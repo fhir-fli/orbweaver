@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:orbweaver/screens/topic_frame.dart';
+import 'package:orbweaver/screens/topic_list_screen.dart';
 
 void main() {
   runApp(const OrbweaverApp());
@@ -17,9 +17,7 @@ class OrbweaverApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      home: const TopicFrame(
-        assetPath: 'assets/topics/wvems_drug_ref_a.yaml',
-      ),
+      home: const TopicListScreen(),
     );
   }
 }

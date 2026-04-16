@@ -18,6 +18,11 @@ class TopicFrame extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFEFEFEF),
+      appBar: AppBar(
+        title: const Text('Preview'),
+        backgroundColor: const Color(0xFF1E4E8C),
+        foregroundColor: Colors.white,
+      ),
       body: SafeArea(
         // Outer scroll so the frame can exceed the window bounds on small
         // desktops / dev displays without clipping the top of the content.
