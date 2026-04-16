@@ -1,0 +1,93 @@
+# ============================================================
+# WHO IMCI Chart 2 — Triage of all sick children (page 6)
+# Pocket Book of Hospital Care for Children (2nd ed, 2013)
+# Second cross-book manual authoring test. Stresses:
+#   - TableBlock severity rows (pink backgrounds for emergency)
+#   - Structured cells via MarkdownCell (title + bullets + conditional
+#     sub-sections inside one cell)
+#   - Narrow 375px frame must hold a 2-column triage matrix
+# ============================================================
+
+topic:
+  id: "who-imci-chart2-triage"
+  title: "Triage of All Sick Children"
+  last_reviewed: "WHO Pocket Book of Hospital Care for Children, 2nd ed"
+  tags: ["triage", "imci", "pediatric", "emergency"]
+  category: "medical"
+  page_number: 6
+
+  blocks:
+
+    # ─────────────── Emergency signs callout ───────────────
+    - type: "prose"
+      title: "Emergency signs"
+      highlight: true
+      markdown: |
+        If any sign is positive: **call for help**, assess and resuscitate,
+        give treatment(s), draw blood for emergency lab (glucose, malaria
+        smear, Hb).
+
+    # ─────────────── Triage matrix ───────────────
+    - type: "table"
+      title: "Assess and treat"
+      columns: ["Assess", "Treat"]
+      rows:
+
+        - severity: "emergency"
+          cells:
+            - |
+              **Coma / convulsing**
+              - Coma
+              - Convulsing (now)
+            - |
+              - Manage the airway (Chart 4)
+              - If convulsing, give diazepam rectally (Chart 9)
+              - Position the unconscious child; if head/neck trauma suspected, stabilize the neck first (Chart 6)
+              - Give IV glucose (Chart 10)
+
+        - severity: "emergency"
+          cells:
+            - |
+              **Severe dehydration** (only in a child with diarrhoea)
+              Diarrhoea plus **any two** of:
+              - Lethargy
+              - Sunken eyes
+              - Very slow skin pinch
+              - Unable to drink or drinks poorly
+
+              **Check for severe malnutrition.**
+            - |
+              - Make sure the child is warm.
+
+              **If no severe malnutrition:**
+              - Insert IV line; begin fluids per Chart 11 + diarrhoea treatment plan C (Chart 13, p. 131)
+
+              **If severe malnutrition:**
+              - Do **not** insert an IV line
+              - Proceed immediately to full assessment + treatment (see §1.4, p. 19)
+
+    # ─────────────── Priority signs ───────────────
+    - type: "prose"
+      title: "Priority signs"
+      markdown: |
+        These children need **prompt assessment and treatment**:
+        - Tiny infant (< 2 months)
+        - Temperature very high
+        - Trauma or other urgent surgical condition
+        - Pallor (severe)
+        - Poisoning (history of)
+        - Pain (severe)
+        - Respiratory distress
+        - Restless, continuously irritable, or lethargic
+        - Referral (urgent)
+        - Malnutrition: visible severe wasting
+        - Oedema of both feet or face
+        - Burns (major)
+
+        *If a child has trauma or other surgical problems, get surgical help or follow surgical guidelines.*
+
+    # ─────────────── Non-urgent footer ───────────────
+    - type: "prose"
+      title: "Non-urgent"
+      markdown: |
+        Proceed with assessment and further treatment according to the child's priority.

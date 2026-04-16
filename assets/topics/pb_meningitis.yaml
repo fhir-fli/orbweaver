@@ -1,0 +1,80 @@
+# ============================================================
+# Pocketbook p.55 — Pediatric Meningitis Rx (> 1 month)
+# First cross-book manual authoring test. Exercises cascade
+# variant with: criteria lists inside decisions, asymmetric
+# action/answer sides, terminal action at cascade tail.
+# ============================================================
+
+topic:
+  id: "pb-meningitis-gt1m"
+  title: "Pediatric Meningitis Rx > 1 month"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["meningitis", "pediatric", "cns_infection"]
+  category: "medical"
+  page_number: 55
+
+  blocks:
+
+    # ─────────────── Management prose ───────────────
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (PR, RR, spO2, Temp, Weight)
+        - Assess AVPU/GCS, hydration status
+        - Start Oxygen if spO2 < 94%, insert IV
+        - Perform brief, targeted history and physical exam
+
+    # ─────────────── Cascade: red-flag screen → LP ───────────────
+    - type: "flowchart"
+      variant: "cascade"
+      # Short action labels; give the decision column (with criteria
+      # bullets) more breathing room than the default 50/50 split.
+      action_width: 0.4
+      entry:
+        text: "Suspected meningitis"
+        shape: "stadium"
+      root:
+        decision: "Does the patient have any of these?"
+        criteria:
+          - "AVPU = P or U"
+          - "Inability to drink / feed"
+          - "Bulging fontanelle"
+          - "Convulsions >6 months old or >48 hrs"
+          - "Evidence of partial seizures"
+          - "Altered mental status AND convulsions"
+        action:
+          text: "Look for other source of symptoms"
+        action_answer: "no"
+        continuation:
+          decision: "Any contraindication to LP?"
+          criteria:
+            - "Requires CPR"
+            - "Shock"
+            - "Signs of raised ICP (GCS ≤8, changing mental status, focal neuro signs, unresponsive pupils, papilledema)"
+            - "Coagulation abnormality or platelets <100"
+            - "Skin infection at LP site"
+          action:
+            text: "No LP currently"
+            timing: "Reassess at 24–48 hrs after antibiotics"
+          action_answer: "yes"
+      terminal_action:
+        text: "Perform LP — send glucose, protein, cell count, gram stain, culture"
+
+    # ─────────────── Treatment prose ───────────────
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        **IV antibiotics x 10 days — start within 1 hour.**
+
+        **> 3 months:**
+        - Cefotaxime 100 mg/kg IV 8-hourly (max 2 g/dose)
+        - **AND** Ampicillin 50 mg/kg IV 6-hourly (max 12 g/day)
+
+        **< 3 months:**
+        - Ceftriaxone 100 mg/kg IV once daily
+
+    - type: "prose"
+      title: "Follow-on"
+      markdown: |
+        - Follow Convulsion Protocol if applicable

@@ -1,0 +1,157 @@
+# ============================================================
+# Demo topic exercising all 5 block types + both flowchart variants.
+# Used as a visual smoke test for the renderer set.
+# ============================================================
+
+topic:
+  id: "demo-all-blocks"
+  title: "All Block Types Demo"
+  category: "medical"
+  page_number: 0
+  tags: ["demo", "smoke_test"]
+
+  blocks:
+
+    # ─────────────── prose ───────────────
+    - type: "prose"
+      title: "Prose Block"
+      markdown: |
+        This is a **prose block** with a few inline emphases and a
+        bullet list:
+        - First point with **bold** inside.
+        - Second point with no bold.
+          - Nested bullet, indented two spaces.
+        - Third point.
+
+    # ─────────────── prose (highlight) ───────────────
+    - type: "prose"
+      title: "Highlight Prose"
+      highlight: true
+      markdown: |
+        Highlighted prose blocks render with a pink tinted container —
+        used for callouts and pediatric notes.
+
+    # ─────────────── table ───────────────
+    - type: "table"
+      title: "WHO IMCI Triage (severity demo)"
+      columns: ["Sign", "Action"]
+      rows:
+        - severity: "emergency"
+          cells:
+            - "Obstructed airway"
+            - ["Open airway", "Give O2", "Position child"]
+        - severity: "emergency"
+          cells:
+            - "Severe respiratory distress"
+            - ["Give O2", "Position", "Reassess"]
+        - severity: "priority"
+          cells:
+            - "Lethargy"
+            - "Move to head of queue"
+        - severity: "non_urgent"
+          cells:
+            - "Stable, normal vitals"
+            - "Routine queue"
+
+    # ─────────────── table with grouped rows ───────────────
+    - type: "table"
+      title: "CPR by Age (grouped rows demo)"
+      columns: ["Adult", "Child", "Infant"]
+      rows:
+        - group: "Compress"
+          header: "Rate"
+          cells: ["100–120/min", "100–120/min", "100–120/min"]
+        - group: "Compress"
+          header: "Depth"
+          cells: ["≥2 in", "~2 in", "~1.5 in"]
+        - group: "Compress"
+          header: "Ratio"
+          cells: ["30:2", "30:2 (1R) / 15:2 (2R)", "30:2 (1R) / 15:2 (2R)"]
+        - group: "Airway"
+          header: "Breaths"
+          cells: ["1 q6s", "1 q2–3s", "1 q2–3s"]
+
+    # ─────────────── flowchart : severity ───────────────
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Suspected sepsis"
+        shape: "stadium"
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+      branches:
+        - id: "mild"
+          label: "Mild"
+          criteria: ["Stable vitals", "Alert"]
+          actions:
+            - text: "Cultures + labs"
+              kind: "diagnostic"
+            - text: "Empiric antibiotics"
+              kind: "medication_administration"
+        - id: "severe"
+          label: "Severe"
+          criteria: ["Hypotensive", "Altered"]
+          actions:
+            - text: "30 mL/kg crystalloid"
+              kind: "medication_administration"
+            - text: "Antibiotics within 1 hr"
+              kind: "medication_administration"
+            - text: "Pressors if persists"
+              kind: "medication_administration"
+
+    # ─────────────── flowchart : cascade ───────────────
+    - type: "flowchart"
+      variant: "cascade"
+      entry:
+        text: "Suspected meningitis"
+        shape: "stadium"
+      root:
+        decision: "Bulging fontanelle?"
+        action:
+          text: "Treat as meningitis"
+          timing: "Empiric, immediate"
+        action_answer: "yes"
+        continuation:
+          decision: "Neck stiffness?"
+          action:
+            text: "LP if no contraindication"
+          action_answer: "yes"
+          continuation:
+            decision: "Altered mental status?"
+            action:
+              text: "LP + empiric antibiotics"
+            action_answer: "yes"
+            continuation:
+              decision: "Persistent fever > 5 days?"
+              action:
+                text: "Reassess, consider workup"
+              action_answer: "yes"
+
+    # ─────────────── drug card ───────────────
+    - type: "drug_card"
+      name: "Epinephrine"
+      class: "Sympathomimetic / vasopressor"
+      indications:
+        - "Anaphylaxis"
+        - "Cardiac arrest (ACLS)"
+        - "Severe symptomatic bradycardia"
+      contraindications:
+        - "No absolute contraindications in arrest"
+      doses:
+        - population: "adult"
+          text: "1 mg IV/IO q3–5 min (arrest); 0.3–0.5 mg IM (anaphylaxis)"
+        - population: "peds"
+          text: "0.01 mg/kg IV/IO (max 1 mg) q3–5 min; 0.01 mg/kg IM (anaphylaxis)"
+      warnings:
+        - "Avoid in active chest pain with confirmed STEMI"
+        - "Extravasation can cause local necrosis"
+      pearls:
+        - "1:10,000 for IV/IO, 1:1,000 for IM"
+        - "Push-dose: 10 mcg/mL, 1 mL q1–5 min"
+
+    # ─────────────── image (placeholder fallback) ───────────────
+    - type: "image"
+      path: "assets/images/missing_demo.png"
+      caption: "Image block — falls back to placeholder when asset missing."
+      size: "medium"

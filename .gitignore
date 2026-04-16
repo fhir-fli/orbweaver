@@ -27,3 +27,12 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+.idea/
+
+# Reference PDFs (large, not source)
+*.pdf
+*.mobi
+
+# Manual test screenshots and rasterized reference pages (generated)
+test/manual/out/
+test/manual/reference/
