@@ -2,10 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 
+/// Severity palette for branches. Matches the WHO-IMCI colours used on
+/// table rows, but with a stronger label band for readability.
+class _SeverityColors {
+  const _SeverityColors({
+    required this.labelBg,
+    required this.tileBg,
+  });
+  final Color labelBg;
+  final Color tileBg;
+}
+
+_SeverityColors? _paletteFor(RowSeverity s) => switch (s) {
+      RowSeverity.none => null,
+      RowSeverity.emergency => const _SeverityColors(
+          labelBg: Color(0xFFD32F2F),
+          tileBg: Color(0xFFFFEBEE),
+        ),
+      RowSeverity.priority => const _SeverityColors(
+          labelBg: Color(0xFFF57C00),
+          tileBg: Color(0xFFFFF8E1),
+        ),
+      RowSeverity.nonUrgent => const _SeverityColors(
+          labelBg: Color(0xFF388E3C),
+          tileBg: Color(0xFFE8F5E9),
+        ),
+    };
+
 /// One branch from the decision diamond — rendered as a vertical column:
 ///   label header → criteria bullets → stacked action items.
 ///
 /// Each action displays its provider-level badge (A/E/I) on the left if set.
+/// If [TopicBranch.severity] is set, the label band and action tiles are
+/// tinted with the WHO-IMCI palette (pink/yellow/green) so branches are
+/// distinguishable without reading labels.
 class BranchColumn extends StatelessWidget {
   const BranchColumn({
     required this.branch,
@@ -18,30 +48,32 @@ class BranchColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final palette = _paletteFor(branch.severity);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        _Label(branch.label, theme: theme),
+        _Label(branch.label, theme: theme, labelBg: palette?.labelBg),
         if (branch.criteria.isNotEmpty)
           _CriteriaBox(criteria: branch.criteria, theme: theme),
         for (final action in branch.actions)
-          _ActionTile(action: action, theme: theme),
+          _ActionTile(action: action, theme: theme, tileBg: palette?.tileBg),
       ],
     );
   }
 }
 
 class _Label extends StatelessWidget {
-  const _Label(this.text, {required this.theme});
+  const _Label(this.text, {required this.theme, this.labelBg});
 
   final String text;
   final TopicTheme theme;
+  final Color? labelBg;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 1),
-      color: theme.branchAccent,
+      color: labelBg ?? theme.branchAccent,
       child: Text(
         text,
         textAlign: TextAlign.center,
@@ -83,17 +115,22 @@ class _CriteriaBox extends StatelessWidget {
 }
 
 class _ActionTile extends StatelessWidget {
-  const _ActionTile({required this.action, required this.theme});
+  const _ActionTile({
+    required this.action,
+    required this.theme,
+    this.tileBg,
+  });
 
   final TopicAction action;
   final TopicTheme theme;
+  final Color? tileBg;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
       decoration: BoxDecoration(
-        color: theme.nodeFill,
+        color: tileBg ?? theme.nodeFill,
         border: Border.all(color: theme.nodeBorder),
       ),
       child: Row(

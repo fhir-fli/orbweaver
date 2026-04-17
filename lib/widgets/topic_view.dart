@@ -28,8 +28,16 @@ class TopicView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           _TopicHeader(topic: topic, theme: theme),
-          for (final block in topic.blocks)
-            _BlockRenderer(block: block, theme: theme),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (final block in topic.blocks)
+                  _BlockRenderer(block: block, theme: theme),
+              ],
+            ),
+          ),
         ],
       ),
     );
