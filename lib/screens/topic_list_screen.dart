@@ -7,6 +7,12 @@ class TopicListScreen extends StatelessWidget {
 
   static const _topics = <_TopicEntry>[
     _TopicEntry(
+      title: 'Paediatric Triage of Sick Children',
+      subtitle: 'Pocketbook p.12 · severity table',
+      asset: 'assets/topics/pb_triage.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
       title: 'Circulation / Shock',
       subtitle: 'WVEMS 2025-008 · severity flowchart',
       asset: 'assets/topics/wvems_2025_008.yaml',
