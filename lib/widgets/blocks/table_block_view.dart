@@ -121,50 +121,82 @@ class TableBlockView extends StatelessWidget {
     required bool isLast,
   }) {
     final sevBg = _severityBg(row.severity);
+    final dividerColor = borderColor.withValues(alpha: 0.5);
+
+    final cellsRow = Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (_hasGroups)
+          SizedBox(
+            width: 64,
+            child: isFirstInGroup
+                ? Text(
+                    row.group ?? '',
+                    style: TextStyle(
+                      fontSize: _fontSize,
+                      fontWeight: FontWeight.w800,
+                      color: theme.header,
+                    ),
+                  )
+                : const SizedBox.shrink(),
+          ),
+        if (_hasRowHeaders)
+          SizedBox(
+            width: 78,
+            child: Text(
+              row.header ?? '',
+              style: const TextStyle(
+                fontSize: _fontSize,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+        for (var ci = 0; ci < row.cells.length; ci++)
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(
+                left: ci == 0 ? 0 : 6,
+                right: ci == row.cells.length - 1 ? 0 : 6,
+              ),
+              decoration: ci == row.cells.length - 1
+                  ? null
+                  : BoxDecoration(
+                      border: Border(
+                        right: BorderSide(color: dividerColor, width: 1),
+                      ),
+                    ),
+              child: _cellView(row.cells[ci]),
+            ),
+          ),
+      ],
+    );
 
     return Container(
       decoration: BoxDecoration(
         color: sevBg,
         border: isLast
             ? null
-            : Border(
-                bottom: BorderSide(color: borderColor.withValues(alpha: 0.5)),
-              ),
+            : Border(bottom: BorderSide(color: borderColor)),
       ),
       padding: const EdgeInsets.symmetric(
         vertical: _rowVPad,
         horizontal: _cellHPad,
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          if (_hasGroups)
-            SizedBox(
-              width: 64,
-              child: isFirstInGroup
-                  ? Text(
-                      row.group ?? '',
-                      style: TextStyle(
-                        fontSize: _fontSize,
-                        fontWeight: FontWeight.w800,
-                        color: theme.header,
-                      ),
-                    )
-                  : const SizedBox.shrink(),
-            ),
-          if (_hasRowHeaders)
-            SizedBox(
-              width: 78,
-              child: Text(
-                row.header ?? '',
-                style: const TextStyle(
-                  fontSize: _fontSize,
-                  fontWeight: FontWeight.w700,
-                ),
+          if (row.title != null) ...[
+            Text(
+              row.title!,
+              style: TextStyle(
+                fontSize: _fontSize + 1,
+                fontWeight: FontWeight.w800,
+                color: theme.header,
               ),
             ),
-          for (final cell in row.cells)
-            Expanded(child: _cellView(cell)),
+            const SizedBox(height: 2),
+          ],
+          cellsRow,
         ],
       ),
     );
