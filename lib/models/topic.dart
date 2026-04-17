@@ -572,6 +572,10 @@ class MarkdownCell extends TableCell {
 
 /// A single data row in a table.
 ///
+/// [title] is an optional row-level banner rendered above the row's cells
+/// (e.g. "Priority signs (3TPR-MOB)" as a prominent heading for the row,
+/// distinct from the cell contents below it).
+///
 /// [header] is an optional row-header label rendered as a left column
 /// (e.g. "Compression rate" in a CPR-by-age table).
 ///
@@ -582,6 +586,7 @@ class MarkdownCell extends TableCell {
 class TopicTableRow {
   const TopicTableRow({
     required this.cells,
+    this.title,
     this.header,
     this.group,
     this.severity = RowSeverity.none,
@@ -593,6 +598,7 @@ class TopicTableRow {
         ? rawCells.toList()
         : (rawCells as List?) ?? const [];
     return TopicTableRow(
+      title: map['title'] as String?,
       header: map['header'] as String?,
       group: map['group'] as String?,
       severity: RowSeverity.fromString(map['severity'] as String?),
@@ -600,6 +606,7 @@ class TopicTableRow {
     );
   }
 
+  final String? title;
   final String? header;
   final String? group;
   final RowSeverity severity;
