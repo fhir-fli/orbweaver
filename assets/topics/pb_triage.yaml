@@ -1,5 +1,5 @@
 # ============================================================
-# Pocketbook p.12 — Paediatric Triage of Sick Children
+# ProtocolBook p.12 — Paediatric Triage of Sick Children
 # Three-tier triage: emergency / priority (3TPR-MOB) / non-urgent.
 # Emergency has 4 sign-clusters (Airway, Circulation, Disability,
 # Severe Diarrhoea) that all feed the same 9-step action list.
@@ -15,17 +15,14 @@ topic:
 
   blocks:
 
-    # ─────────────── Triage matrix ───────────────
     - type: "table"
-      title: "Assess and treat"
       columns: ["Assess", "Treat"]
       rows:
 
         - severity: "emergency"
+          title: "Emergency signs — any positive"
           cells:
             - |
-              **Emergency signs** — any positive:
-
               **Airway & Breathing**
               - Obstructed breathing
               - Central cyanosis
@@ -59,10 +56,9 @@ topic:
               9. Keep patient warm
 
         - severity: "priority"
+          title: "Priority signs (3TPR-MOB) — any positive"
           cells:
             - |
-              **Priority signs (3TPR-MOB)** — any positive:
-
               - **T**iny — sick infant < 2 months
               - **T**emperature — very high or very low
               - **T**rauma — major trauma
@@ -82,8 +78,7 @@ topic:
               - Baseline observations and vital signs
 
         - severity: "non_urgent"
+          title: "Non-urgent — none of the above signs"
           cells:
-            - |
-              **Non-urgent** — children with none of the above signs.
-            - |
-              Proceed with routine assessment and treatment according to the child's priority.
+            - ""
+            - Proceed with routine assessment and treatment according to the child's priority.
