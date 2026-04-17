@@ -194,12 +194,18 @@ class TopicAction {
 }
 
 /// A single branch from the decision diamond in a severity flowchart.
+///
+/// [severity] tints the branch visually (WHO-IMCI palette — pink/yellow/green)
+/// so branches are distinguishable at a glance without reading labels.
+/// Reuses the same [RowSeverity] enum as table rows so the urgency language
+/// stays consistent across block types.
 class TopicBranch {
   const TopicBranch({
     required this.id,
     required this.label,
     this.criteria = const [],
     this.actions = const [],
+    this.severity = RowSeverity.none,
   });
 
   factory TopicBranch.fromYaml(Map<dynamic, dynamic> map) => TopicBranch(
@@ -207,12 +213,14 @@ class TopicBranch {
         label: map['label'] as String,
         criteria: _stringList(map['criteria']),
         actions: _mapList(map['actions'], TopicAction.fromYaml),
+        severity: RowSeverity.fromString(map['severity'] as String?),
       );
 
   final String id;
   final String label;
   final List<String> criteria;
   final List<TopicAction> actions;
+  final RowSeverity severity;
 }
 
 /// A linked bullet in the convergence node.
@@ -229,12 +237,34 @@ class ConvergenceBullet {
   final String? linkId;
 }
 
+/// A labeled arrow leaving the convergence node.
+///
+/// Two shapes:
+///   - Loopback: [loopbackBranchId] names a branch to return to. Rendered
+///     as an inline `↻ {label} → back to <branch colour / label>` note
+///     under the convergence box (a real curved-arrow render is deferred).
+///   - Forward: [loopbackBranchId] is null. Rendered as a labeled downward
+///     arrow leading to [SeverityFlowchart.postConvergence].
+class ConvergenceExit {
+  const ConvergenceExit({required this.label, this.loopbackBranchId});
+
+  factory ConvergenceExit.fromYaml(Map<dynamic, dynamic> map) =>
+      ConvergenceExit(
+        label: map['label'] as String,
+        loopbackBranchId: map['loopback'] as String?,
+      );
+
+  final String label;
+  final String? loopbackBranchId;
+}
+
 /// The bottom convergence node where all branches reconverge.
 class ConvergenceNode {
   const ConvergenceNode({
     required this.text,
     this.shape = NodeShape.roundedRectangle,
     this.bullets = const [],
+    this.exits = const [],
   });
 
   factory ConvergenceNode.fromYaml(Map<dynamic, dynamic> map) =>
@@ -242,11 +272,13 @@ class ConvergenceNode {
         text: map['text'] as String,
         shape: NodeShape.fromString(map['shape'] as String?),
         bullets: _mapList(map['bullets'], ConvergenceBullet.fromYaml),
+        exits: _mapList(map['exits'], ConvergenceExit.fromYaml),
       );
 
   final String text;
   final NodeShape shape;
   final List<ConvergenceBullet> bullets;
+  final List<ConvergenceExit> exits;
 }
 
 /// One row in the medication dose reference table.
@@ -288,30 +320,60 @@ class FlowNode {
 }
 
 /// The parsed body of a `variant: severity` flowchart block.
+///
+/// [entryChain] is a sequence of boxes rendered top-down before the branch
+/// fork (e.g. "Safe/Stimulate/Shout" → "Assess breathing" → "Unresponsive").
+/// Accepts either a YAML list (`entry_chain: [...]`) or a single node
+/// (`entry: {...}`) for backward compatibility with the older shape.
+///
+/// [decision] is an optional node rendered between the last entry and the
+/// branches when authors want an explicit decision prompt. Usually unneeded
+/// when branches are severity-coloured and self-evident.
+///
+/// [postConvergence] is an optional box rendered after the convergence node,
+/// reached by a forward-labeled exit arrow from the convergence. Used for
+/// "if no change → continue with these steps" continuations typical of
+/// resuscitation algorithms.
 class SeverityFlowchart {
   const SeverityFlowchart({
-    required this.entry,
-    required this.decision,
     required this.branches,
+    this.entryChain = const [],
+    this.decision,
     this.convergence,
+    this.postConvergence,
     this.doseTable = const [],
   });
 
-  factory SeverityFlowchart.fromYaml(Map<dynamic, dynamic> map) =>
-      SeverityFlowchart(
-        entry: FlowNode.fromYaml(map['entry'] as Map),
-        decision: FlowNode.fromYaml(map['decision'] as Map),
-        branches: _mapList(map['branches'], TopicBranch.fromYaml),
-        convergence: map['convergence'] != null
-            ? ConvergenceNode.fromYaml(map['convergence'] as Map)
-            : null,
-        doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
+  factory SeverityFlowchart.fromYaml(Map<dynamic, dynamic> map) {
+    final entryChain = <FlowNode>[];
+    if (map['entry_chain'] != null) {
+      entryChain.addAll(
+        _mapList(map['entry_chain'], FlowNode.fromYaml),
       );
+    } else if (map['entry'] != null) {
+      entryChain.add(FlowNode.fromYaml(map['entry'] as Map));
+    }
+    return SeverityFlowchart(
+      entryChain: entryChain,
+      decision: map['decision'] != null
+          ? FlowNode.fromYaml(map['decision'] as Map)
+          : null,
+      branches: _mapList(map['branches'], TopicBranch.fromYaml),
+      convergence: map['convergence'] != null
+          ? ConvergenceNode.fromYaml(map['convergence'] as Map)
+          : null,
+      postConvergence: map['post_convergence'] != null
+          ? FlowNode.fromYaml(map['post_convergence'] as Map)
+          : null,
+      doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
+    );
+  }
 
-  final FlowNode entry;
-  final FlowNode decision;
+  final List<FlowNode> entryChain;
+  final FlowNode? decision;
   final List<TopicBranch> branches;
   final ConvergenceNode? convergence;
+  final FlowNode? postConvergence;
   final List<DoseRow> doseTable;
 }
 
