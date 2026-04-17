@@ -19,6 +19,12 @@ class TopicListScreen extends StatelessWidget {
       category: 'medical',
     ),
     _TopicEntry(
+      title: 'Adult Cardiac Arrest',
+      subtitle: 'Pocketbook p.14 · asymmetric branches + callout',
+      asset: 'assets/topics/pb_cardiac_arrest.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
       title: 'Circulation / Shock',
       subtitle: 'WVEMS 2025-008 · severity flowchart',
       asset: 'assets/topics/wvems_2025_008.yaml',
