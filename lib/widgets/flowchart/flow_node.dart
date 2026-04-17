@@ -31,8 +31,8 @@ class FlowNodeBox extends StatelessWidget {
     };
 
     final padding = compact
-        ? const EdgeInsets.symmetric(horizontal: 6, vertical: 2)
-        : const EdgeInsets.symmetric(horizontal: 8, vertical: 3);
+        ? const EdgeInsets.symmetric(horizontal: 6, vertical: 1)
+        : const EdgeInsets.symmetric(horizontal: 8, vertical: 2);
 
     return Container(
       width: double.infinity,

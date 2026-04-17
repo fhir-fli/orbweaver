@@ -204,18 +204,17 @@ class TableBlockView extends StatelessWidget {
 
   Widget _cellView(TableCell cell) {
     return switch (cell) {
-      TextCell(:final text) => Text(
-          text,
-          style: const TextStyle(fontSize: _fontSize, height: 1.25),
+      // Single-line text cells go through MiniMarkdown so inline `**bold**`
+      // renders (otherwise `**H**ypoglycaemia` shows literal asterisks).
+      TextCell(:final text) => MiniMarkdown(
+          markdown: text,
+          fontSize: _fontSize,
         ),
       BulletCell(:final items) => Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             for (final item in items)
-              Text(
-                '• $item',
-                style: const TextStyle(fontSize: _fontSize, height: 1.25),
-              ),
+              MiniMarkdown(markdown: '- $item', fontSize: _fontSize),
           ],
         ),
       MarkdownCell(:final markdown) => MiniMarkdown(

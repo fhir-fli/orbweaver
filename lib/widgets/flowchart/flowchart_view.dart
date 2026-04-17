@@ -83,6 +83,14 @@ class SeverityFlowchartView extends StatelessWidget {
 
     rows.add(_BranchesRow(branches: fc.branches, theme: theme));
 
+    // Asymmetric branch continuations: render continuation nodes below
+    // the branches row, anchored in the source branch's column.
+    final anyContinuation =
+        fc.branches.any((b) => b.continuation != null);
+    if (anyContinuation && fc.branches.length == 2) {
+      _appendBranchContinuations(rows, fc.branches);
+    }
+
     if (fc.convergence != null) {
       if (useLoopbackLayout) {
         rows.add(
@@ -151,6 +159,92 @@ class SeverityFlowchartView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: rows,
     );
+  }
+
+  void _appendBranchContinuations(
+    List<Widget> rows,
+    List<TopicBranch> branches,
+  ) {
+    final leftCont = branches[0].continuation;
+    final rightCont = branches[1].continuation;
+
+    if (leftCont != null && rightCont != null) {
+      _appendDualContinuations(rows, leftCont, rightCont);
+    } else if (leftCont != null) {
+      _appendSingleContinuation(rows, leftCont);
+    } else if (rightCont != null) {
+      _appendSingleContinuation(rows, rightCont);
+    }
+  }
+
+  /// The single-branch case: render continuation nodes full-width below
+  /// the branches row, since there's only one flow line to follow.
+  void _appendSingleContinuation(
+    List<Widget> rows,
+    BranchContinuation cont,
+  ) {
+    rows.add(FlowDownArrow(label: cont.entryArrowLabel));
+    for (var i = 0; i < cont.nodes.length; i++) {
+      final node = cont.nodes[i];
+      rows.add(
+        FlowNodeBox(text: node.text, shape: node.shape, theme: theme),
+      );
+      if (i < cont.nodes.length - 1) rows.add(const FlowDownArrow());
+    }
+  }
+
+  /// The rare case where both branches have continuations — keep the
+  /// two-column layout so each branch's continuation stays in its column.
+  void _appendDualContinuations(
+    List<Widget> rows,
+    BranchContinuation leftCont,
+    BranchContinuation rightCont,
+  ) {
+    final leftNodes = leftCont.nodes;
+    final rightNodes = rightCont.nodes;
+
+    rows.add(
+      _TwoColumn(
+        left: Center(child: FlowDownArrow(label: leftCont.entryArrowLabel)),
+        right: Center(child: FlowDownArrow(label: rightCont.entryArrowLabel)),
+      ),
+    );
+
+    final maxNodes = leftNodes.length > rightNodes.length
+        ? leftNodes.length
+        : rightNodes.length;
+    for (var i = 0; i < maxNodes; i++) {
+      rows.add(
+        _TwoColumn(
+          left: i < leftNodes.length
+              ? FlowNodeBox(
+                  text: leftNodes[i].text,
+                  shape: leftNodes[i].shape,
+                  theme: theme,
+                )
+              : const SizedBox.shrink(),
+          right: i < rightNodes.length
+              ? FlowNodeBox(
+                  text: rightNodes[i].text,
+                  shape: rightNodes[i].shape,
+                  theme: theme,
+                )
+              : const SizedBox.shrink(),
+        ),
+      );
+      if (i < maxNodes - 1) {
+        rows.add(
+          _TwoColumn(
+            left: i + 1 < leftNodes.length
+                ? const Center(child: FlowDownArrow())
+                : const SizedBox.shrink(),
+            right: i + 1 < rightNodes.length
+                ? const Center(child: FlowDownArrow())
+                : const SizedBox.shrink(),
+          ),
+        );
+      }
+    }
   }
 }
 
@@ -346,7 +440,7 @@ class FlowDownArrow extends StatelessWidget {
   const FlowDownArrow({
     this.label,
     this.labelAfter,
-    this.length = 22,
+    this.length = 14,
     super.key,
   });
 
@@ -372,26 +466,45 @@ class FlowDownArrow extends StatelessWidget {
     final Widget content;
     if (!hasBefore && !hasAfter) {
       content = arrow;
-    } else {
+    } else if (hasBefore && hasAfter) {
+      // Both labels — inline, arrow in the middle ("No ▼ change").
       content = Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          if (hasBefore) ...[
-            Text(label!, style: _arrowLabelStyle),
-            const SizedBox(width: 6),
-          ],
+          Text(label!, style: _arrowLabelStyle),
+          const SizedBox(width: 6),
           arrow,
-          if (hasAfter) ...[
-            const SizedBox(width: 6),
-            Text(labelAfter!, style: _arrowLabelStyle),
-          ],
+          const SizedBox(width: 6),
+          Text(labelAfter!, style: _arrowLabelStyle),
+        ],
+      );
+    } else if (hasBefore) {
+      // Single leading label — stack label above the arrow.
+      content = Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text(label!, style: _arrowLabelStyle),
+          const SizedBox(height: 1),
+          arrow,
+        ],
+      );
+    } else {
+      // Single trailing label — stack label below the arrow.
+      content = Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          arrow,
+          const SizedBox(height: 1),
+          Text(labelAfter!, style: _arrowLabelStyle),
         ],
       );
     }
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 2),
+      padding: const EdgeInsets.symmetric(vertical: 1),
       child: Center(child: content),
     );
   }
@@ -404,7 +517,7 @@ const _arrowLabelStyle = TextStyle(
 );
 
 class FlowUpArrow extends StatelessWidget {
-  const FlowUpArrow({this.label, this.length = 22, super.key});
+  const FlowUpArrow({this.label, this.length = 14, super.key});
 
   final String? label;
   final double length;
@@ -435,7 +548,7 @@ class FlowUpArrow extends StatelessWidget {
             ],
           );
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 2),
+      padding: const EdgeInsets.symmetric(vertical: 1),
       child: Center(child: content),
     );
   }
