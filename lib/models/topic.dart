@@ -199,6 +199,12 @@ class TopicAction {
 /// so branches are distinguishable at a glance without reading labels.
 /// Reuses the same [RowSeverity] enum as table rows so the urgency language
 /// stays consistent across block types.
+///
+/// [continuation] supports asymmetric branch flow — e.g. Adult Cardiac
+/// Arrest p.14, where only the "No Pulse" branch extends downward into
+/// additional action boxes while "Definite Pulse" terminates. When set,
+/// the renderer emits continuation-node rows below the branches row, with
+/// content anchored in this branch's column and empty on the other side.
 class TopicBranch {
   const TopicBranch({
     required this.id,
@@ -206,6 +212,7 @@ class TopicBranch {
     this.criteria = const [],
     this.actions = const [],
     this.severity = RowSeverity.none,
+    this.continuation,
   });
 
   factory TopicBranch.fromYaml(Map<dynamic, dynamic> map) => TopicBranch(
@@ -214,6 +221,9 @@ class TopicBranch {
         criteria: _stringList(map['criteria']),
         actions: _mapList(map['actions'], TopicAction.fromYaml),
         severity: RowSeverity.fromString(map['severity'] as String?),
+        continuation: map['continuation'] != null
+            ? BranchContinuation.fromYaml(map['continuation'] as Map)
+            : null,
       );
 
   final String id;
@@ -221,6 +231,30 @@ class TopicBranch {
   final List<String> criteria;
   final List<TopicAction> actions;
   final RowSeverity severity;
+  final BranchContinuation? continuation;
+}
+
+/// Additional flowchart nodes that flow downward from a specific branch
+/// after its action list, used when the flowchart is asymmetric (one
+/// branch continues, the other terminates).
+///
+/// [entryArrowLabel] optionally labels the arrow from the branch's last
+/// action into the first continuation node — e.g. "Every 2 minutes" for
+/// a cyclic return to the compressions step.
+class BranchContinuation {
+  const BranchContinuation({
+    required this.nodes,
+    this.entryArrowLabel,
+  });
+
+  factory BranchContinuation.fromYaml(Map<dynamic, dynamic> map) =>
+      BranchContinuation(
+        entryArrowLabel: map['entry_arrow_label'] as String?,
+        nodes: _mapList(map['nodes'], FlowNode.fromYaml),
+      );
+
+  final String? entryArrowLabel;
+  final List<FlowNode> nodes;
 }
 
 /// A linked bullet in the convergence node.
