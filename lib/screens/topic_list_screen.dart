@@ -13,6 +13,12 @@ class TopicListScreen extends StatelessWidget {
       category: 'medical',
     ),
     _TopicEntry(
+      title: 'Paediatric Advanced Life Support',
+      subtitle: 'Pocketbook p.13 · prose + severity flowchart',
+      asset: 'assets/topics/pb_pals.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
       title: 'Circulation / Shock',
       subtitle: 'WVEMS 2025-008 · severity flowchart',
       asset: 'assets/topics/wvems_2025_008.yaml',
