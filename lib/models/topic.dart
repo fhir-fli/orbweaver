@@ -573,8 +573,16 @@ class FlowchartBlock extends Block {
 ///     with `**bold**` spans and `- ` bullets. Used for cells with
 ///     structured sub-sections (e.g. WHO IMCI Chart 2 treat cells with
 ///     "If no severe malnutrition: ... / If severe malnutrition: ...").
+///
+/// [span] is the number of table columns this cell covers. Default 1.
+/// Structured cells (YAML map form) can set `span:` to merge neighbouring
+/// columns — e.g. in a Component × (Adults | Children | Infants) table,
+/// a row where all three populations share one value has a `span: 3`
+/// cell instead of three duplicated cells.
 sealed class TableCell {
-  const TableCell();
+  const TableCell({this.span = 1});
+
+  final int span;
 
   factory TableCell.fromYaml(dynamic raw) {
     if (raw is String) {
@@ -585,22 +593,31 @@ sealed class TableCell {
       return BulletCell(raw.map((e) => e as String).toList());
     }
     if (raw is List) return BulletCell(raw.cast<String>());
+    if (raw is Map) {
+      final span = (raw['span'] as num?)?.toInt() ?? 1;
+      if (raw['bullets'] != null) {
+        return BulletCell(_stringList(raw['bullets']), span: span);
+      }
+      final text = raw['text'] as String? ?? '';
+      if (text.contains('\n')) return MarkdownCell(text, span: span);
+      return TextCell(text, span: span);
+    }
     return const TextCell('');
   }
 }
 
 class TextCell extends TableCell {
-  const TextCell(this.text);
+  const TextCell(this.text, {super.span});
   final String text;
 }
 
 class BulletCell extends TableCell {
-  const BulletCell(this.items);
+  const BulletCell(this.items, {super.span});
   final List<String> items;
 }
 
 class MarkdownCell extends TableCell {
-  const MarkdownCell(this.markdown);
+  const MarkdownCell(this.markdown, {super.span});
   final String markdown;
 }
 
