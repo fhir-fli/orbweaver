@@ -25,6 +25,12 @@ class TopicListScreen extends StatelessWidget {
       category: 'medical',
     ),
     _TopicEntry(
+      title: 'CPR Summary (Adults · Children · Infants)',
+      subtitle: 'Pocketbook p.15 · comparison table with cell spans',
+      asset: 'assets/topics/pb_cpr_summary.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
       title: 'Circulation / Shock',
       subtitle: 'WVEMS 2025-008 · severity flowchart',
       asset: 'assets/topics/wvems_2025_008.yaml',
