@@ -506,9 +506,24 @@ sealed class Block {
       'table' => TableBlock.fromYaml(map),
       'drug_card' => DrugCardBlock.fromYaml(map),
       'image' => ImageBlock.fromYaml(map),
+      'row' => RowBlock.fromYaml(map),
       _ => throw FormatException('Unknown block type: $type'),
     };
   }
+}
+
+/// Horizontal layout primitive — renders its child blocks side-by-side in
+/// a Row, each getting equal horizontal share. Used when two blocks (e.g.
+/// a pair of narrow reference tables) read more naturally alongside each
+/// other than stacked vertically.
+class RowBlock extends Block {
+  const RowBlock({required this.blocks});
+
+  factory RowBlock.fromYaml(Map<dynamic, dynamic> map) => RowBlock(
+        blocks: _mapList(map['blocks'], Block.fromYaml),
+      );
+
+  final List<Block> blocks;
 }
 
 /// Markdown-authored text block. Most content lives here.
