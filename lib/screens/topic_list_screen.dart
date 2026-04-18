@@ -31,6 +31,12 @@ class TopicListScreen extends StatelessWidget {
       category: 'medical',
     ),
     _TopicEntry(
+      title: 'Paediatric Emergency Weight Estimation',
+      subtitle: 'Pocketbook p.16 · age/height → weight tables',
+      asset: 'assets/topics/pb_weight_estimation.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
       title: 'Circulation / Shock',
       subtitle: 'WVEMS 2025-008 · severity flowchart',
       asset: 'assets/topics/wvems_2025_008.yaml',
