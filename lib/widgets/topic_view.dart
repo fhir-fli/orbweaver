@@ -110,7 +110,32 @@ class _BlockRenderer extends StatelessWidget {
       final TableBlock b => TableBlockView(block: b, theme: theme),
       final DrugCardBlock b => DrugCardBlockView(block: b, theme: theme),
       final ImageBlock b => ImageBlockView(block: b, theme: theme),
+      final RowBlock b => _RowBlockRenderer(block: b, theme: theme),
     };
+  }
+}
+
+class _RowBlockRenderer extends StatelessWidget {
+  const _RowBlockRenderer({required this.block, required this.theme});
+
+  final RowBlock block;
+  final TopicTheme theme;
+
+  @override
+  Widget build(BuildContext context) {
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (var i = 0; i < block.blocks.length; i++) ...[
+            if (i > 0) const SizedBox(width: 6),
+            Expanded(
+              child: _BlockRenderer(block: block.blocks[i], theme: theme),
+            ),
+          ],
+        ],
+      ),
+    );
   }
 }
 
