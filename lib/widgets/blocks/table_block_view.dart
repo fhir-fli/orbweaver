@@ -123,9 +123,10 @@ class TableBlockView extends StatelessWidget {
     final sevBg = _severityBg(row.severity);
     final dividerColor = borderColor.withValues(alpha: 0.5);
 
-    final cellsRow = Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+    final cellsRow = IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
         if (_hasGroups)
           SizedBox(
             width: 64,
@@ -153,6 +154,7 @@ class TableBlockView extends StatelessWidget {
           ),
         for (var ci = 0; ci < row.cells.length; ci++)
           Expanded(
+            flex: row.cells[ci].span,
             child: Container(
               padding: EdgeInsets.only(
                 left: ci == 0 ? 0 : 6,
@@ -168,7 +170,8 @@ class TableBlockView extends StatelessWidget {
               child: _cellView(row.cells[ci]),
             ),
           ),
-      ],
+        ],
+      ),
     );
 
     return Container(
