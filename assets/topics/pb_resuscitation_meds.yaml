@@ -1,0 +1,74 @@
+# ============================================================
+# ProtocolBook p.20 — Resuscitation Medications
+#
+# Two stacked tables (Children, Adults), same medication ordering.
+# Kept separate rather than merged into one 3-col table because
+# medication names and dose instructions are both long; a 3-col
+# layout at 393 px phone width would be cramped.
+# ============================================================
+
+topic:
+  id: "pb-resuscitation-meds"
+  title: "Resuscitation Medications"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["medications", "resuscitation", "emergency", "dosing"]
+  category: "medical"
+  page_number: 20
+
+  blocks:
+
+    - type: "table"
+      title: "Children"
+      columns: ["Medication", "Dose"]
+      rows:
+        - cells:
+            - "Epinephrine (Adrenaline)"
+            - "**0.1 ml/kg 1:10,000** IV · mix 1 ml of 1:1,000 in 9 ml NS · flush 10 ml NS"
+        - cells:
+            - "Dextrose 10%"
+            - "**5 ml/kg** IV (mix 8 ml NS with 2 ml D50%, or 4 ml D5% with 1 ml D50%)"
+        - cells:
+            - "Diazepam PR ~2.5 mg suppository"
+            - |
+              - < 10 kg: 1 supp (**DO NOT USE** in neonates)
+              - 10 – 15 kg: 2 supp
+              - 15 – 20 kg: 3 supp
+              - 20 – 25 kg: 4 supp
+        - cells:
+            - "Diazepam IV"
+            - "0.3 mg/kg IV slowly over 1 minute"
+        - cells:
+            - "Phenobarbitone / Phenobarbital"
+            - "**Load** 15 mg/kg (20 mg/kg neonates) IM/IV over 20 min · **Maint** 5 mg/kg IM/IV/PO OD"
+        - cells:
+            - "Packed Red Blood Cells (PRBCs)"
+            - "10 ml/kg (raise Hgb 1 g/dL)"
+        - cells:
+            - "Whole Blood (WB)"
+            - "20 ml/kg (raise Hgb 1 g/dL)"
+
+    - type: "table"
+      title: "Adults"
+      columns: ["Medication", "Dose"]
+      rows:
+        - cells:
+            - "Epinephrine (Adrenaline)"
+            - "1 mg IV in 10 ml NS — flush with 20 ml NS"
+        - cells:
+            - "Dextrose"
+            - "50 ml IV of 50% (1 amp)"
+        - cells:
+            - "Diazepam PR 2.5 mg suppository"
+            - "4 suppositories PR"
+        - cells:
+            - "Diazepam IV"
+            - "0.15 mg/kg IV slowly over 1 minute"
+        - cells:
+            - "Phenobarbitone / Phenobarbital"
+            - "**Load** 15 mg/kg IM/IV over 20 min · **Maint** 5 mg/kg IM/IV/PO OD"
+        - cells:
+            - "Packed Red Blood Cells (PRBCs)"
+            - "1 unit (raise Hgb 1 g/dL)"
+        - cells:
+            - "Whole Blood (WB)"
+            - "2 units (raise Hgb 1 g/dL)"

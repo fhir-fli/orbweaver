@@ -55,6 +55,12 @@ class TopicListScreen extends StatelessWidget {
       category: 'medical',
     ),
     _TopicEntry(
+      title: 'Resuscitation Medications',
+      subtitle: 'Pocketbook p.20 · pediatric and adult dosing',
+      asset: 'assets/topics/pb_resuscitation_meds.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
       title: 'Circulation / Shock',
       subtitle: 'WVEMS 2025-008 · severity flowchart',
       asset: 'assets/topics/wvems_2025_008.yaml',
