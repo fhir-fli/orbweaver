@@ -37,6 +37,24 @@ class TopicListScreen extends StatelessWidget {
       category: 'medical',
     ),
     _TopicEntry(
+      title: 'Vital Rates — Percentiles by Age',
+      subtitle: 'Pocketbook p.17 · RR and HR tables',
+      asset: 'assets/topics/pb_vital_rates.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
+      title: 'Girls — BP for Stature',
+      subtitle: 'Pocketbook p.18 · tap-to-zoom chart',
+      asset: 'assets/topics/pb_bp_girls.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
+      title: 'Boys — BP for Stature',
+      subtitle: 'Pocketbook p.19 · tap-to-zoom chart',
+      asset: 'assets/topics/pb_bp_boys.yaml',
+      category: 'medical',
+    ),
+    _TopicEntry(
       title: 'Circulation / Shock',
       subtitle: 'WVEMS 2025-008 · severity flowchart',
       asset: 'assets/topics/wvems_2025_008.yaml',

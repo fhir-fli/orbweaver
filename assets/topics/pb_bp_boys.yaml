@@ -1,0 +1,24 @@
+# ============================================================
+# ProtocolBook p.19 — Boys BP-for-Stature (1-17 years)
+# Zone boundaries as AAP 2017 (see pb_bp_girls for details).
+# ============================================================
+
+topic:
+  id: "pb-bp-boys"
+  title: "Boys — BP for Stature"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pediatric", "blood_pressure", "boys", "reference"]
+  category: "medical"
+  page_number: 19
+
+  blocks:
+
+    - type: "image"
+      path: "assets/images/pb_bp_boys_sbp.png"
+      caption: "Boys — Systolic BP by Stature"
+      size: "full"
+
+    - type: "image"
+      path: "assets/images/pb_bp_boys_dbp.png"
+      caption: "Boys — Diastolic BP by Stature"
+      size: "full"
