@@ -14,7 +14,7 @@ class MiniMarkdown extends StatelessWidget {
   const MiniMarkdown({
     required this.markdown,
     this.fontSize = 13,
-    this.height = 1.25,
+    this.height = 1.15,
     this.color,
     super.key,
   });

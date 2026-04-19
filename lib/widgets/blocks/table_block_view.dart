@@ -20,7 +20,7 @@ class TableBlockView extends StatelessWidget {
   final TableBlock block;
   final TopicTheme theme;
 
-  static const double _rowVPad = 2;
+  static const double _rowVPad = 1;
   static const double _cellHPad = 4;
   static const double _fontSize = 12;
   static const double _headerFontSize = 12;
