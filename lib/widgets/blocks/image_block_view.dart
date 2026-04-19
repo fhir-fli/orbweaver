@@ -7,6 +7,11 @@ import 'package:orbweaver/theme/topic_theme.dart';
 /// [ImageSize] maps to concrete widths; `full` stretches the block to the
 /// column width. Missing/unloadable assets fall back to a labelled grey
 /// placeholder so authoring can proceed before art is finalized.
+///
+/// Tapping the image opens a fullscreen zoomable viewer backed by an
+/// [InteractiveViewer] — important for high-detail reference figures
+/// (BP-for-Stature charts, growth curves) where the inline size can't
+/// show every axis label legibly on a phone.
 class ImageBlockView extends StatelessWidget {
   const ImageBlockView({required this.block, required this.theme, super.key});
 
@@ -22,13 +27,18 @@ class ImageBlockView extends StatelessWidget {
       ImageSize.full => double.infinity,
     };
 
+    final imageChild = Image.asset(
+      block.path,
+      errorBuilder: (context, error, stack) => _placeholder(width),
+    );
+
     return Column(
       children: [
-        SizedBox(
-          width: width == double.infinity ? null : width,
-          child: Image.asset(
-            block.path,
-            errorBuilder: (context, error, stack) => _placeholder(width),
+        GestureDetector(
+          onTap: () => _openZoom(context),
+          child: SizedBox(
+            width: width == double.infinity ? null : width,
+            child: imageChild,
           ),
         ),
         if (block.caption != null)
@@ -45,6 +55,18 @@ class ImageBlockView extends StatelessWidget {
             ),
           ),
       ],
+    );
+  }
+
+  void _openZoom(BuildContext context) {
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        fullscreenDialog: true,
+        builder: (_) => _ZoomableImageView(
+          path: block.path,
+          caption: block.caption,
+        ),
+      ),
     );
   }
 
@@ -69,6 +91,36 @@ class ImageBlockView extends StatelessWidget {
             fontStyle: FontStyle.italic,
           ),
         ),
+      ),
+    );
+  }
+}
+
+class _ZoomableImageView extends StatelessWidget {
+  const _ZoomableImageView({required this.path, this.caption});
+
+  final String path;
+  final String? caption;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+        title: caption == null
+            ? null
+            : Text(
+                caption!,
+                style: const TextStyle(fontSize: 12),
+                overflow: TextOverflow.ellipsis,
+              ),
+      ),
+      body: InteractiveViewer(
+        minScale: 0.8,
+        maxScale: 6,
+        child: Center(child: Image.asset(path)),
       ),
     );
   }
