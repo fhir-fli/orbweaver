@@ -99,6 +99,13 @@ const library = <Book>[
         tags: ['malaria', 'complications', 'co-infection', 'aki', 'anemia'],
       ),
       BookTopic(
+        id: 'pb_malaria_meds',
+        title: 'Malaria — Medications',
+        subtitle: 'p.23–24 · severe + uncomplicated regimens',
+        asset: 'assets/topics/pb_malaria_meds.yaml',
+        tags: ['malaria', 'artesunate', 'coartem', 'quinine', 'dosing'],
+      ),
+      BookTopic(
         id: 'pb_meningitis',
         title: 'Paediatric Meningitis Rx > 1 month',
         subtitle: 'p.55 · cascade flowchart',
