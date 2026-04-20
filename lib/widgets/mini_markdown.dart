@@ -26,7 +26,10 @@ class MiniMarkdown extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final lines = markdown.split('\n');
+    // Strip trailing blank lines — YAML `|` block scalars always leave a
+    // terminal newline, which otherwise renders as unwanted bottom
+    // whitespace inside callouts.
+    final lines = markdown.trimRight().split('\n');
     final children = <Widget>[];
     for (final raw in lines) {
       if (raw.trim().isEmpty) {
@@ -89,23 +92,32 @@ class _MarkdownLine extends StatelessWidget {
   }
 
   List<InlineSpan> _parseBold(String text) {
+    // Stash escaped asterisks (`\*`) behind a sentinel so they don't
+    // participate in bold parsing, then restore as literal `*` in the
+    // emitted spans.
+    const sentinel = '\u0001';
+    final stashed = text.replaceAll(r'\*', sentinel);
     final spans = <InlineSpan>[];
     final re = RegExp(r'\*\*(.+?)\*\*');
     var lastEnd = 0;
-    for (final m in re.allMatches(text)) {
+    for (final m in re.allMatches(stashed)) {
       if (m.start > lastEnd) {
-        spans.add(TextSpan(text: text.substring(lastEnd, m.start)));
+        spans.add(TextSpan(
+          text: stashed.substring(lastEnd, m.start).replaceAll(sentinel, '*'),
+        ));
       }
       spans.add(
         TextSpan(
-          text: m.group(1),
+          text: m.group(1)!.replaceAll(sentinel, '*'),
           style: const TextStyle(fontWeight: FontWeight.w700),
         ),
       );
       lastEnd = m.end;
     }
-    if (lastEnd < text.length) {
-      spans.add(TextSpan(text: text.substring(lastEnd)));
+    if (lastEnd < stashed.length) {
+      spans.add(TextSpan(
+        text: stashed.substring(lastEnd).replaceAll(sentinel, '*'),
+      ));
     }
     return spans;
   }
