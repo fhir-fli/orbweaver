@@ -85,6 +85,13 @@ const library = <Book>[
         tags: ['io', 'procedure', 'vascular access', 'shock'],
       ),
       BookTopic(
+        id: 'pb_malaria',
+        title: 'Malaria',
+        subtitle: 'p.22 · diagnosis + severe Rx',
+        asset: 'assets/topics/pb_malaria.yaml',
+        tags: ['malaria', 'infectious', 'tropical', 'artesunate'],
+      ),
+      BookTopic(
         id: 'pb_meningitis',
         title: 'Paediatric Meningitis Rx > 1 month',
         subtitle: 'p.55 · cascade flowchart',
