@@ -111,7 +111,132 @@ class _BlockRenderer extends StatelessWidget {
       final DrugCardBlock b => DrugCardBlockView(block: b, theme: theme),
       final ImageBlock b => ImageBlockView(block: b, theme: theme),
       final RowBlock b => _RowBlockRenderer(block: b, theme: theme),
+      final ColumnBlock b => _ColumnBlockRenderer(block: b, theme: theme),
+      final ArrowsBlock b => _ArrowsBlockRenderer(block: b),
+      final MergeArrowsBlock b => _MergeArrowsRenderer(block: b),
     };
+  }
+}
+
+class _ColumnBlockRenderer extends StatelessWidget {
+  const _ColumnBlockRenderer({required this.block, required this.theme});
+
+  final ColumnBlock block;
+  final TopicTheme theme;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (var i = 0; i < block.blocks.length; i++) ...[
+          if (i > 0) const SizedBox(height: 6),
+          _BlockRenderer(block: block.blocks[i], theme: theme),
+        ],
+      ],
+    );
+  }
+}
+
+class _ArrowsBlockRenderer extends StatelessWidget {
+  const _ArrowsBlockRenderer({required this.block});
+
+  final ArrowsBlock block;
+
+  @override
+  Widget build(BuildContext context) {
+    if (block.direction == ArrowDirection.right) {
+      return Center(
+        child: FlowRightArrow(length: block.length, label: block.label),
+      );
+    }
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 2),
+      child: Row(
+        children: [
+          for (var i = 0; i < block.count; i++)
+            Expanded(
+              child: Center(
+                child: FlowDownArrow(
+                  label: block.label,
+                  length: block.length,
+                  inline: block.inline,
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
+class _MergeArrowsRenderer extends StatelessWidget {
+  const _MergeArrowsRenderer({required this.block});
+
+  final MergeArrowsBlock block;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 2),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final width = constraints.maxWidth;
+          final cellW = width / block.columns;
+          // Center-of-column x coordinates for each source.
+          final sourceXs = block.sources
+              .map((c) => (c + 0.5) * cellW)
+              .toList()
+            ..sort();
+          final lineStart = sourceXs.first;
+          final lineEnd = sourceXs.last;
+          // targetCenter is a fractional column index; +0.5 lands the
+          // arrow at the center of that column (or halfway between two
+          // columns for a fractional value like 2.5).
+          final targetX = (block.targetCenter + 0.5) * cellW;
+
+          const topArrowLen = 10.0;
+          const bottomArrowLen = 14.0;
+          const lineGap = 2.0;
+          const stubLen = 6.0;
+          const totalHeight =
+              topArrowLen + lineGap + stubLen + bottomArrowLen + 4;
+
+          return SizedBox(
+            height: totalHeight,
+            child: Stack(
+              children: [
+                for (final x in sourceXs)
+                  Positioned(
+                    top: 0,
+                    left: x - 6,
+                    child: const FlowDownArrow(length: topArrowLen),
+                  ),
+                Positioned(
+                  top: topArrowLen + lineGap,
+                  left: lineStart,
+                  width: lineEnd - lineStart,
+                  height: 1,
+                  child: Container(color: Colors.black54),
+                ),
+                Positioned(
+                  top: topArrowLen + lineGap,
+                  left: targetX - 0.5,
+                  height: stubLen,
+                  width: 1,
+                  child: Container(color: Colors.black54),
+                ),
+                Positioned(
+                  top: topArrowLen + lineGap + stubLen,
+                  left: targetX - 6,
+                  child: const FlowDownArrow(),
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
   }
 }
 
@@ -125,11 +250,12 @@ class _RowBlockRenderer extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntrinsicHeight(
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           for (var i = 0; i < block.blocks.length; i++) ...[
             if (i > 0) const SizedBox(width: 6),
             Expanded(
+              flex: block.blocks[i].flex,
               child: _BlockRenderer(block: block.blocks[i], theme: theme),
             ),
           ],

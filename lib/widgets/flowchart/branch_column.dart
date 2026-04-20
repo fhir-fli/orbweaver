@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
 
 /// Severity palette for branches. Matches the WHO-IMCI colours used on
 /// table rows, but with a stronger label band for readability.
@@ -49,6 +50,21 @@ class BranchColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final palette = _paletteFor(branch.severity);
+
+    // Arrow-only branch: render label + a long down-arrow.  Used when
+    // the branch flows directly into the block that comes next in the
+    // topic, with no intermediate action tile in the branch column.
+    if (branch.continues) {
+      return Column(
+        children: [
+          _Label(branch.label, theme: theme, labelBg: palette?.labelBg),
+          const SizedBox(height: 6),
+          const Expanded(child: Center(child: FlowDownArrow(length: 36))),
+          const SizedBox(height: 2),
+        ],
+      );
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [

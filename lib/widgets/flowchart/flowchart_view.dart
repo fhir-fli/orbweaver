@@ -441,6 +441,7 @@ class FlowDownArrow extends StatelessWidget {
     this.label,
     this.labelAfter,
     this.length = 14,
+    this.inline = false,
     super.key,
   });
 
@@ -453,6 +454,12 @@ class FlowDownArrow extends StatelessWidget {
   final String? labelAfter;
 
   final double length;
+
+  /// When true with a single [label], the label renders horizontally
+  /// beside the arrow (label on the left, arrow on the right) instead
+  /// of stacked above it.  Saves a line of vertical space when the
+  /// arrow is floating in a layout with no other content on its line.
+  final bool inline;
 
   @override
   Widget build(BuildContext context) {
@@ -481,16 +488,29 @@ class FlowDownArrow extends StatelessWidget {
         ],
       );
     } else if (hasBefore) {
-      // Single leading label — stack label above the arrow.
-      content = Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(label!, style: _arrowLabelStyle),
-          const SizedBox(height: 1),
-          arrow,
-        ],
-      );
+      if (inline) {
+        // Label beside the arrow — label on left, glyph on right.
+        content = Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(label!, style: _arrowLabelStyle),
+            const SizedBox(width: 4),
+            arrow,
+          ],
+        );
+      } else {
+        // Single leading label — stack label above the arrow.
+        content = Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(label!, style: _arrowLabelStyle),
+            const SizedBox(height: 1),
+            arrow,
+          ],
+        );
+      }
     } else {
       // Single trailing label — stack label below the arrow.
       content = Column(
@@ -555,15 +575,27 @@ class FlowUpArrow extends StatelessWidget {
 }
 
 class FlowRightArrow extends StatelessWidget {
-  const FlowRightArrow({this.length = 18, super.key});
+  const FlowRightArrow({this.length = 18, this.label, super.key});
 
   final double length;
 
+  /// Optional label rendered centered above the arrow glyph.
+  final String? label;
+
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
+    final arrow = CustomPaint(
       size: Size(length, 12),
       painter: const _HorizontalArrowPainter(pointing: _Dir.right),
+    );
+    if (label == null) return arrow;
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(label!, style: _arrowLabelStyle),
+        const SizedBox(height: 1),
+        arrow,
+      ],
     );
   }
 }

@@ -14,6 +14,22 @@ class ProseBlockView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Boxed prose — a rounded-border tile matching boxed-layout table
+    // cells, used when the block is acting as a flow-grid cell inside
+    // a RowBlock (e.g. p.22 malaria row 3: "Treat" / "Treat presumptively"
+    // / "Don't treat").  Centered text, tight padding, no title banner.
+    if (block.boxed) {
+      return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+        decoration: BoxDecoration(
+          border: Border.all(color: theme.nodeBorder.withValues(alpha: 0.6)),
+          borderRadius: BorderRadius.circular(4),
+        ),
+        alignment: Alignment.center,
+        child: MiniMarkdown(markdown: block.markdown),
+      );
+    }
+
     final body = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

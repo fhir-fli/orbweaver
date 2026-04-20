@@ -185,20 +185,68 @@ Used for linear yes/no question chains (e.g. pre-procedure contraindication chec
   size: "medium"                            # small | medium | large | full
 ```
 
-### `row` — side-by-side layout primitive
+### `row` / `column` — layout primitives
 
 ```yaml
 - type: "row"
   blocks:
-    - type: "table"
-      # ...
-    - type: "table"
-      # ...
+    - type: "prose"
+      flex: 3
+      boxed: true
+      markdown: "**Treat**"
+    - type: "column"
+      flex: 6
+      blocks:
+        - type: "prose"
+          boxed: true
+          markdown: "**Treat presumptively**"
+        - type: "row"
+          blocks:
+            - type: "prose"
+              boxed: true
+              markdown: "Order **RDT**"
+            - type: "prose"
+              boxed: true
+              markdown: "Order **B/S**"
+    - type: "prose"
+      flex: 3
+      boxed: true
+      markdown: "**Don't treat**"
 ```
 
-Renders child blocks in a `Row` with `IntrinsicHeight + CrossAxisAlignment.start`. Each child gets `Expanded` (equal horizontal share). Any block type can nest inside, including nested rows.
+`row` lays children out in a `Row` with `IntrinsicHeight`; `column` stacks them in a `Column`. Both use a 6px gap between children.
 
-Use this when two narrow blocks read better alongside each other than stacked (e.g. p.16 age-based and height-based weight tables).
+**Use a 12-column grid convention.** Each `row`'s children's `flex` values should sum to 12. This keeps rows aligned across a page — a row of `[6, 6]` sits under a row of `[3, 3, 3, 3]` with cells lining up. 12 divides evenly into halves, thirds, quarters, and sixths; no content in the ProtocolBook or WVEMS protocols needs a finer split. Tables have their own `span` field per cell (which also should sum to 12).
+
+Any block type can nest inside. `prose` gains a `boxed: true` flag that renders it as a rounded-border centered tile, matching boxed-layout table cells — useful when a prose block is acting as a grid cell.
+
+### `arrows` — down or right arrow(s) spanning a row
+
+```yaml
+- type: "arrows"
+  count: 4            # evenly-spaced down arrows
+- type: "arrows"
+  direction: "right"  # horizontal arrow (count must be 1)
+  label: "No"
+  length: 24
+- type: "arrows"
+  count: 1
+  label: "Yes"
+  inline: true        # label beside the arrow, not stacked above
+```
+
+Use between rows of a flow-grid to indicate flow direction. `count` is the number of evenly-spaced arrows; `label` optionally annotates them; `inline: true` puts the label beside the glyph (saves a line when the arrow is on its own row).
+
+### `merge_arrows` — N arrows converging to 1
+
+```yaml
+- type: "merge_arrows"
+  columns: 12            # grid width
+  sources: [1, 4, 7]     # col indices of top arrows
+  target_center: 2.5     # col index (fractional ok) of merged arrow
+```
+
+Used when several grid cells funnel into a narrower target below (e.g. three "treat" outcomes merging into a half-width severe-signs box). Renders top short arrows at each source col, a horizontal connector joining their bases, a vertical stub descending from `target_center`, and a final longer arrow landing at `target_center`.
 
 ## Shared enums
 

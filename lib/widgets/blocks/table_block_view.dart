@@ -32,6 +32,7 @@ class TableBlockView extends StatelessWidget {
   Widget build(BuildContext context) {
     final borderColor = theme.nodeBorder.withValues(alpha: 0.6);
     final headerBg = theme.header;
+    final boxed = block.layout == TableLayout.boxed;
 
     final children = <Widget>[];
 
@@ -58,12 +59,22 @@ class TableBlockView extends StatelessWidget {
           row.group != null &&
           (i == 0 || block.rows[i - 1].group != row.group);
       children.add(
-        _dataRow(
-          row: row,
-          borderColor: borderColor,
-          isFirstInGroup: isFirstInGroup,
-          isLast: i == block.rows.length - 1,
-        ),
+        boxed
+            ? _boxedRow(row: row, borderColor: borderColor)
+            : _dataRow(
+                row: row,
+                borderColor: borderColor,
+                isFirstInGroup: isFirstInGroup,
+                isLast: i == block.rows.length - 1,
+              ),
+      );
+    }
+
+    // Boxed layout has no outer border — cells carry their own frames.
+    if (boxed) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: children,
       );
     }
 
@@ -78,6 +89,45 @@ class TableBlockView extends StatelessWidget {
       ),
     );
   }
+
+  Widget _boxedRow({
+    required TopicTableRow row,
+    required Color borderColor,
+  }) {
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          for (var ci = 0; ci < row.cells.length; ci++) ...[
+            if (ci > 0) const SizedBox(width: 6),
+            Expanded(
+              flex: row.cells[ci].span,
+              child: _isEmptyCell(row.cells[ci])
+                  ? const SizedBox.shrink()
+                  : Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 6,
+                        vertical: 3,
+                      ),
+                      decoration: BoxDecoration(
+                        color: _severityBg(row.severity),
+                        border: Border.all(color: borderColor),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: _cellView(row.cells[ci]),
+                    ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  /// In boxed layout, a cell with empty text renders as blank space
+  /// (no border, no tile) — lets a row act as a partial overlay under
+  /// a previous row, where only some columns carry content.
+  bool _isEmptyCell(TableCell cell) =>
+      cell is TextCell && cell.text.trim().isEmpty;
 
   Widget _headerRow(Color headerBg, Color borderColor) {
     return Container(

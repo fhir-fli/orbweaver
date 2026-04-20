@@ -213,6 +213,7 @@ class TopicBranch {
     this.actions = const [],
     this.severity = RowSeverity.none,
     this.continuation,
+    this.continues = false,
   });
 
   factory TopicBranch.fromYaml(Map<dynamic, dynamic> map) => TopicBranch(
@@ -224,6 +225,7 @@ class TopicBranch {
         continuation: map['continuation'] != null
             ? BranchContinuation.fromYaml(map['continuation'] as Map)
             : null,
+        continues: map['continues'] as bool? ?? false,
       );
 
   final String id;
@@ -232,6 +234,12 @@ class TopicBranch {
   final List<TopicAction> actions;
   final RowSeverity severity;
   final BranchContinuation? continuation;
+
+  /// When true, the branch renders as label + downward arrow only —
+  /// no action tiles, no continuation box.  Used when this branch
+  /// flows directly into whatever block comes next in the topic
+  /// (e.g. malaria Yes → the severe Rx callout below).
+  final bool continues;
 }
 
 /// Additional flowchart nodes that flow downward from a specific branch
@@ -495,8 +503,14 @@ class CascadeFlowchart {
 
 /// A single vertical section of a [Topic]. Sealed — add a case in every
 /// `switch` on [Block] when a new variant is introduced.
+///
+/// [flex] is only meaningful when this block is a direct child of a
+/// [RowBlock] or [ColumnBlock] — it controls the share of available
+/// space this child receives.  Default 1 (equal share).
 sealed class Block {
-  const Block();
+  const Block({this.flex = 1});
+
+  final int flex;
 
   factory Block.fromYaml(Map<dynamic, dynamic> map) {
     final type = map['type'] as String?;
@@ -507,23 +521,122 @@ sealed class Block {
       'drug_card' => DrugCardBlock.fromYaml(map),
       'image' => ImageBlock.fromYaml(map),
       'row' => RowBlock.fromYaml(map),
+      'column' => ColumnBlock.fromYaml(map),
+      'arrows' => ArrowsBlock.fromYaml(map),
+      'merge_arrows' => MergeArrowsBlock.fromYaml(map),
       _ => throw FormatException('Unknown block type: $type'),
     };
   }
 }
+
+int _flex(Map<dynamic, dynamic> map) => (map['flex'] as num?)?.toInt() ?? 1;
 
 /// Horizontal layout primitive — renders its child blocks side-by-side in
 /// a Row, each getting equal horizontal share. Used when two blocks (e.g.
 /// a pair of narrow reference tables) read more naturally alongside each
 /// other than stacked vertically.
 class RowBlock extends Block {
-  const RowBlock({required this.blocks});
+  const RowBlock({required this.blocks, super.flex});
 
   factory RowBlock.fromYaml(Map<dynamic, dynamic> map) => RowBlock(
         blocks: _mapList(map['blocks'], Block.fromYaml),
+        flex: _flex(map),
       );
 
   final List<Block> blocks;
+}
+
+/// Vertical layout primitive — mirror of [RowBlock].  Stacks child
+/// blocks in a column with the standard 6 px gap between them.  Used
+/// inside a [RowBlock] slot when the column needs to hold more than
+/// one logical row (e.g. a "Treat presumptively" header over a pair
+/// of "Order RDT" / "Order B/S" cells).
+class ColumnBlock extends Block {
+  const ColumnBlock({required this.blocks, super.flex});
+
+  factory ColumnBlock.fromYaml(Map<dynamic, dynamic> map) => ColumnBlock(
+        blocks: _mapList(map['blocks'], Block.fromYaml),
+        flex: _flex(map),
+      );
+
+  final List<Block> blocks;
+}
+
+/// Horizontal run of down-arrows — a layout primitive for bridging two
+/// stacked blocks in a flow-grid (e.g. between rows of a diagnostic
+/// matrix).  [count] is the number of evenly-spaced arrows across the
+/// block width; use `count: 4` under a 4-cell table row to visually link
+/// the cells above to the cells below.
+class ArrowsBlock extends Block {
+  const ArrowsBlock({
+    required this.count,
+    this.label,
+    this.length = 14,
+    this.direction = ArrowDirection.down,
+    this.inline = false,
+    super.flex,
+  });
+
+  factory ArrowsBlock.fromYaml(Map<dynamic, dynamic> map) => ArrowsBlock(
+        count: (map['count'] as num?)?.toInt() ?? 1,
+        label: map['label'] as String?,
+        length: (map['length'] as num?)?.toDouble() ?? 14,
+        direction: ArrowDirection.fromString(map['direction'] as String?),
+        inline: (map['inline'] as bool?) ?? false,
+        flex: _flex(map),
+      );
+
+  final int count;
+  final String? label;
+  final double length;
+  final ArrowDirection direction;
+
+  /// When true (down direction only), the label renders beside the
+  /// arrow instead of stacked above it — saves a line of vertical
+  /// space when the arrow is on its own row.
+  final bool inline;
+}
+
+enum ArrowDirection {
+  down,
+  right;
+
+  static ArrowDirection fromString(String? s) => switch (s) {
+        'right' => right,
+        _ => down,
+      };
+}
+
+/// Converging arrows — rendered as a short row of down-arrows at
+/// [sources] column positions, joined by a horizontal rule, then a
+/// single longer down-arrow descending from [targetCenter].  Used when
+/// several diagnostic outcomes funnel into a single next step and a
+/// straight column of arrows would misalign (e.g. p.22 malaria: three
+/// "treat" outcomes → half-width severe-signs box).
+///
+/// [columns] is the total grid width this block spans (0-indexed
+/// source/target column positions reference slots out of [columns]).
+class MergeArrowsBlock extends Block {
+  const MergeArrowsBlock({
+    required this.columns,
+    required this.sources,
+    required this.targetCenter,
+  });
+
+  factory MergeArrowsBlock.fromYaml(Map<dynamic, dynamic> map) =>
+      MergeArrowsBlock(
+        columns: (map['columns'] as num?)?.toInt() ?? 1,
+        sources: _intList(map['sources']),
+        targetCenter: (map['target_center'] as num?)?.toDouble() ?? 0,
+      );
+
+  final int columns;
+  final List<int> sources;
+
+  /// Column index (fractional allowed) where the single converged
+  /// down-arrow renders.  `2.5` means the arrow sits on the line
+  /// between cols 2 and 3 — useful for centering under a span.
+  final double targetCenter;
 }
 
 /// Markdown-authored text block. Most content lives here.
@@ -535,17 +648,26 @@ class ProseBlock extends Block {
     required this.markdown,
     this.title,
     this.highlight = false,
+    this.boxed = false,
+    super.flex,
   });
 
   factory ProseBlock.fromYaml(Map<dynamic, dynamic> map) => ProseBlock(
         title: map['title'] as String?,
         markdown: map['markdown'] as String,
         highlight: (map['highlight'] as bool?) ?? false,
+        boxed: (map['boxed'] as bool?) ?? false,
+        flex: _flex(map),
       );
 
   final String? title;
   final String markdown;
   final bool highlight;
+
+  /// When true, the prose body is wrapped in a rounded-border tile
+  /// (matching boxed-layout table cells) with centered text.  Used
+  /// when the block is a grid cell inside a RowBlock flow layout.
+  final bool boxed;
 }
 
 /// A flowchart in one of the supported variants.
@@ -689,17 +811,38 @@ class TableBlock extends Block {
     required this.rows,
     this.title,
     this.columns = const [],
+    this.layout = TableLayout.standard,
   });
 
   factory TableBlock.fromYaml(Map<dynamic, dynamic> map) => TableBlock(
         title: map['title'] as String?,
         columns: _stringList(map['columns']),
         rows: _mapList(map['rows'], TopicTableRow.fromYaml),
+        layout: TableLayout.fromString(map['layout'] as String?),
       );
 
   final String? title;
   final List<String> columns;
   final List<TopicTableRow> rows;
+  final TableLayout layout;
+}
+
+/// Table rendering modes.
+///
+/// [standard] is the default dense grid — outer border, 1 px dividers
+/// between cells, row-level severity tinting.  [boxed] renders each cell
+/// as its own rounded-border tile with a visible gap between them —
+/// useful when the table is acting as a flow-grid row (e.g. p.22 malaria
+/// diagnostic matrix) and the cells read as discrete steps, not as
+/// rows of comparable data.
+enum TableLayout {
+  standard,
+  boxed;
+
+  static TableLayout fromString(String? s) => switch (s) {
+        'boxed' => boxed,
+        _ => standard,
+      };
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -841,6 +984,12 @@ List<String> _stringList(dynamic raw) {
   if (raw is YamlList) return raw.map((e) => e as String).toList();
   if (raw is List) return raw.cast<String>();
   return const [];
+}
+
+List<int> _intList(dynamic raw) {
+  if (raw == null) return const [];
+  final list = raw is YamlList ? raw.toList() : raw as List;
+  return list.map((e) => (e as num).toInt()).toList();
 }
 
 List<T> _mapList<T>(
