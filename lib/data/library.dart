@@ -92,6 +92,13 @@ const library = <Book>[
         tags: ['malaria', 'infectious', 'tropical', 'artesunate'],
       ),
       BookTopic(
+        id: 'pb_malaria_complications',
+        title: 'Malaria — Complications & Co-infection',
+        subtitle: 'p.23 · AKI, anemia, Rx failure',
+        asset: 'assets/topics/pb_malaria_complications.yaml',
+        tags: ['malaria', 'complications', 'co-infection', 'aki', 'anemia'],
+      ),
+      BookTopic(
         id: 'pb_meningitis',
         title: 'Paediatric Meningitis Rx > 1 month',
         subtitle: 'p.55 · cascade flowchart',
