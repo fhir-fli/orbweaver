@@ -1,0 +1,32 @@
+# ============================================================
+# ProtocolBook p.23 (bottom) — Malaria: Severe Rx
+# Parenteral regimen ladder for inpatient / severe malaria.
+# ============================================================
+
+topic:
+  id: "pb-malaria-severe-meds"
+  title: "Malaria — Severe Rx"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malaria", "severe", "artesunate", "artemether", "quinine", "parenteral", "inpatient"]
+  category: "medical"
+  page_number: 23
+
+  blocks:
+
+    - type: "prose"
+      highlight: true
+      markdown: |-
+        **All parenteral regimens should be followed by 3 days of oral therapy once tolerating PO.**
+
+    - type: "prose"
+      markdown: |-
+        a) **1st line — Artesunate**
+          i) **3 mg/kg** < 20 kg · **2.4 mg/kg** ≥ 20 kg IV/IM at **0, 12, 24 h**
+          ii) Parenteral Rx ≥ 24 h, then daily until tolerating PO → switch to oral
+        b) **2nd line — Artemether**
+          i) **3.2 mg/kg IM** on admission
+          ii) **1.6 mg/kg IM** daily until able to take oral medication → switch to PO
+        c) **3rd line — Quinine**
+          i) Loading dose **20 mg/kg** — **DANGER:** rapid administration is dangerous. Mix with **10 mL/kg of 5 % dextrose** & run over **2–4 h**. **DO NOT exceed 5 mg/kg/hr.**  Followed by:
+          ii) **10 mg/kg** (run over 2 h) every **8 h**
+          iii) If no improvement in **48 h** → decrease to **10 mg/kg every 12 h**

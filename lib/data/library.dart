@@ -99,11 +99,18 @@ const library = <Book>[
         tags: ['malaria', 'complications', 'co-infection', 'aki', 'anemia'],
       ),
       BookTopic(
-        id: 'pb_malaria_meds',
-        title: 'Malaria — Medications',
-        subtitle: 'p.23–24 · severe + uncomplicated regimens',
-        asset: 'assets/topics/pb_malaria_meds.yaml',
-        tags: ['malaria', 'artesunate', 'coartem', 'quinine', 'dosing'],
+        id: 'pb_malaria_severe_meds',
+        title: 'Malaria — Severe Rx',
+        subtitle: 'p.23 · parenteral ladder (inpatient)',
+        asset: 'assets/topics/pb_malaria_severe_meds.yaml',
+        tags: ['malaria', 'severe', 'artesunate', 'artemether', 'quinine', 'parenteral'],
+      ),
+      BookTopic(
+        id: 'pb_malaria_uncomplicated',
+        title: 'Malaria — Uncomplicated Rx',
+        subtitle: 'p.24 · PO regimens (outpatient)',
+        asset: 'assets/topics/pb_malaria_uncomplicated.yaml',
+        tags: ['malaria', 'uncomplicated', 'coartem', 'outpatient', 'dosing'],
       ),
       BookTopic(
         id: 'pb_meningitis',
