@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:orbweaver/models/topic.dart';
 
 /// One source reference book on the shelf.
 ///
@@ -31,7 +30,6 @@ class BookTopic {
     required this.subtitle,
     required this.asset,
     this.tags = const [],
-    this.category = TopicCategory.medical,
   });
 
   final String id;
@@ -39,11 +37,6 @@ class BookTopic {
   final String subtitle;
   final String asset;
   final List<String> tags;
-
-  /// Category accent used on the TOC row.  Must match the `category:`
-  /// field in the topic's YAML so the row's leading bar matches the
-  /// topic banner once opened.
-  final TopicCategory category;
 
   bool matches(String query) {
     if (query.isEmpty) return true;

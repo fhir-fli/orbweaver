@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:orbweaver/data/topic_loader.dart';
 import 'package:orbweaver/models/book.dart';
+import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/screens/topic_frame.dart';
 import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
@@ -20,16 +22,36 @@ class _BookScreenState extends State<BookScreen> {
   String _query = '';
   bool _searchOpen = false;
 
+  /// Topic.category per topic id, loaded from each YAML on open.
+  /// Rows without an entry yet render a neutral placeholder bar.
+  Map<String, TopicCategory> _categories = {};
+
   @override
   void initState() {
     super.initState();
     LastState.recordBook(widget.book.id);
+    _loadCategories();
   }
 
   @override
   void dispose() {
     _searchCtrl.dispose();
     super.dispose();
+  }
+
+  Future<void> _loadCategories() async {
+    final entries = await Future.wait(
+      widget.book.topics.map((t) async {
+        try {
+          final topic = await loadTopicAsset(t.asset);
+          return MapEntry(t.id, topic.category);
+        } catch (_) {
+          return MapEntry(t.id, TopicCategory.medical);
+        }
+      }),
+    );
+    if (!mounted) return;
+    setState(() => _categories = Map.fromEntries(entries));
   }
 
   @override
@@ -87,6 +109,7 @@ class _BookScreenState extends State<BookScreen> {
                   ),
                   itemBuilder: (context, i) => _TopicRow(
                     topic: filtered[i],
+                    category: _categories[filtered[i].id],
                     onTap: () => _openTopic(filtered[i]),
                   ),
                 ),
@@ -108,15 +131,19 @@ class _BookScreenState extends State<BookScreen> {
 class _TopicRow extends StatelessWidget {
   const _TopicRow({
     required this.topic,
+    required this.category,
     required this.onTap,
   });
 
   final BookTopic topic;
+  final TopicCategory? category;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    final accent = TopicTheme.of(topic.category).header;
+    final accent = category == null
+        ? const Color(0xFFBDBDBD)
+        : TopicTheme.of(category!).header;
     return InkWell(
       onTap: onTap,
       child: Padding(

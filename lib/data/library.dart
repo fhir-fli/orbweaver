@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/book.dart';
-import 'package:orbweaver/models/topic.dart';
 
 /// The set of books on the shelf.
 ///
@@ -21,7 +20,6 @@ const library = <Book>[
         subtitle: 'p.12 · severity table',
         asset: 'assets/topics/pb_triage.yaml',
         tags: ['triage', 'pediatric', 'emergency'],
-        category: TopicCategory.universal,
       ),
       BookTopic(
         id: 'pb_pals',
@@ -29,7 +27,6 @@ const library = <Book>[
         subtitle: 'p.13 · PALS flowchart',
         asset: 'assets/topics/pb_pals.yaml',
         tags: ['pals', 'resuscitation', 'pediatric', 'cpr'],
-        category: TopicCategory.criticalCare,
       ),
       BookTopic(
         id: 'pb_cardiac_arrest',
@@ -37,7 +34,6 @@ const library = <Book>[
         subtitle: 'p.14 · ACLS branches',
         asset: 'assets/topics/pb_cardiac_arrest.yaml',
         tags: ['acls', 'resuscitation', 'adult', 'cpr'],
-        category: TopicCategory.criticalCare,
       ),
       BookTopic(
         id: 'pb_cpr_summary',
@@ -45,7 +41,6 @@ const library = <Book>[
         subtitle: 'p.15 · comparison table',
         asset: 'assets/topics/pb_cpr_summary.yaml',
         tags: ['cpr', 'resuscitation'],
-        category: TopicCategory.criticalCare,
       ),
       BookTopic(
         id: 'pb_weight_estimation',
@@ -53,7 +48,6 @@ const library = <Book>[
         subtitle: 'p.16 · age/height → weight',
         asset: 'assets/topics/pb_weight_estimation.yaml',
         tags: ['weight', 'pediatric', 'dosing'],
-        category: TopicCategory.universal,
       ),
       BookTopic(
         id: 'pb_vital_rates',
@@ -61,7 +55,6 @@ const library = <Book>[
         subtitle: 'p.17 · RR and HR tables',
         asset: 'assets/topics/pb_vital_rates.yaml',
         tags: ['vitals', 'respiratory rate', 'heart rate', 'pediatric'],
-        category: TopicCategory.universal,
       ),
       BookTopic(
         id: 'pb_bp_girls',
@@ -69,7 +62,6 @@ const library = <Book>[
         subtitle: 'p.18 · tap-to-zoom chart',
         asset: 'assets/topics/pb_bp_girls.yaml',
         tags: ['blood pressure', 'bp', 'pediatric', 'girls'],
-        category: TopicCategory.universal,
       ),
       BookTopic(
         id: 'pb_bp_boys',
@@ -77,7 +69,6 @@ const library = <Book>[
         subtitle: 'p.19 · tap-to-zoom chart',
         asset: 'assets/topics/pb_bp_boys.yaml',
         tags: ['blood pressure', 'bp', 'pediatric', 'boys'],
-        category: TopicCategory.universal,
       ),
       BookTopic(
         id: 'pb_resuscitation_meds',
@@ -85,7 +76,6 @@ const library = <Book>[
         subtitle: 'p.20 · pediatric & adult dosing',
         asset: 'assets/topics/pb_resuscitation_meds.yaml',
         tags: ['medications', 'resuscitation', 'dosing'],
-        category: TopicCategory.criticalCare,
       ),
       BookTopic(
         id: 'pb_io_line',
@@ -93,7 +83,6 @@ const library = <Book>[
         subtitle: 'p.21 · technique + illustration',
         asset: 'assets/topics/pb_io_line.yaml',
         tags: ['io', 'procedure', 'vascular access', 'shock'],
-        category: TopicCategory.criticalCare,
       ),
       BookTopic(
         id: 'pb_malaria',
@@ -145,7 +134,6 @@ const library = <Book>[
         subtitle: '2025-008 · severity flowchart',
         asset: 'assets/topics/wvems_2025_008.yaml',
         tags: ['shock', 'circulation', 'prehospital'],
-        category: TopicCategory.universal,
       ),
       BookTopic(
         id: 'wvems_drug_ref_a',
@@ -153,7 +141,6 @@ const library = <Book>[
         subtitle: 'p.120 · drug cards',
         asset: 'assets/topics/wvems_drug_ref_a.yaml',
         tags: ['drugs', 'medications', 'reference'],
-        category: TopicCategory.universal,
       ),
     ],
   ),
