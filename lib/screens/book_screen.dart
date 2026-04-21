@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/topic_frame.dart';
 import 'package:orbweaver/services/last_state.dart';
+import 'package:orbweaver/theme/topic_theme.dart';
 
 /// One book's table of contents. Topics are filtered live by the
 /// search bar (title / subtitle / tags).
@@ -86,7 +87,6 @@ class _BookScreenState extends State<BookScreen> {
                   ),
                   itemBuilder: (context, i) => _TopicRow(
                     topic: filtered[i],
-                    spineColor: widget.book.spineColor,
                     onTap: () => _openTopic(filtered[i]),
                   ),
                 ),
@@ -108,16 +108,15 @@ class _BookScreenState extends State<BookScreen> {
 class _TopicRow extends StatelessWidget {
   const _TopicRow({
     required this.topic,
-    required this.spineColor,
     required this.onTap,
   });
 
   final BookTopic topic;
-  final Color spineColor;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
+    final accent = TopicTheme.of(topic.category).header;
     return InkWell(
       onTap: onTap,
       child: Padding(
@@ -128,7 +127,7 @@ class _TopicRow extends StatelessWidget {
               width: 3,
               height: 32,
               decoration: BoxDecoration(
-                color: spineColor,
+                color: accent,
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
