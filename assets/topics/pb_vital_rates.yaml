@@ -12,7 +12,7 @@ topic:
   title: "Vital Rates — Percentiles by Age"
   last_reviewed: "pocketbook v1.7"
   tags: ["pediatric", "vital_signs", "respiratory_rate", "heart_rate"]
-  category: "medical"
+  category: "universal"
   page_number: 17
 
   blocks:

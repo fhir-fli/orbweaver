@@ -12,7 +12,7 @@ topic:
   title: "Resuscitation Medications"
   last_reviewed: "pocketbook v1.7"
   tags: ["medications", "resuscitation", "emergency", "dosing"]
-  category: "medical"
+  category: "critical_care"
   page_number: 20
 
   blocks:
