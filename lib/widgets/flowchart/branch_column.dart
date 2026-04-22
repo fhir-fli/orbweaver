@@ -65,12 +65,18 @@ class BranchColumn extends StatelessWidget {
       );
     }
 
+    final hasActions = branch.actions.isNotEmpty;
+    final hasCriteria = branch.criteria.isNotEmpty;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         _Label(branch.label, theme: theme, labelBg: palette?.labelBg),
-        if (branch.criteria.isNotEmpty)
-          _CriteriaBox(criteria: branch.criteria, theme: theme),
+        if (hasCriteria) _CriteriaBox(criteria: branch.criteria, theme: theme),
+        if (hasCriteria && hasActions)
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 2),
+            child: Center(child: FlowDownArrow(length: 10)),
+          ),
         for (final action in branch.actions)
           _ActionTile(action: action, theme: theme, tileBg: palette?.tileBg),
       ],
@@ -130,6 +136,8 @@ class _CriteriaBox extends StatelessWidget {
   }
 }
 
+/// Medication tile matching WVEMS format: full-height coloured provider
+/// band on the left (E/A/I), bold underlined drug name on the right.
 class _ActionTile extends StatelessWidget {
   const _ActionTile({
     required this.action,
@@ -144,34 +152,45 @@ class _ActionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
       decoration: BoxDecoration(
-        color: tileBg ?? theme.nodeFill,
-        border: Border.all(color: theme.nodeBorder),
+        color: tileBg ?? Colors.white,
+        border: Border.all(color: Colors.black87, width: 1),
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (action.providerLevel != ProviderLevel.any) ...[
-            _ProviderBadge(level: action.providerLevel),
-            const SizedBox(width: 4),
-          ],
-          Expanded(
-            child: Text(
-              action.text,
-              style: const TextStyle(
-                fontSize: 12,
-                height: 1.2,
-                fontWeight: FontWeight.w500,
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            if (action.providerLevel != ProviderLevel.any)
+              _ProviderBadge(level: action.providerLevel),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 6,
+                  vertical: 6,
+                ),
+                child: Center(
+                  child: Text(
+                    action.text,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      height: 1.1,
+                      fontWeight: FontWeight.w800,
+                      decoration: TextDecoration.underline,
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 }
 
+/// Full-height provider-level band. WVEMS convention:
+///   E = gold, A = green, I = blue.
 class _ProviderBadge extends StatelessWidget {
   const _ProviderBadge({required this.level});
 
@@ -180,26 +199,27 @@ class _ProviderBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final (letter, color) = switch (level) {
-      ProviderLevel.emt => ('E', const Color(0xFF2E7D32)),
-      ProviderLevel.intermediate => ('I', const Color(0xFFE65100)),
-      ProviderLevel.als => ('A', const Color(0xFFC62828)),
+      ProviderLevel.emt => ('E', const Color(0xFFF2C24A)),
+      ProviderLevel.intermediate => ('I', const Color(0xFF6FAADB)),
+      ProviderLevel.als => ('A', const Color(0xFF7BBF86)),
       ProviderLevel.any => ('', Colors.transparent),
     };
 
     return Container(
-      width: 16,
-      height: 16,
+      width: 26,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(3),
+        border: const Border(
+          right: BorderSide(color: Colors.black87, width: 1),
+        ),
       ),
       child: Text(
         letter,
         style: const TextStyle(
-          fontSize: 11,
+          fontSize: 16,
           fontWeight: FontWeight.w800,
-          color: Colors.white,
+          color: Colors.black87,
         ),
       ),
     );

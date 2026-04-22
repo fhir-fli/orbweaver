@@ -65,20 +65,38 @@ class SeverityFlowchartView extends StatelessWidget {
     }
 
     if (fc.decision != null) {
-      rows.add(
-        FlowNodeBox(
-          text: fc.decision!.text,
-          shape: fc.decision!.shape,
-          theme: theme,
-        ),
-      );
-      // No arrow here — fork row handles the split.
-    }
-
-    if (fc.branches.length > 1) {
-      rows.add(_ForkArrows(count: fc.branches.length));
+      // A diamond decision with multiple branches renders as a single
+      // DecisionHub that draws the diamond + L-shape arrows to each
+      // branch in one CustomPaint — arrows then originate at the
+      // diamond's actual points rather than a shared bottom tip.
+      if (fc.decision!.shape == NodeShape.diamond &&
+          fc.branches.length > 1) {
+        rows.add(
+          DecisionHub(
+            text: fc.decision!.text,
+            branchCount: fc.branches.length,
+          ),
+        );
+      } else {
+        rows.add(
+          FlowNodeBox(
+            text: fc.decision!.text,
+            shape: fc.decision!.shape,
+            theme: theme,
+          ),
+        );
+        if (fc.branches.length > 1) {
+          rows.add(_ForkArrows(count: fc.branches.length));
+        } else {
+          rows.add(const FlowDownArrow());
+        }
+      }
     } else {
-      rows.add(const FlowDownArrow());
+      if (fc.branches.length > 1) {
+        rows.add(_ForkArrows(count: fc.branches.length));
+      } else {
+        rows.add(const FlowDownArrow());
+      }
     }
 
     rows.add(_BranchesRow(branches: fc.branches, theme: theme));
@@ -134,8 +152,14 @@ class SeverityFlowchartView extends StatelessWidget {
           );
         }
       } else {
-        rows.add(const FlowDownArrow());
-        rows.add(_ConvergenceBox(node: fc.convergence!, theme: theme));
+        if (fc.branches.length == 3) {
+          rows.add(
+            _ConvergenceHub(node: fc.convergence!, theme: theme),
+          );
+        } else {
+          rows.add(_ParallelDownArrows(count: fc.branches.length));
+          rows.add(_ConvergenceBox(node: fc.convergence!, theme: theme));
+        }
         for (final exit in forwardExits) {
           rows.add(FlowDownArrow(label: exit.label));
         }
@@ -152,6 +176,7 @@ class SeverityFlowchartView extends StatelessWidget {
     }
 
     if (fc.doseTable.isNotEmpty) {
+      rows.add(const SizedBox(height: 18));
       rows.add(DoseTable(rows: fc.doseTable, theme: theme));
     }
 
@@ -252,11 +277,10 @@ class SeverityFlowchartView extends StatelessWidget {
 // Row helpers
 // ─────────────────────────────────────────────────────────────
 
-/// One centered down-arrow per branch column, so the fork looks like
-/// parallel arrows splitting into each branch rather than a single
-/// centered arrow.
-class _ForkArrows extends StatelessWidget {
-  const _ForkArrows({required this.count});
+/// N parallel vertical arrows — one centred in each branch column.
+/// Used between the branch row and the convergence "Consider" oval.
+class _ParallelDownArrows extends StatelessWidget {
+  const _ParallelDownArrows({required this.count});
 
   final int count;
 
@@ -267,11 +291,73 @@ class _ForkArrows extends StatelessWidget {
       children: [
         for (var i = 0; i < count; i++) ...[
           if (i > 0) const SizedBox(width: 4),
-          const Expanded(child: Center(child: FlowDownArrow())),
+          const Expanded(child: Center(child: FlowDownArrow(length: 18))),
         ],
       ],
     );
   }
+}
+
+/// Fan-out arrows radiating from a single point at top-center (the
+/// bottom tip of the centered decision diamond) to the column centre
+/// of each branch below. Drawn as a single [CustomPaint] so the lines
+/// are true diagonals — not stepped pixel-aligned paths.
+class _ForkArrows extends StatelessWidget {
+  const _ForkArrows({required this.count});
+
+  final int count;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 22,
+      child: CustomPaint(
+        size: Size.infinite,
+        painter: _FanArrowsPainter(count: count),
+      ),
+    );
+  }
+}
+
+class _FanArrowsPainter extends CustomPainter {
+  const _FanArrowsPainter({required this.count});
+
+  final int count;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final line = Paint()
+      ..color = Colors.black87
+      ..strokeWidth = 1.5
+      ..style = PaintingStyle.stroke;
+    final fill = Paint()
+      ..color = Colors.black87
+      ..style = PaintingStyle.fill;
+
+    final origin = Offset(size.width / 2, 0);
+    for (var i = 0; i < count; i++) {
+      // Branch column centres: 1/(2n), 3/(2n), …, (2n-1)/(2n) of width.
+      final frac = (2 * i + 1) / (2 * count);
+      final tip = Offset(size.width * frac, size.height);
+      // Shorten slightly so the triangular head sits at the tip.
+      final direction = tip - origin;
+      final length = direction.distance;
+      final unit = direction / length;
+      final shaftEnd = tip - unit * 6;
+      canvas.drawLine(origin, shaftEnd, line);
+      // Triangle head oriented along the line.
+      final perp = Offset(-unit.dy, unit.dx) * 4;
+      final head = Path()
+        ..moveTo(tip.dx, tip.dy)
+        ..lineTo(shaftEnd.dx + perp.dx, shaftEnd.dy + perp.dy)
+        ..lineTo(shaftEnd.dx - perp.dx, shaftEnd.dy - perp.dy)
+        ..close();
+      canvas.drawPath(head, fill);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_FanArrowsPainter old) => old.count != count;
 }
 
 /// Two equal-width children in a Row — so the column divisions line up
@@ -362,39 +448,177 @@ class _ConvergenceWithWaypointRow extends StatelessWidget {
 // Content boxes
 // ─────────────────────────────────────────────────────────────
 
+/// Three-branch convergence: centred stadium + L-arrows coming in from
+/// each branch column. Left arrow turns right into the stadium's left
+/// edge, right arrow mirrors, middle arrow drops straight into the top.
+///
+/// Arrows are drawn in a [CustomPaint] behind the stadium so any part of
+/// an arrow that would pass through the stadium is covered by its fill.
+class _ConvergenceHub extends StatelessWidget {
+  const _ConvergenceHub({required this.node, required this.theme});
+
+  final ConvergenceNode node;
+  final TopicTheme theme;
+
+  static const double _arrowExtension = 22;
+  static const double _stadiumWidthFactor = 0.55;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Stack(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const SizedBox(height: _arrowExtension),
+                Center(
+                  child: FractionallySizedBox(
+                    widthFactor: _stadiumWidthFactor,
+                    child: _ConvergenceBox(node: node, theme: theme),
+                  ),
+                ),
+              ],
+            ),
+            Positioned.fill(
+              child: IgnorePointer(
+                child: CustomPaint(
+                  painter: _ConvergenceArrowsPainter(
+                    arrowExtension: _arrowExtension,
+                    stadiumWidthFactor: _stadiumWidthFactor,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+}
+
+class _ConvergenceArrowsPainter extends CustomPainter {
+  const _ConvergenceArrowsPainter({
+    required this.arrowExtension,
+    required this.stadiumWidthFactor,
+  });
+
+  final double arrowExtension;
+  final double stadiumWidthFactor;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final line = Paint()
+      ..color = Colors.black87
+      ..strokeWidth = 1.5
+      ..style = PaintingStyle.stroke;
+    final fillPaint = Paint()
+      ..color = Colors.black87
+      ..style = PaintingStyle.fill;
+
+    final w = size.width;
+    final stadiumTop = arrowExtension;
+    final stadiumMidY = (stadiumTop + size.height) / 2;
+    final stadiumLeftEdge = w * (1 - stadiumWidthFactor) / 2;
+    final stadiumRightEdge = w - stadiumLeftEdge;
+
+    final leftBranchX = w / 6;
+    final midBranchX = w / 2;
+    final rightBranchX = 5 * w / 6;
+
+    void arrowHead(Offset tip, Offset unit) {
+      final perp = Offset(-unit.dy, unit.dx) * 4;
+      final base = tip - unit * 6;
+      final head = Path()
+        ..moveTo(tip.dx, tip.dy)
+        ..lineTo(base.dx + perp.dx, base.dy + perp.dy)
+        ..lineTo(base.dx - perp.dx, base.dy - perp.dy)
+        ..close();
+      canvas.drawPath(head, fillPaint);
+    }
+
+    // Centre — straight down into top of stadium.
+    final midPath = Path()
+      ..moveTo(midBranchX, 0)
+      ..lineTo(midBranchX, stadiumTop);
+    canvas.drawPath(midPath, line);
+    arrowHead(Offset(midBranchX, stadiumTop), const Offset(0, 1));
+
+    // Left — down from left column to stadium mid-height, then right
+    // into stadium's left edge.
+    final leftPath = Path()
+      ..moveTo(leftBranchX, 0)
+      ..lineTo(leftBranchX, stadiumMidY)
+      ..lineTo(stadiumLeftEdge, stadiumMidY);
+    canvas.drawPath(leftPath, line);
+    arrowHead(Offset(stadiumLeftEdge, stadiumMidY), const Offset(1, 0));
+
+    // Right — mirror of left.
+    final rightPath = Path()
+      ..moveTo(rightBranchX, 0)
+      ..lineTo(rightBranchX, stadiumMidY)
+      ..lineTo(stadiumRightEdge, stadiumMidY);
+    canvas.drawPath(rightPath, line);
+    arrowHead(Offset(stadiumRightEdge, stadiumMidY), const Offset(-1, 0));
+  }
+
+  @override
+  bool shouldRepaint(_ConvergenceArrowsPainter old) =>
+      old.arrowExtension != arrowExtension ||
+      old.stadiumWidthFactor != stadiumWidthFactor;
+}
+
+/// Pale green stadium matching the WVEMS "Consider" terminator. Bullets
+/// with a `link_id` render underlined to signal they're cross-links.
 class _ConvergenceBox extends StatelessWidget {
   const _ConvergenceBox({required this.node, required this.theme});
 
   final ConvergenceNode node;
   final TopicTheme theme;
 
+  static const Color _fill = Color(0xFFD5ECD6);
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
-        color: theme.nodeFill,
-        border: Border.all(color: theme.nodeBorder, width: 1.5),
+        color: _fill,
+        border: Border.all(color: Colors.black87, width: 1.5),
+        borderRadius: BorderRadius.circular(999),
       ),
       alignment: Alignment.center,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
             node.text,
             style: const TextStyle(
-              fontSize: 13,
+              fontSize: 14,
               fontWeight: FontWeight.w700,
             ),
           ),
           if (node.bullets.isNotEmpty) ...[
             const SizedBox(height: 2),
             for (final b in node.bullets)
-              Text(
-                '• ${b.text}',
-                style: const TextStyle(fontSize: 12, height: 1.2),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    const TextSpan(text: '• '),
+                    TextSpan(
+                      text: b.text,
+                      style: TextStyle(
+                        decoration: b.linkId != null
+                            ? TextDecoration.underline
+                            : null,
+                      ),
+                    ),
+                  ],
+                ),
+                style: const TextStyle(fontSize: 13, height: 1.2),
               ),
           ],
         ],
