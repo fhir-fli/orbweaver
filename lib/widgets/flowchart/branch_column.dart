@@ -160,8 +160,9 @@ class _ActionTile extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            if (action.providerLevel != ProviderLevel.any)
-              _ProviderBadge(level: action.providerLevel),
+            // Always show the badge column (gray placeholder for
+            // actions with no provider level) so columns line up.
+            _ProviderBadge(level: action.providerLevel),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(
@@ -202,7 +203,7 @@ class _ProviderBadge extends StatelessWidget {
       ProviderLevel.emt => ('E', const Color(0xFFF2C24A)),
       ProviderLevel.intermediate => ('I', const Color(0xFF6FAADB)),
       ProviderLevel.als => ('A', const Color(0xFF7BBF86)),
-      ProviderLevel.any => ('', Colors.transparent),
+      ProviderLevel.any => ('', const Color(0xFFE0E0E0)),
     };
 
     return Container(

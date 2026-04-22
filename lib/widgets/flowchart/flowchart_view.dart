@@ -152,9 +152,13 @@ class SeverityFlowchartView extends StatelessWidget {
           );
         }
       } else {
-        if (fc.branches.length == 3) {
+        if (fc.branches.length == 2 || fc.branches.length == 3) {
           rows.add(
-            _ConvergenceHub(node: fc.convergence!, theme: theme),
+            _ConvergenceHub(
+              node: fc.convergence!,
+              theme: theme,
+              branchCount: fc.branches.length,
+            ),
           );
         } else {
           rows.add(_ParallelDownArrows(count: fc.branches.length));
@@ -455,55 +459,65 @@ class _ConvergenceWithWaypointRow extends StatelessWidget {
 /// Arrows are drawn in a [CustomPaint] behind the stadium so any part of
 /// an arrow that would pass through the stadium is covered by its fill.
 class _ConvergenceHub extends StatelessWidget {
-  const _ConvergenceHub({required this.node, required this.theme});
+  const _ConvergenceHub({
+    required this.node,
+    required this.theme,
+    required this.branchCount,
+  });
 
   final ConvergenceNode node;
   final TopicTheme theme;
+  final int branchCount;
 
   static const double _arrowExtension = 22;
-  static const double _stadiumWidthFactor = 0.55;
+
+  /// Narrower stadium for 2-branch convergence so the L-arrows from
+  /// each column have room for a visible horizontal segment. 3-branch
+  /// uses a wider stadium so the centre arrow can land cleanly on top.
+  static double _stadiumWidthFactorFor(int branchCount) =>
+      branchCount == 2 ? 0.4 : 0.55;
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        return Stack(
+    final widthFactor = _stadiumWidthFactorFor(branchCount);
+    return Stack(
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                const SizedBox(height: _arrowExtension),
-                Center(
-                  child: FractionallySizedBox(
-                    widthFactor: _stadiumWidthFactor,
-                    child: _ConvergenceBox(node: node, theme: theme),
-                  ),
-                ),
-              ],
-            ),
-            Positioned.fill(
-              child: IgnorePointer(
-                child: CustomPaint(
-                  painter: _ConvergenceArrowsPainter(
-                    arrowExtension: _arrowExtension,
-                    stadiumWidthFactor: _stadiumWidthFactor,
-                  ),
-                ),
+            const SizedBox(height: _arrowExtension),
+            Center(
+              child: FractionallySizedBox(
+                widthFactor: widthFactor,
+                child: _ConvergenceBox(node: node, theme: theme),
               ),
             ),
           ],
-        );
-      },
+        ),
+        Positioned.fill(
+          child: IgnorePointer(
+            child: CustomPaint(
+              painter: _ConvergenceArrowsPainter(
+                branchCount: branchCount,
+                arrowExtension: _arrowExtension,
+                stadiumWidthFactor: widthFactor,
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
 
 class _ConvergenceArrowsPainter extends CustomPainter {
   const _ConvergenceArrowsPainter({
+    required this.branchCount,
     required this.arrowExtension,
     required this.stadiumWidthFactor,
   });
 
+  final int branchCount;
   final double arrowExtension;
   final double stadiumWidthFactor;
 
@@ -523,10 +537,6 @@ class _ConvergenceArrowsPainter extends CustomPainter {
     final stadiumLeftEdge = w * (1 - stadiumWidthFactor) / 2;
     final stadiumRightEdge = w - stadiumLeftEdge;
 
-    final leftBranchX = w / 6;
-    final midBranchX = w / 2;
-    final rightBranchX = 5 * w / 6;
-
     void arrowHead(Offset tip, Offset unit) {
       final perp = Offset(-unit.dy, unit.dx) * 4;
       final base = tip - unit * 6;
@@ -538,26 +548,33 @@ class _ConvergenceArrowsPainter extends CustomPainter {
       canvas.drawPath(head, fillPaint);
     }
 
-    // Centre — straight down into top of stadium.
-    final midPath = Path()
-      ..moveTo(midBranchX, 0)
-      ..lineTo(midBranchX, stadiumTop);
-    canvas.drawPath(midPath, line);
-    arrowHead(Offset(midBranchX, stadiumTop), const Offset(0, 1));
+    final centers = [
+      for (var i = 0; i < branchCount; i++)
+        w * (2 * i + 1) / (2 * branchCount),
+    ];
 
-    // Left — down from left column to stadium mid-height, then right
-    // into stadium's left edge.
+    // Centre arrow only when a column sits directly above the stadium
+    // (odd branch count).
+    if (branchCount == 3) {
+      final midPath = Path()
+        ..moveTo(centers[1], 0)
+        ..lineTo(centers[1], stadiumTop);
+      canvas.drawPath(midPath, line);
+      arrowHead(Offset(centers[1], stadiumTop), const Offset(0, 1));
+    }
+
+    // Left — down to stadium mid-height, then right into the left edge.
     final leftPath = Path()
-      ..moveTo(leftBranchX, 0)
-      ..lineTo(leftBranchX, stadiumMidY)
+      ..moveTo(centers.first, 0)
+      ..lineTo(centers.first, stadiumMidY)
       ..lineTo(stadiumLeftEdge, stadiumMidY);
     canvas.drawPath(leftPath, line);
     arrowHead(Offset(stadiumLeftEdge, stadiumMidY), const Offset(1, 0));
 
-    // Right — mirror of left.
+    // Right — mirror.
     final rightPath = Path()
-      ..moveTo(rightBranchX, 0)
-      ..lineTo(rightBranchX, stadiumMidY)
+      ..moveTo(centers.last, 0)
+      ..lineTo(centers.last, stadiumMidY)
       ..lineTo(stadiumRightEdge, stadiumMidY);
     canvas.drawPath(rightPath, line);
     arrowHead(Offset(stadiumRightEdge, stadiumMidY), const Offset(-1, 0));
@@ -565,6 +582,7 @@ class _ConvergenceArrowsPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_ConvergenceArrowsPainter old) =>
+      old.branchCount != branchCount ||
       old.arrowExtension != arrowExtension ||
       old.stadiumWidthFactor != stadiumWidthFactor;
 }

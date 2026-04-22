@@ -113,8 +113,8 @@ class DiamondNode extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: compact ? 44 : 56,
-              vertical: 10,
+              horizontal: compact ? 28 : 56,
+              vertical: compact ? 8 : 10,
             ),
             child: Text(
               text,
@@ -151,13 +151,24 @@ class DecisionHub extends StatelessWidget {
   final String text;
   final int branchCount;
 
-  static const double _diamondWidthFactor = 0.55;
   static const double _arrowExtension = 28;
+
+  /// Narrower diamond for 2-branch flows leaves room for visible L-shape
+  /// arrow segments between the diamond's side points and the branch
+  /// column centres. 3-branch flows use a wider diamond so the centre
+  /// arrow has somewhere to exit from.
+  static double diamondWidthFactorFor(int branchCount) =>
+      branchCount == 2 ? 0.4 : 0.55;
 
   @override
   Widget build(BuildContext context) {
-    final diamondHeight = DiamondNode.heightFor();
+    // Narrower diamonds (2-branch) have less horizontal room for the
+    // inscribed text band — use the tighter compact padding so short
+    // decision prompts like "Severity?" don't wrap.
+    final compact = branchCount == 2;
+    final diamondHeight = DiamondNode.heightFor(compact: compact);
     final totalHeight = diamondHeight + _arrowExtension;
+    final widthFactor = diamondWidthFactorFor(branchCount);
     return SizedBox(
       width: double.infinity,
       height: totalHeight,
@@ -169,7 +180,7 @@ class DecisionHub extends StatelessWidget {
               painter: _DecisionArrowsPainter(
                 branchCount: branchCount,
                 diamondHeight: diamondHeight,
-                diamondWidthFactor: _diamondWidthFactor,
+                diamondWidthFactor: widthFactor,
               ),
             ),
           ),
@@ -180,8 +191,8 @@ class DecisionHub extends StatelessWidget {
             height: diamondHeight,
             child: Center(
               child: FractionallySizedBox(
-                widthFactor: _diamondWidthFactor,
-                child: DiamondNode(text: text),
+                widthFactor: widthFactor,
+                child: DiamondNode(text: text, compact: compact),
               ),
             ),
           ),
@@ -233,17 +244,23 @@ class _DecisionArrowsPainter extends CustomPainter {
       canvas.drawPath(head, fill);
     }
 
-    if (branchCount == 3) {
-      final centers = [w / 6, w / 2, 5 * w / 6];
-      // Centre — straight down from bottom tip.
-      final centerPath = Path()
-        ..moveTo(midX, diamondHeight)
-        ..lineTo(centers[1], size.height);
-      drawArrow(centerPath, Offset(centers[1], size.height),
-          const Offset(0, 1));
-      // Left — from left point, horizontal to branch 1 column centre,
-      // then straight down.
-      final leftCornerX = centers[0];
+    if (branchCount == 2 || branchCount == 3) {
+      // Column centres: 1/(2n), 3/(2n), …
+      final centers = [
+        for (var i = 0; i < branchCount; i++) w * (2 * i + 1) / (2 * branchCount),
+      ];
+      // Centre arrow only exists for an odd branch count (the bottom
+      // tip of the diamond has a column directly below it).
+      if (branchCount == 3) {
+        final centerPath = Path()
+          ..moveTo(midX, diamondHeight)
+          ..lineTo(centers[1], size.height);
+        drawArrow(centerPath, Offset(centers[1], size.height),
+            const Offset(0, 1));
+      }
+      // Left — from left point, horizontal to left-most branch column
+      // centre, then straight down.
+      final leftCornerX = centers.first;
       final leftPath = Path()
         ..moveTo(leftPointX, diamondMidY)
         ..lineTo(leftCornerX, diamondMidY)
@@ -251,7 +268,7 @@ class _DecisionArrowsPainter extends CustomPainter {
       drawArrow(leftPath, Offset(leftCornerX, size.height),
           const Offset(0, 1));
       // Right — mirror of left.
-      final rightCornerX = centers[2];
+      final rightCornerX = centers.last;
       final rightPath = Path()
         ..moveTo(rightPointX, diamondMidY)
         ..lineTo(rightCornerX, diamondMidY)
