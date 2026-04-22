@@ -143,6 +143,13 @@ const library = <Book>[
         tags: ['pain', 'analgesia', 'fentanyl', 'ketamine'],
       ),
       BookTopic(
+        id: 'wvems_2026_022',
+        title: 'Nausea / Vomiting',
+        subtitle: '2026-022 · Zofran',
+        asset: 'assets/topics/wvems_2026_022.yaml',
+        tags: ['nausea', 'vomiting', 'emesis', 'zofran', 'ondansetron'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',
