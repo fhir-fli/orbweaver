@@ -932,18 +932,38 @@ class ImageBlock extends Block {
 // TOPIC (root)
 // ─────────────────────────────────────────────────────────────
 
-/// A clinical quick-reference topic — a stack of [Block]s plus metadata.
+/// One page within a [Topic]. Maps to a single source-PDF page.
+/// [pageNumber] is the printed page number on that page; surfaces in
+/// the header badge and the page-break divider when scrolling past it.
+class TopicPage {
+  const TopicPage({required this.blocks, this.pageNumber});
+
+  factory TopicPage.fromYaml(Map<dynamic, dynamic> map) => TopicPage(
+        pageNumber: map['page_number'] as int?,
+        blocks: _mapList(map['blocks'], Block.fromYaml),
+      );
+
+  final int? pageNumber;
+  final List<Block> blocks;
+}
+
+/// A clinical quick-reference topic — one or more [TopicPage]s.
+///
+/// YAML may express a topic in two forms:
+///   1. Top-level `pages:` (preferred) — each page has its own
+///      `page_number` and `blocks`.
+///   2. Top-level `blocks:` + `page_number` (legacy single-page form).
+///      Parsed into a single [TopicPage] for uniform rendering.
 class Topic {
   const Topic({
     required this.id,
     required this.title,
-    required this.blocks,
+    required this.pages,
     this.version,
     this.lastReviewed,
     this.tags = const [],
     this.aliases = const [],
     this.category = TopicCategory.universal,
-    this.pageNumber,
   });
 
   /// Parse from a YAML string (e.g., loaded from an asset file).
@@ -952,17 +972,27 @@ class Topic {
     return Topic.fromYaml(doc['topic'] as Map);
   }
 
-  factory Topic.fromYaml(Map<dynamic, dynamic> map) => Topic(
-        id: map['id'] as String,
-        title: map['title'] as String,
-        version: map['version'] as String?,
-        lastReviewed: map['last_reviewed'] as String?,
-        tags: _stringList(map['tags']),
-        aliases: _stringList(map['aliases']),
-        category: TopicCategory.fromString(map['category'] as String?),
-        pageNumber: map['page_number'] as int?,
-        blocks: _mapList(map['blocks'], Block.fromYaml),
-      );
+  factory Topic.fromYaml(Map<dynamic, dynamic> map) {
+    final rawPages = map['pages'];
+    final pages = rawPages != null
+        ? _mapList(rawPages, TopicPage.fromYaml)
+        : <TopicPage>[
+            TopicPage(
+              pageNumber: map['page_number'] as int?,
+              blocks: _mapList(map['blocks'], Block.fromYaml),
+            ),
+          ];
+    return Topic(
+      id: map['id'] as String,
+      title: map['title'] as String,
+      version: map['version'] as String?,
+      lastReviewed: map['last_reviewed'] as String?,
+      tags: _stringList(map['tags']),
+      aliases: _stringList(map['aliases']),
+      category: TopicCategory.fromString(map['category'] as String?),
+      pages: pages,
+    );
+  }
 
   final String id;
   final String title;
@@ -971,8 +1001,15 @@ class Topic {
   final List<String> tags;
   final List<String> aliases;
   final TopicCategory category;
-  final int? pageNumber;
-  final List<Block> blocks;
+  final List<TopicPage> pages;
+
+  /// First page's [TopicPage.pageNumber]. Convenience for places that
+  /// only need the topic's starting page number (e.g., TOC subtitles).
+  int? get pageNumber => pages.isNotEmpty ? pages.first.pageNumber : null;
+
+  /// Flattened blocks across all pages. Retained so callers that don't
+  /// care about page boundaries (tests, search indexing) keep working.
+  List<Block> get blocks => [for (final p in pages) ...p.blocks];
 }
 
 // ─────────────────────────────────────────────────────────────

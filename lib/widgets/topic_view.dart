@@ -10,86 +10,85 @@ import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
 
 /// Top-level renderer for a [Topic].
 ///
-/// Renders a category-coloured header followed by a vertical stack of
-/// block renderers (one per [Block] in [Topic.blocks]). Every block type
-/// has a concrete case — the sealed [Block] hierarchy guarantees this
-/// switch stays exhaustive.
+/// Renders each [TopicPage] in order, separated by a subtle divider
+/// carrying the next page's printed page number. [pageKeys] is attached
+/// to each page's container so [TopicFrame] can measure page positions
+/// for the sticky page-number badge in the app bar.
 class TopicView extends StatelessWidget {
-  const TopicView({required this.topic, super.key});
+  const TopicView({
+    required this.topic,
+    this.pageKeys = const [],
+    super.key,
+  });
 
   final Topic topic;
+
+  /// One key per entry in [Topic.pages]. Pass an empty list to skip
+  /// key attachment (e.g., when the caller doesn't track scroll).
+  final List<GlobalKey> pageKeys;
 
   @override
   Widget build(BuildContext context) {
     final theme = TopicTheme.of(topic.category);
     return ColoredBox(
       color: Colors.white,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          _TopicHeader(topic: topic, theme: theme),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                for (final block in topic.blocks)
-                  _BlockRenderer(block: block, theme: theme),
-              ],
-            ),
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            for (var i = 0; i < topic.pages.length; i++)
+              KeyedSubtree(
+                key: i < pageKeys.length ? pageKeys[i] : null,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    // Divider is inside page i's keyed subtree (for i > 0)
+                    // so the key's top == divider top. The header badge
+                    // flips to page i as soon as the divider reaches the
+                    // viewport top.
+                    if (i > 0)
+                      _PageBreak(pageNumber: topic.pages[i].pageNumber),
+                    for (final block in topic.pages[i].blocks)
+                      _BlockRenderer(block: block, theme: theme),
+                  ],
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
 }
 
-class _TopicHeader extends StatelessWidget {
-  const _TopicHeader({required this.topic, required this.theme});
+/// Visual break between two pages of the same topic. Renders as hairline
+/// rules on either side of the next page's number.
+class _PageBreak extends StatelessWidget {
+  const _PageBreak({required this.pageNumber});
 
-  final Topic topic;
-  final TopicTheme theme;
+  final int? pageNumber;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 28,
-      padding: const EdgeInsets.symmetric(horizontal: 6),
-      color: theme.header,
-      alignment: Alignment.centerLeft,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Row(
         children: [
-          if (topic.pageNumber != null) ...[
-            Container(
-              width: 24,
-              height: 22,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(3),
-              ),
-              child: Text(
-                '${topic.pageNumber}',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w800,
-                  color: theme.header,
-                ),
+          const Expanded(child: Divider(color: Colors.black26, height: 1)),
+          if (pageNumber != null) ...[
+            const SizedBox(width: 10),
+            Text(
+              'Page $pageNumber',
+              style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: Colors.black54,
+                letterSpacing: 0.5,
               ),
             ),
             const SizedBox(width: 10),
           ],
-          Expanded(
-            child: Text(
-              topic.title,
-              style: const TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-                color: Colors.white,
-              ),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
+          const Expanded(child: Divider(color: Colors.black26, height: 1)),
         ],
       ),
     );
