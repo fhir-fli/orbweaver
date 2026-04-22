@@ -136,6 +136,13 @@ const library = <Book>[
         tags: ['shock', 'circulation', 'prehospital'],
       ),
       BookTopic(
+        id: 'wvems_2026_020',
+        title: 'Pain',
+        subtitle: '2026-020 · analgesia ladder',
+        asset: 'assets/topics/wvems_2026_020.yaml',
+        tags: ['pain', 'analgesia', 'fentanyl', 'ketamine'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',

@@ -1,0 +1,173 @@
+# ============================================================
+# WVEMS 2026 Protocol 20 — Pain
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-020"
+  version: "v260101"
+  title: "Pain"
+  last_reviewed: "Oct 2025"
+  tags: ["pain", "analgesia", "fentanyl", "ketamine", "tylenol", "ibuprofen", "toradol"]
+  aliases:
+    - "HA"
+    - "Headache"
+    - "Back Pain"
+    - "Toothache"
+    - "Migraine"
+    - "Fibromyalgia"
+  category: "universal"
+
+  pages:
+
+  - page_number: 20
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: "Injury or Discomfort"
+        shape: "stadium"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "mild"
+          label: "Mild"
+          criteria:
+            - "Minimal Distress"
+            - "Normal Pulse"
+          actions:
+            - provider_level: "E"
+              text: "Tylenol"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "Ibuprofen"
+              kind: "medication_administration"
+
+        - id: "moderate"
+          label: "Moderate"
+          criteria:
+            - "Some Distress"
+            - "Mild Tachycardia"
+          actions:
+            - provider_level: "E"
+              text: "Tylenol"
+              kind: "medication_administration"
+            - provider_level: "A"
+              text: "Toradol"
+              kind: "medication_administration"
+
+        - id: "severe"
+          label: "Severe"
+          criteria:
+            - "Obvious Distress"
+            - "Elevated Vitals"
+          actions:
+            - provider_level: "A"
+              text: "Fentanyl"
+              kind: "medication_administration"
+            - provider_level: "I"
+              text: "Ketamine"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "rounded_rectangle"
+        bullets:
+          - text: "Splinting"
+          - text: "Nausea"
+            link_id: "wvems-2026-022"
+          - text: "Underlying Cause"
+
+      dose_table:
+        - drug: "Tylenol"
+          dose: "1,000 mg"
+          route: "PO, IV/IO"
+          frequency: "x1"
+          population: "adult"
+        - drug: "Ibuprofen"
+          dose: "600 mg"
+          route: "PO"
+          frequency: "x1"
+          population: "adult"
+        - drug: "Toradol"
+          dose: "15 mg"
+          route: "IV/IO, IM/IN"
+          frequency: "x1"
+          population: "adult"
+        - drug: "Fentanyl"
+          dose: "50–100 mcg"
+          route: "IV/IO, IM/IN"
+          frequency: "Q 5 min x4"
+          population: "adult"
+        - drug: "Ketamine"
+          dose: "20 mg"
+          route: "IV/IO, IM/IN"
+          frequency: "Q 15 min x2"
+          population: "adult"
+
+  - page_number: 21
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Prose blocks (notes page)
+    # ────────────────────────────────────────────────
+
+    - type: "prose"
+      title: "Pain Imperatives"
+      highlight: true
+      markdown: |
+        - EMS pain control is indicated for **recent injury** or **sudden pain** like:
+          - Major trauma, obvious fractures, acute abdominal or chest pain
+        - Pain meds (even PO) are **beneficial despite short transport times**.
+        - Use **weight-based peds dosing** for small adults under 110 lbs (50 kg).
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Tylenol®** (Acetaminophen): avoid if end-stage liver disease.
+          - **E** may only give PO — use OTC tabs, caps, powder, or liquid.
+          - **A** may give PO or IV/IO — for IV/IO, give slowly over 10 min.
+        - **Ibuprofen** (Advil®, Motrin®): avoid if active GI bleeding.
+        - **Toradol®** (Ketorolac): avoid if active GI bleeding.
+        - **Fentanyl** (Sublimaze®): use judgement, target **0.5–1 mcg/kg**.
+          - Start lower (50 mcg) for narcotic-naive and/or smaller patients.
+        - **Ketamine** (Ketalar®):
+          - IM/IN use: give as undiluted bolus.
+          - IV/IO use: dilute in NS and give slowly over 10 min.
+        - May give eye drops for abrasions or welder's flash (UV keratitis):
+          - **E** Tetracaine (0.5 % Ophthalmic) — 1–2 gtt into affected eye.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Tylenol and Ibuprofen are good for **sub-acute pain** like:
+          - Toothache, headache (migraine), sciatica, fibromyalgia, etc.
+          - Avoid **Fentanyl** and **Ketamine** for sub-acute pain.
+        - Pain is subjective. May try another medication if pain continues.
+          - Do **not** use Toradol with Ibuprofen (choose one or the other).
+        - Max daily dose: **Tylenol 3,000 mg** · **Ibuprofen 2,400 mg**.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        Use **Peds Reference** or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - EBG for Prehospital Pain — https://pubmed.ncbi.nlm.nih.gov/34928760/ [Ver: 1/22]
+        - Medscape Pain — https://emedicine.medscape.com/article/310834 [Ver: 7/24]
+        - Limmer D, O'Keefe MF. Emergency Care 15th ed. Chapter 14, 16.
+
+        NEMSIS: 9914051, 9914071, 9914131
