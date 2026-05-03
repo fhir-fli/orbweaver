@@ -129,6 +129,13 @@ const library = <Book>[
     spineColor: Color(0xFF1E4E8C),
     topics: [
       BookTopic(
+        id: 'wvems_2026_006',
+        title: 'Breathing',
+        subtitle: '2026-006 · 3-branch severity',
+        asset: 'assets/topics/wvems_2026_006.yaml',
+        tags: ['breathing', 'hypoxia', 'oxygen', 'bvm', 'pneumothorax'],
+      ),
+      BookTopic(
         id: 'wvems_2025_008',
         title: 'Circulation / Shock',
         subtitle: '2025-008 · severity flowchart',
