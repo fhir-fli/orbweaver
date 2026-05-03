@@ -1,0 +1,156 @@
+# ============================================================
+# WVEMS 2026 Protocol 30 — Dyspnea (SOB)
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-030"
+  version: "v260101"
+  title: "Dyspnea"
+  last_reviewed: "Jun 2025"
+  tags: ["dyspnea", "sob", "wheezing", "asthma", "copd", "chf", "albuterol", "nitro"]
+  aliases:
+    - "SOB"
+    - "Wheezing"
+    - "Asthma"
+    - "COPD"
+    - "CHF"
+    - "BRUE"
+  category: "medical"
+
+  pages:
+
+  - page_number: 30
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Cause-branched (not severity) — same schema, different decision label
+    # 3 branches: Reactive / Infectious / Overload
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: "Obvious Difficulty Breathing"
+        shape: "stadium"
+
+      decision:
+        text: "Cause?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "reactive"
+          label: "Reactive"
+          criteria:
+            - "COPD, Asthma"
+            - "Croup in Peds"
+          actions:
+            - provider_level: "E"
+              text: "Albuterol"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "Atrovent"
+              kind: "medication_administration"
+            - provider_level: "A"
+              text: "Epi Neb"
+              kind: "medication_administration"
+            - provider_level: "A"
+              text: "Decadron"
+              kind: "medication_administration"
+
+        - id: "infectious"
+          label: "Infectious"
+          criteria:
+            - "URI, Common Cold"
+            - "Pneumonia, Flu"
+          actions:
+            - text: "Position of Comfort"
+              kind: "procedure"
+
+        - id: "overload"
+          label: "Overload"
+          criteria:
+            - "Heart Failure, CHF"
+            - "Pulmonary Edema"
+          actions:
+            - provider_level: "A"
+              text: "Nitro"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Breathing, Circulation"
+            link_id: "wvems-2026-006"
+          - text: "Tachy, Brady, Allergy"
+          - text: "Pulmonary Edema"
+
+      dose_table:
+        - drug: "Albuterol"
+          dose: "2.5 mg"
+          route: "NEB"
+          frequency: "Q 5 min x4"
+          population: "adult"
+        - drug: "Atrovent"
+          dose: "0.5 mg"
+          route: "NEB"
+          frequency: "x1"
+          population: "adult"
+        - drug: "Decadron"
+          dose: "10 mg"
+          route: "IV/IO, IM"
+          frequency: "x1"
+          population: "adult"
+        - drug: "Epi Neb"
+          dose: "5 mg"
+          route: "NEB"
+          frequency: "x1"
+          population: "adult"
+        - drug: "Nitro"
+          dose: "0.4 mg"
+          route: "SL"
+          frequency: "Q 5 min x3"
+          population: "adult"
+
+  - page_number: 31
+    blocks:
+
+    - type: "prose"
+      title: "Dyspnea Imperatives"
+      highlight: true
+      markdown: |
+        - **Breathing** (O2 and NIPPV) should take precedence over meds.
+          - **SpO2** and **EtCO2** should be used extensively for dyspnea.
+        - Identify the **cause** before reaching for medications.
+          - The wrong med for the wrong cause may cause harm.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Albuterol** (Proventil®): bronchodilator for reactive disease.
+        - **Atrovent** (Ipratropium): give once with first Albuterol.
+        - **Epi Neb**: nebulised for upper airway swelling (croup, anaphylaxis).
+        - **Decadron** (Dexamethasone): single steroid dose to delay rebound.
+        - **Nitro** (Nitroglycerin): for pulmonary edema / heart failure dyspnea.
+          - Hold for SBP < 100 mmHg.
+          - Do **not** give within 24 h of PDE5 inhibitors.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Stridor and barking cough → **croup** — give **Epi Neb** + Decadron.
+        - Wheezing → **asthma/RAD** — Albuterol + Atrovent.
+        - Use **Peds Reference** for weight-based dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - GINA Asthma — https://ginasthma.org/ [Ver: 2024]
+        - GOLD COPD — https://goldcopd.org/ [Ver: 2024]
+        - Medscape Dyspnea — https://emedicine.medscape.com/article/2049439 [Ver: 4/24]
+
+        NEMSIS: 9914137, 9914139, 9914197, 9914221, 9914223
