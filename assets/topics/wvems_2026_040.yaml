@@ -30,11 +30,15 @@ topic:
     - type: "flowchart"
       variant: "severity"
 
-      entry_chain:
-        - text: "Ensure Provider SAFETY"
-          shape: "stadium"
-        - text: "Symptomatic Toxic Exposure or Overdose"
-          shape: "stadium"
+      warnings:
+        - type: "safety"
+          text: "Ensure Provider SAFETY"
+        - type: "caution"
+          text: "Use Caution if Patient Refusal"
+
+      entry:
+        text: "Symptomatic Toxic Exposure or Overdose"
+        shape: "stadium"
 
       decision:
         text: "Severity?"
