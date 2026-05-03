@@ -29,11 +29,13 @@ topic:
     - type: "flowchart"
       variant: "severity"
 
-      entry_chain:
-        - text: "Ensure Provider SAFETY"
-          shape: "stadium"
-        - text: "Convulsions or Posturing"
-          shape: "stadium"
+      warnings:
+        - type: "safety"
+          text: "Ensure Provider SAFETY"
+
+      entry:
+        text: "Convulsions or Posturing"
+        shape: "stadium"
 
       decision:
         text: "Active?"
