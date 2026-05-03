@@ -136,6 +136,13 @@ const library = <Book>[
         tags: ['shock', 'circulation', 'prehospital'],
       ),
       BookTopic(
+        id: 'wvems_2026_016',
+        title: 'Fever',
+        subtitle: '2026-016 · Tylenol / Ibuprofen',
+        asset: 'assets/topics/wvems_2026_016.yaml',
+        tags: ['fever', 'tylenol', 'ibuprofen', 'sepsis', 'infection'],
+      ),
+      BookTopic(
         id: 'wvems_2026_020',
         title: 'Pain',
         subtitle: '2026-020 · analgesia ladder',
