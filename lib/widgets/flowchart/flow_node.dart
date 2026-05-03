@@ -84,6 +84,13 @@ class FlowNodeBox extends StatelessWidget {
 const Color _wvemsDiamondFill = Color(0xFFF6BDAE); // salmon pink
 const Color _wvemsEntryStadium = Color(0xFFCDE0F1); // pale blue
 
+/// Horizontal gap between adjacent branch columns in a severity
+/// flowchart. Painters that draw arrows landing on column centres must
+/// account for this gap, otherwise their X positions are off by half
+/// the gap and the arrow ends look like they "step" instead of being
+/// straight continuations of the column-internal vertical line.
+const double kSeverityBranchGap = 4.0;
+
 /// Rhombus decision node. Exposed so [DecisionHub] can draw it inside
 /// its combined diamond+arrows layout. The inscribed text band spans
 /// the middle; horizontal padding keeps text off the sloping edges.
@@ -181,6 +188,7 @@ class DecisionHub extends StatelessWidget {
                 branchCount: branchCount,
                 diamondHeight: diamondHeight,
                 diamondWidthFactor: widthFactor,
+                columnGap: kSeverityBranchGap,
               ),
             ),
           ),
@@ -207,11 +215,13 @@ class _DecisionArrowsPainter extends CustomPainter {
     required this.branchCount,
     required this.diamondHeight,
     required this.diamondWidthFactor,
+    this.columnGap = 0,
   });
 
   final int branchCount;
   final double diamondHeight;
   final double diamondWidthFactor;
+  final double columnGap;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -245,9 +255,13 @@ class _DecisionArrowsPainter extends CustomPainter {
     }
 
     if (branchCount == 2 || branchCount == 3) {
-      // Column centres: 1/(2n), 3/(2n), …
+      // Column centres in the row below: each column slot has width
+      // (W − (n−1)·gap) / n, and column i sits at offset i·(slotW + gap).
+      // Centring on slotW/2 within each slot gives the painter the same
+      // X positions the column widgets actually occupy.
+      final slotW = (w - (branchCount - 1) * columnGap) / branchCount;
       final centers = [
-        for (var i = 0; i < branchCount; i++) w * (2 * i + 1) / (2 * branchCount),
+        for (var i = 0; i < branchCount; i++) i * (slotW + columnGap) + slotW / 2,
       ];
       // Centre arrow only exists for an odd branch count (the bottom
       // tip of the diamond has a column directly below it).
@@ -291,7 +305,8 @@ class _DecisionArrowsPainter extends CustomPainter {
   bool shouldRepaint(_DecisionArrowsPainter old) =>
       old.branchCount != branchCount ||
       old.diamondHeight != diamondHeight ||
-      old.diamondWidthFactor != diamondWidthFactor;
+      old.diamondWidthFactor != diamondWidthFactor ||
+      old.columnGap != columnGap;
 }
 
 class _DiamondPainter extends CustomPainter {

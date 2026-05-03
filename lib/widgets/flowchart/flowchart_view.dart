@@ -99,7 +99,17 @@ class SeverityFlowchartView extends StatelessWidget {
       }
     }
 
-    rows.add(_BranchesRow(branches: fc.branches, theme: theme));
+    // Branch columns extend their last action down to the bottom of the
+    // (intrinsic-height-stretched) row when the next row is a convergence
+    // hub — keeps the L-arrow visibly continuous from the action tile.
+    final branchesExtendDown = fc.convergence != null &&
+        !useLoopbackLayout &&
+        (fc.branches.length == 2 || fc.branches.length == 3);
+    rows.add(_BranchesRow(
+      branches: fc.branches,
+      theme: theme,
+      extendDown: branchesExtendDown,
+    ));
 
     // Asymmetric branch continuations: render continuation nodes below
     // the branches row, anchored in the source branch's column.
@@ -294,7 +304,7 @@ class _ParallelDownArrows extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         for (var i = 0; i < count; i++) ...[
-          if (i > 0) const SizedBox(width: 4),
+          if (i > 0) const SizedBox(width: kSeverityBranchGap),
           const Expanded(child: Center(child: FlowDownArrow(length: 18))),
         ],
       ],
@@ -378,7 +388,7 @@ class _TwoColumn extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(child: left),
-        const SizedBox(width: 4),
+        const SizedBox(width: kSeverityBranchGap),
         Expanded(child: right),
       ],
     );
@@ -386,10 +396,15 @@ class _TwoColumn extends StatelessWidget {
 }
 
 class _BranchesRow extends StatelessWidget {
-  const _BranchesRow({required this.branches, required this.theme});
+  const _BranchesRow({
+    required this.branches,
+    required this.theme,
+    this.extendDown = false,
+  });
 
   final List<TopicBranch> branches;
   final TopicTheme theme;
+  final bool extendDown;
 
   @override
   Widget build(BuildContext context) {
@@ -398,8 +413,14 @@ class _BranchesRow extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           for (var i = 0; i < branches.length; i++) ...[
-            if (i > 0) const SizedBox(width: 4),
-            Expanded(child: BranchColumn(branch: branches[i], theme: theme)),
+            if (i > 0) const SizedBox(width: kSeverityBranchGap),
+            Expanded(
+              child: BranchColumn(
+                branch: branches[i],
+                theme: theme,
+                extendDown: extendDown,
+              ),
+            ),
           ],
         ],
       ),
@@ -430,7 +451,7 @@ class _ConvergenceWithWaypointRow extends StatelessWidget {
           Expanded(
             child: _ConvergenceBox(node: convergence, theme: theme),
           ),
-          const SizedBox(width: 4),
+          const SizedBox(width: kSeverityBranchGap),
           Expanded(
             child: Row(
               children: [
@@ -501,6 +522,7 @@ class _ConvergenceHub extends StatelessWidget {
                 branchCount: branchCount,
                 arrowExtension: _arrowExtension,
                 stadiumWidthFactor: widthFactor,
+                columnGap: kSeverityBranchGap,
               ),
             ),
           ),
@@ -515,11 +537,13 @@ class _ConvergenceArrowsPainter extends CustomPainter {
     required this.branchCount,
     required this.arrowExtension,
     required this.stadiumWidthFactor,
+    this.columnGap = 0,
   });
 
   final int branchCount;
   final double arrowExtension;
   final double stadiumWidthFactor;
+  final double columnGap;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -548,9 +572,12 @@ class _ConvergenceArrowsPainter extends CustomPainter {
       canvas.drawPath(head, fillPaint);
     }
 
+    // Column centres must match `_BranchesRow`: each column slot is
+    // (W − (n−1)·gap)/n wide, with the gap between adjacent slots.
+    final slotW = (w - (branchCount - 1) * columnGap) / branchCount;
     final centers = [
       for (var i = 0; i < branchCount; i++)
-        w * (2 * i + 1) / (2 * branchCount),
+        i * (slotW + columnGap) + slotW / 2,
     ];
 
     // Centre arrow only when a column sits directly above the stadium
@@ -584,7 +611,8 @@ class _ConvergenceArrowsPainter extends CustomPainter {
   bool shouldRepaint(_ConvergenceArrowsPainter old) =>
       old.branchCount != branchCount ||
       old.arrowExtension != arrowExtension ||
-      old.stadiumWidthFactor != stadiumWidthFactor;
+      old.stadiumWidthFactor != stadiumWidthFactor ||
+      old.columnGap != columnGap;
 }
 
 /// Pale green stadium matching the WVEMS "Consider" terminator. Bullets

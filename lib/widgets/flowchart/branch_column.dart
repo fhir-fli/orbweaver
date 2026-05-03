@@ -41,11 +41,20 @@ class BranchColumn extends StatelessWidget {
   const BranchColumn({
     required this.branch,
     required this.theme,
+    this.extendDown = false,
     super.key,
   });
 
   final TopicBranch branch;
   final TopicTheme theme;
+
+  /// When true, append a trailing vertical line that fills any remaining
+  /// height in the column. Used when the row below is a convergence hub:
+  /// the IntrinsicHeight of `_BranchesRow` stretches every column to the
+  /// tallest sibling's height, so a column with fewer actions has empty
+  /// space above the hub. This fill line bridges that gap so the
+  /// convergence arrow visibly originates from the column's last action.
+  final bool extendDown;
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +76,7 @@ class BranchColumn extends StatelessWidget {
 
     final hasActions = branch.actions.isNotEmpty;
     final hasCriteria = branch.criteria.isNotEmpty;
+    final addTrailingFill = extendDown && branch.continuation == null;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -79,9 +89,43 @@ class BranchColumn extends StatelessWidget {
           ),
         for (final action in branch.actions)
           _ActionTile(action: action, theme: theme, tileBg: palette?.tileBg),
+        if (addTrailingFill) const Expanded(child: _TrailingFillLine()),
       ],
     );
   }
+}
+
+/// Vertical line that fills its slot — no arrow head. Used as the
+/// bottom of a [BranchColumn] to bridge the empty space between the
+/// last action tile and the convergence hub below, so the arrow looks
+/// continuous from the action down into the hub.
+class _TrailingFillLine extends StatelessWidget {
+  const _TrailingFillLine();
+
+  @override
+  Widget build(BuildContext context) {
+    return const CustomPaint(
+      size: Size.infinite,
+      painter: _TrailingFillLinePainter(),
+    );
+  }
+}
+
+class _TrailingFillLinePainter extends CustomPainter {
+  const _TrailingFillLinePainter();
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final cx = size.width / 2;
+    final paint = Paint()
+      ..color = Colors.black87
+      ..strokeWidth = 1.5
+      ..style = PaintingStyle.stroke;
+    canvas.drawLine(Offset(cx, 0), Offset(cx, size.height), paint);
+  }
+
+  @override
+  bool shouldRepaint(_TrailingFillLinePainter old) => false;
 }
 
 class _Label extends StatelessWidget {
@@ -169,17 +213,35 @@ class _ActionTile extends StatelessWidget {
                   horizontal: 6,
                   vertical: 6,
                 ),
-                child: Center(
-                  child: Text(
-                    action.text,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      height: 1.1,
-                      fontWeight: FontWeight.w800,
-                      decoration: TextDecoration.underline,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      action.text,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        height: 1.1,
+                        fontWeight: FontWeight.w800,
+                        decoration: TextDecoration.underline,
+                      ),
                     ),
-                  ),
+                    if (action.timing != null || action.condition != null)
+                      Text(
+                        [
+                          if (action.timing != null) action.timing!,
+                          if (action.condition != null) action.condition!,
+                        ].join(' · '),
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 11,
+                          height: 1.15,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.black54,
+                        ),
+                      ),
+                  ],
                 ),
               ),
             ),
