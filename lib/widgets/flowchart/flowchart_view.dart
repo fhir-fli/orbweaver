@@ -574,11 +574,13 @@ class _ConvergenceHub extends StatelessWidget {
 
   static const double _arrowExtension = 22;
 
-  /// Narrower stadium for 2-branch convergence so the L-arrows from
-  /// each column have room for a visible horizontal segment. 3-branch
-  /// uses a wider stadium so the centre arrow can land cleanly on top.
-  static double _stadiumWidthFactorFor(int branchCount) =>
-      branchCount == 2 ? 0.4 : 0.55;
+  /// Width factor of the centre stadium relative to the row.  We use
+  /// the same 0.55 for both 2- and 3-branch so the convergence has
+  /// enough horizontal room for typical bullet content (HTN, Seizure,
+  /// Overdose all overflow at narrower factors).  The L-arrows still
+  /// land cleanly because the painter computes stadium edges from
+  /// this factor.
+  static double _stadiumWidthFactorFor(int branchCount) => 0.55;
 
   @override
   Widget build(BuildContext context) {
@@ -709,12 +711,18 @@ class _ConvergenceBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Border radius 28 (not 999 / true stadium): a true semicircular
+    // end clips text whose width approaches the box width — and our
+    // narrow convergence stadium (0.4 / 0.55 of row width) regularly
+    // takes 2-3 lines of bullets that brush the curve. The 28 px
+    // radius reads as a soft pill while keeping a rectangular text
+    // safe-zone the full inner width.
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
       decoration: BoxDecoration(
         color: _fill,
         border: Border.all(color: Colors.black87, width: 1.5),
-        borderRadius: BorderRadius.circular(999),
+        borderRadius: BorderRadius.circular(28),
       ),
       alignment: Alignment.center,
       child: Column(
