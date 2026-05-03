@@ -150,6 +150,13 @@ const library = <Book>[
         tags: ['htn', 'hypertension', 'blood pressure', 'bp'],
       ),
       BookTopic(
+        id: 'wvems_2026_012',
+        title: 'Bradycardia',
+        subtitle: '2026-012 · Atropine / Pacing',
+        asset: 'assets/topics/wvems_2026_012.yaml',
+        tags: ['bradycardia', 'brady', 'atropine', 'pacing', 'heart block'],
+      ),
+      BookTopic(
         id: 'wvems_2026_016',
         title: 'Fever',
         subtitle: '2026-016 · Tylenol / Ibuprofen',
@@ -185,11 +192,25 @@ const library = <Book>[
         tags: ['chest pain', 'acs', 'stemi', 'mi', 'aspirin', 'nitro'],
       ),
       BookTopic(
+        id: 'wvems_2026_030',
+        title: 'Dyspnea',
+        subtitle: '2026-030 · cause-branched (Reactive / Infectious / Overload)',
+        asset: 'assets/topics/wvems_2026_030.yaml',
+        tags: ['dyspnea', 'sob', 'asthma', 'copd', 'chf', 'albuterol'],
+      ),
+      BookTopic(
         id: 'wvems_2026_032',
         title: 'Allergic Reaction',
         subtitle: '2026-032 · Epi / Albuterol / Benadryl',
         asset: 'assets/topics/wvems_2026_032.yaml',
         tags: ['allergy', 'anaphylaxis', 'epi', 'albuterol', 'benadryl'],
+      ),
+      BookTopic(
+        id: 'wvems_2026_038',
+        title: 'Diabetic',
+        subtitle: '2026-038 · Glucose / D10 / Glucagon',
+        asset: 'assets/topics/wvems_2026_038.yaml',
+        tags: ['diabetic', 'hypoglycemia', 'hyperglycemia', 'glucose', 'd10', 'dka'],
       ),
       BookTopic(
         id: 'wvems_2026_040',
@@ -204,6 +225,13 @@ const library = <Book>[
         subtitle: '2026-042 · Versed / Keppra / Mag',
         asset: 'assets/topics/wvems_2026_042.yaml',
         tags: ['seizure', 'epilepsy', 'convulsion', 'versed', 'midazolam', 'keppra'],
+      ),
+      BookTopic(
+        id: 'wvems_2026_046',
+        title: 'Behavioral',
+        subtitle: '2026-046 · Versed / Haldol',
+        asset: 'assets/topics/wvems_2026_046.yaml',
+        tags: ['behavioral', 'psych', 'agitation', 'versed', 'haldol', 'restraint'],
       ),
       BookTopic(
         id: 'wvems_drug_ref_a',
