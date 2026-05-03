@@ -384,6 +384,7 @@ class SeverityFlowchart {
     this.convergence,
     this.postConvergence,
     this.doseTable = const [],
+    this.warnings = const [],
   });
 
   factory SeverityFlowchart.fromYaml(Map<dynamic, dynamic> map) {
@@ -408,6 +409,7 @@ class SeverityFlowchart {
           ? FlowNode.fromYaml(map['post_convergence'] as Map)
           : null,
       doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
+      warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
     );
   }
 
@@ -417,6 +419,44 @@ class SeverityFlowchart {
   final ConvergenceNode? convergence;
   final FlowNode? postConvergence;
   final List<DoseRow> doseTable;
+
+  /// Side-of-flowchart warning callouts that flank the first entry node
+  /// (matching the WVEMS protocol PDF convention). One [safety] is
+  /// rendered as a red octagon on the left of the entry stadium; one
+  /// [caution] is rendered as a purple parallelogram on the right.
+  /// More than one of each is allowed but only the first of each type
+  /// is rendered.
+  final List<WarningCallout> warnings;
+}
+
+/// Side-of-flowchart warning callout. Two visual styles map from
+/// [WarningType] — see `lib/widgets/flowchart/warning_callouts.dart`.
+class WarningCallout {
+  const WarningCallout({required this.type, required this.text});
+
+  factory WarningCallout.fromYaml(Map<dynamic, dynamic> map) => WarningCallout(
+        type: WarningType.fromString(map['type'] as String?),
+        text: map['text'] as String,
+      );
+
+  final WarningType type;
+  final String text;
+}
+
+enum WarningType {
+  /// Red octagon (stop sign). For provider-safety warnings that come
+  /// before any patient assessment — e.g. scene safety, BSI.
+  safety,
+
+  /// Purple parallelogram. For caveats that change how a clinician
+  /// engages the patient — e.g. respect refusal, capacity assessment.
+  caution;
+
+  static WarningType fromString(String? s) => switch (s) {
+        'safety' => safety,
+        'caution' => caution,
+        _ => safety,
+      };
 }
 
 /// One step in a cascade flowchart.

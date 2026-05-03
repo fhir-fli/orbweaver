@@ -13,6 +13,7 @@ class FlowNodeBox extends StatelessWidget {
     required this.shape,
     required this.theme,
     this.compact = false,
+    this.fillWidth = false,
     super.key,
   });
 
@@ -21,17 +22,22 @@ class FlowNodeBox extends StatelessWidget {
   final TopicTheme theme;
   final bool compact;
 
+  /// When true, skip the default Center+FractionallySizedBox(0.55) wrap
+  /// applied to stadium and diamond shapes. Use when the node is
+  /// already inside a sized parent slot (e.g. flanked by warning
+  /// callouts) and should fill its slot rather than shrink to 55%.
+  final bool fillWidth;
+
   @override
   Widget build(BuildContext context) {
     if (shape == NodeShape.diamond) {
       // Diamond in isolation (no fan-out). DecisionHub handles the
       // diamond-with-arrows case; this branch is here for flowcharts
       // that use a diamond with a single exit arrow.
+      final diamond = DiamondNode(text: text, compact: compact);
+      if (fillWidth) return diamond;
       return Center(
-        child: FractionallySizedBox(
-          widthFactor: 0.55,
-          child: DiamondNode(text: text, compact: compact),
-        ),
+        child: FractionallySizedBox(widthFactor: 0.55, child: diamond),
       );
     }
 
@@ -48,7 +54,7 @@ class FlowNodeBox extends StatelessWidget {
 
     final padding = compact
         ? const EdgeInsets.symmetric(horizontal: 6, vertical: 2)
-        : const EdgeInsets.symmetric(horizontal: 8, vertical: 6);
+        : const EdgeInsets.symmetric(horizontal: 8, vertical: 4);
 
     final box = Container(
       width: double.infinity,
@@ -62,7 +68,7 @@ class FlowNodeBox extends StatelessWidget {
         text,
         textAlign: TextAlign.center,
         style: const TextStyle(
-          fontSize: 14,
+          fontSize: 16,
           height: 1.15,
           fontWeight: FontWeight.w700,
           color: Colors.black87,
@@ -70,7 +76,7 @@ class FlowNodeBox extends StatelessWidget {
       ),
     );
 
-    if (shape == NodeShape.stadium) {
+    if (shape == NodeShape.stadium && !fillWidth) {
       return Center(
         child: FractionallySizedBox(widthFactor: 0.55, child: box),
       );
@@ -104,7 +110,7 @@ class DiamondNode extends StatelessWidget {
   final String text;
   final bool compact;
 
-  static double heightFor({bool compact = false}) => compact ? 60 : 72;
+  static double heightFor({bool compact = false}) => compact ? 64 : 76;
 
   @override
   Widget build(BuildContext context) {
@@ -120,16 +126,16 @@ class DiamondNode extends StatelessWidget {
         child: Center(
           child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: compact ? 28 : 56,
-              vertical: compact ? 8 : 10,
+              horizontal: compact ? 24 : 44,
+              vertical: compact ? 6 : 8,
             ),
             child: Text(
               text,
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: compact ? 13 : 14,
+                fontSize: compact ? 15 : 16,
                 height: 1.15,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w800,
                 color: Colors.black87,
               ),
             ),

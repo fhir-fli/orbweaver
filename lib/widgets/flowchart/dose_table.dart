@@ -24,7 +24,7 @@ class DoseTable extends StatelessWidget {
           for (var i = 0; i < rows.length; i++)
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
               decoration: BoxDecoration(
                 color: i.isEven
                     ? theme.nodeFill
@@ -59,7 +59,7 @@ class _DoseRowView extends StatelessWidget {
           child: Text(
             row.drug,
             style: const TextStyle(
-              fontSize: 11,
+              fontSize: 12,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -68,14 +68,14 @@ class _DoseRowView extends StatelessWidget {
           flex: 3,
           child: Text(
             row.dose,
-            style: const TextStyle(fontSize: 11),
+            style: const TextStyle(fontSize: 12),
           ),
         ),
         Expanded(
           flex: 2,
           child: Text(
             row.route,
-            style: const TextStyle(fontSize: 11),
+            style: const TextStyle(fontSize: 12),
           ),
         ),
         Expanded(
@@ -83,7 +83,7 @@ class _DoseRowView extends StatelessWidget {
           child: Text(
             row.frequency,
             textAlign: TextAlign.right,
-            style: const TextStyle(fontSize: 11),
+            style: const TextStyle(fontSize: 12),
           ),
         ),
       ],

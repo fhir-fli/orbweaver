@@ -4,28 +4,34 @@ import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
 
 /// Severity palette for branches. Matches the WHO-IMCI colours used on
-/// table rows, but with a stronger label band for readability.
+/// table rows. Tile/header backgrounds are pale so bold text stays
+/// black-on-white-ish for legibility.
+///
+/// Severity tinting is opt-in: a branch only takes a palette when its
+/// YAML sets `severity:` explicitly. WVEMS protocols leave Mild /
+/// Moderate / Severe label bands uncoloured (just bold headers inside
+/// the criteria box) — see [BranchColumn.build].
 class _SeverityColors {
   const _SeverityColors({
-    required this.labelBg,
+    required this.headerBg,
     required this.tileBg,
   });
-  final Color labelBg;
+  final Color headerBg;
   final Color tileBg;
 }
 
 _SeverityColors? _paletteFor(RowSeverity s) => switch (s) {
       RowSeverity.none => null,
       RowSeverity.emergency => const _SeverityColors(
-          labelBg: Color(0xFFD32F2F),
+          headerBg: Color(0xFFFFCDD2),
           tileBg: Color(0xFFFFEBEE),
         ),
       RowSeverity.priority => const _SeverityColors(
-          labelBg: Color(0xFFF57C00),
+          headerBg: Color(0xFFFFE082),
           tileBg: Color(0xFFFFF8E1),
         ),
       RowSeverity.nonUrgent => const _SeverityColors(
-          labelBg: Color(0xFF388E3C),
+          headerBg: Color(0xFFC8E6C9),
           tileBg: Color(0xFFE8F5E9),
         ),
     };
@@ -66,7 +72,7 @@ class BranchColumn extends StatelessWidget {
     if (branch.continues) {
       return Column(
         children: [
-          _Label(branch.label, theme: theme, labelBg: palette?.labelBg),
+          _BranchHeader(label: branch.label, headerBg: palette?.headerBg),
           const SizedBox(height: 6),
           const Expanded(child: Center(child: FlowDownArrow(length: 36))),
           const SizedBox(height: 2),
@@ -80,8 +86,11 @@ class BranchColumn extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        _Label(branch.label, theme: theme, labelBg: palette?.labelBg),
-        if (hasCriteria) _CriteriaBox(criteria: branch.criteria, theme: theme),
+        _BranchHeaderBox(
+          label: branch.label,
+          criteria: branch.criteria,
+          headerBg: palette?.headerBg,
+        ),
         if (hasCriteria && hasActions)
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 2),
@@ -128,53 +137,105 @@ class _TrailingFillLinePainter extends CustomPainter {
   bool shouldRepaint(_TrailingFillLinePainter old) => false;
 }
 
-class _Label extends StatelessWidget {
-  const _Label(this.text, {required this.theme, this.labelBg});
+/// One bordered rounded box containing a centred bold header and the
+/// criteria bullets — matches the WVEMS PDF where Mild / Moderate /
+/// Severe sit *inside* the same box as the criteria, not in a separate
+/// coloured band above it. The header gets a [headerBg] tint only when
+/// the branch's `severity:` field is set in YAML.
+class _BranchHeaderBox extends StatelessWidget {
+  const _BranchHeaderBox({
+    required this.label,
+    required this.criteria,
+    this.headerBg,
+  });
 
-  final String text;
-  final TopicTheme theme;
-  final Color? labelBg;
+  final String label;
+  final List<String> criteria;
+  final Color? headerBg;
 
   @override
   Widget build(BuildContext context) {
+    final hasCriteria = criteria.isNotEmpty;
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 1),
-      color: labelBg ?? theme.branchAccent,
-      child: Text(
-        text,
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 12,
-          fontWeight: FontWeight.w700,
-          color: Colors.white,
-        ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border.all(color: Colors.black87, width: 1),
+        borderRadius: BorderRadius.circular(6),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+            decoration: BoxDecoration(
+              color: headerBg,
+              borderRadius: hasCriteria
+                  ? const BorderRadius.vertical(top: Radius.circular(5))
+                  : BorderRadius.circular(5),
+              border: hasCriteria
+                  ? const Border(
+                      bottom: BorderSide(color: Colors.black87, width: 1),
+                    )
+                  : null,
+            ),
+            child: Text(
+              label,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: Colors.black87,
+                height: 1.1,
+              ),
+            ),
+          ),
+          if (hasCriteria)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  for (final c in criteria)
+                    Text(
+                      '• $c',
+                      style: const TextStyle(fontSize: 12.5, height: 1.25),
+                    ),
+                ],
+              ),
+            ),
+        ],
       ),
     );
   }
 }
 
-class _CriteriaBox extends StatelessWidget {
-  const _CriteriaBox({required this.criteria, required this.theme});
+/// Standalone label used only by the `continues: true` branch shape
+/// (label + long down-arrow only, no criteria box).
+class _BranchHeader extends StatelessWidget {
+  const _BranchHeader({required this.label, this.headerBg});
 
-  final List<String> criteria;
-  final TopicTheme theme;
+  final String label;
+  final Color? headerBg;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+      padding: const EdgeInsets.symmetric(vertical: 3),
       decoration: BoxDecoration(
-        border: Border.all(color: theme.nodeBorder.withValues(alpha: 0.6)),
+        color: headerBg ?? Colors.white,
+        border: Border.all(color: Colors.black87, width: 1),
+        borderRadius: BorderRadius.circular(6),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          for (final c in criteria)
-            Text(
-              '• $c',
-              style: const TextStyle(fontSize: 11, height: 1.2),
-            ),
-        ],
+      child: Text(
+        label,
+        textAlign: TextAlign.center,
+        style: const TextStyle(
+          fontSize: 13,
+          fontWeight: FontWeight.w800,
+          color: Colors.black87,
+        ),
       ),
     );
   }
@@ -211,7 +272,7 @@ class _ActionTile extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 6,
-                  vertical: 6,
+                  vertical: 4,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -221,7 +282,7 @@ class _ActionTile extends StatelessWidget {
                       action.text,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                        fontSize: 14,
+                        fontSize: 16,
                         height: 1.1,
                         fontWeight: FontWeight.w800,
                         decoration: TextDecoration.underline,
@@ -235,7 +296,7 @@ class _ActionTile extends StatelessWidget {
                         ].join(' · '),
                         textAlign: TextAlign.center,
                         style: const TextStyle(
-                          fontSize: 11,
+                          fontSize: 12,
                           height: 1.15,
                           fontStyle: FontStyle.italic,
                           color: Colors.black54,

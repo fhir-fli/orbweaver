@@ -4,6 +4,7 @@ import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/branch_column.dart';
 import 'package:orbweaver/widgets/flowchart/dose_table.dart';
 import 'package:orbweaver/widgets/flowchart/flow_node.dart';
+import 'package:orbweaver/widgets/flowchart/warning_callouts.dart';
 
 /// Severity-variant flowchart renderer — grid-of-widgets layout.
 ///
@@ -54,9 +55,32 @@ class SeverityFlowchartView extends StatelessWidget {
 
     final rows = <Widget>[];
 
+    final safety = fc.warnings
+        .where((w) => w.type == WarningType.safety)
+        .cast<WarningCallout?>()
+        .firstWhere((_) => true, orElse: () => null);
+    final caution = fc.warnings
+        .where((w) => w.type == WarningType.caution)
+        .cast<WarningCallout?>()
+        .firstWhere((_) => true, orElse: () => null);
+    final hasWarnings = safety != null || caution != null;
+
     for (var i = 0; i < fc.entryChain.length; i++) {
       final node = fc.entryChain[i];
-      rows.add(FlowNodeBox(text: node.text, shape: node.shape, theme: theme));
+      // The first entry node gets the warning callouts as side flanks
+      // when any warnings are declared on the flowchart.
+      if (i == 0 && hasWarnings) {
+        rows.add(_EntryWithWarnings(
+          safety: safety,
+          caution: caution,
+          entry: node,
+          theme: theme,
+        ));
+      } else {
+        rows.add(
+          FlowNodeBox(text: node.text, shape: node.shape, theme: theme),
+        );
+      }
       // Skip the arrow after the very last pre-branch node — the fork row
       // below handles that transition (one arrow per branch column).
       final isLastPreBranch =
@@ -374,6 +398,64 @@ class _FanArrowsPainter extends CustomPainter {
   bool shouldRepaint(_FanArrowsPainter old) => old.count != count;
 }
 
+/// Top row of a flowchart that has warning callouts: a safety octagon
+/// on the left, the entry stadium centred, and a caution parallelogram
+/// on the right. Either flank may be null — the slot stays empty so
+/// the entry stays centred relative to the row.
+class _EntryWithWarnings extends StatelessWidget {
+  const _EntryWithWarnings({
+    required this.safety,
+    required this.caution,
+    required this.entry,
+    required this.theme,
+  });
+
+  final WarningCallout? safety;
+  final WarningCallout? caution;
+  final FlowNode entry;
+  final TopicTheme theme;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      // Breathing room between the AppBar (or whatever sits above) and
+      // the warning row — the rectangular callouts otherwise read as
+      // stuck to the header.
+      padding: const EdgeInsets.only(top: 10),
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Expanded(
+              flex: 22,
+              child: safety != null
+                  ? SafetyOctagon(text: safety!.text)
+                  : const SizedBox.shrink(),
+            ),
+            const SizedBox(width: 4),
+            Expanded(
+              flex: 56,
+              child: FlowNodeBox(
+                text: entry.text,
+                shape: entry.shape,
+                theme: theme,
+                fillWidth: true,
+              ),
+            ),
+            const SizedBox(width: 4),
+            Expanded(
+              flex: 22,
+              child: caution != null
+                  ? CautionCallout(text: caution!.text)
+                  : const SizedBox.shrink(),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 /// Two equal-width children in a Row — so the column divisions line up
 /// across the branch, exit-arrow, and post-convergence rows.
 class _TwoColumn extends StatelessWidget {
@@ -628,7 +710,7 @@ class _ConvergenceBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
       decoration: BoxDecoration(
         color: _fill,
         border: Border.all(color: Colors.black87, width: 1.5),
@@ -643,8 +725,8 @@ class _ConvergenceBox extends StatelessWidget {
           Text(
             node.text,
             style: const TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
+              fontSize: 16,
+              fontWeight: FontWeight.w800,
             ),
           ),
           if (node.bullets.isNotEmpty) ...[
@@ -664,7 +746,7 @@ class _ConvergenceBox extends StatelessWidget {
                     ),
                   ],
                 ),
-                style: const TextStyle(fontSize: 13, height: 1.2),
+                style: const TextStyle(fontSize: 14, height: 1.2),
               ),
           ],
         ],
