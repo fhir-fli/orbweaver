@@ -136,6 +136,13 @@ const library = <Book>[
         tags: ['shock', 'circulation', 'prehospital'],
       ),
       BookTopic(
+        id: 'wvems_2026_010',
+        title: 'Hypertension',
+        subtitle: '2026-010 · severity flowchart',
+        asset: 'assets/topics/wvems_2026_010.yaml',
+        tags: ['htn', 'hypertension', 'blood pressure', 'bp'],
+      ),
+      BookTopic(
         id: 'wvems_2026_016',
         title: 'Fever',
         subtitle: '2026-016 · Tylenol / Ibuprofen',
