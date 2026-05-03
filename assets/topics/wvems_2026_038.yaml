@@ -26,6 +26,10 @@ topic:
     - type: "flowchart"
       variant: "severity"
 
+      warnings:
+        - type: "caution"
+          text: "Use Caution if Patient Refusal"
+
       entry:
         text: "Abnormal Blood Glucose"
         shape: "stadium"
