@@ -150,6 +150,13 @@ const library = <Book>[
         tags: ['nausea', 'vomiting', 'emesis', 'zofran', 'ondansetron'],
       ),
       BookTopic(
+        id: 'wvems_2026_042',
+        title: 'Seizure',
+        subtitle: '2026-042 · Versed / Keppra / Mag',
+        asset: 'assets/topics/wvems_2026_042.yaml',
+        tags: ['seizure', 'epilepsy', 'convulsion', 'versed', 'midazolam', 'keppra'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',
