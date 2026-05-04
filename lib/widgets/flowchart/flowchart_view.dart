@@ -65,6 +65,11 @@ class SeverityFlowchartView extends StatelessWidget {
         .firstWhere((_) => true, orElse: () => null);
     final hasWarnings = safety != null || caution != null;
 
+    // Breathing room above the first flowchart object. _EntryWithWarnings
+    // adds its own top padding, so only insert this leading gap when the
+    // flowchart starts with a plain entry node.
+    if (!hasWarnings) rows.add(const SizedBox(height: 6));
+
     for (var i = 0; i < fc.entryChain.length; i++) {
       final node = fc.entryChain[i];
       // The first entry node gets the warning callouts as side flanks
@@ -214,7 +219,7 @@ class SeverityFlowchartView extends StatelessWidget {
     }
 
     if (fc.doseTable.isNotEmpty) {
-      rows.add(const SizedBox(height: 18));
+      rows.add(const SizedBox(height: 8));
       rows.add(DoseTable(rows: fc.doseTable, theme: theme));
     }
 
@@ -435,11 +440,28 @@ class _EntryWithWarnings extends StatelessWidget {
             const SizedBox(width: 4),
             Expanded(
               flex: 56,
-              child: FlowNodeBox(
-                text: entry.text,
-                shape: entry.shape,
-                theme: theme,
-                fillWidth: true,
+              // Stack the entry stadium on top of an extension line that
+              // fills the row's leftover height (when the warning
+              // callouts make the row taller than the stadium). The
+              // FlowDownArrow that follows _EntryWithWarnings provides
+              // the arrowhead — together they read as one continuous
+              // arrow originating at the stadium's bottom.
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  FlowNodeBox(
+                    text: entry.text,
+                    shape: entry.shape,
+                    theme: theme,
+                    fillWidth: true,
+                  ),
+                  Expanded(
+                    child: Center(
+                      child: Container(width: 1.5, color: Colors.black87),
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(width: 4),
@@ -572,15 +594,17 @@ class _ConvergenceHub extends StatelessWidget {
   final TopicTheme theme;
   final int branchCount;
 
-  static const double _arrowExtension = 22;
+  static const double _arrowExtension = 8;
 
-  /// Width factor of the centre stadium relative to the row.  We use
-  /// the same 0.55 for both 2- and 3-branch so the convergence has
-  /// enough horizontal room for typical bullet content (HTN, Seizure,
-  /// Overdose all overflow at narrower factors).  The L-arrows still
-  /// land cleanly because the painter computes stadium edges from
-  /// this factor.
-  static double _stadiumWidthFactorFor(int branchCount) => 0.55;
+  /// Width factor of the centre stadium relative to the row.  Narrow
+  /// (0.4 for 2-branch, 0.55 for 3-branch) so the L-arrows from each
+  /// branch column have a visible horizontal jog to the pill edge.
+  /// Wider stadiums squash the arrows into near-vertical stubs.
+  /// Bullets that don't fit on one line are allowed to wrap; the pill
+  /// auto-grows vertically because `_ConvergenceBox` is a shrink-wrap
+  /// Container around a `MainAxisSize.min` Column.
+  static double _stadiumWidthFactorFor(int branchCount) =>
+      branchCount >= 3 ? 0.55 : 0.4;
 
   @override
   Widget build(BuildContext context) {
@@ -718,27 +742,26 @@ class _ConvergenceBox extends StatelessWidget {
     // radius reads as a soft pill while keeping a rectangular text
     // safe-zone the full inner width.
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
       decoration: BoxDecoration(
         color: _fill,
         border: Border.all(color: Colors.black87, width: 1.5),
         borderRadius: BorderRadius.circular(28),
       ),
-      alignment: Alignment.center,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
             node.text,
+            textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w800,
             ),
           ),
           if (node.bullets.isNotEmpty) ...[
-            const SizedBox(height: 2),
+            const SizedBox(height: 8),
             for (final b in node.bullets)
               Text.rich(
                 TextSpan(
@@ -754,6 +777,7 @@ class _ConvergenceBox extends StatelessWidget {
                     ),
                   ],
                 ),
+                textAlign: TextAlign.center,
                 style: const TextStyle(fontSize: 14, height: 1.2),
               ),
           ],

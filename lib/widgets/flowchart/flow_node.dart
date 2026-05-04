@@ -77,8 +77,14 @@ class FlowNodeBox extends StatelessWidget {
     );
 
     if (shape == NodeShape.stadium && !fillWidth) {
+      // Multi-line entry stadiums (Shock, HTN, etc.) need a wider band
+      // so each authored line fits on its own row instead of wrapping
+      // further. Single-line stadiums stay at the narrower 0.55 to read
+      // as a focused visual cue above the branches.
+      final lineCount = text.split('\n').length;
+      final widthFactor = lineCount >= 2 ? 0.95 : 0.55;
       return Center(
-        child: FractionallySizedBox(widthFactor: 0.55, child: box),
+        child: FractionallySizedBox(widthFactor: widthFactor, child: box),
       );
     }
 
@@ -164,7 +170,7 @@ class DecisionHub extends StatelessWidget {
   final String text;
   final int branchCount;
 
-  static const double _arrowExtension = 28;
+  static const double _arrowExtension = 12;
 
   /// Narrower diamond for 2-branch flows leaves room for visible L-shape
   /// arrow segments between the diamond's side points and the branch
