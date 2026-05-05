@@ -86,7 +86,7 @@ class BranchColumn extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        _BranchHeaderBox(
+        BranchHeaderBox(
           label: branch.label,
           criteria: branch.criteria,
           headerBg: palette?.headerBg,
@@ -97,8 +97,8 @@ class BranchColumn extends StatelessWidget {
             child: Center(child: FlowDownArrow(length: 10)),
           ),
         for (final action in branch.actions)
-          _ActionTile(action: action, theme: theme, tileBg: palette?.tileBg),
-        if (addTrailingFill) const Expanded(child: _TrailingFillLine()),
+          ActionTile(action: action, theme: theme, tileBg: palette?.tileBg),
+        if (addTrailingFill) const Expanded(child: TrailingFillLine()),
       ],
     );
   }
@@ -108,8 +108,8 @@ class BranchColumn extends StatelessWidget {
 /// bottom of a [BranchColumn] to bridge the empty space between the
 /// last action tile and the convergence hub below, so the arrow looks
 /// continuous from the action down into the hub.
-class _TrailingFillLine extends StatelessWidget {
-  const _TrailingFillLine();
+class TrailingFillLine extends StatelessWidget {
+  const TrailingFillLine({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -142,11 +142,12 @@ class _TrailingFillLinePainter extends CustomPainter {
 /// Severe sit *inside* the same box as the criteria, not in a separate
 /// coloured band above it. The header gets a [headerBg] tint only when
 /// the branch's `severity:` field is set in YAML.
-class _BranchHeaderBox extends StatelessWidget {
-  const _BranchHeaderBox({
+class BranchHeaderBox extends StatelessWidget {
+  const BranchHeaderBox({
     required this.label,
     required this.criteria,
     this.headerBg,
+    super.key,
   });
 
   final String label;
@@ -243,11 +244,12 @@ class _BranchHeader extends StatelessWidget {
 
 /// Medication tile matching WVEMS format: full-height coloured provider
 /// band on the left (E/A/I), bold underlined drug name on the right.
-class _ActionTile extends StatelessWidget {
-  const _ActionTile({
+class ActionTile extends StatelessWidget {
+  const ActionTile({
     required this.action,
     required this.theme,
     this.tileBg,
+    super.key,
   });
 
   final TopicAction action;
@@ -282,7 +284,7 @@ class _ActionTile extends StatelessWidget {
                       action.text,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                        fontSize: 16,
+                        fontSize: 13,
                         height: 1.1,
                         fontWeight: FontWeight.w800,
                         decoration: TextDecoration.underline,

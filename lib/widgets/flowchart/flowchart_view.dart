@@ -512,24 +512,124 @@ class _BranchesRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IntrinsicHeight(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          for (var i = 0; i < branches.length; i++) ...[
-            if (i > 0) const SizedBox(width: kSeverityBranchGap),
-            Expanded(
-              child: BranchColumn(
-                branch: branches[i],
-                theme: theme,
-                extendDown: extendDown,
+    // If any branch is a `continues: true` arrow-only stub, fall back to
+    // the legacy single-Column-per-branch layout — those branches don't
+    // have criteria/action structure to align across.
+    if (branches.any((b) => b.continues)) {
+      return IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            for (var i = 0; i < branches.length; i++) ...[
+              if (i > 0) const SizedBox(width: kSeverityBranchGap),
+              Expanded(
+                child: BranchColumn(
+                  branch: branches[i],
+                  theme: theme,
+                  extendDown: extendDown,
+                ),
               ),
-            ),
+            ],
           ],
-        ],
-      ),
+        ),
+      );
+    }
+
+    // Split layout: one IntrinsicHeight Row of criteria boxes (equalises
+    // header heights across columns), then a row of small connector
+    // arrows, then an IntrinsicHeight Row of action stacks. This makes
+    // the first action tile in each branch land at the same Y, even
+    // when criteria text wraps differently between columns.
+    final paletteFor = _resolvePalettes(branches);
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              for (var i = 0; i < branches.length; i++) ...[
+                if (i > 0) const SizedBox(width: kSeverityBranchGap),
+                Expanded(
+                  child: BranchHeaderBox(
+                    label: branches[i].label,
+                    criteria: branches[i].criteria,
+                    headerBg: paletteFor[i]?.headerBg,
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
+        if (branches.any((b) => b.actions.isNotEmpty))
+          Row(
+            children: [
+              for (var i = 0; i < branches.length; i++) ...[
+                if (i > 0) const SizedBox(width: kSeverityBranchGap),
+                Expanded(
+                  child: branches[i].actions.isNotEmpty
+                      ? const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 2),
+                          child: Center(child: FlowDownArrow(length: 10)),
+                        )
+                      : const SizedBox.shrink(),
+                ),
+              ],
+            ],
+          ),
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              for (var i = 0; i < branches.length; i++) ...[
+                if (i > 0) const SizedBox(width: kSeverityBranchGap),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      for (final action in branches[i].actions)
+                        ActionTile(
+                          action: action,
+                          theme: theme,
+                          tileBg: paletteFor[i]?.tileBg,
+                        ),
+                      if (extendDown && branches[i].continuation == null)
+                        const Expanded(child: TrailingFillLine()),
+                    ],
+                  ),
+                ),
+              ],
+            ],
+          ),
+        ),
+      ],
     );
   }
+}
+
+/// Resolve each branch's optional severity palette into the (headerBg,
+/// tileBg) pair used by the renderer. Mirrors the logic inside
+/// [BranchColumn] so the split-row layout produces the same colours.
+List<({Color? headerBg, Color? tileBg})?> _resolvePalettes(
+  List<TopicBranch> branches,
+) {
+  return branches.map<({Color? headerBg, Color? tileBg})?>((b) {
+    return switch (b.severity) {
+      RowSeverity.none => null,
+      RowSeverity.emergency => (
+          headerBg: const Color(0xFFFFCDD2),
+          tileBg: const Color(0xFFFFEBEE),
+        ),
+      RowSeverity.priority => (
+          headerBg: const Color(0xFFFFE082),
+          tileBg: const Color(0xFFFFF8E1),
+        ),
+      RowSeverity.nonUrgent => (
+          headerBg: const Color(0xFFC8E6C9),
+          tileBg: const Color(0xFFE8F5E9),
+        ),
+    };
+  }).toList();
 }
 
 /// Convergence box on the left half + waypoint pill on the right half,
@@ -907,10 +1007,7 @@ class FlowDownArrow extends StatelessWidget {
         ],
       );
     }
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 1),
-      child: Center(child: content),
-    );
+    return Center(child: content);
   }
 }
 
@@ -951,10 +1048,7 @@ class FlowUpArrow extends StatelessWidget {
               ),
             ],
           );
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 1),
-      child: Center(child: content),
-    );
+    return Center(child: content);
   }
 }
 
