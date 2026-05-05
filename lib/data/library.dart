@@ -129,6 +129,13 @@ const library = <Book>[
     spineColor: Color(0xFF1E4E8C),
     topics: [
       BookTopic(
+        id: 'wvems_2026_004',
+        title: 'Airway',
+        subtitle: '2026-004 · OPA / BIAD / Suction',
+        asset: 'assets/topics/wvems_2026_004.yaml',
+        tags: ['airway', 'choking', 'biad', 'opa', 'npa', 'intubation'],
+      ),
+      BookTopic(
         id: 'wvems_2026_006',
         title: 'Breathing',
         subtitle: '2026-006 · 3-branch severity',
