@@ -241,6 +241,13 @@ const library = <Book>[
         tags: ['behavioral', 'psych', 'agitation', 'versed', 'haldol', 'restraint'],
       ),
       BookTopic(
+        id: 'wvems_2026_048',
+        title: 'Pregnancy / Delivery',
+        subtitle: '2026-048 · OB / Eclampsia / Postpartum',
+        asset: 'assets/topics/wvems_2026_048.yaml',
+        tags: ['pregnancy', 'delivery', 'ob', 'preeclampsia', 'postpartum'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',

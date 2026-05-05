@@ -1,0 +1,164 @@
+# ============================================================
+# WVEMS 2026 Protocol 48 — Pregnancy / Delivery
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-048"
+  version: "v260101"
+  title: "Pregnancy / Delivery"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "pregnancy"
+    - "delivery"
+    - "obstetrics"
+    - "preeclampsia"
+    - "eclampsia"
+    - "postpartum"
+  aliases:
+    - "Contractions"
+    - "Miscarriage"
+    - "Postpartum care"
+    - "Postpartum bleeding"
+    - "OB"
+  category: "medical"
+
+  pages:
+
+  - page_number: 48
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 3 branches)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      warnings:
+        - type: "caution"
+          text: "Use Caution if Patient Refusal"
+
+      entry:
+        text: "Suspected or Known Pregnancy (20 weeks & over)"
+        shape: "stadium"
+
+      decision:
+        text: "Delivery?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "not_imminent"
+          label: "Not Imminent"
+          criteria:
+            - "Vaginal Bleeding"
+            - "Labor, Contractions"
+            - "Miscarriage"
+          actions:
+            - text: "Left Lateral Recumbent"
+              kind: "procedure"
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+
+        - id: "normal"
+          label: "Normal"
+          criteria:
+            - "Adequate Perfusion"
+            - "Full Term (>36w)"
+            - "Head Presentation"
+          actions:
+            - provider_level: "E"
+              text: "Deliver Baby"
+              kind: "procedure"
+            - text: "Manage Neonate"
+              kind: "procedure"
+            - provider_level: "A"
+              text: "Saline Lock"
+              kind: "procedure"
+
+        - id: "complicated"
+          label: "Complicated"
+          criteria:
+            - "Premature or Twins"
+            - "Failed Delivery"
+            - "Prolapse or Breech"
+          actions:
+            - text: "Don't Push"
+              kind: "procedure"
+            - provider_level: "E"
+              text: "Emergent Transport"
+              kind: "procedure"
+            - text: "Manage OB Complication"
+              kind: "procedure"
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "HTN, Circulation"
+            link_id: "wvems-2026-010"
+          - text: "Seizure, Bleeding"
+            link_id: "wvems-2026-042"
+          - text: "Preeclampsia"
+          - text: "Destination Triage"
+
+      dose_table:
+        - drug: "NS Bolus"
+          dose: "500 mL"
+          route: "IV/IO"
+          frequency: "x4"
+          population: "adult"
+
+  - page_number: 49
+    blocks:
+
+    - type: "prose"
+      title: "Pregnancy / Delivery Imperatives"
+      markdown: |
+        - This protocol applies to **late pregnancy** (20 weeks & over).
+          - There are no specific EMS interventions for early pregnancy.
+          - Uterus palpable above the umbilicus suggests late pregnancy.
+        - Any SBP reading **above 160 mmHg** may be **preeclampsia**.
+          - Prioritize transport. Call **Medical Control** for any refusal.
+          - Consider **Preeclampsia** if indicated and credentialed for CC.
+        - Aggressively treat any **Seizure** as **eclampsia**.
+        - Any maternal trauma after 20 weeks should be transported.
+          - Fetus may have injury that is not immediately obvious.
+          - Even minor trauma (simple falls, etc.) can cause fetal harm.
+        - **Prioritize transport** if any complications (to facility w/ OB/GYN).
+        - **Reduce cord** over the head if found around the neck.
+        - **Manage OB Complications** during transport:
+          - **Failed Delivery / Shoulder Dystocia**: transport knees to chest.
+          - **Prolapse**: don't handle cord; relieve pressure with fingers in vagina.
+          - **Breech**: do not pull; elevate presenting part if pressing on cord.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Consider **destination triage** to a facility with **OB/GYN** services.
+        - Call **Medical Control** with questions regarding medication safety.
+        - **Postpartum bleeding** can be severe; **fundal massage** can help.
+          - **A** If poor perfusion: **TXA** (Tranex. Acid): **2 g** IV/IO over 10 min.
+        - May attempt **home delivery** if uncomplicated and imminent.
+          - Crowning and urge to push suggest delivery is imminent.
+        - Attempt to have a **chaperone** present for any genital evaluation.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Refer to **Neonate** for management of the newborn baby.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Medscape Delivery — https://emedicine.medscape.com/article/260036 [Ver: 2/24]
+        - Medscape Eclampsia — https://emedicine.medscape.com/article/253960 [Ver: 8/25]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 36
+
+        NEMSIS: 9914145
