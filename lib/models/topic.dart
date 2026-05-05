@@ -681,13 +681,16 @@ class MergeArrowsBlock extends Block {
 
 /// Markdown-authored text block. Most content lives here.
 ///
-/// [highlight] triggers a tinted container (e.g. pediatrics pink, callout
-/// boxes). Details are a renderer concern.
+/// [highlight] triggers a tinted container (pediatrics pink). [callout]
+/// triggers a distinct cream/tan box with a centered title pill, used
+/// for the special "Poor Perfusion"-style sidebars in the WVEMS PDFs.
+/// Details are a renderer concern.
 class ProseBlock extends Block {
   const ProseBlock({
     required this.markdown,
     this.title,
     this.highlight = false,
+    this.callout = false,
     this.boxed = false,
     super.flex,
   });
@@ -696,6 +699,7 @@ class ProseBlock extends Block {
         title: map['title'] as String?,
         markdown: map['markdown'] as String,
         highlight: (map['highlight'] as bool?) ?? false,
+        callout: (map['callout'] as bool?) ?? false,
         boxed: (map['boxed'] as bool?) ?? false,
         flex: _flex(map),
       );
@@ -703,6 +707,7 @@ class ProseBlock extends Block {
   final String? title;
   final String markdown;
   final bool highlight;
+  final bool callout;
 
   /// When true, the prose body is wrapped in a rounded-border tile
   /// (matching boxed-layout table cells) with centered text.  Used
