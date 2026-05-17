@@ -38,20 +38,18 @@ class ProseBlockView extends StatelessWidget {
       // reads as a sidebar inset, not a section divider.
       return Align(
         alignment: Alignment.center,
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(minWidth: 250, maxWidth: 280),
-          child: Container(
-            padding: const EdgeInsets.fromLTRB(12, 6, 12, 6),
-            decoration: BoxDecoration(
-              color: const Color(0xFFF5EFE0),
-              border: Border.all(color: const Color(0xFFB89D6E), width: 1.2),
-              borderRadius: BorderRadius.circular(6),
-            ),
-            child: IntrinsicWidth(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.min,
-                children: [
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(12, 6, 12, 6),
+          decoration: BoxDecoration(
+            color: const Color(0xFFF5EFE0),
+            border: Border.all(color: const Color(0xFFB89D6E), width: 1.2),
+            borderRadius: BorderRadius.circular(6),
+          ),
+          child: IntrinsicWidth(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
                 if (block.title != null)
                   Container(
                     padding: const EdgeInsets.symmetric(
@@ -81,8 +79,7 @@ class ProseBlockView extends StatelessWidget {
                   textAlign: TextAlign.center,
                   child: MiniMarkdown(markdown: block.markdown),
                 ),
-                ],
-              ),
+              ],
             ),
           ),
         ),
