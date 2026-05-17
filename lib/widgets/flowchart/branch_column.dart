@@ -244,11 +244,26 @@ class _BranchHeader extends StatelessWidget {
 
 /// Medication tile matching WVEMS format: full-height coloured provider
 /// band on the left (E/A/I), bold underlined drug name on the right.
+
+/// Provider-badge strip width. Shared so the label-width budget in
+/// [ActionTile] stays in sync with the actual badge.
+const double _badgeWidth = 26;
+
+/// Horizontal padding on each side of the label inside the tile.
+const double _labelHPad = 6;
+
+/// Slack subtracted from the computed label width before deciding
+/// whether to shrink: covers sub-pixel rounding between the measuring
+/// `TextPainter` and the live `RenderParagraph`, plus the tile's 1px
+/// border. A measurement tolerance, not a layout fudge.
+const double _labelMeasureSlack = 6;
+
 class ActionTile extends StatelessWidget {
   const ActionTile({
     required this.action,
     required this.theme,
     this.tileBg,
+    this.columnWidth = double.infinity,
     super.key,
   });
 
@@ -256,8 +271,19 @@ class ActionTile extends StatelessWidget {
   final TopicTheme theme;
   final Color? tileBg;
 
+  /// Width of the branch column this tile sits in, measured by the
+  /// caller *above* the branch row's `IntrinsicHeight` (a `LayoutBuilder`
+  /// can't answer the intrinsic queries `IntrinsicHeight` makes).  The
+  /// tile derives its own label budget from this minus its known chrome
+  /// (badge + padding).  Infinity (the default, for callers that can't
+  /// measure) disables label shrinking — the label just wraps.
+  final double columnWidth;
+
   @override
   Widget build(BuildContext context) {
+    final labelMaxWidth = columnWidth.isFinite
+        ? columnWidth - _badgeWidth - 2 * _labelHPad - _labelMeasureSlack
+        : double.infinity;
     return Container(
       decoration: BoxDecoration(
         color: tileBg ?? Colors.white,
@@ -273,16 +299,16 @@ class ActionTile extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 6,
+                  horizontal: _labelHPad,
                   vertical: 4,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(
+                    _FitText(
                       action.text,
-                      textAlign: TextAlign.center,
+                      maxWidth: labelMaxWidth,
                       style: const TextStyle(
                         fontSize: 13,
                         height: 1.1,
@@ -315,6 +341,70 @@ class ActionTile extends StatelessWidget {
   }
 }
 
+/// Action-tile label that word-wraps like the source PDF but never
+/// breaks a word into an orphan character.
+///
+/// The PDF renders multi-word actions (e.g. "Encourage Breastfeeding")
+/// on as many lines as needed, one word per line when narrow — it never
+/// splits a word.  Flutter's default `Text` breaks a single word
+/// mid-glyph when that word alone is wider than the column (producing
+/// "Breastfeedin" + an orphan "g").  This widget measures the widest
+/// word at [style] and, only if it overflows [maxWidth], scales the
+/// font down just enough that the widest word fits — wrapping then
+/// happens at spaces only, matching the PDF.  Short labels keep the
+/// full [style] size unchanged.
+///
+/// [maxWidth] is computed by the caller *above* the surrounding
+/// `IntrinsicHeight` and passed in, rather than read from a
+/// `LayoutBuilder` here: a `LayoutBuilder` cannot answer the
+/// intrinsic-dimension queries `IntrinsicHeight` makes, so nesting one
+/// inside the tile throws.  A non-finite [maxWidth] disables shrinking.
+class _FitText extends StatelessWidget {
+  const _FitText(this.text, {required this.style, required this.maxWidth});
+
+  final String text;
+  final TextStyle style;
+  final double maxWidth;
+
+  /// Legibility floor — never shrink an action label below this even if
+  /// a pathologically long word would still overflow.  An external
+  /// readability constraint (like a minimum touch target), not a layout
+  /// fudge factor.
+  static const double _minFontSize = 9;
+
+  @override
+  Widget build(BuildContext context) {
+    final baseSize = style.fontSize ?? 14.0;
+    var fontSize = baseSize;
+    if (maxWidth.isFinite && maxWidth > 0) {
+      // Measure with the same text scaler the rendered Text will use,
+      // otherwise the painter under-measures (scale 1.0) and we decide
+      // not to shrink even though the live text overflows.
+      final scaler = MediaQuery.textScalerOf(context);
+      var widest = 0.0;
+      for (final word in text.split(RegExp(r'\s+'))) {
+        if (word.isEmpty) continue;
+        final tp = TextPainter(
+          text: TextSpan(text: word, style: style),
+          textDirection: TextDirection.ltr,
+          textScaler: scaler,
+          maxLines: 1,
+        )..layout();
+        if (tp.width > widest) widest = tp.width;
+      }
+      if (widest > maxWidth) {
+        fontSize =
+            (baseSize * maxWidth / widest).clamp(_minFontSize, baseSize);
+      }
+    }
+    return Text(
+      text,
+      textAlign: TextAlign.center,
+      style: style.copyWith(fontSize: fontSize),
+    );
+  }
+}
+
 /// Full-height provider-level band. WVEMS convention:
 ///   E = gold, A = green, I = blue.
 class _ProviderBadge extends StatelessWidget {
@@ -332,7 +422,7 @@ class _ProviderBadge extends StatelessWidget {
     };
 
     return Container(
-      width: 26,
+      width: _badgeWidth,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: color,

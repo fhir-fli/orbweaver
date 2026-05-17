@@ -577,30 +577,45 @@ class _BranchesRow extends StatelessWidget {
               ],
             ],
           ),
-        IntrinsicHeight(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              for (var i = 0; i < branches.length; i++) ...[
-                if (i > 0) const SizedBox(width: kSeverityBranchGap),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      for (final action in branches[i].actions)
-                        ActionTile(
-                          action: action,
-                          theme: theme,
-                          tileBg: paletteFor[i]?.tileBg,
-                        ),
-                      if (extendDown && branches[i].continuation == null)
-                        const Expanded(child: TrailingFillLine()),
-                    ],
-                  ),
-                ),
-              ],
-            ],
-          ),
+        // LayoutBuilder sits *above* the IntrinsicHeight so it is never
+        // asked for intrinsic dimensions (which it can't answer). It
+        // measures each branch column's width once and hands it to
+        // ActionTile, which derives its own label budget — so the label
+        // can shrink-to-fit without a LayoutBuilder nested inside the
+        // tile's own IntrinsicHeight.
+        LayoutBuilder(
+          builder: (context, constraints) {
+            final n = branches.length;
+            final colW =
+                (constraints.maxWidth - (n - 1) * kSeverityBranchGap) / n;
+            return IntrinsicHeight(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  for (var i = 0; i < branches.length; i++) ...[
+                    if (i > 0) const SizedBox(width: kSeverityBranchGap),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          for (final action in branches[i].actions)
+                            ActionTile(
+                              action: action,
+                              theme: theme,
+                              tileBg: paletteFor[i]?.tileBg,
+                              columnWidth: colW,
+                            ),
+                          if (extendDown &&
+                              branches[i].continuation == null)
+                            const Expanded(child: TrailingFillLine()),
+                        ],
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            );
+          },
         ),
       ],
     );
