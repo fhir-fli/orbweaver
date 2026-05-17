@@ -28,6 +28,16 @@ class TableBlockView extends StatelessWidget {
   bool get _hasRowHeaders => block.rows.any((r) => r.header != null);
   bool get _hasGroups => block.rows.any((r) => r.group != null);
 
+  /// Per-column flex applies only when an explicit weight is given for
+  /// every column; otherwise fall back to [fallback] (equal columns for
+  /// the header, or the cell's own `span` for data rows).
+  bool get _hasColumnFlex =>
+      block.columnFlex.isNotEmpty &&
+      block.columnFlex.length == block.columns.length;
+
+  int _colFlex(int i, int fallback) =>
+      _hasColumnFlex ? block.columnFlex[i] : fallback;
+
   @override
   Widget build(BuildContext context) {
     final borderColor = theme.nodeBorder.withValues(alpha: 0.6);
@@ -148,10 +158,11 @@ class TableBlockView extends StatelessWidget {
             const SizedBox(width: 64, child: SizedBox.shrink()),
           if (_hasRowHeaders)
             const SizedBox(width: 78, child: SizedBox.shrink()),
-          for (final col in block.columns)
+          for (var ci = 0; ci < block.columns.length; ci++)
             Expanded(
+              flex: _colFlex(ci, 1),
               child: Text(
-                col,
+                block.columns[ci],
                 style: const TextStyle(
                   fontSize: _headerFontSize,
                   fontWeight: FontWeight.w800,
@@ -204,7 +215,7 @@ class TableBlockView extends StatelessWidget {
           ),
         for (var ci = 0; ci < row.cells.length; ci++)
           Expanded(
-            flex: row.cells[ci].span,
+            flex: _colFlex(ci, row.cells[ci].span),
             child: Container(
               padding: EdgeInsets.only(
                 left: ci == 0 ? 0 : 6,

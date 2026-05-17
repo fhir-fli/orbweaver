@@ -856,18 +856,29 @@ class TableBlock extends Block {
     required this.rows,
     this.title,
     this.columns = const [],
+    this.columnFlex = const [],
     this.layout = TableLayout.standard,
+    super.flex,
   });
 
   factory TableBlock.fromYaml(Map<dynamic, dynamic> map) => TableBlock(
         title: map['title'] as String?,
         columns: _stringList(map['columns']),
+        columnFlex: _intList(map['column_flex']),
         rows: _mapList(map['rows'], TopicTableRow.fromYaml),
         layout: TableLayout.fromString(map['layout'] as String?),
+        flex: _flex(map),
       );
 
   final String? title;
   final List<String> columns;
+
+  /// Optional per-column flex weights, one per entry in [columns].  When
+  /// set (and length matches [columns]), the header row and every data
+  /// row distribute width by these weights instead of equally — e.g.
+  /// `[5, 2, 2, 2]` makes a wide label column with narrow value columns
+  /// (matches the WVEMS APGAR layout).  Empty = equal columns.
+  final List<int> columnFlex;
   final List<TopicTableRow> rows;
   final TableLayout layout;
 }
