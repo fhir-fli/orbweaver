@@ -248,6 +248,13 @@ const library = <Book>[
         tags: ['pregnancy', 'delivery', 'ob', 'preeclampsia', 'postpartum'],
       ),
       BookTopic(
+        id: 'wvems_2026_050',
+        title: 'Neonate',
+        subtitle: '2026-050 · Newborn / APGAR / T-piece',
+        asset: 'assets/topics/wvems_2026_050.yaml',
+        tags: ['neonate', 'newborn', 'apgar', 'resuscitation', 't-piece'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',
