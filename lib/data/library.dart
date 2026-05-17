@@ -255,6 +255,13 @@ const library = <Book>[
         tags: ['neonate', 'newborn', 'apgar', 'resuscitation', 't-piece'],
       ),
       BookTopic(
+        id: 'wvems_2026_058',
+        title: 'Bleeding',
+        subtitle: '2026-058 · Hemorrhage / Tourniquet / TXA',
+        asset: 'assets/topics/wvems_2026_058.yaml',
+        tags: ['bleeding', 'hemorrhage', 'tourniquet', 'wound packing', 'txa'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',

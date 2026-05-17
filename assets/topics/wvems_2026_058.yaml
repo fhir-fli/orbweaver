@@ -1,0 +1,154 @@
+# ============================================================
+# WVEMS 2026 Protocol 58 — Bleeding
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-058"
+  version: "v260101"
+  title: "Bleeding"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "bleeding"
+    - "hemorrhage"
+    - "tourniquet"
+    - "wound packing"
+    - "txa"
+    - "trauma"
+  aliases:
+    - "Hemorrhage"
+    - "Tourniquet"
+    - "Wound Packing"
+  category: "trauma"
+
+  pages:
+
+  - page_number: 58
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 2 branches)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry_chain:
+        - text: "Acute Hemorrhage"
+          shape: "stadium"
+        - text: "Direct Pressure"
+          shape: "rounded_rectangle"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "minor"
+          label: "Minor"
+          criteria:
+            - "Adequate Perfusion"
+            - "Superficial Injury"
+          actions:
+            - text: "Wound Care"
+              kind: "procedure"
+
+        - id: "major"
+          label: "Major"
+          criteria:
+            - "Poor Perfusion"
+            - "Pulsatile Bleeding"
+          actions:
+            - text: "Tourniquet"
+              kind: "procedure"
+            - text: "Wound Packing"
+              kind: "procedure"
+            - provider_level: "A"
+              text: "TXA"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Breathing"
+            link_id: "wvems-2026-006"
+          - text: "Circulation / Shock"
+            link_id: "wvems-2025-008"
+          - text: "Major Trauma"
+          - text: "Blood"
+          - text: "Destination Triage"
+
+      dose_table:
+        - drug: "TXA"
+          dose: "2 grams"
+          route: "IV/IO"
+          frequency: "over 10 min"
+          population: "adult"
+
+  - page_number: 59
+    blocks:
+
+    - type: "prose"
+      title: "Bleeding Imperatives"
+      highlight: true
+      markdown: |
+        - Advance to a **Tourniquet rapidly** for any major arm / leg bleeding.
+          - Write the time of **Tourniquet** application on the patient.
+        - **Packing** may also help (especially junctional bleeds). **Do not** pack:
+          - Unstable, depressed or open skull fractures; chest wounds.
+          - Bleeding from body orifices: vagina, rectum, ear, mouth, etc.
+
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "TRAUMA Alert"
+          callout: true
+          markdown: |
+            - If Major Intervention
+            - Or Major Mechanism
+            - Call a **TRAUMA** Alert
+        - type: "prose"
+          title: "Poor Perfusion"
+          callout: true
+          markdown: |
+            Suspect if **several** of these:
+            - **Altered Mental Status**
+            - Skin Pale, Cool, Diaphoretic
+            - Tachycardia, Hypotension
+            - Dyspnea, Tachypnea
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **TXA** (Tranexamic Acid): Avoid if injury 3+ hours old or known PE.
+          - Use for any major **external traumatic bleeding**.
+          - Use for suspected **intra-abd / thorax bleed** w/ poor perfusion.
+          - May also use for severe **postpartum** (non-traumatic) bleeding.
+          - Avoid for other forms of suspected internal or medical bleeding.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Anticoagulation** meds (**blood thinners**) increase bleeding risk.
+        - Consider removing bystander dressings to investigate severity.
+        - **Bandage wounds** after bleeding is controlled.
+        - Consider **Blood** if indicated and credentialed for Critical Care.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Hypotension is a late sign of hemorrhagic **Shock** in peds.
+        - Use **Peds Reference** or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Stop the Bleed® — https://www.stopthebleed.org [Ver: 2025]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 29
+
+        NEMSIS: 9914083
