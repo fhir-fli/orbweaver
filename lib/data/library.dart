@@ -262,6 +262,13 @@ const library = <Book>[
         tags: ['bleeding', 'hemorrhage', 'tourniquet', 'wound packing', 'txa'],
       ),
       BookTopic(
+        id: 'wvems_2026_066',
+        title: 'Extremity Injury',
+        subtitle: '2026-066 · Fracture / Amputation / Crush',
+        asset: 'assets/topics/wvems_2026_066.yaml',
+        tags: ['extremity', 'fracture', 'amputation', 'crush', 'splint'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',
