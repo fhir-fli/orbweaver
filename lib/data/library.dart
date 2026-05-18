@@ -269,6 +269,13 @@ const library = <Book>[
         tags: ['extremity', 'fracture', 'amputation', 'crush', 'splint'],
       ),
       BookTopic(
+        id: 'wvems_2026_076',
+        title: 'Epistaxis',
+        subtitle: '2026-076 · Nose Bleed / Afrin / TXA',
+        asset: 'assets/topics/wvems_2026_076.yaml',
+        tags: ['epistaxis', 'nosebleed', 'afrin', 'txa'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',
