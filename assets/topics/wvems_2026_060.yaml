@@ -1,0 +1,138 @@
+# ============================================================
+# WVEMS 2026 Protocol 60 — Immobilization (SMR)
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-060"
+  version: "v260101"
+  title: "Immobilization"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "immobilization"
+    - "smr"
+    - "spinal"
+    - "c-collar"
+    - "backboard"
+    - "trauma"
+  aliases:
+    - "Spinal Motion Restriction (SMR)"
+    - "C-spine"
+    - "Backboard"
+  category: "trauma"
+
+  pages:
+
+  - page_number: 60
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 2 branches)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry_chain:
+        - text: "Suspected Blunt Spinal Injury"
+          shape: "stadium"
+
+      decision:
+        text: "Indications?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "absent"
+          label: "Absent"
+          criteria:
+            - "Can Give History"
+            - "No Indications"
+          actions:
+            - text: "Spine Clear"
+              kind: "assessment"
+
+        - id: "present"
+          label: "Present"
+          criteria:
+            - "History Unreliable"
+            - "Any Indications"
+          actions:
+            - text: "SMR with C-collar"
+              kind: "procedure"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Pain"
+            link_id: "wvems-2026-020"
+          - text: "Major Trauma"
+
+    # ────────────────────────────────────────────────
+    # "Indications" reference box (2-column list)
+    # ────────────────────────────────────────────────
+    - type: "table"
+      title: "Indications"
+      rows:
+        - cells:
+            - "• Spine Tenderness"
+            - "• Altered LOC from Baseline"
+        - cells:
+            - "• Spine Deformity"
+            - "• Acutely Intoxicated"
+        - cells:
+            - "• Neuro Deficits"
+            - "• Distracting Injury or Mechanism"
+
+  - page_number: 61
+    blocks:
+
+    - type: "prose"
+      title: "Immobilization Imperatives"
+      highlight: true
+      markdown: |
+        - While backboards have historically been used for spinal
+          immobilization, **SMR** may also be achieved with a scoop
+          stretcher, vacuum splint, **ambulance cot**, or similar device
+          to which a patient is safely secured.
+        - Awake, compliant patients may be safely secured with seat belts.
+        - SMR requires **supine positioning** and a **c-collar**.
+        - A long spine board, scoop stretcher, or vacuum mattress is
+          recommended to assist with **patient transfers** and to minimize
+          flexion, extension, or rotation of the injured spine.
+          - May try gentle **self-extrication** from a vehicle (with a c-collar).
+        - There is no role for **SMR** in penetrating trauma.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Spine Tenderness or Deformity** includes any:
+          - Midline neck or back pain, tenderness, crepitus, step off, etc.
+        - **Neuro Deficits** include any new symptoms of neurologic injury:
+          - Unconscious greater than 1 min, or seizure.
+          - Paralysis, weakness, numbness, or vision changes.
+          - Shooting 'electric' pain, or tingling in any extremity.
+        - **Altered LOC from Baseline** includes any change in mentation:
+          - **Glasgow Coma Scale** less than baseline, new confusion.
+        - **Acute Intoxication** includes any alteration in mental due to:
+          - Alcohol, medications, recreational or illegal drugs.
+        - **Distracting Injury or Mechanism** may include:
+          - Unstable vitals, airway trauma, blast injury, shallow water diving.
+          - Fall > 10 ft, flail chest, unstable pelvis, 2° or 3° **Burn** > 10% BSA.
+          - Major fracture / bleed, crushed / mangled or amputated **extremity**.
+          - High-risk MVC: > 60 mph, ejection, roll over, death, struck by car.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Any child that cannot provide a reliable history should have **SMR**.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACS-COT, ACEP, NAEMSP: SMR in Trauma — Joint Statement [Ver: 2018]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 33
+
+        NEMSIS: 9914073, 9914107

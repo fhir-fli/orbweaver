@@ -262,6 +262,13 @@ const library = <Book>[
         tags: ['bleeding', 'hemorrhage', 'tourniquet', 'wound packing', 'txa'],
       ),
       BookTopic(
+        id: 'wvems_2026_060',
+        title: 'Immobilization',
+        subtitle: '2026-060 · SMR / C-spine / Backboard',
+        asset: 'assets/topics/wvems_2026_060.yaml',
+        tags: ['immobilization', 'smr', 'spinal', 'c-collar', 'backboard'],
+      ),
+      BookTopic(
         id: 'wvems_2026_066',
         title: 'Extremity Injury',
         subtitle: '2026-066 · Fracture / Amputation / Crush',
