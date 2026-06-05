@@ -276,6 +276,13 @@ const library = <Book>[
         tags: ['extremity', 'fracture', 'amputation', 'crush', 'splint'],
       ),
       BookTopic(
+        id: 'wvems_2026_068',
+        title: 'Cold / Heat',
+        subtitle: '2026-068 · Hypothermia / Hyperthermia / Frostbite',
+        asset: 'assets/topics/wvems_2026_068.yaml',
+        tags: ['cold', 'heat', 'hypothermia', 'hyperthermia', 'frostbite'],
+      ),
+      BookTopic(
         id: 'wvems_2026_076',
         title: 'Epistaxis',
         subtitle: '2026-076 · Nose Bleed / Afrin / TXA',

@@ -1,0 +1,166 @@
+# ============================================================
+# WVEMS 2026 Protocol 68 — Cold / Heat
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-068"
+  version: "v260101"
+  title: "Cold / Heat"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "cold"
+    - "heat"
+    - "hypothermia"
+    - "hyperthermia"
+    - "frostbite"
+    - "heat stroke"
+    - "trauma"
+  aliases:
+    - "Hypo/Hyperthermia"
+    - "Frost Nip/Bite"
+    - "Heat Stroke"
+    - "NMS"
+  category: "trauma"
+
+  pages:
+
+  - page_number: 68
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 3 branches by exposure severity)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry_chain:
+        - text: "Suspected Exposure"
+          shape: "stadium"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "major_hypo"
+          label: "Major Hypo"
+          criteria:
+            - "Stopped Shivering"
+            - "Cyanosis"
+          actions:
+            - text: "Active Warming"
+              kind: "procedure"
+            - text: "Glucometer"
+              kind: "diagnostic"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+
+        - id: "minor"
+          label: "Minor"
+          criteria:
+            - "Adequate Perfusion"
+            - "Normal LOC"
+          actions:
+            - text: "Passive Techniques"
+              kind: "procedure"
+
+        - id: "major_hyper"
+          label: "Major Hyper"
+          criteria:
+            - "Confused"
+            - "Hot Skin"
+          actions:
+            - text: "Active Cooling"
+              kind: "procedure"
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Circulation (shock)"
+            link_id: "wvems-2025-008"
+          - text: "Medical Code"
+
+      dose_table:
+        - drug: "NS Bolus"
+          dose: "500 mL"
+          route: "IV/IO"
+          frequency: "x4"
+          population: "adult"
+
+    # ────────────────────────────────────────────────
+    # Two reference boxes — Active Warming / Active Cooling
+    # ────────────────────────────────────────────────
+    - type: "row"
+      blocks:
+        - type: "table"
+          title: "Active Warming"
+          rows:
+            - cells: ["• Remove Wet Clothes & Dry Off"]
+            - cells: ["• Heat Packs to Groin / Axilla"]
+            - cells: ["• Warmed O2 & IV Fluids"]
+        - type: "table"
+          title: "Active Cooling"
+          rows:
+            - cells: ["• Fan, Misting, and/or Ice Bath"]
+            - cells: ["• Ice Packs to Groin / Axilla"]
+            - cells: ["• PO fluids, Chilled IV Fluids"]
+
+  - page_number: 69
+    blocks:
+
+    - type: "prose"
+      title: "Cold / Heat Imperatives"
+      highlight: true
+      markdown: |
+        - **Hyperthermia** is **not** the same as a **Fever** from infection.
+          - Meds for Fever worsen **hyperthermia** and are contraindicated.
+        - **Confusion** is the hallmark of major **hyperthermic** emergencies.
+          - Aggressively & actively cool anyone that is **hot & confused**.
+          - (A) If shivering from active cooling: **Versed®** 2.5 mg IV/IO x1.
+        - **Resuscitation** of major **hypothermia** is a special case:
+          - Most important intervention is **active rewarming**.
+          - Check carefully for pulse. If present, it will be **very faint**.
+          - Provide **defib** and **ACLS meds** as per normal **Medical Code**.
+          - Call **Medical Control** before termination of resuscitation.
+        - **Pad** heat & ice packs. Do not place directly against the skin.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Passive techniques** include clothing and environment changes.
+        - Special thermometers or **core temp** monitors may be helpful:
+          - Major **hyper**thermia is likely above 104°F (40°C).
+          - Major **hypo**thermia is likely below 88°F (30°C).
+        - Some drugs may also cause **hyperthermia**. Treatment is the same.
+        - Excessive movement of **hypothermic** patients can cause **V-Fib**.
+        - Splint any extremity with **frostbite** to limit movement (do not rub).
+          - Delay rewarming **frostbite** if there is potential for re-freezing.
+        - (E) **Ibuprofen** (Motrin®): Give 600 mg PO x1 for **frostbite**.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Small children (and the elderly/frail) will decompensate faster.
+        - Use **Peds Reference** or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Medscape Hypothermia — https://emedicine.medscape.com/article/770542 [Ver: 10/21]
+        - Medscape Heat Stroke — https://emedicine.medscape.com/article/166320 [Ver: 7/22]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 35
+
+        NEMSIS: 9914023, 9914025, 9914027, 9914029, 9914031
