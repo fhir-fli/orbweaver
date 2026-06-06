@@ -77,13 +77,15 @@ topic:
       convergence:
         text: "Consider"
         shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
         bullets:
           - text: "Breathing, Tachycardia"
             link_id: "wvems-2026-014"
           - text: "Pain, Trunk Injury"
             link_id: "wvems-2026-020"
           - text: "STEMI"
-          - text: "Destination Triage"
 
       dose_table:
         - drug: "Aspirin"

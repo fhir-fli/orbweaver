@@ -73,6 +73,11 @@ topic:
       convergence:
         text: "Consider"
         shape: "stadium"
+        warnings:
+          - type: "safety"
+            text: "Ensure Patient DECON"
+          - type: "caution"
+            text: "Consider Destination Triage"
         bullets:
           - text: "Breathing"
             link_id: "wvems-2026-006"
@@ -81,8 +86,6 @@ topic:
           - text: "Pain"
             link_id: "wvems-2026-020"
           - text: "Antidote"
-          - text: "Ensure Patient DECON"
-          - text: "Destination Triage"
 
       dose_table:
         - drug: "NS Bolus"

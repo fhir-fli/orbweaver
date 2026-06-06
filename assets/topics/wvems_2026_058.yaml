@@ -71,6 +71,9 @@ topic:
       convergence:
         text: "Consider"
         shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
         bullets:
           - text: "Breathing"
             link_id: "wvems-2026-006"
@@ -78,7 +81,6 @@ topic:
             link_id: "wvems-2025-008"
           - text: "Major Trauma"
           - text: "Blood"
-          - text: "Destination Triage"
 
       dose_table:
         - drug: "TXA"

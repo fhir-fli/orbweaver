@@ -77,6 +77,9 @@ topic:
       convergence:
         text: "Consider"
         shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
         bullets:
           - text: "Ancef (A) — If Open Fracture"
           - text: "Pain"
@@ -84,7 +87,6 @@ topic:
           - text: "Bleeding"
             link_id: "wvems-2026-058"
           - text: "Hyperkalemia"
-          - text: "Destination Triage"
 
       dose_table:
         - drug: "Ancef"

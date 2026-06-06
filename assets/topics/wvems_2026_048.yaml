@@ -99,13 +99,15 @@ topic:
       convergence:
         text: "Consider"
         shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
         bullets:
           - text: "HTN, Circulation"
             link_id: "wvems-2026-010"
           - text: "Seizure, Bleeding"
             link_id: "wvems-2026-042"
           - text: "Preeclampsia"
-          - text: "Destination Triage"
 
       dose_table:
         - drug: "NS Bolus"
