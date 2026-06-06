@@ -297,6 +297,13 @@ const library = <Book>[
         tags: ['burns', 'hazmat', 'chemical', 'electrical', 'sunburn'],
       ),
       BookTopic(
+        id: 'wvems_2026_072',
+        title: 'Inhalation',
+        subtitle: '2026-072 · Smoke / CO / Toxic Gas',
+        asset: 'assets/topics/wvems_2026_072.yaml',
+        tags: ['inhalation', 'smoke', 'carbon monoxide', 'toxic gas'],
+      ),
+      BookTopic(
         id: 'wvems_2026_074',
         title: 'Sting / Bite',
         subtitle: '2026-074 · Animal / Snake / Insect',

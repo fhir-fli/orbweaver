@@ -1,0 +1,123 @@
+# ============================================================
+# WVEMS 2026 Protocol 72 — Inhalation
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# Uses the `linear` flowchart variant.
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-072"
+  version: "v260101"
+  title: "Inhalation"
+  last_reviewed: "Jun 2025"
+  tags:
+    - "inhalation"
+    - "smoke"
+    - "carbon monoxide"
+    - "toxic gas"
+    - "anoxic"
+    - "trauma"
+  aliases:
+    - "Smoke Inhalation"
+    - "Carbon Monoxide"
+    - "Toxic / Anoxic Gas"
+  category: "trauma"
+
+  pages:
+
+  - page_number: 72
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (linear variant)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "linear"
+
+      warnings:
+        - type: "safety"
+          text: "Ensure Provider SAFETY"
+
+      entry_chain:
+        - text: "Toxic or Anoxic Gas Exposure"
+          shape: "stadium"
+
+      steps:
+        - type: "action"
+          text: "Remove from Harm"
+          kind: "procedure"
+        - type: "content"
+          title: "Assess for:"
+          bullets:
+            - "Airway, Breathing"
+            - "Burns, OD / Tox"
+        - type: "action"
+          text: "Provide O2"
+          kind: "procedure"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        warnings:
+          - type: "safety"
+            text: "Ensure Patient DECON"
+        bullets:
+          - text: "Breathing"
+            link_id: "wvems-2026-006"
+          - text: "Shock"
+            link_id: "wvems-2025-008"
+          - text: "OD / Tox"
+            link_id: "wvems-2026-040"
+          - text: "Antidote"
+
+      post_convergence:
+        text: "Intubation"
+        shape: "stadium"
+
+  - page_number: 73
+    blocks:
+
+    - type: "prose"
+      title: "Inhalation Imperatives"
+      highlight: true
+      markdown: |
+        - Monitor **Airway** closely with any facial, nasal or oral burns.
+          - Check the mouth for **soot** and the nose/face for **singed hairs**.
+          - Consider **Intubation** if indicated and credentialed for CC.
+        - Provide **100%** oxygen by NRB for carbon monoxide (CO) exposure.
+          - SpO2 may read **false normal** (CO can fool the SpO2 monitor).
+          - Symptoms may include: headache, confusion, red skin, N/V.
+          - Oxygen is critical for **pregnant females** exposed to CO.
+        - Some industrial gas (e.g. **Cyanide**) may benefit from an **Antidote**.
+        - WMD nerve gas (e.g. **Sarin**, **VX**) may benefit from an **Antidote**.
+        - Even non-toxic gases can produce **Hypoxia** & **Dyspnea**. Give O2.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - SpCO monitors are available and work like SpO2 monitors.
+          - Normal: less than 3% (may be up to 6% in heavy smokers).
+          - Exposure: 3% – 10%.
+          - Toxic: above 10%.
+        - Most law enforcement **riot agents** are potent respiratory irritants.
+          - Common agents include **tear gas** (CS) and **pepper spray** (OC).
+          - Flush eyes and move to fresh air. Beware cross-contamination.
+          - There are no specific antidotes. Provide supportive care.
+        - This protocol includes **gasses** and smoke inhalation.
+          - For **chemical burns** and skin exposures, refer to **Burns**.
+          - For **poisoning** and toxic ingestions, refer to **OD / Tox**.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Small children (and the elderly/frail) may exhibit symptoms faster.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Medscape CO — https://emedicine.medscape.com/article/2085044 [Ver: 7/25]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 9, 25
+
+        NEMSIS: 9914033, 9914167, 9914173
