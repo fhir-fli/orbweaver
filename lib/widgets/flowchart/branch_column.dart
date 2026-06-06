@@ -264,6 +264,7 @@ class ActionTile extends StatelessWidget {
     required this.theme,
     this.tileBg,
     this.columnWidth = double.infinity,
+    this.omitAnyBadge = false,
     super.key,
   });
 
@@ -279,10 +280,21 @@ class ActionTile extends StatelessWidget {
   /// measure) disables label shrinking — the label just wraps.
   final double columnWidth;
 
+  /// When true, skip the gray placeholder badge for actions whose
+  /// provider level is `any`.  The placeholder exists so adjacent action
+  /// tiles in a severity branch column line up regardless of provider
+  /// level — in a centered linear flow there's nothing to align against,
+  /// so the placeholder reads as off-center clutter.  Provider-tier
+  /// badges (E/A/I) are always shown.
+  final bool omitAnyBadge;
+
   @override
   Widget build(BuildContext context) {
+    final showBadge =
+        !(omitAnyBadge && action.providerLevel == ProviderLevel.any);
+    final chromeBadge = showBadge ? _badgeWidth : 0.0;
     final labelMaxWidth = columnWidth.isFinite
-        ? columnWidth - _badgeWidth - 2 * _labelHPad - _labelMeasureSlack
+        ? columnWidth - chromeBadge - 2 * _labelHPad - _labelMeasureSlack
         : double.infinity;
     return Container(
       decoration: BoxDecoration(
@@ -293,9 +305,11 @@ class ActionTile extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Always show the badge column (gray placeholder for
-            // actions with no provider level) so columns line up.
-            _ProviderBadge(level: action.providerLevel),
+            // The placeholder badge keeps action tiles in a severity
+            // branch column visually aligned; [omitAnyBadge] suppresses
+            // it for `any`-level actions in contexts (like linear) where
+            // there's no column to align against.
+            if (showBadge) _ProviderBadge(level: action.providerLevel),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(

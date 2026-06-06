@@ -1175,3 +1175,167 @@ class _HorizontalArrowPainter extends CustomPainter {
   bool shouldRepaint(_HorizontalArrowPainter old) =>
       old.pointing != pointing;
 }
+
+/// Renderer for [FlowchartVariant.linear] — a single-column flow
+/// `entry → step → step → … → Consider`.  Steps are either content
+/// boxes (titled white box with bullets — same visual primitive as a
+/// branch criteria box, reused via [BranchHeaderBox]) or action tiles
+/// (reused via [ActionTile]).  Warnings flank the first entry node
+/// just like in the severity variant; convergence + post-convergence
+/// + dose-table follow.
+///
+/// Linear nodes are centered at a 0.55 width factor — matching the
+/// entry stadium width factor used by [FlowNodeBox] — so the column
+/// of nodes reads as a coherent vertical track.
+class LinearFlowchartView extends StatelessWidget {
+  const LinearFlowchartView({
+    required this.flowchart,
+    required this.theme,
+    super.key,
+  });
+
+  final LinearFlowchart flowchart;
+  final TopicTheme theme;
+
+  /// Same as the entry-stadium width factor in [FlowNodeBox]; keeps all
+  /// linear nodes (action tiles, content boxes, entry boxes, convergence)
+  /// aligned in one centered column.
+  static const double _nodeWidthFactor = 0.55;
+
+  @override
+  Widget build(BuildContext context) {
+    final fc = flowchart;
+    final safety = fc.warnings
+        .where((w) => w.type == WarningType.safety)
+        .cast<WarningCallout?>()
+        .firstWhere((_) => true, orElse: () => null);
+    final caution = fc.warnings
+        .where((w) => w.type == WarningType.caution)
+        .cast<WarningCallout?>()
+        .firstWhere((_) => true, orElse: () => null);
+    final hasWarnings = safety != null || caution != null;
+
+    final rows = <Widget>[];
+
+    if (!hasWarnings) rows.add(const SizedBox(height: 6));
+
+    // Entry chain — first node flanked by warnings (if any), rest stack
+    // with a FlowDownArrow between each.  Matches the severity layout.
+    for (var i = 0; i < fc.entryChain.length; i++) {
+      final node = fc.entryChain[i];
+      if (i == 0 && hasWarnings) {
+        rows.add(
+          _EntryWithWarnings(
+            safety: safety,
+            caution: caution,
+            entry: node,
+            theme: theme,
+          ),
+        );
+      } else {
+        rows.add(
+          FlowNodeBox(text: node.text, shape: node.shape, theme: theme),
+        );
+      }
+      rows.add(const FlowDownArrow());
+    }
+
+    // Steps — alternating mix of content boxes and action tiles.  We
+    // measure the content width once via a LayoutBuilder placed above
+    // the steps (not inside any IntrinsicHeight — see [_FitText] note)
+    // so each ActionTile can derive its label budget.
+    if (fc.steps.isNotEmpty) {
+      rows.add(
+        LayoutBuilder(
+          builder: (context, constraints) {
+            final colW = constraints.maxWidth * _nodeWidthFactor;
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (var i = 0; i < fc.steps.length; i++) ...[
+                  _LinearStepRow(
+                    step: fc.steps[i],
+                    theme: theme,
+                    widthFactor: _nodeWidthFactor,
+                    columnWidth: colW,
+                  ),
+                  if (i < fc.steps.length - 1) const FlowDownArrow(),
+                ],
+              ],
+            );
+          },
+        ),
+      );
+    }
+
+    if (fc.convergence != null) {
+      rows.add(const FlowDownArrow());
+      rows.add(
+        Center(
+          child: FractionallySizedBox(
+            widthFactor: _nodeWidthFactor,
+            child: _ConvergenceBox(node: fc.convergence!, theme: theme),
+          ),
+        ),
+      );
+    }
+
+    if (fc.postConvergence != null) {
+      rows.add(const FlowDownArrow());
+      rows.add(
+        FlowNodeBox(
+          text: fc.postConvergence!.text,
+          shape: fc.postConvergence!.shape,
+          theme: theme,
+        ),
+      );
+    }
+
+    if (fc.doseTable.isNotEmpty) {
+      rows.add(const SizedBox(height: 8));
+      rows.add(DoseTable(rows: fc.doseTable, theme: theme));
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: rows,
+    );
+  }
+}
+
+/// One linear step — dispatches on [LinearStep] subtype to render either
+/// a content box (via [BranchHeaderBox]) or an action tile (via
+/// [ActionTile]).  Centered at [widthFactor] of the available width to
+/// match the rest of the linear column.
+class _LinearStepRow extends StatelessWidget {
+  const _LinearStepRow({
+    required this.step,
+    required this.theme,
+    required this.widthFactor,
+    required this.columnWidth,
+  });
+
+  final LinearStep step;
+  final TopicTheme theme;
+  final double widthFactor;
+  final double columnWidth;
+
+  @override
+  Widget build(BuildContext context) {
+    final Widget body = switch (step) {
+      LinearContentStep(:final title, :final bullets) => BranchHeaderBox(
+          label: title,
+          criteria: bullets,
+        ),
+      LinearActionStep(:final action) => ActionTile(
+          action: action,
+          theme: theme,
+          columnWidth: columnWidth,
+          omitAnyBadge: true,
+        ),
+    };
+    return Center(
+      child: FractionallySizedBox(widthFactor: widthFactor, child: body),
+    );
+  }
+}

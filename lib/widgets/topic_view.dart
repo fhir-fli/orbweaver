@@ -281,6 +281,10 @@ class _FlowchartBlockRenderer extends StatelessWidget {
           flowchart: block.cascade!,
           theme: theme,
         ),
+      FlowchartVariant.linear => LinearFlowchartView(
+          flowchart: block.linear!,
+          theme: theme,
+        ),
     };
   }
 }

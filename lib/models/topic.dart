@@ -150,11 +150,21 @@ enum FlowchartVariant {
 
   /// Linear Yes/No chain. Each step has decision + yes_action +
   /// no_continuation. Terminates when an action has no continuation.
-  cascade;
+  cascade,
+
+  /// Single-column sequence with no decision and no branches — used by
+  /// WVEMS protocols whose flow is just `entry → step → step → … →
+  /// Consider` (e.g. Sting/Bite, Inhalation, Stroke). Steps are either
+  /// content boxes (a titled white box with bullets — same look as a
+  /// branch criteria box) or action tiles (the same `ActionTile` used by
+  /// severity branches). Warnings, entry-chain, convergence,
+  /// post-convergence and dose-table all work the same as severity.
+  linear;
 
   static FlowchartVariant fromString(String? s) => switch (s) {
         'severity' => severity,
         'cascade' => cascade,
+        'linear' => linear,
         _ => severity,
       };
 }
@@ -459,6 +469,88 @@ enum WarningType {
       };
 }
 
+/// One step in a linear flowchart — either a content box (a titled
+/// white-bordered box with bulleted text, same look as a branch
+/// criteria box) or an action tile (the same widget used for a
+/// severity-branch action).
+sealed class LinearStep {
+  const LinearStep();
+
+  factory LinearStep.fromYaml(Map<dynamic, dynamic> map) {
+    final type = (map['type'] as String?) ?? 'action';
+    if (type == 'content') {
+      return LinearContentStep(
+        title: map['title'] as String,
+        bullets: _stringList(map['bullets']),
+      );
+    }
+    return LinearActionStep(action: TopicAction.fromYaml(map));
+  }
+}
+
+/// A titled box with bullets — same visual primitive as a branch
+/// criteria box.  Used for "Assess for:" / similar reference content
+/// embedded in the flow.
+class LinearContentStep extends LinearStep {
+  const LinearContentStep({required this.title, this.bullets = const []});
+
+  final String title;
+  final List<String> bullets;
+}
+
+/// An action tile in a linear flow — same `ActionTile` widget the
+/// severity branches use, with the same provider-level badge and
+/// optional `timing` / `condition` subtitle.
+class LinearActionStep extends LinearStep {
+  const LinearActionStep({required this.action});
+
+  final TopicAction action;
+}
+
+/// A single-column flowchart with no decision and no branches — used
+/// by WVEMS protocols whose flow is `entry → step → step → … →
+/// Consider`.  Reuses [entryChain], [convergence], [postConvergence],
+/// [doseTable] and [warnings] with the same semantics as
+/// [SeverityFlowchart].
+class LinearFlowchart {
+  const LinearFlowchart({
+    required this.steps,
+    this.entryChain = const [],
+    this.convergence,
+    this.postConvergence,
+    this.doseTable = const [],
+    this.warnings = const [],
+  });
+
+  factory LinearFlowchart.fromYaml(Map<dynamic, dynamic> map) {
+    final entryChain = <FlowNode>[];
+    if (map['entry_chain'] != null) {
+      entryChain.addAll(_mapList(map['entry_chain'], FlowNode.fromYaml));
+    } else if (map['entry'] != null) {
+      entryChain.add(FlowNode.fromYaml(map['entry'] as Map));
+    }
+    return LinearFlowchart(
+      entryChain: entryChain,
+      steps: _mapList(map['steps'], LinearStep.fromYaml),
+      convergence: map['convergence'] != null
+          ? ConvergenceNode.fromYaml(map['convergence'] as Map)
+          : null,
+      postConvergence: map['post_convergence'] != null
+          ? FlowNode.fromYaml(map['post_convergence'] as Map)
+          : null,
+      doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
+      warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
+    );
+  }
+
+  final List<FlowNode> entryChain;
+  final List<LinearStep> steps;
+  final ConvergenceNode? convergence;
+  final FlowNode? postConvergence;
+  final List<DoseRow> doseTable;
+  final List<WarningCallout> warnings;
+}
+
 /// One step in a cascade flowchart.
 ///
 /// [decision] is the yes/no question shown as the step's header. Optional
@@ -722,7 +814,12 @@ class ProseBlock extends Block {
 /// ACLS-style loops are expressed via [TopicAction.timing] and
 /// [TopicAction.condition] on actions within the existing variants.
 class FlowchartBlock extends Block {
-  const FlowchartBlock({required this.variant, this.severity, this.cascade});
+  const FlowchartBlock({
+    required this.variant,
+    this.severity,
+    this.cascade,
+    this.linear,
+  });
 
   factory FlowchartBlock.fromYaml(Map<dynamic, dynamic> map) {
     final variant = FlowchartVariant.fromString(map['variant'] as String?);
@@ -735,12 +832,17 @@ class FlowchartBlock extends Block {
           variant: variant,
           cascade: CascadeFlowchart.fromYaml(map),
         ),
+      FlowchartVariant.linear => FlowchartBlock(
+          variant: variant,
+          linear: LinearFlowchart.fromYaml(map),
+        ),
     };
   }
 
   final FlowchartVariant variant;
   final SeverityFlowchart? severity;
   final CascadeFlowchart? cascade;
+  final LinearFlowchart? linear;
 }
 
 // ─────────────────────────────────────────────────────────────
