@@ -317,6 +317,7 @@ class ConvergenceNode {
     this.shape = NodeShape.roundedRectangle,
     this.bullets = const [],
     this.exits = const [],
+    this.warnings = const [],
   });
 
   factory ConvergenceNode.fromYaml(Map<dynamic, dynamic> map) =>
@@ -325,12 +326,21 @@ class ConvergenceNode {
         shape: NodeShape.fromString(map['shape'] as String?),
         bullets: _mapList(map['bullets'], ConvergenceBullet.fromYaml),
         exits: _mapList(map['exits'], ConvergenceExit.fromYaml),
+        warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
       );
 
   final String text;
   final NodeShape shape;
   final List<ConvergenceBullet> bullets;
   final List<ConvergenceExit> exits;
+
+  /// Side callouts that flank the convergence stadium, matching the
+  /// WVEMS PDF convention: `safety` is a red octagon on the left (e.g.
+  /// "Ensure Patient DECON"); `caution` is a purple parallelogram on
+  /// the right (e.g. "Consider Destination Triage").  Same callout
+  /// widgets the entry stadium uses for its own side warnings.  Only
+  /// the first of each type is rendered.
+  final List<WarningCallout> warnings;
 }
 
 /// One row in the medication dose reference table.

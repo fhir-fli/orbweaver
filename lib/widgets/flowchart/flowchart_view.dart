@@ -131,8 +131,12 @@ class SeverityFlowchartView extends StatelessWidget {
     // Branch columns extend their last action down to the bottom of the
     // (intrinsic-height-stretched) row when the next row is a convergence
     // hub — keeps the L-arrow visibly continuous from the action tile.
+    // Convergence side-warnings replace the hub with a callout-flanked
+    // stadium (no L-arrows), so the fill line isn't needed there.
+    final convHasWarnings = fc.convergence?.warnings.isNotEmpty ?? false;
     final branchesExtendDown = fc.convergence != null &&
         !useLoopbackLayout &&
+        !convHasWarnings &&
         (fc.branches.length == 2 || fc.branches.length == 3);
     rows.add(_BranchesRow(
       branches: fc.branches,
@@ -191,17 +195,41 @@ class SeverityFlowchartView extends StatelessWidget {
           );
         }
       } else {
-        if (fc.branches.length == 2 || fc.branches.length == 3) {
+        final conv = fc.convergence!;
+        final convSafety = conv.warnings
+            .where((w) => w.type == WarningType.safety)
+            .cast<WarningCallout?>()
+            .firstWhere((_) => true, orElse: () => null);
+        final convCaution = conv.warnings
+            .where((w) => w.type == WarningType.caution)
+            .cast<WarningCallout?>()
+            .firstWhere((_) => true, orElse: () => null);
+        final hasConvWarnings = convSafety != null || convCaution != null;
+        if (hasConvWarnings) {
+          // Side callouts replace the L-arrow hub: this preserves the
+          // clinical content (e.g. "Ensure Patient DECON",
+          // "Consider Destination Triage") at the cost of the L-arrows
+          // from the branch columns.
+          rows.add(_ParallelDownArrows(count: fc.branches.length));
+          rows.add(
+            _ConvergenceWithWarnings(
+              safety: convSafety,
+              caution: convCaution,
+              node: conv,
+              theme: theme,
+            ),
+          );
+        } else if (fc.branches.length == 2 || fc.branches.length == 3) {
           rows.add(
             _ConvergenceHub(
-              node: fc.convergence!,
+              node: conv,
               theme: theme,
               branchCount: fc.branches.length,
             ),
           );
         } else {
           rows.add(_ParallelDownArrows(count: fc.branches.length));
-          rows.add(_ConvergenceBox(node: fc.convergence!, theme: theme));
+          rows.add(_ConvergenceBox(node: conv, theme: theme));
         }
         for (final exit in forwardExits) {
           rows.add(FlowDownArrow(label: exit.label));
@@ -473,6 +501,59 @@ class _EntryWithWarnings extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+/// Mirror of [_EntryWithWarnings] for the convergence stadium: the
+/// `_ConvergenceBox` is centered between an optional safety octagon on
+/// the left and an optional caution parallelogram on the right.
+///
+/// Used by both the linear and severity renderers whenever a
+/// [ConvergenceNode] carries `warnings`.  When the severity convergence
+/// has warnings we use this layout instead of [_ConvergenceHub] — the
+/// L-arrow visualization is traded for the side callouts, which carry
+/// real clinical content (e.g. "Ensure Patient DECON") and shouldn't be
+/// folded into a Consider bullet.
+class _ConvergenceWithWarnings extends StatelessWidget {
+  const _ConvergenceWithWarnings({
+    required this.safety,
+    required this.caution,
+    required this.node,
+    required this.theme,
+  });
+
+  final WarningCallout? safety;
+  final WarningCallout? caution;
+  final ConvergenceNode node;
+  final TopicTheme theme;
+
+  @override
+  Widget build(BuildContext context) {
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 22,
+            child: safety != null
+                ? SafetyOctagon(text: safety!.text)
+                : const SizedBox.shrink(),
+          ),
+          const SizedBox(width: 4),
+          Expanded(
+            flex: 56,
+            child: _ConvergenceBox(node: node, theme: theme),
+          ),
+          const SizedBox(width: 4),
+          Expanded(
+            flex: 22,
+            child: caution != null
+                ? CautionCallout(text: caution!.text)
+                : const SizedBox.shrink(),
+          ),
+        ],
       ),
     );
   }
@@ -1270,14 +1351,34 @@ class LinearFlowchartView extends StatelessWidget {
 
     if (fc.convergence != null) {
       rows.add(const FlowDownArrow());
-      rows.add(
-        Center(
-          child: FractionallySizedBox(
-            widthFactor: _nodeWidthFactor,
-            child: _ConvergenceBox(node: fc.convergence!, theme: theme),
+      final conv = fc.convergence!;
+      final convSafety = conv.warnings
+          .where((w) => w.type == WarningType.safety)
+          .cast<WarningCallout?>()
+          .firstWhere((_) => true, orElse: () => null);
+      final convCaution = conv.warnings
+          .where((w) => w.type == WarningType.caution)
+          .cast<WarningCallout?>()
+          .firstWhere((_) => true, orElse: () => null);
+      if (convSafety != null || convCaution != null) {
+        rows.add(
+          _ConvergenceWithWarnings(
+            safety: convSafety,
+            caution: convCaution,
+            node: conv,
+            theme: theme,
           ),
-        ),
-      );
+        );
+      } else {
+        rows.add(
+          Center(
+            child: FractionallySizedBox(
+              widthFactor: _nodeWidthFactor,
+              child: _ConvergenceBox(node: conv, theme: theme),
+            ),
+          ),
+        );
+      }
     }
 
     if (fc.postConvergence != null) {
