@@ -255,6 +255,13 @@ const library = <Book>[
         tags: ['neonate', 'newborn', 'apgar', 'resuscitation', 't-piece'],
       ),
       BookTopic(
+        id: 'wvems_2026_056',
+        title: 'Major Trauma',
+        subtitle: '2026-056 · Multisystem / Impaled / Blast',
+        asset: 'assets/topics/wvems_2026_056.yaml',
+        tags: ['trauma', 'multisystem', 'impaled', 'blast', 'polytrauma'],
+      ),
+      BookTopic(
         id: 'wvems_2026_058',
         title: 'Bleeding',
         subtitle: '2026-058 · Hemorrhage / Tourniquet / TXA',
