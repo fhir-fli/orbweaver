@@ -297,6 +297,13 @@ const library = <Book>[
         tags: ['burns', 'hazmat', 'chemical', 'electrical', 'sunburn'],
       ),
       BookTopic(
+        id: 'wvems_2026_074',
+        title: 'Sting / Bite',
+        subtitle: '2026-074 · Animal / Snake / Insect',
+        asset: 'assets/topics/wvems_2026_074.yaml',
+        tags: ['sting', 'bite', 'animal', 'snake', 'spider', 'insect'],
+      ),
+      BookTopic(
         id: 'wvems_2026_076',
         title: 'Epistaxis',
         subtitle: '2026-076 · Nose Bleed / Afrin / TXA',
