@@ -283,6 +283,13 @@ const library = <Book>[
         tags: ['cold', 'heat', 'hypothermia', 'hyperthermia', 'frostbite'],
       ),
       BookTopic(
+        id: 'wvems_2026_070',
+        title: 'Burns',
+        subtitle: '2026-070 · Heat / Chemical / Electric',
+        asset: 'assets/topics/wvems_2026_070.yaml',
+        tags: ['burns', 'hazmat', 'chemical', 'electrical', 'sunburn'],
+      ),
+      BookTopic(
         id: 'wvems_2026_076',
         title: 'Epistaxis',
         subtitle: '2026-076 · Nose Bleed / Afrin / TXA',
