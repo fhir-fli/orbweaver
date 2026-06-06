@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orbweaver/widgets/flowchart/fit_text.dart';
 
 /// Red octagon (stop sign) for `WarningType.safety` callouts.
 ///
@@ -26,14 +27,20 @@ class SafetyOctagon extends StatelessWidget {
           // slanted edges.
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           child: Center(
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 13,
-                height: 1.1,
-                fontWeight: FontWeight.w800,
+            child: LayoutBuilder(
+              // Subtract a small margin so the shrunk text leaves
+              // breathing room from the slant edges; matches the
+              // measurement-tolerance pattern used by action tiles.
+              builder: (context, constraints) => FitText(
+                text,
+                maxWidth: constraints.maxWidth - 4,
                 color: Colors.white,
+                style: const TextStyle(
+                  fontSize: 13,
+                  height: 1.1,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
@@ -116,14 +123,20 @@ class CautionCallout extends StatelessWidget {
           // into that corner.
           padding: const EdgeInsets.fromLTRB(6, 4, 6 + _skew, 4),
           child: Center(
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 13,
-                height: 1.1,
-                fontWeight: FontWeight.w800,
+            child: LayoutBuilder(
+              // Subtract a small margin so the shrunk text leaves
+              // breathing room from the slant edges; matches the
+              // measurement-tolerance pattern used by action tiles.
+              builder: (context, constraints) => FitText(
+                text,
+                maxWidth: constraints.maxWidth - 4,
                 color: Colors.white,
+                style: const TextStyle(
+                  fontSize: 13,
+                  height: 1.1,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white,
+                ),
               ),
             ),
           ),
