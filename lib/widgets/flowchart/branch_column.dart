@@ -365,7 +365,7 @@ class ActionTile extends StatelessWidget {
 }
 
 /// Full-height provider-level band. WVEMS convention:
-///   E = gold, A = green, I = blue.
+///   E = gold, A = green, I = blue, P = lavender.
 class _ProviderBadge extends StatelessWidget {
   const _ProviderBadge({required this.level});
 
@@ -377,6 +377,7 @@ class _ProviderBadge extends StatelessWidget {
       ProviderLevel.emt => ('E', const Color(0xFFF2C24A)),
       ProviderLevel.intermediate => ('I', const Color(0xFF6FAADB)),
       ProviderLevel.als => ('A', const Color(0xFF7BBF86)),
+      ProviderLevel.paramedic => ('P', const Color(0xFFAB91D8)),
       ProviderLevel.any => ('', const Color(0xFFE0E0E0)),
     };
 

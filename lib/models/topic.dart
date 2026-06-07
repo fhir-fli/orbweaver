@@ -68,12 +68,14 @@ enum ProviderLevel {
   als,
   emt,
   intermediate,
+  paramedic,
   any;
 
   static ProviderLevel fromString(String? s) => switch (s) {
         'A' => als,
         'E' => emt,
         'I' => intermediate,
+        'P' => paramedic,
         _ => any,
       };
 }
