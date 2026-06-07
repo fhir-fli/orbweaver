@@ -241,6 +241,13 @@ const library = <Book>[
         tags: ['seizure', 'epilepsy', 'convulsion', 'versed', 'midazolam', 'keppra'],
       ),
       BookTopic(
+        id: 'wvems_2026_044',
+        title: 'Stroke',
+        subtitle: '2026-044 · CVA / TIA / Cincinnati FAST',
+        asset: 'assets/topics/wvems_2026_044.yaml',
+        tags: ['stroke', 'cva', 'tia', 'neurology'],
+      ),
+      BookTopic(
         id: 'wvems_2026_046',
         title: 'Behavioral',
         subtitle: '2026-046 · Versed / Haldol',
