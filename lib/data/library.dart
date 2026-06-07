@@ -255,6 +255,13 @@ const library = <Book>[
         tags: ['neonate', 'newborn', 'apgar', 'resuscitation', 't-piece'],
       ),
       BookTopic(
+        id: 'wvems_2026_054',
+        title: 'Trauma ROSC',
+        subtitle: '2026-054 · Return of Pulse / Post-Resuscitation',
+        asset: 'assets/topics/wvems_2026_054.yaml',
+        tags: ['rosc', 'trauma', 'post resuscitation', 'ketamine'],
+      ),
+      BookTopic(
         id: 'wvems_2026_056',
         title: 'Major Trauma',
         subtitle: '2026-056 · Multisystem / Impaled / Blast',
