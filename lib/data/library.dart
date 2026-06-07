@@ -339,6 +339,13 @@ const library = <Book>[
         tags: ['epistaxis', 'nosebleed', 'afrin', 'txa'],
       ),
       BookTopic(
+        id: 'wvems_2026_094',
+        title: 'Sepsis',
+        subtitle: '2026-094 · Septic Shock / Rocephin',
+        asset: 'assets/topics/wvems_2026_094.yaml',
+        tags: ['sepsis', 'infection', 'septic shock', 'rocephin'],
+      ),
+      BookTopic(
         id: 'wvems_drug_ref_a',
         title: 'Drug Reference: A',
         subtitle: 'p.120 · drug cards',

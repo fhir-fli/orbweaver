@@ -1,0 +1,165 @@
+# ============================================================
+# WVEMS 2026 Protocol 94 — Sepsis
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# First Critical Care protocol (purple theme, P paramedic badge).
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-094"
+  version: "v260101"
+  title: "Sepsis"
+  last_reviewed: "Aug 2025"
+  tags:
+    - "sepsis"
+    - "infection"
+    - "septic shock"
+    - "rocephin"
+    - "critical care"
+  aliases:
+    - "Severe Infection"
+    - "Septic Shock"
+  category: "critical_care"
+
+  pages:
+
+  - page_number: 94
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 2 branches)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry_chain:
+        - text: "Suspected Organ Dysfunction from Infection"
+          shape: "stadium"
+        - text: "(P) POC Lactic"
+          shape: "rectangle"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "minor"
+          label: "Minor"
+          criteria:
+            - "Adequate Perfusion"
+            - "Low Likelihood"
+          actions:
+            - text: "Monitor Closely"
+              kind: "assessment"
+
+        - id: "major"
+          label: "Major"
+          criteria:
+            - "Poor Perfusion"
+            - "High Likelihood"
+          actions:
+            - provider_level: "P"
+              text: "Blood Cultures"
+              kind: "diagnostic"
+            - provider_level: "P"
+              text: "Rocephin"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Shock"
+            link_id: "wvems-2025-008"
+          - text: "Fever"
+            link_id: "wvems-2026-016"
+          - text: "Vasopressors"
+
+      dose_table:
+        - drug: "Rocephin"
+          dose: "1 gram"
+          route: "IV/IO, IM"
+          frequency: "x1"
+          population: "adult"
+
+    # ────────────────────────────────────────────────
+    # P POC Lactic — entry-chain action box at the top of the
+    # flowchart in the PDF. Our schema's entry_chain only holds
+    # text nodes, so we render it as a separate centred action
+    # callout below the flowchart (clinical content preserved).
+    # ────────────────────────────────────────────────
+
+  - page_number: 95
+    blocks:
+
+    - type: "prose"
+      title: "Sepsis Mandatory Prerequisites"
+      highlight: true
+      markdown: |
+        - In the last 12 months: pass a critical-care in-service training.
+
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "Organ Dysfunction"
+          callout: true
+          markdown: |
+            Suspect if **several** of these:
+            - Pulse > 90 /min, Lactic > 2 mmol/L
+            - Resp > 20 /min, EtCO2 < 25 mmHg
+            - Temp > 100.4°F (> 38°C)
+            - Temp < 96.8°F (< 36°C)
+            - Decrease in mental status
+            - Increased O2 requirement
+        - type: "prose"
+          title: "Suspect Infection"
+          callout: true
+          markdown: |
+            With any **recent history** of:
+            - Fever, cough, antibiotic use
+            - Indwelling line / catheter
+            - Open wound / decub ulcer
+            - Surgery / major procedure
+
+    - type: "prose"
+      title: "SEPSIS Alert"
+      callout: true
+      markdown: |
+        - **Organ Dysfunction**
+        - **Suspected Infection**
+        - Call a **SEPSIS** Alert
+
+    - type: "prose"
+      title: "Imperatives"
+      markdown: |
+        - Sepsis is life-threatening organ dysfunction caused by infection.
+        - For possible sepsis, we suggest measuring **blood lactate**.
+        - For **sepsis without shock**, we recommend rapid assessment of the
+          likelihood of infectious versus non-infectious causes.
+        - For a **low likelihood** of infection **without shock**, we suggest
+          deferring antimicrobials while continuing to closely monitor.
+        - For **septic shock** or a **high likelihood** for sepsis, we
+          recommend administering antimicrobials immediately.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Rocephin®** (Ceftriaxone): First line for undifferentiated sepsis.
+          - Monitor closely if PCN allergy; avoid if cephalosporin allergy.
+          - Reconstitute with **NS** for IV/IO, and **Lidocaine** for IM.
+          - **Do not** use with **Calcium** — potentially fatal.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - It is appropriate to **defer antibiotics** (minimal evidence for peds).
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Surviving Sepsis Campaign — International Guidelines 2021 [Ver: 11/21]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 24
+
+        NEMSIS: 9914127
