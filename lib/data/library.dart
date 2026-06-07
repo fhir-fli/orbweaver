@@ -192,6 +192,13 @@ const library = <Book>[
         tags: ['nausea', 'vomiting', 'emesis', 'zofran', 'ondansetron'],
       ),
       BookTopic(
+        id: 'wvems_2026_026',
+        title: 'Medical ROSC',
+        subtitle: '2026-026 · Return of Pulse / Post-Resuscitation',
+        asset: 'assets/topics/wvems_2026_026.yaml',
+        tags: ['rosc', 'post resuscitation', 'ketamine', 'amiodarone'],
+      ),
+      BookTopic(
         id: 'wvems_2026_028',
         title: 'Chest Pain',
         subtitle: '2026-028 · Aspirin / Nitro',
