@@ -196,12 +196,13 @@ class BranchHeaderBox extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   for (final c in criteria)
                     Text(
                       '• $c',
+                      textAlign: TextAlign.center,
                       style: const TextStyle(fontSize: 12.5, height: 1.25),
                     ),
                 ],
@@ -293,9 +294,12 @@ class ActionTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final showBadge =
         !(omitAnyBadge && action.providerLevel == ProviderLevel.any);
+    // Badge on the left is mirrored by an invisible spacer on the right
+    // so the label content sits at the tile's true centre — otherwise
+    // it reads as shifted right by half a badge width.
     final chromeBadge = showBadge ? _badgeWidth : 0.0;
     final labelMaxWidth = columnWidth.isFinite
-        ? columnWidth - chromeBadge - 2 * _labelHPad - _labelMeasureSlack
+        ? columnWidth - 2 * chromeBadge - 2 * _labelHPad - _labelMeasureSlack
         : double.infinity;
     return Container(
       decoration: BoxDecoration(
@@ -322,6 +326,7 @@ class ActionTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     FitText(
+
                       action.text,
                       maxWidth: labelMaxWidth,
                       style: const TextStyle(
@@ -349,6 +354,9 @@ class ActionTile extends StatelessWidget {
                 ),
               ),
             ),
+            // Mirror-width spacer balancing the left badge so the label
+            // sits at the tile's true centre.
+            if (showBadge) const SizedBox(width: _badgeWidth),
           ],
         ),
       ),
