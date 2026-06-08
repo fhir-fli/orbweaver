@@ -360,6 +360,13 @@ const library = <Book>[
         tags: ['icp', 'tbi', 'head injury', 'hypertonic saline', 'keppra'],
       ),
       BookTopic(
+        id: 'wvems_2026_088',
+        title: 'STEMI',
+        subtitle: '2026-088 · 15-Lead / Sgarbossa / Heparin',
+        asset: 'assets/topics/wvems_2026_088.yaml',
+        tags: ['stemi', 'acs', '15-lead', 'sgarbossa', 'heparin'],
+      ),
+      BookTopic(
         id: 'wvems_2026_094',
         title: 'Sepsis',
         subtitle: '2026-094 · Septic Shock / Rocephin',
