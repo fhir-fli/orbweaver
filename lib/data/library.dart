@@ -367,6 +367,13 @@ const library = <Book>[
         tags: ['stemi', 'acs', '15-lead', 'sgarbossa', 'heparin'],
       ),
       BookTopic(
+        id: 'wvems_2026_090',
+        title: 'Pulmonary Edema',
+        subtitle: '2026-090 · CHF / Nitro Drip / Lasix',
+        asset: 'assets/topics/wvems_2026_090.yaml',
+        tags: ['pulmonary edema', 'chf', 'heart failure', 'nitro drip', 'lasix'],
+      ),
+      BookTopic(
         id: 'wvems_2026_094',
         title: 'Sepsis',
         subtitle: '2026-094 · Septic Shock / Rocephin',
