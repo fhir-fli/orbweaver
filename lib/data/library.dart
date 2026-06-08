@@ -346,6 +346,13 @@ const library = <Book>[
         tags: ['vasopressors', 'inotropes', 'push dose pressors', 'levophed'],
       ),
       BookTopic(
+        id: 'wvems_2026_084',
+        title: 'Blood',
+        subtitle: '2026-084 · Transfusion / Whole Blood',
+        asset: 'assets/topics/wvems_2026_084.yaml',
+        tags: ['blood', 'transfusion', 'exsanguination', 'whole blood'],
+      ),
+      BookTopic(
         id: 'wvems_2026_094',
         title: 'Sepsis',
         subtitle: '2026-094 · Septic Shock / Rocephin',

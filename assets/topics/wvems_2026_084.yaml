@@ -1,0 +1,150 @@
+# ============================================================
+# WVEMS 2026 Protocol 84 — Blood
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-084"
+  version: "v260101"
+  title: "Blood"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "blood"
+    - "transfusion"
+    - "exsanguination"
+    - "whole blood"
+    - "critical care"
+  aliases:
+    - "Transfusion"
+    - "Exsanguination"
+    - "Whole Blood Products"
+  category: "critical_care"
+
+  pages:
+
+  - page_number: 84
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 3 branches by response)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry_chain:
+        - text: "Hemorrhagic Shock"
+          shape: "stadium"
+        - text: "Stop the Bleeding"
+          shape: "rounded_rectangle"
+        - text: "(A) NS Bolus"
+          shape: "rectangle"
+
+      decision:
+        text: "Response?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "rapid"
+          label: "Rapid"
+          criteria:
+            - "Adequate Perfusion"
+            - "Good Hemostasis"
+          actions:
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+
+        - id: "transient"
+          label: "Transient"
+          criteria:
+            - "Labile Perfusion"
+            - "Poor Hemostasis"
+          actions: []
+
+        - id: "minimal"
+          label: "Minimal / None"
+          criteria:
+            - "Poor Perfusion"
+            - "Internal Bleeding"
+          actions:
+            - provider_level: "P"
+              text: "Blood"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Circulation"
+            link_id: "wvems-2025-008"
+          - text: "Bleeding"
+            link_id: "wvems-2026-058"
+          - text: "Vasopressors"
+            link_id: "wvems-2026-082"
+
+      dose_table:
+        - drug: "NS Bolus"
+          dose: "500 mL"
+          route: "IV/IO"
+          frequency: "PRN"
+          population: "adult"
+        - drug: "Blood"
+          dose: "1 unit"
+          route: "IV/IO"
+          frequency: "PRN"
+          population: "adult"
+
+  - page_number: 85
+    blocks:
+
+    - type: "prose"
+      title: "Blood Mandatory Prerequisites"
+      highlight: true
+      markdown: |
+        - In the last 12 months: pass a critical-care in-service training.
+        - Ensure blood is **stored and maintained** per supplier's instruction.
+
+    - type: "prose"
+      title: "Imperatives"
+      markdown: |
+        - **NS vs. Blood** is a clinical decision. There is no perfect answer.
+          - **NS Bolus** may be good for easily controlled external bleeding.
+          - Switch to blood quickly if perfusion does not respond rapidly.
+          - Providers **may start with blood** for critically unstable bleeding.
+          - Use for overt massive exsanguination (**trauma**, GI, post-partum).
+        - **Target SBP of 90 mmHg** regardless of NS vs. Blood.
+          - Use **balanced** resuscitation in hemorrhagic shock.
+          - Target higher if any **head / spine** injury or **pregnancy**.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **NS Bolus** (0.9% Saline): May skip **NS** for patients in extremis.
+        - **Blood** (LTOWB): **Verify** the environmental control tag.
+          - Use special tubing & **heater**. Watch for **transfusion reactions**.
+          - Stop immediately if any **fever**, **dyspnea** or **allergic reaction**.
+          - **Tell the ED** about any blood administered, and any reactions.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - If possible, ask about any **religious objections** before transfusion.
+          - **If altered**: may check for medical jewelry or in patient's wallet.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Provide **Blood** in aliquots of **10 mL/kg**. May repeat PRN.
+        - Titrate to low end of age-adjusted SBP (listed in **Peds Reference**).
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - PHTLS — https://www.naemt.org/education/trauma-education/phtls [Ver: 10th]
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 29, 34
+
+        NEMSIS: 9914083
