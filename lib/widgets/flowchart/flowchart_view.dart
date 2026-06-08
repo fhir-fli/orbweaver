@@ -1440,3 +1440,153 @@ class _LinearStepRow extends StatelessWidget {
     );
   }
 }
+
+/// Renderer for [FlowchartVariant.differential] — entry → decision →
+/// N-column grid of referential cards → optional convergence.  Each
+/// card is a titled box with bullets (same primitive as a branch
+/// criteria box, reused via `BranchHeaderBox`).  The user reads the
+/// card matching their patient's situation; cards don't carry action
+/// tiles, so downstream actions live in the convergence's bullets or
+/// the dose_table.
+class DifferentialFlowchartView extends StatelessWidget {
+  const DifferentialFlowchartView({
+    required this.flowchart,
+    required this.theme,
+    super.key,
+  });
+
+  final DifferentialFlowchart flowchart;
+  final TopicTheme theme;
+
+  @override
+  Widget build(BuildContext context) {
+    final fc = flowchart;
+    final safety = fc.warnings
+        .where((w) => w.type == WarningType.safety)
+        .cast<WarningCallout?>()
+        .firstWhere((_) => true, orElse: () => null);
+    final caution = fc.warnings
+        .where((w) => w.type == WarningType.caution)
+        .cast<WarningCallout?>()
+        .firstWhere((_) => true, orElse: () => null);
+    final hasWarnings = safety != null || caution != null;
+
+    final rows = <Widget>[];
+
+    if (!hasWarnings) rows.add(const SizedBox(height: 6));
+
+    // Entry chain — same flow as the other variants.
+    for (var i = 0; i < fc.entryChain.length; i++) {
+      final node = fc.entryChain[i];
+      if (i == 0 && hasWarnings) {
+        rows.add(_EntryWithWarnings(
+          safety: safety,
+          caution: caution,
+          entry: node,
+          theme: theme,
+        ));
+      } else {
+        rows.add(FlowNodeBox(text: node.text, shape: node.shape, theme: theme));
+      }
+      // Skip the arrow after the very last pre-decision node — the
+      // diamond's own incoming arrow handles that transition.
+      final isLastPreDecision =
+          i == fc.entryChain.length - 1 && fc.decision != null;
+      if (!isLastPreDecision) rows.add(const FlowDownArrow());
+    }
+
+    if (fc.decision != null) {
+      rows.add(const FlowDownArrow());
+      rows.add(FlowNodeBox(
+        text: fc.decision!.text,
+        shape: fc.decision!.shape,
+        theme: theme,
+      ));
+      rows.add(const FlowDownArrow());
+    }
+
+    // Card grid — cards chunked into rows of [columns] each.
+    if (fc.cards.isNotEmpty) {
+      final cols = fc.columns < 1 ? 1 : fc.columns;
+      for (var i = 0; i < fc.cards.length; i += cols) {
+        final rowCards = fc.cards.sublist(
+          i,
+          (i + cols).clamp(0, fc.cards.length),
+        );
+        rows.add(Padding(
+          padding: const EdgeInsets.only(bottom: 4),
+          child: IntrinsicHeight(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (var c = 0; c < rowCards.length; c++) ...[
+                  if (c > 0) const SizedBox(width: 6),
+                  Expanded(
+                    child: BranchHeaderBox(
+                      label: rowCards[c].title,
+                      criteria: rowCards[c].bullets,
+                    ),
+                  ),
+                ],
+                // Pad short final row with blank slots so cards keep
+                // their column width when the card count isn't a
+                // multiple of [columns].
+                for (var pad = rowCards.length; pad < cols; pad++) ...[
+                  const SizedBox(width: 6),
+                  const Expanded(child: SizedBox.shrink()),
+                ],
+              ],
+            ),
+          ),
+        ));
+      }
+    }
+
+    if (fc.convergence != null) {
+      rows.add(const FlowDownArrow());
+      final conv = fc.convergence!;
+      final convSafety = conv.warnings
+          .where((w) => w.type == WarningType.safety)
+          .cast<WarningCallout?>()
+          .firstWhere((_) => true, orElse: () => null);
+      final convCaution = conv.warnings
+          .where((w) => w.type == WarningType.caution)
+          .cast<WarningCallout?>()
+          .firstWhere((_) => true, orElse: () => null);
+      if (convSafety != null || convCaution != null) {
+        rows.add(_ConvergenceWithWarnings(
+          safety: convSafety,
+          caution: convCaution,
+          node: conv,
+          theme: theme,
+        ));
+      } else {
+        rows.add(Center(
+          child: FractionallySizedBox(
+            widthFactor: 0.55,
+            child: _ConvergenceBox(node: conv, theme: theme),
+          ),
+        ));
+      }
+    }
+
+    if (fc.postConvergence != null) {
+      rows.add(const FlowDownArrow());
+      rows.add(FlowNodeBox(
+        text: fc.postConvergence!.text,
+        shape: fc.postConvergence!.shape,
+        theme: theme,
+      ));
+    }
+
+    if (fc.doseTable.isNotEmpty) {
+      rows.add(const SizedBox(height: 8));
+      rows.add(DoseTable(rows: fc.doseTable, theme: theme));
+    }
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: rows,
+    );
+  }
+}

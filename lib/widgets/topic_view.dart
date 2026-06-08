@@ -285,6 +285,10 @@ class _FlowchartBlockRenderer extends StatelessWidget {
           flowchart: block.linear!,
           theme: theme,
         ),
+      FlowchartVariant.differential => DifferentialFlowchartView(
+          flowchart: block.differential!,
+          theme: theme,
+        ),
     };
   }
 }

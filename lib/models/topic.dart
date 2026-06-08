@@ -161,12 +161,24 @@ enum FlowchartVariant {
   /// branch criteria box) or action tiles (the same `ActionTile` used by
   /// severity branches). Warnings, entry-chain, convergence,
   /// post-convergence and dose-table all work the same as severity.
-  linear;
+  linear,
+
+  /// Decision-into-card-grid pattern: an entry chain leads into a
+  /// decision diamond (e.g. "Location?", "Cause?"), then a grid of
+  /// referential cards (each a title with descriptive bullets — same
+  /// box style as a branch criteria box).  The user reads the card that
+  /// matches the patient's situation; there are no action tiles per
+  /// card.  Used by Head Injury (062), Trunk Injury (064),
+  /// Abdominal Pain (034), and Altered LOC (036).  Warnings,
+  /// entry_chain, convergence, post_convergence and dose_table all
+  /// work the same as severity.
+  differential;
 
   static FlowchartVariant fromString(String? s) => switch (s) {
         'severity' => severity,
         'cascade' => cascade,
         'linear' => linear,
+        'differential' => differential,
         _ => severity,
       };
 }
@@ -563,6 +575,80 @@ class LinearFlowchart {
   final List<WarningCallout> warnings;
 }
 
+/// One card in a [DifferentialFlowchart] — a titled white-bordered box
+/// with descriptive bullets, same visual primitive as a branch criteria
+/// box (rendered via `BranchHeaderBox`).
+class DifferentialCard {
+  const DifferentialCard({required this.title, this.bullets = const []});
+
+  factory DifferentialCard.fromYaml(Map<dynamic, dynamic> map) =>
+      DifferentialCard(
+        title: map['title'] as String,
+        bullets: _stringList(map['bullets']),
+      );
+
+  final String title;
+  final List<String> bullets;
+}
+
+/// Decision-into-card-grid flowchart — used by WVEMS protocols where a
+/// single decision branches into N referential cards (e.g. Location?
+/// → Skull Fx / Mouth / Scalp / Ears / Neck / Nose / Eyes / Teeth) that
+/// the user reads to find the appropriate management for their
+/// patient's specific situation.  Cards don't carry action tiles
+/// themselves; downstream actions live in the convergence's bullets or
+/// in the dose_table.  Reuses [entryChain], [convergence],
+/// [postConvergence], [doseTable] and [warnings] with the same
+/// semantics as [SeverityFlowchart] / [LinearFlowchart].
+class DifferentialFlowchart {
+  const DifferentialFlowchart({
+    required this.cards,
+    this.entryChain = const [],
+    this.decision,
+    this.columns = 2,
+    this.convergence,
+    this.postConvergence,
+    this.doseTable = const [],
+    this.warnings = const [],
+  });
+
+  factory DifferentialFlowchart.fromYaml(Map<dynamic, dynamic> map) {
+    final entryChain = <FlowNode>[];
+    if (map['entry_chain'] != null) {
+      entryChain.addAll(_mapList(map['entry_chain'], FlowNode.fromYaml));
+    } else if (map['entry'] != null) {
+      entryChain.add(FlowNode.fromYaml(map['entry'] as Map));
+    }
+    return DifferentialFlowchart(
+      entryChain: entryChain,
+      decision: map['decision'] != null
+          ? FlowNode.fromYaml(map['decision'] as Map)
+          : null,
+      cards: _mapList(map['cards'], DifferentialCard.fromYaml),
+      columns: (map['columns'] as num?)?.toInt() ?? 2,
+      convergence: map['convergence'] != null
+          ? ConvergenceNode.fromYaml(map['convergence'] as Map)
+          : null,
+      postConvergence: map['post_convergence'] != null
+          ? FlowNode.fromYaml(map['post_convergence'] as Map)
+          : null,
+      doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
+      warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
+    );
+  }
+
+  final List<FlowNode> entryChain;
+  final FlowNode? decision;
+  final List<DifferentialCard> cards;
+
+  /// Grid column count — typically 2 (matching the WVEMS PDF layout).
+  final int columns;
+  final ConvergenceNode? convergence;
+  final FlowNode? postConvergence;
+  final List<DoseRow> doseTable;
+  final List<WarningCallout> warnings;
+}
+
 /// One step in a cascade flowchart.
 ///
 /// [decision] is the yes/no question shown as the step's header. Optional
@@ -831,6 +917,7 @@ class FlowchartBlock extends Block {
     this.severity,
     this.cascade,
     this.linear,
+    this.differential,
   });
 
   factory FlowchartBlock.fromYaml(Map<dynamic, dynamic> map) {
@@ -848,6 +935,10 @@ class FlowchartBlock extends Block {
           variant: variant,
           linear: LinearFlowchart.fromYaml(map),
         ),
+      FlowchartVariant.differential => FlowchartBlock(
+          variant: variant,
+          differential: DifferentialFlowchart.fromYaml(map),
+        ),
     };
   }
 
@@ -855,6 +946,7 @@ class FlowchartBlock extends Block {
   final SeverityFlowchart? severity;
   final CascadeFlowchart? cascade;
   final LinearFlowchart? linear;
+  final DifferentialFlowchart? differential;
 }
 
 // ─────────────────────────────────────────────────────────────
