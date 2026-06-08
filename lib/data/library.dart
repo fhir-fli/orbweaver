@@ -374,6 +374,13 @@ const library = <Book>[
         tags: ['pulmonary edema', 'chf', 'heart failure', 'nitro drip', 'lasix'],
       ),
       BookTopic(
+        id: 'wvems_2026_092',
+        title: 'Malignant HTN',
+        subtitle: '2026-092 · HTN Crisis / Preeclampsia',
+        asset: 'assets/topics/wvems_2026_092.yaml',
+        tags: ['malignant htn', 'hypertensive crisis', 'preeclampsia', 'lopressor', 'magnesium'],
+      ),
+      BookTopic(
         id: 'wvems_2026_094',
         title: 'Sepsis',
         subtitle: '2026-094 · Septic Shock / Rocephin',
