@@ -297,6 +297,13 @@ const library = <Book>[
         tags: ['immobilization', 'smr', 'spinal', 'c-collar', 'backboard'],
       ),
       BookTopic(
+        id: 'wvems_2026_062',
+        title: 'Head Injury',
+        subtitle: '2026-062 · Concussion / Face / Neck / Eye',
+        asset: 'assets/topics/wvems_2026_062.yaml',
+        tags: ['head injury', 'concussion', 'face', 'neck', 'eye', 'nose'],
+      ),
+      BookTopic(
         id: 'wvems_2026_066',
         title: 'Extremity Injury',
         subtitle: '2026-066 · Fracture / Amputation / Crush',
