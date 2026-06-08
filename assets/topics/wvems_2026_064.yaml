@@ -1,0 +1,133 @@
+# ============================================================
+# WVEMS 2026 Protocol 64 — Trunk Injury
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# Uses the `differential` flowchart variant.
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-064"
+  version: "v260101"
+  title: "Trunk Injury"
+  last_reviewed: "Oct 2025"
+  tags:
+    - "trunk injury"
+    - "chest"
+    - "abdomen"
+    - "evisceration"
+    - "flail chest"
+    - "pelvic fx"
+    - "trauma"
+  aliases:
+    - "Chest / Abd Injury"
+    - "Evisceration"
+    - "Flail Chest"
+    - "Pelvic Fx"
+  category: "trauma"
+
+  pages:
+
+  - page_number: 64
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (differential variant — 2-col card grid)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "differential"
+
+      entry_chain:
+        - text: "Chest, Back, or Abdomen Trauma"
+          shape: "stadium"
+
+      decision:
+        text: "Injury?"
+        shape: "diamond"
+
+      cards:
+        - title: "Penetration"
+          bullets:
+            - "Tx: Breathing"
+            - "Consider PTX"
+        - title: "Impaled"
+          bullets:
+            - "Splint Object"
+            - "Don't Remove"
+        - title: "Evisceration"
+          bullets:
+            - "Saline Gauze"
+            - "Vapor Barrier"
+        - title: "Flail Chest"
+          bullets:
+            - "Tx: Breathing"
+            - "Assist with BVM"
+        - title: "Spine"
+          bullets:
+            - "Tx: Immobilization"
+            - "Check for Step Off"
+        - title: "Unstable Pelvis"
+          bullets:
+            - "Tx: Shock"
+            - "Use Pelvic Binder"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Major Trauma"
+            link_id: "wvems-2026-056"
+          - text: "Bleeding"
+            link_id: "wvems-2026-058"
+          - text: "Pain"
+            link_id: "wvems-2026-020"
+
+  - page_number: 65
+    blocks:
+
+    - type: "prose"
+      title: "Trunk Injury Imperatives"
+      highlight: true
+      markdown: |
+        - Splint **impaled objects** as found (cut wreckage to free patient).
+          - May remove only if interfering with airway or resuscitation.
+        - **Lacerations** benefit from repair within the first few hours.
+        - **Mechanism** is an important indicator of injury severity.
+
+    - type: "prose"
+      title: "TRAUMA Alert"
+      callout: true
+      markdown: |
+        - If Major Intervention
+        - Or Major Mechanism
+        - Call a **TRAUMA** Alert
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Penetration**: All penetrations should have a **chest seal**.
+          - Remove chest seal if using positive pressure (e.g. BVM, NIPPV).
+        - **Evisceration**: Cover with saline gauze and vapor barrier.
+        - **Spine**: Monitor for neuro deficits and provide **Immobilization**.
+        - **Impaled**: Cut object free of wreckage. Do not remove from patient.
+        - **Flail Chest**: Monitor for **Pneumothorax**. Use BVM for **Dyspnea**.
+        - **Unstable Pelvis**: Assess **only once** (with gentle compression).
+          - Consider a **pelvic binder**:
+            - Place **BELOW the belt line**.
+            - Over greater trochanters.
+            - Internally rotate the feet.
+            - Secure feet & legs together.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Trunk injury is more likely in peds struck by a car.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Medscape Blunt Chest — https://emedicine.medscape.com/article/428723 [Ver: 11/22]
+        - Medscape Penetrating Abd — https://emedicine.medscape.com/article/2036859 [Ver: 3/22]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 31
+
+        NEMSIS: 9914193

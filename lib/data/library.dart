@@ -304,6 +304,13 @@ const library = <Book>[
         tags: ['head injury', 'concussion', 'face', 'neck', 'eye', 'nose'],
       ),
       BookTopic(
+        id: 'wvems_2026_064',
+        title: 'Trunk Injury',
+        subtitle: '2026-064 · Chest / Abd / Evisceration / Flail',
+        asset: 'assets/topics/wvems_2026_064.yaml',
+        tags: ['trunk injury', 'chest', 'abdomen', 'evisceration', 'flail chest'],
+      ),
+      BookTopic(
         id: 'wvems_2026_066',
         title: 'Extremity Injury',
         subtitle: '2026-066 · Fracture / Amputation / Crush',
