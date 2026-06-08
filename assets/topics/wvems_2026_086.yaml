@@ -1,0 +1,160 @@
+# ============================================================
+# WVEMS 2026 Protocol 86 — Elevated ICP
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-086"
+  version: "v260101"
+  title: "Elevated ICP"
+  last_reviewed: "Oct 2025"
+  tags:
+    - "icp"
+    - "tbi"
+    - "head injury"
+    - "hypertonic saline"
+    - "keppra"
+    - "critical care"
+  aliases:
+    - "Traumatic Brain Injury"
+    - "Hemorrhage"
+    - "Herniation"
+  category: "critical_care"
+
+  pages:
+
+  - page_number: 86
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 2 branches by GCS)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry_chain:
+        - text: "Significant Traumatic Brain Injury"
+          shape: "stadium"
+
+      decision:
+        text: "GCS?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "high_gcs"
+          label: "8 or above"
+          criteria:
+            - "Headache, Dazed"
+            - "Awake & Confused"
+          actions:
+            - text: "Treat as Head Injury"
+              kind: "referral"
+
+        - id: "low_gcs"
+          label: "7 or less"
+          criteria:
+            - "One Pupil Dilated"
+            - "Cushing's Triad"
+          actions:
+            - provider_level: "P"
+              text: "3% Saline"
+              kind: "medication_administration"
+            - provider_level: "P"
+              text: "Keppra"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
+        bullets:
+          - text: "Major Trauma"
+            link_id: "wvems-2026-056"
+          - text: "Altered LOC, Seizure"
+            link_id: "wvems-2026-042"
+          - text: "Intubation"
+
+      dose_table:
+        - drug: "3% Saline"
+          dose: "250 mL"
+          route: "IV/IO"
+          frequency: "over 10 min"
+          population: "adult"
+        - drug: "Keppra"
+          dose: "3,000 mg"
+          route: "IV/IO"
+          frequency: "over 10 min"
+          population: "adult"
+
+  - page_number: 87
+    blocks:
+
+    - type: "prose"
+      title: "Elevated ICP Mandatory Prerequisites"
+      highlight: true
+      markdown: |
+        - In the last 12 months: pass a critical-care in-service training.
+        - Prioritize emergent transport to a Level 1 or 2 trauma center.
+
+    - type: "prose"
+      title: "Imperatives"
+      markdown: |
+        - Critical to avoid **Hypoxia** and **Hypotension**. Treat aggressively.
+          - Target **SBP > 110 mmHg** and **SpO2 96–99%** and **EtCO2 35–45 mmHg**.
+        - Use cot to **sit patient up at 30°** if lower spine injury unlikely.
+        - One dilated pupil suggests herniation. Bilateral dilation is ominous.
+
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "Cushing's Triad"
+          callout: true
+          markdown: |
+            - Hypertension
+            - Bradycardia
+            - Irregular Resps
+        - type: "table"
+          title: "Glasgow Coma Scale"
+          columns: ["Eyes", "Verbal", "Motor", ""]
+          column_flex: [3, 3, 3, 1]
+          rows:
+            - cells: ["none", "none", "none", "1"]
+            - cells: ["pain", "moaning", "extensor", "2"]
+            - cells: ["verbal", "words", "flexor", "3"]
+            - cells: ["normal", "confused", "withdraw", "4"]
+            - cells: ["", "normal", "localizes", "5"]
+            - cells: ["", "", "normal", "6"]
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **3% Saline** (Hypertonic): **Inform the ED** after use.
+        - **Keppra®** (Levetiracetam): May give even before any **seizures**.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Seizures**, **Pain**, **Vomiting**, **Agitation** and **Fever** can all increase ICP.
+          - Consider symptomatic treatment but **do not delay transport**.
+        - Steroids, **TXA**, and/or hyperventilation are **not indicated**.
+        - Increased risk of intracranial hemorrhage if any **anti-coagulation**.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Use **Peds Reference** or other approved source for peds dosing.
+        - Target **upper end** of age-adjusted SBP (also in **Peds Reference**).
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Medscape Head Injury — https://emedicine.medscape.com/article/251834 [Ver: 5/22]
+        - ACS TBI Guidelines — https://www.facs.org/search?searchTerm=TBI+Guideline [Ver: 2020]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 33, 34
+
+        NEMSIS: 9914101, 9914105

@@ -353,6 +353,13 @@ const library = <Book>[
         tags: ['blood', 'transfusion', 'exsanguination', 'whole blood'],
       ),
       BookTopic(
+        id: 'wvems_2026_086',
+        title: 'Elevated ICP',
+        subtitle: '2026-086 · TBI / Herniation / Hypertonic Saline',
+        asset: 'assets/topics/wvems_2026_086.yaml',
+        tags: ['icp', 'tbi', 'head injury', 'hypertonic saline', 'keppra'],
+      ),
+      BookTopic(
         id: 'wvems_2026_094',
         title: 'Sepsis',
         subtitle: '2026-094 · Septic Shock / Rocephin',
