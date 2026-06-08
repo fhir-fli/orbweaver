@@ -339,6 +339,13 @@ const library = <Book>[
         tags: ['epistaxis', 'nosebleed', 'afrin', 'txa'],
       ),
       BookTopic(
+        id: 'wvems_2026_082',
+        title: 'Vasopressors',
+        subtitle: '2026-082 · Levophed / Epi Push / Neo Push',
+        asset: 'assets/topics/wvems_2026_082.yaml',
+        tags: ['vasopressors', 'inotropes', 'push dose pressors', 'levophed'],
+      ),
+      BookTopic(
         id: 'wvems_2026_094',
         title: 'Sepsis',
         subtitle: '2026-094 · Septic Shock / Rocephin',

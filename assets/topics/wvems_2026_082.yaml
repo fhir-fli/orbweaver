@@ -1,0 +1,160 @@
+# ============================================================
+# WVEMS 2026 Protocol 82 — Vasopressors
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-082"
+  version: "v260101"
+  title: "Vasopressors"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "vasopressors"
+    - "inotropes"
+    - "push dose pressors"
+    - "levophed"
+    - "epi"
+    - "critical care"
+  aliases:
+    - "Inotropes"
+    - "Push Dose Pressors"
+  category: "critical_care"
+
+  pages:
+
+  - page_number: 82
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 2 branches by technique)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry_chain:
+        - text: "Systolic Under  (or MAP)\nAdult (14+):  90  (65)\nChild (1-13):  70  (50)\nInfant (<1):  60  (40)"
+          shape: "stadium"
+
+      decision:
+        text: "Technique?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "pump"
+          label: "Pump"
+          criteria:
+            - "Adequate help"
+            - "Longer transport"
+          actions:
+            - provider_level: "P"
+              text: "Levophed"
+              kind: "medication_administration"
+
+        - id: "push"
+          label: "Push"
+          criteria:
+            - "Transient need"
+            - "Shock Index > 0.8"
+          actions:
+            - provider_level: "P"
+              text: "Epi Push"
+              kind: "medication_administration"
+            - provider_level: "P"
+              text: "Neo Push"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Shock"
+            link_id: "wvems-2025-008"
+          - text: "Blood"
+          - text: "Allergy"
+            link_id: "wvems-2026-032"
+          - text: "OD / Tox"
+            link_id: "wvems-2026-040"
+
+      dose_table:
+        - drug: "Levophed"
+          dose: "5–20 mcg/min"
+          route: "IV/IO"
+          frequency: "Titrated Drip"
+          population: "adult"
+        - drug: "Epi Push"
+          dose: "5–20 mcg"
+          route: "IV/IO"
+          frequency: "Q 2 min"
+          population: "adult"
+        - drug: "Neo Push"
+          dose: "50–200 mcg"
+          route: "IV/IO"
+          frequency: "Q 2 min"
+          population: "adult"
+
+  - page_number: 83
+    blocks:
+
+    - type: "prose"
+      title: "Vasopressors Mandatory Prerequisites"
+      highlight: true
+      markdown: |
+        - In the last 12 months: pass a critical-care in-service training.
+
+    - type: "prose"
+      title: "Imperatives"
+      markdown: |
+        - Anticipate & be ready for **repeat hypotension** if using push dose.
+        - Inappropriate use of pressors can **cause harm**.
+          - Double check dose calculation (beware multiple concentrations).
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Levophed®** (Norepinephrine): Good for **septic shock**.
+          - **Requires a pump** — it is inappropriate to dose by gravity gtt.
+        - **Epi Push** (Epinephrine): Good for **anaphylactic shock**.
+          - Be prepared to repeat dosing; avoid in STEMI.
+        - **Neo Push** (Phenylephrine): Good for elevated **shock index**.
+
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "Shock Index"
+          callout: true
+          markdown: |
+            SI = **Pulse / SBP**
+        - type: "prose"
+          title: "Poor Perfusion"
+          callout: true
+          markdown: |
+            Suspect if **several** of these:
+            - **Altered Mental Status**
+            - Skin Pale, Cool, Diaphoretic
+            - Tachycardia, Hypotension
+            - Dyspnea, Tachypnea
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Shock Index** is a good predictor of hypotension from RSI.
+          - Be ready with push dose pressors if **Shock Index is above 0.8**.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Use **Peds Reference** or other approved source for peds dosing.
+        - Titrate to age-adjusted BP (vitals also listed in **Peds Reference**).
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vasopressors — https://emedicine.medscape.com/article/2172220 [Ver: 6/24]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 7, 29
+
+        NEMSIS: 9914127, 9914179
