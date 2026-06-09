@@ -435,6 +435,7 @@ class SeverityFlowchart {
   const SeverityFlowchart({
     required this.branches,
     this.entryChain = const [],
+    this.preDecisionActions = const [],
     this.decision,
     this.convergence,
     this.postConvergence,
@@ -454,6 +455,8 @@ class SeverityFlowchart {
     }
     return SeverityFlowchart(
       entryChain: entryChain,
+      preDecisionActions:
+          _mapList(map['pre_decision_actions'], TopicAction.fromYaml),
       decision: map['decision'] != null
           ? FlowNode.fromYaml(map['decision'] as Map)
           : null,
@@ -473,6 +476,12 @@ class SeverityFlowchart {
   }
 
   final List<FlowNode> entryChain;
+
+  /// Action tiles rendered as a centred vertical badged stack between
+  /// the entry chain and the decision diamond (e.g. Hyperkalemia's
+  /// 12-Lead / Albuterol before the severity branch point). Same
+  /// semantics as [DifferentialFlowchart.preDecisionActions].
+  final List<TopicAction> preDecisionActions;
   final FlowNode? decision;
   final List<TopicBranch> branches;
   final ConvergenceNode? convergence;
@@ -641,6 +650,7 @@ class DifferentialFlowchart {
   const DifferentialFlowchart({
     required this.cards,
     this.entryChain = const [],
+    this.preDecisionActions = const [],
     this.decision,
     this.columns = 2,
     this.convergence,
@@ -659,6 +669,8 @@ class DifferentialFlowchart {
     }
     return DifferentialFlowchart(
       entryChain: entryChain,
+      preDecisionActions:
+          _mapList(map['pre_decision_actions'], TopicAction.fromYaml),
       decision: map['decision'] != null
           ? FlowNode.fromYaml(map['decision'] as Map)
           : null,
@@ -679,6 +691,13 @@ class DifferentialFlowchart {
   }
 
   final List<FlowNode> entryChain;
+
+  /// Action tiles rendered as a centred vertical badged stack between
+  /// the entry chain and the decision diamond — matching WVEMS
+  /// protocols whose flow runs assessments/interventions before the
+  /// branch point (e.g. Altered LOC: Glucometer / 12-Lead / Saline
+  /// Lock; Hyperkalemia: 12-Lead / Albuterol).
+  final List<TopicAction> preDecisionActions;
   final FlowNode? decision;
   final List<DifferentialCard> cards;
 

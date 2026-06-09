@@ -88,9 +88,17 @@ class SeverityFlowchartView extends StatelessWidget {
       }
       // Skip the arrow after the very last pre-branch node — the fork row
       // below handles that transition (one arrow per branch column).
-      final isLastPreBranch =
-          i == fc.entryChain.length - 1 && fc.decision == null;
+      // When pre-decision actions or a decision follow, the loop's
+      // trailing arrow flows into them instead.
+      final isLastPreBranch = i == fc.entryChain.length - 1 &&
+          fc.decision == null &&
+          fc.preDecisionActions.isEmpty;
       if (!isLastPreBranch) rows.add(const FlowDownArrow());
+    }
+
+    if (fc.preDecisionActions.isNotEmpty) {
+      rows.add(_PreDecisionActions(actions: fc.preDecisionActions, theme: theme));
+      rows.add(const FlowDownArrow());
     }
 
     if (fc.decision != null) {
@@ -988,6 +996,48 @@ class _ConvergenceBox extends StatelessWidget {
   }
 }
 
+/// A centred vertical stack of action tiles rendered between the entry
+/// chain and the decision diamond (WVEMS "pre-decision" interventions,
+/// e.g. Altered LOC's Glucometer / 12-Lead / Saline Lock). Tiles keep
+/// their provider badges (gray placeholder for `any`) so the E/A/I
+/// column lines up, matching the single bordered box in the PDF.
+class _PreDecisionActions extends StatelessWidget {
+  const _PreDecisionActions({required this.actions, required this.theme});
+
+  final List<TopicAction> actions;
+  final TopicTheme theme;
+
+  static const double _widthFactor = 0.55;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: FractionallySizedBox(
+        widthFactor: _widthFactor,
+        // LayoutBuilder sits above the tiles' own IntrinsicHeight, so it
+        // can measure the stack width and feed each tile's label-fit.
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final colW = constraints.maxWidth;
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final action in actions)
+                  ActionTile(
+                    action: action,
+                    theme: theme,
+                    columnWidth: colW,
+                  ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
 /// Lavender pill for a Critical Care protocol cross-reference, matching
 /// the WVEMS PDF (e.g. Abdominal Pain → "Sepsis"). Sits below the green
 /// "Consider" terminator. Shrink-wraps its text and underlines it to
@@ -1536,11 +1586,18 @@ class DifferentialFlowchartView extends StatelessWidget {
       } else {
         rows.add(FlowNodeBox(text: node.text, shape: node.shape, theme: theme));
       }
-      // Skip the arrow after the very last pre-decision node — the
-      // diamond's own incoming arrow handles that transition.
-      final isLastPreDecision =
-          i == fc.entryChain.length - 1 && fc.decision != null;
-      if (!isLastPreDecision) rows.add(const FlowDownArrow());
+      // Skip the arrow after the very last entry node only when the
+      // diamond follows immediately — its own incoming arrow handles
+      // that. When pre-decision actions sit between, keep the arrow so
+      // it flows entry → actions.
+      final isLastBeforeDiamond = i == fc.entryChain.length - 1 &&
+          fc.decision != null &&
+          fc.preDecisionActions.isEmpty;
+      if (!isLastBeforeDiamond) rows.add(const FlowDownArrow());
+    }
+
+    if (fc.preDecisionActions.isNotEmpty) {
+      rows.add(_PreDecisionActions(actions: fc.preDecisionActions, theme: theme));
     }
 
     if (fc.decision != null) {
