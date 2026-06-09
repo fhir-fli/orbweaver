@@ -220,6 +220,13 @@ const library = <Book>[
         tags: ['allergy', 'anaphylaxis', 'epi', 'albuterol', 'benadryl'],
       ),
       BookTopic(
+        id: 'wvems_2026_034',
+        title: 'Abdominal Pain',
+        subtitle: '2026-034 · GI / AAA / GI Bleed / OB-GYN',
+        asset: 'assets/topics/wvems_2026_034.yaml',
+        tags: ['abdominal pain', 'stomach pain', 'heartburn', 'gerd', 'aaa', 'gi bleed', 'ectopic'],
+      ),
+      BookTopic(
         id: 'wvems_2026_038',
         title: 'Diabetic',
         subtitle: '2026-038 · Glucose / D10 / Glucagon',
