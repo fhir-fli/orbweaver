@@ -297,6 +297,13 @@ const library = <Book>[
         tags: ['neonate', 'newborn', 'apgar', 'resuscitation', 't-piece'],
       ),
       BookTopic(
+        id: 'wvems_2026_052',
+        title: 'Trauma CODE',
+        subtitle: '2026-052 · Tourniquet / Pleural Decompress / Epi',
+        asset: 'assets/topics/wvems_2026_052.yaml',
+        tags: ['trauma code', 'traumatic arrest', 'cpr', 'tourniquet', 'pleural decompression', 'epinephrine'],
+      ),
+      BookTopic(
         id: 'wvems_2026_054',
         title: 'Trauma ROSC',
         subtitle: '2026-054 · Return of Pulse / Post-Resuscitation',
@@ -379,6 +386,20 @@ const library = <Book>[
         subtitle: '2026-076 · Nose Bleed / Afrin / TXA',
         asset: 'assets/topics/wvems_2026_076.yaml',
         tags: ['epistaxis', 'nosebleed', 'afrin', 'txa'],
+      ),
+      BookTopic(
+        id: 'wvems_2026_078',
+        title: 'Intubation / RSI',
+        subtitle: '2026-078 · Induce / Paralyze / Cric',
+        asset: 'assets/topics/wvems_2026_078.yaml',
+        tags: ['intubation', 'rsi', 'dsi', 'airway', 'etomidate', 'ketamine', 'rocuronium', 'cric'],
+      ),
+      BookTopic(
+        id: 'wvems_2026_080',
+        title: 'Sedation / Vent',
+        subtitle: '2026-080 · Versed / Fentanyl / Propofol / Ketamine',
+        asset: 'assets/topics/wvems_2026_080.yaml',
+        tags: ['sedation', 'ventilator', 'vent', 'versed', 'fentanyl', 'propofol', 'ketamine'],
       ),
       BookTopic(
         id: 'wvems_2026_082',
