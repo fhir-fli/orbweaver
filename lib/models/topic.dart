@@ -465,7 +465,7 @@ class SeverityFlowchart {
           ? ConvergenceNode.fromYaml(map['convergence'] as Map)
           : null,
       postConvergence: map['post_convergence'] != null
-          ? FlowNode.fromYaml(map['post_convergence'] as Map)
+          ? ConvergenceNode.fromYaml(map['post_convergence'] as Map)
           : null,
       criticalCareLink: map['critical_care_link'] != null
           ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
@@ -485,7 +485,7 @@ class SeverityFlowchart {
   final FlowNode? decision;
   final List<TopicBranch> branches;
   final ConvergenceNode? convergence;
-  final FlowNode? postConvergence;
+  final ConvergenceNode? postConvergence;
 
   /// Optional lavender Critical Care reference pill rendered below the
   /// convergence / post-convergence (WVEMS PDF convention).
@@ -599,7 +599,7 @@ class LinearFlowchart {
           ? ConvergenceNode.fromYaml(map['convergence'] as Map)
           : null,
       postConvergence: map['post_convergence'] != null
-          ? FlowNode.fromYaml(map['post_convergence'] as Map)
+          ? ConvergenceNode.fromYaml(map['post_convergence'] as Map)
           : null,
       criticalCareLink: map['critical_care_link'] != null
           ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
@@ -612,7 +612,7 @@ class LinearFlowchart {
   final List<FlowNode> entryChain;
   final List<LinearStep> steps;
   final ConvergenceNode? convergence;
-  final FlowNode? postConvergence;
+  final ConvergenceNode? postConvergence;
 
   /// Optional lavender Critical Care reference pill rendered below the
   /// convergence / post-convergence (WVEMS PDF convention).
@@ -680,7 +680,7 @@ class DifferentialFlowchart {
           ? ConvergenceNode.fromYaml(map['convergence'] as Map)
           : null,
       postConvergence: map['post_convergence'] != null
-          ? FlowNode.fromYaml(map['post_convergence'] as Map)
+          ? ConvergenceNode.fromYaml(map['post_convergence'] as Map)
           : null,
       criticalCareLink: map['critical_care_link'] != null
           ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
@@ -704,7 +704,7 @@ class DifferentialFlowchart {
   /// Grid column count — typically 2 (matching the WVEMS PDF layout).
   final int columns;
   final ConvergenceNode? convergence;
-  final FlowNode? postConvergence;
+  final ConvergenceNode? postConvergence;
 
   /// Optional lavender Critical Care reference pill rendered below the
   /// convergence / post-convergence (WVEMS PDF convention).

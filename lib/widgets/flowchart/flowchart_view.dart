@@ -195,11 +195,7 @@ class SeverityFlowchartView extends StatelessWidget {
             ),
           );
           rows.add(
-            FlowNodeBox(
-              text: fc.postConvergence!.text,
-              shape: fc.postConvergence!.shape,
-              theme: theme,
-            ),
+            _PostConvergence(node: fc.postConvergence!, theme: theme),
           );
         }
       } else {
@@ -244,11 +240,7 @@ class SeverityFlowchartView extends StatelessWidget {
         }
         if (fc.postConvergence != null) {
           rows.add(
-            FlowNodeBox(
-              text: fc.postConvergence!.text,
-              shape: fc.postConvergence!.shape,
-              theme: theme,
-            ),
+            _PostConvergence(node: fc.postConvergence!, theme: theme),
           );
         }
       }
@@ -1043,6 +1035,32 @@ class _PreDecisionActions extends StatelessWidget {
 /// "Consider" terminator. Shrink-wraps its text and underlines it to
 /// echo the convergence-bullet cross-link cue. Colours come from the
 /// shared Critical Care palette (lavender fill, purple border).
+/// Renders a flowchart's `post_convergence` node. With bullets it reads
+/// as a second green "Consider"-style terminator (e.g. Sedation / Vent:
+/// branches → Ventilator → Consider · Airway / Vasopressors); without
+/// bullets it's a plain themed node box (e.g. Airway → Intubation).
+class _PostConvergence extends StatelessWidget {
+  const _PostConvergence({required this.node, required this.theme});
+
+  final ConvergenceNode node;
+  final TopicTheme theme;
+
+  static const double _widthFactor = 0.55;
+
+  @override
+  Widget build(BuildContext context) {
+    if (node.bullets.isNotEmpty) {
+      return Center(
+        child: FractionallySizedBox(
+          widthFactor: _widthFactor,
+          child: _ConvergenceBox(node: node, theme: theme),
+        ),
+      );
+    }
+    return FlowNodeBox(text: node.text, shape: node.shape, theme: theme);
+  }
+}
+
 class _CriticalCareLinkPill extends StatelessWidget {
   const _CriticalCareLinkPill({required this.link});
 
@@ -1477,11 +1495,7 @@ class LinearFlowchartView extends StatelessWidget {
     if (fc.postConvergence != null) {
       rows.add(const FlowDownArrow());
       rows.add(
-        FlowNodeBox(
-          text: fc.postConvergence!.text,
-          shape: fc.postConvergence!.shape,
-          theme: theme,
-        ),
+        _PostConvergence(node: fc.postConvergence!, theme: theme),
       );
     }
 
@@ -1677,11 +1691,7 @@ class DifferentialFlowchartView extends StatelessWidget {
 
     if (fc.postConvergence != null) {
       rows.add(const FlowDownArrow());
-      rows.add(FlowNodeBox(
-        text: fc.postConvergence!.text,
-        shape: fc.postConvergence!.shape,
-        theme: theme,
-      ));
+      rows.add(_PostConvergence(node: fc.postConvergence!, theme: theme));
     }
 
     if (fc.criticalCareLink != null) {
