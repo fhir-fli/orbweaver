@@ -15,31 +15,77 @@ class DoseTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Show Adult / Peds section labels only when the table actually
+    // mixes populations (matches the WVEMS PDF's gray Adult / pink Peds
+    // tabs). A table whose rows are all `both` renders label-free, as
+    // before — the common case for single-population dose strips.
+    final showLabels = rows.any((r) => r.population != DosePopulation.both);
+
+    final children = <Widget>[];
+    for (var i = 0; i < rows.length; i++) {
+      final row = rows[i];
+      final startsGroup = i == 0 || rows[i - 1].population != row.population;
+      if (showLabels &&
+          startsGroup &&
+          row.population != DosePopulation.both) {
+        children.add(_PopulationLabel(population: row.population));
+      }
+      children.add(
+        Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+          decoration: BoxDecoration(
+            color: i.isEven
+                ? theme.nodeFill
+                : theme.nodeFill.withValues(alpha: 0.5),
+            border: i == 0
+                ? null
+                : Border(
+                    top: BorderSide(
+                      color: theme.nodeBorder.withValues(alpha: 0.4),
+                    ),
+                  ),
+          ),
+          child: _DoseRowView(row: row),
+        ),
+      );
+    }
+
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: theme.nodeBorder),
       ),
-      child: Column(
-        children: [
-          for (var i = 0; i < rows.length; i++)
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-              decoration: BoxDecoration(
-                color: i.isEven
-                    ? theme.nodeFill
-                    : theme.nodeFill.withValues(alpha: 0.5),
-                border: i == 0
-                    ? null
-                    : Border(
-                        top: BorderSide(
-                          color: theme.nodeBorder.withValues(alpha: 0.4),
-                        ),
-                      ),
-              ),
-              child: _DoseRowView(row: rows[i]),
-            ),
-        ],
+      child: Column(children: children),
+    );
+  }
+}
+
+/// Thin full-width band labeling the dose rows that follow as Adult or
+/// Peds — gray for adult, pink for peds, matching the WVEMS PDF.
+class _PopulationLabel extends StatelessWidget {
+  const _PopulationLabel({required this.population});
+
+  final DosePopulation population;
+
+  @override
+  Widget build(BuildContext context) {
+    final (label, bg) = switch (population) {
+      DosePopulation.adult => ('Adult', const Color(0xFFD9D9D9)),
+      DosePopulation.peds => ('Peds', const Color(0xFFF8C9DA)),
+      DosePopulation.both => ('', Colors.transparent),
+    };
+    return Container(
+      width: double.infinity,
+      color: bg,
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+      child: Text(
+        label,
+        style: const TextStyle(
+          fontSize: 11,
+          fontWeight: FontWeight.w800,
+          letterSpacing: 0.5,
+          color: Colors.black87,
+        ),
       ),
     );
   }
