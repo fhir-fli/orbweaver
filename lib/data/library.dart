@@ -227,6 +227,13 @@ const library = <Book>[
         tags: ['abdominal pain', 'stomach pain', 'heartburn', 'gerd', 'aaa', 'gi bleed', 'ectopic'],
       ),
       BookTopic(
+        id: 'wvems_2026_036',
+        title: 'Altered LOC / Syncope',
+        subtitle: '2026-036 · GCS / Differential / Cause',
+        asset: 'assets/topics/wvems_2026_036.yaml',
+        tags: ['altered loc', 'syncope', 'unresponsive', 'confused', 'fainting', 'dizzy', 'gcs'],
+      ),
+      BookTopic(
         id: 'wvems_2026_038',
         title: 'Diabetic',
         subtitle: '2026-038 · Glucose / D10 / Glucagon',
