@@ -1,0 +1,82 @@
+book:
+  id: "protocolbook"
+  title: "Quick Reference"
+  subtitle: "Paediatrics & Internal Medicine"
+  cover: "assets/covers/protocolbook.jpg"
+  spine_color: "0xFF2E7D32"
+  topics:
+    - id: "pb_triage"
+      title: "Paediatric Triage of Sick Children"
+      subtitle: "p.12 · severity table"
+      asset: "assets/topics/pb_triage.yaml"
+      tags: ["triage", "pediatric", "emergency"]
+    - id: "pb_pals"
+      title: "Paediatric Advanced Life Support"
+      subtitle: "p.13 · PALS flowchart"
+      asset: "assets/topics/pb_pals.yaml"
+      tags: ["pals", "resuscitation", "pediatric", "cpr"]
+    - id: "pb_cardiac_arrest"
+      title: "Adult Cardiac Arrest"
+      subtitle: "p.14 · ACLS branches"
+      asset: "assets/topics/pb_cardiac_arrest.yaml"
+      tags: ["acls", "resuscitation", "adult", "cpr"]
+    - id: "pb_cpr_summary"
+      title: "CPR Summary (Adults · Children · Infants)"
+      subtitle: "p.15 · comparison table"
+      asset: "assets/topics/pb_cpr_summary.yaml"
+      tags: ["cpr", "resuscitation"]
+    - id: "pb_weight_estimation"
+      title: "Paediatric Weight Estimation"
+      subtitle: "p.16 · age/height → weight"
+      asset: "assets/topics/pb_weight_estimation.yaml"
+      tags: ["weight", "pediatric", "dosing"]
+    - id: "pb_vital_rates"
+      title: "Vital Rates — Percentiles by Age"
+      subtitle: "p.17 · RR and HR tables"
+      asset: "assets/topics/pb_vital_rates.yaml"
+      tags: ["vitals", "respiratory rate", "heart rate", "pediatric"]
+    - id: "pb_bp_girls"
+      title: "Girls — BP for Stature"
+      subtitle: "p.18 · tap-to-zoom chart"
+      asset: "assets/topics/pb_bp_girls.yaml"
+      tags: ["blood pressure", "bp", "pediatric", "girls"]
+    - id: "pb_bp_boys"
+      title: "Boys — BP for Stature"
+      subtitle: "p.19 · tap-to-zoom chart"
+      asset: "assets/topics/pb_bp_boys.yaml"
+      tags: ["blood pressure", "bp", "pediatric", "boys"]
+    - id: "pb_resuscitation_meds"
+      title: "Resuscitation Medications"
+      subtitle: "p.20 · pediatric & adult dosing"
+      asset: "assets/topics/pb_resuscitation_meds.yaml"
+      tags: ["medications", "resuscitation", "dosing"]
+    - id: "pb_io_line"
+      title: "Intra-osseous Line Placement"
+      subtitle: "p.21 · technique + illustration"
+      asset: "assets/topics/pb_io_line.yaml"
+      tags: ["io", "procedure", "vascular access", "shock"]
+    - id: "pb_malaria"
+      title: "Malaria"
+      subtitle: "p.22 · diagnosis + severe Rx"
+      asset: "assets/topics/pb_malaria.yaml"
+      tags: ["malaria", "infectious", "tropical", "artesunate"]
+    - id: "pb_malaria_complications"
+      title: "Malaria — Complications & Co-infection"
+      subtitle: "p.23 · AKI, anemia, Rx failure"
+      asset: "assets/topics/pb_malaria_complications.yaml"
+      tags: ["malaria", "complications", "co-infection", "aki", "anemia"]
+    - id: "pb_malaria_severe_meds"
+      title: "Malaria — Severe Rx"
+      subtitle: "p.23 · parenteral ladder (inpatient)"
+      asset: "assets/topics/pb_malaria_severe_meds.yaml"
+      tags: ["malaria", "severe", "artesunate", "artemether", "quinine", "parenteral"]
+    - id: "pb_malaria_uncomplicated"
+      title: "Malaria — Uncomplicated Rx"
+      subtitle: "p.24 · PO regimens (outpatient)"
+      asset: "assets/topics/pb_malaria_uncomplicated.yaml"
+      tags: ["malaria", "uncomplicated", "coartem", "outpatient", "dosing"]
+    - id: "pb_meningitis"
+      title: "Paediatric Meningitis Rx > 1 month"
+      subtitle: "p.55 · cascade flowchart"
+      asset: "assets/topics/pb_meningitis.yaml"
+      tags: ["meningitis", "pediatric", "antibiotics"]

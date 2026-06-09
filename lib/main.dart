@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library.dart';
+import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
 import 'package:orbweaver/screens/shelf_screen.dart';
 import 'package:orbweaver/screens/topic_frame.dart';
@@ -7,13 +8,15 @@ import 'package:orbweaver/services/last_state.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  final library = await loadLibrary();
   final snapshot = await LastState.load();
-  runApp(OrbweaverApp(snapshot: snapshot));
+  runApp(OrbweaverApp(library: library, snapshot: snapshot));
 }
 
 class OrbweaverApp extends StatelessWidget {
-  const OrbweaverApp({required this.snapshot, super.key});
+  const OrbweaverApp({required this.library, required this.snapshot, super.key});
 
+  final List<Book> library;
   final LastStateSnapshot snapshot;
 
   @override
@@ -25,9 +28,9 @@ class OrbweaverApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
-      onGenerateInitialRoutes: (_) => _restorePages(snapshot),
+      onGenerateInitialRoutes: (_) => _restorePages(snapshot, library),
       onGenerateRoute: (settings) => MaterialPageRoute<void>(
-        builder: (_) => const ShelfScreen(),
+        builder: (_) => ShelfScreen(books: library),
       ),
     );
   }
@@ -36,12 +39,12 @@ class OrbweaverApp extends StatelessWidget {
 /// Builds the initial route stack from persisted state. The shelf is
 /// always on the bottom; book and topic routes are pushed on top if the
 /// user had one open last session. Back button pops in reverse.
-List<Route<void>> _restorePages(LastStateSnapshot s) {
+List<Route<void>> _restorePages(LastStateSnapshot s, List<Book> library) {
   final routes = <Route<void>>[
-    MaterialPageRoute<void>(builder: (_) => const ShelfScreen()),
+    MaterialPageRoute<void>(builder: (_) => ShelfScreen(books: library)),
   ];
 
-  final book = s.bookId == null ? null : findBook(s.bookId!);
+  final book = s.bookId == null ? null : findBook(library, s.bookId!);
   if (book == null) return routes;
   routes.add(MaterialPageRoute<void>(builder: (_) => BookScreen(book: book)));
 

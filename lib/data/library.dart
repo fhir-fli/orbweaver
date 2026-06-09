@@ -1,507 +1,63 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:orbweaver/models/book.dart';
+import 'package:yaml/yaml.dart';
 
-/// The set of books on the shelf.
+/// The library is data, not code: each book is a manifest under
+/// `assets/books/<id>.yaml`, and `assets/books/index.yaml` lists the
+/// book ids in shelf order. Orbweaver is a renderer — it reads what to
+/// show from these files; nothing about the shelf is hardcoded.
 ///
-/// Topics that share a prefix belong to the same book (pb_ = Protocol
-/// Quick Reference, wvems_ = WVEMS, who_ = WHO IMCI, demo_ = Block Demos).
-/// This list is the source of truth for the shelf screen.
-const library = <Book>[
-  Book(
-    id: 'protocolbook',
-    title: 'Quick Reference',
-    subtitle: 'Paediatrics & Internal Medicine',
-    coverAsset: 'assets/covers/protocolbook.jpg',
-    spineColor: Color(0xFF2E7D32),
-    topics: [
-      BookTopic(
-        id: 'pb_triage',
-        title: 'Paediatric Triage of Sick Children',
-        subtitle: 'p.12 · severity table',
-        asset: 'assets/topics/pb_triage.yaml',
-        tags: ['triage', 'pediatric', 'emergency'],
-      ),
-      BookTopic(
-        id: 'pb_pals',
-        title: 'Paediatric Advanced Life Support',
-        subtitle: 'p.13 · PALS flowchart',
-        asset: 'assets/topics/pb_pals.yaml',
-        tags: ['pals', 'resuscitation', 'pediatric', 'cpr'],
-      ),
-      BookTopic(
-        id: 'pb_cardiac_arrest',
-        title: 'Adult Cardiac Arrest',
-        subtitle: 'p.14 · ACLS branches',
-        asset: 'assets/topics/pb_cardiac_arrest.yaml',
-        tags: ['acls', 'resuscitation', 'adult', 'cpr'],
-      ),
-      BookTopic(
-        id: 'pb_cpr_summary',
-        title: 'CPR Summary (Adults · Children · Infants)',
-        subtitle: 'p.15 · comparison table',
-        asset: 'assets/topics/pb_cpr_summary.yaml',
-        tags: ['cpr', 'resuscitation'],
-      ),
-      BookTopic(
-        id: 'pb_weight_estimation',
-        title: 'Paediatric Weight Estimation',
-        subtitle: 'p.16 · age/height → weight',
-        asset: 'assets/topics/pb_weight_estimation.yaml',
-        tags: ['weight', 'pediatric', 'dosing'],
-      ),
-      BookTopic(
-        id: 'pb_vital_rates',
-        title: 'Vital Rates — Percentiles by Age',
-        subtitle: 'p.17 · RR and HR tables',
-        asset: 'assets/topics/pb_vital_rates.yaml',
-        tags: ['vitals', 'respiratory rate', 'heart rate', 'pediatric'],
-      ),
-      BookTopic(
-        id: 'pb_bp_girls',
-        title: 'Girls — BP for Stature',
-        subtitle: 'p.18 · tap-to-zoom chart',
-        asset: 'assets/topics/pb_bp_girls.yaml',
-        tags: ['blood pressure', 'bp', 'pediatric', 'girls'],
-      ),
-      BookTopic(
-        id: 'pb_bp_boys',
-        title: 'Boys — BP for Stature',
-        subtitle: 'p.19 · tap-to-zoom chart',
-        asset: 'assets/topics/pb_bp_boys.yaml',
-        tags: ['blood pressure', 'bp', 'pediatric', 'boys'],
-      ),
-      BookTopic(
-        id: 'pb_resuscitation_meds',
-        title: 'Resuscitation Medications',
-        subtitle: 'p.20 · pediatric & adult dosing',
-        asset: 'assets/topics/pb_resuscitation_meds.yaml',
-        tags: ['medications', 'resuscitation', 'dosing'],
-      ),
-      BookTopic(
-        id: 'pb_io_line',
-        title: 'Intra-osseous Line Placement',
-        subtitle: 'p.21 · technique + illustration',
-        asset: 'assets/topics/pb_io_line.yaml',
-        tags: ['io', 'procedure', 'vascular access', 'shock'],
-      ),
-      BookTopic(
-        id: 'pb_malaria',
-        title: 'Malaria',
-        subtitle: 'p.22 · diagnosis + severe Rx',
-        asset: 'assets/topics/pb_malaria.yaml',
-        tags: ['malaria', 'infectious', 'tropical', 'artesunate'],
-      ),
-      BookTopic(
-        id: 'pb_malaria_complications',
-        title: 'Malaria — Complications & Co-infection',
-        subtitle: 'p.23 · AKI, anemia, Rx failure',
-        asset: 'assets/topics/pb_malaria_complications.yaml',
-        tags: ['malaria', 'complications', 'co-infection', 'aki', 'anemia'],
-      ),
-      BookTopic(
-        id: 'pb_malaria_severe_meds',
-        title: 'Malaria — Severe Rx',
-        subtitle: 'p.23 · parenteral ladder (inpatient)',
-        asset: 'assets/topics/pb_malaria_severe_meds.yaml',
-        tags: ['malaria', 'severe', 'artesunate', 'artemether', 'quinine', 'parenteral'],
-      ),
-      BookTopic(
-        id: 'pb_malaria_uncomplicated',
-        title: 'Malaria — Uncomplicated Rx',
-        subtitle: 'p.24 · PO regimens (outpatient)',
-        asset: 'assets/topics/pb_malaria_uncomplicated.yaml',
-        tags: ['malaria', 'uncomplicated', 'coartem', 'outpatient', 'dosing'],
-      ),
-      BookTopic(
-        id: 'pb_meningitis',
-        title: 'Paediatric Meningitis Rx > 1 month',
-        subtitle: 'p.55 · cascade flowchart',
-        asset: 'assets/topics/pb_meningitis.yaml',
-        tags: ['meningitis', 'pediatric', 'antibiotics'],
-      ),
-    ],
-  ),
-  Book(
-    id: 'wvems',
-    title: 'WVEMS Protocols',
-    subtitle: '2026 Edition · Prehospital',
-    coverAsset: 'assets/covers/wvems.png',
-    spineColor: Color(0xFF1E4E8C),
-    topics: [
-      BookTopic(
-        id: 'wvems_2026_004',
-        title: 'Airway',
-        subtitle: '2026-004 · OPA / BIAD / Suction',
-        asset: 'assets/topics/wvems_2026_004.yaml',
-        tags: ['airway', 'choking', 'biad', 'opa', 'npa', 'intubation'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_006',
-        title: 'Breathing',
-        subtitle: '2026-006 · 3-branch severity',
-        asset: 'assets/topics/wvems_2026_006.yaml',
-        tags: ['breathing', 'hypoxia', 'oxygen', 'bvm', 'pneumothorax'],
-      ),
-      BookTopic(
-        id: 'wvems_2025_008',
-        title: 'Circulation / Shock',
-        subtitle: '2025-008 · severity flowchart',
-        asset: 'assets/topics/wvems_2025_008.yaml',
-        tags: ['shock', 'circulation', 'prehospital'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_010',
-        title: 'Hypertension',
-        subtitle: '2026-010 · severity flowchart',
-        asset: 'assets/topics/wvems_2026_010.yaml',
-        tags: ['htn', 'hypertension', 'blood pressure', 'bp'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_012',
-        title: 'Bradycardia',
-        subtitle: '2026-012 · Atropine / Pacing',
-        asset: 'assets/topics/wvems_2026_012.yaml',
-        tags: ['bradycardia', 'brady', 'atropine', 'pacing', 'heart block'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_016',
-        title: 'Fever',
-        subtitle: '2026-016 · Tylenol / Ibuprofen',
-        asset: 'assets/topics/wvems_2026_016.yaml',
-        tags: ['fever', 'tylenol', 'ibuprofen', 'sepsis', 'infection'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_018',
-        title: 'Hyperkalemia',
-        subtitle: '2026-018 · Albuterol / Calcium / Bicarb',
-        asset: 'assets/topics/wvems_2026_018.yaml',
-        tags: ['hyperkalemia', 'potassium', 'dialysis', 'renal failure', 'calcium', 'albuterol'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_020',
-        title: 'Pain',
-        subtitle: '2026-020 · analgesia ladder',
-        asset: 'assets/topics/wvems_2026_020.yaml',
-        tags: ['pain', 'analgesia', 'fentanyl', 'ketamine'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_014',
-        title: 'Tachycardia',
-        subtitle: '2026-014 · 3-branch w/ conditional meds',
-        asset: 'assets/topics/wvems_2026_014.yaml',
-        tags: ['tachycardia', 'svt', 'afib', 'vt', 'adenosine', 'amiodarone'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_022',
-        title: 'Nausea / Vomiting',
-        subtitle: '2026-022 · Zofran',
-        asset: 'assets/topics/wvems_2026_022.yaml',
-        tags: ['nausea', 'vomiting', 'emesis', 'zofran', 'ondansetron'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_024',
-        title: 'Medical CODE',
-        subtitle: '2026-024 · Compressions / AED / Epi / Amio',
-        asset: 'assets/topics/wvems_2026_024.yaml',
-        tags: ['medical code', 'cardiac arrest', 'cpr', 'vt/vf', 'pea', 'asystole', 'epinephrine', 'amiodarone'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_026',
-        title: 'Medical ROSC',
-        subtitle: '2026-026 · Return of Pulse / Post-Resuscitation',
-        asset: 'assets/topics/wvems_2026_026.yaml',
-        tags: ['rosc', 'post resuscitation', 'ketamine', 'amiodarone'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_028',
-        title: 'Chest Pain',
-        subtitle: '2026-028 · Aspirin / Nitro',
-        asset: 'assets/topics/wvems_2026_028.yaml',
-        tags: ['chest pain', 'acs', 'stemi', 'mi', 'aspirin', 'nitro'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_030',
-        title: 'Dyspnea',
-        subtitle: '2026-030 · cause-branched (Reactive / Infectious / Overload)',
-        asset: 'assets/topics/wvems_2026_030.yaml',
-        tags: ['dyspnea', 'sob', 'asthma', 'copd', 'chf', 'albuterol'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_032',
-        title: 'Allergic Reaction',
-        subtitle: '2026-032 · Epi / Albuterol / Benadryl',
-        asset: 'assets/topics/wvems_2026_032.yaml',
-        tags: ['allergy', 'anaphylaxis', 'epi', 'albuterol', 'benadryl'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_034',
-        title: 'Abdominal Pain',
-        subtitle: '2026-034 · GI / AAA / GI Bleed / OB-GYN',
-        asset: 'assets/topics/wvems_2026_034.yaml',
-        tags: ['abdominal pain', 'stomach pain', 'heartburn', 'gerd', 'aaa', 'gi bleed', 'ectopic'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_036',
-        title: 'Altered LOC / Syncope',
-        subtitle: '2026-036 · GCS / Differential / Cause',
-        asset: 'assets/topics/wvems_2026_036.yaml',
-        tags: ['altered loc', 'syncope', 'unresponsive', 'confused', 'fainting', 'dizzy', 'gcs'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_038',
-        title: 'Diabetic',
-        subtitle: '2026-038 · Glucose / D10 / Glucagon',
-        asset: 'assets/topics/wvems_2026_038.yaml',
-        tags: ['diabetic', 'hypoglycemia', 'hyperglycemia', 'glucose', 'd10', 'dka'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_040',
-        title: 'Overdose / Tox',
-        subtitle: '2026-040 · Narcan / Antidote',
-        asset: 'assets/topics/wvems_2026_040.yaml',
-        tags: ['overdose', 'tox', 'narcan', 'naloxone', 'poisoning'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_042',
-        title: 'Seizure',
-        subtitle: '2026-042 · Versed / Keppra / Mag',
-        asset: 'assets/topics/wvems_2026_042.yaml',
-        tags: ['seizure', 'epilepsy', 'convulsion', 'versed', 'midazolam', 'keppra'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_044',
-        title: 'Stroke',
-        subtitle: '2026-044 · CVA / TIA / Cincinnati FAST',
-        asset: 'assets/topics/wvems_2026_044.yaml',
-        tags: ['stroke', 'cva', 'tia', 'neurology'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_046',
-        title: 'Behavioral',
-        subtitle: '2026-046 · Versed / Haldol',
-        asset: 'assets/topics/wvems_2026_046.yaml',
-        tags: ['behavioral', 'psych', 'agitation', 'versed', 'haldol', 'restraint'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_048',
-        title: 'Pregnancy / Delivery',
-        subtitle: '2026-048 · OB / Eclampsia / Postpartum',
-        asset: 'assets/topics/wvems_2026_048.yaml',
-        tags: ['pregnancy', 'delivery', 'ob', 'preeclampsia', 'postpartum'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_050',
-        title: 'Neonate',
-        subtitle: '2026-050 · Newborn / APGAR / T-piece',
-        asset: 'assets/topics/wvems_2026_050.yaml',
-        tags: ['neonate', 'newborn', 'apgar', 'resuscitation', 't-piece'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_052',
-        title: 'Trauma CODE',
-        subtitle: '2026-052 · Tourniquet / Pleural Decompress / Epi',
-        asset: 'assets/topics/wvems_2026_052.yaml',
-        tags: ['trauma code', 'traumatic arrest', 'cpr', 'tourniquet', 'pleural decompression', 'epinephrine'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_054',
-        title: 'Trauma ROSC',
-        subtitle: '2026-054 · Return of Pulse / Post-Resuscitation',
-        asset: 'assets/topics/wvems_2026_054.yaml',
-        tags: ['rosc', 'trauma', 'post resuscitation', 'ketamine'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_056',
-        title: 'Major Trauma',
-        subtitle: '2026-056 · Multisystem / Impaled / Blast',
-        asset: 'assets/topics/wvems_2026_056.yaml',
-        tags: ['trauma', 'multisystem', 'impaled', 'blast', 'polytrauma'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_058',
-        title: 'Bleeding',
-        subtitle: '2026-058 · Hemorrhage / Tourniquet / TXA',
-        asset: 'assets/topics/wvems_2026_058.yaml',
-        tags: ['bleeding', 'hemorrhage', 'tourniquet', 'wound packing', 'txa'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_060',
-        title: 'Immobilization',
-        subtitle: '2026-060 · SMR / C-spine / Backboard',
-        asset: 'assets/topics/wvems_2026_060.yaml',
-        tags: ['immobilization', 'smr', 'spinal', 'c-collar', 'backboard'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_062',
-        title: 'Head Injury',
-        subtitle: '2026-062 · Concussion / Face / Neck / Eye',
-        asset: 'assets/topics/wvems_2026_062.yaml',
-        tags: ['head injury', 'concussion', 'face', 'neck', 'eye', 'nose'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_064',
-        title: 'Trunk Injury',
-        subtitle: '2026-064 · Chest / Abd / Evisceration / Flail',
-        asset: 'assets/topics/wvems_2026_064.yaml',
-        tags: ['trunk injury', 'chest', 'abdomen', 'evisceration', 'flail chest'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_066',
-        title: 'Extremity Injury',
-        subtitle: '2026-066 · Fracture / Amputation / Crush',
-        asset: 'assets/topics/wvems_2026_066.yaml',
-        tags: ['extremity', 'fracture', 'amputation', 'crush', 'splint'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_068',
-        title: 'Cold / Heat',
-        subtitle: '2026-068 · Hypothermia / Hyperthermia / Frostbite',
-        asset: 'assets/topics/wvems_2026_068.yaml',
-        tags: ['cold', 'heat', 'hypothermia', 'hyperthermia', 'frostbite'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_070',
-        title: 'Burns',
-        subtitle: '2026-070 · Heat / Chemical / Electric',
-        asset: 'assets/topics/wvems_2026_070.yaml',
-        tags: ['burns', 'hazmat', 'chemical', 'electrical', 'sunburn'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_072',
-        title: 'Inhalation',
-        subtitle: '2026-072 · Smoke / CO / Toxic Gas',
-        asset: 'assets/topics/wvems_2026_072.yaml',
-        tags: ['inhalation', 'smoke', 'carbon monoxide', 'toxic gas'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_074',
-        title: 'Sting / Bite',
-        subtitle: '2026-074 · Animal / Snake / Insect',
-        asset: 'assets/topics/wvems_2026_074.yaml',
-        tags: ['sting', 'bite', 'animal', 'snake', 'spider', 'insect'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_076',
-        title: 'Epistaxis',
-        subtitle: '2026-076 · Nose Bleed / Afrin / TXA',
-        asset: 'assets/topics/wvems_2026_076.yaml',
-        tags: ['epistaxis', 'nosebleed', 'afrin', 'txa'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_078',
-        title: 'Intubation / RSI',
-        subtitle: '2026-078 · Induce / Paralyze / Cric',
-        asset: 'assets/topics/wvems_2026_078.yaml',
-        tags: ['intubation', 'rsi', 'dsi', 'airway', 'etomidate', 'ketamine', 'rocuronium', 'cric'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_080',
-        title: 'Sedation / Vent',
-        subtitle: '2026-080 · Versed / Fentanyl / Propofol / Ketamine',
-        asset: 'assets/topics/wvems_2026_080.yaml',
-        tags: ['sedation', 'ventilator', 'vent', 'versed', 'fentanyl', 'propofol', 'ketamine'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_082',
-        title: 'Vasopressors',
-        subtitle: '2026-082 · Levophed / Epi Push / Neo Push',
-        asset: 'assets/topics/wvems_2026_082.yaml',
-        tags: ['vasopressors', 'inotropes', 'push dose pressors', 'levophed'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_084',
-        title: 'Blood',
-        subtitle: '2026-084 · Transfusion / Whole Blood',
-        asset: 'assets/topics/wvems_2026_084.yaml',
-        tags: ['blood', 'transfusion', 'exsanguination', 'whole blood'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_086',
-        title: 'Elevated ICP',
-        subtitle: '2026-086 · TBI / Herniation / Hypertonic Saline',
-        asset: 'assets/topics/wvems_2026_086.yaml',
-        tags: ['icp', 'tbi', 'head injury', 'hypertonic saline', 'keppra'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_088',
-        title: 'STEMI',
-        subtitle: '2026-088 · 15-Lead / Sgarbossa / Heparin',
-        asset: 'assets/topics/wvems_2026_088.yaml',
-        tags: ['stemi', 'acs', '15-lead', 'sgarbossa', 'heparin'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_090',
-        title: 'Pulmonary Edema',
-        subtitle: '2026-090 · CHF / Nitro Drip / Lasix',
-        asset: 'assets/topics/wvems_2026_090.yaml',
-        tags: ['pulmonary edema', 'chf', 'heart failure', 'nitro drip', 'lasix'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_092',
-        title: 'Malignant HTN',
-        subtitle: '2026-092 · HTN Crisis / Preeclampsia',
-        asset: 'assets/topics/wvems_2026_092.yaml',
-        tags: ['malignant htn', 'hypertensive crisis', 'preeclampsia', 'lopressor', 'magnesium'],
-      ),
-      BookTopic(
-        id: 'wvems_2026_094',
-        title: 'Sepsis',
-        subtitle: '2026-094 · Septic Shock / Rocephin',
-        asset: 'assets/topics/wvems_2026_094.yaml',
-        tags: ['sepsis', 'infection', 'septic shock', 'rocephin'],
-      ),
-      BookTopic(
-        id: 'wvems_drug_ref_a',
-        title: 'Drug Reference: A',
-        subtitle: 'p.120 · drug cards',
-        asset: 'assets/topics/wvems_drug_ref_a.yaml',
-        tags: ['drugs', 'medications', 'reference'],
-      ),
-    ],
-  ),
-  Book(
-    id: 'who_imci',
-    title: 'Hospital Care for Children',
-    subtitle: 'WHO · IMCI 2nd ed.',
-    coverAsset: 'assets/covers/who.png',
-    spineColor: Color(0xFF1565C0),
-    topics: [
-      BookTopic(
-        id: 'who_triage_chart2',
-        title: 'Triage of All Sick Children',
-        subtitle: 'IMCI Chart 2 · severity table',
-        asset: 'assets/topics/who_triage_chart2.yaml',
-        tags: ['triage', 'imci', 'pediatric'],
-      ),
-    ],
-  ),
-  Book(
-    id: 'pocket_medicine',
-    title: 'Pocket Medicine',
-    subtitle: 'Sabatine · MGH Handbook',
-    coverAsset: 'assets/covers/pocket_medicine.jpg',
-    spineColor: Color(0xFF6A1B9A),
-    topics: [],
-  ),
-  Book(
-    id: 'demos',
-    title: 'Block Demos',
-    subtitle: 'Schema smoke tests',
-    coverAsset: '',
-    spineColor: Color(0xFF546E7A),
-    topics: [
-      BookTopic(
-        id: 'demo_all_blocks',
-        title: 'All Block Types Demo',
-        subtitle: 'Every block type',
-        asset: 'assets/topics/demo_all_blocks.yaml',
-        tags: ['demo', 'test'],
-      ),
-    ],
-  ),
-];
+/// A manifest is `{book: {id, title, subtitle, cover, spine_color,
+/// topics: [{id, title, subtitle, asset, tags}]}}`. Each topic's `asset`
+/// points at a self-contained topic YAML loaded on demand when opened.
+Future<List<Book>> loadLibrary() async {
+  final indexRaw = await rootBundle.loadString('assets/books/index.yaml');
+  final index = loadYaml(indexRaw) as YamlMap;
+  final ids = (index['books'] as YamlList).map((e) => e as String);
 
-Book? findBook(String id) {
+  final books = <Book>[];
+  for (final id in ids) {
+    final raw = await rootBundle.loadString('assets/books/$id.yaml');
+    books.add(_bookFromYaml(loadYaml(raw) as YamlMap));
+  }
+  return books;
+}
+
+Book _bookFromYaml(YamlMap map) {
+  final b = map['book'] as YamlMap;
+  final rawTopics = b['topics'] as YamlList?;
+  final topics = <BookTopic>[
+    for (final t in rawTopics ?? const []) _topicFromYaml(t as YamlMap),
+  ];
+  return Book(
+    id: b['id'] as String,
+    title: b['title'] as String,
+    subtitle: b['subtitle'] as String,
+    coverAsset: b['cover'] as String? ?? '',
+    spineColor: _color(b['spine_color'] as String),
+    topics: topics,
+  );
+}
+
+BookTopic _topicFromYaml(YamlMap t) => BookTopic(
+      id: t['id'] as String,
+      title: t['title'] as String,
+      subtitle: t['subtitle'] as String? ?? '',
+      asset: t['asset'] as String,
+      tags: [for (final tag in t['tags'] as YamlList? ?? const []) tag as String],
+    );
+
+/// Parses a `"0xAARRGGBB"` (or `"#RRGGBB"`) spine color string.
+Color _color(String s) {
+  var hex = s.trim();
+  if (hex.startsWith('0x')) hex = hex.substring(2);
+  if (hex.startsWith('#')) hex = hex.substring(1);
+  if (hex.length == 6) hex = 'FF$hex';
+  return Color(int.parse(hex, radix: 16));
+}
+
+Book? findBook(List<Book> library, String id) {
   for (final b in library) {
     if (b.id == id) return b;
   }

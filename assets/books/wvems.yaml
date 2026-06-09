@@ -1,0 +1,242 @@
+book:
+  id: "wvems"
+  title: "WVEMS Protocols"
+  subtitle: "2026 Edition · Prehospital"
+  cover: "assets/covers/wvems.png"
+  spine_color: "0xFF1E4E8C"
+  topics:
+    - id: "wvems_2026_004"
+      title: "Airway"
+      subtitle: "2026-004 · OPA / BIAD / Suction"
+      asset: "assets/topics/wvems_2026_004.yaml"
+      tags: ["airway", "choking", "biad", "opa", "npa", "intubation"]
+    - id: "wvems_2026_006"
+      title: "Breathing"
+      subtitle: "2026-006 · 3-branch severity"
+      asset: "assets/topics/wvems_2026_006.yaml"
+      tags: ["breathing", "hypoxia", "oxygen", "bvm", "pneumothorax"]
+    - id: "wvems_2025_008"
+      title: "Circulation / Shock"
+      subtitle: "2025-008 · severity flowchart"
+      asset: "assets/topics/wvems_2025_008.yaml"
+      tags: ["shock", "circulation", "prehospital"]
+    - id: "wvems_2026_010"
+      title: "Hypertension"
+      subtitle: "2026-010 · severity flowchart"
+      asset: "assets/topics/wvems_2026_010.yaml"
+      tags: ["htn", "hypertension", "blood pressure", "bp"]
+    - id: "wvems_2026_012"
+      title: "Bradycardia"
+      subtitle: "2026-012 · Atropine / Pacing"
+      asset: "assets/topics/wvems_2026_012.yaml"
+      tags: ["bradycardia", "brady", "atropine", "pacing", "heart block"]
+    - id: "wvems_2026_016"
+      title: "Fever"
+      subtitle: "2026-016 · Tylenol / Ibuprofen"
+      asset: "assets/topics/wvems_2026_016.yaml"
+      tags: ["fever", "tylenol", "ibuprofen", "sepsis", "infection"]
+    - id: "wvems_2026_018"
+      title: "Hyperkalemia"
+      subtitle: "2026-018 · Albuterol / Calcium / Bicarb"
+      asset: "assets/topics/wvems_2026_018.yaml"
+      tags: ["hyperkalemia", "potassium", "dialysis", "renal failure", "calcium", "albuterol"]
+    - id: "wvems_2026_020"
+      title: "Pain"
+      subtitle: "2026-020 · analgesia ladder"
+      asset: "assets/topics/wvems_2026_020.yaml"
+      tags: ["pain", "analgesia", "fentanyl", "ketamine"]
+    - id: "wvems_2026_014"
+      title: "Tachycardia"
+      subtitle: "2026-014 · 3-branch w/ conditional meds"
+      asset: "assets/topics/wvems_2026_014.yaml"
+      tags: ["tachycardia", "svt", "afib", "vt", "adenosine", "amiodarone"]
+    - id: "wvems_2026_022"
+      title: "Nausea / Vomiting"
+      subtitle: "2026-022 · Zofran"
+      asset: "assets/topics/wvems_2026_022.yaml"
+      tags: ["nausea", "vomiting", "emesis", "zofran", "ondansetron"]
+    - id: "wvems_2026_024"
+      title: "Medical CODE"
+      subtitle: "2026-024 · Compressions / AED / Epi / Amio"
+      asset: "assets/topics/wvems_2026_024.yaml"
+      tags: ["medical code", "cardiac arrest", "cpr", "vt/vf", "pea", "asystole", "epinephrine", "amiodarone"]
+    - id: "wvems_2026_026"
+      title: "Medical ROSC"
+      subtitle: "2026-026 · Return of Pulse / Post-Resuscitation"
+      asset: "assets/topics/wvems_2026_026.yaml"
+      tags: ["rosc", "post resuscitation", "ketamine", "amiodarone"]
+    - id: "wvems_2026_028"
+      title: "Chest Pain"
+      subtitle: "2026-028 · Aspirin / Nitro"
+      asset: "assets/topics/wvems_2026_028.yaml"
+      tags: ["chest pain", "acs", "stemi", "mi", "aspirin", "nitro"]
+    - id: "wvems_2026_030"
+      title: "Dyspnea"
+      subtitle: "2026-030 · cause-branched (Reactive / Infectious / Overload)"
+      asset: "assets/topics/wvems_2026_030.yaml"
+      tags: ["dyspnea", "sob", "asthma", "copd", "chf", "albuterol"]
+    - id: "wvems_2026_032"
+      title: "Allergic Reaction"
+      subtitle: "2026-032 · Epi / Albuterol / Benadryl"
+      asset: "assets/topics/wvems_2026_032.yaml"
+      tags: ["allergy", "anaphylaxis", "epi", "albuterol", "benadryl"]
+    - id: "wvems_2026_034"
+      title: "Abdominal Pain"
+      subtitle: "2026-034 · GI / AAA / GI Bleed / OB-GYN"
+      asset: "assets/topics/wvems_2026_034.yaml"
+      tags: ["abdominal pain", "stomach pain", "heartburn", "gerd", "aaa", "gi bleed", "ectopic"]
+    - id: "wvems_2026_036"
+      title: "Altered LOC / Syncope"
+      subtitle: "2026-036 · GCS / Differential / Cause"
+      asset: "assets/topics/wvems_2026_036.yaml"
+      tags: ["altered loc", "syncope", "unresponsive", "confused", "fainting", "dizzy", "gcs"]
+    - id: "wvems_2026_038"
+      title: "Diabetic"
+      subtitle: "2026-038 · Glucose / D10 / Glucagon"
+      asset: "assets/topics/wvems_2026_038.yaml"
+      tags: ["diabetic", "hypoglycemia", "hyperglycemia", "glucose", "d10", "dka"]
+    - id: "wvems_2026_040"
+      title: "Overdose / Tox"
+      subtitle: "2026-040 · Narcan / Antidote"
+      asset: "assets/topics/wvems_2026_040.yaml"
+      tags: ["overdose", "tox", "narcan", "naloxone", "poisoning"]
+    - id: "wvems_2026_042"
+      title: "Seizure"
+      subtitle: "2026-042 · Versed / Keppra / Mag"
+      asset: "assets/topics/wvems_2026_042.yaml"
+      tags: ["seizure", "epilepsy", "convulsion", "versed", "midazolam", "keppra"]
+    - id: "wvems_2026_044"
+      title: "Stroke"
+      subtitle: "2026-044 · CVA / TIA / Cincinnati FAST"
+      asset: "assets/topics/wvems_2026_044.yaml"
+      tags: ["stroke", "cva", "tia", "neurology"]
+    - id: "wvems_2026_046"
+      title: "Behavioral"
+      subtitle: "2026-046 · Versed / Haldol"
+      asset: "assets/topics/wvems_2026_046.yaml"
+      tags: ["behavioral", "psych", "agitation", "versed", "haldol", "restraint"]
+    - id: "wvems_2026_048"
+      title: "Pregnancy / Delivery"
+      subtitle: "2026-048 · OB / Eclampsia / Postpartum"
+      asset: "assets/topics/wvems_2026_048.yaml"
+      tags: ["pregnancy", "delivery", "ob", "preeclampsia", "postpartum"]
+    - id: "wvems_2026_050"
+      title: "Neonate"
+      subtitle: "2026-050 · Newborn / APGAR / T-piece"
+      asset: "assets/topics/wvems_2026_050.yaml"
+      tags: ["neonate", "newborn", "apgar", "resuscitation", "t-piece"]
+    - id: "wvems_2026_052"
+      title: "Trauma CODE"
+      subtitle: "2026-052 · Tourniquet / Pleural Decompress / Epi"
+      asset: "assets/topics/wvems_2026_052.yaml"
+      tags: ["trauma code", "traumatic arrest", "cpr", "tourniquet", "pleural decompression", "epinephrine"]
+    - id: "wvems_2026_054"
+      title: "Trauma ROSC"
+      subtitle: "2026-054 · Return of Pulse / Post-Resuscitation"
+      asset: "assets/topics/wvems_2026_054.yaml"
+      tags: ["rosc", "trauma", "post resuscitation", "ketamine"]
+    - id: "wvems_2026_056"
+      title: "Major Trauma"
+      subtitle: "2026-056 · Multisystem / Impaled / Blast"
+      asset: "assets/topics/wvems_2026_056.yaml"
+      tags: ["trauma", "multisystem", "impaled", "blast", "polytrauma"]
+    - id: "wvems_2026_058"
+      title: "Bleeding"
+      subtitle: "2026-058 · Hemorrhage / Tourniquet / TXA"
+      asset: "assets/topics/wvems_2026_058.yaml"
+      tags: ["bleeding", "hemorrhage", "tourniquet", "wound packing", "txa"]
+    - id: "wvems_2026_060"
+      title: "Immobilization"
+      subtitle: "2026-060 · SMR / C-spine / Backboard"
+      asset: "assets/topics/wvems_2026_060.yaml"
+      tags: ["immobilization", "smr", "spinal", "c-collar", "backboard"]
+    - id: "wvems_2026_062"
+      title: "Head Injury"
+      subtitle: "2026-062 · Concussion / Face / Neck / Eye"
+      asset: "assets/topics/wvems_2026_062.yaml"
+      tags: ["head injury", "concussion", "face", "neck", "eye", "nose"]
+    - id: "wvems_2026_064"
+      title: "Trunk Injury"
+      subtitle: "2026-064 · Chest / Abd / Evisceration / Flail"
+      asset: "assets/topics/wvems_2026_064.yaml"
+      tags: ["trunk injury", "chest", "abdomen", "evisceration", "flail chest"]
+    - id: "wvems_2026_066"
+      title: "Extremity Injury"
+      subtitle: "2026-066 · Fracture / Amputation / Crush"
+      asset: "assets/topics/wvems_2026_066.yaml"
+      tags: ["extremity", "fracture", "amputation", "crush", "splint"]
+    - id: "wvems_2026_068"
+      title: "Cold / Heat"
+      subtitle: "2026-068 · Hypothermia / Hyperthermia / Frostbite"
+      asset: "assets/topics/wvems_2026_068.yaml"
+      tags: ["cold", "heat", "hypothermia", "hyperthermia", "frostbite"]
+    - id: "wvems_2026_070"
+      title: "Burns"
+      subtitle: "2026-070 · Heat / Chemical / Electric"
+      asset: "assets/topics/wvems_2026_070.yaml"
+      tags: ["burns", "hazmat", "chemical", "electrical", "sunburn"]
+    - id: "wvems_2026_072"
+      title: "Inhalation"
+      subtitle: "2026-072 · Smoke / CO / Toxic Gas"
+      asset: "assets/topics/wvems_2026_072.yaml"
+      tags: ["inhalation", "smoke", "carbon monoxide", "toxic gas"]
+    - id: "wvems_2026_074"
+      title: "Sting / Bite"
+      subtitle: "2026-074 · Animal / Snake / Insect"
+      asset: "assets/topics/wvems_2026_074.yaml"
+      tags: ["sting", "bite", "animal", "snake", "spider", "insect"]
+    - id: "wvems_2026_076"
+      title: "Epistaxis"
+      subtitle: "2026-076 · Nose Bleed / Afrin / TXA"
+      asset: "assets/topics/wvems_2026_076.yaml"
+      tags: ["epistaxis", "nosebleed", "afrin", "txa"]
+    - id: "wvems_2026_078"
+      title: "Intubation / RSI"
+      subtitle: "2026-078 · Induce / Paralyze / Cric"
+      asset: "assets/topics/wvems_2026_078.yaml"
+      tags: ["intubation", "rsi", "dsi", "airway", "etomidate", "ketamine", "rocuronium", "cric"]
+    - id: "wvems_2026_080"
+      title: "Sedation / Vent"
+      subtitle: "2026-080 · Versed / Fentanyl / Propofol / Ketamine"
+      asset: "assets/topics/wvems_2026_080.yaml"
+      tags: ["sedation", "ventilator", "vent", "versed", "fentanyl", "propofol", "ketamine"]
+    - id: "wvems_2026_082"
+      title: "Vasopressors"
+      subtitle: "2026-082 · Levophed / Epi Push / Neo Push"
+      asset: "assets/topics/wvems_2026_082.yaml"
+      tags: ["vasopressors", "inotropes", "push dose pressors", "levophed"]
+    - id: "wvems_2026_084"
+      title: "Blood"
+      subtitle: "2026-084 · Transfusion / Whole Blood"
+      asset: "assets/topics/wvems_2026_084.yaml"
+      tags: ["blood", "transfusion", "exsanguination", "whole blood"]
+    - id: "wvems_2026_086"
+      title: "Elevated ICP"
+      subtitle: "2026-086 · TBI / Herniation / Hypertonic Saline"
+      asset: "assets/topics/wvems_2026_086.yaml"
+      tags: ["icp", "tbi", "head injury", "hypertonic saline", "keppra"]
+    - id: "wvems_2026_088"
+      title: "STEMI"
+      subtitle: "2026-088 · 15-Lead / Sgarbossa / Heparin"
+      asset: "assets/topics/wvems_2026_088.yaml"
+      tags: ["stemi", "acs", "15-lead", "sgarbossa", "heparin"]
+    - id: "wvems_2026_090"
+      title: "Pulmonary Edema"
+      subtitle: "2026-090 · CHF / Nitro Drip / Lasix"
+      asset: "assets/topics/wvems_2026_090.yaml"
+      tags: ["pulmonary edema", "chf", "heart failure", "nitro drip", "lasix"]
+    - id: "wvems_2026_092"
+      title: "Malignant HTN"
+      subtitle: "2026-092 · HTN Crisis / Preeclampsia"
+      asset: "assets/topics/wvems_2026_092.yaml"
+      tags: ["malignant htn", "hypertensive crisis", "preeclampsia", "lopressor", "magnesium"]
+    - id: "wvems_2026_094"
+      title: "Sepsis"
+      subtitle: "2026-094 · Septic Shock / Rocephin"
+      asset: "assets/topics/wvems_2026_094.yaml"
+      tags: ["sepsis", "infection", "septic shock", "rocephin"]
+    - id: "wvems_drug_ref_a"
+      title: "Drug Reference: A"
+      subtitle: "p.120 · drug cards"
+      asset: "assets/topics/wvems_drug_ref_a.yaml"
+      tags: ["drugs", "medications", "reference"]

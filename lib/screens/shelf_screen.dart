@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
 
 /// Library shelf — grid of book covers. Tapping a cover pushes the
-/// book's topic list.
+/// book's topic list. The book list is loaded from the manifest YAMLs
+/// (see `loadLibrary`) and passed in — the shelf hardcodes nothing.
 class ShelfScreen extends StatelessWidget {
-  const ShelfScreen({super.key});
+  const ShelfScreen({required this.books, super.key});
+
+  final List<Book> books;
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +27,8 @@ class ShelfScreen extends StatelessWidget {
           crossAxisSpacing: 16,
           mainAxisSpacing: 20,
         ),
-        itemCount: library.length,
-        itemBuilder: (context, i) => _CoverCard(book: library[i]),
+        itemCount: books.length,
+        itemBuilder: (context, i) => _CoverCard(book: books[i]),
       ),
     );
   }

@@ -1,0 +1,7 @@
+book:
+  id: "pocket_medicine"
+  title: "Pocket Medicine"
+  subtitle: "Sabatine · MGH Handbook"
+  cover: "assets/covers/pocket_medicine.jpg"
+  spine_color: "0xFF6A1B9A"
+  topics:
