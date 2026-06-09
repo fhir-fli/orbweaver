@@ -199,6 +199,13 @@ const library = <Book>[
         tags: ['nausea', 'vomiting', 'emesis', 'zofran', 'ondansetron'],
       ),
       BookTopic(
+        id: 'wvems_2026_024',
+        title: 'Medical CODE',
+        subtitle: '2026-024 · Compressions / AED / Epi / Amio',
+        asset: 'assets/topics/wvems_2026_024.yaml',
+        tags: ['medical code', 'cardiac arrest', 'cpr', 'vt/vf', 'pea', 'asystole', 'epinephrine', 'amiodarone'],
+      ),
+      BookTopic(
         id: 'wvems_2026_026',
         title: 'Medical ROSC',
         subtitle: '2026-026 · Return of Pulse / Post-Resuscitation',
