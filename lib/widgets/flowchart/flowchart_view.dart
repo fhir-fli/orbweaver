@@ -244,6 +244,11 @@ class SeverityFlowchartView extends StatelessWidget {
           );
         }
       }
+
+      if (fc.criticalCareLink != null) {
+        rows.add(const FlowDownArrow());
+        rows.add(_CriticalCareLinkPill(link: fc.criticalCareLink!));
+      }
     }
 
     if (fc.doseTable.isNotEmpty) {
@@ -983,6 +988,44 @@ class _ConvergenceBox extends StatelessWidget {
   }
 }
 
+/// Lavender pill for a Critical Care protocol cross-reference, matching
+/// the WVEMS PDF (e.g. Abdominal Pain → "Sepsis"). Sits below the green
+/// "Consider" terminator. Shrink-wraps its text and underlines it to
+/// echo the convergence-bullet cross-link cue. Colours come from the
+/// shared Critical Care palette (lavender fill, purple border).
+class _CriticalCareLinkPill extends StatelessWidget {
+  const _CriticalCareLinkPill({required this.link});
+
+  final CriticalCareLink link;
+
+  static const Color _fill = Color(0xFFF1E7F6);
+  static const Color _border = Color(0xFF6A1B9A);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 5),
+        decoration: BoxDecoration(
+          color: _fill,
+          border: Border.all(color: _border, width: 1.5),
+          borderRadius: BorderRadius.circular(999),
+        ),
+        child: Text(
+          link.text,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.w700,
+            color: Colors.black87,
+            decoration: TextDecoration.underline,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _ImprovementWaypoint extends StatelessWidget {
   const _ImprovementWaypoint({required this.label});
 
@@ -1392,6 +1435,11 @@ class LinearFlowchartView extends StatelessWidget {
       );
     }
 
+    if (fc.criticalCareLink != null) {
+      rows.add(const FlowDownArrow());
+      rows.add(_CriticalCareLinkPill(link: fc.criticalCareLink!));
+    }
+
     if (fc.doseTable.isNotEmpty) {
       rows.add(const SizedBox(height: 8));
       rows.add(DoseTable(rows: fc.doseTable, theme: theme));
@@ -1577,6 +1625,11 @@ class DifferentialFlowchartView extends StatelessWidget {
         shape: fc.postConvergence!.shape,
         theme: theme,
       ));
+    }
+
+    if (fc.criticalCareLink != null) {
+      rows.add(const FlowDownArrow());
+      rows.add(_CriticalCareLinkPill(link: fc.criticalCareLink!));
     }
 
     if (fc.doseTable.isNotEmpty) {

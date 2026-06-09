@@ -303,6 +303,27 @@ class ConvergenceBullet {
   final String? linkId;
 }
 
+/// A reference to a Critical Care protocol, rendered as the WVEMS
+/// lavender pill below the convergence node (e.g. Abdominal Pain →
+/// "Sepsis", Head Injury → "Elevated ICP").  The PDF colours these
+/// links lavender to flag that the target is a Critical Care protocol
+/// (credentialed providers only), distinct from the green "Consider"
+/// terminator.  Like [ConvergenceBullet.linkId], [linkId] is a visual
+/// cross-reference cue — the underline signals a referenced protocol;
+/// the app does not navigate on tap.
+class CriticalCareLink {
+  const CriticalCareLink({required this.text, this.linkId});
+
+  factory CriticalCareLink.fromYaml(Map<dynamic, dynamic> map) =>
+      CriticalCareLink(
+        text: map['text'] as String,
+        linkId: map['link_id'] as String?,
+      );
+
+  final String text;
+  final String? linkId;
+}
+
 /// A labeled arrow leaving the convergence node.
 ///
 /// Two shapes:
@@ -417,6 +438,7 @@ class SeverityFlowchart {
     this.decision,
     this.convergence,
     this.postConvergence,
+    this.criticalCareLink,
     this.doseTable = const [],
     this.warnings = const [],
   });
@@ -442,6 +464,9 @@ class SeverityFlowchart {
       postConvergence: map['post_convergence'] != null
           ? FlowNode.fromYaml(map['post_convergence'] as Map)
           : null,
+      criticalCareLink: map['critical_care_link'] != null
+          ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
+          : null,
       doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
       warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
     );
@@ -452,6 +477,10 @@ class SeverityFlowchart {
   final List<TopicBranch> branches;
   final ConvergenceNode? convergence;
   final FlowNode? postConvergence;
+
+  /// Optional lavender Critical Care reference pill rendered below the
+  /// convergence / post-convergence (WVEMS PDF convention).
+  final CriticalCareLink? criticalCareLink;
   final List<DoseRow> doseTable;
 
   /// Side-of-flowchart warning callouts that flank the first entry node
@@ -542,6 +571,7 @@ class LinearFlowchart {
     this.entryChain = const [],
     this.convergence,
     this.postConvergence,
+    this.criticalCareLink,
     this.doseTable = const [],
     this.warnings = const [],
   });
@@ -562,6 +592,9 @@ class LinearFlowchart {
       postConvergence: map['post_convergence'] != null
           ? FlowNode.fromYaml(map['post_convergence'] as Map)
           : null,
+      criticalCareLink: map['critical_care_link'] != null
+          ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
+          : null,
       doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
       warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
     );
@@ -571,6 +604,10 @@ class LinearFlowchart {
   final List<LinearStep> steps;
   final ConvergenceNode? convergence;
   final FlowNode? postConvergence;
+
+  /// Optional lavender Critical Care reference pill rendered below the
+  /// convergence / post-convergence (WVEMS PDF convention).
+  final CriticalCareLink? criticalCareLink;
   final List<DoseRow> doseTable;
   final List<WarningCallout> warnings;
 }
@@ -608,6 +645,7 @@ class DifferentialFlowchart {
     this.columns = 2,
     this.convergence,
     this.postConvergence,
+    this.criticalCareLink,
     this.doseTable = const [],
     this.warnings = const [],
   });
@@ -632,6 +670,9 @@ class DifferentialFlowchart {
       postConvergence: map['post_convergence'] != null
           ? FlowNode.fromYaml(map['post_convergence'] as Map)
           : null,
+      criticalCareLink: map['critical_care_link'] != null
+          ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
+          : null,
       doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
       warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
     );
@@ -645,6 +686,10 @@ class DifferentialFlowchart {
   final int columns;
   final ConvergenceNode? convergence;
   final FlowNode? postConvergence;
+
+  /// Optional lavender Critical Care reference pill rendered below the
+  /// convergence / post-convergence (WVEMS PDF convention).
+  final CriticalCareLink? criticalCareLink;
   final List<DoseRow> doseTable;
   final List<WarningCallout> warnings;
 }
