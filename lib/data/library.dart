@@ -171,6 +171,13 @@ const library = <Book>[
         tags: ['fever', 'tylenol', 'ibuprofen', 'sepsis', 'infection'],
       ),
       BookTopic(
+        id: 'wvems_2026_018',
+        title: 'Hyperkalemia',
+        subtitle: '2026-018 · Albuterol / Calcium / Bicarb',
+        asset: 'assets/topics/wvems_2026_018.yaml',
+        tags: ['hyperkalemia', 'potassium', 'dialysis', 'renal failure', 'calcium', 'albuterol'],
+      ),
+      BookTopic(
         id: 'wvems_2026_020',
         title: 'Pain',
         subtitle: '2026-020 · analgesia ladder',
