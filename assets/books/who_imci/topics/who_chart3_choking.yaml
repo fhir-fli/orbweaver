@@ -1,16 +1,26 @@
 # ============================================================
 # WHO IMCI Chart 3 — How to manage a choking infant or child
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.7–8
-# Source figures (back slaps / chest thrusts / back blows /
-# Heimlich) not yet extracted — steps carried as text.
-# Clinical content pending OpenEvidence review.
+# UPDATED per OpenEvidence review (2026-06-09) to the 2025 AHA/AAP
+# Pediatric BLS Guidelines (Joyner BL et al., Circulation 2025;
+# 152(16_suppl_2):S424-S447, doi:10.1161/CIR.0000000000001370):
+#   - Infant chest thrusts: heel of one hand (was: two fingers)
+#   - Infant + child: alternating cycles of 5 back blows/slaps and
+#     5 thrusts (chest for infants, abdominal for children)
+#   - Abdominal thrusts explicitly NOT recommended in infants
+#   - No blind finger sweeps (Class 3: Harm) — remove only visible
+#     foreign bodies
+#   - If unresponsive: start CPR immediately, compressions first,
+#     no pulse check
+# Source figures (back slaps / chest thrusts / Heimlich) not yet
+# extracted — steps carried as text.
 # ============================================================
 
 topic:
   id: "who-imci-chart3-choking"
   title: "Choking Infant or Child"
-  list_subtitle: "IMCI Chart 3 · back slaps / chest thrusts / Heimlich"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  list_subtitle: "IMCI Chart 3 · back blows / chest or abdominal thrusts"
+  last_reviewed: "OpenEvidence review 2026-06-09 · 2025 AHA/AAP Peds BLS"
   tags: ["choking", "airway", "foreign body", "heimlich", "back slaps", "imci", "pediatric"]
   aliases:
     - "Foreign Body Airway Obstruction"
@@ -27,14 +37,30 @@ topic:
       highlight: true
       markdown: |
         - Lay the infant on your arm or thigh in a **head-down position**.
-        - Give **five blows** to the middle of the infant's back with the
-          heel of the hand (**back slaps**).
-        - If obstruction persists, turn the infant over and give
-          **five chest thrusts** with two fingers on the lower half of
-          the sternum.
-        - If obstruction persists, check the infant's mouth for any
-          obstruction that can be removed.
-        - If necessary, repeat sequence with back slaps.
+        - Give **five back blows** to the middle of the infant's back with
+          the heel of the hand.
+        - Turn the infant over and give **five chest thrusts** with the
+          **heel of one hand** on the lower half of the sternum.
+        - **Repeat in alternating cycles** — 5 back blows, then 5 chest
+          thrusts — until the object is cleared or the infant becomes
+          unresponsive.
+        - When opening the airway, remove a foreign body **only if visible**.
+        - **Do not perform blind finger sweeps.**
+
+    - type: "prose"
+      title: "Do NOT"
+      callout: true
+      markdown: |
+        - **No abdominal thrusts** in infants — risk of abdominal organ injury
+        - **No blind finger sweeps**
+
+    - type: "prose"
+      title: "If the infant becomes unresponsive"
+      markdown: |
+        - **Begin CPR immediately**, starting with **chest compressions**
+          — do not pause for a pulse check.
+        - Each time the airway is opened to give breaths, look for the
+          foreign body and remove it **only if visible**.
 
   - page_number: 8
     blocks:
@@ -43,15 +69,29 @@ topic:
       title: "Choking Child (> 1 year of age)"
       highlight: true
       markdown: |
-        Administer back blows to clear airway obstruction in a choking child.
-
-        - Give **five blows** to the middle of the child's back with the
-          heel of the hand, with the child sitting, kneeling or lying.
+        - Give **five back blows** to the middle of the child's back with
+          the heel of the hand, with the child sitting, kneeling or lying.
         - If the obstruction persists, go behind the child and pass your
           arms around the child's body; form a fist with one hand
           immediately **below the child's sternum**; place the other hand
-          over the fist and pull **upwards into the abdomen**; repeat this
-          **Heimlich manoeuvre** five times.
-        - If the obstruction persists, check the child's mouth for any
-          obstruction that can be removed.
-        - If necessary, repeat this sequence with back blows.
+          over the fist and pull **upwards into the abdomen**
+          (**five abdominal thrusts** — Heimlich manoeuvre).
+        - **Repeat in alternating cycles** — 5 back blows, then
+          5 abdominal thrusts — until the object is cleared or the child
+          becomes unresponsive.
+        - When opening the airway, remove a foreign body **only if visible**.
+        - **Do not perform blind finger sweeps.**
+
+    - type: "prose"
+      title: "If the child becomes unresponsive"
+      markdown: |
+        - **Begin CPR immediately**, starting with **chest compressions**
+          — do not pause for a pulse check.
+        - Each time the airway is opened to give breaths, look for the
+          foreign body and remove it **only if visible**.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - WHO Pocket Book of Hospital Care for Children, 2nd ed (2013), p.7–8
+        - 2025 AHA/AAP Pediatric BLS Guidelines — Circulation. 2025;152(16_suppl_2):S424–S447

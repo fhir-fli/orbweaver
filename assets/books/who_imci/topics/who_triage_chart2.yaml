@@ -1,23 +1,34 @@
 # ============================================================
-# WHO IMCI Chart 2 — Triage of all sick children (page 6)
-# Pocket Book of Hospital Care for Children (2nd ed, 2013)
-# Second cross-book manual authoring test. Stresses:
-#   - TableBlock severity rows (pink backgrounds for emergency)
-#   - Structured cells via MarkdownCell (title + bullets + conditional
-#     sub-sections inside one cell)
-#   - Narrow 375px frame must hold a 2-column triage matrix
+# WHO IMCI Chart 2 — Triage of all sick children
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.5–6
+# Completed 2026-06-09: the original transcription covered only
+# p.6 — added p.5's Airway & breathing and Circulation emergency
+# rows (incl. central cyanosis + capillary refill > 3 s, which the
+# OpenEvidence review flagged as missing).
+# OpenEvidence review 2026-06-09: ETAT priority-sign framework
+# remains current (ETAT+ AUC 0.97 for predicting admission).
+# Open consideration (not yet applied, Grey to decide): align the
+# young-infant pathway with the 2019 WHO PSBI sub-classifications
+# (critical illness: not able to feed at all / no movement at all /
+# convulsions vs. clinical severe infection: 6 signs); likely
+# belongs with the Ch.3 neonate topics rather than this chart.
+# Plan C fluid protocols: NEJM 2025 (Maitland et al.) found a slow
+# 8-h IV strategy comparable in non-malnourished children — WHO
+# guidance unchanged; revisit when Charts 11/13 are authored.
 # ============================================================
 
 topic:
   id: "who-imci-chart2-triage"
   title: "Triage of All Sick Children"
   list_subtitle: "IMCI Chart 2 · severity table"
-  last_reviewed: "WHO Pocket Book of Hospital Care for Children, 2nd ed"
-  tags: ["triage", "imci", "pediatric", "emergency"]
+  last_reviewed: "OpenEvidence review 2026-06-09 · WHO PB 2nd ed (2013)"
+  tags: ["triage", "imci", "pediatric", "emergency", "etat"]
   category: "medical"
-  page_number: 6
 
-  blocks:
+  pages:
+
+  - page_number: 5
+    blocks:
 
     # ─────────────── Emergency signs callout ───────────────
     - type: "prose"
@@ -28,7 +39,15 @@ topic:
         give treatment(s), draw blood for emergency lab (glucose, malaria
         smear, Hb).
 
-    # ─────────────── Triage matrix ───────────────
+    - type: "prose"
+      title: "Cervical spine"
+      callout: true
+      markdown: |
+        - Do **not** move neck if a cervical
+          spine injury is possible
+        - But **do open the airway**
+
+    # ─────────────── Triage matrix: p.5 rows ───────────────
     - type: "table"
       title: "Assess and treat"
       columns: ["Assess", "Treat"]
@@ -37,7 +56,54 @@ topic:
         - severity: "emergency"
           cells:
             - |
-              **Coma / convulsing**
+              **Airway and breathing** (any sign positive)
+              - Obstructed or absent breathing
+              - Central cyanosis
+              - Severe respiratory distress
+            - |
+              **If foreign body aspirated:**
+              - Manage airway in choking child (Chart 3)
+
+              **If no foreign body aspirated:**
+              - Manage airway (Chart 4)
+              - Give oxygen (Chart 5)
+              - Make sure the child is warm
+
+        - severity: "emergency"
+          cells:
+            - |
+              **Circulation** (signs positive)
+              Cold skin with:
+              - Capillary refill longer than 3 s, **and**
+              - Weak and fast pulse
+
+              **Check for severe malnutrition.**
+            - |
+              - Stop any bleeding
+              - Give oxygen (Chart 5)
+              - Make sure the child is warm
+
+              **If no severe malnutrition:**
+              - Insert an IV line and begin giving fluids rapidly (Chart 7)
+              - If peripheral IV cannot be inserted, insert an intraosseous or external jugular line (see pp. 340, 342)
+
+              **If severe malnutrition:**
+              - If lethargic or unconscious: give IV glucose (Chart 10); insert IV line and give fluids (Chart 8)
+              - If not lethargic or unconscious: give glucose orally or by nasogastric tube; proceed immediately to full assessment and treatment
+
+  - page_number: 6
+    blocks:
+
+    # ─────────────── Triage matrix: p.6 rows ───────────────
+    - type: "table"
+      title: "Assess and treat (continued)"
+      columns: ["Assess", "Treat"]
+      rows:
+
+        - severity: "emergency"
+          cells:
+            - |
+              **Coma / convulsing** (if coma or convulsion)
               - Coma
               - Convulsing (now)
             - |
@@ -61,7 +127,7 @@ topic:
               - Make sure the child is warm.
 
               **If no severe malnutrition:**
-              - Insert IV line; begin fluids per Chart 11 + diarrhoea treatment plan C (Chart 13, p. 131)
+              - Insert IV line and begin giving fluids rapidly following Chart 11 + diarrhoea treatment plan C in hospital (Chart 13, p. 131)
 
               **If severe malnutrition:**
               - Do **not** insert an IV line
