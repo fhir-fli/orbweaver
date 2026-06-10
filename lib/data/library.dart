@@ -58,17 +58,46 @@ Future<Book> _loadBook(String id) async {
 
 /// Builds a [BookTopic] row from a topic file's own frontmatter — the
 /// topic is the single source of truth for its title/subtitle/tags.
+///
+/// [BookTopic.id] is the topic's own `id` (the logical id used by
+/// cross-topic `link_id`s and by last-state routing) — NOT the filename.
+/// Filenames are just storage; the logical id is what's stable.
 Future<BookTopic> _loadTopicRow(String assetPath) async {
   final raw = await rootBundle.loadString(assetPath);
   final t = (loadYaml(raw) as YamlMap)['topic'] as YamlMap;
-  final stem = assetPath.split('/').last.replaceAll('.yaml', '');
   return BookTopic(
-    id: stem,
+    id: t['id'] as String,
     title: t['title'] as String,
     subtitle: (t['list_subtitle'] as String?) ?? '',
     asset: assetPath,
     tags: [for (final tag in t['tags'] as YamlList? ?? const []) tag as String],
   );
+}
+
+/// Resolves a topic `link_id` to where its topic lives, so a tapped
+/// cross-link can navigate. Built once from the loaded library; spans
+/// the WHOLE library, so links may target any book. A `link_id` that
+/// isn't present resolves to null — the link renders but is inert (the
+/// graceful case for a standalone/pasted topic with no library, or a
+/// book that isn't installed).
+class LibraryIndex {
+  LibraryIndex(List<Book> books)
+      : _byId = {
+          for (final b in books)
+            for (final t in b.topics) t.id: TopicRef(b.id, t.asset),
+        };
+
+  final Map<String, TopicRef> _byId;
+
+  TopicRef? lookup(String topicId) => _byId[topicId];
+  bool contains(String topicId) => _byId.containsKey(topicId);
+}
+
+/// Where a topic lives: its book id (for last-state) + asset path.
+class TopicRef {
+  const TopicRef(this.bookId, this.asset);
+  final String bookId;
+  final String asset;
 }
 
 /// Parses a `"0xAARRGGBB"` (or `"#RRGGBB"`) spine color string.

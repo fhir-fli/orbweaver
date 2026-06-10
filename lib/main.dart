@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library.dart';
+import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
 import 'package:orbweaver/screens/shelf_screen.dart';
@@ -14,9 +15,11 @@ Future<void> main() async {
 }
 
 class OrbweaverApp extends StatelessWidget {
-  const OrbweaverApp({required this.library, required this.snapshot, super.key});
+  OrbweaverApp({required this.library, required this.snapshot, super.key})
+      : index = LibraryIndex(library);
 
   final List<Book> library;
+  final LibraryIndex index;
   final LastStateSnapshot snapshot;
 
   @override
@@ -28,6 +31,10 @@ class OrbweaverApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
+      // Provide the link index above the Navigator so any pushed topic's
+      // cross-links can resolve and navigate.
+      builder: (context, child) =>
+          LibraryScope(index: index, child: child ?? const SizedBox.shrink()),
       onGenerateInitialRoutes: (_) => _restorePages(snapshot, library),
       onGenerateRoute: (settings) => MaterialPageRoute<void>(
         builder: (_) => ShelfScreen(books: library),

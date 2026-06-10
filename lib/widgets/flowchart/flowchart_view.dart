@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/branch_column.dart';
@@ -963,27 +964,38 @@ class _ConvergenceBox extends StatelessWidget {
           ),
           if (node.bullets.isNotEmpty) ...[
             const SizedBox(height: 8),
-            for (final b in node.bullets)
-              Text.rich(
-                TextSpan(
-                  children: [
-                    const TextSpan(text: '• '),
-                    TextSpan(
-                      text: b.text,
-                      style: TextStyle(
-                        decoration: b.linkId != null
-                            ? TextDecoration.underline
-                            : null,
-                      ),
-                    ),
-                  ],
-                ),
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 14, height: 1.2),
-              ),
+            for (final b in node.bullets) _bullet(context, b),
           ],
         ],
       ),
+    );
+  }
+
+  /// One convergence bullet. A bullet with a `link_id` is underlined (a
+  /// cross-reference cue) and tappable — it opens the linked topic.
+  /// Tapping degrades to a no-op when the link doesn't resolve.
+  Widget _bullet(BuildContext context, ConvergenceBullet b) {
+    final text = Text.rich(
+      TextSpan(
+        children: [
+          const TextSpan(text: '• '),
+          TextSpan(
+            text: b.text,
+            style: TextStyle(
+              decoration:
+                  b.linkId != null ? TextDecoration.underline : null,
+            ),
+          ),
+        ],
+      ),
+      textAlign: TextAlign.center,
+      style: const TextStyle(fontSize: 14, height: 1.2),
+    );
+    if (b.linkId == null) return text;
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () => openLinkedTopic(context, b.linkId!),
+      child: text,
     );
   }
 }
@@ -1071,7 +1083,7 @@ class _CriticalCareLinkPill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    final pill = Center(
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 5),
         decoration: BoxDecoration(
@@ -1090,6 +1102,12 @@ class _CriticalCareLinkPill extends StatelessWidget {
           ),
         ),
       ),
+    );
+    if (link.linkId == null) return pill;
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () => openLinkedTopic(context, link.linkId!),
+      child: pill,
     );
   }
 }

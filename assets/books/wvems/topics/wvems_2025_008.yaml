@@ -91,17 +91,17 @@ topic:
         shape: "rounded_rectangle"
         bullets:
           - text: "Tachycardia"
-            link_id: "wvems-2025-014"
+            link_id: "wvems-2026-014"
           - text: "Bradycardia"
-            link_id: "wvems-2025-012"
+            link_id: "wvems-2026-012"
           - text: "Bleeding"
-            link_id: "wvems-2025-058"
+            link_id: "wvems-2026-058"
           - text: "Altered LOC"
-            link_id: "wvems-2025-036"
+            link_id: "wvems-2026-036"
           - text: "Pressors"
-            link_id: "wvems-2025-082"
+            link_id: "wvems-2026-082"
           - text: "Blood"
-            link_id: "wvems-2025-084"
+            link_id: "wvems-2026-084"
 
       dose_table:
         - drug: "NS Bolus"
