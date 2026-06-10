@@ -1,0 +1,51 @@
+# ============================================================
+# WHO IMCI Chart 5 — How to give oxygen
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.11
+# Source figures (prong placement, catheter measurement) not yet
+# extracted — steps carried as text.
+# Clinical content pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-chart5-oxygen"
+  title: "How to Give Oxygen"
+  list_subtitle: "IMCI Chart 5 · nasal prongs / nasal catheter"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["oxygen", "nasal prongs", "nasal catheter", "hypoxia", "imci", "pediatric"]
+  aliases:
+    - "Oxygen Therapy"
+    - "Nasal Prongs"
+    - "Nasal Catheter"
+  category: "medical"
+
+  page_number: 11
+
+  blocks:
+
+    - type: "prose"
+      title: "Give oxygen"
+      highlight: true
+      markdown: |
+        Give oxygen through **nasal prongs** or a **nasal catheter**.
+
+    - type: "prose"
+      title: "Nasal prongs"
+      markdown: |
+        - Place the prongs **just inside the nostrils** and secure with tape.
+
+    - type: "prose"
+      title: "Nasal catheter"
+      markdown: |
+        - Use an **8 French** gauge size tube.
+        - Measure the distance from the side of the nostril to the
+          **inner eyebrow margin** with the catheter.
+        - Insert the catheter to that depth.
+        - Secure with tape.
+
+    - type: "prose"
+      title: "Flow rate"
+      callout: true
+      markdown: |
+        - Start oxygen flow at **1–2 litres/min**
+        - Aim for an oxygen saturation **> 90%**
+        - (see section 10.7, p. 312)
