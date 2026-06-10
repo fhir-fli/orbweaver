@@ -1,0 +1,68 @@
+# ============================================================
+# WHO IMCI 1.2 — Summary of steps in emergency triage assessment
+# and treatment (ETAT)
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.3
+# Clinical content pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-2-etat-summary"
+  title: "ETAT — Summary of Steps"
+  list_subtitle: "1.2 · ABCD check + 3TPR MOB priority signs"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["etat", "emergency triage", "abcd", "priority signs", "3tpr mob", "imci", "pediatric"]
+  aliases:
+    - "Emergency Triage Assessment and Treatment"
+    - "3TPR MOB"
+  category: "medical"
+
+  page_number: 3
+
+  blocks:
+
+    - type: "prose"
+      title: "First check for emergency signs — 3 steps"
+      highlight: true
+      markdown: |
+        Steps are detailed in the charts on **pp. 5–17**.
+
+        - **Step 1 — Airway & Breathing.** Restore breathing: manage
+          the airway and **give oxygen**.
+        - **Step 2 — Circulation.** Check for **shock** or diarrhoea
+          with **severe dehydration**. Give oxygen and start
+          **IV fluid resuscitation**. In trauma,
+          **compress external bleeding**.
+        - **Step 3 — Coma / Convulsion.** Check if unconscious or
+          convulsing. Give **IV glucose** for hypoglycaemia and/or an
+          **anti-convulsant** for convulsions.
+
+    - type: "prose"
+      title: "If emergency signs are found"
+      markdown: |
+        - **Call for help** — but do **not** delay treatment. A very
+          sick child may need **several treatments at once**.
+        - Carry out **emergency investigations**: blood glucose, blood
+          smear, haemoglobin. Send blood for **type & cross-match** if
+          shocked, severely anaemic, or bleeding significantly.
+        - After emergency treatment, proceed at once to
+          **assess, diagnose and treat the underlying problem**
+          (Chapter 2, p.41).
+
+    - type: "prose"
+      title: "If no emergency signs — check priority signs"
+      markdown: |
+        Move any child with a priority sign to the
+        **front of the queue**. Remember the mnemonic **3TPR MOB**:
+
+        - **T**iny infant — any sick child **< 2 months**
+        - **T**emperature — child is very hot
+        - **T**rauma or other urgent surgical condition
+        - **P**allor (severe)
+        - **P**oisoning (history of)
+        - **P**ain (severe)
+        - **R**espiratory distress
+        - **R**estless, continuously irritable or lethargic
+        - **R**eferral (urgent)
+        - **M**alnutrition — visible severe wasting
+        - **O**edema of both feet
+        - **B**urns (major)

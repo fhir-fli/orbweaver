@@ -10,6 +10,9 @@ book:
   contents:
     - title: "1. Triage and emergency conditions"
       children:
+        - topic: "topics/who_1_01_triage.yaml"
+        - topic: "topics/who_1_02_etat_summary.yaml"
+        - topic: "topics/who_1_03_assessment.yaml"
         - topic: "topics/who_triage_chart2.yaml"
         - topic: "topics/who_chart3_choking.yaml"
         - topic: "topics/who_chart4_airway.yaml"

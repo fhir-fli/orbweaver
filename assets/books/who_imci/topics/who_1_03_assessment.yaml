@@ -1,0 +1,62 @@
+# ============================================================
+# WHO IMCI 1.3 — Assessment of emergency and priority signs
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.4
+# The full ABCD triage flow (incl. coma/convulsion and dehydration)
+# is shown in the Triage chart (1. Triage of all sick children).
+# Clinical content pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-3-assessment"
+  title: "Assessment of Emergency & Priority Signs"
+  list_subtitle: "1.3 · assess airway/breathing + circulation"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["assessment", "airway", "breathing", "circulation", "shock", "capillary refill", "imci", "pediatric"]
+  aliases:
+    - "Emergency Assessment"
+    - "Capillary Refill"
+  category: "medical"
+
+  page_number: 4
+
+  blocks:
+
+    - type: "prose"
+      title: "Assess airway & breathing (A, B)"
+      highlight: true
+      markdown: |
+        - **Obstructed breathing?** Look at chest wall movement and
+          listen for poor air movement. **Stridor** indicates
+          obstruction.
+        - **Central cyanosis?** Bluish/purplish discoloration of the
+          **tongue and inside of the mouth**.
+        - **Is the child breathing?** Look and listen.
+        - **Severe respiratory distress?** Very laboured, fast or
+          gasping breathing with
+          **chest indrawing, nasal flaring, grunting**
+          or use of auxiliary muscles (head nodding); the child tires
+          easily and cannot feed.
+
+    - type: "prose"
+      title: "Assess circulation — for shock (C)"
+      highlight: true
+      markdown: |
+        A child in shock needing bolus fluids is **lethargic** with
+        **cold skin, prolonged capillary refill, a fast weak pulse, and hypotension**.
+
+        - **Is the hand cold?** If so, assess further for shock.
+        - **Capillary refill > 3 s?** Press to whiten the nail of the
+          thumb or big toe for **5 s**; time the return of pink colour.
+        - **If refill > 3 s, check the pulse** — weak and fast?
+          - A **strong, not-fast radial pulse** means **not in shock**.
+          - **Infant (< 1 yr):** if no radial pulse, feel the
+            **brachial** (or femoral if lying down).
+          - **Child:** if no radial pulse, feel the **carotid**.
+
+    - type: "prose"
+      title: "Full triage flow"
+      callout: true
+      markdown: |
+        - The complete **ABCD** flow — including **coma / convulsions**
+          and **severe dehydration** — is laid out in the
+          **Triage of all sick children** chart (p.5).

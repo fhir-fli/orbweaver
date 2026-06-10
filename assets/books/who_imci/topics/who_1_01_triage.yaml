@@ -1,0 +1,57 @@
+# ============================================================
+# WHO IMCI 1.1 — Triage
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.2
+# Clinical content pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-1-triage"
+  title: "Triage"
+  list_subtitle: "1.1 · emergency / priority / non-urgent"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["triage", "emergency signs", "priority signs", "etat", "imci", "pediatric"]
+  aliases:
+    - "ETAT"
+    - "Emergency Signs"
+  category: "medical"
+
+  page_number: 2
+
+  blocks:
+
+    - type: "prose"
+      title: "What triage is"
+      highlight: true
+      markdown: |
+        **Triage** is the process of rapidly screening sick children
+        soon after arrival, to sort them into three groups:
+
+        - **Emergency** — have emergency signs; need
+          **immediate treatment**.
+        - **Priority** — have priority signs; move to the
+          **front of the queue** to be assessed without delay.
+        - **Non-urgent** — neither emergency nor priority signs;
+          wait their turn.
+
+    - type: "prose"
+      title: "Emergency signs"
+      markdown: |
+        - **Obstructed or absent breathing**
+        - **Severe respiratory distress**
+        - **Central cyanosis**
+        - **Signs of shock** — cold hands, capillary refill > 3 s,
+          fast heart rate with weak pulse, low/unmeasurable BP
+        - **Coma** (or seriously reduced consciousness)
+        - **Convulsions**
+        - **Severe dehydration** in a child with diarrhoea — lethargy,
+          sunken eyes, very slow skin pinch return (any two)
+
+    - type: "prose"
+      title: "Act now"
+      callout: true
+      markdown: |
+        - Children with **any** emergency sign need
+          **immediate treatment to avert death**.
+        - If a child has **one or more emergency signs**, do **not**
+          spend time looking for priority signs — treat first.
+        - Priority signs are on the next page (1.2).
