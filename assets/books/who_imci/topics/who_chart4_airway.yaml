@@ -1,0 +1,77 @@
+# ============================================================
+# WHO IMCI Chart 4 — How to manage the airway in a child with
+# obstructed breathing (or who has just stopped breathing)
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.9–10
+# Source figures (neutral/tilting head positions, look-listen-feel,
+# jaw thrust, bag-mask) not yet extracted — steps carried as text.
+# Clinical content pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-chart4-airway"
+  title: "Airway in Obstructed Breathing"
+  list_subtitle: "IMCI Chart 4 · head tilt–chin lift / jaw thrust"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["airway", "obstructed breathing", "head tilt", "chin lift", "jaw thrust", "bag mask", "imci", "pediatric"]
+  aliases:
+    - "Airway Management"
+    - "Head Tilt"
+    - "Jaw Thrust"
+  category: "medical"
+
+  pages:
+
+  - page_number: 9
+    blocks:
+
+    - type: "prose"
+      title: "A: When no neck trauma is suspected"
+      highlight: true
+      markdown: |
+        **Child conscious:**
+        1. Inspect mouth and remove foreign body, if present.
+        2. Clear secretions from the throat.
+        3. Let child assume position of maximal comfort.
+
+    - type: "prose"
+      title: "Child unconscious"
+      markdown: |
+        1. Tilt the head, keep it tilted and **lift chin** to open airway.
+          - **Infant**: neutral position to open the airway
+          - **Older child**: tilting position to open the airway
+        2. Inspect mouth and remove foreign body if present and **easily visible**.
+        3. Clear secretions from the throat.
+        4. Check the airway by **looking** for chest movements, **listening**
+           for breath sounds and **feeling** for breath.
+
+  - page_number: 10
+    blocks:
+
+    - type: "prose"
+      title: "B: When neck trauma or cervical spine injury is suspected"
+      highlight: true
+      markdown: |
+        Use **jaw thrust** — do not tilt the head.
+
+        1. Stabilize the neck as shown in Chart 6, and open the airway.
+        2. Inspect mouth and remove foreign body, if present.
+        3. Clear secretions under direct vision.
+        4. Check the airway by **looking** for chest movements, **listening**
+           for breath sounds and **feeling** for breath.
+
+    - type: "prose"
+      title: "Jaw thrust"
+      callout: true
+      markdown: |
+        - Place the **fourth and fifth fingers**
+          behind the angle of the jaw
+        - Move it upwards so the bottom of the
+          jaw is thrust **forwards**, at
+          **90° to the body**
+
+    - type: "prose"
+      title: "If still not breathing"
+      markdown: |
+        If the child is still not breathing after the above,
+        **ventilate with bag and mask**, ideally with a
+        **reservoir bag and oxygen**.
