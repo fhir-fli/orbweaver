@@ -2,16 +2,31 @@
 # WHO IMCI Chart 4 — How to manage the airway in a child with
 # obstructed breathing (or who has just stopped breathing)
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.9–10
-# Source figures (neutral/tilting head positions, look-listen-feel,
-# jaw thrust, bag-mask) not yet extracted — steps carried as text.
-# Clinical content pending OpenEvidence review.
+# UPDATED per OpenEvidence review (2026-06-09) to the 2025 AHA/AAP
+# Pediatric BLS Guidelines (Circulation 2025;152(16_suppl_2):
+# S424-S447) + PALS (Pediatrics 2026;157(1):e2025074351):
+#   - "Look, listen, feel" formalized sequence removed (dropped from
+#     AHA BLS since 2010): assess responsiveness + normal breathing,
+#     intervene without delay
+#   - Explicit: NO blind finger sweeps (Class 3: Harm)
+#   - NEW jaw-thrust fallback (Class 1, C-EO): if jaw thrust fails,
+#     use head tilt–chin lift — airway patency takes precedence over
+#     spinal immobilization
+#   - Bag-mask ventilation rate: 1 breath every 2–3 s (20–30/min),
+#     avoid excessive rates
+# Open low-priority considerations (not applied, Grey to decide):
+#   - Specify infant "sniffing position" (~144–150° head tilt, slight
+#     extension from neutral) instead of "neutral"
+#   - Mention SGA as alternative when BMV is difficult (resource
+#     setting dependent)
+# Source figures not yet extracted — steps carried as text.
 # ============================================================
 
 topic:
   id: "who-imci-chart4-airway"
   title: "Airway in Obstructed Breathing"
   list_subtitle: "IMCI Chart 4 · head tilt–chin lift / jaw thrust"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-09 · 2025 AHA/AAP Peds BLS"
   tags: ["airway", "obstructed breathing", "head tilt", "chin lift", "jaw thrust", "bag mask", "imci", "pediatric"]
   aliases:
     - "Airway Management"
@@ -39,10 +54,13 @@ topic:
         1. Tilt the head, keep it tilted and **lift chin** to open airway.
           - **Infant**: neutral position to open the airway
           - **Older child**: tilting position to open the airway
-        2. Inspect mouth and remove foreign body if present and **easily visible**.
+        2. Inspect mouth and remove foreign body **only if visible**.
+          - **Do not perform blind finger sweeps.**
         3. Clear secretions from the throat.
-        4. Check the airway by **looking** for chest movements, **listening**
-           for breath sounds and **feeling** for breath.
+        4. Assess for **responsiveness** and **normal breathing**
+           (look for chest rise).
+          - If breathing is absent or inadequate, **intervene immediately**
+            — do not delay for a formal assessment sequence.
 
   - page_number: 10
     blocks:
@@ -54,10 +72,13 @@ topic:
         Use **jaw thrust** — do not tilt the head.
 
         1. Stabilize the neck as shown in Chart 6, and open the airway.
-        2. Inspect mouth and remove foreign body, if present.
+        2. Inspect mouth and remove foreign body **only if visible**.
+          - **Do not perform blind finger sweeps.**
         3. Clear secretions under direct vision.
-        4. Check the airway by **looking** for chest movements, **listening**
-           for breath sounds and **feeling** for breath.
+        4. Assess for **responsiveness** and **normal breathing**
+           (look for chest rise).
+          - If breathing is absent or inadequate, **intervene immediately**
+            — do not delay for a formal assessment sequence.
 
     - type: "prose"
       title: "Jaw thrust"
@@ -70,8 +91,23 @@ topic:
           **90° to the body**
 
     - type: "prose"
+      title: "If jaw thrust does not open the airway"
+      markdown: |
+        - Use **head tilt–chin lift**.
+        - **Airway patency takes precedence** over spinal
+          immobilization concerns.
+
+    - type: "prose"
       title: "If still not breathing"
       markdown: |
-        If the child is still not breathing after the above,
-        **ventilate with bag and mask**, ideally with a
-        **reservoir bag and oxygen**.
+        - **Ventilate with bag and mask**, ideally with a
+          **reservoir bag and oxygen**.
+        - Give **1 breath every 2–3 seconds** (20–30 breaths/min).
+        - **Avoid excessive ventilation rates** — they may compromise
+          hemodynamics.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - WHO Pocket Book of Hospital Care for Children, 2nd ed (2013), p.9–10
+        - 2025 AHA/AAP Pediatric BLS Guidelines — Circulation. 2025;152(16_suppl_2):S424–S447
