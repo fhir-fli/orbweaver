@@ -1,16 +1,33 @@
 # ============================================================
 # WHO IMCI Chart 5 — How to give oxygen
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.11
+# UPDATED per OpenEvidence review (2026-06-10):
+#   - SpO2 target (HIGH): keep WHO threshold (start oxygen if
+#     SpO2 < 90%) but avoid hyperoxia — emerging evidence supports a
+#     conservative 88–92% target rather than >94%. Verified vs:
+#       · Oxy-PICU, Lancet 2024;403(10424):355-364 — conservative
+#         SpO2 88–92% vs liberal >94% in ventilated PICU children:
+#         conservative gave better organ-support-free survival
+#       · 2026 Surviving Sepsis Campaign pediatric guidelines
+#         (Pediatr Crit Care Med 2026;27(4):379-434) — target 88–92%
+#         over >94% in intubated children with sepsis post-resus
+#   - HFNC (MEDIUM): added high-flow nasal cannula 2 L/kg/min as
+#     escalation step before CPAP (COAST trial, Maitland, Intensive
+#     Care Med 2021;47(5):566-576 — esp. relevant in this book's
+#     resource-limited setting)
+#   - Catheter landmark (LOW): inner eyebrow margin = NASOPHARYNGEAL
+#     catheter depth (clarified)
+#   - Catheter size (LOW): age-stratified 6F neonate/small infant,
+#     8F older infant & child
 # Source figures (prong placement, catheter measurement) not yet
 # extracted — steps carried as text.
-# Clinical content pending OpenEvidence review.
 # ============================================================
 
 topic:
   id: "who-imci-chart5-oxygen"
   title: "How to Give Oxygen"
   list_subtitle: "IMCI Chart 5 · nasal prongs / nasal catheter"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-10 · Oxy-PICU 2024 / SSC peds 2026 / COAST 2021"
   tags: ["oxygen", "nasal prongs", "nasal catheter", "hypoxia", "imci", "pediatric"]
   aliases:
     - "Oxygen Therapy"
@@ -36,9 +53,11 @@ topic:
     - type: "prose"
       title: "Nasal catheter"
       markdown: |
-        - Use an **8 French** gauge size tube.
+        - Use a **6 French** tube for neonates / small infants,
+          **8 French** for older infants and children.
         - Measure the distance from the side of the nostril to the
-          **inner eyebrow margin** with the catheter.
+          **inner eyebrow margin** with the catheter — this gives a
+          **nasopharyngeal** (not oropharyngeal) depth.
         - Insert the catheter to that depth.
         - Secure with tape.
 
@@ -47,5 +66,25 @@ topic:
       callout: true
       markdown: |
         - Start oxygen flow at **1–2 litres/min**
-        - Aim for an oxygen saturation **> 90%**
+        - Start oxygen if oxygen saturation is **< 90%**
+        - Aim for an oxygen saturation **≥ 90%**, but **avoid hyperoxia**
         - (see section 10.7, p. 312)
+
+    - type: "prose"
+      title: "Targets — emerging evidence"
+      markdown: |
+        - **Do not over-oxygenate.** Recent trials favour a
+          **conservative SpO₂ target of 88–92%** over higher
+          (>94%) targets:
+          - **Oxy-PICU** (2024): conservative 88–92% gave better
+            organ-support-free survival in ventilated children.
+          - **2026 Surviving Sepsis Campaign (paediatric):** target
+            **88–92%** over >94% in intubated children with sepsis
+            after resuscitation.
+
+    - type: "prose"
+      title: "If failing low-flow oxygen"
+      markdown: |
+        - If available, consider **high-flow nasal cannula (HFNC)** at
+          **2 L/kg/min** for children failing standard low-flow
+          oxygen — a step **before CPAP**.

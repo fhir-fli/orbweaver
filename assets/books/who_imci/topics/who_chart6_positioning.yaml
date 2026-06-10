@@ -1,16 +1,35 @@
 # ============================================================
 # WHO IMCI Chart 6 — How to position an unconscious child
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.12
+# UPDATED per OpenEvidence review (2026-06-10):
+#   - Terminology (MEDIUM): "spinal motion restriction" (SMR), not
+#     rigid "immobilization" — ACS/ACEP/NAEMSP joint consensus;
+#     current techniques limit but do not truly immobilize. Rigid
+#     devices (backboards, collars) cause discomfort + pressure
+#     ulcers w/ no proven benefit; de-adoption not linked to more
+#     disabling cord injury (2024 AHA/Red Cross First Aid Guidelines,
+#     Circulation 2024;150(24):e519-e579; NAEMSP review, Prehosp
+#     Emerg Care 2025).
+#   - Board caveats (MEDIUM): remove rigid surface ASAP (pressure
+#     injury); a child's large occiput forces cervical FLEXION when
+#     supine on a flat board — pad UNDER THE TORSO (not the head) for
+#     neutral alignment, esp. under ~8 yr (Nolte, Pediatr Emerg Care
+#     2022;38(1):e75-e84).
+#   - Vomiting + c-spine (LOW): lateral trauma position (LTP) /
+#     HAINES produced less cervical motion than standard recovery
+#     position in cadaver C-spine models (Hyldmo, Acta Anaesthesiol
+#     Scand 2016;60(7):1003-11).
+#   - Airway reassessment (LOW): added "reassess airway & breathing
+#     frequently" reminder.
 # Source figures (board-taping, recovery position) not yet
 # extracted — steps carried as text.
-# Clinical content pending OpenEvidence review.
 # ============================================================
 
 topic:
   id: "who-imci-chart6-positioning"
   title: "Positioning an Unconscious Child"
-  list_subtitle: "IMCI Chart 6 · neck stabilization / recovery position"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  list_subtitle: "IMCI Chart 6 · spinal motion restriction / recovery position"
+  last_reviewed: "OpenEvidence review 2026-06-10 · ACS/NAEMSP SMR + 2024 AHA First Aid"
   tags: ["unconscious", "positioning", "recovery position", "neck trauma", "cervical spine", "imci", "pediatric"]
   aliases:
     - "Recovery Position"
@@ -26,7 +45,10 @@ topic:
       title: "If neck trauma is suspected"
       highlight: true
       markdown: |
-        - **Stabilize the child's neck** and keep the child
+        Goal is **spinal motion restriction (SMR)** — limit movement;
+        rigid devices do not truly immobilize and are temporary.
+
+        - **Restrict neck motion** and keep the child
           **lying on the back**.
         - **Tape the child's forehead and chin** to the sides of a
           **firm board** to secure this position.
@@ -34,6 +56,18 @@ topic:
           (e.g. using **litre bags of IV fluid** on each side).
         - If the child is **vomiting**, turn on the side, keeping the
           **head in line with the body**.
+          - Use the **lateral trauma position** if available (less
+            cervical motion).
+
+    - type: "prose"
+      title: "Board caveats"
+      callout: true
+      markdown: |
+        - **Remove the rigid board as soon as feasible** — pressure
+          injury risk.
+        - A child's **large occiput** forces the neck into **flexion**
+          on a flat board. **Pad under the torso** (not the head) for
+          neutral alignment, especially **under ~8 years**.
 
     - type: "prose"
       title: "If neck trauma is not suspected"
@@ -43,3 +77,8 @@ topic:
         - Keep the **neck slightly extended**, and stabilize by placing
           **cheek on one hand**.
         - **Bend one leg** to stabilize the body position.
+
+    - type: "prose"
+      title: "After positioning"
+      markdown: |
+        - **Reassess airway and breathing frequently.**
