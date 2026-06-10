@@ -16,6 +16,7 @@ class Book {
     required this.coverAsset,
     required this.spineColor,
     required this.contents,
+    this.paletteOverrides = const {},
   });
 
   final String id;
@@ -23,6 +24,10 @@ class Book {
   final String subtitle;
   final String coverAsset;
   final Color spineColor;
+
+  /// Book-level `palette:` overrides (role → color), the root of the
+  /// cascade. Chapters and topics inherit and may override per-role.
+  final Map<String, Color> paletteOverrides;
 
   /// Ordered top-level nodes (chapters or bare topics).
   final List<BookNode> contents;
@@ -66,11 +71,17 @@ class BookGroup extends BookNode {
     required this.title,
     required this.children,
     this.overview,
+    this.paletteOverrides = const {},
   });
 
   final String title;
   final BookTopic? overview;
   final List<BookNode> children;
+
+  /// Chapter-level `palette:` overrides, applied over the book's and
+  /// inherited by this group's topics. Retained for reference; topic rows
+  /// already carry their fully-resolved [BookTopic.palette].
+  final Map<String, Color> paletteOverrides;
 }
 
 /// A leaf reference to a single topic.
@@ -87,6 +98,7 @@ class BookTopic {
     required this.subtitle,
     required this.asset,
     this.tags = const [],
+    this.palette = const {},
   });
 
   final String id;
@@ -94,6 +106,11 @@ class BookTopic {
   final String subtitle;
   final String asset;
   final List<String> tags;
+
+  /// Fully-resolved color palette for this topic (book → chapter → topic
+  /// cascade, accent-derived roles filled in). Drives the TOC row accent
+  /// and is passed to the topic page when opened.
+  final Map<String, Color> palette;
 
   bool matches(String query) {
     if (query.isEmpty) return true;

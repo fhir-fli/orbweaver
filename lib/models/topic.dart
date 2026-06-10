@@ -1290,6 +1290,7 @@ class Topic {
     this.tags = const [],
     this.aliases = const [],
     this.category = TopicCategory.universal,
+    this.ownPaletteArgb = const {},
   });
 
   /// Parse from a YAML string (e.g., loaded from an asset file).
@@ -1316,6 +1317,7 @@ class Topic {
       tags: _stringList(map['tags']),
       aliases: _stringList(map['aliases']),
       category: TopicCategory.fromString(map['category'] as String?),
+      ownPaletteArgb: _parsePaletteArgb(map['palette']),
       pages: pages,
     );
   }
@@ -1327,6 +1329,15 @@ class Topic {
   final List<String> tags;
   final List<String> aliases;
   final TopicCategory category;
+
+  /// The topic's own `palette:` overrides as role → packed-ARGB ints
+  /// (Flutter-free). This is only the innermost cascade layer a topic
+  /// declares for itself; when opened inside a book the loader merges it
+  /// over the book/chapter palette and the renderer uses that resolved
+  /// map. For a standalone (pasted) topic, the renderer resolves from this
+  /// alone over the defaults.
+  final Map<String, int> ownPaletteArgb;
+
   final List<TopicPage> pages;
 
   /// First page's [TopicPage.pageNumber]. Convenience for places that
@@ -1347,6 +1358,31 @@ List<String> _stringList(dynamic raw) {
   if (raw is YamlList) return raw.map((e) => e as String).toList();
   if (raw is List) return raw.cast<String>();
   return const [];
+}
+
+/// Parses a `palette:` YAML map (role → hex string) into role → packed-ARGB
+/// ints. Skips unparseable entries. Kept Flutter-free so the model has no
+/// material dependency (the renderer converts ints → `Color`).
+Map<String, int> _parsePaletteArgb(dynamic node) {
+  if (node is! Map) return const {};
+  final out = <String, int>{};
+  node.forEach((k, v) {
+    final argb = _parseHexArgb(v);
+    if (argb != null) out['$k'] = argb;
+  });
+  return out;
+}
+
+/// Parses a `"0xAARRGGBB"` / `"0xRRGGBB"` / `"#RRGGBB"` color string to a
+/// packed ARGB int (alpha defaults to opaque). Returns null if malformed.
+int? _parseHexArgb(dynamic raw) {
+  if (raw is! String) return null;
+  var hex = raw.trim();
+  if (hex.startsWith('0x') || hex.startsWith('0X')) hex = hex.substring(2);
+  if (hex.startsWith('#')) hex = hex.substring(1);
+  if (hex.length == 6) hex = 'FF$hex';
+  if (hex.length != 8) return null;
+  return int.tryParse(hex, radix: 16);
 }
 
 List<int> _intList(dynamic raw) {

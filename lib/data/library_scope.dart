@@ -40,7 +40,7 @@ Future<void> openLinkedTopic(BuildContext context, String topicId) async {
   await Navigator.push(
     context,
     MaterialPageRoute<void>(
-      builder: (_) => TopicFrame(assetPath: ref.asset),
+      builder: (_) => TopicFrame(assetPath: ref.asset, palette: ref.palette),
     ),
   );
 }

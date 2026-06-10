@@ -72,6 +72,41 @@ Rendering: a book with top-level groups drills down (chapter → accordion of
 sections/subsections); a flat book (only leaves) renders as a list; search
 flattens the whole tree.
 
+## Color palette (cascade)
+
+Every semantic ("attention") color the renderer draws is a named **role**
+(see `lib/theme/palette.dart` for the full default set). A `palette:` map —
+`role: "0xAARRGGBB"` (or `"#RRGGBB"`) — may be declared at three levels and
+**cascades**: **book → chapter (group) → topic**. Each level inherits its
+parent's palette and overrides per-role; an orphaned/pasted topic falls back
+to the defaults + a neutral accent. A topic may also declare its own
+`palette:` in frontmatter. Custom role names are allowed and can be read by
+content.
+
+```yaml
+# book.yaml — book-level default + per-chapter override
+book:
+  palette:
+    accent: "0xFF2E7D32"          # whole-book accent
+  contents:
+    - title: "6. Fever"
+      palette:
+        accent: "0xFFC2185B"      # this chapter re-skins itself
+      children: [ ... ]
+```
+
+Key roles: `accent` (titles, bullets, app bar, TOC bar; `accent_fill` /
+`accent_branch` derive from it unless set), `alert` / `alert_fill` /
+`alert_text` (the prose `callout`), `severity_{mild,moderate,severe}_{header,tile}`,
+`provider_{emt,intermediate,als,paramedic,any}`, `pop_{adult,peds}`,
+`warning_{safety,caution}`, `flow_{decision,entry,convergence}`,
+`cc_link_{fill,border}`, `note_{fill,border,text}`, `danger_text`. Nothing is
+hardcoded at a use site — override any role at any level to recolor it.
+
+The WHO Pocket Book uses this to color-code by chapter (Ch.1 = magenta);
+WVEMS declares each section's accent (+ `accent_fill`/`accent_branch`) so its
+protocols keep their blue/green/orange/purple identity.
+
 ## Block types
 
 ### `prose` — markdown text

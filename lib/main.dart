@@ -58,7 +58,7 @@ List<Route<void>> _restorePages(LastStateSnapshot s, List<Book> library) {
   final topic = s.topicId == null ? null : findTopic(book, s.topicId!);
   if (topic == null) return routes;
   routes.add(MaterialPageRoute<void>(
-    builder: (_) => TopicFrame(assetPath: topic.asset),
+    builder: (_) => TopicFrame(assetPath: topic.asset, palette: topic.palette),
   ));
 
   return routes;

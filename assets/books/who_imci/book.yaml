@@ -9,6 +9,10 @@ book:
   # as groups (with sections/subsections) as they are authored.
   contents:
     - title: "1. Triage and emergency conditions"
+      # WHO Pocket Book color-codes by chapter; Chapter 1 = magenta. Topics
+      # inherit this; any topic may override its own palette.
+      palette:
+        accent: "0xFFD81B60"
       children:
         - topic: "topics/who_1_01_triage.yaml"
         - topic: "topics/who_1_02_etat_summary.yaml"

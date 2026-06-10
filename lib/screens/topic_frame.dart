@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:orbweaver/data/topic_loader.dart';
 import 'package:orbweaver/models/topic.dart';
+import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
 
@@ -12,9 +13,14 @@ import 'package:orbweaver/widgets/topic_view.dart';
 /// Scroll-tracking uses [RenderAbstractViewport.getOffsetToReveal] to
 /// compute each page's top offset on demand — no manual height math.
 class TopicFrame extends StatefulWidget {
-  const TopicFrame({required this.assetPath, super.key});
+  const TopicFrame({required this.assetPath, this.palette = const {}, super.key});
 
   final String assetPath;
+
+  /// Fully-resolved color palette from the book → chapter → topic cascade,
+  /// passed when opened from a book. Empty for a standalone/pasted topic,
+  /// in which case the palette is resolved from the topic's own `palette:`.
+  final Map<String, Color> palette;
 
   @override
   State<TopicFrame> createState() => _TopicFrameState();
@@ -91,11 +97,22 @@ class _TopicFrameState extends State<TopicFrame> {
         body: const Center(child: CircularProgressIndicator()),
       );
     }
-    final theme = TopicTheme.of(topic.category);
+    // Resolve the palette (cascade from the book if opened there, else the
+    // topic's own over the defaults). The accent drives the app bar + badge
+    // so the header matches the content.
+    final resolved = widget.palette.isNotEmpty
+        ? widget.palette
+        : resolvePalette([
+            {
+              for (final e in topic.ownPaletteArgb.entries) e.key: Color(e.value),
+            },
+          ]);
+    final theme = TopicTheme(resolved);
+    final accent = theme.header;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: theme.header,
+        backgroundColor: accent,
         foregroundColor: Colors.white,
         titleSpacing: 8,
         title: ValueListenableBuilder<int>(
@@ -108,7 +125,7 @@ class _TopicFrameState extends State<TopicFrame> {
                 if (page.pageNumber != null) ...[
                   _PageBadge(
                     pageNumber: page.pageNumber!,
-                    headerColor: theme.header,
+                    headerColor: accent,
                   ),
                   const SizedBox(width: 10),
                 ],
@@ -130,7 +147,11 @@ class _TopicFrameState extends State<TopicFrame> {
       body: SafeArea(
         child: SingleChildScrollView(
           controller: _scrollCtrl,
-          child: TopicView(topic: topic, pageKeys: _pageKeys),
+          child: TopicView(
+            topic: topic,
+            palette: resolved,
+            pageKeys: _pageKeys,
+          ),
         ),
       ),
     );

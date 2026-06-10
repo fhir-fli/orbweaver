@@ -290,8 +290,8 @@ class TableBlockView extends StatelessWidget {
 
   Color? _severityBg(RowSeverity s) => switch (s) {
         RowSeverity.none => null,
-        RowSeverity.emergency => const Color(0xFFFFEBEE),
-        RowSeverity.priority => const Color(0xFFFFF8E1),
-        RowSeverity.nonUrgent => const Color(0xFFE8F5E9),
+        RowSeverity.emergency => theme.severitySevereTile,
+        RowSeverity.priority => theme.severityModerateTile,
+        RowSeverity.nonUrgent => theme.severityMildTile,
       };
 }

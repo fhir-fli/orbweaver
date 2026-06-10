@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:orbweaver/data/topic_loader.dart';
 import 'package:orbweaver/models/book.dart';
-import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/screens/topic_frame.dart';
 import 'package:orbweaver/services/last_state.dart';
-import 'package:orbweaver/theme/topic_theme.dart';
 
 /// One book's table of contents.
 ///
@@ -28,36 +25,16 @@ class _BookScreenState extends State<BookScreen> {
   String _query = '';
   bool _searchOpen = false;
 
-  /// Topic.category per topic id, loaded from each YAML on open — drives the
-  /// per-row accent color. Rows without an entry yet render a neutral bar.
-  Map<String, TopicCategory> _categories = {};
-
   @override
   void initState() {
     super.initState();
     LastState.recordBook(widget.book.id);
-    _loadCategories();
   }
 
   @override
   void dispose() {
     _searchCtrl.dispose();
     super.dispose();
-  }
-
-  Future<void> _loadCategories() async {
-    final entries = await Future.wait(
-      widget.book.allTopics.map((t) async {
-        try {
-          final topic = await loadTopicAsset(t.asset);
-          return MapEntry(t.id, topic.category);
-        } catch (_) {
-          return MapEntry(t.id, TopicCategory.medical);
-        }
-      }),
-    );
-    if (!mounted) return;
-    setState(() => _categories = Map.fromEntries(entries));
   }
 
   @override
@@ -122,7 +99,6 @@ class _BookScreenState extends State<BookScreen> {
       ),
       itemBuilder: (context, i) => _TopicRow(
         topic: matches[i],
-        category: _categories[matches[i].id],
         onTap: () => openTopicFromBook(context, widget.book.id, matches[i]),
       ),
     );
@@ -146,7 +122,6 @@ class _BookScreenState extends State<BookScreen> {
       itemBuilder: (context, i) => switch (nodes[i]) {
         BookLeaf(:final topic) => _TopicRow(
             topic: topic,
-            category: _categories[topic.id],
             onTap: () => openTopicFromBook(context, widget.book.id, topic),
           ),
         BookGroup group => _GroupRow(
@@ -159,7 +134,6 @@ class _BookScreenState extends State<BookScreen> {
                   bookId: widget.book.id,
                   group: group,
                   spineColor: widget.book.spineColor,
-                  categories: _categories,
                 ),
               ),
             ),
@@ -180,7 +154,7 @@ Future<void> openTopicFromBook(
   await Navigator.push(
     context,
     MaterialPageRoute<void>(
-      builder: (_) => TopicFrame(assetPath: topic.asset),
+      builder: (_) => TopicFrame(assetPath: topic.asset, palette: topic.palette),
     ),
   );
 }
@@ -192,13 +166,11 @@ class _ChapterScreen extends StatelessWidget {
     required this.bookId,
     required this.group,
     required this.spineColor,
-    required this.categories,
   });
 
   final String bookId;
   final BookGroup group;
   final Color spineColor;
-  final Map<String, TopicCategory> categories;
 
   @override
   Widget build(BuildContext context) {
@@ -215,17 +187,11 @@ class _ChapterScreen extends StatelessWidget {
           if (group.overview != null)
             _TopicRow(
               topic: group.overview!,
-              category: categories[group.overview!.id],
               onTap: () =>
                   openTopicFromBook(context, bookId, group.overview!),
             ),
           for (final node in group.children)
-            _NodeTile(
-              node: node,
-              bookId: bookId,
-              categories: categories,
-              depth: 0,
-            ),
+            _NodeTile(node: node, bookId: bookId, depth: 0),
         ],
       ),
     );
@@ -239,13 +205,11 @@ class _NodeTile extends StatelessWidget {
   const _NodeTile({
     required this.node,
     required this.bookId,
-    required this.categories,
     required this.depth,
   });
 
   final BookNode node;
   final String bookId;
-  final Map<String, TopicCategory> categories;
   final int depth;
 
   @override
@@ -254,7 +218,6 @@ class _NodeTile extends StatelessWidget {
       case BookLeaf(:final topic):
         return _TopicRow(
           topic: topic,
-          category: categories[topic.id],
           indent: depth * 12.0,
           onTap: () => openTopicFromBook(context, bookId, topic),
         );
@@ -272,18 +235,12 @@ class _NodeTile extends StatelessWidget {
             if (group.overview != null)
               _TopicRow(
                 topic: group.overview!,
-                category: categories[group.overview!.id],
                 indent: (depth + 1) * 12.0,
                 onTap: () =>
                     openTopicFromBook(context, bookId, group.overview!),
               ),
             for (final child in group.children)
-              _NodeTile(
-                node: child,
-                bookId: bookId,
-                categories: categories,
-                depth: depth + 1,
-              ),
+              _NodeTile(node: child, bookId: bookId, depth: depth + 1),
           ],
         );
     }
@@ -363,21 +320,19 @@ class _GroupRow extends StatelessWidget {
 class _TopicRow extends StatelessWidget {
   const _TopicRow({
     required this.topic,
-    required this.category,
     required this.onTap,
     this.indent = 0,
   });
 
   final BookTopic topic;
-  final TopicCategory? category;
   final VoidCallback onTap;
   final double indent;
 
   @override
   Widget build(BuildContext context) {
-    final accent = category == null
-        ? const Color(0xFFBDBDBD)
-        : TopicTheme.of(category!).header;
+    // The row accent is the topic's resolved palette accent (book → chapter
+    // → topic cascade), or a neutral bar if nothing declared one.
+    final accent = topic.palette['accent'] ?? const Color(0xFFBDBDBD);
     return InkWell(
       onTap: onTap,
       child: Padding(

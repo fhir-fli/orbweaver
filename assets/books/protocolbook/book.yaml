@@ -4,6 +4,10 @@ book:
   subtitle: "Paediatrics & Internal Medicine"
   cover: "cover.jpg"
   spine_color: "0xFF2E7D32"
+  # Book-level palette: the whole book's accent (inherited by all topics
+  # until chapter groups declare their own).
+  palette:
+    accent: "0xFF2E7D32"
   # contents tree — currently a flat page-order run of leaves (the
   # walkthrough proceeds page by page). Groups can be introduced later to
   # mirror the book's own section structure.

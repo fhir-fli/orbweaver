@@ -9,6 +9,10 @@ book:
   # appendix. Topic+map model; section structure is declared, not derived.
   contents:
     - title: "Universal"
+      palette:
+        accent: "0xFF1E4E8C"
+        accent_fill: "0xFFE8F0FA"
+        accent_branch: "0xFF2C6BB5"
       children:
         - topic: "topics/wvems_2026_004.yaml"
         - topic: "topics/wvems_2026_006.yaml"
@@ -21,6 +25,10 @@ book:
         - topic: "topics/wvems_2026_014.yaml"
         - topic: "topics/wvems_2026_022.yaml"
     - title: "Medical"
+      palette:
+        accent: "0xFF2E7D32"
+        accent_fill: "0xFFEAF4EB"
+        accent_branch: "0xFF43A047"
       children:
         - topic: "topics/wvems_2026_024.yaml"
         - topic: "topics/wvems_2026_026.yaml"
@@ -37,6 +45,10 @@ book:
         - topic: "topics/wvems_2026_048.yaml"
         - topic: "topics/wvems_2026_050.yaml"
     - title: "Trauma"
+      palette:
+        accent: "0xFFC55A11"
+        accent_fill: "0xFFFBEEE4"
+        accent_branch: "0xFFE57324"
       children:
         - topic: "topics/wvems_2026_052.yaml"
         - topic: "topics/wvems_2026_054.yaml"
@@ -52,6 +64,10 @@ book:
         - topic: "topics/wvems_2026_074.yaml"
         - topic: "topics/wvems_2026_076.yaml"
     - title: "Critical Care"
+      palette:
+        accent: "0xFF6A1B9A"
+        accent_fill: "0xFFF1E7F6"
+        accent_branch: "0xFF8E24AA"
       children:
         - topic: "topics/wvems_2026_078.yaml"
         - topic: "topics/wvems_2026_080.yaml"
@@ -63,5 +79,9 @@ book:
         - topic: "topics/wvems_2026_092.yaml"
         - topic: "topics/wvems_2026_094.yaml"
     - title: "Drug Reference"
+      palette:
+        accent: "0xFF1E4E8C"
+        accent_fill: "0xFFE8F0FA"
+        accent_branch: "0xFF2C6BB5"
       children:
         - topic: "topics/wvems_drug_ref_a.yaml"

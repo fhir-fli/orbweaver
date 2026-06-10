@@ -21,19 +21,19 @@ class _SeverityColors {
   final Color tileBg;
 }
 
-_SeverityColors? _paletteFor(RowSeverity s) => switch (s) {
+_SeverityColors? _paletteFor(TopicTheme theme, RowSeverity s) => switch (s) {
       RowSeverity.none => null,
-      RowSeverity.emergency => const _SeverityColors(
-          headerBg: Color(0xFFFFCDD2),
-          tileBg: Color(0xFFFFEBEE),
+      RowSeverity.emergency => _SeverityColors(
+          headerBg: theme.severitySevereHeader,
+          tileBg: theme.severitySevereTile,
         ),
-      RowSeverity.priority => const _SeverityColors(
-          headerBg: Color(0xFFFFE082),
-          tileBg: Color(0xFFFFF8E1),
+      RowSeverity.priority => _SeverityColors(
+          headerBg: theme.severityModerateHeader,
+          tileBg: theme.severityModerateTile,
         ),
-      RowSeverity.nonUrgent => const _SeverityColors(
-          headerBg: Color(0xFFC8E6C9),
-          tileBg: Color(0xFFE8F5E9),
+      RowSeverity.nonUrgent => _SeverityColors(
+          headerBg: theme.severityMildHeader,
+          tileBg: theme.severityMildTile,
         ),
     };
 
@@ -65,7 +65,7 @@ class BranchColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final palette = _paletteFor(branch.severity);
+    final palette = _paletteFor(theme, branch.severity);
 
     // Arrow-only branch: render label + a long down-arrow.  Used when
     // the branch flows directly into the block that comes next in the
@@ -373,12 +373,13 @@ class _ProviderBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = TopicThemeScope.of(context);
     final (letter, color) = switch (level) {
-      ProviderLevel.emt => ('E', const Color(0xFFF2C24A)),
-      ProviderLevel.intermediate => ('I', const Color(0xFF6FAADB)),
-      ProviderLevel.als => ('A', const Color(0xFF7BBF86)),
-      ProviderLevel.paramedic => ('P', const Color(0xFFAB91D8)),
-      ProviderLevel.any => ('', const Color(0xFFE0E0E0)),
+      ProviderLevel.emt => ('E', theme.providerEmt),
+      ProviderLevel.intermediate => ('I', theme.providerIntermediate),
+      ProviderLevel.als => ('A', theme.providerAls),
+      ProviderLevel.paramedic => ('P', theme.providerParamedic),
+      ProviderLevel.any => ('', theme.providerAny),
     };
 
     return Container(

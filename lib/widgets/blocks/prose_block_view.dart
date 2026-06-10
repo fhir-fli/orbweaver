@@ -3,21 +3,26 @@ import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
 
-/// Renders a [ProseBlock] using the minimal markdown subset implemented
-/// in [MiniMarkdown]. Highlight blocks get a pink tinted container
-/// (used for callouts and pediatric notes).
+/// Renders a [ProseBlock] using the minimal markdown subset in
+/// [MiniMarkdown]. All colors come from the resolved [theme]: `accent`
+/// (= `theme.header`) tints the section title, square bullets, and the
+/// highlight rule; the `alert` roles color the attention callout.
 class ProseBlockView extends StatelessWidget {
-  const ProseBlockView({required this.block, required this.theme, super.key});
+  const ProseBlockView({
+    required this.block,
+    required this.theme,
+    super.key,
+  });
 
   final ProseBlock block;
   final TopicTheme theme;
 
   @override
   Widget build(BuildContext context) {
+    final accent = theme.header;
     // Boxed prose — a rounded-border tile matching boxed-layout table
     // cells, used when the block is acting as a flow-grid cell inside
-    // a RowBlock (e.g. p.22 malaria row 3: "Treat" / "Treat presumptively"
-    // / "Don't treat").  Centered text, tight padding, no title banner.
+    // a RowBlock.  Centered text, tight padding, no title banner.
     if (block.boxed) {
       return Container(
         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
@@ -31,19 +36,17 @@ class ProseBlockView extends StatelessWidget {
     }
 
     if (block.callout) {
-      // WVEMS-style sidebar callout: cream body with the title rendered
-      // as a centered stadium pill on top, body bullets centered. Used
-      // for the "Poor Perfusion"-style critical-cue boxes embedded in
-      // the prose pages. Narrower than the full prose column so it
-      // reads as a sidebar inset, not a section divider.
+      // Attention callout: a bright amber card with the title as a solid
+      // amber chip on top — meant to draw the eye (e.g. "Act now"). Sized
+      // to content and centered so it reads as an inset, not a section.
       return Align(
         alignment: Alignment.center,
         child: Container(
-          padding: const EdgeInsets.fromLTRB(12, 6, 12, 6),
+          padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
           decoration: BoxDecoration(
-            color: const Color(0xFFF5EFE0),
-            border: Border.all(color: const Color(0xFFB89D6E), width: 1.2),
-            borderRadius: BorderRadius.circular(6),
+            color: theme.alertFill,
+            border: Border.all(color: theme.alert, width: 1.4),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: IntrinsicWidth(
             child: Column(
@@ -54,14 +57,10 @@ class ProseBlockView extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 16,
-                      vertical: 3,
+                      vertical: 4,
                     ),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFE6D8B8),
-                      border: Border.all(
-                        color: const Color(0xFF7A5F2E),
-                        width: 1.2,
-                      ),
+                      color: theme.alert,
                       borderRadius: BorderRadius.circular(999),
                     ),
                     child: Text(
@@ -70,14 +69,17 @@ class ProseBlockView extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w800,
-                        color: Color(0xFF3E2D0E),
+                        color: Colors.white,
                       ),
                     ),
                   ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 8),
                 DefaultTextStyle.merge(
                   textAlign: TextAlign.center,
-                  child: MiniMarkdown(markdown: block.markdown),
+                  child: MiniMarkdown(
+                    markdown: block.markdown,
+                    bulletColor: theme.alertText,
+                  ),
                 ),
               ],
             ),
@@ -89,27 +91,37 @@ class ProseBlockView extends StatelessWidget {
     final body = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        if (block.title != null)
+        if (block.title != null) ...[
           Text(
             block.title!,
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 15.5,
               fontWeight: FontWeight.w800,
-              color: theme.header,
+              color: accent,
+              height: 1.2,
             ),
           ),
-        MiniMarkdown(markdown: block.markdown),
+          const SizedBox(height: 6),
+        ],
+        MiniMarkdown(markdown: block.markdown, bulletColor: accent),
       ],
     );
 
     if (!block.highlight) return body;
 
+    // Highlight: a clean light card with a left accent rule, instead of a
+    // heavy pink-bordered box. Sets key content apart without the WVEMS
+    // look.
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
       decoration: BoxDecoration(
-        color: const Color(0xFFFFF0F5),
-        border: Border.all(color: const Color(0xFFE57373)),
+        color: accent.withValues(alpha: 0.06),
+        border: Border(left: BorderSide(color: accent, width: 4)),
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(6),
+          bottomRight: Radius.circular(6),
+        ),
       ),
+      padding: const EdgeInsets.fromLTRB(12, 10, 10, 12),
       child: body,
     );
   }

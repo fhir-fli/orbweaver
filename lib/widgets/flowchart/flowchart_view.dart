@@ -627,7 +627,7 @@ class _BranchesRow extends StatelessWidget {
     // arrows, then an IntrinsicHeight Row of action stacks. This makes
     // the first action tile in each branch land at the same Y, even
     // when criteria text wraps differently between columns.
-    final paletteFor = _resolvePalettes(branches);
+    final paletteFor = _resolvePalettes(theme, branches);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -713,22 +713,23 @@ class _BranchesRow extends StatelessWidget {
 /// tileBg) pair used by the renderer. Mirrors the logic inside
 /// [BranchColumn] so the split-row layout produces the same colours.
 List<({Color? headerBg, Color? tileBg})?> _resolvePalettes(
+  TopicTheme theme,
   List<TopicBranch> branches,
 ) {
   return branches.map<({Color? headerBg, Color? tileBg})?>((b) {
     return switch (b.severity) {
       RowSeverity.none => null,
       RowSeverity.emergency => (
-          headerBg: const Color(0xFFFFCDD2),
-          tileBg: const Color(0xFFFFEBEE),
+          headerBg: theme.severitySevereHeader,
+          tileBg: theme.severitySevereTile,
         ),
       RowSeverity.priority => (
-          headerBg: const Color(0xFFFFE082),
-          tileBg: const Color(0xFFFFF8E1),
+          headerBg: theme.severityModerateHeader,
+          tileBg: theme.severityModerateTile,
         ),
       RowSeverity.nonUrgent => (
-          headerBg: const Color(0xFFC8E6C9),
-          tileBg: const Color(0xFFE8F5E9),
+          headerBg: theme.severityMildHeader,
+          tileBg: theme.severityMildTile,
         ),
     };
   }).toList();
@@ -933,8 +934,6 @@ class _ConvergenceBox extends StatelessWidget {
   final ConvergenceNode node;
   final TopicTheme theme;
 
-  static const Color _fill = Color(0xFFD5ECD6);
-
   @override
   Widget build(BuildContext context) {
     // Border radius 28 (not 999 / true stadium): a true semicircular
@@ -946,7 +945,7 @@ class _ConvergenceBox extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
       decoration: BoxDecoration(
-        color: _fill,
+        color: theme.flowConvergence,
         border: Border.all(color: Colors.black87, width: 1.5),
         borderRadius: BorderRadius.circular(28),
       ),
@@ -1078,17 +1077,15 @@ class _CriticalCareLinkPill extends StatelessWidget {
 
   final CriticalCareLink link;
 
-  static const Color _fill = Color(0xFFF1E7F6);
-  static const Color _border = Color(0xFF6A1B9A);
-
   @override
   Widget build(BuildContext context) {
+    final theme = TopicThemeScope.of(context);
     final pill = Center(
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 5),
         decoration: BoxDecoration(
-          color: _fill,
-          border: Border.all(color: _border, width: 1.5),
+          color: theme.ccLinkFill,
+          border: Border.all(color: theme.ccLinkBorder, width: 1.5),
           borderRadius: BorderRadius.circular(999),
         ),
         child: Text(
@@ -1119,21 +1116,22 @@ class _ImprovementWaypoint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = TopicThemeScope.of(context);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
       decoration: BoxDecoration(
-        color: const Color(0xFFFFFDE7),
-        border: Border.all(color: const Color(0xFFF9A825), width: 1.5),
+        color: theme.noteFill,
+        border: Border.all(color: theme.noteBorder, width: 1.5),
         borderRadius: BorderRadius.circular(999),
       ),
       alignment: Alignment.center,
       child: Text(
         label,
         textAlign: TextAlign.center,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.w800,
-          color: Color(0xFF5D4037),
+          color: theme.noteText,
         ),
       ),
     );

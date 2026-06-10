@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:orbweaver/models/book.dart';
+import 'package:orbweaver/theme/palette.dart';
 import 'package:yaml/yaml.dart';
 
 /// The library is data, not code. Each book is a self-contained **bundle
@@ -44,7 +45,12 @@ Future<Book> _loadBook(String id) async {
   final b = (loadYaml(raw) as YamlMap)['book'] as YamlMap;
 
   final cover = (b['cover'] as String?) ?? '';
-  final contents = await _parseNodes(b['contents'] as YamlList? ?? YamlList(), dir);
+  final bookOverrides = parsePaletteOverrides(b['palette']);
+  final contents = await _parseNodes(
+    b['contents'] as YamlList? ?? YamlList(),
+    dir,
+    [bookOverrides],
+  );
 
   return Book(
     id: b['id'] as String,
@@ -53,6 +59,7 @@ Future<Book> _loadBook(String id) async {
     coverAsset: cover.isEmpty ? '' : '$dir/$cover',
     spineColor: _color(b['spine_color'] as String),
     contents: contents,
+    paletteOverrides: bookOverrides,
   );
 }
 
@@ -60,24 +67,39 @@ Future<Book> _loadBook(String id) async {
 /// with a `topic:` path is a [BookLeaf]; an entry with a `title:` is a
 /// [BookGroup] (which may carry its own `topic:` overview and nested
 /// `children:`). Topic rows are read from each file's own frontmatter.
-Future<List<BookNode>> _parseNodes(YamlList raw, String dir) async {
+Future<List<BookNode>> _parseNodes(
+  YamlList raw,
+  String dir,
+  List<Map<String, Color>> layers,
+) async {
   final nodes = <BookNode>[];
   for (final entry in raw) {
     final map = entry as YamlMap;
     final title = map['title'] as String?;
     if (title == null) {
       // Leaf: a bare topic reference.
-      final topic = await _loadTopicRow('$dir/${map['topic'] as String}');
+      final topic = await _loadTopicRow('$dir/${map['topic'] as String}', layers);
       nodes.add(BookLeaf(topic));
     } else {
       // Group: a chapter/section, optionally with its own overview page.
+      // Its `palette:` overrides extend the cascade for its subtree.
+      final groupOverrides = parsePaletteOverrides(map['palette']);
+      final childLayers = [...layers, groupOverrides];
       final overviewPath = map['topic'] as String?;
       final overview = overviewPath == null
           ? null
-          : await _loadTopicRow('$dir/$overviewPath');
-      final children =
-          await _parseNodes(map['children'] as YamlList? ?? YamlList(), dir);
-      nodes.add(BookGroup(title: title, overview: overview, children: children));
+          : await _loadTopicRow('$dir/$overviewPath', childLayers);
+      final children = await _parseNodes(
+        map['children'] as YamlList? ?? YamlList(),
+        dir,
+        childLayers,
+      );
+      nodes.add(BookGroup(
+        title: title,
+        overview: overview,
+        children: children,
+        paletteOverrides: groupOverrides,
+      ));
     }
   }
   return nodes;
@@ -89,15 +111,21 @@ Future<List<BookNode>> _parseNodes(YamlList raw, String dir) async {
 /// [BookTopic.id] is the topic's own `id` (the logical id used by
 /// cross-topic `link_id`s and by last-state routing) — NOT the filename.
 /// Filenames are just storage; the logical id is what's stable.
-Future<BookTopic> _loadTopicRow(String assetPath) async {
+Future<BookTopic> _loadTopicRow(
+  String assetPath,
+  List<Map<String, Color>> layers,
+) async {
   final raw = await rootBundle.loadString(assetPath);
   final t = (loadYaml(raw) as YamlMap)['topic'] as YamlMap;
+  // The topic's own `palette:` is the last (innermost) layer of the cascade.
+  final topicOwn = parsePaletteOverrides(t['palette']);
   return BookTopic(
     id: t['id'] as String,
     title: t['title'] as String,
     subtitle: (t['list_subtitle'] as String?) ?? '',
     asset: assetPath,
     tags: [for (final tag in t['tags'] as YamlList? ?? const []) tag as String],
+    palette: resolvePalette([...layers, topicOwn]),
   );
 }
 
@@ -111,7 +139,8 @@ class LibraryIndex {
   LibraryIndex(List<Book> books)
       : _byId = {
           for (final b in books)
-            for (final t in b.allTopics) t.id: TopicRef(b.id, t.asset),
+            for (final t in b.allTopics)
+              t.id: TopicRef(b.id, t.asset, t.palette),
         };
 
   final Map<String, TopicRef> _byId;
@@ -120,11 +149,14 @@ class LibraryIndex {
   bool contains(String topicId) => _byId.containsKey(topicId);
 }
 
-/// Where a topic lives: its book id (for last-state) + asset path.
+/// Where a topic lives: its book id (for last-state) + asset path + the
+/// topic's fully-resolved palette (so a cross-link opens it with the right
+/// chapter colors).
 class TopicRef {
-  const TopicRef(this.bookId, this.asset);
+  const TopicRef(this.bookId, this.asset, this.palette);
   final String bookId;
   final String asset;
+  final Map<String, Color> palette;
 }
 
 /// Parses a `"0xAARRGGBB"` (or `"#RRGGBB"`) spine color string.

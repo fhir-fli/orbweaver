@@ -37,21 +37,31 @@ class DrugCardBlockView extends StatelessWidget {
             ),
           ),
         if (block.indications.isNotEmpty)
-          _BulletSection(label: 'Indications', items: block.indications),
+          _BulletSection(
+            label: 'Indications',
+            items: block.indications,
+            dangerColor: theme.dangerText,
+          ),
         if (block.contraindications.isNotEmpty)
           _BulletSection(
             label: 'Contraindications',
             items: block.contraindications,
+            dangerColor: theme.dangerText,
           ),
         if (block.doses.isNotEmpty) _DoseSection(doses: block.doses),
         if (block.warnings.isNotEmpty)
           _BulletSection(
             label: 'Warnings',
             items: block.warnings,
+            dangerColor: theme.dangerText,
             emphasize: true,
           ),
         if (block.pearls.isNotEmpty)
-          _BulletSection(label: 'Pearls', items: block.pearls),
+          _BulletSection(
+            label: 'Pearls',
+            items: block.pearls,
+            dangerColor: theme.dangerText,
+          ),
       ],
     );
 
@@ -105,11 +115,13 @@ class _BulletSection extends StatelessWidget {
   const _BulletSection({
     required this.label,
     required this.items,
+    required this.dangerColor,
     this.emphasize = false,
   });
 
   final String label;
   final List<String> items;
+  final Color dangerColor;
   final bool emphasize;
 
   @override
@@ -123,7 +135,7 @@ class _BulletSection extends StatelessWidget {
             fontSize: 12,
             fontWeight: FontWeight.w800,
             color: emphasize
-                ? const Color(0xFFC62828)
+                ? dangerColor
                 : Colors.black.withValues(alpha: 0.75),
           ),
         ),

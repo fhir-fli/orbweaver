@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/fit_text.dart';
 
 /// Red octagon (stop sign) for `WarningType.safety` callouts.
@@ -12,7 +13,6 @@ class SafetyOctagon extends StatelessWidget {
 
   final String text;
 
-  static const Color _fill = Color(0xFFD32F2F);
   static const Color _stroke = Colors.black87;
 
   @override
@@ -20,7 +20,10 @@ class SafetyOctagon extends StatelessWidget {
     return SizedBox(
       height: 84,
       child: CustomPaint(
-        painter: const _OctagonPainter(fill: _fill, stroke: _stroke),
+        painter: _OctagonPainter(
+          fill: TopicThemeScope.of(context).warningSafety,
+          stroke: _stroke,
+        ),
         child: Padding(
           // Octagon corners eat ~22% of the width on each side at the
           // top/bottom — shrink the text box so words don't clip the
@@ -100,7 +103,6 @@ class CautionCallout extends StatelessWidget {
 
   final String text;
 
-  static const Color _fill = Color(0xFF7E57C2);
   static const Color _stroke = Colors.black87;
 
   /// Pixels each long edge slants relative to the short edges. A small
@@ -112,8 +114,8 @@ class CautionCallout extends StatelessWidget {
     return SizedBox(
       height: 84,
       child: CustomPaint(
-        painter: const _ParallelogramPainter(
-          fill: _fill,
+        painter: _ParallelogramPainter(
+          fill: TopicThemeScope.of(context).warningCaution,
           stroke: _stroke,
           skew: _skew,
         ),

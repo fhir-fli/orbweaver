@@ -69,9 +69,10 @@ class _PopulationLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = TopicThemeScope.of(context);
     final (label, bg) = switch (population) {
-      DosePopulation.adult => ('Adult', const Color(0xFFD9D9D9)),
-      DosePopulation.peds => ('Peds', const Color(0xFFF8C9DA)),
+      DosePopulation.adult => ('Adult', theme.popAdult),
+      DosePopulation.peds => ('Peds', theme.popPeds),
       DosePopulation.both => ('', Colors.transparent),
     };
     return Container(

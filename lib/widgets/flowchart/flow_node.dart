@@ -49,7 +49,7 @@ class FlowNodeBox extends StatelessWidget {
     };
 
     final fill = shape == NodeShape.stadium
-        ? _wvemsEntryStadium
+        ? theme.flowEntry
         : theme.nodeFill;
 
     final padding = compact
@@ -93,8 +93,6 @@ class FlowNodeBox extends StatelessWidget {
 }
 
 /// Pale colours matching the WVEMS protocol PDFs.
-const Color _wvemsDiamondFill = Color(0xFFF6BDAE); // salmon pink
-const Color _wvemsEntryStadium = Color(0xFFCDE0F1); // pale blue
 
 /// Horizontal gap between adjacent branch columns in a severity
 /// flowchart. Painters that draw arrows landing on column centres must
@@ -125,8 +123,8 @@ class DiamondNode extends StatelessWidget {
       width: double.infinity,
       height: height,
       child: CustomPaint(
-        painter: const _DiamondPainter(
-          fill: _wvemsDiamondFill,
+        painter: _DiamondPainter(
+          fill: TopicThemeScope.of(context).flowDecision,
           stroke: Colors.black87,
         ),
         child: Center(

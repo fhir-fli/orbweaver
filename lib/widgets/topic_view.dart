@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
+import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/blocks/drug_card_block_view.dart';
 import 'package:orbweaver/widgets/blocks/image_block_view.dart';
@@ -17,11 +18,18 @@ import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
 class TopicView extends StatelessWidget {
   const TopicView({
     required this.topic,
+    this.palette = const {},
     this.pageKeys = const [],
     super.key,
   });
 
   final Topic topic;
+
+  /// Fully-resolved color palette (book → chapter → topic cascade), passed
+  /// in when the topic is opened from a book. Empty for a standalone topic,
+  /// in which case it is resolved from the topic's own `palette:` over the
+  /// defaults.
+  final Map<String, Color> palette;
 
   /// One key per entry in [Topic.pages]. Pass an empty list to skip
   /// key attachment (e.g., when the caller doesn't track scroll).
@@ -29,11 +37,20 @@ class TopicView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = TopicTheme.of(topic.category);
-    return ColoredBox(
+    final resolved = palette.isNotEmpty
+        ? palette
+        : resolvePalette([
+            {
+              for (final e in topic.ownPaletteArgb.entries) e.key: Color(e.value),
+            },
+          ]);
+    final theme = TopicTheme(resolved);
+    return TopicThemeScope(
+      theme: theme,
+      child: ColoredBox(
       color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8),
+        padding: const EdgeInsets.fromLTRB(12, 4, 12, 4),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -49,13 +66,19 @@ class TopicView extends StatelessWidget {
                     // viewport top.
                     if (i > 0)
                       _PageBreak(pageNumber: topic.pages[i].pageNumber),
-                    for (final block in topic.pages[i].blocks)
-                      _BlockRenderer(block: block, theme: theme),
+                    for (var j = 0; j < topic.pages[i].blocks.length; j++) ...[
+                      if (j > 0) const SizedBox(height: 16),
+                      _BlockRenderer(
+                        block: topic.pages[i].blocks[j],
+                        theme: theme,
+                      ),
+                    ],
                   ],
                 ),
               ),
           ],
         ),
+      ),
       ),
     );
   }
