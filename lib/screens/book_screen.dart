@@ -54,11 +54,39 @@ class _BookScreenState extends State<BookScreen> {
     setState(() => _categories = Map.fromEntries(entries));
   }
 
+  /// List rows: a section header wherever the category changes between
+  /// consecutive topics (the WVEMS PDF index's Universal / Medical /
+  /// Trauma / Critical Care sections), then the topic rows. Headers are
+  /// derived purely from each topic's own `category` — nothing
+  /// book-specific is hardcoded. A book whose topics all share one
+  /// category renders flat, and no headers show until categories have
+  /// loaded.
+  List<_ListItem> _buildItems(List<BookTopic> topics) {
+    final distinct = topics
+        .map((t) => _categories[t.id])
+        .whereType<TopicCategory>()
+        .toSet();
+    if (distinct.length < 2) return [for (final t in topics) _TopicItem(t)];
+
+    final items = <_ListItem>[];
+    TopicCategory? prev;
+    for (final t in topics) {
+      final cat = _categories[t.id];
+      if (cat != null && cat != prev) {
+        items.add(_SectionHeaderItem(cat));
+        prev = cat;
+      }
+      items.add(_TopicItem(t));
+    }
+    return items;
+  }
+
   @override
   Widget build(BuildContext context) {
     final filtered = widget.book.topics
         .where((t) => t.matches(_query))
         .toList(growable: false);
+    final items = _buildItems(filtered);
 
     return Scaffold(
       backgroundColor: const Color(0xFFEFEFEF),
@@ -100,18 +128,28 @@ class _BookScreenState extends State<BookScreen> {
               ? _NoMatches(query: _query)
               : ListView.separated(
                   padding: const EdgeInsets.symmetric(vertical: 4),
-                  itemCount: filtered.length,
-                  separatorBuilder: (_, _) => const Divider(
-                    height: 1,
-                    thickness: 0.5,
-                    indent: 12,
-                    endIndent: 12,
-                  ),
-                  itemBuilder: (context, i) => _TopicRow(
-                    topic: filtered[i],
-                    category: _categories[filtered[i].id],
-                    onTap: () => _openTopic(filtered[i]),
-                  ),
+                  itemCount: items.length,
+                  // Divider only between two adjacent topic rows — not
+                  // around section headers, which separate visually on
+                  // their own.
+                  separatorBuilder: (_, i) =>
+                      items[i] is _TopicItem && items[i + 1] is _TopicItem
+                          ? const Divider(
+                              height: 1,
+                              thickness: 0.5,
+                              indent: 12,
+                              endIndent: 12,
+                            )
+                          : const SizedBox.shrink(),
+                  itemBuilder: (context, i) => switch (items[i]) {
+                    _SectionHeaderItem(:final category) =>
+                      _SectionHeader(category: category),
+                    _TopicItem(:final topic) => _TopicRow(
+                        topic: topic,
+                        category: _categories[topic.id],
+                        onTap: () => _openTopic(topic),
+                      ),
+                  },
                 ),
     );
   }
@@ -123,6 +161,54 @@ class _BookScreenState extends State<BookScreen> {
       context,
       MaterialPageRoute<void>(
         builder: (_) => TopicFrame(assetPath: topic.asset),
+      ),
+    );
+  }
+}
+
+/// A TOC list row — either a category section header or a topic.
+sealed class _ListItem {
+  const _ListItem();
+}
+
+class _SectionHeaderItem extends _ListItem {
+  const _SectionHeaderItem(this.category);
+  final TopicCategory category;
+}
+
+class _TopicItem extends _ListItem {
+  const _TopicItem(this.topic);
+  final BookTopic topic;
+}
+
+/// Colored section band matching the WVEMS PDF index's visual language —
+/// the category's theme color with a white label.
+class _SectionHeader extends StatelessWidget {
+  const _SectionHeader({required this.category});
+
+  final TopicCategory category;
+
+  static String _label(TopicCategory c) => switch (c) {
+        TopicCategory.universal => 'Universal',
+        TopicCategory.medical => 'Medical',
+        TopicCategory.trauma => 'Trauma',
+        TopicCategory.criticalCare => 'Critical Care',
+      };
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      color: TopicTheme.of(category).header,
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      child: Text(
+        _label(category),
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 12,
+          fontWeight: FontWeight.w800,
+          letterSpacing: 0.6,
+        ),
       ),
     );
   }
