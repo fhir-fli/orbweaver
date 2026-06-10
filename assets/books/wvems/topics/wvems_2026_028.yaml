@@ -1,0 +1,145 @@
+# ============================================================
+# WVEMS 2026 Protocol 28 — Chest Pain
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-028"
+  version: "v260101"
+  title: "Chest Pain"
+  list_subtitle: "2026-028 · Aspirin / Nitro"
+  last_reviewed: "Feb 2025"
+  tags: ["chest pain", "acs", "stemi", "mi", "aspirin", "nitro", "cardiac"]
+  aliases:
+    - "ACS"
+    - "Heart Attack"
+    - "Acute MI"
+    - "Cardiac"
+    - "Coronary"
+  category: "medical"
+
+  pages:
+
+  - page_number: 28
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 2 branches)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: "Cardiac Chest Discomfort"
+        shape: "stadium"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "minor"
+          label: "Minor"
+          criteria:
+            - "Mild Discomfort"
+            - "Cardiac History"
+          actions:
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+            - provider_level: "E"
+              text: "Aspirin"
+              kind: "medication_administration"
+            - provider_level: "A"
+              text: "Saline Lock"
+              kind: "procedure"
+
+        - id: "major"
+          label: "Major"
+          criteria:
+            - "Nausea, Sweaty"
+            - "Pain that Radiates"
+          actions:
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+            - provider_level: "E"
+              text: "Aspirin"
+              kind: "medication_administration"
+            - provider_level: "A"
+              text: "Saline Lock"
+              kind: "procedure"
+            - provider_level: "E"
+              text: "Nitro"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
+        bullets:
+          - text: "Breathing, Tachycardia"
+            link_id: "wvems-2026-014"
+          - text: "Pain, Trunk Injury"
+            link_id: "wvems-2026-020"
+          - text: "STEMI"
+
+      dose_table:
+        - drug: "Aspirin"
+          dose: "4 × 81 mg"
+          route: "PO"
+          frequency: "x1 (chewed)"
+          population: "adult"
+        - drug: "Nitro"
+          dose: "0.4 mg"
+          route: "SL"
+          frequency: "Q 5 min x3"
+          population: "adult"
+
+  - page_number: 29
+    blocks:
+
+    - type: "prose"
+      title: "Chest Pain Imperatives"
+      highlight: true
+      markdown: |
+        - This protocol is for suspected **cardiac (ACS)** emergencies only.
+          - For pain resulting from chest trauma, refer to **Trunk Injury**.
+          - For palpitations refer to **Tachycardia** or **Bradycardia**.
+        - For all patients with an identified **STEMI**: place defib pads on.
+          - Also expose and shave groin during transport if time allows.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Aspirin** (Baby ASA): contraindicated with active GI bleeding.
+          - Have patient chew **four (4) 81 mg** tabs (not enteric coated).
+        - **Nitro** (Nitroglycerin): may cause **Hypotension**.
+          - Hold for SBP < 100 mmHg or HR < 50 / > 100.
+          - Do **not** give within 24 h of PDE5 inhibitors (sildenafil, etc).
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - 12-Lead within **10 min** of patient contact when feasible.
+        - Transmit STEMI ECG to the receiving facility before arrival if possible.
+        - Atypical presentations are common in **diabetics**, **women**, and the **elderly**.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Cardiac chest pain is uncommon in peds — investigate other causes
+          (musculoskeletal, anxiety, GERD, costochondritis).
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACC/AHA STEMI Guidelines — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001309 [Ver: 2024]
+        - Medscape ACS — https://emedicine.medscape.com/article/1910735 [Ver: 6/24]
+
+        NEMSIS: 9914117, 9914143

@@ -1,0 +1,128 @@
+# ============================================================
+# WVEMS 2026 Protocol 26 — Medical ROSC
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# Uses the `linear` flowchart variant.
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-026"
+  version: "v260101"
+  title: "Medical ROSC"
+  list_subtitle: "2026-026 · Return of Pulse / Post-Resuscitation"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "rosc"
+    - "post resuscitation"
+    - "ketamine"
+    - "amiodarone"
+    - "medical"
+  aliases:
+    - "Return of Pulse"
+    - "Post-Resuscitation Care"
+  category: "medical"
+
+  pages:
+
+  - page_number: 26
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (linear variant)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "linear"
+
+      entry_chain:
+        - text: "Return of Pulse"
+          shape: "stadium"
+
+      steps:
+        - type: "content"
+          title: "Stabilize"
+          bullets:
+            - "Establish Airway"
+            - "Provide Breathing"
+            - "Treat Circulation"
+        - type: "action"
+          provider_level: "E"
+          text: "12-Lead"
+          kind: "diagnostic"
+        - type: "action"
+          provider_level: "A"
+          text: "Saline Lock"
+          kind: "procedure"
+        - type: "action"
+          text: "Glucometer"
+          kind: "diagnostic"
+        - type: "action"
+          provider_level: "I"
+          text: "Ketamine"
+          condition: "If Agitated"
+          kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
+        bullets:
+          - text: "Fever, Altered LOC"
+            link_id: "wvems-2026-016"
+          - text: "Diabetic, Overdose"
+            link_id: "wvems-2026-038"
+          - text: "Intubation, Vent"
+
+      dose_table:
+        - drug: "Ketamine"
+          dose: "20 mg"
+          route: "IV/IO"
+          frequency: "Q 5 min x2"
+          population: "adult"
+
+  - page_number: 27
+    blocks:
+
+    - type: "prose"
+      title: "Medical ROSC Imperatives"
+      highlight: true
+      markdown: |
+        - Ensure adequate resuscitation **before** attempting transport.
+          - Move expeditiously but with caution. **Don't sacrifice stability.**
+        - Monitor closely for **Hypotension**. Be ready with fluids & pressors.
+        - Avoid hyperventilation. It can cause **Hypotension** & repeat arrest.
+        - Monitor body temp and treat any **Fever** aggressively with meds.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Ketamine** (Ketalar®): Dilute in NS and **give slowly over 10 min**.
+          - Use **weight-based peds dosing** for adults under 110 lbs (50 kg).
+        - Consider maintenance drip if **prior VT/VF** & **transport > 30 min**:
+          - (I) **Amiodarone** (Pacerone®): 1 mg/min IV/IO, adult only.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **EtCO2** can help identify ROSC. Monitor during resuscitation.
+        - Consider **Intubation** and/or **Vent** if indicated and credentialed for CC.
+        - Therapeutic hypothermia is **not included** in this protocol.
+          - Also known as "targeted temperature management".
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Arrhythmias are common after ROSC, but are usually self-limited.
+        - Use **Peds Reference** or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape ROSC — https://www.medscape.com/viewarticle/762373 [Ver: 2012]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 20, 21
+
+        NEMSIS: 9914019

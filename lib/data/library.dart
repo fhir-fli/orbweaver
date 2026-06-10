@@ -3,14 +3,22 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:orbweaver/models/book.dart';
 import 'package:yaml/yaml.dart';
 
-/// The library is data, not code: each book is a manifest under
-/// `assets/books/<id>.yaml`, and `assets/books/index.yaml` lists the
-/// book ids in shelf order. Orbweaver is a renderer — it reads what to
-/// show from these files; nothing about the shelf is hardcoded.
+/// The library is data, not code. Each book is a self-contained **bundle
+/// folder** under `assets/books/<id>/`:
 ///
-/// A manifest is `{book: {id, title, subtitle, cover, spine_color,
-/// topics: [{id, title, subtitle, asset, tags}]}}`. Each topic's `asset`
-/// points at a self-contained topic YAML loaded on demand when opened.
+///   assets/books/<id>/book.yaml   metadata + ordered topic paths
+///   assets/books/<id>/cover.*     shelf cover
+///   assets/books/<id>/topics/     one self-contained topic YAML each
+///   assets/books/<id>/images/     bitmaps the topics reference
+///
+/// `assets/books/index.yaml` lists the book ids in shelf order. Paths in
+/// `book.yaml` (cover, topic files) are relative to the bundle folder, so
+/// a bundle is portable — zip it to share. Orbweaver is a renderer: it
+/// reads what to show from these files and hardcodes nothing.
+///
+/// The **topic** is the source of truth for its own row: the loader reads
+/// each topic's `title` / `list_subtitle` / `tags` frontmatter — the book
+/// manifest only orders and references them.
 Future<List<Book>> loadLibrary() async {
   final indexRaw = await rootBundle.loadString('assets/books/index.yaml');
   final index = loadYaml(indexRaw) as YamlMap;
@@ -18,35 +26,50 @@ Future<List<Book>> loadLibrary() async {
 
   final books = <Book>[];
   for (final id in ids) {
-    final raw = await rootBundle.loadString('assets/books/$id.yaml');
-    books.add(_bookFromYaml(loadYaml(raw) as YamlMap));
+    books.add(await _loadBook(id));
   }
   return books;
 }
 
-Book _bookFromYaml(YamlMap map) {
-  final b = map['book'] as YamlMap;
-  final rawTopics = b['topics'] as YamlList?;
-  final topics = <BookTopic>[
-    for (final t in rawTopics ?? const []) _topicFromYaml(t as YamlMap),
+Future<Book> _loadBook(String id) async {
+  final dir = 'assets/books/$id';
+  final raw = await rootBundle.loadString('$dir/book.yaml');
+  final b = (loadYaml(raw) as YamlMap)['book'] as YamlMap;
+
+  final cover = (b['cover'] as String?) ?? '';
+  final topicPaths = [
+    for (final p in b['topics'] as YamlList? ?? const []) p as String,
   ];
+
+  // Read each topic's frontmatter in parallel for its row metadata.
+  final topics = await Future.wait(
+    topicPaths.map((rel) => _loadTopicRow('$dir/$rel')),
+  );
+
   return Book(
     id: b['id'] as String,
     title: b['title'] as String,
-    subtitle: b['subtitle'] as String,
-    coverAsset: b['cover'] as String? ?? '',
+    subtitle: (b['subtitle'] as String?) ?? '',
+    coverAsset: cover.isEmpty ? '' : '$dir/$cover',
     spineColor: _color(b['spine_color'] as String),
     topics: topics,
   );
 }
 
-BookTopic _topicFromYaml(YamlMap t) => BookTopic(
-      id: t['id'] as String,
-      title: t['title'] as String,
-      subtitle: t['subtitle'] as String? ?? '',
-      asset: t['asset'] as String,
-      tags: [for (final tag in t['tags'] as YamlList? ?? const []) tag as String],
-    );
+/// Builds a [BookTopic] row from a topic file's own frontmatter — the
+/// topic is the single source of truth for its title/subtitle/tags.
+Future<BookTopic> _loadTopicRow(String assetPath) async {
+  final raw = await rootBundle.loadString(assetPath);
+  final t = (loadYaml(raw) as YamlMap)['topic'] as YamlMap;
+  final stem = assetPath.split('/').last.replaceAll('.yaml', '');
+  return BookTopic(
+    id: stem,
+    title: t['title'] as String,
+    subtitle: (t['list_subtitle'] as String?) ?? '',
+    asset: assetPath,
+    tags: [for (final tag in t['tags'] as YamlList? ?? const []) tag as String],
+  );
+}
 
 /// Parses a `"0xAARRGGBB"` (or `"#RRGGBB"`) spine color string.
 Color _color(String s) {

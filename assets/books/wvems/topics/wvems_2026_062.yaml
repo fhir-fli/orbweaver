@@ -1,0 +1,145 @@
+# ============================================================
+# WVEMS 2026 Protocol 62 — Head Injury
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# First protocol on the `differential` flowchart variant.
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-062"
+  version: "v260101"
+  title: "Head Injury"
+  list_subtitle: "2026-062 · Concussion / Face / Neck / Eye"
+  last_reviewed: "Oct 2025"
+  tags:
+    - "head injury"
+    - "concussion"
+    - "face"
+    - "neck"
+    - "eye"
+    - "nose"
+    - "trauma"
+  aliases:
+    - "Concussion"
+    - "Face / Neck Trauma"
+    - "Eye / Nose / Mouth Trauma"
+  category: "trauma"
+
+  pages:
+
+  - page_number: 62
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (differential variant — 2-col card grid)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "differential"
+
+      entry_chain:
+        - text: "Head, Face or Neck Trauma"
+          shape: "stadium"
+
+      decision:
+        text: "Location?"
+        shape: "diamond"
+
+      cards:
+        - title: "Skull Fx"
+          bullets:
+            - "Battle's Sign"
+            - "Avoid Pressure"
+        - title: "Mouth"
+          bullets:
+            - "Tx: Airway"
+            - "Be Careful w/ BIAD"
+        - title: "Scalp"
+          bullets:
+            - "Tx: Bleeding"
+            - "Consider Fracture"
+        - title: "Ears"
+          bullets:
+            - "Check for CSF"
+            - "Do Not Pack Ears"
+        - title: "Neck"
+          bullets:
+            - "Tx: Immobilization"
+            - "Chest Seal"
+        - title: "Nose"
+          bullets:
+            - "Tx: Epistaxis"
+            - "Do Not Reduce"
+        - title: "Eyes"
+          bullets:
+            - "Flush Any Chemical"
+            - "Shield Both for Inj."
+        - title: "Teeth"
+          bullets:
+            - "Place in Solution"
+            - "May Try to Replant"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Major Trauma"
+            link_id: "wvems-2026-056"
+          - text: "Altered LOC, Seizure"
+            link_id: "wvems-2026-042"
+          - text: "Elevated ICP"
+            link_id: "wvems-2026-086"
+
+  - page_number: 63
+    blocks:
+
+    - type: "prose"
+      title: "Head Injury Imperatives"
+      highlight: true
+      markdown: |
+        - Transport emergently if sudden changes in LOC.
+          - Consider **Elevated ICP** if indicated & credentialed for Crit Care.
+        - **Hypoxia** and **Hypotension** are associated with poor outcomes.
+          - Investigate and treat for Hypoxia and Hypotension aggressively.
+        - **Anticoagulation** meds (**blood thinners**) increase risk of ICH.
+        - **Lacerations** benefit from repair within the first few hours.
+        - **Mechanism** predicts severity.
+
+    - type: "prose"
+      title: "TRAUMA Alert"
+      callout: true
+      markdown: |
+        - If Major Intervention
+        - Or Major Mechanism
+        - Call a **TRAUMA** Alert
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Skull Fx**: May cause bruising behind ears or around both eyes.
+        - **Scalp**: Direct pressure for brisk bleeding (unless skull crepitus/fx).
+        - **Neck**: All penetrations should have a chest seal.
+        - **Eye**: Use copious saline or water to flush out any contamination.
+          - (E) **Tetracaine** (0.5% Ophthalmic): 1–2 gtt prior to flushing.
+          - Do not flush penetrating injury. Place **eye shield** over both eyes.
+        - **Mouth**: May remove **impaled objects** that compromise **Airway**.
+        - **Ear**: Check any discharge for CSF by dropping on white paper.
+          - A yellow / clear halo suggests CSF leak from skull fracture.
+        - **Nose**: Do not attempt to reduce. Treat for **Epistaxis**.
+        - **Teeth**: Transport avulsed teeth in Hank's solution or NS.
+          - Attempt replantation only in uncomplicated & isolated injury.
+        - **Concussion**: Usually does not require EMS intervention.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Do not attempt replantation for primary (baby) teeth.
+        - Use **Peds Reference** or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Medscape Head Injury — https://emedicine.medscape.com/article/1163653 [Ver: 12/24]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 33
+
+        NEMSIS: 9914041, 9914057, 9914099, 9914101, 9914205

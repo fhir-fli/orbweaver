@@ -7,7 +7,7 @@ import 'package:orbweaver/screens/topic_frame.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
 
 Topic _loadWvems() {
-  final yaml = File('assets/topics/wvems_2025_008.yaml').readAsStringSync();
+  final yaml = File('assets/books/wvems/topics/wvems_2025_008.yaml').readAsStringSync();
   return Topic.fromYamlString(yaml);
 }
 

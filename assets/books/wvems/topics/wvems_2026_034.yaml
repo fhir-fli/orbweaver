@@ -1,0 +1,136 @@
+# ============================================================
+# WVEMS 2026 Protocol 34 — Abdominal Pain
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# `differential` flowchart variant — Cause? → 2-col card grid.
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-034"
+  version: "v260101"
+  title: "Abdominal Pain"
+  list_subtitle: "2026-034 · GI / AAA / GI Bleed / OB-GYN"
+  last_reviewed: "Aug 2025"
+  tags:
+    - "abdominal pain"
+    - "stomach pain"
+    - "heartburn"
+    - "gerd"
+    - "acid reflux"
+    - "aaa"
+    - "gi bleed"
+    - "ectopic"
+  aliases:
+    - "Stomach Pain"
+    - "Heartburn"
+    - "GERD"
+    - "Acid Reflux"
+    - "Ectopic"
+  category: "medical"
+
+  pages:
+
+  - page_number: 34
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (differential variant — 2-col card grid)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "differential"
+
+      entry_chain:
+        - text: "Abdominal Discomfort"
+          shape: "stadium"
+
+      decision:
+        text: "Cause?"
+        shape: "diamond"
+
+      cards:
+        - title: "GI"
+          bullets:
+            - "SBO, Gallbladder"
+            - "Gastritis, Crohn's"
+        - title: "GERD"
+          bullets:
+            - "\"Burning\" Pain"
+            - "Consider Cardiac"
+        - title: "AAA"
+          bullets:
+            - "\"Pulsatile Mass\""
+            - "Monitor for Shock"
+        - title: "GI Bleed"
+          bullets:
+            - "Red or Black Vomit"
+            - "Monitor for Shock"
+        - title: "Trauma"
+          bullets:
+            - "Injury, Fall, MVC"
+            - "Tx: Trunk Injury"
+        - title: "Infection"
+          bullets:
+            - "Appendix, Colitis"
+            - "UTI, Pyelo, STI"
+        - title: "OB / GYN"
+          bullets:
+            - "Ectopic, Torsion"
+            - "Miscarriage, DUB"
+        - title: "GU"
+          bullets:
+            - "Kidney Stones"
+            - "Torsion, Phimosis"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Fever, Pain, Nausea"
+            link_id: "wvems-2026-020"
+          - text: "OD / Tox, Chest Pain"
+            link_id: "wvems-2026-040"
+
+      critical_care_link:
+        text: "Sepsis"
+        link_id: "wvems-2026-094"
+
+  - page_number: 35
+    blocks:
+
+    - type: "prose"
+      title: "Abdominal Pain Imperatives"
+      highlight: true
+      markdown: |
+        - This protocol is for **medical** causes of abdominal pain.
+          - For traumatic abdominal pain, refer to **Trunk Injury**.
+        - Prepare for **Hypotension** if any reported blood loss, or suspected:
+          - **AAA**: Midline "pulsatile mass" in the elderly
+          - **GI Bleeding**: Black stool (melena) or "coffee ground" emesis
+        - Inquire about **Pregnancy** and consider complications.
+          - Consider **ectopic** in any pregnant female, watch for **shock**.
+        - **Avoid oral** food and fluids. (Oral meds are OK.)
+          - Keep patients **NPO** (**Nil Per Os**: Lat. "nothing through the mouth")
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Consider an atypical **Cardiac** cause in diabetics and the elderly.
+        - Many common causes do not require specific EMS intervention.
+          - E.g. gastroenteritis, gallbladder, appendix, colitis, SBO, etc.
+          - Do consider treatment of the symptoms: **Fever**, **Pain**, **Nausea**
+        - Consider **Sepsis** if indicated and credentialed for Critical Care.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Simple constipation is a common cause in peds.
+          - It does not require aggressive EMS intervention.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Medscape Abd Pain — https://emedicine.medscape.com/article/776663 [Ver: 4/25]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 26
+
+        NEMSIS: 9914061

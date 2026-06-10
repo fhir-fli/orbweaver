@@ -1,0 +1,42 @@
+# ============================================================
+# ProtocolBook p.23 — Malaria: Complications & Co-infection
+# ============================================================
+
+topic:
+  id: "pb-malaria-complications"
+  title: "Malaria — Complications & Co-infection"
+  list_subtitle: "p.23 · AKI, anemia, Rx failure"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malaria", "complications", "co-infection", "tropical", "pediatric"]
+  category: "medical"
+  page_number: 23
+
+  blocks:
+
+    - type: "prose"
+      title: "Complications"
+      markdown: |-
+        a) **Coma:** maintain airway, place patient on side, exclude other causes (hypoglycemia, meningitis)
+        b) **Hyperpyrexia:** tepid sponging, paracetamol
+        c) **Convulsions:** see general convulsion treatment
+        d) **Acute kidney injury:**
+          i) Exclude pre-renal causes
+          ii) Check fluid balance
+          iii) If decreasing urinary output, add **Lasix 1 mg/kg/dose** every 6–12 h — **the most important part of treatment is to maintain a normal urinary output**
+        e) **Anemia:** if Hgb < 9, start on **iron + folic acid × 14 days** initially
+        f) **Treatment Failure:**
+          i) Consider other causes of illness / co-morbidity
+          ii) A child on PO antimalarials with signs of severe malaria → switch to **IV artesunate**
+          iii) If on PO antimalarials and still febrile with a **positive blood slide** after **72 h** → check compliance; if treatment failure, proceed to **second-line Rx**
+        g) **Delayed haemolysis:**
+          i) ~7 % of children with hyperparasitemia
+          ii) All children with severe malaria should have a **control CBC at 2 weeks** after discharge
+
+    - type: "prose"
+      title: "Co-infection"
+      markdown: |-
+        No good clinical or laboratory finding differentiates bacterial infection from malaria.  Children with current or recent malaria are at higher risk of invasive bacterial infections and have higher mortality rates.
+
+        a) **Pneumonia:** treat if concern for and meets WHO criteria for pneumonia
+        b) **Septicemia:** treat if concern for and meets **SIRS criteria**
+        c) **Meningitis:** treat if concern for and meets WHO criteria; **get LP before starting antibiotics**

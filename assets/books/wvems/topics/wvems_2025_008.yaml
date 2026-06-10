@@ -1,0 +1,184 @@
+# ============================================================
+# Topic Schema v0.2 (block-based)
+# Source: WVEMS 2025 Circulation / Shock (Protocol 8)
+# ============================================================
+
+topic:
+
+  id: "wvems-2025-008"
+  version: "v250218"
+  title: "Circulation / Shock"
+  list_subtitle: "2025-008 · severity flowchart"
+  last_reviewed: "2024-10"
+  tags: ["circulation", "shock", "hypotension", "fluid_bolus"]
+  aliases:
+    - "Hypotension"
+    - "Low BP"
+    - "Fluid Bolus"
+    - "Dirty Epi"
+  category: "universal"
+  page_number: 8
+
+  blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: |
+          Systolic Under:
+          • Adult (14+): 90 mmHg  or MAP 65 mmHg
+          • Child (1–13): 70 mmHg  or MAP 50 mmHg
+          • Infant (<1):  60 mmHg  or MAP 40 mmHg
+        shape: "stadium"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "mild"
+          label: "Mild"
+          criteria:
+            - "Adequate Perfusion"
+            - "No Symptoms"
+          actions:
+            - provider_level: "A"
+              text: "Saline Lock"
+              kind: "procedure"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+        - id: "moderate"
+          label: "Moderate"
+          criteria:
+            - "Adequate Perfusion"
+            - "Tachy or Dizzy"
+          actions:
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+        - id: "severe"
+          label: "Severe"
+          criteria:
+            - "Poor Perfusion"
+            - "Altered LOC"
+          actions:
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+            - provider_level: "I"
+              text: "Epi Drip"
+              kind: "medication_administration"
+            - provider_level: "I"
+              text: "Dopamine"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+      convergence:
+        text: "Consider"
+        shape: "rounded_rectangle"
+        bullets:
+          - text: "Tachycardia"
+            link_id: "wvems-2025-014"
+          - text: "Bradycardia"
+            link_id: "wvems-2025-012"
+          - text: "Bleeding"
+            link_id: "wvems-2025-058"
+          - text: "Altered LOC"
+            link_id: "wvems-2025-036"
+          - text: "Pressors"
+            link_id: "wvems-2025-082"
+          - text: "Blood"
+            link_id: "wvems-2025-084"
+
+      dose_table:
+        - drug: "NS Bolus"
+          dose: "500 mL"
+          route: "IV/IO"
+          frequency: "x4"
+          population: "adult"
+        - drug: "Epi Drip"
+          dose: "1 gtt/s"
+          route: "IV/IO"
+          frequency: "Titrated Drip"
+          population: "adult"
+        - drug: "Dopamine"
+          dose: "5 mcg/kg/min"
+          route: "IV/IO"
+          frequency: "Titrated Drip"
+          population: "adult"
+
+    # ────────────────────────────────────────────────
+    # Prose blocks (notes page)
+    # ────────────────────────────────────────────────
+
+    - type: "prose"
+      title: "Poor Perfusion"
+      highlight: true
+      markdown: |
+        Suspect if **several** of these:
+        - Altered Mental Status
+        - Skin Pale, Cool, Diaphoretic
+        - Tachycardia, Hypotension
+        - Dyspnea, Tachypnea
+
+    - type: "prose"
+      title: "Shock Imperatives"
+      markdown: |
+        Consider underlying causes:
+        - Bradycardia, Tachycardia
+        - Cardiac, Anaphylaxis
+        - Diabetic, Overdose / Tox
+        - Major Trauma, Exposure
+
+    - type: "prose"
+      title: "Medication"
+      markdown: |
+        **NS Bolus** (0.9% Saline): indicated for **poor perfusion**.
+        - Monitor for edema & rales before & after fluid administration.
+
+        **Epi Drip** (Epinephrine): Mix bag of **1 mcg/mL**:
+        - Add 1 mg Epi into 1,000 mL bag or 0.5 mg in 500 mL bag of NS
+        - Adults (14+ y/o): Use a macro drip (10 or 15 gtt/mL) set.
+        - Peds (0–13 y/o): Use a micro drip (60 gtt/mL) set.
+        - Start at 1 drop per second and **titrate as needed**.
+        - Avoid Epi if active chest pain and confirmed STEMI.
+
+        **Dopamine** (Intropin®): for medical causes refractory to Epi.
+        - **Use a micro drip** (60 gtt/mL) set. May titrate **up to 4x**.
+        - Average adults start around **1 drop every 5 sec** (micro set).
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        Use **balanced** resuscitation in Trauma. Pressors are a last resort.
+        Mean Arterial Pressure (**MAP**) is a better indicator when available.
+        - Consider Pressors or Blood if indicated and credentialed for CC.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        The majority of peds decompensation is airway related.
+        Fluids are important for hypotension. Pressors are a last resort.
+        Use Peds Reference or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — 2020
+        - PALS — 2020
+        - Medscape Vitals — 2/24
+        - Limmer D, O'Keefe MF. Emergency Care 14th Ed. Chapter 7, 29

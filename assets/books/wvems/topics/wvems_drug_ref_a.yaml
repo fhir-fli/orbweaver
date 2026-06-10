@@ -1,0 +1,66 @@
+# ============================================================
+# WVEMS 2025 Drug Reference — page 120 (section "A")
+# Third cross-book manual authoring test. Stresses:
+#   - Multiple DrugCardBlocks in one topic
+#   - Optional drug product image (WVEMS convention)
+#   - WVEMS "Use / Caution / Notes" section layout mapped to
+#     our canonical indications / doses / warnings / pearls fields
+# ============================================================
+
+topic:
+  id: "wvems-2025-drug-ref-a"
+  title: "Drug Reference: A"
+  list_subtitle: "p.120 · drug cards"
+  version: "v250218"
+  last_reviewed: "2024-10"
+  tags: ["drug_reference", "wvems"]
+  category: "universal"
+  page_number: 120
+
+  blocks:
+
+    # ─────────────── Afrin (Oxymetazoline) ───────────────
+    - type: "drug_card"
+      name: "Afrin®"
+      class: "Oxymetazoline — α-adrenergic agonist"
+      image: "assets/drug_images/afrin.png"
+      indications:
+        - "Nosebleeds (epistaxis)"
+      doses:
+        - population: "adult"
+          text: "1 spray IN"
+        - population: "peds"
+          text: "6 y/o and above only"
+      warnings:
+        - "PMH: CAD, HTN"
+        - "May cause headache, nose discomfort"
+        - "Pregnancy Category C: safety not established"
+      pearls:
+        - "Protocol: Epistaxis"
+        - "Onset: seconds · Duration: 6 hr"
+        - "reference.medscape.com/drug/343408"
+
+    # ─────────────── Albuterol (Ventolin) ───────────────
+    - type: "drug_card"
+      name: "Albuterol"
+      class: "Ventolin® — β-adrenergic agonist"
+      image: "assets/drug_images/albuterol.png"
+      indications:
+        - "Wheezing"
+        - "Hyperkalemia"
+      doses:
+        - population: "adult"
+          text: "2.5 mg Neb"
+        - population: "peds"
+          text: "0.15 mg/kg"
+      warnings:
+        - "PMH: antiretroviral therapy"
+        - "PMH: hypokalemia"
+        - "May cause tremor, anxiety"
+        - "May cause palpitation, tachycardia"
+        - "Pregnancy Category C: safety not established"
+      pearls:
+        - "Protocols: Dyspnea, Allergic Reaction"
+        - "Four (4×) nebs back-to-back for Hyperkalemia"
+        - "Onset: 30 min · Duration: 2 hr"
+        - "reference.medscape.com/drug/343426"

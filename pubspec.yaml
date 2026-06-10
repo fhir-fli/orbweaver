@@ -20,8 +20,18 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  # Each book is a self-contained bundle folder under assets/books/<id>/
+  # (book.yaml + cover + topics/ + images/). Flutter asset globs are
+  # non-recursive, so each bundle subdir that holds files is listed.
   assets:
-    - assets/topics/
-    - assets/images/
-    - assets/covers/
     - assets/books/
+    - assets/books/protocolbook/
+    - assets/books/protocolbook/topics/
+    - assets/books/protocolbook/images/
+    - assets/books/wvems/
+    - assets/books/wvems/topics/
+    - assets/books/who_imci/
+    - assets/books/who_imci/topics/
+    - assets/books/pocket_medicine/
+    - assets/books/demos/
+    - assets/books/demos/topics/

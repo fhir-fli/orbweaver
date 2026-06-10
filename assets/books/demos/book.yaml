@@ -1,0 +1,8 @@
+book:
+  id: "demos"
+  title: "Block Demos"
+  subtitle: "Schema smoke tests"
+  cover: ""
+  spine_color: "0xFF546E7A"
+  topics:
+    - "topics/demo_all_blocks.yaml"

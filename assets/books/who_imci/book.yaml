@@ -1,0 +1,8 @@
+book:
+  id: "who_imci"
+  title: "Hospital Care for Children"
+  subtitle: "WHO · IMCI 2nd ed."
+  cover: "cover.png"
+  spine_color: "0xFF1565C0"
+  topics:
+    - "topics/who_triage_chart2.yaml"

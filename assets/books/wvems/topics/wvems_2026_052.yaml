@@ -1,0 +1,183 @@
+# ============================================================
+# WVEMS 2026 Protocol 52 — Trauma CODE
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# `severity` variant — 3 prioritized job branches (trauma analog
+# of Medical CODE 024).
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-052"
+  version: "v260101"
+  title: "Trauma CODE"
+  list_subtitle: "2026-052 · Tourniquet / Pleural Decompress / Epi"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "trauma code"
+    - "traumatic arrest"
+    - "cpr"
+    - "tourniquet"
+    - "pleural decompression"
+    - "epinephrine"
+    - "amiodarone"
+  aliases:
+    - "Traumatic Arrest"
+  category: "trauma"
+
+  pages:
+
+  - page_number: 52
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 3 prioritized jobs)
+    #   entry → Assign Jobs → Compressions / Trauma Care / Medical Care
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: "No Pulse\nNo Mortal Injury\nNo DNR/POST"
+        shape: "stadium"
+
+      decision:
+        text: "Assign Jobs"
+        shape: "diamond"
+
+      branches:
+
+        - id: "first"
+          label: "1. Compressions"
+          criteria:
+            - "Most important"
+            - "Start Immediately"
+            - "Minimize Breaks"
+          actions:
+            - text: "Chest Compression"
+              kind: "procedure"
+
+        - id: "second"
+          label: "2. Trauma Care"
+          criteria:
+            - "Control Bleeding"
+            - "Treat Circulation"
+            - "Airway / Breathing"
+          actions:
+            - text: "Tourniquet"
+              kind: "procedure"
+            - provider_level: "I"
+              text: "Pleural Decompress"
+              kind: "procedure"
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+
+        - id: "third"
+          label: "3. Medical Care"
+          criteria:
+            - "Try Medical CODE"
+            - "Analyze Q 2 min"
+            - "Use IV or IO access"
+          actions:
+            - text: "Defib"
+              kind: "procedure"
+              condition: "If Advised"
+            - provider_level: "I"
+              text: "Epi"
+              kind: "medication_administration"
+            - provider_level: "I"
+              text: "Amio"
+              kind: "medication_administration"
+              condition: "If VT/VF"
+
+      convergence:
+        text: "Disposition"
+        shape: "stadium"
+        bullets:
+          - text: "Transport ASAP"
+
+      dose_table:
+        - drug: "NS Bolus"
+          dose: "500 mL"
+          route: "IV/IO"
+          frequency: "x4"
+          population: "adult"
+        - drug: "Epi"
+          dose: "1 mg"
+          route: "IV/IO"
+          frequency: "Q 5 min"
+          population: "adult"
+        - drug: "Amiodarone"
+          dose: "300 → 150 mg"
+          route: "IV/IO"
+          frequency: "Q 5 min x2"
+          population: "adult"
+
+  - page_number: 53
+    blocks:
+
+    - type: "prose"
+      title: "CODE Imperatives"
+      highlight: true
+      markdown: |
+        - Place **Tourniquets** if needed.
+          - Limiting blood loss is critical.
+        - Try bilateral **Pleural Decompression**.
+          - Hidden tension pneumothorax may cause traumatic arrest.
+        - This protocol applies to cardiac arrest caused by **severe trauma**.
+          - Refer to **Medical CODE** for arrest with only incidental injuries.
+        - Definitive treatment for traumatic arrest is the operating room.
+          - Prioritize compression, tourniquets and **transport ASAP**.
+
+    - type: "prose"
+      title: "Compressions"
+      markdown: |
+        - Adult/Peds: **120 /min**
+        - OPA/NPA: **30:2** w/ BVM
+        - BIAD/ETT: **Continuous**
+
+    - type: "prose"
+      title: "TRAUMA Alert"
+      callout: true
+      markdown: |
+        - If Any Trauma CPR
+        - Or Unstable Vitals
+        - Call a **TRAUMA** Alert
+
+    - type: "prose"
+      title: "Mortal Injuries"
+      markdown: |
+        - Decapitation or Exposed Brain
+        - Destruction of Trunk or Organs
+        - Burned Beyond Recognition
+        - Massive Blunt Force, Explosion
+        - Over 30 min Since Arrest
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **NS Bolus** (0.9% Saline): **Target SBP of 90** mmHg
+          - Use **balanced** resuscitation in hemorrhagic shock
+          - Target higher if any **head/spine** injury or **pregnancy**.
+        - **Amiodarone**: Adults give twice (x2) Q 5 min, 300 → 150 mg
+          - For peds, give 5 mg/kg three times (x3) Q 5 min
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Use caution with **compressions** and **defib** in a moving vehicle.
+        - **EtCo2** can help identify ROSC and guide termination decision.
+        - A well run CODE should operate like a **pit crew**. Focus on your job.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Use **Peds Reference** or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support/ [Ver: 11th]
+        - NAEMSP Mortal Injuries — https://doi.org/10.3109/10903127.2012.755586 [Ver: 1/13]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 29, 34

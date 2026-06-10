@@ -1,0 +1,152 @@
+# ============================================================
+# WVEMS 2026 Protocol 92 — Malignant HTN
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-092"
+  version: "v260101"
+  title: "Malignant HTN"
+  list_subtitle: "2026-092 · HTN Crisis / Preeclampsia"
+  last_reviewed: "Feb 2025"
+  tags:
+    - "malignant htn"
+    - "hypertensive crisis"
+    - "preeclampsia"
+    - "lopressor"
+    - "magnesium"
+    - "critical care"
+  aliases:
+    - "Preeclampsia"
+    - "HTN Urgency"
+    - "HTN Emergency"
+    - "HTN Crisis"
+  category: "critical_care"
+
+  pages:
+
+  - page_number: 92
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 2 branches)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      warnings:
+        - type: "caution"
+          text: "Use Caution if Patient Refusal"
+
+      entry_chain:
+        - text: "Systolic Over\nAdult (14+):  240 mmHg\nChild (1-13):  220 mmHg\nInfant (<1):  200 mmHg"
+          shape: "stadium"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "urgent"
+          label: "Urgent"
+          criteria:
+            - "Chest Pain, SOB"
+            - "Headache"
+          actions:
+            - text: "Treat as Hypertension"
+              kind: "referral"
+
+        - id: "emergent"
+          label: "Emergent"
+          criteria:
+            - "Altered LOC"
+            - "Organ Damage"
+          actions:
+            - provider_level: "P"
+              text: "Lopressor"
+              kind: "medication_administration"
+            - provider_level: "P"
+              text: "Magnesium"
+              condition: "If Pregnant"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Pain"
+            link_id: "wvems-2026-020"
+          - text: "Pregnancy"
+            link_id: "wvems-2026-048"
+          - text: "Seizure"
+            link_id: "wvems-2026-042"
+          - text: "Cardiac, SOB, Stroke"
+            link_id: "wvems-2026-044"
+
+      dose_table:
+        - drug: "Lopressor"
+          dose: "5 mg"
+          route: "IV/IO"
+          frequency: "Q 5 min x2"
+          population: "adult"
+        - drug: "Magnesium"
+          dose: "4 grams"
+          route: "IV/IO"
+          frequency: "over 10 min"
+          population: "adult"
+
+  - page_number: 93
+    blocks:
+
+    - type: "prose"
+      title: "Malignant HTN Mandatory Prerequisites"
+      highlight: true
+      markdown: |
+        - In the last 12 months: pass a critical-care in-service training.
+
+    - type: "prose"
+      title: "Imperatives"
+      markdown: |
+        - Inappropriate use of antihypertensives can **cause harm**.
+          - Consider & investigate for **underlying causes** of **Hypertension**.
+        - Focal neurologic deficits are more likely to be a **Stroke**.
+          - Lowering BP during a stroke can **cause harm**.
+        - Use antihypertensives **only if organ damage** from HTN is likely.
+          - Focus on underlying causes if organ damage is unlikely.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Lopressor®** (Metoprolol):
+          - Aim for **10–20% reduction** in systolic BP. Do not exceed **25%**.
+          - Contraindicated if SBP under 190 mmHg or pulse under 60 /min.
+          - Call **Medical Control** if SBP remains elevated after two doses.
+        - **Magnesium** (Sulfate): Only use for severe **preeclampsia**.
+          - Severe symptoms include: HTN, HA, confusion, dyspnea, edema.
+          - Consider providing for **seizure prophylaxis** if SBP > 160 mmHg.
+          - Monitor **deep tendon reflexes** for toxicity — d/c if reflexes lost.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Signs of **organ damage** from HTN may include:
+          - Obvious global weakness, paralysis, seizure, encephalopathy.
+          - Severe headache and vomiting, mental status changes.
+          - Vision **loss** or blurred (not simple flashes or double vision).
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Malignant HTN is unlikely in peds. Treat **underlying causes** of HTN.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Medscape Malignant HTN — https://emedicine.medscape.com/article/241640 [Ver: 8/24]
+        - Medscape Eclampsia — https://emedicine.medscape.com/article/253960 [Ver: 6/24]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 7, 13
+
+        NEMSIS: 9914123

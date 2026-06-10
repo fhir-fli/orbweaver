@@ -1,0 +1,139 @@
+# ============================================================
+# WVEMS 2026 Protocol 44 — Stroke
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# Uses the `linear` flowchart variant.
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-044"
+  version: "v260101"
+  title: "Stroke"
+  list_subtitle: "2026-044 · CVA / TIA / Cincinnati FAST"
+  last_reviewed: "Aug 2025"
+  tags:
+    - "stroke"
+    - "cva"
+    - "tia"
+    - "neurology"
+    - "medical"
+  aliases:
+    - "CVA"
+    - "TIA"
+    - "Mini Stroke"
+  category: "medical"
+
+  pages:
+
+  - page_number: 44
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (linear variant)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "linear"
+
+      entry_chain:
+        - text: "Acute Focal Neuro Deficits"
+          shape: "stadium"
+
+      steps:
+        - type: "action"
+          text: "Ask Time Last Normal"
+          kind: "assessment"
+        - type: "action"
+          text: "Do Stroke Survey"
+          kind: "assessment"
+        - type: "action"
+          text: "Elevate Head of Bed"
+          kind: "procedure"
+        - type: "action"
+          text: "Glucometer"
+          kind: "diagnostic"
+        - type: "action"
+          provider_level: "E"
+          text: "12-Lead"
+          kind: "diagnostic"
+        - type: "action"
+          provider_level: "A"
+          text: "Saline Lock"
+          kind: "procedure"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
+        bullets:
+          - text: "Breathing, Shock, Seizure"
+            link_id: "wvems-2026-042"
+          - text: "Altered LOC, Head Injury"
+
+  - page_number: 45
+    blocks:
+
+    - type: "prose"
+      title: "Stroke Imperatives"
+      highlight: true
+      markdown: |
+        - Treatment is time sensitive. Do not delay transport for procedures.
+        - **Time Last Normal** is not necessarily when symptoms started.
+          - If noticed upon waking up: last normal is when they went to bed.
+          - If altered LOC: last normal is when someone saw them normal.
+        - **Stroke Survey**: start with the **Cincinnati Stroke** FAST exam.
+          - Consider additional screening if able (Stroke VAN or NIHSS).
+        - **Elevate** head of bed approximately 30° (helps prevent aspiration).
+        - Attempt a **Saline Lock** only once. Leave other sites for ED staff.
+
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "Cincinnati Stroke"
+          callout: true
+          markdown: |
+            - **F**acial Droop?
+            - **A**rm Drift?
+            - **S**lurred Speech?
+            - **T**ime Last Normal?
+        - type: "prose"
+          title: "Stroke VAN"
+          callout: true
+          markdown: |
+            Must have **Arm Drift**.
+            - **V**ision: Partial / Total Loss?
+            - **A**phasia: Trouble Speaking?
+            - **N**eglect: Ignoring One Side?
+
+    - type: "prose"
+      title: "STROKE Alert"
+      callout: true
+      markdown: |
+        - If you suspect a CVA
+        - & Last Normal **< 6 h**
+        - Call a **STROKE** Alert
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Systemic thrombolysis (**tPA**, **TNK**) must occur within **3–6 hours**.
+          - Vascular neuro-intervention may be possible out to 24 hours.
+        - Encourage family or guardian to accompany patient.
+          - There are important decisions to be made quickly at the ED.
+          - Record phone number for family or guardian if possible.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Stroke is unlikely in peds. Consider other causes of **Altered LOC**.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - Medscape Stroke — https://emedicine.medscape.com/article/1916852 [Ver: 2/24]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 22
+
+        NEMSIS: 9914145

@@ -1,0 +1,157 @@
+# ============================================================
+# WVEMS 2026 Protocol 42 — Seizure
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-042"
+  version: "v260101"
+  title: "Seizure"
+  list_subtitle: "2026-042 · Versed / Keppra / Mag"
+  last_reviewed: "Aug 2025"
+  tags: ["seizure", "epilepsy", "convulsion", "versed", "midazolam", "keppra", "levetiracetam", "magnesium"]
+  aliases:
+    - "Epilepsy"
+    - "Eclampsia"
+    - "Febrile Seizure"
+    - "Withdrawal"
+  category: "medical"
+
+  pages:
+
+  - page_number: 42
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 2 branches)
+    # Demonstrates conditional medications via TopicAction.condition
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      warnings:
+        - type: "safety"
+          text: "Ensure Provider SAFETY"
+
+      entry:
+        text: "Convulsions or Posturing"
+        shape: "stadium"
+
+      decision:
+        text: "Active?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "not_seizing"
+          label: "Not Seizing"
+          criteria:
+            - "Recent Convulsion"
+            - "Postictal Confusion"
+          actions:
+            - text: "Glucometer"
+              kind: "diagnostic"
+            - provider_level: "A"
+              text: "Saline Lock"
+              kind: "procedure"
+
+        - id: "seizing"
+          label: "Seizing"
+          criteria:
+            - "Hx: Epilepsy"
+            - "Protect From Harm"
+          actions:
+            - provider_level: "A"
+              text: "Versed"
+              kind: "medication_administration"
+            - provider_level: "A"
+              text: "Keppra"
+              kind: "medication_administration"
+              condition: "If Refractory"
+            - provider_level: "I"
+              text: "Magnesium"
+              kind: "medication_administration"
+              condition: "If Pregnant"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Altered LOC, OD/Tox"
+          - text: "Fever, Head Trauma"
+          - text: "Preeclampsia"
+
+      dose_table:
+        - drug: "Versed"
+          dose: "2.5–5 mg"
+          route: "IV/IO, IM/IN"
+          frequency: "Q 2 min (max 10)"
+          population: "adult"
+        - drug: "Keppra"
+          dose: "3,000 mg"
+          route: "IV/IO"
+          frequency: "over 10 min"
+          population: "adult"
+        - drug: "Magnesium"
+          dose: "4 grams"
+          route: "IV/IO"
+          frequency: "x1"
+          population: "adult"
+
+  - page_number: 43
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Prose blocks (notes page)
+    # ────────────────────────────────────────────────
+
+    - type: "prose"
+      title: "Seizure Imperatives"
+      highlight: true
+      markdown: |
+        - Active convulsions with **Altered LOC** should be treated promptly.
+          - Meds are **contraindicated without active convulsions**.
+          - Aggressively treat seizures due to **alcohol or benzo withdrawal**.
+        - Shaking while awake and responsive is unlikely to be a seizure.
+          - Consider other causes such as **Behavioral** or **OD / Tox**.
+          - Non-epileptic pseudoseizures do not require EMS intervention.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Versed®** (Midazolam): only appropriate for active convulsions.
+          - Start lower if IV and/or smaller patient. Total dose: **10 mg max**.
+          - Use caution with IM — increased risk of provider injury.
+        - **Keppra®** (Levetiracetam): second line if seizures continue.
+          - Use weight-based peds dosing for adults under 110 lbs (50 kg).
+        - **Magnesium** (Sulfate): may cause **Hypotension** and **Dyspnea**.
+          - Only useful for seizures in late **Pregnancy** (20 weeks & over).
+          - Do **not** provide in early pregnancy. Eclampsia is unlikely.
+          - Consider **Preeclampsia** if indicated and credentialed for CC.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Obtain details of patient's seizure meds if immediately available.
+        - Seizures can come in groups — **be prepared to treat another seizure**.
+        - Confusion after seizure is common and may last over 30 min.
+          - Transient stroke-like paralysis is also possible but is **not a CVA**.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Peds under 5 y/o may have a seizure caused by **Fever**.
+          - It is usually self-limiting; consider meds if **>5 min** or multiple.
+          - Aggressively treat any peds seizure not associated with Fever.
+        - Use **Peds Reference** or other approved source for peds dosing.
+          - **A** Versed: max peds dose is **Q 2 min x4 doses**.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Medscape Seizure — https://emedicine.medscape.com/article/1184846 [Ver: 7/22]
+        - Limmer D, O'Keefe MF. Emergency Care 15th ed. Chapter 22.
+
+        NEMSIS: 9914141, 9914157

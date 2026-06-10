@@ -1,0 +1,151 @@
+# ============================================================
+# WVEMS 2026 Protocol 54 — Trauma ROSC
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# Uses the `linear` flowchart variant.
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-054"
+  version: "v260101"
+  title: "Trauma ROSC"
+  list_subtitle: "2026-054 · Return of Pulse / Post-Resuscitation"
+  last_reviewed: "Dec 2025"
+  tags:
+    - "rosc"
+    - "trauma"
+    - "post resuscitation"
+    - "ketamine"
+  aliases:
+    - "Return of Pulse"
+    - "Post-Resuscitation after Trauma"
+  category: "trauma"
+
+  pages:
+
+  - page_number: 54
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (linear variant)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "linear"
+
+      entry_chain:
+        - text: "Return of Pulse"
+          shape: "stadium"
+
+      steps:
+        - type: "content"
+          title: "Stabilize"
+          bullets:
+            - "Control Bleeding"
+            - "Treat Circulation"
+            - "Airway / Breathing"
+        - type: "action"
+          provider_level: "E"
+          text: "Emergent Transport"
+          kind: "referral"
+        - type: "action"
+          text: "Tourniquet"
+          kind: "procedure"
+        - type: "action"
+          provider_level: "I"
+          text: "Pleural Decompress"
+          kind: "procedure"
+        - type: "action"
+          provider_level: "E"
+          text: "12-Lead"
+          kind: "diagnostic"
+        - type: "action"
+          provider_level: "A"
+          text: "Saline Lock"
+          kind: "procedure"
+        - type: "action"
+          provider_level: "I"
+          text: "Ketamine"
+          condition: "If Agitated"
+          kind: "medication_administration"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        warnings:
+          - type: "caution"
+            text: "Consider Destination Triage"
+        bullets:
+          - text: "Bleeding"
+            link_id: "wvems-2026-058"
+          - text: "Shock"
+            link_id: "wvems-2025-008"
+          - text: "Medical ROSC"
+          - text: "Intubation, Vent"
+
+      dose_table:
+        - drug: "Ketamine"
+          dose: "20 mg"
+          route: "IV/IO"
+          frequency: "Q 5 min x2"
+          population: "adult"
+
+  - page_number: 55
+    blocks:
+
+    - type: "prose"
+      title: "Trauma ROSC Imperatives"
+      highlight: true
+      markdown: |
+        - Most important aspect is to prioritize emergent transport.
+          - **Get the patient to the hospital.**
+        - Reassess and repeat **Pleural Decompression** as needed.
+          - Repeat immediately if decompression after initial success.
+        - Reassess and apply additional **Tourniquets** as needed.
+          - Apply pressure and **pack wounds** for junctional bleeding.
+        - Consider a concurrent medical cause preceding the trauma.
+
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "TRAUMA Alert"
+          callout: true
+          markdown: |
+            - If Any Trauma CPR
+            - Or Unstable Vitals
+            - Call a **TRAUMA** Alert
+        - type: "prose"
+          title: "Poor Perfusion"
+          callout: true
+          markdown: |
+            Suspect if **several** of these:
+            - **Altered Mental Status**
+            - Skin Pale, Cool, Diaphoretic
+            - Tachycardia, Hypotension
+            - Dyspnea, Tachypnea
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Ketamine** (Ketalar®): Dilute in NS and **give slowly over 10 min**.
+          - Use **weight-based peds dosing** for adults under 110 lbs (50 kg).
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Keep **normothermic** (hypothermia causes coagulopathy & bleeding).
+        - Consider **Intubation** and/or **Vent** if indicated and credentialed for CC.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Use **Peds Reference** or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 29, 34
+
+        NEMSIS: 9914165

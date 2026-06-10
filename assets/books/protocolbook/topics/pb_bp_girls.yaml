@@ -1,0 +1,37 @@
+# ============================================================
+# ProtocolBook p.18 — Girls BP-for-Stature (1-17 years)
+#
+# SBP and DBP panels rendered as separate images — each fills the
+# phone width without sharing vertical space with its sibling, so
+# axis labels and zone names stay legible inline. Tap-to-zoom is
+# still available for fine detail.
+#
+# Zone boundaries from AAP 2017 clinical practice guideline:
+#   Normal   = SBP/DBP < 90th percentile
+#   Elevated = 90th-95th percentile (or 120-129/<80 mmHg)
+#   Stage 1  = >= 95th percentile (or 130/80-139/89 mmHg)
+#   Stage 2  = >= 95th + 12 mmHg (or >= 140/90 mmHg)
+# The "Hypotension" band is not AAP-defined; book uses its own
+# threshold for point-of-use triage.
+# ============================================================
+
+topic:
+  id: "pb-bp-girls"
+  title: "Girls — BP for Stature"
+  list_subtitle: "p.18 · tap-to-zoom chart"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pediatric", "blood_pressure", "girls", "reference"]
+  category: "universal"
+  page_number: 18
+
+  blocks:
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_bp_girls_sbp.png"
+      caption: "Girls — Systolic BP by Stature"
+      size: "full"
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_bp_girls_dbp.png"
+      caption: "Girls — Diastolic BP by Stature"
+      size: "full"

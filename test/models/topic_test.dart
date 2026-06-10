@@ -9,7 +9,7 @@ void main() {
 
     setUpAll(() {
       final yaml =
-          File('assets/topics/wvems_2025_008.yaml').readAsStringSync();
+          File('assets/books/wvems/topics/wvems_2025_008.yaml').readAsStringSync();
       topic = Topic.fromYamlString(yaml);
     });
 
@@ -116,7 +116,7 @@ void main() {
 
     setUpAll(() {
       final yaml =
-          File('assets/topics/demo_all_blocks.yaml').readAsStringSync();
+          File('assets/books/demos/topics/demo_all_blocks.yaml').readAsStringSync();
       topic = Topic.fromYamlString(yaml);
     });
 

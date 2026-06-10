@@ -1,0 +1,148 @@
+# ============================================================
+# WVEMS 2026 Protocol 38 — Diabetic
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-038"
+  version: "v260101"
+  title: "Diabetic"
+  list_subtitle: "2026-038 · Glucose / D10 / Glucagon"
+  last_reviewed: "Aug 2025"
+  tags: ["diabetic", "diabetes", "hypoglycemia", "hyperglycemia", "dka", "glucose", "d10", "glucagon"]
+  aliases:
+    - "Hypoglycemia"
+    - "Hyperglycemia"
+    - "Blood Sugar"
+    - "Glucose"
+    - "DKA"
+  category: "medical"
+
+  pages:
+
+  - page_number: 38
+    blocks:
+
+    - type: "flowchart"
+      variant: "severity"
+
+      warnings:
+        - type: "caution"
+          text: "Use Caution if Patient Refusal"
+
+      entry:
+        text: "Abnormal Blood Glucose"
+        shape: "stadium"
+
+      decision:
+        text: "Level?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "low"
+          label: "Low"
+          criteria:
+            - "Below 60 mg/dL"
+            - "Confusion"
+          actions:
+            - provider_level: "E"
+              text: "Oral Glucose"
+              kind: "medication_administration"
+            - provider_level: "A"
+              text: "D10"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "Glucagon"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+        - id: "high"
+          label: "High"
+          criteria:
+            - "Above 400 mg/dL"
+            - "Polyuria, Thirst"
+          actions:
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Altered LOC"
+          - text: "Seizure, OD / Tox"
+            link_id: "wvems-2026-042"
+
+      dose_table:
+        - drug: "Oral Glucose"
+          dose: "15 grams"
+          route: "PO"
+          frequency: "Q 5 min x3"
+          population: "adult"
+        - drug: "D10"
+          dose: "100 mL"
+          route: "IV/IO"
+          frequency: "Q 5 min x5"
+          population: "adult"
+        - drug: "Glucagon"
+          dose: "1 mg"
+          route: "IM"
+          frequency: "x1"
+          population: "adult"
+        - drug: "NS Bolus"
+          dose: "500 mL"
+          route: "IV/IO"
+          frequency: "x4"
+          population: "adult"
+
+  - page_number: 39
+    blocks:
+
+    - type: "prose"
+      title: "Diabetic Imperatives"
+      highlight: true
+      markdown: |
+        - EMS intervention is **not required** for mild asymptomatic patients.
+        - Consider a concurrent **Cardiac** emergency in the elderly.
+          - Many diabetic emergencies benefit from a **12-Lead** if able.
+        - Consider other causes of **Altered LOC** even with hypoglycemia.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Oral Glucose** (gel or sweetened liquid): only if airway is protected.
+        - **D10** (Dextrose 10%): titrate to mental status, not a fixed dose.
+          - **D50** is being phased out — D10 is gentler on veins.
+        - **Glucagon**: IM rescue if no IV access. Slow onset (~10 min).
+        - **NS Bolus**: backbone of DKA / hyperosmolar prehospital care.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Recheck glucose **5–10 min** after every intervention.
+        - Patients on insulin pumps: leave the pump alone unless directed otherwise.
+        - **DKA** patients may have fruity breath (acetone) and Kussmaul respirations.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - **Hypoglycemia** in peds is dangerous and underrecognized.
+          - Always check glucose in any peds with altered LOC or seizure.
+        - Use **Peds Reference** for weight-based dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - Medscape Hypoglycemia — https://emedicine.medscape.com/article/767359 [Ver: 9/24]
+        - Medscape DKA — https://emedicine.medscape.com/article/118361 [Ver: 7/24]
+
+        NEMSIS: 9914121, 9914125

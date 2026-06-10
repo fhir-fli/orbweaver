@@ -1,0 +1,149 @@
+# ============================================================
+# WVEMS 2026 Protocol 4 — Airway
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-004"
+  version: "v260101"
+  title: "Airway"
+  list_subtitle: "2026-004 · OPA / BIAD / Suction"
+  last_reviewed: "Dec 2025"
+  tags: ["airway", "choking", "biad", "opa", "npa", "suction", "intubation"]
+  aliases:
+    - "Ventilation"
+    - "Suction"
+    - "Oral/Nasal Airway"
+    - "BIAD"
+    - "Choking"
+  category: "universal"
+
+  pages:
+
+  - page_number: 4
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 3 branches)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: "Choking, Unstable or Unresponsive"
+        shape: "stadium"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "mild"
+          label: "Mild"
+          criteria:
+            - "Gagging, Coughing"
+            - "Awake & Choking"
+          actions:
+            - text: "Back Blows & Thrusts"
+              kind: "procedure"
+
+        - id: "moderate"
+          label: "Moderate"
+          criteria:
+            - "Altered LOC"
+            - "Hypoxia, Gasping"
+          actions:
+            - text: "Reposition Airway"
+              kind: "procedure"
+            - text: "Suction"
+              kind: "procedure"
+            - text: "NPA"
+              kind: "procedure"
+
+        - id: "severe"
+          label: "Severe"
+          criteria:
+            - "Unresponsive"
+            - "Apnea or Snoring"
+          actions:
+            - text: "OPA"
+              kind: "procedure"
+            - provider_level: "A"
+              text: "Magill Forceps"
+              kind: "procedure"
+            - provider_level: "E"
+              text: "BIAD"
+              kind: "procedure"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Breathing"
+            link_id: "wvems-2026-006"
+        exits:
+          - label: ""
+
+      post_convergence:
+        text: "Intubation"
+        shape: "stadium"
+
+  - page_number: 5
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Prose blocks (notes page)
+    # ────────────────────────────────────────────────
+
+    - type: "prose"
+      title: "Airway Imperatives"
+      markdown: |
+        - Maintain the simplest effective airway. **Escalate only if needed.**
+          - Consider **elevating the head** of cot to reduce aspiration risk.
+        - If **BIAD** fails, **try again with a different size.**
+          - Most common failure of a BIAD is inappropriate size.
+        - Use several techniques to confirm airway:
+          - Physical Exam: lung sounds, skin color, chest rise, etc.
+          - Vitals: rising SpO2, EtCO2, waveform capnography (gold standard)
+        - Be prepared to escalate airway if signs of **Poor Perfusion**.
+
+    - type: "prose"
+      title: "Poor Perfusion"
+      callout: true
+      markdown: |
+        Suspect if **several** of these:
+        - **Altered Mental Status**
+        - Skin Pale, Cool, Diaphoretic
+        - Tachycardia, Hypotension
+        - Dyspnea, Tachypnea
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Encourage coughing. Use **Back Blows & Abd. Thrusts** for choking.
+          - Use **Chest Thrusts** if pregnant or unable to encircle abdomen.
+        - Reposition airway with **Jaw Thrust** if any concern for spine injury.
+          - Use **Head Tilt / Chin Lift** if medical cause (or if Jaw Thrust fails).
+        - Use caution with **NPA** if any signs of skull fx. or facial trauma.
+        - Secure **BIAD** well. Use tape or manufactured holding device.
+          - May place c-collar (even without trauma) to help stabilize BIAD.
+          - **A** Consider placing an **OG-Tube** if BIAD will accommodate it.
+        - Consider **Intubation** if indicated and credentialed for Critical Care.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Be suspicious for an airway obstruction, especially with **stridor**.
+        - Use **Chest Thrusts** (instead of Abd. Thrusts) for infants (< 1 y/o).
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 9
+
+        NEMSIS: 9914011, 9914003, 9914005

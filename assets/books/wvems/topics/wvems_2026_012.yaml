@@ -1,0 +1,136 @@
+# ============================================================
+# WVEMS 2026 Protocol 12 — Bradycardia
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-012"
+  version: "v260101"
+  title: "Bradycardia"
+  list_subtitle: "2026-012 · Atropine / Pacing"
+  last_reviewed: "Dec 2025"
+  tags: ["bradycardia", "brady", "atropine", "pacing", "heart block"]
+  aliases:
+    - "Heart Block"
+    - "Junctional"
+    - "IVR"
+  category: "universal"
+
+  pages:
+
+  - page_number: 12
+    blocks:
+
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: "Pulse Under\nAdult (14+): 60 /min\nChild (1–13): 70 /min\nInfant (<1): 80 /min"
+        shape: "stadium"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "mild"
+          label: "Mild"
+          criteria:
+            - "Adequate Perfusion"
+            - "Minimal Symptoms"
+          actions:
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+            - provider_level: "A"
+              text: "Saline Lock"
+              kind: "procedure"
+
+        - id: "moderate"
+          label: "Moderate"
+          criteria:
+            - "Adequate Perfusion"
+            - "Chest Pain, Weak"
+          actions:
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+            - provider_level: "I"
+              text: "Atropine"
+              kind: "medication_administration"
+
+        - id: "severe"
+          label: "Severe"
+          criteria:
+            - "Poor Perfusion"
+            - "Unresponsive"
+          actions:
+            - provider_level: "I"
+              text: "Pacing"
+              kind: "procedure"
+            - provider_level: "I"
+              text: "Epi"
+              kind: "medication_administration"
+              condition: "Peds"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "Pain, Breathing, Hyper K+"
+          - text: "Shock, N/V, OD / Tox"
+
+      dose_table:
+        - drug: "Atropine"
+          dose: "1 mg"
+          route: "IV/IO"
+          frequency: "Q 5 min x3"
+          population: "adult"
+        - drug: "Epi"
+          dose: "Use Peds Reference"
+          route: "IV/IO"
+          frequency: "Q 5 min"
+          population: "peds"
+
+  - page_number: 13
+    blocks:
+
+    - type: "prose"
+      title: "Bradycardia Imperatives"
+      highlight: true
+      markdown: |
+        - Investigate & treat **underlying causes** like Hypothermia.
+          - Consider **Overdose** if appropriate (many meds cause brady).
+          - Slow, wide-complex bradycardia may be due to **Hyperkalemia**.
+        - **I** May try a pacer magnet to improve rate. **Do not** use on AICD.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **Atropine**: first-line for symptomatic, narrow-complex bradycardia.
+          - Less effective in heart-transplant patients (denervated heart).
+          - Doses smaller than 0.5 mg may paradoxically slow the heart.
+        - **Pacing** (transcutaneous): mechanical capture is the goal.
+          - Confirm electrical AND mechanical capture (palpate pulse).
+          - Sedate as tolerated for awake patients.
+        - **Epi** (Peds): infusion or repeat boluses for refractory bradycardia.
+
+    - type: "prose"
+      title: "Pediatrics"
+      highlight: true
+      markdown: |
+        - Bradycardia in peds is most often **hypoxia** — assist ventilations first.
+        - Use **PALS** rate thresholds and weight-based dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+
+        NEMSIS: 9914115
