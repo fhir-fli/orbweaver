@@ -1,0 +1,57 @@
+# ============================================================
+# WHO IMCI Chart 3 — How to manage a choking infant or child
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.7–8
+# Source figures (back slaps / chest thrusts / back blows /
+# Heimlich) not yet extracted — steps carried as text.
+# Clinical content pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-chart3-choking"
+  title: "Choking Infant or Child"
+  list_subtitle: "IMCI Chart 3 · back slaps / chest thrusts / Heimlich"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["choking", "airway", "foreign body", "heimlich", "back slaps", "imci", "pediatric"]
+  aliases:
+    - "Foreign Body Airway Obstruction"
+    - "Heimlich"
+  category: "medical"
+
+  pages:
+
+  - page_number: 7
+    blocks:
+
+    - type: "prose"
+      title: "Choking Infant (< 1 year of age)"
+      highlight: true
+      markdown: |
+        - Lay the infant on your arm or thigh in a **head-down position**.
+        - Give **five blows** to the middle of the infant's back with the
+          heel of the hand (**back slaps**).
+        - If obstruction persists, turn the infant over and give
+          **five chest thrusts** with two fingers on the lower half of
+          the sternum.
+        - If obstruction persists, check the infant's mouth for any
+          obstruction that can be removed.
+        - If necessary, repeat sequence with back slaps.
+
+  - page_number: 8
+    blocks:
+
+    - type: "prose"
+      title: "Choking Child (> 1 year of age)"
+      highlight: true
+      markdown: |
+        Administer back blows to clear airway obstruction in a choking child.
+
+        - Give **five blows** to the middle of the child's back with the
+          heel of the hand, with the child sitting, kneeling or lying.
+        - If the obstruction persists, go behind the child and pass your
+          arms around the child's body; form a fist with one hand
+          immediately **below the child's sternum**; place the other hand
+          over the fist and pull **upwards into the abdomen**; repeat this
+          **Heimlich manoeuvre** five times.
+        - If the obstruction persists, check the child's mouth for any
+          obstruction that can be removed.
+        - If necessary, repeat this sequence with back blows.
