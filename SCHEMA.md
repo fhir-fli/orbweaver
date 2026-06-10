@@ -1,6 +1,8 @@
 # Orbweaver Topic Schema — Authoring Reference
 
-Every page of the ProtocolBook is authored as a single YAML file under `assets/topics/` and added as an entry to `lib/screens/topic_list_screen.dart`. The schema is defined in `lib/models/topic.dart`; this file is the author-facing index.
+Every page is authored as a single self-contained YAML **topic** file under a book bundle's `topics/` folder, and referenced from that book's `book.yaml` (the **map**). The topic schema is defined in `lib/models/topic.dart` and the book/map model in `lib/models/book.dart`; this file is the author-facing index.
+
+This split is the **topic + map** model — the same architecture as DITA (an OASIS standard) and its lightweight, non-XML cousins (MkDocs `nav:`, Antora, Sphinx `toctree`): a *topic* is a titled unit of content that renders standalone in any context, and a *map* references topics and arranges them into a hierarchy. Orbweaver is **DITA-aligned, not DITA-conformant** — we express the model in YAML and keep our own block vocabulary (below), which is the documented *specialization* where no existing standard captures precise clinical layout. We deliberately do **not** use XML.
 
 ## Topic envelope
 
@@ -18,6 +20,57 @@ topic:
 ```
 
 Optional top-level fields: `version`, `aliases` (list of strings).
+
+## Book structure — the map (`book.yaml`)
+
+A book bundle lives at `assets/books/<id>/` and is portable (zip it to share):
+
+```
+assets/books/<id>/book.yaml      metadata + contents tree (the map)
+assets/books/<id>/cover.*        shelf cover
+assets/books/<id>/topics/*.yaml  one self-contained topic each (flat folder)
+assets/books/<id>/images/*.png   bitmaps topics reference
+```
+
+`assets/books/index.yaml` lists book ids in shelf order. `book.yaml` carries a
+**`contents:`** tree that references topic files and arranges them into
+chapters/sections:
+
+```yaml
+book:
+  id: "who_imci"
+  title: "Hospital Care for Children"
+  cover: "cover.png"
+  spine_color: "0xFF1565C0"        # 0xAARRGGBB | #RRGGBB
+  contents:
+    - topic: "topics/intro.yaml"   # a LEAF — a bare topic reference
+    - title: "6. Fever"            # a GROUP — a chapter/section
+      children:
+        - title: "6.2 Malaria"
+          topic: "topics/who_6_02_malaria.yaml"   # optional GROUP OVERVIEW page
+          children:
+            - topic: "topics/who_6_02_01_severe_malaria.yaml"
+            - topic: "topics/who_6_02_02_uncomplicated_malaria.yaml"
+```
+
+- A **leaf** is `{ topic: <path> }`.
+- A **group** has a `title:` (fold the outline number in, e.g. `"6.2 Malaria"`),
+  a list of `children:`, and an optional `topic:` — its own overview page
+  (a group may be both an openable page *and* a parent).
+- Paths are relative to the bundle dir. The topic file owns its row metadata
+  (`title` / `list_subtitle` / `tags`); the map only orders and references.
+- **Depth:** the model is recursive (any depth), but keep real content to ~3
+  levels (chapter → section → subsection) — the established TOC-readability
+  convention; the source book rarely goes deeper.
+- **File layout:** topics stay in one flat `topics/` folder with
+  outline-numbered names (e.g. `who_6_02_01_severe_malaria.yaml`); the tree
+  lives only in `book.yaml`. (Flutter asset globs are non-recursive, so nested
+  folders would each need a `pubspec.yaml` line — and a new bundle subdir still
+  does.)
+
+Rendering: a book with top-level groups drills down (chapter → accordion of
+sections/subsections); a flat book (only leaves) renders as a list; search
+flattens the whole tree.
 
 ## Block types
 
