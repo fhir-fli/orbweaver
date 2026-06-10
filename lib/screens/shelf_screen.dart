@@ -69,7 +69,7 @@ class _CoverCard extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
           ),
           Text(
-            '${book.topics.length} topics',
+            '${book.allTopics.length} topics',
             style: const TextStyle(fontSize: 11, color: Colors.black54),
           ),
         ],

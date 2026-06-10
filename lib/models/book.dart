@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 
 /// One source reference book on the shelf.
 ///
-/// Each [Book] owns a list of [BookTopic] entries. A topic is just the
-/// user-facing row metadata plus the YAML asset path that gets loaded by
-/// `TopicFrame` when the topic is opened.
+/// A [Book] owns a tree of [BookNode]s ([contents]) — the topic+map model
+/// (DITA topic/map; MkDocs `nav:`; Antora/Sphinx toctree), expressed in YAML.
+/// The book is a *map*: it references self-contained topic files and arranges
+/// them into a chapter → section → subsection hierarchy. A topic is just the
+/// user-facing row metadata plus the YAML asset path that `TopicFrame` loads
+/// when the topic is opened.
 class Book {
   const Book({
     required this.id,
@@ -12,7 +15,7 @@ class Book {
     required this.subtitle,
     required this.coverAsset,
     required this.spineColor,
-    required this.topics,
+    required this.contents,
   });
 
   final String id;
@@ -20,7 +23,61 @@ class Book {
   final String subtitle;
   final String coverAsset;
   final Color spineColor;
-  final List<BookTopic> topics;
+
+  /// Ordered top-level nodes (chapters or bare topics).
+  final List<BookNode> contents;
+
+  /// Every topic in the book, flattened depth-first (a group's own
+  /// `overview` page first, then its children). This is what search,
+  /// counts, `LibraryIndex`, last-state resolution, and cross-links use —
+  /// all of which key on a topic's logical id, so they are unaffected by
+  /// where the topic sits in the tree.
+  Iterable<BookTopic> get allTopics sync* {
+    yield* _walk(contents);
+  }
+
+  static Iterable<BookTopic> _walk(List<BookNode> nodes) sync* {
+    for (final node in nodes) {
+      switch (node) {
+        case BookLeaf(:final topic):
+          yield topic;
+        case BookGroup(:final overview, :final children):
+          if (overview != null) yield overview;
+          yield* _walk(children);
+      }
+    }
+  }
+}
+
+/// A node in a book's contents tree: either a [BookGroup] (a chapter or
+/// section that organizes children, optionally with its own overview page)
+/// or a [BookLeaf] (a reference to a single topic).
+sealed class BookNode {
+  const BookNode();
+}
+
+/// A chapter or section. Has a [title] (the outline number is folded in,
+/// e.g. `"6.2 Malaria"`), an optional [overview] page of its own, and a
+/// list of [children]. A group with an [overview] is both an openable page
+/// and a parent (the DITA rule: a topicref can carry content and nest
+/// children).
+class BookGroup extends BookNode {
+  const BookGroup({
+    required this.title,
+    required this.children,
+    this.overview,
+  });
+
+  final String title;
+  final BookTopic? overview;
+  final List<BookNode> children;
+}
+
+/// A leaf reference to a single topic.
+class BookLeaf extends BookNode {
+  const BookLeaf(this.topic);
+
+  final BookTopic topic;
 }
 
 class BookTopic {

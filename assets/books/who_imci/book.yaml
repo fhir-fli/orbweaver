@@ -4,9 +4,14 @@ book:
   subtitle: "WHO · IMCI 2nd ed."
   cover: "cover.png"
   spine_color: "0xFF1565C0"
-  topics:
-    - "topics/who_triage_chart2.yaml"
-    - "topics/who_chart3_choking.yaml"
-    - "topics/who_chart4_airway.yaml"
-    - "topics/who_chart5_oxygen.yaml"
-    - "topics/who_chart6_positioning.yaml"
+  # contents tree — chapters/sections of the WHO Pocket Book. The Chapter 1
+  # ETAT reference charts are the first group; clinical chapters are added
+  # as groups (with sections/subsections) as they are authored.
+  contents:
+    - title: "1. Triage and emergency conditions"
+      children:
+        - topic: "topics/who_triage_chart2.yaml"
+        - topic: "topics/who_chart3_choking.yaml"
+        - topic: "topics/who_chart4_airway.yaml"
+        - topic: "topics/who_chart5_oxygen.yaml"
+        - topic: "topics/who_chart6_positioning.yaml"

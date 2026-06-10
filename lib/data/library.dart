@@ -6,7 +6,7 @@ import 'package:yaml/yaml.dart';
 /// The library is data, not code. Each book is a self-contained **bundle
 /// folder** under `assets/books/<id>/`:
 ///
-///   assets/books/<id>/book.yaml   metadata + ordered topic paths
+///   assets/books/<id>/book.yaml   metadata + contents tree (topic+map)
 ///   assets/books/<id>/cover.*     shelf cover
 ///   assets/books/<id>/topics/     one self-contained topic YAML each
 ///   assets/books/<id>/images/     bitmaps the topics reference
@@ -15,6 +15,13 @@ import 'package:yaml/yaml.dart';
 /// `book.yaml` (cover, topic files) are relative to the bundle folder, so
 /// a bundle is portable — zip it to share. Orbweaver is a renderer: it
 /// reads what to show from these files and hardcodes nothing.
+///
+/// `book.yaml` carries a `contents:` tree (the *map*) that references topic
+/// files and arranges them into chapters/sections — the topic+map model
+/// (DITA; MkDocs `nav:`; Antora/Sphinx toctree). Each entry is either:
+///   - a leaf:  `{ topic: "topics/foo.yaml" }`
+///   - a group: `{ title: "1. Triage", children: [ ... ], topic: <opt overview> }`
+/// Groups nest arbitrarily; a group may carry its own `topic:` overview page.
 ///
 /// The **topic** is the source of truth for its own row: the loader reads
 /// each topic's `title` / `list_subtitle` / `tags` frontmatter — the book
@@ -37,14 +44,7 @@ Future<Book> _loadBook(String id) async {
   final b = (loadYaml(raw) as YamlMap)['book'] as YamlMap;
 
   final cover = (b['cover'] as String?) ?? '';
-  final topicPaths = [
-    for (final p in b['topics'] as YamlList? ?? const []) p as String,
-  ];
-
-  // Read each topic's frontmatter in parallel for its row metadata.
-  final topics = await Future.wait(
-    topicPaths.map((rel) => _loadTopicRow('$dir/$rel')),
-  );
+  final contents = await _parseNodes(b['contents'] as YamlList? ?? YamlList(), dir);
 
   return Book(
     id: b['id'] as String,
@@ -52,8 +52,35 @@ Future<Book> _loadBook(String id) async {
     subtitle: (b['subtitle'] as String?) ?? '',
     coverAsset: cover.isEmpty ? '' : '$dir/$cover',
     spineColor: _color(b['spine_color'] as String),
-    topics: topics,
+    contents: contents,
   );
+}
+
+/// Recursively parses a `contents:` list into a [BookNode] tree. An entry
+/// with a `topic:` path is a [BookLeaf]; an entry with a `title:` is a
+/// [BookGroup] (which may carry its own `topic:` overview and nested
+/// `children:`). Topic rows are read from each file's own frontmatter.
+Future<List<BookNode>> _parseNodes(YamlList raw, String dir) async {
+  final nodes = <BookNode>[];
+  for (final entry in raw) {
+    final map = entry as YamlMap;
+    final title = map['title'] as String?;
+    if (title == null) {
+      // Leaf: a bare topic reference.
+      final topic = await _loadTopicRow('$dir/${map['topic'] as String}');
+      nodes.add(BookLeaf(topic));
+    } else {
+      // Group: a chapter/section, optionally with its own overview page.
+      final overviewPath = map['topic'] as String?;
+      final overview = overviewPath == null
+          ? null
+          : await _loadTopicRow('$dir/$overviewPath');
+      final children =
+          await _parseNodes(map['children'] as YamlList? ?? YamlList(), dir);
+      nodes.add(BookGroup(title: title, overview: overview, children: children));
+    }
+  }
+  return nodes;
 }
 
 /// Builds a [BookTopic] row from a topic file's own frontmatter — the
@@ -84,7 +111,7 @@ class LibraryIndex {
   LibraryIndex(List<Book> books)
       : _byId = {
           for (final b in books)
-            for (final t in b.topics) t.id: TopicRef(b.id, t.asset),
+            for (final t in b.allTopics) t.id: TopicRef(b.id, t.asset),
         };
 
   final Map<String, TopicRef> _byId;
@@ -117,7 +144,7 @@ Book? findBook(List<Book> library, String id) {
 }
 
 BookTopic? findTopic(Book book, String topicId) {
-  for (final t in book.topics) {
+  for (final t in book.allTopics) {
     if (t.id == topicId) return t;
   }
   return null;
