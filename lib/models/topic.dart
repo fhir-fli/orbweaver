@@ -802,9 +802,13 @@ class CascadeFlowchart {
 /// [RowBlock] or [ColumnBlock] — it controls the share of available
 /// space this child receives.  Default 1 (equal share).
 sealed class Block {
-  const Block({this.flex = 1});
+  const Block({this.flex = 1, this.anchor});
 
   final int flex;
+
+  /// Optional anchor slug. A `topic:<id>#<anchor>` or same-topic
+  /// `#<anchor>` link scrolls the view to this block. Null = not a target.
+  final String? anchor;
 
   factory Block.fromYaml(Map<dynamic, dynamic> map) {
     final type = map['type'] as String?;
@@ -947,6 +951,7 @@ class ProseBlock extends Block {
     this.callout = false,
     this.boxed = false,
     super.flex,
+    super.anchor,
   });
 
   factory ProseBlock.fromYaml(Map<dynamic, dynamic> map) => ProseBlock(
@@ -956,6 +961,7 @@ class ProseBlock extends Block {
         callout: (map['callout'] as bool?) ?? false,
         boxed: (map['boxed'] as bool?) ?? false,
         flex: _flex(map),
+        anchor: map['anchor'] as String?,
       );
 
   final String? title;
@@ -982,26 +988,32 @@ class FlowchartBlock extends Block {
     this.cascade,
     this.linear,
     this.differential,
+    super.anchor,
   });
 
   factory FlowchartBlock.fromYaml(Map<dynamic, dynamic> map) {
     final variant = FlowchartVariant.fromString(map['variant'] as String?);
+    final anchor = map['anchor'] as String?;
     return switch (variant) {
       FlowchartVariant.severity => FlowchartBlock(
           variant: variant,
           severity: SeverityFlowchart.fromYaml(map),
+          anchor: anchor,
         ),
       FlowchartVariant.cascade => FlowchartBlock(
           variant: variant,
           cascade: CascadeFlowchart.fromYaml(map),
+          anchor: anchor,
         ),
       FlowchartVariant.linear => FlowchartBlock(
           variant: variant,
           linear: LinearFlowchart.fromYaml(map),
+          anchor: anchor,
         ),
       FlowchartVariant.differential => FlowchartBlock(
           variant: variant,
           differential: DifferentialFlowchart.fromYaml(map),
+          anchor: anchor,
         ),
     };
   }
@@ -1129,6 +1141,7 @@ class TableBlock extends Block {
     this.columnFlex = const [],
     this.layout = TableLayout.standard,
     super.flex,
+    super.anchor,
   });
 
   factory TableBlock.fromYaml(Map<dynamic, dynamic> map) => TableBlock(
@@ -1138,6 +1151,7 @@ class TableBlock extends Block {
         rows: _mapList(map['rows'], TopicTableRow.fromYaml),
         layout: TableLayout.fromString(map['layout'] as String?),
         flex: _flex(map),
+        anchor: map['anchor'] as String?,
       );
 
   final String? title;
@@ -1208,6 +1222,7 @@ class DrugCardBlock extends Block {
     this.warnings = const [],
     this.pearls = const [],
     this.imagePath,
+    super.anchor,
   });
 
   factory DrugCardBlock.fromYaml(Map<dynamic, dynamic> map) => DrugCardBlock(
@@ -1219,6 +1234,7 @@ class DrugCardBlock extends Block {
         warnings: _stringList(map['warnings']),
         pearls: _stringList(map['pearls']),
         imagePath: map['image'] as String?,
+        anchor: map['anchor'] as String?,
       );
 
   final String name;
@@ -1241,12 +1257,14 @@ class ImageBlock extends Block {
     required this.path,
     this.caption,
     this.size = ImageSize.medium,
+    super.anchor,
   });
 
   factory ImageBlock.fromYaml(Map<dynamic, dynamic> map) => ImageBlock(
         path: map['path'] as String,
         caption: map['caption'] as String?,
         size: ImageSize.fromString(map['size'] as String?),
+        anchor: map['anchor'] as String?,
       );
 
   final String path;

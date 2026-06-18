@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/anchor_scope.dart';
 import 'package:orbweaver/widgets/blocks/drug_card_block_view.dart';
 import 'package:orbweaver/widgets/blocks/image_block_view.dart';
 import 'package:orbweaver/widgets/blocks/prose_block_view.dart';
@@ -15,7 +16,7 @@ import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
 /// carrying the next page's printed page number. [pageKeys] is attached
 /// to each page's container so [TopicFrame] can measure page positions
 /// for the sticky page-number badge in the app bar.
-class TopicView extends StatelessWidget {
+class TopicView extends StatefulWidget {
   const TopicView({
     required this.topic,
     this.palette = const {},
@@ -36,51 +37,101 @@ class TopicView extends StatelessWidget {
   final List<GlobalKey> pageKeys;
 
   @override
+  State<TopicView> createState() => _TopicViewState();
+}
+
+class _TopicViewState extends State<TopicView> {
+  /// One stable GlobalKey per block that declares an `anchor:` slug, so a
+  /// `#<anchor>` link can scroll to it. Rebuilt only when the topic changes.
+  Map<String, GlobalKey> _anchorKeys = {};
+
+  @override
+  void initState() {
+    super.initState();
+    _buildAnchorKeys();
+  }
+
+  @override
+  void didUpdateWidget(TopicView oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.topic != widget.topic) _buildAnchorKeys();
+  }
+
+  void _buildAnchorKeys() {
+    _anchorKeys = {
+      for (final b in widget.topic.blocks)
+        if (b.anchor != null) b.anchor!: GlobalKey(),
+    };
+  }
+
+  void _scrollToAnchor(String slug) {
+    final ctx = _anchorKeys[slug]?.currentContext;
+    if (ctx != null) {
+      Scrollable.ensureVisible(
+        ctx,
+        duration: const Duration(milliseconds: 300),
+        alignment: 0.05,
+        curve: Curves.easeInOut,
+      );
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final resolved = palette.isNotEmpty
-        ? palette
+    final topic = widget.topic;
+    final resolved = widget.palette.isNotEmpty
+        ? widget.palette
         : resolvePalette([
             {
               for (final e in topic.ownPaletteArgb.entries) e.key: Color(e.value),
             },
           ]);
     final theme = TopicTheme(resolved);
-    return TopicThemeScope(
-      theme: theme,
-      child: ColoredBox(
-      color: Colors.white,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(12, 4, 12, 4),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            for (var i = 0; i < topic.pages.length; i++)
-              KeyedSubtree(
-                key: i < pageKeys.length ? pageKeys[i] : null,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    // Divider is inside page i's keyed subtree (for i > 0)
-                    // so the key's top == divider top. The header badge
-                    // flips to page i as soon as the divider reaches the
-                    // viewport top.
-                    if (i > 0)
-                      _PageBreak(pageNumber: topic.pages[i].pageNumber),
-                    for (var j = 0; j < topic.pages[i].blocks.length; j++) ...[
-                      if (j > 0) const SizedBox(height: 16),
-                      _BlockRenderer(
-                        block: topic.pages[i].blocks[j],
-                        theme: theme,
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-          ],
+    return AnchorScope(
+      scrollTo: _scrollToAnchor,
+      child: TopicThemeScope(
+        theme: theme,
+        child: ColoredBox(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(12, 4, 12, 4),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                for (var i = 0; i < topic.pages.length; i++)
+                  KeyedSubtree(
+                    key: i < widget.pageKeys.length ? widget.pageKeys[i] : null,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        // Divider is inside page i's keyed subtree (for i > 0)
+                        // so the key's top == divider top. The header badge
+                        // flips to page i as soon as the divider reaches the
+                        // viewport top.
+                        if (i > 0)
+                          _PageBreak(pageNumber: topic.pages[i].pageNumber),
+                        for (var j = 0;
+                            j < topic.pages[i].blocks.length;
+                            j++) ...[
+                          if (j > 0) const SizedBox(height: 16),
+                          _anchored(topic.pages[i].blocks[j], theme),
+                        ],
+                      ],
+                    ),
+                  ),
+              ],
+            ),
+          ),
         ),
       ),
-      ),
     );
+  }
+
+  /// Wraps a block in its anchor KeyedSubtree when it declares an `anchor:`.
+  Widget _anchored(Block block, TopicTheme theme) {
+    final renderer = _BlockRenderer(block: block, theme: theme);
+    final key = block.anchor == null ? null : _anchorKeys[block.anchor];
+    return key == null ? renderer : KeyedSubtree(key: key, child: renderer);
   }
 }
 

@@ -51,8 +51,9 @@ topic:
       markdown: |
         Rapid fluid boluses **increase mortality** in children with severe
         febrile illness (FEAST trial). **Do NOT give a bolus** to a child
-        in **compensated shock (no hypotension)** where intensive care is
-        not available — give **maintenance fluids** and reassess.
+        in **compensated shock** ([no hypotension](#hypotension)) where
+        intensive care is not available — give **maintenance fluids** and
+        reassess.
 
     - type: "prose"
       title: "First steps"
@@ -66,6 +67,7 @@ topic:
 
     - type: "prose"
       title: "What counts as hypotension?"
+      anchor: "hypotension"
       markdown: |
         Systolic BP below (age-specific):
         - **< 1 month:** < 60 mmHg

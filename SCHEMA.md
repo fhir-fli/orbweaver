@@ -121,7 +121,20 @@ protocols keep their blue/green/orange/purple identity.
     **Bold** works. `- ` at line start makes a bullet.
     Numbered lists (`1.`) render as plain text — MiniMarkdown doesn't
     handle them specially yet.
+
+    Inline links: [display](topic:who-imci-chart7-iv-fluids-shock)
+    jumps to another topic (by logical id, cross-book); [text](#slug)
+    jumps to a block in this topic with anchor: slug; [text](https://…)
+    opens externally. See docs/links_and_citations.md.
 ```
+
+**Inline links & anchors** (any markdown field — prose, table cells):
+`[text](target)` where target is `topic:<id>` (cross-topic, by logical
+`id`, works across books), `topic:<id>#<slug>`, `#<slug>` (same topic), or
+an external URL. **Any block** may declare `anchor: "<slug>"` to be a link
+target. Unresolved `topic:` ids render inert (graceful). Same-topic
+`#<slug>` scrolls; cross-topic `#<slug>` scroll is not wired yet (opens the
+topic at the top).
 
 ### `table` — columns + rows with optional severity tinting
 

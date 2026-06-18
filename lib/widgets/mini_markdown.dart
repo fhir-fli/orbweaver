@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library_scope.dart';
+import 'package:orbweaver/widgets/anchor_scope.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Renders a minimal subset of markdown as a vertical [Column]:
@@ -72,7 +73,7 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
       final id = target.substring(6).split('#').first; // anchor TODO
       openLinkedTopic(context, id);
     } else if (target.startsWith('#')) {
-      // Same-topic anchor — scroll system not wired yet; inert for now.
+      AnchorScope.of(context)?.scrollTo(target.substring(1));
     } else {
       final uri = Uri.tryParse(target);
       if (uri != null) {

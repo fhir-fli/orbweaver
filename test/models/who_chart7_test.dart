@@ -45,5 +45,12 @@ void main() {
     final last = blocks.last;
     expect(last, isA<ProseBlock>());
     expect((last as ProseBlock).callout, isTrue);
+
+    // The hypotension-definition block carries an anchor that the FEAST
+    // callout's "[no hypotension](#hypotension)" link targets.
+    expect(
+      blocks.any((b) => b.anchor == 'hypotension'),
+      isTrue,
+    );
   });
 }

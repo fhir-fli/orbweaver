@@ -1,6 +1,11 @@
 # Design: links, anchors & citations
 
-Status: **design — not yet implemented.** Settled 2026-06-18. Principle:
+Status: **Links + anchors IMPLEMENTED (2026-06-18); citations not yet built.**
+Implemented: inline `[text](target)` in MiniMarkdown — `topic:<id>` cross-
+topic nav (reuses `LibraryIndex`/`openLinkedTopic`), external URLs via
+`url_launcher`, same-topic `#<anchor>` scroll (`anchor:` field on any block +
+`AnchorScope`). Not yet: cross-topic `#anchor` scroll (opens topic top), and
+all of §2 Citations. Settled 2026-06-18. Principle:
 use established markup conventions, invent nothing. (There is no
 YAML-native link standard — links live inside the markdown string values,
 so these are the established *markup* conventions applied inside our fields.)
