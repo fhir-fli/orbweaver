@@ -29,6 +29,24 @@ void main() {
     expect(find.textContaining('**', findRichText: true), findsNothing);
   });
 
+  testWidgets('inline link renders display text, not the raw syntax',
+      (tester) async {
+    await tester.pumpWidget(
+      _wrap('see [Chart 7](topic:who-imci-chart7-iv-fluids-shock) for fluids'),
+    );
+    expect(find.textContaining('see Chart 7 for fluids', findRichText: true),
+        findsOneWidget);
+    // The bracket/paren syntax must not leak through as literal text.
+    expect(find.textContaining('](topic:', findRichText: true), findsNothing);
+  });
+
+  testWidgets('external link renders its display text', (tester) async {
+    await tester.pumpWidget(_wrap('[FEAST trial](https://example.org/feast)'));
+    expect(find.textContaining('FEAST trial', findRichText: true),
+        findsOneWidget);
+    expect(find.textContaining('https://', findRichText: true), findsNothing);
+  });
+
   testWidgets('a blank line keeps two paragraphs separate', (tester) async {
     await tester.pumpWidget(_wrap('first para\n\nsecond para'));
     expect(find.textContaining('first para', findRichText: true),

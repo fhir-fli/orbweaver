@@ -72,4 +72,5 @@ topic:
       markdown: |
         - The complete **ABCD** flow — including **coma / convulsions**
           and **severe dehydration** — is laid out in the
-          **Triage of all sick children** chart (p.5).
+          [Triage of all sick children](topic:who-imci-chart2-triage)
+          chart (p.5).

@@ -1,7 +1,16 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:orbweaver/data/library_scope.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 /// Renders a minimal subset of markdown as a vertical [Column]:
 ///   - `**bold**` inline emphasis
+///   - `[text](target)` inline links (CommonMark). Targets:
+///       `topic:<id>`  → open another topic (cross-book, by logical id)
+///       `https://…`, `mailto:…` → open externally
+///       `#<anchor>` / `topic:<id>#<anchor>` → anchor scroll (TODO: the
+///        anchor scroll system isn't wired yet; for now a `topic:…#…` link
+///        opens the topic at the top and a bare `#…` is inert)
 ///   - `- ` bullet lines (two-space indent per nesting level)
 ///   - blank lines become paragraph gaps
 ///
@@ -9,19 +18,17 @@ import 'package:flutter/material.dart';
 /// blank line or a new `- ` bullet starts a new unit, so a long bullet or
 /// paragraph wrapped across several YAML lines flows and wraps to the
 /// container width instead of breaking at each source newline. (This also
-/// means a `**bold**` span may straddle a YAML line wrap safely.)
+/// means a `**bold**` span or a `[link](…)` may straddle a YAML line wrap.)
 ///
-/// Used by both `ProseBlockView` and `MarkdownCell` inside tables.
-/// Kept deliberately minimal — full GFM (links, headings, nested lists
-/// deeper than one level, tables inside prose) is deferred until a topic
-/// needs it.
-class MiniMarkdown extends StatelessWidget {
+/// Stateful so the per-link [TapGestureRecognizer]s can be disposed.
+class MiniMarkdown extends StatefulWidget {
   const MiniMarkdown({
     required this.markdown,
     this.fontSize = 14,
     this.height = 1.4,
     this.color,
     this.bulletColor,
+    this.linkColor,
     super.key,
   });
 
@@ -34,12 +41,57 @@ class MiniMarkdown extends StatelessWidget {
   /// null. Set to the topic accent so list markers carry the book's color.
   final Color? bulletColor;
 
+  /// Color of inline link text (always underlined). Defaults to
+  /// [bulletColor] (the accent), else the text color.
+  final Color? linkColor;
+
+  @override
+  State<MiniMarkdown> createState() => _MiniMarkdownState();
+}
+
+class _MiniMarkdownState extends State<MiniMarkdown> {
+  /// Tap recognizers for the links built this frame — disposed and rebuilt
+  /// on each build.
+  final List<TapGestureRecognizer> _recognizers = [];
+
+  @override
+  void dispose() {
+    _disposeRecognizers();
+    super.dispose();
+  }
+
+  void _disposeRecognizers() {
+    for (final r in _recognizers) {
+      r.dispose();
+    }
+    _recognizers.clear();
+  }
+
+  void _onLinkTap(String target) {
+    if (target.startsWith('topic:')) {
+      final id = target.substring(6).split('#').first; // anchor TODO
+      openLinkedTopic(context, id);
+    } else if (target.startsWith('#')) {
+      // Same-topic anchor — scroll system not wired yet; inert for now.
+    } else {
+      final uri = Uri.tryParse(target);
+      if (uri != null) {
+        launchUrl(uri, mode: LaunchMode.externalApplication);
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    _disposeRecognizers();
+
     // Strip trailing blank lines — YAML `|` block scalars always leave a
     // terminal newline, which otherwise renders as unwanted bottom
     // whitespace inside callouts.
-    final rawLines = markdown.trimRight().split('\n');
+    final rawLines = widget.markdown.trimRight().split('\n');
+    final color = widget.color ?? Colors.black87;
+    final bulletColor = widget.bulletColor ?? color;
+    final linkColor = widget.linkColor ?? widget.bulletColor ?? color;
 
     final children = <Widget>[];
     _Unit? current;
@@ -49,10 +101,11 @@ class MiniMarkdown extends StatelessWidget {
         children.add(
           _UnitLine(
             unit: current!,
-            fontSize: fontSize,
-            height: height,
-            color: color ?? Colors.black87,
-            bulletColor: bulletColor ?? color ?? Colors.black87,
+            fontSize: widget.fontSize,
+            height: widget.height,
+            color: color,
+            bulletColor: bulletColor,
+            spans: _parseInline(current!.text, linkColor),
           ),
         );
         current = null;
@@ -63,12 +116,11 @@ class MiniMarkdown extends StatelessWidget {
       final trimmed = raw.trim();
       if (trimmed.isEmpty) {
         flush();
-        children.add(SizedBox(height: fontSize * 0.5));
+        children.add(SizedBox(height: widget.fontSize * 0.5));
         continue;
       }
       final leading = raw.length - raw.trimLeft().length;
       if (trimmed.startsWith('- ')) {
-        // A new bullet at this indent level starts a new unit.
         flush();
         current = _Unit(
           level: leading ~/ 2,
@@ -76,10 +128,8 @@ class MiniMarkdown extends StatelessWidget {
           text: trimmed.substring(2),
         );
       } else if (current != null) {
-        // Continuation of the current bullet/paragraph — join with a space.
         current = current!.append(trimmed);
       } else {
-        // Start of a plain paragraph.
         current = _Unit(level: leading ~/ 2, isBullet: false, text: trimmed);
       }
     }
@@ -89,6 +139,48 @@ class MiniMarkdown extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: children,
     );
+  }
+
+  /// Parses `**bold**` and `[text](target)` in one pass, emitting plain
+  /// runs between. Escaped asterisks (`\*`) are protected via a sentinel.
+  List<InlineSpan> _parseInline(String text, Color linkColor) {
+    const sentinel = '';
+    final stashed = text.replaceAll(r'\*', sentinel);
+    String restore(String s) => s.replaceAll(sentinel, '*');
+
+    final spans = <InlineSpan>[];
+    final re = RegExp(r'\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*');
+    var last = 0;
+    for (final m in re.allMatches(stashed)) {
+      if (m.start > last) {
+        spans.add(TextSpan(text: restore(stashed.substring(last, m.start))));
+      }
+      if (m.group(2) != null) {
+        // Link: group(1) = display text, group(2) = target.
+        final target = restore(m.group(2)!);
+        final recognizer = TapGestureRecognizer()..onTap = () => _onLinkTap(target);
+        _recognizers.add(recognizer);
+        spans.add(TextSpan(
+          text: restore(m.group(1)!),
+          style: TextStyle(
+            color: linkColor,
+            decoration: TextDecoration.underline,
+          ),
+          recognizer: recognizer,
+        ));
+      } else {
+        // Bold: group(3).
+        spans.add(TextSpan(
+          text: restore(m.group(3)!),
+          style: const TextStyle(fontWeight: FontWeight.w700),
+        ));
+      }
+      last = m.end;
+    }
+    if (last < stashed.length) {
+      spans.add(TextSpan(text: restore(stashed.substring(last))));
+    }
+    return spans;
   }
 }
 
@@ -109,6 +201,8 @@ class _Unit {
       _Unit(level: level, isBullet: isBullet, text: '$text $more');
 }
 
+/// Layout for one unit: a bullet (square glyph + hanging-indent body) or a
+/// paragraph. The inline [spans] are pre-parsed by the parent.
 class _UnitLine extends StatelessWidget {
   const _UnitLine({
     required this.unit,
@@ -116,6 +210,7 @@ class _UnitLine extends StatelessWidget {
     required this.height,
     required this.color,
     required this.bulletColor,
+    required this.spans,
   });
 
   final _Unit unit;
@@ -123,12 +218,13 @@ class _UnitLine extends StatelessWidget {
   final double height;
   final Color color;
   final Color bulletColor;
+  final List<InlineSpan> spans;
 
   @override
   Widget build(BuildContext context) {
     final indent = unit.level * (fontSize * 0.9);
     final textStyle = TextStyle(fontSize: fontSize, height: height, color: color);
-    final text = RichText(text: TextSpan(style: textStyle, children: _parseBold(unit.text)));
+    final text = RichText(text: TextSpan(style: textStyle, children: spans));
 
     if (!unit.isBullet) {
       return Padding(
@@ -137,8 +233,6 @@ class _UnitLine extends StatelessWidget {
       );
     }
 
-    // Bullet: square glyph + hanging-indent body so wrapped lines align
-    // under the text, not under the marker.
     return Padding(
       padding: EdgeInsets.only(left: indent, bottom: 3),
       child: Row(
@@ -160,36 +254,5 @@ class _UnitLine extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  List<InlineSpan> _parseBold(String text) {
-    // Stash escaped asterisks (`\*`) behind a sentinel so they don't
-    // participate in bold parsing, then restore as literal `*` in the
-    // emitted spans.
-    const sentinel = '';
-    final stashed = text.replaceAll(r'\*', sentinel);
-    final spans = <InlineSpan>[];
-    final re = RegExp(r'\*\*(.+?)\*\*');
-    var lastEnd = 0;
-    for (final m in re.allMatches(stashed)) {
-      if (m.start > lastEnd) {
-        spans.add(TextSpan(
-          text: stashed.substring(lastEnd, m.start).replaceAll(sentinel, '*'),
-        ));
-      }
-      spans.add(
-        TextSpan(
-          text: m.group(1)!.replaceAll(sentinel, '*'),
-          style: const TextStyle(fontWeight: FontWeight.w700),
-        ),
-      );
-      lastEnd = m.end;
-    }
-    if (lastEnd < stashed.length) {
-      spans.add(TextSpan(
-        text: stashed.substring(lastEnd).replaceAll(sentinel, '*'),
-      ));
-    }
-    return spans;
   }
 }
