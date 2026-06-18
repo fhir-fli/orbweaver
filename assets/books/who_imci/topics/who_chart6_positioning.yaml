@@ -29,7 +29,7 @@ topic:
   id: "who-imci-chart6-positioning"
   title: "Positioning an Unconscious Child"
   list_subtitle: "IMCI Chart 6 · spinal motion restriction / recovery position"
-  last_reviewed: "OpenEvidence review 2026-06-10 · ACS/NAEMSP SMR + 2024 AHA First Aid"
+  last_reviewed: "OpenEvidence review 2026-06-18 · ACS/NAEMSP SMR + 2024 AHA First Aid + WMS 2024"
   tags: ["unconscious", "positioning", "recovery position", "neck trauma", "cervical spine", "imci", "pediatric"]
   aliases:
     - "Recovery Position"
@@ -68,6 +68,8 @@ topic:
         - A child's **large occiput** forces the neck into **flexion**
           on a flat board. **Pad under the torso** (not the head) for
           neutral alignment, especially **under ~8 years**.
+        - **Cervical collars fit poorly in young children** — prefer
+          **manual in-line stabilization** if someone is available.
 
     - type: "prose"
       title: "If neck trauma is not suspected"

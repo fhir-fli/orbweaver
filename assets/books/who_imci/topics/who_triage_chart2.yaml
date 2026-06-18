@@ -21,7 +21,7 @@ topic:
   id: "who-imci-chart2-triage"
   title: "Triage of All Sick Children"
   list_subtitle: "IMCI Chart 2 · severity table"
-  last_reviewed: "OpenEvidence review 2026-06-09 · WHO PB 2nd ed (2013)"
+  last_reviewed: "OpenEvidence review 2026-06-18 · WHO PB 2013; fluid rate → Chart 7 (FEAST)"
   tags: ["triage", "imci", "pediatric", "emergency", "etat"]
   category: "medical"
 
@@ -84,7 +84,7 @@ topic:
               - Make sure the child is warm
 
               **If no severe malnutrition:**
-              - Insert an IV line and begin giving fluids rapidly (Chart 7)
+              - Insert an IV line and begin giving fluids — rate per **Chart 7** (hemodynamic-status dependent, post-FEAST)
               - If peripheral IV cannot be inserted, insert an intraosseous or external jugular line (see pp. 340, 342)
 
               **If severe malnutrition:**

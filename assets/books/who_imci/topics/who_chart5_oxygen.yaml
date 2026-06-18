@@ -27,7 +27,7 @@ topic:
   id: "who-imci-chart5-oxygen"
   title: "How to Give Oxygen"
   list_subtitle: "IMCI Chart 5 · nasal prongs / nasal catheter"
-  last_reviewed: "OpenEvidence review 2026-06-10 · Oxy-PICU 2024 / SSC peds 2026 / COAST 2021"
+  last_reviewed: "OpenEvidence review 2026-06-18 · OxyKids 2026 / Oxy-PICU 2024 / SSC peds 2026 / COAST 2021"
   tags: ["oxygen", "nasal prongs", "nasal catheter", "hypoxia", "imci", "pediatric"]
   aliases:
     - "Oxygen Therapy"
@@ -76,6 +76,10 @@ topic:
         - **Do not over-oxygenate.** Recent trials favour a
           **conservative SpO₂ target of 88–92%** over higher
           (>94%) targets:
+          - **OxyKids** (2026): in **non-ventilated** children on the
+            ward, an **88% threshold** shortened time to discharge
+            (27.6 vs 46.6 h) with no increase in adverse events — the
+            most relevant trial for this setting.
           - **Oxy-PICU** (2024): conservative 88–92% gave better
             organ-support-free survival in ventilated children.
           - **2026 Surviving Sepsis Campaign (paediatric):** target
@@ -86,5 +90,5 @@ topic:
       title: "If failing low-flow oxygen"
       markdown: |
         - If available, consider **high-flow nasal cannula (HFNC)** at
-          **2 L/kg/min** for children failing standard low-flow
+          **up to 2 L/kg/min** for children failing standard low-flow
           oxygen — a step **before CPAP**.

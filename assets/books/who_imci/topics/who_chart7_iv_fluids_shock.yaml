@@ -27,7 +27,7 @@ topic:
   id: "who-imci-chart7-iv-fluids-shock"
   title: "IV Fluids for Shock (no SAM)"
   list_subtitle: "IMCI Chart 7 · hypotension- & resource-stratified (FEAST)"
-  last_reviewed: "OpenEvidence review 2026-06-18 · FEAST 2011 / SSC peds 2026 / 2025 PALS"
+  last_reviewed: "OpenEvidence review 2026-06-18 (2 rounds) · FEAST / SSC peds 2026 / PALS 2025 / PRoMPT BOLUS 2026"
   tags: ["shock", "iv fluids", "bolus", "feast", "ringers lactate", "septic shock", "resuscitation", "imci", "pediatric"]
   aliases:
     - "Fluid Resuscitation"
@@ -61,7 +61,21 @@ topic:
         - **Confirm the child is not severely malnourished** — shock with
           SAM uses different volume/rate → **Chart 8**.
         - **Insert an IV (or IO) line** and draw blood for emergency labs.
-        - Use **Ringer's lactate (preferred)** or normal saline.
+        - Use **Ringer's lactate or normal saline** — PRoMPT BOLUS (2026,
+          n≈8500) found **no outcome difference**; either is acceptable.
+
+    - type: "prose"
+      title: "What counts as hypotension?"
+      markdown: |
+        Systolic BP below (age-specific):
+        - **< 1 month:** < 60 mmHg
+        - **1–12 months:** < 70 mmHg
+        - **1–10 years:** < 70 + (2 × age in years) mmHg
+        - **> 10 years:** < 90 mmHg
+
+        Hypotension is a **late** sign. Without a BP, treat **cold
+        extremities + capillary refill > 3 s + a weak, fast pulse** as
+        decompensated shock.
 
     - type: "table"
       title: "Choose the fluid approach"
@@ -73,7 +87,7 @@ topic:
             - "**No bolus.** Maintenance fluids only. Reassess frequently."
         - cells:
             - "**Hypotensive** (decompensated), **no ICU**"
-            - "**10–20 ml/kg over 30–60 min.** Reassess after each. Repeat to a **max ~40 ml/kg** only if improving and no overload."
+            - "**10–20 ml/kg per bolus** (each over 30–60 min); **up to 40 ml/kg total in the first hour**. Reassess after each; repeat only if improving and no overload."
         - cells:
             - "**ICU available**"
             - "**10–20 ml/kg** aliquots, up to **40–60 ml/kg** in the first hour. Reassess after each."
@@ -110,10 +124,15 @@ topic:
     - type: "prose"
       title: "If shock persists (fluid-refractory)"
       markdown: |
-        - Start **epinephrine or norepinephrine** — a **peripheral IV or
-          IO** is acceptable if no central line.
+        - Start **epinephrine or norepinephrine** — **norepinephrine may
+          be preferred** in children **without** myocardial dysfunction.
+        - Give it through a **peripheral IV or IO** rather than delaying
+          for a central line (lower mortality; low extravasation risk).
         - Use **dopamine only if** epinephrine/norepinephrine are
           unavailable.
+        - **Consider stress-dose hydrocortisone** if shock persists
+          despite fluids and vasopressors, especially if **adrenal
+          insufficiency** is suspected.
 
     - type: "prose"
       title: "⚠ Malaria & severe anaemia"

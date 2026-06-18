@@ -23,9 +23,9 @@ void main() {
     expect(topic.ownPaletteArgb['alert'], 0xFFD32F2F);
 
     final blocks = topic.blocks;
-    // FEAST callout, first steps, approach table, volume table, reassess,
-    // fluid-refractory, malaria/anaemia callout.
-    expect(blocks.length, 7);
+    // FEAST callout, first steps, hypotension-definition, approach table,
+    // volume table, reassess, fluid-refractory, malaria/anaemia callout.
+    expect(blocks.length, 8);
 
     // Leads with the FEAST attention callout.
     final first = blocks.first;
