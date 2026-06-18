@@ -2,14 +2,22 @@
 # WHO IMCI 1.2 — Summary of steps in emergency triage assessment
 # and treatment (ETAT)
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.3
-# Clinical content pending OpenEvidence review.
+# OpenEvidence review applied (2026-06-18):
+#   - Step 2 (CRITICAL): post-FEAST — "cautious" fluids, 10–20 ml/kg
+#     over 30–60 min reassessing after each (balanced crystalloid
+#     preferred); boluses avoided in severe malnutrition unless frank
+#     shock w/ impaired consciousness. Cross-ref Chart 7.
+#   - Step 3: note buccal/intranasal midazolam as alternative to
+#     rectal diazepam (2023 WHO EML; faster cessation).
+#   - Priority signs: add (where oximetry available) borderline SpO2
+#     90–94% + prolonged capillary refill.
 # ============================================================
 
 topic:
   id: "who-imci-1-2-etat-summary"
   title: "ETAT — Summary of Steps"
   list_subtitle: "1.2 · ABCD check + 3TPR MOB priority signs"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-18 · FEAST / SSC peds 2026 / WHO EML 2023"
   tags: ["etat", "emergency triage", "abcd", "priority signs", "3tpr mob", "imci", "pediatric"]
   aliases:
     - "Emergency Triage Assessment and Treatment"
@@ -29,12 +37,15 @@ topic:
         - **Step 1 — Airway & Breathing.** Restore breathing: manage
           the airway and **give oxygen**.
         - **Step 2 — Circulation.** Check for **shock** or diarrhoea
-          with **severe dehydration**. Give oxygen and start
-          **IV fluid resuscitation**. In trauma,
-          **compress external bleeding**.
+          with **severe dehydration**. Give oxygen and start **cautious**
+          IV fluids — **10–20 ml/kg over 30–60 min, reassess after each**
+          (balanced crystalloid preferred). In **severe malnutrition,
+          avoid boluses** unless frank shock with impaired consciousness.
+          In trauma, **compress external bleeding**. (See **Chart 7**.)
         - **Step 3 — Coma / Convulsion.** Check if unconscious or
           convulsing. Give **IV glucose** for hypoglycaemia and/or an
-          **anti-convulsant** for convulsions.
+          **anti-convulsant** — rectal diazepam, or **buccal/intranasal
+          midazolam** (see **Chart 9**).
 
     - type: "prose"
       title: "If emergency signs are found"
@@ -66,3 +77,6 @@ topic:
         - **M**alnutrition — visible severe wasting
         - **O**edema of both feet
         - **B**urns (major)
+
+        Where pulse oximetry is available, also prioritize **SpO₂ 90–94%**
+        (borderline hypoxemia) and **prolonged capillary refill**.

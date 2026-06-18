@@ -3,14 +3,21 @@
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.4
 # The full ABCD triage flow (incl. coma/convulsion and dehydration)
 # is shown in the Triage chart (1. Triage of all sick children).
-# Clinical content pending OpenEvidence review.
+# OpenEvidence review applied (2026-06-18):
+#   - Infant pulse: check BRACHIAL first (radial unreliable in infants;
+#     2025 PALS).
+#   - Pulse check ≤ 10 s; if no definite pulse, begin CPR (2025 PALS).
+#   - Central (sternal) capillary refill more reliable than peripheral
+#     in a cold environment.
+#   - Hypotension is a LATE sign — do not require it for shock.
+#   - Optional: blood lactate > 2 mmol/L supports occult shock (SSC).
 # ============================================================
 
 topic:
   id: "who-imci-1-3-assessment"
   title: "Assessment of Emergency & Priority Signs"
   list_subtitle: "1.3 · assess airway/breathing + circulation"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-18 · 2025 PALS / SSC peds 2026"
   tags: ["assessment", "airway", "breathing", "circulation", "shock", "capillary refill", "imci", "pediatric"]
   aliases:
     - "Emergency Assessment"
@@ -42,16 +49,22 @@ topic:
       highlight: true
       markdown: |
         A child in shock needing bolus fluids is **lethargic** with
-        **cold skin, prolonged capillary refill, a fast weak pulse, and hypotension**.
+        **cold skin, prolonged capillary refill, a fast weak pulse, and hypotension** — but **hypotension is a LATE sign**, so do not wait for it.
 
         - **Is the hand cold?** If so, assess further for shock.
         - **Capillary refill > 3 s?** Press to whiten the nail of the
           thumb or big toe for **5 s**; time the return of pink colour.
-        - **If refill > 3 s, check the pulse** — weak and fast?
-          - A **strong, not-fast radial pulse** means **not in shock**.
-          - **Infant (< 1 yr):** if no radial pulse, feel the
-            **brachial** (or femoral if lying down).
-          - **Child:** if no radial pulse, feel the **carotid**.
+          In a cold environment, **central (sternal) refill** is more
+          reliable than peripheral.
+        - **Check the pulse — take ≤ 10 s:**
+          - **Infant (< 1 yr):** feel the **brachial** (or femoral) pulse
+            — the radial is unreliable in infants.
+          - **Child:** feel the radial; if absent, the **carotid** or
+            femoral.
+          - A **strong, not-fast** pulse means **not in shock**. If **no
+            definite pulse** in ≤ 10 s, **begin CPR**.
+        - **If available:** blood **lactate > 2 mmol/L** supports occult
+          shock.
 
     - type: "prose"
       title: "Full triage flow"

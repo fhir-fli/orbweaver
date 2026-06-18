@@ -1,14 +1,20 @@
 # ============================================================
 # WHO IMCI 1.1 — Triage
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.2
-# Clinical content pending OpenEvidence review.
+# OpenEvidence review applied (2026-06-18):
+#   - Emergency signs: add severe hypoxemia SpO2 < 90% (where pulse
+#     oximetry available) alongside central cyanosis (SSC peds 2026).
+#   - "Act now": fluid resuscitation is cautious, not reflexive,
+#     post-FEAST — cross-reference Chart 7.
+#   - Severe-dehydration criteria unchanged (2024 Cochrane: sign
+#     combinations perform reasonably).
 # ============================================================
 
 topic:
   id: "who-imci-1-1-triage"
   title: "Triage"
   list_subtitle: "1.1 · emergency / priority / non-urgent"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-18 · WHO PB 2013 + SpO2/FEAST"
   tags: ["triage", "emergency signs", "priority signs", "etat", "imci", "pediatric"]
   aliases:
     - "ETAT"
@@ -38,7 +44,8 @@ topic:
       markdown: |
         - **Obstructed or absent breathing**
         - **Severe respiratory distress**
-        - **Central cyanosis**
+        - **Central cyanosis** — or **SpO₂ < 90%** where pulse oximetry
+          is available
         - **Signs of shock** — cold hands, capillary refill > 3 s,
           fast heart rate with weak pulse, low/unmeasurable BP
         - **Coma** (or seriously reduced consciousness)
@@ -54,4 +61,6 @@ topic:
           **immediate treatment to avert death**.
         - If a child has **one or more emergency signs**, do **not**
           spend time looking for priority signs — treat first.
+        - For shock, fluids are **cautious, not reflexive** (post-FEAST)
+          — see **Chart 7**.
         - Priority signs are on the next page (1.2).
