@@ -98,7 +98,7 @@ void main() {
       return (loadYaml(raw) as YamlMap)['book'] as YamlMap;
     }
 
-    test('who_imci: 1 chapter group (3 prose + 5 charts), no flat topics key',
+    test('who_imci: 1 chapter group (3 prose + 6 charts), no flat topics key',
         () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
@@ -106,7 +106,8 @@ void main() {
       expect(contents, hasLength(1));
       expect((contents.first as YamlMap)['title'],
           '1. Triage and emergency conditions');
-      expect(leafCount(contents), 8);
+      // 1.1–1.3 prose + Charts 2–7.
+      expect(leafCount(contents), 9);
     });
 
     test('wvems: 5 groups (4 sections + drug ref), 47 topics total', () {

@@ -22,3 +22,4 @@ book:
         - topic: "topics/who_chart4_airway.yaml"
         - topic: "topics/who_chart5_oxygen.yaml"
         - topic: "topics/who_chart6_positioning.yaml"
+        - topic: "topics/who_chart7_iv_fluids_shock.yaml"
