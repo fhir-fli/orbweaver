@@ -35,10 +35,10 @@ void main() {
 
     test('severity flowchart entry and decision', () {
       final fc = (topic.blocks.first as FlowchartBlock).severity!;
-      expect(fc.entry.shape, NodeShape.stadium);
-      expect(fc.entry.text, contains('Systolic'));
-      expect(fc.decision.shape, NodeShape.diamond);
-      expect(fc.decision.text, 'Severity?');
+      expect(fc.entryChain.first.shape, NodeShape.stadium);
+      expect(fc.entryChain.first.text, contains('Systolic'));
+      expect(fc.decision!.shape, NodeShape.diamond);
+      expect(fc.decision!.text, 'Severity?');
     });
 
     test('severity flowchart has three branches with actions', () {
@@ -59,7 +59,9 @@ void main() {
       expect(conv.text, 'Consider');
       expect(conv.bullets.length, 6);
       expect(conv.bullets.first.text, 'Tachycardia');
-      expect(conv.bullets.first.linkId, 'wvems-2025-014');
+      // Cross-link year-typo fix: 008's Consider links were corrected
+      // 2025→2026 when cross-topic navigation went live.
+      expect(conv.bullets.first.linkId, 'wvems-2026-014');
     });
 
     test('severity flowchart dose table rows', () {
@@ -190,6 +192,38 @@ void main() {
       expect(image.path, contains('missing_demo.png'));
       expect(image.caption, isNotNull);
       expect(image.size, ImageSize.medium);
+    });
+  });
+
+  group('Topic palette frontmatter (ownPaletteArgb)', () {
+    test('parses a palette: map into role→ARGB ints, skipping bad values', () {
+      final topic = Topic.fromYamlString('''
+topic:
+  id: "t"
+  title: "T"
+  palette:
+    accent: "0xFFD81B60"
+    alert: "#FFB300"
+    bogus: "nope"
+  blocks:
+    - type: "prose"
+      markdown: "x"
+''');
+      expect(topic.ownPaletteArgb['accent'], 0xFFD81B60);
+      expect(topic.ownPaletteArgb['alert'], 0xFFFFB300);
+      expect(topic.ownPaletteArgb.containsKey('bogus'), isFalse);
+    });
+
+    test('no palette: → empty map', () {
+      final topic = Topic.fromYamlString('''
+topic:
+  id: "t"
+  title: "T"
+  blocks:
+    - type: "prose"
+      markdown: "x"
+''');
+      expect(topic.ownPaletteArgb, isEmpty);
     });
   });
 }

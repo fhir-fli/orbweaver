@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:orbweaver/models/topic.dart';
-import 'package:orbweaver/screens/topic_frame.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
 
 Topic _loadWvems() {
@@ -11,12 +10,16 @@ Topic _loadWvems() {
   return Topic.fromYamlString(yaml);
 }
 
+// Pixel 3a-class logical frame the topics are authored against.
+const double _frameWidth = 375;
+const double _frameHeight = 667;
+
 Widget _wrap(Widget child) {
   return MaterialApp(
     home: Scaffold(
       body: SizedBox(
-        width: TopicFrame.frameWidth,
-        height: TopicFrame.frameHeight,
+        width: _frameWidth,
+        height: _frameHeight,
         child: SingleChildScrollView(child: child),
       ),
     ),
@@ -28,10 +31,12 @@ void main() {
   setUpAll(() => topic = _loadWvems());
 
   group('TopicView (WVEMS 2025-008, 375x667 frame)', () {
-    testWidgets('renders the title and page number', (tester) async {
+    // Note: the topic title and page badge live in TopicFrame's AppBar,
+    // not in TopicView — they're covered by the parse tests + TopicFrame.
+    // Here we assert TopicView renders the flowchart's entry node.
+    testWidgets('renders the entry node', (tester) async {
       await tester.pumpWidget(_wrap(TopicView(topic: topic)));
-      expect(find.text('Circulation / Shock'), findsOneWidget);
-      expect(find.text('8'), findsOneWidget);
+      expect(find.textContaining('Systolic Under'), findsOneWidget);
     });
 
     testWidgets('renders the decision text', (tester) async {
