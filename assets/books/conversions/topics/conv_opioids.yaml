@@ -1,0 +1,56 @@
+# ============================================================
+# Opioid conversion → oral morphine equivalents (MME)
+# Factors are ILLUSTRATIVE (CDC 2022 MME conversion factors) and
+# PENDING OpenEvidence review before clinical use.
+# ============================================================
+
+topic:
+  id: "conv-opioids"
+  title: "Opioid Conversion"
+  list_subtitle: "→ oral morphine equivalents (MME)"
+  last_reviewed: "illustrative CDC 2022 MME factors · pending OpenEvidence review"
+  tags: ["opioid", "conversion", "mme", "morphine", "oxycodone", "hydromorphone"]
+  aliases:
+    - "MME"
+    - "Morphine Equivalents"
+  category: "medical"
+  # Dangerous converter — harm caveats render red.
+  palette:
+    alert: "0xFFD32F2F"
+    alert_fill: "0xFFFDECEA"
+    alert_text: "0xFFB71C1C"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        **Direct** conversion — pick the drug you're switching **from**,
+        enter its dose, then pick the drug you're switching **to**. The
+        middle line shows the oral-morphine-equivalent (**MME**). No
+        24-hour totalling: to total a day, read each drug's MME and add
+        them yourself.
+
+    - type: "conversion"
+      mode: "equivalence"
+      title: "Opioid → MME"
+      reference: "oral morphine"
+      reference_label: "MME"
+      unit: "mg"
+      source: "CDC 2022 MME factors (illustrative — pending review)"
+      agents:
+        - { name: "Morphine",      route: "PO",    factor: 1.0 }
+        - { name: "Morphine",      route: "IV/SC", factor: 3.0 }
+        - { name: "Oxycodone",     route: "PO",    factor: 1.5 }
+        - { name: "Hydromorphone", route: "PO",    factor: 4.0 }
+        - { name: "Hydromorphone", route: "IV",    factor: 20.0 }
+        - { name: "Hydrocodone",   route: "PO",    factor: 1.0 }
+        - { name: "Codeine",       route: "PO",    factor: 0.15 }
+        - { name: "Tramadol",      route: "PO",    factor: 0.1 }
+      excluded:
+        - { name: "Methadone",        reason: "Nonlinear, dose-dependent ratio — specialist." }
+        - { name: "Fentanyl (patch/IV)", reason: "Patch kinetics / specialist conversion." }
+        - { name: "Buprenorphine",    reason: "Partial agonist with a ceiling effect." }
+        - { name: "Tapentadol",       reason: "No consensus equivalence factor." }
+      caveats:
+        - "Reduce the calculated dose 25–50% for incomplete cross-tolerance."
+        - "Estimates only — re-titrate to effect and reassess."

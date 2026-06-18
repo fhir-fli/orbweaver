@@ -1,0 +1,13 @@
+book:
+  id: "conversions"
+  title: "Conversions"
+  subtitle: "Dose equivalence tools"
+  cover: ""              # no art asset — shelf renders the fallback cover
+  spine_color: "0xFF00695C"
+  # Book-level palette: a teal "tools" accent inherited by all converters.
+  palette:
+    accent: "0xFF00695C"
+  contents:
+    - topic: "topics/conv_opioids.yaml"
+    - topic: "topics/conv_benzodiazepines.yaml"
+    - topic: "topics/conv_statins.yaml"

@@ -1,7 +1,12 @@
 # Design: the `conversion` block (interactive dose conversion)
 
-Status: **design — not yet implemented.** Captured from the design
-discussion on 2026-06-18. This is the spec we build the prototype from.
+Status: **IMPLEMENTED (2026-06-18).** Both modes built and verified on-device
+(`ConversionBlock` in topic.dart; `conversion_block_view.dart`). Live
+content: Conversions book with opioid (MME) + benzodiazepine (diazepam-eq)
+`equivalence` converters and a statin `tiers` matrix — all carrying
+illustrative factors **pending OpenEvidence review**. The open §8 ideas
+(cross-tolerance reduced-range line; methadone/patch sub-tool) remain future
+work. Original design discussion below (2026-06-18).
 
 ## 1. Why this exists
 

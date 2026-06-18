@@ -822,6 +822,7 @@ sealed class Block {
       'column' => ColumnBlock.fromYaml(map),
       'arrows' => ArrowsBlock.fromYaml(map),
       'merge_arrows' => MergeArrowsBlock.fromYaml(map),
+      'conversion' => ConversionBlock.fromYaml(map),
       _ => throw FormatException('Unknown block type: $type'),
     };
   }
@@ -1270,6 +1271,168 @@ class ImageBlock extends Block {
   final String path;
   final String? caption;
   final ImageSize size;
+}
+
+// ─────────────────────────────────────────────────────────────
+// CONVERSION BLOCK (interactive dose conversion)
+// ─────────────────────────────────────────────────────────────
+
+/// How a conversion is computed. See docs/conversion_block.md.
+enum ConversionMode {
+  /// Titratable classes (opioids/benzos/steroids): free numeric entry,
+  /// each agent has a [ConversionAgent.factor] to a reference anchor.
+  equivalence,
+
+  /// Fixed manufactured strengths (statins/inhalers): selection only;
+  /// agents enumerate [ConversionAgent.doses], each tagged with a tier.
+  tiers;
+
+  static ConversionMode fromString(String? s) =>
+      s == 'tiers' ? tiers : equivalence;
+}
+
+/// One agent in a conversion. In `equivalence` mode it carries a [factor]
+/// (multiplier to the reference) and optional [route]/[unit]; in `tiers`
+/// mode it carries [doses].
+class ConversionAgent {
+  const ConversionAgent({
+    required this.name,
+    this.route,
+    this.factor,
+    this.unit,
+    this.doses = const [],
+  });
+
+  factory ConversionAgent.fromYaml(Map<dynamic, dynamic> map) =>
+      ConversionAgent(
+        name: map['name'] as String,
+        route: map['route'] as String?,
+        factor: (map['factor'] as num?)?.toDouble(),
+        unit: map['unit'] as String?,
+        doses: _mapList(map['doses'], ConversionDose.fromYaml),
+      );
+
+  final String name;
+  final String? route;
+  final double? factor;
+  final String? unit;
+  final List<ConversionDose> doses;
+}
+
+/// A discrete manufactured strength (tiers mode) tagged with its tier.
+class ConversionDose {
+  const ConversionDose({required this.dose, required this.tier});
+
+  factory ConversionDose.fromYaml(Map<dynamic, dynamic> map) => ConversionDose(
+        dose: '${map['dose']}',
+        tier: map['tier'] as String,
+      );
+
+  final String dose;
+  final String tier;
+}
+
+/// An agent that must NOT be auto-converted (nonlinear/special), shown with
+/// the reason instead of being silently dropped.
+class ConversionExcluded {
+  const ConversionExcluded({required this.name, required this.reason});
+
+  factory ConversionExcluded.fromYaml(Map<dynamic, dynamic> map) =>
+      ConversionExcluded(
+        name: map['name'] as String,
+        reason: map['reason'] as String,
+      );
+
+  final String name;
+  final String reason;
+}
+
+/// Interactive dose-conversion block. The first stateful block type.
+class ConversionBlock extends Block {
+  const ConversionBlock({
+    required this.mode,
+    required this.agents,
+    this.title,
+    this.reference,
+    this.referenceLabel,
+    this.unit,
+    this.source,
+    this.tiers = const [],
+    this.tierNote,
+    this.excluded = const [],
+    this.caveats = const [],
+    super.anchor,
+  });
+
+  factory ConversionBlock.fromYaml(Map<dynamic, dynamic> map) => ConversionBlock(
+        mode: ConversionMode.fromString(map['mode'] as String?),
+        title: map['title'] as String?,
+        reference: map['reference'] as String?,
+        referenceLabel: map['reference_label'] as String?,
+        unit: map['unit'] as String?,
+        source: map['source'] as String?,
+        tiers: _stringList(map['tiers']),
+        tierNote: map['tier_note'] as String?,
+        agents: _mapList(map['agents'], ConversionAgent.fromYaml),
+        excluded: _mapList(map['excluded'], ConversionExcluded.fromYaml),
+        caveats: _stringList(map['caveats']),
+        anchor: map['anchor'] as String?,
+      );
+
+  final ConversionMode mode;
+  final String? title;
+
+  /// The reference anchor's name (equivalence mode), e.g. "oral morphine".
+  final String? reference;
+
+  /// Short label for the reference/anchor line, e.g. "MME".
+  final String? referenceLabel;
+
+  /// Default dose unit (per-agent [ConversionAgent.unit] overrides).
+  final String? unit;
+
+  /// Where the factors / tiers come from — required for clinical safety.
+  final String? source;
+
+  /// Ordered tier names (tiers mode), low → high.
+  final List<String> tiers;
+  final String? tierNote;
+
+  final List<ConversionAgent> agents;
+  final List<ConversionExcluded> excluded;
+  final List<String> caveats;
+
+  /// Distinct agent names in declared order (for the drug dropdowns).
+  List<String> get agentNames {
+    final seen = <String>{};
+    final out = <String>[];
+    for (final a in agents) {
+      if (seen.add(a.name)) out.add(a.name);
+    }
+    return out;
+  }
+
+  /// Routes available for [name] (equivalence mode).
+  List<String?> routesFor(String name) =>
+      [for (final a in agents) if (a.name == name) a.route];
+
+  ConversionAgent? agentFor(String name, String? route) {
+    for (final a in agents) {
+      if (a.name == name && a.route == route) return a;
+    }
+    return null;
+  }
+
+  /// Reference-equivalents of [dose] of [agent] (equivalence mode):
+  /// dose × factor. Returns null if the agent has no factor.
+  double? toReference(ConversionAgent agent, double dose) =>
+      agent.factor == null ? null : dose * agent.factor!;
+
+  /// Dose of [agent] equivalent to [referenceEquivalents].
+  double? fromReference(ConversionAgent agent, double referenceEquivalents) =>
+      agent.factor == null || agent.factor == 0
+          ? null
+          : referenceEquivalents / agent.factor!;
 }
 
 // ─────────────────────────────────────────────────────────────

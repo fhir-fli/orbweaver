@@ -33,6 +33,8 @@ flutter:
     - assets/books/wvems/topics/
     - assets/books/who_imci/
     - assets/books/who_imci/topics/
+    - assets/books/conversions/
+    - assets/books/conversions/topics/
     - assets/books/pocket_medicine/
     - assets/books/demos/
     - assets/books/demos/topics/

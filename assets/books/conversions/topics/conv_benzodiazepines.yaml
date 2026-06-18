@@ -1,0 +1,51 @@
+# ============================================================
+# Benzodiazepine conversion → diazepam equivalents (oral)
+# Factors are ILLUSTRATIVE (common equivalence tables, e.g. Ashton)
+# and PENDING OpenEvidence review. Benzodiazepine equivalence is
+# notoriously imprecise and varies by source and half-life.
+# ============================================================
+
+topic:
+  id: "conv-benzodiazepines"
+  title: "Benzodiazepine Conversion"
+  list_subtitle: "→ diazepam equivalents (oral)"
+  last_reviewed: "illustrative equivalence table · pending OpenEvidence review"
+  tags: ["benzodiazepine", "conversion", "diazepam", "lorazepam", "alprazolam", "clonazepam"]
+  aliases:
+    - "Diazepam Equivalents"
+    - "Benzo Conversion"
+  category: "medical"
+  palette:
+    alert: "0xFFD32F2F"
+    alert_fill: "0xFFFDECEA"
+    alert_text: "0xFFB71C1C"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        **Direct** oral conversion. The middle line shows the
+        **diazepam-equivalent** dose. Half-lives differ widely — use
+        equivalence as a starting estimate, not a precise switch.
+
+    - type: "conversion"
+      mode: "equivalence"
+      title: "Benzodiazepine → diazepam-eq"
+      reference: "diazepam"
+      reference_label: "mg diazepam-eq"
+      unit: "mg"
+      source: "Common oral equivalence table (illustrative — pending review)"
+      agents:
+        - { name: "Diazepam",         factor: 1.0 }
+        - { name: "Lorazepam",        factor: 10.0 }
+        - { name: "Alprazolam",       factor: 20.0 }
+        - { name: "Clonazepam",       factor: 20.0 }
+        - { name: "Temazepam",        factor: 0.5 }
+        - { name: "Oxazepam",         factor: 0.33 }
+        - { name: "Chlordiazepoxide", factor: 0.4 }
+      excluded:
+        - { name: "Midazolam", reason: "Short-acting / route-dependent — not a stable oral equivalence." }
+        - { name: "Clobazam",  reason: "Equivalence varies widely." }
+      caveats:
+        - "Equivalences are approximate and differ between references."
+        - "Account for half-life when switching; taper slowly."

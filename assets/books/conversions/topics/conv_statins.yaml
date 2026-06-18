@@ -1,0 +1,66 @@
+# ============================================================
+# Statin intensity equivalence (tiers mode)
+# Tiers/doses are ILLUSTRATIVE (2018 ACC/AHA Cholesterol Guideline
+# intensity table) and PENDING OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "conv-statins"
+  title: "Statin Intensity"
+  list_subtitle: "low / moderate / high intensity"
+  last_reviewed: "illustrative 2018 ACC/AHA table · pending OpenEvidence review"
+  tags: ["statin", "conversion", "intensity", "atorvastatin", "rosuvastatin", "ldl"]
+  aliases:
+    - "Statin Equivalence"
+    - "LDL Intensity"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Statins come in fixed strengths, so this compares by **LDL-lowering
+        intensity tier** rather than an exact dose. **Tap a strength** to
+        highlight its tier — the equivalents across the other agents.
+
+    - type: "conversion"
+      mode: "tiers"
+      title: "Statin intensity"
+      tiers: ["Low", "Moderate", "High"]
+      tier_note: "LDL-C lowering intensity (2018 ACC/AHA)."
+      source: "2018 ACC/AHA Cholesterol Guideline (illustrative — pending review)"
+      agents:
+        - name: "Atorvastatin"
+          doses:
+            - { dose: "10 mg", tier: "Moderate" }
+            - { dose: "20 mg", tier: "Moderate" }
+            - { dose: "40 mg", tier: "High" }
+            - { dose: "80 mg", tier: "High" }
+        - name: "Rosuvastatin"
+          doses:
+            - { dose: "5 mg",  tier: "Moderate" }
+            - { dose: "10 mg", tier: "Moderate" }
+            - { dose: "20 mg", tier: "High" }
+            - { dose: "40 mg", tier: "High" }
+        - name: "Simvastatin"
+          doses:
+            - { dose: "10 mg", tier: "Low" }
+            - { dose: "20 mg", tier: "Moderate" }
+            - { dose: "40 mg", tier: "Moderate" }
+        - name: "Pravastatin"
+          doses:
+            - { dose: "10 mg", tier: "Low" }
+            - { dose: "20 mg", tier: "Low" }
+            - { dose: "40 mg", tier: "Moderate" }
+            - { dose: "80 mg", tier: "Moderate" }
+        - name: "Lovastatin"
+          doses:
+            - { dose: "20 mg", tier: "Low" }
+            - { dose: "40 mg", tier: "Moderate" }
+        - name: "Pitavastatin"
+          doses:
+            - { dose: "1 mg", tier: "Low" }
+            - { dose: "2 mg", tier: "Moderate" }
+            - { dose: "4 mg", tier: "Moderate" }
+      caveats:
+        - "Intensity equivalence ≠ interchangeable — weigh drug interactions, myopathy risk, and renal/hepatic dosing."

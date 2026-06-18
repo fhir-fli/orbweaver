@@ -3,6 +3,7 @@ import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/anchor_scope.dart';
+import 'package:orbweaver/widgets/blocks/conversion_block_view.dart';
 import 'package:orbweaver/widgets/blocks/drug_card_block_view.dart';
 import 'package:orbweaver/widgets/blocks/image_block_view.dart';
 import 'package:orbweaver/widgets/blocks/prose_block_view.dart';
@@ -187,6 +188,7 @@ class _BlockRenderer extends StatelessWidget {
       final ColumnBlock b => _ColumnBlockRenderer(block: b, theme: theme),
       final ArrowsBlock b => _ArrowsBlockRenderer(block: b),
       final MergeArrowsBlock b => _MergeArrowsRenderer(block: b),
+      final ConversionBlock b => ConversionBlockView(block: b, theme: theme),
     };
   }
 }
