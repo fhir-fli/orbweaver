@@ -178,18 +178,31 @@ class _BlockRenderer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return switch (block) {
-      final ProseBlock b => ProseBlockView(block: b, theme: theme),
-      final FlowchartBlock b => _FlowchartBlockRenderer(block: b, theme: theme),
-      final TableBlock b => TableBlockView(block: b, theme: theme),
-      final DrugCardBlock b => DrugCardBlockView(block: b, theme: theme),
-      final ImageBlock b => ImageBlockView(block: b, theme: theme),
-      final RowBlock b => _RowBlockRenderer(block: b, theme: theme),
-      final ColumnBlock b => _ColumnBlockRenderer(block: b, theme: theme),
+    // A block may override any palette role for itself (the "sub-things can
+    // declare their own" rule). Layer its overrides over the topic theme's
+    // resolved map; render with that. Wrap in a TopicThemeScope too, so
+    // context-based leaf widgets (flow shapes, callouts) see the same theme.
+    final t = block.ownPaletteArgb.isEmpty
+        ? theme
+        : TopicTheme({
+            ...theme.palette,
+            for (final e in block.ownPaletteArgb.entries) e.key: Color(e.value),
+          });
+    final child = switch (block) {
+      final ProseBlock b => ProseBlockView(block: b, theme: t),
+      final FlowchartBlock b => _FlowchartBlockRenderer(block: b, theme: t),
+      final TableBlock b => TableBlockView(block: b, theme: t),
+      final DrugCardBlock b => DrugCardBlockView(block: b, theme: t),
+      final ImageBlock b => ImageBlockView(block: b, theme: t),
+      final RowBlock b => _RowBlockRenderer(block: b, theme: t),
+      final ColumnBlock b => _ColumnBlockRenderer(block: b, theme: t),
       final ArrowsBlock b => _ArrowsBlockRenderer(block: b),
       final MergeArrowsBlock b => _MergeArrowsRenderer(block: b),
-      final ConversionBlock b => ConversionBlockView(block: b, theme: theme),
+      final ConversionBlock b => ConversionBlockView(block: b, theme: t),
     };
+    return identical(t, theme)
+        ? child
+        : TopicThemeScope(theme: t, child: child);
   }
 }
 
