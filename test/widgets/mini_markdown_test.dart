@@ -40,6 +40,18 @@ void main() {
     expect(find.textContaining('](topic:', findRichText: true), findsNothing);
   });
 
+  testWidgets('a link nested inside bold still renders (not raw markup)',
+      (tester) async {
+    await tester.pumpWidget(
+      _wrap('first follow **[Chart 7](topic:who-imci-chart7-iv-fluids-shock)**'),
+    );
+    // Bold must not swallow the link: display text shows, syntax does not.
+    expect(find.textContaining('first follow Chart 7', findRichText: true),
+        findsOneWidget);
+    expect(find.textContaining('](topic:', findRichText: true), findsNothing);
+    expect(find.textContaining('**', findRichText: true), findsNothing);
+  });
+
   testWidgets('external link renders its display text', (tester) async {
     await tester.pumpWidget(_wrap('[FEAST trial](https://example.org/feast)'));
     expect(find.textContaining('FEAST trial', findRichText: true),

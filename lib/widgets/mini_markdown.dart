@@ -144,17 +144,23 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
 
   /// Parses `**bold**` and `[text](target)` in one pass, emitting plain
   /// runs between. Escaped asterisks (`\*`) are protected via a sentinel.
-  List<InlineSpan> _parseInline(String text, Color linkColor) {
+  List<InlineSpan> _parseInline(String text, Color linkColor,
+      {bool bold = false}) {
     const sentinel = '';
     final stashed = text.replaceAll(r'\*', sentinel);
     String restore(String s) => s.replaceAll(sentinel, '*');
+    final plainStyle =
+        bold ? const TextStyle(fontWeight: FontWeight.w700) : null;
 
     final spans = <InlineSpan>[];
     final re = RegExp(r'\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*');
     var last = 0;
     for (final m in re.allMatches(stashed)) {
       if (m.start > last) {
-        spans.add(TextSpan(text: restore(stashed.substring(last, m.start))));
+        spans.add(TextSpan(
+          text: restore(stashed.substring(last, m.start)),
+          style: plainStyle,
+        ));
       }
       if (m.group(2) != null) {
         // Link: group(1) = display text, group(2) = target.
@@ -166,20 +172,21 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
           style: TextStyle(
             color: linkColor,
             decoration: TextDecoration.underline,
+            fontWeight: bold ? FontWeight.w700 : null,
           ),
           recognizer: recognizer,
         ));
       } else {
-        // Bold: group(3).
-        spans.add(TextSpan(
-          text: restore(m.group(3)!),
-          style: const TextStyle(fontWeight: FontWeight.w700),
-        ));
+        // Bold: recurse into the inner content (still stashed) so any link
+        // it contains is parsed too, not leaked as raw markup.
+        spans.addAll(_parseInline(m.group(3)!, linkColor, bold: true));
       }
       last = m.end;
     }
     if (last < stashed.length) {
-      spans.add(TextSpan(text: restore(stashed.substring(last))));
+      spans.add(
+        TextSpan(text: restore(stashed.substring(last)), style: plainStyle),
+      );
     }
     return spans;
   }
