@@ -1,0 +1,89 @@
+# ============================================================
+# WHO IMCI Chart 9 — How to give diazepam rectally (convulsions)
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.15
+# 🛑 Pending OpenEvidence review. Reviewer to reconcile:
+#   - First-line agent: 2023 WHO EML + RCTs support buccal/intranasal
+#     midazolam as an alternative (often preferred) to rectal diazepam
+#     (faster cessation, easier administration). See 1.2 review.
+#   - 2nd-line / status: phenytoin vs fosphenytoin vs IV levetiracetam
+#     (ConSEPT/EcLiPSE: levetiracetam ≈ phenytoin) — confirm current
+#     ladder.
+#   - Phenobarbital dosing for neonates < 2 weeks.
+# ============================================================
+
+topic:
+  id: "who-imci-chart9-diazepam"
+  title: "Rectal Diazepam (Convulsions)"
+  list_subtitle: "IMCI Chart 9 · 0.1 ml/kg PR · status ladder"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["convulsion", "seizure", "diazepam", "rectal", "status epilepticus", "phenobarbital", "imci", "pediatric"]
+  aliases:
+    - "Seizure"
+    - "Anticonvulsant"
+    - "Status Epilepticus"
+  category: "medical"
+  # Apnoea / airway safety warning renders red.
+  palette:
+    alert: "0xFFD32F2F"
+    alert_fill: "0xFFFDECEA"
+    alert_text: "0xFFB71C1C"
+
+  page_number: 15
+
+  blocks:
+
+    - type: "prose"
+      title: "Give diazepam rectally"
+      highlight: true
+      markdown: |
+        - Draw the dose from a diazepam ampoule into a **1-ml tuberculin
+          syringe** (dose by weight), then **remove the needle**.
+        - Insert the syringe **4–5 cm into the rectum** and inject.
+        - **Hold the buttocks together** for a few minutes.
+
+    - type: "table"
+      title: "Diazepam PR — 10 mg/2 ml, 0.1 ml/kg"
+      columns: ["Age (weight)", "Dose (0.1 ml/kg)"]
+      column_flex: [3, 2]
+      rows:
+        - cells: ["2 weeks–2 months (< 4 kg)", "0.3 ml"]
+        - cells: ["2–< 4 months (4–< 6 kg)", "0.5 ml"]
+        - cells: ["4–< 12 months (6–< 10 kg)", "1.0 ml"]
+        - cells: ["1–< 3 years (10–< 14 kg)", "1.25 ml"]
+        - cells: ["3–< 5 years (14–19 kg)", "1.5 ml"]
+
+    - type: "prose"
+      title: "Neonate < 2 weeks — use phenobarbital"
+      markdown: |
+        Give **phenobarbital 20 mg/kg** (200 mg/ml), repeat if convulsions
+        continue:
+        - **2 kg:** 0.2 ml, then 0.1 ml after 30 min
+        - **3 kg:** 0.3 ml, then 0.15 ml after 30 min
+
+    - type: "prose"
+      title: "If convulsions continue"
+      highlight: true
+      markdown: |
+        - **After 10 min:** give a **second dose of diazepam** (or IV
+          diazepam **0.05 ml/kg = 0.25 mg/kg** if a line is running).
+          **Do not exceed two doses** of diazepam.
+        - **After another 10 min — suspect status epilepticus:**
+          - **Phenobarbital 15 mg/kg IM or IV over 15 min**, or
+          - **Phenytoin 15–18 mg/kg IV** over 60 min, through a **separate
+            line** (caustic — extravasation causes local damage).
+
+    - type: "prose"
+      title: "If high fever"
+      markdown: |
+        - **Undress** the child to reduce the fever.
+        - Give **no oral medication** until the convulsion is controlled
+          (aspiration risk).
+        - Once it stops and the child can swallow, give **paracetamol or
+          ibuprofen**.
+
+    - type: "prose"
+      title: "⚠ Airway safety"
+      callout: true
+      markdown: |
+        Always have a **working bag and mask** of the right size ready —
+        diazepam can cause **apnoea**.
