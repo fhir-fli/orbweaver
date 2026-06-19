@@ -1,0 +1,70 @@
+# ============================================================
+# WHO IMCI Chart 10 — How to give glucose intravenously (hypoglycaemia)
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.16
+# 🛑 Pending OpenEvidence review. Reviewer to confirm: hypoglycaemia
+# thresholds (<2.5 mmol/L general, <3 mmol/L SAM) vs current peds/
+# neonatal definitions; 10% glucose 5 ml/kg (0.5 g/kg) vs PALS 0.5–1
+# g/kg; sublingual-sugar first-aid evidence.
+# ============================================================
+
+topic:
+  id: "who-imci-chart10-glucose"
+  title: "IV Glucose (Hypoglycaemia)"
+  list_subtitle: "IMCI Chart 10 · 5 ml/kg of 10% glucose"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["hypoglycaemia", "glucose", "dextrose", "iv", "d10", "imci", "pediatric"]
+  aliases:
+    - "Hypoglycemia"
+    - "Dextrose"
+  category: "medical"
+
+  page_number: 16
+
+  blocks:
+
+    - type: "prose"
+      title: "When & what to give"
+      highlight: true
+      markdown: |
+        - **Insert an IV line** and draw blood for emergency labs.
+        - **Treat as hypoglycaemia** if glucose is **< 2.5 mmol/L
+          (45 mg/dL)**, or **< 3 mmol/L (54 mg/dL)** in a severely
+          malnourished child, **or** if it **cannot be measured**.
+        - Give **5 ml/kg of 10% glucose** rapidly by IV injection.
+
+    - type: "table"
+      title: "10% glucose bolus — 5 ml/kg"
+      columns: ["Age (weight)", "Volume (5 ml/kg)"]
+      column_flex: [3, 2]
+      rows:
+        - cells: ["< 2 months (< 4 kg)", "15 ml"]
+        - cells: ["2–< 4 months (4–< 6 kg)", "25 ml"]
+        - cells: ["4–< 12 months (6–< 10 kg)", "40 ml"]
+        - cells: ["1–< 3 years (10–< 14 kg)", "60 ml"]
+        - cells: ["3–< 5 years (14–< 19 kg)", "80 ml"]
+
+    - type: "prose"
+      title: "After the bolus"
+      markdown: |
+        - **Recheck glucose at 30 min.** If still low, **repeat 5 ml/kg**
+          of 10% glucose.
+        - **Feed as soon as the child is conscious.**
+        - If the child **cannot feed safely** (aspiration risk):
+          - **milk or sugar water by NG tube** — 4 level teaspoons sugar
+            (20 g) in a 200 ml cup of clean water, or
+          - **IV fluids containing 5–10% glucose**.
+
+    - type: "prose"
+      title: "If only 50% glucose is available"
+      markdown: |
+        50% glucose = 50% dextrose. To make ~10%:
+        - **1 part 50% in 4 parts sterile water**, or
+        - **1 part 50% in 9 parts 5% glucose** (e.g. 10 ml 50% + 90 ml 5%
+          → 100 ml ≈ 10%).
+
+    - type: "prose"
+      title: "Sublingual sugar — first aid"
+      callout: true
+      markdown: |
+        If IV access is impossible or delayed, place **1 level teaspoon of
+        sugar, moistened with water, under the tongue every 10–20 min**.
