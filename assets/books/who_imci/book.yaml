@@ -26,3 +26,4 @@ book:
         - topic: "topics/who_chart8_iv_fluids_sam.yaml"
         - topic: "topics/who_chart9_diazepam.yaml"
         - topic: "topics/who_chart10_glucose.yaml"
+        - topic: "topics/who_chart11_dehydration.yaml"

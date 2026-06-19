@@ -1,0 +1,94 @@
+# ============================================================
+# WHO IMCI Chart 11 — Treat severe dehydration in an emergency
+# (after initial management of shock)
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.17
+# 🛑 Pending OpenEvidence review. Reviewer to confirm/refine:
+#   - This chart is the NON-SAM rapid-rehydration regimen (70 ml/kg RL
+#     over 5 h infants / 2.5 h children). Severely malnourished children
+#     need a DIFFERENT, slower approach (ReSoMal / low-osmolarity ORS;
+#     GASTROSAM raised questions about WHO SAM-dehydration fluids) — flag
+#     whether to add an explicit SAM carve-out here.
+#   - Ringer's lactate (Hartmann's) preferred vs normal saline.
+#   - "run the drip more rapidly" if not improving — safety bounds?
+#   - ORS ~5 ml/kg/h and the reassess/observe timings.
+# ============================================================
+
+topic:
+  id: "who-imci-chart11-dehydration"
+  title: "Severe Dehydration (Emergency)"
+  list_subtitle: "IMCI Chart 11 · 70 ml/kg RL · then ORS"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["dehydration", "diarrhoea", "ringers lactate", "ors", "rehydration", "plan c", "imci", "pediatric"]
+  aliases:
+    - "Diarrhoea"
+    - "Rehydration"
+  category: "medical"
+
+  page_number: 17
+
+  blocks:
+
+    - type: "prose"
+      title: "When to use this chart"
+      highlight: true
+      markdown: |
+        - **Severe dehydration but NO shock** → use diarrhoea
+          **treatment Plan C** (p.131), not this chart.
+        - **If the child is in shock**, first follow
+          [Chart 7](topic:who-imci-chart7-iv-fluids-shock) /
+          [Chart 8](topic:who-imci-chart8-iv-fluids-sam) (SAM). Switch
+          to this chart once the **pulse slows** or **capillary refill
+          speeds up**.
+
+    - type: "prose"
+      title: "IV rehydration"
+      markdown: |
+        Give **70 ml/kg of Ringer's lactate (Hartmann's)** — or **normal
+        saline** if unavailable:
+        - **over 5 h** in infants **(< 12 months)**, or
+        - **over 2.5 h** in children **(12 months – 5 years)**.
+
+    - type: "table"
+      title: "IV fluid — 70 ml/kg total (rate per hour)"
+      columns: ["Weight", "< 12 mo · over 5 h", "12 mo–5 yr · over 2.5 h"]
+      column_flex: [2, 3, 3]
+      rows:
+        - cells: ["< 4 kg", "200 ml (40 ml/h)", "—"]
+        - cells: ["4–6 kg", "350 ml (70 ml/h)", "—"]
+        - cells: ["6–10 kg", "550 ml (110 ml/h)", "550 ml (220 ml/h)"]
+        - cells: ["10–14 kg", "850 ml (170 ml/h)", "850 ml (340 ml/h)"]
+        - cells: ["14–19 kg", "—", "1200 ml (480 ml/h)"]
+
+    - type: "prose"
+      title: "Reassess"
+      markdown: |
+        - Reassess **every 1–2 h**.
+        - If hydration **is not improving**, give the IV drip **more
+          rapidly**.
+
+    - type: "prose"
+      title: "Add ORS as soon as the child can drink"
+      markdown: |
+        Give **oral rehydration salt (ORS) ~5 ml/kg per hour** as soon as
+        the child can drink — usually after **3–4 h** (infants) or
+        **1–2 h** (children).
+
+    - type: "table"
+      title: "ORS — volume per hour"
+      columns: ["Weight", "ORS per hour"]
+      column_flex: [3, 2]
+      rows:
+        - cells: ["< 4 kg", "15 ml"]
+        - cells: ["4–6 kg", "25 ml"]
+        - cells: ["6–10 kg", "40 ml"]
+        - cells: ["10–14 kg", "60 ml"]
+        - cells: ["14–19 kg", "85 ml"]
+
+    - type: "prose"
+      title: "Then reclassify & continue"
+      markdown: |
+        - Reassess after **6 h** (infants) or **3 h** (children).
+          **Classify dehydration** and choose **Plan A / B / C**
+          (pp.138 / 135 / 131) to continue.
+        - If possible, **observe ≥ 6 h** after rehydration to confirm the
+          mother can maintain hydration with ORS by mouth.
