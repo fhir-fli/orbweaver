@@ -17,8 +17,9 @@ void main() {
     expect(topic.ownPaletteArgb['alert'], 0xFFD32F2F);
 
     final blocks = topic.blocks;
-    // technique, dose table, neonate, escalation, fever, airway callout.
-    expect(blocks.length, 6);
+    // first-line, rectal technique, dose table, neonate, escalation,
+    // fever, airway callout.
+    expect(blocks.length, 7);
 
     final table = blocks.whereType<TableBlock>().single;
     expect(table.columns.length, 2);

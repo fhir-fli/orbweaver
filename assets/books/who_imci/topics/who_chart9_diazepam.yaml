@@ -1,21 +1,27 @@
 # ============================================================
 # WHO IMCI Chart 9 — How to give diazepam rectally (convulsions)
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.15
-# 🛑 Pending OpenEvidence review. Reviewer to reconcile:
-#   - First-line agent: 2023 WHO EML + RCTs support buccal/intranasal
-#     midazolam as an alternative (often preferred) to rectal diazepam
-#     (faster cessation, easier administration). See 1.2 review.
-#   - 2nd-line / status: phenytoin vs fosphenytoin vs IV levetiracetam
-#     (ConSEPT/EcLiPSE: levetiracetam ≈ phenytoin) — confirm current
-#     ladder.
-#   - Phenobarbital dosing for neonates < 2 weeks.
+# OpenEvidence review applied 2026-06-18:
+#   - First-line: add buccal midazolam 0.5 mg/kg / intranasal 0.2 mg/kg
+#     (preferred; level-1 superiority over rectal diazepam — Kertam 2026
+#     meta-analysis, Cochrane 2018, 2026 AAP). Diazepam PR = fallback.
+#   - IV diazepam corrected 0.25 → 0.5 mg/kg (0.1 ml/kg, max 10 mg) per
+#     WHO (was a transcription error; 0.25 was subtherapeutic).
+#   - Status 2nd-line: add levetiracetam 40 mg/kg & valproate 20–40 mg/kg
+#     (ESETT/EcLiPSE equivalence); fosphenytoin preferred over phenytoin;
+#     phenytoin rate ≤ 1 mg/kg/min (was "over 60 min").
+#   - Neonate phenobarbital: note 200 mg/ml generic vs SEZABY 10 mg/ml.
+#   - Antipyretics don't prevent febrile-seizure recurrence.
+# id kept (who-imci-chart9-diazepam) — cross-links target it.
+# Diazepam PR table values are WHO Pocket Book verbatim (representative
+# weight per band); exact dose = 0.1 ml/kg of the 5 mg/ml solution.
 # ============================================================
 
 topic:
   id: "who-imci-chart9-diazepam"
-  title: "Rectal Diazepam (Convulsions)"
-  list_subtitle: "IMCI Chart 9 · 0.1 ml/kg PR · status ladder"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  title: "Anticonvulsant (Convulsions)"
+  list_subtitle: "IMCI Chart 9 · midazolam / rectal diazepam · status ladder"
+  last_reviewed: "OpenEvidence review 2026-06-18 · Kertam 2026 / ESETT / EcLiPSE / WHO"
   tags: ["convulsion", "seizure", "diazepam", "rectal", "status epilepticus", "phenobarbital", "imci", "pediatric"]
   aliases:
     - "Seizure"
@@ -33,8 +39,19 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "Give diazepam rectally"
+      title: "First-line anticonvulsant"
       highlight: true
+      markdown: |
+        Where available, **midazolam is preferred** (faster, easier;
+        level-1 evidence over rectal diazepam):
+        - **Buccal midazolam 0.5 mg/kg** (max 10 mg), or
+        - **Intranasal midazolam 0.2 mg/kg** (max 10 mg).
+
+        If midazolam is unavailable, give **rectal diazepam 0.5 mg/kg**
+        (0.1 ml/kg) — technique and doses below.
+
+    - type: "prose"
+      title: "Rectal diazepam — how to give"
       markdown: |
         - Draw the dose from a diazepam ampoule into a **1-ml tuberculin
           syringe** (dose by weight), then **remove the needle**.
@@ -55,8 +72,10 @@ topic:
     - type: "prose"
       title: "Neonate < 2 weeks — use phenobarbital"
       markdown: |
-        Give **phenobarbital 20 mg/kg** (200 mg/ml), repeat if convulsions
-        continue:
+        Give **phenobarbital 20 mg/kg IV/IM**, repeat **10 mg/kg** after
+        30 min if convulsions continue. Volumes below assume the **200
+        mg/ml** generic (the SEZABY neonatal form is **10 mg/ml** —
+        recalculate):
         - **2 kg:** 0.2 ml, then 0.1 ml after 30 min
         - **3 kg:** 0.3 ml, then 0.15 ml after 30 min
 
@@ -64,13 +83,17 @@ topic:
       title: "If convulsions continue"
       highlight: true
       markdown: |
-        - **After 10 min:** give a **second dose of diazepam** (or IV
-          diazepam **0.05 ml/kg = 0.25 mg/kg** if a line is running).
-          **Do not exceed two doses** of diazepam.
-        - **After another 10 min — suspect status epilepticus:**
-          - **Phenobarbital 15 mg/kg IM or IV over 15 min**, or
-          - **Phenytoin 15–18 mg/kg IV** over 60 min, through a **separate
-            line** (caustic — extravasation causes local damage).
+        - **After 10 min:** give a **second dose** (midazolam or diazepam;
+          or **IV diazepam 0.1 ml/kg = 0.5 mg/kg**, max 10 mg, if a line is
+          running). **Do not exceed two benzodiazepine doses.**
+        - **After another 10 min — suspect status epilepticus.** Give a
+          **second-line agent** (all equivalent — choose by availability):
+          - **Levetiracetam 40 mg/kg IV** over 15 min, or
+          - **Phenobarbital 15–20 mg/kg IV/IM**, or
+          - **Fosphenytoin/phenytoin 15–20 mg/kg IV** at **≤ 1 mg/kg/min**
+            via a **separate line** (phenytoin is caustic — fosphenytoin
+            preferred where available), or
+          - **Valproate 20–40 mg/kg IV** where available.
 
     - type: "prose"
       title: "If high fever"
@@ -79,7 +102,8 @@ topic:
         - Give **no oral medication** until the convulsion is controlled
           (aspiration risk).
         - Once it stops and the child can swallow, give **paracetamol or
-          ibuprofen**.
+          ibuprofen** (for comfort — antipyretics do **not** prevent
+          febrile-seizure recurrence).
 
     - type: "prose"
       title: "⚠ Airway safety"
