@@ -60,7 +60,8 @@ topic:
       highlight: true
       markdown: |
         - **Confirm the child is not severely malnourished** — shock with
-          SAM uses different volume/rate → **Chart 8**.
+          SAM uses different volume/rate →
+          [Chart 8](topic:who-imci-chart8-iv-fluids-sam).
         - **Insert an IV (or IO) line** and draw blood for emergency labs.
         - Use **Ringer's lactate or normal saline** — PRoMPT BOLUS (2026,
           n≈8500) found **no outcome difference**; either is acceptable.

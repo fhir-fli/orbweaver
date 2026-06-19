@@ -23,3 +23,4 @@ book:
         - topic: "topics/who_chart5_oxygen.yaml"
         - topic: "topics/who_chart6_positioning.yaml"
         - topic: "topics/who_chart7_iv_fluids_shock.yaml"
+        - topic: "topics/who_chart8_iv_fluids_sam.yaml"

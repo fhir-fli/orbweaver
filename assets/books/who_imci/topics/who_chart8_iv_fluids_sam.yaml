@@ -1,0 +1,106 @@
+# ============================================================
+# WHO IMCI Chart 8 — IV fluids for shock in a child WITH severe
+# acute malnutrition (SAM)
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.14
+# 🛑 Pending OpenEvidence review. The 2013 SAM approach is already
+# conservative (gated on frank shock + reduced consciousness; 15 ml/kg
+# over 1 h, NOT rapid boluses; explicit stop-for-overload) and broadly
+# consistent with post-FEAST caution. Reviewer to reconcile against:
+#   - FEAST 2011 (bolus harm) — SAM children were excluded, so SAM
+#     guidance rests on separate evidence.
+#   - GASTROSAM (Maitland, NEJM 2025): in SAM + gastroenteritis, a slow
+#     8-h IV strategy (100 ml/kg over 8 h, no boluses) ≈ ORS and ≈ Plan
+#     C on mortality — relevant to the rehydration step and Charts 11/13.
+#   - Confirm ReSoMal / F-75 / antibiotic cross-refs vs current WHO SAM
+#     guidance.
+# Shock WITHOUT severe malnutrition = Chart 7.
+# ============================================================
+
+topic:
+  id: "who-imci-chart8-iv-fluids-sam"
+  title: "IV Fluids for Shock (with SAM)"
+  list_subtitle: "IMCI Chart 8 · only if frank shock · 15 ml/kg over 1 h"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["shock", "severe malnutrition", "sam", "iv fluids", "resomal", "f-75", "imci", "pediatric"]
+  aliases:
+    - "Malnutrition Shock"
+    - "SAM Shock"
+  category: "medical"
+  # STOP / harm callout renders red.
+  palette:
+    alert: "0xFFD32F2F"
+    alert_fill: "0xFFFDECEA"
+    alert_text: "0xFFB71C1C"
+
+  page_number: 14
+
+  blocks:
+
+    - type: "prose"
+      title: "Give ONLY if in shock"
+      highlight: true
+      markdown: |
+        Use this **only** if the malnourished child has **signs of shock**
+        **and** is **lethargic or unconscious**. Malnourished children
+        tolerate fluid poorly — when not in frank shock, rehydrate slowly
+        by mouth/NG (ReSoMal), **not** IV.
+
+    - type: "prose"
+      title: "First steps"
+      markdown: |
+        - **Insert an IV (or IO) line** and draw blood for emergency labs.
+        - **Weigh** (or estimate) the child to calculate the volume.
+        - Give IV fluid **15 ml/kg over 1 hour** — use whichever is
+          available:
+          - **Ringer's lactate with 5% glucose**, or
+          - **half-strength Darrow's with 5% glucose**, or
+          - **0.45% saline with 5% glucose**.
+
+    - type: "table"
+      title: "Volume — 15 ml/kg over 1 hour"
+      columns: ["Weight", "Over 1 h"]
+      column_flex: [1, 1]
+      rows:
+        - cells: ["4 kg", "60 ml"]
+        - cells: ["6 kg", "90 ml"]
+        - cells: ["8 kg", "120 ml"]
+        - cells: ["10 kg", "150 ml"]
+        - cells: ["12 kg", "180 ml"]
+        - cells: ["14 kg", "210 ml"]
+        - cells: ["16 kg", "240 ml"]
+        - cells: ["18 kg", "270 ml"]
+
+    - type: "prose"
+      title: "Monitor every 5–10 min"
+      markdown: |
+        Check **pulse rate, pulse volume, and breathing rate** at the
+        start and **every 5–10 minutes**.
+
+    - type: "prose"
+      title: "If improving (and no pulmonary oedema)"
+      highlight: true
+      markdown: |
+        Improvement = **pulse rate falls, pulse volume rises, or
+        respiratory rate falls**.
+
+        - **Repeat 15 ml/kg over 1 hour**, then
+        - switch to **oral/NG ReSoMal 10 ml/kg/h for up to 10 h** (p.204),
+        - and start **re-feeding with F-75** (p.209).
+
+    - type: "prose"
+      title: "If no improvement after two boluses"
+      markdown: |
+        - Give **maintenance IV fluid 4 ml/kg/h** while waiting for blood.
+        - When available, transfuse **fresh whole blood 10 ml/kg slowly
+          over 3 h** (packed cells if in cardiac failure), then
+        - start **F-75** re-feeding (p.209) and **IV antibiotics** (p.207).
+
+    - type: "prose"
+      title: "⚠ If the child deteriorates — STOP"
+      callout: true
+      markdown: |
+        Stop the infusion if any appear (IV fluid is causing **pulmonary
+        oedema**):
+        - **Respiratory rate up ≥ 5/min** or **pulse up ≥ 15/min**
+        - **Liver enlarges**, **fine crackles** throughout the lungs
+        - **Raised JVP** or a **gallop rhythm**
