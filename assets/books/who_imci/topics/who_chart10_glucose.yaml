@@ -16,8 +16,9 @@
 #     (Baker 2020, Malawi) — raising it did not reduce mortality.
 #   - Volume table & sublingual first-aid confirmed correct (sublingual
 #     supported by 2024 AHA/Red Cross + Cochrane 2019). No change.
-# Not added (flagged to Grey, not in required-changes): 40% oral dextrose
-# gel as a bridge therapy (Cochrane; increasingly available).
+#   - Added 40% buccal dextrose gel as an evidence-based bridge when IV is
+#     impossible/delayed (Cochrane 2019; Sugar Babies) — 0.5 ml/kg (0.2
+#     g/kg) of 40% gel rubbed into the buccal mucosa. (Per Grey 2026-06-18.)
 # ============================================================
 
 topic:
@@ -102,8 +103,11 @@ topic:
         haemorrhage**. Always **dilute to ≤ 12.5%** for a peripheral IV.
 
     - type: "prose"
-      title: "Sublingual sugar — first aid"
+      title: "Buccal glucose — first aid"
       callout: true
       markdown: |
-        If IV access is impossible or delayed, place **1 level teaspoon of
-        sugar, moistened with water, under the tongue every 10–20 min**.
+        If IV access is impossible or delayed:
+        - Where available, **40% dextrose gel 0.5 ml/kg (0.2 g/kg)** rubbed
+          into the **buccal mucosa**, or
+        - **1 level teaspoon of sugar, moistened with water, under the
+          tongue every 10–20 min**.
