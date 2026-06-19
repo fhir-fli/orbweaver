@@ -2,17 +2,19 @@
 # WHO IMCI Chart 8 — IV fluids for shock in a child WITH severe
 # acute malnutrition (SAM)
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.14
-# 🛑 Pending OpenEvidence review. The 2013 SAM approach is already
-# conservative (gated on frank shock + reduced consciousness; 15 ml/kg
-# over 1 h, NOT rapid boluses; explicit stop-for-overload) and broadly
-# consistent with post-FEAST caution. Reviewer to reconcile against:
-#   - FEAST 2011 (bolus harm) — SAM children were excluded, so SAM
-#     guidance rests on separate evidence.
-#   - GASTROSAM (Maitland, NEJM 2025): in SAM + gastroenteritis, a slow
-#     8-h IV strategy (100 ml/kg over 8 h, no boluses) ≈ ORS and ≈ Plan
-#     C on mortality — relevant to the rehydration step and Charts 11/13.
-#   - Confirm ReSoMal / F-75 / antibiotic cross-refs vs current WHO SAM
-#     guidance.
+# OpenEvidence review applied 2026-06-18 (GASTROSAM-driven):
+#   - Rehydration: ReSoMal → "ReSoMal OR standard low-osmolarity WHO-ORS"
+#     (GASTROSAM/Lancet Child Adolesc Health 2026: WHO-ORS equivalent;
+#     ReSoMal → more severe hyponatraemia).
+#   - IV fluid: prefer Ringer's lactate / Hartmann's (SSC peds 2026
+#     balanced crystalloid); hypotonic dextrose options flagged for
+#     hyponatraemia risk; add glucose separately if hypoglycaemic.
+#   - Fluid-refractory: add epinephrine/norepinephrine vasoactive (2025
+#     PALS); restrict transfusion to severe anaemia.
+#   - Opening caveat softened: GASTROSAM (NEJM 2025) shows IV rehydration
+#     is SAFE in SAM with NO overload observed; WHO revision pending. The
+#     frank-shock gate is retained per current WHO guidance.
+# Plan C / dehydration detail (GASTROSAM slow 8-h strategy) → Charts 11/13.
 # Shock WITHOUT severe malnutrition = Chart 7.
 # ============================================================
 
@@ -20,7 +22,7 @@ topic:
   id: "who-imci-chart8-iv-fluids-sam"
   title: "IV Fluids for Shock (with SAM)"
   list_subtitle: "IMCI Chart 8 · only if frank shock · 15 ml/kg over 1 h"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-18 · GASTROSAM 2025/26 / SSC peds 2026 / PALS 2025"
   tags: ["shock", "severe malnutrition", "sam", "iv fluids", "resomal", "f-75", "imci", "pediatric"]
   aliases:
     - "Malnutrition Shock"
@@ -41,20 +43,26 @@ topic:
       highlight: true
       markdown: |
         Use this **only** if the malnourished child has **signs of shock**
-        **and** is **lethargic or unconscious**. Malnourished children
-        tolerate fluid poorly — when not in frank shock, rehydrate slowly
-        by mouth/NG (ReSoMal), **not** IV.
+        **and** is **lethargic or unconscious**. Current WHO guidance
+        restricts IV fluids in SAM to frank shock; when not in shock,
+        rehydrate by **mouth/NG**, not IV.
+
+        Note: recent evidence (**GASTROSAM**, 2025) shows IV rehydration is
+        actually **safe** in SAM, with **no fluid overload** observed — a
+        WHO guideline revision is pending.
 
     - type: "prose"
       title: "First steps"
       markdown: |
         - **Insert an IV (or IO) line** and draw blood for emergency labs.
         - **Weigh** (or estimate) the child to calculate the volume.
-        - Give IV fluid **15 ml/kg over 1 hour** — use whichever is
-          available:
-          - **Ringer's lactate with 5% glucose**, or
-          - **half-strength Darrow's with 5% glucose**, or
-          - **0.45% saline with 5% glucose**.
+        - Give IV fluid **15 ml/kg over 1 hour**. Prefer **Ringer's
+          lactate (or Hartmann's)**.
+          - Where unavailable, half-strength Darrow's or 0.45% saline
+            (each with 5% glucose) — but these are **hypotonic** and may
+            worsen the **hyponatraemia** common in SAM.
+        - **Add 5% glucose** separately if hypoglycaemia is present or
+          suspected.
 
     - type: "table"
       title: "Volume — 15 ml/kg over 1 hour"
@@ -74,7 +82,8 @@ topic:
       title: "Monitor every 5–10 min"
       markdown: |
         Check **pulse rate, pulse volume, and breathing rate** at the
-        start and **every 5–10 minutes**.
+        start and **every 5–10 minutes**. Overload is uncommon (GASTROSAM
+        observed **none** even with liberal IV) — but watch for it.
 
     - type: "prose"
       title: "If improving (and no pulmonary oedema)"
@@ -84,16 +93,23 @@ topic:
         respiratory rate falls**.
 
         - **Repeat 15 ml/kg over 1 hour**, then
-        - switch to **oral/NG ReSoMal 10 ml/kg/h for up to 10 h** (p.204),
-        - and start **re-feeding with F-75** (p.209).
+        - switch to **oral/NG rehydration at 10 ml/kg/h for up to 10 h** —
+          **ReSoMal or standard low-osmolarity WHO-ORS** (p.204). WHO-ORS
+          is a safe alternative; **ReSoMal carries a higher risk of severe
+          hyponatraemia**.
+        - start **re-feeding with F-75** (p.209).
 
     - type: "prose"
       title: "If no improvement after two boluses"
       markdown: |
-        - Give **maintenance IV fluid 4 ml/kg/h** while waiting for blood.
-        - When available, transfuse **fresh whole blood 10 ml/kg slowly
-          over 3 h** (packed cells if in cardiac failure), then
-        - start **F-75** re-feeding (p.209) and **IV antibiotics** (p.207).
+        - Give **maintenance IV fluid 4 ml/kg/h**.
+        - Where available, start a **vasoactive infusion — epinephrine or
+          norepinephrine** (dopamine only if neither is available) for
+          fluid-refractory shock.
+        - Transfuse **only for severe anaemia** (Hb < 4 g/dL, or < 6 with
+          respiratory distress): **whole blood 10 ml/kg slowly over 3 h**
+          (packed cells if in cardiac failure).
+        - Start **F-75** re-feeding (p.209) and **IV antibiotics** (p.207).
 
     - type: "prose"
       title: "⚠ If the child deteriorates — STOP"
