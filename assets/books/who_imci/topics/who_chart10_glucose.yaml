@@ -1,17 +1,30 @@
 # ============================================================
 # WHO IMCI Chart 10 — How to give glucose intravenously (hypoglycaemia)
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.16
-# 🛑 Pending OpenEvidence review. Reviewer to confirm: hypoglycaemia
-# thresholds (<2.5 mmol/L general, <3 mmol/L SAM) vs current peds/
-# neonatal definitions; 10% glucose 5 ml/kg (0.5 g/kg) vs PALS 0.5–1
-# g/kg; sublingual-sugar first-aid evidence.
+# OpenEvidence review applied 2026-06-18:
+#   - Dilution formula #2 corrected: WHO's "1 part 50% in 9 parts 5%" yields
+#     ~9.5%, not 10%. Changed to 1:8 (50%:5%) → exact 10% (90/9).
+#   - Added 50% dextrose safety callout: never give undiluted D50 to
+#     neonates/young children (osmotic injury, hyperglycaemia, ICH; FDA
+#     label) — dilute to ≤ 12.5% for peripheral IV.
+#   - Added dose-discrepancy note: WHO 5 ml/kg (0.5 g/kg) is ~2.5× the
+#     PES/AAP/APLS standard 2 ml/kg (0.2 g/kg); higher WHO dose suits
+#     settings where monitoring/repeat dosing may be delayed.
+#   - Added maintenance-infusion guidance (GIR 5–8 mg/kg/min) to prevent
+#     rebound hypoglycaemia (Luo 2024 review; CHI management).
+#   - Threshold context: 2.5 mmol/L cutoff supported by SugarFACT RCT
+#     (Baker 2020, Malawi) — raising it did not reduce mortality.
+#   - Volume table & sublingual first-aid confirmed correct (sublingual
+#     supported by 2024 AHA/Red Cross + Cochrane 2019). No change.
+# Not added (flagged to Grey, not in required-changes): 40% oral dextrose
+# gel as a bridge therapy (Cochrane; increasingly available).
 # ============================================================
 
 topic:
   id: "who-imci-chart10-glucose"
   title: "IV Glucose (Hypoglycaemia)"
   list_subtitle: "IMCI Chart 10 · 5 ml/kg of 10% glucose"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-18 · SugarFACT / PES / Luo 2024 / WHO"
   tags: ["hypoglycaemia", "glucose", "dextrose", "iv", "d10", "imci", "pediatric"]
   aliases:
     - "Hypoglycemia"
@@ -44,10 +57,22 @@ topic:
         - cells: ["3–< 5 years (14–< 19 kg)", "80 ml"]
 
     - type: "prose"
+      title: "Dose & threshold context"
+      markdown: |
+        - WHO uses **5 ml/kg (0.5 g/kg)** — about **2.5× the PES / AAP /
+          APLS standard of 2 ml/kg (0.2 g/kg)**. The higher WHO dose suits
+          settings where glucose monitoring and repeat dosing may be
+          delayed.
+        - The **2.5 mmol/L** cutoff is supported by the **SugarFACT** RCT
+          (Malawi) — raising it did **not** reduce mortality.
+
+    - type: "prose"
       title: "After the bolus"
       markdown: |
         - **Recheck glucose at 30 min.** If still low, **repeat 5 ml/kg**
           of 10% glucose.
+        - **Start a maintenance 10% glucose infusion** (≈ 5–8 mg/kg/min;
+          use 5% if 10% is unavailable) to prevent **rebound hypoglycaemia**.
         - **Feed as soon as the child is conscious.**
         - If the child **cannot feed safely** (aspiration risk):
           - **milk or sugar water by NG tube** — 4 level teaspoons sugar
@@ -59,8 +84,22 @@ topic:
       markdown: |
         50% glucose = 50% dextrose. To make ~10%:
         - **1 part 50% in 4 parts sterile water**, or
-        - **1 part 50% in 9 parts 5% glucose** (e.g. 10 ml 50% + 90 ml 5%
-          → 100 ml ≈ 10%).
+        - **1 part 50% in 8 parts 5% glucose** (e.g. 10 ml 50% + 80 ml 5%
+          → 90 ml = 10%).
+
+    - type: "prose"
+      title: "⚠ Never give undiluted 50% dextrose"
+      callout: true
+      # Per-block palette: this danger callout reads red, while the
+      # sublingual first-aid tip below keeps the default amber.
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Never give **undiluted 50% dextrose** to neonates or young children
+        — risk of **osmotic injury, hyperglycaemia, and intracerebral
+        haemorrhage**. Always **dilute to ≤ 12.5%** for a peripheral IV.
 
     - type: "prose"
       title: "Sublingual sugar — first aid"
