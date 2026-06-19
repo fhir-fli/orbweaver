@@ -36,8 +36,10 @@ void main() {
     test('golden MME pairs', () {
       // oxycodone 20 mg PO → 30 MME
       expect(b.toReference(agent('Oxycodone', 'PO'), 20), closeTo(30, 1e-9));
-      // hydromorphone 4 mg PO → 16 MME
-      expect(b.toReference(agent('Hydromorphone', 'PO'), 4), closeTo(16, 1e-9));
+      // hydromorphone 4 mg PO → 20 MME (CDC factor 5.0)
+      expect(b.toReference(agent('Hydromorphone', 'PO'), 4), closeTo(20, 1e-9));
+      // tramadol 100 mg PO → 20 MME (CDC factor 0.2)
+      expect(b.toReference(agent('Tramadol', 'PO'), 100), closeTo(20, 1e-9));
       // morphine 10 mg IV/SC → 30 MME
       expect(b.toReference(agent('Morphine', 'IV/SC'), 10), closeTo(30, 1e-9));
       // codeine 200 mg PO → 30 MME
@@ -48,10 +50,10 @@ void main() {
       // oxycodone 30 mg PO → MME → oral morphine
       final mme = b.toReference(agent('Oxycodone', 'PO'), 30)!; // 45
       expect(b.fromReference(agent('Morphine', 'PO'), mme), closeTo(45, 1e-9));
-      // …→ hydromorphone PO (÷4)
+      // …→ hydromorphone PO (÷5)
       expect(
         b.fromReference(agent('Hydromorphone', 'PO'), mme),
-        closeTo(11.25, 1e-9),
+        closeTo(9, 1e-9),
       );
     });
 
@@ -67,7 +69,7 @@ void main() {
     test('route variants apply distinct factors', () {
       expect(agent('Morphine', 'PO').factor, 1.0);
       expect(agent('Morphine', 'IV/SC').factor, 3.0);
-      expect(agent('Hydromorphone', 'PO').factor, 4.0);
+      expect(agent('Hydromorphone', 'PO').factor, 5.0);
       expect(agent('Hydromorphone', 'IV').factor, 20.0);
     });
 
@@ -112,6 +114,11 @@ void main() {
       expect(agent('Diazepam').factor, 1.0);
     });
 
+    test('oxazepam corrected to 0.5 (20 mg ≈ 10 mg diazepam)', () {
+      expect(agent('Oxazepam').factor, 0.5);
+      expect(b.toReference(agent('Oxazepam'), 20), closeTo(10, 1e-9));
+    });
+
     test('midazolam is excluded', () {
       expect(b.excluded.map((e) => e.name), contains('Midazolam'));
     });
@@ -147,6 +154,16 @@ void main() {
       expect(highDoses('Rosuvastatin'), ['20 mg', '40 mg']);
       // Simvastatin has no High-intensity dose.
       expect(highDoses('Simvastatin'), isEmpty);
+    });
+
+    test('pitavastatin 1 mg corrected to Moderate (no Low pitavastatin)', () {
+      final pitavastatin =
+          b.agents.firstWhere((a) => a.name == 'Pitavastatin');
+      expect(pitavastatin.doses.any((d) => d.tier == 'Low'), isFalse);
+      expect(
+        pitavastatin.doses.firstWhere((d) => d.dose == '1 mg').tier,
+        'Moderate',
+      );
     });
 
     test('agents have no equivalence factors (tiers mode)', () {

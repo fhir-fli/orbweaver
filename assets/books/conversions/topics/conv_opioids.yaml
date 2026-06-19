@@ -1,14 +1,19 @@
 # ============================================================
 # Opioid conversion → oral morphine equivalents (MME)
-# Factors are ILLUSTRATIVE (CDC 2022 MME conversion factors) and
-# PENDING OpenEvidence review before clinical use.
+# Factors per the CDC 2022 MME table (oral) + standard parenteral
+# ratios. OpenEvidence review applied 2026-06-18:
+#   - Hydromorphone PO 4.0 → 5.0 (CDC value; NCCN uses 4.0).
+#   - Tramadol PO 0.1 → 0.2 (CDC value; NCCN uses 0.1).
+#   - Added Oxymorphone PO 3.0 (CDC).
+#   - Tapentadol kept excluded (mixed μ/NRI mechanism — CDC lists 0.4
+#     for surveillance, but not reliably equianalgesic for switching).
 # ============================================================
 
 topic:
   id: "conv-opioids"
   title: "Opioid Conversion"
   list_subtitle: "→ oral morphine equivalents (MME)"
-  last_reviewed: "illustrative CDC 2022 MME factors · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-18 · CDC 2022 MME table"
   tags: ["opioid", "conversion", "mme", "morphine", "oxycodone", "hydromorphone"]
   aliases:
     - "MME"
@@ -36,21 +41,22 @@ topic:
       reference: "oral morphine"
       reference_label: "MME"
       unit: "mg"
-      source: "CDC 2022 MME factors (illustrative — pending review)"
+      source: "CDC 2022 MME conversion factors (oral)"
       agents:
         - { name: "Morphine",      route: "PO",    factor: 1.0 }
         - { name: "Morphine",      route: "IV/SC", factor: 3.0 }
         - { name: "Oxycodone",     route: "PO",    factor: 1.5 }
-        - { name: "Hydromorphone", route: "PO",    factor: 4.0 }
+        - { name: "Oxymorphone",   route: "PO",    factor: 3.0 }
+        - { name: "Hydromorphone", route: "PO",    factor: 5.0 }
         - { name: "Hydromorphone", route: "IV",    factor: 20.0 }
         - { name: "Hydrocodone",   route: "PO",    factor: 1.0 }
         - { name: "Codeine",       route: "PO",    factor: 0.15 }
-        - { name: "Tramadol",      route: "PO",    factor: 0.1 }
+        - { name: "Tramadol",      route: "PO",    factor: 0.2 }
       excluded:
         - { name: "Methadone",        reason: "Nonlinear, dose-dependent ratio — specialist." }
         - { name: "Fentanyl (patch/IV)", reason: "Patch kinetics / specialist conversion." }
         - { name: "Buprenorphine",    reason: "Partial agonist with a ceiling effect." }
-        - { name: "Tapentadol",       reason: "No consensus equivalence factor." }
+        - { name: "Tapentadol",       reason: "Mixed μ-opioid/NRI mechanism — not reliably equianalgesic." }
       caveats:
         - "Reduce the calculated dose 25–50% for incomplete cross-tolerance."
         - "Estimates only — re-titrate to effect and reassess."

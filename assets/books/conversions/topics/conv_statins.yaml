@@ -1,14 +1,15 @@
 # ============================================================
 # Statin intensity equivalence (tiers mode)
-# Tiers/doses are ILLUSTRATIVE (2018 ACC/AHA Cholesterol Guideline
-# intensity table) and PENDING OpenEvidence review.
+# Per 2018 ACC/AHA Cholesterol Guideline Table 3. OpenEvidence
+# review applied 2026-06-18: Pitavastatin 1 mg Low → Moderate (1–4 mg
+# = moderate); added Fluvastatin + Lovastatin 80 mg; simva-80 caveat.
 # ============================================================
 
 topic:
   id: "conv-statins"
   title: "Statin Intensity"
   list_subtitle: "low / moderate / high intensity"
-  last_reviewed: "illustrative 2018 ACC/AHA table · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-18 · 2018 ACC/AHA Table 3"
   tags: ["statin", "conversion", "intensity", "atorvastatin", "rosuvastatin", "ldl"]
   aliases:
     - "Statin Equivalence"
@@ -28,7 +29,7 @@ topic:
       title: "Statin intensity"
       tiers: ["Low", "Moderate", "High"]
       tier_note: "LDL-C lowering intensity (2018 ACC/AHA)."
-      source: "2018 ACC/AHA Cholesterol Guideline (illustrative — pending review)"
+      source: "2018 ACC/AHA Cholesterol Guideline, Table 3"
       agents:
         - name: "Atorvastatin"
           doses:
@@ -57,10 +58,17 @@ topic:
           doses:
             - { dose: "20 mg", tier: "Low" }
             - { dose: "40 mg", tier: "Moderate" }
+            - { dose: "80 mg", tier: "Moderate" }
+        - name: "Fluvastatin"
+          doses:
+            - { dose: "20 mg", tier: "Low" }
+            - { dose: "40 mg", tier: "Low" }
+            - { dose: "80 mg XL", tier: "Moderate" }
         - name: "Pitavastatin"
           doses:
-            - { dose: "1 mg", tier: "Low" }
+            - { dose: "1 mg", tier: "Moderate" }
             - { dose: "2 mg", tier: "Moderate" }
             - { dose: "4 mg", tier: "Moderate" }
       caveats:
         - "Intensity equivalence ≠ interchangeable — weigh drug interactions, myopathy risk, and renal/hepatic dosing."
+        - "Simvastatin 80 mg is omitted — the FDA advises against it (myopathy/rhabdomyolysis risk)."
