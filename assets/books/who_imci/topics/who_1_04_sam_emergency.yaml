@@ -1,0 +1,87 @@
+# ============================================================
+# WHO IMCI §1.4 — Emergency treatment for a child with severe malnutrition
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), pp.19–20
+# 🛑 Pending OpenEvidence review. Reviewer to confirm/refine:
+#   - The core WHO stance — "severe dehydration but NOT in shock in SAM →
+#     do NOT give IV fluids; rehydrate orally with ReSoMal" — is exactly
+#     what the GASTROSAM trial re-examined. Flag whether current evidence
+#     supports the blanket no-IV rule and the slower/different fluid for
+#     SAM shock.
+#   - ReSoMal vs low-osmolarity WHO-ORS (hyponatraemia caveat raised in
+#     Chart 8 review).
+#   - Monitoring cadence (pulse/breathing q5–10 min) and the "many signs
+#     of shock" threshold for giving shock fluids.
+# ============================================================
+
+topic:
+  id: "who-imci-1-4-sam-emergency"
+  title: "SAM — Emergency Treatment"
+  list_subtitle: "1.4 · no IV for dehydration · ReSoMal · cautious shock fluids"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["severe malnutrition", "sam", "resomal", "dehydration", "shock", "hypoglycaemia", "imci", "pediatric"]
+  aliases:
+    - "Severe Malnutrition"
+    - "Malnutrition"
+    - "ReSoMal"
+  category: "medical"
+
+  page_number: 19
+
+  blocks:
+
+    - type: "prose"
+      title: "Every SAM child is a priority"
+      highlight: true
+      markdown: |
+        - **All** children with severe malnutrition are flagged at triage
+          as **priority** — prompt assessment and treatment.
+        - A **few** will have **emergency signs**. Treat
+          **airway / breathing** or **coma / convulsions** per the
+          emergency charts ([Chart 4](topic:who-imci-chart4-airway),
+          [Chart 9](topic:who-imci-chart9-diazepam); pp.5–17).
+
+    - type: "prose"
+      title: "Severe dehydration (not in shock) — do NOT give IV fluids"
+      highlight: true
+      # Per-block palette: this danger point reads red.
+      palette:
+        accent: "0xFFD32F2F"
+      markdown: |
+        Severe dehydration is **hard to diagnose in SAM and is often
+        misdiagnosed**. **IV fluids risk over-hydration and death from
+        heart failure.**
+        - **Rehydrate orally with ReSoMal** (the special SAM rehydration
+          solution) — see Chapter 7 (p.204).
+
+    - type: "prose"
+      title: "Shock in SAM"
+      markdown: |
+        - Individual **signs of shock can appear even when there is no
+          shock**.
+        - Give **shock fluids** only if the child has **many** signs
+          together — **lethargy, reduced consciousness, cold skin,
+          prolonged capillary refill, fast weak pulse**
+          ([Chart 8](topic:who-imci-chart8-iv-fluids-sam)).
+
+    - type: "prose"
+      title: "Why SAM shock treatment differs"
+      markdown: |
+        - Shock from **dehydration and sepsis often coexist** and are hard
+          to tell apart on clinical grounds.
+        - SAM children **may not cope with large volumes of water and
+          salt** — guide the **amount by the child's response** and
+          **avoid over-hydration**.
+        - **Monitor pulse and breathing at the start and every 5–10 min**
+          to check they are improving.
+        - The **type of IV fluid differs** for SAM and the **infusion rate
+          is slower** (see [Chart 8](topic:who-imci-chart8-iv-fluids-sam)).
+
+    - type: "prose"
+      title: "Also screen & treat in every SAM child"
+      markdown: |
+        Promptly assess and treat — and **prevent** where not yet present:
+        - **Hypoglycaemia** ([Chart 10](topic:who-imci-chart10-glucose))
+        - **Hypothermia**
+        - **Severe infection**
+        - **Severe anaemia**
+        - **Potentially blinding eye problems**
