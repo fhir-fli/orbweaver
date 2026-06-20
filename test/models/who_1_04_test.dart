@@ -16,14 +16,23 @@ void main() {
     expect(topic.pageNumber, 19);
 
     final blocks = topic.blocks;
-    // priority, no-IV-dehydration, shock, why-differs, also-screen.
-    expect(blocks.length, 5);
+    // priority, dehydration-without-shock, evidence-update, ReSoMal danger,
+    // shock, why-differs, also-screen.
+    expect(blocks.length, 7);
 
-    // The "do NOT give IV fluids" danger block overrides its accent to red.
+    // GASTROSAM update: the red danger is now the ReSoMal hyponatraemia
+    // callout (not "no IV fluids", which the trial refuted).
     final danger = blocks
         .whereType<ProseBlock>()
-        .firstWhere((b) => b.title!.contains('do NOT give IV fluids'));
-    expect(danger.highlight, isTrue);
-    expect(danger.ownPaletteArgb['accent'], 0xFFD32F2F);
+        .firstWhere((b) => b.title!.contains('ReSoMal'));
+    expect(danger.callout, isTrue);
+    expect(danger.ownPaletteArgb['alert'], 0xFFD32F2F);
+
+    // The evidence-update block is a blue-accented highlight.
+    final evidence = blocks
+        .whereType<ProseBlock>()
+        .firstWhere((b) => b.title!.contains('Evidence update'));
+    expect(evidence.highlight, isTrue);
+    expect(evidence.ownPaletteArgb['accent'], 0xFF1565C0);
   });
 }

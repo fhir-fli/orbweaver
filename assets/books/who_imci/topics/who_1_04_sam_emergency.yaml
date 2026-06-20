@@ -1,24 +1,34 @@
 # ============================================================
 # WHO IMCI §1.4 — Emergency treatment for a child with severe malnutrition
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), pp.19–20
-# 🛑 Pending OpenEvidence review. Reviewer to confirm/refine:
-#   - The core WHO stance — "severe dehydration but NOT in shock in SAM →
-#     do NOT give IV fluids; rehydrate orally with ReSoMal" — is exactly
-#     what the GASTROSAM trial re-examined. Flag whether current evidence
-#     supports the blanket no-IV rule and the slower/different fluid for
-#     SAM shock.
-#   - ReSoMal vs low-osmolarity WHO-ORS (hyponatraemia caveat raised in
-#     Chart 8 review).
-#   - Monitoring cadence (pulse/breathing q5–10 min) and the "many signs
-#     of shock" threshold for giving shock fluids.
+# OpenEvidence review applied 2026-06-20 — MAJOR update (GASTROSAM):
+#   - The 2013 blanket "no IV fluids in SAM dehydration → risk of fatal
+#     heart failure" was NEVER evidence-based and is now refuted. GASTROSAM
+#     (Maitland, NEJM 2025, n=272): 100 ml/kg IV over 3–8 h gave ZERO
+#     pulmonary oedema / heart failure / fluid overload; mortality no
+#     different (trend favouring IV). 2026 meta-analysis (Dewez, ADC; 3
+#     RCTs n=484): zero overload events, pooled in-hospital mortality RR
+#     0.71 favouring IV. Removed the "IV causes heart failure" claim; the
+#     chart now presents WHO 2013 default (oral/NG) WITH the evidence note
+#     that IV appears safe & guideline revision is pending.
+#   - ORS: WHO-ORS equivalent to ReSoMal (GASTROSAM, Lancet Child Adolesc
+#     Health 2026, n=415); ReSoMal → MORE severe hyponatraemia (seizures at
+#     Na 108). WHO 2023 already allows WHO-ORS when ReSoMal unavailable.
+#     Red danger emphasis MOVED from "no IV" → ReSoMal hyponatraemia.
+#   - Dehydration dx unreliable in SAM strengthened: IMCI ~76% false-pos
+#     for severe dehydration (DHAKA validation); 93% of GASTROSAM oral
+#     group needed NG, 9% progressed to shock.
+#   - Shock threshold clarified: multiple concurrent signs, not tachycardia
+#     alone. Added severe hyponatraemia to the screen-&-treat list.
+# 🛑 Formal WHO guideline revision still PENDING — wording reflects that.
 # ============================================================
 
 topic:
   id: "who-imci-1-4-sam-emergency"
   title: "SAM — Emergency Treatment"
-  list_subtitle: "1.4 · no IV for dehydration · ReSoMal · cautious shock fluids"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["severe malnutrition", "sam", "resomal", "dehydration", "shock", "hypoglycaemia", "imci", "pediatric"]
+  list_subtitle: "1.4 · oral/NG rehydration · GASTROSAM update · cautious shock fluids"
+  last_reviewed: "OpenEvidence review 2026-06-20 · GASTROSAM (NEJM 2025 / Lancet CAH 2026) / Dewez ADC 2026"
+  tags: ["severe malnutrition", "sam", "resomal", "who-ors", "dehydration", "shock", "gastrosam", "hyponatraemia", "imci", "pediatric"]
   aliases:
     - "Severe Malnutrition"
     - "Malnutrition"
@@ -41,26 +51,61 @@ topic:
           [Chart 9](topic:who-imci-chart9-diazepam); pp.5–17).
 
     - type: "prose"
-      title: "Severe dehydration (not in shock) — do NOT give IV fluids"
+      title: "Severe dehydration without shock"
       highlight: true
-      # Per-block palette: this danger point reads red.
-      palette:
-        accent: "0xFFD32F2F"
       markdown: |
-        Severe dehydration is **hard to diagnose in SAM and is often
-        misdiagnosed**. **IV fluids risk over-hydration and death from
-        heart failure.**
-        - **Rehydrate orally with ReSoMal** (the special SAM rehydration
-          solution) — see Chapter 7 (p.204).
+        WHO 2013 restricts IV fluids in SAM to **frank shock** and
+        rehydrates everyone else by mouth:
+        - **Rehydrate orally or by NG tube** with **ReSoMal or standard
+          low-osmolarity WHO-ORS** — see Chapter 7 (p.204).
+        - **Dehydration is hard to diagnose in SAM** — signs (sunken eyes,
+          slow skin pinch) overlap with malnutrition itself. The IMCI
+          algorithm has a **~76% false-positive rate** for severe
+          dehydration here, so **do not over-diagnose**.
+
+    - type: "prose"
+      title: "Evidence update — IV fluids appear safe in SAM"
+      highlight: true
+      # Per-block palette: blue marks this as newer evidence than the 2013
+      # WHO text above (guideline revision still pending).
+      palette:
+        accent: "0xFF1565C0"
+      markdown: |
+        The old fear that IV fluids cause **fatal heart failure** in SAM
+        was **never evidence-based** and is now refuted:
+        - **GASTROSAM** (NEJM 2025) gave **100 ml/kg IV over 3–8 h** with
+          **zero** pulmonary oedema, heart failure or overload; mortality
+          no different (trend favouring IV).
+        - **2026 meta-analysis** (3 RCTs, n=484): **zero overload events**.
+        - Oral rehydration often **fails** — 93% of the GASTROSAM oral
+          group needed an NG tube and **9% progressed to shock**.
+
+        Until WHO updates its guideline, **oral/NG is still the default**,
+        but **IV rehydration appears safe** when oral fails.
+
+    - type: "prose"
+      title: "⚠ ReSoMal — watch for hyponatraemia"
+      callout: true
+      # Genuine remaining danger → red.
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **ReSoMal carries a higher risk of severe hyponatraemia** (RCT
+        seizures at Na 108). **Standard low-osmolarity WHO-ORS is an
+        equivalent, safer alternative** (GASTROSAM, Lancet CAH 2026; WHO
+        already allows it when ReSoMal is unavailable). **Check sodium.**
 
     - type: "prose"
       title: "Shock in SAM"
       markdown: |
         - Individual **signs of shock can appear even when there is no
           shock**.
-        - Give **shock fluids** only if the child has **many** signs
-          together — **lethargy, reduced consciousness, cold skin,
-          prolonged capillary refill, fast weak pulse**
+        - **Shock = lethargy or reduced consciousness PLUS cold
+          peripheries, capillary refill > 3 s, AND a fast weak pulse.** A
+          **single sign** (e.g. tachycardia alone) is **not** shock.
+        - For true shock, give SAM-specific shock fluids
           ([Chart 8](topic:who-imci-chart8-iv-fluids-sam)).
 
     - type: "prose"
@@ -68,13 +113,13 @@ topic:
       markdown: |
         - Shock from **dehydration and sepsis often coexist** and are hard
           to tell apart on clinical grounds.
-        - SAM children **may not cope with large volumes of water and
-          salt** — guide the **amount by the child's response** and
-          **avoid over-hydration**.
-        - **Monitor pulse and breathing at the start and every 5–10 min**
-          to check they are improving.
-        - The **type of IV fluid differs** for SAM and the **infusion rate
-          is slower** (see [Chart 8](topic:who-imci-chart8-iv-fluids-sam)).
+        - Older teaching held that SAM children **tolerate fluids poorly**;
+          recent RCTs show **normal cardiac function and fluid
+          responsiveness**. Still **guide the amount by the child's
+          response** and watch for overload.
+        - **Monitor pulse and breathing at the start and every 5–10 min.**
+        - The **type of IV fluid differs** for SAM and the **rate is
+          slower** (see [Chart 8](topic:who-imci-chart8-iv-fluids-sam)).
 
     - type: "prose"
       title: "Also screen & treat in every SAM child"
@@ -84,4 +129,5 @@ topic:
         - **Hypothermia**
         - **Severe infection**
         - **Severe anaemia**
+        - **Severe hyponatraemia** (especially if ReSoMal is used)
         - **Potentially blinding eye problems**
