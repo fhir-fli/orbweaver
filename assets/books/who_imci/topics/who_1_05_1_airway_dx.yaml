@@ -1,7 +1,17 @@
 # ============================================================
 # WHO IMCI §1.5.1 — Child presenting with an airway or severe breathing
 # problem. Pocket Book 2nd ed (2013), pp.20–21 (incl. Table 1).
-# 🛑 Pending OpenEvidence review.
+# OpenEvidence review applied 2026-06-20:
+#   - Pneumonia: hypoxia + increased work of breathing = key discriminators
+#     (Shah JAMA 2017).
+#   - FBA: + focal hyperinflation on CXR (OR 8.3; Lee 2021).
+#   - Retropharyngeal abscess REWRITTEN: neck pain/limited extension/
+#     torticollis most common; stridor rare; peak 2–5 yr (Craig 2003).
+#   - Diphtheria: + sore throat w/ painful swallowing, cervical
+#     lymphadenopathy.
+#   - NEW cannot-miss row: epiglottitis (no barking cough vs croup).
+#   - History: + sudden stridor in a well child (FBA), toxic/drooling.
+#   Not added (reviewer "consider" only, not in required list): bronchiolitis.
 # ============================================================
 
 topic:
@@ -25,7 +35,10 @@ topic:
         - Previous similar episodes
         - Upper respiratory tract infection
         - **Cough** and duration (days)
-        - History of **choking**
+        - History of **choking**; **sudden stridor in a previously well
+          child** favours foreign body
+        - **Toxic appearance / drooling** (epiglottitis or retropharyngeal
+          abscess)
         - Present since birth or acquired
         - **Vaccination history:** DPT, measles
         - Known **HIV** infection
@@ -57,10 +70,10 @@ topic:
         - cells:
             - "Pneumonia"
             - - "Cough with fast breathing and fever"
+              - "Hypoxia (low SpO₂) and increased work of breathing — key discriminators"
               - "Grunting or difficulty breathing"
               - "Develops over days, worsening"
-              - "Crepitations on auscultation"
-              - "Signs of consolidation or effusion"
+              - "Crepitations; consolidation or effusion"
         - cells:
             - "Asthma"
             - - "Recurrent wheezing"
@@ -72,11 +85,18 @@ topic:
             - - "History of sudden choking"
               - "Sudden stridor or respiratory distress"
               - "Focal reduced air entry or wheeze"
+              - "Focal hyperinflation on chest X-ray"
         - cells:
             - "Retropharyngeal abscess"
-            - - "Slow development, worsening"
-              - "Inability to swallow"
-              - "High fever"
+            - - "Fever, neck pain, limited neck extension or torticollis"
+              - "Inability to swallow / drooling"
+              - "Neck mass or swelling; bulging posterior pharyngeal wall"
+              - "Peak age 2–5 years; stridor is rare"
+        - cells:
+            - "Epiglottitis (cannot-miss)"
+            - - "Acute onset, high fever, toxic appearance"
+              - "Drooling, tripod positioning, muffled voice"
+              - "NO barking cough (distinguishes from croup)"
         - cells:
             - "Croup"
             - - "Barking cough"
@@ -89,4 +109,5 @@ topic:
             - - "'Bull neck' from enlarged lymph nodes"
               - "Airway obstruction with stridor and recession"
               - "Grey pharyngeal membrane"
+              - "Sore throat with painful swallowing; cervical lymphadenopathy"
               - "No DPT vaccination"

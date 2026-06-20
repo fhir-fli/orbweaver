@@ -1,7 +1,14 @@
 # ============================================================
 # WHO IMCI §1.5.3 — Child presenting with lethargy, unconsciousness or
 # convulsions. Pocket Book 2nd ed (2013), pp.23–25 (incl. Tables 3 & 4).
-# 🛑 Pending OpenEvidence review.
+# OpenEvidence review applied 2026-06-20:
+#   - HIGH: cerebral malaria — ~27% bacterial co-infection doubles
+#     mortality → NEW red callout: empirical antibiotics for ALL febrile
+#     coma, even if malaria+ (Ray, Lancet Glob Health 2025).
+#   - DKA: + falling consciousness during treatment → cerebral oedema.
+#   - Table 4 restructured: kernicterus separated from VKDB; added neonatal
+#     sepsis/meningitis and inborn errors of metabolism (the old WHO
+#     kernicterus row conflated bacterial infection + no-vitamin-K).
 # ============================================================
 
 topic:
@@ -68,6 +75,20 @@ topic:
           If consciousness improves, presume hypoglycaemia.
         - **Urine microscopy** if possible.
 
+    - type: "prose"
+      title: "⚠ Empirical antibiotics for ALL febrile coma"
+      callout: true
+      # High-priority practice point (Ray, Lancet Global Health 2025) → red.
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Give **empirical antibiotics to every child with febrile coma —
+        even if the malaria test is positive.** ~27% of cerebral-malaria
+        cases have **invasive bacterial co-infection**, which **doubles
+        mortality**.
+
     - type: "table"
       title: "Table 3 · Differential diagnosis"
       columns: ["Diagnosis / cause", "In favour"]
@@ -86,6 +107,7 @@ topic:
               - "Anaemia"
               - "Convulsions"
               - "Hypoglycaemia"
+              - "Bacterial co-infection is common (~27%) and DOUBLES mortality — treat empirically (see callout)"
         - cells:
             - "Febrile convulsions (not a cause of unconsciousness)"
             - - "Prior short convulsions when febrile"
@@ -117,6 +139,7 @@ topic:
             - - "High blood sugar"
               - "Polydipsia and polyuria"
               - "Acidotic (deep, laboured) breathing"
+              - "Falling consciousness DURING treatment → suspect cerebral oedema (emergency)"
 
     - type: "prose"
       title: "Meningitis & lumbar puncture — notes"
@@ -146,8 +169,20 @@ topic:
             - - "Onset in first 3 days of life"
               - "Jaundice"
               - "Pallor"
-              - "Serious bacterial infection"
-              - "No vitamin K given"
+        - cells:
+            - "Vitamin K deficiency bleeding (VKDB)"
+            - - "No vitamin K given at birth"
+              - "Bleeding (e.g. intracranial, GI, umbilical)"
+        - cells:
+            - "Neonatal sepsis / meningitis"
+            - - "Serious bacterial infection"
+              - "Lethargy, poor feeding, temperature instability"
+              - "Apnoea or respiratory distress"
+        - cells:
+            - "Inborn error of metabolism"
+            - - "Deterioration after a symptom-free interval / once feeds established"
+              - "Metabolic acidosis or hypoglycaemia"
+              - "Consanguinity or family history of neonatal death"
         - cells:
             - "Neonatal tetanus"
             - - "Onset at age 3–14 days"

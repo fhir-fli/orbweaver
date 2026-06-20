@@ -15,30 +15,44 @@ void main() {
     expect(t.pageNumber, 20);
   });
 
-  test('§1.5.1 airway has a differential table', () {
+  test('§1.5.1 airway has a differential table (incl. epiglottitis)', () {
     final t = load('who_1_05_1_airway_dx.yaml');
     expect(t.id, 'who-imci-1-5-1-airway-dx');
     final table = t.blocks.whereType<TableBlock>().single;
     expect(table.columns, ['Diagnosis / cause', 'In favour']);
-    expect(table.rows.length, 6); // pneumonia … diphtheria
+    // pneumonia, asthma, FBA, retropharyngeal, epiglottitis, croup, diphtheria
+    expect(table.rows.length, 7);
     // The "In favour" cell is a bulleted list.
     expect(table.rows.first.cells[1], isA<BulletCell>());
   });
 
-  test('§1.5.2 shock differential lists 5 causes', () {
+  test('§1.5.2 shock differential lists 6 causes + Phoenix callout', () {
     final t = load('who_1_05_2_shock_dx.yaml');
     expect(t.id, 'who-imci-1-5-2-shock-dx');
     final table = t.blocks.whereType<TableBlock>().single;
-    expect(table.rows.length, 5);
+    // bleeding, dengue, cardiac, septic, anaphylactic, dehydration
+    expect(table.rows.length, 6);
+    final callout = t.blocks
+        .whereType<ProseBlock>()
+        .firstWhere((b) => b.title!.contains('sepsis identification'));
+    expect(callout.callout, isTrue);
   });
 
-  test('§1.5.3 coma has two tables (Table 3 + young-infant Table 4)', () {
+  test('§1.5.3 coma: two tables + red empirical-antibiotics callout', () {
     final t = load('who_1_05_3_coma_dx.yaml');
     expect(t.id, 'who-imci-1-5-3-coma-dx');
     expect(t.pageNumber, 23);
     final tables = t.blocks.whereType<TableBlock>().toList();
     expect(tables.length, 2);
     expect(tables[0].rows.length, 9); // meningitis … DKA
-    expect(tables[1].rows.length, 4); // young-infant causes
+    // young-infant: asphyxia/HIE, ICH, kernicterus, VKDB, sepsis, IEM, tetanus
+    expect(tables[1].rows.length, 7);
+
+    // The empirical-antibiotics callout is red (per-block alert override).
+    final abx = t.blocks
+        .whereType<ProseBlock>()
+        .firstWhere((b) => b.title!.contains('Empirical antibiotics'));
+    expect(abx.callout, isTrue);
+    expect(abx.ownPaletteArgb['alert'], 0xFFD32F2F);
   });
 }

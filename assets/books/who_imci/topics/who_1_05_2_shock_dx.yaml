@@ -1,8 +1,18 @@
 # ============================================================
 # WHO IMCI §1.5.2 — Child presenting with shock.
 # Pocket Book 2nd ed (2013), pp.21–22 (incl. Table 2).
-# 🛑 Pending OpenEvidence review (shock fluid management evolving — see
-#    GASTROSAM note carried on §1.4 / Charts 7–8).
+# OpenEvidence review applied 2026-06-20:
+#   - Dengue: + WHO warning signs (abdominal pain, persistent vomiting,
+#     rising HCT with falling platelets, fluid accumulation, narrowing
+#     pulse pressure) — Karyanti 2024 / CDC.
+#   - Cardiac shock: + myocarditis (viral prodrome, previously well).
+#   - Septic shock: + Phoenix Sepsis Criteria callout (outperforms IPSCC;
+#     Schlapbach JAMA 2024).
+#   - NEW cannot-miss row: anaphylactic shock.
+#   Not added (reviewer "consider" only, not in required list): toxic shock
+#   syndrome.
+# 🛑 Shock fluid management still evolving — see GASTROSAM note on §1.4 /
+#    Charts 7–8.
 # ============================================================
 
 topic:
@@ -70,9 +80,13 @@ topic:
             - - "Known dengue outbreak or season"
               - "History of high fever"
               - "Purpura"
+              - "Warning signs at defervescence: severe abdominal pain, persistent vomiting, fluid accumulation"
+              - "Rising haematocrit with falling platelets"
+              - "Narrowing pulse pressure (diastolic rises before systolic falls)"
         - cells:
             - "Cardiac shock"
             - - "History of heart disease or murmur"
+              - "Myocarditis: acute heart failure, viral prodrome, previously well"
               - "Enlarged neck veins and liver"
               - "Crepitations in both lung fields"
         - cells:
@@ -82,6 +96,20 @@ topic:
               - "Skin warm but BP low, or skin cold"
               - "Purpura, or meningococcal outbreak"
         - cells:
+            - "Anaphylactic shock (cannot-miss)"
+            - - "Acute onset after allergen exposure"
+              - "Urticaria, angioedema, bronchospasm"
+              - "Hypotension"
+        - cells:
             - "Shock with severe dehydration"
             - - "History of profuse diarrhoea"
               - "Known cholera outbreak"
+
+    - type: "prose"
+      title: "Standardised sepsis identification"
+      callout: true
+      markdown: |
+        The **Phoenix Sepsis Score** (JAMA 2024) outperforms the 2005 IPSCC
+        criteria: **sepsis** = Phoenix Score ≥ 2 with suspected infection;
+        **septic shock** = sepsis + ≥ 1 cardiovascular point (severe
+        hypotension for age, vasoactive medication, or lactate ≥ 5 mmol/L).
