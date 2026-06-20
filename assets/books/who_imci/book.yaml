@@ -28,3 +28,9 @@ book:
         - topic: "topics/who_chart10_glucose.yaml"
         - topic: "topics/who_chart11_dehydration.yaml"
         - topic: "topics/who_1_04_sam_emergency.yaml"
+        - title: "1.5 Diagnostic considerations"
+          topic: "topics/who_1_05_diagnostic.yaml"
+          children:
+            - topic: "topics/who_1_05_1_airway_dx.yaml"
+            - topic: "topics/who_1_05_2_shock_dx.yaml"
+            - topic: "topics/who_1_05_3_coma_dx.yaml"

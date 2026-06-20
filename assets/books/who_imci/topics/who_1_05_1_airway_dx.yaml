@@ -1,0 +1,92 @@
+# ============================================================
+# WHO IMCI §1.5.1 — Child presenting with an airway or severe breathing
+# problem. Pocket Book 2nd ed (2013), pp.20–21 (incl. Table 1).
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-5-1-airway-dx"
+  title: "Airway / Breathing — Differential Dx"
+  list_subtitle: "1.5.1 · history, examination, Table 1"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["airway", "breathing", "pneumonia", "asthma", "croup", "diphtheria", "differential diagnosis", "imci"]
+  aliases:
+    - "Breathing Differential"
+  category: "medical"
+
+  page_number: 20
+
+  blocks:
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        - **Onset:** slow or sudden
+        - Previous similar episodes
+        - Upper respiratory tract infection
+        - **Cough** and duration (days)
+        - History of **choking**
+        - Present since birth or acquired
+        - **Vaccination history:** DPT, measles
+        - Known **HIV** infection
+        - **Family history of asthma**
+
+    - type: "prose"
+      title: "Examination"
+      markdown: |
+        - Cough and quality of cough
+        - Cyanosis
+        - Respiratory distress
+        - Grunting
+        - Stridor, abnormal breath sounds
+        - Nasal flaring
+        - Swelling of the neck
+        - Crepitations
+        - Wheezing
+          - generalized
+          - focal
+        - Reduced air entry
+          - generalized
+          - focal
+
+    - type: "table"
+      title: "Table 1 · Differential diagnosis"
+      columns: ["Diagnosis / cause", "In favour"]
+      column_flex: [2, 5]
+      rows:
+        - cells:
+            - "Pneumonia"
+            - - "Cough with fast breathing and fever"
+              - "Grunting or difficulty breathing"
+              - "Develops over days, worsening"
+              - "Crepitations on auscultation"
+              - "Signs of consolidation or effusion"
+        - cells:
+            - "Asthma"
+            - - "Recurrent wheezing"
+              - "Prolonged expiration"
+              - "Wheezing or reduced air entry"
+              - "Responds to bronchodilators"
+        - cells:
+            - "Foreign body aspiration"
+            - - "History of sudden choking"
+              - "Sudden stridor or respiratory distress"
+              - "Focal reduced air entry or wheeze"
+        - cells:
+            - "Retropharyngeal abscess"
+            - - "Slow development, worsening"
+              - "Inability to swallow"
+              - "High fever"
+        - cells:
+            - "Croup"
+            - - "Barking cough"
+              - "Hoarse voice"
+              - "Associated with URTI"
+              - "Stridor on inspiration"
+              - "Signs of respiratory distress"
+        - cells:
+            - "Diphtheria"
+            - - "'Bull neck' from enlarged lymph nodes"
+              - "Airway obstruction with stridor and recession"
+              - "Grey pharyngeal membrane"
+              - "No DPT vaccination"

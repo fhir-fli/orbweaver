@@ -1,0 +1,158 @@
+# ============================================================
+# WHO IMCI §1.5.3 — Child presenting with lethargy, unconsciousness or
+# convulsions. Pocket Book 2nd ed (2013), pp.23–25 (incl. Tables 3 & 4).
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-5-3-coma-dx"
+  title: "Coma / Convulsions — Differential Dx"
+  list_subtitle: "1.5.3 · history, exam, labs, Tables 3 & 4"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["coma", "unconsciousness", "lethargy", "convulsions", "meningitis", "cerebral malaria", "hypoglycaemia", "neonatal tetanus", "differential diagnosis", "imci"]
+  aliases:
+    - "Unconsciousness"
+    - "Coma Differential"
+  category: "medical"
+
+  page_number: 23
+
+  blocks:
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        - Fever
+        - Head injury
+        - Drug overdose or toxin ingestion
+        - **Convulsions:** how long do they last? previous febrile
+          convulsions? epilepsy?
+        - **Infant < 1 week** — consider:
+          - birth asphyxia
+          - birth injury to the brain
+
+    - type: "prose"
+      title: "Examination"
+      markdown: |
+        **General**
+        - Jaundice
+        - Severe palmar pallor
+        - Peripheral or facial oedema (suggests renal failure)
+        - Level of consciousness
+        - Petechial rash
+        - Blood pressure
+        - Determine **AVPU** score (see
+          [§1.3 Assessment](topic:who-imci-1-3-assessment))
+
+        **Head and neck**
+        - Stiff neck
+        - Signs of head trauma or other injuries
+        - Pupil size and reactions to light
+        - Tense or bulging fontanelle
+        - Abnormal posture, especially **opisthotonus** (arched back)
+
+        Monitor the **coma scale** regularly. In infants < 1 week, note the
+        time between birth and onset of unconsciousness. Other regional
+        causes include malaria, Japanese encephalitis, dengue haemorrhagic
+        fever, measles encephalitis, typhoid and relapsing fever.
+
+    - type: "prose"
+      title: "Laboratory investigations"
+      markdown: |
+        - If **meningitis** is suspected and there are **no signs of raised
+          ICP** (unequal pupils, rigid posture, limb/trunk paralysis,
+          irregular breathing) → perform a **lumbar puncture**.
+        - In a malarious area → **rapid malaria test** and blood smear.
+        - If unconscious → **check blood glucose**; if not possible, treat
+          as **hypoglycaemia** ([Chart 10](topic:who-imci-chart10-glucose)).
+          If consciousness improves, presume hypoglycaemia.
+        - **Urine microscopy** if possible.
+
+    - type: "table"
+      title: "Table 3 · Differential diagnosis"
+      columns: ["Diagnosis / cause", "In favour"]
+      column_flex: [2, 5]
+      rows:
+        - cells:
+            - "Meningitis"
+            - - "Very irritable"
+              - "Stiff neck or bulging fontanelle"
+              - "Petechial rash (meningococcal only)"
+              - "Opisthotonus"
+        - cells:
+            - "Cerebral malaria (P. falciparum; often seasonal)"
+            - - "Blood smear / RDT positive for malaria"
+              - "Jaundice"
+              - "Anaemia"
+              - "Convulsions"
+              - "Hypoglycaemia"
+        - cells:
+            - "Febrile convulsions (not a cause of unconsciousness)"
+            - - "Prior short convulsions when febrile"
+              - "Associated with fever"
+              - "Age 6 months to 5 years"
+              - "Blood smear normal"
+        - cells:
+            - "Hypoglycaemia (always seek the cause)"
+            - - "Glucose < 2.5 mmol/L (45 mg/dL), or < 3.0 mmol/L (54 mg/dL) in SAM"
+              - "Responds to glucose treatment"
+        - cells:
+            - "Head injury"
+            - - "Signs or history of head trauma"
+        - cells:
+            - "Poisoning"
+            - - "History of poison ingestion or drug overdose"
+        - cells:
+            - "Shock (lethargy/unconsciousness, unlikely convulsions)"
+            - - "Poor perfusion"
+              - "Rapid, weak pulse"
+        - cells:
+            - "Acute glomerulonephritis with encephalopathy"
+            - - "Raised blood pressure"
+              - "Peripheral or facial oedema"
+              - "Blood and/or protein in urine"
+              - "Decreased or no urine"
+        - cells:
+            - "Diabetic ketoacidosis"
+            - - "High blood sugar"
+              - "Polydipsia and polyuria"
+              - "Acidotic (deep, laboured) breathing"
+
+    - type: "prose"
+      title: "Meningitis & lumbar puncture — notes"
+      callout: true
+      markdown: |
+        The meningitis differential includes **encephalitis, cerebral
+        abscess and TB meningitis** — consult a paediatric text. **Do NOT
+        do an LP if there are signs of raised ICP.** A positive LP may show
+        cloudy CSF, raised white cells (usually > 100 polymorphs/mL in
+        bacterial meningitis), **low CSF glucose** (< 1.5 mmol/L), **high
+        CSF protein** (> 0.4 g/L), or organisms on Gram stain/culture.
+
+    - type: "table"
+      title: "Table 4 · Young infant (< 2 months)"
+      columns: ["Diagnosis / cause", "In favour"]
+      column_flex: [2, 5]
+      rows:
+        - cells:
+            - "Birth asphyxia / HIE / birth trauma"
+            - - "Onset in first 3 days of life"
+              - "History of difficult delivery"
+        - cells:
+            - "Intracranial haemorrhage"
+            - - "Onset in first 3 days in a low-birth-weight or preterm infant"
+        - cells:
+            - "Haemolytic disease of the newborn / kernicterus"
+            - - "Onset in first 3 days of life"
+              - "Jaundice"
+              - "Pallor"
+              - "Serious bacterial infection"
+              - "No vitamin K given"
+        - cells:
+            - "Neonatal tetanus"
+            - - "Onset at age 3–14 days"
+              - "Irritability"
+              - "Difficulty breastfeeding"
+              - "Trismus"
+              - "Muscle spasms"
+              - "Convulsions"

@@ -1,0 +1,33 @@
+# ============================================================
+# WHO IMCI §1.5 — Diagnostic considerations for children with emergency
+# conditions (overview). Pocket Book 2nd ed (2013), p.20.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-5-diagnostic"
+  title: "Diagnostic Considerations"
+  list_subtitle: "1.5 · find the underlying cause after stabilising"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["differential diagnosis", "diagnosis", "emergency", "imci", "pediatric"]
+  aliases:
+    - "Differential Diagnosis"
+  category: "medical"
+
+  page_number: 20
+
+  blocks:
+
+    - type: "prose"
+      title: "After emergency treatment — find the cause"
+      highlight: true
+      markdown: |
+        Once the child is **stabilised** and emergency treatment has been
+        given, determine the **underlying cause** so you can give specific
+        curative treatment.
+
+        These lists and tables are **complemented by the disease-specific
+        chapters**. Work through the relevant presentation:
+        - [Airway or severe breathing problem](topic:who-imci-1-5-1-airway-dx)
+        - [Shock](topic:who-imci-1-5-2-shock-dx)
+        - [Lethargy, unconsciousness or convulsions](topic:who-imci-1-5-3-coma-dx)

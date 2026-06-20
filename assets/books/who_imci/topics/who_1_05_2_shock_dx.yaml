@@ -1,0 +1,87 @@
+# ============================================================
+# WHO IMCI §1.5.2 — Child presenting with shock.
+# Pocket Book 2nd ed (2013), pp.21–22 (incl. Table 2).
+# 🛑 Pending OpenEvidence review (shock fluid management evolving — see
+#    GASTROSAM note carried on §1.4 / Charts 7–8).
+# ============================================================
+
+topic:
+  id: "who-imci-1-5-2-shock-dx"
+  title: "Shock — Differential Dx"
+  list_subtitle: "1.5.2 · history, examination, Table 2"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["shock", "septic shock", "dengue", "cardiac shock", "bleeding", "dehydration", "differential diagnosis", "imci"]
+  aliases:
+    - "Shock Differential"
+  category: "medical"
+
+  page_number: 21
+
+  blocks:
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        - Acute or sudden onset
+        - Trauma
+        - Bleeding
+        - Congenital or rheumatic **heart disease**
+        - History of **diarrhoea**
+        - Any febrile illness
+        - Known **dengue** outbreak
+        - Known **meningitis** outbreak
+        - Fever
+        - Able to feed
+
+    - type: "prose"
+      title: "Examination"
+      markdown: |
+        - Consciousness level
+        - Any bleeding sites
+        - Cold or warm extremities
+        - Neck veins (elevated JVP)
+        - Pulse volume and rate
+        - Blood pressure
+        - Liver size increased
+        - Petechiae
+        - Purpura
+
+    - type: "prose"
+      title: "Recognising shock"
+      highlight: true
+      markdown: |
+        Children with shock are **lethargic** with **fast breathing, cold
+        skin, prolonged capillary refill, a fast weak pulse**, and may have
+        **low blood pressure as a late sign**. Look for the signs below to
+        find the cause ([Chart 7](topic:who-imci-chart7-iv-fluids-shock) /
+        [Chart 8](topic:who-imci-chart8-iv-fluids-sam) for treatment).
+
+    - type: "table"
+      title: "Table 2 · Differential diagnosis"
+      columns: ["Diagnosis / cause", "In favour"]
+      column_flex: [2, 5]
+      rows:
+        - cells:
+            - "Bleeding shock"
+            - - "History of trauma"
+              - "Bleeding site"
+        - cells:
+            - "Dengue shock syndrome"
+            - - "Known dengue outbreak or season"
+              - "History of high fever"
+              - "Purpura"
+        - cells:
+            - "Cardiac shock"
+            - - "History of heart disease or murmur"
+              - "Enlarged neck veins and liver"
+              - "Crepitations in both lung fields"
+        - cells:
+            - "Septic shock"
+            - - "History of febrile illness"
+              - "Very ill child"
+              - "Skin warm but BP low, or skin cold"
+              - "Purpura, or meningococcal outbreak"
+        - cells:
+            - "Shock with severe dehydration"
+            - - "History of profuse diarrhoea"
+              - "Known cholera outbreak"

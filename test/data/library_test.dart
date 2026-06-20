@@ -106,8 +106,21 @@ void main() {
       expect(contents, hasLength(1));
       expect((contents.first as YamlMap)['title'],
           '1. Triage and emergency conditions');
-      // 1.1–1.3 prose + Charts 2–11 + §1.4 SAM.
-      expect(leafCount(contents), 14);
+      // 1.1–1.3 prose + Charts 2–11 + §1.4 SAM + §1.5 group
+      // (overview + 3 subsections).
+      expect(leafCount(contents), 18);
+    });
+
+    test('who_imci: §1.5 is a nested subsection group with 3 children', () {
+      final b = loadBook('who_imci');
+      final ch1 = (b['contents'] as YamlList).first as YamlMap;
+      final children = ch1['children'] as YamlList;
+      final group = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '1.5 Diagnostic considerations',
+      ) as YamlMap;
+      // The group carries its own overview topic plus 3 subsection leaves.
+      expect(group['topic'], isNotNull);
+      expect((group['children'] as YamlList), hasLength(3));
     });
 
     test('wvems: 5 groups (4 sections + drug ref), 47 topics total', () {
