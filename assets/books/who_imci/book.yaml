@@ -34,3 +34,11 @@ book:
             - topic: "topics/who_1_05_1_airway_dx.yaml"
             - topic: "topics/who_1_05_2_shock_dx.yaml"
             - topic: "topics/who_1_05_3_coma_dx.yaml"
+        - title: "1.6 Common poisoning"
+          topic: "topics/who_1_06_poisoning.yaml"
+          children:
+            - topic: "topics/who_1_06_1_ingested.yaml"
+            - topic: "topics/who_1_06_2_skin_eye.yaml"
+            - topic: "topics/who_1_06_3_inhaled.yaml"
+            - topic: "topics/who_1_06_4_specific.yaml"
+            - topic: "topics/who_1_06_5_prevention.yaml"

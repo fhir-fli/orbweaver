@@ -1,0 +1,40 @@
+# ============================================================
+# WHO IMCI §1.6.2 — Poisons in contact with skin or eyes.
+# Pocket Book 2nd ed (2013), p.29.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-6-2-skin-eye"
+  title: "Skin & Eye Contamination"
+  list_subtitle: "1.6.2 · decontaminate skin & irrigate eyes"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["poisoning", "skin decontamination", "eye irrigation", "corrosive", "imci"]
+  aliases:
+    - "Eye Irrigation"
+  category: "medical"
+
+  page_number: 29
+
+  blocks:
+
+    - type: "prose"
+      title: "Skin contamination"
+      markdown: |
+        - **Remove all clothing and personal effects** and wash exposed
+          areas with **copious tepid water** — use **soap and water** for
+          oily substances.
+        - Staff: wear **gloves and aprons** to avoid secondary
+          contamination.
+        - Store removed clothing in a **sealable see-through plastic bag**.
+
+    - type: "prose"
+      title: "Eye contamination"
+      markdown: |
+        - **Rinse the eye for 10–15 min** with clean running water or normal
+          saline. Keep run-off **away from the other eye**.
+        - **Anaesthetic eye drops** ease irrigation. **Evert the eyelids**
+          and rinse all surfaces.
+        - Examine under **fluorescein** for corneal damage; refer urgently
+          to **ophthalmology** if there is significant conjunctival/corneal
+          damage.

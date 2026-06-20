@@ -1,0 +1,112 @@
+# ============================================================
+# WHO IMCI §1.6.1 — Principles for ingested poisons.
+# Pocket Book 2nd ed (2013), pp.27–28 (incl. Table 5).
+# 🛑 Pending OpenEvidence review (gastric decontamination / charcoal /
+#    lavage / ipecac guidance has shifted considerably since 2013 — flag).
+# ============================================================
+
+topic:
+  id: "who-imci-1-6-1-ingested"
+  title: "Ingested Poisons — Principles"
+  list_subtitle: "1.6.1 · decontamination, charcoal, lavage"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["poisoning", "ingestion", "activated charcoal", "gastric lavage", "decontamination", "ipecac", "imci"]
+  aliases:
+    - "Activated Charcoal"
+    - "Gastric Lavage"
+  category: "medical"
+
+  page_number: 27
+
+  blocks:
+
+    - type: "prose"
+      title: "Assess first"
+      highlight: true
+      markdown: |
+        Quickly assess **emergency signs** — airway, breathing, circulation
+        and **level of consciousness** — as some poisons **depress
+        breathing, cause shock, or induce coma**. Check for
+        **hypoglycaemia**; if glucose is unavailable and consciousness is
+        reduced, treat as hypoglycaemia
+        ([Chart 10](topic:who-imci-chart10-glucose)).
+
+    - type: "prose"
+      title: "Gastric decontamination"
+      markdown: |
+        - Most effective **within 1 h** of ingestion; little benefit after,
+          except agents that delay gastric emptying or the deeply
+          unconscious. **Weigh benefit against risk** — it does **not**
+          guarantee full removal.
+
+    - type: "prose"
+      title: "⚠ Contraindications to decontamination"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        - **Unprotected airway** in an unconscious child (unless intubated
+          with an inflated tube).
+        - **Corrosives or petroleum products.**
+        - **Never use salt as an emetic** — it can be **fatal**.
+
+    - type: "prose"
+      title: "Kerosene / petrol or mouth burns"
+      markdown: |
+        If the child swallowed **kerosene, petrol or petrol-based products**
+        (most pesticides are in petrol solvents) **or** the **mouth/throat
+        is burnt** (bleach, toilet cleaner, battery acid):
+        - **Do NOT induce vomiting.** Give **water or milk** orally.
+        - **Call an anaesthetist** to assess the airway.
+
+    - type: "prose"
+      title: "Activated charcoal (preferred)"
+      markdown: |
+        Give activated charcoal if available; **do not induce vomiting**.
+        Give by mouth or NG tube — be sure the NG tube is in the **stomach,
+        not the airway**. Mix in **8–10 volumes of water** (e.g. 5 g in
+        40 ml). Give the whole dose at once if tolerated, or divide it.
+
+    - type: "table"
+      title: "Table 5 · Activated charcoal per dose"
+      columns: ["Age", "Dose"]
+      column_flex: [3, 2]
+      rows:
+        - cells: ["≤ 1 year", "1 g/kg"]
+        - cells: ["1–12 years", "25–50 g"]
+        - cells: ["Adolescents & adults", "25–100 g"]
+
+    - type: "prose"
+      title: "If charcoal is unavailable"
+      markdown: |
+        Induce vomiting **only if the child is conscious** — paediatric
+        **ipecacuanha** (6 months–2 years: 10 ml; > 2 years: 15 ml).
+        Ipecac can cause repeated vomiting, drowsiness and lethargy
+        (may confuse the picture). **Never** induce vomiting after a
+        **corrosive or petroleum** ingestion.
+
+    - type: "prose"
+      title: "Gastric lavage (experienced staff only)"
+      markdown: |
+        Only if **staff are experienced**, ingestion was **< 1 h** ago and
+        **life-threatening**, and **not** a corrosive/petroleum:
+        - Have **suction** ready. Place the child **left lateral,
+          head-down**.
+        - Pass a **24–28 French** tube **via the mouth** (a smaller NG tube
+          won't pass tablets). Confirm it is in the stomach.
+        - Lavage with **10 ml/kg of 0.9% saline**; returned volume should
+          ≈ volume given; continue until the return is clear.
+        - Anaesthetist tracheal intubation may be needed to reduce
+          aspiration risk.
+
+    - type: "prose"
+      title: "Then"
+      markdown: |
+        - Give a **specific antidote** if indicated, and general care.
+        - **Observe 4–24 h** depending on the poison.
+        - Keep unconscious children in the **recovery position**.
+        - Transfer (when safe) if unconscious / deteriorating, with
+          mouth-throat burns, severe respiratory distress, cyanosis or
+          heart failure.

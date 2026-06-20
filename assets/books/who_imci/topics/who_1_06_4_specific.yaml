@@ -1,0 +1,150 @@
+# ============================================================
+# WHO IMCI §1.6.4 — Specific poisons.
+# Pocket Book 2nd ed (2013), pp.29–33.
+# 🛑 Pending OpenEvidence review (antidote dosing & regimens — especially
+#    acetylcysteine, atropine/pralidoxime, deferoxamine, naloxone — should
+#    be checked against current toxicology guidance).
+# ============================================================
+
+topic:
+  id: "who-imci-1-6-4-specific"
+  title: "Specific Poisons"
+  list_subtitle: "1.6.4 · corrosives, petroleum, OP, paracetamol, aspirin, iron, opiates, CO"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["poisoning", "corrosive", "organophosphate", "paracetamol", "acetylcysteine", "aspirin", "salicylate", "iron", "deferoxamine", "opiate", "naloxone", "carbon monoxide", "atropine", "imci"]
+  aliases:
+    - "Antidotes"
+    - "Organophosphate"
+    - "Paracetamol Poisoning"
+  category: "medical"
+
+  page_number: 29
+
+  blocks:
+
+    - type: "prose"
+      title: "Corrosives"
+      highlight: true
+      markdown: |
+        Examples: sodium/potassium hydroxide, acids, bleaches, disinfectants.
+        - **Do NOT induce vomiting or give activated charcoal** — further
+          damage to mouth, throat, airway, lungs, oesophagus, stomach.
+        - Give **milk or water** as soon as possible to dilute.
+        - Then **nothing by mouth**; arrange **surgical review** for
+          oesophageal damage/rupture if severe.
+
+    - type: "prose"
+      title: "Petroleum compounds"
+      highlight: true
+      markdown: |
+        Examples: kerosene, turpentine substitutes, petrol.
+        - **Do NOT induce vomiting or give charcoal** — aspiration causes
+          respiratory distress with hypoxaemia (pulmonary oedema, lipoid
+          pneumonia); ingestion can cause encephalopathy.
+        - Give **oxygen** if there is respiratory distress.
+
+    - type: "prose"
+      title: "Organophosphorus & carbamate compounds"
+      markdown: |
+        Examples: malathion, parathion, mevinphos; carbamates (carbaryl).
+        Absorbed via **skin, ingestion or inhalation**. The child may have
+        vomiting, diarrhoea, blurred vision or weakness.
+
+        **Signs = excess parasympathetic activation:** bronchial secretions,
+        salivation, sweating, lacrimation, **slow pulse, small pupils**,
+        convulsions, muscle weakness/twitching → paralysis, loss of bladder
+        control, **pulmonary oedema and respiratory depression**.
+
+    - type: "prose"
+      title: "Organophosphate — treatment"
+      highlight: true
+      palette:
+        accent: "0xFFD32F2F"
+      markdown: |
+        - **Decontaminate:** irrigate eyes / wash skin.
+        - **Activated charcoal** within 4 h if ingested. **Do NOT induce
+          vomiting** (petrol solvents).
+        - **Atropine 20 µg/kg** (max 2 mg) **IM/IV every 5–10 min** until
+          secretions clear, skin flushes dry, pupils dilate and tachycardia
+          develops; repeat **every 1–4 h for ≥ 24 h**. Aim: dry the chest
+          while avoiding atropine toxicity.
+        - **Pralidoxime 25–50 mg/kg** in 15 ml water **IV over 30 min** if
+          muscle weakness; repeat once or twice, or infuse 10–20 mg/kg/h.
+        - **Monitor SpO₂** (atropine can cause ventricular arrhythmia in
+          hypoxic children); give oxygen if SpO₂ ≤ 90%.
+
+    - type: "prose"
+      title: "Paracetamol"
+      markdown: |
+        - **Within 4 h:** activated charcoal (or induce vomiting) — unless
+          an oral/IV antidote is needed.
+        - **Antidote needed if** ingestion **≥ 150 mg/kg** or a toxic 4-h
+          level (more often in older children with deliberate overdose).
+        - **Within 8 h:** oral **methionine** (conscious, not vomiting —
+          < 6 yr: 1 g q4h ×4; ≥ 6 yr: 2.5 g q4h ×4) **or** IV
+          **acetylcysteine**.
+        - **> 8 h, or can't take oral:** IV **acetylcysteine**.
+
+    - type: "prose"
+      title: "Acetylcysteine — child < 20 kg (standard volumes too large)"
+      highlight: true
+      palette:
+        accent: "0xFF1565C0"
+      markdown: |
+        - **150 mg/kg** in **3 ml/kg** of 5% glucose **over 15 min**, then
+        - **50 mg/kg** in **7 ml/kg** of 5% glucose **over 4 h**, then
+        - **100 mg/kg** in **14 ml/kg** of 5% glucose **over 16 h**.
+
+        Increase the glucose volume for larger children. Continue beyond 20 h
+        if late presentation or evidence of liver toxicity (until enzymes
+        fall).
+
+    - type: "prose"
+      title: "Aspirin & other salicylates"
+      markdown: |
+        Serious in young children — they become **acidotic rapidly** and
+        suffer severe CNS toxicity. Signs: **acidotic breathing, vomiting,
+        tinnitus**.
+        - **Activated charcoal** — give **several doses** (salicylates form
+          a gastric concretion → delayed absorption). If unavailable and the
+          dose is severely toxic, gastric lavage or induced vomiting.
+        - **IV sodium bicarbonate 1 mmol/kg over 4 h** to correct acidosis
+          and raise **urine pH > 7.5** (boosts excretion); add **oral
+          potassium 2–5 mmol/kg/day**; monitor urine pH hourly.
+        - **IV fluids** at maintenance (more if dehydrated); monitor glucose
+          q6h; give **vitamin K 10 mg IM/IV**.
+
+    - type: "prose"
+      title: "Iron"
+      markdown: |
+        Features: nausea, vomiting, abdominal pain, diarrhoea; vomit/stools
+        often **grey or black**. Severe: GI haemorrhage, hypotension,
+        drowsiness, convulsions, metabolic acidosis (usually within 6 h; a
+        child asymptomatic at 6 h probably needs no antidote).
+        - **Charcoal does NOT bind iron** → consider **gastric lavage** if a
+          toxic amount was taken.
+        - **Deferoxamine** (give only with clinical evidence of poisoning):
+          slow IV **15 mg/kg/h**, reduce after 4–6 h so total **≤ 80
+          mg/kg/24 h** (max 6 g/day); or **IM 50 mg/kg every 6 h**.
+
+    - type: "prose"
+      title: "Morphine & other opiates"
+      highlight: true
+      palette:
+        accent: "0xFFD32F2F"
+      markdown: |
+        Features: reduced consciousness, vomiting/nausea, **respiratory
+        depression**, **pin-point pupils**.
+        - **Clear the airway**; assist breathing with bag-valve-mask and
+          give oxygen.
+        - **Naloxone IV 10 µg/kg**; if no response, repeat **10 µg/kg**.
+          Further doses may be needed if respiratory function deteriorates.
+          Give **IM** if no IV (slower onset).
+
+    - type: "prose"
+      title: "Carbon monoxide"
+      markdown: |
+        - Give **100% oxygen** to speed CO removal (the child can look
+          **pink but still be hypoxaemic**) until signs of hypoxia clear.
+        - A **pulse oximeter can read falsely high** — if in doubt, be
+          guided by clinical signs of hypoxaemia.

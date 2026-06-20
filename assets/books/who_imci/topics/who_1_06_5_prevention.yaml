@@ -1,0 +1,33 @@
+# ============================================================
+# WHO IMCI §1.6.5 — Prevention of poisoning.
+# Pocket Book 2nd ed (2013), p.33.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-6-5-prevention"
+  title: "Prevention of Poisoning"
+  list_subtitle: "1.6.5 · safe storage & first-aid advice"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["poisoning", "prevention", "first aid", "safe storage", "imci"]
+  aliases:
+    - "Poisoning Prevention"
+  category: "medical"
+
+  page_number: 33
+
+  blocks:
+
+    - type: "prose"
+      title: "Counsel parents"
+      markdown: |
+        - Keep **drugs and poisons in proper containers, out of reach** of
+          children.
+        - Advise on **first aid** if poisoning happens again:
+          - **Do NOT induce vomiting** if the child swallowed kerosene,
+            petrol or petrol-based products, has **mouth/throat burns**, or
+            is **drowsy**.
+          - For **bleach or other corrosives**, give **milk or water** to
+            drink as soon as possible.
+        - Take the child to a health facility **with the substance** —
+          container, label, or a sample of tablets/berries.

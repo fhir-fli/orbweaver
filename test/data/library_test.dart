@@ -106,9 +106,9 @@ void main() {
       expect(contents, hasLength(1));
       expect((contents.first as YamlMap)['title'],
           '1. Triage and emergency conditions');
-      // 1.1–1.3 prose + Charts 2–11 + §1.4 SAM + §1.5 group
-      // (overview + 3 subsections).
-      expect(leafCount(contents), 18);
+      // 1.1–1.3 prose + Charts 2–11 + §1.4 SAM + §1.5 group (overview + 3)
+      // + §1.6 group (overview + 5).
+      expect(leafCount(contents), 24);
     });
 
     test('who_imci: §1.5 is a nested subsection group with 3 children', () {

@@ -1,0 +1,62 @@
+# ============================================================
+# WHO IMCI §1.6 — Common poisoning (overview).
+# Pocket Book 2nd ed (2013), p.26.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-6-poisoning"
+  title: "Common Poisoning"
+  list_subtitle: "1.6 · suspect, diagnose, admit criteria"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["poisoning", "ingestion", "toxin", "overdose", "imci", "pediatric"]
+  aliases:
+    - "Poisoning"
+    - "Overdose"
+    - "Toxic ingestion"
+  category: "medical"
+
+  page_number: 26
+
+  blocks:
+
+    - type: "prose"
+      title: "Suspect poisoning"
+      highlight: true
+      markdown: |
+        **Suspect poisoning in any unexplained illness in a previously
+        healthy child.** Note that **traditional medicines** can be a
+        source of poisoning. Consult a **poison centre** or paediatric text
+        for specific agents — only common-poison principles are given here.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Base the diagnosis on **history, examination, and investigations**:
+        - Obtain the **agent, amount, and time** of ingestion. Try to
+          identify the exact agent — **ask to see the container**. Check
+          **no other children** were involved. Symptoms vary widely by
+          agent.
+        - Check for **burns in/around the mouth** or **stridor** (upper
+          airway/laryngeal damage) → suggests **corrosive** ingestion.
+
+    - type: "prose"
+      title: "Who to admit / observe"
+      highlight: true
+      markdown: |
+        - **Admit** any child who deliberately ingested **iron,
+          pesticides, paracetamol or aspirin, narcotics, or
+          antidepressants** — and any child who may have been given a
+          poison **intentionally** by another person.
+        - **Corrosives or petroleum products:** observe **≥ 6 h** before
+          discharge — oesophageal burns and aspiration pulmonary oedema may
+          be delayed.
+
+    - type: "prose"
+      title: "Then work through"
+      markdown: |
+        - [Principles for ingested poisons](topic:who-imci-1-6-1-ingested)
+        - [Skin & eye contamination](topic:who-imci-1-6-2-skin-eye)
+        - [Inhaled poisons](topic:who-imci-1-6-3-inhaled)
+        - [Specific poisons](topic:who-imci-1-6-4-specific)
+        - [Prevention](topic:who-imci-1-6-5-prevention)
