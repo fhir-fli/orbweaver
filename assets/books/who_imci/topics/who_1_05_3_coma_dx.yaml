@@ -6,9 +6,12 @@
 #     mortality → NEW red callout: empirical antibiotics for ALL febrile
 #     coma, even if malaria+ (Ray, Lancet Glob Health 2025).
 #   - DKA: + falling consciousness during treatment → cerebral oedema.
-#   - Table 4 restructured: kernicterus separated from VKDB; added neonatal
-#     sepsis/meningitis and inborn errors of metabolism (the old WHO
-#     kernicterus row conflated bacterial infection + no-vitamin-K).
+#   - Table 4 restructured: kernicterus separated from VKDB; added inborn
+#     errors of metabolism (the old WHO kernicterus row conflated bacterial
+#     infection + no-vitamin-K).
+# Fix 2026-06-20: Table 4 continues onto p.26 — transcribed the source's
+#   own Meningitis and Sepsis rows (initially missed; reviewer's "add
+#   neonatal meningitis/sepsis" was already in the source). 8 rows total.
 # ============================================================
 
 topic:
@@ -174,16 +177,6 @@ topic:
             - - "No vitamin K given at birth"
               - "Bleeding (e.g. intracranial, GI, umbilical)"
         - cells:
-            - "Neonatal sepsis / meningitis"
-            - - "Serious bacterial infection"
-              - "Lethargy, poor feeding, temperature instability"
-              - "Apnoea or respiratory distress"
-        - cells:
-            - "Inborn error of metabolism"
-            - - "Deterioration after a symptom-free interval / once feeds established"
-              - "Metabolic acidosis or hypoglycaemia"
-              - "Consanguinity or family history of neonatal death"
-        - cells:
             - "Neonatal tetanus"
             - - "Onset at age 3–14 days"
               - "Irritability"
@@ -191,3 +184,20 @@ topic:
               - "Trismus"
               - "Muscle spasms"
               - "Convulsions"
+        - cells:
+            - "Meningitis"
+            - - "Lethargy"
+              - "Apnoeic episodes"
+              - "Convulsions"
+              - "High-pitched cry"
+              - "Tense or bulging fontanelle"
+        - cells:
+            - "Sepsis"
+            - - "Fever or hypothermia"
+              - "Shock (lethargy, fast breathing, cold skin, prolonged capillary refill, fast weak pulse, sometimes low BP)"
+              - "Seriously ill with no apparent cause"
+        - cells:
+            - "Inborn error of metabolism"
+            - - "Deterioration after a symptom-free interval / once feeds established"
+              - "Metabolic acidosis or hypoglycaemia"
+              - "Consanguinity or family history of neonatal death"

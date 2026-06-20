@@ -45,8 +45,9 @@ void main() {
     final tables = t.blocks.whereType<TableBlock>().toList();
     expect(tables.length, 2);
     expect(tables[0].rows.length, 9); // meningitis … DKA
-    // young-infant: asphyxia/HIE, ICH, kernicterus, VKDB, sepsis, IEM, tetanus
-    expect(tables[1].rows.length, 7);
+    // young-infant: asphyxia/HIE, ICH, kernicterus, VKDB, tetanus,
+    // meningitis, sepsis, IEM (Table 4 continues onto p.26).
+    expect(tables[1].rows.length, 8);
 
     // The empirical-antibiotics callout is red (per-block alert override).
     final abx = t.blocks
