@@ -1,9 +1,18 @@
 # ============================================================
 # WHO IMCI §1.6.4 — Specific poisons.
 # Pocket Book 2nd ed (2013), pp.29–33.
-# 🛑 Pending OpenEvidence review (antidote dosing & regimens — especially
-#    acetylcysteine, atropine/pralidoxime, deferoxamine, naloxone — should
-#    be checked against current toxicology guidance).
+# OpenEvidence review applied 2026-06-22:
+#   - Atropine: removed "max 2 mg"; 0.02 mg/kg IV DOUBLED q5min to
+#     atropinisation (clear chest, HR>80, SBP>80), then 10–20% of total
+#     loading dose/h; large doses may be needed (2025 AHA).
+#   - Pralidoxime: + maintenance 10–20 mg/kg/h.
+#   - Acetylcysteine: TWO-BAG (200/4h → 100/16h) preferred >40 kg; three-bag
+#     ≤40 kg (with <20 kg dilution volumes); + stop criteria (FDA / Dart
+#     JAMA 2023 / Nakatsu 2025).
+#   - Naloxone: escalation corrected 0.01 → 0.1 mg/kg (10×, NOT repeat same).
+#   - Deferoxamine: IM 1000 mg then 500 mg q4–12h (was 50 mg/kg q6h); IV up
+#     to 15 mg/kg/h, max 6 g/day; + WBI preferred for iron.
+#   Corrosives/petroleum/CO unchanged (confirmed correct).
 # ============================================================
 
 topic:
@@ -64,12 +73,13 @@ topic:
         - **Decontaminate:** irrigate eyes / wash skin.
         - **Activated charcoal** within 4 h if ingested. **Do NOT induce
           vomiting** (petrol solvents).
-        - **Atropine 20 µg/kg** (max 2 mg) **IM/IV every 5–10 min** until
-          secretions clear, skin flushes dry, pupils dilate and tachycardia
-          develops; repeat **every 1–4 h for ≥ 24 h**. Aim: dry the chest
-          while avoiding atropine toxicity.
-        - **Pralidoxime 25–50 mg/kg** in 15 ml water **IV over 30 min** if
-          muscle weakness; repeat once or twice, or infuse 10–20 mg/kg/h.
+        - **Atropine 0.02 mg/kg (20 µg/kg) IV — no maximum in severe
+          poisoning — DOUBLED every 5 min** until atropinisation (**clear
+          chest, HR > 80, SBP > 80**). Then infuse **10–20% of the total
+          loading dose per hour**. Much larger doses than usual may be
+          needed.
+        - **Pralidoxime 20–50 mg/kg** in 15 ml water **IV over 15–30 min**
+          if muscle weakness, **then 10–20 mg/kg/h infusion**.
         - **Monitor SpO₂** (atropine can cause ventricular arrhythmia in
           hypoxic children); give oxygen if SpO₂ ≤ 90%.
 
@@ -86,18 +96,25 @@ topic:
         - **> 8 h, or can't take oral:** IV **acetylcysteine**.
 
     - type: "prose"
-      title: "Acetylcysteine — child < 20 kg (standard volumes too large)"
+      title: "Acetylcysteine — choose regimen by weight"
       highlight: true
       palette:
         accent: "0xFF1565C0"
       markdown: |
-        - **150 mg/kg** in **3 ml/kg** of 5% glucose **over 15 min**, then
-        - **50 mg/kg** in **7 ml/kg** of 5% glucose **over 4 h**, then
-        - **100 mg/kg** in **14 ml/kg** of 5% glucose **over 16 h**.
+        **> 40 kg — two-bag (preferred; fewer anaphylactoid reactions):**
+        - **200 mg/kg over 4 h**, then **100 mg/kg over 16 h**
+          (300 mg/kg / 20 h).
 
-        Increase the glucose volume for larger children. Continue beyond 20 h
-        if late presentation or evidence of liver toxicity (until enzymes
-        fall).
+        **≤ 40 kg — three-bag:**
+        - **150 mg/kg over 15 min**, then **50 mg/kg over 4 h**, then
+          **100 mg/kg over 16 h**.
+        - For **< 20 kg** the standard volumes are too large — dilute in 5%
+          glucose: **3 ml/kg** (15 min), **7 ml/kg** (4 h), **14 ml/kg**
+          (16 h).
+
+        **Continue beyond 20 h** if late presentation or liver toxicity;
+        **stop** when paracetamol is undetectable, INR/LFTs are normal or
+        improving, and there is no encephalopathy.
 
     - type: "prose"
       title: "Aspirin & other salicylates"
@@ -121,11 +138,12 @@ topic:
         often **grey or black**. Severe: GI haemorrhage, hypotension,
         drowsiness, convulsions, metabolic acidosis (usually within 6 h; a
         child asymptomatic at 6 h probably needs no antidote).
-        - **Charcoal does NOT bind iron** → consider **gastric lavage** if a
-          toxic amount was taken.
+        - **Charcoal does NOT bind iron** → **whole bowel irrigation** is
+          the preferred decontamination for a toxic ingestion (gastric
+          lavage only if WBI unavailable).
         - **Deferoxamine** (give only with clinical evidence of poisoning):
-          slow IV **15 mg/kg/h**, reduce after 4–6 h so total **≤ 80
-          mg/kg/24 h** (max 6 g/day); or **IM 50 mg/kg every 6 h**.
+          IV infusion **up to 15 mg/kg/h**, **max 6 g/day**. IM: **1000 mg
+          initially, then 500 mg every 4–12 h** by response (max 6 g/day).
 
     - type: "prose"
       title: "Morphine & other opiates"
@@ -137,9 +155,10 @@ topic:
         depression**, **pin-point pupils**.
         - **Clear the airway**; assist breathing with bag-valve-mask and
           give oxygen.
-        - **Naloxone IV 10 µg/kg**; if no response, repeat **10 µg/kg**.
-          Further doses may be needed if respiratory function deteriorates.
-          Give **IM** if no IV (slower onset).
+        - **Naloxone 0.01 mg/kg (10 µg/kg) IV**; if no response, give
+          **0.1 mg/kg — 10× the dose** (not a repeat of the same dose).
+          Repeat doses may be needed — naloxone wears off **faster than most
+          opioids**. Give **IM** if no IV (slower onset).
 
     - type: "prose"
       title: "Carbon monoxide"

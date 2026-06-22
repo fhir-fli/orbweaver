@@ -1,8 +1,13 @@
 # ============================================================
 # WHO IMCI §1.6.1 — Principles for ingested poisons.
 # Pocket Book 2nd ed (2013), pp.27–28 (incl. Table 5).
-# 🛑 Pending OpenEvidence review (gastric decontamination / charcoal /
-#    lavage / ipecac guidance has shifted considerably since 2013 — flag).
+# OpenEvidence review applied 2026-06-22:
+#   - Charcoal "within 1 h" dogma OBSOLETE (CTRC 2026): up to 6 h for many
+#     poisons, beyond 6 h if ongoing absorption (modified-release/bezoars).
+#   - Infant charcoal dose 0.5–1 g/kg (was 1 g/kg).
+#   - IPECAC REMOVED ENTIRELY (no benefit, ↑adverse events; AAP/AACT/
+#     Cochrane 2018) → do NOT induce vomiting; WBI for iron/lithium/SR.
+#   - Gastric lavage: rarely indicated, NOT routine, retrieves <30% toxin.
 # ============================================================
 
 topic:
@@ -34,9 +39,11 @@ topic:
     - type: "prose"
       title: "Gastric decontamination"
       markdown: |
-        - Most effective **within 1 h** of ingestion; little benefit after,
-          except agents that delay gastric emptying or the deeply
-          unconscious. **Weigh benefit against risk** — it does **not**
+        - Give charcoal **early**, but the old **"within 1 h" cut-off is
+          obsolete** (CTRC 2026): give **up to 6 h** post-ingestion for many
+          poisons, and **beyond 6 h** when ongoing absorption is likely
+          (modified-release formulations, pharmacobezoars).
+        - **Weigh benefit against risk** — decontamination does **not**
           guarantee full removal.
 
     - type: "prose"
@@ -74,24 +81,25 @@ topic:
       columns: ["Age", "Dose"]
       column_flex: [3, 2]
       rows:
-        - cells: ["≤ 1 year", "1 g/kg"]
+        - cells: ["≤ 1 year", "0.5–1 g/kg"]
         - cells: ["1–12 years", "25–50 g"]
         - cells: ["Adolescents & adults", "25–100 g"]
 
     - type: "prose"
       title: "If charcoal is unavailable"
       markdown: |
-        Induce vomiting **only if the child is conscious** — paediatric
-        **ipecacuanha** (6 months–2 years: 10 ml; > 2 years: 15 ml).
-        Ipecac can cause repeated vomiting, drowsiness and lethargy
-        (may confuse the picture). **Never** induce vomiting after a
-        **corrosive or petroleum** ingestion.
+        **Do NOT induce vomiting. Ipecac is no longer recommended** (no
+        benefit; increases adverse events — withdrawn by AAP / AACT /
+        Cochrane 2018). For **iron, lithium or sustained-release**
+        formulations, consider **whole bowel irrigation** if available.
 
     - type: "prose"
-      title: "Gastric lavage (experienced staff only)"
+      title: "Gastric lavage — rarely indicated"
       markdown: |
-        Only if **staff are experienced**, ingestion was **< 1 h** ago and
-        **life-threatening**, and **not** a corrosive/petroleum:
+        **Not routinely recommended** — it retrieves **< 30%** of the toxin
+        and carries real risk. Reserve for **experienced staff** when a
+        **recent, life-threatening** ingestion of a non-corrosive,
+        non-petroleum agent is involved:
         - Have **suction** ready. Place the child **left lateral,
           head-down**.
         - Pass a **24–28 French** tube **via the mouth** (a smaller NG tube

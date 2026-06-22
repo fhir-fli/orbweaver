@@ -1,7 +1,10 @@
 # ============================================================
 # WHO IMCI §1.6 — Common poisoning (overview).
 # Pocket Book 2nd ed (2013), p.26.
-# 🛑 Pending OpenEvidence review.
+# OpenEvidence review applied 2026-06-22:
+#   - Admission list +button batteries, +CCB/beta-blockers (lethal single-
+#     pill toddler ingestion).
+#   - Observation: some agents (paraquat, sustained-release) need ≥24 h.
 # ============================================================
 
 topic:
@@ -45,12 +48,14 @@ topic:
       highlight: true
       markdown: |
         - **Admit** any child who deliberately ingested **iron,
-          pesticides, paracetamol or aspirin, narcotics, or
-          antidepressants** — and any child who may have been given a
+          pesticides, paracetamol or aspirin, narcotics, antidepressants,
+          calcium-channel or beta-blockers** (single-pill toddler ingestion
+          can be lethal), or a **button battery** — and any child given a
           poison **intentionally** by another person.
         - **Corrosives or petroleum products:** observe **≥ 6 h** before
           discharge — oesophageal burns and aspiration pulmonary oedema may
-          be delayed.
+          be delayed. **Some agents** (paraquat, sustained-release
+          formulations) need **≥ 24 h**.
 
     - type: "prose"
       title: "Then work through"

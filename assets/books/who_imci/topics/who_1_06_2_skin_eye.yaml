@@ -1,7 +1,10 @@
 # ============================================================
 # WHO IMCI §1.6.2 — Poisons in contact with skin or eyes.
 # Pocket Book 2nd ed (2013), p.29.
-# 🛑 Pending OpenEvidence review.
+# OpenEvidence review applied 2026-06-22:
+#   - Eye irrigation: ≥15 min minimum; continue until ocular pH 7.0–7.5;
+#     alkali burns may need 30–60 min+; "impossible to over-irrigate"
+#     (2024 AHA/Red Cross; Dua 2020). Skin decontamination unchanged.
 # ============================================================
 
 topic:
@@ -31,8 +34,13 @@ topic:
     - type: "prose"
       title: "Eye contamination"
       markdown: |
-        - **Rinse the eye for 10–15 min** with clean running water or normal
-          saline. Keep run-off **away from the other eye**.
+        - **Rinse for at least 15 min** with clean running water, normal
+          saline or Ringer's lactate. Keep run-off **away from the other
+          eye**. **It is impossible to over-irrigate a chemically burned
+          eye.**
+        - For **alkali** burns (penetrate deeply) irrigation may need
+          **30–60 min or longer**. If pH paper is available, **continue
+          until the ocular surface pH is 7.0–7.5**.
         - **Anaesthetic eye drops** ease irrigation. **Evert the eyelids**
           and rinse all surfaces.
         - Examine under **fluorescein** for corneal damage; refer urgently
