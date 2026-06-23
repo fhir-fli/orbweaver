@@ -1,0 +1,108 @@
+# ============================================================
+# WHO IMCI §1.9.1 — Snake bite. Pocket Book 2nd ed (2013), pp.34–37.
+# 🛑 Pending OpenEvidence review (pressure-immobilisation indications,
+#    routine antivenom adrenaline premedication, and antihistamine/steroid
+#    use are all debated in current guidance).
+# ============================================================
+
+topic:
+  id: "who-imci-1-9-1-snake-bite"
+  title: "Snake Bite"
+  list_subtitle: "1.9.1 · diagnosis, first aid, antivenom"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["snake bite", "envenoming", "antivenom", "neurotoxic", "coagulopathy", "imci", "pediatric"]
+  aliases:
+    - "Snakebite"
+    - "Antivenom"
+  category: "medical"
+
+  page_number: 34
+
+  blocks:
+
+    - type: "prose"
+      title: "When to suspect"
+      highlight: true
+      markdown: |
+        Suspect snake bite in any **severe limb pain or swelling**, or any
+        **unexplained illness** with **bleeding** or **abnormal neurological
+        signs**. Some cobras **spit venom into the eyes**, causing pain and
+        inflammation.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **General:** shock, vomiting, headache. Examine the bite for
+          **local necrosis, bleeding, or tender lymph-node enlargement**.
+        - **Specific (venom-dependent):**
+          - **Shock**
+          - **Local swelling** spreading up the limb
+          - **Bleeding** — gums, wounds, sores; or internal (esp.
+            intracranial)
+          - **Neurotoxicity** — respiratory difficulty/paralysis, ptosis,
+            bulbar palsy (difficulty swallowing/talking), limb weakness
+          - **Muscle breakdown** — muscle pain and **black urine**
+        - Check **Hb** and, when possible, **blood clotting**.
+
+    - type: "prose"
+      title: "First aid"
+      markdown: |
+        - **Splint the limb** to reduce movement and venom absorption. For a
+          likely **neurotoxic** bite, apply a **firm bandage** from the
+          fingers/toes up to near the bite.
+        - **Clean the wound.** Transport to a hospital with **antivenom** as
+          soon as possible — take the snake **if it was killed**.
+        - **Do NOT cut the wound or apply a tourniquet.**
+
+    - type: "prose"
+      title: "Hospital — shock & respiratory failure"
+      markdown: |
+        - Treat **shock** if present
+          ([Chart 7](topic:who-imci-chart7-iv-fluids-shock)).
+        - **Respiratory-muscle paralysis can last days** → intubation and
+          mechanical/manual ventilation (relays of staff) until function
+          returns; secure the tube carefully, or perform elective
+          tracheostomy.
+
+    - type: "prose"
+      title: "Antivenom"
+      highlight: true
+      markdown: |
+        Give antivenom for **systemic signs** or **severe local signs**
+        (swelling of **> half the limb** or severe necrosis):
+        - Have **IM adrenaline 0.15 ml of 1:1000** and **IV chlorphenamine**
+          ready for an allergic reaction.
+        - **Monovalent** if the species is known; **polyvalent** if not.
+          **Child dose = adult dose.**
+        - Dilute in **2–3 volumes of 0.9% saline** and give IV **over 1 h**
+          — slowly at first; **monitor closely for anaphylaxis**.
+
+    - type: "prose"
+      title: "⚠ Antivenom reaction"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        If itching, urticaria, restlessness, fever, cough or difficult
+        breathing develop: **STOP the antivenom** and give **adrenaline
+        0.15 ml of 1:1000 IM**. Add bronchodilators, **chlorphenamine
+        0.25 mg/kg**, and steroids as needed. **Restart slowly** once
+        stable.
+
+    - type: "prose"
+      title: "Repeat doses & supportive care"
+      markdown: |
+        - **Repeat antivenom** after **6 h** if a clotting disorder recurs,
+          or after **1–2 h** if bleeding briskly or neuro/cardiovascular
+          signs worsen. Repeat if **no response**.
+        - **Blood transfusion** is usually **not needed** if antivenom is
+          given. Anticholinesterases can reverse neuro signs for some
+          species.
+        - **Surgical opinion** for severe swelling, a pulseless/painful limb
+          or necrosis (excision, fasciotomy, skin graft, tracheostomy).
+        - **Supportive:** fluids PO/NG to requirements (record intake/
+          output); pain relief; **elevate** a swollen limb; **antitetanus**;
+          antibiotics **only** if wound necrosis; **avoid IM injections**.
+        - **Monitor hourly for ≥ 24 h** — envenoming can develop rapidly.

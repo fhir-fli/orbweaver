@@ -1,0 +1,48 @@
+# ============================================================
+# WHO IMCI §1.8 — Electrocution. Pocket Book 2nd ed (2013), p.34.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-8-electrocution"
+  title: "Electrocution"
+  list_subtitle: "1.8 · ABC, fluids for myoglobinuria, wound care"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["electrocution", "electrical injury", "burns", "myoglobinuria", "rhabdomyolysis", "imci", "pediatric"]
+  aliases:
+    - "Electrical Injury"
+  category: "medical"
+
+  page_number: 34
+
+  blocks:
+
+    - type: "prose"
+      title: "Emergency care"
+      highlight: true
+      markdown: |
+        - Ensure **airway, breathing and circulatory support**.
+        - Give **oxygen**, especially for **severe hypoxia, facial or oral
+          burns, loss of consciousness, inability to protect the airway, or
+          respiratory distress**.
+
+    - type: "prose"
+      title: "Assess for trauma"
+      markdown: |
+        Look for traumatic injuries — **pneumothorax, peritonitis, pelvic
+        fractures**.
+
+    - type: "prose"
+      title: "Fluids & myoglobin"
+      markdown: |
+        - Start **normal saline or Ringer's lactate**, titrated to a **urine
+          output ≥ 2 ml/kg/h** in any child with significant **burns or
+          myoglobinuria**.
+        - Consider **furosemide or mannitol** for further myoglobin
+          diuresis.
+
+    - type: "prose"
+      title: "Wound care"
+      markdown: |
+        - Give **tetanus vaccine** as indicated and provide **wound care**.
+        - Treatment may include **early fasciotomy** when necessary.

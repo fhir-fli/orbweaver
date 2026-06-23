@@ -1,0 +1,52 @@
+# ============================================================
+# WHO IMCI §1.9.3 — Other sources of envenoming.
+# Pocket Book 2nd ed (2013), p.38.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-9-3-other"
+  title: "Other Envenoming"
+  list_subtitle: "1.9.3 · spiders, fish, jellyfish"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["envenoming", "spider", "venomous fish", "box jellyfish", "antivenom", "imci", "pediatric"]
+  aliases:
+    - "Jellyfish Sting"
+    - "Spider Bite"
+  category: "medical"
+
+  page_number: 38
+
+  blocks:
+
+    - type: "prose"
+      title: "General"
+      markdown: |
+        Follow the **same principles** as above. Give **antivenom** (when
+        available) for **severe local or any systemic** effects. The dose
+        for jellyfish/spider venom depends on the **amount of venom
+        injected** — higher for multiple bites, severe symptoms or delayed
+        presentation.
+
+    - type: "prose"
+      title: "Spiders & venomous fish"
+      markdown: |
+        - **Spider bites** can be painful but **rarely cause systemic
+          envenoming**. Antivenom exists for some species (widow, banana
+          spiders).
+        - **Venomous fish** can cause **very severe local pain**; systemic
+          envenoming is rare.
+
+    - type: "prose"
+      title: "⚠ Box jellyfish"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Box jellyfish stings can be **rapidly life-threatening**.
+        - Apply **vinegar** on cotton wool to denature the venom protein.
+        - **Carefully remove** adherent tentacles — **do NOT rub** (rubbing
+          discharges more venom).
+        - **Antivenom** may be available.

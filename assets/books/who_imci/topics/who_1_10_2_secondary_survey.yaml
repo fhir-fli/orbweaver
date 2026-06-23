@@ -1,0 +1,61 @@
+# ============================================================
+# WHO IMCI §1.10.2 — Secondary survey. Pocket Book 2nd ed (2013), pp.39–40.
+# 🛑 Pending OpenEvidence review (analgesia, transfusion ratios, permissive
+#    hypotension and crystalloid-first resuscitation have evolved).
+# ============================================================
+
+topic:
+  id: "who-imci-1-10-2-secondary-survey"
+  title: "Trauma — Secondary Survey"
+  list_subtitle: "1.10.2 · head-to-toe, investigations, treatment"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["trauma", "secondary survey", "head-to-toe", "analgesia", "transfusion", "imci", "pediatric"]
+  aliases:
+    - "Secondary Survey"
+  category: "medical"
+
+  page_number: 39
+
+  blocks:
+
+    - type: "prose"
+      title: "When"
+      highlight: true
+      markdown: |
+        Do the secondary survey **only when airway, breathing, circulation
+        and consciousness are stable**.
+
+    - type: "prose"
+      title: "Head-to-toe examination"
+      markdown: |
+        - **Head:** scalp and ocular abnormalities, external ears,
+          periorbital soft-tissue injuries
+        - **Neck:** penetrating wounds, subcutaneous emphysema, tracheal
+          deviation, neck-vein appearance
+        - **Neurological:** level of consciousness (**AVPU**), spinal-cord
+          motor activity, sensation, reflexes
+        - **Chest:** clavicles and all ribs, breath sounds, heart sounds
+        - **Abdomen:** penetrating wound (needs surgical exploration), blunt
+          trauma, rectal exam when needed
+        - **Pelvis & limbs:** fractures, peripheral pulses, cuts, bruises
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        - **X-rays** as indicated: chest, lateral neck, pelvis, cervical
+          spine (all seven vertebrae), long bones, skull.
+        - **Ultrasound** of the abdomen for internal haemorrhage or organ
+          injury.
+
+    - type: "prose"
+      title: "Treatment"
+      highlight: true
+      markdown: |
+        - **No head injury:** **morphine 0.05–0.1 mg/kg IV** for pain, then
+          **0.01–0.02 mg/kg** increments every 10 min to effect.
+        - **Shock:** give **20 ml/kg normal saline** and reassess
+          ([Chart 7](topic:who-imci-chart7-iv-fluids-shock)).
+        - **Blood needed:** **20 ml/kg whole blood** or **10 ml/kg packed
+          cells**.
+        - **Manage hypoglycaemia**
+          ([Chart 10](topic:who-imci-chart10-glucose)).

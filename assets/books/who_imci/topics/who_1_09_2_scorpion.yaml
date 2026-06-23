@@ -1,0 +1,44 @@
+# ============================================================
+# WHO IMCI §1.9.2 — Scorpion sting. Pocket Book 2nd ed (2013), p.37.
+# 🛑 Pending OpenEvidence review (prazosin, antivenom indications).
+# ============================================================
+
+topic:
+  id: "who-imci-1-9-2-scorpion"
+  title: "Scorpion Sting"
+  list_subtitle: "1.9.2 · autonomic storm; antivenom if severe"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["scorpion", "envenoming", "antivenom", "prazosin", "imci", "pediatric"]
+  aliases:
+    - "Scorpion"
+  category: "medical"
+
+  page_number: 37
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Stings are very painful for days; **systemic effects are far more
+        common in children**. Signs of **autonomic activation** can appear
+        within minutes:
+        - **Shock**; high or low blood pressure
+        - **Fast and/or irregular pulse**
+        - Nausea, vomiting, abdominal pain
+        - **Breathing difficulty** (from heart failure) or respiratory
+          failure
+        - Muscle twitches and spasms
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **First aid:** transport to hospital as soon as possible.
+        - **Severe envenoming:** give **scorpion antivenom** if available
+          (infuse as for snake antivenom).
+        - Treat **heart failure** if present; consider **prazosin** for
+          pulmonary oedema.
+        - **Pain:** oral paracetamol, or oral/IM morphine by severity. If
+          very severe, **infiltrate the site with 1% lignocaine — without
+          adrenaline**.

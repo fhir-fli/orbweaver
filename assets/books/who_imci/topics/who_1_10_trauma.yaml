@@ -1,0 +1,36 @@
+# ============================================================
+# WHO IMCI §1.10 — Trauma and injuries (overview).
+# Pocket Book 2nd ed (2013), p.38.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-10-trauma"
+  title: "Trauma & Injuries"
+  list_subtitle: "1.10 · multiple trauma — primary & secondary survey"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["trauma", "injury", "primary survey", "secondary survey", "haemorrhage", "imci", "pediatric"]
+  aliases:
+    - "Major Trauma"
+    - "Multiple Injuries"
+  category: "medical"
+
+  page_number: 38
+
+  blocks:
+
+    - type: "prose"
+      title: "Major trauma"
+      highlight: true
+      markdown: |
+        Severe multiple injuries are **life-threatening** — multiple organs/
+        limbs may be involved and the child can **deteriorate rapidly**. The
+        **first hour** is most critical. When more than one life-threatening
+        state is present, treat them **simultaneously** with effective
+        **teamwork**.
+
+    - type: "prose"
+      title: "Work through"
+      markdown: |
+        - [Primary survey (initial assessment)](topic:who-imci-1-10-1-primary-survey)
+        - [Secondary survey](topic:who-imci-1-10-2-secondary-survey)

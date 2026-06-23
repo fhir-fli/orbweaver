@@ -1,0 +1,56 @@
+# ============================================================
+# WHO IMCI §1.7 — Drowning. Pocket Book 2nd ed (2013), p.33.
+# 🛑 Pending OpenEvidence review (drowning resuscitation, rewarming targets,
+#    routine NG/bronchoscopy and prophylactic antibiotics have all shifted).
+# ============================================================
+
+topic:
+  id: "who-imci-1-7-drowning"
+  title: "Drowning"
+  list_subtitle: "1.7 · ABCs, oxygen, rewarming"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["drowning", "submersion", "hypothermia", "rewarming", "imci", "pediatric"]
+  aliases:
+    - "Submersion"
+    - "Near drowning"
+  category: "medical"
+
+  page_number: 33
+
+  blocks:
+
+    - type: "prose"
+      title: "Assess"
+      highlight: true
+      markdown: |
+        - Ensure **airway, breathing, circulation and consciousness** (the
+          **ABCs**).
+        - Check for **injuries** — especially after diving or a fall.
+          **Facial, head and cervical-spine** injuries are common.
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Give **oxygen** and ensure adequate oxygenation.
+        - **Remove all wet clothes.**
+        - Pass an **NG tube** to remove swallowed water and debris; use
+          **bronchoscopy** if needed to clear aspirated material from the
+          airway.
+
+    - type: "prose"
+      title: "Rewarming"
+      markdown: |
+        - **Core > 32 °C:** warm **externally** — radiant heaters or warmed
+          dry blankets.
+        - **Core < 32 °C:** use **warmed IV fluid (39 °C)** or gastric
+          lavage with **warmed 0.9% saline**.
+
+    - type: "prose"
+      title: "Then"
+      markdown: |
+        - Check for **hypoglycaemia**
+          ([Chart 10](topic:who-imci-chart10-glucose)) and **electrolyte
+          abnormalities** — especially **hyponatraemia**, which raises the
+          risk of **cerebral oedema**.
+        - Give **antibiotics** for possible infection if there are
+          **pulmonary signs**.

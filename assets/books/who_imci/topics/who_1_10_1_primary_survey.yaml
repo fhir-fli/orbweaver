@@ -1,0 +1,59 @@
+# ============================================================
+# WHO IMCI §1.10.1 — Primary survey (initial assessment).
+# Pocket Book 2nd ed (2013), pp.38–39.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-10-1-primary-survey"
+  title: "Trauma — Primary Survey"
+  list_subtitle: "1.10.1 · ABCDE, stop haemorrhage"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["trauma", "primary survey", "abcde", "haemorrhage", "cervical spine", "imci", "pediatric"]
+  aliases:
+    - "Primary Survey"
+  category: "medical"
+
+  page_number: 38
+
+  blocks:
+
+    - type: "prose"
+      title: "Identify life-threatening injuries"
+      highlight: true
+      markdown: |
+        - **Airway obstruction**
+        - **Chest injuries** with breathing difficulty
+        - **Severe external or internal haemorrhage**
+        - **Head and cervical-spine** injuries
+        - **Abdominal** injuries
+
+    - type: "prose"
+      title: "Approach"
+      markdown: |
+        - Be **systematic** (as in [§1.2](topic:who-imci-1-2-etat-summary)).
+          If neck injury is possible, **avoid moving the neck** and
+          stabilise ([Chart 6](topic:who-imci-chart6-positioning)).
+        - On **any deterioration**, reassess **from the start** — a
+          previously undiagnosed injury may have appeared.
+        - **Expose the whole body** to look for injuries.
+
+    - type: "prose"
+      title: "Systematic ABCDE"
+      markdown: |
+        - **A** — airway patency
+        - **B** — breathing adequacy
+        - **C** — circulation and **control of haemorrhage**
+        - **D** — CNS (assess coma scale), **cervical-spine
+          immobilisation**
+        - **E** — exposure of the whole body, looking for injuries
+
+    - type: "prose"
+      title: "Act"
+      markdown: |
+        - Note all injured systems and provide **emergency treatment**.
+        - **Resuscitate:** oxygen by bag/mask if needed; **stop
+          haemorrhage**; gain IV access and support circulation with
+          **crystalloid or blood**.
+        - **Draw blood for Hb and group & cross-match** as you set up IV.
+        - **Document** all procedures.

@@ -1,0 +1,36 @@
+# ============================================================
+# WHO IMCI §1.9 — Common causes of envenoming (overview).
+# Pocket Book 2nd ed (2013), p.34.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-1-9-envenoming"
+  title: "Envenoming"
+  list_subtitle: "1.9 · snake, scorpion & other bites/stings"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["envenoming", "snake bite", "scorpion", "antivenom", "imci", "pediatric"]
+  aliases:
+    - "Envenomation"
+    - "Antivenom"
+  category: "medical"
+
+  page_number: 34
+
+  blocks:
+
+    - type: "prose"
+      title: "Common causes of envenoming"
+      highlight: true
+      markdown: |
+        Bites and stings from venomous animals are common in some regions.
+        Management is complex — know the **common local animals**, recognise
+        **clinically relevant envenoming early**, and use both **symptomatic
+        and specific** (antivenom) treatment.
+
+    - type: "prose"
+      title: "Work through"
+      markdown: |
+        - [Snake bite](topic:who-imci-1-9-1-snake-bite)
+        - [Scorpion sting](topic:who-imci-1-9-2-scorpion)
+        - [Other sources of envenoming](topic:who-imci-1-9-3-other)

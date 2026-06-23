@@ -42,3 +42,16 @@ book:
             - topic: "topics/who_1_06_3_inhaled.yaml"
             - topic: "topics/who_1_06_4_specific.yaml"
             - topic: "topics/who_1_06_5_prevention.yaml"
+        - topic: "topics/who_1_07_drowning.yaml"
+        - topic: "topics/who_1_08_electrocution.yaml"
+        - title: "1.9 Envenoming"
+          topic: "topics/who_1_09_envenoming.yaml"
+          children:
+            - topic: "topics/who_1_09_1_snake_bite.yaml"
+            - topic: "topics/who_1_09_2_scorpion.yaml"
+            - topic: "topics/who_1_09_3_other.yaml"
+        - title: "1.10 Trauma & injuries"
+          topic: "topics/who_1_10_trauma.yaml"
+          children:
+            - topic: "topics/who_1_10_1_primary_survey.yaml"
+            - topic: "topics/who_1_10_2_secondary_survey.yaml"
