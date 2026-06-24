@@ -1,7 +1,12 @@
 # ============================================================
 # WHO IMCI §1.10.2 — Secondary survey. Pocket Book 2nd ed (2013), pp.39–40.
-# 🛑 Pending OpenEvidence review (analgesia, transfusion ratios, permissive
-#    hypotension and crystalloid-first resuscitation have evolved).
+# OpenEvidence review applied 2026-06-24:
+#   - Fluid bolus 20 → 10 ml/kg balanced crystalloid; minimise crystalloid;
+#     early balanced blood products (1:1, or LTOWB) for haemorrhagic shock
+#     (ERC 2021; Pediatric Traumatic Hemorrhagic Shock consensus 2023).
+#   - Added TXA 15–20 mg/kg IV (max 1 g) within 3 h (EAST 2025 meta).
+#   - Added permissive hypotension (except TBI).
+#   - Morphine analgesia unchanged.
 # ============================================================
 
 topic:
@@ -51,11 +56,22 @@ topic:
       title: "Treatment"
       highlight: true
       markdown: |
+        - **Shock:** give **10 ml/kg balanced crystalloid** (not 20 ml/kg)
+          and reassess; **minimise total crystalloid**
+          ([Chart 7](topic:who-imci-chart7-iv-fluids-shock)).
+        - **Haemorrhagic shock:** move early to **balanced blood products**
+          (1:1 plasma : pRBC, or **low-titre group O whole blood**) —
+          **20 ml/kg whole blood** or **10 ml/kg packed cells**.
+        - **Tranexamic acid 15–20 mg/kg IV (max 1 g) within 3 h** of injury.
         - **No head injury:** **morphine 0.05–0.1 mg/kg IV** for pain, then
           **0.01–0.02 mg/kg** increments every 10 min to effect.
-        - **Shock:** give **20 ml/kg normal saline** and reassess
-          ([Chart 7](topic:who-imci-chart7-iv-fluids-shock)).
-        - **Blood needed:** **20 ml/kg whole blood** or **10 ml/kg packed
-          cells**.
         - **Manage hypoglycaemia**
           ([Chart 10](topic:who-imci-chart10-glucose)).
+
+    - type: "prose"
+      title: "Permissive hypotension"
+      markdown: |
+        In **uncontrolled haemorrhage without head injury**, target
+        **minimum haemodynamic stability** (permissive hypotension) rather
+        than normal blood pressure. In **TBI with haemorrhage, maintain
+        normal blood pressure**.

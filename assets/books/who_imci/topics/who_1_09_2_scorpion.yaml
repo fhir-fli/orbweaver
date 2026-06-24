@@ -1,6 +1,9 @@
 # ============================================================
 # WHO IMCI §1.9.2 — Scorpion sting. Pocket Book 2nd ed (2013), p.37.
-# 🛑 Pending OpenEvidence review (prazosin, antivenom indications).
+# OpenEvidence review applied 2026-06-24:
+#   - Antivenom + prazosin superior to prazosin alone (Pandi 2014 / Bawaskar
+#     2011 RCTs); + dobutamine for inotropy, nitroglycerin for pulmonary
+#     oedema (Isbister NEJM 2014).
 # ============================================================
 
 topic:
@@ -36,9 +39,12 @@ topic:
       markdown: |
         - **First aid:** transport to hospital as soon as possible.
         - **Severe envenoming:** give **scorpion antivenom** if available
-          (infuse as for snake antivenom).
-        - Treat **heart failure** if present; consider **prazosin** for
-          pulmonary oedema.
+          (infuse as for snake antivenom). **Antivenom + prazosin is
+          superior to prazosin alone** (faster recovery — Pandi/Bawaskar
+          RCTs).
+        - **Cardiovascular toxicity:** **prazosin** for afterload reduction,
+          **dobutamine** for inotropic support, **nitroglycerin** for
+          pulmonary oedema. Treat heart failure if present.
         - **Pain:** oral paracetamol, or oral/IM morphine by severity. If
           very severe, **infiltrate the site with 1% lignocaine — without
           adrenaline**.

@@ -1,7 +1,9 @@
 # ============================================================
 # WHO IMCI §1.10.1 — Primary survey (initial assessment).
 # Pocket Book 2nd ed (2013), pp.38–39.
-# 🛑 Pending OpenEvidence review.
+# OpenEvidence review applied 2026-06-24:
+#   - Added catastrophic-haemorrhage-first step (⟨C⟩ABCDE) — control major
+#     external bleeding before airway (modern trauma sequence).
 # ============================================================
 
 topic:
@@ -39,11 +41,14 @@ topic:
         - **Expose the whole body** to look for injuries.
 
     - type: "prose"
-      title: "Systematic ABCDE"
+      title: "Systematic ⟨C⟩ABCDE"
       markdown: |
+        - **⟨C⟩** — **catastrophic haemorrhage** first: control major
+          external bleeding (direct pressure, tourniquet) before anything
+          else
         - **A** — airway patency
         - **B** — breathing adequacy
-        - **C** — circulation and **control of haemorrhage**
+        - **C** — circulation and ongoing haemorrhage control
         - **D** — CNS (assess coma scale), **cervical-spine
           immobilisation**
         - **E** — exposure of the whole body, looking for injuries

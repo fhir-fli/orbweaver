@@ -1,15 +1,25 @@
 # ============================================================
 # WHO IMCI §1.7 — Drowning. Pocket Book 2nd ed (2013), p.33.
-# 🛑 Pending OpenEvidence review (drowning resuscitation, rewarming targets,
-#    routine NG/bronchoscopy and prophylactic antibiotics have all shifted).
+# OpenEvidence review applied 2026-06-24:
+#   - Drowning is primarily a RESPIRATORY event → A-B-C (ventilation
+#     first); compression-only CPR ineffective (2024 AHA/AAP, 2025 AHA, WMS
+#     2024).
+#   - C-spine injury uncommon (~0.5–5%) → no routine immobilisation unless
+#     axial-loading mechanism (diving/high fall) (Thom 2023).
+#   - Removed routine NG tube + bronchoscopy (not guideline-supported).
+#   - REMOVED prophylactic antibiotics (no benefit, selects resistant
+#     organisms; WMS 2024 strong rec) → treat only if pneumonia develops.
+#   - Rewarming: + forced-air warming first-line; ECMO for refractory
+#     hypothermic arrest.
+#   - Added submersion-duration prognosis (>5 min major risk factor).
 # ============================================================
 
 topic:
   id: "who-imci-1-7-drowning"
   title: "Drowning"
-  list_subtitle: "1.7 · ABCs, oxygen, rewarming"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["drowning", "submersion", "hypothermia", "rewarming", "imci", "pediatric"]
+  list_subtitle: "1.7 · A-B-C, ventilation-first, rewarming"
+  last_reviewed: "OpenEvidence review 2026-06-24 · 2024 AHA/AAP drowning / WMS 2024 / 2025 AHA"
+  tags: ["drowning", "submersion", "hypothermia", "rewarming", "ventilation", "imci", "pediatric"]
   aliases:
     - "Submersion"
     - "Near drowning"
@@ -20,37 +30,57 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "Assess"
+      title: "Resuscitate — ventilation first"
       highlight: true
       markdown: |
-        - Ensure **airway, breathing, circulation and consciousness** (the
-          **ABCs**).
-        - Check for **injuries** — especially after diving or a fall.
-          **Facial, head and cervical-spine** injuries are common.
+        Drowning is **primarily a respiratory event** — hypoxia drives the
+        arrest.
+        - **Prioritise airway and ventilation (A-B-C sequence).**
+        - **Compression-only CPR is ineffective** in drowning — give
+          **rescue breaths with chest compressions**.
+        - Then secure breathing, circulation and consciousness.
+
+    - type: "prose"
+      title: "Injuries & cervical spine"
+      markdown: |
+        - Check for injuries, especially after **diving or a fall**.
+        - **Cervical-spine injury is uncommon** in drowning (~0.5–5%).
+          **Do not routinely immobilise** — reserve it for an
+          **axial-loading mechanism** (diving, high fall) or focal findings.
 
     - type: "prose"
       title: "Management"
       markdown: |
         - Give **oxygen** and ensure adequate oxygenation.
         - **Remove all wet clothes.**
-        - Pass an **NG tube** to remove swallowed water and debris; use
-          **bronchoscopy** if needed to clear aspirated material from the
-          airway.
+        - Manage the airway with **standard BLS/ALS** techniques.
+          **Bronchoscopy** is rarely needed — only for refractory mucus
+          plugging or solid aspirated material. (Routine NG tube/
+          bronchoscopy is no longer recommended.)
 
     - type: "prose"
       title: "Rewarming"
       markdown: |
-        - **Core > 32 °C:** warm **externally** — radiant heaters or warmed
-          dry blankets.
-        - **Core < 32 °C:** use **warmed IV fluid (39 °C)** or gastric
-          lavage with **warmed 0.9% saline**.
+        - Use **forced-air warming** as the first-line active method.
+        - **Core > 32 °C:** external warming — radiant heaters / warm dry
+          blankets.
+        - **Core < 32 °C:** **warmed IV fluid (39 °C)** or gastric lavage
+          with **warmed 0.9% saline**. Consider **ECMO** for refractory
+          hypothermic cardiac arrest where available.
 
     - type: "prose"
       title: "Then"
       markdown: |
         - Check for **hypoglycaemia**
-          ([Chart 10](topic:who-imci-chart10-glucose)) and **electrolyte
-          abnormalities** — especially **hyponatraemia**, which raises the
-          risk of **cerebral oedema**.
-        - Give **antibiotics** for possible infection if there are
-          **pulmonary signs**.
+          ([Chart 10](topic:who-imci-chart10-glucose)) and **electrolytes**
+          — especially **hyponatraemia** (raises cerebral-oedema risk).
+        - **Do NOT give prophylactic antibiotics** — they select resistant
+          organisms. Treat **only if pneumonia develops** (fever, increased
+          sputum, persistent infiltrates after 48–72 h), guided by cultures.
+
+    - type: "prose"
+      title: "Prognosis"
+      markdown: |
+        **Submersion duration is a key prognostic factor** — submersion
+        **> 5 min** markedly raises the risk of significant lung injury and
+        poor outcome.

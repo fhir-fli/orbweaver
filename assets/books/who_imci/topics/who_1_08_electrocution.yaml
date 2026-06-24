@@ -1,6 +1,10 @@
 # ============================================================
 # WHO IMCI §1.8 — Electrocution. Pocket Book 2nd ed (2013), p.34.
-# 🛑 Pending OpenEvidence review.
+# OpenEvidence review applied 2026-06-24:
+#   - Urine-output target ≥2 ml/kg/h confirmed for myoglobinuria.
+#   - Furosemide/mannitol caveat: NOT routinely supported (Bosch NEJM 2009;
+#     Chest 2026) — only if output inadequate despite crystalloid.
+#   - ABCDE / trauma assessment / tetanus / fasciotomy unchanged.
 # ============================================================
 
 topic:
@@ -37,9 +41,10 @@ topic:
       markdown: |
         - Start **normal saline or Ringer's lactate**, titrated to a **urine
           output ≥ 2 ml/kg/h** in any child with significant **burns or
-          myoglobinuria**.
-        - Consider **furosemide or mannitol** for further myoglobin
-          diuresis.
+          myoglobinuria** (higher than the usual 0.5–1 ml/kg/h target).
+        - **Mannitol or bicarbonate are NOT routinely supported** — consider
+          only if urine output stays inadequate **despite aggressive
+          crystalloid** resuscitation.
 
     - type: "prose"
       title: "Wound care"
