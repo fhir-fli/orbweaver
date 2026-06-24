@@ -2,22 +2,28 @@
 # WHO IMCI Chart 11 — Treat severe dehydration in an emergency
 # (after initial management of shock)
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.17
-# 🛑 Pending OpenEvidence review. Reviewer to confirm/refine:
-#   - This chart is the NON-SAM rapid-rehydration regimen (70 ml/kg RL
-#     over 5 h infants / 2.5 h children). Severely malnourished children
-#     need a DIFFERENT, slower approach (ReSoMal / low-osmolarity ORS;
-#     GASTROSAM raised questions about WHO SAM-dehydration fluids) — flag
-#     whether to add an explicit SAM carve-out here.
-#   - Ringer's lactate (Hartmann's) preferred vs normal saline.
-#   - "run the drip more rapidly" if not improving — safety bounds?
-#   - ORS ~5 ml/kg/h and the reassess/observe timings.
+# OpenEvidence review applied 2026-06-24:
+#   - ⚠ REVIEWER'S "70→100 ml/kg" CHANGE REJECTED (verified against source):
+#     the reviewer conflated Chart 11 with Plan C / Chart 13. Chart 11 (p.17)
+#     is the POST-shock continuation = 70 ml/kg (the rapid 30 ml/kg phase was
+#     already given during shock resus, Charts 7/8). Plan C / Chart 13
+#     (p.131) is the full 100 ml/kg = 30 fast + 70. 70 ml/kg here is CORRECT;
+#     changing it would over-resuscitate. Added a clarifying note instead.
+#   - Added prominent SAM carve-out (red callout): do NOT use this chart for
+#     SAM → Chart 8 if shock, else oral WHO-ORS (NOT ReSoMal — higher
+#     hyponatraemia risk; GASTROSAM, Lancet CAH 2026).
+#   - "run drip more rapidly" replaced with structured reassessment + fluid-
+#     overload monitoring (IDSA 2017).
+#   - Added slow-rehydration evidence note (GASTRO phase II: 100 ml/kg over
+#     8 h ≈ Plan C) and dehydration-assessment-imprecision caveat.
+#   - Ringer's lactate preference confirmed (Cochrane 2023). ORS 5 ml/kg/h ok.
 # ============================================================
 
 topic:
   id: "who-imci-chart11-dehydration"
   title: "Severe Dehydration (Emergency)"
   list_subtitle: "IMCI Chart 11 · 70 ml/kg RL · then ORS"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence review 2026-06-24 · WHO Plan C/Chart 13 / GASTRO / GASTROSAM"
   tags: ["dehydration", "diarrhoea", "ringers lactate", "ors", "rehydration", "plan c", "imci", "pediatric"]
   aliases:
     - "Diarrhoea"
@@ -41,12 +47,32 @@ topic:
           speeds up**.
 
     - type: "prose"
+      title: "⚠ Severely malnourished children — do NOT use this chart"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        SAM children need a different approach
+        ([§1.4](topic:who-imci-1-4-sam-emergency)):
+        - **In shock:** [Chart 8](topic:who-imci-chart8-iv-fluids-sam)
+          (15 ml/kg over 1 h).
+        - **Dehydrated, not in shock:** **oral WHO-ORS** — **not ReSoMal**
+          (higher risk of severe hyponatraemia; GASTROSAM 2026).
+
+    - type: "prose"
       title: "IV rehydration"
       markdown: |
         Give **70 ml/kg of Ringer's lactate (Hartmann's)** — or **normal
         saline** if unavailable:
         - **over 5 h** in infants **(< 12 months)**, or
         - **over 2.5 h** in children **(12 months – 5 years)**.
+
+        **Note:** this 70 ml/kg is the **post-shock deficit phase** — the
+        rapid 30 ml/kg was already given during shock resuscitation. The
+        **full Plan C** (severe dehydration *without* shock, p.131) is
+        **100 ml/kg = 30 ml/kg fast + 70 ml/kg**.
 
     - type: "table"
       title: "IV fluid — 70 ml/kg total (rate per hour)"
@@ -63,8 +89,12 @@ topic:
       title: "Reassess"
       markdown: |
         - Reassess **every 1–2 h**.
-        - If hydration **is not improving**, give the IV drip **more
-          rapidly**.
+        - **If not improving, reassess before just speeding the drip:** Is
+          the **diagnosis** correct? Are **ongoing losses** being replaced?
+          Is there an **underlying cause** (sepsis, ileus)?
+        - If truly dehydrated and not improving, increase the rate
+          **modestly** — and **watch for fluid overload** (respiratory
+          distress, hepatomegaly, periorbital oedema).
 
     - type: "prose"
       title: "Add ORS as soon as the child can drink"
@@ -92,3 +122,18 @@ topic:
           (pp.138 / 135 / 131) to continue.
         - If possible, **observe ≥ 6 h** after rehydration to confirm the
           mother can maintain hydration with ORS by mouth.
+
+    - type: "prose"
+      title: "Evidence notes"
+      highlight: true
+      palette:
+        accent: "0xFF1565C0"
+      markdown: |
+        - **Slow rehydration is a valid alternative** for the full Plan C
+          pathway: **100 ml/kg over 8 h, no boluses** matched standard Plan C
+          for safety and efficacy (GASTRO phase II) and is simpler where
+          staff oversight is limited.
+        - **Clinical dehydration assessment is imprecise** — the WHO scale
+          has limited accuracy (only ~29% of "severely dehydrated" children
+          had ≥ 10% weight loss). **Reassess by clinical response**, not the
+          initial classification alone.

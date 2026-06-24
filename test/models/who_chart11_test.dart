@@ -16,9 +16,9 @@ void main() {
     expect(topic.pageNumber, 17);
 
     final blocks = topic.blocks;
-    // when-to-use, IV rehydration, IV table, reassess, add-ORS,
-    // ORS table, reclassify.
-    expect(blocks.length, 7);
+    // when-to-use, SAM carve-out callout, IV rehydration, IV table,
+    // reassess, add-ORS, ORS table, reclassify, evidence notes.
+    expect(blocks.length, 9);
 
     // Two tables: the 3-column IV fluid table and the 2-column ORS table,
     // each with one row per weight band.
@@ -32,5 +32,17 @@ void main() {
     final orsTable = tables.last;
     expect(orsTable.columns.length, 2);
     expect(orsTable.rows.length, 5);
+
+    // The 70 ml/kg post-shock volume must NOT have been "corrected" to
+    // 100 ml/kg — Chart 11 is the post-shock continuation (verified against
+    // the WHO source; Plan C / Chart 13 is the 100 ml/kg full protocol).
+    expect(ivTable.title, contains('70 ml/kg'));
+
+    // SAM carve-out is a red danger callout.
+    final sam = blocks
+        .whereType<ProseBlock>()
+        .firstWhere((b) => b.title!.contains('Severely malnourished'));
+    expect(sam.callout, isTrue);
+    expect(sam.ownPaletteArgb['alert'], 0xFFD32F2F);
   });
 }
