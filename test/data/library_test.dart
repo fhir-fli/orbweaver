@@ -98,18 +98,24 @@ void main() {
       return (loadYaml(raw) as YamlMap)['book'] as YamlMap;
     }
 
-    test('who_imci: 1 chapter group (prose + charts + 1.4), no flat topics key',
-        () {
+    test('who_imci: 2 chapter groups (Ch.1 = 33 leaves, Ch.2 = 5)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(1));
-      expect((contents.first as YamlMap)['title'],
+      expect(contents, hasLength(2));
+      expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
-      // 1.1–1.3 prose + Charts 2–11 + §1.4 SAM + §1.5 group (overview + 3)
-      // + §1.6 group (overview + 5) + §1.7 + §1.8 + §1.9 group (overview + 3)
-      // + §1.10 group (overview + 2) = finishes Chapter 1.
-      expect(leafCount(contents), 33);
+      expect((contents[1] as YamlMap)['title'],
+          '2. Diagnostic approaches to the sick child');
+      // Ch.1 (33) + Ch.2 (2.1–2.5 = 5) = 38 topics across the book.
+      expect(leafCount(contents), 38);
+    });
+
+    test('who_imci: Chapter 2 is a red-tabbed group of 5 sections', () {
+      final b = loadBook('who_imci');
+      final ch2 = (b['contents'] as YamlList)[1] as YamlMap;
+      expect(ch2['palette']['accent'], '0xFFEF2B3E');
+      expect((ch2['children'] as YamlList), hasLength(5));
     });
 
     test('who_imci: §1.5 is a nested subsection group with 3 children', () {

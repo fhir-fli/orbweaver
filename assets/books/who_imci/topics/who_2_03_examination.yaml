@@ -1,0 +1,64 @@
+# ============================================================
+# WHO IMCI §2.3 — Approach to the sick child & clinical examination.
+# Pocket Book 2nd ed (2013), pp.42–43.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-2-3-examination"
+  title: "Approach & Clinical Examination"
+  list_subtitle: "2.3 · observe first, least-invasive last"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["examination", "observation", "respiratory rate", "pulse oximetry", "point of care", "pediatric"]
+  aliases:
+    - "Clinical Examination"
+  category: "medical"
+
+  page_number: 42
+
+  blocks:
+
+    - type: "prose"
+      title: "Examine fully, but don't upset the child"
+      highlight: true
+      markdown: |
+        Examine the child **fully** so no sign is missed — but, unlike
+        adults, **organise it to avoid upsetting the child**:
+        - **Do not upset the child unnecessarily.**
+        - **Leave the child in the arms of the mother/carer.**
+        - Do the most **invasive part (head and neck) last**.
+
+    - type: "prose"
+      title: "1. Observe before touching"
+      markdown: |
+        Record these before disturbing the child:
+        - Does the child **speak, cry or make any sound**?
+        - **Alert, interested, looking about** — or **drowsy / irritable**?
+        - **Vomiting**? Able to **suck or breastfeed**?
+        - **Cyanosed or pale**?
+        - **Respiratory distress** — auxiliary muscles, **lower chest-wall
+          indrawing**, **fast breathing**?
+        - **Count the respiratory rate.** Ask the mother to cautiously bare
+          the chest, or to breastfeed, to let the child settle first.
+
+    - type: "prose"
+      title: "2. Then minimally-disturbing touch"
+      markdown: |
+        Feel the **pulse**, listen to the **chest** — you get little from a
+        crying child's chest.
+
+    - type: "prose"
+      title: "3. Interfering signs last"
+      markdown: |
+        Leave for last: **temperature, skin turgor, capillary refill, blood
+        pressure, throat and ears**. Measure **SpO₂ by pulse oximeter in ALL
+        children with fast breathing or chest indrawing**.
+
+    - type: "prose"
+      title: "Point-of-care tests"
+      markdown: |
+        Do simple bedside tests where available:
+        - **Glucostix** for an urgent blood sugar
+          ([Chart 10](topic:who-imci-chart10-glucose) if low)
+        - **Rapid malaria test**
+        - any other simple bedside test

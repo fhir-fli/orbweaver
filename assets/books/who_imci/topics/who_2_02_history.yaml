@@ -1,0 +1,45 @@
+# ============================================================
+# WHO IMCI §2.2 — Taking history. Pocket Book 2nd ed (2013), p.42.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-2-2-history"
+  title: "Taking a History"
+  list_subtitle: "2.2 · presenting complaint to full history"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["history", "presenting complaint", "feeding history", "diagnosis", "pediatric"]
+  aliases:
+    - "Clinical History"
+  category: "medical"
+
+  page_number: 42
+
+  blocks:
+
+    - type: "prose"
+      title: "Start with the presenting complaint"
+      highlight: true
+      markdown: |
+        Begin with **"Why did you bring the child?"**, then the **history of
+        the present illness**. The symptom-specific chapters guide the
+        questions that shape a differential diagnosis.
+
+    - type: "prose"
+      title: "Cover the wider history"
+      markdown: |
+        Include **personal, vaccination, family, social and environmental**
+        histories — these often lead to **counselling messages**:
+        - **bednet** use for malaria
+        - **breastfeeding / sanitation** for diarrhoea
+        - reducing **indoor air pollution** for pneumonia
+
+    - type: "prose"
+      title: "Age-specific points"
+      markdown: |
+        - **Younger infants:** pregnancy and birth history matters; the
+          **feeding history is essential** (malnutrition often begins here).
+        - **Older children:** ask about **developmental milestones**; they
+          can contribute information themselves.
+        - **Establish rapport** with child and parent **before examining**.
+          Children **8 months – 5 years** need the most flexible approach.

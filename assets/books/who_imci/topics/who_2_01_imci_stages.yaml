@@ -1,0 +1,50 @@
+# ============================================================
+# WHO IMCI §2.1 — Relationship to the IMCI approach & stages of hospital
+# care. Pocket Book 2nd ed (2013), p.41.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-2-1-imci-stages"
+  title: "IMCI Approach & Stages of Care"
+  list_subtitle: "2.1 · symptom-based; stages of hospital management"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["imci", "diagnosis", "hospital care", "classification", "pediatric"]
+  aliases:
+    - "Stages of Care"
+  category: "medical"
+
+  page_number: 41
+
+  blocks:
+
+    - type: "prose"
+      title: "Symptom-based, IMCI-aligned"
+      highlight: true
+      markdown: |
+        The Pocket Book is **symptom-based**, following the IMCI sequence —
+        **cough, diarrhoea, fever**. Diagnoses match IMCI classifications,
+        but a hospital's expertise and investigations allow **more precise
+        diagnoses** (severe pneumonia, severe malaria, septicaemia,
+        meningitis) instead of broad labels like "very severe disease".
+
+    - type: "prose"
+      title: "Who is considered separately"
+      markdown: |
+        - **Young infants (≤ 2 months)** — see Chapter 3.
+        - **Severely malnourished children** — see Chapter 7 (special
+          attention to reduce their high mortality).
+
+    - type: "prose"
+      title: "Stages of management in hospital"
+      markdown: |
+        - Emergency **triage**
+        - Emergency **treatment** (if required)
+        - Taking a **history**
+        - **Examination**
+        - **Laboratory investigations** (if required)
+        - Making a **diagnosis / differential diagnosis**
+        - **Treatment**
+        - **Supportive care**
+        - **Monitoring**
+        - Planning **discharge** and **follow-up**

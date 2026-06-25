@@ -1,0 +1,44 @@
+# ============================================================
+# WHO IMCI §2.5 — Differential diagnoses. Pocket Book 2nd ed (2013), p.44.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-2-5-differential"
+  title: "Differential Diagnoses"
+  list_subtitle: "2.5 · list, review, revise with response"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["differential diagnosis", "diagnosis", "treatment planning", "pediatric"]
+  aliases:
+    - "Differential"
+  category: "medical"
+
+  page_number: 44
+
+  blocks:
+
+    - type: "prose"
+      title: "Make a list"
+      highlight: true
+      markdown: |
+        After assessment, list the **possible differential diagnoses**. This
+        guards against wrong assumptions, the wrong diagnosis, and missing
+        rare problems. **A sick child may have more than one** problem
+        needing treatment.
+
+    - type: "prose"
+      title: "Where the tables are"
+      markdown: |
+        - **Emergency differentials:**
+          [§1.5 Tables 1–4](topic:who-imci-1-5-diagnostic) (pp.21–26).
+        - **Symptom-specific** differentials open each disease chapter, with
+          the symptoms, examination findings and investigations that point
+          to the main and secondary diagnoses.
+
+    - type: "prose"
+      title: "Plan, then review"
+      markdown: |
+        Once the main and any secondary diagnoses are set, **plan and start
+        treatment** (treat coexisting problems together). **Review the
+        differential** after observing the response or with new findings —
+        revise or add diagnoses as needed.

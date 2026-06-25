@@ -55,3 +55,14 @@ book:
           children:
             - topic: "topics/who_1_10_1_primary_survey.yaml"
             - topic: "topics/who_1_10_2_secondary_survey.yaml"
+    - title: "2. Diagnostic approaches to the sick child"
+      # WHO Pocket Book color-codes by chapter; Chapter 2 tab = red
+      # (sampled 0xFFEF2B3E from the p.41 chapter tab).
+      palette:
+        accent: "0xFFEF2B3E"
+      children:
+        - topic: "topics/who_2_01_imci_stages.yaml"
+        - topic: "topics/who_2_02_history.yaml"
+        - topic: "topics/who_2_03_examination.yaml"
+        - topic: "topics/who_2_04_labs.yaml"
+        - topic: "topics/who_2_05_differential.yaml"

@@ -1,0 +1,45 @@
+# ============================================================
+# WHO IMCI §2.4 — Laboratory investigations. Pocket Book 2nd ed (2013),
+# pp.43–44.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-2-4-labs"
+  title: "Laboratory Investigations"
+  list_subtitle: "2.4 · basic tests for every small hospital"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["laboratory", "investigations", "blood smear", "csf", "blood culture", "pediatric"]
+  aliases:
+    - "Investigations"
+  category: "medical"
+
+  page_number: 43
+
+  blocks:
+
+    - type: "prose"
+      title: "Targeted by history & examination"
+      highlight: true
+      markdown: |
+        Investigations are **targeted** by the history and examination to
+        **narrow the differential** — not ordered blindly.
+
+    - type: "prose"
+      title: "Basic tests — every small paediatric hospital"
+      markdown: |
+        - **Hb** or packed cell volume
+        - **Full blood count**
+        - **Blood smear** for malaria parasites
+        - **Blood glucose**
+        - **CSF microscopy**
+        - **Urinalysis** (including microscopy)
+        - **Blood grouping & cross-matching**
+        - **HIV testing**
+        - Sick newborns **< 1 week:** **blood bilirubin** is also essential
+
+    - type: "prose"
+      title: "Other valuable tests"
+      markdown: |
+        **Pulse oximetry**, **chest X-ray**, **stool microscopy**, **blood
+        cultures** — indications are given in the relevant chapters.
