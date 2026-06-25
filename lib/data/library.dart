@@ -51,6 +51,7 @@ Future<Book> _loadBook(String id) async {
     b['contents'] as YamlList? ?? YamlList(),
     dir,
     [bookOverrides],
+    const [],
   );
 
   return Book(
@@ -72,6 +73,7 @@ Future<List<BookNode>> _parseNodes(
   YamlList raw,
   String dir,
   List<Map<String, Color>> layers,
+  List<String> ancestors,
 ) async {
   final nodes = <BookNode>[];
   for (final entry in raw) {
@@ -79,21 +81,27 @@ Future<List<BookNode>> _parseNodes(
     final title = map['title'] as String?;
     if (title == null) {
       // Leaf: a bare topic reference.
-      final topic = await _loadTopicRow('$dir/${map['topic'] as String}', layers);
+      final topic = await _loadTopicRow(
+        '$dir/${map['topic'] as String}',
+        layers,
+        ancestors,
+      );
       nodes.add(BookLeaf(topic));
     } else {
       // Group: a chapter/section, optionally with its own overview page.
       // Its `palette:` overrides extend the cascade for its subtree.
       final groupOverrides = parsePaletteOverrides(map['palette']);
       final childLayers = [...layers, groupOverrides];
+      final childAncestors = [...ancestors, title];
       final overviewPath = map['topic'] as String?;
       final overview = overviewPath == null
           ? null
-          : await _loadTopicRow('$dir/$overviewPath', childLayers);
+          : await _loadTopicRow('$dir/$overviewPath', childLayers, ancestors);
       final children = await _parseNodes(
         map['children'] as YamlList? ?? YamlList(),
         dir,
         childLayers,
+        childAncestors,
       );
       nodes.add(BookGroup(
         title: title,
@@ -115,11 +123,20 @@ Future<List<BookNode>> _parseNodes(
 Future<BookTopic> _loadTopicRow(
   String assetPath,
   List<Map<String, Color>> layers,
+  List<String> ancestors,
 ) async {
   final raw = await rootBundle.loadString(assetPath);
   final t = (loadYaml(raw) as YamlMap)['topic'] as YamlMap;
   // The topic's own `palette:` is the last (innermost) layer of the cascade.
   final topicOwn = parsePaletteOverrides(t['palette']);
+  final title = t['title'] as String;
+  final subtitle = (t['list_subtitle'] as String?) ?? '';
+  final tags = [
+    for (final tag in t['tags'] as YamlList? ?? const []) tag as String,
+  ];
+  final aliases = [
+    for (final a in t['aliases'] as YamlList? ?? const []) a as String,
+  ];
   // Full-text index: collect EVERY string in the topic (title, subtitle, tags,
   // aliases, and every block's text — markdown, table cells, drug doses, …),
   // then normalise once so spellings/units already match at search time. We
@@ -128,12 +145,15 @@ Future<BookTopic> _loadTopicRow(
   _collectStrings(t, buf);
   return BookTopic(
     id: t['id'] as String,
-    title: t['title'] as String,
-    subtitle: (t['list_subtitle'] as String?) ?? '',
+    title: title,
+    subtitle: subtitle,
     asset: assetPath,
-    tags: [for (final tag in t['tags'] as YamlList? ?? const []) tag as String],
+    tags: tags,
     palette: resolvePalette([...layers, topicOwn]),
     searchText: SearchNormalizer.normalize(buf.toString()),
+    titleText: SearchNormalizer.normalize('$title $subtitle'),
+    keywordsText: SearchNormalizer.normalize([...tags, ...aliases].join(' ')),
+    breadcrumb: ancestors.join(' › '),
   );
 }
 

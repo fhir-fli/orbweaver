@@ -101,6 +101,9 @@ class BookTopic {
     this.tags = const [],
     this.palette = const {},
     this.searchText = '',
+    this.titleText = '',
+    this.keywordsText = '',
+    this.breadcrumb = '',
   });
 
   final String id;
@@ -117,19 +120,47 @@ class BookTopic {
   /// Pre-normalised full-text index for this topic: title + subtitle + tags +
   /// aliases + every block's text, run through [SearchNormalizer] once at load
   /// (so British/American spellings and dosing wording already match). Empty
-  /// for synthetic test stubs. See [matches].
+  /// for synthetic test stubs.
   final String searchText;
 
-  /// True if every whitespace term in [query] (after the same normalisation
-  /// applied to [searchText]) is found as a substring — token-AND full-text
-  /// search. So "diarrhea" hits British "diarrhoea" content and "diazepam
-  /// rectal" requires both words somewhere in the topic.
-  bool matches(String query) {
+  /// Normalised title + subtitle, and normalised tags + aliases — kept
+  /// separately so [relevance] can weight a title/keyword hit above a buried
+  /// body-text mention.
+  final String titleText;
+  final String keywordsText;
+
+  /// Human-readable ancestry for search results, e.g.
+  /// "1. Triage… › 1.5 Diagnostic considerations". Empty for top-level
+  /// topics. Populated during library load.
+  final String breadcrumb;
+
+  /// Relevance of this topic to [query], or 0 if it doesn't match. Every
+  /// query term must appear *somewhere* (token-AND); each term then scores by
+  /// where it hit — title ≫ keywords ≫ body — with bonuses for the whole
+  /// query appearing as a phrase in, or at the start of, the title.
+  double relevance(String query) {
     final q = SearchNormalizer.normalize(query);
-    if (q.isEmpty) return true;
-    for (final term in q.split(' ')) {
-      if (!searchText.contains(term)) return false;
+    if (q.isEmpty) return 0;
+    final terms = q.split(' ');
+    for (final term in terms) {
+      if (!searchText.contains(term)) return 0; // AND filter
     }
-    return true;
+    var score = 0.0;
+    for (final term in terms) {
+      if (titleText.contains(term)) {
+        score += 10;
+      } else if (keywordsText.contains(term)) {
+        score += 5;
+      } else {
+        score += 1; // body-only mention
+      }
+    }
+    if (titleText.contains(q)) score += 20; // whole query as a title phrase
+    if (titleText.startsWith(q)) score += 10; // title prefix
+    return score;
   }
+
+  /// Boolean form of [relevance] (empty query matches everything).
+  bool matches(String query) =>
+      SearchNormalizer.normalize(query).isEmpty || relevance(query) > 0;
 }

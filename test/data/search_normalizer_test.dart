@@ -69,4 +69,41 @@ void main() {
       expect(t('anything').matches(''), isTrue);
     });
   });
+
+  group('BookTopic.relevance (ranking)', () {
+    BookTopic topic({
+      required String title,
+      String keywords = '',
+      String body = '',
+    }) =>
+        BookTopic(
+          id: 'x',
+          title: title,
+          subtitle: '',
+          asset: 'a',
+          titleText: SearchNormalizer.normalize(title),
+          keywordsText: SearchNormalizer.normalize(keywords),
+          searchText: SearchNormalizer.normalize('$title $keywords $body'),
+        );
+
+    test('title hit outranks keyword hit outranks body-only hit', () {
+      final titleHit = topic(title: 'Diazepam for convulsions');
+      final keywordHit = topic(title: 'Anticonvulsant', keywords: 'diazepam');
+      final bodyHit = topic(title: 'Coma', body: 'give diazepam rectally');
+      expect(titleHit.relevance('diazepam'),
+          greaterThan(keywordHit.relevance('diazepam')));
+      expect(keywordHit.relevance('diazepam'),
+          greaterThan(bodyHit.relevance('diazepam')));
+    });
+
+    test('non-matching topic scores zero', () {
+      expect(topic(title: 'Oxygen').relevance('diazepam'), 0);
+    });
+
+    test('title-prefix and whole-phrase bonuses apply', () {
+      final prefix = topic(title: 'Shock in children');
+      final mid = topic(title: 'Severe shock', body: 'shock');
+      expect(prefix.relevance('shock'), greaterThan(mid.relevance('shock')));
+    });
+  });
 }

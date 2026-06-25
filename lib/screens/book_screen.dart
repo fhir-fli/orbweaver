@@ -83,14 +83,25 @@ class _BookScreenState extends State<BookScreen> {
     );
   }
 
-  /// Flat list of topics matching the search query (ignores hierarchy).
+  /// Relevance-ranked flat list of topics matching the query (hierarchy is
+  /// flattened; each result shows its breadcrumb for context). Title/keyword
+  /// hits rank above buried body-text mentions; ties keep book order.
   Widget _buildSearchResults(List<BookTopic> allTopics) {
-    final matches =
-        allTopics.where((t) => t.matches(_query)).toList(growable: false);
-    if (matches.isEmpty) return _NoMatches(query: _query);
+    // Carry the original (book-order) index so we can break score ties in
+    // book order — Dart's List.sort is not stable.
+    final scored = <(BookTopic, double, int)>[];
+    for (var i = 0; i < allTopics.length; i++) {
+      final score = allTopics[i].relevance(_query);
+      if (score > 0) scored.add((allTopics[i], score, i));
+    }
+    scored.sort((a, b) {
+      final byScore = b.$2.compareTo(a.$2);
+      return byScore != 0 ? byScore : a.$3.compareTo(b.$3);
+    });
+    if (scored.isEmpty) return _NoMatches(query: _query);
     return ListView.separated(
       padding: const EdgeInsets.symmetric(vertical: 4),
-      itemCount: matches.length,
+      itemCount: scored.length,
       separatorBuilder: (_, __) => const Divider(
         height: 1,
         thickness: 0.5,
@@ -98,8 +109,9 @@ class _BookScreenState extends State<BookScreen> {
         endIndent: 12,
       ),
       itemBuilder: (context, i) => _TopicRow(
-        topic: matches[i],
-        onTap: () => openTopicFromBook(context, widget.book.id, matches[i]),
+        topic: scored[i].$1,
+        showBreadcrumb: true,
+        onTap: () => openTopicFromBook(context, widget.book.id, scored[i].$1),
       ),
     );
   }
@@ -322,17 +334,24 @@ class _TopicRow extends StatelessWidget {
     required this.topic,
     required this.onTap,
     this.indent = 0,
+    this.showBreadcrumb = false,
   });
 
   final BookTopic topic;
   final VoidCallback onTap;
   final double indent;
 
+  /// In search results, show the topic's chapter/section ancestry above the
+  /// title so otherwise-similar results (e.g. several "Differential Dx") are
+  /// distinguishable. Off in the normal TOC, where the hierarchy is implicit.
+  final bool showBreadcrumb;
+
   @override
   Widget build(BuildContext context) {
     // The row accent is the topic's resolved palette accent (book → chapter
     // → topic cascade), or a neutral bar if nothing declared one.
     final accent = topic.palette['accent'] ?? const Color(0xFFBDBDBD);
+    final crumb = showBreadcrumb && topic.breadcrumb.isNotEmpty;
     return InkWell(
       onTap: onTap,
       child: Padding(
@@ -341,7 +360,7 @@ class _TopicRow extends StatelessWidget {
           children: [
             Container(
               width: 3,
-              height: 32,
+              height: crumb ? 40 : 32,
               decoration: BoxDecoration(
                 color: accent,
                 borderRadius: BorderRadius.circular(2),
@@ -352,6 +371,18 @@ class _TopicRow extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  if (crumb) ...[
+                    Text(
+                      topic.breadcrumb,
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w600,
+                        color: accent,
+                        letterSpacing: 0.2,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                  ],
                   Text(
                     topic.title,
                     style: const TextStyle(
