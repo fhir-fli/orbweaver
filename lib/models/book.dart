@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orbweaver/data/search_normalizer.dart';
 
 /// One source reference book on the shelf.
 ///
@@ -99,6 +100,7 @@ class BookTopic {
     required this.asset,
     this.tags = const [],
     this.palette = const {},
+    this.searchText = '',
   });
 
   final String id;
@@ -112,11 +114,22 @@ class BookTopic {
   /// and is passed to the topic page when opened.
   final Map<String, Color> palette;
 
+  /// Pre-normalised full-text index for this topic: title + subtitle + tags +
+  /// aliases + every block's text, run through [SearchNormalizer] once at load
+  /// (so British/American spellings and dosing wording already match). Empty
+  /// for synthetic test stubs. See [matches].
+  final String searchText;
+
+  /// True if every whitespace term in [query] (after the same normalisation
+  /// applied to [searchText]) is found as a substring — token-AND full-text
+  /// search. So "diarrhea" hits British "diarrhoea" content and "diazepam
+  /// rectal" requires both words somewhere in the topic.
   bool matches(String query) {
-    if (query.isEmpty) return true;
-    final q = query.toLowerCase();
-    if (title.toLowerCase().contains(q)) return true;
-    if (subtitle.toLowerCase().contains(q)) return true;
-    return tags.any((t) => t.toLowerCase().contains(q));
+    final q = SearchNormalizer.normalize(query);
+    if (q.isEmpty) return true;
+    for (final term in q.split(' ')) {
+      if (!searchText.contains(term)) return false;
+    }
+    return true;
   }
 }

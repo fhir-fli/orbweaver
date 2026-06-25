@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:orbweaver/data/search_normalizer.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:yaml/yaml.dart';
@@ -119,6 +120,12 @@ Future<BookTopic> _loadTopicRow(
   final t = (loadYaml(raw) as YamlMap)['topic'] as YamlMap;
   // The topic's own `palette:` is the last (innermost) layer of the cascade.
   final topicOwn = parsePaletteOverrides(t['palette']);
+  // Full-text index: collect EVERY string in the topic (title, subtitle, tags,
+  // aliases, and every block's text — markdown, table cells, drug doses, …),
+  // then normalise once so spellings/units already match at search time. We
+  // already parse the whole YAML here, so this is near-free.
+  final buf = StringBuffer();
+  _collectStrings(t, buf);
   return BookTopic(
     id: t['id'] as String,
     title: t['title'] as String,
@@ -126,7 +133,28 @@ Future<BookTopic> _loadTopicRow(
     asset: assetPath,
     tags: [for (final tag in t['tags'] as YamlList? ?? const []) tag as String],
     palette: resolvePalette([...layers, topicOwn]),
+    searchText: SearchNormalizer.normalize(buf.toString()),
   );
+}
+
+/// Recursively appends every String leaf in a parsed-YAML node to [buf]
+/// (map values and list items; map keys are structural, so skipped). This is
+/// what makes search full-text and block-type-agnostic — new block types are
+/// indexed automatically.
+void _collectStrings(dynamic node, StringBuffer buf) {
+  if (node is String) {
+    buf
+      ..write(node)
+      ..write(' ');
+  } else if (node is Map) {
+    for (final v in node.values) {
+      _collectStrings(v, buf);
+    }
+  } else if (node is List) {
+    for (final v in node) {
+      _collectStrings(v, buf);
+    }
+  }
 }
 
 /// Resolves a topic `link_id` to where its topic lives, so a tapped
