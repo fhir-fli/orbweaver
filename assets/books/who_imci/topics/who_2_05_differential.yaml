@@ -1,13 +1,13 @@
 # ============================================================
 # WHO IMCI §2.5 — Differential diagnoses. Pocket Book 2nd ed (2013), p.44.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07-02: clinical-reasoning content current; no change.
 # ============================================================
 
 topic:
   id: "who-imci-2-5-differential"
   title: "Differential Diagnoses"
   list_subtitle: "2.5 · list, review, revise with response"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07-02"
   tags: ["differential diagnosis", "diagnosis", "treatment planning", "pediatric"]
   aliases:
     - "Differential"

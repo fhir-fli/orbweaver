@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §2.1 — Relationship to the IMCI approach & stages of hospital
 # care. Pocket Book 2nd ed (2013), p.41.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07-02: framework intact; young-infant age
+#    clarified to 0–59 days.
 # ============================================================
 
 topic:
   id: "who-imci-2-1-imci-stages"
   title: "IMCI Approach & Stages of Care"
   list_subtitle: "2.1 · symptom-based; stages of hospital management"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07-02"
   tags: ["imci", "diagnosis", "hospital care", "classification", "pediatric"]
   aliases:
     - "Stages of Care"
@@ -31,7 +32,7 @@ topic:
     - type: "prose"
       title: "Who is considered separately"
       markdown: |
-        - **Young infants (≤ 2 months)** — see Chapter 3.
+        - **Young infants (≤ 2 months / 0–59 days)** — see Chapter 3.
         - **Severely malnourished children** — see Chapter 7 (special
           attention to reduce their high mortality).
 

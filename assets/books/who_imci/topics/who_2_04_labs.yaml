@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §2.4 — Laboratory investigations. Pocket Book 2nd ed (2013),
 # pp.43–44.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07-02: malaria smear-or-RDT (confirm before
+#    treating); HIV virological test <18 mo; stool Xpert MTB/RIF for TB.
 # ============================================================
 
 topic:
   id: "who-imci-2-4-labs"
   title: "Laboratory Investigations"
   list_subtitle: "2.4 · basic tests for every small hospital"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07-02"
   tags: ["laboratory", "investigations", "blood smear", "csf", "blood culture", "pediatric"]
   aliases:
     - "Investigations"
@@ -30,16 +31,24 @@ topic:
       markdown: |
         - **Hb** or packed cell volume
         - **Full blood count**
-        - **Blood smear** for malaria parasites
+        - **Blood smear or malaria RDT** — confirm parasitologically **before**
+          giving antimalarials (RDT where quality microscopy is unavailable)
         - **Blood glucose**
         - **CSF microscopy**
         - **Urinalysis** (including microscopy)
         - **Blood grouping & cross-matching**
-        - **HIV testing**
+        - **HIV testing** — infants **< 18 months** need a **virological (NAT)
+          test** (DNA/RNA PCR); antibody tests become reliable only from **18
+          months**, as maternal antibody persists before then
         - Sick newborns **< 1 week:** **blood bilirubin** is also essential
 
     - type: "prose"
       title: "Other valuable tests"
       markdown: |
         **Pulse oximetry**, **chest X-ray**, **stool microscopy**, **blood
-        cultures** — indications are given in the relevant chapters.
+        cultures**, and **stool Xpert MTB/RIF (Ultra)** for suspected TB when a
+        child cannot produce sputum — indications are given in the relevant
+        chapters. Take **blood cultures before starting antibiotics** in
+        suspected sepsis or severe febrile illness: rising resistance of
+        bloodstream pathogens to first-line agents (e.g. ceftriaxone) makes
+        culture-guided therapy increasingly important where capacity allows.

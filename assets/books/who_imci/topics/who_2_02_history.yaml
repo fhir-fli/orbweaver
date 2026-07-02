@@ -1,13 +1,14 @@
 # ============================================================
 # WHO IMCI §2.2 — Taking history. Pocket Book 2nd ed (2013), p.42.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07-02: elevated immunization-status check;
+#    added HIV-exposure + TB-contact history; expanded counselling messages.
 # ============================================================
 
 topic:
   id: "who-imci-2-2-history"
   title: "Taking a History"
   list_subtitle: "2.2 · presenting complaint to full history"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07-02"
   tags: ["history", "presenting complaint", "feeding history", "diagnosis", "pediatric"]
   aliases:
     - "Clinical History"
@@ -28,11 +29,16 @@ topic:
     - type: "prose"
       title: "Cover the wider history"
       markdown: |
-        Include **personal, vaccination, family, social and environmental**
-        histories — these often lead to **counselling messages**:
+        Include **personal, immunization, family, social and environmental**
+        histories. **Check the immunization status of every sick child** — the
+        single most cost-effective way to cut childhood deaths. In endemic
+        settings also ask about **HIV exposure** (mother's HIV status) and any
+        **TB contact**. These histories often lead to **counselling messages**:
         - **bednet** use for malaria
-        - **breastfeeding / sanitation** for diarrhoea
+        - **breastfeeding, safe water, sanitation & handwashing with soap** for diarrhoea
+        - keeping **ORS at home** for early diarrhoea
         - reducing **indoor air pollution** for pneumonia
+        - **completing the vaccination schedule**
 
     - type: "prose"
       title: "Age-specific points"
@@ -40,6 +46,8 @@ topic:
         - **Younger infants:** pregnancy and birth history matters; the
           **feeding history is essential** (malnutrition often begins here).
         - **Older children:** ask about **developmental milestones**; they
-          can contribute information themselves.
+          can contribute information themselves. If development is a concern,
+          the **WHO Global Scales for Early Development (GSED, 2023)** give a
+          standardised 0–3 yr assessment.
         - **Establish rapport** with child and parent **before examining**.
           Children **8 months – 5 years** need the most flexible approach.

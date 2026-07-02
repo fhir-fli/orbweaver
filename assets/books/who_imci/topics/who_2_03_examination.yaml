@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §2.3 — Approach to the sick child & clinical examination.
 # Pocket Book 2nd ed (2013), pp.42–43.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07-02: added fast-breathing RR thresholds;
+#    broadened pulse oximetry to every acutely ill child + SpO₂<90% threshold.
 # ============================================================
 
 topic:
   id: "who-imci-2-3-examination"
   title: "Approach & Clinical Examination"
   list_subtitle: "2.3 · observe first, least-invasive last"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07-02"
   tags: ["examination", "observation", "respiratory rate", "pulse oximetry", "point of care", "pediatric"]
   aliases:
     - "Clinical Examination"
@@ -38,8 +39,10 @@ topic:
         - **Cyanosed or pale**?
         - **Respiratory distress** — auxiliary muscles, **lower chest-wall
           indrawing**, **fast breathing**?
-        - **Count the respiratory rate.** Ask the mother to cautiously bare
-          the chest, or to breastfeed, to let the child settle first.
+        - **Count the respiratory rate.** Fast breathing:
+          **≥60/min (<2 mo) · ≥50/min (2–12 mo) · ≥40/min (12–59 mo)**.
+          Ask the mother to cautiously bare the chest, or to breastfeed, to
+          let the child settle first.
 
     - type: "prose"
       title: "2. Then minimally-disturbing touch"
@@ -51,8 +54,12 @@ topic:
       title: "3. Interfering signs last"
       markdown: |
         Leave for last: **temperature, skin turgor, capillary refill, blood
-        pressure, throat and ears**. Measure **SpO₂ by pulse oximeter in ALL
-        children with fast breathing or chest indrawing**.
+        pressure, throat and ears**. Measure **SpO₂ by pulse oximeter in every
+        acutely ill child** — not only those with respiratory signs; hypoxaemia
+        is a major, often silent predictor of death and is poorly detected by
+        clinical signs alone. **Give oxygen and refer if SpO₂ < 90%**, then
+        target **88–92%** to avoid hyperoxia (see
+        [Chart 5](topic:who-imci-chart5-oxygen)).
 
     - type: "prose"
       title: "Point-of-care tests"
@@ -61,4 +68,6 @@ topic:
         - **Glucostix** for an urgent blood sugar
           ([Chart 10](topic:who-imci-chart10-glucose) if low)
         - **Rapid malaria test**
+        - **point-of-care CRP** where available — an emerging aid to flag
+          bacterial infection (not yet part of IMCI)
         - any other simple bedside test
