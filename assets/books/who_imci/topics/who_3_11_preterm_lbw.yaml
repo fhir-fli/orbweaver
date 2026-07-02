@@ -1,0 +1,37 @@
+# ============================================================
+# WHO IMCI §3.11 — Preterm and low-birth-weight infants (overview of the
+# nested group). Pocket Book 2nd ed (2013), p.58.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-11-preterm-lbw"
+  title: "Preterm & Low-Birth-Weight Infants"
+  list_subtitle: "3.11 · stratified by weight / gestation"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["preterm", "low birth weight", "lbw", "kangaroo mother care", "neonate", "pediatric"]
+  aliases:
+    - "Preterm"
+    - "Low Birth Weight"
+  category: "medical"
+
+  page_number: 58
+
+  blocks:
+
+    - type: "prose"
+      title: "Stratified by weight & gestation"
+      highlight: true
+      markdown: |
+        Preterm and low-birth-weight infants are at risk of **hypothermia,
+        feeding problems, apnoea, respiratory distress syndrome, infection and
+        necrotizing enterocolitis** — **the smaller the infant, the higher the
+        risk**. Management is stratified by birth weight / gestation:
+        - **2.0–2.5 kg (35–36 weeks)** — usually breastfeed and self-regulate
+          temperature ([§3.11.1](topic:who-imci-3-11-1-lbw-moderate)).
+        - **< 2.0 kg (< 35 weeks)** — admit to special care
+          ([§3.11.2](topic:who-imci-3-11-2-lbw-small)).
+
+        See also **common problems**
+        ([§3.11.3](topic:who-imci-3-11-3-lbw-problems)) and **discharge &
+        follow-up** ([§3.11.4](topic:who-imci-3-11-4-lbw-discharge)).

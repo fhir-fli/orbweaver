@@ -1,0 +1,32 @@
+# ============================================================
+# WHO IMCI §3.11.1 — Infants with a birth weight of 2.0–2.5 kg
+# (35–36 weeks' gestation). Pocket Book 2nd ed (2013), p.58.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-11-1-lbw-moderate"
+  title: "LBW 2.0–2.5 kg (35–36 wk)"
+  list_subtitle: "3.11.1 · usually breastfeed; keep warm; watch for infection"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["low birth weight", "moderate lbw", "breastfeeding", "neonate", "pediatric"]
+  aliases:
+    - "Moderate LBW"
+  category: "medical"
+
+  page_number: 58
+
+  blocks:
+
+    - type: "prose"
+      title: "Usually strong enough to feed"
+      highlight: true
+      markdown: |
+        These infants are usually **strong enough to breastfeed** and to
+        maintain their body temperature.
+        - Start feeds within **1 h of delivery**.
+        - Mothers usually need **additional support for exclusive
+          breastfeeding**.
+        - Keep the infant **warm at all times**.
+        - All low-birth-weight infants are at **risk of infection** and should
+          be **closely observed** for infection control.

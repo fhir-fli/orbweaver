@@ -1,0 +1,88 @@
+# ============================================================
+# WHO IMCI §3.11.3 — Common problems of low-birth-weight infants:
+# respiratory distress syndrome, necrotizing enterocolitis. Pocket Book
+# 2nd ed (2013), pp.61–63.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-11-3-lbw-problems"
+  title: "LBW Common Problems"
+  list_subtitle: "3.11.3 · respiratory distress syndrome · NEC"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["respiratory distress syndrome", "rds", "necrotizing enterocolitis", "nec", "cpap", "preterm", "pediatric"]
+  aliases:
+    - "RDS"
+    - "Necrotizing Enterocolitis"
+  category: "medical"
+
+  page_number: 61
+
+  blocks:
+
+    - type: "prose"
+      title: "Respiratory distress syndrome"
+      highlight: true
+      markdown: |
+        Preterm infants are at risk of RDS from **surfactant deficiency**. Risk
+        is reduced if a mother at risk of premature delivery is given
+        **dexamethasone (two doses of 12 mg, 24 h apart)**. RDS usually occurs
+        in the **first 3 days** and is self-limiting (birth triggers surfactant
+        production) — support the infant until the deficiency resolves. Features
+        are usually obvious within **4 h** of birth:
+        - **tachypnoea**
+        - an **expiratory grunt**
+        - **intercostal / subcostal recession**
+        - **cyanosis**
+
+    - type: "prose"
+      title: "RDS — treatment"
+      markdown: |
+        - **Minimal handling** of the infant.
+        - **Supplementary oxygen** if needed to keep **SpO₂ > 90% but < 95%**
+          (to avoid eye damage).
+        - **Initially no oral feeding**; give **IV fluids**.
+        - Maintain a **normal temperature**.
+        - **IV antibiotics** for neonatal sepsis (pneumonia is hard to exclude
+          as a cause).
+        - **CPAP** — used even in expiration to prevent airway collapse, improve
+          oxygenation and reduce breathing fatigue (§10.7).
+        - If respiratory distress or hypoxaemia persists, do a **chest X-ray**
+          to check for pneumothorax.
+
+    - type: "prose"
+      title: "Necrotizing enterocolitis"
+      markdown: |
+        A **bowel infection** that may occur in low-birth-weight infants,
+        especially **after enteral feeds** are started — commoner in
+        formula-fed infants but possible in breastfed ones.
+
+        **Signs:**
+        - **abdominal distension or tenderness**
+        - **intolerance to feeding**
+        - **bile-stained vomit** or bile-stained fluid up the nasogastric tube
+        - **blood in the stools**
+
+        **Systemic signs:** apnoea, drowsiness or unconsciousness, fever or
+        hypothermia.
+
+    - type: "prose"
+      title: "NEC — treatment"
+      markdown: |
+        - **Stop enteral feeding.**
+        - Pass a **nasogastric tube** and leave it on **free drainage**.
+        - Start an **IV glucose–saline infusion**
+          ([§3.10](topic:who-imci-3-10-supportive-care) for the rate).
+        - Start antibiotics: **ampicillin (or penicillin) + gentamicin +
+          metronidazole for 10 days**.
+        - If apnoea occurs, give **oxygen by nasal catheter**; if it continues,
+          give **aminophylline or caffeine IV**
+          ([§3.11.2](topic:who-imci-3-11-2-lbw-small)).
+        - If the infant is **pale, check the Hb and transfuse if Hb < 10 g/dl**.
+        - Take a **supine and lateral decubitus abdominal X-ray** — gas outside
+          the bowel suggests **perforation** → ask a surgeon to see the infant
+          **urgently**.
+        - Examine the infant daily; reintroduce EBM by nasogastric tube when the
+          abdomen is soft and non-tender, normal stools (no blood) are passing
+          and there is no bilious vomiting. Start slowly, increasing **1–2 ml
+          per feed per day**.

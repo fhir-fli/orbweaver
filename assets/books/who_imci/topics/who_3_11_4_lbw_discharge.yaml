@@ -1,0 +1,37 @@
+# ============================================================
+# WHO IMCI §3.11.4 — Discharge and follow-up of low-birth-weight infants.
+# Pocket Book 2nd ed (2013), p.63.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-11-4-lbw-discharge"
+  title: "LBW Discharge & Follow-up"
+  list_subtitle: "3.11.4 · discharge criteria + vaccines"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["discharge", "follow-up", "low birth weight", "immunisation", "neonate", "pediatric"]
+  aliases:
+    - "LBW Discharge"
+  category: "medical"
+
+  page_number: 63
+
+  blocks:
+
+    - type: "prose"
+      title: "Discharge when…"
+      highlight: true
+      markdown: |
+        A low-birth-weight infant can be discharged when:
+        - there are **no danger signs**
+          ([§3.6](topic:who-imci-3-6-danger-signs)) or signs of serious
+          infection;
+        - the infant is **gaining weight on breastfeeding alone**;
+        - the infant can **maintain a temperature of 36–37 °C in an open cot**;
+        - the mother is **confident and able to care** for the infant.
+
+    - type: "prose"
+      title: "Immunisation"
+      markdown: |
+        Give all **scheduled vaccines** at the time of birth, and any **second
+        doses** that are due by the time of discharge.

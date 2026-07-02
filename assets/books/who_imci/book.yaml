@@ -81,3 +81,11 @@ book:
         - topic: "topics/who_3_07_convulsions.yaml"
         - topic: "topics/who_3_08_bacterial_infection.yaml"
         - topic: "topics/who_3_09_meningitis.yaml"
+        - topic: "topics/who_3_10_supportive_care.yaml"
+        - title: "3.11 Preterm & low-birth-weight infants"
+          topic: "topics/who_3_11_preterm_lbw.yaml"
+          children:
+            - topic: "topics/who_3_11_1_lbw_moderate.yaml"
+            - topic: "topics/who_3_11_2_lbw_small.yaml"
+            - topic: "topics/who_3_11_3_lbw_problems.yaml"
+            - topic: "topics/who_3_11_4_lbw_discharge.yaml"

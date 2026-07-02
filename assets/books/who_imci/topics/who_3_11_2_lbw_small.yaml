@@ -1,0 +1,121 @@
+# ============================================================
+# WHO IMCI §3.11.2 — Infants with a birth weight < 2.0 kg (< 35 weeks'
+# gestation): hypothermia (Kangaroo mother care), feeding, apnoea
+# prevention. Pocket Book 2nd ed (2013), pp.58–61.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-11-2-lbw-small"
+  title: "LBW < 2.0 kg (< 35 wk)"
+  list_subtitle: "3.11.2 · special care · KMC · feeding · apnoea"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["very low birth weight", "kangaroo mother care", "preterm feeding", "apnoea", "caffeine", "neonate", "pediatric"]
+  aliases:
+    - "Very Low Birth Weight"
+    - "Kangaroo Mother Care"
+  category: "medical"
+
+  page_number: 58
+
+  blocks:
+
+    - type: "prose"
+      title: "Admit to special care"
+      highlight: true
+      markdown: |
+        All infants with a **gestation < 35 weeks** or a **birth weight < 2.0
+        kg** should be admitted to a **special care unit** — at risk of
+        hypothermia, feeding problems, apnoea, respiratory distress syndrome
+        and necrotizing enterocolitis (**the smaller the infant, the higher the
+        risk**). Balance the risks of hospital (e.g. hospital-acquired
+        infection) against the benefit of better care. See the infant **at
+        least twice a day** to assess feeding, fluid intake, and the presence
+        of any **danger signs** ([§3.6](topic:who-imci-3-6-danger-signs)) or
+        signs of **serious bacterial infection**
+        ([§3.8](topic:who-imci-3-8-bacterial-infection)).
+
+    - type: "prose"
+      title: "Preventing hypothermia — Kangaroo mother care"
+      markdown: |
+        Clinically stable low-birth-weight neonates (**< 2000 g**) should be
+        given **Kangaroo mother care** soon after birth, ensured at all times,
+        day and night:
+        - Dress the infant only in a **nappy, hat and socks**.
+        - Place the infant **skin-to-skin** on the mother's chest between her
+          breasts, head turned to one side.
+        - **Tie** the infant to the mother with a cloth.
+        - **Cover** the mother and infant with the mother's clothes.
+        - Encourage the mother to **breastfeed frequently**.
+
+        Aim for a core temperature of **36–37 °C**, with the feet warm and
+        pink. If the mother cannot provide it, a clean **incubator** may be used
+        (washed with disinfectant, of a basic design used appropriately).
+
+    - type: "prose"
+      title: "Feeding"
+      markdown: |
+        Many low-birth-weight infants can **suckle at the breast** — breastfeed
+        those who can. Those who cannot should be given **expressed breast milk
+        by cup and spoon**; reduce the cup feeds as breast sucking is
+        established. Infants unable to feed from a cup and spoon should be given
+        **intermittent bolus feeds through a gastric tube**. Feed the infant the
+        **mother's own milk**; in exceptional situations give **donor human
+        milk** (if safe milk-banking exists), and **formula only if neither** is
+        possible.
+
+    - type: "prose"
+      title: "Feeding — infants < 1.5 kg"
+      markdown: |
+        These infants have the **highest** risk of feeding problems and
+        necrotizing enterocolitis.
+        - **Day 1:** give **10 ml/kg/day** of enteral feeds (preferably EBM),
+          the remaining fluid at **50 ml/kg/day IV**; if well and not on IV,
+          give **2–4 ml EBM every 2 h** by nasogastric tube (by weight).
+        - If **enteral feeds are not tolerated**, give IV fluids **60 ml/kg/day**
+          on day 1 (paediatric 100 ml burette: 60 drops = 1 ml, so **1 drop/min
+          = 1 ml/h**).
+        - **Check blood sugar every 6 h** until enteral feeds are established —
+          especially if apnoeic, lethargic or convulsing. Very-low-birth-weight
+          infants may need **10% glucose** (add 10 ml of 50% glucose to 90 ml of
+          4.3% glucose + 0.18% saline, or use 10% glucose in water).
+        - **Start enteral feeding** when the infant is stable, with no abdominal
+          distension or tenderness, bowel sounds present, meconium passed and no
+          apnoea.
+        - When commencing milk feeds, start **2–4 ml every 1–2 h** by
+          orogastric/nasogastric tube (some are fed by cup and spoon or
+          eyedropper — sterilise first). Use EBM where possible. If 2–4 ml is
+          tolerated (no vomiting, no distension, gastric aspirate < half the
+          feed), increase by **1–2 ml per feed per day**. Reduce or withhold
+          feeds if there are signs of poor tolerance. Aim to establish feeding
+          within the first **5–7 days** so the IV drip can be removed.
+        - Feeds may rise over the first 2 weeks to **150–180 ml/kg/day**
+          (3-hourly: 19–23 ml for a 1-kg infant, 28–34 ml for a 1.5-kg infant);
+          recalculate as the infant grows.
+
+    - type: "prose"
+      title: "Supplements & iron"
+      markdown: |
+        Give daily supplements once the infant is accepting **full enteral
+        feeds**:
+        - **vitamin D 400 IU**
+        - **calcium 120–140 mg/kg**
+        - **phosphorus 60–90 mg/kg**
+
+        Start **iron 2–4 mg/kg/day at 2 weeks of age**, continued until **6
+        months**.
+
+    - type: "prose"
+      title: "Preventing apnoea"
+      markdown: |
+        - Give **caffeine citrate** (preferred) or **aminophylline** to prevent
+          apnoea in premature infants.
+        - **Caffeine citrate:** loading **20 mg/kg** orally or IV (given slowly
+          over 30 min); maintenance **5 mg/kg/day** from 24 h later, increased
+          by 5 mg/kg every 24 h to a maximum of **20 mg/kg/day**. Continue **4–5
+          days** after apnoea ceases.
+        - **Aminophylline** (if caffeine unavailable): loading **6 mg/kg IV over
+          20 min**, then **2.5 mg/kg every 12 h**.
+        - Use an **apnoea monitor** if available; if not, a **pulse oximeter**
+          with the alarm on for hypoxaemia may help detect apnoea if the neonate
+          is breathing room air.

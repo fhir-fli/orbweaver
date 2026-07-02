@@ -1,0 +1,96 @@
+# ============================================================
+# WHO IMCI §3.10 — Supportive care for sick neonates (3.10.1 thermal,
+# 3.10.2 fluid, 3.10.3 oxygen, 3.10.4 high fever). Pocket Book 2nd ed
+# (2013), pp.56–58.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-10-supportive-care"
+  title: "Supportive Care for Sick Neonates"
+  list_subtitle: "3.10 · thermal · fluids · oxygen · fever"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["supportive care", "neonate", "thermal", "fluid management", "oxygen", "fever", "pediatric"]
+  aliases:
+    - "Neonatal Supportive Care"
+  category: "medical"
+
+  page_number: 56
+
+  blocks:
+
+    - type: "prose"
+      title: "Thermal environment (3.10.1)"
+      highlight: true
+      markdown: |
+        - Keep the young infant **dry and well wrapped**; a **hat** reduces
+          heat loss. Keep the room **warm (≥ 25 °C)**.
+        - **Kangaroo mother care** ([§3.11](topic:who-imci-3-11-2-lbw-small))
+          24 h/day is an effective way to keep the infant warm; an **external
+          heating device** may be needed when the mother is asleep or too ill.
+        - Avoid **chilling** during examination or investigation.
+        - **Check the temperature regularly** — maintain **36.5–37.5 °C
+          rectal** (36.0–37.0 °C axillary); use a **low-reading thermometer**
+          to detect hypothermia.
+
+    - type: "prose"
+      title: "Fluid management (3.10.2)"
+      markdown: |
+        - Encourage the mother to **breastfeed frequently** to prevent
+          hypoglycaemia. If the infant cannot feed, give **expressed breast
+          milk by nasogastric tube**.
+        - **Withhold oral feeding** with bowel obstruction, necrotizing
+          enterocolitis, or if feeds are not tolerated (increasing abdominal
+          distension or vomiting), and in infants who are **lethargic,
+          unconscious or having frequent convulsions**.
+        - If IV fluids are given, **reduce the rate** as oral/gastric milk feeds
+          increase; give IV fluids through an **in-line burette**.
+
+    - type: "table"
+      title: "Total fluid over the first days (oral + IV)"
+      columns: ["Day", "Fluid"]
+      column_flex: [2, 3]
+      rows:
+        - cells: ["Day 1", "60 ml/kg/day"]
+        - cells: ["Day 2", "90 ml/kg/day"]
+        - cells: ["Day 3", "120 ml/kg/day"]
+        - cells: ["Then increase to", "150 ml/kg/day"]
+
+    - type: "prose"
+      title: "Fluid — cautions"
+      markdown: |
+        - When oral feeds are well tolerated, fluid may rise to **180 ml/kg/day**
+          after some days.
+        - Be careful with **parenteral IV fluids** (they can quickly overhydrate
+          a child): **do not exceed 100 ml/kg/day IV** unless the infant is
+          dehydrated or under phototherapy / a radiant heater. This is the
+          **total** intake — count oral intake when calculating the IV rate.
+        - Give **more** fluid under a radiant heater (**1.2–1.5×**).
+        - For the **first 2 days**, use a **10% glucose** infusion; do **not**
+          use IV glucose without sodium **after** the first 2 days (use
+          half-normal saline + 5% dextrose).
+        - Monitor the infusion carefully — monitoring sheet, calculate the drip
+          rate, and **check rate and volume every hour**.
+
+    - type: "prose"
+      title: "Oxygen therapy (3.10.3)"
+      markdown: |
+        Give oxygen to a neonate or young infant with any of:
+        - **central cyanosis or gasping**
+        - **grunting with every breath**
+        - **difficulty feeding due to respiratory distress**
+        - **severe lower chest-wall indrawing**
+        - **head nodding** (synchronous with respiration — severe distress)
+
+        Use a **pulse oximeter** to guide therapy: give oxygen if **SpO₂ ≤ 90%**,
+        regulate flow to keep **> 90%**, and discontinue once the infant holds
+        **> 90% in room air**. **Nasal prongs** are preferred — **0.5–1 L/min**
+        (up to **2 L/min** in severe distress). Clear thick secretions by
+        intermittent suction under direct vision if they obstruct the airway.
+
+    - type: "prose"
+      title: "High fever (3.10.4)"
+      markdown: |
+        **Do not** use antipyretics such as paracetamol to control fever in
+        young infants. **Control the environment** and, if necessary, **undress
+        the child**.
