@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart' hide TableCell, TableRow;
+import 'package:flutter/material.dart' as mat;
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
@@ -40,6 +41,12 @@ class TableBlockView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // A wide matrix (more columns than fit the screen) renders as a
+    // horizontally-scrolling fixed-width grid instead of a flex table.
+    if (block.layout == TableLayout.scroll) {
+      return _ScrollTableView(block: block, theme: theme);
+    }
+
     final borderColor = theme.nodeBorder.withValues(alpha: 0.6);
     final headerBg = theme.header;
     final boxed = block.layout == TableLayout.boxed;
@@ -293,5 +300,144 @@ class TableBlockView extends StatelessWidget {
         RowSeverity.emergency => theme.severitySevereTile,
         RowSeverity.priority => theme.severityModerateTile,
         RowSeverity.nonUrgent => theme.severityMildTile,
+      };
+}
+
+/// Horizontally-scrolling fixed-width table for [TableLayout.scroll].
+///
+/// Columns can't flex (the grid is wider than the screen), so each takes an
+/// explicit width from [TableBlock.columnWidths] (falling back to a default).
+/// The title stays fixed; only the grid scrolls, under an always-visible
+/// scrollbar. Used by the §3.14 neonatal drug-dose matrix.
+class _ScrollTableView extends StatefulWidget {
+  const _ScrollTableView({required this.block, required this.theme});
+
+  final TableBlock block;
+  final TopicTheme theme;
+
+  @override
+  State<_ScrollTableView> createState() => _ScrollTableViewState();
+}
+
+class _ScrollTableViewState extends State<_ScrollTableView> {
+  final _controller = ScrollController();
+
+  static const double _defaultColWidth = 78;
+  static const double _fontSize = 12;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  double _width(int i) {
+    final w = widget.block.columnWidths;
+    return i < w.length ? w[i] : _defaultColWidth;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final block = widget.block;
+    final theme = widget.theme;
+    final borderColor = theme.nodeBorder.withValues(alpha: 0.6);
+    final dividerColor = borderColor.withValues(alpha: 0.5);
+    final ncol = block.columns.length;
+
+    Widget pad(Widget child) => Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+          child: child,
+        );
+
+    // Flutter's Table equalises row heights and paints its own borders,
+    // and — unlike an IntrinsicHeight+Row — copes with MiniMarkdown cells
+    // (which can't answer intrinsic-dimension queries).  All columns use a
+    // fixed width, so the table has a finite width and can scroll inside a
+    // horizontal viewport.
+    final table = mat.Table(
+      border: mat.TableBorder(
+        top: BorderSide(color: borderColor),
+        bottom: BorderSide(color: borderColor),
+        left: BorderSide(color: borderColor),
+        right: BorderSide(color: borderColor),
+        horizontalInside: BorderSide(color: borderColor),
+        verticalInside: BorderSide(color: dividerColor),
+        borderRadius: BorderRadius.circular(4),
+      ),
+      defaultVerticalAlignment: TableCellVerticalAlignment.top,
+      columnWidths: {
+        for (var i = 0; i < ncol; i++) i: FixedColumnWidth(_width(i)),
+      },
+      children: [
+        mat.TableRow(
+          decoration: BoxDecoration(color: theme.header),
+          children: [
+            for (var i = 0; i < ncol; i++)
+              pad(
+                Text(
+                  block.columns[i],
+                  style: const TextStyle(
+                    fontSize: _fontSize,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+          ],
+        ),
+        for (final row in block.rows)
+          mat.TableRow(
+            children: [
+              for (var i = 0; i < ncol; i++)
+                pad(
+                  i < row.cells.length
+                      ? _cell(row.cells[i])
+                      : const SizedBox.shrink(),
+                ),
+            ],
+          ),
+      ],
+    );
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (block.title != null) ...[
+          Text(
+            block.title!,
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w800,
+              color: theme.header,
+            ),
+          ),
+          const SizedBox(height: 4),
+        ],
+        Scrollbar(
+          controller: _controller,
+          thumbVisibility: true,
+          child: SingleChildScrollView(
+            controller: _controller,
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(bottom: 10),
+            child: table,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _cell(TableCell cell) => switch (cell) {
+        TextCell(:final text) =>
+          MiniMarkdown(markdown: text, fontSize: _fontSize),
+        BulletCell(:final items) => Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              for (final item in items)
+                MiniMarkdown(markdown: '- $item', fontSize: _fontSize),
+            ],
+          ),
+        MarkdownCell(:final markdown) =>
+          MiniMarkdown(markdown: markdown, fontSize: _fontSize),
       };
 }

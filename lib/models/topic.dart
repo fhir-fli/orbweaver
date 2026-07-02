@@ -1156,6 +1156,7 @@ class TableBlock extends Block {
     this.title,
     this.columns = const [],
     this.columnFlex = const [],
+    this.columnWidths = const [],
     this.layout = TableLayout.standard,
     super.flex,
     super.anchor,
@@ -1166,6 +1167,7 @@ class TableBlock extends Block {
         title: map['title'] as String?,
         columns: _stringList(map['columns']),
         columnFlex: _intList(map['column_flex']),
+        columnWidths: _doubleList(map['column_widths']),
         rows: _mapList(map['rows'], TopicTableRow.fromYaml),
         layout: TableLayout.fromString(map['layout'] as String?),
         flex: _flex(map),
@@ -1182,6 +1184,13 @@ class TableBlock extends Block {
   /// `[5, 2, 2, 2]` makes a wide label column with narrow value columns
   /// (matches the WVEMS APGAR layout).  Empty = equal columns.
   final List<int> columnFlex;
+
+  /// Optional per-column fixed widths (logical px), one per entry in
+  /// [columns].  Used only by [TableLayout.scroll], where columns cannot
+  /// flex (the table is wider than the screen and scrolls horizontally),
+  /// so each needs an explicit width — e.g. the §3.14 neonatal drug-dose
+  /// matrix (Drug/Dosage/Form + 7 weight-band columns).
+  final List<double> columnWidths;
   final List<TopicTableRow> rows;
   final TableLayout layout;
 }
@@ -1196,10 +1205,16 @@ class TableBlock extends Block {
 /// rows of comparable data.
 enum TableLayout {
   standard,
-  boxed;
+  boxed,
+
+  /// A table too wide for the screen (many columns).  Columns take fixed
+  /// [TableBlock.columnWidths] and the whole grid scrolls horizontally
+  /// inside a scrollbar.  Used by the §3.14 neonatal drug-dose matrix.
+  scroll;
 
   static TableLayout fromString(String? s) => switch (s) {
         'boxed' => boxed,
+        'scroll' => scroll,
         _ => standard,
       };
 }
@@ -1594,6 +1609,12 @@ List<int> _intList(dynamic raw) {
   if (raw == null) return const [];
   final list = raw is YamlList ? raw.toList() : raw as List;
   return list.map((e) => (e as num).toInt()).toList();
+}
+
+List<double> _doubleList(dynamic raw) {
+  if (raw == null) return const [];
+  final list = raw is YamlList ? raw.toList() : raw as List;
+  return list.map((e) => (e as num).toDouble()).toList();
 }
 
 List<T> _mapList<T>(
