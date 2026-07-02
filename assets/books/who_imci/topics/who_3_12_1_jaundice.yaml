@@ -1,0 +1,114 @@
+# ============================================================
+# WHO IMCI §3.12.1 — Jaundice. Pocket Book 2nd ed (2013), pp.64–66.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-12-1-jaundice"
+  title: "Neonatal Jaundice"
+  list_subtitle: "3.12.1 · normal vs abnormal · phototherapy thresholds"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["jaundice", "hyperbilirubinaemia", "phototherapy", "exchange transfusion", "neonate", "pediatric"]
+  aliases:
+    - "Hyperbilirubinaemia"
+  category: "medical"
+
+  page_number: 64
+
+  blocks:
+
+    - type: "prose"
+      title: "Normal or abnormal?"
+      highlight: true
+      markdown: |
+        More than **50% of normal newborns** and **80% of preterm** infants
+        have some jaundice. It may be **normal** or **abnormal**.
+
+    - type: "prose"
+      title: "Normal (physiological)"
+      markdown: |
+        - Skin and eyes yellow, but **none of the abnormal signs** below.
+
+    - type: "prose"
+      title: "Abnormal (non-physiological)"
+      markdown: |
+        - **starting on the first day of life**
+        - lasting **> 14 days** (term) or **> 21 days** (preterm)
+        - **with fever**
+        - **deep jaundice** — palms and soles deep yellow
+
+        Abnormal jaundice may be due to:
+        - **serious bacterial infection**
+        - **haemolytic disease** (blood-group incompatibility or **G6PD
+          deficiency**)
+        - **congenital syphilis**
+          ([§3.13](topic:who-imci-3-13-1-syphilis)) or other intrauterine
+          infection
+        - **liver disease** (hepatitis or biliary atresia — stools pale, urine
+          dark)
+        - **hypothyroidism**
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        Monitor all newborns for jaundice; confirm by **bilirubin** measurement
+        when possible in:
+        - infants if jaundice appears on **day 1**
+        - **preterm (< 35 wk)** if it appears on **day 2**
+        - infants if **palms and soles** are yellow at any age
+
+        Tests depend on the probable diagnosis: **Hb/PCV**; **FBC** (serious
+        bacterial infection — high/low neutrophils, > 20% band forms — and
+        haemolysis); **blood type of infant and mother + Coombs test**;
+        **syphilis serology (VDRL)**; **G6PD screening, thyroid function,
+        liver ultrasound**.
+
+    - type: "prose"
+      title: "Treatment — phototherapy if…"
+      markdown: |
+        - jaundice on **day 1**
+        - **deep jaundice** involving palms and soles of the feet
+        - **prematurity** and jaundice
+        - jaundice due to **haemolysis**
+
+    - type: "table"
+      title: "Phototherapy threshold — serum bilirubin"
+      columns: ["Age", "Healthy ≥ 35 wk", "Preterm < 35 wk / risk"]
+      column_flex: [2, 3, 3]
+      rows:
+        - cells: ["Day 1", "Any visible jaundice", "Any visible jaundice"]
+        - cells: ["Day 2", "260 µmol/L (15 mg/dl)", "170 µmol/L (10 mg/dl)"]
+        - cells: ["Day ≥ 3", "310 µmol/L (18 mg/dl)", "250 µmol/L (15 mg/dl)"]
+
+    - type: "table"
+      title: "Exchange transfusion threshold — serum bilirubin"
+      columns: ["Age", "Healthy ≥ 35 wk", "Preterm < 35 wk / risk"]
+      column_flex: [2, 3, 3]
+      rows:
+        - cells: ["Day 1", "260 µmol/L (15 mg/dl)", "220 µmol/L (10 mg/dl)"]
+        - cells: ["Day 2", "425 µmol/L (25 mg/dl)", "260 µmol/L (15 mg/dl)"]
+        - cells: ["Day ≥ 3", "425 µmol/L (25 mg/dl)", "340 µmol/L (20 mg/dl)"]
+
+    - type: "prose"
+      title: "About the thresholds"
+      markdown: |
+        - **Risk factors:** small size (**< 2.5 kg** or **< 37 wk**),
+          **haemolysis**, **sepsis**.
+        - Day-1 phototherapy = **any visible jaundice** anywhere on the body.
+        - **Exchange transfusion** is not described in the Pocket Book — the
+          thresholds are given in case exchange is possible, or the infant can
+          be transferred quickly and safely to a facility where it can be done.
+        - Continue phototherapy until bilirubin is **below the threshold**, or
+          the infant is well with no jaundice of palms/soles. If bilirubin is
+          very high and exchange can be done safely, **consider it**.
+
+    - type: "prose"
+      title: "Other treatment"
+      markdown: |
+        - **Antibiotics:** if infection or syphilis is suspected, treat for
+          serious bacterial infection
+          ([§3.8](topic:who-imci-3-8-bacterial-infection) ·
+          [§3.13](topic:who-imci-3-13-1-syphilis)).
+        - **Antimalarials:** if fever and the infant is from a malarious area,
+          check blood films and give antimalarials if positive.
+        - **Encourage breastfeeding.**

@@ -1,0 +1,29 @@
+# ============================================================
+# WHO IMCI §3.12 — Other common neonatal problems (overview of the nested
+# group). Pocket Book 2nd ed (2013), pp.64–67.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-12-other-problems"
+  title: "Other Common Neonatal Problems"
+  list_subtitle: "3.12 · jaundice · conjunctivitis · malformations"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["neonate", "jaundice", "conjunctivitis", "congenital malformations", "pediatric"]
+  aliases:
+    - "Other Neonatal Problems"
+  category: "medical"
+
+  page_number: 64
+
+  blocks:
+
+    - type: "prose"
+      title: "Other common problems"
+      highlight: true
+      markdown: |
+        Other common problems of the neonate and young infant:
+        - **Jaundice** ([§3.12.1](topic:who-imci-3-12-1-jaundice))
+        - **Conjunctivitis** ([§3.12.2](topic:who-imci-3-12-2-conjunctivitis))
+        - **Congenital malformations**
+          ([§3.12.3](topic:who-imci-3-12-3-malformations))

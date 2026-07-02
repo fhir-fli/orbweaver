@@ -1,0 +1,29 @@
+# ============================================================
+# WHO IMCI §3.13 — Infants of mothers with infectious diseases (overview of
+# the nested group). Pocket Book 2nd ed (2013), pp.67–68.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-13-infected-mothers"
+  title: "Infants of Mothers with Infections"
+  list_subtitle: "3.13 · syphilis · tuberculosis · HIV"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["congenital infection", "syphilis", "tuberculosis", "hiv", "neonate", "pediatric"]
+  aliases:
+    - "Infants of Infected Mothers"
+  category: "medical"
+
+  page_number: 67
+
+  blocks:
+
+    - type: "prose"
+      title: "Infants of mothers with infections"
+      highlight: true
+      markdown: |
+        Management of infants born to mothers with:
+        - **Congenital syphilis**
+          ([§3.13.1](topic:who-imci-3-13-1-syphilis))
+        - **Tuberculosis** ([§3.13.2](topic:who-imci-3-13-2-tb))
+        - **HIV infection** ([§3.13.3](topic:who-imci-3-13-3-hiv))

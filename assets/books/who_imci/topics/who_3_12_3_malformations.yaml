@@ -1,0 +1,30 @@
+# ============================================================
+# WHO IMCI §3.12.3 — Congenital malformations. Pocket Book 2nd ed (2013),
+# p.67.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-12-3-malformations"
+  title: "Congenital Malformations"
+  list_subtitle: "3.12.3 · surgical & orthopaedic — see §9.2"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["congenital malformations", "cleft palate", "club foot", "myelomeningocoele", "neonate", "pediatric"]
+  aliases:
+    - "Birth Defects"
+  category: "medical"
+
+  page_number: 67
+
+  blocks:
+
+    - type: "prose"
+      title: "See §9.2 (Surgical problems) for:"
+      highlight: true
+      markdown: |
+        - **cleft lip and palate**
+        - **bowel obstruction**
+        - **abdominal wall defects**
+        - **myelomeningocoele**
+        - **congenital dislocation of the hip**
+        - **talipes equinovarus** (club foot)

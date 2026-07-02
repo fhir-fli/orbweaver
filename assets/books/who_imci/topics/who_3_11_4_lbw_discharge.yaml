@@ -35,3 +35,14 @@ topic:
       markdown: |
         Give all **scheduled vaccines** at the time of birth, and any **second
         doses** that are due by the time of discharge.
+
+    - type: "prose"
+      title: "Counsel before discharge"
+      markdown: |
+        Counsel parents before discharge on:
+        - **exclusive breastfeeding**
+        - **keeping the infant warm**
+        - **danger signs** for seeking care
+
+        Follow up **low-birth-weight infants weekly** — weighing and assessing
+        feeding and general health — until they reach **3 kg**.

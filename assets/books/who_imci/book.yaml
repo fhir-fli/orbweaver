@@ -89,3 +89,15 @@ book:
             - topic: "topics/who_3_11_2_lbw_small.yaml"
             - topic: "topics/who_3_11_3_lbw_problems.yaml"
             - topic: "topics/who_3_11_4_lbw_discharge.yaml"
+        - title: "3.12 Other common neonatal problems"
+          topic: "topics/who_3_12_other_problems.yaml"
+          children:
+            - topic: "topics/who_3_12_1_jaundice.yaml"
+            - topic: "topics/who_3_12_2_conjunctivitis.yaml"
+            - topic: "topics/who_3_12_3_malformations.yaml"
+        - title: "3.13 Infants of mothers with infectious diseases"
+          topic: "topics/who_3_13_infected_mothers.yaml"
+          children:
+            - topic: "topics/who_3_13_1_syphilis.yaml"
+            - topic: "topics/who_3_13_2_tb.yaml"
+            - topic: "topics/who_3_13_3_hiv.yaml"

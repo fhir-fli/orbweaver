@@ -1,0 +1,51 @@
+# ============================================================
+# WHO IMCI §3.12.2 — Conjunctivitis (sticky eyes & ophthalmia neonatorum).
+# Pocket Book 2nd ed (2013), pp.66–67.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-12-2-conjunctivitis"
+  title: "Neonatal Conjunctivitis"
+  list_subtitle: "3.12.2 · sticky eyes vs ophthalmia neonatorum"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["conjunctivitis", "ophthalmia neonatorum", "gonococcal", "ceftriaxone", "neonate", "pediatric"]
+  aliases:
+    - "Ophthalmia Neonatorum"
+    - "Sticky Eyes"
+  category: "medical"
+
+  page_number: 66
+
+  blocks:
+
+    - type: "prose"
+      title: "Sticky eyes & mild conjunctivitis"
+      highlight: true
+      markdown: |
+        Treat as an **outpatient** if the child has no other serious problem.
+        - Show the mother how to **wash the eyes** with water or breast milk,
+          and how to apply ointment — she must **wash her hands** before and
+          after.
+        - Wash the eyes and apply **tetracycline or chloramphenicol eye
+          ointment four times a day for 5 days**.
+
+    - type: "prose"
+      title: "Severe conjunctivitis (ophthalmia neonatorum)"
+      markdown: |
+        A lot of pus and/or swelling of the eyelids is often **gonococcal**
+        infection. Treat as an **inpatient** (**risk of blindness**), with
+        **twice-daily review**.
+        - **Wash the eyes** to clear the pus.
+        - Give **ceftriaxone 50 mg/kg** (up to a maximum of **150 mg**) IM once,
+          **or kanamycin 25 mg/kg** (up to **75 mg**) IM once, per national
+          guidelines.
+        - Also apply **tetracycline or chloramphenicol eye ointment**.
+
+    - type: "prose"
+      title: "Treat the parents"
+      markdown: |
+        Also treat the **mother and her partner** for sexually transmitted
+        infections: **amoxicillin, spectinomycin or ciprofloxacin** for
+        gonorrhoea and **tetracycline** for *Chlamydia*, depending on the local
+        resistance pattern. Refer to the STI control guidelines.

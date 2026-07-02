@@ -1,0 +1,42 @@
+# ============================================================
+# WHO IMCI §3.13.2 — Infants of mothers with tuberculosis. Pocket Book 2nd
+# ed (2013), p.68.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-13-2-tb"
+  title: "Infant of a Mother with TB"
+  list_subtitle: "3.13.2 · isoniazid prophylaxis, delay BCG"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["tuberculosis", "isoniazid", "bcg", "prophylaxis", "neonate", "pediatric"]
+  aliases:
+    - "Maternal TB"
+  category: "medical"
+
+  page_number: 68
+
+  blocks:
+
+    - type: "prose"
+      title: "When it applies"
+      highlight: true
+      markdown: |
+        If the mother has **active lung tuberculosis** and was treated for
+        **< 2 months before the birth**, or TB was diagnosed **after** the
+        birth.
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - **Reassure the mother** that it is safe to breastfeed her infant.
+        - **Do not give the BCG vaccine at birth.**
+        - Give **prophylactic isoniazid 10 mg/kg by mouth once daily**.
+        - **Re-evaluate at 6 weeks** — note weight gain and take a chest X-ray
+          if possible.
+        - If findings suggest **active disease**, start **full anti-TB
+          treatment** (see §4).
+        - If the infant is doing well and tests are negative, **continue
+          isoniazid to complete 6 months**.
+        - **Delay BCG** until 2 weeks after treatment is completed; if BCG was
+          already given, **repeat it 2 weeks after** the end of isoniazid.

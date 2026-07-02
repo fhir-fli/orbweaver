@@ -1,0 +1,26 @@
+# ============================================================
+# WHO IMCI §3.13.3 — Infants of mothers with HIV infection. Pocket Book 2nd
+# ed (2013), p.68.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-13-3-hiv"
+  title: "Infant of a Mother with HIV"
+  list_subtitle: "3.13.3 · see Chapter 8"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["hiv", "pmtct", "neonate", "young infant", "pediatric"]
+  aliases:
+    - "Maternal HIV"
+  category: "medical"
+
+  page_number: 68
+
+  blocks:
+
+    - type: "prose"
+      title: "See Chapter 8"
+      highlight: true
+      markdown: |
+        For the management of an infant born to a mother with HIV infection,
+        **see Chapter 8** (HIV/AIDS) for guidance.
