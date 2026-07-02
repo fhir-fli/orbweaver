@@ -1,0 +1,63 @@
+# ============================================================
+# WHO IMCI §3.6 — Danger signs in newborns and young infants.
+# Pocket Book 2nd ed (2013), pp.52–53.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-6-danger-signs"
+  title: "Danger Signs (Newborn & Young Infant)"
+  list_subtitle: "3.6 · non-specific signs of severe illness + emergency care"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["danger signs", "neonate", "young infant", "sepsis", "emergency", "hypoglycaemia", "pediatric"]
+  aliases:
+    - "Neonatal Danger Signs"
+  category: "medical"
+
+  page_number: 52
+
+  blocks:
+
+    - type: "prose"
+      title: "Recognise severe illness early"
+      highlight: true
+      markdown: |
+        Neonates and young infants often show **non-specific** signs of severe
+        illness — present at or after delivery, or developing during a hospital
+        stay. The aim is to **stabilise** and **prevent deterioration**.
+
+    - type: "prose"
+      title: "Danger signs"
+      markdown: |
+        - **not feeding well**
+        - **convulsions**
+        - **drowsy or unconscious**
+        - **movement only when stimulated**, or no movement at all
+        - **fast breathing (≥ 60/min)**
+        - **grunting**
+        - **severe chest indrawing**
+        - **raised temperature > 38 °C**
+        - **hypothermia < 35.5 °C**
+        - **central cyanosis**
+
+    - type: "prose"
+      title: "Emergency management"
+      markdown: |
+        - **Open and maintain the airway.** Give **oxygen by nasal prongs** if
+          cyanosed, in severe respiratory distress, or hypoxaemic
+          (**SpO₂ ≤ 90%**).
+        - **Bag-and-mask ventilation**
+          ([§3.2](topic:who-imci-3-2-resuscitation)) with oxygen (or room air
+          if none) for **apnoea, gasping, or RR < 20/min**.
+        - Insert a **venous cannula**.
+        - Give **ampicillin (or penicillin) + gentamicin**.
+        - If **drowsy, unconscious or convulsing, check blood glucose.** If
+          **< 2.2 mmol/L (< 40 mg/100 ml)**, give **10% glucose 2 ml/kg IV**,
+          then a **sustained infusion of 5 ml/kg/h** of 10% glucose over the
+          next few days while oral feeds are built up. If glucose cannot be
+          checked, **assume hypoglycaemia** and give glucose IV; if there is no
+          IV, give **expressed breast milk or glucose by nasogastric tube**.
+        - Give **phenobarbital** if convulsing
+          ([§3.7](topic:who-imci-3-7-convulsions)).
+        - **Admit.** Give **vitamin K** if not already given. **Monitor
+          frequently.**

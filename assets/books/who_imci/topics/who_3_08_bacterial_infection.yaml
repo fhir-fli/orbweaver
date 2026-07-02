@@ -1,0 +1,75 @@
+# ============================================================
+# WHO IMCI §3.8 — Serious bacterial infection. Pocket Book 2nd ed (2013),
+# pp.54–55.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-8-bacterial-infection"
+  title: "Serious Bacterial Infection"
+  list_subtitle: "3.8 · neonatal sepsis — signs & antibiotics"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["neonatal sepsis", "bacterial infection", "ampicillin", "gentamicin", "omphalitis", "pediatric"]
+  aliases:
+    - "Neonatal Sepsis"
+  category: "medical"
+
+  page_number: 54
+
+  blocks:
+
+    - type: "prose"
+      title: "Who is at risk"
+      highlight: true
+      markdown: |
+        Newborns with **documented risk factors**
+        ([§3.4](topic:who-imci-3-4-infection-prevention)) are more likely to
+        develop serious bacterial infection. All of the **danger signs**
+        ([§3.6](topic:who-imci-3-6-danger-signs)) are signs of it, but there
+        are others.
+
+    - type: "prose"
+      title: "Signs"
+      markdown: |
+        Other signs of serious bacterial infection:
+        - **severe jaundice**
+        - **severe abdominal distension**
+
+        **Localizing signs of infection:**
+        - **signs of pneumonia** (§4.2)
+        - **many or severe skin pustules**
+        - **umbilical redness extending to the peri-umbilical skin**
+        - **umbilicus draining pus**
+        - **bulging fontanelle** (see
+          [Meningitis · §3.9](topic:who-imci-3-9-meningitis))
+        - **painful joints, joint swelling, reduced movement**, and
+          irritability when these parts are handled
+
+    - type: "prose"
+      title: "Antibiotic therapy"
+      markdown: |
+        Give **empirical antibiotics** for suspected neonatal sepsis.
+        - **Admit** to hospital.
+        - When possible, do a **lumbar puncture and obtain blood cultures
+          before** starting antibiotics.
+        - First-line: **ampicillin (or penicillin) + gentamicin** (doses
+          §3.14).
+        - At greater risk of **staphylococcus** (extensive skin pustules,
+          abscess or omphalitis with signs of sepsis): give **cloxacillin +
+          gentamicin**.
+        - Treat for **at least 7–10 days**.
+        - If **not improving within 2–3 days**, change the antibiotics or refer.
+
+    - type: "prose"
+      title: "Other treatment"
+      markdown: |
+        - If **drowsy or unconscious**, ensure **hypoglycaemia** is not present;
+          if it is, give **2 ml/kg of 10% glucose IV**
+          ([IV glucose](topic:who-imci-chart10-glucose)).
+        - Treat convulsions with **phenobarbital**
+          ([§3.7](topic:who-imci-3-7-convulsions)).
+        - For **pus draining from the eyes**, see §3.12.
+        - In a **malarious area** with fever, take a **blood film** — neonatal
+          malaria is **very rare**; if confirmed, treat with **artesunate or
+          quinine**.
+        - For supportive care, see §3.10.

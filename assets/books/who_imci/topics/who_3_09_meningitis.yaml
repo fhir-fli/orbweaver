@@ -1,0 +1,59 @@
+# ============================================================
+# WHO IMCI §3.9 — Meningitis. Pocket Book 2nd ed (2013), pp.55–56.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-9-meningitis"
+  title: "Neonatal Meningitis"
+  list_subtitle: "3.9 · suspect, LP, 3 weeks of antibiotics"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["meningitis", "neonate", "lumbar puncture", "ampicillin", "gentamicin", "cephalosporin", "pediatric"]
+  aliases:
+    - "Meningitis"
+  category: "medical"
+
+  page_number: 55
+
+  blocks:
+
+    - type: "prose"
+      title: "When to suspect"
+      highlight: true
+      markdown: |
+        Suspect meningitis if signs of serious bacterial infection
+        ([§3.8](topic:who-imci-3-8-bacterial-infection)) are present,
+        **particularly** if any one of these is present.
+
+    - type: "prose"
+      title: "Clinical signs"
+      markdown: |
+        The infant is:
+        - **drowsy, lethargic or unconscious**
+        - **convulsing**
+        - has a **bulging fontanelle**
+        - **irritable**
+        - has a **high-pitched cry**
+
+        It is important to attempt a **lumbar puncture** once the infant is
+        stabilised, **ideally within 2 h** of starting antibiotics — it
+        confirms the diagnosis.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - First-line: **ampicillin + gentamicin for 3 weeks** (doses §3.14).
+        - Alternatively, a **third-generation cephalosporin** + gentamicin for
+          3 weeks:
+          - **ceftriaxone** 50 mg/kg every 12 h if **< 7 days** old, 75 mg/kg
+            after 1 week; **or**
+          - **cefotaxime** 50 mg/kg every 12 h if < 7 days, every 6–8 h if
+            > 7 days.
+        - If there are signs of **hypoxaemia**, give **oxygen** (§3.10).
+        - If **drowsy or unconscious**, ensure **hypoglycaemia** is not present;
+          if it is, give **2 ml/kg of 10% glucose IV**
+          ([IV glucose](topic:who-imci-chart10-glucose)).
+        - Treat convulsions with **phenobarbital**
+          ([§3.7](topic:who-imci-3-7-convulsions)) — after ensuring they are
+          not due to hypoglycaemia or hypoxaemia.
+        - Make **regular checks for hypoglycaemia**.

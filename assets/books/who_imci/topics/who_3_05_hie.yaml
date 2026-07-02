@@ -1,0 +1,53 @@
+# ============================================================
+# WHO IMCI §3.5 — Management of infants with hypoxic ischaemic
+# encephalopathy (HIE). Pocket Book 2nd ed (2013), pp.51–52.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-5-hie"
+  title: "Hypoxic Ischaemic Encephalopathy"
+  list_subtitle: "3.5 · post-asphyxia — fits, apnoea, feeding, tone"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["hie", "birth asphyxia", "encephalopathy", "apnoea", "hypoxia", "neonate", "pediatric"]
+  aliases:
+    - "HIE"
+    - "Birth Asphyxia"
+  category: "medical"
+
+  page_number: 51
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Hypoxic ischaemic encephalopathy (HIE) results from **lack of oxygen**
+        to vital organs before, during or immediately after birth. The initial
+        treatment is **effective resuscitation**
+        ([§3.2](topic:who-imci-3-2-resuscitation)).
+
+    - type: "prose"
+      title: "Problems in the days after birth"
+      markdown: |
+        - **Convulsions:** treat with **phenobarbital**
+          ([§3.7](topic:who-imci-3-7-convulsions)); ensure **hypoglycaemia** is
+          not present (check blood glucose).
+        - **Apnoea:** common after severe birth asphyxia, sometimes with
+          convulsions — **resuscitate with bag and mask** and give **oxygen by
+          nasal prongs**.
+        - **Inability to suck:** feed **expressed breast milk via a
+          nasogastric tube**; avoid delayed gastric emptying, which may cause
+          regurgitation.
+        - **Poor motor tone:** floppy, or limb stiffening (spasticity).
+
+    - type: "prose"
+      title: "Prognosis"
+      markdown: |
+        Prognosis is predicted by **recovery of motor function and sucking
+        ability**. A normally active infant usually does well. One who is still
+        **floppy or spastic and cannot suck within a week** of birth has a
+        **severe brain injury** and does poorly. The outlook is **less grim**
+        for infants recovering motor function and beginning to suck. Discuss
+        this **sensitively** with parents throughout.

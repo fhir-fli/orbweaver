@@ -1,0 +1,63 @@
+# ============================================================
+# WHO IMCI §3.7 — Convulsions or fits. Pocket Book 2nd ed (2013),
+# pp.53–54.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-7-convulsions"
+  title: "Convulsions or Fits"
+  list_subtitle: "3.7 · glucose, phenobarbital, calcium"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["convulsions", "seizure", "phenobarbital", "hypoglycaemia", "hypocalcaemia", "neonate", "pediatric"]
+  aliases:
+    - "Neonatal Seizures"
+    - "Fits"
+  category: "medical"
+
+  page_number: 53
+
+  blocks:
+
+    - type: "prose"
+      title: "Common causes of neonatal fits"
+      highlight: true
+      markdown: |
+        The commonest causes of neonatal convulsions are:
+        - **hypoxic ischaemic encephalopathy** (perinatal asphyxia)
+        - **central nervous system infection**
+        - **hypoglycaemia**
+        - **hypocalcaemia**
+
+    - type: "prose"
+      title: "Immediate treatment"
+      markdown: |
+        - Manage the **airway and breathing**.
+        - Ensure **circulatory access**.
+        - If **hypoglycaemic**, give **glucose IV or nasogastrically — 2 ml/kg
+          of 10% glucose** ([IV glucose](topic:who-imci-chart10-glucose)). If
+          glucose cannot be measured, **treat empirically** with glucose.
+
+    - type: "prose"
+      title: "Anticonvulsant"
+      markdown: |
+        - Treat convulsions with **phenobarbital — loading dose 20 mg/kg IV**.
+          If convulsions persist, give **further 10 mg/kg** doses up to a
+          **maximum of 40 mg/kg**.
+        - Continue phenobarbital at a **maintenance dose of 5 mg/kg per day**.
+        - If **hypocalcaemic**, symptoms may settle with **2 ml/kg of 10%
+          calcium gluconate** as a slow IV infusion, then continue **oral**
+          supplementation.
+        - **Rule out CNS infection** — treat if present
+          ([§3.9](topic:who-imci-3-9-meningitis)).
+
+    - type: "prose"
+      title: "⚠ Watch for apnoea"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Phenobarbital can cause **apnoea** — watch the infant closely and
+        **always keep a bag and mask available**.

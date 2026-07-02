@@ -1,0 +1,55 @@
+# ============================================================
+# WHO IMCI §3.4 — Prevention of neonatal infections.
+# Pocket Book 2nd ed (2013), p.51.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-4-infection-prevention"
+  title: "Preventing Neonatal Infection"
+  list_subtitle: "3.4 · early & late (hospital-acquired) prevention"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["infection prevention", "neonatal sepsis", "hand hygiene", "kangaroo mother care", "prophylaxis", "pediatric"]
+  aliases:
+    - "Infection Prevention"
+  category: "medical"
+
+  page_number: 51
+
+  blocks:
+
+    - type: "prose"
+      title: "Prevent early infection"
+      highlight: true
+      markdown: |
+        Many early neonatal infections can be prevented by:
+        - **Avoiding unnecessary separation** of the newborn from the mother.
+        - **Hand-washing** before delivering and handling the infant.
+        - Good **hygiene during delivery** (e.g. chlorhexidine cream for
+          maternal vaginal examinations).
+        - Appropriate **umbilical cord care** and **eye care**.
+
+    - type: "prose"
+      title: "Prophylactic antibiotics — only with risk factors"
+      markdown: |
+        Give prophylactic antibiotics **only** to neonates with **documented
+        risk factors**:
+        - **Membranes ruptured > 18 h** before delivery.
+        - Mother **fever > 38 °C** before or during labour.
+        - **Foul-smelling or purulent** amniotic fluid.
+
+        Give **IM/IV ampicillin + gentamicin for at least 2 days** and
+        reassess; **continue only** if there are signs of sepsis (or a positive
+        blood culture).
+
+    - type: "prose"
+      title: "Prevent late (hospital-acquired) infection"
+      markdown: |
+        - **Exclusive breastfeeding.**
+        - **Strict hand-washing / alcohol hand-rubs** for all staff and
+          families before and after handling infants.
+        - **Kangaroo mother care** instead of incubators; if an incubator is
+          used, use **no water for humidification** (Pseudomonas colonises it)
+          and clean it thoroughly with antiseptic.
+        - **Sterility** for all procedures; **clean injection** practices.
+        - **Remove IV drips** when no longer needed.

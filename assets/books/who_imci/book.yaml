@@ -66,3 +66,18 @@ book:
         - topic: "topics/who_2_03_examination.yaml"
         - topic: "topics/who_2_04_labs.yaml"
         - topic: "topics/who_2_05_differential.yaml"
+    - title: "3. Problems of the neonate and young infant"
+      # WHO Pocket Book color-codes by chapter; Chapter 3 tab = orange
+      # (sampled 0xFFF05418 from the p.46 chapter tab via pdftoppm).
+      palette:
+        accent: "0xFFF05418"
+      children:
+        - topic: "topics/who_3_01_newborn_care.yaml"
+        - topic: "topics/who_3_02_resuscitation.yaml"
+        - topic: "topics/who_3_03_routine_care.yaml"
+        - topic: "topics/who_3_04_infection_prevention.yaml"
+        - topic: "topics/who_3_05_hie.yaml"
+        - topic: "topics/who_3_06_danger_signs.yaml"
+        - topic: "topics/who_3_07_convulsions.yaml"
+        - topic: "topics/who_3_08_bacterial_infection.yaml"
+        - topic: "topics/who_3_09_meningitis.yaml"
