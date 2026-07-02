@@ -98,7 +98,7 @@ void main() {
       return (loadYaml(raw) as YamlMap)['book'] as YamlMap;
     }
 
-    test('who_imci: 3 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 23)', () {
+    test('who_imci: 3 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
@@ -109,9 +109,9 @@ void main() {
           '2. Diagnostic approaches to the sick child');
       expect((contents[2] as YamlMap)['title'],
           '3. Problems of the neonate and young infant');
-      // Ch.1 (33) + Ch.2 (5) + Ch.3 (10 leaves + §3.11/§3.12/§3.13 groups,
-      // each overview + children = 5+4+4 = 13; 10+13 = 23) = 61 topics.
-      expect(leafCount(contents), 61);
+      // Ch.1 (33) + Ch.2 (5) + Ch.3 (11 leaves incl. §3.14 + §3.11/§3.12/§3.13
+      // groups of overview+children = 5+4+4 = 13; 11+13 = 24) = 62 topics.
+      expect(leafCount(contents), 62);
     });
 
     test('who_imci: Chapter 2 is a red-tabbed group of 5 sections', () {
@@ -125,9 +125,9 @@ void main() {
       final b = loadBook('who_imci');
       final ch3 = (b['contents'] as YamlList)[2] as YamlMap;
       expect(ch3['palette']['accent'], '0xFFF05418');
-      // 3.1–3.10 leaves + §3.11/§3.12/§3.13 subsection groups = 13 children.
+      // 3.1–3.10 + §3.14 leaves + §3.11/§3.12/§3.13 subsection groups = 14.
       final children = ch3['children'] as YamlList;
-      expect(children, hasLength(13));
+      expect(children, hasLength(14));
       final g = children.firstWhere(
         (n) => (n as YamlMap)['title'] == '3.11 Preterm & low-birth-weight infants',
       ) as YamlMap;

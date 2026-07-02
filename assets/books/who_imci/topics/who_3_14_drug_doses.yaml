@@ -1,0 +1,75 @@
+# ============================================================
+# WHO IMCI §3.14 — Doses of common drugs for neonates and low-birth-weight
+# infants. Pocket Book 2nd ed (2013), pp.69–72.
+# Rendered as a horizontal-scroll wide table (layout: scroll) — drugs as
+# rows, the 7 weight bands as columns. Doses transcribed from high-DPI
+# renders of pp.69–72 (neonatal doses — read cell-by-cell).
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-3-14-drug-doses"
+  title: "Neonatal Drug Doses"
+  list_subtitle: "3.14 · doses by weight band (scroll →)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["drug doses", "neonate", "low birth weight", "antibiotics", "reference table", "pediatric"]
+  aliases:
+    - "Neonatal Doses"
+    - "Drug Doses"
+  category: "medical"
+
+  page_number: 69
+
+  blocks:
+
+    - type: "prose"
+      title: "How to use this table"
+      highlight: true
+      markdown: |
+        Doses of common drugs for neonates and low-birth-weight infants.
+        - Columns are **weight bands in kg** — **scroll the table sideways** to
+          see them all.
+        - Cell values are the **volume (or tablet fraction) per dose**;
+          reconstitution is in the **Form** column.
+        - **Ranges are approximate** — where the drug says **calculate the
+          exact dose**, compute it from the infant's exact weight.
+
+    - type: "table"
+      title: "Doses by weight band"
+      layout: "scroll"
+      columns: ["Drug", "Dose", "Form", "1–1.5", "1.5–2", "2–2.5", "2.5–3", "3–3.5", "3.5–4", "4–4.5"]
+      column_widths: [104, 156, 150, 70, 70, 70, 70, 70, 70, 70]
+      rows:
+        - cells: ["**Aminophylline** (apnoea)", "Loading 6 mg/kg oral or IV over 30 min. Not usually used for term infants.", "250 mg/10 ml vial; dilute loading dose to 5 ml, give over 15–30 min", "0.6 ml", "0.8 ml", "1.0 ml", "—", "—", "—", "—"]
+        - cells: ["", "Maint (wk 1): 2.5 mg/kg oral q12h", "", "0.1–0.15 ml", "0.15–0.20 ml", "0.20–0.25 ml", "—", "—", "—", "—"]
+        - cells: ["", "Maint (wk 2–4): 4 mg/kg oral q12h", "", "0.15–0.2 ml", "0.25–0.3 ml", "0.30–0.4 ml", "—", "—", "—", "—"]
+        - cells: ["**Ampicillin**", "50 mg/kg IM/IV — wk 1 q12h; wk 2–4 q8h", "250 mg vial + 1.3 ml water → 250 mg/1.5 ml", "0.3–0.6 ml", "0.6–0.9 ml", "0.9–1.2 ml", "1.2–1.5 ml", "1.5–2.0 ml", "2.0–2.5 ml", "2.5–3.0 ml"]
+        - cells: ["**Caffeine citrate**", "Loading 20 mg/kg oral (or IV over 30 min)", "Calculate the exact dose", "20–30 mg", "30–40 mg", "40–50 mg", "50–60 mg", "60–70 mg", "70–80 mg", "80–90 mg"]
+        - cells: ["", "Maint 5 mg/kg daily oral (or IV over 30 min)", "", "5–7.5 mg", "7.5–10 mg", "10–12.5 mg", "12.5–15 mg", "15–17.5 mg", "17.5–20 mg", "20–22.5 mg"]
+        - cells: ["**Cefotaxime**", "50 mg/kg IV — premature q12h; wk 1 q8h; wk 2–4 q6h", "500 mg vial + 2 ml water → 250 mg/ml", "0.3 ml", "0.4 ml", "0.5 ml", "0.6 ml", "0.7 ml", "0.8 ml", "0.9 ml"]
+        - cells: ["**Ceftriaxone** (meningitis)", "50 mg/kg IV q12h", "1 g vial + 9.6 ml water → 1 g/10 ml", "0.5–0.75 ml", "0.75–1 ml", "1–1.25 ml", "1.25–1.5 ml", "1.5–1.75 ml", "1.75–2 ml", "2–2.5 ml"]
+        - cells: ["", "100 mg/kg IM/IV once a day", "", "1–1.5 ml", "1.5–2 ml", "2–2.5 ml", "2.5–3 ml", "3–3.5 ml", "3.5–4 ml", "4–4.5 ml"]
+        - cells: ["", "Pus from eye: 50 mg/kg IM once (max 125 mg)", "", "—", "—", "—", "—", "—", "—", "—"]
+        - cells: ["**Cloxacillin**", "25–50 mg/kg/dose — wk 1 q12h; wk 2–4 q8h. At 25 mg/kg:", "250 mg vial + 1.3 ml water → 250 mg/1.5 ml", "0.15–0.3 ml", "0.3–0.5 ml", "0.5–0.6 ml", "0.6–0.75 ml", "0.75–1.0 ml", "1.0–1.25 ml", "1.25–1.5 ml"]
+        - cells: ["", "At 50 mg/kg:", "", "0.3–0.6 ml", "0.6–0.9 ml", "0.9–1.2 ml", "1.2–1.5 ml", "1.5–2.0 ml", "2–2.5 ml", "2.5–3.0 ml"]
+        - cells: ["**Gentamicin**", "Wk 1: LBW 3 mg/kg od; normal-wt 5 mg/kg od IM/IV", "20 mg/2 ml vial; or 80 mg/2 ml diluted to 8 ml → 10 mg/ml", "0.3–0.5 ml", "0.5–0.6 ml", "0.6–0.75 ml", "1.25–1.5 ml", "1.5–1.75 ml", "1.75–2 ml", "2–2.25 ml"]
+        - cells: ["", "Wk 2–4: 7.5 mg/kg od IM/IV", "", "0.75–1.1 ml", "1.1–1.5 ml", "1.5–1.8 ml", "1.8–2.2 ml", "2.2–2.6 ml", "2.6–3.0 ml", "3.0–3.3 ml"]
+        - cells: ["**Kanamycin**", "20 mg/kg IM/IV (single dose for eye pus)", "2 ml vial → 125 mg/ml", "0.2–0.3 ml", "0.3–0.4 ml", "0.4–0.5 ml", "0.5–0.6 ml", "0.6–0.7 ml", "0.7–0.8 ml", "0.8–1.0 ml"]
+        - cells: ["**Naloxone**", "0.1 mg/kg", "0.4 mg/ml vial", "0.25 ml", "0.25 ml", "0.5 ml", "0.5 ml", "0.75 ml", "0.75 ml", "1 ml"]
+        - cells: ["**Benzylpenicillin**", "50 000 U/kg — wk 1 q12h; wk 2–4+ q6h", "600 mg (1 000 000 U) vial + 1.6 ml water → 500 000 U/ml", "0.2 ml", "0.2 ml", "0.3 ml", "0.5 ml", "0.5 ml", "0.6 ml", "0.7 ml"]
+        - cells: ["**Benzathine benzylpenicillin**", "50 000 U/kg IM once a day", "1 200 000 U vial + 4 ml water", "0.2 ml", "0.3 ml", "0.4 ml", "0.5 ml", "0.6 ml", "0.7 ml", "0.8 ml"]
+        - cells: ["**Procaine benzylpenicillin**", "50 000 U/kg IM once a day", "3 g (3 000 000 U) vial + 4 ml water", "0.1 ml", "0.15 ml", "0.2 ml", "0.25 ml", "0.3 ml", "0.3 ml", "0.35 ml"]
+        - cells: ["**Phenobarbital**", "Loading 20 mg/kg IM/IV or oral (30-mg tablets)", "200 mg/ml vial + 4 ml water (calculate exact for injection)", "½", "¾", "1", "1¼", "1½", "1¾", "2"]
+        - cells: ["", "Maint 5 mg/kg/day oral (30-mg tablets)", "", "¼", "¼", "½", "½", "½", "¾", "¾"]
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Gentamicin:** to use an **80 mg/2 ml** vial, dilute to 8 ml with
+          sterile water (**10 mg/ml**), then use exactly the same doses as
+          above. The week-1 jump between the 2–2.5 kg and 2.5–3 kg columns is
+          real — smaller (low-birth-weight) infants get **3 mg/kg**, larger
+          (normal-weight) infants **5 mg/kg**.
+        - **Aminophylline, caffeine citrate, phenobarbital (injection):**
+          **calculate the exact dose** from the infant's weight rather than
+          reading a range.
