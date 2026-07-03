@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §6.3.2 — Meningococcal epidemics. Pocket Book 2nd ed (2013),
 # pp.170–171.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: noted ceftriaxone is preferred over oily
+# chloramphenicol where available; added MenAfriVac + pentavalent (ACWXY)
+# conjugate vaccine to public health.
 # ============================================================
 
 topic:
   id: "who-imci-6-3-2-meningococcal-epidemics"
   title: "Meningococcal Epidemics"
   list_subtitle: "6.3.2 · ceftriaxone · oily chloramphenicol"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["meningococcal", "epidemic", "ceftriaxone", "oily chloramphenicol", "chemoprophylaxis", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["meningococcal", "epidemic", "ceftriaxone", "oily chloramphenicol", "MenAfriVac", "vaccine", "chemoprophylaxis", "pediatric"]
   aliases:
     - "Meningococcal Meningitis"
   category: "medical"
@@ -34,10 +36,12 @@ topic:
         - **≥ 2–5 years:** **Neisseria meningitidis** is the most likely
           pathogen — presumptive treatment is justified.
 
-        Give one of:
+        **Ceftriaxone is preferred where available:**
         - **Ceftriaxone 100 mg/kg/day IM or IV once daily** — for **5 days**
           (children 2 months–5 years) or **≥ 7 days** (0–2 months); **or**
-        - **Oily chloramphenicol 100 mg/kg IM** as a single dose (max **3 g**).
+        - **Oily chloramphenicol 100 mg/kg IM** as a single dose (max **3 g**) —
+          an alternative when ceftriaxone is unavailable or cold-chain / IV access
+          is limited.
           If no improvement after 24 h, give a second dose (100 mg/kg) or switch
           to ceftriaxone. The suspension is thick and hard to push through the
           needle — if so, split the dose into two injections, one in each
@@ -49,3 +53,9 @@ topic:
         In epidemics, advise families about the possibility of **secondary cases**
         so they seek treatment promptly. **Chemoprophylaxis** should be given only
         to those in **close contact** with a case.
+
+        **Vaccination:** **MenAfriVac** (serogroup A conjugate) has dramatically
+        reduced serogroup A meningitis across the African meningitis belt. A newer
+        **pentavalent conjugate vaccine (ACWXY)** is now WHO-prequalified and
+        covers the remaining epidemic serogroups (C, W, X, Y). Follow national
+        immunization guidelines.

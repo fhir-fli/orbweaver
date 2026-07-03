@@ -1,15 +1,16 @@
 # ============================================================
 # WHO IMCI §6.4.1 — Severe complicated measles. Pocket Book 2nd ed
 # (2013), pp.175–177.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: vitamin A (dose/timing) confirmed unchanged;
+# added a brief case-by-case ribavirin note for the severely immunocompromised.
 # ============================================================
 
 topic:
   id: "who-imci-6-4-1-severe-measles"
   title: "Severe Complicated Measles"
   list_subtitle: "6.4.1 · admit · vitamin A · complications"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["severe measles", "vitamin A", "pneumonia", "corneal clouding", "mouth ulcers", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["severe measles", "vitamin A", "pneumonia", "corneal clouding", "mouth ulcers", "ribavirin", "pediatric"]
   aliases:
     - "Severe Measles"
   category: "medical"
@@ -48,6 +49,10 @@ topic:
         - **Nutrition:** assess status — weigh and plot (rehydrate before
           weighing); continue breastfeeding; encourage frequent small meals;
           check for and treat mouth ulcers.
+        - **Antiviral:** there is **no routine antiviral** for measles — care is
+          supportive. **Ribavirin** has been used **case by case** in
+          **severely immunocompromised** children with life-threatening measles,
+          but evidence is limited and it is **not a general recommendation**.
 
     - type: "prose"
       title: "Complications"

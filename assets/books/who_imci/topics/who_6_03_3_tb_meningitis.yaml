@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §6.3.3 — Tuberculous meningitis. Pocket Book 2nd ed (2013),
 # pp.171–172.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added the 6-month intensive (Cape Town)
+# regimen as a WHO-recommended alternative to the 12-month standard.
+# Dexamethasone (all cases) and no-streptomycin confirmed.
 # ============================================================
 
 topic:
   id: "who-imci-6-3-3-tb-meningitis"
   title: "Tuberculous Meningitis"
   list_subtitle: "6.3.3 · HRZE 12 months · dexamethasone"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["tuberculous meningitis", "TB", "isoniazid", "rifampicin", "dexamethasone", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["tuberculous meningitis", "TB", "isoniazid", "rifampicin", "ethionamide", "dexamethasone", "cape town regimen", "pediatric"]
   aliases:
     - "TB Meningitis"
   category: "medical"
@@ -42,16 +44,21 @@ topic:
         bacterial meningitis treatment.
 
     - type: "prose"
-      title: "Treatment"
+      title: "Treatment — two WHO-recommended options"
       markdown: |
-        **Four-drug regimen (HRZE) for 2 months, then HR for 10 months** — total
-        **12 months**. Daily doses:
-        - **Isoniazid (H): 10 mg/kg** (range 10–15; max 300 mg/day)
-        - **Rifampicin (R): 15 mg/kg** (range 10–20; max 600 mg/day)
-        - **Pyrazinamide (Z): 35 mg/kg** (range 30–40)
-        - **Ethambutol (E): 20 mg/kg** (range 15–25)
+        - **Standard regimen (12 months):** **HRZE for 2 months, then HR for
+          10 months**. Daily doses: **H 10 mg/kg** (10–15; max 300), **R 15 mg/kg**
+          (10–20; max 600), **Z 35 mg/kg** (30–40), **E 20 mg/kg** (15–25).
+        - **6-month intensive regimen (Cape Town regimen)** — a WHO-recommended
+          alternative for **drug-susceptible** TB meningitis, using higher doses
+          for **6 months**: **isoniazid 15–20 mg/kg/day**, **rifampicin
+          22.5–30 mg/kg/day**, **pyrazinamide 35–45 mg/kg/day**, and
+          **ethionamide 17.5–22.5 mg/kg/day** (replacing ethambutol). South
+          African experience shows markedly better survival and treatment success
+          than the 12-month regimen.
         - **Dexamethasone 0.6 mg/kg/day for 2–3 weeks** (then reduce over a
-          further 2–3 weeks) in **all** cases of TB meningitis.
+          further 2–3 weeks) in **all** cases of TB meningitis, with either
+          regimen.
 
         **MDR** (proven/suspected): a **fluoroquinolone and other second-line
         drugs** within a functioning MDR-TB programme, decided by a clinician

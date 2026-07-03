@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §6.4 — Measles (overview of the nested group). Pocket Book
 # 2nd ed (2013), pp.174–175.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: overview unchanged (vitamin A remains the
+# core intervention; see §6.4.1 for the ribavirin case-by-case note).
 # ============================================================
 
 topic:
   id: "who-imci-6-4-measles"
   title: "Measles"
   list_subtitle: "6.4 · rash + fever + cough/coryza/red eyes"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["measles", "vitamin A", "rash", "vaccination", "pediatric"]
   aliases:
     - "Measles"

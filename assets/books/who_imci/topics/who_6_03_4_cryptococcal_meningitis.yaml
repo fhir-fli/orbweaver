@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §6.3.4 — Cryptococcal meningitis. Pocket Book 2nd ed (2013),
 # pp.172–173.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: replaced "amphotericin + fluconazole" with
+# the full induction/consolidation/maintenance protocol (incl. AMBITION-cm
+# single-dose liposomal option); added CrAg LFA (preferred over India ink) and
+# serum CrAg screening; no-corticosteroids/no-mannitol warning.
 # ============================================================
 
 topic:
   id: "who-imci-6-3-4-cryptococcal-meningitis"
   title: "Cryptococcal Meningitis"
-  list_subtitle: "6.3.4 · HIV · amphotericin + fluconazole"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["cryptococcal meningitis", "HIV", "amphotericin", "fluconazole", "India ink", "pediatric"]
+  list_subtitle: "6.3.4 · HIV · amphotericin + flucytosine"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["cryptococcal meningitis", "HIV", "amphotericin", "flucytosine", "fluconazole", "AMBITION-cm", "CrAg", "pediatric"]
   aliases:
     - "Cryptococcal Meningitis"
   category: "medical"
@@ -31,14 +34,36 @@ topic:
       markdown: |
         - **Lumbar puncture** — the opening pressure may be **elevated**, but CSF
           cell count, glucose and protein can be **virtually normal**.
-        - Analyse CSF with an **India-ink preparation**, or (if available) a
-          **rapid CSF cryptococcal antigen** test — latex agglutination or
-          lateral-flow assay.
+        - **Cryptococcal antigen (CrAg) lateral-flow assay (LFA)** on CSF (or
+          serum) is the **preferred** test — more sensitive and faster than
+          **India ink**, and usable at the point of care. India ink remains a
+          fallback where CrAg LFA is unavailable.
+        - **Serum CrAg screening** is recommended in HIV-positive children with
+          **advanced immunosuppression (low CD4)** to detect early
+          (pre-symptomatic) infection.
 
     - type: "prose"
-      title: "Treatment"
+      title: "Treatment — three phases"
       markdown: |
-        A combination of **amphotericin and fluconazole**. Manage raised
-        intracranial pressure and provide the same supportive care (airway,
-        convulsions, hypoglycaemia, fluids) as for
+        Cure requires prolonged antifungal therapy in **three phases**:
+        - **Induction (2 weeks):** **amphotericin B deoxycholate 1 mg/kg/day IV**
+          (or **liposomal amphotericin B 3–4 mg/kg/day**) **+ flucytosine
+          100–150 mg/kg/day** in 4 divided doses.
+          - Where **liposomal amphotericin B** is available, the WHO-preferred
+            regimen is a **single high dose (10 mg/kg)** on day 1 **+ flucytosine
+            + fluconazole for 14 days** (**AMBITION-cm**) — comparable efficacy
+            with less toxicity and easier monitoring.
+        - **Consolidation (8 weeks):** **fluconazole 12 mg/kg/day** (max 800 mg).
+        - **Maintenance / secondary prophylaxis (6–12 months):** **fluconazole
+          6 mg/kg/day** (max 800 mg), until immune reconstitution on ART.
+
+    - type: "prose"
+      title: "Raised intracranial pressure & supportive care"
+      callout: true
+      markdown: |
+        Manage raised ICP with **therapeutic (repeated) lumbar punctures** to
+        drain CSF — the mainstay for controlling pressure and a major determinant
+        of survival. **Do NOT use corticosteroids or mannitol** (both increase
+        harm in cryptococcal meningitis). Provide the same supportive care
+        (airway, convulsions, hypoglycaemia, fluids) as for
         [bacterial meningitis](topic:who-imci-6-3-1-bacterial-meningitis).

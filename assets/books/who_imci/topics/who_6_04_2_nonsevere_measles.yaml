@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §6.4.2 — Non-severe measles. Pocket Book 2nd ed (2013),
 # p.178.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no change — outpatient vitamin A + supportive
+# care confirmed current.
 # ============================================================
 
 topic:
   id: "who-imci-6-4-2-nonsevere-measles"
   title: "Non-severe Measles"
   list_subtitle: "6.4.2 · outpatient · vitamin A"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["non-severe measles", "vitamin A", "outpatient", "pediatric"]
   aliases:
     - "Non-severe Measles"

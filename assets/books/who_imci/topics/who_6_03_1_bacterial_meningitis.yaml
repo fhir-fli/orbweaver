@@ -1,15 +1,19 @@
 # ============================================================
 # WHO IMCI §6.3.1 — Bacterial meningitis. Pocket Book 2nd ed (2013),
 # pp.167–170 (supportive care pp.172–174).
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: ceftriaxone positioned as preferred (add
+# vancomycin where pneumococcal ceftriaxone-resistance > 1%); chloramphenicol +
+# ampicillin downgraded to last-resort; 5–7-day option for uncomplicated cases;
+# dexamethasone refined (high-income benefit, no proven LMIC benefit, Listeria
+# contraindication); CSF multiplex PCR noted.
 # ============================================================
 
 topic:
   id: "who-imci-6-3-1-bacterial-meningitis"
   title: "Bacterial Meningitis"
   list_subtitle: "6.3.1 · LP · ceftriaxone · dexamethasone"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["bacterial meningitis", "lumbar puncture", "ceftriaxone", "cefotaxime", "chloramphenicol", "dexamethasone", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["bacterial meningitis", "lumbar puncture", "ceftriaxone", "vancomycin", "cefotaxime", "chloramphenicol", "dexamethasone", "pediatric"]
   aliases:
     - "Bacterial Meningitis"
   category: "medical"
@@ -50,7 +54,8 @@ topic:
         - **CSF:** low glucose (< 1.5 mmol/L, or CSF:serum ratio ≤ 0.4); high
           protein (> 0.4 g/L); Gram stain and culture; a raised polymorph white
           cell count.
-        - **Blood culture** where available.
+        - **Blood culture** where available; **CSF multiplex PCR** (where
+          available) rapidly identifies the pathogen and guides de-escalation.
         - **Precaution — raised ICP:** weigh the value of the LP against the risk;
           if in doubt, **delay the LP and start treatment** for suspected
           meningitis.
@@ -60,17 +65,24 @@ topic:
       markdown: |
         Start antibiotics **before** lab results if meningitis is clinically
         suspected or the CSF is cloudy; if signs are present and LP is not
-        possible, **treat immediately**. Choose one regimen:
+        possible, **treat immediately** (delay of > 6 h sharply raises mortality
+        and sequelae). **Ceftriaxone is the preferred agent:**
         - **Ceftriaxone 50 mg/kg IM/IV every 12 h**, **or 100 mg/kg once daily**
-          (deep IM or slow IV over 30–60 min), for **7–10 days**; **or**
-        - **Cefotaxime 50 mg/kg IM/IV every 6 h for 7–10 days**; **or**
-        - (no known chloramphenicol/β-lactam resistance) **chloramphenicol
-          25 mg/kg IM/IV every 6 h + ampicillin 50 mg/kg every 6 h**, **or**
-          **chloramphenicol + benzylpenicillin 60 mg/kg (100 000 U/kg) every
-          6 h** — for **10 days**.
+          (deep IM or slow IV over 30–60 min); **or Cefotaxime 50 mg/kg IM/IV
+          every 6 h**.
+        - Where **ceftriaxone-resistant S. pneumoniae exceeds 1%**, add
+          **vancomycin 60 mg/kg/day IV** pending susceptibilities. Where
+          resistance is low, the cephalosporin **alone** is appropriate.
+        - **Last-resort** (only if cephalosporins are unavailable and there is no
+          known chloramphenicol/β-lactam resistance): **chloramphenicol 25 mg/kg
+          IM/IV every 6 h + ampicillin 50 mg/kg every 6 h**, or chloramphenicol +
+          **benzylpenicillin 60 mg/kg (100 000 U/kg) every 6 h**.
+        - **Duration:** **7–10 days** for most; **5–7 days** may suffice for an
+          uncomplicated case with prompt improvement; **extend to 10–14 days**
+          for pneumococcal or complicated meningitis or slow response.
 
         Review therapy when CSF results are available. Once improved, continue
-        with daily third-generation cephalosporin, or oral chloramphenicol
+        with the daily third-generation cephalosporin, or oral chloramphenicol
         (unless malnourished or with diarrhoea — then give the **full course
         parenterally**).
 
@@ -89,13 +101,15 @@ topic:
       title: "Steroids"
       callout: true
       markdown: |
-        **Dexamethasone 0.15 mg/kg every 6 h for 2–4 days**, given **10–20 min
-        before or with** the first antibiotic, benefits some bacterial meningitis
-        (H. influenzae, pneumococcal, tuberculous) by reducing inflammation.
-        Evidence is insufficient to recommend **routine** steroid use in
-        developing-country bacterial meningitis, **except tuberculous
-        meningitis**. **Do NOT give steroids** in: **newborns**, **suspected
-        cerebral malaria**, or **suspected viral encephalitis**.
+        **Dexamethasone 0.15 mg/kg IV every 6 h for 4 days**, given **with or
+        within 4 h of** the first antibiotic dose. It **reduces hearing loss and
+        neurological sequelae in high-income settings** (especially H. influenzae
+        and pneumococcal meningitis), but has **no proven benefit in low-income
+        settings** (patients present later and sicker) — consider it where
+        presentation is early. **Do NOT give** in: **newborns**, **suspected
+        cerebral malaria**, **suspected viral encephalitis**, or **Listeria
+        monocytogenes** meningitis (higher mortality). It **is** recommended for
+        all **tuberculous** meningitis ([§6.3.3](topic:who-imci-6-3-3-tb-meningitis)).
 
     - type: "prose"
       title: "Antimalarial (malarious areas)"
