@@ -1,13 +1,15 @@
 # ============================================================
 # WHO IMCI §6.7.1 — Mastoiditis. Pocket Book 2nd ed (2013), p.182.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: antibiotic + surgical-referral approach
+# confirmed current; added a note to obtain CT (where available) to assess for
+# subperiosteal abscess / intracranial extension.
 # ============================================================
 
 topic:
   id: "who-imci-6-7-1-mastoiditis"
   title: "Mastoiditis"
   list_subtitle: "6.7.1 · tender swelling behind the ear"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["mastoiditis", "cloxacillin", "ceftriaxone", "brain abscess", "pediatric"]
   aliases:
     - "Mastoiditis"
@@ -40,6 +42,9 @@ topic:
         - **No response within 48 h**, or the child deteriorates → refer to a
           surgical specialist for **incision and drainage of mastoid abscesses or
           mastoidectomy**.
+        - **Where available, obtain a CT scan** to assess for a **subperiosteal
+          abscess** or **intracranial complications** (which change surgical
+          management).
         - **Signs of meningitis or brain abscess** → give antibiotic treatment as
           in [§6.3](topic:who-imci-6-3-meningitis) and refer to a specialist
           hospital immediately.

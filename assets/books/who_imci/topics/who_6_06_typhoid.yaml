@@ -1,14 +1,18 @@
 # ============================================================
 # WHO IMCI §6.6 — Typhoid fever. Pocket Book 2nd ed (2013), pp.180–182.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: ciprofloxacin is no longer universal
+# first-line (near-universal fluoroquinolone resistance in South Asia); treatment
+# reframed around local susceptibility (azithromycin / ceftriaxone); added an XDR
+# S. Typhi callout (Pakistan; azithromycin or carbapenem) and typhoid conjugate
+# vaccine (TCV) to prevention.
 # ============================================================
 
 topic:
   id: "who-imci-6-6-typhoid"
   title: "Typhoid Fever"
-  list_subtitle: "6.6 · ciprofloxacin · perforation risk"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["typhoid", "enteric fever", "salmonella typhi", "ciprofloxacin", "ceftriaxone", "azithromycin", "pediatric"]
+  list_subtitle: "6.6 · azithromycin / ceftriaxone · XDR"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["typhoid", "enteric fever", "salmonella typhi", "azithromycin", "ceftriaxone", "ciprofloxacin", "XDR", "typhoid conjugate vaccine", "pediatric"]
   aliases:
     - "Enteric Fever"
     - "Typhoid"
@@ -44,16 +48,42 @@ topic:
         be hard to distinguish clinically.
 
     - type: "prose"
-      title: "Treatment"
+      title: "Treatment — choose by local susceptibility"
       markdown: |
-        - **Oral ciprofloxacin 15 mg/kg twice a day** (or another fluoroquinolone
-          — gatifloxacin, ofloxacin, perfloxacin) **first-line for 7–10 days**.
-        - **Poor response after 48 h** → suspect **drug-resistant typhoid**;
-          second-line: **IV ceftriaxone 80 mg/kg/day** or **oral azithromycin
-          20 mg/kg/day** (or another third-generation cephalosporin) for
-          **5–7 days**.
-        - Where drug resistance among Salmonella isolates is known, follow
-          **national guidelines** on local susceptibility.
+        **Fluoroquinolone resistance is now near-universal across South Asia**
+        (and common elsewhere), so **ciprofloxacin is no longer a reliable
+        empirical first-line** — treat according to **local resistance patterns**:
+        - **Where fluoroquinolone susceptibility is confirmed:** **oral
+          ciprofloxacin 15 mg/kg twice a day for 7–10 days** remains effective.
+        - **Where fluoroquinolone resistance is prevalent** (most of South Asia,
+          parts of Africa): **oral azithromycin 10–20 mg/kg/day for 5–7 days**,
+          **or IV ceftriaxone 75–80 mg/kg/day for 10–14 days**.
+        - **Poor response after 48 h** → suspect drug-resistant typhoid; escalate
+          per local data and switch to azithromycin or ceftriaxone as above.
+
+    - type: "prose"
+      title: "🛑 Extensively drug-resistant (XDR) typhoid"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        An ongoing outbreak of **XDR Salmonella Typhi** (Sindh, Pakistan, since
+        2016; also reported among travellers) is resistant to **ampicillin,
+        chloramphenicol, co-trimoxazole, fluoroquinolones AND ceftriaxone** —
+        leaving only **azithromycin and carbapenems**. Suspect XDR typhoid in a
+        child from — or recently travelled to — an affected area who fails to
+        respond to ceftriaxone. Treat with **azithromycin** (if susceptible) or a
+        **carbapenem — meropenem 20 mg/kg every 8 h IV**.
+
+    - type: "prose"
+      title: "Prevention — typhoid conjugate vaccine"
+      markdown: |
+        The **typhoid conjugate vaccine (TCV)** is WHO-recommended for children
+        **≥ 6 months** in endemic areas, and is being introduced into routine
+        immunization in high-burden countries (Pakistan, Zimbabwe, Liberia and
+        others). Combine with **safe water, sanitation and hygiene** measures.
 
     - type: "prose"
       title: "Supportive care & monitoring"

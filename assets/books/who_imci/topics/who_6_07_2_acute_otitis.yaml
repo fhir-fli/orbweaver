@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §6.7.2 — Acute otitis media. Pocket Book 2nd ed (2013),
 # pp.183–184.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: amoxicillin made explicit high-dose
+# (80–90 mg/kg/day) per AAP / 2025 NEJM; added watchful-waiting option for mild
+# AOM in children ≥ 2 yr where follow-up is reliable; co-trimoxazole caveat kept.
 # ============================================================
 
 topic:
   id: "who-imci-6-7-2-acute-otitis"
   title: "Acute Otitis Media"
-  list_subtitle: "6.7.2 · amoxicillin · dry the ear by wicking"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["acute otitis media", "amoxicillin", "ear wicking", "pediatric"]
+  list_subtitle: "6.7.2 · high-dose amoxicillin · wicking"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["acute otitis media", "amoxicillin", "watchful waiting", "ear wicking", "pediatric"]
   aliases:
     - "Acute Otitis Media"
   category: "medical"
@@ -30,15 +32,29 @@ topic:
       title: "Treatment"
       markdown: |
         Treat as an **outpatient**. Give oral antibiotics:
-        - **First choice: oral amoxicillin 40 mg/kg twice a day for at least
-          5 days.**
-        - Alternatively, when pathogens are known sensitive: **co-trimoxazole
-          (TMP 4 mg/kg + SMX 20 mg/kg) twice a day for at least 5 days**.
+        - **First choice: high-dose oral amoxicillin 80–90 mg/kg/day in two
+          divided doses** (i.e. 40–45 mg/kg per dose, twice a day) — the high dose
+          overcomes intermediate pneumococcal resistance. Give for **5 days**
+          (children ≥ 2 years), or **10 days** for children **< 2 years** or with
+          severe symptoms or a perforated drum.
+        - **Only where pathogens are known sensitive** (local resistance to
+          co-trimoxazole is now common): **co-trimoxazole (TMP 4 mg/kg + SMX
+          20 mg/kg) twice a day for at least 5 days**.
         - **Pus draining from the ear** → show the mother how to **dry the ear by
           wicking** three times daily until there is no more pus. Do **not** place
           anything in the ear between wicking, and keep the ear out of water (no
           swimming).
         - **Ear pain or high fever ≥ 39 °C** causing distress → paracetamol.
+
+    - type: "prose"
+      title: "Watchful waiting (selected children)"
+      callout: true
+      markdown: |
+        Where **reliable follow-up within 48–72 h** is possible, **watchful
+        waiting** (observation with **rescue antibiotics** if symptoms worsen or
+        fail to improve) is a safe option for children **≥ 2 years with mild,
+        unilateral AOM** (mild otalgia, temperature < 39 °C, no otorrhoea). Where
+        follow-up is uncertain, **treat with antibiotics**.
 
     - type: "prose"
       title: "Follow-up"

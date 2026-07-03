@@ -1,14 +1,18 @@
 # ============================================================
 # WHO IMCI §6.5 — Septicaemia. Pocket Book 2nd ed (2013), pp.179–180.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: fluid resuscitation differentiated by ICU
+# availability + hypotension (FEAST / 2020+2026 SSC paediatric guidelines);
+# vasoactive updated to epinephrine/norepinephrine over dopamine; note on high
+# ampicillin+gentamicin resistance in LMIC (BARNARDS) with ceftriaxone option;
+# lactate trends + capillary refill added to monitoring.
 # ============================================================
 
 topic:
   id: "who-imci-6-5-septicaemia"
   title: "Septicaemia"
   list_subtitle: "6.5 · seriously ill · ampicillin + gentamicin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["septicaemia", "sepsis", "septic shock", "ampicillin", "gentamicin", "ceftriaxone", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["septicaemia", "sepsis", "septic shock", "ampicillin", "gentamicin", "ceftriaxone", "FEAST", "epinephrine", "pediatric"]
   aliases:
     - "Sepsis"
     - "Septicaemia"
@@ -53,19 +57,52 @@ topic:
         > 3 s, fast weak pulse, hypotension and decreased mental status.
 
     - type: "prose"
-      title: "Treatment"
+      title: "Antibiotics — start immediately"
       markdown: |
-        Start antibiotics **immediately**.
         - **IV ampicillin 50 mg/kg every 6 h + IV gentamicin 7.5 mg/kg once
           daily for 7–10 days**; **or ceftriaxone 80–100 mg/kg IV once daily**
           (over 30–60 min) for 7–10 days.
         - **Staphylococcal** infection strongly suspected → **flucloxacillin
           50 mg/kg IV every 6 h + gentamicin 7.5 mg/kg once daily**.
+        - **Resistance caveat:** ampicillin + gentamicin remains the WHO first
+          line, but **resistance is high in many LMIC settings** — in the
+          multi-country BARNARDS study it covered only **~28% of Gram-negative**
+          isolates. Where local data show high ampicillin/gentamicin resistance,
+          prefer **ceftriaxone** first-line, and **follow local susceptibility
+          data** wherever available (add vancomycin where MRSA or
+          ceftriaxone-resistant pneumococcus is prevalent).
         - Give **oxygen** if in respiratory distress or shock.
-        - **Septic shock:** rapid IV infusion of **20 ml/kg** normal saline or
-          Ringer's lactate; reassess and **repeat 20 ml/kg up to 60 ml/kg**; if
-          still in shock (**fluid-refractory**), start **adrenaline or dopamine**
-          if available.
+
+    - type: "prose"
+      title: "🛑 Fluid resuscitation — differentiate by setting (FEAST)"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Match fluid strategy to the setting and to whether the child is
+        **hypotensive** — **reassess after every bolus** for responsiveness and
+        overload:
+        - **With intensive care available:** up to **40–60 ml/kg** in boluses
+          (**10–20 ml/kg per bolus**) over the first hour.
+        - **Without intensive care AND no hypotension:** **do NOT give fluid
+          boluses** — start **maintenance fluids only**. In the **FEAST** trial,
+          boluses in this group **increased mortality**.
+        - **Without intensive care WITH hypotension:** up to **40 ml/kg** in
+          boluses (10–20 ml/kg per bolus) over the first hour.
+
+        Use **balanced crystalloids (Ringer's lactate)** over 0.9% saline where
+        available.
+
+    - type: "prose"
+      title: "Fluid-refractory shock — vasoactive agents"
+      markdown: |
+        If shock persists despite appropriate fluids (**fluid-refractory**),
+        start **epinephrine (adrenaline) or norepinephrine** — both are preferred
+        over dopamine. Use **dopamine only if epinephrine and norepinephrine are
+        unavailable**. Vasoactive agents may be started through a **peripheral
+        IV** if central access is not yet available.
 
     - type: "prose"
       title: "Supportive care & monitoring"
@@ -74,6 +111,11 @@ topic:
         - Monitor **Hb/EVF**; if low and falling, transfuse (**20 ml/kg fresh
           whole blood or 10 ml/kg packed cells**), weighing benefit against
           bloodborne-infection risk.
+        - **Guide resuscitation with perfusion trends:** where available, follow
+          **blood lactate trends** (a falling lactate suggests improving
+          perfusion); where lactate is unavailable, use **capillary refill time**
+          plus clinical assessment (urine output, mental status, extremity
+          warmth).
         - Nurse checks at least **every 3 h**, doctor at least twice daily —
           watch for **complications** (shock, cyanosis, reduced urine output,
           signs of bleeding: petechiae, purpura, venepuncture-site bleeding, skin
