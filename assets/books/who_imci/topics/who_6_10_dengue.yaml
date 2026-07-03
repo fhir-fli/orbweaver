@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §6.10 — Dengue (overview of the nested group). Pocket Book
 # 2nd ed (2013), p.188.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added NS1 antigen + IgM (and RT-PCR)
+# diagnostics; softened the ibuprofen wording (aspirin strictly contraindicated);
+# added a dengue-vaccine note (Qdenga / Dengvaxia).
 # ============================================================
 
 topic:
   id: "who-imci-6-10-dengue"
   title: "Dengue"
-  list_subtitle: "6.10 · Aedes · no aspirin/NSAIDs"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["dengue", "arbovirus", "aedes", "plasma leakage", "pediatric"]
+  list_subtitle: "6.10 · Aedes · NS1/IgM · no aspirin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["dengue", "arbovirus", "aedes", "NS1 antigen", "plasma leakage", "vaccine", "pediatric"]
   aliases:
     - "Dengue Fever"
   category: "medical"
@@ -37,6 +39,13 @@ topic:
         vomiting and/or a rash may occur but are **not always present** — it can
         be difficult to distinguish from other common childhood infections.
 
+        **Confirmatory tests** (where available):
+        - **NS1 antigen rapid test** — most sensitive in the **first 5 days** of
+          illness.
+        - **Dengue IgM** — detectable from about **day 4**.
+        - Combining **NS1 + IgM** on a single specimen identifies **≥ 90%** of
+          cases. **RT-PCR** is the gold standard for acute diagnosis.
+
     - type: "prose"
       title: "Treatment — non-severe dengue"
       markdown: |
@@ -46,11 +55,23 @@ topic:
           persistent vomiting, cold clammy extremities, lethargy or restlessness,
           bleeding (e.g. black stools or coffee-ground vomit).
         - Encourage **oral fluid** (clean water or ORS) to replace losses.
-        - **Paracetamol** for high fever if uncomfortable. **Do NOT give aspirin
-          or NSAIDs such as ibuprofen — they aggravate bleeding.**
+        - **Paracetamol** is the recommended antipyretic. **Aspirin is strictly
+          contraindicated** (irreversible platelet inhibition → bleeding).
+          **Avoid ibuprofen and other NSAIDs** per WHO guidance, though emerging
+          evidence suggests low-dose ibuprofen may be safe in non-severe dengue.
         - **Follow up daily** until the temperature is normal; check the **EVF
           daily** if possible; watch for signs of severe disease.
         - **Admit** any child with signs of severe disease (mucosal or severe
           bleeding, shock, altered mental status, convulsions or jaundice) or a
           rapid, marked rise in EVF
           ([§6.10.1](topic:who-imci-6-10-1-severe-dengue)).
+
+    - type: "prose"
+      title: "Prevention — vector control & vaccines"
+      markdown: |
+        The mainstay is **Aedes vector control** (remove standing water, use
+        nets/repellents). Two vaccines are now available in endemic countries:
+        **TAK-003 (Qdenga)** — approved in several countries **without** a
+        serostatus requirement — and **CYD-TDV (Dengvaxia)** — for
+        **seropositive** individuals aged **6–16 years** only. Follow national
+        immunization policy.

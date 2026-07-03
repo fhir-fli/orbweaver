@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §6.9 — Septic arthritis or osteomyelitis. Pocket Book 2nd ed
 # (2013), pp.186–187.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: shortened uncomplicated durations
+# (10–14 days septic arthritis; 3–4 weeks osteomyelitis) per 2023 PIDS/IDSA
+# guideline + RCT evidence; added Kingella kingae (6 mo–4 yr) and cephalosporin
+# coverage; noted the guideline recommends AGAINST adjunctive corticosteroids.
 # ============================================================
 
 topic:
   id: "who-imci-6-9-septic-arthritis"
   title: "Septic Arthritis or Osteomyelitis"
-  list_subtitle: "6.9 · aspirate · cloxacillin · 3–5 weeks"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["septic arthritis", "osteomyelitis", "cloxacillin", "staphylococcus aureus", "salmonella", "pediatric"]
+  list_subtitle: "6.9 · aspirate · cephalosporin · 10–14 days"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["septic arthritis", "osteomyelitis", "cephalosporin", "kingella kingae", "staphylococcus aureus", "salmonella", "pediatric"]
   aliases:
     - "Septic Arthritis"
     - "Osteomyelitis"
@@ -49,21 +52,35 @@ topic:
         - **Organisms:** **Staphylococcus aureus** (> 3 years); in younger
           children **H. influenzae type b, Streptococcus pneumoniae or S.
           pyogenes group A**; **Salmonella** in malarious areas and sickle-cell
-          disease.
+          disease. In children **6 months–4 years**, **Kingella kingae** is now a
+          common cause — it is **susceptible to cephalosporins and ampicillin but
+          resistant to cloxacillin/vancomycin**, so a **first-generation
+          cephalosporin** is a good empirical choice (covers both S. aureus and
+          K. kingae).
 
     - type: "prose"
       title: "Treatment"
       markdown: |
         Base the antibiotic on the organism and sensitivities; otherwise:
         - **IM/IV cloxacillin or flucloxacillin 50 mg/kg every 6 h** (children
-          > 3 years); if unavailable, **chloramphenicol**.
-        - **Clindamycin** or a **2nd/3rd-generation cephalosporin** may be given.
-        - Once temperature is normal, change to **equivalent oral** treatment;
-          total **3 weeks for septic arthritis, 5 weeks for osteomyelitis**.
+          > 3 years); if unavailable, **chloramphenicol**. A **first-generation
+          cephalosporin** (e.g. cefazolin IV, then cefalexin orally) is preferred
+          in children **6 months–4 years** to cover **Kingella kingae**.
+          **Clindamycin** or a 2nd/3rd-generation cephalosporin may also be used.
+        - **Short parenteral course, then oral:** give **2–4 days of parenteral**
+          antibiotics, then — once the child is improving with a **falling CRP**
+          — change to **equivalent oral** treatment for the remainder.
+        - **Total duration (uncomplicated):** **10–14 days for septic arthritis**;
+          **3–4 weeks for osteomyelitis**. RCT evidence shows these short courses
+          are as effective as the older longer regimens.
+        - **Complicated cases** (virulent S. aureus, adjacent osteomyelitis, poor
+          response): extend to **3–4 weeks** (septic arthritis) or **6 weeks**
+          (osteomyelitis).
         - **Septic arthritis:** remove pus by **aspiration**. If swelling recurs
-          after aspiration, or the infection responds poorly by 3 weeks →
-          **surgical** exploration, drainage of pus, and excision of dead bone;
-          extend antibiotics to **6 weeks**.
+          after aspiration, or the infection responds poorly → **surgical**
+          exploration, drainage of pus, and excision of dead bone.
+        - **Do NOT add corticosteroids** — the potential harms outweigh the
+          marginal benefit shown in small studies (2023 PIDS/IDSA guideline).
         - **Tuberculous osteomyelitis** (slow onset, chronic course, poor
           response): treat per the **national TB programme**; surgery is almost
           never needed as abscesses subside with anti-TB treatment.

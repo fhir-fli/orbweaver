@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §6.10.1 — Severe dengue. Pocket Book 2nd ed (2013),
 # pp.188–192.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: emphasised crystalloid as the preferred
+# resuscitation fluid; colloid reserved for refractory shock and used with
+# caution (excess colloid linked to worse outcomes).
 # ============================================================
 
 topic:
   id: "who-imci-6-10-1-severe-dengue"
   title: "Severe Dengue"
   list_subtitle: "6.10.1 · plasma leakage · shock · fluid care"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["severe dengue", "dengue shock", "plasma leakage", "fluid management", "bleeding", "fluid overload", "pediatric"]
   aliases:
     - "Dengue Shock Syndrome"
@@ -64,13 +66,17 @@ topic:
       title: "Fluid management — patients IN shock (PP ≤ 20 mmHg)"
       callout: true
       markdown: |
-        **Emergency.** Give **10–20 ml/kg of an isotonic crystalloid** (Ringer's
-        lactate or normal saline) **over 1 h**.
+        **Emergency. Crystalloid is the preferred resuscitation fluid** — give
+        **10–20 ml/kg of an isotonic crystalloid** (Ringer's lactate or normal
+        saline) **over 1 h**.
         - **Responds** (perfusion improves, PP widens) → reduce to **10 ml/kg/h
           for 1 h**, then gradually to **2–3 ml/kg/h over the next 6–8 h**.
         - **No response** (continuing shock) → a further **20 ml/kg crystalloid
-          over 1 h**, or consider **10 ml/kg of a colloid** (6% dextran 70 or 6%
-          hetastarch) over 1 h, then revert to crystalloid as soon as possible.
+          over 1 h**. **Reserve colloid** (dextran 40 or a starch) — **10 ml/kg
+          over 1 h** — for **refractory shock not responding to crystalloid**,
+          then revert to crystalloid as soon as possible. Use colloid **with
+          caution**: excess colloid is associated with **worse outcomes** (more
+          mechanical ventilation). **Albumin** may be considered where available.
         - Further small boluses (**5–10 ml/kg over 1 h**) may be needed over the
           next **24–48 h**.
         - **Review vitals hourly** (especially pulse pressure), EVF and urine

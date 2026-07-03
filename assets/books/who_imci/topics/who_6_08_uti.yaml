@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §6.8 — Urinary tract infection. Pocket Book 2nd ed (2013),
 # pp.184–186.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: co-trimoxazole demoted from empirical
+# first-line (widespread E. coli resistance) in favour of amoxicillin-clavulanate
+# / cephalexin; added afebrile-cystitis short course; noted oral therapy equals
+# IV for uncomplicated pyelonephritis; ultrasound after the first febrile UTI.
 # ============================================================
 
 topic:
   id: "who-imci-6-8-uti"
   title: "Urinary Tract Infection"
-  list_subtitle: "6.8 · check the urine · co-trimoxazole"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["urinary tract infection", "UTI", "pyelonephritis", "co-trimoxazole", "gentamicin", "pediatric"]
+  list_subtitle: "6.8 · check the urine · amox-clav / cephalexin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["urinary tract infection", "UTI", "pyelonephritis", "amoxicillin-clavulanate", "cephalexin", "co-trimoxazole", "ultrasound", "pediatric"]
   aliases:
     - "UTI"
   category: "medical"
@@ -55,19 +58,32 @@ topic:
     - type: "prose"
       title: "Treatment"
       markdown: |
-        Treat as an **outpatient** with an oral antibiotic for **7–10 days**,
-        **except** — admit — when there is **high fever / systemic upset**
-        (vomiting or inability to drink/breastfeed), signs of **pyelonephritis**
-        (loin pain or tenderness), or the child is an **infant**.
-        - **Oral co-trimoxazole (TMP 10 mg/kg + SMX 40 mg/kg every 12 h) for
-          5 days**; alternatives — ampicillin, amoxicillin, cefalexin — per local
-          sensitivity of E. coli and other Gram-negative bacilli.
-        - **Poor response or complications** → **gentamicin 7.5 mg/kg IM/IV once
-          daily + ampicillin 50 mg/kg IM/IV every 6 h**, or a parenteral
-          cephalosporin. Consider **pyelonephritis** (costovertebral-angle
-          tenderness + high fever) or **septicaemia**.
-        - **Infants < 2 months:** **gentamicin 7.5 mg/kg IM/IV once daily** until
-          the fever subsides, then review and continue oral treatment as above.
+        Treat as an **outpatient**, **except** — admit — when there is **high
+        fever / systemic upset** (vomiting or inability to drink/breastfeed),
+        signs of **pyelonephritis** (loin pain or tenderness), or the child is an
+        **infant**. **Base the choice on local E. coli susceptibility** where
+        known:
+        - **First choice: oral amoxicillin-clavulanate** (25–50 mg/kg/day of the
+          amoxicillin component in 2–3 divided doses) **or a first-generation
+          cephalosporin** — cefalexin 50 mg/kg/day in 3–4 divided doses.
+        - **Co-trimoxazole** (TMP 8 mg/kg/day + SMX 40 mg/kg/day in 2 doses) is
+          now unreliable as empirical therapy — E. coli resistance exceeds
+          20–30% in many settings — so use it **only where local susceptibility
+          exceeds 80%**. **Adjust to culture results** when available.
+        - **Duration:** **7–10 days** for **febrile UTI / pyelonephritis**;
+          **3–5 days** is sufficient for **afebrile lower UTI (cystitis)** in
+          children ≥ 2 years.
+        - **Oral therapy equals IV.** For **uncomplicated pyelonephritis** in a
+          child who can tolerate oral intake and is **not toxic-appearing**, oral
+          antibiotics alone are as effective as an IV-to-oral course. **Reserve
+          parenteral therapy** for toxic-appearing children, those who cannot
+          tolerate oral medication, and **young infants**.
+        - **Parenteral option** (when indicated): **gentamicin 7.5 mg/kg IM/IV
+          once daily ± ampicillin 50 mg/kg IM/IV every 6 h**, or a parenteral
+          cephalosporin (**ceftriaxone**).
+        - **Infants < 2 months:** parenteral therapy (**gentamicin 7.5 mg/kg
+          IM/IV once daily ± ampicillin**) until the fever subsides, then review
+          and step down to oral treatment as above.
 
     - type: "prose"
       title: "Supportive care & follow-up"
@@ -75,6 +91,9 @@ topic:
         - Encourage the child to **drink or breastfeed** regularly to help clear
           the infection and prevent dehydration.
         - For pain, give **paracetamol**; **avoid NSAIDs**.
-        - **Investigate all episodes** of UTI in any child with **more than one
-          episode** to identify a possible anatomical cause — this may need
-          referral for **ultrasound**.
+        - **Imaging:** obtain a **renal and bladder ultrasound after the first
+          febrile UTI** in young children (to detect obstruction or major
+          structural abnormality). Reserve **micturating cystourethrogram
+          (MCUG/VCUG)** for an abnormal ultrasound, **atypical** UTI, or
+          **recurrent febrile** UTI. Investigate any child with **more than one
+          episode** for an anatomical cause.
