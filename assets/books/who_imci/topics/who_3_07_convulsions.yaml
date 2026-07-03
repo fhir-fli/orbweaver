@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §3.7 — Convulsions or fits. Pocket Book 2nd ed (2013),
 # pp.53–54.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): phenobarbital dosing
+#    confirmed unchanged (NEOLEV2); second-line agents added; buccal
+#    40% dextrose gel noted for asymptomatic hypoglycaemia.
 # ============================================================
 
 topic:
   id: "who-imci-3-7-convulsions"
   title: "Convulsions or Fits"
   list_subtitle: "3.7 · glucose, phenobarbital, calcium"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (NEOLEV2, 2023 NEJM)"
   tags: ["convulsions", "seizure", "phenobarbital", "hypoglycaemia", "hypocalcaemia", "neonate", "pediatric"]
   aliases:
     - "Neonatal Seizures"
@@ -37,6 +39,8 @@ topic:
         - If **hypoglycaemic**, give **glucose IV or nasogastrically — 2 ml/kg
           of 10% glucose** ([IV glucose](topic:who-imci-chart10-glucose)). If
           glucose cannot be measured, **treat empirically** with glucose.
+          (For an **asymptomatic** at-risk infant who is **not** convulsing,
+          **buccal 40% dextrose gel 200 mg/kg** is a low-cost first option.)
 
     - type: "prose"
       title: "Anticonvulsant"
@@ -45,6 +49,9 @@ topic:
           If convulsions persist, give **further 10 mg/kg** doses up to a
           **maximum of 40 mg/kg**.
         - Continue phenobarbital at a **maintenance dose of 5 mg/kg per day**.
+        - If fits **persist despite maximal phenobarbital**, add a **second-line
+          agent — phenytoin (or fosphenytoin), levetiracetam, or midazolam**
+          (limited evidence to choose between them).
         - If **hypocalcaemic**, symptoms may settle with **2 ml/kg of 10%
           calcium gluconate** as a slow IV infusion, then continue **oral**
           supplementation.

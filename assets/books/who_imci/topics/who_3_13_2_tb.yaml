@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §3.13.2 — Infants of mothers with tuberculosis. Pocket Book 2nd
 # ed (2013), p.68.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07, 2024 Lancet Child Adolesc
+#    Health consensus): preferred TPT is now 3 months isoniazid +
+#    rifampicin (3HR), reserving 6–9 months isoniazid alone for infants
+#    on ART / HIV prophylaxis; mother wears a surgical mask if infectious.
 # ============================================================
 
 topic:
   id: "who-imci-3-13-2-tb"
   title: "Infant of a Mother with TB"
   list_subtitle: "3.13.2 · isoniazid prophylaxis, delay BCG"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["tuberculosis", "isoniazid", "bcg", "prophylaxis", "neonate", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (2024 Lancet TB consensus)"
+  tags: ["tuberculosis", "isoniazid", "rifampicin", "bcg", "prophylaxis", "neonate", "pediatric"]
   aliases:
     - "Maternal TB"
   category: "medical"
@@ -29,14 +32,19 @@ topic:
     - type: "prose"
       title: "Management"
       markdown: |
-        - **Reassure the mother** that it is safe to breastfeed her infant.
+        - **Reassure the mother** that it is safe to breastfeed her infant; ask
+          her to wear a **surgical mask** while she is still potentially
+          infectious.
         - **Do not give the BCG vaccine at birth.**
-        - Give **prophylactic isoniazid 10 mg/kg by mouth once daily**.
-        - **Re-evaluate at 6 weeks** — note weight gain and take a chest X-ray
-          if possible.
-        - If findings suggest **active disease**, start **full anti-TB
+        - First **exclude active TB** in the infant (assessment ± chest X-ray).
+          If findings suggest **active disease**, start **full anti-TB
           treatment** (see §4).
-        - If the infant is doing well and tests are negative, **continue
-          isoniazid to complete 6 months**.
-        - **Delay BCG** until 2 weeks after treatment is completed; if BCG was
-          already given, **repeat it 2 weeks after** the end of isoniazid.
+        - Otherwise give **TB preventive treatment (TPT)**:
+          - **Preferred: 3 months of isoniazid + rifampicin (3HR)** as a
+            child-friendly fixed-dose combination.
+          - If the infant is on **antiretroviral therapy or HIV postnatal
+            prophylaxis**, use **6–9 months of isoniazid alone** instead
+            (rifampicin interacts with antiretrovirals).
+        - **Re-evaluate at 6 weeks** — note weight gain and reassess.
+        - Give **BCG after TPT is completed** (in high-incidence settings); if
+          BCG was already given, **repeat it** after TPT.

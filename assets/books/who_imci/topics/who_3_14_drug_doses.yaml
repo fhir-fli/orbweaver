@@ -4,14 +4,16 @@
 # Rendered as a horizontal-scroll wide table (layout: scroll) — drugs as
 # rows, the 7 weight bands as columns. Doses transcribed from high-DPI
 # renders of pp.69–72 (neonatal doses — read cell-by-cell).
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): added a ceftriaxone neonatal
+#    safety caution and a caffeine maximum-maintenance note; transcribed
+#    doses otherwise verified unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-3-14-drug-doses"
   title: "Neonatal Drug Doses"
   list_subtitle: "3.14 · doses by weight band (scroll →)"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (ceftriaxone + caffeine notes)"
   tags: ["drug doses", "neonate", "low birth weight", "antibiotics", "reference table", "pediatric"]
   aliases:
     - "Neonatal Doses"
@@ -72,4 +74,9 @@ topic:
           (normal-weight) infants **5 mg/kg**.
         - **Aminophylline, caffeine citrate, phenobarbital (injection):**
           **calculate the exact dose** from the infant's weight rather than
-          reading a range.
+          reading a range. For **caffeine citrate**, do not exceed a
+          **maintenance of 10 mg/kg/day**.
+        - **Ceftriaxone:** avoid in infants **≤ 28 days** — it displaces
+          bilirubin (kernicterus risk) and forms fatal precipitates with
+          **calcium-containing IV fluids**. Use **cefotaxime** instead
+          ([§3.9](topic:who-imci-3-9-meningitis)).

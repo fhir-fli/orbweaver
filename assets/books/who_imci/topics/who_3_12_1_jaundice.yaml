@@ -1,14 +1,18 @@
 # ============================================================
 # WHO IMCI §3.12.1 — Jaundice. Pocket Book 2nd ed (2013), pp.64–66.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): conjugated-bilirubin /
+#    biliary-atresia flag; TcB screening option; note that the WHO
+#    thresholds are intentionally conservative for LMIC settings (the
+#    2022 AAP raised thresholds but was not designed for LMICs);
+#    escalation-of-care + IVIG where exchange transfusion unavailable.
 # ============================================================
 
 topic:
   id: "who-imci-3-12-1-jaundice"
   title: "Neonatal Jaundice"
   list_subtitle: "3.12.1 · normal vs abnormal · phototherapy thresholds"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["jaundice", "hyperbilirubinaemia", "phototherapy", "exchange transfusion", "neonate", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (2022 AAP context, biliary-atresia flag)"
+  tags: ["jaundice", "hyperbilirubinaemia", "phototherapy", "exchange transfusion", "biliary atresia", "neonate", "pediatric"]
   aliases:
     - "Hyperbilirubinaemia"
   category: "medical"
@@ -61,7 +65,14 @@ topic:
         bacterial infection — high/low neutrophils, > 20% band forms — and
         haemolysis); **blood type of infant and mother + Coombs test**;
         **syphilis serology (VDRL)**; **G6PD screening, thyroid function,
-        liver ultrasound**.
+        liver ultrasound**. Where available, a **transcutaneous bilirubinometer
+        (TcB)** is a useful non-invasive screen (confirm with serum bilirubin
+        before phototherapy).
+
+        **Always measure the conjugated (direct) fraction.** A conjugated
+        bilirubin **> 1 mg/dL (17 µmol/L)** at **any age** is abnormal and needs
+        **urgent evaluation for biliary atresia** — a **Kasai portoenterostomy
+        before 60 days** greatly improves outcomes.
 
     - type: "prose"
       title: "Treatment — phototherapy if…"
@@ -101,6 +112,15 @@ topic:
         - Continue phototherapy until bilirubin is **below the threshold**, or
           the infant is well with no jaundice of palms/soles. If bilirubin is
           very high and exchange can be done safely, **consider it**.
+        - These WHO thresholds are **intentionally conservative** (lower than
+          the 2022 AAP nomograms, which were **not** designed for settings with
+          limited screening, follow-up or phototherapy quality) — appropriate
+          where follow-up is uncertain.
+        - As bilirubin **approaches the exchange level**, treat it as an
+          **escalation of care**: intensify phototherapy, recheck bilirubin
+          **every 2 h**, and arrange transfer. In **isoimmune haemolytic
+          disease** (positive Coombs) where exchange is unavailable, **IVIG
+          0.5–1 g/kg** may help.
 
     - type: "prose"
       title: "Other treatment"

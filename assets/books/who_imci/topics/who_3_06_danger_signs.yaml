@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §3.6 — Danger signs in newborns and young infants.
 # Pocket Book 2nd ed (2013), pp.52–53.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): 2019 WHO PSBI tiered
+#    severity classification, fast-breathing age qualifier, capillary
+#    refill + cry quality as supplementary predictors.
 # ============================================================
 
 topic:
   id: "who-imci-3-6-danger-signs"
   title: "Danger Signs (Newborn & Young Infant)"
   list_subtitle: "3.6 · non-specific signs of severe illness + emergency care"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (WHO 2015/2019 PSBI)"
   tags: ["danger signs", "neonate", "young infant", "sepsis", "emergency", "hypoglycaemia", "pediatric"]
   aliases:
     - "Neonatal Danger Signs"
@@ -33,12 +35,32 @@ topic:
         - **convulsions**
         - **drowsy or unconscious**
         - **movement only when stimulated**, or no movement at all
-        - **fast breathing (≥ 60/min)**
+        - **fast breathing (≥ 60/min)** — a PSBI sign at **0–6 days**; isolated
+          fast breathing at **7–59 days** is classed as **severe pneumonia**
+          (see below)
         - **grunting**
         - **severe chest indrawing**
         - **raised temperature > 38 °C**
         - **hypothermia < 35.5 °C**
         - **central cyanosis**
+        - **prolonged capillary refill**, or a **weak, abnormal or absent cry**
+          — both strongly associated with mortality
+
+    - type: "prose"
+      title: "Classify severity (WHO PSBI)"
+      markdown: |
+        When referral is possible, **any** danger sign warrants urgent
+        admission. When **referral is not feasible**, WHO sub-classifies
+        **possible serious bacterial infection (PSBI)** by severity to guide
+        treatment
+        ([antibiotics · §3.8](topic:who-imci-3-8-bacterial-infection)):
+        - **Critical illness** — **convulsions**, **not feeding at all**, or
+          **no movement even when stimulated**. Highest mortality → **refer**.
+        - **Clinical severe infection** — **not feeding well**, **movement only
+          when stimulated**, **severe chest indrawing**, **temperature ≥ 38 °C
+          or < 35.5 °C**, or **fast breathing at 0–6 days**.
+        - **Severe pneumonia** — **isolated fast breathing at 7–59 days** with
+          no other sign. Lowest mortality → oral antibiotics as an outpatient.
 
     - type: "prose"
       title: "Emergency management"

@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §3.8 — Serious bacterial infection. Pocket Book 2nd ed (2013),
 # pp.54–55.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): ampicillin + gentamicin
+#    confirmed first-line; WHO 2015/2019 simplified outpatient regimens
+#    added for when referral is not feasible.
 # ============================================================
 
 topic:
   id: "who-imci-3-8-bacterial-infection"
   title: "Serious Bacterial Infection"
   list_subtitle: "3.8 · neonatal sepsis — signs & antibiotics"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["neonatal sepsis", "bacterial infection", "ampicillin", "gentamicin", "omphalitis", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (WHO 2015/2019 PSBI)"
+  tags: ["neonatal sepsis", "bacterial infection", "ampicillin", "gentamicin", "amoxicillin", "omphalitis", "pediatric"]
   aliases:
     - "Neonatal Sepsis"
   category: "medical"
@@ -57,8 +59,23 @@ topic:
         - At greater risk of **staphylococcus** (extensive skin pustules,
           abscess or omphalitis with signs of sepsis): give **cloxacillin +
           gentamicin**.
-        - Treat for **at least 7–10 days**.
+        - Treat for **at least 7–10 days**, guided by **clinical response and
+          culture results**.
         - If **not improving within 2–3 days**, change the antibiotics or refer.
+
+    - type: "prose"
+      title: "When referral is not feasible (WHO PSBI regimens)"
+      markdown: |
+        Inpatient ampicillin + gentamicin remains preferred. If the family
+        **cannot reach hospital**, WHO permits **outpatient** treatment by
+        severity ([classification · §3.6](topic:who-imci-3-6-danger-signs)):
+        - **Critical illness** → still **refer**; if impossible, give
+          **injectable gentamicin once daily + injectable ampicillin twice
+          daily** until referral is possible or for **≥ 7 days**.
+        - **Clinical severe infection** → **injectable gentamicin once daily
+          for 2 days + oral amoxicillin 50 mg/kg twice daily for 7 days**.
+        - **Severe pneumonia** (isolated fast breathing, 7–59 days) → **oral
+          amoxicillin 50 mg/kg twice daily for 7 days** alone.
 
     - type: "prose"
       title: "Other treatment"

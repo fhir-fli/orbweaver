@@ -1,15 +1,16 @@
 # ============================================================
 # WHO IMCI §3.11.4 — Discharge and follow-up of low-birth-weight infants.
 # Pocket Book 2nd ed (2013), p.63.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): added ROP screening
+#    (GA ≤30 wk or BW ≤1500 g) — a notable omission from the source page.
 # ============================================================
 
 topic:
   id: "who-imci-3-11-4-lbw-discharge"
   title: "LBW Discharge & Follow-up"
   list_subtitle: "3.11.4 · discharge criteria + vaccines"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["discharge", "follow-up", "low birth weight", "immunisation", "neonate", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (ROP screening added)"
+  tags: ["discharge", "follow-up", "low birth weight", "immunisation", "retinopathy of prematurity", "rop", "neonate", "pediatric"]
   aliases:
     - "LBW Discharge"
   category: "medical"
@@ -35,6 +36,17 @@ topic:
       markdown: |
         Give all **scheduled vaccines** at the time of birth, and any **second
         doses** that are due by the time of discharge.
+
+    - type: "prose"
+      title: "Screen for retinopathy of prematurity"
+      markdown: |
+        Arrange **eye screening for retinopathy of prematurity (ROP)** in
+        infants **≤ 30 weeks' gestation** or **≤ 1500 g** birth weight (and
+        larger infants **1500–2000 g** with an unstable course). The **first
+        dilated exam** is at **4–6 weeks after birth** (or 31–33 weeks
+        postmenstrual age, whichever is later). Untreated ROP is a preventable
+        cause of childhood blindness — ensure the referral is booked **before
+        discharge**.
 
     - type: "prose"
       title: "Counsel before discharge"

@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §3.9 — Meningitis. Pocket Book 2nd ed (2013), pp.55–56.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): ceftriaxone avoided in
+#    neonates (bilirubin displacement + calcium precipitation) → prefer
+#    cefotaxime; pathogen-specific treatment durations.
 # ============================================================
 
 topic:
   id: "who-imci-3-9-meningitis"
   title: "Neonatal Meningitis"
   list_subtitle: "3.9 · suspect, LP, 3 weeks of antibiotics"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["meningitis", "neonate", "lumbar puncture", "ampicillin", "gentamicin", "cephalosporin", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (ceftriaxone caution)"
+  tags: ["meningitis", "neonate", "lumbar puncture", "ampicillin", "gentamicin", "cefotaxime", "cephalosporin", "pediatric"]
   aliases:
     - "Meningitis"
   category: "medical"
@@ -42,13 +44,12 @@ topic:
     - type: "prose"
       title: "Treatment"
       markdown: |
-        - First-line: **ampicillin + gentamicin for 3 weeks** (doses §3.14).
-        - Alternatively, a **third-generation cephalosporin** + gentamicin for
-          3 weeks:
-          - **ceftriaxone** 50 mg/kg every 12 h if **< 7 days** old, 75 mg/kg
-            after 1 week; **or**
-          - **cefotaxime** 50 mg/kg every 12 h if < 7 days, every 6–8 h if
-            > 7 days.
+        - First-line: **ampicillin + gentamicin** (doses §3.14).
+        - If a **third-generation cephalosporin** is used, **prefer cefotaxime**
+          — **50 mg/kg every 12 h if < 7 days**, **every 6–8 h if > 7 days**
+          (+ gentamicin).
+        - **Duration:** at least **21 days for gram-negative** organisms;
+          **14–21 days for group B streptococcus**.
         - If there are signs of **hypoxaemia**, give **oxygen** (§3.10).
         - If **drowsy or unconscious**, ensure **hypoglycaemia** is not present;
           if it is, give **2 ml/kg of 10% glucose IV**
@@ -57,3 +58,17 @@ topic:
           ([§3.7](topic:who-imci-3-7-convulsions)) — after ensuring they are
           not due to hypoglycaemia or hypoxaemia.
         - Make **regular checks for hypoglycaemia**.
+
+    - type: "prose"
+      title: "⚠ Avoid ceftriaxone in neonates"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Do not use ceftriaxone in infants ≤ 28 days.** It displaces
+        **bilirubin** (risk of **kernicterus** in jaundiced infants) and forms
+        **fatal precipitates** with **calcium-containing IV fluids** — including
+        parenteral nutrition — even with a single dose. Use **cefotaxime**
+        (with ampicillin + gentamicin) instead.

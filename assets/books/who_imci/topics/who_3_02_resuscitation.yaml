@@ -2,14 +2,16 @@
 # WHO IMCI §3.2 — Neonatal resuscitation (embeds Chart 12) + §3.2.1
 # post-resuscitation care + §3.2.2 cessation. Pocket Book 2nd ed (2013),
 # pp.46–50 (Chart 12, pp.47–49).
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07), layered onto Chart 12:
+#    tiered initial O₂, 100% O₂ + ETT/LMA + adrenaline dosing during
+#    compressions, individualised cessation (2025 AHA/AAP Part 5).
 # ============================================================
 
 topic:
   id: "who-imci-3-2-resuscitation"
   title: "Neonatal Resuscitation"
   list_subtitle: "3.2 · Chart 12 · dry, stimulate, ventilate, HR-guided"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (2025 AHA/AAP Part 5)"
   tags: ["neonatal resuscitation", "chart 12", "ppv", "bag and mask", "chest compressions", "asphyxia", "pediatric"]
   aliases:
     - "Chart 12"
@@ -52,8 +54,10 @@ topic:
         - Start **positive-pressure ventilation** with mask + self-inflating
           bag **within 1 min of birth**; make sure the **chest moves**
           adequately.
-        - Ventilate with **air** for infants **> 32 weeks**; for very preterm
-          infants start **30% oxygen** if possible.
+        - Start with the **lowest effective oxygen** and titrate to target
+          SpO₂: **21% (air)** for infants **≥ 35 weeks**; **21–30%** for
+          **32–34⁺⁶ weeks**; **≥ 30%** (up to 100% if needed) for
+          **< 32 weeks**.
         - After **30–60 s**, check the **heart rate** with a stethoscope.
 
     - type: "table"
@@ -61,7 +65,7 @@ topic:
       columns: ["Heart rate", "Action"]
       column_flex: [2, 5]
       rows:
-        - cells: ["< 60/min", "Continue ventilation and **start chest compressions**; higher O₂; consider ventilatory support, IV adrenaline, referral. If **no HR for > 10 min**, or HR stays **< 60 for 20 min** → discontinue (see Cessation)."]
+        - cells: ["< 60/min", "Continue ventilation and **start chest compressions**; give **100% oxygen**; secure the airway; give **IV/IO adrenaline**. If there is **no heart rate after 20 min** of high-quality resuscitation → consider **redirecting care** (individualise — see Cessation)."]
         - cells: ["60–100/min", "Take ventilation **corrective steps**; continue ventilating at **40/min**; consider higher O₂; suction if needed; **reassess every 1–2 min**."]
         - cells: ["> 100/min", "Continue at **40 breaths/min**; every 1–2 min pause to check for **spontaneous breathing**; stop when **RR > 30/min**; give post-resuscitation care."]
 
@@ -95,6 +99,15 @@ topic:
           every 2 s**.
         - Place **thumbs just below the internipple line** on the sternum;
           compress **one third** of the chest's anterior–posterior diameter.
+        - **Increase to 100% oxygen** during compressions, then wean once the
+          heart rate recovers.
+        - **Secure the airway** — an **endotracheal tube** is preferred during
+          compressions (a **laryngeal mask** is an alternative at
+          **≥ 34 weeks**).
+        - Give **adrenaline (epinephrine)** if HR stays **< 60/min**:
+          **IV/IO 0.01–0.03 mg/kg** (endotracheal **0.05–0.1 mg/kg** only
+          while IV/IO access is being obtained). For suspected blood loss, give
+          a **volume bolus 10–20 mL/kg** (normal saline or blood).
 
     - type: "prose"
       title: "Post-resuscitation care (3.2.1)"
@@ -112,10 +125,11 @@ topic:
       title: "Cessation of resuscitation (3.2.2)"
       anchor: "cessation"
       markdown: |
-        Consider discontinuing effective resuscitation if:
-        - the infant is **not breathing and has no detectable heartbeat beyond
-          10 min**, or
-        - there is **no spontaneous breathing and the heart rate stays below
-          60/min after 20 min** of effective resuscitation.
+        The decision to stop is **individualised**, not purely time-based —
+        weigh the **gestational age**, the **cause**, the **resources**
+        available (including therapeutic hypothermia,
+        [§3.5](topic:who-imci-3-5-hie)), and the **parents' wishes**. In
+        general, consider **redirecting care** if there is **no detectable
+        heartbeat after 20 min** of high-quality resuscitation.
         **Record** the event and explain to the parents that the infant has
         died; let them **hold the infant** if they wish.

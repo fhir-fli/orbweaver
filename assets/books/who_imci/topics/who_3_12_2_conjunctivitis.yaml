@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §3.12.2 — Conjunctivitis (sticky eyes & ophthalmia neonatorum).
 # Pocket Book 2nd ed (2013), pp.66–67.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07, 2021 CDC STI): ceftriaxone max
+#    corrected 150→250 mg; kanamycin replaced by cefotaxime 100 mg/kg;
+#    erythromycin 0.5% prophylaxis option; parental Rx → ceftriaxone
+#    500 mg IM (not amoxicillin/spectinomycin).
 # ============================================================
 
 topic:
   id: "who-imci-3-12-2-conjunctivitis"
   title: "Neonatal Conjunctivitis"
   list_subtitle: "3.12.2 · sticky eyes vs ophthalmia neonatorum"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["conjunctivitis", "ophthalmia neonatorum", "gonococcal", "ceftriaxone", "neonate", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (2021 CDC STI guidelines)"
+  tags: ["conjunctivitis", "ophthalmia neonatorum", "gonococcal", "ceftriaxone", "cefotaxime", "neonate", "pediatric"]
   aliases:
     - "Ophthalmia Neonatorum"
     - "Sticky Eyes"
@@ -27,8 +30,9 @@ topic:
         - Show the mother how to **wash the eyes** with water or breast milk,
           and how to apply ointment — she must **wash her hands** before and
           after.
-        - Wash the eyes and apply **tetracycline or chloramphenicol eye
-          ointment four times a day for 5 days**.
+        - Wash the eyes and apply **tetracycline 1% or chloramphenicol eye
+          ointment four times a day for 5 days** (**erythromycin 0.5%** is an
+          alternative where available).
 
     - type: "prose"
       title: "Severe conjunctivitis (ophthalmia neonatorum)"
@@ -37,15 +41,19 @@ topic:
         infection. Treat as an **inpatient** (**risk of blindness**), with
         **twice-daily review**.
         - **Wash the eyes** to clear the pus.
-        - Give **ceftriaxone 50 mg/kg** (up to a maximum of **150 mg**) IM once,
-          **or kanamycin 25 mg/kg** (up to **75 mg**) IM once, per national
-          guidelines.
+        - Give **ceftriaxone 25–50 mg/kg** (**maximum 250 mg**) IM/IV as a
+          single dose.
+        - If ceftriaxone **cannot be used** — a jaundiced neonate or one on
+          calcium-containing IV fluids
+          ([see §3.9](topic:who-imci-3-9-meningitis)) — give **cefotaxime
+          100 mg/kg IM/IV** as a single dose instead.
         - Also apply **tetracycline or chloramphenicol eye ointment**.
 
     - type: "prose"
       title: "Treat the parents"
       markdown: |
         Also treat the **mother and her partner** for sexually transmitted
-        infections: **amoxicillin, spectinomycin or ciprofloxacin** for
-        gonorrhoea and **tetracycline** for *Chlamydia*, depending on the local
-        resistance pattern. Refer to the STI control guidelines.
+        infections: **ceftriaxone 500 mg IM as a single dose** for gonorrhoea
+        (amoxicillin and spectinomycin are no longer adequate), plus
+        **doxycycline** for *Chlamydia* unless it has been excluded. Refer to
+        the STI control guidelines.

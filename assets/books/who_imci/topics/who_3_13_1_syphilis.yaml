@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §3.13.1 — Congenital syphilis. Pocket Book 2nd ed (2013),
 # pp.67–68.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07, 2021 CDC / 2016 WHO):
+#    unit-based benzathine dose made primary; aqueous crystalline
+#    penicillin G 100 000–150 000 U/kg/day IV added as preferred regimen
+#    for symptomatic congenital syphilis.
 # ============================================================
 
 topic:
   id: "who-imci-3-13-1-syphilis"
   title: "Congenital Syphilis"
   list_subtitle: "3.13.1 · snuffles, rash, penicillin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["congenital syphilis", "vdrl", "benzathine penicillin", "snuffles", "neonate", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (2021 CDC / 2016 WHO)"
+  tags: ["congenital syphilis", "vdrl", "benzathine penicillin", "crystalline penicillin", "snuffles", "neonate", "pediatric"]
   aliases:
     - "Syphilis"
   category: "medical"
@@ -37,12 +40,12 @@ topic:
       title: "Treatment"
       markdown: |
         - **Asymptomatic** neonates born to women with a positive VDRL or rapid
-          plasma reagin test: **benzathine benzylpenicillin 37.5 mg/kg
-          (50 000 U/kg) as a single IM dose**.
-        - **Symptomatic** infants:
-          - **procaine benzylpenicillin 50 mg/kg** as a single deep IM dose
-            daily for **10 days**, **or**
-          - **benzylpenicillin 30 mg/kg IV every 12 h** for the first 7 days,
-            then **every 8 h for a further 3 days**.
+          plasma reagin test (with a normal evaluation): **benzathine
+          benzylpenicillin 50 000 U/kg (≈ 37.5 mg/kg) as a single IM dose**.
+        - **Symptomatic** infants — preferred: **aqueous crystalline
+          penicillin G 100 000–150 000 U/kg/day IV** (50 000 U/kg **every 12 h**
+          for the first 7 days, then **every 8 h** to complete **10 days**).
+          Where IV is not feasible: **procaine benzylpenicillin 50 mg/kg** as a
+          single deep IM dose daily for **10 days**.
         - Treat the **mother and her partner** for syphilis and check for other
           sexually transmitted infections.

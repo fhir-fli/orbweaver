@@ -2,15 +2,17 @@
 # WHO IMCI §3.11.3 — Common problems of low-birth-weight infants:
 # respiratory distress syndrome, necrotizing enterocolitis. Pocket Book
 # 2nd ed (2013), pp.61–63.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): corrected antenatal steroid
+#    regimens (betamethasone preferred); surfactant via LISA added;
+#    multiple-strain probiotics for NEC prevention (2023 JAMA Peds NMA).
 # ============================================================
 
 topic:
   id: "who-imci-3-11-3-lbw-problems"
   title: "LBW Common Problems"
   list_subtitle: "3.11.3 · respiratory distress syndrome · NEC"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["respiratory distress syndrome", "rds", "necrotizing enterocolitis", "nec", "cpap", "preterm", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (LISA, NEC probiotics)"
+  tags: ["respiratory distress syndrome", "rds", "necrotizing enterocolitis", "nec", "cpap", "surfactant", "lisa", "probiotics", "preterm", "pediatric"]
   aliases:
     - "RDS"
     - "Necrotizing Enterocolitis"
@@ -25,8 +27,10 @@ topic:
       highlight: true
       markdown: |
         Preterm infants are at risk of RDS from **surfactant deficiency**. Risk
-        is reduced if a mother at risk of premature delivery is given
-        **dexamethasone (two doses of 12 mg, 24 h apart)**. RDS usually occurs
+        is reduced by **antenatal corticosteroids** for a mother at risk of
+        premature delivery — **betamethasone 12 mg IM every 24 h × 2 doses**
+        (preferred), **or dexamethasone 6 mg IM every 12 h × 4 doses**. RDS
+        usually occurs
         in the **first 3 days** and is self-limiting (birth triggers surfactant
         production) — support the infant until the deficiency resolves. Features
         are usually obvious within **4 h** of birth:
@@ -39,14 +43,18 @@ topic:
       title: "RDS — treatment"
       markdown: |
         - **Minimal handling** of the infant.
-        - **Supplementary oxygen** if needed to keep **SpO₂ > 90% but < 95%**
-          (to avoid eye damage).
+        - **Supplementary oxygen** if needed to keep **SpO₂ 90–95%** (alarm
+          limits 89% / 95% — avoid hypoxia and the eye damage of hyperoxia).
         - **Initially no oral feeding**; give **IV fluids**.
         - Maintain a **normal temperature**.
         - **IV antibiotics** for neonatal sepsis (pneumonia is hard to exclude
           as a cause).
         - **CPAP** — used even in expiration to prevent airway collapse, improve
           oxygenation and reduce breathing fatigue (§10.7).
+        - **Surfactant**, if available, improves outcomes — give it by the
+          **LISA technique** (a thin catheter, or an **8F feeding tube** where
+          specialised catheters are unavailable) during **spontaneous breathing
+          on CPAP**, avoiding intubation.
         - If respiratory distress or hypoxaemia persists, do a **chest X-ray**
           to check for pneumothorax.
 
@@ -55,7 +63,10 @@ topic:
       markdown: |
         A **bowel infection** that may occur in low-birth-weight infants,
         especially **after enteral feeds** are started — commoner in
-        formula-fed infants but possible in breastfed ones.
+        formula-fed infants but possible in breastfed ones. **Prevention:**
+        breast milk over formula, and — where **pharmaceutical-grade**
+        products are available — **multiple-strain probiotics**, which reduce
+        severe NEC and mortality in preterm infants (high-certainty evidence).
 
         **Signs:**
         - **abdominal distension or tenderness**

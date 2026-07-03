@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §3.12.3 — Congenital malformations. Pocket Book 2nd ed (2013),
 # p.67.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed (2026-07): cross-reference to §9.2 remains
+#    appropriate — no change.
 # ============================================================
 
 topic:
   id: "who-imci-3-12-3-malformations"
   title: "Congenital Malformations"
   list_subtitle: "3.12.3 · surgical & orthopaedic — see §9.2"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["congenital malformations", "cleft palate", "club foot", "myelomeningocoele", "neonate", "pediatric"]
   aliases:
     - "Birth Defects"

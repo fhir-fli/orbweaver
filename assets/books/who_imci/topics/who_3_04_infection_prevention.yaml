@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §3.4 — Prevention of neonatal infections.
 # Pocket Book 2nd ed (2013), p.51.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): routine chlorhexidine vaginal
+#    cleansing not recommended (2015 Cochrane — no benefit).
 # ============================================================
 
 topic:
   id: "who-imci-3-4-infection-prevention"
   title: "Preventing Neonatal Infection"
   list_subtitle: "3.4 · early & late (hospital-acquired) prevention"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (2015 Cochrane)"
   tags: ["infection prevention", "neonatal sepsis", "hand hygiene", "kangaroo mother care", "prophylaxis", "pediatric"]
   aliases:
     - "Infection Prevention"
@@ -25,8 +26,10 @@ topic:
         Many early neonatal infections can be prevented by:
         - **Avoiding unnecessary separation** of the newborn from the mother.
         - **Hand-washing** before delivering and handling the infant.
-        - Good **hygiene during delivery** (e.g. chlorhexidine cream for
-          maternal vaginal examinations).
+        - Good **hygiene during delivery** — clean hands, a clean birth
+          surface, and a clean cord-cutting instrument. (**Routine
+          chlorhexidine vaginal cleansing is not recommended** — trials show it
+          does not reduce neonatal infection.)
         - Appropriate **umbilical cord care** and **eye care**.
 
     - type: "prose"

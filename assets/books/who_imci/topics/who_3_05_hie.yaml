@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §3.5 — Management of infants with hypoxic ischaemic
 # encephalopathy (HIE). Pocket Book 2nd ed (2013), pp.51–52.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): therapeutic hypothermia added
+#    WITH the HELIX / LMIC caveat (2021); levetiracetam second-line;
+#    MRI/aEEG/modified Sarnat as referral-level prognostic tools.
 # ============================================================
 
 topic:
   id: "who-imci-3-5-hie"
   title: "Hypoxic Ischaemic Encephalopathy"
   list_subtitle: "3.5 · post-asphyxia — fits, apnoea, feeding, tone"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["hie", "birth asphyxia", "encephalopathy", "apnoea", "hypoxia", "neonate", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (therapeutic hypothermia + HELIX caveat)"
+  tags: ["hie", "birth asphyxia", "encephalopathy", "apnoea", "hypoxia", "therapeutic hypothermia", "neonate", "pediatric"]
   aliases:
     - "HIE"
     - "Birth Asphyxia"
@@ -32,8 +34,9 @@ topic:
       title: "Problems in the days after birth"
       markdown: |
         - **Convulsions:** treat with **phenobarbital**
-          ([§3.7](topic:who-imci-3-7-convulsions)); ensure **hypoglycaemia** is
-          not present (check blood glucose).
+          ([§3.7](topic:who-imci-3-7-convulsions)) first-line;
+          **levetiracetam** is a second-line option if fits persist. Ensure
+          **hypoglycaemia** is not present (check blood glucose).
         - **Apnoea:** common after severe birth asphyxia, sometimes with
           convulsions — **resuscitate with bag and mask** and give **oxygen by
           nasal prongs**.
@@ -43,11 +46,30 @@ topic:
         - **Poor motor tone:** floppy, or limb stiffening (spasticity).
 
     - type: "prose"
+      title: "Therapeutic hypothermia — only where intensive care exists"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        In infants **≥ 36 weeks** with **moderate-to-severe HIE**, cooling to
+        **33.5 °C for 72 h**, started **within 6 h** of birth, reduces death
+        and disability in **high-resource** settings (NNT ≈ 7).
+        **But it is not safe everywhere.** In low- and middle-income settings
+        the **HELIX** trial (2021) found cooling gave **no benefit and
+        increased mortality** (42% vs 31%). **Do not cool** without **neonatal
+        intensive care**, continuous monitoring, and a strict protocol — or a
+        plan to **transfer** to a centre that has them.
+
+    - type: "prose"
       title: "Prognosis"
       markdown: |
         Prognosis is predicted by **recovery of motor function and sucking
         ability**. A normally active infant usually does well. One who is still
         **floppy or spastic and cannot suck within a week** of birth has a
         **severe brain injury** and does poorly. The outlook is **less grim**
-        for infants recovering motor function and beginning to suck. Discuss
-        this **sensitively** with parents throughout.
+        for infants recovering motor function and beginning to suck. Where
+        available at referral level, **MRI**, **amplitude-integrated EEG
+        (aEEG)**, and the **modified Sarnat** staging help refine the outlook.
+        Discuss this **sensitively** with parents throughout.

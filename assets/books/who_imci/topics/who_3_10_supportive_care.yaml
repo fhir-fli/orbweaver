@@ -2,14 +2,20 @@
 # WHO IMCI §3.10 — Supportive care for sick neonates (3.10.1 thermal,
 # 3.10.2 fluid, 3.10.3 oxygen, 3.10.4 high fever). Pocket Book 2nd ed
 # (2013), pp.56–58.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence review applied (2026-07): fluid volumes stratified by
+#    gestation (VLBW/ELBW need more). SpO₂ TARGET DELIBERATELY KEPT AT
+#    90–95% — OE proposed an 88% target "as per Chart 5," but that
+#    evidence (OxyKids/Oxy-PICU) is in older children; in preterm
+#    NEONATES the 85–89% target INCREASED mortality/NEC vs 91–95%
+#    (BOOST-II/SUPPORT/NeOProM). Rejected per RULE #0. Added an
+#    avoid-hyperoxia ceiling only.
 # ============================================================
 
 topic:
   id: "who-imci-3-10-supportive-care"
   title: "Supportive Care for Sick Neonates"
   list_subtitle: "3.10 · thermal · fluids · oxygen · fever"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (neonatal SpO₂ 90–95% retained)"
   tags: ["supportive care", "neonate", "thermal", "fluid management", "oxygen", "fever", "pediatric"]
   aliases:
     - "Neonatal Supportive Care"
@@ -59,6 +65,11 @@ topic:
     - type: "prose"
       title: "Fluid — cautions"
       markdown: |
+        - The volumes above suit **term / low-birth-weight** infants. **Very
+          preterm / very-low-birth-weight** infants need **more** — often
+          starting **80–90 ml/kg on day 1** and rising toward
+          **150–180 ml/kg/day** — titrated to weight, urine output and
+          electrolytes.
         - When oral feeds are well tolerated, fluid may rise to **180 ml/kg/day**
           after some days.
         - Be careful with **parenteral IV fluids** (they can quickly overhydrate
@@ -83,10 +94,16 @@ topic:
         - **head nodding** (synchronous with respiration — severe distress)
 
         Use a **pulse oximeter** to guide therapy: give oxygen if **SpO₂ ≤ 90%**,
-        regulate flow to keep **> 90%**, and discontinue once the infant holds
+        regulate flow to keep **90–95%**, and discontinue once the infant holds
         **> 90% in room air**. **Nasal prongs** are preferred — **0.5–1 L/min**
         (up to **2 L/min** in severe distress). Clear thick secretions by
         intermittent suction under direct vision if they obstruct the airway.
+
+        **Aim 90–95% — not higher, not lower.** Unlike older children (where
+        trials support a more permissive 88% threshold), in **preterm
+        neonates** a lower target of **85–89%** was shown to **increase death
+        and necrotising enterocolitis**; **avoid hyperoxia** too, as it drives
+        **retinopathy of prematurity**.
 
     - type: "prose"
       title: "High fever (3.10.4)"
