@@ -1,0 +1,49 @@
+# ============================================================
+# WHO IMCI §5.3 — Persistent diarrhoea (overview of the nested group).
+# Pocket Book 2nd ed (2013), p.137.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-3-persistent"
+  title: "Persistent Diarrhoea"
+  list_subtitle: "5.3 · diarrhoea ≥ 14 days"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["persistent diarrhoea", "chronic diarrhoea", "malnutrition", "HIV", "feeding", "pediatric"]
+  aliases:
+    - "Persistent Diarrhoea"
+  category: "medical"
+
+  page_number: 137
+
+  blocks:
+
+    - type: "prose"
+      title: "Diarrhoea ≥ 14 days"
+      highlight: true
+      markdown: |
+        **Persistent diarrhoea** is diarrhoea, with or without blood, that
+        **begins acutely and lasts ≥ 14 days**. When there is **some or severe
+        dehydration**, it is classified as **severe** persistent diarrhoea.
+
+    - type: "prose"
+      title: "Two pathways"
+      markdown: |
+        - **Severe persistent diarrhoea** — signs of dehydration, or a severely
+          malnourished child: needs **hospital** treatment
+          ([§5.3.1](topic:who-imci-5-3-1-severe-persistent)).
+        - **Non-severe persistent diarrhoea** — no dehydration and not severely
+          malnourished: managed as an **outpatient** with special feeding and
+          extra fluids ([§5.3.2](topic:who-imci-5-3-2-persistent-nonsevere)).
+
+        Severely malnourished children with persistent diarrhoea need the
+        specific management in **Chapter 7** (§7.5.4).
+
+    - type: "prose"
+      title: "Consider HIV & parasites"
+      callout: true
+      markdown: |
+        **Where HIV is highly prevalent,** suspect HIV if there are other
+        suggestive clinical signs, assess for HIV infection and **do an HIV
+        test** (Chapter 8). Perform **stool microscopy** for parasites such as
+        **Isospora** and **Cryptosporidium**.

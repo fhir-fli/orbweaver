@@ -1,0 +1,73 @@
+# ============================================================
+# WHO IMCI §5.3.2 — Persistent diarrhoea (non-severe). Pocket Book 2nd
+# ed (2013), pp.142–143.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-3-2-persistent-nonsevere"
+  title: "Persistent Diarrhoea (Non-severe)"
+  list_subtitle: "5.3.2 · outpatient · feeding · follow-up"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["persistent diarrhoea", "outpatient", "feeding", "micronutrients", "milk", "pediatric"]
+  aliases:
+    - "Non-severe Persistent Diarrhoea"
+  category: "medical"
+
+  page_number: 142
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Diarrhoea lasting **≥ 14 days** but with **no signs of dehydration** and
+        **not severely malnourished**. These children do **not** need hospital
+        treatment but need **special feeding and extra fluids at home**.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - Treat as an **outpatient**.
+        - Give **supplementary multivitamins and minerals** for 2 weeks (as in
+          [§5.3.1](topic:who-imci-5-3-1-severe-persistent)).
+        - **Prevent dehydration:** give fluids by **Plan A**
+          ([§5.2.3](topic:who-imci-5-2-3-no-dehydration)). If ORS worsens the
+          diarrhoea (impaired glucose absorption — rising stool volume/thirst),
+          admit for **IV rehydration** until ORS is tolerated.
+
+    - type: "prose"
+      title: "Specific infections only"
+      callout: true
+      markdown: |
+        **Do NOT routinely give antibiotics** — they are not effective. Treat
+        only **specific** infections until they are corrected:
+        - **Non-intestinal:** examine for pneumonia, sepsis, UTI, oral thrush,
+          otitis media, and treat each.
+        - **Intestinal:** **blood in the stools** → an oral antibiotic effective
+          against **Shigella** ([§5.4](topic:who-imci-5-4-dysentery)).
+
+    - type: "prose"
+      title: "Feeding"
+      markdown: |
+        Children may have trouble digesting **animal milk** other than breast
+        milk.
+        - **Continue breastfeeding** — more frequent, longer feeds, day and
+          night.
+        - If taking other animal milk, try replacing it with **fermented milk
+          (e.g. yoghurt)** (less lactose, better tolerated); if not possible,
+          **limit animal milk to 50 ml/kg/day** mixed with the child's cereal
+          (do not dilute).
+        - Give other **age-appropriate foods**; infants > 4 months on milk-only
+          feeds should begin solids. Give **frequent small meals, ≥ 6/day**.
+        - Give **supplementary micronutrients, including zinc**.
+
+    - type: "prose"
+      title: "Follow-up"
+      markdown: |
+        Reassess after **5 days**, or sooner if diarrhoea worsens or other
+        problems develop. Fully reassess any child who has not gained weight or
+        whose diarrhoea has not improved, to find the cause (dehydration,
+        infection) — this may need admission. Children who have **gained weight**
+        and have **≤ 3 loose stools/day** may resume a **normal diet** for age.

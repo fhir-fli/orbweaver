@@ -1,0 +1,99 @@
+# ============================================================
+# WHO IMCI §5.1 — Child presenting with diarrhoea. Pocket Book 2nd ed
+# (2013), pp.125–127 (Table 11 differential, p.127).
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-1-diarrhoea"
+  title: "Child Presenting with Diarrhoea"
+  list_subtitle: "5.1 · history · exam · differential (Table 11)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["diarrhoea", "dehydration", "ORS", "zinc", "cholera", "dysentery", "differential diagnosis", "pediatric"]
+  aliases:
+    - "Diarrhoea"
+    - "Diarrhea"
+  category: "medical"
+
+  page_number: 125
+
+  blocks:
+
+    - type: "prose"
+      title: "About this chapter"
+      highlight: true
+      markdown: |
+        This chapter covers **acute diarrhoea** (with severe, some or no
+        dehydration), **persistent diarrhoea** and **dysentery** in children
+        **1 week – 5 years**. The **three essential elements** in managing all
+        diarrhoea are **rehydration therapy**, **zinc supplementation**, and
+        **continued feeding** (plus counselling on prevention).
+
+        In diarrhoea there is excess loss of water and electrolytes (sodium,
+        potassium, bicarbonate) in liquid stools. **Dehydration** occurs when
+        these losses are not replaced. The rehydration plan is chosen by the
+        **degree of dehydration**. **All** children with diarrhoea should receive
+        **zinc**.
+
+    - type: "prose"
+      title: "Feeding matters — break the malnutrition cycle"
+      markdown: |
+        During diarrhoea, decreased intake and reduced absorption combine with
+        increased nutrient needs → **weight loss and failure to grow**.
+        Malnutrition makes diarrhoea more severe, more prolonged and more
+        frequent. Break this vicious circle by giving **nutrient-rich foods
+        during and after** the episode.
+
+    - type: "prose"
+      title: "No antidiarrhoeals — antibiotics only for specific causes"
+      callout: true
+      markdown: |
+        **Antibiotics are NOT used** except for **bloody diarrhoea** (probable
+        shigellosis), **suspected cholera with severe dehydration**, and other
+        serious non-intestinal infections (e.g. pneumonia, UTI). Antiprotozoal
+        drugs are rarely indicated.
+
+        **'Antidiarrhoeal' drugs and anti-emetics should NOT be given** to young
+        children with acute or persistent diarrhoea or dysentery — they do **not**
+        prevent dehydration or improve nutrition, and some have **dangerous,
+        sometimes fatal** side-effects.
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        A careful **feeding history** is essential. Also ask about:
+        - **frequency** of stools
+        - **number of days** of diarrhoea
+        - **blood** in the stools
+        - a **cholera outbreak** in the area
+        - recent **antibiotic** or other drug treatment
+        - attacks of **crying with pallor** in an infant (→ intussusception).
+
+    - type: "prose"
+      title: "Examination"
+      markdown: |
+        Look for:
+        - **signs of some or severe dehydration:** restlessness or irritability;
+          lethargy or reduced consciousness; **sunken eyes**; skin pinch returns
+          **slowly or very slowly**; thirsty/drinks eagerly, or drinking poorly or
+          unable to drink
+        - **blood** in the stools
+        - signs of **severe malnutrition**
+        - an **abdominal mass**
+        - **abdominal distension**.
+
+        There is **no need for routine stool microscopy or culture** in children
+        with **non-bloody** diarrhoea.
+
+    - type: "table"
+      title: "Table 11 · Differential diagnosis in a child with diarrhoea"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Acute (watery) diarrhoea**", "More than three loose stools per day; **no blood** in the stools"]
+        - cells: ["**Cholera**", "Profuse watery diarrhoea with severe dehydration during a cholera outbreak; positive stool culture for **Vibrio cholerae O1 or O139**"]
+        - cells: ["**Dysentery**", "**Blood mixed with the stools** (seen or reported)"]
+        - cells: ["**Persistent diarrhoea**", "Diarrhoea lasting **≥ 14 days**"]
+        - cells: ["**Diarrhoea with severe malnutrition**", "Any diarrhoea with signs of severe acute malnutrition (§7.4)"]
+        - cells: ["**Diarrhoea with recent antibiotic use**", "Recent course of broad-spectrum oral antibiotics"]
+        - cells: ["**Intussusception**", "Blood and mucus in stools; abdominal mass; attacks of crying with pallor in an infant or young child"]

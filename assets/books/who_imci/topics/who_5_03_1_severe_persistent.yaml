@@ -1,0 +1,120 @@
+# ============================================================
+# WHO IMCI §5.3.1 — Severe persistent diarrhoea (Tables 14 & 15 diets;
+# supplementary micronutrients). Pocket Book 2nd ed (2013), pp.137–142.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-3-1-severe-persistent"
+  title: "Severe Persistent Diarrhoea"
+  list_subtitle: "5.3.1 · hospital · special diets · micronutrients"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["severe persistent diarrhoea", "malnutrition", "low-lactose diet", "micronutrients", "metronidazole", "shigella", "feeding", "pediatric"]
+  aliases:
+    - "Severe Persistent Diarrhoea"
+  category: "medical"
+
+  page_number: 137
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Diarrhoea lasting **≥ 14 days** with **signs of dehydration** (Table 12)
+        is **severe** persistent diarrhoea and needs **hospital** treatment.
+        Assess for signs of dehydration.
+
+    - type: "prose"
+      title: "Rehydration — watch for glucose malabsorption"
+      markdown: |
+        - Give fluids by **Plan B or C** as appropriate.
+        - ORS works for most children, but a few have **impaired glucose
+          absorption:** ORS then **increases** stool volume, thirst and signs of
+          dehydration, and stools contain much **unabsorbed glucose**. These
+          children need **IV rehydration** until ORS can be taken without
+          worsening the diarrhoea.
+
+    - type: "prose"
+      title: "Antibiotics — only for specific infections"
+      markdown: |
+        Routine antibiotics are **not effective** and should not be given. But:
+        - **Examine every child** for non-intestinal infections — pneumonia,
+          sepsis, UTI, oral thrush, otitis media — and treat appropriately.
+        - **Blood in the stools** → an oral antibiotic effective against
+          **Shigella** ([§5.4](topic:who-imci-5-4-dysentery)).
+        - **Oral metronidazole 10 mg/kg three times a day for 5 days** ONLY if:
+          fresh-faeces microscopy shows **Entamoeba histolytica trophozoites
+          within red cells**; **giardia** trophozoites/cysts are seen; two
+          antibiotics usually effective for Shigella have failed; **or** stool
+          exam is unavailable and diarrhoea persists **> 1 month**.
+        - Give **micronutrients and vitamins** (box below).
+
+    - type: "prose"
+      title: "Feeding — the core of treatment"
+      markdown: |
+        Careful feeding is essential. **Continue breastfeeding** as often and as
+        long as the child wants. Withhold other food for **4–6 h only** in
+        children with dehydration being rehydrated on Plan B or C.
+        - **Infants < 6 months:** encourage **exclusive breastfeeding**; help
+          mothers re-establish it. If not breastfeeding, give a **low-lactose or
+          lactose-free** breast-milk substitute (e.g. yoghurt) by spoon/cup — not
+          a bottle. If the mother is HIV-positive, counsel on correct substitute
+          use.
+        - **Children ≥ 6 months:** restart feeding as soon as the child can eat;
+          give food **six times a day** to reach **≥ 110 kcal/kg/day**. Many eat
+          poorly until a serious infection is treated for 24–48 h and may need
+          **nasogastric** feeding initially.
+
+    - type: "prose"
+      title: "Two recommended diets — try diet 1 first"
+      markdown: |
+        Give **diet 1** for 7 days; if there are signs of **dietary failure** or
+        no improvement, stop it and give **diet 2** for 7 days.
+        - **Successful treatment:** adequate intake, **weight gain** (the most
+          important sign — weight up on ≥ 3 successive days), fewer stools,
+          no fever.
+        - **Dietary failure:** stool frequency **increases** (often > 10 watery
+          stools/day), usually with return of dehydration soon after a new diet
+          begins; **or** no daily weight gain within 7 days.
+
+    - type: "table"
+      title: "Table 14 · Diet 1 — starch-based, reduced-milk (low-lactose)"
+      column_flex: [4, 2]
+      columns: ["Ingredient (per 200 ml)", "Amount"]
+      rows:
+        - cells: ["Full-fat dried milk (or whole liquid milk: 85 ml)", "**11 g**"]
+        - cells: ["Rice", "**15 g**"]
+        - cells: ["Vegetable oil", "**3.5 g**"]
+        - cells: ["Cane sugar", "**3.0 g**"]
+        - cells: ["Water to make up", "**200 ml**"]
+        - cells: ["**Target:** ≥ 70 kcal/100 g; ≤ 3.7 g lactose/kg/day; 11% of calories as protein.", ""]
+
+    - type: "table"
+      title: "Table 15 · Diet 2 — reduced-starch (cereal), no-milk (lactose-free)"
+      column_flex: [4, 2]
+      columns: ["Ingredient (per 200 ml)", "Amount"]
+      rows:
+        - cells: ["Whole egg", "**64 g**"]
+        - cells: ["Rice", "**3 g**"]
+        - cells: ["Vegetable oil", "**4 g**"]
+        - cells: ["Glucose", "**3 g**"]
+        - cells: ["Water to make up", "**200 ml**"]
+        - cells: ["**Note:** cooked chicken (12 g) may replace the egg. Target ≥ 70 kcal/100 g; 10% of calories as protein.", ""]
+
+    - type: "prose"
+      title: "Supplementary multivitamins & minerals"
+      callout: true
+      markdown: |
+        Give **all** children daily supplementary multivitamins and minerals for
+        **2 weeks** — a broad range including **≥ 2 RDAs of folate, vitamin A,
+        zinc, magnesium and copper**. As a guide, one RDA for a 1-year-old:
+        **folate 50 µg · zinc 10 mg · vitamin A 400 µg · iron 10 mg · copper
+        1 mg · magnesium 80 mg**.
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        Nurses should check **daily**: body weight, temperature, food taken, and
+        number of diarrhoeal stools.

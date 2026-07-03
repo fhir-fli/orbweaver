@@ -142,3 +142,22 @@ book:
             - topic: "topics/who_4_07_3_foreign_body.yaml"
         - topic: "topics/who_4_08_heart_failure.yaml"
         - topic: "topics/who_4_09_rheumatic_heart.yaml"
+    - title: "5. Diarrhoea"
+      # WHO Pocket Book color-codes by chapter; Chapter 5 tab = olive/mustard
+      # (sampled 0xFF999100 from the p.125 chapter tab via pdftoppm).
+      palette:
+        accent: "0xFF999100"
+      children:
+        - topic: "topics/who_5_01_diarrhoea.yaml"
+        - title: "5.2 Acute diarrhoea"
+          topic: "topics/who_5_02_acute.yaml"
+          children:
+            - topic: "topics/who_5_02_1_severe_dehydration.yaml"
+            - topic: "topics/who_5_02_2_some_dehydration.yaml"
+            - topic: "topics/who_5_02_3_no_dehydration.yaml"
+        - title: "5.3 Persistent diarrhoea"
+          topic: "topics/who_5_03_persistent.yaml"
+          children:
+            - topic: "topics/who_5_03_1_severe_persistent.yaml"
+            - topic: "topics/who_5_03_2_persistent_nonsevere.yaml"
+        - topic: "topics/who_5_04_dysentery.yaml"

@@ -1,0 +1,79 @@
+# ============================================================
+# WHO IMCI §5.2.3 — No dehydration (Diarrhoea treatment Plan A, Chart 15;
+# four rules of home treatment). Pocket Book 2nd ed (2013), pp.134–138.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-2-3-no-dehydration"
+  title: "No Dehydration (Plan A)"
+  list_subtitle: "5.2.3 · home care · four rules"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["no dehydration", "plan A", "home treatment", "ORS", "zinc", "feeding", "pediatric"]
+  aliases:
+    - "Diarrhoea Plan A"
+    - "No Dehydration"
+  category: "medical"
+
+  page_number: 134
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        **No dehydration** — the child does not have **two or more** signs of
+        some or severe dehydration (Table 12). Treat as an **outpatient** and
+        counsel the mother on the **four rules of home treatment**.
+
+    - type: "prose"
+      title: "The four rules of home treatment (Plan A)"
+      callout: true
+      markdown: |
+        **1.** Give **extra fluid**  ·  **2.** Give **zinc supplements**  ·
+        **3.** **Continue feeding**  ·  **4.** **Know when to return.**
+
+    - type: "prose"
+      title: "1 · Give extra fluid"
+      markdown: |
+        - **Breastfed:** breastfeed more frequently and for longer; if
+          exclusively breastfed, give **ORS or clean water** in addition to
+          breast milk. Resume exclusive breastfeeding after the diarrhoea stops.
+        - **Not exclusively breastfed:** give one or more of **ORS**, food-based
+          fluids (**soup, rice water, yoghurt drinks**) or **clean water**.
+        - Amount of extra fluid after each loose stool:
+          - **< 2 years:** about **50–100 ml**
+          - **≥ 2 years:** about **100–200 ml**
+        - Give **small sips from a cup**; if the child vomits, wait 10 min then
+          give more slowly. Continue until the diarrhoea stops. Send the mother
+          home with **two ORS packets**.
+
+    - type: "prose"
+      title: "2 · Give zinc"
+      markdown: |
+        For **10–14 days** (remind the mother to complete the full course):
+        - **< 6 months:** **½ tablet (10 mg)** per day
+        - **≥ 6 months:** **1 tablet (20 mg)** per day
+
+        For infants, dissolve the tablet in a little clean water, expressed milk
+        or ORS; older children can chew it or drink it dissolved.
+
+    - type: "prose"
+      title: "3 · Continue feeding"
+      markdown: |
+        Continue age-appropriate feeding throughout (see nutrition counselling,
+        Chapters 10 & 12) — continued nutritious feeding prevents the weight loss
+        that makes diarrhoea worse.
+
+    - type: "prose"
+      title: "4 · When to return"
+      markdown: |
+        Advise the mother to **return immediately** if the child:
+        - is **drinking poorly** or unable to drink or breastfeed
+        - develops a **general danger sign**
+        - becomes **sicker** or develops a **fever**
+        - has **blood in the stool**.
+
+        If not improving, follow up after **5 days**. Explain that the same Plan A
+        treatment should be started at home as soon as diarrhoea develops again.

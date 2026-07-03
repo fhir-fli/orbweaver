@@ -1,0 +1,60 @@
+# ============================================================
+# WHO IMCI §5.2 — Acute diarrhoea (overview of the nested group +
+# Table 12 dehydration classification). Pocket Book 2nd ed (2013),
+# pp.127–128.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-2-acute"
+  title: "Acute Diarrhoea"
+  list_subtitle: "5.2 · assess dehydration (Table 12)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["acute diarrhoea", "dehydration", "assessment", "ORS", "skin pinch", "pediatric"]
+  aliases:
+    - "Dehydration Assessment"
+  category: "medical"
+
+  page_number: 127
+
+  blocks:
+
+    - type: "prose"
+      title: "Classify dehydration, then choose a plan"
+      highlight: true
+      markdown: |
+        For **every** child with diarrhoea, classify hydration as **severe
+        dehydration**, **some dehydration** or **no dehydration** (Table 12) and
+        give the matching treatment plan. Assess the general condition, look for
+        **sunken eyes**, do a **skin pinch**, and offer fluid to see whether the
+        child is **thirsty** or **drinking poorly**.
+
+    - type: "prose"
+      title: "How to test"
+      markdown: |
+        - **Skin pinch:** pinch the skin of the abdomen; in dehydration it goes
+          back **slowly** (some) or **very slowly, ≥ 2 s** (severe).
+        - **Eyes:** look for the **sunken** appearance.
+        - **Drinking:** offer fluid — **drinks eagerly / thirsty** suggests some
+          dehydration; **drinks poorly or unable to drink** suggests severe.
+        - **Mental state:** restless/irritable (some) → **lethargic or
+          unconscious** (severe).
+
+    - type: "table"
+      title: "Table 12 · Classification of the severity of dehydration"
+      column_flex: [3, 5, 5]
+      columns: ["Class", "Signs (two or more)", "Treatment"]
+      rows:
+        - cells: ["**Severe dehydration**", "**Lethargy / unconsciousness**; sunken eyes; unable to drink or drinks poorly; **skin pinch goes back very slowly (≥ 2 s)**", "**Plan C** — IV fluids in hospital ([§5.2.1](topic:who-imci-5-2-1-severe-dehydration))"]
+        - cells: ["**Some dehydration**", "**Restlessness, irritability**; sunken eyes; **drinks eagerly, thirsty**; skin pinch goes back slowly", "**Plan B** — ORS, then reassess ([§5.2.2](topic:who-imci-5-2-2-some-dehydration))"]
+        - cells: ["**No dehydration**", "Not enough signs to classify as some or severe dehydration", "**Plan A** — fluid & food at home ([§5.2.3](topic:who-imci-5-2-3-no-dehydration))"]
+
+    - type: "prose"
+      title: "Reading mixed signs"
+      callout: true
+      markdown: |
+        Classification needs **two or more** signs in a category. If a child has
+        only **one** sign of severe dehydration together with one sign of some
+        dehydration (e.g. **restless/irritable and drinking poorly**), classify
+        as **some dehydration** — but reassess frequently, as diarrhoea can
+        progress.

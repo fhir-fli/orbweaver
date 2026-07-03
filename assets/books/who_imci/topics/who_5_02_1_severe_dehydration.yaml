@@ -1,0 +1,85 @@
+# ============================================================
+# WHO IMCI §5.2.1 — Severe dehydration (Diarrhoea treatment Plan C,
+# Chart 13; Table 13 IV fluids; cholera). Pocket Book 2nd ed (2013),
+# pp.129–131.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-2-1-severe-dehydration"
+  title: "Severe Dehydration (Plan C)"
+  list_subtitle: "5.2.1 · rapid IV rehydration · Table 13"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["severe dehydration", "plan C", "IV fluids", "Ringer's lactate", "cholera", "ORS", "zinc", "pediatric"]
+  aliases:
+    - "Diarrhoea Plan C"
+    - "Severe Dehydration"
+  category: "medical"
+
+  page_number: 129
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Diagnose **severe dehydration** if **two or more** signs are present
+        (Table 12): **lethargy/unconsciousness**, sunken eyes, unable to drink or
+        drinks poorly, and a **skin pinch that goes back very slowly (≥ 2 s)**.
+        These children need **rapid IV rehydration** with close monitoring,
+        followed by oral rehydration and **zinc** once they improve.
+
+    - type: "prose"
+      title: "Treatment — start IV immediately (Plan C)"
+      markdown: |
+        - **Start IV fluids immediately.** While the drip is set up, give **ORS
+          by mouth** if the child can drink.
+        - Give **100 ml/kg** of the chosen solution, divided as in Table 13.
+        - If IV is not possible, rehydrate by **nasogastric tube or mouth** with
+          ORS **20 ml/kg/h for 6 h (total 120 ml/kg)** — reassess every 1–2 h.
+        - Refer **urgently** for IV treatment if you cannot give it and cannot use
+          an NG tube and the child cannot drink.
+
+    - type: "prose"
+      title: "Which IV fluid"
+      callout: true
+      markdown: |
+        The best IV fluids are **isotonic**: **Ringer's lactate** (Hartmann's) or
+        **normal saline (0.9% NaCl)**. **Do NOT use 5% glucose (dextrose) or
+        0.18% saline with 5% dextrose** — they raise the risk of **hyponatraemia
+        and cerebral oedema**.
+
+    - type: "table"
+      title: "Table 13 · IV fluids for a severely dehydrated child (100 ml/kg)"
+      column_flex: [3, 4, 4]
+      columns: ["Age", "First give 30 ml/kg in:", "Then give 70 ml/kg in:"]
+      rows:
+        - cells: ["**Infants < 12 months**", "**1 hour**", "**5 hours**"]
+        - cells: ["**≥ 12 months**", "**30 min**", "**2½ hours**"]
+        - cells: ["**Note**", "Repeat the first amount (30 ml/kg) if the radial pulse is still weak or not detectable.", ""]
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        - Reassess every **15–30 min** until a strong radial pulse returns; then
+          reassess skin pinch, consciousness and ability to drink at least
+          **hourly** to confirm hydration is improving.
+        - When the full IV volume is given, reassess fully (Chart 7):
+          - **still severe** → repeat the IV infusion (unusual)
+          - **improved but still some dehydration** → switch to **ORS (Plan B)**
+            for 4 h; encourage breastfeeding
+          - **no dehydration** → follow **Plan A**; observe ≥ 6 h before discharge
+            to confirm the mother can maintain hydration with ORS.
+        - **When severe dehydration is corrected, prescribe zinc.**
+
+    - type: "prose"
+      title: "Cholera"
+      markdown: |
+        Suspect **cholera** in a child **> 2 years** with acute watery diarrhoea
+        and severe dehydration or shock, if cholera is present in the area.
+        - **Assess and treat dehydration** as for other acute diarrhoea.
+        - Give an **oral antibiotic** to which local **V. cholerae** strains are
+          sensitive — options include **erythromycin, ciprofloxacin,
+          co-trimoxazole** (see Annex 2 for doses).
+        - **Prescribe zinc** as soon as vomiting stops.

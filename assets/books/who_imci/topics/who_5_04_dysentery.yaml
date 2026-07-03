@@ -1,0 +1,127 @@
+# ============================================================
+# WHO IMCI §5.4 — Dysentery. Pocket Book 2nd ed (2013), pp.143–146.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-4-dysentery"
+  title: "Dysentery"
+  list_subtitle: "5.4 · bloody diarrhoea · Shigella · ciprofloxacin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["dysentery", "shigella", "bloody diarrhoea", "ciprofloxacin", "ceftriaxone", "amoebiasis", "toxic megacolon", "HUS", "pediatric"]
+  aliases:
+    - "Bloody Diarrhoea"
+    - "Shigellosis"
+  category: "medical"
+
+  page_number: 143
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        **Dysentery** is diarrhoea with **frequent loose stools mixed with
+        blood** (not just a few surface smears). Most episodes are due to
+        **Shigella**, and nearly all need **antibiotic treatment**. Shigellosis
+        can cause life-threatening complications — **intestinal perforation,
+        toxic megacolon and haemolytic uraemic syndrome (HUS)**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Frequent loose stools with **visible red blood**. Other findings may
+        include: **abdominal pain**, fever, convulsions, lethargy, **dehydration**
+        (assess as in [§5.2](topic:who-imci-5-2-acute)), and **rectal prolapse**.
+
+    - type: "prose"
+      title: "Treatment — antibiotics"
+      markdown: |
+        Most children can be treated **at home**. **Admit** if: a young infant
+        **< 2 months**; severely ill (lethargic, abdominal distension and
+        tenderness, convulsions); or another condition needing hospital care.
+        - Give an **oral antibiotic (5 days)** to which local **Shigella** are
+          sensitive.
+        - If sensitivity is unknown: **ciprofloxacin 15 mg/kg twice a day for
+          3 days**. If local sensitivity is known, follow local guidelines.
+        - Severely ill children, or as second-line: **ceftriaxone IV or IM
+          50–80 mg/kg/day for 3 days**.
+        - Give **zinc** as for children with watery diarrhoea.
+
+    - type: "prose"
+      title: "Beware antibiotic resistance"
+      callout: true
+      markdown: |
+        There is **widespread Shigella resistance** to **ampicillin,
+        co-trimoxazole, chloramphenicol, nalidixic acid, tetracycline,
+        gentamicin, and 1st- and 2nd-generation cephalosporins** — these are
+        **no longer effective**. Resistance to **ciprofloxacin** is also
+        emerging in some countries.
+
+    - type: "prose"
+      title: "Follow-up"
+      markdown: |
+        Reassess after **2 days**; look for improvement (no fever, fewer stools
+        with less blood, better appetite). **If no improvement after 2 days:**
+        - check for **other conditions** (Chapter 2)
+        - **stop** the first antibiotic and give a **second-line** agent known to
+          be effective against local Shigella (Annex 2).
+
+        If **two** usually-effective antibiotics have each been given for 2 days
+        with no improvement, check for other conditions; if **amoebiasis** is
+        possible, give **metronidazole 10 mg/kg three times a day for 5 days**.
+        Admit if there is any indication for hospital care.
+
+    - type: "prose"
+      title: "Infants & young children"
+      markdown: |
+        Consider **surgical** causes of blood in the stools (e.g.
+        intussusception; §9.4) and refer to a surgeon if appropriate. Dysentery
+        is **unusual in neonates and young infants** — consider **life-threatening
+        bacterial sepsis**: for suspected sepsis give **ceftriaxone IM or IV
+        100 mg/kg once daily for 5 days**.
+
+    - type: "prose"
+      title: "Severely malnourished children"
+      markdown: |
+        See Chapter 7 for general management. Treat for **Shigella first**, and
+        for **amoebiasis** on clinical grounds if lab exam is not possible. If
+        microscopy of fresh stools is possible, check for **Entamoeba histolytica
+        trophozoites in red cells** (treat if present) and **Giardia lamblia**
+        (treat if present).
+
+    - type: "prose"
+      title: "Supportive care"
+      markdown: |
+        Supportive care is **prevention/correction of dehydration** and
+        **continued feeding**. **Never give drugs** for symptomatic relief of
+        abdominal or rectal pain, or to reduce stool frequency — they can make
+        the illness **worse**.
+        - **Dehydration:** assess and give fluids by **Plan A, B or C** as
+          appropriate.
+        - **Feeding:** dysentery markedly harms nutrition — **continue
+          breastfeeding** throughout, more frequently than usual; children
+          **≥ 6 months** should take their normal foods, letting the child choose
+          preferred foods. Return of appetite is an important sign of
+          improvement.
+
+    - type: "prose"
+      title: "Complications"
+      callout: true
+      markdown: |
+        - **Dehydration** — the commonest; manage by Plan A/B/C.
+        - **Potassium depletion** — prevent with ORS or potassium-rich foods
+          (bananas, coconut water, dark-green leafy vegetables).
+        - **High fever (≥ 39 °C)** — paracetamol; consider severe bacterial
+          infection.
+        - **Rectal prolapse** — gently push back with a gloved hand or wet cloth;
+          or apply saturated magnesium sulfate compresses to reduce oedema.
+        - **Convulsions** — usually single; if prolonged/repeated give diazepam
+          ([Chart 9](topic:who-imci-chart9-diazepam)); always check for
+          hypoglycaemia.
+        - **Haemolytic uraemic syndrome (HUS)** — suspect with easy bruising,
+          pallor, altered consciousness, low/no urine output.
+        - **Toxic megacolon** — fever, abdominal distension/tenderness, loss of
+          bowel sounds, tachycardia, dehydration; give IV fluids, pass an NG
+          tube, start antibiotics.

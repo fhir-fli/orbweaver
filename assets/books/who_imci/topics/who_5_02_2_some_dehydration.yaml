@@ -1,0 +1,89 @@
+# ============================================================
+# WHO IMCI §5.2.2 — Some dehydration (Diarrhoea treatment Plan B,
+# Chart 14; zinc; feeding). Pocket Book 2nd ed (2013), pp.132–134.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-5-2-2-some-dehydration"
+  title: "Some Dehydration (Plan B)"
+  list_subtitle: "5.2.2 · ORS over 4 h · zinc · feeding"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["some dehydration", "plan B", "ORS", "oral rehydration", "zinc", "feeding", "pediatric"]
+  aliases:
+    - "Diarrhoea Plan B"
+    - "Some Dehydration"
+  category: "medical"
+
+  page_number: 132
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        **Some dehydration** if **two or more** of: restlessness/irritability;
+        **thirsty, drinks eagerly**; sunken eyes; skin pinch goes back slowly.
+        Give **ORS** for the first **4 h** at the clinic while the child is
+        monitored and the mother is taught how to prepare and give it.
+
+    - type: "prose"
+      title: "Treatment — ORS over the first 4 h (Plan B)"
+      markdown: |
+        - Give ORS by **child's weight** (or age if the weight is unknown) over
+          **4 h** — amount ≈ **weight (kg) × 75 ml**. If the child wants more,
+          give more.
+        - Show the mother how: a **teaspoonful every 1–2 min** for a child < 2
+          years; frequent sips from a cup for an older child.
+        - **If the child vomits**, wait **10 min**, then resume more slowly (e.g.
+          a spoonful every 2–3 min).
+        - **Continue breastfeeding** whenever the child wants.
+
+    - type: "table"
+      title: "Chart 14 · Amount of ORS to give in the first 4 h"
+      column_flex: [3, 4]
+      columns: ["Age / weight", "ORS over 4 h"]
+      rows:
+        - cells: ["**< 4 months** (< 6 kg)", "200–400 ml"]
+        - cells: ["**4 – < 12 months** (6 – < 10 kg)", "400–700 ml"]
+        - cells: ["**12 months – < 2 years** (10 – < 12 kg)", "700–900 ml"]
+        - cells: ["**2 – 5 years** (12–19 kg)", "900–1400 ml"]
+
+    - type: "prose"
+      title: "After 4 h — reassess & reclassify"
+      markdown: |
+        Reassess and classify dehydration, then choose the plan to continue:
+        - **no dehydration** → **Plan A** ([§5.2.3](topic:who-imci-5-2-3-no-dehydration))
+        - **still some dehydration** → repeat **Plan B** for another 4 h and start
+          offering food, milk or juice
+        - **severe dehydration** → **Plan C** ([§5.2.1](topic:who-imci-5-2-1-severe-dehydration)).
+
+        Begin **feeding** in the clinic. If the mother must leave before 4 h,
+        show her how to prepare ORS at home and give enough packets to finish
+        rehydration plus **2 more days**.
+
+    - type: "prose"
+      title: "Zinc"
+      markdown: |
+        Give **zinc** for **10–14 days**:
+        - **< 6 months:** **½ tablet (10 mg)** per day
+        - **≥ 6 months:** **1 tablet (20 mg)** per day
+
+        For infants, dissolve the tablet in a little clean water, expressed milk
+        or ORS.
+
+    - type: "prose"
+      title: "Feeding"
+      markdown: |
+        - In the initial 4-h rehydration period, **give no food except breast
+          milk** — breastfed children should keep breastfeeding frequently.
+        - After 4 h, if still some dehydration and ORS continues, **give food
+          every 3–4 h**.
+        - **All children > 6 months** should be given some food **before
+          discharge**.
+        - Recommended foods: **cereal/starchy food mixed with pulses, vegetables
+          and meat or fish** (with 1–2 teaspoons of vegetable oil); local IMCI
+          complementary foods; **fresh fruit juice or mashed banana** for
+          potassium. Offer food at least **six times a day**, continue after the
+          diarrhoea stops, and give an **extra meal a day for 2 weeks**.
