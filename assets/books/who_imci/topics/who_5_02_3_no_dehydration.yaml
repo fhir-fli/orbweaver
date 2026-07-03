@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §5.2.3 — No dehydration (Diarrhoea treatment Plan A, Chart 15;
 # four rules of home treatment). Pocket Book 2nd ed (2013), pp.134–138.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no change (four rules of home treatment
+# current). Lower-dose zinc note is in §5.2.2.
 # ============================================================
 
 topic:
   id: "who-imci-5-2-3-no-dehydration"
   title: "No Dehydration (Plan A)"
   list_subtitle: "5.2.3 · home care · four rules"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["no dehydration", "plan A", "home treatment", "ORS", "zinc", "feeding", "pediatric"]
   aliases:
     - "Diarrhoea Plan A"

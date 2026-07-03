@@ -2,14 +2,15 @@
 # WHO IMCI §5.2 — Acute diarrhoea (overview of the nested group +
 # Table 12 dehydration classification). Pocket Book 2nd ed (2013),
 # pp.127–128.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no change (Table 12 classification current
+# per IDSA 2017).
 # ============================================================
 
 topic:
   id: "who-imci-5-2-acute"
   title: "Acute Diarrhoea"
   list_subtitle: "5.2 · assess dehydration (Table 12)"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["acute diarrhoea", "dehydration", "assessment", "ORS", "skin pinch", "pediatric"]
   aliases:
     - "Dehydration Assessment"

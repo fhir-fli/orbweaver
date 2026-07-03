@@ -2,15 +2,18 @@
 # WHO IMCI §5.2.1 — Severe dehydration (Diarrhoea treatment Plan C,
 # Chart 13; Table 13 IV fluids; cholera). Pocket Book 2nd ed (2013),
 # pp.129–131.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: strengthened Ringer's-lactate preference
+# (2023 Cochrane); added a HIGH-priority red-alert — do NOT use Plan C in
+# severe acute malnutrition; noted the slow-rehydration alternative; updated
+# cholera antibiotics to azithromycin/doxycycline first-line.
 # ============================================================
 
 topic:
   id: "who-imci-5-2-1-severe-dehydration"
   title: "Severe Dehydration (Plan C)"
   list_subtitle: "5.2.1 · rapid IV rehydration · Table 13"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["severe dehydration", "plan C", "IV fluids", "Ringer's lactate", "cholera", "ORS", "zinc", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["severe dehydration", "plan C", "IV fluids", "Ringer's lactate", "cholera", "azithromycin", "malnutrition", "ORS", "zinc", "pediatric"]
   aliases:
     - "Diarrhoea Plan C"
     - "Severe Dehydration"
@@ -31,6 +34,21 @@ topic:
         followed by oral rehydration and **zinc** once they improve.
 
     - type: "prose"
+      title: "🛑 Severe acute malnutrition — do NOT use Plan C"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **In a severely malnourished child, do NOT give the rapid Plan C
+        schedule.** Their heart cannot handle a rapid fluid load — aggressive IV
+        rehydration can precipitate **fatal heart failure**. Use the **slower,
+        smaller-volume** regimen for SAM (**ReSoMal** orally/NG where possible;
+        cautious IV only for shock, ~**10 ml/kg** boluses with frequent
+        reassessment) — see **Chapter 7** ([Chart 8](topic:who-imci-chart8-iv-fluids-sam)).
+
+    - type: "prose"
       title: "Treatment — start IV immediately (Plan C)"
       markdown: |
         - **Start IV fluids immediately.** While the drip is set up, give **ORS
@@ -40,13 +58,20 @@ topic:
           ORS **20 ml/kg/h for 6 h (total 120 ml/kg)** — reassess every 1–2 h.
         - Refer **urgently** for IV treatment if you cannot give it and cannot use
           an NG tube and the child cannot drink.
+        - **Slower alternative (non-malnourished only):** a **slow strategy —
+          100 ml/kg over 8 h without boluses** — gave outcomes similar to Plan C
+          in a recent trial and needs less staff oversight. **Plan C remains the
+          standard**, but the slow strategy is an option where monitoring is
+          limited.
 
     - type: "prose"
       title: "Which IV fluid"
       callout: true
       markdown: |
-        The best IV fluids are **isotonic**: **Ringer's lactate** (Hartmann's) or
-        **normal saline (0.9% NaCl)**. **Do NOT use 5% glucose (dextrose) or
+        **Ringer's lactate (Hartmann's) is preferred** over 0.9% saline — balanced
+        crystalloids give **shorter hospital stays, better acid-base correction
+        and less hypokalaemia** (2023 Cochrane review). Use **0.9% saline only if
+        Ringer's lactate is unavailable**. **Do NOT use 5% glucose (dextrose) or
         0.18% saline with 5% dextrose** — they raise the risk of **hyponatraemia
         and cerebral oedema**.
 
@@ -80,6 +105,8 @@ topic:
         and severe dehydration or shock, if cholera is present in the area.
         - **Assess and treat dehydration** as for other acute diarrhoea.
         - Give an **oral antibiotic** to which local **V. cholerae** strains are
-          sensitive — options include **erythromycin, ciprofloxacin,
-          co-trimoxazole** (see Annex 2 for doses).
+          sensitive. Preferred now: **azithromycin (single 20 mg/kg dose, max
+          1 g)** for children; **doxycycline (single dose)** for older
+          children/adults; **ciprofloxacin** as an alternative. **Erythromycin
+          and co-trimoxazole are no longer preferred** (resistance).
         - **Prescribe zinc** as soon as vomiting stops.

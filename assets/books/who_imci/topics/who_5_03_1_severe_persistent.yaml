@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §5.3.1 — Severe persistent diarrhoea (Tables 14 & 15 diets;
 # supplementary micronutrients). Pocket Book 2nd ed (2013), pp.137–142.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no change (LMIC diets Tables 14/15 and
+# restricted metronidazole indications remain appropriate).
 # ============================================================
 
 topic:
   id: "who-imci-5-3-1-severe-persistent"
   title: "Severe Persistent Diarrhoea"
   list_subtitle: "5.3.1 · hospital · special diets · micronutrients"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["severe persistent diarrhoea", "malnutrition", "low-lactose diet", "micronutrients", "metronidazole", "shigella", "feeding", "pediatric"]
   aliases:
     - "Severe Persistent Diarrhoea"

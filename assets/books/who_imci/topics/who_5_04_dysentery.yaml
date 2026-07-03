@@ -1,14 +1,17 @@
 # ============================================================
 # WHO IMCI §5.4 — Dysentery. Pocket Book 2nd ed (2013), pp.143–146.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: azithromycin added as co-first-line with
+# ciprofloxacin (rising fluoroquinolone resistance); susceptibility-guided
+# treatment emphasised; resistance callout updated (emerging cipro/azithro
+# resistance, XDR Shigella); empiric ceftriaxone noted for young infants.
 # ============================================================
 
 topic:
   id: "who-imci-5-4-dysentery"
   title: "Dysentery"
   list_subtitle: "5.4 · bloody diarrhoea · Shigella · ciprofloxacin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["dysentery", "shigella", "bloody diarrhoea", "ciprofloxacin", "ceftriaxone", "amoebiasis", "toxic megacolon", "HUS", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["dysentery", "shigella", "bloody diarrhoea", "ciprofloxacin", "azithromycin", "ceftriaxone", "amoebiasis", "toxic megacolon", "HUS", "XDR", "pediatric"]
   aliases:
     - "Bloody Diarrhoea"
     - "Shigellosis"
@@ -41,12 +44,17 @@ topic:
         Most children can be treated **at home**. **Admit** if: a young infant
         **< 2 months**; severely ill (lethargic, abdominal distension and
         tenderness, convulsions); or another condition needing hospital care.
-        - Give an **oral antibiotic (5 days)** to which local **Shigella** are
-          sensitive.
-        - If sensitivity is unknown: **ciprofloxacin 15 mg/kg twice a day for
-          3 days**. If local sensitivity is known, follow local guidelines.
-        - Severely ill children, or as second-line: **ceftriaxone IV or IM
-          50–80 mg/kg/day for 3 days**.
+        - Give an antibiotic to which local **Shigella** are sensitive —
+          **susceptibility-guided treatment matters** as resistance rises. Two
+          co-first-line oral options:
+          - **Ciprofloxacin 15 mg/kg twice a day for 3 days**, **or**
+          - **Azithromycin 12 mg/kg on day 1, then 6 mg/kg on days 2–5**.
+
+          Choose by **local susceptibility**; avoid ciprofloxacin where
+          fluoroquinolone resistance is known/likely.
+        - **Severely ill children, young infants, or second-line:** **ceftriaxone
+          IV or IM 50–80 mg/kg/day for 3 days** (empiric ceftriaxone is preferred
+          for **infants** with bloody diarrhoea).
         - Give **zinc** as for children with watery diarrhoea.
 
     - type: "prose"
@@ -56,8 +64,11 @@ topic:
         There is **widespread Shigella resistance** to **ampicillin,
         co-trimoxazole, chloramphenicol, nalidixic acid, tetracycline,
         gentamicin, and 1st- and 2nd-generation cephalosporins** — these are
-        **no longer effective**. Resistance to **ciprofloxacin** is also
-        emerging in some countries.
+        **no longer effective**. **Ciprofloxacin resistance is emerging** and
+        **azithromycin resistance is increasing**. **Extensively drug-resistant
+        (XDR) Shigella** — resistant to azithromycin, ciprofloxacin, ceftriaxone,
+        co-trimoxazole and ampicillin — has appeared. This is why **local
+        susceptibility surveillance** should guide therapy wherever possible.
 
     - type: "prose"
       title: "Follow-up"

@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §5.2.2 — Some dehydration (Diarrhoea treatment Plan B,
 # Chart 14; zinc; feeding). Pocket Book 2nd ed (2013), pp.132–134.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added the lower-dose zinc evidence (5/10 mg
+# non-inferior to 20 mg with less vomiting, NEJM 2020); 20 mg remains the
+# WHO standard.
 # ============================================================
 
 topic:
   id: "who-imci-5-2-2-some-dehydration"
   title: "Some Dehydration (Plan B)"
   list_subtitle: "5.2.2 · ORS over 4 h · zinc · feeding"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["some dehydration", "plan B", "ORS", "oral rehydration", "zinc", "feeding", "pediatric"]
   aliases:
     - "Diarrhoea Plan B"
@@ -72,6 +74,12 @@ topic:
 
         For infants, dissolve the tablet in a little clean water, expressed milk
         or ORS.
+
+        **Lower doses work too:** a large trial (NEJM 2020) found **5 mg and
+        10 mg/day non-inferior to 20 mg** for diarrhoea duration and stool
+        frequency, with **significantly less vomiting**. **20 mg remains the WHO
+        standard** (not yet formally revised), but a lower dose is a reasonable
+        option if vomiting limits adherence.
 
     - type: "prose"
       title: "Feeding"

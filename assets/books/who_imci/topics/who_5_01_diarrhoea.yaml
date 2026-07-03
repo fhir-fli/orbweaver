@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §5.1 — Child presenting with diarrhoea. Pocket Book 2nd ed
 # (2013), pp.125–127 (Table 11 differential, p.127).
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: specified reduced-osmolarity ORS; added
+# ondansetron as the one evidence-based anti-emetic exception; added rotavirus
+# vaccine to prevention.
 # ============================================================
 
 topic:
   id: "who-imci-5-1-diarrhoea"
   title: "Child Presenting with Diarrhoea"
   list_subtitle: "5.1 · history · exam · differential (Table 11)"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["diarrhoea", "dehydration", "ORS", "zinc", "cholera", "dysentery", "differential diagnosis", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["diarrhoea", "dehydration", "ORS", "zinc", "cholera", "dysentery", "ondansetron", "rotavirus", "differential diagnosis", "pediatric"]
   aliases:
     - "Diarrhoea"
     - "Diarrhea"
@@ -35,6 +37,11 @@ topic:
         **degree of dehydration**. **All** children with diarrhoea should receive
         **zinc**.
 
+        Use **reduced-osmolarity ORS** (total osmolarity ≈ **245 mOsm/L**;
+        Na⁺ 75, glucose 75 mmol/L) — the WHO/UNICEF standard since 2002. Versus
+        the old formulation it reduces **stool output, vomiting and the need for
+        unscheduled IV fluids**, and cuts diarrhoeal mortality by ~69%.
+
     - type: "prose"
       title: "Feeding matters — break the malnutrition cycle"
       markdown: |
@@ -57,6 +64,12 @@ topic:
         children with acute or persistent diarrhoea or dysentery — they do **not**
         prevent dehydration or improve nutrition, and some have **dangerous,
         sometimes fatal** side-effects.
+
+        **The one evidence-based exception is ondansetron** — a single **0.15
+        mg/kg (max 4 mg), oral or IV** dose for vomiting that is **preventing
+        oral rehydration**. It improves ORS success and reduces IV use and
+        admissions. Older anti-emetics (**metoclopramide, prochlorperazine,
+        promethazine**) remain **contraindicated** in young children.
 
     - type: "prose"
       title: "History"
@@ -84,6 +97,16 @@ topic:
 
         There is **no need for routine stool microscopy or culture** in children
         with **non-bloody** diarrhoea.
+
+    - type: "prose"
+      title: "Prevention"
+      markdown: |
+        - **Rotavirus vaccine** for **all infants** (WHO-recommended globally
+          since 2009) is the single most effective prevention against **severe
+          rotavirus diarrhoea** — introduction has cut rotavirus hospitalisations
+          markedly.
+        - Also: exclusive breastfeeding to 6 months, safe water and food,
+          hand-washing, sanitation, and vitamin A / measles vaccination.
 
     - type: "table"
       title: "Table 11 · Differential diagnosis in a child with diarrhoea"

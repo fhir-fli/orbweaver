@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §5.3.2 — Persistent diarrhoea (non-severe). Pocket Book 2nd
 # ed (2013), pp.142–143.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no change (outpatient feeding + micronutrient
+# approach current).
 # ============================================================
 
 topic:
   id: "who-imci-5-3-2-persistent-nonsevere"
   title: "Persistent Diarrhoea (Non-severe)"
   list_subtitle: "5.3.2 · outpatient · feeding · follow-up"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["persistent diarrhoea", "outpatient", "feeding", "micronutrients", "milk", "pediatric"]
   aliases:
     - "Non-severe Persistent Diarrhoea"
