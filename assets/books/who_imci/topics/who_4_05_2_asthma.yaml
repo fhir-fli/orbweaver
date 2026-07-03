@@ -1,13 +1,14 @@
 # ============================================================
 # WHO IMCI §4.5.2 — Asthma. Pocket Book 2nd ed (2013), pp.96–101.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: adrenaline route corrected from
+# subcutaneous to IM anterolateral thigh (faster, more reliable absorption).
 # ============================================================
 
 topic:
   id: "who-imci-4-5-2-asthma"
   title: "Asthma"
   list_subtitle: "4.5.2 · bronchodilator · steroids · oxygen"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["asthma", "salbutamol", "prednisolone", "adrenaline", "magnesium sulfate", "aminophylline", "respiratory", "pediatric"]
   aliases:
     - "Asthma"
@@ -43,7 +44,7 @@ topic:
         - **First episode of wheeze, no distress** → home, supportive care; a
           bronchodilator is not necessary.
         - **Respiratory distress (acute severe asthma) or recurrent wheeze** →
-          salbutamol (MDI + spacer, or nebulizer, or subcutaneous adrenaline).
+          salbutamol (MDI + spacer, or nebulizer, or IM adrenaline).
           Reassess at **15 min**: if distress resolved and no fast breathing →
           home on inhaled salbutamol via MDI + spacer; if it persists → **admit**.
         - **Life-threatening** (central cyanosis, SpO₂ ≤ 90%, silent chest, can't
@@ -71,9 +72,10 @@ topic:
           (> 5 y)**, reassess and repeat as needed. A spacer can be made from a
           plastic cup or 1-litre bottle; a **face mask** on the spacer helps
           infants.
-        - **Subcutaneous adrenaline** (if neither above): **0.01 ml/kg of 1:1000**
-          (max **0.3 ml**), measured with a 1-ml syringe; repeat **once** after
-          15 min if no improvement.
+        - **IM adrenaline** (if neither above): **0.01 ml/kg of 1:1000**
+          (= 0.01 mg/kg, max **0.3 ml**), measured with a 1-ml syringe, injected
+          **IM into the anterolateral thigh** (faster and more reliable than
+          subcutaneous); repeat **once** after 15 min if no improvement.
 
     - type: "prose"
       title: "Steroids"

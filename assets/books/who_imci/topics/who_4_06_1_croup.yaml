@@ -1,13 +1,15 @@
 # ============================================================
 # WHO IMCI §4.6.1 — Viral croup. Pocket Book 2nd ed (2013), pp.102–104.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: capped dexamethasone at 12 mg; nebulized
+# adrenaline changed from a fixed 2 ml to weight-based 0.5 ml/kg of 1:1000
+# (max 5 ml).
 # ============================================================
 
 topic:
   id: "who-imci-4-6-1-croup"
   title: "Viral Croup"
   list_subtitle: "4.6.1 · barking cough · steroids · adrenaline"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["croup", "stridor", "dexamethasone", "budesonide", "adrenaline", "airway", "pediatric"]
   aliases:
     - "Croup"
@@ -42,12 +44,15 @@ topic:
         - **Severe croup** → **admit**; avoid invasive procedures unless an
           anaesthetist is present (they can precipitate complete obstruction).
         - **Steroid** (as soon as possible): a single dose of **oral
-          dexamethasone 0.6 mg/kg** (or equivalent), or **prednisolone**, or
-          **nebulized budesonide 2 mg**. Dissolve the tablet in a spoonful of
-          water for a child who cannot swallow it; repeat if the child vomits.
-        - **Nebulized adrenaline** (trial): **2 ml of 1:1000**. If effective,
-          repeat as often as hourly with careful monitoring — improvement can be
-          temporary (~2 h).
+          dexamethasone 0.6 mg/kg (max 12 mg)** (or equivalent), or
+          **prednisolone**, or **nebulized budesonide 2 mg**. Dissolve the tablet
+          in a spoonful of water for a child who cannot swallow it; repeat if the
+          child vomits. A single dose treats even mild croup and shortens it.
+        - **Nebulized adrenaline** (for stridor at rest / moderate–severe):
+          **0.5 ml/kg of 1:1000, max 5 ml** (1:1000 = 1 mg/ml, so 0.5 mg/kg,
+          max 5 mg), diluted to 3–5 ml with saline. If effective, repeat as often
+          as hourly with careful monitoring — improvement can be **temporary
+          (~2 h)**, so observe for **rebound** before discharge.
         - **Antibiotics are not effective** and should not be given.
 
     - type: "prose"

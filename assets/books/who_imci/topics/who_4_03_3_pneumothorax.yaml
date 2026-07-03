@@ -1,13 +1,13 @@
 # ============================================================
 # WHO IMCI §4.3.3 — Pneumothorax. Pocket Book 2nd ed (2013), pp.89–90.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no change (content current).
 # ============================================================
 
 topic:
   id: "who-imci-4-3-3-pneumothorax"
   title: "Pneumothorax"
   list_subtitle: "4.3.3 · needle decompression → chest drain"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["pneumothorax", "needle decompression", "chest drain", "respiratory", "pediatric"]
   aliases:
     - "Pneumothorax"

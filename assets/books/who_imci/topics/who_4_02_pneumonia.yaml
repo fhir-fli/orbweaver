@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §4.2 — Pneumonia (overview of the nested group + Table 7
 # severity classification). Pocket Book 2nd ed (2013), pp.80–81.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: Table 7 already uses the 2014 WHO two-tier
+# scheme; added a note explaining the reclassification of chest indrawing
+# (without hypoxia/danger signs) from "severe" to non-severe pneumonia.
 # ============================================================
 
 topic:
   id: "who-imci-4-2-pneumonia"
   title: "Pneumonia"
   list_subtitle: "4.2 · classify severity (Table 7)"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["pneumonia", "severity classification", "fast breathing", "antibiotics", "respiratory", "pediatric"]
   aliases:
     - "Pneumonia Classification"
@@ -36,3 +38,16 @@ topic:
         - cells: ["Cough/difficult breathing **with** SpO₂ < 90% or central cyanosis, **or** severe respiratory distress (grunting, very severe indrawing), **or** a general danger sign (can't feed/drink, lethargy, convulsions)", "**Severe pneumonia**", "**Admit.** Oxygen if SpO₂ < 90%; manage the airway; recommended antibiotic; treat high fever."]
         - cells: ["**Fast breathing** (≥ 50/min at 2–11 mo; ≥ 40/min at 1–5 y) **or** chest indrawing, with no severe sign", "**Pneumonia**", "**Home care.** Appropriate oral antibiotic; advise return if worse; follow up after 3 days."]
         - cells: ["No signs of pneumonia or severe pneumonia", "**No pneumonia: cough or cold** ([§4.4](topic:who-imci-4-4-cough-cold))", "**Home care.** Soothe the throat, safe cough remedy; advise return; follow up after 5 days if not improving; if cough > 14 days → [chronic cough §4.7](topic:who-imci-4-7-chronic-cough)."]
+
+    - type: "prose"
+      title: "The two-tier classification (2014 revision)"
+      callout: true
+      markdown: |
+        The older three-tier scheme (pneumonia / severe pneumonia / very severe
+        pneumonia) was simplified by WHO in **2014** to the **two tiers** shown
+        above. The key change: **chest indrawing alone** — without hypoxaemia
+        (SpO₂ < 90%), central cyanosis or a general danger sign — is now
+        classified as **non-severe pneumonia** and treated at home with **oral
+        amoxicillin**, not admission and injectable antibiotics. Only hypoxaemia,
+        central cyanosis, grunting/very severe indrawing or a danger sign make it
+        **severe pneumonia** ([§4.2.1](topic:who-imci-4-2-1-severe-pneumonia)).

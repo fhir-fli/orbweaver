@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §4.2.1 — Severe pneumonia. Pocket Book 2nd ed (2013), pp.80–85.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: clarified "very severe indrawing" (severe)
+# vs ordinary lower-chest indrawing (non-severe, §4.2.2); added HFNC as an
+# oxygen-escalation option. Ampicillin + gentamicin first-line confirmed.
 # ============================================================
 
 topic:
   id: "who-imci-4-2-1-severe-pneumonia"
   title: "Severe Pneumonia"
   list_subtitle: "4.2.1 · admit · oxygen · IV antibiotics"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["severe pneumonia", "oxygen", "ampicillin", "gentamicin", "cloxacillin", "pcp", "respiratory", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["severe pneumonia", "oxygen", "ampicillin", "gentamicin", "cloxacillin", "pcp", "hfnc", "respiratory", "pediatric"]
   aliases:
     - "Severe Pneumonia"
   category: "medical"
@@ -32,6 +34,14 @@ topic:
         at 2–11 mo; ≥ 40/min at 1–5 y), lower chest wall indrawing, decreased or
         bronchial breath sounds, crackles, abnormal vocal resonance, pleural rub.
 
+        **"Very severe indrawing" vs ordinary indrawing:** ordinary lower chest
+        wall indrawing **alone** — without hypoxaemia, cyanosis, grunting or a
+        danger sign — is **non-severe** pneumonia, treated at home with oral
+        amoxicillin ([§4.2.2](topic:who-imci-4-2-2-pneumonia)). It is only
+        **severe** when the indrawing is **very severe** (the whole lower chest
+        wall drawn deeply in, the child in obvious respiratory distress) **or**
+        accompanied by hypoxaemia/cyanosis/grunting or a danger sign.
+
     - type: "prose"
       title: "Investigations"
       markdown: |
@@ -50,6 +60,9 @@ topic:
         - Use pulse oximetry to keep **SpO₂ > 90%**. If no oximeter, continue
           oxygen until the signs of hypoxia (e.g. can't breastfeed, RR ≥ 70/min)
           are gone.
+        - If hypoxaemia persists on standard-flow prongs, **high-flow nasal
+          cannula (HFNC)** — where available — is an effective escalation before
+          CPAP or ventilation, and may reduce the need for intubation.
         - For **stable** children, trial off oxygen each day; **discontinue** if
           SpO₂ stays **> 90%** on room air (check ≥ 15 min).
         - Nurses should check **every 3 h** that prongs are not blocked and all

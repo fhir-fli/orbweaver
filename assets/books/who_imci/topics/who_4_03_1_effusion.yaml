@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §4.3.1 — Pleural effusion and empyema. Pocket Book 2nd ed
 # (2013), pp.88–89.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added modern empyema drainage — small-bore
+# (≤ 12 Fr) tubes + intrapleural fibrinolytics (tPA), with VATS as second-line
+# when drainage fails (2026 IDSA/PIDS).
 # ============================================================
 
 topic:
   id: "who-imci-4-3-1-effusion"
   title: "Pleural Effusion & Empyema"
   list_subtitle: "4.3.1 · drainage + antibiotics"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["pleural effusion", "empyema", "chest drain", "cloxacillin", "respiratory", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["pleural effusion", "empyema", "chest drain", "fibrinolytics", "tpa", "vats", "cloxacillin", "respiratory", "pediatric"]
   aliases:
     - "Empyema"
     - "Pleural Effusion"
@@ -40,7 +42,15 @@ topic:
           if fluid returns (see Annex A1.5 for chest-drain guidelines).
         - Analyse the fluid where possible: **protein and glucose**, cell count
           and differential, Gram and **Ziehl–Neelsen** staining, and bacterial
-          + *Mycobacterium tuberculosis* culture.
+          + **Mycobacterium tuberculosis** culture.
+        - For **empyema / loculated (organising) fluid**, current practice
+          (2026 IDSA/PIDS) favours a **small-bore chest tube (≤ 12 Fr)** plus
+          **intrapleural fibrinolytics** — e.g. **tPA (alteplase)** instilled
+          into the pleural space — which breaks down loculations and clears the
+          space at least as well as a large-bore tube, with less pain.
+        - If drainage plus fibrinolytics **fail**, refer for **VATS**
+          (video-assisted thoracoscopic surgery) to débride the pleura — the
+          preferred second-line intervention where surgical services exist.
 
     - type: "prose"
       title: "Treatment — antibiotics"

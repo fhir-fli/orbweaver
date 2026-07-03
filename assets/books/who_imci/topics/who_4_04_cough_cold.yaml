@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §4.4 — Cough or cold. Pocket Book 2nd ed (2013), pp.90–91.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added honey (≥ 1 year) as a safe soothing
+# remedy — never under 1 year (infant botulism risk).
 # ============================================================
 
 topic:
   id: "who-imci-4-4-cough-cold"
   title: "Cough or Cold"
   list_subtitle: "4.4 · self-limited viral · no antibiotics"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["common cold", "cough", "viral", "supportive care", "respiratory", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["common cold", "cough", "viral", "supportive care", "honey", "respiratory", "pediatric"]
   aliases:
     - "Common Cold"
   category: "medical"
@@ -44,7 +45,9 @@ topic:
       markdown: |
         - **Outpatient** care.
         - **Soothe the throat** and relieve cough with a **safe remedy** (e.g. a
-          warm, sweet drink).
+          warm, sweet drink). In a child **≥ 1 year**, **honey** (2.5–5 ml) is a
+          safe soothing remedy that modestly eases night-time cough. **Never
+          give honey under 1 year** — risk of **infant botulism**.
         - **High fever (≥ 39 °C)** causing distress → **paracetamol**.
         - **Clear the nose** before feeds with a cloth soaked in water and
           twisted to a pointed wick.

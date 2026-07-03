@@ -1,13 +1,16 @@
 # ============================================================
 # WHO IMCI §4.7.1 — Pertussis. Pocket Book 2nd ed (2013), pp.111–114.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: azithromycin is now first-line (erythromycin
+# demoted to alternative, dose corrected to 40–50 mg/kg/day × 14 d); added
+# nasopharyngeal PCR as the preferred confirmatory test and a maternal-Tdap
+# prevention note.
 # ============================================================
 
 topic:
   id: "who-imci-4-7-1-pertussis"
   title: "Pertussis"
-  list_subtitle: "4.7.1 · whooping cough · erythromycin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  list_subtitle: "4.7.1 · whooping cough · azithromycin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["pertussis", "whooping cough", "erythromycin", "azithromycin", "apnoea", "respiratory", "pediatric"]
   aliases:
     - "Whooping Cough"
@@ -39,7 +42,10 @@ topic:
         - young infants may **not whoop** — instead the cough may be followed by
           **apnoea and cyanosis**, or apnoea may occur without coughing
 
-        Also examine for pneumonia and ask about convulsions.
+        Also examine for pneumonia and ask about convulsions. **Confirm with
+        nasopharyngeal PCR** where available — it has replaced culture as the
+        preferred test (higher sensitivity, faster); culture is an alternative
+        but less sensitive.
 
     - type: "prose"
       title: "Treatment — antibiotics"
@@ -48,10 +54,18 @@ topic:
           care. **Admit infants < 6 months**; also admit any child with
           pneumonia, convulsions, dehydration, severe malnutrition, or prolonged
           apnoea/cyanosis after coughing.
-        - **Oral erythromycin 12.5 mg/kg four times a day for 10 days** (does not
-          shorten the illness but reduces infectiousness).
-        - Alternatively **azithromycin 10 mg/kg** (max 500 mg) once on day 1,
-          then **5 mg/kg** (max 250 mg) once daily for 4 days.
+        - A macrolide does **not** shorten established illness but **reduces
+          infectiousness** and is worth giving early (best in the first 1–2
+          weeks). **Azithromycin is now first-line** — daily dosing, a 3–5-day
+          course, and far fewer GI effects than erythromycin (better eradication-
+          adjusted compliance):
+          - **Azithromycin 10 mg/kg** (max 500 mg) once on day 1, then **5 mg/kg**
+            (max 250 mg) once daily on days 2–5; **or 10 mg/kg once daily for
+            3 days**. (In infants < 1 month, azithromycin is the preferred
+            macrolide — erythromycin carries a pyloric-stenosis risk.)
+          - **Erythromycin** — alternative if azithromycin is unavailable:
+            **40–50 mg/kg/day** (max 2 g/day) in **4 divided doses for 14 days**.
+          - **Co-trimoxazole (TMP-SMX)** for the macrolide-intolerant.
         - If fever, or if a macrolide is unavailable, or signs of pneumonia →
           treat with **amoxicillin** as possible secondary pneumonia and follow
           the severe-pneumonia guidelines
@@ -94,6 +108,10 @@ topic:
         - **Subconjunctival haemorrhage, epistaxis, hernias** — no specific
           treatment; refer hernias for surgical review after the acute phase.
         - **Public health:** DPT vaccine/booster to under-immunized family
-          members and the child; **erythromycin estolate 12.5 mg/kg 4×/day for
-          10 days** to any infant < 6 months in the family with fever or
-          respiratory signs.
+          members and the child; give **post-exposure prophylaxis** (same
+          macrolide choice and dose as treatment — **azithromycin preferred**) to
+          any infant < 6 months and other high-risk household contacts.
+        - **Maternal vaccination:** the most effective way to protect newborns is
+          **Tdap in every pregnancy, ideally 27–36 weeks' gestation**, conferring
+          passive antibody before the infant's own primary series — note this
+          where a maternal-immunization programme exists.

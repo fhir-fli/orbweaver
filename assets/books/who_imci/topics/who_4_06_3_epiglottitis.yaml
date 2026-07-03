@@ -1,13 +1,15 @@
 # ============================================================
 # WHO IMCI §4.6.3 — Epiglottitis. Pocket Book 2nd ed (2013), pp.107–108.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: updated to post-Hib-era microbiology (now
+# rare in vaccinated children; S. pneumoniae / GAS / S. aureus predominate);
+# fixed a literal-asterisk rendering bug on "H. influenzae".
 # ============================================================
 
 topic:
   id: "who-imci-4-6-3-epiglottitis"
   title: "Epiglottitis"
   list_subtitle: "4.6.3 · airway emergency · Hib · ceftriaxone"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["epiglottitis", "haemophilus influenzae", "airway emergency", "ceftriaxone", "drooling", "pediatric"]
   aliases:
     - "Epiglottitis"
@@ -23,9 +25,12 @@ topic:
       callout: true
       markdown: |
         A **medical emergency that may result in death** if not treated quickly.
-        Mainly caused by ***Haemophilus influenzae* type b**. Inflammation and
-        swelling between the base of the tongue and the epiglottis can **obstruct
-        the airway**.
+        Classically caused by **Haemophilus influenzae type b (Hib)** — but
+        where **Hib vaccination** is in use, epiglottitis has become **rare in
+        children**, and the organisms now seen are more often **Streptococcus
+        pneumoniae, group A streptococcus and Staphylococcus aureus** (and Hib
+        still in unvaccinated children). Inflammation and swelling between the
+        base of the tongue and the epiglottis can **obstruct the airway**.
 
     - type: "prose"
       title: "Diagnosis"

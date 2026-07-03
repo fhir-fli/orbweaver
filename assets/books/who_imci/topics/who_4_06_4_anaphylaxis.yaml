@@ -1,13 +1,15 @@
 # ============================================================
 # WHO IMCI §4.6.4 — Anaphylaxis. Pocket Book 2nd ed (2013), pp.108–109.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: adrenaline changed from a fixed 0.15 ml to
+# weight-based 0.01 mg/kg IM anterolateral thigh (max 0.3 mg child / 0.5 mg
+# adolescent); corticosteroids downgraded (not routine, never first-line).
 # ============================================================
 
 topic:
   id: "who-imci-4-6-4-anaphylaxis"
   title: "Anaphylaxis"
   list_subtitle: "4.6.4 · adrenaline IM · airway · fluids"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["anaphylaxis", "adrenaline", "allergic reaction", "shock", "airway", "emergency", "pediatric"]
   aliases:
     - "Anaphylaxis"
@@ -49,19 +51,37 @@ topic:
         - **No pulse** → start **basic life support**.
 
     - type: "prose"
+      title: "Adrenaline is the first-line drug — weight-based, IM"
+      callout: true
+      markdown: |
+        In any reaction with **airway, breathing or circulation** compromise,
+        give **adrenaline immediately** — it is the only life-saving drug and
+        must not be delayed for antihistamines or steroids.
+        - **Dose: 0.01 mg/kg of 1:1000 (= 0.01 ml/kg), max 0.3 mg (0.3 ml) in a
+          child**, up to **0.5 mg (0.5 ml) in an adolescent/adult**.
+        - Give **IM into the anterolateral thigh** (faster, more reliable than
+          subcutaneous or deltoid).
+        - **Repeat every 5–15 min** if no improvement. If two or more doses are
+          needed or shock persists, start an **adrenaline infusion** with
+          monitoring.
+
+    - type: "prose"
       title: "Treatment"
       markdown: |
         - **Remove the allergen** where possible.
-        - **Mild** (rash and itching only) → **oral antihistamine + oral
-          prednisolone 1 mg/kg**.
-        - **Moderate** (stridor, obstruction or wheeze) → **adrenaline 0.15 ml of
-          1:1000 IM into the thigh** (or subcutaneous); repeat every
-          **5–15 min**.
-        - **Severe anaphylactic shock:**
-          - **adrenaline 0.15 ml of 1:1000 IM**, repeat every 5–15 min
+        - **Give adrenaline IM** (dose above) for any airway/breathing/
+          circulation involvement — i.e. **moderate or severe** reactions.
+        - **Severe anaphylactic shock**, in addition:
           - **100% oxygen**
           - stabilise **airway, breathing, circulation** and secure **IV access**
           - if obstruction is severe, consider **intubation** or a **surgical
             airway** (call an anaesthetist)
           - **20 ml/kg of normal saline 0.9% or Ringer's lactate IV** as rapidly
-            as possible (**intraosseous** if no IV access)
+            as possible (**intraosseous** if no IV access); repeat as needed
+        - **Mild** reactions (rash/itching only, no ABC involvement) → an **oral
+          antihistamine**; observe for progression.
+        - **Second-line only:** an **antihistamine** relieves itch/urticaria but
+          does **not** treat the reaction; **corticosteroids are not routinely
+          recommended** and are **never** a substitute for adrenaline (no proven
+          effect on the acute reaction or on biphasic reactions).
+        - **Observe** after recovery for a possible **biphasic reaction**.

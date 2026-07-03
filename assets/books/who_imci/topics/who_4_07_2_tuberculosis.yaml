@@ -1,14 +1,18 @@
 # ============================================================
 # WHO IMCI §4.7.2 — Tuberculosis. Pocket Book 2nd ed (2013), pp.115–118.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: 4-month regimen for nonsevere TB (SHINE,
+# NEJM 2022; WHO 2022) added; Xpert Ultra made the initial test for ALL children
+# with presumed TB (+ stool specimens); 6-month intensive option for TB
+# meningitis; 3HR/3HP added to preventive therapy; drug doses confirmed vs
+# 2025 ATS/CDC/ERS/IDSA.
 # ============================================================
 
 topic:
   id: "who-imci-4-7-2-tuberculosis"
   title: "Tuberculosis"
-  list_subtitle: "4.7.2 · diagnosis · HRZE regimens"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["tuberculosis", "isoniazid", "rifampicin", "pyrazinamide", "ethambutol", "mantoux", "xpert", "pediatric"]
+  list_subtitle: "4.7.2 · Xpert Ultra · HRZE · 4-mo nonsevere"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["tuberculosis", "isoniazid", "rifampicin", "pyrazinamide", "ethambutol", "mantoux", "xpert ultra", "shine", "pediatric"]
   aliases:
     - "TB"
   category: "medical"
@@ -21,7 +25,7 @@ topic:
       title: "What it is"
       highlight: true
       markdown: |
-        Most children infected with *M. tuberculosis* **do not develop TB**;
+        Most children infected with **M. tuberculosis** **do not develop TB**;
         progression depends on immune competence, which is weakest in the **very
         young** and impaired by **HIV, malnutrition, measles and whooping
         cough**. TB is most severe in the **lungs, meninges or kidney**; nodes,
@@ -58,8 +62,14 @@ topic:
         - **Mantoux / PPD skin test** — **> 10 mm** suggests TB; **< 10 mm** is
           equivocal after BCG and may be **falsely negative** in HIV, miliary
           disease, severe malnutrition or recent measles.
-        - **Xpert MTB/RIF** as the **initial** test if MDR-TB or HIV-associated
-          TB is suspected.
+        - **Xpert Ultra** (Xpert MTB/RIF Ultra) is now the **initial diagnostic
+          test for every child** with presumed TB — not only when MDR-TB or
+          HIV-associated TB is suspected. It is far more sensitive than the
+          original Xpert and also detects rifampicin resistance. Use respiratory
+          specimens (sputum, gastric aspirate) **or stool** — a non-invasive
+          alternative to gastric aspirate. A **negative Ultra does not exclude
+          TB**; repeat it if the first result is negative and the pre-test
+          probability is ≥ 5%.
         - Offer **routine HIV testing** to all children suspected of TB.
 
     - type: "prose"
@@ -76,17 +86,21 @@ topic:
         - **Ethambutol (E): 20 mg/kg** (15–25)
 
     - type: "prose"
-      title: "Treatment regimens (WHO)"
+      title: "Treatment regimens (WHO 2022)"
       markdown: |
-        - **Four-drug:** **HRZE for 2 months, then HR** — 4 months for most
-          children; **extend HR to 10 months (12 months total)** for extensive
-          pulmonary TB or peripheral lymphadenitis in high-HIV-prevalence areas,
-          or with isoniazid resistance.
-        - **Three-drug:** **HRZ for 2 months, then HR for 4 months** — for
-          suspected/confirmed pulmonary TB or peripheral lymphadenitis in
-          **low-HIV-prevalence, HIV-negative** children.
+        - **Nonsevere TB → 4 months (2HRZ[E] / 2HR).** Children **3 months–16
+          years** with nonsevere, drug-susceptible, smear-negative disease can
+          be cured in **4 months, not 6** (SHINE trial, NEJM 2022 — non-inferior;
+          WHO strong recommendation). Add **E** in high-HIV settings or where
+          isoniazid resistance is likely.
+        - **Severe / extensive pulmonary TB → 6 months (2HRZE / 4HR).** Retain
+          the 6-month course for extensive or cavitary disease, miliary TB, or
+          smear-positive disease.
         - **TB meningitis, spinal TB with neurological signs, osteoarticular
-          TB:** **HRZE 2 months, then HR 10 months**.
+          TB → 12 months (2HRZE / 10HR).** For **drug-susceptible TB
+          meningitis**, a **6-month intensive regimen** — higher-dose H, R and Z
+          with **ethionamide replacing ethambutol** — is an accepted alternative
+          to the 12-month regimen (WHO 2022).
         - **Infants 0–3 months:** treat promptly with the standard regimens,
           adjusting doses for age and possible toxicity.
         - **Intermittent (thrice-weekly)** regimens only where DOT is
@@ -94,6 +108,18 @@ topic:
           areas.
         - **Streptomycin** is **not** first-line — reserve for MDR-TB in a child
           with known susceptibility.
+
+    - type: "prose"
+      title: "What counts as nonsevere TB"
+      callout: true
+      markdown: |
+        The 4-month regimen applies to **nonsevere** disease, defined as: **
+        peripheral lymph node TB**; **intrathoracic lymph node TB without airway
+        obstruction**; **uncomplicated pleural effusion**; or **paucibacillary,
+        non-cavitary disease confined to one lobe without a miliary pattern** —
+        and **smear-negative**. Anything more extensive, cavitary, miliary,
+        smear-positive, or CNS/bone/joint disease is **severe** and takes the
+        longer regimen.
 
     - type: "prose"
       title: "MDR-TB & monitoring"
@@ -113,10 +139,17 @@ topic:
           monitored by the national TB programme.
         - **Screen all household contacts** (and school contacts if needed) and
           treat any active cases found.
-        - **Children < 5 years** who are household/close contacts and — after
+        - **Children < 5 years** (and older child/adolescent contacts, and
+          people living with HIV) who are household/close contacts and — after
           clinical evaluation — are **not** found to have active TB should get
-          **6 months of isoniazid preventive therapy (10 mg/kg/day, range
-          7–15 mg/kg, max 300 mg/day)**.
+          **TB preventive treatment**. Options (WHO 2022):
+          - **6 months isoniazid (6H)** — 10 mg/kg/day (range 7–15; max 300 mg)
+          - **3 months isoniazid + rifampicin (3HR)** — shorter, better completion
+          - **3 months weekly isoniazid + rifapentine (3HP)** — for children
+            **≥ 2 years**
+
+          The shorter rifamycin-based regimens have **better completion rates**
+          than 6 months of isoniazid alone.
         - **Follow-up** at home/hospital: check adherence, screen other family
           children, improve home ventilation and reduce indoor smoking, support
           nutrition, and keep vaccinations up to date.

@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §4.9 — Rheumatic heart disease. Pocket Book 2nd ed (2013),
 # pp.122–123.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added the specific secondary-prophylaxis
+# regimen (benzathine penicillin G 1.2 MU IM q4wk) with a duration table by
+# severity, and a note on echocardiographic screening in endemic settings
+# (2020 ACC/AHA; 2025 Lancet seminar).
 # ============================================================
 
 topic:
   id: "who-imci-4-9-rheumatic-heart"
   title: "Rheumatic Heart Disease"
   list_subtitle: "4.9 · valve damage · penicillin prophylaxis"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["rheumatic heart disease", "rheumatic fever", "valve", "penicillin", "endocarditis", "cardiac", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["rheumatic heart disease", "rheumatic fever", "valve", "penicillin", "benzathine penicillin", "secondary prophylaxis", "endocarditis", "cardiac", "pediatric"]
   aliases:
     - "RHD"
     - "Rheumatic Heart Disease"
@@ -72,3 +75,36 @@ topic:
           ceftriaxone — plus gentamicin IV/IM for 4–6 weeks**.
         - **Refer** for echocardiographic evaluation and a long-term plan;
           severe valve stenosis or regurgitation may need **surgery**.
+
+    - type: "prose"
+      title: "Secondary prophylaxis — the key to preventing progression"
+      highlight: true
+      markdown: |
+        Regular penicillin prevents recurrent rheumatic fever, which is what
+        drives worsening valve damage. Start it in **every** child with rheumatic
+        fever or RHD:
+        - **Benzathine penicillin G (BPG) 1.2 million U IM every 4 weeks** —
+          **preferred** (use **every 3 weeks** in high-risk/high-incidence
+          settings). Use **600 000 U** if body weight is **< 30 kg**.
+        - **Oral penicillin V 250 mg twice daily** — alternative, but less
+          effective (depends on daily adherence).
+        - **Penicillin-allergic:** **sulfadiazine** (0.5 g/day if < 30 kg, 1 g/day
+          if ≥ 30 kg) **or a macrolide** (e.g. erythromycin).
+
+    - type: "table"
+      title: "How long to continue prophylaxis"
+      column_flex: [5, 4]
+      columns: ["Situation", "Duration"]
+      rows:
+        - cells: ["RF **without** carditis", "**≥ 5 years** or until **age 21** — whichever is longer"]
+        - cells: ["RF **with** carditis, **no** residual valve disease", "**≥ 10 years** or until **age 21** — whichever is longer"]
+        - cells: ["RHD with **persistent** valve disease", "**≥ 10 years** or until **age 40** — whichever is longer; **lifelong** if high ongoing strep exposure or severe disease"]
+
+    - type: "prose"
+      title: "Echocardiographic screening in endemic settings"
+      markdown: |
+        In endemic populations, **echocardiographic screening** detects
+        **latent/subclinical RHD** before symptoms appear. Starting secondary
+        prophylaxis in children with echo-detected latent RHD **slows or halts
+        progression** (RCT evidence, Uganda 2022) — consider screening where the
+        disease burden and resources support it.

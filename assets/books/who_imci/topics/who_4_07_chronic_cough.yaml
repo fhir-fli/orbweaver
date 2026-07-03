@@ -2,15 +2,16 @@
 # WHO IMCI §4.7 — Conditions presenting with chronic cough (overview of
 # the nested group + Table 10 differential). Pocket Book 2nd ed (2013),
 # pp.109–111.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: ≥ 14-day threshold kept (appropriate for
+# high-TB-burden LMIC); added protracted bacterial bronchitis to Table 10.
 # ============================================================
 
 topic:
   id: "who-imci-4-7-chronic-cough"
   title: "Chronic Cough"
   list_subtitle: "4.7 · cough ≥ 14 days · differential (Table 10)"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["chronic cough", "tuberculosis", "pertussis", "foreign body", "hiv", "respiratory", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["chronic cough", "tuberculosis", "pertussis", "foreign body", "hiv", "protracted bacterial bronchitis", "respiratory", "pediatric"]
   aliases:
     - "Chronic Cough"
   category: "medical"
@@ -63,3 +64,4 @@ topic:
         - cells: ["**HIV**", "Known/suspected maternal or sibling HIV; failure to thrive; oral/oesophageal thrush; chronic parotitis; herpes zoster (past/present); generalized lymphadenopathy; chronic fever; persistent diarrhoea; finger clubbing"]
         - cells: ["**Bronchiectasis**", "Prior severe pneumonia, TB or aspirated foreign body; poor weight gain; purulent sputum, bad breath; finger clubbing; localized X-ray signs"]
         - cells: ["**Lung abscess**", "Reduced breath sounds over the abscess; poor weight gain / chronically ill; cystic or cavitating lesion on X-ray"]
+        - cells: ["**Protracted bacterial bronchitis**", "Isolated chronic **wet** cough > 4 weeks; otherwise well child; no danger signs; resolves with a 2-week course of amoxicillin-clavulanate (a diagnosis of exclusion once TB, foreign body and asthma are ruled out)"]

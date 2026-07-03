@@ -2,14 +2,14 @@
 # WHO IMCI §4.6 — Conditions presenting with stridor (overview of the
 # nested group + Table 9 differential). Pocket Book 2nd ed (2013),
 # pp.102–103.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no change (section overview).
 # ============================================================
 
 topic:
   id: "who-imci-4-6-stridor"
   title: "Stridor"
   list_subtitle: "4.6 · croup · diphtheria · epiglottitis · anaphylaxis"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["stridor", "croup", "diphtheria", "epiglottitis", "anaphylaxis", "airway", "respiratory", "pediatric"]
   aliases:
     - "Stridor"

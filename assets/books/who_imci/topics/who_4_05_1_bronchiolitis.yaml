@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §4.5.1 — Bronchiolitis. Pocket Book 2nd ed (2013), pp.94–96.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added explicit "do-not-use" list
+# (bronchodilators, corticosteroids, hypertonic saline, chest physiotherapy —
+# AAP 2014), HFNC as oxygen escalation, and a nirsevimab RSV-prophylaxis note.
 # ============================================================
 
 topic:
   id: "who-imci-4-5-1-bronchiolitis"
   title: "Bronchiolitis"
   list_subtitle: "4.5.1 · viral · < 2 y · oxygen, support"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["bronchiolitis", "rsv", "wheeze", "oxygen", "infant", "respiratory", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["bronchiolitis", "rsv", "wheeze", "oxygen", "hfnc", "nirsevimab", "infant", "respiratory", "pediatric"]
   aliases:
     - "Bronchiolitis"
   category: "medical"
@@ -65,6 +67,25 @@ topic:
         - **Supportive:** paracetamol for distressing fever ≥ 39 °C; maintenance
           fluids (avoid over-hydration), encourage breastfeeding; NG feeds if
           unable to maintain intake; gentle nasal suction for obstruction.
+        - If hypoxaemia persists on standard prongs, **high-flow nasal cannula
+          (HFNC)** — where available — is the preferred escalation before CPAP.
+
+    - type: "prose"
+      title: "What NOT to use"
+      callout: true
+      markdown: |
+        Bronchiolitis is essentially a **supportive-care** illness. The following
+        are **not recommended** — none shortens the illness or changes outcome,
+        and each carries cost or harm (AAP 2014; Cochrane):
+        - **bronchodilators** (salbutamol, adrenaline) — no benefit; a brief
+          trial is no longer advised routinely
+        - **corticosteroids** (nebulized or systemic)
+        - **nebulized hypertonic saline** (in the acute inpatient setting)
+        - **chest physiotherapy**
+        - **antibiotics** — only if there are genuine signs of pneumonia (above)
+
+        Care is **oxygen, fluids/feeding support and nasal suction**, escalating
+        to HFNC/CPAP if respiratory failure develops.
 
     - type: "prose"
       title: "Monitoring & complications"
@@ -88,3 +109,14 @@ topic:
         persist up to **3 weeks**; while well, feeding, with no distress/apnoea,
         no antibiotics are needed. **Advise against smoking** (risk of recurrent
         bronchiolitis).
+
+    - type: "prose"
+      title: "Prevention (where available)"
+      markdown: |
+        **Nirsevimab**, a long-acting monoclonal antibody, given as a single IM
+        dose before or during the RSV season protects infants against severe RSV
+        bronchiolitis and is now recommended for all infants in a growing number
+        of countries (an alternative/successor to palivizumab, which was reserved
+        for high-risk infants). Availability in LMIC settings is still limited,
+        but note it where the programme exists. **Maternal RSV vaccination** in
+        pregnancy is another route to passive infant protection.

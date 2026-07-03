@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §4.8 — Heart failure. Pocket Book 2nd ed (2013), pp.120–122.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added chronic guideline-directed therapy
+# (ACE inhibitor, β-blocker, spironolactone) after stabilization and a
+# milrinone note for acute low-output decompensation (2026 AHA statement).
 # ============================================================
 
 topic:
   id: "who-imci-4-8-heart-failure"
   title: "Heart Failure"
   list_subtitle: "4.8 · oxygen · furosemide · avoid fluid overload"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["heart failure", "furosemide", "digoxin", "oxygen", "cardiac", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["heart failure", "furosemide", "digoxin", "oxygen", "ace inhibitor", "enalapril", "milrinone", "cardiac", "pediatric"]
   aliases:
     - "Cardiac Failure"
   category: "medical"
@@ -59,6 +61,24 @@ topic:
         - **Potassium:** not needed for short-term furosemide alone; if **digoxin
           + furosemide**, or furosemide for **> 5 days**, give oral potassium
           **3–5 mmol/kg/day**.
+
+    - type: "prose"
+      title: "Chronic therapy & acute low-output support"
+      markdown: |
+        Beyond the acute diuretic/oxygen measures above, chronic heart failure
+        from cardiomyopathy or congenital/valvular disease is managed with
+        **guideline-directed medical therapy** — start after the child is
+        stabilised, under specialist guidance:
+        - **ACE inhibitor** — **enalapril** or **captopril** (a cornerstone of
+          chronic HF therapy; watch renal function, potassium and blood
+          pressure).
+        - **β-blocker** — **carvedilol**, once the child is euvolaemic and stable.
+        - **Mineralocorticoid antagonist** — **spironolactone**.
+        - **Sacubitril/valsartan (ARNI)** is now approved for children ≥ 1 year
+          with symptomatic HF and systolic dysfunction where available.
+        - For **acute decompensation with low cardiac output**, **milrinone** is
+          the preferred inotrope-vasodilator (favoured over dopamine/dobutamine)
+          where monitored care exists.
 
     - type: "prose"
       title: "Supportive care & monitoring"

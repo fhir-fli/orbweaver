@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §4.6.2 — Diphtheria. Pocket Book 2nd ed (2013), pp.105–107.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: antitoxin dose made severity-based
+# (20,000–120,000 U) with emphasis on giving it as early as possible; added
+# erythromycin as an antibiotic alternative to procaine penicillin.
 # ============================================================
 
 topic:
   id: "who-imci-4-6-2-diphtheria"
   title: "Diphtheria"
   list_subtitle: "4.6.2 · grey membrane · antitoxin · penicillin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["diphtheria", "antitoxin", "procaine penicillin", "bull neck", "myocarditis", "airway", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["diphtheria", "antitoxin", "procaine penicillin", "erythromycin", "bull neck", "myocarditis", "airway", "pediatric"]
   aliases:
     - "Diphtheria"
   category: "medical"
@@ -38,13 +40,23 @@ topic:
     - type: "prose"
       title: "Treatment — antitoxin & antibiotics"
       markdown: |
-        - **Diphtheria antitoxin 40 000 U** IM or IV **immediately** — delay
-          increases mortality. There is a small risk of a serious allergic
-          reaction to the horse serum, so do an **intradermal test first** and
-          have anaphylaxis treatment
+        - **Diphtheria antitoxin (DAT) — give as early as possible**, without
+          waiting for culture; every hour of delay increases mortality. Dose by
+          **site and severity of disease** (the toxin already bound to tissue
+          cannot be neutralised, so more extensive/later disease needs more):
+          - **nasal or tonsillar** disease: **20 000–40 000 U**
+          - **nasopharyngeal** disease: **40 000–60 000 U**
+          - **extensive disease (≥ 3 days) or 'bull neck'**: **80 000–120 000 U**
+
+          Give IM or (for severe disease) IV. There is a small risk of a serious
+          allergic reaction to the horse serum, so do an **intradermal/sensitivity
+          test first** and have anaphylaxis treatment
           ([§4.6.4](topic:who-imci-4-6-4-anaphylaxis)) ready.
-        - **Procaine benzylpenicillin 50 mg/kg** (max 1.2 g) **IM once daily for
-          10 days** — **do not give IV**.
+        - **Antibiotic** (to stop toxin production and transmission):
+          **procaine benzylpenicillin 50 mg/kg** (max 1.2 g) **IM once daily**,
+          **or erythromycin 40–50 mg/kg/day** (max 2 g/day) in 4 divided doses,
+          for **14 days** — do not give procaine penicillin IV. Antibiotics are
+          **not** a substitute for antitoxin.
 
     - type: "prose"
       title: "Airway, oxygen & supportive care"

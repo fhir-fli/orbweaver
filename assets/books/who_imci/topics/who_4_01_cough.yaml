@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §4.1 — Child presenting with cough or difficulty in breathing.
 # Pocket Book 2nd ed (2013), pp.76–79 (Table 6 differential, pp.77–79).
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: pulse oximetry elevated to a core
+# assessment (hypoxia predicts death, may be silent); COVID-19 added to the
+# Table 6 differential.
 # ============================================================
 
 topic:
   id: "who-imci-4-1-cough"
   title: "Child Presenting with Cough"
   list_subtitle: "4.1 · history · exam · differential (Table 6)"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["cough", "difficulty breathing", "pneumonia", "differential diagnosis", "fast breathing", "respiratory", "pediatric"]
   aliases:
     - "Cough"
@@ -41,8 +43,8 @@ topic:
         - **exposure to TB** (or chronic cough) in the family
         - a history of **choking** or **sudden onset** of symptoms
         - known or possible **HIV** infection
-        - **vaccination history** — BCG, DPT, measles, *Haemophilus influenzae*
-          type b, pneumococcus
+        - **vaccination history** — BCG, DPT, measles, **Haemophilus influenzae
+          type b**, pneumococcus
         - personal or family history of **asthma**
 
     - type: "prose"
@@ -55,6 +57,10 @@ topic:
         - **Respiratory rate** — count over **1 min while the child is calm**.
           **Fast breathing:** **< 2 months ≥ 60**, **2–11 months ≥ 50**,
           **1–5 years ≥ 40** breaths/min.
+        - **Pulse oximetry (SpO₂)** — measure in **every** child with cough or
+          difficulty breathing where available. **Hypoxaemia (SpO₂ < 90%)**
+          strongly predicts death and can be present **without visible
+          cyanosis** — treat it as a core vital sign, not an optional test.
         - **Chest:** lower chest wall indrawing; hyperinflation; apex beat or
           trachea shifted from the midline; raised JVP; on auscultation coarse
           crackles, absent air entry or bronchial breath sounds, or wheeze;
@@ -98,6 +104,7 @@ topic:
         - cells: ["**Pertussis**", "Paroxysms of cough with **whoop, vomiting, cyanosis or apnoea**; well between bouts; no fever; no DPT vaccination"]
         - cells: ["**Foreign body**", "History of **sudden choking**; sudden stridor or respiratory distress; focal wheeze or reduced breath sounds"]
         - cells: ["**Pneumothorax**", "Sudden onset (usually after major chest trauma); hyper-resonance on one side; mediastinal shift to the opposite side"]
-        - cells: ["***Pneumocystis* pneumonia**", "2–6-month-old with central cyanosis; hyperexpanded chest; fast breathing; finger clubbing; X-ray changes with a clear chest on auscultation; HIV positive in mother or child"]
+        - cells: ["**Pneumocystis pneumonia**", "2–6-month-old with central cyanosis; hyperexpanded chest; fast breathing; finger clubbing; X-ray changes with a clear chest on auscultation; HIV positive in mother or child"]
         - cells: ["**Croup**", "Inspiratory stridor; current measles; barking cough; hoarse voice"]
         - cells: ["**Diphtheria**", "No DPT vaccination; inspiratory stridor; **grey pharyngeal membrane**; cardiac arrhythmia"]
+        - cells: ["**COVID-19**", "Contact with a case; fever, cough, sometimes fast breathing or hypoxia (may be **silent** — check SpO₂); anosmia/ageusia in older children; usually mild in children but can cause pneumonia or (rarely) MIS-C weeks after infection"]

@@ -1,14 +1,17 @@
 # ============================================================
 # WHO IMCI §4.2.2 — Pneumonia (non-severe). Pocket Book 2nd ed (2013),
 # pp.86–87.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: amoxicillin duration keyed to HIV status —
+# 3 days for HIV-uninfected (Ginsburg NEJM 2020; JAMA Peds 2022), 5 days
+# retained for HIV-infected/exposed; added an outpatient safety-net (SpO₂
+# check + refer criteria).
 # ============================================================
 
 topic:
   id: "who-imci-4-2-2-pneumonia"
   title: "Pneumonia (Non-severe)"
   list_subtitle: "4.2.2 · outpatient · oral amoxicillin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["pneumonia", "amoxicillin", "outpatient", "fast breathing", "respiratory", "pediatric"]
   aliases:
     - "Non-severe Pneumonia"
@@ -37,16 +40,35 @@ topic:
       title: "Treatment"
       markdown: |
         - **Treat as an outpatient.**
-        - Give **oral amoxicillin** — give the **first dose at the clinic** and
-          teach the carer to give the rest at home:
-          - **high-HIV-prevalence** settings: **40 mg/kg/dose twice a day for
-            5 days**
-          - **low-HIV-prevalence** settings: **40 mg/kg/dose twice a day for
-            3 days**
+        - Give **oral amoxicillin 40 mg/kg/dose twice a day** — give the **first
+          dose at the clinic** and teach the carer to give the rest at home.
+          Duration is keyed to **HIV status**, not the local prevalence:
+          - **HIV-uninfected:** **3 days** — a 3-day course is non-inferior to
+            5 days for non-severe fast-breathing **and** chest-indrawing
+            pneumonia (Ginsburg NEJM 2020; JAMA Pediatrics 2022).
+          - **HIV-infected or HIV-exposed** (or status unknown in a
+            high-prevalence setting): **5 days**.
         - Advise **extra fluids** and continued feeding; small frequent drinks
           are better tolerated if there is fever.
         - **Avoid harmful remedies** — those containing **atropine, codeine
           derivatives or alcohol**.
+
+    - type: "prose"
+      title: "Outpatient safety-net"
+      callout: true
+      markdown: |
+        A child sent home with **chest-indrawing** pneumonia needs a clear
+        safety-net:
+        - **Check SpO₂ before discharge** where pulse oximetry is available — any
+          child with **SpO₂ < 90%** is **severe** pneumonia and must be
+          **admitted** for oxygen ([§4.2.1](topic:who-imci-4-2-1-severe-pneumonia)),
+          not treated at home.
+        - Teach the carer the **danger signs that mean return immediately:** any
+          fast/difficult breathing that **worsens**, inability to
+          drink/breastfeed, becomes **less active or drowsy**, or develops
+          grunting, cyanosis or convulsions.
+        - Ensure the carer can **get back quickly** and has the first dose given
+          and understood before leaving.
 
     - type: "prose"
       title: "Follow-up"
