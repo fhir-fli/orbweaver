@@ -1,0 +1,78 @@
+# ============================================================
+# WHO IMCI §6.1.2 — Fever lasting longer than 7 days (Table 19). Pocket
+# Book 2nd ed (2013), pp.153–155.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-1-2-fever-long"
+  title: "Fever Lasting Longer Than 7 Days"
+  list_subtitle: "6.1.2 · prolonged fever · Table 19"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["prolonged fever", "TB", "HIV", "endocarditis", "brucellosis", "miliary TB", "pediatric"]
+  aliases:
+    - "Prolonged Fever"
+  category: "medical"
+
+  page_number: 153
+
+  blocks:
+
+    - type: "prose"
+      title: "Prolonged fever"
+      highlight: true
+      markdown: |
+        There are many causes of prolonged fever — **know the commonest causes
+        in your area**. Investigate to find the most likely cause, then treat.
+        Sometimes a **'trial of treatment'** is needed (e.g. for strongly
+        suspected TB or Salmonella infection); **improvement supports** the
+        suspected diagnosis.
+
+    - type: "prose"
+      title: "History & examination"
+      markdown: |
+        Take a history as for any fever; **in addition consider HIV, TB and
+        malignancy**, which can cause persistent fever. Fully undress the child
+        and examine the whole body for: fast breathing/chest indrawing
+        (pneumonia); stiff neck/bulging fontanelle (meningitis); red tender joint
+        (septic arthritis, rheumatic fever); petechial/purpuric rash
+        (meningococcal, dengue); maculopapular rash (viral, drug reaction);
+        inflamed throat (throat infection); red painful ear with immobile drum
+        (otitis); jaundice or anaemia (malaria, hepatitis, leptospirosis,
+        septicaemia); painful spine/hips/joints (septic arthritis); tender
+        abdomen (suprapubic/loin — UTI). Some causes have **no localizing sign**
+        (septicaemia, Salmonella, miliary TB, HIV, UTI).
+
+    - type: "prose"
+      title: "Laboratory investigations"
+      markdown: |
+        - **blood films / rapid diagnostic test** for malaria (a positive test in
+          an endemic area does not exclude other causes)
+        - **full blood count** incl. platelets, and a thin film for cell
+          morphology
+        - **urinalysis** incl. microscopy
+        - **Mantoux test** — often **negative** in miliary TB, severe
+          malnutrition or HIV
+        - **chest X-ray**
+        - **blood culture**
+        - **HIV testing** if fever > 30 days and HIV is suspected
+        - **lumbar puncture** to exclude meningitis if there are suggestive signs.
+
+    - type: "prose"
+      title: "Differential diagnosis"
+      markdown: |
+        Review all the conditions in **Tables 16–18** (fever ≤ 7 days); in
+        addition, consider the causes of fever > 7 days in Table 19.
+
+    - type: "table"
+      title: "Table 19 · Additional differentials of fever > 7 days"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Abscess** (deep)", "Fever with no obvious focus; tender or fluctuant mass; local tenderness or pain; site-specific signs (subphrenic, psoas, retroperitoneal, lung, renal)"]
+        - cells: ["**Salmonella** (non-typhoidal)", "Child with sickle-cell disease; osteomyelitis or arthritis in an infant"]
+        - cells: ["**Infective endocarditis**", "Weight loss; enlarged spleen; anaemia; heart murmur or underlying heart disease; petechiae; splinter haemorrhages in nail beds; microscopic haematuria; finger clubbing"]
+        - cells: ["**Rheumatic fever**", "Heart murmur (may change over time); arthritis/arthralgia; cardiac failure; persistent fast pulse; pericardial friction rub; chorea; recent known streptococcal infection"]
+        - cells: ["**Miliary TB**", "Weight loss; anorexia, night sweats; enlarged liver and/or spleen; cough; tuberculin test negative; family history of TB; fine miliary pattern on chest X-ray"]
+        - cells: ["**Brucellosis**", "Chronic relapsing or persistent fever; malaise; musculoskeletal pain; low backache or hip pain; enlarged spleen; anaemia; history of drinking unboiled milk (local prevalence matters)"]
+        - cells: ["**Borreliosis** (relapsing fever)", "Painful muscles and joints; red eyes; enlarged liver and spleen; jaundice; petaechial rash; decreased consciousness; spirochaetes on blood film (local prevalence matters)"]

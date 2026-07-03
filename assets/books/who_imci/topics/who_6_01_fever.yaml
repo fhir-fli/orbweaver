@@ -1,0 +1,47 @@
+# ============================================================
+# WHO IMCI §6.1 — Child presenting with fever (overview of the nested
+# group). Pocket Book 2nd ed (2013), pp.149–150.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-1-fever"
+  title: "Child Presenting with Fever"
+  list_subtitle: "6.1 · four categories of fever"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["fever", "differential diagnosis", "malaria", "meningitis", "measles", "dengue", "pediatric"]
+  aliases:
+    - "Fever"
+  category: "medical"
+
+  page_number: 149
+
+  blocks:
+
+    - type: "prose"
+      title: "About this chapter"
+      highlight: true
+      markdown: |
+        This chapter covers the most important conditions that cause fever in
+        children **2 months – 5 years**. The main aim is to **differentiate
+        serious, treatable infections from mild, self-resolving** febrile
+        illness. Febrile conditions in **young infants < 2 months** are covered
+        in [§3](topic:who-imci-3-6-danger-signs).
+
+    - type: "prose"
+      title: "Four categories of fever"
+      markdown: |
+        Sort every febrile child into one of four groups:
+        - **Infection with non-localizing signs** (Table 16) — malaria,
+          septicaemia, typhoid, UTI, HIV.
+        - **Infection with localizing signs** (Table 17) — meningitis, otitis,
+          mastoiditis, osteomyelitis, septic arthritis, pneumonia, etc.
+        - **Fever with a rash** (Table 18) — measles, other viral, dengue,
+          relapsing fever, typhus.
+        - **Fever lasting > 7 days** (Table 19).
+
+        Some causes are **regional** (malaria, dengue, relapsing fever),
+        **seasonal**, or occur in **epidemics** (meningococcal meningitis,
+        typhus). Split management by duration: **≤ 7 days**
+        ([§6.1.1](topic:who-imci-6-1-1-fever-7days)) and **> 7 days**
+        ([§6.1.2](topic:who-imci-6-1-2-fever-long)).

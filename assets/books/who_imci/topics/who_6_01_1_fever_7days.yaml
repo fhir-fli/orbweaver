@@ -1,0 +1,101 @@
+# ============================================================
+# WHO IMCI §6.1.1 — Fever lasting 7 days or less (Tables 16, 17, 18).
+# Pocket Book 2nd ed (2013), pp.150–153.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-1-1-fever-7days"
+  title: "Fever Lasting 7 Days or Less"
+  list_subtitle: "6.1.1 · history · exam · Tables 16–18"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["fever", "differential diagnosis", "malaria", "septicaemia", "meningitis", "rash", "pediatric"]
+  aliases:
+    - "Acute Fever"
+  category: "medical"
+
+  page_number: 150
+
+  blocks:
+
+    - type: "prose"
+      title: "History"
+      highlight: true
+      markdown: |
+        Ask about:
+        - **duration** of fever
+        - **residence in / recent travel to** a malaria-transmission area
+        - **recent contact** with an infectious disease
+        - **vaccination history**
+        - **skin rash**
+        - **stiff neck or neck pain**
+        - **headache**
+        - **convulsions or seizures**
+        - **pain on passing urine**
+        - **ear pain**.
+
+    - type: "prose"
+      title: "Examination"
+      markdown: |
+        - **General:** drowsiness or altered consciousness; pallor or cyanosis;
+          lymphadenopathy.
+        - **Head & neck:** bulging fontanelle; stiff neck; discharge from / red,
+          immobile ear-drum on otoscopy; swelling or tenderness in the mastoid
+          region.
+        - **Chest:** fast breathing (pneumonia, septicaemia or malaria).
+        - **Abdomen:** enlarged spleen (malaria) or enlarged liver.
+        - **Limbs:** difficulty moving a joint or limb (abscess, septic arthritis,
+          osteomyelitis, rheumatic fever).
+        - **Skin rash:** pustules / red-hot-swollen-tender (staphylococcal);
+          **haemorrhagic** purpura or petechiae (meningococcal, dengue);
+          **maculopapular** (measles, other viral).
+
+    - type: "prose"
+      title: "Laboratory investigations"
+      markdown: |
+        - **oxygen saturation**
+        - **blood smear** (malaria)
+        - **urine microscopy and culture**
+        - **full blood count**
+        - **lumbar puncture** if signs suggest meningitis
+        - **blood culture**.
+
+    - type: "table"
+      title: "Table 16 · Fever without localizing signs"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Malaria** (endemic area)", "Positive blood film or rapid diagnostic test; anaemia; enlarged spleen"]
+        - cells: ["**Septicaemia**", "Seriously ill with no apparent cause; purpura, petechiae; shock; hypothermia in a young infant or severely malnourished child"]
+        - cells: ["**Typhoid**", "Seriously ill with no apparent cause; abdominal tenderness; shock; confusion"]
+        - cells: ["**Urinary tract infection**", "Abdominal pain; loin or suprapubic tenderness; crying on passing urine; passing urine more often than usual; new incontinence; white cells and/or bacteria on microscopy, or positive dipstick"]
+        - cells: ["**Fever with HIV**", "Signs of HIV infection (Chapter 8)"]
+
+    - type: "table"
+      title: "Table 17 · Fever with localizing signs"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Meningitis**", "Multiple/complicated convulsions; altered consciousness; LP positive; stiff neck; bulging fontanelle (infancy); meningococcal rash (petechial/purpuric)"]
+        - cells: ["**Otitis media**", "Red immobile ear-drum on otoscopy; pus draining from ear; ear pain"]
+        - cells: ["**Mastoiditis**", "Tender swelling behind the ear"]
+        - cells: ["**Osteomyelitis**", "Local tenderness; refusal to move the affected limb; refusal to bear weight on a leg"]
+        - cells: ["**Septic arthritis**", "Hot, tender, swollen joint(s)"]
+        - cells: ["**Acute rheumatic fever**", "Migratory joint pains; heart murmur(s)"]
+        - cells: ["**Skin & soft tissue infection**", "Cellulitis; skin boils; pustules; pyomyositis (purulent muscle infection)"]
+        - cells: ["**Pneumonia** (§4.2)", "Cough with fast breathing; lower chest wall indrawing; grunting; nasal flaring; coarse crackles, consolidation, effusion"]
+        - cells: ["**Viral upper respiratory infection**", "Symptoms of cough or cold; no systemic upset"]
+        - cells: ["**Retropharyngeal abscess**", "Sore throat in an older child; difficulty swallowing, drooling; tender cervical nodes"]
+        - cells: ["**Sinusitis**", "Facial tenderness on percussion over the affected sinus; foul nasal discharge"]
+        - cells: ["**Hepatitis**", "Severe anorexia; abdominal pain; jaundice with dark urine"]
+
+    - type: "table"
+      title: "Table 18 · Fever with a rash"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Measles**", "Typical rash; cough, runny nose, red eyes; mouth ulcers; corneal clouding; recent exposure to a measles case; no documented measles vaccination"]
+        - cells: ["**Viral infections**", "Mild systemic upset; cough or cold; transient non-specific rash"]
+        - cells: ["**Relapsing fever**", "Petechial rash, skin haemorrhages; jaundice; tender enlarged liver and spleen; history of a previous episode; positive blood smear for Borrelia"]
+        - cells: ["**Typhus**", "Epidemic of typhus in the region; characteristic macular rash; muscle aches (other rickettsial infections may also be common regionally)"]
+        - cells: ["**Dengue haemorrhagic fever**", "Bleeding from nose/gums or in vomitus; bleeding in stools or black stools; skin petechiae or purpura; enlarged liver and spleen; shock; abdominal tenderness"]

@@ -1,0 +1,44 @@
+# ============================================================
+# WHO IMCI §6.3.4 — Cryptococcal meningitis. Pocket Book 2nd ed (2013),
+# pp.172–173.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-3-4-cryptococcal-meningitis"
+  title: "Cryptococcal Meningitis"
+  list_subtitle: "6.3.4 · HIV · amphotericin + fluconazole"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["cryptococcal meningitis", "HIV", "amphotericin", "fluconazole", "India ink", "pediatric"]
+  aliases:
+    - "Cryptococcal Meningitis"
+  category: "medical"
+
+  page_number: 172
+
+  blocks:
+
+    - type: "prose"
+      title: "When to suspect it"
+      highlight: true
+      markdown: |
+        Consider cryptococcal meningitis in **older children known or suspected
+        to be HIV-positive with immunosuppression** who present with **altered
+        mental status**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **Lumbar puncture** — the opening pressure may be **elevated**, but CSF
+          cell count, glucose and protein can be **virtually normal**.
+        - Analyse CSF with an **India-ink preparation**, or (if available) a
+          **rapid CSF cryptococcal antigen** test — latex agglutination or
+          lateral-flow assay.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        A combination of **amphotericin and fluconazole**. Manage raised
+        intracranial pressure and provide the same supportive care (airway,
+        convulsions, hypoglycaemia, fluids) as for
+        [bacterial meningitis](topic:who-imci-6-3-1-bacterial-meningitis).

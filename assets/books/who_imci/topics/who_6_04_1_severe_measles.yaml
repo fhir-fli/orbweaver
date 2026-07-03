@@ -1,0 +1,90 @@
+# ============================================================
+# WHO IMCI §6.4.1 — Severe complicated measles. Pocket Book 2nd ed
+# (2013), pp.175–177.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-4-1-severe-measles"
+  title: "Severe Complicated Measles"
+  list_subtitle: "6.4.1 · admit · vitamin A · complications"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["severe measles", "vitamin A", "pneumonia", "corneal clouding", "mouth ulcers", "pediatric"]
+  aliases:
+    - "Severe Measles"
+  category: "medical"
+
+  page_number: 175
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        In a child with measles, **any one** of these indicates **severe
+        complicated measles**: **inability to drink or breastfeed**, **vomits
+        everything**, or **convulsions**. On examination, look for complications:
+        lethargy/unconsciousness; **corneal clouding**; deep or extensive mouth
+        ulcers; **pneumonia**; dehydration from diarrhoea; **stridor (measles
+        croup)**; severe malnutrition. **These children need hospital treatment.**
+
+    - type: "prose"
+      title: "Vitamin A therapy"
+      callout: true
+      markdown: |
+        Give **oral vitamin A to all children with measles** unless already
+        adequately treated for this illness. Give it **at diagnosis** and **the
+        next day**; if there is any eye sign of vitamin A deficiency, give a
+        **third dose 2–4 weeks later** at follow-up. Dose by age:
+        - **< 6 months:** **50 000 IU**
+        - **6–11 months:** **100 000 IU**
+        - **1–5 years:** **200 000 IU**
+
+    - type: "prose"
+      title: "Supportive care"
+      markdown: |
+        - **Fever:** paracetamol if temperature ≥ 39 °C causing distress.
+        - **Nutrition:** assess status — weigh and plot (rehydrate before
+          weighing); continue breastfeeding; encourage frequent small meals;
+          check for and treat mouth ulcers.
+
+    - type: "prose"
+      title: "Complications"
+      markdown: |
+        - **Pneumonia:** give antibiotics to all with signs of pneumonia — over
+          **50%** of measles pneumonia has secondary bacterial infection
+          ([§4.2](topic:who-imci-4-2-pneumonia)).
+        - **Otitis media** ([§6.7.2](topic:who-imci-6-7-2-acute-otitis)).
+        - **Diarrhoea:** treat dehydration, bloody or persistent diarrhoea
+          ([Chapter 5](topic:who-imci-5-1-diarrhoea)).
+        - **Measles croup** ([§4.6.1](topic:who-imci-4-6-1-croup)): supportive
+          care — **do NOT give steroids**.
+        - **Eye problems:** conjunctivitis/corneal damage from infection, vitamin
+          A deficiency or harmful remedies — give **vitamin A** (above) and treat
+          any infection. Clear watery discharge → no treatment. **Pus** → clean
+          with clean water on cotton wool, apply **tetracycline eye ointment 3×/
+          day for 7 days**; **never use steroid ointment**; use a protective eye
+          pad; refer to an eye specialist if no improvement.
+        - **Mouth ulcers:** clean with clean **salted water** (a pinch of salt in
+          a cup) at least 4×/day; apply **0.25% gentian violet**; if severe/
+          smelly give **IM/IV benzylpenicillin (50 000 U/kg every 6 h)** and
+          **oral metronidazole (7.5 mg/kg 3×/day) for 5 days**; NG feeding if
+          intake is reduced.
+        - **Neurological (encephalitis):** convulsions, excessive drowsiness or
+          coma — assess for dehydration too, and treat ([Chart 9](topic:who-imci-chart9-diazepam)).
+        - **Severe acute malnutrition** (Chapter 7).
+
+    - type: "prose"
+      title: "Monitoring, follow-up & public health"
+      markdown: |
+        - **Monitor:** temperature twice daily; check for the above complications
+          daily.
+        - **Follow-up:** recovery is often delayed for weeks (especially in the
+          malnourished); give the **third vitamin A dose before discharge** if
+          not already given.
+        - **Public health:** isolate admitted children for **≥ 4 days after rash
+          onset** (longer for malnourished/immunocompromised). Vaccinate other
+          children > 6 months in the ward (including HIV-positive); an infant
+          vaccinated at 6–9 months **must** get the routine dose again after
+          9 months. Check and vaccinate staff as needed.

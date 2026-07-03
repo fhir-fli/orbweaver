@@ -1,0 +1,130 @@
+# ============================================================
+# WHO IMCI §6.10.1 — Severe dengue. Pocket Book 2nd ed (2013),
+# pp.188–192.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-10-1-severe-dengue"
+  title: "Severe Dengue"
+  list_subtitle: "6.10.1 · plasma leakage · shock · fluid care"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["severe dengue", "dengue shock", "plasma leakage", "fluid management", "bleeding", "fluid overload", "pediatric"]
+  aliases:
+    - "Dengue Shock Syndrome"
+    - "Severe Dengue"
+  category: "medical"
+
+  page_number: 188
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Severe dengue is defined by **one or more** of: **plasma leakage** that
+        may lead to **shock** and fluid accumulation; **severe bleeding**;
+        **severe organ impairment**. **Plasma leakage is the most important
+        complication.** Shock is present if the **pulse pressure ≤ 20 mmHg** or
+        there are signs of poor perfusion (cold extremities, delayed capillary
+        refill, rapid weak pulse). Systolic hypotension is a **late** sign. Early
+        shock (day 2–3), a **very narrow pulse pressure (≤ 10 mmHg)** or an
+        undetectable pulse/BP suggest very severe disease.
+
+    - type: "prose"
+      title: "Diagnosis — features of severe dengue"
+      markdown: |
+        Suspect severe dengue with fever > 2 days plus any of:
+        - **plasma leakage** — high or progressively rising EVF; pleural
+          effusions or ascites
+        - **circulatory compromise / shock** — cold clammy extremities; capillary
+          refill > 3 s; weak pulse; narrow pulse pressure
+        - **spontaneous bleeding** — from nose or gums; black stools or
+          coffee-ground vomit; skin bruising or extensive petechiae
+        - **altered consciousness** — lethargy or restlessness, coma, convulsions
+        - **severe gastrointestinal involvement** — persistent vomiting;
+          increasing right-upper-quadrant abdominal pain with tenderness;
+          jaundice.
+
+    - type: "prose"
+      title: "Fluid management — patients WITHOUT shock (PP > 20 mmHg)"
+      markdown: |
+        Admit all children with severe dengue for urgent IV fluid treatment and
+        BP/EVF monitoring.
+        - Give IV fluids for **repeated vomiting or a high/rapidly rising EVF**.
+        - Use **isotonic solutions only** — normal saline, Ringer's lactate
+          (Hartmann's) or 5% glucose in Ringer's lactate.
+        - **Start 6 ml/kg/h for 2 h**, then **reduce to 2–3 ml/kg/h** as soon as
+          possible per clinical response. Give the **minimum volume** to maintain
+          good perfusion and urine output. IV fluids are usually needed only for
+          **24–48 h** as the leak resolves spontaneously.
+
+    - type: "prose"
+      title: "Fluid management — patients IN shock (PP ≤ 20 mmHg)"
+      callout: true
+      markdown: |
+        **Emergency.** Give **10–20 ml/kg of an isotonic crystalloid** (Ringer's
+        lactate or normal saline) **over 1 h**.
+        - **Responds** (perfusion improves, PP widens) → reduce to **10 ml/kg/h
+          for 1 h**, then gradually to **2–3 ml/kg/h over the next 6–8 h**.
+        - **No response** (continuing shock) → a further **20 ml/kg crystalloid
+          over 1 h**, or consider **10 ml/kg of a colloid** (6% dextran 70 or 6%
+          hetastarch) over 1 h, then revert to crystalloid as soon as possible.
+        - Further small boluses (**5–10 ml/kg over 1 h**) may be needed over the
+          next **24–48 h**.
+        - **Review vitals hourly** (especially pulse pressure), EVF and urine
+          output. **Stop IV fluids after ~36–48 h** in most cases — **too much
+          fluid can cause death from fluid overload.**
+
+    - type: "prose"
+      title: "Haemorrhagic complications"
+      markdown: |
+        - Mucosal bleeding is usually **minor**. Major bleeding is usually
+          **gastrointestinal**, in children with very severe or prolonged shock;
+          internal bleeding may not be apparent until the first black stool is
+          passed — suspect it in a child who fails to improve, becomes very pale,
+          with a **falling EVF** and a distended, tender abdomen.
+        - **Profound thrombocytopenia (< 20 000/mm³)** → strict **bed rest**,
+          protect from trauma, and **no IM injections**.
+        - Monitor clinical condition, EVF and platelet count. **Transfusion is
+          rarely necessary** — when major bleeding is confirmed, give **5–10 ml/kg
+          fresh whole blood or 10 ml/kg packed cells** slowly.
+        - **Platelet concentrates** (if available) only for **severe bleeding** —
+          they are of **no value** and may be harmful for thrombocytopenia
+          **without** bleeding.
+
+    - type: "prose"
+      title: "Treatment of fluid overload"
+      markdown: |
+        Fluid overload is an important complication of shock treatment (excess/
+        too-rapid IV, hypotonic fluids, IV continued too long, large volumes in
+        severe leak).
+        - **Early signs:** fast breathing, chest indrawing, large pleural
+          effusions, ascites, periorbital or soft-tissue oedema.
+        - **Late signs:** pulmonary oedema, cyanosis, irreversible shock.
+        - **In shock + overload:** repeated small **colloid** boluses with
+          **inotropes**; **avoid diuretics** (they worsen intravascular
+          depletion); aspiration of large effusions/ascites may relieve breathing
+          (bleeding risk); consider **early positive-pressure ventilation** before
+          pulmonary oedema develops.
+        - **Shock resolved + overload:** oral or IV **furosemide 1 mg/kg once or
+          twice daily for 24 h** and oxygen.
+        - **Shock resolved + stable:** stop IV fluids, keep on strict bed rest for
+          **24–48 h** (excess fluid is reabsorbed and lost by diuresis).
+
+    - type: "prose"
+      title: "Supportive care & monitoring"
+      markdown: |
+        - Treat high fever with **paracetamol** if uncomfortable; **no aspirin or
+          NSAIDs**; **do not give steroids**.
+        - Convulsions are uncommon; if they occur, manage per
+          [Chart 9](topic:who-imci-chart9-diazepam). Unconscious child →
+          [§1.5.3](topic:who-imci-1-5-3-coma-dx).
+        - Hypoglycaemia is unusual; give IV glucose if present. Severe hepatic
+          involvement → standard paediatric texts.
+        - **Monitoring:** in shock — vitals **hourly** (esp. pulse pressure)
+          until stable, then EVF 3–4×/day, doctor review ≥ 4×/day, IV prescribed
+          max 6 h at a time. Without shock — nurse checks vitals and EVF **once
+          daily**, doctor daily. Check platelet count daily in the acute phase;
+          keep a detailed fluid intake/output record.

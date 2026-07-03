@@ -1,0 +1,138 @@
+# ============================================================
+# WHO IMCI §6.3.1 — Bacterial meningitis. Pocket Book 2nd ed (2013),
+# pp.167–170 (supportive care pp.172–174).
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-3-1-bacterial-meningitis"
+  title: "Bacterial Meningitis"
+  list_subtitle: "6.3.1 · LP · ceftriaxone · dexamethasone"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["bacterial meningitis", "lumbar puncture", "ceftriaxone", "cefotaxime", "chloramphenicol", "dexamethasone", "pediatric"]
+  aliases:
+    - "Bacterial Meningitis"
+  category: "medical"
+
+  page_number: 167
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        A serious illness with considerable morbidity and mortality. **No single
+        clinical feature is diagnostic**, but **fever + seizures + meningeal
+        signs + altered consciousness** are common. Consider **viral
+        encephalitis** and **tuberculous meningitis** as differentials.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        **History of:** convulsions; vomiting; inability to drink/breastfeed;
+        headache or pain in the back of the neck; irritability; recent head
+        injury.
+        **On examination:** altered consciousness; neck stiffness; repeated
+        convulsions; **bulging fontanelle** (infants); **non-blanching petechial
+        or purpuric rash**; lethargy; irritability; signs of head trauma
+        (possible skull fracture).
+        **Signs of raised intracranial pressure:** decreased consciousness;
+        **unequal pupils**; rigid posture or **posturing (opisthotonus)**; focal
+        limb paralysis; irregular breathing.
+
+    - type: "prose"
+      title: "Laboratory investigations"
+      markdown: |
+        - **Lumbar puncture** and CSF examination confirm the diagnosis. **If the
+          CSF is cloudy, assume meningitis and start treatment** while awaiting
+          confirmation.
+        - **CSF:** low glucose (< 1.5 mmol/L, or CSF:serum ratio ≤ 0.4); high
+          protein (> 0.4 g/L); Gram stain and culture; a raised polymorph white
+          cell count.
+        - **Blood culture** where available.
+        - **Precaution — raised ICP:** weigh the value of the LP against the risk;
+          if in doubt, **delay the LP and start treatment** for suspected
+          meningitis.
+
+    - type: "prose"
+      title: "Antibiotic treatment — start immediately"
+      markdown: |
+        Start antibiotics **before** lab results if meningitis is clinically
+        suspected or the CSF is cloudy; if signs are present and LP is not
+        possible, **treat immediately**. Choose one regimen:
+        - **Ceftriaxone 50 mg/kg IM/IV every 12 h**, **or 100 mg/kg once daily**
+          (deep IM or slow IV over 30–60 min), for **7–10 days**; **or**
+        - **Cefotaxime 50 mg/kg IM/IV every 6 h for 7–10 days**; **or**
+        - (no known chloramphenicol/β-lactam resistance) **chloramphenicol
+          25 mg/kg IM/IV every 6 h + ampicillin 50 mg/kg every 6 h**, **or**
+          **chloramphenicol + benzylpenicillin 60 mg/kg (100 000 U/kg) every
+          6 h** — for **10 days**.
+
+        Review therapy when CSF results are available. Once improved, continue
+        with daily third-generation cephalosporin, or oral chloramphenicol
+        (unless malnourished or with diarrhoea — then give the **full course
+        parenterally**).
+
+    - type: "prose"
+      title: "Poor response — look for complications"
+      markdown: |
+        - **Subdural effusion or cerebral abscess** — persistent fever plus focal
+          neurological signs or reduced consciousness → refer for imaging/
+          specialist care.
+        - Look for **other infection sites** (cellulitis at injection sites,
+          arthritis, osteomyelitis).
+        - **Repeat the LP after 3–5 days** if fever persists and the child is not
+          improving; look for a falling leukocyte count and rising glucose.
+
+    - type: "prose"
+      title: "Steroids"
+      callout: true
+      markdown: |
+        **Dexamethasone 0.15 mg/kg every 6 h for 2–4 days**, given **10–20 min
+        before or with** the first antibiotic, benefits some bacterial meningitis
+        (H. influenzae, pneumococcal, tuberculous) by reducing inflammation.
+        Evidence is insufficient to recommend **routine** steroid use in
+        developing-country bacterial meningitis, **except tuberculous
+        meningitis**. **Do NOT give steroids** in: **newborns**, **suspected
+        cerebral malaria**, or **suspected viral encephalitis**.
+
+    - type: "prose"
+      title: "Antimalarial (malarious areas)"
+      markdown: |
+        Take a blood smear or RDT — **severe malaria is a differential**. Treat
+        with an effective antimalarial if malaria is diagnosed, or presumptively
+        if a smear cannot be taken.
+
+    - type: "prose"
+      title: "Supportive care"
+      markdown: |
+        - **Convulsions:** rectal/IV diazepam ([Chart 9](topic:who-imci-chart9-diazepam));
+          treat repeated convulsions with a preventive anticonvulsant (phenytoin
+          or phenobarbital).
+        - **Hypoglycaemia:** check glucose; give **5 ml/kg 10% dextrose** if low
+          ([Chart 10](topic:who-imci-chart10-glucose)).
+        - **Unconscious child:** keep the airway open; recovery position; turn
+          every 2 h; do not lie in a wet bed; attend to pressure points.
+        - **Oxygen** if convulsions, pneumonia with hypoxia (SpO₂ ≤ 90%),
+          cyanosis, severe indrawing or RR > 70/min.
+        - **Fluids:** meningitis risks **SIADH** (over-hydration → cerebral
+          oedema) but under-hydration harms perfusion — correct dehydration, but
+          some children need only **50–75% of maintenance IV** in the first 2
+          days. Watch for fluid overload (eyelid oedema, enlarged liver, basal
+          crackles).
+        - **Nutrition:** feed as soon as safe (breastfeed or NG if aspiration
+          risk); continue glucose monitoring.
+
+    - type: "prose"
+      title: "Monitoring, complications & follow-up"
+      markdown: |
+        - **Monitoring:** nurse checks consciousness and vitals (incl. pupil
+          size) **every 3 h for 24 h**, then every 6 h; doctor at least twice
+          daily.
+        - **Complications — acute:** convulsions (may be focal → worse
+          prognosis), shock, hyponatraemia. **Long-term:** sensorineural hearing
+          loss, motor/developmental problems, epilepsy.
+        - **Follow-up:** sensorineural deafness is common — arrange a **hearing
+          assessment 1 month after discharge**; measure infant head
+          circumference; refer for physiotherapy if neurological damage.

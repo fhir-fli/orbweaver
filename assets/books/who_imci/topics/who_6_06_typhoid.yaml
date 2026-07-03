@@ -1,0 +1,77 @@
+# ============================================================
+# WHO IMCI §6.6 — Typhoid fever. Pocket Book 2nd ed (2013), pp.180–182.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-6-typhoid"
+  title: "Typhoid Fever"
+  list_subtitle: "6.6 · ciprofloxacin · perforation risk"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["typhoid", "enteric fever", "salmonella typhi", "ciprofloxacin", "ceftriaxone", "azithromycin", "pediatric"]
+  aliases:
+    - "Enteric Fever"
+    - "Typhoid"
+  category: "medical"
+
+  page_number: 180
+
+  blocks:
+
+    - type: "prose"
+      title: "When to suspect it"
+      highlight: true
+      markdown: |
+        Consider typhoid if a child has fever **plus any of:** constipation,
+        vomiting, abdominal pain, headache, cough, or a transient rash —
+        particularly if fever has persisted **≥ 7 days and malaria has been
+        excluded**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Main features:
+        - fever with **no obvious focus** of infection
+        - **no meningitis signs** / negative LP (note: children with typhoid can
+          occasionally have a stiff neck)
+        - systemic upset — inability to drink/breastfeed, convulsions, lethargy,
+          disorientation/confusion, or vomiting everything
+        - **rose/pink spots** on the abdominal wall (light-skinned children)
+        - **hepatosplenomegaly**, tender or distended abdomen.
+
+        Typhoid can present **atypically in infants** as an acute febrile illness
+        with **shock and hypothermia**. Where **typhus** is common, the two can
+        be hard to distinguish clinically.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Oral ciprofloxacin 15 mg/kg twice a day** (or another fluoroquinolone
+          — gatifloxacin, ofloxacin, perfloxacin) **first-line for 7–10 days**.
+        - **Poor response after 48 h** → suspect **drug-resistant typhoid**;
+          second-line: **IV ceftriaxone 80 mg/kg/day** or **oral azithromycin
+          20 mg/kg/day** (or another third-generation cephalosporin) for
+          **5–7 days**.
+        - Where drug resistance among Salmonella isolates is known, follow
+          **national guidelines** on local susceptibility.
+
+    - type: "prose"
+      title: "Supportive care & monitoring"
+      markdown: |
+        - **High fever ≥ 39 °C** causing distress → paracetamol.
+        - Nurse checks at least **every 3 h**, doctor at least twice daily.
+
+    - type: "prose"
+      title: "Complications"
+      callout: true
+      markdown: |
+        Convulsions, confusion or coma, diarrhoea, dehydration, shock, cardiac
+        failure, pneumonia, osteomyelitis and anaemia. In **young infants**,
+        shock and hypothermia can occur.
+
+        **Acute gastrointestinal perforation** with haemorrhage and peritonitis
+        can occur — severe abdominal pain, vomiting, abdominal tenderness on
+        palpation, severe pallor and shock; an abdominal mass (abscess) and/or
+        enlarged liver/spleen may be found. **If there are signs of GI
+        perforation:** pass an **IV line and nasogastric tube**, start
+        appropriate **fluids**, and obtain **urgent surgical attention**.

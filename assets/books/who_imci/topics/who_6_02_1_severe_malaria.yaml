@@ -1,0 +1,179 @@
+# ============================================================
+# WHO IMCI §6.2.1 — Severe malaria. Pocket Book 2nd ed (2013),
+# pp.156–162.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-2-1-severe-malaria"
+  title: "Severe Malaria"
+  list_subtitle: "6.2.1 · parenteral artesunate · complications"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["severe malaria", "cerebral malaria", "artesunate", "quinine", "hypoglycaemia", "severe anaemia", "pediatric"]
+  aliases:
+    - "Severe Malaria"
+    - "Cerebral Malaria"
+  category: "medical"
+
+  page_number: 156
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Severe malaria — usually **Plasmodium falciparum** — is life-threatening.
+        It starts with **fever and often vomiting**, and children can deteriorate
+        rapidly over **1–2 days** into **coma (cerebral malaria)** or prostration,
+        convulsions, severe anaemia, respiratory distress (acidosis) and
+        hypoglycaemia.
+
+    - type: "prose"
+      title: "Diagnosis — features of severe malaria"
+      markdown: |
+        A change of behaviour, confusion, drowsiness or altered consciousness
+        with generalized weakness suggests **cerebral malaria**. Main features:
+        - **generalized multiple convulsions** — more than two in 24 h
+        - **impaired consciousness**, including unrousable coma
+        - **prostration** — unable to walk or sit up without assistance
+        - **deep laboured (acidotic) breathing**
+        - **pulmonary oedema** (clinical or radiological)
+        - **abnormal bleeding**
+        - **jaundice** plus other vital-organ dysfunction
+        - **severe pallor**
+        - **circulatory collapse / shock** — systolic BP < 50 mmHg
+        - **haemoglobinuria** (dark urine).
+
+    - type: "prose"
+      title: "Laboratory findings"
+      markdown: |
+        - **hypoglycaemia** — blood glucose < 2.5 mmol/L (< 45 mg/dl); check in
+          all children with signs of severe malaria
+        - **hyperparasitaemia** — > 100 000/µl (2.5%) in low-transmission areas
+          or > 20% in high-transmission areas
+        - **severe anaemia** — EVF < 15%, Hb < 5 g/dl
+        - **high blood lactate** (> 5 mmol/L); **high creatinine** (> 265 µmol/L)
+        - **lumbar puncture** to exclude bacterial meningitis in a child with
+          severe malaria and altered consciousness/coma (unless contraindicated).
+
+        If severe malaria is suspected and the smear is negative, do an **RDT**.
+        A positive test confirms, but keep looking for other severe illness
+        (esp. severe bacterial infection). If the RDT is negative, malaria is
+        unlikely — seek an alternative diagnosis.
+
+    - type: "prose"
+      title: "Emergency measures — within the first hour"
+      callout: true
+      markdown: |
+        - **Unconscious:** insert a **nasogastric tube** and suction the stomach
+          to minimize aspiration risk; keep the airway open; recovery position.
+        - **Check and correct hypoglycaemia.**
+        - **Treat convulsions** with rectal or IV diazepam ([Chart 9](topic:who-imci-chart9-diazepam));
+          do **not** give prophylactic anticonvulsants.
+        - **Start an effective antimalarial** (below).
+        - **Hyperpyrexia** → paracetamol or ibuprofen to bring temperature
+          below 39 °C.
+        - Check and treat **dehydration** and **severe anaemia**; institute
+          regular observation of vital and neurological signs.
+
+    - type: "prose"
+      title: "Antimalarial treatment"
+      markdown: |
+        If confirmation will take > 1 h, **start treatment before** the diagnosis
+        is confirmed. **Parenteral artesunate is the drug of choice**; give any
+        parenteral agent for **at least 24 h** (even if oral could be tolerated
+        earlier), then complete a full oral ACT course.
+        - **Artesunate: 2.4 mg/kg IV or IM** on admission, then at **12 h and
+          24 h**, then **once daily**.
+        - **Quinine: loading 20 mg/kg** (salt) by infusion in 10 ml/kg IV fluid
+          over **2–4 h**; then **8 h after the start of the loading dose**,
+          **10 mg/kg over 2 h**, repeated **every 8 h** until oral. **Rate must
+          not exceed 5 mg/kg/h; never give as a bolus.** If IV impossible, give
+          the loading dose as **two 10 mg/kg IM injections** into the anterior
+          thigh.
+        - **Artemether: 3.2 mg/kg IM** on admission, then **1.6 mg/kg daily**
+          (use a 1-ml tuberculin syringe for the small volume; absorption can be
+          erratic — use only if artesunate/quinine are unavailable).
+        - **Then complete** a full course of ACT, e.g. artemether–lumefantrine,
+          artesunate + amodiaquine, artesunate + sulfadoxine–pyrimethamine, or
+          dihydroartemisinin + piperaquine.
+
+    - type: "prose"
+      title: "Supportive care"
+      markdown: |
+        - Meticulous **nursing care**, especially for unconscious patients.
+        - Give **daily fluid requirements** and monitor fluid status carefully
+          (keep a record of intake and output).
+        - **NG feeding** if the child cannot feed for > 1–2 days (preferable to
+          prolonged IV fluids).
+        - **Avoid harmful drugs** — corticosteroids, low-molecular-mass dextran,
+          other anti-inflammatories.
+
+    - type: "prose"
+      title: "Complication — cerebral malaria & convulsions"
+      markdown: |
+        - **Cerebral malaria (coma):** monitor consciousness with **AVPU** or a
+          local coma scale; **exclude hypoglycaemia** (check glucose) and
+          **bacterial meningitis** (LP if no contraindication; if you cannot do
+          an LP, give antibiotics for bacterial meningitis); monitor all vitals.
+        - **Convulsions** (common before/after coma; may be subtle — nystagmus,
+          limb twitching, an irregular breathing pattern): give **diazepam**;
+          check/treat **hypoglycaemia**; **phenobarbital** for repeated
+          convulsions; paracetamol if temperature ≥ 39 °C.
+
+    - type: "prose"
+      title: "Complication — hypoglycaemia"
+      markdown: |
+        Blood glucose < 2.5 mmol/L (< 45 mg/dl); common in children < 3 years,
+        those with convulsions or hyperparasitaemia, and the comatose — it can
+        **mimic cerebral malaria**.
+        - Give **5 ml/kg of 10% glucose (dextrose) IV** rapidly ([Chart 10](topic:who-imci-chart10-glucose)).
+          If no IV, give via **intraosseous** or **sublingual sugar**; recheck
+          after 30 min and repeat if still low (< 3.0 mmol/L).
+        - **Prevent** further hypoglycaemia in an unconscious child with **10%
+          dextrose** in the maintenance infusion (add 20 ml of 50% glucose to
+          80 ml of 0.9% saline or Ringer's lactate); do not exceed maintenance
+          fluid needs. Once the child can take food, **stop IV and feed** (NG if
+          needed); continue glucose monitoring.
+
+    - type: "prose"
+      title: "Complication — severe anaemia"
+      markdown: |
+        Severe pallor with fast pulse, difficult breathing, confusion or
+        restlessness; watch for **heart failure** (gallop, enlarged liver, rarely
+        pulmonary oedema). **Transfuse** as soon as possible:
+        - **all** children with **EVF ≤ 12% or Hb ≤ 4 g/dl**
+        - **less severe** (EVF 12–15%; Hb 4–5) **with** shock, impaired
+          consciousness, respiratory acidosis, heart failure, or very high
+          parasitaemia (> 20%).
+
+        Give **10 ml/kg packed cells or 20 ml/kg whole blood over 3–4 h**. Check
+        RR and pulse every 15 min — if either rises (fluid overload), give **IV
+        furosemide 1–2 mg/kg** (max 20 mg). In severely malnourished children,
+        give **whole blood 10 ml/kg** (not 20) once, and do not repeat. Give a
+        daily **iron–folate** tablet or iron syrup for **14 days**.
+
+    - type: "prose"
+      title: "Complication — respiratory distress (acidosis), shock, aspiration"
+      markdown: |
+        - **Respiratory distress (acidosis)** — deep laboured breathing with a
+          clear chest: give **oxygen**; correct reversible causes (dehydration,
+          severe anaemia); monitor.
+        - **Shock** (cold extremities, weak rapid pulse, capillary refill > 3 s):
+          suggests **complicating septicaemia** — correct hypovolaemia, take a
+          blood culture, and give **both antimalarial and antibiotic** treatment
+          for septicaemia ([§6.5](topic:who-imci-6-5-septicaemia)).
+        - **Aspiration pneumonia** can be **fatal** — treat immediately: place
+          on the side, head up 30°; give oxygen if SpO₂ ≤ 90%, cyanosis, severe
+          indrawing or RR ≥ 70/min.
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        Check the IV rate hourly; children with cold extremities, hypoglycaemia,
+        acidosis or deep coma are at greatest risk of death and need close
+        observation. Monitor **consciousness and convulsions**, temperature,
+        pulse, RR (and BP if possible) at least every **6 h for 48 h**, and
+        **blood glucose every 3 h** until fully conscious. Keep a careful record
+        of fluid intake and output; avoid over-infusion (use a burette/chamber).

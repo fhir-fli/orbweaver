@@ -1,0 +1,40 @@
+# ============================================================
+# WHO IMCI §6.4 — Measles (overview of the nested group). Pocket Book
+# 2nd ed (2013), pp.174–175.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-4-measles"
+  title: "Measles"
+  list_subtitle: "6.4 · rash + fever + cough/coryza/red eyes"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["measles", "vitamin A", "rash", "vaccination", "pediatric"]
+  aliases:
+    - "Measles"
+  category: "medical"
+
+  page_number: 174
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        A **highly contagious viral disease** with serious complications
+        (including **blindness** in children with pre-existing vitamin A
+        deficiency) and high mortality. It is **rare in infants < 3 months**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Diagnose measles if the child has **all** of:
+        - **fever** (sometimes with a febrile convulsion), **and**
+        - a **generalized maculopapular rash**, **and**
+        - **one of:** cough, runny nose, or red eyes.
+
+        In children with **HIV**, some of these signs may be absent and the
+        diagnosis can be difficult. Then classify as **severe complicated**
+        ([§6.4.1](topic:who-imci-6-4-1-severe-measles)) or **non-severe**
+        ([§6.4.2](topic:who-imci-6-4-2-nonsevere-measles)).

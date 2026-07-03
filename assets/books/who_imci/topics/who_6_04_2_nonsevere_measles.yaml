@@ -1,0 +1,55 @@
+# ============================================================
+# WHO IMCI §6.4.2 — Non-severe measles. Pocket Book 2nd ed (2013),
+# p.178.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-4-2-nonsevere-measles"
+  title: "Non-severe Measles"
+  list_subtitle: "6.4.2 · outpatient · vitamin A"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["non-severe measles", "vitamin A", "outpatient", "pediatric"]
+  aliases:
+    - "Non-severe Measles"
+  category: "medical"
+
+  page_number: 178
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Non-severe measles: the mother clearly reports a measles rash (or the
+        child has one) **plus** fever **plus** one of cough, runny nose or red
+        eyes — **and none** of the features of severe measles
+        ([§6.4.1](topic:who-imci-6-4-1-severe-measles)).
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - Treat as an **outpatient**.
+        - **Vitamin A:** check whether an adequate dose has already been given
+          for this illness; if not, give **< 6 months 50 000 IU**, **6–11 months
+          100 000 IU**, **1–5 years 200 000 IU** (at diagnosis and the next day).
+
+    - type: "prose"
+      title: "Supportive care"
+      markdown: |
+        - **Fever:** paracetamol if ≥ 39 °C causing distress.
+        - **Nutrition:** assess with **MUAC**; continue breastfeeding; frequent
+          small meals; treat mouth ulcers if present.
+        - **Eye care:** mild conjunctivitis with clear discharge → clean, no
+          treatment. **Pus** → clean and apply **tetracycline eye ointment 3×/day
+          for 7 days**; **never steroid ointment**.
+        - **Mouth care:** wash with clean **salted water** (a pinch of salt in a
+          cup) at least 4×/day; avoid salty, spicy or hot foods.
+
+    - type: "prose"
+      title: "Follow-up"
+      markdown: |
+        Ask the mother to return in **2 days** to check that mouth/eye problems
+        are resolving, exclude severe complications, and monitor nutrition and
+        growth.

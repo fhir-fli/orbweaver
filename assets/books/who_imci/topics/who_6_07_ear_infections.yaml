@@ -1,0 +1,33 @@
+# ============================================================
+# WHO IMCI §6.7 — Ear infections (overview of the nested group). Pocket
+# Book 2nd ed (2013), p.182.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-7-ear-infections"
+  title: "Ear Infections"
+  list_subtitle: "6.7 · mastoiditis · otitis media"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["ear infection", "otitis media", "mastoiditis", "pediatric"]
+  aliases:
+    - "Ear Infection"
+  category: "medical"
+
+  page_number: 182
+
+  blocks:
+
+    - type: "prose"
+      title: "Ear infections & fever"
+      highlight: true
+      markdown: |
+        Ear infections are a common cause of fever and range from the serious to
+        the chronic:
+        - **Mastoiditis** ([§6.7.1](topic:who-imci-6-7-1-mastoiditis)) — a
+          bacterial infection of the mastoid bone; can lead to meningitis or
+          brain abscess.
+        - **Acute otitis media** ([§6.7.2](topic:who-imci-6-7-2-acute-otitis)) —
+          ear pain or pus for < 2 weeks.
+        - **Chronic otitis media** ([§6.7.3](topic:who-imci-6-7-3-chronic-otitis)) —
+          pus draining for ≥ 2 weeks.

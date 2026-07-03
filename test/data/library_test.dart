@@ -99,12 +99,12 @@ void main() {
     }
 
     test(
-        'who_imci: 5 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
-        'Ch.4 = 24, Ch.5 = 9)', () {
+        'who_imci: 6 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
+        'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(5));
+      expect(contents, hasLength(6));
       expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
       expect((contents[1] as YamlMap)['title'],
@@ -114,8 +114,24 @@ void main() {
       expect((contents[3] as YamlMap)['title'],
           '4. Cough or difficulty in breathing');
       expect((contents[4] as YamlMap)['title'], '5. Diarrhoea');
-      // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9) = 95 topics.
-      expect(leafCount(contents), 95);
+      expect((contents[5] as YamlMap)['title'], '6. Fever');
+      // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
+      // + Ch.6 (25) = 120 topics.
+      expect(leafCount(contents), 120);
+    });
+
+    test('who_imci: Chapter 6 is a green-tabbed group; §6.3 nests', () {
+      final b = loadBook('who_imci');
+      final ch6 = (b['contents'] as YamlList)[5] as YamlMap;
+      expect(ch6['palette']['accent'], '0xFF40BA4E');
+      // 6.1/6.2/6.3/6.4/6.7/6.10 groups + 6.5/6.6/6.8/6.9/6.11 leaves = 11.
+      final children = ch6['children'] as YamlList;
+      expect(children, hasLength(11));
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '6.3 Meningitis',
+      ) as YamlMap;
+      expect(g['topic'], isNotNull);
+      expect((g['children'] as YamlList), hasLength(4));
     });
 
     test('who_imci: Chapter 5 is an olive-tabbed group; §5.2 nests', () {

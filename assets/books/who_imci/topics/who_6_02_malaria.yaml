@@ -1,0 +1,35 @@
+# ============================================================
+# WHO IMCI §6.2 — Malaria (overview of the nested group). Pocket Book
+# 2nd ed (2013), p.156.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-2-malaria"
+  title: "Malaria"
+  list_subtitle: "6.2 · severe vs uncomplicated"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["malaria", "plasmodium falciparum", "artesunate", "ACT", "pediatric"]
+  aliases:
+    - "Malaria"
+  category: "medical"
+
+  page_number: 156
+
+  blocks:
+
+    - type: "prose"
+      title: "Suspect it, confirm it, classify it"
+      highlight: true
+      markdown: |
+        In an endemic area, suspect malaria in **any** febrile child. Confirm
+        with a **blood smear or rapid diagnostic test (RDT)**, then classify:
+        - **Severe malaria** — a general danger sign or other feature of severe
+          disease; a medical emergency needing **parenteral** treatment
+          ([§6.2.1](topic:who-imci-6-2-1-severe-malaria)).
+        - **Uncomplicated malaria** — positive test, fever, but **no** signs of
+          severe malaria; treat with an oral **artemisinin-based combination
+          therapy (ACT)** ([§6.2.2](topic:who-imci-6-2-2-uncomplicated-malaria)).
+
+        In a malarious area, if a child has fever with no obvious cause and
+        malaria **cannot be confirmed**, still **treat for malaria**.

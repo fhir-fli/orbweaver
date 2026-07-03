@@ -1,0 +1,33 @@
+# ============================================================
+# WHO IMCI §6.3 — Meningitis (overview of the nested group). Pocket Book
+# 2nd ed (2013), p.167.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-3-meningitis"
+  title: "Meningitis"
+  list_subtitle: "6.3 · early diagnosis is essential"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["meningitis", "lumbar puncture", "ceftriaxone", "pediatric"]
+  aliases:
+    - "Meningitis"
+  category: "medical"
+
+  page_number: 167
+
+  blocks:
+
+    - type: "prose"
+      title: "Early diagnosis is essential"
+      highlight: true
+      markdown: |
+        Early diagnosis is essential for effective treatment. This section covers
+        children **> 2 months**; for meningitis in **young infants < 2 months**
+        see [§3.9](topic:who-imci-3-9-meningitis). Consider **viral encephalitis**
+        and **tuberculous meningitis** as differentials in any child with
+        meningeal signs.
+        - **Bacterial meningitis** ([§6.3.1](topic:who-imci-6-3-1-bacterial-meningitis)) — the emergency; treat on suspicion.
+        - **Meningococcal epidemics** ([§6.3.2](topic:who-imci-6-3-2-meningococcal-epidemics)).
+        - **Tuberculous meningitis** ([§6.3.3](topic:who-imci-6-3-3-tb-meningitis)).
+        - **Cryptococcal meningitis** ([§6.3.4](topic:who-imci-6-3-4-cryptococcal-meningitis)).

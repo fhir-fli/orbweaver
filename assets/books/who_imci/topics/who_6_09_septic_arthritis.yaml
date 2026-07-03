@@ -1,0 +1,76 @@
+# ============================================================
+# WHO IMCI §6.9 — Septic arthritis or osteomyelitis. Pocket Book 2nd ed
+# (2013), pp.186–187.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-9-septic-arthritis"
+  title: "Septic Arthritis or Osteomyelitis"
+  list_subtitle: "6.9 · aspirate · cloxacillin · 3–5 weeks"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["septic arthritis", "osteomyelitis", "cloxacillin", "staphylococcus aureus", "salmonella", "pediatric"]
+  aliases:
+    - "Septic Arthritis"
+    - "Osteomyelitis"
+  category: "medical"
+
+  page_number: 186
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Acute infection of a **bone or joint**, usually from **blood-borne
+        spread**; sometimes from an adjacent focus or a penetrating injury.
+        Occasionally several bones or joints are involved.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **Acute:** the child looks ill, is febrile, and **refuses to move** the
+          affected limb/joint or bear weight on the leg. **Osteomyelitis** —
+          swelling and tenderness over the bone. **Septic arthritis** — a **hot,
+          swollen, tender joint** with reduced range of movement.
+        - **Chronic:** sometimes presents as chronic illness (less ill, less
+          marked local signs, may have no fever); **discharging sinuses** suggest
+          **tuberculous osteomyelitis**.
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        - **X-rays are not helpful early.**
+        - If septic arthritis is strongly suspected, introduce a **sterile
+          needle** (under strictly aseptic conditions, after 1% lignocaine) and
+          **aspirate the joint**. If there is pus, use a **wide-bore needle** to
+          obtain a sample; examine for white cells and **culture**.
+        - **Organisms:** **Staphylococcus aureus** (> 3 years); in younger
+          children **H. influenzae type b, Streptococcus pneumoniae or S.
+          pyogenes group A**; **Salmonella** in malarious areas and sickle-cell
+          disease.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Base the antibiotic on the organism and sensitivities; otherwise:
+        - **IM/IV cloxacillin or flucloxacillin 50 mg/kg every 6 h** (children
+          > 3 years); if unavailable, **chloramphenicol**.
+        - **Clindamycin** or a **2nd/3rd-generation cephalosporin** may be given.
+        - Once temperature is normal, change to **equivalent oral** treatment;
+          total **3 weeks for septic arthritis, 5 weeks for osteomyelitis**.
+        - **Septic arthritis:** remove pus by **aspiration**. If swelling recurs
+          after aspiration, or the infection responds poorly by 3 weeks →
+          **surgical** exploration, drainage of pus, and excision of dead bone;
+          extend antibiotics to **6 weeks**.
+        - **Tuberculous osteomyelitis** (slow onset, chronic course, poor
+          response): treat per the **national TB programme**; surgery is almost
+          never needed as abscesses subside with anti-TB treatment.
+
+    - type: "prose"
+      title: "Supportive care"
+      markdown: |
+        **Rest** the affected limb or joint; if it is the leg, no weight-bearing
+        until pain-free. Treat pain or high fever causing discomfort with
+        **paracetamol**.

@@ -1,0 +1,80 @@
+# ============================================================
+# WHO IMCI §6.5 — Septicaemia. Pocket Book 2nd ed (2013), pp.179–180.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-5-septicaemia"
+  title: "Septicaemia"
+  list_subtitle: "6.5 · seriously ill · ampicillin + gentamicin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["septicaemia", "sepsis", "septic shock", "ampicillin", "gentamicin", "ceftriaxone", "pediatric"]
+  aliases:
+    - "Sepsis"
+    - "Septicaemia"
+  category: "medical"
+
+  page_number: 179
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Consider septicaemia in a child with **acute fever who is severely ill
+        and no other cause is found**. It can also complicate meningitis,
+        pneumonia, UTI or any other bacterial infection. Common organisms:
+        **Streptococcus, Haemophilus influenzae, Staphylococcus aureus**, and
+        enteric Gram-negatives (**E. coli, Klebsiella** — common in severe
+        malnutrition); **non-typhoidal Salmonella** in malarious areas. Where
+        meningococcus is common, **petechiae or purpura** allow a clinical
+        diagnosis of meningococcal septicaemia.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        The history helps find the likely source — **fully undress and examine**
+        for local infection before deciding there is no other cause. Look for:
+        - fever with **no obvious focus**
+        - **negative** malaria film
+        - **no meningitis signs** / negative LP
+        - **confusion or lethargy**
+        - systemic upset — inability to drink/breastfeed, convulsions, lethargy,
+          vomiting everything, tachypnoea
+        - **purpura** may be present.
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        As guided by presentation: **full blood count**; **urinalysis** (urine
+        culture); **blood culture**; **chest X-ray**. In severe cases the child
+        may show **septic shock** — cold hands, poor perfusion, capillary refill
+        > 3 s, fast weak pulse, hypotension and decreased mental status.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Start antibiotics **immediately**.
+        - **IV ampicillin 50 mg/kg every 6 h + IV gentamicin 7.5 mg/kg once
+          daily for 7–10 days**; **or ceftriaxone 80–100 mg/kg IV once daily**
+          (over 30–60 min) for 7–10 days.
+        - **Staphylococcal** infection strongly suspected → **flucloxacillin
+          50 mg/kg IV every 6 h + gentamicin 7.5 mg/kg once daily**.
+        - Give **oxygen** if in respiratory distress or shock.
+        - **Septic shock:** rapid IV infusion of **20 ml/kg** normal saline or
+          Ringer's lactate; reassess and **repeat 20 ml/kg up to 60 ml/kg**; if
+          still in shock (**fluid-refractory**), start **adrenaline or dopamine**
+          if available.
+
+    - type: "prose"
+      title: "Supportive care & monitoring"
+      markdown: |
+        - **High fever ≥ 39 °C** causing distress → paracetamol or ibuprofen.
+        - Monitor **Hb/EVF**; if low and falling, transfuse (**20 ml/kg fresh
+          whole blood or 10 ml/kg packed cells**), weighing benefit against
+          bloodborne-infection risk.
+        - Nurse checks at least **every 3 h**, doctor at least twice daily —
+          watch for **complications** (shock, cyanosis, reduced urine output,
+          signs of bleeding: petechiae, purpura, venepuncture-site bleeding, skin
+          ulceration).

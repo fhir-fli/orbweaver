@@ -1,0 +1,56 @@
+# ============================================================
+# WHO IMCI §6.10 — Dengue (overview of the nested group). Pocket Book
+# 2nd ed (2013), p.188.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-10-dengue"
+  title: "Dengue"
+  list_subtitle: "6.10 · Aedes · no aspirin/NSAIDs"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["dengue", "arbovirus", "aedes", "plasma leakage", "pediatric"]
+  aliases:
+    - "Dengue Fever"
+  category: "medical"
+
+  page_number: 188
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Caused by an **arbovirus transmitted by Aedes mosquitoes**. Highly
+        seasonal in Asia and South America and increasingly in Africa. The
+        illness starts with **acute fever, retro-orbital pain and continuously
+        high temperatures for 2–7 days**. Most children recover; a **small
+        proportion develop severe disease**. In recovery, a **macular or
+        confluent blanching rash** is often noted.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Suspect dengue in an at-risk area if fever has lasted **> 2 days**.
+        Headache, pain behind the eyes, joint and muscle pain, abdominal pain,
+        vomiting and/or a rash may occur but are **not always present** — it can
+        be difficult to distinguish from other common childhood infections.
+
+    - type: "prose"
+      title: "Treatment — non-severe dengue"
+      markdown: |
+        Most children can be managed **at home** if the family has good access to
+        care.
+        - **Counsel to return immediately** if any of: severe abdominal pain,
+          persistent vomiting, cold clammy extremities, lethargy or restlessness,
+          bleeding (e.g. black stools or coffee-ground vomit).
+        - Encourage **oral fluid** (clean water or ORS) to replace losses.
+        - **Paracetamol** for high fever if uncomfortable. **Do NOT give aspirin
+          or NSAIDs such as ibuprofen — they aggravate bleeding.**
+        - **Follow up daily** until the temperature is normal; check the **EVF
+          daily** if possible; watch for signs of severe disease.
+        - **Admit** any child with signs of severe disease (mucosal or severe
+          bleeding, shock, altered mental status, convulsions or jaundice) or a
+          rapid, marked rise in EVF
+          ([§6.10.1](topic:who-imci-6-10-1-severe-dengue)).

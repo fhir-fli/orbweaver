@@ -1,0 +1,100 @@
+# ============================================================
+# WHO IMCI §6.11 — Rheumatic fever (Table 20 revised Jones criteria).
+# Pocket Book 2nd ed (2013), pp.193–195.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-11-rheumatic-fever"
+  title: "Rheumatic Fever"
+  list_subtitle: "6.11 · Jones criteria · aspirin · prophylaxis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["rheumatic fever", "jones criteria", "streptococcus pyogenes", "aspirin", "benzathine penicillin", "carditis", "pediatric"]
+  aliases:
+    - "Acute Rheumatic Fever"
+  category: "medical"
+
+  page_number: 193
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Rheumatic fever commonly follows **S. pyogenes** infection of the throat
+        or skin. Children present with **fever and pains in the large joints**,
+        which may **migrate** from one joint to another. The infection can damage
+        the **heart valves** (especially mitral and aortic), leading to
+        respiratory distress and **heart failure**. Mild disease may cause only a
+        **heart murmur**; severe disease presents with fever, fast/difficult
+        breathing and lethargy, and may include **chest pain or fainting**.
+        Affected children are usually **> 5 years**; those with heart failure have
+        a rapid heart rate, respiratory distress and an enlarged liver.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Diagnosis matters because **penicillin prophylaxis** prevents further
+        episodes and worsening valve damage. Acute rheumatic fever is diagnosed
+        clinically by the **revised Jones criteria** (Table 20): **two major**, or
+        **one major and two minor** manifestations, **plus evidence of a previous
+        group A streptococcal infection**.
+
+    - type: "table"
+      title: "Table 20 · WHO/revised Jones criteria for rheumatic fever"
+      column_flex: [4, 4]
+      columns: ["Diagnostic category", "Criteria"]
+      rows:
+        - cells: ["**Primary episode**, or recurrent attack **without** established rheumatic heart disease", "**Two major**, or **one major + two minor** manifestations, **plus** evidence of a previous group A strep infection"]
+        - cells: ["Recurrent attack **with** established rheumatic heart disease", "**Two minor** manifestations **plus** evidence of a previous group A strep infection"]
+        - cells: ["**Rheumatic chorea**, or insidious-onset rheumatic carditis", "Other major manifestations or evidence of group A strep infection **not required**"]
+
+    - type: "prose"
+      title: "Jones — major, minor & supporting evidence"
+      markdown: |
+        - **Major manifestations:** carditis; polyarthritis; chorea; erythema
+          marginatum; subcutaneous nodules.
+        - **Minor manifestations:** **clinical** — fever, polyarthralgia;
+          **laboratory** — elevated acute-phase reactants (ESR or leukocyte
+          count); **ECG** — prolonged PR interval.
+        - **Supporting evidence of a previous strep infection** (within ~45
+          days): elevated or rising ASO or another streptococcal antibody; a
+          positive throat culture; a rapid antigen test for group A strep; or
+          recent scarlet fever.
+        - **Note:** some patients with recurrent attacks may not fulfil these
+          criteria.
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        Requires **evidence of a prior streptococcal infection**:
+        - streptococcal antibody tests (**ASO**, anti-DNase B)
+        - acute-phase reactants (**ESR, CRP**)
+        - **full blood count**
+        - **chest X-ray**
+        - **echocardiography with Doppler** if available.
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        **Admit to hospital.**
+        - **Aspirin 20 mg/kg every 6 h** until joint pains improve (1–2 weeks),
+          then reduce to **15 mg/kg** for a further **3–6 weeks**.
+        - **If heart failure is present:** bed rest with a **restricted-sodium
+          diet**; **oxygen**; **furosemide 1 mg/kg every 6 h**; **prednisolone
+          1 mg/kg/day orally for 1 week** for severe heart failure; **blood
+          transfusion if Hb < 8 g/dl**; **antibiotics to eradicate pharyngeal
+          streptococcal infection**.
+
+    - type: "prose"
+      title: "Follow-up & secondary prophylaxis"
+      callout: true
+      markdown: |
+        **All children will require antibiotic prophylaxis** to prevent
+        recurrence and further valve damage:
+        - **Benzathine benzylpenicillin 600 000 U IM every 3–4 weeks**, **or**
+          **oral penicillin V 250 mg twice a day**.
+        - Ensure **vaccinations** are up to date.
+        - **Review every 3–6 months** (see also
+          [§4.9 rheumatic heart disease](topic:who-imci-4-9-rheumatic-heart)).

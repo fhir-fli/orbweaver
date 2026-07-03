@@ -1,0 +1,51 @@
+# ============================================================
+# WHO IMCI §6.3.2 — Meningococcal epidemics. Pocket Book 2nd ed (2013),
+# pp.170–171.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-3-2-meningococcal-epidemics"
+  title: "Meningococcal Epidemics"
+  list_subtitle: "6.3.2 · ceftriaxone · oily chloramphenicol"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["meningococcal", "epidemic", "ceftriaxone", "oily chloramphenicol", "chemoprophylaxis", "pediatric"]
+  aliases:
+    - "Meningococcal Meningitis"
+  category: "medical"
+
+  page_number: 170
+
+  blocks:
+
+    - type: "prose"
+      title: "During a confirmed epidemic"
+      highlight: true
+      markdown: |
+        During a **confirmed meningococcal epidemic**, a lumbar puncture need
+        **not** be performed on every child with **petechial or purpuric signs**
+        (characteristic of meningococcal infection) — treat presumptively.
+
+    - type: "prose"
+      title: "Treatment by age"
+      markdown: |
+        - **0–23 months:** adapt treatment to age and make an effort to **exclude
+          other causes** of meningitis.
+        - **≥ 2–5 years:** **Neisseria meningitidis** is the most likely
+          pathogen — presumptive treatment is justified.
+
+        Give one of:
+        - **Ceftriaxone 100 mg/kg/day IM or IV once daily** — for **5 days**
+          (children 2 months–5 years) or **≥ 7 days** (0–2 months); **or**
+        - **Oily chloramphenicol 100 mg/kg IM** as a single dose (max **3 g**).
+          If no improvement after 24 h, give a second dose (100 mg/kg) or switch
+          to ceftriaxone. The suspension is thick and hard to push through the
+          needle — if so, split the dose into two injections, one in each
+          buttock.
+
+    - type: "prose"
+      title: "Public health"
+      markdown: |
+        In epidemics, advise families about the possibility of **secondary cases**
+        so they seek treatment promptly. **Chemoprophylaxis** should be given only
+        to those in **close contact** with a case.

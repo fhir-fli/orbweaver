@@ -1,0 +1,54 @@
+# ============================================================
+# WHO IMCI §6.7.1 — Mastoiditis. Pocket Book 2nd ed (2013), p.182.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-7-1-mastoiditis"
+  title: "Mastoiditis"
+  list_subtitle: "6.7.1 · tender swelling behind the ear"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["mastoiditis", "cloxacillin", "ceftriaxone", "brain abscess", "pediatric"]
+  aliases:
+    - "Mastoiditis"
+  category: "medical"
+
+  page_number: 182
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        A **bacterial infection of the mastoid bone** behind the ear. Without
+        treatment it can lead to **meningitis and brain abscess**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Key features:
+        - **high fever**
+        - **tender swelling behind the ear** (which pushes the ear forward).
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **IV or IM cloxacillin or flucloxacillin 50 mg/kg every 6 h** — or
+          **ceftriaxone** — until the child improves, for a total course of
+          **10 days**.
+        - **No response within 48 h**, or the child deteriorates → refer to a
+          surgical specialist for **incision and drainage of mastoid abscesses or
+          mastoidectomy**.
+        - **Signs of meningitis or brain abscess** → give antibiotic treatment as
+          in [§6.3](topic:who-imci-6-3-meningitis) and refer to a specialist
+          hospital immediately.
+
+    - type: "prose"
+      title: "Supportive care & monitoring"
+      markdown: |
+        - **High fever ≥ 39 °C** causing distress → paracetamol.
+        - Nurse checks at least **every 6 h**, doctor at least once daily. If the
+          child responds poorly — decreasing consciousness, seizure or focal
+          neurological signs — consider **meningitis or brain abscess**
+          ([§6.3](topic:who-imci-6-3-meningitis)).

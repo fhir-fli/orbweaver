@@ -1,0 +1,48 @@
+# ============================================================
+# WHO IMCI §6.7.2 — Acute otitis media. Pocket Book 2nd ed (2013),
+# pp.183–184.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-7-2-acute-otitis"
+  title: "Acute Otitis Media"
+  list_subtitle: "6.7.2 · amoxicillin · dry the ear by wicking"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["acute otitis media", "amoxicillin", "ear wicking", "pediatric"]
+  aliases:
+    - "Acute Otitis Media"
+  category: "medical"
+
+  page_number: 183
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        A history of **ear pain or pus draining from the ear for < 2 weeks**. On
+        **otoscopy**, the ear-drum is **red, inflamed, bulging and opaque**, or
+        **perforated with discharge**.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Treat as an **outpatient**. Give oral antibiotics:
+        - **First choice: oral amoxicillin 40 mg/kg twice a day for at least
+          5 days.**
+        - Alternatively, when pathogens are known sensitive: **co-trimoxazole
+          (TMP 4 mg/kg + SMX 20 mg/kg) twice a day for at least 5 days**.
+        - **Pus draining from the ear** → show the mother how to **dry the ear by
+          wicking** three times daily until there is no more pus. Do **not** place
+          anything in the ear between wicking, and keep the ear out of water (no
+          swimming).
+        - **Ear pain or high fever ≥ 39 °C** causing distress → paracetamol.
+
+    - type: "prose"
+      title: "Follow-up"
+      markdown: |
+        Ask the mother to return after **5 days**. If ear pain or discharge
+        persists, treat for **5 more days with the same antibiotic** and continue
+        wicking; follow up in 5 days.

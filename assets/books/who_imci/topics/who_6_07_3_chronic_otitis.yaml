@@ -1,0 +1,49 @@
+# ============================================================
+# WHO IMCI §6.7.3 — Chronic otitis media. Pocket Book 2nd ed (2013),
+# p.184.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-7-3-chronic-otitis"
+  title: "Chronic Otitis Media"
+  list_subtitle: "6.7.3 · wicking · quinolone ear drops"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["chronic otitis media", "ear wicking", "ciprofloxacin drops", "pseudomonas", "pediatric"]
+  aliases:
+    - "Chronic Otitis Media"
+  category: "medical"
+
+  page_number: 184
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Pus draining from the ear for **≥ 2 weeks** = a chronic ear infection.
+        Confirm (where possible) by **otoscopy**.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Treat as an **outpatient**.
+        - Keep the ear dry by **wicking**.
+        - Instill **topical antibiotic drops containing quinolones**
+          (ciprofloxacin, norfloxacin, ofloxacin), with or without steroids,
+          **twice a day for 2 weeks**. Quinolone drops are **more effective** than
+          other antibiotic drops; **topical antiseptics are not effective** in
+          children.
+
+    - type: "prose"
+      title: "Follow-up"
+      markdown: |
+        Return after **5 days**. If discharge persists:
+        - check the mother is continuing to **wick** the ear
+        - do **not** give repeated courses of **oral** antibiotics for a draining
+          ear
+        - consider **Pseudomonas** or **tuberculous** infection — continue
+          wicking and give parenteral antibiotics effective against Pseudomonas
+          (gentamicin, azlocillin, ceftazidime), or TB treatment after
+          confirmation.

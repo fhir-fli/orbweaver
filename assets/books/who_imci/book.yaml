@@ -161,3 +161,46 @@ book:
             - topic: "topics/who_5_03_1_severe_persistent.yaml"
             - topic: "topics/who_5_03_2_persistent_nonsevere.yaml"
         - topic: "topics/who_5_04_dysentery.yaml"
+    - title: "6. Fever"
+      # WHO Pocket Book color-codes by chapter; Chapter 6 tab = green
+      # (sampled 0xFF40BA4E from the p.149 chapter tab via pdftoppm).
+      palette:
+        accent: "0xFF40BA4E"
+      children:
+        - title: "6.1 Child presenting with fever"
+          topic: "topics/who_6_01_fever.yaml"
+          children:
+            - topic: "topics/who_6_01_1_fever_7days.yaml"
+            - topic: "topics/who_6_01_2_fever_long.yaml"
+        - title: "6.2 Malaria"
+          topic: "topics/who_6_02_malaria.yaml"
+          children:
+            - topic: "topics/who_6_02_1_severe_malaria.yaml"
+            - topic: "topics/who_6_02_2_uncomplicated_malaria.yaml"
+        - title: "6.3 Meningitis"
+          topic: "topics/who_6_03_meningitis.yaml"
+          children:
+            - topic: "topics/who_6_03_1_bacterial_meningitis.yaml"
+            - topic: "topics/who_6_03_2_meningococcal_epidemics.yaml"
+            - topic: "topics/who_6_03_3_tb_meningitis.yaml"
+            - topic: "topics/who_6_03_4_cryptococcal_meningitis.yaml"
+        - title: "6.4 Measles"
+          topic: "topics/who_6_04_measles.yaml"
+          children:
+            - topic: "topics/who_6_04_1_severe_measles.yaml"
+            - topic: "topics/who_6_04_2_nonsevere_measles.yaml"
+        - topic: "topics/who_6_05_septicaemia.yaml"
+        - topic: "topics/who_6_06_typhoid.yaml"
+        - title: "6.7 Ear infections"
+          topic: "topics/who_6_07_ear_infections.yaml"
+          children:
+            - topic: "topics/who_6_07_1_mastoiditis.yaml"
+            - topic: "topics/who_6_07_2_acute_otitis.yaml"
+            - topic: "topics/who_6_07_3_chronic_otitis.yaml"
+        - topic: "topics/who_6_08_uti.yaml"
+        - topic: "topics/who_6_09_septic_arthritis.yaml"
+        - title: "6.10 Dengue"
+          topic: "topics/who_6_10_dengue.yaml"
+          children:
+            - topic: "topics/who_6_10_1_severe_dengue.yaml"
+        - topic: "topics/who_6_11_rheumatic_fever.yaml"

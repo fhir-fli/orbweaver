@@ -1,0 +1,65 @@
+# ============================================================
+# WHO IMCI §6.3.3 — Tuberculous meningitis. Pocket Book 2nd ed (2013),
+# pp.171–172.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-3-3-tb-meningitis"
+  title: "Tuberculous Meningitis"
+  list_subtitle: "6.3.3 · HRZE 12 months · dexamethasone"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["tuberculous meningitis", "TB", "isoniazid", "rifampicin", "dexamethasone", "pediatric"]
+  aliases:
+    - "TB Meningitis"
+  category: "medical"
+
+  page_number: 171
+
+  blocks:
+
+    - type: "prose"
+      title: "When to suspect it"
+      highlight: true
+      markdown: |
+        May be **acute or chronic** (symptoms over 1 day to 9 months). Presents
+        with cranial-nerve deficits, or a more indolent course of headache,
+        meningismus and altered mental status; early symptoms are usually
+        nonspecific (headache, vomiting, photophobia, fever). Consider TB
+        meningitis if any of:
+        - fever persisting **≥ 14 days**
+        - fever **> 7 days plus a family member with TB**
+        - a **chest X-ray suggesting TB**
+        - the child is **unconscious and stays so** despite treatment for
+          bacterial meningitis
+        - **known/exposed HIV**
+        - **CSF:** moderately high white cells (typically < 500, mostly
+          **lymphocytes**), elevated protein (0.8–4 g/L), low glucose
+          (< 1.5 mmol/L) — or this pattern persists despite adequate bacterial
+          meningitis treatment.
+
+        Occasionally, when the diagnosis is unclear, add TB treatment to
+        bacterial meningitis treatment.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        **Four-drug regimen (HRZE) for 2 months, then HR for 10 months** — total
+        **12 months**. Daily doses:
+        - **Isoniazid (H): 10 mg/kg** (range 10–15; max 300 mg/day)
+        - **Rifampicin (R): 15 mg/kg** (range 10–20; max 600 mg/day)
+        - **Pyrazinamide (Z): 35 mg/kg** (range 30–40)
+        - **Ethambutol (E): 20 mg/kg** (range 15–25)
+        - **Dexamethasone 0.6 mg/kg/day for 2–3 weeks** (then reduce over a
+          further 2–3 weeks) in **all** cases of TB meningitis.
+
+        **MDR** (proven/suspected): a **fluoroquinolone and other second-line
+        drugs** within a functioning MDR-TB programme, decided by a clinician
+        experienced in paediatric TB.
+
+    - type: "prose"
+      title: "Note — no streptomycin"
+      callout: true
+      markdown: |
+        **Streptomycin is not advised for children** — risk of **ototoxicity and
+        nephrotoxicity**, and the injections are painful.

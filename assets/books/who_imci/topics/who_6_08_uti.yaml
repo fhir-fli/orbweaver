@@ -1,0 +1,80 @@
+# ============================================================
+# WHO IMCI §6.8 — Urinary tract infection. Pocket Book 2nd ed (2013),
+# pp.184–186.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-8-uti"
+  title: "Urinary Tract Infection"
+  list_subtitle: "6.8 · check the urine · co-trimoxazole"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["urinary tract infection", "UTI", "pyelonephritis", "co-trimoxazole", "gentamicin", "pediatric"]
+  aliases:
+    - "UTI"
+  category: "medical"
+
+  page_number: 184
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Common in **boys in young infancy** (posterior urethral valves) and in
+        **older female infants and children**. When culture is not possible, the
+        diagnosis rests on **clinical signs plus urine microscopy** for bacteria
+        and white cells.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Often **nonspecific** in young children. Consider UTI with:
+        - **fever ≥ 38 °C for ≥ 24 h** with no obvious cause
+        - vomiting or poor feeding
+        - irritability, lethargy, failure to thrive, abdominal pain, jaundice
+          (neonates)
+        - older children — increased frequency, pain on passing urine, loin
+          (abdominal) pain.
+
+        Half of infants with a UTI have **fever and no other sign** — the only
+        way to make the diagnosis is to **check the urine**.
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        - Examine a **clean, fresh, un-centrifuged** urine specimen under the
+          microscope: **> 5 white cells per high-power field**, or a **positive
+          dipstick for leukocytes**. If microscopy shows no bacteriuria and no
+          pyuria and the dipstick is negative, **rule out UTI**.
+        - Obtain a **clean urine sample for culture** where possible. In sick
+          infants, a specimen taken by **in-out catheter or suprapubic bladder
+          aspiration** may be required.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Treat as an **outpatient** with an oral antibiotic for **7–10 days**,
+        **except** — admit — when there is **high fever / systemic upset**
+        (vomiting or inability to drink/breastfeed), signs of **pyelonephritis**
+        (loin pain or tenderness), or the child is an **infant**.
+        - **Oral co-trimoxazole (TMP 10 mg/kg + SMX 40 mg/kg every 12 h) for
+          5 days**; alternatives — ampicillin, amoxicillin, cefalexin — per local
+          sensitivity of E. coli and other Gram-negative bacilli.
+        - **Poor response or complications** → **gentamicin 7.5 mg/kg IM/IV once
+          daily + ampicillin 50 mg/kg IM/IV every 6 h**, or a parenteral
+          cephalosporin. Consider **pyelonephritis** (costovertebral-angle
+          tenderness + high fever) or **septicaemia**.
+        - **Infants < 2 months:** **gentamicin 7.5 mg/kg IM/IV once daily** until
+          the fever subsides, then review and continue oral treatment as above.
+
+    - type: "prose"
+      title: "Supportive care & follow-up"
+      markdown: |
+        - Encourage the child to **drink or breastfeed** regularly to help clear
+          the infection and prevent dehydration.
+        - For pain, give **paracetamol**; **avoid NSAIDs**.
+        - **Investigate all episodes** of UTI in any child with **more than one
+          episode** to identify a possible anatomical cause — this may need
+          referral for **ultrasound**.

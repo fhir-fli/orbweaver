@@ -1,0 +1,105 @@
+# ============================================================
+# WHO IMCI §6.2.2 — Uncomplicated malaria. Pocket Book 2nd ed (2013),
+# pp.163–166.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-6-2-2-uncomplicated-malaria"
+  title: "Uncomplicated Malaria"
+  list_subtitle: "6.2.2 · oral ACT · vivax"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["uncomplicated malaria", "ACT", "artemether-lumefantrine", "chloroquine", "primaquine", "vivax", "pediatric"]
+  aliases:
+    - "Uncomplicated Malaria"
+  category: "medical"
+
+  page_number: 163
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        The presentation is **highly variable** and may mimic many causes of
+        fever. Uncomplicated malaria = **all** of:
+        - **fever** (≥ 37.5 °C) or a history of fever
+        - a **positive blood smear or RDT**
+        - **no** signs of severe malaria (altered consciousness, severe anaemia
+          EVF < 15% / Hb < 5, hypoglycaemia, respiratory distress, jaundice).
+
+        **Note:** in a malarious area, if a child has fever with no obvious cause
+        and malaria cannot be confirmed on smear or RDT, **treat for malaria**.
+
+    - type: "prose"
+      title: "Treatment — artemisinin-based combination therapy (ACT)"
+      markdown: |
+        Treat P. falciparum with a **first-line ACT** per national guidelines
+        (a 3-day course). Options and target doses:
+        - **Artemether–lumefantrine** (20/120 mg tablets) — twice daily for
+          3 days, by weight (table below). **First-line in most programmes.**
+        - **Artesunate + amodiaquine** — target **4 mg/kg artesunate +
+          10 mg/kg amodiaquine once daily for 3 days** (fixed-dose tablets
+          25/67.5, 50/135 or 100/270 mg by weight band).
+        - **Artesunate + sulfadoxine–pyrimethamine** — artesunate 4 mg/kg once
+          daily for 3 days **plus** SP (25 mg/kg sulfadoxine + 1.25 mg/kg
+          pyrimethamine) **once on day 1**.
+        - **Artesunate + mefloquine** — artesunate 4 mg/kg once daily for 3 days
+          **plus** mefloquine 25 mg/kg base divided over 2–3 days.
+        - **Dihydroartemisinin + piperaquine** (40/320 mg tablets) — target
+          **4 mg/kg DHA + 18 mg/kg piperaquine once daily for 3 days**.
+
+    - type: "table"
+      title: "Artemether–lumefantrine (20/120 mg) — twice a day for 3 days"
+      column_flex: [3, 3]
+      columns: ["Weight", "Dose (each of 2 daily doses)"]
+      rows:
+        - cells: ["**5 – < 15 kg**", "1 tablet"]
+        - cells: ["**15 – 24 kg**", "2 tablets"]
+        - cells: ["**> 25 kg**", "3 tablets"]
+
+    - type: "prose"
+      title: "Children with HIV"
+      callout: true
+      markdown: |
+        Give prompt antimalarial treatment as above, **but**:
+        - on **zidovudine or efavirenz** → **avoid amodiaquine-containing** ACT
+        - on **co-trimoxazole** prophylaxis → **avoid sulfadoxine–pyrimethamine**.
+
+    - type: "prose"
+      title: "P. vivax, ovale & malariae"
+      markdown: |
+        These are still largely **chloroquine-sensitive** (treat 3 days), followed
+        by **primaquine for 14 days** for P. vivax (radical cure of liver stages).
+        An ACT (except artesunate + SP) is also effective.
+        - **Chloroquine** total **25 mg base/kg** — **10 mg/kg day 1, 10 mg/kg
+          day 2, 5 mg/kg day 3**.
+        - **Primaquine 0.25 mg base/kg** once daily **with food for 14 days**
+          (P. vivax).
+        - **Chloroquine-resistant vivax** → amodiaquine, mefloquine, or
+          dihydroartemisinin + piperaquine.
+
+    - type: "prose"
+      title: "Complication — anaemia"
+      markdown: |
+        Determine Hb/EVF in any child with palmar pallor. **Hb 5–9.3 g/dl**
+        (≈ EVF 15–27%) = **moderate anaemia**: start **iron and folate** after
+        antimalarial treatment (omit iron in severe malnutrition until recovery).
+        - Give a daily **iron–folate** tablet or iron syrup for **14 days**; ask
+          the parent to return in 14 days (correcting anaemia takes 2–4 weeks;
+          iron stores take 1–3 months).
+        - Child **> 1 year** with no mebendazole in the last 6 months → **one dose
+          of mebendazole 500 mg** for possible hookworm/whipworm.
+        - Advise on good feeding.
+
+    - type: "prose"
+      title: "Follow-up"
+      markdown: |
+        If treated as an outpatient, ask the mother to return if fever **persists
+        after 3 days**, or sooner if worse. On return: check the child actually
+        **took the full dose** and repeat a blood smear.
+        - **Not taken** → repeat the treatment.
+        - **Taken but smear still positive** → treat with a **second-line**
+          antimalarial.
+        - Reassess for **other causes** of fever ([§6.1](topic:who-imci-6-1-fever)).
