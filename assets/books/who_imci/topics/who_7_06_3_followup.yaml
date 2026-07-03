@@ -1,13 +1,15 @@
 # ============================================================
 # WHO IMCI §7.6.3 — Follow-up. Pocket Book 2nd ed (2013), p.221.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added 6-month post-discharge surveillance,
+# the high relapse-rate context, MUAC-based re-referral, and a note on
+# post-discharge interventions under research.
 # ============================================================
 
 topic:
   id: "who-imci-7-6-3-followup"
   title: "Follow-up"
-  list_subtitle: "7.6.3 · weekly weighing · watch for relapse"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  list_subtitle: "7.6.3 · weekly then 6-month surveillance · relapse"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["follow-up", "SAM", "relapse", "pediatric"]
   aliases:
     - "SAM Follow-up"
@@ -30,8 +32,33 @@ topic:
     - type: "prose"
       title: "Refer back if not thriving"
       markdown: |
-        If the child **fails to gain weight over a 2-week period**, or **loses
-        weight** between two measurements, or **develops loss of appetite or
-        oedema**, refer **back to hospital** for further assessment. Once
-        discharged from nutritional treatment, monitor periodically to **avoid
-        relapse**.
+        Refer **back to hospital** for further assessment if the child:
+        - **fails to gain weight over a 2-week period**, or **loses weight**
+          between two measurements
+        - has a **falling MUAC** or MUAC back **< 125 mm**
+        - **develops loss of appetite, oedema, or any new illness**.
+
+    - type: "prose"
+      title: "🛑 Recovery does not end at discharge"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Relapse is common and dangerous.** After discharge from nutritional
+        treatment, **6-month relapse rates of 22–63%** (context-dependent) and
+        post-discharge mortality up to **~9%** are reported — children are most
+        vulnerable in the **first 3 months**. Arrange **surveillance for at least
+        6 months** (e.g. monthly), and **higher anthropometry at discharge is
+        protective** (see [§7.6.2](topic:who-imci-7-6-2-discharge-criteria)).
+
+    - type: "prose"
+      title: "Post-discharge support (evolving evidence)"
+      markdown: |
+        WHO guidance on **post-discharge interventions** is still limited, but
+        several show promise beyond anthropometric monitoring: **unconditional
+        cash transfers** (fewer relapses), **zinc** (less morbidity),
+        **psychosocial stimulation** (lower mortality), and **integrated
+        biomedical + nutrition + malaria** packages. This is an area of **active
+        research** — follow national/programmatic guidance.

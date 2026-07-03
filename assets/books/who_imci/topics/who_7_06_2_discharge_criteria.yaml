@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §7.6.2 — Discharge from nutritional treatment. Pocket Book
 # 2nd ed (2013), pp.220–221.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07 (IMPORTANT): 2023 WHO guideline + 2026 pooled
+# analysis (21 studies) → require BOTH WHZ ≥ −2 AND MUAC ≥ 125 mm (was either/or);
+# removed the "same indicator as admission" rule; added relapse-risk context.
 # ============================================================
 
 topic:
   id: "who-imci-7-6-2-discharge-criteria"
   title: "Discharge from Nutritional Treatment"
-  list_subtitle: "7.6.2 · WHZ ≥ −2 or MUAC ≥ 125 · no oedema 2 wk"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["discharge criteria", "SAM", "weight-for-height", "MUAC", "pediatric"]
+  list_subtitle: "7.6.2 · WHZ ≥ −2 AND MUAC ≥ 125 · no oedema 2 wk"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["discharge criteria", "SAM", "weight-for-height", "MUAC", "relapse", "pediatric"]
   aliases:
     - "SAM Discharge Criteria"
   category: "medical"
@@ -19,19 +21,30 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "Discharge only when"
+      title: "Discharge only when BOTH criteria are met"
       highlight: true
       markdown: |
-        Discharge from the nutritional treatment programme **only when** the
-        child's:
-        - **weight-for-height/length is ≥ −2 z-score** AND they have had **no
-          oedema for at least 2 weeks**, OR
-        - **mid-upper-arm circumference is ≥ 125 mm** AND they have had **no
-          oedema for at least 2 weeks**.
+        The **2023 WHO guideline** requires **BOTH** anthropometric criteria
+        (regardless of which was used for admission):
+        - **weight-for-height/length ≥ −2 z-score**, **AND**
+        - **mid-upper-arm circumference ≥ 125 mm**, **AND**
+        - **no oedema for at least 2 weeks**.
 
-        Use the **same anthropometric indicator that was used on admission** to
-        confirm recovery. **Percentage weight gain should NOT be used** as a
-        discharge criterion.
+        This **replaces** the older either/or rule. **Percentage weight gain
+        should NOT be used** as a discharge criterion.
+
+    - type: "prose"
+      title: "Why both — residual wasting drives relapse"
+      callout: true
+      markdown: |
+        Discharging on a **single** criterion leaves many children with
+        **residual moderate wasting**: a pooled analysis of **21 studies
+        (15 394 children)** found ~**a third** still had residual MAM, and
+        single-criterion discharge missed **> 60%** of relapse cases —
+        **2–3× higher relapse**. The current cut-offs are a **minimum**, not an
+        optimum (some data suggest even higher thresholds minimise relapse), so
+        pair discharge with **post-discharge surveillance**
+        ([§7.6.3](topic:who-imci-7-6-3-followup)).
 
     - type: "prose"
       title: "Feeding at discharge"

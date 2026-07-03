@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §7.7.1 — Mortality audit. Pocket Book 2nd ed (2013),
 # pp.221–222.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: timing-of-death heuristic confirmed; added
+# regional timing, a daily clinical-warning-sign tool, independent mortality
+# predictors, the Sphere case-fatality standard, and audit-and-feedback.
 # ============================================================
 
 topic:
   id: "who-imci-7-7-1-mortality-audit"
   title: "Mortality Audit"
-  list_subtitle: "7.7.1 · timing of death reveals the cause"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  list_subtitle: "7.7.1 · timing of death · warning signs · Sphere"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["mortality audit", "SAM", "quality of care", "pediatric"]
   aliases:
     - "SAM Mortality Audit"
@@ -37,3 +39,30 @@ topic:
           **formulation wrong** — were **potassium and antibiotics** given?
         - **After 72 h:** consider **nosocomial infection**, **re-feeding
           syndrome**, **heart failure** and **HIV infection**.
+
+        Regionally, most deaths in African settings occur between **4 days and
+        4 weeks**, whereas in Asian settings they cluster within **48 h**.
+
+    - type: "prose"
+      title: "Watch daily for clinical warning signs"
+      markdown: |
+        A validated **daily clinical warning-sign (CWS)** score predicts
+        inpatient death well (C-index ≈ 0.81). The strongest signs:
+        - **reduced consciousness**
+        - **symptomatic hypoglycaemia**
+        - **chest indrawing**
+        - **inability to complete feeds**
+        - **low MUAC**.
+
+        Independent predictors of inpatient death (meta-analysis): **HIV**
+        (HR ≈ 4.3), **shock** (3.7), **diarrhoea** (2.8), **no appetite** (2.2),
+        **pneumonia** (1.9) and **lower WHZ**. Mean inpatient mortality is
+        **~16%**.
+
+    - type: "prose"
+      title: "Set a target and close the loop"
+      markdown: |
+        The **Sphere** minimum standard for **inpatient** case fatality is
+        **< 10%**. Pair the mortality register with **structured audit-and-feedback
+        cycles** — regular review against the WHO 10 steps improves adherence and
+        outcomes over time.

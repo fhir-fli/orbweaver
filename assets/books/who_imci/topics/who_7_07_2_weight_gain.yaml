@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §7.7.2 — Weight gain during rehabilitation. Pocket Book 2nd
 # ed (2013), p.222.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: thresholds confirmed but framed as
+# INPATIENT-specific (outpatient gain is much lower, ~3 g/kg/day); added
+# refeeding syndrome to the poor-gain checklist.
 # ============================================================
 
 topic:
   id: "who-imci-7-7-2-weight-gain"
   title: "Weight Gain During Rehabilitation"
-  list_subtitle: "7.7.2 · poor < 5 · moderate 5–10 · good > 10"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  list_subtitle: "7.7.2 · inpatient poor <5 / mod 5–10 / good >10"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["weight gain", "SAM", "rehabilitation", "inadequate feeding", "pediatric"]
   aliases:
     - "SAM Weight Gain"
@@ -24,10 +26,14 @@ topic:
       markdown: |
         **Calibrate the scales every day.** Weigh children at the **same time
         each day** (e.g. morning) after removing clothes (but avoid hypothermia).
-        Weight gain is graded:
+        Weight gain is graded (**inpatient** rehabilitation):
         - **poor: < 5 g/kg per day**
         - **moderate: 5–10 g/kg per day**
         - **good: > 10 g/kg per day**.
+
+        **Outpatient** weight gain is normally much lower — pooled mean ≈
+        **3.0 g/kg/day (2–4)** — so do **not** judge outpatient progress against
+        the inpatient thresholds.
 
     - type: "prose"
       title: "If weight gain is poor (< 5 g/kg/day)"
@@ -56,6 +62,7 @@ topic:
         - **At night:** consider **hypothermia** from insufficient covering or no
           night feeds.
         - **When beginning F-100 or RUTF:** consider **too rapid a transition**
-          from starter to catch-up feeds.
+          from starter to catch-up feeds, and **refeeding syndrome**
+          (hypophosphataemia — [§7.4.4](topic:who-imci-7-4-4-electrolytes)).
         - Also reconsider **untreated infection** (including TB, UTI, otitis media,
           HIV) and **psychological problems**.
