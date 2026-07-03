@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §3.13 — Infants of mothers with infectious diseases (overview of
 # the nested group). Pocket Book 2nd ed (2013), pp.67–68.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed (2026-07): navigation page — no change
+#    (substantive updates are in §3.13.1–3.13.3).
 # ============================================================
 
 topic:
   id: "who-imci-3-13-infected-mothers"
   title: "Infants of Mothers with Infections"
   list_subtitle: "3.13 · syphilis · tuberculosis · HIV"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["congenital infection", "syphilis", "tuberculosis", "hiv", "neonate", "pediatric"]
   aliases:
     - "Infants of Infected Mothers"
