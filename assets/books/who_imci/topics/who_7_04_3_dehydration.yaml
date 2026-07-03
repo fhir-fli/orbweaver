@@ -1,15 +1,19 @@
 # ============================================================
 # WHO IMCI §7.4.3 — Dehydration (Step 3). Pocket Book 2nd ed (2013),
 # pp.203–205.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07 (MAJOR): GASTROSAM trials (NEJM 2025;
+# Lancet Child Adolesc Health 2026) show low-osmolarity WHO-ORS is equivalent to
+# ReSoMal (and ReSoMal caused more severe hyponatraemia), and that CONTROLLED IV
+# rehydration is safe with no fluid overload. Softened the absolute IV prohibition
+# to a controlled-rate option; kept the anti-bolus / overhydration caution (FEAST).
 # ============================================================
 
 topic:
   id: "who-imci-7-4-3-dehydration"
   title: "Step 3 · Dehydration"
-  list_subtitle: "7.4.3 · ReSoMal · rehydrate slowly · not IV"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["dehydration", "SAM", "ReSoMal", "rehydration", "fluid overload", "pediatric"]
+  list_subtitle: "7.4.3 · ORS or ReSoMal · rehydrate slowly"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["dehydration", "SAM", "ReSoMal", "WHO-ORS", "GASTROSAM", "rehydration", "fluid overload", "pediatric"]
   aliases:
     - "SAM Dehydration"
   category: "medical"
@@ -28,34 +32,53 @@ topic:
         circulatory volume/perfusion **can co-exist with oedema**.
 
     - type: "prose"
-      title: "🛑 Do NOT use the IV route (except in shock)"
+      title: "🛑 Rehydrate slowly — overhydration can kill"
       callout: true
       palette:
         alert: "0xFFD32F2F"
         alert_fill: "0xFFFDECEA"
         alert_text: "0xFFB71C1C"
       markdown: |
-        **Do not use the IV route for rehydration except in cases of shock** —
-        and **rehydrate slowly**. **Overhydration is very dangerous** in SAM and
-        may cause **death from heart failure**. Standard WHO ORS has **too much
-        sodium and too little potassium** for these children — use **ReSoMal**
-        (rehydration solution for malnutrition) instead.
+        **Rehydrate slowly and monitor continuously.** **Overhydration is
+        dangerous** in SAM and can cause **death from heart failure**. **Do NOT
+        give rapid fluid boluses** — in the **FEAST** trial, boluses increased
+        mortality in sick African children. Prefer the **oral / NG route**;
+        **controlled IV rehydration** is reserved for children who **cannot** take
+        oral/NG fluids or who are in **shock** (see below).
 
     - type: "prose"
-      title: "Treatment — oral / NG ReSoMal"
+      title: "Treatment — oral / NG first"
       markdown: |
         Rehydrate **orally or by NG tube**, more slowly than for a well-nourished
-        child:
+        child. Use **ReSoMal** OR **standard low-osmolarity WHO-ORS** (both are
+        acceptable — see the evidence note below):
         - **5 ml/kg every 30 min for the first 2 h**, then
         - **5–10 ml/kg per h for the next 4–10 h** on alternate hours **with
           F-75** formula (the exact amount depends on how much the child wants,
           stool losses and vomiting).
         - If **rehydration is still needed at 10 h**, give **starter F-75**
-          instead of ReSoMal, at the same times/volume.
-        - **Shock or severe dehydration who cannot drink / take NG:** give IV —
-          **Ringer's lactate with 5% dextrose**, or half-strength Darrow's with
-          5% dextrose (or, if neither, 0.45% saline with 5% dextrose) — see
-          Chapter 1.
+          instead of the rehydration fluid, at the same times/volume.
+        - **Cannot drink / take NG, or in shock:** give **controlled IV
+          rehydration** — **Ringer's lactate with 5% dextrose**, or
+          half-strength Darrow's with 5% dextrose (or, if neither, 0.45% saline
+          with 5% dextrose) — given **over hours, NOT as a bolus** (see Chapter 1
+          and the evidence note).
+
+    - type: "prose"
+      title: "New trial evidence — GASTROSAM"
+      callout: true
+      markdown: |
+        The **GASTROSAM** trials (the FEAST group) tested the two longstanding
+        SAM-rehydration dogmas:
+        - **Solution:** **low-osmolarity WHO-ORS was equivalent to ReSoMal** (same
+          outcomes, no difference in 24-h sodium), and **ReSoMal caused more
+          severe hyponatraemia**. Either can be used — **WHO-ORS may be preferred**
+          where ReSoMal is unavailable or hyponatraemia is a concern.
+        - **IV route:** **controlled** IV rehydration (100 ml/kg over **3–8 h**,
+          NOT a bolus) showed **no excess mortality and no fluid-overload,
+          pulmonary-oedema or heart-failure events** versus oral rehydration. IV
+          is therefore **safe when oral/NG is not feasible** — but **rapid boluses
+          remain contraindicated** (FEAST).
 
     - type: "table"
       title: "Recipe for ReSoMal using standard WHO ORS"
@@ -84,13 +107,15 @@ topic:
         heart failure. Check: **weight gain** (should not be quick/excessive);
         rising respiratory rate; rising pulse; increasing urine frequency;
         enlarging liver; frequency of stools/vomit. **If respiratory rate rises
-        by 5/min and pulse by 25/min, STOP ReSoMal** and reassess after 1 h.
+        by 5/min and pulse by 25/min, STOP the rehydration fluid** and reassess
+        after 1 h.
 
     - type: "prose"
       title: "Prevention"
       markdown: |
         For continuing watery diarrhoea, prevent dehydration as for well-nourished
-        children **but use ReSoMal**, not standard ORS:
+        children, using **ReSoMal or low-osmolarity WHO-ORS**:
         - if breastfed, **continue breastfeeding**
         - **initiate re-feeding** with starter F-75
-        - give **ReSoMal 50–100 ml** after each watery stool to replace losses.
+        - give **50–100 ml** of the rehydration fluid after each watery stool to
+          replace losses.

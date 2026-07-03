@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §7.2 — Initial assessment. Pocket Book 2nd ed (2013),
 # pp.198–200.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added blood glucose to the initial labs
+# (hypoglycaemia carries ~4× mortality), AVPU for consciousness, and
+# vaccination status to the history.
 # ============================================================
 
 topic:
   id: "who-imci-7-2-initial-assessment"
   title: "Initial Assessment"
   list_subtitle: "7.2 · history · examination · appetite test"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["initial assessment", "SAM", "history", "examination", "appetite test", "pediatric"]
   aliases:
     - "SAM Assessment"
@@ -32,13 +34,16 @@ topic:
         - **family circumstances** (to understand the child's social background)
         - **cough > 2 weeks**; **contact with TB**
         - **recent contact with measles**
-        - **known or suspected HIV** infection/exposure.
+        - **known or suspected HIV** infection/exposure
+        - **vaccination status** (especially measles) and known **hepatitis B**
+          exposure.
 
     - type: "prose"
       title: "On examination, look for"
       markdown: |
-        - **Shock:** lethargic or unconscious; cold hands; slow capillary refill
-          (> 3 s); weak (low-volume), rapid pulse; low blood pressure.
+        - **Shock:** lethargic or unconscious (assess consciousness with
+          **AVPU**); cold hands; slow capillary refill (> 3 s); weak
+          (low-volume), rapid pulse; low blood pressure.
         - **signs of dehydration**
         - **severe palmar pallor**
         - **bilateral pitting oedema**
@@ -62,5 +67,7 @@ topic:
         - **Appetite test:** check whether the child has an appetite by offering
           **ready-to-use therapeutic food (RUTF)** — a pass/fail that decides
           outpatient vs inpatient care.
-        - **Laboratory:** check **Hb or EVF**, especially if there is severe
-          palmar pallor.
+        - **Laboratory:** check **blood glucose** (hypoglycaemia is common and
+          carries **~4× the risk of in-hospital death** — treat immediately per
+          [§7.4.1](topic:who-imci-7-4-1-hypoglycaemia)) and **Hb or EVF**
+          (especially with severe palmar pallor).

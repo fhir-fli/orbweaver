@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §7.3 — Organization of care. Pocket Book 2nd ed (2013),
 # p.200.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added the outpatient pathway detail
+# (>80% of SAM is uncomplicated; RUTF + oral amoxicillin + weekly follow-up),
+# CHW-delivered treatment (2023 WHO guideline), and oedema grading.
 # ============================================================
 
 topic:
   id: "who-imci-7-3-organization-of-care"
   title: "Organization of Care"
-  list_subtitle: "7.3 · outpatient vs inpatient · appetite test"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["organization of care", "SAM", "inpatient", "outpatient", "appetite test", "pediatric"]
+  list_subtitle: "7.3 · outpatient vs inpatient · CHW · appetite test"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["organization of care", "SAM", "inpatient", "outpatient", "community health worker", "RUTF", "appetite test", "pediatric"]
   aliases:
     - "SAM Care Setting"
   category: "medical"
@@ -22,11 +24,40 @@ topic:
       title: "Who is treated where"
       highlight: true
       markdown: |
+        **> 80% of children with SAM are uncomplicated** and can be treated as
+        **outpatients**.
         - **Outpatient care:** children who have an **appetite** (pass the
           appetite test) and are **clinically well and alert**.
         - **Inpatient care:** children with **severe oedema (+++)**, a **poor
           appetite** (fail the appetite test), or **one or more general danger
           signs or medical conditions** requiring admission.
+
+    - type: "prose"
+      title: "Outpatient (community-based) management"
+      markdown: |
+        Uncomplicated SAM is managed in the community with:
+        - **ready-to-use therapeutic food (RUTF)** by weight
+          ([§7.4.8](topic:who-imci-7-4-8-catchup-feeding))
+        - a **short course of oral amoxicillin**
+          ([§7.4.5](topic:who-imci-7-4-5-infection))
+        - **weekly follow-up visits** (typically up to **12 weeks**), with
+          routine vitamin A and vaccination catch-up
+        - **discharge** when **MUAC ≥ 125 mm or WHZ ≥ −2** with **no oedema for
+          2 weeks** ([§7.6.2](topic:who-imci-7-6-2-discharge-criteria)).
+
+        The **2023 WHO guideline** endorses **community health worker
+        (CHW)-delivered** treatment of uncomplicated SAM (MUAC-based admission +
+        RUTF) as an alternative to facility-based outpatient care, with similar
+        recovery rates where the supply chain and supervision are in place.
+
+    - type: "prose"
+      title: "Oedema grading"
+      markdown: |
+        Grade the bilateral pitting oedema:
+        - **Grade 1 (+):** both **feet**
+        - **Grade 2 (++):** feet **plus legs / hands / lower arms**
+        - **Grade 3 (+++):** **generalized**, including the **face** — always
+          **inpatient** care.
 
     - type: "prose"
       title: "On admission for complicated SAM"

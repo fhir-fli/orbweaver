@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §7.1 — Severe acute malnutrition (definition + diagnosis).
 # Pocket Book 2nd ed (2013), p.198.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: diagnostic criteria confirmed current;
+# added the 6–59-month age range, a note on the 2023 WHO terminology shift
+# ("severe wasting and/or nutritional oedema"), and a discharge forward-ref.
 # ============================================================
 
 topic:
   id: "who-imci-7-1-sam"
   title: "Severe Acute Malnutrition"
   list_subtitle: "7.1 · oedema / severe wasting / MUAC < 115"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["severe acute malnutrition", "SAM", "marasmus", "kwashiorkor", "MUAC", "wasting", "oedema", "pediatric"]
   aliases:
     - "SAM"
@@ -23,16 +25,23 @@ topic:
       title: "Definition"
       highlight: true
       markdown: |
-        **Severe acute malnutrition (SAM)** is the presence of **oedema of both
-        feet** OR **severe wasting** (weight-for-height/length **< −3 SD**, or
-        **mid-upper-arm circumference < 115 mm**). **No distinction** is made
-        between the clinical conditions of **kwashiorkor** and **marasmus**
-        because their treatment is similar.
+        **Severe acute malnutrition (SAM)** in children **6–59 months** is the
+        presence of **oedema of both feet** OR **severe wasting**
+        (weight-for-height/length **< −3 SD**, or **mid-upper-arm circumference
+        < 115 mm**). **No distinction** is made between the clinical conditions
+        of **kwashiorkor** and **marasmus** because their treatment is similar.
+        (**Infants < 6 months** are assessed and managed separately —
+        [§7.4.10](topic:who-imci-7-4-10-infants-under6m).)
 
         Children who are **< −3 SD weight-for-age** may be **stunted** (short
         stature) but not severely wasted — stunted children who are not severely
         wasted **do not require hospital admission** unless they have a serious
         illness.
+
+        **Terminology:** the **2023 WHO guideline** frames this condition as
+        **severe wasting and/or nutritional oedema** (part of a continuum of
+        "wasting"), rather than the older term "SAM" — the diagnostic thresholds
+        are unchanged.
 
     - type: "prose"
       title: "Diagnosis — main features"
@@ -56,4 +65,6 @@ topic:
           therapeutic food (RUTF).
 
         See [§7.3 organization of care](topic:who-imci-7-3-organization-of-care)
-        for the appetite test and admission criteria.
+        for the appetite test and admission criteria, and
+        [§7.6.2 discharge criteria](topic:who-imci-7-6-2-discharge-criteria)
+        (recovery = **WHZ ≥ −2 or MUAC ≥ 125 mm** with **no oedema for 2 weeks**).

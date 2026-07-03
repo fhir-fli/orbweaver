@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §7.4.1 — Hypoglycaemia (Step 1). Pocket Book 2nd ed (2013),
 # pp.201–202.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: treatment protocol + threshold confirmed
+# current (SugarFACT: raising the treatment cutoff did NOT reduce mortality);
+# added prevalence (~9%) and the ~4× mortality association.
 # ============================================================
 
 topic:
   id: "who-imci-7-4-1-hypoglycaemia"
   title: "Step 1 · Hypoglycaemia"
   list_subtitle: "7.4.1 · 10% glucose 50 ml · feed every 2 h"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["hypoglycaemia", "SAM", "glucose", "F-75", "frequent feeding", "pediatric"]
   aliases:
     - "SAM Hypoglycaemia"
@@ -24,7 +26,9 @@ topic:
       markdown: |
         **All** severely malnourished children are at risk of hypoglycaemia and,
         on admission, should be given a **feed or 10% glucose/sucrose**.
-        **Frequent 2-hourly feeding** is important.
+        **Frequent 2-hourly feeding** is important. Hypoglycaemia occurs in
+        **~9%** of children with SAM and carries a **~4-fold higher risk of
+        in-hospital death** — treat it as an emergency.
 
     - type: "prose"
       title: "Diagnosis"
@@ -32,7 +36,9 @@ topic:
         Measure blood glucose immediately if it can be done quickly (e.g.
         Dextrostix). Hypoglycaemia = blood glucose **< 3 mmol/L (< 54 mg/dl)**.
         **If glucose cannot be measured, assume** all children with SAM are
-        hypoglycaemic and treat.
+        hypoglycaemic and treat. (The **SugarFACT** trial found that **raising**
+        the treatment threshold did **not** reduce mortality, so the standard
+        cut-off stands.)
 
     - type: "prose"
       title: "Treatment"
