@@ -1,14 +1,17 @@
 # ============================================================
 # WHO IMCI §7.4.7 — Initial re-feeding (Step 7). Pocket Book 2nd ed
 # (2013), pp.209–212. Includes Table 22 (F-75 volumes per feed).
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: standard F-75 protocol confirmed current;
+# noted a modified (reduced-carb/lactose-free) F-75 showed NO benefit (Bandsma
+# 2019) and that phosphorus-fortified F-75 protects against refeeding
+# hypophosphataemia.
 # ============================================================
 
 topic:
   id: "who-imci-7-4-7-initial-refeeding"
   title: "Step 7 · Initial Re-feeding"
   list_subtitle: "7.4.7 · F-75 · gradual · 100 kcal/kg/day"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["initial re-feeding", "SAM", "F-75", "starter formula", "stabilization", "pediatric"]
   aliases:
     - "F-75"
@@ -74,6 +77,13 @@ topic:
         after cooking. **Alternative if milk is unavailable:** precooked
         corn–soya or wheat–soya blend **50 g**, sugar **85 g**, oil **25 g**,
         electrolyte/mineral mix **20 ml**, water to **1000 ml**.
+
+        **Standard F-75 remains the default:** a **modified** (reduced-carbohydrate,
+        lactose-free) F-75 showed **no improvement** in time to stabilization,
+        mortality or diarrhoea in an RCT (Bandsma 2019). Standard F-75 that meets
+        the **phosphorus specification** (~560 mg/L) also **protects against
+        refeeding hypophosphataemia** — most children have their lowest phosphate
+        at admission, not during feeding.
 
     - type: "table"
       title: "Table 22 · Volume of F-75 per feed (≈ 130 ml/kg/day)"

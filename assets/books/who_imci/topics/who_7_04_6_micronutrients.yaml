@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §7.4.6 — Micronutrient deficiencies (Step 6). Pocket Book
 # 2nd ed (2013), pp.208–209.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no-iron-in-stabilization + vitamin A
+# (selective high dose) confirmed current; corrected the repeat vitamin A dose
+# timing to day 15 (per WHO).
 # ============================================================
 
 topic:
   id: "who-imci-7-4-6-micronutrients"
   title: "Step 6 · Micronutrient Deficiencies"
   list_subtitle: "7.4.6 · vitamin A · NO iron in stabilization"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["micronutrients", "SAM", "vitamin A", "iron", "zinc", "folic acid", "copper", "pediatric"]
   aliases:
     - "SAM Micronutrients"
@@ -45,7 +47,7 @@ topic:
     - type: "prose"
       title: "Vitamin A"
       markdown: |
-        Give vitamin A on **day 1**, and **repeat on days 2 and 14 ONLY if** the
+        Give vitamin A on **day 1**, and **repeat on days 2 and 15 ONLY if** the
         child has **eye signs of vitamin A deficiency** (e.g. corneal ulceration)
         or a **history of measles**. If there are no eye signs and no measles,
         **do not give a high dose** — the amounts in therapeutic foods are enough.

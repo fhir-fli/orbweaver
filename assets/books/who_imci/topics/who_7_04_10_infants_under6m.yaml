@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §7.4.10 — SAM in infants aged < 6 months. Pocket Book 2nd ed
 # (2013), pp.216–217.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added the supplementary-suckling technique,
+# treating the mother-infant dyad as a unit, and structured post-discharge
+# breastfeeding support. Diluted-F-100 preparation unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-7-4-10-infants-under6m"
   title: "Step 10 · SAM in Infants < 6 Months"
   list_subtitle: "7.4.10 · re-establish breastfeeding · organic cause"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["SAM", "young infant", "breastfeeding", "supplementary suckling", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["SAM", "young infant", "breastfeeding", "supplementary suckling", "mother-infant dyad", "pediatric"]
   aliases:
     - "SAM Under 6 Months"
   category: "medical"
@@ -47,9 +49,16 @@ topic:
         - **Admit** infants with any of the above complicating factors.
         - Give **parenteral antibiotics** for possible sepsis and treat other
           medical complications.
-        - **Re-establish effective exclusive breastfeeding** by the mother/carer.
-          If not possible, give **replacement commercial infant formula** with
-          advice on safe preparation and use.
+        - **Re-establish effective exclusive breastfeeding** by the mother/carer,
+          using the **supplementary suckling technique** where milk supply is low:
+          tape a **fine NG tube alongside the nipple** with the other end in a cup
+          of **diluted F-100 or infant formula**, so the infant is **rewarded for
+          suckling** while the breast is stimulated to make more milk. If breast
+          milk cannot be re-established, give **replacement commercial infant
+          formula** with advice on safe preparation and use.
+        - **Treat the mother-infant dyad as a unit:** support **maternal
+          nutrition** (balanced diet ± RUTF), **mental health**, and skilled
+          **breastfeeding counselling** — the infant's recovery depends on it.
         - **With oedema:** give infant formula **or diluted F-100** (add water to
           the F-100 recipe on to make **1.5 litres instead of 1 litre** — do NOT
           use full-strength F-100) to supplement breastfeeding.
@@ -78,4 +87,6 @@ topic:
         Discharge from all nutritional care only when the infant **is feeding
         well** and has an **adequate weight gain** and a **weight-for-length
         ≥ −2 z-scores**. Assess and support the **mother's/carer's physical and
-        mental health**.
+        mental health**. Arrange **structured post-discharge breastfeeding
+        support** — infants often **fail to sustain growth** after discharge
+        without it.

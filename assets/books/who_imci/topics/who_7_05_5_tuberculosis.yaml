@@ -1,14 +1,18 @@
 # ============================================================
 # WHO IMCI §7.5.5 — Tuberculosis. Pocket Book 2nd ed (2013), p.219.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07 (SIGNIFICANT): added Xpert MTB/RIF Ultra on
+# sputum / gastric aspirate / STOOL as the primary molecular test, the WHO 2022
+# treatment decision algorithms, stronger framing of Mantoux anergy, the
+# preference for a 6-month regimen in SAM (not the shortened 4-month SHINE
+# regimen), and urine LAM as an emerging tool.
 # ============================================================
 
 topic:
   id: "who-imci-7-5-5-tuberculosis"
   title: "Tuberculosis"
-  list_subtitle: "7.5.5 · Mantoux · CXR · national TB guidelines"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["tuberculosis", "SAM", "mantoux", "chest x-ray", "pediatric"]
+  list_subtitle: "7.5.5 · Xpert Ultra · TDA · 6-month regimen"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["tuberculosis", "SAM", "xpert ultra", "stool", "treatment decision algorithm", "mantoux", "urine LAM", "pediatric"]
   aliases:
     - "SAM TB"
   category: "medical"
@@ -18,12 +22,35 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "If TB is strongly suspected"
+      title: "Screen every child — suspicion is high in SAM"
       highlight: true
       markdown: |
-        - Perform a **Mantoux test** (**false-negative results are frequent** in
-          SAM).
-        - Take a **chest X-ray** if possible.
+        TB is common and easily missed in SAM. **Screen systematically** — do
+        **not** wait for classic features. The **Mantoux / tuberculin skin test
+        is unreliable** in SAM (malnutrition causes **anergy → frequent
+        false negatives**), so it cannot rule TB out.
 
-        If these are positive, or TB is strongly suspected, **treat according to
-        national TB guidelines** ([§4.7.2](topic:who-imci-4-7-2-tuberculosis)).
+    - type: "prose"
+      title: "Diagnosis — molecular test first"
+      markdown: |
+        - **Xpert MTB/RIF Ultra** is the recommended **initial test** — on
+          **sputum, gastric aspirate, OR stool**. **Stool Xpert** is a major
+          practical advance: a **non-invasive** sample for children who cannot
+          produce sputum.
+        - **Chest X-ray** and clinical evaluation support the diagnosis.
+        - **WHO treatment decision algorithms (TDAs, 2022)** integrate symptoms,
+          CXR and Xpert to decide whether to start treatment — a **SAM-specific
+          TDA** (systematic stool/gastric Xpert + CXR + abdominal ultrasound)
+          exists for hospitalised children < 5 years.
+        - **Urine LAM (lateral-flow lipoarabinomannan)** is an **emerging** bedside
+          tool with potential utility even in **HIV-negative** children with SAM.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        If TB is confirmed or the TDA/clinical picture strongly supports it,
+        **treat per national TB guidelines**
+        ([§4.7.2](topic:who-imci-4-7-2-tuberculosis)). **In SAM, prefer the full
+        6-month regimen** even for non-severe disease — the shortened **4-month**
+        (SHINE) regimen was **not separately validated** in severely malnourished
+        children.

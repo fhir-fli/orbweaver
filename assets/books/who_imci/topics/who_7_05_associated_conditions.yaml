@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §7.5 — Treatment of associated conditions (overview of the
 # nested group). Pocket Book 2nd ed (2013), p.217.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: overview updated with a systematic-TB-
+# screening note; substantive updates are in the sub-topics.
 # ============================================================
 
 topic:
   id: "who-imci-7-5-associated-conditions"
   title: "Associated Conditions"
   list_subtitle: "7.5 · eye · anaemia · skin · diarrhoea · TB"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["associated conditions", "SAM", "pediatric"]
   aliases:
     - "SAM Associated Conditions"
@@ -29,3 +30,7 @@ topic:
         - [Skin lesions in kwashiorkor](topic:who-imci-7-5-3-skin-kwashiorkor)
         - [Continuing diarrhoea](topic:who-imci-7-5-4-continuing-diarrhoea)
         - [Tuberculosis](topic:who-imci-7-5-5-tuberculosis)
+
+        **Screen for TB systematically** in **every** child hospitalised with SAM
+        (high prevalence, unreliable skin testing) — not only those with obvious
+        clinical suspicion.

@@ -1,14 +1,17 @@
 # ============================================================
 # WHO IMCI §7.4.5 — Infection (Step 5). Pocket Book 2nd ed (2013),
 # pp.207–208.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: uncomplicated-SAM amoxicillin set to
+# high-dose 7 days (Trehan NEJM 2013) with a note on context-dependent benefit
+# (Niger/Isanaka NEJM 2016); added a measles 2nd dose and HIV co-trimoxazole /
+# treat-all ART. Complicated regimen + gentamicin unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-7-4-5-infection"
   title: "Step 5 · Infection"
   list_subtitle: "7.4.5 · assume infection · broad-spectrum antibiotics"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["infection", "SAM", "amoxicillin", "gentamicin", "benzylpenicillin", "measles vaccine", "pediatric"]
   aliases:
     - "SAM Infection"
@@ -32,19 +35,35 @@ topic:
       markdown: |
         - a **broad-spectrum antibiotic** (below)
         - **measles vaccine** if the child is **≥ 6 months and not vaccinated**
-          (or vaccinated before 9 months of age) — **delay if in shock**.
+          (or vaccinated before 9 months of age) — **delay if in shock**. Give a
+          **second dose at discharge** (or ≥ 4 weeks later) if the first was
+          given during acute illness.
 
     - type: "prose"
       title: "Choice of broad-spectrum antibiotic"
       markdown: |
-        - **Uncomplicated SAM:** **oral amoxicillin for 5 days**.
+        - **Uncomplicated SAM:** **oral amoxicillin 80–90 mg/kg/day in 2 divided
+          doses for 7 days** (the dose and duration used in the trials).
         - **Complicated SAM** (hypoglycaemia, hypothermia, lethargic/sickly, or
           any medical complication) — give **parenteral**:
           - **benzylpenicillin 50 000 U/kg IM/IV every 6 h**, OR **ampicillin
             50 mg/kg IM/IV every 6 h for 2 days**, then **oral amoxicillin
-            25–40 mg/kg every 8 h for 5 days**, **PLUS**
+            25–40 mg/kg every 8 h** to complete the course, **PLUS**
           - **gentamicin 7.5 mg/kg IM/IV once a day for 7 days**.
         - Adapt these regimens to **local resistance patterns**.
+
+    - type: "prose"
+      title: "Note — how much do routine antibiotics help?"
+      callout: true
+      markdown: |
+        The benefit of routine antibiotics in **uncomplicated** SAM is
+        **context-dependent**. A Malawi RCT (**Trehan**, NEJM 2013) found
+        amoxicillin improved recovery and **cut mortality** in a high-HIV /
+        kwashiorkor setting; a Niger RCT (**Isanaka**, NEJM 2016) found **no
+        recovery benefit** in a low-HIV, mostly-marasmus setting (though it
+        reduced inpatient transfers). The **2023 WHO guideline still recommends
+        routine antibiotics**, but the benefit is greatest where **HIV and
+        kwashiorkor are common**.
 
         **Note:** metronidazole 7.5 mg/kg every 8 h for 7 days may be added,
         though its efficacy has not been established in trials.
@@ -63,8 +82,10 @@ topic:
           **albendazole single dose**, or **mebendazole 100 mg twice a day for
           3 days** (in high-prevalence areas, also give to children with no
           evidence of infestation from 7 days after admission).
-        - **HIV** is common — test, and start **ART** as soon as possible after
-          metabolic stabilization; monitor closely in the first **6–8 weeks**.
+        - **HIV** is common — test all children. Start **co-trimoxazole
+          prophylaxis** in every HIV-exposed / infected child, and start **ART**
+          (treat-all, **regardless of CD4**) as soon as possible after metabolic
+          stabilization; monitor closely in the first **6–8 weeks**.
 
     - type: "prose"
       title: "Monitoring"

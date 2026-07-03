@@ -1,13 +1,14 @@
 # ============================================================
 # WHO IMCI §7.5.1 — Eye problems. Pocket Book 2nd ed (2013), p.217.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: vitamin A dosing confirmed; corrected the
+# repeat dose to day 15; flagged corneal ulceration as an ocular emergency.
 # ============================================================
 
 topic:
   id: "who-imci-7-5-1-eye-problems"
   title: "Eye Problems"
   list_subtitle: "7.5.1 · vitamin A · protect the cornea"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["eye problems", "SAM", "vitamin A", "corneal ulceration", "keratomalacia", "pediatric"]
   aliases:
     - "SAM Eye Problems"
@@ -22,7 +23,7 @@ topic:
       highlight: true
       markdown: |
         If the child has any **eye signs of vitamin A deficiency**, give **vitamin
-        A orally on days 1, 2 and 14**:
+        A orally on days 1, 2 and 15**:
         - **< 6 months:** **50 000 IU**
         - **6–12 months:** **100 000 IU**
         - **older children:** **200 000 IU**
@@ -42,5 +43,8 @@ topic:
         - **Cover** with saline-soaked eye pads.
         - **Bandage** the eye(s).
 
-        Examine the eyes **very gently** — children with vitamin A deficiency are
-        photophobic and keep the eyes closed.
+        **Corneal ulceration is an ocular emergency** — untreated, it can
+        progress to **perforation and permanent blindness within hours**. Seek
+        **ophthalmology referral** where available. Examine the eyes **very
+        gently** — children with vitamin A deficiency are photophobic and keep the
+        eyes closed.

@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §7.5.4 — Continuing diarrhoea. Pocket Book 2nd ed (2013),
 # p.219.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: added nitazoxanide as a Giardia second-line
+# (rising metronidazole resistance) and Cryptosporidium (a frequent cause of
+# persistent diarrhoea in SAM). Lactose / osmotic guidance unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-7-5-4-continuing-diarrhoea"
   title: "Continuing Diarrhoea"
-  list_subtitle: "7.5.4 · giardia · lactose · osmotic"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["continuing diarrhoea", "SAM", "giardiasis", "lactose intolerance", "osmotic diarrhoea", "pediatric"]
+  list_subtitle: "7.5.4 · giardia · cryptosporidium · lactose"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["continuing diarrhoea", "SAM", "giardiasis", "cryptosporidium", "nitazoxanide", "lactose intolerance", "osmotic diarrhoea", "pediatric"]
   aliases:
     - "SAM Diarrhoea"
   category: "medical"
@@ -25,7 +27,18 @@ topic:
         Examine the stools by microscopy where possible. If **cysts or
         trophozoites of Giardia lamblia** are found, give **metronidazole
         7.5 mg/kg every 8 h for 7 days**. Also treat if stool microscopy cannot
-        be done or there is only a clinical suspicion of giardiasis.
+        be done or there is only a clinical suspicion of giardiasis. Where
+        metronidazole fails (rising resistance), **nitazoxanide** is a
+        **second-line** option.
+
+    - type: "prose"
+      title: "Cryptosporidium"
+      markdown: |
+        **Cryptosporidium** is a **frequent cause of persistent diarrhoea** in
+        children with SAM and is associated with **worse outcomes**. Test with a
+        **modified acid-fast stain or antigen test** where available; treat with
+        **nitazoxanide** where available (efficacy is limited in HIV/severe
+        immunosuppression — optimise nutrition and ART).
 
     - type: "prose"
       title: "Lactose intolerance"

@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §7.4 — General management (10-step framework, Table 21).
 # Pocket Book 2nd ed (2013), pp.200–201.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: 10-step framework + Table 21 confirmed
+# current; noted the rehabilitation phase often extends beyond 6 weeks in
+# outpatient care (slower weight gain).
 # ============================================================
 
 topic:
   id: "who-imci-7-4-general-management"
   title: "General Management — 10 Steps"
   list_subtitle: "7.4 · stabilization then rehabilitation · Table 21"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["general management", "SAM", "ten steps", "stabilization", "rehabilitation", "pediatric"]
   aliases:
     - "SAM 10 Steps"
@@ -48,6 +50,11 @@ topic:
         - cells: ["**8. Catch-up feeding**", "—", "Weeks 2–6 (F-100/RUTF)"]
         - cells: ["**9. Sensory stimulation**", "Days 1–7", "continues →"]
         - cells: ["**10. Prepare for follow-up**", "—", "Weeks 2–6"]
+
+    - type: "prose"
+      markdown: |
+        In **outpatient** care the **rehabilitation phase often extends beyond
+        6 weeks**, as weight gain is typically slower than in hospital.
 
     - type: "prose"
       title: "The 10 steps"

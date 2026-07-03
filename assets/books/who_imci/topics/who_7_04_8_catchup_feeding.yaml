@@ -1,14 +1,17 @@
 # ============================================================
 # WHO IMCI §7.4.8 — Catch-up growth feeding (Step 8). Pocket Book
 # 2nd ed (2013), pp.210–215.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: 2023 WHO revised the catch-up energy target
+# DOWN (150–185 then 100–130 kcal/kg/day); noted RUTF shortens recovery vs F-100;
+# added outpatient weight-gain context and the both-criteria discharge rule.
+# The 2013 RUTF packet table is retained as the reference (see the update note).
 # ============================================================
 
 topic:
   id: "who-imci-7-4-8-catchup-feeding"
   title: "Step 8 · Catch-up Growth Feeding"
   list_subtitle: "7.4.8 · F-100 / RUTF · avoid heart failure"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["catch-up feeding", "SAM", "F-100", "RUTF", "rehabilitation", "heart failure", "weight gain", "pediatric"]
   aliases:
     - "F-100"
@@ -39,8 +42,26 @@ topic:
         - On the **third day**, increase each successive feed by **10 ml** until
           some feed remains uneaten — usually around an intake of **200 ml/kg per
           day**.
-        - After transition give **frequent feeds, unlimited amounts**,
-          **150–220 kcal/kg per day** and **4–6 g protein/kg per day**.
+        - After transition give **frequent feeds, unlimited amounts** and
+          **4–6 g protein/kg per day**, at the revised energy target below.
+
+    - type: "prose"
+      title: "2023 WHO update — revised energy target"
+      callout: true
+      markdown: |
+        The **2023 WHO guideline lowered** the catch-up energy target from the
+        old **150–220 kcal/kg/day**:
+        - **150–185 kcal/kg/day** while the child is **still severely
+          malnourished**, then
+        - **100–130 kcal/kg/day** until **discharge** (once no longer severely
+          malnourished).
+
+        The higher old ceiling (220) was not supported by benefit and may add
+        metabolic stress. **RUTF is preferred over F-100** in rehabilitation — it
+        shortens recovery (≈ 7 vs 10 days in one cohort) and enables earlier
+        outpatient care. The **packet table below reflects the 2013 dosing** —
+        read its lower (transition) column as the practical rehabilitation amount
+        under the revised target.
 
     - type: "prose"
       title: "If using ready-to-use therapeutic food (RUTF)"
@@ -94,8 +115,22 @@ topic:
         - **Step 3** — divide by average weight in kg (100 ÷ 6.15 = **16.3 g/kg
           per day**).
 
-        Interpretation:
+        Interpretation (**inpatient** rehabilitation):
         - **poor (< 5 g/kg/day)** → the child needs a **full re-assessment**
         - **moderate (5–10 g/kg/day)** → check intake targets are met and no
           infection was overlooked
         - **good (> 10 g/kg/day)** → continue.
+
+        **Outpatient** weight gain is normally **slower** (typically
+        **2–4 g/kg/day**) than the inpatient target — do not judge outpatient
+        progress against the 10 g/kg/day threshold.
+
+    - type: "prose"
+      title: "Discharge from nutritional treatment"
+      markdown: |
+        Discharge on the **anthropometric indicator used at admission**, with
+        **no oedema for at least 2 weeks**
+        ([§7.6.2](topic:who-imci-7-6-2-discharge-criteria)). Pooled evidence
+        (21 studies) shows that requiring **both WHZ ≥ −2 AND MUAC ≥ 125 mm**
+        **lowers relapse** (single-criterion discharge leaves residual wasting) —
+        prefer the **stricter both-criteria** discharge where feasible.

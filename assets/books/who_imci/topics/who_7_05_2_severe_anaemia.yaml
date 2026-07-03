@@ -1,14 +1,19 @@
 # ============================================================
 # WHO IMCI §7.5.2 — Severe anaemia. Pocket Book 2nd ed (2013), p.218.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07 (MODERATE): TRACT trial (NEJM 2019) updates —
+# transfusion volume raised from 10 to 20 ml/kg whole blood (30 afebrile / 20
+# febrile), whole blood preferred over packed cells, routine furosemide
+# de-emphasised (no fluid-overload events in TRACT), and the rigid 4-day
+# no-repeat rule softened to serial Hb-guided re-transfusion. SAM cardiac
+# caution + slow-transfusion emphasis retained.
 # ============================================================
 
 topic:
   id: "who-imci-7-5-2-severe-anaemia"
   title: "Severe Anaemia"
-  list_subtitle: "7.5.2 · transfuse slowly · small volume"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["severe anaemia", "SAM", "transfusion", "furosemide", "heart failure", "pediatric"]
+  list_subtitle: "7.5.2 · transfuse slowly · 20 ml/kg"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["severe anaemia", "SAM", "transfusion", "TRACT", "whole blood", "furosemide", "heart failure", "pediatric"]
   aliases:
     - "SAM Severe Anaemia"
   category: "medical"
@@ -26,15 +31,24 @@ topic:
         - **Hb 4–6 g/dl with respiratory distress**.
 
     - type: "prose"
-      title: "Transfuse slowly and small"
+      title: "Volume — updated by the TRACT trial"
       callout: true
       markdown: |
-        In SAM the transfusion must be **slower and of smaller volume** than for a
-        well-nourished child:
-        - **Whole blood 10 ml/kg slowly over 3 h.**
-        - **Furosemide 1 mg/kg IV at the start** of the transfusion.
-        - If there are **signs of heart failure**, give **10 ml/kg packed cells**
-          (not whole blood, which is likely to worsen failure).
+        In SAM, transfuse **slowly and with close monitoring** (higher cardiac
+        vulnerability), but the **volume is larger** than the old 10 ml/kg — the
+        **TRACT** trial (NEJM 2019) saw **no fluid-overload events** across > 3000
+        transfusions and no interaction with nutritional status:
+        - **Whole blood 20 ml/kg** (or **10 ml/kg packed cells**) as the standard,
+          over ~3–4 h.
+        - **By fever status:** consider **30 ml/kg** whole blood if **afebrile**
+          (lower mortality), but **20 ml/kg** if **febrile** (higher volume harmed
+          febrile children).
+        - **Whole blood is preferred over packed/settled cells** — better Hb
+          recovery at 8 h and fewer repeat transfusions.
+        - If there are **signs of heart failure**, give **packed cells** and treat
+          the failure (see monitoring).
+        - **Furosemide is no longer routine** — TRACT found no overload without
+          it; give it as a **precaution** in SAM or if overload signs appear.
         - Children with SAM and **oedema** may have fluid redistribution causing
           **apparent** low Hb that **does not require transfusion**.
 
@@ -49,5 +63,8 @@ topic:
         - If there are **basal lung crepitations or an enlarging liver, STOP** the
           transfusion and give **furosemide 1 mg/kg IV**.
 
-        **Do NOT repeat transfusion** even if the Hb is still low, or within
-        **4 days** of the last transfusion.
+        **Re-transfusion:** rather than a rigid "no repeat within 4 days" rule,
+        **monitor Hb serially** (~**8 h, 24 h and day 3–4**) and re-transfuse
+        based on **clinical status and Hb trajectory**. Avoid unnecessary repeat
+        transfusions — preferring **whole blood** reduces the need for a second
+        transfusion.

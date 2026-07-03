@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §7.5.3 — Skin lesions in kwashiorkor. Pocket Book 2nd ed
 # (2013), p.218.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: zinc + topical care confirmed; added a
+# potassium-permanganate dilution caution and a secondary-Candida note.
 # ============================================================
 
 topic:
   id: "who-imci-7-5-3-skin-kwashiorkor"
   title: "Skin Lesions in Kwashiorkor"
   list_subtitle: "7.5.3 · zinc · barrier cream · keep dry"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["skin lesions", "kwashiorkor", "SAM", "zinc", "potassium permanganate", "pediatric"]
   aliases:
     - "Kwashiorkor Skin"
@@ -25,8 +26,12 @@ topic:
         **Zinc deficiency is usual** in kwashiorkor, and the skin improves
         quickly with **zinc supplementation**. In addition:
         - **Bathe or soak** the affected areas for **10 min/day in 0.01%
-          potassium permanganate** solution.
+          potassium permanganate** solution. **Dilute correctly** — the solution
+          should be **light pink, not dark purple** (too strong causes **chemical
+          burns**).
         - Apply a **barrier cream** (zinc-and-castor-oil ointment, petroleum
           jelly, or tulle gras) to the raw areas, and **gentian violet or
           nystatin cream** to skin sores.
+        - **Secondary Candida infection** is common, especially in **moist skin
+          folds / the perineum** — treat with **topical nystatin or miconazole**.
         - **Avoid using nappies** so the perineum can stay dry.

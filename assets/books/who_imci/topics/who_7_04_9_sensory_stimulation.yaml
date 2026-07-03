@@ -1,14 +1,16 @@
 # ============================================================
 # WHO IMCI §7.4.9 — Sensory stimulation (Step 9). Pocket Book 2nd ed
 # (2013), p.215.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: content confirmed; added the evidence base
+# (mortality reduction + neurodevelopment), the 2023 WHO framing, and the
+# implementation gap.
 # ============================================================
 
 topic:
   id: "who-imci-7-4-9-sensory-stimulation"
   title: "Step 9 · Sensory Stimulation"
   list_subtitle: "7.4.9 · play · loving care · maternal involvement"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["sensory stimulation", "SAM", "play therapy", "development", "pediatric"]
   aliases:
     - "SAM Stimulation"
@@ -30,3 +32,14 @@ topic:
           feeding, bathing, playing).
 
         Provide suitable **toys and play activities** for the child.
+
+    - type: "prose"
+      title: "Why it matters — and why it is often skipped"
+      markdown: |
+        Psychosocial stimulation is **not optional**: meta-analysis shows it
+        **reduces mortality** (RR ≈ **0.36**) and improves **neurodevelopment**.
+        The **2023 WHO guideline** frames it as the sensory input a child receives
+        from **interactions with people and a varied environment**, and includes
+        **responsive feeding** as part of responsive caregiving. Despite this, it
+        is **rarely implemented** in practice (few trained staff, competing
+        priorities) — make it a **deliberate, rostered part of care**.
