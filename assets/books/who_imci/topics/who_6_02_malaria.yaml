@@ -1,15 +1,17 @@
 # ============================================================
 # WHO IMCI §6.2 — Malaria (overview of the nested group). Pocket Book
 # 2nd ed (2013), p.156.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: reframed to test-and-treat (confirm before
+# treating where testing is available; presumptive treatment only when testing
+# is truly unavailable) per 2022 WHO guidelines.
 # ============================================================
 
 topic:
   id: "who-imci-6-2-malaria"
   title: "Malaria"
   list_subtitle: "6.2 · severe vs uncomplicated"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["malaria", "plasmodium falciparum", "artesunate", "ACT", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["malaria", "plasmodium falciparum", "artesunate", "ACT", "test and treat", "RDT", "pediatric"]
   aliases:
     - "Malaria"
   category: "medical"
@@ -31,5 +33,8 @@ topic:
           severe malaria; treat with an oral **artemisinin-based combination
           therapy (ACT)** ([§6.2.2](topic:who-imci-6-2-2-uncomplicated-malaria)).
 
-        In a malarious area, if a child has fever with no obvious cause and
-        malaria **cannot be confirmed**, still **treat for malaria**.
+        **Test and treat:** confirm malaria with a **blood smear or RDT before
+        treatment** in every setting where testing is available. Treat **without**
+        confirmation **only** when testing is truly unavailable and the child has
+        fever with no other obvious cause — presumptive treatment wastes
+        antimalarials and misses other febrile illnesses.

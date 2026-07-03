@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §6.2.2 — Uncomplicated malaria. Pocket Book 2nd ed (2013),
 # pp.163–166.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: reframed to test-and-treat; added
+# artesunate–pyronaridine to the ACT options; added a partial-artemisinin-
+# resistance section (East Africa); updated P. vivax radical cure (high-dose
+# primaquine / tafenoquine, mandatory quantitative G6PD testing).
 # ============================================================
 
 topic:
   id: "who-imci-6-2-2-uncomplicated-malaria"
   title: "Uncomplicated Malaria"
   list_subtitle: "6.2.2 · oral ACT · vivax"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["uncomplicated malaria", "ACT", "artemether-lumefantrine", "chloroquine", "primaquine", "vivax", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["uncomplicated malaria", "ACT", "artemether-lumefantrine", "artemisinin resistance", "chloroquine", "primaquine", "tafenoquine", "G6PD", "vivax", "pediatric"]
   aliases:
     - "Uncomplicated Malaria"
   category: "medical"
@@ -29,8 +32,9 @@ topic:
         - **no** signs of severe malaria (altered consciousness, severe anaemia
           EVF < 15% / Hb < 5, hypoglycaemia, respiratory distress, jaundice).
 
-        **Note:** in a malarious area, if a child has fever with no obvious cause
-        and malaria cannot be confirmed on smear or RDT, **treat for malaria**.
+        **Test and treat:** confirm malaria on **smear or RDT before treating**
+        wherever testing is available; treat presumptively **only** when testing
+        is truly unavailable and there is fever with no other obvious cause.
 
     - type: "prose"
       title: "Treatment — artemisinin-based combination therapy (ACT)"
@@ -49,6 +53,8 @@ topic:
           **plus** mefloquine 25 mg/kg base divided over 2–3 days.
         - **Dihydroartemisinin + piperaquine** (40/320 mg tablets) — target
           **4 mg/kg DHA + 18 mg/kg piperaquine once daily for 3 days**.
+        - **Artesunate + pyronaridine** (Pyramax) — a WHO-recommended ACT with
+          high efficacy where artemisinin partial resistance is emerging.
 
     - type: "table"
       title: "Artemether–lumefantrine (20/120 mg) — twice a day for 3 days"
@@ -58,6 +64,22 @@ topic:
         - cells: ["**5 – < 15 kg**", "1 tablet"]
         - cells: ["**15 – 24 kg**", "2 tablets"]
         - cells: ["**> 25 kg**", "3 tablets"]
+
+    - type: "prose"
+      title: "Artemisinin partial resistance (East Africa)"
+      callout: true
+      markdown: |
+        **Partial artemisinin resistance** has now emerged in **East Africa**
+        (Uganda, Rwanda, Tanzania, Eritrea, Ethiopia, DRC) — validated **kelch13**
+        markers exceed 20% in many Ugandan districts, and **artemether–
+        lumefantrine efficacy has fallen below 90%** at some sites.
+        - **Monitor local therapeutic-efficacy data** and follow **national
+          treatment guidelines** — deploy **multiple first-line ACTs** where the
+          programme advises.
+        - Where AL efficacy is falling, **dihydroartemisinin–piperaquine** and
+          **artesunate–pyronaridine** have retained higher efficacy; **triple
+          ACTs** (artemisinin + two partner drugs) are being considered to protect
+          partner drugs.
 
     - type: "prose"
       title: "Children with HIV"
@@ -75,8 +97,17 @@ topic:
         An ACT (except artesunate + SP) is also effective.
         - **Chloroquine** total **25 mg base/kg** — **10 mg/kg day 1, 10 mg/kg
           day 2, 5 mg/kg day 3**.
-        - **Primaquine 0.25 mg base/kg** once daily **with food for 14 days**
-          (P. vivax).
+        - **Radical cure of P. vivax** (kills liver hypnozoites) — an
+          **8-aminoquinoline**, dosed to region:
+          - **Primaquine 0.25–0.5 mg/kg/day for 14 days** (total 3.5–7 mg/kg;
+            the higher total is needed for fast-relapsing strains in East Asia/
+            Oceania); a **7-day course (0.5 mg/kg/day)** may be used if **G6PD
+            activity ≥ 70%**.
+          - **Tafenoquine** — a **single dose** (where available) for children
+            **≥ 2 years** with **G6PD activity ≥ 70%** — a major adherence
+            advantage.
+          - **Quantitative G6PD testing is REQUIRED before any 8-aminoquinoline**
+            — these drugs cause **haemolysis in G6PD deficiency**.
         - **Chloroquine-resistant vivax** → amodiaquine, mefloquine, or
           dihydroartemisinin + piperaquine.
 

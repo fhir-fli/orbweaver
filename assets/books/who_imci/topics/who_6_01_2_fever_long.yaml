@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §6.1.2 — Fever lasting longer than 7 days (Table 19). Pocket
 # Book 2nd ed (2013), pp.153–155.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: no change (Table 19 covers the major causes
+# of prolonged fever in LMIC settings).
 # ============================================================
 
 topic:
   id: "who-imci-6-1-2-fever-long"
   title: "Fever Lasting Longer Than 7 Days"
   list_subtitle: "6.1.2 · prolonged fever · Table 19"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 (no change)"
   tags: ["prolonged fever", "TB", "HIV", "endocarditis", "brucellosis", "miliary TB", "pediatric"]
   aliases:
     - "Prolonged Fever"

@@ -1,15 +1,18 @@
 # ============================================================
 # WHO IMCI §6.2.1 — Severe malaria. Pocket Book 2nd ed (2013),
 # pp.156–162.
-# 🛑 Pending OpenEvidence review.
+# ✅ OpenEvidence-reviewed 2026-07: artesunate dose made weight-based (3 mg/kg
+# for < 20 kg); artesunate-over-quinine strengthened (AQUAMAT); added
+# pre-referral rectal artesunate; added a HIGH-priority FEAST red-alert
+# (no fluid boluses in compensated shock); phenobarbital-prophylaxis warning.
 # ============================================================
 
 topic:
   id: "who-imci-6-2-1-severe-malaria"
   title: "Severe Malaria"
   list_subtitle: "6.2.1 · parenteral artesunate · complications"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
-  tags: ["severe malaria", "cerebral malaria", "artesunate", "quinine", "hypoglycaemia", "severe anaemia", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["severe malaria", "cerebral malaria", "artesunate", "rectal artesunate", "FEAST", "fluid boluses", "hypoglycaemia", "severe anaemia", "pediatric"]
   aliases:
     - "Severe Malaria"
     - "Cerebral Malaria"
@@ -78,26 +81,60 @@ topic:
           regular observation of vital and neurological signs.
 
     - type: "prose"
+      title: "🛑 Do NOT give fluid boluses (FEAST)"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Do NOT give rapid fluid boluses** to a child with severe malaria and
+        signs of **impaired perfusion** (cold extremities, weak pulse,
+        tachycardia) **unless** they meet the strict criteria for
+        **decompensated shock (hypotension)**. In the **FEAST** trial, fluid
+        boluses **increased mortality** in febrile African children with
+        compensated shock (most had malaria). Give **maintenance fluids only**,
+        and correct **severe anaemia with blood transfusion** rather than
+        crystalloid.
+
+    - type: "prose"
       title: "Antimalarial treatment"
       markdown: |
         If confirmation will take > 1 h, **start treatment before** the diagnosis
         is confirmed. **Parenteral artesunate is the drug of choice**; give any
         parenteral agent for **at least 24 h** (even if oral could be tolerated
         earlier), then complete a full oral ACT course.
-        - **Artesunate: 2.4 mg/kg IV or IM** on admission, then at **12 h and
-          24 h**, then **once daily**.
-        - **Quinine: loading 20 mg/kg** (salt) by infusion in 10 ml/kg IV fluid
-          over **2–4 h**; then **8 h after the start of the loading dose**,
-          **10 mg/kg over 2 h**, repeated **every 8 h** until oral. **Rate must
-          not exceed 5 mg/kg/h; never give as a bolus.** If IV impossible, give
-          the loading dose as **two 10 mg/kg IM injections** into the anterior
-          thigh.
+        - **Artesunate** (the drug of choice): **3 mg/kg IV or IM** per dose for
+          children **< 20 kg**; **2.4 mg/kg** for children **≥ 20 kg** and adults
+          — on admission, then at **12 h and 24 h**, then **once daily**. (Younger
+          children need the higher dose to reach the same drug exposure.)
+        - **Quinine — only if artesunate is unavailable.** **Loading 20 mg/kg**
+          (salt) by infusion in 10 ml/kg IV fluid over **2–4 h**; then **8 h
+          after the start of the loading dose**, **10 mg/kg over 2 h**, repeated
+          **every 8 h** until oral. **Rate must not exceed 5 mg/kg/h; never give
+          as a bolus.** If IV impossible, give the loading dose as **two 10 mg/kg
+          IM injections** into the anterior thigh. Quinine **aggravates
+          hypoglycaemia** and needs **cardiac monitoring**; **artesunate is
+          vastly superior** (AQUAMAT — lower mortality, fewer neurological
+          deficits).
         - **Artemether: 3.2 mg/kg IM** on admission, then **1.6 mg/kg daily**
           (use a 1-ml tuberculin syringe for the small volume; absorption can be
           erratic — use only if artesunate/quinine are unavailable).
         - **Then complete** a full course of ACT, e.g. artemether–lumefantrine,
           artesunate + amodiaquine, artesunate + sulfadoxine–pyrimethamine, or
           dihydroartemisinin + piperaquine.
+
+    - type: "prose"
+      title: "Pre-referral rectal artesunate (peripheral settings)"
+      callout: true
+      markdown: |
+        Where parenteral treatment **cannot be given immediately** and referral
+        will take **> 6 h**, give a single **rectal artesunate 10 mg/kg** dose to
+        a child **< 6 years** and **refer urgently**. It is **NOT a substitute**
+        for definitive treatment — the child must still receive **parenteral
+        artesunate plus a full oral ACT** at the referral facility, and its
+        benefit depends on the **referral chain actually being completed**
+        (CARAMAL).
 
     - type: "prose"
       title: "Supportive care"
@@ -119,8 +156,11 @@ topic:
           an LP, give antibiotics for bacterial meningitis); monitor all vitals.
         - **Convulsions** (common before/after coma; may be subtle — nystagmus,
           limb twitching, an irregular breathing pattern): give **diazepam**;
-          check/treat **hypoglycaemia**; **phenobarbital** for repeated
-          convulsions; paracetamol if temperature ≥ 39 °C.
+          check/treat **hypoglycaemia**; use **phenobarbital only for active,
+          repeated convulsions** not controlled by diazepam. **Do NOT give
+          phenobarbital prophylactically** — it increases respiratory depression
+          and mortality (Kenyan cerebral-malaria trial). Paracetamol if
+          temperature ≥ 39 °C.
 
     - type: "prose"
       title: "Complication — hypoglycaemia"
@@ -161,9 +201,11 @@ topic:
           clear chest: give **oxygen**; correct reversible causes (dehydration,
           severe anaemia); monitor.
         - **Shock** (cold extremities, weak rapid pulse, capillary refill > 3 s):
-          suggests **complicating septicaemia** — correct hypovolaemia, take a
-          blood culture, and give **both antimalarial and antibiotic** treatment
-          for septicaemia ([§6.5](topic:who-imci-6-5-septicaemia)).
+          suggests **complicating septicaemia** — take a blood culture and give
+          **both antimalarial and antibiotic** treatment for septicaemia
+          ([§6.5](topic:who-imci-6-5-septicaemia)). **Do not fluid-bolus a
+          compensated (normotensive) child** (see the FEAST alert above); reserve
+          boluses for **decompensated shock with hypotension**.
         - **Aspiration pneumonia** can be **fatal** — treat immediately: place
           on the side, head up 30°; give oxygen if SpO₂ ≤ 90%, cyanosis, severe
           indrawing or RR ≥ 70/min.
