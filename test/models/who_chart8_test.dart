@@ -8,7 +8,7 @@ import 'package:orbweaver/models/topic.dart';
 void main() {
   test('WHO Chart 8 parses to the expected blocks', () {
     final yaml = File(
-      'assets/books/who_imci/topics/who_chart8_iv_fluids_sam.yaml',
+      'assets/books/who_imci/topics/who_1_chart08_iv_fluids_sam.yaml',
     ).readAsStringSync();
     final topic = Topic.fromYamlString(yaml);
 

@@ -11,7 +11,7 @@ import 'package:orbweaver/models/topic.dart';
 void main() {
   test('WHO Chart 7 parses to the post-FEAST block structure', () {
     final yaml = File(
-      'assets/books/who_imci/topics/who_chart7_iv_fluids_shock.yaml',
+      'assets/books/who_imci/topics/who_1_chart07_iv_fluids_shock.yaml',
     ).readAsStringSync();
     final topic = Topic.fromYamlString(yaml);
 

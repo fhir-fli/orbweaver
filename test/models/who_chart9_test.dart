@@ -7,7 +7,7 @@ import 'package:orbweaver/models/topic.dart';
 void main() {
   test('WHO Chart 9 parses to the expected blocks', () {
     final yaml = File(
-      'assets/books/who_imci/topics/who_chart9_diazepam.yaml',
+      'assets/books/who_imci/topics/who_1_chart09_diazepam.yaml',
     ).readAsStringSync();
     final topic = Topic.fromYamlString(yaml);
 
