@@ -1,0 +1,63 @@
+# ============================================================
+# WHO IMCI §4.3.1 — Pleural effusion and empyema. Pocket Book 2nd ed
+# (2013), pp.88–89.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-3-1-effusion"
+  title: "Pleural Effusion & Empyema"
+  list_subtitle: "4.3.1 · drainage + antibiotics"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["pleural effusion", "empyema", "chest drain", "cloxacillin", "respiratory", "pediatric"]
+  aliases:
+    - "Empyema"
+    - "Pleural Effusion"
+  category: "medical"
+
+  page_number: 88
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        A child with pneumonia may develop pleural effusion or empyema.
+        - Chest **dull to percussion**, breath sounds **reduced or absent** over
+          the affected area.
+        - A **pleural rub** may be heard early, before the effusion is fully
+          developed.
+        - **Chest X-ray** shows fluid on one or both sides.
+        - **Empyema** — fever persists despite antibiotics and the pleural fluid
+          is **cloudy or frankly purulent**.
+
+    - type: "prose"
+      title: "Treatment — drainage"
+      markdown: |
+        - **Drain** pleural effusions unless very small. If fluid is on **both**
+          sides, drain both. It may be necessary to **repeat drainage 2–3 times**
+          if fluid returns (see Annex A1.5 for chest-drain guidelines).
+        - Analyse the fluid where possible: **protein and glucose**, cell count
+          and differential, Gram and **Ziehl–Neelsen** staining, and bacterial
+          + *Mycobacterium tuberculosis* culture.
+
+    - type: "prose"
+      title: "Treatment — antibiotics"
+      markdown: |
+        - **Ampicillin** — or **cloxacillin / flucloxacillin 50 mg/kg** IM/IV
+          every 6 h — **+ gentamicin 7.5 mg/kg** IM/IV once a day. When the child
+          improves (after ≥ 7 days IV/IM), continue **oral cloxacillin** 4×/day
+          to a total course of **3 weeks**.
+        - **Cloxacillin is preferred** if staphylococcal infection is suspected
+          (more likely if pneumatocoeles are present); it can be replaced by
+          another anti-staphylococcal agent (oxacillin, flucloxacillin,
+          dicloxacillin).
+
+    - type: "prose"
+      title: "Failure to improve"
+      markdown: |
+        If fever and illness continue despite adequate drainage and
+        antibiotics, **test for HIV** and **assess for possible TB** — a trial
+        of **anti-TB therapy** may be required
+        ([§4.7.2](topic:who-imci-4-7-2-tuberculosis)).

@@ -1,0 +1,122 @@
+# ============================================================
+# WHO IMCI §4.7.2 — Tuberculosis. Pocket Book 2nd ed (2013), pp.115–118.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-7-2-tuberculosis"
+  title: "Tuberculosis"
+  list_subtitle: "4.7.2 · diagnosis · HRZE regimens"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["tuberculosis", "isoniazid", "rifampicin", "pyrazinamide", "ethambutol", "mantoux", "xpert", "pediatric"]
+  aliases:
+    - "TB"
+  category: "medical"
+
+  page_number: 115
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Most children infected with *M. tuberculosis* **do not develop TB**;
+        progression depends on immune competence, which is weakest in the **very
+        young** and impaired by **HIV, malnutrition, measles and whooping
+        cough**. TB is most severe in the **lungs, meninges or kidney**; nodes,
+        bones, joints, abdomen and skin may be involved. Many children present
+        only with **failure to thrive, weight loss or prolonged fever**. Cough
+        **> 14 days** can be a presenting sign; sputum-positive pulmonary TB is
+        **rarely** diagnosed in children.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Risk is higher with an **active case in the house**, malnutrition, HIV,
+        or measles in the past few months. Consider TB in any child with:
+        - unexplained **weight loss / failure to thrive**
+        - **fever > 2 weeks**
+        - **chronic cough ≥ 14 days** (± wheeze)
+        - **contact** with an adult with probable/definite infectious pulmonary
+          TB
+
+        On exam: fluid on one side of the chest (reduced air entry, stony
+        dullness); enlarged **non-tender** neck nodes or a node abscess;
+        meningitis signs (CSF mostly lymphocytes, high protein); abdominal
+        swelling/lumps; progressive swelling/deformity of bone or a joint
+        (including the **spine**).
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        - **AFB microscopy (Ziehl–Neelsen) + culture** — three early-morning
+          gastric aspirates, CSF, pleural or ascitic fluid. Detection rates are
+          low, so a **positive confirms** but a **negative does not exclude** TB.
+        - **Chest X-ray** — a **miliary** pattern, or a persistent infiltrate /
+          consolidation (often with effusion or a primary complex), supports TB.
+        - **Mantoux / PPD skin test** — **> 10 mm** suggests TB; **< 10 mm** is
+          equivocal after BCG and may be **falsely negative** in HIV, miliary
+          disease, severe malnutrition or recent measles.
+        - **Xpert MTB/RIF** as the **initial** test if MDR-TB or HIV-associated
+          TB is suspected.
+        - Offer **routine HIV testing** to all children suspected of TB.
+
+    - type: "prose"
+      title: "Treatment — principles & drug doses"
+      markdown: |
+        Give a **full course** to all confirmed or strongly suspected cases;
+        **when in doubt, treat**. Follow the **national TB programme**. Also
+        treat other likely diagnoses (bacterial pneumonia, meningitis, worms,
+        giardiasis) while assessing the TB response. Recommended daily doses (to
+        limit hepatotoxicity):
+        - **Isoniazid (H): 10 mg/kg** (10–15; max 300 mg/day)
+        - **Rifampicin (R): 15 mg/kg** (10–20; max 600 mg/day)
+        - **Pyrazinamide (Z): 35 mg/kg** (30–40)
+        - **Ethambutol (E): 20 mg/kg** (15–25)
+
+    - type: "prose"
+      title: "Treatment regimens (WHO)"
+      markdown: |
+        - **Four-drug:** **HRZE for 2 months, then HR** — 4 months for most
+          children; **extend HR to 10 months (12 months total)** for extensive
+          pulmonary TB or peripheral lymphadenitis in high-HIV-prevalence areas,
+          or with isoniazid resistance.
+        - **Three-drug:** **HRZ for 2 months, then HR for 4 months** — for
+          suspected/confirmed pulmonary TB or peripheral lymphadenitis in
+          **low-HIV-prevalence, HIV-negative** children.
+        - **TB meningitis, spinal TB with neurological signs, osteoarticular
+          TB:** **HRZE 2 months, then HR 10 months**.
+        - **Infants 0–3 months:** treat promptly with the standard regimens,
+          adjusting doses for age and possible toxicity.
+        - **Intermittent (thrice-weekly)** regimens only where DOT is
+          well-established and the child is **HIV-negative** — never in high-HIV
+          areas.
+        - **Streptomycin** is **not** first-line — reserve for MDR-TB in a child
+          with known susceptibility.
+
+    - type: "prose"
+      title: "MDR-TB & monitoring"
+      markdown: |
+        - **MDR-TB:** treat with a **fluoroquinolone or other second-line drug**,
+          within a functioning MDR-TB programme — decided by a clinician
+          experienced in paediatric TB.
+        - **Monitoring:** confirm medication is taken (directly observed);
+          monitor **weight gain daily** and **temperature twice a day**.
+          Improvement should be seen within **1 month** — if not, review
+          compliance, check for complications, and reconsider the diagnosis.
+
+    - type: "prose"
+      title: "Contacts & preventive therapy"
+      markdown: |
+        - **Notify** the case to district health authorities; ensure treatment is
+          monitored by the national TB programme.
+        - **Screen all household contacts** (and school contacts if needed) and
+          treat any active cases found.
+        - **Children < 5 years** who are household/close contacts and — after
+          clinical evaluation — are **not** found to have active TB should get
+          **6 months of isoniazid preventive therapy (10 mg/kg/day, range
+          7–15 mg/kg, max 300 mg/day)**.
+        - **Follow-up** at home/hospital: check adherence, screen other family
+          children, improve home ventilation and reduce indoor smoking, support
+          nutrition, and keep vaccinations up to date.

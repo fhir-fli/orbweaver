@@ -1,0 +1,30 @@
+# ============================================================
+# WHO IMCI §4.5.3 — Wheeze with cough or cold. Pocket Book 2nd ed (2013),
+# p.101.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-5-3-wheeze-cold"
+  title: "Wheeze with Cough or Cold"
+  list_subtitle: "4.5.3 · viral · inhaled salbutamol at home"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["wheeze", "viral", "salbutamol", "infant", "respiratory", "pediatric"]
+  aliases:
+    - "Viral Wheeze"
+  category: "medical"
+
+  page_number: 101
+
+  blocks:
+
+    - type: "prose"
+      title: "Most first wheeze is viral"
+      highlight: true
+      markdown: |
+        Most **first episodes of wheeze in children < 2 years** are associated
+        with **cough and cold**. These children are **not** likely to have a
+        family history of atopy (hay-fever, eczema, allergic rhinitis), and their
+        wheeze episodes become **less frequent as they grow older**. If
+        troublesome, the wheeze may be treated with **inhaled salbutamol at
+        home** ([§4.5.2](topic:who-imci-4-5-2-asthma) for delivery).

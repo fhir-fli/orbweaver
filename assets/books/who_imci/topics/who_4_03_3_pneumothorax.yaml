@@ -1,0 +1,45 @@
+# ============================================================
+# WHO IMCI §4.3.3 — Pneumothorax. Pocket Book 2nd ed (2013), pp.89–90.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-3-3-pneumothorax"
+  title: "Pneumothorax"
+  list_subtitle: "4.3.3 · needle decompression → chest drain"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["pneumothorax", "needle decompression", "chest drain", "respiratory", "pediatric"]
+  aliases:
+    - "Pneumothorax"
+  category: "medical"
+
+  page_number: 89
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Air in the pleural space — usually from **alveolar rupture** or infection
+        with **gas-producing organisms**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Signs vary with the extent of lung collapse, intrapleural pressure and
+        speed of onset.
+        - Chest **bulging on the affected side** (if one side); cardiac impulse
+          **shifted away** from the pneumothorax; decreased breath sounds on the
+          affected side; grunting, severe respiratory distress; **cyanosis** may
+          appear late.
+        - **Differential:** lung cyst, lobar emphysema, bullae, diaphragmatic
+          hernia.
+        - **Chest X-ray is crucial** to confirm the diagnosis.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - Insert a **needle for urgent decompression**, **before** inserting an
+          intercostal chest drain.
+        - See Annex A1.5 for chest-drainage guidelines.

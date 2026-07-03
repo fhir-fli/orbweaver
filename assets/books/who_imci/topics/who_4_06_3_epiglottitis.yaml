@@ -1,0 +1,54 @@
+# ============================================================
+# WHO IMCI §4.6.3 — Epiglottitis. Pocket Book 2nd ed (2013), pp.107–108.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-6-3-epiglottitis"
+  title: "Epiglottitis"
+  list_subtitle: "4.6.3 · airway emergency · Hib · ceftriaxone"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["epiglottitis", "haemophilus influenzae", "airway emergency", "ceftriaxone", "drooling", "pediatric"]
+  aliases:
+    - "Epiglottitis"
+  category: "medical"
+
+  page_number: 107
+
+  blocks:
+
+    - type: "prose"
+      title: "Airway emergency"
+      highlight: true
+      callout: true
+      markdown: |
+        A **medical emergency that may result in death** if not treated quickly.
+        Mainly caused by ***Haemophilus influenzae* type b**. Inflammation and
+        swelling between the base of the tongue and the epiglottis can **obstruct
+        the airway**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **sore throat** with difficulty speaking
+        - difficulty in breathing
+        - **soft stridor**
+        - fever
+        - **drooling** of saliva
+        - difficulty swallowing or inability to drink
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Directed at **relieving the airway obstruction** and eradicating the
+        infection.
+        - Keep the child **calm**; give **humidified oxygen**, with close
+          monitoring.
+        - **Do not examine the throat** if the signs are typical — it can
+          precipitate obstruction.
+        - **Call for help and secure the airway as an emergency** (sudden,
+          unpredictable obstruction). **Elective intubation** is the best option;
+          if obstruction is severe it may be very difficult — consider surgical
+          airway.
+        - **IV ceftriaxone 80 mg/kg once daily for 5 days** once the airway is
+          safe.

@@ -1,0 +1,65 @@
+# ============================================================
+# WHO IMCI §4.7 — Conditions presenting with chronic cough (overview of
+# the nested group + Table 10 differential). Pocket Book 2nd ed (2013),
+# pp.109–111.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-7-chronic-cough"
+  title: "Chronic Cough"
+  list_subtitle: "4.7 · cough ≥ 14 days · differential (Table 10)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["chronic cough", "tuberculosis", "pertussis", "foreign body", "hiv", "respiratory", "pediatric"]
+  aliases:
+    - "Chronic Cough"
+  category: "medical"
+
+  page_number: 109
+
+  blocks:
+
+    - type: "prose"
+      title: "Cough lasting ≥ 14 days"
+      highlight: true
+      markdown: |
+        A chronic cough is one lasting **≥ 14 days**. Many conditions present
+        with it — commonly **TB, pertussis, foreign body and asthma** (Table 10).
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        - **duration** of cough; **nocturnal** cough
+        - **paroxysmal** cough or severe bouts ending in **vomiting or whooping**
+        - **weight loss / failure to thrive** (check the growth chart)
+        - **night sweats**; **persistent fever**
+        - **close contact** with sputum-positive TB or pertussis
+        - attacks of **wheeze** and family history of allergy or asthma
+        - **choking** or inhalation of a foreign body
+        - suspected or known **HIV** infection
+        - **treatment given and the response**
+
+    - type: "prose"
+      title: "Examination"
+      markdown: |
+        - **fever**; **lymphadenopathy** (generalized and localized, e.g. neck)
+        - **wasting**
+        - **wheeze or prolonged expiration**; **clubbing**
+        - **apnoeic episodes** (pertussis); **subconjunctival haemorrhages**
+        - signs of **foreign-body aspiration** — unilateral wheeze, an area of
+          decreased breath sounds that is dull or hyper-resonant, deviation of
+          the trachea or apex beat
+        - signs associated with **HIV** infection
+
+    - type: "table"
+      title: "Table 10 · Differential diagnosis of chronic cough"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Tuberculosis**", "Weight loss / failure to thrive; anorexia; night sweats; enlarged liver and spleen; chronic or intermittent fever; TB contact; abnormal chest X-ray"]
+        - cells: ["**Asthma**", "Recurrent wheeze; hyperinflation; prolonged expiration; reduced air entry (if very severe); good response to bronchodilators"]
+        - cells: ["**Foreign body**", "Sudden onset of choking or stridor; unilateral chest signs (wheeze or hyperinflation); recurrent lobar consolidation; poor response to treatment"]
+        - cells: ["**Pertussis**", "Paroxysms of cough with whoop, vomiting, cyanosis or apnoea; subconjunctival haemorrhages; no DPT vaccination; no fever"]
+        - cells: ["**HIV**", "Known/suspected maternal or sibling HIV; failure to thrive; oral/oesophageal thrush; chronic parotitis; herpes zoster (past/present); generalized lymphadenopathy; chronic fever; persistent diarrhoea; finger clubbing"]
+        - cells: ["**Bronchiectasis**", "Prior severe pneumonia, TB or aspirated foreign body; poor weight gain; purulent sputum, bad breath; finger clubbing; localized X-ray signs"]
+        - cells: ["**Lung abscess**", "Reduced breath sounds over the abscess; poor weight gain / chronically ill; cystic or cavitating lesion on X-ray"]

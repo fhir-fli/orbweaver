@@ -1,0 +1,103 @@
+# ============================================================
+# WHO IMCI §4.1 — Child presenting with cough or difficulty in breathing.
+# Pocket Book 2nd ed (2013), pp.76–79 (Table 6 differential, pp.77–79).
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-1-cough"
+  title: "Child Presenting with Cough"
+  list_subtitle: "4.1 · history · exam · differential (Table 6)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["cough", "difficulty breathing", "pneumonia", "differential diagnosis", "fast breathing", "respiratory", "pediatric"]
+  aliases:
+    - "Cough"
+    - "Difficulty in Breathing"
+  category: "medical"
+
+  page_number: 76
+
+  blocks:
+
+    - type: "prose"
+      title: "About this chapter"
+      highlight: true
+      markdown: |
+        Cough and difficulty in breathing are common in young children, ranging
+        from a mild self-limited illness to a life-threatening one. Most
+        episodes of cough are the **common cold** — but the commonest severe
+        cause and cause of death is **pneumonia**, which should be considered
+        **first** in any differential (Table 6). This chapter covers children
+        **2 months to 5 years**; for infants **< 2 months** see
+        [§3](topic:who-imci-3-6-danger-signs), and for severely malnourished
+        children see §7.
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        Pay particular attention to:
+        - **cough** — its **duration**, and any **paroxysms with whoops,
+          vomiting or central cyanosis**
+        - **exposure to TB** (or chronic cough) in the family
+        - a history of **choking** or **sudden onset** of symptoms
+        - known or possible **HIV** infection
+        - **vaccination history** — BCG, DPT, measles, *Haemophilus influenzae*
+          type b, pneumococcus
+        - personal or family history of **asthma**
+
+    - type: "prose"
+      title: "Examination — general & chest"
+      markdown: |
+        Not every child shows every sign.
+        - **General:** central cyanosis; apnoea, gasping, grunting, nasal
+          flaring, audible wheeze or stridor; **head nodding** (synchronous with
+          inspiration — severe distress); tachycardia; severe palmar pallor.
+        - **Respiratory rate** — count over **1 min while the child is calm**.
+          **Fast breathing:** **< 2 months ≥ 60**, **2–11 months ≥ 50**,
+          **1–5 years ≥ 40** breaths/min.
+        - **Chest:** lower chest wall indrawing; hyperinflation; apex beat or
+          trachea shifted from the midline; raised JVP; on auscultation coarse
+          crackles, absent air entry or bronchial breath sounds, or wheeze;
+          abnormal heart rhythm; percussion signs of **effusion** (stony
+          dullness) or **pneumothorax** (hyper-resonance).
+
+    - type: "prose"
+      title: "What counts as lower chest wall indrawing"
+      callout: true
+      markdown: |
+        **Lower chest wall indrawing** is when the lower chest wall goes **in**
+        as the child breathes in. If only the soft tissue **between the ribs**
+        or **above the clavicle** goes in, that is **not** lower chest wall
+        indrawing.
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        - **Pulse oximetry** — to detect hypoxia and guide when to start and
+          stop oxygen ([Chart 5](topic:who-imci-chart5-oxygen)).
+        - **Full blood count.**
+        - **Chest X-ray** only for **severe pneumonia**, pneumonia not
+          responding to treatment, complications, an unclear diagnosis, or
+          HIV-associated illness.
+
+    - type: "table"
+      title: "Table 6 · Differential diagnosis of cough / difficult breathing"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Pneumonia**", "Cough with **fast breathing**; lower chest wall indrawing; fever; coarse crackles, bronchial breath sounds or dullness; grunting"]
+        - cells: ["**Effusion / empyema**", "Reduced movement on the affected side; **stony dullness**; absent air entry over the effusion"]
+        - cells: ["**Asthma / wheeze**", "Recurrent shortness of breath or wheeze; night cough or wheeze on exercise; **responds to bronchodilators**; family/personal history of allergy or asthma"]
+        - cells: ["**Bronchiolitis**", "Cough; wheeze and crackles; usually **age < 1 year**"]
+        - cells: ["**Malaria**", "Fast breathing in a febrile child; **smear or RDT positive**; palmar pallor; endemic area; deep (acidotic) breathing; chest clear on auscultation"]
+        - cells: ["**Severe anaemia**", "Shortness of breath on exertion; severe palmar pallor; **Hb < 6 g/dl**"]
+        - cells: ["**Cardiac failure**", "Raised JVP (older children); apex displaced left; heart murmur; gallop rhythm; fine crackles at lung bases; enlarged palpable liver"]
+        - cells: ["**Congenital heart disease (cyanotic)**", "Cyanosis; finger clubbing; heart murmur; signs of cardiac failure"]
+        - cells: ["**Congenital heart disease (acyanotic)**", "Difficulty feeding/breastfeeding with failure to thrive; sweating of the forehead; heaving precordium; heart murmur; signs of cardiac failure"]
+        - cells: ["**Tuberculosis**", "**Chronic cough (> 14 days)**; TB contact; poor growth/weight loss; positive Mantoux; primary complex or miliary TB on X-ray; sputum positive in older children"]
+        - cells: ["**Pertussis**", "Paroxysms of cough with **whoop, vomiting, cyanosis or apnoea**; well between bouts; no fever; no DPT vaccination"]
+        - cells: ["**Foreign body**", "History of **sudden choking**; sudden stridor or respiratory distress; focal wheeze or reduced breath sounds"]
+        - cells: ["**Pneumothorax**", "Sudden onset (usually after major chest trauma); hyper-resonance on one side; mediastinal shift to the opposite side"]
+        - cells: ["***Pneumocystis* pneumonia**", "2–6-month-old with central cyanosis; hyperexpanded chest; fast breathing; finger clubbing; X-ray changes with a clear chest on auscultation; HIV positive in mother or child"]
+        - cells: ["**Croup**", "Inspiratory stridor; current measles; barking cough; hoarse voice"]
+        - cells: ["**Diphtheria**", "No DPT vaccination; inspiratory stridor; **grey pharyngeal membrane**; cardiac arrhythmia"]

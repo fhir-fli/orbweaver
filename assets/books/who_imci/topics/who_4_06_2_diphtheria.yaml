@@ -1,0 +1,72 @@
+# ============================================================
+# WHO IMCI §4.6.2 — Diphtheria. Pocket Book 2nd ed (2013), pp.105–107.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-6-2-diphtheria"
+  title: "Diphtheria"
+  list_subtitle: "4.6.2 · grey membrane · antitoxin · penicillin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["diphtheria", "antitoxin", "procaine penicillin", "bull neck", "myocarditis", "airway", "pediatric"]
+  aliases:
+    - "Diphtheria"
+  category: "medical"
+
+  page_number: 105
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        A **bacterial infection preventable by immunization**. Infection of the
+        upper airway/nasopharynx produces a **grey membrane** which, in the
+        larynx or trachea, causes stridor and obstruction. Nasal involvement
+        gives a **bloody discharge**. Diphtheria toxin causes **muscular
+        paralysis and myocarditis** — the causes of death.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Examine the nose and throat carefully for a **grey, adherent membrane**
+        — **great care** is needed as the examination may precipitate complete
+        airway obstruction. Pharyngeal diphtheria may show an obviously **swollen
+        neck ('bull neck')** from enlarged cervical nodes.
+
+    - type: "prose"
+      title: "Treatment — antitoxin & antibiotics"
+      markdown: |
+        - **Diphtheria antitoxin 40 000 U** IM or IV **immediately** — delay
+          increases mortality. There is a small risk of a serious allergic
+          reaction to the horse serum, so do an **intradermal test first** and
+          have anaphylaxis treatment
+          ([§4.6.4](topic:who-imci-4-6-4-anaphylaxis)) ready.
+        - **Procaine benzylpenicillin 50 mg/kg** (max 1.2 g) **IM once daily for
+          10 days** — **do not give IV**.
+
+    - type: "prose"
+      title: "Airway, oxygen & supportive care"
+      markdown: |
+        - **Avoid oxygen unless there is incipient airway obstruction** (a
+          nasal/nasopharyngeal catheter may upset the child and precipitate
+          obstruction).
+        - **Tracheostomy** (by experienced staff only) for signs of incipient
+          complete obstruction (severe indrawing, restlessness). Orotracheal
+          intubation is an alternative but may dislodge the membrane.
+        - Paracetamol for distressing fever; if swallowing is difficult, pass a
+          **nasogastric tube** (by an experienced clinician). Avoid frequent
+          examinations and disturbing the child unnecessarily. Nurse assessment
+          every 3 h, doctor twice a day.
+
+    - type: "prose"
+      title: "Complications & public-health measures"
+      markdown: |
+        - **Myocarditis and paralysis** may appear **2–7 weeks** after onset —
+          a weak, irregular pulse and heart failure; refer to standard texts.
+        - **Isolate** the child; nurse only by **fully vaccinated** staff.
+        - **Vaccinated** household contacts → a diphtheria **toxoid booster**.
+        - **Unvaccinated** contacts → **one dose of benzathine penicillin**
+          (600 000 U if ≤ 5 y; 1 200 000 U if > 5 y), diphtheria toxoid, and
+          daily checks for 5 days for signs of diphtheria.

@@ -1,0 +1,38 @@
+# ============================================================
+# WHO IMCI §4.2 — Pneumonia (overview of the nested group + Table 7
+# severity classification). Pocket Book 2nd ed (2013), pp.80–81.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-2-pneumonia"
+  title: "Pneumonia"
+  list_subtitle: "4.2 · classify severity (Table 7)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["pneumonia", "severity classification", "fast breathing", "antibiotics", "respiratory", "pediatric"]
+  aliases:
+    - "Pneumonia Classification"
+  category: "medical"
+
+  page_number: 80
+
+  blocks:
+
+    - type: "prose"
+      title: "Classify, then treat"
+      highlight: true
+      markdown: |
+        Pneumonia is caused by **viruses or bacteria** — the specific cause
+        usually cannot be told from clinical features or X-ray. Classify it as
+        **severe** or **non-severe** on clinical grounds; the classification
+        drives management. **Most** cases need an antibiotic. **Severe**
+        pneumonia also needs hospital care and support such as **oxygen**.
+
+    - type: "table"
+      title: "Table 7 · Classification of the severity of pneumonia"
+      column_flex: [4, 2, 4]
+      columns: ["Sign", "Class", "Treatment"]
+      rows:
+        - cells: ["Cough/difficult breathing **with** SpO₂ < 90% or central cyanosis, **or** severe respiratory distress (grunting, very severe indrawing), **or** a general danger sign (can't feed/drink, lethargy, convulsions)", "**Severe pneumonia**", "**Admit.** Oxygen if SpO₂ < 90%; manage the airway; recommended antibiotic; treat high fever."]
+        - cells: ["**Fast breathing** (≥ 50/min at 2–11 mo; ≥ 40/min at 1–5 y) **or** chest indrawing, with no severe sign", "**Pneumonia**", "**Home care.** Appropriate oral antibiotic; advise return if worse; follow up after 3 days."]
+        - cells: ["No signs of pneumonia or severe pneumonia", "**No pneumonia: cough or cold** ([§4.4](topic:who-imci-4-4-cough-cold))", "**Home care.** Soothe the throat, safe cough remedy; advise return; follow up after 5 days if not improving; if cough > 14 days → [chronic cough §4.7](topic:who-imci-4-7-chronic-cough)."]

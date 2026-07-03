@@ -1,0 +1,67 @@
+# ============================================================
+# WHO IMCI §4.6.4 — Anaphylaxis. Pocket Book 2nd ed (2013), pp.108–109.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-6-4-anaphylaxis"
+  title: "Anaphylaxis"
+  list_subtitle: "4.6.4 · adrenaline IM · airway · fluids"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["anaphylaxis", "adrenaline", "allergic reaction", "shock", "airway", "emergency", "pediatric"]
+  aliases:
+    - "Anaphylaxis"
+    - "Allergic Reaction"
+  category: "medical"
+
+  page_number: 108
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        A **severe allergic reaction** causing upper-airway obstruction (stridor),
+        lower-airway obstruction (wheeze), or **shock** — or all three. Common
+        triggers: **antibiotics, vaccines, blood transfusion, and certain foods**
+        (especially nuts). Suspect it with previous severe reaction, rapid
+        progression, or a history of asthma, eczema or atopy.
+
+    - type: "table"
+      title: "Severity"
+      column_flex: [2, 4, 4]
+      columns: ["Severity", "Symptoms", "Signs"]
+      rows:
+        - cells: ["**Mild**", "Itching mouth; nausea", "Urticaria; oedema of the face; conjunctivitis; red throat"]
+        - cells: ["**Moderate**", "Cough or wheeze; diarrhoea; sweating", "Wheeze; tachycardia; pallor"]
+        - cells: ["**Severe**", "Difficulty breathing; collapse; vomiting", "Severe wheeze with poor air entry; oedema of the larynx; shock; respiratory arrest; cardiac arrest"]
+
+    - type: "prose"
+      title: "Assess ABC first"
+      callout: true
+      markdown: |
+        Potentially life-threatening — may progress to altered consciousness,
+        collapse, or respiratory/cardiac arrest. **Assess airway, breathing,
+        circulation.**
+        - **Not breathing** → **5 rescue breaths** with a bag-valve mask and
+          **100% oxygen**; assess circulation.
+        - **No pulse** → start **basic life support**.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Remove the allergen** where possible.
+        - **Mild** (rash and itching only) → **oral antihistamine + oral
+          prednisolone 1 mg/kg**.
+        - **Moderate** (stridor, obstruction or wheeze) → **adrenaline 0.15 ml of
+          1:1000 IM into the thigh** (or subcutaneous); repeat every
+          **5–15 min**.
+        - **Severe anaphylactic shock:**
+          - **adrenaline 0.15 ml of 1:1000 IM**, repeat every 5–15 min
+          - **100% oxygen**
+          - stabilise **airway, breathing, circulation** and secure **IV access**
+          - if obstruction is severe, consider **intubation** or a **surgical
+            airway** (call an anaesthetist)
+          - **20 ml/kg of normal saline 0.9% or Ringer's lactate IV** as rapidly
+            as possible (**intraosseous** if no IV access)

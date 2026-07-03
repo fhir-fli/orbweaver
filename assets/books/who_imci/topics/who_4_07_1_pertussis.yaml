@@ -1,0 +1,99 @@
+# ============================================================
+# WHO IMCI §4.7.1 — Pertussis. Pocket Book 2nd ed (2013), pp.111–114.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-7-1-pertussis"
+  title: "Pertussis"
+  list_subtitle: "4.7.1 · whooping cough · erythromycin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["pertussis", "whooping cough", "erythromycin", "azithromycin", "apnoea", "respiratory", "pediatric"]
+  aliases:
+    - "Whooping Cough"
+  category: "medical"
+
+  page_number: 111
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Most severe in **young unimmunized infants**. After a 7–10-day
+        incubation, the child has fever, cough and nasal discharge
+        indistinguishable from a cold; in the **second week**, **paroxysmal
+        (whooping) cough** develops. Coughing can continue for **≥ 3 months**;
+        the child is infectious for up to **3 weeks** after onset.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Suspect pertussis with a severe cough > 2 weeks, especially if occurring
+        locally. Most useful signs:
+        - **paroxysmal cough followed by a whoop** on inspiration, often with
+          vomiting
+        - **subconjunctival haemorrhages**
+        - a child **not vaccinated** against pertussis
+        - young infants may **not whoop** — instead the cough may be followed by
+          **apnoea and cyanosis**, or apnoea may occur without coughing
+
+        Also examine for pneumonia and ask about convulsions.
+
+    - type: "prose"
+      title: "Treatment — antibiotics"
+      markdown: |
+        - Treat **mild cases in children ≥ 6 months** at home with supportive
+          care. **Admit infants < 6 months**; also admit any child with
+          pneumonia, convulsions, dehydration, severe malnutrition, or prolonged
+          apnoea/cyanosis after coughing.
+        - **Oral erythromycin 12.5 mg/kg four times a day for 10 days** (does not
+          shorten the illness but reduces infectiousness).
+        - Alternatively **azithromycin 10 mg/kg** (max 500 mg) once on day 1,
+          then **5 mg/kg** (max 250 mg) once daily for 4 days.
+        - If fever, or if a macrolide is unavailable, or signs of pneumonia →
+          treat with **amoxicillin** as possible secondary pneumonia and follow
+          the severe-pneumonia guidelines
+          ([§4.2.1](topic:who-imci-4-2-1-severe-pneumonia)).
+
+    - type: "prose"
+      title: "Oxygen & airway"
+      markdown: |
+        - Give **oxygen** for apnoea, cyanosis, severe coughing spells, or
+          **SpO₂ ≤ 90%**. Use **nasal prongs** (not a nasopharyngeal catheter —
+          it provokes coughing); flow **1–2 L/min** (0.5 L/min for young
+          infants). Continue until the signs resolve; nurse checks every 3 h.
+        - **During paroxysms:** place the child in the **recovery position** to
+          prevent aspiration; clear secretions with **brief, gentle suction**;
+          if apnoea occurs, clear the airway and give **bag-valve-mask** breaths
+          with high-flow oxygen.
+
+    - type: "prose"
+      title: "Supportive care & monitoring"
+      markdown: |
+        - **Avoid** anything that triggers coughing (unnecessary suction, throat
+          exam, nasogastric tube unless the child cannot drink).
+        - **Do not** give cough suppressants, sedatives, mucolytics or
+          antihistamines.
+        - Paracetamol for distressing fever; encourage breastfeeding / small
+          frequent feeds; NG feeds if unable to drink (IV fluids only if severe
+          distress and NG not possible — risk of aspiration).
+        - Nurse assessment **every 3 h**, doctor once a day; bed near the nursing
+          station; teach the mother to recognize apnoeic spells and alert staff.
+
+    - type: "prose"
+      title: "Complications & public health"
+      markdown: |
+        - **Pneumonia** (commonest — secondary infection or aspiration of
+          vomit): treat with **ampicillin/benzylpenicillin + gentamicin** for
+          5 days (or azithromycin 5 days) and oxygen.
+        - **Convulsions** (from anoxia or toxin): if not stopping within 2 min,
+          give **diazepam** ([Chart 9](topic:who-imci-chart9-diazepam)).
+        - **Malnutrition** — prevent by ensuring adequate feeding.
+        - **Subconjunctival haemorrhage, epistaxis, hernias** — no specific
+          treatment; refer hernias for surgical review after the acute phase.
+        - **Public health:** DPT vaccine/booster to under-immunized family
+          members and the child; **erythromycin estolate 12.5 mg/kg 4×/day for
+          10 days** to any infant < 6 months in the family with fever or
+          respiratory signs.

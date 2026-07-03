@@ -1,0 +1,74 @@
+# ============================================================
+# WHO IMCI §4.8 — Heart failure. Pocket Book 2nd ed (2013), pp.120–122.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-8-heart-failure"
+  title: "Heart Failure"
+  list_subtitle: "4.8 · oxygen · furosemide · avoid fluid overload"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["heart failure", "furosemide", "digoxin", "oxygen", "cardiac", "pediatric"]
+  aliases:
+    - "Cardiac Failure"
+  category: "medical"
+
+  page_number: 120
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Heart failure causes **fast breathing and respiratory distress**.
+        Underlying causes include **congenital heart disease** (usually in the
+        first months of life), acute rheumatic fever, cardiac arrhythmia,
+        myocarditis, suppurative pericarditis with constriction, infective
+        endocarditis, acute glomerulonephritis, severe anaemia, severe pneumonia
+        and severe malnutrition. It can be **precipitated or worsened by fluid
+        overload** — especially large volumes of IV fluid.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Commonest signs:
+        - **tachycardia** — HR **> 160/min** (< 12 months), **> 120/min**
+          (12 months–5 years)
+        - **gallop rhythm** with basal crackles
+        - **enlarged, tender liver**
+        - infants: fast breathing (or sweating), especially when feeding; older
+          children: oedema of feet/hands/face, or **raised JVP**
+        - **severe palmar pallor** if severe anaemia is the cause
+        - a **heart murmur** (rheumatic/congenital heart disease, endocarditis)
+        - chest X-ray: enlarged or abnormally shaped heart
+        - **raised blood pressure** → consider acute glomerulonephritis
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Treatment depends on the underlying disease (follow paediatric
+        guidelines). Main measures in a child who is **not** severely
+        malnourished:
+        - **Oxygen** if RR ≥ 70/min, respiratory distress, central cyanosis or
+          low SpO₂ — aim to keep **SpO₂ > 90%**.
+        - **Furosemide 1 mg/kg** — should increase urine flow within 2 h (give
+          **IV** for faster action). If ineffective, **2 mg/kg** and repeat in
+          12 h; thereafter a single daily **1–2 mg/kg orally** is usually enough.
+        - **Digoxin** — consider (see Annex 2).
+        - **Potassium:** not needed for short-term furosemide alone; if **digoxin
+          + furosemide**, or furosemide for **> 5 days**, give oral potassium
+          **3–5 mmol/kg/day**.
+
+    - type: "prose"
+      title: "Supportive care & monitoring"
+      markdown: |
+        - Support the child **semi-seated**, head and shoulders elevated, lower
+          limbs dependent.
+        - Relieve fever with **paracetamol** to reduce cardiac workload.
+        - Consider **transfusion** if severe anaemia is present.
+        - **Minimise IV fluids** (overload worsens failure).
+        - Nurse checks **every 6 h** (every 3 h while on oxygen), doctor once a
+          day; monitor respiratory and pulse rates, liver size and body weight.
+          Continue treatment until rates are normal and the liver is no longer
+          enlarged.

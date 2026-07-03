@@ -1,0 +1,69 @@
+# ============================================================
+# WHO IMCI §4.2.2 — Pneumonia (non-severe). Pocket Book 2nd ed (2013),
+# pp.86–87.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-2-2-pneumonia"
+  title: "Pneumonia (Non-severe)"
+  list_subtitle: "4.2.2 · outpatient · oral amoxicillin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["pneumonia", "amoxicillin", "outpatient", "fast breathing", "respiratory", "pediatric"]
+  aliases:
+    - "Non-severe Pneumonia"
+  category: "medical"
+
+  page_number: 86
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Cough or difficulty in breathing **plus at least one** of:
+        - **fast breathing** — ≥ 50/min at **2–11 months**, ≥ 40/min at
+          **1–5 years**
+        - **lower chest wall indrawing**
+
+        Crackles or a pleural rub may be present. **Check there are no signs of
+        severe pneumonia** — SpO₂ < 90% or cyanosis, severe respiratory distress,
+        can't feed/vomiting everything, convulsions/lethargy, or signs of
+        effusion/empyema. If any are present, treat as
+        [severe pneumonia](topic:who-imci-4-2-1-severe-pneumonia).
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Treat as an outpatient.**
+        - Give **oral amoxicillin** — give the **first dose at the clinic** and
+          teach the carer to give the rest at home:
+          - **high-HIV-prevalence** settings: **40 mg/kg/dose twice a day for
+            5 days**
+          - **low-HIV-prevalence** settings: **40 mg/kg/dose twice a day for
+            3 days**
+        - Advise **extra fluids** and continued feeding; small frequent drinks
+          are better tolerated if there is fever.
+        - **Avoid harmful remedies** — those containing **atropine, codeine
+          derivatives or alcohol**.
+
+    - type: "prose"
+      title: "Follow-up"
+      markdown: |
+        Ask the carer to return in **3 days**, or sooner if the child becomes
+        sicker or cannot drink/breastfeed. On return:
+        - **Improving** (slower breathing, no indrawing, less fever, feeding
+          better) → complete the antibiotic course.
+        - **Not improved** and no wheeze → **admit** to exclude complications or
+          an alternative diagnosis.
+        - **Signs of severe pneumonia** → admit and treat as severe.
+        - Address risk factors: malnutrition, indoor air pollution, parental
+          smoking.
+
+    - type: "prose"
+      title: "Pneumonia in a child with HIV"
+      markdown: |
+        **Admit** and manage as **severe pneumonia**
+        ([§4.2.1](topic:who-imci-4-2-1-severe-pneumonia)). See Chapter 8 for
+        further management, including PCP prophylaxis.

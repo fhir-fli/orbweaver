@@ -1,0 +1,131 @@
+# ============================================================
+# WHO IMCI §4.5.2 — Asthma. Pocket Book 2nd ed (2013), pp.96–101.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-5-2-asthma"
+  title: "Asthma"
+  list_subtitle: "4.5.2 · bronchodilator · steroids · oxygen"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["asthma", "salbutamol", "prednisolone", "adrenaline", "magnesium sulfate", "aminophylline", "respiratory", "pediatric"]
+  aliases:
+    - "Asthma"
+  category: "medical"
+
+  page_number: 96
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        A **chronic inflammatory** condition with **reversible airways
+        obstruction** — recurrent episodes of wheeze, often with cough, that
+        respond to **bronchodilators and anti-inflammatory drugs**. Antibiotics
+        are given **only** when there are signs of pneumonia.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Recurrent wheeze/cough/chest tightness, worse **at night and early
+        morning**. On examination: rapid/increasing RR; hyperinflation; hypoxia
+        (SpO₂ ≤ 90%); lower chest wall indrawing; use of accessory muscles;
+        prolonged expiration with audible wheeze; **reduced or no air intake**
+        (life-threatening); **absence of fever**; **good response to a
+        bronchodilator**. If uncertain, give a rapid-acting bronchodilator and
+        look for improvement (may need several doses).
+
+    - type: "prose"
+      title: "Treatment — by severity"
+      markdown: |
+        - **First episode of wheeze, no distress** → home, supportive care; a
+          bronchodilator is not necessary.
+        - **Respiratory distress (acute severe asthma) or recurrent wheeze** →
+          salbutamol (MDI + spacer, or nebulizer, or subcutaneous adrenaline).
+          Reassess at **15 min**: if distress resolved and no fast breathing →
+          home on inhaled salbutamol via MDI + spacer; if it persists → **admit**.
+        - **Life-threatening** (central cyanosis, SpO₂ ≤ 90%, silent chest, can't
+          drink/speak, exhausted/confused) → **admit**; oxygen, rapid-acting
+          bronchodilator, and a **first dose of steroids**.
+
+    - type: "prose"
+      title: "Oxygen"
+      markdown: |
+        Give oxygen to keep **SpO₂ > 95%** in any child with asthma who is
+        cyanosed (SpO₂ ≤ 90%) or whose breathing difficulty interferes with
+        talking, eating or breastfeeding.
+
+    - type: "prose"
+      title: "Rapid-acting bronchodilator — how to give it"
+      markdown: |
+        - **Nebulized salbutamol:** **2.5 mg** (**0.5 ml** of the 5 mg/ml
+          solution) + **2–4 ml** sterile saline; nebulize until nearly gone.
+          Give **more frequently** if the response is poor; in severe /
+          life-threatening asthma give **continuous back-to-back nebulizers**
+          until improved, then **every 4 h** and later **6–8 h**. Driving source
+          ≥ 6–9 L/min (oxygen in severe cases).
+        - **Salbutamol by MDI + spacer:** **2 puffs (200 µg)** into the chamber,
+          child breathes 3–5 times; repeat to **6 puffs (< 5 y)** or **12 puffs
+          (> 5 y)**, reassess and repeat as needed. A spacer can be made from a
+          plastic cup or 1-litre bottle; a **face mask** on the spacer helps
+          infants.
+        - **Subcutaneous adrenaline** (if neither above): **0.01 ml/kg of 1:1000**
+          (max **0.3 ml**), measured with a 1-ml syringe; repeat **once** after
+          15 min if no improvement.
+
+    - type: "prose"
+      title: "Steroids"
+      markdown: |
+        For a **severe or life-threatening** attack, give **oral prednisolone
+        1 mg/kg** (max 60 mg; **20 mg** for ages 2–5 y) for **3–5 days**. Repeat
+        the dose if the child vomits; consider IV steroids if oral cannot be
+        retained. Tapering short courses (7–14 days) is not necessary. **IV
+        hydrocortisone (4 mg/kg every 4 h) provides no benefit** and is only for
+        children unable to retain oral medication.
+
+    - type: "prose"
+      title: "Magnesium sulfate"
+      markdown: |
+        IV magnesium sulfate may add benefit in severe asthma already treated
+        with bronchodilators and corticosteroids — it has a **better safety
+        profile than aminophylline**. Give **50% magnesium sulfate as a bolus of
+        0.1 ml/kg (50 mg/kg) IV over 20 min**.
+
+    - type: "prose"
+      title: "Aminophylline — last resort"
+      callout: true
+      markdown: |
+        **Not recommended** in mild-to-moderate asthma. Reserve for a child who
+        does **not** improve after several doses of a rapid-acting bronchodilator
+        plus oral prednisolone. Admit ideally to high-care/ICU with continuous
+        monitoring. **Loading 5–6 mg/kg** (max 300 mg) IV over **≥ 20 min**
+        (preferably 1 h), then **5 mg/kg every 6 h**. **Omit the loading dose** if
+        any aminophylline/caffeine was given in the previous 24 h. **Stop
+        immediately** if the child vomits, has a **pulse > 180/min**, a headache
+        or a convulsion — it is dangerous in overdose or if given too rapidly.
+
+    - type: "prose"
+      title: "Oral salbutamol & antibiotics"
+      markdown: |
+        - **Oral salbutamol** (syrup/tablets) is **not** recommended for severe
+          or persistent wheeze — use only inhaled salbutamol; oral is for a child
+          well enough to go home. Dose: **1 mo–2 y: 100 µg/kg** (max 2 mg) up to
+          4×/day; **2–6 y: 1–2 mg** up to 4×/day.
+        - **Antibiotics** are **not** given routinely for asthma or for a
+          wheezing child with fast breathing but no fever — only for persistent
+          fever and other signs of pneumonia
+          ([§4.2](topic:who-imci-4-2-pneumonia)).
+
+    - type: "prose"
+      title: "Follow-up & long-term care"
+      markdown: |
+        Monitoring: nurse every 3–6 h as the child improves, doctor once a day;
+        watch for respiratory failure. If worsening suddenly, chest X-ray for
+        pneumothorax (hyperinflation can mimic it — take care).
+        Asthma is chronic and recurrent: on discharge prescribe **inhaled
+        salbutamol via MDI + spacer** and teach its use. Make a **long-term plan**
+        based on symptom frequency/severity (intermittent or regular
+        bronchodilator, inhaled steroids, or intermittent oral steroid courses),
+        following up-to-date national or specialist guidelines.

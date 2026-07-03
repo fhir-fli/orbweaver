@@ -102,3 +102,43 @@ book:
             - topic: "topics/who_3_13_2_tb.yaml"
             - topic: "topics/who_3_13_3_hiv.yaml"
         - topic: "topics/who_3_14_drug_doses.yaml"
+    - title: "4. Cough or difficulty in breathing"
+      # WHO Pocket Book color-codes by chapter; Chapter 4 tab = brown/ochre
+      # (sampled 0xFF9C5400 from the p.75 chapter tab via pdftoppm).
+      palette:
+        accent: "0xFF9C5400"
+      children:
+        - topic: "topics/who_4_01_cough.yaml"
+        - title: "4.2 Pneumonia"
+          topic: "topics/who_4_02_pneumonia.yaml"
+          children:
+            - topic: "topics/who_4_02_1_severe_pneumonia.yaml"
+            - topic: "topics/who_4_02_2_pneumonia.yaml"
+        - title: "4.3 Complications of pneumonia"
+          topic: "topics/who_4_03_complications.yaml"
+          children:
+            - topic: "topics/who_4_03_1_effusion.yaml"
+            - topic: "topics/who_4_03_2_abscess.yaml"
+            - topic: "topics/who_4_03_3_pneumothorax.yaml"
+        - topic: "topics/who_4_04_cough_cold.yaml"
+        - title: "4.5 Conditions presenting with wheeze"
+          topic: "topics/who_4_05_wheeze.yaml"
+          children:
+            - topic: "topics/who_4_05_1_bronchiolitis.yaml"
+            - topic: "topics/who_4_05_2_asthma.yaml"
+            - topic: "topics/who_4_05_3_wheeze_cold.yaml"
+        - title: "4.6 Conditions presenting with stridor"
+          topic: "topics/who_4_06_stridor.yaml"
+          children:
+            - topic: "topics/who_4_06_1_croup.yaml"
+            - topic: "topics/who_4_06_2_diphtheria.yaml"
+            - topic: "topics/who_4_06_3_epiglottitis.yaml"
+            - topic: "topics/who_4_06_4_anaphylaxis.yaml"
+        - title: "4.7 Conditions presenting with chronic cough"
+          topic: "topics/who_4_07_chronic_cough.yaml"
+          children:
+            - topic: "topics/who_4_07_1_pertussis.yaml"
+            - topic: "topics/who_4_07_2_tuberculosis.yaml"
+            - topic: "topics/who_4_07_3_foreign_body.yaml"
+        - topic: "topics/who_4_08_heart_failure.yaml"
+        - topic: "topics/who_4_09_rheumatic_heart.yaml"

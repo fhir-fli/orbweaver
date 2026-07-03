@@ -1,0 +1,55 @@
+# ============================================================
+# WHO IMCI §4.3.2 — Lung abscess. Pocket Book 2nd ed (2013), p.89.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-3-2-abscess"
+  title: "Lung Abscess"
+  list_subtitle: "4.3.2 · thick-walled cavity · empirical antibiotics"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["lung abscess", "cavity", "empyema", "cloxacillin", "respiratory", "pediatric"]
+  aliases:
+    - "Lung Abscess"
+  category: "medical"
+
+  page_number: 89
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        A **circumscribed, thick-walled cavity** in the lung containing purulent
+        material from suppuration and necrosis of lung parenchyma. It usually
+        develops in an **unresolved area of pneumonia** — from pulmonary
+        aspiration, diminished clearance, embolic phenomena, or haematogenous
+        spread.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **fever**
+        - **pleuritic chest pain**
+        - **sputum production or haemoptysis**
+        - **weight loss**
+        - On examination: reduced chest movement, decreased breath sounds,
+          dullness to percussion, crackles, bronchial breathing.
+        - **Chest X-ray:** a solitary thick-walled cavity, with or without an
+          **air–fluid level**.
+        - **Ultrasound / CT:** to localize the lesion and guide drainage or
+          needle aspiration.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Antibiotic choice is usually **empirical**, based on the presumed
+        organism.
+        - **Ampicillin** — or **cloxacillin / flucloxacillin 50 mg/kg** IM/IV
+          every 6 h — **+ gentamicin 7.5 mg/kg** IM/IV once a day. Continue as in
+          empyema ([§4.3.1](topic:who-imci-4-3-1-effusion)) for up to **3 weeks**.
+        - **Surgical management** for a large abscess — especially with
+          haemoptysis or clinical deterioration despite adequate antibiotics.
+          Drainage is usually **percutaneous tube drainage** or
+          **ultrasound-guided needle aspiration**.

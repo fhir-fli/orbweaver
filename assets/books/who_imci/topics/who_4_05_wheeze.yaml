@@ -1,0 +1,73 @@
+# ============================================================
+# WHO IMCI §4.5 — Conditions presenting with wheeze (overview of the
+# nested group + Table 8 differential). Pocket Book 2nd ed (2013),
+# pp.91–94.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-5-wheeze"
+  title: "Wheeze"
+  list_subtitle: "4.5 · bronchodilator response · differential (Table 8)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["wheeze", "bronchodilator", "salbutamol", "asthma", "bronchiolitis", "respiratory", "pediatric"]
+  aliases:
+    - "Wheezing"
+  category: "medical"
+
+  page_number: 91
+
+  blocks:
+
+    - type: "prose"
+      title: "What wheeze tells you"
+      highlight: true
+      markdown: |
+        Wheeze is a **high-pitched whistling on expiration** from narrowing of
+        the distal airway. To hear a mild wheeze, place your ear at the child's
+        mouth while the child is calm, or use a stethoscope.
+        - **< 2 years:** mostly **viral** (bronchiolitis, coughs and colds).
+        - **> 2 years:** mostly **asthma** (Table 8).
+
+        Some children with **pneumonia** also wheeze — always consider
+        pneumonia, especially with fast breathing. A child who wheezes but has
+        **no fever, no chest indrawing and no danger sign** is unlikely to have
+        pneumonia and **should not** be given antibiotics.
+
+    - type: "prose"
+      title: "History & examination"
+      markdown: |
+        - **History:** previous wheeze; night-time / early-morning shortness of
+          breath, cough or wheeze; response to bronchodilators; asthma diagnosis
+          or long-term asthma treatment; family history of allergy or asthma.
+        - **Examination:** wheeze on expiration; prolonged expiration; resonant
+          percussion; hyperinflation; rhonchi; shortness of breath at rest or on
+          exertion; lower chest wall indrawing if severe.
+
+    - type: "prose"
+      title: "Response to a rapid-acting bronchodilator"
+      markdown: |
+        If the cause of the wheeze is unclear, or the child has fast breathing or
+        chest indrawing, give a **rapid-acting bronchodilator** and **reassess
+        after 15 min** — the response helps the diagnosis. Deliver it by
+        (see [§4.5.2](topic:who-imci-4-5-2-asthma) for doses):
+        - **nebulized salbutamol**, or
+        - **salbutamol by metered-dose inhaler + spacer**, or
+        - **subcutaneous adrenaline** if neither is available.
+
+        **Signs of improvement:** less respiratory distress (easier breathing),
+        less lower chest wall indrawing, improved air entry. Children who still
+        have signs of **hypoxia** (cyanosis, SpO₂ ≤ 90%, cannot drink, severe
+        indrawing) or fast breathing after bronchodilator should get a **second
+        dose** and be **admitted**.
+
+    - type: "table"
+      title: "Table 8 · Differential diagnosis of wheeze"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Asthma**", "Recurrent wheeze / chest tightness, some unrelated to colds or induced by exercise; hyperinflation; prolonged expiration; reduced air entry (if severe); **good response to bronchodilators**"]
+        - cells: ["**Bronchiolitis**", "**First** episode of wheeze in a child **< 2 years**; at time of seasonal bronchiolitis; hyperinflation; prolonged expiration; reduced air entry (if severe); **poor or no response** to bronchodilators; apnoea in young infants (esp. preterm)"]
+        - cells: ["**Wheeze with cough or cold**", "Wheeze always related to coughs and colds; no family/personal history of asthma, eczema, hay-fever; prolonged expiration; **good response** to bronchodilators; tends to be **less severe** than asthma-associated wheeze"]
+        - cells: ["**Foreign body**", "Sudden onset of choking or wheezing; wheeze may be **unilateral**; air trapping with hyper-resonance and mediastinal shift; lung collapse; **no response** to bronchodilators"]
+        - cells: ["**Pneumonia**", "Fever; coarse crackles; grunting"]

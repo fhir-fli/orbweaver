@@ -1,0 +1,53 @@
+# ============================================================
+# WHO IMCI §4.6 — Conditions presenting with stridor (overview of the
+# nested group + Table 9 differential). Pocket Book 2nd ed (2013),
+# pp.102–103.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-6-stridor"
+  title: "Stridor"
+  list_subtitle: "4.6 · croup · diphtheria · epiglottitis · anaphylaxis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["stridor", "croup", "diphtheria", "epiglottitis", "anaphylaxis", "airway", "respiratory", "pediatric"]
+  aliases:
+    - "Stridor"
+  category: "medical"
+
+  page_number: 102
+
+  blocks:
+
+    - type: "prose"
+      title: "Presenting sign is stridor"
+      highlight: true
+      markdown: |
+        Stridor is a **harsh noise during inspiration**, from narrowing of the
+        air passages in the **oropharynx, subglottis or trachea**. If the
+        obstruction is **below the larynx**, stridor may also occur on
+        expiration. Major causes of severe stridor: **viral croup** (often
+        measles or other viruses), **foreign body**, **retropharyngeal abscess**,
+        **diphtheria**, and **laryngeal trauma** (Table 9). It may also occur in
+        early infancy from **congenital abnormalities**.
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        - **first** or **recurrent** episode of stridor
+        - history of **choking**
+        - stridor present **soon after birth**
+
+    - type: "table"
+      title: "Table 9 · Differential diagnosis of stridor"
+      column_flex: [2, 5]
+      columns: ["Diagnosis", "In favour"]
+      rows:
+        - cells: ["**Viral croup**", "Barking cough; respiratory distress; hoarse voice; if measles, signs of measles"]
+        - cells: ["**Retropharyngeal abscess**", "Soft-tissue swelling at the back of the throat; difficulty swallowing; fever"]
+        - cells: ["**Foreign body**", "Sudden history of choking; respiratory distress"]
+        - cells: ["**Diphtheria**", "**Bull neck** from enlarged cervical nodes and oedema; red throat; **grey pharyngeal membrane**; blood-stained nasal discharge; no DPT vaccination"]
+        - cells: ["**Epiglottitis**", "Soft stridor; **'septic' child**; little or no cough; **drooling** of saliva; inability to drink"]
+        - cells: ["**Congenital anomaly**", "Stridor present since birth"]
+        - cells: ["**Anaphylaxis**", "History of allergen exposure; wheeze; shock; urticaria and oedema of lips and face"]
+        - cells: ["**Burns**", "Swollen lips; smoke inhalation"]

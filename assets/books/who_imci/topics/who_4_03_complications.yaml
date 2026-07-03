@@ -1,0 +1,32 @@
+# ============================================================
+# WHO IMCI §4.3 — Complications of pneumonia (overview of the nested
+# group). Pocket Book 2nd ed (2013), p.88.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-3-complications"
+  title: "Complications of Pneumonia"
+  list_subtitle: "4.3 · effusion/empyema · abscess · pneumothorax"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["pneumonia complications", "empyema", "lung abscess", "pneumothorax", "septicaemia", "respiratory", "pediatric"]
+  aliases:
+    - "Pneumonia Complications"
+  category: "medical"
+
+  page_number: 88
+
+  blocks:
+
+    - type: "prose"
+      title: "Complications of pneumonia"
+      highlight: true
+      markdown: |
+        **Septicaemia** is the most common complication — bacteria spread into
+        the bloodstream and can cause **septic shock** or metastatic infection
+        (meningitis, peritonitis, endocarditis — especially with valvular heart
+        disease — or septic arthritis). Other common complications are:
+        - **Pleural effusion & empyema**
+          ([§4.3.1](topic:who-imci-4-3-1-effusion))
+        - **Lung abscess** ([§4.3.2](topic:who-imci-4-3-2-abscess))
+        - **Pneumothorax** ([§4.3.3](topic:who-imci-4-3-3-pneumothorax))

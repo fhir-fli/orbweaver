@@ -1,0 +1,75 @@
+# ============================================================
+# WHO IMCI §4.6.1 — Viral croup. Pocket Book 2nd ed (2013), pp.102–104.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-6-1-croup"
+  title: "Viral Croup"
+  list_subtitle: "4.6.1 · barking cough · steroids · adrenaline"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["croup", "stridor", "dexamethasone", "budesonide", "adrenaline", "airway", "pediatric"]
+  aliases:
+    - "Croup"
+  category: "medical"
+
+  page_number: 102
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Obstruction of the **upper airway** that, when severe, can be
+        life-threatening. Most severe episodes are in children **≤ 2 years**,
+        caused by various respiratory viruses. For croup associated with
+        **measles**, see p.175.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **Mild croup:** fever; hoarse voice; barking / hacking cough; stridor
+          only when the child is **agitated**.
+        - **Severe croup** — additionally: **stridor at rest**; rapid breathing
+          and lower chest wall indrawing; **cyanosis or SpO₂ ≤ 90%**.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Mild croup** → home care: fluids, breastfeeding/feeding as
+          appropriate.
+        - **Severe croup** → **admit**; avoid invasive procedures unless an
+          anaesthetist is present (they can precipitate complete obstruction).
+        - **Steroid** (as soon as possible): a single dose of **oral
+          dexamethasone 0.6 mg/kg** (or equivalent), or **prednisolone**, or
+          **nebulized budesonide 2 mg**. Dissolve the tablet in a spoonful of
+          water for a child who cannot swallow it; repeat if the child vomits.
+        - **Nebulized adrenaline** (trial): **2 ml of 1:1000**. If effective,
+          repeat as often as hourly with careful monitoring — improvement can be
+          temporary (~2 h).
+        - **Antibiotics are not effective** and should not be given.
+
+    - type: "prose"
+      title: "Watch the airway — intubation / tracheostomy"
+      callout: true
+      markdown: |
+        Monitor closely; ensure emergency **intubation / tracheostomy** can be
+        done immediately — obstruction can occur suddenly. If there are signs of
+        **incipient complete obstruction** (severe lower chest wall indrawing,
+        restlessness), **intubate immediately**; if not possible, transfer
+        urgently. Tracheostomy only by experienced staff. **Avoid oxygen unless
+        there is incipient obstruction** (a nasal/nasopharyngeal catheter can
+        upset the child and precipitate obstruction) — but give it if
+        obstruction is imminent and intubation/tracheostomy is being arranged.
+        **Call for help** (anaesthetist + surgeon).
+
+    - type: "prose"
+      title: "Supportive care & monitoring"
+      markdown: |
+        Keep the child **calm**; avoid disturbance. Paracetamol for distressing
+        fever ≥ 39 °C. Encourage breastfeeding and oral fluids; **avoid
+        parenteral fluids / IV cannula** (distress can precipitate obstruction).
+        **Do not** use mist tents, sedatives or antitussives. Nurses assess
+        respiratory status **every 3 h**, doctors twice a day; keep the bed near
+        the nursing station so incipient obstruction is detected early.

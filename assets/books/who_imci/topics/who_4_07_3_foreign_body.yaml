@@ -1,0 +1,74 @@
+# ============================================================
+# WHO IMCI §4.7.3 — Foreign body inhalation. Pocket Book 2nd ed (2013),
+# pp.119–120.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-7-3-foreign-body"
+  title: "Foreign Body Inhalation"
+  list_subtitle: "4.7.3 · choking first aid · bronchoscopy"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["foreign body", "choking", "aspiration", "bronchoscopy", "airway", "respiratory", "pediatric"]
+  aliases:
+    - "Inhaled Foreign Body"
+    - "Choking"
+  category: "medical"
+
+  page_number: 119
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Nuts, seeds or small objects inhaled, most often by children **< 4
+        years**. The object usually lodges in a **bronchus** (more often the
+        right), causing **collapse or consolidation** of the lung beyond it. A
+        symptom-free interval of days or weeks may be followed by **persistent
+        wheeze, chronic cough or pneumonia that fails to respond** to treatment.
+        A small sharp object in the **larynx** causes stridor or wheeze; a large
+        object in the larynx can cause **sudden death** from asphyxia unless it
+        is dislodged or an emergency tracheostomy is done.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Consider an inhaled foreign body with:
+        - **sudden onset of choking, coughing or wheezing**, or
+        - **segmental / lobar pneumonia that fails to respond** to antibiotics
+
+        On exam: **unilateral wheeze**; an area of decreased breath sounds that
+        is **dull or hyper-resonant**; deviation of the trachea or apex beat.
+        **Chest X-ray at full expiration** may show hyperinflation or collapse
+        with mediastinal shift **away** from the affected side, or a radio-opaque
+        object.
+
+    - type: "prose"
+      title: "Emergency first aid for choking"
+      callout: true
+      markdown: |
+        Attempt to dislodge and expel the object
+        ([Chart 3](topic:who-imci-chart3-choking)) — technique by age:
+        - **Infants:** head-down along your arm/thigh → **5 back blows** (heel of
+          hand between the shoulder blades) → if still obstructed, turn over and
+          give **5 chest thrusts** (2 fingers, lower half of the sternum) → check
+          the mouth for anything removable; repeat.
+        - **Older children:** **5 back blows** (heel of the hand) while sitting/
+          kneeling/lying → if still obstructed, **abdominal thrusts (Heimlich)** —
+          from behind, fist just below the sternum, thrust sharply upward, up to
+          **5 times** → check the mouth; repeat.
+        - Then **check airway patency** — look for chest movement, listen and
+          feel for breath ([Chart 4](topic:who-imci-chart4-airway) for airway
+          actions).
+
+    - type: "prose"
+      title: "Later treatment"
+      markdown: |
+        If a foreign body is suspected, **refer** to a hospital where diagnosis
+        is possible and it can be removed after **bronchoscopy**. If there is
+        evidence of pneumonia, begin **ampicillin (or benzylpenicillin) +
+        gentamicin** as for severe pneumonia
+        ([§4.2.1](topic:who-imci-4-2-1-severe-pneumonia)) **before** attempting
+        removal.

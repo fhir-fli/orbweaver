@@ -1,0 +1,64 @@
+# ============================================================
+# WHO IMCI §4.4 — Cough or cold. Pocket Book 2nd ed (2013), pp.90–91.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-4-cough-cold"
+  title: "Cough or Cold"
+  list_subtitle: "4.4 · self-limited viral · no antibiotics"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["common cold", "cough", "viral", "supportive care", "respiratory", "pediatric"]
+  aliases:
+    - "Common Cold"
+  category: "medical"
+
+  page_number: 90
+
+  blocks:
+
+    - type: "prose"
+      title: "Self-limited — support only"
+      highlight: true
+      markdown: |
+        Common, **self-limited viral** infections that need only supportive
+        care. **Antibiotics should not be given.** Wheeze or stridor may occur,
+        especially in infants. Most episodes end within **14 days** — a cough
+        lasting **≥ 14 days** may be TB, asthma, pertussis or symptomatic HIV
+        ([chronic cough §4.7](topic:who-imci-4-7-chronic-cough)).
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Common features:
+        - **cough**
+        - **nasal discharge**
+        - **mouth breathing**
+        - **fever**
+
+        **Absent:** general danger signs; signs of severe pneumonia or
+        pneumonia; stridor when the child is calm.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Outpatient** care.
+        - **Soothe the throat** and relieve cough with a **safe remedy** (e.g. a
+          warm, sweet drink).
+        - **High fever (≥ 39 °C)** causing distress → **paracetamol**.
+        - **Clear the nose** before feeds with a cloth soaked in water and
+          twisted to a pointed wick.
+        - Normal fluids plus **extra breast milk / fluids**; small frequent
+          drinks are better tolerated with fever.
+        - **Do NOT give:** antibiotics (not effective, do not prevent
+          pneumonia); remedies with **atropine, codeine/codeine derivatives or
+          alcohol**; **mucolytics**; **medicated nose drops**.
+
+    - type: "prose"
+      title: "Follow-up"
+      markdown: |
+        Advise the mother to:
+        - **feed the child**
+        - watch for **fast or difficult breathing** and return if either
+          develops
+        - return if the child becomes **sicker** or cannot drink or breastfeed

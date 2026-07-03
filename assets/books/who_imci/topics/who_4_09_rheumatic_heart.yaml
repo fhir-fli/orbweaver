@@ -1,0 +1,74 @@
+# ============================================================
+# WHO IMCI §4.9 — Rheumatic heart disease. Pocket Book 2nd ed (2013),
+# pp.122–123.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-9-rheumatic-heart"
+  title: "Rheumatic Heart Disease"
+  list_subtitle: "4.9 · valve damage · penicillin prophylaxis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["rheumatic heart disease", "rheumatic fever", "valve", "penicillin", "endocarditis", "cardiac", "pediatric"]
+  aliases:
+    - "RHD"
+    - "Rheumatic Heart Disease"
+  category: "medical"
+
+  page_number: 122
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        Chronic rheumatic heart disease is a complication of **acute rheumatic
+        fever** that leaves **permanent valve damage** — group A β-haemolytic
+        streptococcal antibodies cause pancarditis with valve insufficiency.
+        Risk rises with **repeated episodes** of rheumatic fever, leading to
+        valve stenosis/regurgitation, atrial dilatation, arrhythmia and
+        ventricular dysfunction. It is a major cause of **mitral stenosis** in
+        children.
+
+    - type: "prose"
+      title: "When to suspect"
+      markdown: |
+        Suspect it in any child with a **previous history of rheumatic fever**
+        who presents with **heart failure or a heart murmur**. Diagnosis matters
+        because **penicillin prophylaxis** prevents further episodes of rheumatic
+        fever and worse valve damage. Mild disease may cause only a murmur in an
+        otherwise well child; severe disease reflects the extent of heart damage
+        or infective endocarditis.
+
+    - type: "prose"
+      title: "History & examination"
+      markdown: |
+        - **History:** chest pain; palpitations; heart-failure symptoms
+          (orthopnoea, paroxysmal nocturnal dyspnoea, oedema); fever or stroke
+          (endocarditis of damaged valves); breathlessness on exertion; syncope.
+        - **Examination:** signs of heart failure; **cardiomegaly with a
+          murmur**; signs of **infective endocarditis** — conjunctival/retinal
+          haemorrhages, hemiparesis, **Osler nodes, Roth spots**, splenomegaly.
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        - **Chest X-ray:** cardiomegaly with congested lungs.
+        - **Echocardiogram** (if available) — confirms the diagnosis, the extent
+          of valve damage, and evidence of infective endocarditis.
+        - **Full blood count** and **blood culture**.
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - **Admit** if in heart failure or with suspected bacterial
+          endocarditis.
+        - Treatment depends on the type and extent of valve damage; **manage
+          heart failure** if present ([§4.8](topic:who-imci-4-8-heart-failure)).
+        - **Diuretics and vasodilators** to relieve pulmonary congestion when
+          needed.
+        - For **infective endocarditis:** **penicillin or ampicillin — or
+          ceftriaxone — plus gentamicin IV/IM for 4–6 weeks**.
+        - **Refer** for echocardiographic evaluation and a long-term plan;
+          severe valve stenosis or regurgitation may need **surgery**.

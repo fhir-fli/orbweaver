@@ -1,0 +1,90 @@
+# ============================================================
+# WHO IMCI §4.5.1 — Bronchiolitis. Pocket Book 2nd ed (2013), pp.94–96.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-5-1-bronchiolitis"
+  title: "Bronchiolitis"
+  list_subtitle: "4.5.1 · viral · < 2 y · oxygen, support"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["bronchiolitis", "rsv", "wheeze", "oxygen", "infant", "respiratory", "pediatric"]
+  aliases:
+    - "Bronchiolitis"
+  category: "medical"
+
+  page_number: 94
+
+  blocks:
+
+    - type: "prose"
+      title: "What it is"
+      highlight: true
+      markdown: |
+        A **lower respiratory viral infection**, typically most severe in young
+        infants, occurring in annual epidemics, with airways obstruction and
+        wheezing — most commonly **respiratory syncytial virus (RSV)**.
+        Secondary bacterial infection may occur. Management of bronchiolitis with
+        fast breathing or respiratory distress is similar to pneumonia. Episodes
+        of wheeze may recur for months, but eventually stop.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **wheeze not relieved** by up to 3 doses of a rapid-acting
+          bronchodilator
+        - **hyperinflation** of the chest with increased percussion resonance
+        - **lower chest wall indrawing**
+        - fine crackles and wheeze on auscultation
+        - difficulty feeding/breastfeeding due to respiratory distress
+        - **nasal discharge** that can cause severe nasal obstruction
+
+    - type: "prose"
+      title: "When to admit"
+      markdown: |
+        Most children can be treated **at home**. **Admit** those with any sign
+        of severe pneumonia:
+        - **SpO₂ < 90%** or central cyanosis
+        - **apnoea** or history of apnoea
+        - inability to breastfeed/drink, or vomiting everything
+        - convulsions, lethargy or unconsciousness
+        - gasping and grunting (especially in young infants)
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Oxygen** for all with severe respiratory distress or **SpO₂ < 90%**
+          — nasal prongs or catheter ([Chart 5](topic:who-imci-chart5-oxygen));
+          nurse checks every 3 h.
+        - **Antibiotics only if signs of pneumonia:**
+          - at home — **amoxicillin 40 mg/kg twice a day for 5 days** (only if
+            fast breathing + lower chest wall indrawing)
+          - severe pneumonia — **ampicillin 50 mg/kg** (or benzylpenicillin
+            50 000 U/kg) IM/IV every 6 h ≥ 5 days **+ gentamicin 7.5 mg/kg** once
+            daily ≥ 5 days
+        - **Supportive:** paracetamol for distressing fever ≥ 39 °C; maintenance
+          fluids (avoid over-hydration), encourage breastfeeding; NG feeds if
+          unable to maintain intake; gentle nasal suction for obstruction.
+
+    - type: "prose"
+      title: "Monitoring & complications"
+      markdown: |
+        Nurse assessment **every 3–6 h**, doctor at least once a day; watch for
+        **respiratory failure** (increasing hypoxia and distress → exhaustion).
+        If the child fails to respond to oxygen or worsens suddenly, get a **chest
+        X-ray** for **pneumothorax**. **Tension pneumothorax** with severe
+        distress and mediastinal shift needs **immediate needle
+        thoracocentesis**, then an underwater-seal chest drain. Consider **CPAP**
+        if respiratory failure develops.
+
+    - type: "prose"
+      title: "Infection control, discharge & follow-up"
+      markdown: |
+        Bronchiolitis is **very infectious** to other children in hospital —
+        hand-washing between patients, ideally isolate (with close observation),
+        and during epidemics restrict visits by relatives with URTI symptoms.
+        **Discharge** when respiratory distress and hypoxaemia have resolved,
+        there is no apnoea, and the infant feeds well. Cough and wheeze may
+        persist up to **3 weeks**; while well, feeding, with no distress/apnoea,
+        no antibiotics are needed. **Advise against smoking** (risk of recurrent
+        bronchiolitis).

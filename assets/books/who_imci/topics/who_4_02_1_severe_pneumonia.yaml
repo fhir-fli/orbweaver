@@ -1,0 +1,118 @@
+# ============================================================
+# WHO IMCI §4.2.1 — Severe pneumonia. Pocket Book 2nd ed (2013), pp.80–85.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-4-2-1-severe-pneumonia"
+  title: "Severe Pneumonia"
+  list_subtitle: "4.2.1 · admit · oxygen · IV antibiotics"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["severe pneumonia", "oxygen", "ampicillin", "gentamicin", "cloxacillin", "pcp", "respiratory", "pediatric"]
+  aliases:
+    - "Severe Pneumonia"
+  category: "medical"
+
+  page_number: 80
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Cough or difficulty in breathing **plus at least one** of:
+        - **central cyanosis** or **SpO₂ < 90%** on pulse oximetry
+        - **severe respiratory distress** (grunting, very severe chest
+          indrawing)
+        - a **general danger sign** — inability to breastfeed or drink,
+          lethargy or unconsciousness, convulsions
+
+        Other signs of pneumonia may also be present: fast breathing (≥ 50/min
+        at 2–11 mo; ≥ 40/min at 1–5 y), lower chest wall indrawing, decreased or
+        bronchial breath sounds, crackles, abnormal vocal resonance, pleural rub.
+
+    - type: "prose"
+      title: "Investigations"
+      markdown: |
+        - **Pulse oximetry** in all children with suspected pneumonia.
+        - **Chest X-ray** if possible — to find pleural effusion, empyema,
+          pneumothorax, pneumatocoele, interstitial pneumonia or pericardial
+          effusion.
+
+    - type: "prose"
+      title: "Oxygen therapy"
+      markdown: |
+        - **Admit to hospital.** Ensure a **continuous** oxygen supply.
+        - Give **oxygen to all children with SpO₂ < 90%**.
+        - **Nasal prongs** are preferred (a nasal/nasopharyngeal catheter is an
+          alternative) — see [Chart 5](topic:who-imci-chart5-oxygen).
+        - Use pulse oximetry to keep **SpO₂ > 90%**. If no oximeter, continue
+          oxygen until the signs of hypoxia (e.g. can't breastfeed, RR ≥ 70/min)
+          are gone.
+        - For **stable** children, trial off oxygen each day; **discontinue** if
+          SpO₂ stays **> 90%** on room air (check ≥ 15 min).
+        - Nurses should check **every 3 h** that prongs are not blocked and all
+          connections are secure.
+
+    - type: "prose"
+      title: "Antibiotic therapy"
+      markdown: |
+        - **IV ampicillin (or benzylpenicillin) + gentamicin:**
+          - **ampicillin 50 mg/kg** (or **benzylpenicillin 50 000 U/kg**) IM/IV
+            **every 6 h** for at least **5 days**
+          - **gentamicin 7.5 mg/kg** IM/IV **once a day** for at least **5 days**
+        - If **no improvement within 48 h** or **staphylococcal** pneumonia is
+          suspected → switch to **gentamicin 7.5 mg/kg** once daily +
+          **cloxacillin 50 mg/kg** IM/IV every 6 h.
+        - Use **ceftriaxone 80 mg/kg** IM/IV once daily if first-line treatment
+          fails.
+
+    - type: "prose"
+      title: "Supportive care"
+      markdown: |
+        - **Gently suction** thick secretions at the nasal passages/throat.
+        - Fever **≥ 39 °C** causing distress → **paracetamol**.
+        - If **wheeze**, give a rapid-acting **bronchodilator**
+          ([§4.5](topic:who-imci-4-5-wheeze)).
+        - Give **maintenance fluids** for age — but **avoid over-hydration**.
+          Encourage breastfeeding and oral fluids. If the child cannot drink,
+          pass a **nasogastric tube** and give small frequent amounts; if oxygen
+          is by nasal catheter, pass both tubes through the **same nostril**.
+        - Encourage eating as soon as food can be taken.
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        A nurse checks at least **every 3 h**; a doctor at least **twice a day**.
+        With no complications, expect **signs of improvement within 2 days**:
+        slower breathing, less indrawing, less fever, better feeding and better
+        oxygen saturation.
+
+    - type: "prose"
+      title: "If not improving — other diagnoses"
+      markdown: |
+        If not improved after 2 days or worsening, look for **complications**
+        ([§4.3](topic:who-imci-4-3-complications)) or alternatives (chest X-ray):
+        - **Staphylococcal pneumonia** (rapid deterioration, pneumatocoele or
+          pneumothorax with effusion, septic skin pustules): **cloxacillin
+          50 mg/kg** IM/IV every 6 h **+ gentamicin 7.5 mg/kg** once daily; when
+          improving, oral cloxacillin 4×/day to complete **3 weeks**.
+        - **Tuberculosis:** persistent cough and fever > 2 weeks despite
+          adequate antibiotics → evaluate for TB
+          ([§4.7.2](topic:who-imci-4-7-2-tuberculosis)).
+        - **HIV / PCP:** in HIV-exposed children, ***Pneumocystis* pneumonia
+          (PCP)**, often at **4–6 months**, is an important cause — treat as
+          severe pneumonia, and add **high-dose co-trimoxazole (8 mg/kg
+          trimethoprim + 40 mg/kg sulfamethoxazole) every 8 h for 3 weeks**
+          (< 12 months routinely; 12–59 months only if clinical PCP signs).
+
+    - type: "prose"
+      title: "Discharge & follow-up"
+      markdown: |
+        **Discharge** when respiratory distress has resolved, there is no
+        hypoxaemia (SpO₂ > 90%), the child feeds well and can take oral
+        antibiotics, and the parents understand the danger signs.
+        Children may **cough for several weeks**; their nutrition is often poor —
+        give due vaccinations, arrange **follow-up at 2 weeks**, and address risk
+        factors (malnutrition, indoor air pollution, parental smoking).
