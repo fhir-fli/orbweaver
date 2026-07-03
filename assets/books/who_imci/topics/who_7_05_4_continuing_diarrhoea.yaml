@@ -1,0 +1,47 @@
+# ============================================================
+# WHO IMCI §7.5.4 — Continuing diarrhoea. Pocket Book 2nd ed (2013),
+# p.219.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-5-4-continuing-diarrhoea"
+  title: "Continuing Diarrhoea"
+  list_subtitle: "7.5.4 · giardia · lactose · osmotic"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["continuing diarrhoea", "SAM", "giardiasis", "lactose intolerance", "osmotic diarrhoea", "pediatric"]
+  aliases:
+    - "SAM Diarrhoea"
+  category: "medical"
+
+  page_number: 219
+
+  blocks:
+
+    - type: "prose"
+      title: "Giardiasis"
+      highlight: true
+      markdown: |
+        Examine the stools by microscopy where possible. If **cysts or
+        trophozoites of Giardia lamblia** are found, give **metronidazole
+        7.5 mg/kg every 8 h for 7 days**. Also treat if stool microscopy cannot
+        be done or there is only a clinical suspicion of giardiasis.
+
+    - type: "prose"
+      title: "Lactose intolerance"
+      markdown: |
+        Diarrhoea is **only rarely** due to lactose intolerance — diagnose it
+        only if copious watery diarrhoea occurs **promptly after milk-based
+        feeds** and clearly improves when milk intake is reduced/stopped.
+        (Starter F-75 is already a low-lactose feed.) In exceptional cases:
+        - **replace milk feeds with yoghurt or a lactose-free infant formula**
+        - **reintroduce milk feeds gradually** in the rehabilitation phase.
+
+    - type: "prose"
+      title: "Osmotic diarrhoea"
+      markdown: |
+        Suspect osmotic diarrhoea if it **worsens substantially with hyperosmolar
+        F-75** and **ceases when the sugar content and osmolality are reduced**:
+        - use **cereal-based starter F-75** (lower osmolality), or a commercially
+          available **isotonic starter F-75**
+        - introduce **catch-up F-100 or RUTF gradually**.

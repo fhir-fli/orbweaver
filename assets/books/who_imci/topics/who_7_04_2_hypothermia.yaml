@@ -1,0 +1,62 @@
+# ============================================================
+# WHO IMCI §7.4.2 — Hypothermia (Step 2). Pocket Book 2nd ed (2013),
+# pp.202–203.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-2-hypothermia"
+  title: "Step 2 · Hypothermia"
+  list_subtitle: "7.4.2 · re-warm · feed · treat infection"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["hypothermia", "SAM", "re-warming", "kangaroo", "pediatric"]
+  aliases:
+    - "SAM Hypothermia"
+  category: "medical"
+
+  page_number: 202
+
+  blocks:
+
+    - type: "prose"
+      title: "Why it matters"
+      highlight: true
+      markdown: |
+        Hypothermia is **very common** in malnourished children and often
+        indicates **coexisting hypoglycaemia or serious infection**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        If the **axillary temperature is < 35 °C** or does not register on a
+        normal thermometer, **assume hypothermia**. Where a low-reading
+        thermometer is available, take the **rectal temperature (< 35.5 °C)** to
+        confirm.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Treat **all** hypothermic children routinely for **hypoglycaemia and
+        infection**.
+        - **Feed immediately**, then **every 2 h** (unless abdominal distension);
+          rehydrate first if dehydrated.
+        - **Re-warm:** clothe the child (especially the head); cover with a warm
+          blanket and place a heater or lamp nearby (**not pointing directly at
+          the child**), OR put the child on the mother's **bare chest/abdomen
+          (skin-to-skin)** and cover.
+        - Keep the child **away from draughts**.
+        - Give **appropriate IV or IM antibiotics**
+          ([§7.4.5](topic:who-imci-7-4-5-infection)).
+
+    - type: "prose"
+      title: "Monitoring & prevention"
+      markdown: |
+        - Take the **rectal temperature every 2 h** until it rises **> 36.5 °C**
+          (every 30 min if a heater is used). Keep the child covered at all
+          times, especially at night; keep the head covered.
+        - **Check for hypoglycaemia** whenever hypothermia is found.
+        - **Prevent:** feed every 2–3 h day and night; nurse in a warm,
+          draught-free area; use the **kangaroo technique** for infants; avoid
+          exposing the child to cold (bathing, examinations); change wet
+          nappies/clothes/bedding promptly. **Do not use a hot-water bottle or
+          fluorescent lamp**; use a heater/incandescent lamp with caution.

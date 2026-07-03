@@ -1,0 +1,46 @@
+# ============================================================
+# WHO IMCI §7.6.2 — Discharge from nutritional treatment. Pocket Book
+# 2nd ed (2013), pp.220–221.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-6-2-discharge-criteria"
+  title: "Discharge from Nutritional Treatment"
+  list_subtitle: "7.6.2 · WHZ ≥ −2 or MUAC ≥ 125 · no oedema 2 wk"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["discharge criteria", "SAM", "weight-for-height", "MUAC", "pediatric"]
+  aliases:
+    - "SAM Discharge Criteria"
+  category: "medical"
+
+  page_number: 220
+
+  blocks:
+
+    - type: "prose"
+      title: "Discharge only when"
+      highlight: true
+      markdown: |
+        Discharge from the nutritional treatment programme **only when** the
+        child's:
+        - **weight-for-height/length is ≥ −2 z-score** AND they have had **no
+          oedema for at least 2 weeks**, OR
+        - **mid-upper-arm circumference is ≥ 125 mm** AND they have had **no
+          oedema for at least 2 weeks**.
+
+        Use the **same anthropometric indicator that was used on admission** to
+        confirm recovery. **Percentage weight gain should NOT be used** as a
+        discharge criterion.
+
+    - type: "prose"
+      title: "Feeding at discharge"
+      markdown: |
+        Feed the child **at least 5 times a day** with foods containing about
+        **100 kcal and 2–3 g protein per 100 g**. Counsel the mother to:
+        - give **appropriate meals** (correct quantity) at least **5×/day**
+        - give **high-energy snacks** between meals (milk, banana, bread,
+          biscuits)
+        - **assist and encourage** the child to finish each meal
+        - **give food separately** so intake can be checked
+        - **breastfeed** as often as the child wants.

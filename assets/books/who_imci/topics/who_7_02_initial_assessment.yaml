@@ -1,0 +1,66 @@
+# ============================================================
+# WHO IMCI §7.2 — Initial assessment. Pocket Book 2nd ed (2013),
+# pp.198–200.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-2-initial-assessment"
+  title: "Initial Assessment"
+  list_subtitle: "7.2 · history · examination · appetite test"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["initial assessment", "SAM", "history", "examination", "appetite test", "pediatric"]
+  aliases:
+    - "SAM Assessment"
+  category: "medical"
+
+  page_number: 198
+
+  blocks:
+
+    - type: "prose"
+      title: "Assess danger signs, then take a history"
+      highlight: true
+      markdown: |
+        Assess for **general danger signs or emergency signs** first, then take a
+        history concerning:
+        - **recent intake** of food and fluids; **usual diet** before this illness
+        - **breastfeeding**
+        - **duration and frequency** of diarrhoea and vomiting; **type** of
+          diarrhoea (watery / bloody)
+        - **loss of appetite**
+        - **family circumstances** (to understand the child's social background)
+        - **cough > 2 weeks**; **contact with TB**
+        - **recent contact with measles**
+        - **known or suspected HIV** infection/exposure.
+
+    - type: "prose"
+      title: "On examination, look for"
+      markdown: |
+        - **Shock:** lethargic or unconscious; cold hands; slow capillary refill
+          (> 3 s); weak (low-volume), rapid pulse; low blood pressure.
+        - **signs of dehydration**
+        - **severe palmar pallor**
+        - **bilateral pitting oedema**
+        - **eye signs of vitamin A deficiency:** dry conjunctiva or cornea, Bitot
+          spots; corneal ulceration; keratomalacia. Children with vitamin A
+          deficiency are often **photophobic** and keep their eyes closed —
+          examine the eyes **very gently** to avoid corneal rupture.
+        - **localizing signs of infection** — ear/throat infections, skin
+          infection, pneumonia
+        - **signs of HIV infection**
+        - **fever** (≥ 37.5 °C) **or hypothermia** (rectal < 35.5 °C)
+        - **mouth ulcers**
+        - **skin changes of kwashiorkor:** hypo-/hyperpigmentation;
+          desquamation; ulceration (limbs, thighs, genitalia, groin, behind the
+          ears); exudative lesions (resembling severe burns), often with
+          secondary infection including Candida.
+
+    - type: "prose"
+      title: "Appetite test & labs"
+      markdown: |
+        - **Appetite test:** check whether the child has an appetite by offering
+          **ready-to-use therapeutic food (RUTF)** — a pass/fail that decides
+          outpatient vs inpatient care.
+        - **Laboratory:** check **Hb or EVF**, especially if there is severe
+          palmar pallor.

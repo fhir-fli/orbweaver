@@ -1,0 +1,29 @@
+# ============================================================
+# WHO IMCI §7.7 — Monitoring the quality of care (overview of the
+# nested group). Pocket Book 2nd ed (2013), pp.221–222.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-7-monitoring"
+  title: "Monitoring Quality of Care"
+  list_subtitle: "7.7 · mortality audit · weight gain"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["quality of care", "SAM", "audit", "pediatric"]
+  aliases:
+    - "SAM Quality of Care"
+  category: "medical"
+
+  page_number: 221
+
+  blocks:
+
+    - type: "prose"
+      title: "Two quality checks"
+      highlight: true
+      markdown: |
+        Review the quality of SAM care through:
+        - [Mortality audit](topic:who-imci-7-7-1-mortality-audit) — when in the
+          admission did deaths occur, and why?
+        - [Weight gain during rehabilitation](topic:who-imci-7-7-2-weight-gain) —
+          is the child gaining adequately, and if not, why not?

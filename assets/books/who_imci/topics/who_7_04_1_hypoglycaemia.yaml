@@ -1,0 +1,62 @@
+# ============================================================
+# WHO IMCI §7.4.1 — Hypoglycaemia (Step 1). Pocket Book 2nd ed (2013),
+# pp.201–202.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-1-hypoglycaemia"
+  title: "Step 1 · Hypoglycaemia"
+  list_subtitle: "7.4.1 · 10% glucose 50 ml · feed every 2 h"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["hypoglycaemia", "SAM", "glucose", "F-75", "frequent feeding", "pediatric"]
+  aliases:
+    - "SAM Hypoglycaemia"
+  category: "medical"
+
+  page_number: 201
+
+  blocks:
+
+    - type: "prose"
+      title: "Why it matters"
+      highlight: true
+      markdown: |
+        **All** severely malnourished children are at risk of hypoglycaemia and,
+        on admission, should be given a **feed or 10% glucose/sucrose**.
+        **Frequent 2-hourly feeding** is important.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        Measure blood glucose immediately if it can be done quickly (e.g.
+        Dextrostix). Hypoglycaemia = blood glucose **< 3 mmol/L (< 54 mg/dl)**.
+        **If glucose cannot be measured, assume** all children with SAM are
+        hypoglycaemic and treat.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Conscious:** give **50 ml of 10% glucose or sucrose** (one rounded
+          teaspoon of sugar in 3 tablespoons of water) **orally or by NG tube**,
+          then the **first feed as soon as possible**. Give the first feed of
+          **F-75** if quickly available, then feed **every 2 h for 24 h**; then
+          every 2–3 h day and night.
+        - **Unconscious:** give **IV 10% glucose 5 ml/kg**; if no IV access,
+          give **10% glucose or sucrose solution by NG tube**. If IV glucose is
+          not available, give **1 teaspoon of sugar moistened with 1–2 drops of
+          water sublingually**, repeat every 20 min to prevent relapse (monitor
+          for delayed swallowing/absorption; continue 2-hourly oral or NG feeds).
+        - Start **appropriate IV or IM antibiotics**
+          ([§7.4.5](topic:who-imci-7-4-5-infection)).
+
+    - type: "prose"
+      title: "Monitoring & prevention"
+      markdown: |
+        - **Recheck** (finger/heel-prick Dextrostix) after 30 min. If glucose is
+          still **< 3 mmol/L**, repeat the 10% glucose or sugar solution.
+        - If **rectal temperature falls < 35.5 °C** or consciousness deteriorates,
+          recheck glucose and treat accordingly.
+        - **Prevent:** feed **every 2 h**, starting immediately (or rehydrate
+          first if dehydrated); continue feeding **through the night**; keep the
+          child warm; check for **abdominal distension**.

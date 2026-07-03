@@ -1,0 +1,96 @@
+# ============================================================
+# WHO IMCI §7.4.3 — Dehydration (Step 3). Pocket Book 2nd ed (2013),
+# pp.203–205.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-3-dehydration"
+  title: "Step 3 · Dehydration"
+  list_subtitle: "7.4.3 · ReSoMal · rehydrate slowly · not IV"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["dehydration", "SAM", "ReSoMal", "rehydration", "fluid overload", "pediatric"]
+  aliases:
+    - "SAM Dehydration"
+  category: "medical"
+
+  page_number: 203
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis is hard — do not overestimate"
+      highlight: true
+      markdown: |
+        Dehydration tends to be **overdiagnosed and its severity overestimated**
+        in SAM — clinical signs are unreliable. **Assume all children with watery
+        diarrhoea or reduced urine output have some dehydration.** Note that poor
+        circulatory volume/perfusion **can co-exist with oedema**.
+
+    - type: "prose"
+      title: "🛑 Do NOT use the IV route (except in shock)"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Do not use the IV route for rehydration except in cases of shock** —
+        and **rehydrate slowly**. **Overhydration is very dangerous** in SAM and
+        may cause **death from heart failure**. Standard WHO ORS has **too much
+        sodium and too little potassium** for these children — use **ReSoMal**
+        (rehydration solution for malnutrition) instead.
+
+    - type: "prose"
+      title: "Treatment — oral / NG ReSoMal"
+      markdown: |
+        Rehydrate **orally or by NG tube**, more slowly than for a well-nourished
+        child:
+        - **5 ml/kg every 30 min for the first 2 h**, then
+        - **5–10 ml/kg per h for the next 4–10 h** on alternate hours **with
+          F-75** formula (the exact amount depends on how much the child wants,
+          stool losses and vomiting).
+        - If **rehydration is still needed at 10 h**, give **starter F-75**
+          instead of ReSoMal, at the same times/volume.
+        - **Shock or severe dehydration who cannot drink / take NG:** give IV —
+          **Ringer's lactate with 5% dextrose**, or half-strength Darrow's with
+          5% dextrose (or, if neither, 0.45% saline with 5% dextrose) — see
+          Chapter 1.
+
+    - type: "table"
+      title: "Recipe for ReSoMal using standard WHO ORS"
+      column_flex: [5, 4]
+      columns: ["Ingredient", "Amount"]
+      rows:
+        - cells: ["Water", "2 litres"]
+        - cells: ["WHO ORS", "One 1-litre packet"]
+        - cells: ["Sucrose", "50 g"]
+        - cells: ["Electrolyte/mineral solution", "40 ml"]
+
+    - type: "prose"
+      markdown: |
+        ReSoMal contains **≈ 45 mmol sodium, 40 mmol potassium and 3 mmol
+        magnesium per litre**. If **commercial ReSoMal** is used, follow the
+        manufacturer's instructions. The electrolyte/mineral solution is the same
+        one used to fortify F-75/F-100
+        ([§7.4.7](topic:who-imci-7-4-7-initial-refeeding)).
+
+    - type: "prose"
+      title: "Monitoring — watch for overhydration"
+      markdown: |
+        During rehydration, **respiration and pulse rate should fall** and urine
+        start to pass. Reassess **every 30 min for 2 h**, then hourly for the
+        next 4–10 h. **Be alert for overhydration** — very dangerous, may cause
+        heart failure. Check: **weight gain** (should not be quick/excessive);
+        rising respiratory rate; rising pulse; increasing urine frequency;
+        enlarging liver; frequency of stools/vomit. **If respiratory rate rises
+        by 5/min and pulse by 25/min, STOP ReSoMal** and reassess after 1 h.
+
+    - type: "prose"
+      title: "Prevention"
+      markdown: |
+        For continuing watery diarrhoea, prevent dehydration as for well-nourished
+        children **but use ReSoMal**, not standard ORS:
+        - if breastfed, **continue breastfeeding**
+        - **initiate re-feeding** with starter F-75
+        - give **ReSoMal 50–100 ml** after each watery stool to replace losses.

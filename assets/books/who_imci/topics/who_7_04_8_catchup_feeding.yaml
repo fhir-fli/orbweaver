@@ -1,0 +1,101 @@
+# ============================================================
+# WHO IMCI §7.4.8 — Catch-up growth feeding (Step 8). Pocket Book
+# 2nd ed (2013), pp.210–215.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-8-catchup-feeding"
+  title: "Step 8 · Catch-up Growth Feeding"
+  list_subtitle: "7.4.8 · F-100 / RUTF · avoid heart failure"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["catch-up feeding", "SAM", "F-100", "RUTF", "rehabilitation", "heart failure", "weight gain", "pediatric"]
+  aliases:
+    - "F-100"
+    - "RUTF"
+  category: "medical"
+
+  page_number: 210
+
+  blocks:
+
+    - type: "prose"
+      title: "When the child is ready (rehabilitation phase)"
+      highlight: true
+      markdown: |
+        Most children in the catch-up phase can be **managed as outpatients**.
+        Signs a child has reached the rehabilitation phase:
+        - **return of appetite**
+        - **no episodes of hypoglycaemia** (metabolically stable)
+        - **reduced or disappeared oedema**.
+
+    - type: "prose"
+      title: "Transition F-75 → F-100"
+      markdown: |
+        Make a **gradual transition** over **2–3 days**:
+        - **Replace F-75 with an equal amount of F-100** (100 kcal and 2.9 g
+          protein per 100 ml — see recipe in
+          [§7.4.7](topic:who-imci-7-4-7-initial-refeeding)) **for 2 days**.
+        - On the **third day**, increase each successive feed by **10 ml** until
+          some feed remains uneaten — usually around an intake of **200 ml/kg per
+          day**.
+        - After transition give **frequent feeds, unlimited amounts**,
+          **150–220 kcal/kg per day** and **4–6 g protein/kg per day**.
+
+    - type: "prose"
+      title: "If using ready-to-use therapeutic food (RUTF)"
+      markdown: |
+        - Start with **small but regular meals** and encourage the child to eat
+          often (**first 8 meals/day, later 5–6 meals/day**).
+        - If the child cannot eat the whole RUTF meal during transition, **top up
+          with F-75** to complete the feed.
+        - If the child **cannot take at least half** the recommended RUTF in 12 h,
+          **stop RUTF and give F-75**; retry RUTF in 1–2 days.
+        - If still breastfed, **offer breast milk before every RUTF feed**.
+
+    - type: "table"
+      title: "RUTF per day (92 g packets, 500 kcal each)"
+      column_flex: [3, 4, 4]
+      columns: ["Weight (kg)", "Transition (150 kcal/kg/d)", "Rehab (200 kcal/kg/d)"]
+      rows:
+        - cells: ["**4.0–4.9**", "1.5", "2.0"]
+        - cells: ["**5.0–6.9**", "2.1", "2.5"]
+        - cells: ["**7.0–8.4**", "2.5", "3.0"]
+        - cells: ["**8.5–9.4**", "2.8", "3.5"]
+        - cells: ["**9.5–10.4**", "3.1", "4.0"]
+        - cells: ["**10.5–11.9**", "3.6", "4.5"]
+        - cells: ["**≥ 12.0**", "4.0", "5.0"]
+
+    - type: "prose"
+      title: "🛑 Avoid causing heart failure"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Monitor for **early congestive heart failure**: rapid pulse, fast
+        breathing, basal lung crepitations, enlarging liver, gallop rhythm,
+        raised jugular venous pressure. **If both pulse and breathing rise**
+        (breathing by **5/min** and pulse by **25/min**) and the increase is
+        **sustained over two consecutive 4-hourly readings**:
+        - **Reduce the feed to 100 ml/kg per day for 24 h**, then increase
+          gradually: **115 ml/kg/day** for the next 24 h → **130 ml/kg/day** for
+          the following 48 h → then increase each feed by **10 ml** as before.
+
+    - type: "prose"
+      title: "Assess progress — calculating weight gain"
+      markdown: |
+        Weigh the child **every morning before feeding** and plot the weight.
+        Calculate weight gain **every 3 days as g/kg per day**:
+        - **Step 1** — weight gain in grams (e.g. 6300 − 6000 = **300 g** over
+          3 days)
+        - **Step 2** — average daily gain (300 ÷ 3 = **100 g/day**)
+        - **Step 3** — divide by average weight in kg (100 ÷ 6.15 = **16.3 g/kg
+          per day**).
+
+        Interpretation:
+        - **poor (< 5 g/kg/day)** → the child needs a **full re-assessment**
+        - **moderate (5–10 g/kg/day)** → check intake targets are met and no
+          infection was overlooked
+        - **good (> 10 g/kg/day)** → continue.

@@ -1,0 +1,40 @@
+# ============================================================
+# WHO IMCI §7.3 — Organization of care. Pocket Book 2nd ed (2013),
+# p.200.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-3-organization-of-care"
+  title: "Organization of Care"
+  list_subtitle: "7.3 · outpatient vs inpatient · appetite test"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["organization of care", "SAM", "inpatient", "outpatient", "appetite test", "pediatric"]
+  aliases:
+    - "SAM Care Setting"
+  category: "medical"
+
+  page_number: 200
+
+  blocks:
+
+    - type: "prose"
+      title: "Who is treated where"
+      highlight: true
+      markdown: |
+        - **Outpatient care:** children who have an **appetite** (pass the
+          appetite test) and are **clinically well and alert**.
+        - **Inpatient care:** children with **severe oedema (+++)**, a **poor
+          appetite** (fail the appetite test), or **one or more general danger
+          signs or medical conditions** requiring admission.
+
+    - type: "prose"
+      title: "On admission for complicated SAM"
+      markdown: |
+        - **Separate** the child from infectious children.
+        - Keep in a **warm area (25–30 °C, no draughts)** or a special nutrition
+          unit if available, and **monitor constantly**.
+        - Ensure facilities and staff can **correctly prepare therapeutic foods**
+          and **feed the child regularly, day and night**.
+        - Keep **accurate weighing machines / MUAC tapes** and records of feeds
+          given and weight / anthropometry so progress can be monitored.

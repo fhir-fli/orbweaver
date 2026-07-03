@@ -1,0 +1,53 @@
+# ============================================================
+# WHO IMCI §7.5.2 — Severe anaemia. Pocket Book 2nd ed (2013), p.218.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-5-2-severe-anaemia"
+  title: "Severe Anaemia"
+  list_subtitle: "7.5.2 · transfuse slowly · small volume"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["severe anaemia", "SAM", "transfusion", "furosemide", "heart failure", "pediatric"]
+  aliases:
+    - "SAM Severe Anaemia"
+  category: "medical"
+
+  page_number: 218
+
+  blocks:
+
+    - type: "prose"
+      title: "When to transfuse (first 24 h only)"
+      highlight: true
+      markdown: |
+        Transfuse **only in the first 24 h** and only if:
+        - **Hb < 4 g/dl**, OR
+        - **Hb 4–6 g/dl with respiratory distress**.
+
+    - type: "prose"
+      title: "Transfuse slowly and small"
+      callout: true
+      markdown: |
+        In SAM the transfusion must be **slower and of smaller volume** than for a
+        well-nourished child:
+        - **Whole blood 10 ml/kg slowly over 3 h.**
+        - **Furosemide 1 mg/kg IV at the start** of the transfusion.
+        - If there are **signs of heart failure**, give **10 ml/kg packed cells**
+          (not whole blood, which is likely to worsen failure).
+        - Children with SAM and **oedema** may have fluid redistribution causing
+          **apparent** low Hb that **does not require transfusion**.
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        Monitor pulse and breathing and check jugular venous pressure, examine
+        the abdomen for liver size, and listen to the lungs **every 15 min**
+        during the transfusion.
+        - If breathing rises by **5/min** or pulse by **25/min**, **transfuse
+          more slowly**.
+        - If there are **basal lung crepitations or an enlarging liver, STOP** the
+          transfusion and give **furosemide 1 mg/kg IV**.
+
+        **Do NOT repeat transfusion** even if the Hb is still low, or within
+        **4 days** of the last transfusion.

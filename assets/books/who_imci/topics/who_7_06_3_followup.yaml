@@ -1,0 +1,37 @@
+# ============================================================
+# WHO IMCI §7.6.3 — Follow-up. Pocket Book 2nd ed (2013), p.221.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-6-3-followup"
+  title: "Follow-up"
+  list_subtitle: "7.6.3 · weekly weighing · watch for relapse"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["follow-up", "SAM", "relapse", "pediatric"]
+  aliases:
+    - "SAM Follow-up"
+  category: "medical"
+
+  page_number: 221
+
+  blocks:
+
+    - type: "prose"
+      title: "Plan follow-up before discharge"
+      highlight: true
+      markdown: |
+        When a child is discharged to outpatient care, make a **plan for
+        follow-up until full recovery** and contact the outpatient department,
+        nutrition rehabilitation centre, local clinic or health worker who will
+        take responsibility for continuing supervision. In general, the child
+        should be **weighed weekly**.
+
+    - type: "prose"
+      title: "Refer back if not thriving"
+      markdown: |
+        If the child **fails to gain weight over a 2-week period**, or **loses
+        weight** between two measurements, or **develops loss of appetite or
+        oedema**, refer **back to hospital** for further assessment. Once
+        discharged from nutritional treatment, monitor periodically to **avoid
+        relapse**.

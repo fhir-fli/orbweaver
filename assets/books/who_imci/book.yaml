@@ -204,3 +204,44 @@ book:
           children:
             - topic: "topics/who_6_10_1_severe_dengue.yaml"
         - topic: "topics/who_6_11_rheumatic_fever.yaml"
+    - title: "7. Severe acute malnutrition"
+      # WHO Pocket Book color-codes by chapter; Chapter 7 tab = teal-green
+      # (sampled 0xFF009167 from the p.197 chapter tab via pdftoppm).
+      palette:
+        accent: "0xFF009167"
+      children:
+        - topic: "topics/who_7_01_sam.yaml"
+        - topic: "topics/who_7_02_initial_assessment.yaml"
+        - topic: "topics/who_7_03_organization_of_care.yaml"
+        - title: "7.4 General management (10 steps)"
+          topic: "topics/who_7_04_general_management.yaml"
+          children:
+            - topic: "topics/who_7_04_1_hypoglycaemia.yaml"
+            - topic: "topics/who_7_04_2_hypothermia.yaml"
+            - topic: "topics/who_7_04_3_dehydration.yaml"
+            - topic: "topics/who_7_04_4_electrolytes.yaml"
+            - topic: "topics/who_7_04_5_infection.yaml"
+            - topic: "topics/who_7_04_6_micronutrients.yaml"
+            - topic: "topics/who_7_04_7_initial_refeeding.yaml"
+            - topic: "topics/who_7_04_8_catchup_feeding.yaml"
+            - topic: "topics/who_7_04_9_sensory_stimulation.yaml"
+            - topic: "topics/who_7_04_10_infants_under6m.yaml"
+        - title: "7.5 Associated conditions"
+          topic: "topics/who_7_05_associated_conditions.yaml"
+          children:
+            - topic: "topics/who_7_05_1_eye_problems.yaml"
+            - topic: "topics/who_7_05_2_severe_anaemia.yaml"
+            - topic: "topics/who_7_05_3_skin_kwashiorkor.yaml"
+            - topic: "topics/who_7_05_4_continuing_diarrhoea.yaml"
+            - topic: "topics/who_7_05_5_tuberculosis.yaml"
+        - title: "7.6 Discharge and follow-up"
+          topic: "topics/who_7_06_discharge.yaml"
+          children:
+            - topic: "topics/who_7_06_1_outpatient_transfer.yaml"
+            - topic: "topics/who_7_06_2_discharge_criteria.yaml"
+            - topic: "topics/who_7_06_3_followup.yaml"
+        - title: "7.7 Monitoring quality of care"
+          topic: "topics/who_7_07_monitoring.yaml"
+          children:
+            - topic: "topics/who_7_07_1_mortality_audit.yaml"
+            - topic: "topics/who_7_07_2_weight_gain.yaml"

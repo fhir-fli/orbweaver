@@ -1,0 +1,65 @@
+# ============================================================
+# WHO IMCI §7.4.6 — Micronutrient deficiencies (Step 6). Pocket Book
+# 2nd ed (2013), pp.208–209.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-6-micronutrients"
+  title: "Step 6 · Micronutrient Deficiencies"
+  list_subtitle: "7.4.6 · vitamin A · NO iron in stabilization"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["micronutrients", "SAM", "vitamin A", "iron", "zinc", "folic acid", "copper", "pediatric"]
+  aliases:
+    - "SAM Micronutrients"
+  category: "medical"
+
+  page_number: 208
+
+  blocks:
+
+    - type: "prose"
+      title: "Pre-mixed foods already contain micronutrients"
+      highlight: true
+      markdown: |
+        All children with SAM have **vitamin and mineral deficiencies**.
+        Multivitamins, **vitamin A, folic acid, zinc and copper are already
+        present** in F-75, F-100 and ready-to-use therapeutic food — when
+        pre-mixed packets are used, **no additional doses are needed**.
+
+    - type: "prose"
+      title: "🛑 Do NOT give iron in the stabilization phase"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Although anaemia is common, **do NOT give iron initially** — **wait until
+        the child has a good appetite and starts gaining weight** (usually the
+        **second week**), because **giving iron early can make infections
+        worse**. Start **iron 3 mg/kg per day after 2 days on F-100** catch-up
+        formula. **Do NOT give iron if the child is receiving ready-to-use
+        therapeutic food (RUTF).**
+
+    - type: "prose"
+      title: "Vitamin A"
+      markdown: |
+        Give vitamin A on **day 1**, and **repeat on days 2 and 14 ONLY if** the
+        child has **eye signs of vitamin A deficiency** (e.g. corneal ulceration)
+        or a **history of measles**. If there are no eye signs and no measles,
+        **do not give a high dose** — the amounts in therapeutic foods are enough.
+        - **< 6 months:** **50 000 U**
+        - **6–12 months:** **100 000 U**
+        - **> 12 months:** **200 000 U**
+
+    - type: "prose"
+      title: "If NOT using pre-mixed therapeutic foods"
+      markdown: |
+        Give these micronutrients daily for **at least 2 weeks**:
+        - **Folic acid 5 mg on day 1**, then **1 mg daily**
+        - **Multivitamin syrup 5 ml**
+        - **Zinc 2 mg/kg per day**
+        - **Copper 0.3 mg/kg per day**
+        - **Iron 3 mg/kg per day** — but only **after** the stabilization phase
+          (see the red-alert above).

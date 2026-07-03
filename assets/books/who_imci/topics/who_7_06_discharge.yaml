@@ -1,0 +1,30 @@
+# ============================================================
+# WHO IMCI §7.6 — Discharge and follow-up (overview of the nested
+# group). Pocket Book 2nd ed (2013), pp.219–221.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-6-discharge"
+  title: "Discharge & Follow-up"
+  list_subtitle: "7.6 · outpatient transfer · criteria · follow-up"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["discharge", "SAM", "follow-up", "pediatric"]
+  aliases:
+    - "SAM Discharge"
+  category: "medical"
+
+  page_number: 219
+
+  blocks:
+
+    - type: "prose"
+      title: "Two separate decisions"
+      highlight: true
+      markdown: |
+        Distinguish **transfer to outpatient care** (moving out of hospital
+        during the rehabilitation phase) from **discharge from nutritional
+        treatment** (recovery complete):
+        - [Transfer to outpatient care](topic:who-imci-7-6-1-outpatient-transfer)
+        - [Discharge from nutritional treatment](topic:who-imci-7-6-2-discharge-criteria)
+        - [Follow-up](topic:who-imci-7-6-3-followup)

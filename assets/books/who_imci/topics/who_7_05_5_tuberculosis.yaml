@@ -1,0 +1,29 @@
+# ============================================================
+# WHO IMCI §7.5.5 — Tuberculosis. Pocket Book 2nd ed (2013), p.219.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-5-5-tuberculosis"
+  title: "Tuberculosis"
+  list_subtitle: "7.5.5 · Mantoux · CXR · national TB guidelines"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["tuberculosis", "SAM", "mantoux", "chest x-ray", "pediatric"]
+  aliases:
+    - "SAM TB"
+  category: "medical"
+
+  page_number: 219
+
+  blocks:
+
+    - type: "prose"
+      title: "If TB is strongly suspected"
+      highlight: true
+      markdown: |
+        - Perform a **Mantoux test** (**false-negative results are frequent** in
+          SAM).
+        - Take a **chest X-ray** if possible.
+
+        If these are positive, or TB is strongly suspected, **treat according to
+        national TB guidelines** ([§4.7.2](topic:who-imci-4-7-2-tuberculosis)).

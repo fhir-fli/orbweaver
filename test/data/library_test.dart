@@ -99,12 +99,12 @@ void main() {
     }
 
     test(
-        'who_imci: 6 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
-        'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25)', () {
+        'who_imci: 7 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
+        'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(6));
+      expect(contents, hasLength(7));
       expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
       expect((contents[1] as YamlMap)['title'],
@@ -115,9 +115,11 @@ void main() {
           '4. Cough or difficulty in breathing');
       expect((contents[4] as YamlMap)['title'], '5. Diarrhoea');
       expect((contents[5] as YamlMap)['title'], '6. Fever');
+      expect((contents[6] as YamlMap)['title'],
+          '7. Severe acute malnutrition');
       // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
-      // + Ch.6 (25) = 120 topics.
-      expect(leafCount(contents), 120);
+      // + Ch.6 (25) + Ch.7 (27) = 147 topics.
+      expect(leafCount(contents), 147);
     });
 
     test('who_imci: Chapter 6 is a green-tabbed group; §6.3 nests', () {
@@ -132,6 +134,21 @@ void main() {
       ) as YamlMap;
       expect(g['topic'], isNotNull);
       expect((g['children'] as YamlList), hasLength(4));
+    });
+
+    test('who_imci: Chapter 7 is a teal-tabbed group; §7.4 nests', () {
+      final b = loadBook('who_imci');
+      final ch7 = (b['contents'] as YamlList)[6] as YamlMap;
+      expect(ch7['palette']['accent'], '0xFF009167');
+      // 7.1/7.2/7.3 leaves + 7.4/7.5/7.6/7.7 groups = 7 direct children.
+      final children = ch7['children'] as YamlList;
+      expect(children, hasLength(7));
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '7.4 General management (10 steps)',
+      ) as YamlMap;
+      expect(g['topic'], isNotNull);
+      // 10 steps (7.4.1–7.4.10) nested under the §7.4 overview.
+      expect((g['children'] as YamlList), hasLength(10));
     });
 
     test('who_imci: Chapter 5 is an olive-tabbed group; §5.2 nests', () {

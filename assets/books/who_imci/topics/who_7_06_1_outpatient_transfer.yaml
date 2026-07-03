@@ -1,0 +1,48 @@
+# ============================================================
+# WHO IMCI §7.6.1 — Transfer to outpatient care. Pocket Book 2nd ed
+# (2013), pp.219–220.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-6-1-outpatient-transfer"
+  title: "Transfer to Outpatient Care"
+  list_subtitle: "7.6.1 · rehabilitation phase · not by anthropometry"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["outpatient transfer", "SAM", "rehabilitation", "pediatric"]
+  aliases:
+    - "SAM Outpatient Transfer"
+  category: "medical"
+
+  page_number: 219
+
+  blocks:
+
+    - type: "prose"
+      title: "Transfer during rehabilitation — not by anthropometry"
+      highlight: true
+      markdown: |
+        Children admitted with complicated SAM can transfer to **outpatient care
+        during the rehabilitation phase**. The decision should **NOT be based on
+        achieving specific anthropometric or weight-for-height targets**.
+        Transfer when the child:
+        - has **completed parenteral antibiotic treatment** and is **clinically
+          well and alert**
+        - has **medical complications resolved**
+        - has a **fully recovered appetite** and is eating well
+        - has **oedema reduced or resolved**.
+
+        Take **social factors** into account (loss of earnings, care of other
+        children) and assess available **community support** — the child needs
+        continuing care as an outpatient to complete rehabilitation.
+
+    - type: "prose"
+      title: "Prepare the family"
+      markdown: |
+        Prepare parents for outpatient / community care and link to a nutrition
+        programme with weekly therapeutic food, vaccinations and routine vitamin A.
+        The mother/carer should:
+        - be **available for child care**
+        - have received **counselling on feeding** (types, amount, frequency)
+        - have the **resources to feed the child** (if not, give advice and
+          available support).

@@ -1,0 +1,66 @@
+# ============================================================
+# WHO IMCI §7.4 — General management (10-step framework, Table 21).
+# Pocket Book 2nd ed (2013), pp.200–201.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-general-management"
+  title: "General Management — 10 Steps"
+  list_subtitle: "7.4 · stabilization then rehabilitation · Table 21"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["general management", "SAM", "ten steps", "stabilization", "rehabilitation", "pediatric"]
+  aliases:
+    - "SAM 10 Steps"
+  category: "medical"
+
+  page_number: 200
+
+  blocks:
+
+    - type: "prose"
+      title: "Plan for inpatient care"
+      highlight: true
+      markdown: |
+        For triage assessment and management of **shock**, see
+        [Chapter 1](topic:who-imci-1-1-triage). Treatment involves **10 steps in
+        two phases** — **initial stabilization** then **rehabilitation**
+        (Table 21).
+
+        **If there is corneal ulceration:** give **vitamin A**, instil
+        **chloramphenicol or tetracycline** and **atropine** drops into the eye,
+        cover with a **saline-soaked eye pad**, and bandage
+        ([§7.5.1](topic:who-imci-7-5-1-eye-problems)). **Severe anaemia**, if
+        present, needs urgent treatment ([§7.5.2](topic:who-imci-7-5-2-severe-anaemia)).
+
+    - type: "table"
+      title: "Table 21 · Time frame for managing complicated SAM"
+      column_flex: [4, 4, 3]
+      columns: ["Step", "Stabilization (days 1–7)", "Rehabilitation (wk 2–6)"]
+      rows:
+        - cells: ["**1. Hypoglycaemia**", "Days 1–2", "—"]
+        - cells: ["**2. Hypothermia**", "Days 1–2", "—"]
+        - cells: ["**3. Dehydration**", "Days 1–2", "—"]
+        - cells: ["**4. Electrolytes**", "Days 1–7", "continues →"]
+        - cells: ["**5. Infection**", "Days 1–7", "—"]
+        - cells: ["**6. Micronutrients**", "Days 1–7 (**no iron**)", "**with iron** →"]
+        - cells: ["**7. Initiate feeding**", "Days 1–7 (F-75)", "—"]
+        - cells: ["**8. Catch-up feeding**", "—", "Weeks 2–6 (F-100/RUTF)"]
+        - cells: ["**9. Sensory stimulation**", "Days 1–7", "continues →"]
+        - cells: ["**10. Prepare for follow-up**", "—", "Weeks 2–6"]
+
+    - type: "prose"
+      title: "The 10 steps"
+      markdown: |
+        1. [Hypoglycaemia](topic:who-imci-7-4-1-hypoglycaemia)
+        2. [Hypothermia](topic:who-imci-7-4-2-hypothermia)
+        3. [Dehydration](topic:who-imci-7-4-3-dehydration)
+        4. [Electrolyte imbalance](topic:who-imci-7-4-4-electrolytes)
+        5. [Infection](topic:who-imci-7-4-5-infection)
+        6. [Micronutrient deficiencies](topic:who-imci-7-4-6-micronutrients)
+        7. [Initial re-feeding](topic:who-imci-7-4-7-initial-refeeding)
+        8. [Catch-up growth feeding](topic:who-imci-7-4-8-catchup-feeding)
+        9. [Sensory stimulation](topic:who-imci-7-4-9-sensory-stimulation)
+        10. Prepare for follow-up ([§7.6](topic:who-imci-7-6-discharge))
+
+        See also [SAM in infants < 6 months](topic:who-imci-7-4-10-infants-under6m).

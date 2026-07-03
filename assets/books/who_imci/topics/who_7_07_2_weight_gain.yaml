@@ -1,0 +1,61 @@
+# ============================================================
+# WHO IMCI §7.7.2 — Weight gain during rehabilitation. Pocket Book 2nd
+# ed (2013), p.222.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-7-2-weight-gain"
+  title: "Weight Gain During Rehabilitation"
+  list_subtitle: "7.7.2 · poor < 5 · moderate 5–10 · good > 10"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["weight gain", "SAM", "rehabilitation", "inadequate feeding", "pediatric"]
+  aliases:
+    - "SAM Weight Gain"
+  category: "medical"
+
+  page_number: 222
+
+  blocks:
+
+    - type: "prose"
+      title: "Standardize weighing"
+      highlight: true
+      markdown: |
+        **Calibrate the scales every day.** Weigh children at the **same time
+        each day** (e.g. morning) after removing clothes (but avoid hypothermia).
+        Weight gain is graded:
+        - **poor: < 5 g/kg per day**
+        - **moderate: 5–10 g/kg per day**
+        - **good: > 10 g/kg per day**.
+
+    - type: "prose"
+      title: "If weight gain is poor (< 5 g/kg/day)"
+      markdown: |
+        Determine whether this is happening in **all children** (→ a major review
+        of case management is required) or in **specific children** (reassess as
+        if they were new admissions). General aspects to check:
+
+        **Inadequate feeding** — check that:
+        - **night feeds** are given
+        - **target energy and protein** intakes are achieved (recalculate actual
+          intake = offered minus left over; is the child vomiting/ruminating?)
+        - **feeding technique** — frequent feeds in unlimited amounts?
+        - **quality of care** — motivated, gentle, patient staff?
+        - **feed preparation** — scales, ingredient measurement, mixing, taste,
+          hygienic storage, adequate stirring
+        - **complementary foods** are energy-dense enough
+        - **multivitamin composition and shelf-life** are adequate
+        - **mineral mix** is correctly prepared and given (in goitrous regions,
+          check **potassium iodide is added** to the electrolyte/mineral mix
+          (12 mg/2500 ml), or give **Lugol iodine 5–10 drops/day**).
+
+    - type: "prose"
+      title: "Other causes of poor gain"
+      markdown: |
+        - **At night:** consider **hypothermia** from insufficient covering or no
+          night feeds.
+        - **When beginning F-100 or RUTF:** consider **too rapid a transition**
+          from starter to catch-up feeds.
+        - Also reconsider **untreated infection** (including TB, UTI, otitis media,
+          HIV) and **psychological problems**.

@@ -1,0 +1,39 @@
+# ============================================================
+# WHO IMCI §7.7.1 — Mortality audit. Pocket Book 2nd ed (2013),
+# pp.221–222.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-7-1-mortality-audit"
+  title: "Mortality Audit"
+  list_subtitle: "7.7.1 · timing of death reveals the cause"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["mortality audit", "SAM", "quality of care", "pediatric"]
+  aliases:
+    - "SAM Mortality Audit"
+  category: "medical"
+
+  page_number: 221
+
+  blocks:
+
+    - type: "prose"
+      title: "Keep an admissions register"
+      highlight: true
+      markdown: |
+        Keep a **register of admissions, discharges and deaths** with each
+        child's weight, age, sex, day of admission and date/time of
+        discharge/death. **When** in the admission a death occurred points to the
+        likely cause.
+
+    - type: "prose"
+      title: "Interpreting the timing of death"
+      markdown: |
+        - **Within 24 h:** consider **untreated or delayed treatment** of
+          hypoglycaemia, hypothermia, septicaemia or severe anaemia, or
+          **incorrect rehydration fluid or volume**, or **overuse of IV fluids**.
+        - **Within 72 h:** check whether the **feed volume was too high** or the
+          **formulation wrong** — were **potassium and antibiotics** given?
+        - **After 72 h:** consider **nosocomial infection**, **re-feeding
+          syndrome**, **heart failure** and **HIV infection**.

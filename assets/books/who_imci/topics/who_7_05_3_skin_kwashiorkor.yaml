@@ -1,0 +1,32 @@
+# ============================================================
+# WHO IMCI §7.5.3 — Skin lesions in kwashiorkor. Pocket Book 2nd ed
+# (2013), p.218.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-5-3-skin-kwashiorkor"
+  title: "Skin Lesions in Kwashiorkor"
+  list_subtitle: "7.5.3 · zinc · barrier cream · keep dry"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["skin lesions", "kwashiorkor", "SAM", "zinc", "potassium permanganate", "pediatric"]
+  aliases:
+    - "Kwashiorkor Skin"
+  category: "medical"
+
+  page_number: 218
+
+  blocks:
+
+    - type: "prose"
+      title: "Zinc improves the skin"
+      highlight: true
+      markdown: |
+        **Zinc deficiency is usual** in kwashiorkor, and the skin improves
+        quickly with **zinc supplementation**. In addition:
+        - **Bathe or soak** the affected areas for **10 min/day in 0.01%
+          potassium permanganate** solution.
+        - Apply a **barrier cream** (zinc-and-castor-oil ointment, petroleum
+          jelly, or tulle gras) to the raw areas, and **gentian violet or
+          nystatin cream** to skin sores.
+        - **Avoid using nappies** so the perineum can stay dry.

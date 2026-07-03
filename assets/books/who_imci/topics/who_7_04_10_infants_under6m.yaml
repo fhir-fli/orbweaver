@@ -1,0 +1,81 @@
+# ============================================================
+# WHO IMCI §7.4.10 — SAM in infants aged < 6 months. Pocket Book 2nd ed
+# (2013), pp.216–217.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-10-infants-under6m"
+  title: "Step 10 · SAM in Infants < 6 Months"
+  list_subtitle: "7.4.10 · re-establish breastfeeding · organic cause"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["SAM", "young infant", "breastfeeding", "supplementary suckling", "pediatric"]
+  aliases:
+    - "SAM Under 6 Months"
+  category: "medical"
+
+  page_number: 216
+
+  blocks:
+
+    - type: "prose"
+      title: "Less common — look for an organic cause"
+      highlight: true
+      markdown: |
+        SAM is **less common in infants < 6 months** than in older children.
+        Consider — and treat where appropriate — an **organic cause** for the
+        malnutrition or failure to thrive.
+
+    - type: "prose"
+      title: "Admit for inpatient care if any of"
+      markdown: |
+        - **general danger signs** or serious clinical condition (as for older
+          infants)
+        - **recent weight loss** or failure to gain weight
+        - **ineffective breastfeeding** (attachment, positioning or suckling)
+          directly observed for **15–20 min**, ideally in a supervised separated
+          area
+        - **any pitting bilateral oedema** of the feet
+        - any **medical problem** needing more detailed assessment
+        - any **social issue** requiring detailed assessment or intensive support
+          (e.g. disability or depression of the carer, other adverse
+          circumstances).
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Admit** infants with any of the above complicating factors.
+        - Give **parenteral antibiotics** for possible sepsis and treat other
+          medical complications.
+        - **Re-establish effective exclusive breastfeeding** by the mother/carer.
+          If not possible, give **replacement commercial infant formula** with
+          advice on safe preparation and use.
+        - **With oedema:** give infant formula **or diluted F-100** (add water to
+          the F-100 recipe on to make **1.5 litres instead of 1 litre** — do NOT
+          use full-strength F-100) to supplement breastfeeding.
+        - **Without oedema:** give **expressed breast milk**; when not possible,
+          **infant formula or F-75 or diluted F-100**, in that order of preference.
+
+    - type: "prose"
+      title: "Rehabilitation diets (in order of preference)"
+      markdown: |
+        Young infants are **less able to excrete salt and urea** in their urine
+        (especially in hot climates), so preferred stabilization-phase diets are:
+        1. **breast milk** (if available in sufficient quantity)
+        2. **commercial infant formula**.
+
+    - type: "prose"
+      title: "Discharge"
+      markdown: |
+        An infant < 6 months admitted to inpatient care can transfer to
+        outpatient care when:
+        - all clinical conditions / complications (including oedema) are
+          **resolved** and the child is **clinically well and alert**
+        - the child is **breastfeeding effectively or feeding well**
+        - **weight gain** is satisfactory (e.g. above the median WHO growth
+          velocity, or **> 5 g/kg per day for at least 3 successive days**).
+
+        Discharge from all nutritional care only when the infant **is feeding
+        well** and has an **adequate weight gain** and a **weight-for-length
+        ≥ −2 z-scores**. Assess and support the **mother's/carer's physical and
+        mental health**.

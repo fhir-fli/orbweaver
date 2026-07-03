@@ -1,0 +1,32 @@
+# ============================================================
+# WHO IMCI §7.4.9 — Sensory stimulation (Step 9). Pocket Book 2nd ed
+# (2013), p.215.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-9-sensory-stimulation"
+  title: "Step 9 · Sensory Stimulation"
+  list_subtitle: "7.4.9 · play · loving care · maternal involvement"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["sensory stimulation", "SAM", "play therapy", "development", "pediatric"]
+  aliases:
+    - "SAM Stimulation"
+  category: "medical"
+
+  page_number: 215
+
+  blocks:
+
+    - type: "prose"
+      title: "Provide"
+      highlight: true
+      markdown: |
+        - **tender loving care**
+        - a **cheerful, stimulating environment**
+        - **structured play therapy for 15–30 min/day**
+        - **physical activity** as soon as the child is well enough
+        - **support for as much maternal involvement as possible** (comforting,
+          feeding, bathing, playing).
+
+        Provide suitable **toys and play activities** for the child.

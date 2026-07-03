@@ -1,0 +1,31 @@
+# ============================================================
+# WHO IMCI §7.5 — Treatment of associated conditions (overview of the
+# nested group). Pocket Book 2nd ed (2013), p.217.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-5-associated-conditions"
+  title: "Associated Conditions"
+  list_subtitle: "7.5 · eye · anaemia · skin · diarrhoea · TB"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["associated conditions", "SAM", "pediatric"]
+  aliases:
+    - "SAM Associated Conditions"
+  category: "medical"
+
+  page_number: 217
+
+  blocks:
+
+    - type: "prose"
+      title: "Conditions that commonly accompany SAM"
+      highlight: true
+      markdown: |
+        Alongside the [10 general-management steps](topic:who-imci-7-4-general-management),
+        look for and treat these associated conditions:
+        - [Eye problems (vitamin A deficiency)](topic:who-imci-7-5-1-eye-problems)
+        - [Severe anaemia](topic:who-imci-7-5-2-severe-anaemia)
+        - [Skin lesions in kwashiorkor](topic:who-imci-7-5-3-skin-kwashiorkor)
+        - [Continuing diarrhoea](topic:who-imci-7-5-4-continuing-diarrhoea)
+        - [Tuberculosis](topic:who-imci-7-5-5-tuberculosis)

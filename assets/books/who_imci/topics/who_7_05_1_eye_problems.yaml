@@ -1,0 +1,46 @@
+# ============================================================
+# WHO IMCI §7.5.1 — Eye problems. Pocket Book 2nd ed (2013), p.217.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-5-1-eye-problems"
+  title: "Eye Problems"
+  list_subtitle: "7.5.1 · vitamin A · protect the cornea"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["eye problems", "SAM", "vitamin A", "corneal ulceration", "keratomalacia", "pediatric"]
+  aliases:
+    - "SAM Eye Problems"
+  category: "medical"
+
+  page_number: 217
+
+  blocks:
+
+    - type: "prose"
+      title: "Vitamin A for any eye signs of deficiency"
+      highlight: true
+      markdown: |
+        If the child has any **eye signs of vitamin A deficiency**, give **vitamin
+        A orally on days 1, 2 and 14**:
+        - **< 6 months:** **50 000 IU**
+        - **6–12 months:** **100 000 IU**
+        - **older children:** **200 000 IU**
+
+        If the **first dose was given in the referring centre**, treat on **days
+        1 and 14 only**.
+
+    - type: "prose"
+      title: "Corneal clouding or ulceration — protect the eye"
+      callout: true
+      markdown: |
+        If the eyes show **corneal clouding or ulceration**, give the following
+        additional care to **prevent corneal rupture and lens extrusion**:
+        - Instil **chloramphenicol or tetracycline eye drops 4×/day**, as
+          required, for **7–10 days**.
+        - Instil **atropine eye drops, one drop 3×/day, for 3–5 days**.
+        - **Cover** with saline-soaked eye pads.
+        - **Bandage** the eye(s).
+
+        Examine the eyes **very gently** — children with vitamin A deficiency are
+        photophobic and keep the eyes closed.

@@ -1,0 +1,74 @@
+# ============================================================
+# WHO IMCI §7.4.5 — Infection (Step 5). Pocket Book 2nd ed (2013),
+# pp.207–208.
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-5-infection"
+  title: "Step 5 · Infection"
+  list_subtitle: "7.4.5 · assume infection · broad-spectrum antibiotics"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["infection", "SAM", "amoxicillin", "gentamicin", "benzylpenicillin", "measles vaccine", "pediatric"]
+  aliases:
+    - "SAM Infection"
+  category: "medical"
+
+  page_number: 207
+
+  blocks:
+
+    - type: "prose"
+      title: "Assume infection in every child"
+      highlight: true
+      markdown: |
+        In SAM the **usual signs of infection are often absent**, yet multiple
+        infections are common. **Assume all children with SAM have an infection**
+        on arrival and **treat with antibiotics immediately**. **Hypoglycaemia
+        and hypothermia** are often signs of severe infection.
+
+    - type: "prose"
+      title: "Give every child"
+      markdown: |
+        - a **broad-spectrum antibiotic** (below)
+        - **measles vaccine** if the child is **≥ 6 months and not vaccinated**
+          (or vaccinated before 9 months of age) — **delay if in shock**.
+
+    - type: "prose"
+      title: "Choice of broad-spectrum antibiotic"
+      markdown: |
+        - **Uncomplicated SAM:** **oral amoxicillin for 5 days**.
+        - **Complicated SAM** (hypoglycaemia, hypothermia, lethargic/sickly, or
+          any medical complication) — give **parenteral**:
+          - **benzylpenicillin 50 000 U/kg IM/IV every 6 h**, OR **ampicillin
+            50 mg/kg IM/IV every 6 h for 2 days**, then **oral amoxicillin
+            25–40 mg/kg every 8 h for 5 days**, **PLUS**
+          - **gentamicin 7.5 mg/kg IM/IV once a day for 7 days**.
+        - Adapt these regimens to **local resistance patterns**.
+
+        **Note:** metronidazole 7.5 mg/kg every 8 h for 7 days may be added,
+        though its efficacy has not been established in trials.
+
+    - type: "prose"
+      title: "Treat other infections & worms"
+      markdown: |
+        - **Meningitis** suspected → lumbar puncture and treat per
+          [§6.3.1](topic:who-imci-6-3-1-bacterial-meningitis).
+        - **Pneumonia, dysentery, skin/soft-tissue infection** → treat as
+          appropriate.
+        - **Malaria** → add antimalarial if the blood film / RDT is positive.
+        - **TB** is common, but give anti-TB treatment **only if TB is diagnosed
+          or strongly suspected** ([§7.5.5](topic:who-imci-7-5-5-tuberculosis)).
+        - **Worms:** delay treatment until the **rehabilitation phase** — give
+          **albendazole single dose**, or **mebendazole 100 mg twice a day for
+          3 days** (in high-prevalence areas, also give to children with no
+          evidence of infestation from 7 days after admission).
+        - **HIV** is common — test, and start **ART** as soon as possible after
+          metabolic stabilization; monitor closely in the first **6–8 weeks**.
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        If the child is **still anorexic after 7 days** of antibiotic treatment,
+        **continue for a full 10-day course**. If anorexia persists, **reassess
+        the child fully**.

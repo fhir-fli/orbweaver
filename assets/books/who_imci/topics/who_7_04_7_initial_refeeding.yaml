@@ -1,0 +1,133 @@
+# ============================================================
+# WHO IMCI §7.4.7 — Initial re-feeding (Step 7). Pocket Book 2nd ed
+# (2013), pp.209–212. Includes Table 22 (F-75 volumes per feed).
+# 🛑 Pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-7-4-7-initial-refeeding"
+  title: "Step 7 · Initial Re-feeding"
+  list_subtitle: "7.4.7 · F-75 · gradual · 100 kcal/kg/day"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  tags: ["initial re-feeding", "SAM", "F-75", "starter formula", "stabilization", "pediatric"]
+  aliases:
+    - "F-75"
+    - "SAM Initial Feeding"
+  category: "medical"
+
+  page_number: 209
+
+  blocks:
+
+    - type: "prose"
+      title: "Feed gradually — essential features"
+      highlight: true
+      markdown: |
+        In the initial (stabilization) phase, re-feeding must be **gradual**.
+        Essential features:
+        - **frequent, small oral feeds** of **low osmolality and low lactose**,
+          every **2–3 h**
+        - **NG feeding** if the child is eating **≤ 80%** of the amount offered
+          at **two consecutive feeds**
+        - **calories 100 kcal/kg per day**
+        - **protein 1–1.5 g/kg per day**
+        - **liquid 130 ml/kg per day** (or **100 ml/kg per day** if the child has
+          **severe oedema**)
+        - if breastfed, **continue breastfeeding** — but still give the
+          prescribed amounts of starter formula.
+
+    - type: "table"
+      title: "Starter F-75 feeding schedule (stabilization)"
+      column_flex: [3, 3, 3, 3]
+      columns: ["Days", "Frequency", "Vol/kg/feed", "Vol/kg/day"]
+      rows:
+        - cells: ["**1–2**", "every 2 h", "11 ml", "130 ml"]
+        - cells: ["**3–5**", "every 3 h", "16 ml", "130 ml"]
+        - cells: ["**≥ 6**", "every 4 h", "22 ml", "130 ml"]
+
+    - type: "prose"
+      markdown: |
+        Milk-based **F-75** (75 kcal and 0.9 g protein per 100 ml) suits most
+        children. **Cereal-based F-75** partially replaces sugar with cereal
+        flour, giving **lower osmolality** — helpful for children with persistent
+        diarrhoea. **Feed from a cup or bowl**; use a spoon, dropper or syringe
+        for very weak children.
+
+    - type: "table"
+      title: "Recipes for F-75 (starter) and F-100 (catch-up)"
+      column_flex: [5, 3, 3]
+      columns: ["Ingredient", "F-75 (starter)", "F-100 (catch-up)"]
+      rows:
+        - cells: ["Dried skimmed milk (g)", "25", "80"]
+        - cells: ["Sugar (g)", "70", "50"]
+        - cells: ["Cereal flour (g)", "35", "—"]
+        - cells: ["Vegetable oil (g)", "27", "60"]
+        - cells: ["Electrolyte/mineral solution (ml)", "20", "20"]
+        - cells: ["Water: make up to (ml)", "1000", "1000"]
+        - cells: ["**Energy (kcal/100 ml)**", "**75**", "**100**"]
+        - cells: ["**Protein (g/100 ml)**", "**1.1**", "**2.9**"]
+        - cells: ["Osmolality (mOsm/litre)", "334", "419"]
+
+    - type: "prose"
+      markdown: |
+        Cook cereal-based F-75 for **4 min** and add the mineral/vitamin mix
+        after cooking. **Alternative if milk is unavailable:** precooked
+        corn–soya or wheat–soya blend **50 g**, sugar **85 g**, oil **25 g**,
+        electrolyte/mineral mix **20 ml**, water to **1000 ml**.
+
+    - type: "table"
+      title: "Table 22 · Volume of F-75 per feed (≈ 130 ml/kg/day)"
+      column_flex: [3, 3, 3, 3]
+      columns: ["Weight (kg)", "2-hourly", "3-hourly", "4-hourly"]
+      rows:
+        - cells: ["2.0", "20", "30", "45"]
+        - cells: ["2.2", "25", "35", "50"]
+        - cells: ["2.4", "25", "40", "55"]
+        - cells: ["2.6", "30", "45", "55"]
+        - cells: ["2.8", "30", "45", "60"]
+        - cells: ["3.0", "35", "50", "65"]
+        - cells: ["3.2", "35", "55", "70"]
+        - cells: ["3.4", "35", "55", "75"]
+        - cells: ["3.6", "40", "60", "80"]
+        - cells: ["3.8", "40", "60", "85"]
+        - cells: ["4.0", "45", "65", "90"]
+        - cells: ["4.2", "45", "70", "90"]
+        - cells: ["4.4", "50", "70", "95"]
+        - cells: ["4.6", "50", "75", "100"]
+        - cells: ["4.8", "55", "80", "105"]
+        - cells: ["5.0", "55", "80", "110"]
+        - cells: ["5.2", "55", "85", "115"]
+        - cells: ["5.4", "60", "90", "120"]
+        - cells: ["5.6", "60", "90", "125"]
+        - cells: ["5.8", "65", "95", "130"]
+        - cells: ["6.0", "65", "100", "130"]
+        - cells: ["6.2", "70", "100", "135"]
+        - cells: ["6.4", "70", "105", "140"]
+        - cells: ["6.6", "75", "110", "145"]
+        - cells: ["6.8", "75", "110", "150"]
+        - cells: ["7.0", "80", "115", "155"]
+        - cells: ["7.2", "80", "120", "160"]
+        - cells: ["7.4", "80", "120", "160"]
+        - cells: ["7.6", "85", "125", "165"]
+        - cells: ["7.8", "85", "130", "170"]
+        - cells: ["8.0", "90", "130", "175"]
+        - cells: ["8.2", "90", "135", "180"]
+        - cells: ["8.4", "90", "140", "185"]
+        - cells: ["8.6", "95", "140", "190"]
+        - cells: ["8.8", "95", "145", "195"]
+        - cells: ["9.0", "100", "145", "200"]
+        - cells: ["9.2", "100", "150", "200"]
+        - cells: ["9.4", "105", "155", "205"]
+        - cells: ["9.6", "105", "155", "210"]
+        - cells: ["9.8", "110", "160", "215"]
+        - cells: ["10.0", "110", "160", "220"]
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        If the child's intake (after allowing for vomiting) does **not reach
+        80 kcal/kg per day** despite frequent feeds, give the remaining feed **by
+        NG tube**. **Do not exceed 100 kcal/kg per day** in this initial phase.
+        Monitor and record: **amounts offered and left over; vomiting; stool
+        frequency/consistency; daily body weight**. In very hot climates children
+        may need extra water.
