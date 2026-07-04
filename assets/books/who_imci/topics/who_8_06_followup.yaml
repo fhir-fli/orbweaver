@@ -22,10 +22,12 @@ topic:
       highlight: true
       markdown: |
         HIV-infected children respond slowly or incompletely and need ongoing,
-        decentralized care:
+        decentralized care — ideally managed **by or in consultation with a
+        paediatric HIV specialist**. Key components: **viral-load monitoring** and
+        **weight-based ART dose adjustment** at every visit.
         - [Discharge from hospital](topic:who-imci-8-6-1-discharge) — when general
-          condition is good, follow up as an outpatient.
+          condition is good, follow up as an outpatient (check VL first).
         - [Referral](topic:who-imci-8-6-2-referral) — for testing, second-line
           treatment, counselling, community support.
-        - [Clinical follow-up](topic:who-imci-8-6-3-clinical-followup) — regular
-          monitoring of condition, growth, nutrition, vaccination.
+        - [Clinical follow-up](topic:who-imci-8-6-3-clinical-followup) — CD4/VL,
+          dose adjustment, comorbidity and neurodevelopmental screening.

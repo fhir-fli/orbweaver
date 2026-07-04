@@ -1,14 +1,19 @@
 # ============================================================
 # WHO IMCI §8.6.3 — Clinical follow-up. Pocket Book 2nd ed (2013),
 # p.250.
+# ⚠️ OpenEvidence-reviewed 2026-07: specified the monitoring schedule
+# (CD4/VL every 3–4 mo, VL 6–12-monthly once stably suppressed); weight-based
+# ART dose adjustment at every visit; resistance testing at dx + before any
+# switch; comorbidity + neurodevelopmental screening; adherence + disclosure
+# at every visit. Refs: DHHS/OARAC Pediatric ARV 2024; IDSA 2024.
 # ============================================================
 
 topic:
   id: "who-imci-8-6-3-clinical-followup"
   title: "Clinical Follow-up"
-  list_subtitle: "8.6.3 · well-child visits · monitor growth"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "clinical follow-up", "growth", "monitoring", "pediatric"]
+  list_subtitle: "8.6.3 · CD4/VL q3–4mo · weight-based dosing · comorbidity"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "clinical follow-up", "viral load", "monitoring", "pediatric"]
   aliases:
     - "HIV clinical follow-up"
   category: "medical"
@@ -22,11 +27,33 @@ topic:
       highlight: true
       markdown: |
         HIV-infected children should, when not ill, attend **well-infant clinics**
-        like other children. In addition, they need regular clinical follow-up at
-        **first-level facilities** to monitor:
-        - **clinical condition**
-        - **growth**
-        - **nutritional intake**
-        - **vaccination status**.
+        like other children. In addition, they need regular clinical follow-up to
+        monitor: **clinical condition**, **growth**, **nutritional intake**, and
+        **vaccination status** (review the immunocompromised-child schedule at
+        every visit — [§8.3.1](topic:who-imci-8-3-1-vaccination)).
 
-        Give **psychosocial support** where possible, through community programmes.
+    - type: "prose"
+      title: "Monitoring schedule"
+      markdown: |
+        - **CD4 and viral load** at diagnosis, then **every 3–4 months**. Once
+          **stably suppressed ≥ 2 years** with stable CD4, VL can move to **every
+          6–12 months**.
+        - **Weight-based ART dose adjustment at every visit** — critical in a
+          growing child to avoid under-dosing and resistance.
+        - **Resistance testing** at diagnosis and **before any regimen change**.
+
+    - type: "prose"
+      title: "Screen for comorbidities"
+      markdown: |
+        - **Hepatitis B/C**, **TB (annually)**, CMV where relevant.
+        - **Renal and hepatic function**, **lipids**, and **bone density** (if on
+          TDF).
+        - **Neurodevelopmental assessment** regularly — HIV-associated
+          neurocognitive impairment is common even on ART.
+
+    - type: "prose"
+      title: "Adherence, disclosure, support"
+      markdown: |
+        Assess **adherence at every visit** with the multidisciplinary team.
+        Address **age-appropriate disclosure** of HIV status to the child. Give
+        **psychosocial support** where possible, through community programmes.

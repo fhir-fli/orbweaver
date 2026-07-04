@@ -1,13 +1,16 @@
 # ============================================================
 # WHO IMCI §8.6.1 — Discharge from hospital. Pocket Book 2nd ed (2013),
 # p.249.
+# ✅ OpenEvidence-reviewed 2026-07: check viral load before discharge and at
+# 2–4 wk after ART start/change; ensure ART supply, adherence support,
+# named caregiver and linkage to outpatient HIV care. Refs: IDSA 2024.
 # ============================================================
 
 topic:
   id: "who-imci-8-6-1-discharge"
   title: "Discharge from Hospital"
-  list_subtitle: "8.6.1 · slow responders · outpatient follow-up"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "8.6.1 · slow responders · VL check · outpatient follow-up"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "discharge", "follow-up", "pediatric"]
   aliases:
     - "HIV discharge"
@@ -25,3 +28,11 @@ topic:
         treatment, and may have **persistent fever, persistent diarrhoea and
         chronic cough**. If their **general condition is good**, they need not
         remain in hospital but can be **seen regularly as outpatients**.
+
+    - type: "prose"
+      title: "Before discharge"
+      markdown: |
+        - **Check viral load** before discharge, and again at **2–4 weeks** after
+          starting or changing ART.
+        - Ensure **ART supply and adherence support** are in place — a named,
+          responsible **caregiver** and **linkage to outpatient HIV care**.

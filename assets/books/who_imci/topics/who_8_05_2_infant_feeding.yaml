@@ -1,13 +1,19 @@
 # ============================================================
 # WHO IMCI §8.5.2 — Infant feeding in the context of HIV. Pocket Book
 # 2nd ed (2013), pp.248–249.
+# ⚠️ OpenEvidence-reviewed 2026-07: breastfeeding extended to 12–24 months
+# with ART; shared-decision-making framework (2023 US Perinatal / 2024 AAP)
+# replaces the older binary; transmission 2%/4% (6/12 mo BF on ART) — and
+# formula supplementation does NOT raise acquisition risk under maternal
+# suppression; no consensus on extended infant ARV prophylaxis. Refs: WHO
+# 2016; DHHS Perinatal 2025; AAP 2024.
 # ============================================================
 
 topic:
   id: "who-imci-8-5-2-infant-feeding"
   title: "Infant Feeding & HIV"
-  list_subtitle: "8.5.2 · exclusive BF on ART vs replacement"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "8.5.2 · BF 12–24 mo on ART · shared decision-making"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "infant feeding", "breastfeeding", "replacement feeding", "pediatric"]
   aliases:
     - "Infant feeding and HIV"
@@ -21,50 +27,48 @@ topic:
       title: "The transmission risk"
       highlight: true
       markdown: |
-        Without any intervention, **15–25%** of HIV-positive mothers infect their
-        infants during pregnancy or delivery; if they breastfeed, an **additional
-        5–20%**. Avoiding breastfeeding eliminates breast-milk transmission, **but
-        replacement feeds are associated with increased infant morbidity and
-        mortality**.
+        Without intervention, **15–25%** of HIV-positive mothers infect their
+        infants during pregnancy/delivery; if breastfeeding, an **additional
+        5–20%**. **ART transforms this:** a mother on ART who gives ART to her
+        infant reduces breastfeeding transmission to **~2% (6 months BF)** or
+        **~4% (12 months BF)**.
 
     - type: "prose"
-      title: "Exclusive breastfeeding is safest when BF"
+      title: "Breastfeed 12–24 months with ART"
       markdown: |
-        **Exclusive breastfeeding** for the first months carries **less risk of HIV
-        transmission than mixed feeding**, and gives considerable protection
-        against infectious disease. **ART greatly reduces transmission** while
-        improving the mother's health: an HIV-positive mother on ART who gives ART
-        to her infant reduces transmission to **2% (BF 6 months)** or **4% (BF 12
-        months)**.
+        Since **2016**, WHO recommends (resource-limited settings): breastfeed
+        **exclusively for 6 months**, then continue with complementary foods to
+        **12–24 months (or longer)** — provided the mother is **on ART with
+        sustained viral suppression**. Exclusive breastfeeding carries **less** HIV
+        risk than mixed feeding and protects against other infections.
 
     - type: "prose"
-      title: "Balance the two risks"
+      title: "Shared decision-making"
       callout: true
       markdown: |
-        - Support mothers to give their child the greatest chance of being
-          **HIV-free and surviving**, while considering their own health.
-        - **Balance** HIV prevention against the nutritional and infection
-          protection needs of infants (non-HIV morbidity/mortality).
-        - HIV-positive mothers should preferably receive **lifelong ART**, and the
-          infant should be on **ART prophylaxis** while breastfeeding.
+        The older **breastfeed-vs-replacement binary** is superseded by **shared
+        decision-making** (2023 US Perinatal / 2024 AAP):
+        - **Replacement feeding** (formula or pasteurized donor milk) is the only
+          method that **eliminates** postnatal transmission — appropriate where it
+          is **acceptable, feasible, affordable, sustainable and safe (AFASS)**.
+        - **Breastfeeding is supported** for a mother who strongly desires it,
+          provided ART began early / before pregnancy and **viral suppression is
+          sustained**.
+        - There is **no evidence** that **formula supplementation** raises HIV
+          acquisition under maternal ART + suppression.
 
     - type: "prose"
-      title: "Infant feeding advice"
+      title: "Extended infant ARV prophylaxis"
       markdown: |
-        Follow **national guidelines**: either breastfeed while receiving ART
-        (mother or infant), **or** avoid breastfeeding.
-        - Where national guidelines recommend breastfeeding + ART: breastfeed
-          **exclusively for the first 6 months**, introduce complementary foods
-          thereafter, and **continue breastfeeding to 12 months**.
-        - If the child is **already infected** and a decision is taken to continue
-          breastfeeding, discuss ART and feeding options for future pregnancies.
-        - If the mother is HIV-positive and the **child's status is unknown**,
-          counsel and test the child. If replacement feeding is
-          **acceptable, feasible, affordable, sustainable and safe**, avoiding
-          further breastfeeding is recommended; otherwise exclusive breastfeeding
-          to 6 months, continued to 12 months.
+        Whether to **extend infant ARV prophylaxis** (e.g. NVP or 3TC) through
+        breastfeeding is **not settled** — panels reached **no consensus**. Decide
+        **with the family**, guided by maternal viral load and local capacity.
 
+    - type: "prose"
+      title: "Support and counselling"
+      markdown: |
         Mothers need **continued counselling and support** from trained,
-        experienced counsellors; ensure the advice given is **consistent**. If
-        using breast-milk substitutes, counsel on correct use and safe
-        preparation.
+        experienced counsellors; keep advice **consistent**. If using breast-milk
+        substitutes, counsel on **correct use and safe preparation**. If the
+        mother's status is unknown, **counsel and test**; discuss feeding options
+        for future pregnancies.

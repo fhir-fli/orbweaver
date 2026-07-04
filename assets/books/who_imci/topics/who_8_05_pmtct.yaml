@@ -24,8 +24,11 @@ topic:
       highlight: true
       markdown: |
         HIV may be transmitted during **pregnancy, labour, delivery, or
-        breastfeeding**. This section covers:
-        - [Prevention of MTCT](topic:who-imci-8-5-1-prevention-mtct) — lifelong
-          ART for the mother (Option B+), infant prophylaxis.
-        - [Infant feeding](topic:who-imci-8-5-2-infant-feeding) — exclusive
-          breastfeeding while on ART vs replacement feeding.
+        breastfeeding**. With sustained maternal viral suppression, MTCT falls to
+        **0.1–0.5%**. This section covers:
+        - [Prevention of MTCT](topic:who-imci-8-5-1-prevention-mtct) — **lifelong
+          ART for every pregnant woman** (the old Option B/B+ distinction is
+          obsolete), DTG-preferred, risk-stratified infant prophylaxis.
+        - [Infant feeding](topic:who-imci-8-5-2-infant-feeding) — breastfeeding
+          **12–24 months on ART** vs replacement feeding, by **shared
+          decision-making**.

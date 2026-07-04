@@ -1,12 +1,15 @@
 # ============================================================
 # WHO IMCI §8.6.2 — Referral. Pocket Book 2nd ed (2013), p.249.
+# ✅ OpenEvidence-reviewed 2026-07: POC NAT reduces referral-for-testing;
+# telemedicine with paediatric HIV specialists; adolescent transition
+# planning. Refs: IDSA 2024; Cochrane POC NAT 2021.
 # ============================================================
 
 topic:
   id: "who-imci-8-6-2-referral"
   title: "Referral"
-  list_subtitle: "8.6.2 · testing · second-line · community support"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "8.6.2 · second-line · POC NAT · telemedicine · transition"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "referral", "counselling", "community", "pediatric"]
   aliases:
     - "HIV referral"
@@ -30,6 +33,16 @@ topic:
         - to a **community or home-based care programme**, a voluntary counselling
           and testing centre, or a community social support programme for
           continuing psychosocial support.
+
+    - type: "prose"
+      title: "What has changed"
+      markdown: |
+        - **Point-of-care NAT** is now available in many settings — it **reduces
+          the need to refer solely for HIV testing**.
+        - Use **telemedicine** consultation with a **paediatric HIV specialist**
+          where physical referral is not feasible.
+        - Plan **transition to adult care** for adolescents with perinatally
+          acquired HIV.
 
     - type: "prose"
       title: "Orphans"

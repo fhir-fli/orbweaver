@@ -1,14 +1,22 @@
 # ============================================================
 # WHO IMCI §8.5.1 — Prevention of mother-to-child HIV transmission.
 # Pocket Book 2nd ed (2013), pp.247–248.
+# ⚠️ OpenEvidence-reviewed 2026-07: Option B/B+ terminology obsolete —
+# LIFELONG ART for ALL pregnant women is the universal standard; start
+# immediately (not at 14 wk); preferred maternal regimen DTG + TAF/FTC (or
+# BIC/TAF/FTC); ABC-containing regimens now alternative in pregnancy; EFV no
+# longer preferred (IMPAACT 2010 — DTG higher suppression, less infant
+# stunting); transmission 0.1–0.5% with sustained suppression; risk-
+# stratified infant prophylaxis; PROMISE-EPI. Refs: DHHS Perinatal 2025;
+# IMPAACT 2010/VESTED (Lancet 2021); PROMISE-EPI (Lancet 2024).
 # ============================================================
 
 topic:
   id: "who-imci-8-5-1-prevention-mtct"
   title: "Prevention of MTCT"
-  list_subtitle: "8.5.1 · lifelong ART · Option B+"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "PMTCT", "ART", "Option B+", "pregnancy", "pediatric"]
+  list_subtitle: "8.5.1 · lifelong ART for all · DTG · infant prophylaxis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "PMTCT", "ART", "dolutegravir", "pregnancy", "pediatric"]
   aliases:
     - "Prevention of mother-to-child transmission"
   category: "medical"
@@ -27,22 +35,43 @@ topic:
         care, and counselling/support** for infant feeding.
 
     - type: "prose"
-      title: "Start lifelong ART for all pregnant women"
+      title: "Lifelong ART for all — Option B/B+ is obsolete"
       callout: true
       markdown: |
-        **Start lifelong ART for all pregnant women with HIV, regardless of
-        symptoms** — both for their own health and to prevent transmission during
-        pregnancy and breastfeeding. Start early in pregnancy, at **14 weeks** or
-        as soon as possible thereafter.
+        **Start lifelong ART for every pregnant woman with HIV, regardless of CD4
+        or stage** — this is now the **universal standard**. The old **Option B vs
+        B+** distinction is **obsolete**: the prophylaxis-only-then-stop approach
+        is no longer recommended. Start ART **immediately** on diagnosis (ideally
+        **before conception**) — there is **no reason to wait until 14 weeks**.
 
     - type: "prose"
-      title: "The two options"
+      title: "Preferred maternal regimen"
       markdown: |
-        - **Option B:** a **three-drug prophylactic** regimen for the mother during
-          pregnancy and throughout breastfeeding, plus infant prophylaxis for
-          **6 weeks** after birth (whether or not breastfeeding).
-        - **Option B+:** a **triple ARV treatment** regimen for the mother
-          **beginning in pregnancy and continued for life**, plus infant
-          prophylaxis for 6 weeks.
+        - **Preferred:** **DTG + TAF/FTC** (or TDF/FTC if TAF unavailable);
+          **BIC/TAF/FTC** is also preferred for initiation in pregnancy.
+        - **ABC-containing** regimens are now **alternative** in pregnancy.
+        - **EFV-based** regimens are **no longer preferred** — DTG gives higher
+          suppression at delivery and less infant growth stunting (**IMPAACT
+          2010/VESTED**).
 
-        **Option B+ is now preferred.**
+    - type: "prose"
+      title: "Transmission risk — then vs now"
+      markdown: |
+        Without intervention, **15–25%** transmit during pregnancy/delivery and an
+        **additional 5–20%** through breastfeeding. With **ART achieving sustained
+        viral suppression**, MTCT falls to **0.1–0.5%** — one of the great public
+        health achievements in HIV medicine.
+
+    - type: "prose"
+      title: "Infant prophylaxis — risk-stratified"
+      markdown: |
+        Match infant prophylaxis to **maternal viral load / treatment**:
+        - **Low risk** (mother on ART with sustained suppression): a **single
+          drug** (e.g. zidovudine or nevirapine) for **4–6 weeks**.
+        - **High risk** (elevated/unknown maternal VL, or no/incomplete maternal
+          ART): **combination (presumptive) prophylaxis** for ~6 weeks.
+
+        **PROMISE-EPI** (Zambia/Burkina Faso) tested **extended infant lamivudine**
+        triggered by point-of-care maternal VL during breastfeeding — transmission
+        **0.19 vs 1.16 per 100 person-years** — an emerging on-demand strategy for
+        postnatal elimination.
