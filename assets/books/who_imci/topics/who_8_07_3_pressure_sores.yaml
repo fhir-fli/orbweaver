@@ -1,13 +1,16 @@
 # ============================================================
 # WHO IMCI §8.7.3 — Prevention and treatment of pressure sores. Pocket
 # Book 2nd ed (2013), p.252.
+# ✅ OpenEvidence-reviewed 2026-07: TAC → LET for wound pain; added
+# pressure-redistributing surfaces and nutritional optimisation. Refs:
+# Krauss (Lancet 2016); Cochrane topical anaesthetics 2017.
 # ============================================================
 
 topic:
   id: "who-imci-8-7-3-pressure-sores"
   title: "Pressure Sores"
-  list_subtitle: "8.7.3 · turn 2-hourly · keep clean & dry"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "8.7.3 · turn 2-hourly · keep clean & dry · LET"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "pressure sores", "palliative", "pediatric"]
   aliases:
     - "Pressure sores"
@@ -22,5 +25,14 @@ topic:
       highlight: true
       markdown: |
         Teach carers to **turn the child at least once every 2 h**. If pressure
-        sores develop, **keep them clean and dry**. Use local anaesthetics such as
-        **tetracaine, adrenaline and cocaine** to relieve pain.
+        sores develop, **keep them clean and dry**. For wound pain use **LET
+        (lidocaine + epinephrine + tetracaine)** — the cocaine-free replacement for
+        the older TAC.
+
+    - type: "prose"
+      title: "Prevent and support healing"
+      markdown: |
+        - Use **pressure-redistributing surfaces** (foam mattresses) where
+          available.
+        - **Optimize nutrition** — adequate protein and calories speed healing.
+        - **Assess wounds** with a standardized tool if available.

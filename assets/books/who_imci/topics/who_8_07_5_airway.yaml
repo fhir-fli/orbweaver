@@ -1,14 +1,17 @@
 # ============================================================
 # WHO IMCI §8.7.5 — Airway management. Pocket Book 2nd ed (2013),
 # p.252.
+# ✅ OpenEvidence-reviewed 2026-07: expanded terminal airway comfort —
+# positioning, gentle suction, low-dose morphine for dyspnoea,
+# anticholinergics for "death rattle". Refs: AAP end-of-life guidance 2022.
 # ============================================================
 
 topic:
   id: "who-imci-8-7-5-airway"
   title: "Airway Management"
-  list_subtitle: "8.7.5 · comfort over prolonging life"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "airway", "palliative", "end-of-life", "pediatric"]
+  list_subtitle: "8.7.5 · comfort first · morphine for dyspnoea"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "airway", "palliative", "end-of-life", "dyspnoea", "pediatric"]
   aliases:
     - "Airway management"
   category: "medical"
@@ -21,5 +24,11 @@ topic:
       title: "Comfort first"
       highlight: true
       markdown: |
-        In terminal care, give priority to **keeping the child comfortable**
-        rather than prolonging life.
+        In terminal care, give priority to **keeping the child comfortable** rather
+        than prolonging life:
+        - **Position** semi-upright to ease breathing.
+        - **Gently suction** secretions only if they distress the child.
+        - **Low-dose morphine (0.05–0.1 mg/kg)** relieves **terminal dyspnoea** —
+          evidence-based.
+        - **Anticholinergics** (glycopyrrolate or hyoscine) for **"death rattle"**
+          secretions if distressing to the family.

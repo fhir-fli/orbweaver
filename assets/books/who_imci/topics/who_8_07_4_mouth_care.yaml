@@ -1,13 +1,16 @@
 # ============================================================
 # WHO IMCI §8.7.4 — Care of the mouth. Pocket Book 2nd ed (2013),
 # p.252.
+# ✅ OpenEvidence-reviewed 2026-07: no substantive change — nystatin/
+# miconazole and the secondary-infection antibiotics remain current;
+# gentian violet stays acceptable for low-resource settings.
 # ============================================================
 
 topic:
   id: "who-imci-8-7-4-mouth-care"
   title: "Care of the Mouth"
   list_subtitle: "8.7.4 · clean 4× daily · thrush · pus"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "mouth care", "oral thrush", "palliative", "pediatric"]
   aliases:
     - "Mouth care"

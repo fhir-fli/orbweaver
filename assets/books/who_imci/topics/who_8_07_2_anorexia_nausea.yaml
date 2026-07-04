@@ -1,14 +1,20 @@
 # ============================================================
 # WHO IMCI §8.7.2 — Management of anorexia, nausea and vomiting. Pocket
 # Book 2nd ed (2013), p.252.
+# 🛑 OpenEvidence-reviewed 2026-07 — SAFETY CORRECTION: the 2013 text's
+# metoclopramide "1–2 mg/kg every 2–4 h" is the HIGH-DOSE chemo dose and is
+# ~10× too high (extrapyramidal reactions in ≥ 25% of children at that dose).
+# First-line antiemetic is now ONDANSETRON 0.15 mg/kg; metoclopramide only as
+# an alternative at the CORRECTED 0.1–0.15 mg/kg. Refs: FDA metoclopramide
+# label; Niño-Serna meta-analysis (Pediatrics 2020).
 # ============================================================
 
 topic:
   id: "who-imci-8-7-2-anorexia-nausea"
   title: "Anorexia, Nausea & Vomiting"
-  list_subtitle: "8.7.2 · small frequent feeds · metoclopramide"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "anorexia", "nausea", "vomiting", "palliative", "pediatric"]
+  list_subtitle: "8.7.2 · small frequent feeds · ondansetron"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "anorexia", "nausea", "vomiting", "ondansetron", "palliative", "pediatric"]
   aliases:
     - "Anorexia nausea vomiting"
   category: "medical"
@@ -18,7 +24,7 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "Encourage feeds, treat nausea"
+      title: "Encourage feeds"
       highlight: true
       markdown: |
         Loss of appetite in terminal illness is hard to treat. Encourage carers to
@@ -27,5 +33,25 @@ topic:
           appetite may be better.
         - **cool foods** rather than hot foods.
         - **avoiding salty or spicy foods**.
-        - **oral metoclopramide 1–2 mg/kg every 2–4 h** if there is distressing
-          nausea and vomiting.
+
+    - type: "prose"
+      title: "Antiemetic — ondansetron first-line"
+      callout: true
+      markdown: |
+        For distressing nausea and vomiting, use **ondansetron 0.15 mg/kg IV/oral
+        (max 4 mg) every 8 h** — the preferred paediatric antiemetic (reduces
+        vomiting, hospitalization and need for IV fluids).
+
+    - type: "prose"
+      title: "Metoclopramide — corrected dose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        If metoclopramide is used (alternative only): **0.1–0.15 mg/kg (max 10 mg)
+        every 6–8 h**. **Do NOT** use the old "1–2 mg/kg" dose — that is the
+        high-dose chemo dose and causes **extrapyramidal reactions (dystonia) in
+        ≥ 25% of children**, which are **more common in children than adults**.
+        Avoid in infants.

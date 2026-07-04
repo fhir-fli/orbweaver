@@ -1,13 +1,16 @@
 # ============================================================
 # WHO IMCI §8.7.6 — Psychosocial support. Pocket Book 2nd ed (2013),
 # p.253.
+# ✅ OpenEvidence-reviewed 2026-07: added shared decision-making, advance
+# care planning, bereavement support and staff debriefing. Refs: AAP
+# end-of-life guidance 2022.
 # ============================================================
 
 topic:
   id: "who-imci-8-7-6-psychosocial"
   title: "Psychosocial Support"
-  list_subtitle: "8.7.6 · support family · community links"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "8.7.6 · support family · advance care planning · bereavement"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "psychosocial", "family support", "palliative", "pediatric"]
   aliases:
     - "Psychosocial support"
@@ -34,3 +37,14 @@ topic:
         counselling groups**. Find out whether the carers are receiving support
         from these groups; if not, discuss the family's attitude toward them and
         the possibility of **linking the family** with them.
+
+    - type: "prose"
+      title: "A fuller framework"
+      markdown: |
+        - **Shared decision-making** with child and family about goals of care.
+        - **Advance care planning** — begin soon after a serious diagnosis and
+          revisit as the condition evolves.
+        - **Bereavement support** after death, including follow-up contact from the
+          clinical team.
+        - **Staff debriefing** — a child's death affects the whole team; know the
+          local debriefing resources.

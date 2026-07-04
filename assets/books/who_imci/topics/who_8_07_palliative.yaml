@@ -19,16 +19,26 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "Comfort matters"
+      title: "Comfort matters — and not only at the end"
       highlight: true
       markdown: |
         An immunologically compromised child often has **considerable
-        discomfort** — good palliative care is essential. Take all decisions
-        **with the parents/caretaker**, and communicate them clearly to all staff
-        (including night staff). Consider palliative care **at home** as an
-        alternative to hospital. Treating distressing conditions (oesophageal
-        candidiasis, convulsions) can significantly improve remaining quality of
-        life.
+        discomfort** — good palliative care is essential. It is **not only for
+        dying children**: integrate it **early** in any serious illness to address
+        physical, psychological, social and spiritual needs across the whole
+        trajectory. Take all decisions **with the parents/caretaker**, and
+        communicate them clearly to all staff (including night staff). Consider
+        palliative care **at home**. Treating distressing conditions (oesophageal
+        candidiasis, convulsions) can significantly improve quality of life.
+
+    - type: "prose"
+      title: "Still relevant in the ART era"
+      markdown: |
+        HIV mortality has fallen dramatically, but palliative care remains relevant
+        for children with **advanced HIV** (late presenters), **treatment
+        failure**, and **HIV-related comorbidities** (chronic lung disease,
+        neurocognitive impairment). Engage a palliative team **early** for complex
+        decisions and needs beyond the primary team.
 
     - type: "prose"
       title: "When to give terminal care"
