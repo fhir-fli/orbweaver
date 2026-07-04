@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §9.3.3 — Chest injuries. Pocket Book 2nd ed (2013),
 # pp.273–275.
+# ⚠️ OpenEvidence-reviewed 2026-07: needle decompression at the
+# 4th/5th intercostal space, anterior/mid-axillary line (safer, more
+# reliable than 2nd ICS mid-clavicular in children); if unavailable or
+# it fails, do FINGER (simple) THORACOSTOMY; chest-drain size guide
+# ≈ 4 × ETT internal diameter. Refs: ATLS 10th ed; APLS; Laan 2016.
 # ============================================================
 
 topic:
   id: "who-imci-9-3-3-chest-injuries"
   title: "Chest Injuries"
-  list_subtitle: "9.3.3 · pneumothorax · haemothorax · contusion"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.3.3 · needle decompression · thoracostomy · haemothorax"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "chest injury", "pneumothorax", "haemothorax", "trauma", "pediatric"]
   aliases:
     - "Chest injury"
@@ -38,11 +43,16 @@ topic:
       markdown: |
         Air enters the pleural space but cannot leave. **Severe breathlessness,
         cyanosis, decreased chest movement, no air entry on the affected side,
-        hyper-resonance on percussion.**
-        - **Insert a needle for urgent decompression** before inserting an
-          intercostal drain.
+        hyper-resonance on percussion.** This is a **clinical diagnosis** — treat
+        immediately, do not wait for an X-ray.
+        - **Needle decompression** at the **4th–5th intercostal space in the
+          anterior or mid-axillary line** (more reliable in children than the old
+          2nd-space mid-clavicular site — the chest wall is thinner there).
+        - If a needle is unavailable or fails, do a **finger (simple)
+          thoracostomy** — open blunt dissection into the pleural space.
         - Give **oxygen** near 100% (mask with reservoir).
-        - **Insert a chest drain.**
+        - **Insert a chest drain** — a guide to size is **≈ 4 × the internal
+          diameter of the child's ETT** (in French gauge).
         - **Seek urgent surgical advice.**
 
     - type: "prose"

@@ -1,12 +1,18 @@
 # ============================================================
 # WHO IMCI §9.3.5 — Fractures. Pocket Book 2nd ed (2013), pp.275–279.
+# ⚠️ OpenEvidence-reviewed 2026-07: open fractures — first-generation
+# cephalosporin (cefazolin) is first-line, graded by Gustilo type,
+# given within 1 h and continued ≤ 24 h after wound closure; check the
+# ANTERIOR INTEROSSEOUS / median / ulnar / radial nerves in supracondylar
+# fractures (AIN most commonly injured); NO antibiotic prophylaxis for
+# routine closed pinning. Refs: EAST; Gustilo–Anderson; POSNA.
 # ============================================================
 
 topic:
   id: "who-imci-9-3-5-fractures"
   title: "Fractures"
-  list_subtitle: "9.3.5 · open = antibiotics · splint · traction"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.3.5 · open = cefazolin · splint · traction · check nerves"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "fractures", "orthopaedic", "traction", "splint", "pediatric"]
   aliases:
     - "Fractures"
@@ -33,10 +39,15 @@ topic:
         Ask: **is there a fracture?** and **which bone?** (clinical exam or X-ray).
         - **Refer for review** by a surgeon experienced in paediatric surgery for
           complicated fractures — displaced, involving growth plates, or open.
-        - **Open fractures need antibiotics:** **cloxacillin (25–50 mg/kg IV or
-          orally 4× daily) + gentamicin (7.5 mg/kg IM/IV once daily)**, and
-          meticulous cleaning to prevent osteomyelitis (see
+        - **Open fractures need antibiotics as soon as possible (within 1 h):** a
+          **first-generation cephalosporin — cefazolin** is first-line, given by
+          **Gustilo grade** and continued only **≤ 24 h after wound closure** (add
+          gram-negative/anaerobic cover for grossly contaminated or type-III
+          wounds). Where cefazolin is unavailable, cloxacillin ± gentamicin is a
+          reasonable substitute. Combine with **meticulous debridement** and
+          irrigation to prevent osteomyelitis (see
           [§9.3.6](topic:who-imci-9-3-6-wound-care)).
+        - Ensure **tetanus prophylaxis** is up to date.
 
     - type: "prose"
       title: "Splints and traction"
@@ -58,8 +69,15 @@ topic:
         alert_fill: "0xFFFDECEA"
         alert_text: "0xFFB71C1C"
       markdown: |
-        A key complication is **constriction of the artery at the elbow**. Assess
-        blood flow to the hand: if the artery is obstructed the hand is **cool, slow
-        capillary refill, absent radial pulse** — **reduction must be done
-        urgently**. Reduce under traction, flex the elbow, apply a back slab, and
-        check position on X-ray.
+        A key complication is **constriction of the brachial artery at the elbow**.
+        Assess blood flow to the hand: if the artery is obstructed the hand is
+        **cool, slow capillary refill, absent radial pulse** — **reduction must be
+        done urgently**. Reduce under traction, flex the elbow, apply a back slab,
+        and check position on X-ray.
+
+        **Also examine the nerves** — the **anterior interosseous nerve** (test
+        the "OK" sign / thumb-IP + index-DIP flexion) is the **most commonly
+        injured**; also check **median, ulnar and radial** nerve function.
+        Displaced fractures usually need **closed reduction and percutaneous
+        pinning** — routine **antibiotic prophylaxis is NOT indicated** for closed
+        pinning.

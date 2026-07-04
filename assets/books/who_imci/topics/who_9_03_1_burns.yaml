@@ -1,13 +1,22 @@
 # ============================================================
 # WHO IMCI §9.3.1 — Burns (BSA chart + fluid resuscitation). Pocket
 # Book 2nd ed (2013), pp.269–272.
+# ⚠️ OpenEvidence-reviewed 2026-07: burn-depth granularity (superficial vs
+# deep partial-thickness); clarified Parkland (no separate maintenance) with
+# URINE-OUTPUT-guided titration + "fluid creep" warning; silver sulfadiazine
+# DEMOTED (delays healing) → antimicrobial ointment / silver foam / honey; NO
+# systemic antibiotic prophylaxis; multimodal + procedural pain. Refs:
+# Greenhalgh NEJM 2019; ABA; Liu JBCR 2025; WMS 2025.
+# LMIC lens: honey / antimicrobial ointment lead as resource-appropriate
+# topicals; silver foam flagged expensive/often-unavailable; silver
+# sulfadiazine kept as a practical WHO-EML option when alternatives absent.
 # ============================================================
 
 topic:
   id: "who-imci-9-3-1-burns"
   title: "Burns"
-  list_subtitle: "9.3.1 · depth · % BSA · fluid resuscitation"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.3.1 · depth · % BSA · urine-guided fluids"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "burns", "scalds", "fluid resuscitation", "pediatric"]
   aliases:
     - "Burns"
@@ -24,12 +33,17 @@ topic:
       markdown: |
         Burns and scalds carry high mortality and can cause lifelong disfigurement
         and psychological trauma. **How deep?**
-        - **Full-thickness:** black or white, dry, **no sensation**, do **not
-          blanch** — skin will not regenerate.
-        - **Partial-thickness:** pink or red, blistering or weeping, **painful**.
+        - **Superficial (1st degree):** red, dry, painful; no blisters.
+        - **Superficial partial-thickness (2nd):** pink, moist, blistering,
+          **very painful** — heals spontaneously.
+        - **Deep partial-thickness (2nd):** blotchy red/white, less sensate —
+          often needs **excision and grafting**.
+        - **Full-thickness (3rd):** black or white, dry, leathery, **no sensation**,
+          does **not blanch** — will not regenerate.
 
-        **How much?** Use the body-surface-area chart by age, or the child's
-        **palm ≈ 1%** of total BSA.
+        **How much?** Use the age-adjusted body-surface-area (Lund–Browder) chart
+        — the Rule of Nines is inaccurate in children (big head, small legs). The
+        child's **palm ≈ 1%** of total BSA.
 
     - type: "prose"
       title: "% BSA — the age-varying areas"
@@ -58,43 +72,65 @@ topic:
         (severe facial/inhalation burns may need early intubation or tracheostomy).
 
     - type: "prose"
-      title: "Fluid resuscitation (> 10% BSA)"
+      title: "Fluid resuscitation — titrate to urine output"
       callout: true
       markdown: |
-        Use **Ringer's lactate + 5% glucose** (or normal saline + 5% glucose);
-        maintenance uses Ringer's lactate + 5% glucose or half-normal saline +
-        5% glucose.
-        - **First 24 h = maintenance fluid + extra (4 ml/kg per 1% surface burnt).**
-          Give **half** in the first **8 h**, the rest over the next **16 h**.
-        - **Second 24 h:** give **half to three-quarters** of day-1's volume.
-        - Monitor closely (pulse, RR, BP, urine output); avoid **circulatory
-          overload**. Blood may be given for anaemia or deep burns.
+        Formal IV resuscitation is for **larger burns** (ABA: **≥ 20% TBSA**; the
+        ≥ 10% figure is an admission — not necessarily a fluid — threshold). Use a
+        **balanced isotonic crystalloid — Ringer's lactate** (add 5% glucose in
+        young children; **do not use hypotonic fluids**).
+        - **Parkland: 4 ml/kg × %TBSA** over the first 24 h — **half in the first
+          8 h**, rest over 16 h. (Modified Brooke uses 2 ml/kg × %TBSA.) In young
+          children, **add** maintenance fluid on top.
+        - The formula gives only a **starting rate** — **titrate to urine output**
+          (target **1–1.5 ml/kg/h**), not a fixed volume.
 
-        **Example — 20 kg child, 25% burn:** first-24 h = (60 ml/h × 24 h) +
-        (4 ml × 20 kg × 25%) = 1440 + 2000 = **3440 ml** → **1720 ml over the first
-        8 h**.
+    - type: "prose"
+      title: "Beware fluid creep"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Over-resuscitation ("fluid creep") is a major hazard** — it causes
+        **pulmonary oedema, compartment syndrome, and conversion of burns to
+        deeper wounds**. Reduce the rate as urine output allows; blood may be given
+        for anaemia or deep burns. **Second 24 h:** half to three-quarters of
+        day-1's volume.
 
     - type: "prose"
       title: "Prevent and treat infection"
       markdown: |
         In all cases give **tetanus prophylaxis**. Clean intact skin with
         antiseptic without breaking it; if not intact, **debride** and excise
-        necrotic tissue over the first few days. Topical options (resource-
-        dependent): **silver nitrate, silver sulfadiazine, gentian violet,
-        betadine, mashed papaya**. Small/awkward burns may be left open, clean and
-        dry.
+        necrotic tissue over the first few days.
 
-        If **local infection** (pus, foul odour, cellulitis): **amoxicillin
-        15 mg/kg orally 3× daily + cloxacillin 25 mg/kg orally 4× daily**. If
-        septicaemia suspected: **gentamicin 7.5 mg/kg once daily + cloxacillin
-        25–50 mg/kg IM/IV 4× daily**. Remove an eschar if infection is suspected
-        beneath it.
+        **Topicals** (superficial / superficial partial-thickness): **honey** is
+        an excellent, evidence-based and **widely available LMIC-appropriate**
+        choice, as is **antimicrobial ointment (bacitracin, mupirocin)**. Newer
+        **silver-impregnated foam dressings** reduce painful changes but are
+        **expensive and often unavailable** — use where you have them. **Silver
+        sulfadiazine** delays healing slightly (keratinocyte/fibroblast toxicity)
+        so it is **no longer preferred where alternatives exist**, but it remains
+        on the **WHO Essential Medicines List** and is often the **most practical
+        option available** — it is entirely reasonable when honey or ointments are
+        not to hand. Small/awkward burns may be left open, clean and dry.
+
+        **Do NOT give systemic antibiotic prophylaxis** — it selects resistant
+        organisms. Treat only established infection: **local** (pus, foul odour,
+        cellulitis) → **amoxicillin 15 mg/kg orally 3× daily + cloxacillin 25 mg/kg
+        orally 4× daily**; **septicaemia** → **gentamicin 7.5 mg/kg once daily +
+        cloxacillin 25–50 mg/kg IM/IV 4× daily**. Remove an eschar if infection is
+        suspected beneath it.
 
     - type: "prose"
       title: "Pain, nutrition, contractures"
       markdown: |
-        - **Pain:** paracetamol 10–15 mg/kg every 6 h; if severe, **morphine
-          sulfate 0.05–0.1 mg/kg IV every 4 h**.
+        - **Pain (multimodal):** paracetamol 10–15 mg/kg every 6 h **+ ibuprofen**;
+          if severe, **morphine sulfate 0.05–0.1 mg/kg IV every 4 h**. For
+          **dressing changes** use dedicated **procedural analgesia** (e.g.
+          intranasal fentanyl, or ketamine for major changes).
         - **Nutrition:** feed within 24 h; high-calorie diet with protein, vitamins
           and iron (omit iron initially in severe burns). Extensive burns need
           ~1.5× calories and 2–3× protein.

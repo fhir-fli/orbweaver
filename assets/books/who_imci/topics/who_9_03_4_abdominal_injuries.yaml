@@ -1,13 +1,23 @@
 # ============================================================
 # WHO IMCI §9.3.4 — Abdominal injuries. Pocket Book 2nd ed (2013),
 # p.275.
+# ⚠️ OpenEvidence-reviewed 2026-07: blunt solid-organ (spleen/liver)
+# injury in a haemodynamically STABLE child is managed NON-OPERATIVELY
+# (ATOMAC pathway; transfuse toward Hb ~7 g/dl, operate for instability
+# not for grade); FAST + contrast CT are the modern work-up; AST/ALT
+# elevation flags liver injury. Refs: ATOMAC (Notrica 2015); APSA;
+# ATLS 10th ed.
+# LMIC lens: NOM framed as conditional on serial-Hb monitoring, a
+# reliable blood bank, and rapid access to surgery; without these, lower
+# the threshold to refer/operate. CT flagged "where available"; FAST is
+# the first-line resource-appropriate study.
 # ============================================================
 
 topic:
   id: "who-imci-9-3-4-abdominal-injuries"
   title: "Abdominal Injuries"
-  list_subtitle: "9.3.4 · internal bleeding · penetrating = surgery"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.3.4 · non-operative if stable · FAST/CT · penetrating = surgery"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "abdominal injury", "trauma", "internal bleeding", "pediatric"]
   aliases:
     - "Abdominal injury"
@@ -36,14 +46,27 @@ topic:
         - Be especially cautious with injuries **around the anus** — penetrating
           rectal injuries are easily missed.
         - Look for **bruising and penetrating trauma**, listen for bowel sounds,
-          check renal angles, examine urine for blood. **Ultrasound** is useful if
-          available to investigate intra-abdominal bleeding.
+          check renal angles, examine urine for blood.
+        - **FAST ultrasound** at the bedside detects free fluid and is increasingly
+          available at first-referral level; **where CT is available**, contrast CT
+          is the definitive study in a stable child and **grades** solid-organ
+          injury.
+        - Send **AST/ALT** — elevation suggests **liver injury**; raised **amylase**
+          suggests pancreatic/duodenal injury.
 
     - type: "prose"
       title: "Treatment"
       callout: true
       markdown: |
         - Assess airway and breathing, give oxygen, assess circulation, set up **IV
-          access**, take blood for **Hb, cross-match, amylase**.
-        - **Transfuse** as necessary.
+          access**, take blood for **Hb, cross-match, amylase, AST/ALT**.
+        - **Blunt spleen/liver injury in a haemodynamically STABLE child is managed
+          non-operatively** (ATOMAC pathway) — bed rest, serial obs and Hb,
+          transfuse toward **Hb ~7 g/dl**. The decision to operate is driven by
+          **haemodynamic instability, not the CT grade.** **Non-operative
+          management is only safe where you have serial-Hb monitoring, a reliable
+          blood bank, and the ability to convert to surgery quickly** — if any of
+          these is lacking, keep a **lower threshold to refer or operate**.
+        - **Operate** for a **penetrating** wound, an **unstable** child not
+          responding to resuscitation, or peritonitis (hollow-viscus injury).
         - **Seek urgent surgical advice.**

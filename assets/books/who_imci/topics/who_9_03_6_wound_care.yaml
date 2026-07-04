@@ -1,13 +1,20 @@
 # ============================================================
 # WHO IMCI §9.3.6 — Principles of wound care. Pocket Book 2nd ed (2013),
 # pp.279–281.
+# ⚠️ OpenEvidence-reviewed 2026-07: modern trauma tourniquets are safe
+# well beyond 10 min (routinely up to ~2 h) and endorsed in children for
+# life-threatening extremity haemorrhage — sickle-cell disease is a
+# RELATIVE, not absolute, contraindication; tetanus given by the
+# ACIP wound-type × vaccine-status matrix (TIG for dirty wounds if < 3
+# doses / unknown); cover MRSA for purulent wound infections where
+# prevalent. Refs: ACIP/CDC tetanus; TCCC; IDSA SSTI.
 # ============================================================
 
 topic:
   id: "who-imci-9-3-6-wound-care"
   title: "Principles of Wound Care"
-  list_subtitle: "9.3.6 · stop bleeding · prevent infection · closure"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.3.6 · tourniquet · tetanus (ACIP) · closure · MRSA"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "wound care", "bleeding", "tetanus", "wound closure", "pediatric"]
   aliases:
     - "Wound care"
@@ -29,10 +36,12 @@ topic:
       markdown: |
         - **Direct pressure** controls most bleeding — elevate the limb, apply
           direct pressure, then a pressure bandage.
-        - Bleeding from extremities can be controlled for **≤ 10 min** with a BP
-          cuff inflated above arterial pressure. **Prolonged (> 10 min)**
-          tourniquets can damage the limb — **never** use a tourniquet in a child
-          with **sickle-cell anaemia**.
+        - For **life-threatening extremity haemorrhage** that pressure will not
+          control, apply a **tourniquet** — modern trauma tourniquets are **safe
+          well beyond 10 minutes** (routinely up to **~2 hours**) and are
+          **endorsed in children**. Note the time applied. **Sickle-cell disease
+          is a relative, not absolute, contraindication** — use if the bleeding is
+          life-threatening.
 
     - type: "prose"
       title: "Prevent infection"
@@ -51,10 +60,14 @@ topic:
       title: "Tetanus prophylaxis"
       callout: true
       markdown: |
-        - **Not vaccinated:** give **anti-tetanus serum** (if available) and start
-          a course of **tetanus toxoid**.
-        - **Previously immunized:** give a **booster** if vaccination status is not
-          current.
+        Decide by **wound type × vaccine status** (ACIP):
+        - **Clean, minor wound:** give **tetanus toxoid (Td/DTP-containing)** only
+          if **< 3 prior doses** or the last dose was **> 10 years** ago.
+        - **Dirty / tetanus-prone wound** (contaminated, puncture, crush, burn):
+          give **toxoid** if **< 3 doses** or **> 5 years** since the last, **and**
+          give **tetanus immune globulin (TIG)** — or anti-tetanus serum where TIG
+          is unavailable — if the child has had **< 3 doses or unknown** status.
+        - Give toxoid and TIG at **different sites** with different syringes.
 
     - type: "prose"
       title: "Wound closure"
@@ -74,6 +87,9 @@ topic:
           lightly with damp sterile gauze and change the dressing daily.
         - Antibiotics until surrounding cellulitis resolves (usually 5 days).
         - **Cloxacillin (25–50 mg/kg orally 4× daily)** for most wounds (possible
-          **S. aureus**). If bowel flora suspected: **ampicillin (25–50 mg/kg orally
-          4× daily) + gentamicin (7.5 mg/kg IM/IV once daily) + metronidazole
+          **S. aureus**). Where **community-acquired MRSA** is prevalent, or for a
+          purulent/abscess-forming infection, **cover MRSA** — e.g.
+          **clindamycin** or **trimethoprim–sulfamethoxazole** — after incision and
+          drainage. If bowel flora suspected: **ampicillin (25–50 mg/kg orally 4×
+          daily) + gentamicin (7.5 mg/kg IM/IV once daily) + metronidazole
           (7.5 mg/kg 3× daily)**.

@@ -1,13 +1,21 @@
 # ============================================================
 # WHO IMCI §9.3.2 — Head injuries. Pocket Book 2nd ed (2013),
 # pp.272–273.
+# ⚠️ OpenEvidence-reviewed 2026-07: classify by GCS (mild/moderate/severe);
+# CT (not skull X-ray) + PECARN decision rule for who needs imaging; maintain
+# EUVOLEMIA (not fluid restriction — hypotension worsens outcome); added
+# hypertonic-saline first-line hyperosmolar therapy for raised ICP. Refs:
+# CDC/Lumba-Brown 2018; Kochanek 2019; ACS BIG 2024; Chong JAMA 2025.
+# LMIC lens: CT + hyperosmolar therapy framed "where available"; where CT
+# is absent, serial GCS/neuro obs is the cornerstone and skull X-ray keeps
+# a role for depressed/open fractures.
 # ============================================================
 
 topic:
   id: "who-imci-9-3-2-head-injuries"
   title: "Head Injuries"
-  list_subtitle: "9.3.2 · three Cs · protect airway · avoid 2° injury"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.3.2 · GCS · PECARN/CT · euvolemia · hypertonic saline"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "head injury", "trauma", "skull fracture", "pediatric"]
   aliases:
     - "Head injury"
@@ -23,26 +31,33 @@ topic:
       markdown: |
         Head injuries are a common cause of trauma death in children. The aim is to
         **prevent secondary brain damage** from **hypoxia, hypotension or
-        hypoglycaemia**. There may be a **skull fracture** (closed, open or
-        depressed) or a **brain injury** — the **three Cs**:
-        - **Concussion:** mildest; temporary loss of function.
-        - **Contusion:** the brain is bruised; function affected for hours to
-          weeks.
-        - **Compression:** from swelling or a growing clot (epidural/subdural
-          haematoma) — an urgent operation may be needed.
-
-        Children more often suffer **acute brain swelling** after a severe head
-        injury.
+        hypoglycaemia**. Classify severity by **Glasgow Coma Scale**: **mild
+        13–15, moderate 9–12, severe ≤ 8**. There may be a **skull fracture**
+        (closed, open or depressed) or a **brain injury** — a simplified frame is
+        the **three Cs**: **concussion** (temporary loss of function),
+        **contusion** (bruising, affected for hours–weeks), **compression**
+        (swelling or a growing clot — epidural/subdural haematoma — may need an
+        urgent operation). Children more often suffer **acute brain swelling**
+        after a severe injury.
 
     - type: "prose"
-      title: "Diagnosis"
+      title: "Diagnosis & imaging"
       markdown: |
         - History of head trauma.
         - Look for lacerations, bleeding, bruising; palpate for fractures /
           deformity.
         - **Fractured base of skull:** periorbital bruising, blood behind the
           eardrum, CSF leak or bleeding from nose or ears.
-        - X-ray if available.
+        - **Where CT is available**, it is the imaging of choice; use the
+          **PECARN rule** to decide who needs it — image for **GCS < 15**, altered
+          mental state, palpable/basilar skull fracture, or (age-specific) scalp
+          haematoma, severe mechanism, LOC, vomiting, severe headache. **Very
+          low-risk** children can be safely **observed without CT**.
+        - **Where CT is not available**, the cornerstone is **admission for serial
+          neurological observation** (repeated **GCS**, pupils and vital signs) and
+          **prompt referral** if the child deteriorates. **Skull X-ray** still has
+          a role here — it can show a **depressed or open fracture** — but a normal
+          X-ray does **not** exclude intracranial injury.
 
     - type: "prose"
       title: "Treatment"
@@ -55,7 +70,15 @@ topic:
         protect the airway. In a young child, check for **hypoglycaemia**.
         - **Give nothing orally;** use an **orogastric** (not nasogastric) tube if
           the skull base may be fractured.
-        - **Limit fluids** to two-thirds of maintenance.
+        - **Maintain euvolemia with isotonic fluid — do NOT fluid-restrict.**
+          Hypotension worsens outcome; the old "two-thirds maintenance" advice is
+          harmful. Keep normal blood pressure and normal sodium/glucose.
+        - **Raised ICP / herniation:** the essentials — **airway, oxygenation,
+          euvolemia, head elevation** — matter most and need no special equipment.
+          **Where available**, give hyperosmolar therapy: **hypertonic (3%) saline
+          2–5 ml/kg** (preferred) or **mannitol** (alternative, but risks
+          hypovolaemia). Brief controlled ventilation only for acute herniation;
+          avoid routine prophylactic hyperventilation.
         - **Elevate the head of the bed to 30°** (recovery position if
           consciousness is reduced).
         - Diagnose and treat other injuries.
