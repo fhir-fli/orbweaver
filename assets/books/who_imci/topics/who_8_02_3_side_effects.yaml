@@ -1,0 +1,100 @@
+# ============================================================
+# WHO IMCI §8.2.3 — Side-effects and monitoring (Table 26 + IRIS).
+# Pocket Book 2nd ed (2013), pp.235–238.
+# ============================================================
+
+topic:
+  id: "who-imci-8-2-3-side-effects"
+  title: "Side-effects & Monitoring"
+  list_subtitle: "8.2.3 · Table 26 · IRIS · monitoring schedule"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "ART", "side-effects", "IRIS", "monitoring", "pediatric"]
+  aliases:
+    - "ART side-effects"
+    - "IRIS"
+  category: "medical"
+
+  page_number: 235
+
+  blocks:
+
+    - type: "prose"
+      title: "Monitor response and toxicity"
+      highlight: true
+      markdown: |
+        Monitor the response to and side-effects of ART in **all** children — with
+        regular reassessment of clinical status and stage, laboratory parameters,
+        and symptoms of drug toxicity.
+
+    - type: "table"
+      title: "Table 26 · Common side-effects (NRTIs)"
+      columns: ["Drug", "Side-effects", "Comments"]
+      column_flex: [3, 5, 4]
+      rows:
+        - cells: ["3TC", "Headache, abdominal pain, pancreatitis", "Well tolerated"]
+        - cells: ["d4T", "Headache, abdominal pain, neuropathy", "Suspension capsules can be opened"]
+        - cells: ["ZDV (AZT)", "Headache, anaemia, neutropenia", "Do NOT use with d4T (antagonistic)"]
+        - cells: ["ABC", "Hypersensitivity reaction, fever, mucositis rash — if these occur, STOP the drug", "Tablets can be crushed"]
+        - cells: ["FTC", "Headache, diarrhoea, nausea, rash; may cause hepatotoxicity or lactic acidosis", ""]
+        - cells: ["TDF", "Renal insufficiency; decrease in bone mineral density", ""]
+
+    - type: "table"
+      title: "Table 26 · NNRTIs and PIs"
+      columns: ["Drug", "Side-effects", "Comments"]
+      column_flex: [3, 5, 4]
+      rows:
+        - cells: ["EFV", "Strange dreams, sleepiness, rash", "Take at night; avoid taking with fatty food"]
+        - cells: ["NVP", "Rash, liver toxicity", "With rifampicin, increase NVP by ~30% or avoid; drug interactions"]
+        - cells: ["LPV/RTV", "Diarrhoea, nausea", "Take with food; bitter taste; cold chain for transport"]
+        - cells: ["ATZ", "Jaundice, prolonged PR interval, nephrolithiasis", ""]
+
+    - type: "prose"
+      title: "Long-term effects"
+      markdown: |
+        General long-term side-effects of ART include **lipodystrophy**.
+
+    - type: "prose"
+      title: "Immune reconstitution inflammatory syndrome (IRIS)"
+      callout: true
+      markdown: |
+        **IRIS** is a spectrum of signs and symptoms from immune recovery weeks to
+        months after starting ART — most often in children who start with **very
+        low CD4 (< 15%)**. It reflects **unmasking** of latent/subclinical
+        infection or reactivation of previously treated conditions. Commonest:
+        **TB**, PCP/cryptosporidiosis, **HSV**, and fungal/parasitic infections.
+        Where BCG immunization is routine, **BCG-associated IRIS** is frequent.
+
+        Most paradoxical IRIS resolves spontaneously or with NSAIDs, but some
+        episodes are severe and can be fatal:
+        - **Give specific treatment** for the opportunistic infection.
+        - **Start anti-inflammatory therapy.**
+        - If progressively worse, a short course of **corticosteroids** and,
+          rarely, temporary discontinuation of ART. **Restart the same regimen**
+          once IRIS has improved.
+
+    - type: "prose"
+      title: "Monitoring schedule"
+      markdown: |
+        Assess adherence and the need for additional support at every visit.
+        Minimum follow-up after starting ART:
+        - **infants < 12 months:** weeks 2, 4 and 8, then every 4 weeks for the
+          first year.
+        - **children > 12 months:** weeks 2, 4, 8 and 12, then every 2–3 months
+          once stabilized.
+        - any time there is **caregiver concern** or intercurrent illness.
+
+        **Signs of a good response:** improved growth; improvement in neurological
+        symptoms and development; decreased frequency of infections (bacterial,
+        oral thrush, other opportunistic infections).
+
+    - type: "prose"
+      title: "Long-term follow-up"
+      markdown: |
+        - A **clinician** should see the child at least every **3 months**.
+        - A **non-clinician** (e.g. pharmacist) assesses adherence and provides
+          adherence counselling.
+        - Clinically unstable children should be seen **more frequently**.
+
+        **Monitor at each visit:** weight and height; neurodevelopment; adherence;
+        **CD4 (%) count if available (every 6 months)**; baseline Hb or EVF (on
+        ZDV/AZT) and ALT; symptom-directed labs.

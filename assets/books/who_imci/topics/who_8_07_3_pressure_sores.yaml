@@ -1,0 +1,26 @@
+# ============================================================
+# WHO IMCI §8.7.3 — Prevention and treatment of pressure sores. Pocket
+# Book 2nd ed (2013), p.252.
+# ============================================================
+
+topic:
+  id: "who-imci-8-7-3-pressure-sores"
+  title: "Pressure Sores"
+  list_subtitle: "8.7.3 · turn 2-hourly · keep clean & dry"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "pressure sores", "palliative", "pediatric"]
+  aliases:
+    - "Pressure sores"
+  category: "medical"
+
+  page_number: 252
+
+  blocks:
+
+    - type: "prose"
+      title: "Turn often; keep skin dry"
+      highlight: true
+      markdown: |
+        Teach carers to **turn the child at least once every 2 h**. If pressure
+        sores develop, **keep them clean and dry**. Use local anaesthetics such as
+        **tetracaine, adrenaline and cocaine** to relieve pain.

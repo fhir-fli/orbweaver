@@ -1,0 +1,107 @@
+# ============================================================
+# WHO IMCI §8.1.4 — Clinical staging (Table 23, WHO paediatric clinical
+# staging). Pocket Book 2nd ed (2013), pp.230–232.
+# ============================================================
+
+topic:
+  id: "who-imci-8-1-4-clinical-staging"
+  title: "Clinical Staging"
+  list_subtitle: "8.1.4 · WHO paediatric 4-stage system (Table 23)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "clinical staging", "prognosis", "pediatric"]
+  aliases:
+    - "WHO clinical staging"
+    - "Table 23"
+  category: "medical"
+
+  page_number: 230
+
+  blocks:
+
+    - type: "prose"
+      title: "What staging is for"
+      highlight: true
+      markdown: |
+        The clinical staging system grades the **degree of immune damage** and
+        helps plan treatment and care. Stages run from **least to most severe**;
+        each higher stage means a **poorer prognosis**. Initiating ART with good
+        adherence **dramatically improves** the outlook. Staging events can also
+        identify the **response to ART** where viral load or CD4 count are not
+        readily available.
+
+        **Table 23** applies to children **< 13 years** with confirmed lab
+        evidence of HIV (antibodies for > 18 months; virological for < 18 months).
+
+    - type: "prose"
+      title: "Stage 1 — asymptomatic"
+      markdown: |
+        - Asymptomatic
+        - Persistent generalized lymphadenopathy
+
+    - type: "prose"
+      title: "Stage 2 — mild"
+      markdown: |
+        - Hepatosplenomegaly
+        - Papular pruritic eruptions
+        - Seborrhoeic dermatitis
+        - Fungal nail infections
+        - Angular cheilitis
+        - Linear gingival erythema
+        - Extensive HPV or molluscum infection (> 5% body area)
+        - Recurrent oral ulcerations (≥ 2 episodes in 6 months)
+        - Parotid enlargement
+        - Herpes zoster
+        - Recurrent / chronic upper respiratory tract infection (otitis media,
+          otorrhoea, sinusitis; ≥ 2 episodes in any 6-month period)
+
+    - type: "prose"
+      title: "Stage 3 — advanced"
+      markdown: |
+        - Unexplained moderate malnutrition not responding to standard therapy
+        - Unexplained persistent diarrhoea (> 14 days)
+        - Unexplained persistent fever (intermittent or constant, > 1 month)
+        - Oral candidiasis (outside neonatal period)
+        - Oral hairy leukoplakia
+        - Pulmonary TB **[a]**
+        - Severe recurrent presumed bacterial pneumonia (≥ 2 episodes in 6 months)
+        - Acute necrotizing ulcerative gingivitis / periodontitis
+        - Lymphoid interstitial pneumonia
+        - Unexplained anaemia (< 8 g/dl), neutropenia (< 500/mm³) or
+          thrombocytopenia (< 30 000/mm³) for > 1 month
+        - HIV-related cardiomyopathy
+        - HIV-related nephropathy
+
+    - type: "prose"
+      title: "Stage 4 — severe (AIDS)"
+      markdown: |
+        - Unexplained severe wasting / malnutrition not responding to therapy
+        - PCP
+        - Recurrent severe presumed bacterial infections (≥ 2 within 1 year, e.g.
+          empyema, pyomyositis, bone/joint infection, meningitis — excluding
+          pneumonia)
+        - Chronic orolabial or cutaneous herpes simplex (> 1 month)
+        - Disseminated or extrapulmonary TB
+        - Kaposi sarcoma
+        - Oesophageal candidiasis
+        - Symptomatic HIV seropositive infant < 18 months with ≥ 2 of: oral
+          thrush, severe pneumonia, failure to thrive, severe sepsis **[b]**
+        - CMV retinitis
+        - CNS toxoplasmosis
+        - Any disseminated endemic mycosis (extrapulmonary cryptococcosis incl.
+          meningitis, histoplasmosis, coccidioidomycosis, penicilliosis)
+        - Cryptosporidiosis or isosporiasis (diarrhoea > 1 month)
+        - CMV infection (onset > 1 month, organ other than liver/spleen/nodes)
+        - Disseminated non-TB mycobacterial disease
+        - Candida of trachea, bronchi or lungs
+        - Acquired HIV-related recto-vesical fistula
+        - Cerebral or B-cell non-Hodgkin lymphoma
+        - Progressive multifocal leukoencephalopathy
+        - HIV encephalopathy
+
+    - type: "prose"
+      title: "Footnotes"
+      markdown: |
+        **[a]** TB may occur at any CD4 count; consider the CD4 percentage when
+        available. **[b]** A presumptive Stage 4 diagnosis in a seropositive child
+        < 18 months requires confirmation by virological tests, or an HIV antibody
+        test after 18 months of age.

@@ -1,0 +1,70 @@
+# ============================================================
+# WHO IMCI §8.5.2 — Infant feeding in the context of HIV. Pocket Book
+# 2nd ed (2013), pp.248–249.
+# ============================================================
+
+topic:
+  id: "who-imci-8-5-2-infant-feeding"
+  title: "Infant Feeding & HIV"
+  list_subtitle: "8.5.2 · exclusive BF on ART vs replacement"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "infant feeding", "breastfeeding", "replacement feeding", "pediatric"]
+  aliases:
+    - "Infant feeding and HIV"
+  category: "medical"
+
+  page_number: 248
+
+  blocks:
+
+    - type: "prose"
+      title: "The transmission risk"
+      highlight: true
+      markdown: |
+        Without any intervention, **15–25%** of HIV-positive mothers infect their
+        infants during pregnancy or delivery; if they breastfeed, an **additional
+        5–20%**. Avoiding breastfeeding eliminates breast-milk transmission, **but
+        replacement feeds are associated with increased infant morbidity and
+        mortality**.
+
+    - type: "prose"
+      title: "Exclusive breastfeeding is safest when BF"
+      markdown: |
+        **Exclusive breastfeeding** for the first months carries **less risk of HIV
+        transmission than mixed feeding**, and gives considerable protection
+        against infectious disease. **ART greatly reduces transmission** while
+        improving the mother's health: an HIV-positive mother on ART who gives ART
+        to her infant reduces transmission to **2% (BF 6 months)** or **4% (BF 12
+        months)**.
+
+    - type: "prose"
+      title: "Balance the two risks"
+      callout: true
+      markdown: |
+        - Support mothers to give their child the greatest chance of being
+          **HIV-free and surviving**, while considering their own health.
+        - **Balance** HIV prevention against the nutritional and infection
+          protection needs of infants (non-HIV morbidity/mortality).
+        - HIV-positive mothers should preferably receive **lifelong ART**, and the
+          infant should be on **ART prophylaxis** while breastfeeding.
+
+    - type: "prose"
+      title: "Infant feeding advice"
+      markdown: |
+        Follow **national guidelines**: either breastfeed while receiving ART
+        (mother or infant), **or** avoid breastfeeding.
+        - Where national guidelines recommend breastfeeding + ART: breastfeed
+          **exclusively for the first 6 months**, introduce complementary foods
+          thereafter, and **continue breastfeeding to 12 months**.
+        - If the child is **already infected** and a decision is taken to continue
+          breastfeeding, discuss ART and feeding options for future pregnancies.
+        - If the mother is HIV-positive and the **child's status is unknown**,
+          counsel and test the child. If replacement feeding is
+          **acceptable, feasible, affordable, sustainable and safe**, avoiding
+          further breastfeeding is recommended; otherwise exclusive breastfeeding
+          to 6 months, continued to 12 months.
+
+        Mothers need **continued counselling and support** from trained,
+        experienced counsellors; ensure the advice given is **consistent**. If
+        using breast-milk substitutes, counsel on correct use and safe
+        preparation.

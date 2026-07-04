@@ -245,3 +245,58 @@ book:
           children:
             - topic: "topics/who_7_07_1_mortality_audit.yaml"
             - topic: "topics/who_7_07_2_weight_gain.yaml"
+
+    - title: "8. Children with HIV/AIDS"
+      # WHO Pocket Book color-codes by chapter; Chapter 8 tab = cyan-teal
+      # (sampled 0xFF00AAAF from the p.225 chapter tab via pdftoppm).
+      palette:
+        accent: "0xFF00AAAF"
+      children:
+        - title: "8.1 Suspected or confirmed HIV"
+          topic: "topics/who_8_01_suspected_hiv.yaml"
+          children:
+            - topic: "topics/who_8_01_1_clinical_diagnosis.yaml"
+            - topic: "topics/who_8_01_2_hiv_counselling.yaml"
+            - topic: "topics/who_8_01_3_testing_diagnosis.yaml"
+            - topic: "topics/who_8_01_4_clinical_staging.yaml"
+        - title: "8.2 Antiretroviral therapy"
+          topic: "topics/who_8_02_art.yaml"
+          children:
+            - topic: "topics/who_8_02_1_arv_drugs.yaml"
+            - topic: "topics/who_8_02_2_when_to_start.yaml"
+            - topic: "topics/who_8_02_3_side_effects.yaml"
+            - topic: "topics/who_8_02_4_when_to_change.yaml"
+        - title: "8.3 Supportive care"
+          topic: "topics/who_8_03_supportive_care.yaml"
+          children:
+            - topic: "topics/who_8_03_1_vaccination.yaml"
+            - topic: "topics/who_8_03_2_cotrimoxazole.yaml"
+            - topic: "topics/who_8_03_3_nutrition.yaml"
+        - title: "8.4 HIV-related conditions"
+          topic: "topics/who_8_04_related_conditions.yaml"
+          children:
+            - topic: "topics/who_8_04_1_tuberculosis.yaml"
+            - topic: "topics/who_8_04_2_pcp.yaml"
+            - topic: "topics/who_8_04_3_lip.yaml"
+            - topic: "topics/who_8_04_4_fungal.yaml"
+            - topic: "topics/who_8_04_5_kaposi.yaml"
+        - title: "8.5 PMTCT & infant feeding"
+          topic: "topics/who_8_05_pmtct.yaml"
+          children:
+            - topic: "topics/who_8_05_1_prevention_mtct.yaml"
+            - topic: "topics/who_8_05_2_infant_feeding.yaml"
+        - title: "8.6 Follow-up"
+          topic: "topics/who_8_06_followup.yaml"
+          children:
+            - topic: "topics/who_8_06_1_discharge.yaml"
+            - topic: "topics/who_8_06_2_referral.yaml"
+            - topic: "topics/who_8_06_3_clinical_followup.yaml"
+        - title: "8.7 Palliative & end-of-life care"
+          topic: "topics/who_8_07_palliative.yaml"
+          children:
+            - topic: "topics/who_8_07_1_pain_control.yaml"
+            - topic: "topics/who_8_07_2_anorexia_nausea.yaml"
+            - topic: "topics/who_8_07_3_pressure_sores.yaml"
+            - topic: "topics/who_8_07_4_mouth_care.yaml"
+            - topic: "topics/who_8_07_5_airway.yaml"
+            - topic: "topics/who_8_07_6_psychosocial.yaml"

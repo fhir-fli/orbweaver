@@ -1,0 +1,54 @@
+# ============================================================
+# WHO IMCI §8.2.2 — When to start ART. Pocket Book 2nd ed (2013),
+# p.235.
+# ============================================================
+
+topic:
+  id: "who-imci-8-2-2-when-to-start"
+  title: "When to Start ART"
+  list_subtitle: "8.2.2 · all < 60 mo · CD4 thresholds · with TB"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "ART", "CD4", "TB", "pediatric"]
+  aliases:
+    - "When to start antiretroviral therapy"
+  category: "medical"
+
+  page_number: 235
+
+  blocks:
+
+    - type: "prose"
+      title: "Under 60 months — start everyone"
+      highlight: true
+      markdown: |
+        All HIV-infected infants and children **< 60 months** should begin ART,
+        **irrespective of clinical or immunological stage**.
+        - All children < 60 months with confirmed HIV → **start ART**.
+        - Where viral testing is unavailable, infants **< 18 months** with
+          clinically diagnosed **presumptive severe HIV** → start ART, and confirm
+          infection as soon as possible.
+
+    - type: "prose"
+      title: "60 months and over — by CD4"
+      markdown: |
+        For children **≥ 60 months**, initiate ART for all with:
+        - **CD4 < 500 cells/mm³**, irrespective of WHO clinical stage.
+        - **CD4 ≤ 350 cells/mm³** → treat as a **priority**, as in adults.
+
+        The decision should also take account of the child's **social
+        environment** — identify a clearly defined caregiver who understands the
+        prognosis and the requirements of ART. Occasionally immediate ART may be
+        deferred while the child is stabilized during treatment of acute
+        infections.
+
+    - type: "prose"
+      title: "Starting ART with active TB"
+      callout: true
+      markdown: |
+        With confirmed or presumptive **TB**, **TB treatment is the priority**.
+        Start TB treatment immediately, then start ART **as soon as tolerated,
+        within the first 8 weeks** of TB therapy. On TB treatment:
+        - **> 3 years and ≥ 10 kg:** a regimen containing **EFV** is preferred.
+        - **< 3 years:** if on a **LPV/r-containing** regimen, consider adding
+          **RTV in a 1:1 ratio** of LPV:RTV for a full therapeutic dose of LPV.
+        - A **triple NNRTI-containing** regimen is an alternative.

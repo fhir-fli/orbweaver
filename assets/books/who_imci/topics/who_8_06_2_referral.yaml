@@ -1,0 +1,38 @@
+# ============================================================
+# WHO IMCI §8.6.2 — Referral. Pocket Book 2nd ed (2013), p.249.
+# ============================================================
+
+topic:
+  id: "who-imci-8-6-2-referral"
+  title: "Referral"
+  list_subtitle: "8.6.2 · testing · second-line · community support"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "referral", "counselling", "community", "pediatric"]
+  aliases:
+    - "HIV referral"
+  category: "medical"
+
+  page_number: 249
+
+  blocks:
+
+    - type: "prose"
+      title: "When facilities aren't available, refer"
+      highlight: true
+      markdown: |
+        If the necessary facilities are not available, consider referring a child
+        with suspected HIV:
+        - for **HIV testing** with pre- and post-test counselling.
+        - to another centre/hospital for **further investigation or second-line
+          treatment** if there has been little or no response.
+        - to a **trained counsellor** for HIV and infant feeding, where the local
+          health worker cannot do this.
+        - to a **community or home-based care programme**, a voluntary counselling
+          and testing centre, or a community social support programme for
+          continuing psychosocial support.
+
+    - type: "prose"
+      title: "Orphans"
+      markdown: |
+        Orphans must be referred to essential services, including **health care
+        education and birth registration**.

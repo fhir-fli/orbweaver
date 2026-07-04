@@ -1,0 +1,77 @@
+# ============================================================
+# WHO IMCI §8.3.2 — Co-trimoxazole prophylaxis. Pocket Book 2nd ed
+# (2013), pp.241–242.
+# ============================================================
+
+topic:
+  id: "who-imci-8-3-2-cotrimoxazole"
+  title: "Co-trimoxazole Prophylaxis"
+  list_subtitle: "8.3.2 · who · how long · doses · discontinuation"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "co-trimoxazole", "prophylaxis", "PCP", "pediatric"]
+  aliases:
+    - "Cotrimoxazole prophylaxis"
+    - "CTX prophylaxis"
+  category: "medical"
+
+  page_number: 241
+
+  blocks:
+
+    - type: "prose"
+      title: "What it prevents"
+      highlight: true
+      markdown: |
+        Co-trimoxazole prevents **PCP** and reduces morbidity and mortality in
+        HIV-infected and exposed children. It also protects against **common
+        bacterial infections, toxoplasmosis and malaria**.
+
+    - type: "prose"
+      title: "Who should receive it"
+      markdown: |
+        - **All infants born to HIV-positive mothers** — start **4–6 weeks after
+          birth** (or first encounter), and continue until HIV is definitively
+          excluded **and** the mother is no longer breastfeeding (no longer at
+          risk from breast milk).
+        - **All HIV-infected children** — continue even when on ART.
+
+    - type: "prose"
+      title: "How long to give"
+      markdown: |
+        - **HIV-exposed children:** for the first year, or until HIV is
+          definitively ruled out and the mother is no longer breastfeeding.
+        - **On ART:** may stop once clinical/immunological indicators confirm
+          immune restoration for **≥ 6 months** (it is not known whether it keeps
+          protecting after immune restoration).
+        - **History of PCP:** continue **indefinitely**.
+
+    - type: "prose"
+      title: "When to discontinue"
+      markdown: |
+        - Severe cutaneous reactions (**Stevens-Johnson**), renal/hepatic
+          insufficiency, or severe haematological toxicity.
+        - After HIV is confidently **excluded** in an exposed child:
+          non-breastfed with a negative virological test; breastfed < 18 months
+          with negative virological test 6 weeks after cessation; breastfed
+          > 18 months with negative serological test 6 weeks after cessation.
+        - **HIV-infected children:** continue until **5 years and on ART with a
+          sustained CD4 > 25%**.
+        - **Do NOT discontinue** if the child is **not on ART**.
+
+    - type: "table"
+      title: "Doses — trimethoprim 6–8 mg/kg once daily"
+      columns: ["Age", "Dose"]
+      column_flex: [3, 5]
+      rows:
+        - cells: ["< 6 months", "One paediatric tablet (or ¼ adult tablet) — 20 mg TMP / 100 mg SMX"]
+        - cells: ["6 months – 5 years", "Two paediatric tablets (or ½ adult tablet) — 40 mg TMP / 200 mg SMX"]
+        - cells: ["> 5 years", "One adult tablet"]
+
+    - type: "prose"
+      title: "Allergy and follow-up"
+      markdown: |
+        If **allergic** to co-trimoxazole, **dapsone** is the best alternative —
+        can be given from 4 weeks of age at **2 mg/kg orally once daily**.
+
+        Assess tolerance and adherence at **every** clinic/follow-up visit —
+        initially monthly, then every 3 months if well tolerated.

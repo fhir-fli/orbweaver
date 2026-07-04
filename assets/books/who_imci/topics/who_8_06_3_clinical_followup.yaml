@@ -1,0 +1,32 @@
+# ============================================================
+# WHO IMCI §8.6.3 — Clinical follow-up. Pocket Book 2nd ed (2013),
+# p.250.
+# ============================================================
+
+topic:
+  id: "who-imci-8-6-3-clinical-followup"
+  title: "Clinical Follow-up"
+  list_subtitle: "8.6.3 · well-child visits · monitor growth"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "clinical follow-up", "growth", "monitoring", "pediatric"]
+  aliases:
+    - "HIV clinical follow-up"
+  category: "medical"
+
+  page_number: 250
+
+  blocks:
+
+    - type: "prose"
+      title: "Well-child care plus HIV monitoring"
+      highlight: true
+      markdown: |
+        HIV-infected children should, when not ill, attend **well-infant clinics**
+        like other children. In addition, they need regular clinical follow-up at
+        **first-level facilities** to monitor:
+        - **clinical condition**
+        - **growth**
+        - **nutritional intake**
+        - **vaccination status**.
+
+        Give **psychosocial support** where possible, through community programmes.

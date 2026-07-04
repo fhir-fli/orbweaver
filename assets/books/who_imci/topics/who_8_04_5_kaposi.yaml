@@ -1,0 +1,31 @@
+# ============================================================
+# WHO IMCI §8.4.5 — Kaposi sarcoma. Pocket Book 2nd ed (2013),
+# pp.246–247.
+# ============================================================
+
+topic:
+  id: "who-imci-8-4-5-kaposi"
+  title: "Kaposi Sarcoma"
+  list_subtitle: "8.4.5 · nodular lesions · palatal · biopsy"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "Kaposi sarcoma", "skin lesions", "pediatric"]
+  aliases:
+    - "Kaposi sarcoma"
+  category: "medical"
+
+  page_number: 246
+
+  blocks:
+
+    - type: "prose"
+      title: "When to consider it"
+      highlight: true
+      markdown: |
+        Consider Kaposi sarcoma in children with **nodular skin lesions**, diffuse
+        lymphadenopathy, and lesions on the **palate and conjunctiva** with
+        periorbital bruising. Diagnosis is usually clinical, but can be confirmed
+        by **needle biopsy** of skin lesions or lymph node.
+
+        Also suspect Kaposi in children with **persistent diarrhoea, weight loss,
+        intestinal obstruction, abdominal pain, or large pleural effusion**.
+        Consider referral to a larger hospital for management.

@@ -1,0 +1,36 @@
+# ============================================================
+# WHO IMCI §8.7.6 — Psychosocial support. Pocket Book 2nd ed (2013),
+# p.253.
+# ============================================================
+
+topic:
+  id: "who-imci-8-7-6-psychosocial"
+  title: "Psychosocial Support"
+  list_subtitle: "8.7.6 · support family · community links"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "psychosocial", "family support", "palliative", "pediatric"]
+  aliases:
+    - "Psychosocial support"
+  category: "medical"
+
+  page_number: 253
+
+  blocks:
+
+    - type: "prose"
+      title: "Support the whole family"
+      highlight: true
+      markdown: |
+        Helping parents and siblings through their emotional reaction to the dying
+        child is one of the **most important** aspects of terminal-stage care. How
+        this is done depends on whether care is given **at home, in hospital or in
+        a hospice**. At home, much support is given by close family members,
+        relatives and friends.
+
+    - type: "prose"
+      title: "Link the family to community support"
+      markdown: |
+        Keep up to date on **local community home-care programmes and HIV/AIDS
+        counselling groups**. Find out whether the carers are receiving support
+        from these groups; if not, discuss the family's attitude toward them and
+        the possibility of **linking the family** with them.

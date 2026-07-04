@@ -1,0 +1,61 @@
+# ============================================================
+# WHO IMCI §8.4.1 — Tuberculosis (incl. isoniazid preventive therapy).
+# Pocket Book 2nd ed (2013), pp.243–244.
+# ============================================================
+
+topic:
+  id: "who-imci-8-4-1-tuberculosis"
+  title: "Tuberculosis"
+  list_subtitle: "8.4.1 · same regimen · start with ART · IPT"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "TB", "tuberculosis", "isoniazid", "IPT", "pediatric"]
+  aliases:
+    - "HIV and TB"
+    - "Isoniazid preventive therapy"
+  category: "medical"
+
+  page_number: 243
+
+  blocks:
+
+    - type: "prose"
+      title: "Hard to confirm — always consider it"
+      highlight: true
+      markdown: |
+        In a child with suspected or proven HIV, always **consider TB** — it is
+        often difficult to confirm. Early on, signs resemble those in HIV-negative
+        children; **pulmonary TB** is still the commonest form. As immunity
+        declines, **disseminated TB, miliary TB and tuberculous
+        lymphadenopathy** become more common.
+
+    - type: "prose"
+      title: "Treat TB, then start ART early"
+      callout: true
+      markdown: |
+        HIV-infected children with **active TB** should **begin TB treatment
+        immediately**. If not yet on ART, start it **as soon as tolerated, within
+        the first 8 weeks** of TB therapy — **irrespective** of CD4 count and
+        clinical stage.
+
+        Treat TB with the **same anti-TB drug regimen** as for uninfected children
+        (national TB guidelines, or [§4.7.2](topic:who-imci-4-7-2-tuberculosis)).
+
+    - type: "prose"
+      title: "Isoniazid preventive therapy (IPT)"
+      markdown: |
+        Screen **all** HIV-infected children for TB (cough, fever, weight loss,
+        contact). If **no active TB**, give **isoniazid preventive therapy** daily
+        for **6 months** to:
+        - infants/children **exposed to TB** from a household contact, with no
+          evidence of active disease, who are well and thriving.
+        - children **> 12 months** living with HIV (including those previously
+          treated for TB), unlikely to have active TB and not known to be exposed.
+
+        **Dose: isoniazid 10 mg/kg daily for ≥ 6 months.** See the child monthly
+        and give a 1-month supply at each visit.
+
+    - type: "prose"
+      title: "Note"
+      markdown: |
+        Infants living with HIV who are **unlikely to have TB** and **not known to
+        have been exposed** should **not** receive IPT as part of HIV care.

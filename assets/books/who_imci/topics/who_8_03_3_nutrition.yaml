@@ -1,0 +1,41 @@
+# ============================================================
+# WHO IMCI §8.3.3 — Nutrition. Pocket Book 2nd ed (2013), p.243.
+# ============================================================
+
+topic:
+  id: "who-imci-8-3-3-nutrition"
+  title: "Nutrition"
+  list_subtitle: "8.3.3 · breastfeeding · energy-rich food · SAM"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "nutrition", "breastfeeding", "malnutrition", "pediatric"]
+  aliases:
+    - "HIV nutrition"
+  category: "medical"
+
+  page_number: 243
+
+  blocks:
+
+    - type: "prose"
+      title: "Feed well from the start"
+      highlight: true
+      markdown: |
+        Mothers of infants known to be HIV-infected are **strongly encouraged to
+        breastfeed exclusively for 6 months** and to continue breastfeeding up to
+        **1 year**. Older children should eat a **varied, energy-rich diet** to
+        increase energy intake and ensure adequate micronutrient intake.
+
+    - type: "prose"
+      title: "Assess nutrition routinely"
+      markdown: |
+        Assess nutritional status (weight and height) at every scheduled visit.
+        Energy intake may need to be increased by **25–30%** if the child loses
+        weight or grows poorly.
+
+    - type: "prose"
+      title: "HIV with severe acute malnutrition"
+      markdown: |
+        Manage HIV-infected children with **severe acute malnutrition** according
+        to the guidelines for uninfected children
+        ([Chapter 7](topic:who-imci-7-1-sam)), and give **50–100% additional
+        energy-rich foods**.

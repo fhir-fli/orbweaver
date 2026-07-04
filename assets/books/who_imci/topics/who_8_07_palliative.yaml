@@ -1,0 +1,52 @@
+# ============================================================
+# WHO IMCI §8.7 — Palliative and end-of-life care (overview of the
+# nested group). Pocket Book 2nd ed (2013), p.250.
+# ============================================================
+
+topic:
+  id: "who-imci-8-7-palliative"
+  title: "Palliative & End-of-life Care"
+  list_subtitle: "8.7 · pain · symptoms · mouth · psychosocial"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "palliative care", "end-of-life", "pain", "pediatric"]
+  aliases:
+    - "HIV palliative care"
+    - "End-of-life care"
+  category: "medical"
+
+  page_number: 250
+
+  blocks:
+
+    - type: "prose"
+      title: "Comfort matters"
+      highlight: true
+      markdown: |
+        An immunologically compromised child often has **considerable
+        discomfort** — good palliative care is essential. Take all decisions
+        **with the parents/caretaker**, and communicate them clearly to all staff
+        (including night staff). Consider palliative care **at home** as an
+        alternative to hospital. Treating distressing conditions (oesophageal
+        candidiasis, convulsions) can significantly improve remaining quality of
+        life.
+
+    - type: "prose"
+      title: "When to give terminal care"
+      markdown: |
+        Give end-of-life (terminal) care if:
+        - the child has **progressively worsening illness**, and
+        - **everything possible** has been done to treat the presenting illness.
+
+        Support the family to cope with the impending death, and support parents in
+        giving palliative care **at home** so the child is not kept in hospital
+        unnecessarily.
+
+    - type: "prose"
+      title: "This section covers"
+      markdown: |
+        - [Pain control](topic:who-imci-8-7-1-pain-control) — the two-step ladder.
+        - [Anorexia, nausea, vomiting](topic:who-imci-8-7-2-anorexia-nausea)
+        - [Pressure sores](topic:who-imci-8-7-3-pressure-sores)
+        - [Care of the mouth](topic:who-imci-8-7-4-mouth-care)
+        - [Airway management](topic:who-imci-8-7-5-airway)
+        - [Psychosocial support](topic:who-imci-8-7-6-psychosocial)

@@ -1,0 +1,53 @@
+# ============================================================
+# WHO IMCI §8.4.4 — Fungal infections (candidiasis, cryptococcal
+# meningitis). Pocket Book 2nd ed (2013), p.246.
+# ============================================================
+
+topic:
+  id: "who-imci-8-4-4-fungal"
+  title: "Fungal Infections"
+  list_subtitle: "8.4.4 · candidiasis · cryptococcal meningitis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "candidiasis", "thrush", "cryptococcal meningitis", "pediatric"]
+  aliases:
+    - "Oesophageal candidiasis"
+    - "Cryptococcal meningitis"
+  category: "medical"
+
+  page_number: 246
+
+  blocks:
+
+    - type: "prose"
+      title: "Oral and oesophageal candidiasis"
+      highlight: true
+      markdown: |
+        **Oral thrush:** nystatin (100 000 U/ml) suspension **1–2 ml into the
+        mouth 4× daily for 7 days**. If unavailable, apply **1% gentian violet**.
+        If ineffective, **2% miconazole gel 5 ml twice daily** if available.
+
+        Suspect **oesophageal candidiasis** with difficulty/pain on swallowing,
+        reluctance to eat, excessive salivation, or crying during feeds — ± visible
+        oral thrush. If no oral thrush, give a trial of **fluconazole**, and
+        exclude other causes (CMV, herpes simplex, lymphoma, rarely Kaposi).
+
+    - type: "prose"
+      title: "Candidiasis — antifungal doses"
+      markdown: |
+        - **Fluconazole 3–6 mg/kg once daily orally for 7 days** (except if active
+          liver disease).
+        - **Amphotericin B 0.5 mg/kg once daily IV for 10–14 days** in children who
+          don't respond to oral therapy, can't tolerate oral meds, or are at risk
+          of disseminated candidiasis (e.g. leukopenia).
+
+    - type: "prose"
+      title: "Cryptococcal meningitis"
+      callout: true
+      markdown: |
+        Suspect cryptococcus in any HIV-infected child with signs of meningitis —
+        often **subacute**, with chronic headache or only mental status changes.
+        An **India ink stain** of CSF confirms the diagnosis.
+        - **Amphotericin B 0.5–1.5 mg/kg/day for 14 days**, then
+        - **Fluconazole 6–12 mg/kg (max 800 mg) for 8 weeks**.
+        - Then **fluconazole 6 mg/kg daily (max 200 mg) prophylaxis** after
+          treatment.

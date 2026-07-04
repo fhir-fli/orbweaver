@@ -1,0 +1,45 @@
+# ============================================================
+# WHO IMCI §8.7.4 — Care of the mouth. Pocket Book 2nd ed (2013),
+# p.252.
+# ============================================================
+
+topic:
+  id: "who-imci-8-7-4-mouth-care"
+  title: "Care of the Mouth"
+  list_subtitle: "8.7.4 · clean 4× daily · thrush · pus"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "mouth care", "oral thrush", "palliative", "pediatric"]
+  aliases:
+    - "Mouth care"
+  category: "medical"
+
+  page_number: 252
+
+  blocks:
+
+    - type: "prose"
+      title: "Clean the mouth after every meal"
+      highlight: true
+      markdown: |
+        Teach carers to wash out the mouth after every meal. For mouth ulcers,
+        clean **at least 4× daily** with clean water or salt solution and a clean
+        cloth on a wick. Apply **0.25% or 0.5% gentian violet** to sores. For high
+        fever, irritability or pain, give **paracetamol**. Crushed ice wrapped in
+        gauze and given to suck may give relief. If **bottle-fed**, advise cleaning
+        the teat with water before each feed.
+
+    - type: "prose"
+      title: "Oral thrush"
+      markdown: |
+        Apply **miconazole gel** to affected areas at least **3× daily for 5
+        days**, or give **nystatin suspension 1 ml 4× daily for 7 days**, pouring
+        slowly into the corner of the mouth to reach affected parts.
+
+    - type: "prose"
+      title: "Secondary bacterial infection"
+      callout: true
+      markdown: |
+        If there is **pus** from a secondary bacterial infection, apply
+        **tetracycline or chloramphenicol ointment**. If there is a **foul smell**,
+        give **IM benzylpenicillin (50 000 U/kg every 6 h)** plus **oral
+        metronidazole (7.5 mg/kg every 8 h) for 7 days**.

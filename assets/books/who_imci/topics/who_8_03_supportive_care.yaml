@@ -1,0 +1,31 @@
+# ============================================================
+# WHO IMCI §8.3 — Supportive care for HIV-positive children (overview of
+# the nested group). Pocket Book 2nd ed (2013), pp.240–243.
+# ============================================================
+
+topic:
+  id: "who-imci-8-3-supportive-care"
+  title: "Supportive Care"
+  list_subtitle: "8.3 · vaccination · co-trimoxazole · nutrition"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "supportive care", "vaccination", "prophylaxis", "pediatric"]
+  aliases:
+    - "HIV supportive care"
+  category: "medical"
+
+  page_number: 240
+
+  blocks:
+
+    - type: "prose"
+      title: "Three pillars alongside ART"
+      highlight: true
+      markdown: |
+        Beyond ART, three interventions save HIV-positive children's lives:
+        - [Vaccination](topic:who-imci-8-3-1-vaccination) — give the full EPI
+          schedule, with modifications for BCG and yellow fever.
+        - [Co-trimoxazole prophylaxis](topic:who-imci-8-3-2-cotrimoxazole) —
+          prevents PCP, and protects against common bacterial infections,
+          toxoplasmosis and malaria.
+        - [Nutrition](topic:who-imci-8-3-3-nutrition) — breastfeeding, energy-rich
+          food, routine nutritional assessment.

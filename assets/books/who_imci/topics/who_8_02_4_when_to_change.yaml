@@ -1,0 +1,90 @@
+# ============================================================
+# WHO IMCI §8.2.4 — When to change treatment (substitution, switching,
+# treatment failure, Table 27). Pocket Book 2nd ed (2013), pp.238–240.
+# ============================================================
+
+topic:
+  id: "who-imci-8-2-4-when-to-change"
+  title: "When to Change Treatment"
+  list_subtitle: "8.2.4 · substitute vs switch · failure · second-line"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "ART", "treatment failure", "second-line", "pediatric"]
+  aliases:
+    - "ART treatment failure"
+    - "Second-line ART"
+  category: "medical"
+
+  page_number: 238
+
+  blocks:
+
+    - type: "prose"
+      title: "Substitute vs switch — two different things"
+      highlight: true
+      markdown: |
+        - **Substitute** = replace a **toxic drug** with another in the **same
+          class** (regimen still working).
+        - **Switch** = change the **whole regimen** to second-line because of
+          **treatment failure**.
+
+    - type: "prose"
+      title: "When to substitute (for toxicity)"
+      markdown: |
+        Substitute when a toxic effect can be tied to an identifiable drug — limit
+        substitutions to:
+        - **severe or life-threatening toxicity** — Stevens-Johnson syndrome,
+          severe liver toxicity, severe haematological effects.
+        - **drug interaction** (e.g. TB rifampicin interfering with NVP or a PI).
+        - **potential non-adherence** if the child cannot tolerate the regimen.
+
+    - type: "prose"
+      title: "When to switch (treatment failure)"
+      markdown: |
+        ART failure may be due to **poor adherence**, **inadequate drug level**,
+        **pre-existing/acquired resistance**, or **inadequate potency**. Before
+        deciding a regimen is failing on clinical criteria alone, ensure:
+        - the child has received the regimen for **≥ 24 weeks**
+        - adherence is **optimal**
+        - any opportunistic infections are treated and resolved
+        - **IRIS has been excluded**
+        - the child is **adequately nourished**.
+
+    - type: "prose"
+      title: "Defining treatment failure"
+      callout: true
+      markdown: |
+        - **Clinical failure:** new or recurrent **WHO Stage 4** event after ≥ 24
+          weeks on ART, with adherence.
+        - **Immunological failure:** CD4 **< 200 cells/mm³** or CD4 **< 10%** in a
+          child < 5 years; or persistent CD4 **< 100/mm³** in a child > 5 years.
+        - **Virological failure:** persistent **viral load > 1000 RNA copies/ml**
+          after ≥ 24 weeks, on two consecutive measurements within 3 months, with
+          adherence.
+
+        When failure is confirmed, switch to a **second-line regimen**.
+
+    - type: "prose"
+      title: "Second-line regimens"
+      markdown: |
+        Change the **entire** regimen — at least **three new drugs**, one or more
+        from a **new class**. After failure of a first-line **NNRTI-based**
+        regimen, a **boosted PI + two NRTIs** is recommended; **LPV/RTV** is the
+        preferred boosted PI.
+
+    - type: "table"
+      title: "Table 27 · Second-line regimens"
+      columns: ["First-line", "2nd-line < 3y", "2nd-line ≥ 3y–12y"]
+      column_flex: [4, 3, 4]
+      rows:
+        - cells: ["ABC + 3TC + LPV/r", "No change [a]", "ZDV + 3TC + EFV"]
+        - cells: ["ZDV + 3TC + LPV/r", "No change [a]", "ABC or TDF + 3TC + EFV"]
+        - cells: ["ABC + 3TC + EFV (or NVP)", "ZDV + 3TC + LPV/r", "ZDV + 3TC + LPV/r"]
+        - cells: ["TDF + XTC [b] + EFV (or NVP)", "—", "ZDV + 3TC + LPV/r"]
+        - cells: ["ZDV + 3TC + EFV (or NVP)", "ABC + 3TC + LPV/r", "ABC or TDF + 3TC + LPV/r"]
+
+    - type: "prose"
+      title: "Table 27 notes"
+      markdown: |
+        **[a]** Could switch to a NVP-based regimen if the reason for failure is
+        poor palatability of LPV/r. **[b]** XTC = lamivudine (3TC) or emtricitabine
+        (FTC).

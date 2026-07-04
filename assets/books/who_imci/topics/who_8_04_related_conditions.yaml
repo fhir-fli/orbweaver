@@ -1,0 +1,41 @@
+# ============================================================
+# WHO IMCI §8.4 — Management of HIV-related conditions (overview of the
+# nested group). Pocket Book 2nd ed (2013), pp.243–247.
+# ============================================================
+
+topic:
+  id: "who-imci-8-4-related-conditions"
+  title: "HIV-related Conditions"
+  list_subtitle: "8.4 · TB · PCP · LIP · fungal · Kaposi"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "opportunistic infections", "TB", "PCP", "pediatric"]
+  aliases:
+    - "HIV opportunistic infections"
+  category: "medical"
+
+  page_number: 243
+
+  blocks:
+
+    - type: "prose"
+      title: "Most infections — treat as usual"
+      highlight: true
+      markdown: |
+        The treatment of most infections (pneumonia, diarrhoea, meningitis) in
+        HIV-infected children is the **same as in other children**. In treatment
+        failure, consider a **second-line antibiotic**. Treatment of **recurrent**
+        infections is the same, regardless of the number of recurrences.
+
+    - type: "prose"
+      title: "Conditions needing specific management"
+      markdown: |
+        - [Tuberculosis](topic:who-imci-8-4-1-tuberculosis) — same regimen as
+          uninfected children; IPT for those without active TB.
+        - [Pneumocystis pneumonia (PCP)](topic:who-imci-8-4-2-pcp) — high-dose
+          co-trimoxazole; suspect early.
+        - [Lymphoid interstitial pneumonitis](topic:who-imci-8-4-3-lip) —
+          steroids only if hypoxia/distress.
+        - [Fungal infections](topic:who-imci-8-4-4-fungal) — candidiasis,
+          cryptococcal meningitis.
+        - [Kaposi sarcoma](topic:who-imci-8-4-5-kaposi) — nodular skin lesions,
+          palatal/conjunctival involvement.

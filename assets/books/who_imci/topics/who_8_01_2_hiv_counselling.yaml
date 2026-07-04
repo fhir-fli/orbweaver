@@ -1,0 +1,59 @@
+# ============================================================
+# WHO IMCI §8.1.2 — HIV counselling. Pocket Book 2nd ed (2013),
+# pp.228–229.
+# ============================================================
+
+topic:
+  id: "who-imci-8-1-2-hiv-counselling"
+  title: "HIV Counselling"
+  list_subtitle: "8.1.2 · provider-initiated · informed consent"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "counselling", "consent", "testing", "pediatric"]
+  aliases:
+    - "HIV counselling and testing"
+  category: "medical"
+
+  page_number: 228
+
+  blocks:
+
+    - type: "prose"
+      title: "Offer provider-initiated testing"
+      highlight: true
+      markdown: |
+        **HIV provider-initiated testing and counselling** should be offered to
+        **all children** attending clinical services in **generalized HIV
+        epidemics** (prevalence > 1% in pregnant women). If a child's HIV status
+        is not known, counsel the family and offer diagnostic testing.
+
+    - type: "prose"
+      title: "Treat the child as part of the family"
+      markdown: |
+        Most children are infected by **vertical transmission** from the mother,
+        who often (and the father) may not know their own status. HIV remains
+        **highly stigmatizing**, and parents may be reluctant to undergo testing.
+
+        In counselling, treat the child as **part of the family**, considering the
+        psychological implications for child, mother, father and other members.
+        Stress that although there is **no cure**, early ART and supportive care
+        can greatly improve quality of life and survival.
+
+    - type: "prose"
+      title: "Consent and confidentiality"
+      callout: true
+      markdown: |
+        Counselling takes time and must be done by **trained staff** — if none are
+        available, seek help from local AIDS support organizations. HIV testing
+        must be **voluntary, with no coercion**, and **informed consent** must be
+        obtained before testing.
+
+    - type: "prose"
+      title: "When to offer counselling and testing"
+      markdown: |
+        Offer counselling and testing to:
+        - **all infants and children** in generalized epidemic settings
+          (prevalence > 1% in pregnant women).
+        - **all HIV-exposed infants** at birth or the earliest opportunity.
+        - **any infant or child** with signs, symptoms or conditions that could
+          indicate HIV.
+        - **all pregnant women and their partners** in generalized epidemics.

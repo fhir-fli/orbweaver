@@ -1,0 +1,48 @@
+# ============================================================
+# WHO IMCI §8.5.1 — Prevention of mother-to-child HIV transmission.
+# Pocket Book 2nd ed (2013), pp.247–248.
+# ============================================================
+
+topic:
+  id: "who-imci-8-5-1-prevention-mtct"
+  title: "Prevention of MTCT"
+  list_subtitle: "8.5.1 · lifelong ART · Option B+"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "PMTCT", "ART", "Option B+", "pregnancy", "pediatric"]
+  aliases:
+    - "Prevention of mother-to-child transmission"
+  category: "medical"
+
+  page_number: 247
+
+  blocks:
+
+    - type: "prose"
+      title: "Best prevention = prevent maternal HIV"
+      highlight: true
+      markdown: |
+        The best way to prevent MTCT is to **prevent HIV** in general (especially
+        in pregnant women) and to **prevent unintended pregnancies** in HIV-positive
+        women. An HIV-infected pregnant woman should get **ART, safe obstetric
+        care, and counselling/support** for infant feeding.
+
+    - type: "prose"
+      title: "Start lifelong ART for all pregnant women"
+      callout: true
+      markdown: |
+        **Start lifelong ART for all pregnant women with HIV, regardless of
+        symptoms** — both for their own health and to prevent transmission during
+        pregnancy and breastfeeding. Start early in pregnancy, at **14 weeks** or
+        as soon as possible thereafter.
+
+    - type: "prose"
+      title: "The two options"
+      markdown: |
+        - **Option B:** a **three-drug prophylactic** regimen for the mother during
+          pregnancy and throughout breastfeeding, plus infant prophylaxis for
+          **6 weeks** after birth (whether or not breastfeeding).
+        - **Option B+:** a **triple ARV treatment** regimen for the mother
+          **beginning in pregnancy and continued for life**, plus infant
+          prophylaxis for 6 weeks.
+
+        **Option B+ is now preferred.**

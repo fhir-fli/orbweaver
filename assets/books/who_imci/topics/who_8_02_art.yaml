@@ -1,0 +1,56 @@
+# ============================================================
+# WHO IMCI §8.2 — Antiretroviral therapy (overview of the nested group).
+# Pocket Book 2nd ed (2013), pp.232–239.
+# ============================================================
+
+topic:
+  id: "who-imci-8-2-art"
+  title: "Antiretroviral Therapy"
+  list_subtitle: "8.2 · drugs · when to start · side-effects · changing"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "ART", "antiretroviral", "pediatric"]
+  aliases:
+    - "ART"
+    - "Antiretroviral treatment"
+  category: "medical"
+
+  page_number: 232
+
+  blocks:
+
+    - type: "prose"
+      title: "Treat every young child at diagnosis"
+      highlight: true
+      markdown: |
+        All HIV-infected infants and children **< 60 months** should begin ART
+        **immediately** once diagnosed, **regardless** of clinical or
+        immunological status. Antiretrovirals cannot cure HIV, but they
+        **dramatically reduce mortality and morbidity** and improve quality of
+        life.
+
+    - type: "prose"
+      title: "Triple drug therapy"
+      markdown: |
+        The standard first-line treatment is **three antiretroviral drugs**
+        (**triple therapy**) to suppress viral replication as much as possible and
+        arrest disease progression. **Fixed-dose combinations** are now available
+        and are preferable to syrups or single drugs — they encourage adherence,
+        reduce treatment burden, and cut cost.
+
+        Follow national paediatric HIV treatment guidelines; principles and
+        first-line choices are largely the same as for adults. Consider: a
+        **suitable formulation** in appropriate doses, a **simple dosing
+        schedule**, and **taste/palatability** (hence compliance). Ensure
+        HIV-infected **parents also access treatment**.
+
+    - type: "prose"
+      title: "This section covers"
+      markdown: |
+        - [Antiretroviral drugs](topic:who-imci-8-2-1-arv-drugs) — the three
+          classes; first-line regimens (Tables 24–25).
+        - [When to start](topic:who-imci-8-2-2-when-to-start) — all < 60 months;
+          CD4 thresholds ≥ 60 months; ART with TB treatment.
+        - [Side-effects and monitoring](topic:who-imci-8-2-3-side-effects) —
+          Table 26; IRIS; monitoring schedule.
+        - [When to change treatment](topic:who-imci-8-2-4-when-to-change) —
+          substitution vs switching; treatment failure; second-line.

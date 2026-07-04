@@ -1,0 +1,31 @@
+# ============================================================
+# WHO IMCI §8.7.2 — Management of anorexia, nausea and vomiting. Pocket
+# Book 2nd ed (2013), p.252.
+# ============================================================
+
+topic:
+  id: "who-imci-8-7-2-anorexia-nausea"
+  title: "Anorexia, Nausea & Vomiting"
+  list_subtitle: "8.7.2 · small frequent feeds · metoclopramide"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "anorexia", "nausea", "vomiting", "palliative", "pediatric"]
+  aliases:
+    - "Anorexia nausea vomiting"
+  category: "medical"
+
+  page_number: 252
+
+  blocks:
+
+    - type: "prose"
+      title: "Encourage feeds, treat nausea"
+      highlight: true
+      markdown: |
+        Loss of appetite in terminal illness is hard to treat. Encourage carers to
+        keep offering meals and to try:
+        - **small feeds more frequently**, especially in the **morning** when
+          appetite may be better.
+        - **cool foods** rather than hot foods.
+        - **avoiding salty or spicy foods**.
+        - **oral metoclopramide 1–2 mg/kg every 2–4 h** if there is distressing
+          nausea and vomiting.

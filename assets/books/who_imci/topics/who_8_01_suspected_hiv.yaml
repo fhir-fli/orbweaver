@@ -1,0 +1,51 @@
+# ============================================================
+# WHO IMCI §8.1 — Sick child with suspected or confirmed HIV infection
+# (overview of the nested group). Pocket Book 2nd ed (2013), pp.226–231.
+# ============================================================
+
+topic:
+  id: "who-imci-8-1-suspected-hiv"
+  title: "Suspected or Confirmed HIV"
+  list_subtitle: "8.1 · clinical dx · counselling · testing · staging"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "AIDS", "diagnosis", "counselling", "pediatric"]
+  aliases:
+    - "Child with HIV"
+    - "Suspected HIV"
+  category: "medical"
+
+  page_number: 226
+
+  blocks:
+
+    - type: "prose"
+      title: "Most infections are the same — but think HIV"
+      highlight: true
+      markdown: |
+        Management of most conditions in an HIV-infected child is the **same as
+        in any other child** (Chapters 3–7). But infections may be **more
+        frequent, more severe and recurrent**, and some are due to **unusual
+        pathogens**. Many HIV-positive children die from common childhood
+        illnesses — many of these deaths are **preventable** by early diagnosis,
+        correct management, routine vaccination, improved nutrition, and
+        **ART + co-trimoxazole prophylaxis**.
+
+    - type: "prose"
+      title: "Establish HIV status at first contact"
+      markdown: |
+        Establish every infant's and child's HIV status at their **first contact**
+        with the health system — ideally at birth or the earliest opportunity.
+        All maternal, neonatal and child services should offer **HIV serological
+        testing** to mothers and their infants and children.
+
+    - type: "prose"
+      title: "This section covers"
+      markdown: |
+        - [Clinical diagnosis](topic:who-imci-8-1-1-clinical-diagnosis) — signs
+          that should make you suspect HIV.
+        - [HIV counselling](topic:who-imci-8-1-2-hiv-counselling) — provider-
+          initiated testing and counselling, informed consent.
+        - [Testing and diagnosis](topic:who-imci-8-1-3-testing-diagnosis) —
+          serological vs virological tests; the < 18-month problem.
+        - [Clinical staging](topic:who-imci-8-1-4-clinical-staging) — the WHO
+          paediatric 4-stage system (Table 23).

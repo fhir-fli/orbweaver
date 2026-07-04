@@ -1,0 +1,25 @@
+# ============================================================
+# WHO IMCI §8.7.5 — Airway management. Pocket Book 2nd ed (2013),
+# p.252.
+# ============================================================
+
+topic:
+  id: "who-imci-8-7-5-airway"
+  title: "Airway Management"
+  list_subtitle: "8.7.5 · comfort over prolonging life"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "airway", "palliative", "end-of-life", "pediatric"]
+  aliases:
+    - "Airway management"
+  category: "medical"
+
+  page_number: 252
+
+  blocks:
+
+    - type: "prose"
+      title: "Comfort first"
+      highlight: true
+      markdown: |
+        In terminal care, give priority to **keeping the child comfortable**
+        rather than prolonging life.

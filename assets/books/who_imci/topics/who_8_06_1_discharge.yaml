@@ -1,0 +1,27 @@
+# ============================================================
+# WHO IMCI §8.6.1 — Discharge from hospital. Pocket Book 2nd ed (2013),
+# p.249.
+# ============================================================
+
+topic:
+  id: "who-imci-8-6-1-discharge"
+  title: "Discharge from Hospital"
+  list_subtitle: "8.6.1 · slow responders · outpatient follow-up"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "discharge", "follow-up", "pediatric"]
+  aliases:
+    - "HIV discharge"
+  category: "medical"
+
+  page_number: 249
+
+  blocks:
+
+    - type: "prose"
+      title: "Slow responders can go home"
+      highlight: true
+      markdown: |
+        HIV-infected children may respond **slowly or incompletely** to the usual
+        treatment, and may have **persistent fever, persistent diarrhoea and
+        chronic cough**. If their **general condition is good**, they need not
+        remain in hospital but can be **seen regularly as outpatients**.

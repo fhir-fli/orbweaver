@@ -1,0 +1,49 @@
+# ============================================================
+# WHO IMCI §8.4.3 — Lymphoid interstitial pneumonitis (LIP). Pocket
+# Book 2nd ed (2013), p.245.
+# ============================================================
+
+topic:
+  id: "who-imci-8-4-3-lip"
+  title: "Lymphoid Interstitial Pneumonitis"
+  list_subtitle: "8.4.3 · LIP · steroids only if hypoxic"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "LIP", "lymphoid interstitial pneumonitis", "pediatric"]
+  aliases:
+    - "LIP"
+    - "Lymphocytic interstitial pneumonia"
+  category: "medical"
+
+  page_number: 245
+
+  blocks:
+
+    - type: "prose"
+      title: "Often asymptomatic early"
+      highlight: true
+      markdown: |
+        The child is often asymptomatic early but may later have:
+        - persistent cough, ± difficulty breathing
+        - **bilateral parotid swelling**
+        - persistent generalized lymphadenopathy
+        - hepatomegaly and other signs of heart failure
+        - **finger-clubbing**.
+
+    - type: "prose"
+      title: "Chest X-ray"
+      markdown: |
+        Suspect LIP if the chest X-ray shows a **bilateral reticulonodular
+        interstitial pattern** — distinguish from **pulmonary TB** and **bilateral
+        hilar adenopathy**.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - First give a **trial of antibiotic** treatment for bacterial pneumonia
+          ([§4.2](topic:who-imci-4-2-pneumonia)) **before** starting prednisolone.
+        - Start **steroids only if** the X-ray shows LIP **plus** any of: fast or
+          difficult breathing, cyanosis, or **SpO₂ ≤ 90%**.
+        - **Oral prednisolone 1–2 mg/kg/day for 2 weeks**, then decrease over
+          2–4 weeks depending on response. **Beware reactivating TB.**
+        - Start **ART** if not already on treatment.

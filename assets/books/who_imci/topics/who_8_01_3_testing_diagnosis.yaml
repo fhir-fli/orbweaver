@@ -1,0 +1,85 @@
+# ============================================================
+# WHO IMCI §8.1.3 — Testing and diagnosis of HIV infection. Pocket
+# Book 2nd ed (2013), pp.229–230.
+# ============================================================
+
+topic:
+  id: "who-imci-8-1-3-testing-diagnosis"
+  title: "Testing & Diagnosis"
+  list_subtitle: "8.1.3 · antibody vs virological · < 18 months"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "testing", "diagnosis", "virological", "pediatric"]
+  aliases:
+    - "HIV testing"
+    - "Virological testing"
+  category: "medical"
+
+  page_number: 229
+
+  blocks:
+
+    - type: "prose"
+      title: "The < 18-month problem"
+      highlight: true
+      markdown: |
+        Diagnosis in exposed infants and young children **< 18 months** is
+        difficult: **passively acquired maternal antibodies** may persist in the
+        child's blood, and breastfeeding adds ongoing exposure. Most children
+        lose maternal antibodies between **9 and 18 months**, so a **virological
+        test** is the **only reliable method** of determining HIV status in a
+        child < 18 months.
+
+        Where the mother or child has a **positive antibody test** and the child
+        has **symptoms suggestive of HIV**, but virological testing is not
+        available, the child may be **presumptively diagnosed** as HIV-infected.
+        Do virological testing at the earliest opportunity to confirm.
+
+        All diagnostic HIV testing must be **confidential**, accompanied by
+        counselling, and conducted only with **informed consent**.
+
+    - type: "prose"
+      title: "Serological antibody test (ELISA / rapid test)"
+      markdown: |
+        Rapid tests are widely available, sensitive and reliable for diagnosis in
+        children **> 18 months**. For children **< 18 months**, an antibody test
+        is a sensitive way of detecting **exposure** or **excluding** HIV in
+        non-breastfeeding children.
+
+        Rapid tests can be used to **exclude** HIV in a child with severe acute
+        malnutrition, TB or other serious illness in high-prevalence areas. For
+        children **< 18 months**, confirm all positive results by virological
+        testing as soon as possible; if not possible, **repeat antibody testing at
+        18 months**.
+
+    - type: "prose"
+      title: "Virological tests"
+      markdown: |
+        Testing for HIV **RNA or DNA** is the most reliable method in children
+        **< 18 months**. It may require sending a sample to a specialized
+        laboratory, but the tests are relatively cheap, easy to standardize, and
+        can be done on **dried blood spots**. Available assays:
+        - **HIV DNA** on whole blood or dried blood spots
+        - **HIV RNA** on plasma or dried blood spots
+        - **ultrasensitive p24 antigen** in plasma or dried blood spots.
+
+    - type: "prose"
+      title: "Interpreting virological results"
+      callout: true
+      markdown: |
+        **One positive virological test at 4–8 weeks** is sufficient to diagnose
+        HIV — **start ART without delay**, and collect a **second specimen** at
+        the same time to confirm.
+
+        If the infant is still **breastfeeding** and the test is negative, repeat
+        it **6 weeks after complete cessation of breastfeeding** to confirm the
+        child is not infected. Return results to the clinic and family **within
+        4 weeks** of collection.
+
+    - type: "prose"
+      title: "Breastfeeding infants"
+      markdown: |
+        A breastfeeding infant remains **at risk** of acquiring HIV from an
+        infected mother. Breastfeeding should **not** be stopped in order to
+        perform diagnostic testing. A **negative** viral test is hard to
+        interpret because a **6-week window after complete cessation** is required
+        before a negative result reliably indicates HIV status.

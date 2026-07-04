@@ -1,0 +1,31 @@
+# ============================================================
+# WHO IMCI §8.5 — Prevention of mother-to-child HIV transmission, and
+# infant feeding (overview of the nested group). Pocket Book 2nd ed
+# (2013), pp.247–249.
+# ============================================================
+
+topic:
+  id: "who-imci-8-5-pmtct"
+  title: "PMTCT & Infant Feeding"
+  list_subtitle: "8.5 · prevention · infant feeding"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "PMTCT", "mother-to-child", "infant feeding", "pediatric"]
+  aliases:
+    - "Prevention of mother-to-child transmission"
+    - "PMTCT"
+  category: "medical"
+
+  page_number: 247
+
+  blocks:
+
+    - type: "prose"
+      title: "Two linked topics"
+      highlight: true
+      markdown: |
+        HIV may be transmitted during **pregnancy, labour, delivery, or
+        breastfeeding**. This section covers:
+        - [Prevention of MTCT](topic:who-imci-8-5-1-prevention-mtct) — lifelong
+          ART for the mother (Option B+), infant prophylaxis.
+        - [Infant feeding](topic:who-imci-8-5-2-infant-feeding) — exclusive
+          breastfeeding while on ART vs replacement feeding.

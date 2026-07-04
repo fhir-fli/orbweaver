@@ -1,0 +1,31 @@
+# ============================================================
+# WHO IMCI §8.6 — Follow-up (overview of the nested group). Pocket Book
+# 2nd ed (2013), pp.249–250.
+# ============================================================
+
+topic:
+  id: "who-imci-8-6-followup"
+  title: "Follow-up"
+  list_subtitle: "8.6 · discharge · referral · clinical follow-up"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "follow-up", "discharge", "referral", "pediatric"]
+  aliases:
+    - "HIV follow-up"
+  category: "medical"
+
+  page_number: 249
+
+  blocks:
+
+    - type: "prose"
+      title: "Care continues after hospital"
+      highlight: true
+      markdown: |
+        HIV-infected children respond slowly or incompletely and need ongoing,
+        decentralized care:
+        - [Discharge from hospital](topic:who-imci-8-6-1-discharge) — when general
+          condition is good, follow up as an outpatient.
+        - [Referral](topic:who-imci-8-6-2-referral) — for testing, second-line
+          treatment, counselling, community support.
+        - [Clinical follow-up](topic:who-imci-8-6-3-clinical-followup) — regular
+          monitoring of condition, growth, nutrition, vaccination.

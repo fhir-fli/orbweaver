@@ -1,0 +1,62 @@
+# ============================================================
+# WHO IMCI §8.7.1 — Pain control. Pocket Book 2nd ed (2013),
+# pp.250–252.
+# ============================================================
+
+topic:
+  id: "who-imci-8-7-1-pain-control"
+  title: "Pain Control"
+  list_subtitle: "8.7.1 · two-step ladder · by the clock"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "pain", "palliative", "analgesia", "morphine", "pediatric"]
+  aliases:
+    - "HIV pain control"
+  category: "medical"
+
+  page_number: 250
+
+  blocks:
+
+    - type: "prose"
+      title: "Same principles as other chronic disease"
+      highlight: true
+      markdown: |
+        Manage pain as in **cancer or sickle-cell disease**. Give analgesics:
+        - **in two steps** (mild vs moderate-to-severe pain).
+        - **regularly ('by the clock')** — do not wait for severe pain to recur.
+        - by the **simplest, most effective, least painful route** (avoid IM).
+        - **titrate the dose** for each child to ensure adequate relief.
+
+    - type: "prose"
+      title: "Mild pain (e.g. headache)"
+      markdown: |
+        - **Paracetamol 10–15 mg/kg every 4–6 h**, or
+        - **Ibuprofen 5–10 mg/kg every 6–8 h** (children > 3 months who can take
+          oral). For children < 3 months, use **only paracetamol**.
+
+    - type: "prose"
+      title: "Moderate-to-severe pain — strong opioids"
+      callout: true
+      markdown: |
+        - **Morphine orally or IV every 4–6 h**, or by continuous IV infusion.
+        - If morphine doesn't relieve, switch to an alternative opioid
+          (**fentanyl or hydromorphone**).
+
+        **Note:** monitor carefully for **respiratory depression**. If tolerance
+        develops, increase the dose to maintain the same degree of relief.
+
+    - type: "prose"
+      title: "Adjuvant medicines"
+      markdown: |
+        Evidence is insufficient that adjuvants relieve persistent pain in
+        children, but drugs commonly used: **diazepam** for muscle spasm,
+        **carbamazepine** for neuralgic pain, and **corticosteroids** (e.g.
+        dexamethasone) for inflammatory swelling pressing on a nerve.
+
+    - type: "prose"
+      title: "Local anaesthetics for painful lesions"
+      markdown: |
+        - **Lidocaine:** apply (with gloves) on a gauze pad to painful mouth ulcers
+          before feeds; acts within 2–5 min.
+        - **Tetracaine, adrenaline and cocaine:** apply on a gauze pad over open
+          wounds; particularly useful during suturing.

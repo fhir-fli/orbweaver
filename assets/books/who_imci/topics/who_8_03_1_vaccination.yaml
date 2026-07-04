@@ -1,0 +1,59 @@
+# ============================================================
+# WHO IMCI §8.3.1 — Vaccination. Pocket Book 2nd ed (2013), pp.240–241.
+# ============================================================
+
+topic:
+  id: "who-imci-8-3-1-vaccination"
+  title: "Vaccination"
+  list_subtitle: "8.3.1 · full EPI · BCG & yellow fever caveats"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["HIV", "vaccination", "BCG", "measles", "EPI", "pediatric"]
+  aliases:
+    - "HIV vaccination"
+  category: "medical"
+
+  page_number: 240
+
+  blocks:
+
+    - type: "prose"
+      title: "Give the full EPI schedule"
+      highlight: true
+      markdown: |
+        HIV-exposed and infected children should receive **all** Expanded
+        Programme on Immunization (EPI) vaccines — including **H. influenzae type
+        B** and **pneumococcal** vaccine — according to the national schedule.
+        Schedules may need to be modified for HIV-infected and exposed children.
+
+    - type: "prose"
+      title: "Measles — extra early dose"
+      markdown: |
+        Because of increased risk of early and severe measles, infants with HIV
+        should receive a dose of **standard measles vaccine at 6 months** and a
+        **second dose as soon as possible after 9 months** — unless they are
+        **severely immunocompromised** at that time.
+
+    - type: "prose"
+      title: "Pneumococcal / Hib"
+      markdown: |
+        - **Pneumococcal conjugate** vaccine → give to all children; may be
+          **delayed if severely immunocompromised**.
+        - **Hib conjugate** vaccine → give to all children; may be **delayed if
+          severely immunocompromised**.
+
+    - type: "prose"
+      title: "BCG and yellow fever — CAUTION"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **BCG:** infants with HIV are at high risk for **disseminated BCG
+        disease** — do **NOT** give BCG to children known to be **HIV-infected**.
+        As infants cannot always be identified as HIV-infected at birth, BCG is
+        still given to all infants in areas with **high TB and HIV prevalence**,
+        except those known to be HIV-infected.
+
+        **Yellow fever:** do **NOT** administer to children with **symptomatic**
+        HIV infection.
