@@ -1,13 +1,19 @@
 # ============================================================
 # WHO IMCI §9.1.1 — Preoperative care. Pocket Book 2nd ed (2013),
 # pp.256–257.
+# ⚠️ OpenEvidence-reviewed 2026-07: modernised fasting to 6-4-1/2 for ALL
+# ages (not just infants); balanced crystalloid preferred for resuscitation;
+# surgical prophylaxis given within 120 min of incision and STOPPED within
+# 24 h (not 3–5 days); endocarditis prophylaxis restricted to highest-risk
+# cardiac conditions only, clindamycin dropped. Refs: ASA 2023; Frykholm
+# 2018; WHO SSI 2016; Seidelman JAMA 2023; AHA IE 2021.
 # ============================================================
 
 topic:
   id: "who-imci-9-1-1-preoperative"
   title: "Preoperative Care"
   list_subtitle: "9.1.1 · consent · fitness · fasting · antibiotics"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "preoperative", "fasting", "antibiotics", "pediatric"]
   aliases:
     - "Preop care"
@@ -24,9 +30,10 @@ topic:
         Prepare both child and parents; obtain **consent**. Explain why the
         procedure is needed, the anticipated outcome, and the potential risks and
         benefits. Ensure the child is **medically fit**:
-        - **Correct fluid deficit** and resuscitate — IV bolus of normal saline
-          **10–20 ml/kg**, repeated as needed. Restored urine output implies
-          adequate volume resuscitation.
+        - **Correct fluid deficit** and resuscitate — IV bolus of **isotonic
+          crystalloid 10–20 ml/kg** (**balanced crystalloid** — Ringer's lactate /
+          Hartmann's — preferred over 0.9% saline where available), repeated as
+          needed. Restored urine output implies adequate volume resuscitation.
         - **Correct anaemia** — ideally Hb normal for age. Reserve transfusion for
           situations where anaemia must be corrected quickly (emergency surgery);
           for elective surgery use **oral iron**. Children with **haemoglobinopathy**
@@ -39,13 +46,14 @@ topic:
       title: "Fasting for a general anaesthetic"
       callout: true
       markdown: |
-        Ensure an **empty stomach**. For infants **< 12 months**:
-        - **no solids for 8 h**
-        - **no formula for 6 h**
-        - **no clear liquids for 4 h**
-        - **no breast milk for 4 h**.
+        Ensure an **empty stomach**. Modern paediatric fasting (**all ages**, not
+        just infants) is the **6-4-1/2** rule:
+        - **solids / formula: 6 h**
+        - **breast milk: 4 h**
+        - **clear fluids: 1 h** (actively encouraged — 306 000+ children studied;
+          traditional limit was 2 h). **Avoid prolonged clear-fluid fasting.**
 
-        If prolonged fasting (> 6 h) is anticipated, give **IV fluids containing
+        If prolonged fasting (> 6 h) is unavoidable, give **IV fluids containing
         glucose**.
 
     - type: "prose"
@@ -59,17 +67,30 @@ topic:
         - Other investigations as indicated after full clinical examination.
 
     - type: "prose"
-      title: "Preoperative antibiotics"
+      title: "Surgical antibiotic prophylaxis"
       markdown: |
-        - **Infected / contaminated cases (bowel or bladder surgery) — Bowel:**
-          **ampicillin** (25–50 mg/kg IM/IV 4× daily) + **gentamicin**
-          (7.5 mg/kg IM/IV once daily) + **metronidazole** (10 mg/kg 3× daily)
-          before and for **3–5 days** after.
-        - **Urinary tract:** ampicillin + gentamicin (same doses) before and for
-          3–5 days after.
-        - **At risk for endocarditis** (congenital / valvular heart disease
-          undergoing dental, oral, respiratory or oesophageal procedures):
-          **amoxicillin 50 mg/kg orally** before, or **ampicillin 50 mg/kg IV**
-          within 30 min of surgery if unable to take oral.
+        Give a **single dose within 120 min before incision** (within 60 min for
+        short-half-life agents like cefazolin), and **stop within 24 h** — extended
+        courses do **not** reduce surgical-site infection and cause harm. (A
+        genuinely **infected** case is treated, not prophylaxed — continue therapy
+        as for the infection.)
+        - **Bowel surgery:** **ampicillin** (25–50 mg/kg IM/IV) + **gentamicin**
+          (5–7.5 mg/kg IM/IV) + **metronidazole** (10 mg/kg).
+        - **Urinary tract:** ampicillin + gentamicin (same doses).
+
+    - type: "prose"
+      title: "Endocarditis prophylaxis — highest-risk only"
+      callout: true
+      markdown: |
+        Restrict IE prophylaxis to the **highest-risk cardiac conditions** (AHA
+        2021): **prosthetic valve, prior IE, unrepaired cyanotic CHD, repaired CHD
+        with a residual defect near prosthetic material, transplant with
+        valvulopathy**. **Acquired valvular disease alone is no longer an
+        indication.** Give only for **dental procedures with gingival
+        manipulation** (not broadly for oral/respiratory/oesophageal work):
+        - **amoxicillin 50 mg/kg orally** (or **ampicillin 50 mg/kg IV** if unable
+          to take oral) within 30–60 min.
+        - **Penicillin allergy:** **cephalexin, azithromycin/clarithromycin, or
+          doxycycline** — **not clindamycin** (C. difficile risk).
 
         For major surgery, give **premedication** to allay anxiety.

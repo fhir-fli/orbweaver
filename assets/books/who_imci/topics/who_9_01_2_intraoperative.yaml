@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §9.1.2 — Intraoperative care (anaesthesia + Table 28 ETT
 # sizes). Pocket Book 2nd ed (2013), pp.258–259.
+# ⚠️ OpenEvidence-reviewed 2026-07: clarified lidocaine max with/without
+# epinephrine; added the FDA paediatric-neurotoxicity warning for ketamine
+# (>3 h, age <3 yr); CUFFED ETTs now preferred at all ages (2025 AHA/AAP
+# PALS) — cuffed ID ≈ (age/4)+3.5, cuff <20 cmH2O; added active warming +
+# continuous core-temp monitoring. Refs: PALS 2025; FDA Ketalar; ASA.
 # ============================================================
 
 topic:
   id: "who-imci-9-1-2-intraoperative"
   title: "Intraoperative Care"
-  list_subtitle: "9.1.2 · anaesthesia · ketamine · airway (Table 28)"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.1.2 · anaesthesia · ketamine · cuffed airway"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "anaesthesia", "ketamine", "airway", "intubation", "pediatric"]
   aliases:
     - "Intraop care"
@@ -30,8 +35,9 @@ topic:
       markdown: |
         For minor procedures in cooperative children, infiltrate a local
         anaesthetic:
-        - **Lidocaine 3 mg/kg** (0.3 ml/kg of 1%, or 0.15 ml/kg of 2%; max 200 mg)
-          — do not repeat within 2 h.
+        - **Lidocaine** — a conservative ceiling is **3 mg/kg**; for infiltration
+          the accepted maxima are **4.5 mg/kg plain** and **7 mg/kg with
+          epinephrine** (state which). Do not repeat within 2 h.
         - **Bupivacaine 0.5–2.5 mg/kg** (as 0.25% or 0.5%; max 1 ml/kg of 0.25% or
           0.5 ml/kg of 0.5% = 2.5 mg/kg).
 
@@ -51,6 +57,17 @@ topic:
         recovery in a quiet place.
 
     - type: "prose"
+      title: "Anaesthetic neurotoxicity — prolonged use"
+      callout: true
+      markdown: |
+        **FDA warning:** NMDA-blocking / GABA-enhancing anaesthetics (including
+        **ketamine**) may cause **neuronal apoptosis in the developing brain** when
+        used for **> 3 hours** in children under about **3 years** (or in the third
+        trimester). For brief procedures the benefit outweighs this risk — but
+        avoid unnecessarily **prolonged** anaesthesia in the very young; weigh
+        timing of elective surgery.
+
+    - type: "prose"
       title: "Airway"
       markdown: |
         Children's **smaller-diameter airway** makes them especially prone to
@@ -58,8 +75,21 @@ topic:
         children also move heavy columns of air poorly, so **adult vaporizer units
         are unacceptable**.
 
+    - type: "prose"
+      title: "Cuffed tubes are now preferred at all ages"
+      callout: true
+      markdown: |
+        **2025 AHA/AAP PALS: use cuffed ETTs over uncuffed** in infants and
+        children — fewer tube exchanges, no increase in airway complications.
+        - **Cuffed internal diameter ≈ (age ÷ 4) + 3.5** (about **0.5 mm smaller**
+          than the uncuffed sizes below).
+        - Keep **cuff pressure < 20 cmH₂O** and monitor it.
+
+        The uncuffed sizes below remain a useful reference (uncuffed formula
+        **(age ÷ 4) + 4**).
+
     - type: "table"
-      title: "Table 28 · Endotracheal tube size by age"
+      title: "Table 28 · Endotracheal tube size by age (uncuffed reference)"
       columns: ["Age", "Tube size (mm)"]
       column_flex: [5, 4]
       rows:
@@ -89,6 +119,8 @@ topic:
       markdown: |
         Small children lose heat rapidly (greater relative surface area, poor
         insulation) — hypothermia affects **drug metabolism, anaesthesia and blood
-        coagulation**. Keep theatre **> 28 °C** for infants/small children, cover
-        exposed parts, use **warmed fluids**, avoid procedures > 1 h where
-        possible, and monitor temperature (low-reading thermometer).
+        coagulation**. Keep theatre **> 28 °C** for infants/small children and cover
+        exposed parts. Standard of care now adds **active warming devices**
+        (forced-air warmers, warming mattresses), **warmed IV/irrigation fluids**,
+        and **continuous core-temperature monitoring** (low-reading thermometer).
+        Avoid procedures > 1 h where possible.

@@ -1,13 +1,19 @@
 # ============================================================
 # WHO IMCI §9.1.3 — Postoperative care (Tables 29 & 30). Pocket Book
 # 2nd ed (2013), pp.260–263.
+# ⚠️ OpenEvidence-reviewed 2026-07: maintenance fluids must be ISOTONIC
+# (half-normal saline removed — AAP 2018 CPG, hyponatraemia risk); pain
+# control made MULTIMODAL / opioid-sparing (add NSAIDs, regional blocks);
+# O2 target ≥95% (94% acceptable LMIC); transfusion trigger now Hb-based
+# (~7 g/dl stable) with the 10%-blood-volume rule as a bedside guide. Refs:
+# Feld AAP 2018; Kelley-Quon 2021; PALS 2025.
 # ============================================================
 
 topic:
   id: "who-imci-9-1-3-postoperative"
   title: "Postoperative Care"
-  list_subtitle: "9.1.3 · monitoring · fluids · pain · complications"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.1.3 · monitoring · isotonic fluids · multimodal pain"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "postoperative", "fluids", "pain", "monitoring", "pediatric"]
   aliases:
     - "Postop care"
@@ -27,8 +33,9 @@ topic:
         - observe **vital signs** — temperature, pulse (Table 30), respiratory
           rate, BP (correct cuff size); more often if a value changes from normal
           to abnormal.
-        - monitor **oxygen saturation** (normal > 94%) after a general anaesthetic;
-          give oxygen if needed.
+        - monitor **oxygen saturation** (target **≥ 95%**; > 94% acceptable in
+          resource-limited settings) after a general anaesthetic; give oxygen if
+          needed.
         - observe closely until the anaesthetic has worn off.
 
     - type: "table"
@@ -52,10 +59,13 @@ topic:
       markdown: |
         Postoperatively children commonly need **more than maintenance**. After
         abdominal operations typically **150% of baseline**, more if peritonitis.
-        Preferred IV fluids: **Ringer's lactate + 5% glucose**, **normal saline +
-        5% glucose**, or half-normal saline + 5% glucose. Plain Ringer's/normal
-        saline lack glucose (hypoglycaemia risk); large volumes of 5% glucose lack
-        sodium (hyponatraemia / cerebral oedema risk).
+        Use **isotonic fluids** with added **glucose (1–2.5%)** and **KCl** —
+        **balanced isotonic crystalloid + glucose** (or Ringer's lactate / normal
+        saline + 5% glucose). **Do NOT use hypotonic fluids (e.g. half-normal
+        saline)** for maintenance — they cause dangerous **hyponatraemia** (AAP
+        2018). Plain Ringer's/normal saline lack glucose (hypoglycaemia risk);
+        large volumes of **5% glucose alone** lack sodium (hyponatraemia / cerebral
+        oedema risk).
 
         Record inputs/outputs (IV, nasogastric drainage, vomit, urine drain) every
         **4–6 h**. **Urine output** is the most sensitive indicator: **infants
@@ -63,13 +73,17 @@ topic:
         bladder or unable to void), pass a **urinary catheter**.
 
     - type: "prose"
-      title: "Pain control"
+      title: "Pain control — multimodal, opioid-sparing"
       callout: true
       markdown: |
-        - **Mild pain:** **paracetamol 10–15 mg/kg every 4–6 h** orally or rectally
-          (can be given several hours before, or rectally at the end of surgery).
-        - **Severe pain:** IV narcotic (IM injections are painful) — **morphine
-          sulfate 0.05–0.1 mg/kg IV every 2–4 h**.
+        Combine agents to spare opioids:
+        - **Paracetamol 10–15 mg/kg every 4–6 h** (orally/rectally — can precede
+          surgery), **plus**
+        - an **NSAID** — **ibuprofen 10 mg/kg every 6–8 h**, or **ketorolac
+          0.5 mg/kg IV** — a key opioid-sparing component.
+        - **Severe pain:** IV opioid (IM injections are painful) — **morphine
+          sulfate 0.05–0.1 mg/kg IV every 2–4 h** (or continuous infusion).
+        - Use **regional anaesthesia / nerve blocks** where available.
 
     - type: "prose"
       title: "Nutrition and mobilization"
@@ -104,5 +118,8 @@ topic:
           (max 40 ml/kg; watch for overload); catheterize if retention.
         - **Hypoglycaemia** — use glucose infusions during anaesthesia; check blood
           glucose regularly (signs may be masked by anaesthesia).
-        - **Blood loss** — measure loss; transfuse if it exceeds **10% of blood
-          volume** (Table 29); have blood ready if loss is anticipated.
+        - **Blood loss** — measure loss. Transfusion is best guided by
+          **haemoglobin** (a **~7 g/dl** threshold for the stable child; higher for
+          active bleeding or instability); the **10% of blood volume** rule
+          (Table 29) remains a useful **bedside guide** where rapid Hb is
+          unavailable. Have blood ready if loss is anticipated.
