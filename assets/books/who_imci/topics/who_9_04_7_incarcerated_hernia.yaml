@@ -1,0 +1,43 @@
+# ============================================================
+# WHO IMCI §9.4.7 — Incarcerated hernia. Pocket Book 2nd ed (2013),
+# p.286.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-7-incarcerated-hernia"
+  title: "Incarcerated Hernia"
+  list_subtitle: "9.4.7 · non-reducible tender swelling · reduce gently"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "incarcerated hernia", "bowel obstruction", "pediatric"]
+  aliases:
+    - "Incarcerated hernia"
+  category: "medical"
+
+  page_number: 286
+
+  blocks:
+
+    - type: "prose"
+      title: "Bowel trapped in the hernia"
+      highlight: true
+      markdown: |
+        Occurs when bowel or another intra-abdominal structure (e.g. omentum) is
+        **trapped in the hernia**.
+        - **Non-reducible tender swelling** at an inguinal (or very rarely
+          umbilical) hernia.
+        - Signs of **intestinal obstruction** (vomiting, distension) if the bowel
+          is trapped.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Urgent review** by a surgeon experienced in paediatric surgery.
+        - **Attempt reduction** by **steady constant pressure**, provided there are
+          **no signs of strangulation or perforation**. If it does not reduce
+          easily, an **operation** is required.
+        - **Give nothing orally;** IV fluids; **nasogastric tube** if vomiting or
+          distension.
+        - If **compromised bowel** is suspected: **ampicillin (25–50 mg/kg IM/IV
+          4× daily) + gentamicin (7.5 mg/kg IM/IV once daily) + metronidazole
+          (10 mg/kg 3× daily)**.

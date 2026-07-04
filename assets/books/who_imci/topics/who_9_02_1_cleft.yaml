@@ -1,0 +1,52 @@
+# ============================================================
+# WHO IMCI §9.2.1 — Cleft lip and palate. Pocket Book 2nd ed (2013),
+# pp.264–265.
+# ============================================================
+
+topic:
+  id: "who-imci-9-2-1-cleft"
+  title: "Cleft Lip & Palate"
+  list_subtitle: "9.2.1 · feeding · timing of repair"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "cleft lip", "cleft palate", "congenital", "feeding", "pediatric"]
+  aliases:
+    - "Cleft lip and palate"
+  category: "medical"
+
+  page_number: 264
+
+  blocks:
+
+    - type: "prose"
+      title: "Reassure the parents"
+      highlight: true
+      markdown: |
+        Cleft lip and palate may occur **together or separately**. Reassure the
+        parents that the problem can be dealt with — there may be concern about the
+        unattractive appearance.
+
+    - type: "prose"
+      title: "Feeding"
+      markdown: |
+        Infants with **isolated cleft lip** feed normally. **Cleft palate** brings
+        feeding difficulty — the infant can swallow but not suck adequately, and
+        milk regurgitates through the nose and may be **aspirated**. If **Pierre
+        Robin syndrome** is present (small mandible, backward placement of the jaw),
+        there may be **upper airway obstruction during sleep**.
+
+        Feed with **expressed breast milk** from a cup and spoon (or bottles, if
+        adequate sterility), delivering a bolus of milk over the back of the
+        tongue (spoon, pipette, special teat, or pouring device); the infant then
+        swallows normally. Sleep-related airway obstruction can cause **hypoxaemia
+        and growth failure** and needs specialist paediatric treatment. Monitor
+        feeding and growth closely.
+
+    - type: "prose"
+      title: "Timing of repair"
+      callout: true
+      markdown: |
+        - **Lip:** surgical closure at about **6 months** of age (earlier if it is
+          safe to anaesthetise and technically possible).
+        - **Palate:** closure at **1 year** of age.
+        - Follow up after surgery to monitor **hearing** (middle-ear infections are
+          common) and **speech** development.

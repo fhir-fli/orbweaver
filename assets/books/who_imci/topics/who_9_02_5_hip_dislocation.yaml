@@ -1,0 +1,40 @@
+# ============================================================
+# WHO IMCI §9.2.5 — Congenital dislocation of the hip. Pocket Book 2nd
+# ed (2013), p.267.
+# ============================================================
+
+topic:
+  id: "who-imci-9-2-5-hip-dislocation"
+  title: "Congenital Hip Dislocation"
+  list_subtitle: "9.2.5 · Ortolani sign · abduction bracing"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "hip dislocation", "DDH", "Ortolani", "congenital", "pediatric"]
+  aliases:
+    - "Developmental dysplasia of the hip"
+    - "Congenital dislocation of the hip"
+  category: "medical"
+
+  page_number: 267
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        Detect severe cases by **routine physical examination at birth**. When
+        **unilateral**: the limb is short, there is **limited abduction** with the
+        hip flexed, and the skin crease at the back of the hip is asymmetrical. As
+        the flexed hip is abducted, a **click** can often be felt as the dislocated
+        femoral head enters the acetabulum (**Ortolani's sign**). Diagnosis
+        requires **X-ray and/or specialist ultrasound**.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Milder cases:** keep the hip **flexed and abducted** using **double
+          nappies** or an **abduction brace** for **2–3 months**. Traditional
+          back-carrying with the hip flexed and abducted serves the same purpose.
+        - **More severe cases:** keep the hip **abducted and flexed in a splint**.
+        - **Review** by a surgeon experienced in paediatric surgery.

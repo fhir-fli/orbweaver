@@ -1,0 +1,70 @@
+# ============================================================
+# WHO IMCI §9.3.3 — Chest injuries. Pocket Book 2nd ed (2013),
+# pp.273–275.
+# ============================================================
+
+topic:
+  id: "who-imci-9-3-3-chest-injuries"
+  title: "Chest Injuries"
+  list_subtitle: "9.3.3 · pneumothorax · haemothorax · contusion"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "chest injury", "pneumothorax", "haemothorax", "trauma", "pediatric"]
+  aliases:
+    - "Chest injury"
+    - "Tension pneumothorax"
+  category: "medical"
+
+  page_number: 273
+
+  blocks:
+
+    - type: "prose"
+      title: "Can be life-threatening"
+      highlight: true
+      markdown: |
+        Chest injuries (blunt or penetrating) can be life-threatening. Because a
+        child's rib-cage is **more pliable**, there may be **extensive injury
+        without rib fractures**. All suspected chest injuries need **urgent
+        review** by a surgeon experienced in paediatric surgery. Injuries include
+        rib fractures, pulmonary contusion, pneumothorax and haemothorax.
+
+    - type: "prose"
+      title: "Tension pneumothorax"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Air enters the pleural space but cannot leave. **Severe breathlessness,
+        cyanosis, decreased chest movement, no air entry on the affected side,
+        hyper-resonance on percussion.**
+        - **Insert a needle for urgent decompression** before inserting an
+          intercostal drain.
+        - Give **oxygen** near 100% (mask with reservoir).
+        - **Insert a chest drain.**
+        - **Seek urgent surgical advice.**
+
+    - type: "prose"
+      title: "Haemothorax"
+      markdown: |
+        Commoner in penetrating injuries — blood in the pleural space. If severe:
+        **hypovolaemic shock** plus respiratory distress with **cyanosis, decreased
+        chest movement, dullness on percussion**.
+        - **Insert a large chest tube** for drainage.
+        - **Seek urgent surgical advice** — continued bleeding may need
+          thoracotomy.
+        - **IV fluids 10–20 ml/kg** normal saline initially, and **transfuse with
+          fresh whole blood at 20 ml/kg** as soon as possible.
+        - Give **oxygen** near 100%.
+
+    - type: "prose"
+      title: "Pulmonary contusion & rib fractures"
+      markdown: |
+        - **Pulmonary contusion** (bruising) is common after chest trauma and
+          potentially life-threatening; onset may be slow, progressing over 24 h
+          (breathlessness, hypoxaemia, rib fractures). Give **oxygen** and **seek
+          urgent surgical advice**.
+        - **Rib fractures:** at the point of impact, with possible underlying lung
+          bruising/puncture. Usually stable within 10 days–2 weeks; firm healing
+          with callus by 4–6 weeks in children.

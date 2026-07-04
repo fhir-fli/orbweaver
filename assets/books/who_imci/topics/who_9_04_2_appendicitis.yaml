@@ -1,0 +1,52 @@
+# ============================================================
+# WHO IMCI §9.4.2 — Appendicitis. Pocket Book 2nd ed (2013),
+# pp.282–283.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-2-appendicitis"
+  title: "Appendicitis"
+  list_subtitle: "9.4.2 · RLQ pain · rupture → peritonitis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "appendicitis", "acute abdomen", "peritonitis", "pediatric"]
+  aliases:
+    - "Appendicitis"
+  category: "medical"
+
+  page_number: 282
+
+  blocks:
+
+    - type: "prose"
+      title: "Obstruction → rupture → peritonitis"
+      highlight: true
+      markdown: |
+        Appendicitis is due to **obstruction of the appendix lumen** (faecoliths,
+        lymphoid hyperplasia, GI parasites). If not recognized, the appendix
+        **ruptures**, leading to **peritonitis and abscess formation**.
+
+    - type: "prose"
+      title: "Diagnosis — difficult in young children"
+      markdown: |
+        - **fever, anorexia, vomiting** (variable).
+        - may begin as **periumbilical** pain, but the most important finding is
+          **persistent pain and tenderness in the right lower quadrant**.
+        - may be confused with **UTI, kidney stones, ovarian problems, mesenteric
+          adenitis, ileitis**.
+        - a raised **white cell count** helps; **ultrasound** by a skilled observer
+          can be very helpful.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Give nothing orally;** IV fluids; nasogastric tube if vomiting /
+          distension.
+        - Correct shock — **20 ml/kg** bolus, repeat if needed (watch overload); if
+          dehydrated without shock, 10–20 ml/kg half-strength Darrow's / normal
+          saline + 5% glucose over 20 min.
+        - **Antibiotics:** **ampicillin (25–50 mg/kg IM/IV 4× daily) + gentamicin
+          (7.5 mg/kg IM/IV once daily) + metronidazole (10 mg/kg 3× daily)**.
+        - **Urgent review** by a surgeon — **appendicectomy** as soon as possible.
+          It is **better to operate and be wrong** than to delay and have
+          peritonitis occur.

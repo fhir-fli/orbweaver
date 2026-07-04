@@ -1,0 +1,36 @@
+# ============================================================
+# WHO IMCI §9.5.4 — Pyomyositis. Pocket Book 2nd ed (2013), p.291.
+# ============================================================
+
+topic:
+  id: "who-imci-9-5-4-pyomyositis"
+  title: "Pyomyositis"
+  list_subtitle: "9.5.4 · pus in muscle · incise & drain · cloxacillin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "pyomyositis", "muscle infection", "pediatric"]
+  aliases:
+    - "Pyomyositis"
+  category: "medical"
+
+  page_number: 291
+
+  blocks:
+
+    - type: "prose"
+      title: "Pus within a muscle"
+      highlight: true
+      markdown: |
+        In pyomyositis there is **pus within the substance of a muscle**.
+        - **Fever, tenderness and swelling** of the involved muscle. A fluctuant
+          mass may **not** be detected if the inflammation is deep in the muscle.
+        - **Commonly occurs in the thigh.**
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Incision and drainage** (usually needs general anaesthesia).
+        - Leave a **drain** in the abscess cavity for **2–3 days**.
+        - **X-ray** to exclude underlying **osteomyelitis**.
+        - **Cloxacillin 50 mg/kg IM/IV 4× daily for 5–10 days** — commonest organism
+          **S. aureus**.

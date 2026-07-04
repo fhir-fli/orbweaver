@@ -1,0 +1,38 @@
+# ============================================================
+# WHO IMCI §9.1 — Care before, during and after surgery (overview of the
+# nested group). Pocket Book 2nd ed (2013), pp.256–263.
+# ============================================================
+
+topic:
+  id: "who-imci-9-1-perioperative"
+  title: "Care Before, During & After Surgery"
+  list_subtitle: "9.1 · preoperative · intraoperative · postoperative"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "perioperative", "anaesthesia", "pediatric"]
+  aliases:
+    - "Perioperative care"
+  category: "medical"
+
+  page_number: 256
+
+  blocks:
+
+    - type: "prose"
+      title: "Good surgery is more than the operation"
+      highlight: true
+      markdown: |
+        Infants and children have **distinct surgical diseases and special
+        perioperative needs**. Good surgical care neither begins nor ends with the
+        procedure — in most instances it is the **preparation, the anaesthetic and
+        the postoperative care** that ensure a good outcome. (Detailed guidance:
+        WHO **Surgical care at the district hospital**.)
+
+    - type: "prose"
+      title: "Three phases"
+      markdown: |
+        - [Preoperative care](topic:who-imci-9-1-1-preoperative) — consent,
+          medical fitness, fasting, antibiotics.
+        - [Intraoperative care](topic:who-imci-9-1-2-intraoperative) — anaesthesia,
+          airway (Table 28 ETT sizes), hypothermia, hypoglycaemia, blood loss.
+        - [Postoperative care](topic:who-imci-9-1-3-postoperative) — monitoring
+          (Table 30), fluids, pain, nutrition, complications.

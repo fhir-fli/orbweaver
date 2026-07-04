@@ -1,0 +1,61 @@
+# ============================================================
+# WHO IMCI §9.2.2 — Bowel obstruction (newborn). Pocket Book 2nd ed
+# (2013), pp.265–266.
+# ============================================================
+
+topic:
+  id: "who-imci-9-2-2-bowel-obstruction"
+  title: "Bowel Obstruction (Newborn)"
+  list_subtitle: "9.2.2 · bile-stained vomit = emergency"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "bowel obstruction", "pyloric stenosis", "neonate", "congenital", "pediatric"]
+  aliases:
+    - "Neonatal bowel obstruction"
+    - "Pyloric stenosis"
+  category: "medical"
+
+  page_number: 265
+
+  blocks:
+
+    - type: "prose"
+      title: "Causes in the newborn"
+      highlight: true
+      markdown: |
+        Bowel obstruction in a newborn may be due to **hypertrophic pyloric
+        stenosis, bowel atresia, malrotation with volvulus, meconium plug
+        syndrome, Hirschsprung disease (colonic aganglionosis), or imperforate
+        anus**.
+
+    - type: "prose"
+      title: "Diagnosis by level"
+      markdown: |
+        The **level** of obstruction determines the presentation:
+        - **Proximal** obstruction → vomiting with minimal distension.
+        - **Distal** obstruction → distension, with vomiting occurring late.
+        - **Pyloric stenosis** → projectile (forceful) **non-bilious** vomiting,
+          typically at **3–6 weeks**; dehydration and electrolyte abnormalities;
+          an **olive-like mass** (enlarged pylorus) may be palpable in the upper
+          abdomen.
+
+        Consider other causes of distension: ileus from sepsis, necrotizing
+        enterocolitis, congenital syphilis, ascites.
+
+    - type: "prose"
+      title: "Bile-stained vomit is an emergency"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Bile-stained (green) vomit in an infant is due to bowel obstruction
+        until proven otherwise — a surgical emergency.**
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Prompt resuscitation** and **urgent review** by a surgeon experienced
+          in paediatric surgery.
+        - **Give nothing orally.** Pass a **nasogastric tube** if there is vomiting
+          or abdominal distension.

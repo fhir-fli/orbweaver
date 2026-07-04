@@ -1,0 +1,47 @@
+# ============================================================
+# WHO IMCI §9.4.3 — Bowel obstruction after the neonatal period. Pocket
+# Book 2nd ed (2013), pp.283–284.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-3-bowel-obstruction"
+  title: "Bowel Obstruction (After Neonatal Period)"
+  list_subtitle: "9.4.3 · hernia · adhesions · Ascaris"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "bowel obstruction", "adhesions", "ascaris", "pediatric"]
+  aliases:
+    - "Bowel obstruction (older child)"
+  category: "medical"
+
+  page_number: 283
+
+  blocks:
+
+    - type: "prose"
+      title: "Causes beyond the newborn period"
+      highlight: true
+      markdown: |
+        Bowel obstruction may be due to **incarcerated hernias, adhesions**
+        (scarring from previous surgery), **Ascaris infection**, or
+        [intussusception](topic:who-imci-9-4-4-intussusception).
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        The **level** determines the presentation:
+        - **Proximal** → vomiting with minimal distension.
+        - **Distal** → distension, with vomiting occurring later.
+        - Typically **cramping abdominal pain, distension and no flatus**.
+        - Peristalsis waves may be seen through the abdominal wall.
+        - **Abdominal X-ray** shows distended loops with **air–fluid levels**.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Give nothing orally;** fluid resuscitation (most have been vomiting and
+          are dehydrated). Correct shock with **20 ml/kg** bolus (repeat if needed,
+          watch overload); if dehydrated without shock, 10–20 ml/kg half-strength
+          Darrow's / normal saline + 5% glucose over 20 min.
+        - Pass a **nasogastric tube** to relieve vomiting and decompress the bowel.
+        - **Urgent review** by a surgeon experienced in paediatric surgery.

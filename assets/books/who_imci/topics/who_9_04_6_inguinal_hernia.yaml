@@ -1,0 +1,40 @@
+# ============================================================
+# WHO IMCI §9.4.6 — Inguinal hernia. Pocket Book 2nd ed (2013),
+# pp.285–286.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-6-inguinal-hernia"
+  title: "Inguinal Hernia"
+  list_subtitle: "9.4.6 · groin swelling · elective repair"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "inguinal hernia", "hydrocele", "pediatric"]
+  aliases:
+    - "Inguinal hernia"
+    - "Hydrocele"
+  category: "medical"
+
+  page_number: 285
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        **Intermittent reducible swelling in the groin**, seen when the child cries
+        or strains. It occurs where the **spermatic cord exits the abdomen**
+        (inguinal canal). Occurs **rarely in girls**.
+
+        Distinguish from a **hydrocele** (fluid around a testicle via a patent
+        processus vaginalis) — hydroceles **transilluminate** and usually do **not**
+        extend up into the inguinal canal.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Uncomplicated inguinal hernia:** **elective surgical repair** to prevent
+          incarceration.
+        - **Hydrocele:** repair if **not resolved by age 1 year** (unrepaired
+          hydroceles can become inguinal hernias).

@@ -1,0 +1,39 @@
+# ============================================================
+# WHO IMCI §9.2.6 — Talipes equinovarus (club foot). Pocket Book 2nd
+# ed (2013), p.268.
+# ============================================================
+
+topic:
+  id: "who-imci-9-2-6-talipes"
+  title: "Talipes Equinovarus (Club Foot)"
+  list_subtitle: "9.2.6 · serial casting · early treatment"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "talipes", "club foot", "orthopaedic", "congenital", "pediatric"]
+  aliases:
+    - "Club foot"
+    - "Talipes equinovarus"
+  category: "medical"
+
+  page_number: 268
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        The foot cannot be placed in the normal position. The commonest form has
+        **three deformities**: **plantar flexion** of the foot, **inversion**
+        (inturning of the heel), and **inturning of the forefoot**.
+
+    - type: "prose"
+      title: "Treatment — start early"
+      callout: true
+      markdown: |
+        - **Mild (positional, passively correctable):** simple **stretching** of
+          the foot shortly after birth.
+        - **Moderate:** **serial manipulation** beginning shortly after birth —
+          maintain position with **tape strapping** or well-padded **plaster of
+          Paris casts**. Repeat every **2 weeks** until corrected. Special splints
+          may be needed until the child walks.
+        - **Severe or late presentation:** **surgical repair**.

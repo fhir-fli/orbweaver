@@ -1,0 +1,41 @@
+# ============================================================
+# WHO IMCI §9.2 — Congenital anomalies (overview of the nested group).
+# Pocket Book 2nd ed (2013), pp.264–268.
+# ============================================================
+
+topic:
+  id: "who-imci-9-2-congenital"
+  title: "Congenital Anomalies"
+  list_subtitle: "9.2 · cleft · bowel · wall defects · hip · club foot"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "congenital anomalies", "neonate", "pediatric"]
+  aliases:
+    - "Congenital anomalies"
+    - "Birth defects"
+  category: "medical"
+
+  page_number: 264
+
+  blocks:
+
+    - type: "prose"
+      title: "Recognize early"
+      highlight: true
+      markdown: |
+        Many types of congenital anomaly exist, but only a few are common. Some
+        need **urgent surgical attention**; others can be left until the child is
+        older. **Early recognition** improves outcomes and lets parents be informed
+        about treatment options.
+
+    - type: "prose"
+      title: "This section covers"
+      markdown: |
+        - [Cleft lip and palate](topic:who-imci-9-2-1-cleft) — feeding, timing of
+          repair.
+        - [Bowel obstruction (newborn)](topic:who-imci-9-2-2-bowel-obstruction) —
+          bile-stained vomit = emergency.
+        - [Abdominal wall defects](topic:who-imci-9-2-3-wall-defects) —
+          gastroschisis / omphalocoele.
+        - [Myelomeningocoele](topic:who-imci-9-2-4-myelomeningocoele)
+        - [Congenital dislocation of the hip](topic:who-imci-9-2-5-hip-dislocation)
+        - [Talipes equinovarus (club foot)](topic:who-imci-9-2-6-talipes)

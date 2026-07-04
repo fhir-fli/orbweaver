@@ -1,0 +1,58 @@
+# ============================================================
+# WHO IMCI §9.4.1 — Abdominal pain. Pocket Book 2nd ed (2013),
+# pp.281–282.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-1-abdominal-pain"
+  title: "Abdominal Pain"
+  list_subtitle: "9.4.1 · three questions · peritonitis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "abdominal pain", "peritonitis", "acute abdomen", "pediatric"]
+  aliases:
+    - "Abdominal pain"
+  category: "medical"
+
+  page_number: 281
+
+  blocks:
+
+    - type: "prose"
+      title: "Three questions"
+      highlight: true
+      markdown: |
+        Not all abdominal pain is GI infection. Ask:
+        - **Associated symptoms?** Nausea, vomiting, diarrhoea, constipation,
+          fever, cough, sore throat, dysuria — help gauge severity and narrow the
+          diagnosis.
+        - **Where does it hurt?** Ask the child to point. **Periumbilical** pain is
+          nonspecific.
+        - **Is there peritonitis?** — the critical question, as most causes of
+          peritonitis in children **require surgery**.
+
+    - type: "prose"
+      title: "Signs of peritonitis"
+      callout: true
+      markdown: |
+        - **Tenderness** during palpation.
+        - Pain on **movement**, especially.
+        - **Involuntary guarding** (spasm of the abdominal muscles on palpation).
+        - A **rigid abdomen** that does not move with respiration.
+        - **Absent bowel sounds** through a stethoscope — a strong indicator.
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - **Give nothing orally.** Pass a **nasogastric tube** if vomiting or
+          distension.
+        - **IV fluids** — correct shock with **20 ml/kg** normal saline or
+          Hartmann's rapid bolus (Chart 7); repeat if shock persists (watch for
+          overload). If dehydrated without shock, 10–20 ml/kg half-strength
+          Darrow's / normal saline + 5% glucose over 20 min; then **150%
+          maintenance**.
+        - **Analgesics** if pain is severe (they do **not** mask a serious
+          intra-abdominal problem, and may aid examination).
+        - **Antibiotics** if signs of peritonitis: **ampicillin (25–50 mg/kg IM/IV
+          4× daily) + gentamicin (7.5 mg/kg IM/IV once daily) + metronidazole
+          (10 mg/kg 3× daily)**.
+        - **Urgent review** by a surgeon experienced in paediatric surgery.

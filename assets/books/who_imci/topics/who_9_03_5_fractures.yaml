@@ -1,0 +1,65 @@
+# ============================================================
+# WHO IMCI §9.3.5 — Fractures. Pocket Book 2nd ed (2013), pp.275–279.
+# ============================================================
+
+topic:
+  id: "who-imci-9-3-5-fractures"
+  title: "Fractures"
+  list_subtitle: "9.3.5 · open = antibiotics · splint · traction"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "fractures", "orthopaedic", "traction", "splint", "pediatric"]
+  aliases:
+    - "Fractures"
+    - "Supracondylar fracture"
+  category: "medical"
+
+  page_number: 275
+
+  blocks:
+
+    - type: "prose"
+      title: "Children heal well if aligned"
+      highlight: true
+      markdown: |
+        Children heal fractures well if the bones are **aligned properly**.
+        Diagnosis: pain, swelling, deformity, crepitus, unnatural movement, loss of
+        function. Fractures may be **closed** (skin intact) or **open** (skin
+        wounded) — open fractures may lead to serious **bone infection**; suspect
+        an open fracture if there is an associated wound.
+
+    - type: "prose"
+      title: "Treatment principles"
+      markdown: |
+        Ask: **is there a fracture?** and **which bone?** (clinical exam or X-ray).
+        - **Refer for review** by a surgeon experienced in paediatric surgery for
+          complicated fractures — displaced, involving growth plates, or open.
+        - **Open fractures need antibiotics:** **cloxacillin (25–50 mg/kg IV or
+          orally 4× daily) + gentamicin (7.5 mg/kg IM/IV once daily)**, and
+          meticulous cleaning to prevent osteomyelitis (see
+          [§9.3.6](topic:who-imci-9-3-6-wound-care)).
+
+    - type: "prose"
+      title: "Splints and traction"
+      markdown: |
+        - **Posterior splint:** for upper/lower extremity injuries — wrap with soft
+          padding, then plaster of Paris to hold a neutral position, secured with an
+          elastic bandage. **Monitor capillary refill and finger temperature** so
+          the splint is not too tight.
+        - **Sling** to support an injured arm.
+        - **Skin traction / gallows traction** for femoral fractures (gallows for a
+          child < 3 years; check the feet circulation and warmth every few hours).
+          Skin traction suits mid-shaft femoral fractures in children **3–15 years**.
+
+    - type: "prose"
+      title: "Supracondylar fracture — watch the artery"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        A key complication is **constriction of the artery at the elbow**. Assess
+        blood flow to the hand: if the artery is obstructed the hand is **cool, slow
+        capillary refill, absent radial pulse** — **reduction must be done
+        urgently**. Reduce under traction, flex the elbow, apply a back slab, and
+        check position on X-ray.

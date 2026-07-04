@@ -1,0 +1,62 @@
+# ============================================================
+# WHO IMCI §9.3.2 — Head injuries. Pocket Book 2nd ed (2013),
+# pp.272–273.
+# ============================================================
+
+topic:
+  id: "who-imci-9-3-2-head-injuries"
+  title: "Head Injuries"
+  list_subtitle: "9.3.2 · three Cs · protect airway · avoid 2° injury"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "head injury", "trauma", "skull fracture", "pediatric"]
+  aliases:
+    - "Head injury"
+  category: "medical"
+
+  page_number: 272
+
+  blocks:
+
+    - type: "prose"
+      title: "Prevent secondary brain damage"
+      highlight: true
+      markdown: |
+        Head injuries are a common cause of trauma death in children. The aim is to
+        **prevent secondary brain damage** from **hypoxia, hypotension or
+        hypoglycaemia**. There may be a **skull fracture** (closed, open or
+        depressed) or a **brain injury** — the **three Cs**:
+        - **Concussion:** mildest; temporary loss of function.
+        - **Contusion:** the brain is bruised; function affected for hours to
+          weeks.
+        - **Compression:** from swelling or a growing clot (epidural/subdural
+          haematoma) — an urgent operation may be needed.
+
+        Children more often suffer **acute brain swelling** after a severe head
+        injury.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - History of head trauma.
+        - Look for lacerations, bleeding, bruising; palpate for fractures /
+          deformity.
+        - **Fractured base of skull:** periorbital bruising, blood behind the
+          eardrum, CSF leak or bleeding from nose or ears.
+        - X-ray if available.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        Assess ABC and resuscitate. The best way to retain brain function is to
+        **keep the airway open**, ensure adequate breathing, correct shock and
+        **prevent hypotension**. If the child does not respond to pain or is
+        unconscious (**P or U** on AVPU), seek urgent help from an anaesthetist to
+        protect the airway. In a young child, check for **hypoglycaemia**.
+        - **Give nothing orally;** use an **orogastric** (not nasogastric) tube if
+          the skull base may be fractured.
+        - **Limit fluids** to two-thirds of maintenance.
+        - **Elevate the head of the bed to 30°** (recovery position if
+          consciousness is reduced).
+        - Diagnose and treat other injuries.
+        - **Urgent review** by a surgeon experienced in paediatric surgery.

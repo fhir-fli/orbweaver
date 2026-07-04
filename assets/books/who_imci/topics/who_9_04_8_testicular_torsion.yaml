@@ -1,0 +1,39 @@
+# ============================================================
+# WHO IMCI §9.4.8 — Testicular torsion. Pocket Book 2nd ed (2013),
+# p.286.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-8-testicular-torsion"
+  title: "Testicular Torsion"
+  list_subtitle: "9.4.8 · acute scrotal pain · 6-hour window"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "testicular torsion", "acute scrotum", "urology", "pediatric"]
+  aliases:
+    - "Testicular torsion"
+  category: "medical"
+
+  page_number: 286
+
+  blocks:
+
+    - type: "prose"
+      title: "A surgical emergency — 6-hour window"
+      highlight: true
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Torsion of a testis produces **acute swelling on one side of the scrotum**,
+        with **severe pain** and a testis that is **extremely tender to touch**. To
+        preserve the testis, **urgent surgical treatment** is needed — **if done
+        within 6 h, 90% will be successful.**
+
+    - type: "prose"
+      title: "Differential diagnosis"
+      markdown: |
+        - **Incarcerated hernia** — extends up into the inguinal canal (its upper
+          limit cannot be felt).
+        - **Epididymo-orchitis** — rare in young children.

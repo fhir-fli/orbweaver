@@ -1,0 +1,38 @@
+# ============================================================
+# WHO IMCI §9.5.1 — Abscess. Pocket Book 2nd ed (2013), pp.287–288.
+# ============================================================
+
+topic:
+  id: "who-imci-9-5-1-abscess"
+  title: "Abscess"
+  list_subtitle: "9.5.1 · incise & drain · cloxacillin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "abscess", "incision and drainage", "pediatric"]
+  aliases:
+    - "Abscess"
+  category: "medical"
+
+  page_number: 287
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        An abscess is a collection of pus almost anywhere in the body.
+        - **Fever, swelling, tenderness and a fluctuant mass.**
+        - Determine the cause (injection, foreign body, underlying bone infection).
+          **Injection abscesses** usually develop **2–3 weeks** after an injection.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Incision and drainage** (large abscesses may need general anaesthesia).
+          Send aspirate for microscopy and culture (including **TB**) if available.
+        - **Antibiotics: cloxacillin 25–50 mg/kg 4× daily for 5 days** or until
+          surrounding cellulitis resolves.
+        - If **bowel flora** suspected (e.g. perirectal abscess): **ampicillin
+          (25–50 mg/kg IM/IV 4× daily) + gentamicin (7.5 mg/kg IM/IV once daily) +
+          metronidazole (10 mg/kg 3× daily)**.

@@ -1,0 +1,41 @@
+# ============================================================
+# WHO IMCI §9.3 — Injuries (overview of the nested group). Pocket Book
+# 2nd ed (2013), pp.269–280.
+# ============================================================
+
+topic:
+  id: "who-imci-9-3-injuries"
+  title: "Injuries"
+  list_subtitle: "9.3 · burns · head · chest · abdomen · fractures · wounds"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "injuries", "trauma", "pediatric"]
+  aliases:
+    - "Injuries"
+    - "Trauma"
+  category: "medical"
+
+  page_number: 269
+
+  blocks:
+
+    - type: "prose"
+      title: "The commonest surgical problem of children"
+      highlight: true
+      markdown: |
+        Injuries are the **commonest surgical problems of children**. Proper
+        treatment can prevent death and lifelong disability — and whenever
+        possible, try to **prevent** childhood injuries. (For assessing children
+        with severe injuries see [§1.10](topic:who-imci-1-10-trauma).)
+
+    - type: "prose"
+      title: "This section covers"
+      markdown: |
+        - [Burns](topic:who-imci-9-3-1-burns) — depth/extent, fluid resuscitation.
+        - [Head injuries](topic:who-imci-9-3-2-head-injuries) — the three Cs.
+        - [Chest injuries](topic:who-imci-9-3-3-chest-injuries) — pneumothorax,
+          haemothorax, contusion.
+        - [Abdominal injuries](topic:who-imci-9-3-4-abdominal-injuries) — internal
+          bleeding.
+        - [Fractures](topic:who-imci-9-3-5-fractures) — splinting, traction.
+        - [Principles of wound care](topic:who-imci-9-3-6-wound-care) — bleeding,
+          infection, closure, tetanus.

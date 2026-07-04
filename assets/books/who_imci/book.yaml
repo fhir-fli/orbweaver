@@ -300,3 +300,53 @@ book:
             - topic: "topics/who_8_07_4_mouth_care.yaml"
             - topic: "topics/who_8_07_5_airway.yaml"
             - topic: "topics/who_8_07_6_psychosocial.yaml"
+
+    - title: "9. Common surgical problems"
+      # WHO Pocket Book color-codes by chapter; Chapter 9 tab = sky blue
+      # (sampled 0xFF00ADEF from the p.255 chapter tab via pdftoppm).
+      palette:
+        accent: "0xFF00ADEF"
+      children:
+        - title: "9.1 Care before, during & after surgery"
+          topic: "topics/who_9_01_perioperative.yaml"
+          children:
+            - topic: "topics/who_9_01_1_preoperative.yaml"
+            - topic: "topics/who_9_01_2_intraoperative.yaml"
+            - topic: "topics/who_9_01_3_postoperative.yaml"
+        - title: "9.2 Congenital anomalies"
+          topic: "topics/who_9_02_congenital.yaml"
+          children:
+            - topic: "topics/who_9_02_1_cleft.yaml"
+            - topic: "topics/who_9_02_2_bowel_obstruction.yaml"
+            - topic: "topics/who_9_02_3_wall_defects.yaml"
+            - topic: "topics/who_9_02_4_myelomeningocoele.yaml"
+            - topic: "topics/who_9_02_5_hip_dislocation.yaml"
+            - topic: "topics/who_9_02_6_talipes.yaml"
+        - title: "9.3 Injuries"
+          topic: "topics/who_9_03_injuries.yaml"
+          children:
+            - topic: "topics/who_9_03_1_burns.yaml"
+            - topic: "topics/who_9_03_2_head_injuries.yaml"
+            - topic: "topics/who_9_03_3_chest_injuries.yaml"
+            - topic: "topics/who_9_03_4_abdominal_injuries.yaml"
+            - topic: "topics/who_9_03_5_fractures.yaml"
+            - topic: "topics/who_9_03_6_wound_care.yaml"
+        - title: "9.4 Abdominal problems"
+          topic: "topics/who_9_04_abdominal.yaml"
+          children:
+            - topic: "topics/who_9_04_1_abdominal_pain.yaml"
+            - topic: "topics/who_9_04_2_appendicitis.yaml"
+            - topic: "topics/who_9_04_3_bowel_obstruction.yaml"
+            - topic: "topics/who_9_04_4_intussusception.yaml"
+            - topic: "topics/who_9_04_5_umbilical_hernia.yaml"
+            - topic: "topics/who_9_04_6_inguinal_hernia.yaml"
+            - topic: "topics/who_9_04_7_incarcerated_hernia.yaml"
+            - topic: "topics/who_9_04_8_testicular_torsion.yaml"
+            - topic: "topics/who_9_04_9_rectal_prolapse.yaml"
+        - title: "9.5 Infections requiring surgery"
+          topic: "topics/who_9_05_infections.yaml"
+          children:
+            - topic: "topics/who_9_05_1_abscess.yaml"
+            - topic: "topics/who_9_05_2_osteomyelitis.yaml"
+            - topic: "topics/who_9_05_3_septic_arthritis.yaml"
+            - topic: "topics/who_9_05_4_pyomyositis.yaml"

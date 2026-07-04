@@ -1,0 +1,43 @@
+# ============================================================
+# WHO IMCI §9.4.9 — Rectal prolapse. Pocket Book 2nd ed (2013),
+# p.287.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-9-rectal-prolapse"
+  title: "Rectal Prolapse"
+  list_subtitle: "9.4.9 · reduce gently · treat the cause"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "rectal prolapse", "helminths", "cystic fibrosis", "pediatric"]
+  aliases:
+    - "Rectal prolapse"
+  category: "medical"
+
+  page_number: 287
+
+  blocks:
+
+    - type: "prose"
+      title: "Straining and poor nutrition"
+      highlight: true
+      markdown: |
+        Rectal prolapse is caused by **straining during a bowel motion** and is
+        associated with **chronic diarrhoea and poor nutrition**. Causative factors
+        include GI parasites (e.g. **Trichuris**) and **cystic fibrosis**.
+
+        The prolapse occurs on defecation — initially it reduces spontaneously, but
+        later may require **manual reduction**. It may be complicated by **bleeding**
+        or even **strangulation with gangrene**.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - If the prolapse is **not dead** (pink or red, and bleeds), reduce with
+          **gentle constant pressure**.
+        - Apply **firm strapping across the buttocks** to maintain the reduction.
+        - **Correct the underlying cause** of diarrhoea and malnutrition.
+        - Treat for **helminths** — **mebendazole 100 mg orally twice daily for
+          3 days**, or **500 mg once**.
+        - **Review** by a surgeon experienced in paediatric surgery — recurrent
+          prolapse may require a **Thiersch stitch**.

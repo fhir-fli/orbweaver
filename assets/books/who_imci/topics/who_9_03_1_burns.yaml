@@ -1,0 +1,104 @@
+# ============================================================
+# WHO IMCI §9.3.1 — Burns (BSA chart + fluid resuscitation). Pocket
+# Book 2nd ed (2013), pp.269–272.
+# ============================================================
+
+topic:
+  id: "who-imci-9-3-1-burns"
+  title: "Burns"
+  list_subtitle: "9.3.1 · depth · % BSA · fluid resuscitation"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "burns", "scalds", "fluid resuscitation", "pediatric"]
+  aliases:
+    - "Burns"
+    - "Scalds"
+  category: "medical"
+
+  page_number: 269
+
+  blocks:
+
+    - type: "prose"
+      title: "Assess depth and extent"
+      highlight: true
+      markdown: |
+        Burns and scalds carry high mortality and can cause lifelong disfigurement
+        and psychological trauma. **How deep?**
+        - **Full-thickness:** black or white, dry, **no sensation**, do **not
+          blanch** — skin will not regenerate.
+        - **Partial-thickness:** pink or red, blistering or weeping, **painful**.
+
+        **How much?** Use the body-surface-area chart by age, or the child's
+        **palm ≈ 1%** of total BSA.
+
+    - type: "prose"
+      title: "% BSA — the age-varying areas"
+      markdown: |
+        Add fixed regions (each arm segment ~1–2%, trunk 13% front / 13% back) plus
+        the **age-varying** head and lower-limb areas:
+
+    - type: "table"
+      title: "Body surface (%) by age"
+      columns: ["Area", "0 yr", "1 yr", "5 yr", "10 yr"]
+      column_flex: [5, 3, 3, 3, 3]
+      rows:
+        - cells: ["Head (A/D)", "10%", "9%", "7%", "6%"]
+        - cells: ["Thigh (B/E)", "3%", "3%", "4%", "5%"]
+        - cells: ["Leg (C/F)", "2%", "3%", "3%", "3%"]
+
+    - type: "prose"
+      title: "Who to admit"
+      callout: true
+      markdown: |
+        Admit all children with burns covering **> 10% of body surface**; those
+        involving the **face, hands, feet, perineum and joints**; those that are
+        **circumferential**; and those that cannot be managed as an outpatient.
+        Consider **inhalation injury** — if respiratory distress, give oxygen and
+        watch the airway; inform the anaesthetist about possible airway obstruction
+        (severe facial/inhalation burns may need early intubation or tracheostomy).
+
+    - type: "prose"
+      title: "Fluid resuscitation (> 10% BSA)"
+      callout: true
+      markdown: |
+        Use **Ringer's lactate + 5% glucose** (or normal saline + 5% glucose);
+        maintenance uses Ringer's lactate + 5% glucose or half-normal saline +
+        5% glucose.
+        - **First 24 h = maintenance fluid + extra (4 ml/kg per 1% surface burnt).**
+          Give **half** in the first **8 h**, the rest over the next **16 h**.
+        - **Second 24 h:** give **half to three-quarters** of day-1's volume.
+        - Monitor closely (pulse, RR, BP, urine output); avoid **circulatory
+          overload**. Blood may be given for anaemia or deep burns.
+
+        **Example — 20 kg child, 25% burn:** first-24 h = (60 ml/h × 24 h) +
+        (4 ml × 20 kg × 25%) = 1440 + 2000 = **3440 ml** → **1720 ml over the first
+        8 h**.
+
+    - type: "prose"
+      title: "Prevent and treat infection"
+      markdown: |
+        In all cases give **tetanus prophylaxis**. Clean intact skin with
+        antiseptic without breaking it; if not intact, **debride** and excise
+        necrotic tissue over the first few days. Topical options (resource-
+        dependent): **silver nitrate, silver sulfadiazine, gentian violet,
+        betadine, mashed papaya**. Small/awkward burns may be left open, clean and
+        dry.
+
+        If **local infection** (pus, foul odour, cellulitis): **amoxicillin
+        15 mg/kg orally 3× daily + cloxacillin 25 mg/kg orally 4× daily**. If
+        septicaemia suspected: **gentamicin 7.5 mg/kg once daily + cloxacillin
+        25–50 mg/kg IM/IV 4× daily**. Remove an eschar if infection is suspected
+        beneath it.
+
+    - type: "prose"
+      title: "Pain, nutrition, contractures"
+      markdown: |
+        - **Pain:** paracetamol 10–15 mg/kg every 6 h; if severe, **morphine
+          sulfate 0.05–0.1 mg/kg IV every 4 h**.
+        - **Nutrition:** feed within 24 h; high-calorie diet with protein, vitamins
+          and iron (omit iron initially in severe burns). Extensive burns need
+          ~1.5× calories and 2–3× protein.
+        - **Contractures:** burn scars across flexor surfaces contract. Prevent by
+          **passive mobilization** and **splinting flexor surfaces extended** (worn
+          at night). Begin **physiotherapy/rehabilitation early** and encourage
+          play.

@@ -1,0 +1,38 @@
+# ============================================================
+# WHO IMCI §9.2.4 — Myelomeningocoele. Pocket Book 2nd ed (2013),
+# p.267.
+# ============================================================
+
+topic:
+  id: "who-imci-9-2-4-myelomeningocoele"
+  title: "Myelomeningocoele"
+  list_subtitle: "9.2.4 · spinal defect · sterile dressing · refer"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "myelomeningocoele", "spina bifida", "congenital", "neonate", "pediatric"]
+  aliases:
+    - "Myelomeningocoele"
+    - "Spina bifida"
+  category: "medical"
+
+  page_number: 267
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      highlight: true
+      markdown: |
+        A **small sac protruding through a bony defect** in the skull or vertebrae
+        — commonest site is the **lumbar region**. May be associated with
+        **neurological problems** (bowel, bladder and lower-limb motor deficits)
+        and **hydrocephalus**.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - Apply a **sterile dressing**.
+        - If **ruptured**, give **benzylpenicillin** (100–150 mg/kg daily in two
+          divided doses) or **ampicillin** (25–50 mg/kg IM/IV 4× daily) +
+          **gentamicin** (7.5 mg/kg once daily) for **5 days**.
+        - **Review** by a surgeon experienced in paediatric surgery.

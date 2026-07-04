@@ -1,0 +1,75 @@
+# ============================================================
+# WHO IMCI §9.1.1 — Preoperative care. Pocket Book 2nd ed (2013),
+# pp.256–257.
+# ============================================================
+
+topic:
+  id: "who-imci-9-1-1-preoperative"
+  title: "Preoperative Care"
+  list_subtitle: "9.1.1 · consent · fitness · fasting · antibiotics"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "preoperative", "fasting", "antibiotics", "pediatric"]
+  aliases:
+    - "Preop care"
+  category: "medical"
+
+  page_number: 256
+
+  blocks:
+
+    - type: "prose"
+      title: "Consent and fitness"
+      highlight: true
+      markdown: |
+        Prepare both child and parents; obtain **consent**. Explain why the
+        procedure is needed, the anticipated outcome, and the potential risks and
+        benefits. Ensure the child is **medically fit**:
+        - **Correct fluid deficit** and resuscitate — IV bolus of normal saline
+          **10–20 ml/kg**, repeated as needed. Restored urine output implies
+          adequate volume resuscitation.
+        - **Correct anaemia** — ideally Hb normal for age. Reserve transfusion for
+          situations where anaemia must be corrected quickly (emergency surgery);
+          for elective surgery use **oral iron**. Children with **haemoglobinopathy**
+          (HbSS, HbAS, HbSC, thalassaemia) need special care — refer to standard
+          paediatric texts.
+        - Ensure the **best nutritional state** possible — good nutrition heals
+          wounds.
+
+    - type: "prose"
+      title: "Fasting for a general anaesthetic"
+      callout: true
+      markdown: |
+        Ensure an **empty stomach**. For infants **< 12 months**:
+        - **no solids for 8 h**
+        - **no formula for 6 h**
+        - **no clear liquids for 4 h**
+        - **no breast milk for 4 h**.
+
+        If prolonged fasting (> 6 h) is anticipated, give **IV fluids containing
+        glucose**.
+
+    - type: "prose"
+      title: "Preoperative laboratory screening"
+      markdown: |
+        Generally not essential; if possible:
+        - **Infants < 6 months:** check **Hb or EVF**.
+        - **Children 6 months – 12 years:** minor surgery (e.g. hernia repair) — no
+          investigations; **major surgery** — Hb or EVF, **group and cross-match**
+          blood.
+        - Other investigations as indicated after full clinical examination.
+
+    - type: "prose"
+      title: "Preoperative antibiotics"
+      markdown: |
+        - **Infected / contaminated cases (bowel or bladder surgery) — Bowel:**
+          **ampicillin** (25–50 mg/kg IM/IV 4× daily) + **gentamicin**
+          (7.5 mg/kg IM/IV once daily) + **metronidazole** (10 mg/kg 3× daily)
+          before and for **3–5 days** after.
+        - **Urinary tract:** ampicillin + gentamicin (same doses) before and for
+          3–5 days after.
+        - **At risk for endocarditis** (congenital / valvular heart disease
+          undergoing dental, oral, respiratory or oesophageal procedures):
+          **amoxicillin 50 mg/kg orally** before, or **ampicillin 50 mg/kg IV**
+          within 30 min of surgery if unable to take oral.
+
+        For major surgery, give **premedication** to allay anxiety.

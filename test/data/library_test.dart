@@ -99,12 +99,12 @@ void main() {
     }
 
     test(
-        'who_imci: 8 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
-        'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27, Ch.8 = 34)', () {
+        'who_imci: 9 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
+        'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27, Ch.8 = 34, Ch.9 = 33)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(8));
+      expect(contents, hasLength(9));
       expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
       expect((contents[1] as YamlMap)['title'],
@@ -119,9 +119,11 @@ void main() {
           '7. Severe acute malnutrition');
       expect((contents[7] as YamlMap)['title'],
           '8. Children with HIV/AIDS');
+      expect((contents[8] as YamlMap)['title'],
+          '9. Common surgical problems');
       // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
-      // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) = 181 topics.
-      expect(leafCount(contents), 181);
+      // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) + Ch.9 (33) = 214 topics.
+      expect(leafCount(contents), 214);
     });
 
     test('who_imci: Chapter 8 is a cyan-teal-tabbed group; §8.1 nests', () {
@@ -137,6 +139,21 @@ void main() {
       expect(g['topic'], isNotNull);
       // 6 sub-topics (8.7.1–8.7.6) nested under the §8.7 overview.
       expect((g['children'] as YamlList), hasLength(6));
+    });
+
+    test('who_imci: Chapter 9 is a sky-blue-tabbed group; §9.4 nests', () {
+      final b = loadBook('who_imci');
+      final ch9 = (b['contents'] as YamlList)[8] as YamlMap;
+      expect(ch9['palette']['accent'], '0xFF00ADEF');
+      // 9.1–9.5 all nested groups = 5 direct children.
+      final children = ch9['children'] as YamlList;
+      expect(children, hasLength(5));
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '9.4 Abdominal problems',
+      ) as YamlMap;
+      expect(g['topic'], isNotNull);
+      // 9 sub-topics (9.4.1–9.4.9) nested under the §9.4 overview.
+      expect((g['children'] as YamlList), hasLength(9));
     });
 
     test('who_imci: Chapter 6 is a green-tabbed group; §6.3 nests', () {

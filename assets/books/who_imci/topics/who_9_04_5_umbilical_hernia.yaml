@@ -1,0 +1,26 @@
+# ============================================================
+# WHO IMCI §9.4.5 — Umbilical hernia. Pocket Book 2nd ed (2013),
+# p.285.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-5-umbilical-hernia"
+  title: "Umbilical Hernia"
+  list_subtitle: "9.4.5 · usually closes spontaneously"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "umbilical hernia", "pediatric"]
+  aliases:
+    - "Umbilical hernia"
+  category: "medical"
+
+  page_number: 285
+
+  blocks:
+
+    - type: "prose"
+      title: "Usually closes on its own"
+      highlight: true
+      markdown: |
+        A **soft reducible swelling at the umbilicus**. **Most close
+        spontaneously.** Repair only if **not closed by age 6 years**, or if there
+        is a history of the hernia being **difficult to reduce**.

@@ -1,0 +1,48 @@
+# ============================================================
+# WHO IMCI §9.5.2 — Osteomyelitis. Pocket Book 2nd ed (2013),
+# pp.288–289.
+# ============================================================
+
+topic:
+  id: "who-imci-9-5-2-osteomyelitis"
+  title: "Osteomyelitis"
+  list_subtitle: "9.5.2 · acute vs chronic · long antibiotic course"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "osteomyelitis", "bone infection", "sickle cell", "pediatric"]
+  aliases:
+    - "Osteomyelitis"
+  category: "medical"
+
+  page_number: 288
+
+  blocks:
+
+    - type: "prose"
+      title: "Bone infection from blood spread"
+      highlight: true
+      markdown: |
+        Infection of a bone, usually from **blood spread** (also open fractures).
+        Commonest organisms: **S. aureus**, **Salmonella** (in sickle-cell disease)
+        and **Mycobacterium tuberculosis**.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **Acute:** pain and tenderness of the involved bone; usually intermittent
+          fever; **refusal to move** the affected limb or **bear weight**. Early
+          X-ray may be normal — changes take **12–14 days** to appear.
+        - **Chronic:** chronic draining sinuses over the bone; X-ray shows elevated
+          periosteum and **sequestrum** (dead bone).
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Review** by a surgeon experienced in paediatric surgery.
+        - **Antibiotics** (long course): **chloramphenicol 25 mg/kg 3× daily** for
+          children **< 3 years** and those with **sickle-cell disease**; or
+          **cloxacillin 50 mg/kg IM/IV 4× daily** for children **> 3 years** — for
+          at least **5 weeks**. Give parenteral until clinically improved, then
+          orally to complete the course.
+        - **Chronic osteomyelitis:** **sequestrectomy** (removal of dead bone) is
+          usually needed as well as antibiotics.

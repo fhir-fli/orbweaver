@@ -2,7 +2,7 @@
 # WHO IMCI §3.12.3 — Congenital malformations. Pocket Book 2nd ed (2013),
 # p.67.
 # ✅ OpenEvidence-reviewed (2026-07): cross-reference to §9.2 remains
-#    appropriate — no change.
+#    appropriate — no change. 2026-07: §9.2 authored, forward-refs now wired.
 # ============================================================
 
 topic:
@@ -23,9 +23,9 @@ topic:
       title: "See §9.2 (Surgical problems) for:"
       highlight: true
       markdown: |
-        - **cleft lip and palate**
-        - **bowel obstruction**
-        - **abdominal wall defects**
-        - **myelomeningocoele**
-        - **congenital dislocation of the hip**
-        - **talipes equinovarus** (club foot)
+        - [cleft lip and palate](topic:who-imci-9-2-1-cleft)
+        - [bowel obstruction](topic:who-imci-9-2-2-bowel-obstruction)
+        - [abdominal wall defects](topic:who-imci-9-2-3-wall-defects)
+        - [myelomeningocoele](topic:who-imci-9-2-4-myelomeningocoele)
+        - [congenital dislocation of the hip](topic:who-imci-9-2-5-hip-dislocation)
+        - [talipes equinovarus](topic:who-imci-9-2-6-talipes) (club foot)

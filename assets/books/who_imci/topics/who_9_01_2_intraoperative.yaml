@@ -1,0 +1,94 @@
+# ============================================================
+# WHO IMCI §9.1.2 — Intraoperative care (anaesthesia + Table 28 ETT
+# sizes). Pocket Book 2nd ed (2013), pp.258–259.
+# ============================================================
+
+topic:
+  id: "who-imci-9-1-2-intraoperative"
+  title: "Intraoperative Care"
+  list_subtitle: "9.1.2 · anaesthesia · ketamine · airway (Table 28)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "anaesthesia", "ketamine", "airway", "intubation", "pediatric"]
+  aliases:
+    - "Intraop care"
+    - "Paediatric anaesthesia"
+  category: "medical"
+
+  page_number: 258
+
+  blocks:
+
+    - type: "prose"
+      title: "Make the procedure painless"
+      highlight: true
+      markdown: |
+        Infants and children feel pain just like adults but may express it
+        differently. **Make the procedure as painless as possible.**
+
+    - type: "prose"
+      title: "Local anaesthesia (minor procedures)"
+      markdown: |
+        For minor procedures in cooperative children, infiltrate a local
+        anaesthetic:
+        - **Lidocaine 3 mg/kg** (0.3 ml/kg of 1%, or 0.15 ml/kg of 2%; max 200 mg)
+          — do not repeat within 2 h.
+        - **Bupivacaine 0.5–2.5 mg/kg** (as 0.25% or 0.5%; max 1 ml/kg of 0.25% or
+          0.5 ml/kg of 0.5% = 2.5 mg/kg).
+
+    - type: "prose"
+      title: "Ketamine (short painful procedures)"
+      markdown: |
+        Ketamine is an excellent anaesthetic when muscle relaxation is not needed.
+        - **Induction: 5–8 mg/kg IM** or **1–2 mg/kg IV** over 60 s — ready in
+          **2–3 min IV** or **3–5 min IM**.
+        - **Top-up: 1–2 mg/kg IM** or **0.5–1 mg/kg IV** if the child responds to a
+          painful stimulus.
+        - **Longer procedures (IV infusion):** neonate — 0.5–2 mg/kg loading then
+          continuous 500 µg/kg/h (up to 2 mg/kg/h); infant/child — 0.5–2 mg/kg
+          loading then 0.5–2.5 mg/kg/h.
+
+        At the end, turn the child into the **lateral position** and supervise
+        recovery in a quiet place.
+
+    - type: "prose"
+      title: "Airway"
+      markdown: |
+        Children's **smaller-diameter airway** makes them especially prone to
+        obstruction — they often need intubation to protect the airway. Small
+        children also move heavy columns of air poorly, so **adult vaporizer units
+        are unacceptable**.
+
+    - type: "table"
+      title: "Table 28 · Endotracheal tube size by age"
+      columns: ["Age", "Tube size (mm)"]
+      column_flex: [5, 4]
+      rows:
+        - cells: ["Premature infant", "2.5–3.0"]
+        - cells: ["Newborn", "3.5"]
+        - cells: ["1 year", "4.0"]
+        - cells: ["2 years", "4.5"]
+        - cells: ["2–4 years", "5.0"]
+        - cells: ["5 years", "5.5"]
+        - cells: ["6 years", "6"]
+        - cells: ["6–8 years", "6.5"]
+        - cells: ["8 years", "Cuffed 5.5"]
+        - cells: ["10 years", "Cuffed 6.0"]
+
+    - type: "prose"
+      title: "Tube-size rules of thumb"
+      markdown: |
+        For normally nourished children **> 2 years**:
+        **internal diameter (mm) = (age ÷ 4) + 4**. Another guide is the diameter
+        of the child's **little finger**. Always have tubes **one size larger and
+        smaller** available. An uncuffed tube should have a **small air leak**.
+        Listen with a stethoscope to confirm **equal breath sounds** both sides.
+
+    - type: "prose"
+      title: "Hypothermia"
+      callout: true
+      markdown: |
+        Small children lose heat rapidly (greater relative surface area, poor
+        insulation) — hypothermia affects **drug metabolism, anaesthesia and blood
+        coagulation**. Keep theatre **> 28 °C** for infants/small children, cover
+        exposed parts, use **warmed fluids**, avoid procedures > 1 h where
+        possible, and monitor temperature (low-reading thermometer).

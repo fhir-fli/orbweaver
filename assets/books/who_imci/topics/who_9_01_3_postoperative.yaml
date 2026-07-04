@@ -1,0 +1,108 @@
+# ============================================================
+# WHO IMCI §9.1.3 — Postoperative care (Tables 29 & 30). Pocket Book
+# 2nd ed (2013), pp.260–263.
+# ============================================================
+
+topic:
+  id: "who-imci-9-1-3-postoperative"
+  title: "Postoperative Care"
+  list_subtitle: "9.1.3 · monitoring · fluids · pain · complications"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "postoperative", "fluids", "pain", "monitoring", "pediatric"]
+  aliases:
+    - "Postop care"
+  category: "medical"
+
+  page_number: 260
+
+  blocks:
+
+    - type: "prose"
+      title: "Immediately after surgery"
+      highlight: true
+      markdown: |
+        Communicate the outcome to the family. Recover the child safely from
+        anaesthesia in a monitored ward/recovery area:
+        - **monitor** airway, breathing and circulation.
+        - observe **vital signs** — temperature, pulse (Table 30), respiratory
+          rate, BP (correct cuff size); more often if a value changes from normal
+          to abnormal.
+        - monitor **oxygen saturation** (normal > 94%) after a general anaesthetic;
+          give oxygen if needed.
+        - observe closely until the anaesthetic has worn off.
+
+    - type: "table"
+      title: "Table 30 · Normal pulse and BP in children"
+      columns: ["Age (yr)", "Pulse (range)", "Systolic BP (mmHg)"]
+      column_flex: [3, 4, 4]
+      rows:
+        - cells: ["0–1", "100–160", "> 60"]
+        - cells: ["1–3", "90–150", "> 70"]
+        - cells: ["3–6", "80–140", "> 75"]
+
+    - type: "prose"
+      title: "Note on pulse / pulses"
+      markdown: |
+        Normal pulse rates are **10% slower in sleeping children**. In infants and
+        children, the **presence or absence of a strong central pulse** is a more
+        useful guide to shock than a BP reading.
+
+    - type: "prose"
+      title: "Fluid management"
+      markdown: |
+        Postoperatively children commonly need **more than maintenance**. After
+        abdominal operations typically **150% of baseline**, more if peritonitis.
+        Preferred IV fluids: **Ringer's lactate + 5% glucose**, **normal saline +
+        5% glucose**, or half-normal saline + 5% glucose. Plain Ringer's/normal
+        saline lack glucose (hypoglycaemia risk); large volumes of 5% glucose lack
+        sodium (hyponatraemia / cerebral oedema risk).
+
+        Record inputs/outputs (IV, nasogastric drainage, vomit, urine drain) every
+        **4–6 h**. **Urine output** is the most sensitive indicator: **infants
+        1–2 ml/kg/h; children 1 ml/kg/h**. If retention is suspected (palpable
+        bladder or unable to void), pass a **urinary catheter**.
+
+    - type: "prose"
+      title: "Pain control"
+      callout: true
+      markdown: |
+        - **Mild pain:** **paracetamol 10–15 mg/kg every 4–6 h** orally or rectally
+          (can be given several hours before, or rectally at the end of surgery).
+        - **Severe pain:** IV narcotic (IM injections are painful) — **morphine
+          sulfate 0.05–0.1 mg/kg IV every 2–4 h**.
+
+    - type: "prose"
+      title: "Nutrition and mobilization"
+      markdown: |
+        Feed children **as soon as possible** after surgery; provide a
+        **high-calorie diet with protein and vitamin** supplements; NG feed if oral
+        intake is poor; monitor weight. Encourage **early mobilization** (deep
+        breathing/coughing, exercise, passive joint movement, walking aids),
+        prevent **pressure sores** (turn frequently, keep urine/faeces off skin).
+
+    - type: "table"
+      title: "Table 29 · Blood volume by age"
+      columns: ["Group", "ml/kg body weight"]
+      column_flex: [5, 5]
+      rows:
+        - cells: ["Neonate", "85–90"]
+        - cells: ["Children", "80"]
+        - cells: ["Adults", "70"]
+
+    - type: "prose"
+      title: "Common postoperative problems"
+      markdown: |
+        - **Tachycardia** (Table 30) — pain, hypovolaemia, anaemia, fever,
+          hypoglycaemia or infection. Examine; review pre-op and intra-op care;
+          respond with pain relief, fluid boluses, oxygen, transfusion.
+          **Bradycardia = hypoxia until proven otherwise.**
+        - **Fever** — tissue injury, wound infection, pneumonia, abscess, UTI
+          (catheter), phlebitis (IV), malaria. See wound care
+          ([§9.3.6](topic:who-imci-9-3-6-wound-care)).
+        - **Low urine output** — hypovolaemia, retention or renal failure (usually
+          inadequate resuscitation). Give normal saline 10–20 ml/kg and repeat once
+          (max 40 ml/kg; watch for overload); catheterize if retention.
+        - **Hypoglycaemia** — use glucose infusions during anaesthesia; check blood
+          glucose regularly (signs may be masked by anaesthesia).
+        - **Blood loss** — measure loss; transfuse if it exceeds **10% of blood
+          volume** (Table 29); have blood ready if loss is anticipated.

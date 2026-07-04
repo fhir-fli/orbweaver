@@ -1,0 +1,53 @@
+# ============================================================
+# WHO IMCI §9.4.4 — Intussusception. Pocket Book 2nd ed (2013),
+# pp.284–285.
+# ============================================================
+
+topic:
+  id: "who-imci-9-4-4-intussusception"
+  title: "Intussusception"
+  list_subtitle: "9.4.4 · red-currant jelly stool · air/barium enema"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "intussusception", "bowel obstruction", "enema", "pediatric"]
+  aliases:
+    - "Intussusception"
+  category: "medical"
+
+  page_number: 284
+
+  blocks:
+
+    - type: "prose"
+      title: "One segment telescopes into the next"
+      highlight: true
+      markdown: |
+        A form of bowel obstruction where one segment of intestine **telescopes
+        into the next** — most commonly at the **ileal–caecal junction**. Usually
+        in children **< 2 years**, but can occur in older children.
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **Early:** colicky abdominal pain with vomiting; the child cries with
+          pain, doubles over, and pulls the legs up.
+        - **Late:** pallor, distension, tenderness, **bloody diarrhoea
+          ('red-currant jelly stool')** and dehydration.
+        - A **palpable abdominal mass** (begins in the right lower quadrant, may
+          extend along the line of the colon).
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        **Arrange urgent review** by a surgeon experienced in paediatric surgery.
+        Proceed to operation if **air or barium enema fails to reduce** the
+        intussusception. If the bowel is **ischaemic or dead**, resection is
+        needed. Transfer if no one experienced in enema reduction or X-ray is
+        available.
+
+        **Barium-enema reduction:** an unlubricated 35-ml Foley catheter into the
+        rectum, balloon inflated, buttocks strapped; warm barium in saline flows
+        under gravity from **1 m** height, entering the colon under X-ray. A concave
+        **'meniscus'** confirms the diagnosis; the column's pressure slowly reduces
+        it — reduction is complete only when **several loops of small bowel fill**
+        with barium.

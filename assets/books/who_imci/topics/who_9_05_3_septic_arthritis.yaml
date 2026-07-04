@@ -1,0 +1,42 @@
+# ============================================================
+# WHO IMCI §9.5.3 — Septic arthritis. Pocket Book 2nd ed (2013),
+# pp.289–290.
+# ============================================================
+
+topic:
+  id: "who-imci-9-5-3-septic-arthritis"
+  title: "Septic Arthritis"
+  list_subtitle: "9.5.3 · aspirate joint · pus destroys a joint"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "septic arthritis", "joint infection", "aspiration", "pediatric"]
+  aliases:
+    - "Septic arthritis"
+  category: "medical"
+
+  page_number: 289
+
+  blocks:
+
+    - type: "prose"
+      title: "Like osteomyelitis, but in the joint"
+      highlight: true
+      markdown: |
+        Similar to osteomyelitis, but involving the **joint**.
+        - **Pain and swelling** of the joint.
+        - Usually **intermittent fever**.
+        - Two key signs: **swelling and tenderness over the joint** and
+          **decreased range of movement**.
+
+    - type: "prose"
+      title: "Treatment"
+      callout: true
+      markdown: |
+        - **Aspirate the joint** to confirm the diagnosis (under sterile
+          conditions) — commonest organism **S. aureus**.
+        - **Urgent review** by a surgeon — the joint needs **washing out**. **Pus
+          under pressure destroys a joint.**
+        - **Antibiotics** (as for osteomyelitis): **chloramphenicol 25 mg/kg 3×
+          daily** for children **< 3 years** and those with **sickle-cell disease**;
+          or **cloxacillin 50 mg/kg IM/IV 4× daily** for children **> 3 years** —
+          for at least **3 weeks**. Parenteral until improved, then oral to
+          complete.

@@ -1,0 +1,30 @@
+# ============================================================
+# WHO IMCI §9.5 — Infections requiring surgery (overview of the nested
+# group). Pocket Book 2nd ed (2013), pp.287–291.
+# ============================================================
+
+topic:
+  id: "who-imci-9-5-infections"
+  title: "Infections Requiring Surgery"
+  list_subtitle: "9.5 · abscess · osteomyelitis · septic arthritis · pyomyositis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "abscess", "osteomyelitis", "septic arthritis", "pediatric"]
+  aliases:
+    - "Surgical infections"
+  category: "medical"
+
+  page_number: 287
+
+  blocks:
+
+    - type: "prose"
+      title: "Pus that needs draining"
+      highlight: true
+      markdown: |
+        These infections collect **pus** and generally need **drainage** in
+        addition to antibiotics:
+        - [Abscess](topic:who-imci-9-5-1-abscess) — collection of pus anywhere.
+        - [Osteomyelitis](topic:who-imci-9-5-2-osteomyelitis) — bone infection.
+        - [Septic arthritis](topic:who-imci-9-5-3-septic-arthritis) — joint
+          infection.
+        - [Pyomyositis](topic:who-imci-9-5-4-pyomyositis) — pus within muscle.

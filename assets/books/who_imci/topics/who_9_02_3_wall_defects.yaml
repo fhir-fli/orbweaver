@@ -1,0 +1,48 @@
+# ============================================================
+# WHO IMCI §9.2.3 — Abdominal wall defects. Pocket Book 2nd ed (2013),
+# p.266.
+# ============================================================
+
+topic:
+  id: "who-imci-9-2-3-wall-defects"
+  title: "Abdominal Wall Defects"
+  list_subtitle: "9.2.3 · gastroschisis · omphalocoele"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["surgery", "gastroschisis", "omphalocoele", "congenital", "neonate", "pediatric"]
+  aliases:
+    - "Gastroschisis"
+    - "Omphalocoele"
+  category: "medical"
+
+  page_number: 266
+
+  blocks:
+
+    - type: "prose"
+      title: "The wall does not fully close"
+      highlight: true
+      markdown: |
+        The abdominal wall does not fully develop and remains open.
+        - **Gastroschisis:** exposed bowel.
+        - **Omphalocoele:** bowel covered by a thin layer.
+
+        An exposed bowel loses **fluid and heat rapidly**.
+
+    - type: "prose"
+      title: "Treatment — protect and resuscitate"
+      callout: true
+      markdown: |
+        - Apply a **sterile dressing**, and cover with a **plastic bag or cling
+          film** (prevents fluid loss and hypothermia).
+        - **Give nothing orally.** Pass a **nasogastric tube** for free drainage.
+        - **IV fluids:** normal saline + 5% glucose, or half-strength Darrow's
+          solution.
+          - **Shock:** 20 ml/kg bolus of normal saline or Hartmann's/Ringer's
+            lactate.
+          - **Dehydration (no shock):** 10–20 ml/kg half-strength Darrow's / normal
+            saline + 5% glucose over 20 min.
+          - Then **maintenance + replace** the volume from the nasogastric tube.
+        - **Antibiotics:** ampicillin (25–50 mg/kg IV 4× daily) + gentamicin
+          (7.5 mg/kg IV once daily) + metronidazole (15 mg/kg loading, then
+          7.5 mg/kg every 12 h starting 24 h after the loading dose).
+        - **Urgent review** by a surgeon experienced in paediatric surgery.
