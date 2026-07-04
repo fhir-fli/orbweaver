@@ -1,6 +1,9 @@
 # ============================================================
 # WHO IMCI §8.1.4 — Clinical staging (Table 23, WHO paediatric clinical
 # staging). Pocket Book 2nd ed (2013), pp.230–232.
+# ✅ OpenEvidence-reviewed 2026-07: noted staging NO LONGER determines ART
+# eligibility (treat-all); absolute CD4 count preferred over percentage.
+# Stage condition lists unchanged (still accurate).
 # ============================================================
 
 topic:
@@ -31,6 +34,17 @@ topic:
 
         **Table 23** applies to children **< 13 years** with confirmed lab
         evidence of HIV (antibodies for > 18 months; virological for < 18 months).
+
+    - type: "prose"
+      title: "Staging no longer decides who gets ART"
+      callout: true
+      markdown: |
+        Under **treat-all** (ART for **every** child regardless of stage or CD4),
+        staging is **no longer used to determine ART eligibility**. It still has
+        value for **prognosis**, for **monitoring treatment response** where viral
+        load is unavailable, and for **surveillance**. Where CD4 is used, the
+        **absolute CD4 count is the preferred measure** (percentage remains useful
+        in the youngest children).
 
     - type: "prose"
       title: "Stage 1 — asymptomatic"

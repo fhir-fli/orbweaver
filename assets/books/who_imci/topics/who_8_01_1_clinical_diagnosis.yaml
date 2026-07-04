@@ -1,6 +1,9 @@
 # ============================================================
 # WHO IMCI §8.1.1 — Clinical diagnosis of HIV. Pocket Book 2nd ed
 # (2013), pp.226–228.
+# ✅ OpenEvidence-reviewed 2026-07: natural-history categories framed as
+# PRE-ART / untreated (early ART fundamentally changes prognosis);
+# corrected "jiroveci" → "jirovecii". Sign lists unchanged (still valid).
 # ============================================================
 
 topic:
@@ -24,12 +27,23 @@ topic:
         The clinical expression of HIV in children is **highly variable**. Many
         show severe signs in the **first year of life**; others remain
         asymptomatic or mildly symptomatic for **several years**. Perinatally
-        infected children not on ART fall into **three categories**:
+        infected children **not on ART** fall into **three categories**:
         - **rapid progression (25–30%)** — most die before their first birthday
           (infection acquired in utero or early postnatally).
         - **downhill course, death at 3–5 years (50–60%)**.
         - **long-term survivors, beyond 8 years (5–25%)** — tend to have
           lymphoid interstitial pneumonitis and stunting.
+
+    - type: "prose"
+      title: "These are the UNTREATED natural history"
+      callout: true
+      markdown: |
+        These three categories describe the **pre-ART / untreated** course. With
+        today's **treat-all** policy and **early INSTI-based ART** (see
+        [§8.2](topic:who-imci-8-2-art)), the natural history is **fundamentally
+        altered** — early diagnosis and immediate ART transform the prognosis.
+        The signs below matter because they should prompt **testing**, not
+        because HIV is untreatable.
 
     - type: "prose"
       title: "Signs that MAY indicate HIV infection"
@@ -60,7 +74,7 @@ topic:
       callout: true
       markdown: |
         **Strongly suspect HIV** if any of the following are present:
-        - **Pneumocystis jiroveci** (formerly carinii) pneumonia (**PCP**)
+        - **Pneumocystis jirovecii** (formerly carinii) pneumonia (**PCP**)
         - **oesophageal candidiasis**
         - **lymphocytic interstitial pneumonia**
         - **Kaposi sarcoma**

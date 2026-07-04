@@ -1,14 +1,20 @@
 # ============================================================
 # WHO IMCI §8.2.3 — Side-effects and monitoring (Table 26 + IRIS).
 # Pocket Book 2nd ed (2013), pp.235–238.
+# ⚠️ OpenEvidence-reviewed 2026-07: Table 26 revised — STAVUDINE (d4T)
+# removed; DTG/BIC/RAL/TAF added; EFV/LPV/r notes updated. Added the DTG
+# neural-tube-defect note (risk very small). Monitoring now prioritises
+# VIRAL LOAD (6 mo, 12 mo, then annually if suppressed) with a rapid
+# 1–2-week tolerability check. IRIS unchanged. Refs: DHHS/OARAC 2024; IMPAACT
+# 2019; Tsepamo.
 # ============================================================
 
 topic:
   id: "who-imci-8-2-3-side-effects"
   title: "Side-effects & Monitoring"
-  list_subtitle: "8.2.3 · Table 26 · IRIS · monitoring schedule"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "ART", "side-effects", "IRIS", "monitoring", "pediatric"]
+  list_subtitle: "8.2.3 · Table 26 · IRIS · viral-load monitoring"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "ART", "side-effects", "IRIS", "viral load", "pediatric"]
   aliases:
     - "ART side-effects"
     - "IRIS"
@@ -23,35 +29,42 @@ topic:
       highlight: true
       markdown: |
         Monitor the response to and side-effects of ART in **all** children — with
-        regular reassessment of clinical status and stage, laboratory parameters,
-        and symptoms of drug toxicity.
+        regular reassessment of clinical status, **viral load**, and symptoms of
+        drug toxicity.
 
     - type: "table"
-      title: "Table 26 · Common side-effects (NRTIs)"
+      title: "Table 26 · Common side-effects (anchor drugs)"
       columns: ["Drug", "Side-effects", "Comments"]
-      column_flex: [3, 5, 4]
+      column_flex: [3, 5, 5]
       rows:
-        - cells: ["3TC", "Headache, abdominal pain, pancreatitis", "Well tolerated"]
-        - cells: ["d4T", "Headache, abdominal pain, neuropathy", "Suspension capsules can be opened"]
-        - cells: ["ZDV (AZT)", "Headache, anaemia, neutropenia", "Do NOT use with d4T (antagonistic)"]
-        - cells: ["ABC", "Hypersensitivity reaction, fever, mucositis rash — if these occur, STOP the drug", "Tablets can be crushed"]
-        - cells: ["FTC", "Headache, diarrhoea, nausea, rash; may cause hepatotoxicity or lactic acidosis", ""]
-        - cells: ["TDF", "Renal insufficiency; decrease in bone mineral density", ""]
+        - cells: ["DTG (INSTI)", "Weight gain, insomnia, headache; rare liver injury", "Preferred anchor; very well tolerated"]
+        - cells: ["BIC (INSTI)", "Headache, diarrhoea, nausea", "Well tolerated; as BIC/FTC/TAF"]
+        - cells: ["RAL (INSTI)", "Insomnia, headache, rash", "Neonates; twice-daily dosing"]
+        - cells: ["EFV (NNRTI)", "Vivid dreams, dizziness, rash", "No longer preferred first-line; take at night"]
+        - cells: ["NVP (NNRTI)", "Rash, liver toxicity", "Mainly neonates; drug interactions"]
+        - cells: ["LPV/r (PI)", "Diarrhoea, nausea; bitter taste", "Heat-stable pellets exist, but palatability limits adherence"]
+        - cells: ["ATV (PI)", "Jaundice, prolonged PR, nephrolithiasis", "Alternative PI"]
 
     - type: "table"
-      title: "Table 26 · NNRTIs and PIs"
+      title: "Table 26 · NRTI backbone"
       columns: ["Drug", "Side-effects", "Comments"]
-      column_flex: [3, 5, 4]
+      column_flex: [3, 5, 5]
       rows:
-        - cells: ["EFV", "Strange dreams, sleepiness, rash", "Take at night; avoid taking with fatty food"]
-        - cells: ["NVP", "Rash, liver toxicity", "With rifampicin, increase NVP by ~30% or avoid; drug interactions"]
-        - cells: ["LPV/RTV", "Diarrhoea, nausea", "Take with food; bitter taste; cold chain for transport"]
-        - cells: ["ATZ", "Jaundice, prolonged PR interval, nephrolithiasis", ""]
+        - cells: ["ABC", "Hypersensitivity, fever, mucositis rash — if these occur, STOP", "Preferred backbone; tablets can be crushed"]
+        - cells: ["3TC / FTC", "Headache, abdominal pain, nausea (well tolerated)", "Backbone"]
+        - cells: ["ZDV (AZT)", "Headache, anaemia, neutropenia", "Alternative NRTI"]
+        - cells: ["TAF", "Headache, nausea", "Better renal / bone safety than TDF"]
+        - cells: ["TDF", "Renal insufficiency; lower bone mineral density", "Retained, but TAF preferred"]
 
     - type: "prose"
-      title: "Long-term effects"
+      title: "DTG and neural tube defects"
       markdown: |
-        General long-term side-effects of ART include **lipodystrophy**.
+        An early signal (Tsepamo, Botswana) suggested a small risk of **neural
+        tube defects** with **periconceptional DTG**. Updated data show the risk is
+        **very small** (**~0.19% vs ~0.09%** background). DTG can be used in
+        **adolescents of childbearing potential** with appropriate counselling.
+        General long-term ART effect: **lipodystrophy** (historically driven by
+        d4T, now removed).
 
     - type: "prose"
       title: "Immune reconstitution inflammatory syndrome (IRIS)"
@@ -75,17 +88,20 @@ topic:
     - type: "prose"
       title: "Monitoring schedule"
       markdown: |
-        Assess adherence and the need for additional support at every visit.
-        Minimum follow-up after starting ART:
-        - **infants < 12 months:** weeks 2, 4 and 8, then every 4 weeks for the
-          first year.
+        **Viral load is the preferred monitoring tool.** Check VL at **6 months**
+        after starting ART, at **12 months**, then **every 12 months** if
+        suppressed (< 1000 copies/ml). CD4 every 6 months remains useful but is
+        **secondary** to viral load.
+
+        After starting ART, review at **1–2 weeks** for tolerability and adherence,
+        then at **2–4 weeks** for laboratory testing.
+        - **infants < 12 months:** weeks 2, 4 and 8, then every 4 weeks in year 1.
         - **children > 12 months:** weeks 2, 4, 8 and 12, then every 2–3 months
           once stabilized.
         - any time there is **caregiver concern** or intercurrent illness.
 
         **Signs of a good response:** improved growth; improvement in neurological
-        symptoms and development; decreased frequency of infections (bacterial,
-        oral thrush, other opportunistic infections).
+        symptoms and development; decreased frequency of infections.
 
     - type: "prose"
       title: "Long-term follow-up"
@@ -96,5 +112,5 @@ topic:
         - Clinically unstable children should be seen **more frequently**.
 
         **Monitor at each visit:** weight and height; neurodevelopment; adherence;
-        **CD4 (%) count if available (every 6 months)**; baseline Hb or EVF (on
-        ZDV/AZT) and ALT; symptom-directed labs.
+        **viral load** on schedule (and CD4 every 6 months if available);
+        symptom-directed labs (Hb on ZDV, ALT).

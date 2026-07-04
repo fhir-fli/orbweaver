@@ -1,14 +1,20 @@
 # ============================================================
 # WHO IMCI §8.2.4 — When to change treatment (substitution, switching,
 # treatment failure, Table 27). Pocket Book 2nd ed (2013), pp.238–240.
+# ⚠️ OpenEvidence-reviewed 2026-07: VIRAL LOAD is the preferred criterion
+# for failure (clinical/immunological only where VL unavailable). Table 27
+# replaced for the DTG era — after DTG failure switch to a boosted PI
+# (DRV/r ≥ 3 yr); after legacy NNRTI/PI failure switch to DTG + optimized
+# NRTI backbone (TAF/FTC preferred, per CHAPAS-4). Substitute-vs-switch
+# distinction unchanged. Refs: DHHS/OARAC 2024; CHAPAS-4 (NEJM 2025).
 # ============================================================
 
 topic:
   id: "who-imci-8-2-4-when-to-change"
   title: "When to Change Treatment"
-  list_subtitle: "8.2.4 · substitute vs switch · failure · second-line"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "ART", "treatment failure", "second-line", "pediatric"]
+  list_subtitle: "8.2.4 · substitute vs switch · VL failure · second-line"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "ART", "treatment failure", "second-line", "viral load", "pediatric"]
   aliases:
     - "ART treatment failure"
     - "Second-line ART"
@@ -34,57 +40,52 @@ topic:
         substitutions to:
         - **severe or life-threatening toxicity** — Stevens-Johnson syndrome,
           severe liver toxicity, severe haematological effects.
-        - **drug interaction** (e.g. TB rifampicin interfering with NVP or a PI).
+        - **drug interaction** (e.g. TB rifampicin interfering with the regimen).
         - **potential non-adherence** if the child cannot tolerate the regimen.
 
     - type: "prose"
       title: "When to switch (treatment failure)"
       markdown: |
         ART failure may be due to **poor adherence**, **inadequate drug level**,
-        **pre-existing/acquired resistance**, or **inadequate potency**. Before
-        deciding a regimen is failing on clinical criteria alone, ensure:
-        - the child has received the regimen for **≥ 24 weeks**
-        - adherence is **optimal**
-        - any opportunistic infections are treated and resolved
-        - **IRIS has been excluded**
-        - the child is **adequately nourished**.
+        **resistance**, or **inadequate potency**. Before deciding a regimen is
+        failing, ensure: **≥ 24 weeks** on the regimen, **optimal adherence**, any
+        opportunistic infections treated, **IRIS excluded**, and the child
+        **adequately nourished**.
 
     - type: "prose"
-      title: "Defining treatment failure"
+      title: "Defining failure — viral load first"
       callout: true
       markdown: |
-        - **Clinical failure:** new or recurrent **WHO Stage 4** event after ≥ 24
-          weeks on ART, with adherence.
-        - **Immunological failure:** CD4 **< 200 cells/mm³** or CD4 **< 10%** in a
-          child < 5 years; or persistent CD4 **< 100/mm³** in a child > 5 years.
-        - **Virological failure:** persistent **viral load > 1000 RNA copies/ml**
-          after ≥ 24 weeks, on two consecutive measurements within 3 months, with
-          adherence.
-
-        When failure is confirmed, switch to a **second-line regimen**.
+        **Viral load is the preferred criterion.** Use clinical/immunological
+        criteria only where VL is unavailable.
+        - **Virological failure:** persistent **VL > 1000 copies/ml** after ≥ 24
+          weeks, on two consecutive measurements within 3 months, with adherence.
+        - **Clinical failure:** new/recurrent **WHO Stage 4** event after ≥ 24
+          weeks on ART.
+        - **Immunological failure:** CD4 **< 200** or **< 10%** (child < 5 yr); or
+          persistent CD4 **< 100/mm³** (child > 5 yr).
 
     - type: "prose"
-      title: "Second-line regimens"
+      title: "Second-line — the DTG era"
       markdown: |
-        Change the **entire** regimen — at least **three new drugs**, one or more
-        from a **new class**. After failure of a first-line **NNRTI-based**
-        regimen, a **boosted PI + two NRTIs** is recommended; **LPV/RTV** is the
-        preferred boosted PI.
+        Change the **whole regimen**, keeping an **optimized NRTI backbone**. The
+        **CHAPAS-4** trial (919 children) found **TAF/FTC superior** to the
+        standard ABC- or ZDV-based backbone (adjusted difference **+6.3 pp** for
+        viral suppression), and confirmed DTG as an effective second-line anchor.
 
     - type: "table"
-      title: "Table 27 · Second-line regimens"
-      columns: ["First-line", "2nd-line < 3y", "2nd-line ≥ 3y–12y"]
-      column_flex: [4, 3, 4]
+      title: "Table 27 · Second-line regimens (updated)"
+      columns: ["Failing first-line", "Switch to"]
+      column_flex: [5, 5]
       rows:
-        - cells: ["ABC + 3TC + LPV/r", "No change [a]", "ZDV + 3TC + EFV"]
-        - cells: ["ZDV + 3TC + LPV/r", "No change [a]", "ABC or TDF + 3TC + EFV"]
-        - cells: ["ABC + 3TC + EFV (or NVP)", "ZDV + 3TC + LPV/r", "ZDV + 3TC + LPV/r"]
-        - cells: ["TDF + XTC [b] + EFV (or NVP)", "—", "ZDV + 3TC + LPV/r"]
-        - cells: ["ZDV + 3TC + EFV (or NVP)", "ABC + 3TC + LPV/r", "ABC or TDF + 3TC + LPV/r"]
+        - cells: ["DTG-based", "Boosted PI (DRV/r preferred ≥ 3 yr; LPV/r or ATV/r if younger) + optimized NRTI backbone"]
+        - cells: ["NNRTI-based (legacy)", "DTG + optimized NRTI backbone (TAF/FTC preferred)"]
+        - cells: ["PI-based (legacy)", "DTG + optimized NRTI backbone (TAF/FTC preferred)"]
 
     - type: "prose"
-      title: "Table 27 notes"
+      title: "Note"
       markdown: |
-        **[a]** Could switch to a NVP-based regimen if the reason for failure is
-        poor palatability of LPV/r. **[b]** XTC = lamivudine (3TC) or emtricitabine
-        (FTC).
+        Where DTG was the failing anchor, resistance is possible — a **boosted PI
+        (DRV/r)** is the durable second-line anchor. Always pair the new anchor with
+        an **optimized NRTI backbone** (TAF/FTC preferred per CHAPAS-4), guided by
+        resistance testing where available.

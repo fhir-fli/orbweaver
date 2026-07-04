@@ -1,6 +1,10 @@
 # ============================================================
 # WHO IMCI §8.1.3 — Testing and diagnosis of HIV infection. Pocket
 # Book 2nd ed (2013), pp.229–230.
+# ✅ OpenEvidence-reviewed 2026-07: added point-of-care NAT (Xpert HIV-1
+# Qual, m-PIMA) for early infant diagnosis; updated the virological testing
+# schedule (birth → 14–21 d → 1–2 mo → 4–6 mo) and breastfeeding intervals;
+# de-emphasised ultrasensitive p24 antigen (superseded by NAT).
 # ============================================================
 
 topic:
@@ -54,32 +58,47 @@ topic:
     - type: "prose"
       title: "Virological tests"
       markdown: |
-        Testing for HIV **RNA or DNA** is the most reliable method in children
-        **< 18 months**. It may require sending a sample to a specialized
-        laboratory, but the tests are relatively cheap, easy to standardize, and
-        can be done on **dried blood spots**. Available assays:
+        Testing for HIV **RNA or DNA** (nucleic acid testing, **NAT**) is the most
+        reliable method in children **< 18 months**. It may require sending a
+        sample to a specialized laboratory, but the tests are relatively cheap,
+        easy to standardize, and can be done on **dried blood spots**. Available
+        assays:
         - **HIV DNA** on whole blood or dried blood spots
-        - **HIV RNA** on plasma or dried blood spots
-        - **ultrasensitive p24 antigen** in plasma or dried blood spots.
+        - **HIV RNA** on plasma or dried blood spots.
+
+        (Ultrasensitive **p24 antigen** is still technically available but has been
+        **superseded by NAT** and is no longer a primary recommendation.)
 
     - type: "prose"
-      title: "Interpreting virological results"
+      title: "Point-of-care NAT — a major advance"
       callout: true
       markdown: |
-        **One positive virological test at 4–8 weeks** is sufficient to diagnose
-        HIV — **start ART without delay**, and collect a **second specimen** at
-        the same time to confirm.
+        **Point-of-care NAT (POC NAT)** — e.g. **Xpert HIV-1 Qual** and
+        **m-PIMA HIV-1/2 Detect** — gives a result in **52–90 minutes** from a
+        **finger/heel-prick** sample (sensitivity **~98.6%**, specificity
+        **~99.9%**). Compared with conventional dried-blood-spot testing (results
+        in weeks to months), POC NAT dramatically **shortens turnaround** and
+        **increases ART-initiation rates**. Use POC NAT for early infant diagnosis
+        wherever available.
 
-        If the infant is still **breastfeeding** and the test is negative, repeat
-        it **6 weeks after complete cessation of breastfeeding** to confirm the
-        child is not infected. Return results to the clinic and family **within
-        4 weeks** of collection.
+    - type: "prose"
+      title: "When to do virological tests"
+      markdown: |
+        Test **as early as birth** in high-risk infants, then on a routine
+        schedule:
+        - **first routine test at 14–21 days**
+        - **at 1–2 months**
+        - **at 4–6 months**.
+
+        **One positive virological test** is sufficient to diagnose HIV — **start
+        ART without delay**, and collect a **second specimen** to confirm. Return
+        results to the clinic and family **within 4 weeks** of collection.
 
     - type: "prose"
       title: "Breastfeeding infants"
       markdown: |
-        A breastfeeding infant remains **at risk** of acquiring HIV from an
-        infected mother. Breastfeeding should **not** be stopped in order to
-        perform diagnostic testing. A **negative** viral test is hard to
-        interpret because a **6-week window after complete cessation** is required
-        before a negative result reliably indicates HIV status.
+        A breastfeeding infant remains **at risk** of acquiring HIV throughout
+        breastfeeding. **Do not stop breastfeeding to perform testing.** Test
+        **every 3 months while breastfeeding**, and again at **4–6 weeks and
+        4–6 months after complete cessation**. A **negative** result only reliably
+        excludes HIV once this post-cessation window has passed.

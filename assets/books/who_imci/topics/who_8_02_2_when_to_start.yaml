@@ -1,14 +1,20 @@
 # ============================================================
 # WHO IMCI §8.2.2 — When to start ART. Pocket Book 2nd ed (2013),
 # p.235.
+# ⚠️ OpenEvidence-reviewed 2026-07: TREAT-ALL — ART for every child
+# regardless of age, stage or CD4 (CD4 thresholds removed as eligibility
+# criteria); RAPID initiation (within days); OI exceptions (delay 2–8 wk
+# for cryptococcal/TB meningitis, disseminated MAC); DTG now preferred with
+# rifampicin (double the DTG dose). Refs: DHHS/OARAC Pediatric 2024; IDSA
+# 2024.
 # ============================================================
 
 topic:
   id: "who-imci-8-2-2-when-to-start"
   title: "When to Start ART"
-  list_subtitle: "8.2.2 · all < 60 mo · CD4 thresholds · with TB"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "ART", "CD4", "TB", "pediatric"]
+  list_subtitle: "8.2.2 · treat-all · start within days · with TB"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "ART", "treat-all", "TB", "pediatric"]
   aliases:
     - "When to start antiretroviral therapy"
   category: "medical"
@@ -18,28 +24,37 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "Under 60 months — start everyone"
+      title: "Treat all — start everyone"
       highlight: true
       markdown: |
-        All HIV-infected infants and children **< 60 months** should begin ART,
-        **irrespective of clinical or immunological stage**.
-        - All children < 60 months with confirmed HIV → **start ART**.
+        **Start ART in every HIV-infected infant, child and adolescent** —
+        **regardless of age, clinical stage or CD4 count**. The old CD4
+        thresholds (e.g. CD4 < 500 for older children) are **no longer eligibility
+        criteria**; CD4 now informs prognosis and OI prophylaxis, not the decision
+        to treat.
         - Where viral testing is unavailable, infants **< 18 months** with
           clinically diagnosed **presumptive severe HIV** → start ART, and confirm
           infection as soon as possible.
 
     - type: "prose"
-      title: "60 months and over — by CD4"
+      title: "Start rapidly — within days"
+      callout: true
       markdown: |
-        For children **≥ 60 months**, initiate ART for all with:
-        - **CD4 < 500 cells/mm³**, irrespective of WHO clinical stage.
-        - **CD4 ≤ 350 cells/mm³** → treat as a **priority**, as in adults.
+        Initiate ART **immediately or within days** of diagnosis (**rapid
+        initiation**), especially in **young infants**, where disease progresses
+        fast. Identify a clearly defined **caregiver** who understands the
+        prognosis and the requirements of ART.
 
-        The decision should also take account of the child's **social
-        environment** — identify a clearly defined caregiver who understands the
-        prognosis and the requirements of ART. Occasionally immediate ART may be
-        deferred while the child is stabilized during treatment of acute
-        infections.
+    - type: "prose"
+      title: "Exceptions — delay for certain OIs"
+      markdown: |
+        Delay ART by **2–8 weeks** — treating the opportunistic infection first —
+        in:
+        - **cryptococcal meningitis**
+        - **tuberculous meningitis**
+        - **disseminated Mycobacterium avium complex (MAC)** disease.
+
+        Delaying reduces the risk of severe/fatal **IRIS**.
 
     - type: "prose"
       title: "Starting ART with active TB"
@@ -47,8 +62,10 @@ topic:
       markdown: |
         With confirmed or presumptive **TB**, **TB treatment is the priority**.
         Start TB treatment immediately, then start ART **as soon as tolerated,
-        within the first 8 weeks** of TB therapy. On TB treatment:
-        - **> 3 years and ≥ 10 kg:** a regimen containing **EFV** is preferred.
-        - **< 3 years:** if on a **LPV/r-containing** regimen, consider adding
-          **RTV in a 1:1 ratio** of LPV:RTV for a full therapeutic dose of LPV.
-        - A **triple NNRTI-containing** regimen is an alternative.
+        within the first 8 weeks** of TB therapy — **irrespective** of CD4 and
+        stage. On rifampicin:
+        - **DTG can be used with rifampicin** by **doubling the DTG dose**
+          (weight-adjusted; twice-daily) — now the **preferred** approach given
+          DTG's superiority.
+        - EFV- or LPV/r-based options are alternatives where DTG is not available
+          (LPV/r needs added RTV to overcome rifampicin).

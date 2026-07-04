@@ -29,13 +29,14 @@ topic:
         life.
 
     - type: "prose"
-      title: "Triple drug therapy"
+      title: "Triple therapy — now INSTI-based"
       markdown: |
-        The standard first-line treatment is **three antiretroviral drugs**
-        (**triple therapy**) to suppress viral replication as much as possible and
-        arrest disease progression. **Fixed-dose combinations** are now available
-        and are preferable to syrups or single drugs — they encourage adherence,
-        reduce treatment burden, and cut cost.
+        First-line ART is **three drugs**: two NRTIs plus an anchor. The anchor of
+        choice is now an **INSTI — dolutegravir (DTG)** — for nearly all children
+        (see [§8.2.1](topic:who-imci-8-2-1-arv-drugs)), replacing the older
+        NNRTI/PI-based regimens. **Dispersible fixed-dose combinations** (e.g.
+        DTG/ABC/3TC, Triumeq PD) are preferable to syrups or single drugs — they
+        encourage adherence, reduce treatment burden, and cut cost.
 
         Follow national paediatric HIV treatment guidelines; principles and
         first-line choices are largely the same as for adults. Consider: a

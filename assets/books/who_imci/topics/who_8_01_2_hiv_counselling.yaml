@@ -1,6 +1,8 @@
 # ============================================================
 # WHO IMCI §8.1.2 — HIV counselling. Pocket Book 2nd ed (2013),
 # pp.228–229.
+# ✅ OpenEvidence-reviewed 2026-07: added opt-out testing as the current
+# standard (raises uptake while preserving the right to decline).
 # ============================================================
 
 topic:
@@ -46,6 +48,10 @@ topic:
         available, seek help from local AIDS support organizations. HIV testing
         must be **voluntary, with no coercion**, and **informed consent** must be
         obtained before testing.
+
+        In most settings the standard is now **opt-out testing** — testing is
+        performed **unless the patient/caregiver declines**. This raises testing
+        uptake while preserving the **right to refuse**.
 
     - type: "prose"
       title: "When to offer counselling and testing"
