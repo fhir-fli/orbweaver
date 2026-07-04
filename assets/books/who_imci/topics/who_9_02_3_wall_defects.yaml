@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §9.2.3 — Abdominal wall defects. Pocket Book 2nd ed (2013),
 # p.266.
+# ⚠️ OpenEvidence-reviewed 2026-07: added closure strategies (primary
+# fascial / sutureless cord-stump / staged silo); isotonic resuscitation +
+# very high fluid needs in gastroschisis (150–175 ml/kg/day third-space
+# loss); skin-flora antibiotic prophylaxis is adequate (APSA). Refs: Slidell
+# APSA 2024; Al Maawali 2021.
 # ============================================================
 
 topic:
   id: "who-imci-9-2-3-wall-defects"
   title: "Abdominal Wall Defects"
-  list_subtitle: "9.2.3 · gastroschisis · omphalocoele"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.2.3 · gastroschisis · omphalocoele · closure"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "gastroschisis", "omphalocoele", "congenital", "neonate", "pediatric"]
   aliases:
     - "Gastroschisis"
@@ -35,14 +40,26 @@ topic:
         - Apply a **sterile dressing**, and cover with a **plastic bag or cling
           film** (prevents fluid loss and hypothermia).
         - **Give nothing orally.** Pass a **nasogastric tube** for free drainage.
-        - **IV fluids:** normal saline + 5% glucose, or half-strength Darrow's
-          solution.
-          - **Shock:** 20 ml/kg bolus of normal saline or Hartmann's/Ringer's
-            lactate.
-          - **Dehydration (no shock):** 10–20 ml/kg half-strength Darrow's / normal
-            saline + 5% glucose over 20 min.
-          - Then **maintenance + replace** the volume from the nasogastric tube.
-        - **Antibiotics:** ampicillin (25–50 mg/kg IV 4× daily) + gentamicin
-          (7.5 mg/kg IV once daily) + metronidazole (15 mg/kg loading, then
-          7.5 mg/kg every 12 h starting 24 h after the loading dose).
+        - **IV fluids — isotonic** (normal saline or balanced crystalloid, + 5%
+          glucose for maintenance; avoid hypotonic fluids). **Gastroschisis fluid
+          needs are very high — up to 150–175 ml/kg/day** because exposed bowel
+          loses large volumes to third-spacing.
+          - **Shock:** 20 ml/kg bolus of Hartmann's / Ringer's lactate or normal
+            saline.
+          - **Dehydration (no shock):** 10–20 ml/kg isotonic crystalloid + 5%
+            glucose over 20 min.
+          - Then **maintenance + replace** the nasogastric losses.
+        - **Antibiotics:** **skin-flora prophylaxis is adequate** until closure
+          (APSA); a broader regimen (ampicillin + gentamicin ± metronidazole) is
+          reasonable where surgical closure will be delayed.
         - **Urgent review** by a surgeon experienced in paediatric surgery.
+
+    - type: "prose"
+      title: "Closure strategies"
+      markdown: |
+        - **Primary fascial closure** — **preferred** when abdominal domain and
+          haemodynamics permit (shorter time to feeds, shorter stay).
+        - **Sutureless closure** — using the umbilical cord stump + adhesive
+          dressing; safe and effective, often without sedation/intubation.
+        - **Staged silo reduction** — when primary closure is not possible;
+          fewer GI complications in uncomplicated cases but longer stay.

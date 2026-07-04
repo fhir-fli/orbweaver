@@ -1,14 +1,20 @@
 # ============================================================
-# WHO IMCI §9.2.5 — Congenital dislocation of the hip. Pocket Book 2nd
-# ed (2013), p.267.
+# WHO IMCI §9.2.5 — Developmental dysplasia of the hip (DDH). Pocket
+# Book 2nd ed (2013), p.267.
+# ⚠️ OpenEvidence-reviewed 2026-07: renamed to DDH (spectrum, may not be
+# present at birth); screen with BOTH Barlow + Ortolani (clinical exam has
+# limited sensitivity); ultrasound preferred < 6 mo (X-ray once ossified,
+# ~4–6 mo); selective US at 4–6 wk for risk factors; PAVLIK HARNESS first-line
+# — double nappies NOT effective. Refs: Kim AFP 2025; Singh JAMA 2024; Dwan
+# Cochrane 2022.
 # ============================================================
 
 topic:
   id: "who-imci-9-2-5-hip-dislocation"
-  title: "Congenital Hip Dislocation"
-  list_subtitle: "9.2.5 · Ortolani sign · abduction bracing"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["surgery", "hip dislocation", "DDH", "Ortolani", "congenital", "pediatric"]
+  title: "Developmental Dysplasia of the Hip"
+  list_subtitle: "9.2.5 · Barlow + Ortolani · ultrasound · Pavlik harness"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["surgery", "DDH", "hip dysplasia", "Ortolani", "Barlow", "Pavlik", "pediatric"]
   aliases:
     - "Developmental dysplasia of the hip"
     - "Congenital dislocation of the hip"
@@ -19,22 +25,45 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "Diagnosis"
+      title: "DDH — a spectrum, not just dislocation"
       highlight: true
       markdown: |
-        Detect severe cases by **routine physical examination at birth**. When
-        **unilateral**: the limb is short, there is **limited abduction** with the
-        hip flexed, and the skin crease at the back of the hip is asymmetrical. As
-        the flexed hip is abducted, a **click** can often be felt as the dislocated
-        femoral head enters the acetabulum (**Ortolani's sign**). Diagnosis
-        requires **X-ray and/or specialist ultrasound**.
+        The preferred term is now **developmental dysplasia of the hip (DDH)** — it
+        spans **mild dysplasia to frank dislocation** and **may not be present at
+        birth**. When **unilateral**: the limb is short, abduction is limited with
+        the hip flexed, and the posterior skin crease is asymmetrical.
+
+    - type: "prose"
+      title: "Screening — Barlow + Ortolani"
+      markdown: |
+        Examine the hips at **every well-child visit** in the first months using
+        **both** manoeuvres:
+        - **Ortolani** — relocates a dislocated hip (a **click/clunk** as the
+          femoral head enters the acetabulum).
+        - **Barlow** — dislocates an unstable hip.
+
+        Clinical examination alone has **limited sensitivity** — combine with
+        imaging where risk factors exist.
+
+    - type: "prose"
+      title: "Imaging"
+      markdown: |
+        - **Ultrasound is preferred in infants < 6 months** (hip is not yet
+          ossified).
+        - **X-ray** once the femoral head ossifies (**~4–6 months**).
+        - **Selective ultrasound at 4–6 weeks** for risk factors — **breech
+          presentation** or **first-degree family history** — even with a normal
+          exam.
 
     - type: "prose"
       title: "Treatment"
       callout: true
       markdown: |
-        - **Milder cases:** keep the hip **flexed and abducted** using **double
-          nappies** or an **abduction brace** for **2–3 months**. Traditional
-          back-carrying with the hip flexed and abducted serves the same purpose.
-        - **More severe cases:** keep the hip **abducted and flexed in a splint**.
+        - **< 6 months:** the **Pavlik harness** is **first-line** (flexion +
+          abduction; ~90% success in Barlow-positive hips). **Double nappies are
+          NOT effective** — do not rely on them.
+        - **> 6 months or harness failure:** **closed reduction** under general
+          anaesthesia + **spica cast**.
+        - **Open reduction** for failed closed reduction or presentation after
+          **18 months**.
         - **Review** by a surgeon experienced in paediatric surgery.

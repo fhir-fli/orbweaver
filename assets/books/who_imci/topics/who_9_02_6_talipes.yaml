@@ -1,17 +1,22 @@
 # ============================================================
 # WHO IMCI §9.2.6 — Talipes equinovarus (club foot). Pocket Book 2nd
 # ed (2013), p.268.
+# ⚠️ OpenEvidence-reviewed 2026-07: the PONSETI METHOD is the universal
+# gold standard (serial casting → percutaneous Achilles tenotomy → foot
+# abduction bracing to age 4–5 yr); extensive surgical release is largely
+# abandoned. Refs: Cady Pediatrics 2022; Bina Cochrane 2020; Wang JBJS 2024.
 # ============================================================
 
 topic:
   id: "who-imci-9-2-6-talipes"
   title: "Talipes Equinovarus (Club Foot)"
-  list_subtitle: "9.2.6 · serial casting · early treatment"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["surgery", "talipes", "club foot", "orthopaedic", "congenital", "pediatric"]
+  list_subtitle: "9.2.6 · Ponseti method · cast → tenotomy → brace"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["surgery", "talipes", "club foot", "Ponseti", "orthopaedic", "pediatric"]
   aliases:
     - "Club foot"
     - "Talipes equinovarus"
+    - "Ponseti method"
   category: "medical"
 
   page_number: 268
@@ -27,13 +32,24 @@ topic:
         (inturning of the heel), and **inturning of the forefoot**.
 
     - type: "prose"
-      title: "Treatment — start early"
+      title: "Ponseti method — the gold standard"
       callout: true
       markdown: |
-        - **Mild (positional, passively correctable):** simple **stretching** of
-          the foot shortly after birth.
-        - **Moderate:** **serial manipulation** beginning shortly after birth —
-          maintain position with **tape strapping** or well-padded **plaster of
-          Paris casts**. Repeat every **2 weeks** until corrected. Special splints
-          may be needed until the child walks.
-        - **Severe or late presentation:** **surgical repair**.
+        The **Ponseti method** is the **universal standard** worldwide, including in
+        resource-limited settings, and is effective even for **severe and
+        syndromic** clubfoot. Three phases:
+        - **1 · Serial casting** — weekly **above-knee casts** with gentle
+          manipulation around the talar head; typically **5–8 casts**. Begin in the
+          **first 1–3 weeks** of life.
+        - **2 · Percutaneous Achilles tenotomy** — needed in **~90%** to correct
+          residual equinus; done under **local anaesthesia**, then a final cast for
+          **3 weeks**.
+        - **3 · Foot-abduction bracing** — the **most critical** phase: **23 h/day
+          for 3 months**, then night/nap (12–14 h/day) until age **4–5 years**.
+          **Non-adherence to bracing is the main cause of relapse.**
+
+    - type: "prose"
+      title: "Surgery is now rarely needed"
+      markdown: |
+        Extensive **surgical releases have been largely abandoned** (poor long-term
+        outcomes). Reserve surgery for the few feet that fail Ponseti management.

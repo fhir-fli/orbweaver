@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §9.2.1 — Cleft lip and palate. Pocket Book 2nd ed (2013),
 # pp.264–265.
+# ⚠️ OpenEvidence-reviewed 2026-07: "Pierre Robin syndrome" → "sequence" +
+# stepwise airway management; repair timing updated (lip 3–6 mo, palate
+# 6–14 mo — TOPS NEJM 2023 favours earlier); specialized cleft feeding
+# bottles; multidisciplinary-team follow-up. Refs: ACPA; TOPS (NEJM 2023);
+# Shakir 2025.
 # ============================================================
 
 topic:
   id: "who-imci-9-2-1-cleft"
   title: "Cleft Lip & Palate"
-  list_subtitle: "9.2.1 · feeding · timing of repair"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.2.1 · feeding · timing of repair · MDT"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "cleft lip", "cleft palate", "congenital", "feeding", "pediatric"]
   aliases:
     - "Cleft lip and palate"
@@ -31,22 +36,42 @@ topic:
         Infants with **isolated cleft lip** feed normally. **Cleft palate** brings
         feeding difficulty — the infant can swallow but not suck adequately, and
         milk regurgitates through the nose and may be **aspirated**. If **Pierre
-        Robin syndrome** is present (small mandible, backward placement of the jaw),
-        there may be **upper airway obstruction during sleep**.
+        Robin sequence** is present (micrognathia → glossoptosis → airway
+        obstruction), there may be **upper airway obstruction during sleep**.
 
-        Feed with **expressed breast milk** from a cup and spoon (or bottles, if
-        adequate sterility), delivering a bolus of milk over the back of the
-        tongue (spoon, pipette, special teat, or pouring device); the infant then
-        swallows normally. Sleep-related airway obstruction can cause **hypoxaemia
-        and growth failure** and needs specialist paediatric treatment. Monitor
-        feeding and growth closely.
+        Feed with **expressed breast milk** from a cup and spoon, a **squeezable
+        cleft feeding bottle**, or bottle (if adequate sterility), delivering a
+        bolus over the back of the tongue (spoon, pipette, special teat, or pouring
+        device); the infant then swallows normally. Monitor feeding and growth
+        closely.
+
+    - type: "prose"
+      title: "Robin sequence — airway ladder"
+      callout: true
+      markdown: |
+        Sleep-related airway obstruction can cause **hypoxaemia and growth
+        failure**. Manage in a **stepwise** way — **~60–70% succeed without
+        surgery**:
+        - **prone / lateral positioning** first,
+        - **nasopharyngeal airway** next,
+        - escalate to **mandibular distraction osteogenesis** or **tongue-lip
+          adhesion** only for refractory cases (specialist referral).
 
     - type: "prose"
       title: "Timing of repair"
       callout: true
       markdown: |
-        - **Lip:** surgical closure at about **6 months** of age (earlier if it is
-          safe to anaesthetise and technically possible).
-        - **Palate:** closure at **1 year** of age.
-        - Follow up after surgery to monitor **hearing** (middle-ear infections are
-          common) and **speech** development.
+        - **Lip:** closure at **3–6 months** (some centres do early lip repair
+          earlier). The old **"Rule of 10s"** (10 weeks, 10 lb, Hb > 10) is now a
+          **guideline, not a strict rule**.
+        - **Palate:** closure at **6–14 months** — **earlier favours speech**
+          (TOPS trial); complete **by 18 months** at the latest.
+
+    - type: "prose"
+      title: "Multidisciplinary follow-up"
+      markdown: |
+        Cleft care is a **team pathway**: monitor **hearing** (middle-ear
+        infections are common) and **speech**; formal speech evaluation at
+        **2–4 years**; velopharyngeal-insufficiency assessment; **alveolar bone
+        grafting at ~8–9 years**; orthodontics; and possible orthognathic surgery
+        in adolescence. Refer to a **multidisciplinary cleft team**.

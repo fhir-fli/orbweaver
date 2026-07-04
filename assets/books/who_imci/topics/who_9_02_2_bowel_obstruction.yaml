@@ -1,13 +1,17 @@
 # ============================================================
 # WHO IMCI §9.2.2 — Bowel obstruction (newborn). Pocket Book 2nd ed
 # (2013), pp.265–266.
+# ⚠️ OpenEvidence-reviewed 2026-07: pyloric stenosis 3–8 wk (peak 4–6);
+# ULTRASOUND is the standard confirmatory test (sens/spec ~100%; also
+# malrotation); pyloromyotomy is definitive. Bile-vomit red-alert retained.
+# Refs: Gerrie/Navarro RadioGraphics 2023; Staerkle Cochrane 2021.
 # ============================================================
 
 topic:
   id: "who-imci-9-2-2-bowel-obstruction"
   title: "Bowel Obstruction (Newborn)"
-  list_subtitle: "9.2.2 · bile-stained vomit = emergency"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.2.2 · bile-stained vomit = emergency · ultrasound"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "bowel obstruction", "pyloric stenosis", "neonate", "congenital", "pediatric"]
   aliases:
     - "Neonatal bowel obstruction"
@@ -34,12 +38,22 @@ topic:
         - **Proximal** obstruction → vomiting with minimal distension.
         - **Distal** obstruction → distension, with vomiting occurring late.
         - **Pyloric stenosis** → projectile (forceful) **non-bilious** vomiting,
-          typically at **3–6 weeks**; dehydration and electrolyte abnormalities;
-          an **olive-like mass** (enlarged pylorus) may be palpable in the upper
-          abdomen.
+          typically at **3–8 weeks** (peak 4–6); dehydration and electrolyte
+          abnormalities; an **olive-like mass** (enlarged pylorus) may be palpable
+          in the upper abdomen.
 
         Consider other causes of distension: ileus from sepsis, necrotizing
         enterocolitis, congenital syphilis, ascites.
+
+    - type: "prose"
+      title: "Confirm with ultrasound"
+      markdown: |
+        **Ultrasound is the standard confirmatory test** for hypertrophic pyloric
+        stenosis (sensitivity/specificity approaching **100%**) and helps diagnose
+        **malrotation with volvulus**. Point-of-care ultrasound is increasingly
+        available even in resource-limited settings. Definitive treatment of
+        pyloric stenosis is **pyloromyotomy** (open or laparoscopic) after fluid /
+        electrolyte correction.
 
     - type: "prose"
       title: "Bile-stained vomit is an emergency"

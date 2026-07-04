@@ -31,11 +31,21 @@ topic:
       title: "This section covers"
       markdown: |
         - [Cleft lip and palate](topic:who-imci-9-2-1-cleft) — feeding, timing of
-          repair.
+          repair, Robin sequence.
         - [Bowel obstruction (newborn)](topic:who-imci-9-2-2-bowel-obstruction) —
           bile-stained vomit = emergency.
         - [Abdominal wall defects](topic:who-imci-9-2-3-wall-defects) —
           gastroschisis / omphalocoele.
-        - [Myelomeningocoele](topic:who-imci-9-2-4-myelomeningocoele)
-        - [Congenital dislocation of the hip](topic:who-imci-9-2-5-hip-dislocation)
-        - [Talipes equinovarus (club foot)](topic:who-imci-9-2-6-talipes)
+        - [Myelomeningocoele](topic:who-imci-9-2-4-myelomeningocoele) — prenatal
+          repair, folic acid.
+        - [Developmental dysplasia of the hip](topic:who-imci-9-2-5-hip-dislocation)
+          — Barlow/Ortolani, Pavlik harness.
+        - [Talipes equinovarus (club foot)](topic:who-imci-9-2-6-talipes) — Ponseti
+          method.
+
+    - type: "prose"
+      title: "Multiple anomalies → genetic evaluation"
+      markdown: |
+        An infant with **multiple congenital anomalies** warrants **genetic
+        evaluation** (chromosomal microarray and other testing are now widely
+        recommended) — refer where available.
