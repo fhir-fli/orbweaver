@@ -1,16 +1,24 @@
 # ============================================================
-# WHO IMCI §8.4.1 — Tuberculosis (incl. isoniazid preventive therapy).
+# WHO IMCI §8.4.1 — Tuberculosis (incl. TB preventive therapy).
 # Pocket Book 2nd ed (2013), pp.243–244.
+# ⚠️ OpenEvidence-reviewed 2026-07: TB preventive therapy now offers
+# short-course rifamycin regimens (3HP, 4R, 3HR) preferred over isoniazid
+# monotherapy; TPT eligibility broadened (all children > 12 mo with HIV +
+# positive TST/IGRA or TB contact, regardless of exposure history);
+# rifamycin–INSTI interaction (DTG double dose with daily rifampin > 20 kg);
+# DTG-based ART now preferred with TB. Refs: DHHS/OARAC Pediatric OI 2025;
+# ATS/CDC/ERS/IDSA 2025.
 # ============================================================
 
 topic:
   id: "who-imci-8-4-1-tuberculosis"
   title: "Tuberculosis"
-  list_subtitle: "8.4.1 · same regimen · start with ART · IPT"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "TB", "tuberculosis", "isoniazid", "IPT", "pediatric"]
+  list_subtitle: "8.4.1 · same regimen · start with ART · TPT (3HP/4R/3HR)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "TB", "tuberculosis", "isoniazid", "TPT", "rifapentine", "pediatric"]
   aliases:
     - "HIV and TB"
+    - "TB preventive therapy"
     - "Isoniazid preventive therapy"
   category: "medical"
 
@@ -26,36 +34,48 @@ topic:
         often difficult to confirm. Early on, signs resemble those in HIV-negative
         children; **pulmonary TB** is still the commonest form. As immunity
         declines, **disseminated TB, miliary TB and tuberculous
-        lymphadenopathy** become more common.
+        lymphadenopathy** become more common. For screening, **TST is preferred
+        over IGRA in children < 5 years**.
 
     - type: "prose"
-      title: "Treat TB, then start ART early"
+      title: "Treat TB, then start ART early — DTG-based"
       callout: true
       markdown: |
         HIV-infected children with **active TB** should **begin TB treatment
         immediately**. If not yet on ART, start it **as soon as tolerated, within
-        the first 8 weeks** of TB therapy — **irrespective** of CD4 count and
-        clinical stage.
+        the first 8 weeks** of TB therapy — **irrespective** of CD4 and stage.
 
         Treat TB with the **same anti-TB drug regimen** as for uninfected children
         (national TB guidelines, or [§4.7.2](topic:who-imci-4-7-2-tuberculosis)).
+        **DTG-based ART is now preferred** with TB — with **rifampicin**, **double
+        the DTG dose** (twice-daily; weight-adjusted, esp. > 20 kg), replacing the
+        older EFV/LPV-r-based approaches.
 
     - type: "prose"
-      title: "Isoniazid preventive therapy (IPT)"
+      title: "TB preventive therapy (TPT) — short-course preferred"
       markdown: |
         Screen **all** HIV-infected children for TB (cough, fever, weight loss,
-        contact). If **no active TB**, give **isoniazid preventive therapy** daily
-        for **6 months** to:
-        - infants/children **exposed to TB** from a household contact, with no
-          evidence of active disease, who are well and thriving.
-        - children **> 12 months** living with HIV (including those previously
-          treated for TB), unlikely to have active TB and not known to be exposed.
+        contact). If **no active TB**, give TPT — short-course rifamycin regimens
+        are now **preferred** over 6–9 months of isoniazid alone:
+        - **3HP** — weekly **isoniazid + rifapentine × 12 doses** (children ≥ 2 yr
+          on compatible ART) — best completion rates.
+        - **4R** — daily **rifampin × 4 months** (all ages).
+        - **3HR** — daily **isoniazid + rifampin × 3 months** (all ages).
+        - **Alternative:** **6 or 9 months of daily isoniazid** (10 mg/kg/day) —
+          the only 2013 option; see the child monthly.
 
-        **Dose: isoniazid 10 mg/kg daily for ≥ 6 months.** See the child monthly
-        and give a 1-month supply at each visit.
+        Mind **rifamycin–ART interactions** (esp. with INSTIs): DTG needs
+        **twice-daily dosing** with daily rifampin.
 
     - type: "prose"
-      title: "Note"
+      title: "Who should get TPT"
       markdown: |
-        Infants living with HIV who are **unlikely to have TB** and **not known to
-        have been exposed** should **not** receive IPT as part of HIV care.
+        Give TPT to:
+        - infants/children **exposed to TB** (household contact), no active
+          disease, well and thriving.
+        - **all children > 12 months with HIV** who have a **positive TST/IGRA or a
+          TB contact** — **regardless of exposure history**.
+
+        (The 2013 restriction to only exposed/unlikely children is **too narrow**.)
+        Infants with HIV who are unlikely to have TB and never exposed still need
+        careful screening rather than automatic TPT.

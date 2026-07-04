@@ -1,14 +1,20 @@
 # ============================================================
 # WHO IMCI §8.4.5 — Kaposi sarcoma. Pocket Book 2nd ed (2013),
 # pp.246–247.
+# ⚠️ OpenEvidence-reviewed 2026-07: ART is first-line for all HIV+ KS (ART
+# alone may suffice for localized T0; add chemo for disseminated/visceral
+# T1); liposomal doxorubicin first-line chemo (paclitaxel alt; pomalidomide
+# FDA-approved) — paediatric data limited; AVOID glucocorticoids (KS
+# progression); KS-IRIS within 3–6 mo of ART. Refs: DHHS/OARAC Adult+Peds
+# OI 2025; NCCN Kaposi Sarcoma 2025.
 # ============================================================
 
 topic:
   id: "who-imci-8-4-5-kaposi"
   title: "Kaposi Sarcoma"
-  list_subtitle: "8.4.5 · nodular lesions · palatal · biopsy"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "Kaposi sarcoma", "skin lesions", "pediatric"]
+  list_subtitle: "8.4.5 · ART first-line · nodular lesions · biopsy"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "Kaposi sarcoma", "skin lesions", "doxorubicin", "pediatric"]
   aliases:
     - "Kaposi sarcoma"
   category: "medical"
@@ -26,6 +32,35 @@ topic:
         periorbital bruising. Diagnosis is usually clinical, but can be confirmed
         by **needle biopsy** of skin lesions or lymph node.
 
-        Also suspect Kaposi in children with **persistent diarrhoea, weight loss,
-        intestinal obstruction, abdominal pain, or large pleural effusion**.
-        Consider referral to a larger hospital for management.
+        Also suspect Kaposi with **persistent diarrhoea, weight loss, intestinal
+        obstruction, abdominal pain, or large pleural effusion**. Consider referral
+        to a larger hospital.
+
+    - type: "prose"
+      title: "ART is first-line therapy"
+      callout: true
+      markdown: |
+        **Start ART in all HIV-infected patients with KS.**
+        - **Localized (T0)** disease: **ART alone may be sufficient**.
+        - **Disseminated / visceral (T1)** disease: add **systemic chemotherapy**
+          to ART — **liposomal doxorubicin** first-line (**paclitaxel** alternative;
+          **pomalidomide** is FDA-approved after ART failure). Paediatric data are
+          limited — consult specialist/adult guidelines. Refer.
+
+    - type: "prose"
+      title: "Avoid glucocorticoids"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Avoid glucocorticoids in any form** (systemic, inhaled, topical,
+        intra-articular) in a child with KS — steroids are associated with **KS
+        progression**.
+
+    - type: "prose"
+      title: "KS-associated IRIS"
+      markdown: |
+        **KS-IRIS** may occur **3–6 months** after starting ART — lesional
+        swelling and oedema. Start **systemic KS-directed therapy** for KS-IRIS.

@@ -1,12 +1,18 @@
 # ============================================================
 # WHO IMCI §8.3.3 — Nutrition. Pocket Book 2nd ed (2013), p.243.
+# ⚠️ OpenEvidence-reviewed 2026-07: breastfeeding extended to 12–24 months
+# with ART + viral suppression (shared decision-making in high-income
+# settings); corrected energy supplementation (10% asymptomatic, 20–30%
+# symptomatic/weight loss); SAM caloric targets are the SAME as for
+# uninfected children (no special 50–100% bump). Refs: WHO 2016; DHHS/OARAC
+# Pediatric OI 2025; AAP 2024.
 # ============================================================
 
 topic:
   id: "who-imci-8-3-3-nutrition"
   title: "Nutrition"
-  list_subtitle: "8.3.3 · breastfeeding · energy-rich food · SAM"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "8.3.3 · BF 12–24 mo on ART · energy targets"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "nutrition", "breastfeeding", "malnutrition", "pediatric"]
   aliases:
     - "HIV nutrition"
@@ -21,21 +27,26 @@ topic:
       highlight: true
       markdown: |
         Mothers of infants known to be HIV-infected are **strongly encouraged to
-        breastfeed exclusively for 6 months** and to continue breastfeeding up to
-        **1 year**. Older children should eat a **varied, energy-rich diet** to
-        increase energy intake and ensure adequate micronutrient intake.
+        breastfeed exclusively for 6 months**, then continue with complementary
+        foods. Since **2016**, WHO recommends breastfeeding for **12–24 months (or
+        longer)** where the mother is **on ART with sustained viral suppression**.
+        In high-income settings the approach is **shared decision-making** (see
+        [§8.5.2](topic:who-imci-8-5-2-infant-feeding)). Older children should eat a
+        **varied, energy-rich diet**.
 
     - type: "prose"
       title: "Assess nutrition routinely"
       markdown: |
         Assess nutritional status (weight and height) at every scheduled visit.
-        Energy intake may need to be increased by **25–30%** if the child loses
-        weight or grows poorly.
+        Increase energy intake by:
+        - **~10%** in **asymptomatic** HIV-infected children.
+        - **20–30%** in **symptomatic** children or those with weight loss.
 
     - type: "prose"
       title: "HIV with severe acute malnutrition"
       markdown: |
-        Manage HIV-infected children with **severe acute malnutrition** according
-        to the guidelines for uninfected children
-        ([Chapter 7](topic:who-imci-7-1-sam)), and give **50–100% additional
-        energy-rich foods**.
+        Manage HIV-infected children with **severe acute malnutrition** by the
+        **same** protocol and **same caloric targets** as uninfected children
+        ([Chapter 7](topic:who-imci-7-1-sam)) — there is no HIV-specific 50–100%
+        energy bump. Watch for the higher rates of treatment failure and comorbid
+        infection.

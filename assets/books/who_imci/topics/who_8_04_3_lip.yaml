@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §8.4.3 — Lymphoid interstitial pneumonitis (LIP). Pocket
 # Book 2nd ed (2013), p.245.
+# ⚠️ OpenEvidence-reviewed 2026-07: noted LIP is now RARE with widespread
+# ART (mostly late presenters); constrictive obliterative bronchiolitis +
+# bronchiectasis have emerged as the leading chronic lung diseases in
+# perinatally-acquired HIV on ART. Treatment protocol unchanged. Refs:
+# Nesheim 2021; Frigati 2020; Attia 2017.
 # ============================================================
 
 topic:
   id: "who-imci-8-4-3-lip"
   title: "Lymphoid Interstitial Pneumonitis"
-  list_subtitle: "8.4.3 · LIP · steroids only if hypoxic"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "8.4.3 · LIP (now rare) · steroids only if hypoxic"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "LIP", "lymphoid interstitial pneumonitis", "pediatric"]
   aliases:
     - "LIP"
@@ -17,6 +22,16 @@ topic:
   page_number: 245
 
   blocks:
+
+    - type: "prose"
+      title: "Now rare in the ART era"
+      callout: true
+      markdown: |
+        LIP was the commonest chronic lung disease of paediatric HIV **before
+        ART**; with widespread ART it has become **rare** and is now seen mainly in
+        children who present **late** with advanced disease. In children on ART,
+        **constrictive obliterative bronchiolitis** and **bronchiectasis** are now
+        the leading chronic lung diseases — early ART dramatically reduces LIP.
 
     - type: "prose"
       title: "Often asymptomatic early"

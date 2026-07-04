@@ -22,10 +22,11 @@ topic:
       highlight: true
       markdown: |
         Beyond ART, three interventions save HIV-positive children's lives:
-        - [Vaccination](topic:who-imci-8-3-1-vaccination) — give the full EPI
-          schedule, with modifications for BCG and yellow fever.
+        - [Vaccination](topic:who-imci-8-3-1-vaccination) — the full EPI schedule
+          **plus rotavirus, varicella, HPV and meningococcal**, with CD4-guided
+          caution for live vaccines (BCG, yellow fever).
         - [Co-trimoxazole prophylaxis](topic:who-imci-8-3-2-cotrimoxazole) —
           prevents PCP, and protects against common bacterial infections,
           toxoplasmosis and malaria.
-        - [Nutrition](topic:who-imci-8-3-3-nutrition) — breastfeeding, energy-rich
-          food, routine nutritional assessment.
+        - [Nutrition](topic:who-imci-8-3-3-nutrition) — breastfeeding **up to
+          24 months with ART**, energy-rich food, routine nutritional assessment.

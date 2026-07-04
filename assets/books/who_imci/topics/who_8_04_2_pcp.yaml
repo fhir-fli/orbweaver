@@ -1,18 +1,21 @@
 # ============================================================
-# WHO IMCI §8.4.2 — Pneumocystis jiroveci pneumonia (PCP). Pocket Book
+# WHO IMCI §8.4.2 — Pneumocystis jirovecii pneumonia (PCP). Pocket Book
 # 2nd ed (2013), pp.244–245.
+# ✅ OpenEvidence-reviewed 2026-07: "jiroveci"→"jirovecii"; added
+# atovaquone (and dapsone/TMP) as alternatives; corticosteroids for
+# moderate/severe PCP within 72 h; secondary prophylaxis after treatment.
+# Refs: DHHS/OARAC Pediatric OI 2025.
 # ============================================================
 
 topic:
   id: "who-imci-8-4-2-pcp"
   title: "Pneumocystis Pneumonia (PCP)"
   list_subtitle: "8.4.2 · suspect early · high-dose co-trimoxazole"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "PCP", "pneumocystis", "pneumonia", "co-trimoxazole", "pediatric"]
   aliases:
     - "PCP"
-    - "Pneumocystis jiroveci pneumonia"
-  category: "medical"
+    - "Pneumocystis jirovecii pneumonia"
 
   page_number: 244
 
@@ -49,10 +52,13 @@ topic:
       callout: true
       markdown: |
         - **High-dose co-trimoxazole** (8 mg/kg TMP / 40 mg/kg SMX) oral or
-          preferably **IV, three times daily for 3 weeks**.
-        - If a **severe drug reaction**, change to **pentamidine** (4 mg/kg once
-          daily by IV infusion) for 3 weeks.
-        - **Prednisolone 1–2 mg/kg/day for 1 week**, then taper — helpful early if
-          **severe hypoxia or severe respiratory distress**.
-        - **Continue co-trimoxazole prophylaxis** on recovery, and ensure **ART**
-          is given.
+          preferably **IV, three times daily for 3 weeks** (first-line).
+        - **Alternatives:** **pentamidine** (4 mg/kg once daily IV) for a severe
+          drug reaction; **atovaquone**, or **dapsone + TMP**, for
+          mild-to-moderate PCP.
+        - **Corticosteroids** for **moderate/severe** PCP (PaO₂ < 70 mmHg or
+          A–a gradient > 35 mmHg) — start **within 72 h**: prednisolone
+          **1–2 mg/kg/day**, then taper.
+        - After treatment, continue **secondary prophylaxis** (co-trimoxazole)
+          until CD4 exceeds the age-specific threshold, and ensure **ART** is
+          given.

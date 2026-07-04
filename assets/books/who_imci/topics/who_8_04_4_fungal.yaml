@@ -1,14 +1,21 @@
 # ============================================================
 # WHO IMCI §8.4.4 — Fungal infections (candidiasis, cryptococcal
 # meningitis). Pocket Book 2nd ed (2013), p.246.
+# ⚠️ OpenEvidence-reviewed 2026-07: cryptococcal meningitis substantially
+# revised — CrAg (serum + CSF) diagnosis; induction amphotericin B
+# 1 mg/kg (or liposomal 3–4 mg/kg) + flucytosine 100–150 mg/kg/day;
+# AMBITION single-dose liposomal regimen (adults, not yet validated in
+# children); consolidation fluconazole 12 mg/kg; maintenance minimum 1 year;
+# DELAY ART to the end of the 2-week induction. Refs: ECMM/ISHAM/ASM 2024;
+# DHHS/OARAC Pediatric OI 2025.
 # ============================================================
 
 topic:
   id: "who-imci-8-4-4-fungal"
   title: "Fungal Infections"
   list_subtitle: "8.4.4 · candidiasis · cryptococcal meningitis"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "candidiasis", "thrush", "cryptococcal meningitis", "pediatric"]
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "candidiasis", "thrush", "cryptococcal meningitis", "flucytosine", "pediatric"]
   aliases:
     - "Oesophageal candidiasis"
     - "Cryptococcal meningitis"
@@ -23,8 +30,9 @@ topic:
       highlight: true
       markdown: |
         **Oral thrush:** nystatin (100 000 U/ml) suspension **1–2 ml into the
-        mouth 4× daily for 7 days**. If unavailable, apply **1% gentian violet**.
-        If ineffective, **2% miconazole gel 5 ml twice daily** if available.
+        mouth 4× daily for 7 days**; if unavailable, **1% gentian violet** or **2%
+        miconazole gel**. For **moderate-to-severe or refractory** oral thrush, use
+        **fluconazole 3–6 mg/kg once daily**.
 
         Suspect **oesophageal candidiasis** with difficulty/pain on swallowing,
         reluctance to eat, excessive salivation, or crying during feeds — ± visible
@@ -41,13 +49,45 @@ topic:
           of disseminated candidiasis (e.g. leukopenia).
 
     - type: "prose"
-      title: "Cryptococcal meningitis"
-      callout: true
+      title: "Cryptococcal meningitis — diagnose with CrAg"
+      highlight: true
       markdown: |
         Suspect cryptococcus in any HIV-infected child with signs of meningitis —
         often **subacute**, with chronic headache or only mental status changes.
-        An **India ink stain** of CSF confirms the diagnosis.
-        - **Amphotericin B 0.5–1.5 mg/kg/day for 14 days**, then
-        - **Fluconazole 6–12 mg/kg (max 800 mg) for 8 weeks**.
-        - Then **fluconazole 6 mg/kg daily (max 200 mg) prophylaxis** after
-          treatment.
+        **Cryptococcal antigen (CrAg)** in **serum and CSF** — by **lateral flow
+        assay** — is **more sensitive** than India ink and is the recommended test.
+
+    - type: "prose"
+      title: "Induction (2 weeks)"
+      callout: true
+      markdown: |
+        - **Preferred:** amphotericin B deoxycholate **1 mg/kg/day** (or
+          **liposomal amphotericin B 3–4 mg/kg/day**) **+ flucytosine
+          100–150 mg/kg/day in 4 divided doses**.
+        - **Liposomal** amphotericin is preferred if **renal insufficiency** or
+          risk thereof.
+        - **Resource-limited (adults):** single-dose **liposomal amphotericin B
+          10 mg/kg + flucytosine + fluconazole 1200 mg/day** (AMBITION) — **not yet
+          validated in children**.
+        - If **flucytosine unavailable:** amphotericin B ± **high-dose
+          fluconazole**.
+
+    - type: "prose"
+      title: "Consolidation & maintenance"
+      markdown: |
+        - **Consolidation (≥ 8 weeks):** **fluconazole 12 mg/kg/day (max 800 mg)**.
+        - **Maintenance (secondary prophylaxis):** **fluconazole 6 mg/kg/day
+          (max 200 mg)** for a **minimum of 1 year**. May stop in a child **≥ 6 yr**
+          with **CD4 ≥ 100/mm³** and **undetectable viral load** on ≥ 3 months ART.
+
+    - type: "prose"
+      title: "Delay ART during induction"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Do NOT start ART during the 2-week induction.** Delay ART until the
+        **end of induction** — starting earlier raises the risk of **fatal
+        IRIS**.

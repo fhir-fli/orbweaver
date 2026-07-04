@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §8.3.2 — Co-trimoxazole prophylaxis. Pocket Book 2nd ed
 # (2013), pp.241–242.
+# ⚠️ OpenEvidence-reviewed 2026-07: age-stratified discontinuation
+# criteria (continue < 5 yr; ≥ 6 yr may stop after ≥ 6 mo ART with
+# CD4 ≥ 15% or ≥ 200/mm³ for > 3 mo); ARROW-trial note on prolonged
+# prophylaxis in high-burden sub-Saharan settings; atovaquone added as an
+# alternative. Refs: DHHS/OARAC Pediatric OI 2025; ARROW (NEJM 2014).
 # ============================================================
 
 topic:
   id: "who-imci-8-3-2-cotrimoxazole"
   title: "Co-trimoxazole Prophylaxis"
   list_subtitle: "8.3.2 · who · how long · doses · discontinuation"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["HIV", "co-trimoxazole", "prophylaxis", "PCP", "pediatric"]
   aliases:
     - "Cotrimoxazole prophylaxis"
@@ -31,32 +36,39 @@ topic:
       markdown: |
         - **All infants born to HIV-positive mothers** — start **4–6 weeks after
           birth** (or first encounter), and continue until HIV is definitively
-          excluded **and** the mother is no longer breastfeeding (no longer at
-          risk from breast milk).
+          excluded **and** the mother is no longer breastfeeding.
         - **All HIV-infected children** — continue even when on ART.
 
     - type: "prose"
-      title: "How long to give"
+      title: "When to discontinue — age-stratified"
+      callout: true
       markdown: |
-        - **HIV-exposed children:** for the first year, or until HIV is
-          definitively ruled out and the mother is no longer breastfeeding.
-        - **On ART:** may stop once clinical/immunological indicators confirm
-          immune restoration for **≥ 6 months** (it is not known whether it keeps
-          protecting after immune restoration).
-        - **History of PCP:** continue **indefinitely**.
+        - **HIV-exposed (uninfected):** stop once HIV is confidently excluded and
+          breastfeeding has ended (per the criteria below).
+        - **Infected, age < 5 years:** **continue** — do **not** stop on CD4
+          criteria.
+        - **Infected, age ≥ 6 years:** may discontinue after **≥ 6 months on ART**
+          with **CD4 ≥ 15% or ≥ 200/mm³ for > 3 consecutive months**;
+          **reinstitute** if CD4 falls below the threshold.
+        - **History of PCP:** continue until CD4 exceeds the age threshold on ART.
+        - **Do NOT discontinue** if the child is **not on ART**.
 
     - type: "prose"
-      title: "When to discontinue"
+      title: "Prolonged prophylaxis in high-burden settings"
       markdown: |
-        - Severe cutaneous reactions (**Stevens-Johnson**), renal/hepatic
-          insufficiency, or severe haematological toxicity.
-        - After HIV is confidently **excluded** in an exposed child:
-          non-breastfed with a negative virological test; breastfed < 18 months
-          with negative virological test 6 weeks after cessation; breastfed
-          > 18 months with negative serological test 6 weeks after cessation.
-        - **HIV-infected children:** continue until **5 years and on ART with a
-          sustained CD4 > 25%**.
-        - **Do NOT discontinue** if the child is **not on ART**.
+        The **ARROW** trial (758 children, Uganda/Zimbabwe) showed **continued
+        co-trimoxazole** in children on ART with **high CD4** still reduced
+        hospitalizations — including where malaria is not endemic. In
+        **resource-limited, high-infection-burden** settings, **prolonged
+        prophylaxis may be warranted even after immune reconstitution**.
+
+    - type: "prose"
+      title: "Excluding HIV in an exposed child"
+      markdown: |
+        Stop only after HIV is confidently excluded: non-breastfed with a negative
+        virological test; breastfed < 18 months with a negative virological test
+        6 weeks after cessation; breastfed > 18 months with a negative serological
+        test 6 weeks after cessation.
 
     - type: "table"
       title: "Doses — trimethoprim 6–8 mg/kg once daily"
@@ -70,8 +82,8 @@ topic:
     - type: "prose"
       title: "Allergy and follow-up"
       markdown: |
-        If **allergic** to co-trimoxazole, **dapsone** is the best alternative —
-        can be given from 4 weeks of age at **2 mg/kg orally once daily**.
+        If **allergic** to co-trimoxazole, alternatives are **dapsone** (from 4
+        weeks, **2 mg/kg orally once daily**) or **atovaquone**.
 
         Assess tolerance and adherence at **every** clinic/follow-up visit —
         initially monthly, then every 3 months if well tolerated.

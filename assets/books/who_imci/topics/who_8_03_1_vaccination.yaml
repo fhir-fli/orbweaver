@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §8.3.1 — Vaccination. Pocket Book 2nd ed (2013), pp.240–241.
+# ⚠️ OpenEvidence-reviewed 2026-07: added rotavirus, varicella, HPV
+# (3-dose) and meningococcal (from 2 mo); CD4 thresholds for live vaccines
+# (yellow fever, MMR, varicella); softened the BCG prohibition (SAGE 2017 —
+# may be considered if well and stable on ART); expanded pneumococcal
+# schedule. Refs: DHHS/OARAC Pediatric OI 2025; IDSA 2024; SAGE 2017.
 # ============================================================
 
 topic:
   id: "who-imci-8-3-1-vaccination"
   title: "Vaccination"
-  list_subtitle: "8.3.1 · full EPI · BCG & yellow fever caveats"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["HIV", "vaccination", "BCG", "measles", "EPI", "pediatric"]
+  list_subtitle: "8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  tags: ["HIV", "vaccination", "BCG", "measles", "rotavirus", "HPV", "EPI", "pediatric"]
   aliases:
     - "HIV vaccination"
   category: "medical"
@@ -20,40 +25,59 @@ topic:
       title: "Give the full EPI schedule"
       highlight: true
       markdown: |
-        HIV-exposed and infected children should receive **all** Expanded
-        Programme on Immunization (EPI) vaccines — including **H. influenzae type
-        B** and **pneumococcal** vaccine — according to the national schedule.
-        Schedules may need to be modified for HIV-infected and exposed children.
+        HIV-exposed and infected children should receive **all** EPI vaccines —
+        including **Hib**, **pneumococcal**, and (added since 2013) **rotavirus,
+        varicella, HPV and meningococcal** vaccines — according to the national and
+        immunocompromised-child schedules. **Inactivated** vaccines are safe; some
+        **live** vaccines need a CD4 check (below).
 
     - type: "prose"
-      title: "Measles — extra early dose"
+      title: "Measles / MMR"
       markdown: |
-        Because of increased risk of early and severe measles, infants with HIV
-        should receive a dose of **standard measles vaccine at 6 months** and a
-        **second dose as soon as possible after 9 months** — unless they are
-        **severely immunocompromised** at that time.
+        Because of increased risk of early and severe measles, give an early
+        measles dose at **6 months** and a second **after 9 months** (measles-
+        endemic settings). Children vaccinated **before effective ART** should
+        receive **two appropriately spaced MMR doses after ART is established**,
+        **unless severely immunosuppressed** (CD4 < 15% or < 200/mm³).
 
     - type: "prose"
-      title: "Pneumococcal / Hib"
+      title: "New / expanded vaccines"
       markdown: |
-        - **Pneumococcal conjugate** vaccine → give to all children; may be
-          **delayed if severely immunocompromised**.
-        - **Hib conjugate** vaccine → give to all children; may be **delayed if
-          severely immunocompromised**.
+        - **Rotavirus:** give to HIV-infected/exposed infants **irrespective of
+          CD4**.
+        - **Varicella** (VZV-seronegative, 1–8 yr): give if **CD4 > 15%**;
+          **contraindicated** if CD4 low.
+        - **HPV:** use a **3-dose schedule** (0, 1–2 mo, ≥ 6 mo) for all children
+          with HIV (not the 2-dose immunocompetent schedule).
+        - **Pneumococcal:** after the primary PCV series, give **additional PCV20
+          or PPSV23** from **age 2 years**.
+        - **Meningococcal:** MenACWY from **age 2 months** (earlier than the
+          general schedule).
 
     - type: "prose"
-      title: "BCG and yellow fever — CAUTION"
+      title: "BCG — caution, not absolute"
       callout: true
       palette:
         alert: "0xFFD32F2F"
         alert_fill: "0xFFFDECEA"
         alert_text: "0xFFB71C1C"
       markdown: |
-        **BCG:** infants with HIV are at high risk for **disseminated BCG
-        disease** — do **NOT** give BCG to children known to be **HIV-infected**.
-        As infants cannot always be identified as HIV-infected at birth, BCG is
-        still given to all infants in areas with **high TB and HIV prevalence**,
-        except those known to be HIV-infected.
+        Infants with HIV are at risk of **disseminated BCG disease**. Do **NOT**
+        give BCG to children with **symptomatic HIV or severe immunosuppression**.
+        SAGE (2017) allows BCG to be **considered** in a child with HIV who is
+        **clinically well and immunologically stable on ART**, especially in
+        high-TB-burden settings. As infants cannot always be identified as infected
+        at birth, BCG is still given at birth to all infants in high TB+HIV areas
+        except those known to be infected.
 
-        **Yellow fever:** do **NOT** administer to children with **symptomatic**
-        HIV infection.
+    - type: "prose"
+      title: "Yellow fever — CD4 threshold"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Yellow fever vaccine is a **live** vaccine — **contraindicated** in
+        children with **symptomatic HIV** or **CD4 < 15%**. It may be considered in
+        an asymptomatic child with adequate CD4 if exposure risk is high.
