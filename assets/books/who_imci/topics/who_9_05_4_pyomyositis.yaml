@@ -1,12 +1,21 @@
 # ============================================================
 # WHO IMCI §9.5.4 — Pyomyositis. Pocket Book 2nd ed (2013), p.291.
+# ⚠️ OpenEvidence-reviewed 2026-07: ULTRASOUND is the primary bedside
+# imaging (finds collections, guides aspiration; MRI gold standard "where
+# available"); most common site is the PELVIS (iliopsoas/obturator, ~52–57%)
+# not the thigh; NOT all cases need drainage — early "invasive" stage (before
+# frank abscess) often responds to antibiotics alone, drainage for the
+# suppurative stage / failure to improve; duration 5–10 days → 3–4 WEEKS
+# total (IV until improving then oral); add clindamycin where MRSA prevalent;
+# S. pyogenes is the 2nd pathogen. Refs: Vij J Pediatr Orthop 2021; Weber
+# PIDJ 2024; Cadete PIDJ 2025.
 # ============================================================
 
 topic:
   id: "who-imci-9-5-4-pyomyositis"
   title: "Pyomyositis"
-  list_subtitle: "9.5.4 · pus in muscle · incise & drain · cloxacillin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.5.4 · pus in muscle · ultrasound · cloxacillin · 3–4 wk"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "pyomyositis", "muscle infection", "pediatric"]
   aliases:
     - "Pyomyositis"
@@ -23,14 +32,27 @@ topic:
         In pyomyositis there is **pus within the substance of a muscle**.
         - **Fever, tenderness and swelling** of the involved muscle. A fluctuant
           mass may **not** be detected if the inflammation is deep in the muscle.
-        - **Commonly occurs in the thigh.**
+        - The **most common site is the pelvis** (iliopsoas / obturator muscles,
+          ~52–57%), then the **lower limb including the thigh**. Pelvic pyomyositis
+          can mimic a hip or abdominal problem.
+        - Organisms: **S. aureus** predominates; **Streptococcus pyogenes** is the
+          second most common.
 
     - type: "prose"
       title: "Treatment"
       callout: true
       markdown: |
-        - **Incision and drainage** (usually needs general anaesthesia).
-        - Leave a **drain** in the abscess cavity for **2–3 days**.
-        - **X-ray** to exclude underlying **osteomyelitis**.
-        - **Cloxacillin 50 mg/kg IM/IV 4× daily for 5–10 days** — commonest organism
-          **S. aureus**.
+        - **Ultrasound** is the primary bedside imaging — it identifies
+          intramuscular collections and guides aspiration, and is widely available;
+          **MRI** is the gold standard **where available**. Use imaging (or X-ray)
+          to look for underlying **osteomyelitis**.
+        - **Not every case needs surgery.** In the **early ("invasive") stage
+          before a frank abscess forms**, antibiotics alone often succeed. **Drain
+          (incision or image-guided aspiration) for the suppurative stage or
+          failure to improve** — leave a drain 2–3 days; large collections may need
+          general anaesthesia.
+        - **Antibiotics: cloxacillin 50 mg/kg IV 4× daily** first-line (covers
+          S. aureus and S. pyogenes); **clindamycin** where MRSA is prevalent.
+        - **Duration is longer than the old 5–10 days:** give **IV until clinical
+          improvement** (typically 1–2 weeks), then **oral to complete ~3–4 weeks
+          total**, guided by clinical response and CRP.

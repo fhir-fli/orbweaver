@@ -1,13 +1,21 @@
 # ============================================================
 # WHO IMCI §9.5.3 — Septic arthritis. Pocket Book 2nd ed (2013),
 # pp.289–290.
+# ⚠️ OpenEvidence-reviewed 2026-07: DROP chloramphenicol → cloxacillin
+# (low MRSA) / clindamycin (MRSA) / ceftriaxone (Salmonella-SCD). Duration
+# ≥3 weeks → 10–14 days TOTAL for uncomplicated primary septic arthritis
+# with rapid improvement + CRP fall (PIDS/IDSA 2023; Finnish RCT). Repeated
+# NEEDLE ASPIRATION is a valid alternative to arthrotomy — important where
+# theatre/GA is not immediately available (Malawi RCT) — EXCEPT hip/shoulder
+# (AVN risk → open/arthroscopic drainage). No adjunctive corticosteroids.
+# CRP q2–3 days guides IV→oral. Refs: PIDS/IDSA 2023 (Woods); NEJM Li 2019.
 # ============================================================
 
 topic:
   id: "who-imci-9-5-3-septic-arthritis"
   title: "Septic Arthritis"
-  list_subtitle: "9.5.3 · aspirate joint · pus destroys a joint"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.5.3 · drain joint · cloxacillin/ceftriaxone · 10–14 days"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "septic arthritis", "joint infection", "aspiration", "pediatric"]
   aliases:
     - "Septic arthritis"
@@ -32,11 +40,21 @@ topic:
       callout: true
       markdown: |
         - **Aspirate the joint** to confirm the diagnosis (under sterile
-          conditions) — commonest organism **S. aureus**.
-        - **Urgent review** by a surgeon — the joint needs **washing out**. **Pus
-          under pressure destroys a joint.**
-        - **Antibiotics** (as for osteomyelitis): **chloramphenicol 25 mg/kg 3×
-          daily** for children **< 3 years** and those with **sickle-cell disease**;
-          or **cloxacillin 50 mg/kg IM/IV 4× daily** for children **> 3 years** —
-          for at least **3 weeks**. Parenteral until improved, then oral to
-          complete.
+          conditions) — commonest organism **S. aureus**. Send fluid for Gram stain
+          and culture; check **CRP** where available.
+        - **Drain the joint urgently — pus under pressure destroys a joint.**
+          Formal surgical washout (arthrotomy) is effective, but **repeated needle
+          aspiration is a valid alternative** and is often the practical choice
+          **where theatre or general anaesthesia is not immediately available**
+          (~10% need a second aspiration). **Exception: the hip and shoulder**
+          usually need **open or arthroscopic drainage** (risk of avascular
+          necrosis).
+        - **Antibiotics** (as for osteomyelitis; chloramphenicol is **no longer
+          recommended**): **cloxacillin 50 mg/kg IV 4× daily** first-line (low
+          MRSA); **clindamycin** where MRSA is prevalent; **ceftriaxone** for
+          Salmonella / sickle-cell disease.
+        - **Duration — much shorter than before:** **10–14 days total** for
+          uncomplicated primary septic arthritis with rapid clinical improvement
+          and a falling CRP; give IV until improving, then switch to oral. If there
+          is **adjacent osteomyelitis**, treat for the longer **3–4 weeks**.
+        - **Do not add corticosteroids** — the harms outweigh any benefit.

@@ -1,12 +1,21 @@
 # ============================================================
 # WHO IMCI §9.5.1 — Abscess. Pocket Book 2nd ed (2013), pp.287–288.
+# ⚠️ OpenEvidence-reviewed 2026-07: I&D + TB culture unchanged; add
+# CLINDAMYCIN (WHO-EML) as alternative to cloxacillin where CA-MRSA
+# prevalence is significant (~20% cloxacillin non-susceptibility in
+# sub-Saharan Africa); perirectal/bowel-flora abscess → CEFTRIAXONE +
+# metronidazole (avoids gentamicin drug-monitoring, unavailable at many
+# first-referral sites). LMIC lens: well-drained simple abscesses need
+# little/no antibiotic, but a short course is a reasonable safety margin
+# where follow-up is unreliable. Refs: PIDS/IDSA 2021; SIS 2017;
+# Lancet ID sub-Saharan AMR 2018.
 # ============================================================
 
 topic:
   id: "who-imci-9-5-1-abscess"
   title: "Abscess"
-  list_subtitle: "9.5.1 · incise & drain · cloxacillin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.5.1 · incise & drain · cloxacillin / clindamycin"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "abscess", "incision and drainage", "pediatric"]
   aliases:
     - "Abscess"
@@ -29,10 +38,18 @@ topic:
       title: "Treatment"
       callout: true
       markdown: |
-        - **Incision and drainage** (large abscesses may need general anaesthesia).
-          Send aspirate for microscopy and culture (including **TB**) if available.
-        - **Antibiotics: cloxacillin 25–50 mg/kg 4× daily for 5 days** or until
-          surrounding cellulitis resolves.
-        - If **bowel flora** suspected (e.g. perirectal abscess): **ampicillin
-          (25–50 mg/kg IM/IV 4× daily) + gentamicin (7.5 mg/kg IM/IV once daily) +
-          metronidazole (10 mg/kg 3× daily)**.
+        - **Incision and drainage is the cornerstone** (large abscesses may need
+          general anaesthesia). Send aspirate for microscopy and culture (including
+          **TB** — important where TB is prevalent) if available.
+        - **A well-drained simple abscess with no surrounding cellulitis may need
+          little or no antibiotic** — but where follow-up is unreliable, a **short
+          course is a reasonable safety margin**: **cloxacillin 25–50 mg/kg 4×
+          daily for ~5 days** or until surrounding cellulitis resolves.
+        - **Where community-acquired MRSA is prevalent**, use **clindamycin
+          (10–13 mg/kg 3–4× daily)** — on the WHO Essential Medicines List — as an
+          alternative to cloxacillin.
+        - If **bowel flora** suspected (e.g. perirectal abscess): **ceftriaxone
+          (80 mg/kg IV once daily) + metronidazole (10 mg/kg 3× daily)** is
+          preferred — it avoids the drug-level monitoring that gentamicin needs and
+          is often unavailable at first-referral level. (The older ampicillin +
+          gentamicin + metronidazole regimen remains an acceptable substitute.)

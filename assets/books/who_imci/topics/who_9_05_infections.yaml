@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §9.5 — Infections requiring surgery (overview of the nested
 # group). Pocket Book 2nd ed (2013), pp.287–291.
+# ⚠️ OpenEvidence-reviewed 2026-07: nuance the "requires surgery" framing —
+# a well-drained simple abscess may need little antibiotic, needle
+# aspiration can replace arthrotomy for many septic joints, and early
+# pyomyositis may respond to antibiotics alone; title kept as a safe
+# clinical prompt.
 # ============================================================
 
 topic:
   id: "who-imci-9-5-infections"
   title: "Infections Requiring Surgery"
   list_subtitle: "9.5 · abscess · osteomyelitis · septic arthritis · pyomyositis"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "abscess", "osteomyelitis", "septic arthritis", "pediatric"]
   aliases:
     - "Surgical infections"
@@ -22,7 +27,10 @@ topic:
       highlight: true
       markdown: |
         These infections collect **pus** and generally need **drainage** in
-        addition to antibiotics:
+        addition to antibiotics — though **not every case needs an operation**: a
+        well-drained simple abscess may need little antibiotic, needle aspiration
+        can replace open washout for many septic joints, and early pyomyositis may
+        settle on antibiotics alone.
         - [Abscess](topic:who-imci-9-5-1-abscess) — collection of pus anywhere.
         - [Osteomyelitis](topic:who-imci-9-5-2-osteomyelitis) — bone infection.
         - [Septic arthritis](topic:who-imci-9-5-3-septic-arthritis) — joint

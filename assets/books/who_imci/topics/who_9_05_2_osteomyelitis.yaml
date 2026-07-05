@@ -1,13 +1,22 @@
 # ============================================================
 # WHO IMCI §9.5.2 — Osteomyelitis. Pocket Book 2nd ed (2013),
 # pp.288–289.
+# ⚠️ OpenEvidence-reviewed 2026-07: DROP chloramphenicol (47% S. aureus
+# non-susceptibility in sub-Saharan Africa + aplastic-anaemia risk) —
+# cloxacillin first-line (low MRSA), clindamycin where MRSA prevalent,
+# CEFTRIAXONE for Salmonella/sickle-cell. Add KINGELLA KINGAE (6 mo–4 yr,
+# beta-lactam-susceptible). Duration ≥5 weeks → 3–4 weeks TOTAL; IV only
+# 3–5 days then early oral switch guided by CRP (≥50% fall). Ultrasound
+# detects subperiosteal pus early; MRI is gold standard "where available".
+# All named drugs are on the WHO EML. Refs: PIDS/IDSA 2021 (Woods);
+# NEJM Peltola 2014; Lancet ID sub-Saharan AMR 2018.
 # ============================================================
 
 topic:
   id: "who-imci-9-5-2-osteomyelitis"
   title: "Osteomyelitis"
-  list_subtitle: "9.5.2 · acute vs chronic · long antibiotic course"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.5.2 · cloxacillin / ceftriaxone · 3–4 wk · early oral switch"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["surgery", "osteomyelitis", "bone infection", "sickle cell", "pediatric"]
   aliases:
     - "Osteomyelitis"
@@ -23,7 +32,9 @@ topic:
       markdown: |
         Infection of a bone, usually from **blood spread** (also open fractures).
         Commonest organisms: **S. aureus**, **Salmonella** (in sickle-cell disease)
-        and **Mycobacterium tuberculosis**.
+        and **Mycobacterium tuberculosis**. In children **6 months–4 years**,
+        **Kingella kingae** is now a leading cause — it grows poorly in culture but
+        is **susceptible to beta-lactams**, so empiric cloxacillin covers it.
 
     - type: "prose"
       title: "Diagnosis"
@@ -31,6 +42,11 @@ topic:
         - **Acute:** pain and tenderness of the involved bone; usually intermittent
           fever; **refusal to move** the affected limb or **bear weight**. Early
           X-ray may be normal — changes take **12–14 days** to appear.
+        - **Ultrasound** can detect a **subperiosteal collection earlier** than
+          X-ray and is increasingly available at first-referral level. **MRI** is
+          the gold standard — use **where available / if referral is possible**.
+        - Send **blood culture** and, **where available, CRP** (useful for tracking
+          response and timing the switch to oral antibiotics).
         - **Chronic:** chronic draining sinuses over the bone; X-ray shows elevated
           periosteum and **sequestrum** (dead bone).
 
@@ -38,11 +54,22 @@ topic:
       title: "Treatment"
       callout: true
       markdown: |
-        - **Review** by a surgeon experienced in paediatric surgery.
-        - **Antibiotics** (long course): **chloramphenicol 25 mg/kg 3× daily** for
-          children **< 3 years** and those with **sickle-cell disease**; or
-          **cloxacillin 50 mg/kg IM/IV 4× daily** for children **> 3 years** — for
-          at least **5 weeks**. Give parenteral until clinically improved, then
-          orally to complete the course.
+        - **Review** by a surgeon experienced in paediatric surgery; drain a
+          subperiosteal or soft-tissue abscess.
+        - **Antibiotic choice** (chloramphenicol is **no longer recommended** —
+          high resistance and marrow toxicity):
+          - **First-line, low MRSA prevalence:** **cloxacillin (or flucloxacillin)
+            50 mg/kg IV 4× daily**.
+          - **Where MRSA is prevalent / for broader empiric cover:** **clindamycin
+            10–13 mg/kg IV 3–4× daily** (max 40 mg/kg/day) — good bone penetration,
+            excellent oral bioavailability, on the WHO EML.
+          - **Salmonella osteomyelitis (sickle-cell disease):** **ceftriaxone
+            80 mg/kg IV once daily**.
+        - **Duration — much shorter than before:** total **3–4 weeks** for
+          uncomplicated disease. Give **IV for ~3–5 days** until clinical
+          improvement (afebrile, less pain, better function — a **≥ 50% fall in
+          CRP** where measurable supports the switch), then complete the course
+          **orally**. Individualise longer courses for complicated cases (large
+          abscess, septic emboli, pathological fracture).
         - **Chronic osteomyelitis:** **sequestrectomy** (removal of dead bone) is
           usually needed as well as antibiotics.
