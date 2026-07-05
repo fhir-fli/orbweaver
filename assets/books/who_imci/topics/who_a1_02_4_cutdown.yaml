@@ -1,13 +1,17 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.2.4 — Venous cut-down (long saphenous). Pocket
-# Book 2nd ed (2013), p.343. Authored faithfully; pending OE review.
+# Book 2nd ed (2013), p.343.
+# OpenEvidence-reviewed 2026-07: added a note that intraosseous access is
+#   now PREFERRED over cut-down in emergencies (faster, comparable
+#   reliability — IO has largely replaced saphenous cut-down). Technique
+#   confirmed accurate — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-a1-2-4-cutdown"
   title: "Venous Cut-Down"
   list_subtitle: "A1.2.4 · long saphenous vein"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + IO-preferred"
   tags: ["procedures", "venous cutdown", "saphenous vein", "annex 1", "pediatric"]
   aliases:
     - "Cut-down"
@@ -23,7 +27,11 @@ topic:
       highlight: true
       markdown: |
         A venous cut-down is **less appropriate if speed is essential** (it
-        takes longer than an intraosseous or peripheral line).
+        takes longer than an intraosseous or peripheral line). **Prefer
+        [intraosseous access](topic:who-imci-a1-2-2-intraosseous) in an
+        emergency** — it is faster and comparably reliable, and has largely
+        replaced saphenous cut-down. Reserve cut-down for when IO needles are
+        unavailable.
 
     - type: "prose"
       title: "Technique"

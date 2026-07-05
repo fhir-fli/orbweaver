@@ -1,13 +1,20 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.2.5 — Umbilical vein catheterization. Pocket Book
-# 2nd ed (2013), pp.344–345. Authored faithfully; pending OE review.
+# 2nd ed (2013), pp.344–345.
+# OpenEvidence-reviewed 2026-07:
+#   - Catheter size: 3.5 Fr (preterm/small) or 5 Fr (term) — was 5 Fr only.
+#   - Insertion depth: for emergency/resuscitation, advance only until blood
+#     flows freely (a low-lying ~2–5 cm catheter reduces hepatic injury);
+#     was a flat 4–6 cm (NRP 2025).
+#   - Added: confirm tip position on X-ray where possible. Air-embolism
+#     warning retained.
 # ============================================================
 
 topic:
   id: "who-imci-a1-2-5-umbilical"
   title: "Umbilical Vein Catheterization"
   list_subtitle: "A1.2.5 · neonatal resuscitation / exchange"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + NRP 2025 / NEVAT"
   tags: ["procedures", "umbilical vein", "neonate", "resuscitation", "exchange transfusion", "annex 1", "pediatric"]
   aliases:
     - "Umbilical catheter"
@@ -30,9 +37,9 @@ topic:
       title: "Technique"
       markdown: |
         - Attach a **sterile three-way tap** and syringe to a **sterile
-          5 French gauge catheter** and fill with sterile **0.9% saline**,
-          then **close the tap to prevent air entry** (which may cause an air
-          embolus).
+          catheter — 3.5 French for a preterm/small infant, 5 French for a
+          term infant** — and fill with sterile **0.9% saline**, then **close
+          the tap to prevent air entry** (which may cause an air embolus).
         - Clean the umbilical cord and surrounding skin with antiseptic, then
           **tie a suture around the base** of the cord.
         - **Cut the cord 1–2 cm from the base** with a sterile scalpel.
@@ -40,11 +47,15 @@ topic:
           umbilical arteries (two thicker-walled vessels). Hold the cord near
           the umbilical vein with sterile forceps.
         - Hold the catheter tip with sterile forceps and **advance it into the
-          vein** (it should pass easily) for **4–6 cm**.
+          vein** (it should pass easily) — for **emergency resuscitation,
+          advance only until blood flows freely** (a **low-lying catheter,
+          ~2–5 cm** past the abdominal wall in a term neonate, reduces the
+          risk of hepatic injury).
         - Check the catheter is **not kinked** and that **blood draws back
           easily**; if there is a block, pull gently on the cord, pull the
           catheter back partly, and re-insert.
         - **Secure** with two sutures into the cord, leaving 5-cm ends. Tape
-          the suture and catheter.
+          the suture and catheter. **Confirm the tip position on X-ray where
+          possible.**
         - **After removal**, apply pressure to the umbilical stump for
           **5–10 min**.

@@ -1,15 +1,21 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.2.3 — Central vein cannulation (external jugular,
-# femoral). Pocket Book 2nd ed (2013), pp.342–343. Authored faithfully
-# from source; pending OE review.
+# femoral). Pocket Book 2nd ed (2013), pp.342–343.
+# OpenEvidence-reviewed 2026-07:
+#   - Added a where-available ultrasound-guidance recommendation (halves
+#     failure & arterial puncture — de Souza 2018 meta); the internal
+#     jugular is the common US-guided site.
+#   - Softened femoral-line "up to 5 days" → remove as soon as no longer
+#     needed (no strict time-based replacement).
+#   - Landmark external-jugular & femoral techniques confirmed accurate.
 # ============================================================
 
 topic:
   id: "who-imci-a1-2-3-central-vein"
   title: "Central Vein Cannulation"
   list_subtitle: "A1.2.3 · external jugular · femoral"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["procedures", "central vein", "external jugular", "femoral vein", "annex 1", "pediatric"]
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + de Souza 2018 / ASE 2025"
+  tags: ["procedures", "central vein", "external jugular", "internal jugular", "femoral vein", "ultrasound", "annex 1", "pediatric"]
   aliases:
     - "Central line"
     - "Femoral vein"
@@ -27,6 +33,11 @@ topic:
         cannula from a central vein **as soon as possible** (i.e. when IV
         fluid is no longer essential, or a peripheral vein can be cannulated
         successfully).
+
+        **Use ultrasound guidance when available** — it roughly halves both
+        cannulation failure and arterial puncture. With ultrasound the
+        **internal jugular vein** is the commonly used site; without it, the
+        **external jugular** and **femoral** approaches below are safer.
 
     - type: "prose"
       title: "External jugular vein"
@@ -61,6 +72,7 @@ topic:
           in place; apply a **sterile occlusive dressing** and another over
           the cannula; fix firmly with tape. A **splint** may be needed to
           prevent hip flexion.
-        - **Monitor closely** and keep the leg immobile. A femoral line can
-          last **up to 5 days**. On removal, apply **firm pressure for
-          2–3 min**.
+        - **Monitor closely** and keep the leg immobile. There is **no strict
+          time limit** — **remove the line as soon as it is no longer needed**
+          (or if there is infection or malfunction). On removal, apply **firm
+          pressure for 2–3 min**.

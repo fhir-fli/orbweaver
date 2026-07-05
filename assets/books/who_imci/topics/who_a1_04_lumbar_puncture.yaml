@@ -1,13 +1,24 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.4 — Lumbar puncture. Pocket Book 2nd ed (2013),
-# pp.345–347. Authored faithfully; pending OE review.
+# pp.345–347.
+# OpenEvidence-reviewed 2026-07:
+#   - Contraindications broadened: + focal neuro deficit, new-onset
+#     seizures, immunocompromise, GCS ≤ 12, coagulopathy/severe
+#     thrombocytopenia/anticoagulants, papilloedema (Tunkel IDSA / van de
+#     Beek Lancet 2021). "If in doubt, treat + delay" kept.
+#   - Needle gauge: 25G for neonates/young infants (halves traumatic taps —
+#     Flett Neo-LP 2020); 22G older infants/children, 20G alt.
+#   - Positioning: sitting may be preferred in neonates (higher success).
+#   - CSF volume: 1–2 ml preferable into separate containers if extra tests
+#     (PCR/glucose/protein) needed.
+#   - Traumatic tap: still send for culture/Gram if repeat not feasible.
 # ============================================================
 
 topic:
   id: "who-imci-a1-4-lumbar-puncture"
   title: "Lumbar Puncture"
   list_subtitle: "A1.4 · contraindications, position, technique"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + IDSA / Neo-LP 2020"
   tags: ["procedures", "lumbar puncture", "lp", "csf", "meningitis", "annex 1", "pediatric"]
   aliases:
     - "Lumbar puncture"
@@ -27,9 +38,15 @@ topic:
         alert_fill: "0xFFFDECEA"
         alert_text: "0xFFB71C1C"
       markdown: |
-        **Do NOT perform an LP if there are:**
+        **Do NOT perform an LP (or image the head first) if there are:**
         - **Signs of raised intracranial pressure** — unequal pupils, rigid
-          posture, paralysis of any limbs or trunk, irregular breathing.
+          posture, paralysis of any limbs or trunk, irregular breathing, or
+          **papilloedema**.
+        - **Focal neurological deficit** or **new-onset seizures**.
+        - **Moderate-to-severe reduced consciousness** (GCS ≤ 12).
+        - **Coagulopathy** — severe thrombocytopenia, a bleeding disorder, or
+          anticoagulant use.
+        - **Immunocompromise** (lower threshold to image first).
         - **Skin infection** in the area the needle would pass through.
 
         If contraindications are present, weigh the value of the information
@@ -42,7 +59,8 @@ topic:
       markdown: |
         Two possible positions:
         - **Lying on the left side** — particularly for **young infants**.
-        - **Sitting** — particularly for **older children**.
+        - **Sitting** — particularly for **older children** (and may give a
+          **higher success rate in neonates**).
 
         **Lying on the side:** use a hard surface; place the child on the side
         so the vertebral column is **parallel** to the surface and the
@@ -66,8 +84,10 @@ topic:
     - type: "prose"
       title: "Perform the puncture"
       markdown: |
-        - Use a lumbar-puncture needle with stylet — **22 gauge** for a young
-          infant, **20 gauge** for an older infant or child (if unavailable,
+        - Use a lumbar-puncture needle with stylet — **25 gauge** for a
+          **neonate / young infant** (halves the rate of a bloody
+          'traumatic tap'), **22 gauge** for an older infant or child (**20
+          gauge** as an alternative in older children; if unavailable,
           hypodermic needles may be used). Insert into the **middle of the
           intervertebral space**, aiming **towards the umbilicus**.
         - **Advance slowly** — the needle passes easily until it meets the
@@ -76,9 +96,12 @@ topic:
           this decrease is not always felt, so advance carefully.
         - **Withdraw the stylet** — CSF should drip out. If none, reinsert the
           stylet and advance slightly.
-        - Obtain **0.5–1 ml of CSF** into a sterile container.
+        - Obtain **0.5–1 ml of CSF** (**1–2 ml preferable** if extra tests
+          such as PCR, glucose or protein are needed) into **sterile
+          container(s)** — separate containers for different analyses.
         - Withdraw needle and stylet completely, press over the site for a few
           seconds, and apply a sterile dressing.
         - If the needle goes too far it may puncture a **lumbar vein**
           (**'traumatic tap'**, bloody CSF) — withdraw and **repeat in
-          another disc space**.
+          another disc space**. If a repeat is not feasible, **still send the
+          specimen for culture and Gram stain.**

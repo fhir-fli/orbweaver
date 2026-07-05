@@ -4,13 +4,23 @@
 # Authored faithfully from source; pending OpenEvidence review.
 # A1.1.1 IM, A1.1.2 SC, A1.1.3 intradermal kept as sections on one page
 # (each a short paragraph in the source).
+# OpenEvidence-reviewed 2026-07:
+#   - IM site (SAFETY): removed the 2013 dorsogluteal ("upper outer quadrant
+#     of the buttock") recommendation — sciatic-nerve injury risk. Now
+#     age-based: vastus lateralis (infants), vastus lateralis/deltoid (1–2y),
+#     deltoid (≥3y); ventrogluteal (NOT dorsogluteal) if a gluteal site is
+#     needed (CDC/WHO immunization).
+#   - Aspiration: noted it is NOT required for vaccines (no large vessels at
+#     recommended sites; increases pain) but may be retained for therapeutic
+#     injections.
+#   - SC / intradermal confirmed accurate — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-a1-1-injections"
   title: "Giving Injections"
   list_subtitle: "A1.1 · IM · subcutaneous · intradermal"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + CDC/WHO immunization"
   tags: ["procedures", "injection", "intramuscular", "subcutaneous", "intradermal", "annex 1", "pediatric"]
   aliases:
     - "Injections"
@@ -37,15 +47,22 @@ topic:
     - type: "prose"
       title: "A1.1.1 Intramuscular"
       markdown: |
-        - **Site (child > 2 years):** the **outer thigh** or the **upper
-          outer quadrant of the buttock**, well away from the sciatic nerve.
-        - **Younger or severely malnourished children:** the **outer side of
-          the thigh midway between hip and knee**, or over the **deltoid**
-          in the upper arm.
+        - **Choose the site by age** (the **outer side of the thigh** —
+          vastus lateralis — is the workhorse in small children):
+          - **Infants (< 1 year):** anterolateral thigh (**vastus
+            lateralis**).
+          - **1–2 years:** vastus lateralis or **deltoid**.
+          - **≥ 3 years:** **deltoid** preferred.
+        - **Do NOT use the dorsogluteal site** (upper outer quadrant of the
+          buttock) — **risk of sciatic-nerve injury**. If a gluteal site is
+          unavoidable, use the **ventrogluteal** site.
         - Push the needle (**23–25 gauge**) into the muscle at a **90° angle**
-          (45° in the thigh). **Draw back the plunger** — if no blood, inject
-          slowly; if blood appears, withdraw slightly and try again.
-        - Remove the needle and press a swab firmly over the site.
+          (45° in the thigh). Remove the needle and press a swab firmly over
+          the site.
+        - **Aspiration** (drawing back the plunger to check for blood) is
+          **not required for vaccines** (no large vessels at these sites; it
+          increases pain), but may be retained for **therapeutic injections**
+          — if blood appears, withdraw slightly and try again.
 
     - type: "prose"
       title: "A1.1.2 Subcutaneous"

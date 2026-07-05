@@ -1,14 +1,18 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.2 — Giving parenteral fluids (overview of the
 # nested group). Pocket Book of Hospital Care for Children (2nd ed,
-# 2013), p.338. Authored faithfully from source; pending OE review.
+# 2013), p.338.
+# OpenEvidence-reviewed 2026-07: route hierarchy confirmed appropriate —
+#   no change. (Ultrasound-guided access noted by reviewer but deferred
+#   from the overview as likely beyond first-level scope; where-available
+#   US notes added to A1.2.1 peripheral IV and A1.2.3 central vein.)
 # ============================================================
 
 topic:
   id: "who-imci-a1-2-parenteral-fluids"
   title: "Giving Parenteral Fluids"
   list_subtitle: "A1.2 · routes for IV access"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 (no change)"
   tags: ["procedures", "iv access", "parenteral fluids", "annex 1", "pediatric"]
   aliases:
     - "Parenteral fluids"

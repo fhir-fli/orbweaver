@@ -1,14 +1,22 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.6 — Supra-pubic aspiration. Pocket Book 2nd ed
-# (2013), p.350. Authored faithfully; pending OE review.
+# (2013), p.350.
+# OpenEvidence-reviewed 2026-07:
+#   - Added ultrasound (POCUS) guidance where available (success ~97% vs
+#     ~60% blind — Mahdipour RCT 2021).
+#   - Added urethral catheterization as an equally acceptable alternative
+#     (AAP 2011/2021), esp. when US is unavailable.
+#   - Clarified needle angle (perpendicular to the abdominal wall ≈ 10–20°
+#     from vertical). Strengthened the no-urine-bags point (88–99% false-
+#     positive culture rate). 23G confirmed.
 # ============================================================
 
 topic:
   id: "who-imci-a1-6-suprapubic"
   title: "Supra-Pubic Aspiration"
   list_subtitle: "A1.6 · uncontaminated urine sample"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["procedures", "suprapubic aspiration", "urine", "uti", "annex 1", "pediatric"]
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + POCUS / AAP UTI"
+  tags: ["procedures", "suprapubic aspiration", "urine", "uti", "ultrasound", "annex 1", "pediatric"]
   aliases:
     - "Suprapubic aspiration"
     - "Bladder tap"
@@ -22,14 +30,25 @@ topic:
       title: "Technique"
       highlight: true
       markdown: |
+        - **Use ultrasound guidance when available** — it confirms bladder
+          fullness and guides the needle, raising success from ~60% to ~97%.
         - Aspirate to a depth of **3 cm** in the **midline**, at the
           **proximal transverse crease above the pubis**, with a **23-gauge
           needle** under **sterile conditions**.
         - The bladder is punctured in the **midline, just above the
-          symphysis**, at an angle of about **10–20°**.
-        - Do this **only in a child with a full bladder**, which can be
-          demonstrated by **percussion**.
-        - **Do not use urine bags** to collect the sample — the specimen may
-          become contaminated.
+          symphysis** — insert **perpendicular to the abdominal wall** (≈
+          **10–20° from vertical** given the body's curvature).
+        - Do this **only in a child with a full bladder**, confirmed by
+          **percussion** (or ultrasound).
+        - **Do not use urine bags** to collect a culture sample — bag
+          specimens have an **88–99% false-positive** culture rate.
         - Have a **clean urine jar ready** in case the child passes urine
           during the procedure.
+
+    - type: "prose"
+      title: "Alternative — urethral catheterization"
+      markdown: |
+        **Urethral catheterization** is an **equally acceptable** way to
+        obtain an uncontaminated urine sample in a non-toilet-trained child,
+        and is a good alternative when **ultrasound is unavailable** to
+        confirm bladder fullness.

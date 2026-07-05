@@ -1,13 +1,21 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.2.2 — Intraosseous infusion. Pocket Book 2nd ed
-# (2013), pp.340–342. Authored faithfully from source; pending OE review.
+# (2013), pp.340–342.
+# OpenEvidence-reviewed 2026-07:
+#   - Dwell time extended 8 h → 24 h (commercial IO approved up to 72 h;
+#     PALS says remove ASAP) as a pragmatic LMIC limit; remove-ASAP kept.
+#   - Noted commercial IO devices (e.g. EZ-IO) where available; manual
+#     needle technique retained as primary.
+#   - Added osteomyelitis to complications; added a neonatal note (IO OK,
+#     but umbilical vein preferred for neonatal resuscitation).
+#   - Sites, 90° angle, aspirate-not-required-for-placement confirmed.
 # ============================================================
 
 topic:
   id: "who-imci-a1-2-2-intraosseous"
   title: "Intraosseous Infusion"
   list_subtitle: "A1.2.2 · proximal tibia · emergency access"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + PALS / EZ-IO"
   tags: ["procedures", "intraosseous", "io", "proximal tibia", "emergency access", "annex 1", "pediatric"]
   aliases:
     - "Intraosseous"
@@ -37,7 +45,8 @@ topic:
       markdown: |
         - **Bone-marrow / intraosseous needles 15–18 gauge** (or **21 gauge**
           if not available). If none, **large-bore hypodermic or butterfly
-          needles** can be used in young children.
+          needles** can be used in young children. A **commercial IO device**
+          (e.g. EZ-IO) is faster where available.
         - Antiseptic solution and sterile gauze.
         - A sterile **5-ml syringe filled with normal saline**, a second
           sterile 5-ml syringe, IV infusion equipment, and **sterile gloves**.
@@ -71,7 +80,11 @@ topic:
           clinical response. **Check the calf does not swell** during the
           infusion.
         - **Stop and remove the needle as soon as venous access is
-          available** — in any case, **do not continue > 8 h**.
+          available** — in any case, **do not continue > 24 h** (to limit
+          infection risk).
+        - **Neonates:** IO access **can** be used, but the **umbilical vein
+          is preferred** for neonatal resuscitation
+          ([A1.2.5](topic:who-imci-a1-2-5-umbilical)).
 
     - type: "prose"
       title: "⚠ Complications"
@@ -81,4 +94,5 @@ topic:
           well fixed; infiltration occurs under the skin.
         - **Penetration of the posterior cortex** (more common) —
           infiltration; the calf becomes tense.
-        - **Infection** — cellulitis at the site of the infusion.
+        - **Infection** — cellulitis at the site, or (rarely)
+          **osteomyelitis**.

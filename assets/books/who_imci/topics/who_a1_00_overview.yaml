@@ -1,15 +1,21 @@
 # ============================================================
 # WHO IMCI Annex 1 — Practical procedures (overview).
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.333–334.
-# Authored faithfully from source; pending OpenEvidence review.
+# OpenEvidence-reviewed 2026-07:
+#   - Sedation: MIDAZOLAM now first-line benzodiazepine (shorter-acting,
+#     multi-route IV/IM/IN/buccal/oral, WHO EMLc; consistent with Chart 9);
+#     diazepam kept as alternative.
+#   - Ketamine IM raised 2–4 → 4–5 mg/kg (IM bioavailability ~40%; higher
+#     up to ~6–8 may be needed — Hornik 2018 PK); added IV 0.5–2 mg/kg.
+#   - Added a cautious "flumazenil where available" reversal note.
 # ============================================================
 
 topic:
   id: "who-imci-a1-practical-procedures"
   title: "Practical Procedures"
   list_subtitle: "Annex 1 · consent, analgesia, restraining"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["procedures", "annex 1", "analgesia", "sedation", "ketamine", "restraining", "pediatric"]
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + midazolam/ketamine PK"
+  tags: ["procedures", "annex 1", "analgesia", "sedation", "midazolam", "ketamine", "restraining", "pediatric"]
   aliases:
     - "Practical procedures"
     - "Annex 1"
@@ -35,12 +41,17 @@ topic:
       title: "Analgesia & sedation for procedures"
       markdown: |
         For some procedures (e.g. **chest-tube insertion** or **femoral
-        cannulation**), consider **sedation with diazepam** or **light
+        cannulation**), consider **sedation with midazolam** or **light
         anaesthesia with ketamine** (see
         [§9.1.2 intra-operative care](topic:who-imci-9-1-2-intraoperative)).
-        - **Diazepam sedation:** **0.1–0.2 mg/kg IV.**
-        - **Ketamine:** **2–4 mg/kg IM** — acts in **5–10 min** and lasts
-          about **20 min**.
+        - **Midazolam (preferred benzodiazepine):** **0.1–0.2 mg/kg IV**, or
+          **0.3–0.5 mg/kg intranasal / buccal / oral** when there is no IV
+          line (shorter-acting, multiple routes; on the WHO EMLc).
+          **Diazepam 0.1–0.2 mg/kg IV** is an alternative if midazolam is
+          unavailable.
+        - **Ketamine: 4–5 mg/kg IM** (IM bioavailability is ~40%, so higher
+          doses up to ~6–8 mg/kg may be needed) — acts in **5–10 min** and
+          lasts about **20 min**; or **0.5–2 mg/kg IV** (faster onset).
 
     - type: "prose"
       title: "⚠ Airway safety during sedation"
@@ -50,7 +61,9 @@ topic:
         child's airway**, **beware of respiratory depression**, and
         **monitor oxygen saturation** with a pulse oximeter when possible.
         **Make sure you have a resuscitation bag available — and, if
-        possible, oxygen.**
+        possible, oxygen.** Where available, **flumazenil** can reverse
+        benzodiazepine over-sedation (use **cautiously** — it can precipitate
+        seizures) — but **airway support and oxygen come first**.
 
     - type: "prose"
       title: "Restraining & wrapping the child"

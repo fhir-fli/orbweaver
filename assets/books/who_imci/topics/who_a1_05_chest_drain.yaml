@@ -1,13 +1,22 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.5 — Insertion of a chest drain. Pocket Book 2nd
-# ed (2013), pp.348–349. Authored faithfully; pending OE review.
+# ed (2013), pp.348–349.
+# OpenEvidence-reviewed 2026-07:
+#   - Chest-tube size: replaced flat "16 gauge" with age-based French sizes
+#     (neonate 10–12, infant 12–16, child 16–24, adolescent 24–32; small-
+#     bore pigtail 8.5–14 Fr for simple pneumothorax / thin effusion).
+#   - Needle decompression: added 5th-ICS mid-axillary as an alternative
+#     site (esp. larger body habitus); noted finger thoracostomy is
+#     preferred where surgical capability exists.
+#   - Sedation reference aligned with the A1 overview (midazolam preferred).
+#   - 5th-ICS mid-axillary insertion site (safe triangle) confirmed.
 # ============================================================
 
 topic:
   id: "who-imci-a1-5-chest-drain"
   title: "Chest Drain"
   list_subtitle: "A1.5 · effusion, empyema, pneumothorax"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + WSES-AAST 2025"
   tags: ["procedures", "chest drain", "chest tube", "pleural effusion", "empyema", "pneumothorax", "annex 1", "pediatric"]
   aliases:
     - "Chest tube"
@@ -29,8 +38,11 @@ topic:
     - type: "prose"
       title: "Diagnostic procedure"
       markdown: |
-        - Consider **sedation or light anaesthesia with ketamine**. Wash
-          hands, put on sterile gloves; lay the child **on the back**.
+        - Consider **sedation (midazolam) or light anaesthesia with
+          ketamine** (see
+          [Annex 1 overview](topic:who-imci-a1-practical-procedures) for
+          doses). Wash hands, put on sterile gloves; lay the child **on the
+          back**.
         - Clean the chest with antiseptic (e.g. 70% alcohol). Select a point
           in the **mid-axillary line** (side of the chest) **just below the
           nipple level** (**5th intercostal space**). Infiltrate **~1 ml of
@@ -57,9 +69,12 @@ topic:
           above the upper edge of the rib, and **puncture the pleura**.
         - Pass a **gloved finger** into the incision and clear a path to the
           pleura. (Not possible in infants.)
-        - Hold the **drainage catheter (16 gauge)** with the forceps and
-          introduce it several centimetres, **pointing upwards**. Ensure all
-          drainage holes are inside the chest.
+        - Hold the **drainage tube** with the forceps and introduce it several
+          centimetres, **pointing upwards**. Ensure all drainage holes are
+          inside the chest. **Size by age:** neonate **10–12 Fr**, infant
+          **12–16 Fr**, child **16–24 Fr**, adolescent **24–32 Fr** (empyema
+          needs a larger bore; a small-bore **pigtail 8.5–14 Fr** suffices for
+          a simple pneumothorax or thin effusion).
         - Connect to a **collection bottle with an underwater seal**. Suture
           in place, secure with tape, and apply a gauze dressing.
 
@@ -77,10 +92,14 @@ topic:
         immediate needle decompression may be needed before a chest drain:
         - Identify the **2nd intercostal space in the mid-clavicular line** on
           the **side of the pneumothorax** (opposite the tracheal deviation,
-          same side as the hyper-resonance).
+          same side as the hyper-resonance). The **5th intercostal space,
+          mid-axillary line** is an **alternative site** (better in a larger
+          child, where the anterior chest wall may be too thick).
         - Swab the chest wall; attach a syringe to an over-needle / IV
           cannula. **Insert just above the rib below, aspirating all the
           time.**
         - If air is aspirated, **remove the needle, leaving the plastic
           cannula in place**; tape it and **insert a chest drain as soon as
           possible.**
+        - **Where surgical capability exists, finger (simple) thoracostomy is
+          preferred** — needle decompression has a significant failure rate.

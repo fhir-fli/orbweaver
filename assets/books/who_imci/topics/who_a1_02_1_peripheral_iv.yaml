@@ -1,15 +1,22 @@
 # ============================================================
 # WHO IMCI Annex 1 §A1.2.1 — Insertion of an indwelling IV cannula in a
 # peripheral vein (incl. scalp veins). Pocket Book 2nd ed (2013),
-# pp.338–340. Authored faithfully from source; pending OE review.
+# pp.338–340.
+# OpenEvidence-reviewed 2026-07:
+#   - Care of the cannula: added routine change every 72–96 h if still
+#     needed (CDC/WHO infection prevention).
+#   - Added a where-available note that ultrasound guidance improves
+#     first-attempt success for difficult peripheral access.
+#   - Scalp-vein age (< 2 yr, best in young infants) and thrombophlebitis
+#     management confirmed — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-a1-2-1-peripheral-iv"
   title: "Peripheral IV Cannula"
   list_subtitle: "A1.2.1 · peripheral & scalp veins"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
-  tags: ["procedures", "iv cannula", "peripheral vein", "scalp vein", "butterfly", "annex 1", "pediatric"]
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + CDC infection prevention"
+  tags: ["procedures", "iv cannula", "peripheral vein", "scalp vein", "butterfly", "ultrasound", "annex 1", "pediatric"]
   aliases:
     - "IV cannula"
     - "Scalp vein"
@@ -32,6 +39,8 @@ topic:
         - An assistant keeps the limb **steady** and acts as a **tourniquet**,
           lightly closing their fingers around the limb to obstruct venous
           return.
+        - **Where available, ultrasound guidance** improves first-attempt
+          success for difficult access.
         - **Clean** the skin with antiseptic (spirit, iodine, isopropyl or
           70% alcohol), then introduce the cannula into the vein and insert
           most of its length. **Fix securely with tape.**
@@ -62,6 +71,9 @@ topic:
         - Keep the overlying skin **clean and dry**.
         - **Flush and fill** the cannula with normal saline immediately after
           the initial insertion and after each injection.
+        - **Change the cannula routinely** (e.g. **every 72–96 h**) if it is
+          still needed, and **sooner** if there are signs of phlebitis or
+          infection.
 
     - type: "prose"
       title: "⚠ Common complications"
