@@ -4,13 +4,15 @@
 # OpenEvidence review applied 2026-06-24:
 #   - Added catastrophic-haemorrhage-first step (⟨C⟩ABCDE) — control major
 #     external bleeding before airway (modern trauma sequence).
+# OpenEvidence-reviewed 2026-07: reviewer confirmed ⟨C⟩ABCDE accurate — no
+#   change.
 # ============================================================
 
 topic:
   id: "who-imci-1-10-1-primary-survey"
   title: "Trauma — Primary Survey"
   list_subtitle: "1.10.1 · ABCDE, stop haemorrhage"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 (no change)"
   tags: ["trauma", "primary survey", "abcde", "haemorrhage", "cervical spine", "imci", "pediatric"]
   aliases:
     - "Primary Survey"

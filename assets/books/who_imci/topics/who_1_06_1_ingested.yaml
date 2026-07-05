@@ -8,13 +8,19 @@
 #   - IPECAC REMOVED ENTIRELY (no benefit, ↑adverse events; AAP/AACT/
 #     Cochrane 2018) → do NOT induce vomiting; WBI for iron/lithium/SR.
 #   - Gastric lavage: rarely indicated, NOT routine, retrieves <30% toxin.
+# OpenEvidence-reviewed 2026-07:
+#   - Added a note that charcoal has NO role for iron, lithium, alcohols,
+#     acids/alkalis or metals (CTRC 2026) — it does not adsorb them.
+#   - Charcoal timing (up to 6 h / beyond if ongoing absorption), infant
+#     dose 0.5–1 g/kg, ipecac removal, WBI for iron/lithium/SR, and gastric
+#     lavage caveats all re-confirmed accurate — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-6-1-ingested"
   title: "Ingested Poisons — Principles"
   list_subtitle: "1.6.1 · decontamination, charcoal, lavage"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + CTRC 2026"
   tags: ["poisoning", "ingestion", "activated charcoal", "gastric lavage", "decontamination", "ipecac", "imci"]
   aliases:
     - "Activated Charcoal"
@@ -45,6 +51,9 @@ topic:
           (modified-release formulations, pharmacobezoars).
         - **Weigh benefit against risk** — decontamination does **not**
           guarantee full removal.
+        - **Charcoal has NO role for iron, lithium, alcohols, acids/alkalis
+          or metals** — it does not adsorb them (use other measures, e.g.
+          whole bowel irrigation for iron/lithium).
 
     - type: "prose"
       title: "⚠ Contraindications to decontamination"

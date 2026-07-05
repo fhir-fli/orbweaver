@@ -6,28 +6,35 @@
 #     heart failure" was NEVER evidence-based and is now refuted. GASTROSAM
 #     (Maitland, NEJM 2025, n=272): 100 ml/kg IV over 3–8 h gave ZERO
 #     pulmonary oedema / heart failure / fluid overload; mortality no
-#     different (trend favouring IV). 2026 meta-analysis (Dewez, ADC; 3
-#     RCTs n=484): zero overload events, pooled in-hospital mortality RR
-#     0.71 favouring IV. Removed the "IV causes heart failure" claim; the
-#     chart now presents WHO 2013 default (oral/NG) WITH the evidence note
-#     that IV appears safe & guideline revision is pending.
+#     different (trend favouring IV). Removed the "IV causes heart failure"
+#     claim; the chart now presents WHO 2013 default (oral/NG) WITH the
+#     evidence note that IV appears safe & guideline revision is pending.
 #   - ORS: WHO-ORS equivalent to ReSoMal (GASTROSAM, Lancet Child Adolesc
 #     Health 2026, n=415); ReSoMal → MORE severe hyponatraemia (seizures at
 #     Na 108). WHO 2023 already allows WHO-ORS when ReSoMal unavailable.
 #     Red danger emphasis MOVED from "no IV" → ReSoMal hyponatraemia.
-#   - Dehydration dx unreliable in SAM strengthened: IMCI ~76% false-pos
-#     for severe dehydration (DHAKA validation); 93% of GASTROSAM oral
-#     group needed NG, 9% progressed to shock.
+#   - Dehydration dx unreliable in SAM strengthened: high false-positive
+#     rate for severe dehydration; 93% of GASTROSAM oral group needed NG,
+#     9% progressed to shock.
 #   - Shock threshold clarified: multiple concurrent signs, not tachycardia
 #     alone. Added severe hyponatraemia to the screen-&-treat list.
 # 🛑 Formal WHO guideline revision still PENDING — wording reflects that.
+# OpenEvidence-reviewed 2026-07:
+#   - Removed the unverifiable "2026 meta-analysis (Dewez ADC; 3 RCTs
+#     n=484, RR 0.71)" specifics (reviewer could not confirm the citation);
+#     the claim now rests on the solid GASTROSAM NEJM 2025 trial (n=272,
+#     zero overload) alone.
+#   - Softened the "~76% false-positive rate" (unverifiable exact DHAKA
+#     figure) to "a high false-positive rate."
+#   - GASTROSAM 93%-NG / 9%-shock and the ReSoMal hyponatraemia warning
+#     re-confirmed against source; unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-4-sam-emergency"
   title: "SAM — Emergency Treatment"
   list_subtitle: "1.4 · oral/NG rehydration · GASTROSAM update · cautious shock fluids"
-  last_reviewed: "OpenEvidence review 2026-06-20 · GASTROSAM (NEJM 2025 / Lancet CAH 2026) / Dewez ADC 2026"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · GASTROSAM (NEJM 2025 / Lancet CAH 2026)"
   tags: ["severe malnutrition", "sam", "resomal", "who-ors", "dehydration", "shock", "gastrosam", "hyponatraemia", "imci", "pediatric"]
   aliases:
     - "Severe Malnutrition"
@@ -60,7 +67,7 @@ topic:
           low-osmolarity WHO-ORS** — see Chapter 7 (p.204).
         - **Dehydration is hard to diagnose in SAM** — signs (sunken eyes,
           slow skin pinch) overlap with malnutrition itself. The IMCI
-          algorithm has a **~76% false-positive rate** for severe
+          algorithm has a **high false-positive rate** for severe
           dehydration here, so **do not over-diagnose**.
 
     - type: "prose"
@@ -76,7 +83,6 @@ topic:
         - **GASTROSAM** (NEJM 2025) gave **100 ml/kg IV over 3–8 h** with
           **zero** pulmonary oedema, heart failure or overload; mortality
           no different (trend favouring IV).
-        - **2026 meta-analysis** (3 RCTs, n=484): **zero overload events**.
         - Oral rehydration often **fails** — 93% of the GASTROSAM oral
           group needed an NG tube and **9% progressed to shock**.
 

@@ -11,13 +11,21 @@
 #   - Reaction adrenaline: weight-based 0.01 mg/kg (max 0.3 mg child), not
 #     fixed 0.15 ml.
 #   - Cut/tourniquet prohibition confirmed correct.
+# OpenEvidence-reviewed 2026-07:
+#   - Prophylactic adrenaline CORRECTED: 0.25 ml of 1:1000 (= 0.25 mg) is an
+#     ADULT/older-child dose. Stated the weight-based paediatric dose
+#     0.005 mg/kg SC (≈ 0.005 ml/kg of 1:1000). NB: kept the mg/kg-consistent
+#     ml conversion (0.005 mg/kg ÷ 1 mg/ml = 0.005 ml/kg) — the reviewer's
+#     "≈ 0.01 ml/kg" is an arithmetic slip and was not propagated.
+#   - Reaction adrenaline 0.01 mg/kg, antivenom child=adult dose, and
+#     cut/tourniquet prohibition re-confirmed accurate — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-9-1-snake-bite"
   title: "Snake Bite"
   list_subtitle: "1.9.1 · diagnosis, first aid, antivenom"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + Seifert NEJM 2022 / de Silva 2011"
   tags: ["snake bite", "envenoming", "antivenom", "neurotoxic", "coagulopathy", "imci", "pediatric"]
   aliases:
     - "Snakebite"
@@ -83,10 +91,11 @@ topic:
         Give antivenom for **systemic signs** or **severe local signs**
         (swelling of **> half the limb** or severe necrosis):
         - Have **adrenaline and resuscitation equipment ready**. Where
-          antivenom-reaction rates are high, give **prophylactic adrenaline
-          0.25 ml of 1:1000 SC before** the infusion (reduces severe
-          reactions by ~40%). **Antihistamines/steroids alone do NOT**
-          prevent reactions.
+          antivenom-reaction rates are high, give **prophylactic SC
+          adrenaline before** the infusion (reduces severe reactions ~40%):
+          **0.005 mg/kg (≈ 0.005 ml/kg of 1:1000)** in a child — the
+          **0.25 ml / 0.25 mg** figure is an **adult / older-child** dose.
+          **Antihistamines/steroids alone do NOT** prevent reactions.
         - **Monovalent** if the species is known; **polyvalent** if not.
           **Child dose = adult dose.**
         - Dilute in **2–3 volumes of 0.9% saline** and give IV **over 1 h**

@@ -8,13 +8,22 @@
 #     post-FEAST — cross-reference Chart 7.
 #   - Severe-dehydration criteria unchanged (2024 Cochrane: sign
 #     combinations perform reasonably).
+# OpenEvidence-reviewed 2026-07 — no content change:
+#   - Reviewer suggested adding "severe palmar pallor (severe anaemia)"
+#     to the emergency-signs list. REJECTED per source structure: in WHO
+#     ETAT, severe pallor is a PRIORITY sign (the "P" in 3TPR MOB), not an
+#     emergency sign — already carried in §1.2, and severe anaemia is in
+#     §1.4's screen-&-treat list. Adding it here would misstate WHO's own
+#     triage categorization.
+#   - §1.1 emergency-signs list, severe-dehydration criteria, and "Act now"
+#     callout confirmed accurate vs WHO 2013 / SSC peds 2026; unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-1-triage"
   title: "Triage"
   list_subtitle: "1.1 · emergency / priority / non-urgent"
-  last_reviewed: "OpenEvidence review 2026-06-18 · WHO PB 2013 + SpO2/FEAST"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + SpO2/FEAST"
   tags: ["triage", "emergency signs", "priority signs", "etat", "imci", "pediatric"]
   aliases:
     - "ETAT"

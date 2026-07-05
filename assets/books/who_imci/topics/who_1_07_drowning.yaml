@@ -12,13 +12,23 @@
 #   - Rewarming: + forced-air warming first-line; ECMO for refractory
 #     hypothermic arrest.
 #   - Added submersion-duration prognosis (>5 min major risk factor).
+# OpenEvidence-reviewed 2026-07:
+#   - Softened "compression-only CPR is ineffective" → "unlikely to be
+#     effective" (matches WMS 2024 / 2025 AHA wording; breaths must not
+#     delay compressions).
+#   - Prognosis: reworded ">5 min → lung injury" to "death or poor
+#     neurological outcome" (the evidence is neuro/mortality, not lung
+#     injury — Quan 2016; AAP 2021). Added that hypothermia does not
+#     improve survival (counters the cold-water-protective misconception).
+#   - Ventilation-first, C-spine, prophylactic-antibiotic removal all
+#     re-confirmed accurate — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-7-drowning"
   title: "Drowning"
   list_subtitle: "1.7 · A-B-C, ventilation-first, rewarming"
-  last_reviewed: "OpenEvidence review 2026-06-24 · 2024 AHA/AAP drowning / WMS 2024 / 2025 AHA"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · 2024 AHA/AAP drowning / WMS 2024 / 2025 AHA"
   tags: ["drowning", "submersion", "hypothermia", "rewarming", "ventilation", "imci", "pediatric"]
   aliases:
     - "Submersion"
@@ -36,8 +46,9 @@ topic:
         Drowning is **primarily a respiratory event** — hypoxia drives the
         arrest.
         - **Prioritise airway and ventilation (A-B-C sequence).**
-        - **Compression-only CPR is ineffective** in drowning — give
-          **rescue breaths with chest compressions**.
+        - **Compression-only CPR is unlikely to be effective** in drowning
+          — give **rescue breaths with chest compressions** (breaths should
+          not delay starting compressions).
         - Then secure breathing, circulation and consciousness.
 
     - type: "prose"
@@ -82,5 +93,8 @@ topic:
       title: "Prognosis"
       markdown: |
         **Submersion duration is a key prognostic factor** — submersion
-        **> 5 min** markedly raises the risk of significant lung injury and
-        poor outcome.
+        **> 5 min** markedly raises the risk of **death or poor neurological
+        outcome**. Being cold does **not** improve the odds: hypothermia
+        from cold-water submersion has **not** been shown to improve
+        survival, so do not treat a cold child as more salvageable on that
+        basis alone.

@@ -20,13 +20,17 @@
 #   - Mention SGA as alternative when BMV is difficult (resource
 #     setting dependent)
 # Source figures not yet extracted — steps carried as text.
+# OpenEvidence-reviewed 2026-07: reviewer confirmed jaw-thrust→head-tilt
+#   fallback, BMV 20–30/min, "look-listen-feel" removal, and no-blind-
+#   finger-sweeps all align with 2025 AHA/AAP BLS/PALS — no change. (The
+#   "sniffing position" wording remains an open low-priority refinement.)
 # ============================================================
 
 topic:
   id: "who-imci-chart4-airway"
   title: "Airway in Obstructed Breathing"
   list_subtitle: "IMCI Chart 4 · head tilt–chin lift / jaw thrust"
-  last_reviewed: "OpenEvidence review 2026-06-09 · 2025 AHA/AAP Peds BLS"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · 2025 AHA/AAP Peds BLS (no change)"
   tags: ["airway", "obstructed breathing", "head tilt", "chin lift", "jaw thrust", "bag mask", "imci", "pediatric"]
   aliases:
     - "Airway Management"

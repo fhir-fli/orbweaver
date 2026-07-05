@@ -7,13 +7,21 @@
 #   - Added TXA 15–20 mg/kg IV (max 1 g) within 3 h (EAST 2025 meta).
 #   - Added permissive hypotension (except TBI).
 #   - Morphine analgesia unchanged.
+# OpenEvidence-reviewed 2026-07:
+#   - TXA: added the maintenance infusion 2 mg/kg/h for ≥ 8 h after the
+#     loading dose (ERC 2021; only the loading dose was previously shown).
+#   - Permissive hypotension: noted that specific paediatric BP targets are
+#     NOT established (adult SBP 80–90 does not apply) — goal is minimum
+#     haemodynamic stability.
+#   - 10 ml/kg crystalloid + early balanced blood products and morphine
+#     dosing re-confirmed accurate — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-10-2-secondary-survey"
   title: "Trauma — Secondary Survey"
   list_subtitle: "1.10.2 · head-to-toe, investigations, treatment"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + ERC 2021 / PTHSCC 2023"
   tags: ["trauma", "secondary survey", "head-to-toe", "analgesia", "transfusion", "imci", "pediatric"]
   aliases:
     - "Secondary Survey"
@@ -62,7 +70,8 @@ topic:
         - **Haemorrhagic shock:** move early to **balanced blood products**
           (1:1 plasma : pRBC, or **low-titre group O whole blood**) —
           **20 ml/kg whole blood** or **10 ml/kg packed cells**.
-        - **Tranexamic acid 15–20 mg/kg IV (max 1 g) within 3 h** of injury.
+        - **Tranexamic acid 15–20 mg/kg IV (max 1 g) within 3 h** of injury,
+          **then 2 mg/kg/h infusion for ≥ 8 h**.
         - **No head injury:** **morphine 0.05–0.1 mg/kg IV** for pain, then
           **0.01–0.02 mg/kg** increments every 10 min to effect.
         - **Manage hypoglycaemia**
@@ -73,5 +82,7 @@ topic:
       markdown: |
         In **uncontrolled haemorrhage without head injury**, target
         **minimum haemodynamic stability** (permissive hypotension) rather
-        than normal blood pressure. In **TBI with haemorrhage, maintain
-        normal blood pressure**.
+        than normal blood pressure. **Specific paediatric BP targets are not
+        established** (the adult SBP 80–90 mmHg goal does not apply to
+        children) — aim for minimum stability, not a number. In **TBI with
+        haemorrhage, maintain normal blood pressure**.

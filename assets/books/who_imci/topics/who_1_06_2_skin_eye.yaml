@@ -5,13 +5,14 @@
 #   - Eye irrigation: ≥15 min minimum; continue until ocular pH 7.0–7.5;
 #     alkali burns may need 30–60 min+; "impossible to over-irrigate"
 #     (2024 AHA/Red Cross; Dua 2020). Skin decontamination unchanged.
+# OpenEvidence-reviewed 2026-07: reviewer confirmed accurate — no change.
 # ============================================================
 
 topic:
   id: "who-imci-1-6-2-skin-eye"
   title: "Skin & Eye Contamination"
   list_subtitle: "1.6.2 · decontaminate skin & irrigate eyes"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 (no change)"
   tags: ["poisoning", "skin decontamination", "eye irrigation", "corrosive", "imci"]
   aliases:
     - "Eye Irrigation"

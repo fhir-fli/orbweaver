@@ -1,14 +1,14 @@
 # ============================================================
 # WHO IMCI §1.6.5 — Prevention of poisoning.
 # Pocket Book 2nd ed (2013), p.33.
-# 🛑 Pending OpenEvidence review.
+# OpenEvidence-reviewed 2026-07: reviewer confirmed accurate — no change.
 # ============================================================
 
 topic:
   id: "who-imci-1-6-5-prevention"
   title: "Prevention of Poisoning"
   list_subtitle: "1.6.5 · safe storage & first-aid advice"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 (no change)"
   tags: ["poisoning", "prevention", "first aid", "safe storage", "imci"]
   aliases:
     - "Poisoning Prevention"

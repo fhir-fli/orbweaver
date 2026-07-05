@@ -19,13 +19,16 @@
 #   - Added 40% buccal dextrose gel as an evidence-based bridge when IV is
 #     impossible/delayed (Cochrane 2019; Sugar Babies) — 0.5 ml/kg (0.2
 #     g/kg) of 40% gel rubbed into the buccal mucosa. (Per Grey 2026-06-18.)
+# OpenEvidence-reviewed 2026-07: reviewer confirmed the 10% dose, dilution-
+#   formula correction, D50 safety callout, buccal-gel bridge, SugarFACT
+#   threshold, and GIR maintenance all accurate — no change.
 # ============================================================
 
 topic:
   id: "who-imci-chart10-glucose"
   title: "IV Glucose (Hypoglycaemia)"
   list_subtitle: "IMCI Chart 10 · 5 ml/kg of 10% glucose"
-  last_reviewed: "OpenEvidence review 2026-06-18 · SugarFACT / PES / Luo 2024 / WHO"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · SugarFACT / PES / Luo 2024 / WHO (no change)"
   tags: ["hypoglycaemia", "glucose", "dextrose", "iv", "d10", "imci", "pediatric"]
   aliases:
     - "Hypoglycemia"

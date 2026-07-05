@@ -23,13 +23,16 @@
 #     frequently" reminder.
 # Source figures (board-taping, recovery position) not yet
 # extracted — steps carried as text.
+# OpenEvidence-reviewed 2026-07: reviewer confirmed SMR terminology, remove-
+#   rigid-board-ASAP, pad-under-torso, poorly-fitting-collars→manual-in-line,
+#   and lateral-trauma-position all accurate — no change.
 # ============================================================
 
 topic:
   id: "who-imci-chart6-positioning"
   title: "Positioning an Unconscious Child"
   list_subtitle: "IMCI Chart 6 · spinal motion restriction / recovery position"
-  last_reviewed: "OpenEvidence review 2026-06-18 · ACS/NAEMSP SMR + 2024 AHA First Aid + WMS 2024"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · ACS/NAEMSP SMR + 2024 AHA First Aid + WMS 2024"
   tags: ["unconscious", "positioning", "recovery position", "neck trauma", "cervical spine", "imci", "pediatric"]
   aliases:
     - "Recovery Position"

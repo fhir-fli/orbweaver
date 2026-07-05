@@ -14,13 +14,17 @@
 #     no pulse check
 # Source figures (back slaps / chest thrusts / Heimlich) not yet
 # extracted — steps carried as text.
+# OpenEvidence-reviewed 2026-07: reviewer confirmed full alignment with
+#   2025 AHA/AAP BLS (heel-of-hand infant thrusts, back-blows-first in
+#   children, no infant abdominal thrusts, no blind finger sweeps, CPR-if-
+#   unresponsive) — no change.
 # ============================================================
 
 topic:
   id: "who-imci-chart3-choking"
   title: "Choking Infant or Child"
   list_subtitle: "IMCI Chart 3 · back blows / chest or abdominal thrusts"
-  last_reviewed: "OpenEvidence review 2026-06-09 · 2025 AHA/AAP Peds BLS"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · 2025 AHA/AAP Peds BLS (no change)"
   tags: ["choking", "airway", "foreign body", "heimlich", "back slaps", "imci", "pediatric"]
   aliases:
     - "Foreign Body Airway Obstruction"

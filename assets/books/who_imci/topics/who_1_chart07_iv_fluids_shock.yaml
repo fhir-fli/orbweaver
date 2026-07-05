@@ -21,13 +21,23 @@
 #   - Malaria/severe anaemia: bolus harmful (malaria RR 1.51); transfuse in
 #     severe anaemia instead.
 # Shock WITH severe malnutrition = Chart 8 (different volume/rate).
+# OpenEvidence-reviewed 2026-07:
+#   - PRoMPT BOLUS (NEJM 2026, n≈8500) confirmed no MAKE-30 difference
+#     RL vs saline; noted SSC 2026 STILL conditionally prefers balanced
+#     crystalloid (Ringer's lactate) on lower-AKI grounds (Sankar 2023).
+#   - Severe-anaemia transfusion threshold CORRECTED from "Hb ≤ 7 g/dL"
+#     (a generic critical-care trigger) to the WHO Pocket Book criteria:
+#     Hb < 4 g/dL, or 4–6 g/dL with a complication (respiratory distress,
+#     shock, impaired consciousness, heart failure).
+#   - FEAST framework, hypotension thresholds, fluid-refractory pressors,
+#     stress-dose steroid, overload stop-criteria re-confirmed — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-chart7-iv-fluids-shock"
   title: "IV Fluids for Shock (no SAM)"
   list_subtitle: "IMCI Chart 7 · hypotension- & resource-stratified (FEAST)"
-  last_reviewed: "OpenEvidence review 2026-06-18 (2 rounds) · FEAST / SSC peds 2026 / PALS 2025 / PRoMPT BOLUS 2026"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · FEAST / SSC peds 2026 / PALS 2025 / PRoMPT BOLUS 2026"
   tags: ["shock", "iv fluids", "bolus", "feast", "ringers lactate", "septic shock", "resuscitation", "imci", "pediatric"]
   aliases:
     - "Fluid Resuscitation"
@@ -64,7 +74,9 @@ topic:
           [Chart 8](topic:who-imci-chart8-iv-fluids-sam).
         - **Insert an IV (or IO) line** and draw blood for emergency labs.
         - Use **Ringer's lactate or normal saline** — PRoMPT BOLUS (2026,
-          n≈8500) found **no outcome difference**; either is acceptable.
+          n≈8500) found **no outcome difference**, so either is acceptable;
+          **SSC 2026 still conditionally prefers Ringer's lactate** (lower
+          AKI, Sankar 2023), so use it where available.
 
     - type: "prose"
       title: "What counts as hypotension?"
@@ -145,5 +157,7 @@ topic:
           fluid need — **bolus increased mortality (RR 1.51)**. Give fluids
           with **extreme caution**.
         - **Severe anaemia:** give a **blood transfusion, not a bolus**
-          (transfuse at **Hb ≤ 7 g/dL** once stabilized; for active
-          bleeding, blood 20 ml/kg).
+          — WHO thresholds: **Hb < 4 g/dL**, or **4–6 g/dL with a
+          complication** (respiratory distress, shock, impaired
+          consciousness, heart failure). For active bleeding, blood
+          20 ml/kg.

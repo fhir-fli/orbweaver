@@ -11,13 +11,22 @@
 #     rectal diazepam (2023 WHO EML; faster cessation).
 #   - Priority signs: add (where oximetry available) borderline SpO2
 #     90–94% + prolonged capillary refill.
+# OpenEvidence-reviewed 2026-07:
+#   - Step 2: name Ringer's lactate/Hartmann's explicitly as the balanced
+#     crystalloid (GASTROSAM used lactated Ringer's; it is the LMIC-available
+#     balanced option, preferred over saline).
+#   - Priority signs: flagged the SpO2 90–94% + prolonged-CRT items as a
+#     suggested addition BEYOND the published WHO priority-sign list (they
+#     are an evidence-based editorial enhancement, not WHO-verbatim).
+#   - Step 3 buccal/IN midazolam confirmed well-supported (Kertam 2026
+#     meta-analysis; Cochrane; WHO EMLc) — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-2-etat-summary"
   title: "ETAT — Summary of Steps"
   list_subtitle: "1.2 · ABCD check + 3TPR MOB priority signs"
-  last_reviewed: "OpenEvidence review 2026-06-18 · FEAST / SSC peds 2026 / WHO EML 2023"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · FEAST / SSC peds 2026 / WHO EML 2023"
   tags: ["etat", "emergency triage", "abcd", "priority signs", "3tpr mob", "imci", "pediatric"]
   aliases:
     - "Emergency Triage Assessment and Treatment"
@@ -39,7 +48,8 @@ topic:
         - **Step 2 — Circulation.** Check for **shock** or diarrhoea
           with **severe dehydration**. Give oxygen and start **cautious**
           IV fluids — **10–20 ml/kg over 30–60 min, reassess after each**
-          (balanced crystalloid preferred). In **severe malnutrition,
+          (balanced crystalloid — **Ringer's lactate / Hartmann's** —
+          preferred over saline). In **severe malnutrition,
           avoid boluses** unless frank shock with impaired consciousness
           ([Chart 8](topic:who-imci-chart8-iv-fluids-sam)).
           In trauma, **compress external bleeding**.
@@ -82,4 +92,5 @@ topic:
         - **B**urns (major)
 
         Where pulse oximetry is available, also prioritize **SpO₂ 90–94%**
-        (borderline hypoxemia) and **prolonged capillary refill**.
+        (borderline hypoxemia) and **prolonged capillary refill** — a
+        **suggested addition beyond the published WHO priority-sign list**.

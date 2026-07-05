@@ -21,13 +21,20 @@
 #     8F older infant & child
 # Source figures (prong placement, catheter measurement) not yet
 # extracted — steps carried as text.
+# OpenEvidence-reviewed 2026-07:
+#   - Clarified the threshold-vs-target distinction: the WHO threshold to
+#     START oxygen stays SpO2 < 90%; the conservative 88–92% figure is the
+#     target once a child is ON oxygen (avoid hyperoxia) — not a lower
+#     start-threshold.
+#   - HFNC "up to 2 L/kg/min": noted this weight-based rate applies mainly
+#     to infants/young children.
 # ============================================================
 
 topic:
   id: "who-imci-chart5-oxygen"
   title: "How to Give Oxygen"
   list_subtitle: "IMCI Chart 5 · nasal prongs / nasal catheter"
-  last_reviewed: "OpenEvidence review 2026-06-18 · OxyKids 2026 / Oxy-PICU 2024 / SSC peds 2026 / COAST 2021"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · OxyKids 2026 / Oxy-PICU 2024 / SSC peds 2026 / COAST 2021"
   tags: ["oxygen", "nasal prongs", "nasal catheter", "hypoxia", "imci", "pediatric"]
   aliases:
     - "Oxygen Therapy"
@@ -73,6 +80,10 @@ topic:
     - type: "prose"
       title: "Targets — emerging evidence"
       markdown: |
+        - **Threshold vs target:** the level to **start** oxygen stays
+          **SpO₂ < 90%**. The 88–92% figure below is the **target once the
+          child is on oxygen** — a ceiling to avoid hyperoxia, **not** a
+          lower start-threshold.
         - **Do not over-oxygenate.** Recent trials favour a
           **conservative SpO₂ target of 88–92%** over higher
           (>94%) targets:
@@ -90,5 +101,6 @@ topic:
       title: "If failing low-flow oxygen"
       markdown: |
         - If available, consider **high-flow nasal cannula (HFNC)** at
-          **up to 2 L/kg/min** for children failing standard low-flow
-          oxygen — a step **before CPAP**.
+          **up to 2 L/kg/min** (this weight-based rate applies mainly to
+          **infants and young children**) for children failing standard
+          low-flow oxygen — a step **before CPAP**.

@@ -15,13 +15,20 @@
 # id kept (who-imci-chart9-diazepam) — cross-links target it.
 # Diazepam PR table values are WHO Pocket Book verbatim (representative
 # weight per band); exact dose = 0.1 ml/kg of the 5 mg/ml solution.
+# OpenEvidence-reviewed 2026-07:
+#   - Buccal midazolam: widened to 0.3–0.5 mg/kg (max 10 mg) — some
+#     guidelines/EML use 0.3 mg/kg; the Kertam 2026 meta-analysis pooled
+#     0.2–0.5 mg/kg. Intranasal 0.2 mg/kg unchanged.
+#   - IV diazepam 0.5 mg/kg, second-line ladder (levetiracetam/valproate/
+#     fosphenytoin, phenytoin ≤1 mg/kg/min), two-dose benzo cap, and
+#     antipyretic note all re-confirmed accurate — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-chart9-diazepam"
   title: "Anticonvulsant (Convulsions)"
   list_subtitle: "IMCI Chart 9 · midazolam / rectal diazepam · status ladder"
-  last_reviewed: "OpenEvidence review 2026-06-18 · Kertam 2026 / ESETT / EcLiPSE / WHO"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · Kertam 2026 / ESETT / EcLiPSE / WHO"
   tags: ["convulsion", "seizure", "diazepam", "rectal", "status epilepticus", "phenobarbital", "imci", "pediatric"]
   aliases:
     - "Seizure"
@@ -44,7 +51,7 @@ topic:
       markdown: |
         Where available, **midazolam is preferred** (faster, easier;
         level-1 evidence over rectal diazepam):
-        - **Buccal midazolam 0.5 mg/kg** (max 10 mg), or
+        - **Buccal midazolam 0.3–0.5 mg/kg** (max 10 mg), or
         - **Intranasal midazolam 0.2 mg/kg** (max 10 mg).
 
         If midazolam is unavailable, give **rectal diazepam 0.5 mg/kg**

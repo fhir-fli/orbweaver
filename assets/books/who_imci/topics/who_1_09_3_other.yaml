@@ -6,13 +6,20 @@
 #     (Yanagihara 2025; Australian Resus Council).
 #   - Non-box jellyfish: hot-water immersion 40 °C best for pain (2024
 #     AHA/Red Cross; Cochrane 2023). "Don't rub" confirmed.
+# OpenEvidence-reviewed 2026-07:
+#   - Box jellyfish heat (42–45 °C ~45 min): flagged as based on LIMITED
+#     evidence (Cochrane 2023 found insufficient data for heat in box
+#     jellyfish specifically); vinegar-first is the firmer step.
+#   - Softened "do NOT use ice": a cold/ice pack is an acceptable BACKUP if
+#     vinegar is unavailable (ARC); fresh water still avoided (triggers
+#     nematocyst discharge).
 # ============================================================
 
 topic:
   id: "who-imci-1-9-3-other"
   title: "Other Envenoming"
   list_subtitle: "1.9.3 · spiders, fish, jellyfish"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + Cochrane 2023 / ARC"
   tags: ["envenoming", "spider", "venomous fish", "box jellyfish", "antivenom", "imci", "pediatric"]
   aliases:
     - "Jellyfish Sting"
@@ -53,7 +60,11 @@ topic:
       markdown: |
         Box jellyfish stings can be **rapidly life-threatening**.
         - Apply **vinegar** to inactivate undischarged nematocysts, then
-          apply **heat (42–45 °C hot pack/water) for ~45 min**.
-        - **Do NOT use ice or fresh water** (worsens tissue damage).
+          apply **heat (42–45 °C hot pack/water) for ~45 min** (the heat
+          step rests on **limited evidence** for box jellyfish — vinegar is
+          the firmer first step).
+        - **Avoid fresh water** (triggers nematocyst discharge). Ice is
+          **not first-line**, but a **cold/ice pack is an acceptable backup
+          if vinegar is unavailable**.
         - **Carefully remove** adherent tentacles — **do NOT rub** (rubbing
           discharges more venom). **Antivenom** may be available.

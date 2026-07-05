@@ -13,13 +13,25 @@
 #   - Deferoxamine: IM 1000 mg then 500 mg q4–12h (was 50 mg/kg q6h); IV up
 #     to 15 mg/kg/h, max 6 g/day; + WBI preferred for iron.
 #   Corrosives/petroleum/CO unchanged (confirmed correct).
+# OpenEvidence-reviewed 2026-07:
+#   - Pralidoxime: removed the fixed "in 15 ml water" diluent volume
+#     (not an AHA/FDA spec; misleading across weights) → "diluted in
+#     saline."
+#   - Acetylcysteine: added FDA caveat that it is NOT established whether
+#     the two-bag regimen is comparable to three-bag for preventing
+#     hepatotoxicity (FDA label 2025; two-bag has fewer anaphylactoid
+#     reactions — Nakatsu 2025).
+#   - Paracetamol: REMOVED "(or induce vomiting)" — it contradicts the
+#     ipecac/emesis removal in §1.6.1.
+#   - Atropine, naloxone, deferoxamine, salicylate, iron, CO dosing all
+#     re-confirmed against 2025 AHA / FDA labels — unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-6-4-specific"
   title: "Specific Poisons"
   list_subtitle: "1.6.4 · corrosives, petroleum, OP, paracetamol, aspirin, iron, opiates, CO"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + 2025 AHA / FDA labels"
   tags: ["poisoning", "corrosive", "organophosphate", "paracetamol", "acetylcysteine", "aspirin", "salicylate", "iron", "deferoxamine", "opiate", "naloxone", "carbon monoxide", "atropine", "imci"]
   aliases:
     - "Antidotes"
@@ -78,16 +90,17 @@ topic:
           chest, HR > 80, SBP > 80**). Then infuse **10–20% of the total
           loading dose per hour**. Much larger doses than usual may be
           needed.
-        - **Pralidoxime 20–50 mg/kg** in 15 ml water **IV over 15–30 min**
-          if muscle weakness, **then 10–20 mg/kg/h infusion**.
+        - **Pralidoxime 20–50 mg/kg** diluted in saline **IV over
+          15–30 min** if muscle weakness, **then 10–20 mg/kg/h infusion**
+          (max ~0.5–1 g/h in children).
         - **Monitor SpO₂** (atropine can cause ventricular arrhythmia in
           hypoxic children); give oxygen if SpO₂ ≤ 90%.
 
     - type: "prose"
       title: "Paracetamol"
       markdown: |
-        - **Within 4 h:** activated charcoal (or induce vomiting) — unless
-          an oral/IV antidote is needed.
+        - **Within 4 h:** activated charcoal — unless an oral/IV antidote
+          is needed. (**Do NOT induce vomiting** — see §1.6.1.)
         - **Antidote needed if** ingestion **≥ 150 mg/kg** or a toxic 4-h
           level (more often in older children with deliberate overdose).
         - **Within 8 h:** oral **methionine** (conscious, not vomiting —
@@ -101,9 +114,12 @@ topic:
       palette:
         accent: "0xFF1565C0"
       markdown: |
-        **> 40 kg — two-bag (preferred; fewer anaphylactoid reactions):**
+        **> 40 kg — two-bag (fewer anaphylactoid reactions):**
         - **200 mg/kg over 4 h**, then **100 mg/kg over 16 h**
           (300 mg/kg / 20 h).
+        - **Note:** the FDA states it is **not established** whether the
+          two-bag regimen is **as effective as three-bag at preventing
+          hepatotoxicity** — both remain acceptable.
 
         **≤ 40 kg — three-bag:**
         - **150 mg/kg over 15 min**, then **50 mg/kg over 4 h**, then

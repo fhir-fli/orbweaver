@@ -4,7 +4,7 @@
 # OpenEvidence review applied 2026-06-20:
 #   - Pneumonia: hypoxia + increased work of breathing = key discriminators
 #     (Shah JAMA 2017).
-#   - FBA: + focal hyperinflation on CXR (OR 8.3; Lee 2021).
+#   - FBA: + focal hyperinflation on CXR.
 #   - Retropharyngeal abscess REWRITTEN: neck pain/limited extension/
 #     torticollis most common; stridor rare; peak 2–5 yr (Craig 2003).
 #   - Diphtheria: + sore throat w/ painful swallowing, cervical
@@ -12,13 +12,22 @@
 #   - NEW cannot-miss row: epiglottitis (no barking cough vs croup).
 #   - History: + sudden stridor in a well child (FBA), toxic/drooling.
 #   Not added (reviewer "consider" only, not in required list): bronchiolitis.
+# OpenEvidence-reviewed 2026-07:
+#   - Added a NEW cannot-miss row: bacterial tracheitis (membranous croup)
+#     — mimics severe croup but FAILS standard croup treatment; thick
+#     purulent tracheal secretions, high fever, toxic; significant mortality
+#     if missed (Cooke AFP 2026 / Bjornson & Johnson).
+#   - Removed the unverifiable FBA "OR 8.3; Lee 2021" citation from the
+#     header note (the rendered table never showed a numeric OR).
+#   - Pneumonia / retropharyngeal / epiglottitis / diphtheria rows
+#     re-confirmed accurate; muffled "hot-potato" voice already present.
 # ============================================================
 
 topic:
   id: "who-imci-1-5-1-airway-dx"
   title: "Airway / Breathing — Differential Dx"
   list_subtitle: "1.5.1 · history, examination, Table 1"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + Shah JAMA 2017 / Cooke AFP 2026"
   tags: ["airway", "breathing", "pneumonia", "asthma", "croup", "diphtheria", "differential diagnosis", "imci"]
   aliases:
     - "Breathing Differential"
@@ -104,6 +113,12 @@ topic:
               - "Associated with URTI"
               - "Stridor on inspiration"
               - "Signs of respiratory distress"
+        - cells:
+            - "Bacterial tracheitis (cannot-miss)"
+            - - "Looks like severe croup but **fails standard croup treatment** (no response to nebulized adrenaline/steroids)"
+              - "High fever, toxic appearance, rapidly worsening stridor"
+              - "Thick purulent tracheal secretions"
+              - "Subglottic/tracheal narrowing; significant mortality if missed"
         - cells:
             - "Diphtheria"
             - - "'Bull neck' from enlarged lymph nodes"

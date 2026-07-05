@@ -17,13 +17,18 @@
 #   - Added slow-rehydration evidence note (GASTRO phase II: 100 ml/kg over
 #     8 h ≈ Plan C) and dehydration-assessment-imprecision caveat.
 #   - Ringer's lactate preference confirmed (Cochrane 2023). ORS 5 ml/kg/h ok.
+# OpenEvidence-reviewed 2026-07: reviewer flagged the final sentence as
+#   "cut off" — this was a paste-truncation artifact; the source file already
+#   completes it ("...maintain hydration with ORS by mouth"). 70 ml/kg
+#   post-shock volume, SAM carve-out, RL preference all re-confirmed. No
+#   content change.
 # ============================================================
 
 topic:
   id: "who-imci-chart11-dehydration"
   title: "Severe Dehydration (Emergency)"
   list_subtitle: "IMCI Chart 11 · 70 ml/kg RL · then ORS"
-  last_reviewed: "OpenEvidence review 2026-06-24 · WHO Plan C/Chart 13 / GASTRO / GASTROSAM"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO Plan C/Chart 13 / GASTRO / GASTROSAM"
   tags: ["dehydration", "diarrhoea", "ringers lactate", "ors", "rehydration", "plan c", "imci", "pediatric"]
   aliases:
     - "Diarrhoea"

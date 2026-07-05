@@ -1,14 +1,15 @@
 # ============================================================
 # WHO IMCI §1.6.3 — Inhaled poisons.
 # Pocket Book 2nd ed (2013), p.29.
-# 🛑 Pending OpenEvidence review.
+# OpenEvidence-reviewed 2026-07: reviewer confirmed accurate (delayed
+#   pneumonitis from irritant gases noted correctly) — no change.
 # ============================================================
 
 topic:
   id: "who-imci-1-6-3-inhaled"
   title: "Inhaled Poisons"
   list_subtitle: "1.6.3 · remove from source, oxygen, airway"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 (no change)"
   tags: ["poisoning", "inhalation", "irritant gas", "oxygen", "imci"]
   aliases:
     - "Inhalation Injury"

@@ -13,13 +13,28 @@
 #   syndrome.
 # 🛑 Shock fluid management still evolving — see GASTROSAM note on §1.4 /
 #    Charts 7–8.
+# OpenEvidence-reviewed 2026-07:
+#   - Dengue row: + tender hepatomegaly (WHO 2009 warning sign; independent
+#     predictor of severe dengue — Karyanti 2024 / Idrus 2023).
+#   - Anaphylaxis row fleshed out: rapid onset (min–hrs), GI symptoms
+#     (vomiting/abdominal pain, common with food triggers), ≥2-organ-system
+#     criterion, and a first-line IM adrenaline note (AAP 2026 / Iglesia
+#     JAMA 2024) — adrenaline is the single most important intervention.
+#   - Cardiac shock row: + tachycardia out of proportion to fever / new
+#     gallop as early myocarditis clues (AHA myocarditis statement 2021).
+#   - Septic shock row: sharpened purpura → non-blanching purpura /
+#     purpura fulminans.
+#   - Phoenix callout re-confirmed (Sanchez-Pinto/Schlapbach JAMA 2024;
+#     Marchetto CCM 2026 validation) — unchanged.
+#   - NOT added: neurogenic shock (reviewer unsure of WHO scope; rare in
+#     children) — deferred, consistent with prior "consider-only" items.
 # ============================================================
 
 topic:
   id: "who-imci-1-5-2-shock-dx"
   title: "Shock — Differential Dx"
   list_subtitle: "1.5.2 · history, examination, Table 2"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + Phoenix/AAP/AHA"
   tags: ["shock", "septic shock", "dengue", "cardiac shock", "bleeding", "dehydration", "differential diagnosis", "imci"]
   aliases:
     - "Shock Differential"
@@ -81,12 +96,14 @@ topic:
               - "History of high fever"
               - "Purpura"
               - "Warning signs at defervescence: severe abdominal pain, persistent vomiting, fluid accumulation"
+              - "Tender hepatomegaly (WHO warning sign; predicts severe dengue)"
               - "Rising haematocrit with falling platelets"
               - "Narrowing pulse pressure (diastolic rises before systolic falls)"
         - cells:
             - "Cardiac shock"
             - - "History of heart disease or murmur"
               - "Myocarditis: acute heart failure, viral prodrome, previously well"
+              - "Tachycardia out of proportion to fever, or a new gallop rhythm (early myocarditis clues)"
               - "Enlarged neck veins and liver"
               - "Crepitations in both lung fields"
         - cells:
@@ -94,12 +111,14 @@ topic:
             - - "History of febrile illness"
               - "Very ill child"
               - "Skin warm but BP low, or skin cold"
-              - "Purpura, or meningococcal outbreak"
+              - "Non-blanching purpura or purpura fulminans; meningococcal outbreak"
         - cells:
             - "Anaphylactic shock (cannot-miss)"
-            - - "Acute onset after allergen exposure"
+            - - "Rapid onset (minutes to hours) after likely allergen exposure"
               - "Urticaria, angioedema, bronchospasm"
-              - "Hypotension"
+              - "GI symptoms — vomiting, abdominal pain (common with food triggers)"
+              - "Hypotension, or ≥ 2 organ systems involved"
+              - "**Treat at once with IM adrenaline (epinephrine) 0.01 mg/kg** — the single most important intervention"
         - cells:
             - "Shock with severe dehydration"
             - - "History of profuse diarrhoea"

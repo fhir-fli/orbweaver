@@ -12,13 +12,23 @@
 # Fix 2026-06-20: Table 4 continues onto p.26 — transcribed the source's
 #   own Meningitis and Sepsis rows (initially missed; reviewer's "add
 #   neonatal meningitis/sepsis" was already in the source). 8 rows total.
+# OpenEvidence-reviewed 2026-07:
+#   - Softened the unverifiable "~27%" cerebral-malaria bacterial
+#     co-infection figure (Ray Lancet GH 2025 not confirmable) to "a
+#     substantial proportion" in both the red callout and the Table 3 row.
+#     The empirical-antibiotics-for-all-febrile-coma advice is well-
+#     supported regardless (Crawley Lancet 2010; Kemigisha 2018).
+#   - DKA cerebral-oedema line, Table 4 rows, CSF values, febrile-
+#     convulsion note all re-confirmed accurate — unchanged.
+#   - NOT added: intussusception as a lethargy cause (reviewer "consider"
+#     only; already covered in §9.4) — deferred.
 # ============================================================
 
 topic:
   id: "who-imci-1-5-3-coma-dx"
   title: "Coma / Convulsions — Differential Dx"
   list_subtitle: "1.5.3 · history, exam, labs, Tables 3 & 4"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + malaria co-infection/DKA"
   tags: ["coma", "unconsciousness", "lethargy", "convulsions", "meningitis", "cerebral malaria", "hypoglycaemia", "neonatal tetanus", "differential diagnosis", "imci"]
   aliases:
     - "Unconsciousness"
@@ -88,9 +98,10 @@ topic:
         alert_text: "0xFFB71C1C"
       markdown: |
         Give **empirical antibiotics to every child with febrile coma —
-        even if the malaria test is positive.** ~27% of cerebral-malaria
-        cases have **invasive bacterial co-infection**, which **doubles
-        mortality**.
+        even if the malaria test is positive.** A **substantial proportion**
+        of cerebral-malaria cases have **invasive bacterial co-infection**
+        (often non-typhoidal salmonellae), which **markedly raises
+        mortality** — cover with a third-generation cephalosporin.
 
     - type: "table"
       title: "Table 3 · Differential diagnosis"
@@ -110,7 +121,7 @@ topic:
               - "Anaemia"
               - "Convulsions"
               - "Hypoglycaemia"
-              - "Bacterial co-infection is common (~27%) and DOUBLES mortality — treat empirically (see callout)"
+              - "Bacterial co-infection is common (a substantial proportion) and raises mortality — treat empirically (see callout)"
         - cells:
             - "Febrile convulsions (not a cause of unconsciousness)"
             - - "Prior short convulsions when febrile"

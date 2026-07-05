@@ -5,13 +5,20 @@
 #   - Furosemide/mannitol caveat: NOT routinely supported (Bosch NEJM 2009;
 #     Chest 2026) — only if output inadequate despite crystalloid.
 #   - ABCDE / trauma assessment / tetanus / fasciotomy unchanged.
+# OpenEvidence-reviewed 2026-07:
+#   - Added ECG/cardiac monitoring for significant electrical injury
+#     (arrhythmias, incl. delayed; 2025 AHA).
+#   - Added the "iceberg" caveat: deep tissue injury may far exceed the
+#     visible external burn.
+#   - Urine-output target and mannitol/bicarbonate caveat re-confirmed —
+#     unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-1-8-electrocution"
   title: "Electrocution"
   list_subtitle: "1.8 · ABC, fluids for myoglobinuria, wound care"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + 2025 AHA"
   tags: ["electrocution", "electrical injury", "burns", "myoglobinuria", "rhabdomyolysis", "imci", "pediatric"]
   aliases:
     - "Electrical Injury"
@@ -31,10 +38,21 @@ topic:
           respiratory distress**.
 
     - type: "prose"
+      title: "Cardiac monitoring"
+      markdown: |
+        - Put any child with a **significant electrical injury** on
+          **continuous ECG / cardiac monitoring** — electrical current can
+          cause **arrhythmias, including delayed** ones.
+
+    - type: "prose"
       title: "Assess for trauma"
       markdown: |
         Look for traumatic injuries — **pneumothorax, peritonitis, pelvic
         fractures**.
+
+        **Beware the "iceberg":** deep tissue and muscle injury along the
+        current path may be **far more extensive than the visible external
+        burn** suggests.
 
     - type: "prose"
       title: "Fluids & myoglobin"

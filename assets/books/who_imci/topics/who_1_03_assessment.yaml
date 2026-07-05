@@ -21,13 +21,23 @@
 #     2025 NRP).
 # Addition 2026-06-20: folded in p.18 quick-ref content — normal systolic
 #   BP-by-age table and the AVPU conscious-level scale (per Grey).
+# OpenEvidence-reviewed 2026-07:
+#   - Lactate: clarified the "strong rec to measure" is from the ADULT SSC;
+#     the paediatric SSC (2020) SUGGESTS measuring lactate but acknowledges
+#     limited availability in low-resource settings (LMIC framing).
+#   - BP table extended to 6–12 yr (reviewer cited ~97–112 mmHg; encoded
+#     100–115 to keep the table's 5-mmHg rounding) — the Pocket Book covers
+#     children up to 12 yr.
+#   - "Dark skin → central more reliable" SOFTENED to "may be more reliable":
+#     ambient cold prolonging peripheral CRT is well-evidenced (Fleming
+#     2015); the dark-skin point is clinical reasoning, less documented.
 # ============================================================
 
 topic:
   id: "who-imci-1-3-assessment"
   title: "Assessment of Emergency & Priority Signs"
   list_subtitle: "1.3 · assess airway/breathing + circulation"
-  last_reviewed: "OpenEvidence review 2026-06-20 · 2025 PALS/NRP / SSC peds 2026 / Phoenix"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · 2025 PALS/NRP / SSC peds 2020/2026 / Phoenix"
   tags: ["assessment", "airway", "breathing", "circulation", "shock", "capillary refill", "imci", "pediatric"]
   aliases:
     - "Emergency Assessment"
@@ -65,8 +75,9 @@ topic:
         - **Capillary refill prolonged?** Press to whiten the nail for
           **5 s**; time the return of pink colour. **Fingertip ≥ 3 s** or
           **sternal ≥ 4 s** is abnormal (the two sites are not
-          interchangeable). In a **cold environment or with dark skin**,
-          **central (sternal) refill** is more reliable.
+          interchangeable). In a **cold environment** — and possibly with
+          **dark skin** — **central (sternal) refill may be more reliable**
+          (ambient cold prolongs peripheral refill).
         - **Check the pulse — take ≤ 10 s:**
           - **Neonate:** **auscultate** the precordium — palpation is
             unreliable (ECG is most accurate).
@@ -77,8 +88,11 @@ topic:
           - A **strong, not-fast** pulse means **not in shock**. If **no
             definite pulse** in ≤ 10 s, **begin CPR**.
         - **If available:** blood **lactate ≥ 2 mmol/L** raises concern for
-          tissue hypoperfusion (SSC 2026). The **Phoenix** sepsis score
-          uses **> 5 mmol/L** for cardiovascular dysfunction.
+          tissue hypoperfusion. (The "strong" recommendation to measure is
+          from the **adult** SSC; the **paediatric** SSC only **suggests**
+          measuring it and notes it may be **unavailable in low-resource
+          settings**.) The **Phoenix** sepsis score uses **> 5 mmol/L** for
+          cardiovascular dysfunction.
         - **Blood pressure:** check systolic BP against the **age table
           below**. Shock can occur with **normal** BP; **very low** BP
           means shock. If the room is cold, **rely on the pulse**.
@@ -94,6 +108,7 @@ topic:
         - cells: ["6–12 months", "80–100"]
         - cells: ["1–3 years", "90–105"]
         - cells: ["3–6 years", "95–110"]
+        - cells: ["6–12 years", "100–115"]
 
     - type: "prose"
       title: "Conscious level — AVPU"

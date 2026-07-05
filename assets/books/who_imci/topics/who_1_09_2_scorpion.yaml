@@ -4,13 +4,16 @@
 #   - Antivenom + prazosin superior to prazosin alone (Pandi 2014 / Bawaskar
 #     2011 RCTs); + dobutamine for inotropy, nitroglycerin for pulmonary
 #     oedema (Isbister NEJM 2014).
+# OpenEvidence-reviewed 2026-07: reviewer confirmed accurate (antivenom+
+#   prazosin, dobutamine, nitroglycerin, lignocaine-without-adrenaline) —
+#   no change.
 # ============================================================
 
 topic:
   id: "who-imci-1-9-2-scorpion"
   title: "Scorpion Sting"
   list_subtitle: "1.9.2 · autonomic storm; antivenom if severe"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · pending OpenEvidence review"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + Isbister NEJM 2014 (no change)"
   tags: ["scorpion", "envenoming", "antivenom", "prazosin", "imci", "pediatric"]
   aliases:
     - "Scorpion"
