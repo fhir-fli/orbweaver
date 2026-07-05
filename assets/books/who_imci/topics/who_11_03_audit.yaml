@@ -1,13 +1,19 @@
 # ============================================================
 # WHO IMCI §11.3 — Audit of paediatric care. Pocket Book 2nd ed (2013),
 # p.320.
+# ⚠️ OpenEvidence-reviewed 2026-07: blame-free ethos unchanged; reference
+# WHO's facility-based paediatric mortality audit/review tool; a designated
+# quality-improvement team should own follow-up of action plans (the hardest
+# step is implementing + monitoring solutions, not finding them); "near-death"
+# → "near-miss / critical deterioration events". Refs: Willcox Cochrane 2020;
+# Young & Duke TMIH 2020; Sandakabatu ADC 2018.
 # ============================================================
 
 topic:
   id: "who-imci-11-3-audit"
   title: "Audit of Paediatric Care"
-  list_subtitle: "11.3 · review outcomes · improve, don't blame"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "11.3 · review outcomes · improve, don't blame · QI team"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["monitoring", "audit", "quality improvement", "mortality", "pediatric"]
   aliases:
     - "Audit of paediatric care"
@@ -32,14 +38,18 @@ topic:
       title: "Clinical audit meetings"
       callout: true
       markdown: |
-        **Clinical audit meetings** to discuss **near-death events or deaths** —
-        especially those where some aspect of treatment may have gone wrong — are
-        helpful. **The aim is to improve care and solve problems, not to attribute
-        blame for errors.**
+        **Clinical audit meetings** to discuss **near-miss (critical deterioration)
+        events or deaths** — especially those where some aspect of treatment may
+        have gone wrong — are helpful. **The aim is to improve care and solve
+        problems, not to attribute blame for errors.**
 
         Audit by **comparing the care actually given with a recognized standard**,
-        such as the recommendations in this **Pocket Book**. A successful audit
-        needs the **full, constructive participation of all medical and nursing
-        staff**; keep it **simple** and not too time-consuming. One approach is to
-        ask staff for their views on improving quality and to give **priority to the
-        problems they identify.**
+        such as the recommendations in this **Pocket Book**, or WHO's
+        **facility-based paediatric mortality audit/review tool**. A successful
+        audit needs the **full, constructive participation of all medical and
+        nursing staff**; keep it **simple** and not too time-consuming.
+
+        The **hardest step is not finding problems but acting on them.** Designate a
+        **quality-improvement team** to **own the action plans** — implementing and
+        **monitoring** the agreed solutions over time — with leadership support and
+        adequate resources.

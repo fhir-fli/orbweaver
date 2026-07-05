@@ -1,12 +1,15 @@
 # ============================================================
 # WHO IMCI §11.2 — Monitoring chart. Pocket Book 2nd ed (2013), p.320.
+# ⚠️ OpenEvidence-reviewed 2026-07: added SpO2 (pulse oximetry) to the
+# vital signs recorded — pulse oximetry is now widely available even at
+# first-referral level (see §10.7). Ref: Ernst Pediatrics 2020.
 # ============================================================
 
 topic:
   id: "who-imci-11-2-monitoring-chart"
   title: "Monitoring Chart"
-  list_subtitle: "11.2 · vitals · fluid balance · signs · feeding"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "11.2 · vitals + SpO2 · fluid balance · signs · feeding"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["monitoring", "chart", "vital signs", "fluid balance", "pediatric"]
   aliases:
     - "Monitoring chart"
@@ -22,8 +25,9 @@ topic:
       markdown: |
         - **Patient's details.**
         - **Vital signs:** pulse rate and volume, respiratory rate, presence of
-          **lower chest indrawing**, **coma score / level of consciousness (AVPU)**,
-          temperature and **body weight**.
+          **lower chest indrawing**, **oxygen saturation (SpO₂ by pulse oximetry)**,
+          **coma score / level of consciousness (AVPU)**, temperature and **body
+          weight**.
         - **Fluid balance:** urine output, any vomiting, any stool.
         - **Clinical signs, complications and positive investigation findings** — at
           each check, record whether these are still present and record any **new**

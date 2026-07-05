@@ -1,13 +1,19 @@
 # ============================================================
 # WHO IMCI §11.1 — Monitoring procedures. Pocket Book 2nd ed (2013),
 # p.319.
+# ⚠️ OpenEvidence-reviewed 2026-07: added a recommendation to use a
+# validated Paediatric Early Warning Score where feasible — the simple
+# 6-variable PEWS-RL is validated for resource-limited settings — to
+# standardize monitoring and trigger escalation; added AVPU→GCS
+# equivalences. Refs: Rosman PEWS-RL Pediatrics 2019; van den Brink
+# J Pediatr 2023; Ramgopal AVPU/GCS Pediatrics 2024.
 # ============================================================
 
 topic:
   id: "who-imci-11-1-monitoring-procedures"
   title: "Monitoring Procedures"
-  list_subtitle: "11.1 · check regularly · record · review"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "11.1 · check regularly · PEWS where feasible · escalate"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["monitoring", "progress", "inpatient care", "pediatric"]
   aliases:
     - "Monitoring procedures"
@@ -47,3 +53,28 @@ topic:
         Children who are **seriously ill** should be **visited by a doctor** (or
         other senior health professional) **soon after admission** — an opportunity
         to encourage communication between families and hospital staff.
+
+    - type: "prose"
+      title: "Use a Paediatric Early Warning Score"
+      callout: true
+      markdown: |
+        Where feasible, use a **validated Paediatric Early Warning Score (PEWS)** to
+        standardize monitoring and **trigger escalation** before a child
+        deteriorates. The simple **6-variable PEWS for Resource-Limited Settings
+        (PEWS-RL)** is validated for first-referral hospitals (high sensitivity for
+        identifying children at risk). A rising score should prompt **more frequent
+        observation and senior review.**
+
+    - type: "prose"
+      title: "AVPU — and its GCS equivalents"
+      markdown: |
+        **AVPU** (Alert / responds to Voice / responds to Pain / Unresponsive) is
+        simple, fast and appropriate for resource-limited settings. Approximate
+        **Glasgow Coma Scale** equivalents for reference:
+        - **A (Alert)** ≈ GCS **14–15**,
+        - **V (Voice)** ≈ GCS **11–13**,
+        - **P (Pain)** ≈ GCS **7–10**,
+        - **U (Unresponsive)** ≈ GCS **3–6**.
+
+        A child at **P or U** has seriously impaired consciousness — protect the
+        airway and seek urgent help.
