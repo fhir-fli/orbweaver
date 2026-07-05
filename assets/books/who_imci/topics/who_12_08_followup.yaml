@@ -1,0 +1,64 @@
+# ============================================================
+# WHO IMCI §12.8 — Providing follow-up care. Pocket Book 2nd ed (2013),
+# p.327.
+# ============================================================
+
+topic:
+  id: "who-imci-12-8-followup"
+  title: "Providing Follow-up Care"
+  list_subtitle: "12.8 · when to return · urgent signs"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["discharge", "follow-up", "when to return", "danger signs", "pediatric"]
+  aliases:
+    - "Providing follow-up care"
+    - "When to return"
+  category: "medical"
+
+  page_number: 327
+
+  blocks:
+
+    - type: "prose"
+      title: "Advise when to come back"
+      highlight: true
+      markdown: |
+        Advise every mother taking a child home when to go to a health worker for
+        follow-up. A child may need to return to hospital:
+        - for a **follow-up visit within a specified number of days** (e.g. to check
+          progress or the response to an antibiotic),
+        - if **signs suggest the illness or injury is worsening** (e.g. head injury),
+        - for the child's **next vaccination**.
+
+        It is especially important to teach the mother the signs that mean she must
+        **return immediately**.
+
+    - type: "prose"
+      title: "Follow-up for feeding & nutrition"
+      markdown: |
+        - **Feeding problem** with recommended changes — follow up in **5 days** to
+          see whether the mother made the changes.
+        - **Anaemia** — follow up in **14 days** to give more oral iron.
+        - **Very low weight** — additional follow-up in **30 days** (weigh the child,
+          reassess feeding, give further nutrition counselling).
+
+    - type: "prose"
+      title: "Return IMMEDIATELY if"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Advise the mother to **return immediately** if the child:
+        - is **unable to drink or breastfeed**,
+        - **becomes sicker**,
+        - **develops a fever**,
+        - shows **signs of illness returning** after successful treatment,
+        - has a **cough or cold with fast or difficult breathing**,
+        - has **diarrhoea with blood in the stool** or is **drinking poorly**.
+
+    - type: "prose"
+      title: "Next 'well-child' visit"
+      markdown: |
+        Remind the mother about the child's **next visit for vaccination**, and
+        record the date on the **mother's card** or the child's immunization record.

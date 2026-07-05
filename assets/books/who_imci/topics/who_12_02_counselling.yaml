@@ -1,0 +1,44 @@
+# ============================================================
+# WHO IMCI §12.2 — Counselling (the mother's card). Pocket Book 2nd ed
+# (2013), pp.322–323.
+# ============================================================
+
+topic:
+  id: "who-imci-12-2-counselling"
+  title: "Counselling & the Mother's Card"
+  list_subtitle: "12.2 · pictorial card · when to return"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["discharge", "counselling", "mother's card", "health education", "pediatric"]
+  aliases:
+    - "Counselling"
+    - "Mother's card"
+  category: "medical"
+
+  page_number: 322
+
+  blocks:
+
+    - type: "prose"
+      title: "The mother's card"
+      highlight: true
+      markdown: |
+        A **simple, pictorial card** reminds the mother of the home-care
+        instructions, **when to return** for follow-up, and the signs that mean she
+        should **return immediately**. It helps her remember the appropriate foods
+        and fluids and when to go back to the health worker. Use **national IMCI
+        cards** where available; otherwise see **Annex 6** for an example.
+
+    - type: "prose"
+      title: "Using the card with the mother"
+      markdown: |
+        - **Hold the card** so she can easily see the pictures, or let her hold it.
+        - **Point to the pictures** as you talk and explain each one.
+        - **Mark the information relevant to her** — for example, circle the feeding
+          advice for the child's age; if the child has diarrhoea, tick the
+          appropriate fluid(s); record the date for the next vaccination.
+        - **Watch to see if she looks worried or puzzled** — if so, encourage
+          questions.
+        - **Ask her to tell you, in her own words, what she should do at home**, and
+          encourage her to use the card to help her remember.
+        - **Give her the card** to take home and suggest she show it to other family
+          members. Provide an **effective interpreter** if language is a barrier.

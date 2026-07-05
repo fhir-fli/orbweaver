@@ -1,0 +1,39 @@
+# ============================================================
+# WHO IMCI §12.7 — Communicating with the first-level health worker.
+# Pocket Book 2nd ed (2013), pp.325–327.
+# ============================================================
+
+topic:
+  id: "who-imci-12-7-communicating"
+  title: "Communicating with the Referring Worker"
+  list_subtitle: "12.7 · diagnosis · treatment · follow-up plan"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["discharge", "communication", "referral", "continuity of care", "pediatric"]
+  aliases:
+    - "Communicating with the first-level health worker"
+  category: "medical"
+
+  page_number: 325
+
+  blocks:
+
+    - type: "prose"
+      title: "Hand back the information"
+      highlight: true
+      markdown: |
+        The first-level health worker who **referred the child** should receive
+        information about the child's care in hospital, including:
+        - the **diagnosis or diagnoses**,
+        - the **treatment(s) given** and the **duration of stay**,
+        - the child's **response to treatment**,
+        - **instructions** given to the mother for follow-up treatment or other care
+          at home,
+        - other matters for follow-up (e.g. **vaccinations**).
+
+    - type: "prose"
+      title: "Use the health card"
+      markdown: |
+        If the child has a **health card**, record the above information on it and
+        ask the mother to **show it to the health worker**. When there is no health
+        card, record these details in a **short note** for the mother and the health
+        worker.

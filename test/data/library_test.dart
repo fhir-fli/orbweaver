@@ -99,13 +99,13 @@ void main() {
     }
 
     test(
-        'who_imci: 10 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
+        'who_imci: 12 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
         'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27, Ch.8 = 34, Ch.9 = 33, '
-        'Ch.10 = 15)', () {
+        'Ch.10 = 15, Ch.11 = 3, Ch.12 = 8)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(10));
+      expect(contents, hasLength(12));
       expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
       expect((contents[1] as YamlMap)['title'],
@@ -123,10 +123,14 @@ void main() {
       expect((contents[8] as YamlMap)['title'],
           '9. Common surgical problems');
       expect((contents[9] as YamlMap)['title'], '10. Supportive care');
+      expect((contents[10] as YamlMap)['title'],
+          '11. Monitoring the child\'s progress');
+      expect((contents[11] as YamlMap)['title'],
+          '12. Counselling & discharge from hospital');
       // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
       // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) + Ch.9 (33) + Ch.10 (15)
-      // = 229 topics.
-      expect(leafCount(contents), 229);
+      // + Ch.11 (3) + Ch.12 (8) = 240 topics.
+      expect(leafCount(contents), 240);
     });
 
     test('who_imci: Chapter 10 is a royal-blue-tabbed group; §10.1 & §10.6 nest',
@@ -143,6 +147,24 @@ void main() {
       expect(g['topic'], isNotNull);
       // 5 sub-topics (10.6.1–10.6.5) nested under the §10.6 overview.
       expect((g['children'] as YamlList), hasLength(5));
+    });
+
+    test('who_imci: Ch.11 (violet) & Ch.12 (blue-violet) are flat leaf groups',
+        () {
+      final b = loadBook('who_imci');
+      final ch11 = (b['contents'] as YamlList)[10] as YamlMap;
+      expect(ch11['palette']['accent'], '0xFF542791');
+      // 11.1/11.2/11.3 — three leaf sections, no nesting.
+      final c11 = ch11['children'] as YamlList;
+      expect(c11, hasLength(3));
+      expect(c11.every((n) => (n as YamlMap)['title'] == null), isTrue);
+
+      final ch12 = (b['contents'] as YamlList)[11] as YamlMap;
+      expect(ch12['palette']['accent'], '0xFF7264B8');
+      // 12.1–12.8 — eight leaf sections, no nesting.
+      final c12 = ch12['children'] as YamlList;
+      expect(c12, hasLength(8));
+      expect(c12.every((n) => (n as YamlMap)['title'] == null), isTrue);
     });
 
     test('who_imci: Chapter 8 is a cyan-teal-tabbed group; §8.1 nests', () {

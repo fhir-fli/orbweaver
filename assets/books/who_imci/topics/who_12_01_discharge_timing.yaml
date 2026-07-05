@@ -1,0 +1,61 @@
+# ============================================================
+# WHO IMCI §12.1 — Timing of discharge from hospital. Pocket Book 2nd
+# ed (2013), pp.321–322.
+# ============================================================
+
+topic:
+  id: "who-imci-12-1-discharge-timing"
+  title: "Timing of Discharge"
+  list_subtitle: "12.1 · improved markedly · individual basis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["discharge", "counselling", "follow-up", "pediatric"]
+  aliases:
+    - "Timing of discharge from hospital"
+    - "Discharge"
+  category: "medical"
+
+  page_number: 321
+
+  blocks:
+
+    - type: "prose"
+      title: "The discharge process — include all of these"
+      highlight: true
+      markdown: |
+        The discharge of **every** child should include:
+        - **correct timing** of discharge,
+        - **counselling** the mother on treatment and feeding at home,
+        - ensuring the child's **vaccination status** is up to date,
+        - **communicating** with the health worker who referred the child or who
+          will be responsible for follow-up,
+        - giving instructions on **when to return** for follow-up and on the signs
+          that mean **return urgently**,
+        - **assisting the family with special support** — e.g. equipment for a child
+          with a disability, or linking with community support for children with
+          HIV/AIDS.
+
+    - type: "prose"
+      title: "When is a child ready?"
+      markdown: |
+        In acute infections, a child can be considered ready for discharge when the
+        clinical condition has **improved markedly** (afebrile, alert, eating and
+        sleeping normally) and **oral treatment has been started**.
+
+        Decide on an **individual basis**, taking account of:
+        - the family's **home circumstances** and how much support is available,
+        - the staff's judgement that the **treatment course will be completed at
+          home**,
+        - the likelihood that the family will **return immediately** if the child
+          worsens.
+
+        The timing of discharge of a child with **severe acute malnutrition** is
+        particularly important (see [Chapter 7](topic:who-imci-7-1-sam)).
+
+    - type: "prose"
+      title: "If the family leaves against advice"
+      callout: true
+      markdown: |
+        If the family removes the child **prematurely against advice**, counsel the
+        mother on how to **continue treatment at home**, encourage her to bring the
+        child for **follow-up after 1–2 days**, and make contact with the **local
+        health worker** to help with follow-up care.

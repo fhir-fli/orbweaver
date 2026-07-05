@@ -1,0 +1,42 @@
+# ============================================================
+# WHO IMCI §12.4 — Home treatment. Pocket Book 2nd ed (2013), p.324.
+# ============================================================
+
+topic:
+  id: "who-imci-12-4-home-treatment"
+  title: "Teaching Home Treatment"
+  list_subtitle: "12.4 · inform · show · practise · check"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["discharge", "home treatment", "health education", "ORS", "pediatric"]
+  aliases:
+    - "Home treatment"
+  category: "medical"
+
+  page_number: 324
+
+  blocks:
+
+    - type: "prose"
+      title: "Teaching that sticks"
+      highlight: true
+      markdown: |
+        - Use **words the mother understands**.
+        - Use **teaching aids that are familiar** (e.g. common containers for mixing
+          ORS).
+        - **Let her practise** what she must do — e.g. preparing ORS solution or
+          giving an oral medication — and encourage her to ask questions.
+        - Give advice in a **helpful, constructive manner**, praising the mother for
+          correct answers or good practice.
+
+    - type: "prose"
+      title: "Teaching is more than instructions"
+      callout: true
+      markdown: |
+        Teaching mothers is not just giving instructions. It should include:
+        - **Give information.** Explain how to give the treatment — e.g. preparing
+          ORS, giving an oral antibiotic, or applying eye ointment.
+        - **Show an example.** Demonstrate how to give the treatment.
+        - **Let her practise.** Ask her to prepare the medicine or give the treatment
+          while you watch; help as needed so she does it correctly.
+        - **Check her understanding.** Ask her to repeat the instructions in her own
+          words, or ask questions to confirm she has understood.

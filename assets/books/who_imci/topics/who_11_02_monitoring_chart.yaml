@@ -1,0 +1,40 @@
+# ============================================================
+# WHO IMCI §11.2 — Monitoring chart. Pocket Book 2nd ed (2013), p.320.
+# ============================================================
+
+topic:
+  id: "who-imci-11-2-monitoring-chart"
+  title: "Monitoring Chart"
+  list_subtitle: "11.2 · vitals · fluid balance · signs · feeding"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["monitoring", "chart", "vital signs", "fluid balance", "pediatric"]
+  aliases:
+    - "Monitoring chart"
+  category: "medical"
+
+  page_number: 320
+
+  blocks:
+
+    - type: "prose"
+      title: "What a monitoring chart should include"
+      highlight: true
+      markdown: |
+        - **Patient's details.**
+        - **Vital signs:** pulse rate and volume, respiratory rate, presence of
+          **lower chest indrawing**, **coma score / level of consciousness (AVPU)**,
+          temperature and **body weight**.
+        - **Fluid balance:** urine output, any vomiting, any stool.
+        - **Clinical signs, complications and positive investigation findings** — at
+          each check, record whether these are still present and record any **new**
+          signs or complications.
+        - **Treatments given.**
+        - **Feeding and nutrition:** record the weight on admission and at
+          appropriate intervals; keep a **daily record** of the child's drinking,
+          breastfeeding and eating, the food taken, and any feeding problems.
+
+    - type: "prose"
+      title: "Reference charts"
+      markdown: |
+        See **Annex 6** of the Pocket Book for references to examples of monitoring
+        charts and critical-care pathways.

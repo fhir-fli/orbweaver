@@ -1,0 +1,37 @@
+# ============================================================
+# WHO IMCI §12.5 — Checking the mother's health. Pocket Book 2nd ed
+# (2013), p.324.
+# ============================================================
+
+topic:
+  id: "who-imci-12-5-mothers-health"
+  title: "Checking the Mother's Health"
+  list_subtitle: "12.5 · treat · immunize · family planning · TB screen"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["discharge", "maternal health", "family planning", "tetanus", "tuberculosis", "pediatric"]
+  aliases:
+    - "Checking the mother's health"
+  category: "medical"
+
+  page_number: 324
+
+  blocks:
+
+    - type: "prose"
+      title: "Care for the mother too"
+      highlight: true
+      markdown: |
+        - If the **mother is sick**, provide treatment for her and help arrange
+          follow-up at a first-level clinic close to her home.
+        - Check the mother's **nutritional status** and give appropriate counselling.
+        - Check her **immunization status** and, if needed, give **tetanus toxoid**.
+        - Ensure she has access to **family planning and birth spacing**, and
+          counselling on preventing **sexually transmitted and HIV infections**.
+
+    - type: "prose"
+      title: "If the child has TB"
+      callout: true
+      markdown: |
+        If the child has **TB**, the **mother and other family members** should have
+        a **chest X-ray and a Mantoux test**. Make sure the mother knows where to
+        have them, and explain why they are needed.

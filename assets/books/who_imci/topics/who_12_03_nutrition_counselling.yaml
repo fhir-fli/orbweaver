@@ -1,0 +1,53 @@
+# ============================================================
+# WHO IMCI §12.3 — Nutrition counselling. Pocket Book 2nd ed (2013),
+# pp.323–324.
+# ============================================================
+
+topic:
+  id: "who-imci-12-3-nutrition-counselling"
+  title: "Nutrition Counselling"
+  list_subtitle: "12.3 · find feeding problems · advise · praise"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["discharge", "nutrition", "counselling", "feeding", "pediatric"]
+  aliases:
+    - "Nutrition counselling"
+  category: "medical"
+
+  page_number: 323
+
+  blocks:
+
+    - type: "prose"
+      title: "Identify feeding problems"
+      highlight: true
+      markdown: |
+        First, identify any feeding problems that have not been fully resolved. Ask:
+        - **Do you breastfeed your child?** — How many times during the day? Do you
+          also breastfeed during the night?
+        - **Does the child take any other food or fluids?** — What food or fluids?
+          How many times a day? What do you use to feed the child? How large are the
+          servings? Does the child receive his or her own serving? Who feeds the
+          child and how?
+
+        Compare the child's actual feeding with the **recommended guidelines for
+        that age** (see [feeding the sick child](topic:who-imci-10-1-2-sick-nutrition)).
+        Identify differences and list them as feeding problems.
+
+    - type: "prose"
+      title: "Advise and refer"
+      markdown: |
+        In addition, consider **difficulty in breastfeeding**, **lack of active
+        feeding**, and **not feeding well during the illness**. Advise the mother how
+        to overcome the problems and how to feed the child, and **refer to local
+        feeding recommendations** for children of different ages.
+
+    - type: "prose"
+      title: "Always praise good practice"
+      callout: true
+      markdown: |
+        Even when no specific problem is found, **praise the mother for what she does
+        well**. Give advice that promotes:
+        - **breastfeeding**,
+        - **improved complementary feeding** with locally available energy- and
+          nutrient-rich foods,
+        - **nutritious snacks** for children **≥ 2 years**.

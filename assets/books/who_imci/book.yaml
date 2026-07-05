@@ -376,3 +376,26 @@ book:
             - topic: "topics/who_10_06_5_reactions.yaml"
         - topic: "topics/who_10_07_oxygen.yaml"
         - topic: "topics/who_10_08_play.yaml"
+    - title: "11. Monitoring the child's progress"
+      # WHO Pocket Book color-codes by chapter; Chapter 11 tab = violet
+      # (sampled 0xFF542791 from the p.319 chapter title via pdftoppm).
+      palette:
+        accent: "0xFF542791"
+      children:
+        - topic: "topics/who_11_01_monitoring_procedures.yaml"
+        - topic: "topics/who_11_02_monitoring_chart.yaml"
+        - topic: "topics/who_11_03_audit.yaml"
+    - title: "12. Counselling & discharge from hospital"
+      # WHO Pocket Book color-codes by chapter; Chapter 12 tab = blue-violet
+      # (sampled 0xFF7264B8 from the p.321 chapter title via pdftoppm).
+      palette:
+        accent: "0xFF7264B8"
+      children:
+        - topic: "topics/who_12_01_discharge_timing.yaml"
+        - topic: "topics/who_12_02_counselling.yaml"
+        - topic: "topics/who_12_03_nutrition_counselling.yaml"
+        - topic: "topics/who_12_04_home_treatment.yaml"
+        - topic: "topics/who_12_05_mothers_health.yaml"
+        - topic: "topics/who_12_06_immunization.yaml"
+        - topic: "topics/who_12_07_communicating.yaml"
+        - topic: "topics/who_12_08_followup.yaml"

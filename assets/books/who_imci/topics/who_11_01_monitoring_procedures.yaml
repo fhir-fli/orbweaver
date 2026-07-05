@@ -1,0 +1,49 @@
+# ============================================================
+# WHO IMCI §11.1 — Monitoring procedures. Pocket Book 2nd ed (2013),
+# p.319.
+# ============================================================
+
+topic:
+  id: "who-imci-11-1-monitoring-procedures"
+  title: "Monitoring Procedures"
+  list_subtitle: "11.1 · check regularly · record · review"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["monitoring", "progress", "inpatient care", "pediatric"]
+  aliases:
+    - "Monitoring procedures"
+    - "Monitoring the child's progress"
+  category: "medical"
+
+  page_number: 319
+
+  blocks:
+
+    - type: "prose"
+      title: "What the health worker must know"
+      highlight: true
+      markdown: |
+        For monitoring to be effective, the health worker must know:
+        - the **correct administration** of the treatment,
+        - the **expected progress** of the child,
+        - the possible **adverse effects** of the treatment,
+        - the **complications** that may arise and **how they can be identified**,
+        - possible **alternative diagnoses** in a child who is not responding to
+          treatment.
+
+    - type: "prose"
+      title: "Check regularly, record, review"
+      markdown: |
+        Children treated in hospital should be **checked regularly**, so that any
+        **deterioration, complication, or error** in the administration of treatment
+        is identified **promptly**. The **frequency** of monitoring depends on the
+        **severity and nature** of the illness (see the relevant sections in
+        chapters 3–8).
+
+        **Record the details** of the child's condition and progress so they can be
+        **reviewed by other staff**. A senior health worker responsible for the
+        child's care, with authority to change treatment, should **supervise the
+        records** and examine the child regularly.
+
+        Children who are **seriously ill** should be **visited by a doctor** (or
+        other senior health professional) **soon after admission** — an opportunity
+        to encourage communication between families and hospital staff.

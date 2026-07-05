@@ -1,0 +1,45 @@
+# ============================================================
+# WHO IMCI §11.3 — Audit of paediatric care. Pocket Book 2nd ed (2013),
+# p.320.
+# ============================================================
+
+topic:
+  id: "who-imci-11-3-audit"
+  title: "Audit of Paediatric Care"
+  list_subtitle: "11.3 · review outcomes · improve, don't blame"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["monitoring", "audit", "quality improvement", "mortality", "pediatric"]
+  aliases:
+    - "Audit of paediatric care"
+    - "Clinical audit"
+  category: "medical"
+
+  page_number: 320
+
+  blocks:
+
+    - type: "prose"
+      title: "Review outcomes to improve care"
+      highlight: true
+      markdown: |
+        The quality of care can be improved if there is a system for **reviewing the
+        outcomes** of each child admitted. At a minimum, keep **records of all
+        children who died**, so that **case-fatality trends** can be compared over
+        time and the treatment given discussed by all staff — with the aim of
+        **identifying problems and finding solutions**.
+
+    - type: "prose"
+      title: "Clinical audit meetings"
+      callout: true
+      markdown: |
+        **Clinical audit meetings** to discuss **near-death events or deaths** —
+        especially those where some aspect of treatment may have gone wrong — are
+        helpful. **The aim is to improve care and solve problems, not to attribute
+        blame for errors.**
+
+        Audit by **comparing the care actually given with a recognized standard**,
+        such as the recommendations in this **Pocket Book**. A successful audit
+        needs the **full, constructive participation of all medical and nursing
+        staff**; keep it **simple** and not too time-consuming. One approach is to
+        ask staff for their views on improving quality and to give **priority to the
+        problems they identify.**

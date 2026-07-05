@@ -1,0 +1,79 @@
+# ============================================================
+# WHO IMCI §12.6 — Checking immunization status. Pocket Book 2nd ed
+# (2013), pp.325–326. Table 33 = EPI primary schedule.
+# ============================================================
+
+topic:
+  id: "who-imci-12-6-immunization"
+  title: "Checking Immunization Status"
+  list_subtitle: "12.6 · EPI schedule · only three contraindications"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["discharge", "immunization", "vaccination", "EPI", "pediatric"]
+  aliases:
+    - "Checking immunization status"
+    - "Immunization"
+    - "Vaccination schedule"
+  category: "medical"
+
+  page_number: 325
+
+  blocks:
+
+    - type: "prose"
+      title: "Catch up before discharge"
+      highlight: true
+      markdown: |
+        Ask to see the child's **immunization card** and determine whether all the
+        vaccinations recommended for the child's age have been given. Note any the
+        child still needs and explain this to the mother. **Give the vaccinations
+        before the child leaves hospital**, and record them on the card.
+
+    - type: "table"
+      title: "Table 33 · EPI primary vaccination schedule (infants)"
+      columns: ["Vaccine", "Birth", "6 wk", "10 wk", "14 wk", "9 mo"]
+      column_flex: [6, 3, 3, 3, 3, 3]
+      rows:
+        - cells: ["BCG", "✓", "", "", "", ""]
+        - cells: ["Polio (OPV)", "✓", "✓", "✓", "✓", ""]
+        - cells: ["DPT", "", "✓", "✓", "✓", ""]
+        - cells: ["Hepatitis B", "✓", "✓", "✓", "✓", ""]
+        - cells: ["Hib", "", "✓", "✓", "✓", ""]
+        - cells: ["Pneumococcal", "", "✓", "✓", "✓", ""]
+        - cells: ["Rotavirus", "", "✓", "✓", "✓", ""]
+        - cells: ["Yellow fever", "", "", "", "", "✓"]
+        - cells: ["Measles", "", "", "", "", "✓"]
+        - cells: ["Rubella", "", "", "", "", "✓"]
+
+    - type: "prose"
+      title: "Schedule notes"
+      markdown: |
+        Table 33 lists **WHO's international recommendations**; national schedules
+        take account of local disease patterns.
+        - **OPV birth dose** in **polio-endemic** countries; at least one dose of
+          **inactivated polio vaccine (IPV)** is also recommended (given with the
+          14-week visit).
+        - **Hepatitis B — Option 1** (birth + 6/10/14 wk) where perinatal
+          transmission is frequent (e.g. South-East Asia); **Option 2** (6/10/14 wk,
+          no birth dose) where it is less frequent (e.g. sub-Saharan Africa).
+        - **Rotavirus:** Rotarix = 2 doses; RotaTeq = 3 doses.
+        - **Yellow fever** where the disease poses a risk.
+        - An **extra measles dose at 6 months** in high-risk situations (outbreaks,
+          refugee camps, HIV-positive infants, high infant measles mortality); a
+          **second opportunity** for measles should be provided for all children.
+
+    - type: "prose"
+      title: "Only THREE contraindications"
+      callout: true
+      markdown: |
+        Vaccinate **all** children — including those who are sick or malnourished —
+        **unless** one of the **only three contraindications** applies:
+        - **Do not give BCG or yellow fever vaccine** to a child with **symptomatic
+          HIV infection or AIDS** — but give the other vaccines.
+        - **Do not give DPT-2 or DPT-3** to a child who had **convulsions or shock
+          within 3 days** of the most recent dose.
+        - **Do not give DPT** to a child with **recurrent convulsions or active CNS
+          disease**.
+
+        A child with **diarrhoea** who is due oral polio vaccine **should be given a
+        dose, but it is not counted** — note on the record that it coincided with
+        diarrhoea so an **extra dose** is given later.
