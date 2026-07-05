@@ -1,13 +1,21 @@
 # ============================================================
 # WHO IMCI §12.6 — Checking immunization status. Pocket Book 2nd ed
 # (2013), pp.325–326. Table 33 = EPI primary schedule.
+# ⚠️ OpenEvidence-reviewed 2026-07: the 2013 schedule predates several WHO
+# additions — added a "since 2013" block (MALARIA vaccine RTS,S 2021 / R21
+# 2023 for endemic areas; single-dose HPV for girls 9–14; 2-dose IPV;
+# routine MCV2 at 15–18 mo; MenA conjugate in the meningitis belt; Hep A
+# where endemic); DTP now usually PENTAVALENT (DTP-HepB-Hib); refined
+# contraindications (BCG in confirmed HIV, YF in HIV by CD4, DPT
+# encephalopathy < 7 d, rotavirus SCID/intussusception, prior anaphylaxis).
+# Refs: WHO position papers; Datoo R21 Lancet 2024; Kreimer HPV NEJM 2025.
 # ============================================================
 
 topic:
   id: "who-imci-12-6-immunization"
   title: "Checking Immunization Status"
-  list_subtitle: "12.6 · EPI schedule · only three contraindications"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "12.6 · EPI schedule + malaria/HPV/MCV2 · contraindications"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["discharge", "immunization", "vaccination", "EPI", "pediatric"]
   aliases:
     - "Checking immunization status"
@@ -35,7 +43,7 @@ topic:
       rows:
         - cells: ["BCG", "✓", "", "", "", ""]
         - cells: ["Polio (OPV)", "✓", "✓", "✓", "✓", ""]
-        - cells: ["DPT", "", "✓", "✓", "✓", ""]
+        - cells: ["DTP-containing", "", "✓", "✓", "✓", ""]
         - cells: ["Hepatitis B", "✓", "✓", "✓", "✓", ""]
         - cells: ["Hib", "", "✓", "✓", "✓", ""]
         - cells: ["Pneumococcal", "", "✓", "✓", "✓", ""]
@@ -49,31 +57,58 @@ topic:
       markdown: |
         Table 33 lists **WHO's international recommendations**; national schedules
         take account of local disease patterns.
-        - **OPV birth dose** in **polio-endemic** countries; at least one dose of
-          **inactivated polio vaccine (IPV)** is also recommended (given with the
-          14-week visit).
+        - **DTP, hepatitis B and Hib** are usually given together as a single
+          **pentavalent (DTP-HepB-Hib)** injection.
+        - **Polio:** **OPV birth dose** in **polio-endemic** countries; WHO now
+          recommends a **2-dose IPV** schedule (first dose at **14 weeks**, second
+          **≥ 4 months later**), not just a single IPV dose.
         - **Hepatitis B — Option 1** (birth + 6/10/14 wk) where perinatal
           transmission is frequent (e.g. South-East Asia); **Option 2** (6/10/14 wk,
           no birth dose) where it is less frequent (e.g. sub-Saharan Africa).
         - **Rotavirus:** Rotarix = 2 doses; RotaTeq = 3 doses.
         - **Yellow fever** where the disease poses a risk.
-        - An **extra measles dose at 6 months** in high-risk situations (outbreaks,
-          refugee camps, HIV-positive infants, high infant measles mortality); a
-          **second opportunity** for measles should be provided for all children.
+        - **Measles: two routine doses.** MCV1 at **9 months**, **MCV2 at 15–18
+          months** as part of the routine schedule. Give an **extra dose at 6
+          months** in high-risk situations (outbreaks, refugee camps, HIV-positive
+          infants, high infant measles mortality).
 
     - type: "prose"
-      title: "Only THREE contraindications"
+      title: "Vaccines added since 2013"
       callout: true
       markdown: |
-        Vaccinate **all** children — including those who are sick or malnourished —
-        **unless** one of the **only three contraindications** applies:
-        - **Do not give BCG or yellow fever vaccine** to a child with **symptomatic
-          HIV infection or AIDS** — but give the other vaccines.
-        - **Do not give DPT-2 or DPT-3** to a child who had **convulsions or shock
-          within 3 days** of the most recent dose.
-        - **Do not give DPT** to a child with **recurrent convulsions or active CNS
-          disease**.
+        Several vaccines have entered the WHO schedule since this Pocket Book:
+        - **Malaria vaccine** (**RTS,S/AS01**, recommended 2021; **R21/Matrix-M**,
+          2023) — for children in areas of **moderate-to-high P. falciparum
+          transmission**; a **4-dose** schedule (around **5, 6, 7 and ~18–24
+          months**). Rollout has cut severe malaria and all-cause child mortality.
+        - **HPV vaccine** — a **single dose** now protects **girls aged 9–14 years**
+          (an alternative to the 2-dose schedule).
+        - **Meningococcal A conjugate (MenAfriVac)** in the African **meningitis
+          belt**.
+        - **Hepatitis A** in countries of **intermediate endemicity**.
+
+    - type: "prose"
+      title: "Contraindications & precautions"
+      callout: true
+      markdown: |
+        Vaccinate **all** children — including those who are sick or malnourished.
+        True contraindications are few:
+        - **Anaphylaxis** to a previous dose or a vaccine component → do not give
+          **that** vaccine.
+        - **BCG:** do not give to an infant with **confirmed HIV infection**
+          (regardless of symptoms — risk of disseminated BCG). **Do** give to an
+          HIV-**exposed** infant of unknown status in high-TB settings (benefit
+          outweighs risk).
+        - **Yellow fever:** avoid in **symptomatic/immunosuppressed HIV**; it **can**
+          be given to a child ≥ 9 months with HIV who is **asymptomatic with CD4
+          ≥ 200 (or ≥ 15%)**.
+        - **DTP:** do not give if **encephalopathy occurred within 7 days** of a
+          previous dose. A **progressive neurological disorder** is a **precaution**
+          — defer until stable. (Convulsions or shock after a dose are precautions,
+          not absolute bars.)
+        - **Rotavirus:** do not give with **SCID** or a **history of
+          intussusception**.
 
         A child with **diarrhoea** who is due oral polio vaccine **should be given a
-        dose, but it is not counted** — note on the record that it coincided with
-        diarrhoea so an **extra dose** is given later.
+        dose, but it is not counted** — note that it coincided with diarrhoea so an
+        **extra dose** is given later.

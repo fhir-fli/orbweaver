@@ -1,13 +1,17 @@
 # ============================================================
 # WHO IMCI §12.1 — Timing of discharge from hospital. Pocket Book 2nd
 # ed (2013), pp.321–322.
+# ⚠️ OpenEvidence-reviewed 2026-07: criteria current; added that a child
+# who needed oxygen should hold SpO2 > 90% in room air for 12–24 h before
+# discharge, and that a structured discharge checklist reduces readmissions.
+# Refs: Bradley IDSA/PIDS CAP 2011; §10.7.
 # ============================================================
 
 topic:
   id: "who-imci-12-1-discharge-timing"
   title: "Timing of Discharge"
-  list_subtitle: "12.1 · improved markedly · individual basis"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "12.1 · improved markedly · SpO2 > 90% · individual basis"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["discharge", "counselling", "follow-up", "pediatric"]
   aliases:
     - "Timing of discharge from hospital"
@@ -39,7 +43,10 @@ topic:
       markdown: |
         In acute infections, a child can be considered ready for discharge when the
         clinical condition has **improved markedly** (afebrile, alert, eating and
-        sleeping normally) and **oral treatment has been started**.
+        sleeping normally) and **oral treatment has been started**. A child who
+        needed **oxygen** should maintain **SpO₂ > 90% in room air for 12–24 h**
+        before discharge. A **structured discharge checklist** helps ensure nothing
+        is missed and reduces readmissions.
 
         Decide on an **individual basis**, taking account of:
         - the family's **home circumstances** and how much support is available,

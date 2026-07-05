@@ -1,6 +1,9 @@
 # ============================================================
 # WHO IMCI §12.3 — Nutrition counselling. Pocket Book 2nd ed (2013),
 # pp.323–324.
+# ⚠️ OpenEvidence-reviewed 2026-07: reference the 2023 WHO complementary-
+# feeding guideline (dietary diversity incl. animal-source foods; avoid
+# added sugar/salt and sugary drinks). Ref: WHO CF 6–23 mo (2023).
 # ============================================================
 
 topic:
@@ -51,3 +54,8 @@ topic:
         - **improved complementary feeding** with locally available energy- and
           nutrient-rich foods,
         - **nutritious snacks** for children **≥ 2 years**.
+
+        The **2023 WHO complementary-feeding guideline** emphasises **dietary
+        diversity** (including **animal-source foods**, pulses, nuts, fruit and
+        vegetables) and **avoiding foods with added sugar or salt** and
+        **sugar-sweetened beverages**.

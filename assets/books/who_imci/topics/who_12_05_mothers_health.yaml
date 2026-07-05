@@ -1,13 +1,19 @@
 # ============================================================
 # WHO IMCI §12.5 — Checking the mother's health. Pocket Book 2nd ed
 # (2013), p.324.
+# ⚠️ OpenEvidence-reviewed 2026-07: TB contact evaluation modernised —
+# systematically assess household contacts for BOTH TB disease AND TB
+# infection; TST still fine in LMICs, IGRA an alternative (better in BCG-
+# vaccinated); offer TB preventive treatment (TPT) to eligible contacts,
+# now including short rifamycin-based regimens (3HP, 1HP, 4R). Refs: WHO
+# consolidated TB guidelines 2022; Nolt/Starke Pediatrics 2021.
 # ============================================================
 
 topic:
   id: "who-imci-12-5-mothers-health"
   title: "Checking the Mother's Health"
-  list_subtitle: "12.5 · treat · immunize · family planning · TB screen"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "12.5 · treat · immunize · family planning · TB contacts + TPT"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["discharge", "maternal health", "family planning", "tetanus", "tuberculosis", "pediatric"]
   aliases:
     - "Checking the mother's health"
@@ -29,9 +35,22 @@ topic:
           counselling on preventing **sexually transmitted and HIV infections**.
 
     - type: "prose"
-      title: "If the child has TB"
+      title: "If the child has TB — evaluate the household"
       callout: true
       markdown: |
-        If the child has **TB**, the **mother and other family members** should have
-        a **chest X-ray and a Mantoux test**. Make sure the mother knows where to
-        have them, and explain why they are needed.
+        If the child has **TB**, systematically evaluate the **mother and other
+        household contacts** for **both TB disease and TB infection**:
+        - **Screen for disease** — symptom screen and **chest X-ray**; investigate
+          further (sputum, rapid molecular test) if abnormal.
+        - **Test for infection** — a **tuberculin skin test (Mantoux)** is
+          appropriate in most settings; an **interferon-gamma release assay (IGRA)**
+          is an alternative and is preferred in **BCG-vaccinated** people or where
+          return for TST reading is unreliable.
+        - **Offer TB preventive treatment (TPT)** to eligible contacts once active
+          disease is excluded — especially **children < 5 years** and people living
+          with HIV. Options include **isoniazid** and shorter **rifamycin-based
+          regimens** (**3HP** = 3 months weekly isoniazid + rifapentine; **1HP**;
+          **4R** = 4 months rifampicin).
+
+        Make sure the mother knows **where** to have these done and **why** they are
+        needed.

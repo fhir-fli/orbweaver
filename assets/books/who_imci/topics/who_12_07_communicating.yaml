@@ -1,13 +1,16 @@
 # ============================================================
 # WHO IMCI §12.7 — Communicating with the first-level health worker.
 # Pocket Book 2nd ed (2013), pp.325–327.
+# ⚠️ OpenEvidence-reviewed 2026-07: content current; added that electronic
+# referral systems or mobile-phone communication can supplement the written
+# note where available.
 # ============================================================
 
 topic:
   id: "who-imci-12-7-communicating"
   title: "Communicating with the Referring Worker"
   list_subtitle: "12.7 · diagnosis · treatment · follow-up plan"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["discharge", "communication", "referral", "continuity of care", "pediatric"]
   aliases:
     - "Communicating with the first-level health worker"
@@ -36,4 +39,5 @@ topic:
         If the child has a **health card**, record the above information on it and
         ask the mother to **show it to the health worker**. When there is no health
         card, record these details in a **short note** for the mother and the health
-        worker.
+        worker. Where available, an **electronic referral system or mobile-phone
+        communication** can supplement the written note for more reliable handover.

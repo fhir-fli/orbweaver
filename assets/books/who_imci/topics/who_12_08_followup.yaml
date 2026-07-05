@@ -1,13 +1,16 @@
 # ============================================================
 # WHO IMCI §12.8 — Providing follow-up care. Pocket Book 2nd ed (2013),
 # p.327.
+# ⚠️ OpenEvidence-reviewed 2026-07: danger signs + intervals current;
+# clarified the 14-day anaemia visit is to reassess and CONTINUE iron for
+# the full 3-month course (not a one-off). Ref: §10.5.
 # ============================================================
 
 topic:
   id: "who-imci-12-8-followup"
   title: "Providing Follow-up Care"
   list_subtitle: "12.8 · when to return · urgent signs"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["discharge", "follow-up", "when to return", "danger signs", "pediatric"]
   aliases:
     - "Providing follow-up care"
@@ -37,7 +40,8 @@ topic:
       markdown: |
         - **Feeding problem** with recommended changes — follow up in **5 days** to
           see whether the mother made the changes.
-        - **Anaemia** — follow up in **14 days** to give more oral iron.
+        - **Anaemia** — follow up in **14 days** to **reassess and continue oral
+          iron for the full 3-month course** (not a single top-up).
         - **Very low weight** — additional follow-up in **30 days** (weigh the child,
           reassess feeding, give further nutrition counselling).
 

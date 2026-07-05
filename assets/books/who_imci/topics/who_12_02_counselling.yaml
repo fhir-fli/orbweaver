@@ -1,13 +1,17 @@
 # ============================================================
 # WHO IMCI §12.2 — Counselling (the mother's card). Pocket Book 2nd ed
 # (2013), pp.322–323.
+# ⚠️ OpenEvidence-reviewed 2026-07: teach-back + pictorial cards remain
+# evidence-based; added that SMS / mobile-health reminders can supplement
+# the card for follow-up and danger-sign recall where phones are available.
+# Ref: Talevski teach-back PLoS One 2020.
 # ============================================================
 
 topic:
   id: "who-imci-12-2-counselling"
   title: "Counselling & the Mother's Card"
-  list_subtitle: "12.2 · pictorial card · when to return"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "12.2 · pictorial card · teach-back · when to return"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["discharge", "counselling", "mother's card", "health education", "pediatric"]
   aliases:
     - "Counselling"
@@ -42,3 +46,8 @@ topic:
           encourage her to use the card to help her remember.
         - **Give her the card** to take home and suggest she show it to other family
           members. Provide an **effective interpreter** if language is a barrier.
+
+        Asking her to **repeat the plan in her own words** is the **teach-back
+        method** — it improves recall, adherence and self-care. Where mobile phones
+        are available, **SMS or mobile-health reminders** can supplement the card
+        for follow-up dates and danger-sign recognition.
