@@ -1,13 +1,20 @@
 # ============================================================
 # WHO IMCI §10.5 — Management of anaemia. Pocket Book 2nd ed (2013),
 # pp.307–308.
+# ⚠️ OpenEvidence-reviewed 2026-07: added WHO severity bands for context
+# (anaemia < 11, severe < 7 g/dl at 6–59 mo — the 9.3 g/dl figure is the
+# Pocket Book's home-iron ACTION threshold, kept); TRACT trial (African
+# severe anaemia) — transfusion volume is now FEVER-GUIDED: afebrile
+# children benefit from a HIGHER volume, febrile children (T ≥ 37.5 °C)
+# do worse with high volume, so give the LOWER volume. Refs: WHO Hb
+# thresholds; Maitland TRACT NEJM 2019 + consensus algorithm BJH 2021.
 # ============================================================
 
 topic:
   id: "who-imci-10-5-anaemia"
   title: "Management of Anaemia"
-  list_subtitle: "10.5 · non-severe iron · severe → transfuse"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "10.5 · non-severe iron · severe → fever-guided transfusion"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "anaemia", "iron", "transfusion", "pediatric"]
   aliases:
     - "Management of anaemia"
@@ -22,14 +29,16 @@ topic:
       title: "Non-severe anaemia"
       highlight: true
       markdown: |
-        Young children (**< 6 years**) are anaemic if the **Hb is < 9.3 g/dl**
-        (about **EVF < 27%**). If anaemia is present, begin treatment — **unless the
-        child has severe acute malnutrition** (in which case iron is withheld during
+        **WHO defines anaemia** in children **6–59 months** as **Hb < 11 g/dl**
+        (moderate < 10, **severe < 7 g/dl**). The Pocket Book uses **Hb < 9.3 g/dl**
+        (about **EVF < 27%**) as the **threshold to start home iron treatment** in
+        young children (**< 6 years**). Begin treatment when the Hb is below this —
+        **unless the child has severe acute malnutrition** (iron is withheld during
         the stabilization phase).
-        - Give **home iron treatment** (a daily **iron–folate tablet** or a dose of
-          **iron syrup**) for **14 days**.
-        - Ask the parent to **return in 14 days**. Treat for **3 months** where
-          possible — it takes **2–4 weeks** to correct the anaemia and **1–3
+        - Give **home iron treatment** — a daily **iron–folate tablet** or **iron
+          syrup**, providing **2–3 mg/kg/day of elemental iron**.
+        - Ask the parent to **return in 14 days**. The **standard course is 3
+          months** — it takes **2–4 weeks** to correct the anaemia and **1–3
           months** to build up iron stores.
         - If the child is **≥ 1 year** and has not had **mebendazole** in the
           previous 6 months, give **one dose of mebendazole (500 mg)** for possible
@@ -51,8 +60,15 @@ topic:
           consciousness, heart failure, deep laboured breathing**, or **very high
           malaria parasitaemia (> 10% of red cells)**.
 
-        Give **packed cells 10 ml/kg over 3–4 h** in preference to whole blood; if
-        not available, **fresh whole blood 20 ml/kg over 3–4 h**. Check **RR and
+        **Transfusion volume is now guided by fever** (TRACT trial, African
+        children) — transfuse over **3–4 h**:
+        - **Afebrile (T < 37.5 °C):** give the **higher volume — whole blood
+          30 ml/kg (or packed cells 20 ml/kg)** — it **lowers** mortality.
+        - **Febrile (T ≥ 37.5 °C):** give the **lower volume — whole blood 20 ml/kg
+          (or packed cells 10 ml/kg)** — higher volumes **increased** mortality in
+          febrile children.
+
+        Packed cells are preferred to whole blood where available. Check **RR and
         pulse every 15 min** — if either rises or heart failure appears (basal
         crepitations, enlarged liver, raised JVP), transfuse **more slowly** and
         give **IV furosemide 1–2 mg/kg** (max 20 mg). Repeat the transfusion if the

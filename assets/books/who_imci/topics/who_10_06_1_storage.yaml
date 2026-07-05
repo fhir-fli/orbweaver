@@ -1,12 +1,16 @@
 # ============================================================
 # WHO IMCI §10.6.1 — Storage of blood. Pocket Book 2nd ed (2013), p.308.
+# ⚠️ OpenEvidence-reviewed 2026-07: screening/expiry/2-h rule unchanged;
+# added that a blood warmer should be used (where available) for
+# large-volume or rapid transfusion, especially in neonates and small
+# infants. Ref: PICU Transfusion & Anemia Expertise (Zantek 2018).
 # ============================================================
 
 topic:
   id: "who-imci-10-6-1-storage"
   title: "Storage of Blood"
   list_subtitle: "10.6.1 · screened · not expired · < 2 h out of fridge"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "blood transfusion", "storage", "pediatric"]
   aliases:
     - "Storage of blood"
@@ -25,4 +29,6 @@ topic:
         - **Do not** use blood that has **passed its expiry date** or has been **out
           of the refrigerator for more than 2 h**.
         - **Large-volume, rapid transfusion (> 15 ml/kg per h)** of blood stored at
-          **4 °C** may cause **hypothermia**, especially in small infants.
+          **4 °C** may cause **hypothermia**, especially in small infants — **use a
+          blood warmer where available** for large-volume or rapid transfusion,
+          particularly in **neonates and small infants**.

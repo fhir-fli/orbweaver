@@ -1,6 +1,11 @@
 # ============================================================
 # WHO IMCI §10.1.2 — Nutritional management of sick children. Pocket
 # Book 2nd ed (2013), pp.299–303.
+# ⚠️ OpenEvidence-reviewed 2026-07: Chart 16 / catch-up recipes current;
+# added the 2023 WHO complementary-feeding guideline emphasis — dietary
+# DIVERSITY (protein incl. animal-source foods, pulses, nuts, fruit, veg),
+# responsive feeding, and AVOIDING added sugar and salt. Ref: WHO
+# complementary feeding of infants & young children 6–23 mo (2023).
 # ============================================================
 
 topic:
@@ -115,3 +120,8 @@ topic:
           foods and **1–2 snacks** between meals; keep encouraging the child.
         - **≥ 2 years:** **three family meals a day** plus **two nutritious snacks**;
           talk with the child during meals and keep eye contact.
+
+        The **2023 WHO complementary-feeding guideline** (6–23 months) emphasises a
+        **diverse diet** — including **animal-source foods, pulses, nuts, fruit and
+        vegetables** — and **responsive feeding**, while **avoiding foods with added
+        sugar and salt** and sugary drinks.

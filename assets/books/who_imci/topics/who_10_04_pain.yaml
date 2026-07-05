@@ -1,13 +1,20 @@
 # ============================================================
 # WHO IMCI §10.4 — Pain control. Pocket Book 2nd ed (2013),
 # pp.306–307.
+# ⚠️ OpenEvidence-reviewed 2026-07: named the WHO two-step ladder and made
+# the codeine/tramadol prohibition explicit (CYP2D6 ultra-rapid metabolism
+# → fatal respiratory depression); added oral morphine STARTING dose
+# (0.15–0.3 mg/kg q4h); TAC → LET as preferred topical (cocaine-free;
+# never near mucosa); added amitriptyline (WHO-EML) for neuropathic pain.
+# Refs: WHO persisting-pain guidelines 2012; FDA/EMA codeine; SIOP-PODC
+# low-income supportive-care 2013.
 # ============================================================
 
 topic:
   id: "who-imci-10-4-pain"
   title: "Pain Control"
-  list_subtitle: "10.4 · two steps · by the clock · morphine"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "10.4 · two-step ladder · morphine · no codeine · LET"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "pain", "analgesia", "morphine", "pediatric"]
   aliases:
     - "Pain control"
@@ -22,10 +29,16 @@ topic:
       title: "Principles of effective analgesia"
       highlight: true
       markdown: |
-        Correct use of analgesics relieves pain in most children. Follow these
-        principles:
-        - Give analgesics in **two steps** — according to whether the pain is
-          **mild** or **moderate-to-severe**.
+        Correct use of analgesics relieves pain in most children. Follow the
+        **WHO two-step analgesic ladder** (the old three-step ladder was retired in
+        2012 — the intermediate "weak opioid" step is gone):
+        - Give analgesics in **two steps** — a **non-opioid** for **mild** pain,
+          moving directly to a **strong opioid (morphine)** for **moderate-to-severe**
+          pain.
+        - **Do not use codeine or tramadol in children.** Their effect depends on
+          **CYP2D6** metabolism, which varies widely — ultra-rapid metabolizers can
+          develop **fatal respiratory depression** — so they are no longer
+          recommended.
         - Give analgesics **regularly ('by the clock')** so the child does not have
           to experience a recurrence of severe pain to earn the next dose.
         - Use the **most appropriate, simplest, most effective and least painful
@@ -48,8 +61,8 @@ topic:
       callout: true
       markdown: |
         For pain that does not respond to the above:
-        - Give **morphine orally or IV every 4–6 h**, or by **continuous IV
-          infusion**.
+        - Give **morphine** — a usual **oral starting dose of 0.15–0.3 mg/kg every
+          4 h** (or IV), or by **continuous IV infusion**; titrate to effect.
         - If morphine does not adequately relieve the pain, **switch to an
           alternative opioid** such as **fentanyl or hydromorphone**.
         - **Monitor carefully for respiratory depression.** If tolerance develops,
@@ -58,10 +71,11 @@ topic:
     - type: "prose"
       title: "Adjuvant medicines"
       markdown: |
-        There is not sufficient evidence that adjuvants relieve persistent pain, but
-        in specific cases they are commonly used: **diazepam** for muscle spasm,
-        **carbamazepine** for neuralgic pain, and **corticosteroids** (such as
-        **dexamethasone**) for pain from inflammatory swelling pressing on a nerve.
+        In specific cases adjuvants are commonly used: **diazepam** for muscle
+        spasm, **carbamazepine** or **amitriptyline** for **neuropathic / neuralgic
+        pain** (both on the WHO Essential Medicines List), and **corticosteroids**
+        (such as **dexamethasone**) for pain from inflammatory swelling pressing on
+        a nerve.
 
     - type: "prose"
       title: "Pain control for procedures"
@@ -70,5 +84,9 @@ topic:
         painful procedures (**lidocaine infiltrated at 1–2%**):
         - **Lidocaine:** apply (with gloves) on a gauze pad to **painful mouth
           ulcers before feeds** — acts within **2–5 min**.
-        - **Tetracaine, adrenaline and cocaine (TAC):** apply on a gauze pad and
-          place over **open wounds before suturing**.
+        - **Topical anaesthetic for open wounds before suturing:** apply on a gauze
+          pad. **LET (lidocaine 4%, epinephrine 0.1%, tetracaine 0.5%) is now
+          preferred** over the older **TAC** (tetracaine, adrenaline, **cocaine**) —
+          LET is cocaine-free with comparable efficacy and a better safety profile.
+          **Never apply either near mucous membranes** (mucosal cocaine absorption
+          has caused seizures and deaths).

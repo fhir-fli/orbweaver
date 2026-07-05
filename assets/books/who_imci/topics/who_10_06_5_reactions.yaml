@@ -1,13 +1,20 @@
 # ============================================================
 # WHO IMCI §10.6.5 — Transfusion reactions. Pocket Book 2nd ed (2013),
 # pp.310–312.
+# ⚠️ OpenEvidence-reviewed 2026-07: CRITICAL dosing fixes — fixed adult
+# doses replaced by WEIGHT-BASED: adrenaline 0.01 mg/kg IM (= 0.01 ml/kg
+# of 1:1000, max 0.3 mg), repeat q5–15 min; hydrocortisone 1–2 mg/kg IV
+# (max 100 mg) — the old fixed 200 mg is an adult dose. Adrenaline is the
+# priority; corticosteroids are ADJUNCTIVE (no proven acute benefit).
+# Added TACO vs TRALI as named entities. Refs: Golden anaphylaxis PP 2023;
+# AABB; Kohorst 2020.
 # ============================================================
 
 topic:
   id: "who-imci-10-6-5-reactions"
   title: "Transfusion Reactions"
-  list_subtitle: "10.6.5 · mild · moderately severe · life-threatening"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "10.6.5 · mild · moderate · life-threatening · TACO/TRALI"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "transfusion reaction", "haemolysis", "anaphylaxis", "pediatric"]
   aliases:
     - "Transfusion reactions"
@@ -44,8 +51,8 @@ topic:
         heart rate.
         - **Stop the transfusion;** remove the IV line but **not the cannula**; set
           up a new infusion with **normal saline**.
-        - Give **hydrocortisone 200 mg IV** or **chlorphenamine 0.25 mg/kg IM**, if
-          available.
+        - Give **hydrocortisone 1–2 mg/kg IV (max 100 mg)** or **chlorphenamine
+          0.25 mg/kg IM**, if available.
         - Give a **bronchodilator** if wheezing.
         - **Send to the blood bank:** the giving set used, a blood sample from
           another body site, and urine collected over 24 h.
@@ -69,10 +76,25 @@ topic:
         - **Stop the transfusion;** keep the cannula and run **IV normal saline.**
         - **Maintain the airway and give oxygen.**
         - **Treat shock.**
-        - Give **adrenaline 0.15 ml of 1:1000 solution IM.**
-        - Give **hydrocortisone 200 mg IV** or **chlorphenamine 0.1 mg/kg IM**, if
-          available.
+        - **Adrenaline is the priority:** **0.01 mg/kg IM** (= **0.01 ml/kg of
+          1:1000**, **max 0.3 mg**), **repeat every 5–15 min** as needed.
         - Give a **bronchodilator** if wheezing.
+        - **Hydrocortisone 1–2 mg/kg IV (max 100 mg)** — as an **adjunct only**
+          (steroids have **no proven benefit in acute anaphylaxis** and act too
+          slowly to replace adrenaline).
         - **Report to the blood bank** as soon as possible.
         - Maintain renal blood flow with **furosemide 1 mg/kg.**
         - Give **antibiotics as for septicaemia.**
+
+    - type: "prose"
+      title: "TACO vs TRALI — non-haemolytic emergencies"
+      markdown: |
+        Two non-infectious reactions cause respiratory distress **within 6 h** of
+        transfusion and are easily confused:
+        - **TACO (circulatory overload):** volume overload — **raised JVP/CVP,
+          hypertension, positive fluid balance, pulmonary oedema**. Treat by
+          **slowing/stopping the transfusion, oxygen, and diuretics (furosemide).**
+        - **TRALI (acute lung injury):** **hypoxaemia with bilateral infiltrates**
+          but **not** fluid overload (normal/low filling pressures). Treat with
+          **supportive care and a restrictive fluid strategy** — **diuretics do not
+          help.**

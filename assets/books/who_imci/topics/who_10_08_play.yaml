@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §10.8 — Toys and play therapy. Pocket Book 2nd ed (2013),
 # p.315.
+# ⚠️ OpenEvidence-reviewed 2026-07: core message current; added
+# younger-infant examples (high-contrast visuals 0–3 mo, rattles 3–6 mo),
+# emphasis on CAREGIVER INVOLVEMENT, and the WHO/UNICEF Nurturing Care
+# Framework. Refs: Gjærde BMJ Open 2021; AAP Child Life 2021; WHO/UNICEF
+# Nurturing Care Framework 2018.
 # ============================================================
 
 topic:
   id: "who-imci-10-8-play"
   title: "Toys and Play Therapy"
-  list_subtitle: "10.8 · language + motor play · simple toys"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "10.8 · language + motor play · caregiver-led · simple toys"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "play therapy", "development", "stimulation", "pediatric"]
   aliases:
     - "Toys and play therapy"
@@ -30,6 +35,9 @@ topic:
     - type: "prose"
       title: "Activities with toys"
       markdown: |
+        - **0–3 months:** **high-contrast visual stimuli** (bold black-and-white
+          patterns), faces, and the caregiver's voice.
+        - **3–6 months:** **rattles** and safe objects to grasp, shake and mouth.
         - **Ring on a string (from 6 months):** thread cotton reels and other small
           objects (for example, cut from the necks of plastic bottles) onto a string
           and tie it in a **ring**, leaving a long piece of string hanging.
@@ -37,4 +45,6 @@ topic:
           with sandpaper and paint them in **bright colours**, if possible.
 
         Simple, safe, locally made toys and regular play sessions support a sick
-        child's development and recovery.
+        child's development and recovery. **Involve the caregiver** in play — it
+        benefits both child and family, consistent with the **WHO/UNICEF Nurturing
+        Care Framework** (responsive caregiving and early learning).

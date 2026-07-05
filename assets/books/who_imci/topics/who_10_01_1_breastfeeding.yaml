@@ -1,6 +1,10 @@
 # ============================================================
 # WHO IMCI §10.1.1 — Supporting breastfeeding. Pocket Book 2nd ed
 # (2013), pp.294–299.
+# ⚠️ OpenEvidence-reviewed 2026-07: core recommendations current;
+# added kangaroo mother care (continuous skin-to-skin + exclusive breast
+# milk) for low-birth-weight / preterm infants — reduces mortality and
+# improves feeding, and is highly LMIC-appropriate. Ref: WHO KMC 2022.
 # ============================================================
 
 topic:
@@ -104,6 +108,11 @@ topic:
         often cannot take oral feeds at first and may need **IV** for the first few
         days. Initiate **early feeding** with small oral feeds from day 1 as soon as
         the infant tolerates enteral feeds.
+
+        **Kangaroo mother care** — **continuous skin-to-skin contact** with exclusive
+        breast milk — is strongly recommended for low-birth-weight and preterm
+        infants: it **reduces mortality**, keeps the infant warm, and supports
+        breastfeeding. Start it as soon as the infant is stable.
         - **Very low birth weight (< 1.5 kg):** feed by **naso- or orogastric tube**;
           let the infant suck on the mother's clean finger while being tube-fed.
         - **≥ 32 weeks' gestation:** put to the breast when well enough; continue

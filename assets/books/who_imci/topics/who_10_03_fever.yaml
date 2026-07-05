@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §10.3 — Management of fever. Pocket Book 2nd ed (2013),
 # pp.305–306.
+# ⚠️ OpenEvidence-reviewed 2026-07: treat for the child's DISCOMFORT/distress
+# rather than a rigid 39 °C cutoff; paracetamol 10–15 mg/kg q4–6h (max 4
+# doses/day); ibuprofen 5–10 mg/kg q6–8h, caution in infants < 3–6 months;
+# aspirin/dipyrone cautions unchanged. Refs: Niehues Dtsch Arztebl 2026;
+# Tan JAMA Netw Open 2020.
 # ============================================================
 
 topic:
   id: "who-imci-10-3-fever"
   title: "Management of Fever"
-  list_subtitle: "10.3 · not an antibiotic indication · paracetamol"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "10.3 · treat discomfort · paracetamol / ibuprofen"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "fever", "antipyretic", "paracetamol", "pediatric"]
   aliases:
     - "Management of fever"
@@ -37,12 +42,15 @@ topic:
       title: "Antipyretic treatment"
       callout: true
       markdown: |
-        Restrict **paracetamol** to children **≥ 2 months** with a fever **≥ 39 °C**
-        who are uncomfortable or distressed. Children who are alert and active are
-        unlikely to benefit.
-        - **Paracetamol 15 mg/kg every 6 h.**
-        - **Ibuprofen 10 mg/kg every 6–8 h** — comparable effectiveness and safety,
-          but slightly more expensive and (like any NSAID) can cause gastritis.
+        Treat according to the child's **discomfort and distress**, not a rigid
+        temperature number. Antipyretics are **not routine** — give them to a child
+        (**≥ 2 months**) who is **uncomfortable, distressed or in pain**. A child who
+        is **alert and active** is unlikely to benefit.
+        - **Paracetamol 10–15 mg/kg every 4–6 h** (maximum **4 doses/day**).
+        - **Ibuprofen 5–10 mg/kg every 6–8 h** — comparable effectiveness and
+          safety, but slightly more expensive and (like any NSAID) can cause
+          gastritis; use with **caution in infants < 3–6 months** and avoid if
+          dehydrated or poorly perfused.
 
     - type: "prose"
       title: "Agents to avoid"

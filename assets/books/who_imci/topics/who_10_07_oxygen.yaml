@@ -1,13 +1,19 @@
 # ============================================================
 # WHO IMCI §10.7 — Oxygen therapy. Pocket Book 2nd ed (2013),
 # pp.312–315.
+# ⚠️ OpenEvidence-reviewed 2026-07: nasal prongs + SpO2 < 90% threshold
+# retained as the standard; added HFNC as an option WHERE AVAILABLE for
+# moderate-severe distress not improving on low-flow (nCPAP may be superior
+# in severe hypoxaemia in infants); noted emerging evidence supporting
+# slightly lower SpO2 targets. Refs: Maitland COAST Intensive Care Med
+# 2021; Luo J Pediatr 2019.
 # ============================================================
 
 topic:
   id: "who-imci-10-7-oxygen"
   title: "Oxygen Therapy"
-  list_subtitle: "10.7 · SpO2 < 90% · nasal prongs · monitor"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "10.7 · SpO2 < 90% · nasal prongs · HFNC where available"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "oxygen", "pulse oximetry", "nasal prongs", "pediatric"]
   aliases:
     - "Oxygen therapy"
@@ -61,6 +67,10 @@ topic:
           uvula, a distance from the side of the nostril to the **front of the ear.**
           Flow **1–2 litres/min** (avoid gastric distension). **Humidification is
           required.**
+        - **High-flow nasal cannula (HFNC)** is an option **where available** for a
+          child with **moderate-to-severe respiratory distress not improving on
+          standard low-flow oxygen** — it needs more equipment and training. In
+          **severe hypoxaemia in infants, nCPAP may be superior to HFNC.**
 
     - type: "prose"
       title: "Monitoring"
@@ -77,7 +87,9 @@ topic:
         Normal oxygen saturation at sea level is **95–100%**; it falls in severe
         pneumonia. Titrate the oxygen flow to a stable **SpO₂ > 90%** without wasting
         oxygen. (In cyanotic heart or lung disease, saturation may not rise with
-        oxygen.)
+        oxygen.) **Emerging evidence supports slightly lower targets** (accepting
+        **SpO₂ ≥ 88–92%**) in some settings, which conserves scarce oxygen — but
+        **> 90% remains the standard** for this handbook.
 
         **Continue oxygen** until the child can maintain **SpO₂ > 90% in room air.**
         When stable and improving, take the child off oxygen for a few minutes; if

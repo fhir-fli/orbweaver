@@ -1,13 +1,17 @@
 # ============================================================
 # WHO IMCI §10.6.4 — Giving a blood transfusion. Pocket Book 2nd ed
 # (2013), pp.309–310.
+# ⚠️ OpenEvidence-reviewed 2026-07: checks unchanged; transfusion VOLUME
+# now fever-guided (TRACT) — afebrile 30 ml/kg whole blood, febrile
+# (T ≥ 37.5 °C) 20 ml/kg; furosemide only for heart-failure signs, NOT
+# routine prophylaxis. Refs: Maitland TRACT NEJM 2019; Sarai Cochrane 2015.
 # ============================================================
 
 topic:
   id: "who-imci-10-6-4-giving"
   title: "Giving a Transfusion"
-  list_subtitle: "10.6.4 · check first · 20 ml/kg over 3–4 h · monitor"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "10.6.4 · check first · fever-guided volume · monitor"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "blood transfusion", "monitoring", "furosemide", "pediatric"]
   aliases:
     - "Giving a blood transfusion"
@@ -31,10 +35,15 @@ topic:
           look purple or black**.
         - The child has **no signs of heart failure.** If present, give **furosemide
           1 mg/kg IV** at the start of the transfusion (in a child whose circulating
-          volume is normal) — **do not inject it into the blood pack.**
+          volume is normal) — **do not inject it into the blood pack.** **Routine
+          prophylactic furosemide is not recommended** for every transfusion.
 
-        Make **baseline recordings** of temperature, respiratory rate and pulse. The
-        volume of whole blood transfused should initially be **20 ml/kg over 3–4 h.**
+        Make **baseline recordings** of temperature, respiratory rate and pulse.
+        **The volume is now guided by fever** (TRACT trial), given **over 3–4 h**:
+        - **Afebrile (T < 37.5 °C):** **whole blood 30 ml/kg** (or packed cells
+          20 ml/kg).
+        - **Febrile (T ≥ 37.5 °C):** **whole blood 20 ml/kg** (or packed cells
+          10 ml/kg) — higher volumes increased mortality in febrile children.
 
     - type: "prose"
       title: "During transfusion"

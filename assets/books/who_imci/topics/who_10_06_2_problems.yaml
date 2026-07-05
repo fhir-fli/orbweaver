@@ -1,13 +1,18 @@
 # ============================================================
 # WHO IMCI §10.6.2 — Problems in blood transfusion. Pocket Book 2nd ed
 # (2013), p.308.
+# ⚠️ OpenEvidence-reviewed 2026-07: core minimum screen (HIV/HBV/HCV/
+# syphilis/malaria) unchanged; add HTLV-I/II where feasible and regionally
+# relevant pathogens (e.g. Chagas / T. cruzi) per local epidemiology; note
+# that NON-INFECTIOUS complications (TACO, TRALI) are also important risks.
+# Refs: Busch Blood 2019; AABB.
 # ============================================================
 
 topic:
   id: "who-imci-10-6-2-problems"
   title: "Problems in Blood Transfusion"
-  list_subtitle: "10.6.2 · transmissible infection · screen donors"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "10.6.2 · transmissible infection · screen donors · TACO/TRALI"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
   tags: ["supportive care", "blood transfusion", "infection", "screening", "pediatric"]
   aliases:
     - "Problems in blood transfusion"
@@ -21,7 +26,14 @@ topic:
       title: "Blood can transmit infection"
       highlight: true
       markdown: |
-        Blood can be the **vehicle for transmitting infections** — **malaria,
-        syphilis, hepatitis B and C, and HIV**. Therefore **screen donors** for as
-        many of these infections as possible. To minimize the risk, give blood
-        transfusions **only when essential.**
+        Blood can be the **vehicle for transmitting infections** — the minimum
+        screen is **HIV, hepatitis B and C, syphilis, and malaria**. **Screen donors**
+        for as many as possible; add **HTLV-I/II where feasible**, and screen for
+        **regionally relevant pathogens** (for example **Chagas disease /
+        Trypanosoma cruzi**) according to **local epidemiology**.
+
+        Transfusion also carries **non-infectious risks** — **TACO**
+        (transfusion-associated circulatory overload) and **TRALI**
+        (transfusion-related acute lung injury) — see
+        [transfusion reactions](topic:who-imci-10-6-5-reactions). To minimize all of
+        these, give blood **only when essential.**
