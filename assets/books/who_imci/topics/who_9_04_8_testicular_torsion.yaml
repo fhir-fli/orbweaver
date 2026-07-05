@@ -1,13 +1,21 @@
 # ============================================================
 # WHO IMCI §9.4.8 — Testicular torsion. Pocket Book 2nd ed (2013),
 # p.286.
+# OpenEvidence-reviewed 2026-07:
+#   - Salvage rates CORRECTED per Mellick 2019 systematic review (n=2116):
+#     0–6 h ≈ 97% (not 90%); ≤12 h ≈ 90%; 13–24 h ≈ 54%; >24 h ≈ 18%.
+#   - Added: do NOT abandon exploration on symptom duration alone —
+#     meaningful salvage persists well past the traditional 6–8 h window.
+#   - Added differential: torsion of the appendix testis — the MOST common
+#     cause of the acute scrotum in prepubertal boys; "blue dot sign" at the
+#     upper pole; mimics testicular torsion.
 # ============================================================
 
 topic:
   id: "who-imci-9-4-8-testicular-torsion"
   title: "Testicular Torsion"
-  list_subtitle: "9.4.8 · acute scrotal pain · 6-hour window"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.4.8 · acute scrotal pain · time-critical salvage"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + Mellick 2019"
   tags: ["surgery", "testicular torsion", "acute scrotum", "urology", "pediatric"]
   aliases:
     - "Testicular torsion"
@@ -28,12 +36,19 @@ topic:
       markdown: |
         Torsion of a testis produces **acute swelling on one side of the scrotum**,
         with **severe pain** and a testis that is **extremely tender to touch**. To
-        preserve the testis, **urgent surgical treatment** is needed — **if done
-        within 6 h, 90% will be successful.**
+        preserve the testis, **urgent surgical treatment** is needed — salvage is
+        **~97% within 6 h** and **~90% within 12 h**, then falls (~54% at
+        13–24 h, ~18% beyond 24 h). **Do NOT abandon exploration on symptom
+        duration alone** — meaningful salvage persists well past the
+        traditional 6–8 h window.
 
     - type: "prose"
       title: "Differential diagnosis"
       markdown: |
+        - **Torsion of the appendix testis** — the **most common** cause of
+          the acute scrotum in **prepubertal** boys; a tender **'blue dot'**
+          at the upper pole; can mimic testicular torsion (if in doubt,
+          explore).
         - **Incarcerated hernia** — extends up into the inguinal canal (its upper
           limit cannot be felt).
         - **Epididymo-orchitis** — rare in young children.

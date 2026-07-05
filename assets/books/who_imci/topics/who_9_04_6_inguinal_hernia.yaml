@@ -1,13 +1,17 @@
 # ============================================================
 # WHO IMCI §9.4.6 — Inguinal hernia. Pocket Book 2nd ed (2013),
 # pp.285–286.
+# OpenEvidence-reviewed 2026-07: reviewer confirmed accurate. "Rarely in
+#   girls" kept (girls are ~10–15% of paediatric inguinal hernias — less
+#   common, not absent); hydrocele repair-by-1-yr and elective-repair
+#   guidance unchanged.
 # ============================================================
 
 topic:
   id: "who-imci-9-4-6-inguinal-hernia"
   title: "Inguinal Hernia"
   list_subtitle: "9.4.6 · groin swelling · elective repair"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 (no change)"
   tags: ["surgery", "inguinal hernia", "hydrocele", "pediatric"]
   aliases:
     - "Inguinal hernia"

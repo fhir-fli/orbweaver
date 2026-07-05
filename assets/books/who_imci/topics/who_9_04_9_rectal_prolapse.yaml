@@ -1,13 +1,15 @@
 # ============================================================
 # WHO IMCI §9.4.9 — Rectal prolapse. Pocket Book 2nd ed (2013),
 # p.287.
+# OpenEvidence-reviewed 2026-07: reviewer confirmed accurate (mebendazole
+#   dosing, Thiersch stitch, treat-the-cause) — no change.
 # ============================================================
 
 topic:
   id: "who-imci-9-4-9-rectal-prolapse"
   title: "Rectal Prolapse"
   list_subtitle: "9.4.9 · reduce gently · treat the cause"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 (no change)"
   tags: ["surgery", "rectal prolapse", "helminths", "cystic fibrosis", "pediatric"]
   aliases:
     - "Rectal prolapse"

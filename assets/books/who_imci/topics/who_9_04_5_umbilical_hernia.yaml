@@ -1,13 +1,17 @@
 # ============================================================
 # WHO IMCI §9.4.5 — Umbilical hernia. Pocket Book 2nd ed (2013),
 # p.285.
+# OpenEvidence-reviewed 2026-07: WHO "repair if not closed by 6 yr" kept
+#   (reasonable and conservative for LMIC surgical access); noted most
+#   current guidelines observe to age 4–5 yr (AAP; Zens 2017). Difficult-
+#   to-reduce indication re-confirmed.
 # ============================================================
 
 topic:
   id: "who-imci-9-4-5-umbilical-hernia"
   title: "Umbilical Hernia"
   list_subtitle: "9.4.5 · usually closes spontaneously"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + AAP consensus"
   tags: ["surgery", "umbilical hernia", "pediatric"]
   aliases:
     - "Umbilical hernia"
@@ -22,5 +26,6 @@ topic:
       highlight: true
       markdown: |
         A **soft reducible swelling at the umbilicus**. **Most close
-        spontaneously.** Repair only if **not closed by age 6 years**, or if there
-        is a history of the hernia being **difficult to reduce**.
+        spontaneously.** Repair only if **not closed by age 6 years** (most
+        current guidelines observe to **age 4–5 years**), or if there is a
+        history of the hernia being **difficult to reduce**.

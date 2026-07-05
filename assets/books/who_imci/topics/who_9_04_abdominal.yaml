@@ -1,13 +1,16 @@
 # ============================================================
 # WHO IMCI §9.4 — Abdominal problems (overview of the nested group).
 # Pocket Book 2nd ed (2013), pp.281–287.
+# OpenEvidence-reviewed 2026-07: overview confirmed accurate; the whole
+#   §9.4 group has now been OE-reviewed (the section Ch.9's original OE pass
+#   had skipped). No content change here.
 # ============================================================
 
 topic:
   id: "who-imci-9-4-abdominal"
   title: "Abdominal Problems"
   list_subtitle: "9.4 · pain · appendicitis · obstruction · hernia"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 (no change)"
   tags: ["surgery", "abdominal", "acute abdomen", "hernia", "pediatric"]
   aliases:
     - "Abdominal problems"
@@ -38,6 +41,6 @@ topic:
         - [Umbilical hernia](topic:who-imci-9-4-5-umbilical-hernia)
         - [Inguinal hernia](topic:who-imci-9-4-6-inguinal-hernia)
         - [Incarcerated hernia](topic:who-imci-9-4-7-incarcerated-hernia)
-        - [Testicular torsion](topic:who-imci-9-4-8-testicular-torsion) — 6-hour
-          window.
+        - [Testicular torsion](topic:who-imci-9-4-8-testicular-torsion) —
+          time-critical salvage.
         - [Rectal prolapse](topic:who-imci-9-4-9-rectal-prolapse)

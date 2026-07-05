@@ -1,13 +1,25 @@
 # ============================================================
 # WHO IMCI §9.4.4 — Intussusception. Pocket Book 2nd ed (2013),
 # pp.284–285.
+# OpenEvidence-reviewed 2026-07:
+#   - Reduction technique MODERNISED: ultrasound-guided saline (hydrostatic)
+#     enema is now preferred first-line (higher success, lower perforation,
+#     NO radiation, lower cost, US more available than fluoroscopy — esp.
+#     advantageous in LMIC; Liu 2024 meta / Chukwu 2023). Air (pneumatic)
+#     enema = alternative; barium under fluoroscopy = fallback (the detailed
+#     barium technique retained but deprioritised).
+#   - Red-currant-jelly stool: flagged as a LATE finding present in only
+#     ~30–60% — its absence must not delay diagnosis.
+#   - NOT added: post-reduction dexamethasone for recurrence (reviewer
+#     "consider" only; single small trial, low-quality Cochrane evidence) —
+#     deferred.
 # ============================================================
 
 topic:
   id: "who-imci-9-4-4-intussusception"
   title: "Intussusception"
-  list_subtitle: "9.4.4 · red-currant jelly stool · air/barium enema"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  list_subtitle: "9.4.4 · red-currant jelly stool · US-guided enema"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO PB 2013 + Liu 2024 / Chukwu 2023"
   tags: ["surgery", "intussusception", "bowel obstruction", "enema", "pediatric"]
   aliases:
     - "Intussusception"
@@ -31,7 +43,10 @@ topic:
         - **Early:** colicky abdominal pain with vomiting; the child cries with
           pain, doubles over, and pulls the legs up.
         - **Late:** pallor, distension, tenderness, **bloody diarrhoea
-          ('red-currant jelly stool')** and dehydration.
+          ('red-currant jelly stool')** and dehydration. The red-currant
+          stool is a **late** sign, present in only **~30–60%** — its
+          **absence does not exclude** intussusception; do not let it delay
+          diagnosis.
         - A **palpable abdominal mass** (begins in the right lower quadrant, may
           extend along the line of the colon).
 
@@ -40,12 +55,21 @@ topic:
       callout: true
       markdown: |
         **Arrange urgent review** by a surgeon experienced in paediatric surgery.
-        Proceed to operation if **air or barium enema fails to reduce** the
-        intussusception. If the bowel is **ischaemic or dead**, resection is
-        needed. Transfer if no one experienced in enema reduction or X-ray is
-        available.
+        Proceed to operation if **enema reduction fails**. If the bowel is
+        **ischaemic or dead**, resection is needed. Transfer if no one
+        experienced in enema reduction or imaging is available.
 
-        **Barium-enema reduction:** an unlubricated 35-ml Foley catheter into the
+        **Preferred: ultrasound-guided saline (hydrostatic) enema** — higher
+        success and lower perforation than fluoroscopy, with **no radiation**,
+        **lower cost**, and ultrasound more widely available than fluoroscopy
+        (particularly advantageous here). **Air (pneumatic) enema** is a good
+        alternative where available.
+
+    - type: "prose"
+      title: "Barium enema — fallback if no ultrasound"
+      markdown: |
+        If ultrasound/pneumatic reduction is unavailable, **barium-enema
+        reduction under X-ray**: an unlubricated 35-ml Foley catheter into the
         rectum, balloon inflated, buttocks strapped; warm barium in saline flows
         under gravity from **1 m** height, entering the colon under X-ray. A concave
         **'meniscus'** confirms the diagnosis; the column's pressure slowly reduces
