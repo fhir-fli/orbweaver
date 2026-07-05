@@ -1,0 +1,49 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.7 — Measuring blood glucose. Pocket Book 2nd ed
+# (2013), pp.350–351. Authored faithfully; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-7-blood-glucose"
+  title: "Measuring Blood Glucose"
+  list_subtitle: "A1.7 · reagent strips at the bedside"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "blood glucose", "reagent strip", "dextrostix", "hypoglycaemia", "annex 1", "pediatric"]
+  aliases:
+    - "Blood glucose"
+    - "Glucometer"
+  category: "medical"
+
+  page_number: 350
+
+  blocks:
+
+    - type: "prose"
+      title: "Bedside reagent strips"
+      highlight: true
+      markdown: |
+        Blood glucose can be measured with a **rapid diagnostic test** (e.g.
+        Dextrostix) at the bedside, giving an estimate within a few minutes.
+        Several brands exist that differ slightly in how they are used —
+        **follow the instructions on the box and package leaflet**.
+
+    - type: "prose"
+      title: "Technique"
+      markdown: |
+        - Place a **drop of blood** on the reagent strip and leave for
+          **30 s to 1 min** (depending on the brand).
+        - **Wipe the blood off**, and after another fixed period (e.g. 1
+          further minute) read the **colour change** on the strip against the
+          **colour scale printed on the box**.
+        - This estimates the glucose within a range (e.g. between 2 and
+          5 mmol/L) but **does not allow exact determination**.
+        - Some strips come with an **electronic reading machine** (battery
+          powered) that gives a **more accurate value** — insert the strip
+          after wiping.
+
+    - type: "prose"
+      title: "Storage"
+      markdown: |
+        Reagents **deteriorate with exposure to humidity** — keep strips in a
+        **closed box**, and **close the box again immediately** after taking
+        one out.

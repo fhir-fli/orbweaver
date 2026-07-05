@@ -1,0 +1,66 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.2.3 — Central vein cannulation (external jugular,
+# femoral). Pocket Book 2nd ed (2013), pp.342–343. Authored faithfully
+# from source; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-2-3-central-vein"
+  title: "Central Vein Cannulation"
+  list_subtitle: "A1.2.3 · external jugular · femoral"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "central vein", "external jugular", "femoral vein", "annex 1", "pediatric"]
+  aliases:
+    - "Central line"
+    - "Femoral vein"
+  category: "medical"
+
+  page_number: 342
+
+  blocks:
+
+    - type: "prose"
+      title: "Not for routine use"
+      highlight: true
+      markdown: |
+        **Do not use routinely — only when IV access is urgent.** Remove the
+        cannula from a central vein **as soon as possible** (i.e. when IV
+        fluid is no longer essential, or a peripheral vein can be cannulated
+        successfully).
+
+    - type: "prose"
+      title: "External jugular vein"
+      markdown: |
+        - Hold the child securely with the **head turned to one side away
+          from the puncture site** and **slightly lower than the body
+          (15–30° head-down)**. Restrain as needed.
+        - After cleaning the skin, identify the external jugular vein as it
+          crosses the sternocleidomastoid at the junction of its **middle and
+          lower thirds**. An assistant **occludes** the vein to keep it
+          distended and steady, pressing over the lower end of the visible
+          part **just above the clavicle**.
+        - Pierce the skin over the vein, pointing **towards the clavicle**. A
+          short firm thrust pushes the needle into the vein. Cannulate as for
+          a peripheral vein.
+
+    - type: "prose"
+      title: "Femoral vein"
+      markdown: |
+        - Position the child **supine** with the **buttocks elevated 5 cm** on
+          a rolled towel so the hip is slightly extended. **Abduct and
+          externally rotate** the hip joint and **flex the knee**. An
+          assistant holds the leg and keeps the other leg out of the way. If
+          the child is conscious, infiltrate with **1% lignocaine**.
+        - Clean the skin (aseptic). **Palpate the femoral artery** below the
+          inguinal ligament in the middle of the femoral triangle — the
+          femoral **vein runs medial** to the artery.
+        - Introduce the needle at **10–20° to the skin**, **1–2 cm distal to
+          the inguinal ligament, 0.5–1 cm medial to the artery**. Venous blood
+          flows into the syringe when the needle is in the vein.
+        - Cannulate by **advancing the cannula at 10°** to the skin. Stitch it
+          in place; apply a **sterile occlusive dressing** and another over
+          the cannula; fix firmly with tape. A **splint** may be needed to
+          prevent hip flexion.
+        - **Monitor closely** and keep the leg immobile. A femoral line can
+          last **up to 5 days**. On removal, apply **firm pressure for
+          2–3 min**.

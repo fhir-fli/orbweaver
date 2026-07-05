@@ -1,0 +1,49 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.2.4 — Venous cut-down (long saphenous). Pocket
+# Book 2nd ed (2013), p.343. Authored faithfully; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-2-4-cutdown"
+  title: "Venous Cut-Down"
+  list_subtitle: "A1.2.4 · long saphenous vein"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "venous cutdown", "saphenous vein", "annex 1", "pediatric"]
+  aliases:
+    - "Cut-down"
+    - "Saphenous cut-down"
+  category: "medical"
+
+  page_number: 343
+
+  blocks:
+
+    - type: "prose"
+      title: "When to use"
+      highlight: true
+      markdown: |
+        A venous cut-down is **less appropriate if speed is essential** (it
+        takes longer than an intraosseous or peripheral line).
+
+    - type: "prose"
+      title: "Technique"
+      markdown: |
+        - **Immobilize** the lower leg and clean the skin. Identify the
+          **long saphenous vein** — **half a fingerbreadth** (infant) or **one
+          fingerbreadth** (older child) **superior and anterior to the medial
+          malleolus**.
+        - Infiltrate the skin with **1% lignocaine** and make an incision
+          **perpendicular** to the course of the vein. **Bluntly dissect** the
+          subcutaneous tissue with haemostat forceps.
+        - Identify and free a **1–2 cm strip of vein**. Pass a **proximal and
+          a distal ligature**.
+        - **Tie off the distal end**, keeping the ties long.
+        - Make a small hole in the upper part of the exposed vein and insert
+          the cannula, holding the distal tie to stabilize the vein's
+          position.
+        - **Secure** the cannula with the upper ligature.
+        - Attach a saline-filled syringe and ensure fluid flows freely. If
+          not, check the cannula is in the vein or withdraw it slightly.
+        - Tie the distal ligature around the cannula, close the skin incision
+          with **interrupted sutures**, fix the cannula to the skin and cover
+          with a sterile dressing.

@@ -1,0 +1,70 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.1 — Giving injections.
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), pp.335–337.
+# Authored faithfully from source; pending OpenEvidence review.
+# A1.1.1 IM, A1.1.2 SC, A1.1.3 intradermal kept as sections on one page
+# (each a short paragraph in the source).
+# ============================================================
+
+topic:
+  id: "who-imci-a1-1-injections"
+  title: "Giving Injections"
+  list_subtitle: "A1.1 · IM · subcutaneous · intradermal"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "injection", "intramuscular", "subcutaneous", "intradermal", "annex 1", "pediatric"]
+  aliases:
+    - "Injections"
+    - "Intramuscular injection"
+  category: "medical"
+
+  page_number: 335
+
+  blocks:
+
+    - type: "prose"
+      title: "General principles"
+      highlight: true
+      markdown: |
+        - Find out whether the child has **reacted adversely** to drugs in
+          the past. **Wash your hands** thoroughly.
+        - Use **disposable needles and syringes**.
+        - **Clean the site** with an antiseptic solution.
+        - **Check the dose**, draw up the correct amount, and **expel the
+          air** before injecting.
+        - Always **record the name and amount** of the drug given.
+        - Discard disposable syringes in a **safe (sharps) container**.
+
+    - type: "prose"
+      title: "A1.1.1 Intramuscular"
+      markdown: |
+        - **Site (child > 2 years):** the **outer thigh** or the **upper
+          outer quadrant of the buttock**, well away from the sciatic nerve.
+        - **Younger or severely malnourished children:** the **outer side of
+          the thigh midway between hip and knee**, or over the **deltoid**
+          in the upper arm.
+        - Push the needle (**23–25 gauge**) into the muscle at a **90° angle**
+          (45° in the thigh). **Draw back the plunger** — if no blood, inject
+          slowly; if blood appears, withdraw slightly and try again.
+        - Remove the needle and press a swab firmly over the site.
+
+    - type: "prose"
+      title: "A1.1.2 Subcutaneous"
+      markdown: |
+        - Select the site as for IM injection. Push the needle (**23–25
+          gauge**) under the skin at a **45° angle** into the subcutaneous
+          fat — **do not enter the underlying muscle**.
+        - **Draw back** to make sure there is no blood, then inject slowly.
+        - Remove the needle and press cotton-wool firmly over the site.
+
+    - type: "prose"
+      title: "A1.1.3 Intradermal"
+      markdown: |
+        - Select an **undamaged, uninfected** area of skin (e.g. over the
+          deltoid).
+        - Stretch the skin between thumb and forefinger; with the other hand
+          slowly insert the needle (**25 gauge**), **bevel upwards**, about
+          **2 mm** and almost parallel to the skin surface. **Considerable
+          resistance** is felt.
+        - A **raised, blanched bleb** showing the surface of the hair
+          follicles confirms the injection was given **correctly** (as in the
+          Mantoux test).

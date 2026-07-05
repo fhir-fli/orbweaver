@@ -99,13 +99,13 @@ void main() {
     }
 
     test(
-        'who_imci: 12 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
+        'who_imci: 12 chapters + Annex 1 (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
         'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27, Ch.8 = 34, Ch.9 = 33, '
-        'Ch.10 = 15, Ch.11 = 3, Ch.12 = 8)', () {
+        'Ch.10 = 15, Ch.11 = 3, Ch.12 = 8, Annex 1 = 13)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(12));
+      expect(contents, hasLength(13));
       expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
       expect((contents[1] as YamlMap)['title'],
@@ -127,10 +127,28 @@ void main() {
           '11. Monitoring the child\'s progress');
       expect((contents[11] as YamlMap)['title'],
           '12. Counselling & discharge from hospital');
+      expect((contents[12] as YamlMap)['title'],
+          'Annex 1 · Practical procedures');
       // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
       // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) + Ch.9 (33) + Ch.10 (15)
-      // + Ch.11 (3) + Ch.12 (8) = 240 topics.
-      expect(leafCount(contents), 240);
+      // + Ch.11 (3) + Ch.12 (8) + Annex 1 (13) = 253 topics.
+      expect(leafCount(contents), 253);
+    });
+
+    test('who_imci: Annex 1 is a steel-blue-tabbed group; A1.2 nests', () {
+      final b = loadBook('who_imci');
+      final a1 = (b['contents'] as YamlList)[12] as YamlMap;
+      expect(a1['palette']['accent'], '0xFF5981BF');
+      expect(a1['topic'], isNotNull, reason: 'annex has its own overview');
+      // A1.1 leaf + A1.2 group + A1.3/A1.4/A1.5/A1.6/A1.7 leaves = 7.
+      final children = a1['children'] as YamlList;
+      expect(children, hasLength(7));
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == 'A1.2 Giving parenteral fluids',
+      ) as YamlMap;
+      expect(g['topic'], isNotNull);
+      // 5 sub-procedures (A1.2.1–A1.2.5) nested under the A1.2 overview.
+      expect((g['children'] as YamlList), hasLength(5));
     });
 
     test('who_imci: Chapter 10 is a royal-blue-tabbed group; §10.1 & §10.6 nest',

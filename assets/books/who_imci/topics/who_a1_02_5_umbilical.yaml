@@ -1,0 +1,50 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.2.5 — Umbilical vein catheterization. Pocket Book
+# 2nd ed (2013), pp.344–345. Authored faithfully; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-2-5-umbilical"
+  title: "Umbilical Vein Catheterization"
+  list_subtitle: "A1.2.5 · neonatal resuscitation / exchange"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "umbilical vein", "neonate", "resuscitation", "exchange transfusion", "annex 1", "pediatric"]
+  aliases:
+    - "Umbilical catheter"
+    - "Umbilical vein"
+  category: "medical"
+
+  page_number: 344
+
+  blocks:
+
+    - type: "prose"
+      title: "When to use"
+      highlight: true
+      markdown: |
+        Used for **resuscitation** or **exchange transfusion**, and usually
+        possible in neonates in the **first few days of life** — in some
+        circumstances up to **5 days**.
+
+    - type: "prose"
+      title: "Technique"
+      markdown: |
+        - Attach a **sterile three-way tap** and syringe to a **sterile
+          5 French gauge catheter** and fill with sterile **0.9% saline**,
+          then **close the tap to prevent air entry** (which may cause an air
+          embolus).
+        - Clean the umbilical cord and surrounding skin with antiseptic, then
+          **tie a suture around the base** of the cord.
+        - **Cut the cord 1–2 cm from the base** with a sterile scalpel.
+          Identify the **umbilical vein** (the larger, gaping vessel) and the
+          umbilical arteries (two thicker-walled vessels). Hold the cord near
+          the umbilical vein with sterile forceps.
+        - Hold the catheter tip with sterile forceps and **advance it into the
+          vein** (it should pass easily) for **4–6 cm**.
+        - Check the catheter is **not kinked** and that **blood draws back
+          easily**; if there is a block, pull gently on the cord, pull the
+          catheter back partly, and re-insert.
+        - **Secure** with two sutures into the cord, leaving 5-cm ends. Tape
+          the suture and catheter.
+        - **After removal**, apply pressure to the umbilical stump for
+          **5–10 min**.

@@ -1,0 +1,84 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.4 — Lumbar puncture. Pocket Book 2nd ed (2013),
+# pp.345–347. Authored faithfully; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-4-lumbar-puncture"
+  title: "Lumbar Puncture"
+  list_subtitle: "A1.4 · contraindications, position, technique"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "lumbar puncture", "lp", "csf", "meningitis", "annex 1", "pediatric"]
+  aliases:
+    - "Lumbar puncture"
+    - "LP"
+  category: "medical"
+
+  page_number: 345
+
+  blocks:
+
+    - type: "prose"
+      title: "⚠ Contraindications — check first"
+      callout: true
+      # Raised-ICP contraindication is a genuine "do not do" → red.
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Do NOT perform an LP if there are:**
+        - **Signs of raised intracranial pressure** — unequal pupils, rigid
+          posture, paralysis of any limbs or trunk, irregular breathing.
+        - **Skin infection** in the area the needle would pass through.
+
+        If contraindications are present, weigh the value of the information
+        against the risk. **If in doubt, start treatment for suspected
+        meningitis and delay the LP.**
+
+    - type: "prose"
+      title: "Position the child"
+      highlight: true
+      markdown: |
+        Two possible positions:
+        - **Lying on the left side** — particularly for **young infants**.
+        - **Sitting** — particularly for **older children**.
+
+        **Lying on the side:** use a hard surface; place the child on the side
+        so the vertebral column is **parallel** to the surface and the
+        transverse axis of the back is **vertical**. The assistant flexes the
+        back (knees to chest) and holds at the upper back and buttocks so the
+        back is bent. **Keep the airway open and breathing normal** — do **not
+        hold a young infant by the neck or flex the neck** (airway
+        obstruction).
+
+    - type: "prose"
+      title: "Landmarks & preparation"
+      markdown: |
+        - Locate the space between the **3rd and 4th** or **4th and 5th**
+          lumbar vertebrae. (The 3rd lumbar vertebra is at the junction of
+          the line between the **iliac crests** and the vertebral column.)
+        - Use **aseptic technique** — scrub, sterile gloves; prepare the skin
+          with antiseptic; sterile towels.
+        - In **older children who are alert**, give a **local anaesthetic
+          (1% lignocaine)** infiltrated into the skin over the site.
+
+    - type: "prose"
+      title: "Perform the puncture"
+      markdown: |
+        - Use a lumbar-puncture needle with stylet — **22 gauge** for a young
+          infant, **20 gauge** for an older infant or child (if unavailable,
+          hypodermic needles may be used). Insert into the **middle of the
+          intervertebral space**, aiming **towards the umbilicus**.
+        - **Advance slowly** — the needle passes easily until it meets the
+          ligament between the vertebral processes; more pressure penetrates
+          it, then resistance falls as the dura is pierced. In young infants
+          this decrease is not always felt, so advance carefully.
+        - **Withdraw the stylet** — CSF should drip out. If none, reinsert the
+          stylet and advance slightly.
+        - Obtain **0.5–1 ml of CSF** into a sterile container.
+        - Withdraw needle and stylet completely, press over the site for a few
+          seconds, and apply a sterile dressing.
+        - If the needle goes too far it may puncture a **lumbar vein**
+          (**'traumatic tap'**, bloody CSF) — withdraw and **repeat in
+          another disc space**.

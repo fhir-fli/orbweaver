@@ -1,0 +1,77 @@
+# ============================================================
+# WHO IMCI Annex 1 — Practical procedures (overview).
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.333–334.
+# Authored faithfully from source; pending OpenEvidence review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-practical-procedures"
+  title: "Practical Procedures"
+  list_subtitle: "Annex 1 · consent, analgesia, restraining"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "annex 1", "analgesia", "sedation", "ketamine", "restraining", "pediatric"]
+  aliases:
+    - "Practical procedures"
+    - "Annex 1"
+  category: "medical"
+
+  page_number: 333
+
+  blocks:
+
+    - type: "prose"
+      title: "Before any procedure"
+      highlight: true
+      markdown: |
+        - **Explain** the procedure first to the parents — or to the child
+          if old enough — and **discuss any risks** and obtain **consent**.
+        - Carry out procedures on **young infants in warm surroundings** to
+          **avoid hypothermia**.
+        - **Good light is essential.** Tell older children what is going to
+          happen.
+        - Give **analgesia** when necessary.
+
+    - type: "prose"
+      title: "Analgesia & sedation for procedures"
+      markdown: |
+        For some procedures (e.g. **chest-tube insertion** or **femoral
+        cannulation**), consider **sedation with diazepam** or **light
+        anaesthesia with ketamine** (see
+        [§9.1.2 intra-operative care](topic:who-imci-9-1-2-intraoperative)).
+        - **Diazepam sedation:** **0.1–0.2 mg/kg IV.**
+        - **Ketamine:** **2–4 mg/kg IM** — acts in **5–10 min** and lasts
+          about **20 min**.
+
+    - type: "prose"
+      title: "⚠ Airway safety during sedation"
+      callout: true
+      markdown: |
+        When giving **any sedation or light anaesthesia**: **manage the
+        child's airway**, **beware of respiratory depression**, and
+        **monitor oxygen saturation** with a pulse oximeter when possible.
+        **Make sure you have a resuscitation bag available — and, if
+        possible, oxygen.**
+
+    - type: "prose"
+      title: "Restraining & wrapping the child"
+      markdown: |
+        A child can be held securely by **wrapping in a folded sheet**:
+        - Pull **one end** of the sheet **under the arms** on both sides.
+        - Bring the **other end across the front** and **wrap it around**
+          the child.
+
+        The same hold is used to **restrain a child for examination** of the
+        eyes, ears or mouth.
+
+    - type: "prose"
+      title: "Procedures in this annex"
+      markdown: |
+        - [A1.1 Giving injections](topic:who-imci-a1-1-injections) — IM, SC,
+          intradermal.
+        - [A1.2 Giving parenteral fluids](topic:who-imci-a1-2-parenteral-fluids)
+          — peripheral IV, intraosseous, central vein, cut-down, umbilical.
+        - [A1.3 Nasogastric tube](topic:who-imci-a1-3-ng-tube)
+        - [A1.4 Lumbar puncture](topic:who-imci-a1-4-lumbar-puncture)
+        - [A1.5 Chest drain](topic:who-imci-a1-5-chest-drain)
+        - [A1.6 Supra-pubic aspiration](topic:who-imci-a1-6-suprapubic)
+        - [A1.7 Measuring blood glucose](topic:who-imci-a1-7-blood-glucose)

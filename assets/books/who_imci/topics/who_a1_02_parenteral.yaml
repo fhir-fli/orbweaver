@@ -1,0 +1,38 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.2 — Giving parenteral fluids (overview of the
+# nested group). Pocket Book of Hospital Care for Children (2nd ed,
+# 2013), p.338. Authored faithfully from source; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-2-parenteral-fluids"
+  title: "Giving Parenteral Fluids"
+  list_subtitle: "A1.2 · routes for IV access"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "iv access", "parenteral fluids", "annex 1", "pediatric"]
+  aliases:
+    - "Parenteral fluids"
+    - "IV access"
+  category: "medical"
+
+  page_number: 338
+
+  blocks:
+
+    - type: "prose"
+      title: "Choosing a route"
+      highlight: true
+      markdown: |
+        Establish IV access by the **least invasive route that works**.
+        In order of preference:
+        - [A1.2.1 Indwelling cannula in a peripheral vein](topic:who-imci-a1-2-1-peripheral-iv)
+          — first choice (incl. scalp veins in infants).
+        - [A1.2.2 Intraosseous infusion](topic:who-imci-a1-2-2-intraosseous)
+          — safe, simple and reliable in an **emergency** when venous
+          access fails.
+        - [A1.2.3 Central vein cannulation](topic:who-imci-a1-2-3-central-vein)
+          — external jugular or femoral; **not for routine use**.
+        - [A1.2.4 Venous cut-down](topic:who-imci-a1-2-4-cutdown)
+          — long saphenous; **less appropriate if speed is essential**.
+        - [A1.2.5 Umbilical vein catheterization](topic:who-imci-a1-2-5-umbilical)
+          — in neonates, first few days of life.

@@ -1,0 +1,86 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.2.1 — Insertion of an indwelling IV cannula in a
+# peripheral vein (incl. scalp veins). Pocket Book 2nd ed (2013),
+# pp.338–340. Authored faithfully from source; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-2-1-peripheral-iv"
+  title: "Peripheral IV Cannula"
+  list_subtitle: "A1.2.1 · peripheral & scalp veins"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "iv cannula", "peripheral vein", "scalp vein", "butterfly", "annex 1", "pediatric"]
+  aliases:
+    - "IV cannula"
+    - "Scalp vein"
+  category: "medical"
+
+  page_number: 338
+
+  blocks:
+
+    - type: "prose"
+      title: "Peripheral vein"
+      highlight: true
+      markdown: |
+        Select a suitable vein for a cannula or a **gauge 21 or 23 butterfly**
+        needle.
+        - **Identify an accessible peripheral vein.** In young children
+          **> 2 months** this is usually the **cephalic vein** in the
+          antecubital fossa or the **fourth interdigital vein** on the dorsum
+          of the hand.
+        - An assistant keeps the limb **steady** and acts as a **tourniquet**,
+          lightly closing their fingers around the limb to obstruct venous
+          return.
+        - **Clean** the skin with antiseptic (spirit, iodine, isopropyl or
+          70% alcohol), then introduce the cannula into the vein and insert
+          most of its length. **Fix securely with tape.**
+        - Apply a **splint** with the limb in a good position (e.g. elbow
+          extended, wrist slightly flexed).
+
+    - type: "prose"
+      title: "Scalp vein"
+      markdown: |
+        Scalp veins are used in children **< 2 years** and are most suitable
+        in young infants.
+        - Find a scalp vein — usually in the **midline of the forehead**, the
+          **temporal area**, or **above or behind the ear**.
+        - **Shave** if necessary and clean the skin. The assistant occludes
+          the vein **proximal to the puncture site**. Fill a syringe with
+          normal saline and flush the butterfly set; **disconnect the
+          syringe** and leave the tubing open. Introduce the needle — **blood
+          flowing back slowly** through the tubing shows it is in the vein.
+        - Take care **not to cannulate an artery** (recognized by palpation).
+          If there is **pulsatile spurting of blood**, withdraw and press
+          until bleeding stops, then look for a vein.
+
+    - type: "prose"
+      title: "Care of the cannula"
+      markdown: |
+        - **Secure** the cannula when introduced — this may need **splinting**
+          neighbouring joints to limit movement.
+        - Keep the overlying skin **clean and dry**.
+        - **Flush and fill** the cannula with normal saline immediately after
+          the initial insertion and after each injection.
+
+    - type: "prose"
+      title: "⚠ Common complications"
+      callout: true
+      markdown: |
+        **Superficial skin infection** at the cannula site is the commonest
+        complication and may lead to **thrombophlebitis**, occluding the vein
+        and causing fever. **Remove** the cannula to limit spread; apply a
+        **warm, moist compress** for 30 min every 6 h. If **fever persists
+        > 24 h**, give an antibiotic effective against **Staphylococcus
+        aureus**.
+
+    - type: "prose"
+      title: "IV drugs through an indwelling cannula"
+      markdown: |
+        - Attach the syringe with the drug to the **injection port** of the
+          cannula and introduce the drug. Once given, **flush with normal
+          saline** until all blood is expelled and the catheter is filled
+          with solution.
+        - **If a peripheral or scalp vein cannot be used** and IV fluids are
+          essential to keep the child alive → **set up an intraosseous
+          infusion, use a central vein, or perform a venous cut-down.**

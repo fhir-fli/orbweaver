@@ -1,0 +1,48 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.3 — Insertion of a nasogastric tube. Pocket Book
+# 2nd ed (2013), p.345. Authored faithfully; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-3-ng-tube"
+  title: "Nasogastric Tube"
+  list_subtitle: "A1.3 · measure, insert, confirm"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "nasogastric tube", "ng tube", "feeding", "annex 1", "pediatric"]
+  aliases:
+    - "NG tube"
+    - "Nasogastric"
+  category: "medical"
+
+  page_number: 345
+
+  blocks:
+
+    - type: "prose"
+      title: "Insertion"
+      highlight: true
+      markdown: |
+        - Hold the tip against the child's nose and **measure the distance
+          from the nose to the ear lobe, then to the xiphisternum**
+          (epigastrium). **Mark the tube** at this point.
+        - Hold the child firmly. **Lubricate the tip with water** and pass it
+          **directly into one nostril**, pushing slowly. It should pass easily
+          down into the stomach **without resistance**. When the mark is
+          reached, **fix the tube with tape** at the nose.
+        - **Confirm placement:** aspirate a small amount of stomach contents
+          and check it **turns blue litmus paper pink**. If no aspirate is
+          obtained, **inject air down the tube and listen over the abdomen**
+          with a stethoscope.
+        - If there is **any doubt** about the location, **withdraw and start
+          again**.
+        - When the tube is in place, fix a **20-ml syringe (without the
+          plunger)** to the end and **pour food or fluid** into the syringe,
+          letting it flow **by gravity**.
+
+    - type: "prose"
+      title: "If oxygen is being given as well"
+      markdown: |
+        If **oxygen is to be given by nasopharyngeal catheter** at the same
+        time, pass **both tubes down the same nostril** and keep the other
+        nostril patent by wiping away crusts and secretions — **or pass the
+        feeding tube through the mouth**.

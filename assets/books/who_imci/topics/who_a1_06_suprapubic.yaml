@@ -1,0 +1,35 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.6 — Supra-pubic aspiration. Pocket Book 2nd ed
+# (2013), p.350. Authored faithfully; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-6-suprapubic"
+  title: "Supra-Pubic Aspiration"
+  list_subtitle: "A1.6 · uncontaminated urine sample"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "suprapubic aspiration", "urine", "uti", "annex 1", "pediatric"]
+  aliases:
+    - "Suprapubic aspiration"
+    - "Bladder tap"
+  category: "medical"
+
+  page_number: 350
+
+  blocks:
+
+    - type: "prose"
+      title: "Technique"
+      highlight: true
+      markdown: |
+        - Aspirate to a depth of **3 cm** in the **midline**, at the
+          **proximal transverse crease above the pubis**, with a **23-gauge
+          needle** under **sterile conditions**.
+        - The bladder is punctured in the **midline, just above the
+          symphysis**, at an angle of about **10–20°**.
+        - Do this **only in a child with a full bladder**, which can be
+          demonstrated by **percussion**.
+        - **Do not use urine bags** to collect the sample — the specimen may
+          become contaminated.
+        - Have a **clean urine jar ready** in case the child passes urine
+          during the procedure.

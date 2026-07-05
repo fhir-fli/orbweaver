@@ -399,3 +399,24 @@ book:
         - topic: "topics/who_12_06_immunization.yaml"
         - topic: "topics/who_12_07_communicating.yaml"
         - topic: "topics/who_12_08_followup.yaml"
+    - title: "Annex 1 · Practical procedures"
+      # WHO Pocket Book annex tab = steel blue (sampled 0xFF5981BF from the
+      # p.333 'PRACTICAL PROCEDURES' side tab via pdftoppm).
+      topic: "topics/who_a1_00_overview.yaml"
+      palette:
+        accent: "0xFF5981BF"
+      children:
+        - topic: "topics/who_a1_01_injections.yaml"
+        - title: "A1.2 Giving parenteral fluids"
+          topic: "topics/who_a1_02_parenteral.yaml"
+          children:
+            - topic: "topics/who_a1_02_1_peripheral_iv.yaml"
+            - topic: "topics/who_a1_02_2_intraosseous.yaml"
+            - topic: "topics/who_a1_02_3_central_vein.yaml"
+            - topic: "topics/who_a1_02_4_cutdown.yaml"
+            - topic: "topics/who_a1_02_5_umbilical.yaml"
+        - topic: "topics/who_a1_03_ng_tube.yaml"
+        - topic: "topics/who_a1_04_lumbar_puncture.yaml"
+        - topic: "topics/who_a1_05_chest_drain.yaml"
+        - topic: "topics/who_a1_06_suprapubic.yaml"
+        - topic: "topics/who_a1_07_blood_glucose.yaml"

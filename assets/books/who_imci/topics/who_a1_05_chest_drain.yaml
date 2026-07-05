@@ -1,0 +1,86 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.5 — Insertion of a chest drain. Pocket Book 2nd
+# ed (2013), pp.348–349. Authored faithfully; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-5-chest-drain"
+  title: "Chest Drain"
+  list_subtitle: "A1.5 · effusion, empyema, pneumothorax"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "chest drain", "chest tube", "pleural effusion", "empyema", "pneumothorax", "annex 1", "pediatric"]
+  aliases:
+    - "Chest tube"
+    - "Thoracocentesis"
+  category: "medical"
+
+  page_number: 348
+
+  blocks:
+
+    - type: "prose"
+      title: "When to drain"
+      highlight: true
+      markdown: |
+        **Pleural effusions should be drained**, except when small. Drain
+        **both sides** if needed. You may have to drain the chest **two or
+        three times** if fluid keeps re-accumulating.
+
+    - type: "prose"
+      title: "Diagnostic procedure"
+      markdown: |
+        - Consider **sedation or light anaesthesia with ketamine**. Wash
+          hands, put on sterile gloves; lay the child **on the back**.
+        - Clean the chest with antiseptic (e.g. 70% alcohol). Select a point
+          in the **mid-axillary line** (side of the chest) **just below the
+          nipple level** (**5th intercostal space**). Infiltrate **~1 ml of
+          1% lignocaine** into skin and subcutaneous tissue.
+        - Insert a needle or catheter through skin and pleura and **aspirate**
+          to confirm fluid. Withdraw a sample for microscopy and other tests.
+        - **If fluid is clear** (straw-coloured or brownish): withdraw enough
+          to relieve distress, then dress the site. Consider a differential
+          diagnosis of **TB** (see
+          [§4.7.2](topic:who-imci-4-7-2-tuberculosis)).
+        - **If fluid is thin pus or cloudy (like milk):** leave the catheter
+          in so you can draw more pus several times a day; **seal the end** so
+          no air enters.
+        - **If fluid is thick pus** that cannot pass easily through the needle
+          or catheter → **insert a chest tube.**
+
+    - type: "prose"
+      title: "Insertion of a chest tube"
+      markdown: |
+        - Select and prepare the site as above. Make a **2–3 cm skin incision**
+          along the intercostal space, **just above the rib below** (to avoid
+          the vessels under the lower edge of each rib).
+        - Use **sterile forceps** to push through the subcutaneous tissue just
+          above the upper edge of the rib, and **puncture the pleura**.
+        - Pass a **gloved finger** into the incision and clear a path to the
+          pleura. (Not possible in infants.)
+        - Hold the **drainage catheter (16 gauge)** with the forceps and
+          introduce it several centimetres, **pointing upwards**. Ensure all
+          drainage holes are inside the chest.
+        - Connect to a **collection bottle with an underwater seal**. Suture
+          in place, secure with tape, and apply a gauze dressing.
+
+    - type: "prose"
+      title: "⚠ Needle thoracocentesis — tension pneumothorax"
+      callout: true
+      # Life-threatening emergency → red.
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        For a **rapidly deteriorating patient with a life-threatening tension
+        pneumothorax** (see [§4.3.3](topic:who-imci-4-3-3-pneumothorax)),
+        immediate needle decompression may be needed before a chest drain:
+        - Identify the **2nd intercostal space in the mid-clavicular line** on
+          the **side of the pneumothorax** (opposite the tracheal deviation,
+          same side as the hyper-resonance).
+        - Swab the chest wall; attach a syringe to an over-needle / IV
+          cannula. **Insert just above the rib below, aspirating all the
+          time.**
+        - If air is aspirated, **remove the needle, leaving the plastic
+          cannula in place**; tape it and **insert a chest drain as soon as
+          possible.**

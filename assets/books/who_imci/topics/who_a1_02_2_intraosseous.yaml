@@ -1,0 +1,84 @@
+# ============================================================
+# WHO IMCI Annex 1 §A1.2.2 — Intraosseous infusion. Pocket Book 2nd ed
+# (2013), pp.340–342. Authored faithfully from source; pending OE review.
+# ============================================================
+
+topic:
+  id: "who-imci-a1-2-2-intraosseous"
+  title: "Intraosseous Infusion"
+  list_subtitle: "A1.2.2 · proximal tibia · emergency access"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["procedures", "intraosseous", "io", "proximal tibia", "emergency access", "annex 1", "pediatric"]
+  aliases:
+    - "Intraosseous"
+    - "IO access"
+  category: "medical"
+
+  page_number: 340
+
+  blocks:
+
+    - type: "prose"
+      title: "Safe emergency access"
+      highlight: true
+      markdown: |
+        Intraosseous infusion is a **safe, simple, reliable** method of giving
+        fluid and drugs in an emergency **when venous access is not
+        possible**.
+        - **First choice:** the **proximal tibia** — the middle of the
+          antero-medial surface, at the junction of the upper and middle
+          third (to avoid the epiphyseal plate), or at least **1–2 cm below
+          the tibial tuberosity**.
+        - **Alternative:** the **distal femur**, 2 cm above the lateral
+          condyle.
+
+    - type: "prose"
+      title: "Equipment"
+      markdown: |
+        - **Bone-marrow / intraosseous needles 15–18 gauge** (or **21 gauge**
+          if not available). If none, **large-bore hypodermic or butterfly
+          needles** can be used in young children.
+        - Antiseptic solution and sterile gauze.
+        - A sterile **5-ml syringe filled with normal saline**, a second
+          sterile 5-ml syringe, IV infusion equipment, and **sterile gloves**.
+
+    - type: "prose"
+      title: "Technique"
+      markdown: |
+        - Place **padding under the knee** so it is bent **30°** from
+          straight, heel resting on the table. Locate the site; wash hands
+          and put on sterile gloves; clean the skin.
+        - **Stabilize the proximal tibia** with the (now non-sterile) left
+          hand — grasp thigh and knee above and lateral to the site, fingers
+          and thumb around the knee but **not directly behind** the insertion
+          site. Re-palpate the landmarks.
+        - Insert the needle at a **90° angle**, bevel towards the foot.
+          Advance slowly with a **gentle firm twisting/drilling** motion.
+        - **Stop** when you feel a **sudden decrease in resistance** or can
+          aspirate blood — the needle is now fixed in the bone. **Remove the
+          stylet.**
+        - **Aspirate 1 ml of marrow** (looks like blood) to confirm placement.
+          Attach the saline syringe, stabilize the needle, and **slowly inject
+          3 ml** while palpating for leakage. If none, start the infusion.
+        - Apply dressings and secure the needle.
+        - **Note:** failure to aspirate marrow does **not** mean the needle is
+          misplaced.
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        - Monitor the infusion by how easily fluid flows and the child's
+          clinical response. **Check the calf does not swell** during the
+          infusion.
+        - **Stop and remove the needle as soon as venous access is
+          available** — in any case, **do not continue > 8 h**.
+
+    - type: "prose"
+      title: "⚠ Complications"
+      callout: true
+      markdown: |
+        - **Incomplete penetration** of the bony cortex — the needle is not
+          well fixed; infiltration occurs under the skin.
+        - **Penetration of the posterior cortex** (more common) —
+          infiltration; the calf becomes tense.
+        - **Infection** — cellulitis at the site of the infusion.
