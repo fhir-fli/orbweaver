@@ -1,0 +1,31 @@
+# ============================================================
+# WHO IMCI §10.6.3 — Indications for blood transfusion. Pocket Book
+# 2nd ed (2013), p.309.
+# ============================================================
+
+topic:
+  id: "who-imci-10-6-3-indications"
+  title: "Indications for Transfusion"
+  list_subtitle: "10.6.3 · the five general indications"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "blood transfusion", "indications", "pediatric"]
+  aliases:
+    - "Indications for blood transfusion"
+  category: "medical"
+
+  page_number: 309
+
+  blocks:
+
+    - type: "prose"
+      title: "Five general indications"
+      highlight: true
+      markdown: |
+        1. **Acute blood loss** — when **20–30% of the total blood volume** has been
+           lost and bleeding is continuing.
+        2. **Severe anaemia.**
+        3. **Septic shock** — if IV fluids are insufficient to maintain adequate
+           circulation (transfusion given **in addition to** antibiotic therapy).
+        4. **Whole fresh blood** is required to provide **plasma and platelets** for
+           clotting factors when specific blood components are not available.
+        5. **Exchange transfusion** in neonates with **severe jaundice**.

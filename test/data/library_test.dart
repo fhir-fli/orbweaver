@@ -99,12 +99,13 @@ void main() {
     }
 
     test(
-        'who_imci: 9 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
-        'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27, Ch.8 = 34, Ch.9 = 33)', () {
+        'who_imci: 10 chapter groups (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
+        'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27, Ch.8 = 34, Ch.9 = 33, '
+        'Ch.10 = 15)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(9));
+      expect(contents, hasLength(10));
       expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
       expect((contents[1] as YamlMap)['title'],
@@ -121,9 +122,27 @@ void main() {
           '8. Children with HIV/AIDS');
       expect((contents[8] as YamlMap)['title'],
           '9. Common surgical problems');
+      expect((contents[9] as YamlMap)['title'], '10. Supportive care');
       // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
-      // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) + Ch.9 (33) = 214 topics.
-      expect(leafCount(contents), 214);
+      // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) + Ch.9 (33) + Ch.10 (15)
+      // = 229 topics.
+      expect(leafCount(contents), 229);
+    });
+
+    test('who_imci: Chapter 10 is a royal-blue-tabbed group; §10.1 & §10.6 nest',
+        () {
+      final b = loadBook('who_imci');
+      final ch10 = (b['contents'] as YamlList)[9] as YamlMap;
+      expect(ch10['palette']['accent'], '0xFF1C63B7');
+      // 10.1 & 10.6 groups + 10.2/10.3/10.4/10.5/10.7/10.8 leaves = 8.
+      final children = ch10['children'] as YamlList;
+      expect(children, hasLength(8));
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '10.6 Blood transfusion',
+      ) as YamlMap;
+      expect(g['topic'], isNotNull);
+      // 5 sub-topics (10.6.1–10.6.5) nested under the §10.6 overview.
+      expect((g['children'] as YamlList), hasLength(5));
     });
 
     test('who_imci: Chapter 8 is a cyan-teal-tabbed group; §8.1 nests', () {

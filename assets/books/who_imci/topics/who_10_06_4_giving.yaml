@@ -1,0 +1,56 @@
+# ============================================================
+# WHO IMCI §10.6.4 — Giving a blood transfusion. Pocket Book 2nd ed
+# (2013), pp.309–310.
+# ============================================================
+
+topic:
+  id: "who-imci-10-6-4-giving"
+  title: "Giving a Transfusion"
+  list_subtitle: "10.6.4 · check first · 20 ml/kg over 3–4 h · monitor"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "blood transfusion", "monitoring", "furosemide", "pediatric"]
+  aliases:
+    - "Giving a blood transfusion"
+  category: "medical"
+
+  page_number: 309
+
+  blocks:
+
+    - type: "prose"
+      title: "Before transfusion — check that"
+      highlight: true
+      markdown: |
+        - The blood is the **correct group**, and the patient's **name and number**
+          are on **both the label and the form** (in an emergency, reduce the risk
+          of incompatibility by cross-matching group-specific blood or giving
+          **O-negative** blood if available).
+        - The **transfusion bag has no leaks**.
+        - The pack has **not been out of the refrigerator for more than 2 h**, the
+          **plasma is not pink** or with large clots, and the **red cells do not
+          look purple or black**.
+        - The child has **no signs of heart failure.** If present, give **furosemide
+          1 mg/kg IV** at the start of the transfusion (in a child whose circulating
+          volume is normal) — **do not inject it into the blood pack.**
+
+        Make **baseline recordings** of temperature, respiratory rate and pulse. The
+        volume of whole blood transfused should initially be **20 ml/kg over 3–4 h.**
+
+    - type: "prose"
+      title: "During transfusion"
+      callout: true
+      markdown: |
+        - Use an **infusion device** to control the rate, if available.
+        - Check that the blood is flowing at the **correct speed**.
+        - **Watch for a transfusion reaction**, particularly carefully in the
+          **first 15 min**.
+        - Record general appearance, temperature, pulse and RR **every 30 min**.
+        - Record the **times started and ended**, the **volume** transfused, and any
+          **reactions**. (A **burette** helps measure the volume, and the arm is
+          splinted to prevent elbow flexion.)
+
+    - type: "prose"
+      title: "After transfusion"
+      markdown: |
+        **Reassess** the child. If more blood is needed, a similar quantity should be
+        transfused and the dose of **furosemide (if given) repeated.**

@@ -1,0 +1,68 @@
+# ============================================================
+# WHO IMCI §10.2 — Fluid management. Pocket Book 2nd ed (2013),
+# pp.304–305.
+# ============================================================
+
+topic:
+  id: "who-imci-10-2-fluids"
+  title: "Fluid Management"
+  list_subtitle: "10.2 · maintenance formula · Table 32 · prefer oral"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "fluids", "maintenance", "hydration", "pediatric"]
+  aliases:
+    - "Fluid management"
+    - "Maintenance fluids"
+  category: "medical"
+
+  page_number: 304
+
+  blocks:
+
+    - type: "prose"
+      title: "The maintenance fluid formula"
+      highlight: true
+      markdown: |
+        The total daily fluid requirement is calculated as: **100 ml/kg for the
+        first 10 kg**, then **50 ml/kg for the next 10 kg**, then **25 ml/kg for
+        each subsequent kg**.
+
+        For example, an **8-kg** infant needs **8 × 100 = 800 ml/day**; a **15-kg**
+        child needs **(10 × 100) + (5 × 50) = 1250 ml/day**.
+
+        Give the sick child **more** than these amounts if there is **fever**
+        (**increase by 10% for every 1 °C** of fever).
+
+    - type: "table"
+      title: "Table 32 · Maintenance fluid requirements"
+      columns: ["Body weight (kg)", "Fluid (ml/day)"]
+      column_flex: [4, 4]
+      rows:
+        - cells: ["2", "200"]
+        - cells: ["4", "400"]
+        - cells: ["6", "600"]
+        - cells: ["8", "800"]
+        - cells: ["10", "1000"]
+        - cells: ["12", "1100"]
+        - cells: ["14", "1200"]
+        - cells: ["16", "1300"]
+        - cells: ["18", "1400"]
+        - cells: ["20", "1500"]
+        - cells: ["22", "1550"]
+        - cells: ["24", "1600"]
+        - cells: ["26", "1650"]
+
+    - type: "prose"
+      title: "Monitoring fluid intake"
+      callout: true
+      markdown: |
+        Pay careful attention to hydration in very sick children who have had no
+        oral intake for some time. **Fluids should preferably be given orally (by
+        mouth or nasogastric tube).**
+
+        If fluids must be given **IV**, **monitor the infusion closely** because of
+        the risk of **fluid overload**, which can cause **heart failure or cerebral
+        oedema**. If close monitoring is impossible, use the IV route **only** for
+        severe dehydration, septic shock, or when oral fluids are contraindicated
+        (perforation, surgical abdomen). Possible IV maintenance fluids include
+        **half-normal saline with 5% or 10% glucose**. **Do not give 5% glucose
+        alone** — it can cause **hyponatraemia**.

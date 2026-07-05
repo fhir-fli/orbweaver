@@ -350,3 +350,29 @@ book:
             - topic: "topics/who_9_05_2_osteomyelitis.yaml"
             - topic: "topics/who_9_05_3_septic_arthritis.yaml"
             - topic: "topics/who_9_05_4_pyomyositis.yaml"
+    - title: "10. Supportive care"
+      # WHO Pocket Book color-codes by chapter; Chapter 10 tab = royal blue
+      # (sampled 0xFF1C63B7 from the p.293 'Supportive care' chapter title
+      # via pdftoppm).
+      palette:
+        accent: "0xFF1C63B7"
+      children:
+        - title: "10.1 Nutritional management"
+          topic: "topics/who_10_01_nutrition.yaml"
+          children:
+            - topic: "topics/who_10_01_1_breastfeeding.yaml"
+            - topic: "topics/who_10_01_2_sick_nutrition.yaml"
+        - topic: "topics/who_10_02_fluids.yaml"
+        - topic: "topics/who_10_03_fever.yaml"
+        - topic: "topics/who_10_04_pain.yaml"
+        - topic: "topics/who_10_05_anaemia.yaml"
+        - title: "10.6 Blood transfusion"
+          topic: "topics/who_10_06_transfusion.yaml"
+          children:
+            - topic: "topics/who_10_06_1_storage.yaml"
+            - topic: "topics/who_10_06_2_problems.yaml"
+            - topic: "topics/who_10_06_3_indications.yaml"
+            - topic: "topics/who_10_06_4_giving.yaml"
+            - topic: "topics/who_10_06_5_reactions.yaml"
+        - topic: "topics/who_10_07_oxygen.yaml"
+        - topic: "topics/who_10_08_play.yaml"

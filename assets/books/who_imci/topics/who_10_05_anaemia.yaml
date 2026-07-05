@@ -1,0 +1,67 @@
+# ============================================================
+# WHO IMCI §10.5 — Management of anaemia. Pocket Book 2nd ed (2013),
+# pp.307–308.
+# ============================================================
+
+topic:
+  id: "who-imci-10-5-anaemia"
+  title: "Management of Anaemia"
+  list_subtitle: "10.5 · non-severe iron · severe → transfuse"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "anaemia", "iron", "transfusion", "pediatric"]
+  aliases:
+    - "Management of anaemia"
+    - "Anaemia"
+  category: "medical"
+
+  page_number: 307
+
+  blocks:
+
+    - type: "prose"
+      title: "Non-severe anaemia"
+      highlight: true
+      markdown: |
+        Young children (**< 6 years**) are anaemic if the **Hb is < 9.3 g/dl**
+        (about **EVF < 27%**). If anaemia is present, begin treatment — **unless the
+        child has severe acute malnutrition** (in which case iron is withheld during
+        the stabilization phase).
+        - Give **home iron treatment** (a daily **iron–folate tablet** or a dose of
+          **iron syrup**) for **14 days**.
+        - Ask the parent to **return in 14 days**. Treat for **3 months** where
+          possible — it takes **2–4 weeks** to correct the anaemia and **1–3
+          months** to build up iron stores.
+        - If the child is **≥ 1 year** and has not had **mebendazole** in the
+          previous 6 months, give **one dose of mebendazole (500 mg)** for possible
+          hookworm or whipworm.
+        - Advise the mother about **good feeding practice**.
+
+    - type: "prose"
+      title: "Severe anaemia — transfuse"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Give a **blood transfusion as soon as possible** to:
+        - **all children with an EVF ≤ 12% or Hb ≤ 4 g/dl**, and
+        - **less severely anaemic children (EVF 13–18%; Hb 4–6 g/dl)** who **also**
+          have any of: clinically detectable **dehydration, shock, impaired
+          consciousness, heart failure, deep laboured breathing**, or **very high
+          malaria parasitaemia (> 10% of red cells)**.
+
+        Give **packed cells 10 ml/kg over 3–4 h** in preference to whole blood; if
+        not available, **fresh whole blood 20 ml/kg over 3–4 h**. Check **RR and
+        pulse every 15 min** — if either rises or heart failure appears (basal
+        crepitations, enlarged liver, raised JVP), transfuse **more slowly** and
+        give **IV furosemide 1–2 mg/kg** (max 20 mg). Repeat the transfusion if the
+        Hb stays low.
+
+    - type: "prose"
+      title: "Anaemia in severe acute malnutrition"
+      markdown: |
+        In children with **severe acute malnutrition**, **fluid overload is a common
+        and serious complication**. Give **packed cells (or whole blood) at
+        10 ml/kg (not 20 ml/kg)**, and **do not repeat** the transfusion based on
+        the Hb level or within **4 days**.

@@ -1,0 +1,40 @@
+# ============================================================
+# WHO IMCI §10.6 — Blood transfusion (overview of the nested group).
+# Pocket Book 2nd ed (2013), pp.308–312.
+# ============================================================
+
+topic:
+  id: "who-imci-10-6-transfusion"
+  title: "Blood Transfusion"
+  list_subtitle: "10.6 · storage · indications · giving · reactions"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "blood transfusion", "transfusion reaction", "pediatric"]
+  aliases:
+    - "Blood transfusion"
+  category: "medical"
+
+  page_number: 308
+
+  blocks:
+
+    - type: "prose"
+      title: "Transfuse only when essential"
+      highlight: true
+      markdown: |
+        Blood can be the **vehicle for transmitting infection**, so give a
+        transfusion **only when essential**. This section covers when and how to do
+        it safely.
+
+    - type: "prose"
+      title: "This section covers"
+      markdown: |
+        - [Storage of blood](topic:who-imci-10-6-1-storage) — screening, expiry and
+          time out of the fridge.
+        - [Problems in blood transfusion](topic:who-imci-10-6-2-problems) —
+          transmissible infections.
+        - [Indications for blood transfusion](topic:who-imci-10-6-3-indications) —
+          the five general indications.
+        - [Giving a blood transfusion](topic:who-imci-10-6-4-giving) — checks before,
+          during and after.
+        - [Transfusion reactions](topic:who-imci-10-6-5-reactions) — mild,
+          moderately severe and life-threatening.

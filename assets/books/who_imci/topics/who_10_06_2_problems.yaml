@@ -1,0 +1,27 @@
+# ============================================================
+# WHO IMCI §10.6.2 — Problems in blood transfusion. Pocket Book 2nd ed
+# (2013), p.308.
+# ============================================================
+
+topic:
+  id: "who-imci-10-6-2-problems"
+  title: "Problems in Blood Transfusion"
+  list_subtitle: "10.6.2 · transmissible infection · screen donors"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "blood transfusion", "infection", "screening", "pediatric"]
+  aliases:
+    - "Problems in blood transfusion"
+  category: "medical"
+
+  page_number: 308
+
+  blocks:
+
+    - type: "prose"
+      title: "Blood can transmit infection"
+      highlight: true
+      markdown: |
+        Blood can be the **vehicle for transmitting infections** — **malaria,
+        syphilis, hepatitis B and C, and HIV**. Therefore **screen donors** for as
+        many of these infections as possible. To minimize the risk, give blood
+        transfusions **only when essential.**

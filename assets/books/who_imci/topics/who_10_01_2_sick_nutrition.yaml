@@ -1,0 +1,117 @@
+# ============================================================
+# WHO IMCI §10.1.2 — Nutritional management of sick children. Pocket
+# Book 2nd ed (2013), pp.299–303.
+# ============================================================
+
+topic:
+  id: "who-imci-10-1-2-sick-nutrition"
+  title: "Feeding the Sick Child"
+  list_subtitle: "10.1.2 · don't withhold food · catch-up meals"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "nutrition", "sick child", "catch-up growth", "pediatric"]
+  aliases:
+    - "Nutritional management of sick children"
+    - "Catch-up feeding"
+  category: "medical"
+
+  page_number: 299
+
+  blocks:
+
+    - type: "prose"
+      title: "Principles of feeding a sick child"
+      highlight: true
+      markdown: |
+        - **Continue breastfeeding.**
+        - **Do not withhold food.**
+        - Give **frequent, small feeds**, every **2–3 h**.
+        - **Coax, encourage and be patient.**
+        - Feed by **nasogastric tube** if the child is severely anorexic.
+        - **Promote catch-up growth** after the appetite returns.
+
+    - type: "prose"
+      title: "The food should be"
+      markdown: |
+        - **palatable** (to the child),
+        - **easily eaten** (soft or liquid consistency),
+        - **easily digested**,
+        - **nutritious** — rich in energy and nutrients.
+
+        Provide sufficient **energy-producing foods** and **high-quality protein**.
+        Foods high in **oil or fat** are recommended; **up to 30–40% of calories**
+        as fat helps achieve a high energy intake. Give **multivitamin and mineral
+        supplements**. Encourage the child to eat relatively **small amounts
+        frequently**; children left to feed themselves or competing with siblings
+        may not get enough. A **blocked nose** with dry/thick mucus interferes with
+        feeding — put **saline drops** in the nose with a moistened wick.
+
+    - type: "prose"
+      title: "The child who cannot eat"
+      callout: true
+      markdown: |
+        A minority of children cannot eat for some days (impaired consciousness in
+        meningitis, respiratory distress in severe pneumonia) and may need feeding
+        through a **nasogastric tube**. Reduce the **aspiration risk** by giving
+        **small volumes frequently** and ensuring the tube is in the **stomach**
+        before each feed. During **convalescence**, increase feeding to make up for
+        lost weight — offer at least **one additional meal a day** as the appetite
+        increases.
+
+    - type: "prose"
+      title: "Catch-up meals"
+      markdown: |
+        Catch-up recipes provide about **100 kcal and 3 g protein per 100 ml**;
+        individual servings supply roughly **200 kcal and 6 g protein**. A child
+        should eat **seven meals in 24 h**. These recipes may need to be
+        **supplemented with vitamins and minerals**.
+
+    - type: "table"
+      title: "Recipe 1 — porridge without milk (to make 1 litre)"
+      columns: ["Ingredient", "Per litre", "Per serving"]
+      column_flex: [5, 3, 3]
+      rows:
+        - cells: ["Cereal flour", "100 g", "20 g"]
+        - cells: ["Groundnut or oilseed paste", "100 g", "20 g"]
+        - cells: ["Sugar", "50 g", "10 g"]
+
+    - type: "prose"
+      title: "Recipe 1 — method"
+      markdown: |
+        Make a **thick porridge**, then stir in the paste and sugar and make up to
+        1 litre.
+
+    - type: "table"
+      title: "Recipe 2 — porridge with milk / rice pudding (to make 1 litre)"
+      columns: ["Ingredient", "Per litre", "Per serving"]
+      column_flex: [5, 3, 3]
+      rows:
+        - cells: ["Cereal flour", "125 g", "25 g"]
+        - cells: ["Milk (fresh or long-life whole)", "600 ml", "120 ml"]
+        - cells: ["Sugar", "75 g", "15 g"]
+        - cells: ["Oil or margarine", "25 g", "5 g"]
+
+    - type: "prose"
+      title: "Recipe 2 — method"
+      markdown: |
+        Make a **thick porridge** with milk and a little water (or use 75 g milk
+        powder instead of the 600 ml liquid milk), then add sugar and oil; make up
+        to 1 litre. For **rice pudding**, replace the cereal flour with the same
+        amount of rice. Rice-, maize- and family-food-based versions
+        (**Recipes 3–5**) can be made from locally available foods.
+
+    - type: "prose"
+      title: "Feeding recommendations by age (Chart 16)"
+      markdown: |
+        - **Up to 6 months:** breastfeed as often as the child wants, day and night,
+          **at least 8 times in 24 h**; frequent feeding produces more milk. If < 1
+          week and low birth weight, feed at least 3-hourly (wake after 3 h). Give
+          **no other foods or fluids**. If > 4 months, appears hungry and not
+          gaining weight, add small amounts of complementary food once or twice a
+          day after breastfeeding.
+        - **6–12 months:** breastfeed as often as wanted; give adequate servings of
+          nutrient-dense complementary foods **3 times/day if breastfed** (5 times
+          plus 1–2 cups of milk if not breastfed).
+        - **12 months–2 years:** breastfeed as wanted; give a variety of family
+          foods and **1–2 snacks** between meals; keep encouraging the child.
+        - **≥ 2 years:** **three family meals a day** plus **two nutritious snacks**;
+          talk with the child during meals and keep eye contact.

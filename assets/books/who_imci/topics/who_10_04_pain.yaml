@@ -1,0 +1,74 @@
+# ============================================================
+# WHO IMCI §10.4 — Pain control. Pocket Book 2nd ed (2013),
+# pp.306–307.
+# ============================================================
+
+topic:
+  id: "who-imci-10-4-pain"
+  title: "Pain Control"
+  list_subtitle: "10.4 · two steps · by the clock · morphine"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "pain", "analgesia", "morphine", "pediatric"]
+  aliases:
+    - "Pain control"
+    - "Analgesia"
+  category: "medical"
+
+  page_number: 306
+
+  blocks:
+
+    - type: "prose"
+      title: "Principles of effective analgesia"
+      highlight: true
+      markdown: |
+        Correct use of analgesics relieves pain in most children. Follow these
+        principles:
+        - Give analgesics in **two steps** — according to whether the pain is
+          **mild** or **moderate-to-severe**.
+        - Give analgesics **regularly ('by the clock')** so the child does not have
+          to experience a recurrence of severe pain to earn the next dose.
+        - Use the **most appropriate, simplest, most effective and least painful
+          route** — **by mouth** when possible (IM injection is itself painful and,
+          if shock is present, can delay the effect).
+        - **Tailor the dose** for each child and **progressively titrate** to ensure
+          adequate relief.
+
+    - type: "prose"
+      title: "Mild pain"
+      markdown: |
+        For headaches, post-traumatic pain and pain due to spasticity:
+        - Give **paracetamol or ibuprofen** to children **> 3 months** who can take
+          oral medication; for infants **< 3 months** use **paracetamol only**.
+        - **Paracetamol 10–15 mg/kg every 4–6 h.**
+        - **Ibuprofen 5–10 mg/kg every 6–8 h.**
+
+    - type: "prose"
+      title: "Moderate-to-severe pain — strong opioids"
+      callout: true
+      markdown: |
+        For pain that does not respond to the above:
+        - Give **morphine orally or IV every 4–6 h**, or by **continuous IV
+          infusion**.
+        - If morphine does not adequately relieve the pain, **switch to an
+          alternative opioid** such as **fentanyl or hydromorphone**.
+        - **Monitor carefully for respiratory depression.** If tolerance develops,
+          **increase the dose** to maintain the same degree of relief.
+
+    - type: "prose"
+      title: "Adjuvant medicines"
+      markdown: |
+        There is not sufficient evidence that adjuvants relieve persistent pain, but
+        in specific cases they are commonly used: **diazepam** for muscle spasm,
+        **carbamazepine** for neuralgic pain, and **corticosteroids** (such as
+        **dexamethasone**) for pain from inflammatory swelling pressing on a nerve.
+
+    - type: "prose"
+      title: "Pain control for procedures"
+      markdown: |
+        **Local anaesthetics** for painful lesions of skin or mucosa or during
+        painful procedures (**lidocaine infiltrated at 1–2%**):
+        - **Lidocaine:** apply (with gloves) on a gauze pad to **painful mouth
+          ulcers before feeds** — acts within **2–5 min**.
+        - **Tetracaine, adrenaline and cocaine (TAC):** apply on a gauze pad and
+          place over **open wounds before suturing**.

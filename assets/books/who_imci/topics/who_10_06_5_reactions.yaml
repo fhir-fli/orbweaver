@@ -1,0 +1,78 @@
+# ============================================================
+# WHO IMCI §10.6.5 — Transfusion reactions. Pocket Book 2nd ed (2013),
+# pp.310–312.
+# ============================================================
+
+topic:
+  id: "who-imci-10-6-5-reactions"
+  title: "Transfusion Reactions"
+  list_subtitle: "10.6.5 · mild · moderately severe · life-threatening"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "transfusion reaction", "haemolysis", "anaphylaxis", "pediatric"]
+  aliases:
+    - "Transfusion reactions"
+  category: "medical"
+
+  page_number: 310
+
+  blocks:
+
+    - type: "prose"
+      title: "First step for any reaction"
+      highlight: true
+      markdown: |
+        If a transfusion reaction occurs, **first check the blood-pack labels and
+        the patient's identity.** If there is any discrepancy, **stop the
+        transfusion immediately and notify the blood bank.**
+
+    - type: "prose"
+      title: "Mild reaction (mild hypersensitivity)"
+      markdown: |
+        **Signs:** itchy rash.
+        - **Slow the transfusion.**
+        - Give **chlorphenamine 0.1 mg/kg IM**, if available.
+        - **Continue at the normal rate** if there is no progression after 30 min.
+        - If symptoms persist, treat as a **moderately severe** reaction.
+
+    - type: "prose"
+      title: "Moderately severe reaction"
+      callout: true
+      markdown: |
+        Due to moderate hypersensitivity, non-haemolytic reactions, pyrogens or
+        bacterial contamination. **Signs:** severe itchy rash (urticaria), flushing,
+        **fever > 38 °C** (may have been present before), rigor, restlessness, raised
+        heart rate.
+        - **Stop the transfusion;** remove the IV line but **not the cannula**; set
+          up a new infusion with **normal saline**.
+        - Give **hydrocortisone 200 mg IV** or **chlorphenamine 0.25 mg/kg IM**, if
+          available.
+        - Give a **bronchodilator** if wheezing.
+        - **Send to the blood bank:** the giving set used, a blood sample from
+          another body site, and urine collected over 24 h.
+        - If there is **improvement**, restart the transfusion slowly with new blood
+          and observe carefully. If **no improvement in 15 min**, treat as a
+          **life-threatening** reaction.
+
+    - type: "prose"
+      title: "Life-threatening reaction"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Due to haemolysis, bacterial contamination with septic shock, fluid overload
+        or anaphylaxis. **Signs:** fever > 38 °C, rigor, restlessness, raised heart
+        rate, **fast breathing**, **black or dark-red urine (haemoglobinuria)**,
+        **unexplained bleeding**, **confusion**, **collapse**. (In an unconscious
+        child, uncontrolled bleeding or shock may be the only signs.)
+        - **Stop the transfusion;** keep the cannula and run **IV normal saline.**
+        - **Maintain the airway and give oxygen.**
+        - **Treat shock.**
+        - Give **adrenaline 0.15 ml of 1:1000 solution IM.**
+        - Give **hydrocortisone 200 mg IV** or **chlorphenamine 0.1 mg/kg IM**, if
+          available.
+        - Give a **bronchodilator** if wheezing.
+        - **Report to the blood bank** as soon as possible.
+        - Maintain renal blood flow with **furosemide 1 mg/kg.**
+        - Give **antibiotics as for septicaemia.**

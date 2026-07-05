@@ -1,0 +1,61 @@
+# ============================================================
+# WHO IMCI §10.3 — Management of fever. Pocket Book 2nd ed (2013),
+# pp.305–306.
+# ============================================================
+
+topic:
+  id: "who-imci-10-3-fever"
+  title: "Management of Fever"
+  list_subtitle: "10.3 · not an antibiotic indication · paracetamol"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "fever", "antipyretic", "paracetamol", "pediatric"]
+  aliases:
+    - "Management of fever"
+    - "Antipyretic"
+  category: "medical"
+
+  page_number: 305
+
+  blocks:
+
+    - type: "prose"
+      title: "Fever is a sign, not a diagnosis"
+      highlight: true
+      markdown: |
+        Temperatures in these guidelines are **rectal** unless stated; oral and
+        axillary temperatures are lower by about **0.5 °C** and **0.8 °C**.
+
+        **Fever is not an indication for antibiotics** and may help the immune
+        defence against infection. **High fever (> 39 °C)** can be harmful — it
+        **reduces the appetite**, makes the child **irritable**, may **precipitate
+        convulsions** in children **6 months–5 years**, and **increases oxygen
+        consumption** (harmful in very severe pneumonia, heart failure or
+        meningitis). Always examine for the **underlying cause** and treat it
+        accordingly.
+
+    - type: "prose"
+      title: "Antipyretic treatment"
+      callout: true
+      markdown: |
+        Restrict **paracetamol** to children **≥ 2 months** with a fever **≥ 39 °C**
+        who are uncomfortable or distressed. Children who are alert and active are
+        unlikely to benefit.
+        - **Paracetamol 15 mg/kg every 6 h.**
+        - **Ibuprofen 10 mg/kg every 6–8 h** — comparable effectiveness and safety,
+          but slightly more expensive and (like any NSAID) can cause gastritis.
+
+    - type: "prose"
+      title: "Agents to avoid"
+      markdown: |
+        - **Aspirin** is **not** recommended as a first-line antipyretic — it is
+          linked to **Reye syndrome** (a rare but serious liver/brain condition).
+          Avoid it especially in **chickenpox, dengue** and other haemorrhagic
+          disorders.
+        - **Dipyrone** and **phenylbutazone** are not recommended (toxicity and
+          inefficacy).
+
+    - type: "prose"
+      title: "Supportive care"
+      markdown: |
+        Keep the child **lightly clothed** in a **warm, well-ventilated room**, and
+        **encourage extra oral fluids**.

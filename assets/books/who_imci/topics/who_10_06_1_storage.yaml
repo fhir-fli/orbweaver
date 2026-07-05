@@ -1,0 +1,28 @@
+# ============================================================
+# WHO IMCI §10.6.1 — Storage of blood. Pocket Book 2nd ed (2013), p.308.
+# ============================================================
+
+topic:
+  id: "who-imci-10-6-1-storage"
+  title: "Storage of Blood"
+  list_subtitle: "10.6.1 · screened · not expired · < 2 h out of fridge"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "blood transfusion", "storage", "pediatric"]
+  aliases:
+    - "Storage of blood"
+  category: "medical"
+
+  page_number: 308
+
+  blocks:
+
+    - type: "prose"
+      title: "Use safe, in-date blood"
+      highlight: true
+      markdown: |
+        - Use blood that has been **screened and found negative** for
+          transfusion-transmissible infections.
+        - **Do not** use blood that has **passed its expiry date** or has been **out
+          of the refrigerator for more than 2 h**.
+        - **Large-volume, rapid transfusion (> 15 ml/kg per h)** of blood stored at
+          **4 °C** may cause **hypothermia**, especially in small infants.

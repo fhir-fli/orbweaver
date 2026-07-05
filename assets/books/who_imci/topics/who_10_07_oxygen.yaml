@@ -1,0 +1,86 @@
+# ============================================================
+# WHO IMCI §10.7 — Oxygen therapy. Pocket Book 2nd ed (2013),
+# pp.312–315.
+# ============================================================
+
+topic:
+  id: "who-imci-10-7-oxygen"
+  title: "Oxygen Therapy"
+  list_subtitle: "10.7 · SpO2 < 90% · nasal prongs · monitor"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "oxygen", "pulse oximetry", "nasal prongs", "pediatric"]
+  aliases:
+    - "Oxygen therapy"
+    - "Oxygen"
+  category: "medical"
+
+  page_number: 312
+
+  blocks:
+
+    - type: "prose"
+      title: "Indications"
+      highlight: true
+      markdown: |
+        Oxygen therapy should be **guided by pulse oximetry** — give oxygen to
+        children with an **oxygen saturation < 90%.** When a pulse oximeter is not
+        available, the need is guided by **clinical signs** (less reliable). Give
+        oxygen to children with very severe pneumonia, bronchiolitis or asthma who
+        have:
+        - **central cyanosis**,
+        - **inability to drink** (when due to respiratory distress),
+        - **severe lower chest wall indrawing**,
+        - **respiratory rate ≥ 70/min**,
+        - **grunting with every breath** (in young infants), or
+        - **depressed mental status.**
+
+    - type: "prose"
+      title: "Sources"
+      markdown: |
+        Oxygen should be **available at all times.** The two main sources are
+        **cylinders** and **oxygen concentrators** — check that all equipment is
+        **compatible.**
+
+    - type: "prose"
+      title: "Oxygen delivery"
+      callout: true
+      markdown: |
+        **Nasal prongs are the preferred method** in most circumstances — safe,
+        non-invasive, reliable, and they do not obstruct the nasal airway.
+        Nasal or nasopharyngeal catheters are an alternative **only when prongs are
+        not available.** **Headboxes are not recommended.** A **face mask with a
+        reservoir** delivers 100% oxygen for resuscitation.
+        - **Nasal prongs:** short tubes just inside the nostrils, secured with tape
+          on the cheeks. Set a flow of **1–2 litres/min (0.5 litre/min for young
+          infants)** — delivers up to **40%** inspired oxygen. **Humidification not
+          required.** Keep the nostrils clear of mucus.
+        - **Nasal catheter (6 or 8 FG):** pass to the back of the nasal cavity, a
+          distance from the side of the nostril to the **inner margin of the
+          eyebrow**. Flow **1–2 litres/min.** Humidification not required.
+        - **Nasopharyngeal catheter (6 or 8 FG):** pass to the pharynx just below the
+          uvula, a distance from the side of the nostril to the **front of the ear.**
+          Flow **1–2 litres/min** (avoid gastric distension). **Humidification is
+          required.**
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        Train nurses to place and secure the prongs correctly; check the equipment
+        regularly and **clean the prongs at least twice a day.** Monitor the child at
+        least **every 3 h** for: oxygen saturation (by oximeter), prong position,
+        leaks in the system, correct flow rate, and airway obstruction by mucus
+        (clear with a moist wick or gentle suction).
+
+    - type: "prose"
+      title: "Pulse oximetry & duration"
+      markdown: |
+        Normal oxygen saturation at sea level is **95–100%**; it falls in severe
+        pneumonia. Titrate the oxygen flow to a stable **SpO₂ > 90%** without wasting
+        oxygen. (In cyanotic heart or lung disease, saturation may not rise with
+        oxygen.)
+
+        **Continue oxygen** until the child can maintain **SpO₂ > 90% in room air.**
+        When stable and improving, take the child off oxygen for a few minutes; if
+        saturation stays **> 90%**, discontinue, but **check again half an hour
+        later** and every 3 h on the first day. When no oximeter is available,
+        duration is guided by clinical signs (less reliable).

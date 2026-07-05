@@ -1,0 +1,40 @@
+# ============================================================
+# WHO IMCI §10.8 — Toys and play therapy. Pocket Book 2nd ed (2013),
+# p.315.
+# ============================================================
+
+topic:
+  id: "who-imci-10-8-play"
+  title: "Toys and Play Therapy"
+  list_subtitle: "10.8 · language + motor play · simple toys"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "play therapy", "development", "stimulation", "pediatric"]
+  aliases:
+    - "Toys and play therapy"
+    - "Play therapy"
+  category: "medical"
+
+  page_number: 315
+
+  blocks:
+
+    - type: "prose"
+      title: "Play is part of care"
+      highlight: true
+      markdown: |
+        Each play session should include **language and motor activities** and
+        activities with toys. Teach the child **local songs**. Encourage the child to
+        **laugh, vocalize** and describe what he or she is doing. Always encourage the
+        child to perform the **next appropriate motor activity.**
+
+    - type: "prose"
+      title: "Activities with toys"
+      markdown: |
+        - **Ring on a string (from 6 months):** thread cotton reels and other small
+          objects (for example, cut from the necks of plastic bottles) onto a string
+          and tie it in a **ring**, leaving a long piece of string hanging.
+        - **Blocks (from 9 months):** smooth the surfaces of small blocks of wood
+          with sandpaper and paint them in **bright colours**, if possible.
+
+        Simple, safe, locally made toys and regular play sessions support a sick
+        child's development and recovery.

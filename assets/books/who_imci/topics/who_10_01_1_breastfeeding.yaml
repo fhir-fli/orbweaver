@@ -1,0 +1,129 @@
+# ============================================================
+# WHO IMCI §10.1.1 — Supporting breastfeeding. Pocket Book 2nd ed
+# (2013), pp.294–299.
+# ============================================================
+
+topic:
+  id: "who-imci-10-1-1-breastfeeding"
+  title: "Supporting Breastfeeding"
+  list_subtitle: "10.1.1 · attachment · not-enough-milk · relactation"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "breastfeeding", "attachment", "relactation", "pediatric"]
+  aliases:
+    - "Breastfeeding"
+    - "Relactation"
+  category: "medical"
+
+  page_number: 294
+
+  blocks:
+
+    - type: "prose"
+      title: "Breast milk protects and heals"
+      highlight: true
+      markdown: |
+        Breastfeeding is most important for **protecting infants from illness** and
+        for their **recovery** from illness.
+        - **Exclusive breastfeeding** from birth to **6 months** of age.
+        - **Continued breastfeeding**, with adequate complementary foods, from
+          **6 months to ≥ 2 years**.
+
+        Health workers treating sick young children have a responsibility to
+        encourage mothers to breastfeed and to help them overcome difficulties.
+
+    - type: "prose"
+      title: "Assessing a breastfeed"
+      markdown: |
+        Take a feeding history; observe a feed to decide whether the mother needs
+        help. **Signs of good attachment:**
+        - **areola** more visible **above** the infant's mouth than below,
+        - **mouth wide open**,
+        - **lower lip turned out**,
+        - infant's **chin touching the breast**.
+
+        **Good positioning:** the infant is **held close**, **faces the breast**,
+        **body and head in a straight line**, and the **whole body is supported**.
+
+    - type: "prose"
+      title: "1. 'Not enough milk'"
+      markdown: |
+        Almost all mothers can produce enough milk. Signs an infant is genuinely
+        **not** getting enough:
+        - **poor weight gain** (< 500 g/month, or < 125 g/week, or weighing less
+          than the birth weight after 2 weeks),
+        - passing a **small amount of concentrated urine** (< 6 times a day,
+          yellow and strong-smelling).
+
+        Common **reasons**: **poor breastfeeding practice** (poor attachment — very
+        common — delayed start, fixed-time or short feeds, no night feeds, bottles,
+        pacifiers, other foods/fluids); **psychological factors** (lack of
+        confidence, worry, stress, depression, rejection, tiredness); **mother's
+        condition** (chronic illness such as TB, severe anaemia, rheumatic heart
+        disease; contraceptive pill; diuretics; pregnancy; severe malnutrition;
+        alcohol; smoking; retained placenta [rare]); or the **infant's condition**
+        (illness or an anomaly such as cleft palate or congenital heart disease).
+
+    - type: "prose"
+      title: "2. Help a mother breastfeed again (relactation)"
+      callout: true
+      markdown: |
+        - Keep the infant **close** to her; do not give him or her to other carers.
+        - Ensure plenty of **skin-to-skin contact** at all times.
+        - Offer the breast **whenever the infant is willing** to suckle.
+        - Help the infant take the breast by **expressing milk into the mouth** and
+          positioning so he or she can attach easily.
+        - **Avoid bottles, teats and pacifiers.** If necessary, express milk and
+          give it by **cup**; if not possible, artificial feeds may be needed until
+          supply is re-established.
+
+        **To increase the supply,** let the infant suckle **often** to stimulate the
+        breast; give other feeds from a **cup** while waiting for milk to come;
+        **reduce other milk by 30–60 ml per day**; and monitor weight gain.
+
+    - type: "prose"
+      title: "3. Refusal or reluctance to breastfeed"
+      markdown: |
+        Main reasons an infant refuses:
+        - **The infant is ill, in pain or sedated.** If able to suckle, encourage
+          more frequent feeds; if very ill, express and feed by cup or gastric tube
+          until able again. A **blocked nose** — clear it, suggest shorter, more
+          frequent feeds. A **sore mouth** may be **Candida (thrush)** — treat with
+          **nystatin 100 000 U/ml suspension, 1–2 ml four times daily for 7 days**
+          (or 1% gentian violet); or **teething**. If the mother is on regular
+          sedation, reduce the dose.
+        - **Technique difficulty** — help with positioning/attachment; avoid bottles
+          and pacifiers; treat engorgement by expressing.
+        - **A change has upset the infant** — separation, illness of the mother, a
+          new routine or a change in the mother's smell (soap, food, menstruation).
+
+    - type: "prose"
+      title: "Low-birth-weight and sick infants"
+      callout: true
+      markdown: |
+        Infants **< 2.5 kg** need breast milk **even more** than larger infants, but
+        often cannot take oral feeds at first and may need **IV** for the first few
+        days. Initiate **early feeding** with small oral feeds from day 1 as soon as
+        the infant tolerates enteral feeds.
+        - **Very low birth weight (< 1.5 kg):** feed by **naso- or orogastric tube**;
+          let the infant suck on the mother's clean finger while being tube-fed.
+        - **≥ 32 weeks' gestation:** put to the breast when well enough; continue
+          expressed breast milk by cup or tube to ensure full nutrition.
+        - **34–36 weeks' gestation:** can usually take all they need **directly from
+          the breast.**
+
+    - type: "prose"
+      title: "Infants who cannot breastfeed"
+      markdown: |
+        Non-breastfed infants should receive **either**:
+        - **expressed breast milk** (preferably the mother's own, or safe donor
+          human milk from a milk bank where available), **or**
+        - **formula** prepared with clean water (ready-made liquid formula if
+          possible).
+        - If neither is available, consider **animal milk**: dilute cow's milk by
+          **adding 50 ml water to 100 ml milk, then add 10 g sugar** and an approved
+          micronutrient supplement. **Do not** use for premature infants.
+
+        **Amounts of expressed breast milk:** infants **≥ 2.0 kg** — **150 ml/kg
+        daily in 8 feeds (3-hourly)**; **< 2.0 kg** — follow low-birth-weight
+        guidance. If too weak to suck but able to swallow, feed by **cup** or
+        **naso-/orogastric tube**.

@@ -1,0 +1,37 @@
+# ============================================================
+# WHO IMCI §10.1 — Nutritional management (overview of the nested group).
+# Pocket Book 2nd ed (2013), pp.294–303.
+# ============================================================
+
+topic:
+  id: "who-imci-10-1-nutrition"
+  title: "Nutritional Management"
+  list_subtitle: "10.1 · breastfeeding · feeding the sick child"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013)"
+  tags: ["supportive care", "nutrition", "breastfeeding", "feeding", "pediatric"]
+  aliases:
+    - "Nutritional management"
+    - "Feeding"
+  category: "medical"
+
+  page_number: 294
+
+  blocks:
+
+    - type: "prose"
+      title: "Good feeding aids recovery"
+      highlight: true
+      markdown: |
+        Good nutrition supports recovery from illness and protects against further
+        illness. Health workers should follow the counselling advice in the
+        nutrition-counselling sections, and a **mother's card** with pictures can
+        help the mother take the advice home as a reminder.
+
+    - type: "prose"
+      title: "This section covers"
+      markdown: |
+        - [Supporting breastfeeding](topic:who-imci-10-1-1-breastfeeding) —
+          assessing a feed, overcoming difficulties, the low-birth-weight or sick
+          infant, and infants who cannot breastfeed.
+        - [Nutritional management of sick children](topic:who-imci-10-1-2-sick-nutrition)
+          — principles of feeding a sick child, catch-up meals and feeding by age.
