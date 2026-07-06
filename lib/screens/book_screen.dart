@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/book.dart';
+import 'package:orbweaver/screens/drug_index_screen.dart';
 import 'package:orbweaver/screens/topic_frame.dart';
 import 'package:orbweaver/services/last_state.dart';
+import 'package:orbweaver/theme/palette.dart';
 
 /// One book's table of contents.
 ///
@@ -136,6 +138,24 @@ class _BookScreenState extends State<BookScreen> {
             topic: topic,
             onTap: () => openTopicFromBook(context, widget.book.id, topic),
           ),
+        BookGroup group when group.view == 'collection' &&
+                group.formulary != null =>
+          _GroupRow(
+            group: group,
+            spineColor: widget.book.spineColor,
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute<void>(
+                builder: (_) => DrugIndexScreen(
+                  formulary: group.formulary!,
+                  palette: resolvePalette([
+                    widget.book.paletteOverrides,
+                    group.paletteOverrides,
+                  ]),
+                ),
+              ),
+            ),
+          ),
         BookGroup group => _GroupRow(
             group: group,
             spineColor: widget.book.spineColor,
@@ -161,6 +181,20 @@ Future<void> openTopicFromBook(
   String bookId,
   BookTopic topic,
 ) async {
+  // A synthetic formulary-drug row renders the drug detail directly (its
+  // `asset` is a `formulary:` sentinel, not a file). We don't record these in
+  // last-state — there is no TopicFrame asset to restore them from.
+  final drug = topic.drug;
+  if (drug != null) {
+    await Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (_) =>
+            DrugDetailScreen(drug: drug, palette: topic.palette),
+      ),
+    );
+    return;
+  }
   await LastState.recordTopic(bookId, topic.id);
   if (!context.mounted) return;
   await Navigator.push(
@@ -274,6 +308,9 @@ class _GroupRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final count = _leafCount(group);
+    final unit = group.view == 'collection'
+        ? (count == 1 ? 'drug' : 'drugs')
+        : (count == 1 ? 'topic' : 'topics');
     return InkWell(
       onTap: onTap,
       child: Padding(
@@ -302,7 +339,7 @@ class _GroupRow extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    '$count ${count == 1 ? 'topic' : 'topics'}',
+                    '$count $unit',
                     style: const TextStyle(fontSize: 11, color: Colors.black54),
                   ),
                 ],

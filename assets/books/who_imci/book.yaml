@@ -420,3 +420,11 @@ book:
         - topic: "topics/who_a1_05_chest_drain.yaml"
         - topic: "topics/who_a1_06_suprapubic.yaml"
         - topic: "topics/who_a1_07_blood_glucose.yaml"
+    - title: "Annex 2 · Drug dosages"
+      # A faceted FORMULARY collection (A–Z / class / indication), not a chapter.
+      # Drugs live in formulary.yaml; the drug-index view renders them. Same
+      # steel-blue annex tab (0xFF5981BF) as Annex 1.
+      view: "collection"
+      formulary: "formulary.yaml"
+      palette:
+        accent: "0xFF5981BF"

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart' show Color;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/models/book.dart';
+import 'package:orbweaver/models/formulary.dart';
 import 'package:yaml/yaml.dart';
 
 /// Builds a leaf topic with the given id (title/subtitle/asset derived).
@@ -99,13 +100,14 @@ void main() {
     }
 
     test(
-        'who_imci: 12 chapters + Annex 1 (Ch.1 = 33, Ch.2 = 5, Ch.3 = 24, '
-        'Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27, Ch.8 = 34, Ch.9 = 33, '
-        'Ch.10 = 15, Ch.11 = 3, Ch.12 = 8, Annex 1 = 13)', () {
+        'who_imci: 12 chapters + Annex 1 + Annex 2 (Ch.1 = 33, Ch.2 = 5, '
+        'Ch.3 = 24, Ch.4 = 24, Ch.5 = 9, Ch.6 = 25, Ch.7 = 27, Ch.8 = 34, '
+        'Ch.9 = 33, Ch.10 = 15, Ch.11 = 3, Ch.12 = 8, Annex 1 = 13, '
+        'Annex 2 = formulary)', () {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(13));
+      expect(contents, hasLength(14));
       expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
       expect((contents[1] as YamlMap)['title'],
@@ -129,10 +131,54 @@ void main() {
           '12. Counselling & discharge from hospital');
       expect((contents[12] as YamlMap)['title'],
           'Annex 1 · Practical procedures');
+      expect((contents[13] as YamlMap)['title'], 'Annex 2 · Drug dosages');
       // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
       // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) + Ch.9 (33) + Ch.10 (15)
-      // + Ch.11 (3) + Ch.12 (8) + Annex 1 (13) = 253 topics.
+      // + Ch.11 (3) + Ch.12 (8) + Annex 1 (13) = 253 manifest topics.
+      // Annex 2 is a `view: collection` group with no manifest children — its
+      // ~75 drugs are generated at load from formulary.yaml, so it adds 0 here.
       expect(leafCount(contents), 253);
+    });
+
+    test('who_imci: Annex 2 is a steel-blue formulary collection', () {
+      final b = loadBook('who_imci');
+      final a2 = (b['contents'] as YamlList)[13] as YamlMap;
+      expect(a2['view'], 'collection');
+      expect(a2['formulary'], 'formulary.yaml');
+      expect(a2['palette']['accent'], '0xFF5981BF');
+      // The collection has no inline children — drugs come from the dataset.
+      expect(a2['children'], isNull);
+    });
+
+    test('who_imci: formulary.yaml loads as a Formulary (75 drugs, 3 lenses)',
+        () {
+      final raw =
+          File('assets/books/who_imci/formulary.yaml').readAsStringSync();
+      final f = Formulary.fromYaml(loadYaml(raw) as YamlMap);
+      expect(f.drugs, hasLength(75));
+      expect(f.facets.map((x) => x.key), ['alpha', 'class', 'indication']);
+      expect(f.classOrder, contains('antibiotic'));
+      expect(f.bands.columns, hasLength(5));
+      expect(f.artBands.columns, hasLength(6));
+      // A known multi-indication drug is modelled correctly.
+      final cef = f.drugById('ceftriaxone')!;
+      expect(cef.className, 'antibiotic');
+      expect(cef.indications, containsAll(<String>['meningitis', 'sepsis']));
+      expect(cef.doses.length, greaterThanOrEqualTo(3));
+      expect(cef.bandColumns, hasLength(5));
+      // An antiretroviral rides the 6-band ART axis.
+      final lpv = f.drugById('lopinavir-ritonavir')!;
+      expect(lpv.className, 'antiretroviral');
+      expect(lpv.bandColumns, hasLength(6));
+      // Every dose row's band count matches its drug's axis width.
+      for (final d in f.drugs) {
+        for (final dose in d.doses) {
+          if (dose.bands.isNotEmpty) {
+            expect(dose.bands, hasLength(d.bandColumns.length),
+                reason: '${d.name} / ${dose.label}');
+          }
+        }
+      }
     });
 
     test('who_imci: Annex 1 is a steel-blue-tabbed group; A1.2 nests', () {

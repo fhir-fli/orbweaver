@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:orbweaver/data/search_normalizer.dart';
 import 'package:orbweaver/models/book.dart';
+import 'package:orbweaver/models/formulary.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:yaml/yaml.dart';
 
@@ -97,21 +98,72 @@ Future<List<BookNode>> _parseNodes(
       final overview = overviewPath == null
           ? null
           : await _loadTopicRow('$dir/$overviewPath', childLayers, ancestors);
-      final children = await _parseNodes(
-        map['children'] as YamlList? ?? YamlList(),
-        dir,
-        childLayers,
-        childAncestors,
-      );
+
+      // A `view: "collection"` group is a bespoke faceted screen (a
+      // formulary) rather than a chapter. Its drugs are loaded from the
+      // referenced dataset and surfaced as synthetic searchable leaves.
+      final view = map['view'] as String?;
+      Formulary? formulary;
+      List<BookNode> children;
+      if (view == 'collection') {
+        final formPath = map['formulary'] as String;
+        final raw = await rootBundle.loadString('$dir/$formPath');
+        formulary = Formulary.fromYaml(loadYaml(raw) as YamlMap);
+        children = _formularyLeaves(formulary, childLayers, childAncestors);
+      } else {
+        children = await _parseNodes(
+          map['children'] as YamlList? ?? YamlList(),
+          dir,
+          childLayers,
+          childAncestors,
+        );
+      }
       nodes.add(BookGroup(
         title: title,
         overview: overview,
         children: children,
         paletteOverrides: groupOverrides,
+        view: view,
+        formulary: formulary,
       ));
     }
   }
   return nodes;
+}
+
+/// One synthetic [BookLeaf] per drug in a [Formulary], so every drug is
+/// searched and counted like an ordinary topic. The leaf carries the [Drug]
+/// as its payload; its `asset` is a `formulary:` sentinel (there is no file),
+/// and opening it renders the drug detail directly. [ancestors] here already
+/// includes the collection group's title (the breadcrumb).
+List<BookNode> _formularyLeaves(
+  Formulary formulary,
+  List<Map<String, Color>> layers,
+  List<String> ancestors,
+) {
+  final palette = resolvePalette(layers);
+  final crumb = ancestors.join(' › ');
+  return [
+    for (final drug in formulary.drugs)
+      BookLeaf(BookTopic(
+        id: drug.id,
+        title: drug.name,
+        subtitle: drug.subtitle.isNotEmpty
+            ? drug.subtitle
+            : formulary.classLabel(drug.className),
+        asset: 'formulary:${drug.id}',
+        tags: drug.indications,
+        palette: palette,
+        searchText: SearchNormalizer.normalize(drug.searchBlob),
+        titleText: SearchNormalizer.normalize('${drug.name} ${drug.subtitle}'),
+        keywordsText: SearchNormalizer.normalize([
+          ...drug.indications.map(formulary.indicationLabel),
+          formulary.classLabel(drug.className),
+        ].join(' ')),
+        breadcrumb: crumb,
+        drug: drug,
+      )),
+  ];
 }
 
 /// Builds a [BookTopic] row from a topic file's own frontmatter — the

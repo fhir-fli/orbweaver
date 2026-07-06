@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/search_normalizer.dart';
+import 'package:orbweaver/models/formulary.dart';
 
 /// One source reference book on the shelf.
 ///
@@ -73,11 +74,23 @@ class BookGroup extends BookNode {
     required this.children,
     this.overview,
     this.paletteOverrides = const {},
+    this.view,
+    this.formulary,
   });
 
   final String title;
   final BookTopic? overview;
   final List<BookNode> children;
+
+  /// A `view:` marker that replaces the generic chapter/accordion rendering
+  /// with a bespoke screen. `"collection"` → a faceted [Formulary] index.
+  /// Null for an ordinary chapter/section group.
+  final String? view;
+
+  /// The loaded collection dataset when [view] is `"collection"`. Its drugs
+  /// are also surfaced as synthetic [BookLeaf] children (so they are searched
+  /// and counted); this holds the structured records the custom view renders.
+  final Formulary? formulary;
 
   /// Chapter-level `palette:` overrides, applied over the book's and
   /// inherited by this group's topics. Retained for reference; topic rows
@@ -104,6 +117,7 @@ class BookTopic {
     this.titleText = '',
     this.keywordsText = '',
     this.breadcrumb = '',
+    this.drug,
   });
 
   final String id;
@@ -111,6 +125,12 @@ class BookTopic {
   final String subtitle;
   final String asset;
   final List<String> tags;
+
+  /// For a synthetic formulary-drug row: the structured [Drug] record this
+  /// topic stands in for. When set, opening the row renders the drug detail
+  /// page directly instead of loading [asset] (which is a `formulary:` sentinel,
+  /// not a real file). Null for ordinary topics.
+  final Drug? drug;
 
   /// Fully-resolved color palette for this topic (book → chapter → topic
   /// cascade, accent-derived roles filled in). Drives the TOC row accent

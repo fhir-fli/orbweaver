@@ -1,0 +1,1191 @@
+# ============================================================================
+# WHO IMCI Annex 2 — Drug formulary (Pocket Book 2nd ed 2013, pp.353–373).
+# A reusable "formulary" collection: records + facets (A–Z / class / indication).
+# Rendered by the drug-index view; each record's doses reuse the weight-band table.
+# Every dose verified against the source page renders (RULE #0).
+# ============================================================================
+formulary:
+  id: "who-imci-a2-formulary"
+  title: "Drug dosages"
+  subtitle: "Annex 2 · practical drug doses"
+  source: "WHO Pocket Book of Hospital Care for Children, 2nd ed (2013), pp.353–373"
+  # main weight-band axis (most drugs)
+  bands:
+    label: "Dose by body weight (kg)"
+    columns: ["3–<6", "6–<10", "10–<15", "15–<20", "20–29"]
+  # antiretroviral / surface-area axis (6 bands, morning & evening)
+  bands_art:
+    label: "Dose by surface area or body weight (kg) — morning & evening"
+    columns: ["3–5.9", "6–9.9", "10–13.9", "14–19.9", "20–24.9", "25–34.9"]
+  # toggle lenses
+  facets:
+    - { key: "alpha",      label: "A–Z",           mode: "alpha", tap: "detail" }
+    - { key: "class",      label: "By class",      mode: "group", field: "class",       tap: "detail" }
+    - { key: "indication", label: "By indication", mode: "group", field: "indications", tap: "expand" }
+  # class display labels (also defines group order)
+  classes:
+    - { key: "antibiotic", label: "Antibiotics" }
+    - { key: "antimalarial", label: "Antimalarials" }
+    - { key: "antituberculosis", label: "Antituberculosis" }
+    - { key: "antiretroviral", label: "Antiretrovirals" }
+    - { key: "anticonvulsant_sedation", label: "Anticonvulsants & sedation" }
+    - { key: "analgesia", label: "Analgesia" }
+    - { key: "cardiac", label: "Cardiac / inotropes" }
+    - { key: "fluid_electrolyte", label: "Fluids & electrolytes" }
+    - { key: "other", label: "Other" }
+  # indication display labels
+  indications:
+    - { key: "pneumonia", label: "Pneumonia" }
+    - { key: "oesophageal candidiasis", label: "Oesophageal candidiasis" }
+    - { key: "sepsis", label: "Sepsis" }
+    - { key: "severe pneumonia", label: "Severe pneumonia" }
+    - { key: "meningitis", label: "Meningitis" }
+    - { key: "skin infection", label: "Skin infection" }
+    - { key: "hypokalaemia", label: "Hypokalaemia" }
+    - { key: "wheeze", label: "Wheeze" }
+    - { key: "severe malaria", label: "Severe malaria" }
+    - { key: "hiv", label: "HIV" }
+    - { key: "anaphylaxis", label: "Anaphylaxis" }
+    - { key: "croup", label: "Croup" }
+    - { key: "malaria", label: "Malaria" }
+    - { key: "fever", label: "Fever" }
+    - { key: "pain", label: "Pain" }
+    - { key: "cholera", label: "Cholera" }
+    - { key: "dysentery", label: "Dysentery" }
+    - { key: "staphylococcal infection", label: "Staphylococcal infection" }
+    - { key: "abscess", label: "Abscess" }
+    - { key: "iron poisoning", label: "Iron poisoning" }
+    - { key: "convulsions", label: "Convulsions" }
+    - { key: "sedation", label: "Sedation" }
+    - { key: "heart failure", label: "Heart failure" }
+    - { key: "shock", label: "Shock" }
+    - { key: "pertussis", label: "Pertussis" }
+    - { key: "candidiasis", label: "Candidiasis" }
+    - { key: "cryptococcal meningitis", label: "Cryptococcal meningitis" }
+    - { key: "giardiasis", label: "Giardiasis" }
+    - { key: "neonatal sepsis", label: "Neonatal sepsis" }
+    - { key: "thrush", label: "Thrush" }
+    - { key: "anaemia", label: "Anaemia" }
+    - { key: "anaesthesia", label: "Anaesthesia" }
+    - { key: "intestinal worms", label: "Intestinal worms" }
+    - { key: "nausea and vomiting", label: "Nausea & vomiting" }
+    - { key: "amoebiasis", label: "Amoebiasis" }
+    - { key: "rheumatic fever", label: "Rheumatic fever" }
+    - { key: "syphilis", label: "Syphilis" }
+    - { key: "burns", label: "Burns" }
+    - { key: "neonatal ophthalmia", label: "Neonatal ophthalmia" }
+    - { key: "measles", label: "Measles" }
+    - { key: "vitamin A deficiency", label: "Vitamin A deficiency" }
+    - { key: "tuberculosis", label: "Tuberculosis" }
+  drugs:
+    - id: "amoxicillin"
+      name: "Amoxicillin"
+      class: "antibiotic"
+      subtitle: "penicillin"
+      indications: ["pneumonia"]
+      page: 356
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 25 mg/kg twice a day"
+        form: "250 mg tablet (chewable or dispersible)"
+        bands: ["½", "1", "1½", "2", "2½"]
+      - label: "Standard — syrup"
+        regimen: "Oral: 25 mg/kg twice a day"
+        form: "Syrup (250 mg/5 ml)"
+        bands: ["2.5 ml", "5 ml", "7.5 ml", "10 ml", "—"]
+      notes: "For pneumonia give 40 mg/kg twice a day (higher band)."
+    - id: "amphotericin-b"
+      name: "Amphotericin B"
+      class: "antibiotic"
+      subtitle: "antifungal"
+      indications: ["oesophageal candidiasis"]
+      page: 356
+      doses:
+      - label: "Oesophageal candidiasis"
+        regimen: "0.25 mg/kg/day increasing to 1 mg/kg/day as tolerated, IV infusion over 6 h/day for 10–14 days"
+        form: "50 mg vial"
+        bands: ["—", "2–8 mg", "3–12 mg", "4.5–18 mg", "6–24 mg"]
+    - id: "ampicillin"
+      name: "Ampicillin"
+      class: "antibiotic"
+      subtitle: "penicillin"
+      indications: ["sepsis", "severe pneumonia", "meningitis"]
+      page: 356
+      doses:
+      - label: "Standard"
+        regimen: "IM/IV: 50 mg/kg every 6 h"
+        form: "Vial of 500 mg + 2.1 ml sterile water → 500 mg/2.5 ml"
+        bands: ["1 ml", "2 ml", "3 ml", "5 ml", "6 ml"]
+      notes: "Oral doses are for mild disease and must be 2–4× higher if a course of injectable ampicillin is required for severe disease. Neonatal/premature dosing: see p.69."
+    - id: "cefotaxime"
+      name: "Cefotaxime"
+      class: "antibiotic"
+      subtitle: "cephalosporin"
+      indications: ["sepsis", "meningitis"]
+      page: 358
+      doses:
+      - label: "Standard"
+        regimen: "IV: 50 mg/kg every 6 h"
+        form: "Vial of 500 mg + 2 ml (or 1 g + 4 ml, or 2 g + 8 ml) sterile water"
+        bands: ["0.8 ml", "1.5 ml", "2.5 ml", "3.5 ml", "5 ml"]
+      notes: "Neonatal/premature dosing & intervals: see p.70."
+    - id: "ceftriaxone"
+      name: "Ceftriaxone"
+      class: "antibiotic"
+      subtitle: "cephalosporin"
+      indications: ["meningitis", "sepsis"]
+      page: 358
+      doses:
+      - label: "Standard"
+        regimen: "IM/IV: 80 mg/kg once daily, over 30 min as infusion or 3 min as IV injection"
+        form: "Vial of 1 g + 9.6 ml sterile water → 1 g/10 ml (or 2 g + 19 ml → 2 g/20 ml)"
+        bands: ["3 ml", "6 ml", "10 ml", "14 ml", "20 ml"]
+      - label: "Meningitis"
+        indication: "meningitis"
+        regimen: "IM/IV: 50 mg/kg every 12 h (max single dose 4 g)"
+        bands: ["2 ml", "4 ml", "6 ml", "9 ml", "12.5 ml"]
+      - label: "Meningitis — alt"
+        indication: "meningitis"
+        regimen: "or IM/IV: 100 mg/kg"
+        bands: ["4 ml", "8 ml", "12 ml", "18 ml", "25 ml"]
+      notes: "Neonatal/premature dosing & intervals: see p.70."
+    - id: "cefalexin"
+      name: "Cefalexin"
+      class: "antibiotic"
+      subtitle: "cephalosporin"
+      indications: ["skin infection"]
+      review: true   # indication from EMLc fallback — OE-verify
+      page: 358
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 12.5 mg/kg four times a day"
+        form: "250 mg tablet"
+        bands: ["¼", "½", "¾", "1", "1¼"]
+    - id: "potassium-chloride"
+      name: "Potassium chloride"
+      class: "fluid_electrolyte"
+      indications: ["hypokalaemia"]
+      page: 368
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 2–4 mmol/kg per day"
+        form: "—"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      notes: "Calculate the exact dose by body weight."
+    - id: "prednisolone"
+      name: "Prednisolone"
+      class: "other"
+      subtitle: "corticosteroid"
+      indications: ["wheeze"]
+      review: true   # indication from EMLc fallback — OE-verify
+      page: 368
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 1 mg/kg twice a day for 3 days"
+        form: "5-mg tablet"
+        bands: ["1", "1", "2", "3", "5"]
+      notes: "1 mg prednisolone ≡ 5 mg hydrocortisone ≡ 0.15 mg dexamethasone."
+    - id: "quinine"
+      name: "Quinine"
+      class: "antimalarial"
+      indications: ["severe malaria"]
+      page: 368
+      doses:
+      - label: "IV loading"
+        regimen: "IV: 20 mg salt/kg over 2–4 h, diluted in 10 ml/kg IV fluid"
+        form: "Quinine dihydrochloride 150 mg/ml (2-ml ampoules)"
+        bands: ["0.3 ml", "0.6 ml", "1 ml", "1.2 ml", "2 ml"]
+      - label: "IV maintenance"
+        regimen: "IV: 10 mg salt/kg over 2 h, diluted in 10 ml/kg IV fluid"
+        form: "Quinine dihydrochloride 300 mg/ml (2-ml ampoules)"
+        bands: ["0.2 ml", "0.3 ml", "0.5 ml", "0.6 ml", "1 ml"]
+      - label: "IM (if no IV)"
+        regimen: "IM: same dosage as IV, if IV infusion not possible"
+        form: "Quinine dihydrochloride diluted in normal saline to 60 mg salt/ml"
+        bands: ["1 ml", "1.5 ml", "2.5 ml", "3 ml", "5 ml"]
+      - label: "Oral (200-mg tab)"
+        regimen: "Oral (follow-on)"
+        form: "Quinine sulfate 200-mg tablet"
+        bands: ["¼", "½", "¾", "1", "1½"]
+      - label: "Oral (300-mg tab)"
+        regimen: "Oral (follow-on)"
+        form: "Quinine sulfate 300-mg tablet"
+        bands: ["—", "—", "½", "½", "1"]
+      notes: "Doses expressed as mg of quinine dihydrochloride salt. Loading dose is DOUBLE the maintenance dose. Infusion must not exceed 5 mg salt/kg per hour. At 8 h after the loading dose, give the maintenance dose over 2 h, repeated every 8 h; switch to a full oral ACT course when the child can swallow."
+    - id: "adrenaline"
+      name: "Adrenaline"
+      class: "cardiac"
+      subtitle: "sympathomimetic"
+      indications: ["anaphylaxis", "croup", "wheeze"]
+      page: 355
+      doses:
+      - label: "Wheeze (bronchodilator)"
+        indication: "wheeze"
+        regimen: "0.01 ml/kg (max 0.3 ml) of 1:1000 solution SC (or 0.1 ml/kg of 1:10 000), via 1-ml syringe"
+        form: "1:1000 solution"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      - label: "Severe viral croup (nebulized)"
+        indication: "croup"
+        regimen: "0.5 ml/kg of 1:1000 solution, nebulized (max dose 5 ml)"
+        form: "1:1000 solution"
+        bands: ["—", "3 ml", "5 ml", "5 ml", "5 ml"]
+      - label: "Anaphylaxis"
+        indication: "anaphylaxis"
+        regimen: "0.15 ml of 1:1000 solution IM (0.3 ml for children >6 years)"
+        form: "1:1000 solution"
+        bands: ["fixed", "fixed", "fixed", "fixed", "fixed"]
+      notes: "Make up a 1:10 000 solution by adding 1 ml of 1:1000 solution to 9 ml of normal saline or 5% glucose."
+    - id: "aminophylline"
+      name: "Aminophylline"
+      class: "other"
+      subtitle: "xanthine bronchodilator"
+      indications: ["wheeze"]
+      page: 355
+      doses:
+      - label: "Asthma — oral (100 mg tab)"
+        indication: "wheeze"
+        regimen: "Oral: 6 mg/kg"
+        form: "Tablet: 100 mg"
+        bands: ["¼", "½", "¾", "1", "1½"]
+      - label: "Asthma — oral (200 mg tab)"
+        indication: "wheeze"
+        regimen: "Oral: 6 mg/kg"
+        form: "Tablet: 200 mg"
+        bands: ["—", "¼", "½", "½", "¾"]
+      - label: "IV loading"
+        indication: "wheeze"
+        regimen: "IV: 5–6 mg/kg (max 300 mg) slowly over 20–60 min"
+        form: "250 mg/10-ml vial"
+        bands: ["1 ml", "1.5 ml", "2.5 ml", "3.5 ml", "5 ml"]
+      - label: "IV maintenance"
+        indication: "wheeze"
+        regimen: "IV: 5 mg/kg up to every 6 h, or continuous infusion 0.9 mg/kg/h"
+        form: "250 mg/10-ml vial"
+        bands: ["1 ml", "1.5 ml", "2.5 ml", "3.5 ml", "5 ml"]
+      notes: "Give IV loading dose only if the child has NOT taken aminophylline or theophylline within 24 h. For apnoea dosing in neonates/premature infants, see p.69."
+    - id: "artemether"
+      name: "Artemether"
+      class: "antimalarial"
+      indications: ["severe malaria"]
+      page: 357
+      doses:
+      - label: "Loading (40 mg/ml)"
+        regimen: "IM: 3.2 mg/kg (loading dose)"
+        form: "40 mg/1-ml ampoule"
+        bands: ["0.4 ml", "0.8 ml", "1.2 ml", "1.6 ml", "2.4 ml"]
+      - label: "Loading (80 mg/ml)"
+        regimen: "IM: 3.2 mg/kg (loading dose)"
+        form: "80 mg/1-ml ampoule"
+        bands: ["0.2 ml", "0.4 ml", "0.6 ml", "0.8 ml", "1.2 ml"]
+      - label: "Maintenance (40 mg/ml)"
+        regimen: "IM: 1.6 mg/kg daily"
+        form: "40 mg/1-ml ampoule"
+        bands: ["0.2 ml", "0.4 ml", "0.6 ml", "0.8 ml", "1.2 ml"]
+      - label: "Maintenance (80 mg/ml)"
+        regimen: "IM: 1.6 mg/kg daily"
+        form: "80 mg/1-ml ampoule"
+        bands: ["0.1 ml", "0.2 ml", "0.3 ml", "0.4 ml", "0.6 ml"]
+      notes: "Give the maintenance dose daily for a minimum of 24 h until the patient can take oral artemisinin-based combination therapy (ACT)."
+    - id: "artemether-lumefantrine"
+      name: "Artemether/lumefantrine"
+      class: "antimalarial"
+      indications: ["malaria"]
+      page: 357
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 2 mg/kg artemether + 12 mg/kg lumefantrine twice per day"
+        form: "Tablet: 20 mg artemether / 120 mg lumefantrine"
+        bands: ["1", "1", "1", "2", "2"]
+    - id: "artesunate"
+      name: "Artesunate"
+      class: "antimalarial"
+      indications: ["severe malaria"]
+      page: 357
+      doses:
+      - label: "Standard"
+        regimen: "IV or IM: 2.4 mg/kg at 0, 12 and 24 h, then daily until able to take orally"
+        form: "60 mg artesunic acid (in 0.6 ml 5% bicarbonate) diluted in 3.4 ml saline + glucose"
+        bands: ["0.8 ml", "1.4 ml", "2.4 ml", "3.0 ml", "5.0 ml"]
+      notes: "Prepare the IV solution just before use (dilute the 60 mg in 3.4 ml of 5% glucose). When the child can swallow, give the full oral ACT course."
+    - id: "artesunate-mefloquine"
+      name: "Artesunate–mefloquine"
+      class: "antimalarial"
+      indications: ["malaria"]
+      page: 357
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 4 mg/kg artesunate + 8.3 mg/kg mefloquine once a day"
+        form: "Tablet: 25 mg artesunate / 55 mg mefloquine"
+        bands: ["—", "¼", "½", "¾", "1"]
+      notes: "Not recommended for children <5 months of age owing to limited information."
+    - id: "aspirin"
+      name: "Aspirin"
+      class: "analgesia"
+      indications: ["fever", "pain"]
+      review: true   # indication from EMLc fallback — OE-verify
+      page: 357
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 10–20 mg/kg every 4–6 h"
+        form: "300 mg tablet"
+        bands: ["—", "¼", "½", "¾", "1"]
+      notes: "Avoid in young children where possible because of the risk of Reye syndrome."
+    - id: "chloramphenicol"
+      name: "Chloramphenicol"
+      class: "antibiotic"
+      indications: ["meningitis", "cholera", "sepsis"]
+      page: 359
+      doses:
+      - label: "Meningitis"
+        indication: "meningitis"
+        regimen: "IV: 25 mg/kg every 6 h (max 1 g/dose). Calculate exact dose by weight where possible."
+        form: "Vial of 1 g + 9.2 ml sterile water → 1 g/10 ml"
+        bands: ["0.75–1.25 ml", "1.5–2.25 ml", "2.5–3.5 ml", "3.75–4.75 ml", "5–7.25 ml"]
+      - label: "Cholera"
+        indication: "cholera"
+        regimen: "IM: 20 mg/kg every 6 h for 3 days"
+        form: "Vial of 1 g + 3.2 ml sterile water → 1 g/4 ml"
+        bands: ["0.3–0.5 ml", "0.6–0.9 ml", "1–1.4 ml", "1.5–1.9 ml", "2–2.9 ml"]
+      - label: "Other — oral suspension"
+        indication: "sepsis"
+        regimen: "Oral: 25 mg/kg every 8 h (max 1 g/dose)"
+        form: "125 mg/5 ml suspension (palmitate)"
+        bands: ["3–5 ml", "6–9 ml", "10–14 ml", "15–19 ml", "—"]
+      - label: "Other — capsule"
+        indication: "sepsis"
+        regimen: "Oral: 25 mg/kg every 8 h (max 1 g/dose)"
+        form: "250 mg capsule"
+        bands: ["—", "—", "1", "1½", "2"]
+      notes: "Phenobarbital reduces, and phenytoin increases, chloramphenicol levels when given together."
+    - id: "chloramphenicol-oily"
+      name: "Chloramphenicol, oily"
+      class: "antibiotic"
+      indications: ["meningitis"]
+      page: 359
+      doses:
+      - label: "Meningococcal epidemic"
+        indication: "meningitis"
+        regimen: "IM: 100 mg/kg single dose (max 3 g)"
+        form: "Vial of 0.5 g in 2 ml"
+        bands: ["1.2–2 ml", "2.4–3.6 ml", "4–5.6 ml", "6–7.6 ml", "8–11.6 ml"]
+    - id: "chlorphenamine"
+      name: "Chlorphenamine"
+      class: "other"
+      subtitle: "antihistamine"
+      indications: ["anaphylaxis"]
+      page: 359
+      doses:
+      - label: "Injection"
+        regimen: "IM/IV/SC: 0.25 mg/kg once (may repeat up to 4× in 24 h)"
+        form: "10 mg in 1 ml"
+        bands: ["0.1 ml", "0.2 ml", "0.3 ml", "0.5 ml", "0.6 ml"]
+      - label: "Oral"
+        regimen: "Oral: two or three times daily"
+        form: "Tablet: 4 mg"
+        bands: ["—", "—", "—", "—", "½"]
+    - id: "ciprofloxacin"
+      name: "Ciprofloxacin"
+      class: "antibiotic"
+      subtitle: "fluoroquinolone"
+      indications: ["dysentery", "cholera"]
+      page: 360
+      doses:
+      - label: "100 mg tablet"
+        regimen: "Oral: 10–20 mg/kg per dose twice a day for 5 days (max 500 mg/dose)"
+        form: "100 mg tablet"
+        bands: ["½", "1", "1½", "2", "3"]
+      - label: "250 mg tablet"
+        regimen: "Oral: 10–20 mg/kg per dose twice a day for 5 days (max 500 mg/dose)"
+        form: "250 mg tablet"
+        bands: ["¼", "½", "½", "1", "1½"]
+    - id: "cloxacillin"
+      name: "Cloxacillin (or flucloxacillin/oxacillin)"
+      class: "antibiotic"
+      subtitle: "penicillin (anti-staphylococcal)"
+      indications: ["staphylococcal infection", "abscess"]
+      page: 360
+      doses:
+      - label: "IV"
+        regimen: "IV: 25–50 mg/kg every 6 h  [(n) = dose at 50 mg/kg]"
+        form: "Vial of 500 mg + sterile water → 500 mg/10 ml"
+        bands: ["2–(4) ml", "4–(8) ml", "6–(12) ml", "8–(16) ml", "12–(24) ml"]
+      - label: "IM"
+        regimen: "IM: 25–50 mg/kg every 6 h"
+        form: "Vial of 250 mg + 1.3 ml sterile water → 250 mg/1.5 ml"
+        bands: ["0.6–(1.2) ml", "1–(2) ml", "1.8–(3.6) ml", "2.5–(5) ml", "3.75–(7.5) ml"]
+      - label: "Oral"
+        regimen: "Oral: 25–50 mg/kg every 6 h"
+        form: "250 mg capsule"
+        bands: ["½–(1)", "1–(2)", "1–(2)", "2–(3)", "2–(4)"]
+      - label: "Abscesses"
+        indication: "abscess"
+        regimen: "Oral: 15 mg/kg every 6 h (treating abscesses)"
+        form: "250 mg capsule"
+        bands: ["¼", "½", "1", "1½", "2½"]
+      notes: "Neonatal/premature dosing & intervals: see p.70."
+    - id: "co-trimoxazole"
+      name: "Co-trimoxazole (trimethoprim–sulfamethoxazole)"
+      class: "antibiotic"
+      indications: ["pneumonia", "hiv"]
+      page: 360
+      doses:
+      - label: "Adult tablet"
+        regimen: "Oral: 4 mg/kg TMP + 20 mg/kg SMX twice a day"
+        form: "Adult tablet (80 mg TMP + 400 mg SMX)"
+        bands: ["¼", "½", "1", "1", "1"]
+      - label: "Paediatric tablet"
+        regimen: "Oral: 4 mg/kg TMP + 20 mg/kg SMX twice a day"
+        form: "Paediatric tablet (20 mg TMP + 100 mg SMX)"
+        bands: ["1", "2", "3", "3", "4"]
+      - label: "Syrup"
+        regimen: "Oral: 4 mg/kg TMP + 20 mg/kg SMX twice a day"
+        form: "Syrup (40 mg TMP + 200 mg SMX per 5 ml)"
+        bands: ["2 ml", "3.5 ml", "6 ml", "8.5 ml", "—"]
+      notes: "For interstitial pneumonia (PCP) in HIV: 8 mg/kg TMP + 40 mg/kg SMX three times a day for 21 days. Infant <1 month: ½ paediatric tablet or 1.25 ml syrup twice a day. Avoid in premature or jaundiced neonates."
+    - id: "deferoxamine"
+      name: "Deferoxamine"
+      class: "other"
+      subtitle: "chelating agent"
+      indications: ["iron poisoning"]
+      page: 361
+      doses:
+      - label: "Standard"
+        regimen: "IV: 15 mg/kg/h to max 80 mg/kg in 24 h; or IM: 50 mg/kg every 6 h (max 6 g/day)"
+        form: "500-mg ampoule"
+        bands: ["2", "2", "2", "2", "2"]
+    - id: "dexamethasone"
+      name: "Dexamethasone"
+      class: "other"
+      subtitle: "corticosteroid"
+      indications: ["croup", "meningitis"]
+      page: 361
+      doses:
+      - label: "Severe viral croup"
+        indication: "croup"
+        regimen: "Oral: 0.6 mg/kg single dose"
+        form: "0.5-mg tablets"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      - label: "Meningitis"
+        indication: "meningitis"
+        regimen: "IV: 0.15 mg/kg/dose every 6 h for the first 2–4 days"
+        form: "IM: 5 mg/ml"
+        bands: ["0.5 ml", "0.9 ml", "1.4 ml", "2 ml", "3 ml"]
+    - id: "diazepam"
+      name: "Diazepam"
+      class: "anticonvulsant_sedation"
+      subtitle: "benzodiazepine"
+      indications: ["convulsions", "sedation"]
+      page: 361
+      doses:
+      - label: "Convulsions — rectal"
+        indication: "convulsions"
+        regimen: "Rectal: 0.5 mg/kg"
+        form: "10 mg/2 ml solution"
+        bands: ["0.4 ml", "0.75 ml", "1.2 ml", "1.7 ml", "2.5 ml"]
+      - label: "Convulsions — IV"
+        indication: "convulsions"
+        regimen: "IV: 0.2–0.3 mg/kg"
+        form: "10 mg/2 ml solution"
+        bands: ["0.25 ml", "0.4 ml", "0.6 ml", "0.75 ml", "1.25 ml"]
+      - label: "Sedation before procedures"
+        indication: "sedation"
+        regimen: "0.1–0.2 mg/kg IV"
+        form: "10 mg/2 ml solution"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      notes: "Neonates: give phenobarbital (20 mg/kg IV/IM) instead of diazepam. If convulsions continue, repeat 10 mg/kg IV/IM after 30 min. Oral phenobarbital maintenance 2.5–5 mg/kg."
+    - id: "digoxin"
+      name: "Digoxin"
+      class: "cardiac"
+      indications: ["heart failure"]
+      page: 362
+      doses:
+      - label: "Loading (62.5-µg tab)"
+        regimen: "Oral: 15 µg/kg once only (loading dose)"
+        form: "62.5-µg tablets"
+        bands: ["¾–1", "1½–2", "2½–3½", "3½–4½", "—"]
+      - label: "Loading (125-µg tab)"
+        regimen: "Oral: 15 µg/kg once only (loading dose)"
+        form: "125-µg tablets"
+        bands: ["—", "—", "1–1½", "1¾–2", "2½–3"]
+      - label: "Maintenance"
+        regimen: "Oral: 5 µg/kg every 12 h (max 250 µg/dose), start 6 h after loading"
+        form: "62.5-µg tablets"
+        bands: ["¼–½", "½–¾", "¾–1", "1¼–1½", "1½–2¼"]
+    - id: "dobutamine"
+      name: "Dobutamine"
+      class: "cardiac"
+      subtitle: "inotrope"
+      indications: ["shock"]
+      page: 362
+      doses:
+      - label: "Standard"
+        regimen: "IV infusion: 2–20 µg/kg per min"
+        form: "250 mg/20 ml ampoule; dilute 250 mg in 250 ml 0.9% saline + 5% glucose → 1000 µg/ml"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      notes: "Calculate exact dose by weight and required infusion rate. Diluted solution may be stored ≤24 h."
+    - id: "dopamine"
+      name: "Dopamine"
+      class: "cardiac"
+      subtitle: "inotrope"
+      indications: ["shock"]
+      page: 362
+      doses:
+      - label: "Standard"
+        regimen: "IV infusion: 2–20 µg/kg per min"
+        form: "200 mg/5 ml ampoule; dilute 250 mg in 250 ml 0.9% saline + 5% glucose → 1000 µg/ml"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      notes: "Calculate exact dose by weight and required infusion rate."
+    - id: "erythromycin"
+      name: "Erythromycin"
+      class: "antibiotic"
+      subtitle: "macrolide"
+      indications: ["cholera", "pertussis"]
+      page: 362
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 12.5 mg/kg four times a day for 3 days"
+        form: "250-mg tablet (estolate)"
+        bands: ["¼", "½", "1", "1", "1½"]
+      notes: "Must NOT be given with theophylline/aminophylline (risk of serious adverse reactions)."
+    - id: "fentanyl"
+      name: "Fentanyl"
+      class: "analgesia"
+      subtitle: "opioid"
+      indications: ["pain"]
+      page: 363
+      doses:
+      - label: "IV injection"
+        regimen: "IV: 1–4 µg/kg every 2–4 h; tailor to relieve pain"
+        form: "Injection: 50 µg/ml"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      - label: "IV infusion"
+        regimen: "IV infusion: initial 1–2 µg/kg, then 0.5–1 µg/kg per h"
+        form: "Injection: 50 µg/ml"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      notes: "Calculate exact dose by body weight; titrate to effect."
+    - id: "fluconazole"
+      name: "Fluconazole"
+      class: "other"
+      subtitle: "antifungal"
+      indications: ["candidiasis", "cryptococcal meningitis"]
+      page: 363
+      doses:
+      - label: "Standard"
+        regimen: "3–6 mg/kg once a day"
+        form: "50 mg/5 ml oral suspension"
+        bands: ["—", "—", "5 ml", "7.5 ml", "12.5 ml"]
+      - label: "Cryptococcal meningitis"
+        indication: "cryptococcal meningitis"
+        regimen: "6–12 mg/kg once a day"
+        form: "50-mg capsule"
+        bands: ["—", "—", "1", "1–2", "2–3"]
+    - id: "furazolidone"
+      name: "Furazolidone"
+      class: "antibiotic"
+      subtitle: "antiprotozoal / antibacterial"
+      indications: ["cholera", "giardiasis"]
+      page: 363
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 1.25 mg/kg four times a day for 3 days"
+        form: "100-mg tablet"
+        bands: ["—", "—", "¼", "¼", "¼"]
+    - id: "furosemide"
+      name: "Furosemide (frusemide)"
+      class: "cardiac"
+      subtitle: "loop diuretic"
+      indications: ["heart failure"]
+      page: 363
+      doses:
+      - label: "Oral"
+        regimen: "Oral: 1–2 mg/kg every 12 h"
+        form: "20-mg tablet"
+        bands: ["¼–½", "½–1", "½–1", "1–2", "1¼–2½"]
+      - label: "IV"
+        regimen: "IV: 1–2 mg/kg every 12 h"
+        form: "IV: 10 mg/ml"
+        bands: ["0.4–0.8 ml", "0.8–1.6 ml", "1.2–2.4 ml", "1.7–3.4 ml", "2.5–5 ml"]
+    - id: "gentamicin"
+      name: "Gentamicin"
+      class: "antibiotic"
+      subtitle: "aminoglycoside"
+      indications: ["sepsis", "severe pneumonia", "neonatal sepsis"]
+      page: 363
+      doses:
+      - label: "At 10 mg/ml"
+        regimen: "IM/IV: 7.5 mg/kg once a day. Calculate exact dose by weight where possible."
+        form: "20 mg vial (10 mg/ml) undiluted, OR 80 mg vial (2 ml at 40 mg/ml) + 6 ml water → 10 mg/ml"
+        bands: ["2.25–3.75 ml", "4.5–6.75 ml", "7.5–10.5 ml", "—", "—"]
+      - label: "At 40 mg/ml"
+        regimen: "IM/IV: 7.5 mg/kg once a day"
+        form: "80 mg vial (2 ml at 40 mg/ml) undiluted"
+        bands: ["0.5–0.9 ml", "1.1–1.7 ml", "1.9–2.6 ml", "2.8–3.5 ml", "3.75–5.4 ml"]
+      notes: "Prefer NOT to use undiluted 40 mg/ml gentamicin where avoidable. Risk of adverse effects with theophylline; aminoglycoside oto/nephrotoxicity. Neonatal/premature dosing: see p.71."
+    - id: "gentian-violet"
+      name: "Gentian violet"
+      class: "other"
+      subtitle: "topical antiseptic"
+      indications: ["thrush", "skin infection"]
+      page: 364
+      doses:
+      - label: "Topical"
+        regimen: "Topical application to the affected skin"
+        form: "Aqueous solution"
+        bands: ["topical", "topical", "topical", "topical", "topical"]
+    - id: "hydromorphone"
+      name: "Hydromorphone"
+      class: "analgesia"
+      subtitle: "opioid"
+      indications: ["pain"]
+      page: 364
+      doses:
+      - label: "Oral"
+        regimen: "Oral: 0.1–0.2 mg/kg every 4 h for 2–3 doses, then every 6–12 h"
+        form: "Tablet: 2 or 4 mg"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      - label: "Oral liquid / IV"
+        regimen: "0.015–0.02 mg/kg every 3–6 h"
+        form: "Oral liquid 1 mg/ml; IV 1/2/4 mg/ml"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      notes: "Calculate exact dose by weight; titrate to relieve pain."
+    - id: "ibuprofen"
+      name: "Ibuprofen"
+      class: "analgesia"
+      subtitle: "NSAID"
+      indications: ["pain", "fever"]
+      page: 364
+      doses:
+      - label: "200-mg tablet"
+        regimen: "Oral: 5–10 mg/kg every 6–8 h (max 40 mg/kg/day)"
+        form: "200-mg tablet"
+        bands: ["—", "¼", "¼", "½", "¾"]
+      - label: "400-mg tablet"
+        regimen: "Oral: 5–10 mg/kg every 6–8 h (max 40 mg/kg/day)"
+        form: "400-mg tablet"
+        bands: ["—", "—", "—", "¼", "½"]
+    - id: "iron"
+      name: "Iron"
+      class: "other"
+      subtitle: "haematinic"
+      indications: ["anaemia"]
+      page: 364
+      doses:
+      - label: "Iron–folate tablet"
+        regimen: "Oral: once a day for 14 days"
+        form: "Ferrous sulfate 200 mg + folate 250 µg (= 60 mg elemental iron)"
+        bands: ["—", "—", "½", "½", "1"]
+      - label: "Iron syrup"
+        regimen: "Oral: once a day for 14 days"
+        form: "Ferrous fumarate 100 mg/5 ml (= 20 mg/ml elemental iron)"
+        bands: ["1 ml", "1.25 ml", "2 ml", "2.5 ml", "4 ml"]
+    - id: "kanamycin"
+      name: "Kanamycin"
+      class: "antibiotic"
+      subtitle: "aminoglycoside"
+      indications: ["sepsis", "neonatal sepsis"]
+      page: 365
+      doses:
+      - label: "Standard"
+        regimen: "IM/IV: 20 mg/kg once a day. Calculate exact dose by weight where possible."
+        form: "250 mg vial (2 ml at 125 mg/ml)"
+        bands: ["0.5–0.8 ml", "1–1.5 ml", "1.6–2.2 ml", "2.4–3.0 ml", "3.2–4.6 ml"]
+      notes: "Aminoglycoside — oto/nephrotoxicity. Neonatal/premature dosing: see p.71."
+    - id: "ketamine"
+      name: "Ketamine"
+      class: "anticonvulsant_sedation"
+      subtitle: "dissociative anaesthetic"
+      indications: ["sedation", "anaesthesia"]
+      page: 365
+      doses:
+      - label: "IM loading (major procedures)"
+        indication: "anaesthesia"
+        regimen: "IM: 5–8 mg/kg loading dose"
+        form: "—"
+        bands: ["20–35 mg", "40–60 mg", "60–100 mg", "80–140 mg", "125–200 mg"]
+      - label: "IM further"
+        indication: "anaesthesia"
+        regimen: "IM: 1–2 mg/kg further dose if required"
+        form: "—"
+        bands: ["5–10 mg", "8–15 mg", "12–25 mg", "15–35 mg", "25–50 mg"]
+      - label: "IV loading"
+        indication: "anaesthesia"
+        regimen: "IV: 1–2 mg/kg loading dose"
+        form: "—"
+        bands: ["5–10 mg", "8–15 mg", "12–25 mg", "15–35 mg", "25–50 mg"]
+      - label: "IV further"
+        indication: "anaesthesia"
+        regimen: "IV: 0.5–1 mg/kg further dose if required"
+        form: "—"
+        bands: ["2.5–5 mg", "4–8 mg", "6–12 mg", "8–15 mg", "12–25 mg"]
+      - label: "Light anaesthesia (minor procedures)"
+        indication: "sedation"
+        regimen: "IM: 2–4 mg/kg  or  IV: 0.5–1 mg/kg"
+        form: "—"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      notes: "Full administration details on p.258."
+    - id: "lidocaine"
+      name: "Lidocaine"
+      class: "other"
+      subtitle: "local anaesthetic"
+      indications: ["anaesthesia"]
+      page: 365
+      doses:
+      - label: "Local injection"
+        regimen: "Local injection: 4–5 mg/kg per dose as a local anaesthetic; or apply topically (see p.307)"
+        form: "—"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+    - id: "mebendazole"
+      name: "Mebendazole"
+      class: "other"
+      subtitle: "anthelminthic"
+      indications: ["intestinal worms"]
+      page: 365
+      doses:
+      - label: "3-day course"
+        regimen: "Oral: 100 mg twice a day for 3 days"
+        form: "100-mg tablet"
+        bands: ["—", "—", "1", "1", "1"]
+      - label: "Single dose"
+        regimen: "Oral: 500 mg once only"
+        form: "500-mg tablet"
+        bands: ["—", "—", "1", "1", "1"]
+      notes: "Not recommended for children <5 months of age owing to limited information."
+    - id: "metoclopramide"
+      name: "Metoclopramide"
+      class: "other"
+      subtitle: "antiemetic"
+      indications: ["nausea and vomiting"]
+      page: 366
+      doses:
+      - label: "Tablet"
+        regimen: "0.1–0.2 mg/kg every 8 h as required (max 10 mg/dose)"
+        form: "10-mg tablets"
+        bands: ["—", "—", "¼", "¼", "½"]
+      - label: "Injection"
+        regimen: "0.1–0.2 mg/kg every 8 h as required (max 10 mg/dose)"
+        form: "Injection: 5 mg/ml"
+        bands: ["—", "—", "0.5 ml", "0.7 ml", "1 ml"]
+    - id: "metronidazole"
+      name: "Metronidazole"
+      class: "antibiotic"
+      subtitle: "nitroimidazole (antiprotozoal/anaerobic)"
+      indications: ["giardiasis", "amoebiasis", "dysentery"]
+      page: 366
+      doses:
+      - label: "200-mg tablet"
+        regimen: "Oral: 7.5 mg/kg three times a day for 7 days"
+        form: "200-mg tablet"
+        bands: ["—", "¼", "½", "½", "1"]
+      - label: "400-mg tablet"
+        regimen: "Oral: 7.5 mg/kg three times a day for 7 days"
+        form: "400-mg tablet"
+        bands: ["—", "—", "¼", "¼", "½"]
+      notes: "For giardiasis and amoebiasis, use 10 mg/kg."
+    - id: "morphine"
+      name: "Morphine"
+      class: "analgesia"
+      subtitle: "opioid"
+      indications: ["pain"]
+      page: 366
+      doses:
+      - label: "Oral"
+        regimen: "Oral: 0.2–0.4 mg/kg every 4–6 h; increase if necessary for severe pain"
+        form: "—"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      - label: "IM"
+        regimen: "IM: 0.1–0.2 mg/kg every 4–6 h"
+        form: "—"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      - label: "IV"
+        regimen: "IV: 0.05–0.1 mg/kg every 4–6 h, or 0.005–0.01 mg/kg per h by infusion"
+        form: "—"
+        bands: ["calc", "calc", "calc", "calc", "calc"]
+      notes: "Calculate exact dose by weight; titrate to relieve pain."
+    - id: "nystatin"
+      name: "Nystatin"
+      class: "other"
+      subtitle: "antifungal"
+      indications: ["thrush"]
+      page: 366
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 100 000–200 000 U into the mouth"
+        form: "Oral suspension 100 000 units/ml"
+        bands: ["1–2 ml", "1–2 ml", "1–2 ml", "1–2 ml", "1–2 ml"]
+    - id: "paracetamol"
+      name: "Paracetamol"
+      class: "analgesia"
+      subtitle: "antipyretic / analgesic"
+      indications: ["fever", "pain"]
+      page: 366
+      doses:
+      - label: "100-mg tablet"
+        regimen: "Oral: 10–15 mg/kg, up to six times a day"
+        form: "100-mg tablet"
+        bands: ["—", "1", "1", "2", "3"]
+      - label: "500-mg tablet"
+        regimen: "Oral: 10–15 mg/kg, up to six times a day"
+        form: "500-mg tablet"
+        bands: ["—", "¼", "¼", "½", "½"]
+    - id: "benzathine-benzylpenicillin"
+      name: "Benzathine benzylpenicillin"
+      class: "antibiotic"
+      subtitle: "penicillin (long-acting)"
+      indications: ["rheumatic fever", "syphilis"]
+      review: true   # indication from EMLc fallback — OE-verify
+      page: 367
+      doses:
+      - label: "Standard"
+        regimen: "IM: 50 000 U/kg once a day"
+        form: "Vial of 1 200 000 U + 4 ml sterile water"
+        bands: ["0.5 ml", "1 ml", "2 ml", "3 ml", "4 ml"]
+    - id: "benzylpenicillin"
+      name: "Benzylpenicillin (penicillin G)"
+      class: "antibiotic"
+      subtitle: "penicillin"
+      indications: ["sepsis", "pneumonia", "meningitis"]
+      page: 367
+      doses:
+      - label: "General — IV"
+        regimen: "IV: 50 000 U/kg every 6 h"
+        form: "Vial 600 mg + 9.6 ml water → 1 000 000 U/10 ml"
+        bands: ["2 ml", "3.75 ml", "6 ml", "8.5 ml", "12.5 ml"]
+      - label: "General — IM"
+        regimen: "IM: 50 000 U/kg every 6 h"
+        form: "Vial 600 mg + 1.6 ml water → 1 000 000 U/2 ml"
+        bands: ["0.4 ml", "0.75 ml", "1.2 ml", "1.7 ml", "2.5 ml"]
+      - label: "Meningitis — IV"
+        indication: "meningitis"
+        regimen: "IV: 100 000 U/kg every 6 h"
+        form: "1 000 000 U/10 ml"
+        bands: ["4 ml", "7.5 ml", "12 ml", "17 ml", "25 ml"]
+      - label: "Meningitis — IM"
+        indication: "meningitis"
+        regimen: "IM: 100 000 U/kg every 6 h"
+        form: "1 000 000 U/2 ml"
+        bands: ["0.8 ml", "1.5 ml", "2.5 ml", "3.5 ml", "5 ml"]
+      notes: "Neonatal/premature dosing & intervals: see p.71."
+    - id: "procaine-benzylpenicillin"
+      name: "Procaine benzylpenicillin"
+      class: "antibiotic"
+      subtitle: "penicillin (procaine)"
+      indications: ["pneumonia", "syphilis"]
+      review: true   # indication from EMLc fallback — OE-verify
+      page: 367
+      doses:
+      - label: "Standard"
+        regimen: "IM: 50 000 U/kg once a day"
+        form: "3-g vial (3 000 000 U) + 4 ml sterile water"
+        bands: ["0.25 ml", "0.5 ml", "0.8 ml", "1.2 ml", "1.7 ml"]
+    - id: "phenobarbital"
+      name: "Phenobarbital"
+      class: "anticonvulsant_sedation"
+      subtitle: "barbiturate"
+      indications: ["convulsions"]
+      page: 367
+      doses:
+      - label: "Loading"
+        regimen: "IM: 15 mg/kg loading dose"
+        form: "200 mg/ml solution"
+        bands: ["0.4 ml", "0.6 ml", "1.0 ml", "1.5 ml", "2.0 ml"]
+      - label: "Maintenance"
+        regimen: "Oral/IM: 2.5–5 mg/kg maintenance"
+        form: "200 mg/ml solution"
+        bands: ["0.1 ml", "0.15 ml", "0.25 ml", "0.35 ml", "0.5 ml"]
+      notes: "Neonates: give phenobarbital (20 mg/kg IV/IM) instead of diazepam for convulsions; if they continue, 10 mg/kg IV/IM after 30 min."
+    - id: "salbutamol"
+      name: "Salbutamol"
+      class: "other"
+      subtitle: "β2-agonist bronchodilator"
+      indications: ["wheeze"]
+      page: 369
+      doses:
+      - label: "Inhaler with spacer"
+        regimen: "Inhaler + spacer: two puffs (200 µg) per dose"
+        form: "Metered-dose inhaler (200 doses)"
+        bands: ["dose", "dose", "dose", "dose", "dose"]
+      - label: "Nebulizer"
+        regimen: "Nebulizer: 2.5 mg/dose"
+        form: "5 mg/ml solution; 2.5 mg in 2.5 ml single-dose units"
+        bands: ["dose", "dose", "dose", "dose", "dose"]
+    - id: "silver-sulfadiazine"
+      name: "Silver sulfadiazine"
+      class: "other"
+      subtitle: "topical antimicrobial"
+      indications: ["burns"]
+      page: 369
+      doses:
+      - label: "Topical"
+        regimen: "Apply topically to the affected skin"
+        form: "Cream"
+        bands: ["topical", "topical", "topical", "topical", "topical"]
+    - id: "spectinomycin"
+      name: "Spectinomycin"
+      class: "antibiotic"
+      indications: ["neonatal ophthalmia"]
+      page: 369
+      doses:
+      - label: "Standard"
+        regimen: "IM: 25 mg/kg single dose (max 75 mg)"
+        form: "2-g vial in 5 ml diluent"
+        bands: ["0.25 ml", "—", "—", "—", "—"]
+    - id: "tetracaine-adrenaline-cocaine"
+      name: "Tetracaine, adrenaline, cocaine"
+      class: "other"
+      subtitle: "topical anaesthetic"
+      indications: ["anaesthesia"]
+      page: 369
+      doses:
+      - label: "Topical"
+        regimen: "Apply topically before painful procedures"
+        form: "Solution"
+        bands: ["topical", "topical", "topical", "topical", "topical"]
+    - id: "tetracycline"
+      name: "Tetracycline"
+      class: "antibiotic"
+      subtitle: "tetracycline"
+      indications: ["cholera"]
+      page: 369
+      doses:
+      - label: "Standard"
+        regimen: "Oral: 12.5 mg/kg four times a day for 3 days"
+        form: "250-mg tablet"
+        bands: ["—", "½", "½", "1", "1"]
+      notes: "Give to children ONLY for treatment of cholera — permanently stains teeth."
+    - id: "vitamin-a"
+      name: "Vitamin A"
+      class: "other"
+      subtitle: "vitamin"
+      indications: ["measles", "vitamin A deficiency"]
+      page: 369
+      doses:
+      - label: "200 000 IU capsule"
+        regimen: "Oral: once a day for 2 days"
+        form: "200 000 IU capsule"
+        bands: ["—", "½", "1", "1", "1"]
+      - label: "100 000 IU capsule"
+        regimen: "Oral: once a day for 2 days"
+        form: "100 000 IU capsule"
+        bands: ["½", "1", "2", "2", "2"]
+      - label: "50 000 IU capsule"
+        regimen: "Oral: once a day for 2 days"
+        form: "50 000 IU capsule"
+        bands: ["1", "2", "4", "4", "4"]
+    - id: "isoniazid"
+      name: "Isoniazid (H)"
+      class: "antituberculosis"
+      subtitle: "Bactericidal"
+      indications: ["tuberculosis"]
+      page: 370
+      daily: "10 mg/kg (range 10–15)"
+    - id: "rifampicin"
+      name: "Rifampicin (R)"
+      class: "antituberculosis"
+      subtitle: "Bactericidal"
+      indications: ["tuberculosis"]
+      page: 370
+      daily: "15 mg/kg (range 10–20)"
+    - id: "pyrazinamide"
+      name: "Pyrazinamide (Z)"
+      class: "antituberculosis"
+      subtitle: "Bactericidal"
+      indications: ["tuberculosis"]
+      page: 370
+      daily: "35 mg/kg (range 30–40)"
+    - id: "ethambutol"
+      name: "Ethambutol (E)"
+      class: "antituberculosis"
+      subtitle: "Bacteriostatic"
+      indications: ["tuberculosis"]
+      page: 370
+      daily: "20 mg/kg (range 15–25)"
+    - id: "streptomycin"
+      name: "Streptomycin (S)"
+      class: "antituberculosis"
+      subtitle: "Bactericidal"
+      indications: ["tuberculosis"]
+      page: 370
+      daily: "15 mg/kg (range 12–18)"
+      notes: "Use only for MDR-TB treatment."
+    - id: "zidovudine-lamivudine"
+      name: "Zidovudine/lamivudine (AZT/3TC)"
+      class: "antiretroviral"
+      subtitle: "fixed-dose combination"
+      indications: ["hiv"]
+      axis: "art"
+      page: 370
+      regimen: "AZT 180–240 mg/m² twice a day; 3TC 4 mg/kg twice a day"
+      doses:
+      - label: "AZT 60 mg + 3TC 30 mg (paediatric)"
+        bands: ["1", "1.5", "2", "2.5", "3", "—"]
+      - label: "AZT 300 mg + 3TC 150 mg (adult)"
+        bands: ["—", "—", "—", "—", "—", "1"]
+    - id: "zidovudine-lamivudine-nevirapine"
+      name: "Zidovudine/lamivudine/nevirapine (AZT/3TC/NVP)"
+      class: "antiretroviral"
+      subtitle: "fixed-dose combination"
+      indications: ["hiv"]
+      axis: "art"
+      page: 370
+      regimen: "AZT 180–240 mg/m² BD; 3TC 4 mg/kg BD; NVP 160–200 mg/m²"
+      doses:
+      - label: "AZT 60 mg + 3TC 30 mg + NVP 50 mg (paediatric)"
+        bands: ["1", "1.5", "2", "2.5", "3", "—"]
+      - label: "AZT 300 mg + 3TC 150 mg + NVP 200 mg (adult)"
+        bands: ["—", "—", "—", "—", "—", "1"]
+    - id: "abacavir-zidovudine-lamivudine"
+      name: "Abacavir/zidovudine/lamivudine (ABC/AZT/3TC)"
+      class: "antiretroviral"
+      subtitle: "fixed-dose combination"
+      indications: ["hiv"]
+      axis: "art"
+      page: 371
+      regimen: "ABC 8 mg/kg BD; AZT 180–240 mg/m² BD; 3TC 4 mg/kg BD"
+      doses:
+      - label: "ABC 60 + AZT 60 + 3TC 30 mg (paediatric)"
+        bands: ["1", "1.5", "2", "2.5", "3", "—"]
+      - label: "ABC 300 + AZT 300 + 3TC 150 mg (adult)"
+        bands: ["—", "—", "—", "—", "—", "1"]
+    - id: "abacavir-lamivudine"
+      name: "Abacavir/lamivudine (ABC/3TC)"
+      class: "antiretroviral"
+      subtitle: "fixed-dose combination"
+      indications: ["hiv"]
+      axis: "art"
+      page: 371
+      regimen: "ABC 8 mg/kg BD; 3TC 4 mg/kg BD"
+      doses:
+      - label: "ABC 60 + 3TC 30 mg (paediatric)"
+        bands: ["1", "1.5", "2", "2.5", "3", "—"]
+      - label: "ABC 600 + 3TC 300 mg (adult)"
+        bands: ["—", "—", "—", "—", "—", "½"]
+      notes: "Adult ABC/3TC tablets are unscored; consider giving one tablet daily."
+    - id: "stavudine-lamivudine"
+      name: "Stavudine/lamivudine (d4T/3TC)"
+      class: "antiretroviral"
+      subtitle: "fixed-dose combination"
+      indications: ["hiv"]
+      axis: "art"
+      page: 371
+      regimen: "d4T 1 mg/kg BD; 3TC 4 mg/kg BD"
+      doses:
+      - label: "d4T 6 + 3TC 30 mg (paediatric)"
+        bands: ["1", "1.5", "2", "2.5", "3", "—"]
+      - label: "d4T 30 + 3TC 150 mg (adult)"
+        bands: ["—", "—", "—", "—", "—", "1"]
+    - id: "stavudine-lamivudine-nevirapine"
+      name: "Stavudine/lamivudine/nevirapine (d4T/3TC/NVP)"
+      class: "antiretroviral"
+      subtitle: "fixed-dose combination"
+      indications: ["hiv"]
+      axis: "art"
+      page: 371
+      regimen: "d4T 1 mg/kg BD; 3TC 4 mg/kg BD; NVP 160–200 mg/m²"
+      doses:
+      - label: "d4T 6 + 3TC 30 + NVP 50 mg (paediatric)"
+        bands: ["1", "1.5", "2", "2.5", "3", "—"]
+      - label: "d4T 30 + 3TC 150 + NVP 200 mg (adult)"
+        bands: ["—", "—", "—", "—", "—", "1"]
+      notes: "NVP maximum 200 mg twice a day."
+    - id: "abacavir"
+      name: "Abacavir (ABC)"
+      class: "antiretroviral"
+      subtitle: "NRTI"
+      indications: ["hiv"]
+      axis: "art"
+      page: 372
+      regimen: "8 mg/kg per dose twice a day"
+      doses:
+      - label: "Liquid: 20 mg/ml"
+        bands: ["3 ml", "4 ml", "6 ml", "—", "—", "—"]
+      - label: "Tablet: 60 mg"
+        bands: ["1", "1½", "2", "2½", "3", "—"]
+      - label: "Tablet: 300 mg"
+        bands: ["—", "—", "—", "½", "1", "1"]
+    - id: "lamivudine"
+      name: "Lamivudine (3TC)"
+      class: "antiretroviral"
+      subtitle: "NRTI"
+      indications: ["hiv"]
+      axis: "art"
+      page: 372
+      regimen: "4 mg/kg per dose twice a day"
+      doses:
+      - label: "Liquid: 10 mg/ml"
+        bands: ["3 ml", "4 ml", "6 ml", "—", "—", "—"]
+      - label: "Tablet: 150 mg"
+        bands: ["—", "—", "—", "½", "1", "1"]
+    - id: "tenofovir"
+      name: "Tenofovir (TDF)"
+      class: "antiretroviral"
+      subtitle: "NRTI"
+      indications: ["hiv"]
+      axis: "art"
+      page: 372
+      regimen: "8 mg/kg once a day (max 300 mg)"
+      doses:
+      - label: "Oral powder scoops"
+        bands: ["—", "—", "2.5", "3.5", "4.5", "6.0"]
+      - label: "Tablet: 150 mg"
+        bands: ["—", "—", "—", "1", "—", "—"]
+      - label: "Tablet: 200 mg"
+        bands: ["—", "—", "—", "—", "1", "—"]
+      - label: "Tablet: 250 mg"
+        bands: ["—", "—", "—", "—", "—", "1"]
+    - id: "zidovudine"
+      name: "Zidovudine (AZT/ZDV)"
+      class: "antiretroviral"
+      subtitle: "NRTI"
+      indications: ["hiv"]
+      axis: "art"
+      page: 372
+      regimen: "Oral: 180–240 mg/m² per dose twice a day (total 360–480 mg/m²/day)"
+      doses:
+      - label: "Liquid: 10 mg/ml"
+        bands: ["6 ml", "9 ml", "—", "—", "—", "—"]
+      - label: "Tablet: 60 mg"
+        bands: ["1", "1½", "2", "2½", "3", "—"]
+    - id: "efavirenz"
+      name: "Efavirenz (EFV)"
+      class: "antiretroviral"
+      subtitle: "NNRTI"
+      indications: ["hiv"]
+      axis: "art"
+      page: 372
+      regimen: "15 mg/kg per day once a day"
+      doses:
+      - label: "Tablet: 200 mg (once daily)"
+        bands: ["insufficient data <3 y / <10 kg", "insufficient data <3 y / <10 kg", "1 daily", "1.5 daily", "1.5 daily", "2 daily"]
+      notes: "Higher doses of LPV/RTV may be needed when co-administered with enzyme-inducing drugs (nevirapine, efavirenz, fos-amprenavir, rifampicin)."
+    - id: "nevirapine"
+      name: "Nevirapine (NVP)"
+      class: "antiretroviral"
+      subtitle: "NNRTI"
+      indications: ["hiv"]
+      axis: "art"
+      page: 373
+      regimen: "160–200 mg/m² (max 200 mg) twice a day"
+      doses:
+      - label: "Liquid: 10 mg/ml"
+        bands: ["5 ml", "8 ml", "10 ml", "—", "—", "—"]
+      - label: "Tablet: 50 mg"
+        bands: ["1", "1½", "2", "2½", "3", "—"]
+      - label: "Tablet: 200 mg"
+        bands: ["—", "—", "—", "½", "1½", "1"]
+      notes: "Divide into unequal doses — one in the morning, the other in the evening."
+    - id: "lopinavir-ritonavir"
+      name: "Lopinavir/ritonavir (LPV/RTV)"
+      class: "antiretroviral"
+      subtitle: "protease inhibitor"
+      indications: ["hiv"]
+      axis: "art"
+      page: 373
+      regimen: "230–350 mg/m² twice a day"
+      doses:
+      - label: "Liquid: LPV 80 mg + RTV 20 mg per ml"
+        bands: ["1–1.5 ml", "1.5 ml", "2 ml", "2.5 ml", "3 ml", "—"]
+      - label: "Paediatric tablet: LPV 100 / RTV 25 mg"
+        bands: ["—", "—", "2", "2", "2", "3"]
+      - label: "Adult tablet: LPV 200 / RTV 50 mg"
+        bands: ["—", "—", "1", "1", "1", "1½"]
+      notes: "Higher doses may be needed with enzyme-inducing drugs (nevirapine, efavirenz, fos-amprenavir, rifampicin)."
