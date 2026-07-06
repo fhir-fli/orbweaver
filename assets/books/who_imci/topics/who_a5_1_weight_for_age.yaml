@@ -53,6 +53,8 @@ topic:
       column_widths: [64, 60, 60, 60, 66, 60, 60, 60]
       column_align: ["left", "right", "right", "right", "right", "right", "right", "right"]
       column_tint: ["", "0x28C62828", "0x26EF6C00", "", "", "", "", ""]
+      lookup: true
+      lookup_label: "Go to age (months)"
       rows:
         - cells: ["0", "2.1", "2.5", "2.9", "3.3", "3.9", "4.4", "5.0"]
         - cells: ["1", "2.9", "3.4", "3.9", "4.5", "5.1", "5.8", "6.6"]
@@ -126,6 +128,8 @@ topic:
       column_widths: [64, 60, 60, 60, 66, 60, 60, 60]
       column_align: ["left", "right", "right", "right", "right", "right", "right", "right"]
       column_tint: ["", "0x28C62828", "0x26EF6C00", "", "", "", "", ""]
+      lookup: true
+      lookup_label: "Go to age (months)"
       rows:
         - cells: ["0", "2.0", "2.4", "2.8", "3.2", "3.7", "4.2", "4.8"]
         - cells: ["1", "2.7", "3.2", "3.6", "4.2", "4.8", "5.5", "6.2"]

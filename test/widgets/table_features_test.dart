@@ -49,6 +49,20 @@ void main() {
       expect(boys.columnTintArgb[1], isNotNull);
       expect(boys.columnTintArgb[2], isNotNull);
       expect(boys.columnTintArgb[3], isNull);
+      // lookup finder enabled
+      expect(boys.lookup, isTrue);
+      expect(boys.lookupLabel, 'Go to age (months)');
+    });
+
+    testWidgets('lookup finder accepts a query without error',
+        (tester) async {
+      await tester.pumpWidget(_wrap(TopicView(topic: topic)));
+      final field = find.byType(TextField);
+      expect(field, findsWidgets); // one finder per lookup table
+      await tester.enterText(field.first, '24');
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 300)); // scroll anim
+      expect(tester.takeException(), isNull);
     });
 
     testWidgets('renders the frozen-pane table without overflow',

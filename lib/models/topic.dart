@@ -1163,6 +1163,8 @@ class TableBlock extends Block {
     this.zebra = false,
     this.stickyHeader = false,
     this.stickyFirstColumn = false,
+    this.lookup = false,
+    this.lookupLabel,
     this.maxHeight,
     this.layout = TableLayout.standard,
     super.flex,
@@ -1181,6 +1183,8 @@ class TableBlock extends Block {
         zebra: map['zebra'] == true,
         stickyHeader: map['sticky_header'] == true,
         stickyFirstColumn: map['sticky_first_column'] == true,
+        lookup: map['lookup'] == true,
+        lookupLabel: map['lookup_label'] as String?,
         maxHeight: (map['max_height'] as num?)?.toDouble(),
         rows: _mapList(map['rows'], TopicTableRow.fromYaml),
         layout: TableLayout.fromString(map['layout'] as String?),
@@ -1234,6 +1238,18 @@ class TableBlock extends Block {
   /// Pin the first (label) column while the body scrolls horizontally
   /// (scroll layout) — the age / length / height column stays visible.
   final bool stickyFirstColumn;
+
+  /// Show a "go to row" finder above the table: the reader types a value,
+  /// and the table scrolls to and highlights the row whose first (key)
+  /// column matches — nearest value for a numeric key column, text match
+  /// otherwise. A general aid for any long keyed lookup table (growth
+  /// z-scores, dose-by-weight matrices, conversion tables…). Implies a
+  /// bounded, internally-scrolling panel (like [stickyFirstColumn]).
+  final bool lookup;
+
+  /// Optional label/hint for the [lookup] finder field. Defaults to
+  /// "Go to " followed by the first column's header.
+  final String? lookupLabel;
 
   /// Optional max height (logical px) for a scroll-layout table: the grid
   /// becomes a bounded, internally-scrolling panel instead of an

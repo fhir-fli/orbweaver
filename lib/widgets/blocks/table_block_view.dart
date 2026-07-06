@@ -449,7 +449,17 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
   final _bodyH = ScrollController();
   final _headerH = ScrollController();
   final _bodyV = ScrollController();
+  final _findCtrl = TextEditingController();
   bool _syncing = false;
+
+  /// Row currently matched by the [TableBlock.lookup] finder (null = none).
+  int? _highlightRow;
+
+  /// First-column key of each row parsed as a number (null where it isn't).
+  late final List<double?> _keyNums;
+
+  /// True when every row's key column is numeric → nearest-value matching.
+  late final bool _numericKeys;
 
   static const double _defaultColWidth = 78;
   static const double _fontSize = 12;
@@ -458,13 +468,22 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
   // "Length (cm)") without overflowing into the first data row.
   static const double _headerH2 = 40;
 
+  // The finder needs a bounded, scrollable panel, so lookup implies frozen.
   bool get _frozen =>
-      widget.block.stickyHeader || widget.block.stickyFirstColumn;
+      widget.block.stickyHeader ||
+      widget.block.stickyFirstColumn ||
+      widget.block.lookup;
 
   @override
   void initState() {
     super.initState();
     _bodyH.addListener(_syncHeaderToBody);
+    _keyNums = [
+      for (final r in widget.block.rows)
+        r.cells.isEmpty ? null : _TableStyle._num(r.cells.first),
+    ];
+    _numericKeys =
+        widget.block.rows.isNotEmpty && _keyNums.every((k) => k != null);
   }
 
   void _syncHeaderToBody() {
@@ -474,12 +493,60 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
     _syncing = false;
   }
 
+  /// Resolve the finder query to a row index and scroll it into view.
+  void _onFind(String query) {
+    final q = query.trim();
+    int? match;
+    if (q.isEmpty) {
+      match = null;
+    } else if (_numericKeys) {
+      final target = double.tryParse(q);
+      if (target != null) {
+        var best = 0;
+        var bestDist = double.infinity;
+        for (var i = 0; i < _keyNums.length; i++) {
+          final d = (_keyNums[i]! - target).abs();
+          if (d < bestDist) {
+            bestDist = d;
+            best = i;
+          }
+        }
+        match = best;
+      }
+    } else {
+      final needle = q.toLowerCase();
+      final rows = widget.block.rows;
+      for (var i = 0; i < rows.length; i++) {
+        final key = rows[i].cells.isEmpty ? '' : _cellText(rows[i].cells.first);
+        if (key.toLowerCase().contains(needle)) {
+          match = i;
+          break;
+        }
+      }
+    }
+    setState(() => _highlightRow = match);
+    if (match != null && _bodyV.hasClients) {
+      // Land the row a little below the top so a row of context shows above.
+      final target = ((match - 1) * _rowH)
+          .clamp(0.0, _bodyV.position.maxScrollExtent);
+      _bodyV.animateTo(
+        target,
+        duration: const Duration(milliseconds: 250),
+        curve: Curves.easeOut,
+      );
+    }
+  }
+
+  static String _cellText(TableCell cell) =>
+      cell is TextCell ? cell.text : '';
+
   @override
   void dispose() {
     _simpleH.dispose();
     _bodyH.dispose();
     _headerH.dispose();
     _bodyV.dispose();
+    _findCtrl.dispose();
     super.dispose();
   }
 
@@ -635,18 +702,20 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
 
     Widget bodyCell(int r, int i) {
       final row = block.rows[r];
+      final highlighted = r == _highlightRow;
       final sev = _severityBg(theme, row.severity);
-      final bg = sev ?? style.zebraBg(r);
+      // A lookup match highlights the whole row (wins over column tint /
+      // zebra so it reads as selected); otherwise tint > severity > zebra.
+      final cellBg = highlighted
+          ? theme.header.withValues(alpha: 0.24)
+          : (style.tintFor(i) ?? sev ?? style.zebraBg(r));
       // No Container.alignment here: styledCell's own Align (driven by the
       // column's alignment) positions the content inside the fixed box.
       return Container(
         width: _width(i),
         height: _rowH,
         padding: const EdgeInsets.symmetric(horizontal: 6),
-        decoration: BoxDecoration(
-          color: style.tintFor(i) ?? bg,
-          border: freezeEdge(i),
-        ),
+        decoration: BoxDecoration(color: cellBg, border: freezeEdge(i)),
         child: i < row.cells.length
             ? style.styledCell(i, row.cells[i], _cell)
             : const SizedBox.shrink(),
@@ -721,7 +790,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
       ),
     );
 
-    return Container(
+    final panel = Container(
       decoration: BoxDecoration(
         border: Border.all(color: borderColor),
         borderRadius: BorderRadius.circular(4),
@@ -734,6 +803,52 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
           headerBand,
           Flexible(child: body),
         ],
+      ),
+    );
+
+    if (!block.lookup) return panel;
+    final label = block.lookupLabel ??
+        'Go to ${block.columns.isEmpty ? "row" : block.columns.first}';
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _finderField(theme, label),
+        const SizedBox(height: 6),
+        panel,
+      ],
+    );
+  }
+
+  Widget _finderField(TopicTheme theme, String label) {
+    final hasQuery = _findCtrl.text.isNotEmpty;
+    return TextField(
+      controller: _findCtrl,
+      onChanged: _onFind,
+      keyboardType: _numericKeys
+          ? const TextInputType.numberWithOptions(decimal: true)
+          : TextInputType.text,
+      style: const TextStyle(fontSize: 13),
+      decoration: InputDecoration(
+        isDense: true,
+        prefixIcon: Icon(Icons.search, size: 18, color: theme.header),
+        hintText: label,
+        suffixIcon: hasQuery
+            ? IconButton(
+                icon: const Icon(Icons.close, size: 18),
+                splashRadius: 18,
+                onPressed: () {
+                  _findCtrl.clear();
+                  _onFind('');
+                },
+              )
+            : null,
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8),
+          borderSide: BorderSide(color: theme.header, width: 1.5),
+        ),
       ),
     );
   }
