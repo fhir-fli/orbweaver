@@ -193,26 +193,37 @@ class Drug {
   final String bandLabel;
   final List<String> bandColumns;
 
-  factory Drug.fromYaml(YamlMap m, FormularyAxis axis) => Drug(
-        id: m['id'] as String,
-        name: m['name'] as String,
-        className: m['class'] as String,
-        subtitle: (m['subtitle'] as String?) ?? '',
-        indications: [
-          for (final i in m['indications'] as YamlList? ?? const []) i as String,
-        ],
-        page: m['page'] as int?,
-        regimen: m['regimen'] as String?,
-        daily: m['daily'] as String?,
-        notes: m['notes'] as String?,
-        review: (m['review'] as bool?) ?? false,
-        bandLabel: axis.label,
-        bandColumns: axis.columns,
-        doses: [
-          for (final d in m['doses'] as YamlList? ?? const [])
-            DoseRow.fromYaml(d as YamlMap),
-        ],
-      );
+  /// [axis] is the shared axis this drug inherits (main or ART). A drug may
+  /// override the header with `band_label` and/or supply its own
+  /// `band_columns` when its weight bands differ from the shared axes (e.g.
+  /// the antimalarial ACTs and the TB fixed-dose combination, which are
+  /// dosed on their own bands). Overrides keep those doses honest instead of
+  /// forcing them onto a mismatched grid.
+  factory Drug.fromYaml(YamlMap m, FormularyAxis axis) {
+    final ownColumns = m['band_columns'] as YamlList?;
+    return Drug(
+      id: m['id'] as String,
+      name: m['name'] as String,
+      className: m['class'] as String,
+      subtitle: (m['subtitle'] as String?) ?? '',
+      indications: [
+        for (final i in m['indications'] as YamlList? ?? const []) i as String,
+      ],
+      page: m['page'] as int?,
+      regimen: m['regimen'] as String?,
+      daily: m['daily'] as String?,
+      notes: m['notes'] as String?,
+      review: (m['review'] as bool?) ?? false,
+      bandLabel: (m['band_label'] as String?) ?? axis.label,
+      bandColumns: ownColumns != null
+          ? [for (final c in ownColumns) c as String]
+          : axis.columns,
+      doses: [
+        for (final d in m['doses'] as YamlList? ?? const [])
+          DoseRow.fromYaml(d as YamlMap),
+      ],
+    );
+  }
 
   /// The dose row most relevant to [indicationKey] (for the by-indication
   /// inline-expand): the first dose tagged with that indication, else the

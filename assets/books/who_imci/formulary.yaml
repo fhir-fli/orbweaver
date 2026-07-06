@@ -1195,6 +1195,7 @@ formulary:
       subtitle: "integrase inhibitor (INSTI)"
       indications: ["hiv"]
       axis: "art"
+      band_label: "Dose by body weight (kg) — once daily"
       page: 373
       regimen: "Once daily by weight band. Dispersible 5 mg and film-coated tablets are NOT interchangeable mg-for-mg (dispersible has higher bioavailability)."
       doses:
@@ -1211,6 +1212,7 @@ formulary:
       subtitle: "fixed-dose combination — preferred first-line"
       indications: ["hiv"]
       axis: "art"
+      band_label: "Dose by body weight (kg) — once daily"
       page: 373
       regimen: "Preferred first-line WHO regimen — one fixed-dose combination once daily. Screen for abacavir hypersensitivity (HLA-B 57:01) before starting; disperse paediatric tablets in water, do not swallow whole."
       doses:
@@ -1219,3 +1221,57 @@ formulary:
       - label: "Adult tablet: ABC 600 / 3TC 300 / DTG 50 mg"
         bands: ["—", "—", "—", "—", "—", "1"]
       notes: "WHO-preferred first-line regimen for children 4 weeks and older and at least 3 kg; the dispersible FDC is used from 6 kg (about 3 months). Paediatric and adult tablets are not interchangeable mg-for-mg (see Chapter 8)."
+    - id: "dihydroartemisinin-piperaquine"
+      name: "Dihydroartemisinin–piperaquine (DHA-PIP)"
+      class: "antimalarial"
+      indications: ["malaria"]
+      page: 357
+      band_label: "Dose by body weight (kg) — once daily × 3 days"
+      band_columns: ["5–<8", "8–<11", "11–<17", "17–<25", "25–<36"]
+      regimen: "Oral once daily for 3 days: dihydroartemisinin ~4 mg/kg + piperaquine ~24 mg/kg per day (higher mg/kg target in children under 25 kg)"
+      doses:
+      - label: "Paediatric tablet: DHA 20 / piperaquine 160 mg"
+        bands: ["½", "1", "1½", "2", "—"]
+      - label: "Adult tablet: DHA 40 / piperaquine 320 mg"
+        bands: ["—", "—", "—", "1", "2"]
+      notes: "A preferred ACT in areas without piperaquine resistance; longer post-treatment prophylaxis than artemether–lumefantrine (useful against P. vivax relapse). Give on an empty stomach."
+    - id: "artesunate-amodiaquine"
+      name: "Artesunate–amodiaquine (AS-AQ)"
+      class: "antimalarial"
+      indications: ["malaria"]
+      page: 357
+      band_label: "Dose by body weight (kg) — once daily × 3 days"
+      band_columns: ["4.5–<9", "9–<18", "18–<36", "≥36"]
+      regimen: "Oral once daily for 3 days: artesunate 4 mg/kg + amodiaquine 10 mg/kg"
+      doses:
+      - label: "Infant tablet: AS 25 / AQ 67.5 mg"
+        bands: ["1", "—", "—", "—"]
+      - label: "Child tablet: AS 50 / AQ 135 mg"
+        bands: ["—", "1", "—", "—"]
+      - label: "Adult tablet: AS 100 / AQ 270 mg"
+        bands: ["—", "—", "1", "2"]
+      notes: "A WHO first-line ACT for P. falciparum in Africa; less efficacious than DHA–piperaquine in the Asia–Pacific region."
+    - id: "rectal-artesunate"
+      name: "Rectal artesunate (pre-referral)"
+      class: "antimalarial"
+      indications: ["severe malaria"]
+      page: 357
+      regimen: "Single rectal dose of 10 mg/kg as pre-referral treatment, then refer urgently"
+      notes: "Pre-referral only — NOT definitive treatment. For a child under 6 years (roughly under 20 kg) with suspected severe malaria who cannot take oral treatment and referral is delayed: give one 100 mg suppository (aim for 10 mg/kg) and refer immediately for parenteral artesunate. Hold the buttocks together for about 10 minutes; if the suppository is expelled within 30 minutes, re-insert. Not recommended for children 6 years and older."
+    - id: "rhz-fdc"
+      name: "Rifampicin/isoniazid/pyrazinamide (RHZ FDC)"
+      class: "antituberculosis"
+      subtitle: "paediatric fixed-dose combination"
+      indications: ["tuberculosis"]
+      page: 370
+      band_label: "Dispersible tablets daily by body weight (kg)"
+      band_columns: ["4–7.9", "8–11.9", "12–15.9", "16–24.9"]
+      regimen: "Once daily; disperse tablets in water"
+      doses:
+      - label: "RHZ 75/50/150 mg dispersible (intensive phase)"
+        bands: ["1", "2", "3", "4"]
+      - label: "RH 75/50 mg dispersible (continuation phase)"
+        bands: ["1", "2", "3", "4"]
+      - label: "Add ethambutol 100 mg where indicated"
+        bands: ["1", "2", "3", "4"]
+      notes: "WHO weight-band FDC for children under 25 kg. Add ethambutol in settings with high HIV prevalence or high isoniazid resistance. A 4-month regimen (2HRZ(E)/2HR) is now recommended for nonsevere TB in children 3 months to 16 years without MDR/RR-TB (SHINE trial); other children get the standard 6-month regimen. Children 25 kg and over use adult FDC dosing."

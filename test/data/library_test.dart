@@ -150,12 +150,12 @@ void main() {
       expect(a2['children'], isNull);
     });
 
-    test('who_imci: formulary.yaml loads as a Formulary (77 drugs, 3 lenses)',
+    test('who_imci: formulary.yaml loads as a Formulary (81 drugs, 3 lenses)',
         () {
       final raw =
           File('assets/books/who_imci/formulary.yaml').readAsStringSync();
       final f = Formulary.fromYaml(loadYaml(raw) as YamlMap);
-      expect(f.drugs, hasLength(77));
+      expect(f.drugs, hasLength(81));
       expect(f.facets.map((x) => x.key), ['alpha', 'class', 'indication']);
       expect(f.classOrder, contains('antibiotic'));
       expect(f.bands.columns, hasLength(5));
@@ -170,6 +170,13 @@ void main() {
       final lpv = f.drugById('lopinavir-ritonavir')!;
       expect(lpv.className, 'antiretroviral');
       expect(lpv.bandColumns, hasLength(6));
+      // A drug may carry its own weight bands (ACTs, TB FDC) that match
+      // neither shared axis.
+      final dhap = f.drugById('dihydroartemisinin-piperaquine')!;
+      expect(dhap.bandColumns, ['5–<8', '8–<11', '11–<17', '17–<25', '25–<36']);
+      expect(f.drugById('rhz-fdc')!.bandColumns, hasLength(4));
+      // A pre-referral drug with no band grid renders from regimen + notes.
+      expect(f.drugById('rectal-artesunate')!.doses, isEmpty);
       // Every dose row's band count matches its drug's axis width.
       for (final d in f.drugs) {
         for (final dose in d.doses) {
