@@ -303,10 +303,10 @@ formulary:
       page: 357
       doses:
       - label: "Standard"
-        regimen: "IV or IM: 2.4 mg/kg at 0, 12 and 24 h, then daily until able to take orally"
-        form: "60 mg artesunic acid (in 0.6 ml 5% bicarbonate) diluted in 3.4 ml saline + glucose"
-        bands: ["0.8 ml", "1.4 ml", "2.4 ml", "3.0 ml", "5.0 ml"]
-      notes: "Prepare the IV solution just before use (dilute the 60 mg in 3.4 ml of 5% glucose). When the child can swallow, give the full oral ACT course. WHO now recommends a higher dose of 3 mg/kg per dose for children under 20 kg; the volumes above reflect the older 2.4 mg/kg standard, so recalculate for small children against current product labelling."
+        regimen: "IV or IM at 0, 12 and 24 h, then once daily until able to take orally: 3 mg/kg per dose for children under 20 kg; 2.4 mg/kg for 20 kg and over"
+        form: "60 mg vial reconstituted to 15 mg/ml (dissolve in 0.6 ml 5% bicarbonate, dilute with 3.4 ml saline or 5% glucose)"
+        bands: ["0.9 ml", "1.6 ml", "2.5 ml", "3.5 ml", "3.9 ml"]
+      notes: "Artesunate is the first-line treatment for severe malaria (all species); quinine and IM artemether are alternatives only when it is unavailable. Volumes assume 15 mg/ml and the band midpoint — dose by actual body weight where possible. Prepare just before use; when the child can swallow, complete a full 3-day oral ACT course."
     - id: "artesunate-mefloquine"
       name: "Artesunate–mefloquine"
       class: "antimalarial"
@@ -1189,3 +1189,33 @@ formulary:
       - label: "Adult tablet: LPV 200 / RTV 50 mg"
         bands: ["—", "—", "1", "1", "1", "1½"]
       notes: "Now an alternative rather than a preferred anchor — WHO prefers dolutegravir; LPV/r remains an option for neonates (see Chapter 8). Higher doses may be needed with enzyme-inducing drugs (nevirapine, efavirenz, fos-amprenavir, rifampicin)."
+    - id: "dolutegravir"
+      name: "Dolutegravir (DTG)"
+      class: "antiretroviral"
+      subtitle: "integrase inhibitor (INSTI)"
+      indications: ["hiv"]
+      axis: "art"
+      page: 373
+      regimen: "Once daily by weight band. Dispersible 5 mg and film-coated tablets are NOT interchangeable mg-for-mg (dispersible has higher bioavailability)."
+      doses:
+      - label: "Dispersible 5 mg (scored) — tablets once daily"
+        bands: ["1", "3", "4", "5", "6", "6"]
+      - label: "Film-coated 10 mg — tablets once daily"
+        bands: ["—", "—", "—", "4", "—", "—"]
+      - label: "Film-coated 50 mg — tablets once daily"
+        bands: ["—", "—", "—", "—", "1", "1"]
+      notes: "WHO-preferred integrase-inhibitor anchor for first-line ART in children 4 weeks and older and at least 3 kg (see Chapter 8). With enzyme inducers (rifampicin, efavirenz) give the same per-dose amount twice a day."
+    - id: "abacavir-lamivudine-dolutegravir"
+      name: "Abacavir/lamivudine/dolutegravir (ABC/3TC/DTG)"
+      class: "antiretroviral"
+      subtitle: "fixed-dose combination — preferred first-line"
+      indications: ["hiv"]
+      axis: "art"
+      page: 373
+      regimen: "Preferred first-line WHO regimen — one fixed-dose combination once daily. Screen for abacavir hypersensitivity (HLA-B 57:01) before starting; disperse paediatric tablets in water, do not swallow whole."
+      doses:
+      - label: "Paediatric dispersible: ABC 60 / 3TC 30 / DTG 5 mg (Triumeq PD)"
+        bands: ["—", "3", "4", "5", "6", "—"]
+      - label: "Adult tablet: ABC 600 / 3TC 300 / DTG 50 mg"
+        bands: ["—", "—", "—", "—", "—", "1"]
+      notes: "WHO-preferred first-line regimen for children 4 weeks and older and at least 3 kg; the dispersible FDC is used from 6 kg (about 3 months). Paediatric and adult tablets are not interchangeable mg-for-mg (see Chapter 8)."

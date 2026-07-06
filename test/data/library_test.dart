@@ -150,12 +150,12 @@ void main() {
       expect(a2['children'], isNull);
     });
 
-    test('who_imci: formulary.yaml loads as a Formulary (75 drugs, 3 lenses)',
+    test('who_imci: formulary.yaml loads as a Formulary (77 drugs, 3 lenses)',
         () {
       final raw =
           File('assets/books/who_imci/formulary.yaml').readAsStringSync();
       final f = Formulary.fromYaml(loadYaml(raw) as YamlMap);
-      expect(f.drugs, hasLength(75));
+      expect(f.drugs, hasLength(77));
       expect(f.facets.map((x) => x.key), ['alpha', 'class', 'indication']);
       expect(f.classOrder, contains('antibiotic'));
       expect(f.bands.columns, hasLength(5));
