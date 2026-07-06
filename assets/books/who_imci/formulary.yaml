@@ -93,7 +93,7 @@ formulary:
         regimen: "Oral: 25 mg/kg twice a day"
         form: "Syrup (250 mg/5 ml)"
         bands: ["2.5 ml", "5 ml", "7.5 ml", "10 ml", "—"]
-      notes: "For pneumonia give 40 mg/kg twice a day (higher band)."
+      notes: "For pneumonia give the higher dose of 40 mg/kg per dose twice a day (80 mg/kg/day) — double the volumes above. This is now the standard dose for chest-indrawing pneumonia."
     - id: "amphotericin-b"
       name: "Amphotericin B"
       class: "antibiotic"
@@ -211,7 +211,7 @@ formulary:
         regimen: "Oral (follow-on)"
         form: "Quinine sulfate 300-mg tablet"
         bands: ["—", "—", "½", "½", "1"]
-      notes: "Doses expressed as mg of quinine dihydrochloride salt. Loading dose is DOUBLE the maintenance dose. Infusion must not exceed 5 mg salt/kg per hour. At 8 h after the loading dose, give the maintenance dose over 2 h, repeated every 8 h; switch to a full oral ACT course when the child can swallow."
+      notes: "Intravenous artesunate is now the preferred treatment for severe malaria; quinine is the alternative where artesunate is unavailable (see Chapter 6). Doses expressed as mg of quinine dihydrochloride salt. Loading dose is DOUBLE the maintenance dose. Infusion must not exceed 5 mg salt/kg per hour. At 8 h after the loading dose, give the maintenance dose over 2 h, repeated every 8 h; switch to a full oral ACT course when the child can swallow."
     - id: "adrenaline"
       name: "Adrenaline"
       class: "cardiac"
@@ -285,7 +285,7 @@ formulary:
         regimen: "IM: 1.6 mg/kg daily"
         form: "80 mg/1-ml ampoule"
         bands: ["0.1 ml", "0.2 ml", "0.3 ml", "0.4 ml", "0.6 ml"]
-      notes: "Give the maintenance dose daily for a minimum of 24 h until the patient can take oral artemisinin-based combination therapy (ACT)."
+      notes: "Second-line alternative to IV/IM artesunate for severe malaria (artesunate is preferred; see Chapter 6). Give the maintenance dose daily for a minimum of 24 h until the patient can take oral artemisinin-based combination therapy (ACT)."
     - id: "artemether-lumefantrine"
       name: "Artemether/lumefantrine"
       class: "antimalarial"
@@ -306,7 +306,7 @@ formulary:
         regimen: "IV or IM: 2.4 mg/kg at 0, 12 and 24 h, then daily until able to take orally"
         form: "60 mg artesunic acid (in 0.6 ml 5% bicarbonate) diluted in 3.4 ml saline + glucose"
         bands: ["0.8 ml", "1.4 ml", "2.4 ml", "3.0 ml", "5.0 ml"]
-      notes: "Prepare the IV solution just before use (dilute the 60 mg in 3.4 ml of 5% glucose). When the child can swallow, give the full oral ACT course."
+      notes: "Prepare the IV solution just before use (dilute the 60 mg in 3.4 ml of 5% glucose). When the child can swallow, give the full oral ACT course. WHO now recommends a higher dose of 3 mg/kg per dose for children under 20 kg; the volumes above reflect the older 2.4 mg/kg standard, so recalculate for small children against current product labelling."
     - id: "artesunate-mefloquine"
       name: "Artesunate–mefloquine"
       class: "antimalarial"
@@ -321,15 +321,14 @@ formulary:
     - id: "aspirin"
       name: "Aspirin"
       class: "analgesia"
-      indications: ["fever", "pain"]
-      review: true   # indication from EMLc fallback — OE-verify
+      indications: []
       page: 357
       doses:
       - label: "Standard"
         regimen: "Oral: 10–20 mg/kg every 4–6 h"
         form: "300 mg tablet"
         bands: ["—", "¼", "½", "¾", "1"]
-      notes: "Avoid in young children where possible because of the risk of Reye syndrome."
+      notes: "Not recommended for fever or pain in children — risk of Reye syndrome; use paracetamol or ibuprofen instead. Aspirin is retained only for specific indications such as acute rheumatic fever and Kawasaki disease, which use higher anti-inflammatory doses than the antipyretic dose shown here (see Chapter 6, rheumatic fever)."
     - id: "chloramphenicol"
       name: "Chloramphenicol"
       class: "antibiotic"
@@ -1073,6 +1072,7 @@ formulary:
         bands: ["1", "1.5", "2", "2.5", "3", "—"]
       - label: "d4T 30 + 3TC 150 mg (adult)"
         bands: ["—", "—", "—", "—", "—", "1"]
+      notes: "No longer WHO-recommended — stavudine (d4T) has been phased out for lipodystrophy and metabolic toxicity and the product withdrawn. Use an abacavir- and dolutegravir-based regimen instead (see Chapter 8)."
     - id: "stavudine-lamivudine-nevirapine"
       name: "Stavudine/lamivudine/nevirapine (d4T/3TC/NVP)"
       class: "antiretroviral"
@@ -1086,7 +1086,7 @@ formulary:
         bands: ["1", "1.5", "2", "2.5", "3", "—"]
       - label: "d4T 30 + 3TC 150 + NVP 200 mg (adult)"
         bands: ["—", "—", "—", "—", "—", "1"]
-      notes: "NVP maximum 200 mg twice a day."
+      notes: "No longer WHO-recommended — stavudine (d4T) has been phased out (toxicity) and withdrawn; use an abacavir- and dolutegravir-based regimen instead (see Chapter 8). NVP maximum 200 mg twice a day."
     - id: "abacavir"
       name: "Abacavir (ABC)"
       class: "antiretroviral"
@@ -1156,7 +1156,7 @@ formulary:
       doses:
       - label: "Tablet: 200 mg (once daily)"
         bands: ["insufficient data <3 y / <10 kg", "insufficient data <3 y / <10 kg", "1 daily", "1.5 daily", "1.5 daily", "2 daily"]
-      notes: "Higher doses of LPV/RTV may be needed when co-administered with enzyme-inducing drugs (nevirapine, efavirenz, fos-amprenavir, rifampicin)."
+      notes: "No longer a preferred first-line anchor — now an alternative for when dolutegravir and protease inhibitors cannot be used (WHO prefers dolutegravir; see Chapter 8). Not for children under 3 years or under 10 kg; neuropsychiatric side-effects are common."
     - id: "nevirapine"
       name: "Nevirapine (NVP)"
       class: "antiretroviral"
@@ -1172,7 +1172,7 @@ formulary:
         bands: ["1", "1½", "2", "2½", "3", "—"]
       - label: "Tablet: 200 mg"
         bands: ["—", "—", "—", "½", "1½", "1"]
-      notes: "Divide into unequal doses — one in the morning, the other in the evening."
+      notes: "Now preferred only for neonates under 4 weeks; otherwise an alternative to dolutegravir (see Chapter 8). Divide into unequal doses — one in the morning, the other in the evening."
     - id: "lopinavir-ritonavir"
       name: "Lopinavir/ritonavir (LPV/RTV)"
       class: "antiretroviral"
@@ -1188,4 +1188,4 @@ formulary:
         bands: ["—", "—", "2", "2", "2", "3"]
       - label: "Adult tablet: LPV 200 / RTV 50 mg"
         bands: ["—", "—", "1", "1", "1", "1½"]
-      notes: "Higher doses may be needed with enzyme-inducing drugs (nevirapine, efavirenz, fos-amprenavir, rifampicin)."
+      notes: "Now an alternative rather than a preferred anchor — WHO prefers dolutegravir; LPV/r remains an option for neonates (see Chapter 8). Higher doses may be needed with enzyme-inducing drugs (nevirapine, efavirenz, fos-amprenavir, rifampicin)."
