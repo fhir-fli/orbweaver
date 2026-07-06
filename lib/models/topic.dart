@@ -1157,6 +1157,13 @@ class TableBlock extends Block {
     this.columns = const [],
     this.columnFlex = const [],
     this.columnWidths = const [],
+    this.columnAlign = const [],
+    this.columnTintArgb = const [],
+    this.columnBar = const [],
+    this.zebra = false,
+    this.stickyHeader = false,
+    this.stickyFirstColumn = false,
+    this.maxHeight,
     this.layout = TableLayout.standard,
     super.flex,
     super.anchor,
@@ -1168,6 +1175,13 @@ class TableBlock extends Block {
         columns: _stringList(map['columns']),
         columnFlex: _intList(map['column_flex']),
         columnWidths: _doubleList(map['column_widths']),
+        columnAlign: _alignList(map['column_align']),
+        columnTintArgb: _argbList(map['column_tint']),
+        columnBar: _boolList(map['column_bar']),
+        zebra: map['zebra'] == true,
+        stickyHeader: map['sticky_header'] == true,
+        stickyFirstColumn: map['sticky_first_column'] == true,
+        maxHeight: (map['max_height'] as num?)?.toDouble(),
         rows: _mapList(map['rows'], TopicTableRow.fromYaml),
         layout: TableLayout.fromString(map['layout'] as String?),
         flex: _flex(map),
@@ -1191,8 +1205,56 @@ class TableBlock extends Block {
   /// so each needs an explicit width — e.g. the §3.14 neonatal drug-dose
   /// matrix (Drug/Dosage/Form + 7 weight-band columns).
   final List<double> columnWidths;
+
+  /// Optional per-column text alignment (`left`/`right`/`center`), one per
+  /// [columns]. `right` lines up decimals in numeric reference tables (the
+  /// standard convention for figures). Empty / short → left.
+  final List<CellAlign> columnAlign;
+
+  /// Optional per-column background tint (packed ARGB, one per [columns];
+  /// an empty string / null entry = no tint). Highlights a whole column —
+  /// e.g. the −2 SD / −3 SD decision-boundary columns in the growth tables.
+  /// Composited under zebra/severity so the column reads through striping.
+  final List<int?> columnTintArgb;
+
+  /// Optional per-column in-cell magnitude bars (one bool per [columns]).
+  /// When true and the cell parses as a number, a horizontal bar scaled to
+  /// that column's min…max is drawn behind the value — the "in-cell bar"
+  /// encoding (good for spotting magnitude/extremes at a glance).
+  final List<bool> columnBar;
+
+  /// Soft alternating row shading (zebra striping). Evidence-based aid for
+  /// row-tracking in wide lookup tables — keeps the eye on the correct row.
+  /// Applied only where a row has no explicit [RowSeverity] tint.
+  final bool zebra;
+
+  /// Pin the header row while the body scrolls vertically (scroll layout).
+  final bool stickyHeader;
+
+  /// Pin the first (label) column while the body scrolls horizontally
+  /// (scroll layout) — the age / length / height column stays visible.
+  final bool stickyFirstColumn;
+
+  /// Optional max height (logical px) for a scroll-layout table: the grid
+  /// becomes a bounded, internally-scrolling panel instead of an
+  /// arbitrarily tall page — essential for the ~130-row growth tables.
+  final double? maxHeight;
+
   final List<TopicTableRow> rows;
   final TableLayout layout;
+}
+
+/// Per-column text alignment for [TableBlock].
+enum CellAlign {
+  left,
+  right,
+  center;
+
+  static CellAlign fromString(String? s) => switch (s) {
+        'right' => right,
+        'center' => center,
+        _ => left,
+      };
 }
 
 /// Table rendering modes.
@@ -1615,6 +1677,28 @@ List<double> _doubleList(dynamic raw) {
   if (raw == null) return const [];
   final list = raw is YamlList ? raw.toList() : raw as List;
   return list.map((e) => (e as num).toDouble()).toList();
+}
+
+/// Parses a `column_align:` list of `left`/`right`/`center` strings.
+List<CellAlign> _alignList(dynamic raw) {
+  if (raw == null) return const [];
+  final list = raw is YamlList ? raw.toList() : raw as List;
+  return list.map((e) => CellAlign.fromString(e as String?)).toList();
+}
+
+/// Parses a `column_tint:` list of hex color strings; an empty string or
+/// unparseable entry becomes `null` (no tint for that column).
+List<int?> _argbList(dynamic raw) {
+  if (raw == null) return const [];
+  final list = raw is YamlList ? raw.toList() : raw as List;
+  return list.map(_parseHexArgb).toList();
+}
+
+/// Parses a `column_bar:` list of bools (non-`true` entries → false).
+List<bool> _boolList(dynamic raw) {
+  if (raw == null) return const [];
+  final list = raw is YamlList ? raw.toList() : raw as List;
+  return list.map((e) => e == true).toList();
 }
 
 List<T> _mapList<T>(

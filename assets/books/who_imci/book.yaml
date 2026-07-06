@@ -434,3 +434,10 @@ book:
     # Annex 4 (IV fluids) — composition table + A4.1 choice of fluid, one
     # short topic → a top-level leaf like Annex 3.
     - topic: "topics/who_a4_iv_fluids.yaml"
+    # Annex 5 (Assessing nutritional status) — WHO growth z-score tables.
+    # A group; children (A5.1, A5.2, lookup, charts) added per sub-section.
+    - title: "Annex 5 · Assessing nutritional status"
+      palette:
+        accent: "0xFF5981BF"
+      children:
+        - topic: "topics/who_a5_1_weight_for_age.yaml"
