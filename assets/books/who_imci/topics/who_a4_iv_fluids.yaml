@@ -1,0 +1,88 @@
+# ============================================================
+# WHO IMCI Annex 4 — Intravenous fluids. Pocket Book 2nd ed (2013),
+# pp.377–378. Two parts: (1) a composition table of commonly used IV
+# fluids (p.377), (2) A4.1 Choice of intravenous fluids (p.378) — the
+# hyponatraemia caution + resuscitation vs maintenance guidance.
+# Transcribed cell-by-cell from the p.377 render; A4.1 text verbatim
+# from p.378. Composition table is a horizontal-scroll wide table
+# (layout: scroll) — IV fluid + 7 composition columns.
+# Steel-blue annex tab (0xFF5981BF), same as Annexes 1–3.
+# ============================================================
+
+topic:
+  id: "who-imci-a4-iv-fluids"
+  title: "Intravenous Fluids"
+  list_subtitle: "Annex 4 · IV fluid composition + choice of fluid"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013), pp.377–378"
+  tags: ["iv fluids", "intravenous fluids", "fluid composition", "ringer's lactate", "hartmann's", "normal saline", "darrow's solution", "maintenance fluid", "resuscitation", "hyponatraemia", "dextrose", "glucose", "annex 4", "reference table"]
+  aliases:
+    - "IV fluids"
+    - "Intravenous fluid composition"
+    - "Maintenance fluid"
+    - "Ringer's lactate"
+  category: "medical"
+  palette:
+    accent: "0xFF5981BF"
+
+  page_number: 377
+
+  blocks:
+
+    - type: "prose"
+      highlight: true
+      markdown: |
+        Composition of IV fluids commonly used for neonates, infants and
+        children. For which fluid to use in particular circumstances, see
+        the disease-specific chapters — **shock, the sick young infant,
+        severe acute malnutrition, surgical procedures and supportive
+        care**. Note that **none of these fluids contains sufficient
+        calories for long-term nutritional support** (some contain less
+        than others). When feeds and fluids can be given by mouth or
+        nasogastric tube, that is the safest, preferable route.
+
+    - type: "table"
+      title: "Composition of intravenous fluids"
+      layout: "scroll"
+      columns: ["IV fluid", "Na+ (mmol/l)", "K+ (mmol/l)", "Cl− (mmol/l)", "Ca++ (mmol/l)", "Lactate (mmol/l)", "Glucose (g/l)", "Calories (cal/l)"]
+      column_widths: [204, 118, 112, 114, 120, 142, 120, 130]
+      rows:
+        - cells: ["Ringer's lactate (Hartmann's)", "130", "5.4", "112", "1.8", "27", "–", "–"]
+        - cells: ["Normal saline (0.9% NaCl)", "154", "–", "154", "–", "–", "–", "–"]
+        - cells: ["10% glucose", "–", "–", "–", "–", "–", "100", "400"]
+        - cells: ["0.45 NaCl / 5% glucose", "77", "–", "77", "–", "–", "50", "200"]
+        - cells: ["Darrow's solution", "121", "35", "103", "–", "53", "–", "–"]
+        - cells: ["Half-strength Darrow with 5% glucose (a)", "61", "17", "52", "–", "27", "50", "200"]
+        - cells: ["Half-strength Ringer's lactate with 5% glucose", "65", "2.7", "56", "1", "14", "50", "200"]
+        - cells: ["0.18% NaCl / 4% glucose (b)", "31", "–", "31", "–", "–", "40", "160"]
+        - cells: ["5% glucose (b)", "–", "–", "–", "–", "–", "50", "200"]
+
+    - type: "prose"
+      title: "Table footnotes"
+      markdown: |
+        - **(a)** Half-strength Darrow's solution often comes without
+          glucose, and glucose must be added before use.
+        - **(b)** These fluids can be used mainly in the first few days of
+          life, but **not** in other infants or children.
+
+    - type: "prose"
+      title: "A4.1 Choice of intravenous fluids"
+      highlight: true
+      markdown: |
+        The risk of **hyponatraemia** may be increased by solutions
+        containing very low sodium, compared with fluids of sodium content
+        75–150 mmol/litre. Low-sodium solutions — such as **0.18% sodium
+        chloride with 4% glucose**, or **5% glucose in water** — should
+        **not** be used for rehydration or fluid maintenance. Appropriate
+        sodium-containing IV maintenance fluids should contain glucose, to
+        avoid hypoglycaemia and starvation ketosis in children who cannot
+        feed orally or by nasogastric tube.
+
+    - type: "prose"
+      markdown: |
+        - **Resuscitation:** children who are severely dehydrated or in
+          shock should be resuscitated with **isotonic IV solutions**
+          (normal saline 0.9% or Ringer's lactate).
+        - **Intravenous maintenance fluid:** children who require IV fluids
+          for maintenance should be managed with **Ringer's lactate with
+          5% dextrose**, or **0.9% normal saline with 5% glucose**, or
+          **half-normal saline (0.45% NaCl) with 5% glucose**.

@@ -431,3 +431,6 @@ book:
     # Annex 3 is a single reference table → a top-level leaf (its own
     # steel-blue tab is set in the topic's palette), not a group.
     - topic: "topics/who_a3_equipment.yaml"
+    # Annex 4 (IV fluids) — composition table + A4.1 choice of fluid, one
+    # short topic → a top-level leaf like Annex 3.
+    - topic: "topics/who_a4_iv_fluids.yaml"

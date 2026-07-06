@@ -107,7 +107,7 @@ void main() {
       final b = loadBook('who_imci');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(15));
+      expect(contents, hasLength(16));
       expect((contents[0] as YamlMap)['title'],
           '1. Triage and emergency conditions');
       expect((contents[1] as YamlMap)['title'],
@@ -132,14 +132,16 @@ void main() {
       expect((contents[12] as YamlMap)['title'],
           'Annex 1 · Practical procedures');
       expect((contents[13] as YamlMap)['title'], 'Annex 2 · Drug dosages');
-      // Annex 3 is a single-table leaf (no title, a bare topic reference).
+      // Annexes 3 & 4 are single-table leaves (no title, bare topic refs).
       expect((contents[14] as YamlMap)['topic'], 'topics/who_a3_equipment.yaml');
+      expect((contents[15] as YamlMap)['topic'], 'topics/who_a4_iv_fluids.yaml');
       // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
       // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) + Ch.9 (33) + Ch.10 (15)
-      // + Ch.11 (3) + Ch.12 (8) + Annex 1 (13) + Annex 3 (1) = 254 manifest
-      // topics. Annex 2 is a `view: collection` group with no manifest
-      // children — its 82 drugs are generated at load from formulary.yaml.
-      expect(leafCount(contents), 254);
+      // + Ch.11 (3) + Ch.12 (8) + Annex 1 (13) + Annex 3 (1) + Annex 4 (1)
+      // = 255 manifest topics. Annex 2 is a `view: collection` group with
+      // no manifest children — its 82 drugs are generated at load from
+      // formulary.yaml.
+      expect(leafCount(contents), 255);
     });
 
     test('who_imci: Annex 2 is a steel-blue formulary collection', () {
