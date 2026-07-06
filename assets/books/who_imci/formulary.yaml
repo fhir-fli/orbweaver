@@ -52,6 +52,7 @@ formulary:
     - { key: "pain", label: "Pain" }
     - { key: "cholera", label: "Cholera" }
     - { key: "dysentery", label: "Dysentery" }
+    - { key: "diarrhoea", label: "Diarrhoea" }
     - { key: "staphylococcal infection", label: "Staphylococcal infection" }
     - { key: "abscess", label: "Abscess" }
     - { key: "iron poisoning", label: "Iron poisoning" }
@@ -154,13 +155,13 @@ formulary:
       class: "antibiotic"
       subtitle: "cephalosporin"
       indications: ["skin infection"]
-      review: true   # indication from EMLc fallback — OE-verify
       page: 358
       doses:
       - label: "Standard"
-        regimen: "Oral: 12.5 mg/kg four times a day"
+        regimen: "Oral: 12.5 mg/kg four times a day (or 25 mg/kg twice a day — same total — to aid adherence)"
         form: "250 mg tablet"
         bands: ["¼", "½", "¾", "1", "1¼"]
+      notes: "Total 50 mg/kg/day; for severe skin/soft-tissue infection increase to 100 mg/kg/day. Duration 7–14 days. Cloxacillin or flucloxacillin is preferred for severe staphylococcal infection; cefalexin is an oral step-down or mild-infection option."
     - id: "potassium-chloride"
       name: "Potassium chloride"
       class: "fluid_electrolyte"
@@ -176,15 +177,14 @@ formulary:
       name: "Prednisolone"
       class: "other"
       subtitle: "corticosteroid"
-      indications: ["wheeze"]
-      review: true   # indication from EMLc fallback — OE-verify
+      indications: ["wheeze", "croup"]
       page: 368
       doses:
-      - label: "Standard"
-        regimen: "Oral: 1 mg/kg twice a day for 3 days"
+      - label: "Standard (acute wheeze)"
+        regimen: "Oral: 1 mg/kg per dose (total 1–2 mg/kg/day, max 40 mg) for 3–5 days"
         form: "5-mg tablet"
         bands: ["1", "1", "2", "3", "5"]
-      notes: "1 mg prednisolone ≡ 5 mg hydrocortisone ≡ 0.15 mg dexamethasone."
+      notes: "Acute wheeze/asthma: 1–2 mg/kg/day for 3–5 days, no taper needed. Croup: 1 mg/kg as a single dose (alternative when dexamethasone 0.6 mg/kg, the preferred agent, is unavailable). Nephrotic syndrome uses a longer high-dose specialist regimen. 1 mg prednisolone ≡ 5 mg hydrocortisone ≡ 0.15 mg dexamethasone."
     - id: "quinine"
       name: "Quinine"
       class: "antimalarial"
@@ -355,7 +355,7 @@ formulary:
         regimen: "Oral: 25 mg/kg every 8 h (max 1 g/dose)"
         form: "250 mg capsule"
         bands: ["—", "—", "1", "1½", "2"]
-      notes: "Phenobarbital reduces, and phenytoin increases, chloramphenicol levels when given together."
+      notes: "A WHO AWaRe 'Watch' antibiotic — where ceftriaxone is available it is preferred for meningitis and sepsis; chloramphenicol is a second-line option when cephalosporins are unavailable. Phenobarbital reduces, and phenytoin increases, chloramphenicol levels when given together."
     - id: "chloramphenicol-oily"
       name: "Chloramphenicol, oily"
       class: "antibiotic"
@@ -440,7 +440,7 @@ formulary:
         regimen: "Oral: 4 mg/kg TMP + 20 mg/kg SMX twice a day"
         form: "Syrup (40 mg TMP + 200 mg SMX per 5 ml)"
         bands: ["2 ml", "3.5 ml", "6 ml", "8.5 ml", "—"]
-      notes: "For interstitial pneumonia (PCP) in HIV: 8 mg/kg TMP + 40 mg/kg SMX three times a day for 21 days. Infant <1 month: ½ paediatric tablet or 1.25 ml syrup twice a day. Avoid in premature or jaundiced neonates."
+      notes: "For interstitial pneumonia (PCP) in HIV: 8 mg/kg TMP + 40 mg/kg SMX three times a day for 21 days. HIV co-trimoxazole PROPHYLAXIS (all HIV-exposed and HIV-infected children) is a lower single daily dose by weight band — see Chapter 8. Infant <1 month: ½ paediatric tablet or 1.25 ml syrup twice a day. Avoid in premature or jaundiced neonates."
     - id: "deferoxamine"
       name: "Deferoxamine"
       class: "other"
@@ -589,6 +589,7 @@ formulary:
         regimen: "Oral: 1.25 mg/kg four times a day for 3 days"
         form: "100-mg tablet"
         bands: ["—", "—", "¼", "¼", "¼"]
+      notes: "No longer recommended — withdrawn in many countries over mutagenicity/carcinogenicity concerns and removed from the WHO essential-medicines list. Use metronidazole for giardiasis and azithromycin or ciprofloxacin for cholera."
     - id: "furosemide"
       name: "Furosemide (frusemide)"
       class: "cardiac"
@@ -764,6 +765,7 @@ formulary:
         regimen: "0.1–0.2 mg/kg every 8 h as required (max 10 mg/dose)"
         form: "Injection: 5 mg/ml"
         bands: ["—", "—", "0.5 ml", "0.7 ml", "1 ml"]
+      notes: "Restricted to children 1 year and older (some authorities 15 kg and over) because of the risk of extrapyramidal reactions; use the lowest effective dose for the shortest time."
     - id: "metronidazole"
       name: "Metronidazole"
       class: "antibiotic"
@@ -831,13 +833,14 @@ formulary:
       class: "antibiotic"
       subtitle: "penicillin (long-acting)"
       indications: ["rheumatic fever", "syphilis"]
-      review: true   # indication from EMLc fallback — OE-verify
       page: 367
+      band_label: "Rheumatic-fever prophylaxis — IM every 3–4 weeks"
+      band_columns: ["under 30 kg", "30 kg and over"]
+      regimen: "Long-acting depot — fixed weight-category doses, NOT a daily dose. Reconstituted vial 1 200 000 U in 4 ml = 300 000 U/ml (600 000 U = 2 ml; 1 200 000 U = 4 ml)."
       doses:
-      - label: "Standard"
-        regimen: "IM: 50 000 U/kg once a day"
-        form: "Vial of 1 200 000 U + 4 ml sterile water"
-        bands: ["0.5 ml", "1 ml", "2 ml", "3 ml", "4 ml"]
+      - label: "Benzathine benzylpenicillin (1 200 000 U vial + 4 ml)"
+        bands: ["600 000 U (2 ml)", "1 200 000 U (4 ml)"]
+      notes: "Rheumatic-fever secondary prophylaxis: the dose above every 3–4 weeks (every 3 weeks in high-risk/endemic settings), continued for years. Streptococcal pharyngitis (primary prevention): a single dose — 600 000 U under 27 kg, 1 200 000 U at 27 kg and over. Congenital syphilis: use IV aqueous benzylpenicillin or IM procaine penicillin for symptomatic infants; benzathine 50 000 U/kg as a single dose only for an asymptomatic infant whose mother was adequately treated."
     - id: "benzylpenicillin"
       name: "Benzylpenicillin (penicillin G)"
       class: "antibiotic"
@@ -868,14 +871,14 @@ formulary:
       name: "Procaine benzylpenicillin"
       class: "antibiotic"
       subtitle: "penicillin (procaine)"
-      indications: ["pneumonia", "syphilis"]
-      review: true   # indication from EMLc fallback — OE-verify
+      indications: ["syphilis", "neonatal sepsis"]
       page: 367
       doses:
       - label: "Standard"
         regimen: "IM: 50 000 U/kg once a day"
         form: "3-g vial (3 000 000 U) + 4 ml sterile water"
         bands: ["0.25 ml", "0.5 ml", "0.8 ml", "1.2 ml", "1.7 ml"]
+      notes: "Congenital syphilis: give for 10–15 days. Community-managed neonatal sepsis (with gentamicin) where referral is not possible: 7–10 days. For pneumonia, oral amoxicillin (non-severe) or IV ampicillin + gentamicin (severe) are now preferred (WHO 2014 IMCI revision)."
     - id: "phenobarbital"
       name: "Phenobarbital"
       class: "anticonvulsant_sedation"
@@ -918,6 +921,7 @@ formulary:
         regimen: "Apply topically to the affected skin"
         form: "Cream"
         bands: ["topical", "topical", "topical", "topical", "topical"]
+      notes: "No longer universally first-line — WHO burn care has shifted toward simple wound care and alternative dressings; silver sulfadiazine remains an option but is not required."
     - id: "spectinomycin"
       name: "Spectinomycin"
       class: "antibiotic"
@@ -928,6 +932,7 @@ formulary:
         regimen: "IM: 25 mg/kg single dose (max 75 mg)"
         form: "2-g vial in 5 ml diluent"
         bands: ["0.25 ml", "—", "—", "—", "—"]
+      notes: "Global supply has largely been discontinued. For neonatal gonococcal ophthalmia, ceftriaxone 25–50 mg/kg IM as a single dose (max 125 mg) is now the WHO-recommended treatment."
     - id: "tetracaine-adrenaline-cocaine"
       name: "Tetracaine, adrenaline, cocaine"
       class: "other"
@@ -951,6 +956,18 @@ formulary:
         form: "250-mg tablet"
         bands: ["—", "½", "½", "1", "1"]
       notes: "Give to children ONLY for treatment of cholera — permanently stains teeth."
+    - id: "zinc"
+      name: "Zinc"
+      class: "other"
+      subtitle: "micronutrient supplement"
+      indications: ["diarrhoea"]
+      band_label: "Daily dose by age (for 10–14 days)"
+      band_columns: ["under 6 months", "6 months and over"]
+      regimen: "Give once daily for 10–14 days, alongside ORS, to every child with diarrhoea"
+      doses:
+      - label: "Dispersible 20 mg tablet (or syrup)"
+        bands: ["10 mg (½ tablet)", "20 mg (1 tablet)"]
+      notes: "Shortens diarrhoea and reduces future episodes. WHO standard: 10 mg/day under 6 months, 20 mg/day at 6 months and over; a 2020 trial found 5–10 mg noninferior with less vomiting, but the WHO dose is unchanged. Give with low-osmolarity ORS."
     - id: "vitamin-a"
       name: "Vitamin A"
       class: "other"
