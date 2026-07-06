@@ -428,3 +428,6 @@ book:
       formulary: "formulary.yaml"
       palette:
         accent: "0xFF5981BF"
+    # Annex 3 is a single reference table → a top-level leaf (its own
+    # steel-blue tab is set in the topic's palette), not a group.
+    - topic: "topics/who_a3_equipment.yaml"

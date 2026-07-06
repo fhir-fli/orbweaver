@@ -1,0 +1,63 @@
+# ============================================================
+# WHO IMCI Annex 3 — Equipment sizes. Pocket Book 2nd ed (2013), p.375.
+# A single reference table: appropriate paediatric equipment by age
+# (weight) band. Transcribed cell-by-cell from the p.375 render.
+# Rendered as a horizontal-scroll wide table (layout: scroll); the three
+# PDF sections (Airway & Breathing / Circulation / Other) are bold
+# divider rows (the scroll layout has no group column).
+# Steel-blue annex tab (0xFF5981BF), same as Annex 1 & 2.
+# ============================================================
+
+topic:
+  id: "who-imci-a3-equipment"
+  title: "Equipment Sizes"
+  list_subtitle: "Annex 3 · paediatric equipment by age (weight)"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013), p.375"
+  tags: ["equipment", "tracheal tube", "laryngoscope", "cannula", "nasogastric tube", "urinary catheter", "annex 3", "reference table", "pediatric"]
+  aliases:
+    - "Equipment sizes"
+    - "Tube sizes"
+    - "ET tube size"
+  category: "medical"
+  palette:
+    accent: "0xFF5981BF"
+
+  page_number: 375
+
+  blocks:
+
+    - type: "prose"
+      highlight: true
+      markdown: |
+        Appropriate sizes of paediatric equipment **according to the age
+        (weight) of the child**. Scroll the table sideways to read all four
+        age bands.
+
+    - type: "table"
+      title: "Paediatric equipment by age (weight)"
+      layout: "scroll"
+      columns: ["Equipment", "0–5 months (3–6 kg)", "6–12 months (4–9 kg)", "1–3 years (10–15 kg)", "4–7 years (16–20 kg)"]
+      column_widths: [176, 116, 116, 116, 116]
+      rows:
+        - cells: ["**AIRWAY & BREATHING**", "", "", "", ""]
+        - cells: ["Laryngoscope", "Straight blade", "Straight blade", "Child Macintosh", "Child Macintosh"]
+        - cells: ["Uncuffed tracheal tube", "2.5–3.5", "3.5–4.0", "4.0–5.0", "5.0–6.0"]
+        - cells: ["Stylet", "Small", "Small", "Small/medium", "Medium"]
+        - cells: ["Suction catheter (Fr)", "6", "8", "10/12", "—"]
+        - cells: ["**CIRCULATION**", "", "", "", ""]
+        - cells: ["IV cannula", "24/22", "22", "22/18", "20/16"]
+        - cells: ["Central venous cannula", "20", "20", "18", "18"]
+        - cells: ["**OTHER EQUIPMENT**", "", "", "", ""]
+        - cells: ["Nasogastric tube (Fr)", "8", "10", "10–12", "12"]
+        - cells: ["Urinary catheter (Fr)", "5 feeding tube", "5 feeding tube / F8", "Foley 8", "Foley 10"]
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - **Uncuffed tracheal tube** sizes are the internal diameter in mm; a
+          quick estimate in children over 1 year is **(age in years ÷ 4) + 4**.
+          Have a half-size above and below ready.
+        - **Fr** = French gauge (Charrière) — the two are equivalent and give
+          the **circumference** of the tube in millimetres.
+        - These are **starting sizes** by age/weight; always match the
+          individual child and re-check after placement.
