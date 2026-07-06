@@ -153,6 +153,6 @@ topic:
 
     # ─────────────── image (placeholder fallback) ───────────────
     - type: "image"
-      path: "assets/books/demos/images/missing_demo.png"
+      path: "assets/books/__missing__/missing_demo.png"
       caption: "Image block — falls back to placeholder when asset missing."
       size: "medium"

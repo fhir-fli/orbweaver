@@ -20,8 +20,9 @@ void main() {
     expect(t.id, 'who-imci-1-5-1-airway-dx');
     final table = t.blocks.whereType<TableBlock>().single;
     expect(table.columns, ['Diagnosis / cause', 'In favour']);
-    // pneumonia, asthma, FBA, retropharyngeal, epiglottitis, croup, diphtheria
-    expect(table.rows.length, 7);
+    // pneumonia, asthma, FBA, retropharyngeal, epiglottitis, croup,
+    // bacterial tracheitis, diphtheria
+    expect(table.rows.length, 8);
     // The "In favour" cell is a bulleted list.
     expect(table.rows.first.cells[1], isA<BulletCell>());
   });

@@ -1,0 +1,16 @@
+book:
+  id: "wtf"
+  title: "Ward Treatment Fundamentals"
+  subtitle: "Conversions & bedside tools"
+  cover: "cover.png"      # WTF monogram cover; title renders below on the shelf
+  spine_color: "0xFF00695C"
+  # Ward Treatment Fundamentals ("WTF"): the catch-all book for bedside
+  # tools and demos. Currently the dose-conversion utilities; a home for
+  # misc/demo topics over time.
+  # Book-level palette: a teal "tools" accent inherited by all converters.
+  palette:
+    accent: "0xFF00695C"
+  contents:
+    - topic: "topics/conv_opioids.yaml"
+    - topic: "topics/conv_benzodiazepines.yaml"
+    - topic: "topics/conv_statins.yaml"

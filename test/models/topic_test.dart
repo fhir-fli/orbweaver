@@ -118,7 +118,7 @@ void main() {
 
     setUpAll(() {
       final yaml =
-          File('assets/books/demos/topics/demo_all_blocks.yaml').readAsStringSync();
+          File('test/fixtures/demo_all_blocks.yaml').readAsStringSync();
       topic = Topic.fromYamlString(yaml);
     });
 

@@ -5,7 +5,7 @@ import 'package:orbweaver/models/topic.dart';
 
 ConversionBlock _load(String topicFile) {
   final yaml =
-      File('assets/books/conversions/topics/$topicFile').readAsStringSync();
+      File('assets/books/wtf/topics/$topicFile').readAsStringSync();
   return Topic.fromYamlString(yaml).blocks.whereType<ConversionBlock>().single;
 }
 
