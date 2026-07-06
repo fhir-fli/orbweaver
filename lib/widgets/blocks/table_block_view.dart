@@ -454,7 +454,9 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
   static const double _defaultColWidth = 78;
   static const double _fontSize = 12;
   static const double _rowH = 21;
-  static const double _headerH2 = 26;
+  // Tall enough for a header label that wraps to two lines (e.g.
+  // "Length (cm)") without overflowing into the first data row.
+  static const double _headerH2 = 40;
 
   bool get _frozen =>
       widget.block.stickyHeader || widget.block.stickyFirstColumn;
@@ -620,10 +622,13 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
           child: Text(
             block.columns[i],
             textAlign: style.textAlign(i),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
             style: const TextStyle(
               fontSize: _fontSize,
               fontWeight: FontWeight.w800,
               color: Colors.white,
+              height: 1.1,
             ),
           ),
         );

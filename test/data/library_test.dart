@@ -140,10 +140,10 @@ void main() {
       // Ch.1 (33) + Ch.2 (5) + Ch.3 (24) + Ch.4 (24) + Ch.5 (9)
       // + Ch.6 (25) + Ch.7 (27) + Ch.8 (34) + Ch.9 (33) + Ch.10 (15)
       // + Ch.11 (3) + Ch.12 (8) + Annex 1 (13) + Annex 3 (1) + Annex 4 (1)
-      // + Annex 5 (1 so far: A5.1) = 256 manifest topics. Annex 2 is a
-      // `view: collection` group with no manifest children — its 82 drugs
-      // are generated at load from formulary.yaml.
-      expect(leafCount(contents), 256);
+      // + Annex 5 (3: A5.1 + A5.2 length + A5.2 height) = 258 manifest
+      // topics. Annex 2 is a `view: collection` group with no manifest
+      // children — its 82 drugs are generated at load from formulary.yaml.
+      expect(leafCount(contents), 258);
     });
 
     test('who_imci: Annex 2 is a steel-blue formulary collection', () {

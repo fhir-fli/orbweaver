@@ -441,3 +441,5 @@ book:
         accent: "0xFF5981BF"
       children:
         - topic: "topics/who_a5_1_weight_for_age.yaml"
+        - topic: "topics/who_a5_2_weight_for_length.yaml"
+        - topic: "topics/who_a5_2_weight_for_height.yaml"
