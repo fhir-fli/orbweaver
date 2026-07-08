@@ -8,24 +8,40 @@ book:
   # until chapter groups declare their own).
   palette:
     accent: "0xFF2E7D32"
-  # contents tree — currently a flat page-order run of leaves (the
-  # walkthrough proceeds page by page). Groups can be introduced later to
-  # mirror the book's own section structure.
+  # contents tree — grouped by the book's own section structure (the
+  # section-divider pages: Emergency p.11, Ingestions p.27, Paediatric
+  # p.41, …). Each group takes its own accent that cascades to its
+  # topics (the printed book is B&W, so these accents are ours, chosen
+  # per-section and freely editable here). Groups are added / filled in
+  # as the page-by-page walkthrough reaches each section.
   contents:
-    - topic: "topics/pb_triage.yaml"
-    - topic: "topics/pb_pals.yaml"
-    - topic: "topics/pb_cardiac_arrest.yaml"
-    - topic: "topics/pb_cpr_summary.yaml"
-    - topic: "topics/pb_weight_estimation.yaml"
-    - topic: "topics/pb_vital_rates.yaml"
-    - topic: "topics/pb_bp_girls.yaml"
-    - topic: "topics/pb_bp_boys.yaml"
-    - topic: "topics/pb_resuscitation_meds.yaml"
-    - topic: "topics/pb_io_line.yaml"
-    - topic: "topics/pb_malaria.yaml"
-    - topic: "topics/pb_malaria_complications.yaml"
-    - topic: "topics/pb_malaria_severe_meds.yaml"
-    - topic: "topics/pb_malaria_uncomplicated.yaml"
-    - topic: "topics/pb_altered_mental_status.yaml"
-    - topic: "topics/pb_poisoning_ingestion.yaml"
-    - topic: "topics/pb_meningitis.yaml"
+    - title: "Emergency Protocols"
+      palette:
+        accent: "0xFFC62828"
+      children:
+        - topic: "topics/pb_triage.yaml"
+        - topic: "topics/pb_pals.yaml"
+        - topic: "topics/pb_cardiac_arrest.yaml"
+        - topic: "topics/pb_cpr_summary.yaml"
+        - topic: "topics/pb_weight_estimation.yaml"
+        - topic: "topics/pb_vital_rates.yaml"
+        - topic: "topics/pb_bp_girls.yaml"
+        - topic: "topics/pb_bp_boys.yaml"
+        - topic: "topics/pb_resuscitation_meds.yaml"
+        - topic: "topics/pb_io_line.yaml"
+        - topic: "topics/pb_malaria.yaml"
+        - topic: "topics/pb_malaria_complications.yaml"
+        - topic: "topics/pb_malaria_severe_meds.yaml"
+        - topic: "topics/pb_malaria_uncomplicated.yaml"
+        - topic: "topics/pb_altered_mental_status.yaml"
+    - title: "Ingestions, Anaphylaxis & Bites"
+      palette:
+        accent: "0xFF6A1B9A"
+      children:
+        - topic: "topics/pb_poisoning_ingestion.yaml"
+        - topic: "topics/pb_organophosphate.yaml"
+    - title: "Paediatric Protocols"
+      palette:
+        accent: "0xFF2E7D32"
+      children:
+        - topic: "topics/pb_meningitis.yaml"

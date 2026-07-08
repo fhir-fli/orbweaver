@@ -374,18 +374,35 @@ void main() {
       expect(leafCount(contents), 47);
     });
 
-    test('protocolbook: flat list of 17 leaves', () {
+    test('protocolbook: section groups (Emergency 15, Ingestions 2, '
+        'Paediatric 1 = 18 leaves)', () {
       final b = loadBook('protocolbook');
-      expect(b['topics'], isNull);
+      expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(17));
-      expect(leafCount(contents), 17);
-      // p.25 Altered Mental Status + p.28 Poisoning inserted in page
-      // order, after p.24 uncomplicated malaria and before p.55 meningitis.
-      expect((contents[14] as YamlMap)['topic'],
+      // Three section groups so far, mirroring the book's dividers.
+      expect(contents, hasLength(3));
+      expect((contents[0] as YamlMap)['title'], 'Emergency Protocols');
+      expect((contents[1] as YamlMap)['title'],
+          'Ingestions, Anaphylaxis & Bites');
+      expect((contents[2] as YamlMap)['title'], 'Paediatric Protocols');
+      // Each group carries its own accent.
+      expect((contents[0] as YamlMap)['palette']['accent'], '0xFFC62828');
+      expect((contents[1] as YamlMap)['palette']['accent'], '0xFF6A1B9A');
+      expect((contents[2] as YamlMap)['palette']['accent'], '0xFF2E7D32');
+      // Emergency Protocols = p.12–26 (15 topics), ending in Altered
+      // Mental Status; Ingestions has Poisoning (p.28); Paediatric has
+      // Meningitis (p.55) for now.
+      final emergency = (contents[0] as YamlMap)['children'] as YamlList;
+      expect(emergency, hasLength(15));
+      expect((emergency[14] as YamlMap)['topic'],
           'topics/pb_altered_mental_status.yaml');
-      expect((contents[15] as YamlMap)['topic'],
+      final ingestions = (contents[1] as YamlMap)['children'] as YamlList;
+      expect(ingestions, hasLength(2));
+      expect((ingestions[0] as YamlMap)['topic'],
           'topics/pb_poisoning_ingestion.yaml');
+      expect((ingestions[1] as YamlMap)['topic'],
+          'topics/pb_organophosphate.yaml');
+      expect(leafCount(contents), 18);
     });
   });
 }

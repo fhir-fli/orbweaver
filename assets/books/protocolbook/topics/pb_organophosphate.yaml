@@ -1,0 +1,102 @@
+# ============================================================
+# ProtocolBook p.29 — Organophosphate / Carbamate poisoning
+# (insecticides / nerve gas).
+#
+# HYBRID rendering (Grey's call 2026-07-08): the source is a
+# content-flow diagram (boxes + arrows, NO decision points) →
+# rendered as clean sequential titled prose + a small weight-band
+# table, preserving all content and the top-to-bottom flow. The
+# box/arrow visual carries no clinical info beyond ordering.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (…gas)87,88, ingestion182–186 / 187,
+#     atropinisation88,188) are print footnotes → dropped.
+#   - SLUDGE-BBB mnemonic letters kept bold (they spell the aid).
+#   - Rectal-diazepam weight bands rendered as a table.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully
+# now, NOT changed):
+#   - No OXIME (pralidoxime / 2-PAM) mentioned. WHO/LMIC practice is
+#     often atropine-centred (oxime benefit is debated, esp. late /
+#     carbamate), so this is defensible — flag for OE to confirm
+#     whether to add an "where available" oxime note.
+#   - Atropine "double the previous dose q5min until atropinised" is
+#     the standard escalating regimen — consistent with current tox.
+# ============================================================
+
+topic:
+  id: "pb-organophosphate"
+  title: "Organophosphate / Carbamate Poisoning"
+  list_subtitle: "p.29 · insecticides / nerve gas"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["organophosphate", "carbamate", "insecticide", "cholinergic", "atropine", "poisoning"]
+  category: "medical"
+  page_number: 29
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        - Children: common accidental ingestion
+        - Adults: common purposeful ingestion
+        - **Diagnosis is on a clinical basis**
+
+    - type: "prose"
+      title: "Presentation (SLUDGE-BBB)"
+      markdown: |
+        - **S**alivation
+        - **L**acrimation
+        - **U**rination
+        - **D**iarrhoea
+        - **G**astric cramping
+        - **E**mesis
+        - **B**ronchorrhea
+        - **B**ronchospasm
+        - **B**radycardia
+        - Also: profuse sweating, convulsions and coma, fasciculations, constricted pupils
+
+    - type: "prose"
+      title: "Treatment — atropine bolus"
+      markdown: |
+        - Children: 0.02 mg/kg IV
+        - Adults: 2 mg IV
+        - **Double the previous dose and repeat every 5 minutes** until atropinisation:
+          - Pulmonary secretions dry (improved oxygenation, breathing easier)
+          - Pulse > 80/min
+          - SBP > 80 mmHg
+
+    - type: "prose"
+      title: "Convulsions — diazepam"
+      markdown: |
+        **Children — rectal diazepam** (2.5 mg suppositories), by weight:
+
+    - type: "table"
+      columns: ["Weight", "Suppositories (2.5 mg)"]
+      rows:
+        - cells: ["< 10 kg", "1"]
+        - cells: ["10–15 kg", "2"]
+        - cells: ["15–20 kg", "3"]
+        - cells: ["20–25 kg", "4"]
+
+    - type: "prose"
+      markdown: |
+        - Or IV diazepam 0.2 mg/kg (children)
+        - Adults: 10 mg IV
+        - Repeat as necessary if convulsions occur
+
+    - type: "prose"
+      title: "Maintenance after atropinisation"
+      markdown: |
+        - Mix the total amount of atropine used as boluses into NS or D5%, in the following volumes:
+          - Patients < 25 kg: use 250 mL, run at 50 mL/hr
+          - Patients > 25 kg: use 500 mL, run at 100 mL/hr
+        - Monitor hourly for signs of recurrent symptoms or over-atropinisation, and adjust the rate accordingly
+
+    - type: "prose"
+      title: "Over-atropinisation"
+      callout: true
+      markdown: |
+        Watch for over-atropinisation:
+        - Urinary retention
+        - Confusion / delirium
+        - Hyperthermia
