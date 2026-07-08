@@ -374,12 +374,16 @@ void main() {
       expect(leafCount(contents), 47);
     });
 
-    test('protocolbook: flat list of 15 leaves', () {
+    test('protocolbook: flat list of 16 leaves', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull);
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(15));
-      expect(leafCount(contents), 15);
+      expect(contents, hasLength(16));
+      expect(leafCount(contents), 16);
+      // p.25 Altered Mental Status inserted in page order, after
+      // p.24 uncomplicated malaria and before p.55 meningitis.
+      expect((contents[14] as YamlMap)['topic'],
+          'topics/pb_altered_mental_status.yaml');
     });
   });
 }

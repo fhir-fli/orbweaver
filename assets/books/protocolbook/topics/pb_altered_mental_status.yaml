@@ -1,0 +1,123 @@
+# ============================================================
+# ProtocolBook p.25–26 — Altered Mental Status & the
+# Neurologic Assessment. Two-page topic (multi-page `pages:`).
+#
+# Authoring notes:
+#   - p.25 is a formal outline (I/II/III/IV → a/b/c → i/ii/iii
+#     → 1/2/3/4 → a/b/c/d/e). MiniMarkdown renders nested bullets
+#     (2-space indent per level) but has NO auto-numbering, so the
+#     decorative Roman/letter/number labels are dropped and the
+#     hierarchy is carried by indentation. The AMPLE and AVPU
+#     labels ARE mnemonics (letters spell the word), so those are
+#     preserved inline as bold.
+#   - Source cross-ref "see next page" → "see below" (now one
+#     scrolling topic).
+#   - Coma-scale tables: the book blacks out cells where a column
+#     has no response at that score level; rendered here as an
+#     em-dash (—) meaning "no response scored at this level".
+#   - Two red-alert callouts for the safety-critical lines
+#     (never-assume-intoxication rule; coma → intubate threshold).
+# ============================================================
+
+topic:
+  id: "pb-altered-mental-status"
+  title: "Altered Mental Status & Neurologic Assessment"
+  list_subtitle: "p.25 · assessment + coma scales"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["altered_mental_status", "neurology", "coma", "gcs", "avpu", "bcs"]
+  category: "medical"
+
+  pages:
+
+    # ═══════════════════════ PAGE 25 ═══════════════════════
+    - page_number: 25
+      blocks:
+
+        - type: "prose"
+          title: "Approach"
+          markdown: |
+            - Monitor, support the ABCs
+            - Look for life-threatening injuries (if signs of head injury, immobilize the cervical spine)
+            - Check vital signs (BP, PR, RR, spO2, Temp, Weight) — **Cushing's Triad (bradycardia, respiratory depression & hypertension) is an ominous finding**
+            - Physical exam (done at the same time as history if possible)
+              - Neurologic exam
+                - Brief and to the point
+                - Differentiate structural from non-structural causes (usually suggested by focal findings)
+                - Assess: level of consciousness / responsiveness, motor responses, brainstem reflexes
+                  - Progressive deterioration +/- focal neuro signs or fixed dilated pupils: request emergent surgical consult
+                  - Perform Neurological Assessment Scales (AVPU, BCS or GCS — see below)
+                  - Meningismus / nuchal rigidity (meningitis, subarachnoid hemorrhage)
+                    - Brudzinski's sign — involuntary hip & knee flexion with forced neck flexion
+                    - Kernig's sign — involuntary knee flexion with forced flexion of the hip
+                  - Fundoscopy
+                    - Papilledema suggests raised ICP of more than several hours' duration
+                    - Retinal hemorrhages in an infant are a sign of non-accidental trauma
+                    - Unilateral, fixed, dilated pupil: 3rd nerve compression
+                    - Bilateral, fixed, dilated pupils: brainstem pathology
+                    - Bilateral small pupils: opioids, organophosphates, pontine hemorrhage
+              - Skin exam: bruising may suggest trauma, rashes may suggest infection
+              - Always consider: anemia, dehydration or malnutrition in children
+
+        - type: "prose"
+          title: "Never assume"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            **NEVER** assume a mental status change is due solely to intoxication until alternatives have been ruled out.
+
+    # ═══════════════════════ PAGE 26 ═══════════════════════
+    - page_number: 26
+      blocks:
+
+        - type: "prose"
+          title: "History — AMPLE"
+          markdown: |
+            - **A** — Allergies
+            - **M** — Medications
+            - **P** — Past medical history
+            - **L** — Last meal
+            - **E** — Event: circumstances surrounding — what happened?
+              - Rapid or gradual?
+              - Preceding symptoms, neuro, headache?
+              - Ingestions
+              - Vague / inconsistent history — non-accidental trauma?
+
+        - type: "prose"
+          title: "Neurological Assessment Scales — AVPU"
+          markdown: |
+            - **A** — Alert
+            - **V** — responds to Verbal commands
+            - **P** — responds to Painful stimulus (press firmly on the middle fingernail with a pen; rub your knuckles on the sternum)
+            - **U** — Unconscious
+
+        - type: "table"
+          title: "Blantyre Coma Scale (BCS) — if pre-verbal"
+          columns: ["Best Motor Response", "Best Verbal Response", "Best Eye Movement", "Points"]
+          rows:
+            - cells: ["Localizes pain", "Cries normally to pain", "—", "2"]
+            - cells: ["Withdraws from pain", "Moans or abnormal cry to pain", "Watches / follows", "1"]
+            - cells: ["None or inappropriate", "No verbal response", "No eye movement", "0"]
+
+        - type: "table"
+          title: "Glasgow Coma Scale (GCS)"
+          columns: ["Best Motor Response", "Best Verbal Response", "Eye Opening", "Points"]
+          rows:
+            - cells: ["Follows commands", "—", "—", "6"]
+            - cells: ["Localizes pain", "Oriented", "—", "5"]
+            - cells: ["Withdraws from pain", "Confused", "Spontaneous", "4"]
+            - cells: ["Flexor posturing", "Inappropriate words", "To voice", "3"]
+            - cells: ["Extensor posturing", "Unintelligible sounds", "To painful stimuli", "2"]
+            - cells: ["None", "None", "None", "1"]
+
+        - type: "prose"
+          title: "Coma"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            **GCS ≤ 8** or **BCS ≤ 2** — should generally be intubated for airway protection.

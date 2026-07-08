@@ -26,4 +26,5 @@ book:
     - topic: "topics/pb_malaria_complications.yaml"
     - topic: "topics/pb_malaria_severe_meds.yaml"
     - topic: "topics/pb_malaria_uncomplicated.yaml"
+    - topic: "topics/pb_altered_mental_status.yaml"
     - topic: "topics/pb_meningitis.yaml"
