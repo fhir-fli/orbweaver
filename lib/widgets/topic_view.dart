@@ -8,6 +8,7 @@ import 'package:orbweaver/widgets/blocks/drug_card_block_view.dart';
 import 'package:orbweaver/widgets/blocks/image_block_view.dart';
 import 'package:orbweaver/widgets/blocks/prose_block_view.dart';
 import 'package:orbweaver/widgets/blocks/table_block_view.dart';
+import 'package:orbweaver/widgets/flowchart/algorithm_flowchart_view.dart';
 import 'package:orbweaver/widgets/flowchart/cascade_flowchart_view.dart';
 import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
 
@@ -376,6 +377,10 @@ class _FlowchartBlockRenderer extends StatelessWidget {
         ),
       FlowchartVariant.differential => DifferentialFlowchartView(
           flowchart: block.differential!,
+          theme: theme,
+        ),
+      FlowchartVariant.algorithm => AlgorithmFlowchartView(
+          flowchart: block.algorithm!,
           theme: theme,
         ),
     };

@@ -40,6 +40,7 @@ book:
       children:
         - topic: "topics/pb_poisoning_ingestion.yaml"
         - topic: "topics/pb_organophosphate.yaml"
+        - topic: "topics/pb_hydrocarbon.yaml"
     - title: "Paediatric Protocols"
       palette:
         accent: "0xFF2E7D32"

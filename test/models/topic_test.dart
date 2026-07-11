@@ -226,4 +226,56 @@ topic:
       expect(topic.ownPaletteArgb, isEmpty);
     });
   });
+
+  group('algorithm flowchart variant (ProtocolBook p.30 Hydrocarbon)', () {
+    late FlowchartBlock block;
+    late AlgorithmFlowchart algo;
+
+    setUpAll(() {
+      final yaml = File(
+        'assets/books/protocolbook/topics/pb_hydrocarbon.yaml',
+      ).readAsStringSync();
+      final topic = Topic.fromYamlString(yaml);
+      block = topic.blocks.whereType<FlowchartBlock>().first;
+      algo = block.algorithm!;
+    });
+
+    test('block is an algorithm-variant flowchart', () {
+      expect(block.variant, FlowchartVariant.algorithm);
+      expect(block.algorithm, isNotNull);
+      expect(block.severity, isNull);
+      expect(block.cascade, isNull);
+    });
+
+    test('entry, named boxes and stages parse', () {
+      expect(algo.entry!.text, 'Hydrocarbon ingestion');
+      expect(algo.entry!.shape, NodeShape.stadium);
+      expect(algo.boxes.single.id, 'treat');
+      expect(algo.boxes.single.bullets, hasLength(4));
+      expect(algo.stages, hasLength(3));
+      expect(algo.terminal!.title, 'Discharge');
+    });
+
+    test('stage 1 outcomes: goto + continue vs inline box', () {
+      final s1 = algo.stages.first;
+      expect(s1.decision, 'Any of these present?');
+      expect(s1.criteria, hasLength(4));
+      final yes = s1.outcomes.first;
+      expect(yes.goto, 'treat');
+      expect(yes.cont, isTrue);
+      // goto resolves to the shared "treat" box.
+      expect(algo.boxFor(yes)!.title, 'Treatment');
+      final no = s1.outcomes[1];
+      expect(no.box!.title, 'Observe');
+      expect(no.cont, isFalse); // terminal branch (self-contained observe path)
+    });
+
+    test('severity tint on the terminal ICU disposition', () {
+      final s2 = algo.stages[1];
+      final icu = s2.outcomes.last;
+      expect(icu.box!.title, 'Intubate and admit to ICU');
+      expect(icu.box!.severity, RowSeverity.emergency);
+      expect(icu.cont, isFalse);
+    });
+  });
 }

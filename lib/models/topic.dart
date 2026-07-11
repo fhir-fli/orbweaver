@@ -172,13 +172,26 @@ enum FlowchartVariant {
   /// Abdominal Pain (034), and Altered LOC (036).  Warnings,
   /// entry_chain, convergence, post_convergence and dose_table all
   /// work the same as severity.
-  differential;
+  differential,
+
+  /// Vertical multi-decision algorithm: a top-to-bottom spine of
+  /// decision "stages", each a decision (prompt + optional criteria)
+  /// with 2+ labelled outcomes. Each outcome either ends in a
+  /// disposition box (a severity-tinted leaf), continues down the
+  /// spine to the next stage, or `goto`s a named shared box (e.g. a
+  /// shared "Treatment" box). Loop-backs render as a labelled
+  /// reference to a named box, NOT a drawn backward arrow — so a
+  /// genuinely branching clinical algorithm lays out cleanly as one
+  /// connected vertical flow with no 2-D graph engine. Used by the
+  /// ProtocolBook's complex algorithms (e.g. Hydrocarbon p.30).
+  algorithm;
 
   static FlowchartVariant fromString(String? s) => switch (s) {
         'severity' => severity,
         'cascade' => cascade,
         'linear' => linear,
         'differential' => differential,
+        'algorithm' => algorithm,
         _ => severity,
       };
 }
@@ -792,6 +805,134 @@ class CascadeFlowchart {
 }
 
 // ─────────────────────────────────────────────────────────────
+// ALGORITHM FLOWCHART (variant: algorithm)
+// ─────────────────────────────────────────────────────────────
+
+/// A content box in an [AlgorithmFlowchart] — either a decision outcome's
+/// result box (a disposition/endpoint or an intermediate step) or a named
+/// shared box referenced by `goto`.
+///
+/// [id] (optional) makes the box referenceable from an outcome's `goto`.
+/// [severity] tints the box using the WHO-IMCI severity palette (pink /
+/// yellow / green); [RowSeverity.none] renders as the plain node fill.
+class AlgoBox {
+  const AlgoBox({
+    this.id,
+    required this.title,
+    this.bullets = const [],
+    this.severity = RowSeverity.none,
+  });
+
+  factory AlgoBox.fromYaml(Map<dynamic, dynamic> map) => AlgoBox(
+        id: map['id'] as String?,
+        title: map['title'] as String,
+        bullets: _stringList(map['bullets']),
+        severity: RowSeverity.fromString(map['severity'] as String?),
+      );
+
+  final String? id;
+  final String title;
+  final List<String> bullets;
+  final RowSeverity severity;
+}
+
+/// One labelled outcome branch of an [AlgoStage] decision.
+///
+/// Exactly one target applies: an inline [box], or a [goto] reference to a
+/// named [AlgorithmFlowchart.boxes] entry by id. [cont] (`continue: true`)
+/// means the flow rejoins the spine and proceeds to the next stage after
+/// this outcome; otherwise the outcome is a terminal leaf (the flow ends
+/// in its box — a disposition).
+class AlgoOutcome {
+  const AlgoOutcome({
+    required this.label,
+    this.box,
+    this.goto,
+    this.cont = false,
+  });
+
+  factory AlgoOutcome.fromYaml(Map<dynamic, dynamic> map) => AlgoOutcome(
+        label: map['label'] as String,
+        box: map['box'] != null ? AlgoBox.fromYaml(map['box'] as Map) : null,
+        goto: map['goto'] as String?,
+        cont: (map['continue'] as bool?) ?? false,
+      );
+
+  final String label;
+  final AlgoBox? box;
+  final String? goto;
+  final bool cont;
+}
+
+/// A decision stage on the vertical spine of an [AlgorithmFlowchart].
+class AlgoStage {
+  const AlgoStage({
+    required this.decision,
+    this.criteria = const [],
+    required this.outcomes,
+  });
+
+  factory AlgoStage.fromYaml(Map<dynamic, dynamic> map) => AlgoStage(
+        decision: map['decision'] as String,
+        criteria: _stringList(map['criteria']),
+        outcomes: [
+          for (final o in (map['outcomes'] as List? ?? const []))
+            AlgoOutcome.fromYaml(o as Map),
+        ],
+      );
+
+  final String decision;
+  final List<String> criteria;
+  final List<AlgoOutcome> outcomes;
+}
+
+/// The parsed body of a `variant: algorithm` flowchart block — a vertical
+/// multi-decision clinical algorithm. See [FlowchartVariant.algorithm].
+class AlgorithmFlowchart {
+  const AlgorithmFlowchart({
+    this.entry,
+    this.boxes = const [],
+    required this.stages,
+    this.terminal,
+  });
+
+  factory AlgorithmFlowchart.fromYaml(Map<dynamic, dynamic> map) =>
+      AlgorithmFlowchart(
+        entry: map['entry'] != null
+            ? FlowNode.fromYaml(map['entry'] as Map)
+            : null,
+        boxes: [
+          for (final b in (map['boxes'] as List? ?? const []))
+            AlgoBox.fromYaml(b as Map),
+        ],
+        stages: [
+          for (final s in (map['stages'] as List? ?? const []))
+            AlgoStage.fromYaml(s as Map),
+        ],
+        terminal: map['terminal'] != null
+            ? AlgoBox.fromYaml(map['terminal'] as Map)
+            : null,
+      );
+
+  final FlowNode? entry;
+  final List<AlgoBox> boxes;
+  final List<AlgoStage> stages;
+  final AlgoBox? terminal;
+
+  /// Resolves an outcome's target box: its inline [AlgoOutcome.box], else
+  /// the named box matching [AlgoOutcome.goto] in [boxes] (null if neither).
+  AlgoBox? boxFor(AlgoOutcome o) {
+    if (o.box != null) return o.box;
+    if (o.goto != null) {
+      for (final b in boxes) {
+        if (b.id == o.goto) return b;
+      }
+    }
+    return null;
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
 // BLOCK HIERARCHY
 // ─────────────────────────────────────────────────────────────
 
@@ -999,6 +1140,7 @@ class FlowchartBlock extends Block {
     this.cascade,
     this.linear,
     this.differential,
+    this.algorithm,
     super.anchor,
     super.ownPaletteArgb,
   });
@@ -1032,6 +1174,12 @@ class FlowchartBlock extends Block {
           anchor: anchor,
           ownPaletteArgb: palette,
         ),
+      FlowchartVariant.algorithm => FlowchartBlock(
+          variant: variant,
+          algorithm: AlgorithmFlowchart.fromYaml(map),
+          anchor: anchor,
+          ownPaletteArgb: palette,
+        ),
     };
   }
 
@@ -1040,6 +1188,7 @@ class FlowchartBlock extends Block {
   final CascadeFlowchart? cascade;
   final LinearFlowchart? linear;
   final DifferentialFlowchart? differential;
+  final AlgorithmFlowchart? algorithm;
 }
 
 // ─────────────────────────────────────────────────────────────

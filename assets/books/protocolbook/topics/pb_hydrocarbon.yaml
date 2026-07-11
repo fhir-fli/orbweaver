@@ -1,0 +1,105 @@
+# ============================================================
+# ProtocolBook p.30 — Hydrocarbon ingestion (kerosene, paraffin).
+#
+# First use of the NEW `algorithm` flowchart variant (Grey's call
+# 2026-07-08): a genuinely branching multi-decision algorithm that
+# must render as ONE connected flowchart (prose would break it), but
+# in a cleaner vertical form than the book's hand-drawn 2-D diagram.
+# The algorithm variant = a top-to-bottom spine of decision stages;
+# each outcome ends in a disposition box, continues down the spine,
+# or `goto`s a named shared box. Loop-backs (asymptomatic → becomes
+# symptomatic → Treatment) are expressed as textual references, not
+# drawn backward arrows.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (present?189, antibiotics190) dropped.
+#   - The book's asymptomatic sub-branch (observe → 6 h CXR → normal
+#     → monitor 24 h / abnormal → treat) is captured in the "observe"
+#     box bullets rather than as its own drawn sub-tree — same logic,
+#     cleaner on a phone.
+#   - "See Convulsion Protocol" is plain text now; will become a
+#     topic: cross-link once the Paediatric Convulsions page (p.42)
+#     is authored.
+#
+# CONTENT FLAG for the later OE / content pass (rendered faithfully):
+#   - "Do NOT start prophylactic antibiotics" — matches current
+#     evidence (antibiotics only for secondary bacterial pneumonia);
+#     steroids likewise not indicated (book doesn't mention). Fine.
+# ============================================================
+
+topic:
+  id: "pb-hydrocarbon"
+  title: "Hydrocarbon Ingestion (Kerosene, Paraffin)"
+  list_subtitle: "p.30 · algorithm"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hydrocarbon", "kerosene", "paraffin", "ingestion", "poisoning", "aspiration"]
+  category: "medical"
+  page_number: 30
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        - More likely in children
+        - Often asymptomatic presentation
+        - Kerosene / aliphatic hydrocarbons — petroleum distillate odor
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Hydrocarbon ingestion"
+        shape: "stadium"
+      boxes:
+        - id: "treat"
+          title: "Treatment"
+          bullets:
+            - "Oxygen"
+            - "Salbutamol (DO NOT use epinephrine)"
+            - "Chest X-ray (CXR)"
+            - "NPO with maintenance IV fluids"
+      stages:
+        - decision: "Any of these present?"
+          criteria:
+            - "Respiratory distress (wheezing, tachypnoea)"
+            - "Convulsions"
+            - "Vomiting"
+            - "Depressed mental status, lethargy, restlessness"
+          outcomes:
+            - label: "Yes — symptomatic"
+              goto: "treat"
+              continue: true
+            - label: "No — asymptomatic"
+              box:
+                title: "Observe"
+                bullets:
+                  - "If symptoms develop in hospital → treat (below)"
+                  - "At 6 h post-ingestion, if still asymptomatic → chest X-ray"
+                  - "CXR normal → monitor 24 h, then discharge if well"
+                  - "CXR abnormal → treat (below)"
+        - decision: "Respiratory distress?"
+          outcomes:
+            - label: "None, or mild / moderate"
+              box:
+                title: "Continue close monitoring of respiratory status"
+              continue: true
+            - label: "Severe, responsive to Rx"
+              box:
+                title: "Continue close monitoring of respiratory status"
+              continue: true
+            - label: "Severe, NOT responsive to Rx"
+              box:
+                title: "Intubate and admit to ICU"
+                severity: "emergency"
+        - decision: "Convulsions?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "See Convulsion Protocol"
+            - label: "No"
+              box:
+                title: "Do NOT start prophylactic antibiotics"
+              continue: true
+      terminal:
+        title: "Discharge"
+        bullets:
+          - "At 24 h, or once respiratory symptoms have resolved, may be discharged home"
