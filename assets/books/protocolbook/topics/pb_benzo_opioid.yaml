@@ -1,0 +1,112 @@
+# ============================================================
+# ProtocolBook p.31 — Benzodiazepine / Opioid ingestion.
+#
+# Two parts on the printed page:
+#   1. A comparison table ("Symptoms Generally Associated With")
+#      contrasting the Opioid vs Benzodiazepine toxidrome, with the
+#      book's ✓ / ✓✓✓ relative-severity marks → a `table` block, glyph
+#      columns centre-aligned. ✓ = sometimes / mild, ✓✓✓ = prominent.
+#   2. A genuine branching decision algorithm (classify by toxidrome →
+#      opioid arm carries a respiratory-failure decision → naloxone;
+#      benzodiazepine arm → flumazenil; every path converges on
+#      supportive care) → the `algorithm` flowchart variant (Grey's
+#      hybrid rule: TRUE decision trees render as real flowcharts).
+#
+# Faithful-rendering calls:
+#   - The source draws both treatment boxes (naloxone, flumazenil) and
+#     the decision's "No" branch all arrowing into one shared
+#     "Supportive care" box at the bottom. The algorithm variant models
+#     that convergence as: supportive care = the spine `terminal`
+#     (reached by the continue paths); the two treatment boxes are
+#     severity-tinted leaves that carry a textual "→ then Supportive
+#     care (below)" pointer instead of a drawn convergence arrow (per
+#     the standing loop-back rule — reference by text, never a back /
+#     cross arrow).
+#
+# CONTENT FLAG for the later OE / content pass (rendered faithfully):
+#   - Flumazenil for benzodiazepine overdose is transcribed as printed
+#     ("if respiratory depression"). In practice flumazenil is
+#     controversial — it can precipitate seizures / withdrawal in
+#     benzo-dependent patients and in mixed (esp. TCA) co-ingestions,
+#     and most guidance reserves it for reversal of iatrogenic
+#     procedural sedation, not undifferentiated overdose. OE to confirm
+#     whether to add a "caution / avoid in mixed ingestion" note.
+#   - Naloxone dosing as printed: big child (>5 yo / >20 kg) 2 mg IV but
+#     adult 0.4 mg IV — the adult starting dose is deliberately low
+#     (titrate-to-effect to avoid precipitated withdrawal); left as
+#     printed, OE to confirm.
+# ============================================================
+
+topic:
+  id: "pb-benzo-opioid"
+  title: "Benzodiazepine / Opioid Ingestion"
+  list_subtitle: "p.31 · toxidrome + algorithm"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["benzodiazepine", "opioid", "ingestion", "poisoning", "overdose", "naloxone", "flumazenil", "toxidrome"]
+  category: "medical"
+  page_number: 31
+
+  blocks:
+
+    - type: "table"
+      title: "Symptoms generally associated with"
+      columns: ["Symptom", "Opioids", "Benzos"]
+      column_align: ["left", "center", "center"]
+      rows:
+        - cells: ["Anterograde amnesia", "✓", "✓✓✓"]
+        - cells: ["Ataxia / incoordination", "✓", "✓✓✓"]
+        - cells: ["Slurred speech", "✓", "✓✓✓"]
+        - cells: ["Confusion", "✓", "✓✓✓"]
+        - cells: ["Stupor / coma", "✓✓✓", "✓"]
+        - cells: ["Respiratory depression", "✓✓✓", "✓"]
+        - cells: ["Miosis", "✓✓✓", "✓"]
+        - cells: ["Nausea / vomiting", "✓✓✓", "✓"]
+
+    - type: "prose"
+      markdown: |
+        **✓** = sometimes / mild · **✓✓✓** = prominent
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Suspected benzodiazepine / opioid ingestion — classify by predominant symptom pattern (see table above)"
+        shape: "stadium"
+      stages:
+        - decision: "Predominant toxidrome?"
+          criteria:
+            - "Opioids → stupor / coma, respiratory depression, miosis, nausea / vomiting predominate"
+            - "Benzodiazepines → anterograde amnesia, ataxia, slurred speech, confusion predominate"
+          outcomes:
+            - label: "Known or more likely benzodiazepine overdose"
+              box:
+                id: "flumazenil"
+                title: "Flumazenil (if respiratory depression)"
+                bullets:
+                  - "Children: 0.01 mg/kg IV, max as per adult"
+                  - "Adults: 0.2 mg IV, may repeat for effect (max 1 mg), max 3 mg/hour"
+                  - "Generally lasts ~1 hour — may need repeat dosing"
+                  - "→ then Supportive care (below)"
+            - label: "Known or more likely opioid overdose"
+              continue: true
+        - decision: "Respirations < 12/min  or  SpO₂ < 90%?"
+          outcomes:
+            - label: "Yes"
+              box:
+                id: "naloxone"
+                title: "Bag-valve mask  +  Naloxone"
+                severity: "emergency"
+                bullets:
+                  - "Children < 5 yo or < 20 kg: 0.1 mg/kg IV"
+                  - "Children > 5 yo or > 20 kg: 2 mg IV"
+                  - "Adults: 0.4 mg IV"
+                  - "May repeat q2–3 min for response"
+                  - "After reversal may need to repeat 20–60 minutes later"
+                  - "Admit to ICU"
+                  - "→ then Supportive care (below)"
+            - label: "No"
+              continue: true
+      terminal:
+        title: "Supportive care"
+        bullets:
+          - "Pay specific attention to respiratory status"
+          - "Duration depends on agent ingested"

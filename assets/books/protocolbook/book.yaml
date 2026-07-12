@@ -41,6 +41,7 @@ book:
         - topic: "topics/pb_poisoning_ingestion.yaml"
         - topic: "topics/pb_organophosphate.yaml"
         - topic: "topics/pb_hydrocarbon.yaml"
+        - topic: "topics/pb_benzo_opioid.yaml"
     - title: "Paediatric Protocols"
       palette:
         accent: "0xFF2E7D32"
