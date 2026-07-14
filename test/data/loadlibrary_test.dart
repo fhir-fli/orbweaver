@@ -8,12 +8,12 @@ import 'package:orbweaver/data/library.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('loadLibrary: protocolbook loads all 24 topics incl. CIWA-Ar',
+  test('loadLibrary: protocolbook loads all 25 topics incl. Anaphylaxis',
       () async {
     final books = await loadLibrary();
     final pb = books.firstWhere((b) => b.id == 'protocolbook');
     final titles = pb.allTopics.map((t) => t.title).toList();
-    expect(titles, hasLength(24));
+    expect(titles, hasLength(25));
     expect(
       titles,
       contains('Hydrocarbon Ingestion (Kerosene, Paraffin)'),
@@ -37,6 +37,10 @@ void main() {
     expect(
       titles,
       contains('CIWA-Ar Scale'),
+    );
+    expect(
+      titles,
+      contains('Anaphylaxis'),
     );
   });
 }

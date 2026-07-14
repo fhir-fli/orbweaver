@@ -1,0 +1,112 @@
+# ============================================================
+# ProtocolBook p.37 — Anaphylaxis.
+#
+# Hybrid-rule split: everything above "Wheezing?" on the printed
+# chart is a LINEAR flow with no branch points (symptoms → 3
+# diagnostic-criteria boxes feeding "any of the 3" → epinephrine →
+# 5-item management box), so that half is titled prose with the
+# epinephrine action as a red-alert callout.  The true decision
+# tail (Wheezing? → treat as asthma; Hypotension? → IV fluids;
+# → adjunctive treatment) is an `algorithm` flowchart; the
+# adjunctive box is the spine terminal (every path receives it).
+#
+# Faithful-rendering calls:
+#   - Criteria 1 ends with a stray unmatched ")" in the source —
+#     dropped (typo, no content).
+#   - "Treat as asthma exacerbation" is plain text for now; becomes a
+#     topic: cross-link once the Wheezing/Asthma pages (~p.53) are
+#     authored (same deferral as p.30's convulsion pointer).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - RANITIDINE (H2 blocker) was withdrawn in many markets (2020,
+#     NDMA impurity); famotidine is the usual substitute where H2
+#     blockade is used at all. Availability varies in LMIC — OE to
+#     decide "where available" framing vs substitution.
+#   - Epinephrine max dose printed 0.3 mL (of 1 mg/mL): current
+#     guidance allows up to 0.5 mg for adults/adolescents; 0.3 mg is
+#     the paediatric cap. OE to confirm.
+#   - Diagnostic criteria are the classic NIAID/FAAN set — current.
+# ============================================================
+
+topic:
+  id: "pb-anaphylaxis"
+  title: "Anaphylaxis"
+  list_subtitle: "p.37 · criteria + epinephrine"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["anaphylaxis", "allergy", "allergic reaction", "epinephrine", "adrenaline", "angioedema", "hives", "hypotension"]
+  category: "medical"
+  page_number: 37
+
+  blocks:
+
+    - type: "prose"
+      title: "Common symptoms"
+      markdown: |
+        - **Mucocutaneous:** angioedema, hives, pruritis, flushing
+        - **Respiratory:** dyspnea, wheezing, stridor, hypoxia
+        - **GI:** nausea/vomiting/diarrhea/abdominal cramping
+        - **End-organ dysfunction:** syncope, hypotonia
+
+    - type: "prose"
+      title: "Diagnostic criteria — any of the 3 → epinephrine"
+      markdown: |
+        - **Criteria 1:** Acute skin/mucosal tissue signs + 1 of the following: Respiratory compromise, Hypotension, OR Signs of end-organ dysfunction
+        - **Criteria 2:** Rapid onset after likely antigen exposure of 2 of the following: Mucocutaneous signs, Respiratory symptoms, Hypotension, OR GI symptoms
+        - **Criteria 3:** Hypotension after exposure to known allergen
+          - Adults SBP <90
+          - Children age 11–17: SBP <90
+          - Children age 1–10: SBP <(70 + [age x 2])
+          - Children age 1 month to 1 year: SBP <70
+          - Term neonate: SBP <60
+
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "Epinephrine (1mg/1ml 1:1000)"
+      markdown: |
+        - 0.01mL/kg (max dose 0.3mL)
+        - IM anterolateral thigh
+        - Repeat q5–15 minutes if no improvement
+
+    - type: "prose"
+      title: "Initial management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
+        - Assess GCS, hydration status
+        - Insert 2 IVs, Start Oxygen if spO2 <94%
+        - Draw CBC, malaria, and blood glucose
+
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+        - decision: "Wheezing and/or shortness of breath?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat as asthma exacerbation"
+              continue: true
+            - label: "No"
+              continue: true
+        - decision: "Hypotension?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "IV fluids — NS or RL"
+                bullets:
+                  - "Children: 30mL/kg in first hour"
+                  - "Adults: 1–2L, 5–10mL/kg in first 5 min"
+                  - "May try recumbent positioning or vasopressors prn"
+                severity: "priority"
+              continue: true
+            - label: "No"
+              continue: true
+      terminal:
+        title: "Adjunctive treatment"
+        bullets:
+          - "H1 receptor blocker: Diphenhydramine 1mg/kg IV or PO, max dose 50mg"
+          - "H2 receptor blocker: Ranitidine 1mg/kg IM/slow IV (max 50mg) or 4mg/kg PO (max 150mg)"
+          - "Steroids: Hydrocortisone 5mg/kg IM/slow IV (max 200mg)"
