@@ -1,0 +1,87 @@
+# ============================================================
+# ProtocolBook p.34 — Alcohol Intoxication.
+#
+# The printed page is a vertical sequence of four boxes joined by
+# arrows with NO decision points (criteria → management → further
+# management → "concern for more?" work-up) → a content-flow
+# diagram, so per Grey's standing hybrid rule (2026-07-08) it is
+# rendered as titled prose sections in the same top-to-bottom
+# order, NOT as a flowchart.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (criteria 191, management 27) dropped.
+#   - The diagnostic criteria are numbered 1–3 in the source and the
+#     numbering is semantic (all three must be met), so the numbers
+#     are kept inline as bold leads (MiniMarkdown has no
+#     auto-numbering).
+#   - Criterion 3's six signs are printed as a 2-column space-saving
+#     grid with no header taxonomy; flattened to bullets (the column
+#     split carries no clinical meaning).  The merged bottom row
+#     ("Symptoms not caused by other medical conditions or mental
+#     disorders") kept as a bold caveat line.
+#   - The source's second management box re-starts at "4. Management"
+#     although the first management box already ends with item 4 — a
+#     layout/numbering quirk; both boxes merged into one titled
+#     Management section preserving item order, duplicate "4." label
+#     dropped.
+#   - "Follow altered mental status protocol" is now a live
+#     topic: cross-link to pb-altered-mental-status (pp.25–26,
+#     authored 2026-07-08).
+# ============================================================
+
+topic:
+  id: "pb-alcohol-intoxication"
+  title: "Alcohol Intoxication"
+  list_subtitle: "p.34 · criteria + management"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["alcohol", "ethanol", "intoxication", "ingestion", "poisoning", "altered mental status"]
+  category: "medical"
+  page_number: 34
+
+  blocks:
+
+    - type: "prose"
+      callout: true
+      markdown: |
+        **Always ensure no other causes of alteration before attributing symptoms solely to alcohol** (especially trauma or other ingestion)
+
+    - type: "prose"
+      title: "Diagnostic criteria for acute alcohol intoxication"
+      markdown: |
+        - **1.** Recent alcohol ingestion
+        - **2.** Maladaptive behavior or psychological changes
+          - Sexual or aggressive behavior
+          - Unstable mood
+          - Impaired judgement
+          - Impaired social or occupational functioning
+        - **3.** ≥1 of the following during/shortly after ingestion
+          - Slurred speech
+          - Unsteady gait
+          - Lack of coordination
+          - Stupor/coma
+          - Nystagmus
+          - Impaired attention/memory
+
+        **Symptoms not caused by other medical conditions or mental disorders**
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
+        - Assess GCS, hydration status
+        - Insert 2 IVs, Start Oxygen if spO2 <94%
+        - Lateral position
+        - Monitor for vomiting/aspiration
+        - IV hydration if necessary
+
+    - type: "prose"
+      title: "Concern for more than solely alcohol intoxication?"
+      markdown: |
+        - Follow [altered mental status protocol](topic:pb-altered-mental-status)
+        - Consider tests for disorders related to alcohol or with a similar presentation
+          - Glucose
+          - BMP
+          - Magnesium
+          - Lipase
+          - Liver functions

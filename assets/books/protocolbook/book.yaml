@@ -43,6 +43,7 @@ book:
         - topic: "topics/pb_hydrocarbon.yaml"
         - topic: "topics/pb_benzo_opioid.yaml"
         - topic: "topics/pb_paracetamol.yaml"
+        - topic: "topics/pb_alcohol_intoxication.yaml"
     - title: "Paediatric Protocols"
       palette:
         accent: "0xFF2E7D32"
