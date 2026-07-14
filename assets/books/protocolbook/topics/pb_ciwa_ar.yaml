@@ -1,0 +1,172 @@
+# ============================================================
+# ProtocolBook p.36 — CIWA-Ar Scale (Clinical Institute Withdrawal
+# Assessment — Alcohol, revised).
+#
+# The printed page is a 2-column grid of ten 0–7 (orientation 0–4)
+# anchored scoring items.  The 2-column arrangement is pure
+# space-saving; rendered as ten small Score|Finding tables stacked
+# in the book's reading order (left-to-right, top-to-bottom:
+# Headache, Tremor, Nausea/Vomiting, Anxiety, Paroxysmal sweats,
+# Orientation, Agitation, Auditory, Tactile, Visual).
+#
+# Faithful-rendering calls:
+#   - The source leaves intermediate severities (2, 3, 5, 6 on most
+#     items) unanchored — the clinician interpolates.  Those rows are
+#     kept with an em-dash "—" finding (the established no-value-cell
+#     convention), mirroring the printed blanks.
+#   - No total-score interpretation is printed on this page (the ≥10
+#     treatment threshold lives in the p.35 flowchart) — none added.
+#   - Companion page to Alcohol Withdrawal (p.35); linked both ways.
+# ============================================================
+
+topic:
+  id: "pb-ciwa-ar"
+  title: "CIWA-Ar Scale"
+  list_subtitle: "p.36 · withdrawal scoring"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ciwa", "ciwa-ar", "alcohol", "withdrawal", "score", "scale", "delirium tremens"]
+  category: "medical"
+  page_number: 36
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Clinical Institute Withdrawal Assessment — Alcohol, revised. Score each of the 10 items; used to guide treatment in [alcohol withdrawal](topic:pb-alcohol-withdrawal) (treat if total ≥10). Unanchored scores (—) are intermediate severities between the described ones.
+
+    - type: "table"
+      title: "Headache"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "not present"]
+        - cells: ["1", "very mild"]
+        - cells: ["2", "mild"]
+        - cells: ["3", "moderate"]
+        - cells: ["4", "moderately severe"]
+        - cells: ["5", "severe"]
+        - cells: ["6", "very severe"]
+        - cells: ["7", "extremely severe"]
+
+    - type: "table"
+      title: "Tremor"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "no tremor"]
+        - cells: ["1", "not visible, can be felt at fingertips"]
+        - cells: ["2", "—"]
+        - cells: ["3", "—"]
+        - cells: ["4", "moderate when arms extended"]
+        - cells: ["5", "—"]
+        - cells: ["6", "—"]
+        - cells: ["7", "severe, even without arms extended"]
+
+    - type: "table"
+      title: "Nausea and vomiting"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "no nausea and no vomiting"]
+        - cells: ["1", "—"]
+        - cells: ["2", "—"]
+        - cells: ["3", "—"]
+        - cells: ["4", "intermittent nausea w/ dry heaves"]
+        - cells: ["5", "—"]
+        - cells: ["6", "—"]
+        - cells: ["7", "constant nausea, frequent dry heaves and vomiting"]
+
+    - type: "table"
+      title: "Anxiety"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "no anxiety, at ease"]
+        - cells: ["1", "—"]
+        - cells: ["2", "—"]
+        - cells: ["3", "—"]
+        - cells: ["4", "moderately anxious, or guarded"]
+        - cells: ["5", "—"]
+        - cells: ["6", "—"]
+        - cells: ["7", "acute panic states similar to severe delirium or acute schizophrenia"]
+
+    - type: "table"
+      title: "Paroxysmal sweats"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "no sweat visible"]
+        - cells: ["1", "barely sweating, palms moist"]
+        - cells: ["2", "—"]
+        - cells: ["3", "—"]
+        - cells: ["4", "obvious sweat on forehead"]
+        - cells: ["5", "—"]
+        - cells: ["6", "—"]
+        - cells: ["7", "drenching sweats"]
+
+    - type: "table"
+      title: "Orientation and clouding of sensorium"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "oriented and can do serial additions (add by 7s)"]
+        - cells: ["1", "cannot do serial additions"]
+        - cells: ["2", "disoriented for date by ≤2 calendar days"]
+        - cells: ["3", "disoriented for date by >2 days"]
+        - cells: ["4", "disoriented for place and/or person"]
+
+    - type: "table"
+      title: "Agitation"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "normal activity"]
+        - cells: ["1", "more than normal activity"]
+        - cells: ["2", "—"]
+        - cells: ["3", "—"]
+        - cells: ["4", "moderately fidgety and restless"]
+        - cells: ["5", "—"]
+        - cells: ["6", "—"]
+        - cells: ["7", "constantly paces or thrashes about"]
+
+    - type: "table"
+      title: "Auditory disturbances"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "not present"]
+        - cells: ["1", "very mild harshness/ability to frighten"]
+        - cells: ["2", "mild harshness or ability to frighten"]
+        - cells: ["3", "moderate harshness/ability to frighten"]
+        - cells: ["4", "moderately severe hallucinations"]
+        - cells: ["5", "severe hallucinations"]
+        - cells: ["6", "extremely severe hallucinations"]
+        - cells: ["7", "continuous hallucinations"]
+
+    - type: "table"
+      title: "Tactile disturbances"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "none"]
+        - cells: ["1", "very mild paresthesias"]
+        - cells: ["2", "mild paresthesias"]
+        - cells: ["3", "moderate paresthesias"]
+        - cells: ["4", "moderately severe hallucinations"]
+        - cells: ["5", "severe hallucinations"]
+        - cells: ["6", "extremely severe hallucinations"]
+        - cells: ["7", "continuous hallucinations"]
+
+    - type: "table"
+      title: "Visual disturbances"
+      columns: ["Score", "Finding"]
+      column_flex: [1, 6]
+      rows:
+        - cells: ["0", "not present"]
+        - cells: ["1", "very mild photosensitivity"]
+        - cells: ["2", "mild photosensitivity"]
+        - cells: ["3", "moderate photosensitivity"]
+        - cells: ["4", "moderately severe visual hallucinations"]
+        - cells: ["5", "severe visual hallucinations"]
+        - cells: ["6", "extremely severe visual hallucinations"]
+        - cells: ["7", "continuous visual hallucinations"]

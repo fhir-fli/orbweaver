@@ -1,0 +1,116 @@
+# ============================================================
+# ProtocolBook p.35 — Alcohol Withdrawal.
+#
+# Top half = definition + a formal stages outline (Stage 1 minor
+# symptoms → Stage 2 alcoholic hallucinosis → Stage 3 withdrawal
+# seizures → Stage 4 delirium tremens).  Bottom half = a TRUE
+# decision flowchart (Wernicke concern? → thiamine; CIWA-Ar ≥10? →
+# lorazepam, with BOTH branches looping back to re-scoring) → the
+# `algorithm` variant per the hybrid rule.
+#
+# Faithful-rendering calls:
+#   - Citation superscript (management 27) dropped.
+#   - Stage numbering is semantic (temporal sequence) → kept as bold
+#     "Stage N" leads; the a/b sub-labels dropped (indentation).
+#   - The management box (monitor/vitals/GCS/IVs) precedes the first
+#     decision on the printed chart; rendered as the flowchart
+#     `entry`-adjacent titled prose section above it (same order).
+#   - The two reevaluate loop-backs (q5–10 min after lorazepam,
+#     q15–30 min if <10) are textual "→ recalculate CIWA-Ar" pointers
+#     per the standing no-drawn-back-arrow rule; both branches carry
+#     (continue ↓) to the once-stable wean terminal, mirroring the
+#     book's single down-arrow to that box.
+#   - Flowchart boxes are plain text (no links) → the CIWA-Ar scale
+#     cross-link lives in the prose line above the chart; the scale
+#     (p.36) links back.  Final "concern for more?" box rendered as a
+#     titled prose section (as on p.34) with the live altered-mental-
+#     status link.
+#
+# ⚠️ GENUINE SOURCE TYPO corrected (surfaced to Grey 2026-07-13):
+#   - Stage 4 printed "delirium trements" — spelling typo for
+#     "delirium tremens" (verified on the 300 dpi render).  Corrected
+#     here (searchability matters); source PDF should be fixed too.
+# ============================================================
+
+topic:
+  id: "pb-alcohol-withdrawal"
+  title: "Alcohol Withdrawal"
+  list_subtitle: "p.35 · stages + CIWA-Ar algorithm"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["alcohol", "ethanol", "withdrawal", "delirium tremens", "seizure", "ciwa", "lorazepam", "thiamine", "wernicke"]
+  category: "medical"
+  page_number: 35
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Occurs when a patient stops drinking alcohol after a period of drinking large amounts over a prolonged time.
+
+    - type: "prose"
+      title: "Stages"
+      markdown: |
+        Not all patients have all stages, stages may not go in order.
+
+        - **Stage 1 — minor symptoms**
+          - 6–12 hours after stopping
+          - Tremors, agitation, lack of appetite, nausea, vomiting, anxiety, sweating, restlessness
+        - **Stage 2 — alcoholic hallucinosis**
+          - 12–24 hours after stopping
+          - Hallucinations may occur
+        - **Stage 3 — withdrawal seizures**
+          - 24–48 hours after stopping (occasionally sooner)
+          - Usually tonic-clonic
+        - **Stage 4 — delirium tremens**
+          - 3–7 days after stopping (up to 14 days after)
+          - Hallucinations (usually visual), confusion, tachycardia, hypertension, agitation, sweating
+
+    - type: "prose"
+      title: "Management of alcohol withdrawal"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
+        - Assess GCS, hydration status
+        - Insert 2 IVs, Start Oxygen if spO2 <94%
+
+        Score withdrawal severity with the [CIWA-Ar Scale](topic:pb-ciwa-ar) (next page).
+
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+        - decision: "Concern for Wernicke's encephalopathy (ataxia / ophthalmoplegia), or patient appears severely malnourished?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Thiamine 100mg IV (if available)"
+              continue: true
+            - label: "No"
+              continue: true
+        - decision: "CIWA-Ar ≥ 10?"
+          criteria:
+            - "Calculate CIWA-Ar Score: Clinical Institute Withdrawal Assessment — Alcohol, revised (see above link)"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Lorazepam 2mg IV"
+                bullets:
+                  - "Reevaluate q5–10 min → recalculate CIWA-Ar"
+                severity: "priority"
+              continue: true
+            - label: "No"
+              box:
+                title: "Reevaluate q15–30 min"
+                bullets:
+                  - "→ recalculate CIWA-Ar"
+              continue: true
+      terminal:
+        title: "Continue to monitor"
+        bullets:
+          - "Once stable begin to wean Lorazepam 2mg IV to q2–4hrs prn"
+
+    - type: "prose"
+      title: "Concern for more than solely alcohol intoxication?"
+      markdown: |
+        - Follow [altered mental status protocol](topic:pb-altered-mental-status)
+        - Possible tests for disorders related to alcohol or with a similar presentation
+          - BMP, Magnesium, Liver Functions, Lipase
