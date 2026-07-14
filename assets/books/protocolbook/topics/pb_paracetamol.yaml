@@ -1,0 +1,177 @@
+# ============================================================
+# ProtocolBook pp.32–33 — Paracetamol / Acetaminophen toxicity.
+# Two-page topic (multi-page `pages:`).
+#
+# p.32 is a formal outline (Populations / Inappropriate dosing /
+# Risk factors / Phases 1–4 / mental-status note) + the "Possibly
+# Toxic Dosages" table (0–6 y vs >6 y, acute single ingestion vs
+# repeated supratherapeutic ingestion).  p.33 is the management
+# algorithm: a TRUE decision flowchart (possible toxic dose? →
+# charcoal in children → branch on time since ingestion) → the
+# `algorithm` flowchart variant per Grey's hybrid rule, converging
+# on the Rumack-Matthew nomogram (shipped as an image asset,
+# images/pb_paracetamol_nomogram.png, cropped from the source PDF
+# at 300 dpi) and the NAC dosing table.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (Phases 89–92, dosages 93, management 94,
+#     NAC 89) dropped, as on every previous page.
+#   - Outline Roman/letter labels dropped; hierarchy carried by
+#     nested-bullet indentation (standing rule).
+#   - Risk-factor co-ingestion list had a stray unmatched ")" in the
+#     source — dropped (pure typo, no content).
+#   - The RSTI row of the dosages table spans three time-window
+#     criteria in the source; rendered as three table rows with the
+#     RSTI label on the first and "" continuation cells.
+#   - NAC table footnote markers (*, +) folded into a plain prose
+#     footnote (single "*" is the MiniMarkdown literal-star bug, and
+#     both footnotes apply to the whole table anyway).
+#   - The three time-since-ingestion arms converge on the nomogram in
+#     the source; modelled as textual "→ plot level on nomogram
+#     (below)" pointers per the standing no-drawn-convergence rule.
+#
+# ⚠️ GENUINE SOURCE ERROR corrected (SURFACED TO GREY 2026-07-13):
+#   - NAC loading dose, >40 kg row: the book prints "150mL/kg in
+#     200mL diluent" — a unit typo, self-contradictory as printed
+#     (150 mL/kg of drug "in 200 mL diluent" is impossible).  The
+#     standard adult IV-NAC load is 150 mg/kg in 200 mL over 1 hr,
+#     matching the other two weight rows.  Rendered as **mg/kg**.
+#     Grey should fix the source PDF too.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Nomogram y-axis has no units printed in the source (µg/mL is
+#     the convention; treatment line = 150 µg/mL at 4 h).  OE pass may
+#     want a units note; not added now (faithful render).
+#   - "DW" in the NAC diluent footnote transcribed as printed
+#     (presumably dextrose in water / D5W); OE to confirm phrasing.
+#   - 21-h three-bag IV-NAC regimen (150/50/100 mg/kg) is current
+#     standard; loading over 1 h current.  Fine.
+# ============================================================
+
+topic:
+  id: "pb-paracetamol"
+  title: "Paracetamol / Acetaminophen Toxicity"
+  list_subtitle: "pp.32–33 · phases, nomogram + NAC"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["paracetamol", "acetaminophen", "tylenol", "panadol", "ingestion", "poisoning", "overdose", "NAC", "acetylcysteine", "nomogram", "rumack", "hepatotoxicity", "liver"]
+  category: "medical"
+  page_number: 32
+
+  pages:
+
+    # ═══════════════════════ PAGE 32 ═══════════════════════
+    - page_number: 32
+      blocks:
+
+        - type: "prose"
+          title: "Populations"
+          markdown: |
+            - **Children:** usually accidental ingestion
+            - **Older children / adolescents / adults:** more likely purposeful ingestion
+
+        - type: "prose"
+          title: "Inappropriate dosing from"
+          markdown: |
+            - Adult doses given to children
+            - Unclear understanding of liquid dosages
+            - Additional doses when parents feel first dose wasn't effective
+            - Consuming multiple products containing acetaminophen (Tylenol, Panadol, acetaminophen, paracetamol, cough/cold medications - Pyridex, antacids, headache medications)
+
+        - type: "prose"
+          title: "Risk factors"
+          markdown: |
+            - <2 years & dose of 90mg/kg/day acetaminophen or multiple adult doses
+            - Chronic alcohol abuse
+            - Co-ingestion with: rifampin, isoniazid, co-trimoxazole, zidovudine, barbiturates, carbamazepine
+            - Comorbid conditions: prolonged fasting, prolonged vomiting/diarrhea, eating disorders, malnutrition, malignancy, HIV/AIDS
+
+        - type: "prose"
+          title: "Phases"
+          markdown: |
+            - **Phase 1: ≤24 hours after ingestion**
+              - Nonspecific sxs: nausea, vomiting, abdominal pain, anorexia, lethargy, diaphoresis, and malaise
+            - **Phase 2: 24–72 hours after ingestion**
+              - Increased hepatotoxic risk if presenting >24 hrs after ingestion
+              - Sxs may improve or disappear
+              - Lab abnormalities appear: ↑AST, ALT, bilirubin, PT/INR
+              - Possible RUQ pain or hepatomegaly
+            - **Phase 3: 72–96 hours after ingestion**
+              - Death of hepatocytes and timing of peak liver injury
+              - Nausea and vomiting reappear or worsen
+              - Malaise, jaundice, coagulopathy, encephalopathy, & CNS symptoms (for example, confusion, somnolence, coma) may also be present
+            - **Phase 4: 96 hours–14 days after ingestion**
+              - May start improving, full recovery within 3 mos
+              - May progress to multiorgan failure & death
+
+        - type: "prose"
+          markdown: |
+            Mental status typically normal in first 48 hrs after overdose, unless affected by co-ingestion.
+
+        - type: "table"
+          title: "Possibly toxic dosages"
+          columns: ["Ingestion", "0–6 years", ">6 years"]
+          rows:
+            - cells: ["**Acute single ingestion**", "≥200mg/kg in <8 hrs", "≥10g or 200mg/kg (whichever is lower) in <8 hrs"]
+            - cells: ["**Repeated supratherapeutic ingestion (RSTI)**", "≥200mg/kg in <24 hrs", "≥10g or 200mg/kg (whichever is lower) in <24 hrs"]
+            - cells: ["", "≥150mg/kg/day x 48hrs", "≥6g or 150mg/kg (whichever is lower) per day x 48 hrs"]
+            - cells: ["", "≥100mg/kg/day x 72 hrs", "≥4g/day or 100mg/kg (whichever is less) with above risk factor"]
+
+    # ═══════════════════════ PAGE 33 ═══════════════════════
+    - page_number: 33
+      blocks:
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            Assess against the possibly-toxic-dosages table above.
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "Possible toxic dose?"
+              outcomes:
+                - label: "No"
+                  box:
+                    title: "No Rx necessary"
+                - label: "Yes"
+                  box:
+                    title: "In children, may consider activated charcoal, if KNOWN ingestion of >150mg/kg"
+                  continue: true
+            - decision: "Time since ingestion?"
+              outcomes:
+                - label: "<4 hrs post ingestion"
+                  box:
+                    title: "Paracetamol level at 4 hrs"
+                    bullets:
+                      - "→ plot level on nomogram (below)"
+                - label: "4–8 hrs post ingestion"
+                  box:
+                    title: "Immediate paracetamol level"
+                    bullets:
+                      - "→ plot level on nomogram (below)"
+                - label: ">8 hrs"
+                  box:
+                    title: "Rx with NAC; immediate paracetamol level and ALT"
+                    bullets:
+                      - "→ plot level on nomogram (below)"
+                    severity: "priority"
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_paracetamol_nomogram.png"
+          size: "full"
+          caption: "Rumack-Matthew nomogram — acetaminophen plasma concentration vs hours postingestion. Treatment should be administered if level is above the solid (treatment) line."
+
+        - type: "table"
+          title: "N-acetylcysteine (NAC) proper dosing"
+          layout: "scroll"
+          columns: ["Wt", "Loading dose", "Maintenance dose 1", "Maintenance dose 2"]
+          column_widths: [64, 110, 110, 110]
+          rows:
+            - cells: ["**<20kg**", "150mg/kg into 3mL/kg diluent over 1 hr", "50mg/kg in 7mL/kg diluent over 4 hrs", "100mg/kg in 14mL/kg diluent over 16 hrs"]
+            - cells: ["**20–40kg**", "150mg/kg into 100mL diluent over 1 hr", "50mg/kg into 250mL diluent over 4 hrs", "100mg/kg into 500mL diluent over 16 hrs"]
+            - cells: ["**>40kg**", "150mg/kg in 200mL diluent over 1 hr", "50mg/kg into 500mL diluent over 4 hrs", "100mg/kg into 1L diluent over 16 hrs"]
+
+        - type: "prose"
+          markdown: |
+            - Diluent may be DW, ½NS or sterile water
+            - If wt >100kg, Rx as per 100kg

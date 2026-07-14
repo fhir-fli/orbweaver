@@ -374,8 +374,8 @@ void main() {
       expect(leafCount(contents), 47);
     });
 
-    test('protocolbook: section groups (Emergency 15, Ingestions 4, '
-        'Paediatric 1 = 20 leaves)', () {
+    test('protocolbook: section groups (Emergency 15, Ingestions 5, '
+        'Paediatric 1 = 21 leaves)', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
@@ -397,7 +397,7 @@ void main() {
       expect((emergency[14] as YamlMap)['topic'],
           'topics/pb_altered_mental_status.yaml');
       final ingestions = (contents[1] as YamlMap)['children'] as YamlList;
-      expect(ingestions, hasLength(4));
+      expect(ingestions, hasLength(5));
       expect((ingestions[0] as YamlMap)['topic'],
           'topics/pb_poisoning_ingestion.yaml');
       expect((ingestions[1] as YamlMap)['topic'],
@@ -406,7 +406,9 @@ void main() {
           'topics/pb_hydrocarbon.yaml');
       expect((ingestions[3] as YamlMap)['topic'],
           'topics/pb_benzo_opioid.yaml');
-      expect(leafCount(contents), 20);
+      expect((ingestions[4] as YamlMap)['topic'],
+          'topics/pb_paracetamol.yaml');
+      expect(leafCount(contents), 21);
     });
   });
 }
