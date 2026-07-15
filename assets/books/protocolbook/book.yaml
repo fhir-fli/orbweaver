@@ -48,6 +48,7 @@ book:
         - topic: "topics/pb_ciwa_ar.yaml"
         - topic: "topics/pb_anaphylaxis.yaml"
         - topic: "topics/pb_animal_bite.yaml"
+        - topic: "topics/pb_snake_bite.yaml"
     - title: "Paediatric Protocols"
       palette:
         accent: "0xFF2E7D32"

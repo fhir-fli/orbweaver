@@ -1,0 +1,119 @@
+# ============================================================
+# ProtocolBook p.39 — Suspected Snake bite.
+#
+# Hybrid-rule split: the linear pre-decision flow (management box,
+# side physical-exam box, immobilize DO-NOTs, labs) is titled prose
+# (immobilize block = red-alert callout — it is all safety DO-NOTs);
+# the true decision tree (Has envenomation occurred? no/suspected/
+# yes → syndrome severe enough for antivenom?) is an `algorithm`
+# flowchart. The shared "admit overnight for observation" box is a
+# named `boxes:` target, goto-referenced from BOTH the "Suspected"
+# outcome and the not-severe-enough "No" outcome (the book draws
+# both arrows into one box).
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (title/exam 95, management 27, syndrome
+#     3,95) dropped.
+#   - "Skin marks BUT no symptoms" is the condition on the box in
+#     print; carried as the outcome LABEL so the shared box works
+#     from both references.
+#
+# ⚠️ GENUINE SOURCE TYPOS corrected (surfaced to Grey 2026-07-14):
+#   - "DO NOTE treat with ice" → "DO NOT treat with ice" (ice is
+#     contraindicated in snakebite; the line sits in a DO-NOT list —
+#     verified on the 300 dpi render).
+#   - "Consider the follow labs" → "following labs".
+#   - "effected limb" (×2) → "affected limb".
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Snake Venom Detection Kit (SVDK) is an Australia-specific
+#     product; already framed "if available" — fine, OE may localise.
+#   - Plain immobilization without tourniquet matches WHO guidance
+#     for viper-predominant regions (pressure-immobilization bandage
+#     is elapid/Australia practice) — fine as printed.
+# ============================================================
+
+topic:
+  id: "pb-snake-bite"
+  title: "Suspected Snake Bite"
+  list_subtitle: "p.39 · envenomation + antivenom"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["snake", "snake bite", "envenomation", "antivenom", "viper", "cobra", "bite"]
+  category: "medical"
+  page_number: 39
+
+  blocks:
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (BP, PR, RR, spO2, Temp)
+        - Start Oxygen if spO2 <94%
+        - Perform brief, targeted history, physical exam
+
+    - type: "prose"
+      title: "Physical exam"
+      markdown: |
+        - **Airway** — check for hypersalivation and ability to clear secretions
+        - **Breathing** — watch for respiratory muscle weakness
+        - **Bleeding** — monitor for unusual bleeding (haematuria/oozing from wounds)
+        - **Neuro** — full exam including cranial nerves
+        - **Neurovascular status** of limb, swelling, necrosis
+
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "Immobilize body part"
+      markdown: |
+        - **DO NOT** apply tourniquet
+        - **DO NOT** incise wound
+        - **DO NOT** administer antivenom outside of hospital
+        - **DO NOT** treat with ice
+
+    - type: "prose"
+      title: "Consider the following labs"
+      markdown: |
+        - CBC, CMP, PT/INR, PTT, FDP/d-dimer, CPK
+        - Swab bite area, Snake Venom Detection Kit (SVDK) to be used if available and clinical/lab evidence for envenoming
+
+    - type: "flowchart"
+      variant: "algorithm"
+      boxes:
+        - id: "observe"
+          title: "Admit overnight for observation"
+          bullets:
+            - "Elevate affected limb"
+            - "If no new symptoms, discharge next day"
+      stages:
+        - decision: "Has envenomation occurred?"
+          outcomes:
+            - label: "No — no skin marks, no symptoms an hour post-bite"
+              box:
+                title: "Discharge"
+                bullets:
+                  - "Instruct to return if symptoms develop"
+                severity: "non_urgent"
+            - label: "Suspected — skin marks BUT no symptoms"
+              goto: "observe"
+            - label: "Yes — obvious bite marks and/or symptomatic"
+              continue: true
+        - decision: "What type of envenomation syndrome? Severe enough to warrant antivenom?"
+          outcomes:
+            - label: "No"
+              goto: "observe"
+            - label: "Yes"
+              box:
+                title: "Antivenom administration"
+                bullets:
+                  - "Dilute antivenom in NS (no more than 20mL/500mL bag), give slowly over 30 mins or no more than 1–2mL/min"
+                  - "Polyvalent: titrate to symptoms, assess q30min"
+                  - "Monovalent: monitor haematologic response, repeat dose if needed"
+                  - "Epinephrine ready in case of anaphylaxis: Epinephrine (1mg/1ml 1:1000), 0.01mL/kg (max dose 0.3mL), IM anterolateral thigh, repeat q5–15 minutes if no improvement"
+                  - "Antihistamine: have available, not routinely recommended"
+                  - "Monitor Vital Signs"
+                  - "Never run medications directly into affected limb"
+                severity: "emergency"
