@@ -1,0 +1,108 @@
+# ============================================================
+# ProtocolBook p.42 — Treatment of Paediatric convulsions.
+# First page of the Paediatric Protocols section (divider p.41
+# skipped per the standing divider rule).
+#
+# A genuinely nested decision tree in print. Linearised onto the
+# `algorithm` spine:
+#   - Stage 1 (age >1 month + convulsing >5 min OR presents
+#     convulsing?): Yes → first-line box (ABC/O2/diazepam/dextrose),
+#     continue; No → the printed side-question ("3rd convulsion
+#     lasting <5 mins in <2 hours?") collapsed into a leaf box whose
+#     bullets carry its two answers textually (No → observe; Yes →
+#     phenobarbitone below) plus the * footnote — a sub-decision off
+#     the spine, expressed per the standing textual-reference rule.
+#   - Stages 2 & 3 ("Convulsion stops after 5 more minutes?"): Yes →
+#     shared "observe" box (named `boxes:` target, goto from both —
+#     the book prints the identical Check-ABC/Observe/Investigate box
+#     twice); No → repeat-diazepam box, continue → phenobarbitone
+#     terminal.
+#   - The neonate rule (phenobarbitone only, NO diazepam) heads the
+#     printed page in italics → red-alert callout.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (title 1,16) dropped.
+#   - The book's item numbering continues across boxes (first box
+#     starts at "3)") — the numbers are a layout artifact of the
+#     printed chart; dropped, order preserved.
+#   - Suppository dose ladder kept verbatim (<10kg 1 … 20–25kg 4).
+#   - p.30 Hydrocarbon's "See Convulsion Protocol" box points here;
+#     flowchart boxes render plain text (no links), so that pointer
+#     stays textual.
+# ============================================================
+
+topic:
+  id: "pb-paediatric-convulsions"
+  title: "Paediatric Convulsions"
+  list_subtitle: "p.42 · diazepam → phenobarbitone"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["convulsion", "seizure", "fit", "status epilepticus", "diazepam", "phenobarbitone", "paediatric", "neonate"]
+  category: "medical"
+  page_number: 42
+
+  blocks:
+
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "Convulsions in the 1st month of life"
+      markdown: |
+        Should be treated with **Phenobarbitone 20mg/kg stat**; a further 5–10mg/kg can be given within 24 hrs of the loading dose; maintenance dose is 5mg/kg daily. **Do not give Diazepam to neonates.**
+
+    - type: "flowchart"
+      variant: "algorithm"
+      boxes:
+        - id: "observe"
+          title: "Check ABC"
+          bullets:
+            - "Observe"
+            - "Investigate cause"
+      stages:
+        - decision: "Age >1 month — child convulsing for more than 5 minutes OR presents convulsing?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat fit and hypoglycaemia"
+                bullets:
+                  - "Ensure safety and check ABC"
+                  - "Start oxygen"
+                  - "Diazepam 0.3mg/kg IV slowly over 1min OR Rectal Diazepam 2.5mg suppository: <10kg 1 suppository · 10–15kg 2 · 15–20kg 3 · 20–25kg 4 suppositories"
+                  - "Dextrose 10% 5mls/kg IV (or check glucose)"
+                  - "Check ABCs when fit stops"
+              continue: true
+            - label: "No"
+              box:
+                title: "Child having 3rd convulsion lasting <5mins in <2 hours?"
+                bullets:
+                  - "No → Check ABC, observe, investigate cause"
+                  - "Yes → Phenobarbitone (bottom box below)"
+                  - "Children with up to 2 fits lasting <5 mins do not require emergency drug treatment"
+        - decision: "Convulsion stops after 5 more minutes?"
+          outcomes:
+            - label: "Yes"
+              goto: "observe"
+            - label: "No"
+              box:
+                title: "Repeat diazepam"
+                bullets:
+                  - "Diazepam 0.3mg/kg IV slowly over 1min OR Diazepam 2.5mg PR (dosing as above)"
+                  - "Continue Oxygen"
+                  - "Check ABCs when fit stops"
+              continue: true
+        - decision: "Convulsion stops after 5 more minutes?"
+          outcomes:
+            - label: "Yes"
+              goto: "observe"
+            - label: "No"
+              continue: true
+      terminal:
+        title: "Give IM/IV phenobarbitone 15mg/kg"
+        bullets:
+          - "DO NOT give more than 2 doses of diazepam in 24 hours once phenobarbitone used (if given IV, give over 20mins)"
+          - "Maintenance therapy should be initially with phenobarbitone 5mg/kg IV/IM OD x 48 hrs"
+          - "Continue oxygen during active seizure"
+          - "Check ABCs when fit stops"
+          - "Investigate cause"

@@ -53,4 +53,5 @@ book:
       palette:
         accent: "0xFF2E7D32"
       children:
+        - topic: "topics/pb_paediatric_convulsions.yaml"
         - topic: "topics/pb_meningitis.yaml"
