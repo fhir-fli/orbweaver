@@ -1,17 +1,23 @@
 # ============================================================
-# ProtocolBook p.43 — Paediatric Dehydration Protocol
+# ProtocolBook pp.43–44 — Paediatric Dehydration Protocol
 # (EXCLUDING severe malnutrition), >2 months old with history of
-# diarrhoea/vomiting.
+# diarrhoea/vomiting + Diarrhoea Adjunctive Rx. Two-page topic.
 #
-# A pure severity cascade (shock → Plan C → Plan B → Plan A), each
-# decision's Yes ending in a treatment box and No continuing down —
-# maps 1:1 onto the `algorithm` spine. Severity tints follow the
-# WHO semantics the palette encodes: shock + Plan C = emergency
-# (pink), Plan B = priority (yellow), Plan A terminal = non-urgent
-# (green).
+# p.43 is a pure severity cascade (shock → Plan C → Plan B →
+# Plan A), each decision's Yes ending in a treatment box and No
+# continuing down — maps 1:1 onto the `algorithm` spine. Severity
+# tints follow the WHO semantics the palette encodes: shock +
+# Plan C = emergency (pink), Plan B = priority (yellow), Plan A
+# terminal = non-urgent (green).
+#
+# p.44 ("Diarrhoea Adjunctive Rx") is a short outline companion:
+# zinc for all, ORS intolerance note, dysentery antibiotics
+# (incl. a DO-NOT-USE resistance list), antiprotozoals only for
+# proven amoebiasis/giardiasis → titled prose.
 #
 # Faithful-rendering calls:
-#   - Citation superscripts (title 1,16,17; Plan C 149,150) dropped.
+#   - Citation superscripts (title 1,16,17; Plan C 149,150;
+#     dysentery 16,18) dropped.
 #   - "If Hb<5g/dl transfuse urgently" sits inside the printed shock
 #     box → kept as the last criteria line of that decision.
 #   - STEP 1's dangling "If no IV access or IVF" line is as printed —
@@ -20,86 +26,118 @@
 #   - Plan A's "ORS PO at 10mls/kg after each loose" is missing the
 #     obvious final word in print → rendered "after each loose
 #     stool" (WHO Plan A wording).
+#
+# ⚠️ GENUINE SOURCE TYPO corrected (surfaced to Grey 2026-07-14):
+#   - p.44 prints "Paramomycin" twice (amoebiasis list and the
+#     giardiasis parenthetical) → corrected to "Paromomycin".
 # ============================================================
 
 topic:
   id: "pb-paediatric-dehydration"
   title: "Paediatric Dehydration Protocol"
-  list_subtitle: "p.43 · shock → Plans C/B/A"
+  list_subtitle: "pp.43–44 · Plans C/B/A + adjunctive Rx"
   last_reviewed: "pocketbook v1.7"
-  tags: ["dehydration", "diarrhoea", "gastroenteritis", "ORS", "rehydration", "plan a", "plan b", "plan c", "shock", "paediatric"]
+  tags: ["dehydration", "diarrhoea", "gastroenteritis", "ORS", "rehydration", "plan a", "plan b", "plan c", "shock", "paediatric", "zinc", "dysentery"]
   category: "medical"
   page_number: 43
 
-  blocks:
+  pages:
 
-    - type: "prose"
-      markdown: |
-        For children **>2 months old with history of diarrhoea/vomiting** — **EXCLUDING severe malnutrition**.
+    # ═══════════════════════ PAGE 43 ═══════════════════════
+    - page_number: 43
+      blocks:
 
-    - type: "flowchart"
-      variant: "algorithm"
-      stages:
-        - decision: "CHECK for SHOCK — all four of?"
-          criteria:
-            - "AVPU < A"
-            - "Capillary refill >3 secs"
-            - "Cold hands + Temp gradient"
-            - "Weak / absent pulse"
-            - "If Hb <5g/dl transfuse urgently"
-          outcomes:
-            - label: "Yes — shock"
-              box:
-                title: "Ringers 20mls/kg over 15 minutes"
-                bullets:
-                  - "A second bolus may be given if required before proceeding to PLAN C STEP 2 below"
-                  - "Treat for hypoglycaemia"
-                  - "Start ORS 5 mls/kg/hr once able to drink"
-                severity: "emergency"
-            - label: "No"
-              continue: true
-        - decision: "Severe dehydration (PLAN C) — ≥2 of the following signs?"
-          criteria:
-            - "AVPU < A"
-            - "Capillary refill ≥2 seconds"
-            - "Unable to drink"
-            - "Sunken eyes"
-            - "Slow skin pinch ≥2 seconds"
-            - "Absent tears AND dry mucus membranes"
-          outcomes:
-            - label: "Yes"
-              box:
-                title: "PLAN C"
-                bullets:
-                  - "STEP 1: Ringers 30mls/kg over — >12 months: 30 minutes · <12 months: 60 minutes"
-                  - "If no IV access or IVF"
-                  - "STEP 2: Ringers 70mls/kg over — >12 months: 2.5 hours · <12 months: 5 hours"
-                  - "If no IV access or IVF, use NGT rehydration 100ml/kg ORS"
-                  - "Reassess Hourly"
-                  - "After 3–6 hours, reclassify level of dehydration"
-                severity: "emergency"
-            - label: "No"
-              continue: true
-        - decision: "Some dehydration (PLAN B) — able to drink but 2 or more of the following signs?"
-          criteria:
-            - "Restlessness/Irritability"
-            - "Sunken eyes"
-            - "Slow skin pinch 1–2 seconds"
-            - "Dry tongue"
-            - "Decreased Tears"
-          outcomes:
-            - label: "Yes"
-              box:
-                title: "PLAN B"
-                bullets:
-                  - "ORS PO at 75mls/kg over 4 hours"
-                  - "Continue breast feeding and/or encourage feeding if >6 months"
-                severity: "priority"
-            - label: "No"
-              continue: true
-      terminal:
-        title: "No significant dehydration (PLAN A) — diarrhoea/GE with fewer than 2 of the above signs"
-        bullets:
-          - "ORS PO at 10mls/kg after each loose stool"
-          - "Continue breast feeding and/or encourage feeding if >6 months"
-        severity: "non_urgent"
+        - type: "prose"
+          markdown: |
+            For children **>2 months old with history of diarrhoea/vomiting** — **EXCLUDING severe malnutrition**.
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "CHECK for SHOCK — all four of?"
+              criteria:
+                - "AVPU < A"
+                - "Capillary refill >3 secs"
+                - "Cold hands + Temp gradient"
+                - "Weak / absent pulse"
+                - "If Hb <5g/dl transfuse urgently"
+              outcomes:
+                - label: "Yes — shock"
+                  box:
+                    title: "Ringers 20mls/kg over 15 minutes"
+                    bullets:
+                      - "A second bolus may be given if required before proceeding to PLAN C STEP 2 below"
+                      - "Treat for hypoglycaemia"
+                      - "Start ORS 5 mls/kg/hr once able to drink"
+                    severity: "emergency"
+                - label: "No"
+                  continue: true
+            - decision: "Severe dehydration (PLAN C) — ≥2 of the following signs?"
+              criteria:
+                - "AVPU < A"
+                - "Capillary refill ≥2 seconds"
+                - "Unable to drink"
+                - "Sunken eyes"
+                - "Slow skin pinch ≥2 seconds"
+                - "Absent tears AND dry mucus membranes"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "PLAN C"
+                    bullets:
+                      - "STEP 1: Ringers 30mls/kg over — >12 months: 30 minutes · <12 months: 60 minutes"
+                      - "If no IV access or IVF"
+                      - "STEP 2: Ringers 70mls/kg over — >12 months: 2.5 hours · <12 months: 5 hours"
+                      - "If no IV access or IVF, use NGT rehydration 100ml/kg ORS"
+                      - "Reassess Hourly"
+                      - "After 3–6 hours, reclassify level of dehydration"
+                    severity: "emergency"
+                - label: "No"
+                  continue: true
+            - decision: "Some dehydration (PLAN B) — able to drink but 2 or more of the following signs?"
+              criteria:
+                - "Restlessness/Irritability"
+                - "Sunken eyes"
+                - "Slow skin pinch 1–2 seconds"
+                - "Dry tongue"
+                - "Decreased Tears"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "PLAN B"
+                    bullets:
+                      - "ORS PO at 75mls/kg over 4 hours"
+                      - "Continue breast feeding and/or encourage feeding if >6 months"
+                    severity: "priority"
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "No significant dehydration (PLAN A) — diarrhoea/GE with fewer than 2 of the above signs"
+            bullets:
+              - "ORS PO at 10mls/kg after each loose stool"
+              - "Continue breast feeding and/or encourage feeding if >6 months"
+            severity: "non_urgent"
+
+    # ═══════════════════════ PAGE 44 ═══════════════════════
+    - page_number: 44
+      blocks:
+
+        - type: "prose"
+          title: "Diarrhoea adjunctive Rx"
+          markdown: |
+            - **All cases to receive Zinc 10–20mg/day x 10–14 days**
+            - Diarrhoea >14 days may be complicated by ORS intolerance (worsening diarrhoea) — if seen, change to IV regimens
+
+        - type: "prose"
+          title: "Antibiotics ONLY if bloody diarrhoea (dysentery)"
+          markdown: |
+            - **First line:** Ciprofloxacin 15mg/kg/dose BD x 3–5 days
+            - **Second line (or severely ill):** Ceftriaxone 50–80mg/kg/day x 3–5 days
+            - **Alternative:** Azithromycin 15mg/kg PO on day 1 then 10mg/kg PO OD days 2–5
+            - **DO NOT USE:** aminoglycosides, amoxicillin, ampicillin, chloramphenicol, cotrimoxazole, 1st or 2nd gen cephalosporins, nalidixic acid, nitrofurans, or tetracycline due to resistance
+
+        - type: "prose"
+          title: "Antibiotics/Antiprotozoals ONLY if persistent diarrhoea AND"
+          markdown: |
+            - **Proven amoebiasis:** Paromomycin, diloxanide, iodoquinol
+            - **Proven giardiasis:** Tinidazole, Metronidazole, Nitazoxanide (also albendazole, mebendazole, paromomycin)
