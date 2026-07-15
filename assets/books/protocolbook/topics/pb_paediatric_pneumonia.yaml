@@ -1,0 +1,110 @@
+# ============================================================
+# ProtocolBook p.46 — Paediatric Pneumonia protocol for children
+# aged 2–59 months.
+#
+# A branching WHO IMCI-style decision tree (danger signs → severe
+# pneumonia; else chest indrawing / fast breathing → pneumonia;
+# else no pneumonia), plus an ICU-transfer criteria box and a
+# discharge-criteria box that the severe-pneumonia arm feeds into
+# → the `algorithm` flowchart variant.
+#
+# Structure on the printed page:
+#   - Decision 1 "Cough or difficulty breathing PLUS any danger
+#     sign?" → No → check chest indrawing / fast breathing (decision
+#     2); Yes → severe-pneumonia Rx (continue down the severe arm).
+#   - Decision 2 "Chest indrawing / fast breathing (2–11mo >50,
+#     1–5yr >40)?" → Yes → Rx for Pneumonia (home) leaf; No → "No
+#     pneumonia" leaf.
+#   - The severe-pneumonia arm then flows: Rx for Severe Pneumonia →
+#     Consider ICU Transfer criteria → Discharge criteria (terminal).
+#
+# Linearised onto the spine:
+#   - Stage 1 = danger-sign decision. "No" branch carries the
+#     chest-indrawing sub-decision as a leaf box whose bullets hold
+#     the two textual outcomes (Yes → home Rx / No → no pneumonia),
+#     since it is a branch OFF the severe-pneumonia spine (standing
+#     textual-reference rule). "Yes" goto's the named `severe` box
+#     and continues down the severe arm.
+#   - Stage 2 = the ICU-transfer decision on the severe arm (Yes →
+#     "Transfer to ICU" emergency leaf; No → continue to the
+#     Discharge-criteria terminal). Reframing the printed "Consider
+#     ICU Transfer for…" box as a truthful criteria decision keeps
+#     the whole severe arm on one clean spine.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (title 1,16) dropped.
+#   - "(refer to HIV exposed/infected, TB, neonatology or Sickle
+#     Cell for special cases)" kept as an intro caveat line.
+#   - AVPU "'V, P or U'" kept verbatim (danger sign = not Alert).
+# ============================================================
+
+topic:
+  id: "pb-paediatric-pneumonia"
+  title: "Paediatric Pneumonia (2–59 months)"
+  list_subtitle: "p.46 · severity + antibiotics"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pneumonia", "cough", "difficulty breathing", "chest indrawing", "amoxicillin", "ampicillin", "gentamicin", "paediatric", "respiratory"]
+  category: "medical"
+  page_number: 46
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        For **children aged 2–59 months**. Refer to HIV exposed/infected, TB, neonatology or Sickle Cell protocols for special cases.
+
+    - type: "flowchart"
+      variant: "algorithm"
+      boxes:
+        - id: "severe"
+          title: "Rx for Severe Pneumonia"
+          bullets:
+            - "Oxygen if hypoxic"
+            - "Manage airway prn"
+            - "Treat fever"
+            - "1st line: Ampicillin 50mg/kg IM/IV q6hrs AND Gentamicin 5mg/kg IM/IV daily"
+            - "If no improvement in 48 hours and Staph Pneumonia suspected, change Ampicillin to Cloxacillin (same dosing)"
+            - "2nd line: Ceftriaxone 80mg/kg IM/IV daily"
+            - "Give antibiotics for at least 5 days"
+          severity: "emergency"
+      stages:
+        - decision: "Cough or difficulty breathing PLUS any of these danger signs?"
+          criteria:
+            - "Central cyanosis or O2sat <90%"
+            - "AVPU = 'V, P or U'"
+            - "Inability to breastfeed/drink"
+            - "Severe respiratory distress (e.g. grunting, very severe chest indrawing)"
+          outcomes:
+            - label: "Yes — severe pneumonia"
+              goto: "severe"
+              continue: true
+            - label: "No — assess chest indrawing / breaths per minute (2–11mo >50, 1–5yr >40)"
+              box:
+                title: "Chest indrawing / fast breathing present?"
+                bullets:
+                  - "Yes → Rx for Pneumonia: Amoxicillin 40mg/kg/dose PO BD x 5 days; can be treated at home if no other concerns"
+                  - "No → No pneumonia: if only cough, manage supportively for upper respiratory infection. If shortness of breath, look for other causes"
+        - decision: "On the severe-pneumonia arm — any ICU transfer criteria?"
+          criteria:
+            - "Impending respiratory failure / requires intubation"
+            - "Pulse oximetry <92% on oxygen ≥50%"
+            - "Recurrent apnea or slow irregular breathing"
+            - "Increased RR & HR with severe respiratory distress and exhaustion"
+            - "Altered mental status"
+            - "Shock/inability to maintain BP without pressors"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Transfer to ICU"
+                severity: "emergency"
+            - label: "No — continue treatment, then assess for discharge"
+              continue: true
+      terminal:
+        title: "Discharge criteria"
+        bullets:
+          - "Overall clinical improvement (activity level, appetite, decreased fever) x 24 hours"
+          - "PulseOx >90% on room air x 24 hours"
+          - "Stable & baseline mental status"
+          - "Tolerating oral medication if needed"
+          - "Tolerating PO to maintain hydration/nutrition"
+        severity: "non_urgent"

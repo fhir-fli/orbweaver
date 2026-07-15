@@ -8,12 +8,12 @@ import 'package:orbweaver/data/library.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('loadLibrary: protocolbook loads all 30 topics incl. Sepsis',
+  test('loadLibrary: protocolbook loads all 31 topics incl. Pneumonia',
       () async {
     final books = await loadLibrary();
     final pb = books.firstWhere((b) => b.id == 'protocolbook');
     final titles = pb.allTopics.map((t) => t.title).toList();
-    expect(titles, hasLength(30));
+    expect(titles, hasLength(31));
     expect(
       titles,
       contains('Hydrocarbon Ingestion (Kerosene, Paraffin)'),
@@ -61,6 +61,10 @@ void main() {
     expect(
       titles,
       contains('Paediatric Sepsis & Septic Shock'),
+    );
+    expect(
+      titles,
+      contains('Paediatric Pneumonia (2–59 months)'),
     );
   });
 }

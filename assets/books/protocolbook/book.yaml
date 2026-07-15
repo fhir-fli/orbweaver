@@ -56,4 +56,5 @@ book:
         - topic: "topics/pb_paediatric_convulsions.yaml"
         - topic: "topics/pb_paediatric_dehydration.yaml"
         - topic: "topics/pb_paediatric_sepsis.yaml"
+        - topic: "topics/pb_paediatric_pneumonia.yaml"
         - topic: "topics/pb_meningitis.yaml"
