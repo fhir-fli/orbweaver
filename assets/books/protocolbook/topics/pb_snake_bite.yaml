@@ -1,22 +1,32 @@
 # ============================================================
-# ProtocolBook p.39 — Suspected Snake bite.
+# ProtocolBook pp.39–40 — Suspected Snake bite (+ Types of
+# Envenomation). Two-page topic (multi-page `pages:`).
 #
-# Hybrid-rule split: the linear pre-decision flow (management box,
-# side physical-exam box, immobilize DO-NOTs, labs) is titled prose
-# (immobilize block = red-alert callout — it is all safety DO-NOTs);
-# the true decision tree (Has envenomation occurred? no/suspected/
-# yes → syndrome severe enough for antivenom?) is an `algorithm`
-# flowchart. The shared "admit overnight for observation" box is a
-# named `boxes:` target, goto-referenced from BOTH the "Suspected"
-# outcome and the not-severe-enough "No" outcome (the book draws
-# both arrows into one box).
+# p.39 hybrid-rule split: the linear pre-decision flow (management
+# box, side physical-exam box, immobilize DO-NOTs, labs) is titled
+# prose (immobilize block = red-alert callout — it is all safety
+# DO-NOTs); the true decision tree (Has envenomation occurred?
+# no/suspected/yes → syndrome severe enough for antivenom?) is an
+# `algorithm` flowchart. The shared "admit overnight for
+# observation" box is a named `boxes:` target, goto-referenced from
+# BOTH the "Suspected" outcome and the not-severe-enough "No"
+# outcome (the book draws both arrows into one box).
+#
+# p.40 ("Types of Envenomation") is the companion outline the
+# flowchart's "What type of envenomation syndrome?" decision refers
+# to: three toxidromes (Neurotoxic / Cytotoxic / Haemotoxic), each
+# with symptoms, treatment, indications for antivenom, and which
+# antivenom — pure outline → one titled prose section per
+# toxidrome.
 #
 # Faithful-rendering calls:
 #   - Citation superscripts (title/exam 95, management 27, syndrome
-#     3,95) dropped.
+#     3,95, types 3,95) dropped.
 #   - "Skin marks BUT no symptoms" is the condition on the box in
 #     print; carried as the outcome LABEL so the shared box works
 #     from both references.
+#   - p.40 outline letters (a/b/c/d, 1/2/3) dropped per the standing
+#     rule; the antivenom-triad numbering kept (it is "the triad").
 #
 # ⚠️ GENUINE SOURCE TYPOS corrected (surfaced to Grey 2026-07-14):
 #   - "DO NOTE treat with ice" → "DO NOT treat with ice" (ice is
@@ -24,6 +34,9 @@
 #     verified on the 300 dpi render).
 #   - "Consider the follow labs" → "following labs".
 #   - "effected limb" (×2) → "affected limb".
+#   - p.40 neurotoxic symptoms end "...paralysis and respiratory
+#     failure paralysis" — duplicated word; rendered "paralysis and
+#     respiratory failure".
 #
 # CONTENT FLAGS for the later OE / content pass (rendered faithfully):
 #   - Snake Venom Detection Kit (SVDK) is an Australia-specific
@@ -36,84 +49,138 @@
 topic:
   id: "pb-snake-bite"
   title: "Suspected Snake Bite"
-  list_subtitle: "p.39 · envenomation + antivenom"
+  list_subtitle: "pp.39–40 · envenomation + antivenom"
   last_reviewed: "pocketbook v1.7"
-  tags: ["snake", "snake bite", "envenomation", "antivenom", "viper", "cobra", "bite"]
+  tags: ["snake", "snake bite", "envenomation", "antivenom", "viper", "cobra", "bite", "neurotoxic", "cytotoxic", "haemotoxic"]
   category: "medical"
   page_number: 39
 
-  blocks:
+  pages:
 
-    - type: "prose"
-      title: "Management"
-      markdown: |
-        - Monitor, support ABCs
-        - Check vital signs (BP, PR, RR, spO2, Temp)
-        - Start Oxygen if spO2 <94%
-        - Perform brief, targeted history, physical exam
+    # ═══════════════════════ PAGE 39 ═══════════════════════
+    - page_number: 39
+      blocks:
 
-    - type: "prose"
-      title: "Physical exam"
-      markdown: |
-        - **Airway** — check for hypersalivation and ability to clear secretions
-        - **Breathing** — watch for respiratory muscle weakness
-        - **Bleeding** — monitor for unusual bleeding (haematuria/oozing from wounds)
-        - **Neuro** — full exam including cranial nerves
-        - **Neurovascular status** of limb, swelling, necrosis
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (BP, PR, RR, spO2, Temp)
+            - Start Oxygen if spO2 <94%
+            - Perform brief, targeted history, physical exam
 
-    - type: "prose"
-      callout: true
-      palette:
-        alert: "0xFFD32F2F"
-        alert_fill: "0xFFFDECEA"
-        alert_text: "0xFFB71C1C"
-      title: "Immobilize body part"
-      markdown: |
-        - **DO NOT** apply tourniquet
-        - **DO NOT** incise wound
-        - **DO NOT** administer antivenom outside of hospital
-        - **DO NOT** treat with ice
+        - type: "prose"
+          title: "Physical exam"
+          markdown: |
+            - **Airway** — check for hypersalivation and ability to clear secretions
+            - **Breathing** — watch for respiratory muscle weakness
+            - **Bleeding** — monitor for unusual bleeding (haematuria/oozing from wounds)
+            - **Neuro** — full exam including cranial nerves
+            - **Neurovascular status** of limb, swelling, necrosis
 
-    - type: "prose"
-      title: "Consider the following labs"
-      markdown: |
-        - CBC, CMP, PT/INR, PTT, FDP/d-dimer, CPK
-        - Swab bite area, Snake Venom Detection Kit (SVDK) to be used if available and clinical/lab evidence for envenoming
+        - type: "prose"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          title: "Immobilize body part"
+          markdown: |
+            - **DO NOT** apply tourniquet
+            - **DO NOT** incise wound
+            - **DO NOT** administer antivenom outside of hospital
+            - **DO NOT** treat with ice
 
-    - type: "flowchart"
-      variant: "algorithm"
-      boxes:
-        - id: "observe"
-          title: "Admit overnight for observation"
-          bullets:
-            - "Elevate affected limb"
-            - "If no new symptoms, discharge next day"
-      stages:
-        - decision: "Has envenomation occurred?"
-          outcomes:
-            - label: "No — no skin marks, no symptoms an hour post-bite"
-              box:
-                title: "Discharge"
-                bullets:
-                  - "Instruct to return if symptoms develop"
-                severity: "non_urgent"
-            - label: "Suspected — skin marks BUT no symptoms"
-              goto: "observe"
-            - label: "Yes — obvious bite marks and/or symptomatic"
-              continue: true
-        - decision: "What type of envenomation syndrome? Severe enough to warrant antivenom?"
-          outcomes:
-            - label: "No"
-              goto: "observe"
-            - label: "Yes"
-              box:
-                title: "Antivenom administration"
-                bullets:
-                  - "Dilute antivenom in NS (no more than 20mL/500mL bag), give slowly over 30 mins or no more than 1–2mL/min"
-                  - "Polyvalent: titrate to symptoms, assess q30min"
-                  - "Monovalent: monitor haematologic response, repeat dose if needed"
-                  - "Epinephrine ready in case of anaphylaxis: Epinephrine (1mg/1ml 1:1000), 0.01mL/kg (max dose 0.3mL), IM anterolateral thigh, repeat q5–15 minutes if no improvement"
-                  - "Antihistamine: have available, not routinely recommended"
-                  - "Monitor Vital Signs"
-                  - "Never run medications directly into affected limb"
-                severity: "emergency"
+        - type: "prose"
+          title: "Consider the following labs"
+          markdown: |
+            - CBC, CMP, PT/INR, PTT, FDP/d-dimer, CPK
+            - Swab bite area, Snake Venom Detection Kit (SVDK) to be used if available and clinical/lab evidence for envenoming
+
+        - type: "flowchart"
+          variant: "algorithm"
+          boxes:
+            - id: "observe"
+              title: "Admit overnight for observation"
+              bullets:
+                - "Elevate affected limb"
+                - "If no new symptoms, discharge next day"
+          stages:
+            - decision: "Has envenomation occurred?"
+              outcomes:
+                - label: "No — no skin marks, no symptoms an hour post-bite"
+                  box:
+                    title: "Discharge"
+                    bullets:
+                      - "Instruct to return if symptoms develop"
+                    severity: "non_urgent"
+                - label: "Suspected — skin marks BUT no symptoms"
+                  goto: "observe"
+                - label: "Yes — obvious bite marks and/or symptomatic"
+                  continue: true
+            - decision: "What type of envenomation syndrome? Severe enough to warrant antivenom? (see next page)"
+              outcomes:
+                - label: "No"
+                  goto: "observe"
+                - label: "Yes"
+                  box:
+                    title: "Antivenom administration"
+                    bullets:
+                      - "Dilute antivenom in NS (no more than 20mL/500mL bag), give slowly over 30 mins or no more than 1–2mL/min"
+                      - "Polyvalent: titrate to symptoms, assess q30min"
+                      - "Monovalent: monitor haematologic response, repeat dose if needed"
+                      - "Epinephrine ready in case of anaphylaxis: Epinephrine (1mg/1ml 1:1000), 0.01mL/kg (max dose 0.3mL), IM anterolateral thigh, repeat q5–15 minutes if no improvement"
+                      - "Antihistamine: have available, not routinely recommended"
+                      - "Monitor Vital Signs"
+                      - "Never run medications directly into affected limb"
+                    severity: "emergency"
+
+    # ═══════════════════════ PAGE 40 ═══════════════════════
+    - page_number: 40
+      blocks:
+
+        - type: "prose"
+          title: "Types of envenomation — Neurotoxic"
+          markdown: |
+            - **Symptoms:** Weakness, paresthesia, ptosis, diplopia, mydriasis, problems swallowing, excessive salivation, difficulty breathing, paralysis and respiratory failure
+            - **Treatment**
+              - IV placement
+              - Monitor oxygenation and breathing
+              - Intubation & mechanical ventilation if necessary
+            - **Indications for Antivenom (the triad of)**
+              - 1. Paraesthesia
+              - 2. Excessive salivation/metallic taste & sweating
+              - 3. Dyspnea in the absence of painful, progressive swelling OR Paresis in the presence of significant swelling
+            - **Treatment: Polyvalent Antivenom**
+
+        - type: "prose"
+          title: "Cytotoxic"
+          markdown: |
+            - **Symptoms:** Severe pain, bruising/swelling at site, blisters, severe tissue necrosis, abscess, compartment syndrome, hypotension, shock, rhabdomyolysis, renal failure
+            - **Treatment**
+              - IV placement
+              - Analgesia
+              - Place limb at heart level
+              - IVF for shock/renal failure
+              - Supportive care
+            - **Indications for Antivenom**
+              - Progressive swelling ≥15cm/hr
+              - Swelling extending from foot/hand to knee/elbow in 4 hours
+              - Entire limb swelling by 8 hours
+              - Airway swelling
+              - Associated coagulopathy
+            - **Treatment: Polyvalent Antivenom**
+
+        - type: "prose"
+          title: "Haemotoxic"
+          markdown: |
+            - **Symptoms:** Bleeding at wound sites (may be minor wounds, lacerations, or puncture sites), Ecchymoses, Haematuria, Renal Failure, DIC
+            - **Treatment**
+              - IV access
+              - Blood products as necessary
+              - DO NOT give heparin, antifibrinolytics, thrombolytics
+            - **Indications for Antivenom**
+              - Active bleeding
+              - Non-clotting blood in clean test tube after 20 minutes
+              - Lab evidence of coagulopathy
+            - **Treatment: Monovalent Antivenom**
