@@ -1,0 +1,99 @@
+# ============================================================
+# ProtocolBook p.38 — Animal Bite.
+#
+# Pure outline page (no boxes/arrows): mammalian bites, human
+# bites, prophylactic treatment (amoxicillin-clavulanate, tetanus
+# table, rabies table) → titled prose + tables.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (title 3) dropped.
+#   - The tetanus table has a 2-level printed header (Clean & minor
+#     wound vs All other wounds, each split into Toxoid / HTIG);
+#     split into TWO small 3-column tables (one per wound class) —
+#     same cells, far more legible on a phone.
+#   - "Immunocrompromised" spelling typo in the source → corrected
+#     to "Immunocompromised".
+#   - The rabies Vaccine row ends with a dangling "*" footnote
+#     marker whose footnote text does not exist anywhere on the
+#     page (p.39 starts Snake bite) — marker dropped.
+#
+# ⚠️ GENUINE SOURCE ERROR corrected (SURFACED TO GREY 2026-07-14):
+#   - The rabies table as printed conflates the two biologics: the
+#     Vaccine row reads "Human Ig 20U/kg OR Equine Ig 40U/kg IM
+#     (deltoid or anterolateral thigh area), inject once on days
+#     0, 3, 7 and 14" — but 20 U/kg human / 40 U/kg equine are the
+#     IMMUNOGLOBULIN doses (given ONCE, around the wound + rest IM,
+#     exactly as the row above already says), while days 0/3/7/14 is
+#     the VACCINE schedule. Followed as printed it would give
+#     repeated RIG on 4 days and no vaccine. Redistributed to the
+#     clearly-intended reading: RIG row = human 20 U/kg OR equine
+#     40 U/kg once; Vaccine row = IM deltoid/anterolateral thigh on
+#     days 0, 3, 7 and 14 (dose per product). Grey should fix the
+#     source PDF; OE pass to confirm regimen currency (WHO now also
+#     accepts ID regimens / 2-site schedules).
+# ============================================================
+
+topic:
+  id: "pb-animal-bite"
+  title: "Animal Bite"
+  list_subtitle: "p.38 · bites, tetanus + rabies PEP"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["animal bite", "human bite", "dog bite", "rabies", "tetanus", "bite", "prophylaxis", "amoxicillin-clavulanate"]
+  category: "medical"
+  page_number: 38
+
+  blocks:
+
+    - type: "prose"
+      title: "Mammalian bites (not human)"
+      markdown: |
+        - Clean wound with soap and water
+        - Debridement of devitalized tissue
+        - Prophylactic antibiotics are controversial, but generally recommended in the following cases
+          - Immunocompromised patients
+          - Asplenic patients
+          - Advanced liver disease
+          - Moderate-severe injury or Crush Injury
+          - Oedema at bite site
+          - Injuries near hand, close to other bones/joints, especially if penetrating the joint capsule or periosteum
+
+    - type: "prose"
+      title: "Human bites"
+      markdown: |
+        - Clean wound with soap and water
+        - Debridement of devitalized tissue
+        - All human bites should receive prophylactic antibiotics
+        - Consider post-exposure prophylaxis for HIV, usually low risk, but higher if saliva is contaminated with blood
+        - Hepatitis B vaccine recommended ≤24 hrs after bite if not previously immunized
+
+    - type: "prose"
+      title: "Prophylactic treatment"
+      markdown: |
+        - **Amoxicillin-Clavulanate x 5 days**
+          - Pediatric: 25mg/kg/dose PO BD
+          - Adult: 1 gram PO BD
+        - **Alternative:** Ciprofloxacin, Azithromycin or Doxycycline
+
+    - type: "table"
+      title: "Tetanus — clean and minor wounds"
+      columns: ["Previous doses of tetanus toxoid", "Tetanus toxoid", "Human tetanus immune globulin"]
+      column_flex: [3, 3, 3]
+      rows:
+        - cells: ["<3 doses or unknown", "Yes", "No"]
+        - cells: ["≥3 doses", "Only if last dose given ≥10 yrs ago", "No"]
+
+    - type: "table"
+      title: "Tetanus — all other wounds"
+      columns: ["Previous doses of tetanus toxoid", "Tetanus toxoid", "Human tetanus immune globulin"]
+      column_flex: [3, 3, 3]
+      rows:
+        - cells: ["<3 doses or unknown", "Yes", "Yes"]
+        - cells: ["≥3 doses", "Only if last dose given ≥5 yrs ago", "No"]
+
+    - type: "table"
+      title: "Rabies — assuming not previously vaccinated"
+      columns: ["Biologic", "Schedule"]
+      column_flex: [2, 5]
+      rows:
+        - cells: ["**Rabies immunoglobulin**", "Human Ig 20 units/kg OR Equine Ig 40 units/kg, total dose given once. Inject as much as possible around the wound, give the rest IM."]
+        - cells: ["**Vaccine**", "IM (deltoid or anterolateral thigh area), inject once on days 0, 3, 7 and 14"]
