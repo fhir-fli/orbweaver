@@ -1,0 +1,121 @@
+# ============================================================
+# ProtocolBook p.45 — Paediatric Treatment of Sepsis and Septic
+# Shock.
+#
+# A SIRS-criteria vital-signs table + a decision cascade
+# (infection+SIRS? → treat; shock signs? → bolus; management) +
+# labs/tests/drug-dose outline.
+#
+# Hybrid-rule split: the table and the drug doses are prose/table;
+# the decision cascade (suspected/proven infection+SIRS → shock
+# signs → management) is an `algorithm` flowchart. The bottom
+# management box is reached by BOTH the septic-shock (Yes) and the
+# no-shock (No) branches (the book draws both arrows into it) → it
+# is the spine `terminal`; the septic-shock box is a `continue`
+# emergency box so the flow rejoins the spine into management.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (definition 19–22; table col cites
+#     20/21/23/24/25) dropped.
+#   - Vital-signs table: the printed HR and RR cells for "0–1 week"
+#     and "1 wk–1 mo" are MERGED (one value spanning both age
+#     bands: HR ">180/190 (or <100)", RR ">60"). Merged cells are
+#     repeated in both rows so every row reads self-contained in a
+#     lookup table (no merged-cell primitive; repetition is the
+#     faithful, clearer choice).
+#   - Management step 1 "bag and mask if poor respiratory effort"
+#     is bold/underlined in print → rendered plain (algorithm-box
+#     bullets are plain Text, NOT MiniMarkdown — `**` would show as
+#     literal asterisks; emphasis is not available inside flow boxes).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - This is the 2005 IPSCC (Goldstein) age-band SIRS table — the
+#     pre-Sepsis-3/phoenix definition. Still the LMIC bedside
+#     standard; OE may note pSOFA/Phoenix (2024) exists.
+#   - Empiric Amp/Gent + ceftriaxone-if-meningitis is WHO-consistent
+#     first-line for LMIC neonatal/paediatric sepsis. Fine.
+# ============================================================
+
+topic:
+  id: "pb-paediatric-sepsis"
+  title: "Paediatric Sepsis & Septic Shock"
+  list_subtitle: "p.45 · SIRS table + management"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sepsis", "septic shock", "SIRS", "infection", "paediatric", "ampicillin", "gentamicin", "ceftriaxone", "fluid bolus"]
+  category: "medical"
+  page_number: 45
+
+  blocks:
+
+    - type: "prose"
+      title: "Sepsis definition"
+      markdown: |
+        - **Sepsis:** SIRS criteria + proven or suspected infection
+        - **SIRS:** ≥2 of the following abnormal measurements (one must be Temperature or WBC)
+        - **Temperature** >37.9 axillary (38.5 core) or <35.4 axillary (36 axillary)
+
+    - type: "table"
+      title: "SIRS criteria by age"
+      layout: "scroll"
+      columns: ["Age group", "Heart rate (beats/min)", "Respiratory rate (breaths/min)", "Leukocytes (×10³/mm)", "SBP (mmHg)"]
+      column_widths: [78, 92, 100, 96, 74]
+      rows:
+        - cells: ["0–1 week", ">180/190 (or <100)", ">60", ">34", "<65"]
+        - cells: ["1 wk–1 mo", ">180/190 (or <100)", ">60", ">19.5 or <5", "<70"]
+        - cells: ["1 mo–1 yr", ">180 (or <90)", ">50", ">17.5 or <5", "<75"]
+        - cells: ["1–5 yrs", ">140", ">40", ">15.5 or <6", "<74"]
+        - cells: ["5–10 yrs", ">130", ">30", ">13.5 or <4.5", "<83"]
+        - cells: [">10 yrs", ">110", ">30", ">11 or <4.5", "<90"]
+
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+        - decision: "Suspected/Proven infection + SIRS?"
+          outcomes:
+            - label: "No"
+              box:
+                title: "Don't treat for Sepsis!"
+                severity: "non_urgent"
+            - label: "Yes"
+              continue: true
+        - decision: "Signs of septic shock — ALL of the following?"
+          criteria:
+            - "Cold extremities"
+            - "Cap refill >3 seconds"
+            - "Fast AND weak pulse"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Septic Shock"
+                bullets:
+                  - "Consider bolus 10–20mL/kg NS or RL over 30–60 minutes, watch for signs of volume overload"
+                severity: "emergency"
+              continue: true
+            - label: "No"
+              continue: true
+      terminal:
+        title: "Management"
+        bullets:
+          - "Airway/Breathing: 100% O2, bag and mask if poor respiratory effort"
+          - "Treat hypoglycaemia: Dextrose 10% 5ml/kg IV push (1mL D50% plus 9mL D5% = 10mL D10%)"
+          - "PRBCs if severe anemia (Hgb <5)"
+          - "Start Amp/Gent within 1 hour. Ceftriaxone if concerned for meningitis (see medication doses below)"
+          - "If no improvement, consider hydrocortisone 50mg/kg/day"
+
+    - type: "prose"
+      title: "Labs & other tests"
+      markdown: |
+        - **Labs:** MRDT, RBS, CBC with diff, Blood Culture
+        - **Other Tests:** Urinalysis, Urine Culture, electrolytes/Urea/Cr/Calcium, LFTs (AST/ALT [GOT/GPT]/Bili), CSF if indicated, CXR, serologic tests for infections
+
+    - type: "prose"
+      title: "Medication doses"
+      markdown: |
+        - **Ampicillin:** 50mg/kg/dose IV/IM
+          - First week of life: every 12 hours
+          - Weeks 2–4: every 8 hours
+          - Over 4 weeks: every 6 hours
+        - **Gentamicin:**
+          - Low Birth Wt: 3mg/kg IM/IV OD
+          - Normal Birth Wt & >1 week of age (normal renal function): 5mg/kg OD IM/IV
+        - **Ceftriaxone:** 1gm/10mL 100mg/kg/OD IV (can give 50mg/kg/12hrs)
