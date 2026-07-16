@@ -1,81 +1,151 @@
 # ============================================================
-# Pocketbook p.55 — Pediatric Meningitis Rx (> 1 month)
-# First cross-book manual authoring test. Exercises cascade
-# variant with: criteria lists inside decisions, asymmetric
-# action/answer sides, terminal action at cascade tail.
+# ProtocolBook pp.54–55 — Pediatric Meningitis. Two-page topic.
+#
+# p.54 = diagnosis/recognition: symptoms-by-age table (Infant vs
+# Children) + the LP-and-treat indications. p.55 = the Rx cascade
+# (red-flag screen → LP-contraindication check → LP; antibiotic
+# treatment). p.55 was the first cross-book manual authoring test
+# (uses the older `cascade` flowchart variant) — kept as-is and
+# folded in as page 55; p.54 prepended when the walkthrough reached
+# it.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (title 1,16,36; footnote 37; steroids
+#     38–41) dropped.
+#   - p.54 symptom table: "✓" = may be present; blank cells (source
+#     leaves them empty) → em-dash "—" (the standing no-value
+#     convention).
+#   - Outline numbering (I–V, a–f) dropped per the standing rule;
+#     the LP-findings sub-criteria kept as nested bullets.
+#   - The AND / NO WAY / MAY emphases in the source notes are bolded
+#     in prose (MiniMarkdown).
 # ============================================================
 
 topic:
   id: "pb-meningitis-gt1m"
-  title: "Pediatric Meningitis Rx > 1 month"
-  list_subtitle: "p.55 · cascade flowchart"
+  title: "Pediatric Meningitis"
+  list_subtitle: "pp.54–55 · recognition + Rx cascade"
   last_reviewed: "pocketbook v1.7"
-  tags: ["meningitis", "pediatric", "cns_infection"]
+  tags: ["meningitis", "pediatric", "cns_infection", "lumbar puncture", "CSF", "cefotaxime", "ceftriaxone"]
   category: "medical"
-  page_number: 55
+  page_number: 54
 
-  blocks:
+  pages:
 
-    # ─────────────── Management prose ───────────────
-    - type: "prose"
-      title: "Management"
-      markdown: |
-        - Monitor, support ABCs
-        - Check vital signs (PR, RR, spO2, Temp, Weight)
-        - Assess AVPU/GCS, hydration status
-        - Start Oxygen if spO2 < 94%, insert IV
-        - Perform brief, targeted history and physical exam
+    # ═══════════════════════ PAGE 54 ═══════════════════════
+    - page_number: 54
+      blocks:
 
-    # ─────────────── Cascade: red-flag screen → LP ───────────────
-    - type: "flowchart"
-      variant: "cascade"
-      # Short action labels; give the decision column (with criteria
-      # bullets) more breathing room than the default 50/50 split.
-      action_width: 0.4
-      entry:
-        text: "Suspected meningitis"
-        shape: "stadium"
-      root:
-        decision: "Does the patient have any of these?"
-        criteria:
-          - "AVPU = P or U"
-          - "Inability to drink / feed"
-          - "Bulging fontanelle"
-          - "Convulsions >6 months old or >48 hrs"
-          - "Evidence of partial seizures"
-          - "Altered mental status AND convulsions"
-        action:
-          text: "Look for other source of symptoms"
-        action_answer: "no"
-        continuation:
-          decision: "Any contraindication to LP?"
-          criteria:
-            - "Requires CPR"
-            - "Shock"
-            - "Signs of raised ICP (GCS ≤8, changing mental status, focal neuro signs, unresponsive pupils, papilledema)"
-            - "Coagulation abnormality or platelets <100"
-            - "Skin infection at LP site"
-          action:
-            text: "No LP currently"
-            timing: "Reassess at 24–48 hrs after antibiotics"
-          action_answer: "yes"
-      terminal_action:
-        text: "Perform LP — send glucose, protein, cell count, gram stain, culture"
+        - type: "prose"
+          markdown: |
+            - Symptoms are often nonspecific; if unclear, treat for Meningitis **AND** other diagnosis (malaria, TB meningitis, etc.) until definitive tests.
+            - There is **NO WAY** to rule in or rule out meningitis without a lumbar puncture.
 
-    # ─────────────── Treatment prose ───────────────
-    - type: "prose"
-      title: "Treatment"
-      markdown: |
-        **IV antibiotics x 10 days — start within 1 hour.**
+        - type: "table"
+          title: "Symptoms that MAY be present in Infants and Children"
+          columns: ["Symptom", "Infant", "Children"]
+          column_flex: [5, 5, 5]
+          rows:
+            - cells: ["Fever", "Neonates: not always (may have hypothermia)", "✓"]
+            - cells: ["Headache", "✓", "✓"]
+            - cells: ["Neck Stiffness / Kernig's / Brudzinski's", "Less common", "✓"]
+            - cells: ["Poor feeding / vomiting / diarrhea", "✓", "✓"]
+            - cells: ["Altered Mental Status", "Lethargy/Irritability", "Confusion/Lethargy/Irritability"]
+            - cells: ["Convulsions", "More concerning <6 months", "More concerning >6 years"]
+            - cells: ["Focal Neuro Signs", "✓", "✓"]
+            - cells: ["Respiratory distress / apnea", "✓", "uncommon"]
+            - cells: ["Bulging Fontanelle", "✓", "—"]
+            - cells: ["Photophobia", "Unable to confirm", "✓"]
+            - cells: ["Cushing triad", "no", "Late and Ominous Sign (HTN, bradycardia, irregular breathing)"]
 
-        **> 3 months:**
-        - Cefotaxime 100 mg/kg IV 8-hourly (max 2 g/dose)
-        - **AND** Ampicillin 50 mg/kg IV 6-hourly (max 12 g/day)
+        - type: "prose"
+          markdown: |
+            Children with **≥1 of**: neck stiffness, cyanosis, impaired consciousness, partial convulsions, or convulsions older than 6 years old have a much higher rate of meningitis.
 
-        **< 3 months:**
-        - Ceftriaxone 100 mg/kg IV once daily
+        - type: "prose"
+          title: "Notes"
+          markdown: |
+            - If any concern for Tuberculous Meningitis, see Tuberculosis Protocol
+            - If culture reveals meningococcus, needs prophylaxis for close contacts
+            - If <1-month old, see Neonatal Protocols
+            - Steroids no longer recommended in low-resource countries
 
-    - type: "prose"
-      title: "Follow-on"
-      markdown: |
-        - Follow Convulsion Protocol if applicable
+        - type: "prose"
+          title: "Treat with a full course of antibiotics if any present"
+          markdown: |
+            - Lumbar Puncture with either:
+              - Bacteria on Gram Stain, positive CSF culture, OR
+              - Gram Stain: >9 WBC (<3 months), >6 WBC (>3 months)
+            - AVPU = 'P or U'
+            - Stiff neck / Kernig's / Brudzinski's
+            - Bulging fontanelle in sick child
+            - Evidence of partial seizures
+            - If not, may consider stopping antibiotics at 48 hours if CSF culture negative
+
+    # ═══════════════════════ PAGE 55 ═══════════════════════
+    - page_number: 55
+      blocks:
+
+        # ─────────────── Management prose ───────────────
+        - type: "prose"
+          title: "Management (Rx >1 month)"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (PR, RR, spO2, Temp, Weight)
+            - Assess AVPU/GCS, hydration status
+            - Start Oxygen if spO2 < 94%, insert IV
+            - Perform brief, targeted history and physical exam
+
+        # ─────────────── Cascade: red-flag screen → LP ───────────────
+        - type: "flowchart"
+          variant: "cascade"
+          # Short action labels; give the decision column (with criteria
+          # bullets) more breathing room than the default 50/50 split.
+          action_width: 0.4
+          entry:
+            text: "Suspected meningitis"
+            shape: "stadium"
+          root:
+            decision: "Does the patient have any of these?"
+            criteria:
+              - "AVPU = P or U"
+              - "Inability to drink / feed"
+              - "Bulging fontanelle"
+              - "Convulsions >6 months old or >48 hrs"
+              - "Evidence of partial seizures"
+              - "Altered mental status AND convulsions"
+            action:
+              text: "Look for other source of symptoms"
+            action_answer: "no"
+            continuation:
+              decision: "Any contraindication to LP?"
+              criteria:
+                - "Requires CPR"
+                - "Shock"
+                - "Signs of raised ICP (GCS ≤8, changing mental status, focal neuro signs, unresponsive pupils, papilledema)"
+                - "Coagulation abnormality or platelets <100"
+                - "Skin infection at LP site"
+              action:
+                text: "No LP currently"
+                timing: "Reassess at 24–48 hrs after antibiotics"
+              action_answer: "yes"
+          terminal_action:
+            text: "Perform LP — send glucose, protein, cell count, gram stain, culture"
+
+        # ─────────────── Treatment prose ───────────────
+        - type: "prose"
+          title: "Treatment"
+          markdown: |
+            **IV antibiotics x 10 days — start within 1 hour.**
+
+            **> 3 months:**
+            - Cefotaxime 100 mg/kg IV 8-hourly (max 2 g/dose)
+            - **AND** Ampicillin 50 mg/kg IV 6-hourly (max 12 g/day)
+
+            **< 3 months:**
+            - Ceftriaxone 100 mg/kg IV once daily
+
+        - type: "prose"
+          title: "Follow-on"
+          markdown: |
+            - Follow Convulsion Protocol if applicable
