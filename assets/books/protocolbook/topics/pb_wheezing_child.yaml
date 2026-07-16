@@ -1,0 +1,177 @@
+# ============================================================
+# ProtocolBook pp.52–53 — Admission of Wheezing Child (p.52,
+# bronchiolitis) + Acute Asthma Management (p.53). Two-page topic —
+# both start from "the wheezing child" and p.52 classifies
+# bronchiolitis vs asthma, so kept together.
+#
+# p.52: wheeze classification prose (+ the "DO NOT USE antibiotics"
+# safety line) → initial bronchiolitis management prose → severity
+# `algorithm` (Severe → supportive Rx → CPAP-if-failing → Discharge;
+# Mild → Rx at Home).
+# p.53: acute asthma — a severity `algorithm` (Severe → Oxygen;
+# Mild/Moderate) both feeding a shared Management prose block, then
+# a reassess `algorithm` (improved? → Discharge vs Admit, both
+# converging on an education/follow-up terminal).
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (title 1,16) dropped.
+#   - p.53's shared "Management" box sits between the severity split
+#     and the reassess decision → rendered as a prose block between
+#     the two flowchart blocks (MiniMarkdown, so "Oral salbutamol is
+#     ineffective" stays bold and the neb/MDI dosing reads as
+#     bullets); the severity split's two arms each end in a box that
+#     points to it.
+#   - "ONE nebulization" / "NO Cough or Cold medicine" emphasis in
+#     print survives via the ALL-CAPS wording (AlgoBox = plain text).
+#   - p.52 Rx-at-Home + p.53 Admit/Discharge/education boxes carry
+#     the book's numbered lists as flat bullets.
+# ============================================================
+
+topic:
+  id: "pb-wheezing-child"
+  title: "Wheezing Child (Bronchiolitis & Asthma)"
+  list_subtitle: "pp.52–53 · bronchiolitis + asthma"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["wheeze", "wheezing", "bronchiolitis", "asthma", "salbutamol", "respiratory", "paediatric", "nebulizer", "prednisolone", "dexamethasone"]
+  category: "medical"
+  page_number: 52
+
+  pages:
+
+    # ═══════════════════════ PAGE 52 ═══════════════════════
+    - page_number: 52
+      blocks:
+
+        - type: "prose"
+          title: "Admission of the Wheezing Child"
+          markdown: |
+            Wheeze + history of cough or difficult breathing:
+
+            - **Likely Bronchiolitis:** <2 year, febrile, crackles
+            - **Likely Asthma if:** >2 years, hx of recurrent wheeze, or family atopic hx
+
+            **DO NOT USE antibiotics for either of the above unless the patient ALSO has pneumonia** (see the Pneumonia pathway for guidance).
+
+        - type: "prose"
+          title: "Bronchiolitis Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (PR, RR, spO2, Temp, Weight)
+            - Assess AVPU/GCS, hydration status
+            - Start Oxygen if spO2 <94%, insert IV if needed
+            - Perform brief, targeted history, physical exam
+
+            Consider CBC, CXR in premature <12 weeks, CHD, immunodeficiency and chronic neurological disease.
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "Bronchiolitis severity?"
+              outcomes:
+                - label: "Severe (spO2 <90%, apnea, or persistently increased respiratory effort — tachypnea, nasal flaring, subcostal/suprasternal retractions, accessory muscle use, grunting)"
+                  box:
+                    title: "Treatment (mostly supportive)"
+                    bullets:
+                      - "Oxygen if spO2 <94%"
+                      - "Nasal saline and bulb suction"
+                      - "PO Hydration or NGT/IVF if not tolerating oral feeds"
+                      - "Paracetamol for fever"
+                      - "Steroids & Antibiotics ineffective"
+                      - "Salbutamol: if over 9 months may give ONE nebulization, must examine before and after; stop if no improvement; if notable improvement, may continue every 4 hours"
+                    severity: "emergency"
+                  continue: true
+                - label: "Mild (no hypoxia, no apnea, no respiratory distress)"
+                  box:
+                    title: "Rx at Home"
+                    bullets:
+                      - "Nasal Saline"
+                      - "Oral Hydration"
+                      - "Paracetamol for fever"
+                      - "NO Cough or Cold medicine"
+                    severity: "non_urgent"
+            - decision: "Impending respiratory failure?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "CPAP trial"
+                    severity: "emergency"
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "Discharge Criteria"
+            bullets:
+              - "O2sat >94% x 12 hours"
+              - "Notably improved respiratory rate"
+              - "Able to take fluids to stay hydrated"
+              - "Caretaker instructed in use of nasal saline"
+              - "Counsel cough may persist 1–2 weeks"
+            severity: "non_urgent"
+
+    # ═══════════════════════ PAGE 53 ═══════════════════════
+    - page_number: 53
+      blocks:
+
+        - type: "prose"
+          title: "Acute Asthma Management"
+          markdown: |
+            Classify severity, then proceed to Management below.
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "Asthma severity?"
+              outcomes:
+                - label: "Severe — Wheeze PLUS spO2 <90%, lower chest wall indrawing, inability to breastfeed/drink, inability to talk, lethargy, peak flow <50%"
+                  box:
+                    title: "Place on Oxygen"
+                    bullets:
+                      - "→ then Management (below)"
+                    severity: "emergency"
+                - label: "Mild/Moderate — Wheeze PLUS fast breathing (2–12 months: RR ≥50; >12 months: RR ≥40), peak flow 50–80%, adequate air exchange, spO2 >90%"
+                  box:
+                    title: "Proceed to Management (below)"
+                    severity: "priority"
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Salbutamol every 15 minutes x 3 doses, via Nebulizer OR MDI+spacer+mask
+              - Nebulizer: <2 years 2.5mg in 3mL NS; >2 years 5mg in 5mL NS
+              - MDI+spacer+mask: 5–10 kg 4 puffs; 10–20 kg 6 puffs; >20 kg 8 puffs
+              - **Oral salbutamol is ineffective**
+            - Dexamethasone 0.6mg/kg PO or IV (if not drinking) x 1 dose, OR Prednisolone 1–2mg/kg PO x 1 dose
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Reassess after 30–60 minutes"
+            shape: "stadium"
+          stages:
+            - decision: "Was the patient initially mild/moderate and has shown marked improvement?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Discharge Criteria"
+                    bullets:
+                      - "O2sat >92%"
+                      - "Able to take fluids to stay hydrated"
+                      - "Requires salbutamol no more than every 6hrs"
+                    severity: "non_urgent"
+                  continue: true
+                - label: "No"
+                  box:
+                    title: "Admit"
+                    bullets:
+                      - "Severe: continue oxygen, 1–4 hourly salbutamol, early review"
+                      - "Mild/Moderate: 4 hourly salbutamol"
+                      - "Prednisolone 1–2mg/kg OD x 3 days"
+                      - "Ensure adequate hydration, maintenance fluids via NGT/IV if necessary"
+                    severity: "priority"
+                  continue: true
+          terminal:
+            title: "Education & follow-up (all patients)"
+            bullets:
+              - "Give education on use & importance of inhaler, spacer + mask, signs of asthma, danger signs, and avoidance of triggers (smoke, etc.)"
+              - "Discharge on Salbutamol MDI every 6 hours for no more than 5 days"
+              - "If did NOT receive 3 days of steroids, complete Prednisolone 1–2mg/kg PO OD x 3 days total"
+              - "Consider inhaled steroids if recurrent episodes of wheezing"

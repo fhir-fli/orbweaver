@@ -59,4 +59,5 @@ book:
         - topic: "topics/pb_paediatric_pneumonia.yaml"
         - topic: "topics/pb_paediatric_dka.yaml"
         - topic: "topics/pb_uti_kidney.yaml"
+        - topic: "topics/pb_wheezing_child.yaml"
         - topic: "topics/pb_meningitis.yaml"
