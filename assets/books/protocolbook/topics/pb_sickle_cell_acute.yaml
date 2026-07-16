@@ -1,0 +1,105 @@
+# ============================================================
+# ProtocolBook p.60 — Sickle Cell Acute Management. A multi-decision
+# cascade (stroke → ACS → splenic sequestration → vaso-occlusive
+# crisis → fever → dehydration → supportive care) → `algorithm`
+# flowchart, with an initial-management prose block.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (neuro 156,157; supportive 158–161)
+#     dropped.
+#   - The Yes outcomes that point to other protocols (stroke, ACS,
+#     pain, dehydration) are textual pointer boxes — flowchart boxes
+#     can't link, and those protocols are separate topics in this
+#     Sickle Cell group (Stroke p.61, ACS p.62).
+#   - "DO NOT BOLUS if not hypotensive" emphasis survives via the
+#     ALL-CAPS wording (AlgoBox = plain text).
+#   - Splenic-sequestration and fever boxes keep their a/b and
+#     bullet detail as flat bullets.
+# ============================================================
+
+topic:
+  id: "pb-sickle-cell-acute"
+  title: "Sickle Cell Acute Management"
+  list_subtitle: "p.60 · crisis triage"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sickle cell", "SCD", "crisis", "vaso-occlusive", "acute chest syndrome", "splenic sequestration", "stroke", "ceftriaxone", "paediatric", "haematology"]
+  category: "medical"
+  page_number: 60
+
+  blocks:
+
+    - type: "prose"
+      title: "Initial Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check VS (BP, PR, RR, spO2, Temp, Wt)
+        - Assess GCS, hydration status
+        - Insert IV, Start Oxygen if spO2 <94%
+        - Draw CBC, retic count, malaria, Tbili/Dbili if jaundiced
+        - Perform brief, targeted history, physical exam
+
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+        - decision: "Focal Neurologic findings? (Hemiparesis, focal neurologic deficit, speech disorder)"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat for Stroke"
+                severity: "emergency"
+            - label: "No"
+              continue: true
+        - decision: "Meets criteria for pneumonia or has moderate to severe chest pain?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat for Acute Chest Syndrome"
+                severity: "emergency"
+            - label: "No"
+              continue: true
+        - decision: "Sudden Splenic Enlargement with drop in Hgb >2g/dL from baseline? (usually with abdominal pain and <5yo)"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Splenic sequestration"
+                bullets:
+                  - "Hgb may continue to drop, monitor carefully"
+                  - "May require more aggressive transfusions than normal crisis"
+                severity: "emergency"
+            - label: "No"
+              continue: true
+        - decision: "Vaso-occlusive Crisis or Moderate to Severe pain?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat aggressively, see pain management protocol"
+                severity: "priority"
+            - label: "No"
+              continue: true
+        - decision: "Fever?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat for infection"
+                bullets:
+                  - "Blood Cultures"
+                  - "Ceftriaxone: 100mg/kg/OD IV (can give 50mg/kg/12hrs)"
+                  - "If evidence of sepsis, use sepsis protocol"
+                severity: "priority"
+            - label: "No"
+              continue: true
+        - decision: "Hypotensive or dehydrated?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat with dehydration protocol"
+                severity: "priority"
+            - label: "No"
+              continue: true
+      terminal:
+        title: "Supportive Care"
+        bullets:
+          - "Hydration: if mildly dehydrated or poor PO intake, may consider 1.5 x MIVF for 24hrs, goal is Euvolemia; ideally overall intake (IV and PO) should be full maintenance; watch carefully for volume overload (DO NOT BOLUS if not hypotensive)"
+          - "Feeding"
+          - "Malaria"
+        severity: "non_urgent"

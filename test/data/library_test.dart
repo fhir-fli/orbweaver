@@ -375,7 +375,7 @@ void main() {
     });
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '
-        'Paediatric 8, Cardiac 2, Sickle Cell 1 = 37 leaves)', () {
+        'Paediatric 8, Cardiac 2, Sickle Cell 2 = 38 leaves)', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
@@ -450,10 +450,12 @@ void main() {
       expect((cardiac[1] as YamlMap)['topic'],
           'topics/pb_rheumatic_fever.yaml');
       final sickle = (contents[4] as YamlMap)['children'] as YamlList;
-      expect(sickle, hasLength(1));
+      expect(sickle, hasLength(2));
       expect((sickle[0] as YamlMap)['topic'],
           'topics/pb_sickle_cell.yaml');
-      expect(leafCount(contents), 37);
+      expect((sickle[1] as YamlMap)['topic'],
+          'topics/pb_sickle_cell_acute.yaml');
+      expect(leafCount(contents), 38);
     });
   });
 }

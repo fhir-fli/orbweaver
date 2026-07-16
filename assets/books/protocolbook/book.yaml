@@ -72,3 +72,4 @@ book:
         accent: "0xFFBF360C"
       children:
         - topic: "topics/pb_sickle_cell.yaml"
+        - topic: "topics/pb_sickle_cell_acute.yaml"
