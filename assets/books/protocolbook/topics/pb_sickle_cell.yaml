@@ -1,0 +1,62 @@
+# ============================================================
+# ProtocolBook p.59 — Sickle Cell Disease (overview: admission
+# criteria + home medications). First topic of the new "Sickle
+# Cell Disease" section group. Pure outline → titled prose.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (home meds 26; hydroxyurea 51) dropped.
+#   - Outline numbering (I–II, a–d, 1–5) dropped per the standing
+#     rule; malaria-prophylaxis age dosing kept as nested bullets.
+#
+# ⚠️ GENUINE SOURCE TYPO corrected (surfaced to Grey 2026-07-16):
+#   - Malaria prophylaxis drug printed "Sulphadoxinepiremetamine"
+#     → the intended drug is sulfadoxine-pyrimethamine (SP,
+#     "Fansidar"); rendered "Sulfadoxine-pyrimethamine (SP)".
+#     Grey should fix the source PDF.
+#
+# CONTENT FLAG for the later OE / content pass (rendered faithfully):
+#   - Monthly SP malaria chemoprophylaxis in SCD is an LMIC-specific
+#     practice; where SP resistance is high other agents are used.
+#     OE may add a resistance caveat.
+# ============================================================
+
+topic:
+  id: "pb-sickle-cell"
+  title: "Sickle Cell Disease"
+  list_subtitle: "p.59 · admission + home meds"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sickle cell", "SCD", "hydroxyurea", "folic acid", "penicillin prophylaxis", "malaria prophylaxis", "priapism", "paediatric", "haematology"]
+  category: "medical"
+  page_number: 59
+
+  blocks:
+
+    - type: "prose"
+      title: "Admit a child with Sickle Cell Disease if any of the following"
+      markdown: |
+        - Pain: moderate to severe
+        - Severe pallor, Hgb <5, symptomatic with Hgb <7 or 2+ drop in Hgb from baseline
+        - Fever with tachycardia, tachypnea, hypotension or >38.0 C
+        - Chest pain, difficulty breathing
+        - Acute (0–7 days) abnormal CNS signs (e.g. headache, drowsiness, paralysis or limb weakness)
+        - Priapism (>4 hours)
+        - RDT or B/S + for Malaria
+        - Diarrhea and/or vomiting with abdominal pain, distension or inability to drink enough to stay hydrated
+        - Neutropenia (granulocytes <1000) and fever
+
+    - type: "prose"
+      title: "Home Medications at time of Discharge"
+      markdown: |
+        - **Folic Acid** 5mg PO QD
+        - **Penicillin VK**
+          - <3yo: 125mg PO BD
+          - 3–5yo: 250mg PO BD
+        - **Malaria Prophylaxis**
+          - Sulfadoxine-pyrimethamine (SP): 2–5yo ½ tab monthly; 5–10yo 1 tab monthly; 10–15yo 2 tabs monthly; >15yo 3 tabs monthly
+          - Sulfur allergy: Consider erythromycin 250mg PO q12hrs
+        - **Hydroxyurea**
+          - Should ideally be managed by specialized treatment centre
+          - Indications: Frequent crises >5/year; Abnormal Transcranial Doppler (TCD) Ultrasonography velocity >200cm/s; H/o of Acute Chest Syndrome; H/o Stroke
+          - Likely beneficial in all children with Sickle Cell Disease, although larger studies are still pending
+          - Start after 9 months old
+          - Starting Dose: 20mg/kg PO QD

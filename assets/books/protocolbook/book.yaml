@@ -67,3 +67,8 @@ book:
       children:
         - topic: "topics/pb_heart_failure.yaml"
         - topic: "topics/pb_rheumatic_fever.yaml"
+    - title: "Sickle Cell Disease"
+      palette:
+        accent: "0xFFBF360C"
+      children:
+        - topic: "topics/pb_sickle_cell.yaml"

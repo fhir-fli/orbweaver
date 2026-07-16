@@ -375,23 +375,25 @@ void main() {
     });
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '
-        'Paediatric 8, Cardiac 2 = 36 leaves)', () {
+        'Paediatric 8, Cardiac 2, Sickle Cell 1 = 37 leaves)', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      // Four section groups so far, mirroring the book's dividers.
-      expect(contents, hasLength(4));
+      // Five section groups so far, mirroring the book's dividers.
+      expect(contents, hasLength(5));
       expect((contents[0] as YamlMap)['title'], 'Emergency Protocols');
       expect((contents[1] as YamlMap)['title'],
           'Ingestions, Anaphylaxis & Bites');
       expect((contents[2] as YamlMap)['title'], 'Paediatric Protocols');
       expect((contents[3] as YamlMap)['title'],
           'Paediatric Cardiac Protocols');
+      expect((contents[4] as YamlMap)['title'], 'Sickle Cell Disease');
       // Each group carries its own accent.
       expect((contents[0] as YamlMap)['palette']['accent'], '0xFFC62828');
       expect((contents[1] as YamlMap)['palette']['accent'], '0xFF6A1B9A');
       expect((contents[2] as YamlMap)['palette']['accent'], '0xFF2E7D32');
       expect((contents[3] as YamlMap)['palette']['accent'], '0xFFAD1457');
+      expect((contents[4] as YamlMap)['palette']['accent'], '0xFFBF360C');
       // Emergency Protocols = p.12–26 (15 topics), ending in Altered
       // Mental Status; Ingestions has Poisoning (p.28); Paediatric has
       // Meningitis (p.55) for now.
@@ -447,7 +449,11 @@ void main() {
           'topics/pb_heart_failure.yaml');
       expect((cardiac[1] as YamlMap)['topic'],
           'topics/pb_rheumatic_fever.yaml');
-      expect(leafCount(contents), 36);
+      final sickle = (contents[4] as YamlMap)['children'] as YamlList;
+      expect(sickle, hasLength(1));
+      expect((sickle[0] as YamlMap)['topic'],
+          'topics/pb_sickle_cell.yaml');
+      expect(leafCount(contents), 37);
     });
   });
 }
