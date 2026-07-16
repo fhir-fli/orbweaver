@@ -66,3 +66,4 @@ book:
         accent: "0xFFAD1457"
       children:
         - topic: "topics/pb_heart_failure.yaml"
+        - topic: "topics/pb_rheumatic_fever.yaml"

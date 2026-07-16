@@ -1,0 +1,69 @@
+# ============================================================
+# ProtocolBook p.58 — Acute Rheumatic Fever (ARF). Second topic of
+# the Paediatric Cardiac Protocols section. Pure outline (2015 Jones
+# criteria + evaluation + treatment) → titled prose.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (Jones 45–50; treatment 51) dropped.
+#   - Outline numbering (I–V, a–c, i–ii) dropped per the standing
+#     rule; the criteria manifestations kept as nested bullets.
+#   - "↑↑ ESR / ↑↑ CRP" arrows kept verbatim (unicode renders).
+#   - Aspirin for ARF is a recognised indication (the anti-
+#     inflammatory of choice for ARF arthritis/carditis), NOT the
+#     usual paediatric-aspirin caution — left without a flag.
+# ============================================================
+
+topic:
+  id: "pb-rheumatic-fever"
+  title: "Acute Rheumatic Fever (ARF)"
+  list_subtitle: "p.58 · Jones criteria + Rx"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["rheumatic fever", "ARF", "jones criteria", "streptococcus", "carditis", "sydenham chorea", "cardiac", "penicillin", "prophylaxis", "paediatric"]
+  category: "medical"
+  page_number: 58
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - **Initial ARF:** (evidence of preceding group A Streptococcus infection) + (2 major) OR (1 major + 2 minor criteria)
+        - **Recurrent ARF:** (h/o ARF) + (2 major) OR (1 major + 2 minor) OR (3 minor criteria)
+
+        Below = 2015 Jones criteria for the diagnosis of rheumatic fever for moderate to high-risk populations.
+
+    - type: "prose"
+      title: "Major Criteria"
+      markdown: |
+        - **Carditis and valvulitis** (clinical and/or subclinical)
+          - Manifestations: fever, new murmur, chest discomfort or pleuritic chest pain, malaise, tachycardia, heart failure
+        - **Arthritis**
+          - Manifestations: fever, migratory polyarthritis affecting large joints (knees, elbows, ankles, wrists) but also monoarthritis or polyarthralgia, lower extremity affected first, more in adolescents, asymmetric
+        - **Central nervous system involvement** (e.g. Sydenham Chorea)
+          - Manifestations: fever, grimacing, fidgeting, clumsiness, emotional lability, difficulty with handwriting, gait imbalance, may resolve while sleeping
+        - **Subcutaneous nodules**
+        - **Erythema marginatum**
+
+    - type: "prose"
+      title: "Minor Criteria"
+      markdown: |
+        - Monoarthralgia or polyarthralgia
+        - Fever (≥37.5 °C axillary)
+        - ↑↑ ESR (≥30 mm/hr) and/or ↑↑ CRP (≥3.0 mg/dL)
+        - Prolonged PR interval, after accounting for age variability (unless carditis is a major criterion)
+
+    - type: "prose"
+      title: "Evaluation"
+      markdown: |
+        - CBC and ESR/CRP when available
+        - ECHO, ECG if available
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        - Streptococcal Pharyngitis antibiotic regimen (regardless of whether patient currently has pharyngitis)
+        - **Arthritis:** Aspirin 20–25mg/kg/dose q6hrs
+        - **Secondary prophylaxis**
+          - Benzathine Penicillin G (BPG) IM qmonth: ≤27kg = 600,000 IU; >27kg = 1.2 million IU
+          - Penicillin V 250mg PO BD
+          - Erythromycin 250mg PO BD (only if PCN allergic)
