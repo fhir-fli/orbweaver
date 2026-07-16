@@ -1,0 +1,181 @@
+# ============================================================
+# ProtocolBook pp.47–48 — Paediatric Hyperglycemia (RBS >14mmol/L)
+# + Diabetic Ketoacidosis. Two-page topic.
+#
+# The two printed pages are one continuous protocol: p.47's
+# "ketones in urine? → Yes" branch flows into the "Diabetic
+# Ketoacidosis" box that opens p.48. Kept as ONE topic so the
+# bridge reads as "start DKA protocol (next page)".
+#
+# Hybrid split:
+#   - p.47: history/findings + management as prose; the triage
+#     cascade (GCS<9/insulin-drip? → ICU; ketones? → DKA vs non-DKA
+#     hyperglycaemia management) as an `algorithm` flowchart.
+#   - p.48: the DKA management is FOUR concurrent protocol boxes
+#     (Fluid / Insulin / Potassium / Monitor Neuro) with no decision
+#     between them → titled prose sections per the hybrid rule
+#     (concurrent content-flow arms = prose). The resolution tail
+#     (repeat urinalysis → ketones? → NPO+D5 vs eat+SC-insulin) is a
+#     small `algorithm` flowchart.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (title 26,27; management 27) dropped.
+#   - Management items renumbered 5–11 in print (template artifact)
+#     → numbers dropped, order kept; item 11 "DO NOT GIVE INSULIN"
+#     kept as a bold safety line.
+#   - Fluid formula printed "80mL/kg - + 2*maintenance – initial
+#     bolus": the stray "-" dropped and "2*maintenance" written
+#     "2× maintenance" (a bare "*" would break MiniMarkdown).
+#   - AlgoBox bullets are a flat list (no nesting) and PLAIN text
+#     (no MiniMarkdown) → sub-points inlined parenthetically, no
+#     bold inside flow boxes (safety emphasis lives in the prose).
+#   - "urinalyis" (p.47) → "urinalysis"; "decreased conscious"
+#     (p.48) kept as printed (telegraphic for "decreased level of
+#     consciousness").
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - SC insulin for DKA (0.15 IU/kg q2h) rather than an IV insulin
+#     infusion is a resource-limited adaptation; the 2× maintenance
+#     + 80mL/kg regimen and the "no bolus >40mL/kg in 4h" cerebral-
+#     oedema caution are broadly consistent with ISPAD LMIC guidance.
+#     OE to confirm currency vs ISPAD 2022 (slower correction, weight-
+#     based fluids, insulin 0.05–0.1 U/kg/h IV where available).
+# ============================================================
+
+topic:
+  id: "pb-paediatric-dka"
+  title: "Paediatric Hyperglycemia & DKA"
+  list_subtitle: "pp.47–48 · triage + DKA protocol"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hyperglycemia", "hyperglycaemia", "DKA", "diabetic ketoacidosis", "diabetes", "insulin", "ketones", "paediatric", "type 1 diabetes"]
+  category: "medical"
+  page_number: 47
+
+  pages:
+
+    # ═══════════════════════ PAGE 47 ═══════════════════════
+    - page_number: 47
+      blocks:
+
+        - type: "prose"
+          markdown: |
+            **Pediatric Hyperglycemia** — RBS >14mmol/L.
+
+            - **History:** Polyuria, Polydipsia, Weight loss, Abdominal pain, Tiredness, Vomiting, Confusion
+            - **Clinical findings:** deep sighing/Kussmaul respirations, smell of ketones, lethargy, vomiting
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
+            - Assess GCS, hydration status
+            - Insert 2 IVs, Start Oxygen if spO2 <94%
+            - Draw renal functions, potassium, CBC, malaria, urinalysis
+            - Perform brief, targeted history, physical exam
+            - **DO NOT GIVE INSULIN**
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "GCS <9 OR plan to use Insulin drip?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Transfer to ICU"
+                    severity: "emergency"
+                - label: "No"
+                  continue: true
+            - decision: "Ketones in Urine?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Diabetic Ketoacidosis"
+                    bullets:
+                      - "Identify and treat precipitating illness, consider: sepsis, pneumonia, gastroenteritis"
+                      - "→ start DKA protocol (next page)"
+                    severity: "emergency"
+                - label: "No"
+                  box:
+                    title: "Manage hyperglycaemia without DKA"
+                    bullets:
+                      - "Evaluate and manage dehydration"
+                      - "Check glucose every 4 hours (if hyperglycemia resolves with hydration → monitor every 6 hours x 24 hours; if continues to be normal x 24 hours → likely reactive)"
+                      - "Check urine dipstick every 6 hours"
+                      - "If ketonuria with hyperglycemia, start DKA pathway"
+                      - "If glucose >14 for >6 hours → Dx: Type 1 DM without DKA"
+                      - "Start SC Insulin, usual dose 0.5–1 IU/kg/day (Regular sliding scale every 6 hours; Mixtard BD 70% AM / 30% PM, 30 minutes before meals)"
+                    severity: "priority"
+
+    # ═══════════════════════ PAGE 48 ═══════════════════════
+    - page_number: 48
+      blocks:
+
+        - type: "prose"
+          title: "Diabetic Ketoacidosis"
+          markdown: |
+            Identify and treat precipitating illness, consider: sepsis, pneumonia, gastroenteritis.
+
+        - type: "prose"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          title: "Fluid Protocol"
+          markdown: |
+            Total fluid replacement = 80mL/kg + 2× maintenance − initial bolus
+
+            - **Initial bolus**
+              - Hypovolemic Shock: 10–20mL/kg NS or RL bolus, repeat until BP improves
+              - Hypovolemic but no Shock: 10–20mL/kg of NS or RL over 1st hr
+              - **DO NOT give >40mL/kg in first 4hrs — can cause cerebral edema**
+            - Replacement fluids: correct the remaining deficit over 48 hours
+            - Satisfactory urine output 1–2mL/hr
+
+            **NEVER alternate D10 & NS/RL — this can cause brain oedema**
+
+        - type: "prose"
+          title: "Insulin Protocol"
+          markdown: |
+            **Start after 1-hour IVF.**
+
+            - Soluble Regular Insulin Injection: SC 0.15 IU/kg every 2 hours
+
+        - type: "prose"
+          title: "Potassium Protocol"
+          markdown: |
+            - Add 10mEq KCl/500mL bag
+            - **DO NOT give potassium if urine output <1mL/kg/hr (or K >5.5)**
+
+        - type: "prose"
+          title: "Monitor Neuro Status"
+          markdown: |
+            - Watch for: headache, slowing HR, irritability, incontinence, decreased conscious, focal signs
+            - If any of the above: check/correct hypoglycemia
+            - If **not** hypoglycemic: Call Senior if neuro changes and concern for increased ICP; Transfer to ICU; Mannitol 0.5–1g/kg or hypertonic saline
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "When RBS <14 or RBS drops rapidly, repeat urinalysis"
+            shape: "stadium"
+          stages:
+            - decision: "Urine ketones on repeat?"
+              outcomes:
+                - label: "Urine still with ketones"
+                  box:
+                    title: "Keep NPO"
+                    bullets:
+                      - "Change IVF to D5 NS/RL (50mL D50 + 450mL NS/RL)"
+                      - "Continue Insulin Regimen until RBS <14"
+                      - "Recheck urine for ketones every 4 hours"
+                    severity: "priority"
+                - label: "Urine without ketones"
+                  box:
+                    title: "Transition to oral"
+                    bullets:
+                      - "If patient can drink, stop IVF, otherwise continue replacement/maintenance"
+                      - "Patient is allowed to eat"
+                      - "Switch to SC Insulin, usual dose 0.5–1 IU/kg/day (Regular sliding scale every 6 hours; Mixtard BD 70% AM / 30% PM, 30 minutes before meals)"
+                    severity: "non_urgent"
