@@ -1,0 +1,204 @@
+# ============================================================
+# ProtocolBook pp.49–50 — Urinary Tract and Kidney Disorders in
+# Children (p.49) + UTI/Pyelonephritis Work-Up (p.50). Two-page
+# topic — p.49's "Go To UTI/Pyelonephritis Algorithm" box hands off
+# directly to the p.50 work-up, so kept as one topic ("next page").
+#
+# p.49: presenting symptoms → dipstick screen → labs → nephrotic
+# vs supportive-care branch → one `algorithm` flowchart with a
+# prose symptom intro.
+# p.50: a rotated (landscape) multi-entry work-up in print. It has
+# TWO independent patient pathways (febrile infant 3–24mo; verbal
+# child with symptoms) that both converge on a shared urinalysis →
+# nitrite/LE endpoint → rendered as THREE small `algorithm` blocks
+# (pathway 1, pathway 2, shared endpoint) plus a risk-factor prose
+# block, since the `algorithm` spine is single-entry.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (title 28; p.50 157; HTN 151; Lasix
+#     152) dropped.
+#   - Outline numbering dropped per the standing rule; order kept.
+#   - p.49 "Obtain labs" + "Evaluate & treat other factors" are
+#     action boxes feeding the nephrotic decision → folded into that
+#     decision's criteria/context (you obtain them to decide).
+#   - Supportive-care box "MOST IMPORTANT" is bold/underlined in
+#     print; it is the flowchart terminal (AlgoBox = plain text, no
+#     MiniMarkdown) so emphasis is carried by the ALL-CAPS wording
+#     only. Footnote "*" on item 1 has no matching footnote text on
+#     the page → dropped.
+#   - p.50 "Circumcised males → UTI unlikely" branch (off the verbal
+#     child entry) folded into pathway 2 as a lead note.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Nitrite/LE-only screening + treat/exclude is the LMIC bedside
+#     approach; where microscopy/culture exist a positive UA is
+#     confirmed by culture. OE may add "confirm with urine culture
+#     where available."
+#   - Nephrotic Rx = prednisone 2mg/kg/day x4wk then taper is
+#     standard ISKDC induction. Fine.
+# ============================================================
+
+topic:
+  id: "pb-uti-kidney"
+  title: "Urinary Tract & Kidney Disorders"
+  list_subtitle: "pp.49–50 · work-up + UTI algorithm"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["UTI", "urinary tract infection", "pyelonephritis", "kidney", "renal", "nephrotic syndrome", "haematuria", "proteinuria", "oedema", "paediatric"]
+  category: "medical"
+  page_number: 49
+
+  pages:
+
+    # ═══════════════════════ PAGE 49 ═══════════════════════
+    - page_number: 49
+      blocks:
+
+        - type: "prose"
+          title: "Most common presenting symptoms"
+          markdown: |
+            - Fever
+            - Dysuria, frequency, nocturia
+            - Abdominal pain/discomfort
+            - Hematuria (bloody, dark, tea-colored urine)
+            - Oliguria/Anuria
+            - Swelling — face and extremities
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "3–24 months with fever, OR verbal child with dysuria/frequency/nocturia or abdominal symptoms?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Go to UTI/Pyelonephritis Work-Up"
+                    bullets:
+                      - "→ see UTI/Pyelonephritis Work-Up (next page)"
+                - label: "No"
+                  continue: true
+            - decision: "Bedside urine dipstick — any of the following present?"
+              criteria:
+                - "Hematuria (gross or microscopic)"
+                - "Proteinuria"
+                - "Oliguria/anuria"
+                - "Edema"
+              outcomes:
+                - label: "No"
+                  box:
+                    title: "Consider other causes"
+                    severity: "non_urgent"
+                - label: "Yes"
+                  continue: true
+            - decision: "Nephrotic syndrome — all of the following present?"
+              criteria:
+                - "First obtain: Renal Functions, Electrolytes (Na+/K+/Cl−), Albumin/Protein, CBC"
+                - "Evaluate & treat other factors: Malaria, Sepsis, Dehydration, Heart Failure, Malnutrition"
+                - "Proteinuria"
+                - "Edema"
+                - "Hypoalbuminemia"
+                - "No other diagnosis or history of gross hematuria, or increased Cr"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat as Nephrotic Syndrome"
+                    bullets:
+                      - "Prednisone 2mg/kg/day x 4 weeks (will require taper)"
+                    severity: "priority"
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "Supportive Care"
+            bullets:
+              - "Oliguria/Anuria (MOST IMPORTANT): if urine output drops, after correcting any prerenal causes, start Lasix 1mg/kg IV/dose BD, and consider IV hydration (1/2–2/3 MIVF, watch for fluid overload)"
+              - "Hypertension (>95%): if not controlled with Lasix, Amlodipine 2.5mg OD-BD"
+              - "Edema: Lasix 1mg/kg/dose IV OD-BD"
+              - "Monitor UOP/Volume status: may need to place foley catheter (goal UOP 1mL/kg/hr)"
+              - "Hx of pharyngitis/skin infection: consider Penicillin V 250mg TID for strep eradication"
+              - "Treat infections (avoid gentamicin, ibuprofen, and other nephrotoxic drugs)"
+              - "Treat malaria (consider confirming eradication with control RDT & B/S)"
+              - "REMEMBER: may be intravascularly depleted even with edema"
+
+    # ═══════════════════════ PAGE 50 ═══════════════════════
+    - page_number: 50
+      blocks:
+
+        - type: "prose"
+          title: "UTI / Pyelonephritis Work-Up"
+          markdown: |
+            **Risk Factors for UTI:**
+
+            - Hx of UTI
+            - T >39°C
+            - Fever w/o source
+            - Ill appearance
+            - Suprapubic Tenderness
+            - Fever >24H
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Fever in children 3–24 months"
+            shape: "stadium"
+          stages:
+            - decision: "Meets the UTI risk threshold for the child's group?"
+              criteria:
+                - "Girls <12 months or uncircumcised boys: ≥1 risk factor"
+                - "Girls >12 months or circumcised boys: ≥2 risk factors"
+              outcomes:
+                - label: "Threshold met"
+                  box:
+                    title: "Obtain Urinalysis (Clean Catch)"
+                    bullets:
+                      - "→ interpret below"
+                    severity: "priority"
+                - label: "Threshold not met"
+                  box:
+                    title: "Urinary Tract Infection/Pyelonephritis Unlikely"
+                    severity: "non_urgent"
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Verbal child with urinary or abdominal symptoms"
+            shape: "stadium"
+          stages:
+            - decision: "Dysuria or frequency?"
+              criteria:
+                - "Circumcised male with no urinary symptoms → UTI unlikely, look for other cause"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Obtain Urinalysis (Clean Catch)"
+                    bullets:
+                      - "→ interpret below"
+                    severity: "priority"
+                - label: "No"
+                  continue: true
+            - decision: "Abdominal pain, back pain, or new-onset incontinence?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Obtain Urinalysis (Clean Catch)"
+                    bullets:
+                      - "→ interpret below"
+                    severity: "priority"
+                - label: "No"
+                  box:
+                    title: "UTI unlikely, look for other cause"
+                    severity: "non_urgent"
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Obtain Urinalysis (Clean Catch) — interpret"
+            shape: "stadium"
+          stages:
+            - decision: "Nitrite or LE positive?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat for UTI"
+                    severity: "priority"
+                - label: "No"
+                  box:
+                    title: "UTI unlikely, look for other cause"
+                    severity: "non_urgent"
