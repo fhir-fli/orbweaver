@@ -1,0 +1,157 @@
+# ============================================================
+# ProtocolBook pp.56–57 — Pediatric Heart Failure. First topic of
+# the new "Pediatric Cardiac Protocols" section (starts directly on
+# p.56, no divider page). Two-page topic.
+#
+# p.56: symptoms / physical-exam / neonatal-screening prose +
+# acute-management prose + an acute-management `algorithm` flowchart
+# (anemia-or-fever? → high-output Rx; cold limbs? → dopamine; volume
+# overload? → furosemide vs after-stabilization).
+# p.57: chronic medications & dosages + the LV-dysfunction med order
+# (with the ECHO/potassium/senior WARNING as a red-alert callout) +
+# Rx for specified conditions (ACHD, Tet spell, dilated CM) — pure
+# outline → titled prose.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (symptoms 42; exam 43; chronic 44;
+#     transfuse 155) dropped.
+#   - Outline numbering (I–III, a–c, i–vii, 1–4) dropped per the
+#     standing rule; order kept; the Tet-spell 5-step sequence kept
+#     as ordered bullets.
+#   - "WARNING!" med-safety block bolded/italic in print → red-alert
+#     callout (prose, so emphasis renders).
+#   - AlgoBox bullets are plain text (no MiniMarkdown, no nesting).
+# ============================================================
+
+topic:
+  id: "pb-heart-failure"
+  title: "Pediatric Heart Failure"
+  list_subtitle: "pp.56–57 · acute + chronic Rx"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["heart failure", "cardiac", "furosemide", "dopamine", "digoxin", "ACE inhibitor", "tet spell", "cardiomyopathy", "congenital heart disease", "paediatric"]
+  category: "medical"
+  page_number: 56
+
+  pages:
+
+    # ═══════════════════════ PAGE 56 ═══════════════════════
+    - page_number: 56
+      blocks:
+
+        - type: "prose"
+          title: "Heart Failure — most common symptoms"
+          markdown: |
+            - **Infants:** difficulty feeding, easy fatigability, failure to thrive
+            - **Young children:** GI sxs, failure to thrive, easy fatigability, recurrent or chronic cough with wheezing (must differentiate from asthma)
+            - **Older children:** exercise intolerance, anorexia, abdominal pain, wheezing, dyspnea, edema, palpitations, chest pain or syncope
+
+        - type: "prose"
+          title: "Physical exam findings"
+          markdown: |
+            - Tachycardia, gallop rhythm
+            - Poor perfusion — cool/mottled extremities, decreased cap refill, decreased peripheral pulses, lowered systemic BP
+            - Pulmonary findings — tachypnea, retractions, accessory respiratory muscle use, grunting/nasal flaring in infants, wheezes and rales (more in older children)
+            - Systemic congestion — hepatomegaly, jugular venous distension (rare in infants and young children), peripheral edema
+            - Hypertension in upper extremities or weak pulses in lower extremities
+            - Grade III+ murmur, precordial thrill or heave
+            - **Neonatal screening (>24 hrs old):** check preductal (R. hand) & post-ductal (either foot) SpO2. Positive screen if: (a) SpO2 differs by >3% btw upper and lower extremities on 3 measurements separated by an hour each, (b) SpO2 <90% any extremity, or (c) SpO2 <95% in upper and lower extremities on 3 measurements separated by an hour each
+
+        - type: "prose"
+          title: "Acute Management"
+          markdown: |
+            - Monitor, support ABCs, ensure patient is seated
+            - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
+            - Assess GCS, hydration status
+            - Start Oxygen if spO2 <94%, insert IV as needed
+            - Draw CBC, malaria, RFTs, electrolytes
+            - Perform brief, targeted history, physical exam
+            - Consider ECG if available
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "Severe anemia or High fever?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Consider treating high-output heart failure from anemia, malaria or sepsis"
+                    bullets:
+                      - "Transfuse 10–20mL/kg over 2–4 hours (2.5–5mL/kg/hr) if needed"
+                      - "Malaria Rx per protocol"
+                      - "Sepsis Rx per protocol"
+                    severity: "priority"
+                  continue: true
+                - label: "No"
+                  continue: true
+            - decision: "Are limbs cold?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Consider Dopamine 5–20mcg/kg per minute, titrate to effect"
+                    severity: "priority"
+                  continue: true
+                - label: "No"
+                  continue: true
+            - decision: "Volume overload?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Furosemide 1mg/kg IV every 4 hours until clinical improvement, then every 6–8 hours"
+                    severity: "priority"
+                - label: "No"
+                  box:
+                    title: "After Stabilization: CXR, ECHO"
+                    severity: "non_urgent"
+
+    # ═══════════════════════ PAGE 57 ═══════════════════════
+    - page_number: 57
+      blocks:
+
+        - type: "prose"
+          title: "Chronic Medications & Dosages"
+          markdown: |
+            - **Diuretics**
+              - Furosemide 1mg/kg/dose OD or BD
+              - Spironolactone 1mg/kg/day divided OD-BD, up to 3.3–6mg/kg/day divided OD-BD (not to exceed 100mg/day)
+            - **ACE Inhibitors / ARBs**
+              - Captopril 0.3–2.5mg/kg divided BD, titrate up as needed, max dose 6mg/kg/day
+              - Lisinopril/enalapril 0.1mg/kg OD
+              - Losartan 0.5mg/kg/day (not to exceed 12.5–25mg/day), up to 1.4mg/kg/day (not to exceed 150mg/day)
+            - **Digitalis/Digoxin** 5–15mcg/kg/day divided BD, up to 20–30mcg/kg/day divided BD
+              - Especially useful in the setting of atrial arrhythmias
+            - **Beta Blockers**
+              - Propranolol 1–3mg/kg/dose BD-TID
+              - Carvedilol 0.1mg/kg/day divided BD (not to exceed 3.125mg/day), up to 0.8–1mg/kg/day divided BD (not to exceed 25mg BD)
+
+        - type: "prose"
+          title: "Recommended order in left ventricular dysfunction"
+          markdown: |
+            - Furosemide — for patients with or history of fluid retention
+            - ACEI/ARBs — everyone without specific contraindication, especially with valvular (notably regurgitant mitral or aortic valvular) disease
+
+        - type: "prose"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          title: "WARNING"
+          markdown: |
+            Before starting either of the following medications, must have ECHO, potassium level and have consulted with senior.
+
+            - Spironolactone — for patients on Furosemide that continue with fluid retention, especially in patients that are more symptomatic
+            - Digoxin — for those with low ejection fraction
+
+        - type: "prose"
+          title: "Rx for specified conditions"
+          markdown: |
+            - **Acyanotic Congenital Heart Disease:** Left to Right Shunts (VSD/PDA most common) — standard order of medications
+            - **Cyanotic Congenital Heart Disease: Tetralogy of Fallot**
+              - Heart failure symptoms rare
+              - Treat Tet Spell:
+                - Knee-chest position
+                - Oxygen
+                - Morphine 0.1 mg/kg/dose IV
+                - Normal Saline 10–20mL/kg IV slow bolus
+                - Propranolol 0.1mg/kg/dose IV or 0.5mg/kg/dose PO
+            - **Dilated Cardiomyopathy:** Order of Rx standard; Digoxin (especially in the setting of atrial arrhythmias)

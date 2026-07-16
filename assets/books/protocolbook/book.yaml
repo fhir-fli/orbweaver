@@ -61,3 +61,8 @@ book:
         - topic: "topics/pb_uti_kidney.yaml"
         - topic: "topics/pb_wheezing_child.yaml"
         - topic: "topics/pb_meningitis.yaml"
+    - title: "Paediatric Cardiac Protocols"
+      palette:
+        accent: "0xFFAD1457"
+      children:
+        - topic: "topics/pb_heart_failure.yaml"
