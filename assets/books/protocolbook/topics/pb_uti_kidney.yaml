@@ -41,7 +41,7 @@
 topic:
   id: "pb-uti-kidney"
   title: "Urinary Tract & Kidney Disorders"
-  list_subtitle: "pp.49–50 · work-up + UTI algorithm"
+  list_subtitle: "pp.49–51 · work-up + UTI Rx"
   last_reviewed: "pocketbook v1.7"
   tags: ["UTI", "urinary tract infection", "pyelonephritis", "kidney", "renal", "nephrotic syndrome", "haematuria", "proteinuria", "oedema", "paediatric"]
   category: "medical"
@@ -197,8 +197,51 @@ topic:
                 - label: "Yes"
                   box:
                     title: "Treat for UTI"
+                    bullets:
+                      - "→ see Treatment (next page)"
                     severity: "priority"
                 - label: "No"
                   box:
                     title: "UTI unlikely, look for other cause"
                     severity: "non_urgent"
+
+    # ═══════════════════════ PAGE 51 ═══════════════════════
+    - page_number: 51
+      blocks:
+
+        - type: "prose"
+          title: "Treatment for lower UTI (7 day course)"
+          markdown: |
+            Outpatient treatment (for those non-toxic and able to tolerate):
+
+            - Nitrofurantoin 6mg/kg PO divided every 6 hours (not if <1 year old)
+            - Amoxicillin / Amoxicillin-Clavulanate 50mg/kg PO divided every 12 hours
+
+        - type: "prose"
+          title: "Treat for upper UTI (Pyelonephritis) if the following are present"
+          markdown: |
+            - **<2 years**
+              - Age <2 months
+              - Clinical urosepsis (e.g. toxic appearance, hypotension, poor capillary refill)
+              - Immunocompromised patient
+              - Vomiting or inability to tolerate oral medication
+              - Lack of adequate outpatient follow-up (e.g. no telephone, live far from hospital)
+              - Failure to respond to outpatient therapy
+            - **>2 years**, at least 2 of the following: Fever, Chills, Flank Pain
+
+        - type: "prose"
+          title: "Pyelonephritis Treatment (7–14 days)"
+          markdown: |
+            Inpatient treatment. Labs: CBC, renal fxn (Bld Cx if concern for sepsis).
+
+            - IV antibiotics for 48–72 hours until clinical improvement, then switch to PO
+            - Cefotaxime 150mg/kg/day IV/IM divided every 8 hours
+            - Ceftriaxone 75mg/kg IV/IM daily
+            - Ampicillin 50mg/kg IV/IM every 6 hours
+            - IV hydration if unable to tolerate PO, monitor urine output
+
+        - type: "prose"
+          title: "Imaging"
+          markdown: |
+            - **Renal/Bladder Ultrasound:** all febrile infants with UTI, within 48 hours if severe, otherwise after resolution of acute illness
+            - **VCUG** for any of: abnormalities on ultrasound, recurrent febrile UTI, Temp >38 axillary AND a pathogen other than E. Coli, failure to thrive or hypertension
