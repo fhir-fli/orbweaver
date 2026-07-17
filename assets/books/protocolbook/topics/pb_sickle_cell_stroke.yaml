@@ -1,0 +1,73 @@
+# ============================================================
+# ProtocolBook p.61 — Sickle Cell Stroke. A linear flow (presentation
+# → initial management → concurrent-issue management table →
+# monitoring → discharge) with no decision points → titled prose +
+# one table, per the hybrid rule.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (Hgb 156,162; hydration 163,164) dropped.
+#   - The concurrent-management table's Fever/Hypoglycemia rows have
+#     Children-vs-Adults values; the other rows span both ages. To
+#     avoid empty cells, rendered as a 2-column Issue|Management
+#     table with the age split inlined for those two rows.
+#
+# ⚠️ GENUINE SOURCE ERROR corrected (surfaced to Grey 2026-07-16):
+#   - The management table is titled "Does the patient have any
+#     contraindication?:" in the source — a template/copy-paste
+#     error: the table below it is concurrent-issue MANAGEMENT
+#     (fever, hypoglycemia, convulsions, anemia, infection,
+#     hydration), NOT a contraindication check. Retitled "Manage
+#     concurrent issues" to match its content. Grey should fix the
+#     source PDF header.
+# ============================================================
+
+topic:
+  id: "pb-sickle-cell-stroke"
+  title: "Sickle Cell Stroke"
+  list_subtitle: "p.61 · acute stroke protocol"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sickle cell", "SCD", "stroke", "hemiparesis", "transfusion", "cefotaxime", "hydroxyurea", "paediatric", "haematology", "neurology"]
+  category: "medical"
+  page_number: 61
+
+  blocks:
+
+    - type: "prose"
+      title: "Presentation"
+      markdown: |
+        New Neurologic Findings: hemiparesis, focal neurologic deficit, speech disorder — **OR** High Clinical Suspicion.
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
+        - Start Oxygen if spO2 <94%
+        - Assess GCS
+        - Assess hydration status
+        - Insert IV, Draw CBC, malaria, RBS
+        - Perform brief, targeted history, physical exam
+
+    - type: "table"
+      title: "Manage concurrent issues"
+      columns: ["Issue", "Management"]
+      column_flex: [3, 7]
+      rows:
+        - cells: ["**Fever: Paracetamol**", "Children: 15mg/kg PO q6hrs · Adults: 650mg PO q6hrs"]
+        - cells: ["**Hypoglycemia**", "Children: Dextrose 10% 5ml/kg (mix 8ml NS with 2ml Dextrose 50%) · Adults: 1 amp (50ml) of Dextrose 50%"]
+        - cells: ["**Convulsions**", "See Convulsion Protocol"]
+        - cells: ["**Anemia: Transfusion**", "Simple transfusion, PRBCs, to Hgb >9"]
+        - cells: ["**Infection: Antibiotics**", "Cefotaxime IV 50mg/kg every 8 hours (max dose 2g). May substitute Ceftriaxone 80mg/kg IV daily (max dose 2g)"]
+        - cells: ["**Hydration**", "Dehydrated: see dehydration recommendations. MIVF if hydrated. Encourage feeding"]
+
+    - type: "prose"
+      title: "Monitoring"
+      markdown: |
+        - Daily neuro checks
+        - Physiotherapy as soon as acute issues resolved
+
+    - type: "prose"
+      title: "Discharge Plan"
+      markdown: |
+        - Hydroxyurea
+        - F/U in Sickle Cell Clinic
