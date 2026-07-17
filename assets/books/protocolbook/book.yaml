@@ -81,3 +81,4 @@ book:
       children:
         - topic: "topics/pb_sam_assessment.yaml"
         - topic: "topics/pb_sam_management.yaml"
+        - topic: "topics/pb_sam_feeding.yaml"

@@ -1,0 +1,69 @@
+# ============================================================
+# ProtocolBook p.66 — Feeding in Severe Acute Malnutrition. Third
+# and final SAM topic. Pure outline → titled prose (Stabilization →
+# When to transition → Transitioning to RUTF / to F-100 → When to
+# switch back to stabilization).
+#
+# Faithful-rendering calls:
+#   - Bullet outline kept; no numbering to drop.
+#   - "sacket" → "sachet" and "Playful" lowercased (minor typos).
+# ============================================================
+
+topic:
+  id: "pb-sam-feeding"
+  title: "SAM — Feeding (F-75 / RUTF / F-100)"
+  list_subtitle: "p.66 · stabilization → transition"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malnutrition", "SAM", "feeding", "F-75", "F-100", "RUTF", "plumpy nut", "stabilization", "transition", "paediatric", "nutrition"]
+  category: "medical"
+  page_number: 66
+
+  blocks:
+
+    - type: "prose"
+      title: "Stabilization"
+      markdown: |
+        - Use F-75 only
+        - If oedema: 100mls/kg/day
+        - If no oedema: 130mls/kg/day
+        - Do not change the total daily volume of milk, even when they lose or gain weight
+        - Initially 2 hourly feeds for at least 48 hrs
+        - If stable, then go to 3 hourly, or 4 hourly feeds
+        - Child should complete at least 80% of the feeds offered
+        - Use NGT if not finishing at least 80% of the feeds on 2–3 consecutive feeds
+        - **Vomiting:** reduce feeds to 1 hourly or estimate the vomited milk and offer it again
+
+    - type: "prose"
+      title: "When to transition?"
+      markdown: |
+        - Return of appetite
+        - Reduced edema or minimal edema
+        - Child may smile at this point
+        - Resolved medical complications
+        - Passes acceptance/appetite test (eats a third of the 92g sachet of plumpy nut)
+        - NB. Can transition to ready-to-use therapeutic feeds (RUTF/Plumpy nuts) or F-100
+
+    - type: "prose"
+      title: "Transitioning to RUTF"
+      markdown: |
+        - Offer the RUTF in a hygienic and playful environment
+        - Provide the RUTF with plenty of safe water to drink
+        - If not completing but finishing >half of the RUTF, supplement with F-75
+        - If taking <a half, go back to stabilization F-75
+
+    - type: "prose"
+      title: "Transitioning to F-100"
+      markdown: |
+        - For the first 2 days, give the same volume as F-75
+        - On day 3, add 10mls/feed to a maximum of 220ml/kg/day or until the child is unable to finish
+        - Start iron supplementation on day 3 of transition
+
+    - type: "prose"
+      title: "When to switch back to stabilization"
+      markdown: |
+        - Re-occurrence of medical complications
+        - Loss of appetite (taking <80% of feeds consecutively)
+        - Development/increasing of edema
+        - Deteriorating medical condition
+        - Signs of fluid overload
+        - Re-feeding diarrhea
