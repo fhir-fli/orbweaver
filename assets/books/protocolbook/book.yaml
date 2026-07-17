@@ -98,3 +98,4 @@ book:
       children:
         - topic: "topics/pb_tb_diagnosis.yaml"
         - topic: "topics/pb_tb_scoring.yaml"
+        - topic: "topics/pb_tb_treatment.yaml"

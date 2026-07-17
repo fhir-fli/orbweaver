@@ -1,0 +1,149 @@
+# ============================================================
+# ProtocolBook p.73 — Paediatric Tuberculosis: Treatment (printed
+# "Treatment for Pediatric Tuberculosis"). Third and final leaf of the
+# Paediatric Tuberculosis group (p.71 diagnosis → p.72 scoring →
+# p.73 treatment). p.74 (Anaemia) starts the next section.
+#
+# The printed page is a genuine decision flowchart INTERLEAVED with two
+# drug-dose reference tables and a pyridoxine weight table. Per the
+# hybrid rule, the DECISION clusters render as `algorithm` flowcharts;
+# the tabular / sequential reference content renders as `table` /
+# `prose` in strict top-to-bottom order, so the whole page reads the
+# way it's printed.
+#
+# Block order (mirrors the page):
+#   1. algorithm — LFT safety check (Check LFTs → ALT>3×ULN? →
+#      Abnl LFTs but ALT<3×ULN? → begin treatment).
+#   2. prose (**) — LFT-monitoring footnote (kept next to the check
+#      it annotates rather than at page-bottom, for phone clarity).
+#   3. table — First 2 months treatment (4 drugs).
+#   4. algorithm — adjunctive steroids (Are any severe forms present?
+#      → Yes: add Prednisone taper; converge → After 2 months duration).
+#   5. table — After 2 months continuation regimen (2 drugs).
+#   6. prose (*) + table — pyridoxine throughout treatment, by weight.
+#   7. Citation superscripts (78, 181) dropped.
+#
+# Flowchart-box text is PLAIN (algorithm boxes render as plain Text,
+# not MiniMarkdown) — no `**bold**` inside boxes/decisions/outcomes.
+#
+# GENUINE SOURCE TYPO surfaced to Grey (rendered CORRECTED here):
+#   - Steroid-criteria list prints "Severe military TB" → corrected to
+#     "Severe miliary TB" (miliary TB is the real entity; same
+#     "military→miliary" slip corrected on p.72). Grey should fix the
+#     source PDF.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - 2HRZE / 4HR (2-month RIPE intensive → continuation isoniazid+
+#     rifampicin) is the standard WHO paediatric regimen; durations
+#     extended for CNS/disseminated disease. Doses transcribed as
+#     printed (WHO 2010-era mg/kg bands; current WHO paediatric FDC
+#     dosing is weight-band based — OE may modernise). Pyridoxine
+#     co-administration is appropriate for at-risk / malnourished /
+#     HIV+ children on isoniazid.
+# ============================================================
+
+topic:
+  id: "pb-tb-treatment"
+  title: "TB — Treatment"
+  list_subtitle: "p.73 · LFT check · regimen · steroids"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["tuberculosis", "TB", "paediatric", "treatment", "isoniazid", "rifampicin", "pyrazinamide", "ethambutol", "prednisone", "pyridoxine", "LFTs", "regimen"]
+  category: "medical"
+  page_number: 73
+
+  blocks:
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Check LFTs before starting treatment"
+        shape: "stadium"
+      stages:
+        - decision: "ALT > 3 × upper limit of normal?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Consult senior about a possible alternate regimen"
+                severity: "priority"
+            - label: "No"
+              continue: true
+        - decision: "Abnormal LFTs but ALT < 3 × upper limit of normal?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Recheck LFTs monthly during treatment"
+              continue: true
+            - label: "No"
+              continue: true
+      terminal:
+        title: "Begin treatment — First 2 months regimen (table below)"
+
+    - type: "prose"
+      title: "LFT monitoring during treatment"
+      markdown: |
+        If liver tenderness, hepatomegaly or jaundice develop, recheck LFTs. Do not change the regimen unless LFTs > 5 × the upper limit of normal.
+
+    - type: "table"
+      title: "First 2 months treatment"
+      zebra: true
+      columns: ["Drug", "Recommended daily dose", "Range", "Max dose"]
+      column_flex: [5, 4, 5, 5]
+      column_align: ["left", "center", "center", "center"]
+      rows:
+        - cells: ["Isoniazid", "10 mg/kg", "7–15 mg/kg", "300 mg/day"]
+        - cells: ["Rifampicin", "15 mg/kg", "10–20 mg/kg", "600 mg/day"]
+        - cells: ["Pyrazinamide", "35 mg/kg", "30–40 mg/kg", "1.5 g/day"]
+        - cells: ["Ethambutol", "20 mg/kg", "15–25 mg/kg", "1.6 g/day"]
+
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+        - decision: "Are any of the following present?"
+          criteria:
+            - "TB meningitis"
+            - "Pulmonary TB with respiratory distress"
+            - "Pulmonary TB with airway obstruction from hilar lymph nodes"
+            - "Severe miliary TB"
+            - "Pericardial effusion"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Add Prednisone"
+                bullets:
+                  - "2 mg/kg (max 6 mg/day) × 4 weeks"
+                  - "Followed by 1 mg/kg × 1 week"
+                  - "Followed by 0.5 mg/kg × 1 week"
+              continue: true
+            - label: "No"
+              continue: true
+      terminal:
+        title: "After 2 months"
+        bullets:
+          - "Cerebral TB requires 10 more months of treatment"
+          - "Pulmonary TB requires 6 more months of treatment"
+
+    - type: "table"
+      title: "After 2 months (continuation)"
+      zebra: true
+      columns: ["Drug", "Recommended daily dose", "Range", "Max dose"]
+      column_flex: [5, 4, 5, 5]
+      column_align: ["left", "center", "center", "center"]
+      rows:
+        - cells: ["Isoniazid", "10 mg/kg", "7–15 mg/kg", "300 mg/day"]
+        - cells: ["Rifampicin", "15 mg/kg", "10–20 mg/kg", "600 mg/day"]
+
+    - type: "prose"
+      title: "Pyridoxine throughout treatment"
+      markdown: |
+        The patient should receive pyridoxine (vitamin B6) throughout the whole course of treatment.
+
+    - type: "table"
+      title: "Pyridoxine dose by weight (50 mg tablets)"
+      zebra: true
+      columns: ["Weight (kg)", "Number of pyridoxine (50 mg) tablets"]
+      column_flex: [4, 6]
+      column_align: ["left", "left"]
+      rows:
+        - cells: ["5–7", "Quarter tablet daily"]
+        - cells: ["8–14", "Half tablet daily"]
+        - cells: ["≥15", "One full tablet daily"]
