@@ -1,0 +1,159 @@
+# ============================================================
+# ProtocolBook pp.64–65 — SAM: Admission & Acute Complications.
+# Second SAM topic (two pages). Admission criteria + the 10-item
+# "check for all after admission" complication checklist → titled
+# prose, with a red-alert callout for the shock criteria and a
+# dehydration sign list.
+#
+# Faithful-rendering calls:
+#   - Outline numbering 1–10 is a semantic checklist → kept as bold
+#     "N." leads; sub-steps as nested bullets.
+#   - The dehydration ">2 of the following signs" printed 2-column
+#     grid has no column headers (just space-saving) → flattened to
+#     a single bullet list of all 9 signs.
+#   - The shock criteria box ("Both AVPU <A AND cold extremities plus
+#     one of…") is a callout.
+#   - "chloramphenical" (p.65) kept as printed (minor spelling).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - This is WHO "10 steps" SAM inpatient care (the ProtocolBook
+#     condenses it). Consistent with the already-OE-reviewed WHO IMCI
+#     Ch.7 in the Hospital Care book; the GASTROSAM/ReSoMal-hyponat
+#     and TRACT transfusion nuances from that review may apply here
+#     too. OE to cross-check IV-fluid/ReSoMal currency.
+# ============================================================
+
+topic:
+  id: "pb-sam-management"
+  title: "SAM — Admission & Acute Complications"
+  list_subtitle: "pp.64–65 · the 10-step checklist"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malnutrition", "SAM", "hypoglycemia", "hypothermia", "shock", "dehydration", "ReSoMal", "anemia", "F-75", "infection", "vitamin A", "paediatric", "nutrition"]
+  category: "medical"
+  page_number: 64
+
+  pages:
+
+    # ═══════════════════════ PAGE 64 ═══════════════════════
+    - page_number: 64
+      blocks:
+
+        - type: "prose"
+          title: "Criteria for admission with SAM (any)"
+          markdown: |
+            - Patients with SAM & severe oedema
+            - Children <6 months with SAM
+            - Patients with complicated SAM
+
+            **Uncomplicated SAM** (no admission criteria): manage from outpatient therapeutic care (OTC) with ready-to-use therapeutic feeds (RUTF).
+
+        - type: "prose"
+          markdown: |
+            **After admission, check for ALL of the following:**
+
+        - type: "prose"
+          title: "1. Hypoglycemia"
+          markdown: |
+            Blood glucose <3mmol/L (54mg/dL). Treatment:
+
+            - Can drink: 50mls of 10% dextrose or sugar water (1 spoon of sugar + 50mls of water)
+            - Can't drink: Dextrose 10% IV 5mls/kg, followed by Dextrose 10% 50mLs or sugar water by NGT
+
+        - type: "prose"
+          title: "2. Hypothermia"
+          markdown: |
+            Axillary temperature <35 or rectal <35.5. Treatment:
+
+            - Actively warm (kangaroo, cover head, no water bottles as skin is already fragile, away from windows or draughts, keep room warm, change wet clothes, keep covered all time & at night)
+            - Must also treat for hypoglycemia and infection
+
+        - type: "prose"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          title: "3. Shock — criteria"
+          markdown: |
+            Both AVPU <A **AND** cold extremities **plus one of**: Capillary refill >3 secs OR weak/fast/absent pulse.
+
+        - type: "prose"
+          title: "3. Shock — treatment"
+          markdown: |
+            - Oxygen
+            - Keep warm
+            - IV fluids: 15mls/kg/hour (may repeat once)
+            - Choice of fluids: RL+D5% or ½NS+D5%, add 20mmol/L KCL
+            - If no improvement after first bolus, assume septic shock, give whole blood 10mL/kg
+
+        - type: "prose"
+          title: "4. Dehydration — >2 of the following signs"
+          markdown: |
+            - AVPU <A
+            - Capillary refill ≥2 seconds
+            - Unable to drink
+            - Sunken eyes
+            - Slow skin pinch ≥2 seconds
+            - Absent tears
+            - Dry mucus membranes
+            - Recent/frequent diarrhea
+            - Vomiting
+
+            **Treatment — use rehydration solution for malnutrition (ReSoMal):**
+
+            - 5mls/kg PO q30min x 2 hrs THEN
+            - 5–10mls/kg/hr, alternate ReSoMal one hour then F-75 the next x 10 hrs
+            - Monitor for improvement or over-hydration
+            - If improved, give ReSoMal only after each loose stool
+
+        - type: "prose"
+          title: "5. Severe Anemia"
+          markdown: |
+            Hgb <4g/dl, <6g/dl with heart failure, or (if no Hgb) pallor with heart failure symptoms (tachypnea, tachycardia, engorged neck veins, cold extremities, cyanosis of fingertips or tongue).
+
+            - Stop all oral feeds and IV fluids for 24 hours, check for heart failure
+            - No heart failure: 10mls/kg whole blood over 3hrs
+            - Heart failure: 5–7mls/kg of packed RBCS
+
+    # ═══════════════════════ PAGE 65 ═══════════════════════
+    - page_number: 65
+      blocks:
+
+        - type: "prose"
+          title: "6. Cardiac Failure"
+          markdown: |
+            - **Common causes:** over-hydration, overfeeding, blood transfusion, high sodium diet, severe anemia, severe pneumonia
+            - **Signs:** deterioration with weight gain, reappearance of edema, sudden DIB, prominent neck veins, cold extremities, tender liver, cyanosis
+            - Oxygen
+            - Stop all IV fluids & feeds
+            - Lasix 1mg/kg IV
+            - Do not use digoxin in newborns
+
+        - type: "prose"
+          title: "7. Eye signs — Vitamin A deficiency / corneal ulceration / purulent ocular discharge"
+          markdown: |
+            - Vitamin A on day 1, 2 and 15
+            - 1% atropine to relax the eye
+            - Gentamycin or chloramphenical eyedrops
+
+        - type: "prose"
+          title: "8. Severe dermatosis"
+          markdown: |
+            Peeling with cracking and ulceration of the skin.
+
+            - Sponge affected areas with 0.01% potassium permanganate or gentian violet
+
+        - type: "prose"
+          title: "9. Infection Control (for complicated SAM)"
+          markdown: |
+            - Ampicillin 50mg/kg IV q6hrs x 2 days
+            - Switch ampicillin to amoxicillin if improved after 2 days
+            - Gentamicin 5mg/kg/day x 7 days
+            - Check mom for HIV if <18 months, otherwise check patient
+
+        - type: "prose"
+          title: "10. Micronutrient deficiency"
+          markdown: |
+            - No supplements necessary (all micronutrients already included in F-75, F-100)
+            - Add CMV (Combined Mineral and Vitamin) mix to the milk if making own feeds
+            - If no formula feeds or CMV, supplement with multivitamin drops for all stages of management. However, start iron in the rehabilitation phase

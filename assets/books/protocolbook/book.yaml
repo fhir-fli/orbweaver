@@ -80,3 +80,4 @@ book:
         accent: "0xFF00695C"
       children:
         - topic: "topics/pb_sam_assessment.yaml"
+        - topic: "topics/pb_sam_management.yaml"
