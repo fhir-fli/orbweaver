@@ -1,0 +1,58 @@
+# ============================================================
+# ProtocolBook p.69 — Mastoiditis. Item "III." under the printed
+# "Ear, Nose and Throat Infections" header (I–V, pp.68–70); authored
+# as its own ENT-group leaf. Roman-numeral outline → titled prose
+# (Presentation/Examination findings, Treatment split children/adults),
+# plus the printed posterior-head line drawing showing postauricular
+# swelling as an image asset.
+#
+# Faithful-rendering calls:
+#   - Adults "with intracranial complications" (printed as sub-item 2
+#     then regimen "a.") flattened to a bold-lead bullet under Adults.
+#   - Citation superscripts (58,59) dropped; the "53" mark and page
+#     number were trimmed/whited from the cropped drawing.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Mastoiditis is a complication of AOM needing IV antibiotics ±
+#     surgical drainage; regimens (Ampicillin-Sulbactam / anti-staph
+#     penicillin in children; Ceftriaxone ± Vancomycin in adults for
+#     intracranial spread) transcribed as printed.
+# ============================================================
+
+topic:
+  id: "pb-mastoiditis"
+  title: "Mastoiditis"
+  list_subtitle: "p.69 · ENT infections III"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["mastoiditis", "ENT", "otitis media", "postauricular", "protruding ear", "ampicillin-sulbactam", "ceftriaxone", "vancomycin", "paediatric"]
+  category: "medical"
+  page_number: 69
+
+  blocks:
+
+    - type: "prose"
+      title: "Presentation / examination findings"
+      markdown: |
+        - Risk factor is a current or recent diagnosis of acute otitis media
+        - Signs of local inflammation over the mastoid:
+          - Protruding ear
+          - Postauricular erythema, swelling or pain
+          - Systemic signs, fever or malaise
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_mastoiditis_postauricular.png"
+      size: "full"
+      caption: "Mastoiditis — postauricular swelling over the (right) mastoid displacing the ear outward and downward (posterior view)."
+
+    - type: "prose"
+      title: "Treatment — children"
+      markdown: |
+        - Ampicillin-Sulbactam IV 50mg/kg 8 hourly
+        - Cloxacillin or Flucloxacillin IV 50mg/kg 6 hourly
+        - If no response within 48 hours or the child deteriorates, refer to a surgical specialist to consider incision and drainage
+
+    - type: "prose"
+      title: "Treatment — adults"
+      markdown: |
+        - Ceftriaxone 2g IV BD or Cefotaxime 2g IV 8 hourly
+        - **With intracranial complications:** Ceftriaxone 2g IV BD or 8 hourly plus Vancomycin 2g in 2–4 divided doses

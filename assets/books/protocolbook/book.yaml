@@ -88,3 +88,5 @@ book:
       children:
         - topic: "topics/pb_epistaxis.yaml"
         - topic: "topics/pb_otitis_media.yaml"
+        - topic: "topics/pb_otitis_externa.yaml"
+        - topic: "topics/pb_mastoiditis.yaml"

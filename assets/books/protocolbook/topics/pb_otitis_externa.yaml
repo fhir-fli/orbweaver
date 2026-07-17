@@ -1,0 +1,49 @@
+# ============================================================
+# ProtocolBook p.69 — Otitis Externa. Item "II." under the printed
+# "Ear, Nose and Throat Infections" header (I–V, pp.68–70); authored
+# as its own ENT-group leaf. Roman-numeral outline → titled prose
+# (Presentation / Examination / Treatment).
+#
+# Faithful-rendering calls:
+#   - The printed italic distinguishing pearl ("Generally, manipulation
+#     of the external ear is painful in Otitis Externa but not in Otitis
+#     Media") is rendered as a **bold** bullet — MiniMarkdown has no
+#     italic, and this is the key exam-differentiator so emphasis is
+#     warranted.
+#   - Citation superscripts (56,57) dropped.
+# ============================================================
+
+topic:
+  id: "pb-otitis-externa"
+  title: "Otitis Externa"
+  list_subtitle: "p.69 · ENT infections II"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["otitis externa", "swimmer's ear", "ear canal", "ENT", "otoscopy", "cortisporin", "otalgia", "tragus", "paediatric"]
+  category: "medical"
+  page_number: 69
+
+  blocks:
+
+    - type: "prose"
+      title: "Presentation"
+      markdown: |
+        - Otalgia, pruritus, pressure/fullness of ear canal, hearing loss, jaw pain, discharge, redness/erythema, swelling/edema
+
+    - type: "prose"
+      title: "Examination"
+      markdown: |
+        Need to perform otoscopy as well.
+
+        - Pain with tragus/pinna movement
+        - Erythema/edema of ear canal
+        - Cellulitis
+        - Discharge from canal
+        - **Manipulation of the external ear is generally painful in otitis externa, but not in otitis media**
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        **Topical antibiotic:**
+
+        - Neomycin/Polymyxin B/Hydrocortisone (Cortisporin Otic) 3–4 drops to affected ear 8 hourly x 7–10 days
+        - Educate about keeping the ear dry
