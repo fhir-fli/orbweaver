@@ -97,3 +97,4 @@ book:
         accent: "0xFF283593"
       children:
         - topic: "topics/pb_tb_diagnosis.yaml"
+        - topic: "topics/pb_tb_scoring.yaml"

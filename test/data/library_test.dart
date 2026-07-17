@@ -489,10 +489,12 @@ void main() {
       expect((ent[5] as YamlMap)['topic'],
           'topics/pb_sinusitis.yaml');
       final tb = (contents[7] as YamlMap)['children'] as YamlList;
-      expect(tb, hasLength(1));
+      expect(tb, hasLength(2));
       expect((tb[0] as YamlMap)['topic'],
           'topics/pb_tb_diagnosis.yaml');
-      expect(leafCount(contents), 50);
+      expect((tb[1] as YamlMap)['topic'],
+          'topics/pb_tb_scoring.yaml');
+      expect(leafCount(contents), 51);
     });
   });
 }

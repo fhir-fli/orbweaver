@@ -1,0 +1,117 @@
+# ============================================================
+# ProtocolBook p.72 — Paediatric Tuberculosis: Pulmonary Scoring
+# Systems (printed item XI). Second leaf of the Paediatric
+# Tuberculosis group (p.71 diagnosis/systemic score → p.72 pulmonary
+# scoring → p.73 treatment).
+#
+# This page = three published paediatric-TB scoring systems, all
+# grids:
+#   1. 8-point Risk Score for children in contact with infected
+#      persons (Feature/score 0–4).
+#   2. New modified Edwards' score (Feature/score 0–3; ≥7 = TB).
+#   3. Brazilian Ministry of Health Scoring System (sectioned, Points
+#      column; ≥40 highly likely / 30–39 possible / ≤29 unlikely).
+#
+# Faithful-rendering calls:
+#   - All three fit on a phone (few narrow columns) → STANDARD-layout
+#     tables (no `layout: scroll`) with `column_flex` + `column_align`,
+#     so long feature labels wrap and rows grow to fit (per the
+#     scroll-table fixed-row-height overflow gotcha).
+#   - Empty scoring cells kept as "-" (matches the p.71 Keith Edwards
+#     grid convention).
+#   - The Brazilian table's sub-sections (Clinical Symptoms /
+#     Radiologic Findings / Contact with Adult TB patient / Tuberculin
+#     skin test / Nutritional Status) → bold full-width divider rows
+#     via `{text, span: 2}` merged cells, then the scored rows beneath.
+#   - Citation superscripts (66–71) dropped.
+#   - The 8-point-table footnote and the Edwards ≥7 note → separate
+#     prose blocks after their tables (TableBlock has no note field).
+#
+# GENUINE SOURCE TYPO surfaced to Grey (rendered CORRECTED here):
+#   - Brazilian table, Radiologic Findings row prints "military
+#     pattern" → corrected to "miliary pattern" (miliary TB is the
+#     real radiographic entity; "military" is a spelling slip). Grey
+#     should fix the source PDF.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - These are three separate historical scoring systems reproduced
+#     as printed; none is a current WHO-endorsed diagnostic algorithm
+#     (modern practice weights bacteriological confirmation via Xpert
+#     MTB/RIF Ultra). Transcribed verbatim as clinical-judgement aids.
+# ============================================================
+
+topic:
+  id: "pb-tb-scoring"
+  title: "TB — Pulmonary Scoring Systems"
+  list_subtitle: "p.72 · 8-point · Edwards · Brazilian"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["tuberculosis", "TB", "paediatric", "pulmonary tuberculosis", "scoring", "8-point risk score", "edwards score", "brazilian scoring system", "tuberculin", "cxr"]
+  category: "medical"
+  page_number: 72
+
+  blocks:
+
+    - type: "table"
+      title: "8-point Risk Score for children in contact with infected persons"
+      zebra: true
+      columns: ["Feature / score", "0", "1", "2", "3", "4"]
+      column_flex: [8, 2, 2, 2, 2, 2]
+      column_align: ["left", "center", "center", "center", "center", "center"]
+      rows:
+        - cells: ["Tuberculin test (mm of induration)", "<10", "-", "10–14", "15–19", "≥20"]
+        - cells: ["Smear positive source case", "-", "Present", "-", "-", "-"]
+        - cells: ["Source case lives in high incident area", "-", "-", "Present", "-", "-"]
+        - cells: ["Source case is female", "-", "Present", "-", "-", "-"]
+
+    - type: "prose"
+      markdown: |
+        **High incident area:** in the initial study this incidence was 277/100,000; if unsure of your local incidence, you may assume high if in Africa or South-East Asia.
+
+    - type: "table"
+      title: "New modified Edwards' score"
+      zebra: true
+      columns: ["Feature / score", "0", "1", "2", "3"]
+      column_flex: [7, 3, 4, 3, 4]
+      column_align: ["left", "center", "center", "center", "center"]
+      rows:
+        - cells: ["Duration of illness (weeks)", "<2", "2–4", "-", ">4"]
+        - cells: ["Nutrition (% wt-for-lt)", ">80", "60–80", "-", "<60"]
+        - cells: ["Family h/o TB", "None", "Reported by family", "-", "Proved sputum +ve"]
+        - cells: ["Tuberculin test", "-", "-", "-", "Positive"]
+        - cells: ["Malnutrition", "-", "-", "-", "Not improved after 4 weeks"]
+        - cells: ["Unexplained fever (>2 weeks)", "-", "-", "No response to treatment", "-"]
+
+    - type: "prose"
+      markdown: |
+        Scores of ≥7 indicative of tuberculosis
+
+    - type: "table"
+      title: "Brazilian Ministry of Health Scoring System"
+      zebra: true
+      columns: ["Finding", "Points"]
+      column_flex: [8, 2]
+      column_align: ["left", "center"]
+      rows:
+        - cells: [{text: "**Clinical Symptoms**", span: 2}]
+        - cells: ["Fever or symptoms such as cough, fatigue, weight loss, sweating for > 2 weeks", "+15"]
+        - cells: ["Asymptomatic or symptomatic < 2 weeks", "0"]
+        - cells: ["Improvement in respiratory infection without antibiotics, or with antibiotics for common germs", "−10"]
+        - cells: [{text: "**Radiologic Findings**", span: 2}]
+        - cells: ["CXR with hilar lymph node enlargement, miliary pattern, condensation or infiltrate for > 2 weeks, with worsening symptoms or lack of improvement with antibiotics for common germs", "+15"]
+        - cells: ["Condensation or infiltrate < 2 weeks", "+5"]
+        - cells: ["Normal CXR", "−5"]
+        - cells: [{text: "**Contact with Adult TB patient**", span: 2}]
+        - cells: ["Close contact within last 2 years", "+10"]
+        - cells: ["Occasional or negative", "0"]
+        - cells: [{text: "**Tuberculin skin test**", span: 2}]
+        - cells: ["> 10mm in child given BCG > 2 years ago or never vaccinated", "+15"]
+        - cells: [">15mm in children given BCG vaccine within last 2 years", "+15"]
+        - cells: ["≥ 5mm and ≤ 9mm", "+5"]
+        - cells: ["< 5mm", "0"]
+        - cells: [{text: "**Nutritional Status**", span: 2}]
+        - cells: ["Weight < 10th percentile", "+5"]
+        - cells: ["Weight ≥ 10th percentile", "0"]
+
+    - type: "prose"
+      markdown: |
+        **Points:** ≥40 highly likely · 30–39 possible · ≤29 unlikely
