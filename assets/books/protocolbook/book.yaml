@@ -75,3 +75,8 @@ book:
         - topic: "topics/pb_sickle_cell_acute.yaml"
         - topic: "topics/pb_sickle_cell_stroke.yaml"
         - topic: "topics/pb_sickle_cell_acs.yaml"
+    - title: "Severe Acute Malnutrition"
+      palette:
+        accent: "0xFF00695C"
+      children:
+        - topic: "topics/pb_sam_assessment.yaml"

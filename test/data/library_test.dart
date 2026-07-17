@@ -375,12 +375,12 @@ void main() {
     });
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '
-        'Paediatric 8, Cardiac 2, Sickle Cell 4 = 40 leaves)', () {
+        'Paediatric 8, Cardiac 2, Sickle Cell 4, SAM 1 = 41 leaves)', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      // Five section groups so far, mirroring the book's dividers.
-      expect(contents, hasLength(5));
+      // Six section groups so far, mirroring the book's dividers.
+      expect(contents, hasLength(6));
       expect((contents[0] as YamlMap)['title'], 'Emergency Protocols');
       expect((contents[1] as YamlMap)['title'],
           'Ingestions, Anaphylaxis & Bites');
@@ -388,12 +388,14 @@ void main() {
       expect((contents[3] as YamlMap)['title'],
           'Paediatric Cardiac Protocols');
       expect((contents[4] as YamlMap)['title'], 'Sickle Cell Disease');
+      expect((contents[5] as YamlMap)['title'], 'Severe Acute Malnutrition');
       // Each group carries its own accent.
       expect((contents[0] as YamlMap)['palette']['accent'], '0xFFC62828');
       expect((contents[1] as YamlMap)['palette']['accent'], '0xFF6A1B9A');
       expect((contents[2] as YamlMap)['palette']['accent'], '0xFF2E7D32');
       expect((contents[3] as YamlMap)['palette']['accent'], '0xFFAD1457');
       expect((contents[4] as YamlMap)['palette']['accent'], '0xFFBF360C');
+      expect((contents[5] as YamlMap)['palette']['accent'], '0xFF00695C');
       // Emergency Protocols = p.12–26 (15 topics), ending in Altered
       // Mental Status; Ingestions has Poisoning (p.28); Paediatric has
       // Meningitis (p.55) for now.
@@ -459,7 +461,11 @@ void main() {
           'topics/pb_sickle_cell_stroke.yaml');
       expect((sickle[3] as YamlMap)['topic'],
           'topics/pb_sickle_cell_acs.yaml');
-      expect(leafCount(contents), 40);
+      final sam = (contents[5] as YamlMap)['children'] as YamlList;
+      expect(sam, hasLength(1));
+      expect((sam[0] as YamlMap)['topic'],
+          'topics/pb_sam_assessment.yaml');
+      expect(leafCount(contents), 41);
     });
   });
 }

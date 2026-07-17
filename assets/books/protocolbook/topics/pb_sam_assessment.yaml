@@ -1,0 +1,85 @@
+# ============================================================
+# ProtocolBook p.63 — Severe Acute Malnutrition (SAM): Nutritional
+# Assessment + Classification. First topic of the new "Severe Acute
+# Malnutrition" section group. Outline + one classification table.
+#
+# Faithful-rendering calls:
+#   - Outline numbering / bullets kept as nested bullets.
+#   - Classification table: the age category spans several
+#     indicator sub-rows in print (grouped cells). Repeated the age
+#     label on each row so every row reads self-contained on a phone
+#     (no merged-cell primitive; repetition is the faithful choice).
+#   - "<11.5cm (red)" keeps the book's "(red)" note; the SAM column
+#     is given a light-red tint and MAM a light-amber tint (book is
+#     B&W, so tints are ours — they mirror the WHO growth-table
+#     severity shading and the app severity palette).
+#   - Complicated-SAM list kept verbatim (it gates admission on the
+#     next page).
+# ============================================================
+
+topic:
+  id: "pb-sam-assessment"
+  title: "SAM — Assessment & Classification"
+  list_subtitle: "p.63 · MUAC/WFH + MAM vs SAM"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malnutrition", "SAM", "MAM", "severe acute malnutrition", "MUAC", "weight for height", "oedema", "nutrition", "paediatric", "z-score"]
+  category: "medical"
+  page_number: 63
+
+  blocks:
+
+    - type: "prose"
+      title: "Nutritional Assessment"
+      markdown: |
+        - **Mid upper arm circumference (MUAC)** in cm
+          - Measures wasting/muscle mass in children older than 6 months
+          - Correlates significantly with risk for death
+          - Easy screening tool in the community
+          - Used in very ill patients who cannot have weight/length measured
+        - **Body weight** (in kg to the nearest 0.1 kg)
+          - Weigh as soon as arrival to hospital
+          - Take one hour before or after a meal
+          - Remove clothes, jewelry, diapers, etc.
+          - Keep child warm with a blanket as you wait to measure
+        - **Length/height**
+          - Length (child laying down): <2yrs, or <87cm if age unknown
+          - Height (child standing up): ≥2yrs, or ≥87cm if age not known
+          - If ≥2yrs & can't stand, take length and subtract 0.7 cm
+          - Child should be barefoot, no head gear
+          - Shoulders, buttocks and heels should touch the board
+          - Measure to the nearest 0.1 cm
+
+    - type: "prose"
+      title: "Making sense of the measurements"
+      markdown: |
+        - Use Weight-for-Length/Height (WFL/WFH) if <6 years (59 months)
+        - Use BMI/age if ≥6 years
+        - Plot measurements (use growth charts) and obtain Z-score
+        - Classify the degree of malnutrition
+
+    - type: "table"
+      title: "Classification of acute malnutrition"
+      columns: ["Age", "Indicator", "MAM (Moderate)", "SAM (Severe)"]
+      column_flex: [3, 3, 4, 4]
+      column_tint: ["", "", "0xFFFFF8E1", "0xFFFDECEA"]
+      rows:
+        - cells: ["**<6 months**", "WFL", "≥−3SD & <−2SD", "<−3SD"]
+        - cells: ["**<6 months**", "Oedema", "Absent", "Present"]
+        - cells: ["**6–59 months**", "WFL/WFH", "≥−3SD & <−2SD", "<−3SD"]
+        - cells: ["**6–59 months**", "Oedema", "Absent", "Present"]
+        - cells: ["**6–59 months**", "MUAC", "≥11.5 & <12.5cm", "<11.5cm (red)"]
+        - cells: ["**5–19 years**", "BMI/age", "≥−3SD & <−2SD", "<−3SD"]
+        - cells: ["**5–19 years**", "Oedema", "Absent", "Present"]
+        - cells: ["**5 to <10 yrs**", "MUAC", "≥13.5 & <14.5cm", "<13.5 cm"]
+        - cells: ["**10 to <15 yrs**", "MUAC", "≥16.0 & <18.0 cm", "<16.0 cm"]
+        - cells: ["**15 to 19**", "MUAC", "≥16.5 & <21.0 cm", "<18.5 cm"]
+
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "Complicated SAM includes any of the following"
+      markdown: |
+        Hypoglycemia, hypothermia, infections, severe dehydration, shock, Hgb <4, cardiac failure, corneal ulceration, severe dermatoses, or IMCI danger signs like anorexia, intractable vomiting, convulsions, lethargy/LOC, inability to feed or breast feed, fever >39.

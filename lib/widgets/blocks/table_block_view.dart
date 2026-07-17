@@ -174,21 +174,21 @@ class TableBlockView extends StatelessWidget {
             const SizedBox(width: 64, child: SizedBox.shrink()),
           if (_hasRowHeaders)
             const SizedBox(width: 78, child: SizedBox.shrink()),
+          // Column tint (column_tint) is a body-cell data cue only — the
+          // header keeps its solid [headerBg] fill so the white header text
+          // stays legible (a light amber/red tint over it washes it out).
           for (var ci = 0; ci < block.columns.length; ci++)
             Expanded(
               flex: _colFlex(ci, 1),
-              child: Container(
-                color: style.tintFor(ci),
-                child: Align(
-                  alignment: style.alignment(ci),
-                  child: Text(
-                    block.columns[ci],
-                    textAlign: style.textAlign(ci),
-                    style: const TextStyle(
-                      fontSize: _headerFontSize,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                    ),
+              child: Align(
+                alignment: style.alignment(ci),
+                child: Text(
+                  block.columns[ci],
+                  textAlign: style.textAlign(ci),
+                  style: const TextStyle(
+                    fontSize: _headerFontSize,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white,
                   ),
                 ),
               ),
