@@ -375,13 +375,13 @@ void main() {
     });
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '
-        'Paediatric 8, Cardiac 2, Sickle Cell 4, SAM 3, ENT 6 = 49 leaves)',
-        () {
+        'Paediatric 8, Cardiac 2, Sickle Cell 4, SAM 3, ENT 6, TB 1 = 50 '
+        'leaves)', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      // Seven section groups so far, mirroring the book's dividers.
-      expect(contents, hasLength(7));
+      // Eight section groups so far, mirroring the book's dividers.
+      expect(contents, hasLength(8));
       expect((contents[0] as YamlMap)['title'], 'Emergency Protocols');
       expect((contents[1] as YamlMap)['title'],
           'Ingestions, Anaphylaxis & Bites');
@@ -391,6 +391,7 @@ void main() {
       expect((contents[4] as YamlMap)['title'], 'Sickle Cell Disease');
       expect((contents[5] as YamlMap)['title'], 'Severe Acute Malnutrition');
       expect((contents[6] as YamlMap)['title'], 'Ear, Nose & Throat');
+      expect((contents[7] as YamlMap)['title'], 'Paediatric Tuberculosis');
       // Each group carries its own accent.
       expect((contents[0] as YamlMap)['palette']['accent'], '0xFFC62828');
       expect((contents[1] as YamlMap)['palette']['accent'], '0xFF6A1B9A');
@@ -399,6 +400,7 @@ void main() {
       expect((contents[4] as YamlMap)['palette']['accent'], '0xFFBF360C');
       expect((contents[5] as YamlMap)['palette']['accent'], '0xFF00695C');
       expect((contents[6] as YamlMap)['palette']['accent'], '0xFF5D4037');
+      expect((contents[7] as YamlMap)['palette']['accent'], '0xFF283593');
       // Emergency Protocols = p.12–26 (15 topics), ending in Altered
       // Mental Status; Ingestions has Poisoning (p.28); Paediatric has
       // Meningitis (p.55) for now.
@@ -486,7 +488,11 @@ void main() {
           'topics/pb_pharyngitis.yaml');
       expect((ent[5] as YamlMap)['topic'],
           'topics/pb_sinusitis.yaml');
-      expect(leafCount(contents), 49);
+      final tb = (contents[7] as YamlMap)['children'] as YamlList;
+      expect(tb, hasLength(1));
+      expect((tb[0] as YamlMap)['topic'],
+          'topics/pb_tb_diagnosis.yaml');
+      expect(leafCount(contents), 50);
     });
   });
 }

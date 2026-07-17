@@ -92,3 +92,8 @@ book:
         - topic: "topics/pb_mastoiditis.yaml"
         - topic: "topics/pb_pharyngitis.yaml"
         - topic: "topics/pb_sinusitis.yaml"
+    - title: "Paediatric Tuberculosis"
+      palette:
+        accent: "0xFF283593"
+      children:
+        - topic: "topics/pb_tb_diagnosis.yaml"

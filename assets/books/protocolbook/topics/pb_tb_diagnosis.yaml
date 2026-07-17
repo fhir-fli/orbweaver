@@ -1,0 +1,88 @@
+# ============================================================
+# ProtocolBook p.71 — Paediatric Tuberculosis: diagnosis + systemic
+# score. OPENS the new Paediatric Tuberculosis section (bold header
+# "Paediatric Tuberculosis", pp.71–73; p.74 = Anaemia starts the next
+# section). First leaf of the new group.
+#
+# This page = printed items VII–X: VII "consider TB with…" (10-item
+# list), VIII "general considerations making TB more likely" (5-item
+# list), IX Diagnosis (gastric aspirate technique), X Scoring Systems –
+# Systemic TB (the Keith Edwards score grid). The pulmonary-TB scoring
+# systems (p.72, XI) and the treatment algorithm (p.73) are separate
+# leaves in this group.
+#
+# Faithful-rendering calls:
+#   - VII/VIII/IX outline → titled prose per item.
+#   - The Keith Edwards grid (Feature/score 0–4, 11 features) → a
+#     `layout: scroll` table with a frozen feature column (the feature
+#     labels are long, the score columns short — scrolls cleanly on a
+#     phone). "-" cells kept as printed.
+#   - Citation superscripts (66–68) dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Gastric aspirate x3 on separate early mornings before eating/
+#     ambulating is the classic LMIC technique for <5 yr who can't
+#     expectorate; stool Xpert / induced sputum are modern additions OE
+#     may note. Keith Edwards score ≥7 = TB transcribed as printed.
+# ============================================================
+
+topic:
+  id: "pb-tb-diagnosis"
+  title: "TB — Diagnosis & Systemic Score"
+  list_subtitle: "p.71 · suspect / diagnose / Keith Edwards"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["tuberculosis", "TB", "paediatric", "keith edwards score", "gastric aspirate", "diagnosis", "lymphadenopathy", "chronic cough", "tuberculin", "scoring"]
+  category: "medical"
+  page_number: 71
+
+  blocks:
+
+    - type: "prose"
+      title: "Consider tuberculosis with any of the following"
+      markdown: |
+        - Chronic cough
+        - Chronic fever
+        - Pneumonia not improving on treatment
+        - Wasting
+        - Lymphadenopathy
+        - Ascites
+        - Heart failure / pericardial effusion
+        - Refusal to bend a painful joint
+        - Irritability, meningeal signs
+        - Haematuria, sterile pyuria
+
+    - type: "prose"
+      title: "General considerations making tuberculosis more likely"
+      markdown: |
+        - Prolonged course of cough, fever, sweats
+        - Patient's disease symptoms don't improve with expected treatment
+        - Weight loss / malnutrition, especially if no improvement after 4 weeks
+        - Large, painless lymphadenopathy
+        - Close contact with someone with tuberculosis within the last 2 years
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - In children especially difficult — <5yo cannot produce sputum
+        - **<5yo or cannot produce sputum → gastric aspirate:**
+          - Perform on different days, 3 times total
+          - Early morning, before the child eats or ambulates (ideally wake the patient after sleeping prone all night)
+
+    - type: "table"
+      title: "Scoring systems — Systemic TB · Keith Edwards Score (≥7 indicative of TB)"
+      zebra: true
+      columns: ["Feature / score", "0", "1", "2", "3", "4"]
+      column_flex: [7, 2, 2, 2, 2, 2]
+      column_align: ["left", "center", "center", "center", "center", "center"]
+      rows:
+        - cells: ["Length of illness (weeks)", "<2", "2–4", "-", ">4", "-"]
+        - cells: ["Nutrition (% wt for age)", ">80", "60–80", "-", "<60", "-"]
+        - cells: ["Family h/o TB", "None", "Reported", "-", "Proven", "-"]
+        - cells: ["Unexplained fever not responding to malaria drugs", "-", "-", "Positive", "-", "-"]
+        - cells: ["Tuberculin test", "-", "-", "-", "Positive", "-"]
+        - cells: ["Painless lymphadenopathy with or without sinus", "-", "-", "-", "Positive", "-"]
+        - cells: ["Malnutrition not improved after four weeks", "-", "-", "-", "Positive", "-"]
+        - cells: ["Joint/bone swelling, sinuses", "-", "-", "-", "Positive", "-"]
+        - cells: ["Unexplained abdominal mass or ascites", "-", "-", "-", "Positive", "-"]
+        - cells: ["CNS: changes in temperament, fits or coma", "-", "-", "-", "Positive", "-"]
+        - cells: ["Angle deformity of spine", "-", "-", "-", "-", "Positive"]
