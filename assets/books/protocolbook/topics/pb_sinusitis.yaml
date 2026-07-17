@@ -1,0 +1,71 @@
+# ============================================================
+# ProtocolBook p.70 — Sinusitis. Item "V." under the printed "Ear,
+# Nose and Throat Infections" header; own ENT-group leaf. Closes the
+# ENT-infections outline (I–V, pp.68–70).
+#
+# Structure: "no abx unless bacterial" note → acute-sinusitis diagnosis
+# rule + Major/Minor symptom two-column lists (bulleted-cell table) →
+# bacterial-sinusitis criteria (prose) → treatment (prose).
+#
+# Faithful-rendering calls:
+#   - The printed parallel Major | Minor lists → one table row of two
+#     bulleted cells (side-by-side lists, no false row-pairing).
+#   - Citation superscripts (60,61,62–65) dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Bacterial-sinusitis criteria (persistent ≥10 days / worsening
+#     "double sickening" after initial improvement / severe onset with
+#     fever ≥38.5 + purulent discharge/facial pain ≥3 days) mirror the
+#     IDSA/AAP definition. Amox vs amox-clav selection by age/severity/
+#     daycare/recent-abx transcribed as printed.
+# ============================================================
+
+topic:
+  id: "pb-sinusitis"
+  title: "Sinusitis"
+  list_subtitle: "p.70 · ENT infections V"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sinusitis", "rhinosinusitis", "bacterial sinusitis", "ENT", "nasal", "amoxicillin", "double sickening", "paediatric"]
+  category: "medical"
+  page_number: 70
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        - Does **not** require antibiotics unless bacterial
+
+    - type: "table"
+      title: "Acute sinusitis diagnosis — 2 major, OR 1 major + ≥2 minor symptoms"
+      columns: ["Major symptoms", "Minor criteria"]
+      column_flex: [1, 1]
+      rows:
+        - cells:
+            - bullets:
+                - "Nasal congestion or obstruction"
+                - "Purulent nasal discharge"
+                - "Hyposmia or anosmia"
+                - "Facial congestion or fullness"
+                - "Facial pain or pressure"
+                - "Fever"
+            - bullets:
+                - "Headache"
+                - "Ear pain, pressure or fullness"
+                - "Halitosis"
+                - "Dental pain"
+                - "Cough"
+                - "Fatigue"
+
+    - type: "prose"
+      title: "Diagnosis of BACTERIAL sinusitis — any of"
+      markdown: |
+        - Signs/symptoms above lasting ≥10 days
+        - Worsening or new onset of signs/symptoms following initial improvement, typically after 5–6 days (**double sickening**)
+        - Severe symptoms with concurrent fever (>38.5 axillary) & purulent nasal discharge or facial pain lasting ≥3 days
+
+    - type: "prose"
+      title: "Treatment for bacterial sinusitis (must meet above criteria)"
+      markdown: |
+        - Amoxicillin 45mg/kg/dose BD x 7 days if >2 years, mild-moderate, uncomplicated disease
+        - Amoxicillin/Clavulanic Acid 45mg/kg/dose BD x 7 days if <2 years, moderate-severe illness, attending daycare, or antibiotic exposure in the last 4 weeks
+        - If no improvement in 72 hours, consider changing antibiotics

@@ -1,0 +1,97 @@
+# ============================================================
+# ProtocolBook p.70 — Pharyngitis. Item "IV." under the printed "Ear,
+# Nose and Throat Infections" header; own ENT-group leaf.
+#
+# Structure: strep-vs-viral note (prose) → Modified Centor Score
+# (table) → Child / Adult scoring→action (two small tables) →
+# Treatment drug table (span-2 cells for the weight-based agents).
+#
+# Faithful-rendering calls:
+#   - The printed Centor rubric is split into two side-by-side
+#     Criteria|Points tables purely for page layout; merged here into
+#     ONE Criteria|Points table (same rubric, cleaner on a phone). The
+#     left table's "Age Range" shaded sub-header is folded into the
+#     three age rows ("Age 3–14 years" etc.).
+#   - Treatment table: Amoxicillin & Clindamycin are weight-based (one
+#     dose across both weight bands) → single `span: 2` cell, matching
+#     the print's merged cells.
+#   - Citation superscript (60) dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Modified Centor / McIsaac score with the age adjustment and the
+#     "cough absent" criterion transcribed as printed; treatment-
+#     threshold guidance (culture at 2–3, treat at ≥3) is the book's.
+#   - Penicillin is first-line for strep pharyngitis; amoxicillin and
+#     clindamycin (penicillin allergy) alternatives — as printed.
+# ============================================================
+
+topic:
+  id: "pb-pharyngitis"
+  title: "Pharyngitis"
+  list_subtitle: "p.70 · ENT infections IV"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pharyngitis", "sore throat", "strep throat", "streptococcal", "centor score", "ENT", "penicillin", "amoxicillin", "clindamycin", "tonsillitis", "paediatric"]
+  category: "medical"
+  page_number: 70
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        - Strep pharyngitis usually presents with sore throat, fever, headache or stomach ache, but **NOT** with viral symptoms like cough, coryza, conjunctivitis
+        - **Only streptococcal pharyngitis should be treated with antibiotics** — all others should only be treated with supportive care
+
+    - type: "table"
+      title: "Streptococcal pharyngitis diagnosis — Modified Centor Score"
+      columns: ["Criteria", "Points"]
+      column_flex: [6, 1]
+      column_align: ["left", "center"]
+      rows:
+        - cells: ["Age 3–14 years", "+1"]
+        - cells: ["Age 15–44 years", "0"]
+        - cells: ["Age ≥45 years", "−1"]
+        - cells: ["Tonsillar exudates", "+1"]
+        - cells: ["Tender/swollen anterior cervical lymph nodes", "+1"]
+        - cells: ["Febrile", "+1"]
+        - cells: ["Cough absent", "+1"]
+
+    - type: "table"
+      title: "Scoring — children"
+      columns: ["Score", "Action"]
+      column_flex: [2, 5]
+      column_align: ["center", "left"]
+      rows:
+        - cells: ["0–1 points", "No treatment required"]
+        - cells: ["2 points", "Ideally rapid test/culture; may use clinical judgement to start Rx"]
+        - cells: ["3+ points", "Start Rx presumptively"]
+
+    - type: "table"
+      title: "Scoring — adults"
+      columns: ["Score", "Action"]
+      column_flex: [2, 5]
+      column_align: ["center", "left"]
+      rows:
+        - cells: ["0–2 points", "No treatment required"]
+        - cells: ["3+ points", "Start treatment presumptively"]
+
+    - type: "table"
+      title: "Treatment"
+      columns: ["Drug", "Paediatric dose (≤27kg)", "Adult dose (>27kg)"]
+      column_flex: [5, 5, 5]
+      rows:
+        - cells:
+            - "Penicillin VK PO"
+            - "250mg PO BD x 10 days"
+            - "500mg PO BD x 10 days"
+        - cells:
+            - "Benzathine Penicillin G IM"
+            - "600,000 IU"
+            - "1.2 million IU"
+        - cells:
+            - "Amoxicillin PO"
+            - text: "25mg/kg/dose (max 1g) BD x 10 days"
+              span: 2
+        - cells:
+            - "Clindamycin PO"
+            - text: "7mg/kg (max 300mg) 8 hourly x 10 days"
+              span: 2

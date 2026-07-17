@@ -90,3 +90,5 @@ book:
         - topic: "topics/pb_otitis_media.yaml"
         - topic: "topics/pb_otitis_externa.yaml"
         - topic: "topics/pb_mastoiditis.yaml"
+        - topic: "topics/pb_pharyngitis.yaml"
+        - topic: "topics/pb_sinusitis.yaml"
