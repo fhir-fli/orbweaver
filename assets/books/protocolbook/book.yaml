@@ -74,3 +74,4 @@ book:
         - topic: "topics/pb_sickle_cell.yaml"
         - topic: "topics/pb_sickle_cell_acute.yaml"
         - topic: "topics/pb_sickle_cell_stroke.yaml"
+        - topic: "topics/pb_sickle_cell_acs.yaml"

@@ -1,0 +1,85 @@
+# ============================================================
+# ProtocolBook p.62 — Sickle Cell Acute Chest Syndrome. Last Sickle
+# Cell topic. A linear flow (presentation → management → Clinical
+# Respiratory Score table → ICU note → antibiotics → supportive care
+# → discharge) with no decision points → titled prose + one scoring
+# table, per the hybrid rule.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (CRS 165; antibiotics 163–165;
+#     discharge 165) dropped.
+#   - CRS table's blank first-column header (source spans the title
+#     "Clinical Respiratory Score" over it) → labelled "Sign".
+#   - Discharge criteria are printed in a 2-column interleaved list
+#     (1–6); flattened to a single ordered bullet list, order kept.
+#   - "If available, consider ICU admission for CRS ≥6" rendered as a
+#     highlighted callout note.
+# ============================================================
+
+topic:
+  id: "pb-sickle-cell-acs"
+  title: "Sickle Cell Acute Chest Syndrome"
+  list_subtitle: "p.62 · CRS score + Rx"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sickle cell", "SCD", "acute chest syndrome", "ACS", "clinical respiratory score", "cefotaxime", "azithromycin", "transfusion", "paediatric", "haematology", "respiratory"]
+  category: "medical"
+  page_number: 62
+
+  blocks:
+
+    - type: "prose"
+      title: "Presentation"
+      markdown: |
+        Meets criteria for pneumonia **OR** has moderate to severe chest pain.
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
+        - Assess GCS, hydration status
+        - Start Oxygen if spO2 <94%
+        - Insert IV, Draw CBC, malaria, transfuse for Hgb <9
+        - Perform brief, targeted history, physical exam
+
+    - type: "table"
+      title: "Clinical Respiratory Score (CRS)"
+      columns: ["Sign", "0", "1", "2"]
+      column_flex: [4, 5, 5, 5]
+      rows:
+        - cells: ["**RR (>12mo)**", "<30", "30–40", ">40"]
+        - cells: ["**Auscultation**", "Good air mvmt, minimal wheezing/creps", "Decreased air mvmt, insp & exp wheezing", "Severely diminished/absent sounds, severe wheezing"]
+        - cells: ["**Retractions or nasal flaring**", "Mild", "Moderate", "Severe"]
+        - cells: ["**Mental Status**", "Normal/mildly irritable", "Irritable, restless", "Lethargic"]
+        - cells: ["**O2sat**", ">95%", "90–95%", "<90%"]
+        - cells: ["**Color**", "Normal", "Pale", "Cyanotic, dusky"]
+
+    - type: "prose"
+      callout: true
+      markdown: |
+        If available, consider ICU admission for CRS ≥6.
+
+    - type: "prose"
+      title: "Start Antibiotics"
+      markdown: |
+        - **Cefotaxime** IV 50mg/kg every 8 hours (max dose 2g)
+          - May substitute Ceftriaxone 80mg/kg IV daily (max dose 2g)
+        - **Azithromycin**
+          - Day 1: 10mg/kg (max/adult dose 500mg)
+          - Day 2–5: 5mg/kg (max/adult dose 250mg)
+
+    - type: "prose"
+      title: "General Supportive Care"
+      markdown: |
+        - Aggressive pain management
+        - Encourage feeding, IVF if not eating (but TOTAL fluid intake should be no more than maintenance)
+
+    - type: "prose"
+      title: "Discharge Criteria"
+      markdown: |
+        - Improved symptoms
+        - pO2 >94% on room air
+        - Afebrile x 24hrs
+        - Hgb >5
+        - Good PO intake
+        - Pain controlled without morphine
