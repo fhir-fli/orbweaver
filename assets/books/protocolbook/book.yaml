@@ -82,3 +82,8 @@ book:
         - topic: "topics/pb_sam_assessment.yaml"
         - topic: "topics/pb_sam_management.yaml"
         - topic: "topics/pb_sam_feeding.yaml"
+    - title: "Ear, Nose & Throat"
+      palette:
+        accent: "0xFF5D4037"
+      children:
+        - topic: "topics/pb_epistaxis.yaml"

@@ -1,0 +1,116 @@
+# ============================================================
+# ProtocolBook p.67 — Epistaxis. Opens a NEW ENT section.
+#
+# The printed page = a "Management" action box (no decision) feeding a
+# genuine escalating decision tree: pinch 15 min → stopped? → cotton
+# pledget (TXA then epi) → stopped? → anterior/posterior packing (foley)
+# → admit. TRUE decision tree → real `algorithm` flowchart per the
+# hybrid rule; the leading Management box (no branch) → titled prose
+# above it.
+#
+# Flow shape: two "Has bleeding stopped?" decisions each escalate the
+# intervention on the No arm and both send a Yes to ONE shared
+# disposition box (observe_stop). After packing, the spine continues to
+# the terminal admit/labs box (observe_admit) — the print draws a single
+# "bleeding has stopped" arrow out of packing, so there is no third
+# decision.
+#
+# 🛑 algorithm box/decision/label text renders as PLAIN Text, NOT
+#    MiniMarkdown — so NO **bold** inside the flowchart; the source's
+#    bold/underlined emphasis (NOT PACKING, 10 minutes, 15 MINUTES,
+#    DO NOT) is kept as plain caps in the boxes and as **bold** only in
+#    the Management prose block above.
+#
+# Faithful-rendering calls:
+#   - Trailing "*" on the printed "Epistaxis*" heading (a footnote/
+#     draft marker with no footnote on the page) dropped.
+#   - The two disposition boxes are kept distinct as the print draws
+#     them: observe_stop (resolved after pinch/pledget — no BP, no labs,
+#     vaseline TID) vs observe_admit (post-packing — adds BP, IV, labs,
+#     keep packing 12–24 h).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - "Do not order coagulation labs / do not use packing during this
+#     time" (i.e. during the first 15 min) is the book's sequencing, not
+#     a contraindication — OE to confirm phrasing.
+#   - Topical TXA-soaked pledget + topical epinephrine before packing is
+#     reasonable anterior-epistaxis practice; doses (TXA 500 mg/5 mL,
+#     epi 1 mg/5 mL) transcribed as printed.
+#   - Bacitracin/K-Y as packing lubricant transcribed as printed.
+# ============================================================
+
+topic:
+  id: "pb-epistaxis"
+  title: "Epistaxis (Nosebleed)"
+  list_subtitle: "p.67 · algorithm"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["epistaxis", "nosebleed", "ENT", "nasal", "tranexamic acid", "TXA", "packing", "foley", "bleeding", "haemorrhage"]
+  category: "medical"
+  page_number: 67
+
+  blocks:
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Have patient lean forward, pinch nose closed (**DO NOT** tilt head back)
+        - Check vital signs (PR, RR, spO2, Temp, Weight)
+        - Assess AVPU/GCS, hydration status
+        - Start oxygen if spO2 <94%, insert IV if needed
+        - Perform brief, targeted history and physical exam
+          - Nasal trauma (nose picking) is the most common cause, especially in children
+        - Continue pinching the nose closed for **15 MINUTES**
+        - **Do not order coagulation labs during this time**
+        - **Do not use packing during this time**
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "After 15 minutes of continuous nose pinching"
+        shape: "stadium"
+      boxes:
+        - id: "observe_stop"
+          title: "Bleeding stopped — observe"
+          bullets:
+            - "Repeat vital signs (PR, RR, spO2, Temp)"
+            - "Repeat GCS"
+            - "Remove any packing"
+            - "Monitor for at least 60 minutes"
+            - "Education about cause"
+            - "Vaseline / petroleum jelly TID for 7–10 days"
+      stages:
+        - decision: "Has bleeding stopped?"
+          outcomes:
+            - label: "Yes"
+              goto: "observe_stop"
+            - label: "No"
+              box:
+                title: "Cotton pledget in bleeding nostril (this is NOT packing)"
+                bullets:
+                  - "Insert a soaked pledget, in order, each left in for 10 minutes; stop at any point if bleeding is controlled:"
+                  - "1) Injectable tranexamic acid (500 mg in 5 mL NS)"
+                  - "2) Epinephrine / adrenaline (1 mg in 5 mL)"
+              continue: true
+        - decision: "Has bleeding stopped?"
+          outcomes:
+            - label: "Yes"
+              goto: "observe_stop"
+            - label: "No"
+              box:
+                title: "Anterior + posterior packing"
+                bullets:
+                  - "Perform in order; stop at any point if bleeding is controlled:"
+                  - "1) Pack the bleeding nostril with a tampon or gauze soaked in bacitracin or K-Y jelly"
+                  - "2) Pack the contralateral nostril with a tampon or gauze soaked in bacitracin or K-Y jelly"
+                  - "3) Pass a lubricated foley catheter through the bleeding nostril into the nasopharynx, fill with NS and pull forward, placing light traction against the posterior nasal choana"
+                  - "4) Pack the bleeding nostril around the foley catheter with a tampon or gauze soaked in bacitracin or K-Y jelly"
+              continue: true
+      terminal:
+        title: "After packing — admit & monitor"
+        bullets:
+          - "Repeat vital signs (PR, RR, spO2, Temp, BP)"
+          - "Repeat GCS"
+          - "IV access"
+          - "Labs: CBC, LFTs, Coagulation Studies"
+          - "Consider keeping packing in place for 12–24 hours"
