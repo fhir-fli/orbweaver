@@ -1,0 +1,74 @@
+# ============================================================
+# ProtocolBook p.68 — Otitis Media. Second child of the Ear, Nose &
+# Throat group. This is item "I." under the printed section header
+# "Ear, Nose and Throat Infections" (I. Otitis Media / II. Otitis
+# Externa / III. Mastoiditis / IV. Pharyngitis / V. Sinusitis span
+# pp.68–70) — each condition is authored as its own leaf.
+#
+# Structure: roman-numeral outline (Presentation / Examination /
+# Diagnosis / Treatment) → titled prose per subsection (same pattern as
+# the SAM topics), then the printed Normal-TM vs Acute-OM otoscopy
+# comparison figure as an image asset.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts on the printed figure (53/54/55) left in the
+#     cropped image (tiny corner marks; cropping them would clip image
+#     content); the page number "68" was trimmed off.
+#   - "Duration" (printed as treatment item d.iii) kept under Treatment.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Diagnosis criteria mirror the AAP acute-otitis-media definition
+#     (moderate/severe TM bulging, or mild bulging + recent-onset pain /
+#     intense erythema, or new otorrhoea not from otitis externa).
+#   - Amoxicillin dosing printed as "45mg/dose PO BD (max/adult 875mg/
+#     dose)" — high-dose amox is 80–90 mg/kg/day divided BD, i.e.
+#     ~45 mg/kg/dose; the "/dose" appears to mean per-kg-per-dose.
+#     Transcribed as printed; OE to confirm the per-kg wording.
+# ============================================================
+
+topic:
+  id: "pb-otitis-media"
+  title: "Otitis Media"
+  list_subtitle: "p.68 · ENT infections I"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["otitis media", "AOM", "ear infection", "ENT", "tympanic membrane", "otoscopy", "amoxicillin", "ear pain", "otorrhea", "paediatric"]
+  category: "medical"
+  page_number: 68
+
+  blocks:
+
+    - type: "prose"
+      title: "Presentation"
+      markdown: |
+        - **Most common parental complaints:** restless sleep, irritability, ear rubbing (appears to be the most useful symptoms to aid diagnosis), ear pain, severe or prolonged rhinitis or cough, fever
+        - Acute onset, possibly preceded by upper respiratory symptoms
+        - More likely if smoking at home or formula feeding
+
+    - type: "prose"
+      title: "Examination"
+      markdown: |
+        - Perform otoscopy (examine the tympanic membrane with an otoscope — ideally with an insufflator bulb)
+        - Remove cerumen if necessary for visualization
+
+    - type: "prose"
+      title: "Diagnosis — any of the following on exam"
+      markdown: |
+        - Moderate-to-severe bulging of the tympanic membrane (TM)
+        - Mild bulging of TM **&** <48 hrs of ear pain, or intense erythema of TM
+        - TM is red, bulging and opaque
+        - New otorrhea not due to otitis externa
+        - TM is perforated with discharge
+
+    - type: "prose"
+      title: "Treatment"
+      markdown: |
+        Max/adult dose for the below is **875mg/dose PO BD**.
+
+        - **1st line:** Amoxicillin 45mg/dose PO BD
+        - **2nd line:** Amoxicillin/Clavulanic Acid 45mg/dose PO BD
+        - **Duration:** 10 days if <2 years old, 7 days if >2 years old
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_otitis_media_tm.png"
+      size: "full"
+      caption: "Tympanic membrane on otoscopy — Normal TM (left) vs Acute Otitis Media (right): line drawings above, matching otoscopy photographs below."

@@ -87,3 +87,4 @@ book:
         accent: "0xFF5D4037"
       children:
         - topic: "topics/pb_epistaxis.yaml"
+        - topic: "topics/pb_otitis_media.yaml"
