@@ -376,7 +376,7 @@ void main() {
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '
         'Paediatric 8, Cardiac 2, Sickle Cell 4, SAM 3, ENT 6, TB 3, '
-        'Anaemia 3, Pain 4, Neonatal 5 = 64 leaves)', () {
+        'Anaemia 3, Pain 4, Neonatal 6 = 65 leaves)', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
@@ -521,7 +521,7 @@ void main() {
       expect((pain[3] as YamlMap)['topic'],
           'topics/pb_pain_ladder.yaml');
       final neo = (contents[10] as YamlMap)['children'] as YamlList;
-      expect(neo, hasLength(5));
+      expect(neo, hasLength(6));
       expect((neo[0] as YamlMap)['topic'],
           'topics/pb_neo_feeding.yaml');
       expect((neo[1] as YamlMap)['topic'],
@@ -532,7 +532,9 @@ void main() {
           'topics/pb_neo_sepsis_treatment.yaml');
       expect((neo[4] as YamlMap)['topic'],
           'topics/pb_neo_jaundice.yaml');
-      expect(leafCount(contents), 64);
+      expect((neo[5] as YamlMap)['topic'],
+          'topics/pb_neo_ballard.yaml');
+      expect(leafCount(contents), 65);
     });
   });
 }

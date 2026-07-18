@@ -1,0 +1,133 @@
+# ============================================================
+# ProtocolBook pp.90–91 — Ballard Score (gestational-age estimation).
+# Sixth and final leaf of the Neonatal Protocols section. (p.92 blank;
+# Internal Medicine starts p.93.)
+#
+# Two-page topic (`pages:`): p.90 = the Neuromuscular Maturity chart
+# (rotated 90° in the PDF → cropped + rotated upright as an image
+# asset); p.91 = Physical Maturity + Maturity Rating.
+#
+# Faithful-rendering calls:
+#   - Neuromuscular chart → image asset images/pb_neo_ballard_neuro.png
+#     (p.90 @300 dpi, rotated +90° to upright, cropped x105–1875
+#     y115–1210). The postures/angles ARE the tool → kept as the
+#     picture.
+#   - Physical Maturity is an 8-column grid of long text cells — a
+#     scroll table would overflow (fixed row height) and won't fit
+#     standard layout on a phone → rendered as prose, one bold-lead
+#     sign with its score → descriptor sub-bullets. The −1/−2 plantar
+#     and eye/ear sub-scores are spelled out.
+#   - Maturity Rating (total score → weeks) → a small `table`.
+#   - Only Skin carries a score of 5; others stop at 4.
+# ============================================================
+
+topic:
+  id: "pb-neo-ballard"
+  title: "Ballard Score (Gestational Age)"
+  list_subtitle: "pp.90–91 · neuromuscular + physical maturity"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "ballard score", "gestational age", "maturity", "neuromuscular", "physical maturity", "preterm", "newborn", "new ballard"]
+  category: "medical"
+  page_number: 90
+
+  pages:
+
+    # ═══════════════════════ PAGE 90 ═══════════════════════
+    - page_number: 90
+      blocks:
+
+        - type: "prose"
+          markdown: |
+            The Ballard Score estimates gestational age. Score the six neuromuscular signs (chart below) and the six physical-maturity signs (next page), each from −1 to 5, then sum both for a total score and read the gestational age from the Maturity Rating table.
+
+        - type: "prose"
+          title: "Neuromuscular maturity"
+          markdown: |
+            Match the infant to the picture for each sign (Posture, Square Window, Arm Recoil, Popliteal Angle, Scarf Sign, Heel to Ear).
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_neo_ballard_neuro.png"
+          size: "full"
+          caption: "Neuromuscular maturity — score −1 to 5 for each of the six signs."
+
+    # ═══════════════════════ PAGE 91 ═══════════════════════
+    - page_number: 91
+      blocks:
+
+        - type: "prose"
+          title: "Physical maturity"
+          markdown: |
+            Score each sign −1 to 5:
+            - **Skin**
+              - −1: sticky, friable, transparent
+              - 0: gelatinous, red, translucent
+              - 1: smooth pink, visible veins
+              - 2: superficial peeling and/or rash, few veins
+              - 3: cracking, pale areas, rare veins
+              - 4: parchment, deep cracking, no vessels
+              - 5: leathery, cracked, wrinkled
+            - **Lanugo**
+              - −1: none
+              - 0: sparse
+              - 1: abundant
+              - 2: thinning
+              - 3: bald areas
+              - 4: mostly bald
+            - **Plantar surface**
+              - −2: heel-toe < 40 mm
+              - −1: heel-toe 40–50 mm
+              - 0: > 50 mm, no crease
+              - 1: faint red marks
+              - 2: anterior transverse crease only
+              - 3: creases over anterior 2/3
+              - 4: creases over entire sole
+            - **Breast**
+              - −1: imperceptible
+              - 0: barely perceptible
+              - 1: flat areola, no bud
+              - 2: stippled areola, 1–2 mm bud
+              - 3: raised areola, 3–4 mm bud
+              - 4: full areola, 5–10 mm bud
+            - **Eye / ear**
+              - −2: lids fused tightly
+              - −1: lids fused loosely
+              - 0: lids open, pinna flat, stays folded
+              - 1: slightly curved pinna; soft; slow recoil
+              - 2: well-curved pinna; soft but ready recoil
+              - 3: formed and firm, instant recoil
+              - 4: thick cartilage, ear stiff
+            - **Genitals (male)**
+              - −1: scrotum flat, smooth
+              - 0: scrotum empty, faint rugae
+              - 1: testes in upper canal, rare rugae
+              - 2: testes descending, few rugae
+              - 3: testes down, good rugae
+              - 4: testes pendulous, deep rugae
+            - **Genitals (female)**
+              - −1: clitoris prominent, labia flat
+              - 0: prominent clitoris, small labia minora
+              - 1: prominent clitoris, enlarging minora
+              - 2: majora and minora equally prominent
+              - 3: majora large, minora small
+              - 4: majora cover clitoris and minora
+
+        - type: "table"
+          title: "Maturity rating — total score → gestational age"
+          zebra: true
+          columns: ["Total score (neuromuscular + physical)", "Weeks"]
+          column_flex: [7, 3]
+          column_align: ["center", "center"]
+          rows:
+            - cells: ["−10", "20"]
+            - cells: ["−5", "22"]
+            - cells: ["0", "24"]
+            - cells: ["5", "26"]
+            - cells: ["10", "28"]
+            - cells: ["15", "30"]
+            - cells: ["20", "32"]
+            - cells: ["25", "34"]
+            - cells: ["30", "36"]
+            - cells: ["35", "38"]
+            - cells: ["40", "40"]
+            - cells: ["45", "42"]
+            - cells: ["50", "44"]
