@@ -1,0 +1,90 @@
+# ============================================================
+# ProtocolBook p.80 — Pain Management: 0–10 Numeric Rating scale +
+# shared scoring interpretation + WHO Analgesic Ladder treatment.
+# Fourth and final leaf of the Pain Management section (p.77 NIPS →
+# p.78 r-FLACC → p.79 faces/jerry cans → p.80 numeric + ladder).
+# p.81 (Neonatal, per the roadmap) starts the next section.
+#
+# This page = the numeric self-report scale, the "all scales graded the
+# same" interpretation, and the WHO analgesic ladder (steps 1–3 by
+# pain score) + safety notes. It is the shared scoring/treatment home
+# for the whole Pain section — p.78 and p.79 cross-link here.
+#
+# Faithful-rendering calls:
+#   - The 0–10 gradient bar is a trivial labelled line (0 no pain /
+#     5 moderate / 10 worst) → described in prose, not embedded as an
+#     image (unlike the p.79 faces/cans, where the drawing IS the tool).
+#   - Interpretation (0 / 1–3 / 4–6 / 7–10) → a `table`.
+#   - WHO ladder steps 1–3 → titled prose, bold-lead step per pain-score
+#     band with dose sub-bullets.
+#   - Respiratory-depression monitoring → highlight callout (safety).
+#   - "Acetaminophen (Tylenol)" → paracetamol; citations dropped.
+#
+# GENUINE (DANGEROUS) SOURCE TYPO surfaced to Grey — CORRECTED here:
+#   - Step 2 prints "Adults: Morphine 2-10mg/kg/dose PO" — the "/kg" is
+#     an error (2–10 mg/kg PO in an adult ≈ 140–700 mg/dose, a lethal
+#     overdose). The intended adult oral morphine dose is 2–10 mg/dose
+#     (matches the child mg/kg row and the Step-3 adult "1–2 mg/dose").
+#     Rendered as "2–10 mg/dose". GREY MUST FIX THE SOURCE PDF.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - WHO stepwise paracetamol/ibuprofen → oral opioid → IV opioid is
+#     standard; codeine is deprecated in children (CYP2D6 variability),
+#     which the book already anticipates ("morphine preferred over
+#     codeine"). Paracetamol 10–15 mg/kg and ibuprofen 10 mg/kg are
+#     standard paediatric analgesic doses.
+# ============================================================
+
+topic:
+  id: "pb-pain-ladder"
+  title: "Pain — Numeric Scale & WHO Analgesic Ladder"
+  list_subtitle: "p.80 · 0–10 scale · scoring · treatment"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pain", "pain management", "numeric rating scale", "0-10", "WHO analgesic ladder", "paracetamol", "ibuprofen", "morphine", "opioid", "treatment", "analgesia"]
+  category: "medical"
+  page_number: 80
+
+  blocks:
+
+    - type: "prose"
+      title: "Numeric rating scale"
+      markdown: |
+        For adults and children able to understand numeric scores. Ask the patient to rate their pain from 0 to 10:
+        - **0** — no pain
+        - **5** — moderate pain
+        - **10** — worst possible pain
+
+    - type: "table"
+      title: "Scoring — all of the above scales are graded the same"
+      zebra: true
+      columns: ["Score", "Interpretation"]
+      column_flex: [3, 7]
+      column_align: ["center", "left"]
+      rows:
+        - cells: ["0", "Relaxed and comfortable"]
+        - cells: ["1–3", "Mild discomfort"]
+        - cells: ["4–6", "Moderate pain"]
+        - cells: ["7–10", "Severe pain"]
+
+    - type: "prose"
+      title: "Treatment — WHO Analgesic Ladder"
+      markdown: |
+        A graduated approach to pain control by pain score.
+        - **Step 1 · Pain score 0–3 — non-opioid**
+          - Paracetamol 10–15 mg/kg q4–6h (adults 650 mg PO q4–6h)
+          - Ibuprofen 10 mg/kg q6–8h (adults 400–800 mg PO q6–8h)
+          - May alternate paracetamol & ibuprofen — give one or the other every 3 hours (e.g. paracetamol now, ibuprofen in 3 hours, paracetamol 3 hours after that)
+        - **Step 2 · Pain score 4–6 — oral opioid preferred**
+          - Morphine preferred over codeine if available
+          - Children: morphine 0.2–0.5 mg/kg/dose PO q4–6h PRN
+          - Adults: morphine 2–10 mg/dose PO q2–4h PRN
+        - **Step 3 · Pain score 7–10 — IV opioid preferred**
+          - Children: morphine 0.1–0.2 mg/kg/dose IV q2–4h PRN
+          - Adults: morphine 1–2 mg/dose IV q2–4h PRN
+
+    - type: "prose"
+      title: "Notes"
+      highlight: true
+      markdown: |
+        - It is often beneficial to combine non-opioids with opioids
+        - When beginning opioids, use a high enough dose to control pain, and monitor respirations hourly (q1h) to avoid respiratory depression

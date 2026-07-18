@@ -113,3 +113,4 @@ book:
         - topic: "topics/pb_pain_nips.yaml"
         - topic: "topics/pb_pain_flacc.yaml"
         - topic: "topics/pb_pain_faces.yaml"
+        - topic: "topics/pb_pain_ladder.yaml"

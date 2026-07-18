@@ -94,3 +94,7 @@ topic:
         - cells: ["6", "Moderate pain"]
         - cells: ["8", "Severe pain"]
         - cells: ["10", "Overwhelming pain"]
+
+    - type: "prose"
+      markdown: |
+        See [scoring & the WHO analgesic ladder](topic:pb-pain-ladder).

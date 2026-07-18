@@ -28,7 +28,7 @@ topic:
 
     - type: "prose"
       markdown: |
-        Revised FLACC scale (Face, Legs, Activity, Cry, Consolability) — for children **2 months to 7 years old**. Sum the five categories for a total score of 0–10.
+        Revised FLACC scale (Face, Legs, Activity, Cry, Consolability) — for children **2 months to 7 years old**. Sum the five categories for a total score of 0–10; see [scoring & the WHO analgesic ladder](topic:pb-pain-ladder).
 
     - type: "table"
       title: "r-FLACC Scale"
