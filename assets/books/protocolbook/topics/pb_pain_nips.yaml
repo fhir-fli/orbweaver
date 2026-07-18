@@ -1,0 +1,98 @@
+# ============================================================
+# ProtocolBook p.77 — Pain Management: Neonatal Infant Pain Score
+# (NIPS, < 1 year). OPENS the new "Pain Management" section (pp.77–80:
+# p.77 NIPS → p.78 r-FLACC → p.79 Wong-Baker faces / jerry cans →
+# p.80 numeric rating + WHO analgesic ladder). First leaf of the new
+# group (accent orange 0xFFEF6C00).
+#
+# This page = the section intro ("evaluation based on age, use the
+# appropriate scoring system"), the NIPS grid (8 variables, Points),
+# and the neonatal "How to Score" tiers with their comfort measures +
+# treatment.
+#
+# Faithful-rendering calls:
+#   - NIPS grid → a `table` grouped like the p.72 Brazilian scale: each
+#     Variable is a `{text, span:2}` bold divider row, its Finding /
+#     Points options beneath (a real 3-col rowspan grid doesn't map to
+#     the standard table, and Variable is a grouping not a data column).
+#   - "How to Score" tiers (0–3 / 4–6 / 7–10) → titled prose with
+#     bold-lead tiers + non-pharmacologic / pharmacologic sub-bullets.
+#   - Citation superscripts (74,75) dropped.
+#   - "Acetaminophen (Tylenol)" → "paracetamol" (INN, used elsewhere).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - NIPS is a validated neonatal pain tool; the comfort measures
+#     (non-nutritive sucking, sucrose, swaddling, recorded intrauterine
+#     sounds) are standard non-pharmacologic neonatal analgesia.
+#   - "Narcotic bolus/drip" for moderate/severe neonatal pain is
+#     transcribed as printed; neonatal opioid dosing + apnoea
+#     monitoring is a place OE may add specifics.
+# ============================================================
+
+topic:
+  id: "pb-pain-nips"
+  title: "Pain — Neonatal (NIPS)"
+  list_subtitle: "p.77 · NIPS scale · < 1 year"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pain", "pain management", "NIPS", "neonatal infant pain score", "neonate", "analgesia", "comfort measures", "sucrose", "paracetamol", "opioid"]
+  category: "medical"
+  page_number: 77
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Evaluation is based on age — use the appropriate scoring system. NIPS is for infants **< 1 year old**.
+
+    - type: "table"
+      title: "Neonatal Infant Pain Score (NIPS)"
+      zebra: true
+      columns: ["Finding", "Points"]
+      column_flex: [8, 2]
+      column_align: ["left", "center"]
+      rows:
+        - cells: [{text: "**Facial expression**", span: 2}]
+        - cells: ["Relaxed — restful face, neutral expression", "0"]
+        - cells: ["Grimace — tight muscles, furrowed brow / chin / jaw", "1"]
+        - cells: [{text: "**Cry**", span: 2}]
+        - cells: ["No cry — quiet, not crying", "0"]
+        - cells: ["Whimper — mild moaning, intermittent", "1"]
+        - cells: ["Vigorous crying — loud scream, shrill, continuous (if intubated, score silent cry by facial movement)", "2"]
+        - cells: [{text: "**Breathing pattern**", span: 2}]
+        - cells: ["Relaxed — usual pattern for this infant", "0"]
+        - cells: ["Change in breathing — irregular, faster than usual, gagging, breath-holding", "1"]
+        - cells: [{text: "**Arms**", span: 2}]
+        - cells: ["Relaxed — no muscular rigidity, occasional random movements", "0"]
+        - cells: ["Flexed / extended — tense, straight arms, rigid and/or rapid extension or flexion", "1"]
+        - cells: [{text: "**Legs**", span: 2}]
+        - cells: ["Relaxed — no rigidity, occasional random movements", "0"]
+        - cells: ["Flexed / extended — tense, straight legs, rigid and/or rapid extension or flexion", "1"]
+        - cells: [{text: "**State of arousal**", span: 2}]
+        - cells: ["Sleeping / awake — quiet, peaceful, sleeping, or alert and settled", "0"]
+        - cells: ["Fussy — alert, restless and thrashing", "1"]
+        - cells: [{text: "**Heart rate**", span: 2}]
+        - cells: ["Within 10% of baseline", "0"]
+        - cells: ["11–20% of baseline", "1"]
+        - cells: [">20% of baseline", "2"]
+        - cells: [{text: "**O₂ saturation**", span: 2}]
+        - cells: ["No additional O₂ needed to maintain saturation", "0"]
+        - cells: ["Additional O₂ required to maintain saturation", "1"]
+
+    - type: "prose"
+      title: "How to score"
+      markdown: |
+        - **0–3 · Mild** — non-pharmacologic is the primary method:
+          - Pacifiers, sucrose, hand-to-mouth, non-nutritive sucking
+          - Swaddling, nesting, holding
+          - Position changes; correct positioning for procedures
+          - Decrease environmental stimuli (light, noise, abrupt movements)
+          - Decreased handling, with rest periods between procedures
+          - Comfort measures noted to be effective with the individual neonate
+          - Soothing vocalizations; recorded intrauterine sounds
+          - Pharmacologic: paracetamol
+        - **4–6 · Moderate**
+          - Non-pharmacologic (see the primary methods above)
+          - Add a narcotic bolus
+        - **7–10 · Severe**
+          - Pharmacologic is the primary method: narcotic intermittent bolus
+          - Consider a narcotic drip

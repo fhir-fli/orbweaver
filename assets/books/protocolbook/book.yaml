@@ -106,3 +106,8 @@ book:
         - topic: "topics/pb_anaemia.yaml"
         - topic: "topics/pb_anaemia_workup.yaml"
         - topic: "topics/pb_transfusions.yaml"
+    - title: "Pain Management"
+      palette:
+        accent: "0xFFEF6C00"
+      children:
+        - topic: "topics/pb_pain_nips.yaml"
