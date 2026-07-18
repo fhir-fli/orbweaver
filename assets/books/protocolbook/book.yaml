@@ -134,3 +134,4 @@ book:
         - topic: "topics/pb_im_convulsions.yaml"
         - topic: "topics/pb_im_meningitis.yaml"
         - topic: "topics/pb_im_gi_bleed.yaml"
+        - topic: "topics/pb_im_dka.yaml"

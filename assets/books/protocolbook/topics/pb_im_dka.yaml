@@ -1,0 +1,137 @@
+# ============================================================
+# ProtocolBook p.105 — Adult Hyperglycaemia, DKA and HHS (RBS >
+# 14 mmol/L). Seventh leaf of the Internal Medicine Protocols section.
+#
+# A dense single page: management + a classification flowchart (ketones
+# → DKA; RBS > 33.3 → HHS; else uncomplicated) + insulin/potassium/
+# fluid protocols + a cerebral-oedema neuro-watch + the RBS<14 step-
+# down + outpatient management of uncomplicated hyperglycaemia.
+#
+# Faithful-rendering calls:
+#   - Classification → an `algorithm` (each arm a terminal box pointing
+#     to the protocols/outpatient section below — DKA and HHS both go to
+#     the same DKA/HHS protocols, so textual pointers, not a forced
+#     single flowchart terminal).
+#   - Insulin / potassium / fluid protocols + RBS<14 step-down +
+#     outpatient management → titled prose with nested bullets
+#     (decorative outline numbering dropped).
+#   - The three safety lines kept prominent: "DO NOT give insulin"
+#     (before hydration), the cerebral-oedema neuro-watch (highlight
+#     callout), and "NEVER alternate D10 & NS/RL".
+#   - Flowchart-box text plain; citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Fixed-rate weight-based insulin (0.1 IU/kg/hr IM or 0.14 IU/kg/hr
+#     infusion) after a 1-hour fluid delay, K+ replacement gated on
+#     urine output / K < 5.5, the < 50 mL/kg-in-4h cerebral-oedema cap,
+#     and corrected-Na-directed fluid choice are all standard LMIC DKA
+#     practice (bedside, no blood-gas/osmolality). Metformin-first
+#     outpatient titration is appropriate.
+# ============================================================
+
+topic:
+  id: "pb-im-dka"
+  title: "Adult Hyperglycaemia, DKA & HHS"
+  list_subtitle: "p.105 · RBS > 14 · insulin & fluid protocols"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hyperglycaemia", "DKA", "diabetic ketoacidosis", "HHS", "hyperosmolar", "diabetes", "adult", "internal medicine", "insulin", "potassium", "metformin", "cerebral oedema", "endocrine"]
+  category: "medical"
+  page_number: 105
+
+  blocks:
+
+    - type: "prose"
+      title: "Management (RBS > 14 mmol/L)"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (BP, PR, RR, SpO₂, temp)
+        - Start oxygen if SpO₂ < 94%
+        - IV access; draw renal functions, potassium, urinalysis
+        - 12-lead ECG (adults)
+        - Perform a brief, targeted history and physical exam
+        - **DO NOT give insulin yet** — start only after 1 hour of hydration (see the insulin protocol)
+
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+        - decision: "Ketones in the urine?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Diabetic ketoacidosis (DKA) — use the DKA/HHS protocols below"
+                severity: "priority"
+            - label: "No"
+              continue: true
+        - decision: "RBS > 33.3 mmol/L?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Hyperosmolar hyperglycaemic state (HHS) — use the DKA/HHS protocols below"
+                severity: "priority"
+            - label: "No"
+              box:
+                title: "Uncomplicated hyperglycaemia — see the outpatient section below"
+                severity: "non_urgent"
+
+    - type: "prose"
+      title: "DKA / HHS — first"
+      markdown: |
+        Identify and treat the precipitating illness — consider sepsis, pneumonia, gastroenteritis, ACS.
+
+    - type: "prose"
+      title: "Insulin protocol (start after 1 hour of hydration)"
+      markdown: |
+        - Soluble insulin injection:
+          - IM 0.1 IU/kg/hr, OR
+          - SC 0.15 IU/kg every 2 hours
+        - Soluble insulin infusion: 0.14 IU/kg/hr
+
+    - type: "prose"
+      title: "Potassium protocol"
+      markdown: |
+        - Add 5 mEq KCl per 500 mL bag
+        - **DO NOT give potassium if urine output < 1 mL/kg/hr (or K > 5.5)**
+
+    - type: "prose"
+      title: "Fluid protocol"
+      markdown: |
+        - Initial bolus:
+          - Hypovolaemic shock: 15–20 mL/kg NS or RL bolus, repeat until BP improves
+          - Hypovolaemic but no shock: 15–20 mL/kg NS or RL over the 1st hour
+          - **DO NOT give > 50 mL/kg in the first 4 hours — can cause cerebral oedema**
+        - If corrected Na < 135: continue NS or RL at 250–500 mL/hr
+        - If corrected Na > 135: continue ½ NS at 250–500 mL/hr
+        - Satisfactory urine output is 1–2 mL/kg/hr
+        - **NEVER alternate D10 and NS/RL — this can cause brain oedema**
+
+    - type: "prose"
+      title: "Monitor neuro status for cerebral oedema"
+      highlight: true
+      markdown: |
+        Watch for headache, slowing HR, irritability, incontinence, decreased consciousness, focal signs. If present:
+        - Check / correct hypoglycaemia
+        - Call senior, transfer to ICU
+        - Mannitol 0.5–1 g/kg
+
+    - type: "prose"
+      title: "When RBS < 14 — recheck urinalysis"
+      markdown: |
+        - Ketones still present:
+          - Change IV fluids to 5% dextrose ½ NS at 150–200 mL/hr
+          - Insulin 0.02–0.05 IU/kg/hr infusion (maintain the IM/SC regimen)
+        - No ketones: switch to SC insulin with meals, a sliding scale, or Mixtard BD
+          - Usual dose 0.5–1 IU/kg/day
+
+    - type: "prose"
+      title: "Uncomplicated hyperglycaemia (outpatient)"
+      markdown: |
+        - **Known diabetic:**
+          - Medication compliance? — No: restart the regimen; Yes: change the dose
+          - Keep a log of RBS
+          - Clinic follow-up in 5 days
+        - **Newly diagnosed diabetic:**
+          - Start metformin 500 mg BD with meals
+          - Titrate weekly if no GI symptoms
+          - If GI symptoms, decrease to the previous dose until resolution
+          - Max dose 1000 mg BD, or sometimes 850 mg TID
+        - **All patients:** lifestyle modification advice
