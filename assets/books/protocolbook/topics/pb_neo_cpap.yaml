@@ -1,0 +1,90 @@
+# ============================================================
+# ProtocolBook p.84 — Neonatal Continuous Positive Airway Pressure
+# (CPAP). Second leaf of the Neonatal Protocols section.
+#
+# A genuine decision flowchart (initiate → monitor q3h → worsening vs
+# improving) plus the Silverman-Anderson Score grid → per the hybrid
+# rule the decision spine renders as an `algorithm` and the score grid
+# as a `table` below (same pattern as p.73/p.75).
+#
+# Faithful-rendering calls:
+#   - Inclusion criteria (weight >1000 g, APGAR ≥4 at 5 min, Silverman-
+#     Anderson ≥4) → prose intro.
+#   - Monitor-q3h checklist → the decision's criteria list; the two
+#     outcomes (worsening / improving) → boxes; improving continues to
+#     the "transition to nasal-prong oxygen" terminal.
+#   - Silverman-Anderson grid (5 features × score 0/1/2) → a `table`.
+#   - The table footnote (>6 → initiate CPAP while preparing transfer
+#     for mechanical ventilation) → prose under the table.
+#   - Flowchart-box text is plain (no markdown in algorithm boxes).
+#   - Citation superscript (78) dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Bubble/nasal CPAP for neonatal respiratory distress is standard
+#     LMIC practice; the >1000 g / APGAR ≥4 gate reflects local
+#     resource-appropriate selection. Silverman-Anderson is a validated
+#     neonatal respiratory-distress score.
+# ============================================================
+
+topic:
+  id: "pb-neo-cpap"
+  title: "Neonatal CPAP"
+  list_subtitle: "p.84 · indications · Silverman-Anderson score"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "CPAP", "respiratory distress", "silverman anderson score", "APGAR", "newborn", "oxygen", "nasal prongs"]
+  category: "medical"
+  page_number: 84
+
+  blocks:
+
+    - type: "prose"
+      title: "Continuous Positive Airway Pressure (CPAP)"
+      markdown: |
+        For maximum benefit, start as soon as symptoms are identified. Initiate in a newborn with severe respiratory distress and **all** of:
+        - Weight > 1000 g
+        - APGAR score ≥ 4 at 5 minutes
+        - Respiratory distress — a Silverman-Anderson score ≥ 4
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Initiate CPAP"
+        shape: "stadium"
+      stages:
+        - decision: "Monitor every 3 hours — signs & score"
+          criteria:
+            - "Vital signs — temperature, heart rate, respiratory rate"
+            - "Pulse oximetry"
+            - "Silverman-Anderson scoring"
+            - "Need for nasal clearing / suction"
+          outcomes:
+            - label: "Worsening signs & score"
+              box:
+                title: "Troubleshoot & escalate"
+                bullets:
+                  - "Ensure the CPAP seal and equipment are working well; adjust FiO₂ / pressure"
+                  - "Senior review"
+                severity: "priority"
+            - label: "Improving signs & score"
+              box:
+                title: "Continue CPAP; monitor until Silverman-Anderson score < 4"
+              continue: true
+      terminal:
+        title: "Transition from CPAP to oxygen by nasal prongs"
+
+    - type: "table"
+      title: "Silverman-Anderson Score"
+      zebra: true
+      columns: ["Feature", "Score 0", "Score 1", "Score 2"]
+      column_flex: [5, 3, 5, 4]
+      column_align: ["left", "center", "center", "center"]
+      rows:
+        - cells: ["Chest movement", "Equal", "Respiratory lag", "Seesaw respiration"]
+        - cells: ["Intercostal retraction", "None", "Minimal", "Marked"]
+        - cells: ["Xiphoid retraction", "None", "Minimal", "Marked"]
+        - cells: ["Nasal flaring", "None", "Minimal", "Marked"]
+        - cells: ["Expiratory grunt", "None", "Audible with stethoscope", "Audible"]
+
+    - type: "prose"
+      markdown: |
+        A score of > 6 — initiate CPAP as you prepare for transfer for mechanical ventilation.
