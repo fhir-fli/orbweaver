@@ -122,3 +122,4 @@ book:
         - topic: "topics/pb_neo_cpap.yaml"
         - topic: "topics/pb_neo_sepsis_prevention.yaml"
         - topic: "topics/pb_neo_sepsis_treatment.yaml"
+        - topic: "topics/pb_neo_jaundice.yaml"

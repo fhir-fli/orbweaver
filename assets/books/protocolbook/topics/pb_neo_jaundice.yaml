@@ -1,0 +1,130 @@
+# ============================================================
+# ProtocolBook pp.88–89 — Neonatal Jaundice. Fifth leaf of the
+# Neonatal Protocols section.
+#
+# Two-page topic (`pages:`): p.88 = assessment + phototherapy &
+# supportive-care checklist; p.89 = the Kramer dermal-zone chart
+# (image + zone→bilirubin table) and the serum-bilirubin treatment
+# thresholds.
+#
+# Faithful-rendering calls:
+#   - Kramer baby diagram → cropped image asset
+#     images/pb_neo_kramer_zones.png (from p.89 @300 dpi, x178–545
+#     y115–815); the dermal-zone → indirect-bilirubin figures beside it
+#     → a `table`.
+#   - The wide "Treatment of jaundice based on serum bilirubin level"
+#     table (Age × 4 threshold columns) → SPLIT into two phone-friendly
+#     3-column tables (phototherapy thresholds; exchange-transfusion
+#     thresholds); µmol/l (mg/dl) pairs transcribed exactly as printed
+#     (WHO Pocket Book values — the mg/dl are the book's own conservative
+#     pairings, not recomputed).
+#   - bilitool.org kept as an external link.
+#   - Checklist items keep their bold leads.
+#   - Citation superscripts (53) dropped.
+#
+# GENUINE CLINICAL ERROR surfaced to Grey — CORRECTED here:
+#   - p.88 prints "Phototherapy will not treat indirect
+#     hyperbilirubinemia." This is inverted: phototherapy treats
+#     INDIRECT (unconjugated) bilirubin; it does NOT treat DIRECT
+#     (conjugated) hyperbilirubinaemia (which points to obstructive
+#     causes like biliary atresia — the preceding bullet). Rendered as
+#     "direct (conjugated)". GREY SHOULD FIX THE SOURCE PDF.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - "Any jaundice < 24 h" as a red flag, sole-of-foot / preterm
+#     visible-jaundice phototherapy triggers, and the WHO age-based
+#     bilirubin thresholds are standard WHO Pocket Book guidance.
+#   - Kramer dermal-zone estimation is explicitly a last-resort visual
+#     method (the book notes visual inspection is unreliable).
+# ============================================================
+
+topic:
+  id: "pb-neo-jaundice"
+  title: "Neonatal Jaundice"
+  list_subtitle: "pp.88–89 · phototherapy · Kramer zones · thresholds"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "jaundice", "hyperbilirubinaemia", "bilirubin", "phototherapy", "exchange transfusion", "kramer", "dermal zones", "biliary atresia", "newborn"]
+  category: "medical"
+  page_number: 88
+
+  pages:
+
+    # ═══════════════════════ PAGE 88 ═══════════════════════
+    - page_number: 88
+      blocks:
+
+        - type: "prose"
+          title: "Assessment"
+          markdown: |
+            - Assess for jaundice in bright, natural light if possible. Check the eyes, under the tongue, palms and soles.
+            - Always measure serum bilirubin if < 24 hours and if clinically moderate or severe jaundice. Treat according to [bilitool.org](https://bilitool.org/) or by infant age in days per the WHO guidelines below.
+            - **Any jaundice < 24 hours needs further evaluation and urgent treatment with phototherapy or exchange transfusion.**
+            - If unable to measure bilirubin, start phototherapy:
+              - In a well baby with jaundice easily visible on the sole of the foot during the first week of life
+              - In a preterm baby (< 2000 g) with ANY visible jaundice
+              - In a sick baby with poor feeding, irritability, and moderate to severe jaundice — evaluate and treat for sepsis
+            - Babies over 2 weeks of age need evaluation for obstructive causes of jaundice such as biliary atresia. They do not usually require phototherapy.
+            - Phototherapy will not treat **direct (conjugated)** hyperbilirubinaemia.
+
+        - type: "prose"
+          title: "Phototherapy & supportive care — checklist"
+          markdown: |
+            - **Shield the eyes** with an eye patch or hat. Remove periodically during feeds.
+            - **Keep the baby naked.**
+            - **Place the baby close to the light source** — 45 cm distance is often recommended, but closer is OK if the baby is not overheating. May use white cloth around the light to reflect light back to the baby. Learn the recommended distance for your equipment.
+            - **Do not place anything on phototherapy devices.** Lights and baby need to keep cool, so do not block air vents. Keep the device clean — dust can carry bacteria and reduce light emitted.
+            - **Promote frequent breastfeeding.** Unless the baby is dehydrated, supplements or IV fluids are unnecessary. Phototherapy can be interrupted for feeds and to allow maternal bonding.
+            - **Periodically change position** from supine to prone. Expose the maximum surface area of the baby. Reposition after each feed.
+            - **Monitor temperature** every 2 hours and weight every 24 hours.
+            - **Periodic (12–24 h) plasma/serum bilirubin test required.** Visual testing for jaundice is unreliable.
+            - **Make sure the light source is working** and emitting light. Fluorescent tubes should be replaced if more than 6 months in use, the tube ends have blackened, or the lights flicker.
+
+    # ═══════════════════════ PAGE 89 ═══════════════════════
+    - page_number: 89
+      blocks:
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_neo_kramer_zones.png"
+          size: "full"
+          caption: "Kramer dermal zones — jaundice advances head-to-toe (zone 1 = head/neck, zone 5 = palms/soles). May be used if no other method is available, but visual inspection for jaundice is unreliable."
+
+        - type: "table"
+          title: "Dermal zone → indirect bilirubin (mg/100 mL)"
+          zebra: true
+          columns: ["Dermal zone", "Mean ± SD", "Range", "Observations"]
+          column_flex: [3, 3, 3, 3]
+          column_align: ["center", "center", "center", "center"]
+          rows:
+            - cells: ["1", "5.9 ± 0.3", "4.3–7.9", "13"]
+            - cells: ["2", "8.9 ± 1.7", "5.4–12.2", "49"]
+            - cells: ["3", "11.8 ± 1.8", "8.1–16.5", "52"]
+            - cells: ["4", "15.0 ± 1.7", "11.1–18.3", "45"]
+            - cells: ["5", "—", "> 15", "29"]
+
+        - type: "table"
+          title: "Phototherapy threshold (start at or above)"
+          zebra: true
+          columns: ["Age", "Healthy ≥ 35 wk", "Preterm < 35 wk or risk factors"]
+          column_flex: [3, 4, 5]
+          column_align: ["left", "center", "center"]
+          rows:
+            - cells: ["Day 1", "Any visible jaundice", "Any visible jaundice"]
+            - cells: ["Day 2", "260 µmol/l (15 mg/dl)", "170 µmol/l (10 mg/dl)"]
+            - cells: ["Day ≥ 3", "310 µmol/l (18 mg/dl)", "250 µmol/l (15 mg/dl)"]
+
+        - type: "table"
+          title: "Exchange transfusion threshold (at or above)"
+          zebra: true
+          columns: ["Age", "Healthy ≥ 35 wk", "Preterm < 35 wk or risk factors"]
+          column_flex: [3, 4, 5]
+          column_align: ["left", "center", "center"]
+          rows:
+            - cells: ["Day 1", "260 µmol/l (15 mg/dl)", "220 µmol/l (10 mg/dl)"]
+            - cells: ["Day 2", "425 µmol/l (25 mg/dl)", "260 µmol/l (15 mg/dl)"]
+            - cells: ["Day ≥ 3", "425 µmol/l (25 mg/dl)", "340 µmol/l (20 mg/dl)"]
+
+        - type: "prose"
+          markdown: |
+            - Exchange transfusion is not described in this Pocket Book; the serum bilirubin levels are included in case exchange transfusion is possible, or if the infant can be transferred quickly and safely to another facility where it can be performed.
+            - Risk factors include small size (< 2.5 kg at birth or born before 37 weeks' gestation), haemolysis, and sepsis.
+            - Visible jaundice anywhere on the body on day 1 is significant.
