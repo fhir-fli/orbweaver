@@ -120,3 +120,4 @@ book:
       children:
         - topic: "topics/pb_neo_feeding.yaml"
         - topic: "topics/pb_neo_cpap.yaml"
+        - topic: "topics/pb_neo_sepsis_prevention.yaml"

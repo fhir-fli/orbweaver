@@ -1,0 +1,104 @@
+# ============================================================
+# ProtocolBook p.85 — Early Onset Neonatal Sepsis (< 7 days): risk
+# factors + prevention (prophylaxis) algorithm. Third leaf of the
+# Neonatal Protocols section. (p.86–87 = neonatal sepsis treatment +
+# duration, a separate leaf.)
+#
+# A genuine multi-stage decision flowchart (a "settings without
+# laboratory" prophylaxis triage) → `algorithm` variant; risk factors
+# → prose above it.
+#
+# Faithful-rendering calls:
+#   - Risk-factors box → prose bullet list.
+#   - The 6-branch decision cascade → `algorithm` stages; the final
+#     catch-all (preterm / LBW / prolonged ROM → IV abx × 48 h) →
+#     the `terminal` box.
+#   - Note the ROM/fever stage inverts (No → routine care terminal;
+#     Yes → continue down the cascade) — preserved.
+#   - Flowchart-box text plain (no markdown in algorithm boxes).
+#   - Citation superscript (192) dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - This is a WHO/LMIC no-lab intrapartum-risk prophylaxis pathway
+#     (ROM ≥18 h, chorioamnionitis, maternal fever, preterm/LBW as
+#     the classic early-onset sepsis risk set). Ampicillin + gentamicin
+#     empiric cover is on the p.86 treatment page. Consistent with WHO
+#     Pocket Book neonatal guidance.
+# ============================================================
+
+topic:
+  id: "pb-neo-sepsis-prevention"
+  title: "Early-Onset Neonatal Sepsis — Risk & Prevention"
+  list_subtitle: "p.85 · < 7 days · risk factors · prophylaxis"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "sepsis", "early onset sepsis", "newborn", "risk factors", "chorioamnionitis", "ROM", "rupture of membranes", "prophylaxis", "ampicillin", "prevention"]
+  category: "medical"
+  page_number: 85
+
+  blocks:
+
+    - type: "prose"
+      title: "Risk factors"
+      markdown: |
+        - Prolonged rupture of membranes (> 18 hours)
+        - Prolonged labour
+        - Maternal fever (≥ 38°C) or other evidence of infection
+        - Foul-smelling amniotic fluid or malodorous baby
+        - Prematurity (< 37 weeks)
+        - Low birth weight (< 2000 g)
+        - Birth outside a health facility
+        - Some traditional practices (such as application of cow dung to the cord)
+        - 5-minute APGAR score < 6
+
+    - type: "prose"
+      title: "Prevention (in settings without laboratory)"
+      markdown: |
+        Work down the following in order.
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Assess for early-onset sepsis"
+        shape: "stadium"
+      stages:
+        - decision: "Clinical signs of sepsis?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Full course of IV antibiotics"
+                severity: "priority"
+            - label: "No"
+              continue: true
+        - decision: "Maternal chorioamnionitis, or a twin with clinical signs of sepsis?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "IV antibiotics × 48 h, then review"
+            - label: "No"
+              continue: true
+        - decision: "ROM ≥ 18 h, or maternal fever ≥ 38°C?"
+          outcomes:
+            - label: "No"
+              box:
+                title: "Routine clinical care"
+                severity: "non_urgent"
+            - label: "Yes"
+              continue: true
+        - decision: "Mother received 2 doses of IV ampicillin ≥ 4 h before delivery?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Observation for ≥ 48 h"
+            - label: "No"
+              continue: true
+        - decision: "≥ 37 weeks gestation (or weight ≥ 2000 g) AND ROM < 18 h?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Observation for ≥ 48 h"
+            - label: "No"
+              continue: true
+      terminal:
+        title: "IV antibiotics × 48 h, then review"
+        bullets:
+          - "For < 37 weeks gestation (or weight < 2000 g), or ROM ≥ 18 h"
