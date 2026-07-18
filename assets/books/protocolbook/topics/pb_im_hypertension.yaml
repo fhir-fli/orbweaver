@@ -1,0 +1,151 @@
+# ============================================================
+# ProtocolBook pp.106–107 — Adult Hypertension. Eighth leaf of the
+# Internal Medicine Protocols section.
+#
+# Two-page topic (`pages:`): p.106 = acute hypertension (urgency vs
+# emergency, by end-organ dysfunction); p.107 = HTN in specific
+# conditions + general (essential) hypertension treatment.
+#
+# Faithful-rendering calls:
+#   - BP-threshold triage (>180/120 → this protocol; 140/90–180/120 →
+#     essential-HTN treatment on p.107; <140/90 → not hypertensive) →
+#     prose intro.
+#   - "Headache alone is NEVER an emergency" → highlight callout.
+#   - The end-organ-dysfunction decision (emergency vs urgency) →
+#     `algorithm`; each arm's IV/PO regimen + BP goal → prose.
+#   - Specific-condition goals/Rx (1–9) and the essential-HTN
+#     population goals + first-line options + follow-up → prose.
+#   - Cross-links: "see stroke pathway" → p.96 stroke; "see HF
+#     protocol" → p.94 heart failure.
+#   - Flowchart-box text plain; citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - The JNC-8-style essential-HTN targets (≥60: <150/90; <60/DM/CKD:
+#     <140/90), thiazide/CCB first-line (ACE-I/ARB for DM/CKD), and the
+#     condition-specific acute targets (dissection SBP<120; encephalo-
+#     pathy ≤20–25%/hr; avoid nitroprusside in encephalopathy) are
+#     standard. Nitroglycerin contraindicated with recent PDE-5
+#     inhibitors is correct. OE may update newer <130/80 targets.
+# ============================================================
+
+topic:
+  id: "pb-im-hypertension"
+  title: "Adult Hypertension"
+  list_subtitle: "pp.106–107 · urgency / emergency · essential HTN"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hypertension", "hypertensive emergency", "hypertensive urgency", "adult", "internal medicine", "blood pressure", "nicardipine", "labetalol", "nitroprusside", "amlodipine", "lisinopril", "cardiology"]
+  category: "medical"
+  page_number: 106
+
+  pages:
+
+    # ═══════════════════════ PAGE 106 ═══════════════════════
+    - page_number: 106
+      blocks:
+
+        - type: "prose"
+          title: "Hypertensive urgency & emergency"
+          markdown: |
+            - BP > 180/120 → follow this protocol
+            - BP 140/90 – 180/120 → hypertensive; see the essential-hypertension treatment (next page)
+            - BP < 140/90 → not hypertensive
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (PR, RR, SpO₂, temp)
+            - Repeat and **verify** the BP
+            - Start oxygen if SpO₂ < 94%
+            - IV access; 12-lead ECG
+            - Labs: RBS, CBC, renal functions, urinalysis for proteinuria
+            - Perform a brief, targeted history and physical exam
+
+        - type: "prose"
+          title: "Reminder"
+          highlight: true
+          markdown: |
+            Headache alone is NEVER an emergency.
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "Evidence of end-organ dysfunction?"
+              criteria:
+                - "Chest pain / angina / ACS / heart failure"
+                - "Shortness of breath or pulmonary oedema"
+                - "Stroke, numbness/weakness, vision changes, difficulty speaking"
+                - "Encephalopathy"
+                - "Acute kidney injury"
+                - "Aortic dissection"
+                - "Eclampsia"
+              outcomes:
+                - label: "Yes — hypertensive emergency"
+                  box:
+                    title: "Hypertensive emergency (see treatment below)"
+                    severity: "emergency"
+                - label: "No — hypertensive urgency"
+                  box:
+                    title: "Hypertensive urgency (see treatment below)"
+                    severity: "priority"
+
+        - type: "prose"
+          title: "Hypertensive emergency — treatment"
+          markdown: |
+            - Nicardipine — initial 5 mg/hr, increase 2.5 mg/hr q5min to a max of 15 mg/hr
+            - Sodium nitroprusside — 0.3–0.5 mcg/kg/min, increase 0.5 mcg/kg/min every few minutes to a max of 10 mcg/kg/min
+            - Labetalol — 10–20 mg IV, then bolus 20–80 mg q10min until BP at target, or 300 mg total dose
+            - Must be admitted for management. **Goal: 20–25% decrease in BP in the 1st hour, then < 160/110 over the next 2–6 hours**
+
+        - type: "prose"
+          title: "Hypertensive urgency — treatment"
+          markdown: |
+            - Nicardipine 20–40 mg PO q8–12h
+            - Captopril 25 mg PO q8–12h
+            - Labetalol 200 mg PO, then 200–400 mg q6–12h PRN
+            - No specific goal BP acutely. If still no evidence of end-organ dysfunction at 6 hours, may discharge home with follow-up in a few days.
+
+    # ═══════════════════════ PAGE 107 ═══════════════════════
+    - page_number: 107
+      blocks:
+
+        - type: "prose"
+          title: "Hypertension in specific conditions"
+          markdown: |
+            - **Acute aortic dissection** — goal SBP < 120 in 5–10 minutes; a beta-blocker and vasodilator (esmolol/metoprolol & nicardipine, nitroprusside, fenoldopam)
+            - **Acute stroke** — see the [stroke pathway](topic:pb-im-stroke)
+            - **Hypertensive encephalopathy** — goal: lower SBP by no more than 20–25%, or DBP to 100–110, in the first hour; labetalol, nicardipine (DO NOT use nitroprusside)
+            - **Acute myocardial ischaemia** (see ACS protocol) — goal SBP < 160, DBP < 100; nitroglycerin (unless a phosphodiesterase inhibitor was used in the last 48 h — sildenafil, tadalafil); alternatives labetalol, esmolol, nicardipine
+            - **Acute heart failure** — see the [heart failure protocol](topic:pb-im-heart-failure); IV or SL nitroglycerin
+            - **Acute postoperative hypertension** — usually starts < 2 h after operation and usually requires treatment for < 6 hours; goal in cardiac-surgery patients BP < 140/90 or MAP < 105; esmolol, nicardipine, labetalol, nitroprusside
+            - **Acute pulmonary oedema**
+            - **Acute renal failure** — see the renal failure algorithm
+            - **Pre-eclampsia / eclampsia** — consult OBGYN
+
+        - type: "prose"
+          title: "General (essential) hypertension — confirmed on > 1 occasion"
+          markdown: |
+            Start with lifestyle interventions. Set the BP goal and choose medication based on age, diabetes (DM), and chronic kidney disease (CKD).
+            - **Goals by group:**
+              - ≥ 60 years (no DM/CKD): BP < 150/90
+              - < 60 years (no DM/CKD): BP < 140/90
+              - DM but no CKD: BP < 140/90
+              - CKD present: BP < 140/90
+
+        - type: "prose"
+          title: "First-line options"
+          markdown: |
+            - **General population (no DM/CKD):**
+              - Hydrochlorothiazide 12.5–25 mg PO OD
+              - Amlodipine 2.5–10 mg PO OD
+              - Nifedipine 30–120 mg PO OD
+            - **DM or CKD present:**
+              - Lisinopril 5–20 mg PO OD
+              - Losartan 25–100 mg PO OD
+
+        - type: "prose"
+          title: "Follow-up management"
+          markdown: |
+            - Assess compliance, lifestyle, and medication
+            - If BP is not at goal, increase the 1st medication dose; if already at max, add a 2nd medication
+            - See the ACS and heart failure protocols for specific recommendations
