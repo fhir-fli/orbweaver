@@ -129,3 +129,4 @@ book:
         accent: "0xFF0D47A1"
       children:
         - topic: "topics/pb_im_heart_failure.yaml"
+        - topic: "topics/pb_im_stroke.yaml"

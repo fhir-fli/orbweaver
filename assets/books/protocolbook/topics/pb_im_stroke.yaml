@@ -1,0 +1,252 @@
+# ============================================================
+# ProtocolBook pp.96–98 — TIA / Stroke. Second leaf of the Internal
+# Medicine Protocols section.
+#
+# Three-page topic (`pages:`): p.96 = symptoms + management +
+# ongoing-symptoms decision + ROSIER; p.97 = Stroke Protocol (LAPSS,
+# BP management, stroke-vs-TIA branch, NIHSS-severity + ABCD3 tables);
+# p.98 = the full NIH Stroke Scale.
+#
+# Faithful-rendering calls:
+#   - Genuine Yes/No decisions ("symptoms ongoing?", LAPSS all/some) →
+#     `algorithm` blocks; every scoring instrument (ROSIER, ABCD3,
+#     NIHSS-severity, LAPSS checklist, the 11-item NIHSS) → `table` /
+#     prose, in printed order (same interleaving as p.73/p.75/p.97-era
+#     pages).
+#   - The NIHSS grid → the span:2 item-divider pattern (like NIPS /
+#     r-FLACC): each item a bold divider row, its Score/Description
+#     options beneath.
+#   - Glucose values kept as printed "mmol/l (mg/dl)" pairs.
+#   - "check or give glucose prior to initiating stroke evaluation" kept.
+#   - Citation superscripts dropped; OCR glitches ("Mild 10 moderate"
+#     → "mild to moderate", "Bood Cx" → "Blood cultures") corrected.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - LAPSS / ROSIER / ABCD3 / NIHSS are the standard prehospital and
+#     bedside stroke instruments. BP target < 170/105 with IV labetalol/
+#     hydralazine reflects a no-thrombolysis LMIC setting (permissive
+#     hypertension for ischaemic stroke); OE may contextualise vs
+#     thrombolysis/thrombectomy windows where available.
+# ============================================================
+
+topic:
+  id: "pb-im-stroke"
+  title: "TIA / Stroke"
+  list_subtitle: "pp.96–98 · ROSIER · LAPSS · ABCD3 · NIHSS"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["stroke", "TIA", "transient ischaemic attack", "internal medicine", "ROSIER", "LAPSS", "ABCD3", "NIHSS", "neurology", "labetalol", "blood pressure"]
+  category: "medical"
+  page_number: 96
+
+  pages:
+
+    # ═══════════════════════ PAGE 96 ═══════════════════════
+    - page_number: 96
+      blocks:
+
+        - type: "prose"
+          title: "TIA / Stroke"
+          markdown: |
+            Check or give glucose prior to initiating stroke evaluation.
+
+        - type: "prose"
+          title: "Symptoms of TIA / stroke"
+          markdown: |
+            - Transient symptoms in TIA
+            - Focal neurologic deficit
+            - Unilateral motor dysfunction of extremities or face (weakness, clumsiness, paralysis)
+            - Vision change: loss of vision in one eye, diplopia
+            - Homonymous hemianopia
+            - Speech disturbances (aphasia, dysarthria)
+            - Unilateral sensory deficit (numbness, sensory loss)
+            - Vertigo, ataxia of gait, trunk, extremities
+            - Loss of consciousness, syncope, convulsion
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (BP, PR, RR, SpO₂, temp)
+            - Start oxygen if SpO₂ < 94%
+            - Maintain glucose between 7.7 (140) and 10 (180)
+            - Obtain labs: CBC, RFT, electrolytes, coagulation studies, urinalysis for proteinuria
+            - 12-lead ECG — if positive for arrhythmia or infarction, prioritise cardiac stabilisation (see the cardiac protocol)
+            - Perform a brief, targeted history and physical exam
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "Symptoms ongoing?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Score with ROSIER (below)"
+                    bullets:
+                      - "Total ≥ 1 → Stroke Protocol (next page)"
+                      - "Total < 1 → look for other causes"
+                - label: "No"
+                  box:
+                    title: "Evaluate & treat mimics"
+                    bullets:
+                      - "Hypo/hyperglycaemia; convulsion; (complicated) migraine"
+                      - "Brain lesion (tumour/aneurysm); infection (e.g. meningitis)"
+                      - "Cardiac disorders; syncope; delirium; psychiatric disorder"
+                      - "Acute vestibular syndrome; peripheral nerve condition"
+                      - "If no mimics found → TIA; treat the same as stroke → Stroke Protocol"
+
+        - type: "table"
+          title: "ROSIER criteria (total ≥ 1 → stroke likely)"
+          zebra: true
+          columns: ["Feature", "Points"]
+          column_flex: [8, 2]
+          column_align: ["left", "center"]
+          rows:
+            - cells: ["Loss of consciousness or syncope", "−1"]
+            - cells: ["Seizure activity", "−1"]
+            - cells: ["Asymmetrical facial weakness", "+1"]
+            - cells: ["Asymmetrical arm weakness", "+1"]
+            - cells: ["Asymmetrical leg weakness", "+1"]
+            - cells: ["Speech disturbance", "+1"]
+            - cells: ["Visual field defect", "+1"]
+
+    # ═══════════════════════ PAGE 97 ═══════════════════════
+    - page_number: 97
+      blocks:
+
+        - type: "prose"
+          title: "Stroke Protocol — LAPSS criteria"
+          markdown: |
+            - Age > 45 years
+            - No history of seizures
+            - New neuro symptoms in the last 24 hours
+            - Ambulatory at baseline
+            - Glucose > 3.4 (60) and < 22.2 (400)
+            - Asymmetry is unilateral
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "How many LAPSS criteria are met?"
+              outcomes:
+                - label: "Meets ALL"
+                  box:
+                    title: "Treat for stroke"
+                - label: "Meets SOME"
+                  box:
+                    title: "Treat for stroke, but evaluate for other causes"
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Continue to monitor, support ABCs
+            - Check vital signs (BP, PR, RR, SpO₂, temp)
+            - Start oxygen if SpO₂ < 94%
+            - Maintain glucose between 7.7 (140) and 10 (180)
+            - Treat hypovolaemia with normal saline
+            - **Blood pressure: maintain < 170/105** (if no bradycardia) — labetalol 10–20 mg IV over 1–2 minutes, may repeat once; or hydralazine
+            - Then continue supportive care — if **stroke**, use the NIH Stroke Scale (below); if **TIA**, use the ABCD3 score (below)
+
+        - type: "table"
+          title: "NIHSS — stroke severity"
+          zebra: true
+          columns: ["Score", "Severity"]
+          column_flex: [3, 7]
+          column_align: ["center", "left"]
+          rows:
+            - cells: ["0", "No stroke symptoms"]
+            - cells: ["1–4", "Minor stroke"]
+            - cells: ["5–15", "Moderate stroke"]
+            - cells: ["16–20", "Moderate to severe stroke"]
+            - cells: ["21–42", "Severe stroke"]
+
+        - type: "table"
+          title: "ABCD3 score (TIA — risk of subsequent stroke)"
+          zebra: true
+          columns: ["Feature", "Points"]
+          column_flex: [8, 2]
+          column_align: ["left", "center"]
+          rows:
+            - cells: ["Age > 60", "+1"]
+            - cells: ["BP > 140/90", "+1"]
+            - cells: ["Clinical: unilateral weakness", "+2"]
+            - cells: ["Clinical: speech impairment, no weakness", "+1"]
+            - cells: ["Duration of symptoms > 60 minutes", "+2"]
+            - cells: ["Duration of symptoms 10–59 minutes", "+1"]
+            - cells: ["Diabetes", "+1"]
+            - cells: ["TIA in the last 7 days", "+2"]
+
+        - type: "prose"
+          markdown: |
+            Score < 4: very low risk of stroke.
+
+    # ═══════════════════════ PAGE 98 ═══════════════════════
+    - page_number: 98
+      blocks:
+
+        - type: "table"
+          title: "National Institutes of Health Stroke Scale (NIHSS)"
+          zebra: true
+          columns: ["Score", "Description"]
+          column_flex: [2, 8]
+          column_align: ["center", "left"]
+          rows:
+            - cells: [{text: "**1a. Level of consciousness (LOC)**", span: 2}]
+            - cells: ["0", "Alert; keenly responsive"]
+            - cells: ["1", "Not alert; arousable by minor stimulation"]
+            - cells: ["2", "Not alert; requires repeated stimulation"]
+            - cells: ["3", "Unresponsive, or responds only with reflex"]
+            - cells: [{text: "**1b. LOC questions** (What is the month? What is your age?)", span: 2}]
+            - cells: ["0", "Both answers correct"]
+            - cells: ["1", "Answers one question correctly"]
+            - cells: ["2", "Answers both questions incorrectly"]
+            - cells: [{text: "**1c. LOC commands**", span: 2}]
+            - cells: ["0", "Performs both tasks correctly"]
+            - cells: ["1", "Performs one task correctly"]
+            - cells: ["2", "Performs neither task correctly"]
+            - cells: [{text: "**2. Best gaze**", span: 2}]
+            - cells: ["0", "Normal"]
+            - cells: ["1", "Partial gaze palsy"]
+            - cells: ["2", "Forced deviation"]
+            - cells: [{text: "**3. Visual**", span: 2}]
+            - cells: ["0", "No visual loss"]
+            - cells: ["1", "Partial hemianopia"]
+            - cells: ["2", "Complete hemianopia"]
+            - cells: ["3", "Bilateral hemianopia"]
+            - cells: [{text: "**4. Facial palsy**", span: 2}]
+            - cells: ["0", "Normal symmetric movements"]
+            - cells: ["1", "Minor paralysis"]
+            - cells: ["2", "Partial paralysis"]
+            - cells: ["3", "Complete paralysis of one or both sides"]
+            - cells: [{text: "**5. Motor arm** (5a left, 5b right)", span: 2}]
+            - cells: ["0", "No drift"]
+            - cells: ["1", "Drift"]
+            - cells: ["2", "Some effort against gravity"]
+            - cells: ["3", "No effort against gravity; limb falls"]
+            - cells: ["4", "No movement"]
+            - cells: [{text: "**6. Motor leg** (6a left, 6b right)", span: 2}]
+            - cells: ["0", "No drift"]
+            - cells: ["1", "Drift"]
+            - cells: ["2", "Some effort against gravity"]
+            - cells: ["3", "No effort against gravity; limb falls"]
+            - cells: ["4", "No movement"]
+            - cells: [{text: "**7. Limb ataxia**", span: 2}]
+            - cells: ["0", "Absent"]
+            - cells: ["1", "Present in one limb"]
+            - cells: ["2", "Present in two limbs"]
+            - cells: [{text: "**8. Sensory**", span: 2}]
+            - cells: ["0", "Normal, no sensory loss"]
+            - cells: ["1", "Mild-to-moderate sensory loss"]
+            - cells: ["2", "Severe to total sensory loss"]
+            - cells: [{text: "**9. Best language**", span: 2}]
+            - cells: ["0", "No aphasia; normal"]
+            - cells: ["1", "Mild to moderate aphasia"]
+            - cells: ["2", "Severe aphasia"]
+            - cells: ["3", "Mute, global aphasia"]
+            - cells: [{text: "**10. Dysarthria**", span: 2}]
+            - cells: ["0", "Normal"]
+            - cells: ["1", "Mild to moderate dysarthria"]
+            - cells: ["2", "Severe dysarthria"]
+            - cells: [{text: "**11. Extinction and inattention**", span: 2}]
+            - cells: ["0", "No abnormality"]
+            - cells: ["1", "Visual / tactile / auditory / spatial / personal inattention"]
+            - cells: ["2", "Profound hemi-inattention or extinction"]
