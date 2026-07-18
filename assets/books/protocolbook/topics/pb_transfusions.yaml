@@ -1,0 +1,101 @@
+# ============================================================
+# ProtocolBook p.76 — Transfusions. Third and final leaf of the
+# "Anaemia & Transfusion" section (p.74 approach → p.75 cause workup →
+# p.76 transfusions). p.77 (Pain scales) starts the next section.
+#
+# The printed page is a pure outline (sections A–D, all bulleted, NO
+# decision branch) → content-flow → titled prose + small tables per
+# the hybrid rule.
+#
+# Faithful-rendering calls:
+#   - A (When to transfuse) repeats the p.74 malaria-area Hb cut-offs;
+#     kept as a self-contained table here (a bedside page should stand
+#     alone) + a cross-link back to the p.74 approach topic.
+#   - B (General considerations) and C (Calculate volume) → titled
+#     prose with nested bullets (drop the a/b/c + i/ii/iii outline
+#     numbering; MiniMarkdown renders nesting by indent).
+#   - D (Complications) → titled prose, one bold-lead entry per
+#     reaction with Signs / Treatment sub-bullets (more legible on a
+#     phone than a cramped 3-column table).
+#   - Anaphylaxis "(see protocol)" → cross-link to the p.37 Anaphylaxis
+#     topic (pb-anaphylaxis).
+#   - Abbreviations expanded once (WB = whole blood, PRBCs = packed red
+#     blood cells); citation superscripts (15,16,73) dropped.
+#   - "Acetaminophen" → "paracetamol" (book's US spelling; app uses the
+#     INN elsewhere).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Lasix (furosemide) + dopamine for AHTR, meperidine for rigors,
+#     and the WB-vs-PRBC volume rules are transcribed as printed; a
+#     modern review may note leucoreduction and restrictive thresholds.
+#   - "1 unit PRBCs raises adult Hb ~1 g/dL" and "10–15 mL/kg raises
+#     child Hb 2–3 g/dL" are standard rules of thumb. Kept as printed.
+# ============================================================
+
+topic:
+  id: "pb-transfusions"
+  title: "Transfusions"
+  list_subtitle: "p.76 · when / volume / complications"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["transfusion", "blood", "PRBC", "whole blood", "haemoglobin", "AHTR", "febrile reaction", "TRALI", "anaphylaxis", "malaria", "paediatric"]
+  category: "medical"
+  page_number: 76
+
+  blocks:
+
+    - type: "table"
+      title: "When to transfuse"
+      zebra: true
+      columns: ["Setting", "Transfuse if haemoglobin"]
+      column_flex: [5, 5]
+      column_align: ["left", "left"]
+      rows:
+        - cells: [{text: "**High malaria areas**", span: 2}]
+        - cells: ["Low blood supply", "<4 g/dL, or <5 g/dL and unstable"]
+        - cells: ["Good blood supply", "<5 g/dL"]
+        - cells: [{text: "**Low malaria areas**", span: 2}]
+        - cells: ["—", "<7 g/dL, or <10 g/dL and unstable"]
+
+    - type: "prose"
+      markdown: |
+        See also [Anaemia — approach & thresholds](topic:pb-anaemia).
+
+    - type: "prose"
+      title: "General considerations"
+      markdown: |
+        - 10 mL PRBCs = 20 mL whole blood (WB)
+        - If in shock, give WB for extra volume
+        - If no shock and concern for volume overload (malnourished, heart failure), give PRBCs
+        - 10–15 mL/kg PRBCs raises a child's Hb an average of 2–3 g/dL
+        - Usual range for children: 10–20 mL/kg
+        - 1 unit PRBCs raises an adult's Hb an average of 1 g/dL
+        - Normal volume for adults: 1–2 units
+        - Usually run 10 mL/kg (1 unit) over 3–4 hours
+
+    - type: "prose"
+      title: "Calculate transfusion volume"
+      markdown: |
+        - **Paediatric**
+          - <1 yr: 10 mL/kg PRBCs, or 15 mL/kg WB
+          - >1 yr: 10 mL/kg PRBCs, or 20 mL/kg WB
+          - Malnourished: 5 mL/kg PRBCs, or 10 mL/kg WB (do not repeat the transfusion)
+        - **Adult**: 1–2 units PRBCs
+
+    - type: "prose"
+      title: "Complications"
+      markdown: |
+        - **Acute haemolytic reaction (AHTR)** — within 24 h
+          - Signs: fevers, chills, rigors, pain at the infusion site, chest / back / abdominal pain, low BP, shortness of breath
+          - Treatment: stop the transfusion; send the unit back to the lab to recheck compatibility; aggressive IV fluid hydration; maintain urine output with furosemide and/or dopamine
+        - **Febrile non-haemolytic reaction** — within 6 h
+          - Signs: fevers, chills, tachypnoea, headache, vomiting, BP change
+          - Treatment: stop the transfusion; send the unit back to the lab to recheck compatibility (important to differentiate haemolytic from non-haemolytic); draw blood cultures; give paracetamol (may consider meperidine)
+        - **Delayed haemolytic reaction** — within 5–7 days
+          - Signs: fever, anaemia, mild jaundice
+          - Treatment: screen for new antibodies; no specific treatment
+        - **Allergic / urticarial / anaphylaxis**
+          - Signs: bronchospasm, laryngeal oedema, hypotension
+          - Treatment: urticaria — diphenhydramine; anaphylaxis (see the [anaphylaxis protocol](topic:pb-anaphylaxis)) — epinephrine, diphenhydramine, H2-blocker, glucocorticoids
+        - **Transfusion-related acute lung injury (TRALI)** — often within 1–2 h, sometimes within 6 h; usually improves in 48–96 h
+          - Signs: fever, bilateral pulmonary oedema, hypoxaemia, respiratory failure, hypotension
+          - Treatment: supplemental oxygen & respiratory support; CXR; evaluate for possible volume overload (presents with similar features)

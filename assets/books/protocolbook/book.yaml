@@ -105,3 +105,4 @@ book:
       children:
         - topic: "topics/pb_anaemia.yaml"
         - topic: "topics/pb_anaemia_workup.yaml"
+        - topic: "topics/pb_transfusions.yaml"
