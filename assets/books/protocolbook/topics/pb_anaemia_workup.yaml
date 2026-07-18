@@ -1,0 +1,119 @@
+# ============================================================
+# ProtocolBook p.75 — Evaluation for Cause of Anaemia. Second leaf of
+# the "Anaemia & Transfusion" section (p.74 approach → p.75 cause
+# workup → p.76 transfusions).
+#
+# The printed page is a genuine branching decision tree (haemolysis
+# screen → antihelminthic → MCV three-way classification) INTERLEAVED
+# with the Iron Studies interpretation table and the supplementation
+# doses. Per the hybrid rule, the DECISION spine renders as an
+# `algorithm` flowchart; the Iron Studies table + note + drug doses
+# render as `table` / `prose` blocks below, with the microcytic/
+# normocytic arms pointing to the table textually (same pattern as the
+# p.73 treatment page).
+#
+# Faithful-rendering calls:
+#   - RI formula rendered in prose (MiniMarkdown has no fractions):
+#     RI = (reticulocyte % ÷ 2) × (haematocrit ÷ normal haematocrit).
+#   - Both Microcytic and Normocytic MCV arms point to the Iron Studies
+#     table (verified from the source arrows); Macrocytic arm gets its
+#     own workup box (B12/folate/LFTs/thyroid/EtOH/meds).
+#   - Iron Studies table: ↑ / ↓ / nL kept as printed; Fe:TIBC cut-off
+#     18% kept. Peripheral-smear note → prose under the table.
+#   - Supplementation (Iron / Folate / B12) → nested bullets (drop the
+#     decorative I/II/III + a/b outline numbering; MiniMarkdown renders
+#     nested bullets by indent).
+#   - Citation superscript (72) dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - "Give all children an antihelminthic" for non-haemolytic anaemia
+#     is an LMIC empiric deworming step (helminths → iron-deficiency
+#     anaemia); appropriate for the target setting.
+#   - Iron 1–2 mg/kg/dose PO q8h = ~3–6 mg/kg/day elemental, standard
+#     paediatric therapeutic range. B12 1 mg PO daily (high-dose oral)
+#     is a valid alternative to IM where oral is preferred. Kept as
+#     printed.
+# ============================================================
+
+topic:
+  id: "pb-anaemia-workup"
+  title: "Anaemia — Evaluate the Cause"
+  list_subtitle: "p.75 · haemolysis screen · MCV · iron studies"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["anaemia", "anemia", "haemolysis", "reticulocyte index", "MCV", "microcytic", "normocytic", "macrocytic", "iron studies", "iron deficiency", "ferritin", "B12", "folate", "supplementation"]
+  category: "medical"
+  page_number: 75
+
+  blocks:
+
+    - type: "prose"
+      title: "Workup after stabilisation"
+      markdown: |
+        - Order once the child is stabilised and malaria & sepsis are ruled out
+        - Labs: CBC, LDH, bilirubin, haptoglobin, reticulocyte index (RI)
+        - RI = (reticulocyte % ÷ 2) × (haematocrit ÷ normal haematocrit)
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Screen for haemolysis"
+        shape: "stadium"
+      stages:
+        - decision: "Is there ↑ LDH, ↑ bilirubin, ↓ haptoglobin, or RI > 2%?"
+          outcomes:
+            - label: "Yes — concern for haemolysis"
+              box:
+                title: "Consider the following tests"
+                bullets:
+                  - "Haemoglobin electrophoresis — evaluate for sickle cell, thalassaemia, or other haemoglobinopathy"
+                  - "Coagulation studies and LFTs — evaluate for liver disease and DIC"
+                  - "Peripheral smear — look for possible cancers"
+                  - "G6PD testing"
+            - label: "No"
+              box:
+                title: "Give all children an antihelminthic"
+              continue: true
+        - decision: "Classify by MCV"
+          outcomes:
+            - label: "Microcytic anaemia"
+              box:
+                title: "See Iron Studies (table below)"
+            - label: "Normocytic anaemia"
+              box:
+                title: "See Iron Studies (table below)"
+            - label: "Macrocytic anaemia"
+              box:
+                title: "Macrocytic workup"
+                bullets:
+                  - "B12 & folate levels"
+                  - "LFTs"
+                  - "Thyroid studies"
+                  - "Ask about a history of alcohol abuse"
+                  - "Review medications (zidovudine, hydroxyurea)"
+
+    - type: "table"
+      title: "Iron Studies (microcytic / normocytic anaemia)"
+      zebra: true
+      columns: ["", "Fe", "TIBC", "Ferritin", "Fe : TIBC"]
+      column_flex: [7, 2, 2, 3, 3]
+      column_align: ["left", "center", "center", "center", "center"]
+      rows:
+        - cells: ["Iron deficiency", "↓", "↑", "↓", "<18%"]
+        - cells: ["Anaemia of chronic inflammation", "↓", "nL", "↑", ">18%"]
+
+    - type: "prose"
+      markdown: |
+        May also consider a peripheral smear: basophilic stippling suggests thalassaemia or sideroblastic anaemia.
+
+    - type: "prose"
+      title: "Supplementation"
+      markdown: |
+        - **Iron**
+          - Children: 1–2 mg/kg/dose PO q8h of elemental iron
+          - Adults: 50 mg/dose PO q8h of elemental iron
+        - **Folate (folic acid)**
+          - Children: 1 mg PO daily
+          - Adults: 1–5 mg PO daily (depending on severity)
+        - **B12 (cyanocobalamin)**
+          - Children: 1 mg PO daily
+          - Adults: 1–2 mg PO daily

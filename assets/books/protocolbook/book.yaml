@@ -104,3 +104,4 @@ book:
         accent: "0xFF37474F"
       children:
         - topic: "topics/pb_anaemia.yaml"
+        - topic: "topics/pb_anaemia_workup.yaml"

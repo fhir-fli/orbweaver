@@ -103,4 +103,4 @@ topic:
 
     - type: "prose"
       markdown: |
-        Then evaluate for the cause of anaemia (see the next topic).
+        Then [evaluate for the cause of anaemia](topic:pb-anaemia-workup).
