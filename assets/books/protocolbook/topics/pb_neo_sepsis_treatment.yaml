@@ -1,0 +1,132 @@
+# ============================================================
+# ProtocolBook pp.86–87 — Neonatal Sepsis (< 28 days): Treatment +
+# Duration of treatment. Fourth leaf of the Neonatal Protocols section.
+#
+# Two-page topic (`pages:`): p.86 = the treatment flowchart (one real
+# decision — clinical signs of sepsis? — branching into a sepsis-
+# management pathway and a localized-infection pathway) + antibiotic
+# regimens; p.87 = the duration-of-treatment table.
+#
+# Faithful-rendering calls:
+#   - The single top decision (signs of sepsis? Yes/No) → a small
+#     `algorithm` (Yes → treat as sepsis; No → assess for localized
+#     infection); each arm's detail (multi-step management + a/b/c
+#     antibiotic dosing, which the algorithm boxes can't hold) →
+#     titled prose below, in printed order. Same split as p.73/p.75.
+#   - Antibiotic regimens a/b/c → bold-lead prose with dose bullets.
+#   - Duration (p.87) → a two-column `table` (standard layout so the
+#     long cells wrap).
+#   - Cefotaxime "may substitute ceftriaxone (but risk of jaundice)"
+#     kept as printed.
+#   - Citation superscripts dropped; "No`" arrow typo (stray backtick)
+#     silently corrected.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Ampicillin + gentamicin is the WHO first-line neonatal empiric
+#     regimen; cloxacillin for soft-tissue, ampicillin + cefotaxime for
+#     meningitis. Gentamicin 3 mg/kg OD if <2 kg / 1st week / asphyxia
+#     is the reduced-clearance adjustment. Ceftriaxone-jaundice caution
+#     (bilirubin displacement) is correct. Vitamin K + tetracycline eye
+#     ointment for home births = standard newborn prophylaxis.
+# ============================================================
+
+topic:
+  id: "pb-neo-sepsis-treatment"
+  title: "Neonatal Sepsis — Treatment"
+  list_subtitle: "pp.86–87 · < 28 days · antibiotics · duration"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "sepsis", "newborn", "treatment", "ampicillin", "gentamicin", "cloxacillin", "cefotaxime", "ceftriaxone", "meningitis", "antibiotics", "duration", "localized infection"]
+  category: "medical"
+  page_number: 86
+
+  pages:
+
+    # ═══════════════════════ PAGE 86 ═══════════════════════
+    - page_number: 86
+      blocks:
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Neonate — assess for sepsis"
+            shape: "stadium"
+          stages:
+            - decision: "Clinical signs of sepsis?"
+              criteria:
+                - "Lethargy"
+                - "Bulging fontanelle"
+                - "History of convulsions"
+                - "Feeding difficulty"
+                - "Temperature > 38 or < 35.5°C"
+                - "Respiratory rate > 60/min"
+                - "Severe chest-wall indrawing, grunting, apnoea or cyanosis"
+                - "PROM > 18 h (if aged < 7 days)"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat as neonatal sepsis (see below)"
+                    severity: "priority"
+                - label: "No"
+                  box:
+                    title: "Assess for localized infection (see below)"
+
+        - type: "prose"
+          title: "If signs of sepsis — initial management"
+          markdown: |
+            - Blood cultures
+            - Do an LP if meningitis is suspected
+            - Check for hypoglycaemia; treat if unable to measure glucose
+            - Give oxygen if cyanosed or respiratory rate > 60/min
+            - Give vitamin K and tetracycline eye ointment (TEO) if born at home or not given at maternity
+            - Keep warm
+            - Maintain feeding by mouth or NG; use IV fluids only if respiratory distress or severe abdominal signs
+
+        - type: "prose"
+          title: "Antibiotic treatment"
+          markdown: |
+            - **First line:** ampicillin 50 mg/kg q8h (q12h if in the 1st week) PLUS gentamicin 5 mg/kg OD (3 mg/kg OD if < 2 kg in the 1st week, or birth asphyxia)
+            - **If concern for soft-tissue infection:** cloxacillin PLUS gentamicin (same dosing as above)
+            - **If concern for meningitis:** ampicillin 100 mg/kg q8h (q12h if in the 1st week) PLUS cefotaxime 50 mg/kg q8h (q12h if in the 1st week) — may substitute ceftriaxone (but risk of jaundice)
+
+        - type: "prose"
+          title: "If no signs of sepsis — assess for localized infection"
+          markdown: |
+            Is there:
+            - Pus from the eye
+            - Pus from the ear
+            - Pus from the umbilicus and redness of the abdominal skin; or
+            - A few large, pus-filled blisters / septic spots
+
+        - type: "prose"
+          title: "Decide — does the baby need fluids, feeds or blood?"
+          markdown: |
+            Then check for any of the following symptoms:
+            - Jaundice
+            - Capillary refill (delayed)
+            - Severe pallor
+            - Localized severe infection — joints, abdominal distension
+            - Weight loss
+
+        - type: "prose"
+          title: "Where appropriate"
+          markdown: |
+            - Treat for neonatal ophthalmia
+            - Treat with an oral antibiotic — one that covers Staph aureus if there are large, pus-filled septic spots
+            - Give the mother advice and arrange review
+
+    # ═══════════════════════ PAGE 87 ═══════════════════════
+    - page_number: 87
+      blocks:
+
+        - type: "table"
+          title: "Duration of treatment for neonatal sepsis"
+          zebra: true
+          columns: ["Problem", "Days of treatment"]
+          column_flex: [5, 8]
+          column_align: ["left", "left"]
+          rows:
+            - cells: ["Signs of severe neonatal sepsis", "Blood culture should be done. IV/IM antibiotics for a minimum of 7 days, or until completely well if the LP is clear."]
+            - cells: ["Mild signs of neonatal infection, or R/O sepsis in a child with risk factors — ONLY if blood culture done", "Antibiotics could be stopped after 48 hours if all signs of possible sepsis have resolved, the child is feeding well, and the LP (if done) is negative. Blood culture negative."]
+            - cells: ["Neonatal meningitis, or severe neonatal sepsis with LP", "Blood culture should be done if not able to do LP. IV/IM antibiotics for a minimum of 14 days; a minimum of 3 weeks if gram-negative meningitis is suspected."]
+            - cells: ["Clinical or radiological pneumonia", "IV/IM antibiotics for a minimum of 5 days, or until completely well for 24 h. For a positive LP, see meningitis."]
+            - cells: ["Skin infection with signs of generalized illness such as poor feeding", "IV/IM antibiotics could be stopped after 72 hours if the child is feeding well without fever and has no other problem, and the LP (if done) is normal. Blood culture negative. Oral antibiotics for a further 5 days."]
