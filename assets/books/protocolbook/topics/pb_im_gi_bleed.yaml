@@ -1,0 +1,105 @@
+# ============================================================
+# ProtocolBook p.104 — Upper GI Bleed. Sixth leaf of the Internal
+# Medicine Protocols section.
+#
+# Presentations + likelihood factors + a management flowchart (shock
+# triage → acid suppression → varices decision).
+#
+# Faithful-rendering calls:
+#   - Presentations (melena/haematemesis/coffee-ground/haematochezia)
+#     and likelihood factors → prose.
+#   - Shock/hypotension decision → an `algorithm` whose shared terminal
+#     is the IV acid-suppression step (the convergence point); the
+#     varices-in-cirrhosis decision → a second `algorithm`.
+#   - Flowchart-box text plain (no markdown in algorithm boxes).
+#   - Citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - IV PPI (rabeprazole/other), restrictive transfusion (Hb < 7 low-
+#     risk / < 9 high-risk), and prophylactic antibiotics (ceftriaxone)
+#     for suspected variceal bleeding in cirrhosis are all standard.
+#     Whole-blood resuscitation + balloon tamponade as a surgical
+#     bridge reflect the LMIC setting. Ranitidine 2nd-line is now
+#     withdrawn (NDMA) — an alternate H2-blocker/PPI would substitute;
+#     kept as printed and flagged.
+# ============================================================
+
+topic:
+  id: "pb-im-gi-bleed"
+  title: "Upper GI Bleed"
+  list_subtitle: "p.104 · presentations · resuscitation · varices"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["upper GI bleed", "UGIB", "haematemesis", "melena", "coffee ground", "haematochezia", "internal medicine", "PPI", "rabeprazole", "varices", "cirrhosis", "transfusion", "gastroenterology"]
+  category: "medical"
+  page_number: 104
+
+  blocks:
+
+    - type: "prose"
+      title: "Common presentations"
+      markdown: |
+        - **Melena** — dark, tarry stools stained with blood; requires 50 mL of blood from the upper GI tract
+        - **Haematemesis** — bright red blood in the vomitus; the source is usually above the ligament of Treitz
+        - **Coffee-ground emesis** — vomitus containing dark, altered blood with stomach contents
+        - **Haematochezia** — bloody faeces
+
+    - type: "prose"
+      title: "Factors affecting the likelihood of an upper GI bleed"
+      markdown: |
+        - **More likely:** history of melena, melenic stool on exam, coffee grounds on lavage, urea/Cr > 30
+        - **Severe bleeding more likely:** red blood detected during lavage, tachycardia, Hb < 8
+        - **Less likely:** blood clots in the stool
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Monitor, support ABCs; check vitals (BP, PR, RR, SpO₂, temp)"
+        shape: "stadium"
+      stages:
+        - decision: "Shock / hypotension? (SBP < 100)"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Resuscitate"
+                bullets:
+                  - "NPO"
+                  - "Oxygen 4–6 L via nasal cannula"
+                  - "2 large-bore IVs"
+                  - "Bolus 20 mL/kg Ringer's if blood not immediately available"
+                  - "Check CBC; transfuse whole blood when it becomes available"
+                severity: "priority"
+              continue: true
+            - label: "No"
+              box:
+                title: "Monitor & work up"
+                bullets:
+                  - "Check vitals every 15 minutes until stable (SBP > 100), then hourly"
+                  - "Labs: CBC, type & screen, BUN, Cr, RBS"
+                  - "12-lead ECG if available"
+                  - "Oxygen 4–6 L via nasal cannula"
+                  - "Brief, targeted history and physical exam (including rectal)"
+              continue: true
+      terminal:
+        title: "Start IV acid suppression"
+        bullets:
+          - "1st line: rabeprazole 40 mg IV BD (or other PPI as available)"
+          - "2nd line: ranitidine 50 mg IV 8-hourly"
+
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+        - decision: "Bleeding likely from varices in cirrhosis?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Start antibiotics"
+                bullets:
+                  - "Ceftriaxone 1 g/day × 7 days (ciprofloxacin 500 mg PO BD if discharged < 7 days)"
+                  - "See the cirrhosis protocol for preventive management"
+            - label: "No"
+              box:
+                title: "Treat hypotension with repeat fluid bolus / transfusion"
+                bullets:
+                  - "Consider transfusion if Hb < 9 in high-risk patients (elderly, heart disease)"
+                  - "Consider transfusion if Hb < 7 in low-risk patients"
+                  - "If significant bleeding continues, contact surgery for balloon tamponade"
