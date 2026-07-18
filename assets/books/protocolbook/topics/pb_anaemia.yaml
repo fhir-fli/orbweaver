@@ -1,0 +1,106 @@
+# ============================================================
+# ProtocolBook p.74 — Anaemia (approach + when to transfuse). OPENS
+# the new "Anaemia & Transfusion" section (pp.74–76: p.74 approach →
+# p.75 Evaluation for Cause of Anaemia → p.76 Transfusions). First
+# leaf of the new group (accent slate blue-grey 0xFF37474F — distinct
+# from the blood-toned red/pink/rust accents already in use).
+#
+# The printed page is a CONTENT-FLOW diagram (boxes + downward arrows
+# in a single sequence, with NO Yes/No decision branch). Per the
+# hybrid rule (standing decision #1), no-decision content-flows render
+# as titled prose + a table in top-to-bottom order, NOT as a flowchart.
+#
+# Faithful-rendering calls:
+#   - Management box is printed numbered 12–18 (a continuation of the
+#     book's general-approach numbering); the decorative numbers carry
+#     no meaning as a standalone topic → dropped, rendered as bullets.
+#     "Weight" kept bold as printed (emphasised in the source).
+#   - The "Transfuse in the following cases" box → a threshold table
+#     (setting → Hb cut-off), the clinically load-bearing part.
+#   - Citation superscripts (27, 72…) dropped.
+#   - "Evaluate for Cause of anemia" terminal box → cross-link to the
+#     p.75 workup topic (pb-anaemia-workup).
+#   - spO2 normalised to SpO₂; "anemia" kept as the book's spelling in
+#     quoted box titles, "anaemia" elsewhere.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Transfusion thresholds are WHO/LMIC malaria-area-stratified (the
+#     book's own scheme); modern restrictive-transfusion practice is
+#     broadly consistent. Empirical malaria+sepsis co-treatment and
+#     "no way to clinically differentiate malaria from sepsis" is an
+#     LMIC-appropriate pearl — kept verbatim.
+# ============================================================
+
+topic:
+  id: "pb-anaemia"
+  title: "Anaemia — Approach & Transfusion Thresholds"
+  list_subtitle: "p.74 · assess / resuscitate / when to transfuse"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["anaemia", "anemia", "pallor", "transfusion", "haemoglobin", "malaria", "sepsis", "bleeding", "koilonychia"]
+  category: "medical"
+  page_number: 74
+
+  blocks:
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        - Sleepiness
+        - Anorexia
+        - Dysphagia
+        - Fatigue
+        - Dyspnoea on exertion
+        - Syncope
+
+    - type: "prose"
+      title: "Clinical findings"
+      markdown: |
+        - Pallor
+        - Tachycardia
+        - Stomatitis
+        - Koilonychia
+        - Angular stomatitis
+        - Glossitis
+        - Oesophageal / pharyngeal webs
+        - Heart failure symptoms
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (BP, PR, RR, SpO₂, Temp, **Weight**)
+        - Assess GCS, hydration status
+        - Insert 2 IVs; start oxygen if SpO₂ < 94%
+        - Draw CBC, malaria; consider blood cultures if concern for sepsis
+        - Type and cross if tachycardic, tachypnoeic, or severe pallor
+        - Perform a brief, targeted history and physical exam
+
+    - type: "prose"
+      title: "Is there a possibility of bleeding?"
+      markdown: |
+        - Ask about recent trauma
+        - Clinically significant GI bleeding should be visible as haematemesis, coffee-ground emesis, melaena, or haematochezia
+        - Four locations in the body may hide active bleeding: thorax, abdomen, retroperitoneum / pelvis, thigh
+
+    - type: "prose"
+      title: "Empirical treatment"
+      highlight: true
+      markdown: |
+        Consider empirically treating for malaria and sepsis if appropriate — remember there is NO way to clinically differentiate between malaria and sepsis.
+
+    - type: "table"
+      title: "When to transfuse"
+      zebra: true
+      columns: ["Setting", "Transfuse if haemoglobin"]
+      column_flex: [5, 5]
+      column_align: ["left", "left"]
+      rows:
+        - cells: [{text: "**High malaria areas**", span: 2}]
+        - cells: ["Low blood supply", "<4 g/dL, or <5 g/dL and unstable"]
+        - cells: ["Good blood supply", "<5 g/dL"]
+        - cells: [{text: "**Low malaria areas**", span: 2}]
+        - cells: ["—", "<7 g/dL, or <10 g/dL and unstable"]
+
+    - type: "prose"
+      markdown: |
+        Then evaluate for the cause of anaemia (see the next topic).
