@@ -1,0 +1,89 @@
+# ============================================================
+# ProtocolBook p.101 — Adult Convulsions / status epilepticus. Fourth
+# leaf of the Internal Medicine Protocols section.
+#
+# A stepwise escalation flowchart (first-line diazepam → still
+# convulsing? → repeat diazepam, max 2 → still convulsing? →
+# phenobarbital), with a parallel "history of convulsions" workup arm.
+#
+# Faithful-rendering calls:
+#   - First-line management + the not-actively-fitting workup → prose.
+#   - The "still convulsing / recurrent?" escalation → an `algorithm`
+#     (each step a decision; Yes escalates, No = seizure stopped).
+#   - Flowchart-box text plain (no markdown in algorithm boxes).
+#   - Citation superscript (27) dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Benzodiazepine-first (diazepam), then phenobarbital as 2nd line
+#     is standard LMIC status-epilepticus practice (where IV
+#     levetiracetam/phenytoin may be unavailable). Rectal diazepam
+#     4 × 2.5 mg = 10 mg. Concurrent glucose (50 mL 50% dextrose) +
+#     treating the cause is appropriate. Phenobarbital IV load over
+#     ≥20 min (respiratory-depression caution) kept.
+# ============================================================
+
+topic:
+  id: "pb-im-convulsions"
+  title: "Adult Convulsions"
+  list_subtitle: "p.101 · status epilepticus · diazepam → phenobarbital"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["convulsions", "seizure", "status epilepticus", "adult", "internal medicine", "diazepam", "phenobarbital", "phenobarbitone", "dextrose", "neurology"]
+  category: "medical"
+  page_number: 101
+
+  blocks:
+
+    - type: "prose"
+      title: "First-line management"
+      markdown: |
+        **Active convulsion or status epilepticus** = a convulsion > 5 minutes, or 2 discrete convulsions with incomplete recovery between.
+        - Ensure safety
+        - Start oxygen
+        - Treat both the fit and hypoglycaemia:
+          - Rectal diazepam — 4 suppositories, 2.5 mg each, OR
+          - IV diazepam 0.15 mg/kg slowly over 1 minute (max 10 mg)
+        - Give 50 mL 50% dextrose
+        - Check ABCs when the fit stops
+
+    - type: "prose"
+      title: "If a history of convulsions (not actively fitting)"
+      markdown: |
+        - Monitor, support ABCs
+        - Check vital signs (PR, RR, SpO₂, temp, weight)
+        - Assess AVPU/GCS, hydration status
+        - Start oxygen if SpO₂ < 94%; insert an IV if needed
+        - Perform a brief, targeted history and physical exam
+        - Labs: CBC, malaria, HIV, electrolytes
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "After first-line diazepam"
+        shape: "stadium"
+      stages:
+        - decision: "Still convulsing or recurrent convulsion?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Repeat diazepam (maximum 2 doses total)"
+                bullets:
+                  - "Rectal diazepam — 4 suppositories, 2.5 mg each, OR"
+                  - "IV diazepam 0.15 mg/kg slowly over 1 minute (max 10 mg)"
+              continue: true
+            - label: "No"
+              box:
+                title: "Seizure stopped — continue supportive care & monitoring"
+                severity: "non_urgent"
+        - decision: "Still convulsing or recurrent after 2 doses of diazepam?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Phenobarbital / phenobarbitone"
+                bullets:
+                  - "Loading dose 15 mg/kg IM/IV (if given IV, over 20 minutes)"
+                  - "Maintenance 5 mg/kg IV OD"
+                severity: "priority"
+            - label: "No"
+              box:
+                title: "Seizure stopped — continue supportive care & monitoring"
+                severity: "non_urgent"
