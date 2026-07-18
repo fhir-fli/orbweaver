@@ -1,0 +1,182 @@
+# ============================================================
+# ProtocolBook pp.94–95 — Adult Heart Failure. OPENS the new "Internal
+# Medicine Protocols" section (p.93 is a pure divider → skipped;
+# content runs pp.94 onward). First leaf of the new group (accent deep
+# blue 0xFF0D47A1).
+#
+# Two-page topic (`pages:`): p.94 = presenting complaints / risk
+# factors / initial management / the Stevenson 2×2 classification;
+# p.95 = treatment by category + NYHA classes.
+#
+# Faithful-rendering calls:
+#   - The 2×2 "warm/cold × wet/dry" classification (Low Perfusion ×
+#     Congestion) → four titled prose blocks (Cold & Wet / Cold & Dry /
+#     Warm & Wet / Warm & Dry), each with its findings; the axes are
+#     named in the intro. A literal 2×2 bullet-cell table is too
+#     cramped for a phone.
+#   - Treatment (p.95) mirrors the same four categories → four prose
+#     blocks with Roman-step drug bullets. "ONLY IF PROVEN" (digoxin
+#     only for proven SVT/AF) kept bold as printed.
+#   - NYHA classes I–IV → a `table`.
+#   - Citation superscripts (73, 96) dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - The Stevenson profiles + category-directed therapy (diuretic for
+#     wet, inotrope/dopamine for cold, ACE-I/beta-blocker/spironolactone
+#     for the stable warm-and-dry chronic patient) are standard. Digoxin
+#     restricted to proven AF/flutter is appropriate. Morphine in acute
+#     pulmonary oedema is now controversial (kept as printed — flag).
+# ============================================================
+
+topic:
+  id: "pb-im-heart-failure"
+  title: "Adult Heart Failure"
+  list_subtitle: "pp.94–95 · warm/cold × wet/dry · treatment"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["heart failure", "CHF", "adult", "internal medicine", "stevenson", "cold wet dry warm", "furosemide", "dopamine", "digoxin", "ACE inhibitor", "NYHA", "cardiology"]
+  category: "medical"
+  page_number: 94
+
+  pages:
+
+    # ═══════════════════════ PAGE 94 ═══════════════════════
+    - page_number: 94
+      blocks:
+
+        - type: "prose"
+          title: "Common presenting complaints"
+          markdown: |
+            - Paroxysmal nocturnal dyspnoea (PND)
+            - Orthopnoea
+            - Dyspnoea on exertion (DOE)
+            - Fatigue and weight gain
+            - Cough
+            - Exercise intolerance
+            - Increasing abdominal girth
+            - Lower-extremity oedema
+            - Shortness of breath when bending forward ("bendopnoea")
+
+        - type: "prose"
+          title: "Risk factors"
+          markdown: |
+            - Known history of heart failure, coronary artery disease, myocardial infarction, or hypertension
+            - Diabetes mellitus or dyslipidaemia
+            - COPD or other lung disease
+            - Cardiac valve disease
+            - Pulmonary embolism or pulmonary hypertension
+            - Sleep apnoea
+            - Infection
+            - Recent surgery or trauma
+            - Family history of heart failure
+            - Significant smoking or alcohol use
+
+        - type: "prose"
+          title: "Initial management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (PR, RR, SpO₂, temp, weight)
+            - Start oxygen if SpO₂ < 94%
+            - Place a large-bore IV
+            - Assess AVPU/GCS, hydration status
+            - Perform a brief, targeted history and physical exam
+            - 12-lead ECG
+
+        - type: "prose"
+          title: "Classify by physical exam"
+          markdown: |
+            Classify by two axes — **congestion** (wet = congested, dry = not) and **perfusion** (cold = hypoperfused, warm = well-perfused):
+
+        - type: "prose"
+          title: "Cold & Wet (low perfusion + congestion)"
+          markdown: |
+            - SBP < 90 / narrow pulse pressure
+            - Cool / pale extremities
+            - Decreased urine output
+            - Elevated JVP
+            - Crackles in lung bases
+            - Peripheral oedema
+            - Hepatomegaly / ascites
+
+        - type: "prose"
+          title: "Cold & Dry (low perfusion, no congestion)"
+          markdown: |
+            - SBP < 90 / narrow pulse pressure
+            - Cool / pale extremities
+            - Decreased urine output
+            - Normal / low JVP
+            - Clear lungs
+            - Minimal peripheral oedema
+
+        - type: "prose"
+          title: "Warm & Wet (good perfusion + congestion)"
+          markdown: |
+            - SBP > 90
+            - Good peripheral pulse
+            - Normal urine output
+            - Elevated JVP
+            - Crackles in lung bases
+            - Peripheral oedema
+            - Hepatomegaly / ascites
+
+        - type: "prose"
+          title: "Warm & Dry (good perfusion, no congestion)"
+          markdown: |
+            - SBP > 90
+            - Good peripheral pulse
+            - Normal urine output
+            - Normal JVP
+            - Clear lungs
+            - Minimal peripheral oedema
+
+    # ═══════════════════════ PAGE 95 ═══════════════════════
+    - page_number: 95
+      blocks:
+
+        - type: "prose"
+          title: "Treatment — for all exacerbations"
+          markdown: |
+            - Monitor intake/output, consider a Foley, get daily weights
+            - Consider electrolytes, BUN, Cr
+            - ECHO if a new diagnosis; repeat once stable if possibly worsening baseline disease
+
+        - type: "prose"
+          title: "Cold & Wet — treatment"
+          markdown: |
+            - Dopamine 3–10 mcg/kg/min to maintain SBP > 90
+            - Furosemide — start once BP is sustained; 40–80 mg IV 2-hourly according to clinical evaluation
+            - Digoxin — **ONLY IF PROVEN** supraventricular tachycardia (atrial fibrillation, atrial flutter, etc.): loading dose 0.25–0.5 mg IV; maintenance 0.25 mg 6–8-hourly / 24 h PRN
+
+        - type: "prose"
+          title: "Cold & Dry — treatment"
+          markdown: |
+            - Dopamine 3–10 mcg/kg/min to maintain SBP > 90
+            - Digoxin — **ONLY IF PROVEN** supraventricular tachycardia (atrial fibrillation, atrial flutter, etc.): loading dose 0.25–0.5 mg IV; maintenance 0.25 mg 6–8-hourly / 24 h PRN
+
+        - type: "prose"
+          title: "Warm & Wet — treatment"
+          markdown: |
+            - Furosemide — initial IV dose should equal or exceed the chronic daily PO dose, OR 40–80 mg IV bolus (double the dose if no effect in 30 minutes); consider a 2nd diuretic if no response; continue 2-hourly as needed
+            - Morphine 5–10 mg PO if distressed, restless or anxious
+            - If hypertensive: ACE inhibitor
+            - Continue home dose of beta-blocker or ACEI if haemodynamically stable, but do not titrate until the exacerbation is resolved
+
+        - type: "prose"
+          title: "Warm & Dry — treatment"
+          markdown: |
+            Stable, chronic heart failure — treatment should also be started in hospital after an acute exacerbation is stabilised, prior to discharge:
+            - ACE inhibitor — titrate to the highest dose tolerated; periodically monitor Cr and K+
+            - Beta-blocker — start low, titrate up every two weeks to the maximum tolerated dose
+            - Furosemide — for chronic volume overload
+            - Spironolactone — for NYHA class II–IV; serum Cr < 2.5 / 2 (men/women); potassium < 5
+
+        - type: "table"
+          title: "New York Heart Association (NYHA) classes"
+          zebra: true
+          columns: ["Class", "Description"]
+          column_flex: [2, 8]
+          column_align: ["center", "left"]
+          rows:
+            - cells: ["I", "No limitation of physical activity. Ordinary physical activity does not cause undue fatigue, palpitation, or dyspnoea."]
+            - cells: ["II", "Slight limitation of physical activity. Comfortable at rest. Ordinary physical activity results in fatigue, palpitation, or dyspnoea."]
+            - cells: ["III", "Marked limitation of physical activity. Comfortable at rest. Less than ordinary activity causes fatigue, palpitation, or dyspnoea."]
+            - cells: ["IV", "Unable to carry on any physical activity without discomfort. Symptoms of heart failure at rest. Any physical activity increases discomfort."]

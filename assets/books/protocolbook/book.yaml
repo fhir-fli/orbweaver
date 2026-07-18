@@ -124,3 +124,8 @@ book:
         - topic: "topics/pb_neo_sepsis_treatment.yaml"
         - topic: "topics/pb_neo_jaundice.yaml"
         - topic: "topics/pb_neo_ballard.yaml"
+    - title: "Internal Medicine Protocols"
+      palette:
+        accent: "0xFF0D47A1"
+      children:
+        - topic: "topics/pb_im_heart_failure.yaml"
