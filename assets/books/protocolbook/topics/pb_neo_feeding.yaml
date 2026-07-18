@@ -1,0 +1,106 @@
+# ============================================================
+# ProtocolBook pp.82–83 — Newborn Feeding / Fluid Requirements. OPENS
+# the new "Neonatal Protocols" section (pp.82–91; p.81 is a pure
+# divider page → skipped, p.92 blank; Internal Medicine starts p.93).
+# First leaf of the new group (accent light blue 0xFF0277BD).
+#
+# Two-page topic (`pages:`): p.82 = fluid-requirement table + total-
+# fluids calculations + well-baby feeding; p.83 = enteral feeding +
+# OGT/NGT indications + VLBW vitamin supplementation. Content-flow
+# (no decision branch) → titled prose + a table.
+#
+# Faithful-rendering calls:
+#   - Fluid table (ml/kg/day by day of life, <1500 g vs >1500 g) as a
+#     `table`; units stated in the title (the printed header omits
+#     them).
+#   - Abbreviations kept as the book uses them (D10% = 10% dextrose,
+#     MRL = the book's maintenance-feed level term, EBM = expressed
+#     breast milk, BW = birth weight, IVF = IV fluids, OGT/NGT = oro-/
+#     naso-gastric tube, LBW/VLBW = low / very low birth weight).
+#   - bilitool.org link on the jaundice page (p.88), not here.
+#   - Citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Perinatal-asphyxia NPO×24 h + IVF 50 ml/kg/day (fluid restriction)
+#     is standard HIE practice. Vitamin D 400 IU/day + iron 2–4 mg/kg/day
+#     from 2 weeks for VLBW are standard preterm supplements.
+#   - "Bottle feed not recommended" (cup/spoon/tube preferred) is WHO/
+#     LMIC breastfeeding-protection practice.
+# ============================================================
+
+topic:
+  id: "pb-neo-feeding"
+  title: "Newborn Feeding & Fluid Requirements"
+  list_subtitle: "pp.82–83 · fluids · enteral feeds · OGT/NGT"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "newborn", "feeding", "fluids", "fluid requirements", "EBM", "breast milk", "OGT", "NGT", "VLBW", "LBW", "vitamin D", "iron", "dextrose"]
+  category: "medical"
+  page_number: 82
+
+  pages:
+
+    # ═══════════════════════ PAGE 82 ═══════════════════════
+    - page_number: 82
+      blocks:
+
+        - type: "table"
+          title: "Fluid requirements (ml/kg/day, by day of life)"
+          zebra: true
+          columns: ["Day", "< 1500 g", "> 1500 g"]
+          column_flex: [4, 3, 3]
+          column_align: ["left", "center", "center"]
+          rows:
+            - cells: ["D1 (D10%)", "80", "60"]
+            - cells: ["D2 (D10%)", "100", "80"]
+            - cells: ["D3 (MRL)", "120", "100"]
+            - cells: ["D4 (MRL)", "140", "120"]
+            - cells: ["D5 (MRL)", "160", "140"]
+            - cells: ["D6 (MRL)", "180", "160"]
+            - cells: ["D7+ (MRL)", "180", "160–180"]
+
+        - type: "prose"
+          title: "Total fluids calculations"
+          markdown: |
+            - Day 1 refers to the 1st day of life — there is no day 0. The total volume of fluids is calculated for 24 hours and is composed of both enteral (PO/NG) and IV fluids.
+            - Use birth weight for calculations until BW is exceeded, or use the highest weight.
+            - If IV fluids given, use D10% for days 1 & 2; change to MRL on day 3. Maximum IVF 150 ml/kg/day. Give via a paediatric infusion set (1 ml = 60 drops) and replace the fluid bag every 24 hours.
+            - Perinatal asphyxia: NPO for 24 hours after birth, and IVF at 50 ml/kg/day.
+            - Occasionally VLBW babies need 200–220 ml/kg/day to gain weight.
+            - Monitor weight daily for all infants in the newborn nursery.
+
+        - type: "prose"
+          title: "Well baby > 34 weeks gestation and/or > 1500 g"
+          markdown: |
+            - LBW infants who are able to breastfeed should be put to the breast as soon as possible after birth, when clinically stable.
+            - Feed on demand, at least every 3 hours (at least 8 feeds per day). In babies > 1500 g who are not sick and are breastfeeding, it is not necessary to perform fluid calculations.
+            - If sick and not able to breastfeed, start EBM using the enteral feed calculations (below).
+
+    # ═══════════════════════ PAGE 83 ═══════════════════════
+    - page_number: 83
+      blocks:
+
+        - type: "prose"
+          title: "Enteral feeding"
+          markdown: |
+            - Neonates < 32–34 weeks or < 1500 g often have trouble coordinating suck and swallow. Expressed breast milk (EBM) should be obtained and given by cup, spoon, or oro-/naso-gastric tube. Bottle feeding is not recommended.
+            - Feed EBM every 2 hours (12 feeds per day). May put to breast after EBM.
+            - Neonates unable to breastfeed should be kept NPO for day 1. On day 2, start EBM at 10 ml/kg/day, with the remaining fluid requirement met by IV fluids.
+            - Increase EBM by 30 ml/kg/day every 24 hours and decrease IV fluids to keep within the daily fluid requirement until IVF is stopped. Monitor carefully for feeding intolerance (vomiting, apnoea, gastric residuals).
+            - When the enteral feeding volume reaches 100 ml/kg/day and the baby is tolerating feeds, the IV infusion may be stopped. Aim to stop IVF by day 7–8 of life to reduce the risk of infection.
+            - Newborns lose weight in the first week of life but should not lose more than 10% of body weight.
+            - Newborns should be back to birthweight by 2 weeks of age. After the infant regains BW, the goal is to gain 20–30 grams a day during the first 6–8 weeks of life.
+
+        - type: "prose"
+          title: "Indications for OGT or NGT"
+          markdown: |
+            - All neonates < 1300 grams until gaining weight steadily
+            - Premature or VLBW (< 32–34 weeks or < 1500 g) with poor suck or ineffective suck/swallow coordination
+            - Respiratory distress — risk of aspiration; all newborns on CPAP
+            - Sick newborns (asphyxia, meningitis, seizures) — poor suck
+            - Poor / no weight gain for 1 week on EBM / breastfeeding alone
+
+        - type: "prose"
+          title: "VLBW infants (< 1500 g) — vitamin supplementation (when tolerating full feeds)"
+          markdown: |
+            - Vitamin D 400 IU per day until 6 months of age
+            - Iron 2–4 mg/kg per day, starting at 2 weeks, until 6 months of age

@@ -376,12 +376,12 @@ void main() {
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '
         'Paediatric 8, Cardiac 2, Sickle Cell 4, SAM 3, ENT 6, TB 3, '
-        'Anaemia 3, Pain 4 = 59 leaves)', () {
+        'Anaemia 3, Pain 4, Neonatal 1 = 60 leaves)', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      // Ten section groups so far, mirroring the book's dividers.
-      expect(contents, hasLength(10));
+      // Eleven section groups so far, mirroring the book's dividers.
+      expect(contents, hasLength(11));
       expect((contents[0] as YamlMap)['title'], 'Emergency Protocols');
       expect((contents[1] as YamlMap)['title'],
           'Ingestions, Anaphylaxis & Bites');
@@ -394,6 +394,7 @@ void main() {
       expect((contents[7] as YamlMap)['title'], 'Paediatric Tuberculosis');
       expect((contents[8] as YamlMap)['title'], 'Anaemia & Transfusion');
       expect((contents[9] as YamlMap)['title'], 'Pain Management');
+      expect((contents[10] as YamlMap)['title'], 'Neonatal Protocols');
       // Each group carries its own accent.
       expect((contents[0] as YamlMap)['palette']['accent'], '0xFFC62828');
       expect((contents[1] as YamlMap)['palette']['accent'], '0xFF6A1B9A');
@@ -405,6 +406,7 @@ void main() {
       expect((contents[7] as YamlMap)['palette']['accent'], '0xFF283593');
       expect((contents[8] as YamlMap)['palette']['accent'], '0xFF37474F');
       expect((contents[9] as YamlMap)['palette']['accent'], '0xFFEF6C00');
+      expect((contents[10] as YamlMap)['palette']['accent'], '0xFF0277BD');
       // Emergency Protocols = p.12–26 (15 topics), ending in Altered
       // Mental Status; Ingestions has Poisoning (p.28); Paediatric has
       // Meningitis (p.55) for now.
@@ -518,7 +520,11 @@ void main() {
           'topics/pb_pain_faces.yaml');
       expect((pain[3] as YamlMap)['topic'],
           'topics/pb_pain_ladder.yaml');
-      expect(leafCount(contents), 59);
+      final neo = (contents[10] as YamlMap)['children'] as YamlList;
+      expect(neo, hasLength(1));
+      expect((neo[0] as YamlMap)['topic'],
+          'topics/pb_neo_feeding.yaml');
+      expect(leafCount(contents), 60);
     });
   });
 }

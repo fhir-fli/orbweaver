@@ -114,3 +114,8 @@ book:
         - topic: "topics/pb_pain_flacc.yaml"
         - topic: "topics/pb_pain_faces.yaml"
         - topic: "topics/pb_pain_ladder.yaml"
+    - title: "Neonatal Protocols"
+      palette:
+        accent: "0xFF0277BD"
+      children:
+        - topic: "topics/pb_neo_feeding.yaml"
