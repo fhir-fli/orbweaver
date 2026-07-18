@@ -1,0 +1,188 @@
+# ============================================================
+# ProtocolBook pp.99–100 — Adult Sepsis. Third leaf of the Internal
+# Medicine Protocols section.
+#
+# Two-page topic (`pages:`): p.99 = definitions + management/qSOFA
+# decision flow + SOFA score; p.100 = PaO₂/O₂-sat & O₂-flow tables +
+# therapeutic management + antibiotics.
+#
+# Faithful-rendering calls:
+#   - qSOFA and the two treat/don't-treat decisions → `algorithm`.
+#   - SOFA score (7 organ systems × score 0–4, several long pressor
+#     cells) → prose per system with score→criteria bullets (a 6-column
+#     table won't fit a phone and a scroll table would overflow on the
+#     long MAP/Cr cells).
+#   - PaO₂→O₂-sat conversion → a compact 6-column table (3 value pairs
+#     per row, as printed); O₂ flow-rate table kept as a 2-column table.
+#   - Therapeutic management I–IX → prose with nested bullets (decorative
+#     Roman/letter outline dropped).
+#   - Citation superscripts dropped; OCR "Bood Cx" → blood culture,
+#     "spO2" → SpO₂, "Cultue" → culture.
+#
+# GENUINE SOURCE ERROR surfaced to Grey — NOT propagated:
+#   - The antibiotic list annotates gentamicin (a gram-negative
+#     aminoglycoside) with "(also for MRSA)". Gentamicin has NO
+#     reliable MRSA activity — this is wrong and would mislead therapy;
+#     the MRSA agents are clindamycin/vancomycin (listed under Gram
+#     positives). Rendered gentamicin WITHOUT the MRSA claim. Grey
+#     should fix / clarify the source.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Sepsis-3 definitions (qSOFA, SOFA ≥2, septic-shock lactate/
+#     vasopressor criteria) are current. 30 mL/kg crystalloid bolus,
+#     early broad-spectrum antibiotics, and MAP ≥65 vasopressor target
+#     are standard Surviving Sepsis guidance; ceftriaxone 2 g first-line
+#     is resource-appropriate. Transfuse Hb < 5 is an LMIC threshold.
+# ============================================================
+
+topic:
+  id: "pb-im-sepsis"
+  title: "Adult Sepsis"
+  list_subtitle: "pp.99–100 · qSOFA · SOFA · antibiotics"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sepsis", "septic shock", "adult", "internal medicine", "qSOFA", "SOFA", "lactate", "vasopressor", "ceftriaxone", "antibiotics", "MAP"]
+  category: "medical"
+  page_number: 99
+
+  pages:
+
+    # ═══════════════════════ PAGE 99 ═══════════════════════
+    - page_number: 99
+      blocks:
+
+        - type: "prose"
+          title: "Definitions"
+          markdown: |
+            - **Sepsis** (no more "severe sepsis"): life-threatening organ dysfunction caused by a dysregulated host response to infection
+            - **Organ dysfunction**: an acute change in the SOFA score ≥ 2 points secondary to infection
+            - **Septic shock**
+              - Sepsis with severe circulatory / cellular / metabolic abnormalities substantially increasing mortality (hospital mortality ≥ 40%)
+              - Clinical definition: persistent hypotension requiring vasopressors to maintain MAP ≥ 65, and serum lactate > 2 mmol/L (18 mg/dL), after adequate volume resuscitation
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (BP, PR, RR, SpO₂, temp, weight)
+            - Start oxygen if SpO₂ < 94%
+            - 12-lead ECG
+            - Perform a brief, targeted history and physical exam
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "qSOFA — 2 or more of: GCS < 15, respiratory rate > 22, SBP < 100?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat as sepsis until labs result"
+                    bullets:
+                      - "Bolus IV fluids"
+                      - "Start antibiotics"
+                      - "Draw labs, including blood cultures"
+                    severity: "priority"
+                - label: "No"
+                  box:
+                    title: "Don't treat for sepsis"
+                    severity: "non_urgent"
+
+        - type: "prose"
+          title: "SOFA score (points per organ system)"
+          markdown: |
+            - **PaO₂/FiO₂ (mmHg)** — 0: ≥ 400 · 1: < 400 · 2: < 300 · 3: < 200 with respiratory support · 4: < 100 with respiratory support
+            - **Platelets (×10³/µL)** — 0: ≥ 150 · 1: < 150 · 2: < 100 · 3: < 50 · 4: < 20
+            - **Bilirubin (mg/dL)** — 0: < 1.2 · 1: 1.2–1.9 · 2: 2.0–5.9 · 3: 6.0–11.9 · 4: > 12.0
+            - **MAP / vasopressors** — 0: ≥ 70 · 1: < 70 · 2: dopamine < 5 or dobutamine (any dose) · 3: dopamine 5.1–15 or epinephrine ≤ 0.1 or norepinephrine ≤ 0.1 · 4: dopamine > 15 or epinephrine > 0.1 or norepinephrine > 0.1
+            - **GCS** — 0: 15 · 1: 13–14 · 2: 10–12 · 3: 6–9 · 4: < 6
+            - **Creatinine (mg/dL)** — 0: < 1.2 · 1: 1.2–1.9 · 2: 2.0–3.4 · 3: 3.5–4.9 · 4: > 5.0
+            - **Urine output (mL/day)** — 3: < 500 · 4: < 200
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "≥ 2 increase in SOFA score from baseline? (assume a baseline of 0 if no known pre-existing organ dysfunction)"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat sepsis"
+                    severity: "priority"
+                - label: "No"
+                  box:
+                    title: "Don't treat for sepsis"
+                    severity: "non_urgent"
+
+        - type: "prose"
+          title: "Reminder"
+          highlight: true
+          markdown: |
+            This protocol can be used during hospitalisation, not just at admission.
+
+    # ═══════════════════════ PAGE 100 ═══════════════════════
+    - page_number: 100
+      blocks:
+
+        - type: "table"
+          title: "Estimate of PaO₂ using O₂ saturation"
+          zebra: true
+          columns: ["PaO₂", "O₂ sat", "PaO₂", "O₂ sat", "PaO₂", "O₂ sat"]
+          column_flex: [2, 2, 2, 2, 3, 2]
+          column_align: ["center", "center", "center", "center", "center", "center"]
+          rows:
+            - cells: ["21", "35%", "36", "69%", "51", "86%"]
+            - cells: ["22", "37%", "37", "71%", "52", "86%"]
+            - cells: ["23", "40%", "38", "72%", "53", "87%"]
+            - cells: ["24", "43%", "39", "74%", "54–55", "88%"]
+            - cells: ["25", "45%", "40", "75%", "56–57", "89%"]
+            - cells: ["26", "48%", "41", "76%", "58–59", "90%"]
+            - cells: ["27", "50%", "42", "77%", "60–62", "91%"]
+            - cells: ["28", "53%", "43", "79%", "63–65", "92%"]
+            - cells: ["29", "55%", "44", "80%", "66–68", "93%"]
+            - cells: ["30", "57%", "45", "81%", "69–73", "94%"]
+            - cells: ["31", "60%", "46", "82%", "74–78", "95%"]
+            - cells: ["32", "62%", "47", "83%", "79–85", "96%"]
+            - cells: ["33", "64%", "48", "83%", "86–96", "97%"]
+            - cells: ["34", "65%", "49", "84%", "97–114", "98%"]
+            - cells: ["35", "67%", "50", "85%", "≥ 115", "99%"]
+
+        - type: "table"
+          title: "Estimate of oxygen flow rates — nasal cannula"
+          zebra: true
+          columns: ["Oxygen flow rate", "FiO₂ (%)"]
+          column_flex: [6, 4]
+          column_align: ["left", "center"]
+          rows:
+            - cells: ["Room air", "21"]
+            - cells: ["1 L", "24"]
+            - cells: ["2 L", "28"]
+            - cells: ["3 L", "32"]
+            - cells: ["4 L", "36"]
+            - cells: ["5 L", "40"]
+            - cells: ["6 L", "44"]
+
+        - type: "prose"
+          title: "Therapeutic management"
+          markdown: |
+            - **Cardiovascular** — monitor HR, BP, urine output, and capillary refill for signs of hypoperfusion
+              - Initial bolus: 30 mL/kg LR/NS in the first 3 hours
+              - Further bolus: additional 500 mL – 1 L LR/NS as needed
+              - Vasopressor: begin if MAP < 65 after fluid resuscitation — dopamine 5 mcg/kg/min, titrate to effect
+            - **Respiratory** — oxygen as necessary to keep O₂ sat > 90%
+            - **Labs to draw** — CBC, malaria, blood culture; renal functions, electrolytes; liver functions, amylase, lipase; PT/INR, PTT; urine culture
+            - **Transfuse** — Hb < 5
+            - **Glucose control** — insulin to keep glucose under 12
+            - **DVT prophylaxis** — generally recommended
+            - **GI prophylaxis** — only if mechanically ventilated or coagulopathy present; may consider in the severely ill with multiple comorbidities; may use an H2-blocker or PPI
+            - **Nutrition** — begin enteral feeding early in the disease course
+
+        - type: "prose"
+          title: "Choice of antibiotics (IV)"
+          markdown: |
+            - Dual therapy ONLY for those in shock
+            - Use a 2nd-line or additional antibiotic based on clinical suspicion of source
+            - **1st line:** ceftriaxone 2 g IV daily
+            - **Gram negatives:**
+              - Gentamicin IV 5 mg/kg/day
+              - Meropenem 1 g IV 8-hourly (also covers gram-positives, but NOT MRSA)
+            - **Gram positives (including MRSA):**
+              - Clindamycin 600 mg IV 8-hourly (also anaerobes)
+              - Vancomycin 15 mg/kg IV 8-hourly (consult pharmacy)

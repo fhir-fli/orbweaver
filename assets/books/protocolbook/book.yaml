@@ -130,3 +130,4 @@ book:
       children:
         - topic: "topics/pb_im_heart_failure.yaml"
         - topic: "topics/pb_im_stroke.yaml"
+        - topic: "topics/pb_im_sepsis.yaml"
