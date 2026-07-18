@@ -132,3 +132,4 @@ book:
         - topic: "topics/pb_im_stroke.yaml"
         - topic: "topics/pb_im_sepsis.yaml"
         - topic: "topics/pb_im_convulsions.yaml"
+        - topic: "topics/pb_im_meningitis.yaml"

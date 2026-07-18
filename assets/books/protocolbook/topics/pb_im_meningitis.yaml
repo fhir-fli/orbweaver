@@ -1,0 +1,146 @@
+# ============================================================
+# ProtocolBook pp.102–103 — Adult Meningitis. Fifth leaf of the
+# Internal Medicine Protocols section.
+#
+# Two-page topic (`pages:`): p.102 = principles + symptoms/red-flags +
+# close-contact prophylaxis; p.103 = the management flowchart (LP
+# absolute/relative contraindications) + treatment.
+#
+# Faithful-rendering calls:
+#   - The two-column "symptoms MAY be present | warning signs / red
+#     flags" table → two titled prose blocks (cleaner on a phone than a
+#     2-col long-list table). The <2 / none-of-these footnote kept.
+#   - The management flowchart (signs? → absolute LP contraindications?
+#     → relative LP contraindications? → LP vs no-LP, both → treat) →
+#     an `algorithm`; LP findings + the 10-day antibiotic regimen →
+#     prose below.
+#   - "Follow the Convulsion Protocol if applicable" → cross-link to
+#     the p.101 Adult Convulsions topic.
+#   - Flowchart-box text plain (no markdown in algorithm boxes).
+#   - Citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - "Steroids no longer recommended" reflects this book's stance; note
+#     that adjunctive dexamethasone IS recommended in some adult
+#     bacterial-meningitis guidelines (esp. pneumococcal, high-income
+#     settings) — OE may contextualise for the LMIC target. LP
+#     contraindication logic (raised ICP, coagulopathy, shock) +
+#     empiric ceftriaxone/cefotaxime ± ampicillin (>50/immunocompromised,
+#     for Listeria) are standard. Meningococcus close-contact
+#     prophylaxis (ciprofloxacin / ceftriaxone) is correct.
+# ============================================================
+
+topic:
+  id: "pb-im-meningitis"
+  title: "Adult Meningitis"
+  list_subtitle: "pp.102–103 · red flags · LP contraindications · Rx"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["meningitis", "adult", "internal medicine", "lumbar puncture", "LP", "ceftriaxone", "cefotaxime", "ampicillin", "meningococcus", "prophylaxis", "neurology", "CSF"]
+  category: "medical"
+  page_number: 102
+
+  pages:
+
+    # ═══════════════════════ PAGE 102 ═══════════════════════
+    - page_number: 102
+      blocks:
+
+        - type: "prose"
+          markdown: |
+            - Symptoms are often nonspecific — if unclear, treat for meningitis AND other diagnoses (malaria, TB meningitis, etc.) until definitive tests.
+            - There is **NO WAY** to rule in or rule out meningitis without a lumbar puncture.
+
+        - type: "prose"
+          title: "Symptoms that may be present"
+          markdown: |
+            - Fever
+            - Headache
+            - Neck stiffness, or Kernig's / Brudzinski's sign
+            - Altered mental status — confusion, obtundation
+            - Convulsions
+            - Photophobia
+
+            If **fewer than 2** of fever / headache / neck stiffness / altered mental status are present, strongly consider an alternate diagnosis. If **none** of these are present, meningitis should not be considered.
+
+        - type: "prose"
+          title: "Warning signs / red flags (more critical illness)"
+          markdown: |
+            - Rapidly progressive rash
+            - Poor peripheral perfusion: capillary refill > 4 sec, oliguria, SBP < 90
+            - Respiratory rate < 8 or > 30
+            - Pulse > 140 or < 40
+            - WBC < 4
+            - GCS < 12
+            - Poor response to initial resuscitation
+            - Focal neurological signs
+            - Cushing's triad (late and ominous): hypertension, bradycardia, irregular breathing
+
+        - type: "prose"
+          title: "If culture reveals meningococcus — treat close contacts"
+          markdown: |
+            - Close contacts: household members, roommates, dorm members; on the same flight/bus for > 8 hours; exposed to oral secretions (intimate kissing, mouth-to-mouth resuscitation, intubation or ET-tube management)
+            - Prophylaxis:
+              - > 15 years old: ciprofloxacin 500 mg PO stat
+              - < 15 years old: ceftriaxone 125 mg IM stat
+
+        - type: "prose"
+          title: "Notes"
+          markdown: |
+            - TB: see the tuberculosis section
+            - Steroids are no longer recommended
+
+    # ═══════════════════════ PAGE 103 ═══════════════════════
+    - page_number: 103
+      blocks:
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (PR, RR, SpO₂, temp, weight)
+            - Assess AVPU/GCS, hydration status
+            - Start oxygen if SpO₂ < 94%; insert an IV if needed
+            - Perform a brief, targeted history and physical exam
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "Does the patient have signs concerning for meningitis?"
+              outcomes:
+                - label: "No"
+                  box:
+                    title: "Look for another source of symptoms"
+                    severity: "non_urgent"
+                - label: "Yes"
+                  continue: true
+            - decision: "Absolute contraindications to LP?"
+              criteria:
+                - "Requires CPR"
+                - "Shock"
+                - "Signs of raised ICP (decerebrate posturing, papilloedema, unresponsive pupils)"
+                - "Skin infection at the LP site"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "No LP now — begin treatment; if the contraindication resolves < 4 h after starting antibiotics, perform LP then"
+                - label: "No"
+                  continue: true
+            - decision: "Relative contraindications to LP?"
+              criteria:
+                - "Convulsions"
+                - "Coagulation abnormalities (known bleeding disorder, platelets < 50)"
+                - "GCS ≤ 8, changing mental status, focal or changing neuro signs"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "No LP now — begin treatment; perform LP when safe"
+                - label: "No"
+                  box:
+                    title: "Perform LP — if bacteria on Gram stain, > 6 WBC, or positive CSF culture → full 10-day IV antibiotic course"
+
+        - type: "prose"
+          title: "Treatment (IV antibiotics × 10 days)"
+          markdown: |
+            - Ceftriaxone 2 g IV BD, OR cefotaxime 2 g IV 6-hourly
+            - If > 50 years old or immunocompromised, add ampicillin 3 g IV 6-hourly
+            - Follow the [Convulsion Protocol](topic:pb-im-convulsions) if applicable
