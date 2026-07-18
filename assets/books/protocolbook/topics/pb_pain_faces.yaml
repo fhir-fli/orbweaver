@@ -1,0 +1,96 @@
+# ============================================================
+# ProtocolBook p.79 — Pain Management: visual self-report scales
+# (Wong-Baker Faces + "Jerry Cans" analog). Third leaf of the Pain
+# Management section (p.77 NIPS → p.78 r-FLACC → p.79 faces/jerry cans
+# → p.80 numeric + WHO analgesic ladder).
+#
+# The printed page is TWO picture scales (the drawings ARE the tool —
+# you point the child at the face / can that matches their pain), each
+# with a score row (0–10) and a verbal label. The section titles are
+# rotated 90° on the page; the scale bodies (faces, cans, scores,
+# labels) are upright.
+#
+# Faithful-rendering calls:
+#   - Each scale embedded as a cropped image asset (upright as printed;
+#     the rotated titles dropped → carried as topic/prose text). Images
+#     cropped from the p.79 PDF render @300 dpi:
+#       images/pb_pain_faces.png, images/pb_pain_jerrycans.png
+#     (recreate via crop of `pdftoppm -f 79 -l 79 -r 300` — faces
+#     x205–706, cans x745–1215, y60–1885).
+#   - A compact score→label `table` accompanies each image so the
+#     labels are searchable / selectable (an image is neither) and so
+#     the corrected jerry-can label can be shown (see typo below).
+#   - Shared interpretation (0 / 1–3 / 4–6 / 7–10) + WHO analgesic
+#     ladder live on p.80 — noted; cross-link added once p.80 exists.
+#   - Citation superscripts (177,178–180) dropped.
+#
+# GENUINE SOURCE TYPO surfaced to Grey (image can't be edited; corrected
+# in the reference table + flagged):
+#   - Jerry-can 10 label prints "Overwhelmign Pain" → should be
+#     "Overwhelming Pain". Grey should fix the source PDF art.
+# ============================================================
+
+topic:
+  id: "pb-pain-faces"
+  title: "Pain — Faces & Jerry-Can Scales"
+  list_subtitle: "p.79 · Wong-Baker faces · jerry cans"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pain", "pain management", "wong-baker", "faces scale", "jerry can", "visual analog", "self-report", "paediatric", "pain scale"]
+  category: "medical"
+  page_number: 79
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Visual self-report scales — point the patient to the picture that best matches their pain.
+        - **Wong-Baker Faces** — for ages **4–12** (can be used up to 18)
+        - **Jerry cans** — an alternative for patients unable to understand the faces
+
+    - type: "prose"
+      title: "Wong-Baker Faces Scale"
+      markdown: |
+        Ages 4–12 (can be used up to 18).
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_pain_faces.png"
+      size: "full"
+      caption: "Wong-Baker Faces — from 0 (No Hurt) at the bottom to 10 (Hurts Worst) at the top."
+
+    - type: "table"
+      title: "Faces — score & label"
+      zebra: true
+      columns: ["Score", "Label"]
+      column_flex: [2, 6]
+      column_align: ["center", "left"]
+      rows:
+        - cells: ["0", "No hurt"]
+        - cells: ["2", "Hurts a little bit"]
+        - cells: ["4", "Hurts little more"]
+        - cells: ["6", "Hurts even more"]
+        - cells: ["8", "Hurts whole lot"]
+        - cells: ["10", "Hurts worst"]
+
+    - type: "prose"
+      title: "Jerry Cans Scale"
+      markdown: |
+        For scoring if unable to understand the faces — the can fills as the pain increases.
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_pain_jerrycans.png"
+      size: "full"
+      caption: "Jerry cans — from 0 (No Pain, empty) at the bottom to 10 (Overwhelming Pain, full) at the top."
+
+    - type: "table"
+      title: "Jerry cans — score & label"
+      zebra: true
+      columns: ["Score", "Label"]
+      column_flex: [2, 6]
+      column_align: ["center", "left"]
+      rows:
+        - cells: ["0", "No pain"]
+        - cells: ["2", "Mild pain"]
+        - cells: ["4", "More pain"]
+        - cells: ["6", "Moderate pain"]
+        - cells: ["8", "Severe pain"]
+        - cells: ["10", "Overwhelming pain"]

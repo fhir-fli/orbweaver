@@ -112,3 +112,4 @@ book:
       children:
         - topic: "topics/pb_pain_nips.yaml"
         - topic: "topics/pb_pain_flacc.yaml"
+        - topic: "topics/pb_pain_faces.yaml"
