@@ -142,3 +142,4 @@ book:
         - topic: "topics/pb_im_ecg_basics.yaml"
         - topic: "topics/pb_im_ecg_enlargement.yaml"
         - topic: "topics/pb_im_ecg_conduction.yaml"
+        - topic: "topics/pb_im_ecg_svt.yaml"

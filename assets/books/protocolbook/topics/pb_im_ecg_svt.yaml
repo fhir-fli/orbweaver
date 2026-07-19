@@ -1,0 +1,75 @@
+# ============================================================
+# ProtocolBook p.118 — Electrocardiography (ECG): Supraventricular
+# Arrhythmias. Fourth of the split ECG sub-topics (after Basics &
+# Approach, Chamber Enlargement, Conduction Abnormalities). Covers
+# section "7. EKG findings in Supraventricular Arrhythmias" — atrial
+# flutter and atrial fibrillation (including AF with rapid ventricular
+# response).
+#
+# Faithful-rendering calls:
+#   - Diagnostic criteria for each rhythm → prose bullet lists.
+#   - The book's rhythm-strip examples are cropped as image assets
+#     (from p.118 @300 dpi) and embedded next to the matching rhythm —
+#     the example strips are the teaching tool:
+#       pb_ecg_aflutter.png (boxed lead-II flutter strip, sawtooth)
+#       pb_ecg_afib.png     (atrial fibrillation strip)
+#       pb_ecg_afrvr.png    (two AF-with-RVR strips)
+#   - The book's inline figure labels ("Aflutter (sawtooth or coarse)",
+#     "Atrial Fibrillation", "Atrial Fibrillation with Rapid Ventricular
+#     Response") become the image captions.
+#   - Citation superscripts on the figures are left as printed.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Atrial flutter ~300 atrial cycles/min with 2:1 conduction giving a
+#     ventricular rate of ~150/min; F waves negative in II/III/aVF and
+#     positive in V1; AF irregularly irregular. All standard.
+# ============================================================
+
+topic:
+  id: "pb-im-ecg-svt"
+  title: "ECG — Supraventricular Arrhythmias"
+  list_subtitle: "p.118 · atrial flutter · AF · AF with RVR"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiography", "adult", "internal medicine", "cardiology", "arrhythmia", "supraventricular", "SVT", "atrial flutter", "atrial fibrillation", "AF", "afib", "rapid ventricular response", "RVR", "F waves"]
+  category: "medical"
+  page_number: 118
+
+  blocks:
+
+    - type: "prose"
+      title: "Supraventricular arrhythmias"
+      callout: true
+      palette:
+        alert: "0xFF0D47A1"
+        alert_fill: "0xFFE8EEF7"
+        alert_text: "0xFF0D47A1"
+      markdown: |
+        EKG findings in the common supraventricular arrhythmias.
+
+    - type: "prose"
+      title: "Atrial flutter"
+      markdown: |
+        - Typically ~300 cycles/minute, ventricular rate 150/min
+        - Classic F waves negative in II, III, aVF, positive in V1
+        - Aflutter (sawtooth or coarse)
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_aflutter.png"
+      size: "full"
+      caption: "Atrial flutter in lead II — sawtooth (coarse) flutter waves."
+
+    - type: "prose"
+      title: "Atrial fibrillation"
+      markdown: |
+        - Atrial wave irregular
+        - Pattern irregularly irregular
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_afib.png"
+      size: "full"
+      caption: "Atrial fibrillation — irregularly irregular, no discrete P waves."
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_afrvr.png"
+      size: "full"
+      caption: "Atrial fibrillation with rapid ventricular response."
