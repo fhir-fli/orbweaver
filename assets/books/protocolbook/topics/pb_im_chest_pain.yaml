@@ -1,0 +1,87 @@
+# ============================================================
+# ProtocolBook p.121 — Chest Pain / Acute Coronary Syndrome. Internal
+# Medicine Protocols leaf (follows the ECG chapter).
+#
+# Hybrid rendering (per the standing rule): the top of the page is
+# content-flow, the bottom is a genuine decision tree.
+#   - Differential + "Management — chest discomfort suggestive of
+#     ischemia" action box → prose (actions, not decisions).
+#   - The ST-elevation → risk-stratification → disposition decision tree
+#     → `algorithm` flowchart. Stage 1 (ST elevation?) splits STEMI vs.
+#     the risk-stratification path; stage 2 (risk tier) fans to the three
+#     dispositions (Treat NSTEMI / Treat conservatively / Look for other
+#     causes). STEMI box tinted emergency, NSTEMI priority.
+#
+# Faithful-rendering calls:
+#   - The book's management box is reproduced verbatim as prose bullets.
+#   - "Types of Anginal Chest pain" is kept as plain text (no cross-link
+#     target authored yet).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Aspirin 300/325 mg PO ×1, nitroglycerin 0.4 mg SL q5min ×3, O2 only
+#     if SpO2 < 94% (routine O2 no longer recommended in ACS) — all
+#     current. HEART score (troponin) / TIMI score risk stratification is
+#     standard; the "use TIMI without labs" fallback is this book's
+#     resource-limited adaptation.
+# ============================================================
+
+topic:
+  id: "pb-im-chest-pain"
+  title: "Chest Pain / Acute Coronary Syndrome"
+  list_subtitle: "p.121 · differential · ACS algorithm"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["chest pain", "ACS", "acute coronary syndrome", "STEMI", "NSTEMI", "angina", "ischemia", "ischaemia", "internal medicine", "cardiology", "HEART score", "TIMI", "aspirin", "nitroglycerin", "troponin", "risk stratification"]
+  category: "medical"
+  page_number: 121
+
+  blocks:
+
+    - type: "prose"
+      title: "Chest pain"
+      markdown: |
+        - Wide differential should be considered
+        - Most dangerous usually: acute coronary syndrome, aortic dissection, pulmonary embolism, tension pneumothorax, pericardial tamponade, mediastinitis (from things like esophageal rupture)
+
+    - type: "prose"
+      title: "Management — chest discomfort suggestive of ischemia"
+      markdown: |
+        - Monitor, support ABCs
+        - Obtain / review EKG
+        - Check vital signs (PR, RR, spO₂, Temp, Weight)
+        - Assess AVPU / GCS, hydration status
+        - Start oxygen if spO₂ < 94%, insert IV if needed
+        - Perform brief, targeted history, physical exam
+        - **Aspirin** 300 / 325 mg PO × 1 dose
+        - **Nitroglycerin** sublingual spray or tablet 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved
+        - IV morphine / fentanyl if available for pain control
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Chest discomfort suggestive of ischemia"
+        shape: "stadium"
+      stages:
+        - decision: "ST elevation on EKG?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat STEMI"
+                severity: "emergency"
+            - label: "No"
+              continue: true
+        - decision: "Risk stratification"
+          criteria:
+            - "If troponin is available: use HEART Score"
+            - "If troponin or CK-MB is available: use TIMI score — high risk, treat as NSTEMI"
+            - "If no labs are available: use TIMI score without labs — high risk, treat as NSTEMI; low risk, use Types of Anginal Chest pain"
+          outcomes:
+            - label: "High risk"
+              box:
+                title: "Treat NSTEMI"
+                severity: "priority"
+            - label: "Intermediate risk"
+              box:
+                title: "Treat conservatively"
+            - label: "Low / very low risk"
+              box:
+                title: "Look for other causes"
