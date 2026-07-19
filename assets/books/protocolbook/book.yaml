@@ -139,3 +139,4 @@ book:
         - topic: "topics/pb_im_liver_failure.yaml"
         - topic: "topics/pb_im_aki.yaml"
         - topic: "topics/pb_im_agitation.yaml"
+        - topic: "topics/pb_im_ecg_basics.yaml"

@@ -1,0 +1,120 @@
+# ============================================================
+# ProtocolBook pp.114–115 — Electrocardiography (ECG): Basics &
+# Approach. Twelfth leaf of the Internal Medicine Protocols section,
+# and the FIRST of several ECG sub-topics (the book's 7-page ECG
+# chapter pp.114–120 is split into logical leaves: Basics/Approach,
+# then Chamber Enlargement, Conduction, SVT Arrhythmias, Ischaemia).
+#
+# Two-page topic (`pages:`): p.114 = lead placement + properly-mounted
+# checks + basic parts (with lead-placement & waveform diagrams);
+# p.115 = calibration + systematic approach (rate/rhythm/intervals) +
+# mean QRS axis (with the hexaxial axis wheel).
+#
+# Faithful-rendering calls:
+#   - Three reference diagrams cropped as image assets (from p.114/115
+#     @300 dpi): pb_ecg_leads.png (chest lead placement),
+#     pb_ecg_waveform.png (P/QRS/ST/T/U + intervals), pb_ecg_axis.png
+#     (hexaxial axis wheel). The calibration box drawing is fully
+#     conveyed in prose (box = time) → not embedded.
+#   - Placement / approach / axis text → prose (decorative outline
+#     numbering dropped).
+#   - Citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Standard lead placement, calibration (25 mm/s, 10 mm/mV), the
+#     300÷(large boxes) rate rule, sinus-rhythm criteria, normal
+#     intervals (PR 0.12–0.20, QRS < 0.12, QTc ≤ 0.44/0.45), and the
+#     I/II quadrant axis method are all standard.
+# ============================================================
+
+topic:
+  id: "pb-im-ecg-basics"
+  title: "ECG — Basics & Approach"
+  list_subtitle: "pp.114–115 · placement · intervals · axis"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiography", "adult", "internal medicine", "lead placement", "axis", "PR interval", "QRS", "QT", "QTc", "rate", "rhythm", "cardiology"]
+  category: "medical"
+  page_number: 114
+
+  pages:
+
+    # ═══════════════════════ PAGE 114 ═══════════════════════
+    - page_number: 114
+      blocks:
+
+        - type: "prose"
+          title: "Lead placement"
+          markdown: |
+            - **LA / RA:** placed mid-arm, lateral bicep, immediately below the V4 horizontal line
+            - **LL / RL:** limb (abdominal) leads, placed 7.5 cm below the umbilicus, on either side of the umbilical vertical line
+            - **V1:** 4th ICS, just right of the sternum
+            - **V2:** 4th ICS, just left of the sternum
+            - **V3:** midway between V2 & V4
+            - **V4:** midclavicular line, 5th ICS
+            - **V5:** anterior axillary line, lateral to V4
+            - **V6:** midaxillary line, lateral to V4 & V5
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_leads.png"
+          size: "full"
+          caption: "Precordial (V1–V6) and limb (RA/LA/RL/LL) electrode placement."
+
+        - type: "prose"
+          title: "Properly mounted?"
+          markdown: |
+            - R waves in lead II should be the sum of the R waves in lead I and lead III
+            - The sum of the waves in aVR, aVL & aVF should equal zero
+
+        - type: "prose"
+          title: "Basic parts of the ECG"
+          markdown: |
+            - **P wave** — atrial depolarisation (activation)
+            - **QRS complex** — ventricular depolarisation (activation)
+            - **ST segment, T wave, U wave** — ventricular repolarisation (recovery)
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_waveform.png"
+          size: "full"
+          caption: "ECG waveform — P/Q/R/S/T/U waves with the PR, QRS, ST, QT and RR intervals. 1 large box = 0.20 s."
+
+    # ═══════════════════════ PAGE 115 ═══════════════════════
+    - page_number: 115
+      blocks:
+
+        - type: "prose"
+          title: "Calibration"
+          markdown: |
+            - 1 large box = 5 mm = 0.20 seconds
+            - 1 small box = 1 mm = 0.04 seconds
+            - 5 small boxes = 1 large box
+            - Proper calibration: 10 mm tall represents 1 mV (10 small boxes / 2 large boxes) — ensured by a standardisation mark at the beginning of the ECG
+
+        - type: "prose"
+          title: "Approach (a systematic approach is vital)"
+          markdown: |
+            - **Rate** (tachy? brady?): 300 ÷ R-R interval (in large boxes) = beats per minute
+            - **Rhythm** (relationship between P and QRS?): sinus = a P before every QRS, a QRS after every P, and P upright in II and down in aVR
+            - **Intervals:**
+              - PR 0.12–0.2 sec (3–5 small boxes)
+              - QRS < 0.1–0.11 sec
+              - QT / QTc (QTc = 0.33–0.44 / 0.45 sec)
+            - **Easily confused points:**
+              - The RR interval is really the QRS–QRS interval
+              - The PR interval is really the start of P to the start of QRS
+              - The QT interval is really the onset of QRS to the end of T
+              - Not every QRS has all 3
+
+        - type: "prose"
+          title: "Mean QRS axis (LAD or RAD?)"
+          markdown: |
+            - Midway between two extremity leads with tall R waves of equal height
+            - Points at 90° (right angle) to any extremity lead with a biphasic QRS complex (Q = R or R = S)
+            - Normal is between −30° and 100°
+            - If QRS positive in I & II → axis is normal
+            - If QRS positive in I & negative in II → left axis deviation (LAD)
+            - If QRS positive in II & negative in I → right axis deviation (RAD)
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_axis.png"
+          size: "full"
+          caption: "Hexaxial reference system — the lead axis for each limb lead (degrees)."
