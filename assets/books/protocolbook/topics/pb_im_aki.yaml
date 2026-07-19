@@ -1,0 +1,80 @@
+# ============================================================
+# ProtocolBook p.111 — Acute Kidney Injury in Adults. Tenth leaf of the
+# Internal Medicine Protocols section.
+#
+# A single-page classification decision tree (prerenal vs postrenal vs
+# intrinsic renal).
+#
+# Faithful-rendering calls:
+#   - Diagnosis criteria + labs → prose.
+#   - The prerenal-indices decision + obstruction decision →
+#     `algorithm`; the intrinsic-renal arm has four sub-categories with
+#     cause lists → prose below (a flowchart terminal can't hold them).
+#   - Prerenal indices (FeNa<1%, BUN/Cr>20, U_Na<20, U_osm>500) and the
+#     cause lists transcribed as printed.
+#   - Flowchart-box text plain; citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - KDIGO-style AKI definition (UOP < 0.5 mL/kg/hr > 6 h; Cr rise
+#     ≥ 0.3 mg/dL or ≥ 50%), the classic prerenal urine indices, and the
+#     pre/intrinsic/post causal framework are standard. Schistosomiasis
+#     as an obstructive cause is an appropriate LMIC-specific addition.
+# ============================================================
+
+topic:
+  id: "pb-im-aki"
+  title: "Acute Kidney Injury"
+  list_subtitle: "p.111 · prerenal / intrinsic / postrenal"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["acute kidney injury", "AKI", "renal failure", "adult", "internal medicine", "prerenal", "postrenal", "intrinsic renal", "ATN", "AIN", "glomerulonephritis", "FeNa", "nephrology"]
+  category: "medical"
+  page_number: 111
+
+  blocks:
+
+    - type: "prose"
+      title: "Diagnosis"
+      markdown: |
+        - Urine output decreases (< 0.5 mL/kg/hr for > 6 hours)
+        - Cr rise ≥ 0.3 mg/dL
+        - Cr rise ≥ 50%
+
+    - type: "prose"
+      title: "Labs"
+      markdown: |
+        - Urine: analysis, Cr, Na, urea, osmolarity
+        - Serum: CBC, Na, Cr, BUN
+
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+        - decision: "Any of: FeNa < 1%, BUN/Cr > 20, U_Na < 20, U_osm > 500?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Prerenal (suggestive, not definitive)"
+                bullets:
+                  - "Diminished effective circulating arterial volume; treat the underlying cause"
+                  - "Causes: hypovolaemia, heart failure, sepsis, dehydration, haemorrhage / intravascular, liver failure"
+            - label: "No"
+              continue: true
+        - decision: "Concern for obstruction?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Postrenal"
+                bullets:
+                  - "Place a Foley catheter"
+                  - "Consider abdominal & pelvic ultrasound"
+                  - "Causes: nephrolithiasis, malignancy, BPH, prostate cancer, anticholinergic meds, schistosomiasis"
+            - label: "No"
+              box:
+                title: "Intrinsic renal — see the categories below"
+
+    - type: "prose"
+      title: "Intrinsic renal — categories"
+      markdown: |
+        - **Glomerulonephritis**
+        - **Vascular:** HUS/TTP, DIC, pre-eclampsia, malignant hypertension
+        - **Acute tubular necrosis (ATN):** ischaemia; drugs (aminoglycosides); pigment (rhabdomyolysis, haemolysis)
+        - **Acute interstitial nephritis (AIN):** allergic (beta-lactam, sulfa, NSAIDs); infection (pyelonephritis, TB); infiltrative (leukaemia / lymphoma)
