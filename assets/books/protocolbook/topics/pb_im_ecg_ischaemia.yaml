@@ -1,0 +1,126 @@
+# ============================================================
+# ProtocolBook pp.119–120 — Electrocardiography (ECG): Ischaemia. Fifth
+# and final leaf of the split ECG sub-topics (after Basics & Approach,
+# Chamber Enlargement, Conduction Abnormalities, Supraventricular
+# Arrhythmias). Covers section "8. EKG findings of Ischemia" — coronary
+# territories, STEMI, and NSTEMI.
+#
+# Two-page topic (`pages:`): p.119 = culprit arteries + territory
+# localisation table + STEMI criteria (with the J-point / ST-segment
+# reference diagram + ST-elevation example strips); p.120 = ST-elevation
+# with LBBB examples + NSTEMI criteria + ST-depression example strips.
+#
+# Faithful-rendering calls:
+#   - Culprit-artery bullets, STEMI/NSTEMI criteria → prose.
+#   - The localisation table → a real `table` block (Anatomic Area /
+#     ECG leads / Coronary Artery); the printed "ST depression V1-V2"
+#     posterior cell is kept verbatim.
+#   - Four reference/example figures cropped as image assets (p.119/120
+#     @300 dpi): pb_ecg_st_diagram.png (P/Q/R/S/T with J point,
+#     baseline, ST-elevation, ST-segment labels), pb_ecg_ste_examples.png
+#     (four ST-elevation strips), pb_ecg_ste_lbbb.png (ST-elevation with
+#     LBBB), pb_ecg_std_examples.png (four ST-depression strips).
+#   - Citation superscripts on the figures/headings are left as printed.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - STEMI J-point criteria (V2–V3: men ≥40 ≥2 mm, men <40 ≥2.5 mm,
+#     women ≥1.5 mm; ≥1 mm elsewhere) match the 4th-universal-definition
+#     thresholds. NSTEMI: horizontal/downsloping ST depression ≥1 mm in
+#     ≥2 contiguous leads lasting ≥0.08 s. All standard.
+# ============================================================
+
+topic:
+  id: "pb-im-ecg-ischaemia"
+  title: "ECG — Ischaemia (STEMI / NSTEMI)"
+  list_subtitle: "pp.119–120 · territories · STEMI · NSTEMI"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiography", "adult", "internal medicine", "cardiology", "ischaemia", "ischemia", "STEMI", "NSTEMI", "myocardial infarction", "MI", "ST elevation", "ST depression", "coronary artery", "LAD", "RCA", "LCx", "J point"]
+  category: "medical"
+  page_number: 119
+
+  pages:
+
+    # ═══════════════════════ PAGE 119 ═══════════════════════
+    - page_number: 119
+      blocks:
+
+        - type: "prose"
+          title: "Culprit vessel"
+          markdown: |
+            Usually the result of blockage of one of the 3 main arteries:
+
+            - Right coronary artery (RCA) supplies inferior wall
+            - Left anterior descending (LAD) supplies anterior
+            - Left Circumflex (LCx) supplies lateral
+            - Note: Left main supplies both anterior and lateral
+
+        - type: "prose"
+          title: "Localisation via the ECG"
+          markdown: |
+            Localization is sometimes possible via the EKG:
+
+        - type: "table"
+          columns: ["Anatomic Area", "ECG leads", "Coronary Artery"]
+          column_flex: [3, 4, 5]
+          rows:
+            - cells: ["Septal", "V1–V2", "Proximal LAD"]
+            - cells: ["Anterior", "V3–V4", "LAD"]
+            - cells: ["Apical", "V5–V6", "Distal LAD, LCx or RCA"]
+            - cells: ["Lateral", "I, aVL", "LCx"]
+            - cells: ["Inferior", "II, III, aVF", "RCA (85%), LCx (15%)"]
+            - cells: ["RV", "V1–V2 & V4R", "Proximal RCA"]
+            - cells: ["Posterior", "ST depression V1–V2", "RCA or LCx"]
+
+        - type: "prose"
+          title: "ST-Elevation MI (STEMI)"
+          markdown: |
+            - Transmural ischemia — entire thickness
+            - ST segment elevation at J point in 2 contiguous leads
+              - **Leads V2–V3:**
+                - 2 mm elevation in men ≥ 40 years old
+                - 2.5 mm elevation in men < 40 years old
+                - 1.5 mm elevation in women
+              - 1 mm elevation in all other leads
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_st_diagram.png"
+          size: "full"
+          caption: "J point, baseline and ST-segment — where ST elevation is measured."
+
+        - type: "prose"
+          markdown: |
+            Examples of ST segment elevation:
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_ste_examples.png"
+          size: "full"
+          caption: "Examples of ST segment elevation."
+
+    # ═══════════════════════ PAGE 120 ═══════════════════════
+    - page_number: 120
+      blocks:
+
+        - type: "prose"
+          markdown: |
+            Examples of ST segment elevation with Left Bundle Branch Block:
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_ste_lbbb.png"
+          size: "full"
+          caption: "ST segment elevation in the setting of LBBB."
+
+        - type: "prose"
+          title: "Non-STEMI (NSTEMI)"
+          markdown: |
+            - Subendocardial ischemia
+            - Abnormal ST segment
+              - Present in 2 contiguous leads
+              - Horizontal or downward ST depression
+              - 1 mm or more
+              - Lasting at least 0.08 seconds
+            - **NOTE:** ST depressions < 1 mm (or only J point) with a rapid rise of ST segment are considered normal
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_std_examples.png"
+          size: "full"
+          caption: "Examples of ST segment depression."
