@@ -1,87 +1,179 @@
 # ============================================================
-# ProtocolBook p.121 — Chest Pain / Acute Coronary Syndrome. Internal
-# Medicine Protocols leaf (follows the ECG chapter).
+# ProtocolBook pp.121–122 — Chest Pain / Acute Coronary Syndrome.
+# Internal Medicine Protocols leaf (follows the ECG chapter).
 #
-# Hybrid rendering (per the standing rule): the top of the page is
+# Two-page topic (`pages:`): p.121 = differential + management + the
+# ST-elevation / risk-stratification / disposition decision tree; p.122 =
+# the risk-score tables the algorithm invokes (HEART Score, TIMI Risk
+# Score, Types of Anginal Chest Pain, Likelihood of CAD).
+#
+# Hybrid rendering (per the standing rule): the top of p.121 is
 # content-flow, the bottom is a genuine decision tree.
 #   - Differential + "Management — chest discomfort suggestive of
 #     ischemia" action box → prose (actions, not decisions).
 #   - The ST-elevation → risk-stratification → disposition decision tree
-#     → `algorithm` flowchart. Stage 1 (ST elevation?) splits STEMI vs.
-#     the risk-stratification path; stage 2 (risk tier) fans to the three
-#     dispositions (Treat NSTEMI / Treat conservatively / Look for other
-#     causes). STEMI box tinted emergency, NSTEMI priority.
+#     → `algorithm` flowchart. STEMI box tinted emergency, NSTEMI priority.
+#   - p.122 A/B → `table` blocks (vertical category-merge rendered as an
+#     empty leading cell on continuation rows; TIMI's Historical /
+#     Presentation dividers = full-width `span` rows). C (Anginal types)
+#     → prose; Likelihood of CAD → 5-column table (High cells bolded, the
+#     book's underline is not a MiniMarkdown feature).
 #
 # Faithful-rendering calls:
-#   - The book's management box is reproduced verbatim as prose bullets.
-#   - "Types of Anginal Chest pain" is kept as plain text (no cross-link
-#     target authored yet).
+#   - The management box + all score tables are reproduced verbatim.
+#   - "Types of Anginal Chest pain" is kept as plain text on p.121 (the
+#     definition now lives on p.122 of the same topic).
 #
 # CONTENT FLAGS for the later OE / content pass (rendered faithfully):
 #   - Aspirin 300/325 mg PO ×1, nitroglycerin 0.4 mg SL q5min ×3, O2 only
 #     if SpO2 < 94% (routine O2 no longer recommended in ACS) — all
-#     current. HEART score (troponin) / TIMI score risk stratification is
-#     standard; the "use TIMI without labs" fallback is this book's
-#     resource-limited adaptation.
+#     current. HEART (troponin) / TIMI risk stratification is standard;
+#     the "use TIMI without labs" fallback is this book's resource-limited
+#     adaptation. The Diamond-Forrester-style Likelihood-of-CAD table is
+#     the classic pre-test-probability grid.
 # ============================================================
 
 topic:
   id: "pb-im-chest-pain"
   title: "Chest Pain / Acute Coronary Syndrome"
-  list_subtitle: "p.121 · differential · ACS algorithm"
+  list_subtitle: "pp.121–122 · ACS algorithm · HEART / TIMI"
   last_reviewed: "pocketbook v1.7"
-  tags: ["chest pain", "ACS", "acute coronary syndrome", "STEMI", "NSTEMI", "angina", "ischemia", "ischaemia", "internal medicine", "cardiology", "HEART score", "TIMI", "aspirin", "nitroglycerin", "troponin", "risk stratification"]
+  tags: ["chest pain", "ACS", "acute coronary syndrome", "STEMI", "NSTEMI", "angina", "ischemia", "ischaemia", "internal medicine", "cardiology", "HEART score", "TIMI", "aspirin", "nitroglycerin", "troponin", "risk stratification", "pre-test probability"]
   category: "medical"
   page_number: 121
 
-  blocks:
+  pages:
 
-    - type: "prose"
-      title: "Chest pain"
-      markdown: |
-        - Wide differential should be considered
-        - Most dangerous usually: acute coronary syndrome, aortic dissection, pulmonary embolism, tension pneumothorax, pericardial tamponade, mediastinitis (from things like esophageal rupture)
+    # ═══════════════════════ PAGE 121 ═══════════════════════
+    - page_number: 121
+      blocks:
 
-    - type: "prose"
-      title: "Management — chest discomfort suggestive of ischemia"
-      markdown: |
-        - Monitor, support ABCs
-        - Obtain / review EKG
-        - Check vital signs (PR, RR, spO₂, Temp, Weight)
-        - Assess AVPU / GCS, hydration status
-        - Start oxygen if spO₂ < 94%, insert IV if needed
-        - Perform brief, targeted history, physical exam
-        - **Aspirin** 300 / 325 mg PO × 1 dose
-        - **Nitroglycerin** sublingual spray or tablet 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved
-        - IV morphine / fentanyl if available for pain control
+        - type: "prose"
+          title: "Chest pain"
+          markdown: |
+            - Wide differential should be considered
+            - Most dangerous usually: acute coronary syndrome, aortic dissection, pulmonary embolism, tension pneumothorax, pericardial tamponade, mediastinitis (from things like esophageal rupture)
 
-    - type: "flowchart"
-      variant: "algorithm"
-      entry:
-        text: "Chest discomfort suggestive of ischemia"
-        shape: "stadium"
-      stages:
-        - decision: "ST elevation on EKG?"
-          outcomes:
-            - label: "Yes"
-              box:
-                title: "Treat STEMI"
-                severity: "emergency"
-            - label: "No"
-              continue: true
-        - decision: "Risk stratification"
-          criteria:
-            - "If troponin is available: use HEART Score"
-            - "If troponin or CK-MB is available: use TIMI score — high risk, treat as NSTEMI"
-            - "If no labs are available: use TIMI score without labs — high risk, treat as NSTEMI; low risk, use Types of Anginal Chest pain"
-          outcomes:
-            - label: "High risk"
-              box:
-                title: "Treat NSTEMI"
-                severity: "priority"
-            - label: "Intermediate risk"
-              box:
-                title: "Treat conservatively"
-            - label: "Low / very low risk"
-              box:
-                title: "Look for other causes"
+        - type: "prose"
+          title: "Management — chest discomfort suggestive of ischemia"
+          markdown: |
+            - Monitor, support ABCs
+            - Obtain / review EKG
+            - Check vital signs (PR, RR, spO₂, Temp, Weight)
+            - Assess AVPU / GCS, hydration status
+            - Start oxygen if spO₂ < 94%, insert IV if needed
+            - Perform brief, targeted history, physical exam
+            - **Aspirin** 300 / 325 mg PO × 1 dose
+            - **Nitroglycerin** sublingual spray or tablet 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved
+            - IV morphine / fentanyl if available for pain control
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Chest discomfort suggestive of ischemia"
+            shape: "stadium"
+          stages:
+            - decision: "ST elevation on EKG?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat STEMI"
+                    severity: "emergency"
+                - label: "No"
+                  continue: true
+            - decision: "Risk stratification"
+              criteria:
+                - "If troponin is available: use HEART Score"
+                - "If troponin or CK-MB is available: use TIMI score — high risk, treat as NSTEMI"
+                - "If no labs are available: use TIMI score without labs — high risk, treat as NSTEMI; low risk, use Types of Anginal Chest pain"
+              outcomes:
+                - label: "High risk"
+                  box:
+                    title: "Treat NSTEMI"
+                    severity: "priority"
+                - label: "Intermediate risk"
+                  box:
+                    title: "Treat conservatively"
+                - label: "Low / very low risk"
+                  box:
+                    title: "Look for other causes"
+
+    # ═══════════════════════ PAGE 122 ═══════════════════════
+    - page_number: 122
+      blocks:
+
+        - type: "prose"
+          title: "HEART Score"
+          markdown: |
+            Score **≤ 3** low risk · **4–6** intermediate risk · **≥ 7** high risk.
+
+        - type: "table"
+          columns: ["", "Characteristic", "Points"]
+          column_flex: [3, 8, 2]
+          column_align: ["left", "left", "center"]
+          rows:
+            - cells: ["**History**", "Highly suspicious", "2"]
+            - cells: ["", "Moderately suspicious", "1"]
+            - cells: ["**ECG**", "Significant ST depression", "2"]
+            - cells: ["", "Nonspecific repolarization abnormality", "1"]
+            - cells: ["**Age**", "65 or older", "2"]
+            - cells: ["", "45–65", "1"]
+            - cells: ["**Risk Factors**", "diabetes, > 90 days smoker, hyperlipidemia, hypertension, FHx of CAD, BMI > 30, history of atherosclerotic disease", "—"]
+            - cells: ["", "3 or more", "2"]
+            - cells: ["", "1–2", "1"]
+            - cells: ["**Troponin**", "> 3 times normal limit", "2"]
+            - cells: ["", "1–3 times normal limit", "1"]
+
+        - type: "prose"
+          title: "TIMI Risk Score (TRS) for NSTEMI"
+          markdown: |
+            Score **≥ 3** indicates high risk. One point each:
+
+        - type: "table"
+          columns: ["Characteristic", "Point"]
+          column_flex: [9, 2]
+          column_align: ["left", "center"]
+          rows:
+            - cells: [{text: "**Historical**", span: 2}]
+            - cells: ["Age ≥ 65", "1"]
+            - cells: ["≥ 3 risk factors for CAD (hypertension, hypercholesterolemia, diabetes, family history of CAD, current smoker)", "1"]
+            - cells: ["Known CAD (stenosis ≥ 50%)", "1"]
+            - cells: ["Aspirin use in the last 7 days", "1"]
+            - cells: [{text: "**Presentation**", span: 2}]
+            - cells: ["Severe angina (≥ 2 episodes in last 24 hours)", "1"]
+            - cells: ["ST deviation ≥ 0.5 mm", "1"]
+            - cells: ["+ cardiac biomarkers (troponin, CK-MB)", "1"]
+
+        - type: "prose"
+          title: "Types of Anginal Chest Pain"
+          markdown: |
+            Three components:
+
+            - Substernal chest pain or discomfort
+            - Provoked by exertion / exercise / emotional stress
+            - Relieved by rest and/or nitroglycerin
+
+            Classification:
+
+            - **Typical angina** has all 3 components
+            - **Atypical angina** has 2 of 3
+            - **Non-anginal** chest pain has < 2 components
+
+        - type: "prose"
+          title: "Likelihood of Coronary Artery Disease"
+          markdown: |
+            Pre-test probability by age, sex and pain type:
+
+        - type: "table"
+          columns: ["Age", "Sex", "Typical", "Atypical", "Non-Anginal"]
+          column_flex: [3, 3, 4, 4, 4]
+          column_align: ["left", "left", "center", "center", "center"]
+          rows:
+            - cells: ["30–39", "Men", "Intermediate", "Intermediate", "Low"]
+            - cells: ["", "Women", "Intermediate", "Very Low", "Very Low"]
+            - cells: ["40–49", "Men", "**High**", "Intermediate", "Intermediate"]
+            - cells: ["", "Women", "Intermediate", "Low", "Very Low"]
+            - cells: ["50–59", "Men", "**High**", "Intermediate", "Intermediate"]
+            - cells: ["", "Women", "Intermediate", "Intermediate", "Low"]
+            - cells: ["60–69", "Men", "**High**", "Intermediate", "Intermediate"]
+            - cells: ["", "Women", "**High**", "Intermediate", "Intermediate"]
