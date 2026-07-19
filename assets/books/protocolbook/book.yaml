@@ -140,3 +140,5 @@ book:
         - topic: "topics/pb_im_aki.yaml"
         - topic: "topics/pb_im_agitation.yaml"
         - topic: "topics/pb_im_ecg_basics.yaml"
+        - topic: "topics/pb_im_ecg_enlargement.yaml"
+        - topic: "topics/pb_im_ecg_conduction.yaml"

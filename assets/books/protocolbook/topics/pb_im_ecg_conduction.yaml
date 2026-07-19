@@ -1,0 +1,67 @@
+# ============================================================
+# ProtocolBook p.117 — Electrocardiography (ECG): Conduction
+# Abnormalities. Third of the split ECG sub-topics (after Basics &
+# Approach and Chamber Enlargement). Covers the bundle branch blocks
+# (RBBB and LBBB) — section "6. Conduction Abnormalities" at the bottom
+# of p.117.
+#
+# Faithful-rendering calls:
+#   - RBBB / LBBB morphology criteria → prose bullet lists.
+#   - The book's normal-vs-RBBB-vs-LBBB comparison grid (leads V1 & V6)
+#     is cropped as one image asset (pb_ecg_conduction.png, from
+#     p.117 @300 dpi) and embedded — the example strips are the teaching
+#     tool.
+#   - Citation superscripts (a/f/g) on the strip labels are part of the
+#     source figure and left as printed inside the image.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - RBBB (rSR' in V1, wide slurred S in I/V6) and LBBB (loss of septal
+#     r in V1/q in V6, broad monophasic R in V6) criteria are standard.
+#   - The book states complete block "QRS 0.10–0.12 sec" and incomplete
+#     block "QRS 0.10–0.12 sec" identically for both RBBB and LBBB — as
+#     printed the complete/incomplete rows read the same duration range;
+#     transcribed faithfully (standard teaching: complete ≥ 0.12 s,
+#     incomplete 0.10–0.12 s). Flag for OE.
+# ============================================================
+
+topic:
+  id: "pb-im-ecg-conduction"
+  title: "ECG — Conduction Abnormalities"
+  list_subtitle: "p.117 · RBBB · LBBB"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiography", "adult", "internal medicine", "cardiology", "conduction", "bundle branch block", "RBBB", "LBBB", "right bundle branch block", "left bundle branch block", "QRS"]
+  category: "medical"
+  page_number: 117
+
+  blocks:
+
+    - type: "prose"
+      title: "Conduction abnormalities"
+      callout: true
+      palette:
+        alert: "0xFF0D47A1"
+        alert_fill: "0xFFE8EEF7"
+        alert_text: "0xFF0D47A1"
+      markdown: |
+        Bundle branch blocks — recognised by QRS widening and characteristic V1 / V6 morphology.
+
+    - type: "prose"
+      title: "Right bundle branch block (RBBB)"
+      markdown: |
+        - rSR' pattern in V1 (small initial r wave, followed by a normal size S wave, and then another large positive deflection)
+        - Complete RBB: QRS > 0.12 seconds with above pattern
+        - Incomplete RBB: QRS 0.10–0.12 seconds with above pattern
+
+    - type: "prose"
+      title: "Left bundle branch block (LBBB)"
+      markdown: |
+        - Loss of initial r wave in V1 & q wave in V6
+        - QS pattern in V1 (just downward deflecting, may be notched)
+        - R pattern in V6 (just upward deflecting, may be notched)
+        - Complete LBBB: QRS 0.10–0.12 seconds with above pattern
+        - Incomplete LBBB: QRS 0.10–0.12 seconds with above pattern
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_conduction.png"
+      size: "full"
+      caption: "Normal vs. RBBB vs. LBBB in leads V1 and V6."

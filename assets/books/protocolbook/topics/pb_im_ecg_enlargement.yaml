@@ -1,0 +1,107 @@
+# ============================================================
+# ProtocolBook pp.116–117 — Electrocardiography (ECG): Chamber
+# Enlargement. Second of the split ECG sub-topics (after Basics &
+# Approach). Covers atrial enlargement (RAA/LAA) and ventricular
+# hypertrophy (RVH/LVH). The conduction abnormalities (RBBB/LBBB) that
+# begin at the bottom of p.117 are a SEPARATE leaf (pb-im-ecg-conduction).
+#
+# Faithful-rendering calls:
+#   - Criteria for each of RAA / LAA / RVH / LVH → prose bullet lists.
+#   - The book's three normal-vs-abnormal example-strip comparison grids
+#     are cropped as image assets (from p.116/117 @300 dpi):
+#       pb_ecg_atrial_enlargement.png (Normal / LAE / RAE, in leads II & V1)
+#       pb_ecg_rvh.png                (normal / RVH, in leads V1 & V6)
+#       pb_ecg_lvh.png                (normal / LVH, in leads V1 & V6)
+#     The example strips ARE the teaching tool, so they are embedded
+#     inline next to the matching criteria.
+#   - Citation superscripts (a–e) on the strip labels are part of the
+#     source figures and are left as printed inside the images.
+#   - Page 116 heading "5. Atrial/Ventricular enlargement (all findings
+#     suggestive but not diagnostic)" is carried as the intro highlight.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Criteria are standard (RAA: peaked P >2.5 mm in II/III/aVF, <0.12 s;
+#     LAA: P >0.12 s, notched, biphasic in V1 with terminal negativity
+#     >0.04 s or >1 mm; RVH: dominant R in V1, RAD, RV strain; LVH:
+#     Sokolow-Lyon SV1+RV5/6 >35 mm, Cornell criteria). All standard.
+# ============================================================
+
+topic:
+  id: "pb-im-ecg-enlargement"
+  title: "ECG — Chamber Enlargement"
+  list_subtitle: "pp.116–117 · RAA · LAA · RVH · LVH"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiography", "adult", "internal medicine", "cardiology", "atrial enlargement", "RAA", "LAA", "ventricular hypertrophy", "RVH", "LVH", "Sokolow-Lyon", "Cornell", "P wave", "chamber enlargement"]
+  category: "medical"
+  page_number: 116
+
+  pages:
+
+    # ═══════════════════════ PAGE 116 ═══════════════════════
+    - page_number: 116
+      blocks:
+
+        - type: "prose"
+          title: "Atrial / Ventricular enlargement"
+          callout: true
+          palette:
+            alert: "0xFF0D47A1"
+            alert_fill: "0xFFE8EEF7"
+            alert_text: "0xFF0D47A1"
+          markdown: |
+            All findings are **suggestive but not diagnostic** — correlate with the clinical picture and imaging.
+
+        - type: "prose"
+          title: "Right atrial enlargement (RAA)"
+          markdown: |
+            - P wave > 2.5 mm in II, III, or aVF but < 0.12 sec
+            - Usually with R. ventricular enlargement
+            - Often with pulmonary disease or congenital heart disease
+
+        - type: "prose"
+          title: "Left atrial enlargement (LAA)"
+          markdown: |
+            - P wave > 0.12 sec
+            - P wave with double humped or notched appearance in extremity leads
+            - P wave biphasic in V1 — negative deflection > 0.04 sec or > 1 mm
+            - If particularly notable, indicates increased risk for afib
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_atrial_enlargement.png"
+          size: "full"
+          caption: "Normal vs. left atrial vs. right atrial enlargement in leads II and V1."
+
+        - type: "prose"
+          title: "Right ventricular hypertrophy (RVH)"
+          markdown: |
+            - Tall R wave in V1
+            - R wave > S wave in V1
+            - Right axis deviation
+            - T-wave inversions in V1–V3
+            - Often in congenital heart disease
+            - RAA is often present
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_rvh.png"
+          size: "full"
+          caption: "Normal vs. RVH in leads V1 and V6 — dominant R in V1 with strain."
+
+    # ═══════════════════════ PAGE 117 ═══════════════════════
+    - page_number: 117
+      blocks:
+
+        - type: "prose"
+          title: "Left ventricular hypertrophy (LVH)"
+          markdown: |
+            - Deep S waves in right chest leads
+            - Tall, positive R waves in left chest leads
+            - S wave height in V1 plus R wave height in either V5 or V6 > 35 mm
+            - **Cornell Voltage Criteria:** S wave height in V3 + R wave height in aVL, men > 28 mm, women > 20 mm
+            - R wave in aVL > 12 mm
+            - LAA is often present
+            - 2 most common causes: hypertension and aortic stenosis
+
+        - type: "image"
+          path: "assets/books/protocolbook/images/pb_ecg_lvh.png"
+          size: "full"
+          caption: "Normal vs. LVH in leads V1 and V6 — deep S in V1, tall R in V6."
