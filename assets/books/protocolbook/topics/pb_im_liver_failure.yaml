@@ -1,0 +1,199 @@
+# ============================================================
+# ProtocolBook pp.108–110 — Liver Failure. Ninth leaf of the Internal
+# Medicine Protocols section.
+#
+# Three-page topic (`pages:`): p.108 = when to suspect + lab notes +
+# acute management flowchart; p.109 = diagnostic workup by LFT pattern;
+# p.110 = encephalopathy grading + Child-Turcotte-Pugh score + chronic
+# management + children.
+#
+# Faithful-rendering calls:
+#   - Acute management (hypotensive? → bleeding? → ascites?/SBP → AMS/
+#     encephalopathy?) → an `algorithm` converging on abdominal US.
+#   - The p.109 LFT-pattern decision tree (hepatocellular / cholestatic
+#     / isolated hyperbilirubinaemia / infiltrative, each with a
+#     differential) → prose with bold-lead patterns (a classification-
+#     with-differentials reads better as prose than a flowchart).
+#   - Child-Turcotte-Pugh → a `table` (parameter × 1/2/3 points) + a
+#     small class/survival table.
+#   - "If UGI, see protocol" → a prose cross-link to the p.104 GI bleed
+#     topic (algorithm boxes can't hold links).
+#   - Flowchart-box text plain; citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - SBP diagnosis (>250 PMN / ascites+fever+pain) + cefotaxime, non-
+#     selective beta-blocker variceal prophylaxis titrated to HR,
+#     co-trimoxazole/norfloxacin SBP prophylaxis criteria, and
+#     spironolactone±furosemide ascites management are standard.
+#     Lactulose for hepatic encephalopathy (after excluding infection/
+#     bleeding/intoxication) is correct. Child-Pugh thresholds standard.
+# ============================================================
+
+topic:
+  id: "pb-im-liver-failure"
+  title: "Liver Failure"
+  list_subtitle: "pp.108–110 · workup · SBP · Child-Pugh"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["liver failure", "cirrhosis", "hepatic encephalopathy", "adult", "internal medicine", "ascites", "SBP", "spontaneous bacterial peritonitis", "child-pugh", "lactulose", "varices", "LFT", "hepatology"]
+  category: "medical"
+  page_number: 108
+
+  pages:
+
+    # ═══════════════════════ PAGE 108 ═══════════════════════
+    - page_number: 108
+      blocks:
+
+        - type: "prose"
+          title: "If no known history, suspect liver disease with"
+          markdown: |
+            - Elevated liver function tests; jaundice
+            - Peripheral oedema / ascites; abdominal distension
+            - Gastrointestinal bleeding (haematemesis / melaena)
+            - Abdominal wall collaterals (caput medusae); cutaneous telangiectasias; spider angiomas; palmar erythema; digital clubbing
+            - Encephalopathy (confusion, change in sleep pattern); peripheral neuropathy; asterixis
+            - Gynaecomastia / testicular atrophy
+
+        - type: "prose"
+          title: "Notes on lab results"
+          markdown: |
+            - ↓ albumin, ↑ PT/INR/PTT in liver failure
+            - ALT is more liver-specific than AST
+            - ALT > AST: viral hepatitis, fatty liver / non-alcoholic steatohepatitis (pre-cirrhotic)
+            - AST > 2 × ALT: alcoholic hepatitis, cirrhosis (non-hepatic source)
+            - Jaundice: seen when bilirubin > 2.5 mg/dL; ↑ urine bilirubin if conjugated
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (PR, RR, SpO₂, temp, weight)
+            - Start oxygen if SpO₂ < 94%; place a large-bore IV
+            - Assess AVPU/GCS, hydration status
+            - Perform a brief, targeted history and physical exam; 12-lead ECG in adults
+            - **Rule out:** malaria (RDT, blood smear), sepsis (CBC, blood cultures)
+            - Other labs: LFTs (AST, ALT, total & direct bilirubin, albumin), renal functions, electrolytes; consider PT/INR/PTT
+
+        - type: "flowchart"
+          variant: "algorithm"
+          stages:
+            - decision: "Hypotensive?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "NS bolus for resuscitation; dopamine PRN; keep SBP > 90"
+                    severity: "priority"
+                - label: "No"
+                  continue: true
+            - decision: "Bleeding?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "If upper GI, see the GI bleed protocol; otherwise transfuse whole blood"
+                    severity: "priority"
+                - label: "No"
+                  continue: true
+            - decision: "Ascites?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Diagnostic paracentesis"
+                    bullets:
+                      - "Cell count & differential; culture & gram stain; glucose, total protein, albumin, LDH"
+                      - "If > 250 neutrophils OR ascites + fever + abdominal pain → start antibiotics for SBP: cefotaxime 2 g IV 8-hourly (2nd line ceftriaxone 1 g IV daily)"
+                - label: "No"
+                  continue: true
+            - decision: "Altered mental status (see encephalopathy grading), with NO infection, NO bleeding, NO acute intoxication, and haemodynamically stable?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Lactulose 20–30 g PO 3–4 times daily"
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "Abdominal ultrasound if not already done"
+
+        - type: "prose"
+          markdown: |
+            For upper GI bleeding, see the [Upper GI Bleed protocol](topic:pb-im-gi-bleed).
+
+    # ═══════════════════════ PAGE 109 ═══════════════════════
+    - page_number: 109
+      blocks:
+
+        - type: "prose"
+          title: "Diagnostic workup — by LFT pattern"
+          markdown: |
+            - **Hepatocellular (AST/ALT predominantly elevated):**
+              - AST/ALT > 1000 → viral hepatitis, ischaemia, paracetamol
+              - Otherwise → CHF (obtain ECHO), drugs, alcohol
+            - **Cholestasis (bilirubin & alkaline phosphatase elevated):** abdominal ultrasound —
+              - Ductal dilatation present → biliary obstruction (cancer, stones, fibrosis)
+              - No dilatation → sepsis (↑↑ alk phos), hepatitis (↑ ALT), cirrhosis (↑ PT/INR, ↓ albumin); consider biopsy if no diagnosis
+            - **Isolated hyperbilirubinaemia (bilirubin alone elevated):**
+              - Unconjugated (indirect) → overproduction (haemolysis, haematoma resorption, PE); defective conjugation (Gilbert's, Crigler-Najjar)
+              - Conjugated (direct) → defective excretion (Dubin-Johnson, Rotor's), abnormal biliary transport
+            - **Infiltrative (alkaline phosphatase alone elevated):** hepatocellular carcinoma, metastatic, lymphoma, TB, sarcoidosis, histoplasmosis, amoebiasis, medications. If none → consider a non-hepatic cause.
+
+    # ═══════════════════════ PAGE 110 ═══════════════════════
+    - page_number: 110
+      blocks:
+
+        - type: "prose"
+          title: "Grading encephalopathy"
+          markdown: |
+            - **Stage I** — altered / depressed mental status, not acting like their usual self
+            - **Stage II** — lethargy, confusion, sleep reversal
+            - **Stage III** — stupor, somnolence, combativeness
+            - **Stage IV** — coma
+
+        - type: "table"
+          title: "Modified Child-Turcotte-Pugh score"
+          zebra: true
+          columns: ["Parameter", "1 point", "2 points", "3 points"]
+          column_flex: [5, 3, 4, 4]
+          column_align: ["left", "center", "center", "center"]
+          rows:
+            - cells: ["Ascites", "None", "Easily controlled", "Poorly controlled"]
+            - cells: ["Encephalopathy", "None", "Grade 1 or 2", "Grade 3 or 4"]
+            - cells: ["Bilirubin (mg/dL)", "< 2", "2–3", "> 3"]
+            - cells: ["Albumin (g/dL)", "> 3.5", "2.8–3.5", "< 2.8"]
+            - cells: ["PT (sec > control)", "< 4", "4–6", "> 6"]
+            - cells: ["or INR", "< 1.7", "1.8–2.3", "> 2.3"]
+
+        - type: "table"
+          title: "Child-Pugh class → 1-year survival"
+          zebra: true
+          columns: ["Class", "Total points", "1-year survival"]
+          column_flex: [3, 4, 4]
+          column_align: ["center", "center", "center"]
+          rows:
+            - cells: ["A", "5–6", "100%"]
+            - cells: ["B", "7–9", "80%"]
+            - cells: ["C", "10–15", "45%"]
+
+        - type: "prose"
+          title: "Chronic management"
+          markdown: |
+            - Vaccinate for hepatitis A & B if not done already
+            - Educate about avoiding alcohol, paracetamol, and other hepatotoxic drugs
+            - **Variceal bleeding prophylaxis:**
+              - Start prophylaxis 1 week after a bleed if haemodynamically stable
+              - Propranolol 20 mg PO BD, or carvedilol 3.125 mg PO BD
+              - Titrate to one of: resting HR 55 beats/min; HR reduction 25% from baseline; or development of side effects
+            - **SBP prophylaxis** — if ALL of the following, start co-trimoxazole 160/800 mg PO 5 days/week, or norfloxacin 400 mg PO daily:
+              - Prior spontaneous bacterial peritonitis
+              - Ascitic fluid protein < 1.5 g/dL
+              - Impaired renal function (Cr > 1.2, BUN > 25, or Na < 130)
+              - Child-Turcotte-Pugh score > 9 and bilirubin > 3
+            - **Ascites treatment:**
+              - Education: reduce salt; reduce fluid intake if low Na and hypervolaemic
+              - Diuretics (both if BP tolerates): spironolactone 100 mg/day (max 400) and furosemide 40 mg/day (max 160)
+              - If refractory, consider therapeutic paracentesis
+
+        - type: "prose"
+          title: "Children"
+          markdown: |
+            - Almost always secondary (almost never intrinsic hepatic disease)
+            - If intrinsic disease, hepatitis A is most common — but screen for hepatitis B/C
+            - If cholelithiasis / choledocholithiasis, must rule out sickle cell disease

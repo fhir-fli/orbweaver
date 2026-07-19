@@ -136,3 +136,4 @@ book:
         - topic: "topics/pb_im_gi_bleed.yaml"
         - topic: "topics/pb_im_dka.yaml"
         - topic: "topics/pb_im_hypertension.yaml"
+        - topic: "topics/pb_im_liver_failure.yaml"
