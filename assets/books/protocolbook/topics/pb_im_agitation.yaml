@@ -1,0 +1,123 @@
+# ============================================================
+# ProtocolBook pp.112–113 — Severely Agitated or Violent Patient.
+# Eleventh leaf of the Internal Medicine Protocols section.
+#
+# Two-page topic (`pages:`): p.112 = prevention / risk factors / warning
+# signs / verbal de-escalation / DO-NOTs; p.113 = management (staff
+# safety → verbal → restraint indications → monitor → rapid sedation
+# by situation).
+#
+# Faithful-rendering calls:
+#   - p.112 is a pure outline (I–V) → titled prose (decorative Roman/
+#     letter numbering dropped).
+#   - p.113 management is mostly a content-flow sequence → prose steps;
+#     the 3-way rapid-sedation categorisation → a `table`
+#     (situation → regimen).
+#   - Citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Verbal de-escalation first, restraints only for imminent harm /
+#     failed verbal approach, and haloperidol ± benzodiazepine sedation
+#     (benzodiazepine-first for intoxication/withdrawal/undifferentiated,
+#     to avoid lowering the seizure threshold / QT issues) is standard.
+#     Doses (haloperidol 2.5–5 mg, midazolam 2.5–5 mg IV/IM) are
+#     reasonable; monitor airway/respirations after sedation.
+# ============================================================
+
+topic:
+  id: "pb-im-agitation"
+  title: "Severely Agitated or Violent Patient"
+  list_subtitle: "pp.112–113 · de-escalation · restraint · sedation"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["agitation", "violent patient", "de-escalation", "restraint", "sedation", "adult", "internal medicine", "haloperidol", "midazolam", "psychiatry", "behavioural"]
+  category: "medical"
+  page_number: 112
+
+  pages:
+
+    # ═══════════════════════ PAGE 112 ═══════════════════════
+    - page_number: 112
+      blocks:
+
+        - type: "prose"
+          markdown: |
+            Prevention is always better than treatment when possible.
+
+        - type: "prose"
+          title: "Factors making violence more likely"
+          markdown: |
+            - Male gender
+            - A history of violence
+            - Drug or alcohol abuse
+
+        - type: "prose"
+          title: "Signs of impending violence"
+          markdown: |
+            - Provocative behaviour
+            - Angry demeanour
+            - Loud, aggressive speech
+            - Tense posturing (e.g. clenched fists)
+            - Frequently moving or changing body position, pacing
+            - Aggressive acts (e.g. pounding walls, throwing objects, hitting oneself)
+
+        - type: "prose"
+          title: "10 elements for verbal de-escalation"
+          markdown: |
+            - Respect personal space (2 arms' lengths)
+            - Do not be provocative (remain calm)
+            - Establish verbal contact (the first person to make contact leads the discussion)
+            - Use concise, simple language
+            - Identify feelings and desires ("What are you hoping for?")
+            - Listen closely (repeat back to the patient to ensure accuracy)
+            - Agree, be clear, agree to disagree if necessary
+            - Set clear limits and boundaries (explain that violence/abuse is not tolerated)
+            - Offer choices, stay positive
+            - Debrief the patient and staff
+
+        - type: "prose"
+          title: "DO NOT"
+          markdown: |
+            - Argue
+            - Threaten
+            - Condescend
+            - Command
+
+    # ═══════════════════════ PAGE 113 ═══════════════════════
+    - page_number: 113
+      blocks:
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Ensure staff safety
+            - Attempt to calm the patient using verbal techniques
+            - Call security / police when possible for any concern about violence, or a patient threatening violence
+
+        - type: "prose"
+          title: "Indications for restraints"
+          markdown: |
+            - Imminent harm to others
+            - Imminent harm to self
+            - Disruption of important treatment
+            - Damage to surrounding equipment / environment
+            - Unsuccessful verbal approach
+
+        - type: "prose"
+          title: "Before sedation"
+          markdown: |
+            - Monitor, support ABCs
+            - Establish IV / O₂ monitoring if possible
+            - Check vital signs (BP, PR, RR, SpO₂, temp, weight)
+            - Check blood glucose
+            - Re-attempt to calm the patient using verbal techniques
+
+        - type: "table"
+          title: "Rapid sedation (if required, and/or not responding to verbal techniques)"
+          zebra: true
+          columns: ["Situation", "Sedation"]
+          column_flex: [4, 6]
+          column_align: ["left", "left"]
+          rows:
+            - cells: ["Severely violent patient", "Haloperidol 2.5–5 mg IV/IM AND/OR midazolam 2.5–5 mg IV/IM"]
+            - cells: ["Drug intoxication / withdrawal, or undifferentiated", "Midazolam 2.5–5 mg IV/IM, AND (if necessary) haloperidol 2.5–5 mg IV/IM"]
+            - cells: ["Known psychiatric disorder", "Haloperidol 2.5–5 mg IV/IM AND/OR midazolam 2.5–5 mg IV/IM"]

@@ -138,3 +138,4 @@ book:
         - topic: "topics/pb_im_hypertension.yaml"
         - topic: "topics/pb_im_liver_failure.yaml"
         - topic: "topics/pb_im_aki.yaml"
+        - topic: "topics/pb_im_agitation.yaml"
