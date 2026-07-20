@@ -21,6 +21,13 @@
 #     "/kg" is a DANGEROUS typo (2–10 mg/kg in an adult ≈ lethal); same fix
 #     as the p.80 pain-ladder morphine row. Child /kg rows are correct.
 #   - p.153 Lorazepam agitation "0.5–2 mg IV 12–4hrs" → "q2–4hrs".
+#   - p.156 Sulfadiazine notes "for PCP" → "for toxoplasmosis" (sulfadiazine
+#     + pyrimethamine + leucovorin is the toxoplasmosis regimen, matching the
+#     book's own p.136; sulfadiazine has no role in PCP).
+#
+# OE CURRENCY FLAG (transcribed faithfully, NOT edited — for the OE pass):
+#   - p.156 Ranitidine was withdrawn globally in 2020 (NDMA contamination);
+#     a modern formulary would substitute an alternative H2 blocker / PPI.
 # ============================================================
 
 formulary:
@@ -744,3 +751,446 @@ formulary:
         - 2–10 mg/dose PO q2–4hrs prn
       notes: |
         Ensure a high enough dose for pain control — but monitor frequently (at least q1hr to start) to avoid respiratory depression.
+
+    # ═══════════════════════ PAGE 154 ═══════════════════════
+    - id: "nifedipine"
+      name: "Nifedipine"
+      class: ""
+      page: 154
+      dose: |
+        **Children (> 1 yr):**
+        - Initial: 0.125 mg/kg BD
+        - Maintenance: up to 3 mg/kg/day or 120 mg/day
+
+        **Adults:**
+        - Initial (XR): 30 mg PO OD
+        - Maintenance (XR): up to 120 mg/day
+        - Immediate release (IR): 10–30 mg PO q8hr
+      notes: |
+        Only use extended release (XR) with children. Ideally adults would only use XR for HTN. Immediate release (IR) should really only be used for angina.
+
+    - id: "nitazoxanide"
+      name: "Nitazoxanide"
+      class: ""
+      page: 154
+      dose: |
+        - 1–3 yo: 100 mg PO BD × 14 days
+        - 4–11 yo: 200 mg PO BD × 14 days
+        - ≥ 12 yo and adults: 500–1000 mg PO BD × 14 days
+      notes: |
+        Give with food.
+
+    - id: "nitrofurantoin"
+      name: "Nitrofurantoin"
+      class: ""
+      page: 154
+      dose: |
+        - Children (> 1 yr): 1.5 mg/kg PO q6hr (total 6 mg/kg/day)
+        - Adults: 100 mg PO q6hr
+      notes: |
+        Full course for UTI in children and adults is 7 days.
+
+    - id: "nitroglycerine"
+      name: "Nitroglycerine"
+      class: ""
+      page: 154
+      dose: |
+        Adults: 0.4 mg SL q5min × 3 doses
+      notes: |
+        prn anginal pain.
+
+    - id: "nystatin"
+      name: "Nystatin"
+      class: ""
+      page: 154
+      dose: |
+        - Preterm infants: 0.5 mL to each side of mouth q6hrs
+        - Term infant: 1 mL to each side of mouth q6hrs
+        - Children / Adults — oropharyngeal candidiasis: 4–6 mL PO q6hr
+      notes: |
+        - PO suspension = 100,000 units/mL
+        - Two weeks if HIV+ve
+        - Swish in mouth as long as possible before swallowing
+
+    - id: "omeprazole"
+      name: "Omeprazole"
+      class: ""
+      page: 154
+      dose: |
+        - Children: 0.5–1 mg/kg/dose PO OD or BD
+        - Adults: 20–40 mg PO OD
+      notes: |
+        May reduce the serum concentration of clopidogrel.
+
+    - id: "paracetamol"
+      name: "Paracetamol / Panadol"
+      class: ""
+      page: 154
+      dose: |
+        - Children: 10–15 mg/kg PO q4–6hr
+        - Adults: 650 mg PO q4–6hr
+      notes: |
+        Max dose: 4 g/day. Not given in liver failure.
+
+    - id: "paromomycin"
+      name: "Paromomycin"
+      class: ""
+      page: 154
+      dose: |
+        ≥ 12 yo and adults: 500 mg PO QID × 14–21 days
+
+    - id: "pentamidine"
+      name: "Pentamidine"
+      class: ""
+      page: 154
+      dose: |
+        Adults / Children: 4 mg/kg IV QD
+
+    - id: "pethidine"
+      name: "Pethidine (Demerol)"
+      class: ""
+      page: 154
+      dose: |
+        - Children: 0.5–1 mg/kg q4hrs
+        - Adults: IM/PO/SQ 50 mg q3hrs
+      notes: |
+        Morphine is almost always preferred if available (including for biliary issues).
+
+    - id: "phenobarbital"
+      name: "Phenobarbitone / Phenobarbital"
+      class: ""
+      page: 154
+      dose: |
+        **Neonates:**
+        - Loading: 20 mg/kg IV/IM
+        - Maintenance: 5 mg/kg IV/IM/PO OD
+
+        **Infants / Children / Adults:**
+        - Loading: 15 mg/kg IV/IM (max initial loading dose 320 mg)
+        - Maintenance: 5 mg/kg IV/IM/PO OD
+      notes: |
+        **Not compatible with aminophylline, metronidazole.**
+
+        Give over 20 minutes if IV (not faster than 1 mg/kg/min).
+
+    # ═══════════════════════ PAGE 155 ═══════════════════════
+    - id: "phenytoin"
+      name: "Phenytoin"
+      class: ""
+      page: 155
+      dose: |
+        **Children:**
+        - Loading: 15–20 mg/kg IV
+        - Maintenance: 2.5–4 mg/kg IV/PO q12hrs
+
+        **Adults:**
+        - Loading: 20 mg/kg IV
+        - Maintenance: 100 mg IV/PO q6–8hrs
+      notes: |
+        **Not compatible with aminophylline.** Give in NS only. Flush with NS after giving.
+
+        IV push: max rate 50 mg/min.
+
+    - id: "potassium"
+      name: "Potassium"
+      class: ""
+      page: 155
+      dose: |
+        **Children:** 1 mEq/kg/dose
+
+        **Adults:**
+        - Dose based on the level of hypokalemia
+        - 10 mEq raises potassium approximately 0.1
+        - PO preferred to IV
+      notes: |
+        - 1 mEq = 75 mg (KCl)
+        - Frequency based on the level of deficiency
+
+    - id: "prednisone"
+      name: "Prednisone / Prednisolone"
+      class: ""
+      page: 155
+      dose: |
+        - Children: 1–2 mg/kg PO OD
+        - Adults: 40 mg PO OD
+
+        **Suggested tapering schedule:**
+        - Children: decrease dose by ~10% every 2 weeks
+        - Adults:
+          - Dose ≥ 20 mg/day: decrease by 5 mg/day every week
+          - Dose 10–20 mg/day: decrease by 2.5 mg/day every 2 weeks
+          - Dose ≤ 10 mg/day: decrease by 1 mg/day every 2 weeks
+      notes: |
+        Max for asthma: 60 mg/day. Tapering is only required if used for **> 3 weeks**.
+
+        If any symptoms of adrenal insufficiency, return to the previous dose. Symptoms of adrenal insufficiency: abd pain, vomiting, unusual sweating, dehydration, confusion, fatigue, weakness, low BP, high HR, shock.
+
+    - id: "propranolol"
+      name: "Propranolol"
+      class: ""
+      page: 155
+      dose: |
+        - Children: 0.5–1 mg/kg/day PO ÷ q6–12hrs
+        - Adults — initial: 40 mg PO BID
+      notes: |
+        - Max: 8 mg/kg/day
+        - Max: 320 mg PO ÷ q6–12hrs
+
+    - id: "pyrazinamide"
+      name: "Pyrazinamide"
+      class: ""
+      page: 155
+      dose: |
+        - Children: 35 mg/kg PO QD
+        - Adults: 25 mg/kg PO QD
+
+    - id: "pyridoxine"
+      name: "Pyridoxine"
+      class: ""
+      page: 155
+      dose: |
+        Adults: 25 mg PO QD
+      notes: |
+        Given with TB treatment.
+
+    - id: "pyrimethamine"
+      name: "Pyrimethamine"
+      class: ""
+      page: 155
+      dose: |
+        **Children:**
+        - Initial: 0.5 mg/kg/dose BD × 2–4 days
+        - Maintenance: 0.25 mg/kg/dose
+
+        **Adults:**
+        - Initial: 200 mg PO once
+        - Maintenance: weight ≤ 60 kg 50 mg PO QD; weight > 60 kg 75 mg PO QD
+      notes: |
+        Given with sulfadiazine and leucovorin.
+
+    # ═══════════════════════ PAGE 156 ═══════════════════════
+    - id: "quinine"
+      name: "Quinine"
+      class: ""
+      page: 156
+      dose: |
+        **Infants / Children / Adults:**
+        - See the malaria algorithm
+        - Loading dose: 20 mg/kg IV given over 4 hours (after dilution)
+        - Maintenance dose: 10 mg/kg IV q8hrs (dilute, give over 2 hrs)
+      notes: |
+        **DANGER:** rapid administration is dangerous. Mix with 10 mL/kg of 5% dextrose & run over 2–4 hours. DO NOT exceed 5 mg/kg/hr.
+
+    - id: "ranitidine"
+      name: "Ranitidine"
+      class: ""
+      page: 156
+      dose: |
+        **Neonates:**
+        - < 37 weeks: 0.5 mg/kg IV q12hrs
+        - > 37 weeks: 1 mg/kg IV q12hrs
+        - PO: 1–2 mg/kg q12hrs
+
+        **Children:** 2–5 mg/kg/dose q12hrs
+
+        **Adults:** 150 mg PO BD
+      notes: |
+        **Not compatible with phenytoin.**
+
+        - IV push: minimum > 5 min to prevent hypotension
+        - IV infusion: 15–20 min
+        - Caution: increased risk of NEC in VLBW infants
+
+    - id: "rifabutin"
+      name: "Rifabutin"
+      class: ""
+      page: 156
+      dose: |
+        **Children:**
+        - Treatment: 15 mg/kg PO QD
+        - Prophylaxis: 5 mg/kg PO QD
+
+        **Adults:** 300 mg PO QD
+      notes: |
+        In severe MAC.
+
+    - id: "rifampicin"
+      name: "Rifampicin"
+      class: ""
+      page: 156
+      dose: |
+        - Children: 15 mg/kg PO QD
+        - Adults: 10 mg/kg PO QD
+
+    - id: "salbutamol"
+      name: "Salbutamol"
+      class: ""
+      page: 156
+      dose: |
+        **Nebulization:**
+        - ≤ 20 kg: 2.5 mg/dose in 3 mL NS
+        - > 20 kg: 5 mg/dose in 5 mL NS
+
+        **MDI (metered dose inhaler):**
+        - 5–10 kg: 4 puffs
+        - 10–20 kg: 6 puffs
+        - > 20 kg: 8 puffs
+      notes: |
+        **DO NOT EVER GIVE ORALLY — not effective.**
+
+    - id: "sulphadoxine-pyrimethamine"
+      name: "Sulphadoxine-pyrimethamine (SP)"
+      class: ""
+      page: 156
+      dose: |
+        **Children:**
+        - 2–5 yo: ½ tab monthly
+        - 5–10 yo: 1 tab monthly
+        - 10–15 yo: 2 tabs monthly
+        - > 15 yo: 3 tabs monthly
+      notes: |
+        Malaria prophylaxis in patients with sickle cell disease.
+
+    - id: "spironolactone"
+      name: "Spironolactone"
+      class: ""
+      page: 156
+      dose: |
+        - Children: 0.5–1.5 mg/kg/dose BD
+        - Adults: 25 mg PO OD
+      notes: |
+        Max dose: 100 mg/day.
+
+    - id: "valacyclovir"
+      name: "Valacyclovir"
+      class: ""
+      page: 156
+      dose: |
+        **Children:**
+        - HSV: 1 g PO BD
+        - VZV: 20 mg/kg/dose PO TID
+
+        **Adults:**
+        - HSV: 400 mg PO TID
+        - VZV: 1 g PO TID
+
+    - id: "valganciclovir"
+      name: "Valganciclovir"
+      class: ""
+      page: 156
+      dose: |
+        Adults: 900 mg PO BD
+
+    - id: "sulfadiazine"
+      name: "Sulfadiazine"
+      class: ""
+      page: 156
+      dose: |
+        - Children: 40 mg/kg/dose QID
+        - Adults: 1.5 g PO q6hrs
+      notes: |
+        Given with leucovorin and pyrimethamine for toxoplasmosis.
+
+    # ═══════════════════════ PAGE 157 ═══════════════════════
+    - id: "valproic-acid"
+      name: "Valproic Acid / Sodium Valproate"
+      class: ""
+      page: 157
+      dose: |
+        **Children:**
+        - Initial: 10–15 mg/kg/day PO ÷ q8–12hrs
+        - Maintenance: 30–60 mg/kg/day ÷ q8–12 hrs
+
+        **Adults:**
+        - Initial: 15 mg/kg/day PO ÷ q8–12hrs
+        - Maintenance: 60 mg/kg/day ÷ q8–12 hrs
+
+    - id: "vitamin-a"
+      name: "Vitamin A"
+      class: ""
+      page: 157
+      dose: |
+        - < 6 months: not recommended
+        - 6–12 months: 100,000 units PO stat
+        - > 12 months: 200,000 units PO stat
+      notes: |
+        Once on admission; should not be given twice within 1 month.
+
+    - id: "vitamin-d"
+      name: "Vitamin D"
+      class: ""
+      page: 157
+      dose: |
+        **Infants:**
+        - Rickets: 2000 IU/day × 6–12 wks
+        - Maintenance: 400 IU/day
+
+        **Children:**
+        - Rickets: 2000 IU/day × 6–12 wks
+        - Maintenance: 600–1000 IU/day
+
+        **Adults:**
+        - Deficiency: 6000 IU/day × 8 wks
+        - Maintenance: 2000 IU/day
+      notes: |
+        Children may also take 50,000 IU/week × 6 weeks.
+
+    - id: "vitamin-k"
+      name: "Vitamin K"
+      class: ""
+      page: 157
+      dose: |
+        **Neonate:**
+        - Preterm < 1 kg: 0.3 mg/kg IM stat
+        - Preterm > 1 kg: 0.5 mg IM stat
+        - Term: 1 mg IM stat
+
+        **Supratherapeutic INR:**
+        - Children: 0.03 mg/kg/dose IV (max dose 1 mg)
+        - Adult:
+          - INR 4.5–10, no bleeding: may consider 1–2.5 mg PO
+          - INR > 10: 2.5–5 mg PO
+          - Minor bleeding & elevated INR: 2.5–5 mg PO
+          - Major bleeding & elevated INR: 10 mg PO
+      notes: |
+        **Adequate standard intake daily:**
+        - 0–1 yrs: 2.5 mcg
+        - 1–3 yrs: 30 mcg
+        - 4–13 yrs: 60 mcg
+        - 9–13 yrs: 60 mcg
+        - > 14 yrs female: 90 mcg/day
+        - > 14 yrs male: 120 mcg/day
+
+    # ═══════════════════════ PAGE 158 ═══════════════════════
+    - id: "vitamin-b12"
+      name: "Vitamin B12"
+      class: ""
+      page: 158
+      dose: |
+        **Infants dietary deficiency:** 1 mg IM/day × 5 days, then weekly × 3 more doses
+
+        **Infants / Children malabsorption:** 1 mg IM every other day × 6 days, then weekly for 6 weeks
+
+        **Adults:**
+        - Deficiency: 1 mg PO QD
+        - Severe deficiency or pernicious anemia: 1 mg IM every other day × 6 days, then weekly for 6 weeks
+      notes: |
+        Also known as cyanocobalamin.
+
+    - id: "warfarin"
+      name: "Warfarin"
+      class: ""
+      page: 158
+      dose: |
+        - Children: 0.2 mg/kg (max 10 mg) PO OD × 2 days
+        - Adults: 10 mg PO OD × 2 days
+      notes: |
+        Max 10 mg/dose.
+
+    - id: "zinc-sulfate"
+      name: "Zinc Sulfate"
+      class: ""
+      page: 158
+      dose: |
+        - Age ≤ 6 m: 10 mg daily for 10–14 days
+        - Age > 6 m: 20 mg daily for 10–14 days
