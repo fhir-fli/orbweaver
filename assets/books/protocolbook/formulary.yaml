@@ -25,9 +25,17 @@
 #     + pyrimethamine + leucovorin is the toxoplasmosis regimen, matching the
 #     book's own p.136; sulfadiazine has no role in PCP).
 #
+# DRUG-NAME SPELLING normalised to the correct INN (better for search; no
+# dose change): "Gancyclovir"→"Ganciclovir", "Valgancyclovir"→
+# "Valganciclovir", "Paramomycin"→"Paromomycin".
+#
 # OE CURRENCY FLAG (transcribed faithfully, NOT edited — for the OE pass):
 #   - p.156 Ranitidine was withdrawn globally in 2020 (NDMA contamination);
 #     a modern formulary would substitute an alternative H2 blocker / PPI.
+#
+# ✅ FULL VERIFICATION SWEEP 2026-07-20: every drug on pp.146–158 re-checked
+#   against a 300-dpi render — ZERO dose-transcription errors; the only
+#   deviations from the source are the intentional corrections listed above.
 # ============================================================
 
 formulary:
