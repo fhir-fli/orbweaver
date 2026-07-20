@@ -1,0 +1,217 @@
+# ============================================================
+# ProtocolBook pp.135–138 — Opportunistic Infections in HIV. Internal
+# Medicine Protocols leaf. One cohesive reference (11 OIs + prophylaxis)
+# under a single book sub-heading → one multi-page leaf (like the STI
+# section); rich per-OI tags make each infection searchable by name.
+#
+# Rendering: each OI is a titled prose card (CD4 / symptoms / diagnosis /
+# treatment as nested bullets). Prophylaxis and the VZV drug matrix are
+# rendered as prose/table respectively (the book's 2-cell prophylaxis
+# table has too much nested content for a grid).
+#
+# 🔴 GENUINE ERROR corrected (silent, per the standing rule):
+#   p.136 cryptococcal induction prints flucytosine "25 gm/kg/dose" — a
+#   grams-per-kg dose is physically impossible; standard 5-FC is 25 MG/kg/
+#   dose QID (100 mg/kg/day, per WHO cryptococcal-meningitis guidance).
+#   Rendered "25 mg/kg/dose". Grey must fix the source PDF.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - p.136 toxoplasmosis child leucovorin printed "5 mg PO QD once every
+#     3 days" (contradictory) → rendered "5 mg PO once every 3 days".
+#   - CD4 thresholds, TMP-SMX / dapsone prophylaxis, pyrimethamine-
+#     sulfadiazine-leucovorin for toxo, ampho+flucytosine → fluconazole for
+#     crypto, 21-day TMP-SMX + steroid-if-hypoxic for PCP, and the
+#     ganciclovir/valganciclovir CMV options are all standard OI care.
+# ============================================================
+
+topic:
+  id: "pb-im-hiv-oi"
+  title: "Opportunistic Infections in HIV"
+  list_subtitle: "pp.135–138 · prophylaxis & treatment by OI"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["HIV", "AIDS", "opportunistic infection", "OI", "CD4", "prophylaxis", "TMP-SMX", "cotrimoxazole", "dapsone", "candida", "candidiasis", "thrush", "toxoplasmosis", "cryptococcal meningitis", "cryptococcus", "PCP", "pneumocystis", "MAC", "mycobacterium avium", "cryptosporidiosis", "histoplasmosis", "HSV", "herpes", "VZV", "varicella", "zoster", "shingles", "CMV", "cytomegalovirus", "fluconazole", "amphotericin", "flucytosine", "ganciclovir", "acyclovir", "internal medicine", "infectious disease"]
+  category: "medical"
+  page_number: 135
+
+  pages:
+
+    # ═══════════════════════ PAGE 135 ═══════════════════════
+    - page_number: 135
+      blocks:
+
+        - type: "prose"
+          title: "Prophylaxis — when to give to prevent infection"
+          markdown: |
+            - **PCP / toxoplasma encephalitis** — CD4 < 200 or %CD4 < 14% (and for toxoplasma when CD4 < 100 and toxoplasma IgG positive)
+              - Preferred: TMP-SMX
+                - Child < 5 kg: 120 mg PO QD
+                - Child 5–14.9 kg: 240 mg PO QD
+                - Child 15–29.9 kg: 480 mg PO QD
+                - Child > 30 kg and adult: 1 DS tab PO QD
+              - Alternative: dapsone
+                - Child < 12 yo: 2 mg/kg PO QD
+                - Child > 12 yo and adults: 100 mg PO QD
+            - **Disseminated MAC** — CD4 < 50 (after ruling out active disseminated MAC)
+              - Preferred (child): azithromycin 20 mg/kg PO once weekly, OR clarithromycin 7.5 mg/kg PO BD, OR azithromycin 5 mg/kg/day PO; alternative rifabutin 5 mg/kg PO daily
+              - Preferred (adult): azithromycin 1200 mg PO once weekly, OR clarithromycin 500 mg PO BD, OR azithromycin 600 mg PO twice weekly; alternative rifabutin 300 mg PO daily
+
+        - type: "prose"
+          title: "Candida (oropharyngeal and oesophageal)"
+          markdown: |
+            - **CD4:** usually < 200
+            - **Symptoms:** cotton feeling in the mouth, loss of taste, varying degrees of pain with swallowing
+            - **Diagnosis:** physical exam reveals pseudomembranous white plaques
+            - **Treatment:**
+              - Oropharyngeal (treat 7–14 days)
+                - Fluconazole — child 3–6 mg/kg/dose PO daily; adult 100 mg PO QD
+                - Nystatin (if suspension, swish in mouth as long as possible before swallowing) — child < 5 yo 100,000 IU (1 mL) q6hrs PO; child 5–12 yr 200,000 IU (2 mL) q6hrs PO; > 12 yo and adult 400,000–600,000 IU (4–6 mL) q6hrs PO
+              - Oesophageal (treat 14–21 days)
+                - Fluconazole — child 6 mg/kg/dose PO × 1 then 3–6 mg/kg/dose PO daily; adult 400 mg PO × 1 then 150–200 mg PO QD
+
+    # ═══════════════════════ PAGE 136 ═══════════════════════
+    - page_number: 136
+      blocks:
+
+        - type: "prose"
+          title: "Toxoplasmosis"
+          markdown: |
+            - **CD4:** usually < 200
+            - **Symptoms:** often neurological / encephalitis (headache, confusion), may also have fever, can have pneumonitis (presents similarly to PCP)
+            - **Diagnosis:** usually presumptive based on clinical picture; can also diagnose with positive Ig test
+            - **Treatment** (pyrimethamine, sulfadiazine and leucovorin):
+              - Children
+                - Pyrimethamine 0.5 mg/kg/dose BD × 2–4 days, followed by 0.25 mg/kg/dose × 4 weeks, PLUS
+                - Sulfadiazine 40 mg/kg/dose 4 times daily
+                - Leucovorin 5 mg PO once every 3 days
+              - Adults
+                - Pyrimethamine 200 mg PO once, followed by: weight ≤ 60 kg 50 mg PO QD; weight > 60 kg 75 mg PO QD
+                - Sulfadiazine 1.5 g PO q6hrs
+                - Leucovorin 10–25 mg PO QD
+                - Alternative: TMP-SMX 5 mg/kg/dose & 25 mg/kg/dose PO BD
+
+        - type: "prose"
+          title: "Cryptococcal meningitis"
+          markdown: |
+            - **CD4:** usually < 100
+            - **Symptoms:** typical meningoencephalitis symptoms — fever, headache, meningismus, photophobia and vomiting
+            - **Diagnosis:** LP — CSF analysis (india ink stain, Ag testing, fungal culture)
+            - **Treatment:**
+              - Induction phase (2 weeks) — one of the following, first option preferred:
+                - (Preferred) Liposomal amphotericin B 4 mg/kg/day IV plus flucytosine 25 mg/kg/dose PO 4 times daily × 2 weeks
+                - Amphotericin B deoxycholate 1 mg/kg/day IV plus flucytosine 25 mg/kg/dose PO 4 times daily
+                - Fluconazole 800 mg/day (12 mg/kg/day in children < 19 kg) plus flucytosine 25 mg/kg/dose PO 4 times daily
+              - Consolidation phase (8 weeks):
+                - Fluconazole 400 mg/day (10 mg/kg/day in children < 19 kg)
+
+        - type: "prose"
+          title: "Pneumocystis jiroveci pneumonia (PCP)"
+          markdown: |
+            - **CD4:** usually < 200
+            - **Symptoms:** progressive dyspnea on exertion, nonproductive cough, fever, chest discomfort; may be severely hypoxic
+            - **Diagnosis:** CXR with bilateral infiltrates, elevated LDH
+            - **Treatment** (21 days) — first option preferred:
+              - TMP-SMX: TMP 5 mg/kg/dose & SMX 25 mg/kg/dose IV or PO q6hrs
+              - Pentamidine 4 mg/kg IV QD
+              - If initial O₂ sat on room air is < 90%: add prednisone / prednisolone
+                - Days 1–5: 1 mg/kg/dose BID (max 40 mg/dose)
+                - Days 6–10: 1 mg/kg/dose QD (max 40 mg/dose)
+                - Days 11–21: 0.5 mg/kg/dose QD (max 20 mg/dose)
+
+    # ═══════════════════════ PAGE 137 ═══════════════════════
+    - page_number: 137
+      blocks:
+
+        - type: "prose"
+          title: "Mycobacterium avium complex (MAC)"
+          markdown: |
+            - **CD4:** usually < 50
+            - **Symptoms:** typically nonspecific — fevers, night sweats, abdominal pain and diarrhea; can also cause lymphadenitis
+            - **Diagnosis:** AFB smear from blood, bone marrow, stool, sputum, bronchial washings, gastric aspirate, or biopsy / FNA
+            - **Treatment** (at least 2 drugs):
+              - Children
+                - Clarithromycin 10 mg/kg/dose BD
+                - Ethambutol 20 mg/kg PO QD
+                - Azithromycin (in place of clarithromycin) 10 mg/kg QD
+                - If CD4 < 50, consider adding rifabutin 15 mg/kg PO QD
+              - Adults
+                - Clarithromycin 500 mg PO BD
+                - Ethambutol 15 mg/kg PO QD
+                - Azithromycin (in place of clarithromycin) 500 mg PO QD
+
+        - type: "prose"
+          title: "Cryptosporidiosis"
+          markdown: |
+            - **CD4:** usually < 100
+            - **Symptoms:** varying degrees of diarrheal illness, from mild to severe enteritis; can be profuse and life-threatening
+            - **Diagnosis:** clinical presentation, stool microscopy, PCR
+            - **Treatment:**
+              - Primary treatment is to start ART — difficult to clear the infection while severely immunocompromised
+              - May attempt direct treatment:
+                - Nitazoxanide — 1–3 yo 100 mg PO BD; 4–11 yo 200 mg PO BD; ≥ 12 yo 500–1000 mg PO BD with food × 14 days
+                - Alternative: paromomycin 500 mg PO QID × 14–21 days
+
+        - type: "prose"
+          title: "Histoplasmosis"
+          markdown: |
+            - **CD4:** usually < 150
+            - **Symptoms:** nonspecific — fever, chills, sweats, malaise, fatigue, muscle ache, weight loss; often pulmonary involvement and can be mistaken for TB; may have hepatosplenomegaly
+            - **Diagnosis:** often only by history (exposure to soil contaminated with bat and bird feces); difficult to make — cultures may take 6 wks, Ag (blood or urine) more rapid, Ig may take 4–6 weeks after initial exposure to appear
+            - **Treatment:**
+              - Induction — one of the two below (first option preferred):
+                - Liposomal amphotericin B 3 mg/kg IV QD (children 3–5 mg/kg)
+                - Amphotericin B deoxycholate 1 mg/kg/day IV
+              - Maintenance:
+                - Children: itraconazole 2–5 mg/kg/dose TID × 3 days, then BID
+                - Adults: itraconazole 200 mg PO TID
+              - If CD4 < 50, consider adding rifabutin 300 mg PO QD
+
+    # ═══════════════════════ PAGE 138 ═══════════════════════
+    - page_number: 138
+      blocks:
+
+        - type: "prose"
+          title: "Herpes simplex virus (HSV) types 1 & 2"
+          markdown: |
+            - **CD4:** no specific level; generally more severe as CD4 drops
+            - **Symptoms:** often a prodrome of pruritis, followed by eruption of painful vesicles and ulcerations; may be multiple or single; cannot determine type 1 vs 2 from clinical presentation alone
+            - **Diagnosis:** often clinical; ideally viral culture, Ag detection or PCR for HSV DNA if available (especially since, if immunocompromised, multiple diseases may present with ulcers)
+            - **Treatment:**
+              - Valacyclovir 1 g PO BD (children and adults)
+              - Acyclovir — children < 12 yo 20 mg/kg/dose PO TID; children > 12 yo & adults 400 mg PO TID
+
+        - type: "prose"
+          title: "Varicella zoster virus (VZV) — \"shingles\""
+          markdown: |
+            - **CD4:** no specific level; generally more severe as CD4 drops
+            - **Symptoms:** erythematous papules progressing to vesicles or bullae, generally distributed along a single dermatome (though more likely to affect a greater area with more severe immunosuppression)
+            - **Diagnosis:** usually clinical, based on history and vesicular / dermatomal rash
+
+        - type: "table"
+          columns: ["Drug", "Children", "Adults"]
+          column_flex: [4, 5, 4]
+          column_align: ["left", "left", "left"]
+          rows:
+            - cells: ["Valacyclovir", "20 mg/kg/dose PO TID", "1 g PO TID"]
+            - cells: ["Acyclovir", "20 mg/kg/dose PO QID", "1 g PO TID"]
+
+        - type: "prose"
+          markdown: |
+            Severe cutaneous, visceral or disseminated disease in children and adults: acyclovir 10–15 mg/kg/dose IV q8hrs until improvement.
+
+            **Prevention — vaccination:**
+
+            - Give in patients with CD4 > 200, no prior vaccination, no prior outbreaks, and seronegative for VZV
+            - Primary varicella vaccination: 0.5 mL SQ × 2 doses ≥ 3 months apart
+
+        - type: "prose"
+          title: "Cytomegalovirus (CMV)"
+          markdown: |
+            - **CD4:** usually < 50
+            - **Symptoms:** retinitis most common (80–90%) — blurring, blind spots, floaters or flashing lights, usually unilateral; can also affect the GI tract with nonspecific complaints that usually include pain; rarely affects the nervous system (encephalitis or peripheral nerve involvement)
+            - **Diagnosis:** generally made by ophthalmologist; serum PCR and serologies not normally helpful, but if found in CSF on LP, high likelihood of brain involvement
+            - **Treatment:**
+              - Induction (one of the following):
+                - Adults: valganciclovir 900 mg PO BD
+                - Alternatives for adults and children:
+                  - Ganciclovir 5 mg/kg/dose IV q12hrs
+                  - Foscarnet 90 mg/kg/dose IV q12hrs
