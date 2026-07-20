@@ -175,12 +175,18 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
     final f = _facet;
     if (f.mode == 'alpha') {
       final ds = _sortedDrugs;
+      final intro = widget.formulary.intro;
+      final hasIntro = intro != null;
       return ListView.separated(
         padding: const EdgeInsets.symmetric(vertical: 4),
-        itemCount: ds.length,
+        itemCount: ds.length + (hasIntro ? 1 : 0),
         separatorBuilder: (_, _) => const Divider(
             height: 1, thickness: 0.5, indent: 12, endIndent: 12),
-        itemBuilder: (_, i) => _drugRow(ds[i], subtitle: ds[i].subtitle),
+        itemBuilder: (_, i) {
+          if (hasIntro && i == 0) return _introCard(intro);
+          final d = ds[hasIntro ? i - 1 : i];
+          return _drugRow(d, subtitle: d.subtitle);
+        },
       );
     }
     // group mode: class or indication.
@@ -226,6 +232,19 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
             color: _accent,
           ),
         ),
+      );
+
+  /// Front-matter card shown once at the top of the A–Z list.
+  Widget _introCard(String markdown) => Container(
+        margin: const EdgeInsets.fromLTRB(10, 6, 10, 6),
+        padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(9),
+          border: Border.all(color: _accent.withValues(alpha: 0.35)),
+        ),
+        child: MiniMarkdown(
+            markdown: markdown, fontSize: 12.5, bulletColor: _accent),
       );
 
   /// A–Z / class row: taps through to the drug detail page.
@@ -455,6 +474,13 @@ class DrugDetailScreen extends StatelessWidget {
                         fontSize: 12.5,
                         fontStyle: FontStyle.italic,
                         color: Colors.black.withValues(alpha: 0.55))),
+              ),
+            if (drug.dose != null)
+              _card(
+                theme,
+                title: 'Dose & route',
+                child: MiniMarkdown(
+                    markdown: drug.dose!, fontSize: 13, bulletColor: _accent),
               ),
             if (drug.regimen != null)
               _card(

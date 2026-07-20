@@ -1,0 +1,110 @@
+# ============================================================
+# ProtocolBook pp.146–158 — Essential Medications Formulary.
+#
+# Built as a faceted `collection` (Grey's decision 2026-07-19): NOT a
+# page-by-page printed list. The book's alphabetical Medications | Dose and
+# Route | Notes/Contraindications table is modelled as drug records and
+# rendered by the existing DrugIndexScreen (A–Z + search). These drugs are
+# PROSE-dosed (by population/indication), so each uses the `dose` markdown
+# field (added to the Drug model for this formulary) rather than the WHO
+# weight-band grid. `intro` carries the book's front-matter dosing notes.
+#
+# Source-verified against pp.146–158 @150/300 dpi (RULE #0). p.145 is the
+# section divider.
+# ============================================================
+
+formulary:
+  id: "pb_formulary"
+  title: "Essential Medications"
+  subtitle: "ProtocolBook formulary · pp.146–158"
+
+  # Prose-dose formulary — no weight-band axes (kept minimal to satisfy the
+  # loader; no drug uses bands).
+  bands:
+    label: ""
+    columns: []
+  bands_art:
+    label: ""
+    columns: []
+
+  facets:
+    - key: "alpha"
+      label: "A–Z"
+      mode: "alpha"
+      tap: "detail"
+
+  classes: []
+  indications: []
+
+  intro: |
+    **Age designations**
+    - Neonates: ≤ 28 days old
+    - Infants: ≤ 1 year old (includes neonates unless specified)
+    - Children: ≤ 12 years old (includes infants & neonates unless specified)
+    - Adult: > 12 years old
+
+    **Dosing regimens**
+    - "dose BD" = that dose given twice daily, not divided
+    - "dose ÷ BD" = the dose is the total for the day, divided into two separate equal doses
+
+    **Note:** these are the most common regimens for commonly encountered conditions; the specific patient or condition may require different dosing.
+
+  drugs:
+
+    # ═══════════════════════ PAGE 146 ═══════════════════════
+    - id: "acyclovir"
+      name: "Acyclovir"
+      class: ""
+      page: 146
+      dose: |
+        **Children:**
+        - HSV: 20 mg/kg/dose PO TID
+        - VZV: 20 mg/kg/dose PO QID
+
+        **Adults:**
+        - HSV: 400 mg PO TID
+        - VZV: 1 g PO TID
+
+    - id: "albendazole"
+      name: "Albendazole"
+      class: ""
+      page: 146
+      dose: |
+        - Age < 2 yrs: 200 mg PO × 1 dose
+        - Age ≥ 2 yr: 400 mg PO × 1 dose
+
+    - id: "aminophylline"
+      name: "Aminophylline"
+      class: ""
+      page: 146
+      dose: |
+        **Infants** (only < 32 weeks or 1.5 kg with apnea of prematurity):
+        - Loading: 6 mg/kg IV/PO over 1 hr
+        - Maintenance dose (IV or oral):
+          - Age ≤ 6 days: 2.5 mg/kg 12 hrly
+          - Age 7–28 days: 4 mg/kg 12 hrly
+      notes: |
+        **Not compatible with phenobarbital.**
+
+        IV infusion: give over 20–30 minutes. Oral preparation: mix 10 mL aminophylline (250 mg vial) with 40 mL sterile water = 5 mg/1 mL.
+
+    - id: "amoxicillin-clavulanate"
+      name: "Amoxicillin / Amoxiclav (Amoxicillin-Clavulanic acid)"
+      class: ""
+      page: 146
+      dose: |
+        **Children:**
+        - 25 mg/kg/dose BD for simple infections
+        - 40–45 mg/kg/dose BD for pneumonia / otitis media
+
+        **Adults:** 875 mg PO BD
+
+    - id: "amlodipine"
+      name: "Amlodipine"
+      class: ""
+      page: 146
+      dose: |
+        - Children: 0.05 mg/kg/dose OD
+        - Adults: 5–10 mg/dose PO daily
+      notes: |
+        Max dose 5 mg/dose, 10 mg/24 hr.

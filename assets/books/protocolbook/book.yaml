@@ -162,3 +162,9 @@ book:
       children:
         - topic: "topics/pb_im_sodium.yaml"
         - topic: "topics/pb_im_potassium.yaml"
+    - title: "Essential Medications"
+      # Faceted formulary collection (A–Z + search), not a chapter.
+      view: "collection"
+      formulary: "formulary.yaml"
+      palette:
+        accent: "0xFF4A148C"

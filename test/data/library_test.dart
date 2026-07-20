@@ -376,13 +376,13 @@ void main() {
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '
         'Paediatric 8, Cardiac 2, Sickle Cell 4, SAM 3, ENT 6, TB 3, '
-        'Anaemia 3, Pain 4, Neonatal 6, IM 28, Electrolytes 2 = 95 leaves)',
-        () {
+        'Anaemia 3, Pain 4, Neonatal 6, IM 28, Electrolytes 2 = 95 leaves; '
+        '+ Essential Medications formulary collection)', () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      // Thirteen section groups so far, mirroring the book's dividers.
-      expect(contents, hasLength(13));
+      // Fourteen section groups so far, mirroring the book's dividers.
+      expect(contents, hasLength(14));
       expect((contents[0] as YamlMap)['title'], 'Emergency Protocols');
       expect((contents[1] as YamlMap)['title'],
           'Ingestions, Anaphylaxis & Bites');
@@ -399,6 +399,8 @@ void main() {
       expect((contents[11] as YamlMap)['title'], 'Internal Medicine Protocols');
       expect((contents[12] as YamlMap)['title'],
           'Electrolytes: Sodium & Potassium');
+      expect((contents[13] as YamlMap)['title'], 'Essential Medications');
+      expect((contents[13] as YamlMap)['view'], 'collection');
       // Each group carries its own accent.
       expect((contents[0] as YamlMap)['palette']['accent'], '0xFFC62828');
       expect((contents[1] as YamlMap)['palette']['accent'], '0xFF6A1B9A');
@@ -413,6 +415,7 @@ void main() {
       expect((contents[10] as YamlMap)['palette']['accent'], '0xFF0277BD');
       expect((contents[11] as YamlMap)['palette']['accent'], '0xFF0D47A1');
       expect((contents[12] as YamlMap)['palette']['accent'], '0xFF00838F');
+      expect((contents[13] as YamlMap)['palette']['accent'], '0xFF4A148C');
       // Emergency Protocols = p.12–26 (15 topics), ending in Altered
       // Mental Status; Ingestions has Poisoning (p.28); Paediatric has
       // Meningitis (p.55) for now.

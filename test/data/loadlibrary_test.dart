@@ -8,12 +8,15 @@ import 'package:orbweaver/data/library.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('loadLibrary: protocolbook loads all 95 topics incl. TB Diagnosis',
+  test('loadLibrary: protocolbook loads all topics + formulary drugs',
       () async {
     final books = await loadLibrary();
     final pb = books.firstWhere((b) => b.id == 'protocolbook');
     final titles = pb.allTopics.map((t) => t.title).toList();
-    expect(titles, hasLength(95));
+    // 95 authored topic leaves + the Essential Medications formulary drugs
+    // (each drug loads as a synthetic searchable leaf).
+    expect(titles, hasLength(100));
+    expect(titles, contains('Acyclovir'));
     expect(
       titles,
       contains('Hydrocarbon Ingestion (Kerosene, Paraffin)'),

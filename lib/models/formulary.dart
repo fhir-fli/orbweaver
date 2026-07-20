@@ -24,11 +24,17 @@ class Formulary {
     required this.indicationLabels,
     required this.indicationOrder,
     required this.drugs,
+    this.intro,
   });
 
   final String id;
   final String title;
   final String subtitle;
+
+  /// Optional markdown shown once at the top of the A–Z list — used for a
+  /// formulary's front-matter (e.g. the ProtocolBook age-designation and
+  /// "dose BD" vs "dose ÷ BD" dosing conventions).
+  final String? intro;
 
   /// The two dose axes: the main weight-band grid (most drugs) and the
   /// antiretroviral surface-area/weight grid (6 bands, morning & evening).
@@ -107,6 +113,7 @@ class Formulary {
       indicationLabels: indLabels,
       indicationOrder: indOrder,
       drugs: drugs,
+      intro: f['intro'] as String?,
     );
   }
 }
@@ -167,6 +174,7 @@ class Drug {
     this.page,
     this.doses = const [],
     this.daily,
+    this.dose,
     this.notes,
     this.regimen,
     this.review = false,
@@ -182,6 +190,11 @@ class Drug {
 
   /// Antituberculosis daily dose (mg/kg), when there is no band grid.
   final String? daily;
+
+  /// Free-form "dose & route" markdown, for prose-dose formularies (e.g. the
+  /// ProtocolBook A–Z list) whose drugs are dosed by population / indication
+  /// rather than a weight-band grid. Rendered as a MiniMarkdown card.
+  final String? dose;
 
   /// Shared regimen line (antiretrovirals list it once above the forms).
   final String? regimen;
@@ -212,6 +225,7 @@ class Drug {
       page: m['page'] as int?,
       regimen: m['regimen'] as String?,
       daily: m['daily'] as String?,
+      dose: m['dose'] as String?,
       notes: m['notes'] as String?,
       review: (m['review'] as bool?) ?? false,
       bandLabel: (m['band_label'] as String?) ?? axis.label,
@@ -244,6 +258,7 @@ class Drug {
       ..write('${indications.join(' ')} ');
     if (regimen != null) b.write('$regimen ');
     if (daily != null) b.write('$daily ');
+    if (dose != null) b.write('$dose ');
     for (final d in doses) {
       b
         ..write('${d.label} ')
