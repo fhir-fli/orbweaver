@@ -17,6 +17,10 @@
 #     ceftriaxone; q23hr is a clear typo).
 #   - p.149 Cloxacillin adults "Severe infection: q4hr5" → "q4hr" (stray 5);
 #     "Flush line ... will if given" → "well".
+#   - p.153 Morphine adults "2–10 mg/kg/dose PO" → "2–10 mg/dose PO". The
+#     "/kg" is a DANGEROUS typo (2–10 mg/kg in an adult ≈ lethal); same fix
+#     as the p.80 pain-ladder morphine row. Child /kg rows are correct.
+#   - p.153 Lorazepam agitation "0.5–2 mg IV 12–4hrs" → "q2–4hrs".
 # ============================================================
 
 formulary:
@@ -453,3 +457,290 @@ formulary:
         - Children: 2 mL of 1:1000 nebulized, may repeat if effective
       notes: |
         To make 1:10,000: mix 1 mL of 1:1000 epinephrine in 9 mLs NS.
+
+    # ═══════════════════════ PAGE 151 ═══════════════════════
+    - id: "ethambutol"
+      name: "Ethambutol"
+      class: ""
+      page: 151
+      dose: |
+        - Children: 20 mg/kg/dose PO QD
+        - Adults: 15 mg/kg/dose PO QD
+
+    - id: "erythromycin"
+      name: "Erythromycin (Estolate)"
+      class: ""
+      page: 151
+      dose: |
+        **Infants / Children:**
+        - 50 mg/kg/day PO ÷ q6–8hrs
+        - 20 mg/kg/day IV ÷ q6hrs
+
+        **Adults:** 500 mg PO q6hr
+
+    - id: "fluconazole"
+      name: "Fluconazole"
+      class: ""
+      page: 151
+      dose: |
+        **Oropharyngeal candidiasis:**
+        - Children: 3–6 mg/kg/dose daily × 7–14 days
+        - Adult: 100 mg PO QD × 7–14 days
+
+        **Oesophageal candidiasis:**
+        - Children: 6 mg/kg/dose PO × 1, then 3–6 mg/kg/dose PO daily × 14–21 days
+        - Adult: 400 mg PO × 1, then 150–200 mg PO QD × 14–21 days
+
+    - id: "folic-acid"
+      name: "Folic Acid / Folate"
+      class: ""
+      page: 151
+      dose: |
+        **Infants / Children maintenance:**
+        - Infant: 0.1 mg PO/day
+        - < 4 years: 0.3 mg PO/day
+        - ≥ 4 years: 0.4 mg PO/day
+
+        **Adults:**
+        - Deficiency: 1 mg PO/day
+        - Maintenance: 0.4 mg PO/day
+
+        **Pregnant women:** 0.8 mg PO/day
+      notes: |
+        Megaloblastic / macrocytic anemia all receive 1 mg PO/IM/IV daily regardless of age.
+
+        **NEVER LESS THAN 0.1 MG PO/DAY IN PREGNANCY.**
+
+    - id: "foscarnet"
+      name: "Foscarnet"
+      class: ""
+      page: 151
+      dose: |
+        Everyone: 90 mg/kg/dose IV q12hrs
+
+    - id: "furosemide"
+      name: "Furosemide / Lasix"
+      class: ""
+      page: 151
+      dose: |
+        **Children:** 1–2 mg/kg IV/PO q12hrs
+
+        **Adults:**
+        - Heart failure exacerbation: 40 mg IV/IM (or double the maintenance dose) q2hrs
+        - Heart failure maintenance: 20–40 mg PO OD-BD
+        - Other: 20–40 mg IV/IM/PO
+      notes: |
+        **Not compatible with gentamicin.**
+
+        - IV push: max rate 0.5 mg/kg/min
+        - IV infusion: 10–15 min
+
+        See the heart failure protocol for specific details.
+
+    - id: "ganciclovir"
+      name: "Ganciclovir"
+      class: ""
+      page: 151
+      dose: |
+        Everyone: 5 mg/kg/dose IV q12hrs
+
+    - id: "gentamicin"
+      name: "Gentamicin"
+      class: ""
+      page: 151
+      dose: |
+        **Neonates** (if LBW < 2.5 kg and term with birth asphyxia):
+        - < 7 days: 3 mg/kg/day OD
+        - 8–28 days: 5 mg/kg/day OD
+
+        **Term neonates / children / adults:** 5–7.5 mg/kg/day OD
+      notes: |
+        **Do not mix with ampicillin.** Flush line or burette well if given at the same time as ampicillin.
+
+        - IV push: no
+        - IV infusion: give over 30 minutes; flush line well
+
+    # ═══════════════════════ PAGE 152 ═══════════════════════
+    - id: "heparin"
+      name: "Heparin (unfractionated)"
+      class: ""
+      page: 152
+      dose: |
+        **Children:**
+        - DVT / PE treatment: 75 units/kg IV bolus; 20 units/kg/hr IV infusion
+
+        **Adults:**
+        - DVT prophylaxis: 5000 units SC q12hrs
+        - DVT / PE treatment: 80 units/kg IV bolus; 18 units/kg/hr IV infusion
+        - Acute coronary syndrome: 60 units/kg IV bolus; 12 units/kg/hr IV infusion
+      notes: |
+        Treatment is given as an IV bolus followed by a continuous IV infusion.
+
+        - Maximum bolus for DVT/PE: 5,000 units
+        - Maximum bolus for ACS: 4,000 units
+        - Maximum infusion rate: 1,000 units/hr
+
+    - id: "hctz"
+      name: "HCTZ (Hydrochlorothiazide)"
+      class: ""
+      page: 152
+      dose: |
+        - Children: 0.5–1 mg/kg/dose OD or BD
+        - Adults: 12.5–50 mg OD
+      notes: |
+        **Max dose:**
+        - < 2 years: 37.5 mg OD
+        - 2–12 years: 100 mg OD
+        - > 12 years: 200 mg OD
+
+    - id: "hydroxyurea"
+      name: "Hydroxyurea"
+      class: ""
+      page: 152
+      dose: |
+        Child 2–12 years: initially 20 mg/kg once daily, increased every 12 weeks in steps of 2.5–5 mg/kg daily according to response; usual dose 20–30 mg/kg daily (max 35 mg/kg daily).
+      notes: |
+        For use in SCD with stroke, admission for acute chest syndrome, > 3 admissions/yr for pain, or requiring ≥ 2 transfusions yearly.
+
+    - id: "ibuprofen"
+      name: "Ibuprofen"
+      class: ""
+      page: 152
+      dose: |
+        **Neonates (PDA closure):**
+        - Dose 1 at 0 hours: 10 mg/kg PO
+        - Dose 2 & 3: 5 mg/kg PO at 24 & 48 hours
+
+        **Children:** 10 mg/kg PO q6hrs
+
+        **Adults:** 400–800 mg PO q6–8hrs
+      notes: |
+        **Max:** 800 mg/dose, 2400 mg/day.
+
+        Do not give in cases of renal disease. Give with food when possible.
+
+    - id: "iron"
+      name: "Iron"
+      class: ""
+      page: 152
+      dose: |
+        **Pre-term infant:** 2–4 mg elemental Fe/kg/day
+
+        **Iron deficiency:**
+        - Children: 3–6 mg elemental Fe/kg/day
+        - Adults: 60–120 mg elemental iron daily
+      notes: |
+        - Max dose: 15 mg elemental Fe/kg/day
+        - Hemaforte syrup: 5 mg elemental iron/mL
+        - 325 mg ferrous sulfate tablet contains 65 mg elemental iron
+
+    - id: "isoniazid"
+      name: "Isoniazid"
+      class: ""
+      page: 152
+      dose: |
+        - Children: 10 mg/kg PO QD
+        - Adults: 5 mg/kg PO QD
+
+    - id: "lactulose"
+      name: "Lactulose"
+      class: ""
+      page: 152
+      dose: |
+        - Infants (hepatic encephalopathy): 2.5–10 mL ÷ TID-QID
+        - Children: 1–3 mL/kg/day ÷ q8–12hrs
+        - Adults: 30 mL PO q6hr
+      notes: |
+        - Children max dose: 60 mL/day
+        - Formulation: 10 g/15 mL
+        - Goal: at least 3–4 soft stools daily
+
+    # ═══════════════════════ PAGE 153 ═══════════════════════
+    - id: "leucovorin"
+      name: "Leucovorin"
+      class: ""
+      page: 153
+      dose: |
+        - Children: 5 mg PO QD
+        - Adults: 10–25 mg PO QD
+
+    - id: "lisinopril"
+      name: "Lisinopril"
+      class: ""
+      page: 153
+      dose: |
+        - Infants / Children: 0.1 mg/kg PO OD
+        - Adults: 5 mg PO OD
+      notes: |
+        **Max dose:**
+        - Children: 0.6 mg/kg/day or the adult dose
+        - Adults: 40 mg/day
+
+    - id: "lorazepam"
+      name: "Lorazepam"
+      class: ""
+      page: 153
+      dose: |
+        **Adults / Children (> 12 yr):**
+        - Anxiety (acute): 2 mg PO q8hr
+        - Agitation: 0.5–2 mg IV q2–4hrs
+      notes: |
+        Use with caution in the elderly.
+
+    - id: "losartan"
+      name: "Losartan"
+      class: ""
+      page: 153
+      dose: |
+        **Infants / Children:**
+        - Initial: 0.5 mg/kg/day
+        - Maintenance: up to 1.4 mg/kg/day
+
+        **Adults:** 25 mg PO daily
+      notes: |
+        - Infants / Children max: initial 12.5 mg/day, maintenance 150 mg/day
+        - Adult max: 150 mg/day
+
+    - id: "metronidazole"
+      name: "Metronidazole"
+      class: ""
+      page: 153
+      dose: |
+        **Neonates:** 7.5 mg/kg/dose IV
+        - First week of life:
+          - < 1.2 kg: every 48 hours
+          - 1.2–2 kg: every 24 hours
+          - > 2 kg: every 12 hours
+        - Weeks 2–4:
+          - < 1.2 kg: every 24 hours
+          - > 1.2 kg: every 12 hours
+
+        **Mild infections:**
+        - Infants / Children: 7.5 mg/kg/dose PO q8hrs
+        - Adults: 500 mg PO q6hrs
+
+        **Moderate–severe infections:**
+        - Infants / Children: 10 mg/kg/dose IV q8hrs
+        - Adults: 500 mg IV q6hrs
+      notes: |
+        **Not compatible with phenobarbital or Ringers Lactate.** Administer separately. Discontinue the primary IV.
+
+        - IV push: no
+        - IV infusion: give over 60 minutes in D10 or NS
+
+    - id: "morphine"
+      name: "Morphine"
+      class: ""
+      page: 153
+      dose: |
+        **Neonate:** 0.05–0.2 mg/kg/dose IM/SC/slow IV q4hr prn
+
+        **Children:**
+        - 0.1–0.2 mg/kg/dose IV q2–4hrs prn
+        - 0.2–0.5 mg/kg/dose PO q4–6hrs prn
+
+        **Adults:**
+        - 1–2 mg/dose IV q2–4hrs prn
+        - 2–10 mg/dose PO q2–4hrs prn
+      notes: |
+        Ensure a high enough dose for pain control — but monitor frequently (at least q1hr to start) to avoid respiratory depression.
