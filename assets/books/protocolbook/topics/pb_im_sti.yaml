@@ -13,14 +13,16 @@
 #     UGTI), preserving the routing on the single-spine model.
 #   - The "children = sexual abuse" safeguarding note → red-alert callout.
 #
+# 🔴 GENUINE ERROR corrected (Grey approved 2026-07-19, silent per the rule):
+#   p.134 printed regimen (e) as "Trichomoniasis" but listed clotrimazole /
+#   nystatin — those are ANTIFUNGALS that treat CANDIDIASIS, not
+#   trichomoniasis. Fixed by: relabelling that entry "Candidiasis" (its drugs
+#   are correct for candidiasis) AND adding the proper "Trichomoniasis"
+#   regimen = metronidazole 2 g PO ×1 (alt tinidazole 2 g PO ×1), per WHO /
+#   CDC 2021 STI guidelines (trich = nitroimidazoles; VVC = topical azoles).
+#   Grey must fix the source PDF.
+#
 # CONTENT FLAGS for the later OE / content pass:
-#   - 🔴 p.134 regimen (e) is headed "Trichomoniasis" but lists clotrimazole
-#     / nystatin — these are ANTIFUNGALS that treat CANDIDIASIS, not
-#     trichomoniasis (which needs metronidazole/tinidazole, i.e. regimen
-#     (d)). The heading appears mislabeled (should be "Candidiasis").
-#     Transcribed FAITHFULLY (not a clear typo — an interpretive fix), but
-#     Grey should review: as written, trichomoniasis is covered by (d)'s
-#     metronidazole/tinidazole and (e) actually covers candidiasis.
 #   - Syndromic management (treat-by-presentation without lab confirmation)
 #     is standard WHO practice for low-resource settings. Doxycycline in
 #     pregnancy is (correctly) routed to erythromycin; ceftriaxone 250 mg
@@ -216,7 +218,8 @@ topic:
               - Alternative for non-pregnant women / men: doxycycline 100 mg/dose q12hrs × 7 days
               - Alternative for pregnant women: erythromycin 1 g/dose q12hrs × 7 days
             - **Bacterial vaginosis:** tinidazole 2 g PO × 1 dose (alternative: metronidazole 2 g PO × 1 dose)
-            - **Trichomoniasis** (using vaginal tablets): clotrimazole 500 mg inserted vaginally at bedtime × 1 dose
+            - **Trichomoniasis:** metronidazole 2 g PO × 1 dose (alternative: tinidazole 2 g PO × 1 dose)
+            - **Candidiasis** (using vaginal tablets): clotrimazole 500 mg inserted vaginally at bedtime × 1 dose
               - Alternative: clotrimazole 100 mg inserted vaginally at bedtime × 6 days
               - Alternative: nystatin 100,000 IU
             - **Herpes:**
