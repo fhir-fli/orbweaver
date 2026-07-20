@@ -82,3 +82,8 @@ book:
         - topic: "topics/calc_ottawa_ankle.yaml"
         - topic: "topics/calc_ottawa_knee.yaml"
         - topic: "topics/calc_bishop.yaml"
+    - title: "Mental Health & Alcohol"
+      children:
+        - topic: "topics/calc_phq9.yaml"
+        - topic: "topics/calc_gad7.yaml"
+        - topic: "topics/calc_auditc.yaml"

@@ -1,0 +1,59 @@
+# ============================================================
+# PHQ-9 — Patient Health Questionnaire (depression).
+# Evidence review 2026-07-19: validated severity/screening measure
+# (Kroenke 2001; USPSTF 2023 Grade B). Cutoff ≥ 10 ≈ 88% sens/spec for
+# major depression. PUBLIC DOMAIN (Pfizer, no permission/fee).
+# Item 9 (self-harm) needs a direct safety assessment on any positive.
+# ============================================================
+
+topic:
+  id: "calc-phq9"
+  title: "PHQ-9"
+  list_subtitle: "depression severity"
+  last_reviewed: "Evidence review 2026-07-19 · Kroenke 2001 · USPSTF 2023"
+  tags: ["phq-9", "phq9", "depression", "screening", "mood", "psychiatry", "severity"]
+  aliases:
+    - "PHQ-9"
+    - "Patient Health Questionnaire"
+    - "Depression screen"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Over the last 2 weeks, how often has the patient been bothered by each
+        problem? Scores severity and tracks response to treatment.
+
+    - type: "score"
+      title: "PHQ-9"
+      unit: "/ 27"
+      source: "Kroenke, Spitzer & Williams, J Gen Intern Med 2001 (public domain)"
+      items:
+        - key: "q1"
+          label: "Little interest or pleasure in doing things"
+          type: "scale"
+          default: "0"
+          options: &freq
+            - { value: "0", points: 0, label: "Not at all" }
+            - { value: "1", points: 1, label: "Several days" }
+            - { value: "2", points: 2, label: "More than half the days" }
+            - { value: "3", points: 3, label: "Nearly every day" }
+        - { key: "q2", label: "Feeling down, depressed, or hopeless", type: "scale", default: "0", options: *freq }
+        - { key: "q3", label: "Trouble falling/staying asleep, or sleeping too much", type: "scale", default: "0", options: *freq }
+        - { key: "q4", label: "Feeling tired or having little energy", type: "scale", default: "0", options: *freq }
+        - { key: "q5", label: "Poor appetite or overeating", type: "scale", default: "0", options: *freq }
+        - { key: "q6", label: "Feeling bad about yourself — a failure, or letting yourself/family down", type: "scale", default: "0", options: *freq }
+        - { key: "q7", label: "Trouble concentrating (reading, watching TV)", type: "scale", default: "0", options: *freq }
+        - { key: "q8", label: "Moving/speaking slowly, or being fidgety/restless — noticeably", type: "scale", default: "0", options: *freq }
+        - { key: "q9", label: "Thoughts of being better off dead, or of hurting yourself", type: "scale", default: "0", options: *freq }
+      bands:
+        - { min: 0, max: 4, label: "Minimal", severity: "none" }
+        - { min: 5, max: 9, label: "Mild", severity: "none" }
+        - { min: 10, max: 14, label: "Moderate — consider treatment", severity: "warn" }
+        - { min: 15, max: 19, label: "Moderately severe", severity: "alert" }
+        - { min: 20, label: "Severe", severity: "alert" }
+      notes:
+        - "≥ 10 is the usual threshold for probable major depression. A screening/severity measure — not diagnostic on its own."
+      caveats:
+        - "Item 9 (thoughts of self-harm): ANY positive response warrants a direct suicide-safety assessment, regardless of the total score."

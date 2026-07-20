@@ -1,0 +1,65 @@
+# ============================================================
+# AUDIT-C — Alcohol Use Disorders Identification Test (Consumption).
+# Evidence review 2026-07-19: validated alcohol screen (Bush 1998; USPSTF
+# 2018 Grade B). Positive: ≥ 4 (men) / ≥ 3 (women). PUBLIC DOMAIN (WHO/VA).
+# ============================================================
+
+topic:
+  id: "calc-auditc"
+  title: "AUDIT-C"
+  list_subtitle: "alcohol use screening"
+  last_reviewed: "Evidence review 2026-07-19 · Bush 1998 · USPSTF 2018"
+  tags: ["audit-c", "auditc", "alcohol", "screening", "drinking", "substance use", "aud"]
+  aliases:
+    - "AUDIT-C"
+    - "Alcohol screen"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        A brief screen for hazardous drinking or alcohol use disorder. Score
+        each of the three questions.
+
+    - type: "score"
+      title: "AUDIT-C"
+      unit: "/ 12"
+      source: "Bush et al., Arch Intern Med 1998 (public domain)"
+      items:
+        - key: "frequency"
+          label: "How often do you have a drink containing alcohol?"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Never" }
+            - { value: "1", points: 1, label: "Monthly or less" }
+            - { value: "2", points: 2, label: "2–4 times a month" }
+            - { value: "3", points: 3, label: "2–3 times a week" }
+            - { value: "4", points: 4, label: "4+ times a week" }
+        - key: "quantity"
+          label: "How many standard drinks on a typical drinking day?"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "1–2" }
+            - { value: "1", points: 1, label: "3–4" }
+            - { value: "2", points: 2, label: "5–6" }
+            - { value: "3", points: 3, label: "7–9" }
+            - { value: "4", points: 4, label: "10 or more" }
+        - key: "binge"
+          label: "How often do you have 6 or more drinks on one occasion?"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Never" }
+            - { value: "1", points: 1, label: "Less than monthly" }
+            - { value: "2", points: 2, label: "Monthly" }
+            - { value: "3", points: 3, label: "Weekly" }
+            - { value: "4", points: 4, label: "Daily or almost daily" }
+      bands:
+        - { min: 0, max: 2, label: "Lower risk", severity: "none" }
+        - { min: 3, max: 7, label: "Positive screen — hazardous/harmful drinking likely", severity: "warn" }
+        - { min: 8, label: "High — probable alcohol use disorder", severity: "alert" }
+      notes:
+        - "Sex-specific positive cutoff: ≥ 4 (men) / ≥ 3 (women). A screening tool — confirm with a fuller assessment."

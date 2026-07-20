@@ -581,6 +581,65 @@ void main() {
     test('max 5', () => expect(scoreRange(b).max, 5));
   });
 
+  group('PHQ-9 (public-domain screen, 0–27)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_phq9.yaml'));
+
+    test('all zero → 0, minimal', () {
+      final all0 = {for (final i in b.items) i.key: '0'};
+      expect(_total(b, all0), 0);
+      expect(_band(b, all0), contains('Minimal'));
+    });
+    test('YAML anchor expands: 9 items each with 4 options', () {
+      expect(b.items, hasLength(9));
+      for (final i in b.items) {
+        expect(i.type, ScoreItemType.scale);
+        expect(i.options.map((o) => o.points), [0, 1, 2, 3]);
+      }
+    });
+    test('band boundaries 9/10 and 19/20', () {
+      // 9 = q1..q3 at 3 → mild; 10 = one more point → moderate
+      expect(_band(b, {'q1': '3', 'q2': '3', 'q3': '3'}), contains('Mild'));
+      expect(_band(b, {'q1': '3', 'q2': '3', 'q3': '3', 'q4': '1'}),
+          contains('Moderate'));
+      // 20 = severe
+      expect(
+        _band(b, {
+          'q1': '3', 'q2': '3', 'q3': '3', 'q4': '3',
+          'q5': '3', 'q6': '3', 'q7': '2',
+        }),
+        contains('Severe'),
+      ); // 20
+    });
+    test('maximum = 27', () => expect(scoreRange(b).max, 27));
+  });
+
+  group('GAD-7', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_gad7.yaml'));
+
+    test('7 items, max 21, ≥10 moderate', () {
+      expect(b.items, hasLength(7));
+      expect(scoreRange(b).max, 21);
+      expect(_band(b, {'q1': '3', 'q2': '3', 'q3': '3', 'q4': '1'}),
+          contains('Moderate')); // 10
+    });
+  });
+
+  group('AUDIT-C (sex-specific cutoff in note)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_auditc.yaml'));
+
+    test('0–2 lower, 3+ positive screen', () {
+      expect(_band(b, {'frequency': '2'}), contains('Lower')); // 2
+      expect(_band(b, {'frequency': '2', 'quantity': '1'}),
+          contains('Positive')); // 3
+      expect(_band(b, {'frequency': '4', 'quantity': '4'}),
+          contains('probable alcohol')); // 8
+    });
+    test('maximum = 12', () => expect(scoreRange(b).max, 12));
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));

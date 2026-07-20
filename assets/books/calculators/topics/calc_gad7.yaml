@@ -1,0 +1,53 @@
+# ============================================================
+# GAD-7 — Generalized Anxiety Disorder-7.
+# Evidence review 2026-07-19: validated (Spitzer 2006; USPSTF 2023 Grade B
+# for anxiety screening in adults ≤ 64). Cutoff ≥ 10 ≈ 89% sens / 82% spec.
+# PUBLIC DOMAIN (Pfizer, no permission/fee).
+# ============================================================
+
+topic:
+  id: "calc-gad7"
+  title: "GAD-7"
+  list_subtitle: "anxiety severity"
+  last_reviewed: "Evidence review 2026-07-19 · Spitzer 2006 · USPSTF 2023"
+  tags: ["gad-7", "gad7", "anxiety", "screening", "psychiatry", "severity", "worry"]
+  aliases:
+    - "GAD-7"
+    - "Generalized Anxiety Disorder"
+    - "Anxiety screen"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Over the last 2 weeks, how often has the patient been bothered by each
+        problem? Scores anxiety severity.
+
+    - type: "score"
+      title: "GAD-7"
+      unit: "/ 21"
+      source: "Spitzer et al., Arch Intern Med 2006 (public domain)"
+      items:
+        - key: "q1"
+          label: "Feeling nervous, anxious, or on edge"
+          type: "scale"
+          default: "0"
+          options: &freq
+            - { value: "0", points: 0, label: "Not at all" }
+            - { value: "1", points: 1, label: "Several days" }
+            - { value: "2", points: 2, label: "More than half the days" }
+            - { value: "3", points: 3, label: "Nearly every day" }
+        - { key: "q2", label: "Not being able to stop or control worrying", type: "scale", default: "0", options: *freq }
+        - { key: "q3", label: "Worrying too much about different things", type: "scale", default: "0", options: *freq }
+        - { key: "q4", label: "Trouble relaxing", type: "scale", default: "0", options: *freq }
+        - { key: "q5", label: "Being so restless that it is hard to sit still", type: "scale", default: "0", options: *freq }
+        - { key: "q6", label: "Becoming easily annoyed or irritable", type: "scale", default: "0", options: *freq }
+        - { key: "q7", label: "Feeling afraid, as if something awful might happen", type: "scale", default: "0", options: *freq }
+      bands:
+        - { min: 0, max: 4, label: "Minimal anxiety", severity: "none" }
+        - { min: 5, max: 9, label: "Mild anxiety", severity: "none" }
+        - { min: 10, max: 14, label: "Moderate — probable GAD", severity: "warn" }
+        - { min: 15, label: "Severe anxiety", severity: "alert" }
+      notes:
+        - "≥ 10 is the usual threshold for probable generalized anxiety disorder. A screening/severity measure — not diagnostic on its own."
