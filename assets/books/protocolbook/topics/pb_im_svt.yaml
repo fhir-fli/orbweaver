@@ -1,0 +1,89 @@
+# ============================================================
+# ProtocolBook p.125 — Supraventricular Tachycardias (SVT). Internal
+# Medicine Protocols leaf.
+#
+# Genuine multi-decision flowchart → `algorithm` variant (per the hybrid
+# rule). Spine: stable? (No → acute termination with adenosine /
+# cardioversion; Yes → workup) → sinus tachycardia? (Yes → treat cause;
+# No → beta blocker) → atrial fibrillation / flutter? (Yes → rate control
+# + anticoagulation). The two intro points are prose above the chart.
+#
+# Faithful-rendering calls:
+#   - The adenosine dosing protocol + the "cardioversion preferred for
+#     unstable" note live inside the adenosine box bullets (flowchart box
+#     text is plain — no MiniMarkdown).
+#   - The stable=Yes path runs the stable-patient workup spine; the
+#     unstable=No path gets acute termination — clinically coherent as
+#     drawn.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Adenosine 6 mg → 12 mg → 12 mg IV push with rapid NS flush, max 3
+#     doses, is standard. For the AF/flutter arm the book suggests digoxin
+#     for rate control and warfarin (10 mg ×2 days then titrate to INR
+#     2–3); current practice favours a beta-blocker/CCB for rate control
+#     and a DOAC over warfarin where available, and CHA₂DS₂-VASc-guided
+#     anticoagulation — flag for OE (transcribed as printed).
+# ============================================================
+
+topic:
+  id: "pb-im-svt"
+  title: "Supraventricular Tachycardias (SVT)"
+  list_subtitle: "p.125 · stable? · adenosine · rate control"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["SVT", "supraventricular tachycardia", "arrhythmia", "adenosine", "cardioversion", "sinus tachycardia", "atrial fibrillation", "atrial flutter", "rate control", "digoxin", "warfarin", "anticoagulation", "internal medicine", "cardiology"]
+  category: "medical"
+  page_number: 125
+
+  blocks:
+
+    - type: "prose"
+      title: "Supraventricular tachycardias (SVT)"
+      markdown: |
+        - Tachycardias arising above the AV node
+        - Narrow QRS indicates SVT
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Evaluation of SVT"
+        shape: "stadium"
+      stages:
+        - decision: "Is the patient stable?"
+          outcomes:
+            - label: "No"
+              box:
+                title: "Adenosine"
+                bullets:
+                  - "Give each dose as rapidly as possible"
+                  - "Follow each dose immediately with a flush of 20 mL IV NS"
+                  - "6 mg IV push (followed by NS flush)"
+                  - "Wait 1–2 minutes"
+                  - "No response — give 12 mg IV push (followed by NS flush)"
+                  - "Wait 1–2 minutes"
+                  - "No response — give 12 mg IV push (followed by NS flush)"
+                  - "Do not use more than 3 doses"
+                  - "Note: electrical cardioversion per ACLS protocol is preferred for unstable patients if available"
+            - label: "Yes"
+              continue: true
+        - decision: "Sinus tachycardia?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat underlying cause"
+            - label: "No"
+              box:
+                title: "Beta blocker"
+                bullets:
+                  - "Metoprolol tartrate 25 mg PO BD"
+                  - "Metoprolol succinate (metoprolol ER) 25 mg PO daily"
+                  - "Carvedilol 6.25 mg PO BD"
+              continue: true
+        - decision: "Atrial fibrillation or atrial flutter?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Rate control & anticoagulation"
+                bullets:
+                  - "Can consider digoxin for rate control"
+                  - "Needs anticoagulation"
+                  - "Warfarin 10 mg PO daily × 2 days, then base on INR (goal 2–3)"
