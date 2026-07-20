@@ -1,0 +1,229 @@
+# ============================================================
+# ProtocolBook pp.128–129 — Adult Tuberculosis. Internal Medicine
+# Protocols leaf. (Distinct from the paediatric TB group at pp.71–73.)
+#
+# Two-page topic: p.128 = when to consider TB + the diagnosis algorithm;
+# p.129 = treatment (LFT safety gate + intensive/continuation FDC dosing
+# + adjunctive steroids + continuation durations).
+#
+# Rendering calls (hybrid rule):
+#   - "Consider TB" list + continuation durations → prose.
+#   - Diagnosis + LFT gate + steroid indication → `algorithm` flowcharts.
+#     The book's two diagnosis decisions "X-ray available?" then "CXR
+#     suggestive?" (with the no-X-ray branch skipping straight to sputum)
+#     are LINEARISED into one decision — "Chest X-ray available and
+#     suggestive?" — whose criteria note preserves the no-X-ray path; the
+#     shared sputum box is a `goto` target. This keeps the single-spine
+#     algorithm faithful to the clinical routing.
+#   - The two weight→tablet FDC matrices → `table` blocks.
+#
+# 🔴 GENUINE DANGEROUS ERROR corrected + surfaced to Grey (RULE #0):
+#   BOTH FDC dosing tables on p.129 print the 30–37 kg and 38–54 kg rows'
+#   tablet counts SWAPPED (intensive: 38–54 kg→2, 30–37 kg→3; continuation:
+#   same swap). As printed, a lighter patient would receive MORE tablets
+#   than a heavier one — non-monotonic and unsafe. Rendered here CORRECTED
+#   to the WHO FDC schedule (30–37 kg→2, 38–54 kg→3, 55–70 kg→4, >70 kg→5
+#   intensive; 30–37 kg→2, 38–54 kg→3 of RH 150/75 and 55–70/>70 kg→2 of
+#   RH 300/150 continuation). Grey must fix the source PDF.
+#
+# GENUINE TYPO corrected + flagged: "Severe military TB" → "miliary TB"
+#   (same typo the book has at pp.72/73).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Standard 2HRZE / 4HR regimen, weight-banded FDCs, pyridoxine 25 mg
+#     daily, adjunctive steroids for TB meningitis / pericarditis / airway
+#     compression, extended 12-month course for CNS TB, and the ALT-based
+#     hepatotoxicity thresholds (hold/alternate if >3–5× ULN) are all
+#     standard programmatic TB care.
+# ============================================================
+
+topic:
+  id: "pb-im-tb"
+  title: "Adult Tuberculosis"
+  list_subtitle: "pp.128–129 · diagnosis · RHZE regimen"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["tuberculosis", "TB", "adult", "rifampicin", "isoniazid", "pyrazinamide", "ethambutol", "RHZE", "FDC", "GeneXpert", "AFB smear", "MDR-TB", "pyridoxine", "sputum", "internal medicine", "infectious disease"]
+  category: "medical"
+  page_number: 128
+
+  pages:
+
+    # ═══════════════════════ PAGE 128 ═══════════════════════
+    - page_number: 128
+      blocks:
+
+        - type: "prose"
+          title: "Consider tuberculosis with the following"
+          markdown: |
+            - Chronic cough (> 2–3 weeks)
+            - Chronic fever (> 2–3 weeks)
+            - Pneumonia not improving on treatment
+            - Wasting
+            - Lymphadenopathy (large, painless)
+            - Ascites
+            - Heart failure / pericardial effusion
+            - Refusal to bend a painful joint
+            - Irritability, meningeal signs
+            - Haematuria, sterile pyuria
+            - Close contact with someone with TB in the last 2 years
+
+        - type: "prose"
+          title: "Diagnosis — begin workup if any present"
+          markdown: |
+            - Cough > 2 weeks
+            - Other unexplained respiratory symptoms > 2 weeks
+            - Community-acquired pneumonia not responding after 7 days of treatment
+            - High clinical suspicion based on history or physical
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "TB workup"
+            shape: "stadium"
+          boxes:
+            - id: "sputum"
+              title: "Sputum testing"
+              bullets:
+                - "If available, perform Gene Xpert on 1 sputum sample"
+                - "If not, 3 sputum specimens for AFB smear"
+          stages:
+            - decision: "HIV?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Discuss with senior"
+                - label: "No"
+                  continue: true
+            - decision: "Chest X-ray available and suggestive of TB?"
+              criteria:
+                - "If no X-ray is available, proceed directly to sputum testing"
+              outcomes:
+                - label: "Not available, or available and suggestive"
+                  goto: "sputum"
+                  continue: true
+                - label: "Available but not suggestive"
+                  box:
+                    title: "Consider other etiology"
+            - decision: "MDR TB?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Consult specialist"
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "Begin treatment"
+            bullets:
+              - "Proceed to the treatment page"
+
+    # ═══════════════════════ PAGE 129 ═══════════════════════
+    - page_number: 129
+      blocks:
+
+        - type: "prose"
+          title: "Treatment — check liver function first"
+          markdown: |
+            Check LFTs before starting.
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Check LFTs"
+            shape: "stadium"
+          stages:
+            - decision: "ALT > 3 × upper limit of normal?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Consult senior about a possible alternate regimen"
+                - label: "No"
+                  continue: true
+            - decision: "Abnormal LFTs but ALT < 3 × upper limit of normal?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Recheck LFTs monthly"
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "Begin the regimen below"
+
+        - type: "prose"
+          title: "First 2 months (intensive phase) — daily dose"
+          markdown: |
+            - Rifampicin (R) 10 mg/kg
+            - Isoniazid (H) 5 mg/kg
+            - Pyrazinamide (Z) 25 mg/kg
+            - Ethambutol (E) 15 mg/kg
+
+        - type: "prose"
+          title: "⚠ Dosing correction"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            The source PDF prints the **30–37 kg** and **38–54 kg** tablet counts swapped in both FDC tables. Corrected below to the WHO FDC schedule (a lighter patient must not receive more tablets than a heavier one).
+
+        - type: "table"
+          columns: ["Pre-treatment weight", "FDC RHZE 150/75/400/275"]
+          column_flex: [5, 6]
+          column_align: ["left", "center"]
+          rows:
+            - cells: ["30–37 kg", "2 tabs"]
+            - cells: ["38–54 kg", "3 tabs"]
+            - cells: ["55–70 kg", "4 tabs"]
+            - cells: ["> 70 kg", "5 tabs"]
+
+        - type: "prose"
+          markdown: |
+            **Note:** pyridoxine 25 mg PO daily should be given for the duration of treatment.
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Adjunctive corticosteroids?"
+            shape: "stadium"
+          stages:
+            - decision: "Any of the following present?"
+              criteria:
+                - "TB meningitis"
+                - "Pulmonary TB with respiratory distress"
+                - "Pulmonary TB with airway obstruction from hilar lymph nodes"
+                - "Severe miliary TB"
+                - "Pericardial effusion"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Add prednisone"
+                    bullets:
+                      - "60 mg/day × 2 weeks"
+                      - "Reduce by 10 mg/day weekly"
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "Continue to the continuation phase"
+
+        - type: "prose"
+          title: "Continuation phase (after 2 months)"
+          markdown: |
+            - Cerebral TB requires 10 more months
+            - Pulmonary TB requires 6 more months
+            - Sputum smear:
+              - If positive, retest at 3 months
+              - If still positive at 3 months, retest susceptibilities
+
+        - type: "table"
+          columns: ["Pre-treatment weight", "RH 150/75", "RH 300/150"]
+          column_flex: [4, 4, 4]
+          column_align: ["left", "center", "center"]
+          rows:
+            - cells: ["30–37 kg", "2 tabs", "—"]
+            - cells: ["38–54 kg", "3 tabs", "—"]
+            - cells: ["55–70 kg", "—", "2 tabs"]
+            - cells: ["> 70 kg", "—", "2 tabs"]
+
+        - type: "prose"
+          markdown: |
+            **LFT monitoring:** if liver tenderness, hepatomegaly or jaundice, recheck LFTs. Do not change the regimen unless LFTs > 5 × upper limit of normal.
