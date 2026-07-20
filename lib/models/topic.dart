@@ -1828,10 +1828,19 @@ enum ScoreItemType {
   toggle,
 
   /// A pick-one criterion; the chosen [ScoreOption] contributes its points.
-  choice;
+  /// Rendered as chips.
+  choice,
 
-  static ScoreItemType fromString(String? s) =>
-      s == 'choice' ? choice : toggle;
+  /// Like [choice] but rendered as a compact 0–N stepper with the selected
+  /// level's anchor label — for graded scales (CIWA-Ar, COWS, PHQ-9, …) whose
+  /// many levels would be too busy as chips. Scored identically to [choice].
+  scale;
+
+  static ScoreItemType fromString(String? s) => switch (s) {
+        'choice' => choice,
+        'scale' => scale,
+        _ => toggle,
+      };
 }
 
 /// One option of a `choice` item.

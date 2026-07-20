@@ -29,6 +29,7 @@ ScoreResult computeScore(ScoreBlock block, Map<String, dynamic> selections) {
       case ScoreItemType.toggle:
         if (selections[item.key] == true) total += item.points;
       case ScoreItemType.choice:
+      case ScoreItemType.scale:
         final v = selections[item.key];
         for (final o in item.options) {
           if (o.value == v) {

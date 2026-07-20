@@ -1,0 +1,168 @@
+# ============================================================
+# CIWA-Ar — Clinical Institute Withdrawal Assessment for Alcohol.
+# Evidence review 2026-07-19: ASAM 2020 endorses symptom-triggered
+# benzodiazepine dosing driven by CIWA-Ar (shorter LOS, less total
+# benzodiazepine) — but it is VALID ONLY in an awake, communicative,
+# cooperative patient (not ICU/delirious/non-verbal). Sullivan 1989.
+# 10 items; total 0–67.
+# ============================================================
+
+topic:
+  id: "calc-ciwa-ar"
+  title: "CIWA-Ar"
+  list_subtitle: "alcohol withdrawal severity"
+  last_reviewed: "Evidence review 2026-07-19 · Sullivan 1989 · ASAM 2020"
+  tags: ["ciwa", "ciwa-ar", "alcohol", "withdrawal", "dts", "benzodiazepine", "detox"]
+  aliases:
+    - "CIWA-Ar"
+    - "CIWA"
+    - "Alcohol withdrawal"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Alcohol-withdrawal severity for symptom-triggered treatment. Score each
+        of the ten items; higher totals indicate greater withdrawal severity
+        and risk of seizures / delirium tremens.
+
+    - type: "score"
+      title: "CIWA-Ar"
+      source: "Sullivan et al., Br J Addiction 1989"
+      items:
+        - key: "nausea"
+          label: "Nausea / vomiting"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "None" }
+            - { value: "1", points: 1, label: "Mild nausea, no vomiting" }
+            - { value: "2", points: 2 }
+            - { value: "3", points: 3 }
+            - { value: "4", points: 4, label: "Intermittent nausea, dry heaves" }
+            - { value: "5", points: 5 }
+            - { value: "6", points: 6 }
+            - { value: "7", points: 7, label: "Constant nausea, frequent dry heaves & vomiting" }
+        - key: "tremor"
+          label: "Tremor (arms extended)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "No tremor" }
+            - { value: "1", points: 1, label: "Not visible, felt fingertip to fingertip" }
+            - { value: "2", points: 2 }
+            - { value: "3", points: 3 }
+            - { value: "4", points: 4, label: "Moderate, with arms extended" }
+            - { value: "5", points: 5 }
+            - { value: "6", points: 6 }
+            - { value: "7", points: 7, label: "Severe, even with arms not extended" }
+        - key: "sweats"
+          label: "Paroxysmal sweats"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "No sweat visible" }
+            - { value: "1", points: 1, label: "Barely perceptible, palms moist" }
+            - { value: "2", points: 2 }
+            - { value: "3", points: 3 }
+            - { value: "4", points: 4, label: "Beads of sweat on forehead" }
+            - { value: "5", points: 5 }
+            - { value: "6", points: 6 }
+            - { value: "7", points: 7, label: "Drenching sweats" }
+        - key: "anxiety"
+          label: "Anxiety"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "No anxiety, at ease" }
+            - { value: "1", points: 1, label: "Mildly anxious" }
+            - { value: "2", points: 2 }
+            - { value: "3", points: 3 }
+            - { value: "4", points: 4, label: "Moderately anxious / guarded" }
+            - { value: "5", points: 5 }
+            - { value: "6", points: 6 }
+            - { value: "7", points: 7, label: "Acute panic / severe delirium" }
+        - key: "agitation"
+          label: "Agitation"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Normal activity" }
+            - { value: "1", points: 1, label: "Somewhat more than normal" }
+            - { value: "2", points: 2 }
+            - { value: "3", points: 3 }
+            - { value: "4", points: 4, label: "Moderately fidgety / restless" }
+            - { value: "5", points: 5 }
+            - { value: "6", points: 6 }
+            - { value: "7", points: 7, label: "Paces / thrashes about" }
+        - key: "tactile"
+          label: "Tactile disturbances"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "None" }
+            - { value: "1", points: 1, label: "Very mild itch / pins & needles" }
+            - { value: "2", points: 2, label: "Mild" }
+            - { value: "3", points: 3, label: "Moderate" }
+            - { value: "4", points: 4, label: "Moderately severe hallucinations" }
+            - { value: "5", points: 5, label: "Severe hallucinations" }
+            - { value: "6", points: 6, label: "Extremely severe" }
+            - { value: "7", points: 7, label: "Continuous hallucinations" }
+        - key: "auditory"
+          label: "Auditory disturbances"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Not present" }
+            - { value: "1", points: 1, label: "Very mild harshness / ability to frighten" }
+            - { value: "2", points: 2, label: "Mild" }
+            - { value: "3", points: 3, label: "Moderate" }
+            - { value: "4", points: 4, label: "Moderately severe hallucinations" }
+            - { value: "5", points: 5, label: "Severe hallucinations" }
+            - { value: "6", points: 6, label: "Extremely severe" }
+            - { value: "7", points: 7, label: "Continuous hallucinations" }
+        - key: "visual"
+          label: "Visual disturbances"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Not present" }
+            - { value: "1", points: 1, label: "Very mild sensitivity" }
+            - { value: "2", points: 2, label: "Mild" }
+            - { value: "3", points: 3, label: "Moderate" }
+            - { value: "4", points: 4, label: "Moderately severe hallucinations" }
+            - { value: "5", points: 5, label: "Severe hallucinations" }
+            - { value: "6", points: 6, label: "Extremely severe" }
+            - { value: "7", points: 7, label: "Continuous hallucinations" }
+        - key: "headache"
+          label: "Headache / fullness in head"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Not present" }
+            - { value: "1", points: 1, label: "Very mild" }
+            - { value: "2", points: 2, label: "Mild" }
+            - { value: "3", points: 3, label: "Moderate" }
+            - { value: "4", points: 4, label: "Moderately severe" }
+            - { value: "5", points: 5, label: "Severe" }
+            - { value: "6", points: 6, label: "Very severe" }
+            - { value: "7", points: 7, label: "Extremely severe" }
+        - key: "orientation"
+          label: "Orientation / clouding of sensorium"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Oriented, can do serial additions" }
+            - { value: "1", points: 1, label: "Cannot do serial additions / uncertain of date" }
+            - { value: "2", points: 2, label: "Disoriented to date by ≤ 2 calendar days" }
+            - { value: "3", points: 3, label: "Disoriented to date by > 2 days" }
+            - { value: "4", points: 4, label: "Disoriented to place and/or person" }
+      bands:
+        - { min: 0, max: 9, label: "Minimal / absent withdrawal", severity: "none" }
+        - { min: 10, max: 19, label: "Moderate withdrawal", severity: "warn" }
+        - { min: 20, label: "Severe withdrawal — seizure / DT risk", severity: "alert" }
+      notes:
+        - "Symptom-triggered protocols typically medicate at CIWA-Ar ≥ 8–10 and reassess."
+      caveats:
+        - "Valid ONLY in an awake, communicative, cooperative patient — not in ICU / delirious / non-verbal patients, where it can drive iatrogenic over- or under-sedation. Escalate severe/refractory withdrawal (e.g. phenobarbital, monitored setting)."

@@ -57,3 +57,7 @@ book:
         - topic: "topics/calc_4ts.yaml"
         - topic: "topics/calc_gcs.yaml"
         - topic: "topics/calc_canadian_ct_head.yaml"
+    - title: "Withdrawal Scales"
+      children:
+        - topic: "topics/calc_ciwa_ar.yaml"
+        - topic: "topics/calc_cows.yaml"

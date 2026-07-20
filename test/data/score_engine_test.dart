@@ -326,6 +326,62 @@ void main() {
     test('max 7', () => expect(scoreRange(b).max, 7));
   });
 
+  group('CIWA-Ar (scale items, 0–67)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_ciwa_ar.yaml'));
+
+    test('all zero → 0, minimal', () {
+      final all0 = {
+        for (final i in b.items) i.key: '0',
+      };
+      expect(_total(b, all0), 0);
+      expect(_band(b, all0), contains('Minimal'));
+    });
+    test('scale points equal their level; sums correctly', () {
+      // nausea 4 + tremor 7 + orientation 4 = 15 → moderate
+      final s = {'nausea': '4', 'tremor': '7', 'orientation': '4'};
+      expect(_total(b, s), 15);
+      expect(_band(b, s), contains('Moderate'));
+    });
+    test('boundary 9→minimal, 10→moderate, 20→severe', () {
+      expect(_band(b, {'nausea': '2', 'tremor': '7'}), contains('Minimal')); // 9
+      expect(_band(b, {'nausea': '3', 'tremor': '7'}), contains('Moderate')); // 10
+      expect(_band(b, {'nausea': '7', 'tremor': '7', 'sweats': '6'}),
+          contains('Severe')); // 20
+    });
+    test('maximum = 67 (nine 0–7 items + one 0–4)', () {
+      expect(scoreRange(b).max, 67);
+    });
+    test('orientation item is 0–4 only', () {
+      final orientation = b.items.firstWhere((i) => i.key == 'orientation');
+      expect(orientation.type, ScoreItemType.scale);
+      expect(orientation.options.map((o) => o.points).reduce((a, c) => a > c ? a : c),
+          4);
+    });
+  });
+
+  group('COWS (scale items, non-contiguous points, 0–48)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_cows.yaml'));
+
+    test('all zero → 0, minimal', () {
+      final all0 = {for (final i in b.items) i.key: '0'};
+      expect(_total(b, all0), 0);
+      expect(_band(b, all0), contains('Minimal'));
+    });
+    test('non-contiguous points: restlessness has a 3 and 5 (no 2/4)', () {
+      final r = b.items.firstWhere((i) => i.key == 'restlessness');
+      expect(r.options.map((o) => o.points).toSet(), {0, 1, 3, 5});
+    });
+    test('sums across bands: 13 → moderate', () {
+      // pulse 4 + restlessness 5 + gooseflesh... use pulse4+gi5+aches4 = 13
+      final s = {'pulse': '4', 'gi': '5', 'aches': '4'};
+      expect(_total(b, s), 13);
+      expect(_band(b, s), contains('Moderate'));
+    });
+    test('maximum = 48', () => expect(scoreRange(b).max, 48));
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));

@@ -47,6 +47,25 @@ void main() {
     expect(find.textContaining('Mild'), findsOneWidget);
   });
 
+  testWidgets('CIWA-Ar scale: stepper taps update anchor + total/band',
+      (t) async {
+    await t.pumpWidget(_wrap(TopicView(topic: _load('calc_ciwa_ar.yaml'))));
+    expect(find.byType(ScoreBlockView), findsOneWidget);
+    expect(find.textContaining('Minimal'), findsOneWidget);
+    expect(find.text('7'), findsWidgets); // a "7" button per 0–7 scale item
+
+    await t.ensureVisible(find.text('7').first);
+    await t.tap(find.text('7').first); // nausea → 7
+    await t.pump();
+    expect(find.textContaining('Constant nausea'), findsOneWidget); // anchor
+
+    await t.ensureVisible(find.text('7').at(1));
+    await t.tap(find.text('7').at(1)); // tremor → 7, total 14
+    await t.pump();
+    expect(find.textContaining('Moderate'), findsOneWidget);
+    expect(find.textContaining('Minimal'), findsNothing);
+  });
+
   testWidgets('GCS: choosing worst responses drops to 3 / Severe', (t) async {
     await t.pumpWidget(_wrap(TopicView(topic: _load('calc_gcs.yaml'))));
     // Tap the first "None" chip of each component (eye/verbal/motor → all 1).

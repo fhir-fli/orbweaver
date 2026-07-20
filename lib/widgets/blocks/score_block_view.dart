@@ -100,9 +100,11 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
 
   Widget _buildItem(Color accent, ScoreItem item) => Padding(
         padding: const EdgeInsets.only(bottom: 6),
-        child: item.type == ScoreItemType.toggle
-            ? _toggleRow(accent, item)
-            : _choiceRow(accent, item),
+        child: switch (item.type) {
+          ScoreItemType.toggle => _toggleRow(accent, item),
+          ScoreItemType.choice => _choiceRow(accent, item),
+          ScoreItemType.scale => _scaleRow(accent, item),
+        },
       );
 
   Widget _toggleRow(Color accent, ScoreItem item) {
@@ -153,6 +155,72 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
         ),
       ],
     );
+  }
+
+  Widget _scaleRow(Color accent, ScoreItem item) {
+    final sel = _choices[item.key];
+    final selOpt = _optionFor(item, sel);
+    final anchor = (selOpt != null && selOpt.label != '${selOpt.points}')
+        ? selOpt.label
+        : null;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _labelBlock(item),
+        const SizedBox(height: 4),
+        Wrap(
+          spacing: 6,
+          runSpacing: 6,
+          children: [
+            for (final o in item.options)
+              _scaleButton(accent, item.key, o, o.value == sel),
+          ],
+        ),
+        if (anchor != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 4),
+            child: Text(
+              anchor,
+              style: TextStyle(
+                fontSize: 11.5,
+                color: accent,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+
+  Widget _scaleButton(Color accent, String key, ScoreOption o, bool sel) =>
+      InkWell(
+        onTap: () => setState(() => _choices[key] = o.value),
+        borderRadius: BorderRadius.circular(6),
+        child: Container(
+          width: 34,
+          height: 34,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: sel ? accent : Colors.white,
+            border: Border.all(color: accent.withValues(alpha: 0.6)),
+            borderRadius: BorderRadius.circular(6),
+          ),
+          child: Text(
+            '${o.points}',
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.w700,
+              color: sel ? Colors.white : Colors.black87,
+            ),
+          ),
+        ),
+      );
+
+  ScoreOption? _optionFor(ScoreItem item, String? value) {
+    for (final o in item.options) {
+      if (o.value == value) return o;
+    }
+    return null;
   }
 
   Widget _choiceChip(Color accent, String key, ScoreOption o, bool sel) =>

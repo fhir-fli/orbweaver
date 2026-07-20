@@ -1,0 +1,142 @@
+# ============================================================
+# COWS — Clinical Opiate Withdrawal Scale.
+# Evidence review 2026-07-19: ASAM 2020 references COWS for opioid-
+# withdrawal severity and buprenorphine-induction timing (typically
+# ≥ 11–12; some use ≥ 13 in the fentanyl era). Wesson & Ling 2003.
+# 11 items; total 0–48.
+# ============================================================
+
+topic:
+  id: "calc-cows"
+  title: "COWS"
+  list_subtitle: "opioid withdrawal severity"
+  last_reviewed: "Evidence review 2026-07-19 · Wesson & Ling 2003 · ASAM 2020"
+  tags: ["cows", "opioid", "opiate", "withdrawal", "buprenorphine", "induction", "detox"]
+  aliases:
+    - "COWS"
+    - "Opioid withdrawal"
+    - "Clinical Opiate Withdrawal Scale"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Opioid-withdrawal severity, used to time buprenorphine induction.
+        Score each sign; a moderate score indicates enough withdrawal to start
+        buprenorphine safely.
+
+    - type: "score"
+      title: "COWS"
+      source: "Wesson & Ling, J Psychoactive Drugs 2003"
+      items:
+        - key: "pulse"
+          label: "Resting pulse rate"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "≤ 80" }
+            - { value: "1", points: 1, label: "81–100" }
+            - { value: "2", points: 2, label: "101–120" }
+            - { value: "4", points: 4, label: "> 120" }
+        - key: "sweating"
+          label: "Sweating"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "None" }
+            - { value: "1", points: 1, label: "Subjective chills / flushing" }
+            - { value: "2", points: 2, label: "Flushed or moist face" }
+            - { value: "3", points: 3, label: "Beads of sweat on brow" }
+            - { value: "4", points: 4, label: "Sweat streaming off face" }
+        - key: "restlessness"
+          label: "Restlessness"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Able to sit still" }
+            - { value: "1", points: 1, label: "Reports difficulty, but able" }
+            - { value: "3", points: 3, label: "Frequent shifting / extraneous movements" }
+            - { value: "5", points: 5, label: "Unable to sit still > a few seconds" }
+        - key: "pupil"
+          label: "Pupil size"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Pinned or normal" }
+            - { value: "1", points: 1, label: "Possibly larger than normal" }
+            - { value: "2", points: 2, label: "Moderately dilated" }
+            - { value: "5", points: 5, label: "Only rim of iris visible" }
+        - key: "aches"
+          label: "Bone / joint aches"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Not present" }
+            - { value: "1", points: 1, label: "Mild diffuse discomfort" }
+            - { value: "2", points: 2, label: "Severe diffuse aching" }
+            - { value: "4", points: 4, label: "Rubbing joints, unable to sit still" }
+        - key: "nose"
+          label: "Runny nose / tearing"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Not present" }
+            - { value: "1", points: 1, label: "Nasal stuffiness / eyes watering" }
+            - { value: "2", points: 2, label: "Nose running / tearing" }
+            - { value: "4", points: 4, label: "Constant, streaming" }
+        - key: "gi"
+          label: "GI upset"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "None" }
+            - { value: "1", points: 1, label: "Stomach cramps" }
+            - { value: "2", points: 2, label: "Nausea or loose stool" }
+            - { value: "3", points: 3, label: "Vomiting or diarrhea" }
+            - { value: "5", points: 5, label: "Multiple episodes" }
+        - key: "tremor"
+          label: "Tremor (outstretched hands)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "None" }
+            - { value: "1", points: 1, label: "Felt, not observed" }
+            - { value: "2", points: 2, label: "Slight tremor observable" }
+            - { value: "4", points: 4, label: "Gross tremor / muscle twitching" }
+        - key: "yawning"
+          label: "Yawning"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "None" }
+            - { value: "1", points: 1, label: "Once or twice" }
+            - { value: "2", points: 2, label: "≥ 3 times" }
+            - { value: "4", points: 4, label: "Several times per minute" }
+        - key: "anxiety"
+          label: "Anxiety / irritability"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "None" }
+            - { value: "1", points: 1, label: "Mild" }
+            - { value: "2", points: 2, label: "Obviously irritable / anxious" }
+            - { value: "4", points: 4, label: "So anxious participation is difficult" }
+        - key: "gooseflesh"
+          label: "Gooseflesh skin"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Smooth" }
+            - { value: "3", points: 3, label: "Piloerection felt / hairs standing up" }
+            - { value: "5", points: 5, label: "Prominent piloerection" }
+      bands:
+        - { min: 0, max: 4, label: "Minimal / no withdrawal", severity: "none" }
+        - { min: 5, max: 12, label: "Mild withdrawal", severity: "none" }
+        - { min: 13, max: 24, label: "Moderate withdrawal", severity: "warn" }
+        - { min: 25, max: 36, label: "Moderately severe withdrawal", severity: "warn" }
+        - { min: 37, label: "Severe withdrawal", severity: "alert" }
+      notes:
+        - "A score of ~11–12+ (some use ≥ 13 in the fentanyl era) generally indicates enough withdrawal to start buprenorphine."
+      caveats:
+        - "Objective signs (pupils, gooseflesh, sweating, tremor) are harder to feign — weight them when subjective and objective findings disagree."

@@ -46,7 +46,8 @@ instruments (PHQ-9, GAD-7): items with 0–3 option points and severity bands.
 | type     | contributes                                                       |
 |----------|-------------------------------------------------------------------|
 | `toggle` | `points` when checked on (may be negative, e.g. Wells DVT −2)      |
-| `choice` | the selected option's `points`; declare a `default` option value  |
+| `choice` | the selected option's `points`; declare a `default`. Rendered as chips. |
+| `scale`  | same scoring as `choice`, but rendered as a compact 0–N stepper (the button shows each option's `points`) with the selected level's `label` shown as an anchor beneath. For graded scales (CIWA-Ar, COWS, PHQ-9) whose 5–8 levels are too busy as chips. Omit a `label` (or set it equal to the number) to show no anchor for that level. |
 
 ### Bands
 

@@ -25,6 +25,8 @@ const _files = <String>[
   'calc_qsofa.yaml',
   'calc_centor.yaml',
   'calc_canadian_ct_head.yaml',
+  'calc_ciwa_ar.yaml',
+  'calc_cows.yaml',
 ];
 
 ScoreBlock _load(String file) => Topic.fromYamlString(
@@ -50,10 +52,11 @@ void main() {
           for (final item in b.items) {
             expect(keys.add(item.key), isTrue,
                 reason: 'duplicate item key "${item.key}"');
-            if (item.type == ScoreItemType.choice) {
-              expect(item.options, isNotEmpty);
+            if (item.type != ScoreItemType.toggle) {
+              expect(item.options, isNotEmpty,
+                  reason: '${item.type.name} "${item.key}" needs options');
               expect(item.defaultValue, isNotNull,
-                  reason: 'choice "${item.key}" needs a default');
+                  reason: '${item.type.name} "${item.key}" needs a default');
               expect(
                 item.options.map((o) => o.value),
                 contains(item.defaultValue),
@@ -86,7 +89,7 @@ void main() {
     }
 
     test('all scores registered', () {
-      expect(_files, hasLength(13));
+      expect(_files, hasLength(15));
       for (final f in _files) {
         expect(File('$_dir/$f').existsSync(), isTrue, reason: 'missing $f');
       }
