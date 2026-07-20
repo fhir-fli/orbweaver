@@ -1,0 +1,170 @@
+# ============================================================
+# ProtocolBook pp.123–124 — Treatment of Acute Coronary Syndromes /
+# Myocardial Infarctions. Internal Medicine Protocols leaf; the "how to
+# treat" companion to the p.121–122 Chest Pain / ACS algorithm — its four
+# categories (STEMI / NSTEMI / Intermediate / Low) map 1:1 to that
+# algorithm's four dispositions.
+#
+# Two-page topic (`pages:`): p.123 = STEMI (antiplatelet / nitroglycerin /
+# anticoagulant / thrombolytics with contraindications + weight-based
+# dosing); p.124 = NSTEMI + Intermediate + Low/very-low risk.
+#
+# Hybrid rendering: this whole page is content-flow (treatment lists by
+# category, no decisions) → titled prose + two tables (thrombolytic
+# weight-dose ladder; the contraindications are rendered as two stacked
+# lists — Absolute as a red-alert callout since they are hard stops —
+# rather than the book's paper-saving 2-column table, which reads better
+# on a phone).
+#
+# Faithful-rendering calls:
+#   - All drug doses transcribed verbatim.
+#   - Citation superscripts dropped.
+#   - Cross-links to the Chest Pain / ACS algorithm added in prose.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Aspirin 325 + clopidogrel 300 loading, UFH 60 u/kg bolus (max 4000) +
+#     12 u/kg/hr (max 1000/hr), enoxaparin 30 mg IV then 1 mg/kg SC q12h
+#     (hold if CrCl < 30), tenecteplase weight-banded, streptokinase 1.5 M
+#     u over 60 min, beta-blocker + ACE-i within 24 h — all standard ACS
+#     care. The lytic contraindication list matches ACC/AHA.
+# ============================================================
+
+topic:
+  id: "pb-im-acs-treatment"
+  title: "Treatment of ACS / Myocardial Infarction"
+  list_subtitle: "pp.123–124 · STEMI · NSTEMI · lytics"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ACS", "acute coronary syndrome", "STEMI", "NSTEMI", "myocardial infarction", "MI", "treatment", "thrombolytics", "tenecteplase", "streptokinase", "heparin", "enoxaparin", "aspirin", "clopidogrel", "beta blocker", "ACE inhibitor", "internal medicine", "cardiology"]
+  category: "medical"
+  page_number: 123
+
+  pages:
+
+    # ═══════════════════════ PAGE 123 ═══════════════════════
+    - page_number: 123
+      blocks:
+
+        - type: "prose"
+          markdown: |
+            Treatment by risk category, following the [Chest Pain / ACS](topic:pb-im-chest-pain) algorithm.
+
+        - type: "prose"
+          title: "STEMI"
+          markdown: |
+            - **Anti-platelet:**
+              - Aspirin 325 mg PO × 1 dose if not already given
+              - Clopidogrel 300 mg PO × 1 dose
+            - **Nitroglycerin** sublingual spray or tablet (if not already given)
+              - 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved
+            - **Anticoagulant:**
+              - Unfractionated heparin
+                - 60 units/kg IV bolus, maximum 4,000 units
+                - 12 units/kg/hr IV infusion, maximum 1,000 units/hr
+              - Enoxaparin
+                - 30 mg IV bolus followed 15 minutes later by
+                - 1 mg/kg subcutaneously q12hrs (maximum 100 mg/dose for first 2 doses)
+                - Should not be given if creatinine clearance < 30
+            - **Thrombolytics**
+              - Ideally within first 24 hours of chest pain
+              - Patient should be connected to defibrillator if possible
+
+        - type: "prose"
+          title: "Thrombolytics — absolute contraindications"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            - History of intracranial hemorrhage
+            - Known structural cerebrovascular lesion (such as arteriovenous malformation)
+            - Known intracranial malignant neoplasm
+            - Ischaemic stroke within 3 months (EXCEPT ischaemic stroke within 3 hours)
+            - Suspected aortic dissection
+            - Active bleeding
+            - Significant head/facial trauma within 3 months
+            - Intracranial/intraspinal surgery within 2 months
+
+        - type: "prose"
+          title: "Thrombolytics — relative contraindications"
+          markdown: |
+            - History of chronic, severe, poorly controlled hypertension
+            - Uncontrolled hypertension (>180/110)
+            - Ischemic stroke > 3 months
+            - Dementia
+            - Known intracranial pathology that is not an absolute contraindication
+            - CPR > 10 min or traumatic
+            - Major surgery within 3 weeks
+            - Pregnancy
+            - Active peptic ulcer
+            - Oral anticoagulant therapy
+
+        - type: "prose"
+          title: "Thrombolytic dosing"
+          markdown: |
+            **Tenecteplase** — mix 50 mg vial in 10 mL sterile water (5 mg/mL), administered as an IV bolus over 5 seconds:
+
+        - type: "table"
+          columns: ["Weight", "Dose", "Volume"]
+          column_flex: [4, 4, 4]
+          column_align: ["left", "center", "center"]
+          rows:
+            - cells: ["< 60 kg", "30 mg", "6 mL"]
+            - cells: ["60–69 kg", "35 mg", "7 mL"]
+            - cells: ["70–79 kg", "40 mg", "8 mL"]
+            - cells: ["80–89 kg", "45 mg", "9 mL"]
+            - cells: ["≥ 90 kg", "50 mg", "10 mL"]
+
+        - type: "prose"
+          markdown: |
+            **Streptokinase** — 1.5 million units in 50 mL of D5W IV given over 60 minutes.
+
+            - Monitor vital signs every 15 minutes during infusions
+            - Monitor patient for 30 minutes after infusion
+            - Transfer patient to ICU whether or not they have received infusion
+
+    # ═══════════════════════ PAGE 124 ═══════════════════════
+    - page_number: 124
+      blocks:
+
+        - type: "prose"
+          title: "NSTEMI"
+          markdown: |
+            - Recheck EKG in 6 hours
+            - **Anti-platelet:**
+              - Aspirin 325 mg PO × 1 dose if not already given
+              - Clopidogrel 300 mg PO × 1 dose
+            - **Nitroglycerin** sublingual spray or tablet (if not already given)
+              - 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved
+            - **Anticoagulant:**
+              - Unfractionated heparin
+                - 60 units/kg IV bolus, maximum 4,000 units
+                - 12 units/kg/hr IV infusion, maximum 1,000 units/hr
+              - Enoxaparin
+                - 30 mg IV bolus followed 15 minutes later by
+                - 1 mg/kg subcutaneously q12hrs (maximum 100 mg/dose for first 2 doses)
+                - Should not be given if creatinine clearance < 30
+            - **Oral beta blocker within first 24 hours** (preferred metoprolol succinate or carvedilol)
+              - Metoprolol succinate (metoprolol ER) 25 mg PO daily
+              - Carvedilol 6.25 mg PO BD
+              - Metoprolol tartrate 25 mg PO BD
+              - Labetalol 100 mg PO BD
+              - Atenolol 50 mg PO daily
+            - **Oral ACE inhibitor within first 24 hours**
+              - Captopril 12.5 mg PO BD
+              - Lisinopril 5 mg PO daily
+              - May use ARB if no ACE inhibitors available — losartan 50 mg PO daily
+
+        - type: "prose"
+          title: "Intermediate risk category"
+          markdown: |
+            - **Anti-platelet:** aspirin 325 mg PO × 1 dose if not already given
+            - **Nitroglycerin** sublingual spray or tablet (if not already given) — 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved
+            - **Prophylactic anticoagulant:**
+              - Heparin 5,000 units subcutaneously q12hrs
+              - Enoxaparin 40 mg subcutaneously daily
+
+        - type: "prose"
+          title: "Low / very low risk categories"
+          markdown: |
+            Look for other causes.

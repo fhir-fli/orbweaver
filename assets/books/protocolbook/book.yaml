@@ -145,3 +145,4 @@ book:
         - topic: "topics/pb_im_ecg_svt.yaml"
         - topic: "topics/pb_im_ecg_ischaemia.yaml"
         - topic: "topics/pb_im_chest_pain.yaml"
+        - topic: "topics/pb_im_acs_treatment.yaml"
