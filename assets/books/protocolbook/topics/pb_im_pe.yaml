@@ -1,0 +1,115 @@
+# ============================================================
+# ProtocolBook p.131 — Pulmonary Embolism (PE). Internal Medicine
+# Protocols leaf. Shares its anticoagulation regimen with DVT (p.130) →
+# prose cross-link to pb-im-dvt.
+#
+# Rendering calls (hybrid rule):
+#   - Presenting complaints / risk factors / risk-based treatment → prose.
+#   - The PERC rule-out + "evaluate for DVT" decisions → `algorithm`.
+#   - The Wells PE score → `table` (Finding | Points) with its risk bands
+#     as a prose note.
+#
+# SILENT SOURCE CORRECTIONS (per the standing rule — value fixed, no
+# in-app callout):
+#   - The risk-band box prints "Score 2: Low Risk" then "Score 2–6:
+#     Intermediate" — 2 cannot be in both bands; the intended low-risk cut
+#     is "< 2". Rendered "< 2".
+#   - "Well Clinical Decision Rule" → "Wells" (eponym).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - PERC (all 8 negative → PE effectively ruled out in low-pretest
+#     patients) and the Wells PE criteria/point weights are standard. The
+#     book routes definitive anticoagulation through the shared DVT/PE
+#     regimen (LMWH/UFH → warfarin); modern practice favours a DOAC.
+# ============================================================
+
+topic:
+  id: "pb-im-pe"
+  title: "Pulmonary Embolism (PE)"
+  list_subtitle: "p.131 · PERC · Wells score"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pulmonary embolism", "PE", "VTE", "PERC", "Wells score", "dyspnea", "pleuritic chest pain", "hemoptysis", "anticoagulation", "D-dimer", "internal medicine", "respiratory"]
+  category: "medical"
+  page_number: 131
+
+  blocks:
+
+    - type: "prose"
+      title: "Common presenting complaints"
+      markdown: |
+        Usually with rapid onset:
+
+        - Dyspnea
+        - Tachypnea
+        - Pleuritic chest pain
+        - Cough
+        - Fever
+        - Tachycardia
+
+    - type: "prose"
+      title: "Risk factors"
+      markdown: |
+        - Same as DVT
+
+        Also:
+
+        - Medications: hormonal contraceptives, hormonal replacement therapy, antipsychotics, fibrates
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "PE rule-out (PERC)"
+        shape: "stadium"
+      stages:
+        - decision: "Does the patient meet ALL of these?"
+          criteria:
+            - "Age < 50 years"
+            - "Pulse < 100"
+            - "SpO₂ > 94%"
+            - "No unilateral leg swelling"
+            - "No hemoptysis"
+            - "No surgery or trauma within 4 weeks"
+            - "No previous DVT / PE"
+            - "No oral hormone use"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Do not treat for pulmonary embolism"
+            - label: "No"
+              continue: true
+        - decision: "Evaluate for DVT — positive?"
+          outcomes:
+            - label: "Positive for DVT"
+              box:
+                title: "Treat for DVT / PE"
+            - label: "Not positive"
+              continue: true
+      terminal:
+        title: "Apply the Wells score (below)"
+
+    - type: "prose"
+      title: "Wells clinical decision rule"
+      markdown: |
+        Score **< 2** low risk · **2–6** intermediate risk · **> 6** high risk.
+
+    - type: "table"
+      columns: ["Finding", "Points"]
+      column_flex: [9, 2]
+      column_align: ["left", "center"]
+      rows:
+        - cells: ["Previous DVT / PE", "1.5"]
+        - cells: ["Immobilization > 3 days or surgery in previous 4 weeks", "1.5"]
+        - cells: ["Malignancy in last 6 months", "1"]
+        - cells: ["Leg swelling / pain with palpation of deep veins (clinical signs of DVT)", "3"]
+        - cells: ["Hemoptysis", "1"]
+        - cells: ["Pulmonary embolism most likely diagnosis", "3"]
+        - cells: ["Heart rate > 100", "1.5"]
+
+    - type: "prose"
+      title: "Treatment based on risk"
+      markdown: |
+        - **Low risk:** no treatment
+        - **Intermediate risk:** discuss with senior if treatment is appropriate
+        - **High risk:** may start empiric treatment; discuss with senior if treatment should be continued
+
+        See [Deep Vein Thrombosis](topic:pb-im-dvt) for the shared DVT / PE anticoagulation regimen.
