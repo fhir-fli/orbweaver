@@ -98,8 +98,123 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'meld3' => _meld3(v),
     'qtc' => _qtc(v),
     'free_water_deficit' => _freeWaterDeficit(v),
+    'anthropometrics' => _anthropometrics(v),
+    'osmolal_gap' => _osmolalGap(v),
+    'parkland' => _parkland(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── anthropometrics: BMI (+ category) and BSA (Mosteller) ─────────────
+
+FormulaResult _anthropometrics(Map<String, dynamic> v) {
+  final height = _num(v, 'height');
+  final wt = _num(v, 'weight');
+  if (height == null || height <= 0 || wt == null || wt <= 0) {
+    return const FormulaResult.empty();
+  }
+  final cm = _sel(v, 'height_unit') == 'in' ? height * 2.54 : height;
+  final m = cm / 100;
+  final bmi = wt / (m * m);
+  final bsa = math.sqrt(cm * wt / 3600); // Mosteller
+
+  final String cat;
+  final FormulaSeverity sev;
+  if (bmi < 18.5) {
+    cat = 'Underweight';
+    sev = FormulaSeverity.warn;
+  } else if (bmi < 25) {
+    cat = 'Normal';
+    sev = FormulaSeverity.none;
+  } else if (bmi < 30) {
+    cat = 'Overweight';
+    sev = FormulaSeverity.warn;
+  } else {
+    cat = 'Obese';
+    sev = FormulaSeverity.alert;
+  }
+  return FormulaResult([
+    FormulaOutput(
+      label: 'BMI',
+      value: fmtNum(bmi),
+      unit: 'kg/m²',
+      primary: true,
+      severity: sev,
+      interpretation: '$cat (WHO). Asian cutoffs: overweight ≥23, obese ≥27.5.',
+    ),
+    FormulaOutput(
+      label: 'BSA (Mosteller)',
+      value: fmtNum(bsa, decimals: 2),
+      unit: 'm²',
+      interpretation: 'Body-surface area for dosing (chemo convention).',
+    ),
+  ]);
+}
+
+// ── osmolal_gap ──────────────────────────────────────────────────────
+
+FormulaResult _osmolalGap(Map<String, dynamic> v) {
+  final measured = _num(v, 'measured');
+  final na = _num(v, 'sodium');
+  final glucose = _num(v, 'glucose'); // mg/dL
+  final bun = _num(v, 'bun'); // mg/dL
+  if (measured == null || na == null || glucose == null || bun == null) {
+    return const FormulaResult.empty();
+  }
+  final ethanol = _num(v, 'ethanol'); // mg/dL, optional
+  var calc = 2 * na + glucose / 18 + bun / 2.8;
+  if (ethanol != null) calc += ethanol / 3.7;
+  final gap = measured - calc;
+  final high = gap > 10;
+  return FormulaResult([
+    FormulaOutput(
+      label: 'Osmolal gap',
+      value: fmtNum(gap),
+      unit: 'mOsm/kg',
+      primary: true,
+      severity: high ? FormulaSeverity.warn : FormulaSeverity.none,
+      interpretation: high
+          ? 'Elevated (> 10) — consider unmeasured osmoles (toxic alcohol).'
+          : 'Normal ≤ 10 — but a normal gap does NOT exclude toxic alcohol.',
+    ),
+    FormulaOutput(
+      label: 'Calculated osmolality',
+      value: fmtNum(calc),
+      unit: 'mOsm/kg',
+    ),
+  ]);
+}
+
+// ── parkland: burn resuscitation fluid ───────────────────────────────
+
+FormulaResult _parkland(Map<String, dynamic> v) {
+  final wt = _num(v, 'weight');
+  final tbsa = _num(v, 'tbsa');
+  if (wt == null || wt <= 0 || tbsa == null || tbsa <= 0) {
+    return const FormulaResult.empty();
+  }
+  final coeff = _sel(v, 'coefficient') == '4' ? 4.0 : 2.0;
+  final total = coeff * wt * tbsa;
+  final firstHalf = total / 2;
+  return FormulaResult([
+    FormulaOutput(
+      label: '24-hour volume',
+      value: fmtNum(firstHalf * 2),
+      unit: 'mL',
+      primary: true,
+      interpretation: 'Lactated Ringer\'s; titrate to urine output 0.5 mL/kg/h.',
+    ),
+    FormulaOutput(
+      label: 'First 8 h (from burn time)',
+      value: '${fmtNum(firstHalf)} mL',
+      unit: '≈ ${fmtNum(firstHalf / 8)} mL/h',
+    ),
+    FormulaOutput(
+      label: 'Next 16 h',
+      value: '${fmtNum(firstHalf)} mL',
+      unit: '≈ ${fmtNum(firstHalf / 16)} mL/h',
+    ),
+  ]);
 }
 
 // ── meld3: MELD 3.0 (OPTN 2023, age ≥12) ─────────────────────────────

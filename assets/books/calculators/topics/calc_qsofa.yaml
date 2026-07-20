@@ -1,0 +1,38 @@
+# ============================================================
+# qSOFA — quick Sepsis-related Organ Failure Assessment.
+# Evidence review 2026-07-19: the Surviving Sepsis Campaign 2021 (and 2026)
+# issued a STRONG recommendation AGAINST using qSOFA as a SINGLE sepsis
+# screening tool (poor sensitivity), favoring NEWS/NEWS2/MEWS/SIRS. qSOFA
+# still marks higher mortality risk. Seymour 2016 (Sepsis-3). Max 3.
+# ============================================================
+
+topic:
+  id: "calc-qsofa"
+  title: "qSOFA"
+  list_subtitle: "sepsis mortality-risk flag"
+  last_reviewed: "Evidence review 2026-07-19 · Sepsis-3 2016 · SSC 2021"
+  tags: ["qsofa", "sepsis", "sofa", "organ failure", "mortality", "infection", "sepsis-3"]
+  aliases:
+    - "qSOFA"
+    - "quick SOFA"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        A rapid bedside flag for higher mortality risk in suspected infection.
+        It is **not** a sensitive screen — see the caveat.
+
+    - type: "score"
+      title: "qSOFA"
+      source: "Seymour et al., JAMA 2016 (Sepsis-3)"
+      items:
+        - { key: "rr", label: "Respiratory rate ≥ 22", type: "toggle", points: 1 }
+        - { key: "mentation", label: "Altered mentation (GCS < 15)", type: "toggle", points: 1 }
+        - { key: "sbp", label: "Systolic BP ≤ 100 mmHg", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 1, label: "Lower risk", severity: "none" }
+        - { min: 2, label: "≥ 2 — increased mortality risk; escalate assessment", severity: "warn" }
+      caveats:
+        - "SSC 2021/2026 recommend AGAINST qSOFA as a single sepsis screen (low sensitivity) — use NEWS2/MEWS/SIRS to screen. A positive raises concern; a negative does NOT exclude sepsis."

@@ -271,6 +271,61 @@ void main() {
     test('max 8', () => expect(scoreRange(b).max, 8));
   });
 
+  group('qSOFA', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_qsofa.yaml'));
+
+    test('0–1 lower risk; 2+ increased risk (boundary)', () {
+      expect(_band(b, const {}), contains('Lower'));
+      expect(_band(b, {'rr': true}), contains('Lower'));
+      final s = {'rr': true, 'sbp': true};
+      expect(_total(b, s), 2);
+      expect(_band(b, s), contains('increased'));
+    });
+    test('max 3', () => expect(scoreRange(b).max, 3));
+  });
+
+  group('Centor / McIsaac (has age −1 option)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_centor.yaml'));
+
+    test('age ≥45 subtracts 1 → −1 possible', () {
+      expect(_total(b, {'age': 'a45'}), -1);
+      expect(scoreRange(b).min, -1);
+    });
+    test('band edges: 0 very low, 1 low, 2 intermediate, 4 high', () {
+      expect(_band(b, {'age': 'a15_44'}), contains('Very low')); // 0
+      expect(_band(b, {'age': 'a3_14'}), contains('testing optional')); // 1
+      expect(_band(b, {'age': 'a3_14', 'exudate': true}),
+          contains('Intermediate')); // 2
+      final high = {
+        'exudate': true,
+        'nodes': true,
+        'fever': true,
+        'no_cough': true,
+        'age': 'a15_44',
+      };
+      expect(_total(b, high), 4);
+      expect(_band(b, high), contains('High')); // 4
+    });
+    test('max 5', () => expect(scoreRange(b).max, 5));
+  });
+
+  group('Canadian CT Head Rule (any factor → CT)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_canadian_ct_head.yaml'));
+
+    test('no factors → no CT indicated', () {
+      expect(_total(b, const {}), 0);
+      expect(_band(b, const {}), contains('No CT'));
+    });
+    test('any single factor → CT recommended', () {
+      expect(_band(b, {'vomiting': true}), contains('recommended'));
+      expect(_band(b, {'age65': true}), contains('recommended'));
+    });
+    test('max 7', () => expect(scoreRange(b).max, 7));
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));

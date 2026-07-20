@@ -435,6 +435,87 @@ void main() {
     });
   });
 
+  group('anthropometrics (BMI + BSA)', () {
+    test('180cm 80kg → BMI 24.7 normal, BSA 2.00', () {
+      final r = computeFormula('anthropometrics', {'height': 180, 'weight': 80});
+      expect(_v(r, 0), closeTo(24.7, 0.05)); // 80/1.8²
+      expect(r.outputs[0].interpretation, contains('Normal'));
+      expect(_v(r, 1), closeTo(2.0, 0.01)); // Mosteller √(180·80/3600)=2
+    });
+    test('BMI category + severity thresholds', () {
+      expect(
+        computeFormula('anthropometrics', {'height': 180, 'weight': 100})
+            .outputs[0]
+            .interpretation,
+        contains('Obese'),
+      );
+      expect(
+        computeFormula('anthropometrics', {'height': 180, 'weight': 55})
+            .outputs[0]
+            .interpretation,
+        contains('Underweight'),
+      );
+    });
+    test('height unit toggle: 70.866 in ≡ 180 cm', () {
+      final cm = computeFormula('anthropometrics', {'height': 180, 'weight': 80});
+      final inch = computeFormula('anthropometrics',
+          {'height': 70.866, 'weight': 80, 'height_unit': 'in'});
+      expect(_v(inch, 0), closeTo(_v(cm, 0), 0.05));
+    });
+    test('missing weight → empty', () {
+      expect(computeFormula('anthropometrics', {'height': 180}).isEmpty, isTrue);
+    });
+  });
+
+  group('osmolal_gap', () {
+    test('measured 300, Na 140, glu 90, BUN 14 → gap 10', () {
+      final r = computeFormula('osmolal_gap',
+          {'measured': 300, 'sodium': 140, 'glucose': 90, 'bun': 14});
+      expect(_v(r, 1), closeTo(290, 0.05)); // calc = 280+5+5
+      expect(_v(r, 0), closeTo(10, 0.05));
+    });
+    test('ethanol is added to calculated osmolality', () {
+      final r = computeFormula('osmolal_gap', {
+        'measured': 300,
+        'sodium': 140,
+        'glucose': 90,
+        'bun': 14,
+        'ethanol': 100,
+      });
+      expect(_v(r, 1), closeTo(290 + 100 / 3.7, 0.05));
+    });
+    test('gap > 10 flags warn', () {
+      final r = computeFormula('osmolal_gap',
+          {'measured': 320, 'sodium': 140, 'glucose': 90, 'bun': 14});
+      expect(r.outputs[0].severity, FormulaSeverity.warn);
+    });
+    test('missing BUN → empty', () {
+      expect(
+        computeFormula('osmolal_gap',
+                {'measured': 300, 'sodium': 140, 'glucose': 90})
+            .isEmpty,
+        isTrue,
+      );
+    });
+  });
+
+  group('parkland (burn fluid)', () {
+    test('ABA default 2 mL/kg: 70kg 40% → 5600 mL, 2800/2800', () {
+      final r = computeFormula('parkland', {'weight': 70, 'tbsa': 40});
+      expect(_v(r, 0), closeTo(5600, 0.5)); // 2×70×40
+      expect(r.outputs[1].value, contains('2800')); // first 8h
+      expect(r.outputs[1].unit, contains('350')); // 2800/8 mL/h
+    });
+    test('4 mL/kg legacy coefficient doubles it', () {
+      final r =
+          computeFormula('parkland', {'weight': 70, 'tbsa': 40, 'coefficient': '4'});
+      expect(_v(r, 0), closeTo(11200, 0.5));
+    });
+    test('missing TBSA → empty', () {
+      expect(computeFormula('parkland', {'weight': 70}).isEmpty, isTrue);
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

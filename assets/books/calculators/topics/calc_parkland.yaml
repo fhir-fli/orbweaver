@@ -1,0 +1,49 @@
+# ============================================================
+# Burn resuscitation fluid (Parkland / ABA Consensus).
+# Evidence review 2026-07-19: ABA 2023/24 recommends STARTING at
+# 2 mL/kg/%TBSA in adults (the "ABA Consensus" rate), NOT the classic
+# 4 mL/kg Parkland rate ("fluid creep"). Half over the first 8 h from the
+# TIME OF BURN, half over the next 16 h. The formula is a starting
+# estimate — titrate to urine output 0.5 mL/kg/h. Use %TBSA of 2nd/3rd
+# degree burns (Lund-Browder; rule of nines is inaccurate in children).
+# ============================================================
+
+topic:
+  id: "calc-parkland"
+  title: "Burn Resuscitation Fluid"
+  list_subtitle: "Parkland / ABA Consensus"
+  last_reviewed: "Evidence review 2026-07-19 · ABA CPG 2023/24"
+  tags: ["parkland", "burn", "fluid", "resuscitation", "tbsa", "aba", "lactated ringers", "trauma"]
+  aliases:
+    - "Parkland formula"
+    - "Burn fluid"
+    - "ABA Consensus"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Initial 24-hour crystalloid for burn resuscitation. Enter weight and
+        the %TBSA of second- and third-degree burns. **Default is the ABA
+        Consensus 2 mL/kg** starting rate; the 4 mL/kg Parkland rate is the
+        historical option.
+
+    - type: "formula"
+      kind: "parkland"
+      title: "Burn resuscitation fluid"
+      source: "ABA Clinical Practice Guideline 2023/24 (2 mL/kg); Baxter/Parkland (4 mL/kg)"
+      inputs:
+        - { key: "weight", label: "Weight", unit: "kg", type: "number" }
+        - { key: "tbsa", label: "%TBSA (2nd/3rd degree)", unit: "%", type: "number" }
+        - key: "coefficient"
+          label: "Starting rate"
+          type: "select"
+          default: "2"
+          options:
+            - { value: "2", label: "2 mL/kg (ABA Consensus)" }
+            - { value: "4", label: "4 mL/kg (Parkland, historical)" }
+      notes:
+        - "Give half over the first 8 h FROM THE TIME OF BURN, the remaining half over the next 16 h."
+      caveats:
+        - "A starting estimate only — titrate to urine output (~0.5 mL/kg/h adults). Estimate %TBSA with Lund-Browder (rule of nines under-/over-estimates, especially in children)."

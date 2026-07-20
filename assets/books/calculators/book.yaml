@@ -24,11 +24,13 @@ book:
       children:
         - topic: "topics/calc_creatinine_clearance.yaml"
         - topic: "topics/calc_holliday_segar.yaml"
+        - topic: "topics/calc_parkland.yaml"
     - title: "Electrolytes & Acid–Base"
       children:
         - topic: "topics/calc_corrected_sodium.yaml"
         - topic: "topics/calc_free_water_deficit.yaml"
         - topic: "topics/calc_anion_gap.yaml"
+        - topic: "topics/calc_osmolal_gap.yaml"
         - topic: "topics/calc_winters.yaml"
         - topic: "topics/calc_aa_gradient.yaml"
     - title: "Cardiac & Body Size"
@@ -36,6 +38,7 @@ book:
         - topic: "topics/calc_map.yaml"
         - topic: "topics/calc_qtc.yaml"
         - topic: "topics/calc_ideal_body_weight.yaml"
+        - topic: "topics/calc_anthropometrics.yaml"
     - title: "Hepatology"
       children:
         - topic: "topics/calc_meld.yaml"
@@ -49,5 +52,8 @@ book:
         - topic: "topics/calc_wells_pe.yaml"
         - topic: "topics/calc_perc.yaml"
         - topic: "topics/calc_curb65.yaml"
+        - topic: "topics/calc_qsofa.yaml"
+        - topic: "topics/calc_centor.yaml"
         - topic: "topics/calc_4ts.yaml"
         - topic: "topics/calc_gcs.yaml"
+        - topic: "topics/calc_canadian_ct_head.yaml"

@@ -37,6 +37,14 @@ const _files = <String, Map<String, dynamic>>{
   },
   'calc_qtc.yaml': {'qt': 400, 'hr': 60},
   'calc_free_water_deficit.yaml': {'weight': 70, 'sex': 'M', 'sodium': 160},
+  'calc_anthropometrics.yaml': {'height': 180, 'weight': 80},
+  'calc_osmolal_gap.yaml': {
+    'measured': 300,
+    'sodium': 140,
+    'glucose': 90,
+    'bun': 14,
+  },
+  'calc_parkland.yaml': {'weight': 70, 'tbsa': 40},
 };
 
 FormulaBlock _load(String file) {
@@ -99,7 +107,7 @@ void main() {
     });
 
     test('all formula calculators are present', () {
-      expect(_files, hasLength(11));
+      expect(_files, hasLength(14));
       for (final f in _files.keys) {
         expect(File('$_dir/$f').existsSync(), isTrue, reason: 'missing $f');
       }

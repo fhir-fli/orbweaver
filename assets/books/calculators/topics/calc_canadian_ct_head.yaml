@@ -1,0 +1,46 @@
+# ============================================================
+# Canadian CT Head Rule.
+# Evidence review 2026-07-19: ACEP 2023 gives CCHR a Level A recommendation
+# for minor head injury (higher specificity than NEXUS/New Orleans → fewer
+# scans). Any high- or medium-risk factor present → CT. Applies only to
+# GCS 13–15 minor head injury with witnessed LOC/amnesia/disorientation.
+# EXCLUDES anticoagulated/antiplatelet, age < 16, seizure, bleeding
+# disorder, obvious open skull fracture. Stiell 2001.
+# ============================================================
+
+topic:
+  id: "calc-canadian-ct-head"
+  title: "Canadian CT Head Rule"
+  list_subtitle: "minor head injury imaging"
+  last_reviewed: "Evidence review 2026-07-19 · Stiell 2001 · ACEP 2023"
+  tags: ["canadian ct head", "cchr", "head injury", "tbi", "ct", "concussion", "trauma", "imaging"]
+  aliases:
+    - "Canadian CT Head Rule"
+    - "CCHR"
+    - "Head CT rule"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Identifies which minor head-injury patients (GCS 13–15) need a head
+        CT. Tap any factor present — a single one means CT is recommended.
+        Check the exclusions before applying.
+
+    - type: "score"
+      title: "Canadian CT Head Rule"
+      source: "Stiell et al., Lancet 2001; ACEP 2023 mTBI policy"
+      items:
+        - { key: "gcs", label: "GCS < 15 at 2 h post-injury", type: "toggle", points: 1, help: "high-risk" }
+        - { key: "open_depressed", label: "Suspected open or depressed skull fracture", type: "toggle", points: 1, help: "high-risk" }
+        - { key: "basal", label: "Any sign of basal skull fracture", type: "toggle", points: 1, help: "hemotympanum, raccoon eyes, CSF leak, Battle's sign" }
+        - { key: "vomiting", label: "≥ 2 episodes of vomiting", type: "toggle", points: 1, help: "high-risk" }
+        - { key: "age65", label: "Age ≥ 65", type: "toggle", points: 1, help: "high-risk" }
+        - { key: "amnesia", label: "Retrograde amnesia ≥ 30 min before impact", type: "toggle", points: 1, help: "medium-risk" }
+        - { key: "mechanism", label: "Dangerous mechanism", type: "toggle", points: 1, help: "pedestrian struck, ejected, fall > 3 ft / 5 stairs (medium-risk)" }
+      bands:
+        - { min: 0, max: 0, label: "No CT indicated by the rule", severity: "none" }
+        - { min: 1, label: "CT head recommended", severity: "warn" }
+      caveats:
+        - "Applies ONLY to GCS 13–15 minor head injury with witnessed LOC/amnesia/disorientation. Do NOT apply if on anticoagulant/antiplatelet, age < 16, seizure, bleeding disorder, or obvious open skull fracture."

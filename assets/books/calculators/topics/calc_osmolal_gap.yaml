@@ -1,0 +1,42 @@
+# ============================================================
+# Osmolal gap.
+# Evidence review 2026-07-19: gap = measured − calculated osmolality,
+# calc = 2·Na + glucose/18 + BUN/2.8 (+ ethanol/3.7). An adjunct for
+# toxic-alcohol evaluation — a normal/low gap does NOT rule out ingestion
+# (esp. late, once the parent alcohol is metabolized). Levels + anion gap
+# + clinical picture (and EXTRIP for dialysis) drive management.
+# ============================================================
+
+topic:
+  id: "calc-osmolal-gap"
+  title: "Osmolal Gap"
+  list_subtitle: "toxic alcohol screen"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["osmolal gap", "osmolar gap", "toxic alcohol", "methanol", "ethylene glycol", "osmolality", "toxicology"]
+  aliases:
+    - "Osmolal gap"
+    - "Osmolar gap"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Difference between measured and calculated serum osmolality. A large
+        gap suggests unmeasured osmoles (e.g. methanol, ethylene glycol) — but
+        a normal gap cannot exclude a toxic-alcohol ingestion.
+
+    - type: "formula"
+      kind: "osmolal_gap"
+      title: "Osmolal gap"
+      source: "Gap = measured − (2·Na + glucose/18 + BUN/2.8 + ethanol/3.7)"
+      inputs:
+        - { key: "measured", label: "Measured osmolality", unit: "mOsm/kg", type: "number" }
+        - { key: "sodium", label: "Na⁺", unit: "mEq/L", type: "number" }
+        - { key: "glucose", label: "Glucose", unit: "mg/dL", type: "number" }
+        - { key: "bun", label: "BUN", unit: "mg/dL", type: "number" }
+        - { key: "ethanol", label: "Ethanol", unit: "mg/dL", type: "number", optional: true, help: "include measured level if present" }
+      notes:
+        - "Normal gap ≈ ≤ 10 mOsm/kg. Include a measured ethanol level so alcohol isn't misread as an unmeasured osmole."
+      caveats:
+        - "A normal/low osmolal gap does NOT exclude toxic-alcohol poisoning — pair with the anion gap, specific levels, and clinical context."

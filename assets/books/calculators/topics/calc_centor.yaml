@@ -1,0 +1,50 @@
+# ============================================================
+# Centor / McIsaac (modified) — strep pharyngitis.
+# Evidence review 2026-07-19: IDSA 2025 suggests using a clinical score to
+# decide WHO TO TEST — it does NOT endorse empiric antibiotics by score
+# alone where rapid antigen/molecular testing exists. McIsaac adds the age
+# adjustment. Points per McIsaac 1998. Range −1 to 5.
+# ============================================================
+
+topic:
+  id: "calc-centor"
+  title: "Centor / McIsaac"
+  list_subtitle: "strep pharyngitis"
+  last_reviewed: "Evidence review 2026-07-19 · McIsaac 1998 · IDSA 2025"
+  tags: ["centor", "mcisaac", "pharyngitis", "strep", "sore throat", "gas", "streptococcal"]
+  aliases:
+    - "Centor"
+    - "McIsaac"
+    - "Strep score"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Estimates the probability of group A strep in sore throat, to decide
+        who warrants testing. Tap the features present and pick the age band.
+
+    - type: "score"
+      title: "Centor (McIsaac-modified)"
+      source: "McIsaac et al., CMAJ 1998"
+      items:
+        - { key: "exudate", label: "Tonsillar exudate or swelling", type: "toggle", points: 1 }
+        - { key: "nodes", label: "Tender/swollen anterior cervical nodes", type: "toggle", points: 1 }
+        - { key: "fever", label: "Fever > 38 °C (or history)", type: "toggle", points: 1 }
+        - { key: "no_cough", label: "Absence of cough", type: "toggle", points: 1 }
+        - key: "age"
+          label: "Age"
+          type: "choice"
+          default: "a15_44"
+          options:
+            - { value: "a3_14", label: "3–14", points: 1 }
+            - { value: "a15_44", label: "15–44", points: 0 }
+            - { value: "a45", label: "≥ 45", points: -1 }
+      bands:
+        - { min: -1, max: 0, label: "Very low — no testing or antibiotics", severity: "none" }
+        - { min: 1, max: 1, label: "Low — testing optional", severity: "none" }
+        - { min: 2, max: 3, label: "Intermediate — rapid antigen / culture", severity: "warn" }
+        - { min: 4, label: "High — test; where testing is unavailable, consider empiric treatment", severity: "warn" }
+      caveats:
+        - "Use to decide who to TEST, not to treat by score alone where rapid antigen/molecular testing exists (IDSA 2025). Score-guided empiric treatment is a resource-limited fallback only."

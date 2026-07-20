@@ -1,0 +1,43 @@
+# ============================================================
+# BMI + body-surface area (Mosteller).
+# Evidence review 2026-07-19: BSA default = Mosteller (chemo-dosing
+# convention; Cancer Care Ontario). BMI with WHO categories (+ optional
+# Asian cutoffs noted). Mosteller BSA = √(height_cm × weight_kg / 3600).
+# ============================================================
+
+topic:
+  id: "calc-anthropometrics"
+  title: "BMI & BSA"
+  list_subtitle: "body mass index + surface area"
+  last_reviewed: "Evidence review 2026-07-19 · Mosteller 1987"
+  tags: ["bmi", "bsa", "body mass index", "body surface area", "mosteller", "weight", "obesity", "dosing"]
+  aliases:
+    - "BMI"
+    - "BSA"
+    - "Body surface area"
+    - "Body mass index"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Body mass index (with WHO category) and body-surface area (Mosteller,
+        the chemotherapy-dosing convention).
+
+    - type: "formula"
+      kind: "anthropometrics"
+      title: "BMI & BSA"
+      source: "BMI = kg/m²; BSA = √(height·weight/3600) (Mosteller 1987)"
+      inputs:
+        - { key: "height", label: "Height", type: "number" }
+        - key: "height_unit"
+          label: "Height unit"
+          type: "select"
+          default: "cm"
+          options:
+            - { value: "cm" }
+            - { value: "in" }
+        - { key: "weight", label: "Weight", unit: "kg", type: "number" }
+      notes:
+        - "WHO BMI: < 18.5 underweight · 18.5–24.9 normal · 25–29.9 overweight · ≥ 30 obese."
