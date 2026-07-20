@@ -868,6 +868,57 @@ void main() {
     });
   });
 
+  group('adrogue_madias', () {
+    test('3% saline, Na 120, 70kg male → +9.1 mEq/L per L', () {
+      final r = computeFormula('adrogue_madias', {
+        'sodium': 120, 'weight': 70, 'sex': 'M', 'fluid': 'saline3',
+      });
+      expect(_v(r, 0), closeTo(9.1, 0.1)); // (513-120)/(42+1)
+    });
+    test('D5W lowers Na (negative ΔNa)', () {
+      final r = computeFormula('adrogue_madias', {
+        'sodium': 120, 'weight': 70, 'sex': 'M', 'fluid': 'd5w',
+      });
+      expect(_v(r, 0), lessThan(0));
+    });
+    test('volume scales the effect', () {
+      final r = computeFormula('adrogue_madias', {
+        'sodium': 120, 'weight': 70, 'sex': 'M', 'fluid': 'saline3',
+        'volume': 2,
+      });
+      expect(_v(r, 0), closeTo(17.9, 0.1)); // 393×2/(42+2)
+    });
+    test('female TBW factor 0.5 differs from male', () {
+      final m = computeFormula('adrogue_madias',
+          {'sodium': 120, 'weight': 70, 'sex': 'M', 'fluid': 'ns'});
+      final f = computeFormula('adrogue_madias',
+          {'sodium': 120, 'weight': 70, 'sex': 'F', 'fluid': 'ns'});
+      expect(_v(f, 0), isNot(closeTo(_v(m, 0), 0.05)));
+    });
+    test('missing fluid → empty', () {
+      expect(
+        computeFormula('adrogue_madias', {'sodium': 120, 'weight': 70, 'sex': 'M'})
+            .isEmpty,
+        isTrue,
+      );
+    });
+  });
+
+  group('hba1c_eag (ADAG)', () {
+    test('A1c 7% → 154 mg/dL', () {
+      final r = computeFormula('hba1c_eag', {'a1c': 7});
+      expect(_v(r, 0), closeTo(154, 0.5)); // 28.7×7 − 46.7
+      expect(r.outputs[0].interpretation, contains('8.5'));
+    });
+    test('A1c 6% → ~125–126 mg/dL', () {
+      // 28.7×6 − 46.7 = 125.5 (ADA table rounds to 126; float lands at 125.5)
+      expect(_v(computeFormula('hba1c_eag', {'a1c': 6}), 0), closeTo(125.5, 1));
+    });
+    test('missing A1c → empty', () {
+      expect(computeFormula('hba1c_eag', const {}).isEmpty, isTrue);
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

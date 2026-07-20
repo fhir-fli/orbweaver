@@ -1,0 +1,36 @@
+# ============================================================
+# HbA1c → estimated average glucose (eAG).
+# Evidence review 2026-07-19: ADAG study (Nathan, Diabetes Care 2008).
+# eAG (mg/dL) = 28.7 × A1c − 46.7; eAG (mmol/L) = 1.59 × A1c − 2.59.
+# A population estimate — individual mean glucose varies.
+# ============================================================
+
+topic:
+  id: "calc-hba1c-eag"
+  title: "HbA1c → eAG"
+  list_subtitle: "estimated average glucose"
+  last_reviewed: "Evidence review 2026-07-19 · ADAG (Nathan 2008)"
+  tags: ["hba1c", "a1c", "eag", "estimated average glucose", "diabetes", "glucose", "conversion"]
+  aliases:
+    - "eAG"
+    - "A1c to glucose"
+    - "Estimated average glucose"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Converts HbA1c to an estimated average glucose — the everyday-units
+        equivalent patients relate to.
+
+    - type: "formula"
+      kind: "hba1c_eag"
+      title: "HbA1c → eAG"
+      source: "Nathan et al. (ADAG), Diabetes Care 2008"
+      inputs:
+        - { key: "a1c", label: "HbA1c", unit: "%", type: "number" }
+      notes:
+        - "eAG (mg/dL) = 28.7 × A1c − 46.7. Example: A1c 7% ≈ 154 mg/dL (8.6 mmol/L)."
+      caveats:
+        - "A population regression — an individual's true mean glucose can differ; conditions altering red-cell turnover distort HbA1c."

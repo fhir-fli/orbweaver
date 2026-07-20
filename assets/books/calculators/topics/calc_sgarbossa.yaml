@@ -1,0 +1,42 @@
+# ============================================================
+# Modified (Smith) Sgarbossa Criteria — MI in LBBB / paced rhythm.
+# Evidence review 2026-07-19: the unweighted Smith 2012 modification —
+# ANY criterion positive suggests acute coronary occlusion (sens ~80% /
+# spec ~99%, validated Meyers 2015), far more sensitive than the original
+# weighted score (sens ~20%). Applies to LBBB or ventricular pacing.
+# ============================================================
+
+topic:
+  id: "calc-sgarbossa"
+  title: "Sgarbossa (Modified)"
+  list_subtitle: "MI in LBBB / paced rhythm"
+  last_reviewed: "Evidence review 2026-07-19 · Smith 2012 · Meyers 2015"
+  tags: ["sgarbossa", "lbbb", "left bundle branch block", "mi", "stemi", "paced", "ecg", "occlusion"]
+  aliases:
+    - "Sgarbossa"
+    - "Modified Sgarbossa"
+    - "LBBB MI"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Detects acute MI when a left bundle branch block (or ventricular
+        pacing) obscures the usual ST changes. Any one positive criterion is a
+        positive result.
+
+    - type: "score"
+      title: "Modified Sgarbossa criteria"
+      source: "Smith et al., Ann Emerg Med 2012 (validated Meyers 2015)"
+      items:
+        - { key: "concordant_ste", label: "Concordant ST elevation ≥ 1 mm in ≥ 1 lead", type: "toggle", points: 1 }
+        - { key: "concordant_std", label: "Concordant ST depression ≥ 1 mm in V1–V3", type: "toggle", points: 1 }
+        - { key: "discordant", label: "Discordant ST elevation with ST/S ratio ≤ −0.25 (STE ≥ 25% of S-wave depth)", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 0, label: "Negative — no criterion met", severity: "none" }
+        - { min: 1, label: "Positive — suggests acute MI (activate cath lab pathway)", severity: "alert" }
+      notes:
+        - "The modified (unweighted) rule uses the ST/S ratio for the third criterion; sensitivity ~80% / specificity ~99%, better than the original weighted 5/3/2 score."
+      caveats:
+        - "For LBBB or ventricular-paced rhythms. A negative result does not exclude MI — correlate with symptoms, troponin, and serial ECGs."

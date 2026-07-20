@@ -112,8 +112,65 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'lille' => _lille(v),
     'prevent_ascvd' => _preventAscvd(v),
     'glasgow_blatchford' => _glasgowBlatchford(v),
+    'adrogue_madias' => _adrogueMadias(v),
+    'hba1c_eag' => _hba1cEag(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── adrogue_madias: predicted ΔNa from an infusate (hyponatremia) ────
+// ΔNa = (infusate Na + infusate K − serum Na) × Vol / (TBW + Vol).
+// Reduces to the classic per-1-L Adrogué-Madias at Vol = 1 L; the volume-
+// scaled form (Kidney360 2021) is correct for any volume.
+
+FormulaResult _adrogueMadias(Map<String, dynamic> v) {
+  final serumNa = _num(v, 'sodium');
+  final wt = _num(v, 'weight');
+  final sex = _sel(v, 'sex');
+  final fluid = _sel(v, 'fluid');
+  if (serumNa == null || wt == null || wt <= 0 || sex == null || fluid == null) {
+    return const FormulaResult.empty();
+  }
+  // (Na+, K+) of each infusate, mEq/L.
+  final (naInf, kInf) = switch (fluid) {
+    'saline3' => (513.0, 0.0), // 3% hypertonic saline
+    'ns' => (154.0, 0.0), // 0.9% normal saline
+    'lr' => (130.0, 4.0), // lactated Ringer's
+    'half_ns' => (77.0, 0.0), // 0.45% saline
+    'd5w' => (0.0, 0.0), // D5W
+    _ => (154.0, 0.0),
+  };
+  final tbw = wt * (sex == 'F' ? 0.5 : 0.6);
+  final vol = _num(v, 'volume') ?? 1.0;
+  if (vol <= 0) return const FormulaResult.empty();
+  final delta = (naInf + kInf - serumNa) * vol / (tbw + vol);
+  return FormulaResult([
+    FormulaOutput(
+      label: 'Predicted ΔNa⁺',
+      value: fmtNum(delta, decimals: 1),
+      unit: 'mEq/L',
+      primary: true,
+      interpretation: 'per ${fmtNum(vol)} L infused. Estimate — recheck Na.',
+    ),
+  ]);
+}
+
+// ── hba1c_eag: HbA1c → estimated average glucose (ADAG) ──────────────
+
+FormulaResult _hba1cEag(Map<String, dynamic> v) {
+  final a1c = _num(v, 'a1c'); // %
+  if (a1c == null || a1c <= 0) return const FormulaResult.empty();
+  final mgdl = 28.7 * a1c - 46.7;
+  final mmol = 1.59 * a1c - 2.59;
+  return FormulaResult([
+    FormulaOutput(
+      label: 'Estimated average glucose',
+      value: fmtNum(mgdl, decimals: 0),
+      unit: 'mg/dL',
+      primary: true,
+      interpretation: '≈ ${fmtNum(mmol, decimals: 1)} mmol/L (ADAG). Population estimate.',
+    ),
+  ]);
 }
 
 // ── glasgow_blatchford: upper-GI-bleed risk (sex-conditional Hb) ─────

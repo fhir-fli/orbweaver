@@ -668,6 +668,33 @@ void main() {
     test('maximum = 42', () => expect(scoreRange(b).max, 42));
   });
 
+  group('SIRS', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_sirs.yaml'));
+
+    test('0–1 not met, ≥2 present (boundary)', () {
+      expect(_band(b, const {}), contains('not met'));
+      expect(_band(b, {'temp': true}), contains('not met'));
+      expect(_band(b, {'temp': true, 'hr': true}), contains('present'));
+    });
+    test('max 4', () => expect(scoreRange(b).max, 4));
+  });
+
+  group('Modified Sgarbossa (any positive → MI)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_sgarbossa.yaml'));
+
+    test('no criteria → negative', () {
+      expect(_total(b, const {}), 0);
+      expect(_band(b, const {}), contains('Negative'));
+    });
+    test('any single criterion → positive', () {
+      expect(_band(b, {'concordant_ste': true}), contains('Positive'));
+      expect(_band(b, {'discordant': true}), contains('Positive'));
+    });
+    test('max 3', () => expect(scoreRange(b).max, 3));
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));

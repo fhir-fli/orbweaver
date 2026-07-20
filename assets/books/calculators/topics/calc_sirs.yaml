@@ -1,0 +1,38 @@
+# ============================================================
+# SIRS — Systemic Inflammatory Response Syndrome criteria.
+# Evidence review 2026-07-19: ≥ 2 of 4 = SIRS. Still widely used to flag
+# possible infection/sepsis (SSC lists SIRS among preferred screens over
+# qSOFA). Non-specific — SIRS ≠ sepsis. Bone 1992.
+# ============================================================
+
+topic:
+  id: "calc-sirs"
+  title: "SIRS Criteria"
+  list_subtitle: "systemic inflammatory response"
+  last_reviewed: "Evidence review 2026-07-19 · Bone 1992"
+  tags: ["sirs", "sepsis", "systemic inflammatory response", "infection", "screening", "temperature"]
+  aliases:
+    - "SIRS"
+    - "Systemic inflammatory response"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Tap each criterion present. Two or more meets SIRS — a prompt to look
+        for infection, though SIRS itself is non-specific.
+
+    - type: "score"
+      title: "SIRS criteria"
+      source: "Bone et al., Chest 1992 (ACCP/SCCM)"
+      items:
+        - { key: "temp", label: "Temperature > 38 °C or < 36 °C", type: "toggle", points: 1 }
+        - { key: "hr", label: "Heart rate > 90", type: "toggle", points: 1 }
+        - { key: "rr", label: "Respiratory rate > 20 or PaCO₂ < 32 mmHg", type: "toggle", points: 1 }
+        - { key: "wbc", label: "WBC > 12k or < 4k, or > 10% bands", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 1, label: "SIRS criteria not met", severity: "none" }
+        - { min: 2, label: "SIRS present — evaluate for infection / sepsis", severity: "warn" }
+      caveats:
+        - "SIRS is non-specific (trauma, pancreatitis, burns also trigger it) — it is not sepsis by itself; interpret with the clinical picture and a lactate."

@@ -1,0 +1,56 @@
+# ============================================================
+# Adrogué-Madias — predicted change in serum Na from an infusate.
+# Evidence review 2026-07-19: ΔNa = (infusate Na + infusate K − serum Na)
+# × Vol / (TBW + Vol). The volume-scaled form (Kidney360 2021) is correct
+# for any volume; at 1 L it is the classic Adrogué-Madias. A planning
+# estimate — it ignores ongoing losses, so recheck Na frequently.
+# ============================================================
+
+topic:
+  id: "calc-adrogue-madias"
+  title: "Adrogué-Madias"
+  list_subtitle: "Na change per infusate (hyponatremia)"
+  last_reviewed: "Evidence review 2026-07-19 · Adrogué & Madias 2000"
+  tags: ["adrogue-madias", "adrogue", "hyponatremia", "sodium", "hypertonic saline", "correction", "electrolyte"]
+  aliases:
+    - "Adrogue-Madias"
+    - "Sodium correction"
+    - "Hyponatremia correction"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Predicts the change in serum sodium from 1 L (or a chosen volume) of an
+        IV fluid — to help plan hyponatremia (or hypernatremia) correction.
+
+    - type: "formula"
+      kind: "adrogue_madias"
+      title: "Adrogué-Madias"
+      source: "Adrogué & Madias, NEJM 2000; volume-scaled form Kidney360 2021"
+      inputs:
+        - { key: "sodium", label: "Current serum Na⁺", unit: "mEq/L", type: "number" }
+        - { key: "weight", label: "Weight", unit: "kg", type: "number" }
+        - key: "sex"
+          label: "Sex"
+          type: "select"
+          default: "M"
+          options:
+            - { value: "M", label: "Male (TBW 0.6)" }
+            - { value: "F", label: "Female (TBW 0.5)" }
+        - key: "fluid"
+          label: "Infusate"
+          type: "select"
+          default: "saline3"
+          options:
+            - { value: "saline3", label: "3% saline (Na 513)" }
+            - { value: "ns", label: "0.9% saline (Na 154)" }
+            - { value: "lr", label: "Lactated Ringer's (Na 130)" }
+            - { value: "half_ns", label: "0.45% saline (Na 77)" }
+            - { value: "d5w", label: "D5W (Na 0)" }
+        - { key: "volume", label: "Volume infused", unit: "L", type: "number", optional: true, help: "default 1 L" }
+      notes:
+        - "Total body water = weight × 0.6 (male) / 0.5 (female)."
+      caveats:
+        - "Planning estimate only — ignores ongoing urinary/insensible losses; recheck Na frequently. Limit correction (≈ ≤ 8 mEq/L per 24 h in chronic hyponatremia) to avoid osmotic demyelination."

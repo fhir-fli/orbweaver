@@ -30,10 +30,12 @@ book:
       children:
         - topic: "topics/calc_corrected_sodium.yaml"
         - topic: "topics/calc_free_water_deficit.yaml"
+        - topic: "topics/calc_adrogue_madias.yaml"
         - topic: "topics/calc_anion_gap.yaml"
         - topic: "topics/calc_osmolal_gap.yaml"
         - topic: "topics/calc_winters.yaml"
         - topic: "topics/calc_aa_gradient.yaml"
+        - topic: "topics/calc_hba1c_eag.yaml"
     - title: "Cardiac & Body Size"
       children:
         - topic: "topics/calc_map.yaml"
@@ -67,7 +69,9 @@ book:
         - topic: "topics/calc_curb65.yaml"
         - topic: "topics/calc_news2.yaml"
         - topic: "topics/calc_qsofa.yaml"
+        - topic: "topics/calc_sirs.yaml"
         - topic: "topics/calc_centor.yaml"
+        - topic: "topics/calc_sgarbossa.yaml"
         - topic: "topics/calc_ich_score.yaml"
         - topic: "topics/calc_nihss.yaml"
         - topic: "topics/calc_sofa.yaml"
