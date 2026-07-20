@@ -1,0 +1,152 @@
+# ============================================================
+# NIHSS — National Institutes of Health Stroke Scale.
+# Evidence review 2026-07-19: standard stroke-severity measure (AHA/ASA
+# 2019 Class I, LOE B-NR). 15 items; total 0-42. Report components too.
+# ============================================================
+
+topic:
+  id: "calc-nihss"
+  title: "NIHSS"
+  list_subtitle: "stroke severity"
+  last_reviewed: "Evidence review 2026-07-19 · AHA/ASA 2019"
+  tags: ["nihss", "nih stroke scale", "stroke", "severity", "neuro", "cva", "tpa"]
+  aliases:
+    - "NIHSS"
+    - "NIH Stroke Scale"
+    - "Stroke severity"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Quantifies stroke severity from a structured neurologic exam. Defaults
+        show a normal exam (0); set each item to the finding observed.
+
+    - type: "score"
+      title: "NIHSS"
+      unit: "/ 42"
+      source: "Brott et al., Stroke 1989; NIH Stroke Scale"
+      items:
+        - key: "loc"
+          label: "1a. Level of consciousness"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Alert, responsive" }
+            - { value: "1", points: 1, label: "Arousable to minor stimulation" }
+            - { value: "2", points: 2, label: "Arousable only to repeated/painful stimuli" }
+            - { value: "3", points: 3, label: "Unresponsive / reflex responses only" }
+        - key: "loc_q"
+          label: "1b. LOC questions (month, age)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Both correct" }
+            - { value: "1", points: 1, label: "One correct" }
+            - { value: "2", points: 2, label: "Neither correct" }
+        - key: "loc_c"
+          label: "1c. LOC commands (open/close eyes, grip)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Both tasks correct" }
+            - { value: "1", points: 1, label: "One task correct" }
+            - { value: "2", points: 2, label: "Neither task" }
+        - key: "gaze"
+          label: "2. Best gaze"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Normal" }
+            - { value: "1", points: 1, label: "Partial gaze palsy" }
+            - { value: "2", points: 2, label: "Forced deviation" }
+        - key: "visual"
+          label: "3. Visual fields"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "No visual loss" }
+            - { value: "1", points: 1, label: "Partial hemianopia" }
+            - { value: "2", points: 2, label: "Complete hemianopia" }
+            - { value: "3", points: 3, label: "Bilateral hemianopia / blind" }
+        - key: "facial"
+          label: "4. Facial palsy"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Normal" }
+            - { value: "1", points: 1, label: "Minor (flattened nasolabial fold)" }
+            - { value: "2", points: 2, label: "Partial (lower face)" }
+            - { value: "3", points: 3, label: "Complete (upper + lower)" }
+        - key: "arm_l"
+          label: "5a. Left arm motor"
+          type: "scale"
+          default: "0"
+          options: &motorarm
+            - { value: "0", points: 0, label: "No drift (holds 10 s)" }
+            - { value: "1", points: 1, label: "Drift before 10 s" }
+            - { value: "2", points: 2, label: "Some effort against gravity" }
+            - { value: "3", points: 3, label: "No effort against gravity" }
+            - { value: "4", points: 4, label: "No movement" }
+        - { key: "arm_r", label: "5b. Right arm motor", type: "scale", default: "0", options: *motorarm }
+        - key: "leg_l"
+          label: "6a. Left leg motor"
+          type: "scale"
+          default: "0"
+          options: &motorleg
+            - { value: "0", points: 0, label: "No drift (holds 5 s)" }
+            - { value: "1", points: 1, label: "Drift before 5 s" }
+            - { value: "2", points: 2, label: "Some effort against gravity" }
+            - { value: "3", points: 3, label: "No effort against gravity" }
+            - { value: "4", points: 4, label: "No movement" }
+        - { key: "leg_r", label: "6b. Right leg motor", type: "scale", default: "0", options: *motorleg }
+        - key: "ataxia"
+          label: "7. Limb ataxia"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Absent" }
+            - { value: "1", points: 1, label: "One limb" }
+            - { value: "2", points: 2, label: "Two limbs" }
+        - key: "sensory"
+          label: "8. Sensory"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Normal" }
+            - { value: "1", points: 1, label: "Mild-moderate loss" }
+            - { value: "2", points: 2, label: "Severe / total loss" }
+        - key: "language"
+          label: "9. Best language"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "No aphasia" }
+            - { value: "1", points: 1, label: "Mild-moderate aphasia" }
+            - { value: "2", points: 2, label: "Severe aphasia" }
+            - { value: "3", points: 3, label: "Mute / global aphasia" }
+        - key: "dysarthria"
+          label: "10. Dysarthria"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "Normal" }
+            - { value: "1", points: 1, label: "Mild-moderate slurring" }
+            - { value: "2", points: 2, label: "Severe / unintelligible" }
+        - key: "extinction"
+          label: "11. Extinction / inattention"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "No abnormality" }
+            - { value: "1", points: 1, label: "One sensory modality" }
+            - { value: "2", points: 2, label: "Profound / multiple modalities" }
+      bands:
+        - { min: 0, max: 0, label: "No stroke symptoms", severity: "none" }
+        - { min: 1, max: 4, label: "Minor stroke", severity: "warn" }
+        - { min: 5, max: 15, label: "Moderate stroke", severity: "warn" }
+        - { min: 16, max: 20, label: "Moderate-to-severe stroke", severity: "alert" }
+        - { min: 21, label: "Severe stroke", severity: "alert" }
+      notes:
+        - "Report components, not just the total. Serial NIHSS tracks progression / treatment response."

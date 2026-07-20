@@ -1713,10 +1713,16 @@ class ConversionBlock extends Block {
 
 enum FormulaInputType {
   number,
-  select;
+  select,
 
-  static FormulaInputType fromString(String? s) =>
-      s == 'select' ? select : number;
+  /// A yes/no checkbox; contributes a bool (true when checked) to the values.
+  boolean;
+
+  static FormulaInputType fromString(String? s) => switch (s) {
+        'select' => select,
+        'boolean' => boolean,
+        _ => number,
+      };
 }
 
 /// One option in a `select` input (a unit toggle, sex, …).

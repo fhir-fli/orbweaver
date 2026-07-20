@@ -25,6 +25,7 @@ class FormulaBlockView extends StatefulWidget {
 class _FormulaBlockViewState extends State<FormulaBlockView> {
   final _controllers = <String, TextEditingController>{};
   final _selects = <String, String>{};
+  final _bools = <String, bool>{};
 
   FormulaBlock get _b => widget.block;
 
@@ -32,14 +33,16 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
   void initState() {
     super.initState();
     for (final input in _b.inputs) {
-      if (input.type == FormulaInputType.number) {
-        _controllers[input.key] =
-            TextEditingController(text: input.defaultValue ?? '')
-              ..addListener(() => setState(() {}));
-      } else {
-        final initial = input.defaultValue ??
-            (input.options.isNotEmpty ? input.options.first.value : '');
-        _selects[input.key] = initial;
+      switch (input.type) {
+        case FormulaInputType.number:
+          _controllers[input.key] =
+              TextEditingController(text: input.defaultValue ?? '')
+                ..addListener(() => setState(() {}));
+        case FormulaInputType.boolean:
+          _bools[input.key] = input.defaultValue == 'true';
+        case FormulaInputType.select:
+          _selects[input.key] = input.defaultValue ??
+              (input.options.isNotEmpty ? input.options.first.value : '');
       }
     }
   }
@@ -57,12 +60,15 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
   Map<String, dynamic> _values() {
     final v = <String, dynamic>{};
     for (final input in _b.inputs) {
-      if (input.type == FormulaInputType.number) {
-        final parsed = double.tryParse(_controllers[input.key]!.text.trim());
-        if (parsed != null) v[input.key] = parsed;
-      } else {
-        final s = _selects[input.key];
-        if (s != null && s.isNotEmpty) v[input.key] = s;
+      switch (input.type) {
+        case FormulaInputType.number:
+          final parsed = double.tryParse(_controllers[input.key]!.text.trim());
+          if (parsed != null) v[input.key] = parsed;
+        case FormulaInputType.boolean:
+          v[input.key] = _bools[input.key] ?? false;
+        case FormulaInputType.select:
+          final s = _selects[input.key];
+          if (s != null && s.isNotEmpty) v[input.key] = s;
       }
     }
     return v;
@@ -129,42 +135,61 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
       for (final input in _b.inputs)
         Padding(
           padding: const EdgeInsets.only(bottom: 8),
-          child: Row(
-            children: [
-              Expanded(
-                flex: 5,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          child: input.type == FormulaInputType.boolean
+              ? _booleanRow(input)
+              : Row(
                   children: [
-                    Text(
-                      input.label + (input.optional ? ' (optional)' : ''),
-                      style: const TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w600,
-                      ),
+                    Expanded(flex: 5, child: _inputLabel(input)),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      flex: 4,
+                      child: input.type == FormulaInputType.number
+                          ? _numberField(input)
+                          : _selectField(input),
                     ),
-                    if (input.help != null)
-                      Text(
-                        input.help!,
-                        style: const TextStyle(
-                          fontSize: 10.5,
-                          color: Colors.black54,
-                        ),
-                      ),
                   ],
                 ),
-              ),
-              const SizedBox(width: 8),
-              Expanded(
-                flex: 4,
-                child: input.type == FormulaInputType.number
-                    ? _numberField(input)
-                    : _selectField(input),
-              ),
-            ],
-          ),
         ),
     ];
+  }
+
+  Widget _inputLabel(FormulaInput input) => Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            input.label + (input.optional ? ' (optional)' : ''),
+            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+          ),
+          if (input.help != null)
+            Text(
+              input.help!,
+              style: const TextStyle(fontSize: 10.5, color: Colors.black54),
+            ),
+        ],
+      );
+
+  Widget _booleanRow(FormulaInput input) {
+    final on = _bools[input.key] ?? false;
+    return InkWell(
+      onTap: () => setState(() => _bools[input.key] = !on),
+      borderRadius: BorderRadius.circular(6),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 30,
+            child: Checkbox(
+              value: on,
+              visualDensity: VisualDensity.compact,
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              activeColor: widget.theme.header,
+              onChanged: (b) => setState(() => _bools[input.key] = b ?? false),
+            ),
+          ),
+          const SizedBox(width: 4),
+          Expanded(child: _inputLabel(input)),
+        ],
+      ),
+    );
   }
 
   Widget _numberField(FormulaInput input) => TextField(

@@ -41,13 +41,14 @@ book:
         - topic: "topics/calc_prevent_ascvd.yaml"
         - topic: "topics/calc_ideal_body_weight.yaml"
         - topic: "topics/calc_anthropometrics.yaml"
-    - title: "Hepatology"
+    - title: "Hepatology & GI"
       children:
         - topic: "topics/calc_meld.yaml"
         - topic: "topics/calc_child_pugh.yaml"
         - topic: "topics/calc_fib4.yaml"
         - topic: "topics/calc_maddrey.yaml"
         - topic: "topics/calc_lille.yaml"
+        - topic: "topics/calc_glasgow_blatchford.yaml"
     - title: "Hematology & Pulmonary"
       children:
         - topic: "topics/calc_anc.yaml"
@@ -68,6 +69,7 @@ book:
         - topic: "topics/calc_qsofa.yaml"
         - topic: "topics/calc_centor.yaml"
         - topic: "topics/calc_ich_score.yaml"
+        - topic: "topics/calc_nihss.yaml"
         - topic: "topics/calc_sofa.yaml"
         - topic: "topics/calc_4ts.yaml"
         - topic: "topics/calc_gcs.yaml"

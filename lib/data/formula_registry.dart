@@ -111,8 +111,89 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'dday_age' => _ddayAge(v),
     'lille' => _lille(v),
     'prevent_ascvd' => _preventAscvd(v),
+    'glasgow_blatchford' => _glasgowBlatchford(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── glasgow_blatchford: upper-GI-bleed risk (sex-conditional Hb) ─────
+// Blatchford 2000. In the formula registry (not the additive score block)
+// because the hemoglobin points are sex-conditional. Total 0–23; GBS ≤ 1 =
+// low risk (safe for outpatient per ACG 2021 / NICE).
+
+FormulaResult _glasgowBlatchford(Map<String, dynamic> v) {
+  final bunRaw = _num(v, 'bun');
+  final hgb = _num(v, 'hgb'); // g/dL
+  final sex = _sel(v, 'sex');
+  final sbp = _num(v, 'sbp');
+  if (bunRaw == null || hgb == null || sex == null || sbp == null) {
+    return const FormulaResult.empty();
+  }
+  // Urea mmol/L → BUN mg/dL (× 2.8) if the unit toggle says so.
+  final bun = _sel(v, 'bun_unit') == 'urea_mmol' ? bunRaw * 2.8 : bunRaw;
+
+  var score = 0;
+  if (bun >= 70) {
+    score += 6;
+  } else if (bun >= 28) {
+    score += 4;
+  } else if (bun >= 22.4) {
+    score += 3;
+  } else if (bun >= 18.2) {
+    score += 2;
+  }
+
+  if (sex == 'F') {
+    if (hgb < 10) {
+      score += 6;
+    } else if (hgb < 12) {
+      score += 1;
+    }
+  } else {
+    if (hgb < 10) {
+      score += 6;
+    } else if (hgb < 12) {
+      score += 3;
+    } else if (hgb < 13) {
+      score += 1;
+    }
+  }
+
+  if (sbp < 90) {
+    score += 3;
+  } else if (sbp < 100) {
+    score += 2;
+  } else if (sbp < 110) {
+    score += 1;
+  }
+
+  if (v['pulse100'] == true) score += 1;
+  if (v['melena'] == true) score += 1;
+  if (v['syncope'] == true) score += 2;
+  if (v['hepatic'] == true) score += 2;
+  if (v['cardiac'] == true) score += 2;
+
+  final FormulaSeverity sev;
+  final String interp;
+  if (score <= 1) {
+    sev = FormulaSeverity.none;
+    interp = 'Low risk — outpatient management may be appropriate.';
+  } else if (score <= 6) {
+    sev = FormulaSeverity.warn;
+    interp = 'Intermediate — admit for evaluation.';
+  } else {
+    sev = FormulaSeverity.alert;
+    interp = 'High risk — likely needs intervention (endoscopy / transfusion).';
+  }
+  return FormulaResult([
+    FormulaOutput(
+      label: 'Glasgow-Blatchford score',
+      value: '$score',
+      primary: true,
+      severity: sev,
+      interpretation: interp,
+    ),
+  ]);
 }
 
 // ── prevent_ascvd: AHA PREVENT 10-year ASCVD risk (race-free) ────────

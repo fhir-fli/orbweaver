@@ -818,6 +818,56 @@ void main() {
     });
   });
 
+  group('glasgow_blatchford (sex-conditional Hb + bool markers)', () {
+    test('all normal → 0, low risk', () {
+      final r = computeFormula('glasgow_blatchford',
+          {'bun': 15, 'hgb': 15, 'sex': 'M', 'sbp': 120});
+      expect(r.outputs[0].value, '0');
+      expect(r.outputs[0].severity, FormulaSeverity.none);
+    });
+    test('hemoglobin points differ by sex (Hgb 11)', () {
+      // Male Hgb 10–<12 → 3; female Hgb 10–<12 → 1
+      final male = computeFormula('glasgow_blatchford',
+          {'bun': 15, 'hgb': 11, 'sex': 'M', 'sbp': 120});
+      final female = computeFormula('glasgow_blatchford',
+          {'bun': 15, 'hgb': 11, 'sex': 'F', 'sbp': 120});
+      expect(male.outputs[0].value, '3');
+      expect(female.outputs[0].value, '1');
+    });
+    test('worked example: BUN 25, Hgb 11 M, SBP 95, syncope → 10 (high)', () {
+      final r = computeFormula('glasgow_blatchford', {
+        'bun': 25, 'hgb': 11, 'sex': 'M', 'sbp': 95, 'syncope': true,
+      });
+      expect(r.outputs[0].value, '10'); // 3(BUN)+3(Hb)+2(SBP)+2(syncope)
+      expect(r.outputs[0].severity, FormulaSeverity.alert);
+    });
+    test('urea mmol/L toggle: 10 mmol/L ≡ BUN 28 mg/dL', () {
+      final mgdl = computeFormula('glasgow_blatchford',
+          {'bun': 28, 'hgb': 15, 'sex': 'M', 'sbp': 120});
+      final mmol = computeFormula('glasgow_blatchford', {
+        'bun': 10, 'bun_unit': 'urea_mmol', 'hgb': 15, 'sex': 'M', 'sbp': 120,
+      });
+      expect(mmol.outputs[0].value, mgdl.outputs[0].value); // both 4
+    });
+    test('boolean markers add points', () {
+      final base = computeFormula('glasgow_blatchford',
+          {'bun': 15, 'hgb': 15, 'sex': 'M', 'sbp': 120});
+      final withMarkers = computeFormula('glasgow_blatchford', {
+        'bun': 15, 'hgb': 15, 'sex': 'M', 'sbp': 120,
+        'melena': true, 'cardiac': true,
+      });
+      expect(base.outputs[0].value, '0');
+      expect(withMarkers.outputs[0].value, '3'); // melena 1 + cardiac 2
+    });
+    test('missing SBP → empty', () {
+      expect(
+        computeFormula('glasgow_blatchford', {'bun': 15, 'hgb': 15, 'sex': 'M'})
+            .isEmpty,
+        isTrue,
+      );
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

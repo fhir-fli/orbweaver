@@ -1,0 +1,59 @@
+# ============================================================
+# Glasgow-Blatchford Score — upper GI bleed risk.
+# Evidence review 2026-07-19: superior to Rockall for predicting need for
+# intervention (Stanley BMJ 2017, AUROC 0.86 vs 0.66-0.70). ACG 2021 / ESGE:
+# GBS ≤ 1 identifies very-low-risk patients safe for outpatient management.
+# In the formula block (not the additive score block) because hemoglobin
+# points are SEX-CONDITIONAL. Total 0-23.
+# ============================================================
+
+topic:
+  id: "calc-glasgow-blatchford"
+  title: "Glasgow-Blatchford Score"
+  list_subtitle: "upper GI bleed risk"
+  last_reviewed: "Evidence review 2026-07-19 · Blatchford 2000 · ACG 2021"
+  tags: ["glasgow-blatchford", "gbs", "gi bleed", "upper gi bleed", "hematemesis", "melena", "ugib"]
+  aliases:
+    - "Glasgow-Blatchford"
+    - "GBS"
+    - "GI bleed score"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Risk-stratifies acute upper GI bleeding to identify very-low-risk
+        patients (GBS ≤ 1) who may be managed as outpatients.
+
+    - type: "formula"
+      kind: "glasgow_blatchford"
+      title: "Glasgow-Blatchford score"
+      source: "Blatchford et al., Lancet 2000"
+      inputs:
+        - { key: "bun", label: "BUN", type: "number" }
+        - key: "bun_unit"
+          label: "Urea unit"
+          type: "select"
+          default: "bun_mgdl"
+          options:
+            - { value: "bun_mgdl", label: "BUN mg/dL" }
+            - { value: "urea_mmol", label: "Urea mmol/L" }
+        - { key: "hgb", label: "Hemoglobin", unit: "g/dL", type: "number" }
+        - key: "sex"
+          label: "Sex"
+          type: "select"
+          default: "M"
+          options:
+            - { value: "M", label: "Male" }
+            - { value: "F", label: "Female" }
+        - { key: "sbp", label: "Systolic BP", unit: "mmHg", type: "number" }
+        - { key: "pulse100", label: "Pulse ≥ 100", type: "boolean" }
+        - { key: "melena", label: "Melena", type: "boolean" }
+        - { key: "syncope", label: "Syncope", type: "boolean" }
+        - { key: "hepatic", label: "Hepatic disease", type: "boolean" }
+        - { key: "cardiac", label: "Cardiac failure", type: "boolean" }
+      notes:
+        - "Hemoglobin thresholds differ by sex (men 13/12/10, women 12/10). GBS 0–1 = very low risk."
+      caveats:
+        - "Best validated for predicting need for intervention/transfusion, not mortality; interpret with clinical judgment."

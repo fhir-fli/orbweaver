@@ -640,6 +640,34 @@ void main() {
     test('maximum = 12', () => expect(scoreRange(b).max, 12));
   });
 
+  group('NIHSS (15 scale items, 0–42)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_nihss.yaml'));
+
+    test('15 items; all normal → 0, no symptoms', () {
+      expect(b.items, hasLength(15));
+      final all0 = {for (final i in b.items) i.key: '0'};
+      expect(_total(b, all0), 0);
+      expect(_band(b, all0), contains('No stroke'));
+    });
+    test('anchor YAML alias expands: arm/leg motor 0–4', () {
+      final arm = b.items.firstWhere((i) => i.key == 'arm_r');
+      expect(arm.options.map((o) => o.points), [0, 1, 2, 3, 4]);
+    });
+    test('band boundaries: 4 minor, 5 moderate, 16 mod-severe, 21 severe', () {
+      // 4 = gaze2 + facial2
+      expect(_band(b, {'gaze': '2', 'facial': '2'}), contains('Minor'));
+      // 5 = arm_l 4 + loc_q 1
+      expect(_band(b, {'arm_l': '4', 'loc_q': '1'}), contains('Moderate'));
+      // 16 = four limbs 4 = 16 → moderate-to-severe
+      expect(
+        _band(b, {'arm_l': '4', 'arm_r': '4', 'leg_l': '4', 'leg_r': '4'}),
+        contains('Moderate-to-severe'),
+      );
+    });
+    test('maximum = 42', () => expect(scoreRange(b).max, 42));
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));
