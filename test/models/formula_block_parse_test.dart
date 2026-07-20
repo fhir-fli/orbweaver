@@ -72,6 +72,16 @@ const _files = <String, Map<String, dynamic>>{
     'serum_ldh': 200,
     'serum_ldh_uln': 250,
   },
+  'calc_prevent_ascvd.yaml': {
+    'sex': 'F',
+    'age': 50,
+    'total_c': 200,
+    'hdl_c': 45,
+    'sbp': 160,
+    'egfr': 90,
+    'bp_tx': 'yes',
+    'diabetes': 'yes',
+  },
 };
 
 FormulaBlock _load(String file) {
@@ -134,7 +144,7 @@ void main() {
     });
 
     test('all formula calculators are present', () {
-      expect(_files, hasLength(23));
+      expect(_files, hasLength(24));
       for (final f in _files.keys) {
         expect(File('$_dir/$f').existsSync(), isTrue, reason: 'missing $f');
       }

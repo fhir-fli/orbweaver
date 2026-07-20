@@ -38,6 +38,7 @@ book:
       children:
         - topic: "topics/calc_map.yaml"
         - topic: "topics/calc_qtc.yaml"
+        - topic: "topics/calc_prevent_ascvd.yaml"
         - topic: "topics/calc_ideal_body_weight.yaml"
         - topic: "topics/calc_anthropometrics.yaml"
     - title: "Hepatology"

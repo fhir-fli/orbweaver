@@ -769,6 +769,55 @@ void main() {
     });
   });
 
+  group('prevent_ascvd (AHA PREVENT 10-yr)', () {
+    // Coefficients from Khan Circulation 2024 via preventr; validated against
+    // the preventr worked example (→ 9.2%) and the paper's Table 2 HRs.
+    test('preventr worked example → 9.2%', () {
+      final r = computeFormula('prevent_ascvd', {
+        'sex': 'F',
+        'age': 50,
+        'total_c': 200,
+        'hdl_c': 45,
+        'sbp': 160,
+        'egfr': 90,
+        'bp_tx': 'yes',
+        'statin': 'no',
+        'diabetes': 'yes',
+        'smoking': 'no',
+      });
+      expect(_v(r, 0), closeTo(9.2, 0.1));
+    });
+    test('cholesterol unit toggle: mmol/L ≡ mg/dL', () {
+      // TC 200 mg/dL = 5.172 mmol/L; HDL 45 = 1.164 mmol/L
+      final mg = computeFormula('prevent_ascvd', {
+        'sex': 'F', 'age': 50, 'total_c': 200, 'hdl_c': 45, 'sbp': 160,
+        'egfr': 90, 'bp_tx': 'yes', 'diabetes': 'yes',
+      });
+      final mmol = computeFormula('prevent_ascvd', {
+        'sex': 'F', 'age': 50, 'total_c': 5.172, 'hdl_c': 1.164,
+        'chol_unit': 'mmol/L', 'sbp': 160, 'egfr': 90, 'bp_tx': 'yes',
+        'diabetes': 'yes',
+      });
+      expect(_v(mmol, 0), closeTo(_v(mg, 0), 0.1));
+    });
+    test('lower-risk male → single-digit or lower, no alert', () {
+      final r = computeFormula('prevent_ascvd', {
+        'sex': 'M', 'age': 40, 'total_c': 170, 'hdl_c': 55, 'sbp': 120,
+        'egfr': 100,
+      });
+      expect(_v(r, 0), lessThan(5));
+      expect(r.outputs[0].severity, FormulaSeverity.none);
+    });
+    test('missing eGFR → empty', () {
+      expect(
+        computeFormula('prevent_ascvd', {
+          'sex': 'F', 'age': 50, 'total_c': 200, 'hdl_c': 45, 'sbp': 160,
+        }).isEmpty,
+        isTrue,
+      );
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

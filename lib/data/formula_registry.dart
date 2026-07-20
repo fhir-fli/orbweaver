@@ -110,8 +110,98 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'oxygenation' => _oxygenation(v),
     'dday_age' => _ddayAge(v),
     'lille' => _lille(v),
+    'prevent_ascvd' => _preventAscvd(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── prevent_ascvd: AHA PREVENT 10-year ASCVD risk (race-free) ────────
+// Coefficients extracted from the AHA-published PREVENT equations (Khan et
+// al., Circulation 2024;149:430-449) via the peer-reviewed `preventr` R
+// package (base 10-year ASCVD model), cross-checked term-by-term against the
+// paper's Table 2 hazard ratios (exp(β) matches) and validated end-to-end
+// against the preventr worked example (→ 9.2%). 23 terms; risk =
+// exp(LP)/(1+exp(LP)). BMI terms are 0 for ASCVD. Centered: age 55, non-HDL
+// 3.5 mmol/L, HDL 1.3 mmol/L, SBP 130. Cholesterol mg/dL → mmol/L ÷ 38.67.
+
+const List<double> _preventAscvdFemale = [
+  0.719883, 0.1176967, -0.151185, -0.0835358, 0.3592852, 0.8348585, 0.4831078,
+  0.0, 0.0, 0.4864619, 0.0397779, 0.2265309, -0.0592374, -0.0395762, 0.0844423,
+  -0.0567839, 0.0325692, -0.1035985, -0.2417542, -0.0791142, 0.0, -0.1671492,
+  -3.819975,
+];
+const List<double> _preventAscvdMale = [
+  0.7099847, 0.1658663, -0.1144285, -0.2837212, 0.3239977, 0.7189597,
+  0.3956973, 0.0, 0.0, 0.3690075, 0.0203619, 0.2036522, -0.0865581, -0.0322916,
+  0.114563, -0.0300005, 0.0232747, -0.0927024, -0.2018525, -0.0970527, 0.0,
+  -0.1217081, -3.500655,
+];
+
+FormulaResult _preventAscvd(Map<String, dynamic> v) {
+  final sex = _sel(v, 'sex');
+  final age = _num(v, 'age');
+  final tc = _num(v, 'total_c');
+  final hdl = _num(v, 'hdl_c');
+  final sbp = _num(v, 'sbp');
+  final egfr = _num(v, 'egfr');
+  if (sex == null ||
+      age == null ||
+      tc == null ||
+      hdl == null ||
+      sbp == null ||
+      egfr == null) {
+    return const FormulaResult.empty();
+  }
+  final conv = _sel(v, 'chol_unit') == 'mmol/L' ? 1.0 : 38.67;
+  final nonHdl = (tc - hdl) / conv;
+  final hdlM = hdl / conv;
+  final dm = _sel(v, 'diabetes') == 'yes' ? 1.0 : 0.0;
+  final smoke = _sel(v, 'smoking') == 'yes' ? 1.0 : 0.0;
+  final bpTx = _sel(v, 'bp_tx') == 'yes' ? 1.0 : 0.0;
+  final statin = _sel(v, 'statin') == 'yes' ? 1.0 : 0.0;
+
+  final a = (age - 55) / 10;
+  final sbpLow = (math.min(sbp, 110) - 110) / 20;
+  final sbpHigh = (math.max(sbp, 110) - 130) / 20;
+  final egfrLow = (math.min(egfr, 60) - 60) / -15;
+  final egfrHigh = (math.max(egfr, 60) - 90) / -15;
+  final nonHdlC = nonHdl - 3.5;
+  final hdlC = (hdlM - 1.3) / 0.3;
+
+  final x = <double>[
+    a, nonHdlC, hdlC, sbpLow, sbpHigh, dm, smoke, 0, 0, egfrLow, egfrHigh,
+    bpTx, statin, bpTx * sbpHigh, statin * nonHdlC,
+    a * nonHdlC, a * hdlC, a * sbpHigh, a * dm, a * smoke, 0, a * egfrLow,
+    1.0,
+  ];
+  final b = sex == 'F' ? _preventAscvdFemale : _preventAscvdMale;
+  var lp = 0.0;
+  for (var i = 0; i < b.length; i++) {
+    lp += b[i] * x[i];
+  }
+  final risk = math.exp(lp) / (1 + math.exp(lp)) * 100;
+
+  final FormulaSeverity sev;
+  if (risk >= 20) {
+    sev = FormulaSeverity.alert;
+  } else if (risk >= 7.5) {
+    sev = FormulaSeverity.warn;
+  } else if (risk >= 5) {
+    sev = FormulaSeverity.warn;
+  } else {
+    sev = FormulaSeverity.none;
+  }
+  return FormulaResult([
+    FormulaOutput(
+      label: '10-year ASCVD risk',
+      value: fmtNum(risk, decimals: 1),
+      unit: '%',
+      primary: true,
+      severity: sev,
+      interpretation:
+          'AHA PREVENT (race-free). Interpret against current prevention guidance; runs lower than the old Pooled Cohort Equations.',
+    ),
+  ]);
 }
 
 // ── lille: steroid response in alcohol-associated hepatitis ──────────

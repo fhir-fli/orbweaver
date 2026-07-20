@@ -1,0 +1,68 @@
+# ============================================================
+# PREVENT — 10-year ASCVD risk (AHA, race-free).
+# Evidence review 2026-07-19: the 2026 ACC/AHA dyslipidemia guideline
+# recommends the AHA PREVENT equations over the Pooled Cohort Equations
+# (race removed; PCE overestimated by ~40-50%). Coefficients from Khan et
+# al., Circulation 2024;149:430-449, extracted via the peer-reviewed
+# preventr package, cross-checked vs the paper's Table 2 hazard ratios and
+# validated end-to-end (preventr worked example → 9.2%). Ages 30–79.
+# ============================================================
+
+topic:
+  id: "calc-prevent-ascvd"
+  title: "PREVENT (ASCVD 10-yr)"
+  list_subtitle: "cardiovascular risk (race-free)"
+  last_reviewed: "Evidence review 2026-07-19 · Khan Circulation 2024 · 2026 ACC/AHA"
+  tags: ["prevent", "ascvd", "cardiovascular risk", "cvd", "statin", "primary prevention", "cholesterol", "risk"]
+  aliases:
+    - "PREVENT"
+    - "ASCVD risk"
+    - "Cardiovascular risk"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        AHA PREVENT 10-year risk of atherosclerotic cardiovascular disease
+        (heart attack or stroke) — the race-free successor to the Pooled Cohort
+        Equations. For primary prevention, ages 30–79.
+
+    - type: "formula"
+      kind: "prevent_ascvd"
+      title: "PREVENT — 10-year ASCVD risk"
+      source: "Khan et al., Circulation 2024;149:430-449 (AHA PREVENT base model)"
+      inputs:
+        - key: "sex"
+          label: "Sex"
+          type: "select"
+          default: "M"
+          options:
+            - { value: "M", label: "Male" }
+            - { value: "F", label: "Female" }
+        - { key: "age", label: "Age", unit: "yr", type: "number", help: "30–79" }
+        - { key: "total_c", label: "Total cholesterol", type: "number" }
+        - { key: "hdl_c", label: "HDL cholesterol", type: "number" }
+        - key: "chol_unit"
+          label: "Cholesterol unit"
+          type: "select"
+          default: "mg/dL"
+          options:
+            - { value: "mg/dL" }
+            - { value: "mmol/L" }
+        - { key: "sbp", label: "Systolic BP", unit: "mmHg", type: "number" }
+        - { key: "egfr", label: "eGFR", unit: "mL/min/1.73m²", type: "number", help: "CKD-EPI 2021 (see the CrCl/eGFR calculator)" }
+        - key: "bp_tx"
+          label: "On blood-pressure treatment"
+          type: "select"
+          default: "no"
+          options: &yn
+            - { value: "no", label: "No" }
+            - { value: "yes", label: "Yes" }
+        - { key: "statin", label: "On a statin", type: "select", default: "no", options: *yn }
+        - { key: "diabetes", label: "Diabetes", type: "select", default: "no", options: *yn }
+        - { key: "smoking", label: "Current smoking", type: "select", default: "no", options: *yn }
+      notes:
+        - "Race-free by design — the discredited race coefficient in the older eGFR/PCE tools is not used. BMI is not required for the ASCVD estimate."
+      caveats:
+        - "Primary prevention, ages 30–79. PREVENT estimates run lower than the Pooled Cohort Equations — apply the current guideline's PREVENT-specific thresholds, not the old 7.5% PCE cutoff."
