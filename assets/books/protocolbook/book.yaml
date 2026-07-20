@@ -154,3 +154,4 @@ book:
         - topic: "topics/pb_im_tb.yaml"
         - topic: "topics/pb_im_dvt.yaml"
         - topic: "topics/pb_im_pe.yaml"
+        - topic: "topics/pb_im_sti.yaml"

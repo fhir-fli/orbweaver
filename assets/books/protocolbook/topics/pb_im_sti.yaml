@@ -1,0 +1,228 @@
+# ============================================================
+# ProtocolBook pp.132–134 — Sexually Transmitted Infections / Diseases
+# (STI/STDs). Internal Medicine Protocols leaf. One cohesive syndromic-
+# management topic → a single 3-page leaf (the three algorithms all feed
+# the shared treatment-regimen reference on p.134).
+#
+# Rendering calls (hybrid rule):
+#   - Presenting complaints / notes / treatment regimens → prose.
+#   - The three syndromic pathways (female discharge / male discharge /
+#     genital ulcer) → `algorithm` flowcharts. The female pathway's nested
+#     "lower abdominal pain → danger signs?" sub-branch is LINEARISED into
+#     two spine decisions (danger-signs → consult; then PID signs → treat
+#     UGTI), preserving the routing on the single-spine model.
+#   - The "children = sexual abuse" safeguarding note → red-alert callout.
+#
+# CONTENT FLAGS for the later OE / content pass:
+#   - 🔴 p.134 regimen (e) is headed "Trichomoniasis" but lists clotrimazole
+#     / nystatin — these are ANTIFUNGALS that treat CANDIDIASIS, not
+#     trichomoniasis (which needs metronidazole/tinidazole, i.e. regimen
+#     (d)). The heading appears mislabeled (should be "Candidiasis").
+#     Transcribed FAITHFULLY (not a clear typo — an interpretive fix), but
+#     Grey should review: as written, trichomoniasis is covered by (d)'s
+#     metronidazole/tinidazole and (e) actually covers candidiasis.
+#   - Syndromic management (treat-by-presentation without lab confirmation)
+#     is standard WHO practice for low-resource settings. Doxycycline in
+#     pregnancy is (correctly) routed to erythromycin; ceftriaxone 250 mg
+#     is the older GC dose (now often 500 mg) — flag for OE.
+# ============================================================
+
+topic:
+  id: "pb-im-sti"
+  title: "Sexually Transmitted Infections (STIs)"
+  list_subtitle: "pp.132–134 · syndromic management"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["STI", "STD", "sexually transmitted", "discharge", "genital ulcer", "gonorrhea", "chlamydia", "syphilis", "chancroid", "herpes", "trichomoniasis", "bacterial vaginosis", "candidiasis", "PID", "upper genital tract infection", "ceftriaxone", "azithromycin", "doxycycline", "acyclovir", "benzathine penicillin", "internal medicine", "infectious disease"]
+  category: "medical"
+  page_number: 132
+
+  pages:
+
+    # ═══════════════════════ PAGE 132 ═══════════════════════
+    - page_number: 132
+      blocks:
+
+        - type: "prose"
+          title: "Common presenting complaints"
+          markdown: |
+            - Dysuria
+            - Dyspareunia
+            - Lower abdominal pain
+            - Urethral / vaginal discharge
+            - Vulvar / vaginal itching / burning
+            - Penile / scrotal itching / burning
+            - Blisters / sores / warts / growths in genital / anal area
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Female patient — c/o discharge"
+            shape: "stadium"
+          stages:
+            - decision: "HIV test in the last 3 months?"
+              outcomes:
+                - label: "No"
+                  box:
+                    title: "HIV test"
+                - label: "Yes"
+                  continue: true
+            - decision: "Abnormal discharge?"
+              outcomes:
+                - label: "No"
+                  box:
+                    title: "Consider other diagnoses"
+                - label: "Yes"
+                  box:
+                    title: "Get pregnancy test"
+                  continue: true
+            - decision: "Lower abdominal pain with any danger sign?"
+              criteria:
+                - "Recent delivery / abortion"
+                - "Amenorrhea"
+                - "Abnormal vaginal bleeding"
+                - "Abdominal guarding / rebound tenderness"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Request gynaecological / surgical consult"
+                - label: "No"
+                  continue: true
+            - decision: "Lower abdominal pain or cervical motion tenderness?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat for upper genital tract infections"
+                - label: "No"
+                  continue: true
+            - decision: "Any of the following present?"
+              criteria:
+                - "Purulent discharge"
+                - "Urethral discharge in partner"
+                - "Sexual violence / prostitution"
+                - "New partner or > 1 partner in the last 3 months"
+                - "High clinical suspicion"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat for gonorrhea and chlamydia"
+                  continue: true
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "Treat for bacterial vaginosis and trichomoniasis"
+            bullets:
+              - "Consider treatment for candidiasis"
+
+    # ═══════════════════════ PAGE 133 ═══════════════════════
+    - page_number: 133
+      blocks:
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Male patient — c/o discharge"
+            shape: "stadium"
+          stages:
+            - decision: "HIV test in the last 3 months?"
+              outcomes:
+                - label: "No"
+                  box:
+                    title: "HIV test"
+                - label: "Yes"
+                  continue: true
+            - decision: "Urethral discharge present?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat for gonorrhea and chlamydia"
+                - label: "No"
+                  box:
+                    title: "Look for another genital / anal finding"
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Patient — c/o genital ulcer"
+            shape: "stadium"
+          stages:
+            - decision: "HIV test in the last 3 months?"
+              outcomes:
+                - label: "No"
+                  box:
+                    title: "HIV test"
+                - label: "Yes"
+                  continue: true
+            - decision: "Sore / ulcer / vesicle present?"
+              outcomes:
+                - label: "No"
+                  box:
+                    title: "Consider other diagnoses"
+                - label: "Yes"
+                  continue: true
+            - decision: "Any of the following?"
+              criteria:
+                - "Small painful vesicles"
+                - "Small ulcers with recurrent vesicles"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Treat for genital herpes"
+                - label: "No"
+                  box:
+                    title: "Treat for syphilis AND chancroid"
+
+        - type: "prose"
+          title: "In children"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            While beyond the scope of this text, these symptoms in any child are **sexual abuse until proven otherwise**. Always consider sexual assault.
+
+        - type: "prose"
+          title: "Partner treatment"
+          markdown: |
+            All sexual partners of the patient should be treated even if no symptoms (except herpes and candidiasis).
+
+    # ═══════════════════════ PAGE 134 ═══════════════════════
+    - page_number: 134
+      blocks:
+
+        - type: "prose"
+          title: "Treatment regimens — upper genital tract infections"
+          markdown: |
+            - **Admit to hospital if any present:**
+              - Concern for severe infection (sepsis), toxic appearance, clinical concern that the outpatient regimen is unsuitable
+              - Concern for complicated infection (peritonitis, abscess)
+              - Unclear etiology
+              - Unable to tolerate PO
+              - No improvement / worsening in the first 48 hrs of outpatient treatment
+            - **Inpatient treatment:**
+              - Ceftriaxone 250 mg IM daily
+              - Doxycycline 100 mg/dose PO BID × 14 days
+              - Metronidazole 500 mg PO/IV BID × 14 days
+            - **Ambulatory treatment:**
+              - Ceftriaxone 250 mg IM × 1 dose (alternative: cefixime 400 mg PO × 1 dose)
+              - Doxycycline 100 mg/dose PO BID × 14 days
+              - Metronidazole 500 mg PO BID × 14 days
+
+        - type: "prose"
+          title: "Treatment regimens — by organism"
+          markdown: |
+            - **Gonorrhea:** ceftriaxone 250 mg IM × 1 dose (alternative: cefixime 400 mg PO × 1 dose)
+            - **Chlamydia:** azithromycin 1 g PO × 1 dose
+              - Alternative for non-pregnant women / men: doxycycline 100 mg/dose q12hrs × 7 days
+              - Alternative for pregnant women: erythromycin 1 g/dose q12hrs × 7 days
+            - **Bacterial vaginosis:** tinidazole 2 g PO × 1 dose (alternative: metronidazole 2 g PO × 1 dose)
+            - **Trichomoniasis** (using vaginal tablets): clotrimazole 500 mg inserted vaginally at bedtime × 1 dose
+              - Alternative: clotrimazole 100 mg inserted vaginally at bedtime × 6 days
+              - Alternative: nystatin 100,000 IU
+            - **Herpes:**
+              - Initial outbreak — ineffective if started after 5 days from onset; acyclovir 400 mg/dose PO q8hrs × 7 days
+              - Recurrence — ineffective if given after 24 hours from onset; acyclovir 400 mg/dose PO q8hrs × 5 days
+            - **Syphilis:** benzathine penicillin 1.2 million IU IM in each buttock
+              - If < 2 years of infection: 1 dose
+              - If > 2 years or unknown: 1 dose weekly × 3 weeks
+            - **Chancroid:** azithromycin 1 g PO × 1 dose (alternative: ceftriaxone 250 mg IM × 1 dose)
