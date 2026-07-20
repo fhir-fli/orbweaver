@@ -46,6 +46,7 @@ book:
         - topic: "topics/calc_child_pugh.yaml"
         - topic: "topics/calc_fib4.yaml"
         - topic: "topics/calc_maddrey.yaml"
+        - topic: "topics/calc_lille.yaml"
     - title: "Hematology & Pulmonary"
       children:
         - topic: "topics/calc_anc.yaml"

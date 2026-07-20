@@ -719,6 +719,56 @@ void main() {
     });
   });
 
+  group('lille (steroid response)', () {
+    // Coefficients cross-checked vs the original Louvet µmol model; expected
+    // values hand-computed from R = exp(-R)/(1+exp(-R)).
+    test('falling bilirubin, no renal insuff → 0.31 (responder)', () {
+      final r = computeFormula('lille', {
+        'age': 50,
+        'albumin': 2.5,
+        'bilirubin_day0': 15,
+        'bilirubin_day7': 12,
+        'creatinine': 1.0,
+        'pt': 20,
+      });
+      expect(_v(r, 0), closeTo(0.31, 0.01));
+      expect(r.outputs[0].severity, FormulaSeverity.none);
+    });
+    test('rising bilirubin + renal insuff (Cr>1.3) → 0.75 (non-responder)', () {
+      final r = computeFormula('lille', {
+        'age': 50,
+        'albumin': 2.5,
+        'bilirubin_day0': 15,
+        'bilirubin_day7': 18,
+        'creatinine': 2.0,
+        'pt': 20,
+      });
+      expect(_v(r, 0), closeTo(0.75, 0.01));
+      expect(r.outputs[0].severity, FormulaSeverity.alert);
+    });
+    test('renal term is binary at 1.3 mg/dL threshold', () {
+      final below = computeFormula('lille', {
+        'age': 50, 'albumin': 2.5, 'bilirubin_day0': 15,
+        'bilirubin_day7': 15, 'creatinine': 1.3, 'pt': 20,
+      });
+      final above = computeFormula('lille', {
+        'age': 50, 'albumin': 2.5, 'bilirubin_day0': 15,
+        'bilirubin_day7': 15, 'creatinine': 1.4, 'pt': 20,
+      });
+      // Crossing 1.3 subtracts 0.206 from R → raises the Lille score.
+      expect(_v(above, 0), greaterThan(_v(below, 0)));
+    });
+    test('missing PT → empty', () {
+      expect(
+        computeFormula('lille', {
+          'age': 50, 'albumin': 2.5, 'bilirubin_day0': 15,
+          'bilirubin_day7': 12, 'creatinine': 1.0,
+        }).isEmpty,
+        isTrue,
+      );
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

@@ -109,8 +109,52 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'maddrey' => _maddrey(v),
     'oxygenation' => _oxygenation(v),
     'dday_age' => _ddayAge(v),
+    'lille' => _lille(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── lille: steroid response in alcohol-associated hepatitis ──────────
+// Louvet 2007, coefficients converted to conventional US units (albumin
+// g/dL, bilirubin mg/dL). Renal insufficiency is BINARY (creatinine
+// > 1.3 mg/dL) as in the original model / MDCalc — NOT a continuous term.
+
+FormulaResult _lille(Map<String, dynamic> v) {
+  final age = _num(v, 'age');
+  final alb = _num(v, 'albumin'); // g/dL
+  final bili0 = _num(v, 'bilirubin_day0'); // mg/dL
+  final bili7 = _num(v, 'bilirubin_day7'); // mg/dL
+  final cr = _num(v, 'creatinine'); // mg/dL
+  final pt = _num(v, 'pt'); // sec
+  if (age == null ||
+      alb == null ||
+      bili0 == null ||
+      bili7 == null ||
+      cr == null ||
+      pt == null) {
+    return const FormulaResult.empty();
+  }
+  final renal = cr > 1.3 ? 1 : 0;
+  final r = 3.19 -
+      0.101 * age +
+      1.47 * alb +
+      0.28215 * (bili0 - bili7) -
+      0.206 * renal -
+      0.11115 * bili0 -
+      0.0096 * pt;
+  final lille = math.exp(-r) / (1 + math.exp(-r));
+  final nonResponder = lille >= 0.45;
+  return FormulaResult([
+    FormulaOutput(
+      label: 'Lille score',
+      value: fmtNum(lille, decimals: 2),
+      primary: true,
+      severity: nonResponder ? FormulaSeverity.alert : FormulaSeverity.none,
+      interpretation: nonResponder
+          ? '≥ 0.45 — steroid non-responder; stop steroids, consider transplant eval.'
+          : '< 0.45 — responder; continue corticosteroids.',
+    ),
+  ]);
 }
 
 // ── fib4: liver fibrosis index ───────────────────────────────────────
