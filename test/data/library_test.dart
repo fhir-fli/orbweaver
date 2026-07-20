@@ -376,12 +376,13 @@ void main() {
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '
         'Paediatric 8, Cardiac 2, Sickle Cell 4, SAM 3, ENT 6, TB 3, '
-        'Anaemia 3, Pain 4, Neonatal 6, IM 28 = 93 leaves)', () {
+        'Anaemia 3, Pain 4, Neonatal 6, IM 28, Electrolytes 2 = 95 leaves)',
+        () {
       final b = loadBook('protocolbook');
       expect(b['topics'], isNull, reason: 'old flat key must be gone');
       final contents = b['contents'] as YamlList;
-      // Twelve section groups so far, mirroring the book's dividers.
-      expect(contents, hasLength(12));
+      // Thirteen section groups so far, mirroring the book's dividers.
+      expect(contents, hasLength(13));
       expect((contents[0] as YamlMap)['title'], 'Emergency Protocols');
       expect((contents[1] as YamlMap)['title'],
           'Ingestions, Anaphylaxis & Bites');
@@ -396,6 +397,8 @@ void main() {
       expect((contents[9] as YamlMap)['title'], 'Pain Management');
       expect((contents[10] as YamlMap)['title'], 'Neonatal Protocols');
       expect((contents[11] as YamlMap)['title'], 'Internal Medicine Protocols');
+      expect((contents[12] as YamlMap)['title'],
+          'Electrolytes: Sodium & Potassium');
       // Each group carries its own accent.
       expect((contents[0] as YamlMap)['palette']['accent'], '0xFFC62828');
       expect((contents[1] as YamlMap)['palette']['accent'], '0xFF6A1B9A');
@@ -409,6 +412,7 @@ void main() {
       expect((contents[9] as YamlMap)['palette']['accent'], '0xFFEF6C00');
       expect((contents[10] as YamlMap)['palette']['accent'], '0xFF0277BD');
       expect((contents[11] as YamlMap)['palette']['accent'], '0xFF0D47A1');
+      expect((contents[12] as YamlMap)['palette']['accent'], '0xFF00838F');
       // Emergency Protocols = p.12–26 (15 topics), ending in Altered
       // Mental Status; Ingestions has Poisoning (p.28); Paediatric has
       // Meningitis (p.55) for now.
@@ -594,7 +598,11 @@ void main() {
           'topics/pb_im_sti.yaml');
       expect((im[27] as YamlMap)['topic'],
           'topics/pb_im_hiv_oi.yaml');
-      expect(leafCount(contents), 93);
+      final elyte = (contents[12] as YamlMap)['children'] as YamlList;
+      expect(elyte, hasLength(2));
+      expect((elyte[0] as YamlMap)['topic'], 'topics/pb_im_sodium.yaml');
+      expect((elyte[1] as YamlMap)['topic'], 'topics/pb_im_potassium.yaml');
+      expect(leafCount(contents), 95);
     });
   });
 }

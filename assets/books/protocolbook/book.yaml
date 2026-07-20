@@ -156,3 +156,9 @@ book:
         - topic: "topics/pb_im_pe.yaml"
         - topic: "topics/pb_im_sti.yaml"
         - topic: "topics/pb_im_hiv_oi.yaml"
+    - title: "Electrolytes: Sodium & Potassium"
+      palette:
+        accent: "0xFF00838F"
+      children:
+        - topic: "topics/pb_im_sodium.yaml"
+        - topic: "topics/pb_im_potassium.yaml"

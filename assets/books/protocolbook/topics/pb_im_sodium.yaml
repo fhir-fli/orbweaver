@@ -1,0 +1,159 @@
+# ============================================================
+# ProtocolBook pp.140–141 — Sodium (Na⁺) abnormalities. First leaf of the
+# new "Electrolytes" group (p.139 is a section divider, p.144 blank).
+#
+# Two-page leaf: p.140 = sodium calculations + hyponatremia emergent
+# management algorithm; p.141 = hyponatremia evaluation algorithm +
+# hypernatremia.
+#
+# Rendering calls (hybrid rule):
+#   - Calculations / hypernatremia → prose. Formulas rendered as inline
+#     text ([Na] notation; MiniMarkdown has no math/subscripts).
+#   - Emergent management + evaluation → `algorithm` flowcharts. The
+#     emergent chart's nested "hypotensive? → volume overloaded?" branch is
+#     linearised into one decision with three outcomes (not overloaded →
+#     NS bolus; overloaded → dopamine; not hypotensive → continue).
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Correction-rate limits (≤ 8 mEq/L/day, 0.5 mEq/L/hr), 3% saline for
+#     symptomatic hyponatremia, and the volume-status (hyper/hypo/eu) work-up
+#     with U_osm/U_Na and glucose correction are all standard.
+# ============================================================
+
+topic:
+  id: "pb-im-sodium"
+  title: "Sodium (Na⁺) Abnormalities"
+  list_subtitle: "pp.140–141 · hypo/hypernatremia · formulas"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sodium", "Na", "hyponatremia", "hypernatremia", "SIADH", "hypertonic saline", "3% saline", "free water deficit", "TBW", "FENa", "electrolyte", "internal medicine"]
+  category: "medical"
+  page_number: 140
+
+  pages:
+
+    # ═══════════════════════ PAGE 140 ═══════════════════════
+    - page_number: 140
+      blocks:
+
+        - type: "prose"
+          title: "Calculations with sodium"
+          markdown: |
+            - **TBW (total body water)** = weight (kg) × fraction of water
+            - **Fraction of water:**
+              - Children: 0.65 (< 6 yo), 0.6 until adulthood
+              - Adult: 0.5 females, 0.6 males
+              - Elderly: 0.45 females, 0.5 males
+            - **Change in serum [Na] per L infusate** = (infusate [Na] − serum [Na]) ÷ (TBW + 1)
+            - **Rate of IVF infusion to increase Na by 0.5 mEq/L/h** = 1000 ÷ (2 × serum [Na])
+            - **Free H₂O deficit (L)** = (serum [Na] − 140) ÷ 140 × TBW
+            - **FENa (fractional excretion of sodium)** = 100 × (urine Na × serum Cr) ÷ (serum Na × urine Cr)
+
+        - type: "prose"
+          title: "Hyponatremia (Na < 135) — emergent management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (BP, PR, RR, spO₂, Temp, Wt)
+            - Start oxygen if spO₂ < 94%
+            - Serum labs: CBC, RFT, electrolytes
+            - Urine labs: creatinine, sodium, osmolarity
+            - 12-lead ECG
+            - Perform brief, targeted history, physical exam
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Acute hyponatremia"
+            shape: "stadium"
+          stages:
+            - decision: "Hypotensive / shock?"
+              outcomes:
+                - label: "Yes — not volume overloaded"
+                  box:
+                    title: "NS 20 mL/kg bolus"
+                - label: "Yes — volume overloaded"
+                  box:
+                    title: "Dopamine 2–5 mcg/min"
+                - label: "No"
+                  continue: true
+            - decision: "Neurologic symptoms? (somnolence, convulsions, GCS < 9)"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "3% saline, run over 20 minutes"
+                    bullets:
+                      - "Children: 4 mL/kg (max 100 mL)"
+                      - "Adults: 100 mL"
+                      - "Repeat until symptoms improve"
+                - label: "No"
+                  continue: true
+          terminal:
+            title: "Correct Na no faster than 8 mEq/L/day and 0.5 mEq/L/hr"
+
+    # ═══════════════════════ PAGE 141 ═══════════════════════
+    - page_number: 141
+      blocks:
+
+        - type: "prose"
+          title: "Hyponatremia — evaluation"
+          markdown: |
+            Low serum sodium (< 135 mEq/L). First exclude factors that affect measurement:
+
+            - Other factors: mannitol, hyperlipidemia, hyperproteinemia (e.g. cancer)
+            - Hyperglycemia? Add 1 mEq/L to the serum sodium for every 2 points glucose above 10
+            - If no other explanation, assume hypotonic hyponatremia
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Hypotonic hyponatremia — assess volume status"
+            shape: "stadium"
+          stages:
+            - decision: "Signs of volume overload? (peripheral or pulmonary edema, or ascites)"
+              outcomes:
+                - label: "Yes — hypervolemic"
+                  box:
+                    title: "Hypervolemic (FENa > 1% suggests renal failure)"
+                    bullets:
+                      - "Furosemide"
+                      - "Vasodilator in CHF"
+                      - "Colloid infusion in cirrhosis"
+                - label: "No"
+                  continue: true
+            - decision: "Signs of hypovolemia? (low BP or hypotension)"
+              outcomes:
+                - label: "Yes — hypovolemic"
+                  box:
+                    title: "Hypovolemic"
+                    bullets:
+                      - "Urine Na < 20: extrarenal losses (most common: diarrhea; also 3rd spacing or diuretics)"
+                      - "Urine Na > 30: renal losses"
+                      - "Treatment: volume repletion using NS"
+                - label: "No — euvolemic"
+                  continue: true
+            - decision: "Urine osmolality > 100?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "SIADH (most common)"
+                    bullets:
+                      - "Less common: hypothyroidism"
+                      - "Fluid restrict ≤ 1 L/day"
+                      - "Treat underlying cause"
+                - label: "No"
+                  box:
+                    title: "Low solute"
+                    bullets:
+                      - "Poor intake (malnourished, alcoholism)"
+                      - "Water intoxication (psychogenic polydipsia)"
+                      - "Treatment: improve intake"
+
+        - type: "prose"
+          title: "Hypernatremia (Na > 145)"
+          markdown: |
+            - Most common renal causes: osmotic diuresis, loop diuretics, diabetes insipidus
+            - Most common extrarenal causes: vomiting, diarrhea
+            - Treatment:
+              - Restore access to PO water (> 1 L/day)
+              - Correct Na no faster than 10 mEq/L/day and 0.5 mEq/L/hr
+            - Assess if clinically logical; if not, consider confirming before managing
+            - Unless there is reason to suspect otherwise (extremely elevated glucose, mannitol, high serum protein — e.g. cancer), assume hypotonic hyponatremia

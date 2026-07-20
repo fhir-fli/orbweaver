@@ -1,0 +1,135 @@
+# ============================================================
+# ProtocolBook pp.142–143 — Potassium (K⁺) abnormalities. Second leaf of
+# the "Electrolytes" group.
+#
+# Two-page leaf: p.142 = hypokalemia (replacement thresholds, IV/PO
+# potassium, magnesium); p.143 = hyperkalemia (presentation/risk factors +
+# a severity-driven treatment algorithm).
+#
+# Rendering calls (hybrid rule):
+#   - Hypokalemia + hyperkalemia presentation/risk factors → prose; the
+#     "NEVER give IV potassium as a bolus" safety line → red-alert callout.
+#   - Hyperkalemia treatment → `algorithm`: severe (K > 6.5, symptoms or
+#     ECG changes) → calcium/furosemide/dialysis; moderate → insulin-
+#     glucose / salbutamol / resonium; else consider no Rx.
+#
+# CONTENT FLAG (silent light cleanup): the book's moderate-tier decision
+#   prints the range "6.5-6" (reversed) → rendered "K⁺ 6.0–6.5?".
+#
+# CONTENT FLAGS for OE (rendered faithfully): calcium gluconate for
+#   membrane stabilisation, insulin-glucose + salbutamol for intracellular
+#   shift, and resonium / furosemide / dialysis for elimination are the
+#   standard hyperkalemia bundle.
+# ============================================================
+
+topic:
+  id: "pb-im-potassium"
+  title: "Potassium (K⁺) Abnormalities"
+  list_subtitle: "pp.142–143 · hypo/hyperkalemia"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["potassium", "K", "hypokalemia", "hyperkalemia", "calcium gluconate", "insulin glucose", "salbutamol", "resonium", "magnesium", "ECG", "electrolyte", "internal medicine"]
+  category: "medical"
+  page_number: 142
+
+  pages:
+
+    # ═══════════════════════ PAGE 142 ═══════════════════════
+    - page_number: 142
+      blocks:
+
+        - type: "prose"
+          title: "Hypokalemia (main Rx is treating the cause)"
+          markdown: |
+            - **Risk factors:** diarrhea, vomiting, diuretics, refeeding syndrome, inadequate dietary intake (malnutrition, chronic alcoholic)
+            - **Potassium replacement:**
+              - K < 3: even if asymptomatic
+              - K < 4: in heart failure, HTN or arrhythmias
+            - **IV potassium:**
+              - Indications: K < 2.5, symptomatic, or a nonfunctioning GI tract
+              - 40 mEq in 1 L NS (children 0.5–1 mEq/kg/hr; adult 10 mEq/hr infusion)
+            - **PO potassium:**
+              - 40–100 mEq/day (max adult 200 mEq/day; max children 3 mEq/kg/day)
+              - Divide into doses every 6 hours
+
+        - type: "prose"
+          title: "IV potassium — never bolus"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            IV potassium must **NEVER** be given as a bolus — always as a controlled infusion.
+
+        - type: "prose"
+          title: "Magnesium (often accompanies hypokalemia)"
+          markdown: |
+            - Unstable or symptomatic & magnesium < 1: magnesium sulfate 2 g in 50 mL 5% dextrose, given over 30 minutes, 6 hourly (children 25–50 mg/kg)
+            - Stable, asymptomatic, magnesium < 2 but > 1: oral supplementation
+
+    # ═══════════════════════ PAGE 143 ═══════════════════════
+    - page_number: 143
+      blocks:
+
+        - type: "prose"
+          title: "Hyperkalemia — presentation"
+          markdown: |
+            - **Majority are asymptomatic**
+            - Muscle weakness / paralysis
+            - Cardiac arrhythmias / palpitations
+            - Decreased bowel motility
+            - Neuro: paraesthesia, confusion, convulsion
+
+        - type: "prose"
+          title: "Common risk factors"
+          markdown: |
+            - Acute and chronic kidney disease
+            - Medications: ACEI and ARBs, beta blockers, digoxin, NSAIDs, spironolactone, co-trimoxazole
+            - Highly aggressive tumours with tumour lysis syndrome
+            - Tissue damage (rhabdomyolysis, burns or trauma)
+
+        - type: "prose"
+          title: "Management"
+          markdown: |
+            - Monitor, support ABCs
+            - Check vital signs (BP, PR, RR, spO₂, Temp, Wt)
+            - Start oxygen if spO₂ < 94%
+            - Serum labs: CBC, RFT, electrolytes
+            - 12-lead ECG
+            - Perform brief, targeted history, physical exam
+            - **K⁺ ≥ 5.5 = hyperkalemia** — recheck to confirm the result, and stop all K⁺ supplementation
+
+        - type: "flowchart"
+          variant: "algorithm"
+          entry:
+            text: "Confirmed hyperkalemia"
+            shape: "stadium"
+          stages:
+            - decision: "Any of the following?"
+              criteria:
+                - "K > 6.5"
+                - "Weakness, frank muscle paralysis, palpitations, paraesthesia"
+                - "ECG changes: tall tented T-waves, PR prolongation, AV block, widening QRS (may eventually merge with the T-wave)"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Stabilise & treat urgently"
+                    bullets:
+                      - "Cardiac monitoring"
+                      - "10% calcium gluconate IV — children 0.5 mL/kg, adults 10 mL, given over 2–3 minutes, repeat every 5 min until ECG improves (lasts 30–60 min)"
+                      - "Furosemide IV — children 1 mg/kg, adults 20–40 mg"
+                      - "Dialysis: urgently if unstable; consider for asymptomatic patients with ESRD"
+                - label: "No"
+                  continue: true
+            - decision: "K⁺ 6.0–6.5?"
+              outcomes:
+                - label: "Yes"
+                  box:
+                    title: "Shift potassium intracellularly"
+                    bullets:
+                      - "Insulin + glucose — adults: IV bolus insulin 10 IU + glucose 40–60 g; children: insulin IV 0.05 IU/kg/hr + glucose IV 0.5 g/kg/hr (for RBS < 180)"
+                      - "Salbutamol q1–2hr — nebulizer: < 25 kg 2.5 mg in 3 mL NS, > 25 kg 5 mg in 5 mL NS (adults max 10–20 mg); MDI + spacer + mask: 5–10 kg 4 puffs, 10–20 kg 6 puffs, > 20 kg 8 puffs"
+                      - "Resonium q6hr — children 1 g/kg PO or PR; adults 15 g PO or 30–50 g PR"
+                - label: "No"
+                  box:
+                    title: "Consider no Rx"
