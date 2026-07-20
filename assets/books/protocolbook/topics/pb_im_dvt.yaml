@@ -1,0 +1,90 @@
+# ============================================================
+# ProtocolBook p.130 — Deep Vein Thrombosis (DVT). Internal Medicine
+# Protocols leaf.
+#
+# Content-flow page → titled prose + the Wells prediction-score `table`
+# and its risk-band interpretation. Management is stratified by risk tier
+# (prose, not a drawn decision tree). Treatment is shared with PE.
+#
+# Rendering calls:
+#   - Presenting complaints / risk factors / management / treatment →
+#     prose (decorative I–V numbering dropped).
+#   - Wells score → `table` (Finding | Points); the side interpretation
+#     box (≤0 low / 1–2 intermediate / ≥3 high) → a prose note under it.
+#
+# MINOR TYPO corrected + flagged: the book prints "Well Prediction Score";
+#   the eponym is Wells (J.S. Wells) → rendered "Wells".
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Wells DVT criteria, risk-stratified D-dimer/ultrasound rule-out, and
+#     LMWH/UFH acute anticoagulation are standard. The book bridges to
+#     warfarin (10 mg ×2 days → INR 2–3); modern practice favours a DOAC
+#     where available — flag for OE (transcribed as printed).
+# ============================================================
+
+topic:
+  id: "pb-im-dvt"
+  title: "Deep Vein Thrombosis (DVT)"
+  list_subtitle: "p.130 · Wells score · anticoagulation"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["DVT", "deep vein thrombosis", "VTE", "Wells score", "D-dimer", "doppler ultrasound", "enoxaparin", "heparin", "warfarin", "anticoagulation", "iliofemoral", "internal medicine", "haematology"]
+  category: "medical"
+  page_number: 130
+
+  blocks:
+
+    - type: "prose"
+      title: "Common presenting complaints"
+      markdown: |
+        - Leg swelling, pain, unilateral leg tenderness
+        - Iliofemoral thrombosis may present with:
+          - Pain in buttocks / groin, swelling in thigh, collateral superficial veins
+
+    - type: "prose"
+      title: "Risk factors"
+      markdown: |
+        - Prolonged bed rest, immobilization, air or bus travel
+        - Age > 40 years
+        - Obesity
+        - HIV or tuberculosis
+
+    - type: "prose"
+      title: "Wells prediction score"
+      markdown: |
+        Score **≤ 0** low risk · **1–2** intermediate risk · **≥ 3** high risk.
+
+    - type: "table"
+      columns: ["Finding", "Points"]
+      column_flex: [9, 2]
+      column_align: ["left", "center"]
+      rows:
+        - cells: ["Previous DVT / PE", "1"]
+        - cells: ["Paralysis / immobilization of lower extremity", "1"]
+        - cells: ["Bedridden > 3 days or major surgery within 4 weeks", "1"]
+        - cells: ["Local tenderness", "1"]
+        - cells: ["Swelling of entire leg", "1"]
+        - cells: ["Calf difference ≥ 3 cm", "1"]
+        - cells: ["Pitting edema ONLY in symptomatic leg", "1"]
+        - cells: ["Collateral superficial veins", "1"]
+        - cells: ["Alternative diagnosis more likely than DVT", "−2"]
+
+    - type: "prose"
+      title: "Management recommendations"
+      markdown: |
+        - **Low risk:** can rule out with doppler ultrasound of the lower extremities or D-dimer if concerned; otherwise no treatment
+        - **Moderate risk:**
+          - Doppler ultrasound of lower extremities or D-dimer to rule out
+          - Wait until results to begin treatment
+        - **High risk:**
+          - Begin treatment
+          - Order doppler ultrasound of lower extremities for confirmation
+
+    - type: "prose"
+      title: "Treatment options for DVT or PE"
+      markdown: |
+        **Acute:**
+
+        - Enoxaparin 1 mg/kg subcutaneously q12hrs
+        - Unfractionated heparin IV 80 units/kg (5000 units max), then 18 units/kg/hr (1000 units max)
+
+        **Chronic:** warfarin 10 mg PO daily × 2 days, then base on INR (goal 2–3).

@@ -152,3 +152,4 @@ book:
         - topic: "topics/pb_im_headache.yaml"
         - topic: "topics/pb_im_copd_asthma.yaml"
         - topic: "topics/pb_im_tb.yaml"
+        - topic: "topics/pb_im_dvt.yaml"
