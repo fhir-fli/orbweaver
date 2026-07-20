@@ -1,0 +1,39 @@
+# ============================================================
+# FIB-4 — liver fibrosis index.
+# Evidence review 2026-07-19: AASLD 2023 MASLD first-line risk stratifier.
+# FIB-4 = (age × AST) / (platelets × √ALT). < 1.3 low / 1.3–2.67
+# indeterminate → VCTE-ELF / > 2.67 high. Age-adjusted: use 2.0 low-cutoff
+# for age > 65; unreliable under 35.
+# ============================================================
+
+topic:
+  id: "calc-fib4"
+  title: "FIB-4 Index"
+  list_subtitle: "liver fibrosis risk"
+  last_reviewed: "Evidence review 2026-07-19 · AASLD 2023"
+  tags: ["fib-4", "fib4", "liver", "fibrosis", "masld", "nafld", "cirrhosis", "hepatology"]
+  aliases:
+    - "FIB-4"
+    - "Fibrosis-4"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        First-line non-invasive estimate of advanced hepatic fibrosis risk in
+        at-risk (e.g. MASLD) patients.
+
+    - type: "formula"
+      kind: "fib4"
+      title: "FIB-4"
+      source: "Sterling et al. 2006; AASLD 2023 MASLD guidance"
+      inputs:
+        - { key: "age", label: "Age", unit: "yr", type: "number" }
+        - { key: "ast", label: "AST", unit: "U/L", type: "number" }
+        - { key: "alt", label: "ALT", unit: "U/L", type: "number" }
+        - { key: "platelets", label: "Platelets", unit: "×10⁹/L", type: "number" }
+      notes:
+        - "FIB-4 = (age × AST) / (platelets × √ALT). Cutoffs < 1.3 low, > 2.67 high (low-cutoff 2.0 if age > 65)."
+      caveats:
+        - "Unreliable under age 35; indeterminate results need a second-line test (VCTE / ELF)."

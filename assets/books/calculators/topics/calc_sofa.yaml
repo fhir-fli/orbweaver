@@ -1,0 +1,99 @@
+# ============================================================
+# SOFA — Sequential Organ Failure Assessment.
+# Evidence review 2026-07-19: the Sepsis-3 organ-dysfunction standard
+# (sepsis = suspected infection + acute rise in SOFA ≥ 2). ICU-oriented,
+# lab-dependent — not a rapid ward screen (use NEWS2 for screening).
+# Vincent 1996. Six organ systems, 0–4 each; total 0–24.
+# ============================================================
+
+topic:
+  id: "calc-sofa"
+  title: "SOFA Score"
+  list_subtitle: "organ dysfunction (Sepsis-3)"
+  last_reviewed: "Evidence review 2026-07-19 · Vincent 1996 · Sepsis-3 2016"
+  tags: ["sofa", "sepsis", "organ failure", "icu", "sepsis-3", "mortality", "critical care"]
+  aliases:
+    - "SOFA"
+    - "Sequential Organ Failure Assessment"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Quantifies organ dysfunction across six systems. Underpins the Sepsis-3
+        definition (an acute rise of ≥ 2 points with suspected infection).
+
+    - type: "score"
+      title: "SOFA"
+      source: "Vincent et al., Intensive Care Med 1996"
+      items:
+        - key: "resp"
+          label: "Respiration (PaO₂/FiO₂, mmHg)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "≥ 400" }
+            - { value: "1", points: 1, label: "< 400" }
+            - { value: "2", points: 2, label: "< 300" }
+            - { value: "3", points: 3, label: "< 200 with respiratory support" }
+            - { value: "4", points: 4, label: "< 100 with respiratory support" }
+        - key: "coag"
+          label: "Coagulation (platelets ×10³/µL)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "≥ 150" }
+            - { value: "1", points: 1, label: "< 150" }
+            - { value: "2", points: 2, label: "< 100" }
+            - { value: "3", points: 3, label: "< 50" }
+            - { value: "4", points: 4, label: "< 20" }
+        - key: "liver"
+          label: "Liver (bilirubin, mg/dL)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "< 1.2" }
+            - { value: "1", points: 1, label: "1.2–1.9" }
+            - { value: "2", points: 2, label: "2.0–5.9" }
+            - { value: "3", points: 3, label: "6.0–11.9" }
+            - { value: "4", points: 4, label: "> 12" }
+        - key: "cardio"
+          label: "Cardiovascular"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "MAP ≥ 70" }
+            - { value: "1", points: 1, label: "MAP < 70" }
+            - { value: "2", points: 2, label: "Dopamine ≤ 5 or dobutamine (any)" }
+            - { value: "3", points: 3, label: "Dopamine > 5, or epi/norepi ≤ 0.1 µg/kg/min" }
+            - { value: "4", points: 4, label: "Dopamine > 15, or epi/norepi > 0.1" }
+        - key: "cns"
+          label: "CNS (Glasgow Coma Scale)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "15" }
+            - { value: "1", points: 1, label: "13–14" }
+            - { value: "2", points: 2, label: "10–12" }
+            - { value: "3", points: 3, label: "6–9" }
+            - { value: "4", points: 4, label: "< 6" }
+        - key: "renal"
+          label: "Renal (creatinine mg/dL or urine output)"
+          type: "scale"
+          default: "0"
+          options:
+            - { value: "0", points: 0, label: "< 1.2" }
+            - { value: "1", points: 1, label: "1.2–1.9" }
+            - { value: "2", points: 2, label: "2.0–3.4" }
+            - { value: "3", points: 3, label: "3.5–4.9 or UOP < 500 mL/day" }
+            - { value: "4", points: 4, label: "> 5.0 or UOP < 200 mL/day" }
+      bands:
+        - { min: 0, max: 6, label: "Lower mortality (roughly < 10–20%)", severity: "none" }
+        - { min: 7, max: 9, label: "Moderate mortality (~15–20%+)", severity: "warn" }
+        - { min: 10, max: 12, label: "High mortality (~40–50%)", severity: "alert" }
+        - { min: 13, label: "Very high mortality (> 50%)", severity: "alert" }
+      notes:
+        - "Sepsis-3: suspected infection + an acute rise in SOFA of ≥ 2 points (baseline assumed 0 if organ function was normal)."
+      caveats:
+        - "ICU/lab-dependent (needs ABG, labs, vasopressor data) — not a rapid bedside screen; use NEWS2 to screen for deterioration."

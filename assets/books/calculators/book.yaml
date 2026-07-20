@@ -44,11 +44,15 @@ book:
       children:
         - topic: "topics/calc_meld.yaml"
         - topic: "topics/calc_child_pugh.yaml"
+        - topic: "topics/calc_fib4.yaml"
+        - topic: "topics/calc_maddrey.yaml"
     - title: "Hematology & Pulmonary"
       children:
         - topic: "topics/calc_anc.yaml"
         - topic: "topics/calc_reticulocyte.yaml"
+        - topic: "topics/calc_dday_age.yaml"
         - topic: "topics/calc_lights.yaml"
+        - topic: "topics/calc_oxygenation.yaml"
     - title: "Risk & Severity Scores"
       children:
         - topic: "topics/calc_cha2ds2_vasc.yaml"
@@ -62,9 +66,12 @@ book:
         - topic: "topics/calc_qsofa.yaml"
         - topic: "topics/calc_centor.yaml"
         - topic: "topics/calc_ich_score.yaml"
+        - topic: "topics/calc_sofa.yaml"
         - topic: "topics/calc_4ts.yaml"
         - topic: "topics/calc_gcs.yaml"
         - topic: "topics/calc_canadian_ct_head.yaml"
+        - topic: "topics/calc_rcri.yaml"
+        - topic: "topics/calc_bisap.yaml"
     - title: "Withdrawal Scales"
       children:
         - topic: "topics/calc_ciwa_ar.yaml"

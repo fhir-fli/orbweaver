@@ -1,0 +1,42 @@
+# ============================================================
+# BISAP — Bedside Index of Severity in Acute Pancreatitis.
+# Evidence review 2026-07-19: calculable within 24 h (vs Ranson's 48 h),
+# comparable discrimination — a reasonable bedside severity index. BUT
+# ACG 2013 endorses NO single score over SIRS + serial clinical/organ-
+# failure assessment (Atlanta 2012 defines severity by organ failure).
+# Wu 2008. 5 factors; total 0–5.
+# ============================================================
+
+topic:
+  id: "calc-bisap"
+  title: "BISAP Score"
+  list_subtitle: "acute pancreatitis severity"
+  last_reviewed: "Evidence review 2026-07-19 · Wu 2008 · ACG 2013"
+  tags: ["bisap", "pancreatitis", "acute pancreatitis", "severity", "mortality", "gi"]
+  aliases:
+    - "BISAP"
+    - "Pancreatitis severity"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Early (within 24 h) mortality-risk index for acute pancreatitis. Tap
+        each criterion present.
+
+    - type: "score"
+      title: "BISAP"
+      source: "Wu et al., Gut 2008"
+      items:
+        - { key: "bun", label: "BUN > 25 mg/dL", type: "toggle", points: 1 }
+        - { key: "mental", label: "Impaired mental status (GCS < 15)", type: "toggle", points: 1 }
+        - { key: "sirs", label: "SIRS (≥ 2 criteria)", type: "toggle", points: 1 }
+        - { key: "age60", label: "Age > 60", type: "toggle", points: 1 }
+        - { key: "effusion", label: "Pleural effusion on imaging", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 2, label: "Lower mortality (~< 2%)", severity: "none" }
+        - { min: 3, max: 3, label: "Elevated mortality (~5–8%)", severity: "warn" }
+        - { min: 4, label: "High mortality (~13–27%)", severity: "alert" }
+      caveats:
+        - "No single score substitutes for SIRS + serial clinical and organ-failure assessment (ACG 2013; severity is defined by persistent organ failure, Atlanta 2012)."

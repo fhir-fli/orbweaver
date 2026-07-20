@@ -1,0 +1,39 @@
+# ============================================================
+# Maddrey Discriminant Function — alcoholic hepatitis severity.
+# Evidence review 2026-07-19: mDF = 4.6 × (PT − control PT) + bilirubin
+# (mg/dL). ≥ 32 = severe → consider corticosteroids. AASLD 2020 also
+# prompts steroids at MELD > 20; Morales-Arraez 2022 found MELD out-
+# performs mDF, so pair with MELD and the day-7 Lille response score.
+# ============================================================
+
+topic:
+  id: "calc-maddrey"
+  title: "Maddrey Discriminant Function"
+  list_subtitle: "alcoholic hepatitis severity"
+  last_reviewed: "Evidence review 2026-07-19 · AASLD 2020"
+  tags: ["maddrey", "discriminant function", "mdf", "alcoholic hepatitis", "steroids", "liver", "hepatology"]
+  aliases:
+    - "Maddrey"
+    - "Discriminant function"
+    - "mDF"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Severity of alcohol-associated hepatitis, used to decide on
+        corticosteroids. Needs the patient PT and the lab's control PT.
+
+    - type: "formula"
+      kind: "maddrey"
+      title: "Maddrey discriminant function"
+      source: "Maddrey et al., Gastroenterology 1978"
+      inputs:
+        - { key: "pt", label: "Patient PT", unit: "sec", type: "number" }
+        - { key: "control_pt", label: "Control PT", unit: "sec", type: "number" }
+        - { key: "bilirubin", label: "Total bilirubin", unit: "mg/dL", type: "number" }
+      notes:
+        - "mDF = 4.6 × (PT − control PT) + bilirubin. ≥ 32 = severe alcohol-associated hepatitis."
+      caveats:
+        - "MELD out-predicts mDF (Morales-Arraez 2022) — also treat if MELD > 20, and reassess steroid response with the day-7 Lille score."

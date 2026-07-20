@@ -1,0 +1,40 @@
+# ============================================================
+# Oxygenation indices — P/F ratio (+ SpO₂/FiO₂).
+# Evidence review 2026-07-19: P/F = PaO₂ / FiO₂(fraction) — Berlin ARDS
+# severity (300/200/100 at PEEP ≥ 5). S/F is the 2023 Global-ARDS-
+# Definition surrogate when no ABG and SpO₂ ≤ 97% (≈ 315/235/148).
+# ============================================================
+
+topic:
+  id: "calc-oxygenation"
+  title: "P/F & S/F Ratio"
+  list_subtitle: "oxygenation / ARDS severity"
+  last_reviewed: "Evidence review 2026-07-19 · Berlin 2012 · Global ARDS 2023"
+  tags: ["p/f ratio", "pf ratio", "sf ratio", "spo2/fio2", "ards", "oxygenation", "hypoxemia", "pulmonary"]
+  aliases:
+    - "P/F ratio"
+    - "PaO2/FiO2"
+    - "S/F ratio"
+    - "SpO2/FiO2"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Oxygenation ratio for ARDS severity. Enter FiO₂ and PaO₂ for the P/F
+        ratio; add SpO₂ for the ABG-free S/F surrogate.
+
+    - type: "formula"
+      kind: "oxygenation"
+      title: "Oxygenation indices"
+      source: "P/F = PaO₂/FiO₂ (Berlin 2012); S/F surrogate (Global ARDS 2023)"
+      inputs:
+        - { key: "fio2", label: "FiO₂", unit: "%", type: "number", default: 21, help: "21 = room air" }
+        - { key: "pao2", label: "PaO₂", unit: "mmHg", type: "number", optional: true }
+        - { key: "spo2", label: "SpO₂", unit: "%", type: "number", optional: true, help: "for S/F; use only if ≤ 97%" }
+      notes:
+        - "P/F Berlin severity (PEEP ≥ 5): mild 200–300 · moderate 100–200 · severe < 100."
+        - "S/F ≈ 315 mild · 235 moderate · 148 severe — surrogate only, misclassifies ~⅓."
+      caveats:
+        - "S/F is valid only when SpO₂ ≤ 97% and no ABG is available; it is not interchangeable with P/F for titrating therapy."

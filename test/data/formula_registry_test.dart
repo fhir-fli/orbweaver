@@ -635,6 +635,90 @@ void main() {
     });
   });
 
+  group('fib4', () {
+    test('age 60, AST 50, plt 150, ALT 40 → 3.16 (high)', () {
+      final r = computeFormula(
+          'fib4', {'age': 60, 'ast': 50, 'alt': 40, 'platelets': 150});
+      expect(_v(r, 0), closeTo(3.16, 0.02)); // (60×50)/(150×√40)
+      expect(r.outputs[0].severity, FormulaSeverity.alert);
+    });
+    test('low result flagged low (< 1.3)', () {
+      final r = computeFormula(
+          'fib4', {'age': 40, 'ast': 20, 'alt': 25, 'platelets': 250});
+      expect(r.outputs[0].severity, FormulaSeverity.none);
+      expect(r.outputs[0].interpretation, contains('Low'));
+    });
+    test('age > 65 raises the low cutoff to 2.0', () {
+      // FIB-4 ~1.6 → indeterminate under 1.3 cutoff, but LOW under 2.0 (>65)
+      final r = computeFormula(
+          'fib4', {'age': 70, 'ast': 30, 'alt': 30, 'platelets': 200});
+      expect(_v(r, 0), closeTo(1.92, 0.05)); // (70×30)/(200×√30)
+      expect(r.outputs[0].interpretation, contains('Low'));
+    });
+    test('missing platelets → empty', () {
+      expect(
+        computeFormula('fib4', {'age': 60, 'ast': 50, 'alt': 40}).isEmpty,
+        isTrue,
+      );
+    });
+  });
+
+  group('maddrey', () {
+    test('PT 20, control 12, bili 10 → 46.8 (severe)', () {
+      final r = computeFormula(
+          'maddrey', {'pt': 20, 'control_pt': 12, 'bilirubin': 10});
+      expect(_v(r, 0), closeTo(46.8, 0.05)); // 4.6×8 + 10
+      expect(r.outputs[0].severity, FormulaSeverity.alert);
+    });
+    test('below 32 not severe', () {
+      final r = computeFormula(
+          'maddrey', {'pt': 14, 'control_pt': 12, 'bilirubin': 5});
+      expect(_v(r, 0), closeTo(14.2, 0.05)); // 4.6×2 + 5
+      expect(r.outputs[0].severity, FormulaSeverity.none);
+    });
+  });
+
+  group('oxygenation (P/F, S/F)', () {
+    test('PaO2 90 on 21% → P/F 429', () {
+      final r = computeFormula('oxygenation', {'fio2': 21, 'pao2': 90});
+      expect(_v(r, 0), closeTo(429, 1)); // 90/0.21
+      expect(r.outputs[0].severity, FormulaSeverity.none);
+    });
+    test('PaO2 90 on 100% → P/F 90 (severe ARDS range)', () {
+      final r = computeFormula('oxygenation', {'fio2': 100, 'pao2': 90});
+      expect(_v(r, 0), closeTo(90, 0.5));
+      expect(r.outputs[0].severity, FormulaSeverity.alert);
+    });
+    test('S/F added when SpO2 given', () {
+      final r =
+          computeFormula('oxygenation', {'fio2': 21, 'pao2': 90, 'spo2': 95});
+      expect(r.outputs, hasLength(2));
+      expect(_v(r, 1), closeTo(452, 1)); // 95/0.21
+    });
+    test('no PaO2 and no SpO2 → empty', () {
+      expect(computeFormula('oxygenation', {'fio2': 21}).isEmpty, isTrue);
+    });
+  });
+
+  group('dday_age (age-adjusted D-dimer)', () {
+    test('age 80 → cutoff 800', () {
+      final r = computeFormula('dday_age', {'age': 80});
+      expect(_v(r, 0), closeTo(800, 0.5)); // 80×10
+    });
+    test('age ≤ 50 → conventional 500', () {
+      expect(_v(computeFormula('dday_age', {'age': 45}), 0), closeTo(500, 0.5));
+    });
+    test('measured value interpreted vs cutoff', () {
+      final pos = computeFormula('dday_age', {'age': 80, 'measured': 850});
+      expect(pos.outputs[1].severity, FormulaSeverity.warn);
+      final neg = computeFormula('dday_age', {'age': 80, 'measured': 600});
+      expect(neg.outputs[1].severity, FormulaSeverity.none); // < 800 cutoff
+    });
+    test('missing age → empty', () {
+      expect(computeFormula('dday_age', const {}).isEmpty, isTrue);
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

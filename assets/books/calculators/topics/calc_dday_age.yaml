@@ -1,0 +1,37 @@
+# ============================================================
+# Age-adjusted D-dimer cutoff.
+# Evidence review 2026-07-19: for age > 50 with LOW/INTERMEDIATE pretest
+# probability, the D-dimer cutoff = age × 10 µg/L (FEU) instead of a fixed
+# 500 — safely raises the exclusion rate in older patients (ADJUST-PE,
+# JAMA 2014; ESC 2019 Class IIa). Only valid at non-high pretest probability.
+# ============================================================
+
+topic:
+  id: "calc-dday-age"
+  title: "Age-Adjusted D-Dimer"
+  list_subtitle: "VTE exclusion cutoff"
+  last_reviewed: "Evidence review 2026-07-19 · ADJUST-PE 2014 · ESC 2019"
+  tags: ["d-dimer", "age-adjusted", "vte", "pe", "dvt", "cutoff", "exclusion"]
+  aliases:
+    - "Age-adjusted D-dimer"
+    - "D-dimer cutoff"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        The age-adjusted D-dimer cutoff for excluding VTE in older patients.
+        Enter age (and, optionally, the measured D-dimer to interpret it).
+
+    - type: "formula"
+      kind: "dday_age"
+      title: "Age-adjusted D-dimer"
+      source: "Righini et al. (ADJUST-PE), JAMA 2014; ESC 2019 PE guideline"
+      inputs:
+        - { key: "age", label: "Age", unit: "yr", type: "number" }
+        - { key: "measured", label: "Measured D-dimer", unit: "µg/L FEU", type: "number", optional: true }
+      notes:
+        - "Cutoff = age × 10 µg/L (FEU) for age > 50; otherwise the conventional 500."
+      caveats:
+        - "Valid only with LOW or INTERMEDIATE pretest probability (not high). Assumes a fibrinogen-equivalent-unit (FEU) assay — check your lab's units/reference."

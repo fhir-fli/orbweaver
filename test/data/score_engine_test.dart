@@ -527,6 +527,60 @@ void main() {
     test('maximum = 13', () => expect(scoreRange(b).max, 13));
   });
 
+  group('SOFA (6 scale organs, 0–24)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_sofa.yaml'));
+
+    test('all normal → 0, lower mortality', () {
+      final all0 = {for (final i in b.items) i.key: '0'};
+      expect(_total(b, all0), 0);
+      expect(_band(b, all0), contains('Lower'));
+    });
+    test('sums organs; band boundaries 6/7 and 12/13', () {
+      // resp3 + cardio3 + renal1 = 7 → moderate
+      expect(_band(b, {'resp': '3', 'cardio': '3', 'renal': '1'}),
+          contains('Moderate'));
+      // resp4+coag4+liver4+cardio1 = 13 → very high
+      expect(
+        _band(b, {'resp': '4', 'coag': '4', 'liver': '4', 'cardio': '1'}),
+        contains('Very high'),
+      );
+    });
+    test('maximum = 24', () => expect(scoreRange(b).max, 24));
+  });
+
+  group('RCRI (Lee)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_rcri.yaml'));
+
+    test('0 → Class I, 1 → Class II, 2 → Class III, 3+ → Class IV', () {
+      expect(_band(b, const {}), contains('Class I'));
+      expect(_band(b, {'ihd': true}), contains('Class II'));
+      expect(_band(b, {'ihd': true, 'chf': true}), contains('Class III'));
+      expect(
+        _band(b, {'ihd': true, 'chf': true, 'cva': true}),
+        contains('Class IV'),
+      );
+    });
+    test('max 6', () => expect(scoreRange(b).max, 6));
+  });
+
+  group('BISAP', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_bisap.yaml'));
+
+    test('0–2 lower, 3 elevated, 4 high', () {
+      expect(_band(b, {'bun': true, 'age60': true}), contains('Lower')); // 2
+      expect(_band(b, {'bun': true, 'age60': true, 'sirs': true}),
+          contains('Elevated')); // 3
+      expect(
+        _band(b, {'bun': true, 'age60': true, 'sirs': true, 'effusion': true}),
+        contains('High'),
+      ); // 4
+    });
+    test('max 5', () => expect(scoreRange(b).max, 5));
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));

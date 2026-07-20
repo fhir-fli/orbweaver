@@ -105,8 +105,161 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'anc' => _anc(v),
     'reticulocyte' => _reticulocyte(v),
     'lights' => _lights(v),
+    'fib4' => _fib4(v),
+    'maddrey' => _maddrey(v),
+    'oxygenation' => _oxygenation(v),
+    'dday_age' => _ddayAge(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── fib4: liver fibrosis index ───────────────────────────────────────
+
+FormulaResult _fib4(Map<String, dynamic> v) {
+  final age = _num(v, 'age');
+  final ast = _num(v, 'ast');
+  final alt = _num(v, 'alt');
+  final plt = _num(v, 'platelets'); // ×10⁹/L
+  if (age == null ||
+      ast == null ||
+      alt == null ||
+      plt == null ||
+      age <= 0 ||
+      alt <= 0 ||
+      plt <= 0) {
+    return const FormulaResult.empty();
+  }
+  final fib4 = (age * ast) / (plt * math.sqrt(alt));
+  // Age-adjusted low cutoff: 2.0 if >65, else 1.3.
+  final lowCut = age > 65 ? 2.0 : 1.3;
+  final FormulaSeverity sev;
+  final String interp;
+  if (fib4 < lowCut) {
+    sev = FormulaSeverity.none;
+    interp = age < 35
+        ? 'Below cutoff, but FIB-4 is unreliable under age 35.'
+        : 'Low risk of advanced fibrosis (< ${fmtNum(lowCut)}) — monitor.';
+  } else if (fib4 <= 2.67) {
+    sev = FormulaSeverity.warn;
+    interp = 'Indeterminate — second-line test (VCTE / ELF).';
+  } else {
+    sev = FormulaSeverity.alert;
+    interp = 'High risk of advanced fibrosis (> 2.67) — refer.';
+  }
+  return FormulaResult([
+    FormulaOutput(
+      label: 'FIB-4',
+      value: fmtNum(fib4, decimals: 2),
+      primary: true,
+      severity: sev,
+      interpretation: interp,
+    ),
+  ]);
+}
+
+// ── maddrey: discriminant function (alcoholic hepatitis) ─────────────
+
+FormulaResult _maddrey(Map<String, dynamic> v) {
+  final pt = _num(v, 'pt');
+  final control = _num(v, 'control_pt');
+  final bili = _num(v, 'bilirubin'); // mg/dL
+  if (pt == null || control == null || bili == null) {
+    return const FormulaResult.empty();
+  }
+  final df = 4.6 * (pt - control) + bili;
+  final severe = df >= 32;
+  return FormulaResult([
+    FormulaOutput(
+      label: 'Maddrey discriminant function',
+      value: fmtNum(df, decimals: 1),
+      primary: true,
+      severity: severe ? FormulaSeverity.alert : FormulaSeverity.none,
+      interpretation: severe
+          ? '≥ 32 — severe; consider corticosteroids (also MELD > 20).'
+          : '< 32 — not severe by mDF.',
+    ),
+  ]);
+}
+
+// ── oxygenation: P/F ratio (+ S/F) ───────────────────────────────────
+
+FormulaResult _oxygenation(Map<String, dynamic> v) {
+  final fio2pct = _num(v, 'fio2');
+  if (fio2pct == null || fio2pct <= 0) return const FormulaResult.empty();
+  final fio2 = fio2pct / 100;
+  final out = <FormulaOutput>[];
+
+  final pao2 = _num(v, 'pao2');
+  if (pao2 != null) {
+    final pf = pao2 / fio2;
+    final String interp;
+    final FormulaSeverity sev;
+    if (pf >= 300) {
+      interp = '≥ 300 — no ARDS by oxygenation (Berlin).';
+      sev = FormulaSeverity.none;
+    } else if (pf >= 200) {
+      interp = '200–300 — mild ARDS range.';
+      sev = FormulaSeverity.warn;
+    } else if (pf >= 100) {
+      interp = '100–200 — moderate ARDS range.';
+      sev = FormulaSeverity.warn;
+    } else {
+      interp = '< 100 — severe ARDS range.';
+      sev = FormulaSeverity.alert;
+    }
+    out.add(FormulaOutput(
+      label: 'P/F ratio',
+      value: fmtNum(pf, decimals: 0),
+      primary: true,
+      severity: sev,
+      interpretation: interp,
+    ));
+  }
+
+  final spo2 = _num(v, 'spo2');
+  if (spo2 != null) {
+    final sf = spo2 / fio2;
+    out.add(FormulaOutput(
+      label: 'SpO₂/FiO₂ ratio',
+      value: fmtNum(sf, decimals: 0),
+      interpretation:
+          'Surrogate when no ABG & SpO₂ ≤ 97% (≈ 315 mild / 235 mod / 148 severe).',
+    ));
+  }
+  return out.isEmpty ? const FormulaResult.empty() : FormulaResult(out);
+}
+
+// ── dday_age: age-adjusted D-dimer threshold ─────────────────────────
+
+FormulaResult _ddayAge(Map<String, dynamic> v) {
+  final age = _num(v, 'age');
+  if (age == null || age <= 0) return const FormulaResult.empty();
+  final threshold = age > 50 ? age * 10 : 500.0; // µg/L (FEU)
+  final out = <FormulaOutput>[
+    FormulaOutput(
+      label: 'Age-adjusted D-dimer cutoff',
+      value: fmtNum(threshold, decimals: 0),
+      unit: 'µg/L FEU',
+      primary: true,
+      interpretation: age > 50
+          ? 'age × 10 (only valid with low/intermediate pretest probability).'
+          : 'Under age 50 the conventional 500 cutoff applies.',
+    ),
+  ];
+  final measured = _num(v, 'measured');
+  if (measured != null) {
+    final positive = measured >= threshold;
+    out.add(FormulaOutput(
+      label: 'Measured D-dimer',
+      value: fmtNum(measured, decimals: 0),
+      unit: 'µg/L FEU',
+      severity: positive ? FormulaSeverity.warn : FormulaSeverity.none,
+      interpretation: positive
+          ? '≥ cutoff — cannot exclude; imaging indicated.'
+          : '< cutoff — VTE excluded (with low/intermediate pretest probability).',
+    ));
+  }
+  return FormulaResult(out);
 }
 
 // ── anc: absolute neutrophil count ───────────────────────────────────

@@ -1,0 +1,44 @@
+# ============================================================
+# Revised Cardiac Risk Index (Lee).
+# Evidence review 2026-07-19: 2024 AHA/ACC perioperative guideline keeps
+# RCRI as a foundational preop cardiac-risk tool but recommends NOT using
+# it alone — pair with a procedure-specific calculator (NSQIP MICA) and,
+# in elevated-risk patients, biomarkers (BNP/troponin). Lee 1999. 6 factors.
+# ============================================================
+
+topic:
+  id: "calc-rcri"
+  title: "Revised Cardiac Risk Index"
+  list_subtitle: "perioperative cardiac risk"
+  last_reviewed: "Evidence review 2026-07-19 · Lee 1999 · AHA/ACC 2024"
+  tags: ["rcri", "lee index", "perioperative", "cardiac risk", "surgery", "preoperative", "mace"]
+  aliases:
+    - "RCRI"
+    - "Lee index"
+    - "Revised Cardiac Risk Index"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Estimates perioperative major cardiac risk for non-cardiac surgery.
+        Tap each factor present.
+
+    - type: "score"
+      title: "Revised Cardiac Risk Index"
+      source: "Lee et al., Circulation 1999"
+      items:
+        - { key: "highrisk_surgery", label: "High-risk surgery (intraperitoneal, intrathoracic, suprainguinal vascular)", type: "toggle", points: 1 }
+        - { key: "ihd", label: "Ischemic heart disease", type: "toggle", points: 1 }
+        - { key: "chf", label: "History of congestive heart failure", type: "toggle", points: 1 }
+        - { key: "cva", label: "History of cerebrovascular disease", type: "toggle", points: 1 }
+        - { key: "insulin", label: "Insulin therapy for diabetes", type: "toggle", points: 1 }
+        - { key: "creatinine", label: "Preoperative creatinine > 2.0 mg/dL", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 0, label: "Class I — low (~3.9% MACE)", severity: "none" }
+        - { min: 1, max: 1, label: "Class II (~6% MACE)", severity: "none" }
+        - { min: 2, max: 2, label: "Class III — elevated (~10% MACE)", severity: "warn" }
+        - { min: 3, label: "Class IV — high (~15%+ MACE)", severity: "alert" }
+      caveats:
+        - "Do not use alone (AHA/ACC 2024): pair with a procedure-specific calculator (NSQIP MICA) and, in elevated-risk patients, BNP/troponin and functional capacity."
