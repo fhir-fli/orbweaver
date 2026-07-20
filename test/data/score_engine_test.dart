@@ -382,6 +382,75 @@ void main() {
     test('maximum = 48', () => expect(scoreRange(b).max, 48));
   });
 
+  group('NEWS2 (7 choice params, U-shaped bands)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_news2.yaml'));
+
+    Map<String, dynamic> normal() => {
+          'rr': 'rr_normal',
+          'spo2': 'spo2_normal',
+          'o2': 'air',
+          'sbp': 'sbp_normal',
+          'pulse': 'pulse_normal',
+          'consciousness': 'alert',
+          'temp': 'temp_normal',
+        };
+
+    test('all-normal → 0, low', () {
+      expect(_total(b, normal()), 0);
+      expect(_band(b, normal()), contains('Low'));
+    });
+    test('extremes score high on both tails (U-shaped)', () {
+      final s = normal()..['rr'] = 'rr_le8'; // ≤8 → 3
+      expect(_total(b, s), 3);
+      final s2 = normal()..['rr'] = 'rr_ge25'; // ≥25 → 3
+      expect(_total(b, s2), 3);
+    });
+    test('aggregate bands: 5 medium, 7 high', () {
+      // O₂ (2) + SpO₂ 92–93 (2) + temp ≥39.1 (2) = 6 → medium... build a 5:
+      final five = normal()
+        ..['o2'] = 'o2' // 2
+        ..['rr'] = 'rr_21_24' // 2
+        ..['temp'] = 'temp_38_39'; // 1  => 5
+      expect(_total(b, five), 5);
+      expect(_band(b, five), contains('Medium'));
+      final seven = normal()
+        ..['rr'] = 'rr_ge25' // 3
+        ..['spo2'] = 'spo2_92_93' // 2
+        ..['o2'] = 'o2'; // 2  => 7
+      expect(_total(b, seven), 7);
+      expect(_band(b, seven), contains('High'));
+    });
+    test('maximum aggregate = 20', () => expect(scoreRange(b).max, 20));
+  });
+
+  group('ICH Score (mortality bands 0–6)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_ich_score.yaml'));
+
+    test('GCS 13–15, nothing else → 0', () {
+      expect(_total(b, {'gcs': 'g13_15'}), 0);
+      expect(_band(b, {'gcs': 'g13_15'}), contains('Score 0'));
+    });
+    test('GCS 3–4 alone → 2', () {
+      expect(_total(b, {'gcs': 'g3_4'}), 2);
+    });
+    test('full house → 6, top mortality band', () {
+      final s = {
+        'gcs': 'g3_4',
+        'volume': true,
+        'ivh': true,
+        'infratentorial': true,
+        'age80': true,
+      };
+      expect(_total(b, s), 6);
+      expect(_band(b, s), contains('4–6'));
+    });
+    test('reachable totals are 0..6 and all banded', () {
+      expect(reachableTotals(b), {for (var i = 0; i <= 6; i++) i});
+    });
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));

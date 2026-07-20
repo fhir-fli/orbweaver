@@ -23,6 +23,7 @@ book:
     - title: "Renal & Fluids"
       children:
         - topic: "topics/calc_creatinine_clearance.yaml"
+        - topic: "topics/calc_urinary_indices.yaml"
         - topic: "topics/calc_holliday_segar.yaml"
         - topic: "topics/calc_parkland.yaml"
     - title: "Electrolytes & Acid–Base"
@@ -52,8 +53,10 @@ book:
         - topic: "topics/calc_wells_pe.yaml"
         - topic: "topics/calc_perc.yaml"
         - topic: "topics/calc_curb65.yaml"
+        - topic: "topics/calc_news2.yaml"
         - topic: "topics/calc_qsofa.yaml"
         - topic: "topics/calc_centor.yaml"
+        - topic: "topics/calc_ich_score.yaml"
         - topic: "topics/calc_4ts.yaml"
         - topic: "topics/calc_gcs.yaml"
         - topic: "topics/calc_canadian_ct_head.yaml"

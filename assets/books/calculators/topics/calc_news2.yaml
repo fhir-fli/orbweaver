@@ -1,0 +1,105 @@
+# ============================================================
+# NEWS2 — National Early Warning Score 2.
+# Evidence review 2026-07-19: NHS-mandated ward deterioration/sepsis
+# screen; SSC prefers it over qSOFA. Strong discrimination for
+# deterioration/mortality (outcome improvement depends on the escalation
+# response). RCP 2017. Aggregate 0–20 with SpO₂ Scale 1. A score of 3 in
+# ANY single parameter is a "red score" → urgent review regardless of total.
+# ============================================================
+
+topic:
+  id: "calc-news2"
+  title: "NEWS2"
+  list_subtitle: "early warning / deterioration"
+  last_reviewed: "Evidence review 2026-07-19 · RCP 2017 · SSC 2021"
+  tags: ["news2", "news", "early warning", "deterioration", "sepsis", "escalation", "vitals", "ward"]
+  aliases:
+    - "NEWS2"
+    - "NEWS"
+    - "Early warning score"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        The NHS early-warning score for clinical deterioration. Pick the band
+        for each observation; the total drives the monitoring/escalation
+        response.
+
+    - type: "score"
+      title: "NEWS2"
+      source: "Royal College of Physicians, NEWS2 (2017)"
+      items:
+        - key: "rr"
+          label: "Respiration rate (/min)"
+          type: "choice"
+          default: "rr_normal"
+          options:
+            - { value: "rr_le8", label: "≤ 8", points: 3 }
+            - { value: "rr_9_11", label: "9–11", points: 1 }
+            - { value: "rr_normal", label: "12–20", points: 0 }
+            - { value: "rr_21_24", label: "21–24", points: 2 }
+            - { value: "rr_ge25", label: "≥ 25", points: 3 }
+        - key: "spo2"
+          label: "SpO₂ (Scale 1, %)"
+          type: "choice"
+          default: "spo2_normal"
+          options:
+            - { value: "spo2_le91", label: "≤ 91", points: 3 }
+            - { value: "spo2_92_93", label: "92–93", points: 2 }
+            - { value: "spo2_94_95", label: "94–95", points: 1 }
+            - { value: "spo2_normal", label: "≥ 96", points: 0 }
+        - key: "o2"
+          label: "Air or supplemental oxygen"
+          type: "choice"
+          default: "air"
+          options:
+            - { value: "air", label: "Air", points: 0 }
+            - { value: "o2", label: "Supplemental O₂", points: 2 }
+        - key: "sbp"
+          label: "Systolic BP (mmHg)"
+          type: "choice"
+          default: "sbp_normal"
+          options:
+            - { value: "sbp_le90", label: "≤ 90", points: 3 }
+            - { value: "sbp_91_100", label: "91–100", points: 2 }
+            - { value: "sbp_101_110", label: "101–110", points: 1 }
+            - { value: "sbp_normal", label: "111–219", points: 0 }
+            - { value: "sbp_ge220", label: "≥ 220", points: 3 }
+        - key: "pulse"
+          label: "Pulse (/min)"
+          type: "choice"
+          default: "pulse_normal"
+          options:
+            - { value: "pulse_le40", label: "≤ 40", points: 3 }
+            - { value: "pulse_41_50", label: "41–50", points: 1 }
+            - { value: "pulse_normal", label: "51–90", points: 0 }
+            - { value: "pulse_91_110", label: "91–110", points: 1 }
+            - { value: "pulse_111_130", label: "111–130", points: 2 }
+            - { value: "pulse_ge131", label: "≥ 131", points: 3 }
+        - key: "consciousness"
+          label: "Consciousness (ACVPU)"
+          type: "choice"
+          default: "alert"
+          options:
+            - { value: "alert", label: "Alert", points: 0 }
+            - { value: "cvpu", label: "New confusion / V / P / U", points: 3 }
+        - key: "temp"
+          label: "Temperature (°C)"
+          type: "choice"
+          default: "temp_normal"
+          options:
+            - { value: "temp_le35", label: "≤ 35.0", points: 3 }
+            - { value: "temp_35_36", label: "35.1–36.0", points: 1 }
+            - { value: "temp_normal", label: "36.1–38.0", points: 0 }
+            - { value: "temp_38_39", label: "38.1–39.0", points: 1 }
+            - { value: "temp_ge39", label: "≥ 39.1", points: 2 }
+      bands:
+        - { min: 0, max: 4, label: "Low — routine to 4–6 hourly monitoring", severity: "none" }
+        - { min: 5, max: 6, label: "Medium — urgent review by a competent clinician", severity: "warn" }
+        - { min: 7, label: "High — emergency threshold; critical-care review", severity: "alert" }
+      notes:
+        - "A score of 3 in ANY single parameter is a 'red score' → urgent review even if the aggregate is low."
+      caveats:
+        - "SpO₂ Scale 2 (target 88–92%, e.g. hypercapnic COPD) is a different scoring table and is not modeled here. Outcomes depend on the escalation response, not the number."

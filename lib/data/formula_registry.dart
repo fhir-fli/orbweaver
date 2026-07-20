@@ -101,8 +101,53 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'anthropometrics' => _anthropometrics(v),
     'osmolal_gap' => _osmolalGap(v),
     'parkland' => _parkland(v),
+    'urinary_indices' => _urinaryIndices(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── urinary_indices: FENa (+ FEUrea) for AKI ─────────────────────────
+
+FormulaResult _urinaryIndices(Map<String, dynamic> v) {
+  final sNa = _num(v, 'serum_na');
+  final uNa = _num(v, 'urine_na');
+  final sCr = _num(v, 'serum_cr');
+  final uCr = _num(v, 'urine_cr');
+  if (sNa == null ||
+      uNa == null ||
+      sCr == null ||
+      uCr == null ||
+      sNa <= 0 ||
+      uCr <= 0) {
+    return const FormulaResult.empty();
+  }
+  final fena = (uNa * sCr) / (sNa * uCr) * 100;
+  final prerenal = fena < 1;
+  final out = <FormulaOutput>[
+    FormulaOutput(
+      label: 'FENa',
+      value: fmtNum(fena, decimals: 2),
+      unit: '%',
+      primary: true,
+      severity: FormulaSeverity.none,
+      interpretation: prerenal
+          ? '< 1% suggests prerenal.'
+          : (fena > 2 ? '> 2% suggests intrinsic (ATN).' : '1–2% indeterminate.'),
+    ),
+  ];
+  final sUrea = _num(v, 'serum_urea');
+  final uUrea = _num(v, 'urine_urea');
+  if (sUrea != null && uUrea != null && sUrea > 0) {
+    final feurea = (uUrea * sCr) / (sUrea * uCr) * 100;
+    out.add(FormulaOutput(
+      label: 'FEUrea',
+      value: fmtNum(feurea, decimals: 1),
+      unit: '%',
+      interpretation:
+          '< 35% suggests prerenal — more reliable than FENa on diuretics.',
+    ));
+  }
+  return FormulaResult(out);
 }
 
 // ── anthropometrics: BMI (+ category) and BSA (Mosteller) ─────────────

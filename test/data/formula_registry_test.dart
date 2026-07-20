@@ -516,6 +516,52 @@ void main() {
     });
   });
 
+  group('urinary_indices (FENa / FEUrea)', () {
+    test('prerenal: FENa 0.36%', () {
+      final r = computeFormula('urinary_indices', {
+        'serum_na': 140,
+        'urine_na': 10,
+        'serum_cr': 5,
+        'urine_cr': 100,
+      });
+      expect(_v(r, 0), closeTo(0.36, 0.01)); // (10×5)/(140×100)×100
+      expect(r.outputs[0].interpretation, contains('prerenal'));
+    });
+    test('intrinsic: FENa > 2% flagged', () {
+      final r = computeFormula('urinary_indices', {
+        'serum_na': 140,
+        'urine_na': 60,
+        'serum_cr': 2,
+        'urine_cr': 20,
+      });
+      expect(_v(r, 0), closeTo(4.29, 0.02)); // (60×2)/(140×20)×100
+      expect(r.outputs[0].interpretation, contains('intrinsic'));
+    });
+    test('FEUrea added only when urea provided', () {
+      final base = computeFormula('urinary_indices',
+          {'serum_na': 140, 'urine_na': 10, 'serum_cr': 5, 'urine_cr': 100});
+      expect(base.outputs, hasLength(1));
+      final withUrea = computeFormula('urinary_indices', {
+        'serum_na': 140,
+        'urine_na': 10,
+        'serum_cr': 5,
+        'urine_cr': 100,
+        'serum_urea': 40,
+        'urine_urea': 200,
+      });
+      expect(withUrea.outputs, hasLength(2));
+      expect(_v(withUrea, 1), closeTo(25.0, 0.1)); // (200×5)/(40×100)×100
+    });
+    test('missing urine creatinine → empty', () {
+      expect(
+        computeFormula('urinary_indices',
+                {'serum_na': 140, 'urine_na': 10, 'serum_cr': 5})
+            .isEmpty,
+        isTrue,
+      );
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

@@ -1,0 +1,45 @@
+# ============================================================
+# Urinary indices for AKI — FENa (+ FEUrea).
+# Evidence review 2026-07-19: adjuncts for prerenal vs intrinsic (ATN)
+# AKI, NOT a KDIGO-endorsed standalone standard. FENa is unreliable with
+# diuretics, CKD, and sepsis — FEUrea (< 35%) is more reliable under
+# diuretics. The prerenal/intrinsic dichotomy is an oversimplification.
+#   FENa%  = (UNa × SCr)/(SNa × UCr) × 100
+#   FEUrea% = (Uurea × SCr)/(Surea × UCr) × 100
+# ============================================================
+
+topic:
+  id: "calc-urinary-indices"
+  title: "FENa / FEUrea"
+  list_subtitle: "prerenal vs intrinsic AKI"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["fena", "feurea", "aki", "acute kidney injury", "prerenal", "atn", "urinary indices", "renal"]
+  aliases:
+    - "FENa"
+    - "FEUrea"
+    - "Fractional excretion of sodium"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Fractional excretion of sodium (and urea) to help distinguish prerenal
+        from intrinsic (ATN) AKI. Interpret alongside the clinical picture — not
+        as a standalone test.
+
+    - type: "formula"
+      kind: "urinary_indices"
+      title: "FENa / FEUrea"
+      source: "FENa = (UNa·SCr)/(SNa·UCr)·100; FEUrea = (Uurea·SCr)/(Surea·UCr)·100"
+      inputs:
+        - { key: "serum_na", label: "Serum Na⁺", unit: "mEq/L", type: "number" }
+        - { key: "urine_na", label: "Urine Na⁺", unit: "mEq/L", type: "number" }
+        - { key: "serum_cr", label: "Serum creatinine", unit: "mg/dL", type: "number" }
+        - { key: "urine_cr", label: "Urine creatinine", unit: "mg/dL", type: "number" }
+        - { key: "serum_urea", label: "Serum urea (BUN)", unit: "mg/dL", type: "number", optional: true, help: "for FEUrea" }
+        - { key: "urine_urea", label: "Urine urea", unit: "mg/dL", type: "number", optional: true, help: "for FEUrea" }
+      notes:
+        - "FENa < 1% prerenal · > 2% intrinsic (ATN). FEUrea < 35% prerenal."
+      caveats:
+        - "FENa is unreliable with diuretics, CKD, and sepsis — use FEUrea under diuretics. Not a KDIGO-endorsed standalone standard; the prerenal/intrinsic split is an oversimplification."

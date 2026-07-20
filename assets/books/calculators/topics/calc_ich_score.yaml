@@ -1,0 +1,52 @@
+# ============================================================
+# ICH Score — intracerebral hemorrhage 30-day mortality.
+# Evidence review 2026-07-19: validated (Hemphill 2001). Prone to a
+# self-fulfilling prophecy — early withdrawal of care drives the mortality
+# it "predicts"; the AHA/ASA 2022 ICH guideline advises aggressive early
+# care and postponing new DNR orders to at least hospital day 2. Do NOT use
+# it to justify limiting care. Total 0–6.
+# ============================================================
+
+topic:
+  id: "calc-ich-score"
+  title: "ICH Score"
+  list_subtitle: "intracerebral hemorrhage mortality"
+  last_reviewed: "Evidence review 2026-07-19 · Hemphill 2001 · AHA/ASA 2022"
+  tags: ["ich score", "intracerebral hemorrhage", "stroke", "hemorrhage", "mortality", "neuro"]
+  aliases:
+    - "ICH Score"
+    - "Hemphill"
+    - "Intracerebral hemorrhage score"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Estimates 30-day mortality after spontaneous intracerebral hemorrhage.
+        A prognostic aid only — read the caveat before it informs any decision.
+
+    - type: "score"
+      title: "ICH Score"
+      source: "Hemphill et al., Stroke 2001"
+      items:
+        - key: "gcs"
+          label: "GCS"
+          type: "choice"
+          default: "g13_15"
+          options:
+            - { value: "g13_15", label: "13–15", points: 0 }
+            - { value: "g5_12", label: "5–12", points: 1 }
+            - { value: "g3_4", label: "3–4", points: 2 }
+        - { key: "volume", label: "ICH volume ≥ 30 cm³", type: "toggle", points: 1 }
+        - { key: "ivh", label: "Intraventricular hemorrhage", type: "toggle", points: 1 }
+        - { key: "infratentorial", label: "Infratentorial origin", type: "toggle", points: 1 }
+        - { key: "age80", label: "Age ≥ 80", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 0, label: "Score 0", detail: "~0% 30-day mortality (Hemphill cohort).", severity: "none" }
+        - { min: 1, max: 1, label: "Score 1", detail: "~13% mortality.", severity: "warn" }
+        - { min: 2, max: 2, label: "Score 2", detail: "~26% mortality.", severity: "warn" }
+        - { min: 3, max: 3, label: "Score 3", detail: "~72% mortality.", severity: "alert" }
+        - { min: 4, label: "Score 4–6", detail: "~97–100% mortality.", severity: "alert" }
+      caveats:
+        - "Self-fulfilling prophecy: early withdrawal of care inflates the mortality it predicts. AHA/ASA 2022 advises aggressive early care and deferring new DNR orders to ≥ day 2 — do NOT use this score to justify limiting care."
