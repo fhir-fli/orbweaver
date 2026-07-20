@@ -156,16 +156,6 @@ topic:
             - Pyrazinamide (Z) 25 mg/kg
             - Ethambutol (E) 15 mg/kg
 
-        - type: "prose"
-          title: "⚠ Dosing correction"
-          callout: true
-          palette:
-            alert: "0xFFD32F2F"
-            alert_fill: "0xFFFDECEA"
-            alert_text: "0xFFB71C1C"
-          markdown: |
-            The source PDF prints the **30–37 kg** and **38–54 kg** tablet counts swapped in both FDC tables. Corrected below to the WHO FDC schedule (a lighter patient must not receive more tablets than a heavier one).
-
         - type: "table"
           columns: ["Pre-treatment weight", "FDC RHZE 150/75/400/275"]
           column_flex: [5, 6]
