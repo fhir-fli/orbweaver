@@ -1,0 +1,71 @@
+# ============================================================
+# Glasgow Coma Scale (GCS).
+# Evidence review 2026-07-19: universal (ATLS / Brain Trauma Foundation);
+# entrenched despite inter-rater variability. The MOTOR subscore is the
+# most reliable/prognostic; verbal is untestable when intubated. Teasdale
+# & Jennett 1974. Total 3–15.
+# ============================================================
+
+topic:
+  id: "calc-gcs"
+  title: "Glasgow Coma Scale"
+  list_subtitle: "GCS 3–15"
+  last_reviewed: "Evidence review 2026-07-19 · Teasdale & Jennett 1974"
+  tags: ["gcs", "glasgow coma scale", "consciousness", "coma", "neuro", "tbi", "trauma"]
+  aliases:
+    - "GCS"
+    - "Glasgow Coma Scale"
+    - "Coma scale"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Level of consciousness from eye, verbal, and motor responses.
+        Defaults show a normal (15) patient; adjust each to the best response
+        observed.
+
+    - type: "score"
+      title: "Glasgow Coma Scale"
+      unit: "/ 15"
+      source: "Teasdale & Jennett, Lancet 1974"
+      items:
+        - key: "eye"
+          label: "Eye opening"
+          type: "choice"
+          default: "e4"
+          options:
+            - { value: "e1", label: "None", points: 1 }
+            - { value: "e2", label: "To pain", points: 2 }
+            - { value: "e3", label: "To speech", points: 3 }
+            - { value: "e4", label: "Spontaneous", points: 4 }
+        - key: "verbal"
+          label: "Verbal response"
+          type: "choice"
+          default: "v5"
+          options:
+            - { value: "v1", label: "None", points: 1 }
+            - { value: "v2", label: "Incomprehensible sounds", points: 2 }
+            - { value: "v3", label: "Inappropriate words", points: 3 }
+            - { value: "v4", label: "Confused", points: 4 }
+            - { value: "v5", label: "Oriented", points: 5 }
+        - key: "motor"
+          label: "Motor response"
+          type: "choice"
+          default: "m6"
+          options:
+            - { value: "m1", label: "None", points: 1 }
+            - { value: "m2", label: "Extension (decerebrate)", points: 2 }
+            - { value: "m3", label: "Abnormal flexion (decorticate)", points: 3 }
+            - { value: "m4", label: "Withdrawal from pain", points: 4 }
+            - { value: "m5", label: "Localizes pain", points: 5 }
+            - { value: "m6", label: "Obeys commands", points: 6 }
+      bands:
+        - { min: 3, max: 8, label: "Severe brain injury", detail: "GCS ≤ 8 — consider airway protection.", severity: "alert" }
+        - { min: 9, max: 12, label: "Moderate brain injury", severity: "warn" }
+        - { min: 13, max: 15, label: "Mild / minor", severity: "none" }
+      notes:
+        - "Report components separately (e.g. E3 V4 M5). The motor subscore is the most reliable and prognostic."
+      caveats:
+        - "Confounded by sedation and intubation (verbal untestable if intubated) — document the modifier and the best response."

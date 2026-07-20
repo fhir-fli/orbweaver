@@ -9,6 +9,7 @@
 //   drug_card   — canonical drug reference card (stub for now)
 //   image       — bitmap/vector asset with optional caption (stub for now)
 
+import 'package:orbweaver/data/formula_registry.dart' show FormulaSeverity;
 import 'package:yaml/yaml.dart';
 
 // ─────────────────────────────────────────────────────────────
@@ -973,6 +974,7 @@ sealed class Block {
       'merge_arrows' => MergeArrowsBlock.fromYaml(map),
       'conversion' => ConversionBlock.fromYaml(map),
       'formula' => FormulaBlock.fromYaml(map),
+      'score' => ScoreBlock.fromYaml(map),
       _ => throw FormatException('Unknown block type: $type'),
     };
   }
@@ -1810,6 +1812,153 @@ class FormulaBlock extends Block {
   final List<FormulaInput> inputs;
 
   /// Static explanatory lines shown under the result (e.g. the formula itself).
+  final List<String> notes;
+  final List<String> caveats;
+}
+
+// ─────────────────────────────────────────────────────────────
+// SCORE BLOCK (criteria → summed points → risk band)
+// ─────────────────────────────────────────────────────────────
+// Fully declarative: points + bands live in YAML; the sum + band lookup is in
+// lib/data/score_engine.dart (pure Dart, unit-tested). General enough for
+// risk scores AND questionnaire/screening instruments. See docs/score_block.md.
+
+enum ScoreItemType {
+  /// A yes/no criterion contributing [ScoreItem.points] when on.
+  toggle,
+
+  /// A pick-one criterion; the chosen [ScoreOption] contributes its points.
+  choice;
+
+  static ScoreItemType fromString(String? s) =>
+      s == 'choice' ? choice : toggle;
+}
+
+/// One option of a `choice` item.
+class ScoreOption {
+  const ScoreOption({
+    required this.value,
+    required this.label,
+    required this.points,
+  });
+
+  factory ScoreOption.fromYaml(Map<dynamic, dynamic> m) => ScoreOption(
+        value: '${m['value']}',
+        label: (m['label'] as String?) ?? '${m['value']}',
+        points: (m['points'] as num?) ?? 0,
+      );
+
+  final String value;
+  final String label;
+  final num points;
+}
+
+/// One scored criterion.
+class ScoreItem {
+  const ScoreItem({
+    required this.key,
+    required this.label,
+    required this.type,
+    this.help,
+    this.points = 0,
+    this.options = const [],
+    this.defaultValue,
+  });
+
+  factory ScoreItem.fromYaml(Map<dynamic, dynamic> m) => ScoreItem(
+        key: m['key'] as String,
+        label: m['label'] as String,
+        type: ScoreItemType.fromString(m['type'] as String?),
+        help: m['help'] as String?,
+        points: (m['points'] as num?) ?? 0,
+        options: [
+          for (final o in m['options'] as List? ?? const [])
+            ScoreOption.fromYaml(o as Map),
+        ],
+        defaultValue: m['default'] == null ? null : '${m['default']}',
+      );
+
+  final String key;
+  final String label;
+  final ScoreItemType type;
+  final String? help;
+
+  /// Points added when a `toggle` item is on.
+  final num points;
+
+  /// Options for a `choice` item.
+  final List<ScoreOption> options;
+
+  /// A `choice` item's initially-selected option value (falls back to the
+  /// first option). Ignored for toggles (which start off).
+  final String? defaultValue;
+}
+
+/// A total-score interval mapping to an interpretation. [max] null = open-ended.
+class ScoreBand {
+  const ScoreBand({
+    required this.min,
+    required this.label,
+    this.max,
+    this.detail,
+    this.severity = FormulaSeverity.none,
+  });
+
+  factory ScoreBand.fromYaml(Map<dynamic, dynamic> m) => ScoreBand(
+        min: (m['min'] as num?) ?? 0,
+        max: m['max'] as num?,
+        label: m['label'] as String,
+        detail: m['detail'] as String?,
+        severity: switch (m['severity'] as String?) {
+          'alert' => FormulaSeverity.alert,
+          'warn' => FormulaSeverity.warn,
+          'info' => FormulaSeverity.info,
+          _ => FormulaSeverity.none,
+        },
+      );
+
+  final num min;
+  final num? max;
+  final String label;
+  final String? detail;
+  final FormulaSeverity severity;
+}
+
+/// Interactive additive-score calculator (tap criteria → summed points → risk
+/// band). The scoring is in score_engine.dart. Stateful, like [FormulaBlock].
+class ScoreBlock extends Block {
+  const ScoreBlock({
+    required this.items,
+    required this.bands,
+    this.title,
+    this.unit = 'points',
+    this.source,
+    this.notes = const [],
+    this.caveats = const [],
+    super.anchor,
+    super.ownPaletteArgb,
+  });
+
+  factory ScoreBlock.fromYaml(Map<dynamic, dynamic> map) => ScoreBlock(
+        title: map['title'] as String?,
+        unit: (map['unit'] as String?) ?? 'points',
+        source: map['source'] as String?,
+        items: _mapList(map['items'], ScoreItem.fromYaml),
+        bands: _mapList(map['bands'], ScoreBand.fromYaml),
+        notes: _stringList(map['notes']),
+        caveats: _stringList(map['caveats']),
+        anchor: map['anchor'] as String?,
+        ownPaletteArgb: _parsePaletteArgb(map['palette']),
+      );
+
+  final String? title;
+  final String unit;
+
+  /// Provenance of the score — required for clinical safety (shown as source).
+  final String? source;
+
+  final List<ScoreItem> items;
+  final List<ScoreBand> bands;
   final List<String> notes;
   final List<String> caveats;
 }

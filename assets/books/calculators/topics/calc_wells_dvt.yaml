@@ -1,0 +1,48 @@
+# ============================================================
+# Wells score for DVT (two-level).
+# Evidence review 2026-07-19: NICE NG158 / ASH 2018 use the two-level
+# Wells DVT score as the entry point, ALWAYS paired with D-dimer ±
+# proximal ultrasound — not a standalone rule-out (weaker in primary
+# care, Oudega). Points per Wells 2003 (NEJM). Alt-diagnosis item = −2.
+# ============================================================
+
+topic:
+  id: "calc-wells-dvt"
+  title: "Wells Score — DVT"
+  list_subtitle: "DVT pretest probability"
+  last_reviewed: "Evidence review 2026-07-19 · Wells 2003 · NICE NG158"
+  tags: ["wells", "dvt", "deep vein thrombosis", "vte", "pretest", "d-dimer", "probability"]
+  aliases:
+    - "Wells DVT"
+    - "DVT score"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Two-level Wells score for deep vein thrombosis pretest probability.
+        The result directs the D-dimer / ultrasound pathway — it is not a
+        standalone rule-out.
+
+    - type: "score"
+      title: "Wells score — DVT"
+      source: "Wells et al., NEJM 2003; NICE NG158"
+      items:
+        - { key: "cancer", label: "Active cancer (treatment within 6 mo or palliative)", type: "toggle", points: 1 }
+        - { key: "immobil", label: "Paralysis, paresis, or recent plaster immobilization of leg", type: "toggle", points: 1 }
+        - { key: "bedridden", label: "Recently bedridden ≥ 3 days or major surgery within 12 wk", type: "toggle", points: 1 }
+        - { key: "tender", label: "Localized tenderness along the deep venous system", type: "toggle", points: 1 }
+        - { key: "swollen_leg", label: "Entire leg swollen", type: "toggle", points: 1 }
+        - { key: "calf", label: "Calf swelling ≥ 3 cm vs asymptomatic side", type: "toggle", points: 1 }
+        - { key: "edema", label: "Pitting edema confined to the symptomatic leg", type: "toggle", points: 1 }
+        - { key: "collateral", label: "Collateral superficial veins (non-varicose)", type: "toggle", points: 1 }
+        - { key: "prior_dvt", label: "Previously documented DVT", type: "toggle", points: 1 }
+        - { key: "alt_dx", label: "Alternative diagnosis at least as likely as DVT", type: "toggle", points: -2 }
+      bands:
+        - { min: -2, max: 1, label: "DVT unlikely", detail: "→ D-dimer; if negative, DVT excluded.", severity: "none" }
+        - { min: 2, label: "DVT likely", detail: "→ proximal leg vein ultrasound.", severity: "warn" }
+      notes:
+        - "Three-level alternative: ≤ 0 low, 1–2 moderate, ≥ 3 high probability."
+      caveats:
+        - "Always paired with D-dimer ± ultrasound (NICE NG158) — not a standalone rule-out; performs less well in primary care."

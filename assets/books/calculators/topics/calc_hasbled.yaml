@@ -1,0 +1,46 @@
+# ============================================================
+# HAS-BLED — major bleeding risk on anticoagulation in AF.
+# Evidence review 2026-07-19: modest discrimination (c ~0.58–0.61).
+# ESC 2024 de-emphasized structured bleeding scoring; HAS-BLED is for
+# identifying/correcting MODIFIABLE bleeding factors and flagging
+# high-risk (≥3) patients for review — it must NEVER be used to withhold
+# anticoagulation. Points per Pisters 2010 (Chest). Max 9.
+# ============================================================
+
+topic:
+  id: "calc-hasbled"
+  title: "HAS-BLED"
+  list_subtitle: "bleeding risk on anticoagulation"
+  last_reviewed: "Evidence review 2026-07-19 · Pisters 2010 · ESC 2024"
+  tags: ["has-bled", "hasbled", "bleeding", "anticoagulation", "afib", "atrial fibrillation", "risk"]
+  aliases:
+    - "HAS-BLED"
+    - "Bleeding risk"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Estimates 1-year major bleeding risk in AF patients on
+        anticoagulation. Its purpose is to surface **modifiable** bleeding
+        factors — not to deny anticoagulation.
+
+    - type: "score"
+      title: "HAS-BLED"
+      source: "Pisters et al., Chest 2010"
+      items:
+        - { key: "htn", label: "Hypertension (uncontrolled, SBP > 160)", type: "toggle", points: 1 }
+        - { key: "renal", label: "Abnormal renal function (dialysis, transplant, Cr > 2.3 mg/dL)", type: "toggle", points: 1 }
+        - { key: "liver", label: "Abnormal liver function (cirrhosis, bili > 2× or AST/ALT/AP > 3×)", type: "toggle", points: 1 }
+        - { key: "stroke", label: "Prior stroke", type: "toggle", points: 1 }
+        - { key: "bleeding", label: "Prior major bleeding or predisposition", type: "toggle", points: 1 }
+        - { key: "labile_inr", label: "Labile INR (unstable/high, TTR < 60%)", type: "toggle", points: 1 }
+        - { key: "elderly", label: "Elderly (age > 65)", type: "toggle", points: 1 }
+        - { key: "drugs", label: "Drugs predisposing to bleeding (antiplatelet, NSAID)", type: "toggle", points: 1 }
+        - { key: "alcohol", label: "Alcohol ≥ 8 drinks/week", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 2, label: "Low–moderate bleeding risk", severity: "none" }
+        - { min: 3, label: "High bleeding risk — correct modifiable factors & review", severity: "warn" }
+      caveats:
+        - "NEVER use HAS-BLED to withhold anticoagulation. A high score flags modifiable factors (BP, labile INR, alcohol, concomitant drugs) to correct and prompts closer follow-up."

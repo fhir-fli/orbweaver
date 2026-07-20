@@ -1,0 +1,54 @@
+# ============================================================
+# CHA₂DS₂-VASc — stroke risk in atrial fibrillation.
+# Evidence review 2026-07-19: 2023 ACC/AHA/ACCP/HRS AF guideline uses
+# CHA₂DS₂-VASc (absolute-risk framing). ESC 2024 moved to CHA₂DS₂-VA
+# (drops the sex category, max 8) — surfaced in a note. Points per Lip
+# 2010 (Chest). Pair with HAS-BLED for modifiable bleeding factors.
+# ============================================================
+
+topic:
+  id: "calc-cha2ds2-vasc"
+  title: "CHA₂DS₂-VASc"
+  list_subtitle: "AF stroke risk"
+  last_reviewed: "Evidence review 2026-07-19 · 2023 ACC/AHA AF · Lip 2010"
+  tags: ["cha2ds2-vasc", "chads", "atrial fibrillation", "afib", "stroke", "anticoagulation", "risk", "vasc"]
+  aliases:
+    - "CHA2DS2-VASc"
+    - "CHADS-VASc"
+    - "AF stroke risk"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Estimates annual stroke risk in non-valvular atrial fibrillation to
+        guide oral anticoagulation. Tap each factor that applies.
+
+    - type: "score"
+      title: "CHA₂DS₂-VASc"
+      source: "Lip et al., Chest 2010; 2023 ACC/AHA/ACCP/HRS AF guideline"
+      items:
+        - { key: "chf", label: "Congestive HF / LV dysfunction", type: "toggle", points: 1 }
+        - { key: "htn", label: "Hypertension", type: "toggle", points: 1 }
+        - key: "age"
+          label: "Age"
+          type: "choice"
+          default: "lt65"
+          options:
+            - { value: "lt65", label: "< 65", points: 0 }
+            - { value: "65_74", label: "65–74", points: 1 }
+            - { value: "ge75", label: "≥ 75", points: 2 }
+        - { key: "dm", label: "Diabetes mellitus", type: "toggle", points: 1 }
+        - { key: "stroke", label: "Prior stroke / TIA / thromboembolism", type: "toggle", points: 2 }
+        - { key: "vasc", label: "Vascular disease (prior MI, PAD, aortic plaque)", type: "toggle", points: 1 }
+        - { key: "female", label: "Sex category female", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 0, label: "Low risk", detail: "No antithrombotic therapy indicated.", severity: "none" }
+        - { min: 1, max: 1, label: "Low–intermediate — consider anticoagulation (men)", severity: "warn" }
+        - { min: 2, label: "Oral anticoagulation recommended", detail: "Risk rises with score; assess vs bleeding risk.", severity: "alert" }
+      notes:
+        - "Thresholds are sex-specific: OAC recommended at ≥2 (men) / ≥3 (women). A woman scoring 1 from sex alone is low risk."
+        - "ESC 2024 uses CHA₂DS₂-VA (sex category dropped, max 8); this version keeps it (US 2023 practice)."
+      caveats:
+        - "Guides — does not mandate — anticoagulation; weigh against bleeding risk (HAS-BLED) and shared decision-making."

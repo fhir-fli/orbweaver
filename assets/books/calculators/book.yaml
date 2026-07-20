@@ -4,11 +4,12 @@ book:
   subtitle: "Bedside clinical calculators"
   cover: "cover.png"      # "Calculators" cover; title renders below on the shelf
   spine_color: "0xFF00695C"
-  # Calculators: evidence-vetted bedside clinical calculators. Two kinds:
+  # Calculators: evidence-vetted bedside clinical calculators. Three kinds:
   #   - conversion  (equivalence/tiers dose converters — opioid/benzo/statin/steroid)
   #   - formula     (numbers in → number out — CrCl, MAP, corrected Na, …)
-  # Every calculator is guideline-backed; each formula's math lives in a
-  # unit-tested Dart registry (lib/data/formula_registry.dart), not free text.
+  #   - score       (criteria → summed points → risk band — CHA₂DS₂-VASc, Wells, …)
+  # Every calculator is guideline-backed; formula math lives in a unit-tested
+  # Dart registry (formula_registry.dart) and score sums in score_engine.dart.
   # Book-level palette: a teal "tools" accent inherited by all calculators.
   palette:
     accent: "0xFF00695C"
@@ -33,3 +34,12 @@ book:
       children:
         - topic: "topics/calc_map.yaml"
         - topic: "topics/calc_ideal_body_weight.yaml"
+    - title: "Risk & Severity Scores"
+      children:
+        - topic: "topics/calc_cha2ds2_vasc.yaml"
+        - topic: "topics/calc_hasbled.yaml"
+        - topic: "topics/calc_wells_dvt.yaml"
+        - topic: "topics/calc_wells_pe.yaml"
+        - topic: "topics/calc_perc.yaml"
+        - topic: "topics/calc_curb65.yaml"
+        - topic: "topics/calc_gcs.yaml"

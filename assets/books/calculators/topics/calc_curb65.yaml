@@ -1,0 +1,43 @@
+# ============================================================
+# CURB-65 — community-acquired pneumonia severity.
+# Evidence review 2026-07-19: ATS/IDSA 2019 PREFERS PSI/PORT for the
+# admission decision but CURB-65 is simpler and UK-standard (NICE NG250).
+# Points per Lim 2003 (Thorax). Max 5. Use with clinical judgment.
+# ============================================================
+
+topic:
+  id: "calc-curb65"
+  title: "CURB-65"
+  list_subtitle: "pneumonia severity"
+  last_reviewed: "Evidence review 2026-07-19 · Lim 2003 · ATS/IDSA 2019"
+  tags: ["curb-65", "curb65", "pneumonia", "cap", "severity", "admission", "mortality"]
+  aliases:
+    - "CURB-65"
+    - "CURB"
+    - "Pneumonia severity"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Estimates 30-day mortality in community-acquired pneumonia to support
+        the admission decision. Tap each criterion that applies.
+
+    - type: "score"
+      title: "CURB-65"
+      source: "Lim et al., Thorax 2003"
+      items:
+        - { key: "confusion", label: "Confusion (new disorientation)", type: "toggle", points: 1 }
+        - { key: "urea", label: "Urea > 7 mmol/L (BUN > 19 mg/dL)", type: "toggle", points: 1 }
+        - { key: "rr", label: "Respiratory rate ≥ 30", type: "toggle", points: 1 }
+        - { key: "bp", label: "Blood pressure: SBP < 90 or DBP ≤ 60", type: "toggle", points: 1 }
+        - { key: "age65", label: "Age ≥ 65", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 1, label: "Low severity — consider outpatient management", severity: "none" }
+        - { min: 2, max: 2, label: "Moderate — consider admission / short-stay", severity: "warn" }
+        - { min: 3, label: "High severity — admit; assess for ICU care", severity: "alert" }
+      notes:
+        - "CRB-65 (drop urea) is the primary-care version when bloods are unavailable."
+      caveats:
+        - "Use with clinical judgment; ATS/IDSA 2019 prefers PSI/PORT for identifying low-risk patients for the admission decision."

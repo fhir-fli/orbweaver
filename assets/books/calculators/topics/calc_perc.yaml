@@ -1,0 +1,44 @@
+# ============================================================
+# PERC — Pulmonary Embolism Rule-out Criteria.
+# Evidence review 2026-07-19: valid ONLY in low clinical-probability /
+# low-prevalence patients (PROPER RCT). If ALL 8 criteria are negative
+# (score 0), PE can be excluded without D-dimer. Any positive item →
+# cannot rule out. Endorsed by ACEP 2018 and the 2026 AHA/ACC PE guideline.
+# ============================================================
+
+topic:
+  id: "calc-perc"
+  title: "PERC Rule"
+  list_subtitle: "rule out PE (low-probability only)"
+  last_reviewed: "Evidence review 2026-07-19 · Kline 2004 · PROPER 2018"
+  tags: ["perc", "pulmonary embolism", "pe", "rule out", "vte", "d-dimer"]
+  aliases:
+    - "PERC"
+    - "PE rule-out"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Pulmonary Embolism Rule-out Criteria. Tap each criterion that is
+        **present**. If none are present (score 0) **and** clinical pretest
+        probability is already low, PE is excluded without further testing.
+
+    - type: "score"
+      title: "PERC criteria"
+      source: "Kline et al., 2004; PROPER trial, JAMA 2018"
+      items:
+        - { key: "age50", label: "Age ≥ 50", type: "toggle", points: 1 }
+        - { key: "hr100", label: "Heart rate ≥ 100", type: "toggle", points: 1 }
+        - { key: "spo2", label: "SpO₂ < 95% on room air", type: "toggle", points: 1 }
+        - { key: "leg_swelling", label: "Unilateral leg swelling", type: "toggle", points: 1 }
+        - { key: "hemoptysis", label: "Hemoptysis", type: "toggle", points: 1 }
+        - { key: "surgery_trauma", label: "Recent surgery or trauma (within 4 wk, needing hospitalization/GA)", type: "toggle", points: 1 }
+        - { key: "prior_vte", label: "Prior PE or DVT", type: "toggle", points: 1 }
+        - { key: "hormone", label: "Hormone use (OCP, estrogen, HRT)", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 0, label: "PERC negative — PE excluded (if pretest probability is low)", severity: "none" }
+        - { min: 1, label: "PERC positive — PE not excluded; proceed with workup", severity: "warn" }
+      caveats:
+        - "Valid ONLY when clinical/gestalt pretest probability is already LOW (and in low-prevalence settings) — never a standalone rule-out at moderate/high probability."

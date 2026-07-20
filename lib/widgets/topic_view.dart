@@ -8,6 +8,7 @@ import 'package:orbweaver/widgets/blocks/drug_card_block_view.dart';
 import 'package:orbweaver/widgets/blocks/formula_block_view.dart';
 import 'package:orbweaver/widgets/blocks/image_block_view.dart';
 import 'package:orbweaver/widgets/blocks/prose_block_view.dart';
+import 'package:orbweaver/widgets/blocks/score_block_view.dart';
 import 'package:orbweaver/widgets/blocks/table_block_view.dart';
 import 'package:orbweaver/widgets/flowchart/algorithm_flowchart_view.dart';
 import 'package:orbweaver/widgets/flowchart/cascade_flowchart_view.dart';
@@ -202,6 +203,7 @@ class _BlockRenderer extends StatelessWidget {
       final MergeArrowsBlock b => _MergeArrowsRenderer(block: b),
       final ConversionBlock b => ConversionBlockView(block: b, theme: t),
       final FormulaBlock b => FormulaBlockView(block: b, theme: t),
+      final ScoreBlock b => ScoreBlockView(block: b, theme: t),
     };
     return identical(t, theme)
         ? child

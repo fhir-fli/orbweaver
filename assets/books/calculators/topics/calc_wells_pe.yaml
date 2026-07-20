@@ -1,0 +1,45 @@
+# ============================================================
+# Wells score for PE (two-level / dichotomized).
+# Evidence review 2026-07-19: ESC 2019 (Class I-B) and the 2026 AHA/ACC
+# PE guideline endorse Wells for pretest probability. Points per Wells
+# 2000. Dichotomized cutoff ≤ 4 "PE unlikely" → D-dimer, > 4 "PE likely"
+# → CTPA. Half-point weights.
+# ============================================================
+
+topic:
+  id: "calc-wells-pe"
+  title: "Wells Score — PE"
+  list_subtitle: "PE pretest probability"
+  last_reviewed: "Evidence review 2026-07-19 · Wells 2000 · ESC 2019"
+  tags: ["wells", "pe", "pulmonary embolism", "vte", "pretest", "d-dimer", "ctpa", "probability"]
+  aliases:
+    - "Wells PE"
+    - "PE score"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Dichotomized (two-level) Wells score for pulmonary embolism pretest
+        probability. Drives the D-dimer vs CT-pulmonary-angiography pathway.
+
+    - type: "score"
+      title: "Wells score — PE"
+      source: "Wells et al., 2000; ESC 2019 PE guideline"
+      items:
+        - { key: "dvt_signs", label: "Clinical signs / symptoms of DVT", type: "toggle", points: 3 }
+        - { key: "pe_likely", label: "PE is the #1 diagnosis, or equally likely", type: "toggle", points: 3 }
+        - { key: "tachy", label: "Heart rate > 100", type: "toggle", points: 1.5 }
+        - { key: "immobil", label: "Immobilization ≥ 3 days or surgery in previous 4 wk", type: "toggle", points: 1.5 }
+        - { key: "prior_vte", label: "Previous DVT / PE", type: "toggle", points: 1.5 }
+        - { key: "hemoptysis", label: "Hemoptysis", type: "toggle", points: 1 }
+        - { key: "malignancy", label: "Malignancy (treatment within 6 mo or palliative)", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 4, label: "PE unlikely", detail: "→ D-dimer (age-adjusted / YEARS); if negative, PE excluded.", severity: "none" }
+        - { min: 4, label: "PE likely", detail: "→ CT pulmonary angiography.", severity: "warn" }
+      notes:
+        - "Three-level alternative: < 2 low, 2–6 moderate, > 6 high probability."
+        - "Revised Geneva is a fully-objective alternative pretest score."
+      caveats:
+        - "Combine with a D-dimer strategy; PERC may exclude PE in genuinely low-probability patients without testing."
