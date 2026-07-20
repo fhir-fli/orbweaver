@@ -1,0 +1,99 @@
+# ============================================================
+# ProtocolBook p.127 — Adult COPD and Asthma. Internal Medicine Protocols
+# leaf.
+#
+# The page's boxes-and-arrows are a SEQUENTIAL content-flow (management →
+# oxygen caution → evaluate other causes → bronchodilator Rx → antibiotics
+# if infective features), NOT a branching decision tree → titled prose +
+# one safety callout per the hybrid rule. The SpO2 caution is the one
+# genuine "don't get this wrong" point → amber callout.
+#
+# Faithful-rendering calls:
+#   - History / exam outlines → nested prose (decorative VI./VII. numbering
+#     dropped).
+#   - The oxygen box → titled callout. The infective-exacerbation box is a
+#     conditional ("if more sputum / colour change / fever / tachypnoea →
+#     antibiotics") rendered as a titled prose section.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Target SpO2 88–92% in known/suspected COPD to avoid CO2 narcosis is
+#     standard (book says 90–92%). Salbutamol/ipratropium q20min ×3, a 5-day
+#     prednisolone 40 mg course, and antibiotics for the Anthonisen
+#     (increased dyspnoea + sputum volume + purulence) criteria are all
+#     current exacerbation care.
+# ============================================================
+
+topic:
+  id: "pb-im-copd-asthma"
+  title: "Adult COPD and Asthma"
+  list_subtitle: "p.127 · exacerbation management"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["COPD", "asthma", "exacerbation", "shortness of breath", "SOB", "dyspnea", "wheezing", "salbutamol", "albuterol", "ipratropium", "prednisolone", "oxygen", "bronchodilator", "adult", "internal medicine", "respiratory"]
+  category: "medical"
+  page_number: 127
+
+  blocks:
+
+    - type: "prose"
+      title: "History"
+      markdown: |
+        - **CC:** almost always shortness of breath
+        - **COPD:** often chronic and progressive symptoms
+          - Cough, wheezing
+          - Sputum production (3 or more months in the last 2 yrs)
+          - Dyspnea on exertion, usually worse with upper body activity, lower body activity better tolerated
+          - Smoking history
+        - **Asthma:** may also have cough, chest tightness, wheezing
+
+    - type: "prose"
+      title: "Physical exam / study findings"
+      markdown: |
+        - Prolonged expiratory phase
+        - Expiratory wheezing
+        - Use of accessory respiratory muscles
+        - Hypoxia
+        - NOT finger clubbing (if present, other dx needs to be considered)
+        - CXR: hyperinflation, flat diaphragm
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        - Monitor, support ABCs
+        - Check VS (PR, RR, spO₂, Temp, Weight)
+        - Assess AVPU / GCS
+        - Assess hydration status, IV if needed
+        - Perform brief, targeted history, physical exam
+
+    - type: "prose"
+      title: "Important note on oxygen"
+      callout: true
+      palette:
+        alert: "0xFFEF6C00"
+        alert_fill: "0xFFFFF3E0"
+        alert_text: "0xFFE65100"
+      markdown: |
+        If the patient has known or suspected COPD, aim for an **spO₂ of 90–92%, not higher**.
+
+    - type: "prose"
+      title: "Evaluate for other causes of SOB"
+      markdown: |
+        - Heart failure
+        - Pneumonia
+        - Pulmonary TB
+
+    - type: "prose"
+      title: "Bronchodilator therapy"
+      markdown: |
+        - Albuterol / ipratropium q20min × 3 doses — nebulizer (5 mg / 0.5 mg) or MDI 8 puffs
+        - Caution using albuterol with cardiac disease
+        - Evaluate after the first Rx and after the first 3 Rx; if symptoms dramatically improve, more likely to be asthma
+        - Prednisolone 40 mg/day × 5 days
+
+    - type: "prose"
+      title: "Suspect infective exacerbation"
+      markdown: |
+        More sputum, change in colour to yellow/green, or increased breathlessness, fever, tachypnea? Suspect COPD exacerbation and treat:
+
+        - Amoxicillin / clavulanate 875 mg BD × 5 days
+        - Doxycycline 100 mg BD × 10 days
+        - Azithromycin 500 mg once daily × 3 days
