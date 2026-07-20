@@ -27,19 +27,27 @@ book:
     - title: "Electrolytes & Acid–Base"
       children:
         - topic: "topics/calc_corrected_sodium.yaml"
+        - topic: "topics/calc_free_water_deficit.yaml"
         - topic: "topics/calc_anion_gap.yaml"
         - topic: "topics/calc_winters.yaml"
         - topic: "topics/calc_aa_gradient.yaml"
-    - title: "Hemodynamics & Body Size"
+    - title: "Cardiac & Body Size"
       children:
         - topic: "topics/calc_map.yaml"
+        - topic: "topics/calc_qtc.yaml"
         - topic: "topics/calc_ideal_body_weight.yaml"
+    - title: "Hepatology"
+      children:
+        - topic: "topics/calc_meld.yaml"
+        - topic: "topics/calc_child_pugh.yaml"
     - title: "Risk & Severity Scores"
       children:
         - topic: "topics/calc_cha2ds2_vasc.yaml"
         - topic: "topics/calc_hasbled.yaml"
+        - topic: "topics/calc_heart.yaml"
         - topic: "topics/calc_wells_dvt.yaml"
         - topic: "topics/calc_wells_pe.yaml"
         - topic: "topics/calc_perc.yaml"
         - topic: "topics/calc_curb65.yaml"
+        - topic: "topics/calc_4ts.yaml"
         - topic: "topics/calc_gcs.yaml"

@@ -305,6 +305,136 @@ void main() {
     });
   });
 
+  group('meld3 (OPTN 2023)', () {
+    // female, bili 2.0, Na 130, INR 1.5, Cr 1.5, alb 3.0 → 23.82 → 24
+    test('worked example → 24', () {
+      final r = computeFormula('meld3', {
+        'sex': 'F',
+        'bilirubin': 2.0,
+        'sodium': 130,
+        'inr': 1.5,
+        'creatinine': 1.5,
+        'albumin': 3.0,
+      });
+      expect(r.outputs.first.value, '24');
+    });
+
+    test('lab lower-bounds + creatinine cap → 18', () {
+      // male, bili 0.5→1, Na 145→137, INR 0.9→1, Cr 5→3, alb 1.0→1.5
+      final r = computeFormula('meld3', {
+        'sex': 'M',
+        'bilirubin': 0.5,
+        'sodium': 145,
+        'inr': 0.9,
+        'creatinine': 5,
+        'albumin': 1.0,
+      });
+      expect(r.outputs.first.value, '18');
+    });
+
+    test('dialysis forces creatinine to 3.0', () {
+      final r = computeFormula('meld3', {
+        'sex': 'M',
+        'bilirubin': 0.5,
+        'sodium': 145,
+        'inr': 0.9,
+        'creatinine': 1.0,
+        'albumin': 1.0,
+        'dialysis': 'yes',
+      });
+      expect(r.outputs.first.value, '18'); // same as Cr 5 case
+    });
+
+    test('healthy labs clamp to the floor of 6', () {
+      final r = computeFormula('meld3', {
+        'sex': 'M',
+        'bilirubin': 1.0,
+        'sodium': 137,
+        'inr': 1.0,
+        'creatinine': 1.0,
+        'albumin': 3.5,
+      });
+      expect(r.outputs.first.value, '6');
+    });
+
+    test('creatinine unit toggle honored', () {
+      final mg = computeFormula('meld3', {
+        'sex': 'F',
+        'bilirubin': 2.0,
+        'sodium': 130,
+        'inr': 1.5,
+        'creatinine': 1.5,
+        'albumin': 3.0,
+      });
+      final umol = computeFormula('meld3', {
+        'sex': 'F',
+        'bilirubin': 2.0,
+        'sodium': 130,
+        'inr': 1.5,
+        'creatinine': 132.6, // 1.5 mg/dL × 88.4
+        'cr_unit': 'µmol/L',
+        'albumin': 3.0,
+      });
+      expect(umol.outputs.first.value, mg.outputs.first.value);
+    });
+
+    test('missing input → empty', () {
+      expect(computeFormula('meld3', {'sex': 'F'}).isEmpty, isTrue);
+    });
+  });
+
+  group('qtc', () {
+    test('HR 60 → all formulas equal QT (RR = 1)', () {
+      final r = computeFormula('qtc', {'qt': 400, 'hr': 60});
+      for (final o in r.outputs) {
+        expect(o.value, '400');
+      }
+    });
+
+    test('HR 100, QT 400 → Fridericia 474, Bazett 516', () {
+      final r = computeFormula('qtc', {'qt': 400, 'hr': 100});
+      expect(r.outputs[0].value, '474'); // Fridericia (primary)
+      expect(r.outputs[1].value, '516'); // Bazett
+      expect(r.outputs[0].severity, FormulaSeverity.warn); // ≥460 prolonged
+    });
+
+    test('Fridericia > 500 → alert', () {
+      final r = computeFormula('qtc', {'qt': 500, 'hr': 100});
+      expect(r.outputs[0].severity, FormulaSeverity.alert);
+    });
+
+    test('missing HR → empty', () {
+      expect(computeFormula('qtc', {'qt': 400}).isEmpty, isTrue);
+    });
+  });
+
+  group('free_water_deficit', () {
+    test('male 70kg, Na 160, target 140 → 6 L', () {
+      final r = computeFormula('free_water_deficit',
+          {'weight': 70, 'sex': 'M', 'sodium': 160, 'target': 140});
+      expect(_v(r, 0), closeTo(6.0, 0.05));
+    });
+
+    test('female TBW factor 0.5: 60kg Na 154 → 3 L', () {
+      final r = computeFormula('free_water_deficit',
+          {'weight': 60, 'sex': 'F', 'sodium': 154, 'target': 140});
+      expect(_v(r, 0), closeTo(3.0, 0.05));
+    });
+
+    test('target defaults to 140 when omitted', () {
+      final r = computeFormula(
+          'free_water_deficit', {'weight': 70, 'sex': 'M', 'sodium': 160});
+      expect(_v(r, 0), closeTo(6.0, 0.05));
+    });
+
+    test('missing sodium → empty', () {
+      expect(
+        computeFormula('free_water_deficit', {'weight': 70, 'sex': 'M'}).isEmpty,
+        isTrue,
+      );
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

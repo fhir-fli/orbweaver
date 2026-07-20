@@ -95,8 +95,145 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'winters' => _winters(v),
     'ideal_body_weight' => _idealBodyWeight(v),
     'holliday_segar' => _hollidaySegar(v),
+    'meld3' => _meld3(v),
+    'qtc' => _qtc(v),
+    'free_water_deficit' => _freeWaterDeficit(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── meld3: MELD 3.0 (OPTN 2023, age ≥12) ─────────────────────────────
+
+FormulaResult _meld3(Map<String, dynamic> v) {
+  final bili0 = _num(v, 'bilirubin');
+  final na0 = _num(v, 'sodium');
+  final inr0 = _num(v, 'inr');
+  final cr0 = _creatinineMgDl(v, 'creatinine', 'cr_unit');
+  final alb0 = _num(v, 'albumin');
+  final sex = _sel(v, 'sex');
+  if (bili0 == null ||
+      na0 == null ||
+      inr0 == null ||
+      cr0 == null ||
+      alb0 == null ||
+      sex == null) {
+    return const FormulaResult.empty();
+  }
+  final female = sex == 'F';
+  // Bounds per OPTN policy.
+  final bili = bili0 < 1 ? 1.0 : bili0;
+  final inr = inr0 < 1 ? 1.0 : inr0;
+  var cr = cr0 < 1 ? 1.0 : cr0;
+  if (_sel(v, 'dialysis') == 'yes') cr = 3.0; // ≥2 sessions/wk or 24h CVVHD
+  if (cr > 3) cr = 3.0;
+  var na = na0;
+  if (na < 125) na = 125;
+  if (na > 137) na = 137;
+  var alb = alb0;
+  if (alb < 1.5) alb = 1.5;
+  if (alb > 3.5) alb = 3.5;
+
+  final score = 1.33 * (female ? 1 : 0) +
+      4.56 * math.log(bili) +
+      0.82 * (137 - na) -
+      0.24 * (137 - na) * math.log(bili) +
+      9.09 * math.log(inr) +
+      11.14 * math.log(cr) +
+      1.85 * (3.5 - alb) -
+      1.83 * (3.5 - alb) * math.log(cr) +
+      6;
+  var meld = score.round();
+  if (meld < 6) meld = 6;
+  if (meld > 40) meld = 40;
+
+  final FormulaSeverity sev;
+  if (meld >= 30) {
+    sev = FormulaSeverity.alert;
+  } else if (meld >= 20) {
+    sev = FormulaSeverity.warn;
+  } else {
+    sev = FormulaSeverity.none;
+  }
+  return FormulaResult([
+    FormulaOutput(
+      label: 'MELD 3.0',
+      value: '$meld',
+      primary: true,
+      severity: sev,
+      interpretation: '90-day mortality rises steeply above ~20; range 6–40.',
+    ),
+  ]);
+}
+
+// ── qtc: corrected QT (Fridericia default) ───────────────────────────
+
+FormulaResult _qtc(Map<String, dynamic> v) {
+  final qt = _num(v, 'qt'); // ms
+  final hr = _num(v, 'hr'); // bpm
+  if (qt == null || hr == null || hr <= 0) return const FormulaResult.empty();
+  final rr = 60 / hr; // seconds
+  final fridericia = qt / _pow(rr, 1 / 3);
+  final bazett = qt / math.sqrt(rr);
+  final framingham = qt + 154 * (1 - rr);
+  final hodges = qt + 1.75 * (hr - 60);
+
+  final FormulaSeverity sev;
+  final String interp;
+  if (fridericia > 500) {
+    sev = FormulaSeverity.alert;
+    interp = 'QTc > 500 ms — high torsades risk.';
+  } else if (fridericia >= 460) {
+    sev = FormulaSeverity.warn;
+    interp = 'Prolonged (≈ ≥ 460 ms).';
+  } else {
+    sev = FormulaSeverity.none;
+    interp = 'Fridericia is the preferred correction (FDA / AHA).';
+  }
+  return FormulaResult([
+    FormulaOutput(
+      label: 'QTc (Fridericia)',
+      value: fmtNum(fridericia, decimals: 0),
+      unit: 'ms',
+      primary: true,
+      severity: sev,
+      interpretation: interp,
+    ),
+    FormulaOutput(
+      label: 'QTc (Bazett)',
+      value: fmtNum(bazett, decimals: 0),
+      unit: 'ms',
+      interpretation: 'Overestimates at high HR, underestimates at low HR.',
+    ),
+    FormulaOutput(
+        label: 'QTc (Framingham)', value: fmtNum(framingham, decimals: 0), unit: 'ms'),
+    FormulaOutput(
+        label: 'QTc (Hodges)', value: fmtNum(hodges, decimals: 0), unit: 'ms'),
+  ]);
+}
+
+// ── free_water_deficit (hypernatremia) ───────────────────────────────
+
+FormulaResult _freeWaterDeficit(Map<String, dynamic> v) {
+  final wt = _num(v, 'weight');
+  final sex = _sel(v, 'sex');
+  final current = _num(v, 'sodium');
+  if (wt == null || wt <= 0 || sex == null || current == null) {
+    return const FormulaResult.empty();
+  }
+  final target = _num(v, 'target') ?? 140;
+  if (target <= 0) return const FormulaResult.empty();
+  final tbwFactor = sex == 'F' ? 0.5 : 0.6;
+  final tbw = wt * tbwFactor;
+  final deficit = tbw * (current / target - 1);
+  return FormulaResult([
+    FormulaOutput(
+      label: 'Free water deficit',
+      value: fmtNum(deficit),
+      unit: 'L',
+      primary: true,
+      interpretation: 'Deficit only — add ongoing/insensible losses.',
+    ),
+  ]);
 }
 
 // ── renal_function: Cockcroft-Gault CrCl + CKD-EPI 2021 eGFR ──────────

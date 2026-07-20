@@ -197,6 +197,80 @@ void main() {
     });
   });
 
+  group('Child-Pugh (5 three-option choices → A/B/C)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_child_pugh.yaml'));
+
+    Map<String, dynamic> cp(String bil, String alb, String inr, String asc,
+            String enc) =>
+        {'bilirubin': bil, 'albumin': alb, 'inr': inr, 'ascites': asc, 'enceph': enc};
+
+    test('all mildest → 5, Class A', () {
+      final s = cp('b1', 'a1', 'i1', 'as1', 'e1');
+      expect(_total(b, s), 5);
+      expect(_band(b, s), contains('Class A'));
+    });
+    test('6 → Class A, 7 → Class B (boundary)', () {
+      expect(_band(b, cp('b2', 'a1', 'i1', 'as1', 'e1')), contains('Class A')); // 6
+      expect(_band(b, cp('b2', 'a2', 'i1', 'as1', 'e1')), contains('Class B')); // 7
+    });
+    test('9 → B, 10 → C (boundary)', () {
+      expect(_band(b, cp('b3', 'a2', 'i2', 'as1', 'e1')), contains('Class B')); // 9
+      expect(_band(b, cp('b2', 'a2', 'i2', 'as2', 'e2')), contains('Class C')); // 10
+    });
+    test('all severe → 15, Class C', () {
+      final s = cp('b3', 'a3', 'i3', 'as3', 'e3');
+      expect(_total(b, s), 15);
+      expect(_band(b, s), contains('Class C'));
+    });
+    test('reachable totals are exactly 5..15', () {
+      expect(reachableTotals(b), {for (var i = 5; i <= 15; i++) i});
+    });
+  });
+
+  group('HEART', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_heart.yaml'));
+
+    Map<String, dynamic> h(String hi, String ec, String ag, String r,
+            String t) =>
+        {'history': hi, 'ecg': ec, 'age': ag, 'risk': r, 'troponin': t};
+
+    test('all zero → 0, low', () {
+      expect(_total(b, h('h0', 'ec0', 'ag0', 'r0', 't0')), 0);
+      expect(_band(b, h('h0', 'ec0', 'ag0', 'r0', 't0')), contains('Low'));
+    });
+    test('3 → low, 4 → moderate (boundary)', () {
+      expect(_band(b, h('h1', 'ec1', 'ag1', 'r0', 't0')), contains('Low')); // 3
+      expect(_band(b, h('h1', 'ec1', 'ag1', 'r1', 't0')), contains('Moderate')); // 4
+    });
+    test('7 → high', () {
+      expect(_band(b, h('h2', 'ec2', 'ag2', 'r1', 't0')), contains('High')); // 7
+    });
+    test('max 10', () => expect(scoreRange(b).max, 10));
+  });
+
+  group('4Ts (HIT)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_4ts.yaml'));
+
+    Map<String, dynamic> t4(String tc, String ti, String tb, String ot) =>
+        {'thrombocytopenia': tc, 'timing': ti, 'thrombosis': tb, 'other': ot};
+
+    test('all zero → 0, low (rule-out)', () {
+      expect(_total(b, t4('tc0', 'ti0', 'tb0', 'ot0')), 0);
+      expect(_band(b, t4('tc0', 'ti0', 'tb0', 'ot0')), contains('excluded'));
+    });
+    test('3 → low, 4 → intermediate (boundary)', () {
+      expect(_band(b, t4('tc1', 'ti1', 'tb1', 'ot0')), contains('excluded')); // 3
+      expect(_band(b, t4('tc2', 'ti1', 'tb1', 'ot0')), contains('Intermediate')); // 4
+    });
+    test('6 → high', () {
+      expect(_band(b, t4('tc2', 'ti2', 'tb1', 'ot1')), contains('High')); // 6
+    });
+    test('max 8', () => expect(scoreRange(b).max, 8));
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));

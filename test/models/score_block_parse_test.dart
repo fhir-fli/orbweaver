@@ -19,6 +19,9 @@ const _files = <String>[
   'calc_perc.yaml',
   'calc_curb65.yaml',
   'calc_gcs.yaml',
+  'calc_child_pugh.yaml',
+  'calc_heart.yaml',
+  'calc_4ts.yaml',
 ];
 
 ScoreBlock _load(String file) => Topic.fromYamlString(
@@ -79,8 +82,8 @@ void main() {
       });
     }
 
-    test('all seven scores registered', () {
-      expect(_files, hasLength(7));
+    test('all scores registered', () {
+      expect(_files, hasLength(10));
       for (final f in _files) {
         expect(File('$_dir/$f').existsSync(), isTrue, reason: 'missing $f');
       }

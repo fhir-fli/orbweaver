@@ -1,0 +1,70 @@
+# ============================================================
+# 4Ts score — Heparin-Induced Thrombocytopenia (HIT) pretest probability.
+# Evidence review 2026-07-19: ASH 2018 uses 4Ts to set pretest probability;
+# high negative predictive value (~98%) makes a LOW score a reliable
+# rule-out, but PPV is low so a high score needs lab confirmation
+# (immunoassay → functional). Points per Lo 2006. Total 0–8.
+# ============================================================
+
+topic:
+  id: "calc-4ts"
+  title: "4Ts Score (HIT)"
+  list_subtitle: "heparin-induced thrombocytopenia"
+  last_reviewed: "Evidence review 2026-07-19 · Lo 2006 · ASH 2018"
+  tags: ["4ts", "hit", "heparin", "thrombocytopenia", "platelets", "thrombosis", "hematology"]
+  aliases:
+    - "4Ts"
+    - "HIT score"
+    - "Heparin-induced thrombocytopenia"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Pretest probability of heparin-induced thrombocytopenia. A low score
+        reliably rules HIT out; an intermediate/high score warrants stopping
+        heparin and laboratory confirmation.
+
+    - type: "score"
+      title: "4Ts score"
+      source: "Lo et al., J Thromb Haemost 2006; ASH 2018 HIT guideline"
+      items:
+        - key: "thrombocytopenia"
+          label: "Thrombocytopenia (magnitude)"
+          type: "choice"
+          default: "tc0"
+          options:
+            - { value: "tc0", label: "Fall < 30% or nadir < 10", points: 0 }
+            - { value: "tc1", label: "Fall 30–50% or nadir 10–19", points: 1 }
+            - { value: "tc2", label: "Fall > 50% and nadir ≥ 20", points: 2 }
+        - key: "timing"
+          label: "Timing of platelet fall"
+          type: "choice"
+          default: "ti0"
+          options:
+            - { value: "ti0", label: "< 4 days, no recent heparin", points: 0 }
+            - { value: "ti1", label: "Consistent but unclear / onset after day 10 / ≤1 day w/ prior heparin 31–100 d", points: 1 }
+            - { value: "ti2", label: "Clear onset days 5–10, or ≤ 1 day w/ heparin within 30 d", points: 2 }
+        - key: "thrombosis"
+          label: "Thrombosis or sequelae"
+          type: "choice"
+          default: "tb0"
+          options:
+            - { value: "tb0", label: "None", points: 0 }
+            - { value: "tb1", label: "Progressive/recurrent or suspected thrombosis", points: 1 }
+            - { value: "tb2", label: "New thrombosis, skin necrosis, or anaphylactoid reaction", points: 2 }
+        - key: "other"
+          label: "oTher cause of thrombocytopenia"
+          type: "choice"
+          default: "ot0"
+          options:
+            - { value: "ot0", label: "Definite", points: 0 }
+            - { value: "ot1", label: "Possible", points: 1 }
+            - { value: "ot2", label: "None apparent", points: 2 }
+      bands:
+        - { min: 0, max: 3, label: "Low probability — HIT effectively excluded", detail: "High NPV (~98%).", severity: "none" }
+        - { min: 4, max: 5, label: "Intermediate — stop heparin, test", severity: "warn" }
+        - { min: 6, max: 8, label: "High probability — stop heparin, test, treat", severity: "alert" }
+      caveats:
+        - "A high score is NOT diagnostic (low PPV) — confirm with an immunoassay, then a functional assay. A low score reliably rules HIT out."

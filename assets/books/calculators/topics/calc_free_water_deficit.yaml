@@ -1,0 +1,48 @@
+# ============================================================
+# Free water deficit (hypernatremia).
+# Evidence review 2026-07-19: FWD = TBW × (current Na / target Na − 1),
+# TBW = weight × 0.6 (male) / 0.5 (female). Estimates the deficit ONLY —
+# ongoing/insensible losses must be added. The strict ≤0.5 mEq/L/h
+# correction cap is pediatric-extrapolated; adult cohorts show no harm
+# from faster correction — use clinical judgment.
+# ============================================================
+
+topic:
+  id: "calc-free-water-deficit"
+  title: "Free Water Deficit"
+  list_subtitle: "hypernatremia"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["free water deficit", "hypernatremia", "sodium", "water", "tbw", "dehydration", "electrolyte"]
+  aliases:
+    - "Free water deficit"
+    - "Water deficit"
+    - "Hypernatremia"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Estimates the free water deficit in hypernatremia. This is the deficit
+        to replace — add ongoing and insensible losses to plan total
+        replacement.
+
+    - type: "formula"
+      kind: "free_water_deficit"
+      title: "Free water deficit"
+      source: "Free water deficit = TBW × (current Na / target Na − 1)"
+      inputs:
+        - { key: "weight", label: "Weight", unit: "kg", type: "number" }
+        - key: "sex"
+          label: "Sex"
+          type: "select"
+          default: "M"
+          options:
+            - { value: "M", label: "Male (TBW 0.6)" }
+            - { value: "F", label: "Female (TBW 0.5)" }
+        - { key: "sodium", label: "Current Na⁺", unit: "mEq/L", type: "number" }
+        - { key: "target", label: "Target Na⁺", unit: "mEq/L", type: "number", optional: true, help: "default 140" }
+      notes:
+        - "Total body water = weight × 0.6 (male) / 0.5 (female). Add ongoing + insensible losses to the deficit."
+      caveats:
+        - "Deficit is an estimate. The strict ≤ 0.5 mEq/L/h correction cap is pediatric-extrapolated; recent adult data show no harm from faster correction — apply clinical judgment."

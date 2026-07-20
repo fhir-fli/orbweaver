@@ -1,0 +1,64 @@
+# ============================================================
+# MELD 3.0 — Model for End-stage Liver Disease (OPTN 2023).
+# Evidence review 2026-07-19: OPTN/UNOS adopted MELD 3.0 (July 2023) for
+# adult liver-transplant allocation, replacing MELD-Na. Adds female sex
+# (+1.33) and albumin. Bounds: labs ≥1.0; bilirubin ≥1; INR ≥1;
+# creatinine 1–3 (=3 if dialysis ≥2×/wk or 24h CVVHD); sodium 125–137;
+# albumin 1.5–3.5. Result rounded, bounded 6–40. Age ≥12. Kim, Gastro 2021.
+# ============================================================
+
+topic:
+  id: "calc-meld"
+  title: "MELD 3.0"
+  list_subtitle: "end-stage liver disease (OPTN 2023)"
+  last_reviewed: "Evidence review 2026-07-19 · OPTN 2023 · Kim 2021"
+  tags: ["meld", "meld 3.0", "liver", "cirrhosis", "transplant", "mortality", "end-stage", "hepatic"]
+  aliases:
+    - "MELD"
+    - "MELD 3.0"
+    - "MELD-Na"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        MELD 3.0 — the current OPTN liver-transplant allocation score
+        (replaced MELD-Na in 2023). Predicts 90-day mortality in end-stage
+        liver disease. Lab units are US (mg/dL) except creatinine.
+
+    - type: "formula"
+      kind: "meld3"
+      title: "MELD 3.0"
+      source: "OPTN policy 2023; Kim et al., Gastroenterology 2021"
+      inputs:
+        - key: "sex"
+          label: "Sex"
+          type: "select"
+          default: "M"
+          options:
+            - { value: "M", label: "Male" }
+            - { value: "F", label: "Female" }
+        - { key: "bilirubin", label: "Bilirubin", unit: "mg/dL", type: "number" }
+        - { key: "creatinine", label: "Creatinine", type: "number" }
+        - key: "cr_unit"
+          label: "Creatinine unit"
+          type: "select"
+          default: "mg/dL"
+          options:
+            - { value: "mg/dL" }
+            - { value: "µmol/L" }
+        - { key: "inr", label: "INR", type: "number" }
+        - { key: "sodium", label: "Sodium", unit: "mEq/L", type: "number" }
+        - { key: "albumin", label: "Albumin", unit: "g/dL", type: "number" }
+        - key: "dialysis"
+          label: "Dialysis ≥ 2×/wk (or 24h CVVHD)"
+          type: "select"
+          default: "no"
+          options:
+            - { value: "no", label: "No" }
+            - { value: "yes", label: "Yes" }
+      notes:
+        - "Bounds applied automatically: bilirubin/INR/creatinine ≥ 1; creatinine capped at 3 (=3 on dialysis); sodium 125–137; albumin 1.5–3.5; result 6–40."
+      caveats:
+        - "For age ≥ 12. Allocation policy uses MELD 3.0; some trials/registries still report MELD-Na."
