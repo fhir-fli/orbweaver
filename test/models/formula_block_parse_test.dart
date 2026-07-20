@@ -51,6 +51,15 @@ const _files = <String, Map<String, dynamic>>{
     'serum_cr': 5,
     'urine_cr': 100,
   },
+  'calc_anc.yaml': {'wbc': 7.5, 'segs': 60},
+  'calc_reticulocyte.yaml': {'retic': 5, 'hct': 30},
+  'calc_lights.yaml': {
+    'pleural_protein': 4.0,
+    'serum_protein': 6.0,
+    'pleural_ldh': 100,
+    'serum_ldh': 200,
+    'serum_ldh_uln': 250,
+  },
 };
 
 FormulaBlock _load(String file) {
@@ -113,7 +122,7 @@ void main() {
     });
 
     test('all formula calculators are present', () {
-      expect(_files, hasLength(15));
+      expect(_files, hasLength(18));
       for (final f in _files.keys) {
         expect(File('$_dir/$f').existsSync(), isTrue, reason: 'missing $f');
       }

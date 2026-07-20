@@ -1,0 +1,39 @@
+# ============================================================
+# Ottawa Knee Rule.
+# Evidence review 2026-07-19: well-validated (pooled sensitivity ~98–99%
+# for fracture; ~50% fewer knee radiographs). Any of the five criteria →
+# knee X-ray. Stiell 1995/1996.
+# ============================================================
+
+topic:
+  id: "calc-ottawa-knee"
+  title: "Ottawa Knee Rule"
+  list_subtitle: "knee X-ray decision"
+  last_reviewed: "Evidence review 2026-07-19 · Stiell 1995"
+  tags: ["ottawa knee", "knee", "fracture", "x-ray", "orthopedics", "decision rule"]
+  aliases:
+    - "Ottawa Knee Rule"
+    - "Knee X-ray rule"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Identifies which acute knee injuries need an X-ray. Tap any criterion
+        present — a single one means imaging is indicated.
+
+    - type: "score"
+      title: "Ottawa Knee Rule"
+      source: "Stiell et al., 1995/1996"
+      items:
+        - { key: "age55", label: "Age ≥ 55", type: "toggle", points: 1 }
+        - { key: "fibula", label: "Tenderness at the head of the fibula", type: "toggle", points: 1 }
+        - { key: "patella", label: "Isolated tenderness of the patella", type: "toggle", points: 1 }
+        - { key: "flex90", label: "Unable to flex to 90°", type: "toggle", points: 1 }
+        - { key: "weight", label: "Unable to bear weight 4 steps (immediately & in ED)", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 0, label: "No X-ray indicated by the rule", severity: "none" }
+        - { min: 1, label: "Knee X-ray indicated", severity: "warn" }
+      caveats:
+        - "Applies to acute isolated knee injury; less validated in children and after significant delay."

@@ -102,8 +102,142 @@ FormulaResult computeFormula(String kind, Map<String, dynamic> v) {
     'osmolal_gap' => _osmolalGap(v),
     'parkland' => _parkland(v),
     'urinary_indices' => _urinaryIndices(v),
+    'anc' => _anc(v),
+    'reticulocyte' => _reticulocyte(v),
+    'lights' => _lights(v),
     _ => const FormulaResult.empty(),
   };
+}
+
+// ── anc: absolute neutrophil count ───────────────────────────────────
+
+FormulaResult _anc(Map<String, dynamic> v) {
+  final wbc = _num(v, 'wbc'); // ×10⁹/L
+  final segs = _num(v, 'segs'); // %
+  final bands = _num(v, 'bands') ?? 0; // %, optional
+  if (wbc == null || segs == null || wbc < 0) {
+    return const FormulaResult.empty();
+  }
+  final anc = wbc * 1000 * (segs + bands) / 100; // cells/µL
+  final FormulaSeverity sev;
+  final String interp;
+  if (anc < 500) {
+    sev = FormulaSeverity.alert;
+    interp = 'Severe neutropenia (< 500) — high infection risk.';
+  } else if (anc < 1000) {
+    sev = FormulaSeverity.warn;
+    interp = 'Moderate neutropenia (500–999).';
+  } else if (anc < 1500) {
+    sev = FormulaSeverity.warn;
+    interp = 'Mild neutropenia (1000–1499).';
+  } else {
+    sev = FormulaSeverity.none;
+    interp = 'Normal (≥ 1500).';
+  }
+  return FormulaResult([
+    FormulaOutput(
+      label: 'ANC',
+      value: fmtNum(anc, decimals: 0),
+      unit: 'cells/µL',
+      primary: true,
+      severity: sev,
+      interpretation: interp,
+    ),
+  ]);
+}
+
+// ── reticulocyte: corrected retic% + reticulocyte production index ────
+
+FormulaResult _reticulocyte(Map<String, dynamic> v) {
+  final retic = _num(v, 'retic'); // %
+  final hct = _num(v, 'hct'); // %
+  if (retic == null || hct == null || hct <= 0) {
+    return const FormulaResult.empty();
+  }
+  final corrected = retic * (hct / 45);
+  final double maturation;
+  if (hct >= 35) {
+    maturation = 1.0;
+  } else if (hct >= 25) {
+    maturation = 1.5;
+  } else if (hct >= 20) {
+    maturation = 2.0;
+  } else {
+    maturation = 2.5;
+  }
+  final rpi = corrected / maturation;
+  final adequate = rpi >= 2;
+  return FormulaResult([
+    FormulaOutput(
+      label: 'Reticulocyte production index',
+      value: fmtNum(rpi, decimals: 1),
+      primary: true,
+      severity: adequate ? FormulaSeverity.none : FormulaSeverity.warn,
+      interpretation: adequate
+          ? 'RPI ≥ 2 — adequate marrow response (blood loss / hemolysis).'
+          : 'RPI < 2 — inadequate (hypoproliferative) response.',
+    ),
+    FormulaOutput(
+      label: 'Corrected reticulocyte',
+      value: fmtNum(corrected, decimals: 1),
+      unit: '%',
+    ),
+  ]);
+}
+
+// ── lights: pleural exudate vs transudate ────────────────────────────
+
+FormulaResult _lights(Map<String, dynamic> v) {
+  final pProt = _num(v, 'pleural_protein');
+  final sProt = _num(v, 'serum_protein');
+  final pLdh = _num(v, 'pleural_ldh');
+  final sLdh = _num(v, 'serum_ldh');
+  final ldhUln = _num(v, 'serum_ldh_uln');
+  if (pProt == null ||
+      sProt == null ||
+      pLdh == null ||
+      sLdh == null ||
+      ldhUln == null ||
+      sProt <= 0 ||
+      sLdh <= 0 ||
+      ldhUln <= 0) {
+    return const FormulaResult.empty();
+  }
+  final protRatio = pProt / sProt;
+  final ldhRatio = pLdh / sLdh;
+  final ldhFrac = pLdh / ldhUln;
+  final c1 = protRatio > 0.5;
+  final c2 = ldhRatio > 0.6;
+  final c3 = ldhFrac > (2 / 3);
+  final met = [c1, c2, c3].where((x) => x).length;
+  final exudate = met > 0;
+  return FormulaResult([
+    FormulaOutput(
+      label: exudate ? 'Exudate' : 'Transudate',
+      value: '$met/3',
+      unit: 'criteria met',
+      primary: true,
+      severity: exudate ? FormulaSeverity.warn : FormulaSeverity.none,
+      interpretation: exudate
+          ? 'Any Light\'s criterion met → exudate (needs further workup).'
+          : 'No criterion met → transudate.',
+    ),
+    FormulaOutput(
+      label: 'Protein ratio',
+      value: fmtNum(protRatio, decimals: 2),
+      interpretation: c1 ? '> 0.5 ✓' : '≤ 0.5',
+    ),
+    FormulaOutput(
+      label: 'LDH ratio',
+      value: fmtNum(ldhRatio, decimals: 2),
+      interpretation: c2 ? '> 0.6 ✓' : '≤ 0.6',
+    ),
+    FormulaOutput(
+      label: 'Pleural LDH / ULN',
+      value: fmtNum(ldhFrac, decimals: 2),
+      interpretation: c3 ? '> 2/3 ✓' : '≤ 2/3',
+    ),
+  ]);
 }
 
 // ── urinary_indices: FENa (+ FEUrea) for AKI ─────────────────────────

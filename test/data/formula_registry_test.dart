@@ -562,6 +562,79 @@ void main() {
     });
   });
 
+  group('anc', () {
+    test('WBC 7.5, segs 60, bands 3 → 4725 cells/µL', () {
+      final r = computeFormula('anc', {'wbc': 7.5, 'segs': 60, 'bands': 3});
+      expect(_v(r, 0), closeTo(4725, 0.5));
+      expect(r.outputs[0].severity, FormulaSeverity.none);
+    });
+    test('bands optional (defaults 0)', () {
+      final r = computeFormula('anc', {'wbc': 7.5, 'segs': 60});
+      expect(_v(r, 0), closeTo(4500, 0.5));
+    });
+    test('severe neutropenia flag < 500', () {
+      final r = computeFormula('anc', {'wbc': 0.5, 'segs': 50});
+      expect(_v(r, 0), closeTo(250, 0.5));
+      expect(r.outputs[0].severity, FormulaSeverity.alert);
+    });
+    test('missing segs → empty', () {
+      expect(computeFormula('anc', {'wbc': 7.5}).isEmpty, isTrue);
+    });
+  });
+
+  group('reticulocyte (RPI)', () {
+    test('retic 5%, Hct 30 → corrected 3.3%, RPI 2.2', () {
+      final r = computeFormula('reticulocyte', {'retic': 5, 'hct': 30});
+      expect(_v(r, 0), closeTo(2.2, 0.05)); // RPI (primary): 3.333/1.5
+      expect(_v(r, 1), closeTo(3.3, 0.05)); // corrected retic
+    });
+    test('maturation factor steps with Hct', () {
+      // Hct 45 → factor 1.0; retic 1% → corrected 1.0 → RPI 1.0 (inadequate)
+      final r = computeFormula('reticulocyte', {'retic': 1, 'hct': 45});
+      expect(_v(r, 0), closeTo(1.0, 0.02));
+      expect(r.outputs[0].severity, FormulaSeverity.warn);
+    });
+    test('missing Hct → empty', () {
+      expect(computeFormula('reticulocyte', {'retic': 5}).isEmpty, isTrue);
+    });
+  });
+
+  group("Light's criteria", () {
+    test('protein ratio > 0.5 → exudate', () {
+      final r = computeFormula('lights', {
+        'pleural_protein': 4.0,
+        'serum_protein': 6.0,
+        'pleural_ldh': 100,
+        'serum_ldh': 200,
+        'serum_ldh_uln': 250,
+      });
+      expect(r.outputs[0].label, 'Exudate'); // protein ratio 0.667 > 0.5
+      expect(_v(r, 1), closeTo(0.67, 0.01)); // protein ratio row
+    });
+    test('all ratios below thresholds → transudate (0/3)', () {
+      final r = computeFormula('lights', {
+        'pleural_protein': 2.0,
+        'serum_protein': 7.0,
+        'pleural_ldh': 80,
+        'serum_ldh': 200,
+        'serum_ldh_uln': 250,
+      });
+      expect(r.outputs[0].label, 'Transudate');
+      expect(r.outputs[0].value, '0/3');
+    });
+    test('missing serum LDH ULN → empty', () {
+      expect(
+        computeFormula('lights', {
+          'pleural_protein': 4.0,
+          'serum_protein': 6.0,
+          'pleural_ldh': 100,
+          'serum_ldh': 200,
+        }).isEmpty,
+        isTrue,
+      );
+    });
+  });
+
   group('registry guards', () {
     test('unknown kind → empty (author typo fails safe)', () {
       expect(computeFormula('does_not_exist', {'x': 1}).isEmpty, isTrue);

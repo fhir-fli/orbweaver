@@ -1,0 +1,80 @@
+# ============================================================
+# Bishop score — cervical readiness for induction.
+# Evidence review 2026-07-19: standard cervical-favorability tool (ACOG
+# Clinical Practice Guideline No. 9, 2025, which replaced Practice
+# Bulletin 107). It is a RIPENING/favorability measure, a poor predictor
+# of induction SUCCESS (Kolkman 2013); no single cutoff is endorsed.
+# Total 0–13. Higher = more favorable.
+# ============================================================
+
+topic:
+  id: "calc-bishop"
+  title: "Bishop Score"
+  list_subtitle: "cervical readiness for induction"
+  last_reviewed: "Evidence review 2026-07-19 · ACOG CPG No. 9 (2025)"
+  tags: ["bishop", "cervical", "induction", "labor", "obstetrics", "ripening", "favorability"]
+  aliases:
+    - "Bishop score"
+    - "Cervical score"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Assesses cervical favorability before induction of labor. Higher scores
+        indicate a more favorable ("ripe") cervix.
+
+    - type: "score"
+      title: "Bishop score"
+      source: "Bishop 1964; ACOG Clinical Practice Guideline No. 9 (2025)"
+      items:
+        - key: "dilation"
+          label: "Dilation (cm)"
+          type: "choice"
+          default: "d0"
+          options:
+            - { value: "d0", label: "0", points: 0 }
+            - { value: "d1", label: "1–2", points: 1 }
+            - { value: "d3", label: "3–4", points: 2 }
+            - { value: "d5", label: "≥ 5", points: 3 }
+        - key: "effacement"
+          label: "Effacement (%)"
+          type: "choice"
+          default: "e0"
+          options:
+            - { value: "e0", label: "0–30", points: 0 }
+            - { value: "e40", label: "40–50", points: 1 }
+            - { value: "e60", label: "60–70", points: 2 }
+            - { value: "e80", label: "≥ 80", points: 3 }
+        - key: "station"
+          label: "Fetal station"
+          type: "choice"
+          default: "s3"
+          options:
+            - { value: "s3", label: "−3", points: 0 }
+            - { value: "s2", label: "−2", points: 1 }
+            - { value: "s1", label: "−1 / 0", points: 2 }
+            - { value: "sp", label: "+1 / +2", points: 3 }
+        - key: "consistency"
+          label: "Cervical consistency"
+          type: "choice"
+          default: "c_firm"
+          options:
+            - { value: "c_firm", label: "Firm", points: 0 }
+            - { value: "c_med", label: "Medium", points: 1 }
+            - { value: "c_soft", label: "Soft", points: 2 }
+        - key: "position"
+          label: "Cervical position"
+          type: "choice"
+          default: "p_post"
+          options:
+            - { value: "p_post", label: "Posterior", points: 0 }
+            - { value: "p_mid", label: "Mid", points: 1 }
+            - { value: "p_ant", label: "Anterior", points: 2 }
+      bands:
+        - { min: 0, max: 5, label: "Unfavorable — consider cervical ripening", severity: "warn" }
+        - { min: 6, max: 7, label: "Intermediate favorability", severity: "none" }
+        - { min: 8, label: "Favorable cervix", severity: "none" }
+      caveats:
+        - "A favorability/ripening measure — a poor predictor of induction success (ACOG CPG No. 9, 2025); no single cutoff is endorsed."

@@ -451,6 +451,82 @@ void main() {
     });
   });
 
+  group('Ottawa Ankle / Knee (any positive → imaging)', () {
+    late ScoreBlock ankle;
+    late ScoreBlock knee;
+    setUpAll(() {
+      ankle = _load('calc_ottawa_ankle.yaml');
+      knee = _load('calc_ottawa_knee.yaml');
+    });
+
+    test('ankle: no findings → no X-ray; any finding → X-ray', () {
+      expect(_band(ankle, const {}), contains('No X-ray'));
+      expect(_band(ankle, {'lat_mall': true}), contains('X-ray indicated'));
+      expect(_band(ankle, {'weight': true}), contains('X-ray indicated'));
+    });
+    test('knee: age ≥55 alone → knee X-ray', () {
+      expect(_band(knee, const {}), contains('No X-ray'));
+      expect(_band(knee, {'age55': true}), contains('X-ray indicated'));
+    });
+    test('ankle max 5, knee max 5', () {
+      expect(scoreRange(ankle).max, 5);
+      expect(scoreRange(knee).max, 5);
+    });
+  });
+
+  group('Bishop score (cervical favorability 0–13)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_bishop.yaml'));
+
+    test('all least-favorable defaults → 0, unfavorable', () {
+      final s = {
+        'dilation': 'd0',
+        'effacement': 'e0',
+        'station': 's3',
+        'consistency': 'c_firm',
+        'position': 'p_post',
+      };
+      expect(_total(b, s), 0);
+      expect(_band(b, s), contains('Unfavorable'));
+    });
+    test('boundary 5 unfavorable, 6 intermediate, 8 favorable', () {
+      // 5: dilation 3–4 (2) + effacement 40–50 (1) + station −1/0 (2) = 5
+      expect(
+        _band(b, {
+          'dilation': 'd3',
+          'effacement': 'e40',
+          'station': 's1',
+          'consistency': 'c_firm',
+          'position': 'p_post',
+        }),
+        contains('Unfavorable'),
+      );
+      // 6: add soft consistency (2) → but that's 7; use dilation2+eff2+station2=6
+      expect(
+        _band(b, {
+          'dilation': 'd3',
+          'effacement': 'e60',
+          'station': 's1',
+          'consistency': 'c_firm',
+          'position': 'p_post',
+        }),
+        contains('Intermediate'),
+      ); // 2+2+2 = 6
+      // 8: dilation ≥5 (3) + effacement ≥80 (3) + station +1/+2 (3)... = 9 favorable
+      expect(
+        _band(b, {
+          'dilation': 'd5',
+          'effacement': 'e80',
+          'station': 's1',
+          'consistency': 'c_firm',
+          'position': 'p_post',
+        }),
+        contains('Favorable'),
+      ); // 3+3+2 = 8
+    });
+    test('maximum = 13', () => expect(scoreRange(b).max, 13));
+  });
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));

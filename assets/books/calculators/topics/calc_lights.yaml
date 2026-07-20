@@ -1,0 +1,43 @@
+# ============================================================
+# Light's criteria — pleural exudate vs transudate.
+# Evidence review 2026-07-19: standard first-line test (BTS 2023 built
+# around the exudate/transudate split). Exudate if ANY: pleural/serum
+# protein > 0.5, pleural/serum LDH > 0.6, or pleural LDH > 2/3 the upper
+# limit of normal serum LDH. Known pitfall: over-calls exudate in diuresed
+# heart failure — use the serum-effusion albumin gradient (> 1.2 g/dL) or
+# NT-proBNP when HF is suspected.
+# ============================================================
+
+topic:
+  id: "calc-lights"
+  title: "Light's Criteria"
+  list_subtitle: "pleural exudate vs transudate"
+  last_reviewed: "Evidence review 2026-07-19 · Light 1972 · BTS 2023"
+  tags: ["light's criteria", "lights", "pleural effusion", "exudate", "transudate", "thoracentesis", "pulmonary"]
+  aliases:
+    - "Light's criteria"
+    - "Pleural fluid"
+    - "Exudate transudate"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Classifies a pleural effusion as exudate or transudate. Any one
+        criterion being met makes it an exudate.
+
+    - type: "formula"
+      kind: "lights"
+      title: "Light's criteria"
+      source: "Light et al., Ann Intern Med 1972"
+      inputs:
+        - { key: "pleural_protein", label: "Pleural protein", unit: "g/dL", type: "number" }
+        - { key: "serum_protein", label: "Serum protein", unit: "g/dL", type: "number" }
+        - { key: "pleural_ldh", label: "Pleural LDH", unit: "U/L", type: "number" }
+        - { key: "serum_ldh", label: "Serum LDH", unit: "U/L", type: "number" }
+        - { key: "serum_ldh_uln", label: "Serum LDH upper-limit-normal", unit: "U/L", type: "number" }
+      notes:
+        - "Exudate if ANY: protein ratio > 0.5, LDH ratio > 0.6, or pleural LDH > ⅔ × serum LDH ULN."
+      caveats:
+        - "Over-calls exudate in diuresed heart failure — if HF is likely, use the serum-effusion albumin gradient (> 1.2 g/dL = transudate) or NT-proBNP."

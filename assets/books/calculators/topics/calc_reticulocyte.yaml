@@ -1,0 +1,36 @@
+# ============================================================
+# Corrected reticulocyte count + reticulocyte production index (RPI).
+# Evidence review 2026-07-19: corrected retic% = retic% × (Hct/45);
+# RPI = corrected ÷ maturation factor (Hct ≥35→1.0, 25–34→1.5, 20–24→2.0,
+# <20→2.5). RPI ≥ 2 = adequate marrow response; < 2 = hypoproliferative.
+# ============================================================
+
+topic:
+  id: "calc-reticulocyte"
+  title: "Reticulocyte Index (RPI)"
+  list_subtitle: "corrected retic + production index"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["reticulocyte", "rpi", "retic", "anemia", "hemolysis", "marrow", "hematology"]
+  aliases:
+    - "RPI"
+    - "Reticulocyte production index"
+    - "Corrected reticulocyte"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Adjusts the reticulocyte percentage for the degree of anemia to judge
+        whether the marrow is responding appropriately.
+
+    - type: "formula"
+      kind: "reticulocyte"
+      title: "Reticulocyte production index"
+      source: "Corrected retic% = retic% × Hct/45; RPI = corrected ÷ maturation factor"
+      inputs:
+        - { key: "retic", label: "Reticulocyte", unit: "%", type: "number" }
+        - { key: "hct", label: "Hematocrit", unit: "%", type: "number" }
+      notes:
+        - "Maturation factor by Hct: ≥ 35 → 1.0 · 25–34 → 1.5 · 20–24 → 2.0 · < 20 → 2.5."
+        - "RPI ≥ 2 (some use 3) suggests appropriate response (blood loss / hemolysis); < 2 suggests hypoproliferation."

@@ -1,0 +1,35 @@
+# ============================================================
+# Absolute neutrophil count (ANC).
+# Evidence review 2026-07-19: ANC = WBC × (%segs + %bands) / 100.
+# Convention includes bands. Neutropenia < 1500, severe < 500 cells/µL.
+# ============================================================
+
+topic:
+  id: "calc-anc"
+  title: "Absolute Neutrophil Count"
+  list_subtitle: "ANC / neutropenia"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["anc", "absolute neutrophil count", "neutropenia", "wbc", "neutrophil", "hematology", "febrile"]
+  aliases:
+    - "ANC"
+    - "Absolute neutrophil count"
+    - "Neutropenia"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Absolute neutrophil count from the white-cell count and differential.
+        Includes band forms.
+
+    - type: "formula"
+      kind: "anc"
+      title: "Absolute neutrophil count"
+      source: "ANC = WBC × (%segs + %bands) / 100"
+      inputs:
+        - { key: "wbc", label: "WBC", unit: "×10⁹/L", type: "number" }
+        - { key: "segs", label: "Segmented neutrophils", unit: "%", type: "number" }
+        - { key: "bands", label: "Band neutrophils", unit: "%", type: "number", optional: true }
+      notes:
+        - "Neutropenia: < 1500 mild-ish · < 1000 moderate · < 500 severe (cells/µL)."

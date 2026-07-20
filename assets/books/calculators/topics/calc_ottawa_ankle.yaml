@@ -1,0 +1,41 @@
+# ============================================================
+# Ottawa Ankle Rule.
+# Evidence review 2026-07-19: among the best-validated decision rules
+# (pooled sensitivity ~98–100% for fracture; ~30–40% fewer radiographs).
+# Ankle X-ray if pain in the malleolar zone AND a positive finding; foot
+# X-ray if pain in the midfoot zone AND a positive finding. Any positive
+# finding here → imaging. Stiell 1992.
+# ============================================================
+
+topic:
+  id: "calc-ottawa-ankle"
+  title: "Ottawa Ankle Rule"
+  list_subtitle: "ankle/foot X-ray decision"
+  last_reviewed: "Evidence review 2026-07-19 · Stiell 1992"
+  tags: ["ottawa ankle", "ankle", "foot", "fracture", "x-ray", "sprain", "orthopedics", "decision rule"]
+  aliases:
+    - "Ottawa Ankle Rule"
+    - "Ankle X-ray rule"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Identifies which acute ankle/foot injuries need an X-ray. Tap any
+        positive finding — a single one means imaging is indicated.
+
+    - type: "score"
+      title: "Ottawa Ankle Rule"
+      source: "Stiell et al., Ann Emerg Med 1992"
+      items:
+        - { key: "lat_mall", label: "Bone tenderness — posterior edge/tip of lateral malleolus", type: "toggle", points: 1, help: "→ ankle X-ray" }
+        - { key: "med_mall", label: "Bone tenderness — posterior edge/tip of medial malleolus", type: "toggle", points: 1, help: "→ ankle X-ray" }
+        - { key: "fifth_mt", label: "Bone tenderness — base of 5th metatarsal", type: "toggle", points: 1, help: "→ foot X-ray" }
+        - { key: "navicular", label: "Bone tenderness — navicular", type: "toggle", points: 1, help: "→ foot X-ray" }
+        - { key: "weight", label: "Unable to bear weight 4 steps (immediately & in ED)", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 0, label: "No X-ray indicated by the rule", severity: "none" }
+        - { min: 1, label: "X-ray indicated", severity: "warn" }
+      caveats:
+        - "Applies to acute injury, typically age ≥ 18 (validated variants from age 6), assessed within ~10 days, without intoxication or distracting injury."

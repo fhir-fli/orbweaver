@@ -44,6 +44,11 @@ book:
       children:
         - topic: "topics/calc_meld.yaml"
         - topic: "topics/calc_child_pugh.yaml"
+    - title: "Hematology & Pulmonary"
+      children:
+        - topic: "topics/calc_anc.yaml"
+        - topic: "topics/calc_reticulocyte.yaml"
+        - topic: "topics/calc_lights.yaml"
     - title: "Risk & Severity Scores"
       children:
         - topic: "topics/calc_cha2ds2_vasc.yaml"
@@ -64,3 +69,8 @@ book:
       children:
         - topic: "topics/calc_ciwa_ar.yaml"
         - topic: "topics/calc_cows.yaml"
+    - title: "Orthopedics & Obstetrics"
+      children:
+        - topic: "topics/calc_ottawa_ankle.yaml"
+        - topic: "topics/calc_ottawa_knee.yaml"
+        - topic: "topics/calc_bishop.yaml"
