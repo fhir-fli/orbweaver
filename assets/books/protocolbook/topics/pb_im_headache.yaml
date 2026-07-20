@@ -1,0 +1,52 @@
+# ============================================================
+# ProtocolBook p.126 — Headache (adult). One of three "Adult Common
+# Clinical Complaints" on p.126, split into a separate searchable leaf.
+# Essentially a red-flags / danger-signs screen for secondary headache.
+#
+# Content-flow outline (no decisions) → titled prose per the hybrid rule.
+# The danger-signs list is a red-alert callout (these are the "don't miss"
+# features). Citation superscripts dropped.
+#
+# GENUINE SOURCE TYPO corrected + surfaced to Grey: the printed
+# "spacy-occupying ... lesion" is a typo for "space-occupying" — corrected
+# here; Grey should fix the source PDF.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - The red-flag set (systemic symptoms, neuro signs, new/thunderclap
+#     onset esp. > 40 yo, trauma/toxins, positional/Valsalva-worsened or
+#     sleep-waking headache, change in an established pattern) is the
+#     standard SNNOOP-style secondary-headache screen.
+# ============================================================
+
+topic:
+  id: "pb-im-headache"
+  title: "Headache — Red Flags"
+  list_subtitle: "p.126 · secondary-headache danger signs"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["headache", "red flags", "thunderclap", "secondary headache", "danger signs", "SNNOOP", "adult", "internal medicine", "common complaints", "neurology"]
+  category: "medical"
+  page_number: 126
+
+  blocks:
+
+    - type: "prose"
+      title: "Headache"
+      markdown: |
+        - **Good and complete history and physical**
+
+    - type: "prose"
+      title: "Danger signs (\"red flags\")"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Suggest a space-occupying or vascular lesion, infection, metabolic disturbance, or systemic condition:
+
+        - Systemic symptoms or condition (e.g. fever, ↓ weight, pregnancy, HIV)
+        - Neuro symptoms (e.g. confusion, decreased consciousness, focal signs, vision changes, meningismus, convulsions, papilledema)
+        - New onset (especially if > 40 yo) or sudden ("thunderclap")
+        - History of head trauma, illicit drug use, toxic exposure
+        - Headache awakens from sleep, worse with Valsalva, cough, exertion or sexual activity, or worse in a specific position
+        - History of headache with a change in features: frequency, severity, associated features

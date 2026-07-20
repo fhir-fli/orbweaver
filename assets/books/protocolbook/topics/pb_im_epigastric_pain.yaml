@@ -1,0 +1,40 @@
+# ============================================================
+# ProtocolBook p.126 — Epigastric Pain (adult). One of three "Adult
+# Common Clinical Complaints" on p.126, split into a separate searchable
+# leaf.
+#
+# Content-flow outline (no decisions) → titled prose per the hybrid rule.
+# Decorative outline numbering dropped; the H. pylori age split is kept
+# as a nested pair. Citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - The dangerous differential (ACS, pancreatitis, DKA, cholecystitis,
+#     ulcer, pre-eclampsia/HELLP, ectopic), the surgical-consult triggers,
+#     the endoscopy alarm features and the test-and-treat vs. scope-first
+#     H. pylori age cut-off (55) are all standard dyspepsia guidance.
+# ============================================================
+
+topic:
+  id: "pb-im-epigastric-pain"
+  title: "Epigastric Pain (Adult)"
+  list_subtitle: "p.126 · dyspepsia · alarm features"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["epigastric pain", "dyspepsia", "abdominal pain", "H. pylori", "helicobacter", "ulcer", "OGD", "endoscopy", "pancreatitis", "cholecystitis", "adult", "internal medicine", "common complaints"]
+  category: "medical"
+  page_number: 126
+
+  blocks:
+
+    - type: "prose"
+      title: "Epigastric pain"
+      markdown: |
+        - **Good and complete history and physical**
+          - VS and SpO₂
+          - Consider: ACS, pancreatitis, DKA, cholecystitis, ulcer, pre-eclampsia / eclampsia, HELLP, ectopic pregnancy
+          - Tests to consider: 12-lead ECG, CXR
+          - Labs to consider: CBC, RFTs, amylase / lipase, LFTs, glucose, pregnancy test
+          - Signs requiring immediate surgical consult: unstable VS or signs of peritonitis (severe abdominal pain on palpation or rebound tenderness)
+          - Indications for oesophagogastroduodenoscopy (OGD): > 55 yo, bleeding / bloody stools / bloody vomitus / anemia, early satiety, unexplained or unintended weight loss (> 10% body weight), progressive dysphagia, odynophagia, persistent n/v, PMHx or FHx of gastrointestinal cancer, previous ulcer, abdominal mass
+          - Helicobacter pylori:
+            - ≤ 55 yo — test for H. pylori if possible, treat if positive
+            - > 55 yo — consider OGD; if negative, test for H. pylori, treat if positive

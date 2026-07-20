@@ -1,0 +1,37 @@
+# ============================================================
+# ProtocolBook p.126 — Syncope (adult). One of three "Adult Common
+# Clinical Complaints" on p.126 (Syncope / Epigastric Pain / Headache),
+# split into separate searchable leaves (a chief complaint is looked up
+# on its own).
+#
+# Content-flow outline (no decisions) → titled prose per the hybrid rule.
+# Decorative outline numbering dropped; hierarchy carried by nested
+# bullets. Citation superscripts dropped.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
+#   - Targeted history, orthostatic/exertional/cardiac features, ECG (±
+#     ECHO for murmur/exertional/chest-pain syncope), selective labs, and
+#     safe discharge if all normal — standard low-risk-syncope workup.
+# ============================================================
+
+topic:
+  id: "pb-im-syncope"
+  title: "Syncope (Adult)"
+  list_subtitle: "p.126 · adult common complaints"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["syncope", "faint", "collapse", "loss of consciousness", "adult", "internal medicine", "common complaints", "ECG", "orthostatic"]
+  category: "medical"
+  page_number: 126
+
+  blocks:
+
+    - type: "prose"
+      title: "Syncope"
+      markdown: |
+        - **Good and complete history and physical**
+          - Include circumstances: changes in medication, dehydration, defecation, urination, coughing, pain, heat exposure, standing outside for long periods of time, head rotation, pressure on carotid sinus (such as shaving), exercise, shortness of breath
+        - Check RBS, CBC, pregnancy test
+        - Consider convulsions (but remember shaking alone does not mean convulsion — non-convulsive shaking is common after syncope)
+        - 12-lead ECG; ECHO if concerning murmur, or if syncope occurred during exercise or was associated with chest pain
+        - Electrolytes **only** in patients with high likelihood of abnormalities
+        - If above are all within normal limits, including VS, may be safely discharged home

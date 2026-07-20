@@ -147,3 +147,6 @@ book:
         - topic: "topics/pb_im_chest_pain.yaml"
         - topic: "topics/pb_im_acs_treatment.yaml"
         - topic: "topics/pb_im_svt.yaml"
+        - topic: "topics/pb_im_syncope.yaml"
+        - topic: "topics/pb_im_epigastric_pain.yaml"
+        - topic: "topics/pb_im_headache.yaml"
