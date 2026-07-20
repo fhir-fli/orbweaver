@@ -1,0 +1,56 @@
+# ============================================================
+# Ideal body weight (Devine) + adjusted body weight.
+# Evidence review 2026-07-19: Devine (1974) IBW is the de-facto dosing
+# standard but is EMPIRIC (not dataset-derived; Pai/Paloucek 2000) and
+# biased at height/sex extremes. Adjusted BW = IBW + 0.4×(actual − IBW).
+# Drug-specific dosing weight (TBW vs IBW vs AdjBW vs LBW) varies by agent.
+# ============================================================
+
+topic:
+  id: "calc-ideal-body-weight"
+  title: "Ideal / Adjusted Body Weight"
+  list_subtitle: "Devine IBW + adjusted BW"
+  last_reviewed: "Evidence review 2026-07-19 · Devine 1974"
+  tags: ["ideal body weight", "ibw", "adjusted body weight", "devine", "dosing", "weight", "obesity"]
+  aliases:
+    - "IBW"
+    - "Ideal body weight"
+    - "Adjusted body weight"
+    - "Devine"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Devine ideal body weight for weight-based drug dosing. Enter an actual
+        weight too to also get the adjusted body weight (used for some drugs in
+        obesity).
+
+    - type: "formula"
+      kind: "ideal_body_weight"
+      title: "Ideal / adjusted body weight"
+      source: "Devine, 1974; adjusted BW = IBW + 0.4 × (actual − IBW)"
+      inputs:
+        - { key: "height", label: "Height", type: "number" }
+        - key: "height_unit"
+          label: "Height unit"
+          type: "select"
+          default: "cm"
+          options:
+            - { value: "cm" }
+            - { value: "in" }
+        - key: "sex"
+          label: "Sex"
+          type: "select"
+          default: "M"
+          options:
+            - { value: "M", label: "Male" }
+            - { value: "F", label: "Female" }
+        - { key: "weight", label: "Actual weight", unit: "kg", type: "number", optional: true, help: "for adjusted body weight" }
+      notes:
+        - "IBW (male) = 50 + 2.3 × (height inches − 60); (female) = 45.5 + 2.3 × (height inches − 60)."
+        - "Adjusted body weight = IBW + 0.4 × (actual − IBW)."
+      caveats:
+        - "Devine IBW is empiric (not dataset-derived) and biased at extremes of height and sex."
+        - "Which weight to dose on (total, ideal, adjusted, or lean) is drug-specific — follow the individual agent's guidance."

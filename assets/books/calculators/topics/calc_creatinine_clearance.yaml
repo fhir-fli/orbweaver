@@ -1,0 +1,62 @@
+# ============================================================
+# Renal function: Cockcroft-Gault CrCl + CKD-EPI 2021 eGFR.
+# Evidence review 2026-07-19: FDA May-2024 guidance moved new PK/labeling
+# to race-free eGFR (CKD-EPI 2021); NKF-ASN 2021 + KDIGO 2024 make
+# CKD-EPI 2021 the staging standard. BUT many legacy drug labels' dose
+# cut-points were derived against Cockcroft-Gault, so show BOTH and flag
+# discordance. eGFR is BSA-indexed (mL/min/1.73m²) — de-index before
+# using for an individual's drug dose. No race term in either equation.
+# ============================================================
+
+topic:
+  id: "calc-creatinine-clearance"
+  title: "Creatinine Clearance / eGFR"
+  list_subtitle: "Cockcroft-Gault + CKD-EPI 2021 (race-free)"
+  last_reviewed: "Evidence review 2026-07-19 · FDA 2024 · KDIGO 2024 · CKD-EPI 2021"
+  tags: ["renal", "creatinine", "clearance", "crcl", "egfr", "ckd-epi", "cockcroft", "gault", "kidney", "gfr", "dosing"]
+  aliases:
+    - "CrCl"
+    - "eGFR"
+    - "Cockcroft-Gault"
+    - "CKD-EPI"
+    - "GFR"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Two renal estimates side by side. **Cockcroft-Gault CrCl** (needs
+        weight) matches the cut-points most drug labels were built on — use
+        it for **drug dosing**. **CKD-EPI 2021** (race-free) is the
+        **CKD-staging** standard; de-index it before dosing.
+
+    - type: "formula"
+      kind: "renal_function"
+      title: "Creatinine clearance / eGFR"
+      source: "Cockcroft-Gault (1976); CKD-EPI 2021 creatinine, race-free (Inker, NEJM 2021)"
+      inputs:
+        - { key: "age", label: "Age", unit: "yr", type: "number" }
+        - key: "sex"
+          label: "Sex"
+          type: "select"
+          default: "M"
+          options:
+            - { value: "M", label: "Male" }
+            - { value: "F", label: "Female" }
+        - { key: "weight", label: "Weight", unit: "kg", type: "number", optional: true, help: "Cockcroft-Gault only" }
+        - { key: "creatinine", label: "Serum creatinine", type: "number" }
+        - key: "cr_unit"
+          label: "Creatinine unit"
+          type: "select"
+          default: "mg/dL"
+          options:
+            - { value: "mg/dL" }
+            - { value: "µmol/L" }
+      notes:
+        - "CrCl = (140 − age) × weight × (0.85 if female) ÷ (72 × Scr mg/dL)"
+        - "CKD-EPI 2021 is reported per 1.73m² — multiply by (BSA ÷ 1.73) for an absolute mL/min dosing estimate."
+      caveats:
+        - "Cockcroft-Gault and CKD-EPI can fall in different dosing bands — check both, especially at extremes of body size or age."
+        - "Weight choice for Cockcroft-Gault (actual vs ideal vs adjusted) affects the result; follow drug-specific dosing-weight guidance."
+        - "Neither equation uses race (per NKF-ASN 2021 / KDIGO 2024)."

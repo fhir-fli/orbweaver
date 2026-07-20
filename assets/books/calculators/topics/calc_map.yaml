@@ -1,0 +1,39 @@
+# ============================================================
+# Mean arterial pressure (MAP).
+# Evidence review 2026-07-19: MAP = DBP + (SBP − DBP)/3. The 1/3
+# coefficient is an approximation that tends to UNDERESTIMATE true MAP
+# (aortic pulse-pressure factor ≈ 0.4); cuff-derived MAP is not
+# interchangeable with invasive arterial-line MAP in shock/vasopressor
+# states. Flags MAP < 65 (organ-perfusion threshold).
+# ============================================================
+
+topic:
+  id: "calc-map"
+  title: "Mean Arterial Pressure"
+  list_subtitle: "MAP from SBP / DBP"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["map", "mean arterial pressure", "blood pressure", "perfusion", "hemodynamics", "shock", "sbp", "dbp"]
+  aliases:
+    - "MAP"
+    - "Mean arterial pressure"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Mean arterial pressure from a cuff blood pressure. A MAP ≥ 65 mmHg is
+        the usual organ-perfusion target.
+
+    - type: "formula"
+      kind: "map"
+      title: "Mean arterial pressure"
+      source: "MAP = DBP + (SBP − DBP) / 3"
+      inputs:
+        - { key: "sbp", label: "Systolic BP", unit: "mmHg", type: "number" }
+        - { key: "dbp", label: "Diastolic BP", unit: "mmHg", type: "number" }
+      notes:
+        - "MAP = DBP + (SBP − DBP) / 3 = DBP + ⅓ × pulse pressure."
+      caveats:
+        - "The ⅓ formula is an estimate that tends to underestimate true MAP (better pulse-pressure factor ≈ 0.4)."
+        - "Cuff-derived MAP is not interchangeable with an arterial-line MAP — prefer direct measurement in shock / on vasopressors."

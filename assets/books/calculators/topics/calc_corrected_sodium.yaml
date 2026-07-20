@@ -1,0 +1,49 @@
+# ============================================================
+# Sodium correction for hyperglycemia.
+# Evidence review 2026-07-19: the Hillier 2.4 factor (Hillier, Am J Med
+# 1999, hyperglycemic-clamp) is better-validated than the classic Katz
+# 1.6 (Katz, NEJM 1973), especially at glucose > 400 mg/dL. Default 2.4,
+# show 1.6 for comparison. Corrected Na is an interpretive aid for fluid
+# tonicity/trend — NOT a treatment target; DKA/HHS fluids follow ADA 2024.
+# ============================================================
+
+topic:
+  id: "calc-corrected-sodium"
+  title: "Sodium Correction (Hyperglycemia)"
+  list_subtitle: "Hillier 2.4 (Katz 1.6 shown)"
+  last_reviewed: "Evidence review 2026-07-19 · Hillier 1999 · ADA 2024"
+  tags: ["sodium", "corrected", "hyperglycemia", "glucose", "hyponatremia", "dka", "hhs", "electrolyte", "hillier", "katz"]
+  aliases:
+    - "Corrected sodium"
+    - "Corrected Na"
+    - "Sodium correction"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Estimates true serum sodium given hyperglycemia (glucose pulls water
+        intravascularly, diluting measured Na⁺). Uses the evidence-preferred
+        **Hillier ×2.4** factor; the legacy **Katz ×1.6** is shown for
+        comparison.
+
+    - type: "formula"
+      kind: "corrected_sodium"
+      title: "Corrected sodium"
+      source: "Hillier, Am J Med 1999 (×2.4); Katz, NEJM 1973 (×1.6)"
+      inputs:
+        - { key: "sodium", label: "Measured Na⁺", unit: "mEq/L", type: "number" }
+        - { key: "glucose", label: "Glucose", type: "number" }
+        - key: "glu_unit"
+          label: "Glucose unit"
+          type: "select"
+          default: "mg/dL"
+          options:
+            - { value: "mg/dL" }
+            - { value: "mmol/L" }
+      notes:
+        - "Corrected Na⁺ = measured Na⁺ + factor × (glucose[mg/dL] − 100) / 100."
+      caveats:
+        - "Interpretive aid for fluid tonicity and trend — not a treatment target."
+        - "DKA/HHS fluid resuscitation follows ADA 2024 (isotonic crystalloid first); the ADA 2024 consensus tracks β-hydroxybutyrate over the anion gap."

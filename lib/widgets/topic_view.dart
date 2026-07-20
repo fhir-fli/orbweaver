@@ -5,6 +5,7 @@ import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/anchor_scope.dart';
 import 'package:orbweaver/widgets/blocks/conversion_block_view.dart';
 import 'package:orbweaver/widgets/blocks/drug_card_block_view.dart';
+import 'package:orbweaver/widgets/blocks/formula_block_view.dart';
 import 'package:orbweaver/widgets/blocks/image_block_view.dart';
 import 'package:orbweaver/widgets/blocks/prose_block_view.dart';
 import 'package:orbweaver/widgets/blocks/table_block_view.dart';
@@ -200,6 +201,7 @@ class _BlockRenderer extends StatelessWidget {
       final ArrowsBlock b => _ArrowsBlockRenderer(block: b),
       final MergeArrowsBlock b => _MergeArrowsRenderer(block: b),
       final ConversionBlock b => ConversionBlockView(block: b, theme: t),
+      final FormulaBlock b => FormulaBlockView(block: b, theme: t),
     };
     return identical(t, theme)
         ? child

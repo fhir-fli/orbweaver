@@ -1,0 +1,43 @@
+# ============================================================
+# Anion gap (+ optional albumin correction, Figge).
+# Evidence review 2026-07-19: AG = Na − (Cl + HCO3). Albumin correction
+# (+2.5 per 1 g/dL below 4.0) unmasks an occult high gap in hypoalbuminemia
+# and is better-founded than calcium correction — but it is NOT a lactate
+# surrogate (Chawla 2008: doesn't improve hyperlactatemia detection).
+# Check a lactate directly. Normal AG ≈ 8–12 (analyzer-dependent).
+# ============================================================
+
+topic:
+  id: "calc-anion-gap"
+  title: "Anion Gap"
+  list_subtitle: "± albumin correction"
+  last_reviewed: "Evidence review 2026-07-19 · Figge 1998 (albumin correction)"
+  tags: ["anion", "gap", "acidosis", "hagma", "albumin", "figge", "acid-base", "electrolyte", "bicarbonate"]
+  aliases:
+    - "Anion gap"
+    - "AG"
+    - "HAGMA"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Serum anion gap from the basic metabolic panel. Add albumin to also
+        get the **albumin-corrected** gap, which unmasks a hidden high gap
+        when albumin is low.
+
+    - type: "formula"
+      kind: "anion_gap"
+      title: "Anion gap"
+      source: "AG = Na − (Cl + HCO₃); albumin correction per Figge, Crit Care Med 1998"
+      inputs:
+        - { key: "sodium", label: "Na⁺", unit: "mEq/L", type: "number" }
+        - { key: "chloride", label: "Cl⁻", unit: "mEq/L", type: "number" }
+        - { key: "bicarbonate", label: "HCO₃⁻", unit: "mEq/L", type: "number" }
+        - { key: "albumin", label: "Albumin", unit: "g/dL", type: "number", optional: true }
+      notes:
+        - "Anion gap = Na⁺ − (Cl⁻ + HCO₃⁻); normal ≈ 8–12 mEq/L (analyzer-dependent)."
+        - "Albumin-corrected AG = AG + 2.5 × (4.0 − albumin g/dL)."
+      caveats:
+        - "The albumin correction unmasks an occult gap in hypoalbuminemia but is NOT a lactate surrogate — measure lactate directly when perfusion is a concern."

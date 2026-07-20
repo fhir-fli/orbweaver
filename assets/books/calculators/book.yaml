@@ -1,0 +1,35 @@
+book:
+  id: "calculators"
+  title: "Calculators"
+  subtitle: "Bedside clinical calculators"
+  cover: "cover.png"      # "Calculators" cover; title renders below on the shelf
+  spine_color: "0xFF00695C"
+  # Calculators: evidence-vetted bedside clinical calculators. Two kinds:
+  #   - conversion  (equivalence/tiers dose converters — opioid/benzo/statin/steroid)
+  #   - formula     (numbers in → number out — CrCl, MAP, corrected Na, …)
+  # Every calculator is guideline-backed; each formula's math lives in a
+  # unit-tested Dart registry (lib/data/formula_registry.dart), not free text.
+  # Book-level palette: a teal "tools" accent inherited by all calculators.
+  palette:
+    accent: "0xFF00695C"
+  contents:
+    - title: "Dose Conversions"
+      children:
+        - topic: "topics/conv_opioids.yaml"
+        - topic: "topics/conv_benzodiazepines.yaml"
+        - topic: "topics/conv_steroids.yaml"
+        - topic: "topics/conv_statins.yaml"
+    - title: "Renal & Fluids"
+      children:
+        - topic: "topics/calc_creatinine_clearance.yaml"
+        - topic: "topics/calc_holliday_segar.yaml"
+    - title: "Electrolytes & Acid–Base"
+      children:
+        - topic: "topics/calc_corrected_sodium.yaml"
+        - topic: "topics/calc_anion_gap.yaml"
+        - topic: "topics/calc_winters.yaml"
+        - topic: "topics/calc_aa_gradient.yaml"
+    - title: "Hemodynamics & Body Size"
+      children:
+        - topic: "topics/calc_map.yaml"
+        - topic: "topics/calc_ideal_body_weight.yaml"

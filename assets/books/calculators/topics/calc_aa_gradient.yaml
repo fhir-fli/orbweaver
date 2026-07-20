@@ -1,0 +1,42 @@
+# ============================================================
+# Alveolar-arterial (A-a) oxygen gradient.
+# Evidence review 2026-07-19: PAO2 = FiO2×(Patm − PH2O) − PaCO2/R;
+# A-a = PAO2 − PaO2. Age-adjusted upper normal ≈ age/4 + 4. Sea-level
+# defaults Patm 760, PH2O 47, R 0.8. Patm is adjustable for altitude.
+# ============================================================
+
+topic:
+  id: "calc-aa-gradient"
+  title: "A–a Oxygen Gradient"
+  list_subtitle: "alveolar-arterial O₂ gradient"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["a-a", "aa gradient", "oxygen", "alveolar", "arterial", "hypoxemia", "abg", "pao2", "shunt"]
+  aliases:
+    - "A-a gradient"
+    - "Alveolar-arterial gradient"
+    - "Aa gradient"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        The alveolar-arterial oxygen gradient from an ABG. An elevated
+        gradient points to V/Q mismatch, shunt, or diffusion limitation
+        (vs hypoventilation / low FiO₂, where the gradient is normal).
+
+    - type: "formula"
+      kind: "aa_gradient"
+      title: "A–a gradient"
+      source: "PAO₂ = FiO₂×(Patm − 47) − PaCO₂/0.8; A–a = PAO₂ − PaO₂"
+      inputs:
+        - { key: "fio2", label: "FiO₂", unit: "%", type: "number", default: 21, help: "21 = room air" }
+        - { key: "paco2", label: "PaCO₂", unit: "mmHg", type: "number" }
+        - { key: "pao2", label: "PaO₂", unit: "mmHg", type: "number" }
+        - { key: "age", label: "Age", unit: "yr", type: "number", optional: true, help: "for age-adjusted normal" }
+        - { key: "patm", label: "Atmospheric P", unit: "mmHg", type: "number", optional: true, help: "760 at sea level; lower at altitude" }
+      notes:
+        - "Age-adjusted upper limit of normal ≈ (age / 4) + 4 mmHg."
+        - "Defaults: Patm 760 mmHg (sea level), water vapour 47 mmHg, respiratory quotient 0.8."
+      caveats:
+        - "At altitude, enter the local atmospheric pressure — the sea-level default (760 mmHg) overestimates PAO₂ and the gradient otherwise."

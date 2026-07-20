@@ -1,0 +1,39 @@
+# ============================================================
+# Winters formula — expected pCO2 in metabolic acidosis.
+# Evidence review 2026-07-19: expected pCO2 = 1.5 × HCO3 + 8 ± 2
+# (Winters, 1967). Standard, uncontroversial. Assesses adequacy of
+# respiratory compensation / detects a superimposed respiratory disorder.
+# ============================================================
+
+topic:
+  id: "calc-winters"
+  title: "Winters' Formula"
+  list_subtitle: "expected pCO₂ in metabolic acidosis"
+  last_reviewed: "Evidence review 2026-07-19 · Winters 1967"
+  tags: ["winters", "pco2", "metabolic", "acidosis", "compensation", "acid-base", "bicarbonate", "respiratory"]
+  aliases:
+    - "Winters formula"
+    - "Expected pCO2"
+    - "Respiratory compensation"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Predicts the pCO₂ expected from appropriate respiratory compensation
+        in a primary metabolic acidosis. Enter the measured pCO₂ too to check
+        for a superimposed respiratory disorder.
+
+    - type: "formula"
+      kind: "winters"
+      title: "Expected pCO₂"
+      source: "Winters, Dell & Albert, 1967"
+      inputs:
+        - { key: "bicarbonate", label: "HCO₃⁻", unit: "mEq/L", type: "number" }
+        - { key: "measured_pco2", label: "Measured pCO₂", unit: "mmHg", type: "number", optional: true }
+      notes:
+        - "Expected pCO₂ = 1.5 × HCO₃⁻ + 8 (± 2) mmHg."
+        - "Measured > expected → concurrent respiratory acidosis; measured < expected → concurrent respiratory alkalosis."
+      caveats:
+        - "Applies to a primary metabolic acidosis — interpret alongside the full acid-base picture."

@@ -972,6 +972,7 @@ sealed class Block {
       'arrows' => ArrowsBlock.fromYaml(map),
       'merge_arrows' => MergeArrowsBlock.fromYaml(map),
       'conversion' => ConversionBlock.fromYaml(map),
+      'formula' => FormulaBlock.fromYaml(map),
       _ => throw FormatException('Unknown block type: $type'),
     };
   }
@@ -1699,6 +1700,118 @@ class ConversionBlock extends Block {
       agent.factor == null || agent.factor == 0
           ? null
           : referenceEquivalents / agent.factor!;
+}
+
+// ─────────────────────────────────────────────────────────────
+// FORMULA BLOCK (numbers in → number out)
+// ─────────────────────────────────────────────────────────────
+// The math lives in lib/data/formula_registry.dart (pure Dart, unit-tested)
+// keyed by [FormulaBlock.kind]. This block only declares the form. See
+// docs/formula_block.md.
+
+enum FormulaInputType {
+  number,
+  select;
+
+  static FormulaInputType fromString(String? s) =>
+      s == 'select' ? select : number;
+}
+
+/// One option in a `select` input (a unit toggle, sex, …).
+class FormulaOption {
+  const FormulaOption({required this.value, this.label});
+
+  factory FormulaOption.fromYaml(dynamic raw) => raw is Map
+      ? FormulaOption(value: '${raw['value']}', label: raw['label'] as String?)
+      : FormulaOption(value: '$raw');
+
+  final String value;
+  final String? label;
+  String get display => label ?? value;
+}
+
+/// One user input of a [FormulaBlock] — drives a form field. The compute
+/// function reads values by [key].
+class FormulaInput {
+  const FormulaInput({
+    required this.key,
+    required this.label,
+    required this.type,
+    this.unit,
+    this.help,
+    this.defaultValue,
+    this.options = const [],
+    this.optional = false,
+  });
+
+  factory FormulaInput.fromYaml(Map<dynamic, dynamic> map) => FormulaInput(
+        key: map['key'] as String,
+        label: map['label'] as String,
+        type: FormulaInputType.fromString(map['type'] as String?),
+        unit: map['unit'] as String?,
+        help: map['help'] as String?,
+        defaultValue: map['default'] == null ? null : '${map['default']}',
+        options: [
+          for (final o in map['options'] as List? ?? const [])
+            FormulaOption.fromYaml(o),
+        ],
+        optional: (map['optional'] as bool?) ?? false,
+      );
+
+  final String key;
+  final String label;
+  final FormulaInputType type;
+  final String? unit;
+  final String? help;
+
+  /// Default as a string (parsed to num for number inputs; the selected option
+  /// value for selects, falling back to the first option).
+  final String? defaultValue;
+  final List<FormulaOption> options;
+
+  /// Optional inputs don't block computation when blank (e.g. albumin for the
+  /// anion-gap correction, or actual weight for adjusted body weight).
+  final bool optional;
+}
+
+/// Interactive formula calculator block. Numeric/select inputs → one or more
+/// computed outputs via the registry keyed by [kind]. The first stateful block
+/// after [ConversionBlock].
+class FormulaBlock extends Block {
+  const FormulaBlock({
+    required this.kind,
+    required this.inputs,
+    this.title,
+    this.source,
+    this.notes = const [],
+    this.caveats = const [],
+    super.anchor,
+    super.ownPaletteArgb,
+  });
+
+  factory FormulaBlock.fromYaml(Map<dynamic, dynamic> map) => FormulaBlock(
+        kind: map['kind'] as String,
+        title: map['title'] as String?,
+        source: map['source'] as String?,
+        inputs: _mapList(map['inputs'], FormulaInput.fromYaml),
+        notes: _stringList(map['notes']),
+        caveats: _stringList(map['caveats']),
+        anchor: map['anchor'] as String?,
+        ownPaletteArgb: _parsePaletteArgb(map['palette']),
+      );
+
+  /// Registry key selecting the compute function (see formula_registry.dart).
+  final String kind;
+  final String? title;
+
+  /// Provenance of the formula — required for clinical safety (shown as source).
+  final String? source;
+
+  final List<FormulaInput> inputs;
+
+  /// Static explanatory lines shown under the result (e.g. the formula itself).
+  final List<String> notes;
+  final List<String> caveats;
 }
 
 // ─────────────────────────────────────────────────────────────

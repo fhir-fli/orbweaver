@@ -5,7 +5,7 @@ import 'package:orbweaver/models/topic.dart';
 
 ConversionBlock _load(String topicFile) {
   final yaml =
-      File('assets/books/wtf/topics/$topicFile').readAsStringSync();
+      File('assets/books/calculators/topics/$topicFile').readAsStringSync();
   return Topic.fromYamlString(yaml).blocks.whereType<ConversionBlock>().single;
 }
 
@@ -121,6 +121,58 @@ void main() {
 
     test('midazolam is excluded', () {
       expect(b.excluded.map((e) => e.name), contains('Midazolam'));
+    });
+  });
+
+  group('Corticosteroid converter (equivalence)', () {
+    late ConversionBlock b;
+    setUpAll(() => b = _load('conv_steroids.yaml'));
+
+    ConversionAgent agent(String name) => b.agentFor(name, null)!;
+
+    test('mode, reference, source are set', () {
+      expect(b.mode, ConversionMode.equivalence);
+      expect(b.reference, 'prednisone');
+      expect(b.referenceLabel, isNotNull);
+      expect(b.source, isNotNull);
+    });
+
+    test('reference identity: prednisone & prednisolone factor 1.0', () {
+      expect(agent('Prednisone').factor, 1.0);
+      expect(agent('Prednisolone').factor, 1.0);
+    });
+
+    test('golden equipotent doses → 5 mg prednisone-equivalent', () {
+      // classic table: HC 20 = cortisone 25 = pred 5 = mPred 4
+      //   = triamcinolone 4 = dex 0.75 = betamethasone 0.6
+      expect(b.toReference(agent('Hydrocortisone'), 20), closeTo(5, 1e-9));
+      expect(b.toReference(agent('Cortisone'), 25), closeTo(5, 1e-9));
+      expect(b.toReference(agent('Methylprednisolone'), 4), closeTo(5, 1e-9));
+      expect(b.toReference(agent('Triamcinolone'), 4), closeTo(5, 1e-9));
+      expect(b.toReference(agent('Dexamethasone'), 0.75), closeTo(5, 5e-3));
+      expect(b.toReference(agent('Betamethasone'), 0.6), closeTo(5, 5e-3));
+    });
+
+    test('direct dex → methylprednisolone conversion', () {
+      // dexamethasone 4 mg → 26.67 mg pred-equiv → mPred 21.3 mg
+      final predEq = b.toReference(agent('Dexamethasone'), 4)!;
+      expect(predEq, closeTo(26.67, 0.05));
+      expect(
+        b.fromReference(agent('Methylprednisolone'), predEq),
+        closeTo(21.3, 0.05),
+      );
+    });
+
+    test('fludrocortisone excluded (mineralocorticoid), not selectable', () {
+      expect(b.excluded.map((e) => e.name), contains('Fludrocortisone'));
+      expect(b.agentNames, isNot(contains('Fludrocortisone')));
+    });
+
+    test('every agent has a positive factor', () {
+      for (final a in b.agents) {
+        expect(a.factor, isNotNull, reason: '${a.name} needs a factor');
+        expect(a.factor! > 0, isTrue);
+      }
     });
   });
 

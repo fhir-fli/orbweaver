@@ -1,0 +1,39 @@
+# ============================================================
+# Maintenance IV fluids — Holliday-Segar (4-2-1 / 100-50-20).
+# Evidence review 2026-07-19: the RATE calculation is standard, but the
+# COMPOSITION must be ISOTONIC per AAP 2018 (Feld, Pediatrics 2018) — the
+# historical hypotonic default (D5-0.45%/0.2% NaCl) causes iatrogenic
+# hyponatremia. Applies to children > 28 days (neonates differ).
+# ============================================================
+
+topic:
+  id: "calc-holliday-segar"
+  title: "Maintenance IV Fluids"
+  list_subtitle: "Holliday-Segar 4-2-1 rule"
+  last_reviewed: "Evidence review 2026-07-19 · Holliday-Segar 1957 · AAP 2018 (isotonic)"
+  tags: ["fluids", "maintenance", "holliday", "segar", "4-2-1", "iv", "pediatric", "hydration", "rate"]
+  aliases:
+    - "4-2-1 rule"
+    - "Maintenance fluids"
+    - "Holliday-Segar"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Maintenance fluid **rate** by weight (Holliday-Segar). Enter weight;
+        the calculator gives the hourly rate and 24-hour volume.
+
+    - type: "formula"
+      kind: "holliday_segar"
+      title: "Maintenance fluid rate"
+      source: "Holliday & Segar, Pediatrics 1957; composition per AAP 2018 (Feld)"
+      inputs:
+        - { key: "weight", label: "Weight", unit: "kg", type: "number" }
+      notes:
+        - "Hourly (4-2-1): 4 mL/kg/h first 10 kg + 2 mL/kg/h next 10 kg + 1 mL/kg/h each kg > 20."
+        - "Daily (100-50-20): 100 mL/kg first 10 kg + 50 mL/kg next 10 kg + 20 mL/kg each kg > 20."
+      caveats:
+        - "Use an ISOTONIC maintenance fluid (0.9% NaCl or balanced, + dextrose/KCl) per AAP 2018 — hypotonic fluids (D5-0.45%/0.2% NaCl) risk hyponatremia."
+        - "For children > 28 days; neonates and specific states (SIADH, renal/cardiac disease, ongoing losses) need adjustment."

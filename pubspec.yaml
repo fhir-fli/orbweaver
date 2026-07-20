@@ -33,5 +33,5 @@ flutter:
     - assets/books/wvems/topics/
     - assets/books/who_imci/
     - assets/books/who_imci/topics/
-    - assets/books/wtf/
-    - assets/books/wtf/topics/
+    - assets/books/calculators/
+    - assets/books/calculators/topics/
