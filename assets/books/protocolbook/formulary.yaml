@@ -11,6 +11,12 @@
 #
 # Source-verified against pp.146–158 @150/300 dpi (RULE #0). p.145 is the
 # section divider.
+#
+# SILENT CORRECTIONS of clear typos (Grey to fix the source PDF):
+#   - p.148 Ceftriaxone adults "Other: 2 g IV q23hr" → "q24hr" (once-daily
+#     ceftriaxone; q23hr is a clear typo).
+#   - p.149 Cloxacillin adults "Severe infection: q4hr5" → "q4hr" (stray 5);
+#     "Flush line ... will if given" → "well".
 # ============================================================
 
 formulary:
@@ -108,3 +114,342 @@ formulary:
         - Adults: 5–10 mg/dose PO daily
       notes: |
         Max dose 5 mg/dose, 10 mg/24 hr.
+
+    # ═══════════════════════ PAGE 147 ═══════════════════════
+    - id: "amphotericin"
+      name: "Amphotericin"
+      class: ""
+      page: 147
+      dose: |
+        **Children / Adults:**
+        - Liposomal amphotericin B: 4 mg/kg/day IV
+        - Amphotericin B deoxycholate: 1 mg/kg/day IV
+      notes: |
+        Used with flucytosine.
+
+    - id: "ampicillin"
+      name: "Ampicillin"
+      class: ""
+      page: 147
+      dose: |
+        **Neonate:** 50 mg/kg/dose IV or IM
+        - < 7 days: 12 hourly
+        - 8–28 days: 8 hourly
+
+        **Infants / Children:** 50 mg/kg/dose (max 500 mg) 6 hourly IV/IM
+
+        **Adults:** 2 g 6 hourly IV/IM
+      notes: |
+        **DO NOT MIX WITH GENTAMICIN.** Flush line or burette if given at the same time as gentamicin.
+
+        - IV push: over 3–5 min
+        - IV infusion: over 15–30 min
+
+    - id: "artesunate"
+      name: "Artesunate"
+      class: ""
+      page: 147
+      dose: |
+        - < 5 kg: treat as though 5 kg
+        - < 20 kg: 3 mg/kg IV/IM at 0, 12 & 24 hrs
+        - > 20 kg: 2.4 mg/kg IV/IM at 0, 12 & 24 hrs
+
+    - id: "azithromycin"
+      name: "Azithromycin"
+      class: ""
+      page: 147
+      dose: |
+        - Infants / Children: 10 mg/kg PO × 1 day, then 5 mg/kg PO × 4 days
+        - Adults: 500 mg PO × 1 day, then 250 mg PO × 4 days
+      notes: |
+        MAC: the first-day dose is continued as the maintenance dose.
+
+    - id: "benzyl-penicillin"
+      name: "Benzyl Penicillin (Crystalline Penicillin, PenG)"
+      class: ""
+      page: 147
+      dose: |
+        - < 7 days: 50,000 IU/kg/dose q12hrs IV/IM
+        - ≥ 7 days: 50,000 IU/kg/dose q6hrs IV/IM
+
+        **Group A streptococcal pharyngitis:**
+        - ≤ 27 kg: 600,000 IU IM single dose
+        - > 27 kg: 1.2 million IU IM single dose
+
+    - id: "calcium"
+      name: "Calcium"
+      class: ""
+      page: 147
+      dose: |
+        **Children:**
+        - Replacement: 10 mg/kg/day
+        - Tetany / convulsions: 0.6–1 mL/kg of 10% solution via slow push
+
+        **Adults:**
+        - Tetany / convulsions: 2 g IV calcium gluconate
+        - Replacement: 10 mg/kg/day
+      notes: |
+        - 20 mg = 1 mEq
+        - 100 mg Ca carbonate = 40 mg elemental Ca = 2 mEq Ca
+        - **Ca gluconate 10%:** max dose 20 mL/kg, max dose 2 g
+
+    - id: "captopril"
+      name: "Captopril"
+      class: ""
+      page: 147
+      dose: |
+        - Neonate: 0.01–0.05 mg/kg/dose PO Q8–12hr
+        - Infants < 6 mo: 0.01–0.5 mg/kg/dose PO BID-TID
+        - Children: 0.3–0.5 mg/kg/dose PO BID-TID
+        - Adults: 12.5–25 mg PO BID-TID; titrate qweek by 25 mg/dose
+      notes: |
+        Max dose 450 mg/24 hr.
+
+    # ═══════════════════════ PAGE 148 ═══════════════════════
+    - id: "carbamazepine"
+      name: "Carbamazepine"
+      class: ""
+      page: 148
+      dose: |
+        **< 12 years:**
+        - Initial: 10–20 mg/kg/24hr PO ÷ q12hr
+        - Titrate qweek
+
+        **> 12 yr:**
+        - Initial: 200 mg PO BD
+        - Titrate qweek by 200 mg/24hr
+      notes: |
+        Avoid abrupt withdrawal and watch carefully for side effects.
+
+        **Max dose:**
+        - < 12 yrs: 1 g/day, 35 mg/kg/day, 100 mg/dose BD
+        - 12–15 yrs: 1 g/24hr
+        - > 15 yrs: 1.2 g/24hr
+        - Adult: 1.6–2.4 g/24hr
+
+    - id: "carvedilol"
+      name: "Carvedilol"
+      class: ""
+      page: 148
+      dose: |
+        - Infants / Children: 0.025 mg/kg/dose PO q12hr
+        - Adults: 3.125 mg PO q12hr, max 25 mg PO q12hr
+      notes: |
+        Titrate every 2 weeks.
+
+    - id: "cefotaxime"
+      name: "Cefotaxime"
+      class: ""
+      page: 148
+      dose: |
+        **Neonates:**
+        - < 7 days: 50 mg/kg/dose IV/IM 12 hourly
+        - 8–28 days: 50 mg/kg/dose IV/IM 8 hourly
+
+        **Infants / Children:**
+        - 50 mg/kg/dose q8hr
+        - Meningitis: 50 mg/kg/dose q6hr
+        - Max: 2000 mg/dose
+
+        **Adults:**
+        - Meningitis / sepsis: 2 g IV 6 hrly
+        - Other: 1 g IV 12 hrly
+      notes: |
+        Flush line or burette well if given at the same time as gentamicin.
+
+        - IV push: over 5 minutes
+        - IV infusion: over 30 min
+
+    - id: "ceftriaxone"
+      name: "Ceftriaxone"
+      class: ""
+      page: 148
+      dose: |
+        **Infants:**
+        - Meningitis: 100 mg/kg IV OD
+        - Sepsis / pneumonia: 80 mg/kg IV OD
+
+        **Children:**
+        - 50 mg/kg/dose IV/IM q24hr
+        - Meningitis: 100 mg/kg/dose q24hr
+        - Max: 2 g/dose
+
+        **Adults:**
+        - Meningitis: 2 g IV q12hr
+        - Other: 2 g IV q24hr
+      notes: |
+        Contraindicated in neonates if severe jaundice. Do not mix with RL.
+
+        - IV push: 10 minutes
+        - IV infusion: give over 30–60 minutes
+
+    - id: "ciprofloxacin"
+      name: "Ciprofloxacin"
+      class: ""
+      page: 148
+      dose: |
+        **Children:**
+        - 10–15 mg/kg/dose PO BD
+        - Max: 1000 mg/dose
+
+        **Adults:**
+        - Mild / moderate infection: 500 mg PO BD
+        - Severe infection: 750 mg PO BD
+        - UTI (uncomplicated): 250 mg PO BD × 3 days
+
+    # ═══════════════════════ PAGE 149 ═══════════════════════
+    - id: "clarithromycin"
+      name: "Clarithromycin"
+      class: ""
+      page: 149
+      dose: |
+        - Children: 10 mg/kg/dose BD
+        - Adults: 500 mg PO BD
+
+    - id: "clotrimazole"
+      name: "Clotrimazole"
+      class: ""
+      page: 149
+      dose: |
+        - Children: paint for oral thrush — apply BD-TID until cleared
+        - Children / Adults: apply to the infected area BD-TID until cleared
+
+    - id: "cloxacillin"
+      name: "Cloxacillin"
+      class: ""
+      page: 149
+      dose: |
+        **Neonates:** 25–50 mg/kg/dose
+        - < 7 days: every 12 hours
+        - 8–28 days: every 8 hours
+
+        **Infants / Children:** 25–50 mg/kg/dose IV/IM q6hr
+
+        **Adults:**
+        - 2 g IV/IM
+        - Mild / moderate infection: q6hr
+        - Severe infection: q4hr
+      notes: |
+        Flush line or burette well if given at the same time as gentamicin.
+
+    - id: "co-trimoxazole"
+      name: "Co-trimoxazole (Trimethoprim–Sulfamethoxazole, TMP-SMX)"
+      class: ""
+      page: 149
+      dose: |
+        **Children:**
+        - Dosage: 4 mg/kg/dose TMP + 20 mg/kg/dose SMX/dose BD
+        - For interstitial pneumonia in children with HIV give 8 mg/kg/dose + SMZ 40 mg/kg/dose TMP TID × 21 days
+
+        **Adults:**
+        - TMP 160 mg / SMX 800 mg PO every 12 hrs
+        - PCP pneumonia: TMP 15–20 mg/kg/day, SMX 75–100 mg/kg/day, divided in 4 equal doses
+      notes: |
+        - Syrup: 40 mg TMP / 200 mg SMZ per 5 mL
+        - Paediatric tab: 20 mg TMP / 100 mg SMZ
+        - **Max dose:** TMP 160 mg / SMX 800 mg PO q12hrs
+        - **Tablets:** Single Strength (SS) = TMP 80 mg / SMX 400 mg; Double Strength (DS) = TMP 160 mg / SMX 800 mg
+
+    - id: "dapsone"
+      name: "Dapsone"
+      class: ""
+      page: 149
+      dose: |
+        Prophylaxis CD4 < 200:
+        - Children: 2 mg/kg PO QD
+        - Adults: 100 mg PO QD
+
+    - id: "dexamethasone"
+      name: "Dexamethasone"
+      class: ""
+      page: 149
+      dose: |
+        **Children:**
+        - Extubation / upper airway swelling: 0.25–0.5 mg/kg/dose IV q6hr (max 8 mg/dose)
+        - Asthma / croup: 0.6 mg/kg/dose IV/IM/PO × 1 dose
+
+        **Adults:**
+        - Cerebral edema: 2 mg PO TID
+
+    # ═══════════════════════ PAGE 150 ═══════════════════════
+    - id: "dextrose-glucose"
+      name: "Dextrose / Glucose"
+      class: ""
+      page: 150
+      dose: |
+        - Neonates / infants / children: D10% 5 mL/kg IV push (if no D10 immediately available, use D5)
+        - Adults: 25–50 mL D50 IV push
+      notes: |
+        **How to make D10:**
+        - 1 mL of D50% + 9 mL D5%, OR
+        - 2 mL of D50% + 8 mL NS
+
+    - id: "diazepam"
+      name: "Diazepam"
+      class: ""
+      page: 150
+      dose: |
+        **Rectal diazepam 2.5 mg suppository:**
+        - < 10 kg: 1 suppository
+        - 10–15 kg: 2 suppositories
+        - 15–20 kg: 3 suppositories
+        - 20–25 kg: 4 suppositories
+
+        **IV diazepam:** 0.3 mg/kg slowly over 1 minute
+      notes: |
+        Do not give to a neonate. Do not give IM.
+
+    - id: "digoxin"
+      name: "Digoxin"
+      class: ""
+      page: 150
+      dose: |
+        **Age 2–5 yrs:**
+        - Loading: 35 mcg/kg ÷ TID × 24hr
+        - Maintenance: 5 mcg/kg/dose BD
+
+        **Age 5–10 yrs:**
+        - Loading: 25 mcg/kg ÷ TID × 24hr
+        - Maintenance: 3 mcg/kg/dose BD
+
+        **Age 10–12 yrs:**
+        - Loading: 0.75–1.5 mg ÷ TID × 24hr
+        - Maintenance: 30–125 mcg BD
+
+        **Adults:**
+        - Rapid digitalization:
+          - IV/IM: 5 mcg/kg × 1 dose, followed by 2.5 mcg/kg q8hr × 2 doses
+          - PO: 7 mcg/kg × 1 dose, followed by 3 mcg/kg q8hr × 2 doses
+        - Maintenance:
+          - IV/IM: 2.4–3.6 mcg/kg/day
+          - PO: 3.4–5.1 mcg/kg/day
+      notes: |
+        Titrate maintenance dose every 2 weeks.
+
+    - id: "enoxaparin"
+      name: "Enoxaparin"
+      class: ""
+      page: 150
+      dose: |
+        **Children / Adults:**
+        - DVT / PE treatment: 1 mg/kg SC q12hrs
+
+        **Adults:**
+        - DVT prophylaxis: 40 mg SC OD
+        - Acute coronary syndrome treatment: 1 mg/kg SC q12hrs
+      notes: |
+        Should not be given if CrCl < 30. For ACS: a 30 mg IV bolus is given 15 minutes before starting SC.
+
+    - id: "epinephrine"
+      name: "Epinephrine (Adrenaline)"
+      class: ""
+      page: 150
+      dose: |
+        **Resuscitation:**
+        - Children: 0.1 mL/kg IV of 1:10,000
+        - Adults: 1 mg or 10 mL 1:10,000
+
+        **Viral croup:**
+        - Children: 2 mL of 1:1000 nebulized, may repeat if effective
+      notes: |
+        To make 1:10,000: mix 1 mL of 1:1000 epinephrine in 9 mLs NS.

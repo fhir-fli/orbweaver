@@ -15,8 +15,9 @@ void main() {
     final titles = pb.allTopics.map((t) => t.title).toList();
     // 95 authored topic leaves + the Essential Medications formulary drugs
     // (each drug loads as a synthetic searchable leaf).
-    expect(titles, hasLength(100));
+    expect(titles, hasLength(123));
     expect(titles, contains('Acyclovir'));
+    expect(titles, contains('Epinephrine (Adrenaline)'));
     expect(
       titles,
       contains('Hydrocarbon Ingestion (Kerosene, Paraffin)'),
