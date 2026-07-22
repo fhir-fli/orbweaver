@@ -153,7 +153,24 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
         bold ? const TextStyle(fontWeight: FontWeight.w700) : null;
 
     final spans = <InlineSpan>[];
-    final re = RegExp(r'\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*');
+    TextSpan linkSpan(String display, String target) {
+      final recognizer = TapGestureRecognizer()..onTap = () => _onLinkTap(target);
+      _recognizers.add(recognizer);
+      return TextSpan(
+        text: display,
+        style: TextStyle(
+          color: linkColor,
+          decoration: TextDecoration.underline,
+          fontWeight: bold ? FontWeight.w700 : null,
+        ),
+        recognizer: recognizer,
+      );
+    }
+
+    // Order matters: explicit `[text](target)` first, then bold, then a bare
+    // URL (so a URL already inside a markdown link isn't matched twice).
+    final re = RegExp(
+        r'\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*|(https?://[^\s)\]]+)');
     var last = 0;
     for (final m in re.allMatches(stashed)) {
       if (m.start > last) {
@@ -163,23 +180,24 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
         ));
       }
       if (m.group(2) != null) {
-        // Link: group(1) = display text, group(2) = target.
-        final target = restore(m.group(2)!);
-        final recognizer = TapGestureRecognizer()..onTap = () => _onLinkTap(target);
-        _recognizers.add(recognizer);
-        spans.add(TextSpan(
-          text: restore(m.group(1)!),
-          style: TextStyle(
-            color: linkColor,
-            decoration: TextDecoration.underline,
-            fontWeight: bold ? FontWeight.w700 : null,
-          ),
-          recognizer: recognizer,
-        ));
-      } else {
+        // Explicit link: group(1) = display text, group(2) = target.
+        spans.add(linkSpan(restore(m.group(1)!), restore(m.group(2)!)));
+      } else if (m.group(3) != null) {
         // Bold: recurse into the inner content (still stashed) so any link
         // it contains is parsed too, not leaked as raw markup.
         spans.addAll(_parseInline(m.group(3)!, linkColor, bold: true));
+      } else {
+        // Bare URL: linkify it. Trailing sentence punctuation stays plain.
+        var url = restore(m.group(4)!);
+        var trailing = '';
+        while (url.isNotEmpty && '.,;:!?'.contains(url[url.length - 1])) {
+          trailing = '${url[url.length - 1]}$trailing';
+          url = url.substring(0, url.length - 1);
+        }
+        spans.add(linkSpan(url, url));
+        if (trailing.isNotEmpty) {
+          spans.add(TextSpan(text: trailing, style: plainStyle));
+        }
       }
       last = m.end;
     }
