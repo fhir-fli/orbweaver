@@ -19,6 +19,9 @@ topic:
     - "DKA"
   category: "medical"
 
+  # Sticky: flowchart page + prose page each snap to a full screen.
+  layout: "paged"
+
   pages:
 
   - page_number: 38

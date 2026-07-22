@@ -170,7 +170,7 @@ class _FitToScreen extends StatefulWidget {
 }
 
 class _FitToScreenState extends State<_FitToScreen> {
-  static const double _min = 0.55;
+  static const double _min = 0.48;
   double _scale = 1.0;
   final _key = GlobalKey();
 

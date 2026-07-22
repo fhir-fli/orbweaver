@@ -23,6 +23,9 @@ topic:
     - "Backboard"
   category: "trauma"
 
+  # Sticky: flowchart page + prose page each snap to a full screen.
+  layout: "paged"
+
   pages:
 
   - page_number: 60
