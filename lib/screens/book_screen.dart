@@ -98,7 +98,7 @@ class _BookScreenState extends State<BookScreen> {
         case BookLeaf(:final topic):
           sections.add(_IndexGrid(
             topics: [topic],
-            onTap: (t) => openTopicFromBook(context, widget.book.id, t),
+            onTap: (t) => openTopicFromBook(context, widget.book, t),
           ));
         case BookGroup group:
           final accent =
@@ -108,7 +108,7 @@ class _BookScreenState extends State<BookScreen> {
             ..add(_IndexGrid(
               topics: _leavesOf(group).toList(growable: false),
               accent: accent,
-              onTap: (t) => openTopicFromBook(context, widget.book.id, t),
+              onTap: (t) => openTopicFromBook(context, widget.book, t),
             ));
       }
     }
@@ -160,7 +160,7 @@ class _BookScreenState extends State<BookScreen> {
       itemBuilder: (context, i) => _TopicRow(
         topic: scored[i].$1,
         showBreadcrumb: true,
-        onTap: () => openTopicFromBook(context, widget.book.id, scored[i].$1),
+        onTap: () => openTopicFromBook(context, widget.book, scored[i].$1),
       ),
     );
   }
@@ -183,7 +183,7 @@ class _BookScreenState extends State<BookScreen> {
       itemBuilder: (context, i) => switch (nodes[i]) {
         BookLeaf(:final topic) => _TopicRow(
             topic: topic,
-            onTap: () => openTopicFromBook(context, widget.book.id, topic),
+            onTap: () => openTopicFromBook(context, widget.book, topic),
           ),
         BookGroup group when group.view == 'collection' &&
                 group.formulary != null =>
@@ -210,9 +210,8 @@ class _BookScreenState extends State<BookScreen> {
               context,
               MaterialPageRoute<void>(
                 builder: (_) => _ChapterScreen(
-                  bookId: widget.book.id,
+                  book: widget.book,
                   group: group,
-                  spineColor: widget.book.spineColor,
                 ),
               ),
             ),
@@ -222,10 +221,11 @@ class _BookScreenState extends State<BookScreen> {
   }
 }
 
-/// Records last-state and opens a topic page.
+/// Records last-state and opens a topic — inside a [TopicPager] so the reader
+/// can swipe left/right to the previous/next protocol in book order.
 Future<void> openTopicFromBook(
   BuildContext context,
-  String bookId,
+  Book book,
   BookTopic topic,
 ) async {
   // A synthetic formulary-drug row renders the drug detail directly (its
@@ -242,12 +242,22 @@ Future<void> openTopicFromBook(
     );
     return;
   }
-  await LastState.recordTopic(bookId, topic.id);
+  // Swipe-siblings = every real (non-drug) topic in book order.
+  final siblings =
+      book.allTopics.where((t) => t.drug == null).toList(growable: false);
+  final index = siblings.indexWhere((t) => t.id == topic.id);
+  await LastState.recordTopic(book.id, topic.id);
   if (!context.mounted) return;
   await Navigator.push(
     context,
     MaterialPageRoute<void>(
-      builder: (_) => TopicFrame(assetPath: topic.asset, palette: topic.palette),
+      builder: (_) => index < 0
+          ? TopicFrame(assetPath: topic.asset, palette: topic.palette)
+          : TopicPager(
+              siblings: siblings,
+              initialIndex: index,
+              bookId: book.id,
+            ),
     ),
   );
 }
@@ -256,21 +266,19 @@ Future<void> openTopicFromBook(
 /// and subsections shown as a collapsible accordion of [_NodeTile]s.
 class _ChapterScreen extends StatelessWidget {
   const _ChapterScreen({
-    required this.bookId,
+    required this.book,
     required this.group,
-    required this.spineColor,
   });
 
-  final String bookId;
+  final Book book;
   final BookGroup group;
-  final Color spineColor;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFEFEFEF),
       appBar: AppBar(
-        backgroundColor: spineColor,
+        backgroundColor: book.spineColor,
         foregroundColor: Colors.white,
         title: Text(group.title),
       ),
@@ -281,10 +289,10 @@ class _ChapterScreen extends StatelessWidget {
             _TopicRow(
               topic: group.overview!,
               onTap: () =>
-                  openTopicFromBook(context, bookId, group.overview!),
+                  openTopicFromBook(context, book, group.overview!),
             ),
           for (final node in group.children)
-            _NodeTile(node: node, bookId: bookId, depth: 0),
+            _NodeTile(node: node, book: book, depth: 0),
         ],
       ),
     );
@@ -297,12 +305,12 @@ class _ChapterScreen extends StatelessWidget {
 class _NodeTile extends StatelessWidget {
   const _NodeTile({
     required this.node,
-    required this.bookId,
+    required this.book,
     required this.depth,
   });
 
   final BookNode node;
-  final String bookId;
+  final Book book;
   final int depth;
 
   @override
@@ -312,7 +320,7 @@ class _NodeTile extends StatelessWidget {
         return _TopicRow(
           topic: topic,
           indent: depth * 12.0,
-          onTap: () => openTopicFromBook(context, bookId, topic),
+          onTap: () => openTopicFromBook(context, book, topic),
         );
       case BookGroup group:
         return ExpansionTile(
@@ -330,10 +338,10 @@ class _NodeTile extends StatelessWidget {
                 topic: group.overview!,
                 indent: (depth + 1) * 12.0,
                 onTap: () =>
-                    openTopicFromBook(context, bookId, group.overview!),
+                    openTopicFromBook(context, book, group.overview!),
               ),
             for (final child in group.children)
-              _NodeTile(node: child, bookId: bookId, depth: depth + 1),
+              _NodeTile(node: child, book: book, depth: depth + 1),
           ],
         );
     }

@@ -1,37 +1,48 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:orbweaver/data/topic_loader.dart';
+import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/models/topic.dart';
+import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
 
-/// Chrome around a [TopicView]: app bar with a page-number badge that
-/// updates as the user scrolls past each page's [TopicPage], plus the
-/// scroll view itself.
-///
-/// Scroll-tracking uses [RenderAbstractViewport.getOffsetToReveal] to
-/// compute each page's top offset on demand — no manual height math.
-class TopicFrame extends StatefulWidget {
-  const TopicFrame({required this.assetPath, this.palette = const {}, super.key});
+/// Loads a topic asset and renders just its body — either a continuous
+/// [SingleChildScrollView] (`layout: scroll`) or a sticky vertical [PageView]
+/// that snaps one screen per [TopicPage] (`layout: paged`). Carries no app-bar
+/// chrome; the parent ([TopicFrame] or [TopicPager]) owns that and is fed the
+/// loaded topic ([onLoaded]) and the currently-visible page number ([onPage]).
+class TopicBody extends StatefulWidget {
+  const TopicBody({
+    required this.assetPath,
+    this.palette = const {},
+    this.onLoaded,
+    this.onPage,
+    super.key,
+  });
 
   final String assetPath;
 
-  /// Fully-resolved color palette from the book → chapter → topic cascade,
-  /// passed when opened from a book. Empty for a standalone/pasted topic,
-  /// in which case the palette is resolved from the topic's own `palette:`.
+  /// Fully-resolved palette from the book→chapter→topic cascade (empty for a
+  /// standalone topic, whose palette is resolved from its own `palette:`).
   final Map<String, Color> palette;
 
+  final void Function(Topic topic)? onLoaded;
+  final void Function(int? pageNumber)? onPage;
+
   @override
-  State<TopicFrame> createState() => _TopicFrameState();
+  State<TopicBody> createState() => _TopicBodyState();
 }
 
-class _TopicFrameState extends State<TopicFrame> {
+class _TopicBodyState extends State<TopicBody> {
   final _scrollCtrl = ScrollController();
-  final _currentPage = ValueNotifier<int>(0);
+  final _pageCtrl = PageController();
   Topic? _topic;
   Object? _error;
   List<GlobalKey> _pageKeys = const [];
+  int _subPage = 0;
 
   @override
   void initState() {
@@ -44,6 +55,8 @@ class _TopicFrameState extends State<TopicFrame> {
         _pageKeys =
             List.generate(t.pages.length, (_) => GlobalKey(), growable: false);
       });
+      widget.onLoaded?.call(t);
+      _report();
     }).catchError((Object e) {
       if (!mounted) return;
       setState(() => _error = e);
@@ -53,8 +66,15 @@ class _TopicFrameState extends State<TopicFrame> {
   @override
   void dispose() {
     _scrollCtrl.dispose();
-    _currentPage.dispose();
+    _pageCtrl.dispose();
     super.dispose();
+  }
+
+  void _report() {
+    final t = _topic;
+    if (t == null || t.pages.isEmpty) return;
+    final idx = _subPage.clamp(0, t.pages.length - 1);
+    widget.onPage?.call(t.pages[idx].pageNumber);
   }
 
   void _onScroll() {
@@ -70,36 +90,26 @@ class _TopicFrameState extends State<TopicFrame> {
       final viewport = RenderAbstractViewport.maybeOf(box);
       if (viewport == null) continue;
       final reveal = viewport.getOffsetToReveal(box, 0).offset;
-      // Current page = last page whose top is above the viewport's
-      // vertical centre. That matches the reader's expectation: when
-      // more than half the screen is a given page, that page's number
-      // shows in the header.
       if (reveal <= viewportCenter) newIdx = i;
     }
-    if (_currentPage.value != newIdx) _currentPage.value = newIdx;
+    if (newIdx != _subPage) {
+      _subPage = newIdx;
+      _report();
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     if (_error != null) {
-      return Scaffold(
-        appBar: AppBar(title: const Text('Topic')),
-        body: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Text('Error: $_error'),
-        ),
+      return Padding(
+        padding: const EdgeInsets.all(16),
+        child: Text('Error: $_error'),
       );
     }
     final topic = _topic;
     if (topic == null) {
-      return Scaffold(
-        appBar: AppBar(title: const Text('Loading…')),
-        body: const Center(child: CircularProgressIndicator()),
-      );
+      return const Center(child: CircularProgressIndicator());
     }
-    // Resolve the palette (cascade from the book if opened there, else the
-    // topic's own over the defaults). The accent drives the app bar + badge
-    // so the header matches the content.
     final resolved = widget.palette.isNotEmpty
         ? widget.palette
         : resolvePalette([
@@ -108,104 +118,194 @@ class _TopicFrameState extends State<TopicFrame> {
             },
           ]);
     final theme = TopicTheme(resolved);
-    final accent = theme.header;
+
+    if (topic.layout == TopicLayout.paged && topic.pages.length > 1) {
+      // Sticky: each page snaps to a full screen; a non-scrollable inner
+      // viewport lets vertical drags drive the page snap.
+      return PageView(
+        controller: _pageCtrl,
+        scrollDirection: Axis.vertical,
+        onPageChanged: (i) {
+          _subPage = i;
+          _report();
+        },
+        children: [
+          for (final page in topic.pages)
+            SingleChildScrollView(
+              physics: const NeverScrollableScrollPhysics(),
+              child: TopicPageBody(page: page, theme: theme),
+            ),
+        ],
+      );
+    }
+
+    return SingleChildScrollView(
+      controller: _scrollCtrl,
+      child: TopicView(topic: topic, palette: resolved, pageKeys: _pageKeys),
+    );
+  }
+}
+
+/// A single topic with app-bar chrome (page badge + title), for standalone /
+/// last-state-restore opens where there are no sibling protocols to swipe.
+class TopicFrame extends StatefulWidget {
+  const TopicFrame({required this.assetPath, this.palette = const {}, super.key});
+
+  final String assetPath;
+  final Map<String, Color> palette;
+
+  @override
+  State<TopicFrame> createState() => _TopicFrameState();
+}
+
+class _TopicFrameState extends State<TopicFrame> {
+  final _pageNumber = ValueNotifier<int?>(null);
+  String _title = '';
+
+  @override
+  void dispose() {
+    _pageNumber.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final resolved = widget.palette.isNotEmpty ? widget.palette : null;
+    final accent = resolved != null ? TopicTheme(resolved).header : Colors.grey;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: accent,
         foregroundColor: Colors.white,
         titleSpacing: 8,
-        title: ValueListenableBuilder<int>(
-          valueListenable: _currentPage,
-          builder: (_, idx, _) {
-            final safeIdx = idx.clamp(0, topic.pages.length - 1);
-            final page = topic.pages[safeIdx];
-            return Row(
-              children: [
-                if (page.pageNumber != null) ...[
-                  _PageBadge(
-                    pageNumber: page.pageNumber!,
-                    headerColor: accent,
-                  ),
-                  const SizedBox(width: 10),
-                ],
-                Expanded(
-                  child: Text(
-                    topic.title,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-              ],
-            );
-          },
+        title: _AppBarTitle(
+          pageNumber: _pageNumber,
+          title: _title,
+          headerColor: accent,
         ),
       ),
       body: SafeArea(
-        child: topic.layout == TopicLayout.paged && topic.pages.length > 1
-            ? _StickyPages(
-                topic: topic,
-                theme: theme,
-                currentPage: _currentPage,
-              )
-            : SingleChildScrollView(
-                controller: _scrollCtrl,
-                child: TopicView(
-                  topic: topic,
-                  palette: resolved,
-                  pageKeys: _pageKeys,
-                ),
-              ),
+        child: TopicBody(
+          assetPath: widget.assetPath,
+          palette: widget.palette,
+          onLoaded: (t) => setState(() => _title = t.title),
+          onPage: (pn) => _pageNumber.value = pn,
+        ),
       ),
     );
   }
 }
 
-/// Sticky (paged) presentation: a vertical [PageView] that snaps one full
-/// screen per [TopicPage]. Each page is held in a non-scrollable viewport, so
-/// vertical drags drive the page snap (not an inner scroll) and the page is
-/// expected to fit the screen. [currentPage] is driven by `onPageChanged` so
-/// the app-bar badge follows the visible page.
-class _StickyPages extends StatefulWidget {
-  const _StickyPages({
-    required this.topic,
-    required this.theme,
-    required this.currentPage,
+/// A horizontally-swipeable run of sibling protocols: swipe left/right for the
+/// next/previous topic (in book order). Each page is a [TopicBody] (which may
+/// itself be sticky-paged or free-scroll). The app bar reflects the active
+/// protocol and its currently-visible page.
+class TopicPager extends StatefulWidget {
+  const TopicPager({
+    required this.siblings,
+    required this.initialIndex,
+    required this.bookId,
+    super.key,
   });
 
-  final Topic topic;
-  final TopicTheme theme;
-  final ValueNotifier<int> currentPage;
+  /// Ordered real topics (no formulary drugs) the user can swipe between.
+  final List<BookTopic> siblings;
+  final int initialIndex;
+  final String bookId;
 
   @override
-  State<_StickyPages> createState() => _StickyPagesState();
+  State<TopicPager> createState() => _TopicPagerState();
 }
 
-class _StickyPagesState extends State<_StickyPages> {
-  final _pageCtrl = PageController();
+class _TopicPagerState extends State<TopicPager> {
+  late final PageController _hCtrl =
+      PageController(initialPage: widget.initialIndex);
+  late int _activeIndex = widget.initialIndex;
+  final _badge = ValueNotifier<int?>(null);
+  final Map<int, int?> _badgeByIndex = {};
 
   @override
   void dispose() {
-    _pageCtrl.dispose();
+    _hCtrl.dispose();
+    _badge.dispose();
     super.dispose();
+  }
+
+  void _report(int index, int? pageNumber) {
+    _badgeByIndex[index] = pageNumber;
+    if (index == _activeIndex) _badge.value = pageNumber;
   }
 
   @override
   Widget build(BuildContext context) {
-    return PageView(
-      controller: _pageCtrl,
-      scrollDirection: Axis.vertical,
-      onPageChanged: (i) => widget.currentPage.value = i,
-      children: [
-        for (final page in widget.topic.pages)
-          SingleChildScrollView(
-            physics: const NeverScrollableScrollPhysics(),
-            child: TopicPageBody(page: page, theme: widget.theme),
+    final active = widget.siblings[_activeIndex];
+    final accent = TopicTheme(active.palette).header;
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: accent,
+        foregroundColor: Colors.white,
+        titleSpacing: 8,
+        title: _AppBarTitle(
+          pageNumber: _badge,
+          title: active.title,
+          headerColor: accent,
+        ),
+      ),
+      body: SafeArea(
+        child: PageView.builder(
+          controller: _hCtrl,
+          itemCount: widget.siblings.length,
+          onPageChanged: (i) {
+            setState(() => _activeIndex = i);
+            _badge.value = _badgeByIndex[i];
+            LastState.recordTopic(widget.bookId, widget.siblings[i].id);
+          },
+          itemBuilder: (context, i) {
+            final t = widget.siblings[i];
+            return TopicBody(
+              assetPath: t.asset,
+              palette: t.palette,
+              onPage: (pn) => _report(i, pn),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+/// App-bar title row: an optional page-number badge + the topic title.
+class _AppBarTitle extends StatelessWidget {
+  const _AppBarTitle({
+    required this.pageNumber,
+    required this.title,
+    required this.headerColor,
+  });
+
+  final ValueListenable<int?> pageNumber;
+  final String title;
+  final Color headerColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<int?>(
+      valueListenable: pageNumber,
+      builder: (_, pn, _) => Row(
+        children: [
+          if (pn != null) ...[
+            _PageBadge(pageNumber: pn, headerColor: headerColor),
+            const SizedBox(width: 10),
+          ],
+          Expanded(
+            child: Text(
+              title,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+            ),
           ),
-      ],
+        ],
+      ),
     );
   }
 }
