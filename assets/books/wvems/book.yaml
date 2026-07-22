@@ -4,6 +4,9 @@ book:
   subtitle: "2026 Edition · Prehospital"
   cover: "cover.png"
   spine_color: "0xFF1E4E8C"
+  # Single-page directory of every protocol (like the printed cover index),
+  # instead of the default drill-down TOC. Auto-built from the contents tree.
+  view: "index"
   # contents tree — the 4 PDF index sections as explicit groups
   # (Universal / Medical / Trauma / Critical Care) + a drug-reference
   # appendix. Topic+map model; section structure is declared, not derived.

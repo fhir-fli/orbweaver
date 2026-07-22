@@ -63,6 +63,7 @@ Future<Book> _loadBook(String id) async {
     spineColor: _color(b['spine_color'] as String),
     contents: contents,
     paletteOverrides: bookOverrides,
+    view: b['view'] as String?,
   );
 }
 

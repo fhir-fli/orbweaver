@@ -19,6 +19,7 @@ class Book {
     required this.spineColor,
     required this.contents,
     this.paletteOverrides = const {},
+    this.view,
   });
 
   final String id;
@@ -26,6 +27,11 @@ class Book {
   final String subtitle;
   final String coverAsset;
   final Color spineColor;
+
+  /// A book-level `view:` marker that replaces the default drill-down table of
+  /// contents. `"index"` → a single-page sectioned directory linking every
+  /// topic at once (like the WVEMS cover). Null for the ordinary drill-down.
+  final String? view;
 
   /// Book-level `palette:` overrides (role → color), the root of the
   /// cascade. Chapters and topics inherit and may override per-role.

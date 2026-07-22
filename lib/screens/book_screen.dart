@@ -81,8 +81,55 @@ class _BookScreenState extends State<BookScreen> {
           ? const _EmptyState()
           : _query.isNotEmpty
               ? _buildSearchResults(allTopics)
-              : _buildContents(),
+              : widget.book.view == 'index'
+                  ? _buildIndex()
+                  : _buildContents(),
     );
+  }
+
+  /// A single-page directory of every protocol (book `view: "index"`): each
+  /// top-level group becomes a colored section header followed by a compact
+  /// two-column grid of its topics — the whole book linkable at a glance, like
+  /// the printed cover index. Built from the same [Book.contents] tree.
+  Widget _buildIndex() {
+    final sections = <Widget>[];
+    for (final node in widget.book.contents) {
+      switch (node) {
+        case BookLeaf(:final topic):
+          sections.add(_IndexGrid(
+            topics: [topic],
+            onTap: (t) => openTopicFromBook(context, widget.book.id, t),
+          ));
+        case BookGroup group:
+          final accent =
+              group.paletteOverrides['accent'] ?? widget.book.spineColor;
+          sections
+            ..add(_IndexHeader(title: group.title, accent: accent))
+            ..add(_IndexGrid(
+              topics: _leavesOf(group).toList(growable: false),
+              accent: accent,
+              onTap: (t) => openTopicFromBook(context, widget.book.id, t),
+            ));
+      }
+    }
+    return ListView(
+      padding: const EdgeInsets.only(bottom: 16),
+      children: sections,
+    );
+  }
+
+  /// Every topic under a group, depth-first (its overview first, then the
+  /// leaves of its children) — flattened so the section grid lists them all.
+  static Iterable<BookTopic> _leavesOf(BookGroup group) sync* {
+    if (group.overview != null) yield group.overview!;
+    for (final child in group.children) {
+      switch (child) {
+        case BookLeaf(:final topic):
+          yield topic;
+        case BookGroup g:
+          yield* _leavesOf(g);
+      }
+    }
   }
 
   /// Relevance-ranked flat list of topics matching the query (hierarchy is
@@ -441,6 +488,135 @@ class _TopicRow extends StatelessWidget {
       ),
     );
   }
+}
+
+/// A colored section divider in the one-page index (`view: "index"`).
+class _IndexHeader extends StatelessWidget {
+  const _IndexHeader({required this.title, required this.accent});
+  final String title;
+  final Color accent;
+
+  @override
+  Widget build(BuildContext context) => Container(
+        width: double.infinity,
+        margin: const EdgeInsets.only(top: 14, bottom: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        color: accent,
+        child: Text(
+          title,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 14,
+            fontWeight: FontWeight.w800,
+            letterSpacing: 0.3,
+          ),
+        ),
+      );
+}
+
+/// A two-column grid of compact topic cells under a section header.
+class _IndexGrid extends StatelessWidget {
+  const _IndexGrid({required this.topics, required this.onTap, this.accent});
+  final List<BookTopic> topics;
+  final Color? accent;
+  final void Function(BookTopic) onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    if (topics.isEmpty) return const SizedBox.shrink();
+    return LayoutBuilder(builder: (context, c) {
+      const gap = 8.0;
+      final cellW = (c.maxWidth - 24 - gap) / 2;
+      return Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        child: Wrap(
+          spacing: gap,
+          runSpacing: gap,
+          children: [
+            for (final t in topics)
+              SizedBox(
+                width: cellW,
+                child: _IndexCell(
+                  topic: t,
+                  accent: accent ?? t.palette['accent'] ?? Colors.grey,
+                  onTap: () => onTap(t),
+                ),
+              ),
+          ],
+        ),
+      );
+    });
+  }
+}
+
+/// A single compact protocol tile: a page-number badge + title.
+class _IndexCell extends StatelessWidget {
+  const _IndexCell({
+    required this.topic,
+    required this.accent,
+    required this.onTap,
+  });
+  final BookTopic topic;
+  final Color accent;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final page = _pageOf(topic);
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(7),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(color: accent.withValues(alpha: 0.35)),
+          borderRadius: BorderRadius.circular(7),
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            if (page != null)
+              Container(
+                margin: const EdgeInsets.only(right: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                decoration: BoxDecoration(
+                  color: accent.withValues(alpha: 0.14),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Text(
+                  '$page',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w800,
+                    color: accent,
+                  ),
+                ),
+              ),
+            Expanded(
+              child: Text(
+                topic.title,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 12.5,
+                  fontWeight: FontWeight.w600,
+                  height: 1.1,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// The page number encoded in a topic's id (e.g. `wvems-2026-004` → 4), or
+/// null when the trailing id segment isn't numeric (e.g. a drug-reference page).
+int? _pageOf(BookTopic topic) {
+  final seg = topic.id.split(RegExp('[-_]')).last;
+  return int.tryParse(seg);
 }
 
 class _EmptyState extends StatelessWidget {
