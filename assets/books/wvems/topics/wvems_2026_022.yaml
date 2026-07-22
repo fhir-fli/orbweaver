@@ -97,7 +97,7 @@ topic:
       title: "Medications"
       markdown: |
         - **Zofran®** (Ondansetron): use for all causes of nausea & vomiting.
-          - Use caution with **Bradycardia**, and **Overdose / Tox**.
+          - Use caution with [Bradycardia](topic:wvems-2026-012), and [Overdose / Tox](topic:wvems-2026-040).
           - Consider **12-Lead** if hx/risk of Long QT or electrolyte imbalance.
           - **E** may only give PO — use Orally Disintegrating Tabs (ODTs).
           - **A** alternate 4–10 y/o dose: break ODT in half and give 2 mg PO.

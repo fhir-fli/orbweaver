@@ -106,7 +106,7 @@ topic:
       highlight: true
       markdown: |
         - Use **ABLS fluid rate** (may use **NS** or **LR**). Watch for **Hypothermia**.
-        - Monitor **Airway** closely with any facial, nasal or oral burns.
+        - Monitor [Airway](topic:wvems-2026-004) closely with any facial, nasal or oral burns.
         - Some chemical burns (e.g. **HF acid**) may benefit from an **Antidote**.
         - Monitor **EKG** for electrical burns > **1,000 v**.
         - Remove adjacent and distal jewelry if able.
@@ -146,7 +146,7 @@ topic:
           - Patient's palm (**with fingers**) is about 1% BSA.
           - Consider only partial and full thickness when calculating BSA.
         - This protocol includes **chemical burns** and skin exposures.
-          - For **gasses** and smoke inhalation, refer to **Inhalation**.
+          - For **gasses** and smoke inhalation, refer to [Inhalation](topic:wvems-2026-072).
           - For **poisoning** and toxic ingestions, refer to **OD / Tox**.
         - If chemical is known, consider calling **CHEMTREC**: 800-424-9300.
         - This does **not** include **radiation** exposure (call **Medical Control**).

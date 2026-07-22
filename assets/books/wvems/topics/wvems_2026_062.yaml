@@ -100,7 +100,7 @@ topic:
       highlight: true
       markdown: |
         - Transport emergently if sudden changes in LOC.
-          - Consider **Elevated ICP** if indicated & credentialed for Crit Care.
+          - Consider [Elevated ICP](topic:wvems-2026-086) if indicated & credentialed for Crit Care.
         - **Hypoxia** and **Hypotension** are associated with poor outcomes.
           - Investigate and treat for Hypoxia and Hypotension aggressively.
         - **Anticoagulation** meds (**blood thinners**) increase risk of ICH.
@@ -124,10 +124,10 @@ topic:
         - **Eye**: Use copious saline or water to flush out any contamination.
           - (E) **Tetracaine** (0.5% Ophthalmic): 1–2 gtt prior to flushing.
           - Do not flush penetrating injury. Place **eye shield** over both eyes.
-        - **Mouth**: May remove **impaled objects** that compromise **Airway**.
+        - **Mouth**: May remove **impaled objects** that compromise [Airway](topic:wvems-2026-004).
         - **Ear**: Check any discharge for CSF by dropping on white paper.
           - A yellow / clear halo suggests CSF leak from skull fracture.
-        - **Nose**: Do not attempt to reduce. Treat for **Epistaxis**.
+        - **Nose**: Do not attempt to reduce. Treat for [Epistaxis](topic:wvems-2026-076).
         - **Teeth**: Transport avulsed teeth in Hank's solution or NS.
           - Attempt replantation only in uncomplicated & isolated injury.
         - **Concussion**: Usually does not require EMS intervention.

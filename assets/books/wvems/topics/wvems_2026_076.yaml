@@ -111,7 +111,7 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Afrin®** (Oxymetazoline): Do not use if any cardiac **chest pain**.
+        - **Afrin®** (Oxymetazoline): Do not use if any cardiac [chest pain](topic:wvems-2026-028).
         - **TXA** (Tranexamic Acid): Use **atomizer**. Avoid if known PE or DVT.
 
     - type: "prose"
@@ -124,9 +124,9 @@ topic:
           - Anticoagulants increase risk.
           - Be ready to treat for **shock**.
         - Anticoagulants (**blood thinners**) also increase risk in:
-          - **Major Trauma**
-          - **Bleeding**
-          - **Head Injury**
+          - [Major Trauma](topic:wvems-2026-056)
+          - [Bleeding](topic:wvems-2026-058)
+          - [Head Injury](topic:wvems-2026-062)
 
     - type: "prose"
       title: "Anticoag Meds"

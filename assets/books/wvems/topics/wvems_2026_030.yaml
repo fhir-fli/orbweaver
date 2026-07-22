@@ -126,7 +126,7 @@ topic:
       title: "Dyspnea Imperatives"
       highlight: true
       markdown: |
-        - **Breathing** (O2 and NIPPV) should take precedence over meds.
+        - [Breathing](topic:wvems-2026-006) (O2 and NIPPV) should take precedence over meds.
           - **SpO2** and **EtCO2** should be used extensively for dyspnea.
         - Identify the **cause** before reaching for medications.
           - The wrong med for the wrong cause may cause harm.

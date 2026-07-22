@@ -142,7 +142,7 @@ topic:
     - type: "prose"
       title: "Notes"
       markdown: |
-        - **Seizures**, **Pain**, **Vomiting**, **Agitation** and **Fever** can all increase ICP.
+        - **Seizures**, [Pain](topic:wvems-2026-020), **Vomiting**, **Agitation** and [Fever](topic:wvems-2026-016) can all increase ICP.
           - Consider symptomatic treatment but **do not delay transport**.
         - Steroids, **TXA**, and/or hyperventilation are **not indicated**.
         - Increased risk of intracranial hemorrhage if any **anti-coagulation**.

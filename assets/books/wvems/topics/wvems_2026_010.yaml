@@ -83,7 +83,7 @@ topic:
       highlight: true
       markdown: |
         - Confirm elevated systolic BP with **two reliable** blood pressures.
-        - HTN is a frequent reaction to **Pain** and acute physiologic insult.
+        - HTN is a frequent reaction to [Pain](topic:wvems-2026-020) and acute physiologic insult.
           - Investigate and treat **pain & underlying causes first**.
         - Even mild HTN (SBP > 160 mmHg) in late **Pregnancy** may be pathologic.
           - It may progress to **eclampsia**. Be ready to treat for **Seizures**.

@@ -105,7 +105,7 @@ topic:
       highlight: true
       markdown: |
         - This protocol is for **medical** causes of abdominal pain.
-          - For traumatic abdominal pain, refer to **Trunk Injury**.
+          - For traumatic abdominal pain, refer to [Trunk Injury](topic:wvems-2026-064).
         - Prepare for **Hypotension** if any reported blood loss, or suspected:
           - **AAA**: Midline "pulsatile mass" in the elderly
           - **GI Bleeding**: Black stool (melena) or "coffee ground" emesis
@@ -120,8 +120,8 @@ topic:
         - Consider an atypical **Cardiac** cause in diabetics and the elderly.
         - Many common causes do not require specific EMS intervention.
           - E.g. gastroenteritis, gallbladder, appendix, colitis, SBO, etc.
-          - Do consider treatment of the symptoms: **Fever**, **Pain**, **Nausea**
-        - Consider **Sepsis** if indicated and credentialed for Critical Care.
+          - Do consider treatment of the symptoms: [Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), **Nausea**
+        - Consider [Sepsis](topic:wvems-2026-094) if indicated and credentialed for Critical Care.
 
     - type: "prose"
       title: "Pediatrics"

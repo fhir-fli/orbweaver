@@ -140,7 +140,7 @@ topic:
         - **Anticoagulation** meds (**blood thinners**) increase bleeding risk.
         - Consider removing bystander dressings to investigate severity.
         - **Bandage wounds** after bleeding is controlled.
-        - Consider **Blood** if indicated and credentialed for Critical Care.
+        - Consider [Blood](topic:wvems-2026-084) if indicated and credentialed for Critical Care.
 
     - type: "prose"
       title: "Pediatrics"

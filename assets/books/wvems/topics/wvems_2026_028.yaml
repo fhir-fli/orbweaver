@@ -111,9 +111,9 @@ topic:
       highlight: true
       markdown: |
         - This protocol is for suspected **cardiac (ACS)** emergencies only.
-          - For pain resulting from chest trauma, refer to **Trunk Injury**.
-          - For palpitations refer to **Tachycardia** or **Bradycardia**.
-        - For all patients with an identified **STEMI**: place defib pads on.
+          - For pain resulting from chest trauma, refer to [Trunk Injury](topic:wvems-2026-064).
+          - For palpitations refer to [Tachycardia](topic:wvems-2026-014) or [Bradycardia](topic:wvems-2026-012).
+        - For all patients with an identified [STEMI](topic:wvems-2026-088): place defib pads on.
           - Also expose and shave groin during transport if time allows.
 
     - type: "prose"

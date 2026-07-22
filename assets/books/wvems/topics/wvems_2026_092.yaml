@@ -113,8 +113,8 @@ topic:
       title: "Imperatives"
       markdown: |
         - Inappropriate use of antihypertensives can **cause harm**.
-          - Consider & investigate for **underlying causes** of **Hypertension**.
-        - Focal neurologic deficits are more likely to be a **Stroke**.
+          - Consider & investigate for **underlying causes** of [Hypertension](topic:wvems-2026-010).
+        - Focal neurologic deficits are more likely to be a [Stroke](topic:wvems-2026-044).
           - Lowering BP during a stroke can **cause harm**.
         - Use antihypertensives **only if organ damage** from HTN is likely.
           - Focus on underlying causes if organ damage is unlikely.

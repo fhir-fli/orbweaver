@@ -133,7 +133,7 @@ topic:
       markdown: |
         - Monitor patients **closely**. Sedation & vents are a delicate balance.
           - Use clinical sense and vital signs **including SpO2 and EtCO2**.
-          - Be ready to **titrate settings** and assist with **Suction** and **Airway**.
+          - Be ready to **titrate settings** and assist with **Suction** and [Airway](topic:wvems-2026-004).
         - Use lung protective volumes w/ **ventilator**. Start at 4-8 mL/kg IBW.
         - Elevate **head of bed to 30°** to help ventilation & limit aspiration.
         - May **increase I:E ratio** (1:5) for obstructive disease (COPD, Asthma).

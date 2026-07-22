@@ -120,7 +120,7 @@ topic:
       highlight: true
       markdown: |
         - Be aggressive with treatment and transport if any **EKG changes**.
-        - Consider hyperkalemia during any **crushing** type **extremity injury**.
+        - Consider hyperkalemia during any **crushing** type [extremity injury](topic:wvems-2026-066).
 
     - type: "prose"
       title: "K+ EKG Changes"

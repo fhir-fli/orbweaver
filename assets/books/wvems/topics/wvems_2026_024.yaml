@@ -169,7 +169,7 @@ topic:
       highlight: true
       markdown: |
         - Use 15:2 compression ratio for dual rescuer BLS resuscitation.
-        - Refer to **Neonate** for any peds **under 1 month** (≤ 30 days) old.
+        - Refer to [Neonate](topic:wvems-2026-050) for any peds **under 1 month** (≤ 30 days) old.
         - Use **Peds Reference** or other approved source for peds dosing.
 
     - type: "prose"

@@ -127,7 +127,7 @@ topic:
       title: "Cold / Heat Imperatives"
       highlight: true
       markdown: |
-        - **Hyperthermia** is **not** the same as a **Fever** from infection.
+        - **Hyperthermia** is **not** the same as a [Fever](topic:wvems-2026-016) from infection.
           - Meds for Fever worsen **hyperthermia** and are contraindicated.
         - **Confusion** is the hallmark of major **hyperthermic** emergencies.
           - Aggressively & actively cool anyone that is **hot & confused**.
@@ -135,7 +135,7 @@ topic:
         - **Resuscitation** of major **hypothermia** is a special case:
           - Most important intervention is **active rewarming**.
           - Check carefully for pulse. If present, it will be **very faint**.
-          - Provide **defib** and **ACLS meds** as per normal **Medical Code**.
+          - Provide **defib** and **ACLS meds** as per normal [Medical Code](topic:wvems-2026-024).
           - Call **Medical Control** before termination of resuscitation.
         - **Pad** heat & ice packs. Do not place directly against the skin.
 

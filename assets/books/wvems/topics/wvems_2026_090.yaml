@@ -107,8 +107,8 @@ topic:
     - type: "prose"
       title: "Imperatives"
       markdown: |
-        - Acute edema is usually associated with **dyspnea** and elevated SBP.
-        - Use **O2 & NIPPV** aggressively. Be prepared to escalate **airway**.
+        - Acute edema is usually associated with [dyspnea](topic:wvems-2026-030) and elevated SBP.
+        - Use **O2 & NIPPV** aggressively. Be prepared to escalate [airway](topic:wvems-2026-004).
 
     - type: "prose"
       title: "Medications"
@@ -119,7 +119,7 @@ topic:
           - May **start with two SL tabs** (0.4 mg SL x2) while preparing drip.
           - Use caution with history of aortic stenosis or pulmonary HTN.
           - Contraindicated if recent (36 h) use of any **PDE5 inhibitor**.
-          - Stop drip and consider **vasopressors** if persistent **hypotension**.
+          - Stop drip and consider [vasopressors](topic:wvems-2026-082) if persistent **hypotension**.
         - **Lasix®** (Furosemide): Effect is delayed, but may be beneficial.
 
     - type: "prose"

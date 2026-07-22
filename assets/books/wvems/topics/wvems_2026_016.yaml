@@ -136,13 +136,13 @@ topic:
       title: "Notes"
       markdown: |
         - Temporal thermometers are inaccurate on sweaty skin.
-        - Consider **Sepsis** if indicated and credentialed for CC.
+        - Consider [Sepsis](topic:wvems-2026-094) if indicated and credentialed for CC.
 
     - type: "prose"
       title: "Pediatrics"
       highlight: true
       markdown: |
-        - Peds under 5 y/o may have a **Seizure** caused by fever.
+        - Peds under 5 y/o may have a [Seizure](topic:wvems-2026-042) caused by fever.
           - It is usually self-limiting and does not require intervention.
           - Consider intervention if longer than **5 min** or Seizure reoccurs.
         - Breaking tablets in half is appropriate. **Do not break capsules**.

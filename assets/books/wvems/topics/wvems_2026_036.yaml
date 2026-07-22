@@ -111,7 +111,7 @@ topic:
           - Most important step is to consider and **search for the cause**.
           - Investigate the case and take a **careful history**.
         - Unstable patients should be treated aggressively.
-          - Be prepared for a **Medical CODE**.
+          - Be prepared for a [Medical CODE](topic:wvems-2026-024).
         - Alcohol and drugs can mask other causes of altered LOC.
           - **Don't assume Intoxication** is the only problem.
         - Syncope may be caused by or result in **trauma**.
@@ -121,7 +121,7 @@ topic:
       title: "Notes"
       markdown: |
         - Consider an atypical **Cardiac** cause in diabetics and the elderly.
-        - Consider **Sepsis** if indicated and credentialed for Critical Care.
+        - Consider [Sepsis](topic:wvems-2026-094) if indicated and credentialed for Critical Care.
         - Check for **medical jewelry**.
         - May investigate pt's GCS:
           - Check each response

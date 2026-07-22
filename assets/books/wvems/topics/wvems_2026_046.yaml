@@ -128,7 +128,7 @@ topic:
       title: "Notes"
       markdown: |
         - Always rule out medical causes of altered behavior:
-          - **Hypoxia**, **hypoglycemia**, **head injury**, **OD / Tox**, **sepsis**.
+          - **Hypoxia**, **hypoglycemia**, [head injury](topic:wvems-2026-062), **OD / Tox**, [sepsis](topic:wvems-2026-094).
         - Document a clear scene description and the indication for any restraint.
         - **Excited delirium** is a medical emergency — sudden death is possible.
 

@@ -109,7 +109,7 @@ topic:
       markdown: |
         - Investigate & treat **underlying causes** like Hypothermia.
           - Consider **Overdose** if appropriate (many meds cause brady).
-          - Slow, wide-complex bradycardia may be due to **Hyperkalemia**.
+          - Slow, wide-complex bradycardia may be due to [Hyperkalemia](topic:wvems-2026-018).
         - **I** May try a pacer magnet to improve rate. **Do not** use on AICD.
 
     - type: "prose"

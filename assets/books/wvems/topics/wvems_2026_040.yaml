@@ -111,7 +111,7 @@ topic:
           - Minor exposures with few symptoms do not require an Antidote.
           - Stable patients should be monitored and transported.
           - Supportive care is sufficient for **alcohol (ethanol)** intoxication.
-        - Monitor **Airway** closely with all caustic ingestions.
+        - Monitor [Airway](topic:wvems-2026-004) closely with all caustic ingestions.
 
     - type: "prose"
       title: "Medications"

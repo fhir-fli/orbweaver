@@ -135,7 +135,7 @@ topic:
       title: "Pediatrics"
       highlight: true
       markdown: |
-        - Refer to **Neonate** for any peds under 1 month (≤ 30 days) old.
+        - Refer to [Neonate](topic:wvems-2026-050) for any peds under 1 month (≤ 30 days) old.
           - Consider a **T-piece resuscitator** (instead of BVM) for Neonates.
         - Use caution and appropriately sized BVM to prevent **barotrauma**.
 

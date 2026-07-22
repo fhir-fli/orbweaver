@@ -132,7 +132,7 @@ topic:
         - Any SBP reading **above 160 mmHg** may be **preeclampsia**.
           - Prioritize transport. Call **Medical Control** for any refusal.
           - Consider **Preeclampsia** if indicated and credentialed for CC.
-        - Aggressively treat any **Seizure** as **eclampsia**.
+        - Aggressively treat any [Seizure](topic:wvems-2026-042) as **eclampsia**.
         - Any maternal trauma after 20 weeks should be transported.
           - Fetus may have injury that is not immediately obvious.
           - Even minor trauma (simple falls, etc.) can cause fetal harm.
@@ -158,7 +158,7 @@ topic:
       title: "Pediatrics"
       highlight: true
       markdown: |
-        - Refer to **Neonate** for management of the newborn baby.
+        - Refer to [Neonate](topic:wvems-2026-050) for management of the newborn baby.
 
     - type: "prose"
       title: "References"
