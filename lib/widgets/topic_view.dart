@@ -140,6 +140,38 @@ class _TopicViewState extends State<TopicView> {
   }
 }
 
+/// Renders a single [TopicPage]'s blocks (theme scope + padding), for the
+/// sticky/paged presentation where each page owns a full screen. No anchor
+/// scrolling (a paged page is meant to fit without scrolling).
+class TopicPageBody extends StatelessWidget {
+  const TopicPageBody({required this.page, required this.theme, super.key});
+
+  final TopicPage page;
+  final TopicTheme theme;
+
+  @override
+  Widget build(BuildContext context) {
+    return TopicThemeScope(
+      theme: theme,
+      child: ColoredBox(
+        color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              for (var j = 0; j < page.blocks.length; j++) ...[
+                if (j > 0) const SizedBox(height: 16),
+                _BlockRenderer(block: page.blocks[j], theme: theme),
+              ],
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 /// Visual break between two pages of the same topic. Renders as hairline
 /// rules on either side of the next page's number.
 class _PageBreak extends StatelessWidget {

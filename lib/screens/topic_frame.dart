@@ -145,15 +145,67 @@ class _TopicFrameState extends State<TopicFrame> {
         ),
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          controller: _scrollCtrl,
-          child: TopicView(
-            topic: topic,
-            palette: resolved,
-            pageKeys: _pageKeys,
-          ),
-        ),
+        child: topic.layout == TopicLayout.paged && topic.pages.length > 1
+            ? _StickyPages(
+                topic: topic,
+                theme: theme,
+                currentPage: _currentPage,
+              )
+            : SingleChildScrollView(
+                controller: _scrollCtrl,
+                child: TopicView(
+                  topic: topic,
+                  palette: resolved,
+                  pageKeys: _pageKeys,
+                ),
+              ),
       ),
+    );
+  }
+}
+
+/// Sticky (paged) presentation: a vertical [PageView] that snaps one full
+/// screen per [TopicPage]. Each page is held in a non-scrollable viewport, so
+/// vertical drags drive the page snap (not an inner scroll) and the page is
+/// expected to fit the screen. [currentPage] is driven by `onPageChanged` so
+/// the app-bar badge follows the visible page.
+class _StickyPages extends StatefulWidget {
+  const _StickyPages({
+    required this.topic,
+    required this.theme,
+    required this.currentPage,
+  });
+
+  final Topic topic;
+  final TopicTheme theme;
+  final ValueNotifier<int> currentPage;
+
+  @override
+  State<_StickyPages> createState() => _StickyPagesState();
+}
+
+class _StickyPagesState extends State<_StickyPages> {
+  final _pageCtrl = PageController();
+
+  @override
+  void dispose() {
+    _pageCtrl.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return PageView(
+      controller: _pageCtrl,
+      scrollDirection: Axis.vertical,
+      onPageChanged: (i) => widget.currentPage.value = i,
+      children: [
+        for (final page in widget.topic.pages)
+          SingleChildScrollView(
+            physics: const NeverScrollableScrollPhysics(),
+            child: TopicPageBody(page: page, theme: widget.theme),
+          ),
+      ],
     );
   }
 }

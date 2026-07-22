@@ -2152,6 +2152,20 @@ class TopicPage {
   final List<Block> blocks;
 }
 
+/// How a topic's [TopicPage]s are presented to the reader.
+///
+/// [scroll] — one continuous free-scrolling column (the default; best for
+/// mostly-prose topics). [paged] — "sticky" pages that snap one full screen at
+/// a time (best for a protocol whose flowchart page and prose page should each
+/// own a screen). Each [paged] page is expected to fit one screen.
+enum TopicLayout {
+  scroll,
+  paged;
+
+  static TopicLayout fromString(String? s) =>
+      s == 'paged' ? TopicLayout.paged : TopicLayout.scroll;
+}
+
 /// A clinical quick-reference topic — one or more [TopicPage]s.
 ///
 /// YAML may express a topic in two forms:
@@ -2170,6 +2184,7 @@ class Topic {
     this.aliases = const [],
     this.category = TopicCategory.universal,
     this.ownPaletteArgb = const {},
+    this.layout = TopicLayout.scroll,
   });
 
   /// Parse from a YAML string (e.g., loaded from an asset file).
@@ -2198,6 +2213,7 @@ class Topic {
       category: TopicCategory.fromString(map['category'] as String?),
       ownPaletteArgb: _parsePaletteArgb(map['palette']),
       pages: pages,
+      layout: TopicLayout.fromString(map['layout'] as String?),
     );
   }
 
@@ -2218,6 +2234,10 @@ class Topic {
   final Map<String, int> ownPaletteArgb;
 
   final List<TopicPage> pages;
+
+  /// Presentation mode — free [TopicLayout.scroll] (default) or sticky
+  /// [TopicLayout.paged] (snap one screen per page).
+  final TopicLayout layout;
 
   /// First page's [TopicPage.pageNumber]. Convenience for places that
   /// only need the topic's starting page number (e.g., TOC subtitles).

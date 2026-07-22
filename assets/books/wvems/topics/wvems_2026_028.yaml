@@ -18,6 +18,9 @@ topic:
     - "Cardiac"
     - "Coronary"
   category: "medical"
+  # Sticky presentation: the flowchart page and the prose page each snap to a
+  # full screen (protocol + prose).
+  layout: "paged"
 
   pages:
 
