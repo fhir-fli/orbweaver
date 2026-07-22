@@ -126,6 +126,7 @@ Future<List<BookNode>> _parseNodes(
         paletteOverrides: groupOverrides,
         view: view,
         formulary: formulary,
+        appendix: map['appendix'] as bool? ?? false,
       ));
     }
   }

@@ -82,11 +82,17 @@ class BookGroup extends BookNode {
     this.paletteOverrides = const {},
     this.view,
     this.formulary,
+    this.appendix = false,
   });
 
   final String title;
   final BookTopic? overview;
   final List<BookNode> children;
+
+  /// When true, this section is a reference appendix (drugs / peds /
+  /// procedures) rather than a numbered protocol section — the `view: index`
+  /// directory renders it as a footer bar below the protocol columns.
+  final bool appendix;
 
   /// A `view:` marker that replaces the generic chapter/accordion rendering
   /// with a bespoke screen. `"collection"` → a faceted [Formulary] index.

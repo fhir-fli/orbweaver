@@ -82,6 +82,9 @@ book:
         - topic: "topics/wvems_2026_092.yaml"
         - topic: "topics/wvems_2026_094.yaml"
     - title: "Drug Reference"
+      # Reference appendix — rendered as a footer bar in the index directory,
+      # not a protocol column.
+      appendix: true
       palette:
         accent: "0xFF1E4E8C"
         accent_fill: "0xFFE8F0FA"

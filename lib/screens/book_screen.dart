@@ -87,49 +87,98 @@ class _BookScreenState extends State<BookScreen> {
     );
   }
 
-  /// A single-page directory of every protocol (book `view: "index"`): each
-  /// top-level group becomes a colored section header followed by a compact
-  /// two-column grid of its topics — the whole book linkable at a glance, like
-  /// the printed cover index. Built from the same [Book.contents] tree.
+  /// A single-page directory of every protocol (book `view: "index"`), like the
+  /// printed cover: the numbered protocol sections flow down TWO columns
+  /// (section order preserved, split near the half-height point), each a
+  /// colored header + a single column of compact page-badge tiles. Reference
+  /// [BookGroup.appendix] sections (drugs / peds / procedures) render as a
+  /// footer bar. Everything fits one screen — no scrolling.
   Widget _buildIndex() {
-    final sections = <Widget>[];
+    final protocolGroups = <BookGroup>[];
+    final footerGroups = <BookGroup>[];
     for (final node in widget.book.contents) {
-      switch (node) {
-        case BookLeaf(:final topic):
-          sections.add(_IndexGrid(
-            topics: [topic],
-            onTap: (t) => openTopicFromBook(context, widget.book, t),
-          ));
-        case BookGroup group:
-          final accent =
-              group.paletteOverrides['accent'] ?? widget.book.spineColor;
-          sections
-            ..add(_IndexHeader(title: group.title, accent: accent))
-            ..add(_IndexGrid(
-              topics: _leavesOf(group).toList(growable: false),
-              accent: accent,
-              onTap: (t) => openTopicFromBook(context, widget.book, t),
-            ));
+      if (node is BookGroup) {
+        (node.appendix ? footerGroups : protocolGroups).add(node);
       }
     }
-    return ListView(
-      padding: const EdgeInsets.only(top: 2, bottom: 10),
-      children: sections,
-    );
-  }
 
-  /// Every topic under a group, depth-first (its overview first, then the
-  /// leaves of its children) — flattened so the section grid lists them all.
-  static Iterable<BookTopic> _leavesOf(BookGroup group) sync* {
-    if (group.overview != null) yield group.overview!;
-    for (final child in group.children) {
-      switch (child) {
-        case BookLeaf(:final topic):
-          yield topic;
-        case BookGroup g:
-          yield* _leavesOf(g);
+    // Newspaper split: fill the left column with whole sections in order until
+    // it reaches ~half the total height; the rest go right.
+    int weight(BookGroup g) => 1 + leavesOfGroup(g).length;
+    final total = protocolGroups.fold<int>(0, (a, g) => a + weight(g));
+    final left = <BookGroup>[];
+    final right = <BookGroup>[];
+    var lh = 0;
+    for (final g in protocolGroups) {
+      if (lh < total / 2) {
+        left.add(g);
+        lh += weight(g);
+      } else {
+        right.add(g);
       }
     }
+
+    Widget column(List<BookGroup> groups) => Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            for (final g in groups) ...[
+              _IndexHeader(
+                title: g.title,
+                accent: g.paletteOverrides['accent'] ?? widget.book.spineColor,
+              ),
+              for (final t in leavesOfGroup(g))
+                _IndexCell(
+                  topic: t,
+                  accent:
+                      g.paletteOverrides['accent'] ?? widget.book.spineColor,
+                  onTap: () => openTopicFromBook(context, widget.book, t),
+                ),
+            ],
+          ],
+        );
+
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(8, 2, 8, 6),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: column(left)),
+                const SizedBox(width: 6),
+                Expanded(child: column(right)),
+              ],
+            ),
+            for (final g in footerGroups)
+              _IndexHeader(
+                title: g.title,
+                accent:
+                    g.paletteOverrides['accent'] ?? widget.book.spineColor,
+              ),
+            if (footerGroups.isNotEmpty)
+              Wrap(
+                spacing: 6,
+                runSpacing: 4,
+                children: [
+                  for (final g in footerGroups)
+                    for (final t in leavesOfGroup(g))
+                      SizedBox(
+                        width: 180,
+                        child: _IndexCell(
+                          topic: t,
+                          accent: g.paletteOverrides['accent'] ??
+                              widget.book.spineColor,
+                          onTap: () => openTopicFromBook(context, widget.book, t),
+                        ),
+                      ),
+                ],
+              ),
+          ],
+        ),
+      ),
+    );
   }
 
   /// Relevance-ranked flat list of topics matching the query (hierarchy is
@@ -523,37 +572,17 @@ class _IndexHeader extends StatelessWidget {
 }
 
 /// A two-column grid of compact topic cells under a section header.
-class _IndexGrid extends StatelessWidget {
-  const _IndexGrid({required this.topics, required this.onTap, this.accent});
-  final List<BookTopic> topics;
-  final Color? accent;
-  final void Function(BookTopic) onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    if (topics.isEmpty) return const SizedBox.shrink();
-    return LayoutBuilder(builder: (context, c) {
-      const gap = 6.0;
-      final cellW = (c.maxWidth - 24 - gap) / 2;
-      return Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
-        child: Wrap(
-          spacing: gap,
-          runSpacing: 2,
-          children: [
-            for (final t in topics)
-              SizedBox(
-                width: cellW,
-                child: _IndexCell(
-                  topic: t,
-                  accent: accent ?? t.palette['accent'] ?? Colors.grey,
-                  onTap: () => onTap(t),
-                ),
-              ),
-          ],
-        ),
-      );
-    });
+/// Every topic under a group, depth-first (its overview first, then the leaves
+/// of its children) — flattened so an index section lists them all.
+Iterable<BookTopic> leavesOfGroup(BookGroup group) sync* {
+  if (group.overview != null) yield group.overview!;
+  for (final child in group.children) {
+    switch (child) {
+      case BookLeaf(:final topic):
+        yield topic;
+      case BookGroup g:
+        yield* leavesOfGroup(g);
+    }
   }
 }
 
@@ -575,6 +604,7 @@ class _IndexCell extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.circular(5),
       child: Container(
+        margin: const EdgeInsets.only(bottom: 3),
         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
         decoration: BoxDecoration(
           color: Colors.white,
