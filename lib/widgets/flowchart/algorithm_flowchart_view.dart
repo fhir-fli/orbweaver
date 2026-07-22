@@ -159,17 +159,25 @@ class _DecisionStage extends StatelessWidget {
 
     final singleBox =
         terminals.length == 1 ? flowchart.boxFor(terminals.first) : null;
-    final wideBelow = (singleBox?.bullets.length ?? 0) >= 5;
+    final wideBelow =
+        (singleBox?.bullets.length ?? 0) >= 5 || singleBox?.table != null;
     // A criteria-bearing decision sends its terminal BELOW the criteria card
     // (stacked), so the box never collides with the wide criteria card.
     final atLevel = terminals.length == 1 && !wideBelow && !hasCrit;
-    final leftForBox =
-        atLevel ? rightCornerX + colW * 1.6 : colW * AlgorithmFlowchartView._boxLeftCol;
+    // A short at-level box (a plain disposition) stays compact; one carrying
+    // several bullets goes WIDER (and closer to the diamond) so a content-heavy
+    // box renders short instead of as a narrow, sprawling column.
+    final atWide = atLevel && (singleBox?.bullets.length ?? 0) >= 3;
+    final leftForBox = atLevel
+        ? rightCornerX + colW * (atWide ? 0.8 : 1.6)
+        : colW * AlgorithmFlowchartView._boxLeftCol;
     // At-level: the label sits ~at the diamond level, the box just below it
     // so the right arrow lands near the box's top.
     final boxTop =
         atLevel ? (midY - 18).clamp(0.0, midY) : (belowStart + 14);
-    final boxW = atLevel ? colW * 5.2 : colW * (12 - AlgorithmFlowchartView._boxLeftCol);
+    final boxW = atLevel
+        ? colW * (atWide ? 6.6 : 5.2)
+        : colW * (12 - AlgorithmFlowchartView._boxLeftCol);
     // Estimated vertical centres of each stacked box (multi-way fan), so
     // the painter can draw a connector from the diamond to each.
     final branchCenters = <double>[];
@@ -468,17 +476,78 @@ class _AlgoBox extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(b.title,
-              style: const TextStyle(
-                  fontSize: 12, fontWeight: FontWeight.w800, height: 1.15)),
+          if (b.title.isNotEmpty)
+            Text(b.title,
+                style: const TextStyle(
+                    fontSize: 12, fontWeight: FontWeight.w800, height: 1.15)),
           for (final bullet in b.bullets)
             Padding(
               padding: const EdgeInsets.only(top: 2),
               child: Text('•  $bullet',
                   style: const TextStyle(fontSize: 11, height: 1.2)),
             ),
+          if (b.table != null)
+            Padding(
+              padding: EdgeInsets.only(top: b.title.isNotEmpty ? 4 : 0),
+              child: _MiniTable(table: b.table!, theme: theme),
+            ),
         ],
       ),
+    );
+  }
+}
+
+/// A compact bordered table rendered inside an [_AlgoBox] — a reference table
+/// that lives as a node in the flowchart (e.g. Iron Studies).
+class _MiniTable extends StatelessWidget {
+  const _MiniTable({required this.table, required this.theme});
+  final AlgoTable table;
+  final TopicTheme theme;
+
+  TextAlign _alignOf(int c) {
+    final a = (table.align != null && c < table.align!.length)
+        ? table.align![c]
+        : (c == 0 ? 'left' : 'center');
+    return switch (a) {
+      'right' => TextAlign.right,
+      'center' => TextAlign.center,
+      _ => TextAlign.left,
+    };
+  }
+
+  Widget _cell(String s, {required bool header, required int c}) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+        child: Text(s,
+            textAlign: _alignOf(c),
+            style: TextStyle(
+                fontSize: 10.5,
+                height: 1.1,
+                fontWeight: header ? FontWeight.w800 : FontWeight.w400)),
+      );
+
+  @override
+  Widget build(BuildContext context) {
+    final line = theme.nodeBorder.withValues(alpha: 0.55);
+    return Table(
+      border: TableBorder.all(color: line, width: 0.8),
+      columnWidths: const {0: FlexColumnWidth()},
+      defaultColumnWidth: const IntrinsicColumnWidth(),
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      children: [
+        TableRow(
+          decoration:
+              BoxDecoration(color: theme.nodeBorder.withValues(alpha: 0.12)),
+          children: [
+            for (var c = 0; c < table.columns.length; c++)
+              _cell(table.columns[c], header: true, c: c),
+          ],
+        ),
+        for (final row in table.rows)
+          TableRow(children: [
+            for (var c = 0; c < row.length; c++)
+              _cell(row[c], header: false, c: c),
+          ]),
+      ],
     );
   }
 }

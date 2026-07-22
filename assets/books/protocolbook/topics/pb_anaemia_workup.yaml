@@ -55,9 +55,6 @@ topic:
 
     - type: "flowchart"
       variant: "algorithm"
-      entry:
-        text: "Screen for haemolysis"
-        shape: "stadium"
       stages:
         - decision: "Is there ↑ LDH, ↑ bilirubin, ↓ haptoglobin, or RI > 2%?"
           outcomes:
@@ -75,12 +72,8 @@ topic:
               continue: true
         - decision: "Classify by MCV"
           outcomes:
-            - label: "Microcytic anaemia"
-              box:
-                title: "See Iron Studies (table below)"
-            - label: "Normocytic anaemia"
-              box:
-                title: "See Iron Studies (table below)"
+            # Macrocytic first (higher) so the micro/normo arm below points
+            # straight into the embedded Iron Studies table.
             - label: "Macrocytic anaemia"
               box:
                 title: "Macrocytic workup"
@@ -90,20 +83,22 @@ topic:
                   - "Thyroid studies"
                   - "Ask about a history of alcohol abuse"
                   - "Review medications (zidovudine, hydroxyurea)"
-
-    - type: "table"
-      title: "Iron Studies (microcytic / normocytic anaemia)"
-      zebra: true
-      columns: ["", "Fe", "TIBC", "Ferritin", "Fe : TIBC"]
-      column_flex: [7, 2, 2, 3, 3]
-      column_align: ["left", "center", "center", "center", "center"]
-      rows:
-        - cells: ["Iron deficiency", "↓", "↑", "↓", "<18%"]
-        - cells: ["Anaemia of chronic inflammation", "↓", "nL", "↑", ">18%"]
+            # Microcytic and normocytic are identical on the printed page —
+            # merged, and their target Iron Studies table is embedded here as a
+            # node in the flowchart (rather than a separate block below).
+            - label: "Microcytic or normocytic anaemia"
+              box:
+                title: "Iron Studies"
+                table:
+                  columns: ["", "Fe", "TIBC", "Ferritin", "Fe : TIBC"]
+                  align: ["left", "center", "center", "center", "center"]
+                  rows:
+                    - ["Iron deficiency", "↓", "↑", "↓", "<18%"]
+                    - ["Anaemia of chronic inflammation", "↓", "nL", "↑", ">18%"]
 
     - type: "prose"
       markdown: |
-        May also consider a peripheral smear: basophilic stippling suggests thalassaemia or sideroblastic anaemia.
+        Also consider a peripheral smear: basophilic stippling suggests thalassaemia or sideroblastic anaemia.
 
     - type: "prose"
       title: "Supplementation"

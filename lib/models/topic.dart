@@ -831,19 +831,52 @@ class AlgoBox {
     required this.title,
     this.bullets = const [],
     this.severity = RowSeverity.none,
+    this.table,
   });
 
   factory AlgoBox.fromYaml(Map<dynamic, dynamic> map) => AlgoBox(
         id: map['id'] as String?,
-        title: map['title'] as String,
+        title: map['title'] as String? ?? '',
         bullets: _stringList(map['bullets']),
         severity: RowSeverity.fromString(map['severity'] as String?),
+        table: map['table'] != null
+            ? AlgoTable.fromYaml(map['table'] as Map)
+            : null,
       );
 
   final String? id;
   final String title;
   final List<String> bullets;
   final RowSeverity severity;
+
+  /// Optional compact table rendered inside the box (below [title]). Lets a
+  /// flowchart outcome BE a small reference table (e.g. Iron Studies) instead
+  /// of pointing at a separate table block below the chart.
+  final AlgoTable? table;
+}
+
+/// A small bordered table rendered inside an [AlgoBox]. [align] is one entry
+/// per column ("left"/"center"/"right"); defaults to left for col 0, centre
+/// for the rest.
+class AlgoTable {
+  const AlgoTable({required this.columns, required this.rows, this.align});
+
+  factory AlgoTable.fromYaml(Map<dynamic, dynamic> map) => AlgoTable(
+        columns: [
+          for (final c in (map['columns'] as List? ?? const [])) c.toString(),
+        ],
+        rows: [
+          for (final r in (map['rows'] as List? ?? const []))
+            [for (final c in (r as List)) c.toString()],
+        ],
+        align: map['align'] != null
+            ? [for (final a in (map['align'] as List)) a.toString()]
+            : null,
+      );
+
+  final List<String> columns;
+  final List<List<String>> rows;
+  final List<String>? align;
 }
 
 /// One labelled outcome branch of an [AlgoStage] decision.
