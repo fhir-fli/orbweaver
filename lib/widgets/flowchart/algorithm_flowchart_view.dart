@@ -123,7 +123,9 @@ class _DecisionStage extends StatelessWidget {
     final rightCornerX = leftX + dW;
     final boxLeftX = colW * AlgorithmFlowchartView._boxLeftCol;
 
-    final dLines = (stage.decision.length / 14).ceil().clamp(2, 4);
+    // Grow the diamond with the decision length so long questions have room
+    // (and the criteria card below never overlaps the wrapped text).
+    final dLines = (stage.decision.length / 14).ceil().clamp(2, 6);
     final dH = (32 + dLines * 15).toDouble();
     final midY = dH / 2;
 
@@ -261,6 +263,7 @@ class _DecisionStage extends StatelessWidget {
               child: FitText(
                 stage.decision,
                 maxWidth: dW * 0.62,
+                maxHeight: dH * 0.82,
                 style: const TextStyle(
                     fontSize: 11.5,
                     height: 1.05,

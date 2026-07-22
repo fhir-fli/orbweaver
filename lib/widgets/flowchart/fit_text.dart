@@ -20,6 +20,7 @@ class FitText extends StatelessWidget {
     this.text, {
     required this.style,
     required this.maxWidth,
+    this.maxHeight,
     this.textAlign = TextAlign.center,
     this.color,
     super.key,
@@ -28,6 +29,12 @@ class FitText extends StatelessWidget {
   final String text;
   final TextStyle style;
   final double maxWidth;
+
+  /// Optional wrapped-height budget. After the width-based shrink, if the
+  /// text still wraps taller than this, the font is scaled down further (to
+  /// [_minFontSize]) so it fits — used to keep a decision's text inside its
+  /// diamond instead of spilling past the points onto the box below.
+  final double? maxHeight;
   final TextAlign textAlign;
 
   /// Optional override on the rendered text's colour — applied on top of
@@ -60,6 +67,26 @@ class FitText extends StatelessWidget {
       if (widest > maxWidth) {
         fontSize =
             (baseSize * maxWidth / widest).clamp(_minFontSize, baseSize);
+      }
+      // Height fit: shrink further if the wrapped text is taller than the
+      // budget (two proportional passes converge quickly).
+      final mh = maxHeight;
+      if (mh != null && mh.isFinite && mh > 0) {
+        final scaler = MediaQuery.textScalerOf(context);
+        double wrappedHeight(double fs) {
+          final tp = TextPainter(
+            text: TextSpan(text: text, style: style.copyWith(fontSize: fs)),
+            textDirection: TextDirection.ltr,
+            textScaler: scaler,
+          )..layout(maxWidth: maxWidth);
+          return tp.height;
+        }
+
+        for (var i = 0; i < 2; i++) {
+          final h = wrappedHeight(fontSize);
+          if (h <= mh || fontSize <= _minFontSize) break;
+          fontSize = (fontSize * mh / h).clamp(_minFontSize, fontSize);
+        }
       }
     }
     final resolved = style.copyWith(fontSize: fontSize, color: color);
