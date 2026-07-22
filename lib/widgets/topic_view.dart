@@ -144,24 +144,34 @@ class _TopicViewState extends State<TopicView> {
 /// sticky/paged presentation where each page owns a full screen. No anchor
 /// scrolling (a paged page is meant to fit without scrolling).
 class TopicPageBody extends StatelessWidget {
-  const TopicPageBody({required this.page, required this.theme, super.key});
+  const TopicPageBody({
+    required this.page,
+    required this.theme,
+    this.gapScale = 1.0,
+    super.key,
+  });
 
   final TopicPage page;
   final TopicTheme theme;
 
+  /// Scales the inter-block gaps (and top/bottom padding) so [_FitToScreen] can
+  /// tighten a paged page's vertical rhythm along with its text.
+  final double gapScale;
+
   @override
   Widget build(BuildContext context) {
+    final gap = 12.0 * gapScale;
     return TopicThemeScope(
       theme: theme,
       child: ColoredBox(
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
+          padding: EdgeInsets.fromLTRB(12, 6 * gapScale, 12, 6 * gapScale),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               for (var j = 0; j < page.blocks.length; j++) ...[
-                if (j > 0) const SizedBox(height: 16),
+                if (j > 0) SizedBox(height: gap),
                 _BlockRenderer(block: page.blocks[j], theme: theme),
               ],
             ],

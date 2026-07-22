@@ -250,7 +250,9 @@ class _UnitLine extends StatelessWidget {
   Widget build(BuildContext context) {
     final indent = unit.level * (fontSize * 0.9);
     final textStyle = TextStyle(fontSize: fontSize, height: height, color: color);
-    final text = RichText(text: TextSpan(style: textStyle, children: spans));
+    // Text.rich (not RichText) so the ambient MediaQuery.textScaler applies —
+    // this is what lets the paged fit-to-screen shrink prose to fit.
+    final text = Text.rich(TextSpan(style: textStyle, children: spans));
 
     if (!unit.isBullet) {
       return Padding(

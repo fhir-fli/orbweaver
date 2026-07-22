@@ -120,8 +120,9 @@ class _TopicBodyState extends State<TopicBody> {
     final theme = TopicTheme(resolved);
 
     if (topic.layout == TopicLayout.paged && topic.pages.length > 1) {
-      // Sticky: each page snaps to a full screen; a non-scrollable inner
-      // viewport lets vertical drags drive the page snap.
+      // Sticky: each page snaps to a full screen. A flowchart page renders at
+      // its exact size; a prose page is auto-fit (text + gaps scaled down just
+      // enough) so it fills one screen full-width, like the printed page.
       return PageView(
         controller: _pageCtrl,
         scrollDirection: Axis.vertical,
@@ -131,10 +132,18 @@ class _TopicBodyState extends State<TopicBody> {
         },
         children: [
           for (final page in topic.pages)
-            SingleChildScrollView(
-              physics: const NeverScrollableScrollPhysics(),
-              child: TopicPageBody(page: page, theme: theme),
-            ),
+            page.blocks.any((b) => b is FlowchartBlock)
+                ? SingleChildScrollView(
+                    physics: const NeverScrollableScrollPhysics(),
+                    child: TopicPageBody(page: page, theme: theme),
+                  )
+                : _FitToScreen(
+                    builder: (scale) => TopicPageBody(
+                      page: page,
+                      theme: theme,
+                      gapScale: scale,
+                    ),
+                  ),
         ],
       );
     }
@@ -143,6 +152,59 @@ class _TopicBodyState extends State<TopicBody> {
       controller: _scrollCtrl,
       child: TopicView(topic: topic, palette: resolved, pageKeys: _pageKeys),
     );
+  }
+}
+
+/// Scales a paged prose page's content down (text via a smaller `textScaler`,
+/// gaps via [TopicPageBody.gapScale]) just enough that it fits one screen —
+/// dense and full-width like the printed protocol page, with nothing cut.
+/// Measures the laid-out content and re-scales until it fits (converges in a
+/// frame or two); never scales below [_min].
+class _FitToScreen extends StatefulWidget {
+  const _FitToScreen({required this.builder});
+
+  final Widget Function(double scale) builder;
+
+  @override
+  State<_FitToScreen> createState() => _FitToScreenState();
+}
+
+class _FitToScreenState extends State<_FitToScreen> {
+  static const double _min = 0.55;
+  double _scale = 1.0;
+  final _key = GlobalKey();
+
+  void _fit(double availH) {
+    final ctx = _key.currentContext;
+    final box = ctx?.findRenderObject();
+    if (box is! RenderBox || !box.hasSize || availH <= 0) return;
+    final h = box.size.height;
+    // Shrink-only, in small steps, until the content fits — converges from
+    // full size DOWN to the largest scale that fits one screen (a few frames).
+    // No growth, so it never oscillates back into an overflow that clips
+    // clinical content.
+    if (h > availH - 2 && _scale > _min) {
+      final ns = (_scale * 0.97).clamp(_min, 1.0);
+      if (ns != _scale) setState(() => _scale = ns);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, c) {
+      WidgetsBinding.instance.addPostFrameCallback((_) => _fit(c.maxHeight));
+      return MediaQuery(
+        data: MediaQuery.of(context)
+            .copyWith(textScaler: TextScaler.linear(_scale)),
+        // A non-scrollable scroll view gives the content unbounded height, so
+        // we can measure its NATURAL height (rather than clamp it to the
+        // screen and overflow) and scale down until it fits.
+        child: SingleChildScrollView(
+          physics: const NeverScrollableScrollPhysics(),
+          child: KeyedSubtree(key: _key, child: widget.builder(_scale)),
+        ),
+      );
+    });
   }
 }
 
