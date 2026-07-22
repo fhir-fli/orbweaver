@@ -185,7 +185,15 @@ enum FlowchartVariant {
   /// genuinely branching clinical algorithm lays out cleanly as one
   /// connected vertical flow with no 2-D graph engine. Used by the
   /// ProtocolBook's complex algorithms (e.g. Hydrocarbon p.30).
-  algorithm;
+  algorithm,
+
+  /// Cyclic clinical algorithm: a vertical spine of nodes where an edge can
+  /// target a node by `id`. A target BELOW flows normally; a target ABOVE
+  /// renders as a labelled return arrow routed up the outer margin (a
+  /// back-edge). Covers the reducible loop taxonomy — reassessment
+  /// self-loops (CIWA-Ar), titration, resuscitation cycles (ACLS),
+  /// escalation-with-recheck — from pure YAML. See [CycleFlowchart].
+  cycle;
 
   static FlowchartVariant fromString(String? s) => switch (s) {
         'severity' => severity,
@@ -193,6 +201,7 @@ enum FlowchartVariant {
         'linear' => linear,
         'differential' => differential,
         'algorithm' => algorithm,
+        'cycle' => cycle,
         _ => severity,
       };
 }
@@ -933,6 +942,112 @@ class AlgorithmFlowchart {
   }
 }
 
+/// Which side of the spine a [CycleBranch] box sits on.
+enum CycleSide {
+  left,
+  right;
+
+  static CycleSide fromString(String? s) =>
+      s == 'left' ? CycleSide.left : CycleSide.right;
+}
+
+/// A labelled branch off a [CycleNode] — a treatment/action/wait box placed
+/// to one [side] of the spine, reached by a labelled arrow from the node.
+///
+/// If [loopTo] names a spine node id, a return arrow is drawn from this box
+/// back up to that node (the loop), optionally annotated with [loopLabel]
+/// (e.g. a reassessment interval "reassess q5–10 min"). If [loopTo] is null
+/// the branch is a terminal side action (e.g. Wernicke → Thiamine).
+class CycleBranch {
+  const CycleBranch({
+    required this.label,
+    required this.side,
+    required this.box,
+    this.loopTo,
+    this.loopLabel,
+  });
+
+  factory CycleBranch.fromYaml(Map<dynamic, dynamic> map) => CycleBranch(
+        label: map['label'] as String? ?? '',
+        side: CycleSide.fromString(map['side'] as String?),
+        box: AlgoBox.fromYaml(map['box'] as Map),
+        loopTo: map['loop_to'] as String?,
+        loopLabel: map['loop_label'] as String?,
+      );
+
+  final String label;
+  final CycleSide side;
+  final AlgoBox box;
+  final String? loopTo;
+  final String? loopLabel;
+}
+
+/// One node on the vertical spine of a [CycleFlowchart].
+///
+/// [shape] is a plain [CycleNodeShape.box] rectangle or a
+/// [CycleNodeShape.decision] diamond. [branches] are side boxes (each
+/// optionally looping back). [downLabel] annotates the arrow to the next
+/// spine node (e.g. a decision's "once stable" exit); null = a plain arrow.
+/// [id] makes the node a valid [CycleBranch.loopTo] target.
+enum CycleNodeShape {
+  box,
+  decision;
+
+  static CycleNodeShape fromString(String? s) =>
+      s == 'decision' ? CycleNodeShape.decision : CycleNodeShape.box;
+}
+
+class CycleNode {
+  const CycleNode({
+    this.id,
+    required this.shape,
+    required this.title,
+    this.bullets = const [],
+    this.severity = RowSeverity.none,
+    this.branches = const [],
+    this.downLabel,
+  });
+
+  factory CycleNode.fromYaml(Map<dynamic, dynamic> map) => CycleNode(
+        id: map['id'] as String?,
+        shape: CycleNodeShape.fromString(map['shape'] as String?),
+        title: map['title'] as String,
+        bullets: _stringList(map['bullets']),
+        severity: RowSeverity.fromString(map['severity'] as String?),
+        branches: [
+          for (final b in (map['branches'] as List? ?? const []))
+            CycleBranch.fromYaml(b as Map),
+        ],
+        downLabel: map['down_label'] as String?,
+      );
+
+  final String? id;
+  final CycleNodeShape shape;
+  final String title;
+  final List<String> bullets;
+  final RowSeverity severity;
+  final List<CycleBranch> branches;
+  final String? downLabel;
+}
+
+/// The parsed body of a `variant: cycle` flowchart — a vertical spine of
+/// [nodes] with id-addressed edges. See [FlowchartVariant.cycle].
+class CycleFlowchart {
+  const CycleFlowchart({required this.nodes});
+
+  factory CycleFlowchart.fromYaml(Map<dynamic, dynamic> map) => CycleFlowchart(
+        nodes: [
+          for (final n in (map['nodes'] as List? ?? const []))
+            CycleNode.fromYaml(n as Map),
+        ],
+      );
+
+  final List<CycleNode> nodes;
+
+  /// Index of the spine node with [id], or -1.
+  int indexOfId(String id) => nodes.indexWhere((n) => n.id == id);
+}
+
 // ─────────────────────────────────────────────────────────────
 // BLOCK HIERARCHY
 // ─────────────────────────────────────────────────────────────
@@ -1132,10 +1247,9 @@ class ProseBlock extends Block {
 
 /// A flowchart in one of the supported variants.
 ///
-/// Exactly one of [severity] or [cascade] is populated, selected by
-/// [variant]. A third `cycle` variant was considered and rejected — cyclic
-/// ACLS-style loops are expressed via [TopicAction.timing] and
-/// [TopicAction.condition] on actions within the existing variants.
+/// Exactly one variant body is populated, selected by [variant]. The `cycle`
+/// variant carries a [CycleFlowchart] for genuinely cyclic algorithms
+/// (reassessment loops, resuscitation cycles) drawn with real back-edges.
 class FlowchartBlock extends Block {
   const FlowchartBlock({
     required this.variant,
@@ -1144,6 +1258,7 @@ class FlowchartBlock extends Block {
     this.linear,
     this.differential,
     this.algorithm,
+    this.cycle,
     super.anchor,
     super.ownPaletteArgb,
   });
@@ -1183,6 +1298,12 @@ class FlowchartBlock extends Block {
           anchor: anchor,
           ownPaletteArgb: palette,
         ),
+      FlowchartVariant.cycle => FlowchartBlock(
+          variant: variant,
+          cycle: CycleFlowchart.fromYaml(map),
+          anchor: anchor,
+          ownPaletteArgb: palette,
+        ),
     };
   }
 
@@ -1192,6 +1313,7 @@ class FlowchartBlock extends Block {
   final LinearFlowchart? linear;
   final DifferentialFlowchart? differential;
   final AlgorithmFlowchart? algorithm;
+  final CycleFlowchart? cycle;
 }
 
 // ─────────────────────────────────────────────────────────────

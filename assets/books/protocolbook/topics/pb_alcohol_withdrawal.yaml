@@ -76,37 +76,43 @@ topic:
         Score withdrawal severity with the [CIWA-Ar Scale](topic:pb-ciwa-ar) (next page).
 
     - type: "flowchart"
-      variant: "algorithm"
-      stages:
-        - decision: "Concern for Wernicke's encephalopathy (ataxia / ophthalmoplegia), or patient appears severely malnourished?"
-          outcomes:
+      variant: "cycle"
+      # Reassessment loop: CIWA-Ar is re-scored, and BOTH branches (treat with
+      # lorazepam, or wait) loop back UP to the re-score hub; the only exit is
+      # straight down ("once stable").  Matches the printed p.35 layout.
+      nodes:
+        - title: "Concern for Wernicke's encephalopathy (ataxia / ophthalmoplegia), or patient appears severely malnourished?"
+          branches:
             - label: "Yes"
+              side: "right"
               box:
                 title: "Thiamine 100mg IV (if available)"
-              continue: true
+        - id: "rescore"
+          title: "Calculate CIWA-Ar Score"
+          bullets:
+            - "Clinical Institute Withdrawal Assessment — Alcohol, revised (see link above)"
+        - shape: "decision"
+          title: "CIWA-Ar ≥ 10?"
+          down_label: "once stable"
+          branches:
             - label: "No"
-              continue: true
-        - decision: "CIWA-Ar ≥ 10?"
-          criteria:
-            - "Calculate CIWA-Ar Score: Clinical Institute Withdrawal Assessment — Alcohol, revised (see above link)"
-          outcomes:
-            - label: "Yes"
-              box:
-                title: "Lorazepam 2mg IV"
-                bullets:
-                  - "Reevaluate q5–10 min → recalculate CIWA-Ar"
-                severity: "priority"
-              continue: true
-            - label: "No"
+              side: "left"
               box:
                 title: "Reevaluate q15–30 min"
                 bullets:
-                  - "→ recalculate CIWA-Ar"
-              continue: true
-      terminal:
-        title: "Continue to monitor"
-        bullets:
-          - "Once stable begin to wean Lorazepam 2mg IV to q2–4hrs prn"
+                  - "then re-score"
+              loop_to: "rescore"
+            - label: "Yes"
+              side: "right"
+              box:
+                title: "Lorazepam 2mg IV"
+                bullets:
+                  - "reassess q5–10 min → re-score"
+                severity: "priority"
+              loop_to: "rescore"
+        - title: "Continue to monitor"
+          bullets:
+            - "Once stable begin to wean Lorazepam 2mg IV to q2–4hrs prn"
 
     - type: "prose"
       title: "Concern for more than solely alcohol intoxication?"

@@ -12,6 +12,7 @@ import 'package:orbweaver/widgets/blocks/score_block_view.dart';
 import 'package:orbweaver/widgets/blocks/table_block_view.dart';
 import 'package:orbweaver/widgets/flowchart/algorithm_flowchart_view.dart';
 import 'package:orbweaver/widgets/flowchart/cascade_flowchart_view.dart';
+import 'package:orbweaver/widgets/flowchart/cycle_flowchart_view.dart';
 import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
 
 /// Top-level renderer for a [Topic].
@@ -385,6 +386,10 @@ class _FlowchartBlockRenderer extends StatelessWidget {
         ),
       FlowchartVariant.algorithm => AlgorithmFlowchartView(
           flowchart: block.algorithm!,
+          theme: theme,
+        ),
+      FlowchartVariant.cycle => CycleFlowchartView(
+          flowchart: block.cycle!,
           theme: theme,
         ),
     };
