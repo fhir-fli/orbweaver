@@ -1091,11 +1091,12 @@ class _CriticalCareLinkPill extends StatelessWidget {
         child: Text(
           link.text,
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w700,
             color: Colors.black87,
-            decoration: TextDecoration.underline,
+            decoration:
+                link.linkId != null ? TextDecoration.underline : null,
           ),
         ),
       ),

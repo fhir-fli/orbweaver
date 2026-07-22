@@ -333,7 +333,6 @@ class ActionTile extends StatelessWidget {
                         fontSize: 13,
                         height: 1.1,
                         fontWeight: FontWeight.w800,
-                        decoration: TextDecoration.underline,
                       ),
                     ),
                     if (action.timing != null || action.condition != null)
