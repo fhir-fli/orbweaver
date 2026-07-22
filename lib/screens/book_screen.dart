@@ -113,7 +113,7 @@ class _BookScreenState extends State<BookScreen> {
       }
     }
     return ListView(
-      padding: const EdgeInsets.only(bottom: 16),
+      padding: const EdgeInsets.only(top: 2, bottom: 10),
       children: sections,
     );
   }
@@ -507,14 +507,14 @@ class _IndexHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
         width: double.infinity,
-        margin: const EdgeInsets.only(top: 14, bottom: 8),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        margin: const EdgeInsets.only(top: 3, bottom: 1),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
         color: accent,
         child: Text(
           title,
           style: const TextStyle(
             color: Colors.white,
-            fontSize: 14,
+            fontSize: 11.5,
             fontWeight: FontWeight.w800,
             letterSpacing: 0.3,
           ),
@@ -533,13 +533,13 @@ class _IndexGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     if (topics.isEmpty) return const SizedBox.shrink();
     return LayoutBuilder(builder: (context, c) {
-      const gap = 8.0;
+      const gap = 6.0;
       final cellW = (c.maxWidth - 24 - gap) / 2;
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Wrap(
           spacing: gap,
-          runSpacing: gap,
+          runSpacing: 2,
           children: [
             for (final t in topics)
               SizedBox(
@@ -573,29 +573,29 @@ class _IndexCell extends StatelessWidget {
     final page = _pageOf(topic);
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(7),
+      borderRadius: BorderRadius.circular(5),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
         decoration: BoxDecoration(
           color: Colors.white,
           border: Border.all(color: accent.withValues(alpha: 0.35)),
-          borderRadius: BorderRadius.circular(7),
+          borderRadius: BorderRadius.circular(5),
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             if (page != null)
               Container(
-                margin: const EdgeInsets.only(right: 8),
-                padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                margin: const EdgeInsets.only(right: 6),
+                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
                 decoration: BoxDecoration(
                   color: accent.withValues(alpha: 0.14),
-                  borderRadius: BorderRadius.circular(4),
+                  borderRadius: BorderRadius.circular(3),
                 ),
                 child: Text(
                   '$page',
                   style: TextStyle(
-                    fontSize: 11,
+                    fontSize: 9.5,
                     fontWeight: FontWeight.w800,
                     color: accent,
                   ),
@@ -607,9 +607,9 @@ class _IndexCell extends StatelessWidget {
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
-                  fontSize: 12.5,
+                  fontSize: 10.5,
                   fontWeight: FontWeight.w600,
-                  height: 1.1,
+                  height: 1.0,
                 ),
               ),
             ),
