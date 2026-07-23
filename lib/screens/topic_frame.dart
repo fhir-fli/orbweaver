@@ -134,9 +134,19 @@ class _TopicBodyState extends State<TopicBody> {
         children: [
           for (final page in topic.pages)
             page.blocks.any((b) => b is FlowchartBlock)
-                ? SingleChildScrollView(
-                    physics: const NeverScrollableScrollPhysics(),
-                    child: TopicPageBody(page: page, theme: theme),
+                // A flowchart page scales down UNIFORMLY (boxes + text together)
+                // to fit one screen — its hand-drawn boxes can't reflow like
+                // text, so uniform scaling is the safe fit. No-op when it
+                // already fits (renders full size, top-aligned).
+                ? LayoutBuilder(
+                    builder: (context, c) => FittedBox(
+                      fit: BoxFit.scaleDown,
+                      alignment: Alignment.topCenter,
+                      child: SizedBox(
+                        width: c.maxWidth,
+                        child: TopicPageBody(page: page, theme: theme),
+                      ),
+                    ),
                   )
                 : _FitToScreen(
                     builder: (scale) => TopicPageBody(
