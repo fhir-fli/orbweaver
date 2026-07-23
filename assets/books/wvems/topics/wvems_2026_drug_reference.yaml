@@ -24,17 +24,20 @@ topic:
     - type: "drug_card"
       name: "3% Saline"
       class: "Hypertonic Saline"
+      image: "assets/books/wvems/images/drug_3pct_saline.jpg"
       indications:
         - "Traumatic Brain Injury"
       doses:
         - population: "adult"
-          text: "250 mL IV/IO over 10 min"
+          text: "**250 mL** IV/IO"
         - population: "peds"
-          text: "2–5 mL/kg over 10 min"
+          text: "2–5 mL/kg"
+        - population: "both"
+          text: "**Give over 10 min**"
       warnings:
         - "PMH: CHF, CKD, hypernatremia"
         - "May cause: hypernatremia, seizure"
-        - "Pregnancy Category C: safety not established"
+        - "**Pregnancy Category C**: safety not established"
       pearls:
         - "Protocol: Elevated ICP"
         - "Osmotic diuretic · Onset: minutes · Duration: hours"
@@ -43,21 +46,22 @@ topic:
     - type: "drug_card"
       name: "Adenosine"
       class: "Adenocard® — antiarrhythmic (Class V)"
+      image: "assets/books/wvems/images/drug_adenosine.jpg"
       indications:
         - "Supraventricular Tachycardia (SVT)"
       doses:
         - population: "adult"
-          text: "12 mg IV/IO"
+          text: "**12 mg** IV/IO"
         - population: "peds"
           text: "0.1–0.2 mg/kg"
       warnings:
-        - "Beware asthma: can cause an attack"
+        - "**Beware asthma**: can cause an attack"
         - "PMH: WPW, bradycardia, AV block"
         - "PMH: COPD, theophylline, digoxin"
         - "May cause: palpitations"
-        - "Pregnancy Category C: safety not established"
+        - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Give rapid IV push followed by a rapid saline flush"
+        - "Give **rapid IV push** followed by a **rapid saline flush**"
         - "Protocol: Tachycardia"
         - "Onset: seconds · Duration: ~10 s"
         - "https://reference.medscape.com/drug/342295"
