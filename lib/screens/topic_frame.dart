@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:orbweaver/data/topic_loader.dart';
 import 'package:orbweaver/models/book.dart';
+import 'package:orbweaver/screens/book_screen.dart' show kBookRouteName;
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/palette.dart';
@@ -285,17 +286,39 @@ class _TopicPagerState extends State<TopicPager> {
   late int _activeIndex = widget.initialIndex;
   final _badge = ValueNotifier<int?>(null);
   final Map<int, int?> _badgeByIndex = {};
+  final _searchCtrl = TextEditingController();
+  bool _searchOpen = false;
+  String _query = '';
 
   @override
   void dispose() {
     _hCtrl.dispose();
     _badge.dispose();
+    _searchCtrl.dispose();
     super.dispose();
   }
 
   void _report(int index, int? pageNumber) {
     _badgeByIndex[index] = pageNumber;
     if (index == _activeIndex) _badge.value = pageNumber;
+  }
+
+  void _closeSearch() {
+    setState(() {
+      _searchOpen = false;
+      _query = '';
+      _searchCtrl.clear();
+    });
+  }
+
+  void _goToSibling(int index) {
+    _closeSearch();
+    _hCtrl.jumpToPage(index);
+  }
+
+  void _goHome() {
+    Navigator.of(context)
+        .popUntil((r) => r.settings.name == kBookRouteName || r.isFirst);
   }
 
   @override
@@ -308,30 +331,161 @@ class _TopicPagerState extends State<TopicPager> {
         backgroundColor: accent,
         foregroundColor: Colors.white,
         titleSpacing: 8,
-        title: _AppBarTitle(
-          pageNumber: _badge,
-          title: active.title,
-          headerColor: accent,
+        title: _searchOpen
+            ? TextField(
+                controller: _searchCtrl,
+                autofocus: true,
+                style: const TextStyle(color: Colors.white, fontSize: 16),
+                cursorColor: Colors.white,
+                decoration: const InputDecoration(
+                  hintText: 'Search protocols…',
+                  hintStyle: TextStyle(color: Colors.white70),
+                  border: InputBorder.none,
+                ),
+                onChanged: (v) => setState(() => _query = v),
+              )
+            : _AppBarTitle(
+                pageNumber: _badge,
+                title: active.title,
+                headerColor: accent,
+              ),
+        actions: [
+          IconButton(
+            tooltip: _searchOpen ? 'Close search' : 'Search protocols',
+            icon: Icon(_searchOpen ? Icons.close : Icons.search),
+            onPressed: () {
+              if (_searchOpen) {
+                _closeSearch();
+              } else {
+                setState(() => _searchOpen = true);
+              }
+            },
+          ),
+          IconButton(
+            tooltip: 'All protocols',
+            icon: const Icon(Icons.home_outlined),
+            onPressed: _goHome,
+          ),
+        ],
+      ),
+      // The PageView stays in the tree even while searching (search results
+      // overlay it), so its controller stays attached and jumpToPage works.
+      body: SafeArea(
+        child: Stack(
+          children: [
+            PageView.builder(
+              controller: _hCtrl,
+              itemCount: widget.siblings.length,
+              onPageChanged: (i) {
+                setState(() => _activeIndex = i);
+                _badge.value = _badgeByIndex[i];
+                LastState.recordTopic(widget.bookId, widget.siblings[i].id);
+              },
+              itemBuilder: (context, i) {
+                final t = widget.siblings[i];
+                return TopicBody(
+                  assetPath: t.asset,
+                  palette: t.palette,
+                  onPage: (pn) => _report(i, pn),
+                );
+              },
+            ),
+            if (_searchOpen && _query.isNotEmpty)
+              Positioned.fill(
+                child: _SearchResults(
+                  siblings: widget.siblings,
+                  query: _query,
+                  onTap: _goToSibling,
+                ),
+              ),
+          ],
         ),
       ),
-      body: SafeArea(
-        child: PageView.builder(
-          controller: _hCtrl,
-          itemCount: widget.siblings.length,
-          onPageChanged: (i) {
-            setState(() => _activeIndex = i);
-            _badge.value = _badgeByIndex[i];
-            LastState.recordTopic(widget.bookId, widget.siblings[i].id);
-          },
-          itemBuilder: (context, i) {
-            final t = widget.siblings[i];
-            return TopicBody(
-              assetPath: t.asset,
-              palette: t.palette,
-              onPage: (pn) => _report(i, pn),
-            );
-          },
+    );
+  }
+}
+
+/// In-protocol search: a relevance-ranked list of the book's protocols matching
+/// the query; tapping one jumps the pager to it.
+class _SearchResults extends StatelessWidget {
+  const _SearchResults({
+    required this.siblings,
+    required this.query,
+    required this.onTap,
+  });
+
+  final List<BookTopic> siblings;
+  final String query;
+  final void Function(int index) onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final scored = <(int, double)>[];
+    for (var i = 0; i < siblings.length; i++) {
+      final s = siblings[i].relevance(query);
+      if (s > 0) scored.add((i, s));
+    }
+    scored.sort((a, b) {
+      final byScore = b.$2.compareTo(a.$2);
+      return byScore != 0 ? byScore : a.$1.compareTo(b.$1);
+    });
+    if (scored.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Text('No protocols match "$query".',
+              style: const TextStyle(color: Colors.black54)),
         ),
+      );
+    }
+    return ColoredBox(
+      color: const Color(0xFFEFEFEF),
+      child: ListView.separated(
+        padding: const EdgeInsets.symmetric(vertical: 4),
+        itemCount: scored.length,
+        separatorBuilder: (_, __) => const Divider(
+            height: 1, thickness: 0.5, indent: 12, endIndent: 12),
+        itemBuilder: (context, k) {
+          final i = scored[k].$1;
+          final t = siblings[i];
+          final accent = t.palette['accent'] ?? const Color(0xFFBDBDBD);
+          return InkWell(
+            onTap: () => onTap(i),
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+              child: Row(
+                children: [
+                  Container(
+                    width: 3,
+                    height: 34,
+                    decoration: BoxDecoration(
+                      color: accent,
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(t.title,
+                            style: const TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w600)),
+                        if (t.subtitle.isNotEmpty) ...[
+                          const SizedBox(height: 2),
+                          Text(t.subtitle,
+                              style: const TextStyle(
+                                  fontSize: 11, color: Colors.black54)),
+                        ],
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          );
+        },
       ),
     );
   }

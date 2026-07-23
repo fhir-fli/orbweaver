@@ -45,6 +45,7 @@ class _CoverCard extends StatelessWidget {
       onTap: () => Navigator.push(
         context,
         MaterialPageRoute<void>(
+          settings: const RouteSettings(name: kBookRouteName),
           builder: (_) => BookScreen(book: book),
         ),
       ),

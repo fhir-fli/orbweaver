@@ -243,12 +243,22 @@ class LibraryIndex {
           for (final b in books)
             for (final t in b.allTopics)
               t.id: TopicRef(b.id, t.asset, t.palette),
+        },
+        _bookByTopic = {
+          for (final b in books)
+            for (final t in b.allTopics) t.id: b,
         };
 
   final Map<String, TopicRef> _byId;
+  final Map<String, Book> _bookByTopic;
 
   TopicRef? lookup(String topicId) => _byId[topicId];
   bool contains(String topicId) => _byId.containsKey(topicId);
+
+  /// The [Book] that owns [topicId] — so a cross-link can open the topic in a
+  /// full [TopicPager] (with sibling swipe + in-protocol search) rather than a
+  /// bare single-topic frame.
+  Book? bookContaining(String topicId) => _bookByTopic[topicId];
 }
 
 /// Where a topic lives: its book id (for last-state) + asset path + the

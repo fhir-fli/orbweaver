@@ -53,12 +53,19 @@ List<Route<void>> _restorePages(LastStateSnapshot s, List<Book> library) {
 
   final book = s.bookId == null ? null : findBook(library, s.bookId!);
   if (book == null) return routes;
-  routes.add(MaterialPageRoute<void>(builder: (_) => BookScreen(book: book)));
+  routes.add(MaterialPageRoute<void>(
+    settings: const RouteSettings(name: kBookRouteName),
+    builder: (_) => BookScreen(book: book),
+  ));
 
   final topic = s.topicId == null ? null : findTopic(book, s.topicId!);
   if (topic == null) return routes;
+  final siblings = protocolSiblings(book);
+  final idx = siblings.indexWhere((t) => t.id == topic.id);
   routes.add(MaterialPageRoute<void>(
-    builder: (_) => TopicFrame(assetPath: topic.asset, palette: topic.palette),
+    builder: (_) => idx < 0
+        ? TopicFrame(assetPath: topic.asset, palette: topic.palette)
+        : TopicPager(siblings: siblings, initialIndex: idx, bookId: book.id),
   ));
 
   return routes;

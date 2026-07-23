@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library.dart';
+import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/topic_frame.dart';
 import 'package:orbweaver/services/last_state.dart';
 
@@ -29,11 +30,19 @@ class LibraryScope extends InheritedWidget {
 bool isTopicLinkLive(BuildContext context, String topicId) =>
     LibraryScope.of(context)?.contains(topicId) ?? false;
 
-/// Opens the topic a `link_id` points at, pushing it onto the stack so
-/// back returns to the source topic. No-ops if the id doesn't resolve
-/// (unknown link, or no library in scope) — links degrade gracefully.
+/// Opens [topicId] as a protocol page, pushing it onto the stack so back
+/// returns to the source. Uses a [TopicPager] (sibling swipe + in-protocol
+/// search + home) when the owning book is known; falls back to a single
+/// [TopicFrame] otherwise. No-ops if the id doesn't resolve — links degrade
+/// gracefully.
 Future<void> openLinkedTopic(BuildContext context, String topicId) async {
-  final ref = LibraryScope.of(context)?.lookup(topicId);
+  final lib = LibraryScope.of(context);
+  final book = lib?.bookContaining(topicId);
+  if (book != null) {
+    await openProtocol(context, book, topicId);
+    return;
+  }
+  final ref = lib?.lookup(topicId);
   if (ref == null) return;
   await LastState.recordTopic(ref.bookId, topicId);
   if (!context.mounted) return;
@@ -41,6 +50,45 @@ Future<void> openLinkedTopic(BuildContext context, String topicId) async {
     context,
     MaterialPageRoute<void>(
       builder: (_) => TopicFrame(assetPath: ref.asset, palette: ref.palette),
+    ),
+  );
+}
+
+/// Builds the swipe-siblings for a book — every real (non-drug) topic, in book
+/// order.
+List<BookTopic> protocolSiblings(Book book) =>
+    book.allTopics.where((t) => t.drug == null).toList(growable: false);
+
+/// Opens [topicId] (owned by [book]) in a [TopicPager] so the reader can swipe
+/// between siblings, search within the protocols, and jump home. Falls back to
+/// a single [TopicFrame] if the topic isn't a swipeable protocol.
+Future<void> openProtocol(
+  BuildContext context,
+  Book book,
+  String topicId,
+) async {
+  await LastState.recordTopic(book.id, topicId);
+  if (!context.mounted) return;
+  final siblings = protocolSiblings(book);
+  final index = siblings.indexWhere((t) => t.id == topicId);
+  if (index < 0) {
+    final t = book.allTopics.firstWhere(
+      (t) => t.id == topicId,
+      orElse: () => siblings.isNotEmpty ? siblings.first : book.allTopics.first,
+    );
+    await Navigator.push(
+      context,
+      MaterialPageRoute<void>(
+        builder: (_) => TopicFrame(assetPath: t.asset, palette: t.palette),
+      ),
+    );
+    return;
+  }
+  await Navigator.push(
+    context,
+    MaterialPageRoute<void>(
+      builder: (_) =>
+          TopicPager(siblings: siblings, initialIndex: index, bookId: book.id),
     ),
   );
 }

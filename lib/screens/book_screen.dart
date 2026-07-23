@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/drug_index_screen.dart';
-import 'package:orbweaver/screens/topic_frame.dart';
 import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/palette.dart';
 
@@ -270,45 +270,31 @@ class _BookScreenState extends State<BookScreen> {
   }
 }
 
-/// Records last-state and opens a topic — inside a [TopicPager] so the reader
-/// can swipe left/right to the previous/next protocol in book order.
+/// The [BookScreen]'s route name, so a protocol's Home button can pop the whole
+/// protocol stack back to the book index.
+const String kBookRouteName = 'orbweaver-book';
+
+/// Opens a topic from a book. A formulary drug renders its detail screen; a
+/// real topic opens in a [TopicPager] (via [openProtocol]) so the reader can
+/// swipe between protocols, search, and jump home.
 Future<void> openTopicFromBook(
   BuildContext context,
   Book book,
   BookTopic topic,
 ) async {
   // A synthetic formulary-drug row renders the drug detail directly (its
-  // `asset` is a `formulary:` sentinel, not a file). We don't record these in
-  // last-state — there is no TopicFrame asset to restore them from.
+  // `asset` is a `formulary:` sentinel, not a file).
   final drug = topic.drug;
   if (drug != null) {
     await Navigator.push(
       context,
       MaterialPageRoute<void>(
-        builder: (_) =>
-            DrugDetailScreen(drug: drug, palette: topic.palette),
+        builder: (_) => DrugDetailScreen(drug: drug, palette: topic.palette),
       ),
     );
     return;
   }
-  // Swipe-siblings = every real (non-drug) topic in book order.
-  final siblings =
-      book.allTopics.where((t) => t.drug == null).toList(growable: false);
-  final index = siblings.indexWhere((t) => t.id == topic.id);
-  await LastState.recordTopic(book.id, topic.id);
-  if (!context.mounted) return;
-  await Navigator.push(
-    context,
-    MaterialPageRoute<void>(
-      builder: (_) => index < 0
-          ? TopicFrame(assetPath: topic.asset, palette: topic.palette)
-          : TopicPager(
-              siblings: siblings,
-              initialIndex: index,
-              bookId: book.id,
-            ),
-    ),
-  );
+  await openProtocol(context, book, topic.id);
 }
 
 /// A chapter (top-level group) opened as its own screen, with its sections
