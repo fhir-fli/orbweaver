@@ -1,0 +1,73 @@
+# ============================================================
+# WVEMS 2026 — Peds Reference (page 144)
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT) — the WVEMS
+# rules/policy text below is original WVEMS content.
+#
+# NOTE: the printed per-age dose tables (pp.145–161) are built on the
+# Handtevy Pediatric Emergency Standards, a commercial/proprietary
+# product (handtevy.com). Those dose tables are NOT reproduced here —
+# they are left as a placeholder to be regenerated from current
+# guidelines (e.g. via OpenEvidence) and clinically confirmed, so the
+# app ships no third-party-licensed dosing content.
+# ============================================================
+
+topic:
+  id: "wvems-2026-144"
+  version: "v260101"
+  title: "Peds Reference"
+  list_subtitle: "2026-144 · age-based dosing"
+  last_reviewed: "Dec 2025"
+  tags: ["pediatric", "peds", "dosing", "handtevy", "age", "reference"]
+  aliases:
+    - "Pediatric"
+    - "Peds Dosing"
+    - "Handtevy"
+  category: "medical"
+  page_number: 144
+
+  blocks:
+
+    - type: "prose"
+      title: "Peds Reference"
+      highlight: true
+      markdown: |
+        - **Age** is the primary reference — it allows preparation en route.
+        - Use a **length/colour tape** if the age is unknown (or if the child is very small/large).
+        - **Weight-based** dosing is tertiary — estimating weight is less accurate.
+        - Use the **same route & frequency** as the adult protocol.
+          - Limit **NS Bolus** to **×3** (60 mL/kg).
+
+    - type: "prose"
+      title: "EMT Peds Dosing"
+      markdown: |
+        - Paediatric med math is **not in EMT scope**.
+        - EMTs may give the regular **adult dose** for these, at/above the listed age:
+          - **Afrin** (oxymetazoline): ≥ 6 y/o
+          - **Albuterol** (Ventolin): ≥ 2 y/o
+          - **Atrovent** (ipratropium): ≥ 5 y/o
+          - **Baqsimi** (glucagon IN): ≥ 1 y/o
+          - **Glucagon** (IM): ≥ 5 y/o
+          - **Oral Glucose** (Glutose): ≥ 2 y/o
+          - **Narcan** (naloxone): ≥ 1 y/o
+          - **Tetracaine** (ophthalmic): all ages
+          - **Zofran ODT** (ondansetron): ≥ 11 y/o
+        - May give an **EpiPen Jr** for 3–8 y/o, or an adult **EpiPen** for ≥ 9 y/o.
+        - May give **OTC** doses of Benadryl, Ibuprofen, and Tylenol — follow the directions on the OTC box for age/weight.
+          - May **not** give doses labelled "ask (or as directed by) a physician".
+
+    - type: "prose"
+      title: "Age-based dose tables — coming soon"
+      callout: true
+      markdown: |
+        Per-age emergency drug dosing (Premie → 13 years) for the WVEMS
+        formulary is being rebuilt from current paediatric guidelines and
+        clinically verified, rather than reproduced from the licensed source.
+
+        **Until then:** use your approved paediatric length/colour tape or an
+        approved dosing reference.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Handtevy — Pediatric Emergency Standards — https://handtevy.com [Ver: 5/22]

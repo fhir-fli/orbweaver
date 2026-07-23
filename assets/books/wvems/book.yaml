@@ -82,8 +82,8 @@ book:
         - topic: "topics/wvems_2026_092.yaml"
         - topic: "topics/wvems_2026_094.yaml"
     - title: "Drug Reference"
-      # Reference appendix — rendered as a footer bar in the index directory,
-      # not a protocol column.
+      # Reference appendices — rendered as footer bars in the index directory,
+      # not protocol columns.
       appendix: true
       palette:
         accent: "0xFF1E4E8C"
@@ -91,3 +91,11 @@ book:
         accent_branch: "0xFF2C6BB5"
       children:
         - topic: "topics/wvems_drug_ref_a.yaml"
+    - title: "Peds Reference"
+      appendix: true
+      palette:
+        accent: "0xFFAD1457"
+        accent_fill: "0xFFFDE7F0"
+        accent_branch: "0xFFD81B60"
+      children:
+        - topic: "topics/wvems_2026_144.yaml"
