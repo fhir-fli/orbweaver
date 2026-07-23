@@ -31,6 +31,7 @@ flutter:
     - assets/books/protocolbook/images/
     - assets/books/wvems/
     - assets/books/wvems/topics/
+    - assets/books/wvems/images/
     - assets/books/who_imci/
     - assets/books/who_imci/topics/
     - assets/books/calculators/

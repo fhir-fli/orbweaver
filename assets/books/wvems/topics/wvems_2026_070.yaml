@@ -120,16 +120,10 @@ topic:
             - 14+ y/o: **500 mL/hr**
             - 6–13 y/o: **250 mL/hr**
             - 0–5 y/o: **125 mL/hr**
-        - type: "prose"
-          title: "Rule of 9's (Adult)"
-          callout: true
-          markdown: |
-            - Head: **9%**
-            - Each arm: **9%**
-            - Front torso: **18%**
-            - Back torso: **18%**
-            - Each leg: **18%**
-            - Perineum: **1%**
+        - type: "image"
+          path: "assets/books/wvems/images/bsa_rule_of_nines.png"
+          size: "full"
+          caption: "Rule of 9's (adult BSA) — palm (with fingers) ≈ 1%, perineum 1%."
 
     - type: "prose"
       title: "TRAUMA Alert"
