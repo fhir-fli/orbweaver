@@ -90,7 +90,7 @@ book:
         accent_fill: "0xFFE8F0FA"
         accent_branch: "0xFF2C6BB5"
       children:
-        - topic: "topics/wvems_drug_ref_a.yaml"
+        - topic: "topics/wvems_2026_drug_reference.yaml"
     - title: "Peds Reference"
       appendix: true
       palette:
