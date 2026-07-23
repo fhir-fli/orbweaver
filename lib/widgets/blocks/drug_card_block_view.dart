@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/mini_markdown.dart';
 
-/// Renders a [DrugCardBlock] as a bordered card with sectioned bullet
-/// lists (Indications / Contraindications / Dose / Warnings / Pearls).
+/// Renders a [DrugCardBlock] as the WVEMS-style drug card: a dark name header
+/// over three colour-coded sections — **Use** (green), **Caution** (amber),
+/// **Notes** (lavender) — each with a vertical side-label.
 class DrugCardBlockView extends StatelessWidget {
   const DrugCardBlockView({
     required this.block,
@@ -14,189 +16,157 @@ class DrugCardBlockView extends StatelessWidget {
   final DrugCardBlock block;
   final TopicTheme theme;
 
+  static const _header = Color(0xFF3E5C6B);
+  static const _useBg = Color(0xFFCDE9CD);
+  static const _cautionBg = Color(0xFFFBE9BE);
+  static const _notesBg = Color(0xFFE3D7F1);
+
+  String? _useMd() {
+    final lines = <String>[
+      for (final i in block.indications) '- **Tx:** $i',
+      for (final d in block.doses) '- **${_pop(d.population)}:** ${d.text}',
+    ];
+    return lines.isEmpty ? null : lines.join('\n');
+  }
+
+  String? _bulletsMd(List<String> items) =>
+      items.isEmpty ? null : [for (final i in items) '- $i'].join('\n');
+
   @override
   Widget build(BuildContext context) {
-    final body = Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          block.name,
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w800,
-            color: theme.header,
-          ),
-        ),
-        if (block.drugClass != null)
-          Text(
-            block.drugClass!,
-            style: const TextStyle(
-              fontSize: 11,
-              fontStyle: FontStyle.italic,
-              color: Colors.black54,
-            ),
-          ),
-        if (block.indications.isNotEmpty)
-          _BulletSection(
-            label: 'Indications',
-            items: block.indications,
-            dangerColor: theme.dangerText,
-          ),
-        if (block.contraindications.isNotEmpty)
-          _BulletSection(
-            label: 'Contraindications',
-            items: block.contraindications,
-            dangerColor: theme.dangerText,
-          ),
-        if (block.doses.isNotEmpty) _DoseSection(doses: block.doses),
-        if (block.warnings.isNotEmpty)
-          _BulletSection(
-            label: 'Warnings',
-            items: block.warnings,
-            dangerColor: theme.dangerText,
-            emphasize: true,
-          ),
-        if (block.pearls.isNotEmpty)
-          _BulletSection(
-            label: 'Pearls',
-            items: block.pearls,
-            dangerColor: theme.dangerText,
-          ),
-      ],
-    );
+    // Caution folds contraindications in with the warnings.
+    final caution = [...block.contraindications, ...block.warnings];
+    final use = _useMd();
+    final cautionMd = _bulletsMd(caution);
+    final notesMd = _bulletsMd(block.pearls);
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
       decoration: BoxDecoration(
-        color: theme.nodeFill,
-        border: Border.all(color: theme.nodeBorder, width: 1.5),
+        border: Border.all(color: _header, width: 1.5),
+        borderRadius: BorderRadius.circular(10),
       ),
-      child: block.imagePath == null
-          ? body
-          : Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      clipBehavior: Clip.antiAlias,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          // Name header.
+          Container(
+            color: _header,
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.baseline,
+              textBaseline: TextBaseline.alphabetic,
               children: [
-                Expanded(child: body),
-                const SizedBox(width: 4),
-                SizedBox(
-                  width: 76,
-                  child: Image.asset(
-                    block.imagePath!,
-                    errorBuilder: (context, error, stack) =>
-                        _imagePlaceholder(),
+                Flexible(
+                  child: Text(
+                    block.name,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                 ),
+                if (block.drugClass != null) ...[
+                  const SizedBox(width: 8),
+                  Flexible(
+                    child: Text(
+                      block.drugClass!,
+                      textAlign: TextAlign.right,
+                      style: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 12.5,
+                      ),
+                    ),
+                  ),
+                ],
               ],
             ),
+          ),
+          if (use != null)
+            _Section(label: 'Use', bg: _useBg, markdown: use, accent: theme.header),
+          if (cautionMd != null)
+            _Section(
+                label: 'Caution',
+                bg: _cautionBg,
+                markdown: cautionMd,
+                accent: theme.header),
+          if (notesMd != null)
+            _Section(
+                label: 'Notes',
+                bg: _notesBg,
+                markdown: notesMd,
+                accent: theme.header),
+        ],
+      ),
     );
   }
 
-  Widget _imagePlaceholder() => Container(
-        height: 72,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: const Color(0xFFF5F5F5),
-          border: Border.all(color: const Color(0xFFBDBDBD)),
-        ),
-        padding: const EdgeInsets.all(3),
-        child: Text(
-          '[image missing]\n${block.imagePath}',
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 8,
-            color: Color(0xFF757575),
-            fontStyle: FontStyle.italic,
-          ),
-        ),
-      );
+  String _pop(DosePopulation p) => switch (p) {
+        DosePopulation.adult => 'Adult',
+        DosePopulation.peds => 'Peds',
+        DosePopulation.both => 'Dose',
+      };
 }
 
-class _BulletSection extends StatelessWidget {
-  const _BulletSection({
+/// One colour-coded drug-card section: a vertical side-label + a MiniMarkdown
+/// body (so links in the notes stay tappable).
+class _Section extends StatelessWidget {
+  const _Section({
     required this.label,
-    required this.items,
-    required this.dangerColor,
-    this.emphasize = false,
+    required this.bg,
+    required this.markdown,
+    required this.accent,
   });
 
   final String label;
-  final List<String> items;
-  final Color dangerColor;
-  final bool emphasize;
+  final Color bg;
+  final String markdown;
+  final Color accent;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w800,
-            color: emphasize
-                ? dangerColor
-                : Colors.black.withValues(alpha: 0.75),
-          ),
-        ),
-        for (final item in items)
-          Padding(
-            padding: const EdgeInsets.only(left: 6),
-            child: Text(
-              '• $item',
-              style: const TextStyle(fontSize: 12, height: 1.2),
-            ),
-          ),
-      ],
-    );
-  }
-}
-
-class _DoseSection extends StatelessWidget {
-  const _DoseSection({required this.doses});
-
-  final List<DrugDose> doses;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Dose',
-          style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w800,
-            color: Colors.black.withValues(alpha: 0.75),
-          ),
-        ),
-        for (final d in doses)
-          Padding(
-            padding: const EdgeInsets.only(left: 6),
-            child: RichText(
-              text: TextSpan(
-                style: const TextStyle(
-                  fontSize: 12,
-                  height: 1.2,
-                  color: Colors.black87,
-                ),
-                children: [
-                  TextSpan(
-                    text: '${_popLabel(d.population)}: ',
-                    style: const TextStyle(fontWeight: FontWeight.w700),
+    return Container(
+      color: bg,
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Vertical side-label.
+            Container(
+              width: 30,
+              alignment: Alignment.center,
+              decoration: const BoxDecoration(
+                border: Border(right: BorderSide(color: Colors.black26)),
+              ),
+              child: RotatedBox(
+                quarterTurns: 3,
+                child: Text(
+                  label,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.black87,
+                    letterSpacing: 0.5,
                   ),
-                  TextSpan(text: d.text),
-                ],
+                ),
               ),
             ),
-          ),
-      ],
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(8, 5, 8, 5),
+                child: MiniMarkdown(
+                  markdown: markdown,
+                  fontSize: 13,
+                  height: 1.25,
+                  bulletColor: Colors.black54,
+                  linkColor: accent,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
-
-  String _popLabel(DosePopulation p) => switch (p) {
-        DosePopulation.adult => 'Adult',
-        DosePopulation.peds => 'Peds',
-        DosePopulation.both => 'All',
-      };
 }
