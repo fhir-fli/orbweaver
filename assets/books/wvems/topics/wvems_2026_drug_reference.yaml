@@ -418,3 +418,188 @@ topic:
         - "Protocol: [Circulation / Shock](topic:wvems-2026-008)"
         - "Catecholamine · Onset: 5 minutes · Duration: 10 minutes"
         - "https://reference.medscape.com/drug/342435"
+
+    - type: "drug_card"
+      name: "DuoDote®"
+      class: "Atropine & Pralidoxime"
+      image: "assets/books/wvems/images/drug_duodote.jpg"
+      indications:
+        - "Organophosphate poisoning"
+      doses:
+        - population: "adult"
+          text: "**auto-inj** IM (2.1 mg / 600 mg)"
+        - population: "peds"
+          text: "safety not established ≤ 40 kg"
+      warnings:
+        - "May require **multiple doses**"
+        - "PMH: chronic renal or liver disease"
+        - "Do not mix: **Glucagon**"
+        - "May cause: vision changes, HTN"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: Administer Antidote"
+        - "Antidote: anticholinergic, reactivates esterase · Peak: 30 m"
+        - "https://reference.medscape.com/drug/343745"
+
+    - type: "drug_card"
+      name: "Epi, Epi Neb"
+      class: "Epinephrine, EpiPen®"
+      image: "assets/books/wvems/images/drug_epi.jpg"
+      indications:
+        - "Bradycardia, CODE, Dyspnea, Allergy"
+      doses:
+        - population: "adult"
+          text: "**1 mg** IV/IO (CODE)"
+        - population: "peds"
+          text: "0.01 mg/kg (Brady, CODE)"
+        - population: "both"
+          text: "Epi Neb: 0.5 mg/kg, max 5 mg (SOB)"
+      warnings:
+        - "PMH: CAD, HTN"
+        - "May cause: **palpitations**"
+        - "May cause: anxiety, arrhythmia"
+        - "May cause: HTN, flushing"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Bradycardia](topic:wvems-2026-012), [CODE](topic:wvems-2026-024), [Dyspnea](topic:wvems-2026-030), [Allergy](topic:wvems-2026-032), [Neonate](topic:wvems-2026-050)"
+        - "See also **Epi Drip** (below) for Circulation / Shock"
+        - "Adrenergic α, β agonist · Onset: 1 min · Duration: varies"
+        - "https://reference.medscape.com/drug/342437"
+
+    - type: "drug_card"
+      name: "Epi Drip, Epi Push"
+      class: "Epinephrine, Adrenalin"
+      image: "assets/books/wvems/images/drug_epi_drip.jpg"
+      indications:
+        - "Hypotension, Shock"
+      doses:
+        - population: "adult"
+          text: "**1 gtt/sec macro** drip set"
+        - population: "peds"
+          text: "1 gtt/sec micro drip set"
+        - population: "both"
+          text: "Mix **1 mg Epi** into **1 L NS** (1 mcg/mL)"
+      warnings:
+        - "PMH: CAD, HTN"
+        - "May cause: **palpitations**"
+        - "May cause: anxiety, arrhythmia"
+        - "May cause: HTN, flushing"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Circulation / Shock](topic:wvems-2026-008), [Vasopressors](topic:wvems-2026-082)"
+        - "See also **Epi** (above) for Brady, CODE, Dyspnea, Allergy"
+        - "Adrenergic α, β agonist · Onset: 1 min"
+        - "https://reference.medscape.com/drug/342437"
+
+    - type: "drug_card"
+      name: "Etomidate"
+      class: "Amidate®"
+      image: "assets/books/wvems/images/drug_etomidate.jpg"
+      indications:
+        - "RSI / RSA induction"
+      doses:
+        - population: "adult"
+          text: "**0.3 mg/kg** IV/IO"
+        - population: "peds"
+          text: "0.3 mg/kg (10+ y/o only)"
+        - population: "both"
+          text: "0–9 y/o: safety not established"
+      warnings:
+        - "PMH: adrenal insufficiency"
+        - "May cause: **limb jerking**"
+        - "May cause: **eye twitching**"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: [Intubation / RSI](topic:wvems-2026-078)"
+        - "Central hypnotic · Onset: seconds · Duration: minutes"
+        - "https://reference.medscape.com/drug/343098"
+
+    - type: "drug_card"
+      name: "Fentanyl"
+      class: "Sublimaze®"
+      image: "assets/books/wvems/images/drug_fentanyl.jpg"
+      indications:
+        - "Acute Pain, Sedation"
+      doses:
+        - population: "adult"
+          text: "**50–100 mcg** IV/IO, IM/IN"
+        - population: "peds"
+          text: "0.5–2 mcg/kg"
+      warnings:
+        - "PMH: MAOIs (antidepressant)"
+        - "May cause: **respiratory depression**"
+        - "May cause: **hypotension**"
+        - "May cause: delirium, N/V"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: [Pain](topic:wvems-2026-020)"
+        - "Critical Care: [Sedation / Vent](topic:wvems-2026-080)"
+        - "Opioid: μ-agonist · Onset: seconds · Duration: 45 min"
+        - "https://reference.medscape.com/drug/343311"
+
+    - type: "drug_card"
+      name: "Glucagon"
+      class: "Baqsimi®, Glucagen®"
+      image: "assets/books/wvems/images/drug_glucagon.jpg"
+      indications:
+        - "Hypoglycemia, β-blocker OD"
+      doses:
+        - population: "adult"
+          text: "**1 mg** IM (or 3 mg IN)"
+        - population: "peds"
+          text: "0.5 mg if < 6 y/o (< 20 kg)"
+      warnings:
+        - "PMH: pheochromocytoma"
+        - "PMH: starvation, **Coumadin**"
+        - "May cause: nausea / vomiting"
+        - "Beware: **refractory hypoglycemia**"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "**β-blocker OD** may require multiple doses"
+        - "Protocols: [Diabetic](topic:wvems-2026-038), Administer Antidote"
+        - "Hepatic glycogenolysis · Onset: 10 min · Duration: 30 min"
+        - "https://reference.medscape.com/drug/342712"
+
+    - type: "drug_card"
+      name: "Glucose"
+      class: "Oral Glucose, Glutose 15™"
+      image: "assets/books/wvems/images/drug_glucose.jpg"
+      indications:
+        - "Hypoglycemia"
+      doses:
+        - population: "adult"
+          text: "**15 grams** PO"
+        - population: "peds"
+          text: "0.5 g/kg"
+      warnings:
+        - "PMH: hyperglycemia"
+        - "May cause: hyperactivity"
+        - "**Pregnancy Category A**: demonstrated safe"
+      pearls:
+        - "Protocol: [Diabetic](topic:wvems-2026-038)"
+        - "Monosaccharide · Onset: mins · Duration: 40 min"
+        - "https://reference.medscape.com/drug/342705"
+
+    - type: "drug_card"
+      name: "Haldol®"
+      class: "Haloperidol"
+      image: "assets/books/wvems/images/drug_haldol.jpg"
+      indications:
+        - "Severe Psychosis"
+      doses:
+        - population: "adult"
+          text: "**5 mg** IM"
+        - population: "peds"
+          text: "0.075–0.15 mg/kg (6+ y/o)"
+        - population: "both"
+          text: "0–5 y/o: safety not established"
+      warnings:
+        - "PMH: antiarrhythmics, Long QT"
+        - "PMH: Parkinson's disease"
+        - "May cause: **hypotension, NMS**"
+        - "May cause: dystonia"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: [Behavioral](topic:wvems-2026-046)"
+        - "Antipsychotic: dopamine blocker · Onset: 10 m · Duration: 18 h"
+        - "https://reference.medscape.com/drug/342974"
