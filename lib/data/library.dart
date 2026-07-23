@@ -41,6 +41,10 @@ Future<List<Book>> loadLibrary() async {
   return books;
 }
 
+/// Loads a single book by id — for a single-book build (e.g. the WHO-only web
+/// app) that opens straight into one book with no shelf.
+Future<Book> loadBook(String id) => _loadBook(id);
+
 Future<Book> _loadBook(String id) async {
   final dir = 'assets/books/$id';
   final raw = await rootBundle.loadString('$dir/book.yaml');
