@@ -45,6 +45,10 @@ flutter build web -t lib/main_who.dart --no-tree-shake-icons --base-href "$BASE"
 # Title the page (the generated index.html uses the project name).
 sed -i 's#<title>[^<]*</title>#<title>Hospital Care for Children</title>#' \
   build/web/index.html || true
+# Name the app in the manifest (shown in the tab / any bookmark). Runs as a
+# plain website (display:browser) — no "install app" prompt.
+sed -i 's#"name": *"[^"]*"#"name": "Hospital Care for Children"#; s#"short_name": *"[^"]*"#"short_name": "Hospital Care"#' \
+  build/web/manifest.json || true
 
 echo "WHO web build ready at build/web (base-href $BASE)."
 echo "Books bundled:"
