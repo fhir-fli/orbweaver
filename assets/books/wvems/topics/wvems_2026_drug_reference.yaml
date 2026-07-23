@@ -603,3 +603,186 @@ topic:
         - "Protocol: [Behavioral](topic:wvems-2026-046)"
         - "Antipsychotic: dopamine blocker · Onset: 10 m · Duration: 18 h"
         - "https://reference.medscape.com/drug/342974"
+
+    - type: "drug_card"
+      name: "Heparin"
+      class: "Heparin Sodium"
+      image: "assets/books/wvems/images/drug_heparin.jpg"
+      indications:
+        - "ST-Elevation Myocardial Infarction"
+      doses:
+        - population: "adult"
+          text: "**5,000 units** IV/IO"
+        - population: "peds"
+          text: "do not use"
+        - population: "both"
+          text: "Double check concentration"
+      warnings:
+        - "PMH: induced thrombocytopenia"
+        - "Do not mix: **Haldol**"
+        - "May cause: bleeding"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: STEMI"
+        - "Anticoagulant · Onset: immediate · Peak: 2–4 hours"
+        - "https://reference.medscape.com/drug/342169"
+
+    - type: "drug_card"
+      name: "Ibuprofen"
+      class: "Advil®, Motrin®"
+      image: "assets/books/wvems/images/drug_ibuprofen.jpg"
+      indications:
+        - "Fever, Pain"
+      doses:
+        - population: "adult"
+          text: "**600 mg** PO"
+        - population: "peds"
+          text: "10 mg/kg"
+      warnings:
+        - "PMH: CKD, recent CABG"
+        - "Do not use if **active GI bleeding**"
+        - "May cause: epigastric pain"
+        - "May cause: N/V, dizzy"
+        - "**Pregnancy Category D**: known risks"
+      pearls:
+        - "Protocols: [Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), Cold / Heat"
+        - "NSAID: cox inhibitor · Onset: 30 min · Duration: 4 hours"
+        - "https://reference.medscape.com/drug/343289"
+
+    - type: "drug_card"
+      name: "Keppra®"
+      class: "Levetiracetam"
+      image: "assets/books/wvems/images/drug_keppra.jpg"
+      indications:
+        - "Status Epilepticus, Seizures"
+      doses:
+        - population: "adult"
+          text: "**3,000 mg** IV/IO"
+        - population: "peds"
+          text: "20 mg/kg (6 y/o and older)"
+        - population: "both"
+          text: "Dilute in NS and **give over 10 min**"
+      warnings:
+        - "PMH: paranoid psychosis"
+        - "May cause: fatigue, weakness"
+        - "May cause: hypertension, headache"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Seizure](topic:wvems-2026-042), [Elevated ICP](topic:wvems-2026-086)"
+        - "Novel antiepileptic · Peak: 1 hour · Half-life: 6–8 hours"
+        - "https://reference.medscape.com/drug/343013"
+
+    - type: "drug_card"
+      name: "Ketamine"
+      class: "Ketalar®"
+      image: "assets/books/wvems/images/drug_ketamine.jpg"
+      indications:
+        - "Severe Pain, Discomfort"
+      doses:
+        - population: "adult"
+          text: "**20 mg** IV/IO, IM/IN (pain)"
+        - population: "peds"
+          text: "0.25–0.5 mg/kg"
+        - population: "both"
+          text: "Higher doses for Critical Care"
+      warnings:
+        - "PMH: increased ICP, glaucoma"
+        - "May cause: **laryngospasm**"
+        - "May cause: **hypersalivation**"
+        - "**Pregnancy N/A**: not categorized"
+      pearls:
+        - "Protocols: [Pain](topic:wvems-2026-020), [Med ROSC](topic:wvems-2026-026), Trauma ROSC, [RSI](topic:wvems-2026-078), [Sedation](topic:wvems-2026-080)"
+        - "Dilute in NS, **give over 10 min if used IV/IO in pain/ROSC**"
+        - "Dissociative anesthetic · Onset: 30 s · Duration: minutes"
+        - "https://reference.medscape.com/drug/343099"
+
+    - type: "drug_card"
+      name: "Lasix®"
+      class: "Furosemide"
+      image: "assets/books/wvems/images/drug_lasix.jpg"
+      indications:
+        - "Congestive Heart Failure"
+      doses:
+        - population: "adult"
+          text: "**40 mg** IV/IO, IM"
+        - population: "peds"
+          text: "1–2 mg/kg"
+      warnings:
+        - "PMH: CKD, anuria, liver disease"
+        - "May cause: **Hypotension**, tinnitus"
+        - "May cause: **Hypokalemia**, rash"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: Pulmonary Edema"
+        - "Loop diuretic · Onset: 5 minutes · Duration: 4 hours"
+        - "https://reference.medscape.com/drug/342423"
+
+    - type: "drug_card"
+      name: "Levophed®"
+      class: "Norepinephrine"
+      image: "assets/books/wvems/images/drug_levophed.jpg"
+      indications:
+        - "Hypotension, Septic Shock"
+      doses:
+        - population: "adult"
+          text: "**5–20 mcg/min** IV/IO"
+        - population: "peds"
+          text: "0.05 mcg/kg/min"
+        - population: "both"
+          text: "Dilute **4 mg in 250 mL**, use a **pump**"
+      warnings:
+        - "**Beware extravasation**"
+        - "PMH: CAD, HTN, MAOI meds"
+        - "May cause: HTN, arrhythmia"
+        - "May cause: anxiety, flushing"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: [Vasopressors](topic:wvems-2026-082)"
+        - "**Dilute in D5W** if available (NS is OK, but will lose potency)"
+        - "Adrenergic: β, α agonist · Onset: 1 min · Duration: 1 min"
+        - "https://reference.medscape.com/drug/342443"
+
+    - type: "drug_card"
+      name: "Lidocaine"
+      class: "Xylocaine®"
+      image: "assets/books/wvems/images/drug_lidocaine.jpg"
+      indications:
+        - "Pain after IO (or V-Tach / V-Fib)"
+      doses:
+        - population: "adult"
+          text: "Pain after IO: **10 mg** IO"
+        - population: "both"
+          text: "CODE 1st dose: 1–1.5 mg/kg IV/IO"
+        - population: "both"
+          text: "CODE 2nd dose: 0.5–0.75 mg/kg IV/IO"
+      warnings:
+        - "PMH: antiarrhythmics, AV block"
+        - "PMH: hyperkalemia"
+        - "Do not mix: **Digoxin®**"
+        - "May cause: hypotension, N/V, seizure"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocol: IO Procedure"
+        - "Antiarrhythmic: Class IB · Onset: 45 sec · Duration: 10 min"
+        - "https://reference.medscape.com/drug/342302"
+
+    - type: "drug_card"
+      name: "Lopressor®"
+      class: "Metoprolol"
+      image: "assets/books/wvems/images/drug_lopressor.jpg"
+      indications:
+        - "HTN, Tachycardia"
+      doses:
+        - population: "adult"
+          text: "**5 mg** IV/IO"
+        - population: "peds"
+          text: "0.5 mcg/kg/min infusion"
+      warnings:
+        - "PMH: CHF, AV block"
+        - "May cause: **hypotension**, syncope"
+        - "May cause: **bradycardia**, dizzy"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: [Malignant HTN](topic:wvems-2026-010)"
+        - "β-blocker · Onset: minutes · Duration: hours"
+        - "https://reference.medscape.com/drug/342360"
