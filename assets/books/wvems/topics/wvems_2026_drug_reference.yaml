@@ -62,6 +62,180 @@ topic:
         - "**Pregnancy Category C**: safety not established"
       pearls:
         - "Give **rapid IV push** followed by a **rapid saline flush**"
-        - "Protocol: Tachycardia"
+        - "Protocol: [Tachycardia](topic:wvems-2026-014)"
         - "Onset: seconds · Duration: ~10 s"
         - "https://reference.medscape.com/drug/342295"
+
+    - type: "drug_card"
+      name: "Afrin®"
+      class: "Oxymetazoline"
+      image: "assets/books/wvems/images/drug_afrin.jpg"
+      indications:
+        - "Nosebleeds"
+      doses:
+        - population: "adult"
+          text: "**1 spray** IN"
+        - population: "peds"
+          text: "6 y/o and above only"
+      warnings:
+        - "PMH: CAD, HTN"
+        - "May cause: HA, nose discomfort"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: [Epistaxis](topic:wvems-2026-076)"
+        - "Adrenergic α-agonist · Onset: seconds · Duration: 6 hr"
+        - "https://reference.medscape.com/drug/343408"
+
+    - type: "drug_card"
+      name: "Albuterol"
+      class: "Ventolin®"
+      image: "assets/books/wvems/images/drug_albuterol.jpg"
+      indications:
+        - "Wheezing, Hyperkalemia"
+      doses:
+        - population: "adult"
+          text: "**2.5 mg** Neb"
+        - population: "peds"
+          text: "0.15 mg/kg"
+      warnings:
+        - "PMH: antiretroviral therapy"
+        - "PMH: hypokalemia"
+        - "May cause: tremor, anxiety"
+        - "May cause: palpitation, tachycardia"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Dyspnea](topic:wvems-2026-030), [Allergic Reaction](topic:wvems-2026-032)"
+        - "Four (4×) nebs back-to-back for [Hyperkalemia](topic:wvems-2026-018)"
+        - "Adrenergic β-agonist · Onset: 30 min · Duration: 2 hr"
+        - "https://reference.medscape.com/drug/343426"
+
+    - type: "drug_card"
+      name: "Amiodarone"
+      class: "Pacerone®"
+      image: "assets/books/wvems/images/drug_amiodarone.jpg"
+      indications:
+        - "V-Tach / V-Fib"
+      doses:
+        - population: "adult"
+          text: "CODE: **300**, then **150 mg** IV/IO"
+        - population: "peds"
+          text: "CODE: 5 mg/kg, Q 5 min ×3"
+        - population: "both"
+          text: "Gtt: over 10 min (peds over 30 min)"
+      warnings:
+        - "PMH: antiretroviral therapy"
+        - "PMH: bradycardia, hyperkalemia"
+        - "May cause: bradycardia, HA"
+        - "May cause: hypotension, dizzy"
+        - "**Pregnancy Category D**: known risks"
+      pearls:
+        - "Protocols: [Tachycardia](topic:wvems-2026-014), Med CODE/ROSC, [Trauma CODE](topic:wvems-2026-052)"
+        - "Dilute in NS and **give over 10 min if non-emergent**"
+        - "Antiarrhythmic Class III · Onset: mins · Duration: hours"
+        - "https://reference.medscape.com/drug/342296"
+
+    - type: "drug_card"
+      name: "Ancef®"
+      class: "Cefazolin"
+      image: "assets/books/wvems/images/drug_ancef.jpg"
+      indications:
+        - "Major Wounds, Open Fractures"
+      doses:
+        - population: "adult"
+          text: "**2 grams** IV/IO, IM"
+        - population: "peds"
+          text: "10–30 mg/kg IV/IO, IM"
+      warnings:
+        - "Monitor closely if PCN allergy"
+        - "Avoid if cephalosporin allergy"
+        - "May cause: rash/hives, dyspnea"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocols: [Major Trauma](topic:wvems-2026-056), [Extremity Injury](topic:wvems-2026-066)"
+        - "**Reconstitute**: w/ 3 mL NS for IM; dilute in 10 mL for IV/IO"
+        - "Antibiotic (1st-gen cephalosporin) · Onset: minutes · Duration: hours"
+        - "https://reference.medscape.com/drug/342492"
+
+    - type: "drug_card"
+      name: "Aspirin"
+      class: "Baby ASA"
+      image: "assets/books/wvems/images/drug_aspirin.jpg"
+      indications:
+        - "Angina"
+      doses:
+        - population: "adult"
+          text: "**81 mg** ×4 PO (chew)"
+        - population: "peds"
+          text: "*do not use*"
+      warnings:
+        - "PMH: GI bleeding, low platelets"
+        - "May cause: GERD, bleeding"
+        - "**Pregnancy Category D**: known risks"
+      pearls:
+        - "Protocol: [Chest Pain](topic:wvems-2026-028)"
+        - "Antiplatelet (and NSAID) · Onset: 5 min · Duration: 4 hrs"
+        - "https://reference.medscape.com/drug/343279"
+
+    - type: "drug_card"
+      name: "Ativan®"
+      class: "Lorazepam"
+      image: "assets/books/wvems/images/drug_ativan.jpg"
+      indications:
+        - "Seizure, Delirium, Sedation"
+      doses:
+        - population: "adult"
+          text: "**1 mg** IV/IO, IM/IN"
+        - population: "peds"
+          text: "25–50 mcg/kg"
+      warnings:
+        - "PMH: glaucoma"
+        - "May cause: **respiratory depression**"
+        - "May cause: hypotension"
+        - "**Pregnancy Category D**: known risks"
+        - "**Do not use** for premature babies"
+      pearls:
+        - "Alternate substitute for **Versed** (only with OMD approval)"
+        - "Benzo (GABA agonist) · Onset: 1 min · Duration: 8 hours"
+        - "https://reference.medscape.com/drug/342906"
+
+    - type: "drug_card"
+      name: "Atropine"
+      class: "AtroPen®"
+      image: "assets/books/wvems/images/drug_atropine.jpg"
+      indications:
+        - "Bradycardia, Organophosphate OD"
+      doses:
+        - population: "adult"
+          text: "**1 mg** IV/IO (brady)"
+        - population: "peds"
+          text: "0.02 mg/kg"
+      warnings:
+        - "PMH: glaucoma, AV block"
+        - "May cause: palpitations"
+        - "May cause: dry mouth, HA"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "**Organophosphate OD** may require massive doses"
+        - "Protocols: [Bradycardia](topic:wvems-2026-012), Administer Antidote"
+        - "Anticholinergic · Onset: seconds · Duration: minutes"
+        - "https://reference.medscape.com/drug/343093"
+
+    - type: "drug_card"
+      name: "Atrovent®"
+      class: "Ipratropium Bromide"
+      image: "assets/books/wvems/images/drug_atrovent.jpg"
+      indications:
+        - "Wheezing"
+      doses:
+        - population: "adult"
+          text: "**0.5 mg** Neb"
+        - population: "peds"
+          text: "0.25 mg if <6 y/o (<20 kg)"
+      warnings:
+        - "PMH: glaucoma"
+        - "May cause: HA, cough"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocols: [Dyspnea](topic:wvems-2026-030), [Allergic Reaction](topic:wvems-2026-032)"
+        - "Anticholinergic · Onset: 15 min · Duration: 3 hours"
+        - "https://reference.medscape.com/drug/343416"
