@@ -94,6 +94,18 @@ topic:
           - This protocol does not apply to **marine** stings or bites.
         - If animal is known, consider calling **Poison Control**: 800-222-1222.
 
+    - type: "row"
+      blocks:
+        - type: "image"
+          path: "assets/books/wvems/images/snake_rattlesnake.jpg"
+          caption: "Rattlesnake · Jonathunder / Wikimedia, CC BY-SA 3.0"
+        - type: "image"
+          path: "assets/books/wvems/images/snake_copperhead.jpg"
+          caption: "Copperhead · Holger Krisp / Wikimedia, CC BY 3.0"
+        - type: "image"
+          path: "assets/books/wvems/images/spider_black_widow.jpg"
+          caption: "Black Widow · Shenrich91 / Wikimedia, CC BY-SA 3.0"
+
     - type: "prose"
       title: "Pediatrics"
       highlight: true
