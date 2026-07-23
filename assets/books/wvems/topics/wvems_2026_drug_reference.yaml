@@ -239,3 +239,182 @@ topic:
         - "Protocols: [Dyspnea](topic:wvems-2026-030), [Allergic Reaction](topic:wvems-2026-032)"
         - "Anticholinergic · Onset: 15 min · Duration: 3 hours"
         - "https://reference.medscape.com/drug/343416"
+
+    - type: "drug_card"
+      name: "Benadryl®"
+      class: "Diphenhydramine"
+      image: "assets/books/wvems/images/drug_benadryl.jpg"
+      indications:
+        - "Allergic Reactions, Dystonia"
+      doses:
+        - population: "adult"
+          text: "**25 mg** IV/IO, IM, PO (may give 50 mg PO)"
+        - population: "peds"
+          text: "1 mg/kg"
+      warnings:
+        - "PMH: glaucoma, elderly"
+        - "May cause: **sedation**, delirium"
+        - "May cause: dry mouth"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocols: [Allergic Reaction](topic:wvems-2026-032), [Behavioral](topic:wvems-2026-046), Antidote"
+        - "Antihistamine · Onset: 15 min · Duration: 4 hours"
+        - "https://reference.medscape.com/drug/343392"
+
+    - type: "drug_card"
+      name: "Bicarb"
+      class: "Sodium Bicarbonate"
+      image: "assets/books/wvems/images/drug_bicarb.jpg"
+      indications:
+        - "Acidosis, Arrhythmia"
+      doses:
+        - population: "adult"
+          text: "**50 mEq** IV/IO"
+        - population: "peds"
+          text: "1 mEq/kg"
+      warnings:
+        - "**Beware extravasation**"
+        - "Do not mix: **Calcium**"
+        - "May cause: alkalosis, CHF"
+        - "May cause: hypokalemia"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Hyperkalemia](topic:wvems-2026-018), Administer Antidote"
+        - "Electrolyte: alkali · Onset: 15 min · Duration: 1 hour"
+        - "https://reference.medscape.com/drug/342305"
+
+    - type: "drug_card"
+      name: "Calcium"
+      class: "Calcium Chloride"
+      image: "assets/books/wvems/images/drug_calcium.jpg"
+      indications:
+        - "Hyperkalemia, Ca-blocker OD"
+      doses:
+        - population: "adult"
+          text: "**1 gram** IV/IO"
+        - population: "peds"
+          text: "20 mg/kg"
+        - population: "both"
+          text: "Give **over 10 min** (or bolus in CODE)"
+      warnings:
+        - "**Beware extravasation**"
+        - "Do not mix: **Rocephin®, Digoxin®**"
+        - "Do not mix: **Bicarbonate**"
+        - "May cause: tachy, brady, N/V, HA"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Hyperkalemia](topic:wvems-2026-018), Administer Antidote"
+        - "Dilute in NS and **give over 10 min if non-emergent**"
+        - "Electrolyte: cofactor · Onset: minutes · Duration: hours"
+        - "https://reference.medscape.com/drug/344432"
+
+    - type: "drug_card"
+      name: "Charcoal"
+      class: "Activated"
+      image: "assets/books/wvems/images/drug_charcoal.jpg"
+      indications:
+        - "Poisoning, Overdose"
+      doses:
+        - population: "adult"
+          text: "**25 grams** PO"
+        - population: "peds"
+          text: "1 gram/kg"
+        - population: "both"
+          text: "May give over ice to improve taste"
+      warnings:
+        - "May cause: vomiting, black stools"
+        - "May cause: diarrhea (w/ sorbitol)"
+        - "Do not use: caustic ingestions"
+        - "**Pregnancy N/A**: not categorized"
+      pearls:
+        - "Protocol: Administer Antidote"
+        - "Antidote: physical binder, not metabolized"
+        - "https://reference.medscape.com/drug/343714"
+
+    - type: "drug_card"
+      name: "CyanoKit®"
+      class: "Hydroxocobalamin"
+      image: "assets/books/wvems/images/drug_cyanokit.jpg"
+      indications:
+        - "Cyanide Poisoning / Exposure"
+      doses:
+        - population: "adult"
+          text: "**5 grams** IV/IO over 10 min"
+        - population: "peds"
+          text: "70 mg/kg"
+      warnings:
+        - "May cause: HA, flushing, HTN"
+        - "PMH: CKD, renal failure"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: Administer Antidote"
+        - "Follow kit instructions and **give over 10 min**"
+        - "Antidote: protein binding to cyanide · Half-life: 30 hrs"
+        - "https://reference.medscape.com/drug/343734"
+
+    - type: "drug_card"
+      name: "D10"
+      class: "Dextrose 10%"
+      image: "assets/books/wvems/images/drug_d10.jpg"
+      indications:
+        - "Hypoglycemia"
+      doses:
+        - population: "adult"
+          text: "**100 mL** IV/IO"
+        - population: "peds"
+          text: "5 mL/kg"
+      warnings:
+        - "**Beware extravasation**"
+        - "May cause: edema"
+        - "May cause: hyperglycemia"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Diabetic](topic:wvems-2026-038), Administer Antidote"
+        - "Glucose monosaccharide · Onset: mins · Duration: 40 min"
+        - "https://reference.medscape.com/drug/342705"
+
+    - type: "drug_card"
+      name: "Decadron®"
+      class: "Dexamethasone"
+      image: "assets/books/wvems/images/drug_decadron.jpg"
+      indications:
+        - "Inflammation"
+      doses:
+        - population: "adult"
+          text: "**10 mg** IV/IO, IM (alt 8 mg)"
+        - population: "peds"
+          text: "0.5 mg/kg"
+      warnings:
+        - "PMH: antivirals, anticoagulants"
+        - "PMH: **diabetics**, birth control"
+        - "May cause: hyperglycemia"
+        - "May cause: delirium"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Dyspnea](topic:wvems-2026-030), [Allergic Reaction](topic:wvems-2026-032)"
+        - "Steroid: glucocorticoid · Onset: minutes · Duration: hours"
+        - "https://reference.medscape.com/drug/342741"
+
+    - type: "drug_card"
+      name: "Dopamine"
+      class: "Intropin®"
+      image: "assets/books/wvems/images/drug_dopamine.jpg"
+      indications:
+        - "Shock, Hypotension"
+      doses:
+        - population: "adult"
+          text: "**5 mcg/kg/min** IV/IO"
+        - population: "peds"
+          text: "5 mcg/kg/min"
+        - population: "both"
+          text: "Titrate rate (up to 4×) to effect"
+      warnings:
+        - "PMH: tachycardia"
+        - "PMH: antidepressants"
+        - "May cause: arrhythmia"
+        - "May cause: HA, N/V"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: [Circulation / Shock](topic:wvems-2026-008)"
+        - "Catecholamine · Onset: 5 minutes · Duration: 10 minutes"
+        - "https://reference.medscape.com/drug/342435"
