@@ -786,3 +786,186 @@ topic:
         - "Protocol: [Malignant HTN](topic:wvems-2026-010)"
         - "β-blocker · Onset: minutes · Duration: hours"
         - "https://reference.medscape.com/drug/342360"
+
+    - type: "drug_card"
+      name: "Magnesium"
+      class: "Magnesium Sulfate"
+      image: "assets/books/wvems/images/drug_magnesium.jpg"
+      indications:
+        - "TdP, Preeclampsia, Eclampsia"
+      doses:
+        - population: "adult"
+          text: "**1–4 grams** IV/IO"
+        - population: "peds"
+          text: "25–50 mg/kg"
+      warnings:
+        - "PMH: DKA, AV block"
+        - "Do not mix: **Digoxin®**"
+        - "May cause: hypoxia, edema, **shock**"
+        - "**Monitor reflexes** to avoid toxicity"
+        - "**Pregnancy Category D**: known risks"
+      pearls:
+        - "Protocols: [Tachy](topic:wvems-2026-014), [SOB](topic:wvems-2026-030), [CODE](topic:wvems-2026-024), [Seizure](topic:wvems-2026-042), [OD/Tox](topic:wvems-2026-040), [Malig. HTN](topic:wvems-2026-010)"
+        - "Dilute in **NS** and **give over 10 min if non-emergent**"
+        - "Electrolyte · Onset: seconds · Duration: hours"
+        - "https://reference.medscape.com/drug/344444"
+
+    - type: "drug_card"
+      name: "Morphine"
+      class: "Morphine Sulfate"
+      image: "assets/books/wvems/images/drug_morphine.jpg"
+      indications:
+        - "Acute Pain, Sedation"
+      doses:
+        - population: "adult"
+          text: "**2–4 mg** IV/IO, IM/IN"
+        - population: "peds"
+          text: "0.1–0.2 mg/kg"
+      warnings:
+        - "PMH: MAOIs (antidepressant)"
+        - "May cause: **respiratory depression**"
+        - "May cause: **hypotension**"
+        - "May cause: delirium, N/V, itching"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Alt. substitute for Fentanyl (only with OMD approval)"
+        - "Opioid: μ-agonist · Onset: minutes · Duration: 4 hours"
+        - "https://reference.medscape.com/drug/343319"
+
+    - type: "drug_card"
+      name: "Narcan®"
+      class: "Naloxone"
+      image: "assets/books/wvems/images/drug_narcan.jpg"
+      indications:
+        - "Opiate OD"
+      doses:
+        - population: "adult"
+          text: "**0.04–4 mg** IV/IO, IM/N"
+        - population: "peds"
+          text: "0.1 mg/kg"
+      warnings:
+        - "May cause: **opiate withdrawal**"
+        - "May cause: N/V, Abdominal Pain"
+        - "**Pregnancy Category C**: safety not established"
+        - "**Do not use** for premature babies"
+      pearls:
+        - "Protocols: [Overdose / Tox](topic:wvems-2026-040), Administer Antidote"
+        - "Opioid (μ) antagonist · Onset: 2 min · Duration: 45 min"
+        - "https://reference.medscape.com/drug/343741"
+
+    - type: "drug_card"
+      name: "Neo Push"
+      class: "Phenylephrine"
+      image: "assets/books/wvems/images/drug_neo_push.jpg"
+      indications:
+        - "Hypotension, Shock Index > 0.8"
+      doses:
+        - population: "adult"
+          text: "**50–200 mcg** IV/IO"
+        - population: "peds"
+          text: "5–20 mcg/kg"
+        - population: "both"
+          text: "0–1 y/o: safety not established"
+      warnings:
+        - "**Beware extravasation**"
+        - "PMH: heart block, CHF"
+        - "May cause: HTN, **bradycardia**"
+        - "May cause: anxiety, flushing"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocol: [Vasopressors](topic:wvems-2026-082)"
+        - "**Must dilute in NS** to concentration of 100 mcg/mL"
+        - "Adrenergic: α agonist · Onset: 10 min · Duration: 15 min"
+        - "https://reference.medscape.com/drug/342444"
+
+    - type: "drug_card"
+      name: "Nitro, Nitro Drip"
+      class: "Nitroglycerin, Nitrostat®"
+      image: "assets/books/wvems/images/drug_nitro.jpg"
+      indications:
+        - "Angina, Congestive Heart Failure"
+      doses:
+        - population: "adult"
+          text: "**0.4 mg** SL"
+        - population: "both"
+          text: "Adult drip: 300 mcg/min, titrate down"
+        - population: "both"
+          text: "Dilute 50 mg in 250 mL, use a pump"
+      warnings:
+        - "Peds: do not use"
+        - "PMH: recent (36 h) **PDE5 inhibitors**"
+        - "PMH: ergot meds (pain/migraine)"
+        - "May cause: **headache**, hypotension"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocols: [Chest Pain](topic:wvems-2026-028), [Dyspnea](topic:wvems-2026-030), Pulmonary Edema"
+        - "Systemic vasodilator · Onset: 1 min · Duration: 30 min"
+        - "https://reference.medscape.com/drug/342280"
+
+    - type: "drug_card"
+      name: "NS Bolus"
+      class: "0.9% Normal Saline"
+      image: "assets/books/wvems/images/drug_ns_bolus.jpg"
+      indications:
+        - "Hypotension, Hypovolemia"
+      doses:
+        - population: "adult"
+          text: "**500 mL** IV/IO"
+        - population: "peds"
+          text: "20 mL/kg"
+      warnings:
+        - "PMH: CHF, CKD, HTN"
+        - "May cause: **hypervolemia** & edema"
+        - "May cause: **dyspnea** & rales"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Protocols: [Shock](topic:wvems-2026-008), [Tachy](topic:wvems-2026-014), [Fever](topic:wvems-2026-016), [HyperK+](topic:wvems-2026-018), [Diabetic](topic:wvems-2026-038), [OD/Tox](topic:wvems-2026-040), Preg, [Major Trauma](topic:wvems-2026-056) / CODE, Cold/Heat, [Burn](topic:wvems-2026-070)"
+        - "Isotonic crystalloid · Onset: seconds · Duration: varies"
+        - "https://www.rxlist.com/normal-saline-drug.htm"
+
+    - type: "drug_card"
+      name: "Propofol"
+      class: "Diprivan®"
+      image: "assets/books/wvems/images/drug_propofol.jpg"
+      indications:
+        - "Sedation"
+      doses:
+        - population: "adult"
+          text: "**150 mcg/kg/min** IV/IO"
+        - population: "peds"
+          text: "200 mcg/kg/min (3+ months)"
+        - population: "both"
+          text: "0–2 months: safety unknown"
+      warnings:
+        - "PMH: CKD, renal failure"
+        - "May cause: **hypotension**, **apnea**"
+        - "Titrate down **rapidly** in **first 30 min**"
+        - "Aim for 30–50% **reduction** quickly"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocol: [Sedation / Vent](topic:wvems-2026-080)"
+        - "Sedative/hypnotic: GABA · Onset: secs · Duration: mins"
+        - "https://reference.medscape.com/drug/343100"
+
+    - type: "drug_card"
+      name: "Rocephin®"
+      class: "Ceftriaxone"
+      image: "assets/books/wvems/images/drug_rocephin.jpg"
+      indications:
+        - "Infection"
+      doses:
+        - population: "adult"
+          text: "**1 gram** IV/IO, IM"
+        - population: "peds"
+          text: "25–50 mg/kg"
+      warnings:
+        - "Monitor closely if PCN allergy"
+        - "Avoid if cephalosporin allergy"
+        - "Do not mix: **Calcium** (may be fatal)"
+        - "May cause: rash/hives, dyspnea"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocol: [Sepsis](topic:wvems-2026-094)"
+        - "**Reconstitute**: w/ 3 mL — NS for IV/IO, or 2% Lido for IM"
+        - "Antibiotic: 3rd Gen Ceph · Onset: minutes · Duration: hours"
+        - "https://reference.medscape.com/drug/342510"
