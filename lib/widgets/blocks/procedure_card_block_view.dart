@@ -51,7 +51,6 @@ class ProcedureCardBlockView extends StatelessWidget {
         children: [
           // Scope-badged header.
           Container(
-            color: _headerBg,
             padding: const EdgeInsets.fromLTRB(8, 6, 10, 6),
             decoration: BoxDecoration(
               color: _headerBg,
