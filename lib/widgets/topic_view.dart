@@ -7,6 +7,7 @@ import 'package:orbweaver/widgets/blocks/conversion_block_view.dart';
 import 'package:orbweaver/widgets/blocks/drug_card_block_view.dart';
 import 'package:orbweaver/widgets/blocks/formula_block_view.dart';
 import 'package:orbweaver/widgets/blocks/image_block_view.dart';
+import 'package:orbweaver/widgets/blocks/procedure_card_block_view.dart';
 import 'package:orbweaver/widgets/blocks/prose_block_view.dart';
 import 'package:orbweaver/widgets/blocks/score_block_view.dart';
 import 'package:orbweaver/widgets/blocks/table_block_view.dart';
@@ -239,6 +240,7 @@ class _BlockRenderer extends StatelessWidget {
       final FlowchartBlock b => _FlowchartBlockRenderer(block: b, theme: t),
       final TableBlock b => TableBlockView(block: b, theme: t),
       final DrugCardBlock b => DrugCardBlockView(block: b, theme: t),
+      final ProcedureBlock b => ProcedureCardBlockView(block: b, theme: t),
       final ImageBlock b => ImageBlockView(block: b, theme: t),
       final RowBlock b => _RowBlockRenderer(block: b, theme: t),
       final ColumnBlock b => _ColumnBlockRenderer(block: b, theme: t),

@@ -1115,6 +1115,7 @@ sealed class Block {
       'flowchart' => FlowchartBlock.fromYaml(map),
       'table' => TableBlock.fromYaml(map),
       'drug_card' => DrugCardBlock.fromYaml(map),
+      'procedure_card' => ProcedureBlock.fromYaml(map),
       'image' => ImageBlock.fromYaml(map),
       'row' => RowBlock.fromYaml(map),
       'column' => ColumnBlock.fromYaml(map),
@@ -1666,6 +1667,69 @@ class DrugCardBlock extends Block {
   final List<String> warnings;
   final List<String> pearls;
   final String? imagePath;
+}
+
+// ─────────────────────────────────────────────────────────────
+// PROCEDURE CARD BLOCK
+// ─────────────────────────────────────────────────────────────
+
+/// A single how-to procedure card (WVEMS Procedures section, pp.96-109):
+/// a scope-badged header (provider level E/A/I, or none for basic/all-level)
+/// over an auto-numbered step list.
+///
+/// Each entry in [steps] is a raw line parsed by the renderer via a compact
+/// prefix mini-syntax (kept terse because a procedure runs 4-8 steps and the
+/// section holds ~30 procedures):
+///   - plain line            → next auto-numbered step ("1.", "2." …)
+///   - `@2a text`            → explicit step label "2a"; resets the auto
+///                             counter to the leading integer so a following
+///                             plain step numbers correctly
+///   - `- text`              → indented sub-bullet (not numbered)
+///   - `~[E] text`           → standalone scope note (no number), dashed
+///   - `[E] text` on a step  → inline provider-scope chip (tag is one of
+///                             `[E]` / `[A]` / `[I]` / `[P]`); works on numbered
+///                             steps, sub-bullets and standalone notes alike
+///   - `:` before the text    → dashed-border emphasis (scope-gated callout);
+///                             usually paired with a scope tag, e.g. `:[I] …`
+///   - leading `!`           → pink highlight band (peds / age distinctions),
+///                             composable with any of the above (e.g. `!- text`)
+///   - leading `^`           → lavender highlight band (Critical Care / advanced
+///                             option), composable the same way
+///   - `NOTE: text`          → full-width note paragraph (no number)
+/// Emphasis (`**bold**`) and links render through MiniMarkdown as elsewhere.
+class ProcedureBlock extends Block {
+  const ProcedureBlock({
+    required this.name,
+    this.scope,
+    this.steps = const [],
+    this.imagePath,
+    super.anchor,
+    super.ownPaletteArgb,
+  });
+
+  factory ProcedureBlock.fromYaml(Map<dynamic, dynamic> map) => ProcedureBlock(
+        name: map['name'] as String,
+        scope: _normalizeScope(map['scope'] as String?),
+        steps: _stringList(map['steps']),
+        imagePath: map['image'] as String?,
+        anchor: map['anchor'] as String?,
+        ownPaletteArgb: _parsePaletteArgb(map['palette']),
+      );
+
+  final String name;
+
+  /// Provider-level badge letter: `E`, `A`, `I`, or `P` (paramedic). Null =
+  /// basic / all-level (rendered as a neutral grey chip, matching the printed
+  /// index).
+  final String? scope;
+  final List<String> steps;
+  final String? imagePath;
+
+  static String? _normalizeScope(String? s) {
+    if (s == null) return null;
+    final v = s.trim().toUpperCase();
+    return (v == 'E' || v == 'A' || v == 'I' || v == 'P') ? v : null;
+  }
 }
 
 // ─────────────────────────────────────────────────────────────

@@ -91,6 +91,14 @@ book:
         accent_branch: "0xFF2C6BB5"
       children:
         - topic: "topics/wvems_2026_drug_reference.yaml"
+    - title: "Procedures"
+      appendix: true
+      palette:
+        accent: "0xFFC55A11"
+        accent_fill: "0xFFFBEEE4"
+        accent_branch: "0xFFE57324"
+      children:
+        - topic: "topics/wvems_2026_096.yaml"
     - title: "Peds Reference"
       appendix: true
       palette:

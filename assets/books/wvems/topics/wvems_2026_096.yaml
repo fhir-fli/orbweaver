@@ -1,0 +1,584 @@
+# ============================================================
+# WVEMS 2026 — Procedures (pp.96-108)
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT) — original
+# WVEMS content, transcribed to typed procedure_card blocks.
+#
+# Scope badges (min. provider level cleared for the skill; no badge =
+# all levels): E, A, I, P — ascending. Colours match the printed index
+# (E gold, A green, I blue, P purple).
+#
+# Anatomical diagrams from the printed cards (Cricothyroid Membrane =
+# Wikimedia CC-BY-SA 3.0 PhilippN; Safe Triangle = public domain; the
+# Saline Lock blood-tube photo) are NOT yet embedded — image slots are
+# left null, to be sourced/attributed like the burn/snake images.
+#
+# Policies (pp.109-117: Abuse, Orders, Termination, Cardiac Devices,
+# Standbys, Refusals, Destination, Deceased/MCI) are a SEPARATE section,
+# not transcribed here.
+# ============================================================
+
+topic:
+  id: "wvems-2026-096"
+  version: "v260101"
+  title: "Procedures"
+  list_subtitle: "2026-096 · how-to skills"
+  last_reviewed: "Dec 2025"
+  tags: ["procedures", "skills", "how-to", "airway", "cpr", "rsi"]
+  aliases:
+    - "Skills"
+    - "How-To"
+  category: "critical"
+  page_number: 96
+
+  blocks:
+
+    - type: "prose"
+      title: "Procedures"
+      highlight: true
+      markdown: |
+        Step-by-step skills from the WVEMS card set (pp.96-108). Each card's
+        badge marks the **minimum provider scope** cleared for that skill —
+        **E**, **A**, **I**, **P** (ascending); no badge = all levels.
+        Pink bands flag **age/peds** distinctions; lavender bands flag
+        **Critical Care** options; dashed callouts are **scope-gated**.
+
+    # ── General ─────────────────────────────────────────────
+    - type: "prose"
+      title: "General"
+      markdown: "Assessment & vascular access."
+
+    - type: "procedure_card"
+      name: "Glucometer"
+      steps:
+        - "Prepare glucometer and test strip."
+        - "Identify and clean site."
+        - "- The patient may have a preference."
+        - "Pierce skin with lancet to obtain blood sample."
+        - "- May alternatively obtain blood from IV attempt if meter allows."
+        - "Place blood in/on reagent strip per manufacturer's instructions."
+
+    - type: "procedure_card"
+      name: "12-Lead"
+      scope: "E"
+      steps:
+        - "Enter patient info into monitor."
+        - "Prepare chest and place electrodes."
+        - "Instruct pt to **lay still**. Press button on monitor to acquire 12-lead."
+        - "Acquire EKG while **not moving**. Try to **minimize artifact**."
+        - "Transmit EKG to ED. May contact receiving hospital to confirm."
+        - "~:[E] May read machine Interpretation."
+        - "~:[I] May interpret directly."
+
+    - type: "procedure_card"
+      name: "Saline Lock"
+      scope: "A"
+      steps:
+        - "Investigate for good site."
+        - "- AC and wrist are common sites."
+        - "- Try to avoid legs, forehead and jugular **unless necessary**."
+        - "- Advance rapidly to **IO in emergencies**. May start w/ IO in a CODE."
+        - "Clean site well. Apply a proximal venous tourniquet."
+        - "Perform venipuncture with appropriate size needle/cath."
+        - "Watch for flash of blood; advance catheter (do not rethread cath)."
+        - "Lab draw order: (culture), **blue**, (red), **gold**, **green**, **purple**, (gray)"
+        - "Attach lock and flush with saline. Secure well with tape."
+        - "NOTE: It is **almost always** inappropriate for EMS to access an established indwelling central line (such as **dialysis** or **PICC line**). But EMS may consider using established lines during a CODE."
+
+    # ── Airway ──────────────────────────────────────────────
+    - type: "prose"
+      title: "Airway"
+      markdown: "Clearing & securing the airway."
+
+    - type: "procedure_card"
+      name: "Back Blows & Thrusts"
+      steps:
+        - "Help patient **cough if able**."
+        - "Start with back blows (slaps) in all ages."
+        - "Alternate **5 back blows** (slaps) & **5 thrusts** for serious choking:"
+        - "- Adult (14+): Abdominal thrusts (Use chest thrusts if obese/preg.)"
+        - "!- Child (1-13 y/o): Abdominal thrusts, Infant (<1 y/o): Chest thrusts"
+        - "Keep going until relieved. **Begin CPR** if pt goes unresponsive."
+        - "Remove any overt foreign bodies from mouth before ventilation."
+        - "- Do not perform blind finger sweeps in adults or peds."
+
+    - type: "procedure_card"
+      name: "Suction"
+      steps:
+        - "Awake pts may suction themselves."
+        - "Prepare suction device with tip:"
+        - "- Oropharynx: **hard tip** (e.g. Yankauer or large bore DuCanto™)"
+        - "- :[E] Nasal/BIAD/ETT/trach/stoma: **flexible cath** (french)."
+        - "Insert tip with suction off and/or vent hole uncovered."
+        - "- May use 2-3 mL saline to loosen secretions."
+        - "- :[E] Consider detailed trach care: remove/clean inner cannula."
+        - "Cover vent hole and apply suction as tip is withdrawn."
+
+    - type: "procedure_card"
+      name: "Magill Forceps"
+      scope: "A"
+      steps:
+        - "Confirm patient is unresponsive."
+        - "Visualize posterior pharynx."
+        - "- May utilize laryngoscope (average adults use Mac #3)."
+        - "Use Magill Forceps to remove any identified foreign bodies."
+        - "- Consider using **suction**."
+        - "Secure [Airway](topic:wvems-2026-004) with BIAD if needed."
+
+    # ── Breathing ───────────────────────────────────────────
+    - type: "prose"
+      title: "Breathing"
+      markdown: "Oxygenation & ventilation."
+
+    - type: "procedure_card"
+      name: "BVM"
+      steps:
+        - "Prepare appropriately sized BVM."
+        - "- Connect to high-flow **oxygen**."
+        - "!- Consider a **T-piece** resuscitator (instead of BVM) for [Neonates](topic:wvems-2026-050)."
+        - "Maintain adequate mask seal. **Dual rescuers is preferred**."
+        - "- **Single**: Use E-C clamp; **Dual**: Use two handed technique."
+        - "- **Dentures** may improve seal, but remove if causing obstruction."
+        - "Ventilate with slow deliberate squeezing of bag."
+        - "- Assist natural rate and provide additional breaths as needed."
+
+    - type: "procedure_card"
+      name: "NPA / OPA"
+      steps:
+        - "Measure appropriate OPA / NPA size:"
+        - "- OPA: Corner of mouth to angle of jaw"
+        - "- NPA: Tip of nose to angle of jaw (or diameter of nostril or pinky)"
+        - "@2a **OPA**: Insert into mouth slowly. May use tongue blade to assist."
+        - "- Insert with **tip to nose** for adults and **tip to toes** for peds."
+        - "- Rotate into place. Remove promptly if any gagging."
+        - "@2b **NPA**: Insert into nare with slanted hole (bevel) toward septum."
+        - "- Lube tube and start on larger nare. Minor bleeding is common."
+        - "- If resistance is felt: rotate gently, try smaller NPA or other nare."
+        - "- **Use caution** if obvious facial trauma or basilar skull fracture."
+
+    - type: "procedure_card"
+      name: "NIPPV"
+      scope: "E"
+      steps:
+        - "Provide **strong** patient encouragement."
+        - "- Consider an NPA if tolerated."
+        - "Start the flow of oxygen to the mask. Set **basic mask at 7.5** cmH2O."
+        - "- Alternate: use CPAP or BiPAP mode on vent w/ OMD approval."
+        - "- Start vent **CPAP at 7.5** cmH2O and **BiPAP at 10/5** cmH2O (IPAP/EPAP)"
+        - "Place the mask over patient's nose and mouth and tighten straps."
+        - "- Ensure **adequate seal** by adjusting placement and strap tension."
+        - "May use on semi-conscious patients, but must **monitor closely**."
+        - "- **Remove promptly if any vomiting** or hypotension."
+        - ":[I] Consider treatment of **anxiety** to assist with compliance."
+        - "May titrate pressures: higher if hypoxic, lower if hypotensive."
+        - "- Likely beneficial to use **nebulizers in-line** if indicated & able."
+
+    # ── Advanced Adjuncts ───────────────────────────────────
+    - type: "prose"
+      title: "Advanced Adjuncts"
+      markdown: "Supraglottic airways & decompression."
+
+    - type: "procedure_card"
+      name: "BIAD"
+      scope: "E"
+      steps:
+        - "Prepare appropriately sized device:"
+        - "- Average adults use **iGel #4 (green)**."
+        - "Follow **manufacturer's guidelines**. Apply appropriate **lube**."
+        - "- Open mouth and pull jaw & tongue forward (or use jaw thrust)."
+        - "Insert BIAD into pharynx. Follow curve of the palate and tongue."
+        - "- Stop when resistance is felt and teeth are near the **depth line**."
+        - "- May rotate to facilitate insertion. Rock gently to seat in airway."
+        - "Confirm placement. Secure well with tape or other device."
+        - "- Use auscultation, capnometry, EtCO2 and SpO2 if available."
+        - "If BIAD fails, **try again with a different size**."
+        - "- Most common failure of a BIAD is **inappropriate size**."
+
+    - type: "procedure_card"
+      name: "OG-Tube"
+      scope: "A"
+      steps:
+        - "Measure appropriate tube depth:"
+        - "- Tip of nose to the stomach"
+        - "Only place a prehospital OG-tube with an **appropriate airway**."
+        - "- Lube the OG-tube and insert into airway device as designed."
+        - "- Advance the tube gently until the appropriate depth is reached."
+        - "Confirm placement: inject air & listen for bubbles in the stomach"
+        - "Secure tube and **attempt to aspirate** gastric contents."
+
+    - type: "procedure_card"
+      name: "Pleural Decompress"
+      scope: "I"
+      steps:
+        - "Identify side and clean best site:"
+        - "!- Peds: 2nd intercostal midclavicular"
+        - "- Adults: **4th or 5th intercostal anterior to midaxillary line**"
+        - "^- Consider [Finger Thoracostomy](#finger-thoracostomy) if indicated & cleared for CC."
+        - "Insert large (12- or 14- gauge) IV needle into the skin at 90°"
+        - "- Preferably use a needle **specifically made** for decompression."
+        - "- Go just over the top of the rib to minimize bleeding."
+        - "Advance until a \"pop\" is felt and / or you hear a hiss of air."
+        - "- Hold needle in place, **advance cath only** the rest of the way."
+        - "Remove the needle, leaving the plastic cath. Apply a **chest seal**."
+        - "Vent chest seal or **repeat decompression** if dyspnea returns."
+        - "- **Remove** chest seal if using positive pressure (e.g. BVM, NIPPV)."
+
+    # ── Resuscitation ───────────────────────────────────────
+    - type: "prose"
+      title: "Resuscitation"
+      markdown: "CPR, defibrillation & IO access."
+
+    - type: "procedure_card"
+      name: "Chest Compression"
+      steps:
+        - "Confirm no pulse and not breathing."
+        - "Place hands on chest:"
+        - "- Adult (14+): Two hands w/ fingers interlaced over center of chest"
+        - "!- Child (1-13): One hand over center of chest"
+        - "!- Infant (<1): Two hands circling chest using thumbs"
+        - "Push hard and fast. Compress about 1/3 the depth of the chest."
+        - "- Make sure to allow full **chest recoil** between compressions."
+        - "**Minimize interruption**. Switch providers every 2-5 min as needed."
+        - "NOTE: May switch to a **mechanical CPR device** after the first 2 min."
+
+    - type: "procedure_card"
+      name: "Defib"
+      steps:
+        - "Cut clothes to expose chest."
+        - "- Consider shaving excessive hair."
+        - "- Remove any medication patches. Wipe off residue."
+        - "Apply defibrillator pads. Avoid implanted devices or catheters."
+        - "When indicated, stop compressions and analyze cardiac rhythm."
+        - "~:[E] Use AED \"analyze\" function."
+        - "~:[I] May interpret directly."
+        - "If shock indicated: **charge defibrillator while continuing CPR**."
+        - "- Start at max, or follow manufacturer's or OMD's dosing guideline."
+        - "!- Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing."
+        - "**Assertively state \"CLEAR!\"** Visually confirm everyone is clear."
+        - "Defibrillate by pressing **SHOCK**. **Restart CPR immediately**."
+        - "- Consider moving the defib pads (**vector change**) if refractory."
+        - "- Routine use of double sequential defib is not recommended."
+
+    - type: "procedure_card"
+      name: "IO"
+      scope: "A"
+      steps:
+        - "Prepare IO device and select site."
+        - "- Consider pre-treating for [Pain](topic:wvems-2026-020)."
+        - "- **Tibial plateau** & **humeral head** are typical. Follow OMD guidance."
+        - "Insert IO following manufacturer's recommended procedure."
+        - "Secure well with bulky dressing or other manufactured device."
+        - "Consider admin of low-dose Lidocaine for local discomfort."
+        - "~[A] **Lidocaine: 10 mg** IO · Q 5 min · x3 PRN Pain · Adult"
+        - "Consider using a pressure bag to increase fluid rates if needed."
+
+    # ── Bleeding ────────────────────────────────────────────
+    - type: "prose"
+      title: "Bleeding"
+      markdown: "Hemorrhage control."
+
+    - type: "procedure_card"
+      name: "Wound Care"
+      steps:
+        - "Apply **direct pressure** for bleeding."
+        - "- Consider tourniquet or packing."
+        - "If bleeding is easily controlled, irrigate contaminated wounds."
+        - "- Maximize **flushing** gross contamination out of large wounds."
+        - "- Consider pre-treatment of [Pain](topic:wvems-2026-020) before significant **flushing**."
+        - "Cover wounds with sterile gauze and apply appropriate dressing."
+        - "- Monitor and **document distal pulse**, movement and sensation."
+        - "- Cover **burns** with non-adherent gauze and sterile burn dressing."
+        - "- Apply a **chest seal** (occlusive) to any neck or trunk penetration."
+        - "- **Remove** chest seal if using positive pressure (e.g. BVM, NIPPV)."
+
+    - type: "procedure_card"
+      name: "Tourniquet"
+      steps:
+        - "Apply **direct pressure** for bleeding."
+        - "- May remove ineffective bystander TQs."
+        - "Apply tourniquet proximal to bleed per manufacturer instruction."
+        - "- May consider purpose made device (e.g. **junctional** TQ, ITclamp)"
+        - "**Tighten** until bleeding is controlled. **Secure windlass** in place."
+        - "- Consider placing second tourniquet if bleeding continues."
+        - "- Consider treatment of [Pain](topic:wvems-2026-020). Do not place over bony joints."
+        - "**Record time** on tourniquet or directly on the patient's skin."
+
+    - type: "procedure_card"
+      name: "Wound Packing"
+      steps:
+        - "Apply **direct pressure** for bleeding."
+        - "- If stable, consider simple wound care."
+        - "- If massive bleeding from a limb, consider a tourniquet."
+        - "- Packing is ideal for **junctional injury** (neck, axilla, groin)."
+        - "- Do not pack skull or thorax wounds. Do not pack natural orifices."
+        - "If bleeding continues, **wipe** gross blood and clot out of wound."
+        - "Insert packing inch by inch as deep as possible into wound."
+        - "- Avoid rapidly stuffing a large wad. **Pack deep** and deliberately."
+        - "- Insert as much packing into the wound as possible."
+        - "- :[E] May use hemostatic agents (e.g. QuikClot®, XStat®)"
+        - "Re-apply **direct pressure** on top of packing. Treat for [pain](topic:wvems-2026-020)."
+
+    # ── Injury ──────────────────────────────────────────────
+    - type: "prose"
+      title: "Injury"
+      markdown: "Spinal motion restriction & splinting."
+
+    - type: "procedure_card"
+      name: "SMR with C-collar"
+      steps:
+        - "Provide **manual** cervical SMR."
+        - "Prepare appropriately sized **c-collar**."
+        - "- Apply c-collar while maintaining manual cervical SMR."
+        - "**Use adjuncts** to minimize all spinal motion while transferring."
+        - "- Such as: backboard, scoop stretcher, vacuum mattress, etc."
+        - "- May try gentle **self-extrication** from a vehicle (with a c-collar)."
+        - "Once on the cot, **adjuncts may be removed** if appropriate."
+        - "- Awake, compliant patients can be safely secured with seat belts."
+        - "- May sit up (to 30°) if no pain/tingling to maintain an airway."
+        - "Manual cervical SMR may be released if the patient will hold still."
+        - "- Otherwise: secure the head to an appropriate adjunct."
+        - "NOTE: Some patients (due to size, age or anatomy) will not be appropriate for standard equipment. Never force a patient into a non-neutral position. Use alternate techniques or manual SMR."
+
+    - type: "procedure_card"
+      name: "Splint"
+      steps:
+        - "Provide manual immobilization."
+        - "Expose area: remove or cut clothes."
+        - "Check and **document distal pulse**, movement and sensation."
+        - "May gently return to **near anatomic** alignment & secure splint."
+        - "- Splint in position found if any significant pain or resistance."
+        - "Recheck and **document distal pulse**, movement and sensation."
+        - "- Reapply or remove the splint if any decline in distal function."
+        - "NOTE: Consider a **traction splint** for an isolated femur fracture."
+
+    - type: "procedure_card"
+      name: "Reduce Deformity"
+      scope: "E"
+      steps:
+        - "Confirm **no pulse distal to injury**."
+        - "Consider pre-treating for [Pain](topic:wvems-2026-020) if able."
+        - "Manually reduce injury and splint in anatomic neutral position."
+        - "Recheck and **document distal pulse**, movement and sensation."
+
+    - type: "procedure_card"
+      name: "Stinger Removal"
+      steps:
+        - "Inspect wound for stinger."
+        - "If visualized, scrape stinger away."
+        - "- Use tool with firm edge, like a credit card. Do not use tweezers."
+
+    # ── Antidotes ───────────────────────────────────────────
+    - type: "prose"
+      title: "Antidotes"
+      markdown: "Toxin-specific reversal."
+
+    - type: "prose"
+      title: "Administer Antidote"
+      markdown: |
+        - Some toxins have unique antidotes — only **major symptoms** need treatment.
+        - Most indications below **require online orders** (and dosing) — call the **toxicologist** at **Poison Control** or the ED (or OMD).
+        - A few antidotes are included in other protocols — if indicated, may follow those standing orders.
+        - Don't forget the basics: **O2** for inhaled toxins, **Narcan** for hypoxia, **NS Bolus** for shock.
+        - **Poison Help: 1-800-222-1222**
+
+    - type: "procedure_card"
+      name: "Adult Antidotes"
+      steps:
+        - "~[I] **Atropine**: [Bradycardia](topic:wvems-2026-012), Cholinergics"
+        - "~[I] **Benadryl**: Dystonia, Neuroleptics"
+        - "~[I] **Bicarb**: [Hyper K+](topic:wvems-2026-018), Wide QRS, ASA, TCA, SS/SNRI"
+        - "~[I] **Calcium**: [Hyper K+](topic:wvems-2026-018), Ca-Blocker OD, HF Acid burns"
+        - "~**Charcoal**: PO Toxins (not caustics or metals)"
+        - "~[A] **CyanoKit**: Cyanide (ingested or inhaled)"
+        - "~[A] **D10**: [Hypoglycemia](topic:wvems-2026-038), Sulfonylurea OD"
+        - "~**DuoDote**: Organophosphates, Nerve Agents (WMDs)"
+        - "~[A] **Glucagon**: [Hypoglycemia](topic:wvems-2026-038), β & Ca-Blocker OD"
+        - "~[I] **Magnesium**: [Torsades](topic:wvems-2026-014), Prolonged QTc"
+        - "~**Narcan**: [Opiates](topic:wvems-2026-040) (only for hypoxia), Clonidine OD"
+        - "~[A] **Versed**: [Seizures](topic:wvems-2026-042), Anticholinergics"
+
+    - type: "prose"
+      title: "Antidote References"
+      markdown: |
+        - Medscape Anticholinergics — https://emedicine.medscape.com/article/812644 [6/24]
+        - Medscape ASA — https://emedicine.medscape.com/article/1009987 [5/24]
+        - Medscape β-Blockers — https://emedicine.medscape.com/article/813342 [9/23]
+        - Medscape Ca-Blockers — https://emedicine.medscape.com/article/2184611 [4/23]
+        - Medscape Cyanide — https://emedicine.medscape.com/article/814287 [5/25]
+        - Medscape Ethanol — https://emedicine.medscape.com/article/812411 [1/25]
+        - Medscape Hydrofluoric acid — https://emedicine.medscape.com/article/769336 [10/21]
+        - Medscape Organophosphate — https://emedicine.medscape.com/article/167726 [3/23]
+        - Medscape SSRI/SNRI — https://emedicine.medscape.com/article/821737 [11/24]
+        - Medscape Tricyclics — https://emedicine.medscape.com/article/819204 [6/24]
+        - Limmer D, O'Keefe MF. Emergency Care 15th ed. Chapter 25
+
+    # ── Cardiac ─────────────────────────────────────────────
+    - type: "prose"
+      title: "Cardiac"
+      markdown: "Pacing & cardioversion."
+
+    - type: "procedure_card"
+      name: "Pacing"
+      scope: "I"
+      steps:
+        - "Place defib pads **and EKG limb leads**."
+        - "- Consider pre-treating for [Pain](topic:wvems-2026-020)."
+        - "- Wipe off any topical meds. Avoid implanted devices or catheters."
+        - "Place monitor in \"pacing\" mode."
+        - "- Select initial rate of **80 bpm** for adults."
+        - "!- Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds **rate**."
+        - "- Alternate: follow manufacturer's or OMD's rate guideline."
+        - "Slowly increase mA output until electrical capture is noted."
+        - "- Watch for pacer spikes with corresponding QRS on EKG screen."
+        - "- Typical initial target energy is around **80 mA** for **all patients**."
+        - "Once electrical capture is noted, check for mechanical capture."
+        - "- Pulse should correspond to electrical activity on EKG screen."
+        - "Continue to increase mA output if no mechanical capture."
+        - "Maintain a balance between pt comfort and medical necessity."
+        - "- Treat [Pain](topic:wvems-2026-020) and/or Anxiety from pacing as soon as appropriate."
+        - "- Consider reducing energy if appropriate."
+
+    - type: "procedure_card"
+      name: "Cardiovert"
+      scope: "I"
+      steps:
+        - "Place defib pads **and EKG limb leads**."
+        - "- Consider pre-treating for [Pain](topic:wvems-2026-020)."
+        - "- Wipe off any topical meds. Avoid implanted devices or catheters."
+        - "Enable **SYNC** mode and charge to **200 J** for adults."
+        - "!- Use [Peds Reference](topic:wvems-2026-144) for initial (and escalating) doses in peds."
+        - "- Alternate: follow manufacturer's or OMD's dosing guideline."
+        - "- If monitor unable to SYNC: disable SYNC and use regular defib."
+        - "**Assertively state \"CLEAR!\"** Visually confirm everyone is clear."
+        - "Cardiovert by pressing **and holding** the **SHOCK** button."
+        - "- There may be a noticeable delay before energy is delivered."
+        - "Reassess patient and rhythm. Repeat (or escalate) as needed."
+        - "- Treat [Pain](topic:wvems-2026-020) and/or Anxiety from shock as soon as appropriate."
+        - "- Consider moving the defib pads (**vector change**) if refractory."
+
+    # ── Obstetrics ──────────────────────────────────────────
+    - type: "prose"
+      title: "Obstetrics"
+      markdown: "Emergency delivery."
+
+    - type: "procedure_card"
+      name: "Deliver Baby"
+      scope: "E"
+      steps:
+        - "**Expose patient**. Have a chaperone."
+        - "- Visually inspect vaginal area."
+        - "Identify presenting part. Prioritize **transport if not crowning**."
+        - "- If any problems, manage complications and transport ASAP."
+        - "**Support & deliver head**. Try to prevent explosive birth."
+        - "**Check for cord around neck**. Reduce over the head if found."
+        - "**Deliver shoulders**. Deliver top shoulder first."
+        - "- May flex mom's legs to chest to assist."
+        - "- May press on mom's lower abdomen to assist."
+        - "Deliver body. Caution: **neonates are slippery**."
+        - "Manage Neonate. (Stimulate, warm, clean, dry.)"
+        - "- May place baby on mothers chest for skin-to-skin contact."
+        - "- May encourage breastfeeding after uncomplicated delivery."
+        - "Keep baby level with mom and **delay cord clamping** ~60 sec."
+        - "- Clamp about **6-10 in. away** from the baby. Cut between clamps."
+        - "- Leave a long viable stump for the ED to use (for lines & lab draw)."
+        - "Massage mother's lower abdomen (fundal massage)."
+        - "- This should help stop postpartum [bleeding](topic:wvems-2026-058)."
+        - "- :[A] If poor perfusion: **TXA** (Tranex. Acid): **2 g** IV/IO over 10 m"
+        - "Prepare for delivery of the placenta. Do not pull on the cord."
+        - "- Take the placenta to the hospital with mom and baby."
+
+    - type: "procedure_card"
+      name: "Manage OB Complication"
+      scope: "E"
+      steps:
+        - "**Prioritize emergent transport to a facility with OB/GYN services**."
+        - "Tell mom: **Do Not Push**. EMS can do very little for **preemies**, **twins** or **breech** birth."
+        - "Provide standard care: [Breathing](topic:wvems-2026-006), [Pain](topic:wvems-2026-020), etc."
+        - "Try to help during transport."
+        - "- Failed Delivery / Shoulder Dystocia: transport knees to chest"
+        - "- Prolapse: don't handle cord, relieve pressure using fingers in vagina"
+        - "- Breech: do not pull; elevate presenting part if pressing on cord"
+        - "^~Consider **Destination Triage**"
+
+    # ── Critical Care ───────────────────────────────────────
+    - type: "prose"
+      title: "Critical Care"
+      markdown: "RSI, ventilator & surgical airway."
+
+    - type: "procedure_card"
+      name: "RSI Prep Checklist"
+      scope: "P"
+      steps:
+        - "Consider a standardized checklist."
+        - "- E.g: https://bit.ly/NRVEMS_CCAirway"
+        - "**Preoxygenate**: Give 100% FiO2 with adjuncts, prep for apneic O2"
+        - "**Resuscitate Before Intubate**: IV, O2, monitor, EtCO2, BP, Pressors"
+        - "**Plan & Predict**: Why not BIAD? LEMON eval, brief the team"
+        - "**Prepare**: ETT, rigid stylet, 10 cc syringe, video scope, suction"
+        - "**Position**: Record monitor & medic, maybe cric pressure"
+        - "**Push Meds**: Syringes labeled, doses double checked"
+        - "**Place Tube**: Watch ETT through cords, secure w/ tape or device"
+        - "**Prove It**: Confirm two ways, use waveform capnography"
+        - "**Post-Intubation Care**: Sedation & Vent, OGT to suction, document"
+
+    - type: "procedure_card"
+      name: "Ventilator"
+      scope: "P"
+      steps:
+        - "Attach appropriate **patient circuit**."
+        - "Attach high pressure **oxygen hose**."
+        - "Inspect fresh gas & emergency air intake filters."
+        - "**Power on** the vent and configure operating mode & parameters."
+        - "Perform operational test and **attach to patient**. Monitor closely."
+        - "^~**Typical Adult Vent Settings**"
+        - "^~Mode: **AC (V)** · Vt: **350 mL** (or 450 mL if over 6′ tall)"
+        - "^~BPM: **12-16**/min · FiO2: **100%** (may titrate down 40-60%)"
+        - "^~PEEP: 5 mmHg · PIP Limit: 35 mmHg · I:E 1:3"
+        - "Use a standard **troubleshooting** algorithm like \"DOPE\":"
+        - "- Investigate any **warnings** promptly while monitoring pt closely."
+        - "- Immediately remove vent and **use BVM** for any critical **alarms**."
+        - "Think **Dislodgement**, **Obstruction** or **PTX** if poor BVM response."
+        - "**Titrate vent** settings to patient response."
+        - "- **Hypoxia**: increase FiO2, and/or PEEP (and/or minute volume)"
+        - "- **Hypotension**: decrease PEEP (and/or tidal volume)"
+        - "- **Breath Stacking** (e.g. COPD, asthma): increase I:E (1:4 or 1:5)"
+
+    - type: "procedure_card"
+      name: "Cric"
+      scope: "P"
+      steps:
+        - "Confirm all alternatives have failed."
+        - "Prepare supplies and **suction**."
+        - "**Locate cricothyroid** membrane. **Clean skin** if time allows."
+        - "- Visualize spot under thyroid cartilage and above tracheal rings."
+        - "Use **Bougie** for adults or **Needle** for peds."
+        - "@4a **Bougie**: Expect blood, this is a tactile skill."
+        - "- Make large **vertical incision** through skin."
+        - "- Find the cricothyroid membrane w/ finger."
+        - "- Stab **horizontal incision**, bubbles are good."
+        - "- **Insert a bougie**, then a **trach** over bougie. (Or #6 ETT: advance 1-2 cm past balloon.)"
+        - "- **Inflate balloon** taught. Remove bougie."
+        - "@4b **Needle**: Use small syringe with saline."
+        - "!- Attach 10-12g needle & cath. Insert at 90°."
+        - "!- Pull suction. Advance slowly till bubbles."
+        - "!- Angle down. Advance cath. Remove needle."
+        - "!- Use Transtracheal Jet Insufflation device."
+        - "@5 **Confirm** placement. **Secure** well w/ tape or manufactured device."
+        - "- Use auscultation, clinical response, skin color, SpO2 and/or EtCO2."
+
+    - type: "procedure_card"
+      name: "Finger Thoracostomy"
+      scope: "P"
+      anchor: "finger-thoracostomy"
+      steps:
+        - "Confirm **pulseless and apneic**."
+        - "- **Clean skin** if time allows."
+        - "**Locate the rib** at the nipple (or just above)."
+        - "Cut along the rib, all the way down to bone."
+        - "- From the anterior to mid-axillary line."
+        - "Press **kelly clamp** firmly through the cut."
+        - "- Go just **above the rib**, pop into pleura."
+        - "Spread the clamp to make a bigger hole."
+        - "Remove the clamp and insert your finger."
+        - "- Listen for air, feel for lung, check pulse."
+        - "Place vented chest seal. Give **Ancef 2 g** IV."
+        - "- Place suction in hole if massive bleeding."
