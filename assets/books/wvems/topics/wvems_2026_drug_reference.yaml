@@ -24,7 +24,7 @@ topic:
     - type: "drug_card"
       name: "3% Saline"
       class: "Hypertonic Saline"
-      image: "assets/books/wvems/images/drug_3pct_saline.jpg"
+      image: "assets/books/wvems/images/form_ivbag.jpg"
       indications:
         - "Traumatic Brain Injury"
       doses:
@@ -46,7 +46,7 @@ topic:
     - type: "drug_card"
       name: "Adenosine"
       class: "Adenocard® — antiarrhythmic (Class V)"
-      image: "assets/books/wvems/images/drug_adenosine.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Supraventricular Tachycardia (SVT)"
       doses:
@@ -69,7 +69,7 @@ topic:
     - type: "drug_card"
       name: "Afrin®"
       class: "Oxymetazoline"
-      image: "assets/books/wvems/images/drug_afrin.jpg"
+      image: "assets/books/wvems/images/form_nasalspray.jpg"
       indications:
         - "Nosebleeds"
       doses:
@@ -89,7 +89,7 @@ topic:
     - type: "drug_card"
       name: "Albuterol"
       class: "Ventolin®"
-      image: "assets/books/wvems/images/drug_albuterol.jpg"
+      image: "assets/books/wvems/images/form_nebule.jpg"
       indications:
         - "Wheezing, Hyperkalemia"
       doses:
@@ -112,7 +112,7 @@ topic:
     - type: "drug_card"
       name: "Amiodarone"
       class: "Pacerone®"
-      image: "assets/books/wvems/images/drug_amiodarone.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "V-Tach / V-Fib"
       doses:
@@ -137,7 +137,7 @@ topic:
     - type: "drug_card"
       name: "Ancef®"
       class: "Cefazolin"
-      image: "assets/books/wvems/images/drug_ancef.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Major Wounds, Open Fractures"
       doses:
@@ -159,7 +159,7 @@ topic:
     - type: "drug_card"
       name: "Aspirin"
       class: "Baby ASA"
-      image: "assets/books/wvems/images/drug_aspirin.jpg"
+      image: "assets/books/wvems/images/form_tablet.jpg"
       indications:
         - "Angina"
       doses:
@@ -179,7 +179,7 @@ topic:
     - type: "drug_card"
       name: "Ativan®"
       class: "Lorazepam"
-      image: "assets/books/wvems/images/drug_ativan.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Seizure, Delirium, Sedation"
       doses:
@@ -201,7 +201,7 @@ topic:
     - type: "drug_card"
       name: "Atropine"
       class: "AtroPen®"
-      image: "assets/books/wvems/images/drug_atropine.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Bradycardia, Organophosphate OD"
       doses:
@@ -223,7 +223,7 @@ topic:
     - type: "drug_card"
       name: "Atrovent®"
       class: "Ipratropium Bromide"
-      image: "assets/books/wvems/images/drug_atrovent.jpg"
+      image: "assets/books/wvems/images/form_nebule.jpg"
       indications:
         - "Wheezing"
       doses:
@@ -243,7 +243,7 @@ topic:
     - type: "drug_card"
       name: "Benadryl®"
       class: "Diphenhydramine"
-      image: "assets/books/wvems/images/drug_benadryl.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Allergic Reactions, Dystonia"
       doses:
@@ -264,7 +264,7 @@ topic:
     - type: "drug_card"
       name: "Bicarb"
       class: "Sodium Bicarbonate"
-      image: "assets/books/wvems/images/drug_bicarb.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Acidosis, Arrhythmia"
       doses:
@@ -286,7 +286,7 @@ topic:
     - type: "drug_card"
       name: "Calcium"
       class: "Calcium Chloride"
-      image: "assets/books/wvems/images/drug_calcium.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Hyperkalemia, Ca-blocker OD"
       doses:
@@ -311,7 +311,6 @@ topic:
     - type: "drug_card"
       name: "Charcoal"
       class: "Activated"
-      image: "assets/books/wvems/images/drug_charcoal.jpg"
       indications:
         - "Poisoning, Overdose"
       doses:
@@ -334,7 +333,7 @@ topic:
     - type: "drug_card"
       name: "CyanoKit®"
       class: "Hydroxocobalamin"
-      image: "assets/books/wvems/images/drug_cyanokit.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Cyanide Poisoning / Exposure"
       doses:
@@ -355,7 +354,7 @@ topic:
     - type: "drug_card"
       name: "D10"
       class: "Dextrose 10%"
-      image: "assets/books/wvems/images/drug_d10.jpg"
+      image: "assets/books/wvems/images/form_ivbag.jpg"
       indications:
         - "Hypoglycemia"
       doses:
@@ -376,7 +375,7 @@ topic:
     - type: "drug_card"
       name: "Decadron®"
       class: "Dexamethasone"
-      image: "assets/books/wvems/images/drug_decadron.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Inflammation"
       doses:
@@ -398,7 +397,7 @@ topic:
     - type: "drug_card"
       name: "Dopamine"
       class: "Intropin®"
-      image: "assets/books/wvems/images/drug_dopamine.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Shock, Hypotension"
       doses:
@@ -422,7 +421,7 @@ topic:
     - type: "drug_card"
       name: "DuoDote®"
       class: "Atropine & Pralidoxime"
-      image: "assets/books/wvems/images/drug_duodote.jpg"
+      image: "assets/books/wvems/images/form_autoinjector.jpg"
       indications:
         - "Organophosphate poisoning"
       doses:
@@ -444,7 +443,7 @@ topic:
     - type: "drug_card"
       name: "Epi, Epi Neb"
       class: "Epinephrine, EpiPen®"
-      image: "assets/books/wvems/images/drug_epi.jpg"
+      image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
         - "Bradycardia, CODE, Dyspnea, Allergy"
       doses:
@@ -469,7 +468,7 @@ topic:
     - type: "drug_card"
       name: "Epi Drip, Epi Push"
       class: "Epinephrine, Adrenalin"
-      image: "assets/books/wvems/images/drug_epi_drip.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Hypotension, Shock"
       doses:
@@ -494,7 +493,7 @@ topic:
     - type: "drug_card"
       name: "Etomidate"
       class: "Amidate®"
-      image: "assets/books/wvems/images/drug_etomidate.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "RSI / RSA induction"
       doses:
@@ -517,7 +516,7 @@ topic:
     - type: "drug_card"
       name: "Fentanyl"
       class: "Sublimaze®"
-      image: "assets/books/wvems/images/drug_fentanyl.jpg"
+      image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
         - "Acute Pain, Sedation"
       doses:
@@ -540,7 +539,7 @@ topic:
     - type: "drug_card"
       name: "Glucagon"
       class: "Baqsimi®, Glucagen®"
-      image: "assets/books/wvems/images/drug_glucagon.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Hypoglycemia, β-blocker OD"
       doses:
@@ -563,7 +562,6 @@ topic:
     - type: "drug_card"
       name: "Glucose"
       class: "Oral Glucose, Glutose 15™"
-      image: "assets/books/wvems/images/drug_glucose.jpg"
       indications:
         - "Hypoglycemia"
       doses:
@@ -583,7 +581,7 @@ topic:
     - type: "drug_card"
       name: "Haldol®"
       class: "Haloperidol"
-      image: "assets/books/wvems/images/drug_haldol.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Severe Psychosis"
       doses:
@@ -607,7 +605,7 @@ topic:
     - type: "drug_card"
       name: "Heparin"
       class: "Heparin Sodium"
-      image: "assets/books/wvems/images/drug_heparin.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "ST-Elevation Myocardial Infarction"
       doses:
@@ -630,7 +628,7 @@ topic:
     - type: "drug_card"
       name: "Ibuprofen"
       class: "Advil®, Motrin®"
-      image: "assets/books/wvems/images/drug_ibuprofen.jpg"
+      image: "assets/books/wvems/images/form_tablet.jpg"
       indications:
         - "Fever, Pain"
       doses:
@@ -652,7 +650,7 @@ topic:
     - type: "drug_card"
       name: "Keppra®"
       class: "Levetiracetam"
-      image: "assets/books/wvems/images/drug_keppra.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Status Epilepticus, Seizures"
       doses:
@@ -675,7 +673,7 @@ topic:
     - type: "drug_card"
       name: "Ketamine"
       class: "Ketalar®"
-      image: "assets/books/wvems/images/drug_ketamine.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Severe Pain, Discomfort"
       doses:
@@ -699,7 +697,7 @@ topic:
     - type: "drug_card"
       name: "Lasix®"
       class: "Furosemide"
-      image: "assets/books/wvems/images/drug_lasix.jpg"
+      image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
         - "Congestive Heart Failure"
       doses:
@@ -720,7 +718,7 @@ topic:
     - type: "drug_card"
       name: "Levophed®"
       class: "Norepinephrine"
-      image: "assets/books/wvems/images/drug_levophed.jpg"
+      image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
         - "Hypotension, Septic Shock"
       doses:
@@ -745,7 +743,7 @@ topic:
     - type: "drug_card"
       name: "Lidocaine"
       class: "Xylocaine®"
-      image: "assets/books/wvems/images/drug_lidocaine.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Pain after IO (or V-Tach / V-Fib)"
       doses:
@@ -769,7 +767,7 @@ topic:
     - type: "drug_card"
       name: "Lopressor®"
       class: "Metoprolol"
-      image: "assets/books/wvems/images/drug_lopressor.jpg"
+      image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
         - "HTN, Tachycardia"
       doses:
@@ -790,7 +788,7 @@ topic:
     - type: "drug_card"
       name: "Magnesium"
       class: "Magnesium Sulfate"
-      image: "assets/books/wvems/images/drug_magnesium.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "TdP, Preeclampsia, Eclampsia"
       doses:
@@ -813,7 +811,7 @@ topic:
     - type: "drug_card"
       name: "Morphine"
       class: "Morphine Sulfate"
-      image: "assets/books/wvems/images/drug_morphine.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Acute Pain, Sedation"
       doses:
@@ -835,7 +833,7 @@ topic:
     - type: "drug_card"
       name: "Narcan®"
       class: "Naloxone"
-      image: "assets/books/wvems/images/drug_narcan.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Opiate OD"
       doses:
@@ -856,7 +854,7 @@ topic:
     - type: "drug_card"
       name: "Neo Push"
       class: "Phenylephrine"
-      image: "assets/books/wvems/images/drug_neo_push.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Hypotension, Shock Index > 0.8"
       doses:
@@ -881,7 +879,7 @@ topic:
     - type: "drug_card"
       name: "Nitro, Nitro Drip"
       class: "Nitroglycerin, Nitrostat®"
-      image: "assets/books/wvems/images/drug_nitro.jpg"
+      image: "assets/books/wvems/images/form_tablet.jpg"
       indications:
         - "Angina, Congestive Heart Failure"
       doses:
@@ -905,7 +903,7 @@ topic:
     - type: "drug_card"
       name: "NS Bolus"
       class: "0.9% Normal Saline"
-      image: "assets/books/wvems/images/drug_ns_bolus.jpg"
+      image: "assets/books/wvems/images/form_ivbag.jpg"
       indications:
         - "Hypotension, Hypovolemia"
       doses:
@@ -926,7 +924,7 @@ topic:
     - type: "drug_card"
       name: "Propofol"
       class: "Diprivan®"
-      image: "assets/books/wvems/images/drug_propofol.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Sedation"
       doses:
@@ -950,7 +948,7 @@ topic:
     - type: "drug_card"
       name: "Rocephin®"
       class: "Ceftriaxone"
-      image: "assets/books/wvems/images/drug_rocephin.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Infection"
       doses:
@@ -973,7 +971,7 @@ topic:
     - type: "drug_card"
       name: "Rocuronium"
       class: "Zemuron®"
-      image: "assets/books/wvems/images/drug_rocuronium.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "RSI Paralysis"
       doses:
@@ -996,7 +994,7 @@ topic:
     - type: "drug_card"
       name: "Succinylcholine"
       class: "Anectine®"
-      image: "assets/books/wvems/images/drug_succinylcholine.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "RSI Paralysis"
       doses:
@@ -1018,7 +1016,6 @@ topic:
     - type: "drug_card"
       name: "Tetracaine"
       class: "0.5% Ophthalmic"
-      image: "assets/books/wvems/images/drug_tetracaine.jpg"
       indications:
         - "Eye pain (non-penetrating)"
       doses:
@@ -1039,7 +1036,7 @@ topic:
     - type: "drug_card"
       name: "Toradol®"
       class: "Ketorolac"
-      image: "assets/books/wvems/images/drug_toradol.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Moderate Pain"
       doses:
@@ -1061,7 +1058,7 @@ topic:
     - type: "drug_card"
       name: "TXA"
       class: "Tranexamic Acid"
-      image: "assets/books/wvems/images/drug_txa.jpg"
+      image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
         - "Bleeding, Epistaxis"
       doses:
@@ -1084,7 +1081,7 @@ topic:
     - type: "drug_card"
       name: "Tylenol®"
       class: "Acetaminophen"
-      image: "assets/books/wvems/images/drug_tylenol.jpg"
+      image: "assets/books/wvems/images/form_ivbag.jpg"
       indications:
         - "Fever, Pain"
       doses:
@@ -1107,7 +1104,7 @@ topic:
     - type: "drug_card"
       name: "Versed®"
       class: "Midazolam"
-      image: "assets/books/wvems/images/drug_versed.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Seizure, Delirium, Sedation"
       doses:
@@ -1129,7 +1126,7 @@ topic:
     - type: "drug_card"
       name: "Zofran®"
       class: "Ondansetron"
-      image: "assets/books/wvems/images/drug_zofran.jpg"
+      image: "assets/books/wvems/images/form_vial.jpg"
       indications:
         - "Nausea, Vomiting"
       doses:
