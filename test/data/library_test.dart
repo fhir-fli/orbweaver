@@ -366,13 +366,13 @@ void main() {
       expect((group['children'] as YamlList), hasLength(3));
     });
 
-    test('wvems: 7 groups (4 sections + drug ref + procedures + peds ref), '
-        '49 topics total', () {
+    test('wvems: 8 groups (4 sections + drug ref + procedures + policies + '
+        'peds ref), 50 topics total', () {
       final b = loadBook('wvems');
       expect(b['topics'], isNull);
       final contents = b['contents'] as YamlList;
-      expect(contents, hasLength(7));
-      expect(leafCount(contents), 49);
+      expect(contents, hasLength(8));
+      expect(leafCount(contents), 50);
     });
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '

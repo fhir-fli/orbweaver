@@ -1,0 +1,309 @@
+# ============================================================
+# WVEMS 2026 — Policies (pp.109-117)
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT) — original
+# WVEMS content, transcribed to titled prose (Grey's hybrid rule:
+# reference/policy text → titled prose + nested bullets, not flowcharts).
+#
+# NOTES ON FIDELITY:
+#  - The printed provider-scope chips (E/A/I/P) that tag a few policy
+#    lines are written here as BOLD level names inline — in every case
+#    the chip is redundant with the adjacent word (ALS/BLS/CC/Paramedic),
+#    so no information is lost. (If Grey wants the coloured chips, add an
+#    inline-chip token to MiniMarkdown.)
+#  - The p.116 "Alternate <30 min? → May Bypass Closest ED" mini-decision
+#    is rendered as a highlighted callout (one trivial decision; the prose
+#    above it already states the rule).
+#  - Images deferred (like the drug/procedure art): the p.114 Taser-probe
+#    "Score Line" diagram is not embedded.
+# ============================================================
+
+topic:
+  id: "wvems-2026-109"
+  version: "v260101"
+  title: "Policies"
+  list_subtitle: "2026-109 · operational policies"
+  last_reviewed: "Dec 2025"
+  tags: ["policies", "operations", "refusal", "termination", "destination", "mci", "abuse"]
+  aliases:
+    - "Operational Policies"
+    - "Refusals"
+    - "Termination"
+    - "Destination"
+    - "MCI"
+  category: "critical"
+  page_number: 109
+
+  blocks:
+
+    - type: "prose"
+      title: "Policies"
+      highlight: true
+      markdown: |
+        WVEMS operational policies (pp.110-117): abuse reporting, on-scene
+        authority, withholding/terminating resuscitation, advanced cardiac
+        devices, standbys & law enforcement, refusals, destination triage,
+        and deceased/MCI. **Call Medical Control for any conflict.**
+
+    # ── p.110 Abuse ─────────────────────────────────────────
+    - type: "prose"
+      title: "Patient Abuse and Neglect"
+      markdown: |
+        - Abuse is any physical, sexual and/or mental injury of any **child, domestic partner, senior citizen, or incapacitated adult** by another person through commission or omission — at the hand of a partner, parent, caregiver, spouse, neighbor, or adult child. EMS are **Mandatory Reporters** under the Code of Virginia (**22 VAC 30-100-15**).
+        - Be aware of the potential for abuse in **all** patients. Where abuse is suspected, first **protect the EMS team** and patient from harm. Collect as much information as possible and preserve physical evidence if able. Signs may include:
+          - **Physical**: injuries inconsistent with the reported mechanism, injuries in different stages of healing, defensive injuries (e.g. to forearms), or injuries during pregnancy
+          - **Psychological**: excessive passivity, compliant/fearful behavior, excessive aggression, violent tendencies, excessive crying, behavioral disorders, substance abuse, or med non-compliance
+          - **Neglect**: inappropriate clothing for weather, inadequate hygiene, inattentive caregiver, or malnutrition
+        - Immediately report suspicious findings to both the receiving hospital (if transported) and social services and/or police:
+          - **Adults** — Adult Protective Services **888-832-3858**
+          - Suspected **human trafficking** — involve police; National Trafficking Hotline **888-373-7888**
+          - **Domestic violence** — offer law enforcement; National Hotline **800-799-SAFE**
+          - **Children** — Child Protective Services **800-552-7096**
+
+    - type: "prose"
+      title: "Infant Abandonment"
+      callout: true
+      markdown: |
+        The Code of Virginia (**§18.2-371.1 B.2**) **allows** a new parent to
+        **surrender their newborn** to a hospital or EMS agency under certain
+        circumstances. EMS providers should **accept without hesitation**,
+        assess, and transport any infant surrendered to them.
+
+    # ── p.111 Bystander, Physician ──────────────────────────
+    - type: "prose"
+      title: "Verification of On Scene Personnel"
+      markdown: |
+        - Prehospital care is the responsibility of the **responding EMS resources**. Bystanders may be considered when immediate needs outweigh available EMS resources, or if a bystander provides a unique resource. EMS should never authorize or perform any intervention outside their scope **or knowledge/comfort level**.
+        - Bystanders may have a unique understanding of a specialized **medical condition or device** (case workers/patient aides, mental-health professionals, a caretaker managing a home vent, an LVAD patient, etc.). EMS must call **Medical Control** for any orders to deviate from routine EMS care.
+        - **BLS procedures** are frequently taught as common first aid. Appropriate bystanders may assist when EMS resources are insufficient — EMS must direct them and maintain overall responsibility.
+        - **ALS interventions** are only appropriate by responding ALS resources. A formal mutual-aid agreement or **Medical Control** authorization must exist first. EMS has no authority to enable non-EMS medical personnel (RN, NP, PA, CRNA, RT, etc.) to perform ALS interventions.
+
+    - type: "prose"
+      title: "Physician Orders"
+      markdown: |
+        - Physicians represent a unique resource. EMS may follow written or verbal orders from a patient's established physician, and **appropriate** verbal orders from a physician bystander on scene. EMS should only consider verbal orders outside these protocols **if the physician bystander accompanies EMS** to the hospital. Call **Medical Control** if there is any conflict.
+
+    # ── p.112 Termination ───────────────────────────────────
+    - type: "prose"
+      title: "Withholding Resuscitation"
+      markdown: |
+        - Resuscitation is not appropriate if efforts are futile or against the patient's explicit wishes. **Withhold resuscitation** if any signs of **obvious death**, **mortal injury**, or if the patient has a **DNR / POST**.
+        - Ask about a DNR / POST for any **hospice or nursing home** patient.
+        - EMS should attempt to validate any DNR / POST with family or health-care workers. Begin resuscitation and call **Medical Control** if there is any question; EMS may stop resuscitation once verified.
+
+    - type: "prose"
+      title: "Termination of Resuscitation"
+      markdown: |
+        - Transportation during resuscitation is not optimal and exposes crews to significant risk. This policy balances the potential benefit of prolonged resuscitation against the risks of emergent transport.
+        - **Prioritize transport for any special case.** If attempting resuscitation, special cases may benefit from resources not available in the field — prioritize compressions and AED and transport ASAP.
+        - **ALS**: resuscitate on scene for non-special cases. Call **Medical Control** if no ROSC **within 30 min**.
+        - **BLS**: try to turn over care to ALS (or a hospital) within 15 min. **Prioritize transport if a hospital is within 15 min.** Extended BLS resuscitation beyond 15 min may still succeed if the arrest is **witnessed by EMS** or if any shock is ever advised by the AED — prioritize transport in those cases regardless of time. Call **Medical Control** if not witnessed by EMS, not shocked, and no ALS after 15 min.
+
+    - type: "prose"
+      title: "Special Cases (prioritize transport)"
+      boxed: true
+      markdown: |
+        - Suspected **Traumatic Cause**
+        - **Pediatric** or **Pregnant** patients
+        - **Hypothermia** or **Drowning**
+        - **Lightning** or **Electric Shock**
+        - **Overdose** or **Poisoning**
+
+    - type: "prose"
+      title: "ALS Termination criteria"
+      boxed: true
+      markdown: |
+        - Not a **Special Case**
+        - No ROSC within **30 min**
+
+    - type: "prose"
+      title: "BLS Termination criteria"
+      boxed: true
+      markdown: |
+        - Not a **Special Case**
+        - Not witnessed by EMS
+        - Never shocked by AED
+        - No ALS within **15 min**
+        - No ROSC within **15 min**
+
+    # ── p.113 Cardiac Devices ───────────────────────────────
+    - type: "prose"
+      title: "Advanced Cardiac Devices"
+      markdown: |
+        - EMS may occasionally encounter exotic devices such as:
+          - Wearable defibrillator (e.g. **ZOLL® LifeVest**)
+          - Intra-Aortic Balloon Pump (**IABP**)
+          - Transvenous Pacemaker (**TVP**)
+          - Left Ventricular Assist Device (**LVAD**)
+        - **Bring all device supplies** and paperwork to the ED with you.
+          - **Bring all batteries**, cords, documentation and wallet cards.
+          - Consider [destination triage](#destination-triage) in consultation with **Medical Control**.
+        - Diagnosing device problems is complex.
+          - **Do not unplug or remove anything.**
+          - When in doubt, follow regular protocols.
+          - Call **Medical Control** with any questions.
+          - Consider the advice of the patient and any trained bystanders.
+          - Some devices may provide **voice prompts** for troubleshooting.
+        - Routine management of these devices is **outside the scope** of EMS — the patient's life literally depends on them.
+
+    - type: "prose"
+      title: "Left Ventricular Assist Devices (LVADs)"
+      markdown: |
+        - All **LVAD** patients will have an assigned "**LVAD center**."
+          - The patient should have the emergency contact phone number.
+          - EMS may try to **contact the LVAD center** with any problems.
+          - Call **Medical Control** to verify any recommendations.
+        - LVAD patients may be alive and well **without a palpable pulse**.
+          - It may be impossible to palpate or auscultate a blood pressure.
+          - Do not start CPR on patients who are obviously alive and well.
+        - An LVAD can make **diagnosis of arrest** very difficult.
+          - Look for other signs of life and listen for pump noise.
+          - Chest compressions may harm a ventricular assist device.
+          - Consider the advice of trained bystanders or the LVAD center.
+          - Call **Medical Control ASAP for any unconscious LVAD** patient.
+
+    # ── p.114 Standby, Police ───────────────────────────────
+    - type: "prose"
+      title: "EMS Standbys"
+      markdown: |
+        - EMS may be utilized to standby at a scene without a specific patient.
+        - EMS should complete a full report for any patients or treatments.
+          - Consider simple interventions such as **PO pain meds** and ice.
+          - Document a [refusal](#patient-refusals) if any patient declines transport.
+
+    - type: "prose"
+      title: "Scene Rehab"
+      markdown: |
+        - EMS may provide rehab for **large scenes** like structure fires, etc.
+          - This may include abbreviated screening and/or treatment.
+          - Rehab is **only applicable to fellow first responders**.
+        - EMS should coordinate all activity with incident command.
+        - Standard rehab includes a specific area dedicated to **medical ops**.
+          - Rehab generally involves checking vital signs and simple exam.
+          - Provide PO fluids and food. Monitor until back to baseline.
+          - An abbreviated record may be substituted for a full report.
+          - Incident command will dictate who may return after rehab.
+
+    - type: "prose"
+      title: "Law Enforcement Assistance"
+      markdown: |
+        - EMS may be called to evaluate a patient in custody.
+          - Always offer transport. EMS can **never recommend** a refusal.
+          - EMS can provide treatment, but cannot "clear" a patient.
+          - Officers may elect to decline transport, but should sign a refusal.
+          - Officers should accompany any patient in custody.
+          - Call **Medical Control** if there is any conflict.
+        - EMS may remove CEW (**Taser™**) probes as part of wound care.
+          - EMS should document a full report.
+          - Officers may sign a refusal for a person under their arrest.
+          - Probes are small straight barbs. Stretch skin tight and pull out.
+          - The **barb is in-line with the score mark** on the probe.
+
+    # ── p.115 Refusal ───────────────────────────────────────
+    - type: "prose"
+      title: "Patient Refusals"
+      anchor: "patient-refusals"
+      markdown: |
+        - Refusals represent a unique medical risk. EMS should complete a formal refusal with **2 sets of vitals** and **a witness signature** for any patient who declines any intervention and/or transport.
+        - EMS should encourage treatment and transport for every patient.
+          - **Never refuse transport. Never encourage a refusal.**
+        - All patients who wish to refuse must be **eligible** to make their own decisions. Eligible patients include:
+          - Legal Adults (18 y/o and older)
+          - Minors (< 18 y/o) who are married, divorced or emancipated
+        - The Code of Virginia (**§54.1-2969 C,D**) allows any **minor 14-17 y/o** to direct treatment **only if no responsible party** is reasonably available — this includes the ability to refuse treatment/transport.
+        - The Code of Virginia (**§54.1-2969 G**) allows **pregnant minors** to direct treatment **only relating to the delivery of their baby**.
+        - A responsible party (parent, guardian, medical POA, etc.) may have the authority to refuse for a patient who is not eligible on their own.
+        - Any patient (or responsible party) who wishes to refuse must also demonstrate **capacity** — awake, oriented, and able to demonstrate understanding of the potential risks.
+          - Patients with altered LOC lack capacity and cannot refuse.
+          - Suicidal patients lack capacity and cannot refuse.
+        - Call **Medical Control** and enlist law enforcement for any patient who attempts to refuse but should not be allowed to do so.
+
+    - type: "prose"
+      title: "Who is a Patient?"
+      markdown: |
+        - Any person for whom EMS is specifically summoned should be considered a patient. Every patient should have a full report completed with a transport or a refusal documented.
+        - Not every person on scene needs to be considered a patient. EMS is not obligated to document a refusal for a person who declines EMS assessment, **and** is acting normally without obvious distress, **and** for whom EMS was not specifically summoned.
+          - A refusal should be documented if there is any doubt.
+
+    # ── p.116 Destination ───────────────────────────────────
+    - type: "prose"
+      title: "Destination Triage Plan"
+      anchor: "destination-triage"
+      markdown: |
+        - In some specific cases patients may benefit from triage directly to a more appropriate facility. Consider bypassing the closest facility and increasing transport time by **no more than 30 minutes** for:
+          - Specific **emergent needs**: **STEMI**, LVO **Stroke**, or **Major Trauma**
+          - Anticipated specialty services (ortho, OB/GYN, peds, ENT, etc.)
+          - Pre-established physician (recent surgery, oncology, dialysis, etc.)
+          - System status (agency utilization, need for admission, etc.)
+        - Consider utilization of **HEMS** for critical illness or longer transports.
+
+    - type: "prose"
+      title: "Destination Triage"
+      highlight: true
+      markdown: |
+        Is an **alternate** facility **< 30 min** farther? → **May bypass the closest ED.**
+
+    - type: "prose"
+      title: "Acute STEMI with Chest Pain"
+      markdown: |
+        - Adults should have an appropriate presentation ([chest pain](topic:wvems-2026-028), etc.) and an EKG identified as **\*\*\* ACUTE MI \*\*\*** by automated analysis.
+        - **ALS**: May consider STE > 1 mm in 2 or more contiguous leads.
+        - **CC** (Critical Care): May consider advanced criteria (Sgarbossa's, posterior, etc.).
+        - Appropriate WVEMS cardiac hospitals (with emergent PCI) include:
+          - Carilion **Roanoke** & **New River Valley** & Centra **Lynchburg**
+          - Lewis Gale **Salem** & **Montgomery** & Sovah **Danville** & **Martinsville**
+
+    - type: "prose"
+      title: "Acute Large Vessel (LVO) Stroke"
+      markdown: |
+        - Patients must have a definite **time last normal under 6 hrs** and at least one positive finding on a **Cincinnati Stroke** (FAST) exam.
+        - Must also have **arm drift** and at least one finding on a **Stroke VAN**.
+        - Appropriate WVEMS stroke hospitals (PSC, TSC, or CSC) include:
+          - Carilion **Roanoke** Memorial & Centra **Lynchburg** Baptist
+          - Lewis Gale **Salem** & Sovah **Danville** & Sovah **Martinsville**
+
+    - type: "prose"
+      title: "Major or Unstable Trauma"
+      markdown: |
+        - Patients should meet trauma triage guidelines with **major injury** and/or **major mechanism** and/or **major burns** > 20% BSA.
+        - Appropriate WVEMS trauma hospitals (Level 1 or 2) include:
+          - Carilion **Roanoke** & Lewis Gale **Salem** & Centra **Lynchburg**
+
+    # ── p.117 Deceased, MCI ─────────────────────────────────
+    - type: "prose"
+      title: "Deceased Subjects"
+      markdown: |
+        - EMS may occasionally encounter a deceased subject.
+          - Maintain respect for the deceased and their family.
+          - Always **involve law enforcement**. Always **write a full report**.
+        - If resuscitation was not attempted:
+          - Consider all deceased subjects as a potential **crime scene**.
+          - Limit EMS ingress/egress and coordinate with law enforcement.
+          - Law enforcement may request EMS to confirm death.
+        - If resuscitation was attempted and subsequently terminated:
+          - **Medical Control** should already be involved.
+          - Do not remove any pads, leads, invasive lines or tubes.
+          - EMS may disconnect hardware such as EKG wires and BVM.
+          - Defer to the direction of law enforcement or Medical Examiner.
+        - In some situations law enforcement may release the body.
+          - EMS should not transport the deceased to the ED.
+          - After the body is released EMS may remove lines, tubes, etc.
+          - EMS may offer courtesy transport to a funeral home.
+          - Courtesy transport is not required. Defer to agency policy.
+          - Inform Medical Control of any courtesy transports.
+        - **EMS may confirm death** in several ways including:
+          - Lack of pulse, respirations and response.
+          - **Obvious Death** or **Mortal Injury**.
+          - **ALS**: Asystole in at least two cardiac leads with EKG gain at max.
+        - EMS may consider assisting with last rites if requested by family.
+
+    - type: "prose"
+      title: "Mass Casualty (MCI)"
+      markdown: |
+        - **Call for more help. Begin a standardized MCI triage system.**
+          - Several systems are described, such as SALT and START.
+        - Do the most good for the most people until adequate help arrives.
+          - Consider utilizing any available resources, such as bystanders.
+          - Prioritize life-saving interventions.
+          - Triage and prioritizing care during an MCI is not abandonment.
+          - Consider "reverse triage" if a mass casualty **lightning strike**.
+        - **Notify the receiving hospital**(s) as soon as possible.

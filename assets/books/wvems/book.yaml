@@ -99,6 +99,14 @@ book:
         accent_branch: "0xFFE57324"
       children:
         - topic: "topics/wvems_2026_096.yaml"
+    - title: "Policies"
+      appendix: true
+      palette:
+        accent: "0xFF455A64"
+        accent_fill: "0xFFECEFF1"
+        accent_branch: "0xFF607D8B"
+      children:
+        - topic: "topics/wvems_2026_109.yaml"
     - title: "Peds Reference"
       appendix: true
       palette:
