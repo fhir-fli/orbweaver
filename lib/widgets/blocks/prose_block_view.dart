@@ -21,17 +21,37 @@ class ProseBlockView extends StatelessWidget {
   Widget build(BuildContext context) {
     final accent = theme.header;
     // Boxed prose — a rounded-border tile matching boxed-layout table
-    // cells, used when the block is acting as a flow-grid cell inside
-    // a RowBlock.  Centered text, tight padding, no title banner.
+    // cells.  Untitled: acts as a flow-grid cell inside a RowBlock
+    // (centered text, tight padding).  Titled: a labelled criteria panel
+    // (bold accent header + left-aligned body), e.g. the WVEMS Termination
+    // "Special Cases / ALS / BLS" boxes.
     if (block.boxed) {
       return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
         decoration: BoxDecoration(
           border: Border.all(color: theme.nodeBorder.withValues(alpha: 0.6)),
           borderRadius: BorderRadius.circular(4),
         ),
-        alignment: Alignment.center,
-        child: MiniMarkdown(markdown: block.markdown),
+        alignment: block.title == null ? Alignment.center : null,
+        child: block.title == null
+            ? MiniMarkdown(markdown: block.markdown)
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 3),
+                    child: Text(
+                      block.title!,
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w800,
+                        color: accent,
+                      ),
+                    ),
+                  ),
+                  MiniMarkdown(markdown: block.markdown),
+                ],
+              ),
       );
     }
 
