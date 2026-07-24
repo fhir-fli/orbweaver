@@ -969,3 +969,180 @@ topic:
         - "**Reconstitute**: w/ 3 mL — NS for IV/IO, or 2% Lido for IM"
         - "Antibiotic: 3rd Gen Ceph · Onset: minutes · Duration: hours"
         - "https://reference.medscape.com/drug/342510"
+
+    - type: "drug_card"
+      name: "Rocuronium"
+      class: "Zemuron®"
+      image: "assets/books/wvems/images/drug_rocuronium.jpg"
+      indications:
+        - "RSI Paralysis"
+      doses:
+        - population: "adult"
+          text: "**1 mg/kg** IV/IO"
+        - population: "peds"
+          text: "0.6 mg/kg (3+ months old)"
+        - population: "both"
+          text: "0–2 months: safety unknown"
+      warnings:
+        - "PMH: liver failure, ascites"
+        - "**Beware** Malignant Hyperthermia"
+        - "May cause: paralysis, apnea"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocol: [Intubation / RSI](topic:wvems-2026-078)"
+        - "Non-depolarizing · Onset: 1 minute · Duration: 30 minutes"
+        - "https://reference.medscape.com/drug/343109"
+
+    - type: "drug_card"
+      name: "Succinylcholine"
+      class: "Anectine®"
+      image: "assets/books/wvems/images/drug_succinylcholine.jpg"
+      indications:
+        - "RSI Paralysis"
+      doses:
+        - population: "adult"
+          text: "**1.5 mg/kg** IV/IO"
+        - population: "peds"
+          text: "2 mg/kg"
+      warnings:
+        - "PMH: **hyperkalemia**, burns"
+        - "**Beware** Malignant Hyperthermia"
+        - "**Beware** Pediatric Myopathy"
+        - "May cause: paralysis, apnea"
+        - "**Pregnancy Category C**: safety not established"
+      pearls:
+        - "Alt. substitute for Rocuronium (only w/ OMD approval)"
+        - "Depolarizing · Onset: 30 seconds · Duration: 5 minutes"
+        - "https://reference.medscape.com/drug/343102"
+
+    - type: "drug_card"
+      name: "Tetracaine"
+      class: "0.5% Ophthalmic"
+      image: "assets/books/wvems/images/drug_tetracaine.jpg"
+      indications:
+        - "Eye pain (non-penetrating)"
+      doses:
+        - population: "adult"
+          text: "**1–2 gtt** into affected eye"
+        - population: "peds"
+          text: "**1–2 gtt** into affected eye"
+      warnings:
+        - "**Will sting** for 3–5 seconds (normal)"
+        - "**Use caution** after admin"
+        - "Do not let pts rub or scratch eye"
+        - "**Pregnancy N/A**: not categorized"
+      pearls:
+        - "Protocols: [Pain](topic:wvems-2026-020), [Head Injury](topic:wvems-2026-062)"
+        - "Topical anesthetic · Onset: seconds · Duration: 20 min"
+        - "https://reference.medscape.com/drug/343373"
+
+    - type: "drug_card"
+      name: "Toradol®"
+      class: "Ketorolac"
+      image: "assets/books/wvems/images/drug_toradol.jpg"
+      indications:
+        - "Moderate Pain"
+      doses:
+        - population: "adult"
+          text: "**15 mg** IV/IO, IM/IN"
+        - population: "peds"
+          text: "0.5 mg/kg (2+ years old)"
+      warnings:
+        - "PMH: CKD, recent CABG"
+        - "Do not use if **active GI bleeding**"
+        - "May cause: epigastric pain"
+        - "May cause: N/V, dizzy, itching"
+        - "**Pregnancy Category D**: known risks"
+      pearls:
+        - "Protocol: [Pain](topic:wvems-2026-020)"
+        - "NSAID: cox inhibitor · Onset: 5 min · Duration: 4 hours"
+        - "https://reference.medscape.com/drug/343292"
+
+    - type: "drug_card"
+      name: "TXA"
+      class: "Tranexamic Acid"
+      image: "assets/books/wvems/images/drug_txa.jpg"
+      indications:
+        - "Bleeding, Epistaxis"
+      doses:
+        - population: "adult"
+          text: "**2 grams** IV/IO (or 150 mg IN)"
+        - population: "peds"
+          text: "10–25 mg/kg"
+        - population: "both"
+          text: "Dilute in NS and **give over 10 min**"
+      warnings:
+        - "PMH: seizure, **known DVT/PE**"
+        - "May cause: **hypotension**"
+        - "May cause: visual changes, N/V"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocols: [Bleeding](topic:wvems-2026-058), Pregnancy, [Epistaxis](topic:wvems-2026-076), OB Procedures"
+        - "Antifibrinolytic · Onset: minutes · Duration: 3 hours"
+        - "https://reference.medscape.com/drug/342087"
+
+    - type: "drug_card"
+      name: "Tylenol®"
+      class: "Acetaminophen"
+      image: "assets/books/wvems/images/drug_tylenol.jpg"
+      indications:
+        - "Fever, Pain"
+      doses:
+        - population: "adult"
+          text: "**1,000 mg** PO, IV/IO"
+        - population: "peds"
+          text: "15 mg/kg"
+        - population: "both"
+          text: "For IV admin: **give over 10 min**"
+      warnings:
+        - "PMH: end stage liver disease"
+        - "**Pregnancy Category B**: likely safe"
+        - "**Do not use** for premature babies"
+      pearls:
+        - "Protocols: [Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020)"
+        - "Analgesic: antiprostaglandin · Onset: 1 hr · Duration: 4 hrs"
+        - "PO: https://reference.medscape.com/drug/343346"
+        - "IV: https://reference.medscape.com/drug/999610"
+
+    - type: "drug_card"
+      name: "Versed®"
+      class: "Midazolam"
+      image: "assets/books/wvems/images/drug_versed.jpg"
+      indications:
+        - "Seizure, Delirium, Sedation"
+      doses:
+        - population: "adult"
+          text: "**2.5–5 mg** IV/IO, IM/IN"
+        - population: "peds"
+          text: "50–75 mcg/kg"
+      warnings:
+        - "PMH: antivirals, glaucoma"
+        - "May cause: **respiratory depression**"
+        - "May cause: hypotension"
+        - "**Pregnancy Category D**: known risks"
+      pearls:
+        - "Protocols: [Seizure](topic:wvems-2026-042), [Behavioral](topic:wvems-2026-046), Cold / Heat, Antidote"
+        - "Critical Care: [Sedation / Vent](topic:wvems-2026-080)"
+        - "Benzo: GABA agonist · Onset: 3 minutes · Duration: 1 hour"
+        - "https://reference.medscape.com/drug/342907"
+
+    - type: "drug_card"
+      name: "Zofran®"
+      class: "Ondansetron"
+      image: "assets/books/wvems/images/drug_zofran.jpg"
+      indications:
+        - "Nausea, Vomiting"
+      doses:
+        - population: "adult"
+          text: "**4 mg** IV/IO, IM/IN, PO"
+        - population: "peds"
+          text: "0.1 mg/kg"
+      warnings:
+        - "PMH: antidepressants, Long QT"
+        - "May cause: HA, fatigue"
+        - "**Pregnancy Category B**: likely safe"
+      pearls:
+        - "Protocol: [Nausea / Vomiting](topic:wvems-2026-022)"
+        - "Use **injectable for IV/IO** & IM/IN; use **ODT for PO**"
+        - "5-HT3 antagonist · Onset: seconds · Duration: hours"
+        - "https://reference.medscape.com/drug/342052"
