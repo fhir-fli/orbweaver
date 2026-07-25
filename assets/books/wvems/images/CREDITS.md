@@ -21,3 +21,25 @@ CC0 requires none (courtesy credit given).
 Still imageless (no clean free image found yet): Tetracaine (ophthalmic
 dropper), Glucose gel & Charcoal (oral gel/bottle). The prefilled-syringe
 drugs reuse form_vial (they also come as vials).
+
+## Procedures equipment images
+
+Representative equipment for the procedure cards (generic, not a specific product).
+
+| App file | Equipment | Source (Wikimedia Commons) | Author | License |
+|---|---|---|---|---|
+| eq_glucometer.jpg | glucometer | [Glucose_meters.jpg](https://commons.wikimedia.org/wiki/File:Glucose_meters.jpg) | Christidy at English Wikipedia | Public domain |
+| eq_ivcath.jpg | ivcath | [Intravenous_cannula_decription.jpg](https://commons.wikimedia.org/wiki/File:Intravenous_cannula_decription.jpg) | Fifo | [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5) |
+| eq_suction.jpg | suction | [Absaugpumpe_von_Laerdal_im_blau-gelben_Corporate-Design.jpg](https://commons.wikimedia.org/wiki/File:Absaugpumpe_von_Laerdal_im_blau-gelben_Corporate-Design.jpg) | Massimiliano Mariani | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) |
+| eq_magill.jpg | magill | [Magill_forceps_open.jpg](https://commons.wikimedia.org/wiki/File:Magill_forceps_open.jpg) | Dctrzl | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| eq_opa.jpg | opa | [One-piece_Guedel_Airways.jpg](https://commons.wikimedia.org/wiki/File:One-piece_Guedel_Airways.jpg) | Intersurgical Ltd | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) |
+| eq_cpap.jpg | cpap | [CPAP.png](https://commons.wikimedia.org/wiki/File:CPAP.png) | PruebasBMA | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) |
+| eq_defib.jpg | defib | [AED_machine_medisource.jpg](https://commons.wikimedia.org/wiki/File:AED_machine_medisource.jpg) | Chercher1105 | [CC0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| eq_tourniquet.jpg | tourniquet | [US_Army_soldier_demonstrates_the_proper_way_to_use_a_combat_action_tourniquet,_Nov._6,_2008_(081106-D-1852B-012).jpg](https://commons.wikimedia.org/wiki/File:US_Army_soldier_demonstrates_the_proper_way_to_use_a_combat_action_tourniquet,_Nov._6,_2008_(081106-D-1852B-012).jpg) | Fred W. Baker III | Public domain |
+| eq_collar.jpg | collar | [Cervical_collar.jpg](https://commons.wikimedia.org/wiki/File:Cervical_collar.jpg) | Pagemaker787 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| eq_splint.jpg | splint | [Ankle_foot_orthosis_splint.JPG](https://commons.wikimedia.org/wiki/File:Ankle_foot_orthosis_splint.JPG) | Pagemaker787 | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| eq_bvm.jpg | bvm | [2ballons.jpg](https://commons.wikimedia.org/wiki/File:2ballons.jpg) | bigomar2 | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| eq_laryngoscope.jpg | laryngoscope | [1st generation Video Laryngoscope.jpg](https://commons.wikimedia.org/wiki/File:1st_generation_Video_Laryngoscope.jpg) | KARL STORZ Endoskope | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| eq_gastric.jpg | gastric | [Enteral feeding tube stylet retracted.png](https://commons.wikimedia.org/wiki/File:Enteral_feeding_tube_stylet_retracted.png) | Tenbergen | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| eq_igel.jpg | igel | [Laryngeal_mask_100.jpg](https://commons.wikimedia.org/wiki/File:Laryngeal_mask_100.jpg) | (see source page) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) |
+| eq_ventilator.jpg | ventilator | [Servo_I_Ventilator.jpg](https://commons.wikimedia.org/wiki/File:Servo_I_Ventilator.jpg) | BreathDriver | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |

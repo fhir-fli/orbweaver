@@ -49,6 +49,7 @@ topic:
 
     - type: "procedure_card"
       name: "Glucometer"
+      image: "assets/books/wvems/images/eq_glucometer.jpg"
       steps:
         - "Prepare glucometer and test strip."
         - "Identify and clean site."
@@ -71,6 +72,7 @@ topic:
 
     - type: "procedure_card"
       name: "Saline Lock"
+      image: "assets/books/wvems/images/eq_ivcath.jpg"
       scope: "A"
       steps:
         - "Investigate for good site."
@@ -103,6 +105,7 @@ topic:
 
     - type: "procedure_card"
       name: "Suction"
+      image: "assets/books/wvems/images/eq_suction.jpg"
       steps:
         - "Awake pts may suction themselves."
         - "Prepare suction device with tip:"
@@ -115,6 +118,7 @@ topic:
 
     - type: "procedure_card"
       name: "Magill Forceps"
+      image: "assets/books/wvems/images/eq_magill.jpg"
       scope: "A"
       steps:
         - "Confirm patient is unresponsive."
@@ -131,6 +135,7 @@ topic:
 
     - type: "procedure_card"
       name: "BVM"
+      image: "assets/books/wvems/images/eq_bvm.jpg"
       steps:
         - "Prepare appropriately sized BVM."
         - "- Connect to high-flow **oxygen**."
@@ -143,6 +148,7 @@ topic:
 
     - type: "procedure_card"
       name: "NPA / OPA"
+      image: "assets/books/wvems/images/eq_opa.jpg"
       steps:
         - "Measure appropriate OPA / NPA size:"
         - "- OPA: Corner of mouth to angle of jaw"
@@ -157,6 +163,7 @@ topic:
 
     - type: "procedure_card"
       name: "NIPPV"
+      image: "assets/books/wvems/images/eq_cpap.jpg"
       scope: "E"
       steps:
         - "Provide **strong** patient encouragement."
@@ -179,6 +186,7 @@ topic:
 
     - type: "procedure_card"
       name: "BIAD"
+      image: "assets/books/wvems/images/eq_igel.jpg"
       scope: "E"
       steps:
         - "Prepare appropriately sized device:"
@@ -195,6 +203,7 @@ topic:
 
     - type: "procedure_card"
       name: "OG-Tube"
+      image: "assets/books/wvems/images/eq_gastric.jpg"
       scope: "A"
       steps:
         - "Measure appropriate tube depth:"
@@ -207,6 +216,7 @@ topic:
 
     - type: "procedure_card"
       name: "Pleural Decompress"
+      image: "assets/books/wvems/images/eq_ivcath.jpg"
       scope: "I"
       steps:
         - "Identify side and clean best site:"
@@ -242,6 +252,7 @@ topic:
 
     - type: "procedure_card"
       name: "Defib"
+      image: "assets/books/wvems/images/eq_defib.jpg"
       steps:
         - "Cut clothes to expose chest."
         - "- Consider shaving excessive hair."
@@ -292,6 +303,7 @@ topic:
 
     - type: "procedure_card"
       name: "Tourniquet"
+      image: "assets/books/wvems/images/eq_tourniquet.jpg"
       steps:
         - "Apply **direct pressure** for bleeding."
         - "- May remove ineffective bystander TQs."
@@ -324,6 +336,7 @@ topic:
 
     - type: "procedure_card"
       name: "SMR with C-collar"
+      image: "assets/books/wvems/images/eq_collar.jpg"
       steps:
         - "Provide **manual** cervical SMR."
         - "Prepare appropriately sized **c-collar**."
@@ -340,6 +353,7 @@ topic:
 
     - type: "procedure_card"
       name: "Splint"
+      image: "assets/books/wvems/images/eq_splint.jpg"
       steps:
         - "Provide manual immobilization."
         - "Expose area: remove or cut clothes."
@@ -418,6 +432,7 @@ topic:
 
     - type: "procedure_card"
       name: "Pacing"
+      image: "assets/books/wvems/images/eq_defib.jpg"
       scope: "I"
       steps:
         - "Place defib pads **and EKG limb leads**."
@@ -439,6 +454,7 @@ topic:
 
     - type: "procedure_card"
       name: "Cardiovert"
+      image: "assets/books/wvems/images/eq_defib.jpg"
       scope: "I"
       steps:
         - "Place defib pads **and EKG limb leads**."
@@ -506,6 +522,7 @@ topic:
 
     - type: "procedure_card"
       name: "RSI Prep Checklist"
+      image: "assets/books/wvems/images/eq_laryngoscope.jpg"
       scope: "P"
       steps:
         - "Consider a standardized checklist."
@@ -522,6 +539,7 @@ topic:
 
     - type: "procedure_card"
       name: "Ventilator"
+      image: "assets/books/wvems/images/eq_ventilator.jpg"
       scope: "P"
       steps:
         - "Attach appropriate **patient circuit**."

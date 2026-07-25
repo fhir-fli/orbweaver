@@ -351,18 +351,19 @@ class _ProcedureImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Fixed-height band so tall/portrait equipment photos don't blow up the
+    // card; the image is centred and letterboxed within it (BoxFit.contain).
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.all(4),
+      alignment: Alignment.center,
+      height: 150,
       child: Image.asset(
         path,
         fit: BoxFit.contain,
-        errorBuilder: (context, error, stack) => const SizedBox(
-          height: 40,
-          child: Center(
-            child: Text('[image]',
-                style: TextStyle(fontSize: 9, color: Colors.black38)),
-          ),
+        errorBuilder: (context, error, stack) => const Center(
+          child: Text('[image]',
+              style: TextStyle(fontSize: 9, color: Colors.black38)),
         ),
       ),
     );
