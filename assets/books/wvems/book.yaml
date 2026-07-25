@@ -115,3 +115,11 @@ book:
         accent_branch: "0xFFD81B60"
       children:
         - topic: "topics/wvems_2026_144.yaml"
+    - title: "About & Credits"
+      appendix: true
+      palette:
+        accent: "0xFF455A64"
+        accent_fill: "0xFFECEFF1"
+        accent_branch: "0xFF607D8B"
+      children:
+        - topic: "topics/wvems_2026_about.yaml"

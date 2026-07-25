@@ -1,0 +1,124 @@
+# ============================================================
+# WVEMS 2026 — About / Credits
+# Source: 2026-WVEMS-Protocols (Western Virginia EMS Council, Inc.),
+# front matter p.2 (license + legend) and back cover p.166 (credits).
+# WVEMS released this under CC BY-SA 4.0 — attribution is both courtesy
+# and a license requirement; this page provides it.
+# ============================================================
+
+topic:
+  id: "wvems-2026-about"
+  version: "v260101"
+  title: "About & Credits"
+  list_subtitle: "authors · license · legend"
+  last_reviewed: "Dec 2025"
+  tags: ["about", "credits", "license", "attribution", "legend", "wvems"]
+  aliases:
+    - "Credits"
+    - "License"
+    - "Attribution"
+    - "Legend"
+  category: "universal"
+  page_number: 2
+
+  blocks:
+
+    - type: "prose"
+      title: "WVEMS Protocols 2026"
+      highlight: true
+      markdown: |
+        **Protocols, Procedures, Policies & Medications of the Western Virginia
+        EMS Medical Direction Committee.**
+
+        Editors: **Drs. Ekey, LePera, and Stanley.** Created and generously
+        released to the public by the **Western Virginia EMS Council, Inc.
+        (WVEMS)** — this Orbweaver edition is a digital transcription of their
+        work, with our gratitude.
+
+    - type: "prose"
+      title: "License"
+      callout: true
+      palette:
+        alert: "0xFF2E7D32"
+        alert_fill: "0xFFEAF4EB"
+        alert_text: "0xFF1B5E20"
+      markdown: |
+        The WVEMS Protocols are published under the **Creative Commons
+        Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)** —
+        free for anyone to use, adapt, and share, with attribution.
+
+        This digital edition is provided under the **same CC BY-SA 4.0**
+        license, with attribution to WVEMS.
+        creativecommons.org/licenses/by-sa/4.0/
+
+    - type: "prose"
+      title: "Credits — Editors & Reviewers"
+      markdown: |
+        **Editors:** Drs. Ekey, LePera, and Stanley.
+
+        **Physician Review:** Dr. D DeBroekert · Dr. B Ekey† · Dr. M Green† ·
+        Dr. K Gutermuth† · Dr. C Lane† · Dr. A LePera · Dr. D Lollar ·
+        Dr. M Mitchell · Dr. J Patterson · Dr. H Rose-Inman† · Dr. E Stanley† ·
+        Dr. N Yelverton. (**†** EMS Subspecialist.)
+
+        **EMS Review:** Brian Alderson · Adam Amburgey · Chris Christensen ·
+        Kevin Cressell · Jennifer Daniels · Scott Davis · Diana Foley ·
+        Mike Garnett · Laura Hungerford · Steve LePera · Jane Lindsay ·
+        Christian Long · Drew Mitchell · Dave Perfater · Daryll Perry ·
+        Kari Whitney · Brandon Winesett.
+
+        **Admin Review:** Belinda Hodges · Afton Jamerson.
+
+    - type: "prose"
+      title: "Adapted From (WVEMS sources)"
+      markdown: |
+        - WVEMS Protocols — 2025
+        - VA OEMS Scope of Practice — 2024 (v3)
+        - VA (NEMSIS) VPHIB 3.5.0.6 — 2025
+        - AHA Guidelines for CPR & ECC — 2025
+        - NAEMSP Trauma Compendium — 2025
+
+    - type: "prose"
+      title: "Provider scope legend"
+      markdown: |
+        Badges mark the **minimum provider level** cleared for a skill/dose:
+        - (no badge) — **EMR** (all levels)
+        - **E** — EMT
+        - **A** — AEMT
+        - **I** — Intermediate
+        - **P** — Paramedic (purple **P** = Critical Care Paramedic)
+
+        Basic Life Support (BLS): EMR, EMT, AEMT · Advanced Life Support (ALS):
+        Intermediate, Paramedic, Critical Care Paramedic.
+
+    - type: "prose"
+      title: "Flow & intervention symbols"
+      markdown: |
+        - **Indications** (rounded blue) — when to use
+        - **Use Judgement** (diamond) — a decision point
+        - **Don't Forget** (rounded green) — reminders
+        - **Important Note** (trapezoid) — key caveat
+        - **Concept** (box) — background & details
+        - **WARNING** (red octagon) — safety stop
+
+    - type: "prose"
+      title: "Contact — WVEMS Council"
+      markdown: |
+        Western Virginia EMS Council, Inc.
+        1944 Peters Creek Rd., Roanoke, VA 24017
+        - Phone: 540-562-3482
+        - Web: https://wvems.org
+        - Email: western@vaems.org
+
+    - type: "prose"
+      title: "About this digital edition"
+      boxed: true
+      markdown: |
+        Transcribed into Orbweaver from the WVEMS 2026 protocols. Where dosing
+        was **updated to current evidence** (PALS 2025 / OpenEvidence), it is
+        noted on the affected cards. The proprietary **Handtevy** per-age
+        pediatric dose tables were **not reproduced** — the Peds Reference here
+        is an independent, evidence-based computed equivalent (verify locally).
+        Medication/equipment images are **representative** (generic), not the
+        specific products. **Confirm all doses against current references and
+        your medical director before use.**
