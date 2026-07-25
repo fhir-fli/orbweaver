@@ -78,9 +78,9 @@ topic:
       sticky_first_column: true
       zebra: true
       columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
-      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
-        - cells: ["Epi (CODE/Brady) (mg)", "0.01 mg/kg", "0.04", "0.08", "0.1", "0.12", "0.16", "0.2", "0.25", "0.32", "0.4"]
+        - cells: ["Epi (mg)", "0.01 mg/kg", "0.04", "0.08", "0.1", "0.12", "0.16", "0.2", "0.25", "0.32", "0.4"]
         - cells: ["Adenosine 1st (mg)", "0.1 mg/kg", "0.4", "0.8", "1", "1.2", "1.6", "2", "2.5", "3.2", "4"]
         - cells: ["Adenosine 2nd (mg)", "0.2 mg/kg", "0.7", "1.6", "2", "2.4", "3.2", "4", "5", "6.4", "8"]
         - cells: ["Amiodarone (mg)", "5 mg/kg", "18", "40", "50", "60", "80", "100", "125", "160", "200"]
@@ -94,7 +94,7 @@ topic:
         - cells: ["Narcan (mg)", "0.1 mg/kg", "0.4", "0.8", "1", "1.2", "1.6", "2", "2*", "2*", "2*"]
     - type: "prose"
       markdown: |
-        - Epi (CODE/Brady) (mg): = 0.1 mL/kg of 0.1 mg/mL; max 1 mg
+        - Epi (mg): CODE/Brady; = 0.1 mL/kg of 0.1 mg/mL; max 1 mg
         - Adenosine 1st (mg): rapid push + flush; max 6 mg
         - Adenosine 2nd (mg): max 12 mg
         - Amiodarone (mg): CODE; max 300 mg; Q5min x3
@@ -114,7 +114,7 @@ topic:
       sticky_first_column: true
       zebra: true
       columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
-      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
         - cells: ["Ativan (mg)", "0.025–0.05 mg/kg", "0.1–0.2", "0.2–0.4", "0.25–0.5", "0.3–0.6", "0.4–0.8", "0.5–1", "0.6–1.25", "0.8–1.6", "1–2"]
         - cells: ["Versed (mg)", "0.05–0.075 mg/kg", "0.2–0.3", "0.4–0.6", "0.5–0.8", "0.6–0.9", "0.8–1.2", "1–1.5", "1.2–1.9", "1.6–2.4", "2–3"]
@@ -134,7 +134,7 @@ topic:
       sticky_first_column: true
       zebra: true
       columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
-      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
         - cells: ["Etomidate (mg)", "0.3 mg/kg", "—", "—", "—", "—", "—", "—", "—", "9.5", "12"]
         - cells: ["Rocuronium (mg)", "0.6 mg/kg", "—", "5", "6", "7", "10", "12", "15", "19", "24"]
@@ -151,7 +151,7 @@ topic:
       sticky_first_column: true
       zebra: true
       columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
-      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
         - cells: ["Fentanyl (mcg)", "0.5–2 mcg/kg", "2–7", "4–16", "5–20", "6–24", "8–32", "10–40", "12–50", "16–64", "20–80"]
         - cells: ["Morphine (mg)", "0.1–0.2 mg/kg", "0.5", "1–1.5", "1–2", "1–2.5", "1.5–3", "2–4", "2.5–4*", "3–4*", "4"]
@@ -161,6 +161,8 @@ topic:
         - cells: ["Decadron (mg)", "0.5 mg/kg", "2", "4", "5", "6", "8", "10", "10*", "10*", "10*"]
         - cells: ["Lasix (mg)", "1–2 mg/kg", "4–7", "8–16", "10–20", "12–24", "16–32", "20–40", "25–40*", "32–40*", "40"]
         - cells: ["TXA (mg)", "10–25 mg/kg", "40–90", "80–200", "100–250", "120–300", "160–400", "200–500", "250–620", "320–800", "400–1000"]
+        - cells: ["Ibuprofen (mg)", "10 mg/kg", "—", "80", "100", "120", "160", "200", "250", "320", "400"]
+        - cells: ["Tylenol (mg)", "15 mg/kg", "50", "120", "150", "180", "240", "300", "380", "480", "600"]
     - type: "prose"
       markdown: |
         - Fentanyl (mcg): max ~100 mcg
@@ -171,6 +173,8 @@ topic:
         - Decadron (mg): dexamethasone; max ~10 mg
         - Lasix (mg): furosemide; max 40 mg
         - TXA (mg): over 10 min; max 2 g
+        - Ibuprofen (mg): 6+ mo; max ~600 mg
+        - Tylenol (mg): acetaminophen; max ~1 g
 
     - type: "table"
       title: "Antibiotics / Antidote"
@@ -179,7 +183,7 @@ topic:
       sticky_first_column: true
       zebra: true
       columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
-      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
         - cells: ["Ancef (mg)", "10–30 mg/kg", "40–100", "80–240", "100–300", "120–360", "160–480", "200–600", "250–750", "320–960", "400–1200"]
         - cells: ["Rocephin (mg)", "25–50 mg/kg", "90–180", "200–400", "250–500", "300–600", "400–800", "500–1000", "620–1250", "800–1600", "1000–2000"]
@@ -189,6 +193,24 @@ topic:
         - Ancef (mg): cefazolin; max 2 g
         - Rocephin (mg): ceftriaxone; max ~1-2 g
         - CyanoKit (mg): hydroxocobalamin; over 10 min; max 5 g
+
+    - type: "table"
+      title: "Infusions (titrate)"
+      layout: "scroll"
+      sticky_header: true
+      sticky_first_column: true
+      zebra: true
+      columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
+      column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
+      rows:
+        - cells: ["Dopamine (mcg/min)", "5–20 mcg/kg/min", "20–70", "40–160", "50–200", "60–240", "80–320", "100–400", "125–500", "160–640", "200–800"]
+        - cells: ["Levophed (mcg/min)", "0.05–0.5 mcg/kg/min", "0.2–1.8", "0.4–4", "0.5–5", "0.6–6", "0.8–8", "1–10", "1.2–12.5", "1.6–16", "2–20"]
+        - cells: ["Lopressor (mcg/min)", "0.5 mcg/kg/min", "2", "4", "5", "6", "8", "10", "12.5", "16", "20"]
+    - type: "prose"
+      markdown: |
+        - Dopamine (mcg/min): 5-20 mcg/kg/min; titrate
+        - Levophed (mcg/min): norepi 0.05-0.5 mcg/kg/min; 4 mg in 250 mL
+        - Lopressor (mcg/min): metoprolol 0.5 mcg/kg/min
     - type: "prose"
       title: "Not in the tables (infusions & fixed doses)"
       markdown: |

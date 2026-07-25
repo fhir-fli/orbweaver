@@ -16,7 +16,7 @@ def fmt(x):
 # Short names = WVEMS drug-card names. Unit is shown in the frozen Drug column
 # ("Name (unit)") so age cells stay unitless & narrow (avoids scroll-row overflow).
 D = [
- ("Resuscitation","Epi (CODE/Brady)","IV/IO","mg",0.01,0.01,None,1,0.01,0,"= 0.1 mL/kg of 0.1 mg/mL; max 1 mg"),
+ ("Resuscitation","Epi","IV/IO","mg",0.01,0.01,None,1,0.01,0,"CODE/Brady; = 0.1 mL/kg of 0.1 mg/mL; max 1 mg"),
  ("Resuscitation","Adenosine 1st","IV/IO","mg",0.1,0.1,None,6,0.1,0,"rapid push + flush; max 6 mg"),
  ("Resuscitation","Adenosine 2nd","IV/IO","mg",0.2,0.2,None,12,0.1,0,"max 12 mg"),
  ("Resuscitation","Amiodarone","IV/IO","mg",5,5,None,300,1,0,"CODE; max 300 mg; Q5min x3"),
@@ -43,10 +43,18 @@ D = [
  ("Analgesia / Other","Decadron","IV/IO/IM","mg",0.5,0.5,None,10,0.5,0,"dexamethasone; max ~10 mg"),
  ("Analgesia / Other","Lasix","IV/IO/IM","mg",1,2,None,40,1,0,"furosemide; max 40 mg"),
  ("Analgesia / Other","TXA","IV/IO","mg",10,25,None,2000,10,0,"over 10 min; max 2 g"),
+ ("Analgesia / Other","Ibuprofen","PO","mg",10,10,None,600,10,0.5,"6+ mo; max ~600 mg"),
+ ("Analgesia / Other","Tylenol","PO/IV","mg",15,15,None,1000,10,0,"acetaminophen; max ~1 g"),
  ("Antibiotics / Antidote","Ancef","IV/IO/IM","mg",10,30,None,2000,10,0,"cefazolin; max 2 g"),
  ("Antibiotics / Antidote","Rocephin","IV/IO/IM","mg",25,50,None,2000,10,0,"ceftriaxone; max ~1-2 g"),
  ("Antibiotics / Antidote","CyanoKit","IV/IO","mg",70,70,None,5000,10,0,"hydroxocobalamin; over 10 min; max 5 g"),
+ # Infusions: unit = mcg/min (= mcg/kg/min x weight). TITRATE to effect; mix per pump.
+ ("Infusions (titrate)","Dopamine","IV/IO pump","mcg/min",5,20,None,None,5,0,"5-20 mcg/kg/min; titrate"),
+ ("Infusions (titrate)","Levophed","IV/IO pump","mcg/min",0.05,0.5,None,None,0.1,0,"norepi 0.05-0.5 mcg/kg/min; 4 mg in 250 mL"),
+ ("Infusions (titrate)","Lopressor","IV/IO pump","mcg/min",0.5,0.5,None,None,0.5,0,"metoprolol 0.5 mcg/kg/min"),
 ]
+# Dose/kg display override (infusions are mcg/kg/min, not mcg/min/kg)
+PK_OVERRIDE = {"Dopamine":"5–20 mcg/kg/min","Levophed":"0.05–0.5 mcg/kg/min","Lopressor":"0.5 mcg/kg/min"}
 
 def one(perkg, floor, cap, step, unit, w):
     v = perkg * w
@@ -71,7 +79,7 @@ fh.write("\t".join(hdr) + "\n"); fh.flush()
 print("weights: " + " | ".join(f"{a} {w}kg" for a,w,_ in AGES), flush=True)
 for cat,name,route,unit,lo,hi,floor,cap,step,minage,note in D:
     drug = f"{name} ({unit})"                                  # unit frozen in Drug col
-    pk = (fmt(lo) if lo==hi else f"{fmt(lo)}–{fmt(hi)}") + f" {unit}/kg"
+    pk = PK_OVERRIDE.get(name, (fmt(lo) if lo==hi else f"{fmt(lo)}–{fmt(hi)}") + f" {unit}/kg")
     cells = [cell(lo,hi,floor,cap,step,unit,w,minage,yr) for _,w,yr in AGES]
     fh.write("\t".join([cat,drug,pk,note]+cells) + "\n"); fh.flush()
     print(f"{drug[:22]:22s} {pk[:14]:14s} | NB={cells[0]}  1yr={cells[2]}  8yr={cells[6]}", flush=True)
