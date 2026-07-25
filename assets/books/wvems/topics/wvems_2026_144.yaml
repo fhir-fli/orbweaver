@@ -42,7 +42,7 @@ topic:
           - Limit **NS Bolus** to **×3** (60 mL/kg).
 
     - type: "prose"
-      title: "⚠️ DRAFT — verify every dose"
+      title: "⚠️ Verify every dose"
       callout: true
       palette:
         alert: "0xFFD32F2F"
@@ -50,24 +50,24 @@ topic:
         alert_text: "0xFFB71C1C"
       markdown: |
         These age tables are **COMPUTED** (**mg/kg** × **estimated
-        weight-for-age**), reviewed against **PALS 2025 / OpenEvidence** but
-        **not a licensed source** and **pending final local sign-off**. Treat
-        as a **cross-check**, not authority. **Confirm every dose** against a
-        current reference (and a length/colour tape) before administration.
-        Max doses & caveats are in the notes under each table (**\*** = capped
-        at max).
+        weight-for-age**) and reviewed against **PALS 2025 / OpenEvidence**, but
+        remain a **cross-check** pending **medical-director sign-off** — not a
+        substitute for it. **Confirm every dose** against a current reference
+        (and a length/colour tape) before administration. Max doses & caveats
+        are in the notes under each table (**\*** = capped at max).
 
     - type: "prose"
-      title: "Seizure / RSI doses differ from the Drug Reference"
+      title: "Seizure / RSI doses (evidence-based)"
       boxed: true
       markdown: |
-        Per PALS / status-epilepticus evidence, these use **higher** doses than
-        the general Drug Reference cards:
-        - **Ativan** (lorazepam) **0.1 mg/kg** (SE) — cards show 0.025–0.05 (sedation)
-        - **Versed** (midazolam) **0.1–0.2 mg/kg** (SE) — cards show 0.05–0.075
-        - **Keppra** **40–60 mg/kg** (SE loading) — cards show 20 (maintenance)
-        - **Rocuronium** **1 mg/kg** (RSI) — cards show 0.6
+        These follow **PALS / status-epilepticus evidence** — **higher than
+        sedation doses**:
+        - **Ativan** (lorazepam) **0.1 mg/kg** SE (max 4 mg)
+        - **Versed** (midazolam) **0.1–0.2 mg/kg** SE (max 10 mg)
+        - **Keppra** **40–60 mg/kg** SE loading (3+ mo)
+        - **Rocuronium** **1 mg/kg** RSI
         - **Atropine** — no 0.1 mg minimum (removed in PALS 2020)
+        For **sedation**, use the lower doses shown on the Drug Reference cards.
 
     - type: "table"
       title: "Estimated weight-for-age (confirm / adjust)"

@@ -184,9 +184,9 @@ topic:
         - "Seizure, Delirium, Sedation"
       doses:
         - population: "adult"
-          text: "**1 mg** IV/IO, IM/IN"
+          text: "**4 mg** IV/IO (seizure); 1 mg sedation/delirium"
         - population: "peds"
-          text: "25–50 mcg/kg"
+          text: "**0.1 mg/kg** seizure (max 4 mg); 0.025–0.05 mg/kg sedation"
       warnings:
         - "PMH: glaucoma"
         - "May cause: **respiratory depression**"
@@ -656,9 +656,9 @@ topic:
         - "Status Epilepticus, Seizures"
       doses:
         - population: "adult"
-          text: "**3,000 mg** IV/IO"
+          text: "**60 mg/kg** IV/IO (max 4.5 g)"
         - population: "peds"
-          text: "20 mg/kg (6 y/o and older)"
+          text: "**40–60 mg/kg** SE loading (3+ mo)"
         - population: "both"
           text: "Dilute in NS and **give over 10 min**"
       warnings:
@@ -979,7 +979,7 @@ topic:
         - population: "adult"
           text: "**1 mg/kg** IV/IO"
         - population: "peds"
-          text: "0.6 mg/kg (3+ months old)"
+          text: "**1 mg/kg** RSI (3+ months old)"
         - population: "both"
           text: "0–2 months: safety unknown"
       warnings:
@@ -1111,9 +1111,9 @@ topic:
         - "Seizure, Delirium, Sedation"
       doses:
         - population: "adult"
-          text: "**2.5–5 mg** IV/IO, IM/IN"
+          text: "**10 mg** IM or 0.2 mg/kg IV (seizure); 2.5–5 mg sedation"
         - population: "peds"
-          text: "50–75 mcg/kg"
+          text: "**0.1–0.2 mg/kg** seizure (max 10 mg); 0.05–0.075 mg/kg sedation"
       warnings:
         - "PMH: antivirals, glaucoma"
         - "May cause: **respiratory depression**"
