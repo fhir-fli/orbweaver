@@ -51,3 +51,5 @@ Representative equipment for the procedure cards (generic, not a specific produc
 | form_eyedrops.jpg | Tetracaine (ophthalmic dropper) | [Alphagan-japan.jpg](https://commons.wikimedia.org/wiki/File:Alphagan-japan.jpg) | melvil | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
 | form_oralbottle.jpg | Charcoal (oral suspension) | [ActivatedCharcoal.JPG](https://commons.wikimedia.org/wiki/File:ActivatedCharcoal.JPG) | James Heilman, MD | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) |
 | eq_cric.jpg | Cric (cricothyroid membrane landmark) | [Cricothyrotomy.png](https://commons.wikimedia.org/wiki/File:Cricothyrotomy.png) | PhilippN | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+
+| eq_ecg.jpg | ecg/12-lead | [Bare chest ... ECG with probes.jpg](https://commons.wikimedia.org/wiki/File:Bare_chest_of_a_old_man_for_ECG_with_probes.jpg) | Suyash.dwivedi | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |

@@ -60,6 +60,7 @@ topic:
 
     - type: "procedure_card"
       name: "12-Lead"
+      image: "assets/books/wvems/images/eq_ecg.jpg"
       scope: "E"
       steps:
         - "Enter patient info into monitor."
