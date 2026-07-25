@@ -565,6 +565,7 @@ topic:
     - type: "drug_card"
       name: "Glucose"
       class: "Oral Glucose, Glutose 15™"
+      image: "assets/books/wvems/images/form_glucosegel.jpg"
       indications:
         - "Hypoglycemia"
       doses:

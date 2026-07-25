@@ -272,6 +272,7 @@ topic:
 
     - type: "procedure_card"
       name: "IO"
+      image: "assets/books/wvems/images/eq_ezio.jpg"
       scope: "A"
       steps:
         - "Prepare IO device and select site."
@@ -290,6 +291,7 @@ topic:
 
     - type: "procedure_card"
       name: "Wound Care"
+      image: "assets/books/wvems/images/eq_gauze.jpg"
       steps:
         - "Apply **direct pressure** for bleeding."
         - "- Consider tourniquet or packing."
@@ -317,6 +319,7 @@ topic:
 
     - type: "procedure_card"
       name: "Wound Packing"
+      image: "assets/books/wvems/images/eq_gauze.jpg"
       steps:
         - "Apply **direct pressure** for bleeding."
         - "- If stable, consider simple wound care."
@@ -587,6 +590,7 @@ topic:
 
     - type: "procedure_card"
       name: "Finger Thoracostomy"
+      image: "assets/books/wvems/images/eq_safetriangle.jpg"
       scope: "P"
       anchor: "finger-thoracostomy"
       steps:
