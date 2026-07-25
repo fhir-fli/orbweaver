@@ -3,12 +3,16 @@
 # Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT) — the WVEMS
 # rules/policy text below is original WVEMS content.
 #
-# NOTE: the printed per-age dose tables (pp.145–161) are built on the
-# Handtevy Pediatric Emergency Standards, a commercial/proprietary
-# product (handtevy.com). Those dose tables are NOT reproduced here —
-# they are left as a placeholder to be regenerated from current
-# guidelines (e.g. via OpenEvidence) and clinically confirmed, so the
-# app ships no third-party-licensed dosing content.
+# ⚠️ AGE-BASED DOSE TABLES ARE A CLEAN-ROOM DRAFT — NOT clinically verified.
+# The printed per-age tables (pp.145–161) are built on the Handtevy
+# Pediatric Emergency Standards, a commercial/proprietary product, and are
+# NOT reproduced. Instead the tables below are COMPUTED:
+#   per-age dose = (our drug cards' approved mg/kg) × (estimated weight-for-age)
+# rounded to a practical amount and capped (max shown in the notes). Dosing
+# facts/formulas aren't copyrightable, so this derivation is publish-clean.
+# The weight-for-age row is an APPROXIMATE 50th-percentile estimate (Grey to
+# confirm/replace). Compute script: tmp/peds_dose.py (auditable). Every value
+# must be clinically verified before field use.
 # ============================================================
 
 topic:
@@ -17,7 +21,7 @@ topic:
   title: "Peds Reference"
   list_subtitle: "2026-144 · age-based dosing"
   last_reviewed: "Dec 2025"
-  tags: ["pediatric", "peds", "dosing", "handtevy", "age", "reference"]
+  tags: ["pediatric", "peds", "dosing", "age", "reference", "draft"]
   aliases:
     - "Pediatric"
     - "Peds Dosing"
@@ -38,6 +42,163 @@ topic:
           - Limit **NS Bolus** to **×3** (60 mL/kg).
 
     - type: "prose"
+      title: "⚠️ DRAFT — verify every dose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        These age tables are **COMPUTED** (approved **mg/kg** × **estimated
+        weight-for-age**), **not** taken from a licensed source, and are
+        **not yet clinically verified**. Treat as a **cross-check**, not
+        authority. **Confirm every dose** against a current reference (and a
+        length/colour tape) before administration. Max doses & caveats are in
+        the notes under each table (**\*** = capped at max).
+
+    - type: "table"
+      title: "Estimated weight-for-age (confirm / adjust)"
+      columns: ["Age", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
+      column_widths: [70, 58, 54, 54, 54, 54, 54, 54, 56, 56]
+      layout: "scroll"
+      sticky_first_column: true
+      rows:
+        - cells: ["Weight", "3.5 kg", "8 kg", "10 kg", "12 kg", "16 kg", "20 kg", "25 kg", "32 kg", "40 kg"]
+
+    - type: "prose"
+      markdown: |
+        Approximate **50th-percentile** weight-for-age (PALS/Broselow-aligned).
+        **This is the key assumption** — swap in your preferred standard (e.g.
+        a length/colour tape estimate) and the doses scale accordingly.
+
+    - type: "table"
+      title: "Resuscitation"
+      layout: "scroll"
+      sticky_header: true
+      sticky_first_column: true
+      zebra: true
+      columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
+      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      rows:
+        - cells: ["Epi (CODE/Brady) (mg)", "0.01 mg/kg", "0.04", "0.08", "0.1", "0.12", "0.16", "0.2", "0.25", "0.32", "0.4"]
+        - cells: ["Adenosine 1st (mg)", "0.1 mg/kg", "0.4", "0.8", "1", "1.2", "1.6", "2", "2.5", "3.2", "4"]
+        - cells: ["Adenosine 2nd (mg)", "0.2 mg/kg", "0.7", "1.6", "2", "2.4", "3.2", "4", "5", "6.4", "8"]
+        - cells: ["Amiodarone (mg)", "5 mg/kg", "18", "40", "50", "60", "80", "100", "125", "160", "200"]
+        - cells: ["Atropine (mg)", "0.02 mg/kg", "0.1", "0.16", "0.2", "0.24", "0.32", "0.4", "0.5", "0.5*", "0.5*"]
+        - cells: ["Calcium (mg)", "20 mg/kg", "70", "160", "200", "240", "320", "400", "500", "640", "800"]
+        - cells: ["Bicarb (mEq)", "1 mEq/kg", "4", "8", "10", "12", "16", "20", "25", "32", "40"]
+        - cells: ["D10 (mL)", "5 mL/kg", "20", "40", "50", "60", "80", "100", "125", "160", "200"]
+        - cells: ["NS bolus (mL)", "20 mL/kg", "70", "160", "200", "240", "320", "400", "500", "640", "800"]
+        - cells: ["3% Saline (mL)", "2–5 mL/kg", "5–20", "15–40", "20–50", "25–60", "30–80", "40–100", "50–125", "65–160", "80–200"]
+        - cells: ["Magnesium (mg)", "25–50 mg/kg", "90–180", "200–400", "250–500", "300–600", "400–800", "500–1000", "620–1250", "800–1600", "1000–2000"]
+        - cells: ["Narcan (mg)", "0.1 mg/kg", "0.4", "0.8", "1", "1.2", "1.6", "2", "2*", "2*", "2*"]
+    - type: "prose"
+      markdown: |
+        - Epi (CODE/Brady) (mg): = 0.1 mL/kg of 0.1 mg/mL; max 1 mg
+        - Adenosine 1st (mg): rapid push + flush; max 6 mg
+        - Adenosine 2nd (mg): max 12 mg
+        - Amiodarone (mg): CODE; max 300 mg; Q5min x3
+        - Atropine (mg): min 0.1 mg, max 0.5 mg
+        - Calcium (mg): over 10 min (bolus in CODE)
+        - Bicarb (mEq): max 50 mEq
+        - D10 (mL): = 0.5 g/kg
+        - NS bolus (mL): limit x3 (60 mL/kg)
+        - 3% Saline (mL): TBI; over 10 min
+        - Magnesium (mg): over 10 min; max 2 g
+        - Narcan (mg): titrate; max ~2 mg
+
+    - type: "table"
+      title: "Seizure / Sedation"
+      layout: "scroll"
+      sticky_header: true
+      sticky_first_column: true
+      zebra: true
+      columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
+      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      rows:
+        - cells: ["Ativan (mg)", "0.025–0.05 mg/kg", "0.1–0.2", "0.2–0.4", "0.25–0.5", "0.3–0.6", "0.4–0.8", "0.5–1", "0.6–1.25", "0.8–1.6", "1–2"]
+        - cells: ["Versed (mg)", "0.05–0.075 mg/kg", "0.2–0.3", "0.4–0.6", "0.5–0.8", "0.6–0.9", "0.8–1.2", "1–1.5", "1.2–1.9", "1.6–2.4", "2–3"]
+        - cells: ["Ketamine (mg)", "0.25–0.5 mg/kg", "1–2", "2–4", "2.5–5", "3–6", "4–8", "5–10", "6–12.5", "8–16", "10–20"]
+        - cells: ["Keppra (mg)", "20 mg/kg", "—", "—", "—", "—", "—", "400", "500", "640", "800"]
+    - type: "prose"
+      markdown: |
+        - Ativan (mg): lorazepam 25-50 mcg/kg; max ~2 mg
+        - Versed (mg): midazolam 50-75 mcg/kg; max ~5 mg
+        - Ketamine (mg): pain; higher for Critical Care
+        - Keppra (mg): levetiracetam; 6+ y/o; over 10 min; max 3 g
+
+    - type: "table"
+      title: "Airway / RSI"
+      layout: "scroll"
+      sticky_header: true
+      sticky_first_column: true
+      zebra: true
+      columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
+      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      rows:
+        - cells: ["Etomidate (mg)", "0.3 mg/kg", "—", "—", "—", "—", "—", "—", "—", "9.5", "12"]
+        - cells: ["Rocuronium (mg)", "0.6 mg/kg", "—", "5", "6", "7", "10", "12", "15", "19", "24"]
+        - cells: ["Succinylcholine (mg)", "2 mg/kg", "7", "16", "20", "24", "32", "40", "50", "64", "80"]
+    - type: "prose"
+      markdown: |
+        - Etomidate (mg): 10+ y/o only per card
+        - Rocuronium (mg): 3+ months old
+
+    - type: "table"
+      title: "Analgesia / Other"
+      layout: "scroll"
+      sticky_header: true
+      sticky_first_column: true
+      zebra: true
+      columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
+      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      rows:
+        - cells: ["Fentanyl (mcg)", "0.5–2 mcg/kg", "2–7", "4–16", "5–20", "6–24", "8–32", "10–40", "12–50", "16–64", "20–80"]
+        - cells: ["Morphine (mg)", "0.1–0.2 mg/kg", "0.5", "1–1.5", "1–2", "1–2.5", "1.5–3", "2–4", "2.5–4*", "3–4*", "4"]
+        - cells: ["Toradol (mg)", "0.5 mg/kg", "—", "—", "—", "6", "8", "10", "12", "15*", "15*"]
+        - cells: ["Zofran (mg)", "0.1 mg/kg", "0.5", "1", "1", "1", "1.5", "2", "2.5", "3", "4"]
+        - cells: ["Benadryl (mg)", "1 mg/kg", "4", "8", "10", "12", "16", "20", "25", "32", "40"]
+        - cells: ["Decadron (mg)", "0.5 mg/kg", "2", "4", "5", "6", "8", "10", "10*", "10*", "10*"]
+        - cells: ["Lasix (mg)", "1–2 mg/kg", "4–7", "8–16", "10–20", "12–24", "16–32", "20–40", "25–40*", "32–40*", "40"]
+        - cells: ["TXA (mg)", "10–25 mg/kg", "40–90", "80–200", "100–250", "120–300", "160–400", "200–500", "250–620", "320–800", "400–1000"]
+    - type: "prose"
+      markdown: |
+        - Fentanyl (mcg): max ~100 mcg
+        - Morphine (mg): max ~4 mg
+        - Toradol (mg): ketorolac; 2+ y/o; max 15 mg
+        - Zofran (mg): ondansetron; max 4 mg
+        - Benadryl (mg): diphenhydramine; max 50 mg
+        - Decadron (mg): dexamethasone; max ~10 mg
+        - Lasix (mg): furosemide; max 40 mg
+        - TXA (mg): over 10 min; max 2 g
+
+    - type: "table"
+      title: "Antibiotics / Antidote"
+      layout: "scroll"
+      sticky_header: true
+      sticky_first_column: true
+      zebra: true
+      columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
+      column_widths: [150, 122, 70, 70, 70, 70, 70, 70, 70, 70, 70]
+      rows:
+        - cells: ["Ancef (mg)", "10–30 mg/kg", "40–100", "80–240", "100–300", "120–360", "160–480", "200–600", "250–750", "320–960", "400–1200"]
+        - cells: ["Rocephin (mg)", "25–50 mg/kg", "90–180", "200–400", "250–500", "300–600", "400–800", "500–1000", "620–1250", "800–1600", "1000–2000"]
+        - cells: ["CyanoKit (mg)", "70 mg/kg", "240", "560", "700", "840", "1120", "1400", "1750", "2240", "2800"]
+    - type: "prose"
+      markdown: |
+        - Ancef (mg): cefazolin; max 2 g
+        - Rocephin (mg): ceftriaxone; max ~1-2 g
+        - CyanoKit (mg): hydroxocobalamin; over 10 min; max 5 g
+    - type: "prose"
+      title: "Not in the tables (infusions & fixed doses)"
+      markdown: |
+        - **Epinephrine drip / Dopamine / Norepinephrine (Levophed) / Metoprolol (Lopressor)** — weight-based **infusions** (mcg/kg/min); titrate to effect, not a single dose.
+        - **Glucagon** — **0.5 mg** IM if **< 6 y/o (< 20 kg)**, otherwise 1 mg.
+        - **Albuterol / Atrovent / Epi Neb** — nebulised; use the standard neb dose (Albuterol **2.5 mg**, Atrovent **0.5 mg**, Epi Neb **0.5 mg/kg** max 5 mg).
+        - **DuoDote** — safety not established **≤ 40 kg**.
+        - **Aspirin / Afrin / Heparin / Nitro** — adult indications; not routine peds.
+
+    - type: "prose"
       title: "EMT Peds Dosing"
       markdown: |
         - Paediatric med math is **not in EMT scope**.
@@ -56,18 +217,9 @@ topic:
           - May **not** give doses labelled "ask (or as directed by) a physician".
 
     - type: "prose"
-      title: "Age-based dose tables — coming soon"
-      callout: true
-      markdown: |
-        Per-age emergency drug dosing (Premie → 13 years) for the WVEMS
-        formulary is being rebuilt from current paediatric guidelines and
-        clinically verified, rather than reproduced from the licensed source.
-
-        **Until then:** use your approved paediatric length/colour tape or an
-        approved dosing reference.
-
-    - type: "prose"
       title: "References"
       markdown: |
-        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
-        - Handtevy — Pediatric Emergency Standards — https://handtevy.com [Ver: 5/22]
+        - PALS (AHA 2020) — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Weight-for-age: approx 50th-percentile (CDC/WHO growth; PALS/Broselow convention)
+        - Doses derived from the WVEMS Drug Reference (mg/kg) in this app
+        - Handtevy — Pediatric Emergency Standards (the printed WVEMS source; proprietary, deliberately NOT reproduced) — https://handtevy.com
