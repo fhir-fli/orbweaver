@@ -310,6 +310,7 @@ topic:
 
     - type: "drug_card"
       name: "Charcoal"
+      image: "assets/books/wvems/images/form_oralbottle.jpg"
       class: "Activated"
       indications:
         - "Poisoning, Overdose"
@@ -1015,6 +1016,7 @@ topic:
 
     - type: "drug_card"
       name: "Tetracaine"
+      image: "assets/books/wvems/images/form_eyedrops.jpg"
       class: "0.5% Ophthalmic"
       indications:
         - "Eye pain (non-penetrating)"

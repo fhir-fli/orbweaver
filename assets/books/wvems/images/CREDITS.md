@@ -43,3 +43,11 @@ Representative equipment for the procedure cards (generic, not a specific produc
 | eq_gastric.jpg | gastric | [Enteral feeding tube stylet retracted.png](https://commons.wikimedia.org/wiki/File:Enteral_feeding_tube_stylet_retracted.png) | Tenbergen | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
 | eq_igel.jpg | igel | [Laryngeal_mask_100.jpg](https://commons.wikimedia.org/wiki/File:Laryngeal_mask_100.jpg) | (see source page) | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) |
 | eq_ventilator.jpg | ventilator | [Servo_I_Ventilator.jpg](https://commons.wikimedia.org/wiki/File:Servo_I_Ventilator.jpg) | BreathDriver | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+
+## Additional images (round 2)
+
+| App file | Use | Source (Wikimedia Commons) | Author | License |
+|---|---|---|---|---|
+| form_eyedrops.jpg | Tetracaine (ophthalmic dropper) | [Alphagan-japan.jpg](https://commons.wikimedia.org/wiki/File:Alphagan-japan.jpg) | melvil | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) |
+| form_oralbottle.jpg | Charcoal (oral suspension) | [ActivatedCharcoal.JPG](https://commons.wikimedia.org/wiki/File:ActivatedCharcoal.JPG) | James Heilman, MD | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0) |
+| eq_cric.jpg | Cric (cricothyroid membrane landmark) | [Cricothyrotomy.png](https://commons.wikimedia.org/wiki/File:Cricothyrotomy.png) | PhilippN | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |

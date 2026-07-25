@@ -562,6 +562,7 @@ topic:
 
     - type: "procedure_card"
       name: "Cric"
+      image: "assets/books/wvems/images/eq_cric.jpg"
       scope: "P"
       steps:
         - "Confirm all alternatives have failed."
