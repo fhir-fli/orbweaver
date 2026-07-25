@@ -51,7 +51,7 @@ topic:
         - "Supraventricular Tachycardia (SVT)"
       doses:
         - population: "adult"
-          text: "**12 mg** IV/IO"
+          text: "**6 mg**, then **12 mg** IV/IO"
         - population: "peds"
           text: "0.1–0.2 mg/kg"
       warnings:
@@ -96,7 +96,7 @@ topic:
         - population: "adult"
           text: "**2.5 mg** Neb"
         - population: "peds"
-          text: "0.15 mg/kg"
+          text: "**2.5 mg** neb (1.25 mg if <15 kg)"
       warnings:
         - "PMH: antiretroviral therapy"
         - "PMH: hypokalemia"
@@ -144,7 +144,7 @@ topic:
         - population: "adult"
           text: "**2 grams** IV/IO, IM"
         - population: "peds"
-          text: "10–30 mg/kg IV/IO, IM"
+          text: "**25–30 mg/kg** IV/IO, IM (max 2 g)"
       warnings:
         - "Monitor closely if PCN allergy"
         - "Avoid if cephalosporin allergy"
@@ -206,9 +206,9 @@ topic:
         - "Bradycardia, Organophosphate OD"
       doses:
         - population: "adult"
-          text: "**1 mg** IV/IO (brady)"
+          text: "**1 mg** IV/IO (brady); **2 mg** double q5 min (organophosphate, no max)"
         - population: "peds"
-          text: "0.02 mg/kg"
+          text: "0.02 mg/kg (brady); 0.05 mg/kg double q5 min (organophosphate)"
       warnings:
         - "PMH: glaucoma, AV block"
         - "May cause: palpitations"
@@ -316,7 +316,7 @@ topic:
         - "Poisoning, Overdose"
       doses:
         - population: "adult"
-          text: "**25 grams** PO"
+          text: "**50 g** PO (1 g/kg)"
         - population: "peds"
           text: "1 gram/kg"
         - population: "both"
@@ -383,7 +383,7 @@ topic:
         - population: "adult"
           text: "**10 mg** IV/IO, IM (alt 8 mg)"
         - population: "peds"
-          text: "0.5 mg/kg"
+          text: "**0.6 mg/kg** (croup; max 12 mg)"
       warnings:
         - "PMH: antivirals, anticoagulants"
         - "PMH: **diabetics**, birth control"
@@ -449,9 +449,9 @@ topic:
         - "Bradycardia, CODE, Dyspnea, Allergy"
       doses:
         - population: "adult"
-          text: "**1 mg** IV/IO (CODE)"
+          text: "**1 mg** IV/IO (CODE); **0.3 mg IM** (anaphylaxis)"
         - population: "peds"
-          text: "0.01 mg/kg (Brady, CODE)"
+          text: "0.01 mg/kg IV (Brady/CODE); 0.01 mg/kg IM, max 0.3 mg (anaphylaxis)"
         - population: "both"
           text: "Epi Neb: 0.5 mg/kg, max 5 mg (SOB)"
       warnings:
@@ -478,7 +478,9 @@ topic:
         - population: "peds"
           text: "1 gtt/sec micro drip set"
         - population: "both"
-          text: "Mix **1 mg Epi** into **1 L NS** (1 mcg/mL)"
+          text: "**Drip**: 1 mg in 1 L NS (1 mcg/mL)"
+        - population: "both"
+          text: "**Push-dose**: 10 mcg/mL (1 mg in 100 mL); 10 mcg (0.5–2 mL) q2–5 min"
       warnings:
         - "PMH: CAD, HTN"
         - "May cause: **palpitations**"
@@ -545,9 +547,9 @@ topic:
         - "Hypoglycemia, β-blocker OD"
       doses:
         - population: "adult"
-          text: "**1 mg** IM (or 3 mg IN)"
+          text: "**1 mg** IM hypoglycemia; **2–10 mg** IV (β-blocker/CCB OD)"
         - population: "peds"
-          text: "0.5 mg if < 6 y/o (< 20 kg)"
+          text: "0.5 mg if <25 kg (hypoglycemia); 0.05–0.15 mg/kg IV (OD)"
       warnings:
         - "PMH: pheochromocytoma"
         - "PMH: starvation, **Coumadin**"
@@ -841,7 +843,7 @@ topic:
         - population: "adult"
           text: "**0.04–4 mg** IV/IO, IM/N"
         - population: "peds"
-          text: "0.1 mg/kg"
+          text: "**0.01 mg/kg**, up to 0.1 mg/kg (titrate)"
       warnings:
         - "May cause: **opiate withdrawal**"
         - "May cause: N/V, Abdominal Pain"
@@ -954,9 +956,9 @@ topic:
         - "Infection"
       doses:
         - population: "adult"
-          text: "**1 gram** IV/IO, IM"
+          text: "**1–2 g** IV/IO, IM (sepsis); **2 g** meningitis"
         - population: "peds"
-          text: "25–50 mg/kg"
+          text: "**50 mg/kg** sepsis (max 2 g); **100 mg/kg** meningitis (max 4 g)"
       warnings:
         - "Monitor closely if PCN allergy"
         - "Avoid if cephalosporin allergy"
@@ -1065,9 +1067,9 @@ topic:
         - "Bleeding, Epistaxis"
       doses:
         - population: "adult"
-          text: "**2 grams** IV/IO (or 150 mg IN)"
+          text: "**1 g** IV/IO over 10 min (then 1 g/8 hr); 150 mg IN (epistaxis)"
         - population: "peds"
-          text: "10–25 mg/kg"
+          text: "**15–20 mg/kg** (max 1 g)"
         - population: "both"
           text: "Dilute in NS and **give over 10 min**"
       warnings:

@@ -171,9 +171,9 @@ topic:
         - cells: ["Toradol (mg)", "0.5 mg/kg", "—", "—", "—", "6", "8", "10", "12", "15*", "15*"]
         - cells: ["Zofran (mg)", "0.1 mg/kg", "0.5", "1", "1", "1", "1.5", "2", "2.5", "3", "4"]
         - cells: ["Benadryl (mg)", "1 mg/kg", "4", "8", "10", "12", "16", "20", "25", "32", "40"]
-        - cells: ["Decadron (mg)", "0.5 mg/kg", "2", "4", "5", "6", "8", "10", "10*", "10*", "10*"]
+        - cells: ["Decadron (mg)", "0.6 mg/kg", "2", "5", "6", "7", "9.5", "12", "12*", "12*", "12*"]
         - cells: ["Lasix (mg)", "1–2 mg/kg", "4–7", "8–16", "10–20", "12–24", "16–32", "20–40", "25–40*", "32–40*", "40"]
-        - cells: ["TXA (mg)", "10–25 mg/kg", "40–90", "80–200", "100–250", "120–300", "160–400", "200–500", "250–620", "320–800", "400–1000"]
+        - cells: ["TXA (mg)", "15–20 mg/kg", "50–70", "120–160", "150–200", "180–240", "240–320", "300–400", "380–500", "480–640", "600–800"]
         - cells: ["Ibuprofen (mg)", "10 mg/kg", "—", "80", "100", "120", "160", "200", "250", "320", "400"]
         - cells: ["Tylenol (mg)", "15 mg/kg", "50", "120", "150", "180", "240", "300", "380", "480", "600"]
     - type: "prose"
@@ -183,9 +183,9 @@ topic:
         - Toradol (mg): ketorolac; 2+ y/o; max 15 mg
         - Zofran (mg): ondansetron; max 4 mg
         - Benadryl (mg): diphenhydramine; max 50 mg
-        - Decadron (mg): dexamethasone; max ~10 mg
+        - Decadron (mg): dexamethasone; croup; max 12 mg
         - Lasix (mg): furosemide; max 40 mg
-        - TXA (mg): over 10 min; max 2 g
+        - TXA (mg): over 10 min; max 1 g (then 2 mg/kg/hr)
         - Ibuprofen (mg): 6+ mo; max ~600 mg
         - Tylenol (mg): acetaminophen; max ~1 g
 
@@ -198,13 +198,13 @@ topic:
       columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
       column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
-        - cells: ["Ancef (mg)", "10–30 mg/kg", "40–100", "80–240", "100–300", "120–360", "160–480", "200–600", "250–750", "320–960", "400–1200"]
-        - cells: ["Rocephin (mg)", "25–50 mg/kg", "90–180", "200–400", "250–500", "300–600", "400–800", "500–1000", "620–1250", "800–1600", "1000–2000"]
+        - cells: ["Ancef (mg)", "25–30 mg/kg", "90–100", "200–240", "250–300", "300–360", "400–480", "500–600", "620–750", "800–960", "1000–1200"]
+        - cells: ["Rocephin (mg)", "50 mg/kg", "180", "400", "500", "600", "800", "1000", "1250", "1600", "2000"]
         - cells: ["CyanoKit (mg)", "70 mg/kg", "240", "560", "700", "840", "1120", "1400", "1750", "2240", "2800"]
     - type: "prose"
       markdown: |
         - Ancef (mg): cefazolin; max 2 g
-        - Rocephin (mg): ceftriaxone; max ~1-2 g
+        - Rocephin (mg): ceftriaxone sepsis; meningitis 100 mg/kg max 4 g
         - CyanoKit (mg): hydroxocobalamin; over 10 min; max 5 g
 
     - type: "table"

@@ -1,10 +1,21 @@
 # WVEMS Drug Reference — evidence-audit worksheet
 
+> ## ✅ COMPLETE — all flags OpenEvidence-verified by Grey and APPLIED (commit after `a850e37`)
+> All 11 flags (+ naloxone) were run through OpenEvidence and corrected in the
+> Drug Reference cards + mirrored in `tool/peds_dose_compute.py`:
+> - **Adenosine** adult → 6 mg then 12 mg. **Epi** → 0.3 mg IM anaphylaxis added,
+>   distinct from 1 mg IV CODE. **Atropine** → organophosphate 2 mg double q5min.
+>   **Glucagon** → β-blocker/CCB OD 2–10 mg IV. **Charcoal** → 50 g (1 g/kg).
+>   **Ancef** peds → 25–30 mg/kg. **Decadron** peds → 0.6 mg/kg, max 12.
+>   **Epi Push** → 10 mcg/mL push-dose added. **Rocephin** → sepsis 50/2 g vs
+>   meningitis 100/4 g. **TXA** → CRASH-2 1 g (not 2 g). **Albuterol** peds →
+>   fixed 2.5 mg. **Narcan** peds → 0.01 mg/kg initial, titrate to 0.1.
+> Evidence: PALS 2025, AHA 2023/2025 poisoning updates, CRASH-2, GINA 2026, FDA
+> labels, per OpenEvidence (references in the conversation/commit).
+
 Systematic review of all 50 cards in `wvems_2026_drug_reference.yaml` against
-current guideline/standard EMS dosing. **These flags are from model knowledge —
-run each through OpenEvidence to confirm before changing anything.** Once
-confirmed, edit the card doses (and mirror any peds change in
-`tool/peds_dose_compute.py`).
+current guideline/standard EMS dosing. Flags below were from model knowledge,
+then OpenEvidence-confirmed and applied (history kept for reference).
 
 Status: ✅ looks guideline-consistent · ⚠️ CHECK (concern below). The benzo /
 Keppra / Rocuronium / Atropine-minimum items were already corrected (commit
