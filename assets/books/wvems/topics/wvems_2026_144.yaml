@@ -49,12 +49,25 @@ topic:
         alert_fill: "0xFFFDECEA"
         alert_text: "0xFFB71C1C"
       markdown: |
-        These age tables are **COMPUTED** (approved **mg/kg** × **estimated
-        weight-for-age**), **not** taken from a licensed source, and are
-        **not yet clinically verified**. Treat as a **cross-check**, not
-        authority. **Confirm every dose** against a current reference (and a
-        length/colour tape) before administration. Max doses & caveats are in
-        the notes under each table (**\*** = capped at max).
+        These age tables are **COMPUTED** (**mg/kg** × **estimated
+        weight-for-age**), reviewed against **PALS 2025 / OpenEvidence** but
+        **not a licensed source** and **pending final local sign-off**. Treat
+        as a **cross-check**, not authority. **Confirm every dose** against a
+        current reference (and a length/colour tape) before administration.
+        Max doses & caveats are in the notes under each table (**\*** = capped
+        at max).
+
+    - type: "prose"
+      title: "Seizure / RSI doses differ from the Drug Reference"
+      boxed: true
+      markdown: |
+        Per PALS / status-epilepticus evidence, these use **higher** doses than
+        the general Drug Reference cards:
+        - **Ativan** (lorazepam) **0.1 mg/kg** (SE) — cards show 0.025–0.05 (sedation)
+        - **Versed** (midazolam) **0.1–0.2 mg/kg** (SE) — cards show 0.05–0.075
+        - **Keppra** **40–60 mg/kg** (SE loading) — cards show 20 (maintenance)
+        - **Rocuronium** **1 mg/kg** (RSI) — cards show 0.6
+        - **Atropine** — no 0.1 mg minimum (removed in PALS 2020)
 
     - type: "table"
       title: "Estimated weight-for-age (confirm / adjust)"
@@ -80,11 +93,11 @@ topic:
       columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
       column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
-        - cells: ["Epi (mg)", "0.01 mg/kg", "0.04", "0.08", "0.1", "0.12", "0.16", "0.2", "0.25", "0.32", "0.4"]
-        - cells: ["Adenosine 1st (mg)", "0.1 mg/kg", "0.4", "0.8", "1", "1.2", "1.6", "2", "2.5", "3.2", "4"]
+        - cells: ["Epi (mg)", "0.01 mg/kg", "0.035", "0.08", "0.1", "0.12", "0.16", "0.2", "0.25", "0.32", "0.4"]
+        - cells: ["Adenosine 1st (mg)", "0.1 mg/kg", "0.35", "0.8", "1", "1.2", "1.6", "2", "2.5", "3.2", "4"]
         - cells: ["Adenosine 2nd (mg)", "0.2 mg/kg", "0.7", "1.6", "2", "2.4", "3.2", "4", "5", "6.4", "8"]
         - cells: ["Amiodarone (mg)", "5 mg/kg", "18", "40", "50", "60", "80", "100", "125", "160", "200"]
-        - cells: ["Atropine (mg)", "0.02 mg/kg", "0.1", "0.16", "0.2", "0.24", "0.32", "0.4", "0.5", "0.5*", "0.5*"]
+        - cells: ["Atropine (mg)", "0.02 mg/kg", "0.07", "0.16", "0.2", "0.24", "0.32", "0.4", "0.5", "0.5*", "0.5*"]
         - cells: ["Calcium (mg)", "20 mg/kg", "70", "160", "200", "240", "320", "400", "500", "640", "800"]
         - cells: ["Bicarb (mEq)", "1 mEq/kg", "4", "8", "10", "12", "16", "20", "25", "32", "40"]
         - cells: ["D10 (mL)", "5 mL/kg", "20", "40", "50", "60", "80", "100", "125", "160", "200"]
@@ -98,14 +111,14 @@ topic:
         - Adenosine 1st (mg): rapid push + flush; max 6 mg
         - Adenosine 2nd (mg): max 12 mg
         - Amiodarone (mg): CODE; max 300 mg; Q5min x3
-        - Atropine (mg): min 0.1 mg, max 0.5 mg
+        - Atropine (mg): no minimum (PALS 2020); max 0.5 mg
         - Calcium (mg): over 10 min (bolus in CODE)
         - Bicarb (mEq): max 50 mEq
         - D10 (mL): = 0.5 g/kg
         - NS bolus (mL): limit x3 (60 mL/kg)
         - 3% Saline (mL): TBI; over 10 min
         - Magnesium (mg): over 10 min; max 2 g
-        - Narcan (mg): titrate; max ~2 mg
+        - Narcan (mg): FDA initial 0.01 mg/kg, titrate; max ~2 mg
 
     - type: "table"
       title: "Seizure / Sedation"
@@ -116,16 +129,16 @@ topic:
       columns: ["Drug", "Dose/kg", "Newborn", "6 mo", "1 yr", "2 yr", "4 yr", "6 yr", "8 yr", "10 yr", "12 yr"]
       column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
-        - cells: ["Ativan (mg)", "0.025–0.05 mg/kg", "0.1–0.2", "0.2–0.4", "0.25–0.5", "0.3–0.6", "0.4–0.8", "0.5–1", "0.6–1.25", "0.8–1.6", "1–2"]
-        - cells: ["Versed (mg)", "0.05–0.075 mg/kg", "0.2–0.3", "0.4–0.6", "0.5–0.8", "0.6–0.9", "0.8–1.2", "1–1.5", "1.2–1.9", "1.6–2.4", "2–3"]
+        - cells: ["Ativan (mg)", "0.1 mg/kg", "0.35", "0.8", "1", "1.2", "1.6", "2", "2.5", "3.2", "4"]
+        - cells: ["Versed (mg)", "0.1–0.2 mg/kg", "0.35–0.7", "0.8–1.6", "1–2", "1.2–2.4", "1.6–3.2", "2–4", "2.5–5", "3.2–6.4", "4–8"]
         - cells: ["Ketamine (mg)", "0.25–0.5 mg/kg", "1–2", "2–4", "2.5–5", "3–6", "4–8", "5–10", "6–12.5", "8–16", "10–20"]
-        - cells: ["Keppra (mg)", "20 mg/kg", "—", "—", "—", "—", "—", "400", "500", "640", "800"]
+        - cells: ["Keppra (mg)", "40–60 mg/kg", "—", "320–480", "400–600", "480–720", "640–960", "800–1200", "1000–1500", "1280–1920", "1600–2400"]
     - type: "prose"
       markdown: |
-        - Ativan (mg): lorazepam 25-50 mcg/kg; max ~2 mg
-        - Versed (mg): midazolam 50-75 mcg/kg; max ~5 mg
+        - Ativan (mg): lorazepam SE 0.1 mg/kg; max 4 mg [OE]
+        - Versed (mg): midazolam SE 0.1-0.2 mg/kg; max 10 mg [OE]
         - Ketamine (mg): pain; higher for Critical Care
-        - Keppra (mg): levetiracetam; 6+ y/o; over 10 min; max 3 g
+        - Keppra (mg): levetiracetam SE loading 40-60 mg/kg; 3+ mo; max 4.5 g [OE]
 
     - type: "table"
       title: "Airway / RSI"
@@ -137,12 +150,12 @@ topic:
       column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
       rows:
         - cells: ["Etomidate (mg)", "0.3 mg/kg", "—", "—", "—", "—", "—", "—", "—", "9.5", "12"]
-        - cells: ["Rocuronium (mg)", "0.6 mg/kg", "—", "5", "6", "7", "10", "12", "15", "19", "24"]
+        - cells: ["Rocuronium (mg)", "1 mg/kg", "—", "8", "10", "12", "16", "20", "25", "32", "40"]
         - cells: ["Succinylcholine (mg)", "2 mg/kg", "7", "16", "20", "24", "32", "40", "50", "64", "80"]
     - type: "prose"
       markdown: |
         - Etomidate (mg): 10+ y/o only per card
-        - Rocuronium (mg): 3+ months old
+        - Rocuronium (mg): RSI 1 mg/kg (OE 1.0-1.2); 3+ months [OE]
 
     - type: "table"
       title: "Analgesia / Other"
