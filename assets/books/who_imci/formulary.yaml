@@ -468,7 +468,7 @@ formulary:
         indication: "meningitis"
         regimen: "IV: 0.15 mg/kg/dose every 6 h for the first 2–4 days"
         form: "IM: 5 mg/ml"
-        bands: ["0.5 ml", "0.9 ml", "1.4 ml", "2 ml", "3 ml"]
+        bands: ["0.15 ml", "0.25 ml", "0.4 ml", "0.5 ml", "0.75 ml"]
     - id: "diazepam"
       name: "Diazepam"
       class: "anticonvulsant_sedation"
