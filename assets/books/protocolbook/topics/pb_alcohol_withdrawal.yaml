@@ -26,6 +26,18 @@
 #     titled prose section (as on p.34) with the live altered-mental-
 #     status link.
 #
+# 🔴 CONTENT FLAG — OPEN, DOSE ISSUE (audit pass 2026-07-26, awaiting OE):
+#   - "Thiamine 100mg IV (if available)" is triggered by CONCERN FOR
+#     WERNICKE'S ENCEPHALOPATHY (ataxia / ophthalmoplegia) or severe
+#     malnutrition — i.e. it is a TREATMENT indication, but 100 mg is
+#     the PROPHYLAXIS dose. Current guidance (RCP / EFNS / most tox
+#     references) for suspected or established Wernicke's is
+#     500 mg IV TDS for 2–3 days, then step down. As printed the
+#     protocol under-doses the exact patient it is designed to catch.
+#     Highest-value flag in this group — OE to confirm the regimen
+#     (and whether to keep a separate lower prophylaxis dose for the
+#     malnourished-but-no-WE-signs patient).
+#
 # ⚠️ GENUINE SOURCE TYPO corrected (surfaced to Grey 2026-07-13):
 #   - Stage 4 printed "delirium trements" — spelling typo for
 #     "delirium tremens" (verified on the 300 dpi render).  Corrected

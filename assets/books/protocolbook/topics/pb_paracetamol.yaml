@@ -46,6 +46,23 @@
 #     (presumably dextrose in water / D5W); OE to confirm phrasing.
 #   - 21-h three-bag IV-NAC regimen (150/50/100 mg/kg) is current
 #     standard; loading over 1 h current.  Fine.
+#
+# ⚠️ CONTENT FLAGS — OPEN (audit pass 2026-07-26, awaiting OE):
+#   - ACTIVATED CHARCOAL box carries NO TIME WINDOW ("in children, may
+#     consider activated charcoal, if KNOWN ingestion of >150mg/kg").
+#     Charcoal is only useful within roughly 1–2 h of ingestion; as
+#     printed it invites late, useless (and aspiration-risky) dosing.
+#     Adding the window is the single clearest improvement here.
+#   - TWO-BAG NAC (200 mg/kg over 4 h then 100 mg/kg over 16 h, per
+#     SNAP) has largely displaced the 3-bag regimen in centres that
+#     have switched, on the strength of markedly fewer anaphylactoid
+#     reactions. The printed 3-bag regimen is NOT wrong — this is a
+#     currency question for OE, not an error.
+#   - 4–8 h arm: current practice also starts NAC empirically if the
+#     level will not return before the 8 h mark. Not printed.
+#   - Thresholds (≥200 mg/kg; ≥10 g or 200 mg/kg >6 y) verified
+#     against the AAP/AACT out-of-hospital criteria ✓. >100 kg dosed
+#     as 100 kg ✓ (standard capped dosing).
 # ============================================================
 
 topic:

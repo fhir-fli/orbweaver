@@ -24,6 +24,24 @@
 #   - Gastric lavage "almost never indicated" — consistent with modern
 #     tox practice (single-dose activated charcoal preferred within 1 h
 #     for selected ingestions); OE may add charcoal guidance.
+#
+# ⚠️ CONTENT FLAGS — OPEN (audit pass 2026-07-26, awaiting OE):
+#   - METHANOL section is ANTIDOTE-ONLY. The printed ethanol dosing
+#     itself checks out (1.8 mL/kg of 43% ≈ 0.61 g/kg load; 0.2–0.4
+#     mL/kg/hr ≈ 0.07–0.14 g/kg/hr maintenance — both textbook, and
+#     the LMIC-appropriate choice), but TWO pillars of methanol
+#     management are absent: (a) FOLINIC / FOLIC ACID (accelerates
+#     formate clearance; usual 50 mg IV q6h), and (b) HAEMODIALYSIS,
+#     which is the DEFINITIVE treatment for significant poisoning
+#     (visual symptoms, severe acidosis, high level) and clears both
+#     methanol and formate. Absence of any dialysis pointer is the
+#     larger gap. OE to confirm what to add and in what form given
+#     dialysis availability in this setting.
+#   - Example "40 ml shots of vodka in a 70 kg adult" reads as a
+#     SINGLE shot; 1.8 mL/kg × 70 kg ≈ 126 mL ≈ THREE 40 mL shots.
+#     Ambiguous as printed — OE / Grey to reword.
+#   - Physostigmine "avoid in TCA" ✓ current (asystole risk).
+#     NaHCO3 for TCA ✓. Benzodiazepine-first for seizures ✓.
 # ============================================================
 
 topic:

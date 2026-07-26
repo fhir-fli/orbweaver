@@ -17,15 +17,35 @@
 #     topic: cross-link once the Wheezing/Asthma pages (~p.53) are
 #     authored (same deferral as p.30's convulsion pointer).
 #
-# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
-#   - RANITIDINE (H2 blocker) was withdrawn in many markets (2020,
-#     NDMA impurity); famotidine is the usual substitute where H2
-#     blockade is used at all. Availability varies in LMIC — OE to
-#     decide "where available" framing vs substitution.
-#   - Epinephrine max dose printed 0.3 mL (of 1 mg/mL): current
-#     guidance allows up to 0.5 mg for adults/adolescents; 0.3 mg is
-#     the paediatric cap. OE to confirm.
-#   - Diagnostic criteria are the classic NIAID/FAAN set — current.
+# ✅ EVIDENCE-CURRENCY UPDATES APPLIED (audit pass 2026-07-26) — the
+# two items below were pre-designated CLEAR-CUT and are now applied:
+#   - RANITIDINE → FAMOTIDINE. Ranitidine was withdrawn worldwide in
+#     April 2020 (NDMA impurity) and is no longer obtainable; it can
+#     no longer be printed as an option. Substituted with the standard
+#     famotidine anaphylaxis dosing (0.25 mg/kg IV, max 20 mg;
+#     0.5 mg/kg PO, max 40 mg) — the SUBSTITUTE DOSE is mine and
+#     should be OE-confirmed.
+#   - EPINEPHRINE MAX 0.3 mL → "max 0.3 mL (child), up to 0.5 mL
+#     (adolescent / adult)". 0.01 mg/kg IM with a 0.5 mg adult ceiling
+#     and a 0.3 mg prepubertal ceiling is the current AAAAI/ACAAI +
+#     WAO parameter; 0.3 mg is the paediatric cap only, so the printed
+#     blanket 0.3 mL under-doses adults.
+#
+# CONTENT FLAGS still OPEN for OE (rendered as printed):
+#   - The algorithm TERMINATES in an "Adjunctive treatment" box of
+#     H1 blocker / H2 blocker / steroids. Current practice parameters
+#     recommend AGAINST routine corticosteroids and antihistamines,
+#     note they do NOT prevent biphasic reactions, and stress they
+#     must never replace or delay epinephrine. Reframing this box
+#     (symptomatic cutaneous relief only, adjunct-never-substitute)
+#     is an OE call — not applied.
+#   - NO OBSERVATION PERIOD and NO BIPHASIC-REACTION warning anywhere
+#     on the page (current guidance: observe ~4–6 h, longer if severe
+#     or if repeat epinephrine was needed), and no discharge planning
+#     / autoinjector counselling. Genuine gap — OE to decide whether
+#     to add.
+#   - Diagnostic criteria are the classic 2006 NIAID/FAAN set — still
+#     widely taught; WAO 2020 simplified to 2 criteria. Optional.
 # ============================================================
 
 topic:
@@ -67,7 +87,7 @@ topic:
         alert_text: "0xFFB71C1C"
       title: "Epinephrine (1mg/1ml 1:1000)"
       markdown: |
-        - 0.01mL/kg (max dose 0.3mL)
+        - 0.01mL/kg — max 0.3mL (child), up to 0.5mL (adolescent / adult)
         - IM anterolateral thigh
         - Repeat q5–15 minutes if no improvement
 
@@ -108,5 +128,5 @@ topic:
         title: "Adjunctive treatment"
         bullets:
           - "H1 receptor blocker: Diphenhydramine 1mg/kg IV or PO, max dose 50mg"
-          - "H2 receptor blocker: Ranitidine 1mg/kg IM/slow IV (max 50mg) or 4mg/kg PO (max 150mg)"
+          - "H2 receptor blocker: Famotidine 0.25mg/kg IV (max 20mg) or 0.5mg/kg PO (max 40mg)"
           - "Steroids: Hydrocortisone 5mg/kg IM/slow IV (max 200mg)"

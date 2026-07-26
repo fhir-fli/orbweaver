@@ -17,6 +17,28 @@
 #     marker whose footnote text does not exist anywhere on the
 #     page (p.39 starts Snake bite) — marker dropped.
 #
+# ⚠️ CONTENT FLAGS — OPEN (audit pass 2026-07-26, awaiting OE):
+#   - PENICILLIN-ALLERGY ALTERNATIVES as printed ("Ciprofloxacin,
+#     Azithromycin or Doxycycline") are listed as MONOTHERAPY, but
+#     none of the three reliably covers the oral ANAEROBES that make
+#     bite wounds infect. Standard alternative regimens pair an agent
+#     with Pasteurella cover against an anaerobic agent — e.g.
+#     doxycycline + metronidazole, TMP-SMX + metronidazole, or a
+#     fluoroquinolone + clindamycin. (Clindamycin alone is likewise
+#     inadequate — no Pasteurella.) OE to confirm the preferred pair
+#     for this setting, then add "+ metronidazole".
+#   - RABIES IMMUNOGLOBULIN administration: the table says "inject as
+#     much as possible around the wound, give the rest IM". The WHO
+#     2018 rabies position paper CHANGED this — infiltrate ALL of the
+#     RIG into and around the wound; the distant IM remainder is no
+#     longer recommended (no added benefit, wastes a scarce biologic).
+#     Clear-looking but a WHO-policy change rather than a printing
+#     error, so left as printed for OE.
+#   - Tetanus tables verified cell-by-cell against CDC — exact ✓.
+#   - Vaccine days 0/3/7/14 IM = the standard 4-dose Essen regimen ✓;
+#     WHO 2018 also endorses shorter ID regimens where ID practice
+#     exists. Optional note only.
+#
 # ⚠️ GENUINE SOURCE ERROR corrected (SURFACED TO GREY 2026-07-14):
 #   - The rabies table as printed conflates the two biologics: the
 #     Vaccine row reads "Human Ig 20U/kg OR Equine Ig 40U/kg IM

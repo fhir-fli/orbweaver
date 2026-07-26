@@ -17,6 +17,22 @@
 #   - No total-score interpretation is printed on this page (the ≥10
 #     treatment threshold lives in the p.35 flowchart) — none added.
 #   - Companion page to Alcohol Withdrawal (p.35); linked both ways.
+#
+# ✓ VERIFIED FAITHFUL (audit pass 2026-07-26): all ten items checked
+#   anchor-by-anchor against the published CIWA-Ar (Sullivan 1989) —
+#   item set, score ranges (nine 0–7 + orientation 0–4, max 67) and
+#   every printed anchor wording match. No errors.
+#
+# ⚠️ MINOR FLAGS — OPEN (audit pass 2026-07-26):
+#   - Two "—" cells are NOT actually unanchored in the real scale:
+#     Nausea/vomiting score 1 = "mild nausea with no vomiting", and
+#     Anxiety score 1 = "mildly anxious". The SOURCE printed them
+#     blank; restoring them would improve scoring consistency but is a
+#     deviation from the printed page — Grey's call.
+#   - No total-score severity bands printed (conventionally <8–10
+#     mild / 8–15 moderate / >15 severe with raised seizure and DT
+#     risk). Only the ≥10 treatment threshold exists, on p.35.
+#     Optional addition.
 # ============================================================
 
 topic:

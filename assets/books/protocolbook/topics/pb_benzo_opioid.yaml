@@ -35,6 +35,24 @@
 #     adult 0.4 mg IV — the adult starting dose is deliberately low
 #     (titrate-to-effect to avoid precipitated withdrawal); left as
 #     printed, OE to confirm.
+#
+# ✓ VERIFIED CURRENT (audit pass 2026-07-26): every printed dose checks
+#   out — flumazenil 0.01 mg/kg child / 0.2 mg adult, repeat to 1 mg,
+#   max 3 mg/hr ✓ label; naloxone 0.1 mg/kg (<5 y / <20 kg), 2 mg
+#   (>5 y / >20 kg), 0.4 mg adult ✓; repeat q2–3 min ✓; re-dose at
+#   20–60 min ✓ (naloxone t½ is shorter than most opioids).
+#
+# ⚠️ CONTENT FLAG — OPEN (audit pass 2026-07-26, awaiting OE), and it
+#   is the FLUMAZENIL one above that matters most: current consensus
+#   is that flumazenil should NOT be given in undifferentiated
+#   overdose, and is contraindicated with TCA co-ingestion, chronic
+#   benzodiazepine use, or a seizure history — it is for reversing
+#   iatrogenic procedural sedation. As printed the algorithm sends
+#   every "more likely benzodiazepine" patient to it. Adding a
+#   caution/contraindication line is the recommended fix.
+#   Secondary gaps: naloxone is IV-only here (no IM/IN route for the
+#   no-IV situation), and there is no INFUSION guidance for long-acting
+#   opioids (usual: two-thirds of the effective bolus per hour).
 # ============================================================
 
 topic:

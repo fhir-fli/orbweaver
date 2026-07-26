@@ -22,6 +22,24 @@
 #     whether to add an "where available" oxime note.
 #   - Atropine "double the previous dose q5min until atropinised" is
 #     the standard escalating regimen — consistent with current tox.
+#
+# ✓ VERIFIED CURRENT (audit pass 2026-07-26):
+#   - The maintenance infusion is right: mixing the TOTAL bolus load
+#     into 250 mL run at 50 mL/hr (<25 kg) or 500 mL at 100 mL/hr
+#     (>25 kg) both deliver the loading dose over 5 hours = 20 %/hr,
+#     which sits at the top of the standard 10–20 %-of-loading-dose
+#     per hour regimen. No change needed.
+#   - Rectal diazepam bands work out to ~0.4–0.5 mg/kg across the
+#     range ✓. IV diazepam 0.2 mg/kg (child) / 10 mg (adult) ✓.
+#   - Atropinisation endpoints ✓ (has 3 of the usual 5 — dry axillae
+#     and non-pinpoint pupils not printed; cosmetic).
+#
+# ⚠️ CONTENT FLAG — OPEN (audit pass 2026-07-26, awaiting OE):
+#   - Paediatric atropine bolus printed 0.02 mg/kg. WHO uses 0.02
+#     mg/kg, but a number of current tox references start children at
+#     0.05 mg/kg in OP poisoning. Since the regimen doubles q5min the
+#     practical difference is one cycle — low risk either way, but
+#     worth an OE confirmation of the starting dose.
 # ============================================================
 
 topic:

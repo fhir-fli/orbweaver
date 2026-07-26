@@ -38,6 +38,24 @@
 #     failure paralysis" — duplicated word; rendered "paralysis and
 #     respiratory failure".
 #
+# ✅ EVIDENCE-CURRENCY UPDATE APPLIED (audit pass 2026-07-26):
+#   - The antivenom-reaction epinephrine line carried the same blanket
+#     "max dose 0.3mL" as p.37 Anaphylaxis; updated in step with it to
+#     "max 0.3mL child, 0.5mL adolescent/adult" (current AAAAI/ACAAI +
+#     WAO ceiling). Kept verbatim-consistent with pb_anaphylaxis.
+#
+# CONTENT FLAGS still OPEN for OE (audit pass 2026-07-26):
+#   - NO TETANUS PROPHYLAXIS anywhere on the page — WHO snakebite
+#     guidance includes tetanus toxoid once coagulopathy allows IM
+#     injection. Genuine gap.
+#   - NEUROTOXIC arm has no ANTICHOLINESTERASE TRIAL (neostigmine +
+#     atropine / edrophonium test), which WHO recommends for
+#     post-synaptic (cobra-type) neurotoxic envenoming as an adjunct
+#     while antivenom takes effect. Genuine gap.
+#   - Haemotoxic "blood products as necessary": WHO sequences this
+#     AFTER adequate antivenom (clotting factors given before are
+#     consumed). Nuance — OE to confirm phrasing.
+#
 # CONTENT FLAGS for the later OE / content pass (rendered faithfully):
 #   - Snake Venom Detection Kit (SVDK) is an Australia-specific
 #     product; already framed "if available" — fine, OE may localise.
@@ -129,7 +147,7 @@ topic:
                       - "Dilute antivenom in NS (no more than 20mL/500mL bag), give slowly over 30 mins or no more than 1–2mL/min"
                       - "Polyvalent: titrate to symptoms, assess q30min"
                       - "Monovalent: monitor haematologic response, repeat dose if needed"
-                      - "Epinephrine ready in case of anaphylaxis: Epinephrine (1mg/1ml 1:1000), 0.01mL/kg (max dose 0.3mL), IM anterolateral thigh, repeat q5–15 minutes if no improvement"
+                      - "Epinephrine ready in case of anaphylaxis: Epinephrine (1mg/1ml 1:1000), 0.01mL/kg (max 0.3mL child, 0.5mL adolescent/adult), IM anterolateral thigh, repeat q5–15 minutes if no improvement"
                       - "Antihistamine: have available, not routinely recommended"
                       - "Monitor Vital Signs"
                       - "Never run medications directly into affected limb"
