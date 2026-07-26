@@ -423,189 +423,189 @@ void main() {
       final emergency = (contents[0] as YamlMap)['children'] as YamlList;
       expect(emergency, hasLength(15));
       expect((emergency[14] as YamlMap)['topic'],
-          'topics/pb_altered_mental_status.yaml');
+          'topics/pb_025_altered_mental_status.yaml');
       final ingestions = (contents[1] as YamlMap)['children'] as YamlList;
       expect(ingestions, hasLength(11));
       expect((ingestions[0] as YamlMap)['topic'],
-          'topics/pb_poisoning_ingestion.yaml');
+          'topics/pb_028_poisoning_ingestion.yaml');
       expect((ingestions[1] as YamlMap)['topic'],
-          'topics/pb_organophosphate.yaml');
+          'topics/pb_029_organophosphate.yaml');
       expect((ingestions[2] as YamlMap)['topic'],
-          'topics/pb_hydrocarbon.yaml');
+          'topics/pb_030_hydrocarbon.yaml');
       expect((ingestions[3] as YamlMap)['topic'],
-          'topics/pb_benzo_opioid.yaml');
+          'topics/pb_031_benzo_opioid.yaml');
       expect((ingestions[4] as YamlMap)['topic'],
-          'topics/pb_paracetamol.yaml');
+          'topics/pb_032_paracetamol.yaml');
       expect((ingestions[5] as YamlMap)['topic'],
-          'topics/pb_alcohol_intoxication.yaml');
+          'topics/pb_034_alcohol_intoxication.yaml');
       expect((ingestions[6] as YamlMap)['topic'],
-          'topics/pb_alcohol_withdrawal.yaml');
+          'topics/pb_035_alcohol_withdrawal.yaml');
       expect((ingestions[7] as YamlMap)['topic'],
-          'topics/pb_ciwa_ar.yaml');
+          'topics/pb_036_ciwa_ar.yaml');
       expect((ingestions[8] as YamlMap)['topic'],
-          'topics/pb_anaphylaxis.yaml');
+          'topics/pb_037_anaphylaxis.yaml');
       expect((ingestions[9] as YamlMap)['topic'],
-          'topics/pb_animal_bite.yaml');
+          'topics/pb_038_animal_bite.yaml');
       expect((ingestions[10] as YamlMap)['topic'],
-          'topics/pb_snake_bite.yaml');
+          'topics/pb_039_snake_bite.yaml');
       final paediatric = (contents[2] as YamlMap)['children'] as YamlList;
       expect(paediatric, hasLength(8));
       expect((paediatric[0] as YamlMap)['topic'],
-          'topics/pb_paediatric_convulsions.yaml');
+          'topics/pb_042_paediatric_convulsions.yaml');
       expect((paediatric[1] as YamlMap)['topic'],
-          'topics/pb_paediatric_dehydration.yaml');
+          'topics/pb_043_paediatric_dehydration.yaml');
       expect((paediatric[2] as YamlMap)['topic'],
-          'topics/pb_paediatric_sepsis.yaml');
+          'topics/pb_045_paediatric_sepsis.yaml');
       expect((paediatric[3] as YamlMap)['topic'],
-          'topics/pb_paediatric_pneumonia.yaml');
+          'topics/pb_046_paediatric_pneumonia.yaml');
       expect((paediatric[4] as YamlMap)['topic'],
-          'topics/pb_paediatric_dka.yaml');
+          'topics/pb_047_paediatric_dka.yaml');
       expect((paediatric[5] as YamlMap)['topic'],
-          'topics/pb_uti_kidney.yaml');
+          'topics/pb_049_uti_kidney.yaml');
       expect((paediatric[6] as YamlMap)['topic'],
-          'topics/pb_wheezing_child.yaml');
+          'topics/pb_052_wheezing_child.yaml');
       expect((paediatric[7] as YamlMap)['topic'],
-          'topics/pb_meningitis.yaml');
+          'topics/pb_054_meningitis.yaml');
       final cardiac = (contents[3] as YamlMap)['children'] as YamlList;
       expect(cardiac, hasLength(2));
       expect((cardiac[0] as YamlMap)['topic'],
-          'topics/pb_heart_failure.yaml');
+          'topics/pb_056_heart_failure.yaml');
       expect((cardiac[1] as YamlMap)['topic'],
-          'topics/pb_rheumatic_fever.yaml');
+          'topics/pb_058_rheumatic_fever.yaml');
       final sickle = (contents[4] as YamlMap)['children'] as YamlList;
       expect(sickle, hasLength(4));
       expect((sickle[0] as YamlMap)['topic'],
-          'topics/pb_sickle_cell.yaml');
+          'topics/pb_059_sickle_cell.yaml');
       expect((sickle[1] as YamlMap)['topic'],
-          'topics/pb_sickle_cell_acute.yaml');
+          'topics/pb_060_sickle_cell_acute.yaml');
       expect((sickle[2] as YamlMap)['topic'],
-          'topics/pb_sickle_cell_stroke.yaml');
+          'topics/pb_061_sickle_cell_stroke.yaml');
       expect((sickle[3] as YamlMap)['topic'],
-          'topics/pb_sickle_cell_acs.yaml');
+          'topics/pb_062_sickle_cell_acs.yaml');
       final sam = (contents[5] as YamlMap)['children'] as YamlList;
       expect(sam, hasLength(3));
       expect((sam[0] as YamlMap)['topic'],
-          'topics/pb_sam_assessment.yaml');
+          'topics/pb_063_sam_assessment.yaml');
       expect((sam[1] as YamlMap)['topic'],
-          'topics/pb_sam_management.yaml');
+          'topics/pb_064_sam_management.yaml');
       expect((sam[2] as YamlMap)['topic'],
-          'topics/pb_sam_feeding.yaml');
+          'topics/pb_066_sam_feeding.yaml');
       final ent = (contents[6] as YamlMap)['children'] as YamlList;
       expect(ent, hasLength(6));
       expect((ent[0] as YamlMap)['topic'],
-          'topics/pb_epistaxis.yaml');
+          'topics/pb_067_epistaxis.yaml');
       expect((ent[1] as YamlMap)['topic'],
-          'topics/pb_otitis_media.yaml');
+          'topics/pb_068_otitis_media.yaml');
       expect((ent[2] as YamlMap)['topic'],
-          'topics/pb_otitis_externa.yaml');
+          'topics/pb_069_otitis_externa.yaml');
       expect((ent[3] as YamlMap)['topic'],
-          'topics/pb_mastoiditis.yaml');
+          'topics/pb_069_mastoiditis.yaml');
       expect((ent[4] as YamlMap)['topic'],
-          'topics/pb_pharyngitis.yaml');
+          'topics/pb_070_pharyngitis.yaml');
       expect((ent[5] as YamlMap)['topic'],
-          'topics/pb_sinusitis.yaml');
+          'topics/pb_070_sinusitis.yaml');
       final tb = (contents[7] as YamlMap)['children'] as YamlList;
       expect(tb, hasLength(3));
       expect((tb[0] as YamlMap)['topic'],
-          'topics/pb_tb_diagnosis.yaml');
+          'topics/pb_071_tb_diagnosis.yaml');
       expect((tb[1] as YamlMap)['topic'],
-          'topics/pb_tb_scoring.yaml');
+          'topics/pb_072_tb_scoring.yaml');
       expect((tb[2] as YamlMap)['topic'],
-          'topics/pb_tb_treatment.yaml');
+          'topics/pb_073_tb_treatment.yaml');
       final anaemia = (contents[8] as YamlMap)['children'] as YamlList;
       expect(anaemia, hasLength(3));
       expect((anaemia[0] as YamlMap)['topic'],
-          'topics/pb_anaemia.yaml');
+          'topics/pb_074_anaemia.yaml');
       expect((anaemia[1] as YamlMap)['topic'],
-          'topics/pb_anaemia_workup.yaml');
+          'topics/pb_075_anaemia_workup.yaml');
       expect((anaemia[2] as YamlMap)['topic'],
-          'topics/pb_transfusions.yaml');
+          'topics/pb_076_transfusions.yaml');
       final pain = (contents[9] as YamlMap)['children'] as YamlList;
       expect(pain, hasLength(4));
       expect((pain[0] as YamlMap)['topic'],
-          'topics/pb_pain_nips.yaml');
+          'topics/pb_077_pain_nips.yaml');
       expect((pain[1] as YamlMap)['topic'],
-          'topics/pb_pain_flacc.yaml');
+          'topics/pb_078_pain_flacc.yaml');
       expect((pain[2] as YamlMap)['topic'],
-          'topics/pb_pain_faces.yaml');
+          'topics/pb_079_pain_faces.yaml');
       expect((pain[3] as YamlMap)['topic'],
-          'topics/pb_pain_ladder.yaml');
+          'topics/pb_080_pain_ladder.yaml');
       final neo = (contents[10] as YamlMap)['children'] as YamlList;
       expect(neo, hasLength(6));
       expect((neo[0] as YamlMap)['topic'],
-          'topics/pb_neo_feeding.yaml');
+          'topics/pb_082_neo_feeding.yaml');
       expect((neo[1] as YamlMap)['topic'],
-          'topics/pb_neo_cpap.yaml');
+          'topics/pb_084_neo_cpap.yaml');
       expect((neo[2] as YamlMap)['topic'],
-          'topics/pb_neo_sepsis_prevention.yaml');
+          'topics/pb_085_neo_sepsis_prevention.yaml');
       expect((neo[3] as YamlMap)['topic'],
-          'topics/pb_neo_sepsis_treatment.yaml');
+          'topics/pb_086_neo_sepsis_treatment.yaml');
       expect((neo[4] as YamlMap)['topic'],
-          'topics/pb_neo_jaundice.yaml');
+          'topics/pb_088_neo_jaundice.yaml');
       expect((neo[5] as YamlMap)['topic'],
-          'topics/pb_neo_ballard.yaml');
+          'topics/pb_090_neo_ballard.yaml');
       final im = (contents[11] as YamlMap)['children'] as YamlList;
       expect(im, hasLength(28));
       expect((im[0] as YamlMap)['topic'],
-          'topics/pb_im_heart_failure.yaml');
+          'topics/pb_094_im_heart_failure.yaml');
       expect((im[1] as YamlMap)['topic'],
-          'topics/pb_im_stroke.yaml');
+          'topics/pb_096_im_stroke.yaml');
       expect((im[2] as YamlMap)['topic'],
-          'topics/pb_im_sepsis.yaml');
+          'topics/pb_099_im_sepsis.yaml');
       expect((im[3] as YamlMap)['topic'],
-          'topics/pb_im_convulsions.yaml');
+          'topics/pb_101_im_convulsions.yaml');
       expect((im[4] as YamlMap)['topic'],
-          'topics/pb_im_meningitis.yaml');
+          'topics/pb_102_im_meningitis.yaml');
       expect((im[5] as YamlMap)['topic'],
-          'topics/pb_im_gi_bleed.yaml');
+          'topics/pb_104_im_gi_bleed.yaml');
       expect((im[6] as YamlMap)['topic'],
-          'topics/pb_im_dka.yaml');
+          'topics/pb_105_im_dka.yaml');
       expect((im[7] as YamlMap)['topic'],
-          'topics/pb_im_hypertension.yaml');
+          'topics/pb_106_im_hypertension.yaml');
       expect((im[8] as YamlMap)['topic'],
-          'topics/pb_im_liver_failure.yaml');
+          'topics/pb_108_im_liver_failure.yaml');
       expect((im[9] as YamlMap)['topic'],
-          'topics/pb_im_aki.yaml');
+          'topics/pb_111_im_aki.yaml');
       expect((im[10] as YamlMap)['topic'],
-          'topics/pb_im_agitation.yaml');
+          'topics/pb_112_im_agitation.yaml');
       expect((im[11] as YamlMap)['topic'],
-          'topics/pb_im_ecg_basics.yaml');
+          'topics/pb_114_im_ecg_basics.yaml');
       expect((im[12] as YamlMap)['topic'],
-          'topics/pb_im_ecg_enlargement.yaml');
+          'topics/pb_116_im_ecg_enlargement.yaml');
       expect((im[13] as YamlMap)['topic'],
-          'topics/pb_im_ecg_conduction.yaml');
+          'topics/pb_117_im_ecg_conduction.yaml');
       expect((im[14] as YamlMap)['topic'],
-          'topics/pb_im_ecg_svt.yaml');
+          'topics/pb_118_im_ecg_svt.yaml');
       expect((im[15] as YamlMap)['topic'],
-          'topics/pb_im_ecg_ischaemia.yaml');
+          'topics/pb_119_im_ecg_ischaemia.yaml');
       expect((im[16] as YamlMap)['topic'],
-          'topics/pb_im_chest_pain.yaml');
+          'topics/pb_121_im_chest_pain.yaml');
       expect((im[17] as YamlMap)['topic'],
-          'topics/pb_im_acs_treatment.yaml');
+          'topics/pb_123_im_acs_treatment.yaml');
       expect((im[18] as YamlMap)['topic'],
-          'topics/pb_im_svt.yaml');
+          'topics/pb_125_im_svt.yaml');
       expect((im[19] as YamlMap)['topic'],
-          'topics/pb_im_syncope.yaml');
+          'topics/pb_126_im_syncope.yaml');
       expect((im[20] as YamlMap)['topic'],
-          'topics/pb_im_epigastric_pain.yaml');
+          'topics/pb_126_im_epigastric_pain.yaml');
       expect((im[21] as YamlMap)['topic'],
-          'topics/pb_im_headache.yaml');
+          'topics/pb_126_im_headache.yaml');
       expect((im[22] as YamlMap)['topic'],
-          'topics/pb_im_copd_asthma.yaml');
+          'topics/pb_127_im_copd_asthma.yaml');
       expect((im[23] as YamlMap)['topic'],
-          'topics/pb_im_tb.yaml');
+          'topics/pb_128_im_tb.yaml');
       expect((im[24] as YamlMap)['topic'],
-          'topics/pb_im_dvt.yaml');
+          'topics/pb_130_im_dvt.yaml');
       expect((im[25] as YamlMap)['topic'],
-          'topics/pb_im_pe.yaml');
+          'topics/pb_131_im_pe.yaml');
       expect((im[26] as YamlMap)['topic'],
-          'topics/pb_im_sti.yaml');
+          'topics/pb_132_im_sti.yaml');
       expect((im[27] as YamlMap)['topic'],
-          'topics/pb_im_hiv_oi.yaml');
+          'topics/pb_135_im_hiv_oi.yaml');
       final elyte = (contents[12] as YamlMap)['children'] as YamlList;
       expect(elyte, hasLength(2));
-      expect((elyte[0] as YamlMap)['topic'], 'topics/pb_im_sodium.yaml');
-      expect((elyte[1] as YamlMap)['topic'], 'topics/pb_im_potassium.yaml');
+      expect((elyte[0] as YamlMap)['topic'], 'topics/pb_140_im_sodium.yaml');
+      expect((elyte[1] as YamlMap)['topic'], 'topics/pb_142_im_potassium.yaml');
       expect(leafCount(contents), 95);
     });
   });

@@ -233,7 +233,7 @@ topic:
 
     setUpAll(() {
       final yaml = File(
-        'assets/books/protocolbook/topics/pb_hydrocarbon.yaml',
+        'assets/books/protocolbook/topics/pb_030_hydrocarbon.yaml',
       ).readAsStringSync();
       final topic = Topic.fromYamlString(yaml);
       block = topic.blocks.whereType<FlowchartBlock>().first;
