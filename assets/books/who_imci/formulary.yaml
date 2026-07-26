@@ -313,11 +313,15 @@ formulary:
       indications: ["malaria"]
       page: 357
       doses:
-      - label: "Standard"
-        regimen: "Oral: 4 mg/kg artesunate + 8.3 mg/kg mefloquine once a day"
+      - label: "Paediatric tablet"
+        regimen: "Oral: 4 mg/kg artesunate + 8.3 mg/kg mefloquine once daily × 3 days"
         form: "Tablet: 25 mg artesunate / 55 mg mefloquine"
-        bands: ["—", "¼", "½", "¾", "1"]
-      notes: "Not recommended for children <5 months of age owing to limited information."
+        bands: ["1", "1", "2", "2", "—"]
+      - label: "Adult tablet"
+        regimen: "Oral: 4 mg/kg artesunate + 8.3 mg/kg mefloquine once daily × 3 days"
+        form: "Tablet: 100 mg artesunate / 220 mg mefloquine"
+        bands: ["—", "—", "—", "—", "1"]
+      notes: "Once daily × 3 days (target 4 mg/kg/day artesunate; range 2–10). Use WHOLE paediatric (25/55) tablets — do NOT quarter/halve them. ≥30 kg: 2 adult (100/220) tablets. Not recommended <5 months / <5 kg."
     - id: "aspirin"
       name: "Aspirin"
       class: "analgesia"
