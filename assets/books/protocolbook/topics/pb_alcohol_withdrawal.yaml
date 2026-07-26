@@ -26,17 +26,33 @@
 #     titled prose section (as on p.34) with the live altered-mental-
 #     status link.
 #
-# 🔴 CONTENT FLAG — OPEN, DOSE ISSUE (audit pass 2026-07-26, awaiting OE):
-#   - "Thiamine 100mg IV (if available)" is triggered by CONCERN FOR
-#     WERNICKE'S ENCEPHALOPATHY (ataxia / ophthalmoplegia) or severe
-#     malnutrition — i.e. it is a TREATMENT indication, but 100 mg is
-#     the PROPHYLAXIS dose. Current guidance (RCP / EFNS / most tox
-#     references) for suspected or established Wernicke's is
-#     500 mg IV TDS for 2–3 days, then step down. As printed the
-#     protocol under-doses the exact patient it is designed to catch.
-#     Highest-value flag in this group — OE to confirm the regimen
-#     (and whether to keep a separate lower prophylaxis dose for the
-#     malnourished-but-no-WE-signs patient).
+# ✅ OE-CONFIRMED CHANGES APPLIED (Grey's OpenEvidence pass, 2026-07-26):
+#   Both were rated MODERATE severity — they affect management of a
+#   life-threatening condition.
+#
+#   1. WERNICKE SCREENING CRITERIA were incomplete. The decision node
+#      listed only "ataxia / ophthalmoplegia". The classic triad is
+#      CONFUSION + oculomotor dysfunction + ataxia, and the full triad
+#      appears in only ~10% of cases (the more sensitive Caine criteria
+#      need just 2 of 4: dietary deficiency, oculomotor abnormality,
+#      cerebellar dysfunction, altered mental status). "Confusion"
+#      added to the parenthetical; order now mirrors the stated triad.
+#      Refs: Sinha 2019 Mayo Clin Proc; Li 2025 Front Neurol; ASAM 2020.
+#
+#   2. THIAMINE DOSE was prophylaxis-only on a treatment trigger.
+#      100 mg IV daily is the ASAM PROPHYLAXIS dose (3–5 days); this
+#      node is fired by concern for Wernicke's, which warrants
+#      100–200 mg IV THREE TIMES DAILY for 3 days then oral. The box
+#      now carries both, labelled, so the malnourished-but-no-signs
+#      patient still gets the lower prophylactic regimen.
+#      (My original flag proposed 500 mg IV TDS per RCP/EFNS; OE
+#      landed on 200 mg IV TID — OE's value is what is applied.)
+#
+# ✓ OE-VERIFIED, NO CHANGE: stage timings 1–4 and the "stages may not
+#   go in order" caveat (ASAM — seizures can occur without preceding
+#   mild symptoms); lorazepam 2 mg IV; CIWA-Ar ≥10 treatment threshold
+#   (moderate withdrawal = 10–18); q5–10 min reassessment; wean to
+#   q2–4h prn.
 #
 # ⚠️ GENUINE SOURCE TYPO corrected (surfaced to Grey 2026-07-13):
 #   - Stage 4 printed "delirium trements" — spelling typo for
@@ -93,12 +109,15 @@ topic:
       # lorazepam, or wait) loop back UP to the re-score hub; the only exit is
       # straight down ("once stable").  Matches the printed p.35 layout.
       nodes:
-        - title: "Concern for Wernicke's encephalopathy (ataxia / ophthalmoplegia), or patient appears severely malnourished?"
+        - title: "Concern for Wernicke's encephalopathy (confusion / ophthalmoplegia / ataxia), or patient appears severely malnourished?"
           branches:
             - label: "Yes"
               side: "right"
               box:
-                title: "Thiamine 100mg IV (if available)"
+                title: "Thiamine IV (if available)"
+                bullets:
+                  - "Suspected Wernicke's: 200mg IV TID × 3 days, then oral"
+                  - "Prophylaxis only (malnourished, no Wernicke's signs): 100mg IV daily × 3–5 days"
         - id: "rescore"
           title: "Calculate CIWA-Ar Score"
           bullets:

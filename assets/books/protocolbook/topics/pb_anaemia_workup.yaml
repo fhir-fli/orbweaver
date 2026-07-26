@@ -25,14 +25,36 @@
 #     nested bullets by indent).
 #   - Citation superscript (72) dropped.
 #
-# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
-#   - "Give all children an antihelminthic" for non-haemolytic anaemia
-#     is an LMIC empiric deworming step (helminths → iron-deficiency
-#     anaemia); appropriate for the target setting.
-#   - Iron 1–2 mg/kg/dose PO q8h = ~3–6 mg/kg/day elemental, standard
-#     paediatric therapeutic range. B12 1 mg PO daily (high-dose oral)
-#     is a valid alternative to IM where oral is preferred. Kept as
-#     printed.
+# ✅ OE-CONFIRMED CHANGES APPLIED (Grey's OpenEvidence pass, 2026-07-26).
+#   Both rated MINOR — the page was otherwise judged clinically sound.
+#
+#   1. RI FORMULA is a simplification. Placing "÷ 2" as a fixed divisor
+#      is mathematically equivalent to dividing the corrected
+#      reticulocyte count by a maturation factor of 2 — which only
+#      holds at a haematocrit around 25%. The factor actually varies
+#      with severity (~2.5 at Hct 15%, 2 at 25%, 1.5 at 35%, 1 at
+#      normal). Kept the pocket-manual shortcut, added a sub-bullet
+#      stating the assumption and the range, as OE recommended.
+#      Ref: Agarwal & Rets 2020 Int J Lab Hematol.
+#
+#   2. ANTIHELMINTHIC now names the drug and dose. The empiric
+#      deworming step was correct for the setting (WHO supports MDA
+#      where helminth prevalence >20%) but was not actionable without
+#      a drug. Added albendazole 400 mg PO single dose (>2 y) and
+#      200 mg (1–2 y). Refs: Taylor-Robinson 2019 Cochrane;
+#      Jourdan 2018 Lancet.
+#
+# ✓ OE-VERIFIED, NO CHANGE:
+#   - Iron 1–2 mg/kg/dose PO q8h (~3–6 mg/kg/day) and adult 50 mg q8h
+#     (150 mg/day) are OLDER divided-dose practice — the 2026 AAP
+#     clinical report now favours 3 mg/kg ONCE daily, and adult
+#     evidence supports lower once-daily dosing with fewer side
+#     effects. OE judged the TID regimen acceptable and possibly
+#     PREFERABLE here, since low-resource settings often stock only
+#     small-volume ferrous sulfate drops. Deliberately left as printed.
+#   - B12 1–2 mg PO daily: valid alternative to IM (~1% of an oral
+#     dose is absorbed by passive diffusion without intrinsic factor).
+#   - Fe:TIBC 18% cut-off: simplified but clinically useful.
 # ============================================================
 
 topic:
@@ -52,6 +74,7 @@ topic:
         - Order once the child is stabilised and malaria & sepsis are ruled out
         - Labs: CBC, LDH, bilirubin, haptoglobin, reticulocyte index (RI)
         - RI = (reticulocyte % ÷ 2) × (haematocrit ÷ normal haematocrit)
+          - The ÷ 2 is the maturation correction factor, which assumes a haematocrit around 25%. It rises as anaemia worsens — roughly 2.5 at Hct 15%, 2 at 25%, 1.5 at 35%, 1 at a normal Hct
 
     - type: "flowchart"
       variant: "algorithm"
@@ -69,6 +92,9 @@ topic:
             - label: "No"
               box:
                 title: "Give all children an antihelminthic"
+                bullets:
+                  - "Albendazole 400mg PO single dose (age > 2 years)"
+                  - "Albendazole 200mg PO single dose (age 1–2 years)"
               continue: true
         - decision: "Classify by MCV"
           outcomes:

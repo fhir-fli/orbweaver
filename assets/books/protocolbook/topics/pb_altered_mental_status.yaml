@@ -17,6 +17,17 @@
 #     em-dash (—) meaning "no response scored at this level".
 #   - Two red-alert callouts for the safety-critical lines
 #     (never-assume-intoxication rule; coma → intubate threshold).
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). Checked and confirmed correct: the whole GCS table
+#    scored component-by-component against the standard scale (all 15
+#    rows exact); Blantyre Coma Scale structure and 0–5 range, with
+#    BCS ≤ 2 an appropriate intubation threshold for this setting;
+#    GCS ≤ 8 → intubate (universally accepted); AVPU; AMPLE; Cushing's
+#    triad as an ominous sign of raised ICP; Brudzinski's and Kernig's
+#    descriptions; and all pupil findings (unilateral fixed dilated =
+#    CN III compression, bilateral fixed dilated = brainstem, bilateral
+#    small = opioids / organophosphates / pontine haemorrhage).
 # ============================================================
 
 topic:

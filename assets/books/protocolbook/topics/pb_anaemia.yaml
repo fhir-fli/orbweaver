@@ -23,12 +23,15 @@
 #   - spO2 normalised to SpO₂; "anemia" kept as the book's spelling in
 #     quoted box titles, "anaemia" elsewhere.
 #
-# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
-#   - Transfusion thresholds are WHO/LMIC malaria-area-stratified (the
-#     book's own scheme); modern restrictive-transfusion practice is
-#     broadly consistent. Empirical malaria+sepsis co-treatment and
-#     "no way to clinically differentiate malaria from sepsis" is an
-#     LMIC-appropriate pearl — kept verbatim.
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). The tiered transfusion thresholds were confirmed
+#    consistent with WHO/LMIC guidance (Maitland 2019 NEJM, TRACT;
+#    Carson 2023 JAMA). The empirical malaria + sepsis co-treatment
+#    pearl was singled out as an important LMIC-specific teaching
+#    point. Clinical findings of iron deficiency (pallor, tachycardia,
+#    koilonychia, glossitis, angular stomatitis, oesophageal webs) and
+#    the four occult-bleeding compartments (thorax, abdomen,
+#    retroperitoneum/pelvis, thigh) confirmed as standard.
 # ============================================================
 
 topic:
