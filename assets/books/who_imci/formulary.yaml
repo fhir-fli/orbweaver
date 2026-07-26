@@ -86,15 +86,15 @@ formulary:
       indications: ["pneumonia"]
       page: 356
       doses:
-      - label: "Standard"
-        regimen: "Oral: 25 mg/kg twice a day"
+      - label: "Pneumonia (standard)"
+        regimen: "Oral: 40 mg/kg twice a day"
         form: "250 mg tablet (chewable or dispersible)"
-        bands: ["½", "1", "1½", "2", "2½"]
-      - label: "Standard — syrup"
-        regimen: "Oral: 25 mg/kg twice a day"
+        bands: ["1", "2", "3", "4", "5"]
+      - label: "Pneumonia — syrup"
+        regimen: "Oral: 40 mg/kg twice a day"
         form: "Syrup (250 mg/5 ml)"
-        bands: ["2.5 ml", "5 ml", "7.5 ml", "10 ml", "—"]
-      notes: "For pneumonia give the higher dose of 40 mg/kg per dose twice a day (80 mg/kg/day) — double the volumes above. This is now the standard dose for chest-indrawing pneumonia."
+        bands: ["5 ml", "10 ml", "15 ml", "20 ml", "—"]
+      notes: "40 mg/kg per dose twice a day (80 mg/kg/day) is the WHO standard for pneumonia / chest-indrawing pneumonia (2014 IMCI revision). Some non-pneumonia infections use the lower 25 mg/kg twice a day (halve the amounts above)."
     - id: "amphotericin-b"
       name: "Amphotericin B"
       class: "antibiotic"
