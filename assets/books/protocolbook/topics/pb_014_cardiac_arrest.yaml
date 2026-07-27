@@ -24,17 +24,20 @@
 #   pulse" branch at 1 breath every 6 seconds (correct for ADULTS —
 #   note this differs from the paediatric rate, see p.13/p.15).
 #
-# ⚠️ OPEN — AUTHOR'S CALL, NOT APPLIED: HYPOGLYCAEMIA leads our H's
+# ✅ RESOLVED by OE (2026-07-27): KEEP hypoglycaemia in the H's, but mark
+#    it as a deliberate setting-specific addition. A one-line footnote was
+#    added under the table. (My earlier advice was to add nothing; OE asked
+#    for the footnote, so the footnote is what is printed.)
+#
+# (historical) OPEN item, now closed: HYPOGLYCAEMIA leads our H's
 #   list. It was in the 2005 AHA H's and T's but was dropped from 2010
 #   onward; the current standard is 5 H's (Hypovolaemia, Hypoxia,
 #   Hydrogen ion, Hypo-/Hyperkalaemia, Hypothermia) and 5 T's. OE
 #   judged keeping it DEFENSIBLE and appropriate for an LMIC manual
 #   where hypoglycaemia is a more prevalent reversible cause, and noted
 #   6 H's + 5 T's is fine as a deliberately expanded list. Kept as
-#   printed; all other H's and T's verified standard. GREY TO DECIDE
-#   whether to mark it as an intentional addition (I'd leave it —
-#   an in-app "this differs from AHA" note is clutter the reader at a
-#   code doesn't need).
+#   printed; all other H's and T's verified standard. Now decided:
+#   keep it, with the footnote.
 # ============================================================
 
 topic:
@@ -113,6 +116,10 @@ topic:
         - cells:
             - "**H**ypothermia"
             - ""
+
+    - type: "prose"
+      markdown: |
+        Hypoglycaemia is not in the standard AHA list — it is kept here deliberately, as a common and readily reversible cause of arrest in this setting.
 
     - type: "prose"
       title: "High-Quality CPR"

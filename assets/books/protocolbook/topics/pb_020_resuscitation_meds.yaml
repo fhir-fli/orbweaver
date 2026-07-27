@@ -79,10 +79,10 @@ topic:
               - 20 – 25 kg: 4 supp
         - cells:
             - "Diazepam IV"
-            - "0.3 mg/kg IV slowly over 1 minute"
+            - "**0.2 mg/kg** IV slowly over 1 minute, **max 8 mg** · may repeat 0.1 mg/kg (max 4 mg) after 5 min"
         - cells:
             - "Phenobarbitone / Phenobarbital"
-            - "**Load** 15 mg/kg (20 mg/kg neonates) IM/IV over 20 min · **Maint** 5 mg/kg IM/IV/PO OD"
+            - "**Load** 20 mg/kg IM/IV over 20 min (all ages, incl. neonates) · **Maint** 3–5 mg/kg IM/IV/PO OD"
         - cells:
             - "Packed Red Blood Cells (PRBCs)"
             - "10 ml/kg (raise Hgb 1 g/dL)"

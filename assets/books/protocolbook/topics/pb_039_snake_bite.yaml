@@ -110,6 +110,12 @@ topic:
             - **DO NOT** treat with ice
 
         - type: "prose"
+          title: "Tetanus"
+          markdown: |
+            - Give **tetanus toxoid** — snakebite wounds are tetanus-prone
+            - **If the patient is coagulopathic, delay the intramuscular injection** until clotting has been restored by antivenom, to avoid a haematoma at the injection site
+
+        - type: "prose"
           title: "Consider the following labs"
           markdown: |
             - CBC, CMP, PT/INR, PTT, FDP/d-dimer, CPK

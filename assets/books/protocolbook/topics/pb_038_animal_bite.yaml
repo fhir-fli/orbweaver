@@ -94,7 +94,9 @@ topic:
         - **Amoxicillin-Clavulanate x 5 days**
           - Pediatric: 25mg/kg/dose PO BD
           - Adult: 1 gram PO BD
-        - **Alternative:** Ciprofloxacin, Azithromycin or Doxycycline
+        - **Penicillin allergy — use a PAIR, not one drug** (no single alternative covers both **Pasteurella** and oral anaerobes):
+          - **Doxycycline** — adults 100 mg PO BD · children ≥ 8 yrs 2.2 mg/kg/dose PO BD (max 100 mg/dose)
+          - **PLUS Metronidazole** — adults 500 mg PO TDS · children 7.5 mg/kg/dose PO TDS (max 500 mg/dose)
 
     - type: "table"
       title: "Tetanus — clean and minor wounds"
@@ -117,5 +119,5 @@ topic:
       columns: ["Biologic", "Schedule"]
       column_flex: [2, 5]
       rows:
-        - cells: ["**Rabies immunoglobulin**", "Human Ig 20 units/kg OR Equine Ig 40 units/kg, total dose given once. Inject as much as possible around the wound, give the rest IM."]
+        - cells: ["**Rabies immunoglobulin**", "Human Ig 20 units/kg OR Equine Ig 40 units/kg, total dose given once. **Infiltrate ALL of it into and around the wound.** Give the remainder IM only if the wound cannot physically take the full volume."]
         - cells: ["**Vaccine**", "IM (deltoid or anterolateral thigh area), inject once on days 0, 3, 7 and 14"]

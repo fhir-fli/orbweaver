@@ -152,7 +152,7 @@ topic:
                     title: "No Rx necessary"
                 - label: "Yes"
                   box:
-                    title: "In children, may consider activated charcoal, if KNOWN ingestion of >150mg/kg"
+                    title: "In children, may consider activated charcoal, if KNOWN ingestion of >150mg/kg — within 2 h of ingestion (up to 4 h for a large ingestion)"
                   continue: true
             - decision: "Time since ingestion?"
               outcomes:
@@ -179,16 +179,25 @@ topic:
           caption: "Rumack-Matthew nomogram — acetaminophen plasma concentration vs hours postingestion. Treatment should be administered if level is above the solid (treatment) line."
 
         - type: "table"
-          title: "N-acetylcysteine (NAC) proper dosing"
+          title: "N-acetylcysteine (NAC) — 3-bag regimen, use if ≤ 40 kg"
           layout: "scroll"
           columns: ["Wt", "Loading dose", "Maintenance dose 1", "Maintenance dose 2"]
           column_widths: [64, 110, 110, 110]
           rows:
             - cells: ["**<20kg**", "150mg/kg into 3mL/kg diluent over 1 hr", "50mg/kg in 7mL/kg diluent over 4 hrs", "100mg/kg in 14mL/kg diluent over 16 hrs"]
             - cells: ["**20–40kg**", "150mg/kg into 100mL diluent over 1 hr", "50mg/kg into 250mL diluent over 4 hrs", "100mg/kg into 500mL diluent over 16 hrs"]
-            - cells: ["**>40kg**", "150mg/kg in 200mL diluent over 1 hr", "50mg/kg into 500mL diluent over 4 hrs", "100mg/kg into 1L diluent over 16 hrs"]
+
+        - type: "table"
+          title: "N-acetylcysteine (NAC) — 2-bag regimen, preferred if > 40 kg"
+          layout: "scroll"
+          columns: ["Wt", "Bag 1", "Bag 2"]
+          column_widths: [64, 155, 155]
+          rows:
+            - cells: ["**>40kg**", "200mg/kg in 500mL diluent over 4 hrs", "100mg/kg in 1L diluent over 16 hrs"]
 
         - type: "prose"
           markdown: |
             - Diluent may be DW, ½NS or sterile water
             - If wt >100kg, Rx as per 100kg
+            - The **2-bag** regimen gives the same total 300mg/kg over 20 hrs with far fewer anaphylactoid reactions and fewer bag changes — use it in anyone **>40 kg**
+            - Keep the **3-bag** regimen for **≤40 kg**, and for anyone already showing signs of severe liver injury

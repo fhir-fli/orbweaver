@@ -98,9 +98,12 @@ topic:
             - label: "Known or more likely benzodiazepine overdose"
               box:
                 id: "flumazenil"
-                title: "Flumazenil (if respiratory depression)"
+                title: "Flumazenil — only if isolated benzodiazepine ingestion is CONFIRMED"
+                severity: "priority"
                 bullets:
-                  - "Children: 0.01 mg/kg IV, max as per adult"
+                  - "DO NOT GIVE in: undifferentiated overdose or coma; suspected tricyclic or other pro-convulsant co-ingestion; chronic benzodiazepine use; known seizure disorder; wide QRS, dysrhythmia or anticholinergic signs"
+                  - "Safe only where the ingestion is reliably known — e.g. witnessed paediatric exploratory ingestion, or reversal of procedural sedation"
+                  - "If respiratory depression and criteria met — Children: 0.01 mg/kg IV, max as per adult"
                   - "Adults: 0.2 mg IV, may repeat for effect (max 1 mg), max 3 mg/hour"
                   - "Generally lasts ~1 hour — may need repeat dosing"
                   - "→ then Supportive care (below)"
@@ -116,9 +119,11 @@ topic:
                 bullets:
                   - "Children < 5 yo or < 20 kg: 0.1 mg/kg IV"
                   - "Children > 5 yo or > 20 kg: 2 mg IV"
-                  - "Adults: 0.4 mg IV"
+                  - "Adults: 0.4 mg IV, titrate up to 2 mg"
+                  - "No IV? Same dose IM, or intranasal — adults 4 mg one nostril; children 0.1 mg/kg (max 4 mg)"
                   - "May repeat q2–3 min for response"
                   - "After reversal may need to repeat 20–60 minutes later"
+                  - "Long-acting opioid: infuse two-thirds of the effective bolus dose per hour, titrate to RR ≥ 12"
                   - "Admit to ICU"
                   - "→ then Supportive care (below)"
             - label: "No"

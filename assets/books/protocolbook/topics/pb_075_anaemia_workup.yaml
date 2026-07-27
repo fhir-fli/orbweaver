@@ -129,9 +129,10 @@ topic:
     - type: "prose"
       title: "Supplementation"
       markdown: |
-        - **Iron**
-          - Children: 1–2 mg/kg/dose PO q8h of elemental iron
-          - Adults: 50 mg/dose PO q8h of elemental iron
+        - **Iron** — once daily, with or before food, not with milk or tea
+          - Children: **3 mg/kg ONCE daily** of elemental iron (max 60 mg/day)
+          - Adults: **65 mg ONCE daily** of elemental iron (= ferrous sulfate 200 mg, one tablet). If not tolerated, the same tablet every other day — equally effective and better absorbed
+          - Do not split into three daily doses: it is no more effective, is absorbed less well, and is taken less reliably
         - **Folate (folic acid)**
           - Children: 1 mg PO daily
           - Adults: 1–5 mg PO daily (depending on severity)

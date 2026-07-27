@@ -36,13 +36,16 @@
 #   top of the 200–500 mg/kg range) and its 2 mL D50% + 8 mL NS recipe
 #   are both correct and consistent with p.12.
 #
-# ⚠️ OPEN — AUTHOR'S CALL, NOT APPLIED: "If no improvement after 15
+# ✅ RESOLVED by OE (2026-07-27): termination threshold 15 min → 20 min
+#    ("extend to 20 minutes minimum"). APPLIED.
+#
+# (historical) OPEN item, now closed: "If no improvement after 15
 #   minutes, consider stopping." OE flagged 15 min as short (AHA sets
 #   no fixed limit; meaningful survival falls off after 20–30 min) and
 #   called it a judgment call for the protocol authors. Left as
-#   printed — a termination-of-resuscitation threshold is a clinical
-#   and ethical policy decision for the setting, not a factual fix.
-#   GREY TO DECIDE: keep 15 min, or extend to 20–30 min.
+#   printed at the time — a termination-of-resuscitation threshold is a
+#   clinical and ethical policy decision for the setting, not a factual
+#   fix, so it waited for Grey. Now decided: 20 minutes.
 # ============================================================
 
 topic:
@@ -110,5 +113,5 @@ topic:
           Reassess ABC every 2–3 minutes
           If pale, consider transfusion
           Repeat epinephrine every 3–5 minutes
-          If no improvement after 15 minutes, consider stopping
+          If no improvement after 20 minutes, consider stopping
         shape: "rectangle"

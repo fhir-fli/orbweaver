@@ -130,3 +130,10 @@ topic:
           - "H1 receptor blocker: Diphenhydramine 1mg/kg IV or PO, max dose 50mg"
           - "H2 receptor blocker: Famotidine 0.25mg/kg IV (max 20mg) or 0.5mg/kg PO (max 40mg)"
           - "Steroids: Hydrocortisone 5mg/kg IM/slow IV (max 200mg)"
+
+    - type: "prose"
+      title: "Observation before discharge"
+      markdown: |
+        - Observe **at least 4 hours** after the last dose of epinephrine
+        - Extend to **6 hours or more**, or admit, if the reaction was severe, if epinephrine had to be repeated, or if the trigger is unknown
+        - **Warn every patient and carer that symptoms can return** hours after they settle — a second (biphasic) reaction occurs in roughly 5–20% of cases, usually within 4–12 hours. Tell them to come straight back
