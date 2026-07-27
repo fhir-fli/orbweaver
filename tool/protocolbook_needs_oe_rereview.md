@@ -98,3 +98,79 @@ grep the whole book for the old drug name.**
 - **Do not conflate SNAP with the 2-bag regimen.** SNAP (Bateman 2014) is a
   12-hour protocol with ondansetron. The 200-then-100 mg/kg is the 2-bag 20-hour
   regimen (Wong/Graudins, 2NAC).
+
+---
+
+# D. PAEDIATRIC GROUP AUDIT (pp.42–55) — flags raised 2026-07-27, NOTHING APPLIED
+
+First never-audited group. 8 topics. Audited against current standards and, where
+the text extraction allowed, Uganda Clinical Guidelines 2023.
+
+## D1 🔴🔴 MENINGITIS — the two age-group regimens appear INVERTED (`pb_054`)
+As printed:
+- **> 3 months:** Cefotaxime 100 mg/kg q8h **AND** Ampicillin 50 mg/kg q6h
+- **< 3 months:** Ceftriaxone 100 mg/kg once daily
+
+Standard practice is the reverse. **Ampicillin is the Listeria drug, and Listeria is
+a pathogen of the UNDER-3-month group.** So as printed:
+1. **Infants < 3 months get NO Listeria cover** — the one group that needs it.
+2. They get **ceftriaxone**, the cephalosporin normally AVOIDED in neonates
+   (bilirubin displacement → kernicterus; fatal precipitation with calcium-
+   containing fluids).
+3. Over-3-months get ampicillin for a pathogen they do not have — harmless, but it
+   is the mirror image, which is what suggests the two headings were swapped.
+
+Standard: **< 3 months = ampicillin + cefotaxime** (ampicillin for Listeria,
+cefotaxime rather than ceftriaxone in neonates); **> 3 months = ceftriaxone or
+cefotaxime alone.**
+
+**NOT CHANGED** — a swap is my inference and this is a neonatal meningitis page.
+Hazards 1 and 2 are true regardless of whether it was a swap. **Highest-priority
+item in the audit so far.** Compare with the reversed artesunate bands (`d180100`).
+
+## D2 🔴 SEPSIS — hydrocortisone 50 mg/kg/day (`pb_045`)
+"If no improvement, consider hydrocortisone 50mg/kg/day". Commonly cited paediatric
+septic-shock dosing is **1–2 mg/kg/dose q6h**, or **50 mg/m²/day** — and mg/m² vs
+mg/kg is exactly the confusion that produces a figure like this. **The same book
+gives hydrocortisone 5 mg/kg (max 200 mg) for anaphylaxis on p.37** — a 10×
+internal disagreement for one drug.
+⚠️ I could NOT verify this locally: the UCG text extraction contains no
+"hydrocortisone" entry at all, and I am not certain enough about "shock-dose"
+hydrocortisone literature to call it wrong. **Needs OE.**
+
+## D3 🟡 DKA — urine output target missing "/kg" (`pb_047`)
+"Satisfactory urine output **1–2mL/hr**" should be **1–2 mL/kg/hr**. Two other
+places get it right — line 149 of the same page says "<1mL/kg/hr", and p.49 says
+"goal UOP 1mL/kg/hr". For a 20 kg child this is a 20× difference, and it sits in
+DKA where urine output is the trigger for starting potassium.
+
+## D4 🟡 DKA — soluble (regular) insulin SC every 2 hours (`pb_047`)
+The published subcutaneous DKA regimens dose **q2h with a rapid-acting analogue**
+(lispro/aspart) precisely because of its short duration. **Regular/soluble insulin
+peaks at 2–4 h and lasts 5–8 h**, so q2h dosing stacks. Either the interval or the
+insulin should change. Also absent from the page: any warning against bicarbonate
+in DKA (raises cerebral-oedema risk).
+
+## D5 🟡 SEPSIS — the D10 recipe is 9.5%, and it is the odd one out (`pb_045`)
+"1mL D50% plus 9mL D5% = 10mL D10%" computes to **950 mg / 10 mL = D9.5%**. The
+claim "= D10%" is arithmetically false. This is the same WHO Chart 10 recipe an
+independent pass found to be slightly off. **Every other D10 recipe in the book
+(p.13 ×2, p.20, p.61) uses 8 mL NS + 2 mL D50 = exactly D10%** — so consistency and
+correctness point the same way. Exact D5-based alternative: 1 mL D50 + 8 mL D5
+(9 mL). Minor, but it is a printed equation that does not hold.
+
+## D6 🟢 SEPSIS — SIRS temperature line typo (`pb_045`)
+"<35.4 axillary (36 **axillary**)" — the parenthetical should be **core**, matching
+the ">37.9 axillary (38.5 core)" pattern on the same line.
+
+## ✓ VERIFIED FINE in this group (no action)
+Septic-shock definition requires all three of cold extremities / cap refill >3 s /
+fast-and-weak pulse (matches WHO ETAT and p.12) · the 10–20 mL/kg-over-30–60-min
+bolus is appropriately FEAST-conservative · ampicillin 50 mg/kg with the neonatal
+interval ladder · gentamicin 3 mg/kg LBW / 5 mg/kg OD · ceftriaxone 100 mg/kg OD or
+50 mg/kg q12h · amoxicillin 40 mg/kg/dose BD for pneumonia (matches the WHO fix) ·
+zinc 10–20 mg × 10–14 d · ciprofloxacin 15 mg/kg BD for dysentery · salbutamol neb
+2.5/5 mg · dexamethasone 0.6 mg/kg · prednisolone 1–2 mg/kg · prednisone 2 mg/kg/day
+for nephrotic syndrome · nitrofurantoin 6 mg/kg ÷ q6h · DKA fluid maths (80 mL/kg +
+2× maintenance − bolus, max 40 mL/kg in 4 h, "never alternate D10 & NS") · D5 bag
+recipe (50 mL D50 + 450 mL = exactly 5%) · mannitol 0.5–1 g/kg.
