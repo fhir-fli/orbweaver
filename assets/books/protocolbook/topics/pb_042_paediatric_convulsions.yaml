@@ -69,7 +69,7 @@ topic:
                 bullets:
                   - "Ensure safety and check ABC"
                   - "Start oxygen"
-                  - "Diazepam 0.2mg/kg IV slowly over 1min (max 8mg) OR Rectal Diazepam 2.5mg suppository: <10kg 1 suppository · 10–15kg 2 · 15–20kg 3 · 20–25kg 4 suppositories"
+                  - "Diazepam 0.2mg/kg IV slowly over 1min (max 10mg) OR Rectal Diazepam 2.5mg suppository: <10kg 1 suppository · 10–15kg 2 · 15–20kg 3 · 20–25kg 4 suppositories"
                   - "Dextrose 10% 5mls/kg IV (or check glucose)"
                   - "Check ABCs when fit stops"
               continue: true
@@ -88,7 +88,7 @@ topic:
               box:
                 title: "Repeat diazepam"
                 bullets:
-                  - "Diazepam 0.2mg/kg IV slowly over 1min (max 8mg) OR Diazepam 2.5mg PR (dosing as above)"
+                  - "Diazepam 0.2mg/kg IV slowly over 1min (max 10mg) OR Diazepam 2.5mg PR (dosing as above)"
                   - "Continue Oxygen"
                   - "Check ABCs when fit stops"
               continue: true

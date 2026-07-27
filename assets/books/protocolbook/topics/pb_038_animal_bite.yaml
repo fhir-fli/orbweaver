@@ -95,7 +95,7 @@ topic:
           - Pediatric: 25mg/kg/dose PO BD
           - Adult: 1 gram PO BD
         - **Penicillin allergy — use a PAIR, not one drug** (no single alternative covers both **Pasteurella** and oral anaerobes):
-          - **Doxycycline** — adults 100 mg PO BD · children ≥ 8 yrs 2.2 mg/kg/dose PO BD (max 100 mg/dose)
+          - **Doxycycline** — adults 100 mg PO BD · children 2.2 mg/kg/dose PO BD (max 100 mg/dose). **Safe at any age for courses under 21 days — it does not stain teeth**
           - **PLUS Metronidazole** — adults 500 mg PO TDS · children 7.5 mg/kg/dose PO TDS (max 500 mg/dose)
 
     - type: "table"
@@ -121,3 +121,7 @@ topic:
       rows:
         - cells: ["**Rabies immunoglobulin**", "Human Ig 20 units/kg OR Equine Ig 40 units/kg, total dose given once. **Infiltrate ALL of it into and around the wound.** Give the remainder IM only if the wound cannot physically take the full volume."]
         - cells: ["**Vaccine**", "IM (deltoid or anterolateral thigh area), inject once on days 0, 3, 7 and 14"]
+
+    - type: "prose"
+      markdown: |
+        **On the immunoglobulin remainder:** WHO (2018) advises infiltrating **all** of it into and around the wound. Uganda Clinical Guidelines 2023 still advises giving any remainder IM into the gluteus. **Both are acceptable** — wound-only infiltration also stretches a scarce biologic further.

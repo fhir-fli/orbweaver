@@ -98,7 +98,7 @@ topic:
 
     - type: "prose"
       markdown: |
-        - Or IV diazepam 0.2 mg/kg (children), max 8 mg
+        - Or IV diazepam 0.2 mg/kg (children), max 10 mg
         - Adults: 10 mg IV
         - Repeat as necessary if convulsions occur
 
@@ -109,6 +109,10 @@ topic:
           - Patients < 25 kg: use 250 mL, run at 50 mL/hr
           - Patients > 25 kg: use 500 mL, run at 100 mL/hr
         - Monitor hourly for signs of recurrent symptoms or over-atropinisation, and adjust the rate accordingly
+
+    - type: "prose"
+      markdown: |
+        **Pralidoxime (2-PAM):** Uganda Clinical Guidelines 2023 includes it; evidence of benefit is uncertain (Cochrane review; Eddleston placebo-controlled trial). Include where available, per national guideline. Atropine, given early and to the endpoints above, is what changes outcome.
 
     - type: "prose"
       title: "Over-atropinisation"

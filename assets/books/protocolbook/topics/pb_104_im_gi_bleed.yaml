@@ -19,7 +19,16 @@
 #     risk / < 9 high-risk), and prophylactic antibiotics (ceftriaxone)
 #     for suspected variceal bleeding in cirrhosis are all standard.
 #     Whole-blood resuscitation + balloon tamponade as a surgical
-#     bridge reflect the LMIC setting. Ranitidine 2nd-line is now
+#     bridge reflect the LMIC setting.
+#
+# ✅ APPLIED 2026-07-27: 2nd-line RANITIDINE 50 mg IV q8h → FAMOTIDINE
+#    20 mg IV q12h. Ranitidine was withdrawn worldwide in April 2020
+#    (NDMA) and is not obtainable, so it cannot stay printed as an
+#    option. Same substitution as p.37 anaphylaxis. This was on the
+#    original clear-cut flag list and had been missed until a
+#    whole-book grep for the drug name caught it.
+#
+# (historical) Ranitidine 2nd-line was
 #     withdrawn (NDMA) — an alternate H2-blocker/PPI would substitute;
 #     kept as printed and flagged.
 # ============================================================
@@ -83,7 +92,7 @@ topic:
         title: "Start IV acid suppression"
         bullets:
           - "1st line: rabeprazole 40 mg IV BD (or other PPI as available)"
-          - "2nd line: ranitidine 50 mg IV 8-hourly"
+          - "2nd line: famotidine 20 mg IV 12-hourly"
 
     - type: "flowchart"
       variant: "algorithm"

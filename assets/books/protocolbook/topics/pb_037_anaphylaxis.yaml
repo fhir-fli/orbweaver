@@ -19,33 +19,45 @@
 #
 # ✅ EVIDENCE-CURRENCY UPDATES APPLIED (audit pass 2026-07-26) — the
 # two items below were pre-designated CLEAR-CUT and are now applied:
-#   - RANITIDINE → FAMOTIDINE. Ranitidine was withdrawn worldwide in
-#     April 2020 (NDMA impurity) and is no longer obtainable; it can
-#     no longer be printed as an option. Substituted with the standard
-#     famotidine anaphylaxis dosing (0.25 mg/kg IV, max 20 mg;
-#     0.5 mg/kg PO, max 40 mg) — the SUBSTITUTE DOSE is mine and
-#     should be OE-confirmed.
+#   - RANITIDINE → FAMOTIDINE → **DELETED ENTIRELY (2026-07-27)**.
+#     Ranitidine was withdrawn worldwide in April 2020 (NDMA), so it
+#     was first swapped for famotidine. On re-review the H2 blocker
+#     was removed altogether: no H2 blocker appears in RCUK 2021, the
+#     AAAAI/ACAAI 2020 or 2023 parameters, WHO EML §3, or Uganda
+#     Clinical Guidelines 2023 §1.1.1 — and Nurmatov's systematic
+#     review "failed to identify any eligible studies for inclusion",
+#     i.e. zero RCTs have ever been done. It consumed page space and
+#     pharmacy stock while offering nothing, and risked reading as
+#     "treatment" of an anaphylaxis. H1 blocker and steroid kept, but
+#     now explicitly labelled as not treating airway, breathing or
+#     circulation.
 #   - EPINEPHRINE MAX 0.3 mL → "max 0.3 mL (child), up to 0.5 mL
 #     (adolescent / adult)". 0.01 mg/kg IM with a 0.5 mg adult ceiling
 #     and a 0.3 mg prepubertal ceiling is the current AAAAI/ACAAI +
 #     WAO parameter; 0.3 mg is the paediatric cap only, so the printed
 #     blanket 0.3 mL under-doses adults.
 #
-# CONTENT FLAGS still OPEN for OE (rendered as printed):
-#   - The algorithm TERMINATES in an "Adjunctive treatment" box of
-#     H1 blocker / H2 blocker / steroids. Current practice parameters
-#     recommend AGAINST routine corticosteroids and antihistamines,
-#     note they do NOT prevent biphasic reactions, and stress they
-#     must never replace or delay epinephrine. Reframing this box
-#     (symptomatic cutaneous relief only, adjunct-never-substitute)
-#     is an OE call — not applied.
-#   - NO OBSERVATION PERIOD and NO BIPHASIC-REACTION warning anywhere
-#     on the page (current guidance: observe ~4–6 h, longer if severe
-#     or if repeat epinephrine was needed), and no discharge planning
-#     / autoinjector counselling. Genuine gap — OE to decide whether
-#     to add.
+# ✅ RESOLVED 2026-07-27 (both were open flags, now closed):
+#   - The "Adjunctive treatment" terminal is now explicitly labelled as
+#     NOT treating airway, breathing or circulation, and never to
+#     delay or replace epinephrine — matching the practice parameters,
+#     which recommend against routine steroids/antihistamines and note
+#     they do not prevent biphasic reactions.
+#   - OBSERVATION PERIOD added, and set LONGER than the international
+#     default deliberately. NICE NG258's short-observation route
+#     requires the patient to already hold two in-date adrenaline
+#     auto-injectors and to have ready access to emergency care —
+#     neither is true here, so no patient in this setting qualifies.
+#     NICE's 12-hour criteria, by contrast, explicitly include
+#     "presents out-of-hours" and "would be discharged to an area
+#     where access to emergency care is difficult" — routinely true
+#     for a rural catchment. Hence 6 h minimum / 12 h if severe /
+#     admit every child under 16. This is a case where the right
+#     answer is set by logistics rather than biology.
+#
+# CONTENT FLAG still open (optional):
 #   - Diagnostic criteria are the classic 2006 NIAID/FAAN set — still
-#     widely taught; WAO 2020 simplified to 2 criteria. Optional.
+#     widely taught; WAO 2020 simplified to 2 criteria.
 # ============================================================
 
 topic:
@@ -127,13 +139,15 @@ topic:
       terminal:
         title: "Adjunctive treatment"
         bullets:
+          - "These do NOT treat airway, breathing or circulation. Never let them delay or replace epinephrine"
           - "H1 receptor blocker: Diphenhydramine 1mg/kg IV or PO, max dose 50mg"
-          - "H2 receptor blocker: Famotidine 0.25mg/kg IV (max 20mg) or 0.5mg/kg PO (max 40mg)"
           - "Steroids: Hydrocortisone 5mg/kg IM/slow IV (max 200mg)"
 
     - type: "prose"
       title: "Observation before discharge"
       markdown: |
-        - Observe **at least 4 hours** after the last dose of epinephrine
-        - Extend to **6 hours or more**, or admit, if the reaction was severe, if epinephrine had to be repeated, or if the trigger is unknown
+        - **Observe at least 6 hours** after all symptoms have resolved — for every patient who needed epinephrine
+        - **Keep overnight (12 hours minimum, admit) if any of:** more than one dose of epinephrine needed · any hypotension or collapse · stridor, wheeze or other severe breathing problem · known severe asthma · previous biphasic reaction · arrives at night · lives far away or transport back is difficult · no adult at home to watch them
+        - **Admit every child under 16.** Do not discharge a child the same day after true anaphylaxis
+        - Before discharge, sit or stand the patient up and check for dizziness
         - **Warn every patient and carer that symptoms can return** hours after they settle — a second (biphasic) reaction occurs in roughly 5–20% of cases, usually within 4–12 hours. Tell them to come straight back
