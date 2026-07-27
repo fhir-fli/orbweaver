@@ -25,7 +25,21 @@
 #     tox practice (single-dose activated charcoal preferred within 1 h
 #     for selected ingestions); OE may add charcoal guidance.
 #
-# ⚠️ CONTENT FLAGS — OPEN (audit pass 2026-07-26, awaiting OE):
+# ✅ OE-CONFIRMED, APPLIED 2026-07-27: activated charcoal guidance added
+#    (1 g/kg PO/NGT within 1 h; not if not fully awake; never intubate
+#    solely to give it) — OE called this the most impactful decontamination
+#    tool available in an LMIC setting. Sympathomimetic Rx reordered to put
+#    BENZODIAZEPINES FIRST (they usually settle the hypertension and
+#    tachycardia without a second agent). METHANOL gained folic acid
+#    1 mg/kg (or 50 mg) IV q4–6h and an explicit haemodialysis referral
+#    trigger (pH ≤7.15, visual symptoms, seizures, coma, or deterioration
+#    despite antidote) — OE called the dialysis omission the largest gap on
+#    the page. Vodka example disambiguated to ~three 40 ml shots (≈126 ml).
+#    ✓ Confirmed no change: gastric-lavage stance, physostigmine-avoid-in-TCA
+#    (safest for a setting with limited monitoring), NaHCO3 for TCA,
+#    benzodiazepine-first for toxin seizures, and the ethanol dosing itself.
+#
+# (historical) CONTENT FLAGS — OPEN (audit pass 2026-07-26, awaiting OE):
 #   - METHANOL section is ANTIDOTE-ONLY. The printed ethanol dosing
 #     itself checks out (1.8 mL/kg of 43% ≈ 0.61 g/kg load; 0.2–0.4
 #     mL/kg/hr ≈ 0.07–0.14 g/kg/hr maintenance — both textbook, and
@@ -71,6 +85,7 @@ topic:
         - 12-lead ECG
         - Seizures are a neurological emergency and should be treated promptly with diazepam
         - Gastric lavage: almost **NEVER INDICATED**
+        - Consider **single-dose activated charcoal 1 g/kg PO/NGT within 1 hour** of ingestion, for substances known to be adsorbed. Do not give it to a patient who is not fully awake, and never intubate solely in order to give it
 
     - type: "prose"
       title: "Indications for ICU admission"
@@ -88,7 +103,7 @@ topic:
         - **Adrenergic / Sympathomimetics**
           - Cocaine, amphetamines (crystal meth, Adderall), pseudoephedrine
           - Presentation: HTN, tachycardia, mydriasis, anxiety, delirium, delusions
-          - Rx: supportive (IVF, benzodiazepines, anti-hypertensives)
+          - Rx: supportive — **benzodiazepines first** (they usually settle the hypertension and tachycardia on their own), plus IV fluids; anti-hypertensives only if still needed
         - **Anticholinergic / Tricyclic antidepressants (TCA) / antihistamines**
           - Presentation: hyperpyrexia, cutaneous vasodilation (flushing), decreased saliva, mydriasis, urinary retention, dysrhythmias
           - Rx:
@@ -96,4 +111,6 @@ topic:
             - NaHCO3 for TCA
         - **Methanol**
           - Presentation: delirium, loss of vision
-          - Rx: oral by NGT — 1.8 ml/kg of 43% ethanol (e.g. 40 ml shots of vodka in a 70 kg adult); maintenance 0.2–0.4 ml/kg/hour of 43% ethanol
+          - Rx: oral by NGT — 1.8 ml/kg of 43% ethanol (roughly **three 40 ml shots, ≈126 ml**, in a 70 kg adult); maintenance 0.2–0.4 ml/kg/hour of 43% ethanol
+          - **Plus folic acid 1 mg/kg (or 50 mg) IV every 4–6 hours** — it speeds conversion of formic acid to CO₂ and water, and is cheap and available
+          - **Refer urgently for haemodialysis if available:** pH ≤ 7.15, visual symptoms, seizures, coma, or deterioration despite the antidote. Dialysis clears both methanol and formate and is the definitive treatment

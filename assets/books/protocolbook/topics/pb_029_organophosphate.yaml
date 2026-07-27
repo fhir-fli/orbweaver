@@ -34,7 +34,15 @@
 #   - Atropinisation endpoints ✓ (has 3 of the usual 5 — dry axillae
 #     and non-pinpoint pupils not printed; cosmetic).
 #
-# ⚠️ CONTENT FLAG — OPEN (audit pass 2026-07-26, awaiting OE):
+# ✅ OE-RESOLVED 2026-07-27, NO CHANGE NEEDED: paediatric atropine 0.02 mg/kg
+#    is what the 2025 AHA guideline table prints, and because the regimen
+#    DOUBLES every 5 min the practical difference from a 0.05 mg/kg start is
+#    one cycle. Keep 0.02. The pralidoxime prose block was reviewed and
+#    called well-calibrated (AHA gives it Class 2b; a 2026 umbrella review
+#    found neither clear benefit nor harm; atropine remains the mainstay).
+#    Atropinisation endpoints match the AHA wording exactly.
+#
+# (historical) CONTENT FLAG — OPEN (audit pass 2026-07-26, awaiting OE):
 #   - Paediatric atropine bolus printed 0.02 mg/kg. WHO uses 0.02
 #     mg/kg, but a number of current tox references start children at
 #     0.05 mg/kg in OP poisoning. Since the regimen doubles q5min the

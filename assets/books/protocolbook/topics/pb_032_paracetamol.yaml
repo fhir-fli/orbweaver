@@ -165,6 +165,7 @@ topic:
                   box:
                     title: "Immediate paracetamol level"
                     bullets:
+                      - "If the level will not be back before 8 h from ingestion, START NAC NOW and stop it later if the level turns out to be low — NAC loses effect after 8 h, so do not wait on the lab"
                       - "→ plot level on nomogram (below)"
                 - label: ">8 hrs"
                   box:
@@ -176,7 +177,7 @@ topic:
         - type: "image"
           path: "assets/books/protocolbook/images/pb_paracetamol_nomogram.png"
           size: "full"
-          caption: "Rumack-Matthew nomogram — acetaminophen plasma concentration vs hours postingestion. Treatment should be administered if level is above the solid (treatment) line."
+          caption: "Rumack-Matthew nomogram — acetaminophen plasma concentration (µg/mL) vs hours post-ingestion. Treat if the level is above the solid (treatment) line, which passes through 150 µg/mL at 4 hours."
 
         - type: "table"
           title: "N-acetylcysteine (NAC) — 2-bag regimen, ALL weights"

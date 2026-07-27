@@ -21,7 +21,14 @@
 #     topic: cross-link once the Paediatric Convulsions page (p.42)
 #     is authored.
 #
-# CONTENT FLAG for the later OE / content pass (rendered faithfully):
+# ✅ OE-REVIEWED 2026-07-27: page confirmed accurate as written. Only change
+#    applied — CXR timing 6 h → "6–8 h", the window the literature cites.
+#    ✓ Confirmed: no prophylactic antibiotics (a double-blind RCT in an LMIC
+#    setting found no benefit in kerosene pneumonitis), salbutamol with
+#    epinephrine avoided (myocardial sensitisation), NPO + maintenance IVF,
+#    24 h monitoring, and ICU for severe distress unresponsive to treatment.
+#
+# (historical) CONTENT FLAG for the later OE pass:
 #   - "Do NOT start prophylactic antibiotics" — matches current
 #     evidence (antibiotics only for secondary bacterial pneumonia);
 #     steroids likewise not indicated (book doesn't mention). Fine.
@@ -73,7 +80,7 @@ topic:
                 title: "Observe"
                 bullets:
                   - "If symptoms develop in hospital → treat (below)"
-                  - "At 6 h post-ingestion, if still asymptomatic → chest X-ray"
+                  - "At 6–8 h post-ingestion, if still asymptomatic → chest X-ray"
                   - "CXR normal → monitor 24 h, then discharge if well"
                   - "CXR abnormal → treat (below)"
         - decision: "Respiratory distress?"

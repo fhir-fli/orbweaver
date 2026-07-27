@@ -84,7 +84,7 @@ topic:
       column_flex: [1, 6]
       rows:
         - cells: ["0", "no nausea and no vomiting"]
-        - cells: ["1", "—"]
+        - cells: ["1", "mild nausea with no vomiting"]
         - cells: ["2", "—"]
         - cells: ["3", "—"]
         - cells: ["4", "intermittent nausea w/ dry heaves"]
@@ -98,7 +98,7 @@ topic:
       column_flex: [1, 6]
       rows:
         - cells: ["0", "no anxiety, at ease"]
-        - cells: ["1", "—"]
+        - cells: ["1", "mildly anxious"]
         - cells: ["2", "—"]
         - cells: ["3", "—"]
         - cells: ["4", "moderately anxious, or guarded"]
