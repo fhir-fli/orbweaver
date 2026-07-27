@@ -3,6 +3,17 @@
 # Three-tier triage: emergency / priority (3TPR-MOB) / non-urgent.
 # Emergency has 4 sign-clusters (Airway, Circulation, Disability,
 # Severe Diarrhoea) that all feed the same 9-step action list.
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). The three-tier Emergency/Priority/Non-urgent scheme
+#    was confirmed consistent with the WHO ETAT framework, and all
+#    emergency sign-clusters (airway/breathing, circulation, disability,
+#    severe diarrhoea) verified appropriate. The 9-step action list is
+#    appropriate for the setting. Step 7's empiric D10% 5 mL/kg
+#    (= 500 mg/kg, within the standard 200–500 mg/kg range) was
+#    specifically endorsed as a reasonable LMIC step given how common
+#    hypoglycaemia is in critically ill children here; diazepam IV/PR
+#    likewise appropriate where midazolam may be unavailable.
 # ============================================================
 
 topic:

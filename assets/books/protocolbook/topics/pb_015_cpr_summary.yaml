@@ -4,6 +4,35 @@
 # Schema feature exercised:
 #   - TableCell span: cells covering multiple columns (most rows share
 #     one value across Adults/Children/Infants; a few vary per column)
+#
+# ✅ OE-CONFIRMED CHANGES APPLIED (Grey's OpenEvidence pass, 2026-07-26).
+#   Two of these were rated HIGH — this page had been silently
+#   flattening an age difference the 2025 guidelines widened.
+#
+#   1. 🔴 HIGH — RESCUE BREATHS was ONE span-3 cell reading "1 breath
+#      every 3–5 seconds (12–20 breaths/min)" for every age. Adults and
+#      children now diverge sharply: adults 1 breath every 5–6 s
+#      (10–12/min), children and infants 1 breath every 2–3 s
+#      (20–30/min). Split into an Adults cell + a span-2 Children/
+#      Infants cell; the Newborns 30–50/min line rides with the
+#      paediatric cell where it belongs.
+#
+#   2. 🔴 HIGH — VENTILATIONS WITH ADVANCED AIRWAY had the same
+#      problem: one span-3 cell at "1 breath every 6–8 seconds
+#      (8–10 breaths/min)". That is right for ADULTS and roughly a
+#      THIRD of the correct paediatric rate. Split the same way:
+#      adults 6–8 s (8–10/min), children/infants 2–3 s (20–30/min).
+#
+#   3. MODERATE — COMPRESSION RATE "At least 100/min" → "100–120/min",
+#      matching p.14 (rates >120/min degrade compression depth).
+#
+#   Refs: Joyner 2026 Pediatrics (Part 6, Pediatric BLS 2025);
+#   Kleinman 2025 Circulation (Part 7, Adult BLS); Sawyer 2023.
+#
+# ✓ OE-VERIFIED, NO CHANGE: compression depths (adults ≥5 cm; children
+#   ~1/3 AP ≈ 5 cm; infants ~1/3 AP ≈ 4 cm) all correct; the newborn
+#   3:1 C:V ratio correct per the 2025 neonatal guidelines; C-A-B vs
+#   newborn A-B-C; recognition criteria; interruption limits.
 # ============================================================
 
 topic:
@@ -39,7 +68,7 @@ topic:
 
         - cells:
             - "Compression Rate"
-            - text: "At least 100/min"
+            - text: "100–120/min"
               span: 3
 
         - cells:
@@ -88,14 +117,20 @@ topic:
         - cells:
             - "Rescue breaths (unresponsive with pulse)"
             - text: |
-                1 breath every 3–5 seconds
-                (12–20 breaths/min)
+                1 breath every 5–6 seconds
+                (10–12 breaths/min)
+            - text: |
+                1 breath every 2–3 seconds
+                (20–30 breaths/min)
                 Newborns: 30–50 breaths/min
-              span: 3
+              span: 2
 
         - cells:
             - "Ventilations with advanced airway (intubated)"
             - text: |
                 1 breath every 6–8 seconds
                 (8–10 breaths/min)
-              span: 3
+            - text: |
+                1 breath every 2–3 seconds
+                (20–30 breaths/min)
+              span: 2

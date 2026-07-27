@@ -4,6 +4,17 @@
 # Schema feature exercised:
 #   - RowBlock: side-by-side layout for the age and height tables,
 #     cutting ~250 px of vertical space vs. stacking.
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). Values judged reasonable approximations, broadly
+#    consistent with WHO 50th-percentile weights. OE noted the general
+#    caveat that length-based methods (Broselow, PAWPER) outperform
+#    age-based ones — but our page already carries the two adjustments
+#    that matter: the underweight rule (use 2 age-categories younger /
+#    1 height-category above) and the "severe malnutrition — charts are
+#    inaccurate" warning, which OE called critically important and
+#    correctly highlighted. Limitations appropriately acknowledged;
+#    no change recommended.
 # ============================================================
 
 topic:
@@ -55,7 +66,7 @@ topic:
 
     - type: "prose"
       markdown: |
-        **Underweight:** use **2 age-categories younger** *or* **1 height-category above**.
+        **Underweight:** use **2 age-categories younger** or **1 height-category above**.
 
     - type: "prose"
       highlight: true

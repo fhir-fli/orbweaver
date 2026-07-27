@@ -5,6 +5,15 @@
 # data sources per clinician verification:
 #   - RR/HR centiles align with Fleming et al. 2011 Lancet systematic
 #     review (143,346 children, 69 studies).
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). The Fleming 2011 attribution above was checked and
+#    confirmed correct — it is the definitive systematic review of
+#    paediatric vital-sign reference ranges, and our table values are
+#    consistent with its published centile charts. Carrying the 10th,
+#    50th and 90th centiles was called out as clinically useful for
+#    identifying tachycardia/tachypnoea (>90th) and brady- states
+#    (<10th) rather than relying on a single "normal" number.
 # ============================================================
 
 topic:
