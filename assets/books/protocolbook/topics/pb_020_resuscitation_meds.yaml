@@ -5,6 +5,48 @@
 # Kept separate rather than merged into one 3-col table because
 # medication names and dose instructions are both long; a 3-col
 # layout at 393 px phone width would be cramped.
+#
+# ✅ OE-CONFIRMED CHANGES APPLIED (Grey's OpenEvidence pass, 2026-07-26):
+#
+#   1. 🔴 HIGH — THE ALTERNATIVE D10% RECIPE WAS WRONG. Printed
+#      "4 ml D5% with 1 ml D50%" yields 700 mg in 5 ml = **D14%**, not
+#      D10% — a 40% overshoot from a formula a clinician would trust
+#      at the bedside. Corrected to **8 ml D5% with 1 ml D50%**.
+#      ⚠️ NOTE: this is NOT the number OE suggested. OE proposed
+#      9 ml D5% + 1 ml D50% and called it "≈ D9.5%, close enough".
+#      Solving it exactly: (500x + 50y)/(x+y) = 100 → 400x = 50y →
+#      y = 8x, so 1 ml D50% + 8 ml D5% = 9 ml of EXACTLY D10.00%.
+#      Verified all four recipes arithmetically:
+#        8 ml NS  + 2 ml D50% = 1000 mg /10 ml = D10.00%  (printed, ✓)
+#        4 ml D5% + 1 ml D50% =  700 mg / 5 ml = D14.00%  (printed, ✗)
+#        9 ml D5% + 1 ml D50% =  950 mg /10 ml = D 9.50%  (OE's)
+#        8 ml D5% + 1 ml D50% =  900 mg / 9 ml = D10.00%  (applied)
+#      Exact beats approximate for a mixing instruction, and it
+#      mirrors the "8 + 2" shape already on the page. Grey should fix
+#      the source PDF, and may want to sanity-check this deviation.
+#
+#   2. MODERATE — paediatric EPINEPHRINE had no ceiling. Added
+#      "max 10 ml (= 1 mg)", matching the same fix on p.13.
+#
+# ✓ OE-VERIFIED, NO CHANGE: adult epinephrine 1 mg in 10 ml + 20 ml
+#   flush; adult dextrose 50 ml of D50% (25 g); adult diazepam
+#   0.15 mg/kg (≈10.5 mg at 70 kg, inside the 5–10 mg label range);
+#   adult diazepam PR 4 supp (=10 mg, inside 10–20 mg); the PR
+#   weight bands and the "DO NOT USE in neonates" warning; PRBC
+#   10 ml/kg and whole blood 20 ml/kg ≈ 1 g/dL.
+#
+# ⚠️ OPEN — GREY'S CALL, NOT APPLIED (both dose changes OE hedged on):
+#   - PAEDIATRIC DIAZEPAM IV 0.3 mg/kg exceeds the FDA-approved
+#     0.2 mg/kg (max 8 mg), though WHO/LMIC references do use 0.3.
+#     ⚠️ INTERNAL INCONSISTENCY I found while checking: 0.3 mg/kg is
+#     also on p.42 (twice), but p.29 organophosphate says 0.2 mg/kg.
+#     So the book already disagrees with itself. Whichever way Grey
+#     goes, it must change in THREE places (here + p.42 ×2) or ONE
+#     (p.29), not one. Adults are consistently 0.15 (here + p.101).
+#   - PHENOBARBITAL non-neonatal load 15 mg/kg vs the more standard
+#     20 mg/kg (our neonatal 20 mg/kg is correct and matches p.42).
+#     OE rated this LOW and said "consider". Maintenance 5 mg/kg/day
+#     is at the top of the 3–5 range but acceptable.
 # ============================================================
 
 topic:
@@ -24,10 +66,10 @@ topic:
       rows:
         - cells:
             - "Epinephrine (Adrenaline)"
-            - "**0.1 ml/kg 1:10,000** IV · mix 1 ml of 1:1,000 in 9 ml NS · flush 10 ml NS"
+            - "**0.1 ml/kg 1:10,000** IV, **max 10 ml (= 1 mg)** · mix 1 ml of 1:1,000 in 9 ml NS · flush 10 ml NS"
         - cells:
             - "Dextrose 10%"
-            - "**5 ml/kg** IV (mix 8 ml NS with 2 ml D50%, or 4 ml D5% with 1 ml D50%)"
+            - "**5 ml/kg** IV (mix 8 ml NS with 2 ml D50%, or 8 ml D5% with 1 ml D50%)"
         - cells:
             - "Diazepam PR ~2.5 mg suppository"
             - |

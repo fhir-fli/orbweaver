@@ -1,6 +1,13 @@
 # ============================================================
 # ProtocolBook p.23 (bottom) — Malaria: Severe Rx
 # Parenteral regimen ladder for inpatient / severe malaria.
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). The three-tier parenteral ladder (artesunate →
+#    artemether → quinine) confirmed consistent with WHO, and the
+#    artesunate weight-band dosing verified correct — this is the
+#    page that was used to cross-check and fix the reversed bands on
+#    p.22 in d180100, and it holds up independently.
 # ============================================================
 
 topic:

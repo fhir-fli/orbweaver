@@ -3,6 +3,22 @@
 # PO regimens for outpatient treatment of uncomplicated malaria.
 # Three weight-band dosing tables: Coartem, Artesunate/Amodiaquine,
 # and DHA/Piperaquine.
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). ALL THREE weight-band tables checked row by row and
+#    confirmed correct per WHO:
+#      Coartem      5–14 kg 1 tab BID · 15–24 kg 2 · 25–34 kg 3 ·
+#                   >35 kg 4, all × 3 days ✓
+#      Artesunate/Amodiaquine — matches the WHO-prequalified
+#                   fixed-dose combination bands ✓
+#      DHA/Piperaquine — matches WHO exactly ✓
+#    The "first two doses 8 hours apart" note is correct per WHO ✓.
+#    The high-fat-meal warning for DHA/piperaquine was specifically
+#    confirmed and matters: a high-fat meal can raise piperaquine
+#    bioavailability ~3-fold, and piperaquine prolongs QTc — so this
+#    is a cardiotoxicity precaution, not a tolerability note. (Small
+#    amounts of fat in ordinary meals do not meaningfully change
+#    exposure.) Refs: Reuter 2015; Chan 2018 Lancet ID; Annerberg 2011.
 # ============================================================
 
 topic:

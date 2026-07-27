@@ -1,5 +1,39 @@
 # ============================================================
 # ProtocolBook p.23 — Malaria: Complications & Co-infection
+#
+# ✅ OE-CONFIRMED CHANGES APPLIED (Grey's OpenEvidence pass, 2026-07-26):
+#
+#   1. MODERATE — AKI section made FUROSEMIDE the hero. As printed,
+#      "if decreasing urinary output, add Lasix … the most important
+#      part of treatment is to maintain a normal urinary output"
+#      reads as: make urine with a diuretic. Furosemide does not
+#      improve renal outcomes in AKI and actively worsens injury in a
+#      volume-depleted child — which is exactly the malaria patient.
+#      Reframed to lead with fluid balance and effective antimalarial
+#      therapy, with furosemide explicitly reserved for fluid
+#      OVERLOAD. Dose and interval preserved. The "exclude pre-renal
+#      causes" step was already there and is what makes this safe.
+#
+#   2. MODERATE — DELAYED HAEMOLYSIS follow-up was a single control
+#      CBC at 2 weeks. Post-artesunate delayed haemolysis needs
+#      weekly CBC plus haemolysis markers for 4 weeks; one snapshot
+#      at 2 weeks can miss both an earlier nadir and a later one.
+#      Markers named (LDH, bilirubin, haptoglobin, reticulocytes) to
+#      make it actionable — same vocabulary as the p.75 workup page.
+#
+# ✓ OE-VERIFIED, NO CHANGE: treatment-failure logic incl. positive
+#   slide at 72 h → second-line; the co-infection section (the "no
+#   clinical or lab finding differentiates bacterial infection from
+#   malaria" pearl was called out as an important LMIC teaching
+#   point, and LP-before-antibiotics is correct).
+#
+# ⚠️ OPEN — GREY'S CALL, NOT APPLIED: item (e) starts IRON + folic
+#   acid for Hgb < 9 DURING the acute episode, for 14 days. OE rated
+#   this LOW and suggested deferring iron until after the acute
+#   illness and extending to ~3 months. Both parts are real (iron
+#   during acute infection is debated in malaria-endemic settings,
+#   and 14 days is too short to refill stores), but this changes
+#   therapy timing, so it waits for Grey.
 # ============================================================
 
 topic:
@@ -20,9 +54,10 @@ topic:
         b) **Hyperpyrexia:** tepid sponging, paracetamol
         c) **Convulsions:** see general convulsion treatment
         d) **Acute kidney injury:**
-          i) Exclude pre-renal causes
-          ii) Check fluid balance
-          iii) If decreasing urinary output, add **Lasix 1 mg/kg/dose** every 6–12 h — **the most important part of treatment is to maintain a normal urinary output**
+          i) Exclude pre-renal causes — correct hypovolaemia first
+          ii) **Careful fluid balance is the most important part of treatment**
+          iii) Effective antimalarial treatment is the definitive therapy
+          iv) **Furosemide (Lasix) 1 mg/kg/dose every 6–12 h is for fluid OVERLOAD only** — it does not improve renal recovery, and worsens injury in a volume-depleted child
         e) **Anemia:** if Hgb < 9, start on **iron + folic acid × 14 days** initially
         f) **Treatment Failure:**
           i) Consider other causes of illness / co-morbidity
@@ -30,7 +65,7 @@ topic:
           iii) If on PO antimalarials and still febrile with a **positive blood slide** after **72 h** → check compliance; if treatment failure, proceed to **second-line Rx**
         g) **Delayed haemolysis:**
           i) ~7 % of children with hyperparasitemia
-          ii) All children with severe malaria should have a **control CBC at 2 weeks** after discharge
+          ii) All children treated for severe malaria should have a **weekly CBC plus haemolysis markers (LDH, bilirubin, haptoglobin, reticulocytes) for 4 weeks** after discharge
 
     - type: "prose"
       title: "Co-infection"

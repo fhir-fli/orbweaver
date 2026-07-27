@@ -12,6 +12,25 @@
 #   Merge arrows → severity
 #   Severity row:               [6 | 2 | 4]
 #   Yes arrow row:              [6 | 6]
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). Severe-malaria criteria confirmed broadly consistent
+#    with WHO. Artesunate weight-differentiated dosing verified correct
+#    (this is the page whose REVERSED bands were fixed in d180100 —
+#    the correction now reads clean against WHO). Dosing schedule at
+#    0, 12, 24 h then daily ✓. The "DO NOT bolus unless diarrhoea with
+#    signs of severe dehydration" rule was specifically endorsed as
+#    consistent with FEAST (boluses increased mortality in febrile
+#    African children with impaired perfusion) and an important
+#    LMIC-specific teaching point.
+#
+# ⚠️ NOTED, NOT CHANGED (OE rated LOW, acceptable as-is):
+#    - Our "≥ 2 convulsions" is marginally more conservative than
+#      WHO's ">2 in 24 h" — triggers severe classification one seizure
+#      earlier. Erring toward treating as severe is right here.
+#    - Our severe-anaemia haemoglobin threshold differs slightly from
+#      the WHO cut-off; OE judged ours acceptable and suggested only
+#      that the distinction could be noted. Not added.
 # ============================================================
 
 topic:
