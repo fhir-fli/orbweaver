@@ -10,10 +10,24 @@
 #     discharge 165) dropped.
 #   - CRS table's blank first-column header (source spans the title
 #     "Clinical Respiratory Score" over it) → labelled "Sign".
-#   - Discharge criteria are printed in a 2-column interleaved list
-#     (1–6); flattened to a single ordered bullet list, order kept.
+#   - Discharge criteria are printed in a 2-column list that reads
+#     COLUMN-first (left 1,2,3 / right 4,5,6 — the source misprints
+#     the "4" as a second "2"). Flattened to a single bullet list in
+#     the source's numbered order. All six are conjunctive, so nothing
+#     clinical turns on the order.
 #   - "If available, consider ICU admission for CRS ≥6" rendered as a
 #     highlighted callout note.
+#
+# ⚠️ UNIT SLIP corrected (2026-07-28, Grey's standing typo/unit-slip
+#   authorisation — the book contradicts itself elsewhere):
+#   - Discharge criterion printed "pO2 >94% on room air". A percentage
+#     measured on room air is a SATURATION, not a partial pressure
+#     (pO2 is mmHg/kPa). The book writes "spO2" everywhere else,
+#     including twice on this same page ("Start Oxygen if spO2 <94%")
+#     and "O2sat" in the CRS table; "pO2" occurs exactly once in all
+#     95 topics. Rendered "SpO2 >94% on room air". Verified against
+#     the source PDF p.62 — the source prints it too, so Grey should
+#     fix the source PDF.
 # ============================================================
 
 topic:
@@ -78,8 +92,8 @@ topic:
       title: "Discharge Criteria"
       markdown: |
         - Improved symptoms
-        - pO2 >94% on room air
         - Afebrile x 24hrs
-        - Hgb >5
         - Good PO intake
+        - SpO2 >94% on room air
+        - Hgb >5
         - Pain controlled without morphine

@@ -170,3 +170,169 @@ zinc 10–20 mg × 10–14 d · ciprofloxacin 15 mg/kg BD for dysentery · salbu
 for nephrotic syndrome · nitrofurantoin 6 mg/kg ÷ q6h · DKA fluid maths (80 mL/kg +
 2× maintenance − bolus, max 40 mL/kg in 4 h, "never alternate D10 & NS") · D5 bag
 recipe (50 mL D50 + 450 mL = exactly 5%) · mannitol 0.5–1 g/kg.
+
+---
+
+# E. SICKLE CELL GROUP AUDIT (pp.59–62) — flags raised 2026-07-28
+
+Second advance-pass group, ahead of where Grey is reading. 4 topics. Every dose
+cross-checked line by line against **Uganda Clinical Guidelines 2023 §11.1.3**
+(pp.579–588), which carries a full SCD chapter — the single best comparator this
+group could have. Source PDF pp.59–62 re-extracted to confirm the digitization is
+faithful (it is, with one exception, E10).
+
+**Two things applied directly** under the typo/unit-slip authorisation (E12, E13).
+**Everything below in E1–E11 is NOT changed — it needs Grey/OE.**
+
+## E1 🔴 folic acid 5 mg daily is prescribed alongside monthly SP — on the same list (`pb_059`)
+The p.59 discharge regimen gives **folic acid 5 mg PO daily** and **monthly
+sulfadoxine-pyrimethamine chemoprophylaxis**, for life, to every child.
+
+That is the exact combination this audit already ruled against. `pb_075` line 139,
+applied at `24fbe4d`, now reads: *"Do NOT give 5 mg folic acid to anyone taking an
+antifolate — sulfadoxine-pyrimethamine (SP, used for malaria chemoprevention) or
+cotrimoxazole prophylaxis. High-dose folate rescues the parasite and roughly doubles
+antimalarial treatment failure. Keep folic acid at ≤1 mg/day, ideally 0.4 mg."*
+
+**The book now contradicts itself**, and the contradiction lands on the largest
+standing prescription in the group.
+
+⚠️ Important: **UCG 2023 prescribes both too** — "give folic acid 5 mg daily for
+life" and monthly SP, in the same table. So this is not a transcription error and
+not a book-vs-UCG divergence; it is **UCG-vs-the-interaction-evidence**, and we have
+already taken the evidence side once. Grey has to decide which way the book goes.
+Options worth putting to OE rather than picking myself: keep 5 mg and separate it in
+time from the monthly SP dose; drop to 1 mg daily; or accept UCG as-is for SCD
+specifically on the grounds that SCD folate demand from chronic haemolysis is
+genuinely higher than the general anaemia case `pb_075` was written about.
+**Whatever is decided, the two pages must be made to agree.**
+
+## E2 🔴 acute chest syndrome — no incentive spirometry (`pb_062`)
+UCG's ACS block says, explicitly: **"Start incentive spirometry (or blowing of a
+balloon) early in acute chest syndrome."** It is absent from `pb_062` and, by grep,
+from all 95 topics.
+
+This is the highest-yield thing missing from the page. It has RCT support in exactly
+this population (Bellet, NEJM 1995 — incentive spirometry in SCD with chest or back
+pain markedly reduced pulmonary complications), it is in the national guideline, and
+UCG supplies a zero-cost substitute for when no spirometer exists. Nothing else on
+this page costs so little.
+
+## E3 🔴 acute chest syndrome — no bronchodilator (`pb_062`)
+UCG ACS: **salbutamol inhaler 2–4 puffs prn, or nebulised 5 mg (2.5 mg for under-5s).**
+`pb_062` has none.
+
+The page's own Clinical Respiratory Score grades wheeze in 3 of its 6 rows and scores
+"severe wheezing" as a 2 — so the page measures bronchospasm and then never treats
+it. Availability is not the reason: salbutamol is used freely elsewhere in the book
+(`pb_052`, `pb_127`, `pb_030`, `pb_142`).
+
+## E4 🔴 stroke — transfusion has a floor and no ceiling (`pb_061`)
+The page says **"Simple transfusion, PRBCs, to Hgb >9"**. UCG agrees on the trigger
+("transfuse if Hb <9 g/dl"), so the floor is right. The problem is what is not said:
+
+- **No upper limit.** In acute sickle stroke the accepted ceiling is about **10 g/dL**
+  — raising the haematocrit without lowering HbS raises viscosity and can extend the
+  infarct. "To Hgb >9" with no cap invites transfusion to 12–13.
+- **No mention of exchange transfusion** (target HbS <30%), which is the guideline
+  standard for acute stroke where it exists. May well be out of reach at a district
+  hospital — but if so, that should be a stated fallback, not an omission.
+- **No neuroimaging or referral line.** UCG's stroke block ends "Refer for
+  neuroimaging and advanced management." Adults with SCD have a substantial rate of
+  *haemorrhagic* stroke, which transfusion does not treat.
+
+## E5 🔴 priapism is an admission criterion with no treatment anywhere in the book
+p.59 admits for **priapism >4 hours**. Grep across all 95 topics **and** the 84-drug
+formulary: "priapism" appears only in that one admission line and the `pb_059` tag
+list. There is no management, no drug, no referral.
+
+>4 hours is ischaemic priapism — a compartment-syndrome-equivalent emergency where
+delay causes permanent impotence, and it is a common SCD presentation in exactly this
+age group. Standard is aspiration and irrigation of the corpora ± intracavernosal
+sympathomimetic (phenylephrine; etilefrine is the agent named in African SCD
+literature), plus urology involvement. The book currently admits the patient and then
+falls silent. **Worth asking OE for a district-hospital-realistic priapism block.**
+
+## E6 🟡 the retic count is drawn and never used — no aplastic-crisis arm (`pb_060`)
+Initial management draws "CBC, retic count". The cascade then branches on splenic
+sequestration (Hgb drop >2 g/dL + sudden splenomegaly) but has **no branch for
+aplastic crisis** — the other cause of acute anaemia in SCD, which UCG lists
+alongside sequestration. It is distinguished by a **low** reticulocyte count with no
+splenomegaly, typically post-Parvovirus B19, and it needs transfusion rather than
+observation. As written, that child passes every decision and lands in "Supportive
+Care". The one test that separates the two is already being sent.
+
+## E7 🟡 ceftriaxone — three different numbers in four pages (`pb_060`, cf. `pb_061`/`pb_062`)
+- `pb_060` fever box: **100 mg/kg OD IV, no maximum**
+- `pb_061` infection row: **80 mg/kg IV daily, max 2 g**
+- `pb_062` antibiotics: **80 mg/kg IV daily, max 2 g**
+
+UCG uses 80 mg/kg (80–100 for ACS) with an adult ceiling of 1–2 g. The 100 mg/kg on
+p.60 is defensible on its own terms — fever in a functionally asplenic child is
+presumed sepsis — but **the missing cap is a real hazard**: a 60 kg adolescent in
+crisis with fever is prescribed 6 g. Compare `pb_054`, which does cap it (max 4 g/day).
+**`pb_045` (paediatric sepsis) carries the same uncapped 100 mg/kg line** — if this is
+fixed, fix both.
+
+## E8 🟡 hydroxyurea threshold is ~2× stricter than the national guideline (`pb_059`)
+Book: "Frequent crises **>5/year**". UCG 2023: "Frequent crises: **>3 crises in a
+year**", and UCG adds an indication the book does not have — **"pain interfering with
+activities of daily living"**. TCD >200 cm/s, prior ACS and prior stroke all match.
+
+## E9 🟡 the hydroxyurea hedge is out of date (`pb_059`)
+Book: "Likely beneficial in all children with Sickle Cell Disease, although **larger
+studies are still pending**."
+
+They are not pending any more. REACH (NEJM 2019, 606 children across Angola, DRC,
+Kenya and **Uganda**) and NOHARM (Uganda) settled safety and efficacy of hydroxyurea
+in sub-Saharan African children, including in a malaria-endemic setting. UCG 2023 has
+already moved: **"Children of 9 months and above should be initiated on hydroxyurea."**
+The book's own "start after 9 months" and "20 mg/kg" match UCG exactly — only the
+hedge is stale.
+
+## E10 🟡 the splenic-sequestration box has an invisible third bullet (`pb_060`)
+The source PDF's text layer contains a third item — **"c. Otherwise treat"** — that
+the printed box **clips and does not display**. I confirmed this by rendering p.60 at
+150 dpi: only a and b are visible. Our YAML matches what a reader sees, so nothing is
+wrong in the app.
+
+Two things for Grey: (1) the sentence is **truncated in the source document itself**
+— "Otherwise treat" what? — so only he knows what it was meant to say; (2) the source
+text box needs enlarging or the line will stay invisible in the PDF.
+
+While here — UCG's one explicit warning on this complication is also absent from the
+box: **"Avoid splenectomy in acute sequestration (high mortality)."**
+
+## E11 🟡 ACS discharge at "Hgb > 5" vs the same page's transfuse-below-9 (`pb_062`)
+The page transfuses for Hgb <9 on admission and then discharges at Hgb >5. p.59's
+admission criteria include "symptomatic with Hgb <7". So a child can meet the ACS
+discharge criteria at Hgb 5.5 while simultaneously meeting an admission criterion.
+Possibly deliberate — SCD baseline is 6–9 g/dL and re-admission thresholds differ
+from steady-state ones — but it reads as an internal contradiction and should be
+either justified or aligned.
+
+## ✅ APPLIED 2026-07-28 (typo/unit-slip authorisation, no clinical change)
+- **E12 — `pb_062` "pO2 >94% on room air" → "SpO2 >94% on room air".** A percentage
+  measured on room air is a saturation, not a partial pressure. The book writes spO2
+  everywhere else *including twice on this same page*, and the CRS table on this page
+  says "O2sat"; "pO2" occurred exactly once in all 95 topics. **The source PDF prints
+  it too — Grey should fix the source.**
+- **E13 — `pb_062` discharge criteria re-ordered** to the source's own numbering. The
+  source is a 2-column list that reads column-first (and misprints its "4" as a second
+  "2"); we had flattened it row-first while the file header claimed "order kept". All
+  six criteria are conjunctive, so nothing clinical turns on it.
+
+## ✓ VERIFIED FINE in this group (no action)
+Penicillin V prophylaxis 125 mg BD / 250 mg BD by age — **exact UCG match** · SP
+chemoprophylaxis bands ½ / 1 / 2 / 3 tabs by age — **exact UCG match** · erythromycin
+250 mg q12h as the sulphur-allergy alternative — exact UCG match · hydroxyurea 20 mg/kg
+from 9 months — exact UCG match · TCD >200 cm/s — exact UCG match · transfuse-if-Hb<9
+in both stroke and ACS — UCG match · cefotaxime 50 mg/kg q8h max 2 g · azithromycin
+10 mg/kg day 1 then 5 mg/kg (UCG uses erythromycin; azithromycin is the better agent) ·
+paracetamol 15 mg/kg q6h paeds / 650 mg q6h adult (UCG 10–15 mg/kg 6–8h) · the D10
+recipe "8 mL NS + 2 mL D50 = D10%" — **arithmetically exact, and the correct one**
+(contrast the 9.5% recipe flagged at D5 in `pb_045`) · O2 for spO2 <94% — UCG stroke
+target · "1.5 × MIVF, goal euvolemia, DO NOT BOLUS if not hypotensive" — appropriately
+conservative and consistent with UCG's restricted-fluid stance in ACS · admission
+criteria including the ≥2 g/dL drop — matches UCG's transfusion indications · CRS
+table transcribed exactly · p.61 transcribed exactly.
