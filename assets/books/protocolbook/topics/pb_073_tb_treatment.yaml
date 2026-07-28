@@ -32,6 +32,37 @@
 #     "military→miliary" slip corrected on p.72). Grey should fix the
 #     source PDF.
 #
+# ⚠️ DROPPED ZERO corrected 2026-07-28 (Grey's standing typo/unit-slip
+#   authorisation — the book contradicts itself elsewhere, three ways):
+#   - Source p.73 prints the adjunctive steroid as "2mg/kg (max
+#     6mg/day) x 4 weeks". Rendered "max 60 mg/day".
+#     VERIFIED VISUALLY at 200 dpi (pb73-073.png) — the source really
+#     does print 6mg, so it is not a text-extraction artifact.
+#     Why 60 is certain:
+#       1. A 6 mg/day cap on a 2 mg/kg/day dose binds at 3 kg, i.e. for
+#          EVERY patient on this pathway — which makes the mg/kg
+#          meaningless. A cap that never lets the weight-based dose
+#          apply is self-evidently a misprint.
+#       2. pb_049_uti_kidney prints the SAME drug at the SAME
+#          2 mg/kg/day for the SAME 4 weeks with "max 60mg/day".
+#       3. pb_128_im_tb (adult TB, the same indication) gives
+#          prednisone 60 mg/day. The book would otherwise be giving an
+#          adult 60 mg and capping a child at 6 mg.
+#     60 mg/day is also the universal prednis(ol)one ceiling for this
+#     indication. This matters: the gate above it is TB meningitis /
+#     miliary TB / pericardial effusion, where adjunctive steroids
+#     reduce mortality — a 10x under-cap would make them near-placebo.
+#     Grey should fix the source PDF.
+#
+# 🔴 NOT CHANGED, needs Grey/OE — see §H of tool/protocolbook_needs_oe_rereview.md:
+#   - "Pulmonary TB requires 6 more months of treatment" (total 8
+#     months). UCG 2023 and WHO both use 2RHZE/4RH — a 4-month
+#     continuation, 6 months total. Note the book gets the CNS figure
+#     exactly right (10 more months = UCG's 2RHZE/10RH), and pb_128_im_tb
+#     prints the same "6 more months" for adults, so this is a
+#     consistent book-wide position rather than a slip — which is why
+#     it is flagged rather than corrected.
+#
 # CONTENT FLAGS for the later OE / content pass (rendered faithfully):
 #   - 2HRZE / 4HR (2-month RIPE intensive → continuation isoniazid+
 #     rifampicin) is the standard WHO paediatric regimen; durations
@@ -110,7 +141,7 @@ topic:
               box:
                 title: "Add Prednisone"
                 bullets:
-                  - "2 mg/kg (max 6 mg/day) × 4 weeks"
+                  - "2 mg/kg (max 60 mg/day) × 4 weeks"
                   - "Followed by 1 mg/kg × 1 week"
                   - "Followed by 0.5 mg/kg × 1 week"
               continue: true

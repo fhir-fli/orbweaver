@@ -684,3 +684,124 @@ forward, pinch, do not tilt the head back, a full 15 minutes) · **topical trane
 acid before packing, which is well supported and more current than much of the book** ·
 the escalation order pledget → anterior pack → contralateral pack → posterior balloon ·
 vaseline TID for 7–10 days on discharge.
+
+---
+
+# H. PAEDIATRIC TB GROUP AUDIT (pp.71–73) — flags raised 2026-07-28
+
+Fifth advance-pass group. 3 topics (diagnosis + Keith Edwards score; the three
+pulmonary scoring systems; treatment). Checked against **UCG 2023 §TB** and the **WHO
+Pocket Book**. pp.71–72 are faithful verbatim reproductions of published scoring
+systems and need no dose review; everything below is on p.73 or is a gap across the
+group.
+
+**One thing applied** (H1). The rest need Grey/OE.
+
+## H1 ✅ APPLIED — the paediatric steroid cap was a dropped zero (`pb_073`)
+Source p.73 prints the adjunctive steroid as **"2mg/kg (max 6mg/day) x 4 weeks"**.
+Corrected to **max 60 mg/day**.
+
+**Verified visually** at 200 dpi before touching it — the source really does print
+6mg, so this is not a `pdftotext` artifact. Why 60 is certain, three ways, all
+internal to the book:
+
+1. **A 6 mg/day cap on a 2 mg/kg/day dose binds at 3 kg** — that is, for every single
+   patient who reaches this box. A cap that never allows the weight-based dose to
+   apply is self-evidently a misprint rather than a clinical choice.
+2. **`pb_049_uti_kidney` prints the same drug at the same 2 mg/kg/day for the same
+   4 weeks with "max 60mg/day".**
+3. **`pb_128_im_tb` (adult TB, same indication) gives prednisone 60 mg/day.** Without
+   the correction the book gives an adult 60 mg and caps a child at 6 mg.
+
+This one matters more than most typos: the gate immediately above the box is **TB
+meningitis / severe miliary TB / pericardial effusion**, which is precisely where
+adjunctive corticosteroids reduce mortality. A tenfold under-cap would have made them
+close to placebo. **Grey should fix the source PDF.**
+
+## H2 🔴 pulmonary TB gets an 8-month course where UCG and WHO give 6 (`pb_073`, also `pb_128_im_tb`)
+p.73, after the intensive phase: *"Cerebral TB requires 10 more months of treatment ·
+**Pulmonary TB requires 6 more months of treatment**"* — a 2 + 6 = **8-month** total.
+
+UCG 2023 is explicit and tabulated:
+- *"All forms of TB in adults: **2RHZE / 4RH**"* — a **4-month** continuation, 6 months total
+- *"TB meningitis, Bone: **2RHZE / 10RH**"*
+- and in the text: *"Treat as per pulmonary TB but continuation phase is 10 months
+  instead of **4** (2RHZE/10RH)"*
+
+**The book gets the CNS number exactly right** (10 more months, matching UCG
+character for character) **and the pulmonary one wrong**, which is what makes it look
+like an error rather than a deliberate local policy. It is also consistent across the
+book — `pb_128_im_tb` prints the same "6 more months" for adults — so it must be fixed
+in **both** places, and it is not the sort of thing I would correct unilaterally.
+
+Two extra months of rifampicin and isoniazid for every pulmonary TB patient means
+extra hepatotoxicity exposure, extra adherence burden, and a course that does not
+match the fixed-duration packs the national programme dispenses. Worth noting to OE
+as well: **WHO has since endorsed a 4-month regimen (2HRZ(E)/2HR) for non-severe
+drug-susceptible TB in children aged 3 months to 16 years**, so the book is two months
+longer than the standard course and four months longer than the modern paediatric one.
+
+## H3 🟡 the LFT gate and its own footnote give different thresholds (`pb_073`)
+The flowchart routes **ALT > 3 × ULN** to *"consult senior about a possible alternate
+regimen"*. The footnote rendered directly beneath it says *"**Do not change the
+regimen unless LFTs > 5 × the upper limit of normal**"*.
+
+Both numbers are real, but they belong to different situations — the usual rule stops
+anti-TB drugs at **>3 × ULN with symptoms** and at **>5 × ULN without**. The page
+states both figures without the symptomatic/asymptomatic distinction that reconciles
+them, so as printed the chart and its footnote simply disagree. One clause would fix
+it.
+
+## H4 🟡 nothing on the paediatric TB pathway tests for HIV (`pb_071`–`pb_073`)
+HIV is not mentioned anywhere in the user-facing content of any of the three topics —
+only inside a file-header comment. That is out of step with the rest of the book and
+with the setting: **`pb_064` (SAM) explicitly says "Check mom for HIV if <18 months,
+otherwise check patient"**, and paediatric TB in Uganda is heavily HIV-associated. HIV
+status changes prognosis, mandates co-trimoxazole preventive therapy, and creates
+rifampicin–ART interactions that alter the regimen. The book has an HIV OI page
+(`pb_135`) to link to.
+
+## H5 🟡 contacts are scored but never treated (`pb_071`, `pb_072`)
+p.71 lists *"close contact with someone with tuberculosis within the last 2 years"* as
+a risk factor, and **the entire first table on p.72 is a risk score for children in
+contact with infected persons** — yet nothing anywhere in the group says what to do
+for a well child contact who does not have TB.
+
+The WHO Pocket Book already in the repo gives it plainly: **isoniazid preventive
+therapy, 10 mg/kg daily for at least 6 months**, for under-5 contacts. This is a core
+national-programme activity. As it stands the book helps you score a contact and then
+stops.
+
+## H6 🟡 children get no bacteriological confirmation route, but adults do (`pb_071`)
+p.71's Diagnosis section offers **gastric aspirate ×3 only**. **Xpert MTB/RIF appears
+nowhere in the paediatric group** — while **`pb_128_im_tb` (adult) says "If available,
+perform Gene Xpert on 1 sputum sample"**. So the book routes adults to the
+WHO-recommended initial diagnostic test and children to a 1950s technique.
+
+This matters more for children than adults, because **Xpert Ultra is validated on
+stool in young children** — which removes the need for gastric aspirate altogether in
+exactly the group p.71 says cannot expectorate. The three scoring systems on p.72 are
+all pre-Xpert clinical scores, which the file header already noted; this is the
+actionable half of that observation.
+
+## H7 🟢 "Source case is female" (+1) will puzzle readers (`pb_072`)
+The 8-point risk score awards a point for the source case being female. It is
+faithfully transcribed from the published score, where it reflects the caregiving
+contact pattern in one specific study population, and it is not a risk factor to
+generalise from. A one-line note would prevent it being read as a general rule — the
+table already carries a footnote for the "high incidence area" criterion, so there is
+a precedent on the same table.
+
+## ✓ VERIFIED FINE in this group (no action)
+**All four intensive-phase drug doses match WHO exactly** — isoniazid 10 mg/kg
+(7–15, max 300 mg/day), rifampicin 15 mg/kg (10–20, max 600 mg/day), pyrazinamide
+35 mg/kg (30–40, max 1.5 g/day), ethambutol 20 mg/kg (15–25, max 1.6 g/day) · the
+continuation phase being isoniazid + rifampicin only, at the same doses · **cerebral
+TB "10 more months" — matches UCG's 2RHZE/10RH exactly** · the steroid indication list
+(TB meningitis, pulmonary TB with respiratory distress, airway obstruction from hilar
+nodes, severe miliary TB, pericardial effusion) · the steroid taper shape
+(2 → 1 → 0.5 mg/kg) · pyridoxine throughout treatment and its three weight bands ·
+gastric aspirate ×3 on separate early mornings before eating or ambulating · the
+"consider TB" and "more likely" lists · **all three scoring systems transcribed
+verbatim and correctly**, including the Keith Edwards ≥7 threshold, the modified
+Edwards ≥7 threshold, and the Brazilian ≥40 / 30–39 / ≤29 bands and every point value.
