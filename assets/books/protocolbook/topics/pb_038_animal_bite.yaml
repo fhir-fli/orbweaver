@@ -94,6 +94,7 @@ topic:
         - **Amoxicillin-Clavulanate x 5 days**
           - Pediatric: 25mg/kg/dose PO BD
           - Adult: 1 gram PO BD
+        - **If co-amoxiclav is not stocked but plain amoxicillin is** (a supply problem, not an allergy) — **Amoxicillin at the same dose PLUS Metronidazole** (adults 400mg PO TDS · children 7.5mg/kg/dose PO TDS) x 5 days
         - **Penicillin allergy — use a PAIR, not one drug** (no single alternative covers both **Pasteurella** and oral anaerobes):
           - **Doxycycline** — adults 100 mg PO BD · children 2.2 mg/kg/dose PO BD (max 100 mg/dose). **Safe at any age for courses under 21 days — it does not stain teeth**
           - **PLUS Metronidazole** — adults 500 mg PO TDS · children 7.5 mg/kg/dose PO TDS (max 500 mg/dose)
@@ -119,7 +120,7 @@ topic:
       columns: ["Biologic", "Schedule"]
       column_flex: [2, 5]
       rows:
-        - cells: ["**Rabies immunoglobulin**", "Human Ig 20 units/kg OR Equine Ig 40 units/kg, total dose given once. **Infiltrate ALL of it into and around the wound.** Give the remainder IM only if the wound cannot physically take the full volume."]
+        - cells: ["**Rabies immunoglobulin** (category III exposure only)", "Human Ig 20 IU/kg OR Equine Ig 40 IU/kg. **This is a MAXIMUM, not a target — there is no minimum dose. Do not exceed it** (excess suppresses the patient's own antibody response). **Infiltrate ALL of it into and around the wound(s)**; if the volume is too small to reach every wound, dilute with normal saline. Give any remainder IM only if the wound physically cannot take it. **Day 0 only — never give RIG more than 7 days after the first vaccine dose.** No skin test is needed before equine Ig."]
         - cells: ["**Vaccine**", "IM (deltoid or anterolateral thigh area), inject once on days 0, 3, 7 and 14"]
 
     - type: "prose"

@@ -52,7 +52,7 @@ topic:
       markdown: |
         - **Sepsis:** SIRS criteria + proven or suspected infection
         - **SIRS:** ≥2 of the following abnormal measurements (one must be Temperature or WBC)
-        - **Temperature** >37.9 axillary (38.5 core) or <35.4 axillary (36 axillary)
+        - **Temperature** >37.9 axillary (38.5 core) or <35.4 axillary (36 core)
 
     - type: "table"
       title: "SIRS criteria by age"

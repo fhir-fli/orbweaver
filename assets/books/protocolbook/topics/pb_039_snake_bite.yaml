@@ -130,10 +130,10 @@ topic:
             - **DO NOT** treat with ice
 
         - type: "prose"
-          title: "Tetanus"
+          title: "Tetanus — and a rule about every IM injection"
           markdown: |
             - Give **tetanus toxoid** — snakebite wounds are tetanus-prone
-            - **If the patient is coagulopathic, delay the intramuscular injection** until clotting has been restored by antivenom, to avoid a haematoma at the injection site
+            - 🛑 **While clotting is abnormal (20WBCT positive, oozing wounds, any unusual bleeding), give NO intramuscular injection of anything** — not tetanus toxoid, not antibiotics, not analgesia. An IM injection into incoagulable blood causes a deep haematoma. **Use the IV or oral route until antivenom has restored clotting**, then give the toxoid
 
         - type: "prose"
           title: "Consider the following labs"

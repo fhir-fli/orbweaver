@@ -58,15 +58,18 @@ topic:
           ii) **Careful fluid balance is the most important part of treatment**
           iii) Effective antimalarial treatment is the definitive therapy
           iv) **Furosemide (Lasix) 1 mg/kg/dose every 6–12 h is for fluid OVERLOAD only** — it does not improve renal recovery, and worsens injury in a volume-depleted child
-        e) **Anemia:** if Hgb < 9, give iron — but **start it only after the antimalarial course is complete**, not on admission. **Treat for 3 months** (it takes 2–4 weeks to correct the haemoglobin and 1–3 months to refill iron stores); dispense 14 days at a time and review at each refill. Recheck Hb at 1 month — if it has not risen, the diagnosis is wrong or adherence has failed
+        e) **Anemia:** Hgb < 9 here is a **pragmatic treatment threshold for starting iron in this setting, not the definition of anaemia** (WHO's diagnostic cut-offs are higher and age-specific). If Hgb < 9, give iron — but **start it only after the antimalarial course is complete**, not on admission. **Treat for 3 months** (it takes 2–4 weeks to correct the haemoglobin and 1–3 months to refill iron stores); dispense 14 days at a time and review at each refill. Recheck Hb at 1 month — if it has not risen, the diagnosis is wrong or adherence has failed
         f) **After discharge for severe malarial anaemia — give post-discharge malaria chemoprevention (PDMC):** a full course of **dihydroartemisinin-piperaquine monthly for 3 months** (at weeks 2, 6 and 10 after discharge). WHO-recommended since 2022; reduces all-cause mortality by ~77% and readmission by ~55%. Use these visits for the haemolysis checks in (h) as well
         g) **Treatment Failure:**
           i) Consider other causes of illness / co-morbidity
           ii) A child on PO antimalarials with signs of severe malaria → switch to **IV artesunate**
           iii) If on PO antimalarials and still febrile with a **positive blood slide** after **72 h** → check compliance; if treatment failure, proceed to **second-line Rx**
-        h) **Delayed haemolysis:**
-          i) ~7 % of children with hyperparasitemia
-          ii) All children treated for severe malaria should have a **weekly CBC plus haemolysis markers (LDH, bilirubin, haptoglobin, reticulocytes) for 4 weeks** after discharge
+        h) **Delayed haemolysis (post-artesunate):**
+          i) Occurs in children who received **PARENTERAL artesunate** — not oral ACT, and not quinine or artemether. Commonest after high parasitaemia, but do not restrict monitoring to those children
+          ii) **Weekly haemoglobin for 4 weeks** after discharge — Hb alone is enough to act on, and is available everywhere
+          iii) If Hb falls, or there is jaundice or dark urine, add **LDH, bilirubin, haptoglobin and reticulocytes where available**
+          iv) Transfuse if symptomatic, or if Hb falls below the transfusion threshold
+          v) Tell the carer at discharge to return immediately for yellow eyes, dark urine, pallor or breathlessness — do not wait for the appointment
 
     - type: "prose"
       title: "Co-infection"

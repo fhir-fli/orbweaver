@@ -87,7 +87,7 @@ topic:
             - "**0.2 mg/kg** IV slowly over 1 minute, **max 10 mg** · may repeat once after 5–10 min · **maximum 2 doses**, then phenobarbital"
         - cells:
             - "Phenobarbitone / Phenobarbital"
-            - "**Load** 15 mg/kg IM/IV over 20 min (20 mg/kg neonates) — may increase to 20 mg/kg if seizures persist AND respiratory monitoring is available · **Maint** 3–5 mg/kg IM/IV/PO OD"
+            - "**Load** 20 mg/kg IM/IV over 20 min (all ages) · if still fitting after 15 min give a further **10 mg/kg**, to a **cumulative max 40 mg/kg** — only where respiratory monitoring is available · **Maint** 3–5 mg/kg IM/IV/PO OD"
         - cells:
             - "Packed Red Blood Cells (PRBCs)"
             - "10 ml/kg (raise Hgb 1 g/dL)"
@@ -113,7 +113,7 @@ topic:
             - "0.15 mg/kg IV slowly over 1 minute"
         - cells:
             - "Phenobarbitone / Phenobarbital"
-            - "**Load** 15 mg/kg IM/IV over 20 min · **Maint** 5 mg/kg IM/IV/PO OD"
+            - "**Load** 20 mg/kg IM/IV over 20 min · **Maint** 3–5 mg/kg IM/IV/PO OD"
         - cells:
             - "Packed Red Blood Cells (PRBCs)"
             - "1 unit (raise Hgb 1 g/dL)"

@@ -99,9 +99,9 @@ topic:
             - label: "No"
               continue: true
       terminal:
-        title: "Give IM/IV phenobarbitone 15mg/kg"
+        title: "Give IM/IV phenobarbitone 20mg/kg"
         bullets:
-          - "May increase to 20mg/kg if seizures persist AND respiratory monitoring is available (20mg/kg is the usual standard load; 15 is the conservative choice where there is no ventilator)"
+          - "If still fitting after 15 min, give a further 10mg/kg — cumulative maximum 40mg/kg. Only where respiratory monitoring is available: phenobarbitone causes apnoea and hypotension, so have a bag-valve mask at the bedside"
           - "DO NOT give more than 2 doses of diazepam in 24 hours once phenobarbitone used (if given IV, give over 20mins)"
           - "Maintenance therapy should be initially with phenobarbitone 5mg/kg IV/IM OD x 48 hrs"
           - "Continue oxygen during active seizure"
