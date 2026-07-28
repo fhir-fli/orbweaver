@@ -336,3 +336,198 @@ target · "1.5 × MIVF, goal euvolemia, DO NOT BOLUS if not hypotensive" — app
 conservative and consistent with UCG's restricted-fluid stance in ACS · admission
 criteria including the ≥2 g/dL drop — matches UCG's transfusion indications · CRS
 table transcribed exactly · p.61 transcribed exactly.
+
+---
+
+# F. SEVERE ACUTE MALNUTRITION GROUP AUDIT (pp.63–66) — flags raised 2026-07-28
+
+Third advance-pass group. 3 topics. This group has an unusually strong comparator
+set: **WHO Pocket Book of Hospital Care for Children ch.7** (the source the
+ProtocolBook is condensing — the PDF is already in the repo root) **and UCG 2023
+§19.2.2**. Source PDF pp.63–66 re-extracted line by line; **the digitization is
+faithful and complete — every finding below is in the book, not in our rendering.**
+
+**Nothing applied.** Unlike the Sickle Cell group there is no typo-class item here;
+every finding is a clinical threshold, a dose, or an omission.
+
+## F1 🔴 gentamicin is 5 mg/kg/day where both WHO and UCG say 7.5 (`pb_064`)
+p.65 item 9: **"Gentamicin 5mg/kg/day x 7 days"**.
+
+- WHO Pocket Book ch.7 §7.4.5: *"gentamicin (7.5 mg/kg IM or IV) once a day for 7 days"*
+- UCG 2023 §19.2.2.3, verbatim: *"Gentamicin 7.5 mg/kg once a day for 7 days"*
+
+Both agree, and the duration in the book already matches theirs — only the mg/kg
+differs. This is a **33% underdose of the aminoglycoside in complicated SAM**, where
+occult sepsis is the leading cause of death and the child is by definition
+immunocompromised. Note the book's 5 mg/kg is its *general* paediatric gentamicin
+dose (used elsewhere in the book); SAM has its own higher figure in both guidelines.
+**Highest-priority item in this group.**
+
+## F2 🔴 the amoxicillin step-down has no dose and no duration (`pb_064`)
+p.65 item 9b: *"Switch ampicillin to amoxicillin if improved after 2 days"* — and
+that is all. No dose, no duration, nothing in the formulary tying it to SAM.
+
+- WHO: *"ampicillin 50 mg/kg IM or IV every 6 h for 2 days, then oral amoxicillin
+  **25–40 mg/kg every 8 h for 5 days**"*
+- UCG: same two-day ampicillin, *"then, oral amoxicillin"*; UCG's uncomplicated-SAM
+  route is *"amoxicillin DT 40 mg/kg twice"* daily
+
+The ampicillin half of the sentence is fully specified; the half the child is
+actually discharged on is not.
+
+## F3 🔴 blood transfusion in SAM has no furosemide, no monitoring, and no repeat rule (`pb_064`)
+p.64 item 5 orders *"10mls/kg whole blood over 3hrs"*. The volume and the rate are
+exactly WHO's. Everything WHO wraps around them is missing:
+
+- **furosemide 1 mg/kg IV at the start of the transfusion** — WHO gives this in the
+  same breath as the volume
+- **monitoring**: pulse, breathing, lung fields, liver size and JVP **every 15 min
+  during the transfusion**; slow down if breathing rises by 5/min or pulse by 25/min;
+  **stop and give furosemide** if there are basal crepitations or an enlarging liver
+- **"Do not repeat transfusion even if the Hb is still low, or within 4 days of the
+  last transfusion"**
+
+What makes this more than a completeness point: **item 6 on the very next page lists
+"blood transfusion" as a common cause of cardiac failure in SAM.** The book names
+transfusion as a killer in this population and then gives the transfusion order
+without the precautions that exist because of it.
+
+Two dose questions in the same item: the book transfuses at **Hgb <6 "with heart
+failure"** where WHO's trigger is **Hb 4–6 with respiratory distress** (a broader and
+earlier sign), and gives **5–7 ml/kg packed cells** in heart failure where WHO gives
+**10 ml/kg of packed cells**.
+
+## F4 🔴 vitamin A: no dose on the page, and the formulary forbids the schedule (`pb_064` + `formulary.yaml`)
+p.65 item 7a says only **"Vitamin A on day 1, 2 and 15"**. No dose. So the reader goes
+to the formulary — which then contradicts the page:
+
+| | p.65 | `formulary.yaml` (p.157) | WHO §7.5.1 |
+|---|---|---|---|
+| schedule | days 1, 2, **15** | *"Once on admission; **should not be given twice within 1 month**"* | days 1, 2, **14** |
+| <6 months | (no dose) | *"not recommended"* | **50 000 IU** |
+| 6–12 months | (no dose) | 100 000 IU | 100 000 IU |
+| >12 months | (no dose) | 200 000 IU | 200 000 IU |
+
+Two real problems, not one:
+1. **The formulary's "not twice within 1 month" forbids the day-2 and day-15 doses
+   the protocol page orders.** A clinician who looks up the dose is told not to give
+   it. The two rules are about different things — the formulary states the *routine
+   supplementation* rule, the page states the *deficiency treatment* rule — but the
+   book never says so, and as written they simply conflict.
+2. **<6 months is "not recommended" in the formulary but 50 000 IU in WHO** — and
+   p.64's admission criteria explicitly include *"Children <6 months with SAM"*, so
+   this gap is reachable by design.
+
+Also worth carrying over from WHO §7.4.6: high-dose vitamin A should **not** be given
+routinely when there are no eye signs and no measles history, because F-75, F-100 and
+RUTF already contain enough. The formulary's "once on admission" reads as routine
+dosing for everyone, which is the position WHO moved away from.
+
+## F5 🟡 ReSoMal is given with no cholera / profuse-diarrhoea exception (`pb_064`)
+p.64 item 4 gives ReSoMal unconditionally. Both guidelines carve out the same
+exception in near-identical words — WHO: *"…as per the ReSoMal recipe below, **unless
+the child has cholera or profuse watery diarrhoea**"*, in which case standard ORS is
+used; UCG repeats it verbatim. ReSoMal is deliberately low-sodium, which is exactly
+wrong in high-output sodium-losing diarrhoea.
+
+The page's monitoring line is also softer than the source: it says *"monitor for
+improvement or over hydration"* where WHO gives the actual stop rule — **if
+respiratory rate rises by 5/min and pulse by 25/min, stop ReSoMal immediately and
+reassess.**
+
+## F6 🟡 the adolescent MUAC bands overlap — a MUAC of 17 cm is both MAM and SAM (`pb_063`)
+Bottom row of the classification table, transcribed exactly from the source:
+
+| Age | Indicator | MAM | SAM |
+|---|---|---|---|
+| 5 to <10 yrs | MUAC | ≥13.5 & <14.5 cm | <13.5 cm |
+| 10 to <15 yrs | MUAC | ≥16.0 & <18.0 cm | <16.0 cm |
+| **15 to 19** | **MUAC** | **≥16.5 & <21.0 cm** | **<18.5 cm** |
+
+Every other row has MAM's lower bound **equal to** SAM's upper bound (13.5/13.5,
+16.0/16.0). The last row does not: **≥16.5 and <18.5 overlap**, so a 16-year-old
+measuring 17.0 cm satisfies both columns at once. That is not a judgement call, it is
+arithmetically impossible.
+
+Which bound is wrong is a clinical decision I am not making. The pattern of the
+column suggests **MAM's "≥16.5" is a misprint for "≥18.5"** — the SAM cutoffs would
+then run 13.5 → 16.0 → 18.5 in even steps, and the boundary rule would hold as it
+does in every other row. The alternative (SAM should be <16.5) makes the SAM series
+13.5 → 16.0 → 16.5, which barely moves across a five-year age gap. **Worth putting to
+OE as a straight question.**
+
+## F7 🟡 the WFH-vs-BMI crossover age contradicts itself in the same sentence (`pb_063`)
+"Making sense of the measurements", as printed:
+- *"Use Weight-for-Length/Height (WFL/WFH) if **<6 years (59 months)**"*
+- *"Use BMI/age if **≥6 years**"*
+
+**59 months is under 5 years, not under 6.** The sentence disagrees with its own
+parenthetical, and the classification table two rows below settles it the other way —
+its rows are *"6 to 59 months"* (WFL/WFH) and *"5 to 19 years"* (BMI/age), which is
+also the WHO convention. So both prose lines should read **5 years**, not 6.
+
+I did not apply this. It is a clean internal contradiction and the direction is not
+really in doubt, but it is an age threshold that changes which chart a child is
+classified on, so it should be Grey's line rather than mine. **Quick confirm.**
+
+## F8 🟡 "Do not use digoxin in newborns" is a caution about a drug the book never offers (`pb_064`)
+p.65 item 6d. Digoxin appears nowhere else in the cardiac-failure block, nowhere else
+in the topic, and **WHO's SAM chapter does not mention digoxin at all** — its SAM
+heart-failure management is stopping feeds and fluids plus furosemide, which is what
+items 6a–6c already say. The line reads like a survivor from a different source's
+heart-failure block that did list digoxin as an option. As printed it warns against a
+treatment that was never offered, and it implicitly suggests digoxin *is* appropriate
+in non-newborns, which the book never states or doses. **Either restore the digoxin
+option properly or drop the line.**
+
+## F9 🟡 eye care is missing the part that saves the eye (`pb_064`)
+p.65 item 7 gives *"1% atropine to relax the eye"* and *"Gentamycin or chloramphenical
+eyedrops"*. WHO §7.5.1, for corneal clouding or ulceration, gives four things
+explicitly *"to prevent corneal rupture and extrusion of the lens"*:
+- chloramphenicol **or tetracycline** drops, **four times a day for 7–10 days**
+- atropine, **one drop three times a day for 3–5 days**
+- **cover with saline-soaked eye pads**
+- **bandage the eye(s)**
+
+The book has the two drugs without frequency or duration, names **gentamicin** drops
+(not a WHO choice here) as the first option, and omits the pad and bandage entirely —
+which are the mechanical steps, need no supply chain, and are what actually prevents
+the globe from perforating.
+
+## F10 🟢 smaller items
+- **"Stop all oral feeds and IV fluids for 24 hours"** (p.64 item 5a) has no
+  counterpart in WHO, which says only that transfusion should be given in the first
+  24 h if criteria are met. Withholding feeds for a full day in a child whose item-1
+  problem is hypoglycaemia deserves a second look — possibly a garbling of WHO's
+  "in the first 24 h".
+- **Dehydration sign "Capillary refill ≥2 seconds"** (p.64 item 4) is a very loose
+  threshold; the shock criteria on the same page use **>3 seconds**, and >3 s is the
+  usual abnormal cut-off.
+- **Uncomplicated SAM going to OTC/RUTF** (p.64) carries no antibiotic, where both
+  WHO and UCG give oral amoxicillin to uncomplicated SAM as well.
+- **Kwashiorkor skin lesions** (p.65 item 8): the book has potassium permanganate and
+  gentian violet. WHO adds **zinc** (deficiency is usual in kwashiorkor and the skin
+  responds quickly), a **barrier cream** to raw areas, and **avoiding nappies** so the
+  perineum stays dry. Item 10's "micronutrients already in F-75/F-100" may cover the
+  zinc; the barrier cream and nappy advice are free and are not covered.
+- **Vitamin A day 15** should be **day 14** in both WHO and the wider literature.
+
+## ✓ VERIFIED FINE in this group (no action)
+Hypoglycaemia <3 mmol/L / 54 mg/dL with the drink-vs-can't-drink split, 50 mL of 10%
+dextrose or sugar water, D10 5 mL/kg IV then NGT — WHO and UCG match · hypothermia
+axillary <35 / rectal <35.5 and the whole active-warming list including no hot water
+bottles — WHO match · **shock: 15 mL/kg/hour, may repeat once, RL+D5% or ½NS+D5% with
+20 mmol/L KCl, then whole blood 10 mL/kg if no improvement after the first bolus —
+matches WHO's SAM-specific shock chart exactly**, including the deliberately slower
+rate that separates SAM from non-SAM shock · the SAM shock definition (AVPU <A AND
+cold extremities plus cap refill >3 s or weak/fast pulse) · ReSoMal 5 mL/kg q30min ×2 h
+then 5–10 mL/kg/h alternating hourly with F-75 × 10 h, and ReSoMal after each loose
+stool — WHO match · ampicillin 50 mg/kg IV q6h × 2 days — WHO and UCG match · F-75
+100 mL/kg/day with oedema, 130 without, fixed total volume, 2-hourly for 48 h then
+3–4 hourly, 80% completion rule, NGT trigger — WHO match · appetite test at one third
+of a 92 g sachet · F-100 same volume for 2 days then +10 mL/feed to max 220 mL/kg/day
+· **iron deferred to rehabilitation / day 3 of transition — WHO match, and the book
+says it consistently in two places** · the whole switch-back-to-stabilization list ·
+0.01% potassium permanganate for dermatosis — WHO match · the complicated-SAM
+definition and the three admission criteria · MUAC/weight/length measurement technique
+including the 87 cm and 0.7 cm rules.
