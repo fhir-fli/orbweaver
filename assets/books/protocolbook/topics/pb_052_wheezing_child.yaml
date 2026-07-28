@@ -139,7 +139,7 @@ topic:
               - Nebulizer: <2 years 2.5mg in 3mL NS; >2 years 5mg in 5mL NS
               - MDI+spacer+mask: 5–10 kg 4 puffs; 10–20 kg 6 puffs; >20 kg 8 puffs
               - **Oral salbutamol is ineffective**
-            - Dexamethasone 0.6mg/kg PO or IV (if not drinking) x 1 dose, OR Prednisolone 1–2mg/kg PO x 1 dose
+            - Dexamethasone 0.6mg/kg PO or IV (if not drinking), **max 12mg**, x 1 dose, OR Prednisolone 1–2mg/kg PO x 1 dose
 
         - type: "flowchart"
           variant: "algorithm"

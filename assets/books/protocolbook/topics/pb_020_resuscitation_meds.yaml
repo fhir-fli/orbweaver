@@ -69,7 +69,12 @@ topic:
             - "**0.1 ml/kg 1:10,000** IV, **max 10 ml (= 1 mg)** · mix 1 ml of 1:1,000 in 9 ml NS · flush 10 ml NS"
         - cells:
             - "Dextrose 10%"
-            - "**5 ml/kg** IV (mix 8 ml NS with 2 ml D50%, or 8 ml D5% with 1 ml D50%)"
+            - |
+              **5 ml/kg** IV. Three ways to make it — they are **not** the same fluid:
+              - **D10 in ~0.7% saline** (has sodium, ~123 mmol/L): 8 ml NS + 2 ml D50%
+              - **D10 in water** (no sodium, free water): 1 ml D50% + 4 ml sterile water
+              - **D10 in water**, if only D5% is at hand: 1 ml D50% + 8 ml D5%
+              For a hypoglycaemia bolus any of these is fine. **If it will run on as maintenance fluid, know which one you made** — the saline version carries sodium, the others are free water
         - cells:
             - "Diazepam PR ~2.5 mg suppository"
             - |

@@ -101,7 +101,7 @@ topic:
                   box:
                     title: "Treat as Nephrotic Syndrome"
                     bullets:
-                      - "Prednisone 2mg/kg/day x 4 weeks (will require taper)"
+                      - "Prednisone 2mg/kg/day (max 60mg/day) x 4 weeks, then alternate-day dosing — will require taper"
                     severity: "priority"
                 - label: "No"
                   continue: true

@@ -152,11 +152,14 @@ topic:
           stages:
             - decision: "Has envenomation occurred?"
               outcomes:
-                - label: "No — no skin marks, no symptoms an hour post-bite"
+                - label: "No — no skin marks, no symptoms"
                   box:
-                    title: "Discharge"
+                    title: "Observe at least 12 hours before discharge"
                     bullets:
-                      - "Instruct to return if symptoms develop"
+                      - "Up to 10–90% of venomous bites are dry bites, and envenoming may not declare for many hours — one hour is far too short"
+                      - "Observe 24 hours if the snake was not identified, the patient lives far from hospital, or labs are not available for serial monitoring"
+                      - "Repeat clotting check (20WBCT) before discharge"
+                      - "Instruct to return immediately if any symptom develops"
                     severity: "non_urgent"
                 - label: "Suspected — skin marks BUT no symptoms"
                   goto: "observe"

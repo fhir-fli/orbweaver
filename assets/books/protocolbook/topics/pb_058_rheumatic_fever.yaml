@@ -47,7 +47,7 @@ topic:
     - type: "prose"
       title: "Minor Criteria"
       markdown: |
-        - Monoarthralgia or polyarthralgia
+        - Monoarthralgia (in this population **polyarthralgia is a MAJOR criterion**, not minor — count a joint finding in one category only, never both)
         - Fever (≥37.5 °C axillary)
         - ↑↑ ESR (≥30 mm/hr) and/or ↑↑ CRP (≥3.0 mg/dL)
         - Prolonged PR interval, after accounting for age variability (unless carditis is a major criterion)
@@ -67,3 +67,4 @@ topic:
           - Benzathine Penicillin G (BPG) IM qmonth: ≤27kg = 600,000 IU; >27kg = 1.2 million IU
           - Penicillin V 250mg PO BD
           - Erythromycin 250mg PO BD (only if PCN allergic)
+          - **Duration:** no carditis — 5 years or until age 21, whichever is longer · carditis but no residual heart disease — 10 years or until age 21, whichever is longer · residual heart disease — 10 years or until age 40, sometimes lifelong

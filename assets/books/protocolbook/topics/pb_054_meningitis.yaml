@@ -138,12 +138,18 @@ topic:
           markdown: |
             **IV antibiotics x 10 days — start within 1 hour.**
 
-            **> 3 months:**
-            - Cefotaxime 100 mg/kg IV 8-hourly (max 2 g/dose)
-            - **AND** Ampicillin 50 mg/kg IV 6-hourly (max 12 g/day)
+            **Under 1 month (neonate):**
+            - Ampicillin 75 mg/kg IV 6-hourly (= 300 mg/kg/day) — **for Listeria**
+            - **AND** Cefotaxime 75 mg/kg IV 6–8-hourly (= 225–300 mg/kg/day)
+            - ⚠️ **Avoid ceftriaxone in neonates** — it displaces bilirubin, and forms fatal precipitates with calcium-containing fluids. Use cefotaxime
 
-            **< 3 months:**
-            - Ceftriaxone 100 mg/kg IV once daily
+            **1–3 months:**
+            - Ampicillin 75 mg/kg IV 6-hourly — **Listeria risk continues through this window**
+            - **AND** Cefotaxime 75 mg/kg IV 6–8-hourly, or Ceftriaxone 100 mg/kg IV once daily (max 4 g/day)
+
+            **Over 3 months:**
+            - Ceftriaxone 100 mg/kg IV once daily (max 4 g/day), **OR** Cefotaxime 75 mg/kg IV 6–8-hourly
+            - Ampicillin is **not** needed at this age — Listeria is no longer a likely pathogen
 
         - type: "prose"
           title: "Follow-on"
