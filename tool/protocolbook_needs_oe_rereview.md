@@ -35,56 +35,52 @@ grep the whole book for the old drug name.**
 
 ---
 
-# B. STILL OPEN
+# B. STILL OPEN  (updated 2026-07-27 after the pp.28-40 reviews)
 
-## B1 — OE's round-2 reply did not reach these
-1. **Methanol antidote/dialysis block** (nothing applied). Folinic acid
-   1 mg/kg (max 50 mg) q4h, folic acid same dose if unavailable, repeat after
-   dialysis · dialysis criteria (visual loss, coma/fits, pH ≤7.15 or HCO₃ <10,
-   persisting acidosis, >30 mL or >1 g/kg ingested, methanol >50 mg/dL, renal
-   failure) · **ethanol maintenance DOUBLED in regular drinkers** (under-dosing
-   is the commonest error, and regular drinkers are who drinks bad waragi) ·
-   no-dialysis path (ethanol 5–7 days; bicarbonate = 0.3 × wt × base deficit) ·
-   fomepizole "where available", never with ethanol · **Gulu RRH is itself a
-   dialysis centre**, which makes "refer" concrete.
-2. **Activated charcoal** — window refinement (CTRC 2026: ≤2 h strong, ≤3 h
-   conditional, against beyond 6 h; the 4 h figure is for ≥30 g specifically)
-   and **we still print no charcoal DOSE anywhere** (50 g adult, 1 g/kg child).
-3. **Atropine paediatric start** — 0.02 (applied, OE round 1) vs **0.05 mg/kg
-   (UCG 2023)**. Also not on our page: titrate to **secretions, not heart rate** —
-   "do not stop atropine for tachycardia, especially in children".
-4. **Flumazenil** — currently gated on the algorithm with contraindications.
-   The research argued for removing it from the overdose algorithm entirely
-   (not on WHO EML; Penninga 13-RCT meta-analysis AE **RR 2.85**, serious
-   **RR 3.81**). OE round 2 did not revisit.
-5. **Post-artesunate haemolysis** — trigger should be "received parenteral
-   artesunate" not "severe malaria"; and the weekly four-marker panel is not
-   obtainable at a district hospital, so it should probably be **Hb + clinical
-   weekly, markers "if available"**. Incidence ~23%, days 14 and 21 highest-yield.
-6. **Hgb < 9 anaemia threshold** — OE's reply truncated mid-sentence. Below WHO's
-   2024 thresholds. Deliberate rationing choice, or should it move?
+## CLOSED since the last revision of this file
+- ~~Methanol antidote/dialysis block~~ → **APPLIED** `18501ad` (folic acid 1 mg/kg
+  or 50 mg IV q4–6h; haemodialysis referral trigger; vodka example fixed).
+- ~~Activated charcoal~~ → **APPLIED** `18501ad` (p.28 gained 1 g/kg within 1 h
+  guidance + the not-if-not-awake and never-intubate-for-it cautions; the p.33
+  2 h / 4 h window was reviewed and called well-calibrated).
+- ~~Atropine 0.02 vs 0.05 mg/kg~~ → **RESOLVED, KEEP 0.02.** It is what the 2025
+  AHA table prints, and because the regimen doubles every 5 min the difference
+  from a 0.05 start is one cycle. (My research pass was right to raise it and
+  wrong about the direction.)
+- ~~Flumazenil placement~~ → **RESOLVED, KEEP AS APPLIED.** The gated
+  contraindication box was reviewed and called consistent with AHA/ACMT consensus.
+- ~~Bite prophylaxis indications~~ → **MY FLAG WAS WRONG.** p.38 already carries
+  the indication list (immunocompromised, asplenic, advanced liver disease,
+  moderate-severe/crush, oedema at site, hand/joint/periosteum) and it was
+  confirmed consistent with published recommendations. I raised it without
+  re-reading the page. Only UCG's no-co-amoxiclav fallback (amoxicillin +
+  metronidazole) remains unaddressed.
 
-## B2 — never put to OE
-7. **Bite prophylaxis indications** — neither our page nor OE states *when* to
-   give it. UCG and IDSA agree: deep/cat puncture · human bite · severe or
-   extensive · face, genitalia, hands · over joint or bone · immunocompromised,
-   diabetic, asplenic · already infected — i.e. **not routine for a small
-   uncomplicated dog bite**. Plus UCG's no-co-amoxiclav fallback (amoxicillin +
-   metronidazole), which is the realistic district-level situation.
-8. **Phenobarbital repeat pathway** — WHO pp.49–50 give further **10 mg/kg doses
-   to a cumulative max 40 mg/kg**. Not on our page.
-9. **Phenobarbital maintenance** — we print 3–5 mg/kg/day; better-sourced is
+## Still genuinely open
+1. **Post-artesunate haemolysis** — trigger should be "received parenteral
+   artesunate", not "severe malaria"; the weekly four-marker panel is not
+   obtainable at a district hospital, so probably **Hb + clinical weekly, markers
+   "if available"**. Incidence ~23%; days 14 and 21 highest-yield.
+2. **Hgb < 9 anaemia threshold** — below WHO's 2024 thresholds. Deliberate
+   rationing choice, or should it move?
+3. **Phenobarbital repeat pathway** — WHO pp.49–50 give further 10 mg/kg doses to
+   a cumulative max 40 mg/kg. Not on our page.
+4. **Phenobarbital maintenance** — we print 3–5 mg/kg/day; better-sourced is
    **2.5–5** (WHO Annex 2 verbatim; UCG 2.5 mg/kg once–twice daily).
-10. **Snakebite — the IM rule is broader than tetanus.** WHO SEARO: "avoid even
-    minor trauma **including intramuscular injections**" — applies to every IM
-    drug while clotting is abnormal, not just the toxoid. Use IV/oral instead.
-11. **Rabies immunoglobulin framing** — WHO 2018 says the dose is a **MAXIMUM,
-    not a target** ("there is no minimum dose"), and leftover RIG can be
-    **fractionated for another patient** rather than given IM. Our text still
-    reads as a target. Also unstated: category III only, no eRIG skin test,
-    dilute with saline for small children, never after day 7.
-
----
+5. **Snakebite — the IM rule is broader than tetanus.** WHO SEARO: avoid all IM
+   injections while clotting is abnormal, not just the toxoid. Use IV/oral.
+6. **Rabies immunoglobulin framing** — WHO 2018 says the dose is a MAXIMUM, not a
+   target ("no minimum dose"), and leftover RIG can be fractionated for another
+   patient. Our text reads as a target. Also unstated: category III only, no eRIG
+   skin test, dilute with saline for small children, never after day 7.
+   (Lower priority — the infiltration change itself is applied and endorsed.)
+7. **Bite prophylaxis — no-co-amoxiclav fallback** (UCG: amoxicillin +
+   metronidazole, the realistic district-level situation).
+8. 🆕 **Snakebite discharge at 1 hour** — the flowchart discharges "no skin marks,
+   no symptoms an hour post-bite". OE suggests 6–8 h because envenoming
+   (haemotoxic especially) can declare late. NOT changed — it is a
+   discharge-safety criterion and OE hedged it. **Ask OE for the minimum
+   observation period directly.**
 
 # C. STANDING NOTES
 
