@@ -44,7 +44,27 @@
 #     "max 0.3mL child, 0.5mL adolescent/adult" (current AAAAI/ACAAI +
 #     WAO ceiling). Kept verbatim-consistent with pb_anaphylaxis.
 #
-# CONTENT FLAGS still OPEN for OE (audit pass 2026-07-26):
+# ✅ OE-REVIEWED 2026-07-27 — pages confirmed clinically sound. Applied:
+#    haemotoxic arm now leads with "give ANTIVENOM FIRST" before blood
+#    products (factors transfused before the venom is neutralised are
+#    consumed — wasted product, no benefit). ✓ Confirmed unchanged: all
+#    four immobilisation DO-NOTs; the deliberate ABSENCE of a pressure-
+#    immobilisation bandage (PIB is elapid/Australian practice and can
+#    worsen local cytotoxic injury in a viper-predominant region like this
+#    one); antivenom dilution and rate; antihistamine-not-routine; the
+#    WBCT20; the neurotoxic triad; cytotoxic antivenom criteria; and the
+#    added tetanus and cobra-only anticholinesterase blocks.
+#
+# ⚠️ OPEN — GREY TO CONFIRM (discharge-safety criterion, NOT changed):
+#    The flowchart discharges "no skin marks, no symptoms an hour
+#    post-bite". OE suggests extending that observation to 6–8 h, because
+#    envenoming — haemotoxic especially — can declare late. I have NOT
+#    changed it: it is a discharge criterion, OE hedged it as "consider",
+#    and I have seen longer windows cited elsewhere, so the right number
+#    should be confirmed rather than guessed. Worth asking OE directly
+#    what the minimum observation is for a suspected bite with no marks.
+#
+# (historical) CONTENT FLAGS still OPEN for OE (audit pass 2026-07-26):
 #   - NO TETANUS PROPHYLAXIS anywhere on the page — WHO snakebite
 #     guidance includes tetanus toxoid once coagulopathy allows IM
 #     injection. Genuine gap.
@@ -208,7 +228,7 @@ topic:
             - **Symptoms:** Bleeding at wound sites (may be minor wounds, lacerations, or puncture sites), Ecchymoses, Haematuria, Renal Failure, DIC
             - **Treatment**
               - IV access
-              - Blood products as necessary
+              - **Give ANTIVENOM FIRST.** Clotting factors transfused before the venom is neutralised are simply consumed — wasted product, no benefit. Transfuse only after antivenom, and only for life-threatening bleeding
               - DO NOT give heparin, antifibrinolytics, thrombolytics
             - **Indications for Antivenom**
               - Active bleeding
