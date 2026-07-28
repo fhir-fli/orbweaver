@@ -531,3 +531,156 @@ says it consistently in two places** · the whole switch-back-to-stabilization l
 0.01% potassium permanganate for dermatosis — WHO match · the complicated-SAM
 definition and the three admission criteria · MUAC/weight/length measurement technique
 including the 87 cm and 0.7 cm rules.
+
+---
+
+# G. ENT GROUP AUDIT (pp.67–70) — flags raised 2026-07-28
+
+Fourth advance-pass group. 6 topics (epistaxis; then otitis media, otitis externa,
+mastoiditis, pharyngitis and sinusitis, which are items I–V of one printed section
+split into five leaves). Source PDF pp.67–70 re-extracted; **the digitization is
+faithful** — every finding is in the book.
+
+**One thing applied** (G1, typo/unit-slip authorisation). The rest need Grey/OE.
+
+The theme of this group is different from the last two: most findings are **the book
+disagreeing with itself**, and in three cases the internal comparison settles the
+answer on its own without needing an external guideline at all.
+
+## G1 ✅ APPLIED — p.68 amoxicillin was missing its "/kg" (`pb_068`)
+Source p.68 prints **"Amoxicillin 45mg/dose PO BD"** and **"Amoxicillin/Clavulanic
+Acid 45mg/dose PO BD"**. Corrected to **45mg/kg/dose**. Three independent lines of
+evidence, all internal to the book:
+
+1. **The same page's own ceiling** is *"max/adult dose for the below is 875mg/dose PO
+   BD"* — meaningless if the paediatric dose is a flat 45 mg.
+2. **p.70 prints the same drug on the same twice-daily regimen with the /kg** —
+   *"Amoxicillin 45mg/kg/dose BD"* for sinusitis.
+3. **A whole-book grep**: every other amoxicillin dose in all 95 topics is per-kg
+   (`pb_046` 40 mg/kg/dose BD, `pb_049` 50 mg/kg, `pb_070` 45 mg/kg/dose). p.68 was
+   the only exception in the book.
+
+45 mg/kg/dose BD = 90 mg/kg/day, the standard high-dose amoxicillin regimen for AOM.
+As printed, **a 15 kg child would have received 45 mg BD instead of 675 mg BD — a 15×
+underdose**, for the commonest childhood infection in the book. `pb_068`'s header had
+already suspected this and left it as an open OE flag; the p.70 comparison settles it.
+**Grey should fix the source PDF.**
+
+## G2 🔴 otitis externa prescribes an ototoxic drop with no perforation warning (`pb_069_otitis_externa`)
+The only treatment given is **Neomycin/Polymyxin B/Hydrocortisone (Cortisporin Otic)**.
+Neomycin is an aminoglycoside and is **ototoxic if it reaches the middle ear** — it is
+contraindicated when the tympanic membrane is perforated or a tympanostomy tube is in
+place, where it can cause permanent sensorineural hearing loss.
+
+The book supplies the exact patient one page earlier: **`pb_068`'s AOM diagnostic
+criteria include "TM is perforated with discharge" and "new otorrhea not due to otitis
+externa"** — and these two conditions are the classic clinical confusion, which is why
+`pb_069` prints a pearl for telling them apart. A discharging ear that is misread as
+otitis externa gets neomycin.
+
+The standard answer where perforation cannot be excluded is a **fluoroquinolone otic
+drop (ciprofloxacin or ofloxacin)**, which is not ototoxic. Also absent: **aural toilet
+or an ear wick** when the canal is too swollen for drops to penetrate (drops into an
+occluded canal do nothing), and any analgesia.
+
+## G3 🔴 mastoiditis gives up to 6 g/day of ceftriaxone — above the book's own ceiling (`pb_069_mastoiditis`)
+*"With intracranial complications: **Ceftriaxone 2g IV BD or 8 hourly** plus
+Vancomycin…"*. 2 g every 8 hours is **6 g/day**. The book contradicts itself twice:
+
+- **`formulary.yaml` (p.148)**: *"Adults: Meningitis 2 g IV q12hr; Other 2 g IV q24hr"*
+  and *"Max: 2 g/dose"* — so the highest adult regimen the formulary recognises is
+  4 g/day.
+- **`pb_054`** prints *"max 4 g/day"* explicitly, twice.
+
+2 g q12h is the accepted regimen for CNS infection. The *"or 8 hourly"* has no support
+in the book or outside it, and it appears in the one place where the patient already
+has an intracranial infection and reduced renal reserve is likely.
+
+## G4 🟡 the same line under-doses vancomycin, relative to the book's own sepsis page (`pb_069_mastoiditis`)
+*"Vancomycin 2g in 2–4 divided doses"* — a flat 2 g/day, roughly 28 mg/kg/day for a
+70 kg adult. **`pb_099_im_sepsis` gives "Vancomycin 15 mg/kg IV 8-hourly"** — about
+45 mg/kg/day.
+
+So the book gives **less** vancomycin for an intracranial infection than for ordinary
+sepsis, when CNS penetration is poor and CNS dosing is normally the higher of the two.
+Vancomycin is also **absent from the 84-drug formulary entirely**, so there is nothing
+to look up, and neither page mentions levels or renal adjustment.
+
+## G5 🟡 mastoiditis in children: AND or OR? (`pb_069_mastoiditis`)
+Printed as two unnumbered-in-our-render bullets:
+- Ampicillin-Sulbactam IV 50 mg/kg 8 hourly
+- Cloxacillin or Flucloxacillin IV 50 mg/kg 6 hourly
+
+The source prints them as items 1 and 2 of a list with no conjunction, so our two
+bullets read as "give both". **Ampicillin-sulbactam already covers MSSA**, so giving
+cloxacillin alongside it duplicates the anti-staphylococcal cover and adds nothing;
+if the intent was "either", the page should say so. Separately, ampicillin-sulbactam
+is normally dosed **q6h**, and stated per the ampicillin component — neither is
+specified here.
+
+## G6 🟡 mastoiditis: no imaging, and no surgical route for adults (`pb_069_mastoiditis`)
+Children get *"if no response within 48 hours or the child deteriorates, refer to a
+surgical specialist to consider incision and drainage"*. **Adults get no surgical
+referral line at all** — including in the intracranial-complications bullet, where
+drainage is emergent rather than something to trial for 48 hours. No imaging (CT
+temporal bone) is mentioned anywhere in the topic, for either age group.
+
+## G7 🟡 pharyngitis: the amoxicillin cap looks like a per-day figure applied per-dose (`pb_070_pharyngitis`)
+Treatment table: **"Amoxicillin 25mg/kg/dose (max 1g) BD x 10 days"**. The mg/kg is
+right — 25 mg/kg/dose BD = 50 mg/kg/day. But the cap as written is **1 g per dose,
+i.e. 2 g/day**. The usual regimens are 50 mg/kg once daily to a **maximum of 1000 mg
+per day**, or 25 mg/kg/dose BD to a **maximum of 500 mg per dose**. Either way the
+daily ceiling is 1 g, not 2 g. Likely a per-day maximum written into a per-dose cell.
+
+## G8 🟡 pharyngitis never says why it is being treated — and the book has the page (`pb_070_pharyngitis`)
+The topic explains that only streptococcal pharyngitis warrants antibiotics, and gives
+a Centor threshold, but never states the reason the threshold exists: **preventing
+acute rheumatic fever**. In this setting that is the whole point, and **the book
+already has a rheumatic fever topic — `pb_058`, in the Paediatric Cardiac group.**
+There is no cross-link in either direction. One sentence and one `topic:` link would
+connect the two, and would also justify completing the full 10 days.
+
+Smaller items on the same page: the **benzathine penicillin G row gives no frequency**
+(it is a single dose, but the table does not say so, while every other row carries
+"x 10 days"), and **clindamycin is not labelled as the penicillin-allergy option**, so
+it reads as a peer alternative.
+
+## G9 🟡 epistaxis takes no blood pressure and no anticoagulant history (`pb_067`)
+The Management block checks *"PR, RR, spO2, Temp, Weight"* — **no BP**. BP appears only
+in the two disposition boxes at the end of the algorithm, so the book clearly regards
+it as relevant; it is simply missing from the point where it matters. Nothing anywhere
+on the page asks about **anticoagulants or antiplatelets**, which in adults is among
+the most useful questions in epistaxis and changes both the risk and the disposition.
+
+## G10 🟡 epistaxis: the posterior balloon has no inflation volume (`pb_067`)
+*"Pass a lubricated foley catheter through the bleeding nostril into the nasopharynx,
+**fill with NS** and pull forward"* — no volume is given anywhere. There is also no
+warning about over-inflation (alar and septal pressure necrosis), no analgesia or
+sedation note for a procedure that is very painful, and no **silver nitrate cautery**
+step, which is the usual intermediate between a topical pledget and packing where a
+visible anterior bleeding point exists.
+
+## G11 🟢 otitis media offers no analgesia (`pb_068`)
+The Presentation section is almost entirely pain — ear pain, ear rubbing, restless
+sleep, irritability — and the Treatment section is antibiotics only. Analgesia is the
+intervention that actually helps in the first 24 hours, and it is the one the parent
+came for.
+
+## ✓ VERIFIED FINE in this group (no action)
+Modified Centor / McIsaac transcribed exactly, including the age adjustment (+1 for
+3–14, 0 for 15–44, −1 for ≥45) and all four clinical criteria · the child-vs-adult
+scoring thresholds · penicillin VK 250 mg BD paeds / 500 mg BD adult × 10 days ·
+benzathine penicillin G 600 000 IU / 1.2 million IU by the 27 kg split · clindamycin
+7 mg/kg (max 300 mg) q8h × 10 days · AOM diagnostic criteria (they mirror the AAP
+definition) · AOM duration 10 days if <2 years, 7 days if older · **sinusitis is
+correct throughout** — the 2-major-or-1-major-plus-2-minor rule, all three
+bacterial-sinusitis triggers including double-sickening and the ≥10-day and
+severe-plus-fever routes, amoxicillin 45 mg/kg/dose BD × 7 days, the amox-clav
+indications (<2 years, moderate-severe, daycare, antibiotic in the last 4 weeks), and
+the 72-hour reassessment · otitis externa presentation and examination findings
+including the tragus-tenderness pearl that distinguishes it from otitis media ·
+mastoiditis presentation and the postauricular findings · epistaxis first aid (lean
+forward, pinch, do not tilt the head back, a full 15 minutes) · **topical tranexamic
+acid before packing, which is well supported and more current than much of the book** ·
+the escalation order pledget → anterior pack → contralateral pack → posterior balloon ·
+vaseline TID for 7–10 days on discharge.

@@ -20,10 +20,26 @@
 #   - Diagnosis criteria mirror the AAP acute-otitis-media definition
 #     (moderate/severe TM bulging, or mild bulging + recent-onset pain /
 #     intense erythema, or new otorrhoea not from otitis externa).
-#   - Amoxicillin dosing printed as "45mg/dose PO BD (max/adult 875mg/
-#     dose)" — high-dose amox is 80–90 mg/kg/day divided BD, i.e.
-#     ~45 mg/kg/dose; the "/dose" appears to mean per-kg-per-dose.
-#     Transcribed as printed; OE to confirm the per-kg wording.
+#   - Diagnosis criteria mirror the AAP acute-otitis-media definition.
+#
+# ⚠️ UNIT SLIP corrected 2026-07-28 (Grey's standing typo/unit-slip
+#   authorisation — the book contradicts itself elsewhere). RESOLVES the
+#   open flag this header previously carried:
+#   - Source p.68 prints "Amoxicillin 45mg/dose PO BD" and "Amoxicillin/
+#     Clavulanic Acid 45mg/dose PO BD" — the "/kg" is missing. Rendered
+#     "45mg/kg/dose PO BD" for both. Evidence, all three independent:
+#       1. The same page's own ceiling is "max/adult dose 875mg/dose PO
+#          BD", which is meaningless if the paediatric dose is a flat
+#          45 mg.
+#       2. p.70 (Sinusitis) prints the SAME drug on the SAME twice-daily
+#          regimen WITH the /kg: "Amoxicillin 45mg/kg/dose BD".
+#       3. A whole-book grep: every other amoxicillin dose in all 95
+#          topics is per-kg (pb_046 40mg/kg/dose BD, pb_049 50mg/kg,
+#          pb_070 45mg/kg/dose). p.68 was the only exception.
+#     45 mg/kg/dose BD = 90 mg/kg/day, the standard high-dose amoxicillin
+#     regimen for AOM. As printed, a 15 kg child would have received
+#     45 mg BD instead of 675 mg BD — a 15x underdose for the commonest
+#     childhood infection in the book. Grey should fix the source PDF.
 # ============================================================
 
 topic:
@@ -64,8 +80,8 @@ topic:
       markdown: |
         Max/adult dose for the below is **875mg/dose PO BD**.
 
-        - **1st line:** Amoxicillin 45mg/dose PO BD
-        - **2nd line:** Amoxicillin/Clavulanic Acid 45mg/dose PO BD
+        - **1st line:** Amoxicillin 45mg/kg/dose PO BD
+        - **2nd line:** Amoxicillin/Clavulanic Acid 45mg/kg/dose PO BD
         - **Duration:** 10 days if <2 years old, 7 days if >2 years old
 
     - type: "image"
