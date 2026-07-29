@@ -926,3 +926,37 @@ a position. **None of it is applied yet.**
 - **Ask for the missing numbers explicitly.** Three answers stopped exactly at the
   figure (HbS target, retic threshold, crossover age) and one confirmed an error
   without saying which way to fix it. That is now §F of the question list.
+
+---
+
+# J. CLOSED QUESTION LOG (what was asked, answered and applied)
+
+Kept so nothing is re-asked. The question file holds **only open items**; anything
+listed here is done.
+
+| Asked as | Question | Answer | Applied |
+|---|---|---|---|
+| E4 / F8 | HbS target for exchange transfusion in sickle stroke | post-procedure **15–20%**, start within 2 h; simple transfusion cap **Hb 10** | `pb_061` |
+| E6 / F9 | Reticulocyte threshold defining aplastic crisis | **<1%**, Hb typically 3–6 g/dL, no splenomegaly | `pb_060` |
+| F5 | ReSoMal in cholera / profuse diarrhoea | use **standard ORS**; stop rule RR +5 and pulse +25 | `pb_064` |
+| F6 / F11 | Adolescent MUAC overlap — which bound is wrong | **MAM ≥18.5** | `pb_063` |
+| F7 / F10 | WFH-vs-BMI crossover age | **5 years** | `pb_063` |
+| F8 (SAM) | Orphan digoxin line | **delete it** | `pb_064` |
+| F9 (SAM) | Eye care frequencies and the pad/bandage | chloramphenicol/tetracycline QID 7–10 d; atropine TDS 3–5 d; **saline pads + bandage** | `pb_064` |
+| F10a | "Stop feeds and IV fluids for 24 h" | **during the transfusion only**, keep D10 running | `pb_064` |
+| F10b | Kwashiorkor skin | barrier cream, no nappies, zinc if not yet feeding | `pb_064` |
+| H6 | Xpert for children | add it; **stool Xpert** priority sputum > stool > gastric aspirate | `pb_071` |
+| H7 | "Source case is female" +1 | study-population artefact — annotate | `pb_072` |
+| G1 | Is the 8-item scale the NIPS? | **no** — revert to 6 items, max 7, bands 0–2 / 3–4 / 5–7, treat at **≥3** | `pb_077` |
+| G2 | Transfusion thresholds + define "unstable" | thresholds stand; "unstable" defined | `pb_074` |
+| G3 / H2 | SpO₂ trigger in severe anaemia | keep 94%, **add that a normal SpO₂ does not exclude critical anaemia** | `pb_074` |
+| G5 | Epinephrine 1:1,000 vs 1:10,000 warning | exact wording given; **mg/mL-first notation** | `pb_037`, `pb_020`, `pb_013` |
+| G6 | Esmolol regimen | 500 mcg/kg over 1 min, then 25–50 mcg/kg/min to max 200–300; **labetalol first-line here** | `pb_106` |
+| G7 | Splenic sequestration third bullet | "otherwise manage as a vaso-occlusive crisis" + 5 mL/kg aliquots, recurrence, splenectomy | `pb_060` |
+| H1 | NAC 2-bag vs 3-bag under 40 kg | **2-bag for all weights** — FDA wording is absent data, not harm | no change needed |
+| H3 | Pralidoxime dose | children 20–50 mg/kg (max 2 g) then 10–20 mg/kg/hr; adults 1–2 g then 500 mg/hr | `pb_029` |
+
+**Still open — see `protocolbook_open_dosing_questions.md`:** the essential-hypertension
+BP targets (§I1), the aortic-dissection heart-rate figure (§I2), and the ferritin
+threshold under inflammation (§J, which was partially answered on 2026-07-29 and then
+lost — never applied, never re-asked, found only by auditing the tracking).
