@@ -71,14 +71,14 @@ topic:
         - type: "flowchart"
           variant: "algorithm"
           stages:
-            - decision: "qSOFA — 2 or more of: GCS < 15, respiratory rate > 22, SBP < 100?"
+            - decision: "qSOFA — 2 or more of: GCS < 15, respiratory rate > 22, SBP < 100? (qSOFA MISSES many septic patients — a score under 2 does not rule sepsis out. Treat on clinical suspicion)"
               outcomes:
                 - label: "Yes"
                   box:
                     title: "Treat as sepsis until labs result"
                     bullets:
                       - "Bolus IV fluids"
-                      - "Start antibiotics"
+                      - "Start antibiotics — WITHIN 1 HOUR in septic shock, within 3 hours otherwise"
                       - "Draw labs, including blood cultures"
                     severity: "priority"
                 - label: "No"
@@ -163,14 +163,14 @@ topic:
           title: "Therapeutic management"
           markdown: |
             - **Cardiovascular** — monitor HR, BP, urine output, and capillary refill for signs of hypoperfusion
-              - Initial bolus: 30 mL/kg LR/NS in the first 3 hours
+              - Initial bolus: 30 mL/kg LR/NS in the first 3 hours — **give it in 500 mL–1 L steps and reassess between each** (chest, JVP, oxygen saturation, urine output). Where there is no mechanical ventilation, fluid overload is far harder to rescue, and trials in sub-Saharan Africa have shown harm from aggressive fluid loading
               - Further bolus: additional 500 mL – 1 L LR/NS as needed
-              - Vasopressor: begin if MAP < 65 after fluid resuscitation — dopamine 5 mcg/kg/min, titrate to effect
+              - Vasopressor: begin if MAP < 65 after fluid resuscitation. **Norepinephrine is first-line where available** — start 0.05–0.1 mcg/kg/min and titrate to MAP ≥ 65; it can be run peripherally on a drop counter if there is no central line. If it is not stocked, dopamine 5–20 mcg/kg/min — acceptable, but with markedly more arrhythmia and higher mortality
             - **Respiratory** — oxygen as necessary to keep O₂ sat > 90%
             - **Labs to draw** — CBC, malaria, blood culture; renal functions, electrolytes; liver functions, amylase, lipase; PT/INR, PTT; urine culture
             - **Transfuse** — Hb < 5
-            - **Glucose control** — insulin to keep glucose under 12
-            - **DVT prophylaxis** — generally recommended
+            - **Glucose control** — insulin to keep glucose under 10 mmol/L (180 mg/dL); do not chase tight control, hypoglycaemia does more harm here
+            - **DVT prophylaxis** — **enoxaparin 40 mg SC daily**, or unfractionated heparin 5000 units SC BD–TDS, unless there is active bleeding or platelets are low
             - **GI prophylaxis** — only if mechanically ventilated or coagulopathy present; may consider in the severely ill with multiple comorbidities; may use an H2-blocker or PPI
             - **Nutrition** — begin enteral feeding early in the disease course
 

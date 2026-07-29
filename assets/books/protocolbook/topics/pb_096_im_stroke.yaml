@@ -143,7 +143,11 @@ topic:
             - Start oxygen if SpO₂ < 94%
             - Maintain glucose between 7.7 (140) and 10 (180)
             - Treat hypovolaemia with normal saline
-            - **Blood pressure: maintain < 170/105** (if no bradycardia) — labetalol 10–20 mg IV over 1–2 minutes, may repeat once; or hydralazine
+            - 🛑 **Blood pressure: do NOT lower it** unless **SBP ≥ 220 or DBP ≥ 120**, or there is a specific indication (aortic dissection, acute coronary syndrome, acute heart failure). High BP after a stroke is largely compensatory — dropping it reduces perfusion to the ischaemic penumbra and worsens the infarct
+            - If treatment is indicated, **reduce by no more than 15% in the first 24 hours** — labetalol 10–20 mg IV over 1–2 minutes, may repeat once; or hydralazine
+            - **If thrombolysis is being given**, the target is different — maintain < 185/110 before and < 180/105 after
+            - **Antiplatelet — the single most useful drug you have here.** Once haemorrhage is excluded (or, without imaging, once the picture is clearly ischaemic and there is no anticoagulant use or head trauma): **aspirin 300 mg PO stat**, then 75–100 mg daily
+            - **TIA or minor stroke:** add **clopidogrel 300 mg loading, then 75 mg daily for 21 days**, then continue aspirin alone. Dual therapy for those 21 days cuts recurrent stroke by about a quarter
             - Then continue supportive care — if **stroke**, use the NIH Stroke Scale (below); if **TIA**, use the ABCD3 score (below)
 
         - type: "table"
@@ -177,7 +181,7 @@ topic:
 
         - type: "prose"
           markdown: |
-            Score < 4: very low risk of stroke.
+            Score < 4: very low risk of stroke. **A low score does not mean "send home" — about 1 in 5 low-score patients has a serious treatable cause (carotid stenosis, atrial fibrillation). Every suspected TIA needs an ECG and, where available, carotid assessment, whatever the score.**
 
     # ═══════════════════════ PAGE 98 ═══════════════════════
     - page_number: 98
