@@ -140,7 +140,8 @@ topic:
           markdown: |
             **Start after 1-hour IVF.**
 
-            - Soluble Regular Insulin Injection: SC 0.15 IU/kg every 2 hours
+            - **Rapid-acting analogue (lispro/aspart) if available:** SC 0.15 IU/kg **every 2 hours**
+            - **Soluble/Regular Insulin — SC 0.15 IU/kg every 4 hours, NOT every 2.** Regular insulin peaks at 2–4 hours and lasts 5–8; dosing it 2-hourly stacks doses and causes hypoglycaemia. The 2-hourly interval belongs to the rapid-acting analogues
 
         - type: "prose"
           title: "Potassium Protocol"

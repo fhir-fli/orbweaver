@@ -54,14 +54,22 @@
 #     reduce mortality — a 10x under-cap would make them near-placebo.
 #     Grey should fix the source PDF.
 #
-# 🔴 NOT CHANGED, needs Grey/OE — see §H of tool/protocolbook_needs_oe_rereview.md:
-#   - "Pulmonary TB requires 6 more months of treatment" (total 8
-#     months). UCG 2023 and WHO both use 2RHZE/4RH — a 4-month
-#     continuation, 6 months total. Note the book gets the CNS figure
-#     exactly right (10 more months = UCG's 2RHZE/10RH), and pb_128_im_tb
-#     prints the same "6 more months" for adults, so this is a
-#     consistent book-wide position rather than a slip — which is why
-#     it is flagged rather than corrected.
+# ✅ APPLIED 2026-07-28 after OE confirmation (was §H2/§H3):
+#   - PULMONARY TB CONTINUATION 6 → 4 MORE MONTHS (6 months total).
+#     Source printed "6 more months" = an 8-month course. UCG 2023
+#     tabulates 2RHZE/4RH and WHO agrees; the SHINE trial (NEJM 2022,
+#     Uganda among its sites) showed 4 months non-inferior for
+#     non-severe paediatric TB, and ATS/CDC/ERS/IDSA 2025 now
+#     recommends 2HRZ(E)/2HR for that group. The book already had the
+#     CNS figure exactly right (10 more months = UCG's 2RHZE/10RH).
+#     Changed HERE and in pb_128_im_tb, which printed the same figure
+#     for adults — both had to move together, which is why this was
+#     flagged rather than silently corrected.
+#   - LFT RULE now distinguishes symptomatic from asymptomatic
+#     (>3× ULN with symptoms, >5× ULN without). The chart said 3× and
+#     the footnote said 5×; both are real thresholds and the missing
+#     distinction is what reconciles them.
+#   Grey should carry both into the source PDF.
 #
 # CONTENT FLAGS for the later OE / content pass (rendered faithfully):
 #   - 2HRZE / 4HR (2-month RIPE intensive → continuation isoniazid+
@@ -112,7 +120,10 @@ topic:
     - type: "prose"
       title: "LFT monitoring during treatment"
       markdown: |
-        If liver tenderness, hepatomegaly or jaundice develop, recheck LFTs. Do not change the regimen unless LFTs > 5 × the upper limit of normal.
+        If liver tenderness, hepatomegaly or jaundice develop, recheck LFTs.
+
+        - **With symptoms** (nausea, vomiting, abdominal pain, jaundice): stop and consult at **ALT >3 × the upper limit of normal**
+        - **Without symptoms:** stop and consult at **ALT >5 × the upper limit of normal**
 
     - type: "table"
       title: "First 2 months treatment"
@@ -150,8 +161,8 @@ topic:
       terminal:
         title: "After 2 months"
         bullets:
-          - "Cerebral TB requires 10 more months of treatment"
-          - "Pulmonary TB requires 6 more months of treatment"
+          - "Cerebral TB requires 10 more months of treatment (12 months total)"
+          - "Pulmonary TB requires 4 more months of treatment (6 months total)"
 
     - type: "table"
       title: "After 2 months (continuation)"

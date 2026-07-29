@@ -45,6 +45,22 @@ topic:
         - Neutropenia (granulocytes <1000) and fever
 
     - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "Priapism >4 hours — this is ischaemic, treat it now"
+      markdown: |
+        Delay causes permanent impotence. Do **not** wait for transfusion — **RBC transfusion does not treat priapism.**
+
+        - IV fluids and analgesia (opioids as needed)
+        - If not resolved within 1 hour of supportive care: **aspirate** dark blood from the corpus cavernosum with a 19G butterfly needle, then **irrigate with normal saline**
+        - If aspiration alone fails: **phenylephrine 100–500 mcg intracavernosal** (dilute 1mg in 19mL NS = 50 mcg/mL), repeat every 5 minutes, **maximum 1mg total**
+        - Keep **atropine** at the bedside — phenylephrine can cause reflex bradycardia
+        - Still not resolved: **urgent surgical referral for a shunt**
+
+    - type: "prose"
       title: "Home Medications at time of Discharge"
       markdown: |
         - **Folic Acid** 5mg PO QD
@@ -56,7 +72,7 @@ topic:
           - Sulfur allergy: Consider erythromycin 250mg PO q12hrs
         - **Hydroxyurea**
           - Should ideally be managed by specialized treatment centre
-          - Indications: Frequent crises >5/year; Abnormal Transcranial Doppler (TCD) Ultrasonography velocity >200cm/s; H/o of Acute Chest Syndrome; H/o Stroke
-          - Likely beneficial in all children with Sickle Cell Disease, although larger studies are still pending
-          - Start after 9 months old
+          - Indications: Frequent crises **≥3/year**; pain interfering with activities of daily living; Abnormal Transcranial Doppler (TCD) Ultrasonography velocity >200cm/s; H/o of Acute Chest Syndrome; H/o Stroke
+          - **All children from 9 months should be started on hydroxyurea.** Safety and efficacy in sub-Saharan African children are established (REACH, NOHARM)
           - Starting Dose: 20mg/kg PO QD
+          - Decision by a senior health worker after CBC, renal and liver function tests

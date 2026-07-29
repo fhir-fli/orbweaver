@@ -47,12 +47,13 @@ topic:
     - type: "prose"
       title: "Treatment — children"
       markdown: |
-        - Ampicillin-Sulbactam IV 50mg/kg 8 hourly
-        - Cloxacillin or Flucloxacillin IV 50mg/kg 6 hourly
+        - Ampicillin-Sulbactam IV 50mg/kg 6 hourly (dose is of the ampicillin component), **OR** Cloxacillin or Flucloxacillin IV 50mg/kg 6 hourly — **one or the other, not both** (ampicillin-sulbactam already covers staphylococcus)
         - If no response within 48 hours or the child deteriorates, refer to a surgical specialist to consider incision and drainage
 
     - type: "prose"
       title: "Treatment — adults"
       markdown: |
-        - Ceftriaxone 2g IV BD or Cefotaxime 2g IV 8 hourly
-        - **With intracranial complications:** Ceftriaxone 2g IV BD or 8 hourly plus Vancomycin 2g in 2–4 divided doses
+        - Ceftriaxone 2g IV q12hr (**max 4g/day**) or Cefotaxime 2g IV 8 hourly
+        - **With intracranial complications:** Ceftriaxone 2g IV q12hr (**max 4g/day**) plus **Vancomycin 15mg/kg IV 8 hourly (max 2g/dose)** — monitor levels if available
+        - **CT of the temporal bone** where available, to look for coalescent mastoiditis or intracranial spread
+        - **Refer to surgery.** With intracranial complications drainage is emergent — do not wait 48 hours

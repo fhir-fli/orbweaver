@@ -198,8 +198,8 @@ topic:
         - type: "prose"
           title: "Continuation phase (after 2 months)"
           markdown: |
-            - Cerebral TB requires 10 more months
-            - Pulmonary TB requires 6 more months
+            - Cerebral TB requires 10 more months (12 months total, 2RHZE/10RH)
+            - Pulmonary TB requires 4 more months (6 months total, 2RHZE/4RH)
             - Sputum smear:
               - If positive, retest at 3 months
               - If still positive at 3 months, retest susceptibilities

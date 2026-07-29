@@ -40,6 +40,7 @@ topic:
       markdown: |
         - Strep pharyngitis usually presents with sore throat, fever, headache or stomach ache, but **NOT** with viral symptoms like cough, coryza, conjunctivitis
         - **Only streptococcal pharyngitis should be treated with antibiotics** — all others should only be treated with supportive care
+        - **Why treat it at all:** to prevent **acute rheumatic fever** and the rheumatic heart disease that follows. That is why the full 10 days must be completed even though the sore throat settles in 2–3 days. See the [rheumatic fever protocol](topic:pb-rheumatic-fever)
 
     - type: "table"
       title: "Streptococcal pharyngitis diagnosis — Modified Centor Score"
@@ -84,14 +85,14 @@ topic:
             - "250mg PO BD x 10 days"
             - "500mg PO BD x 10 days"
         - cells:
-            - "Benzathine Penicillin G IM"
-            - "600,000 IU"
-            - "1.2 million IU"
+            - "Benzathine Penicillin G IM — single dose"
+            - "600,000 IU x 1"
+            - "1.2 million IU x 1"
         - cells:
             - "Amoxicillin PO"
-            - text: "25mg/kg/dose (max 1g) BD x 10 days"
+            - text: "25mg/kg/dose (max 500mg/dose) BD x 10 days"
               span: 2
         - cells:
-            - "Clindamycin PO"
+            - "Clindamycin PO — for penicillin allergy"
             - text: "7mg/kg (max 300mg) 8 hourly x 10 days"
               span: 2

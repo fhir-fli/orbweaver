@@ -65,6 +65,20 @@ topic:
                 bullets:
                   - "Hgb may continue to drop, monitor carefully"
                   - "May require more aggressive transfusions than normal crisis"
+                  - "DO NOT splenectomise in acute sequestration — mortality is high"
+                severity: "emergency"
+            - label: "No"
+              continue: true
+        - decision: "Hgb far below baseline with a LOW reticulocyte count? (retic <1%, or near zero)"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Aplastic crisis"
+                bullets:
+                  - "Marrow has stopped producing red cells, usually after Parvovirus B19"
+                  - "Distinguished from sequestration by the LOW retic count and NO splenomegaly"
+                  - "Hgb typically falls to 3-6 g/dL and will keep falling until the marrow recovers"
+                  - "Transfuse; recovery is usually within 7-10 days"
                 severity: "emergency"
             - label: "No"
               continue: true
@@ -83,7 +97,7 @@ topic:
                 title: "Treat for infection"
                 bullets:
                   - "Blood Cultures"
-                  - "Ceftriaxone: 100mg/kg/OD IV (can give 50mg/kg/12hrs)"
+                  - "Ceftriaxone: 100mg/kg/OD IV (can give 50mg/kg/12hrs) — max 2g/dose, and max 4g/day only if treating meningitis, otherwise max 2g/day"
                   - "If evidence of sepsis, use sepsis protocol"
                 severity: "priority"
             - label: "No"

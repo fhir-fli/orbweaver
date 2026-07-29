@@ -1118,11 +1118,19 @@ formulary:
       class: ""
       page: 157
       dose: |
+        **Routine supplementation:**
         - < 6 months: not recommended
         - 6–12 months: 100,000 units PO stat
         - > 12 months: 200,000 units PO stat
+
+        **Treatment of deficiency (eye signs, or recent measles):** days 1, 2 and 14
+        - < 6 months: 50,000 units
+        - 6–12 months: 100,000 units
+        - > 12 months: 200,000 units
       notes: |
-        Once on admission; should not be given twice within 1 month.
+        For ROUTINE supplementation: once on admission; should not be given twice within 1 month.
+
+        The 1-month rule does **not** apply to the 3-dose deficiency-treatment course above — that schedule is deliberate. In severe acute malnutrition, give high-dose vitamin A only if there are eye signs or a recent history of measles: F-75, F-100 and RUTF already contain enough for everyone else.
 
     - id: "vitamin-d"
       name: "Vitamin D"

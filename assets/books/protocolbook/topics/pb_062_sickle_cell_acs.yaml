@@ -85,6 +85,8 @@ topic:
     - type: "prose"
       title: "General Supportive Care"
       markdown: |
+        - **Incentive spirometry — 10 maximal inspirations every 2 hours while awake.** Start early. If no spirometer is available, have the child **blow up a balloon** to the same schedule. This is the single highest-yield thing on this page: it cuts pulmonary complications sharply and costs nothing
+        - **Salbutamol** for any wheeze or bronchospasm — nebulised 5mg (2.5mg if <5 years), or inhaler 2–4 puffs as needed. The Clinical Respiratory Score above grades wheeze, so treat what it finds
         - Aggressive pain management
         - Encourage feeding, IVF if not eating (but TOTAL fluid intake should be no more than maintenance)
 
@@ -95,5 +97,5 @@ topic:
         - Afebrile x 24hrs
         - Good PO intake
         - SpO2 >94% on room air
-        - Hgb >5
+        - Hgb >5, **or back at the patient's known baseline — whichever is higher**
         - Pain controlled without morphine
