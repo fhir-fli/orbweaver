@@ -45,7 +45,7 @@ text extraction.
 | **45** | "1 mL D50% + 9 mL D5% = D10%" | Computes to **D9.5%**. Use 8 mL NS + 2 mL D50%, or 1 mL D50% + 8 mL D5% |
 | **45** | SIRS temp "<35.4 axillary (36 **axillary**)" | "(36 **core**)" — matches the ">37.9 axillary (38.5 core)" pattern on the same line |
 | **47** | Soluble/regular insulin SC 0.15 IU/kg **q2h** | **q4h** for regular insulin (peaks 2–4 h, lasts 5–8 h, so q2h stacks). q2h belongs to a rapid-acting analogue |
-| **60** | Splenic-sequestration box has a **third bullet that does not print** | The PDF text layer contains "c. Otherwise treat" but the box **clips it**, and it is truncated mid-sentence even in the text layer. **Only you know what it was meant to say** — and the box needs enlarging |
+| **60** | Splenic-sequestration box has a **third bullet that does not print** | See the investigation note at the bottom of this sheet. The text ends at "c. Otherwise treat" in **both** editions and in the tagged structure tree, and it is not recoverable from any file on this machine — **only your original Word document can settle it** |
 | **61** | Table titled "Does the patient have any contraindication?:" | The table beneath is concurrent-issue **management** (fever, hypoglycaemia, convulsions, anaemia, infection, hydration). Retitle — looks like a template paste |
 | **62** | "**pO2** >94% on room air" | "**SpO2** >94%". A percentage on room air is a saturation; the same page says spO2 twice |
 | **63** | "Use WFL/WFH if **<6 years** (59 months)" and "BMI/age if **≥6 years**" | **5 years** in both. 59 months is under five, and the table below uses "6 to 59 months" / "5 to 19 years" |
@@ -84,13 +84,50 @@ text extraction.
 
 ---
 
+## p.60 — the invisible third bullet: what the search actually found
+
+Grey asked whether I had searched the original PDF for it. I had not — I had only
+looked at p.60. Doing it properly:
+
+1. **Whole-book text search, eBook 1.7** — "Otherwise treat" occurs **exactly once**
+   in all 176 pages, at p.60, ending there.
+2. **`ProtocolBook Print 1.7.pdf`** (in `~/dev/quick_reference/`, a second edition I
+   had not been using) — **identical truncation**, same three words.
+3. **Word bounding boxes** — the phrase has a real on-page position (x 226–275,
+   y 242–249 pt), i.e. it is not parked off-page.
+4. **300 dpi render of that exact strip** — pure white. Nothing is painted. The dark
+   pixels inside the text's own bounding box turned out to be the two box borders
+   crossing it, not glyphs.
+5. **The tagged structure tree** (inflated from the PDF, and generated from Word's own
+   document model) reads:
+   ```
+   /S/Span /ActualText(c.)
+   /S/Span /ActualText(Otherwise treat )
+   /S/LBody ...        <- the list item closes here
+   /S/Textbox ...      <- it lives inside a Word text box
+   ```
+   The list item is well-formed and contains those two spans and nothing else.
+6. **No source document on this machine** — no `.docx`, `.odt`, `.indd` or `.pages`
+   anywhere under `/home/grey`; `~/dev/quick_reference` is a git repo but tracks only
+   `LICENSE`, so there is no earlier revision of the PDF to diff against.
+
+**Conclusion:** the phrase sits in a Word text box that is too small, so the overflow
+is clipped at render time — extraction ignores clipping, which is why it shows up in
+the text layer but never on paper. Whatever followed "Otherwise treat" was never
+carried into either PDF, so **it cannot be recovered from anything here.** Your
+original Word file is the only place it can still exist.
+
+For what it is worth, the a/b/c structure ("Hgb may continue to drop" / "may require
+more aggressive transfusions than normal crisis" / "Otherwise treat…") reads as though
+it ended something like *"…as a normal crisis"* — but that is a guess from the shape of
+the list, not something found in the file, and it should not go into the book on my
+say-so.
+
 ## Notes
 
 - **p.79's typo is in the image itself**, not in text — the jerry-can artwork has to be
   regenerated. The app works around it by carrying the correct wording in an
   accompanying table.
-- **p.60's missing bullet is the one item on this sheet I cannot write for you.** The
-  sentence is incomplete in your own source file.
 - Additions the app made that are **not** errors in your text, so they need no PDF fix
   unless you want parity: a paediatric epinephrine ceiling on pp.13/20, and the
   clinical gaps filled during the evidence audit (priapism, incentive spirometry,

@@ -63,7 +63,7 @@ topic:
     - type: "prose"
       title: "Home Medications at time of Discharge"
       markdown: |
-        - **Folic Acid** 5mg PO QD
+        - **Folic Acid** 1mg PO QD — **not 5mg.** 1mg covers the increased demand from chronic haemolysis, and high-dose folate antagonises the monthly sulfadoxine-pyrimethamine below (it rescues the parasite and roughly doubles antimalarial treatment failure)
         - **Penicillin VK**
           - <3yo: 125mg PO BD
           - 3–5yo: 250mg PO BD
