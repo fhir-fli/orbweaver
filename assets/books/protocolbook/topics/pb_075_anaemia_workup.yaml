@@ -44,14 +44,25 @@
 #      200 mg (1–2 y). Refs: Taylor-Robinson 2019 Cochrane;
 #      Jourdan 2018 Lancet.
 #
+# ⚠️ HEADER CORRECTED 2026-07-29 — it said the TID regimen had been
+#   "deliberately left as printed" long after the content had moved to
+#   ONCE DAILY. OE caught the contradiction on re-review, and the stale
+#   note had already caused one wrong recommendation: fed the old text,
+#   OE advised "keep TID", which would have reverted a correct change.
+#   ✅ IRON IS NOW ONCE DAILY, and that is the intended state:
+#   - Children 3 mg/kg once daily (max 60 mg/day); adults 65 mg once
+#     daily (= ferrous sulfate 200 mg), alternate-day if not tolerated.
+#   - Source printed 1–2 mg/kg/dose q8h (~3–6 mg/kg/day) and adult
+#     50 mg q8h — older divided-dose practice. The 2026 AAP clinical
+#     report favours 3 mg/kg ONCE daily, and adult evidence supports
+#     lower once-daily dosing with fewer side effects and better
+#     absorption (hepcidin rises for ~24 h after a dose, so a second
+#     dose the same day is absorbed less well).
+#   - The once-daily wording is phrased as a PREFERENCE, not a ban:
+#     TID is not wrong, and divided dosing can suit a setting stocking
+#     only small-volume ferrous sulfate drops.
+#
 # ✓ OE-VERIFIED, NO CHANGE:
-#   - Iron 1–2 mg/kg/dose PO q8h (~3–6 mg/kg/day) and adult 50 mg q8h
-#     (150 mg/day) are OLDER divided-dose practice — the 2026 AAP
-#     clinical report now favours 3 mg/kg ONCE daily, and adult
-#     evidence supports lower once-daily dosing with fewer side
-#     effects. OE judged the TID regimen acceptable and possibly
-#     PREFERABLE here, since low-resource settings often stock only
-#     small-volume ferrous sulfate drops. Deliberately left as printed.
 #   - B12 1–2 mg PO daily: valid alternative to IM (~1% of an oral
 #     dose is absorbed by passive diffusion without intrinsic factor).
 #   - Fe:TIBC 18% cut-off: simplified but clinically useful.
@@ -132,7 +143,7 @@ topic:
         - **Iron** — once daily, with or before food, not with milk or tea
           - Children: **3 mg/kg ONCE daily** of elemental iron (max 60 mg/day)
           - Adults: **65 mg ONCE daily** of elemental iron (= ferrous sulfate 200 mg, one tablet). If not tolerated, the same tablet every other day — equally effective and better absorbed
-          - Do not split into three daily doses: it is no more effective, is absorbed less well, and is taken less reliably
+          - **Once daily is preferred** over splitting into three doses — equally effective, better absorbed, and taken more reliably. Divided dosing is not wrong if that is what your stock allows
         - **Folate (folic acid)**
           - Children: 0.4–1 mg PO daily
           - Adults: 1–5 mg PO daily (depending on severity)

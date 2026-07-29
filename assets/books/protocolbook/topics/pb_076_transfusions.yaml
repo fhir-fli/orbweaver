@@ -24,12 +24,26 @@
 #   - "Acetaminophen" → "paracetamol" (book's US spelling; app uses the
 #     INN elsewhere).
 #
-# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
-#   - Lasix (furosemide) + dopamine for AHTR, meperidine for rigors,
-#     and the WB-vs-PRBC volume rules are transcribed as printed; a
-#     modern review may note leucoreduction and restrictive thresholds.
-#   - "1 unit PRBCs raises adult Hb ~1 g/dL" and "10–15 mL/kg raises
-#     child Hb 2–3 g/dL" are standard rules of thumb. Kept as printed.
+# ✅ OE REVIEW APPLIED 2026-07-29 (pp.74–76 group):
+#   - AHTR treatment reordered. IV fluids were already present, so OE's
+#     "omits IV fluids" flag was wrong — but the rest held: the page
+#     read "maintain urine output with furosemide and/or dopamine",
+#     which conflates two different indications. Now: fluids are the
+#     priority (they protect the kidney from free haemoglobin),
+#     furosemide only if output stays low despite filling, and
+#     vasopressors are for hypotension — with the explicit note that
+#     low-dose "renal" dopamine does not protect kidneys.
+#   - Meperidine/pethidine for rigors marked SECOND-LINE with the
+#     normeperidine seizure risk and the absence of efficacy data.
+#     (Pethidine is stocked — it is in the formulary at p.153.)
+#   - Delayed haemolytic reaction "within 5–7 days" → "typically
+#     3–21 days", so a later presentation is not missed.
+#
+# ✓ VERIFIED FINE, NO CHANGE: TRALI timing (1–2 h, sometimes 6 h,
+#   improves 48–96 h) · the 10–15 mL/kg PRBC and 20 mL/kg WB rules ·
+#   the malnourished-child 5 mL/kg PRBC / 10 mL/kg WB do-not-repeat
+#   rule · "1 unit raises adult Hb ~1 g/dL" · the malaria-area
+#   threshold table.
 # ============================================================
 
 topic:
@@ -86,11 +100,11 @@ topic:
       markdown: |
         - **Acute haemolytic reaction (AHTR)** — within 24 h
           - Signs: fevers, chills, rigors, pain at the infusion site, chest / back / abdominal pain, low BP, shortness of breath
-          - Treatment: stop the transfusion; send the unit back to the lab to recheck compatibility; aggressive IV fluid hydration; maintain urine output with furosemide and/or dopamine
+          - Treatment: stop the transfusion; send the unit back to the lab to recheck compatibility; **aggressive IV fluid hydration is the priority** — it protects the kidneys from free haemoglobin. Add **furosemide** only if urine output stays low despite adequate filling. **Vasopressors (e.g. dopamine) are for hypotension, not for urine output** — low-dose "renal" dopamine does not protect the kidneys
         - **Febrile non-haemolytic reaction** — within 6 h
           - Signs: fevers, chills, tachypnoea, headache, vomiting, BP change
-          - Treatment: stop the transfusion; send the unit back to the lab to recheck compatibility (important to differentiate haemolytic from non-haemolytic); draw blood cultures; give paracetamol (may consider meperidine)
-        - **Delayed haemolytic reaction** — within 5–7 days
+          - Treatment: stop the transfusion; send the unit back to the lab to recheck compatibility (important to differentiate haemolytic from non-haemolytic); draw blood cultures; give paracetamol. **Pethidine (meperidine) for severe rigors is second-line only** — its metabolite accumulates and causes seizures with repeated dosing, and its benefit here has never been demonstrated
+        - **Delayed haemolytic reaction** — typically 3–21 days
           - Signs: fever, anaemia, mild jaundice
           - Treatment: screen for new antibodies; no specific treatment
         - **Allergic / urticarial / anaphylaxis**
