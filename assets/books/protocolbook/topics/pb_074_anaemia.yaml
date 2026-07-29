@@ -106,4 +106,6 @@ topic:
 
     - type: "prose"
       markdown: |
+        **"Unstable" means any of:** respiratory distress (RR >50 in infants, >40 in older children) · impaired consciousness · clinical shock (weak fast pulse, cold extremities, capillary refill >3 s) · acidotic breathing.
+
         Then [evaluate for the cause of anaemia](topic:pb-anaemia-workup).

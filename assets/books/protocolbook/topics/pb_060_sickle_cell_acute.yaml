@@ -65,7 +65,11 @@ topic:
                 bullets:
                   - "Hgb may continue to drop, monitor carefully"
                   - "May require more aggressive transfusions than normal crisis"
+                  - "Transfuse CAUTIOUSLY in 5 mL/kg aliquots with serial Hb — aim for Hb 7-8, not higher. As the spleen releases the sequestered cells the Hb overshoots and causes hyperviscosity"
+                  - "Otherwise manage supportively as for a vaso-occlusive crisis: IV fluids, analgesia, oxygen"
                   - "DO NOT splenectomise in acute sequestration — mortality is high"
+                  - "Recurs in about half of cases. Elective splenectomy after a second episode, or after one life-threatening episode; vaccinate against pneumococcus and meningococcus first"
+                  - "Tell the family to return immediately for sudden pallor, abdominal distension or lethargy"
                 severity: "emergency"
             - label: "No"
               continue: true

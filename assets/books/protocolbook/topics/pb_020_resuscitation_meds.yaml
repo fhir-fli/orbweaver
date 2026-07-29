@@ -66,7 +66,7 @@ topic:
       rows:
         - cells:
             - "Epinephrine (Adrenaline)"
-            - "**0.1 ml/kg 1:10,000** IV, **max 10 ml (= 1 mg)** · mix 1 ml of 1:1,000 in 9 ml NS · flush 10 ml NS"
+            - "**0.1 ml/kg of 0.1 mg/mL (1:10,000)** IV, **max 10 ml (= 1 mg)** · flush 10 ml NS · 🛑 Use 0.1 mg/mL (1:10,000) for IV/IO. If only 1 mg/mL (1:1,000) ampoules are stocked, dilute 1 ml in 9 ml NS to make 1:10,000 — giving 1:1,000 undiluted IV can be fatal"
         - cells:
             - "Dextrose 10%"
             - |

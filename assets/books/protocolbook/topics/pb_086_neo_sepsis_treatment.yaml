@@ -86,7 +86,8 @@ topic:
           markdown: |
             - **First line:** ampicillin 50 mg/kg q8h (q12h if in the 1st week) PLUS gentamicin 5 mg/kg OD (3 mg/kg OD if < 2 kg in the 1st week, or birth asphyxia)
             - **If concern for soft-tissue infection:** cloxacillin PLUS gentamicin (same dosing as above)
-            - **If concern for meningitis:** ampicillin 100 mg/kg q8h (q12h if in the 1st week) PLUS cefotaxime 50 mg/kg q8h (q12h if in the 1st week) — may substitute ceftriaxone (but risk of jaundice)
+            - **If concern for meningitis:** ampicillin 100 mg/kg q8h (q12h if in the 1st week) PLUS cefotaxime 50 mg/kg q8h (q12h if in the 1st week)
+            - 🛑 **Prefer cefotaxime to ceftriaxone in a neonate.** Ceftriaxone displaces bilirubin from albumin and worsens jaundice, and it is **absolutely contraindicated in any neonate receiving calcium-containing IV fluids** — the two form fatal precipitates in the lungs and kidneys
 
         - type: "prose"
           title: "If no signs of sepsis — assess for localized infection"

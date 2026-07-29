@@ -97,11 +97,12 @@ topic:
         alert: "0xFFD32F2F"
         alert_fill: "0xFFFDECEA"
         alert_text: "0xFFB71C1C"
-      title: "Epinephrine (1mg/1ml 1:1000)"
+      title: "Epinephrine 1 mg/mL (1:1,000)"
       markdown: |
         - 0.01mL/kg — max 0.3mL (child), up to 0.5mL (adolescent / adult)
         - IM anterolateral thigh
         - Repeat q5–15 minutes if no improvement
+        - 🛑 **Use 1 mg/mL (1:1,000) for IM injection ONLY. Do NOT give it IV** — it is **10× the IV concentration** and can cause fatal arrhythmia. For IV use (cardiac arrest only), dilute to **0.1 mg/mL (1:10,000)**
 
     - type: "prose"
       title: "Initial management"

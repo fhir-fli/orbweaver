@@ -94,7 +94,8 @@ topic:
           markdown: |
             - Nicardipine — initial 5 mg/hr, increase 2.5 mg/hr q5min to a max of 15 mg/hr
             - Sodium nitroprusside — 0.3–0.5 mcg/kg/min, increase 0.5 mcg/kg/min every few minutes to a max of 10 mcg/kg/min
-            - Labetalol — 10–20 mg IV, then bolus 20–80 mg q10min until BP at target, or 300 mg total dose
+            - **Labetalol — first choice here.** 10–20 mg IV, then bolus 20–80 mg q10min until BP at target, or 300 mg total dose. **It needs no infusion pump** — the others do
+            - **Esmolol** (where an infusion pump is available) — 500 mcg/kg IV over 1 minute, then infuse 25–50 mcg/kg/min, increasing by 25–50 mcg/kg/min every 5–10 minutes, to a maximum of 200–300 mcg/kg/min
             - Must be admitted for management. **Goal: 20–25% decrease in BP in the 1st hour, then < 160/110 over the next 2–6 hours**
 
         - type: "prose"

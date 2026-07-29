@@ -568,3 +568,69 @@ Several previous replies were **cut off exactly at the number** (an HbS target, 
 reticulocyte threshold, an age cut-off). Where a question asks for a figure, please
 give the figure as a plain standalone line — for example "HbS target: 15–20%" — rather
 than inside a sentence.
+
+---
+
+# H. STILL OPEN AFTER THE 2026-07-29 ROUND
+
+## H1 🔴 NAC — the two OE rounds contradict each other, and we have already applied one
+
+**Round 1 (2026-07-28):** *"2-bag for ALL weights, diluent scaled 7 mL/kg → 14 mL/kg,
+D5W in children."* **We applied exactly that**, and our page now reads:
+
+> **N-acetylcysteine (NAC) — 2-bag regimen, ALL weights**
+> Child ≤40 kg: 200 mg/kg in **7 mL/kg** diluent (max 500 mL), then 100 mg/kg in
+> **14 mL/kg** diluent (max 1 L)
+> \>40 kg: 200 mg/kg (max 22 g) in 500 mL diluent, then 100 mg/kg (max 11 g) in 1 L
+
+**Round 2 (2026-07-29):** *"Move to the 2-bag regimen for patients >40 kg. **Keep the
+3-bag regimen for patients ≤40 kg** per the FDA label"* — citing the label's
+"insufficient data to recommend the two-bag regimen in patients ≤40 kg."
+
+**Nothing changed between the two rounds except the question wording. We have not
+changed the page — it still says 2-bag for all weights.**
+
+**Q1.** Which is right for a paediatric-heavy district hospital: 2-bag for everyone
+with the diluent scaled to weight, or 2-bag only above 40 kg and 3-bag below?
+
+**Q2.** The FDA's caution says "insufficient data", not "evidence of harm". Is there
+any actual signal of worse outcomes with 2-bag in children, or is this an absence of
+paediatric trials?
+
+**Q3.** Which consideration should win here: fewer bag changes and fewer anaphylactoid
+reactions (favouring 2-bag for all, and fewer medication errors in a busy ward with
+one nurse), or label conformity (favouring 3-bag under 40 kg)?
+
+Please answer with a single recommendation for what to print.
+
+## H2 ⚪ NOT ANSWERED — the SpO₂ trigger in severe anaemia
+
+This was asked as G3 and the reply did not reach it. Restating it alone:
+
+Our anaemia page prints, in its management list:
+
+> Check vital signs (BP, PR, RR, **SpO₂**, Temp, Weight)
+> Insert 2 IVs; **start oxygen if SpO₂ < 94%**
+
+**Q1.** Is "start oxygen if SpO₂ <94%" the right trigger in **severe anaemia
+specifically**? Pulse oximetry reports the saturation of the haemoglobin that is
+present, so a child with Hb 3 g/dL can read 99% while being profoundly deficient in
+oxygen *delivery*.
+
+**Q2.** Should the page state that a normal SpO₂ does **not** exclude critical anaemia,
+and that oxygen should be given on clinical grounds — respiratory distress, altered
+consciousness, shock — regardless of the reading?
+
+Please answer these two points only.
+
+## H3 🟡 Pralidoxime — a dose was offered; confirm before we print it
+
+Our organophosphate page currently carries a footnote saying UCG includes pralidoxime
+and the evidence is uncertain, but **prints no dose**. The suggested line was:
+
+> Pralidoxime (where available): 25–50 mg/kg IV over 30 min, then 10–20 mg/kg/hr;
+> evidence of benefit is uncertain.
+
+**Q.** Confirm those figures, including the adult dose and any maximum, and confirm
+this is worth printing at all for a hospital where pralidoxime is very unlikely to be
+stocked.

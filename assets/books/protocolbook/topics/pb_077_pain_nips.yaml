@@ -20,13 +20,29 @@
 #   - Citation superscripts (74,75) dropped.
 #   - "Acetaminophen (Tylenol)" → "paracetamol" (INN, used elsewhere).
 #
-# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
-#   - NIPS is a validated neonatal pain tool; the comfort measures
-#     (non-nutritive sucking, sucrose, swaddling, recorded intrauterine
-#     sounds) are standard non-pharmacologic neonatal analgesia.
-#   - "Narcotic bolus/drip" for moderate/severe neonatal pain is
-#     transcribed as printed; neonatal opioid dosing + apnoea
-#     monitoring is a place OE may add specifics.
+# 🔴 SOURCE ERROR corrected 2026-07-29 — THE SCALE WAS NOT THE NIPS.
+#   Source p.77 prints an EIGHT-variable grid scoring to 10, and bands
+#   it 0–3 mild / 4–6 moderate / 7–10 severe. Our render was faithful,
+#   so this is the book's content, not a digitisation error (verified
+#   against the source PDF).
+#   The validated NIPS (Lawrence 1993) has SIX items with a maximum of
+#   7: facial expression, cry, breathing pattern, arms, legs, state of
+#   arousal. The book added HEART RATE (0–2) and O₂ SATURATION (0–1),
+#   which belong to PIPP-type scales.
+#   OE confirmed and chose reverting over renaming: calling a modified
+#   tool "NIPS" misleads anyone who looks it up or was trained
+#   elsewhere, and the two extra items are driven by fever, anaemia and
+#   lung disease as well as pain, so they lower specificity.
+#   APPLIED: heart rate and O₂ saturation REMOVED; max is now 7; tiers
+#   re-banded to OE's figures — 0–2 mild / 3–4 moderate / 5–7 severe,
+#   with the standard published treatment threshold of ≥3 stated
+#   explicitly at the top of the scoring block.
+#   Grey must fix the source PDF, and this is a case where the printed
+#   book and the app now deliberately differ.
+#
+# ✅ Neonatal opioid dosing added (was "narcotic bolus/drip", a drug
+#   class with no dose): morphine 0.05–0.1 mg/kg IV, plus a hard
+#   apnoea-monitoring note with BVM and naloxone at the bedside.
 # ============================================================
 
 topic:
@@ -70,18 +86,17 @@ topic:
         - cells: [{text: "**State of arousal**", span: 2}]
         - cells: ["Sleeping / awake — quiet, peaceful, sleeping, or alert and settled", "0"]
         - cells: ["Fussy — alert, restless and thrashing", "1"]
-        - cells: [{text: "**Heart rate**", span: 2}]
-        - cells: ["Within 10% of baseline", "0"]
-        - cells: ["11–20% of baseline", "1"]
-        - cells: [">20% of baseline", "2"]
-        - cells: [{text: "**O₂ saturation**", span: 2}]
-        - cells: ["No additional O₂ needed to maintain saturation", "0"]
-        - cells: ["Additional O₂ required to maintain saturation", "1"]
+
+    - type: "prose"
+      markdown: |
+        **Maximum score 7.** Heart rate and oxygen saturation are **not** part of the NIPS — they belong to other scales (PIPP). They are driven by fever, anaemia and lung disease as well as pain, so adding them lowers the score's specificity.
 
     - type: "prose"
       title: "How to score"
       markdown: |
-        - **0–3 · Mild** — non-pharmacologic is the primary method:
+        **Give analgesia at a score of 3 or more.**
+
+        - **0–2 · Mild** — non-pharmacologic is the primary method:
           - Pacifiers, sucrose, hand-to-mouth, non-nutritive sucking
           - Swaddling, nesting, holding
           - Position changes; correct positioning for procedures
@@ -90,10 +105,10 @@ topic:
           - Comfort measures noted to be effective with the individual neonate
           - Soothing vocalizations; recorded intrauterine sounds
           - Pharmacologic: paracetamol
-        - **4–6 · Moderate**
+        - **3–4 · Moderate**
           - Non-pharmacologic (see the primary methods above)
           - Add an opioid bolus — **morphine 0.05–0.1 mg/kg IV**
-        - **7–10 · Severe**
+        - **5–7 · Severe**
           - Pharmacologic is the primary method: **morphine 0.05–0.1 mg/kg IV** as an intermittent bolus
           - Consider a morphine infusion
         - 🛑 **Any opioid in a neonate requires apnoea monitoring.** Neonates are far more sensitive to opioid-induced respiratory depression than older infants — have a bag-valve mask and naloxone at the bedside
