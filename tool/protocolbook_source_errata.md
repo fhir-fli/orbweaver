@@ -111,11 +111,33 @@ looked at p.60. Doing it properly:
    anywhere under `/home/grey`; `~/dev/quick_reference` is a git repo but tracks only
    `LICENSE`, so there is no earlier revision of the PDF to diff against.
 
-**Conclusion:** the phrase sits in a Word text box that is too small, so the overflow
-is clipped at render time — extraction ignores clipping, which is why it shows up in
-the text layer but never on paper. Whatever followed "Otherwise treat" was never
-carried into either PDF, so **it cannot be recovered from anything here.** Your
-original Word file is the only place it can still exist.
+7. **The page content stream itself** (page object 136, contents object 1001,
+   inflated) settles the mechanism exactly:
+   ```
+   /P <</MCID 73>> BDC q
+   193.92 263.76 90 64.8 re      <- clip rectangle: y 263.76 .. 328.56
+   W* n
+   BT
+   1 0 0 1 226.39 256.63 Tm      <- text baseline at y 256.63
+   0 g                           <- fill colour BLACK, not white
+   [(O)(t)(h)(e)(r)(w)(i)(se)( t)(r)(e)(at)( )] TJ
+   ```
+
+**Conclusion — it is black text, clipped, not white text.** The Word text box's clip
+rectangle bottoms out at **y 263.76**. `"normal crisis"` sits at **y 265.75** — the
+last line that fits. `"c. Otherwise treat"` sits at **y 256.63**, about **7 points
+below the clip edge**, so the renderer discards it. It is laid out and written into
+the file, then clipped away at paint time: copy-paste and screen readers get it, ink
+never does. That is why it could sit in two published editions unnoticed.
+
+**Nothing followed it.** The next marked-content item (MCID 74) is the arrow path, not
+another text run, and the tagged structure closes the list item immediately after
+`"Otherwise treat "`. Word emitted that single overflow line and nothing after it, so
+the sentence is unfinished **in the source document too** — it is not that the PDF
+lost the ending.
+
+**Practical consequence:** simply enlarging the text box in Word will make the line
+reappear as an incomplete sentence. It has to be written, not recovered.
 
 For what it is worth, the a/b/c structure ("Hgb may continue to drop" / "may require
 more aggressive transfusions than normal crisis" / "Otherwise treat…") reads as though
