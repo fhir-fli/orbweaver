@@ -108,11 +108,12 @@ topic:
                     bullets:
                       - "ORS PO at 75mls/kg over 4 hours"
                       - "Continue breast feeding and/or encourage feeding if >6 months"
+                      - "Reassess and reclassify at 4 hours"
                     severity: "priority"
                 - label: "No"
                   continue: true
           terminal:
-            title: "No significant dehydration (PLAN A) — diarrhoea/GE with fewer than 2 of the above signs"
+            title: "No significant dehydration (PLAN A) — diarrhoea/GE with fewer than 2 of the above signs of dehydration"
             bullets:
               - "ORS PO at 10mls/kg after each loose stool"
               - "Continue breast feeding and/or encourage feeding if >6 months"

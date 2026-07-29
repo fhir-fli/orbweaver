@@ -81,6 +81,7 @@ topic:
                 - "Proteinuria"
                 - "Oliguria/anuria"
                 - "Edema"
+                - "Hypertension"
               outcomes:
                 - label: "No"
                   box:

@@ -155,3 +155,50 @@ say-so.
   clinical gaps filled during the evidence audit (priapism, incentive spirometry,
   isoniazid preventive therapy, and so on). Those are tracked in
   `protocolbook_needs_oe_rereview.md`, not here.
+
+---
+
+# 🕵️ CLIPPED-TEXT SWEEP — text that is in the PDF but never prints
+
+**Run 2026-07-29 across all 176 pages**, after p.60 turned out to be black text sitting
+below its text box's clip rectangle. Method: walk the page tree, inflate each content
+stream, track the `q`/`Q` graphics stack and every `x y w h re W n` clip, track the
+text matrix, and flag every text-showing operator whose baseline falls outside the clip
+in force.
+
+**Result: 21 clipped runs on 10 pages** — 37, 43, 45, 49, 53, 60, 86, 105, 106, 122.
+
+Calibration: for 8 pt text the glyphs rise ~5.6 pt above the baseline, so a baseline
+**≥ ~5.5 pt below** the clip bottom means the whole glyph is gone. p.53's run is only
+1.66 pt below and **is** partially visible on the page — rendered and confirmed, which
+validates the threshold. Every other hit was rendered at 300 dpi and confirmed absent.
+
+## 🔴 Real content lost from the printed page
+
+| Page | Printed page shows | Hidden text | Status |
+|---|---|---|---|
+| **37** | Epinephrine box ends "…Repeat q5-15 minutes if no improvement" | **"Note this is NOT the same "** — *truncated in the source too* | ⚠️ **needs your wording.** The book uses **1:1000 IM** here and **1:10,000 IV** on pp.13/20. This is a warning about exactly the concentration confusion that kills people, and it has never appeared in any printed copy. **The app has no such warning either** |
+| **106** | Hypertensive-emergency box ends at "3. Labetalol…" | **"4. Esmolol: 500 mcg/kg/minute over 1"** — *truncated in the source too* | ⚠️ **needs your wording.** A whole fourth agent. The app has only the three |
+| **49** | Dipstick criteria end at "4. Edema" | **"5. Hypertension"** | ✅ **applied** — it was missing from the app too, and it is a cardinal feature of acute glomerulonephritis |
+| **43** | PLAN B box ends at "2) Continue breast feeding…" | **"3) Reassess and reclassify at 4 [hours]"** | ✅ **applied** — was missing from the app too; reassessment at 4 h is core to WHO Plan B |
+| **60** | Splenic sequestration box ends at "b. …normal crisis" | **"c. Otherwise treat"** — *truncated in the source too* | ⚠️ **needs your wording** (see the section above) |
+| **86** | "…only if respiratory distress or severe abdominal" | **"distension"** | ✅ **applied** — the app had guessed "signs" |
+| **105** | Decision box reads "Ketones in" | **"Urine"** | ✅ app already read "Ketones in the urine?" |
+| **45** | "…watch for signs of volume" | **"overload"** | ✅ app already read "volume overload" |
+| **43** | PLAN A box reads "…fewer than 2 of the above signs of" | **"dehydration"** | ✅ applied |
+
+## Not content loss
+- **p.53** — "6hrs" is only 1.66 pt below the clip and **does** print, sliced but
+  legible ("Requires salbutamol no more than every 6hrs").
+- **p.122** — the list numbers "1." "2." "3." sit ~10 pt to the **left** of their box
+  and do not print, but the three angina criteria themselves print in full. Cosmetic.
+
+## Why this matters for the source document
+This failure mode is invisible to every normal check. It does not show in a render, it
+does not show on paper, and proofreading cannot catch it — the only trace is that text
+extraction returns more than the page displays. **Four of the ten cases lost real
+clinical content**, and in three of those the sentence is unfinished in your source as
+well, so enlarging the box will reveal a fragment rather than restore a sentence.
+
+Worth checking any text box you resize in v1.8: if a box is full to its last line,
+assume something may be sitting just underneath it.
