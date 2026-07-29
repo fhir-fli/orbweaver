@@ -74,6 +74,7 @@ topic:
         - Check vital signs (BP, PR, RR, SpO₂, Temp, **Weight**)
         - Assess GCS, hydration status
         - Insert 2 IVs; start oxygen if SpO₂ < 94%
+        - ⚠️ **A normal SpO₂ does NOT exclude critical anaemia.** SpO₂ measures saturation of the haemoglobin that is present, not oxygen delivery — a child with Hb 3 g/dL can read 99% while profoundly oxygen-deficient. **Give oxygen on clinical grounds** — respiratory distress, altered consciousness, or shock — whatever the reading
         - Draw CBC, malaria; consider blood cultures if concern for sepsis
         - Type and cross if tachycardic, tachypnoeic, or severe pallor
         - Perform a brief, targeted history and physical exam

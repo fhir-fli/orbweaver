@@ -120,7 +120,12 @@ topic:
 
     - type: "prose"
       markdown: |
-        **Pralidoxime (2-PAM):** Uganda Clinical Guidelines 2023 includes it; evidence of benefit is uncertain (Cochrane review; Eddleston placebo-controlled trial). Include where available, per national guideline. Atropine, given early and to the endpoints above, is what changes outcome.
+        **Pralidoxime (2-PAM) — where available:**
+
+        - **Children:** 20–50 mg/kg (max 2 g) IV over 30 minutes, then 10–20 mg/kg/hr
+        - **Adults:** 1–2 g IV over 30 minutes, then 500 mg/hr
+
+        Uganda Clinical Guidelines 2023 includes it, but evidence of a mortality benefit is uncertain (Cochrane review; Eddleston placebo-controlled trial). **Atropine, given early and to the endpoints above, is what changes outcome.**
 
     - type: "prose"
       title: "Over-atropinisation"

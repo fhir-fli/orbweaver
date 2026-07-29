@@ -1,238 +1,20 @@
-# ProtocolBook — OPEN DOSING QUESTIONS
+# ProtocolBook — OPEN QUESTIONS FOR OE
 
-> # 🛑 SECTIONS A–E ARE CLOSED. DO NOT PASTE THEM INTO OE AGAIN.
->
-> **Verified file by file on 2026-07-28: every question in §A–§E below has been
-> resolved and applied.** The quoted "current text" in those sections is from
-> **2026-07-26** and was superseded by the round-2 fixes (`24fbe4d`, `18501ad`).
->
-> They were pasted into OE again on 2026-07-28. OE answered them faithfully **from
-> the stale quotes**, and two of its answers would have been **regressions**:
->
-> - **A2 phenobarbital** — OE advised "keep 15 mg/kg". The book is at **20 mg/kg for
->   all ages** with the repeat 10 mg/kg to a cumulative max 40, gated on respiratory
->   monitoring. That gate is what reconciles WHO/UCG's 15 with the 20 standard, and
->   the load has already moved three times (20 → 15 → 20). **Do not move it a fourth.**
->   Note OE's own answer cites the FDA neonatal label, NEJM and AES — all at 20 mg/kg —
->   and then recommends 15.
-> - **D2 iron** — OE advised "keep TID as printed". The book **is no longer TID**:
->   `pb_075` reads *"Children 3 mg/kg ONCE daily"*, *"Adults 65 mg ONCE daily"* and
->   *"Do not split into three daily doses"*. Reverting would contradict the AAP report
->   OE itself cites.
->
-> **Everything else in §A–§E was confirmed correct as already applied** — diazepam
-> (0.2 mg/kg max 10 mg in all four places), epinephrine 1 mg ceiling, the 8+1 D10
-> recipe, methanol folic acid + dialysis, atropine 0.02, naloxone IM/intranasal/
-> infusion (already present near-verbatim), the charcoal 2 h/4 h window, 2-bag NAC for
-> all weights, the flumazenil contraindication box, all of §C, and iron-after-the-
-> antimalarial-course.
->
-> **Only two genuinely new things came out of §A–§E**, both minor and recorded in §I of
-> the tracker: extra haemodialysis criteria for methanol (anion gap >24 mmol/L, renal
-> impairment, persistent acidosis despite antidote), and the FDA's note that there are
-> insufficient data for the 2-bag NAC regimen at ≤40 kg — which we already handle by
-> scaling the diluent.
->
-> **Live questions start at §F.**
+**Paste any section below straight into OpenEvidence.** Every question is
+self-contained: it quotes the verbatim current text of the page, states the concern,
+and asks something specific. Nothing refers to a file, a commit, or a previous
+conversation, because OE cannot see the repository.
 
----
+Setting throughout: **district hospital, Gulu, northern Uganda — low-resource,
+paediatric-heavy, malaria-endemic.** Assume limited drug availability and prefer
+regimens deliverable there.
 
-Every dosing question still unresolved after audit batches 1–3 (2026-07-26).
-Each entry gives the **verbatim current text**, the question, and the candidate
-alternative. Setting throughout: **district hospital, Gulu, northern Uganda —
-low-resource, paediatric-heavy, malaria-endemic.** Answers should assume drug
-availability is limited and prefer regimens deliverable there.
+Where a question asks for a figure, ask for it as a **standalone line** — several
+replies have been cut off exactly at the number.
 
-Status key: 🔴 = a dose is possibly wrong · 🟡 = a dose is defensible but dated
-or inconsistent · ⚪ = a gap (no dose printed where one is needed)
-
----
-
-## A. Anticonvulsants & resuscitation drugs
-
-### A1 🟡 Paediatric IV diazepam — 0.3 or 0.2 mg/kg? (and the book contradicts itself)
-- **p.20 Resuscitation Medications:** "Diazepam IV — 0.3 mg/kg IV slowly over 1 minute"
-- **p.42 Paediatric Convulsions** (×2): "Diazepam 0.3mg/kg IV slowly over 1min"
-- **p.29 Organophosphate:** "Or IV diazepam 0.2 mg/kg (children)"
-
-**Q:** For a child in status epilepticus in this setting, is the correct initial IV
-diazepam dose **0.2 mg/kg (max 8 mg)** per the FDA label, or **0.3 mg/kg** as used by
-WHO and several LMIC references? Is there a maximum single dose we should print?
-And should the organophosphate page use the same dose as the convulsion pages, or is
-a lower dose deliberate there (patients already receiving large escalating atropine
-doses)?
-
-**Why it matters:** whichever answer is right, the book currently says both. Changing
-to 0.2 means editing 3 places; keeping 0.3 means fixing p.29.
-*(Adults are internally consistent at 0.15 mg/kg — p.20 and p.101 — and appear fine.)*
-
-### A2 🟡 Phenobarbital / phenobarbitone loading dose in NON-neonates
-- **p.20:** "**Load** 15 mg/kg (20 mg/kg neonates) IM/IV over 20 min · **Maint** 5 mg/kg IM/IV/PO OD"
-- **p.42** gives neonates 20 mg/kg stat (agrees) + "a further 5–10 mg/kg within 24 hrs".
-
-**Q:** Should the non-neonatal paediatric loading dose be **20 mg/kg** rather than
-15 mg/kg? Most paediatric references use 20 mg/kg for all children, not only neonates.
-Is a maintenance of **5 mg/kg/day** correct, or should it be **3–5 mg/kg/day** (the
-FDA-approved neonatal maintenance is 4.5 mg/kg/day)?
-
-### A3 ⚪ Paediatric epinephrine ceiling — confirm the value I added
-- **p.13 and p.20 now read:** "0.1 ml/kg 1:10,000, **max 10 ml (= 1 mg)**"
-
-**Q:** Confirm **1 mg** is the correct maximum single IV/IO dose of epinephrine for a
-child in cardiac arrest (i.e. the point at which a large child gets the adult dose).
-
-### A4 🔴 D10% mixing recipe — verify my arithmetic, since I departed from OE
-- **p.20 previously:** "mix 8 ml NS with 2 ml D50%, **or 4 ml D5% with 1 ml D50%**"
-- **now:** "mix 8 ml NS with 2 ml D50%, **or 8 ml D5% with 1 ml D50%**"
-
-The printed alternative was **D14%**, not D10%. OE proposed 9 ml D5% + 1 ml D50%
-(= D9.5%, "close enough"); solving `(500x+50y)/(x+y)=100` gives `y=8x`, so
-**8 ml D5% + 1 ml D50% = 900 mg in 9 ml = exactly D10.00%**.
-
-| recipe | dextrose | volume | result |
-|---|---|---|---|
-| 8 ml NS + 2 ml D50% | 1000 mg | 10 ml | **D10.00%** ✓ printed primary |
-| 4 ml D5% + 1 ml D50% | 700 mg | 5 ml | **D14.00%** ✗ printed alternative |
-| 9 ml D5% + 1 ml D50% | 950 mg | 10 ml | D9.50% (OE's suggestion) |
-| 8 ml D5% + 1 ml D50% | 900 mg | 9 ml | **D10.00%** ✓ applied |
-
-**Q:** Sanity-check the arithmetic and confirm 8+1 is what should be printed.
-
----
-
-## B. Toxicology
-
-### B1 ⚪ Methanol — folinic acid dose, and haemodialysis criteria
-- **p.28 currently gives only:** oral ethanol by NGT, 1.8 ml/kg of 43% ethanol, then
-  0.2–0.4 ml/kg/hour. *(The ethanol dosing itself checks out: ≈0.61 g/kg load,
-  ≈0.07–0.14 g/kg/hr maintenance.)*
-
-**Q:** What **folinic acid (or folic acid)** dose and interval should be added for
-methanol poisoning? And what are the **haemodialysis indications** worth printing
-(visual symptoms / acidosis threshold / methanol level), given dialysis is the
-definitive treatment and is currently not mentioned at all? Should **fomepizole**
-appear as "where available", or is ethanol-only correct for this setting?
-
-### B2 🟡 Organophosphate — paediatric atropine starting dose, and pralidoxime
-- **p.29:** "Children: 0.02 mg/kg IV · Adults: 2 mg IV · **Double the previous dose and
-  repeat every 5 minutes** until atropinisation"
-- No oxime anywhere on the page.
-
-**Q:** Is the paediatric atropine bolus **0.02 mg/kg** (WHO) or **0.05 mg/kg** (several
-current toxicology references)? Is there a minimum dose (e.g. 0.1 mg) worth printing?
-Separately: should **pralidoxime / 2-PAM** be added as "where available", and at what
-dose (commonly 30 mg/kg loading over 30 min, then 8 mg/kg/hr)? The evidence is
-contested — the Cochrane review and Eddleston's Sri Lanka trial found no benefit.
-
-*(The maintenance infusion — total bolus load into 250 ml at 50 ml/hr under 25 kg,
-500 ml at 100 ml/hr over 25 kg = 20%/hr — was verified correct. No question there.)*
-
-### B3 ⚪ Naloxone — non-IV route and infusion
-- **p.31:** children <5 y / <20 kg 0.1 mg/kg IV; >5 y / >20 kg 2 mg IV; adults 0.4 mg IV;
-  repeat q2–3 min; may need repeating at 20–60 min. **IV only; no infusion guidance.**
-
-**Q:** What **IM or intranasal** doses should be printed for when there is no IV?
-And what **continuous infusion** rate for a long-acting opioid — is the usual
-"two-thirds of the effective bolus per hour" the right thing to print?
-
-### B4 ⚪ Paracetamol — charcoal time window, and 2-bag vs 3-bag NAC
-- **p.33 charcoal box:** "In children, may consider activated charcoal, if KNOWN
-  ingestion of >150mg/kg" — **no time limit stated.**
-- **p.33 NAC table:** 3-bag 21-hour regimen, 150 / 50 / 100 mg/kg.
-
-**Q1:** What time window should be printed for activated charcoal (≤1 h? ≤2 h? up to
-4 h for paracetamol specifically)?
-**Q2:** Should we move to the **2-bag regimen (200 mg/kg over 4 h, then 100 mg/kg over
-16 h)** per SNAP, which has markedly fewer anaphylactoid reactions, or keep 3-bag?
-
-### B5 🟡 Flumazenil — contraindications (not a dose change)
-- **p.31:** "Flumazenil (if respiratory depression) — Children 0.01 mg/kg IV; Adults
-  0.2 mg IV, may repeat for effect (max 1 mg), max 3 mg/hour"
-
-**Q:** The doses are correct, but should the page carry an explicit
-**contraindication line** — avoid in undifferentiated overdose, tricyclic
-co-ingestion, chronic benzodiazepine use, or seizure history? As drawn, the algorithm
-routes every "more likely benzodiazepine" patient to flumazenil.
-
----
-
-## C. Anaphylaxis, bites & envenomation
-
-### C1 🔴 Famotidine substitute dose — I chose this, it needs confirming
-- **p.37 now reads:** "H2 receptor blocker: **Famotidine 0.25mg/kg IV (max 20mg) or
-  0.5mg/kg PO (max 40mg)**"
-- It previously read: "Ranitidine 1mg/kg IM/slow IV (max 50mg) or 4mg/kg PO (max 150mg)"
-
-Ranitidine was withdrawn worldwide in April 2020 (NDMA), so the substitution had to
-happen — but **the replacement dose is mine, not OE's.**
-
-**Q:** Confirm or correct the famotidine paediatric and adult anaphylaxis dosing,
-IV and PO.
-
-### C2 ⚪ Anaphylaxis observation period
-- **p.37 has no observation period and no biphasic-reaction warning anywhere.**
-
-**Q:** What observation duration should be printed after anaphylaxis treated with
-epinephrine — 4 h? 6 h? longer if severe or if repeat epinephrine was needed?
-
-### C3 ⚪ Bite prophylaxis for the penicillin-allergic patient
-- **p.38:** "**Amoxicillin-Clavulanate x 5 days** — Pediatric 25mg/kg/dose PO BD ·
-  Adult 1 gram PO BD. **Alternative:** Ciprofloxacin, Azithromycin or Doxycycline"
-
-The alternatives are listed as monotherapy and none reliably covers oral anaerobes.
-
-**Q:** What alternative regimen and **doses** should be printed — doxycycline +
-metronidazole? trimethoprim-sulfamethoxazole + metronidazole? a fluoroquinolone +
-clindamycin? Please give the metronidazole paediatric and adult doses to print.
-
-### C4 🟡 Rabies immunoglobulin — WHO 2018 changed the administration
-- **p.38:** "Human Ig 20 units/kg OR Equine Ig 40 units/kg, total dose given once.
-  Inject as much as possible around the wound, **give the rest IM.**"
-
-**Q:** Confirm WHO now advises infiltrating **all** of the immunoglobulin into and
-around the wound, with **no** distant intramuscular remainder. Doses (20 / 40 IU/kg)
-unchanged?
-
-### C5 ⚪ Snakebite — tetanus prophylaxis and the anticholinesterase trial
-- **pp.39–40** carry no tetanus prophylaxis, and the neurotoxic arm has no
-  neostigmine/edrophonium trial.
-
-**Q1:** Should tetanus toxoid be added, and with what timing relative to coagulopathy?
-**Q2:** For post-synaptic (cobra-type) neurotoxic envenoming, what
-**neostigmine + atropine** trial doses should be printed, paediatric and adult?
-
----
-
-## D. Malaria & anaemia
-
-### D1 🟡 Iron in acute malaria — timing and duration
-- **p.23:** "**Anemia:** if Hgb < 9, start on **iron + folic acid × 14 days** initially"
-
-**Q:** Should iron be **deferred until after the acute episode** in a malaria-endemic
-setting, and should the course be **~3 months** rather than 14 days? Please address
-both the timing (safety of iron during acute infection) and the duration separately.
-
-### D2 🟡 Iron supplementation dosing — divided vs once daily
-- **p.75:** "Children: 1–2 mg/kg/dose PO q8h · Adults: 50 mg/dose PO q8h of elemental iron"
-
-OE previously judged the TID regimen acceptable and possibly preferable here (where
-only small-volume ferrous sulfate drops may be stocked), noting the 2026 AAP report
-now favours **3 mg/kg once daily** and that lower once-daily adult dosing has fewer
-side effects.
-
-**Q:** Confirm whether to keep TID or move to once-daily, given the stocking argument.
-
----
-
-## E. Not dosing, but open and worth asking alongside
-
-- **E1 — p.13 PALS:** "If no improvement after 15 minutes, consider stopping."
-  Is 15 minutes too short a termination threshold? (AHA sets no fixed limit;
-  meaningful survival falls off after 20–30 min.) Policy decision, not a dose.
-- **E2 — p.14 Adult Cardiac Arrest:** hypoglycaemia leads our H's list. It was dropped
-  from the AHA H's and T's after 2005. Keep as a deliberate LMIC addition?
-- **E3 — p.21 IO line:** we print a strict 90° insertion angle; classic manual-needle
-  teaching is 60–90° angled away from the growth plate. Judged acceptable — confirm.
+Sections A–E (audit batches 1–3, 2026-07-26) were all resolved and applied, and were
+deleted on 2026-07-29 after OE spent two rounds re-answering them from stale text.
+Resolved questions live in `protocolbook_needs_oe_rereview.md`, not here.
 
 ---
 
@@ -571,66 +353,19 @@ than inside a sentence.
 
 ---
 
-# H. STILL OPEN AFTER THE 2026-07-29 ROUND
+# H. RESOLVED 2026-07-29 — all three answered and applied
 
-## H1 🔴 NAC — the two OE rounds contradict each other, and we have already applied one
+- **NAC** — the contradiction is settled: **keep 2-bag for all weights**, as printed.
+  The FDA's "insufficient data" at ≤40 kg is an absence of paediatric trials, not a
+  safety signal; the one paediatric comparison found fewer anaphylactoid reactions
+  (2% vs 10%) and fewer medication errors (23% vs 39%) with no difference in
+  hepatotoxicity. Total dose is identical either way. **No change made — the page was
+  already right.**
+- **SpO₂ in severe anaemia** — applied. The 94% trigger stays, with an added warning
+  that a normal SpO₂ does not exclude critical anaemia and that oxygen is given on
+  clinical grounds regardless of the reading.
+- **Pralidoxime** — applied, with the loading dose corrected from the earlier
+  suggestion: children 20–50 mg/kg (max 2 g) IV over 30 min then 10–20 mg/kg/hr;
+  adults 1–2 g IV over 30 min then 500 mg/hr.
 
-**Round 1 (2026-07-28):** *"2-bag for ALL weights, diluent scaled 7 mL/kg → 14 mL/kg,
-D5W in children."* **We applied exactly that**, and our page now reads:
-
-> **N-acetylcysteine (NAC) — 2-bag regimen, ALL weights**
-> Child ≤40 kg: 200 mg/kg in **7 mL/kg** diluent (max 500 mL), then 100 mg/kg in
-> **14 mL/kg** diluent (max 1 L)
-> \>40 kg: 200 mg/kg (max 22 g) in 500 mL diluent, then 100 mg/kg (max 11 g) in 1 L
-
-**Round 2 (2026-07-29):** *"Move to the 2-bag regimen for patients >40 kg. **Keep the
-3-bag regimen for patients ≤40 kg** per the FDA label"* — citing the label's
-"insufficient data to recommend the two-bag regimen in patients ≤40 kg."
-
-**Nothing changed between the two rounds except the question wording. We have not
-changed the page — it still says 2-bag for all weights.**
-
-**Q1.** Which is right for a paediatric-heavy district hospital: 2-bag for everyone
-with the diluent scaled to weight, or 2-bag only above 40 kg and 3-bag below?
-
-**Q2.** The FDA's caution says "insufficient data", not "evidence of harm". Is there
-any actual signal of worse outcomes with 2-bag in children, or is this an absence of
-paediatric trials?
-
-**Q3.** Which consideration should win here: fewer bag changes and fewer anaphylactoid
-reactions (favouring 2-bag for all, and fewer medication errors in a busy ward with
-one nurse), or label conformity (favouring 3-bag under 40 kg)?
-
-Please answer with a single recommendation for what to print.
-
-## H2 ⚪ NOT ANSWERED — the SpO₂ trigger in severe anaemia
-
-This was asked as G3 and the reply did not reach it. Restating it alone:
-
-Our anaemia page prints, in its management list:
-
-> Check vital signs (BP, PR, RR, **SpO₂**, Temp, Weight)
-> Insert 2 IVs; **start oxygen if SpO₂ < 94%**
-
-**Q1.** Is "start oxygen if SpO₂ <94%" the right trigger in **severe anaemia
-specifically**? Pulse oximetry reports the saturation of the haemoglobin that is
-present, so a child with Hb 3 g/dL can read 99% while being profoundly deficient in
-oxygen *delivery*.
-
-**Q2.** Should the page state that a normal SpO₂ does **not** exclude critical anaemia,
-and that oxygen should be given on clinical grounds — respiratory distress, altered
-consciousness, shock — regardless of the reading?
-
-Please answer these two points only.
-
-## H3 🟡 Pralidoxime — a dose was offered; confirm before we print it
-
-Our organophosphate page currently carries a footnote saying UCG includes pralidoxime
-and the evidence is uncertain, but **prints no dose**. The suggested line was:
-
-> Pralidoxime (where available): 25–50 mg/kg IV over 30 min, then 10–20 mg/kg/hr;
-> evidence of benefit is uncertain.
-
-**Q.** Confirm those figures, including the adult dose and any maximum, and confirm
-this is worth printing at all for a hospital where pralidoxime is very unlikely to be
-stocked.
+**Nothing is open. The next batch goes below this line.**
