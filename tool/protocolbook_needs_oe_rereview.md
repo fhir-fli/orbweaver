@@ -829,19 +829,24 @@ records **what it answered, what it did not, and what the repo actually contains
 because the reply's "already applied" language describes *its own earlier conversation
 turns*, not our files, and the two had drifted apart.
 
-## I.1 Coverage — 33 of 39 flags answered
+## I.1 Coverage — 35 of 45 flags answered
 
-| Section | Flags | Answered | Not answered | Answer truncated / incomplete |
+| Section | Flags | Answered | Not answered | Answer incomplete |
 |---|---|---|---|---|
 | §D Paediatric (pp.42–55) | 6 | 6 | — | — |
 | §E Sickle Cell (pp.59–62) | 11 | 9 | — | E4, E6 |
-| §F SAM (pp.63–66) | 10 | 4 | F5, F8, F9, F10a, F10b | F6, F7 |
+| §F SAM (pp.63–66) | 10 | 4 | F5, F8, F9 | F6, F7, F10 |
 | §G ENT (pp.67–70) | 11 | 11 | — | — |
 | §H Paed TB (pp.71–73) | 7 | 5 | H6, H7 | — |
+| **Total** | **45** | **35** | **5** | **5** |
 
-**§G came back complete.** §F is the weak one: **half of it went unaddressed**, and it
-is also the section with the most WHO-sourced omissions. The 11 open items are written
-up paste-ready as **§F of `protocolbook_open_dosing_questions.md`**.
+**§G came back complete.** §F is the weak one — **6 of its 10 flags are unresolved**,
+and it is also the section with the most WHO-sourced omissions. (F10 is a bundle of
+five smaller items; two were answered, three were not, which is why it counts as
+incomplete rather than unanswered.)
+
+The **10 open flags are written up as 11 paste-ready questions** in
+**§F of `protocolbook_open_dosing_questions.md`** — F10 needs two separate questions.
 
 ## I.2 ⚠️ The repo/OE drift — read before actioning anything in §D
 The reply treats D1, D2, D3, D5 and D6 as settled ("already confirmed in the previous
