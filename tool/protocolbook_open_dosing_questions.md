@@ -374,3 +374,197 @@ so 17.0 cm is both. Every other row has MAM's lower bound equal to SAM's upper b
 **Q:** Which single number should change — **MAM's "≥16.5" → "≥18.5"** (making the SAM
 series 13.5 → 16.0 → 18.5, and restoring the boundary rule), or **SAM's "<18.5" →
 "<16.5"**? If neither, what are the correct 15–19-year MUAC cut-offs to print?
+
+---
+
+# G. OPEN QUESTIONS, WRITTEN OUT IN FULL (2026-07-29)
+
+**Standing format from here on.** Every question below is self-contained: it quotes the
+**verbatim current text** of the page, states the concern, and asks a specific
+question. OE cannot see the repository, so nothing here refers to a file, a section
+letter, or a previous conversation. Paste any block on its own.
+
+Setting for all of them: **district hospital, Gulu, northern Uganda — low-resource,
+paediatric-heavy, malaria-endemic. Assume limited drug availability and prefer regimens
+deliverable there.**
+
+---
+
+## G1 🔴 Neonatal pain scale — is this the NIPS, and if not, what should it be called?
+
+Our neonatal pain page is headed **"Neonatal Infant Pain Score (NIPS) — < 1 year old"**
+and scores **eight** variables:
+
+| Variable | Options (points) |
+|---|---|
+| Facial expression | Relaxed 0 · Grimace 1 |
+| Cry | No cry 0 · Whimper 1 · Vigorous crying 2 |
+| Breathing pattern | Relaxed 0 · Change in breathing 1 |
+| Arms | Relaxed 0 · Flexed/extended 1 |
+| Legs | Relaxed 0 · Flexed/extended 1 |
+| State of arousal | Sleeping/awake 0 · Fussy 1 |
+| **Heart rate** | Within 10% of baseline 0 · 11–20% 1 · >20% 2 |
+| **O₂ saturation** | No additional O₂ needed 0 · Additional O₂ required 1 |
+
+Maximum total **10**. The page then bands it: **0–3 mild · 4–6 moderate · 7–10 severe**.
+
+The validated NIPS (Lawrence 1993) has **six** items — the first six above — with a
+maximum of **7**, and the usual treatment threshold is **>3**. Our last two items,
+heart rate and oxygen saturation, are not part of it; they belong to scales such as
+PIPP/PIPP-R.
+
+**Q1.** Is the eight-item version above a recognised published variant of the NIPS, or
+is it a local composite? If it is a variant, what is its name and source?
+
+**Q2.** For a district hospital in northern Uganda, which is better: (a) revert to the
+six-item NIPS with a maximum of 7 and re-band the tiers, or (b) keep the eight items
+and rename the tool so it is not confused with the validated NIPS?
+
+**Q3.** If we revert to the six-item scale, give the exact tier bands to print for
+mild / moderate / severe on a 0–7 scale, and confirm the threshold at which analgesia
+should be given.
+
+**Q4.** If we keep heart rate and oxygen saturation, does that change the score at
+which analgesia should start, given the two extra points are physiological rather than
+behavioural and can be driven by non-pain causes?
+
+---
+
+## G2 🟡 Anaemia — are our transfusion thresholds right for a malaria-endemic district hospital?
+
+Our page prints this table verbatim:
+
+| Setting | Transfuse if haemoglobin |
+|---|---|
+| **High malaria areas** — low blood supply | <4 g/dL, or <5 g/dL and unstable |
+| **High malaria areas** — good blood supply | <5 g/dL |
+| **Low malaria areas** | <7 g/dL, or <10 g/dL and unstable |
+
+**Q1.** Are these the correct cut-offs to print for a high-malaria-transmission district
+hospital, or should any of the four numbers move?
+
+**Q2.** "Unstable" is not defined anywhere on the page. What should it mean here —
+which specific findings should trigger transfusion at the higher haemoglobin?
+
+**Q3.** Should the high-malaria thresholds differ for a child with **severe acute
+malnutrition**, who is separately covered on another page at Hb <4, or Hb 4–6 with
+respiratory distress?
+
+---
+
+## G3 🟡 Anaemia — is an SpO₂ threshold of 94% the right oxygen trigger in severe anaemia?
+
+Our anaemia page prints, in its management list:
+
+> Check vital signs (BP, PR, RR, **SpO₂**, Temp, Weight)
+> Insert 2 IVs; **start oxygen if SpO₂ < 94%**
+
+**Q1.** Is "start oxygen if SpO₂ <94%" the right trigger in **severe anaemia
+specifically**? Pulse oximetry measures saturation of the haemoglobin present, so a
+child with Hb 3 g/dL can read 99% while being profoundly oxygen-deficient in terms of
+delivery.
+
+**Q2.** Should the page warn that a normal SpO₂ does **not** exclude critical anaemia,
+and should oxygen be given on clinical grounds (respiratory distress, altered
+consciousness, shock) regardless of the saturation reading?
+
+---
+
+## G4 🟡 Anaemia — is a single Fe:TIBC cut-off of 18% safe to print?
+
+Our iron studies table prints:
+
+| | Fe | TIBC | Ferritin | Fe : TIBC |
+|---|---|---|---|---|
+| Iron deficiency | ↓ | ↑ | ↓ | **<18%** |
+| Anaemia of chronic inflammation | ↓ | nL | ↑ | **>18%** |
+
+**Q1.** Is a single **18%** transferrin-saturation cut-off adequate to separate iron
+deficiency from anaemia of chronic inflammation, or does it need a caveat?
+
+**Q2.** In a setting with **very high rates of malaria, HIV and chronic infection**,
+where ferritin is an acute-phase reactant and will be raised by inflammation
+regardless of iron status, what is the most reliable practical way to identify iron
+deficiency? Should we print a raised ferritin cut-off in the presence of
+inflammation, or add CRP?
+
+**Q3.** Given iron studies are often unavailable at district level, is there a
+defensible way to decide on iron treatment without them?
+
+---
+
+## G5 🔴 Epinephrine concentration — we need the warning text
+
+Our anaphylaxis page gives, in a box:
+
+> Epinephrine (1mg/1ml **1:1000**) · 0.01 mL/kg (max dose 0.3 mL) · IM anterolateral
+> thigh · Repeat q5–15 minutes if no improvement
+
+Elsewhere the same book uses **1:10,000** for cardiac arrest — "Epinephrine 0.1 mL/kg
+1:10,000, max 10 mL (= 1 mg), mix 1 mL of 1:1,000 in 9 mL normal saline".
+
+So both concentrations appear in one pocket book, for different emergencies, by
+different routes.
+
+**Q1.** What warning should be printed alongside the anaphylaxis dose to prevent the
+1:1000 / 1:10,000 mix-up? Please give the exact wording you would print.
+
+**Q2.** Should the same warning appear on the cardiac-arrest pages as well, or only
+next to the IM anaphylaxis dose?
+
+**Q3.** Is there a formulation or labelling convention (e.g. writing "1 mg/mL" and
+"0.1 mg/mL" instead of ratios) that is safer to print in a setting where both ampoule
+types may be on the same trolley?
+
+---
+
+## G6 🔴 Esmolol in hypertensive emergency — we need the full dose
+
+Our hypertensive-emergency box currently lists three agents:
+
+> 1. Nicardipine: initial 5 mg/H, increase 2.5 mg/hr q5min to max of 15 mg/H
+> 2. Sodium nitroprusside: 0.3–0.5 mcg/kg/min, increase 0.5 mcg/kg/minute every few
+>    minutes to max 10 mcg/kg/min
+> 3. Labetalol: 10–20 mg IV, then bolus of 20–80 mg q10min until BP at target or
+>    300 mg total dose
+
+A fourth agent was intended — the source reads **"4. Esmolol: 500 mcg/kg/minute over 1"**
+and stops mid-sentence.
+
+**Q1.** Give the complete esmolol regimen for hypertensive emergency in an adult:
+loading dose, infusion rate, titration steps and maximum.
+
+**Q2.** In a district hospital without an infusion pump or arterial line, is esmolol
+appropriate to list at all, or should it be marked "where an infusion pump is
+available"?
+
+**Q3.** Of these four agents, which should be **first-line** in a setting where
+nicardipine and nitroprusside are frequently out of stock?
+
+---
+
+## G7 🟡 Sickle cell splenic sequestration — what is the third management point?
+
+Our splenic sequestration box reads:
+
+> **Splenic sequestration** (sudden splenic enlargement with a drop in Hb >2 g/dL from
+> baseline, usually with abdominal pain, under 5 years)
+> a. Hgb may continue to drop, monitor carefully
+> b. May require more aggressive transfusions than normal crisis
+> c. *(the source begins "Otherwise treat" and stops)*
+
+**Q1.** What should the third point say? Is the intended meaning "otherwise treat as a
+normal vaso-occlusive crisis"?
+
+**Q2.** What else belongs in an acute splenic sequestration box for a district
+hospital — in particular, transfusion volume (given the risk of autotransfusion and
+hyperviscosity as the spleen releases sequestered cells), and what to tell the family
+about recurrence and splenectomy?
+
+---
+
+## Answering format — please note
+Several previous replies were **cut off exactly at the number** (an HbS target, a
+reticulocyte threshold, an age cut-off). Where a question asks for a figure, please
+give the figure as a plain standalone line — for example "HbS target: 15–20%" — rather
+than inside a sentence.
