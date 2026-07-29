@@ -15,6 +15,26 @@
 #     severity shading and the app severity palette).
 #   - Complicated-SAM list kept verbatim (it gates admission on the
 #     next page).
+#
+# ⚠️ TWO SOURCE ERRORS corrected 2026-07-28 (both raised by the SAM
+#   advance audit as §F6/§F7, both confirmed by OE):
+#   1. ADOLESCENT MUAC BANDS OVERLAPPED. Source p.63 prints
+#      "15 to 19 | MUAC | MAM ≥16.5 & <21.0 cm | SAM <18.5 cm" — so a
+#      16-year-old measuring 17.0 cm satisfied BOTH columns, which is
+#      arithmetically impossible. Every other row in the table has
+#      MAM's lower bound EQUAL to SAM's upper bound (13.5/13.5,
+#      16.0/16.0). Corrected MAM to "≥18.5 & <21.0 cm", which restores
+#      the boundary rule and makes the SAM series run 13.5 → 16.0 →
+#      18.5 in even steps. The alternative (moving SAM to <16.5) would
+#      make the SAM series 13.5 → 16.0 → 16.5, barely moving across a
+#      five-year age gap. OE confirmed MAM ≥18.5 is the fix.
+#   2. THE WFH-vs-BMI CROSSOVER AGE contradicted itself. Source prints
+#      "Use WFL/WFH if <6 years (59 months)" and "Use BMI/age if
+#      ≥6 years" — but 59 months is under FIVE years, and the
+#      classification table below uses "6 to 59 months" and "5 to 19
+#      years", which is also the WHO convention. Both prose lines
+#      corrected to 5 years.
+#   Grey should fix both in the source PDF.
 # ============================================================
 
 topic:
@@ -52,8 +72,8 @@ topic:
     - type: "prose"
       title: "Making sense of the measurements"
       markdown: |
-        - Use Weight-for-Length/Height (WFL/WFH) if <6 years (59 months)
-        - Use BMI/age if ≥6 years
+        - Use Weight-for-Length/Height (WFL/WFH) if <5 years (59 months)
+        - Use BMI/age if ≥5 years
         - Plot measurements (use growth charts) and obtain Z-score
         - Classify the degree of malnutrition
 
@@ -72,7 +92,7 @@ topic:
         - cells: ["**5–19 years**", "Oedema", "Absent", "Present"]
         - cells: ["**5 to <10 yrs**", "MUAC", "≥13.5 & <14.5cm", "<13.5 cm"]
         - cells: ["**10 to <15 yrs**", "MUAC", "≥16.0 & <18.0 cm", "<16.0 cm"]
-        - cells: ["**15 to 19**", "MUAC", "≥16.5 & <21.0 cm", "<18.5 cm"]
+        - cells: ["**15 to 19**", "MUAC", "≥18.5 & <21.0 cm", "<18.5 cm"]
 
     - type: "prose"
       callout: true

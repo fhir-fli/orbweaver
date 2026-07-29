@@ -27,13 +27,17 @@
 #   malaria" pearl was called out as an important LMIC teaching
 #   point, and LP-before-antibiotics is correct).
 #
-# ⚠️ OPEN — GREY'S CALL, NOT APPLIED: item (e) starts IRON + folic
-#   acid for Hgb < 9 DURING the acute episode, for 14 days. OE rated
-#   this LOW and suggested deferring iron until after the acute
-#   illness and extending to ~3 months. Both parts are real (iron
-#   during acute infection is debated in malaria-endemic settings,
-#   and 14 days is too short to refill stores), but this changes
-#   therapy timing, so it waits for Grey.
+# ✅ RESOLVED AND APPLIED (header corrected 2026-07-28 — it still said
+#   "OPEN, NOT APPLIED" long after the change had gone in, and that
+#   stale wording was fed back into OE, which then re-answered a
+#   settled question from the obsolete text):
+#   - item (e) previously started IRON + folic acid for Hgb < 9 DURING
+#     the acute episode, for 14 days. It now reads "start it only
+#     after the antimalarial course is complete, not on admission"
+#     and "treat for 3 months", dispensing 14 days at a time. Iron
+#     during acute infection is hazardous in a malaria-endemic
+#     setting, and 14 days was too short to refill stores.
+#     Re-confirmed by OE 2026-07-28.
 # ============================================================
 
 topic:

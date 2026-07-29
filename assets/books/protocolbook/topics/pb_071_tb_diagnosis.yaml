@@ -64,9 +64,12 @@ topic:
       title: "Diagnosis"
       markdown: |
         - In children especially difficult — <5yo cannot produce sputum
-        - **<5yo or cannot produce sputum → gastric aspirate:**
+        - **Bacteriological confirmation — if Xpert MTB/RIF Ultra is available, use it first.** Specimen priority: **sputum** (if the child can expectorate) → **stool** → gastric aspirate. Stool Xpert is WHO-endorsed in children who cannot expectorate and **removes the need for a gastric aspirate altogether**
+        - **If Xpert is not available — <5yo or cannot produce sputum → gastric aspirate:**
           - Perform on different days, 3 times total
           - Early morning, before the child eats or ambulates (ideally wake the patient after sleeping prone all night)
+        - **Test for HIV** — check the mother if the child is <18 months, otherwise test the child. HIV changes prognosis, mandates co-trimoxazole preventive therapy, and creates rifampicin–ART interactions that alter the regimen. See the [HIV opportunistic infections protocol](topic:pb-im-hiv-oi)
+        - **Well child contacts who do NOT have TB:** give **isoniazid preventive therapy 10mg/kg daily for 6 months**
 
     - type: "table"
       title: "Scoring systems — Systemic TB · Keith Edwards Score (≥7 indicative of TB)"

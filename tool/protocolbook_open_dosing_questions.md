@@ -1,5 +1,42 @@
 # ProtocolBook — OPEN DOSING QUESTIONS
 
+> # 🛑 SECTIONS A–E ARE CLOSED. DO NOT PASTE THEM INTO OE AGAIN.
+>
+> **Verified file by file on 2026-07-28: every question in §A–§E below has been
+> resolved and applied.** The quoted "current text" in those sections is from
+> **2026-07-26** and was superseded by the round-2 fixes (`24fbe4d`, `18501ad`).
+>
+> They were pasted into OE again on 2026-07-28. OE answered them faithfully **from
+> the stale quotes**, and two of its answers would have been **regressions**:
+>
+> - **A2 phenobarbital** — OE advised "keep 15 mg/kg". The book is at **20 mg/kg for
+>   all ages** with the repeat 10 mg/kg to a cumulative max 40, gated on respiratory
+>   monitoring. That gate is what reconciles WHO/UCG's 15 with the 20 standard, and
+>   the load has already moved three times (20 → 15 → 20). **Do not move it a fourth.**
+>   Note OE's own answer cites the FDA neonatal label, NEJM and AES — all at 20 mg/kg —
+>   and then recommends 15.
+> - **D2 iron** — OE advised "keep TID as printed". The book **is no longer TID**:
+>   `pb_075` reads *"Children 3 mg/kg ONCE daily"*, *"Adults 65 mg ONCE daily"* and
+>   *"Do not split into three daily doses"*. Reverting would contradict the AAP report
+>   OE itself cites.
+>
+> **Everything else in §A–§E was confirmed correct as already applied** — diazepam
+> (0.2 mg/kg max 10 mg in all four places), epinephrine 1 mg ceiling, the 8+1 D10
+> recipe, methanol folic acid + dialysis, atropine 0.02, naloxone IM/intranasal/
+> infusion (already present near-verbatim), the charcoal 2 h/4 h window, 2-bag NAC for
+> all weights, the flumazenil contraindication box, all of §C, and iron-after-the-
+> antimalarial-course.
+>
+> **Only two genuinely new things came out of §A–§E**, both minor and recorded in §I of
+> the tracker: extra haemodialysis criteria for methanol (anion gap >24 mmol/L, renal
+> impairment, persistent acidosis despite antidote), and the FDA's note that there are
+> insufficient data for the 2-bag NAC regimen at ≤40 kg — which we already handle by
+> scaling the diluent.
+>
+> **Live questions start at §F.**
+
+---
+
 Every dosing question still unresolved after audit batches 1–3 (2026-07-26).
 Each entry gives the **verbatim current text**, the question, and the candidate
 alternative. Setting throughout: **district hospital, Gulu, northern Uganda —
@@ -200,6 +237,25 @@ side effects.
 ---
 
 # F. RE-ASK LIST — what the 2026-07-28 OE round did NOT answer
+
+> ## STATUS after the second OE pass (2026-07-28)
+> **9 of 11 answered and applied** — F1 ReSoMal · F2 digoxin · F3 eye care ·
+> F4 the 24-hour fast · F5 kwashiorkor skin · F6 Xpert · F7 female source case ·
+> F10 crossover age (**5 years**) · F11 MUAC (**MAM ≥18.5**, confirming the inference
+> that the boundary rule holds in every row).
+>
+> 🔴 **F8 and F9 are STILL OPEN — and F8 has now truncated in the same place three
+> times.** Both answers stop exactly at the figure:
+> - **F8** — *"The target for exchange transfusion in acute sickle stroke is HbS"* →
+>   citation. The summary table row is also blank.
+> - **F9** — *"A low reticulocyte count ("* → citation. No prose section at all in the
+>   second pass.
+>
+> **When re-asking, ask for the two numbers on their own, outside any prose** — e.g.
+> *"Give only: (1) the HbS percentage target for exchange transfusion in acute sickle
+> stroke, and (2) the reticulocyte count or percentage that defines aplastic crisis in
+> sickle cell disease. Numbers only."* Something in the surrounding sentence structure
+> is being lost each time.
 
 The pp.59–73 review (sections E–H of `protocolbook_needs_oe_rereview.md`) came back
 thorough on 33 of 39 flags. **These 11 are still open.** Seven got no answer at all;

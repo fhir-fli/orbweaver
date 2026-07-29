@@ -67,6 +67,8 @@ topic:
       markdown: |
         **High incident area:** in the initial study this incidence was 277/100,000; if unsure of your local incidence, you may assume high if in Africa or South-East Asia.
 
+        **Source case is female:** this reflects caregiving contact patterns in the original study population — female caregivers typically have more prolonged close contact with young children. It is not a biological risk factor.
+
     - type: "table"
       title: "New modified Edwards' score"
       zebra: true
