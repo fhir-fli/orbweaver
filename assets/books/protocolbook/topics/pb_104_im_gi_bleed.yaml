@@ -91,7 +91,7 @@ topic:
       terminal:
         title: "Start IV acid suppression"
         bullets:
-          - "1st line: rabeprazole 40 mg IV BD (or other PPI as available)"
+          - "1st line PPI (rabeprazole, omeprazole, pantoprazole — whichever is stocked): 80 mg IV bolus, THEN 40 mg IV every 8-12 hours (or 8 mg/hr infusion if a pump is available). Continue at least 72 hours"
           - "2nd line: famotidine 20 mg IV 12-hourly"
 
     - type: "flowchart"
@@ -101,9 +101,11 @@ topic:
           outcomes:
             - label: "Yes"
               box:
-                title: "Start antibiotics"
+                title: "Vasoactive drug + antibiotics"
                 bullets:
-                  - "Ceftriaxone 1 g/day × 7 days (ciprofloxacin 500 mg PO BD if discharged < 7 days)"
+                  - "Octreotide 50 mcg IV bolus, THEN 50 mcg/hr infusion for 3-5 days. This is the vasoactive drug of choice and should start as soon as varices are suspected, before endoscopy"
+                  - "If octreotide is unavailable: terlipressin 2 mg IV q4-6h until bleeding stops, then 1 mg q4-6h (more adverse effects - avoid in ischaemic heart disease)"
+                  - "Ceftriaxone 1 g/day × 7 days (ciprofloxacin 500 mg PO BD if discharged < 7 days) - antibiotics reduce mortality here, not just infection"
                   - "See the cirrhosis protocol for preventive management"
             - label: "No"
               box:

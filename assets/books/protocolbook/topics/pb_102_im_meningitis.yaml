@@ -87,7 +87,7 @@ topic:
           title: "Notes"
           markdown: |
             - TB: see the tuberculosis section
-            - Steroids are no longer recommended
+            - **Steroids: not routinely.** Adjunctive dexamethasone showed no benefit in low-income, high-HIV-prevalence settings, where patients present late and sicker. **If the patient is HIV-negative and presents early**, dexamethasone 10 mg IV q6h × 4 days may be considered — give it **with or just before the first antibiotic dose**, or not at all. **Stop it if Listeria is identified** (associated with worse outcomes), and do not use it in cryptococcal meningitis
 
     # ═══════════════════════ PAGE 103 ═══════════════════════
     - page_number: 103
@@ -142,5 +142,6 @@ topic:
           title: "Treatment (IV antibiotics × 10 days)"
           markdown: |
             - Ceftriaxone 2 g IV BD, OR cefotaxime 2 g IV 6-hourly
-            - If > 50 years old or immunocompromised, add ampicillin 3 g IV 6-hourly
+            - If > 50 years old or immunocompromised, add **ampicillin 2 g IV 4-hourly** for Listeria (same 12 g/day, but ampicillin kills by time above MIC, so the shorter interval matters)
+            - **Duration by organism:** 10 days is the default · meningococcus 7 days · pneumococcus 10–14 days · **Listeria or gram-negative bacilli 21 days**
             - Follow the [Convulsion Protocol](topic:pb-im-convulsions) if applicable

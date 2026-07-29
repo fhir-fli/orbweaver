@@ -41,7 +41,8 @@ topic:
         - Start oxygen
         - Treat both the fit and hypoglycaemia:
           - Rectal diazepam — 4 suppositories, 2.5 mg each, OR
-          - IV diazepam 0.15 mg/kg slowly over 1 minute (max 10 mg)
+          - IV diazepam 0.15 mg/kg slowly over 1 minute (max 10 mg), OR
+          - **No IV access? IM midazolam 10 mg** — as effective as IV lorazepam and faster to give when a cannula is proving difficult
         - Give 50 mL 50% dextrose
         - Check ABCs when the fit stops
 
@@ -80,8 +81,8 @@ topic:
               box:
                 title: "Phenobarbital / phenobarbitone"
                 bullets:
-                  - "Loading dose 15 mg/kg IM/IV (if given IV, over 20 minutes)"
-                  - "Maintenance 5 mg/kg IV OD"
+                  - "Loading dose 20 mg/kg IM/IV (if given IV, over 20 minutes). If still fitting after 15 min, a further 10 mg/kg to a cumulative maximum of 40 mg/kg - only where respiratory monitoring is available"
+                  - "Maintenance (adults) 2-3 mg/kg/day IV/PO, once daily or divided"
                 severity: "priority"
             - label: "No"
               box:

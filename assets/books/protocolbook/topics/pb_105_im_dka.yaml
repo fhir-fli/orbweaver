@@ -81,16 +81,18 @@ topic:
     - type: "prose"
       title: "Insulin protocol (start after 1 hour of hydration)"
       markdown: |
-        - Soluble insulin injection:
-          - IM 0.1 IU/kg/hr, OR
-          - SC 0.15 IU/kg every 2 hours
-        - Soluble insulin infusion: 0.14 IU/kg/hr
+        - Soluble insulin **IM 0.1 IU/kg/hr**, OR
+        - Soluble insulin **infusion 0.1 IU/kg/hr** (minimum 1 unit/hr)
+        - **Rapid-acting analogue SC** (if no pump and no IM route): **0.3 IU/kg initial dose**, then **0.2 IU/kg every 2 hours** — or 0.1 IU/kg hourly
 
     - type: "prose"
       title: "Potassium protocol"
       markdown: |
-        - Add 5 mEq KCl per 500 mL bag
-        - **DO NOT give potassium if urine output < 1 mL/kg/hr (or K > 5.5)**
+        - **K⁺ 3.3–5.3 and urine output established → add 10 mEq KCl per 500 mL bag (= 20 mEq/L).** This is the usual case
+        - **K⁺ < 3.3 → hold the insulin** and replace potassium first (20–40 mEq/L) until K⁺ is above 3.3 — insulin drives potassium into cells and will make it worse
+        - **K⁺ > 5.3 → give no potassium**, recheck in 2 hours
+        - **DO NOT give potassium if urine output < 1 mL/kg/hr (or K > 5.3)**
+        - ⚠️ Total body potassium is always depleted in DKA even when the serum level looks normal, and it falls further as insulin takes effect. Under-replacing is the commoner error
 
     - type: "prose"
       title: "Fluid protocol"
@@ -118,7 +120,8 @@ topic:
       markdown: |
         - Ketones still present:
           - Change IV fluids to 5% dextrose ½ NS at 150–200 mL/hr
-          - Insulin 0.02–0.05 IU/kg/hr infusion (maintain the IM/SC regimen)
+          - Insulin 0.05 IU/kg/hr infusion (maintain the IM/SC regimen)
+          - **DKA has resolved when: glucose < 11 mmol/L (200 mg/dL) AND two of — pH > 7.3, bicarbonate ≥ 18, anion gap normal.** Only then switch to subcutaneous insulin, and **overlap the first SC dose with the infusion by 1–2 hours** or the ketoacidosis returns
         - No ketones: switch to SC insulin with meals, a sliding scale, or Mixtard BD
           - Usual dose 0.5–1 IU/kg/day
 
