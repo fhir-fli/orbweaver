@@ -97,7 +97,21 @@ grep the whole book for the old drug name.**
 
 ---
 
-# D. PAEDIATRIC GROUP AUDIT (pp.42–55) — flags raised 2026-07-27, NOTHING APPLIED
+# D. PAEDIATRIC GROUP AUDIT (pp.42–55) — flags raised 2026-07-27
+
+> ⚠️ **HEADER CORRECTED 2026-07-28.** This section used to say "NOTHING APPLIED".
+> That is no longer true and was misleading OE, whose 2026-07-28 reply assumed items
+> were applied because they had been *answered* in an earlier conversation turn.
+> **Verified against the actual files on 2026-07-28:**
+> **D1 ✅ applied** (`pb_054` now has three age bands, ampicillin 75 mg/kg for Listeria
+> in both under-3-month bands, and the avoid-ceftriaxone-in-neonates warning) ·
+> **D2 ✅ applied** (`pb_045` now 2 mg/kg then 1 mg/kg q6h, narrowed to refractory
+> shock with a do-not-use-routinely caution) · **D3 ✅ applied** (`pb_047` line 134
+> reads "1–2mL/kg/hr") · **D5 ✅ applied** (`pb_045` line 100 carries both exact
+> recipes) · **D6 ✅ applied** (`pb_045` line 55 reads "(36 core)").
+> **D4 ❌ STILL OPEN — the only unapplied item in this section.** `pb_047` line 143
+> still reads "Soluble Regular Insulin Injection: SC 0.15 IU/kg every 2 hours".
+> OE has now given the fix (see the reconciliation at §I).
 
 First never-audited group. 8 topics. Audited against current standards and, where
 the text extraction allowed, Uganda Clinical Guidelines 2023.
@@ -805,3 +819,105 @@ gastric aspirate ×3 on separate early mornings before eating or ambulating · t
 "consider TB" and "more likely" lists · **all three scoring systems transcribed
 verbatim and correctly**, including the Keith Edwards ≥7 threshold, the modified
 Edwards ≥7 threshold, and the Brazilian ≥40 / 30–39 / ≤29 bands and every point value.
+
+---
+
+# I. RECONCILIATION OF THE 2026-07-28 OE ROUND (pp.59–73)
+
+Grey put sections D–H through OpenEvidence and returned a full review. This section
+records **what it answered, what it did not, and what the repo actually contains** —
+because the reply's "already applied" language describes *its own earlier conversation
+turns*, not our files, and the two had drifted apart.
+
+## I.1 Coverage — 33 of 39 flags answered
+
+| Section | Flags | Answered | Not answered | Answer truncated / incomplete |
+|---|---|---|---|---|
+| §D Paediatric (pp.42–55) | 6 | 6 | — | — |
+| §E Sickle Cell (pp.59–62) | 11 | 9 | — | E4, E6 |
+| §F SAM (pp.63–66) | 10 | 4 | F5, F8, F9, F10a, F10b | F6, F7 |
+| §G ENT (pp.67–70) | 11 | 11 | — | — |
+| §H Paed TB (pp.71–73) | 7 | 5 | H6, H7 | — |
+
+**§G came back complete.** §F is the weak one: **half of it went unaddressed**, and it
+is also the section with the most WHO-sourced omissions. The 11 open items are written
+up paste-ready as **§F of `protocolbook_open_dosing_questions.md`**.
+
+## I.2 ⚠️ The repo/OE drift — read before actioning anything in §D
+The reply treats D1, D2, D3, D5 and D6 as settled ("already confirmed in the previous
+round", "already applied on p.20"). **Verified file by file: it is right about all
+five — they are applied.** But it reached that conclusion from its own transcript, not
+from our files, and §D's header still said "NOTHING APPLIED", which is what it was
+reading. Both have now been corrected.
+
+**The one that actually matters: D4 was never applied and OE has now resolved it.**
+`pb_047` line 143 still prints *"Soluble Regular Insulin Injection: SC 0.15 IU/kg
+every 2 hours"*. The reply is unusually well-sourced here (Ethiopian DKA series,
+AAFP 2024, ISPAD-concordant protocol, ADA 2026) and the pharmacology is not in
+dispute: **0.15 IU/kg q2h is correct for a rapid-acting analogue and wrong for
+regular/soluble insulin, which peaks at 2–4 h and lasts 5–8 h, so q2h stacks.**
+Fix to print both routes:
+- rapid-acting analogue (lispro/aspart) available → **0.15 IU/kg SC q2h**
+- only regular/soluble insulin → **0.15 IU/kg SC q4h** (not q2h — it stacks)
+
+## I.3 Where OE overrode UCG — flag for Grey, do not apply silently
+**E1 folic acid.** OE recommends dropping from **5 mg to 1 mg daily**, and says so
+explicitly: *"UCG's 5 mg is the outlier here, not the evidence."* That inverts this
+book's usual pattern, where WHO/UCG wins — so it deserves a conscious decision rather
+than a quiet edit, because it changes a **lifelong prescription for every SCD child**.
+
+The evidence offered is strong: Cochrane 2026 (CD014217) on folic acid and antifolate
+antimalarials, the Cochrane SCD folate review, a 2025 noninferiority RCT, and the FDA
+label's *"daily doses greater than 1 mg do not enhance the hematologic effect"*.
+1 mg is also the standard SCD dose internationally, and it makes the book internally
+consistent with `pb_075`'s own ≤1 mg/day rule.
+
+One tension worth noting when it goes back: Cochrane's phrasing is that there is **"no
+safe minimum dose"** for the SP interaction — which argues 1 mg is a compromise rather
+than a clean answer. Whether SCD's haemolytic folate demand justifies that compromise
+is the actual question, and it was not directly addressed.
+
+## I.4 Confirmed and ready to apply
+Everything below was answered unambiguously and agrees with WHO/UCG where those have
+a position. **None of it is applied yet.**
+
+| Item | Page | Change |
+|---|---|---|
+| D4 | 47 | regular insulin q2h → **q4h**; q2h only for a rapid-acting analogue |
+| E1 | 59 | folic acid 5 mg → **1 mg daily** *(see §I.3 first)* |
+| E2 | 62 | **add incentive spirometry** — 10 maximal inspirations q2h while awake; balloon if no spirometer |
+| E3 | 62 | **add salbutamol** (already dosed on pp.52–53) |
+| E4 | 61 | cap simple transfusion at **Hb 10 g/dL**; add exchange transfusion *(HbS target still missing — §F8 of the question list)* |
+| E5 | 59 | **add a priapism block** — aspiration + irrigation, intracavernosal phenylephrine 100–500 mcg q5min (max 1 mg), atropine at bedside, urgent surgical referral, and **RBC transfusion does NOT treat priapism** |
+| E6 | 60 | **add an aplastic-crisis arm** *(retic threshold still missing — §F9)* |
+| E7 | 60, 45 | ceftriaxone → **max 4 g/day meningitis, 2 g/day otherwise**; harmonise with the formulary's "max 2 g/dose" wording |
+| E8 | 59 | hydroxyurea threshold **>5/year → ≥3/year** |
+| E9 | 59 | drop the "larger studies are still pending" hedge |
+| E10 | 60 | add **"avoid splenectomy in acute sequestration"** |
+| E11 | 62 | discharge Hb **">5 g/dL or at the patient's known baseline, whichever is higher"** |
+| F1 | 65 | gentamicin **5 → 7.5 mg/kg/day × 7 days** |
+| F2 | 65 | amoxicillin step-down **25–40 mg/kg q8h × 5 days** |
+| F3 | 64 | add **furosemide 1 mg/kg IV at the start of transfusion**, q15min monitoring, no-repeat-within-4-days; trigger **Hb 4–6 with respiratory distress** |
+| F4 | 65 | vitamin A **days 1, 2, 14**; <6 mo 50 000 IU · 6–12 mo 100 000 IU · >12 mo 200 000 IU; **only for eye signs or recent measles**; reconcile the formulary's "not twice within 1 month" as the *routine* rule |
+| F10 | 64 | uncomplicated SAM should also get oral amoxicillin |
+| G2 | 69 | **add the perforation warning + fluoroquinolone (cipro/oflox) alternative**; add aural toilet/wick and analgesia |
+| G3 | 69 | ceftriaxone **"2 g IV q12h (max 4 g/day)"** — delete "or 8 hourly" |
+| G4 | 69 | vancomycin → **15 mg/kg IV q8h (max 2 g/dose)**, monitor levels if available |
+| G5 | 69 | ampicillin-sulbactam **OR** cloxacillin, not both |
+| G6 | 69 | add CT temporal bone + adult surgical referral |
+| G7 | 70 | pharyngitis amoxicillin cap **1 g/dose → 500 mg/dose** |
+| G8 | 70 | add the ARF-prevention rationale + cross-link to `pb_058` |
+| G9 | 67 | add **BP** to the initial vitals (and an anticoagulant question) |
+| G10 | 67 | foley balloon **5–15 mL**, check by gentle forward traction |
+| G11 | 68 | add paracetamol/ibuprofen to AOM |
+| H2 | 73, 129 | pulmonary TB continuation **6 → 4 months** (6 total) — **both pages**. CNS 10 months stays |
+| H3 | 73 | LFT rule → **>3× ULN with symptoms, >5× ULN without** |
+| H4 | 71 | add HIV testing + cross-link to `pb_135` |
+| H5 | 71 | add **isoniazid preventive therapy 10 mg/kg daily × 6 months** for well child contacts |
+
+## I.5 Two notes for the next OE round
+- **The reply's own priority table is a subset**, not a checklist — it lists 20 of the
+  39 flags. Do not treat absence from that table as "no action".
+- **Ask for the missing numbers explicitly.** Three answers stopped exactly at the
+  figure (HbS target, retic threshold, crossover age) and one confirmed an error
+  without saying which way to fix it. That is now §F of the question list.

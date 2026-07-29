@@ -196,3 +196,125 @@ side effects.
   from the AHA H's and T's after 2005. Keep as a deliberate LMIC addition?
 - **E3 — p.21 IO line:** we print a strict 90° insertion angle; classic manual-needle
   teaching is 60–90° angled away from the growth plate. Judged acceptable — confirm.
+
+---
+
+# F. RE-ASK LIST — what the 2026-07-28 OE round did NOT answer
+
+The pp.59–73 review (sections E–H of `protocolbook_needs_oe_rereview.md`) came back
+thorough on 33 of 39 flags. **These 11 are still open.** Seven got no answer at all;
+three had an answer that was cut off exactly where the number should have been; one
+was confirmed as an error without saying which way to fix it.
+
+**Paste this block alongside the relevant page.** Same setting as above: district
+hospital, Gulu, northern Uganda.
+
+## F1 ⚪ NOT ANSWERED — ReSoMal in cholera or profuse watery diarrhoea (p.64)
+Our p.64 gives ReSoMal unconditionally: 5 mL/kg PO q30min × 2 h, then 5–10 mL/kg/h
+alternating hourly with F-75 × 10 h.
+
+WHO ch.7 and UCG both carve out the same exception in near-identical words — use
+**standard ORS, not ReSoMal, if the child has cholera or profuse watery diarrhoea**,
+because ReSoMal is deliberately low-sodium.
+
+**Q:** Should that exception be printed, and in what words? WHO also gives a hard stop
+rule we do not carry — *stop ReSoMal immediately if respiratory rate rises by 5/min
+and pulse by 25/min*. Should that replace our softer "monitor for improvement or
+over hydration"?
+
+## F2 ⚪ NOT ANSWERED — the orphan digoxin line in SAM cardiac failure (p.65)
+p.65 item 6 reads: Oxygen · Stop all IV fluids & feeds · Lasix 1 mg/kg IV ·
+**"Do not use digoxin in newborns."**
+
+Digoxin appears nowhere else in the block, nowhere else in the topic, and **WHO's SAM
+chapter never mentions digoxin at all.** So the page warns against a treatment it
+never offers, and implies digoxin *is* appropriate in non-newborns without ever
+dosing it.
+
+**Q:** Delete the line, or restore digoxin properly as an option with a dose? If it
+stays, what dose in SAM specifically — where myocardial mass is reduced and
+electrolytes are deranged?
+
+## F3 ⚪ NOT ANSWERED — SAM eye care is missing the part that saves the eye (p.65)
+p.65 item 7 gives only: *"Vitamin A on day 1, 2 and 15 · 1% atropine to relax the eye ·
+Gentamycin or chloramphenical eyedrops"* — no frequencies, no durations.
+
+WHO §7.5.1 gives four things explicitly *"to prevent corneal rupture and extrusion of
+the lens"*: chloramphenicol **or tetracycline** drops **4×/day for 7–10 days**;
+atropine **one drop three times a day for 3–5 days**; **cover with saline-soaked eye
+pads**; and **bandage the eye(s)**.
+
+**Q:** Confirm the drop frequencies and durations to print. Should **gentamicin** drops
+be replaced by tetracycline/chloramphenicol as WHO specifies? And should the
+**saline pad and bandage** be added — they need no supply chain and are the mechanical
+step that stops the globe perforating.
+
+## F4 ⚪ NOT ANSWERED — "stop all oral feeds and IV fluids for 24 hours" (p.64 item 5a)
+Our severe-anaemia block opens by withholding all feeds and IV fluids for a full day.
+WHO has no such instruction — it says only that transfusion should be given *in the
+first 24 h* if criteria are met, which looks like the likely origin of the sentence.
+
+**Q:** Is a 24-hour fast correct in a SAM child whose item-1 problem on the same page
+is hypoglycaemia? Or should feeds be withheld only **during** the transfusion?
+
+## F5 ⚪ NOT ANSWERED — kwashiorkor skin lesions (p.65 item 8)
+We print only 0.01% potassium permanganate or gentian violet. WHO §7.5.3 adds **zinc**
+(deficiency is usual in kwashiorkor and the skin responds quickly), a **barrier cream**
+(zinc and castor oil ointment, petroleum jelly or tulle gras) to raw areas, and
+**avoiding nappies so the perineum stays dry**.
+
+**Q:** Item 10 says micronutrients are already in F-75/F-100 — does that cover the
+zinc, or is additional zinc needed for kwashiorkor dermatosis specifically? Should the
+barrier cream and nappy advice be added?
+
+## F6 ⚪ NOT ANSWERED — Xpert MTB/RIF for children (p.71)
+p.71's diagnosis section offers **gastric aspirate ×3 only**. Xpert appears nowhere in
+the paediatric TB group — but **p.128 (adult TB) says "If available, perform Gene Xpert
+on 1 sputum sample."** So we route adults to the WHO-recommended initial test and
+children to a 1950s technique.
+
+**Q:** Should Xpert MTB/RIF Ultra be added to the paediatric pathway — and specifically
+**stool Xpert**, which is WHO-endorsed in young children and removes the need for
+gastric aspirate in exactly the under-5s p.71 says cannot expectorate? What specimen
+priority should we print where Xpert is available?
+
+## F7 ⚪ NOT ANSWERED — "Source case is female" +1 (p.72, 8-point risk score)
+The 8-point contact score awards a point for the source case being female. We
+transcribed it verbatim.
+
+**Q:** Is this reproducing a study-population caregiving artefact rather than a
+generalisable risk factor? Should a one-line note say so, as the same table already
+does for "high incidence area"?
+
+## F8 🔴 ANSWER CUT OFF — the HbS target in sickle stroke (p.61)
+The reply read *"the goal is to lower HbS to"* and stopped at the citation marker.
+
+**Q:** State the **HbS percentage target** for exchange transfusion in acute sickle
+stroke, and confirm the **simple-transfusion Hb ceiling** (we understood ~10 g/dL, and
+that exceeding it risks extending the infarct through hyperviscosity).
+
+## F9 🔴 ANSWER CUT OFF — the reticulocyte threshold for aplastic crisis (p.60)
+The reply began *"A low reticulocyte count ("* and stopped at the number.
+
+**Q:** What **reticulocyte count or percentage** should define aplastic crisis on the
+p.60 cascade, so the arm can be written? We already draw a retic count in initial
+management and currently never use it.
+
+## F10 🔴 ANSWER CUT OFF — the WFH-vs-BMI crossover age (p.63)
+The reply was garbled mid-sentence.
+
+**Q:** Our prose says *"Use WFL/WFH if <6 years (59 months)"* and *"Use BMI/age if
+≥6 years"* — but 59 months is under **5** years, and the table below it uses
+"6 to 59 months" and "5 to 19 years". Confirm both prose lines should read **5 years**.
+
+## F11 🟡 CONFIRMED AS AN ERROR, BUT NOT WHICH WAY (p.63)
+The reply agreed the adolescent MUAC row is a source-document error, but did not say
+which bound is wrong.
+
+As printed, **15 to 19 years: MAM ≥16.5 & <21.0 cm · SAM <18.5 cm** — these overlap,
+so 17.0 cm is both. Every other row has MAM's lower bound equal to SAM's upper bound
+(13.5/13.5, 16.0/16.0).
+
+**Q:** Which single number should change — **MAM's "≥16.5" → "≥18.5"** (making the SAM
+series 13.5 → 16.0 → 18.5, and restoring the boundary rule), or **SAM's "<18.5" →
+"<16.5"**? If neither, what are the correct 15–19-year MUAC cut-offs to print?
