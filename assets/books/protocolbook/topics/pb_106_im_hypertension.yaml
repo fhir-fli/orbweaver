@@ -113,7 +113,7 @@ topic:
         - type: "prose"
           title: "Hypertension in specific conditions"
           markdown: |
-            - **Acute aortic dissection** — goal SBP < 120 in 5–10 minutes; a beta-blocker and vasodilator (esmolol/metoprolol & nicardipine, nitroprusside, fenoldopam)
+            - **Acute aortic dissection** — goal **SBP < 120 within the first hour** (not within 5–10 minutes — that pace risks end-organ hypoperfusion). **Also target heart rate < 60.** Give the **beta-blocker FIRST**, then the vasodilator — a vasodilator alone causes reflex tachycardia and raises aortic wall shear stress. Esmolol or metoprolol, then nicardipine or nitroprusside
             - **Acute stroke** — see the [stroke pathway](topic:pb-im-stroke)
             - **Hypertensive encephalopathy** — goal: lower SBP by no more than 20–25%, or DBP to 100–110, in the first hour; labetalol, nicardipine (DO NOT use nitroprusside)
             - **Acute myocardial ischaemia** (see ACS protocol) — goal SBP < 160, DBP < 100; nitroglycerin (unless a phosphodiesterase inhibitor was used in the last 48 h — sildenafil, tadalafil); alternatives labetalol, esmolol, nicardipine

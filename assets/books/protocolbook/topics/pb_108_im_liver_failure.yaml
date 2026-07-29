@@ -81,7 +81,7 @@ topic:
               outcomes:
                 - label: "Yes"
                   box:
-                    title: "NS bolus for resuscitation; dopamine PRN; keep SBP > 90"
+                    title: "NS bolus for resuscitation; keep SBP > 90. Vasopressor if needed: norepinephrine where available, dopamine if not"
                     severity: "priority"
                 - label: "No"
                   continue: true
@@ -107,7 +107,7 @@ topic:
               outcomes:
                 - label: "Yes"
                   box:
-                    title: "Lactulose 20–30 g PO 3–4 times daily"
+                    title: "Lactulose 30-45 mL (20-30 g) PO every 1-2 hours until 2 bowel movements, THEN 15-30 mL 2-4 times daily to keep 2-3 soft stools a day. For recurrent encephalopathy add rifaximin 550 mg PO BD where available"
                 - label: "No"
                   continue: true
           terminal:
@@ -179,13 +179,12 @@ topic:
             - Educate about avoiding alcohol, paracetamol, and other hepatotoxic drugs
             - **Variceal bleeding prophylaxis:**
               - Start prophylaxis 1 week after a bleed if haemodynamically stable
-              - Propranolol 20 mg PO BD, or carvedilol 3.125 mg PO BD
-              - Titrate to one of: resting HR 55 beats/min; HR reduction 25% from baseline; or development of side effects
-            - **SBP prophylaxis** — if ALL of the following, start co-trimoxazole 160/800 mg PO 5 days/week, or norfloxacin 400 mg PO daily:
-              - Prior spontaneous bacterial peritonitis
-              - Ascitic fluid protein < 1.5 g/dL
-              - Impaired renal function (Cr > 1.2, BUN > 25, or Na < 130)
-              - Child-Turcotte-Pugh score > 9 and bilirubin > 3
+              - **Carvedilol 6.25 mg PO daily, titrating to 12.5 mg daily — preferred.** Its extra alpha-blockade lowers portal pressure better than propranolol. Use propranolol 20 mg PO BD only if carvedilol is unavailable
+              - Titrate to one of: resting HR 55–60 beats/min; HR reduction 25% from baseline; or development of side effects
+              - **Hold the beta-blocker if SBP falls below 90**, or in refractory ascites
+            - **SBP prophylaxis — two separate indications, do not require both:**
+              - **Secondary (has had SBP before): treat regardless of any other criterion.** Co-trimoxazole 160/800 mg PO 5 days/week, or norfloxacin 400 mg PO daily, indefinitely
+              - **Primary (never had SBP):** consider if **ascitic fluid protein < 1.5 g/dL** AND either impaired renal function (Cr > 1.2, BUN > 25, or Na < 130) **or** advanced liver disease (Child-Turcotte-Pugh > 9 with bilirubin > 3)
             - **Ascites treatment:**
               - Education: reduce salt; reduce fluid intake if low Na and hypervolaemic
               - Diuretics (both if BP tolerates): spironolactone 100 mg/day (max 400) and furosemide 40 mg/day (max 160)

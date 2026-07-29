@@ -121,3 +121,9 @@ topic:
             - cells: ["Severely violent patient", "Haloperidol 2.5–5 mg IV/IM AND/OR midazolam 2.5–5 mg IV/IM"]
             - cells: ["Drug intoxication / withdrawal, or undifferentiated", "Midazolam 2.5–5 mg IV/IM, AND (if necessary) haloperidol 2.5–5 mg IV/IM"]
             - cells: ["Known psychiatric disorder", "Haloperidol 2.5–5 mg IV/IM AND/OR midazolam 2.5–5 mg IV/IM"]
+
+    - type: "prose"
+      markdown: |
+        - **Combination works better than either drug alone.** Haloperidol **plus** midazolam is more effective than haloperidol on its own, which is the least effective of the usual options
+        - **Olanzapine 10 mg IM**, where stocked, is a good alternative to haloperidol with fewer extrapyramidal effects
+        - ⚠️ **Haloperidol prolongs the QT interval.** Get an ECG when that is feasible; avoid it if the QT is known to be long or the patient is on other QT-prolonging drugs. **IV carries more risk than IM**

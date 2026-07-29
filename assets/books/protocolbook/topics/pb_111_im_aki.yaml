@@ -36,8 +36,8 @@ topic:
       title: "Diagnosis"
       markdown: |
         - Urine output decreases (< 0.5 mL/kg/hr for > 6 hours)
-        - Cr rise ≥ 0.3 mg/dL
-        - Cr rise ≥ 50%
+        - Cr rise ≥ 0.3 mg/dL **within 48 hours**
+        - Cr rise ≥ 50% **within the last 7 days**
 
     - type: "prose"
       title: "Labs"
@@ -78,3 +78,31 @@ topic:
         - **Vascular:** HUS/TTP, DIC, pre-eclampsia, malignant hypertension
         - **Acute tubular necrosis (ATN):** ischaemia; drugs (aminoglycosides); pigment (rhabdomyolysis, haemolysis)
         - **Acute interstitial nephritis (AIN):** allergic (beta-lactam, sulfa, NSAIDs); infection (pyelonephritis, TB); infiltrative (leukaemia / lymphoma)
+
+    - type: "prose"
+      title: "Management"
+      markdown: |
+        There is no drug that treats AKI. Everything below is about removing the cause and not making it worse.
+
+        - **Treat the cause** — rehydrate the prerenal patient, relieve the obstruction (catheterise), stop the offending drug
+        - **Stop nephrotoxins:** NSAIDs, aminoglycosides, ACE-inhibitors/ARBs, contrast. Review **every** drug chart
+        - **Dose-adjust everything renally cleared** — this is where avoidable harm accumulates
+        - **Fluids to euvolaemia, then stop.** Under-filling prolongs the injury; over-filling kills. Reassess often
+        - **Monitor daily:** urine output, weight, creatinine, **potassium**
+        - Treat hyperkalaemia, acidosis and fluid overload on their own protocols
+
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "Refer for dialysis — AEIOU"
+      markdown: |
+        - **A** — **A**cidosis, severe and not correcting
+        - **E** — **E**lectrolytes: hyperkalaemia refractory to medical treatment
+        - **I** — **I**ngestion of a dialysable poison (methanol, ethylene glycol, salicylate, lithium)
+        - **O** — fluid **O**verload not responding to diuretics
+        - **U** — **U**raemia: pericarditis, encephalopathy, bleeding
+
+        Refer early — transfer takes time, and these patients deteriorate quickly.
