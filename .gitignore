@@ -36,3 +36,6 @@ doc/api/
 # Manual test screenshots and rasterized reference pages (generated)
 test/manual/out/
 test/manual/reference/
+
+# Diagnostic probe output (test/widgets/fit_overload_probe_test.dart)
+fit_overload.tsv
