@@ -27,6 +27,7 @@ class MiniMarkdown extends StatefulWidget {
     required this.markdown,
     this.fontSize = 14,
     this.height = 1.4,
+    this.unitSpacing,
     this.color,
     this.bulletColor,
     this.linkColor,
@@ -36,6 +37,17 @@ class MiniMarkdown extends StatefulWidget {
   final String markdown;
   final double fontSize;
   final double height;
+
+  /// Vertical gap below each rendered unit (bullet or paragraph). Null
+  /// keeps the historical 3 px / 2 px defaults.
+  ///
+  /// The printed protocols set bullets at the *same* pitch as a wrapped
+  /// continuation line — there is no extra spacing between bullets at all
+  /// (measured on PDF pp.11 and 71: 50-56 px pitch at 150 dpi, identical
+  /// within a wrapped bullet and between bullets). Prose therefore passes
+  /// a near-zero value; other call sites keep the looser default.
+  final double? unitSpacing;
+
   final Color? color;
 
   /// Color of the square bullet glyph. Defaults to the text color when
@@ -104,6 +116,7 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
             unit: current!,
             fontSize: widget.fontSize,
             height: widget.height,
+            unitSpacing: widget.unitSpacing,
             color: color,
             bulletColor: bulletColor,
             spans: _parseInline(current!.text, linkColor),
@@ -234,6 +247,7 @@ class _UnitLine extends StatelessWidget {
     required this.unit,
     required this.fontSize,
     required this.height,
+    required this.unitSpacing,
     required this.color,
     required this.bulletColor,
     required this.spans,
@@ -242,6 +256,7 @@ class _UnitLine extends StatelessWidget {
   final _Unit unit;
   final double fontSize;
   final double height;
+  final double? unitSpacing;
   final Color color;
   final Color bulletColor;
   final List<InlineSpan> spans;
@@ -256,13 +271,13 @@ class _UnitLine extends StatelessWidget {
 
     if (!unit.isBullet) {
       return Padding(
-        padding: EdgeInsets.only(left: indent, bottom: 2),
+        padding: EdgeInsets.only(left: indent, bottom: unitSpacing ?? 2),
         child: text,
       );
     }
 
     return Padding(
-      padding: EdgeInsets.only(left: indent, bottom: 3),
+      padding: EdgeInsets.only(left: indent, bottom: unitSpacing ?? 3),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

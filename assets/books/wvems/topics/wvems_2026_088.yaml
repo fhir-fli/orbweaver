@@ -137,9 +137,9 @@ topic:
         - Notify ED **ASAP**. Prepare to **go straight to cath lab** if time allows.
           - **Shave** from belt to knees, place **defib pads**, change into a gown.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - May have early repolarization on EKG that mimics ST elevations.
           - But early repolarization **does not require** EMS intervention.

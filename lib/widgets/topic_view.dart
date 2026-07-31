@@ -3,6 +3,7 @@ import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/anchor_scope.dart';
+import 'package:orbweaver/widgets/blocks/band_callout_block_view.dart';
 import 'package:orbweaver/widgets/blocks/conversion_block_view.dart';
 import 'package:orbweaver/widgets/blocks/drug_card_block_view.dart';
 import 'package:orbweaver/widgets/blocks/formula_block_view.dart';
@@ -159,15 +160,23 @@ class TopicPageBody extends StatelessWidget {
   /// tighten a paged page's vertical rhythm along with its text.
   final double gapScale;
 
+  /// Gap between two blocks of a paged page. Measured off the print
+  /// (PDF p.71, the dense Burns notes page): consecutive sections are
+  /// separated by about one line pitch beyond the last line — roughly
+  /// 40 px at 150 dpi, i.e. ~12 logical px on the 393-wide phone frame,
+  /// of which the last line's own descender space already supplies part.
+  /// 9 is that gap less the leading the tightened prose keeps.
+  static const double kBlockGap = 9;
+
   @override
   Widget build(BuildContext context) {
-    final gap = 12.0 * gapScale;
+    final gap = kBlockGap * gapScale;
     return TopicThemeScope(
       theme: theme,
       child: ColoredBox(
         color: Colors.white,
         child: Padding(
-          padding: EdgeInsets.fromLTRB(12, 6 * gapScale, 12, 6 * gapScale),
+          padding: EdgeInsets.fromLTRB(12, 4 * gapScale, 12, 4 * gapScale),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -237,6 +246,7 @@ class _BlockRenderer extends StatelessWidget {
           });
     final child = switch (block) {
       final ProseBlock b => ProseBlockView(block: b, theme: t),
+      final BandCalloutBlock b => BandCalloutBlockView(block: b, theme: t),
       final FlowchartBlock b => _FlowchartBlockRenderer(block: b, theme: t),
       final TableBlock b => TableBlockView(block: b, theme: t),
       final DrugCardBlock b => DrugCardBlockView(block: b, theme: t),

@@ -146,9 +146,9 @@ topic:
         - **Shock Index** is a good predictor of hypotension from RSI.
           - Be ready with push dose pressors if **Shock Index is above 0.8**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
         - Titrate to age-adjusted BP (vitals also listed in **Peds Reference**).

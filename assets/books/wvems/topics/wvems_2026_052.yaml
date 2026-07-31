@@ -139,22 +139,25 @@ topic:
         - OPA/NPA: **30:2** w/ BVM
         - BIAD/ETT: **Continuous**
 
-    - type: "prose"
-      title: "TRAUMA Alert"
-      callout: true
-      markdown: |
-        - If Any Trauma CPR
-        - Or Unstable Vitals
-        - Call a **TRAUMA** Alert
-
-    - type: "prose"
-      title: "Mortal Injuries"
-      markdown: |
-        - Decapitation or Exposed Brain
-        - Destruction of Trunk or Organs
-        - Burned Beyond Recognition
-        - Massive Blunt Force, Explosion
-        - Over 30 min Since Arrest
+    # Print p.53 sets TRAUMA Alert and Mortal Injuries side by side in one
+    # band. Longest lines are 22 and 30 chars, so both hold a 181 px slot.
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "TRAUMA Alert"
+          callout: true
+          markdown: |
+            - If Any Trauma CPR
+            - Or Unstable Vitals
+            - Call a **TRAUMA** Alert
+        - type: "prose"
+          title: "Mortal Injuries"
+          markdown: |
+            - Decapitation or Exposed Brain
+            - Destruction of Trunk or Organs
+            - Burned Beyond Recognition
+            - Massive Blunt Force, Explosion
+            - Over 30 min Since Arrest
 
     - type: "prose"
       title: "Medications"
@@ -172,9 +175,9 @@ topic:
         - **EtCo2** can help identify ROSC and guide termination decision.
         - A well run CODE should operate like a **pit crew**. Focus on your job.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
 

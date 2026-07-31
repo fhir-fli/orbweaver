@@ -111,9 +111,9 @@ topic:
           - For **chemical burns** and skin exposures, refer to [Burns](topic:wvems-2026-070).
           - For **poisoning** and toxic ingestions, refer to **OD / Tox**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Small children (and the elderly/frail) may exhibit symptoms faster.
 

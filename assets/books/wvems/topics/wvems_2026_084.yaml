@@ -137,9 +137,9 @@ topic:
         - If possible, ask about any **religious objections** before transfusion.
           - **If altered**: may check for medical jewelry or in patient's wallet.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Provide **Blood** in aliquots of **10 mL/kg**. May repeat PRN.
         - Titrate to low end of age-adjusted SBP (listed in **Peds Reference**).

@@ -129,9 +129,9 @@ topic:
         - Use **Poison Control** (1-800-222-1222) for exposure-specific guidance.
         - Treat **co-ingestions** assuming worst-case mixed effect.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Pediatric exposures often involve household chemicals and meds left
           accessible — gather history from caregivers and bring containers if safe.

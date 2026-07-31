@@ -123,29 +123,37 @@ topic:
         - Consider an atypical **Cardiac** cause in diabetics and the elderly.
         - Consider [Sepsis](topic:wvems-2026-094) if indicated and credentialed for Critical Care.
         - Check for **medical jewelry**.
-        - May investigate pt's GCS:
-          - Check each response
-          - Repeat **as needed**
-          - Record the **best effort**
-          - Add the three numbers
-          - Normal score is **15**
-          - Worst score is **3**
 
-    - type: "table"
-      title: "Glasgow Coma Scale"
-      columns: ["Eyes", "Verbal", "Motor", ""]
-      column_flex: [3, 3, 3, 1]
-      rows:
-        - cells: ["none", "none", "none", "1"]
-        - cells: ["pain", "moaning", "extensor", "2"]
-        - cells: ["verbal", "words", "flexor", "3"]
-        - cells: ["normal", "confused", "withdraw", "4"]
-        - cells: ["", "normal", "localizes", "5"]
-        - cells: ["", "", "normal", "6"]
+    # Print p.37 sets the GCS scoring bullets to the LEFT of the GCS table
+    # rather than above it. Both halves are narrow (longest bullet 22 chars,
+    # and the same table already lives in a row on p.87), so the pairing
+    # survives a 181 px slot.
+    - type: "row"
+      blocks:
+        - type: "prose"
+          markdown: |
+            May investigate pt's GCS:
+            - Check each response
+            - Repeat **as needed**
+            - Record the **best effort**
+            - Add the three numbers
+            - Normal score is **15**
+            - Worst score is **3**
+        - type: "table"
+          title: "Glasgow Coma Scale"
+          columns: ["Eyes", "Verbal", "Motor", ""]
+          column_flex: [3, 3, 3, 1]
+          rows:
+            - cells: ["none", "none", "none", "1"]
+            - cells: ["pain", "moaning", "extensor", "2"]
+            - cells: ["verbal", "words", "flexor", "3"]
+            - cells: ["normal", "confused", "withdraw", "4"]
+            - cells: ["", "normal", "localizes", "5"]
+            - cells: ["", "", "normal", "6"]
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Many causes of transient syncope are benign, but:
           - Prolonged altered LOC indicates potentially serious pathology.

@@ -166,11 +166,16 @@ topic:
         - Consider IV **fluid warmers** and/or **rapid infusers** if available.
         - Splint **impaled objects** as found (cut wreckage to free patient).
           - May remove only if interfering with airway or resuscitation.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
         - Consider [Blood](topic:wvems-2026-084) if indicated and credentialed for Critical Care.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
 

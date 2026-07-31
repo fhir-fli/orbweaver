@@ -106,9 +106,9 @@ topic:
           path: "assets/books/wvems/images/spider_black_widow.jpg"
           caption: "Black Widow · Shenrich91 / Wikimedia, CC BY-SA 3.0"
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Beware **Anaphylaxis** with any voice changes (i.e. hoarseness).
 

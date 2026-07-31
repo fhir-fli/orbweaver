@@ -132,19 +132,25 @@ topic:
         - (E) **BLS**: Get ALS ASAP. Transport if witnessed by EMS or any shock.
         - (I) **ALS**: Try for **30 min**. If no ROSC: **Call for Termination**.
 
-    - type: "prose"
-      title: "Compressions"
-      markdown: |
-        - Adult/Peds: **120 /min**
-        - OPA/NPA: **30:2** w/ BVM
-        - BIAD/ETT: **Continuous**
-
-    - type: "prose"
-      title: "Obvious Death"
-      markdown: |
-        - Pooling Lividity
-        - Rigor Mortis
-        - Body Decomposition
+    # Print p.25 floats Compressions into the right margin beside the
+    # Imperatives, and Obvious Death beside the Medications. Neither of those
+    # pairings survives 181 px (halving a 60-95 char bullet list costs more
+    # height than the small box saves), so the two narrow boxes are paired
+    # with each other instead — same band, same space saving.
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "Compressions"
+          markdown: |
+            - Adult/Peds: **120 /min**
+            - OPA/NPA: **30:2** w/ BVM
+            - BIAD/ETT: **Continuous**
+        - type: "prose"
+          title: "Obvious Death"
+          markdown: |
+            - Pooling Lividity
+            - Rigor Mortis
+            - Body Decomposition
 
     - type: "prose"
       title: "Medications"
@@ -164,9 +170,9 @@ topic:
         - A well run CODE should operate like a **pit crew**. Focus on your job.
         - Consider causes: Shock, OD/Tox, Hypoglycemia, Hyperkalemia, etc.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use 15:2 compression ratio for dual rescuer BLS resuscitation.
         - Refer to [Neonate](topic:wvems-2026-050) for any peds **under 1 month** (≤ 30 days) old.

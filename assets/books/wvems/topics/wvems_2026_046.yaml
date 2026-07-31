@@ -132,9 +132,9 @@ topic:
         - Document a clear scene description and the indication for any restraint.
         - **Excited delirium** is a medical emergency — sudden death is possible.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Acute behavioral changes in peds are usually medical, not psychiatric.
         - Use **Peds Reference** for weight-based dosing.

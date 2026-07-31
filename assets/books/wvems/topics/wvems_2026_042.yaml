@@ -141,9 +141,9 @@ topic:
         - Confusion after seizure is common and may last over 30 min.
           - Transient stroke-like paralysis is also possible but is **not a CVA**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Peds under 5 y/o may have a seizure caused by [Fever](topic:wvems-2026-016).
           - It is usually self-limiting; consider meds if **>5 min** or multiple.

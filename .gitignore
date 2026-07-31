@@ -36,3 +36,7 @@ doc/api/
 # Manual test screenshots and rasterized reference pages (generated)
 test/manual/out/
 test/manual/reference/
+
+# probe measurement outputs
+fit_overload.tsv
+fit_real_font.tsv

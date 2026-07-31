@@ -136,11 +136,16 @@ topic:
       title: "Notes"
       markdown: |
         - Keep **normothermic** (hypothermia causes coagulopathy & bleeding).
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
         - Consider **Intubation** and/or **Vent** if indicated and credentialed for CC.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
 

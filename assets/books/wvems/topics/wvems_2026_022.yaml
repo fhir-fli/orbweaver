@@ -108,9 +108,9 @@ topic:
         - Consider an atypical **Cardiac** cause in diabetics and the elderly.
         - Sniffing an alcohol prep may also provide minor nausea relief.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         Use **Peds Reference** or other approved source for peds dosing.
 

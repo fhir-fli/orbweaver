@@ -147,9 +147,9 @@ topic:
         - Steroids, **TXA**, and/or hyperventilation are **not indicated**.
         - Increased risk of intracranial hemorrhage if any **anti-coagulation**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
         - Target **upper end** of age-adjusted SBP (also in **Peds Reference**).

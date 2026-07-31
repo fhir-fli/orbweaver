@@ -93,11 +93,14 @@ class _OctagonPainter extends CustomPainter {
       old.fill != fill || old.stroke != stroke;
 }
 
-/// Purple parallelogram for `WarningType.caution` callouts.
+/// Purple trapezoid for `WarningType.caution` callouts.
 ///
-/// Matches the WVEMS convention — clinician-facing caveats that change
-/// how to engage the patient (e.g. respect refusal, capacity check).
-/// The slant points right, top-aligned with the sister callout.
+/// Matches the WVEMS convention — the print's "Important Note" shape
+/// (PDF p.2 legend) and its in-flow uses, e.g. p.70's "Consider
+/// Destination Triage".  Both sides slope inward going down (an
+/// isosceles trapezoid, wide edge on top), which is what distinguishes
+/// it from the plain boxes around it.  Used for clinician-facing caveats
+/// and cross-references that change how to engage the patient.
 class CautionCallout extends StatelessWidget {
   const CautionCallout({required this.text, super.key});
 
@@ -105,69 +108,85 @@ class CautionCallout extends StatelessWidget {
 
   static const Color _stroke = Colors.black87;
 
-  /// Pixels each long edge slants relative to the short edges. A small
-  /// amount reads as a parallelogram without the box looking unstable.
-  static const double _skew = 8;
+  /// Fraction of the callout's width each sloped side eats by the bottom
+  /// edge.  Measured off the source PDF: the legend trapezoid on p.2 is
+  /// 511 x 315 px at 300 dpi with a 355 px bottom edge, and p.70's is
+  /// 255 x 157 px at 150 dpi with a 177 px bottom edge — both 0.248 of
+  /// the height per side, bottom edge 0.70 of the top.  Expressed against
+  /// width (not height) because the app's flank slot is narrower and
+  /// taller than the printed box: holding the printed width ratio keeps
+  /// the printed silhouette, where holding its 14 degree slope would
+  /// pinch the bottom edge to under half the top.
+  static const double _taperFraction = 0.15;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 84,
       child: CustomPaint(
-        painter: _ParallelogramPainter(
+        painter: _TrapezoidPainter(
           fill: TopicThemeScope.of(context).warningCaution,
           stroke: _stroke,
-          skew: _skew,
+          taperFraction: _taperFraction,
         ),
-        child: Padding(
-          // Inset from the slanted edges so text doesn't clip. The
-          // right edge needs the larger inset because the slant cuts
-          // into that corner.
-          padding: const EdgeInsets.fromLTRB(6, 4, 6 + _skew, 4),
-          child: Center(
-            child: LayoutBuilder(
-              // Subtract a small margin so the shrunk text leaves
-              // breathing room from the slant edges; matches the
-              // measurement-tolerance pattern used by action tiles.
-              builder: (context, constraints) => FitText(
-                text,
-                maxWidth: constraints.maxWidth - 4,
-                color: Colors.white,
-                style: const TextStyle(
-                  fontSize: 13,
-                  height: 1.1,
-                  fontWeight: FontWeight.w800,
+        child: LayoutBuilder(
+          builder: (context, slot) {
+            // Inset by half the taper on each side — the trapezoid's width
+            // at mid-height, which is where the text band sits. The print
+            // does the same: on p.70 the widest line spans nearly the full
+            // top edge and only the short last line sits inside the narrow
+            // bottom.
+            final inset = 6 + slot.maxWidth * _taperFraction / 2;
+            return Padding(
+              padding: EdgeInsets.symmetric(horizontal: inset, vertical: 4),
+              child: Center(
+                // Subtract a small margin so the shrunk text leaves
+                // breathing room from the slant edges; matches the
+                // measurement-tolerance pattern used by action tiles.
+                child: FitText(
+                  text,
+                  maxWidth: slot.maxWidth - 2 * inset - 4,
                   color: Colors.white,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    height: 1.1,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-            ),
-          ),
+            );
+          },
         ),
       ),
     );
   }
 }
 
-class _ParallelogramPainter extends CustomPainter {
-  const _ParallelogramPainter({
+class _TrapezoidPainter extends CustomPainter {
+  const _TrapezoidPainter({
     required this.fill,
     required this.stroke,
-    required this.skew,
+    required this.taperFraction,
   });
 
   final Color fill;
   final Color stroke;
-  final double skew;
+
+  /// See [CautionCallout._taperFraction] — how much of the width each
+  /// sloped side has eaten by the bottom edge.
+  final double taperFraction;
 
   @override
   void paint(Canvas canvas, Size size) {
     final w = size.width;
     final h = size.height;
+    final taper = w * taperFraction;
     final path = Path()
-      ..moveTo(skew, 0)
+      ..moveTo(0, 0)
       ..lineTo(w, 0)
-      ..lineTo(w - skew, h)
-      ..lineTo(0, h)
+      ..lineTo(w - taper, h)
+      ..lineTo(taper, h)
       ..close();
     canvas.drawPath(path, Paint()..color = fill);
     canvas.drawPath(
@@ -181,6 +200,8 @@ class _ParallelogramPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(_ParallelogramPainter old) =>
-      old.fill != fill || old.stroke != stroke || old.skew != skew;
+  bool shouldRepaint(_TrapezoidPainter old) =>
+      old.fill != fill ||
+      old.stroke != stroke ||
+      old.taperFraction != taperFraction;
 }

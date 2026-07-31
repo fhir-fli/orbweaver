@@ -50,6 +50,13 @@ class TopicTheme {
   Color get popAdult => _c('pop_adult');
   Color get popPeds => _c('pop_peds');
 
+  // Population / credentialing content bands (peds pink, Critical Care
+  // lavender) — see `BandCalloutBlock`.
+  Color get pedsBandFill => _c('peds_band_fill');
+  Color get pedsBandRule => _c('peds_band_rule');
+  Color get ccBandFill => _c('cc_band_fill');
+  Color get ccBandRule => _c('cc_band_rule');
+
   // Warnings.
   Color get warningSafety => _c('warning_safety');
   Color get warningCaution => _c('warning_caution');

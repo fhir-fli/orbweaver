@@ -129,9 +129,9 @@ topic:
           - Non-cardiac causes still benefit from aggressive **O2 & NIPPV**.
         - Consider **Fentanyl** for chest **pain or headache** (or air hunger).
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
         - Typical CHF is unlikely. Consider structural disease or **arrhythmia**.

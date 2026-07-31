@@ -75,23 +75,49 @@ void main() {
     test('prose blocks follow the flowchart', () {
       final prose = topic.blocks.whereType<ProseBlock>().toList();
       final titles = prose.map((p) => p.title).toList();
+      // 'Pediatrics' is deliberately absent: it is a BandCalloutBlock now, not
+      // a ProseBlock — see the peds-band test below.
       expect(titles, [
         'Poor Perfusion',
         'Shock Imperatives',
         'Medication',
         'Notes',
-        'Pediatrics',
         'References',
       ]);
     });
 
-    test('highlight flag set for callout and pediatrics', () {
+    test('highlight flag set for the callout, not for pediatrics', () {
       final byTitle = {
         for (final p in topic.blocks.whereType<ProseBlock>()) p.title: p,
       };
       expect(byTitle['Poor Perfusion']!.highlight, isTrue);
-      expect(byTitle['Pediatrics']!.highlight, isTrue);
       expect(byTitle['Medication']!.highlight, isFalse);
+      // Pediatrics must NOT be a highlighted prose block any more: `highlight`
+      // tints with the CHAPTER ACCENT, which rendered the peds section salmon
+      // on Trauma and green on Medical. The print uses pink on every one.
+      expect(byTitle.containsKey('Pediatrics'), isFalse);
+    });
+
+    test('pediatrics is a pink peds band, not a chapter-accent highlight', () {
+      final peds = topic.blocks
+          .whereType<BandCalloutBlock>()
+          .where((b) => b.band == CalloutBand.peds)
+          .toList();
+      expect(peds, hasLength(1));
+      expect(peds.single.title, 'Pediatrics');
+      expect(peds.single.markdown, isNotEmpty);
+    });
+
+    test('the credentialed-for-CC line is a bare lavender band', () {
+      final cc = topic.blocks
+          .whereType<BandCalloutBlock>()
+          .where((b) => b.band == CalloutBand.criticalCare)
+          .toList();
+      expect(cc, hasLength(1));
+      // A bare band: the print tints this line inside another section, so it
+      // carries no heading of its own.
+      expect(cc.single.title, '');
+      expect(cc.single.markdown, contains('credentialed'));
     });
 
     test('prose markdown content preserved', () {

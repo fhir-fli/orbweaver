@@ -113,9 +113,9 @@ topic:
         - Therapeutic hypothermia is **not included** in this protocol.
           - Also known as "targeted temperature management".
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Arrhythmias are common after ROSC, but are usually self-limited.
         - Use **Peds Reference** or other approved source for peds dosing.

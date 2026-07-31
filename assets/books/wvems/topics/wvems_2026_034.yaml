@@ -121,11 +121,16 @@ topic:
         - Many common causes do not require specific EMS intervention.
           - E.g. gastroenteritis, gallbladder, appendix, colitis, SBO, etc.
           - Do consider treatment of the symptoms: [Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), **Nausea**
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
         - Consider [Sepsis](topic:wvems-2026-094) if indicated and credentialed for Critical Care.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Simple constipation is a common cause in peds.
           - It does not require aggressive EMS intervention.

@@ -97,11 +97,23 @@ topic:
   - page_number: 95
     blocks:
 
-    - type: "prose"
-      title: "Sepsis Mandatory Prerequisites"
-      highlight: true
-      markdown: |
-        - In the last 12 months: pass a critical-care in-service training.
+    # Print p.95 sets the SEPSIS Alert to the RIGHT of the Prerequisites, above
+    # the Organ Dysfunction / Suspect Infection band. Both halves are short
+    # (one bullet, and a 3-line alert triad).
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "Sepsis Mandatory Prerequisites"
+          highlight: true
+          markdown: |
+            - In the last 12 months: pass a critical-care in-service training.
+        - type: "prose"
+          title: "SEPSIS Alert"
+          callout: true
+          markdown: |
+            - **Organ Dysfunction**
+            - **Suspected Infection**
+            - Call a **SEPSIS** Alert
 
     - type: "row"
       blocks:
@@ -127,14 +139,6 @@ topic:
             - Surgery / major procedure
 
     - type: "prose"
-      title: "SEPSIS Alert"
-      callout: true
-      markdown: |
-        - **Organ Dysfunction**
-        - **Suspected Infection**
-        - Call a **SEPSIS** Alert
-
-    - type: "prose"
       title: "Imperatives"
       markdown: |
         - Sepsis is life-threatening organ dysfunction caused by infection.
@@ -154,9 +158,9 @@ topic:
           - Reconstitute with **NS** for IV/IO, and **Lidocaine** for IM.
           - **Do not** use with **Calcium** — potentially fatal.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - It is appropriate to **defer antibiotics** (minimal evidence for peds).
 

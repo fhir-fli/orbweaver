@@ -132,9 +132,9 @@ topic:
           - Attempt replantation only in uncomplicated & isolated injury.
         - **Concussion**: Usually does not require EMS intervention.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Do not attempt replantation for primary (baby) teeth.
         - Use **Peds Reference** or other approved source for peds dosing.

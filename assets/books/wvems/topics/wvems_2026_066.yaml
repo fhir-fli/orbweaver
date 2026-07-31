@@ -140,9 +140,9 @@ topic:
         - High **pressure injections** may cause subtle but devastating injury.
         - A **traction splint** may help pain & bleeding from isolated **femur fx**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Consider **Child Abuse** for injuries that do not match the history.
 

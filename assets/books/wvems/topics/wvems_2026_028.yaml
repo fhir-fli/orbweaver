@@ -132,9 +132,9 @@ topic:
         - Transmit STEMI ECG to the receiving facility before arrival if possible.
         - Atypical presentations are common in **diabetics**, **women**, and the **elderly**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Cardiac chest pain is uncommon in peds — investigate other causes
           (musculoskeletal, anxiety, GERD, costochondritis).

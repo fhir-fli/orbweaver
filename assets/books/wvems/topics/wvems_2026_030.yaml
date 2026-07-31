@@ -142,9 +142,9 @@ topic:
           - Hold for SBP < 100 mmHg.
           - Do **not** give within 24 h of PDE5 inhibitors.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Stridor and barking cough → **croup** — give **Epi Neb** + Decadron.
         - Wheezing → **asthma/RAD** — Albuterol + Atrovent.

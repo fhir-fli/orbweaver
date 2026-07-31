@@ -147,9 +147,9 @@ topic:
         - Consider aeromedical **Destination Triage** if major burn > 20% BSA.
           - There are no ABA-verified burn centers near the WVEMS region.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
 

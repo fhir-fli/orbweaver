@@ -165,11 +165,16 @@ topic:
       markdown: |
         Use **balanced** resuscitation in Trauma. Pressors are a last resort.
         Mean Arterial Pressure (**MAP**) is a better indicator when available.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
         - Consider Pressors or Blood if indicated and credentialed for CC.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         The majority of peds decompensation is airway related.
         Fluids are important for hypotension. Pressors are a last resort.

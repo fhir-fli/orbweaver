@@ -140,11 +140,16 @@ topic:
         - **Anticoagulation** meds (**blood thinners**) increase bleeding risk.
         - Consider removing bystander dressings to investigate severity.
         - **Bandage wounds** after bleeding is controlled.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
         - Consider [Blood](topic:wvems-2026-084) if indicated and credentialed for Critical Care.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Hypotension is a late sign of hemorrhagic **Shock** in peds.
         - Use **Peds Reference** or other approved source for peds dosing.

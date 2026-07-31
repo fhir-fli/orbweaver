@@ -149,9 +149,9 @@ topic:
           consider **Glucagon** if available.
         - **Biphasic** reactions can recur 4–12 h after the initial response.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **EpiPen Jr.®** for 3–8 y/o; **EpiPen®** for 9+ y/o.
         - Use **Peds Reference** for all other weight-based dosing.

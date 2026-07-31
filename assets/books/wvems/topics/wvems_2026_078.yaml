@@ -162,9 +162,9 @@ topic:
         - **Rocuronium** (Zemuron®): Onset - 1 min; Duration - 30 min
           - Consider a detailed **neuro exam** before paralysis
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Induction & paralytics w/ a BIAD (**RSA**) is superior to ETI for peds.
 

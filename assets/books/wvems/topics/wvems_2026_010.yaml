@@ -98,9 +98,9 @@ topic:
           stimulation — significantly worsens HTN and may cause cardiac ischemia.
         - Hypertensive emergencies require careful titrated therapy in the ED.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Hypertension is unusual in peds — investigate the underlying cause.
         - Use **Peds Reference** or other approved source for peds dosing.

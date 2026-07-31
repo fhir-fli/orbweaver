@@ -127,9 +127,9 @@ topic:
           - Major fracture / bleed, crushed / mangled or amputated **extremity**.
           - High-risk MVC: > 60 mph, ejection, roll over, death, struck by car.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Any child that cannot provide a reliable history should have **SMR**.
 

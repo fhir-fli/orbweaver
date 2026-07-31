@@ -394,7 +394,7 @@ class ConvergenceNode {
 
   /// Side callouts that flank the convergence stadium, matching the
   /// WVEMS PDF convention: `safety` is a red octagon on the left (e.g.
-  /// "Ensure Patient DECON"); `caution` is a purple parallelogram on
+  /// "Ensure Patient DECON"); `caution` is a purple trapezoid on
   /// the right (e.g. "Consider Destination Triage").  Same callout
   /// widgets the entry stadium uses for its own side warnings.  Only
   /// the first of each type is rendered.
@@ -518,7 +518,7 @@ class SeverityFlowchart {
   /// Side-of-flowchart warning callouts that flank the first entry node
   /// (matching the WVEMS protocol PDF convention). One [safety] is
   /// rendered as a red octagon on the left of the entry stadium; one
-  /// [caution] is rendered as a purple parallelogram on the right.
+  /// [caution] is rendered as a purple trapezoid on the right.
   /// More than one of each is allowed but only the first of each type
   /// is rendered.
   final List<WarningCallout> warnings;
@@ -543,8 +543,10 @@ enum WarningType {
   /// before any patient assessment — e.g. scene safety, BSI.
   safety,
 
-  /// Purple parallelogram. For caveats that change how a clinician
-  /// engages the patient — e.g. respect refusal, capacity assessment.
+  /// Purple trapezoid (wide edge on top). For caveats that change how a
+  /// clinician engages the patient — e.g. respect refusal, capacity
+  /// assessment — and Critical Care cross-references (PDF p.70's
+  /// "Consider Destination Triage").
   caution;
 
   static WarningType fromString(String? s) => switch (s) {
@@ -1112,6 +1114,7 @@ sealed class Block {
     final type = map['type'] as String?;
     return switch (type) {
       'prose' => ProseBlock.fromYaml(map),
+      'band_callout' => BandCalloutBlock.fromYaml(map),
       'flowchart' => FlowchartBlock.fromYaml(map),
       'table' => TableBlock.fromYaml(map),
       'drug_card' => DrugCardBlock.fromYaml(map),
@@ -1251,6 +1254,7 @@ class ProseBlock extends Block {
     this.title,
     this.highlight = false,
     this.callout = false,
+    this.dashed = false,
     this.boxed = false,
     super.flex,
     super.anchor,
@@ -1262,6 +1266,7 @@ class ProseBlock extends Block {
         markdown: map['markdown'] as String,
         highlight: (map['highlight'] as bool?) ?? false,
         callout: (map['callout'] as bool?) ?? false,
+        dashed: (map['dashed'] as bool?) ?? false,
         boxed: (map['boxed'] as bool?) ?? false,
         flex: _flex(map),
         anchor: map['anchor'] as String?,
@@ -1273,10 +1278,97 @@ class ProseBlock extends Block {
   final bool highlight;
   final bool callout;
 
+  /// Draws a [callout] box's outline dashed instead of solid. The print
+  /// uses this to separate a **conditional** box from a firm one — PDF
+  /// p.71 dashes "If Major Intervention / Or Major Mechanism / Call a
+  /// TRAUMA Alert" while the "ABLS rate:" box beside it stays solid, and
+  /// p.43 dashes the conditional peds Versed sub-box. Ignored unless
+  /// [callout] is set.
+  final bool dashed;
+
   /// When true, the prose body is wrapped in a rounded-border tile
   /// (matching boxed-layout table cells) with centered text.  Used
   /// when the block is a grid cell inside a RowBlock flow layout.
   final bool boxed;
+}
+
+// ─────────────────────────────────────────────────────────────
+// BAND CALLOUT BLOCK
+// ─────────────────────────────────────────────────────────────
+
+/// Which population / credential a [BandCalloutBlock] applies to. The
+/// printed protocols use exactly two of these tints.
+enum CalloutBand {
+  /// Paediatric-only content — pink band, pink left bracket. The printed
+  /// "Pediatrics" section that closes almost every protocol text page.
+  peds,
+
+  /// Critical Care content — lavender band, purple left bracket. The
+  /// printed "Consider … if indicated and credentialed for CC." lines,
+  /// and whole sections on the Critical Care pages.
+  criticalCare;
+
+  static CalloutBand fromString(String? s) => switch (s) {
+        'peds' => peds,
+        'pediatrics' => peds,
+        'critical_care' => criticalCare,
+        'cc' => criticalCare,
+        _ => peds,
+      };
+
+  /// Section label the print uses when the band stands on its own, used
+  /// when the author gives no `title:`.
+  String get defaultTitle => switch (this) {
+        peds => 'Pediatrics',
+        criticalCare => 'Critical Care',
+      };
+}
+
+/// A banded callout: a run of markdown the printed protocols tint to flag
+/// **who** it applies to. Distinct from [ProseBlock]'s `callout: true`,
+/// which is the amber attention card — this block carries the WVEMS
+/// population/credentialing convention instead:
+///
+///   - [CalloutBand.peds] — pink fill + pink left bracket. In the source
+///     PDF a pink band appears on 78 of the 166 pages, and the pink
+///     "Pediatrics" section bracket on 50 (pp.3-95 odd, 110, 144, 147);
+///     it is the single most frequent callout in the book.
+///   - [CalloutBand.criticalCare] — lavender fill + purple left bracket.
+///     Lavender appears on 54 pages (e.g. p.11's three "Consider …
+///     credentialed for CC." lines, p.5's "Consider Intubation …").
+///
+/// Body text renders through MiniMarkdown like any other prose, so
+/// `**bold**` and `[links](topic:…)` behave the same. Colors come from the
+/// `peds_band_*` / `cc_band_*` palette roles, so a book, chapter, topic or
+/// this very block may re-skin them.
+class BandCalloutBlock extends Block {
+  const BandCalloutBlock({
+    required this.band,
+    required this.markdown,
+    this.title,
+    super.flex,
+    super.anchor,
+    super.ownPaletteArgb,
+  });
+
+  factory BandCalloutBlock.fromYaml(Map<dynamic, dynamic> map) =>
+      BandCalloutBlock(
+        band: CalloutBand.fromString(map['band'] as String?),
+        markdown: map['markdown'] as String,
+        title: map['title'] as String?,
+        flex: _flex(map),
+        anchor: map['anchor'] as String?,
+        ownPaletteArgb: _parsePaletteArgb(map['palette']),
+      );
+
+  final CalloutBand band;
+  final String markdown;
+
+  /// Section label shown inside the band. Null falls back to
+  /// [CalloutBand.defaultTitle]; pass an empty string for a bare band
+  /// (the print's line-level use, where the tinted line sits inside some
+  /// other section and carries no heading of its own).
+  final String? title;
 }
 
 /// A flowchart in one of the supported variants.

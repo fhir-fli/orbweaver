@@ -126,9 +126,9 @@ topic:
           - There are important decisions to be made quickly at the ED.
           - Record phone number for family or guardian if possible.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Stroke is unlikely in peds. Consider other causes of **Altered LOC**.
 

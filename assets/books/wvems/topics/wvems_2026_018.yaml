@@ -151,9 +151,9 @@ topic:
           - Avoid NIBP or IVs in the same extremity as dialysis access.
           - Consider transport to a hospital with **dialysis capability**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
 

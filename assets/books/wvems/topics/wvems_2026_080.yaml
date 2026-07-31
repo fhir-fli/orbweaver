@@ -158,9 +158,9 @@ topic:
           - For elderly or debilitated: start lower (100 mcg/kg/min).
           - For peds: start higher (200 mcg/kg/min).
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **Peds Reference** or other approved source for peds dosing.
 

@@ -133,11 +133,16 @@ topic:
         - Secure **BIAD** well. Use tape or manufactured holding device.
           - May place c-collar (even without trauma) to help stabilize BIAD.
           - **A** Consider placing an **OG-Tube** if BIAD will accommodate it.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
         - Consider **Intubation** if indicated and credentialed for Critical Care.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Be suspicious for an airway obstruction, especially with **stridor**.
         - Use **Chest Thrusts** (instead of Abd. Thrusts) for infants (< 1 y/o).

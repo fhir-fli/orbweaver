@@ -121,9 +121,9 @@ topic:
             - Internally rotate the feet.
             - Secure feet & legs together.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Trunk injury is more likely in peds struck by a car.
 

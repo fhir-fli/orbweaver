@@ -134,9 +134,9 @@ topic:
         - Patients on insulin pumps: leave the pump alone unless directed otherwise.
         - **DKA** patients may have fruity breath (acetone) and Kussmaul respirations.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - **Hypoglycemia** in peds is dangerous and underrecognized.
           - Always check glucose in any peds with altered LOC or seizure.

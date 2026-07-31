@@ -161,9 +161,9 @@ topic:
           - Do **not** use Toradol with Ibuprofen (choose one or the other).
         - Max daily dose: **Tylenol 3,000 mg** · **Ibuprofen 2,400 mg**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         Use **Peds Reference** or other approved source for peds dosing.
 

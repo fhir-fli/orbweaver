@@ -152,9 +152,9 @@ topic:
           - Delay rewarming **frostbite** if there is potential for re-freezing.
         - (E) **Ibuprofen** (Motrin®): Give 600 mg PO x1 for **frostbite**.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Small children (and the elderly/frail) will decompensate faster.
         - Use **Peds Reference** or other approved source for peds dosing.

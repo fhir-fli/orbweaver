@@ -438,7 +438,7 @@ class _FanArrowsPainter extends CustomPainter {
 }
 
 /// Top row of a flowchart that has warning callouts: a safety octagon
-/// on the left, the entry stadium centred, and a caution parallelogram
+/// on the left, the entry stadium centred, and a caution trapezoid
 /// on the right. Either flank may be null — the slot stays empty so
 /// the entry stays centred relative to the row.
 class _EntryWithWarnings extends StatelessWidget {
@@ -514,7 +514,7 @@ class _EntryWithWarnings extends StatelessWidget {
 
 /// Mirror of [_EntryWithWarnings] for the convergence stadium: the
 /// `_ConvergenceBox` is centered between an optional safety octagon on
-/// the left and an optional caution parallelogram on the right.
+/// the left and an optional caution trapezoid on the right.
 ///
 /// Used by both the linear and severity renderers whenever a
 /// [ConvergenceNode] carries `warnings`.  When the severity convergence

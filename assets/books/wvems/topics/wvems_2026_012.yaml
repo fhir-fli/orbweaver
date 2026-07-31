@@ -123,9 +123,9 @@ topic:
           - Sedate as tolerated for awake patients.
         - **Epi** (Peds): infusion or repeat boluses for refractory bradycardia.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Bradycardia in peds is most often **hypoxia** — assist ventilations first.
         - Use **PALS** rate thresholds and weight-based dosing.

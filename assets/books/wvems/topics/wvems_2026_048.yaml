@@ -154,9 +154,9 @@ topic:
           - Crowning and urge to push suggest delivery is imminent.
         - Attempt to have a **chaperone** present for any genital evaluation.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Refer to [Neonate](topic:wvems-2026-050) for management of the newborn baby.
 

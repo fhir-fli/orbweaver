@@ -139,9 +139,9 @@ topic:
           - Severe headache and vomiting, mental status changes.
           - Vision **loss** or blurred (not simple flashes or double vision).
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Malignant HTN is unlikely in peds. Treat **underlying causes** of HTN.
 

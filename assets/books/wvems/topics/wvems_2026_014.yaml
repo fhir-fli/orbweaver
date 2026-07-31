@@ -161,9 +161,9 @@ topic:
           - Sedate first if time and patient stability allow.
         - Reassess rate and rhythm after every intervention.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Use **PALS** rate thresholds and weight-based dosing.
         - Vagal manoeuvres (ice to face) may convert SVT in stable peds.

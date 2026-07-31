@@ -44,6 +44,19 @@ const Map<String, Color> kRoleDefaults = {
   'pop_adult': Color(0xFFD9D9D9),
   'pop_peds': Color(0xFFF8C9DA),
 
+  // Population / credentialing content bands. The printed protocols tint a
+  // whole run of prose to flag *who* it applies to: pink for paediatric
+  // content (WVEMS PDF pp.11, 13, 79 — a pink band appears on 78 of the 166
+  // pages) and lavender for Critical Care, i.e. credentialed providers only
+  // (pp.5, 9, 11 — 54 pages). `*_rule` is the bracket the print draws down
+  // the band's left edge; the peds bracket was sampled from the PDF at
+  // 0xFFDA5798, the CC rule matches `cc_link_border` so every Critical Care
+  // cue in the app reads as one colour.
+  'peds_band_fill': Color(0xFFFBD5DE),
+  'peds_band_rule': Color(0xFFDA5798),
+  'cc_band_fill': Color(0xFFE3DCF2),
+  'cc_band_rule': Color(0xFF6A1B9A),
+
   // Warning callouts.
   'warning_safety': Color(0xFFD32F2F),
   'warning_caution': Color(0xFF7E57C2),

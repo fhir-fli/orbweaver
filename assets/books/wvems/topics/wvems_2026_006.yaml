@@ -129,11 +129,16 @@ topic:
           - Target SpO2 of **88–92%** for adults with isolated COPD.
         - If SpO2 unavailable or machine fails: use good clinical judgment.
         - **Drowning** (or SCUBA) may cause hypoxia — treatment is the same.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
         - Consider **Ventilator** if indicated and credentialed for Critical Care.
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Refer to [Neonate](topic:wvems-2026-050) for any peds under 1 month (≤ 30 days) old.
           - Consider a **T-piece resuscitator** (instead of BVM) for Neonates.

@@ -128,6 +128,11 @@ topic:
           - [Bleeding](topic:wvems-2026-058)
           - [Head Injury](topic:wvems-2026-062)
 
+    # NOT converted to a `row`, deliberately. Print p.77 does set the Anticoag
+    # Meds box beside these bullets, but measured at 393x852 the row costs
+    # +126 px and drops the page's fit scale from 0.74 to 0.70: nine drug names
+    # up to 22 chars wrap once the box is confined to a slot. See
+    # tool/wvems_sidebyside_audit.md.
     - type: "prose"
       title: "Anticoag Meds"
       callout: true
@@ -142,9 +147,9 @@ topic:
         - Brilinta® (Ticagrelor)
         - Lovenox® (Enoxaparin)
 
-    - type: "prose"
+    - type: "band_callout"
+      band: "peds"
       title: "Pediatrics"
-      highlight: true
       markdown: |
         - Nose bleeds are usually from minor trauma (nose picking).
         - Use **Peds Reference** or other approved source for peds dosing.
