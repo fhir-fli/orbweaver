@@ -37,8 +37,5 @@ doc/api/
 test/manual/out/
 test/manual/reference/
 
-# Diagnostic probe output
-# test/widgets/fit_overload_probe_test.dart  -> fit_overload.tsv
-# test/widgets/fit_real_font_probe_test.dart -> fit_real_font.tsv
-fit_overload.tsv
-fit_real_font.tsv
+# Diagnostic output from test/widgets/page_fits_screen_test.dart
+page_fits.tsv
