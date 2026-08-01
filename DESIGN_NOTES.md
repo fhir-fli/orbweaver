@@ -148,3 +148,12 @@ to split the variant. If they don't, the current schema was fine.
 - Whether Pocket Medicine should contribute to the extracted vocabulary.
   Probably yes with a frequency filter (entities appearing in ≥2
   protocols); no to including rare subspecialty content wholesale.
+
+
+## Design questions
+
+- Initial screen more condensed
+- All links need to be obvious and work
+- No search after protocol selected
+- Sticky pages per protocol, side swipe to go between protocols
+- 
