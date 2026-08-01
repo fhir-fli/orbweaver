@@ -415,7 +415,7 @@ topic:
         - "May cause: HA, N/V"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocol: [Circulation / Shock](topic:wvems-2026-008)"
+        - "Protocol: [Circulation / Shock](topic:wvems-2025-008)"
         - "Catecholamine · Onset: 5 minutes · Duration: 10 minutes"
         - "https://reference.medscape.com/drug/342435"
 
@@ -488,7 +488,7 @@ topic:
         - "May cause: HTN, flushing"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocols: [Circulation / Shock](topic:wvems-2026-008), [Vasopressors](topic:wvems-2026-082)"
+        - "Protocols: [Circulation / Shock](topic:wvems-2025-008), [Vasopressors](topic:wvems-2026-082)"
         - "See also **Epi** (above) for Brady, CODE, Dyspnea, Allergy"
         - "Adrenergic α, β agonist · Onset: 1 min"
         - "https://reference.medscape.com/drug/342437"
@@ -921,7 +921,7 @@ topic:
         - "May cause: **dyspnea** & rales"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocols: [Shock](topic:wvems-2026-008), [Tachy](topic:wvems-2026-014), [Fever](topic:wvems-2026-016), [HyperK+](topic:wvems-2026-018), [Diabetic](topic:wvems-2026-038), [OD/Tox](topic:wvems-2026-040), Preg, [Major Trauma](topic:wvems-2026-056) / CODE, Cold/Heat, [Burn](topic:wvems-2026-070)"
+        - "Protocols: [Shock](topic:wvems-2025-008), [Tachy](topic:wvems-2026-014), [Fever](topic:wvems-2026-016), [HyperK+](topic:wvems-2026-018), [Diabetic](topic:wvems-2026-038), [OD/Tox](topic:wvems-2026-040), Preg, [Major Trauma](topic:wvems-2026-056) / CODE, Cold/Heat, [Burn](topic:wvems-2026-070)"
         - "Isotonic crystalloid · Onset: seconds · Duration: varies"
         - "https://www.rxlist.com/normal-saline-drug.htm"
 
