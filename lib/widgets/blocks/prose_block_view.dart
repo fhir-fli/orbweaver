@@ -211,7 +211,10 @@ class _DashedBoxPainter extends BoxPainter {
     );
     final path = Path()
       ..addRRect(
-        RRect.fromRectAndRadius(rect, const Radius.circular(_DashedRoundedBorder.radius)),
+        RRect.fromRectAndRadius(
+          rect,
+          const Radius.circular(_DashedRoundedBorder.radius),
+        ),
       );
     final paint = Paint()
       ..color = spec.color

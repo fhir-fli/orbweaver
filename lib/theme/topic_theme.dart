@@ -11,10 +11,11 @@ class TopicTheme {
   /// Build a theme directly from a single accent color (the rest of the
   /// roles fall back to defaults, accent-derived where applicable). Used
   /// for standalone rendering when no cascade is available.
-  factory TopicTheme.fromAccent(Color accent) =>
-      TopicTheme(resolvePalette([
-        {'accent': accent},
-      ]));
+  factory TopicTheme.fromAccent(Color accent) => TopicTheme(
+    resolvePalette([
+      {'accent': accent},
+    ]),
+  );
 
   /// The resolved role → color map.
   final Map<String, Color> palette;
@@ -131,8 +132,7 @@ class TopicThemeScope extends InheritedWidget {
   final TopicTheme theme;
 
   static TopicTheme of(BuildContext context) {
-    final scope =
-        context.dependOnInheritedWidgetOfExactType<TopicThemeScope>();
+    final scope = context.dependOnInheritedWidgetOfExactType<TopicThemeScope>();
     return scope?.theme ?? TopicTheme.fromAccent(kNeutralAccent);
   }
 

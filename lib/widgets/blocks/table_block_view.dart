@@ -79,7 +79,8 @@ class TableBlockView extends StatelessWidget {
 
     for (var i = 0; i < block.rows.length; i++) {
       final row = block.rows[i];
-      final isFirstInGroup = _hasGroups &&
+      final isFirstInGroup =
+          _hasGroups &&
           row.group != null &&
           (i == 0 || block.rows[i - 1].group != row.group);
       children.add(
@@ -170,8 +171,7 @@ class TableBlockView extends StatelessWidget {
       ),
       child: Row(
         children: [
-          if (_hasGroups)
-            const SizedBox(width: 64, child: SizedBox.shrink()),
+          if (_hasGroups) const SizedBox(width: 64, child: SizedBox.shrink()),
           if (_hasRowHeaders)
             const SizedBox(width: 78, child: SizedBox.shrink()),
           // Column tint (column_tint) is a body-cell data cue only — the
@@ -214,50 +214,50 @@ class TableBlockView extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-        if (_hasGroups)
-          SizedBox(
-            width: 64,
-            child: isFirstInGroup
-                ? Text(
-                    row.group ?? '',
-                    style: TextStyle(
-                      fontSize: _fontSize,
-                      fontWeight: FontWeight.w800,
-                      color: theme.header,
-                    ),
-                  )
-                : const SizedBox.shrink(),
-          ),
-        if (_hasRowHeaders)
-          SizedBox(
-            width: 78,
-            child: Text(
-              row.header ?? '',
-              style: const TextStyle(
-                fontSize: _fontSize,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-          ),
-        for (var ci = 0; ci < row.cells.length; ci++)
-          Expanded(
-            flex: _colFlex(ci, row.cells[ci].span),
-            child: Container(
-              color: style.tintFor(ci),
-              padding: EdgeInsets.only(
-                left: ci == 0 ? 0 : 6,
-                right: ci == row.cells.length - 1 ? 0 : 6,
-              ),
-              foregroundDecoration: ci == row.cells.length - 1
-                  ? null
-                  : BoxDecoration(
-                      border: Border(
-                        right: BorderSide(color: dividerColor, width: 1),
+          if (_hasGroups)
+            SizedBox(
+              width: 64,
+              child: isFirstInGroup
+                  ? Text(
+                      row.group ?? '',
+                      style: TextStyle(
+                        fontSize: _fontSize,
+                        fontWeight: FontWeight.w800,
+                        color: theme.header,
                       ),
-                    ),
-              child: style.styledCell(ci, row.cells[ci], _cellView),
+                    )
+                  : const SizedBox.shrink(),
             ),
-          ),
+          if (_hasRowHeaders)
+            SizedBox(
+              width: 78,
+              child: Text(
+                row.header ?? '',
+                style: const TextStyle(
+                  fontSize: _fontSize,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          for (var ci = 0; ci < row.cells.length; ci++)
+            Expanded(
+              flex: _colFlex(ci, row.cells[ci].span),
+              child: Container(
+                color: style.tintFor(ci),
+                padding: EdgeInsets.only(
+                  left: ci == 0 ? 0 : 6,
+                  right: ci == row.cells.length - 1 ? 0 : 6,
+                ),
+                foregroundDecoration: ci == row.cells.length - 1
+                    ? null
+                    : BoxDecoration(
+                        border: Border(
+                          right: BorderSide(color: dividerColor, width: 1),
+                        ),
+                      ),
+                child: style.styledCell(ci, row.cells[ci], _cellView),
+              ),
+            ),
         ],
       ),
     );
@@ -265,9 +265,7 @@ class TableBlockView extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: rowBg,
-        border: isLast
-            ? null
-            : Border(bottom: BorderSide(color: borderColor)),
+        border: isLast ? null : Border(bottom: BorderSide(color: borderColor)),
       ),
       padding: const EdgeInsets.symmetric(
         vertical: _rowVPad,
@@ -298,29 +296,29 @@ class TableBlockView extends StatelessWidget {
       // Single-line text cells go through MiniMarkdown so inline `**bold**`
       // renders (otherwise `**H**ypoglycaemia` shows literal asterisks).
       TextCell(:final text) => MiniMarkdown(
-          markdown: text,
-          fontSize: _fontSize,
-        ),
+        markdown: text,
+        fontSize: _fontSize,
+      ),
       BulletCell(:final items) => Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            for (final item in items)
-              MiniMarkdown(markdown: '- $item', fontSize: _fontSize),
-          ],
-        ),
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (final item in items)
+            MiniMarkdown(markdown: '- $item', fontSize: _fontSize),
+        ],
+      ),
       MarkdownCell(:final markdown) => MiniMarkdown(
-          markdown: markdown,
-          fontSize: _fontSize,
-        ),
+        markdown: markdown,
+        fontSize: _fontSize,
+      ),
     };
   }
 
   Color? _severityBg(RowSeverity s) => switch (s) {
-        RowSeverity.none => null,
-        RowSeverity.emergency => theme.severitySevereTile,
-        RowSeverity.priority => theme.severityModerateTile,
-        RowSeverity.nonUrgent => theme.severityMildTile,
-      };
+    RowSeverity.none => null,
+    RowSeverity.emergency => theme.severitySevereTile,
+    RowSeverity.priority => theme.severityModerateTile,
+    RowSeverity.nonUrgent => theme.severityMildTile,
+  };
 }
 
 /// Shared cell-styling helpers used by both the standard and scroll table
@@ -354,16 +352,16 @@ class _TableStyle {
       c < block.columnAlign.length ? block.columnAlign[c] : CellAlign.left;
 
   Alignment alignment(int c) => switch (_alignFor(c)) {
-        CellAlign.right => Alignment.centerRight,
-        CellAlign.center => Alignment.center,
-        CellAlign.left => Alignment.centerLeft,
-      };
+    CellAlign.right => Alignment.centerRight,
+    CellAlign.center => Alignment.center,
+    CellAlign.left => Alignment.centerLeft,
+  };
 
   TextAlign textAlign(int c) => switch (_alignFor(c)) {
-        CellAlign.right => TextAlign.right,
-        CellAlign.center => TextAlign.center,
-        CellAlign.left => TextAlign.left,
-      };
+    CellAlign.right => TextAlign.right,
+    CellAlign.center => TextAlign.center,
+    CellAlign.left => TextAlign.left,
+  };
 
   Color? tintFor(int c) {
     if (c >= block.columnTintArgb.length) return null;
@@ -527,8 +525,10 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
     setState(() => _highlightRow = match);
     if (match != null && _bodyV.hasClients) {
       // Land the row a little below the top so a row of context shows above.
-      final target = ((match - 1) * _rowH)
-          .clamp(0.0, _bodyV.position.maxScrollExtent);
+      final target = ((match - 1) * _rowH).clamp(
+        0.0,
+        _bodyV.position.maxScrollExtent,
+      );
       _bodyV.animateTo(
         target,
         duration: const Duration(milliseconds: 250),
@@ -537,8 +537,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
     }
   }
 
-  static String _cellText(TableCell cell) =>
-      cell is TextCell ? cell.text : '';
+  static String _cellText(TableCell cell) => cell is TextCell ? cell.text : '';
 
   @override
   void dispose() {
@@ -655,10 +654,10 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
   }
 
   Widget _padCell(Widget child, {Color? tint}) => Container(
-        color: tint,
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-        child: child,
-      );
+    color: tint,
+    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+    child: child,
+  );
 
   // ── Frozen-pane mode ───────────────────────────────────────────
   Widget _frozenPane(BuildContext context, _TableStyle style) {
@@ -672,8 +671,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
       for (var i = bodyStart; i < ncol; i++) _width(i),
     ].fold<double>(0, (a, b) => a + b);
 
-    final maxH = block.maxHeight ??
-        (MediaQuery.sizeOf(context).height * 0.58);
+    final maxH = block.maxHeight ?? (MediaQuery.sizeOf(context).height * 0.58);
 
     final freezeBorder = BorderSide(color: borderColor);
     // Right edge of the frozen first column, to set it off from the body.
@@ -681,24 +679,24 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
         (freezeFirst && i == 0) ? Border(right: freezeBorder) : null;
 
     Widget headerCell(int i) => Container(
-          width: _width(i),
-          height: _headerH2,
-          alignment: _alignmentFor(style, i),
-          padding: const EdgeInsets.symmetric(horizontal: 6),
-          decoration: BoxDecoration(color: style.tintFor(i), border: freezeEdge(i)),
-          child: Text(
-            block.columns[i],
-            textAlign: style.textAlign(i),
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              fontSize: _fontSize,
-              fontWeight: FontWeight.w800,
-              color: Colors.white,
-              height: 1.1,
-            ),
-          ),
-        );
+      width: _width(i),
+      height: _headerH2,
+      alignment: _alignmentFor(style, i),
+      padding: const EdgeInsets.symmetric(horizontal: 6),
+      decoration: BoxDecoration(color: style.tintFor(i), border: freezeEdge(i)),
+      child: Text(
+        block.columns[i],
+        textAlign: style.textAlign(i),
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
+        style: const TextStyle(
+          fontSize: _fontSize,
+          fontWeight: FontWeight.w800,
+          color: Colors.white,
+          height: 1.1,
+        ),
+      ),
+    );
 
     Widget bodyCell(int r, int i) {
       final row = block.rows[r];
@@ -807,7 +805,8 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
     );
 
     if (!block.lookup) return panel;
-    final label = block.lookupLabel ??
+    final label =
+        block.lookupLabel ??
         'Go to ${block.columns.isEmpty ? "row" : block.columns.first}';
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -842,8 +841,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
                 },
               )
             : null,
-        contentPadding:
-            const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
@@ -856,23 +854,24 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
   Alignment _alignmentFor(_TableStyle style, int i) => style.alignment(i);
 
   Widget _cell(TableCell cell) => switch (cell) {
-        TextCell(:final text) =>
-          MiniMarkdown(markdown: text, fontSize: _fontSize),
-        BulletCell(:final items) => Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              for (final item in items)
-                MiniMarkdown(markdown: '- $item', fontSize: _fontSize),
-            ],
-          ),
-        MarkdownCell(:final markdown) =>
-          MiniMarkdown(markdown: markdown, fontSize: _fontSize),
-      };
+    TextCell(:final text) => MiniMarkdown(markdown: text, fontSize: _fontSize),
+    BulletCell(:final items) => Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        for (final item in items)
+          MiniMarkdown(markdown: '- $item', fontSize: _fontSize),
+      ],
+    ),
+    MarkdownCell(:final markdown) => MiniMarkdown(
+      markdown: markdown,
+      fontSize: _fontSize,
+    ),
+  };
 }
 
 Color? _severityBg(TopicTheme theme, RowSeverity s) => switch (s) {
-      RowSeverity.none => null,
-      RowSeverity.emergency => theme.severitySevereTile,
-      RowSeverity.priority => theme.severityModerateTile,
-      RowSeverity.nonUrgent => theme.severityMildTile,
-    };
+  RowSeverity.none => null,
+  RowSeverity.emergency => theme.severitySevereTile,
+  RowSeverity.priority => theme.severityModerateTile,
+  RowSeverity.nonUrgent => theme.severityMildTile,
+};

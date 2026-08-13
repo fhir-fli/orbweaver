@@ -54,92 +54,115 @@ List<double> fineLadder() {
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('MEASURE: finest fitting textScaler per paged prose page',
-      (tester) async {
-    tester.view.physicalSize = kPhone * 3.0;
-    tester.view.devicePixelRatio = 3.0;
-    addTearDown(tester.view.reset);
+  testWidgets(
+    'MEASURE: finest fitting textScaler per paged prose page',
+    (tester) async {
+      tester.view.physicalSize = kPhone * 3.0;
+      tester.view.devicePixelRatio = 3.0;
+      addTearDown(tester.view.reset);
 
-    final outPath =
-        Platform.environment['FIT_OUT'] ?? 'tool/wvems_fit_fine.tsv';
-    final fh = File(outPath).openSync(mode: FileMode.write);
-    fh.writeStringSync('topic\tpage_number\tfits_at\tnat_h_1.0\tavail_h\n');
-    fh.flushSync();
+      final outPath =
+          Platform.environment['FIT_OUT'] ?? 'tool/wvems_fit_fine.tsv';
+      final fh = File(outPath).openSync(mode: FileMode.write);
+      fh.writeStringSync('topic\tpage_number\tfits_at\tnat_h_1.0\tavail_h\n');
+      fh.flushSync();
 
-    final loaded = <({String id, Topic topic})>[];
-    await tester.runAsync(() async {
-      final books = await loadLibrary();
-      for (final book in books) {
-        if (book.id != 'wvems') continue;
-        for (final entry in book.allTopics) {
-          if (entry.drug != null || entry.asset.isEmpty) continue;
-          if (!kOfInterest.contains(entry.id)) continue;
-          loaded.add((id: entry.id, topic: await loadTopicAsset(entry.asset)));
-        }
-      }
-    });
-    stdout.writeln('measuring ${loaded.length} topics');
-    stdout.flush();
-
-    for (final rec in loaded) {
-      final topic = rec.topic;
-      if (topic.layout != TopicLayout.paged || topic.pages.length < 2) continue;
-      final theme = TopicTheme(resolvePalette([
-        {for (final e in topic.ownPaletteArgb.entries) e.key: Color(e.value)},
-      ]));
-
-      for (final page in topic.pages) {
-        if (page.blocks.any((b) => b is FlowchartBlock)) continue;
-
-        double? natural;
-        double avail = 0;
-        double fits = -1;
-
-        for (final scale in fineLadder()) {
-          final key = GlobalKey();
-          await tester.pumpWidget(MaterialApp(
-            home: Scaffold(
-              body: Builder(builder: (context) {
-                return MediaQuery(
-                  data: MediaQuery.of(context)
-                      .copyWith(textScaler: TextScaler.linear(scale)),
-                  child: LayoutBuilder(builder: (context, c) {
-                    avail = c.maxHeight;
-                    return SingleChildScrollView(
-                      physics: const NeverScrollableScrollPhysics(),
-                      child: KeyedSubtree(
-                        key: key,
-                        child: TopicPageBody(
-                            page: page, theme: theme, gapScale: scale),
-                      ),
-                    );
-                  }),
-                );
-              }),
-            ),
-          ));
-          await tester.pump();
-
-          final box = key.currentContext?.findRenderObject();
-          if (box is! RenderBox || !box.hasSize) break;
-          natural ??= box.size.height;
-          if (box.size.height <= avail - 2) {
-            fits = scale;
-            break;
+      final loaded = <({String id, Topic topic})>[];
+      await tester.runAsync(() async {
+        final books = await loadLibrary();
+        for (final book in books) {
+          if (book.id != 'wvems') continue;
+          for (final entry in book.allTopics) {
+            if (entry.drug != null || entry.asset.isEmpty) continue;
+            if (!kOfInterest.contains(entry.id)) continue;
+            loaded.add((
+              id: entry.id,
+              topic: await loadTopicAsset(entry.asset),
+            ));
           }
         }
+      });
+      stdout.writeln('measuring ${loaded.length} topics');
+      stdout.flush();
 
-        final line = '${rec.id}\t${page.pageNumber ?? ""}\t'
-            '${fits < 0 ? "NEVER" : fits.toStringAsFixed(2)}\t'
-            '${natural?.toStringAsFixed(0) ?? "?"}\t'
-            '${avail.toStringAsFixed(0)}\n';
-        fh.writeStringSync(line);
-        fh.flushSync();
-        stdout.writeln(line.trim());
-        stdout.flush();
+      for (final rec in loaded) {
+        final topic = rec.topic;
+        if (topic.layout != TopicLayout.paged || topic.pages.length < 2)
+          continue;
+        final theme = TopicTheme(
+          resolvePalette([
+            {
+              for (final e in topic.ownPaletteArgb.entries)
+                e.key: Color(e.value),
+            },
+          ]),
+        );
+
+        for (final page in topic.pages) {
+          if (page.blocks.any((b) => b is FlowchartBlock)) continue;
+
+          double? natural;
+          double avail = 0;
+          double fits = -1;
+
+          for (final scale in fineLadder()) {
+            final key = GlobalKey();
+            await tester.pumpWidget(
+              MaterialApp(
+                home: Scaffold(
+                  body: Builder(
+                    builder: (context) {
+                      return MediaQuery(
+                        data: MediaQuery.of(
+                          context,
+                        ).copyWith(textScaler: TextScaler.linear(scale)),
+                        child: LayoutBuilder(
+                          builder: (context, c) {
+                            avail = c.maxHeight;
+                            return SingleChildScrollView(
+                              physics: const NeverScrollableScrollPhysics(),
+                              child: KeyedSubtree(
+                                key: key,
+                                child: TopicPageBody(
+                                  page: page,
+                                  theme: theme,
+                                  gapScale: scale,
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
+            );
+            await tester.pump();
+
+            final box = key.currentContext?.findRenderObject();
+            if (box is! RenderBox || !box.hasSize) break;
+            natural ??= box.size.height;
+            if (box.size.height <= avail - 2) {
+              fits = scale;
+              break;
+            }
+          }
+
+          final line =
+              '${rec.id}\t${page.pageNumber ?? ""}\t'
+              '${fits < 0 ? "NEVER" : fits.toStringAsFixed(2)}\t'
+              '${natural?.toStringAsFixed(0) ?? "?"}\t'
+              '${avail.toStringAsFixed(0)}\n';
+          fh.writeStringSync(line);
+          fh.flushSync();
+          stdout.writeln(line.trim());
+          stdout.flush();
+        }
       }
-    }
 
-    fh.closeSync();
-  }, timeout: const Timeout(Duration(minutes: 15)));
+      fh.closeSync();
+    },
+    timeout: const Timeout(Duration(minutes: 15)),
+  );
 }

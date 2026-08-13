@@ -61,8 +61,8 @@ Set<num> reachableTotals(ScoreBlock block) {
     final contribs = item.type == ScoreItemType.toggle
         ? <num>[0, item.points]
         : (item.options.isEmpty
-            ? <num>[0]
-            : item.options.map((o) => o.points).toList());
+              ? <num>[0]
+              : item.options.map((o) => o.points).toList());
     final next = <num>{};
     for (final t in totals) {
       for (final c in contribs) {

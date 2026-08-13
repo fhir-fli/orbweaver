@@ -26,12 +26,15 @@ void main() {
 
     // Two callouts: the D50 danger warning overrides its palette to red;
     // the sublingual first-aid tip keeps the inherited (amber) default.
-    final callouts =
-        blocks.whereType<ProseBlock>().where((b) => b.callout).toList();
+    final callouts = blocks
+        .whereType<ProseBlock>()
+        .where((b) => b.callout)
+        .toList();
     expect(callouts.length, 2);
 
-    final danger =
-        callouts.firstWhere((b) => b.title!.contains('50% dextrose'));
+    final danger = callouts.firstWhere(
+      (b) => b.title!.contains('50% dextrose'),
+    );
     expect(danger.ownPaletteArgb['alert'], 0xFFD32F2F);
 
     final tip = blocks.last as ProseBlock;

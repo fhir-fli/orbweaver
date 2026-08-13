@@ -59,8 +59,10 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
 
   /// Non-null routes available for [name], or empty if the class has no
   /// route concept.
-  List<String> _routes(String name) =>
-      [for (final r in _b.routesFor(name)) if (r != null) r];
+  List<String> _routes(String name) => [
+    for (final r in _b.routesFor(name))
+      if (r != null) r,
+  ];
 
   String? _firstRoute(String name) {
     final r = _routes(name);
@@ -120,8 +122,12 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
     final src = _srcName == null ? null : _b.agentFor(_srcName!, _srcRoute);
     final tgt = _tgtName == null ? null : _b.agentFor(_tgtName!, _tgtRoute);
     final dose = double.tryParse(_doseCtrl.text.trim());
-    final refEq = (src != null && dose != null) ? _b.toReference(src, dose) : null;
-    final tgtDose = (tgt != null && refEq != null) ? _b.fromReference(tgt, refEq) : null;
+    final refEq = (src != null && dose != null)
+        ? _b.toReference(src, dose)
+        : null;
+    final tgtDose = (tgt != null && refEq != null)
+        ? _b.fromReference(tgt, refEq)
+        : null;
     final refLabel = _b.referenceLabel ?? _b.reference ?? 'reference';
 
     return Column(
@@ -176,7 +182,10 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
                 tgtDose == null
                     ? '= —'
                     : '= ${_fmt(tgtDose)} ${tgt?.unit ?? _b.unit ?? ''}'.trim(),
-                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ],
@@ -193,7 +202,10 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
       isDense: true,
       items: [
         for (final n in _b.agentNames)
-          DropdownMenuItem(value: n, child: Text(n, overflow: TextOverflow.ellipsis)),
+          DropdownMenuItem(
+            value: n,
+            child: Text(n, overflow: TextOverflow.ellipsis),
+          ),
       ],
       onChanged: (n) {
         if (n == null) return;
@@ -215,7 +227,9 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
     final routes = _routes(name);
     final value = isSource ? _srcRoute : _tgtRoute;
     return DropdownButton<String>(
-      value: routes.contains(value) ? value : (routes.isEmpty ? null : routes.first),
+      value: routes.contains(value)
+          ? value
+          : (routes.isEmpty ? null : routes.first),
       isExpanded: true,
       isDense: true,
       items: [
@@ -318,7 +332,9 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
 
   Widget _tierHeaderCell(String text, Color accent, {required bool highlight}) {
     return Container(
-      color: highlight ? accent.withValues(alpha: 0.18) : accent.withValues(alpha: 0.06),
+      color: highlight
+          ? accent.withValues(alpha: 0.18)
+          : accent.withValues(alpha: 0.06),
       padding: const EdgeInsets.all(6),
       child: Text(
         text,
@@ -354,10 +370,15 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
                   InkWell(
                     onTap: () => setState(() => _selectedTier = tier),
                     child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 8,
+                        vertical: 3,
+                      ),
                       decoration: BoxDecoration(
                         color: highlight ? accent : Colors.white,
-                        border: Border.all(color: accent.withValues(alpha: 0.6)),
+                        border: Border.all(
+                          color: accent.withValues(alpha: 0.6),
+                        ),
                         borderRadius: BorderRadius.circular(999),
                       ),
                       child: Text(
@@ -427,17 +448,17 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
   }
 
   Widget _label(String text) => Padding(
-        padding: const EdgeInsets.only(bottom: 4),
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontSize: 11,
-            fontWeight: FontWeight.w800,
-            color: Colors.black54,
-            letterSpacing: 0.6,
-          ),
-        ),
-      );
+    padding: const EdgeInsets.only(bottom: 4),
+    child: Text(
+      text,
+      style: const TextStyle(
+        fontSize: 11,
+        fontWeight: FontWeight.w800,
+        color: Colors.black54,
+        letterSpacing: 0.6,
+      ),
+    ),
+  );
 
   /// Formats a computed dose: integer when whole, else up to 2 decimals
   /// (trailing zeros trimmed) — no false precision.

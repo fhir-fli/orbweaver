@@ -44,8 +44,8 @@ const _files = <String>[
 ];
 
 ScoreBlock _load(String file) => Topic.fromYamlString(
-      File('$_dir/$file').readAsStringSync(),
-    ).blocks.whereType<ScoreBlock>().single;
+  File('$_dir/$file').readAsStringSync(),
+).blocks.whereType<ScoreBlock>().single;
 
 void main() {
   group('score topics parse to valid ScoreBlocks', () {
@@ -64,13 +64,22 @@ void main() {
         test('item keys unique; choices have options + a valid default', () {
           final keys = <String>{};
           for (final item in b.items) {
-            expect(keys.add(item.key), isTrue,
-                reason: 'duplicate item key "${item.key}"');
+            expect(
+              keys.add(item.key),
+              isTrue,
+              reason: 'duplicate item key "${item.key}"',
+            );
             if (item.type != ScoreItemType.toggle) {
-              expect(item.options, isNotEmpty,
-                  reason: '${item.type.name} "${item.key}" needs options');
-              expect(item.defaultValue, isNotNull,
-                  reason: '${item.type.name} "${item.key}" needs a default');
+              expect(
+                item.options,
+                isNotEmpty,
+                reason: '${item.type.name} "${item.key}" needs options',
+              );
+              expect(
+                item.defaultValue,
+                isNotNull,
+                reason: '${item.type.name} "${item.key}" needs a default',
+              );
               expect(
                 item.options.map((o) => o.value),
                 contains(item.defaultValue),
@@ -85,8 +94,7 @@ void main() {
           expect(reachable, isNotEmpty);
           final uncovered =
               reachable.where((t) => bandFor(b, t) == null).toList()..sort();
-          expect(uncovered, isEmpty,
-              reason: 'totals with no band: $uncovered');
+          expect(uncovered, isEmpty, reason: 'totals with no band: $uncovered');
         });
 
         test('bands are ordered and non-overlapping on first-match', () {

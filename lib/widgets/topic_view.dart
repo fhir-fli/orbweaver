@@ -90,7 +90,8 @@ class _TopicViewState extends State<TopicView> {
         ? widget.palette
         : resolvePalette([
             {
-              for (final e in topic.ownPaletteArgb.entries) e.key: Color(e.value),
+              for (final e in topic.ownPaletteArgb.entries)
+                e.key: Color(e.value),
             },
           ]);
     final theme = TopicTheme(resolved);
@@ -117,9 +118,11 @@ class _TopicViewState extends State<TopicView> {
                         // viewport top.
                         if (i > 0)
                           _PageBreak(pageNumber: topic.pages[i].pageNumber),
-                        for (var j = 0;
-                            j < topic.pages[i].blocks.length;
-                            j++) ...[
+                        for (
+                          var j = 0;
+                          j < topic.pages[i].blocks.length;
+                          j++
+                        ) ...[
                           if (j > 0) const SizedBox(height: 16),
                           _anchored(topic.pages[i].blocks[j], theme),
                         ],
@@ -332,9 +335,7 @@ class _MergeArrowsRenderer extends StatelessWidget {
           final width = constraints.maxWidth;
           final cellW = width / block.columns;
           // Center-of-column x coordinates for each source.
-          final sourceXs = block.sources
-              .map((c) => (c + 0.5) * cellW)
-              .toList()
+          final sourceXs = block.sources.map((c) => (c + 0.5) * cellW).toList()
             ..sort();
           final lineStart = sourceXs.first;
           final lineEnd = sourceXs.last;
@@ -423,29 +424,29 @@ class _FlowchartBlockRenderer extends StatelessWidget {
   Widget build(BuildContext context) {
     return switch (block.variant) {
       FlowchartVariant.severity => SeverityFlowchartView(
-          flowchart: block.severity!,
-          theme: theme,
-        ),
+        flowchart: block.severity!,
+        theme: theme,
+      ),
       FlowchartVariant.cascade => CascadeFlowchartView(
-          flowchart: block.cascade!,
-          theme: theme,
-        ),
+        flowchart: block.cascade!,
+        theme: theme,
+      ),
       FlowchartVariant.linear => LinearFlowchartView(
-          flowchart: block.linear!,
-          theme: theme,
-        ),
+        flowchart: block.linear!,
+        theme: theme,
+      ),
       FlowchartVariant.differential => DifferentialFlowchartView(
-          flowchart: block.differential!,
-          theme: theme,
-        ),
+        flowchart: block.differential!,
+        theme: theme,
+      ),
       FlowchartVariant.algorithm => AlgorithmFlowchartView(
-          flowchart: block.algorithm!,
-          theme: theme,
-        ),
+        flowchart: block.algorithm!,
+        theme: theme,
+      ),
       FlowchartVariant.cycle => CycleFlowchartView(
-          flowchart: block.cycle!,
-          theme: theme,
-        ),
+        flowchart: block.cycle!,
+        theme: theme,
+      ),
     };
   }
 }

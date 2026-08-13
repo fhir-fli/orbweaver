@@ -55,18 +55,20 @@ class DrugCardBlockView extends StatelessWidget {
       children: [
         if (use != null)
           _Section(
-              label: 'Use',
-              bg: theme.drugUseFill,
-              spine: theme.drugUseSpine,
-              markdown: use,
-              accent: theme.header),
+            label: 'Use',
+            bg: theme.drugUseFill,
+            spine: theme.drugUseSpine,
+            markdown: use,
+            accent: theme.header,
+          ),
         if (cautionMd != null)
           _Section(
-              label: 'Caution',
-              bg: theme.drugCautionFill,
-              spine: theme.drugCautionSpine,
-              markdown: cautionMd,
-              accent: theme.header),
+            label: 'Caution',
+            bg: theme.drugCautionFill,
+            spine: theme.drugCautionSpine,
+            markdown: cautionMd,
+            accent: theme.header,
+          ),
       ],
     );
 
@@ -104,7 +106,9 @@ class DrugCardBlockView extends StatelessWidget {
                       block.drugClass!,
                       textAlign: TextAlign.right,
                       style: const TextStyle(
-                          color: Colors.white70, fontSize: 12.5),
+                        color: Colors.white70,
+                        fontSize: 12.5,
+                      ),
                     ),
                   ),
                 ],
@@ -126,25 +130,26 @@ class DrugCardBlockView extends StatelessWidget {
             topSections,
           if (notesMd != null)
             _Section(
-                label: 'Notes',
-                bg: block.criticalCare
-                    ? theme.drugNotesCcFill
-                    : theme.drugNotesFill,
-                spine: block.criticalCare
-                    ? theme.drugNotesCcSpine
-                    : theme.drugNotesSpine,
-                markdown: notesMd,
-                accent: theme.header),
+              label: 'Notes',
+              bg: block.criticalCare
+                  ? theme.drugNotesCcFill
+                  : theme.drugNotesFill,
+              spine: block.criticalCare
+                  ? theme.drugNotesCcSpine
+                  : theme.drugNotesSpine,
+              markdown: notesMd,
+              accent: theme.header,
+            ),
         ],
       ),
     );
   }
 
   String _pop(DosePopulation p) => switch (p) {
-        DosePopulation.adult => 'Adult',
-        DosePopulation.peds => 'Peds',
-        DosePopulation.both => '',
-      };
+    DosePopulation.adult => 'Adult',
+    DosePopulation.peds => 'Peds',
+    DosePopulation.both => '',
+  };
 }
 
 /// The medication photo beside the Use/Caution rows.
@@ -170,8 +175,10 @@ class _DrugImage extends StatelessWidget {
         path,
         fit: BoxFit.contain,
         errorBuilder: (context, error, stack) => const Center(
-          child: Text('[photo]',
-              style: TextStyle(fontSize: 9, color: Colors.black38)),
+          child: Text(
+            '[photo]',
+            style: TextStyle(fontSize: 9, color: Colors.black38),
+          ),
         ),
       ),
     );

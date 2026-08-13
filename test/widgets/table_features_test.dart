@@ -19,14 +19,14 @@ const double _frameWidth = 375;
 const double _frameHeight = 667;
 
 Widget _wrap(Widget child) => MaterialApp(
-      home: Scaffold(
-        body: SizedBox(
-          width: _frameWidth,
-          height: _frameHeight,
-          child: SingleChildScrollView(child: child),
-        ),
-      ),
-    );
+  home: Scaffold(
+    body: SizedBox(
+      width: _frameWidth,
+      height: _frameHeight,
+      child: SingleChildScrollView(child: child),
+    ),
+  ),
+);
 
 void main() {
   late Topic topic;
@@ -54,8 +54,7 @@ void main() {
       expect(boys.lookupLabel, 'Go to age (months)');
     });
 
-    testWidgets('lookup finder accepts a query without error',
-        (tester) async {
+    testWidgets('lookup finder accepts a query without error', (tester) async {
       await tester.pumpWidget(_wrap(TopicView(topic: topic)));
       final field = find.byType(TextField);
       expect(field, findsWidgets); // one finder per lookup table
@@ -65,8 +64,9 @@ void main() {
       expect(tester.takeException(), isNull);
     });
 
-    testWidgets('renders the frozen-pane table without overflow',
-        (tester) async {
+    testWidgets('renders the frozen-pane table without overflow', (
+      tester,
+    ) async {
       await tester.pumpWidget(_wrap(TopicView(topic: topic)));
       expect(tester.takeException(), isNull);
       // header (pinned) + a first-row value are in the tree
@@ -76,8 +76,9 @@ void main() {
       expect(find.text('2.1', findRichText: true), findsWidgets);
     });
 
-    testWidgets('renders zebra + tint without exception on a phone frame',
-        (tester) async {
+    testWidgets('renders zebra + tint without exception on a phone frame', (
+      tester,
+    ) async {
       // A wider check that the bounded frozen panel lays out cleanly.
       await tester.pumpWidget(_wrap(TopicView(topic: topic)));
       await tester.pump();

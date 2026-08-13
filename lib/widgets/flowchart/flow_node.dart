@@ -48,9 +48,7 @@ class FlowNodeBox extends StatelessWidget {
       NodeShape.diamond => 0.0,
     };
 
-    final fill = shape == NodeShape.stadium
-        ? theme.flowEntry
-        : theme.nodeFill;
+    final fill = shape == NodeShape.stadium ? theme.flowEntry : theme.nodeFill;
 
     final padding = compact
         ? const EdgeInsets.symmetric(horizontal: 6, vertical: 2)
@@ -271,7 +269,8 @@ class _DecisionArrowsPainter extends CustomPainter {
       // X positions the column widgets actually occupy.
       final slotW = (w - (branchCount - 1) * columnGap) / branchCount;
       final centers = [
-        for (var i = 0; i < branchCount; i++) i * (slotW + columnGap) + slotW / 2,
+        for (var i = 0; i < branchCount; i++)
+          i * (slotW + columnGap) + slotW / 2,
       ];
       // Centre arrow only exists for an odd branch count (the bottom
       // tip of the diamond has a column directly below it).
@@ -279,8 +278,11 @@ class _DecisionArrowsPainter extends CustomPainter {
         final centerPath = Path()
           ..moveTo(midX, diamondHeight)
           ..lineTo(centers[1], size.height);
-        drawArrow(centerPath, Offset(centers[1], size.height),
-            const Offset(0, 1));
+        drawArrow(
+          centerPath,
+          Offset(centers[1], size.height),
+          const Offset(0, 1),
+        );
       }
       // Left — from left point, horizontal to left-most branch column
       // centre, then straight down.
@@ -289,16 +291,18 @@ class _DecisionArrowsPainter extends CustomPainter {
         ..moveTo(leftPointX, diamondMidY)
         ..lineTo(leftCornerX, diamondMidY)
         ..lineTo(leftCornerX, size.height);
-      drawArrow(leftPath, Offset(leftCornerX, size.height),
-          const Offset(0, 1));
+      drawArrow(leftPath, Offset(leftCornerX, size.height), const Offset(0, 1));
       // Right — mirror of left.
       final rightCornerX = centers.last;
       final rightPath = Path()
         ..moveTo(rightPointX, diamondMidY)
         ..lineTo(rightCornerX, diamondMidY)
         ..lineTo(rightCornerX, size.height);
-      drawArrow(rightPath, Offset(rightCornerX, size.height),
-          const Offset(0, 1));
+      drawArrow(
+        rightPath,
+        Offset(rightCornerX, size.height),
+        const Offset(0, 1),
+      );
     } else {
       for (var i = 0; i < branchCount; i++) {
         final frac = (2 * i + 1) / (2 * branchCount);

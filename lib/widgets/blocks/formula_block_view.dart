@@ -35,13 +35,14 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
     for (final input in _b.inputs) {
       switch (input.type) {
         case FormulaInputType.number:
-          _controllers[input.key] =
-              TextEditingController(text: input.defaultValue ?? '')
-                ..addListener(() => setState(() {}));
+          _controllers[input.key] = TextEditingController(
+            text: input.defaultValue ?? '',
+          )..addListener(() => setState(() {}));
         case FormulaInputType.boolean:
           _bools[input.key] = input.defaultValue == 'true';
         case FormulaInputType.select:
-          _selects[input.key] = input.defaultValue ??
+          _selects[input.key] =
+              input.defaultValue ??
               (input.options.isNotEmpty ? input.options.first.value : '');
       }
     }
@@ -154,19 +155,19 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
   }
 
   Widget _inputLabel(FormulaInput input) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            input.label + (input.optional ? ' (optional)' : ''),
-            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
-          ),
-          if (input.help != null)
-            Text(
-              input.help!,
-              style: const TextStyle(fontSize: 10.5, color: Colors.black54),
-            ),
-        ],
-      );
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        input.label + (input.optional ? ' (optional)' : ''),
+        style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+      ),
+      if (input.help != null)
+        Text(
+          input.help!,
+          style: const TextStyle(fontSize: 10.5, color: Colors.black54),
+        ),
+    ],
+  );
 
   Widget _booleanRow(FormulaInput input) {
     final on = _bools[input.key] ?? false;
@@ -193,18 +194,18 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
   }
 
   Widget _numberField(FormulaInput input) => TextField(
-        controller: _controllers[input.key],
-        keyboardType: const TextInputType.numberWithOptions(decimal: true),
-        inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9.]'))],
-        decoration: InputDecoration(
-          isDense: true,
-          hintText: input.label.toLowerCase(),
-          suffixText: input.unit,
-          contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
-          border: const OutlineInputBorder(),
-        ),
-        style: const TextStyle(fontSize: 14),
-      );
+    controller: _controllers[input.key],
+    keyboardType: const TextInputType.numberWithOptions(decimal: true),
+    inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9.]'))],
+    decoration: InputDecoration(
+      isDense: true,
+      hintText: input.label.toLowerCase(),
+      suffixText: input.unit,
+      contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+      border: const OutlineInputBorder(),
+    ),
+    style: const TextStyle(fontSize: 14),
+  );
 
   Widget _selectField(FormulaInput input) {
     final current = _selects[input.key];
@@ -268,7 +269,8 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
       FormulaSeverity.info => accent,
       FormulaSeverity.none => accent,
     };
-    final tinted = o.severity == FormulaSeverity.alert ||
+    final tinted =
+        o.severity == FormulaSeverity.alert ||
         o.severity == FormulaSeverity.warn;
     return Container(
       width: double.infinity,
@@ -343,29 +345,29 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
   }
 
   Widget _buildCaveats() => Container(
-        width: double.infinity,
-        padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
-        decoration: BoxDecoration(
-          color: widget.theme.alertFill,
-          border: Border.all(color: widget.theme.alert, width: 1.2),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            for (final c in _b.caveats)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 2),
-                child: Text(
-                  '⚠ $c',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: widget.theme.alertText,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+    width: double.infinity,
+    padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
+    decoration: BoxDecoration(
+      color: widget.theme.alertFill,
+      border: Border.all(color: widget.theme.alert, width: 1.2),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        for (final c in _b.caveats)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 2),
+            child: Text(
+              '⚠ $c',
+              style: TextStyle(
+                fontSize: 12,
+                color: widget.theme.alertText,
+                fontWeight: FontWeight.w600,
               ),
-          ],
-        ),
-      );
+            ),
+          ),
+      ],
+    ),
+  );
 }

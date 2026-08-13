@@ -126,9 +126,9 @@ class FormularyAxis {
   final List<String> columns;
 
   factory FormularyAxis.fromYaml(YamlMap m) => FormularyAxis(
-        label: m['label'] as String,
-        columns: [for (final c in m['columns'] as YamlList) c as String],
-      );
+    label: m['label'] as String,
+    columns: [for (final c in m['columns'] as YamlList) c as String],
+  );
 }
 
 /// One toggle lens. [mode] is `alpha` (flat A–Z) or `group` (grouped by
@@ -150,12 +150,12 @@ class FormularyFacet {
   final String? field; // 'class' | 'indications' (for group mode)
 
   factory FormularyFacet.fromYaml(YamlMap m) => FormularyFacet(
-        key: m['key'] as String,
-        label: m['label'] as String,
-        mode: m['mode'] as String,
-        tap: m['tap'] as String,
-        field: m['field'] as String?,
-      );
+    key: m['key'] as String,
+    label: m['label'] as String,
+    mode: m['mode'] as String,
+    tap: m['tap'] as String,
+    field: m['field'] as String?,
+  );
 }
 
 /// One drug record. [bandColumns]/[bandLabel] are the resolved dose axis for
@@ -289,10 +289,10 @@ class DoseRow {
   final List<String> bands;
 
   factory DoseRow.fromYaml(YamlMap m) => DoseRow(
-        label: m['label'] as String,
-        indication: m['indication'] as String?,
-        regimen: m['regimen'] as String?,
-        form: m['form'] as String?,
-        bands: [for (final b in m['bands'] as YamlList? ?? const []) b as String],
-      );
+    label: m['label'] as String,
+    indication: m['indication'] as String?,
+    regimen: m['regimen'] as String?,
+    form: m['form'] as String?,
+    bands: [for (final b in m['bands'] as YamlList? ?? const []) b as String],
+  );
 }

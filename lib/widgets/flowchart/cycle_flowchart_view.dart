@@ -32,7 +32,8 @@ class CycleFlowchartView extends StatelessWidget {
   // ── Grid + sizing constants (tuned visually). ─────────────────────────
   static const int _cols = 12;
   static const double _boxColsWide = 6.6; // plain spine box width (cols)
-  static const double _boxColsBranched = 4.2; // spine box that has side branches
+  static const double _boxColsBranched =
+      4.2; // spine box that has side branches
   static const double _decisionCols = 3.6; // decision diamond width (cols)
   static const double _branchCols = 2.9; // side branch box width (cols)
   static const double _bandGap = 30; // vertical gap between spine bands
@@ -40,98 +41,106 @@ class CycleFlowchartView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, c) {
-      final w = c.maxWidth;
-      final colW = w / _cols;
-      final cx = w / 2;
-      final layout = _CycleLayout(flowchart, colW: colW, cx: cx, width: w);
+    return LayoutBuilder(
+      builder: (context, c) {
+        final w = c.maxWidth;
+        final colW = w / _cols;
+        final cx = w / 2;
+        final layout = _CycleLayout(flowchart, colW: colW, cx: cx, width: w);
 
-      final children = <Widget>[
-        // All connectors first (behind the nodes).
-        Positioned.fill(
-          child: CustomPaint(
-            painter: _CyclePainter(layout: layout, fill: theme.flowDecision),
-          ),
-        ),
-      ];
-
-      // Spine nodes.
-      for (var i = 0; i < layout.nodes.length; i++) {
-        final n = flowchart.nodes[i];
-        final r = layout.nodes[i];
-        children.add(Positioned(
-          left: r.left,
-          top: r.top,
-          width: r.width,
-          child: n.shape == CycleNodeShape.decision
-              ? _Diamond(
-                  text: n.title,
-                  width: r.width,
-                  height: r.height,
-                  fill: theme.flowDecision,
-                  border: theme.nodeBorder,
-                )
-              : _NodeBox(
-                  title: n.title,
-                  bullets: n.bullets,
-                  severity: n.severity,
-                  theme: theme,
-                  isHub: n.id != null,
-                ),
-        ));
-      }
-
-      // Branch boxes + their edge labels.
-      for (final b in layout.branches) {
-        children.add(Positioned(
-          left: b.rect.left,
-          top: b.rect.top,
-          width: b.rect.width,
-          child: _NodeBox(
-            title: b.branch.box.title,
-            bullets: b.branch.box.bullets,
-            severity: b.branch.box.severity,
-            theme: theme,
-            isHub: false,
-          ),
-        ));
-      }
-
-      // Edge labels (branch labels, loop labels, down labels) as positioned
-      // text so they wrap cleanly.
-      for (final lbl in layout.labels) {
-        children.add(Positioned(
-          left: lbl.left,
-          top: lbl.top,
-          width: lbl.width,
-          child: Align(
-            alignment: lbl.alignRight
-                ? Alignment.centerRight
-                : (lbl.center ? Alignment.center : Alignment.centerLeft),
-            child: Text(
-              lbl.text,
-              textAlign: lbl.alignRight
-                  ? TextAlign.right
-                  : (lbl.center ? TextAlign.center : TextAlign.left),
-              style: TextStyle(
-                fontSize: _labelFont,
-                fontWeight: FontWeight.w700,
-                color: Colors.black87,
-                backgroundColor: lbl.loop
-                    ? Colors.white.withValues(alpha: 0.85)
-                    : null,
-              ),
+        final children = <Widget>[
+          // All connectors first (behind the nodes).
+          Positioned.fill(
+            child: CustomPaint(
+              painter: _CyclePainter(layout: layout, fill: theme.flowDecision),
             ),
           ),
-        ));
-      }
+        ];
 
-      return SizedBox(
-        width: w,
-        height: layout.totalHeight,
-        child: Stack(clipBehavior: Clip.none, children: children),
-      );
-    });
+        // Spine nodes.
+        for (var i = 0; i < layout.nodes.length; i++) {
+          final n = flowchart.nodes[i];
+          final r = layout.nodes[i];
+          children.add(
+            Positioned(
+              left: r.left,
+              top: r.top,
+              width: r.width,
+              child: n.shape == CycleNodeShape.decision
+                  ? _Diamond(
+                      text: n.title,
+                      width: r.width,
+                      height: r.height,
+                      fill: theme.flowDecision,
+                      border: theme.nodeBorder,
+                    )
+                  : _NodeBox(
+                      title: n.title,
+                      bullets: n.bullets,
+                      severity: n.severity,
+                      theme: theme,
+                      isHub: n.id != null,
+                    ),
+            ),
+          );
+        }
+
+        // Branch boxes + their edge labels.
+        for (final b in layout.branches) {
+          children.add(
+            Positioned(
+              left: b.rect.left,
+              top: b.rect.top,
+              width: b.rect.width,
+              child: _NodeBox(
+                title: b.branch.box.title,
+                bullets: b.branch.box.bullets,
+                severity: b.branch.box.severity,
+                theme: theme,
+                isHub: false,
+              ),
+            ),
+          );
+        }
+
+        // Edge labels (branch labels, loop labels, down labels) as positioned
+        // text so they wrap cleanly.
+        for (final lbl in layout.labels) {
+          children.add(
+            Positioned(
+              left: lbl.left,
+              top: lbl.top,
+              width: lbl.width,
+              child: Align(
+                alignment: lbl.alignRight
+                    ? Alignment.centerRight
+                    : (lbl.center ? Alignment.center : Alignment.centerLeft),
+                child: Text(
+                  lbl.text,
+                  textAlign: lbl.alignRight
+                      ? TextAlign.right
+                      : (lbl.center ? TextAlign.center : TextAlign.left),
+                  style: TextStyle(
+                    fontSize: _labelFont,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black87,
+                    backgroundColor: lbl.loop
+                        ? Colors.white.withValues(alpha: 0.85)
+                        : null,
+                  ),
+                ),
+              ),
+            ),
+          );
+        }
+
+        return SizedBox(
+          width: w,
+          height: layout.totalHeight,
+          child: Stack(clipBehavior: Clip.none, children: children),
+        );
+      },
+    );
   }
 }
 
@@ -171,7 +180,12 @@ class _EdgeLabel {
 
 /// Computes rects for every spine node, branch box, connector and label.
 class _CycleLayout {
-  _CycleLayout(this.fc, {required this.colW, required this.cx, required this.width}) {
+  _CycleLayout(
+    this.fc, {
+    required this.colW,
+    required this.cx,
+    required this.width,
+  }) {
     _compute();
   }
 
@@ -209,8 +223,7 @@ class _CycleLayout {
         for (final b in n.branches)
           _boxHeight(b.box.title, b.box.bullets, _branchW),
       ];
-      final bandH =
-          [nodeH, ...branchHeights].reduce((a, b) => math.max(a, b));
+      final bandH = [nodeH, ...branchHeights].reduce((a, b) => math.max(a, b));
 
       final nodeTop = y + (bandH - nodeH) / 2;
       // Centre on the spine — but if a box node's branches are all on ONE side,
@@ -233,11 +246,13 @@ class _CycleLayout {
         final left = b.side == CycleSide.left
             ? colW * 0.1
             : width - _branchW - colW * 0.1;
-        branches.add(_BranchLayout(
-          b,
-          _NodeRect(left, y + (bandH - bh) / 2, _branchW, bh),
-          i,
-        ));
+        branches.add(
+          _BranchLayout(
+            b,
+            _NodeRect(left, y + (bandH - bh) / 2, _branchW, bh),
+            i,
+          ),
+        );
       }
 
       y += bandH + CycleFlowchartView._bandGap;
@@ -255,14 +270,21 @@ class _CycleLayout {
     for (final bl in branches) {
       final node = nodes[bl.parentIndex];
       final left = bl.branch.side == CycleSide.left;
-      final midY = math.max(node.top, bl.rect.top) +
+      final midY =
+          math.max(node.top, bl.rect.top) +
           math.min(node.height, bl.rect.height) / 2;
       final gapMid = left
           ? (node.left + bl.rect.right) / 2
           : (node.right + bl.rect.left) / 2;
-      labels.add(_EdgeLabel(bl.branch.label, gapMid - branchLabelW / 2,
-          midY - 17, branchLabelW,
-          center: true));
+      labels.add(
+        _EdgeLabel(
+          bl.branch.label,
+          gapMid - branchLabelW / 2,
+          midY - 17,
+          branchLabelW,
+          center: true,
+        ),
+      );
     }
 
     // Down labels on spine exit arrows (e.g. a decision's "once stable" exit).
@@ -285,7 +307,10 @@ class _CycleLayout {
     for (final b in bullets) {
       bulletLines += math.max(1, (b.length / cplB).ceil());
     }
-    return 12 + titleLines * 15.5 + bulletLines * 14.0 + (bullets.isNotEmpty ? 3 : 0);
+    return 12 +
+        titleLines * 15.5 +
+        bulletLines * 14.0 +
+        (bullets.isNotEmpty ? 3 : 0);
   }
 
   double _diamondHeight(String text) {
@@ -320,8 +345,8 @@ class _CyclePainter extends CustomPainter {
       final node = nodes[bl.parentIndex];
       final br = bl.rect;
       final left = bl.branch.side == CycleSide.left;
-      final y = math.max(node.top, br.top) +
-          math.min(node.height, br.height) / 2;
+      final y =
+          math.max(node.top, br.top) + math.min(node.height, br.height) / 2;
 
       // node side → branch inner side
       if (left) {
@@ -332,8 +357,9 @@ class _CyclePainter extends CustomPainter {
 
       // return riser: up from the branch's TOP-CENTRE, then elbow INWARD into
       // the hub node's side (loopTo).
-      final target =
-          bl.branch.loopTo == null ? -1 : layout.fc.indexOfId(bl.branch.loopTo!);
+      final target = bl.branch.loopTo == null
+          ? -1
+          : layout.fc.indexOfId(bl.branch.loopTo!);
       if (target >= 0) {
         final hub = nodes[target];
         final startX = br.cx;
@@ -416,14 +442,21 @@ class _NodeBox extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(title,
-              style: const TextStyle(
-                  fontSize: 12, fontWeight: FontWeight.w800, height: 1.15)),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w800,
+              height: 1.15,
+            ),
+          ),
           for (final b in bullets)
             Padding(
               padding: const EdgeInsets.only(top: 2),
-              child: Text('•  $b',
-                  style: const TextStyle(fontSize: 11, height: 1.2)),
+              child: Text(
+                '•  $b',
+                style: const TextStyle(fontSize: 11, height: 1.2),
+              ),
             ),
         ],
       ),
@@ -457,10 +490,11 @@ class _Diamond extends StatelessWidget {
               text,
               maxWidth: width * 0.62,
               style: const TextStyle(
-                  fontSize: 11.5,
-                  height: 1.05,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.black87),
+                fontSize: 11.5,
+                height: 1.05,
+                fontWeight: FontWeight.w800,
+                color: Colors.black87,
+              ),
             ),
           ),
         ),
@@ -482,11 +516,12 @@ class _DiamondPainter extends CustomPainter {
       ..close();
     canvas.drawPath(path, Paint()..color = fill);
     canvas.drawPath(
-        path,
-        Paint()
-          ..color = border
-          ..strokeWidth = 1.5
-          ..style = PaintingStyle.stroke);
+      path,
+      Paint()
+        ..color = border
+        ..strokeWidth = 1.5
+        ..style = PaintingStyle.stroke,
+    );
   }
 
   @override
@@ -495,15 +530,15 @@ class _DiamondPainter extends CustomPainter {
 }
 
 Color? _sevFill(TopicTheme t, RowSeverity s) => switch (s) {
-      RowSeverity.emergency => t.severitySevereTile,
-      RowSeverity.priority => t.severityModerateTile,
-      RowSeverity.nonUrgent => t.severityMildTile,
-      RowSeverity.none => null,
-    };
+  RowSeverity.emergency => t.severitySevereTile,
+  RowSeverity.priority => t.severityModerateTile,
+  RowSeverity.nonUrgent => t.severityMildTile,
+  RowSeverity.none => null,
+};
 
 Color? _sevBorder(TopicTheme t, RowSeverity s) => switch (s) {
-      RowSeverity.emergency => t.severitySevereHeader,
-      RowSeverity.priority => t.severityModerateHeader,
-      RowSeverity.nonUrgent => t.severityMildHeader,
-      RowSeverity.none => null,
-    };
+  RowSeverity.emergency => t.severitySevereHeader,
+  RowSeverity.priority => t.severityModerateHeader,
+  RowSeverity.nonUrgent => t.severityMildHeader,
+  RowSeverity.none => null,
+};

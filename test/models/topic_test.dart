@@ -8,8 +8,9 @@ void main() {
     late Topic topic;
 
     setUpAll(() {
-      final yaml =
-          File('assets/books/wvems/topics/wvems_2025_008.yaml').readAsStringSync();
+      final yaml = File(
+        'assets/books/wvems/topics/wvems_2025_008.yaml',
+      ).readAsStringSync();
       topic = Topic.fromYamlString(yaml);
     });
 
@@ -121,9 +122,9 @@ void main() {
     });
 
     test('prose markdown content preserved', () {
-      final meds = topic.blocks
-          .whereType<ProseBlock>()
-          .firstWhere((p) => p.title == 'Medication');
+      final meds = topic.blocks.whereType<ProseBlock>().firstWhere(
+        (p) => p.title == 'Medication',
+      );
       expect(meds.markdown, contains('**NS Bolus**'));
       expect(meds.markdown, contains('Dopamine'));
     });
@@ -143,8 +144,9 @@ void main() {
     late Topic topic;
 
     setUpAll(() {
-      final yaml =
-          File('test/fixtures/demo_all_blocks.yaml').readAsStringSync();
+      final yaml = File(
+        'test/fixtures/demo_all_blocks.yaml',
+      ).readAsStringSync();
       topic = Topic.fromYamlString(yaml);
     });
 
@@ -185,9 +187,9 @@ void main() {
     });
 
     test('cascade flowchart block parses linked chain', () {
-      final cascade = topic.blocks
-          .whereType<FlowchartBlock>()
-          .firstWhere((b) => b.variant == FlowchartVariant.cascade);
+      final cascade = topic.blocks.whereType<FlowchartBlock>().firstWhere(
+        (b) => b.variant == FlowchartVariant.cascade,
+      );
       expect(cascade.cascade, isNotNull);
       var step = cascade.cascade!.root;
       var depth = 1;

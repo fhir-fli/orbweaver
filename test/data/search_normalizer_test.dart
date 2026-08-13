@@ -14,9 +14,11 @@ void main() {
         ['anaesthesia', 'anesthesia'],
         ['sulphate', 'sulfate'],
       ]) {
-        expect(SearchNormalizer.normalize(pair[0]),
-            SearchNormalizer.normalize(pair[1]),
-            reason: '${pair[0]} vs ${pair[1]}');
+        expect(
+          SearchNormalizer.normalize(pair[0]),
+          SearchNormalizer.normalize(pair[1]),
+          reason: '${pair[0]} vs ${pair[1]}',
+        );
       }
     });
 
@@ -42,12 +44,12 @@ void main() {
 
   group('BookTopic.matches (full-text, normalised)', () {
     BookTopic t(String searchSource) => BookTopic(
-          id: 'x',
-          title: 'x',
-          subtitle: '',
-          asset: 'a',
-          searchText: SearchNormalizer.normalize(searchSource),
-        );
+      id: 'x',
+      title: 'x',
+      subtitle: '',
+      asset: 'a',
+      searchText: SearchNormalizer.normalize(searchSource),
+    );
 
     test('US query finds British-spelled content', () {
       final topic = t('Severe dehydration with diarrhoea and oedema');
@@ -75,25 +77,28 @@ void main() {
       required String title,
       String keywords = '',
       String body = '',
-    }) =>
-        BookTopic(
-          id: 'x',
-          title: title,
-          subtitle: '',
-          asset: 'a',
-          titleText: SearchNormalizer.normalize(title),
-          keywordsText: SearchNormalizer.normalize(keywords),
-          searchText: SearchNormalizer.normalize('$title $keywords $body'),
-        );
+    }) => BookTopic(
+      id: 'x',
+      title: title,
+      subtitle: '',
+      asset: 'a',
+      titleText: SearchNormalizer.normalize(title),
+      keywordsText: SearchNormalizer.normalize(keywords),
+      searchText: SearchNormalizer.normalize('$title $keywords $body'),
+    );
 
     test('title hit outranks keyword hit outranks body-only hit', () {
       final titleHit = topic(title: 'Diazepam for convulsions');
       final keywordHit = topic(title: 'Anticonvulsant', keywords: 'diazepam');
       final bodyHit = topic(title: 'Coma', body: 'give diazepam rectally');
-      expect(titleHit.relevance('diazepam'),
-          greaterThan(keywordHit.relevance('diazepam')));
-      expect(keywordHit.relevance('diazepam'),
-          greaterThan(bodyHit.relevance('diazepam')));
+      expect(
+        titleHit.relevance('diazepam'),
+        greaterThan(keywordHit.relevance('diazepam')),
+      );
+      expect(
+        keywordHit.relevance('diazepam'),
+        greaterThan(bodyHit.relevance('diazepam')),
+      );
     });
 
     test('non-matching topic scores zero', () {

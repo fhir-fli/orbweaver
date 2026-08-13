@@ -91,17 +91,30 @@ class SearchNormalizer {
   /// Dosing / measurement unit words → their abbreviation, so "100
   /// milligrams" matches "100 mg".
   static const Map<String, String> _dosing = {
-    'milligrams': 'mg', 'milligram': 'mg',
-    'micrograms': 'mcg', 'microgram': 'mcg',
-    'kilograms': 'kg', 'kilogram': 'kg',
-    'grams': 'g', 'gram': 'g',
-    'milliliters': 'ml', 'milliliter': 'ml',
-    'millilitres': 'ml', 'millilitre': 'ml',
-    'liters': 'l', 'liter': 'l', 'litres': 'l', 'litre': 'l',
-    'centimeters': 'cm', 'centimeter': 'cm',
-    'centimetres': 'cm', 'centimetre': 'cm',
-    'millimeters': 'mm', 'millimeter': 'mm',
-    'millimetres': 'mm', 'millimetre': 'mm',
+    'milligrams': 'mg',
+    'milligram': 'mg',
+    'micrograms': 'mcg',
+    'microgram': 'mcg',
+    'kilograms': 'kg',
+    'kilogram': 'kg',
+    'grams': 'g',
+    'gram': 'g',
+    'milliliters': 'ml',
+    'milliliter': 'ml',
+    'millilitres': 'ml',
+    'millilitre': 'ml',
+    'liters': 'l',
+    'liter': 'l',
+    'litres': 'l',
+    'litre': 'l',
+    'centimeters': 'cm',
+    'centimeter': 'cm',
+    'centimetres': 'cm',
+    'centimetre': 'cm',
+    'millimeters': 'mm',
+    'millimeter': 'mm',
+    'millimetres': 'mm',
+    'millimetre': 'mm',
   };
 
   static final RegExp _digitComma = RegExp(r'(\d),(\d)');
@@ -157,6 +170,12 @@ class SearchNormalizer {
   }
 
   static const Set<String> _ourExceptions = {
-    'four', 'your', 'hour', 'tour', 'sour', 'pour', 'flour',
+    'four',
+    'your',
+    'hour',
+    'tour',
+    'sour',
+    'pour',
+    'flour',
   };
 }

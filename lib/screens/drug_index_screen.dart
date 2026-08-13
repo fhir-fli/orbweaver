@@ -32,10 +32,8 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
   /// "indication|id" so the same drug can be expanded per indication group).
   String? _expanded;
 
-  Color get _accent =>
-      widget.palette['accent'] ?? const Color(0xFF5981BF);
-  Color get _fill =>
-      widget.palette['accent_fill'] ?? const Color(0xFFEEF2F9);
+  Color get _accent => widget.palette['accent'] ?? const Color(0xFF5981BF);
+  Color get _fill => widget.palette['accent_fill'] ?? const Color(0xFFEEF2F9);
 
   @override
   void dispose() {
@@ -157,16 +155,18 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
       return Center(
         child: Padding(
           padding: const EdgeInsets.all(32),
-          child: Text('No drugs match "$_query".',
-              style: const TextStyle(color: Colors.black54)),
+          child: Text(
+            'No drugs match "$_query".',
+            style: const TextStyle(color: Colors.black54),
+          ),
         ),
       );
     }
     return ListView.separated(
       padding: const EdgeInsets.symmetric(vertical: 4),
       itemCount: hits.length,
-      separatorBuilder: (_, _) => const Divider(
-          height: 1, thickness: 0.5, indent: 12, endIndent: 12),
+      separatorBuilder: (_, _) =>
+          const Divider(height: 1, thickness: 0.5, indent: 12, endIndent: 12),
       itemBuilder: (_, i) => _drugRow(hits[i], subtitle: hits[i].subtitle),
     );
   }
@@ -180,8 +180,8 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
       return ListView.separated(
         padding: const EdgeInsets.symmetric(vertical: 4),
         itemCount: ds.length + (hasIntro ? 1 : 0),
-        separatorBuilder: (_, _) => const Divider(
-            height: 1, thickness: 0.5, indent: 12, endIndent: 12),
+        separatorBuilder: (_, _) =>
+            const Divider(height: 1, thickness: 0.5, indent: 12, endIndent: 12),
         itemBuilder: (_, i) {
           if (hasIntro && i == 0) return _introCard(intro);
           final d = ds[hasIntro ? i - 1 : i];
@@ -201,9 +201,7 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
     final tiles = <Widget>[];
     for (final key in order) {
       final members = _sortedDrugs.where((d) {
-        return byIndication
-            ? d.indications.contains(key)
-            : d.className == key;
+        return byIndication ? d.indications.contains(key) : d.className == key;
       }).toList();
       if (members.isEmpty) continue;
       tiles.add(_groupHeader(label(key)));
@@ -222,30 +220,33 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
   }
 
   Widget _groupHeader(String text) => Padding(
-        padding: const EdgeInsets.fromLTRB(14, 14, 14, 4),
-        child: Text(
-          text.toUpperCase(),
-          style: TextStyle(
-            fontSize: 11,
-            fontWeight: FontWeight.w800,
-            letterSpacing: 0.6,
-            color: _accent,
-          ),
-        ),
-      );
+    padding: const EdgeInsets.fromLTRB(14, 14, 14, 4),
+    child: Text(
+      text.toUpperCase(),
+      style: TextStyle(
+        fontSize: 11,
+        fontWeight: FontWeight.w800,
+        letterSpacing: 0.6,
+        color: _accent,
+      ),
+    ),
+  );
 
   /// Front-matter card shown once at the top of the A–Z list.
   Widget _introCard(String markdown) => Container(
-        margin: const EdgeInsets.fromLTRB(10, 6, 10, 6),
-        padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(9),
-          border: Border.all(color: _accent.withValues(alpha: 0.35)),
-        ),
-        child: MiniMarkdown(
-            markdown: markdown, fontSize: 12.5, bulletColor: _accent),
-      );
+    margin: const EdgeInsets.fromLTRB(10, 6, 10, 6),
+    padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(9),
+      border: Border.all(color: _accent.withValues(alpha: 0.35)),
+    ),
+    child: MiniMarkdown(
+      markdown: markdown,
+      fontSize: 12.5,
+      bulletColor: _accent,
+    ),
+  );
 
   /// A–Z / class row: taps through to the drug detail page.
   Widget _drugRow(Drug d, {required String subtitle}) {
@@ -266,14 +267,22 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(d.name,
-                      style: const TextStyle(
-                          fontSize: 14.5, fontWeight: FontWeight.w600)),
+                  Text(
+                    d.name,
+                    style: const TextStyle(
+                      fontSize: 14.5,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                   if (subtitle.isNotEmpty) ...[
                     const SizedBox(height: 1),
-                    Text(subtitle,
-                        style: const TextStyle(
-                            fontSize: 11.5, color: Colors.black54)),
+                    Text(
+                      subtitle,
+                      style: const TextStyle(
+                        fontSize: 11.5,
+                        color: Colors.black54,
+                      ),
+                    ),
                   ],
                 ],
               ),
@@ -306,22 +315,32 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(d.name,
-                          style: const TextStyle(
-                              fontSize: 14.5, fontWeight: FontWeight.w600)),
+                      Text(
+                        d.name,
+                        style: const TextStyle(
+                          fontSize: 14.5,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                       if (hint.isNotEmpty) ...[
                         const SizedBox(height: 1),
-                        Text(hint,
-                            style: TextStyle(
-                                fontSize: 11.5,
-                                fontWeight: FontWeight.w600,
-                                color: _darken(_accent))),
+                        Text(
+                          hint,
+                          style: TextStyle(
+                            fontSize: 11.5,
+                            fontWeight: FontWeight.w600,
+                            color: _darken(_accent),
+                          ),
+                        ),
                       ],
                     ],
                   ),
                 ),
-                Icon(open ? Icons.expand_less : Icons.chevron_right,
-                    size: 20, color: Colors.black38),
+                Icon(
+                  open ? Icons.expand_less : Icons.chevron_right,
+                  size: 20,
+                  color: Colors.black38,
+                ),
               ],
             ),
           ),
@@ -340,12 +359,15 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (dose != null && dose.bands.isNotEmpty) ...[
-            Text(d.bandLabel.toUpperCase(),
-                style: const TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 0.4,
-                    color: Colors.black54)),
+            Text(
+              d.bandLabel.toUpperCase(),
+              style: const TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w700,
+                letterSpacing: 0.4,
+                color: Colors.black54,
+              ),
+            ),
             const SizedBox(height: 5),
             _bandStrip(d.bandColumns, dose.bands),
             const SizedBox(height: 6),
@@ -353,9 +375,10 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
           if (dose?.form != null)
             Padding(
               padding: const EdgeInsets.only(bottom: 6),
-              child: Text(dose!.form!,
-                  style:
-                      const TextStyle(fontSize: 12, color: Colors.black54)),
+              child: Text(
+                dose!.form!,
+                style: const TextStyle(fontSize: 12, color: Colors.black54),
+              ),
             ),
           GestureDetector(
             onTap: () => Navigator.push(
@@ -365,11 +388,14 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
                     DrugDetailScreen(drug: d, palette: widget.palette),
               ),
             ),
-            child: Text('See full ${d.name} →',
-                style: TextStyle(
-                    fontSize: 12.5,
-                    fontWeight: FontWeight.w600,
-                    color: _darken(_accent))),
+            child: Text(
+              'See full ${d.name} →',
+              style: TextStyle(
+                fontSize: 12.5,
+                fontWeight: FontWeight.w600,
+                color: _darken(_accent),
+              ),
+            ),
           ),
         ],
       ),
@@ -390,36 +416,41 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
               for (final c in cols) _cell(c, header: true),
             ],
           ),
-          TableRow(children: [
-            for (var i = 0; i < cols.length; i++)
-              _cell(i < vals.length ? vals[i] : '—'),
-          ]),
+          TableRow(
+            children: [
+              for (var i = 0; i < cols.length; i++)
+                _cell(i < vals.length ? vals[i] : '—'),
+            ],
+          ),
         ],
       ),
     );
   }
 
   Widget _cell(String text, {bool header = false}) => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-        child: Text(text,
-            style: TextStyle(
-                fontSize: 11.5,
-                fontWeight: header ? FontWeight.w700 : FontWeight.w400,
-                color: header ? Colors.black54 : Colors.black87)),
-      );
+    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+    child: Text(
+      text,
+      style: TextStyle(
+        fontSize: 11.5,
+        fontWeight: header ? FontWeight.w700 : FontWeight.w400,
+        color: header ? Colors.black54 : Colors.black87,
+      ),
+    ),
+  );
 
   Widget _accentBar({bool open = false}) => Container(
-        width: 3,
-        height: 32,
-        decoration: BoxDecoration(
-          color: open ? _darken(_accent) : _accent,
-          borderRadius: BorderRadius.circular(2),
-        ),
-      );
+    width: 3,
+    height: 32,
+    decoration: BoxDecoration(
+      color: open ? _darken(_accent) : _accent,
+      borderRadius: BorderRadius.circular(2),
+    ),
+  );
 
-  static Color _darken(Color c) =>
-      HSLColor.fromColor(c).withLightness(
-          (HSLColor.fromColor(c).lightness - 0.12).clamp(0.0, 1.0)).toColor();
+  static Color _darken(Color c) => HSLColor.fromColor(c)
+      .withLightness((HSLColor.fromColor(c).lightness - 0.12).clamp(0.0, 1.0))
+      .toColor();
 }
 
 /// A single drug's detail page: the weight-band dose table(s) + preparation
@@ -454,10 +485,14 @@ class DrugDetailScreen extends StatelessWidget {
               const SizedBox(width: 10),
             ],
             Expanded(
-              child: Text(drug.name,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.w700)),
+              child: Text(
+                drug.name,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
             ),
           ],
         ),
@@ -469,34 +504,46 @@ class DrugDetailScreen extends StatelessWidget {
             if (drug.subtitle.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(left: 2, bottom: 8),
-                child: Text(drug.subtitle,
-                    style: TextStyle(
-                        fontSize: 12.5,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.black.withValues(alpha: 0.55))),
+                child: Text(
+                  drug.subtitle,
+                  style: TextStyle(
+                    fontSize: 12.5,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.black.withValues(alpha: 0.55),
+                  ),
+                ),
               ),
             if (drug.dose != null)
               _card(
                 theme,
                 title: 'Dose & route',
                 child: MiniMarkdown(
-                    markdown: drug.dose!, fontSize: 13, bulletColor: _accent),
+                  markdown: drug.dose!,
+                  fontSize: 13,
+                  bulletColor: _accent,
+                ),
               ),
             if (drug.regimen != null)
               _card(
                 theme,
                 title: 'Regimen',
-                child: Text(drug.regimen!,
-                    style: const TextStyle(fontSize: 13)),
+                child: Text(
+                  drug.regimen!,
+                  style: const TextStyle(fontSize: 13),
+                ),
                 highlight: true,
               ),
             if (drug.daily != null)
               _card(
                 theme,
                 title: 'Daily dose',
-                child: Text(drug.daily!,
-                    style: const TextStyle(
-                        fontSize: 14, fontWeight: FontWeight.w600)),
+                child: Text(
+                  drug.daily!,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 highlight: true,
               ),
             if (drug.doses.isNotEmpty) _doseTable(),
@@ -505,17 +552,22 @@ class DrugDetailScreen extends StatelessWidget {
                 theme,
                 title: 'Notes',
                 child: MiniMarkdown(
-                    markdown: drug.notes!, fontSize: 13, bulletColor: _accent),
+                  markdown: drug.notes!,
+                  fontSize: 13,
+                  bulletColor: _accent,
+                ),
               ),
             if (drug.review)
               Padding(
                 padding: const EdgeInsets.only(top: 8, left: 2),
                 child: Text(
-                    'Indication from EMLc fallback — pending OpenEvidence review.',
-                    style: TextStyle(
-                        fontSize: 11,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.black.withValues(alpha: 0.45))),
+                  'Indication from EMLc fallback — pending OpenEvidence review.',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontStyle: FontStyle.italic,
+                    color: Colors.black.withValues(alpha: 0.45),
+                  ),
+                ),
               ),
           ],
         ),
@@ -527,48 +579,56 @@ class DrugDetailScreen extends StatelessWidget {
     const firstW = 190.0;
     const bandW = 78.0;
     Widget hcell(String t, double w, {bool first = false}) => Container(
-          width: w,
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7),
-          alignment: first ? Alignment.centerLeft : Alignment.centerLeft,
-          child: Text(t,
-              style: TextStyle(
-                  fontSize: 10.5,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 0.2,
-                  color: _darken(_accent))),
-        );
+      width: w,
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7),
+      alignment: first ? Alignment.centerLeft : Alignment.centerLeft,
+      child: Text(
+        t,
+        style: TextStyle(
+          fontSize: 10.5,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 0.2,
+          color: _darken(_accent),
+        ),
+      ),
+    );
     Widget vcell(String t, double w) => Container(
-          width: w,
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-          child: Text(t,
-              style: const TextStyle(fontSize: 12, color: Colors.black87)),
-        );
+      width: w,
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+      child: Text(
+        t,
+        style: const TextStyle(fontSize: 12, color: Colors.black87),
+      ),
+    );
     Widget firstCell(DoseRow d) => Container(
-          width: firstW,
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(d.label,
-                  style: const TextStyle(
-                      fontSize: 12.5, fontWeight: FontWeight.w700)),
-              if (d.regimen != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 2),
-                  child: Text(d.regimen!,
-                      style: const TextStyle(
-                          fontSize: 11, color: Colors.black54)),
-                ),
-              if (d.form != null)
-                Padding(
-                  padding: const EdgeInsets.only(top: 2),
-                  child: Text(d.form!,
-                      style: const TextStyle(
-                          fontSize: 11, color: Colors.black45)),
-                ),
-            ],
+      width: firstW,
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            d.label,
+            style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w700),
           ),
-        );
+          if (d.regimen != null)
+            Padding(
+              padding: const EdgeInsets.only(top: 2),
+              child: Text(
+                d.regimen!,
+                style: const TextStyle(fontSize: 11, color: Colors.black54),
+              ),
+            ),
+          if (d.form != null)
+            Padding(
+              padding: const EdgeInsets.only(top: 2),
+              child: Text(
+                d.form!,
+                style: const TextStyle(fontSize: 11, color: Colors.black45),
+              ),
+            ),
+        ],
+      ),
+    );
 
     final cols = drug.bandColumns;
     return Container(
@@ -582,21 +642,26 @@ class DrugDetailScreen extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(12, 10, 12, 6),
-            child: Text(drug.bandLabel,
-                style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w700,
-                    color: _darken(_accent))),
+            child: Text(
+              drug.bandLabel,
+              style: TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.w700,
+                color: _darken(_accent),
+              ),
+            ),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(children: [
-                  hcell('Dose', firstW, first: true),
-                  for (final c in cols) hcell(c, bandW),
-                ]),
+                Row(
+                  children: [
+                    hcell('Dose', firstW, first: true),
+                    for (final c in cols) hcell(c, bandW),
+                  ],
+                ),
                 const Divider(height: 1, thickness: 0.5),
                 for (final d in drug.doses) ...[
                   Row(
@@ -617,8 +682,12 @@ class DrugDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _card(TopicTheme theme,
-      {required String title, required Widget child, bool highlight = false}) {
+  Widget _card(
+    TopicTheme theme, {
+    required String title,
+    required Widget child,
+    bool highlight = false,
+  }) {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 10),
@@ -633,11 +702,14 @@ class DrugDetailScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title,
-              style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w700,
-                  color: _darken(_accent))),
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.w700,
+              color: _darken(_accent),
+            ),
+          ),
           const SizedBox(height: 6),
           child,
         ],
@@ -645,9 +717,9 @@ class DrugDetailScreen extends StatelessWidget {
     );
   }
 
-  static Color _darken(Color c) =>
-      HSLColor.fromColor(c).withLightness(
-          (HSLColor.fromColor(c).lightness - 0.12).clamp(0.0, 1.0)).toColor();
+  static Color _darken(Color c) => HSLColor.fromColor(c)
+      .withLightness((HSLColor.fromColor(c).lightness - 0.12).clamp(0.0, 1.0))
+      .toColor();
 }
 
 class _PageBadge extends StatelessWidget {
@@ -658,17 +730,20 @@ class _PageBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        width: 28,
-        height: 24,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(3),
-        ),
-        child: Text('$pageNumber',
-            style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w800,
-                color: headerColor)),
-      );
+    width: 28,
+    height: 24,
+    alignment: Alignment.center,
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(3),
+    ),
+    child: Text(
+      '$pageNumber',
+      style: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w800,
+        color: headerColor,
+      ),
+    ),
+  );
 }

@@ -17,7 +17,8 @@ import 'package:orbweaver/widgets/section_bracket.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
 
 /// A one-page topic whose only block is the given YAML block body.
-String _topicYaml(String blockYaml) => '''
+String _topicYaml(String blockYaml) =>
+    '''
 topic:
   id: "t"
   title: "T"
@@ -28,20 +29,27 @@ topic:
 $blockYaml
 ''';
 
-Future<Topic> _pump(WidgetTester tester, String blockYaml,
-    {Color accent = const Color(0xFFDD7E6B)}) async {
+Future<Topic> _pump(
+  WidgetTester tester,
+  String blockYaml, {
+  Color accent = const Color(0xFFDD7E6B),
+}) async {
   final topic = Topic.fromYamlString(_topicYaml(blockYaml));
-  final theme = TopicTheme(resolvePalette([
-    {'accent': accent},
-    {for (final e in topic.ownPaletteArgb.entries) e.key: Color(e.value)},
-  ]));
-  await tester.pumpWidget(MaterialApp(
-    home: Scaffold(
-      body: SingleChildScrollView(
-        child: TopicPageBody(page: topic.pages.first, theme: theme),
+  final theme = TopicTheme(
+    resolvePalette([
+      {'accent': accent},
+      {for (final e in topic.ownPaletteArgb.entries) e.key: Color(e.value)},
+    ]),
+  );
+  await tester.pumpWidget(
+    MaterialApp(
+      home: Scaffold(
+        body: SingleChildScrollView(
+          child: TopicPageBody(page: topic.pages.first, theme: theme),
+        ),
       ),
     ),
-  ));
+  );
   return topic;
 }
 
@@ -51,8 +59,9 @@ SectionBracket _bracket(WidgetTester tester) =>
 
 void main() {
   group('band_callout', () {
-    testWidgets('peds band parses and renders pink, not the chapter accent',
-        (tester) async {
+    testWidgets('peds band parses and renders pink, not the chapter accent', (
+      tester,
+    ) async {
       // Salmon accent = the Burns chapter, where print still uses pink.
       final topic = await _pump(tester, '''
     - type: "band_callout"
@@ -74,8 +83,9 @@ void main() {
       expect(find.textContaining('Peds Reference'), findsOneWidget);
     });
 
-    testWidgets('critical_care band renders lavender with its own label',
-        (tester) async {
+    testWidgets('critical_care band renders lavender with its own label', (
+      tester,
+    ) async {
       final topic = await _pump(tester, '''
     - type: "band_callout"
       band: "critical_care"
@@ -93,8 +103,9 @@ void main() {
       expect(bracket.title, 'Critical Care');
     });
 
-    testWidgets('an explicit title overrides the default label',
-        (tester) async {
+    testWidgets('an explicit title overrides the default label', (
+      tester,
+    ) async {
       await _pump(tester, '''
     - type: "band_callout"
       band: "peds"
@@ -105,8 +116,9 @@ void main() {
       expect(_bracket(tester).title, 'Infants');
     });
 
-    testWidgets('an empty title gives a bare band with no heading',
-        (tester) async {
+    testWidgets('an empty title gives a bare band with no heading', (
+      tester,
+    ) async {
       // The print's line-level use: a single tinted line inside somebody
       // else's section (PDF p.79's "Etomidate is not appropriate under 10").
       await _pump(tester, '''
@@ -121,8 +133,9 @@ void main() {
       expect(bracket.bodyFill, kRoleDefaults['peds_band_fill']);
     });
 
-    testWidgets('a block-level palette override re-skins the band',
-        (tester) async {
+    testWidgets('a block-level palette override re-skins the band', (
+      tester,
+    ) async {
       // Proves the colours are palette roles, not constants at the use site.
       await _pump(tester, '''
     - type: "band_callout"

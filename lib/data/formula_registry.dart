@@ -128,7 +128,11 @@ FormulaResult _adrogueMadias(Map<String, dynamic> v) {
   final wt = _num(v, 'weight');
   final sex = _sel(v, 'sex');
   final fluid = _sel(v, 'fluid');
-  if (serumNa == null || wt == null || wt <= 0 || sex == null || fluid == null) {
+  if (serumNa == null ||
+      wt == null ||
+      wt <= 0 ||
+      sex == null ||
+      fluid == null) {
     return const FormulaResult.empty();
   }
   // (Na+, K+) of each infusate, mEq/L.
@@ -168,7 +172,8 @@ FormulaResult _hba1cEag(Map<String, dynamic> v) {
       value: fmtNum(mgdl, decimals: 0),
       unit: 'mg/dL',
       primary: true,
-      interpretation: '≈ ${fmtNum(mmol, decimals: 1)} mmol/L (ADAG). Population estimate.',
+      interpretation:
+          '≈ ${fmtNum(mmol, decimals: 1)} mmol/L (ADAG). Population estimate.',
     ),
   ]);
 }
@@ -263,16 +268,54 @@ FormulaResult _glasgowBlatchford(Map<String, dynamic> v) {
 // 3.5 mmol/L, HDL 1.3 mmol/L, SBP 130. Cholesterol mg/dL → mmol/L ÷ 38.67.
 
 const List<double> _preventAscvdFemale = [
-  0.719883, 0.1176967, -0.151185, -0.0835358, 0.3592852, 0.8348585, 0.4831078,
-  0.0, 0.0, 0.4864619, 0.0397779, 0.2265309, -0.0592374, -0.0395762, 0.0844423,
-  -0.0567839, 0.0325692, -0.1035985, -0.2417542, -0.0791142, 0.0, -0.1671492,
+  0.719883,
+  0.1176967,
+  -0.151185,
+  -0.0835358,
+  0.3592852,
+  0.8348585,
+  0.4831078,
+  0.0,
+  0.0,
+  0.4864619,
+  0.0397779,
+  0.2265309,
+  -0.0592374,
+  -0.0395762,
+  0.0844423,
+  -0.0567839,
+  0.0325692,
+  -0.1035985,
+  -0.2417542,
+  -0.0791142,
+  0.0,
+  -0.1671492,
   -3.819975,
 ];
 const List<double> _preventAscvdMale = [
-  0.7099847, 0.1658663, -0.1144285, -0.2837212, 0.3239977, 0.7189597,
-  0.3956973, 0.0, 0.0, 0.3690075, 0.0203619, 0.2036522, -0.0865581, -0.0322916,
-  0.114563, -0.0300005, 0.0232747, -0.0927024, -0.2018525, -0.0970527, 0.0,
-  -0.1217081, -3.500655,
+  0.7099847,
+  0.1658663,
+  -0.1144285,
+  -0.2837212,
+  0.3239977,
+  0.7189597,
+  0.3956973,
+  0.0,
+  0.0,
+  0.3690075,
+  0.0203619,
+  0.2036522,
+  -0.0865581,
+  -0.0322916,
+  0.114563,
+  -0.0300005,
+  0.0232747,
+  -0.0927024,
+  -0.2018525,
+  -0.0970527,
+  0.0,
+  -0.1217081,
+  -3.500655,
 ];
 
 FormulaResult _preventAscvd(Map<String, dynamic> v) {
@@ -307,9 +350,28 @@ FormulaResult _preventAscvd(Map<String, dynamic> v) {
   final hdlC = (hdlM - 1.3) / 0.3;
 
   final x = <double>[
-    a, nonHdlC, hdlC, sbpLow, sbpHigh, dm, smoke, 0, 0, egfrLow, egfrHigh,
-    bpTx, statin, bpTx * sbpHigh, statin * nonHdlC,
-    a * nonHdlC, a * hdlC, a * sbpHigh, a * dm, a * smoke, 0, a * egfrLow,
+    a,
+    nonHdlC,
+    hdlC,
+    sbpLow,
+    sbpHigh,
+    dm,
+    smoke,
+    0,
+    0,
+    egfrLow,
+    egfrHigh,
+    bpTx,
+    statin,
+    bpTx * sbpHigh,
+    statin * nonHdlC,
+    a * nonHdlC,
+    a * hdlC,
+    a * sbpHigh,
+    a * dm,
+    a * smoke,
+    0,
+    a * egfrLow,
     1.0,
   ];
   final b = sex == 'F' ? _preventAscvdFemale : _preventAscvdMale;
@@ -363,7 +425,8 @@ FormulaResult _lille(Map<String, dynamic> v) {
     return const FormulaResult.empty();
   }
   final renal = cr > 1.3 ? 1 : 0;
-  final r = 3.19 -
+  final r =
+      3.19 -
       0.101 * age +
       1.47 * alb +
       0.28215 * (bili0 - bili7) -
@@ -479,24 +542,28 @@ FormulaResult _oxygenation(Map<String, dynamic> v) {
       interp = '< 100 — severe ARDS range.';
       sev = FormulaSeverity.alert;
     }
-    out.add(FormulaOutput(
-      label: 'P/F ratio',
-      value: fmtNum(pf, decimals: 0),
-      primary: true,
-      severity: sev,
-      interpretation: interp,
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'P/F ratio',
+        value: fmtNum(pf, decimals: 0),
+        primary: true,
+        severity: sev,
+        interpretation: interp,
+      ),
+    );
   }
 
   final spo2 = _num(v, 'spo2');
   if (spo2 != null) {
     final sf = spo2 / fio2;
-    out.add(FormulaOutput(
-      label: 'SpO₂/FiO₂ ratio',
-      value: fmtNum(sf, decimals: 0),
-      interpretation:
-          'Surrogate when no ABG & SpO₂ ≤ 97% (≈ 315 mild / 235 mod / 148 severe).',
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'SpO₂/FiO₂ ratio',
+        value: fmtNum(sf, decimals: 0),
+        interpretation:
+            'Surrogate when no ABG & SpO₂ ≤ 97% (≈ 315 mild / 235 mod / 148 severe).',
+      ),
+    );
   }
   return out.isEmpty ? const FormulaResult.empty() : FormulaResult(out);
 }
@@ -521,15 +588,17 @@ FormulaResult _ddayAge(Map<String, dynamic> v) {
   final measured = _num(v, 'measured');
   if (measured != null) {
     final positive = measured >= threshold;
-    out.add(FormulaOutput(
-      label: 'Measured D-dimer',
-      value: fmtNum(measured, decimals: 0),
-      unit: 'µg/L FEU',
-      severity: positive ? FormulaSeverity.warn : FormulaSeverity.none,
-      interpretation: positive
-          ? '≥ cutoff — cannot exclude; imaging indicated.'
-          : '< cutoff — VTE excluded (with low/intermediate pretest probability).',
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'Measured D-dimer',
+        value: fmtNum(measured, decimals: 0),
+        unit: 'µg/L FEU',
+        severity: positive ? FormulaSeverity.warn : FormulaSeverity.none,
+        interpretation: positive
+            ? '≥ cutoff — cannot exclude; imaging indicated.'
+            : '< cutoff — VTE excluded (with low/intermediate pretest probability).',
+      ),
+    );
   }
   return FormulaResult(out);
 }
@@ -691,20 +760,24 @@ FormulaResult _urinaryIndices(Map<String, dynamic> v) {
       severity: FormulaSeverity.none,
       interpretation: prerenal
           ? '< 1% suggests prerenal.'
-          : (fena > 2 ? '> 2% suggests intrinsic (ATN).' : '1–2% indeterminate.'),
+          : (fena > 2
+                ? '> 2% suggests intrinsic (ATN).'
+                : '1–2% indeterminate.'),
     ),
   ];
   final sUrea = _num(v, 'serum_urea');
   final uUrea = _num(v, 'urine_urea');
   if (sUrea != null && uUrea != null && sUrea > 0) {
     final feurea = (uUrea * sCr) / (sUrea * uCr) * 100;
-    out.add(FormulaOutput(
-      label: 'FEUrea',
-      value: fmtNum(feurea, decimals: 1),
-      unit: '%',
-      interpretation:
-          '< 35% suggests prerenal — more reliable than FENa on diuretics.',
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'FEUrea',
+        value: fmtNum(feurea, decimals: 1),
+        unit: '%',
+        interpretation:
+            '< 35% suggests prerenal — more reliable than FENa on diuretics.',
+      ),
+    );
   }
   return FormulaResult(out);
 }
@@ -806,7 +879,8 @@ FormulaResult _parkland(Map<String, dynamic> v) {
       value: fmtNum(firstHalf * 2),
       unit: 'mL',
       primary: true,
-      interpretation: 'Lactated Ringer\'s; titrate to urine output 0.5 mL/kg/h.',
+      interpretation:
+          'Lactated Ringer\'s; titrate to urine output 0.5 mL/kg/h.',
     ),
     FormulaOutput(
       label: 'First 8 h (from burn time)',
@@ -852,7 +926,8 @@ FormulaResult _meld3(Map<String, dynamic> v) {
   if (alb < 1.5) alb = 1.5;
   if (alb > 3.5) alb = 3.5;
 
-  final score = 1.33 * (female ? 1 : 0) +
+  final score =
+      1.33 * (female ? 1 : 0) +
       4.56 * math.log(bili) +
       0.82 * (137 - na) -
       0.24 * (137 - na) * math.log(bili) +
@@ -924,9 +999,15 @@ FormulaResult _qtc(Map<String, dynamic> v) {
       interpretation: 'Overestimates at high HR, underestimates at low HR.',
     ),
     FormulaOutput(
-        label: 'QTc (Framingham)', value: fmtNum(framingham, decimals: 0), unit: 'ms'),
+      label: 'QTc (Framingham)',
+      value: fmtNum(framingham, decimals: 0),
+      unit: 'ms',
+    ),
     FormulaOutput(
-        label: 'QTc (Hodges)', value: fmtNum(hodges, decimals: 0), unit: 'ms'),
+      label: 'QTc (Hodges)',
+      value: fmtNum(hodges, decimals: 0),
+      unit: 'ms',
+    ),
   ]);
 }
 
@@ -971,30 +1052,37 @@ FormulaResult _renalFunction(Map<String, dynamic> v) {
   final wt = _num(v, 'weight');
   if (wt != null && wt > 0) {
     final crcl = (140 - age) * wt * (female ? 0.85 : 1.0) / (72 * scr);
-    out.add(FormulaOutput(
-      label: 'CrCl (Cockcroft-Gault)',
-      value: fmtNum(crcl),
-      unit: 'mL/min',
-      primary: true,
-      interpretation: 'Use for drug dosing (matches legacy label cut-points).',
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'CrCl (Cockcroft-Gault)',
+        value: fmtNum(crcl),
+        unit: 'mL/min',
+        primary: true,
+        interpretation:
+            'Use for drug dosing (matches legacy label cut-points).',
+      ),
+    );
   }
 
   // CKD-EPI 2021 creatinine, race-free (mL/min/1.73m²).
   final kappa = female ? 0.7 : 0.9;
   final alpha = female ? -0.241 : -0.302;
   final ratio = scr / kappa;
-  final egfr = 142 *
+  final egfr =
+      142 *
       _pow(ratio < 1 ? ratio : 1, alpha) *
       _pow(ratio > 1 ? ratio : 1, -1.200) *
       _pow(0.9938, age) *
       (female ? 1.012 : 1.0);
-  out.add(FormulaOutput(
-    label: 'eGFR (CKD-EPI 2021, race-free)',
-    value: fmtNum(egfr),
-    unit: 'mL/min/1.73m²',
-    interpretation: 'For CKD staging. De-index (×BSA/1.73) before drug dosing.',
-  ));
+  out.add(
+    FormulaOutput(
+      label: 'eGFR (CKD-EPI 2021, race-free)',
+      value: fmtNum(egfr),
+      unit: 'mL/min/1.73m²',
+      interpretation:
+          'For CKD staging. De-index (×BSA/1.73) before drug dosing.',
+    ),
+  );
   return FormulaResult(out);
 }
 
@@ -1003,7 +1091,8 @@ FormulaResult _renalFunction(Map<String, dynamic> v) {
 FormulaResult _map(Map<String, dynamic> v) {
   final sbp = _num(v, 'sbp');
   final dbp = _num(v, 'dbp');
-  if (sbp == null || dbp == null || sbp < dbp) return const FormulaResult.empty();
+  if (sbp == null || dbp == null || sbp < dbp)
+    return const FormulaResult.empty();
   final map = dbp + (sbp - dbp) / 3;
   return FormulaResult([
     FormulaOutput(
@@ -1049,7 +1138,8 @@ FormulaResult _anionGap(Map<String, dynamic> v) {
   final na = _num(v, 'sodium');
   final cl = _num(v, 'chloride');
   final hco3 = _num(v, 'bicarbonate');
-  if (na == null || cl == null || hco3 == null) return const FormulaResult.empty();
+  if (na == null || cl == null || hco3 == null)
+    return const FormulaResult.empty();
   final ag = na - (cl + hco3);
   final high = ag > 12;
   final out = <FormulaOutput>[
@@ -1068,14 +1158,16 @@ FormulaResult _anionGap(Map<String, dynamic> v) {
   if (albumin != null && albumin > 0) {
     final corrected = ag + 2.5 * (4.0 - albumin);
     final cHigh = corrected > 12;
-    out.add(FormulaOutput(
-      label: 'Albumin-corrected AG',
-      value: fmtNum(corrected),
-      unit: 'mEq/L',
-      severity: cHigh ? FormulaSeverity.warn : FormulaSeverity.none,
-      interpretation:
-          'Unmasks occult gap when albumin is low — not a lactate surrogate.',
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'Albumin-corrected AG',
+        value: fmtNum(corrected),
+        unit: 'mEq/L',
+        severity: cHigh ? FormulaSeverity.warn : FormulaSeverity.none,
+        interpretation:
+            'Unmasks occult gap when albumin is low — not a lactate surrogate.',
+      ),
+    );
   }
   return FormulaResult(out);
 }
@@ -1106,15 +1198,17 @@ FormulaResult _aaGradient(Map<String, dynamic> v) {
   if (age != null && age > 0) {
     final expected = age / 4 + 4;
     final elevated = aa > expected;
-    out.add(FormulaOutput(
-      label: 'Expected (age-adjusted)',
-      value: '≤ ${fmtNum(expected)}',
-      unit: 'mmHg',
-      severity: elevated ? FormulaSeverity.warn : FormulaSeverity.none,
-      interpretation: elevated
-          ? 'Elevated for age (age/4 + 4).'
-          : 'Within age-expected range (age/4 + 4).',
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'Expected (age-adjusted)',
+        value: '≤ ${fmtNum(expected)}',
+        unit: 'mmHg',
+        severity: elevated ? FormulaSeverity.warn : FormulaSeverity.none,
+        interpretation: elevated
+            ? 'Elevated for age (age/4 + 4).'
+            : 'Within age-expected range (age/4 + 4).',
+      ),
+    );
   }
   return FormulaResult(out);
 }
@@ -1133,7 +1227,8 @@ FormulaResult _winters(Map<String, dynamic> v) {
       value: '${fmtNum(lo)}–${fmtNum(hi)}',
       unit: 'mmHg',
       primary: true,
-      interpretation: 'Adequate respiratory compensation in metabolic acidosis.',
+      interpretation:
+          'Adequate respiratory compensation in metabolic acidosis.',
     ),
   ];
   final measured = _num(v, 'measured_pco2');
@@ -1150,13 +1245,15 @@ FormulaResult _winters(Map<String, dynamic> v) {
       interp = 'Measured within expected → appropriate compensation.';
       sev = FormulaSeverity.none;
     }
-    out.add(FormulaOutput(
-      label: 'Measured pCO₂',
-      value: fmtNum(measured),
-      unit: 'mmHg',
-      severity: sev,
-      interpretation: interp,
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'Measured pCO₂',
+        value: fmtNum(measured),
+        unit: 'mmHg',
+        severity: sev,
+        interpretation: interp,
+      ),
+    );
   }
   return FormulaResult(out);
 }
@@ -1184,12 +1281,15 @@ FormulaResult _idealBodyWeight(Map<String, dynamic> v) {
   final actual = _num(v, 'weight');
   if (actual != null && actual > 0) {
     final adj = ibw + 0.4 * (actual - ibw);
-    out.add(FormulaOutput(
-      label: 'Adjusted body weight',
-      value: fmtNum(adj),
-      unit: 'kg',
-      interpretation: 'IBW + 0.4 × (actual − IBW); use per drug-specific guidance.',
-    ));
+    out.add(
+      FormulaOutput(
+        label: 'Adjusted body weight',
+        value: fmtNum(adj),
+        unit: 'kg',
+        interpretation:
+            'IBW + 0.4 × (actual − IBW); use per drug-specific guidance.',
+      ),
+    );
   }
   return FormulaResult(out);
 }

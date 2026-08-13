@@ -15,14 +15,14 @@ Topic _load(String file) =>
     Topic.fromYamlString(File('$_dir/$file').readAsStringSync());
 
 Widget _wrap(Widget child) => MaterialApp(
-      home: Scaffold(
-        body: SizedBox(
-          width: 375,
-          height: 667,
-          child: SingleChildScrollView(child: child),
-        ),
-      ),
-    );
+  home: Scaffold(
+    body: SizedBox(
+      width: 375,
+      height: 667,
+      child: SingleChildScrollView(child: child),
+    ),
+  ),
+);
 
 void main() {
   testWidgets('CURB-65: toggling criteria moves total 0→2 and band', (t) async {
@@ -47,8 +47,9 @@ void main() {
     expect(find.textContaining('Mild'), findsOneWidget);
   });
 
-  testWidgets('CIWA-Ar scale: stepper taps update anchor + total/band',
-      (t) async {
+  testWidgets('CIWA-Ar scale: stepper taps update anchor + total/band', (
+    t,
+  ) async {
     await t.pumpWidget(_wrap(TopicView(topic: _load('calc_ciwa_ar.yaml'))));
     expect(find.byType(ScoreBlockView), findsOneWidget);
     expect(find.textContaining('Minimal'), findsOneWidget);

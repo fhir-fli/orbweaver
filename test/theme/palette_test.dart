@@ -41,8 +41,7 @@ void main() {
     test('empty layers → defaults + neutral accent', () {
       final p = resolvePalette([]);
       expect(p['accent'], kNeutralAccent);
-      expect(p['severity_severe_tile'],
-          kRoleDefaults['severity_severe_tile']);
+      expect(p['severity_severe_tile'], kRoleDefaults['severity_severe_tile']);
       expect(p['provider_emt'], kRoleDefaults['provider_emt']);
     });
 
@@ -82,7 +81,10 @@ void main() {
 
     test('explicit accent_fill override is preserved, not re-derived', () {
       final p = resolvePalette([
-        {'accent': const Color(0xFFD81B60), 'accent_fill': const Color(0xFF00FFFF)},
+        {
+          'accent': const Color(0xFFD81B60),
+          'accent_fill': const Color(0xFF00FFFF),
+        },
       ]);
       expect(p['accent_fill'], const Color(0xFF00FFFF));
     });

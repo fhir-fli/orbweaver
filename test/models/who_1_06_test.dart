@@ -6,8 +6,8 @@ import 'package:orbweaver/models/topic.dart';
 /// Structural parse checks for WHO §1.6 poisoning topics.
 void main() {
   Topic load(String file) => Topic.fromYamlString(
-        File('assets/books/who_imci/topics/$file').readAsStringSync(),
-      );
+    File('assets/books/who_imci/topics/$file').readAsStringSync(),
+  );
 
   test('§1.6 overview parses', () {
     final t = load('who_1_06_poisoning.yaml');
@@ -15,16 +15,15 @@ void main() {
     expect(t.pageNumber, 26);
   });
 
-  test('§1.6.1 ingested: charcoal Table 5 + red contraindications callout',
-      () {
+  test('§1.6.1 ingested: charcoal Table 5 + red contraindications callout', () {
     final t = load('who_1_06_1_ingested.yaml');
     expect(t.id, 'who-imci-1-6-1-ingested');
     final table = t.blocks.whereType<TableBlock>().single;
     expect(table.rows.length, 3); // ≤1y, 1–12y, adolescents/adults
 
-    final danger = t.blocks
-        .whereType<ProseBlock>()
-        .firstWhere((b) => b.title!.contains('Contraindications'));
+    final danger = t.blocks.whereType<ProseBlock>().firstWhere(
+      (b) => b.title!.contains('Contraindications'),
+    );
     expect(danger.callout, isTrue);
     expect(danger.ownPaletteArgb['alert'], 0xFFD32F2F);
   });
@@ -37,7 +36,10 @@ void main() {
   test('§1.6.4 specific poisons covers the 8 agents', () {
     final t = load('who_1_06_4_specific.yaml');
     expect(t.id, 'who-imci-1-6-4-specific');
-    final titles = t.blocks.whereType<ProseBlock>().map((b) => b.title).join(' ');
+    final titles = t.blocks
+        .whereType<ProseBlock>()
+        .map((b) => b.title)
+        .join(' ');
     for (final agent in [
       'Corrosives',
       'Petroleum',

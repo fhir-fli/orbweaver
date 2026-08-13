@@ -24,12 +24,12 @@ class ProcedureCardBlockView extends StatelessWidget {
   final TopicTheme theme;
 
   Color _scopeColor(String? scope) => switch (scope) {
-        'E' => theme.providerEmt,
-        'P' => theme.providerParamedic,
-        'A' => theme.providerAls,
-        'I' => theme.providerIntermediate,
-        _ => theme.providerAny,
-      };
+    'E' => theme.providerEmt,
+    'P' => theme.providerParamedic,
+    'A' => theme.providerAls,
+    'I' => theme.providerIntermediate,
+    _ => theme.providerAny,
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -49,13 +49,17 @@ class ProcedureCardBlockView extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(8, 6, 10, 6),
             decoration: BoxDecoration(
               color: theme.procedureHeaderFill,
-              border:
-                  Border(bottom: BorderSide(color: theme.boxBorder, width: 1.5)),
+              border: Border(
+                bottom: BorderSide(color: theme.boxBorder, width: 1.5),
+              ),
             ),
             child: Row(
               children: [
                 _ScopeChip(
-                    letter: block.scope, color: _scopeColor(block.scope), size: 26),
+                  letter: block.scope,
+                  color: _scopeColor(block.scope),
+                  size: 26,
+                ),
                 const SizedBox(width: 8),
                 Expanded(
                   child: Text(
@@ -140,17 +144,19 @@ class ProcedureCardBlockView extends StatelessWidget {
         s = s.substring(m.end);
       }
 
-      out.add(_Step(
-        label: label,
-        bullet: bullet,
-        note: note,
-        standalone: standalone,
-        scope: scope,
-        dashed: dashed,
-        highlight: highlight,
-        ccHighlight: ccHighlight,
-        text: s,
-      ));
+      out.add(
+        _Step(
+          label: label,
+          bullet: bullet,
+          note: note,
+          standalone: standalone,
+          scope: scope,
+          dashed: dashed,
+          highlight: highlight,
+          ccHighlight: ccHighlight,
+          text: s,
+        ),
+      );
     }
     return out;
   }
@@ -189,12 +195,12 @@ class _StepRow extends StatelessWidget {
   final TopicTheme theme;
 
   Color _scopeColor(String? scope) => switch (scope) {
-        'E' => theme.providerEmt,
-        'P' => theme.providerParamedic,
-        'A' => theme.providerAls,
-        'I' => theme.providerIntermediate,
-        _ => theme.providerAny,
-      };
+    'E' => theme.providerEmt,
+    'P' => theme.providerParamedic,
+    'A' => theme.providerAls,
+    'I' => theme.providerIntermediate,
+    _ => theme.providerAny,
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -224,9 +230,7 @@ class _StepRow extends StatelessWidget {
     if (step.highlight || step.ccHighlight) {
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 1),
-        color: step.ccHighlight
-            ? theme.ccBandFill
-            : theme.pedsBandFill,
+        color: step.ccHighlight ? theme.ccBandFill : theme.pedsBandFill,
         padding: const EdgeInsets.symmetric(vertical: 1),
         child: row,
       );
@@ -247,7 +251,10 @@ class _StepRow extends StatelessWidget {
             '${step.label}.',
             textAlign: TextAlign.right,
             style: const TextStyle(
-                fontSize: 13.5, fontWeight: FontWeight.w700, color: Colors.black87),
+              fontSize: 13.5,
+              fontWeight: FontWeight.w700,
+              color: Colors.black87,
+            ),
           ),
         ),
       );
@@ -256,8 +263,10 @@ class _StepRow extends StatelessWidget {
       // Indent sub-bullets under the number column, then a dash marker.
       return const Padding(
         padding: EdgeInsets.only(left: 26, top: 1, right: 2),
-        child: Text('–',
-            style: TextStyle(fontSize: 13.5, color: Colors.black54)),
+        child: Text(
+          '–',
+          style: TextStyle(fontSize: 13.5, color: Colors.black54),
+        ),
       );
     }
     // Standalone scope note / list row — minimal indent, no marker.
@@ -280,7 +289,10 @@ class _StepRow extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 1, right: 6),
             child: _ScopeChip(
-                letter: step.scope, color: _scopeColor(step.scope), size: 19),
+              letter: step.scope,
+              color: _scopeColor(step.scope),
+              size: 19,
+            ),
           ),
           Expanded(child: text),
         ],
@@ -293,8 +305,7 @@ class _StepRow extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.only(left: 2, top: 1),
         child: CustomPaint(
-          painter: _DashedBorderPainter(
-              color: theme.dashRule),
+          painter: _DashedBorderPainter(color: theme.dashRule),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(6, 3, 6, 3),
             child: content,
@@ -309,7 +320,11 @@ class _StepRow extends StatelessWidget {
 /// The provider-scope letter chip (E / A / I), or a blank neutral chip when the
 /// procedure is basic / all-level (matching the printed grey index cells).
 class _ScopeChip extends StatelessWidget {
-  const _ScopeChip({required this.letter, required this.color, required this.size});
+  const _ScopeChip({
+    required this.letter,
+    required this.color,
+    required this.size,
+  });
 
   final String? letter;
   final Color color;
@@ -358,8 +373,10 @@ class _ProcedureImage extends StatelessWidget {
         path,
         fit: BoxFit.contain,
         errorBuilder: (context, error, stack) => const Center(
-          child: Text('[image]',
-              style: TextStyle(fontSize: 9, color: Colors.black38)),
+          child: Text(
+            '[image]',
+            style: TextStyle(fontSize: 9, color: Colors.black38),
+          ),
         ),
       ),
     );

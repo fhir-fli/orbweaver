@@ -23,12 +23,12 @@ enum TopicCategory {
   criticalCare;
 
   static TopicCategory fromString(String? s) => switch (s) {
-        'universal' => universal,
-        'medical' => medical,
-        'trauma' => trauma,
-        'critical_care' => criticalCare,
-        _ => universal,
-      };
+    'universal' => universal,
+    'medical' => medical,
+    'trauma' => trauma,
+    'critical_care' => criticalCare,
+    _ => universal,
+  };
 }
 
 enum NodeShape {
@@ -38,12 +38,12 @@ enum NodeShape {
   roundedRectangle;
 
   static NodeShape fromString(String? s) => switch (s) {
-        'stadium' => stadium,
-        'diamond' => diamond,
-        'rectangle' => rectangle,
-        'rounded_rectangle' => roundedRectangle,
-        _ => rectangle,
-      };
+    'stadium' => stadium,
+    'diamond' => diamond,
+    'rectangle' => rectangle,
+    'rounded_rectangle' => roundedRectangle,
+    _ => rectangle,
+  };
 }
 
 enum ActionKind {
@@ -55,14 +55,14 @@ enum ActionKind {
   communication;
 
   static ActionKind fromString(String? s) => switch (s) {
-        'procedure' => procedure,
-        'medication_administration' => medicationAdministration,
-        'diagnostic' => diagnostic,
-        'assessment' => assessment,
-        'referral' => referral,
-        'communication' => communication,
-        _ => procedure,
-      };
+    'procedure' => procedure,
+    'medication_administration' => medicationAdministration,
+    'diagnostic' => diagnostic,
+    'assessment' => assessment,
+    'referral' => referral,
+    'communication' => communication,
+    _ => procedure,
+  };
 }
 
 enum ProviderLevel {
@@ -73,12 +73,12 @@ enum ProviderLevel {
   any;
 
   static ProviderLevel fromString(String? s) => switch (s) {
-        'A' => als,
-        'E' => emt,
-        'I' => intermediate,
-        'P' => paramedic,
-        _ => any,
-      };
+    'A' => als,
+    'E' => emt,
+    'I' => intermediate,
+    'P' => paramedic,
+    _ => any,
+  };
 }
 
 enum DosePopulation {
@@ -87,11 +87,11 @@ enum DosePopulation {
   both;
 
   static DosePopulation fromString(String? s) => switch (s) {
-        'adult' => adult,
-        'peds' => peds,
-        'both' => both,
-        _ => both,
-      };
+    'adult' => adult,
+    'peds' => peds,
+    'both' => both,
+    _ => both,
+  };
 }
 
 /// WHO IMCI-style row severity coloring for table rows.
@@ -102,11 +102,11 @@ enum RowSeverity {
   nonUrgent; // green — routine
 
   static RowSeverity fromString(String? s) => switch (s) {
-        'emergency' => emergency,
-        'priority' => priority,
-        'non_urgent' => nonUrgent,
-        _ => none,
-      };
+    'emergency' => emergency,
+    'priority' => priority,
+    'non_urgent' => nonUrgent,
+    _ => none,
+  };
 }
 
 /// Size hint for image blocks. The renderer picks a concrete width.
@@ -117,12 +117,12 @@ enum ImageSize {
   full;
 
   static ImageSize fromString(String? s) => switch (s) {
-        'small' => small,
-        'medium' => medium,
-        'large' => large,
-        'full' => full,
-        _ => medium,
-      };
+    'small' => small,
+    'medium' => medium,
+    'large' => large,
+    'full' => full,
+    _ => medium,
+  };
 }
 
 /// Which answer (yes or no) in a cascade step leads to the terminal action.
@@ -132,17 +132,17 @@ enum YesNo {
   no;
 
   static YesNo fromString(String? s) => switch (s) {
-        'yes' => yes,
-        'no' => no,
-        _ => yes,
-      };
+    'yes' => yes,
+    'no' => no,
+    _ => yes,
+  };
 
   YesNo get opposite => this == yes ? no : yes;
 
   String get label => switch (this) {
-        yes => 'Yes',
-        no => 'No',
-      };
+    yes => 'Yes',
+    no => 'No',
+  };
 }
 
 enum FlowchartVariant {
@@ -196,14 +196,14 @@ enum FlowchartVariant {
   cycle;
 
   static FlowchartVariant fromString(String? s) => switch (s) {
-        'severity' => severity,
-        'cascade' => cascade,
-        'linear' => linear,
-        'differential' => differential,
-        'algorithm' => algorithm,
-        'cycle' => cycle,
-        _ => severity,
-      };
+    'severity' => severity,
+    'cascade' => cascade,
+    'linear' => linear,
+    'differential' => differential,
+    'algorithm' => algorithm,
+    'cycle' => cycle,
+    _ => severity,
+  };
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -225,13 +225,12 @@ class TopicAction {
   });
 
   factory TopicAction.fromYaml(Map<dynamic, dynamic> map) => TopicAction(
-        text: map['text'] as String,
-        kind: ActionKind.fromString(map['kind'] as String?),
-        providerLevel:
-            ProviderLevel.fromString(map['provider_level'] as String?),
-        timing: map['timing'] as String?,
-        condition: map['condition'] as String?,
-      );
+    text: map['text'] as String,
+    kind: ActionKind.fromString(map['kind'] as String?),
+    providerLevel: ProviderLevel.fromString(map['provider_level'] as String?),
+    timing: map['timing'] as String?,
+    condition: map['condition'] as String?,
+  );
 
   final String text;
   final ActionKind kind;
@@ -264,16 +263,16 @@ class TopicBranch {
   });
 
   factory TopicBranch.fromYaml(Map<dynamic, dynamic> map) => TopicBranch(
-        id: map['id'] as String,
-        label: map['label'] as String,
-        criteria: _stringList(map['criteria']),
-        actions: _mapList(map['actions'], TopicAction.fromYaml),
-        severity: RowSeverity.fromString(map['severity'] as String?),
-        continuation: map['continuation'] != null
-            ? BranchContinuation.fromYaml(map['continuation'] as Map)
-            : null,
-        continues: map['continues'] as bool? ?? false,
-      );
+    id: map['id'] as String,
+    label: map['label'] as String,
+    criteria: _stringList(map['criteria']),
+    actions: _mapList(map['actions'], TopicAction.fromYaml),
+    severity: RowSeverity.fromString(map['severity'] as String?),
+    continuation: map['continuation'] != null
+        ? BranchContinuation.fromYaml(map['continuation'] as Map)
+        : null,
+    continues: map['continues'] as bool? ?? false,
+  );
 
   final String id;
   final String label;
@@ -412,12 +411,12 @@ class DoseRow {
   });
 
   factory DoseRow.fromYaml(Map<dynamic, dynamic> map) => DoseRow(
-        drug: map['drug'] as String,
-        dose: map['dose'] as String,
-        route: map['route'] as String,
-        frequency: map['frequency'] as String,
-        population: DosePopulation.fromString(map['population'] as String?),
-      );
+    drug: map['drug'] as String,
+    dose: map['dose'] as String,
+    route: map['route'] as String,
+    frequency: map['frequency'] as String,
+    population: DosePopulation.fromString(map['population'] as String?),
+  );
 
   final String drug;
   final String dose;
@@ -431,9 +430,9 @@ class FlowNode {
   const FlowNode({required this.text, required this.shape});
 
   factory FlowNode.fromYaml(Map<dynamic, dynamic> map) => FlowNode(
-        text: map['text'] as String,
-        shape: NodeShape.fromString(map['shape'] as String?),
-      );
+    text: map['text'] as String,
+    shape: NodeShape.fromString(map['shape'] as String?),
+  );
 
   final String text;
   final NodeShape shape;
@@ -478,8 +477,10 @@ class SeverityFlowchart {
     }
     return SeverityFlowchart(
       entryChain: entryChain,
-      preDecisionActions:
-          _mapList(map['pre_decision_actions'], TopicAction.fromYaml),
+      preDecisionActions: _mapList(
+        map['pre_decision_actions'],
+        TopicAction.fromYaml,
+      ),
       decision: map['decision'] != null
           ? FlowNode.fromYaml(map['decision'] as Map)
           : null,
@@ -530,9 +531,9 @@ class WarningCallout {
   const WarningCallout({required this.type, required this.text});
 
   factory WarningCallout.fromYaml(Map<dynamic, dynamic> map) => WarningCallout(
-        type: WarningType.fromString(map['type'] as String?),
-        text: map['text'] as String,
-      );
+    type: WarningType.fromString(map['type'] as String?),
+    text: map['text'] as String,
+  );
 
   final WarningType type;
   final String text;
@@ -550,10 +551,10 @@ enum WarningType {
   caution;
 
   static WarningType fromString(String? s) => switch (s) {
-        'safety' => safety,
-        'caution' => caution,
-        _ => safety,
-      };
+    'safety' => safety,
+    'caution' => caution,
+    _ => safety,
+  };
 }
 
 /// One step in a linear flowchart — either a content box (a titled
@@ -694,8 +695,10 @@ class DifferentialFlowchart {
     }
     return DifferentialFlowchart(
       entryChain: entryChain,
-      preDecisionActions:
-          _mapList(map['pre_decision_actions'], TopicAction.fromYaml),
+      preDecisionActions: _mapList(
+        map['pre_decision_actions'],
+        TopicAction.fromYaml,
+      ),
       decision: map['decision'] != null
           ? FlowNode.fromYaml(map['decision'] as Map)
           : null,
@@ -757,16 +760,16 @@ class CascadeStep {
   });
 
   factory CascadeStep.fromYaml(Map<dynamic, dynamic> map) => CascadeStep(
-        decision: map['decision'] as String,
-        criteria: _stringList(map['criteria']),
-        action: map['action'] != null
-            ? TopicAction.fromYaml(map['action'] as Map)
-            : null,
-        actionAnswer: YesNo.fromString(map['action_answer'] as String?),
-        continuation: map['continuation'] != null
-            ? CascadeStep.fromYaml(map['continuation'] as Map)
-            : null,
-      );
+    decision: map['decision'] as String,
+    criteria: _stringList(map['criteria']),
+    action: map['action'] != null
+        ? TopicAction.fromYaml(map['action'] as Map)
+        : null,
+    actionAnswer: YesNo.fromString(map['action_answer'] as String?),
+    continuation: map['continuation'] != null
+        ? CascadeStep.fromYaml(map['continuation'] as Map)
+        : null,
+  );
 
   final String decision;
   final List<String> criteria;
@@ -806,8 +809,7 @@ class CascadeFlowchart {
         terminalAction: map['terminal_action'] != null
             ? TopicAction.fromYaml(map['terminal_action'] as Map)
             : null,
-        actionWidthFraction:
-            (map['action_width'] as num?)?.toDouble() ?? 0.5,
+        actionWidthFraction: (map['action_width'] as num?)?.toDouble() ?? 0.5,
       );
 
   final FlowNode entry;
@@ -837,14 +839,14 @@ class AlgoBox {
   });
 
   factory AlgoBox.fromYaml(Map<dynamic, dynamic> map) => AlgoBox(
-        id: map['id'] as String?,
-        title: map['title'] as String? ?? '',
-        bullets: _stringList(map['bullets']),
-        severity: RowSeverity.fromString(map['severity'] as String?),
-        table: map['table'] != null
-            ? AlgoTable.fromYaml(map['table'] as Map)
-            : null,
-      );
+    id: map['id'] as String?,
+    title: map['title'] as String? ?? '',
+    bullets: _stringList(map['bullets']),
+    severity: RowSeverity.fromString(map['severity'] as String?),
+    table: map['table'] != null
+        ? AlgoTable.fromYaml(map['table'] as Map)
+        : null,
+  );
 
   final String? id;
   final String title;
@@ -864,17 +866,17 @@ class AlgoTable {
   const AlgoTable({required this.columns, required this.rows, this.align});
 
   factory AlgoTable.fromYaml(Map<dynamic, dynamic> map) => AlgoTable(
-        columns: [
-          for (final c in (map['columns'] as List? ?? const [])) c.toString(),
-        ],
-        rows: [
-          for (final r in (map['rows'] as List? ?? const []))
-            [for (final c in (r as List)) c.toString()],
-        ],
-        align: map['align'] != null
-            ? [for (final a in (map['align'] as List)) a.toString()]
-            : null,
-      );
+    columns: [
+      for (final c in (map['columns'] as List? ?? const [])) c.toString(),
+    ],
+    rows: [
+      for (final r in (map['rows'] as List? ?? const []))
+        [for (final c in (r as List)) c.toString()],
+    ],
+    align: map['align'] != null
+        ? [for (final a in (map['align'] as List)) a.toString()]
+        : null,
+  );
 
   final List<String> columns;
   final List<List<String>> rows;
@@ -897,11 +899,11 @@ class AlgoOutcome {
   });
 
   factory AlgoOutcome.fromYaml(Map<dynamic, dynamic> map) => AlgoOutcome(
-        label: map['label'] as String,
-        box: map['box'] != null ? AlgoBox.fromYaml(map['box'] as Map) : null,
-        goto: map['goto'] as String?,
-        cont: (map['continue'] as bool?) ?? false,
-      );
+    label: map['label'] as String,
+    box: map['box'] != null ? AlgoBox.fromYaml(map['box'] as Map) : null,
+    goto: map['goto'] as String?,
+    cont: (map['continue'] as bool?) ?? false,
+  );
 
   final String label;
   final AlgoBox? box;
@@ -918,13 +920,13 @@ class AlgoStage {
   });
 
   factory AlgoStage.fromYaml(Map<dynamic, dynamic> map) => AlgoStage(
-        decision: map['decision'] as String,
-        criteria: _stringList(map['criteria']),
-        outcomes: [
-          for (final o in (map['outcomes'] as List? ?? const []))
-            AlgoOutcome.fromYaml(o as Map),
-        ],
-      );
+    decision: map['decision'] as String,
+    criteria: _stringList(map['criteria']),
+    outcomes: [
+      for (final o in (map['outcomes'] as List? ?? const []))
+        AlgoOutcome.fromYaml(o as Map),
+    ],
+  );
 
   final String decision;
   final List<String> criteria;
@@ -1003,12 +1005,12 @@ class CycleBranch {
   });
 
   factory CycleBranch.fromYaml(Map<dynamic, dynamic> map) => CycleBranch(
-        label: map['label'] as String? ?? '',
-        side: CycleSide.fromString(map['side'] as String?),
-        box: AlgoBox.fromYaml(map['box'] as Map),
-        loopTo: map['loop_to'] as String?,
-        loopLabel: map['loop_label'] as String?,
-      );
+    label: map['label'] as String? ?? '',
+    side: CycleSide.fromString(map['side'] as String?),
+    box: AlgoBox.fromYaml(map['box'] as Map),
+    loopTo: map['loop_to'] as String?,
+    loopLabel: map['loop_label'] as String?,
+  );
 
   final String label;
   final CycleSide side;
@@ -1044,17 +1046,17 @@ class CycleNode {
   });
 
   factory CycleNode.fromYaml(Map<dynamic, dynamic> map) => CycleNode(
-        id: map['id'] as String?,
-        shape: CycleNodeShape.fromString(map['shape'] as String?),
-        title: map['title'] as String,
-        bullets: _stringList(map['bullets']),
-        severity: RowSeverity.fromString(map['severity'] as String?),
-        branches: [
-          for (final b in (map['branches'] as List? ?? const []))
-            CycleBranch.fromYaml(b as Map),
-        ],
-        downLabel: map['down_label'] as String?,
-      );
+    id: map['id'] as String?,
+    shape: CycleNodeShape.fromString(map['shape'] as String?),
+    title: map['title'] as String,
+    bullets: _stringList(map['bullets']),
+    severity: RowSeverity.fromString(map['severity'] as String?),
+    branches: [
+      for (final b in (map['branches'] as List? ?? const []))
+        CycleBranch.fromYaml(b as Map),
+    ],
+    downLabel: map['down_label'] as String?,
+  );
 
   final String? id;
   final CycleNodeShape shape;
@@ -1071,11 +1073,11 @@ class CycleFlowchart {
   const CycleFlowchart({required this.nodes});
 
   factory CycleFlowchart.fromYaml(Map<dynamic, dynamic> map) => CycleFlowchart(
-        nodes: [
-          for (final n in (map['nodes'] as List? ?? const []))
-            CycleNode.fromYaml(n as Map),
-        ],
-      );
+    nodes: [
+      for (final n in (map['nodes'] as List? ?? const []))
+        CycleNode.fromYaml(n as Map),
+    ],
+  );
 
   final List<CycleNode> nodes;
 
@@ -1142,9 +1144,9 @@ class RowBlock extends Block {
   const RowBlock({required this.blocks, super.flex});
 
   factory RowBlock.fromYaml(Map<dynamic, dynamic> map) => RowBlock(
-        blocks: _mapList(map['blocks'], Block.fromYaml),
-        flex: _flex(map),
-      );
+    blocks: _mapList(map['blocks'], Block.fromYaml),
+    flex: _flex(map),
+  );
 
   final List<Block> blocks;
 }
@@ -1158,9 +1160,9 @@ class ColumnBlock extends Block {
   const ColumnBlock({required this.blocks, super.flex});
 
   factory ColumnBlock.fromYaml(Map<dynamic, dynamic> map) => ColumnBlock(
-        blocks: _mapList(map['blocks'], Block.fromYaml),
-        flex: _flex(map),
-      );
+    blocks: _mapList(map['blocks'], Block.fromYaml),
+    flex: _flex(map),
+  );
 
   final List<Block> blocks;
 }
@@ -1181,13 +1183,13 @@ class ArrowsBlock extends Block {
   });
 
   factory ArrowsBlock.fromYaml(Map<dynamic, dynamic> map) => ArrowsBlock(
-        count: (map['count'] as num?)?.toInt() ?? 1,
-        label: map['label'] as String?,
-        length: (map['length'] as num?)?.toDouble() ?? 14,
-        direction: ArrowDirection.fromString(map['direction'] as String?),
-        inline: (map['inline'] as bool?) ?? false,
-        flex: _flex(map),
-      );
+    count: (map['count'] as num?)?.toInt() ?? 1,
+    label: map['label'] as String?,
+    length: (map['length'] as num?)?.toDouble() ?? 14,
+    direction: ArrowDirection.fromString(map['direction'] as String?),
+    inline: (map['inline'] as bool?) ?? false,
+    flex: _flex(map),
+  );
 
   final int count;
   final String? label;
@@ -1205,9 +1207,9 @@ enum ArrowDirection {
   right;
 
   static ArrowDirection fromString(String? s) => switch (s) {
-        'right' => right,
-        _ => down,
-      };
+    'right' => right,
+    _ => down,
+  };
 }
 
 /// Converging arrows — rendered as a short row of down-arrows at
@@ -1262,16 +1264,16 @@ class ProseBlock extends Block {
   });
 
   factory ProseBlock.fromYaml(Map<dynamic, dynamic> map) => ProseBlock(
-        title: map['title'] as String?,
-        markdown: map['markdown'] as String,
-        highlight: (map['highlight'] as bool?) ?? false,
-        callout: (map['callout'] as bool?) ?? false,
-        dashed: (map['dashed'] as bool?) ?? false,
-        boxed: (map['boxed'] as bool?) ?? false,
-        flex: _flex(map),
-        anchor: map['anchor'] as String?,
-        ownPaletteArgb: _parsePaletteArgb(map['palette']),
-      );
+    title: map['title'] as String?,
+    markdown: map['markdown'] as String,
+    highlight: (map['highlight'] as bool?) ?? false,
+    callout: (map['callout'] as bool?) ?? false,
+    dashed: (map['dashed'] as bool?) ?? false,
+    boxed: (map['boxed'] as bool?) ?? false,
+    flex: _flex(map),
+    anchor: map['anchor'] as String?,
+    ownPaletteArgb: _parsePaletteArgb(map['palette']),
+  );
 
   final String? title;
   final String markdown;
@@ -1309,19 +1311,19 @@ enum CalloutBand {
   criticalCare;
 
   static CalloutBand fromString(String? s) => switch (s) {
-        'peds' => peds,
-        'pediatrics' => peds,
-        'critical_care' => criticalCare,
-        'cc' => criticalCare,
-        _ => peds,
-      };
+    'peds' => peds,
+    'pediatrics' => peds,
+    'critical_care' => criticalCare,
+    'cc' => criticalCare,
+    _ => peds,
+  };
 
   /// Section label the print uses when the band stands on its own, used
   /// when the author gives no `title:`.
   String get defaultTitle => switch (this) {
-        peds => 'Pediatrics',
-        criticalCare => 'Critical Care',
-      };
+    peds => 'Pediatrics',
+    criticalCare => 'Critical Care',
+  };
 }
 
 /// A banded callout: a run of markdown the printed protocols tint to flag
@@ -1395,41 +1397,41 @@ class FlowchartBlock extends Block {
     final palette = _parsePaletteArgb(map['palette']);
     return switch (variant) {
       FlowchartVariant.severity => FlowchartBlock(
-          variant: variant,
-          severity: SeverityFlowchart.fromYaml(map),
-          anchor: anchor,
-          ownPaletteArgb: palette,
-        ),
+        variant: variant,
+        severity: SeverityFlowchart.fromYaml(map),
+        anchor: anchor,
+        ownPaletteArgb: palette,
+      ),
       FlowchartVariant.cascade => FlowchartBlock(
-          variant: variant,
-          cascade: CascadeFlowchart.fromYaml(map),
-          anchor: anchor,
-          ownPaletteArgb: palette,
-        ),
+        variant: variant,
+        cascade: CascadeFlowchart.fromYaml(map),
+        anchor: anchor,
+        ownPaletteArgb: palette,
+      ),
       FlowchartVariant.linear => FlowchartBlock(
-          variant: variant,
-          linear: LinearFlowchart.fromYaml(map),
-          anchor: anchor,
-          ownPaletteArgb: palette,
-        ),
+        variant: variant,
+        linear: LinearFlowchart.fromYaml(map),
+        anchor: anchor,
+        ownPaletteArgb: palette,
+      ),
       FlowchartVariant.differential => FlowchartBlock(
-          variant: variant,
-          differential: DifferentialFlowchart.fromYaml(map),
-          anchor: anchor,
-          ownPaletteArgb: palette,
-        ),
+        variant: variant,
+        differential: DifferentialFlowchart.fromYaml(map),
+        anchor: anchor,
+        ownPaletteArgb: palette,
+      ),
       FlowchartVariant.algorithm => FlowchartBlock(
-          variant: variant,
-          algorithm: AlgorithmFlowchart.fromYaml(map),
-          anchor: anchor,
-          ownPaletteArgb: palette,
-        ),
+        variant: variant,
+        algorithm: AlgorithmFlowchart.fromYaml(map),
+        anchor: anchor,
+        ownPaletteArgb: palette,
+      ),
       FlowchartVariant.cycle => FlowchartBlock(
-          variant: variant,
-          cycle: CycleFlowchart.fromYaml(map),
-          anchor: anchor,
-          ownPaletteArgb: palette,
-        ),
+        variant: variant,
+        cycle: CycleFlowchart.fromYaml(map),
+        anchor: anchor,
+        ownPaletteArgb: palette,
+      ),
     };
   }
 
@@ -1573,25 +1575,25 @@ class TableBlock extends Block {
   });
 
   factory TableBlock.fromYaml(Map<dynamic, dynamic> map) => TableBlock(
-        title: map['title'] as String?,
-        columns: _stringList(map['columns']),
-        columnFlex: _intList(map['column_flex']),
-        columnWidths: _doubleList(map['column_widths']),
-        columnAlign: _alignList(map['column_align']),
-        columnTintArgb: _argbList(map['column_tint']),
-        columnBar: _boolList(map['column_bar']),
-        zebra: map['zebra'] == true,
-        stickyHeader: map['sticky_header'] == true,
-        stickyFirstColumn: map['sticky_first_column'] == true,
-        lookup: map['lookup'] == true,
-        lookupLabel: map['lookup_label'] as String?,
-        maxHeight: (map['max_height'] as num?)?.toDouble(),
-        rows: _mapList(map['rows'], TopicTableRow.fromYaml),
-        layout: TableLayout.fromString(map['layout'] as String?),
-        flex: _flex(map),
-        anchor: map['anchor'] as String?,
-        ownPaletteArgb: _parsePaletteArgb(map['palette']),
-      );
+    title: map['title'] as String?,
+    columns: _stringList(map['columns']),
+    columnFlex: _intList(map['column_flex']),
+    columnWidths: _doubleList(map['column_widths']),
+    columnAlign: _alignList(map['column_align']),
+    columnTintArgb: _argbList(map['column_tint']),
+    columnBar: _boolList(map['column_bar']),
+    zebra: map['zebra'] == true,
+    stickyHeader: map['sticky_header'] == true,
+    stickyFirstColumn: map['sticky_first_column'] == true,
+    lookup: map['lookup'] == true,
+    lookupLabel: map['lookup_label'] as String?,
+    maxHeight: (map['max_height'] as num?)?.toDouble(),
+    rows: _mapList(map['rows'], TopicTableRow.fromYaml),
+    layout: TableLayout.fromString(map['layout'] as String?),
+    flex: _flex(map),
+    anchor: map['anchor'] as String?,
+    ownPaletteArgb: _parsePaletteArgb(map['palette']),
+  );
 
   final String? title;
   final List<String> columns;
@@ -1667,10 +1669,10 @@ enum CellAlign {
   center;
 
   static CellAlign fromString(String? s) => switch (s) {
-        'right' => right,
-        'center' => center,
-        _ => left,
-      };
+    'right' => right,
+    'center' => center,
+    _ => left,
+  };
 }
 
 /// Table rendering modes.
@@ -1691,10 +1693,10 @@ enum TableLayout {
   scroll;
 
   static TableLayout fromString(String? s) => switch (s) {
-        'boxed' => boxed,
-        'scroll' => scroll,
-        _ => standard,
-      };
+    'boxed' => boxed,
+    'scroll' => scroll,
+    _ => standard,
+  };
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -1709,9 +1711,9 @@ class DrugDose {
   });
 
   factory DrugDose.fromYaml(Map<dynamic, dynamic> map) => DrugDose(
-        text: map['text'] as String,
-        population: DosePopulation.fromString(map['population'] as String?),
-      );
+    text: map['text'] as String,
+    population: DosePopulation.fromString(map['population'] as String?),
+  );
 
   final String text;
   final DosePopulation population;
@@ -1740,18 +1742,18 @@ class DrugCardBlock extends Block {
   });
 
   factory DrugCardBlock.fromYaml(Map<dynamic, dynamic> map) => DrugCardBlock(
-        name: map['name'] as String,
-        drugClass: map['class'] as String?,
-        indications: _stringList(map['indications']),
-        contraindications: _stringList(map['contraindications']),
-        doses: _mapList(map['doses'], DrugDose.fromYaml),
-        warnings: _stringList(map['warnings']),
-        pearls: _stringList(map['pearls']),
-        imagePath: map['image'] as String?,
-        criticalCare: map['critical_care'] as bool? ?? false,
-        anchor: map['anchor'] as String?,
-        ownPaletteArgb: _parsePaletteArgb(map['palette']),
-      );
+    name: map['name'] as String,
+    drugClass: map['class'] as String?,
+    indications: _stringList(map['indications']),
+    contraindications: _stringList(map['contraindications']),
+    doses: _mapList(map['doses'], DrugDose.fromYaml),
+    warnings: _stringList(map['warnings']),
+    pearls: _stringList(map['pearls']),
+    imagePath: map['image'] as String?,
+    criticalCare: map['critical_care'] as bool? ?? false,
+    anchor: map['anchor'] as String?,
+    ownPaletteArgb: _parsePaletteArgb(map['palette']),
+  );
 
   final String name;
   final String? drugClass;
@@ -1807,13 +1809,13 @@ class ProcedureBlock extends Block {
   });
 
   factory ProcedureBlock.fromYaml(Map<dynamic, dynamic> map) => ProcedureBlock(
-        name: map['name'] as String,
-        scope: _normalizeScope(map['scope'] as String?),
-        steps: _stringList(map['steps']),
-        imagePath: map['image'] as String?,
-        anchor: map['anchor'] as String?,
-        ownPaletteArgb: _parsePaletteArgb(map['palette']),
-      );
+    name: map['name'] as String,
+    scope: _normalizeScope(map['scope'] as String?),
+    steps: _stringList(map['steps']),
+    imagePath: map['image'] as String?,
+    anchor: map['anchor'] as String?,
+    ownPaletteArgb: _parsePaletteArgb(map['palette']),
+  );
 
   final String name;
 
@@ -1846,12 +1848,12 @@ class ImageBlock extends Block {
   });
 
   factory ImageBlock.fromYaml(Map<dynamic, dynamic> map) => ImageBlock(
-        path: map['path'] as String,
-        caption: map['caption'] as String?,
-        size: ImageSize.fromString(map['size'] as String?),
-        anchor: map['anchor'] as String?,
-        ownPaletteArgb: _parsePaletteArgb(map['palette']),
-      );
+    path: map['path'] as String,
+    caption: map['caption'] as String?,
+    size: ImageSize.fromString(map['size'] as String?),
+    anchor: map['anchor'] as String?,
+    ownPaletteArgb: _parsePaletteArgb(map['palette']),
+  );
 
   final String path;
   final String? caption;
@@ -1909,9 +1911,9 @@ class ConversionDose {
   const ConversionDose({required this.dose, required this.tier});
 
   factory ConversionDose.fromYaml(Map<dynamic, dynamic> map) => ConversionDose(
-        dose: '${map['dose']}',
-        tier: map['tier'] as String,
-      );
+    dose: '${map['dose']}',
+    tier: map['tier'] as String,
+  );
 
   final String dose;
   final String tier;
@@ -1950,7 +1952,8 @@ class ConversionBlock extends Block {
     super.ownPaletteArgb,
   });
 
-  factory ConversionBlock.fromYaml(Map<dynamic, dynamic> map) => ConversionBlock(
+  factory ConversionBlock.fromYaml(Map<dynamic, dynamic> map) =>
+      ConversionBlock(
         mode: ConversionMode.fromString(map['mode'] as String?),
         title: map['title'] as String?,
         reference: map['reference'] as String?,
@@ -2000,8 +2003,10 @@ class ConversionBlock extends Block {
   }
 
   /// Routes available for [name] (equivalence mode).
-  List<String?> routesFor(String name) =>
-      [for (final a in agents) if (a.name == name) a.route];
+  List<String?> routesFor(String name) => [
+    for (final a in agents)
+      if (a.name == name) a.route,
+  ];
 
   ConversionAgent? agentFor(String name, String? route) {
     for (final a in agents) {
@@ -2018,8 +2023,8 @@ class ConversionBlock extends Block {
   /// Dose of [agent] equivalent to [referenceEquivalents].
   double? fromReference(ConversionAgent agent, double referenceEquivalents) =>
       agent.factor == null || agent.factor == 0
-          ? null
-          : referenceEquivalents / agent.factor!;
+      ? null
+      : referenceEquivalents / agent.factor!;
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -2037,10 +2042,10 @@ enum FormulaInputType {
   boolean;
 
   static FormulaInputType fromString(String? s) => switch (s) {
-        'select' => select,
-        'boolean' => boolean,
-        _ => number,
-      };
+    'select' => select,
+    'boolean' => boolean,
+    _ => number,
+  };
 }
 
 /// One option in a `select` input (a unit toggle, sex, …).
@@ -2071,18 +2076,18 @@ class FormulaInput {
   });
 
   factory FormulaInput.fromYaml(Map<dynamic, dynamic> map) => FormulaInput(
-        key: map['key'] as String,
-        label: map['label'] as String,
-        type: FormulaInputType.fromString(map['type'] as String?),
-        unit: map['unit'] as String?,
-        help: map['help'] as String?,
-        defaultValue: map['default'] == null ? null : '${map['default']}',
-        options: [
-          for (final o in map['options'] as List? ?? const [])
-            FormulaOption.fromYaml(o),
-        ],
-        optional: (map['optional'] as bool?) ?? false,
-      );
+    key: map['key'] as String,
+    label: map['label'] as String,
+    type: FormulaInputType.fromString(map['type'] as String?),
+    unit: map['unit'] as String?,
+    help: map['help'] as String?,
+    defaultValue: map['default'] == null ? null : '${map['default']}',
+    options: [
+      for (final o in map['options'] as List? ?? const [])
+        FormulaOption.fromYaml(o),
+    ],
+    optional: (map['optional'] as bool?) ?? false,
+  );
 
   final String key;
   final String label;
@@ -2116,15 +2121,15 @@ class FormulaBlock extends Block {
   });
 
   factory FormulaBlock.fromYaml(Map<dynamic, dynamic> map) => FormulaBlock(
-        kind: map['kind'] as String,
-        title: map['title'] as String?,
-        source: map['source'] as String?,
-        inputs: _mapList(map['inputs'], FormulaInput.fromYaml),
-        notes: _stringList(map['notes']),
-        caveats: _stringList(map['caveats']),
-        anchor: map['anchor'] as String?,
-        ownPaletteArgb: _parsePaletteArgb(map['palette']),
-      );
+    kind: map['kind'] as String,
+    title: map['title'] as String?,
+    source: map['source'] as String?,
+    inputs: _mapList(map['inputs'], FormulaInput.fromYaml),
+    notes: _stringList(map['notes']),
+    caveats: _stringList(map['caveats']),
+    anchor: map['anchor'] as String?,
+    ownPaletteArgb: _parsePaletteArgb(map['palette']),
+  );
 
   /// Registry key selecting the compute function (see formula_registry.dart).
   final String kind;
@@ -2161,10 +2166,10 @@ enum ScoreItemType {
   scale;
 
   static ScoreItemType fromString(String? s) => switch (s) {
-        'choice' => choice,
-        'scale' => scale,
-        _ => toggle,
-      };
+    'choice' => choice,
+    'scale' => scale,
+    _ => toggle,
+  };
 }
 
 /// One option of a `choice` item.
@@ -2176,10 +2181,10 @@ class ScoreOption {
   });
 
   factory ScoreOption.fromYaml(Map<dynamic, dynamic> m) => ScoreOption(
-        value: '${m['value']}',
-        label: (m['label'] as String?) ?? '${m['value']}',
-        points: (m['points'] as num?) ?? 0,
-      );
+    value: '${m['value']}',
+    label: (m['label'] as String?) ?? '${m['value']}',
+    points: (m['points'] as num?) ?? 0,
+  );
 
   final String value;
   final String label;
@@ -2199,17 +2204,17 @@ class ScoreItem {
   });
 
   factory ScoreItem.fromYaml(Map<dynamic, dynamic> m) => ScoreItem(
-        key: m['key'] as String,
-        label: m['label'] as String,
-        type: ScoreItemType.fromString(m['type'] as String?),
-        help: m['help'] as String?,
-        points: (m['points'] as num?) ?? 0,
-        options: [
-          for (final o in m['options'] as List? ?? const [])
-            ScoreOption.fromYaml(o as Map),
-        ],
-        defaultValue: m['default'] == null ? null : '${m['default']}',
-      );
+    key: m['key'] as String,
+    label: m['label'] as String,
+    type: ScoreItemType.fromString(m['type'] as String?),
+    help: m['help'] as String?,
+    points: (m['points'] as num?) ?? 0,
+    options: [
+      for (final o in m['options'] as List? ?? const [])
+        ScoreOption.fromYaml(o as Map),
+    ],
+    defaultValue: m['default'] == null ? null : '${m['default']}',
+  );
 
   final String key;
   final String label;
@@ -2238,17 +2243,17 @@ class ScoreBand {
   });
 
   factory ScoreBand.fromYaml(Map<dynamic, dynamic> m) => ScoreBand(
-        min: (m['min'] as num?) ?? 0,
-        max: m['max'] as num?,
-        label: m['label'] as String,
-        detail: m['detail'] as String?,
-        severity: switch (m['severity'] as String?) {
-          'alert' => FormulaSeverity.alert,
-          'warn' => FormulaSeverity.warn,
-          'info' => FormulaSeverity.info,
-          _ => FormulaSeverity.none,
-        },
-      );
+    min: (m['min'] as num?) ?? 0,
+    max: m['max'] as num?,
+    label: m['label'] as String,
+    detail: m['detail'] as String?,
+    severity: switch (m['severity'] as String?) {
+      'alert' => FormulaSeverity.alert,
+      'warn' => FormulaSeverity.warn,
+      'info' => FormulaSeverity.info,
+      _ => FormulaSeverity.none,
+    },
+  );
 
   final num min;
   final num? max;
@@ -2273,16 +2278,16 @@ class ScoreBlock extends Block {
   });
 
   factory ScoreBlock.fromYaml(Map<dynamic, dynamic> map) => ScoreBlock(
-        title: map['title'] as String?,
-        unit: (map['unit'] as String?) ?? 'points',
-        source: map['source'] as String?,
-        items: _mapList(map['items'], ScoreItem.fromYaml),
-        bands: _mapList(map['bands'], ScoreBand.fromYaml),
-        notes: _stringList(map['notes']),
-        caveats: _stringList(map['caveats']),
-        anchor: map['anchor'] as String?,
-        ownPaletteArgb: _parsePaletteArgb(map['palette']),
-      );
+    title: map['title'] as String?,
+    unit: (map['unit'] as String?) ?? 'points',
+    source: map['source'] as String?,
+    items: _mapList(map['items'], ScoreItem.fromYaml),
+    bands: _mapList(map['bands'], ScoreBand.fromYaml),
+    notes: _stringList(map['notes']),
+    caveats: _stringList(map['caveats']),
+    anchor: map['anchor'] as String?,
+    ownPaletteArgb: _parsePaletteArgb(map['palette']),
+  );
 
   final String? title;
   final String unit;
@@ -2307,9 +2312,9 @@ class TopicPage {
   const TopicPage({required this.blocks, this.pageNumber});
 
   factory TopicPage.fromYaml(Map<dynamic, dynamic> map) => TopicPage(
-        pageNumber: map['page_number'] as int?,
-        blocks: _mapList(map['blocks'], Block.fromYaml),
-      );
+    pageNumber: map['page_number'] as int?,
+    blocks: _mapList(map['blocks'], Block.fromYaml),
+  );
 
   final int? pageNumber;
   final List<Block> blocks;

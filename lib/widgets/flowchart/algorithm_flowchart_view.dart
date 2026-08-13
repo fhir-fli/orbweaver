@@ -23,31 +23,41 @@ class AlgorithmFlowchartView extends StatelessWidget {
   static const int _cols = 12;
   static const double _dLeftCol = 0.3; // diamond left edge
   static const double _dCols = 4.2; // diamond width
-  static const double _boxLeftCol = 2.7; // wide box, next to the down-arrow (→ col 12)
+  static const double _boxLeftCol =
+      2.7; // wide box, next to the down-arrow (→ col 12)
 
   static double diamondCenter(double colW) => colW * (_dLeftCol + _dCols / 2);
 
   @override
   Widget build(BuildContext context) {
     final fc = flowchart;
-    return LayoutBuilder(builder: (context, c) {
-      final colW = c.maxWidth / _cols;
-      final rows = <Widget>[];
+    return LayoutBuilder(
+      builder: (context, c) {
+        final colW = c.maxWidth / _cols;
+        final rows = <Widget>[];
 
-      if (fc.entry != null) {
-        rows.add(_Entry(text: fc.entry!.text, theme: theme, colW: colW));
-      }
-      for (final s in fc.stages) {
-        rows.add(_DecisionStage(stage: s, flowchart: fc, theme: theme, colW: colW));
-      }
-      if (fc.terminal != null) {
-        rows.add(Padding(
-          padding: EdgeInsets.only(left: colW * _boxLeftCol),
-          child: _AlgoBox(box: fc.terminal!, theme: theme, terminal: true),
-        ));
-      }
-      return Column(crossAxisAlignment: CrossAxisAlignment.start, children: rows);
-    });
+        if (fc.entry != null) {
+          rows.add(_Entry(text: fc.entry!.text, theme: theme, colW: colW));
+        }
+        for (final s in fc.stages) {
+          rows.add(
+            _DecisionStage(stage: s, flowchart: fc, theme: theme, colW: colW),
+          );
+        }
+        if (fc.terminal != null) {
+          rows.add(
+            Padding(
+              padding: EdgeInsets.only(left: colW * _boxLeftCol),
+              child: _AlgoBox(box: fc.terminal!, theme: theme, terminal: true),
+            ),
+          );
+        }
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: rows,
+        );
+      },
+    );
   }
 }
 
@@ -80,10 +90,15 @@ class _Entry extends StatelessWidget {
                 border: Border.all(color: theme.nodeBorder, width: 1.5),
                 borderRadius: BorderRadius.circular(longEntry ? 18 : 999),
               ),
-              child: Text(text,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                      fontSize: 13.5, fontWeight: FontWeight.w700, color: Colors.black87)),
+              child: Text(
+                text,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 13.5,
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black87,
+                ),
+              ),
             ),
           ),
         ),
@@ -92,7 +107,9 @@ class _Entry extends StatelessWidget {
           child: SizedBox(
             width: 14,
             height: 18,
-            child: CustomPaint(painter: _ArrowLine(const [Offset(7, 0), Offset(7, 18)])),
+            child: CustomPaint(
+              painter: _ArrowLine(const [Offset(7, 0), Offset(7, 18)]),
+            ),
           ),
         ),
       ],
@@ -129,7 +146,10 @@ class _DecisionStage extends StatelessWidget {
     final dH = (32 + dLines * 15).toDouble();
     final midY = dH / 2;
 
-    final terminals = [for (final o in stage.outcomes) if (!o.cont) o];
+    final terminals = [
+      for (final o in stage.outcomes)
+        if (!o.cont) o,
+    ];
     AlgoOutcome? cont;
     for (final o in stage.outcomes) {
       if (o.cont) {
@@ -152,13 +172,16 @@ class _DecisionStage extends StatelessWidget {
     final hasCrit = stage.criteria.isNotEmpty;
     // Estimate the criteria-card height, allowing for text wrapping in the
     // ~6-column-wide card (~28 chars/line at the card font).
-    final critLines =
-        stage.criteria.fold<int>(0, (a, c) => a + (c.length / 28).ceil());
+    final critLines = stage.criteria.fold<int>(
+      0,
+      (a, c) => a + (c.length / 28).ceil(),
+    );
     final critH = hasCrit ? (16 + critLines * 14).toDouble() : 0.0;
     final belowStart = dH + (hasCrit ? critH + 12 : 0.0);
 
-    final singleBox =
-        terminals.length == 1 ? flowchart.boxFor(terminals.first) : null;
+    final singleBox = terminals.length == 1
+        ? flowchart.boxFor(terminals.first)
+        : null;
     final wideBelow =
         (singleBox?.bullets.length ?? 0) >= 5 || singleBox?.table != null;
     // A criteria-bearing decision sends its terminal BELOW the criteria card
@@ -173,8 +196,7 @@ class _DecisionStage extends StatelessWidget {
         : colW * AlgorithmFlowchartView._boxLeftCol;
     // At-level: the label sits ~at the diamond level, the box just below it
     // so the right arrow lands near the box's top.
-    final boxTop =
-        atLevel ? (midY - 18).clamp(0.0, midY) : (belowStart + 14);
+    final boxTop = atLevel ? (midY - 18).clamp(0.0, midY) : (belowStart + 14);
     final boxW = atLevel
         ? colW * (atWide ? 6.6 : 5.2)
         : colW * (12 - AlgorithmFlowchartView._boxLeftCol);
@@ -192,8 +214,9 @@ class _DecisionStage extends StatelessWidget {
     }
 
     final sizing = ConstrainedBox(
-      constraints:
-          BoxConstraints(minHeight: belowStart + 16 + (cont != null ? 20 : 6)),
+      constraints: BoxConstraints(
+        minHeight: belowStart + 16 + (cont != null ? 20 : 6),
+      ),
       child: Padding(
         padding: EdgeInsets.only(left: leftForBox, top: boxTop),
         child: Column(
@@ -201,7 +224,9 @@ class _DecisionStage extends StatelessWidget {
           children: [
             for (var i = 0; i < terminals.length; i++)
               Padding(
-                padding: EdgeInsets.only(bottom: i < terminals.length - 1 ? 10 : 0),
+                padding: EdgeInsets.only(
+                  bottom: i < terminals.length - 1 ? 10 : 0,
+                ),
                 child: SizedBox(
                   width: boxW,
                   child: Column(
@@ -236,87 +261,94 @@ class _DecisionStage extends StatelessWidget {
     return SizedBox(
       width: fullW,
       child: Stack(
-      children: [
-        sizing,
-        Positioned.fill(
-          child: CustomPaint(
-            painter: _StagePainter(
-              leftX: leftX,
-              dW: dW,
-              dH: dH,
-              dcx: dcx,
-              rightCornerX: rightCornerX,
-              boxTop: boxTop,
-              boxLeftX: leftForBox,
-              atLevel: atLevel,
-              contStartY: belowStart,
-              fill: theme.flowDecision,
-              hasContinue: cont != null,
-              terminalCount: terminals.length,
-              branchCenters: branchCenters,
+        children: [
+          sizing,
+          Positioned.fill(
+            child: CustomPaint(
+              painter: _StagePainter(
+                leftX: leftX,
+                dW: dW,
+                dH: dH,
+                dcx: dcx,
+                rightCornerX: rightCornerX,
+                boxTop: boxTop,
+                boxLeftX: leftForBox,
+                atLevel: atLevel,
+                contStartY: belowStart,
+                fill: theme.flowDecision,
+                hasContinue: cont != null,
+                terminalCount: terminals.length,
+                branchCenters: branchCenters,
+              ),
             ),
           ),
-        ),
-        // Diamond label.
-        Positioned(
-          left: leftX,
-          top: 0,
-          width: dW,
-          height: dH,
-          child: Center(
-            // Constrain to the diamond's inscribed width so the text wraps
-            // inside the rhombus instead of poking past its side points.
-            child: SizedBox(
-              width: dW * 0.62,
-              child: FitText(
-                stage.decision,
-                maxWidth: dW * 0.62,
-                maxHeight: dH * 0.82,
-                style: const TextStyle(
+          // Diamond label.
+          Positioned(
+            left: leftX,
+            top: 0,
+            width: dW,
+            height: dH,
+            child: Center(
+              // Constrain to the diamond's inscribed width so the text wraps
+              // inside the rhombus instead of poking past its side points.
+              child: SizedBox(
+                width: dW * 0.62,
+                child: FitText(
+                  stage.decision,
+                  maxWidth: dW * 0.62,
+                  maxHeight: dH * 0.82,
+                  style: const TextStyle(
                     fontSize: 11.5,
                     height: 1.05,
                     fontWeight: FontWeight.w800,
-                    color: Colors.black87),
+                    color: Colors.black87,
+                  ),
+                ),
               ),
             ),
           ),
-        ),
-        // Criteria card on the spine, just below the diamond.
-        if (hasCrit)
-          Positioned(
-            left: leftX,
-            top: dH + 4,
-            width: colW * 6.2,
-            child: _CriteriaCard(criteria: stage.criteria, theme: theme),
-          ),
-        // Continue label — to the LEFT of the down-arrow, where there's room.
-        // The gutter is narrow, so use a slightly smaller size and let long
-        // labels wrap on word boundaries rather than mid-word.
-        if (cont != null)
-          Positioned(
-            left: 0,
-            top: belowStart + 4,
-            width: dcx - 2,
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                cont.label,
-                textAlign: TextAlign.right,
-                style: const TextStyle(
+          // Criteria card on the spine, just below the diamond.
+          if (hasCrit)
+            Positioned(
+              left: leftX,
+              top: dH + 4,
+              width: colW * 6.2,
+              child: _CriteriaCard(criteria: stage.criteria, theme: theme),
+            ),
+          // Continue label — to the LEFT of the down-arrow, where there's room.
+          // The gutter is narrow, so use a slightly smaller size and let long
+          // labels wrap on word boundaries rather than mid-word.
+          if (cont != null)
+            Positioned(
+              left: 0,
+              top: belowStart + 4,
+              width: dcx - 2,
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  cont.label,
+                  textAlign: TextAlign.right,
+                  style: const TextStyle(
                     fontSize: 11,
                     fontWeight: FontWeight.w700,
-                    color: Colors.black87),
+                    color: Colors.black87,
+                  ),
+                ),
               ),
             ),
-          ),
-      ],
+        ],
       ),
     );
   }
 
-  Widget _label(String s) => Text(s,
-      style: const TextStyle(
-          fontSize: 12, fontWeight: FontWeight.w700, color: Colors.black87));
+  Widget _label(String s) => Text(
+    s,
+    style: const TextStyle(
+      fontSize: 12,
+      fontWeight: FontWeight.w700,
+      color: Colors.black87,
+    ),
+  );
 }
 
 class _StagePainter extends CustomPainter {
@@ -373,17 +405,24 @@ class _StagePainter extends CustomPainter {
       ..close();
     canvas
       ..drawPath(d, Paint()..color = fill)
-      ..drawPath(d, Paint()
-        ..color = Colors.black87
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 2
-        ..strokeJoin = StrokeJoin.round);
+      ..drawPath(
+        d,
+        Paint()
+          ..color = Colors.black87
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 2
+          ..strokeJoin = StrokeJoin.round,
+      );
 
     // Terminal branch(es).
     if (terminalCount == 1) {
       if (atLevel) {
         // Short disposition: straight right into a box at the diamond level.
-        canvas.drawLine(Offset(rightCornerX, midY), Offset(boxLeftX, midY), stroke);
+        canvas.drawLine(
+          Offset(rightCornerX, midY),
+          Offset(boxLeftX, midY),
+          stroke,
+        );
         head(Offset(boxLeftX, midY), const Offset(1, 0));
       } else {
         // Dosing box below: out to the right slightly, then turn down in.
@@ -398,8 +437,7 @@ class _StagePainter extends CustomPainter {
     } else if (terminalCount > 1 && branchCenters.isNotEmpty) {
       // Multi-way fan: a spine from the diamond bottom down, with a tick
       // into each stacked box.
-      canvas.drawLine(
-          Offset(dcx, dH), Offset(dcx, branchCenters.last), stroke);
+      canvas.drawLine(Offset(dcx, dH), Offset(dcx, branchCenters.last), stroke);
       for (final cy in branchCenters) {
         canvas.drawLine(Offset(dcx, cy), Offset(boxLeftX, cy), stroke);
         head(Offset(boxLeftX, cy), const Offset(1, 0));
@@ -407,7 +445,11 @@ class _StagePainter extends CustomPainter {
     }
     // Continue: from below the criteria, straight down to the next diamond.
     if (hasContinue) {
-      canvas.drawLine(Offset(dcx, contStartY), Offset(dcx, size.height), stroke);
+      canvas.drawLine(
+        Offset(dcx, contStartY),
+        Offset(dcx, size.height),
+        stroke,
+      );
       head(Offset(dcx, size.height), const Offset(0, 1));
     }
   }
@@ -455,7 +497,11 @@ class _ArrowLine extends CustomPainter {
 }
 
 class _AlgoBox extends StatelessWidget {
-  const _AlgoBox({required this.box, required this.theme, this.terminal = false});
+  const _AlgoBox({
+    required this.box,
+    required this.theme,
+    this.terminal = false,
+  });
   final AlgoBox? box;
   final TopicTheme theme;
   final bool terminal;
@@ -477,14 +523,21 @@ class _AlgoBox extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           if (b.title.isNotEmpty)
-            Text(b.title,
-                style: const TextStyle(
-                    fontSize: 12, fontWeight: FontWeight.w800, height: 1.15)),
+            Text(
+              b.title,
+              style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w800,
+                height: 1.15,
+              ),
+            ),
           for (final bullet in b.bullets)
             Padding(
               padding: const EdgeInsets.only(top: 2),
-              child: Text('•  $bullet',
-                  style: const TextStyle(fontSize: 11, height: 1.2)),
+              child: Text(
+                '•  $bullet',
+                style: const TextStyle(fontSize: 11, height: 1.2),
+              ),
             ),
           if (b.table != null)
             Padding(
@@ -516,14 +569,17 @@ class _MiniTable extends StatelessWidget {
   }
 
   Widget _cell(String s, {required bool header, required int c}) => Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-        child: Text(s,
-            textAlign: _alignOf(c),
-            style: TextStyle(
-                fontSize: 10.5,
-                height: 1.1,
-                fontWeight: header ? FontWeight.w800 : FontWeight.w400)),
-      );
+    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+    child: Text(
+      s,
+      textAlign: _alignOf(c),
+      style: TextStyle(
+        fontSize: 10.5,
+        height: 1.1,
+        fontWeight: header ? FontWeight.w800 : FontWeight.w400,
+      ),
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -535,18 +591,21 @@ class _MiniTable extends StatelessWidget {
       defaultVerticalAlignment: TableCellVerticalAlignment.middle,
       children: [
         TableRow(
-          decoration:
-              BoxDecoration(color: theme.nodeBorder.withValues(alpha: 0.12)),
+          decoration: BoxDecoration(
+            color: theme.nodeBorder.withValues(alpha: 0.12),
+          ),
           children: [
             for (var c = 0; c < table.columns.length; c++)
               _cell(table.columns[c], header: true, c: c),
           ],
         ),
         for (final row in table.rows)
-          TableRow(children: [
-            for (var c = 0; c < row.length; c++)
-              _cell(row[c], header: false, c: c),
-          ]),
+          TableRow(
+            children: [
+              for (var c = 0; c < row.length; c++)
+                _cell(row[c], header: false, c: c),
+            ],
+          ),
       ],
     );
   }
@@ -560,37 +619,39 @@ class _CriteriaCard extends StatelessWidget {
   final TopicTheme theme;
   @override
   Widget build(BuildContext context) => Container(
-        padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(color: theme.nodeBorder.withValues(alpha: 0.6)),
-          borderRadius: BorderRadius.circular(5),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            for (final c in criteria)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 1),
-                child: Text('•  $c',
-                    style: const TextStyle(fontSize: 10.5, height: 1.15)),
-              ),
-          ],
-        ),
-      );
+    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      border: Border.all(color: theme.nodeBorder.withValues(alpha: 0.6)),
+      borderRadius: BorderRadius.circular(5),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        for (final c in criteria)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 1),
+            child: Text(
+              '•  $c',
+              style: const TextStyle(fontSize: 10.5, height: 1.15),
+            ),
+          ),
+      ],
+    ),
+  );
 }
 
 Color? _sevFill(TopicTheme t, RowSeverity s) => switch (s) {
-      RowSeverity.emergency => t.severitySevereTile,
-      RowSeverity.priority => t.severityModerateTile,
-      RowSeverity.nonUrgent => t.severityMildTile,
-      RowSeverity.none => null,
-    };
+  RowSeverity.emergency => t.severitySevereTile,
+  RowSeverity.priority => t.severityModerateTile,
+  RowSeverity.nonUrgent => t.severityMildTile,
+  RowSeverity.none => null,
+};
 
 Color? _sevBorder(TopicTheme t, RowSeverity s) => switch (s) {
-      RowSeverity.emergency => t.severitySevereHeader,
-      RowSeverity.priority => t.severityModerateHeader,
-      RowSeverity.nonUrgent => t.severityMildHeader,
-      RowSeverity.none => null,
-    };
+  RowSeverity.emergency => t.severitySevereHeader,
+  RowSeverity.priority => t.severityModerateHeader,
+  RowSeverity.nonUrgent => t.severityMildHeader,
+  RowSeverity.none => null,
+};

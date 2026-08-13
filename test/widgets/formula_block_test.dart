@@ -17,14 +17,14 @@ Topic _load(String file) =>
     Topic.fromYamlString(File('$_dir/$file').readAsStringSync());
 
 Widget _wrap(Widget child) => MaterialApp(
-      home: Scaffold(
-        body: SizedBox(
-          width: 375,
-          height: 667,
-          child: SingleChildScrollView(child: child),
-        ),
-      ),
-    );
+  home: Scaffold(
+    body: SizedBox(
+      width: 375,
+      height: 667,
+      child: SingleChildScrollView(child: child),
+    ),
+  ),
+);
 
 void main() {
   testWidgets('MAP: placeholder until inputs, then computes 93.3', (t) async {
@@ -57,7 +57,8 @@ void main() {
 
   testWidgets('Holliday-Segar: renders both rate and daily rows', (t) async {
     await t.pumpWidget(
-        _wrap(TopicView(topic: _load('calc_holliday_segar.yaml'))));
+      _wrap(TopicView(topic: _load('calc_holliday_segar.yaml'))),
+    );
     await t.enterText(find.byType(TextField).first, '15');
     await t.pump();
 
@@ -69,7 +70,8 @@ void main() {
 
   testWidgets('corrected sodium renders with default unit select', (t) async {
     await t.pumpWidget(
-        _wrap(TopicView(topic: _load('calc_corrected_sodium.yaml'))));
+      _wrap(TopicView(topic: _load('calc_corrected_sodium.yaml'))),
+    );
     // two number fields (Na, glucose); one select (glucose unit) defaulting mg/dL
     final fields = find.byType(TextField);
     expect(fields, findsNWidgets(2));

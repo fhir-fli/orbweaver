@@ -34,7 +34,8 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
       if (item.type == ScoreItemType.toggle) {
         _toggles[item.key] = false;
       } else {
-        _choices[item.key] = item.defaultValue ??
+        _choices[item.key] =
+            item.defaultValue ??
             (item.options.isNotEmpty ? item.options.first.value : '');
       }
     }
@@ -99,13 +100,13 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
   // ── items ────────────────────────────────────────────────────
 
   Widget _buildItem(Color accent, ScoreItem item) => Padding(
-        padding: const EdgeInsets.only(bottom: 6),
-        child: switch (item.type) {
-          ScoreItemType.toggle => _toggleRow(accent, item),
-          ScoreItemType.choice => _choiceRow(accent, item),
-          ScoreItemType.scale => _scaleRow(accent, item),
-        },
-      );
+    padding: const EdgeInsets.only(bottom: 6),
+    child: switch (item.type) {
+      ScoreItemType.toggle => _toggleRow(accent, item),
+      ScoreItemType.choice => _choiceRow(accent, item),
+      ScoreItemType.scale => _scaleRow(accent, item),
+    },
+  );
 
   Widget _toggleRow(Color accent, ScoreItem item) {
     final on = _toggles[item.key] ?? false;
@@ -246,19 +247,19 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
       );
 
   Widget _labelBlock(ScoreItem item) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            item.label,
-            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
-          ),
-          if (item.help != null)
-            Text(
-              item.help!,
-              style: const TextStyle(fontSize: 10.5, color: Colors.black54),
-            ),
-        ],
-      );
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(
+        item.label,
+        style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+      ),
+      if (item.help != null)
+        Text(
+          item.help!,
+          style: const TextStyle(fontSize: 10.5, color: Colors.black54),
+        ),
+    ],
+  );
 
   Widget _pointsBadge(Color accent, num points, {required bool active}) =>
       Container(
@@ -282,7 +283,8 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
   Widget _buildResult(Color accent, ScoreResult result) {
     final band = result.band;
     final sevColor = _sevColor(accent, band?.severity ?? FormulaSeverity.none);
-    final tinted = band != null &&
+    final tinted =
+        band != null &&
         (band.severity == FormulaSeverity.alert ||
             band.severity == FormulaSeverity.warn);
     return Container(
@@ -293,8 +295,9 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
             ? sevColor.withValues(alpha: 0.10)
             : accent.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(6),
-        border:
-            tinted ? Border.all(color: sevColor.withValues(alpha: 0.5)) : null,
+        border: tinted
+            ? Border.all(color: sevColor.withValues(alpha: 0.5))
+            : null,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -359,38 +362,38 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
   }
 
   Widget _buildCaveats() => Container(
-        width: double.infinity,
-        padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
-        decoration: BoxDecoration(
-          color: widget.theme.alertFill,
-          border: Border.all(color: widget.theme.alert, width: 1.2),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            for (final c in _b.caveats)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 2),
-                child: Text(
-                  '⚠ $c',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: widget.theme.alertText,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+    width: double.infinity,
+    padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
+    decoration: BoxDecoration(
+      color: widget.theme.alertFill,
+      border: Border.all(color: widget.theme.alert, width: 1.2),
+      borderRadius: BorderRadius.circular(8),
+    ),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        for (final c in _b.caveats)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 2),
+            child: Text(
+              '⚠ $c',
+              style: TextStyle(
+                fontSize: 12,
+                color: widget.theme.alertText,
+                fontWeight: FontWeight.w600,
               ),
-          ],
-        ),
-      );
+            ),
+          ),
+      ],
+    ),
+  );
 
   Color _sevColor(Color accent, FormulaSeverity sev) => switch (sev) {
-        FormulaSeverity.alert => widget.theme.alert,
-        FormulaSeverity.warn => widget.theme.formulaWarn,
-        FormulaSeverity.info => accent,
-        FormulaSeverity.none => accent,
-      };
+    FormulaSeverity.alert => widget.theme.alert,
+    FormulaSeverity.warn => widget.theme.formulaWarn,
+    FormulaSeverity.info => accent,
+    FormulaSeverity.none => accent,
+  };
 
   /// "+2" / "−2" / "0" — with a real minus glyph for negatives.
   String _signed(num p) {

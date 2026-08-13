@@ -49,19 +49,24 @@ class _TopicBodyState extends State<TopicBody> {
   void initState() {
     super.initState();
     _scrollCtrl.addListener(_onScroll);
-    loadTopicAsset(widget.assetPath).then((t) {
-      if (!mounted) return;
-      setState(() {
-        _topic = t;
-        _pageKeys =
-            List.generate(t.pages.length, (_) => GlobalKey(), growable: false);
-      });
-      widget.onLoaded?.call(t);
-      _report();
-    }).catchError((Object e) {
-      if (!mounted) return;
-      setState(() => _error = e);
-    });
+    loadTopicAsset(widget.assetPath)
+        .then((t) {
+          if (!mounted) return;
+          setState(() {
+            _topic = t;
+            _pageKeys = List.generate(
+              t.pages.length,
+              (_) => GlobalKey(),
+              growable: false,
+            );
+          });
+          widget.onLoaded?.call(t);
+          _report();
+        })
+        .catchError((Object e) {
+          if (!mounted) return;
+          setState(() => _error = e);
+        });
   }
 
   @override
@@ -115,7 +120,8 @@ class _TopicBodyState extends State<TopicBody> {
         ? widget.palette
         : resolvePalette([
             {
-              for (final e in topic.ownPaletteArgb.entries) e.key: Color(e.value),
+              for (final e in topic.ownPaletteArgb.entries)
+                e.key: Color(e.value),
             },
           ]);
     final theme = TopicTheme(resolved);
@@ -202,27 +208,34 @@ class _FitToScreenState extends State<_FitToScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, c) {
-      WidgetsBinding.instance.addPostFrameCallback((_) => _fit(c.maxHeight));
-      return MediaQuery(
-        data: MediaQuery.of(context)
-            .copyWith(textScaler: TextScaler.linear(_scale)),
-        // A non-scrollable scroll view gives the content unbounded height, so
-        // we can measure its NATURAL height (rather than clamp it to the
-        // screen and overflow) and scale down until it fits.
-        child: SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(),
-          child: KeyedSubtree(key: _key, child: widget.builder(_scale)),
-        ),
-      );
-    });
+    return LayoutBuilder(
+      builder: (context, c) {
+        WidgetsBinding.instance.addPostFrameCallback((_) => _fit(c.maxHeight));
+        return MediaQuery(
+          data: MediaQuery.of(
+            context,
+          ).copyWith(textScaler: TextScaler.linear(_scale)),
+          // A non-scrollable scroll view gives the content unbounded height, so
+          // we can measure its NATURAL height (rather than clamp it to the
+          // screen and overflow) and scale down until it fits.
+          child: SingleChildScrollView(
+            physics: const NeverScrollableScrollPhysics(),
+            child: KeyedSubtree(key: _key, child: widget.builder(_scale)),
+          ),
+        );
+      },
+    );
   }
 }
 
 /// A single topic with app-bar chrome (page badge + title), for standalone /
 /// last-state-restore opens where there are no sibling protocols to swipe.
 class TopicFrame extends StatefulWidget {
-  const TopicFrame({required this.assetPath, this.palette = const {}, super.key});
+  const TopicFrame({
+    required this.assetPath,
+    this.palette = const {},
+    super.key,
+  });
 
   final String assetPath;
   final Map<String, Color> palette;
@@ -292,8 +305,9 @@ class TopicPager extends StatefulWidget {
 }
 
 class _TopicPagerState extends State<TopicPager> {
-  late final PageController _hCtrl =
-      PageController(initialPage: widget.initialIndex);
+  late final PageController _hCtrl = PageController(
+    initialPage: widget.initialIndex,
+  );
   late int _activeIndex = widget.initialIndex;
   final _badge = ValueNotifier<int?>(null);
   final Map<int, int?> _badgeByIndex = {};
@@ -328,8 +342,9 @@ class _TopicPagerState extends State<TopicPager> {
   }
 
   void _goHome() {
-    Navigator.of(context)
-        .popUntil((r) => r.settings.name == kBookRouteName || r.isFirst);
+    Navigator.of(
+      context,
+    ).popUntil((r) => r.settings.name == kBookRouteName || r.isFirst);
   }
 
   @override
@@ -445,8 +460,10 @@ class _SearchResults extends StatelessWidget {
       return Center(
         child: Padding(
           padding: const EdgeInsets.all(32),
-          child: Text('No protocols match "$query".',
-              style: const TextStyle(color: Colors.black54)),
+          child: Text(
+            'No protocols match "$query".',
+            style: const TextStyle(color: Colors.black54),
+          ),
         ),
       );
     }
@@ -455,8 +472,8 @@ class _SearchResults extends StatelessWidget {
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(vertical: 4),
         itemCount: scored.length,
-        separatorBuilder: (_, __) => const Divider(
-            height: 1, thickness: 0.5, indent: 12, endIndent: 12),
+        separatorBuilder: (_, __) =>
+            const Divider(height: 1, thickness: 0.5, indent: 12, endIndent: 12),
         itemBuilder: (context, k) {
           final i = scored[k].$1;
           final t = siblings[i];
@@ -464,8 +481,7 @@ class _SearchResults extends StatelessWidget {
           return InkWell(
             onTap: () => onTap(i),
             child: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
               child: Row(
                 children: [
                   Container(
@@ -481,14 +497,22 @@ class _SearchResults extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(t.title,
-                            style: const TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.w600)),
+                        Text(
+                          t.title,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                         if (t.subtitle.isNotEmpty) ...[
                           const SizedBox(height: 2),
-                          Text(t.subtitle,
-                              style: const TextStyle(
-                                  fontSize: 11, color: Colors.black54)),
+                          Text(
+                            t.subtitle,
+                            style: const TextStyle(
+                              fontSize: 11,
+                              color: Colors.black54,
+                            ),
+                          ),
                         ],
                       ],
                     ),

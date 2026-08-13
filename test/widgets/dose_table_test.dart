@@ -25,12 +25,12 @@ const _pedsLight = Color(0xFFFFDCE2);
 const _pedsDark = Color(0xFFFFC0CB);
 
 DoseRow _row(String drug, DosePopulation population) => DoseRow(
-      drug: drug,
-      dose: '1 mg',
-      route: 'IV',
-      frequency: 'once',
-      population: population,
-    );
+  drug: drug,
+  dose: '1 mg',
+  route: 'IV',
+  frequency: 'once',
+  population: population,
+);
 
 /// The row fills, in visual order. Rows are the containers that carry an
 /// explicit BoxDecoration colour; the label bands use a plain `color:`.
@@ -46,17 +46,21 @@ Future<void> _pump(
   List<DoseRow> rows, {
   Color accent = const Color(0xFF1E4E8C),
 }) async {
-  final theme = TopicTheme(resolvePalette([
-    {'accent': accent},
-  ]));
-  await tester.pumpWidget(MaterialApp(
-    home: Scaffold(
-      body: TopicThemeScope(
-        theme: theme,
-        child: DoseTable(rows: rows, theme: theme),
+  final theme = TopicTheme(
+    resolvePalette([
+      {'accent': accent},
+    ]),
+  );
+  await tester.pumpWidget(
+    MaterialApp(
+      home: Scaffold(
+        body: TopicThemeScope(
+          theme: theme,
+          child: DoseTable(rows: rows, theme: theme),
+        ),
       ),
     ),
-  ));
+  );
 }
 
 void main() {
@@ -75,8 +79,9 @@ void main() {
       expect(fills, [_adultLight, _adultDark, _pedsLight, _pedsDark]);
     });
 
-    testWidgets('the stripe does not follow the chapter accent',
-        (tester) async {
+    testWidgets('the stripe does not follow the chapter accent', (
+      tester,
+    ) async {
       final rows = [
         _row('Epi', DosePopulation.peds),
         _row('Amiodarone', DosePopulation.peds),

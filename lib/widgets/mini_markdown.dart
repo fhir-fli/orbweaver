@@ -157,17 +157,22 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
 
   /// Parses `**bold**` and `[text](target)` in one pass, emitting plain
   /// runs between. Escaped asterisks (`\*`) are protected via a sentinel.
-  List<InlineSpan> _parseInline(String text, Color linkColor,
-      {bool bold = false}) {
+  List<InlineSpan> _parseInline(
+    String text,
+    Color linkColor, {
+    bool bold = false,
+  }) {
     const sentinel = '';
     final stashed = text.replaceAll(r'\*', sentinel);
     String restore(String s) => s.replaceAll(sentinel, '*');
-    final plainStyle =
-        bold ? const TextStyle(fontWeight: FontWeight.w700) : null;
+    final plainStyle = bold
+        ? const TextStyle(fontWeight: FontWeight.w700)
+        : null;
 
     final spans = <InlineSpan>[];
     TextSpan linkSpan(String display, String target) {
-      final recognizer = TapGestureRecognizer()..onTap = () => _onLinkTap(target);
+      final recognizer = TapGestureRecognizer()
+        ..onTap = () => _onLinkTap(target);
       _recognizers.add(recognizer);
       return TextSpan(
         text: display,
@@ -183,14 +188,17 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
     // Order matters: explicit `[text](target)` first, then bold, then a bare
     // URL (so a URL already inside a markdown link isn't matched twice).
     final re = RegExp(
-        r'\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*|(https?://[^\s)\]]+)');
+      r'\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*|(https?://[^\s)\]]+)',
+    );
     var last = 0;
     for (final m in re.allMatches(stashed)) {
       if (m.start > last) {
-        spans.add(TextSpan(
-          text: restore(stashed.substring(last, m.start)),
-          style: plainStyle,
-        ));
+        spans.add(
+          TextSpan(
+            text: restore(stashed.substring(last, m.start)),
+            style: plainStyle,
+          ),
+        );
       }
       if (m.group(2) != null) {
         // Explicit link: group(1) = display text, group(2) = target.
@@ -264,7 +272,11 @@ class _UnitLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final indent = unit.level * (fontSize * 0.9);
-    final textStyle = TextStyle(fontSize: fontSize, height: height, color: color);
+    final textStyle = TextStyle(
+      fontSize: fontSize,
+      height: height,
+      color: color,
+    );
     // Text.rich (not RichText) so the ambient MediaQuery.textScaler applies —
     // this is what lets the paged fit-to-screen shrink prose to fit.
     final text = Text.rich(TextSpan(style: textStyle, children: spans));

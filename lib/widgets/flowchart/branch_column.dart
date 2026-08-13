@@ -22,20 +22,20 @@ class _SeverityColors {
 }
 
 _SeverityColors? _paletteFor(TopicTheme theme, RowSeverity s) => switch (s) {
-      RowSeverity.none => null,
-      RowSeverity.emergency => _SeverityColors(
-          headerBg: theme.severitySevereHeader,
-          tileBg: theme.severitySevereTile,
-        ),
-      RowSeverity.priority => _SeverityColors(
-          headerBg: theme.severityModerateHeader,
-          tileBg: theme.severityModerateTile,
-        ),
-      RowSeverity.nonUrgent => _SeverityColors(
-          headerBg: theme.severityMildHeader,
-          tileBg: theme.severityMildTile,
-        ),
-    };
+  RowSeverity.none => null,
+  RowSeverity.emergency => _SeverityColors(
+    headerBg: theme.severitySevereHeader,
+    tileBg: theme.severitySevereTile,
+  ),
+  RowSeverity.priority => _SeverityColors(
+    headerBg: theme.severityModerateHeader,
+    tileBg: theme.severityModerateTile,
+  ),
+  RowSeverity.nonUrgent => _SeverityColors(
+    headerBg: theme.severityMildHeader,
+    tileBg: theme.severityMildTile,
+  ),
+};
 
 /// One branch from the decision diamond — rendered as a vertical column:
 ///   label header → criteria bullets → stacked action items.
@@ -326,7 +326,6 @@ class ActionTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     FitText(
-
                       action.text,
                       maxWidth: labelMaxWidth,
                       style: const TextStyle(

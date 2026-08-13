@@ -111,29 +111,44 @@ void main() {
 
         test('has a kind and a source', () {
           expect(b.kind, isNotEmpty);
-          expect(b.source, isNotNull,
-              reason: 'clinical formulas must cite provenance');
+          expect(
+            b.source,
+            isNotNull,
+            reason: 'clinical formulas must cite provenance',
+          );
         });
 
-        test('kind is wired into the registry and computes with a valid vector',
-            () {
-          final r = computeFormula(b.kind, sample);
-          expect(r.isEmpty, isFalse,
-              reason: 'kind "${b.kind}" produced no output — '
-                  'unwired kind or wrong sample keys');
-          expect(r.outputs.first.value, isNotEmpty);
-        });
+        test(
+          'kind is wired into the registry and computes with a valid vector',
+          () {
+            final r = computeFormula(b.kind, sample);
+            expect(
+              r.isEmpty,
+              isFalse,
+              reason:
+                  'kind "${b.kind}" produced no output — '
+                  'unwired kind or wrong sample keys',
+            );
+            expect(r.outputs.first.value, isNotEmpty);
+          },
+        );
 
         test('inputs are well-formed (keys unique; selects have options)', () {
           expect(b.inputs, isNotEmpty);
           final keys = <String>{};
           for (final input in b.inputs) {
             expect(input.key, isNotEmpty);
-            expect(keys.add(input.key), isTrue,
-                reason: 'duplicate input key "${input.key}"');
+            expect(
+              keys.add(input.key),
+              isTrue,
+              reason: 'duplicate input key "${input.key}"',
+            );
             if (input.type == FormulaInputType.select) {
-              expect(input.options, isNotEmpty,
-                  reason: 'select "${input.key}" needs options');
+              expect(
+                input.options,
+                isNotEmpty,
+                reason: 'select "${input.key}" needs options',
+              );
               // a declared default must be one of the options
               if (input.defaultValue != null) {
                 expect(
@@ -149,8 +164,11 @@ void main() {
         test('every sample key exists as a declared input', () {
           final declared = b.inputs.map((i) => i.key).toSet();
           for (final k in sample.keys) {
-            expect(declared, contains(k),
-                reason: 'sample key "$k" is not a declared input');
+            expect(
+              declared,
+              contains(k),
+              reason: 'sample key "$k" is not a declared input',
+            );
           }
         });
       });

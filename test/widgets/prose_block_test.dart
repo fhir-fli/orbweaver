@@ -16,7 +16,8 @@ import 'package:orbweaver/widgets/topic_view.dart';
 
 const Color kAccent = Color(0xFF6D9EEB);
 
-String _topicYaml(String blockYaml) => '''
+String _topicYaml(String blockYaml) =>
+    '''
 topic:
   id: "t"
   title: "T"
@@ -29,32 +30,39 @@ $blockYaml
 
 Future<Topic> _pump(WidgetTester tester, String blockYaml) async {
   final topic = Topic.fromYamlString(_topicYaml(blockYaml));
-  await tester.pumpWidget(MaterialApp(
-    home: Scaffold(
-      body: SingleChildScrollView(
-        child: TopicPageBody(
-          page: topic.pages.first,
-          theme: TopicTheme(resolvePalette([
-            {'accent': kAccent},
-          ])),
+  await tester.pumpWidget(
+    MaterialApp(
+      home: Scaffold(
+        body: SingleChildScrollView(
+          child: TopicPageBody(
+            page: topic.pages.first,
+            theme: TopicTheme(
+              resolvePalette([
+                {'accent': kAccent},
+              ]),
+            ),
+          ),
         ),
       ),
     ),
-  ));
+  );
   return topic;
 }
 
 void main() {
   group('titled prose renders as a bracketed section', () {
-    testWidgets('bracket takes the accent and no tint without highlight',
-        (tester) async {
+    testWidgets('bracket takes the accent and no tint without highlight', (
+      tester,
+    ) async {
       await _pump(tester, '''
     - type: "prose"
       title: "Notes"
       markdown: |
         - Rule of 9s can estimate BSA in adults.
 ''');
-      final bracket = tester.widget<SectionBracket>(find.byType(SectionBracket));
+      final bracket = tester.widget<SectionBracket>(
+        find.byType(SectionBracket),
+      );
       expect(bracket.color, kAccent);
       expect(bracket.title, 'Notes');
       expect(bracket.bodyFill, isNull);
@@ -89,9 +97,9 @@ void main() {
     DecoratedBox _card(WidgetTester tester) => tester
         .widgetList<DecoratedBox>(find.byType(DecoratedBox))
         .firstWhere((d) {
-      final dec = d.decoration;
-      return dec is BoxDecoration && dec.borderRadius != null;
-    });
+          final dec = d.decoration;
+          return dec is BoxDecoration && dec.borderRadius != null;
+        });
 
     testWidgets('solid by default', (tester) async {
       await _pump(tester, '''
@@ -112,8 +120,9 @@ void main() {
       );
     });
 
-    testWidgets('dashed: true swaps the solid border for a dashed overlay',
-        (tester) async {
+    testWidgets('dashed: true swaps the solid border for a dashed overlay', (
+      tester,
+    ) async {
       final topic = await _pump(tester, '''
     - type: "prose"
       title: "TRAUMA Alert"

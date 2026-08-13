@@ -4,8 +4,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:orbweaver/models/topic.dart';
 
 ConversionBlock _load(String topicFile) {
-  final yaml =
-      File('assets/books/calculators/topics/$topicFile').readAsStringSync();
+  final yaml = File(
+    'assets/books/calculators/topics/$topicFile',
+  ).readAsStringSync();
   return Topic.fromYamlString(yaml).blocks.whereType<ConversionBlock>().single;
 }
 
@@ -189,19 +190,22 @@ void main() {
     test('every dose references a declared tier', () {
       for (final a in b.agents) {
         for (final d in a.doses) {
-          expect(b.tiers, contains(d.tier),
-              reason: '${a.name} ${d.dose} tier "${d.tier}" not declared');
+          expect(
+            b.tiers,
+            contains(d.tier),
+            reason: '${a.name} ${d.dose} tier "${d.tier}" not declared',
+          );
         }
       }
     });
 
     test('tier equivalence: High-intensity doses across agents', () {
       List<String> highDoses(String name) => [
-            for (final a in b.agents)
-              if (a.name == name)
-                for (final d in a.doses)
-                  if (d.tier == 'High') d.dose,
-          ];
+        for (final a in b.agents)
+          if (a.name == name)
+            for (final d in a.doses)
+              if (d.tier == 'High') d.dose,
+      ];
       expect(highDoses('Atorvastatin'), ['40 mg', '80 mg']);
       expect(highDoses('Rosuvastatin'), ['20 mg', '40 mg']);
       // Simvastatin has no High-intensity dose.
@@ -209,8 +213,7 @@ void main() {
     });
 
     test('pitavastatin 1 mg corrected to Moderate (no Low pitavastatin)', () {
-      final pitavastatin =
-          b.agents.firstWhere((a) => a.name == 'Pitavastatin');
+      final pitavastatin = b.agents.firstWhere((a) => a.name == 'Pitavastatin');
       expect(pitavastatin.doses.any((d) => d.tier == 'Low'), isFalse);
       expect(
         pitavastatin.doses.firstWhere((d) => d.dose == '1 mg').tier,

@@ -33,9 +33,11 @@ List<Color> _zoneFills(WidgetTester tester) => tester
     .toList();
 
 Future<void> _pump(WidgetTester tester, {required bool criticalCare}) async {
-  final theme = TopicTheme(resolvePalette([
-    {'accent': const Color(0xFF3A5D64)},
-  ]));
+  final theme = TopicTheme(
+    resolvePalette([
+      {'accent': const Color(0xFF3A5D64)},
+    ]),
+  );
   final block = DrugCardBlock(
     name: 'Rocephin',
     indications: const ['Infection'],
@@ -43,16 +45,18 @@ Future<void> _pump(WidgetTester tester, {required bool criticalCare}) async {
     pearls: const ['Reconstitute with 3 mL'],
     criticalCare: criticalCare,
   );
-  await tester.pumpWidget(MaterialApp(
-    home: Scaffold(
-      body: SingleChildScrollView(
-        child: TopicThemeScope(
-          theme: theme,
-          child: DrugCardBlockView(block: block, theme: theme),
+  await tester.pumpWidget(
+    MaterialApp(
+      home: Scaffold(
+        body: SingleChildScrollView(
+          child: TopicThemeScope(
+            theme: theme,
+            child: DrugCardBlockView(block: block, theme: theme),
+          ),
         ),
       ),
     ),
-  ));
+  );
 }
 
 void main() {

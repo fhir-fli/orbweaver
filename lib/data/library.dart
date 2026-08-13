@@ -123,15 +123,17 @@ Future<List<BookNode>> _parseNodes(
           childAncestors,
         );
       }
-      nodes.add(BookGroup(
-        title: title,
-        overview: overview,
-        children: children,
-        paletteOverrides: groupOverrides,
-        view: view,
-        formulary: formulary,
-        appendix: map['appendix'] as bool? ?? false,
-      ));
+      nodes.add(
+        BookGroup(
+          title: title,
+          overview: overview,
+          children: children,
+          paletteOverrides: groupOverrides,
+          view: view,
+          formulary: formulary,
+          appendix: map['appendix'] as bool? ?? false,
+        ),
+      );
     }
   }
   return nodes;
@@ -151,24 +153,30 @@ List<BookNode> _formularyLeaves(
   final crumb = ancestors.join(' › ');
   return [
     for (final drug in formulary.drugs)
-      BookLeaf(BookTopic(
-        id: drug.id,
-        title: drug.name,
-        subtitle: drug.subtitle.isNotEmpty
-            ? drug.subtitle
-            : formulary.classLabel(drug.className),
-        asset: 'formulary:${drug.id}',
-        tags: drug.indications,
-        palette: palette,
-        searchText: SearchNormalizer.normalize(drug.searchBlob),
-        titleText: SearchNormalizer.normalize('${drug.name} ${drug.subtitle}'),
-        keywordsText: SearchNormalizer.normalize([
-          ...drug.indications.map(formulary.indicationLabel),
-          formulary.classLabel(drug.className),
-        ].join(' ')),
-        breadcrumb: crumb,
-        drug: drug,
-      )),
+      BookLeaf(
+        BookTopic(
+          id: drug.id,
+          title: drug.name,
+          subtitle: drug.subtitle.isNotEmpty
+              ? drug.subtitle
+              : formulary.classLabel(drug.className),
+          asset: 'formulary:${drug.id}',
+          tags: drug.indications,
+          palette: palette,
+          searchText: SearchNormalizer.normalize(drug.searchBlob),
+          titleText: SearchNormalizer.normalize(
+            '${drug.name} ${drug.subtitle}',
+          ),
+          keywordsText: SearchNormalizer.normalize(
+            [
+              ...drug.indications.map(formulary.indicationLabel),
+              formulary.classLabel(drug.className),
+            ].join(' '),
+          ),
+          breadcrumb: crumb,
+          drug: drug,
+        ),
+      ),
   ];
 }
 
@@ -243,15 +251,14 @@ void _collectStrings(dynamic node, StringBuffer buf) {
 /// book that isn't installed).
 class LibraryIndex {
   LibraryIndex(List<Book> books)
-      : _byId = {
-          for (final b in books)
-            for (final t in b.allTopics)
-              t.id: TopicRef(b.id, t.asset, t.palette),
-        },
-        _bookByTopic = {
-          for (final b in books)
-            for (final t in b.allTopics) t.id: b,
-        };
+    : _byId = {
+        for (final b in books)
+          for (final t in b.allTopics) t.id: TopicRef(b.id, t.asset, t.palette),
+      },
+      _bookByTopic = {
+        for (final b in books)
+          for (final t in b.allTopics) t.id: b,
+      };
 
   final Map<String, TopicRef> _byId;
   final Map<String, Book> _bookByTopic;

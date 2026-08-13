@@ -30,9 +30,7 @@ class DoseTable extends StatelessWidget {
       final row = rows[i];
       final startsGroup = i == 0 || rows[i - 1].population != row.population;
       if (startsGroup) indexInGroup = 0;
-      if (showLabels &&
-          startsGroup &&
-          row.population != DosePopulation.both) {
+      if (showLabels && startsGroup && row.population != DosePopulation.both) {
         children.add(_PopulationLabel(population: row.population));
       }
       children.add(

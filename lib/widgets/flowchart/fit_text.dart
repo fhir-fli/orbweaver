@@ -65,8 +65,7 @@ class FitText extends StatelessWidget {
         if (tp.width > widest) widest = tp.width;
       }
       if (widest > maxWidth) {
-        fontSize =
-            (baseSize * maxWidth / widest).clamp(_minFontSize, baseSize);
+        fontSize = (baseSize * maxWidth / widest).clamp(_minFontSize, baseSize);
       }
       // Height fit: shrink further if the wrapped text is taller than the
       // budget (two proportional passes converge quickly).
@@ -75,7 +74,10 @@ class FitText extends StatelessWidget {
         final scaler = MediaQuery.textScalerOf(context);
         double wrappedHeight(double fs) {
           final tp = TextPainter(
-            text: TextSpan(text: text, style: style.copyWith(fontSize: fs)),
+            text: TextSpan(
+              text: text,
+              style: style.copyWith(fontSize: fs),
+            ),
             textDirection: TextDirection.ltr,
             textScaler: scaler,
           )..layout(maxWidth: maxWidth);

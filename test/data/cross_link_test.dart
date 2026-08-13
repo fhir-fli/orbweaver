@@ -51,13 +51,18 @@ void main() {
       }
     });
 
-    expect(total, greaterThan(100),
-        reason: 'suspiciously few cross-links found ($total) — did the link '
-            'syntax change? A guard that stops matching stops guarding.');
+    expect(
+      total,
+      greaterThan(100),
+      reason:
+          'suspiciously few cross-links found ($total) — did the link '
+          'syntax change? A guard that stops matching stops guarding.',
+    );
     expect(
       broken,
       isEmpty,
-      reason: 'Dead cross-links. These render as normal text and do nothing '
+      reason:
+          'Dead cross-links. These render as normal text and do nothing '
           'when tapped:\n  ${broken.join("\n  ")}',
     );
   });

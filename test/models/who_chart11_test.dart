@@ -39,9 +39,9 @@ void main() {
     expect(ivTable.title, contains('70 ml/kg'));
 
     // SAM carve-out is a red danger callout.
-    final sam = blocks
-        .whereType<ProseBlock>()
-        .firstWhere((b) => b.title!.contains('Severely malnourished'));
+    final sam = blocks.whereType<ProseBlock>().firstWhere(
+      (b) => b.title!.contains('Severely malnourished'),
+    );
     expect(sam.callout, isTrue);
     expect(sam.ownPaletteArgb['alert'], 0xFFD32F2F);
   });

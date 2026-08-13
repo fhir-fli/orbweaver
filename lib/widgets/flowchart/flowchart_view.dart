@@ -43,16 +43,16 @@ class SeverityFlowchartView extends StatelessWidget {
         .where((e) => e.loopbackBranchId != null)
         .cast<ConvergenceExit?>()
         .firstWhere((_) => true, orElse: () => null);
-    final forwardExits =
-        exits.where((e) => e.loopbackBranchId == null).toList();
+    final forwardExits = exits
+        .where((e) => e.loopbackBranchId == null)
+        .toList();
 
     final loopbackTargetIdx = loopback == null
         ? -1
         : fc.branches.indexWhere((b) => b.id == loopback.loopbackBranchId);
 
-    final useLoopbackLayout = loopback != null &&
-        loopbackTargetIdx >= 0 &&
-        fc.branches.length == 2;
+    final useLoopbackLayout =
+        loopback != null && loopbackTargetIdx >= 0 && fc.branches.length == 2;
 
     final rows = <Widget>[];
 
@@ -76,12 +76,14 @@ class SeverityFlowchartView extends StatelessWidget {
       // The first entry node gets the warning callouts as side flanks
       // when any warnings are declared on the flowchart.
       if (i == 0 && hasWarnings) {
-        rows.add(_EntryWithWarnings(
-          safety: safety,
-          caution: caution,
-          entry: node,
-          theme: theme,
-        ));
+        rows.add(
+          _EntryWithWarnings(
+            safety: safety,
+            caution: caution,
+            entry: node,
+            theme: theme,
+          ),
+        );
       } else {
         rows.add(
           FlowNodeBox(text: node.text, shape: node.shape, theme: theme),
@@ -91,14 +93,17 @@ class SeverityFlowchartView extends StatelessWidget {
       // below handles that transition (one arrow per branch column).
       // When pre-decision actions or a decision follow, the loop's
       // trailing arrow flows into them instead.
-      final isLastPreBranch = i == fc.entryChain.length - 1 &&
+      final isLastPreBranch =
+          i == fc.entryChain.length - 1 &&
           fc.decision == null &&
           fc.preDecisionActions.isEmpty;
       if (!isLastPreBranch) rows.add(const FlowDownArrow());
     }
 
     if (fc.preDecisionActions.isNotEmpty) {
-      rows.add(_PreDecisionActions(actions: fc.preDecisionActions, theme: theme));
+      rows.add(
+        _PreDecisionActions(actions: fc.preDecisionActions, theme: theme),
+      );
       rows.add(const FlowDownArrow());
     }
 
@@ -107,8 +112,7 @@ class SeverityFlowchartView extends StatelessWidget {
       // DecisionHub that draws the diamond + L-shape arrows to each
       // branch in one CustomPaint — arrows then originate at the
       // diamond's actual points rather than a shared bottom tip.
-      if (fc.decision!.shape == NodeShape.diamond &&
-          fc.branches.length > 1) {
+      if (fc.decision!.shape == NodeShape.diamond && fc.branches.length > 1) {
         rows.add(
           DecisionHub(
             text: fc.decision!.text,
@@ -143,20 +147,22 @@ class SeverityFlowchartView extends StatelessWidget {
     // Convergence side-warnings replace the hub with a callout-flanked
     // stadium (no L-arrows), so the fill line isn't needed there.
     final convHasWarnings = fc.convergence?.warnings.isNotEmpty ?? false;
-    final branchesExtendDown = fc.convergence != null &&
+    final branchesExtendDown =
+        fc.convergence != null &&
         !useLoopbackLayout &&
         !convHasWarnings &&
         (fc.branches.length == 2 || fc.branches.length == 3);
-    rows.add(_BranchesRow(
-      branches: fc.branches,
-      theme: theme,
-      extendDown: branchesExtendDown,
-    ));
+    rows.add(
+      _BranchesRow(
+        branches: fc.branches,
+        theme: theme,
+        extendDown: branchesExtendDown,
+      ),
+    );
 
     // Asymmetric branch continuations: render continuation nodes below
     // the branches row, anchored in the source branch's column.
-    final anyContinuation =
-        fc.branches.any((b) => b.continuation != null);
+    final anyContinuation = fc.branches.any((b) => b.continuation != null);
     if (anyContinuation && fc.branches.length == 2) {
       _appendBranchContinuations(rows, fc.branches);
     }
@@ -692,8 +698,7 @@ class _BranchesRow extends StatelessWidget {
                               tileBg: paletteFor[i]?.tileBg,
                               columnWidth: colW,
                             ),
-                          if (extendDown &&
-                              branches[i].continuation == null)
+                          if (extendDown && branches[i].continuation == null)
                             const Expanded(child: TrailingFillLine()),
                         ],
                       ),
@@ -720,17 +725,17 @@ List<({Color? headerBg, Color? tileBg})?> _resolvePalettes(
     return switch (b.severity) {
       RowSeverity.none => null,
       RowSeverity.emergency => (
-          headerBg: theme.severitySevereHeader,
-          tileBg: theme.severitySevereTile,
-        ),
+        headerBg: theme.severitySevereHeader,
+        tileBg: theme.severitySevereTile,
+      ),
       RowSeverity.priority => (
-          headerBg: theme.severityModerateHeader,
-          tileBg: theme.severityModerateTile,
-        ),
+        headerBg: theme.severityModerateHeader,
+        tileBg: theme.severityModerateTile,
+      ),
       RowSeverity.nonUrgent => (
-          headerBg: theme.severityMildHeader,
-          tileBg: theme.severityMildTile,
-        ),
+        headerBg: theme.severityMildHeader,
+        tileBg: theme.severityMildTile,
+      ),
     };
   }).toList();
 }
@@ -887,8 +892,7 @@ class _ConvergenceArrowsPainter extends CustomPainter {
     // (W − (n−1)·gap)/n wide, with the gap between adjacent slots.
     final slotW = (w - (branchCount - 1) * columnGap) / branchCount;
     final centers = [
-      for (var i = 0; i < branchCount; i++)
-        i * (slotW + columnGap) + slotW / 2,
+      for (var i = 0; i < branchCount; i++) i * (slotW + columnGap) + slotW / 2,
     ];
 
     // Centre arrow only when a column sits directly above the stadium
@@ -981,8 +985,7 @@ class _ConvergenceBox extends StatelessWidget {
           TextSpan(
             text: b.text,
             style: TextStyle(
-              decoration:
-                  b.linkId != null ? TextDecoration.underline : null,
+              decoration: b.linkId != null ? TextDecoration.underline : null,
             ),
           ),
         ],
@@ -1095,8 +1098,7 @@ class _CriticalCareLinkPill extends StatelessWidget {
             fontSize: 14,
             fontWeight: FontWeight.w700,
             color: Colors.black87,
-            decoration:
-                link.linkId != null ? TextDecoration.underline : null,
+            decoration: link.linkId != null ? TextDecoration.underline : null,
           ),
         ),
       ),
@@ -1381,8 +1383,7 @@ class _HorizontalArrowPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(_HorizontalArrowPainter old) =>
-      old.pointing != pointing;
+  bool shouldRepaint(_HorizontalArrowPainter old) => old.pointing != pointing;
 }
 
 /// Renderer for [FlowchartVariant.linear] — a single-column flow
@@ -1554,15 +1555,15 @@ class _LinearStepRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final Widget body = switch (step) {
       LinearContentStep(:final title, :final bullets) => BranchHeaderBox(
-          label: title,
-          criteria: bullets,
-        ),
+        label: title,
+        criteria: bullets,
+      ),
       LinearActionStep(:final action) => ActionTile(
-          action: action,
-          theme: theme,
-          columnWidth: columnWidth,
-          omitAnyBadge: true,
-        ),
+        action: action,
+        theme: theme,
+        columnWidth: columnWidth,
+        omitAnyBadge: true,
+      ),
     };
     return Center(
       child: FractionallySizedBox(widthFactor: widthFactor, child: body),
@@ -1608,12 +1609,14 @@ class DifferentialFlowchartView extends StatelessWidget {
     for (var i = 0; i < fc.entryChain.length; i++) {
       final node = fc.entryChain[i];
       if (i == 0 && hasWarnings) {
-        rows.add(_EntryWithWarnings(
-          safety: safety,
-          caution: caution,
-          entry: node,
-          theme: theme,
-        ));
+        rows.add(
+          _EntryWithWarnings(
+            safety: safety,
+            caution: caution,
+            entry: node,
+            theme: theme,
+          ),
+        );
       } else {
         rows.add(FlowNodeBox(text: node.text, shape: node.shape, theme: theme));
       }
@@ -1621,23 +1624,28 @@ class DifferentialFlowchartView extends StatelessWidget {
       // diamond follows immediately — its own incoming arrow handles
       // that. When pre-decision actions sit between, keep the arrow so
       // it flows entry → actions.
-      final isLastBeforeDiamond = i == fc.entryChain.length - 1 &&
+      final isLastBeforeDiamond =
+          i == fc.entryChain.length - 1 &&
           fc.decision != null &&
           fc.preDecisionActions.isEmpty;
       if (!isLastBeforeDiamond) rows.add(const FlowDownArrow());
     }
 
     if (fc.preDecisionActions.isNotEmpty) {
-      rows.add(_PreDecisionActions(actions: fc.preDecisionActions, theme: theme));
+      rows.add(
+        _PreDecisionActions(actions: fc.preDecisionActions, theme: theme),
+      );
     }
 
     if (fc.decision != null) {
       rows.add(const FlowDownArrow());
-      rows.add(FlowNodeBox(
-        text: fc.decision!.text,
-        shape: fc.decision!.shape,
-        theme: theme,
-      ));
+      rows.add(
+        FlowNodeBox(
+          text: fc.decision!.text,
+          shape: fc.decision!.shape,
+          theme: theme,
+        ),
+      );
       rows.add(const FlowDownArrow());
     }
 
@@ -1649,32 +1657,34 @@ class DifferentialFlowchartView extends StatelessWidget {
           i,
           (i + cols).clamp(0, fc.cards.length),
         );
-        rows.add(Padding(
-          padding: const EdgeInsets.only(bottom: 4),
-          child: IntrinsicHeight(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                for (var c = 0; c < rowCards.length; c++) ...[
-                  if (c > 0) const SizedBox(width: 6),
-                  Expanded(
-                    child: BranchHeaderBox(
-                      label: rowCards[c].title,
-                      criteria: rowCards[c].bullets,
+        rows.add(
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4),
+            child: IntrinsicHeight(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  for (var c = 0; c < rowCards.length; c++) ...[
+                    if (c > 0) const SizedBox(width: 6),
+                    Expanded(
+                      child: BranchHeaderBox(
+                        label: rowCards[c].title,
+                        criteria: rowCards[c].bullets,
+                      ),
                     ),
-                  ),
+                  ],
+                  // Pad short final row with blank slots so cards keep
+                  // their column width when the card count isn't a
+                  // multiple of [columns].
+                  for (var pad = rowCards.length; pad < cols; pad++) ...[
+                    const SizedBox(width: 6),
+                    const Expanded(child: SizedBox.shrink()),
+                  ],
                 ],
-                // Pad short final row with blank slots so cards keep
-                // their column width when the card count isn't a
-                // multiple of [columns].
-                for (var pad = rowCards.length; pad < cols; pad++) ...[
-                  const SizedBox(width: 6),
-                  const Expanded(child: SizedBox.shrink()),
-                ],
-              ],
+              ),
             ),
           ),
-        ));
+        );
       }
     }
 
@@ -1690,19 +1700,23 @@ class DifferentialFlowchartView extends StatelessWidget {
           .cast<WarningCallout?>()
           .firstWhere((_) => true, orElse: () => null);
       if (convSafety != null || convCaution != null) {
-        rows.add(_ConvergenceWithWarnings(
-          safety: convSafety,
-          caution: convCaution,
-          node: conv,
-          theme: theme,
-        ));
-      } else {
-        rows.add(Center(
-          child: FractionallySizedBox(
-            widthFactor: 0.55,
-            child: _ConvergenceBox(node: conv, theme: theme),
+        rows.add(
+          _ConvergenceWithWarnings(
+            safety: convSafety,
+            caution: convCaution,
+            node: conv,
+            theme: theme,
           ),
-        ));
+        );
+      } else {
+        rows.add(
+          Center(
+            child: FractionallySizedBox(
+              widthFactor: 0.55,
+              child: _ConvergenceBox(node: conv, theme: theme),
+            ),
+          ),
+        );
       }
     }
 

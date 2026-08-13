@@ -71,8 +71,7 @@ class SectionBracket extends StatelessWidget {
           children: [
             if (title != null)
               Padding(
-                padding:
-                    const EdgeInsets.only(left: _titleInset - _bodyInset),
+                padding: const EdgeInsets.only(left: _titleInset - _bodyInset),
                 child: Text(title!, style: titleStyle),
               ),
             body,

@@ -80,10 +80,10 @@ class _BookScreenState extends State<BookScreen> {
       body: allTopics.isEmpty
           ? const _EmptyState()
           : _query.isNotEmpty
-              ? _buildSearchResults(allTopics)
-              : widget.book.view == 'index'
-                  ? _buildIndex()
-                  : _buildContents(),
+          ? _buildSearchResults(allTopics)
+          : widget.book.view == 'index'
+          ? _buildIndex()
+          : _buildContents(),
     );
   }
 
@@ -119,23 +119,22 @@ class _BookScreenState extends State<BookScreen> {
     }
 
     Widget column(List<BookGroup> groups) => Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            for (final g in groups) ...[
-              _IndexHeader(
-                title: g.title,
-                accent: g.paletteOverrides['accent'] ?? widget.book.spineColor,
-              ),
-              for (final t in leavesOfGroup(g))
-                _IndexCell(
-                  topic: t,
-                  accent:
-                      g.paletteOverrides['accent'] ?? widget.book.spineColor,
-                  onTap: () => openTopicFromBook(context, widget.book, t),
-                ),
-            ],
-          ],
-        );
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (final g in groups) ...[
+          _IndexHeader(
+            title: g.title,
+            accent: g.paletteOverrides['accent'] ?? widget.book.spineColor,
+          ),
+          for (final t in leavesOfGroup(g))
+            _IndexCell(
+              topic: t,
+              accent: g.paletteOverrides['accent'] ?? widget.book.spineColor,
+              onTap: () => openTopicFromBook(context, widget.book, t),
+            ),
+        ],
+      ],
+    );
 
     return SingleChildScrollView(
       child: Padding(
@@ -154,8 +153,7 @@ class _BookScreenState extends State<BookScreen> {
             for (final g in footerGroups)
               _IndexHeader(
                 title: g.title,
-                accent:
-                    g.paletteOverrides['accent'] ?? widget.book.spineColor,
+                accent: g.paletteOverrides['accent'] ?? widget.book.spineColor,
               ),
             if (footerGroups.isNotEmpty)
               Wrap(
@@ -168,9 +166,11 @@ class _BookScreenState extends State<BookScreen> {
                         width: 180,
                         child: _IndexCell(
                           topic: t,
-                          accent: g.paletteOverrides['accent'] ??
+                          accent:
+                              g.paletteOverrides['accent'] ??
                               widget.book.spineColor,
-                          onTap: () => openTopicFromBook(context, widget.book, t),
+                          onTap: () =>
+                              openTopicFromBook(context, widget.book, t),
                         ),
                       ),
                 ],
@@ -222,20 +222,20 @@ class _BookScreenState extends State<BookScreen> {
       itemCount: nodes.length,
       separatorBuilder: (_, i) =>
           nodes[i] is BookLeaf && nodes[i + 1] is BookLeaf
-              ? const Divider(
-                  height: 1,
-                  thickness: 0.5,
-                  indent: 12,
-                  endIndent: 12,
-                )
-              : const SizedBox.shrink(),
+          ? const Divider(
+              height: 1,
+              thickness: 0.5,
+              indent: 12,
+              endIndent: 12,
+            )
+          : const SizedBox.shrink(),
       itemBuilder: (context, i) => switch (nodes[i]) {
         BookLeaf(:final topic) => _TopicRow(
-            topic: topic,
-            onTap: () => openTopicFromBook(context, widget.book, topic),
-          ),
-        BookGroup group when group.view == 'collection' &&
-                group.formulary != null =>
+          topic: topic,
+          onTap: () => openTopicFromBook(context, widget.book, topic),
+        ),
+        BookGroup group
+            when group.view == 'collection' && group.formulary != null =>
           _GroupRow(
             group: group,
             spineColor: widget.book.spineColor,
@@ -253,18 +253,18 @@ class _BookScreenState extends State<BookScreen> {
             ),
           ),
         BookGroup group => _GroupRow(
-            group: group,
-            spineColor: widget.book.spineColor,
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute<void>(
-                builder: (_) => _ChapterScreen(
-                  book: widget.book,
-                  group: group,
-                ),
+          group: group,
+          spineColor: widget.book.spineColor,
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute<void>(
+              builder: (_) => _ChapterScreen(
+                book: widget.book,
+                group: group,
               ),
             ),
           ),
+        ),
       },
     );
   }
@@ -323,8 +323,7 @@ class _ChapterScreen extends StatelessWidget {
           if (group.overview != null)
             _TopicRow(
               topic: group.overview!,
-              onTap: () =>
-                  openTopicFromBook(context, book, group.overview!),
+              onTap: () => openTopicFromBook(context, book, group.overview!),
             ),
           for (final node in group.children)
             _NodeTile(node: node, book: book, depth: 0),
@@ -372,8 +371,7 @@ class _NodeTile extends StatelessWidget {
               _TopicRow(
                 topic: group.overview!,
                 indent: (depth + 1) * 12.0,
-                onTap: () =>
-                    openTopicFromBook(context, book, group.overview!),
+                onTap: () => openTopicFromBook(context, book, group.overview!),
               ),
             for (final child in group.children)
               _NodeTile(node: child, book: book, depth: depth + 1),
@@ -482,7 +480,12 @@ class _TopicRow extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: EdgeInsets.only(left: 12 + indent, right: 12, top: 8, bottom: 8),
+        padding: EdgeInsets.only(
+          left: 12 + indent,
+          right: 12,
+          top: 8,
+          bottom: 8,
+        ),
         child: Row(
           children: [
             Container(
@@ -541,20 +544,20 @@ class _IndexHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        width: double.infinity,
-        margin: const EdgeInsets.only(top: 3, bottom: 1),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
-        color: accent,
-        child: Text(
-          title,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 11.5,
-            fontWeight: FontWeight.w800,
-            letterSpacing: 0.3,
-          ),
-        ),
-      );
+    width: double.infinity,
+    margin: const EdgeInsets.only(top: 3, bottom: 1),
+    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
+    color: accent,
+    child: Text(
+      title,
+      style: const TextStyle(
+        color: Colors.white,
+        fontSize: 11.5,
+        fontWeight: FontWeight.w800,
+        letterSpacing: 0.3,
+      ),
+    ),
+  );
 }
 
 /// A two-column grid of compact topic cells under a section header.
@@ -648,15 +651,15 @@ class _EmptyState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => const Center(
-        child: Padding(
-          padding: EdgeInsets.all(32),
-          child: Text(
-            'No topics yet.\n\nContent for this book is still being authored.',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.black54),
-          ),
-        ),
-      );
+    child: Padding(
+      padding: EdgeInsets.all(32),
+      child: Text(
+        'No topics yet.\n\nContent for this book is still being authored.',
+        textAlign: TextAlign.center,
+        style: TextStyle(color: Colors.black54),
+      ),
+    ),
+  );
 }
 
 class _NoMatches extends StatelessWidget {
@@ -666,13 +669,13 @@ class _NoMatches extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Center(
-        child: Padding(
-          padding: const EdgeInsets.all(32),
-          child: Text(
-            'No topics match "$query".',
-            textAlign: TextAlign.center,
-            style: const TextStyle(color: Colors.black54),
-          ),
-        ),
-      );
+    child: Padding(
+      padding: const EdgeInsets.all(32),
+      child: Text(
+        'No topics match "$query".',
+        textAlign: TextAlign.center,
+        style: const TextStyle(color: Colors.black54),
+      ),
+    ),
+  );
 }

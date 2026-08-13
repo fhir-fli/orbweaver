@@ -22,27 +22,43 @@ void main() {
   group('renal_function — Cockcroft-Gault CrCl', () {
     // CrCl = (140 − age) × wt × (0.85 if F) / (72 × Scr[mg/dL])
     test('male 60y, 80kg, Scr 1.0 → 88.9 mL/min', () {
-      final r = computeFormula('renal_function',
-          {'age': 60, 'sex': 'M', 'weight': 80, 'creatinine': 1.0});
+      final r = computeFormula('renal_function', {
+        'age': 60,
+        'sex': 'M',
+        'weight': 80,
+        'creatinine': 1.0,
+      });
       expect(_byLabel(r, 'cockcroft').unit, 'mL/min');
       expect(_v(r, 0), closeTo(88.9, 0.1)); // 80×80/72
     });
 
     test('female applies 0.85 factor → 75.6 mL/min', () {
-      final r = computeFormula('renal_function',
-          {'age': 60, 'sex': 'F', 'weight': 80, 'creatinine': 1.0});
+      final r = computeFormula('renal_function', {
+        'age': 60,
+        'sex': 'F',
+        'weight': 80,
+        'creatinine': 1.0,
+      });
       expect(_v(r, 0), closeTo(75.6, 0.1)); // 88.888 × 0.85
     });
 
     test('elderly higher creatinine: 70y male 70kg Scr 1.2 → 56.7', () {
-      final r = computeFormula('renal_function',
-          {'age': 70, 'sex': 'M', 'weight': 70, 'creatinine': 1.2});
+      final r = computeFormula('renal_function', {
+        'age': 70,
+        'sex': 'M',
+        'weight': 70,
+        'creatinine': 1.2,
+      });
       expect(_v(r, 0), closeTo(56.7, 0.1)); // 70×70/86.4
     });
 
     test('creatinine unit toggle: 88.4 µmol/L ≡ 1.0 mg/dL', () {
-      final mg = computeFormula('renal_function',
-          {'age': 60, 'sex': 'M', 'weight': 80, 'creatinine': 1.0});
+      final mg = computeFormula('renal_function', {
+        'age': 60,
+        'sex': 'M',
+        'weight': 80,
+        'creatinine': 1.0,
+      });
       final umol = computeFormula('renal_function', {
         'age': 60,
         'sex': 'M',
@@ -54,8 +70,11 @@ void main() {
     });
 
     test('no weight → CrCl omitted, only eGFR remains', () {
-      final r = computeFormula(
-          'renal_function', {'age': 60, 'sex': 'M', 'creatinine': 1.0});
+      final r = computeFormula('renal_function', {
+        'age': 60,
+        'sex': 'M',
+        'creatinine': 1.0,
+      });
       expect(r.outputs.any((o) => o.label.contains('Cockcroft')), isFalse);
       expect(r.outputs.any((o) => o.label.contains('eGFR')), isTrue);
     });
@@ -64,27 +83,39 @@ void main() {
   group('renal_function — CKD-EPI 2021 eGFR (race-free)', () {
     // 142 × min(Scr/κ,1)^α × max(Scr/κ,1)^−1.2 × 0.9938^age × (1.012 if F)
     test('male 60y Scr 1.0 → 86.2 (max-branch)', () {
-      final r = computeFormula(
-          'renal_function', {'age': 60, 'sex': 'M', 'creatinine': 1.0});
+      final r = computeFormula('renal_function', {
+        'age': 60,
+        'sex': 'M',
+        'creatinine': 1.0,
+      });
       expect(_byLabel(r, 'egfr').unit, 'mL/min/1.73m²');
       expect(_v(_single(r, 'egfr'), 0), closeTo(86.2, 0.4));
     });
 
     test('female 60y Scr 0.8 → 84.3 (female coefficients)', () {
-      final r = computeFormula(
-          'renal_function', {'age': 60, 'sex': 'F', 'creatinine': 0.8});
+      final r = computeFormula('renal_function', {
+        'age': 60,
+        'sex': 'F',
+        'creatinine': 0.8,
+      });
       expect(_egfr(r), closeTo(84.3, 0.4));
     });
 
     test('female 40y Scr 0.5 → 121.6 (min/α branch, Scr<κ)', () {
-      final r = computeFormula(
-          'renal_function', {'age': 40, 'sex': 'F', 'creatinine': 0.5});
+      final r = computeFormula('renal_function', {
+        'age': 40,
+        'sex': 'F',
+        'creatinine': 0.5,
+      });
       expect(_egfr(r), closeTo(121.6, 0.5));
     });
 
     test('missing age → empty (no wrong number)', () {
       expect(
-        computeFormula('renal_function', {'sex': 'M', 'creatinine': 1.0}).isEmpty,
+        computeFormula('renal_function', {
+          'sex': 'M',
+          'creatinine': 1.0,
+        }).isEmpty,
         isTrue,
       );
     });
@@ -120,57 +151,83 @@ void main() {
 
   group('corrected_sodium', () {
     test('Na 130, glu 600 → Hillier 142, Katz 138', () {
-      final r =
-          computeFormula('corrected_sodium', {'sodium': 130, 'glucose': 600});
+      final r = computeFormula('corrected_sodium', {
+        'sodium': 130,
+        'glucose': 600,
+      });
       expect(_v(r, 0), closeTo(142, 0.05)); // 130 + 2.4×5
       expect(_v(r, 1), closeTo(138, 0.05)); // 130 + 1.6×5
     });
 
     test('Na 125, glu 200 → Hillier 127.4', () {
-      final r =
-          computeFormula('corrected_sodium', {'sodium': 125, 'glucose': 200});
+      final r = computeFormula('corrected_sodium', {
+        'sodium': 125,
+        'glucose': 200,
+      });
       expect(_v(r, 0), closeTo(127.4, 0.05));
     });
 
     test('glucose unit toggle: 33.333 mmol/L ≡ 600 mg/dL', () {
-      final mgdl =
-          computeFormula('corrected_sodium', {'sodium': 130, 'glucose': 600});
-      final mmol = computeFormula('corrected_sodium',
-          {'sodium': 130, 'glucose': 33.333, 'glu_unit': 'mmol/L'});
+      final mgdl = computeFormula('corrected_sodium', {
+        'sodium': 130,
+        'glucose': 600,
+      });
+      final mmol = computeFormula('corrected_sodium', {
+        'sodium': 130,
+        'glucose': 33.333,
+        'glu_unit': 'mmol/L',
+      });
       expect(_v(mmol, 0), closeTo(_v(mgdl, 0), 0.05));
     });
 
     test('missing glucose → empty', () {
-      expect(computeFormula('corrected_sodium', {'sodium': 130}).isEmpty, isTrue);
+      expect(
+        computeFormula('corrected_sodium', {'sodium': 130}).isEmpty,
+        isTrue,
+      );
     });
   });
 
   group('anion_gap', () {
     test('140/100/24 → AG 16, high', () {
-      final r = computeFormula(
-          'anion_gap', {'sodium': 140, 'chloride': 100, 'bicarbonate': 24});
+      final r = computeFormula('anion_gap', {
+        'sodium': 140,
+        'chloride': 100,
+        'bicarbonate': 24,
+      });
       expect(_v(r, 0), closeTo(16, 0.05));
       expect(r.outputs[0].severity, FormulaSeverity.warn);
       expect(r.outputs, hasLength(1)); // no albumin → no correction row
     });
 
     test('140/105/25 → AG 10, normal', () {
-      final r = computeFormula(
-          'anion_gap', {'sodium': 140, 'chloride': 105, 'bicarbonate': 25});
+      final r = computeFormula('anion_gap', {
+        'sodium': 140,
+        'chloride': 105,
+        'bicarbonate': 25,
+      });
       expect(_v(r, 0), closeTo(10, 0.05));
       expect(r.outputs[0].severity, FormulaSeverity.none);
     });
 
     test('albumin 2.0 adds corrected AG 21', () {
-      final r = computeFormula('anion_gap',
-          {'sodium': 140, 'chloride': 100, 'bicarbonate': 24, 'albumin': 2.0});
+      final r = computeFormula('anion_gap', {
+        'sodium': 140,
+        'chloride': 100,
+        'bicarbonate': 24,
+        'albumin': 2.0,
+      });
       expect(r.outputs, hasLength(2));
       expect(_v(r, 1), closeTo(21, 0.05)); // 16 + 2.5×(4−2)
     });
 
     test('albumin 4.0 (normal) leaves corrected == raw', () {
-      final r = computeFormula('anion_gap',
-          {'sodium': 140, 'chloride': 100, 'bicarbonate': 24, 'albumin': 4.0});
+      final r = computeFormula('anion_gap', {
+        'sodium': 140,
+        'chloride': 100,
+        'bicarbonate': 24,
+        'albumin': 4.0,
+      });
       expect(_v(r, 1), closeTo(16, 0.05));
     });
 
@@ -185,32 +242,50 @@ void main() {
   group('aa_gradient', () {
     // PAO2 = FiO2×(760−47) − PaCO2/0.8 ; A-a = PAO2 − PaO2
     test('room air 40/90, age 40 → A-a 9.7, within expected 14', () {
-      final r = computeFormula(
-          'aa_gradient', {'fio2': 21, 'paco2': 40, 'pao2': 90, 'age': 40});
+      final r = computeFormula('aa_gradient', {
+        'fio2': 21,
+        'paco2': 40,
+        'pao2': 90,
+        'age': 40,
+      });
       expect(_v(r, 0), closeTo(9.7, 0.1));
       expect(_byLabel(r, 'expected').severity, FormulaSeverity.none);
     });
 
     test('room air 40/60, age 40 → A-a 39.7, elevated for age', () {
-      final r = computeFormula(
-          'aa_gradient', {'fio2': 21, 'paco2': 40, 'pao2': 60, 'age': 40});
+      final r = computeFormula('aa_gradient', {
+        'fio2': 21,
+        'paco2': 40,
+        'pao2': 60,
+        'age': 40,
+      });
       expect(_v(r, 0), closeTo(39.7, 0.1));
       expect(_byLabel(r, 'expected').severity, FormulaSeverity.warn);
     });
 
     test('atmospheric-pressure override changes PAO2 (altitude)', () {
-      final sea = computeFormula(
-          'aa_gradient', {'fio2': 21, 'paco2': 40, 'pao2': 60});
-      final alt = computeFormula('aa_gradient',
-          {'fio2': 21, 'paco2': 40, 'pao2': 60, 'patm': 700});
+      final sea = computeFormula('aa_gradient', {
+        'fio2': 21,
+        'paco2': 40,
+        'pao2': 60,
+      });
+      final alt = computeFormula('aa_gradient', {
+        'fio2': 21,
+        'paco2': 40,
+        'pao2': 60,
+        'patm': 700,
+      });
       expect(_v(sea, 0), closeTo(39.7, 0.1)); // 99.73 − 60
       expect(_v(alt, 0), closeTo(27.1, 0.2)); // 0.21×653 − 50 − 60
       expect(_v(alt, 0), lessThan(_v(sea, 0)));
     });
 
     test('no age → only the gradient, no expected row', () {
-      final r =
-          computeFormula('aa_gradient', {'fio2': 21, 'paco2': 40, 'pao2': 90});
+      final r = computeFormula('aa_gradient', {
+        'fio2': 21,
+        'paco2': 40,
+        'pao2': 90,
+      });
       expect(r.outputs, hasLength(1));
     });
 
@@ -230,21 +305,27 @@ void main() {
     });
 
     test('measured 30 > 28 → concurrent respiratory acidosis', () {
-      final r =
-          computeFormula('winters', {'bicarbonate': 12, 'measured_pco2': 30});
+      final r = computeFormula('winters', {
+        'bicarbonate': 12,
+        'measured_pco2': 30,
+      });
       expect(r.outputs[1].severity, FormulaSeverity.warn);
       expect(r.outputs[1].interpretation, contains('acidosis'));
     });
 
     test('measured 26 within range → appropriate compensation', () {
-      final r =
-          computeFormula('winters', {'bicarbonate': 12, 'measured_pco2': 26});
+      final r = computeFormula('winters', {
+        'bicarbonate': 12,
+        'measured_pco2': 26,
+      });
       expect(r.outputs[1].severity, FormulaSeverity.none);
     });
 
     test('measured 20 < 24 → concurrent respiratory alkalosis', () {
-      final r =
-          computeFormula('winters', {'bicarbonate': 12, 'measured_pco2': 20});
+      final r = computeFormula('winters', {
+        'bicarbonate': 12,
+        'measured_pco2': 20,
+      });
       expect(r.outputs[1].severity, FormulaSeverity.warn);
       expect(r.outputs[1].interpretation, contains('alkalosis'));
     });
@@ -257,34 +338,49 @@ void main() {
   group('ideal_body_weight (Devine)', () {
     // male 50 + 2.3×(in−60); female 45.5 + 2.3×(in−60)
     test('male 180cm → 75.0 kg', () {
-      final r = computeFormula(
-          'ideal_body_weight', {'height': 180, 'sex': 'M'});
+      final r = computeFormula('ideal_body_weight', {
+        'height': 180,
+        'sex': 'M',
+      });
       expect(_v(r, 0), closeTo(75.0, 0.1)); // in=70.87
     });
 
     test('female 165cm → 56.9 kg', () {
-      final r = computeFormula(
-          'ideal_body_weight', {'height': 165, 'sex': 'F'});
+      final r = computeFormula('ideal_body_weight', {
+        'height': 165,
+        'sex': 'F',
+      });
       expect(_v(r, 0), closeTo(56.9, 0.1));
     });
 
     test('height unit toggle: 70.866 in ≡ 180 cm', () {
-      final cm = computeFormula(
-          'ideal_body_weight', {'height': 180, 'sex': 'M'});
-      final inch = computeFormula('ideal_body_weight',
-          {'height': 70.866, 'sex': 'M', 'height_unit': 'in'});
+      final cm = computeFormula('ideal_body_weight', {
+        'height': 180,
+        'sex': 'M',
+      });
+      final inch = computeFormula('ideal_body_weight', {
+        'height': 70.866,
+        'sex': 'M',
+        'height_unit': 'in',
+      });
       expect(_v(inch, 0), closeTo(_v(cm, 0), 0.05));
     });
 
     test('actual weight adds adjusted BW: 180cm male, 120kg → 93', () {
-      final r = computeFormula('ideal_body_weight',
-          {'height': 180, 'sex': 'M', 'weight': 120});
+      final r = computeFormula('ideal_body_weight', {
+        'height': 180,
+        'sex': 'M',
+        'weight': 120,
+      });
       expect(r.outputs, hasLength(2));
       expect(_v(r, 1), closeTo(93.0, 0.2)); // 75 + 0.4×45
     });
 
     test('missing sex → empty', () {
-      expect(computeFormula('ideal_body_weight', {'height': 180}).isEmpty, isTrue);
+      expect(
+        computeFormula('ideal_body_weight', {'height': 180}).isEmpty,
+        isTrue,
+      );
     });
   });
 
@@ -410,26 +506,40 @@ void main() {
 
   group('free_water_deficit', () {
     test('male 70kg, Na 160, target 140 → 6 L', () {
-      final r = computeFormula('free_water_deficit',
-          {'weight': 70, 'sex': 'M', 'sodium': 160, 'target': 140});
+      final r = computeFormula('free_water_deficit', {
+        'weight': 70,
+        'sex': 'M',
+        'sodium': 160,
+        'target': 140,
+      });
       expect(_v(r, 0), closeTo(6.0, 0.05));
     });
 
     test('female TBW factor 0.5: 60kg Na 154 → 3 L', () {
-      final r = computeFormula('free_water_deficit',
-          {'weight': 60, 'sex': 'F', 'sodium': 154, 'target': 140});
+      final r = computeFormula('free_water_deficit', {
+        'weight': 60,
+        'sex': 'F',
+        'sodium': 154,
+        'target': 140,
+      });
       expect(_v(r, 0), closeTo(3.0, 0.05));
     });
 
     test('target defaults to 140 when omitted', () {
-      final r = computeFormula(
-          'free_water_deficit', {'weight': 70, 'sex': 'M', 'sodium': 160});
+      final r = computeFormula('free_water_deficit', {
+        'weight': 70,
+        'sex': 'M',
+        'sodium': 160,
+      });
       expect(_v(r, 0), closeTo(6.0, 0.05));
     });
 
     test('missing sodium → empty', () {
       expect(
-        computeFormula('free_water_deficit', {'weight': 70, 'sex': 'M'}).isEmpty,
+        computeFormula('free_water_deficit', {
+          'weight': 70,
+          'sex': 'M',
+        }).isEmpty,
         isTrue,
       );
     });
@@ -437,40 +547,58 @@ void main() {
 
   group('anthropometrics (BMI + BSA)', () {
     test('180cm 80kg → BMI 24.7 normal, BSA 2.00', () {
-      final r = computeFormula('anthropometrics', {'height': 180, 'weight': 80});
+      final r = computeFormula('anthropometrics', {
+        'height': 180,
+        'weight': 80,
+      });
       expect(_v(r, 0), closeTo(24.7, 0.05)); // 80/1.8²
       expect(r.outputs[0].interpretation, contains('Normal'));
       expect(_v(r, 1), closeTo(2.0, 0.01)); // Mosteller √(180·80/3600)=2
     });
     test('BMI category + severity thresholds', () {
       expect(
-        computeFormula('anthropometrics', {'height': 180, 'weight': 100})
-            .outputs[0]
-            .interpretation,
+        computeFormula('anthropometrics', {
+          'height': 180,
+          'weight': 100,
+        }).outputs[0].interpretation,
         contains('Obese'),
       );
       expect(
-        computeFormula('anthropometrics', {'height': 180, 'weight': 55})
-            .outputs[0]
-            .interpretation,
+        computeFormula('anthropometrics', {
+          'height': 180,
+          'weight': 55,
+        }).outputs[0].interpretation,
         contains('Underweight'),
       );
     });
     test('height unit toggle: 70.866 in ≡ 180 cm', () {
-      final cm = computeFormula('anthropometrics', {'height': 180, 'weight': 80});
-      final inch = computeFormula('anthropometrics',
-          {'height': 70.866, 'weight': 80, 'height_unit': 'in'});
+      final cm = computeFormula('anthropometrics', {
+        'height': 180,
+        'weight': 80,
+      });
+      final inch = computeFormula('anthropometrics', {
+        'height': 70.866,
+        'weight': 80,
+        'height_unit': 'in',
+      });
       expect(_v(inch, 0), closeTo(_v(cm, 0), 0.05));
     });
     test('missing weight → empty', () {
-      expect(computeFormula('anthropometrics', {'height': 180}).isEmpty, isTrue);
+      expect(
+        computeFormula('anthropometrics', {'height': 180}).isEmpty,
+        isTrue,
+      );
     });
   });
 
   group('osmolal_gap', () {
     test('measured 300, Na 140, glu 90, BUN 14 → gap 10', () {
-      final r = computeFormula('osmolal_gap',
-          {'measured': 300, 'sodium': 140, 'glucose': 90, 'bun': 14});
+      final r = computeFormula('osmolal_gap', {
+        'measured': 300,
+        'sodium': 140,
+        'glucose': 90,
+        'bun': 14,
+      });
       expect(_v(r, 1), closeTo(290, 0.05)); // calc = 280+5+5
       expect(_v(r, 0), closeTo(10, 0.05));
     });
@@ -485,15 +613,21 @@ void main() {
       expect(_v(r, 1), closeTo(290 + 100 / 3.7, 0.05));
     });
     test('gap > 10 flags warn', () {
-      final r = computeFormula('osmolal_gap',
-          {'measured': 320, 'sodium': 140, 'glucose': 90, 'bun': 14});
+      final r = computeFormula('osmolal_gap', {
+        'measured': 320,
+        'sodium': 140,
+        'glucose': 90,
+        'bun': 14,
+      });
       expect(r.outputs[0].severity, FormulaSeverity.warn);
     });
     test('missing BUN → empty', () {
       expect(
-        computeFormula('osmolal_gap',
-                {'measured': 300, 'sodium': 140, 'glucose': 90})
-            .isEmpty,
+        computeFormula('osmolal_gap', {
+          'measured': 300,
+          'sodium': 140,
+          'glucose': 90,
+        }).isEmpty,
         isTrue,
       );
     });
@@ -507,8 +641,11 @@ void main() {
       expect(r.outputs[1].unit, contains('350')); // 2800/8 mL/h
     });
     test('4 mL/kg legacy coefficient doubles it', () {
-      final r =
-          computeFormula('parkland', {'weight': 70, 'tbsa': 40, 'coefficient': '4'});
+      final r = computeFormula('parkland', {
+        'weight': 70,
+        'tbsa': 40,
+        'coefficient': '4',
+      });
       expect(_v(r, 0), closeTo(11200, 0.5));
     });
     test('missing TBSA → empty', () {
@@ -538,8 +675,12 @@ void main() {
       expect(r.outputs[0].interpretation, contains('intrinsic'));
     });
     test('FEUrea added only when urea provided', () {
-      final base = computeFormula('urinary_indices',
-          {'serum_na': 140, 'urine_na': 10, 'serum_cr': 5, 'urine_cr': 100});
+      final base = computeFormula('urinary_indices', {
+        'serum_na': 140,
+        'urine_na': 10,
+        'serum_cr': 5,
+        'urine_cr': 100,
+      });
       expect(base.outputs, hasLength(1));
       final withUrea = computeFormula('urinary_indices', {
         'serum_na': 140,
@@ -554,9 +695,11 @@ void main() {
     });
     test('missing urine creatinine → empty', () {
       expect(
-        computeFormula('urinary_indices',
-                {'serum_na': 140, 'urine_na': 10, 'serum_cr': 5})
-            .isEmpty,
+        computeFormula('urinary_indices', {
+          'serum_na': 140,
+          'urine_na': 10,
+          'serum_cr': 5,
+        }).isEmpty,
         isTrue,
       );
     });
@@ -637,21 +780,33 @@ void main() {
 
   group('fib4', () {
     test('age 60, AST 50, plt 150, ALT 40 → 3.16 (high)', () {
-      final r = computeFormula(
-          'fib4', {'age': 60, 'ast': 50, 'alt': 40, 'platelets': 150});
+      final r = computeFormula('fib4', {
+        'age': 60,
+        'ast': 50,
+        'alt': 40,
+        'platelets': 150,
+      });
       expect(_v(r, 0), closeTo(3.16, 0.02)); // (60×50)/(150×√40)
       expect(r.outputs[0].severity, FormulaSeverity.alert);
     });
     test('low result flagged low (< 1.3)', () {
-      final r = computeFormula(
-          'fib4', {'age': 40, 'ast': 20, 'alt': 25, 'platelets': 250});
+      final r = computeFormula('fib4', {
+        'age': 40,
+        'ast': 20,
+        'alt': 25,
+        'platelets': 250,
+      });
       expect(r.outputs[0].severity, FormulaSeverity.none);
       expect(r.outputs[0].interpretation, contains('Low'));
     });
     test('age > 65 raises the low cutoff to 2.0', () {
       // FIB-4 ~1.6 → indeterminate under 1.3 cutoff, but LOW under 2.0 (>65)
-      final r = computeFormula(
-          'fib4', {'age': 70, 'ast': 30, 'alt': 30, 'platelets': 200});
+      final r = computeFormula('fib4', {
+        'age': 70,
+        'ast': 30,
+        'alt': 30,
+        'platelets': 200,
+      });
       expect(_v(r, 0), closeTo(1.92, 0.05)); // (70×30)/(200×√30)
       expect(r.outputs[0].interpretation, contains('Low'));
     });
@@ -665,14 +820,20 @@ void main() {
 
   group('maddrey', () {
     test('PT 20, control 12, bili 10 → 46.8 (severe)', () {
-      final r = computeFormula(
-          'maddrey', {'pt': 20, 'control_pt': 12, 'bilirubin': 10});
+      final r = computeFormula('maddrey', {
+        'pt': 20,
+        'control_pt': 12,
+        'bilirubin': 10,
+      });
       expect(_v(r, 0), closeTo(46.8, 0.05)); // 4.6×8 + 10
       expect(r.outputs[0].severity, FormulaSeverity.alert);
     });
     test('below 32 not severe', () {
-      final r = computeFormula(
-          'maddrey', {'pt': 14, 'control_pt': 12, 'bilirubin': 5});
+      final r = computeFormula('maddrey', {
+        'pt': 14,
+        'control_pt': 12,
+        'bilirubin': 5,
+      });
       expect(_v(r, 0), closeTo(14.2, 0.05)); // 4.6×2 + 5
       expect(r.outputs[0].severity, FormulaSeverity.none);
     });
@@ -690,8 +851,11 @@ void main() {
       expect(r.outputs[0].severity, FormulaSeverity.alert);
     });
     test('S/F added when SpO2 given', () {
-      final r =
-          computeFormula('oxygenation', {'fio2': 21, 'pao2': 90, 'spo2': 95});
+      final r = computeFormula('oxygenation', {
+        'fio2': 21,
+        'pao2': 90,
+        'spo2': 95,
+      });
       expect(r.outputs, hasLength(2));
       expect(_v(r, 1), closeTo(452, 1)); // 95/0.21
     });
@@ -748,12 +912,20 @@ void main() {
     });
     test('renal term is binary at 1.3 mg/dL threshold', () {
       final below = computeFormula('lille', {
-        'age': 50, 'albumin': 2.5, 'bilirubin_day0': 15,
-        'bilirubin_day7': 15, 'creatinine': 1.3, 'pt': 20,
+        'age': 50,
+        'albumin': 2.5,
+        'bilirubin_day0': 15,
+        'bilirubin_day7': 15,
+        'creatinine': 1.3,
+        'pt': 20,
       });
       final above = computeFormula('lille', {
-        'age': 50, 'albumin': 2.5, 'bilirubin_day0': 15,
-        'bilirubin_day7': 15, 'creatinine': 1.4, 'pt': 20,
+        'age': 50,
+        'albumin': 2.5,
+        'bilirubin_day0': 15,
+        'bilirubin_day7': 15,
+        'creatinine': 1.4,
+        'pt': 20,
       });
       // Crossing 1.3 subtracts 0.206 from R → raises the Lille score.
       expect(_v(above, 0), greaterThan(_v(below, 0)));
@@ -761,8 +933,11 @@ void main() {
     test('missing PT → empty', () {
       expect(
         computeFormula('lille', {
-          'age': 50, 'albumin': 2.5, 'bilirubin_day0': 15,
-          'bilirubin_day7': 12, 'creatinine': 1.0,
+          'age': 50,
+          'albumin': 2.5,
+          'bilirubin_day0': 15,
+          'bilirubin_day7': 12,
+          'creatinine': 1.0,
         }).isEmpty,
         isTrue,
       );
@@ -790,19 +965,35 @@ void main() {
     test('cholesterol unit toggle: mmol/L ≡ mg/dL', () {
       // TC 200 mg/dL = 5.172 mmol/L; HDL 45 = 1.164 mmol/L
       final mg = computeFormula('prevent_ascvd', {
-        'sex': 'F', 'age': 50, 'total_c': 200, 'hdl_c': 45, 'sbp': 160,
-        'egfr': 90, 'bp_tx': 'yes', 'diabetes': 'yes',
+        'sex': 'F',
+        'age': 50,
+        'total_c': 200,
+        'hdl_c': 45,
+        'sbp': 160,
+        'egfr': 90,
+        'bp_tx': 'yes',
+        'diabetes': 'yes',
       });
       final mmol = computeFormula('prevent_ascvd', {
-        'sex': 'F', 'age': 50, 'total_c': 5.172, 'hdl_c': 1.164,
-        'chol_unit': 'mmol/L', 'sbp': 160, 'egfr': 90, 'bp_tx': 'yes',
+        'sex': 'F',
+        'age': 50,
+        'total_c': 5.172,
+        'hdl_c': 1.164,
+        'chol_unit': 'mmol/L',
+        'sbp': 160,
+        'egfr': 90,
+        'bp_tx': 'yes',
         'diabetes': 'yes',
       });
       expect(_v(mmol, 0), closeTo(_v(mg, 0), 0.1));
     });
     test('lower-risk male → single-digit or lower, no alert', () {
       final r = computeFormula('prevent_ascvd', {
-        'sex': 'M', 'age': 40, 'total_c': 170, 'hdl_c': 55, 'sbp': 120,
+        'sex': 'M',
+        'age': 40,
+        'total_c': 170,
+        'hdl_c': 55,
+        'sbp': 120,
         'egfr': 100,
       });
       expect(_v(r, 0), lessThan(5));
@@ -811,7 +1002,11 @@ void main() {
     test('missing eGFR → empty', () {
       expect(
         computeFormula('prevent_ascvd', {
-          'sex': 'F', 'age': 50, 'total_c': 200, 'hdl_c': 45, 'sbp': 160,
+          'sex': 'F',
+          'age': 50,
+          'total_c': 200,
+          'hdl_c': 45,
+          'sbp': 160,
         }).isEmpty,
         isTrue,
       );
@@ -820,49 +1015,84 @@ void main() {
 
   group('glasgow_blatchford (sex-conditional Hb + bool markers)', () {
     test('all normal → 0, low risk', () {
-      final r = computeFormula('glasgow_blatchford',
-          {'bun': 15, 'hgb': 15, 'sex': 'M', 'sbp': 120});
+      final r = computeFormula('glasgow_blatchford', {
+        'bun': 15,
+        'hgb': 15,
+        'sex': 'M',
+        'sbp': 120,
+      });
       expect(r.outputs[0].value, '0');
       expect(r.outputs[0].severity, FormulaSeverity.none);
     });
     test('hemoglobin points differ by sex (Hgb 11)', () {
       // Male Hgb 10–<12 → 3; female Hgb 10–<12 → 1
-      final male = computeFormula('glasgow_blatchford',
-          {'bun': 15, 'hgb': 11, 'sex': 'M', 'sbp': 120});
-      final female = computeFormula('glasgow_blatchford',
-          {'bun': 15, 'hgb': 11, 'sex': 'F', 'sbp': 120});
+      final male = computeFormula('glasgow_blatchford', {
+        'bun': 15,
+        'hgb': 11,
+        'sex': 'M',
+        'sbp': 120,
+      });
+      final female = computeFormula('glasgow_blatchford', {
+        'bun': 15,
+        'hgb': 11,
+        'sex': 'F',
+        'sbp': 120,
+      });
       expect(male.outputs[0].value, '3');
       expect(female.outputs[0].value, '1');
     });
     test('worked example: BUN 25, Hgb 11 M, SBP 95, syncope → 10 (high)', () {
       final r = computeFormula('glasgow_blatchford', {
-        'bun': 25, 'hgb': 11, 'sex': 'M', 'sbp': 95, 'syncope': true,
+        'bun': 25,
+        'hgb': 11,
+        'sex': 'M',
+        'sbp': 95,
+        'syncope': true,
       });
       expect(r.outputs[0].value, '10'); // 3(BUN)+3(Hb)+2(SBP)+2(syncope)
       expect(r.outputs[0].severity, FormulaSeverity.alert);
     });
     test('urea mmol/L toggle: 10 mmol/L ≡ BUN 28 mg/dL', () {
-      final mgdl = computeFormula('glasgow_blatchford',
-          {'bun': 28, 'hgb': 15, 'sex': 'M', 'sbp': 120});
+      final mgdl = computeFormula('glasgow_blatchford', {
+        'bun': 28,
+        'hgb': 15,
+        'sex': 'M',
+        'sbp': 120,
+      });
       final mmol = computeFormula('glasgow_blatchford', {
-        'bun': 10, 'bun_unit': 'urea_mmol', 'hgb': 15, 'sex': 'M', 'sbp': 120,
+        'bun': 10,
+        'bun_unit': 'urea_mmol',
+        'hgb': 15,
+        'sex': 'M',
+        'sbp': 120,
       });
       expect(mmol.outputs[0].value, mgdl.outputs[0].value); // both 4
     });
     test('boolean markers add points', () {
-      final base = computeFormula('glasgow_blatchford',
-          {'bun': 15, 'hgb': 15, 'sex': 'M', 'sbp': 120});
+      final base = computeFormula('glasgow_blatchford', {
+        'bun': 15,
+        'hgb': 15,
+        'sex': 'M',
+        'sbp': 120,
+      });
       final withMarkers = computeFormula('glasgow_blatchford', {
-        'bun': 15, 'hgb': 15, 'sex': 'M', 'sbp': 120,
-        'melena': true, 'cardiac': true,
+        'bun': 15,
+        'hgb': 15,
+        'sex': 'M',
+        'sbp': 120,
+        'melena': true,
+        'cardiac': true,
       });
       expect(base.outputs[0].value, '0');
       expect(withMarkers.outputs[0].value, '3'); // melena 1 + cardiac 2
     });
     test('missing SBP → empty', () {
       expect(
-        computeFormula('glasgow_blatchford', {'bun': 15, 'hgb': 15, 'sex': 'M'})
-            .isEmpty,
+        computeFormula('glasgow_blatchford', {
+          'bun': 15,
+          'hgb': 15,
+          'sex': 'M',
+        }).isEmpty,
         isTrue,
       );
     });
@@ -871,34 +1101,54 @@ void main() {
   group('adrogue_madias', () {
     test('3% saline, Na 120, 70kg male → +9.1 mEq/L per L', () {
       final r = computeFormula('adrogue_madias', {
-        'sodium': 120, 'weight': 70, 'sex': 'M', 'fluid': 'saline3',
+        'sodium': 120,
+        'weight': 70,
+        'sex': 'M',
+        'fluid': 'saline3',
       });
       expect(_v(r, 0), closeTo(9.1, 0.1)); // (513-120)/(42+1)
     });
     test('D5W lowers Na (negative ΔNa)', () {
       final r = computeFormula('adrogue_madias', {
-        'sodium': 120, 'weight': 70, 'sex': 'M', 'fluid': 'd5w',
+        'sodium': 120,
+        'weight': 70,
+        'sex': 'M',
+        'fluid': 'd5w',
       });
       expect(_v(r, 0), lessThan(0));
     });
     test('volume scales the effect', () {
       final r = computeFormula('adrogue_madias', {
-        'sodium': 120, 'weight': 70, 'sex': 'M', 'fluid': 'saline3',
+        'sodium': 120,
+        'weight': 70,
+        'sex': 'M',
+        'fluid': 'saline3',
         'volume': 2,
       });
       expect(_v(r, 0), closeTo(17.9, 0.1)); // 393×2/(42+2)
     });
     test('female TBW factor 0.5 differs from male', () {
-      final m = computeFormula('adrogue_madias',
-          {'sodium': 120, 'weight': 70, 'sex': 'M', 'fluid': 'ns'});
-      final f = computeFormula('adrogue_madias',
-          {'sodium': 120, 'weight': 70, 'sex': 'F', 'fluid': 'ns'});
+      final m = computeFormula('adrogue_madias', {
+        'sodium': 120,
+        'weight': 70,
+        'sex': 'M',
+        'fluid': 'ns',
+      });
+      final f = computeFormula('adrogue_madias', {
+        'sodium': 120,
+        'weight': 70,
+        'sex': 'F',
+        'fluid': 'ns',
+      });
       expect(_v(f, 0), isNot(closeTo(_v(m, 0), 0.05)));
     });
     test('missing fluid → empty', () {
       expect(
-        computeFormula('adrogue_madias', {'sodium': 120, 'weight': 70, 'sex': 'M'})
-            .isEmpty,
+        computeFormula('adrogue_madias', {
+          'sodium': 120,
+          'weight': 70,
+          'sex': 'M',
+        }).isEmpty,
         isTrue,
       );
     });
@@ -935,11 +1185,12 @@ void main() {
 
 // helpers ────────────────────────────────────────────────────────────
 
-FormulaResult _single(FormulaResult r, String label) => FormulaResult(
-    [r.outputs.firstWhere((o) => o.label.toLowerCase().contains(label))]);
+FormulaResult _single(FormulaResult r, String label) => FormulaResult([
+  r.outputs.firstWhere((o) => o.label.toLowerCase().contains(label)),
+]);
 
-double _egfr(FormulaResult r) => double.parse(
-    r.outputs.firstWhere((o) => o.label.contains('eGFR')).value);
+double _egfr(FormulaResult r) =>
+    double.parse(r.outputs.firstWhere((o) => o.label.contains('eGFR')).value);
 
 /// Matcher-ish helper: format an expected integer-valued mL the way fmtNum does.
 String closeToStr(double v) => fmtNum(v);

@@ -14,8 +14,8 @@ import 'package:orbweaver/models/topic.dart';
 const _dir = 'assets/books/calculators/topics';
 
 ScoreBlock _load(String file) => Topic.fromYamlString(
-      File('$_dir/$file').readAsStringSync(),
-    ).blocks.whereType<ScoreBlock>().single;
+  File('$_dir/$file').readAsStringSync(),
+).blocks.whereType<ScoreBlock>().single;
 
 /// total for a selection map.
 num _total(ScoreBlock b, Map<String, dynamic> sel) =>
@@ -173,8 +173,11 @@ void main() {
     late ScoreBlock b;
     setUpAll(() => b = _load('calc_gcs.yaml'));
 
-    Map<String, dynamic> g(String e, String v, String m) =>
-        {'eye': e, 'verbal': v, 'motor': m};
+    Map<String, dynamic> g(String e, String v, String m) => {
+      'eye': e,
+      'verbal': v,
+      'motor': m,
+    };
 
     test('normal E4V5M6 → 15, mild', () {
       expect(_total(b, g('e4', 'v5', 'm6')), 15);
@@ -201,9 +204,19 @@ void main() {
     late ScoreBlock b;
     setUpAll(() => b = _load('calc_child_pugh.yaml'));
 
-    Map<String, dynamic> cp(String bil, String alb, String inr, String asc,
-            String enc) =>
-        {'bilirubin': bil, 'albumin': alb, 'inr': inr, 'ascites': asc, 'enceph': enc};
+    Map<String, dynamic> cp(
+      String bil,
+      String alb,
+      String inr,
+      String asc,
+      String enc,
+    ) => {
+      'bilirubin': bil,
+      'albumin': alb,
+      'inr': inr,
+      'ascites': asc,
+      'enceph': enc,
+    };
 
     test('all mildest → 5, Class A', () {
       final s = cp('b1', 'a1', 'i1', 'as1', 'e1');
@@ -211,12 +224,24 @@ void main() {
       expect(_band(b, s), contains('Class A'));
     });
     test('6 → Class A, 7 → Class B (boundary)', () {
-      expect(_band(b, cp('b2', 'a1', 'i1', 'as1', 'e1')), contains('Class A')); // 6
-      expect(_band(b, cp('b2', 'a2', 'i1', 'as1', 'e1')), contains('Class B')); // 7
+      expect(
+        _band(b, cp('b2', 'a1', 'i1', 'as1', 'e1')),
+        contains('Class A'),
+      ); // 6
+      expect(
+        _band(b, cp('b2', 'a2', 'i1', 'as1', 'e1')),
+        contains('Class B'),
+      ); // 7
     });
     test('9 → B, 10 → C (boundary)', () {
-      expect(_band(b, cp('b3', 'a2', 'i2', 'as1', 'e1')), contains('Class B')); // 9
-      expect(_band(b, cp('b2', 'a2', 'i2', 'as2', 'e2')), contains('Class C')); // 10
+      expect(
+        _band(b, cp('b3', 'a2', 'i2', 'as1', 'e1')),
+        contains('Class B'),
+      ); // 9
+      expect(
+        _band(b, cp('b2', 'a2', 'i2', 'as2', 'e2')),
+        contains('Class C'),
+      ); // 10
     });
     test('all severe → 15, Class C', () {
       final s = cp('b3', 'a3', 'i3', 'as3', 'e3');
@@ -232,9 +257,13 @@ void main() {
     late ScoreBlock b;
     setUpAll(() => b = _load('calc_heart.yaml'));
 
-    Map<String, dynamic> h(String hi, String ec, String ag, String r,
-            String t) =>
-        {'history': hi, 'ecg': ec, 'age': ag, 'risk': r, 'troponin': t};
+    Map<String, dynamic> h(
+      String hi,
+      String ec,
+      String ag,
+      String r,
+      String t,
+    ) => {'history': hi, 'ecg': ec, 'age': ag, 'risk': r, 'troponin': t};
 
     test('all zero → 0, low', () {
       expect(_total(b, h('h0', 'ec0', 'ag0', 'r0', 't0')), 0);
@@ -242,10 +271,16 @@ void main() {
     });
     test('3 → low, 4 → moderate (boundary)', () {
       expect(_band(b, h('h1', 'ec1', 'ag1', 'r0', 't0')), contains('Low')); // 3
-      expect(_band(b, h('h1', 'ec1', 'ag1', 'r1', 't0')), contains('Moderate')); // 4
+      expect(
+        _band(b, h('h1', 'ec1', 'ag1', 'r1', 't0')),
+        contains('Moderate'),
+      ); // 4
     });
     test('7 → high', () {
-      expect(_band(b, h('h2', 'ec2', 'ag2', 'r1', 't0')), contains('High')); // 7
+      expect(
+        _band(b, h('h2', 'ec2', 'ag2', 'r1', 't0')),
+        contains('High'),
+      ); // 7
     });
     test('max 10', () => expect(scoreRange(b).max, 10));
   });
@@ -254,16 +289,26 @@ void main() {
     late ScoreBlock b;
     setUpAll(() => b = _load('calc_4ts.yaml'));
 
-    Map<String, dynamic> t4(String tc, String ti, String tb, String ot) =>
-        {'thrombocytopenia': tc, 'timing': ti, 'thrombosis': tb, 'other': ot};
+    Map<String, dynamic> t4(String tc, String ti, String tb, String ot) => {
+      'thrombocytopenia': tc,
+      'timing': ti,
+      'thrombosis': tb,
+      'other': ot,
+    };
 
     test('all zero → 0, low (rule-out)', () {
       expect(_total(b, t4('tc0', 'ti0', 'tb0', 'ot0')), 0);
       expect(_band(b, t4('tc0', 'ti0', 'tb0', 'ot0')), contains('excluded'));
     });
     test('3 → low, 4 → intermediate (boundary)', () {
-      expect(_band(b, t4('tc1', 'ti1', 'tb1', 'ot0')), contains('excluded')); // 3
-      expect(_band(b, t4('tc2', 'ti1', 'tb1', 'ot0')), contains('Intermediate')); // 4
+      expect(
+        _band(b, t4('tc1', 'ti1', 'tb1', 'ot0')),
+        contains('excluded'),
+      ); // 3
+      expect(
+        _band(b, t4('tc2', 'ti1', 'tb1', 'ot0')),
+        contains('Intermediate'),
+      ); // 4
     });
     test('6 → high', () {
       expect(_band(b, t4('tc2', 'ti2', 'tb1', 'ot1')), contains('High')); // 6
@@ -296,8 +341,10 @@ void main() {
     test('band edges: 0 very low, 1 low, 2 intermediate, 4 high', () {
       expect(_band(b, {'age': 'a15_44'}), contains('Very low')); // 0
       expect(_band(b, {'age': 'a3_14'}), contains('testing optional')); // 1
-      expect(_band(b, {'age': 'a3_14', 'exudate': true}),
-          contains('Intermediate')); // 2
+      expect(
+        _band(b, {'age': 'a3_14', 'exudate': true}),
+        contains('Intermediate'),
+      ); // 2
       final high = {
         'exudate': true,
         'nodes': true,
@@ -344,10 +391,18 @@ void main() {
       expect(_band(b, s), contains('Moderate'));
     });
     test('boundary 9→minimal, 10→moderate, 20→severe', () {
-      expect(_band(b, {'nausea': '2', 'tremor': '7'}), contains('Minimal')); // 9
-      expect(_band(b, {'nausea': '3', 'tremor': '7'}), contains('Moderate')); // 10
-      expect(_band(b, {'nausea': '7', 'tremor': '7', 'sweats': '6'}),
-          contains('Severe')); // 20
+      expect(
+        _band(b, {'nausea': '2', 'tremor': '7'}),
+        contains('Minimal'),
+      ); // 9
+      expect(
+        _band(b, {'nausea': '3', 'tremor': '7'}),
+        contains('Moderate'),
+      ); // 10
+      expect(
+        _band(b, {'nausea': '7', 'tremor': '7', 'sweats': '6'}),
+        contains('Severe'),
+      ); // 20
     });
     test('maximum = 67 (nine 0–7 items + one 0–4)', () {
       expect(scoreRange(b).max, 67);
@@ -355,8 +410,12 @@ void main() {
     test('orientation item is 0–4 only', () {
       final orientation = b.items.firstWhere((i) => i.key == 'orientation');
       expect(orientation.type, ScoreItemType.scale);
-      expect(orientation.options.map((o) => o.points).reduce((a, c) => a > c ? a : c),
-          4);
+      expect(
+        orientation.options
+            .map((o) => o.points)
+            .reduce((a, c) => a > c ? a : c),
+        4,
+      );
     });
   });
 
@@ -387,14 +446,14 @@ void main() {
     setUpAll(() => b = _load('calc_news2.yaml'));
 
     Map<String, dynamic> normal() => {
-          'rr': 'rr_normal',
-          'spo2': 'spo2_normal',
-          'o2': 'air',
-          'sbp': 'sbp_normal',
-          'pulse': 'pulse_normal',
-          'consciousness': 'alert',
-          'temp': 'temp_normal',
-        };
+      'rr': 'rr_normal',
+      'spo2': 'spo2_normal',
+      'o2': 'air',
+      'sbp': 'sbp_normal',
+      'pulse': 'pulse_normal',
+      'consciousness': 'alert',
+      'temp': 'temp_normal',
+    };
 
     test('all-normal → 0, low', () {
       expect(_total(b, normal()), 0);
@@ -409,14 +468,18 @@ void main() {
     test('aggregate bands: 5 medium, 7 high', () {
       // O₂ (2) + SpO₂ 92–93 (2) + temp ≥39.1 (2) = 6 → medium... build a 5:
       final five = normal()
-        ..['o2'] = 'o2' // 2
-        ..['rr'] = 'rr_21_24' // 2
+        ..['o2'] =
+            'o2' // 2
+        ..['rr'] =
+            'rr_21_24' // 2
         ..['temp'] = 'temp_38_39'; // 1  => 5
       expect(_total(b, five), 5);
       expect(_band(b, five), contains('Medium'));
       final seven = normal()
-        ..['rr'] = 'rr_ge25' // 3
-        ..['spo2'] = 'spo2_92_93' // 2
+        ..['rr'] =
+            'rr_ge25' // 3
+        ..['spo2'] =
+            'spo2_92_93' // 2
         ..['o2'] = 'o2'; // 2  => 7
       expect(_total(b, seven), 7);
       expect(_band(b, seven), contains('High'));
@@ -538,8 +601,10 @@ void main() {
     });
     test('sums organs; band boundaries 6/7 and 12/13', () {
       // resp3 + cardio3 + renal1 = 7 → moderate
-      expect(_band(b, {'resp': '3', 'cardio': '3', 'renal': '1'}),
-          contains('Moderate'));
+      expect(
+        _band(b, {'resp': '3', 'cardio': '3', 'renal': '1'}),
+        contains('Moderate'),
+      );
       // resp4+coag4+liver4+cardio1 = 13 → very high
       expect(
         _band(b, {'resp': '4', 'coag': '4', 'liver': '4', 'cardio': '1'}),
@@ -571,8 +636,10 @@ void main() {
 
     test('0–2 lower, 3 elevated, 4 high', () {
       expect(_band(b, {'bun': true, 'age60': true}), contains('Lower')); // 2
-      expect(_band(b, {'bun': true, 'age60': true, 'sirs': true}),
-          contains('Elevated')); // 3
+      expect(
+        _band(b, {'bun': true, 'age60': true, 'sirs': true}),
+        contains('Elevated'),
+      ); // 3
       expect(
         _band(b, {'bun': true, 'age60': true, 'sirs': true, 'effusion': true}),
         contains('High'),
@@ -600,13 +667,20 @@ void main() {
     test('band boundaries 9/10 and 19/20', () {
       // 9 = q1..q3 at 3 → mild; 10 = one more point → moderate
       expect(_band(b, {'q1': '3', 'q2': '3', 'q3': '3'}), contains('Mild'));
-      expect(_band(b, {'q1': '3', 'q2': '3', 'q3': '3', 'q4': '1'}),
-          contains('Moderate'));
+      expect(
+        _band(b, {'q1': '3', 'q2': '3', 'q3': '3', 'q4': '1'}),
+        contains('Moderate'),
+      );
       // 20 = severe
       expect(
         _band(b, {
-          'q1': '3', 'q2': '3', 'q3': '3', 'q4': '3',
-          'q5': '3', 'q6': '3', 'q7': '2',
+          'q1': '3',
+          'q2': '3',
+          'q3': '3',
+          'q4': '3',
+          'q5': '3',
+          'q6': '3',
+          'q7': '2',
         }),
         contains('Severe'),
       ); // 20
@@ -621,8 +695,10 @@ void main() {
     test('7 items, max 21, ≥10 moderate', () {
       expect(b.items, hasLength(7));
       expect(scoreRange(b).max, 21);
-      expect(_band(b, {'q1': '3', 'q2': '3', 'q3': '3', 'q4': '1'}),
-          contains('Moderate')); // 10
+      expect(
+        _band(b, {'q1': '3', 'q2': '3', 'q3': '3', 'q4': '1'}),
+        contains('Moderate'),
+      ); // 10
     });
   });
 
@@ -632,10 +708,14 @@ void main() {
 
     test('0–2 lower, 3+ positive screen', () {
       expect(_band(b, {'frequency': '2'}), contains('Lower')); // 2
-      expect(_band(b, {'frequency': '2', 'quantity': '1'}),
-          contains('Positive')); // 3
-      expect(_band(b, {'frequency': '4', 'quantity': '4'}),
-          contains('probable alcohol')); // 8
+      expect(
+        _band(b, {'frequency': '2', 'quantity': '1'}),
+        contains('Positive'),
+      ); // 3
+      expect(
+        _band(b, {'frequency': '4', 'quantity': '4'}),
+        contains('probable alcohol'),
+      ); // 8
     });
     test('maximum = 12', () => expect(scoreRange(b).max, 12));
   });

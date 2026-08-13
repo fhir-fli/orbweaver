@@ -22,16 +22,16 @@ void main() {
 
     // GASTROSAM update: the red danger is now the ReSoMal hyponatraemia
     // callout (not "no IV fluids", which the trial refuted).
-    final danger = blocks
-        .whereType<ProseBlock>()
-        .firstWhere((b) => b.title!.contains('ReSoMal'));
+    final danger = blocks.whereType<ProseBlock>().firstWhere(
+      (b) => b.title!.contains('ReSoMal'),
+    );
     expect(danger.callout, isTrue);
     expect(danger.ownPaletteArgb['alert'], 0xFFD32F2F);
 
     // The evidence-update block is a blue-accented highlight.
-    final evidence = blocks
-        .whereType<ProseBlock>()
-        .firstWhere((b) => b.title!.contains('Evidence update'));
+    final evidence = blocks.whereType<ProseBlock>().firstWhere(
+      (b) => b.title!.contains('Evidence update'),
+    );
     expect(evidence.highlight, isTrue);
     expect(evidence.ownPaletteArgb['accent'], 0xFF1565C0);
   });

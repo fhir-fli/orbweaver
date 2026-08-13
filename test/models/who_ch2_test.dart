@@ -6,8 +6,8 @@ import 'package:orbweaver/models/topic.dart';
 /// Structural parse checks for WHO Chapter 2 (diagnostic approaches).
 void main() {
   Topic load(String file) => Topic.fromYamlString(
-        File('assets/books/who_imci/topics/$file').readAsStringSync(),
-      );
+    File('assets/books/who_imci/topics/$file').readAsStringSync(),
+  );
 
   test('Chapter 2 sections parse with the expected ids and pages', () {
     final cases = {

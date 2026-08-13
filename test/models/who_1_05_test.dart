@@ -6,8 +6,8 @@ import 'package:orbweaver/models/topic.dart';
 /// Structural parse checks for WHO §1.5 diagnostic-considerations topics.
 void main() {
   Topic load(String file) => Topic.fromYamlString(
-        File('assets/books/who_imci/topics/$file').readAsStringSync(),
-      );
+    File('assets/books/who_imci/topics/$file').readAsStringSync(),
+  );
 
   test('§1.5 overview parses', () {
     final t = load('who_1_05_diagnostic.yaml');
@@ -33,9 +33,9 @@ void main() {
     final table = t.blocks.whereType<TableBlock>().single;
     // bleeding, dengue, cardiac, septic, anaphylactic, dehydration
     expect(table.rows.length, 6);
-    final callout = t.blocks
-        .whereType<ProseBlock>()
-        .firstWhere((b) => b.title!.contains('sepsis identification'));
+    final callout = t.blocks.whereType<ProseBlock>().firstWhere(
+      (b) => b.title!.contains('sepsis identification'),
+    );
     expect(callout.callout, isTrue);
   });
 
@@ -51,9 +51,9 @@ void main() {
     expect(tables[1].rows.length, 8);
 
     // The empirical-antibiotics callout is red (per-block alert override).
-    final abx = t.blocks
-        .whereType<ProseBlock>()
-        .firstWhere((b) => b.title!.contains('Empirical antibiotics'));
+    final abx = t.blocks.whereType<ProseBlock>().firstWhere(
+      (b) => b.title!.contains('Empirical antibiotics'),
+    );
     expect(abx.callout, isTrue);
     expect(abx.ownPaletteArgb['alert'], 0xFFD32F2F);
   });
