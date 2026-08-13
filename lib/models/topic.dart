@@ -1734,6 +1734,7 @@ class DrugCardBlock extends Block {
     this.warnings = const [],
     this.pearls = const [],
     this.imagePath,
+    this.criticalCare = false,
     super.anchor,
     super.ownPaletteArgb,
   });
@@ -1747,6 +1748,7 @@ class DrugCardBlock extends Block {
         warnings: _stringList(map['warnings']),
         pearls: _stringList(map['pearls']),
         imagePath: map['image'] as String?,
+        criticalCare: map['critical_care'] as bool? ?? false,
         anchor: map['anchor'] as String?,
         ownPaletteArgb: _parsePaletteArgb(map['palette']),
       );
@@ -1759,6 +1761,11 @@ class DrugCardBlock extends Block {
   final List<String> warnings;
   final List<String> pearls;
   final String? imagePath;
+
+  /// The drug is Critical-Care restricted. In the printed cards this shows
+  /// as the Notes zone turning lavender (#D9D2E9) instead of cyan — the Use
+  /// and Caution zones are unchanged (verified p.139, Propofol).
+  final bool criticalCare;
 }
 
 // ─────────────────────────────────────────────────────────────

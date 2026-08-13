@@ -27,9 +27,21 @@ class TopicTheme {
 
   // Identity / accent.
   Color get header => _c('accent');
-  Color get nodeBorder => _c('accent');
+  Color get nodeBorder => _c('node_border');
   Color get nodeFill => _c('accent_fill');
   Color get branchAccent => _c('accent_branch');
+
+  /// Section and box chrome. These default to the accent (see
+  /// `resolvePalette`), so overriding them is how a book takes the printed
+  /// book's neutral chrome instead: WVEMS draws a #666666 bracket, black
+  /// section titles and black outlines on every chapter, which is what lets
+  /// its pink paediatric bracket carry meaning.
+  Color get sectionRule => _c('section_rule');
+  Color get sectionTitle => _c('section_title');
+  Color get boxBorder => _c('box_border');
+
+  /// The page behind the content — a faint chapter wash in print.
+  Color get pageWash => _c('page_wash');
 
   // Severity bands.
   Color get severityMildHeader => _c('severity_mild_header');
@@ -46,9 +58,14 @@ class TopicTheme {
   Color get providerParamedic => _c('provider_paramedic');
   Color get providerAny => _c('provider_any');
 
-  // Dose populations.
+  // Dose populations — the group label, then the row stripes that carry the
+  // population in the print.
   Color get popAdult => _c('pop_adult');
   Color get popPeds => _c('pop_peds');
+  Color get adultRowLight => _c('adult_row_light');
+  Color get adultRowDark => _c('adult_row_dark');
+  Color get pedsRowLight => _c('peds_row_light');
+  Color get pedsRowDark => _c('peds_row_dark');
 
   // Population / credentialing content bands (peds pink, Critical Care
   // lavender) — see `BandCalloutBlock`.
@@ -73,13 +90,30 @@ class TopicTheme {
   Color get noteBorder => _c('note_border');
   Color get noteText => _c('note_text');
 
-  // Attention callout.
+  // Attention callout, and the same card in its conditional (dashed) form.
   Color get alert => _c('alert');
   Color get alertFill => _c('alert_fill');
   Color get alertText => _c('alert_text');
+  Color get dashRule => _c('dash_rule');
+  Color get dashFill => _c('dash_fill');
 
-  // Danger text.
+  // Procedure card.
+  Color get procedureHeaderFill => _c('procedure_header_fill');
+
+  // Drug-reference card zones.
+  Color get drugCardHeader => _c('drug_card_header');
+  Color get drugUseFill => _c('drug_use_fill');
+  Color get drugUseSpine => _c('drug_use_spine');
+  Color get drugCautionFill => _c('drug_caution_fill');
+  Color get drugCautionSpine => _c('drug_caution_spine');
+  Color get drugNotesFill => _c('drug_notes_fill');
+  Color get drugNotesSpine => _c('drug_notes_spine');
+  Color get drugNotesCcFill => _c('drug_notes_cc_fill');
+  Color get drugNotesCcSpine => _c('drug_notes_cc_spine');
+
+  // Danger text, and the warn tier of a computed value.
   Color get dangerText => _c('danger_text');
+  Color get formulaWarn => _c('formula_warn');
 }
 
 /// Provides the resolved [TopicTheme] to the widget subtree, so deeply

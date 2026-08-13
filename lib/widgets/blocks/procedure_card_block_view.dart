@@ -23,11 +23,6 @@ class ProcedureCardBlockView extends StatelessWidget {
   final ProcedureBlock block;
   final TopicTheme theme;
 
-  static const Color _headerBg = Color(0xFFF3EFE6);
-  static const Color _highlightBg = Color(0xFFFBD5DE);
-  static const Color _ccHighlightBg = Color(0xFFE3DCF2);
-  static const Color _dashColor = Colors.black45;
-
   Color _scopeColor(String? scope) => switch (scope) {
         'E' => theme.providerEmt,
         'P' => theme.providerParamedic,
@@ -42,7 +37,7 @@ class ProcedureCardBlockView extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: theme.header, width: 1.5),
+        border: Border.all(color: theme.boxBorder, width: 1.5),
         borderRadius: BorderRadius.circular(10),
       ),
       clipBehavior: Clip.antiAlias,
@@ -53,8 +48,9 @@ class ProcedureCardBlockView extends StatelessWidget {
           Container(
             padding: const EdgeInsets.fromLTRB(8, 6, 10, 6),
             decoration: BoxDecoration(
-              color: _headerBg,
-              border: Border(bottom: BorderSide(color: theme.header, width: 1.5)),
+              color: theme.procedureHeaderFill,
+              border:
+                  Border(bottom: BorderSide(color: theme.boxBorder, width: 1.5)),
             ),
             child: Row(
               children: [
@@ -229,8 +225,8 @@ class _StepRow extends StatelessWidget {
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 1),
         color: step.ccHighlight
-            ? ProcedureCardBlockView._ccHighlightBg
-            : ProcedureCardBlockView._highlightBg,
+            ? theme.ccBandFill
+            : theme.pedsBandFill,
         padding: const EdgeInsets.symmetric(vertical: 1),
         child: row,
       );
@@ -298,7 +294,7 @@ class _StepRow extends StatelessWidget {
         padding: const EdgeInsets.only(left: 2, top: 1),
         child: CustomPaint(
           painter: _DashedBorderPainter(
-              color: ProcedureCardBlockView._dashColor),
+              color: theme.dashRule),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(6, 3, 6, 3),
             child: content,

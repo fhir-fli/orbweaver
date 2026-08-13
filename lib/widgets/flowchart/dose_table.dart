@@ -22,9 +22,14 @@ class DoseTable extends StatelessWidget {
     final showLabels = rows.any((r) => r.population != DosePopulation.both);
 
     final children = <Widget>[];
+    // Row index *within the current population group*. The print restarts
+    // each group's zebra on its light colour (verified on p.24, where the
+    // paediatric table under the adult one begins #FFDCE2, not #FFC0CB).
+    var indexInGroup = 0;
     for (var i = 0; i < rows.length; i++) {
       final row = rows[i];
       final startsGroup = i == 0 || rows[i - 1].population != row.population;
+      if (startsGroup) indexInGroup = 0;
       if (showLabels &&
           startsGroup &&
           row.population != DosePopulation.both) {
@@ -35,9 +40,7 @@ class DoseTable extends StatelessWidget {
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
           decoration: BoxDecoration(
-            color: i.isEven
-                ? theme.nodeFill
-                : theme.nodeFill.withValues(alpha: 0.5),
+            color: _stripe(theme, row.population, indexInGroup),
             border: i == 0
                 ? null
                 : Border(
@@ -49,6 +52,7 @@ class DoseTable extends StatelessWidget {
           child: _DoseRowView(row: row),
         ),
       );
+      indexInGroup++;
     }
 
     return Container(
@@ -60,8 +64,25 @@ class DoseTable extends StatelessWidget {
   }
 }
 
-/// Thin full-width band labeling the dose rows that follow as Adult or
-/// Peds — gray for adult, pink for peds, matching the WVEMS PDF.
+/// The zebra fill for a dose row. The *pair* of alternating colours encodes
+/// the population — grey for adult doses, pink for paediatric ones — so a
+/// reader can tell whose dose a row is from the fill alone, without finding
+/// the group header. `both` (a strip that does not distinguish) takes the
+/// adult greys, which is what the print does on single-population pages.
+Color _stripe(TopicTheme theme, DosePopulation population, int indexInGroup) {
+  final light = population == DosePopulation.peds
+      ? theme.pedsRowLight
+      : theme.adultRowLight;
+  final dark = population == DosePopulation.peds
+      ? theme.pedsRowDark
+      : theme.adultRowDark;
+  return indexInGroup.isEven ? light : dark;
+}
+
+/// Thin full-width band labeling the dose rows that follow as Adult or Peds.
+/// Print draws it as a right-hand vertical tab — solid #666666 for adult,
+/// solid #D23282 for peds, white text; the app keeps the full-width
+/// horizontal band (a better fit on a phone) and takes the tab's colours.
 class _PopulationLabel extends StatelessWidget {
   const _PopulationLabel({required this.population});
 
@@ -85,7 +106,7 @@ class _PopulationLabel extends StatelessWidget {
           fontSize: 11,
           fontWeight: FontWeight.w800,
           letterSpacing: 0.5,
-          color: Colors.black87,
+          color: Colors.white,
         ),
       ),
     );

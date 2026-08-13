@@ -3,10 +3,18 @@ import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
 
-/// Renders a [DrugCardBlock] as the WVEMS-style drug card: a dark name header
-/// over three colour-coded sections — **Use** (green), **Caution** (amber),
-/// **Notes** (lavender) — each with a vertical side-label, plus an optional
-/// medication photo beside the Use/Caution rows.
+/// Renders a [DrugCardBlock] as the WVEMS-style drug card: a dark teal name
+/// header over three colour-coded sections — **Use** (green), **Caution**
+/// (amber), **Notes** (cyan, or lavender when the drug is Critical-Care
+/// restricted) — each with a vertical side-label on the darker spine strip
+/// the print draws, plus an optional medication photo beside the Use/Caution
+/// rows.
+///
+/// Every fill is a palette role with the printed card's own value as its
+/// default (pp.118-143). The Notes zone is the one that carries the CC
+/// signal: print reserves lavender for CC drugs and gives every other drug
+/// cyan, so colouring them all lavender — as this view used to — says every
+/// drug is Critical Care.
 ///
 /// Emphasis (bold) is authored in the content itself (e.g. a dose amount), not
 /// applied to the labels — matching the printed cards, where the value is bold
@@ -20,11 +28,6 @@ class DrugCardBlockView extends StatelessWidget {
 
   final DrugCardBlock block;
   final TopicTheme theme;
-
-  static const _header = Color(0xFF3E5C6B);
-  static const _useBg = Color(0xFFCDE9CD);
-  static const _cautionBg = Color(0xFFFBE9BE);
-  static const _notesBg = Color(0xFFE3D7F1);
 
   String? _useMd() {
     final lines = <String>[
@@ -51,11 +54,17 @@ class DrugCardBlockView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         if (use != null)
-          _Section(label: 'Use', bg: _useBg, markdown: use, accent: theme.header),
+          _Section(
+              label: 'Use',
+              bg: theme.drugUseFill,
+              spine: theme.drugUseSpine,
+              markdown: use,
+              accent: theme.header),
         if (cautionMd != null)
           _Section(
               label: 'Caution',
-              bg: _cautionBg,
+              bg: theme.drugCautionFill,
+              spine: theme.drugCautionSpine,
               markdown: cautionMd,
               accent: theme.header),
       ],
@@ -63,7 +72,7 @@ class DrugCardBlockView extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(color: _header, width: 1.5),
+        border: Border.all(color: theme.drugCardHeader, width: 1.5),
         borderRadius: BorderRadius.circular(10),
       ),
       clipBehavior: Clip.antiAlias,
@@ -72,7 +81,7 @@ class DrugCardBlockView extends StatelessWidget {
         children: [
           // Name header.
           Container(
-            color: _header,
+            color: theme.drugCardHeader,
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -118,7 +127,12 @@ class DrugCardBlockView extends StatelessWidget {
           if (notesMd != null)
             _Section(
                 label: 'Notes',
-                bg: _notesBg,
+                bg: block.criticalCare
+                    ? theme.drugNotesCcFill
+                    : theme.drugNotesFill,
+                spine: block.criticalCare
+                    ? theme.drugNotesCcSpine
+                    : theme.drugNotesSpine,
                 markdown: notesMd,
                 accent: theme.header),
         ],
@@ -142,9 +156,14 @@ class _DrugImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 108,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Colors.white,
-        border: Border(left: BorderSide(color: Color(0xFF3E5C6B), width: 1.5)),
+        border: Border(
+          left: BorderSide(
+            color: TopicThemeScope.of(context).drugCardHeader,
+            width: 1.5,
+          ),
+        ),
       ),
       padding: const EdgeInsets.all(4),
       child: Image.asset(
@@ -165,12 +184,16 @@ class _Section extends StatelessWidget {
   const _Section({
     required this.label,
     required this.bg,
+    required this.spine,
     required this.markdown,
     required this.accent,
   });
 
   final String label;
   final Color bg;
+
+  /// The darker strip the print runs down the label edge of each zone.
+  final Color spine;
   final String markdown;
   final Color accent;
 
@@ -185,8 +208,11 @@ class _Section extends StatelessWidget {
             Container(
               width: 30,
               alignment: Alignment.center,
-              decoration: const BoxDecoration(
-                border: Border(right: BorderSide(color: Colors.black26)),
+              decoration: BoxDecoration(
+                color: spine,
+                border: const Border(
+                  right: BorderSide(color: Colors.black26),
+                ),
               ),
               child: RotatedBox(
                 quarterTurns: 3,

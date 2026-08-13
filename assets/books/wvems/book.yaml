@@ -7,6 +7,37 @@ book:
   # Single-page directory of every protocol (like the printed cover index),
   # instead of the default drill-down TOC. Auto-built from the contents tree.
   view: "index"
+  # The printed book uses colour in two registers: a CHAPTER register (the
+  # page-number circles, title bar, edge rail and page wash) and a SEMANTIC
+  # register that is fixed across all 166 pages (peds pink, Critical-Care
+  # lavender, the red octagon, the purple trapezoid, the dose-table zebra).
+  # Everything structural in between — section brackets, section titles, box
+  # outlines — is NEUTRAL on every chapter, and that is precisely what lets
+  # the pink paediatric bracket carry meaning. The app's default is to tint
+  # that chrome with the chapter accent, which is right for the other books
+  # and wrong here, so WVEMS overrides it at the book level.
+  #
+  # Measured in tool/wvems_audit_colour.md: bracket #666666 on all 117
+  # bracketed pages; black borders on every solid box, flow node and card;
+  # #999999 dashes on 79 pages; and no amber anywhere in the book — the
+  # nearest colour to the app's `alert` is 36 points away, so the amber
+  # callout was outshouting the red octagon it is supposed to defer to.
+  palette:
+    node_border: "0xFF000000"
+    section_rule: "0xFF666666"
+    section_title: "0xFF000000"
+    box_border: "0xFF000000"
+    # Firm ("Concept") box: neutral grey card, black outline and title chip.
+    alert: "0xFF000000"
+    alert_fill: "0xFFEFEFEF"
+    alert_text: "0xFF000000"
+    # Conditional box: near-white card, #999999 dashes.
+    dash_rule: "0xFF999999"
+    dash_fill: "0xFFFDFAFA"
+    # The note pill inside a flowchart, same neutral treatment.
+    note_fill: "0xFFEFEFEF"
+    note_border: "0xFF000000"
+    note_text: "0xFF000000"
   # contents tree — the 4 PDF index sections as explicit groups
   # (Universal / Medical / Trauma / Critical Care) + a drug-reference
   # appendix. Topic+map model; section structure is declared, not derived.
@@ -16,6 +47,7 @@ book:
         accent: "0xFF1E4E8C"
         accent_fill: "0xFFE8F0FA"
         accent_branch: "0xFF2C6BB5"
+        page_wash: "0xFFF5F8FD"
       children:
         - topic: "topics/wvems_2026_004.yaml"
         - topic: "topics/wvems_2026_006.yaml"
@@ -32,6 +64,7 @@ book:
         accent: "0xFF2E7D32"
         accent_fill: "0xFFEAF4EB"
         accent_branch: "0xFF43A047"
+        page_wash: "0xFFF5F9F3"
       children:
         - topic: "topics/wvems_2026_024.yaml"
         - topic: "topics/wvems_2026_026.yaml"
@@ -52,6 +85,7 @@ book:
         accent: "0xFFC55A11"
         accent_fill: "0xFFFBEEE4"
         accent_branch: "0xFFE57324"
+        page_wash: "0xFFFCF6F5"
       children:
         - topic: "topics/wvems_2026_052.yaml"
         - topic: "topics/wvems_2026_054.yaml"
@@ -71,6 +105,7 @@ book:
         accent: "0xFF6A1B9A"
         accent_fill: "0xFFF1E7F6"
         accent_branch: "0xFF8E24AA"
+        page_wash: "0xFFF2F0F6"
       children:
         - topic: "topics/wvems_2026_078.yaml"
         - topic: "topics/wvems_2026_080.yaml"
@@ -85,10 +120,16 @@ book:
       # Reference appendices — rendered as footer bars in the index directory,
       # not protocol columns.
       appendix: true
+      # Print gives the Drug Reference its own teal accent (#76A5AF), the only
+      # cue that says "drug card, not protocol" at a glance; #3A5D64 is the
+      # dark form of the same hue and is what the card headers are drawn in,
+      # so it carries the print's identity while staying legible under white
+      # AppBar text.
       palette:
-        accent: "0xFF1E4E8C"
-        accent_fill: "0xFFE8F0FA"
-        accent_branch: "0xFF2C6BB5"
+        accent: "0xFF3A5D64"
+        accent_fill: "0xFFE6EEF0"
+        accent_branch: "0xFF5E8F99"
+        page_wash: "0xFFF6F9F9"
       children:
         - topic: "topics/wvems_2026_drug_reference.yaml"
     - title: "Procedures"
@@ -97,14 +138,18 @@ book:
         accent: "0xFFC55A11"
         accent_fill: "0xFFFBEEE4"
         accent_branch: "0xFFE57324"
+        page_wash: "0xFFFDF8F2"
       children:
         - topic: "topics/wvems_2026_096.yaml"
     - title: "Policies"
       appendix: true
+      # Print runs Procedures and Policies as one orange section; the app
+      # splits them for navigation but keeps the section's page wash.
       palette:
         accent: "0xFF455A64"
         accent_fill: "0xFFECEFF1"
         accent_branch: "0xFF607D8B"
+        page_wash: "0xFFFDF8F2"
       children:
         - topic: "topics/wvems_2026_109.yaml"
     - title: "Peds Reference"
@@ -113,6 +158,7 @@ book:
         accent: "0xFFAD1457"
         accent_fill: "0xFFFDE7F0"
         accent_branch: "0xFFD81B60"
+        page_wash: "0xFFFFFBFB"
       children:
         - topic: "topics/wvems_2026_144.yaml"
     - title: "About & Credits"

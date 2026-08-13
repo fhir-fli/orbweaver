@@ -244,9 +244,10 @@ class _TopicFrameState extends State<TopicFrame> {
   @override
   Widget build(BuildContext context) {
     final resolved = widget.palette.isNotEmpty ? widget.palette : null;
-    final accent = resolved != null ? TopicTheme(resolved).header : Colors.grey;
+    final theme = resolved != null ? TopicTheme(resolved) : null;
+    final accent = theme?.header ?? Colors.grey;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: theme?.pageWash ?? Colors.white,
       appBar: AppBar(
         backgroundColor: accent,
         foregroundColor: Colors.white,
@@ -334,9 +335,10 @@ class _TopicPagerState extends State<TopicPager> {
   @override
   Widget build(BuildContext context) {
     final active = widget.siblings[_activeIndex];
-    final accent = TopicTheme(active.palette).header;
+    final theme = TopicTheme(active.palette);
+    final accent = theme.header;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: theme.pageWash,
       appBar: AppBar(
         backgroundColor: accent,
         foregroundColor: Colors.white,

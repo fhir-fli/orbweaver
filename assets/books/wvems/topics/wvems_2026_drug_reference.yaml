@@ -23,6 +23,7 @@ topic:
 
     - type: "drug_card"
       name: "3% Saline"
+      critical_care: true
       class: "Hypertonic Saline"
       image: "assets/books/wvems/images/form_ivbag.jpg"
       indications:
@@ -495,6 +496,7 @@ topic:
 
     - type: "drug_card"
       name: "Etomidate"
+      critical_care: true
       class: "Amidate®"
       image: "assets/books/wvems/images/form_vial.jpg"
       indications:
@@ -608,6 +610,7 @@ topic:
 
     - type: "drug_card"
       name: "Heparin"
+      critical_care: true
       class: "Heparin Sodium"
       image: "assets/books/wvems/images/form_vial.jpg"
       indications:
@@ -700,6 +703,7 @@ topic:
 
     - type: "drug_card"
       name: "Lasix®"
+      critical_care: true
       class: "Furosemide"
       image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
@@ -721,6 +725,7 @@ topic:
 
     - type: "drug_card"
       name: "Levophed®"
+      critical_care: true
       class: "Norepinephrine"
       image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
@@ -770,6 +775,7 @@ topic:
 
     - type: "drug_card"
       name: "Lopressor®"
+      critical_care: true
       class: "Metoprolol"
       image: "assets/books/wvems/images/form_ampoule.jpg"
       indications:
@@ -857,6 +863,7 @@ topic:
 
     - type: "drug_card"
       name: "Neo Push"
+      critical_care: true
       class: "Phenylephrine"
       image: "assets/books/wvems/images/form_vial.jpg"
       indications:
@@ -927,6 +934,7 @@ topic:
 
     - type: "drug_card"
       name: "Propofol"
+      critical_care: true
       class: "Diprivan®"
       image: "assets/books/wvems/images/form_vial.jpg"
       indications:
@@ -951,6 +959,7 @@ topic:
 
     - type: "drug_card"
       name: "Rocephin®"
+      critical_care: true
       class: "Ceftriaxone"
       image: "assets/books/wvems/images/form_vial.jpg"
       indications:
@@ -974,6 +983,7 @@ topic:
 
     - type: "drug_card"
       name: "Rocuronium"
+      critical_care: true
       class: "Zemuron®"
       image: "assets/books/wvems/images/form_vial.jpg"
       indications:
@@ -997,6 +1007,7 @@ topic:
 
     - type: "drug_card"
       name: "Succinylcholine"
+      critical_care: true
       class: "Anectine®"
       image: "assets/books/wvems/images/form_vial.jpg"
       indications:

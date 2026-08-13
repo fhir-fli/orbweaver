@@ -387,7 +387,7 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
 
   Color _sevColor(Color accent, FormulaSeverity sev) => switch (sev) {
         FormulaSeverity.alert => widget.theme.alert,
-        FormulaSeverity.warn => const Color(0xFFB26A00),
+        FormulaSeverity.warn => widget.theme.formulaWarn,
         FormulaSeverity.info => accent,
         FormulaSeverity.none => accent,
       };

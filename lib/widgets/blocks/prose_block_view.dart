@@ -20,9 +20,12 @@ const double kProseLineHeight = 1.18;
 const double kProseUnitSpacing = 1;
 
 /// Renders a [ProseBlock] using the minimal markdown subset in
-/// [MiniMarkdown]. All colors come from the resolved [theme]: `accent`
-/// (= `theme.header`) tints the section title, square bullets, and the
-/// highlight rule; the `alert` roles color the attention callout.
+/// [MiniMarkdown]. All colors come from the resolved [theme]: `section_rule`
+/// and `section_title` draw the section chrome and `accent` the bullets and
+/// highlight rule; `box_border` outlines a boxed tile; the `alert` roles
+/// color the attention callout and `dash_*` its conditional form. The
+/// section and box roles default to the accent, so a book that does not
+/// override them looks exactly as it did before they existed.
 class ProseBlockView extends StatelessWidget {
   const ProseBlockView({
     required this.block,
@@ -45,7 +48,7 @@ class ProseBlockView extends StatelessWidget {
       return Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
         decoration: BoxDecoration(
-          border: Border.all(color: theme.nodeBorder.withValues(alpha: 0.6)),
+          border: Border.all(color: theme.boxBorder),
           borderRadius: BorderRadius.circular(4),
         ),
         alignment: block.title == null ? Alignment.center : null,
@@ -61,7 +64,7 @@ class ProseBlockView extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w800,
-                        color: accent,
+                        color: theme.sectionTitle,
                       ),
                     ),
                   ),
@@ -86,14 +89,14 @@ class ProseBlockView extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
           decoration: BoxDecoration(
-            color: theme.alertFill,
+            color: block.dashed ? theme.dashFill : theme.alertFill,
             border: block.dashed
                 ? null
                 : Border.all(color: theme.alert, width: 1.4),
             borderRadius: BorderRadius.circular(10),
           ),
           foregroundDecoration: block.dashed
-              ? _DashedRoundedBorder(color: theme.alert, width: 1.4)
+              ? _DashedRoundedBorder(color: theme.dashRule, width: 1.4)
               : null,
           child: IntrinsicWidth(
             child: Column(
@@ -152,12 +155,12 @@ class ProseBlockView extends StatelessWidget {
     // no padding, because five sections a page means every pixel of
     // section chrome is paid five times over.
     return SectionBracket(
-      color: accent,
+      color: theme.sectionRule,
       title: block.title,
       titleStyle: TextStyle(
         fontSize: 15.5,
         fontWeight: FontWeight.w800,
-        color: accent,
+        color: theme.sectionTitle,
         height: 1.2,
       ),
       bodyFill: block.highlight ? accent.withValues(alpha: 0.06) : null,
