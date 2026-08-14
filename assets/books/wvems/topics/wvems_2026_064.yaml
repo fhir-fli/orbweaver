@@ -108,12 +108,12 @@ topic:
     - type: "prose"
       title: "Notes"
       markdown: |
-        - **Penetration**: All penetrations should have a **chest seal**.
+        - **Penetration**: All penetrations should have a [chest seal](topic:wvems-2026-006).
           - Remove chest seal if using positive pressure (e.g. BVM, NIPPV).
         - **Evisceration**: Cover with saline gauze and vapor barrier.
         - **Spine**: Monitor for neuro deficits and provide [Immobilization](topic:wvems-2026-060).
         - **Impaled**: Cut object free of wreckage. Do not remove from patient.
-        - **Flail Chest**: Monitor for **Pneumothorax**. Use BVM for [Dyspnea](topic:wvems-2026-030).
+        - **Flail Chest**: Monitor for [Pneumothorax](topic:wvems-2026-006). Use BVM for [Dyspnea](topic:wvems-2026-030).
         - **Unstable Pelvis**: Assess **only once** (with gentle compression).
           - Consider a **pelvic binder**:
             - Place **BELOW the belt line**.

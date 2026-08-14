@@ -108,33 +108,33 @@ topic:
       title: "Imperatives"
       markdown: |
         - Acute edema is usually associated with [dyspnea](topic:wvems-2026-030) and elevated SBP.
-        - Use **O2 & NIPPV** aggressively. Be prepared to escalate [airway](topic:wvems-2026-004).
+        - Use [O2 & NIPPV](topic:wvems-2026-006) aggressively. Be prepared to escalate [airway](topic:wvems-2026-004).
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Nitro Drip** (Nitroglycerin): Monitor very closely for **hypotension**.
+        - **[Nitro Drip](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): Monitor very closely for [hypotension](topic:wvems-2025-008).
           - **Requires a pump** — it is inappropriate to dose by gravity gtt.
           - **Titrate down** rapidly to maintain **SBP above 90 mmHg**.
           - May **start with two SL tabs** (0.4 mg SL x2) while preparing drip.
           - Use caution with history of aortic stenosis or pulmonary HTN.
-          - Contraindicated if recent (36 h) use of any **PDE5 inhibitor**.
-          - Stop drip and consider [vasopressors](topic:wvems-2026-082) if persistent **hypotension**.
-        - **Lasix®** (Furosemide): Effect is delayed, but may be beneficial.
+          - Contraindicated if recent (36 h) use of any [PDE5 inhibitor](topic:wvems-2026-028).
+          - Stop drip and consider [vasopressors](topic:wvems-2026-082) if persistent [hypotension](topic:wvems-2025-008).
+        - **[Lasix®](topic:wvems-2026-drug-reference#lasix)** (Furosemide): Effect is delayed, but may be beneficial.
 
     - type: "prose"
       title: "Notes"
       markdown: |
         - This protocol concentrates on common **cardiac** causes of edema.
           - Non-cardiac causes still benefit from aggressive **O2 & NIPPV**.
-        - Consider **Fentanyl** for chest **pain or headache** (or air hunger).
+        - Consider **Fentanyl** for chest [pain or headache](topic:wvems-2026-020) (or air hunger).
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
-        - Typical CHF is unlikely. Consider structural disease or **arrhythmia**.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
+        - Typical CHF is unlikely. Consider structural disease or [arrhythmia](topic:wvems-2026-014).
 
     - type: "prose"
       title: "References"

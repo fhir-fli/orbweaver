@@ -102,14 +102,14 @@ topic:
       highlight: true
       markdown: |
         - **Dyspnea with penetrating trauma** is a severe problem.
-          - Apply a **chest seal** over any penetrating injury to neck or trunk.
+          - Apply a **chest seal** over any penetrating injury to neck or [trunk](topic:wvems-2026-064).
           - Remove chest seal if using positive pressure (e.g. BVM, NIPPV).
         - Spontaneous or traumatic **PTX** can be a severe problem.
-          - **Pleural Decompress** for Hypotension or persistent hypoxia.
-        - **BVM**: use two providers and two-handed technique if able.
+          - **[Pleural Decompress](topic:wvems-2026-096#pleural-decompress)** for [Hypotension](topic:wvems-2025-008) or persistent hypoxia.
+        - **[BVM](topic:wvems-2026-096#bvm)**: use two providers and two-handed technique if able.
           - Use **EtCO2** and target **35–45 mmHg**. Avoid hyperventilation.
           - During CPR: alternate **30 : 2** until BIAD (or ETT) is placed.
-        - **NIPPV**: contraindicated with agitation, vomiting, or hypotension.
+        - **[NIPPV](topic:wvems-2026-096#nippv)**: contraindicated with agitation, vomiting, or hypotension.
           - May use if altered or unresponsive, but monitor closely.
           - May place EtCO2 cannula under NIPPV mask to get waveform.
 
@@ -134,14 +134,14 @@ topic:
       band: "critical_care"
       title: ""
       markdown: |
-        - Consider **Ventilator** if indicated and credentialed for Critical Care.
+        - Consider [Ventilator](topic:wvems-2026-080) if indicated and credentialed for Critical Care.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
         - Refer to [Neonate](topic:wvems-2026-050) for any peds under 1 month (≤ 30 days) old.
-          - Consider a **T-piece resuscitator** (instead of BVM) for Neonates.
+          - Consider a **T-piece resuscitator** (instead of BVM) for [Neonates](topic:wvems-2026-050).
         - Use caution and appropriately sized BVM to prevent **barotrauma**.
 
     - type: "prose"

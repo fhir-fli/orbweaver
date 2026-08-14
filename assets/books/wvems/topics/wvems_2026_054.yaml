@@ -101,10 +101,10 @@ topic:
       markdown: |
         - Most important aspect is to prioritize emergent transport.
           - **Get the patient to the hospital.**
-        - Reassess and repeat **Pleural Decompression** as needed.
+        - Reassess and repeat **[Pleural Decompression](topic:wvems-2026-096#pleural-decompress)** as needed.
           - Repeat immediately if decompression after initial success.
-        - Reassess and apply additional **Tourniquets** as needed.
-          - Apply pressure and **pack wounds** for junctional bleeding.
+        - Reassess and apply additional **[Tourniquets](topic:wvems-2026-096#tourniquet)** as needed.
+          - Apply pressure and **[pack wounds](topic:wvems-2026-096#wound-packing)** for junctional bleeding.
         - Consider a concurrent medical cause preceding the trauma.
 
     - type: "row"
@@ -129,8 +129,8 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Ketamine** (Ketalar®): Dilute in NS and **give slowly over 10 min**.
-          - Use **weight-based peds dosing** for adults under 110 lbs (50 kg).
+        - **[Ketamine](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®): Dilute in NS and **give slowly over 10 min**.
+          - Use [weight-based peds dosing](topic:wvems-2026-144) for adults under 110 lbs (50 kg).
 
     - type: "prose"
       title: "Notes"
@@ -141,13 +141,13 @@ topic:
       band: "critical_care"
       title: ""
       markdown: |
-        - Consider **Intubation** and/or **Vent** if indicated and credentialed for CC.
+        - Consider [Intubation](topic:wvems-2026-078) and/or [Vent](topic:wvems-2026-080) if indicated and credentialed for CC.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

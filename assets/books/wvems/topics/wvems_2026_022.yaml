@@ -96,23 +96,23 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Zofran®** (Ondansetron): use for all causes of nausea & vomiting.
+        - **[Zofran®](topic:wvems-2026-drug-reference#zofran)** (Ondansetron): use for all causes of nausea & vomiting.
           - Use caution with [Bradycardia](topic:wvems-2026-012), and [Overdose / Tox](topic:wvems-2026-040).
-          - Consider **12-Lead** if hx/risk of Long QT or electrolyte imbalance.
+          - Consider **[12-Lead](topic:wvems-2026-096#12-lead)** if hx/risk of Long QT or electrolyte imbalance.
           - **E** may only give PO — use Orally Disintegrating Tabs (ODTs).
           - **A** alternate 4–10 y/o dose: break ODT in half and give 2 mg PO.
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Consider an atypical **Cardiac** cause in diabetics and the elderly.
+        - Consider an atypical [Cardiac](topic:wvems-2026-028) cause in diabetics and the elderly.
         - Sniffing an alcohol prep may also provide minor nausea relief.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        Use **Peds Reference** or other approved source for peds dosing.
+        Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

@@ -107,8 +107,8 @@ topic:
       markdown: |
         - Collect a detailed history and **SDS** (Safety Data Sheet) if able:
           - Substance, quantity and time of ingestion or exposure.
-        - Consider an **Antidote** for critical symptoms from a known toxin.
-          - Minor exposures with few symptoms do not require an Antidote.
+        - Consider an **[Antidote](topic:wvems-2026-096#adult-antidotes)** for critical symptoms from a known toxin.
+          - Minor exposures with few symptoms do not require an **[Antidote](topic:wvems-2026-096#adult-antidotes)**.
           - Stable patients should be monitored and transported.
           - Supportive care is sufficient for **alcohol (ethanol)** intoxication.
         - Monitor [Airway](topic:wvems-2026-004) closely with all caustic ingestions.
@@ -116,7 +116,7 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Narcan®** (Naloxone): should only be used to treat **Hypoxia**.
+        - **[Narcan®](topic:wvems-2026-drug-reference#narcan)** (Naloxone): should only be used to treat [Hypoxia](topic:wvems-2026-006).
           - Goal is restored breathing — **not** full alertness.
           - Repeat doses titrated to effect; long-acting opioids may need redosing.
         - **NS Bolus**: supportive in shock from hypovolemia or sepsis-like states.
@@ -135,7 +135,7 @@ topic:
       markdown: |
         - Pediatric exposures often involve household chemicals and meds left
           accessible — gather history from caregivers and bring containers if safe.
-        - Use **Peds Reference** for weight-based dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) for weight-based dosing.
 
     - type: "prose"
       title: "References"

@@ -51,7 +51,7 @@ def phrase_in_rect(page, rect):
             if overlap > best_overlap:
                 best_line, best_overlap = line, overlap
     if best_line is None:
-        return ""
+        return "", None, ""
     picked = []  # (x, char)
     for span in best_line.get("spans", []):
         for ch in span.get("chars", []):
@@ -60,14 +60,24 @@ def phrase_in_rect(page, rect):
             if rect.x0 - 0.5 <= cx <= rect.x1 + 0.5:
                 picked.append((cb[0], LIGATURES.get(ch["c"], ch["c"])))
     picked.sort()
-    return "".join(c for _, c in picked).replace("\xa0", " ").strip()
+    text = "".join(c for _, c in picked).replace("\xa0", " ").strip()
+    full = "".join(
+        LIGATURES.get(ch["c"], ch["c"])
+        for span in best_line.get("spans", [])
+        for ch in span.get("chars", [])
+    )
+    full = full.replace("\xa0", " ").replace("\t", " ").strip()
+    return text, best_line["bbox"], full
 
 
 def main():
     out_path = Path(sys.argv[1])
     out_path.parent.mkdir(parents=True, exist_ok=True)
     fh = open(out_path, "w")
-    fh.write("src_page\tidx\tkind\tdest\tx0\ty0\tx1\ty1\ton_page\tphrase\n")
+    fh.write(
+        "src_page\tidx\tkind\tdest\tx0\ty0\tx1\ty1\ton_page\t"
+        "line_x0\tline_x1\tphrase\tline_text\n"
+    )
     fh.flush()
 
     doc = pymupdf.open(PDF)
@@ -93,10 +103,14 @@ def main():
             # printed page at all. They are invisible to a reader; flagged
             # here so nothing downstream treats them as cross-references.
             on_page = "y" if r.intersects(page.rect) else "n"
-            phrase = phrase_in_rect(page, r).replace("\t", " ")
+            phrase, lbox, line_text = phrase_in_rect(page, r)
+            phrase = phrase.replace("\t", " ")
+            lx0 = f"{lbox[0]:.1f}" if lbox else ""
+            lx1 = f"{lbox[2]:.1f}" if lbox else ""
             fh.write(
                 f"{pno + 1}\t{i}\t{kind_s}\t{dest}\t"
-                f"{r.x0:.1f}\t{r.y0:.1f}\t{r.x1:.1f}\t{r.y1:.1f}\t{on_page}\t{phrase}\n"
+                f"{r.x0:.1f}\t{r.y0:.1f}\t{r.x1:.1f}\t{r.y1:.1f}\t{on_page}\t"
+                f"{lx0}\t{lx1}\t{phrase}\t{line_text}\n"
             )
             fh.flush()
             total += 1

@@ -110,7 +110,7 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Beware **Anaphylaxis** with any voice changes (i.e. hoarseness).
+        - Beware [Anaphylaxis](topic:wvems-2026-032) with any voice changes (i.e. hoarseness).
 
     - type: "prose"
       title: "References"

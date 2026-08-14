@@ -107,15 +107,15 @@ topic:
       title: "Bradycardia Imperatives"
       highlight: true
       markdown: |
-        - Investigate & treat **underlying causes** like Hypothermia.
-          - Consider **Overdose** if appropriate (many meds cause brady).
+        - Investigate & treat **underlying causes** like [Hypothermia](topic:wvems-2026-068).
+          - Consider [Overdose](topic:wvems-2026-040) if appropriate (many meds cause brady).
           - Slow, wide-complex bradycardia may be due to [Hyperkalemia](topic:wvems-2026-018).
         - **I** May try a pacer magnet to improve rate. **Do not** use on AICD.
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Atropine**: first-line for symptomatic, narrow-complex bradycardia.
+        - **[Atropine](topic:wvems-2026-drug-reference#atropine)**: first-line for symptomatic, narrow-complex bradycardia.
           - Less effective in heart-transplant patients (denervated heart).
           - Doses smaller than 0.5 mg may paradoxically slow the heart.
         - **Pacing** (transcutaneous): mechanical capture is the goal.

@@ -127,17 +127,43 @@ or procedure name ("Versed" → p.143), so phrase → card is an exact match.
 
 ### Sub-batches
 
-- [ ] **2a — wire cross-topic anchors.** `openLinkedTopic(context, id, anchor:)`
+- [x] **2a — wire cross-topic anchors.** `openLinkedTopic(context, id, anchor:)`
       threaded through `TopicFrame`/`TopicPager` to `TopicView`, which already
       keeps a `GlobalKey` per `anchor:` block for same-topic `#slug` links.
-- [ ] **2b — give every card an anchor.** Drug cards slug from `name`,
+- [x] **2b — give every card an anchor.** Drug cards slug from `name`,
       procedure cards from their title, policy sections from their heading.
-- [ ] **2c — rewrite the YAML.** For the pages the app ships: every underlined
-      phrase becomes `[phrase](topic:id#anchor)`, and the 214 that are currently
-      `**bold**` lose the bold — print sets cross-references in regular weight
-      (audit §1.5), and bold has to go back to meaning emphasis only.
-- [ ] **2d — guard it.** `test/data/cross_link_test.dart` asserts every target
-      resolves: topic id in the library, anchor present in that topic.
+- [x] **2c — rewrite the YAML, odd (prose) pages.** 253 restored, 53 already
+      correct. Print weight followed: a protocol / policy / peds reference is
+      regular weight + underline, a drug or procedure is bold + underline.
+- [x] **2d — guard it.** `test/data/cross_link_test.dart` now checks the
+      `#anchor` half too, and fails if the anchored-link count collapses.
+- [ ] **2e — even (flowchart) pages.** 370 more cross-references across the 46
+      flowchart pages; the app uses `link_id` 88 times and none of those point
+      at a drug, procedure or policy. `TopicAction` has no link field yet, so
+      the drug names inside flow nodes cannot carry one.
+- [ ] **2f — outbound links from the appendix topics.** 191 more, leaving the
+      drug reference, procedures, policies and peds reference.
+
+### What Batch 2 could not restore
+
+**`tool/wvems_links_not_restorable.md`** — 65 cross-references on 13 pages
+whose sentence is simply not in the app. These are the eleven rewritten pages
+audit §5.1-5.2 already lists (p.11's whole *Notes* section is different copy,
+p.13's and p.15's are gone, p.31 differs on the PDE5 window), so they are
+content work, not link work. Two more are a genuine decision: the print points
+**Dyspnea** at p.6 *Breathing* while the app points it at p.30 *Dyspnea*, and
+the app's target was left alone.
+
+### The three tools, and how to re-run them
+
+```
+pdfvenv/bin/python tool/wvems_link_extract.py  links.tsv
+pdfvenv/bin/python tool/wvems_link_resolve.py  links.tsv targets.tsv
+pdfvenv/bin/python tool/wvems_link_apply.py    targets.tsv report.tsv [--apply] [--odd|--even]
+```
+
+`pdfvenv` is a throwaway venv with `pymupdf` + `pyyaml`. Each writes every row
+as it is produced; `wvems_link_apply.py` without `--apply` only reports.
 
 ## Batch 3 — ship the two missing pages
 
@@ -182,3 +208,10 @@ tables not shrunk, section title ratio, and small print for URLs/attributions.
   Emulator-verified against the print on p.24 (adult grey over peds pink dose
   strips, black node borders, print badge fills), p.26 and the drug reference
   (teal chrome, cyan vs lavender Notes).
+- 2026-08-13 — **Batch 2 prose pages applied.** Link graph re-derived from the
+  PDF (1,492 annotations, matching the audit exactly); cross-topic anchors
+  wired; 253 links restored, 65 reported as unrestorable. 597 tests pass, same
+  4 pre-existing failures. Emulator-verified: p.21 shows the two weights
+  correctly side by side, tapping **Fentanyl** lands on the Fentanyl card 23
+  cards into the drug reference, tapping **Tourniquet** lands on the Tourniquet
+  card 17 cards into the procedures.

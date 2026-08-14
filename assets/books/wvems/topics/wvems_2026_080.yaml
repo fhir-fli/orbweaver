@@ -131,10 +131,10 @@ topic:
       title: "Imperatives"
       highlight: true
       markdown: |
-        - Monitor patients **closely**. Sedation & vents are a delicate balance.
+        - Monitor patients **closely**. Sedation & **[vents](topic:wvems-2026-096#ventilator)** are a delicate balance.
           - Use clinical sense and vital signs **including SpO2 and EtCO2**.
-          - Be ready to **titrate settings** and assist with **Suction** and [Airway](topic:wvems-2026-004).
-        - Use lung protective volumes w/ **ventilator**. Start at 4-8 mL/kg IBW.
+          - Be ready to **titrate settings** and assist with **[Suction](topic:wvems-2026-096#suction)** and [Airway](topic:wvems-2026-004).
+        - Use lung protective volumes w/ **[ventilator](topic:wvems-2026-096#ventilator)**. Start at 4-8 mL/kg IBW.
         - Elevate **head of bed to 30°** to help ventilation & limit aspiration.
         - May **increase I:E ratio** (1:5) for obstructive disease (COPD, Asthma).
 
@@ -148,11 +148,11 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Fentanyl** (Sublimaze®), **Versed** (Midazolam®): Use together.
+        - **[Fentanyl](topic:wvems-2026-drug-reference#fentanyl)** (Sublimaze®), **[Versed](topic:wvems-2026-drug-reference#versed)** (Midazolam®): Use together.
           - One without the other is unlikely to produce adequate sedation.
-        - **Ketamine** (Ketalar®): Useful for peds and asthmatics.
+        - **[Ketamine](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®): Useful for peds and asthmatics.
           - Double dose for IM (watch concentration: max 3 mL per IM inj.)
-        - **Propofol** (Diprivan®): Start gtt near 150 mcg/kg/min.
+        - **[Propofol](topic:wvems-2026-drug-reference#propofol)** (Diprivan®): Start gtt near 150 mcg/kg/min.
           - **Use only with an IV pump** and an accurate patient weight.
           - Titrate to effect, aim for 30-50% **reduction** in the first 30 min.
           - For elderly or debilitated: start lower (100 mcg/kg/min).
@@ -162,7 +162,7 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

@@ -125,7 +125,7 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **NS Bolus** (0.9% Saline): May skip **NS** for patients in extremis.
+        - **[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)** (0.9% Saline): May skip **NS** for patients in extremis.
         - **Blood** (LTOWB): **Verify** the environmental control tag.
           - Use special tubing & **heater**. Watch for **transfusion reactions**.
           - Stop immediately if any [fever](topic:wvems-2026-016), [dyspnea](topic:wvems-2026-030) or [allergic reaction](topic:wvems-2026-032).
@@ -142,7 +142,7 @@ topic:
       title: "Pediatrics"
       markdown: |
         - Provide **Blood** in aliquots of **10 mL/kg**. May repeat PRN.
-        - Titrate to low end of age-adjusted SBP (listed in **Peds Reference**).
+        - Titrate to low end of age-adjusted SBP (listed in [Peds Reference](topic:wvems-2026-144)).
 
     - type: "prose"
       title: "References"

@@ -122,11 +122,11 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Lopressor®** (Metoprolol):
+        - **[Lopressor®](topic:wvems-2026-drug-reference#lopressor)** (Metoprolol):
           - Aim for **10–20% reduction** in systolic BP. Do not exceed **25%**.
           - Contraindicated if SBP under 190 mmHg or pulse under 60 /min.
           - Call **Medical Control** if SBP remains elevated after two doses.
-        - **Magnesium** (Sulfate): Only use for severe **preeclampsia**.
+        - **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** (Sulfate): Only use for severe **preeclampsia**.
           - Severe symptoms include: HTN, HA, confusion, dyspnea, edema.
           - Consider providing for **seizure prophylaxis** if SBP > 160 mmHg.
           - Monitor **deep tendon reflexes** for toxicity — d/c if reflexes lost.
@@ -143,7 +143,7 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Malignant HTN is unlikely in peds. Treat **underlying causes** of HTN.
+        - Malignant HTN is unlikely in peds. Treat [underlying causes](topic:wvems-2026-010) of HTN.
 
     - type: "prose"
       title: "References"

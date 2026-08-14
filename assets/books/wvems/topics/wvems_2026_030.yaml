@@ -137,8 +137,8 @@ topic:
         - **Albuterol** (Proventil®): bronchodilator for reactive disease.
         - **Atrovent** (Ipratropium): give once with first Albuterol.
         - **Epi Neb**: nebulised for upper airway swelling (croup, anaphylaxis).
-        - **Decadron** (Dexamethasone): single steroid dose to delay rebound.
-        - **Nitro** (Nitroglycerin): for pulmonary edema / heart failure dyspnea.
+        - **[Decadron](topic:wvems-2026-drug-reference#decadron)** (Dexamethasone): single steroid dose to delay rebound.
+        - **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): for pulmonary edema / heart failure dyspnea.
           - Hold for SBP < 100 mmHg.
           - Do **not** give within 24 h of PDE5 inhibitors.
 
@@ -148,7 +148,7 @@ topic:
       markdown: |
         - Stridor and barking cough → **croup** — give **Epi Neb** + Decadron.
         - Wheezing → **asthma/RAD** — Albuterol + Atrovent.
-        - Use **Peds Reference** for weight-based dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) for weight-based dosing.
 
     - type: "prose"
       title: "References"

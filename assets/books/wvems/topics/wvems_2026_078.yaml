@@ -146,20 +146,20 @@ topic:
           - **Maximum** of two (2) attempts per provider & max three (3) **total**.
         - Monitor BP, SpO2 and EtCO2 with waveform. Try to maintain:
           - SpO2 **above 90%**, EtCO2 of **35-45** mmHg, SBP above 90 mmHg
-        - **Preoxygenate** while predicting airway difficulty. Utilize **apneic O2**.
-        - Utilize an **RSI Prep Checklist** and drug/vent reference materials.
-        - May use adjunct meds (e.g. push pressors if **shock index** > 0.8).
+        - [Preoxygenate](topic:wvems-2026-006) while predicting airway difficulty. Utilize **apneic O2**.
+        - Utilize an **[RSI Prep Checklist](topic:wvems-2026-096#rsi-prep-checklist)** and drug/vent reference materials.
+        - May use adjunct meds (e.g. push [pressors](topic:wvems-2026-082) if [shock index](topic:wvems-2026-082) > 0.8).
         - **Video Laryngoscopy** is the standard of care; **record every case**.
           - Record the monitor/vitals and your face prior to each attempt.
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Etomidate** (Amidate®) or **Ketamine** (Ketalar®): Choose one.
-          - Beware (uncommon) laryngospasm with **Ketamine**.
-          - May give **Ketamine** & then pause for more oxygenation (**DSI**).
-        - **Etomidate** is not appropriate for patients under 10 y/o.
-        - **Rocuronium** (Zemuron®): Onset - 1 min; Duration - 30 min
+        - **[Etomidate](topic:wvems-2026-drug-reference#etomidate)** (Amidate®) or **[Ketamine](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®): Choose one.
+          - Beware (uncommon) laryngospasm with **[Ketamine](topic:wvems-2026-drug-reference#ketamine)**.
+          - May give **[Ketamine](topic:wvems-2026-drug-reference#ketamine)** & then pause for more oxygenation (**DSI**).
+        - **[Etomidate](topic:wvems-2026-drug-reference#etomidate)** is not appropriate for patients under 10 y/o.
+        - **[Rocuronium](topic:wvems-2026-drug-reference#rocuronium)** (Zemuron®): Onset - 1 min; Duration - 30 min
           - Consider a detailed **neuro exam** before paralysis
 
     - type: "band_callout"

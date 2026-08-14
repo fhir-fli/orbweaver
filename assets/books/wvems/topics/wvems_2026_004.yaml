@@ -105,8 +105,8 @@ topic:
       markdown: |
         - Maintain the simplest effective airway. **Escalate only if needed.**
           - Consider **elevating the head** of cot to reduce aspiration risk.
-        - If **BIAD** fails, **try again with a different size.**
-          - Most common failure of a BIAD is inappropriate size.
+        - If **[BIAD](topic:wvems-2026-096#biad)** fails, **try again with a different size.**
+          - Most common failure of a **[BIAD](topic:wvems-2026-096#biad)** is inappropriate size.
         - Use several techniques to confirm airway:
           - Physical Exam: lung sounds, skin color, chest rise, etc.
           - Vitals: rising SpO2, EtCO2, waveform capnography (gold standard)
@@ -125,20 +125,20 @@ topic:
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Encourage coughing. Use **Back Blows & Abd. Thrusts** for choking.
+        - Encourage coughing. Use **[Back Blows & Abd. Thrusts](topic:wvems-2026-096#back-blows-thrusts)** for choking.
           - Use **Chest Thrusts** if pregnant or unable to encircle abdomen.
         - Reposition airway with **Jaw Thrust** if any concern for spine injury.
           - Use **Head Tilt / Chin Lift** if medical cause (or if Jaw Thrust fails).
-        - Use caution with **NPA** if any signs of skull fx. or facial trauma.
-        - Secure **BIAD** well. Use tape or manufactured holding device.
+        - Use caution with **[NPA](topic:wvems-2026-096#npa-opa)** if any signs of skull fx. or facial trauma.
+        - Secure **[BIAD](topic:wvems-2026-096#biad)** well. Use tape or manufactured holding device.
           - May place c-collar (even without trauma) to help stabilize BIAD.
-          - **A** Consider placing an **OG-Tube** if BIAD will accommodate it.
+          - **A** Consider placing an **[OG-Tube](topic:wvems-2026-096#og-tube)** if BIAD will accommodate it.
 
     - type: "band_callout"
       band: "critical_care"
       title: ""
       markdown: |
-        - Consider **Intubation** if indicated and credentialed for Critical Care.
+        - Consider [Intubation](topic:wvems-2026-078) if indicated and credentialed for Critical Care.
 
     - type: "band_callout"
       band: "peds"

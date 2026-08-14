@@ -127,9 +127,9 @@ topic:
         - **SpO2 rises slowly** after birth.
           - Consider a sensor on **right hand**.
         - May **try 30 sec of ventilation** before starting compressions.
-          - If **T-piece Resuscitator** is unavailable: use neonatal **BVM**.
+          - If **T-piece Resuscitator** is unavailable: use neonatal **[BVM](topic:wvems-2026-096#bvm)**.
           - **EKG** can provide rapid & reliable pulse rate & response.
-        - Less common causes of distress: **PTX**, **Hypoglycemia**, **Shock**.
+        - Less common causes of distress: [PTX](topic:wvems-2026-006), [Hypoglycemia](topic:wvems-2026-038), [Shock](topic:wvems-2025-008).
 
     - type: "row"
       blocks:

@@ -97,16 +97,16 @@ topic:
       highlight: true
       markdown: |
         - While backboards have historically been used for spinal
-          immobilization, **SMR** may also be achieved with a scoop
+          immobilization, **[SMR](topic:wvems-2026-096#smr-with-c-collar)** may also be achieved with a scoop
           stretcher, vacuum splint, **ambulance cot**, or similar device
           to which a patient is safely secured.
         - Awake, compliant patients may be safely secured with seat belts.
-        - SMR requires **supine positioning** and a **c-collar**.
+        - SMR requires **supine positioning** and a **[c-collar](topic:wvems-2026-096#smr-with-c-collar)**.
         - A long spine board, scoop stretcher, or vacuum mattress is
           recommended to assist with **patient transfers** and to minimize
           flexion, extension, or rotation of the injured spine.
           - May try gentle **self-extrication** from a vehicle (with a c-collar).
-        - There is no role for **SMR** in penetrating trauma.
+        - There is no role for **[SMR](topic:wvems-2026-096#smr-with-c-collar)** in penetrating trauma.
 
     - type: "prose"
       title: "Notes"
@@ -118,20 +118,20 @@ topic:
           - Paralysis, weakness, numbness, or vision changes.
           - Shooting 'electric' pain, or tingling in any extremity.
         - **Altered LOC from Baseline** includes any change in mentation:
-          - **Glasgow Coma Scale** less than baseline, new confusion.
+          - [Glasgow Coma Scale](topic:wvems-2026-036) less than baseline, new confusion.
         - **Acute Intoxication** includes any alteration in mental due to:
           - Alcohol, medications, recreational or illegal drugs.
         - **Distracting Injury or Mechanism** may include:
           - Unstable vitals, airway trauma, blast injury, shallow water diving.
-          - Fall > 10 ft, flail chest, unstable pelvis, 2° or 3° **Burn** > 10% BSA.
-          - Major fracture / bleed, crushed / mangled or amputated **extremity**.
+          - Fall > 10 ft, flail chest, unstable pelvis, 2° or 3° [Burn](topic:wvems-2026-070) > 10% BSA.
+          - Major fracture / bleed, crushed / mangled or amputated [extremity](topic:wvems-2026-066).
           - High-risk MVC: > 60 mph, ejection, roll over, death, struck by car.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Any child that cannot provide a reliable history should have **SMR**.
+        - Any child that cannot provide a reliable history should have **[SMR](topic:wvems-2026-096#smr-with-c-collar)**.
 
     - type: "prose"
       title: "References"

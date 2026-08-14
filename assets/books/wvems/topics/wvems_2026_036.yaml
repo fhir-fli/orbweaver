@@ -113,14 +113,14 @@ topic:
         - Unstable patients should be treated aggressively.
           - Be prepared for a [Medical CODE](topic:wvems-2026-024).
         - Alcohol and drugs can mask other causes of altered LOC.
-          - **Don't assume Intoxication** is the only problem.
+          - **Don't assume [Intoxication](topic:wvems-2026-040)** is the only problem.
         - Syncope may be caused by or result in **trauma**.
           - Maintain a high index of suspicion.
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Consider an atypical **Cardiac** cause in diabetics and the elderly.
+        - Consider an atypical [Cardiac](topic:wvems-2026-028) cause in diabetics and the elderly.
         - Consider [Sepsis](topic:wvems-2026-094) if indicated and credentialed for Critical Care.
         - Check for **medical jewelry**.
 

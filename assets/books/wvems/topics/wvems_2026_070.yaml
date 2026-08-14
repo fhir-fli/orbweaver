@@ -105,10 +105,10 @@ topic:
       title: "Burn Imperatives"
       highlight: true
       markdown: |
-        - Use **ABLS fluid rate** (may use **NS** or **LR**). Watch for **Hypothermia**.
+        - Use **ABLS fluid rate** (may use **NS** or **LR**). Watch for [Hypothermia](topic:wvems-2026-068).
         - Monitor [Airway](topic:wvems-2026-004) closely with any facial, nasal or oral burns.
-        - Some chemical burns (e.g. **HF acid**) may benefit from an **Antidote**.
-        - Monitor **EKG** for electrical burns > **1,000 v**.
+        - Some chemical burns (e.g. **HF acid**) may benefit from an **[Antidote](topic:wvems-2026-096#adult-antidotes)**.
+        - Monitor **[EKG](topic:wvems-2026-096#12-lead)** for electrical burns > **1,000 v**.
         - Remove adjacent and distal jewelry if able.
 
     - type: "row"
@@ -140,18 +140,18 @@ topic:
           - Patient's palm (**with fingers**) is about 1% BSA.
           - Consider only partial and full thickness when calculating BSA.
         - This protocol includes **chemical burns** and skin exposures.
-          - For **gasses** and smoke inhalation, refer to [Inhalation](topic:wvems-2026-072).
-          - For **poisoning** and toxic ingestions, refer to **OD / Tox**.
+          - For **gasses** and smoke [inhalation](topic:wvems-2026-072), refer to [Inhalation](topic:wvems-2026-072).
+          - For **poisoning** and toxic ingestions, refer to [OD / Tox](topic:wvems-2026-040).
         - If chemical is known, consider calling **CHEMTREC**: 800-424-9300.
         - This does **not** include **radiation** exposure (call **Medical Control**).
-        - Consider aeromedical **Destination Triage** if major burn > 20% BSA.
+        - Consider aeromedical [Destination Triage](topic:wvems-2026-109#destination-triage) if major burn > 20% BSA.
           - There are no ABA-verified burn centers near the WVEMS region.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

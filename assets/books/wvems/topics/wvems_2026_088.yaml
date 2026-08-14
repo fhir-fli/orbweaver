@@ -102,9 +102,9 @@ topic:
     - type: "prose"
       title: "Imperatives"
       markdown: |
-        - Don't forget the basics: **O2**, **ASA** & **Nitro**. Start **IV in left hand**.
+        - Don't forget [the basics](topic:wvems-2026-028): **O2**, **ASA** & **Nitro**. Start **IV in left hand**.
         - Perform **15-Lead EKG** if: inferior STEMI or septal ST depressions.
-          - ST elevation in V4R is right sided MI — **Nitro** may cause **shock**.
+          - ST elevation in V4R is right sided MI — **Nitro** may cause [shock](topic:wvems-2025-008).
           - ST elevations in V8 and V9 indicates a **posterior STEMI**.
         - If V-pace or LBBB: any of **Sgarbossa's** criteria suggests a STEMI.
 
@@ -128,7 +128,7 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Heparin** (Sodium): Verify dose/concentration, give slow IV push.
+        - **[Heparin](topic:wvems-2026-drug-reference#heparin)** (Sodium): Verify dose/concentration, give slow IV push.
           - Avoid if any suspected life-threatening bleeding (UGIB, ICH, etc.).
 
     - type: "prose"

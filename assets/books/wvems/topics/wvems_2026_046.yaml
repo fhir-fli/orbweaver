@@ -109,7 +109,7 @@ topic:
       highlight: true
       markdown: |
         - **Do not assume psychosis.** Evaluate and treat for other causes.
-        - Behavioral patients may **not have the capacity to refuse**.
+        - Behavioral patients may **not have the [capacity to refuse](topic:wvems-2026-109#patient-refusals)**.
           - Involve **Police** and call Medical Control for any SI / HI refusal.
         - Use of any restraint presents significant medical (and legal) risk.
           - Attempt **de-escalation first**. Restraint should be a last resort.
@@ -137,7 +137,7 @@ topic:
       title: "Pediatrics"
       markdown: |
         - Acute behavioral changes in peds are usually medical, not psychiatric.
-        - Use **Peds Reference** for weight-based dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) for weight-based dosing.
 
     - type: "prose"
       title: "References"

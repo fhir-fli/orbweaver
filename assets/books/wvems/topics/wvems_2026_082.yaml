@@ -117,11 +117,11 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Levophed®** (Norepinephrine): Good for **septic shock**.
+        - **[Levophed®](topic:wvems-2026-drug-reference#levophed)** (Norepinephrine): Good for **septic shock**.
           - **Requires a pump** — it is inappropriate to dose by gravity gtt.
-        - **Epi Push** (Epinephrine): Good for **anaphylactic shock**.
+        - **[Epi Push](topic:wvems-2026-drug-reference#epi-drip-epi-push)** (Epinephrine): Good for **anaphylactic shock**.
           - Be prepared to repeat dosing; avoid in STEMI.
-        - **Neo Push** (Phenylephrine): Good for elevated **shock index**.
+        - **[Neo Push](topic:wvems-2026-drug-reference#neo-push)** (Phenylephrine): Good for elevated **shock index**.
 
     - type: "row"
       blocks:
@@ -150,8 +150,8 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
-        - Titrate to age-adjusted BP (vitals also listed in **Peds Reference**).
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
+        - Titrate to age-adjusted BP (vitals also listed in [Peds Reference](topic:wvems-2026-144)).
 
     - type: "prose"
       title: "References"

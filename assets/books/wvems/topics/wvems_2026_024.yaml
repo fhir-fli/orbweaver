@@ -128,9 +128,9 @@ topic:
       highlight: true
       markdown: |
         - Start compressions in place.
-          - Transport ASAP if **ROSC**, or **peds**, or **pregnant**, or any **Special Case**.
-        - (E) **BLS**: Get ALS ASAP. Transport if witnessed by EMS or any shock.
-        - (I) **ALS**: Try for **30 min**. If no ROSC: **Call for Termination**.
+          - Transport ASAP if **ROSC**, or **peds**, or **pregnant**, or any [Special Case](topic:wvems-2026-109#termination-of-resuscitation).
+        - (E) **BLS**: Get ALS ASAP. [Transport](topic:wvems-2026-109#termination-of-resuscitation) if witnessed by EMS or any shock.
+        - (I) **ALS**: Try for **30 min**. If no ROSC: [Call for Termination](topic:wvems-2026-109#termination-of-resuscitation).
 
     # Print p.25 floats Compressions into the right margin beside the
     # Imperatives, and Obvious Death beside the Medications. Neither of those
@@ -155,20 +155,20 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Amiodarone** (Pacerone®):
+        - **[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®):
           - For adults, give twice (x2) Q 5 min
             - (1) 300 mg → (2) 150 mg
           - For peds, give 5 mg/kg three times (x3) Q 5 min
         - Consider adjunct meds for pulseless polymorphic VT arrest:
-          - (I) **Magnesium** (Sulfate): 2 grams IV/IO x1 for Torsades
+          - (I) **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** (Sulfate): 2 grams IV/IO x1 for Torsades
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Use caution with **compressions** and **defib** in a moving vehicle.
+        - Use caution with **[compressions](topic:wvems-2026-096#chest-compression)** and **[defib](topic:wvems-2026-096#defib)** in a moving vehicle.
         - **EtCo2** can help identify ROSC and guide termination decision.
         - A well run CODE should operate like a **pit crew**. Focus on your job.
-        - Consider causes: Shock, OD/Tox, Hypoglycemia, Hyperkalemia, etc.
+        - Consider causes: [Shock](topic:wvems-2025-008), [OD/Tox](topic:wvems-2026-040), [Hypoglycemia](topic:wvems-2026-038), [Hyperkalemia](topic:wvems-2026-018), etc.
 
     - type: "band_callout"
       band: "peds"
@@ -176,7 +176,7 @@ topic:
       markdown: |
         - Use 15:2 compression ratio for dual rescuer BLS resuscitation.
         - Refer to [Neonate](topic:wvems-2026-050) for any peds **under 1 month** (≤ 30 days) old.
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

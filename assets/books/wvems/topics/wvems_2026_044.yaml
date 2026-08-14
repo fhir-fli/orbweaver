@@ -88,7 +88,7 @@ topic:
         - **Stroke Survey**: start with the **Cincinnati Stroke** FAST exam.
           - Consider additional screening if able (Stroke VAN or NIHSS).
         - **Elevate** head of bed approximately 30° (helps prevent aspiration).
-        - Attempt a **Saline Lock** only once. Leave other sites for ED staff.
+        - Attempt a **[Saline Lock](topic:wvems-2026-096#saline-lock)** only once. Leave other sites for ED staff.
 
     - type: "row"
       blocks:
@@ -130,7 +130,7 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Stroke is unlikely in peds. Consider other causes of **Altered LOC**.
+        - Stroke is unlikely in peds. Consider other causes of [Altered LOC](topic:wvems-2026-036).
 
     - type: "prose"
       title: "References"

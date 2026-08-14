@@ -123,9 +123,9 @@ topic:
       title: "CODE Imperatives"
       highlight: true
       markdown: |
-        - Place **Tourniquets** if needed.
+        - Place **[Tourniquets](topic:wvems-2026-096#tourniquet)** if needed.
           - Limiting blood loss is critical.
-        - Try bilateral **Pleural Decompression**.
+        - Try bilateral **[Pleural Decompression](topic:wvems-2026-096#pleural-decompress)**.
           - Hidden tension pneumothorax may cause traumatic arrest.
         - This protocol applies to cardiac arrest caused by **severe trauma**.
           - Refer to [Medical CODE](topic:wvems-2026-024) for arrest with only incidental injuries.
@@ -162,10 +162,10 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **NS Bolus** (0.9% Saline): **Target SBP of 90** mmHg
+        - **[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)** (0.9% Saline): **Target SBP of 90** mmHg
           - Use **balanced** resuscitation in hemorrhagic shock
           - Target higher if any **head/spine** injury or **pregnancy**.
-        - **Amiodarone**: Adults give twice (x2) Q 5 min, 300 → 150 mg
+        - **[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)**: Adults give twice (x2) Q 5 min, 300 → 150 mg
           - For peds, give 5 mg/kg three times (x3) Q 5 min
 
     - type: "prose"
@@ -179,7 +179,7 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

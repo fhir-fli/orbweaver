@@ -169,8 +169,21 @@ def best_match(phrase, candidates):
     return scored[0][1]
 
 
+EDGE_TOL = 2.0
+
+
 def merge(rows):
-    """Fold wrapped annotations (same dest, exactly touching rects) into one."""
+    """Fold wrapped annotations (same dest, exactly touching rects) into one.
+
+    Touching rects alone are not enough: p.59 carries two separate links to
+    p.102 on consecutive lines, both the word "Tourniquet", and p.73 two to
+    p.104 both reading "Antidote". A phrase that actually *wrapped* runs to the
+    end of its line and resumes at the start of the next, so the merge also
+    requires the earlier rect to reach its line's right edge and the later one
+    to start at its line's left edge. On p.18's "Consider / Destination /
+    Triage" each rect equals its whole line; on p.59 the rect is a 97 pt
+    fragment of a 574 pt line.
+    """
     merged = []
     for r in rows:
         prev = merged[-1] if merged else None
@@ -181,11 +194,17 @@ def merge(rows):
             and prev["kind"] == r["kind"]
             and abs(prev["y1"] - r["y0"]) < 1.0
             and min(prev["x1"], r["x1"]) - max(prev["x0"], r["x0"]) > 0
+            and prev["line_x1"] - prev["x1"] <= EDGE_TOL
+            and r["x0"] - r["line_x0"] <= EDGE_TOL
         ):
             prev["phrase"] = f"{prev['phrase']} {r['phrase']}".strip()
             prev["y1"] = r["y1"]
             prev["x0"] = min(prev["x0"], r["x0"])
             prev["x1"] = max(prev["x1"], r["x1"])
+            if r["line_text"] not in prev["line_text"]:
+                prev["line_text"] = f"{prev['line_text']} {r['line_text']}".strip()
+            prev["line_x0"] = r["line_x0"]
+            prev["line_x1"] = r["line_x1"]
             prev["parts"] += 1
             continue
         r["parts"] = 1
@@ -220,13 +239,16 @@ def main():
                 "y0": float(f[5]),
                 "x1": float(f[6]),
                 "y1": float(f[7]),
-                "phrase": f[9] if len(f) > 9 else "",
+                "line_x0": float(f[9]) if f[9] else float(f[4]),
+                "line_x1": float(f[10]) if f[10] else float(f[6]),
+                "phrase": f[11] if len(f) > 11 else "",
+                "line_text": f[12] if len(f) > 12 else "",
             }
         )
     rows = merge(rows)
 
     fh = open(out_path, "w")
-    fh.write("src_page\tdest\tparts\tphrase\ttopic\tanchor\thow\n")
+    fh.write("src_page\tdest\tparts\tphrase\ttopic\tanchor\thow\tline_text\n")
     fh.flush()
     counts = {}
     for r in rows:
@@ -239,7 +261,11 @@ def main():
             d = int(r["dest"])
             if 4 <= d <= 95:
                 even = d if d % 2 == 0 else d - 1
-                topic = f"wvems-2026-{even:03d}"
+                # pp.8-9 (Circulation / Shock) still ship as the 2025 file:
+                # the flowchart page was carried over and the prose page never
+                # was (audit §5.1). Batch 3 replaces it; until then this is
+                # where a link to p.8 has to land.
+                topic = "wvems-2025-008" if even == 8 else f"wvems-2026-{even:03d}"
                 how = "protocol-page"
             elif 96 <= d <= 108:
                 topic = PROC_TOPIC
@@ -272,7 +298,7 @@ def main():
         counts[how.split()[0]] = counts.get(how.split()[0], 0) + 1
         fh.write(
             f"{r['src']}\t{r['dest']}\t{r['parts']}\t{r['phrase']}\t"
-            f"{topic}\t{anchor}\t{how}\n"
+            f"{topic}\t{anchor}\t{how}\t{r['line_text']}\n"
         )
         fh.flush()
     fh.close()

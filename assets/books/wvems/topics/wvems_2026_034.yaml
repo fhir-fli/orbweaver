@@ -106,21 +106,21 @@ topic:
       markdown: |
         - This protocol is for **medical** causes of abdominal pain.
           - For traumatic abdominal pain, refer to [Trunk Injury](topic:wvems-2026-064).
-        - Prepare for **Hypotension** if any reported blood loss, or suspected:
+        - Prepare for [Hypotension](topic:wvems-2025-008) if any reported blood loss, or suspected:
           - **AAA**: Midline "pulsatile mass" in the elderly
           - **GI Bleeding**: Black stool (melena) or "coffee ground" emesis
-        - Inquire about **Pregnancy** and consider complications.
-          - Consider **ectopic** in any pregnant female, watch for **shock**.
+        - Inquire about [Pregnancy](topic:wvems-2026-048) and consider complications.
+          - Consider **ectopic** in any pregnant female, watch for [shock](topic:wvems-2025-008).
         - **Avoid oral** food and fluids. (Oral meds are OK.)
           - Keep patients **NPO** (**Nil Per Os**: Lat. "nothing through the mouth")
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Consider an atypical **Cardiac** cause in diabetics and the elderly.
+        - Consider an atypical [Cardiac](topic:wvems-2026-028) cause in diabetics and the elderly.
         - Many common causes do not require specific EMS intervention.
           - E.g. gastroenteritis, gallbladder, appendix, colitis, SBO, etc.
-          - Do consider treatment of the symptoms: [Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), **Nausea**
+          - Do consider treatment of the symptoms: [Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), [Nausea](topic:wvems-2026-022)
 
     - type: "band_callout"
       band: "critical_care"

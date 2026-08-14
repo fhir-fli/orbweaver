@@ -128,10 +128,10 @@ topic:
       highlight: true
       markdown: |
         - **Hyperthermia** is **not** the same as a [Fever](topic:wvems-2026-016) from infection.
-          - Meds for Fever worsen **hyperthermia** and are contraindicated.
+          - Meds for [Fever](topic:wvems-2026-016) worsen **hyperthermia** and are contraindicated.
         - **Confusion** is the hallmark of major **hyperthermic** emergencies.
           - Aggressively & actively cool anyone that is **hot & confused**.
-          - (A) If shivering from active cooling: **Versed®** 2.5 mg IV/IO x1.
+          - (A) If shivering from active cooling: **[Versed®](topic:wvems-2026-drug-reference#versed)** 2.5 mg IV/IO x1.
         - **Resuscitation** of major **hypothermia** is a special case:
           - Most important intervention is **active rewarming**.
           - Check carefully for pulse. If present, it will be **very faint**.
@@ -150,14 +150,14 @@ topic:
         - Excessive movement of **hypothermic** patients can cause **V-Fib**.
         - Splint any extremity with **frostbite** to limit movement (do not rub).
           - Delay rewarming **frostbite** if there is potential for re-freezing.
-        - (E) **Ibuprofen** (Motrin®): Give 600 mg PO x1 for **frostbite**.
+        - (E) **[Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen)** (Motrin®): Give 600 mg PO x1 for **frostbite**.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
         - Small children (and the elderly/frail) will decompensate faster.
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

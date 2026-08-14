@@ -107,7 +107,7 @@ topic:
     - type: "prose"
       title: "Imperatives"
       markdown: |
-        - Critical to avoid **Hypoxia** and **Hypotension**. Treat aggressively.
+        - Critical to avoid [Hypoxia](topic:wvems-2026-006) and [Hypotension](topic:wvems-2025-008). Treat aggressively.
           - Target **SBP > 110 mmHg** and **SpO2 96–99%** and **EtCO2 35–45 mmHg**.
         - Use cot to **sit patient up at 30°** if lower spine injury unlikely.
         - One dilated pupil suggests herniation. Bilateral dilation is ominous.
@@ -136,23 +136,23 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **3% Saline** (Hypertonic): **Inform the ED** after use.
-        - **Keppra®** (Levetiracetam): May give even before any **seizures**.
+        - **[3% Saline](topic:wvems-2026-drug-reference#3-saline)** (Hypertonic): **Inform the ED** after use.
+        - **[Keppra®](topic:wvems-2026-drug-reference#keppra)** (Levetiracetam): May give even before any [seizures](topic:wvems-2026-042).
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - **Seizures**, [Pain](topic:wvems-2026-020), **Vomiting**, **Agitation** and [Fever](topic:wvems-2026-016) can all increase ICP.
+        - [Seizures](topic:wvems-2026-042), [Pain](topic:wvems-2026-020), [Vomiting](topic:wvems-2026-022), [Agitation](topic:wvems-2026-046) and [Fever](topic:wvems-2026-016) can all increase ICP.
           - Consider symptomatic treatment but **do not delay transport**.
         - Steroids, **TXA**, and/or hyperventilation are **not indicated**.
-        - Increased risk of intracranial hemorrhage if any **anti-coagulation**.
+        - Increased risk of intracranial hemorrhage if any [anti-coagulation](topic:wvems-2026-076).
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
-        - Target **upper end** of age-adjusted SBP (also in **Peds Reference**).
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
+        - Target **upper end** of age-adjusted SBP (also in [Peds Reference](topic:wvems-2026-144)).
 
     - type: "prose"
       title: "References"

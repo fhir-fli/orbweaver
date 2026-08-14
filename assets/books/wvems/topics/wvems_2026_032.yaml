@@ -131,15 +131,15 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Epi** (Epinephrine): use **IM**. Treat major reactions aggressively.
-          - Use for any major **Airway, Breathing or Circulation** problems.
+        - **[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): use **IM**. Treat major reactions aggressively.
+          - Use for any major **[Airway](topic:wvems-2026-004), [Breathing](topic:wvems-2026-006) or [Circulation](topic:wvems-2025-008)** problems.
           - Be cautious in patients **over 50 y/o** or with CAD or chest pain.
           - **EpiPen Jr.®**: use for 3–8 y/o. **EpiPen®**: use for 9+ y/o.
-        - **Albuterol** (Proventil®, Ventolin®): nebulised for bronchospasm.
+        - **[Albuterol](topic:wvems-2026-drug-reference#albuterol)** (Proventil®, Ventolin®): nebulised for bronchospasm.
         - **Atrovent** (Ipratropium): nebulised — give once with first Albuterol.
-        - **Benadryl** (Diphenhydramine): blunts the histamine response.
+        - **[Benadryl](topic:wvems-2026-drug-reference#benadryl)** (Diphenhydramine): blunts the histamine response.
           - Sedating — use caution if monitoring mental status.
-        - **Decadron** (Dexamethasone): single steroid dose to delay rebound.
+        - **[Decadron](topic:wvems-2026-drug-reference#decadron)** (Dexamethasone): single steroid dose to delay rebound.
 
     - type: "prose"
       title: "Notes"
@@ -154,7 +154,7 @@ topic:
       title: "Pediatrics"
       markdown: |
         - Use **EpiPen Jr.®** for 3–8 y/o; **EpiPen®** for 9+ y/o.
-        - Use **Peds Reference** for all other weight-based dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) for all other weight-based dosing.
 
     - type: "prose"
       title: "References"

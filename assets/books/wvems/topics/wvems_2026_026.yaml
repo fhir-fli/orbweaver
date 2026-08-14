@@ -93,23 +93,23 @@ topic:
       markdown: |
         - Ensure adequate resuscitation **before** attempting transport.
           - Move expeditiously but with caution. **Don't sacrifice stability.**
-        - Monitor closely for **Hypotension**. Be ready with fluids & pressors.
-        - Avoid hyperventilation. It can cause **Hypotension** & repeat arrest.
+        - Monitor closely for [Hypotension](topic:wvems-2025-008). Be ready with fluids & pressors.
+        - Avoid hyperventilation. It can cause [Hypotension](topic:wvems-2025-008) & repeat arrest.
         - Monitor body temp and treat any [Fever](topic:wvems-2026-016) aggressively with meds.
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Ketamine** (Ketalar®): Dilute in NS and **give slowly over 10 min**.
-          - Use **weight-based peds dosing** for adults under 110 lbs (50 kg).
+        - **[Ketamine](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®): Dilute in NS and **give slowly over 10 min**.
+          - Use [weight-based peds dosing](topic:wvems-2026-144) for adults under 110 lbs (50 kg).
         - Consider maintenance drip if **prior VT/VF** & **transport > 30 min**:
-          - (I) **Amiodarone** (Pacerone®): 1 mg/min IV/IO, adult only.
+          - (I) **[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®): 1 mg/min IV/IO, adult only.
 
     - type: "prose"
       title: "Notes"
       markdown: |
         - **EtCO2** can help identify ROSC. Monitor during resuscitation.
-        - Consider **Intubation** and/or **Vent** if indicated and credentialed for CC.
+        - Consider [Intubation](topic:wvems-2026-078) and/or [Vent](topic:wvems-2026-080) if indicated and credentialed for CC.
         - Therapeutic hypothermia is **not included** in this protocol.
           - Also known as "targeted temperature management".
 
@@ -118,7 +118,7 @@ topic:
       title: "Pediatrics"
       markdown: |
         - Arrhythmias are common after ROSC, but are usually self-limited.
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

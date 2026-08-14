@@ -113,25 +113,25 @@ topic:
       title: "Seizure Imperatives"
       highlight: true
       markdown: |
-        - Active convulsions with **Altered LOC** should be treated promptly.
+        - Active convulsions with [Altered LOC](topic:wvems-2026-036) should be treated promptly.
           - Meds are **contraindicated without active convulsions**.
           - Aggressively treat seizures due to **alcohol or benzo withdrawal**.
         - Shaking while awake and responsive is unlikely to be a seizure.
-          - Consider other causes such as [Behavioral](topic:wvems-2026-046) or **OD / Tox**.
+          - Consider other causes such as [Behavioral](topic:wvems-2026-046) or [OD / Tox](topic:wvems-2026-040).
           - Non-epileptic pseudoseizures do not require EMS intervention.
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Versed®** (Midazolam): only appropriate for active convulsions.
+        - **[Versed®](topic:wvems-2026-drug-reference#versed)** (Midazolam): only appropriate for active convulsions.
           - Start lower if IV and/or smaller patient. Total dose: **10 mg max**.
           - Use caution with IM — increased risk of provider injury.
-        - **Keppra®** (Levetiracetam): second line if seizures continue.
-          - Use weight-based peds dosing for adults under 110 lbs (50 kg).
-        - **Magnesium** (Sulfate): may cause **Hypotension** and [Dyspnea](topic:wvems-2026-030).
-          - Only useful for seizures in late **Pregnancy** (20 weeks & over).
+        - **[Keppra®](topic:wvems-2026-drug-reference#keppra)** (Levetiracetam): second line if seizures continue.
+          - Use [weight-based peds dosing](topic:wvems-2026-144) for adults under 110 lbs (50 kg).
+        - **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** (Sulfate): may cause [Hypotension](topic:wvems-2025-008) and [Dyspnea](topic:wvems-2026-030).
+          - Only useful for seizures in late [Pregnancy](topic:wvems-2026-048) (20 weeks & over).
           - Do **not** provide in early pregnancy. Eclampsia is unlikely.
-          - Consider **Preeclampsia** if indicated and credentialed for CC.
+          - Consider [Preeclampsia](topic:wvems-2026-092) if indicated and credentialed for CC.
 
     - type: "prose"
       title: "Notes"
@@ -147,9 +147,9 @@ topic:
       markdown: |
         - Peds under 5 y/o may have a seizure caused by [Fever](topic:wvems-2026-016).
           - It is usually self-limiting; consider meds if **>5 min** or multiple.
-          - Aggressively treat any peds seizure not associated with Fever.
-        - Use **Peds Reference** or other approved source for peds dosing.
-          - **A** Versed: max peds dose is **Q 2 min x4 doses**.
+          - Aggressively treat any peds seizure not associated with [Fever](topic:wvems-2026-016).
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
+          - **A** **[Versed](topic:wvems-2026-drug-reference#versed)**: max peds dose is **Q 2 min x4 doses**.
 
     - type: "prose"
       title: "References"

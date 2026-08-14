@@ -153,10 +153,10 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Rocephin®** (Ceftriaxone): First line for undifferentiated sepsis.
+        - **[Rocephin®](topic:wvems-2026-drug-reference#rocephin)** (Ceftriaxone): First line for undifferentiated sepsis.
           - Monitor closely if PCN allergy; avoid if cephalosporin allergy.
-          - Reconstitute with **NS** for IV/IO, and **Lidocaine** for IM.
-          - **Do not** use with **Calcium** — potentially fatal.
+          - Reconstitute with **[NS](topic:wvems-2026-drug-reference#ns-bolus)** for IV/IO, and **[Lidocaine](topic:wvems-2026-drug-reference#lidocaine)** for IM.
+          - **Do not** use with **[Calcium](topic:wvems-2026-drug-reference#calcium)** — potentially fatal.
 
     - type: "band_callout"
       band: "peds"

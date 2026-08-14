@@ -111,8 +111,8 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Afrin®** (Oxymetazoline): Do not use if any cardiac [chest pain](topic:wvems-2026-028).
-        - **TXA** (Tranexamic Acid): Use **atomizer**. Avoid if known PE or DVT.
+        - **[Afrin®](topic:wvems-2026-drug-reference#afrin)** (Oxymetazoline): Do not use if any cardiac [chest pain](topic:wvems-2026-028).
+        - **[TXA](topic:wvems-2026-drug-reference#txa)** (Tranexamic Acid): Use **atomizer**. Avoid if known PE or DVT.
 
     - type: "prose"
       title: "Notes"
@@ -122,7 +122,7 @@ topic:
           - Bleeding may be **significant**.
           - More common in the elderly.
           - Anticoagulants increase risk.
-          - Be ready to treat for **shock**.
+          - Be ready to treat for [shock](topic:wvems-2025-008).
         - Anticoagulants (**blood thinners**) also increase risk in:
           - [Major Trauma](topic:wvems-2026-056)
           - [Bleeding](topic:wvems-2026-058)
@@ -152,7 +152,7 @@ topic:
       title: "Pediatrics"
       markdown: |
         - Nose bleeds are usually from minor trauma (nose picking).
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

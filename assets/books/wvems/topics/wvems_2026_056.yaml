@@ -128,7 +128,7 @@ topic:
           - Delay transport only to address major threats to life.
           - Secondary survey and treatment can occur during transport.
         - It is appropriate to start with rapid **manual immobilization** only.
-          - You may defer placing a **c-collar** to the secondary survey.
+          - You may defer placing a [c-collar](topic:wvems-2026-060) to the secondary survey.
           - You should defer extremity splinting to the secondary survey.
 
     - type: "row"
@@ -153,10 +153,10 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **NS Bolus** (0.9% Saline): **Target SBP of 90 mmHg**.
+        - **[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)** (0.9% Saline): **Target SBP of 90 mmHg**.
           - Use **balanced** resuscitation in hemorrhagic shock (target higher
             if any **head / spine** injury or **pregnancy**).
-        - **Ancef®** (Cefazolin): Provide for any major **open wound**.
+        - **[Ancef®](topic:wvems-2026-drug-reference#ancef)** (Cefazolin): Provide for any major **open wound**.
           - Monitor closely if PCN allergy; avoid if cephalosporin allergy.
           - Reconstitute powder with normal saline and **shake well** to mix.
 
@@ -177,7 +177,7 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

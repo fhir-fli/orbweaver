@@ -134,14 +134,14 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Albuterol** (Ventolin®): Appropriate even if EKG unavailable.
+        - **[Albuterol](topic:wvems-2026-drug-reference#albuterol)** (Ventolin®): Appropriate even if EKG unavailable.
           - Give **four** (4x) standard nebulizer treatments back-to-back.
-        - **NS Bolus** (0.9% Saline): Aggressive fluids help dilute potassium.
-          - Consider aggressive fluids even without **Hypotension**.
+        - **[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)** (0.9% Saline): Aggressive fluids help dilute potassium.
+          - Consider aggressive fluids even without [Hypotension](topic:wvems-2025-008).
           - Avoid aggressive/prophylactic fluids for **dialysis** patients.
-        - **Calcium** (Chloride): **Avoid** with **Rocephin®** or Digoxin® (fatal).
-        - Consider **Bicarb** if acidotic and/or wide QRS (>120 ms) on EKG.
-          - (I) **Bicarb** (Sodium Bicarbonate): give 50 mEq IV/IO x1
+        - **[Calcium](topic:wvems-2026-drug-reference#calcium)** (Chloride): **Avoid** with **[Rocephin®](topic:wvems-2026-drug-reference#rocephin)** or Digoxin® (fatal).
+        - Consider **[Bicarb](topic:wvems-2026-drug-reference#bicarb)** if acidotic and/or wide QRS (>120 ms) on EKG.
+          - (I) **[Bicarb](topic:wvems-2026-drug-reference#bicarb)** (Sodium Bicarbonate): give 50 mEq IV/IO x1
 
     - type: "prose"
       title: "Notes"
@@ -155,7 +155,7 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"

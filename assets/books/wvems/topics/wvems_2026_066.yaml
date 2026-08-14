@@ -106,8 +106,8 @@ topic:
       title: "Extremity Injury Imperatives"
       highlight: true
       markdown: |
-        - Advance to a **Tourniquet rapidly** for any major arm / leg bleeding.
-          - Write the time of **Tourniquet** application on the patient.
+        - Advance to a **[Tourniquet](topic:wvems-2026-096#tourniquet) rapidly** for any major arm / leg bleeding.
+          - Write the time of **[Tourniquet](topic:wvems-2026-096#tourniquet)** application on the patient.
         - **Pulseless extremities** and **amputations** are true emergencies.
           - Record time of injury. Reduce any deformity. Transport ASAP.
           - Wrap amputated parts in saline gauze and place in a sealed bag.
@@ -129,7 +129,7 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Ancef®** (Cefazolin): Provide if an **open fracture** is suspected.
+        - **[Ancef®](topic:wvems-2026-drug-reference#ancef)** (Cefazolin): Provide if an **open fracture** is suspected.
           - Monitor closely if PCN allergy; avoid if cephalosporin allergy.
           - Reconstitute powder with normal saline and **shake well** to mix.
 
@@ -138,13 +138,13 @@ topic:
       markdown: |
         - Remove adjacent and distal jewelry if able.
         - High **pressure injections** may cause subtle but devastating injury.
-        - A **traction splint** may help pain & bleeding from isolated **femur fx**.
+        - A **[traction splint](topic:wvems-2026-096#splint)** may help pain & bleeding from isolated **femur fx**.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Consider **Child Abuse** for injuries that do not match the history.
+        - Consider [Child Abuse](topic:wvems-2026-109#patient-abuse-and-neglect) for injuries that do not match the history.
 
     - type: "prose"
       title: "References"
