@@ -83,17 +83,15 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
           - text: "Ancef (A) — If Open Fracture"
-          - text: "Pain"
-            link_id: "wvems-2026-020"
-          - text: "Bleeding"
-            link_id: "wvems-2026-058"
-          - text: "Hyperkalemia"
+          - text: "[Pain](topic:wvems-2026-020)"
+          - text: "[Bleeding](topic:wvems-2026-058)"
+          - text: "[Hyperkalemia](topic:wvems-2026-018)"
 
       dose_table:
-        - drug: "Ancef"
+        - drug: "[Ancef](topic:wvems-2026-drug-reference#ancef)"
           dose: "2 grams"
           route: "IV/IO, IM"
           frequency: "x1"

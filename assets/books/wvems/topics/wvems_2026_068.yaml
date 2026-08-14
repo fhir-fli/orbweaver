@@ -91,12 +91,11 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Circulation (shock)"
-            link_id: "wvems-2025-008"
-          - text: "Medical Code"
+          - text: "[Circulation (shock)](topic:wvems-2025-008)"
+          - text: "[Medical Code](topic:wvems-2026-024)"
 
       dose_table:
-        - drug: "NS Bolus"
+        - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"
           route: "IV/IO"
           frequency: "x4"

@@ -41,7 +41,7 @@ topic:
 
       warnings:
         - type: "caution"
-          text: "Use Caution if Patient Refusal"
+          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry:
         text: "Suspected or Known Pregnancy (20 weeks & over)"
@@ -74,9 +74,9 @@ topic:
             - "Head Presentation"
           actions:
             - provider_level: "E"
-              text: "Deliver Baby"
+              text: "Deliver [Baby](topic:wvems-2026-096#deliver-baby)"
               kind: "procedure"
-            - text: "Manage Neonate"
+            - text: "[Manage Neonate](topic:wvems-2026-050)"
               kind: "procedure"
             - provider_level: "A"
               text: "Saline Lock"
@@ -94,7 +94,7 @@ topic:
             - provider_level: "E"
               text: "Emergent Transport"
               kind: "procedure"
-            - text: "Manage OB Complication"
+            - text: "[Manage OB Complication](topic:wvems-2026-096#manage-ob-complication)"
               kind: "procedure"
             - provider_level: "A"
               text: "NS Bolus"
@@ -105,16 +105,14 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "HTN, Circulation"
-            link_id: "wvems-2026-010"
-          - text: "Seizure, Bleeding"
-            link_id: "wvems-2026-042"
-          - text: "Preeclampsia"
+          - text: "[HTN](topic:wvems-2026-010), [Circulation](topic:wvems-2025-008)"
+          - text: "[Seizure](topic:wvems-2026-042), [Bleeding](topic:wvems-2026-058)"
+          - text: "[Preeclampsia](topic:wvems-2026-092)"
 
       dose_table:
-        - drug: "NS Bolus"
+        - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"
           route: "IV/IO"
           frequency: "x4"

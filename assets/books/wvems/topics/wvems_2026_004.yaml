@@ -84,13 +84,12 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Breathing"
-            link_id: "wvems-2026-006"
+          - text: "[Breathing](topic:wvems-2026-006)"
         exits:
           - label: ""
 
       post_convergence:
-        text: "Intubation"
+        text: "[Intubation](topic:wvems-2026-078)"
         shape: "stadium"
 
   - page_number: 5

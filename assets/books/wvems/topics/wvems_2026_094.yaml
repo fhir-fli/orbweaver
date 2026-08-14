@@ -74,14 +74,12 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Shock"
-            link_id: "wvems-2025-008"
-          - text: "Fever"
-            link_id: "wvems-2026-016"
-          - text: "Vasopressors"
+          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Fever](topic:wvems-2026-016)"
+          - text: "[Vasopressors](topic:wvems-2026-082)"
 
       dose_table:
-        - drug: "Rocephin"
+        - drug: "[Rocephin](topic:wvems-2026-drug-reference#rocephin)"
           dose: "1 gram"
           route: "IV/IO, IM"
           frequency: "x1"

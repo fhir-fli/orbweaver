@@ -53,8 +53,8 @@ topic:
         - type: "content"
           title: "Assess for:"
           bullets:
-            - "Airway, Breathing"
-            - "Burns, OD / Tox"
+            - "[Airway](topic:wvems-2026-004), Breathing"
+            - "[Burns](topic:wvems-2026-070), OD / Tox"
         - type: "action"
           text: "Provide O2"
           kind: "procedure"
@@ -68,14 +68,13 @@ topic:
         bullets:
           - text: "Breathing"
             link_id: "wvems-2026-006"
-          - text: "Shock"
-            link_id: "wvems-2025-008"
+          - text: "[Shock](topic:wvems-2025-008)"
           - text: "OD / Tox"
             link_id: "wvems-2026-040"
-          - text: "Antidote"
+          - text: "[Antidote](topic:wvems-2026-096#adult-antidotes)"
 
       post_convergence:
-        text: "Intubation"
+        text: "[Intubation](topic:wvems-2026-078)"
         shape: "stadium"
 
   - page_number: 73

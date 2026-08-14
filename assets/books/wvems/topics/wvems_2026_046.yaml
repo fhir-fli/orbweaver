@@ -35,7 +35,7 @@ topic:
         - type: "safety"
           text: "Ensure Provider SAFETY"
         - type: "caution"
-          text: "Use Caution if Patient Refusal"
+          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry:
         text: "Overt Psychosis, Anxiety or SI / HI"
@@ -85,17 +85,16 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Circulation (shock)"
-            link_id: "wvems-2025-008"
-          - text: "Altered LOC"
+          - text: "[Circulation (shock)](topic:wvems-2025-008)"
+          - text: "[Altered LOC](topic:wvems-2026-036)"
 
       dose_table:
-        - drug: "Versed"
+        - drug: "[Versed](topic:wvems-2026-drug-reference#versed)"
           dose: "2.5–5 mg"
           route: "IV/IO, IM/IN"
           frequency: "Q 2 min (max 10)"
           population: "adult"
-        - drug: "Haldol"
+        - drug: "[Haldol](topic:wvems-2026-drug-reference#haldol)"
           dose: "5 mg"
           route: "IM"
           frequency: "x1"

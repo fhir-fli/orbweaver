@@ -83,21 +83,19 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "Breathing, Tachycardia"
-            link_id: "wvems-2026-014"
-          - text: "Pain, Trunk Injury"
-            link_id: "wvems-2026-020"
-          - text: "STEMI"
+          - text: "[Breathing](topic:wvems-2026-006), [Tachycardia](topic:wvems-2026-014)"
+          - text: "[Pain](topic:wvems-2026-020), [Trunk Injury](topic:wvems-2026-064)"
+          - text: "[STEMI](topic:wvems-2026-088)"
 
       dose_table:
-        - drug: "Aspirin"
+        - drug: "[Aspirin](topic:wvems-2026-drug-reference#aspirin)"
           dose: "4 × 81 mg"
           route: "PO"
           frequency: "x1 (chewed)"
           population: "adult"
-        - drug: "Nitro"
+        - drug: "[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
           dose: "0.4 mg"
           route: "SL"
           frequency: "Q 5 min x3"

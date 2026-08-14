@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/fit_text.dart';
+import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
 
 /// Severity palette for branches. Matches the WHO-IMCI colours used on
@@ -181,9 +182,8 @@ class BranchHeaderBox extends StatelessWidget {
                     )
                   : null,
             ),
-            child: Text(
+            child: FlowLinkText(
               label,
-              textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w800,
@@ -200,9 +200,8 @@ class BranchHeaderBox extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   for (final c in criteria)
-                    Text(
-                      '• $c',
-                      textAlign: TextAlign.center,
+                    FlowLinkText(
+                      '\u2022 $c',
                       style: const TextStyle(fontSize: 12.5, height: 1.25),
                     ),
                 ],
@@ -231,9 +230,8 @@ class _BranchHeader extends StatelessWidget {
         border: Border.all(color: Colors.black87, width: 1),
         borderRadius: BorderRadius.circular(6),
       ),
-      child: Text(
+      child: FlowLinkText(
         label,
-        textAlign: TextAlign.center,
         style: const TextStyle(
           fontSize: 13,
           fontWeight: FontWeight.w800,

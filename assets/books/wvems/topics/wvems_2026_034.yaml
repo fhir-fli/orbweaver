@@ -58,19 +58,19 @@ topic:
         - title: "GERD"
           bullets:
             - "\"Burning\" Pain"
-            - "Consider Cardiac"
+            - "Consider [Cardiac](topic:wvems-2026-028)"
         - title: "AAA"
           bullets:
             - "\"Pulsatile Mass\""
-            - "Monitor for Shock"
+            - "Monitor for [Shock](topic:wvems-2025-008)"
         - title: "GI Bleed"
           bullets:
             - "Red or Black Vomit"
-            - "Monitor for Shock"
+            - "Monitor for [Shock](topic:wvems-2025-008)"
         - title: "Trauma"
           bullets:
             - "Injury, Fall, MVC"
-            - "Tx: Trunk Injury"
+            - "Tx: [Trunk Injury](topic:wvems-2026-064)"
         - title: "Infection"
           bullets:
             - "Appendix, Colitis"
@@ -78,7 +78,7 @@ topic:
         - title: "OB / GYN"
           bullets:
             - "Ectopic, Torsion"
-            - "Miscarriage, DUB"
+            - "[Miscarriage](topic:wvems-2026-048), DUB"
         - title: "GU"
           bullets:
             - "Kidney Stones"
@@ -88,10 +88,8 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Fever, Pain, Nausea"
-            link_id: "wvems-2026-020"
-          - text: "OD / Tox, Chest Pain"
-            link_id: "wvems-2026-040"
+          - text: "[Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), [Nausea](topic:wvems-2026-022)"
+          - text: "[OD / Tox](topic:wvems-2026-040), [Chest Pain](topic:wvems-2026-028)"
 
       critical_care_link:
         text: "Sepsis"

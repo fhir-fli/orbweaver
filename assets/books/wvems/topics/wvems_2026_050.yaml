@@ -40,7 +40,7 @@ topic:
 
       warnings:
         - type: "caution"
-          text: "Use Caution if Patient Refusal"
+          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry_chain:
         - text: "Infant Under 1 Month Old (≤30 days)"
@@ -101,13 +101,11 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Bradycardia"
-            link_id: "wvems-2026-012"
-          - text: "Circulation / Shock"
-            link_id: "wvems-2025-008"
+          - text: "[Bradycardia](topic:wvems-2026-012)"
+          - text: "[Circulation / Shock](topic:wvems-2025-008)"
 
       dose_table:
-        - drug: "Epi"
+        - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
           dose: "0.5 mL (of 1 mg per 10 mL)"
           route: "IV/IO"
           frequency: "Q 5 min"

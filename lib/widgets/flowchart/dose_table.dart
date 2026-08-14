@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 
 /// Compact medication dose reference strip at the bottom of the flowchart.
 class DoseTable extends StatelessWidget {
@@ -122,8 +123,9 @@ class _DoseRowView extends StatelessWidget {
       children: [
         Expanded(
           flex: 3,
-          child: Text(
+          child: FlowLinkText(
             row.drug,
+            textAlign: TextAlign.left,
             style: const TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w700,
@@ -132,8 +134,9 @@ class _DoseRowView extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
-          child: Text(
+          child: FlowLinkText(
             row.dose,
+            textAlign: TextAlign.left,
             style: const TextStyle(fontSize: 12),
           ),
         ),

@@ -45,7 +45,7 @@ topic:
 
       warnings:
         - type: "caution"
-          text: "Use Caution if Patient Refusal"
+          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry_chain:
         - text: "Confused or Unresponsive\n(but breathing)"
@@ -63,11 +63,11 @@ topic:
         shape: "diamond"
 
       cards:
-        - title: "Diabetic"
+        - title: "[Diabetic](topic:wvems-2026-038)"
           bullets:
             - "Hx: Diabetes"
             - "Abnormal Glucose"
-        - title: "Behavioral"
+        - title: "[Behavioral](topic:wvems-2026-046)"
           bullets:
             - "Suicidal, Homicidal"
             - "Delusions, Psychosis"
@@ -77,24 +77,24 @@ topic:
             - "Obvious Drugs/Alcohol"
         - title: "Injury"
           bullets:
-            - "Head Injury, Bleeding"
-            - "Cold / Heat Exposure"
-        - title: "Seizure"
+            - "[Head Injury](topic:wvems-2026-062), [Bleeding](topic:wvems-2026-058)"
+            - "[Cold / Heat Exposure](topic:wvems-2026-068)"
+        - title: "[Seizure](topic:wvems-2026-042)"
           bullets:
             - "Hx: Epilepsy"
             - "Shaking, Confused"
-        - title: "Stroke"
+        - title: "[Stroke](topic:wvems-2026-044)"
           bullets:
             - "Facial Droop, Weakness"
             - "Slurred Speech"
-        - title: "Fever"
+        - title: "[Fever](topic:wvems-2026-016)"
           bullets:
             - "Hx: Illness or Malaise"
             - "Skin Flushed, Hot"
         - title: "Cardiac"
           bullets:
-            - "Brady, Tachy"
-            - "Shock, Chest Pain"
+            - "[Brady](topic:wvems-2026-012), [Tachy](topic:wvems-2026-014)"
+            - "[Shock](topic:wvems-2025-008), [Chest Pain](topic:wvems-2026-028)"
 
       critical_care_link:
         text: "Sepsis"

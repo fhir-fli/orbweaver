@@ -49,8 +49,8 @@ topic:
         - id: "first"
           label: "First"
           criteria:
-            - "Treat Circulation"
-            - "Establish Airway"
+            - "Treat [Circulation](topic:wvems-2025-008)"
+            - "Establish [Airway](topic:wvems-2026-004)"
             - "Provide Breathing"
           actions:
             - text: "Tourniquet"
@@ -64,9 +64,9 @@ topic:
         - id: "second"
           label: "Second"
           criteria:
-            - "Consider HEMS"
+            - "Consider [HEMS](topic:wvems-2026-109#destination-triage)"
             - "Scene time < 10 m"
-            - "Hold Manual SMR"
+            - "Hold Manual [SMR](topic:wvems-2026-060)"
           actions:
             - provider_level: "E"
               text: "Emergent Transport"
@@ -77,7 +77,7 @@ topic:
           criteria:
             - "Repeat 1° Survey"
             - "Treat Other Injury"
-            - "Treat Pain"
+            - "Treat [Pain](topic:wvems-2026-020)"
           actions:
             - provider_level: "A"
               text: "NS Bolus"
@@ -92,25 +92,22 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
           - text: "Breathing"
             link_id: "wvems-2026-006"
-          - text: "Shock"
-            link_id: "wvems-2025-008"
-          - text: "Bleeding"
-            link_id: "wvems-2026-058"
-          - text: "Pain"
-            link_id: "wvems-2026-020"
-          - text: "Blood"
+          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Bleeding](topic:wvems-2026-058)"
+          - text: "[Pain](topic:wvems-2026-020)"
+          - text: "[Blood](topic:wvems-2026-084)"
 
       dose_table:
-        - drug: "NS Bolus"
+        - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"
           route: "IV/IO"
           frequency: "x4"
           population: "adult"
-        - drug: "Ancef"
+        - drug: "[Ancef](topic:wvems-2026-drug-reference#ancef)"
           dose: "2 grams"
           route: "IV/IO, IM"
           frequency: "x1"

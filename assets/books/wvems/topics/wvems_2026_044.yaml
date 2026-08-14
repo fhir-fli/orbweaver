@@ -68,11 +68,10 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "Breathing, Shock, Seizure"
-            link_id: "wvems-2026-042"
-          - text: "Altered LOC, Head Injury"
+          - text: "[Breathing](topic:wvems-2026-006), [Shock](topic:wvems-2025-008), [Seizure](topic:wvems-2026-042)"
+          - text: "[Altered LOC](topic:wvems-2026-036), Head Injury"
 
   - page_number: 45
     blocks:

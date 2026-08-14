@@ -53,7 +53,7 @@ topic:
             - "Headache, Dazed"
             - "Awake & Confused"
           actions:
-            - text: "Treat as Head Injury"
+            - text: "Treat as [Head Injury](topic:wvems-2026-062)"
               kind: "referral"
 
         - id: "low_gcs"
@@ -74,21 +74,19 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "Major Trauma"
-            link_id: "wvems-2026-056"
-          - text: "Altered LOC, Seizure"
-            link_id: "wvems-2026-042"
-          - text: "Intubation"
+          - text: "[Major Trauma](topic:wvems-2026-056)"
+          - text: "[Altered LOC](topic:wvems-2026-036), [Seizure](topic:wvems-2026-042)"
+          - text: "[Intubation](topic:wvems-2026-078)"
 
       dose_table:
-        - drug: "3% Saline"
+        - drug: "[3% Saline](topic:wvems-2026-drug-reference#3-saline)"
           dose: "250 mL"
           route: "IV/IO"
           frequency: "over 10 min"
           population: "adult"
-        - drug: "Keppra"
+        - drug: "[Keppra](topic:wvems-2026-drug-reference#keppra)"
           dose: "3,000 mg"
           route: "IV/IO"
           frequency: "over 10 min"

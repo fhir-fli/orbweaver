@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 
 /// Text widget that word-wraps but never breaks a word into an orphan
 /// fragment.  If the widest word at [style] doesn't fit [maxWidth], the
@@ -49,12 +50,17 @@ class FitText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Measure what the reader sees. The inline cross-reference syntax
+    // (`[Fever](topic:wvems-2026-016)`) is invisible on screen, but measured
+    // raw its target would be the widest "word" on the page and would shrink
+    // the node to the legibility floor.
+    final shown = flowLinkPlain(text);
     final baseSize = style.fontSize ?? 14.0;
     var fontSize = baseSize;
     if (maxWidth.isFinite && maxWidth > 0) {
       final scaler = MediaQuery.textScalerOf(context);
       var widest = 0.0;
-      for (final word in text.split(RegExp(r'\s+'))) {
+      for (final word in shown.split(RegExp(r'\s+'))) {
         if (word.isEmpty) continue;
         final tp = TextPainter(
           text: TextSpan(text: word, style: style),
@@ -75,7 +81,7 @@ class FitText extends StatelessWidget {
         double wrappedHeight(double fs) {
           final tp = TextPainter(
             text: TextSpan(
-              text: text,
+              text: shown,
               style: style.copyWith(fontSize: fs),
             ),
             textDirection: TextDirection.ltr,
@@ -92,6 +98,6 @@ class FitText extends StatelessWidget {
       }
     }
     final resolved = style.copyWith(fontSize: fontSize, color: color);
-    return Text(text, textAlign: textAlign, style: resolved);
+    return FlowLinkText(text, textAlign: textAlign, style: resolved);
   }
 }

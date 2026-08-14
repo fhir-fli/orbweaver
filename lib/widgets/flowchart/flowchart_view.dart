@@ -4,6 +4,7 @@ import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/branch_column.dart';
 import 'package:orbweaver/widgets/flowchart/dose_table.dart';
+import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 import 'package:orbweaver/widgets/flowchart/flow_node.dart';
 import 'package:orbweaver/widgets/flowchart/warning_callouts.dart';
 
@@ -957,9 +958,8 @@ class _ConvergenceBox extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(
+          FlowLinkText(
             node.text,
-            textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w800,
@@ -974,10 +974,28 @@ class _ConvergenceBox extends StatelessWidget {
     );
   }
 
-  /// One convergence bullet. A bullet with a `link_id` is underlined (a
-  /// cross-reference cue) and tappable — it opens the linked topic.
-  /// Tapping degrades to a no-op when the link doesn't resolve.
+  /// One convergence bullet.
+  ///
+  /// Two ways to carry a cross-reference, because the print uses both. A
+  /// bullet whose whole text is one reference takes `link_id`; a bullet that
+  /// packs several — p.34's "Fever, Pain, Nausea" is three links, to pp.16, 20
+  /// and 22 — writes them inline (see [flowLinkPattern]). Either way the
+  /// reference is underlined, and tapping degrades to a no-op when it doesn't
+  /// resolve.
   Widget _bullet(BuildContext context, ConvergenceBullet b) {
+    const style = TextStyle(fontSize: 14, height: 1.2);
+    if (hasFlowLink(b.text)) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('• ', style: style),
+          Flexible(
+            child: FlowLinkText(b.text, style: style),
+          ),
+        ],
+      );
+    }
     final text = Text.rich(
       TextSpan(
         children: [
@@ -991,7 +1009,7 @@ class _ConvergenceBox extends StatelessWidget {
         ],
       ),
       textAlign: TextAlign.center,
-      style: const TextStyle(fontSize: 14, height: 1.2),
+      style: style,
     );
     if (b.linkId == null) return text;
     return GestureDetector(

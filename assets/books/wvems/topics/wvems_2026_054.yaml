@@ -44,8 +44,8 @@ topic:
           title: "Stabilize"
           bullets:
             - "Control Bleeding"
-            - "Treat Circulation"
-            - "Airway / Breathing"
+            - "Treat [Circulation](topic:wvems-2025-008)"
+            - "[Airway](topic:wvems-2026-004) / [Breathing](topic:wvems-2026-006)"
         - type: "action"
           provider_level: "E"
           text: "Emergent Transport"
@@ -76,17 +76,16 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
           - text: "Bleeding"
             link_id: "wvems-2026-058"
-          - text: "Shock"
-            link_id: "wvems-2025-008"
-          - text: "Medical ROSC"
-          - text: "Intubation, Vent"
+          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Medical ROSC](topic:wvems-2026-026)"
+          - text: "[Intubation](topic:wvems-2026-078), [Vent](topic:wvems-2026-080)"
 
       dose_table:
-        - drug: "Ketamine"
+        - drug: "[Ketamine](topic:wvems-2026-drug-reference#ketamine)"
           dose: "20 mg"
           route: "IV/IO"
           frequency: "Q 5 min x2"

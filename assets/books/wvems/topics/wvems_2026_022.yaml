@@ -64,13 +64,11 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Fever, Pain"
-            link_id: "wvems-2026-020"
-          - text: "Abdominal Pain"
-            link_id: "wvems-2026-020"
+          - text: "[Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020)"
+          - text: "[Abdominal Pain](topic:wvems-2026-034)"
 
       dose_table:
-        - drug: "Zofran"
+        - drug: "[Zofran](topic:wvems-2026-drug-reference#zofran)"
           dose: "4 mg"
           route: "IV/IO, IM/IN, PO"
           frequency: "Q 5 min x2"

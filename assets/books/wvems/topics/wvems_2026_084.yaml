@@ -39,7 +39,7 @@ topic:
       entry_chain:
         - text: "Hemorrhagic Shock"
           shape: "stadium"
-        - text: "Stop the Bleeding"
+        - text: "Stop the [Bleeding](topic:wvems-2026-058)"
           shape: "rounded_rectangle"
         - text: "(A) NS Bolus"
           shape: "rectangle"
@@ -81,15 +81,13 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Circulation"
-            link_id: "wvems-2025-008"
+          - text: "[Circulation](topic:wvems-2025-008)"
           - text: "Bleeding"
             link_id: "wvems-2026-058"
-          - text: "Vasopressors"
-            link_id: "wvems-2026-082"
+          - text: "[Vasopressors](topic:wvems-2026-082)"
 
       dose_table:
-        - drug: "NS Bolus"
+        - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"
           route: "IV/IO"
           frequency: "PRN"

@@ -39,3 +39,6 @@ test/manual/reference/
 
 # Diagnostic output from test/widgets/page_fits_screen_test.dart
 page_fits.tsv
+
+# Claude Code personal settings (permissions allowlist)
+.claude/settings.local.json

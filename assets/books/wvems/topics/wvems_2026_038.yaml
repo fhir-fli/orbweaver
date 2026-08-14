@@ -32,7 +32,7 @@ topic:
 
       warnings:
         - type: "caution"
-          text: "Use Caution if Patient Refusal"
+          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry:
         text: "Abnormal Blood Glucose"
@@ -80,27 +80,25 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Altered LOC"
-          - text: "Seizure, OD / Tox"
-            link_id: "wvems-2026-042"
-
+          - text: "[Altered LOC](topic:wvems-2026-036)"
+          - text: "[Seizure](topic:wvems-2026-042), [OD / Tox](topic:wvems-2026-040)"
       dose_table:
-        - drug: "Oral Glucose"
+        - drug: "[Oral Glucose](topic:wvems-2026-drug-reference#glucose)"
           dose: "15 grams"
           route: "PO"
           frequency: "Q 5 min x3"
           population: "adult"
-        - drug: "D10"
+        - drug: "[D10](topic:wvems-2026-drug-reference#d10)"
           dose: "100 mL"
           route: "IV/IO"
           frequency: "Q 5 min x5"
           population: "adult"
-        - drug: "Glucagon"
+        - drug: "[Glucagon](topic:wvems-2026-drug-reference#glucagon)"
           dose: "1 mg"
           route: "IM"
           frequency: "x1"
           population: "adult"
-        - drug: "NS Bolus"
+        - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"
           route: "IV/IO"
           frequency: "x4"

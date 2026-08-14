@@ -45,7 +45,7 @@ topic:
 
       steps:
         - type: "action"
-          text: "Treat for Chest Pain"
+          text: "Treat for [Chest Pain](topic:wvems-2026-028)n](topic:wvems-2026-020)"
           kind: "referral"
         - type: "action"
           provider_level: "P"
@@ -72,19 +72,17 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "Breathing"
-            link_id: "wvems-2026-006"
-          - text: "Shock"
-            link_id: "wvems-2025-008"
+          - text: "[Breathing](topic:wvems-2026-006)"
+          - text: "[Shock](topic:wvems-2025-008)"
           - text: "Pain"
             link_id: "wvems-2026-020"
           - text: "Chest Pain"
             link_id: "wvems-2026-028"
 
       dose_table:
-        - drug: "Heparin"
+        - drug: "[Heparin](topic:wvems-2026-drug-reference#heparin)"
           dose: "5,000 units"
           route: "IV/IO"
           frequency: "x1"

@@ -53,7 +53,7 @@ topic:
             - "Adequate Perfusion"
             - "Chronic Edema"
           actions:
-            - text: "Treat as Dyspnea"
+            - text: "Treat as [Dyspnea](topic:wvems-2026-030)"
               kind: "referral"
 
         - id: "major"
@@ -73,23 +73,20 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Breathing"
-            link_id: "wvems-2026-006"
-          - text: "Shock"
-            link_id: "wvems-2025-008"
-          - text: "Chest Pain"
-            link_id: "wvems-2026-028"
+          - text: "[Breathing](topic:wvems-2026-006)"
+          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Chest Pain](topic:wvems-2026-028)"
           - text: "Dyspnea"
             link_id: "wvems-2026-030"
-          - text: "Intubation"
+          - text: "[Intubation](topic:wvems-2026-078)"
 
       dose_table:
-        - drug: "Nitro Drip"
+        - drug: "[Nitro Drip](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
           dose: "300 mcg/min"
           route: "IV/IO"
           frequency: "Titrate Down"
           population: "adult"
-        - drug: "Lasix"
+        - drug: "[Lasix](topic:wvems-2026-drug-reference#lasix)"
           dose: "40 mg"
           route: "IV/IO, IM"
           frequency: "x1"

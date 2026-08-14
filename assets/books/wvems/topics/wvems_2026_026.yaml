@@ -44,9 +44,9 @@ topic:
         - type: "content"
           title: "Stabilize"
           bullets:
-            - "Establish Airway"
-            - "Provide Breathing"
-            - "Treat Circulation"
+            - "Establish [Airway](topic:wvems-2026-004)"
+            - "Provide [Breathing](topic:wvems-2026-006)"
+            - "Treat [Circulation](topic:wvems-2025-008)"
         - type: "action"
           provider_level: "E"
           text: "12-Lead"
@@ -69,16 +69,14 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "Fever, Altered LOC"
-            link_id: "wvems-2026-016"
-          - text: "Diabetic, Overdose"
-            link_id: "wvems-2026-038"
-          - text: "Intubation, Vent"
+          - text: "[Fever](topic:wvems-2026-016), [Altered LOC](topic:wvems-2026-036)"
+          - text: "[Diabetic](topic:wvems-2026-038), [Overdose](topic:wvems-2026-040)"
+          - text: "[Intubation](topic:wvems-2026-078), [Vent](topic:wvems-2026-080)"
 
       dose_table:
-        - drug: "Ketamine"
+        - drug: "[Ketamine](topic:wvems-2026-drug-reference#ketamine)"
           dose: "20 mg"
           route: "IV/IO"
           frequency: "Q 5 min x2"

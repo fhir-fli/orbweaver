@@ -62,16 +62,15 @@ topic:
             - "History Unreliable"
             - "Any Indications"
           actions:
-            - text: "SMR with C-collar"
+            - text: "SMR with [C-collar](topic:wvems-2026-096#smr-with-c-collar)"
               kind: "procedure"
 
       convergence:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Pain"
-            link_id: "wvems-2026-020"
-          - text: "Major Trauma"
+          - text: "[Pain](topic:wvems-2026-020)"
+          - text: "[Major Trauma](topic:wvems-2026-056)"
 
     # ────────────────────────────────────────────────
     # "Indications" reference box (2-column list)

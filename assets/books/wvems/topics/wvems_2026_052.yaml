@@ -62,9 +62,9 @@ topic:
         - id: "second"
           label: "2. Trauma Care"
           criteria:
-            - "Control Bleeding"
-            - "Treat Circulation"
-            - "Airway / Breathing"
+            - "Control [Bleeding](topic:wvems-2026-058)"
+            - "Treat [Circulation](topic:wvems-2025-008)"
+            - "[Airway](topic:wvems-2026-004) / [Breathing](topic:wvems-2026-006)"
           actions:
             - text: "Tourniquet"
               kind: "procedure"
@@ -78,7 +78,7 @@ topic:
         - id: "third"
           label: "3. Medical Care"
           criteria:
-            - "Try Medical CODE"
+            - "Try [Medical CODE](topic:wvems-2026-024)"
             - "Analyze Q 2 min"
             - "Use IV or IO access"
           actions:
@@ -100,17 +100,17 @@ topic:
           - text: "Transport ASAP"
 
       dose_table:
-        - drug: "NS Bolus"
+        - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"
           route: "IV/IO"
           frequency: "x4"
           population: "adult"
-        - drug: "Epi"
+        - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
           dose: "1 mg"
           route: "IV/IO"
           frequency: "Q 5 min"
           population: "adult"
-        - drug: "Amiodarone"
+        - drug: "[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)"
           dose: "300 → 150 mg"
           route: "IV/IO"
           frequency: "Q 5 min x2"

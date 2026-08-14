@@ -38,7 +38,7 @@ topic:
         - type: "safety"
           text: "Ensure Provider SAFETY"
         - type: "caution"
-          text: "Use Caution if Patient Refusal"
+          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry:
         text: "Symptomatic Toxic Exposure or Overdose"
@@ -75,24 +75,24 @@ topic:
             - provider_level: "A"
               text: "NS Bolus"
               kind: "medication_administration"
-            - text: "Administer Antidote"
+            - text: "Administer [Antidote](topic:wvems-2026-096#adult-antidotes)"
               kind: "medication_administration"
 
       convergence:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Co-ingestions, Brady, N/V"
-          - text: "Shock, Hyperthermia"
+          - text: "Co-ingestions, [Brady](topic:wvems-2026-012), [N/V](topic:wvems-2026-022)"
+          - text: "[Shock](topic:wvems-2025-008), [Hyperthermia](topic:wvems-2026-068)"
           - text: "Patient DECON"
 
       dose_table:
-        - drug: "Narcan"
+        - drug: "[Narcan](topic:wvems-2026-drug-reference#narcan)"
           dose: "up to 4 mg"
           route: "IV/IO, IM/IN"
           frequency: "PRN"
           population: "adult"
-        - drug: "NS Bolus"
+        - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"
           route: "IV/IO"
           frequency: "x4"

@@ -85,17 +85,17 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Pain, Breathing, Hyper K+"
-          - text: "Shock, N/V, OD / Tox"
+          - text: "[Pain](topic:wvems-2026-020), [Breathing](topic:wvems-2026-006), [Hyper K+](topic:wvems-2026-018)"
+          - text: "[Shock](topic:wvems-2025-008), [N/V](topic:wvems-2026-022), [OD / Tox](topic:wvems-2026-040)"
 
       dose_table:
-        - drug: "Atropine"
+        - drug: "[Atropine](topic:wvems-2026-drug-reference#atropine)"
           dose: "1 mg"
           route: "IV/IO"
           frequency: "Q 5 min x3"
           population: "adult"
-        - drug: "Epi"
-          dose: "Use Peds Reference"
+        - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
+          dose: "Use [Peds Reference](topic:wvems-2026-144)"
           route: "IV/IO"
           frequency: "Q 5 min"
           population: "peds"

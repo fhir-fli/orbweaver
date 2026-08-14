@@ -54,11 +54,11 @@ topic:
             - "Avoid Pressure"
         - title: "Mouth"
           bullets:
-            - "Tx: Airway"
+            - "Tx: [Airway](topic:wvems-2026-004)"
             - "Be Careful w/ BIAD"
         - title: "Scalp"
           bullets:
-            - "Tx: Bleeding"
+            - "Tx: [Bleeding](topic:wvems-2026-058)"
             - "Consider Fracture"
         - title: "Ears"
           bullets:
@@ -66,11 +66,11 @@ topic:
             - "Do Not Pack Ears"
         - title: "Neck"
           bullets:
-            - "Tx: Immobilization"
+            - "Tx: [Immobilization](topic:wvems-2026-060)"
             - "Chest Seal"
         - title: "Nose"
           bullets:
-            - "Tx: Epistaxis"
+            - "Tx: [Epistaxis](topic:wvems-2026-076)"
             - "Do Not Reduce"
         - title: "Eyes"
           bullets:
@@ -85,12 +85,9 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Major Trauma"
-            link_id: "wvems-2026-056"
-          - text: "Altered LOC, Seizure"
-            link_id: "wvems-2026-042"
-          - text: "Elevated ICP"
-            link_id: "wvems-2026-086"
+          - text: "[Major Trauma](topic:wvems-2026-056)"
+          - text: "[Altered LOC](topic:wvems-2026-036), [Seizure](topic:wvems-2026-042)"
+          - text: "[Elevated ICP](topic:wvems-2026-086)"
 
   - page_number: 63
     blocks:

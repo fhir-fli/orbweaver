@@ -77,17 +77,15 @@ topic:
         shape: "stadium"
         warnings:
           - type: "caution"
-            text: "Consider Destination Triage"
+            text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "Breathing"
-            link_id: "wvems-2026-006"
-          - text: "Circulation / Shock"
-            link_id: "wvems-2025-008"
-          - text: "Major Trauma"
-          - text: "Blood"
+          - text: "[Breathing](topic:wvems-2026-006)"
+          - text: "Circulation / [Shock](topic:wvems-2025-008)"
+          - text: "[Major Trauma](topic:wvems-2026-056)"
+          - text: "[Blood](topic:wvems-2026-084)"
 
       dose_table:
-        - drug: "TXA"
+        - drug: "[TXA](topic:wvems-2026-drug-reference#txa)"
           dose: "2 grams"
           route: "IV/IO"
           frequency: "over 10 min"

@@ -40,7 +40,7 @@ topic:
 
       warnings:
         - type: "caution"
-          text: "Use Caution if Patient Refusal"
+          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry_chain:
         - text: "Systolic Over\nAdult (14+):  240 mmHg\nChild (1-13):  220 mmHg\nInfant (<1):  200 mmHg"
@@ -58,7 +58,7 @@ topic:
             - "Chest Pain, SOB"
             - "Headache"
           actions:
-            - text: "Treat as Hypertension"
+            - text: "Treat as [Hypertension](topic:wvems-2026-010)"
               kind: "referral"
 
         - id: "emergent"
@@ -79,22 +79,18 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Pain"
-            link_id: "wvems-2026-020"
-          - text: "Pregnancy"
-            link_id: "wvems-2026-048"
-          - text: "Seizure"
-            link_id: "wvems-2026-042"
-          - text: "Cardiac, SOB, Stroke"
-            link_id: "wvems-2026-044"
+          - text: "[Pain](topic:wvems-2026-020)"
+          - text: "[Pregnancy](topic:wvems-2026-048)"
+          - text: "[Seizure](topic:wvems-2026-042)"
+          - text: "[Cardiac](topic:wvems-2026-028), [SOB](topic:wvems-2026-030), [Stroke](topic:wvems-2026-044)"
 
       dose_table:
-        - drug: "Lopressor"
+        - drug: "[Lopressor](topic:wvems-2026-drug-reference#lopressor)"
           dose: "5 mg"
           route: "IV/IO"
           frequency: "Q 5 min x2"
           population: "adult"
-        - drug: "Magnesium"
+        - drug: "[Magnesium](topic:wvems-2026-drug-reference#magnesium)"
           dose: "4 grams"
           route: "IV/IO"
           frequency: "over 10 min"

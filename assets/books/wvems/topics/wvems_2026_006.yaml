@@ -87,8 +87,8 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Airway, Dyspnea"
-          - text: "Ventilator"
+          - text: "[Airway](topic:wvems-2026-004), [Dyspnea](topic:wvems-2026-030)"
+          - text: "[Ventilator](topic:wvems-2026-080)"
 
   - page_number: 7
     blocks:

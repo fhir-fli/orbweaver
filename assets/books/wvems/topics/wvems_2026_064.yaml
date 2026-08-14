@@ -51,7 +51,7 @@ topic:
       cards:
         - title: "Penetration"
           bullets:
-            - "Tx: Breathing"
+            - "Tx: [Breathing](topic:wvems-2026-006)"
             - "Consider PTX"
         - title: "Impaled"
           bullets:
@@ -63,27 +63,24 @@ topic:
             - "Vapor Barrier"
         - title: "Flail Chest"
           bullets:
-            - "Tx: Breathing"
+            - "Tx: [Breathing](topic:wvems-2026-006)"
             - "Assist with BVM"
         - title: "Spine"
           bullets:
-            - "Tx: Immobilization"
+            - "Tx: [Immobilization](topic:wvems-2026-060)"
             - "Check for Step Off"
         - title: "Unstable Pelvis"
           bullets:
-            - "Tx: Shock"
+            - "Tx: [Shock](topic:wvems-2025-008)"
             - "Use Pelvic Binder"
 
       convergence:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Major Trauma"
-            link_id: "wvems-2026-056"
-          - text: "Bleeding"
-            link_id: "wvems-2026-058"
-          - text: "Pain"
-            link_id: "wvems-2026-020"
+          - text: "[Major Trauma](topic:wvems-2026-056)"
+          - text: "[Bleeding](topic:wvems-2026-058)"
+          - text: "[Pain](topic:wvems-2026-020)"
 
   - page_number: 65
     blocks:

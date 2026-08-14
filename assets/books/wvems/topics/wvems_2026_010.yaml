@@ -66,10 +66,9 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "Pain, Pregnancy, Seizure"
-            link_id: "wvems-2026-042"
-          - text: "Cardiac, SOB, Stroke"
-          - text: "Malignant HTN"
+          - text: "[Pain](topic:wvems-2026-020), [Pregnancy](topic:wvems-2026-048), [Seizure](topic:wvems-2026-042)"
+          - text: "[Cardiac](topic:wvems-2026-028), [SOB](topic:wvems-2026-030), [Stroke](topic:wvems-2026-044)"
+          - text: "[Malignant HTN](topic:wvems-2026-092)"
 
   - page_number: 11
     blocks:

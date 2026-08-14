@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 
 /// A flowchart node (entry / decision / convergence / action).
 ///
@@ -62,9 +63,8 @@ class FlowNodeBox extends StatelessWidget {
         border: Border.all(color: theme.nodeBorder, width: 1.5),
         borderRadius: BorderRadius.circular(radius),
       ),
-      child: Text(
+      child: FlowLinkText(
         text,
-        textAlign: TextAlign.center,
         style: const TextStyle(
           fontSize: 16,
           height: 1.15,
@@ -131,9 +131,8 @@ class DiamondNode extends StatelessWidget {
               horizontal: compact ? 24 : 44,
               vertical: compact ? 6 : 8,
             ),
-            child: Text(
+            child: FlowLinkText(
               text,
-              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: compact ? 15 : 16,
                 height: 1.15,
