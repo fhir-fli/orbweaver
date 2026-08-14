@@ -137,10 +137,12 @@ or procedure name ("Versed" → p.143), so phrase → card is an exact match.
       regular weight + underline, a drug or procedure is bold + underline.
 - [x] **2d — guard it.** `test/data/cross_link_test.dart` now checks the
       `#anchor` half too, and fails if the anchored-link count collapses.
-- [ ] **2e — even (flowchart) pages.** 370 more cross-references across the 46
-      flowchart pages; the app uses `link_id` 88 times and none of those point
-      at a drug, procedure or policy. `TopicAction` has no link field yet, so
-      the drug names inside flow nodes cannot carry one.
+- [x] **2e — even (flowchart) pages.** 323 restored. Flowchart text is not
+      markdown, so this needed a renderer change (`flow_link.dart`) rather than
+      a rewrite: the print puts *several* references on one line — p.34's
+      "Fever, Pain, Nausea" is three links — which a per-node `link_id` cannot
+      express, and that bullet had all three pointing at Pain. 73 redundant
+      `link_id`s dropped; 18 exceptions reported.
 - [ ] **2f — outbound links from the appendix topics.** 191 more, leaving the
       drug reference, procedures, policies and peds reference.
 
@@ -215,3 +217,7 @@ tables not shrunk, section title ratio, and small print for URLs/attributions.
   correctly side by side, tapping **Fentanyl** lands on the Fentanyl card 23
   cards into the drug reference, tapping **Tourniquet** lands on the Tourniquet
   card 17 cards into the procedures.
+- 2026-08-14 — **Batch 2 flowchart pages applied** (`ef03212`). 323 links over
+  the 46 even pages. Verified on p.34 (three references in one bullet, Nausea
+  now opens p.22) and p.22 (the dose table's Zofran opens the drug reference;
+  the action tile above it stays unlinked, as in print).
