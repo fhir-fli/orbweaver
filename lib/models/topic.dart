@@ -1751,7 +1751,7 @@ class DrugCardBlock extends Block {
     pearls: _stringList(map['pearls']),
     imagePath: map['image'] as String?,
     criticalCare: map['critical_care'] as bool? ?? false,
-    anchor: map['anchor'] as String?,
+    anchor: map['anchor'] as String? ?? anchorSlug(map['name'] as String),
     ownPaletteArgb: _parsePaletteArgb(map['palette']),
   );
 
@@ -1813,7 +1813,7 @@ class ProcedureBlock extends Block {
     scope: _normalizeScope(map['scope'] as String?),
     steps: _stringList(map['steps']),
     imagePath: map['image'] as String?,
-    anchor: map['anchor'] as String?,
+    anchor: map['anchor'] as String? ?? anchorSlug(map['name'] as String),
     ownPaletteArgb: _parsePaletteArgb(map['palette']),
   );
 
@@ -2419,6 +2419,23 @@ class Topic {
 // ─────────────────────────────────────────────────────────────
 // UTILITIES
 // ─────────────────────────────────────────────────────────────
+
+/// Slugifies a card's name into its default anchor: lowercase, every run of
+/// non-alphanumerics collapsed to one hyphen, ends trimmed.
+///
+/// Drug and procedure cards get this for free (see [DrugCardBlock.fromYaml],
+/// [ProcedureBlock.fromYaml]) so a `topic:<id>#<slug>` cross-reference can
+/// reach one card out of fifty without every card being hand-anchored. The
+/// print's own cross-references name the card ("Versed", "Needle Decompression"),
+/// so the slug is derivable from the link text rather than invented.
+///
+///     '3% Saline'    → '3-saline'
+///     'Afrin®'       → 'afrin'
+///     'Epi 1:10,000' → 'epi-1-10-000'
+String anchorSlug(String name) => name
+    .toLowerCase()
+    .replaceAll(RegExp('[^a-z0-9]+'), '-')
+    .replaceAll(RegExp('^-+|-+\$'), '');
 
 List<String> _stringList(dynamic raw) {
   if (raw == null) return const [];

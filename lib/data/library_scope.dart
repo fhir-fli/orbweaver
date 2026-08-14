@@ -35,11 +35,20 @@ bool isTopicLinkLive(BuildContext context, String topicId) =>
 /// search + home) when the owning book is known; falls back to a single
 /// [TopicFrame] otherwise. No-ops if the id doesn't resolve — links degrade
 /// gracefully.
-Future<void> openLinkedTopic(BuildContext context, String topicId) async {
+///
+/// [anchor] is the `#slug` half of a `topic:<id>#<anchor>` link: the topic
+/// opens scrolled to the block carrying that `anchor:`. This is what lets a
+/// cross-reference reach one drug card out of fifty rather than the top of the
+/// drug reference.
+Future<void> openLinkedTopic(
+  BuildContext context,
+  String topicId, {
+  String? anchor,
+}) async {
   final lib = LibraryScope.of(context);
   final book = lib?.bookContaining(topicId);
   if (book != null) {
-    await openProtocol(context, book, topicId);
+    await openProtocol(context, book, topicId, anchor: anchor);
     return;
   }
   final ref = lib?.lookup(topicId);
@@ -49,7 +58,11 @@ Future<void> openLinkedTopic(BuildContext context, String topicId) async {
   await Navigator.push(
     context,
     MaterialPageRoute<void>(
-      builder: (_) => TopicFrame(assetPath: ref.asset, palette: ref.palette),
+      builder: (_) => TopicFrame(
+        assetPath: ref.asset,
+        palette: ref.palette,
+        initialAnchor: anchor,
+      ),
     ),
   );
 }
@@ -65,8 +78,9 @@ List<BookTopic> protocolSiblings(Book book) =>
 Future<void> openProtocol(
   BuildContext context,
   Book book,
-  String topicId,
-) async {
+  String topicId, {
+  String? anchor,
+}) async {
   await LastState.recordTopic(book.id, topicId);
   if (!context.mounted) return;
   final siblings = protocolSiblings(book);
@@ -79,7 +93,11 @@ Future<void> openProtocol(
     await Navigator.push(
       context,
       MaterialPageRoute<void>(
-        builder: (_) => TopicFrame(assetPath: t.asset, palette: t.palette),
+        builder: (_) => TopicFrame(
+          assetPath: t.asset,
+          palette: t.palette,
+          initialAnchor: anchor,
+        ),
       ),
     );
     return;
@@ -87,8 +105,12 @@ Future<void> openProtocol(
   await Navigator.push(
     context,
     MaterialPageRoute<void>(
-      builder: (_) =>
-          TopicPager(siblings: siblings, initialIndex: index, bookId: book.id),
+      builder: (_) => TopicPager(
+        siblings: siblings,
+        initialIndex: index,
+        bookId: book.id,
+        initialAnchor: anchor,
+      ),
     ),
   );
 }

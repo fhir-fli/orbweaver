@@ -47,6 +47,7 @@ topic:
     # ── p.110 Abuse ─────────────────────────────────────────
     - type: "prose"
       title: "Patient Abuse and Neglect"
+      anchor: "patient-abuse-and-neglect"
       markdown: |
         - Abuse is any physical, sexual and/or mental injury of any **child, domestic partner, senior citizen, or incapacitated adult** by another person through commission or omission — at the hand of a partner, parent, caregiver, spouse, neighbor, or adult child. EMS are **Mandatory Reporters** under the Code of Virginia (**22 VAC 30-100-15**).
         - Be aware of the potential for abuse in **all** patients. Where abuse is suspected, first **protect the EMS team** and patient from harm. Collect as much information as possible and preserve physical evidence if able. Signs may include:
@@ -71,6 +72,7 @@ topic:
     # ── p.111 Bystander, Physician ──────────────────────────
     - type: "prose"
       title: "Verification of On Scene Personnel"
+      anchor: "verification-of-on-scene-personnel"
       markdown: |
         - Prehospital care is the responsibility of the **responding EMS resources**. Bystanders may be considered when immediate needs outweigh available EMS resources, or if a bystander provides a unique resource. EMS should never authorize or perform any intervention outside their scope **or knowledge/comfort level**.
         - Bystanders may have a unique understanding of a specialized **medical condition or device** (case workers/patient aides, mental-health professionals, a caretaker managing a home vent, an LVAD patient, etc.). EMS must call **Medical Control** for any orders to deviate from routine EMS care.
@@ -92,6 +94,7 @@ topic:
 
     - type: "prose"
       title: "Termination of Resuscitation"
+      anchor: "termination-of-resuscitation"
       markdown: |
         - Transportation during resuscitation is not optimal and exposes crews to significant risk. This policy balances the potential benefit of prolonged resuscitation against the risks of emergent transport.
         - **Prioritize transport for any special case.** If attempting resuscitation, special cases may benefit from resources not available in the field — prioritize compressions and AED and transport ASAP.
@@ -128,6 +131,7 @@ topic:
     # ── p.113 Cardiac Devices ───────────────────────────────
     - type: "prose"
       title: "Advanced Cardiac Devices"
+      anchor: "advanced-cardiac-devices"
       markdown: |
         - EMS may occasionally encounter exotic devices such as:
           - Wearable defibrillator (e.g. **ZOLL® LifeVest**)
@@ -164,6 +168,7 @@ topic:
     # ── p.114 Standby, Police ───────────────────────────────
     - type: "prose"
       title: "EMS Standbys"
+      anchor: "ems-standbys"
       markdown: |
         - EMS may be utilized to standby at a scene without a specific patient.
         - EMS should complete a full report for any patients or treatments.
@@ -271,6 +276,7 @@ topic:
     # ── p.117 Deceased, MCI ─────────────────────────────────
     - type: "prose"
       title: "Deceased Subjects"
+      anchor: "deceased-subjects"
       markdown: |
         - EMS may occasionally encounter a deceased subject.
           - Maintain respect for the deceased and their family.

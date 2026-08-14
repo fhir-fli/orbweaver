@@ -9,9 +9,8 @@ import 'package:url_launcher/url_launcher.dart';
 ///   - `[text](target)` inline links (CommonMark). Targets:
 ///       `topic:<id>`  → open another topic (cross-book, by logical id)
 ///       `https://…`, `mailto:…` → open externally
-///       `#<anchor>` / `topic:<id>#<anchor>` → anchor scroll (TODO: the
-///        anchor scroll system isn't wired yet; for now a `topic:…#…` link
-///        opens the topic at the top and a bare `#…` is inert)
+///       `#<anchor>` → scroll this topic to the block with that `anchor:`
+///       `topic:<id>#<anchor>` → open that topic scrolled to that block
 ///   - `- ` bullet lines (two-space indent per nesting level)
 ///   - blank lines become paragraph gaps
 ///
@@ -82,8 +81,12 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
 
   void _onLinkTap(String target) {
     if (target.startsWith('topic:')) {
-      final id = target.substring(6).split('#').first; // anchor TODO
-      openLinkedTopic(context, id);
+      final parts = target.substring(6).split('#');
+      openLinkedTopic(
+        context,
+        parts.first,
+        anchor: parts.length > 1 && parts[1].isNotEmpty ? parts[1] : null,
+      );
     } else if (target.startsWith('#')) {
       AnchorScope.of(context)?.scrollTo(target.substring(1));
     } else {

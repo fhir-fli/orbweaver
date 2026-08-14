@@ -21,10 +21,16 @@ class TopicBody extends StatefulWidget {
     this.palette = const {},
     this.onLoaded,
     this.onPage,
+    this.initialAnchor,
     super.key,
   });
 
   final String assetPath;
+
+  /// Anchor slug to open at, from a `topic:<id>#<anchor>` cross-reference.
+  /// Only meaningful for a scrolling topic; a paged topic has no scroll to
+  /// place.
+  final String? initialAnchor;
 
   /// Fully-resolved palette from the book→chapter→topic cascade (empty for a
   /// standalone topic, whose palette is resolved from its own `palette:`).
@@ -167,7 +173,12 @@ class _TopicBodyState extends State<TopicBody> {
 
     return SingleChildScrollView(
       controller: _scrollCtrl,
-      child: TopicView(topic: topic, palette: resolved, pageKeys: _pageKeys),
+      child: TopicView(
+        topic: topic,
+        palette: resolved,
+        pageKeys: _pageKeys,
+        initialAnchor: widget.initialAnchor,
+      ),
     );
   }
 }
@@ -234,11 +245,15 @@ class TopicFrame extends StatefulWidget {
   const TopicFrame({
     required this.assetPath,
     this.palette = const {},
+    this.initialAnchor,
     super.key,
   });
 
   final String assetPath;
   final Map<String, Color> palette;
+
+  /// Anchor slug to open at, from a `topic:<id>#<anchor>` cross-reference.
+  final String? initialAnchor;
 
   @override
   State<TopicFrame> createState() => _TopicFrameState();
@@ -277,6 +292,7 @@ class _TopicFrameState extends State<TopicFrame> {
           palette: widget.palette,
           onLoaded: (t) => setState(() => _title = t.title),
           onPage: (pn) => _pageNumber.value = pn,
+          initialAnchor: widget.initialAnchor,
         ),
       ),
     );
@@ -292,6 +308,7 @@ class TopicPager extends StatefulWidget {
     required this.siblings,
     required this.initialIndex,
     required this.bookId,
+    this.initialAnchor,
     super.key,
   });
 
@@ -299,6 +316,10 @@ class TopicPager extends StatefulWidget {
   final List<BookTopic> siblings;
   final int initialIndex;
   final String bookId;
+
+  /// Anchor slug for the topic at [initialIndex] only — a cross-reference
+  /// aimed at one card. Swiping to a sibling opens it at the top, as before.
+  final String? initialAnchor;
 
   @override
   State<TopicPager> createState() => _TopicPagerState();
@@ -414,6 +435,9 @@ class _TopicPagerState extends State<TopicPager> {
                   assetPath: t.asset,
                   palette: t.palette,
                   onPage: (pn) => _report(i, pn),
+                  initialAnchor: i == widget.initialIndex
+                      ? widget.initialAnchor
+                      : null,
                 );
               },
             ),

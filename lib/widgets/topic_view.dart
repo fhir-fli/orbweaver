@@ -28,10 +28,17 @@ class TopicView extends StatefulWidget {
     required this.topic,
     this.palette = const {},
     this.pageKeys = const [],
+    this.initialAnchor,
     super.key,
   });
 
   final Topic topic;
+
+  /// Anchor slug to scroll to once laid out — set when the topic was opened
+  /// by a `topic:<id>#<anchor>` cross-reference, which is how the print's
+  /// links into the drug reference and the procedures reach one card out of
+  /// fifty. Ignored when the slug isn't in this topic.
+  final String? initialAnchor;
 
   /// Fully-resolved color palette (book → chapter → topic cascade), passed
   /// in when the topic is opened from a book. Empty for a standalone topic,
@@ -56,12 +63,27 @@ class _TopicViewState extends State<TopicView> {
   void initState() {
     super.initState();
     _buildAnchorKeys();
+    _scheduleInitialAnchor();
   }
 
   @override
   void didUpdateWidget(TopicView oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.topic != widget.topic) _buildAnchorKeys();
+    if (oldWidget.initialAnchor != widget.initialAnchor) {
+      _scheduleInitialAnchor();
+    }
+  }
+
+  /// Jumps to [TopicView.initialAnchor] after the first layout, when the
+  /// anchor keys have contexts to scroll to. Without animation: the reader
+  /// asked for a card, not for a tour of the topic above it.
+  void _scheduleInitialAnchor() {
+    final slug = widget.initialAnchor;
+    if (slug == null) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) _scrollToAnchor(slug, animate: false);
+    });
   }
 
   void _buildAnchorKeys() {
@@ -71,12 +93,12 @@ class _TopicViewState extends State<TopicView> {
     };
   }
 
-  void _scrollToAnchor(String slug) {
+  void _scrollToAnchor(String slug, {bool animate = true}) {
     final ctx = _anchorKeys[slug]?.currentContext;
     if (ctx != null) {
       Scrollable.ensureVisible(
         ctx,
-        duration: const Duration(milliseconds: 300),
+        duration: animate ? const Duration(milliseconds: 300) : Duration.zero,
         alignment: 0.05,
         curve: Curves.easeInOut,
       );

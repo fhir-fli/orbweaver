@@ -100,6 +100,45 @@ channel — print uses bold and underline orthogonally.
 Re-derive the link table (the Aug-01 scratch data is gone), map PDF page → topic
 id, rewrite the YAML, and let `test/data/cross_link_test.dart` guard it.
 
+**Link table re-derived 2026-08-13** — `tool/wvems_link_extract.py` reads every
+PDF link annotation and recovers its phrase char-by-char from the annotation
+rect. **1,492 links over all 166 pages**, which is exactly the audit's 1,284
+internal + 208 external, so the extraction reproduces the measurement.
+
+### Where the print's links point, and what the app can receive
+
+| dest range | app target | state before this batch |
+|---|---|---|
+| 4–95 protocols | `wvems-2026-<even page>` | works |
+| 96–108 procedures | `wvems-2026-096` (31 cards, one topic) | **needs an anchor** |
+| 109–117 policies | `wvems-2026-109` (24 sections, one topic) | **needs an anchor** |
+| 118–143 drugs | `wvems-2026-drug-reference` (50 cards, one topic) | **needs an anchor** |
+| 144–161 peds ref | `wvems-2026-144` | works |
+| 1, 162–166 | index / back cover | no app target |
+
+46 % of the graph lands in a *single* topic holding 50 drug cards or 31
+procedure cards. A destination page alone would drop the reader at the top of
+that topic, which is not the cross-reference the print makes — so the anchor
+work is a prerequisite, not a polish item, and `mini_markdown.dart:85` currently
+throws the anchor away (`split('#').first // anchor TODO`).
+
+The *target within* the topic is not guessed either: the link phrase is the drug
+or procedure name ("Versed" → p.143), so phrase → card is an exact match.
+
+### Sub-batches
+
+- [ ] **2a — wire cross-topic anchors.** `openLinkedTopic(context, id, anchor:)`
+      threaded through `TopicFrame`/`TopicPager` to `TopicView`, which already
+      keeps a `GlobalKey` per `anchor:` block for same-topic `#slug` links.
+- [ ] **2b — give every card an anchor.** Drug cards slug from `name`,
+      procedure cards from their title, policy sections from their heading.
+- [ ] **2c — rewrite the YAML.** For the pages the app ships: every underlined
+      phrase becomes `[phrase](topic:id#anchor)`, and the 214 that are currently
+      `**bold**` lose the bold — print sets cross-references in regular weight
+      (audit §1.5), and bold has to go back to meaning emphasis only.
+- [ ] **2d — guard it.** `test/data/cross_link_test.dart` asserts every target
+      resolves: topic id in the library, anchor present in that topic.
+
 ## Batch 3 — ship the two missing pages
 
 Source: `wvems_audit_typography.md` §5.1.
