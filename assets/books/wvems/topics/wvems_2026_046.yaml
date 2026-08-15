@@ -35,7 +35,7 @@ topic:
         - type: "safety"
           text: "Ensure Provider SAFETY"
         - type: "caution"
-          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
+          text: "[Use Caution if Patient Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry:
         text: "Overt Psychosis, Anxiety or SI / HI"

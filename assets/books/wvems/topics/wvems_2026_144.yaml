@@ -234,7 +234,7 @@ topic:
         - **Aspirin / Afrin / Heparin / Nitro** — adult indications; not routine peds.
 
     - type: "prose"
-      title: "EMT Peds Dosing"
+      title: "{E} EMT Peds Dosing"
       markdown: |
         - Paediatric med math is **not in EMT scope**.
         - EMTs may give the regular **adult dose** for these, at/above the listed age:

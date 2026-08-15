@@ -33,6 +33,10 @@ topic:
     - type: "flowchart"
       variant: "severity"
 
+      warnings:
+        - type: "caution"
+          text: "[Use Caution if Patient Refusal](topic:wvems-2026-109#patient-refusals)"
+
       entry:
         text: "Symptomatic Allergic Reaction"
         shape: "stadium"

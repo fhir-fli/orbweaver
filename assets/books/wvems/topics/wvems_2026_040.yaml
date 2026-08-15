@@ -37,8 +37,10 @@ topic:
       warnings:
         - type: "safety"
           text: "Ensure Provider SAFETY"
+        - type: "safety"
+          text: "Ensure Patient DECON"
         - type: "caution"
-          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
+          text: "[Use Caution if Patient Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry:
         text: "Symptomatic Toxic Exposure or Overdose"

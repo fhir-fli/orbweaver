@@ -85,7 +85,7 @@ topic:
               kind: "medication_administration"
 
       convergence:
-        text: "Ventilator"
+        text: "{P(CC)} Ventilator"
         shape: "stadium"
 
       post_convergence:

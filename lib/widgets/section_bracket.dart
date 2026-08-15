@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orbweaver/widgets/scope_chip.dart';
 
 /// The printed WVEMS section bracket — a `[` drawn down the left of a
 /// section: a short arm right at the top with the title sitting in the gap
@@ -72,7 +73,7 @@ class SectionBracket extends StatelessWidget {
             if (title != null)
               Padding(
                 padding: const EdgeInsets.only(left: _titleInset - _bodyInset),
-                child: Text(title!, style: titleStyle),
+                child: _Title(title: title!, style: titleStyle),
               ),
             body,
           ],
@@ -116,4 +117,27 @@ class _BracketPainter extends CustomPainter {
   @override
   bool shouldRepaint(_BracketPainter old) =>
       old.color != color || old.arm != arm || old.stroke != stroke;
+}
+
+/// A section heading, with the provider badge the print sets before it when
+/// the title opens with a `{E}` token.
+class _Title extends StatelessWidget {
+  const _Title({required this.title, this.style});
+
+  final String title;
+  final TextStyle? style;
+
+  @override
+  Widget build(BuildContext context) {
+    final (level, rest) = splitLeadingScope(title);
+    if (level == null) return Text(title, style: style);
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        ScopeChip(level: level, size: (style?.fontSize ?? 16) * 1.05),
+        const SizedBox(width: 6),
+        Flexible(child: Text(rest, style: style)),
+      ],
+    );
+  }
 }

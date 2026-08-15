@@ -5,11 +5,11 @@
 # reference/policy text → titled prose + nested bullets, not flowcharts).
 #
 # NOTES ON FIDELITY:
-#  - The printed provider-scope chips (E/A/I/P) that tag a few policy
-#    lines are written here as BOLD level names inline — in every case
-#    the chip is redundant with the adjacent word (ALS/BLS/CC/Paramedic),
-#    so no information is lost. (If Grey wants the coloured chips, add an
-#    inline-chip token to MiniMarkdown.)
+#  - The five printed provider-scope chips (pp.112, 116, 117) are drawn, via
+#    the `{E}` / `{I}` / `{P(CC)}` token MiniMarkdown takes since batch 4.
+#    They were bold level names until then because no inline-chip token
+#    existed. The print sets BOTH the chip and the word, and the chip is not
+#    redundant: it is colour-coded and scannable in a way bold text is not.
 #  - The p.116 "Alternate <30 min? → May Bypass Closest ED" mini-decision
 #    is rendered as a highlighted callout (one trivial decision; the prose
 #    above it already states the rule).
@@ -98,8 +98,8 @@ topic:
       markdown: |
         - Transportation during resuscitation is not optimal and exposes crews to significant risk. This policy balances the potential benefit of prolonged resuscitation against the risks of emergent transport.
         - **Prioritize transport for any special case.** If attempting resuscitation, special cases may benefit from resources not available in the field — prioritize compressions and AED and transport ASAP.
-        - **ALS**: resuscitate on scene for non-special cases. Call **Medical Control** if no ROSC **within 30 min**.
-        - **BLS**: try to turn over care to ALS (or a hospital) within 15 min. **Prioritize transport if a hospital is within 15 min.** Extended BLS resuscitation beyond 15 min may still succeed if the arrest is **witnessed by EMS** or if any shock is ever advised by the AED — prioritize transport in those cases regardless of time. Call **Medical Control** if not witnessed by EMS, not shocked, and no ALS after 15 min.
+        - {I} **ALS**: resuscitate on scene for non-special cases. Call **Medical Control** if no ROSC **within 30 min**.
+        - {E} **BLS**: try to turn over care to ALS (or a hospital) within 15 min. **Prioritize transport if a hospital is within 15 min.** Extended BLS resuscitation beyond 15 min may still succeed if the arrest is **witnessed by EMS** or if any shock is ever advised by the AED — prioritize transport in those cases regardless of time. Call **Medical Control** if not witnessed by EMS, not shocked, and no ALS after 15 min.
 
     - type: "prose"
       title: "Special Cases (prioritize transport)"
@@ -251,8 +251,8 @@ topic:
       title: "Acute STEMI with Chest Pain"
       markdown: |
         - Adults should have an appropriate presentation ([chest pain](topic:wvems-2026-028), etc.) and an EKG identified as **\*\*\* ACUTE MI \*\*\*** by automated analysis.
-        - **ALS**: May consider STE > 1 mm in 2 or more contiguous leads.
-        - **CC** (Critical Care): May consider advanced criteria (Sgarbossa's, [posterior](topic:wvems-2026-088), etc.).
+        - {I} **ALS**: May consider STE > 1 mm in 2 or more contiguous leads.
+        - {P(CC)} **CC** (Critical Care): May consider advanced criteria (Sgarbossa's, [posterior](topic:wvems-2026-088), etc.).
         - Appropriate WVEMS cardiac hospitals (with emergent PCI) include:
           - Carilion **Roanoke** & **New River Valley** & Centra **Lynchburg**
           - Lewis Gale **Salem** & **Montgomery** & Sovah **Danville** & **Martinsville**
@@ -299,7 +299,7 @@ topic:
         - **EMS may confirm death** in several ways including:
           - Lack of pulse, respirations and response.
           - [Obvious Death](topic:wvems-2026-024) or [Mortal Injury](topic:wvems-2026-052).
-          - **ALS**: Asystole in at least two cardiac leads with EKG gain at max.
+          - {I} **ALS**: Asystole in at least two cardiac leads with EKG gain at max.
         - EMS may consider assisting with last rites if requested by family.
 
     - type: "prose"

@@ -40,7 +40,7 @@ topic:
 
       warnings:
         - type: "caution"
-          text: "[Use Caution](topic:wvems-2026-109#patient-refusals) [if Patient](topic:wvems-2026-109#patient-refusals) [Refusal](topic:wvems-2026-109#patient-refusals)"
+          text: "[Use Caution if Patient Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry_chain:
         - text: "Systolic Over\nAdult (14+):  240 mmHg\nChild (1-13):  220 mmHg\nInfant (<1):  200 mmHg"

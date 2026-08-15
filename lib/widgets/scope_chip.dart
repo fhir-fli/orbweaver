@@ -52,3 +52,17 @@ Color scopeFill(TopicTheme theme, ProviderLevel level) => switch (level) {
   ProviderLevel.criticalCare => theme.providerCriticalCare,
   ProviderLevel.any => theme.providerAny,
 };
+
+/// A leading `{E}` on a section title, split off so the heading can carry the
+/// badge the print sets *before* it (p.144, "EMT Peds Dosing").
+///
+/// Titles render as a plain `Text`, not markdown, so the token would otherwise
+/// print literally.
+final RegExp _leadingBadge = RegExp(r'^\{(E|A|I|P\(CC\)|P|CC)?\}\s*');
+
+/// `(level, rest)` when [title] opens with a badge token, else `(null, title)`.
+(ProviderLevel?, String) splitLeadingScope(String title) {
+  final m = _leadingBadge.firstMatch(title);
+  if (m == null) return (null, title);
+  return (ProviderLevel.fromString(m.group(1)), title.substring(m.end));
+}

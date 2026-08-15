@@ -124,6 +124,14 @@ topic:
           - Do **not** give within 24 h of PDE5 inhibitors (sildenafil, etc).
 
     - type: "prose"
+      title: "STEMI Alert"
+      callout: true
+      markdown: |
+        - If you see a [STEMI](topic:wvems-2026-088)
+        - Or EKG says \*\***AMI**\*\*
+        - Call a **STEMI** Alert
+
+    - type: "prose"
       title: "Notes"
       markdown: |
         - 12-Lead within **10 min** of patient contact when feasible.
