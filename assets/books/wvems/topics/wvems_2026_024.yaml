@@ -129,8 +129,8 @@ topic:
       markdown: |
         - Start compressions in place.
           - Transport ASAP if **ROSC**, or **peds**, or **pregnant**, or any [Special Case](topic:wvems-2026-109#termination-of-resuscitation).
-        - (E) **BLS**: Get ALS ASAP. [Transport](topic:wvems-2026-109#termination-of-resuscitation) if witnessed by EMS or any shock.
-        - (I) **ALS**: Try for **30 min**. If no ROSC: [Call for Termination](topic:wvems-2026-109#termination-of-resuscitation).
+        - {E} **BLS**: Get ALS ASAP. [Transport](topic:wvems-2026-109#termination-of-resuscitation) if witnessed by EMS or any shock.
+        - {I} **ALS**: Try for **30 min**. If no ROSC: [Call for Termination](topic:wvems-2026-109#termination-of-resuscitation).
 
     # Print p.25 floats Compressions into the right margin beside the
     # Imperatives, and Obvious Death beside the Medications. Neither of those
@@ -160,7 +160,7 @@ topic:
             - (1) 300 mg → (2) 150 mg
           - For peds, give 5 mg/kg three times (x3) Q 5 min
         - Consider adjunct meds for pulseless polymorphic VT arrest:
-          - (I) **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** (Sulfate): 2 grams IV/IO x1 for Torsades
+          - {I} **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** (Sulfate): 2 grams IV/IO x1 for Torsades
 
     - type: "prose"
       title: "Notes"

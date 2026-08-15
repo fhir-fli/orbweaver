@@ -57,10 +57,10 @@ topic:
             - "Adequate Perfusion"
             - "Short Transport"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Versed"
               kind: "medication_administration"
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Fentanyl"
               kind: "medication_administration"
 
@@ -70,7 +70,7 @@ topic:
             - "Adequate Perfusion"
             - "IV Pump Available"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Propofol"
               kind: "medication_administration"
 
@@ -80,7 +80,7 @@ topic:
             - "Poor Perfusion"
             - "Poor Access"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Ketamine"
               kind: "medication_administration"
 

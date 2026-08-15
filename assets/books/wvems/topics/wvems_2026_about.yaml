@@ -81,12 +81,15 @@ topic:
     - type: "prose"
       title: "Provider scope legend"
       markdown: |
-        Badges mark the **minimum provider level** cleared for a skill/dose:
-        - (no badge) — **EMR** (all levels)
-        - **E** — EMT
-        - **A** — AEMT
-        - **I** — Intermediate
-        - **P** — Paramedic (purple **P** = Critical Care Paramedic)
+        Badges mark the **minimum provider level** cleared for a skill or dose.
+        You may use any intervention marked for **your level or lower** — see
+        [How To Use](topic:wvems-2026-003).
+        - {} — **EMR** (all levels; the print leaves this badge blank)
+        - {E} — EMT
+        - {A} — AEMT
+        - {I} — Intermediate
+        - {P} — Paramedic
+        - {P(CC)} — Critical Care Paramedic (credentialed paramedics only)
 
         Basic Life Support (BLS): EMR, EMT, AEMT · Advanced Life Support (ALS):
         Intermediate, Paramedic, Critical Care Paramedic.

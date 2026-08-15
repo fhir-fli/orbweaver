@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
+import 'package:orbweaver/widgets/scope_chip.dart';
 
 /// Renders a [ProcedureBlock] as a WVEMS-style procedure card: a scope-badged
 /// header (provider level E/A/I/P, or a neutral chip for basic/all-level) over
@@ -22,14 +23,6 @@ class ProcedureCardBlockView extends StatelessWidget {
 
   final ProcedureBlock block;
   final TopicTheme theme;
-
-  Color _scopeColor(String? scope) => switch (scope) {
-    'E' => theme.providerEmt,
-    'P' => theme.providerParamedic,
-    'A' => theme.providerAls,
-    'I' => theme.providerIntermediate,
-    _ => theme.providerAny,
-  };
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +48,8 @@ class ProcedureCardBlockView extends StatelessWidget {
             ),
             child: Row(
               children: [
-                _ScopeChip(
-                  letter: block.scope,
-                  color: _scopeColor(block.scope),
+                ScopeChip(
+                  level: ProviderLevel.fromString(block.scope),
                   size: 26,
                 ),
                 const SizedBox(width: 8),
@@ -194,14 +186,6 @@ class _StepRow extends StatelessWidget {
   final _Step step;
   final TopicTheme theme;
 
-  Color _scopeColor(String? scope) => switch (scope) {
-    'E' => theme.providerEmt,
-    'P' => theme.providerParamedic,
-    'A' => theme.providerAls,
-    'I' => theme.providerIntermediate,
-    _ => theme.providerAny,
-  };
-
   @override
   Widget build(BuildContext context) {
     // NOTE paragraph: full-width, no gutter.
@@ -288,9 +272,8 @@ class _StepRow extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 1, right: 6),
-            child: _ScopeChip(
-              letter: step.scope,
-              color: _scopeColor(step.scope),
+            child: ScopeChip(
+              level: ProviderLevel.fromString(step.scope),
               size: 19,
             ),
           ),
@@ -319,42 +302,6 @@ class _StepRow extends StatelessWidget {
 
 /// The provider-scope letter chip (E / A / I), or a blank neutral chip when the
 /// procedure is basic / all-level (matching the printed grey index cells).
-class _ScopeChip extends StatelessWidget {
-  const _ScopeChip({
-    required this.letter,
-    required this.color,
-    required this.size,
-  });
-
-  final String? letter;
-  final Color color;
-  final double size;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: size,
-      height: size,
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: Colors.black26),
-      ),
-      child: letter == null
-          ? null
-          : Text(
-              letter!,
-              style: TextStyle(
-                fontSize: size * 0.62,
-                fontWeight: FontWeight.w800,
-                color: Colors.black87,
-              ),
-            ),
-    );
-  }
-}
-
 /// Optional bottom image (e.g. the Saline Lock blood-tube order photo).
 class _ProcedureImage extends StatelessWidget {
   const _ProcedureImage({required this.path});

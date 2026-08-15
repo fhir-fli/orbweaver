@@ -149,7 +149,7 @@ topic:
           - It is usually self-limiting; consider meds if **>5 min** or multiple.
           - Aggressively treat any peds seizure not associated with [Fever](topic:wvems-2026-016).
         - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
-          - **A** **[Versed](topic:wvems-2026-drug-reference#versed)**: max peds dose is **Q 2 min x4 doses**.
+          - {A} **[Versed](topic:wvems-2026-drug-reference#versed)**: max peds dose is **Q 2 min x4 doses**.
 
     - type: "prose"
       title: "References"

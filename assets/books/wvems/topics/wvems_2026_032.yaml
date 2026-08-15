@@ -124,7 +124,7 @@ topic:
       markdown: |
         - Airway symptoms and **facial swelling** indicate a major reaction.
           - Lip and tongue swelling can be an immediate life threat.
-        - **A** Use IM meds (or IV/IO if available) for any patient in extremis.
+        - {A} Use IM meds (or IV/IO if available) for any patient in extremis.
 
     - type: "prose"
       title: "Medications"

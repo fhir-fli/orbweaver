@@ -55,8 +55,9 @@ class TopicTheme {
   // Provider badges.
   Color get providerEmt => _c('provider_emt');
   Color get providerIntermediate => _c('provider_intermediate');
-  Color get providerAls => _c('provider_als');
+  Color get providerAemt => _c('provider_aemt');
   Color get providerParamedic => _c('provider_paramedic');
+  Color get providerCriticalCare => _c('provider_critical_care');
   Color get providerAny => _c('provider_any');
 
   // Dose populations — the group label, then the row stripes that carry the

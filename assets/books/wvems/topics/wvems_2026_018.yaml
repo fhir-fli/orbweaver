@@ -139,7 +139,7 @@ topic:
           - Avoid aggressive/prophylactic fluids for **dialysis** patients.
         - **[Calcium](topic:wvems-2026-drug-reference#calcium)** (Chloride): **Avoid** with **[Rocephin®](topic:wvems-2026-drug-reference#rocephin)** or Digoxin® (fatal).
         - Consider **[Bicarb](topic:wvems-2026-drug-reference#bicarb)** if acidotic and/or wide QRS (>120 ms) on EKG.
-          - (I) **[Bicarb](topic:wvems-2026-drug-reference#bicarb)** (Sodium Bicarbonate): give 50 mEq IV/IO x1
+          - {I} **[Bicarb](topic:wvems-2026-drug-reference#bicarb)** (Sodium Bicarbonate): give 50 mEq IV/IO x1
 
     - type: "prose"
       title: "Notes"

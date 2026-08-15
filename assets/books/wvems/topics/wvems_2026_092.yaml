@@ -67,10 +67,10 @@ topic:
             - "Altered LOC"
             - "Organ Damage"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Lopressor"
               kind: "medication_administration"
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Magnesium"
               condition: "If Pregnant"
               kind: "medication_administration"

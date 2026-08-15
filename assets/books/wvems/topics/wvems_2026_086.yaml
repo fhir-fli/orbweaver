@@ -62,10 +62,10 @@ topic:
             - "One Pupil Dilated"
             - "Cushing's Triad"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "3% Saline"
               kind: "medication_administration"
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Keppra"
               kind: "medication_administration"
 

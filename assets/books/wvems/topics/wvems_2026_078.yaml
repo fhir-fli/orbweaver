@@ -53,10 +53,10 @@ topic:
         shape: "stadium"
 
       pre_decision_actions:
-        - provider_level: "P"
+        - provider_level: "P(CC)"
           text: "Induce"
           kind: "medication_administration"
-        - provider_level: "P"
+        - provider_level: "P(CC)"
           text: "Paralyze"
           kind: "medication_administration"
 
@@ -72,7 +72,7 @@ topic:
             - "Have suction ready"
             - "Max 3 attempts"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Intubate"
               kind: "procedure"
               condition: "Adult"
@@ -82,7 +82,7 @@ topic:
           criteria:
             - "BIAD may work better after meds"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "BIAD"
               kind: "procedure"
 
@@ -91,11 +91,11 @@ topic:
           criteria:
             - "Be prepared for bleeding"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Bougie Cric"
               kind: "procedure"
               condition: "Adult"
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Needle Cric"
               kind: "procedure"
               condition: "Peds"

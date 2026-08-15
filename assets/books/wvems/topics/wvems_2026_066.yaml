@@ -85,7 +85,7 @@ topic:
           - type: "caution"
             text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "Ancef (A) — If Open Fracture"
+          - text: "{A} Ancef — If Open Fracture"
           - text: "[Pain](topic:wvems-2026-020)"
           - text: "[Bleeding](topic:wvems-2026-058)"
           - text: "[Hyperkalemia](topic:wvems-2026-018)"

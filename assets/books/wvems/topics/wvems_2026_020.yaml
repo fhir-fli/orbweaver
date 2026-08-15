@@ -137,8 +137,8 @@ topic:
       title: "Medications"
       markdown: |
         - **[Tylenol®](topic:wvems-2026-drug-reference#tylenol)** (Acetaminophen): avoid if end-stage liver disease.
-          - **E** may only give PO — use OTC tabs, caps, powder, or liquid.
-          - **A** may give PO or IV/IO — for IV/IO, give slowly over 10 min.
+          - {E} may only give PO — use OTC tabs, caps, powder, or liquid.
+          - {A} may give PO or IV/IO — for IV/IO, give slowly over 10 min.
         - **[Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen)** (Advil®, Motrin®): avoid if active GI bleeding.
         - **[Toradol®](topic:wvems-2026-drug-reference#toradol)** (Ketorolac): avoid if active GI bleeding.
         - **[Fentanyl](topic:wvems-2026-drug-reference#fentanyl)** (Sublimaze®): use judgement, target **0.5–1 mcg/kg**.
@@ -147,7 +147,7 @@ topic:
           - IM/IN use: give as undiluted bolus.
           - IV/IO use: dilute in NS and give slowly over 10 min.
         - May give eye drops for abrasions or welder's flash (UV keratitis):
-          - **E** **[Tetracaine](topic:wvems-2026-drug-reference#tetracaine)** (0.5 % Ophthalmic) — 1–2 gtt into affected eye.
+          - {E} **[Tetracaine](topic:wvems-2026-drug-reference#tetracaine)** (0.5 % Ophthalmic) — 1–2 gtt into affected eye.
 
     - type: "prose"
       title: "Notes"

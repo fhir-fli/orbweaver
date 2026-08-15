@@ -39,7 +39,7 @@ topic:
       entry_chain:
         - text: "Suspected Organ Dysfunction from Infection"
           shape: "stadium"
-        - text: "(P) POC Lactic"
+        - text: "{P(CC)} POC Lactic"
           shape: "rectangle"
 
       decision:
@@ -63,10 +63,10 @@ topic:
             - "Poor Perfusion"
             - "High Likelihood"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Blood Cultures"
               kind: "diagnostic"
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Rocephin"
               kind: "medication_administration"
 

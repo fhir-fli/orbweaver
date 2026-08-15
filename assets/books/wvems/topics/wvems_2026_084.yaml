@@ -41,7 +41,7 @@ topic:
           shape: "stadium"
         - text: "Stop the [Bleeding](topic:wvems-2026-058)"
           shape: "rounded_rectangle"
-        - text: "(A) NS Bolus"
+        - text: "{A} NS Bolus"
           shape: "rectangle"
 
       decision:
@@ -73,7 +73,7 @@ topic:
             - "Poor Perfusion"
             - "Internal Bleeding"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Blood"
               kind: "medication_administration"
 

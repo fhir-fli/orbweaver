@@ -4,6 +4,7 @@ import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/fit_text.dart';
 import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
+import 'package:orbweaver/widgets/scope_chip.dart';
 
 /// Severity palette for branches. Matches the WHO-IMCI colours used on
 /// table rows. Tile/header backgrounds are pale so bold text stays
@@ -370,25 +371,18 @@ class _ProviderBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = TopicThemeScope.of(context);
-    final (letter, color) = switch (level) {
-      ProviderLevel.emt => ('E', theme.providerEmt),
-      ProviderLevel.intermediate => ('I', theme.providerIntermediate),
-      ProviderLevel.als => ('A', theme.providerAls),
-      ProviderLevel.paramedic => ('P', theme.providerParamedic),
-      ProviderLevel.any => ('', theme.providerAny),
-    };
 
     return Container(
       width: _badgeWidth,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: color,
+        color: scopeFill(theme, level),
         border: const Border(
           right: BorderSide(color: Colors.black87, width: 1),
         ),
       ),
       child: Text(
-        letter,
+        level.letter,
         style: const TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w800,

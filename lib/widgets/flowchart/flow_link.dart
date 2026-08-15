@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library_scope.dart';
+import 'package:orbweaver/models/topic.dart';
+import 'package:orbweaver/widgets/scope_chip.dart';
 
 /// Inline cross-references inside flowchart text.
 ///
@@ -20,17 +22,32 @@ import 'package:orbweaver/data/library_scope.dart';
 ///  -> "[Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), ..."
 final RegExp flowLinkPattern = RegExp(r'\[([^\]]+)\]\(topic:([^)]+)\)');
 
-/// True when [raw] carries at least one inline cross-reference.
-bool hasFlowLink(String raw) => flowLinkPattern.hasMatch(raw);
+/// Provider-scope badge, the same token `MiniMarkdown` takes: `{E}`, `{A}`,
+/// `{I}`, `{P}`, `{P(CC)}`, and `{}` for the print's blank EMR badge.
+///
+/// Flowchart text needs it because the print puts badges inside convergence
+/// stadium bullets (pp.24, 52) and inside entry-chain nodes (pp.84, 94), where
+/// there is no action tile to carry a `provider_level:`. Those were authored
+/// as "(A) NS Bolus".
+final RegExp flowBadgePattern = RegExp(r'\{(E|A|I|P\(CC\)|P|CC)?\}');
+
+final RegExp _flowInline = RegExp(
+  '${flowLinkPattern.pattern}|${flowBadgePattern.pattern}',
+);
+
+/// True when [raw] carries at least one cross-reference or badge.
+bool hasFlowLink(String raw) => _flowInline.hasMatch(raw);
 
 /// [raw] as the reader sees it, with the markup removed.
 ///
 /// Every measurement — `FitText`'s widest-word shrink, line-count estimates,
 /// layout budgets — must use this, never the raw string, or the invisible
 /// `](topic:wvems-2026-016)` counts as a very long word and shrinks the node
-/// to nothing.
-String flowLinkPlain(String raw) =>
-    raw.replaceAllMapped(flowLinkPattern, (m) => m.group(1)!);
+/// to nothing. A badge stands in as its letter plus a space, which is about
+/// the width the chip actually takes.
+String flowLinkPlain(String raw) => raw
+    .replaceAllMapped(flowLinkPattern, (m) => m.group(1)!)
+    .replaceAllMapped(flowBadgePattern, (m) => '${m.group(1) ?? ''} ');
 
 /// Renders flowchart text with its inline cross-references tappable and
 /// underlined, and plain `Text` when there are none.
@@ -86,7 +103,9 @@ class _FlowLinkTextState extends State<FlowLinkText> {
       );
     }
     return Text.rich(
-      TextSpan(children: buildFlowLinkSpans(context, widget.text, _recognizers)),
+      TextSpan(
+        children: buildFlowLinkSpans(context, widget.text, _recognizers),
+      ),
       textAlign: widget.textAlign,
       style: widget.style,
       maxLines: widget.maxLines,
@@ -105,9 +124,23 @@ List<InlineSpan> buildFlowLinkSpans(
 ) {
   final spans = <InlineSpan>[];
   var last = 0;
-  for (final m in flowLinkPattern.allMatches(raw)) {
+  for (final m in _flowInline.allMatches(raw)) {
     if (m.start > last) {
       spans.add(TextSpan(text: raw.substring(last, m.start)));
+    }
+    if (m.group(2) == null) {
+      // A badge: groups 1-2 belong to the link alternative, group 3 to this.
+      spans.add(
+        WidgetSpan(
+          alignment: PlaceholderAlignment.middle,
+          child: Padding(
+            padding: const EdgeInsets.only(right: 3),
+            child: ScopeChip(level: ProviderLevel.fromString(m.group(3))),
+          ),
+        ),
+      );
+      last = m.end;
+      continue;
     }
     final target = m.group(2)!.split('#');
     final recognizer = TapGestureRecognizer()

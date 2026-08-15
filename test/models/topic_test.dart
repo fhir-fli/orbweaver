@@ -50,7 +50,7 @@ void main() {
       expect(severe.criteria, ['Poor Perfusion', 'Altered LOC']);
       expect(severe.actions.length, 4);
       expect(severe.actions.first.text, 'NS Bolus');
-      expect(severe.actions.first.providerLevel, ProviderLevel.als);
+      expect(severe.actions.first.providerLevel, ProviderLevel.aemt);
       expect(severe.actions.first.kind, ActionKind.medicationAdministration);
     });
 

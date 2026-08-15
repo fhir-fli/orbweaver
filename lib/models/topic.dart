@@ -65,19 +65,43 @@ enum ActionKind {
   };
 }
 
+/// WVEMS credentialing strip. The letter on a badge is the *minimum* level
+/// cleared for that intervention — p.3: "You may use any intervention marked
+/// for your level or lower."
+///
+/// [aemt] is the print's `A`. It reads as ALS to most ears but the book files
+/// AEMT under **BLS**, so the enum is named for the credential, not the tier.
+///
+/// [paramedic] and [criticalCare] both draw a `P`; the print separates them by
+/// fill. Plain paramedic is flat pink and appears exactly once in 166 pages
+/// (the p.2 legend); all 29 body `P` badges are Critical Care, which the print
+/// gives a purple gradient. Critical Care is a credential *on top of*
+/// paramedic — p.3: "Critical Care (CC) is for credentialed paramedics only."
 enum ProviderLevel {
-  als,
+  aemt,
   emt,
   intermediate,
   paramedic,
+  criticalCare,
   any;
 
   static ProviderLevel fromString(String? s) => switch (s) {
-    'A' => als,
+    'A' => aemt,
     'E' => emt,
     'I' => intermediate,
     'P' => paramedic,
+    'P(CC)' || 'CC' => criticalCare,
     _ => any,
+  };
+
+  /// The character printed inside the badge. Blank for [any] — the print's
+  /// empty pale-grey band, which means EMR (every level).
+  String get letter => switch (this) {
+    emt => 'E',
+    aemt => 'A',
+    intermediate => 'I',
+    paramedic || criticalCare => 'P',
+    any => '',
   };
 }
 

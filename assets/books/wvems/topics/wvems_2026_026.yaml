@@ -101,7 +101,7 @@ topic:
         - **[Ketamine](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®): Dilute in NS and **give slowly over 10 min**.
           - Use [weight-based peds dosing](topic:wvems-2026-144) for adults under 110 lbs (50 kg).
         - Consider maintenance drip if **prior VT/VF** & **transport > 30 min**:
-          - (I) **[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®): 1 mg/min IV/IO, adult only.
+          - {I} **[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®): 1 mg/min IV/IO, adult only.
 
     - type: "prose"
       title: "Notes"

@@ -38,7 +38,7 @@ topic:
       markdown: |
         Step-by-step skills from the WVEMS card set (pp.96-108). Each card's
         badge marks the **minimum provider scope** cleared for that skill —
-        **E**, **A**, **I**, **P** (ascending); no badge = all levels.
+        {E} {A} {I} {P} (ascending); no badge = all levels.
         Pink bands flag **age/peds** distinctions; lavender bands flag
         **Critical Care** options; dashed callouts are **scope-gated**.
 
@@ -527,7 +527,7 @@ topic:
     - type: "procedure_card"
       name: "RSI Prep Checklist"
       image: "assets/books/wvems/images/eq_laryngoscope.jpg"
-      scope: "P"
+      scope: "P(CC)"
       steps:
         - "Consider a standardized checklist."
         - "- E.g: https://bit.ly/NRVEMS_CCAirway"
@@ -544,7 +544,7 @@ topic:
     - type: "procedure_card"
       name: "Ventilator"
       image: "assets/books/wvems/images/eq_ventilator.jpg"
-      scope: "P"
+      scope: "P(CC)"
       steps:
         - "Attach appropriate **patient circuit**."
         - "Attach high pressure **oxygen hose**."
@@ -567,7 +567,7 @@ topic:
     - type: "procedure_card"
       name: "Cric"
       image: "assets/books/wvems/images/eq_cric.jpg"
-      scope: "P"
+      scope: "P(CC)"
       steps:
         - "Confirm all alternatives have failed."
         - "Prepare supplies and **suction**."
@@ -591,7 +591,7 @@ topic:
     - type: "procedure_card"
       name: "Finger Thoracostomy"
       image: "assets/books/wvems/images/eq_safetriangle.jpg"
-      scope: "P"
+      scope: "P(CC)"
       anchor: "finger-thoracostomy"
       steps:
         - "Confirm **pulseless and apneic**."

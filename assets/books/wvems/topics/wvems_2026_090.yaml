@@ -62,10 +62,10 @@ topic:
             - "Rales, Orthopnea"
             - "HTN, JVD, Cough"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Nitro Drip"
               kind: "medication_administration"
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Lasix"
               kind: "medication_administration"
 

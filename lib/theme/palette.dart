@@ -35,15 +35,17 @@ const Map<String, Color> kRoleDefaults = {
 
   // Provider-level badges (WVEMS credentialing strip). Fills sampled from
   // the printed legend (p.2) and confirmed against all 363 body badges.
-  // `provider_paramedic` is deliberately NOT the print's flat pink #D5A6BD
-  // yet: that colour appears exactly once in the book (the legend), while
-  // all 32 body uses of a `P` are the Critical-Care gradient. Until a
-  // distinct critical-care level exists, repointing this would recolour 32
-  // real badges to a colour their content does not mean.
+  //
+  // The two `P`s are separate roles now that `ProviderLevel.criticalCare`
+  // exists. `provider_paramedic` is the print's flat pink, which appears
+  // exactly once in 166 pages (the legend); every body `P` is Critical Care
+  // and takes the purple the print gives it. Before the split, one lavender
+  // stood for both and the distinction was unrenderable.
   'provider_emt': Color(0xFFFFD966),
   'provider_intermediate': Color(0xFF6FA8DC),
-  'provider_als': Color(0xFF93C47D),
-  'provider_paramedic': Color(0xFFAB91D8),
+  'provider_aemt': Color(0xFF93C47D),
+  'provider_paramedic': Color(0xFFD5A6BD),
+  'provider_critical_care': Color(0xFFAB91D8),
   'provider_any': Color(0xFFEFEFEF),
 
   // Dose-table population coding. In the printed book the *row fill* of a

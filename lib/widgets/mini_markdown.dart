@@ -1,10 +1,13 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library_scope.dart';
+import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/widgets/anchor_scope.dart';
+import 'package:orbweaver/widgets/scope_chip.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Renders a minimal subset of markdown as a vertical [Column]:
+///   - `{E}` / `{A}` / `{I}` / `{P}` / `{P(CC)}` / `{}` provider-scope badges
 ///   - `**bold**` inline emphasis
 ///   - `[text](target)` inline links (CommonMark). Targets:
 ///       `topic:<id>`  → open another topic (cross-book, by logical id)
@@ -189,9 +192,12 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
     }
 
     // Order matters: explicit `[text](target)` first, then bold, then a bare
-    // URL (so a URL already inside a markdown link isn't matched twice).
+    // URL (so a URL already inside a markdown link isn't matched twice), then
+    // the provider-scope badge. Braces are used by none of the others, so the
+    // badge token cannot collide with the link syntax.
     final re = RegExp(
-      r'\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*|(https?://[^\s)\]]+)',
+      r'\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*|(https?://[^\s)\]]+)'
+      r'|\{(E|A|I|P\(CC\)|P|CC)?\}',
     );
     var last = 0;
     for (final m in re.allMatches(stashed)) {
@@ -210,6 +216,23 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
         // Bold: recurse into the inner content (still stashed) so any link
         // it contains is parsed too, not leaked as raw markup.
         spans.addAll(_parseInline(m.group(3)!, linkColor, bold: true));
+      } else if (m.group(0)!.startsWith('{')) {
+        // Provider-scope badge. The print sets these inline in prose and band
+        // bullets 31 times across 21 pages — the place a reader looks for the
+        // permission boundary — and the app had no way to draw one, so they
+        // were authored as two bold characters.
+        spans.add(
+          WidgetSpan(
+            alignment: PlaceholderAlignment.middle,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 3),
+              child: ScopeChip(
+                level: ProviderLevel.fromString(m.group(5)),
+                size: widget.fontSize * 1.15,
+              ),
+            ),
+          ),
+        );
       } else {
         // Bare URL: linkify it. Trailing sentence punctuation stays plain.
         var url = restore(m.group(4)!);

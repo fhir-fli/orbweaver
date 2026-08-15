@@ -52,7 +52,7 @@ topic:
             - "Adequate help"
             - "Longer transport"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Levophed"
               kind: "medication_administration"
 
@@ -62,10 +62,10 @@ topic:
             - "Transient need"
             - "Shock Index > 0.8"
           actions:
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Epi Push"
               kind: "medication_administration"
-            - provider_level: "P"
+            - provider_level: "P(CC)"
               text: "Neo Push"
               kind: "medication_administration"
 

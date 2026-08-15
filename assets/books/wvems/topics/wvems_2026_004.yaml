@@ -131,7 +131,7 @@ topic:
         - Use caution with **[NPA](topic:wvems-2026-096#npa-opa)** if any signs of skull fx. or facial trauma.
         - Secure **[BIAD](topic:wvems-2026-096#biad)** well. Use tape or manufactured holding device.
           - May place c-collar (even without trauma) to help stabilize BIAD.
-          - **A** Consider placing an **[OG-Tube](topic:wvems-2026-096#og-tube)** if BIAD will accommodate it.
+          - {A} Consider placing an **[OG-Tube](topic:wvems-2026-096#og-tube)** if BIAD will accommodate it.
 
     - type: "band_callout"
       band: "critical_care"
