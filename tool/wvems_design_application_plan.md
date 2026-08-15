@@ -143,8 +143,10 @@ or procedure name ("Versed" → p.143), so phrase → card is an exact match.
       "Fever, Pain, Nausea" is three links — which a per-node `link_id` cannot
       express, and that bullet had all three pointing at Pain. 73 redundant
       `link_id`s dropped; 18 exceptions reported.
-- [ ] **2f — outbound links from the appendix topics.** 191 more, leaving the
-      drug reference, procedures, policies and peds reference.
+- [x] **2f — outbound links from the appendix topics.** 66 restored, 96 already
+      correct. Needed `appendix_range()` (a printed page → its line range inside
+      a single-file topic) and the `--appendix` flag. A drug card can now reach
+      the procedure that administers it and the other drug cards.
 
 ### What Batch 2 could not restore
 
@@ -221,3 +223,6 @@ tables not shrunk, section title ratio, and small print for URLs/attributions.
   the 46 even pages. Verified on p.34 (three references in one bullet, Nausea
   now opens p.22) and p.22 (the dose table's Zofran opens the drug reference;
   the action tile above it stays unlinked, as in print).
+- 2026-08-14 — **Batch 2 complete** (`944958a`). 642 cross-references restored
+  in total: 253 prose, 323 flowchart, 66 appendix. Unrestorable and conflicting
+  ones are listed in `tool/wvems_links_not_restorable.md`.
