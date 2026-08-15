@@ -1109,9 +1109,8 @@ class _CriticalCareLinkPill extends StatelessWidget {
           border: Border.all(color: theme.ccLinkBorder, width: 1.5),
           borderRadius: BorderRadius.circular(999),
         ),
-        child: Text(
+        child: FlowLinkText(
           link.text,
-          textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w700,
