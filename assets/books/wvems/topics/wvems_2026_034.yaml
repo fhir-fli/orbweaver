@@ -62,11 +62,11 @@ topic:
         - title: "AAA"
           bullets:
             - "\"Pulsatile Mass\""
-            - "Monitor for [Shock](topic:wvems-2025-008)"
+            - "Monitor for [Shock](topic:wvems-2026-008)"
         - title: "GI Bleed"
           bullets:
             - "Red or Black Vomit"
-            - "Monitor for [Shock](topic:wvems-2025-008)"
+            - "Monitor for [Shock](topic:wvems-2026-008)"
         - title: "Trauma"
           bullets:
             - "Injury, Fall, MVC"
@@ -104,11 +104,11 @@ topic:
       markdown: |
         - This protocol is for **medical** causes of abdominal pain.
           - For traumatic abdominal pain, refer to [Trunk Injury](topic:wvems-2026-064).
-        - Prepare for [Hypotension](topic:wvems-2025-008) if any reported blood loss, or suspected:
+        - Prepare for [Hypotension](topic:wvems-2026-008) if any reported blood loss, or suspected:
           - **AAA**: Midline "pulsatile mass" in the elderly
           - **GI Bleeding**: Black stool (melena) or "coffee ground" emesis
         - Inquire about [Pregnancy](topic:wvems-2026-048) and consider complications.
-          - Consider **ectopic** in any pregnant female, watch for [shock](topic:wvems-2025-008).
+          - Consider **ectopic** in any pregnant female, watch for [shock](topic:wvems-2026-008).
         - **Avoid oral** food and fluids. (Oral meds are OK.)
           - Keep patients **NPO** (**Nil Per Os**: Lat. "nothing through the mouth")
 

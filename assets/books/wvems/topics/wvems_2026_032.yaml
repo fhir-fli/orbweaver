@@ -85,7 +85,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Circulation](topic:wvems-2025-008)"
+          - text: "[Circulation](topic:wvems-2026-008)"
           - text: "[Dyspnea](topic:wvems-2026-030)"
 
       dose_table:
@@ -130,7 +130,7 @@ topic:
       title: "Medications"
       markdown: |
         - **[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): use **IM**. Treat major reactions aggressively.
-          - Use for any major **[Airway](topic:wvems-2026-004), [Breathing](topic:wvems-2026-006) or [Circulation](topic:wvems-2025-008)** problems.
+          - Use for any major **[Airway](topic:wvems-2026-004), [Breathing](topic:wvems-2026-006) or [Circulation](topic:wvems-2026-008)** problems.
           - Be cautious in patients **over 50 y/o** or with CAD or chest pain.
           - **EpiPen Jr.®**: use for 3–8 y/o. **EpiPen®**: use for 9+ y/o.
         - **[Albuterol](topic:wvems-2026-drug-reference#albuterol)** (Proventil®, Ventolin®): nebulised for bronchospasm.

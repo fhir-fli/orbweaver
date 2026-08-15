@@ -85,7 +85,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Circulation (shock)](topic:wvems-2025-008)"
+          - text: "[Circulation (shock)](topic:wvems-2026-008)"
           - text: "[Altered LOC](topic:wvems-2026-036)"
 
       dose_table:

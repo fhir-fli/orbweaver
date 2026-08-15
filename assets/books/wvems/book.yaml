@@ -51,7 +51,7 @@ book:
       children:
         - topic: "topics/wvems_2026_004.yaml"
         - topic: "topics/wvems_2026_006.yaml"
-        - topic: "topics/wvems_2025_008.yaml"
+        - topic: "topics/wvems_2026_008.yaml"
         - topic: "topics/wvems_2026_010.yaml"
         - topic: "topics/wvems_2026_012.yaml"
         - topic: "topics/wvems_2026_016.yaml"
@@ -168,4 +168,5 @@ book:
         accent_fill: "0xFFECEFF1"
         accent_branch: "0xFF607D8B"
       children:
+        - topic: "topics/wvems_2026_003.yaml"
         - topic: "topics/wvems_2026_about.yaml"

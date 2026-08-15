@@ -81,7 +81,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Circulation](topic:wvems-2025-008)"
+          - text: "[Circulation](topic:wvems-2026-008)"
           - text: "Bleeding"
             link_id: "wvems-2026-058"
           - text: "[Vasopressors](topic:wvems-2026-082)"

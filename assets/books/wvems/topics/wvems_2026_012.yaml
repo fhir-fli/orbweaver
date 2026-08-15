@@ -86,7 +86,7 @@ topic:
         shape: "stadium"
         bullets:
           - text: "[Pain](topic:wvems-2026-020), [Breathing](topic:wvems-2026-006), [Hyper K+](topic:wvems-2026-018)"
-          - text: "[Shock](topic:wvems-2025-008), [N/V](topic:wvems-2026-022), [OD / Tox](topic:wvems-2026-040)"
+          - text: "[Shock](topic:wvems-2026-008), [N/V](topic:wvems-2026-022), [OD / Tox](topic:wvems-2026-040)"
 
       dose_table:
         - drug: "[Atropine](topic:wvems-2026-drug-reference#atropine)"

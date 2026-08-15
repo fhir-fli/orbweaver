@@ -87,7 +87,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Breathing](topic:wvems-2026-006), [Circulation](topic:wvems-2025-008)"
+          - text: "[Breathing](topic:wvems-2026-006), [Circulation](topic:wvems-2026-008)"
           - text: "[Tachy](topic:wvems-2026-014), [Brady](topic:wvems-2026-012), [Allergy](topic:wvems-2026-032)"
           - text: "[Pulmonary Edema](topic:wvems-2026-090)"
 

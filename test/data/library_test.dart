@@ -429,12 +429,12 @@ void main() {
     });
 
     test('wvems: 9 groups (4 sections + drug ref + procedures + policies + '
-        'peds ref + about), 51 topics total', () {
+        'peds ref + front matter), 52 topics total', () {
       final b = loadBook('wvems');
       expect(b['topics'], isNull);
       final contents = b['contents'] as YamlList;
       expect(contents, hasLength(9));
-      expect(leafCount(contents), 51);
+      expect(leafCount(contents), 52);
     });
 
     test('protocolbook: section groups (Emergency 15, Ingestions 11, '

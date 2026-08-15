@@ -105,7 +105,7 @@ topic:
     - type: "prose"
       title: "Imperatives"
       markdown: |
-        - Critical to avoid [Hypoxia](topic:wvems-2026-006) and [Hypotension](topic:wvems-2025-008). Treat aggressively.
+        - Critical to avoid [Hypoxia](topic:wvems-2026-006) and [Hypotension](topic:wvems-2026-008). Treat aggressively.
           - Target **SBP > 110 mmHg** and **SpO2 96–99%** and **EtCO2 35–45 mmHg**.
         - Use cot to **sit patient up at 30°** if lower spine injury unlikely.
         - One dilated pupil suggests herniation. Bilateral dilation is ominous.

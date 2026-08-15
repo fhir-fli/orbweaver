@@ -91,7 +91,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Circulation (shock)](topic:wvems-2025-008)"
+          - text: "[Circulation (shock)](topic:wvems-2026-008)"
           - text: "[Medical Code](topic:wvems-2026-024)"
 
       dose_table:

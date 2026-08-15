@@ -1,0 +1,197 @@
+# ============================================================
+# WVEMS 2026 Protocol 8 — Circulation / Shock
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+#
+# Replaces wvems_2025_008.yaml, which shipped the 2025 edition's flowchart
+# with a flattened, partly-2025 prose section and no page split. p.9's prose
+# page is transcribed here for the first time (audit §5.1 listed it as one of
+# the two whole pages missing from the app).
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-008"
+  version: "v260101"
+  title: "Circulation / Shock"
+  list_subtitle: "2026-008 · NS Bolus / Epi Drip / Dopamine"
+  last_reviewed: "Dec 2025"
+  tags: ["circulation", "shock", "hypotension", "low bp", "fluid bolus", "perfusion", "dirty epi", "pressor"]
+  aliases:
+    - "Hypotension"
+    - "Low BP"
+    - "Fluid Bolus"
+    - "Dirty Epi"
+  category: "universal"
+
+  # Sticky: flowchart page + prose page each snap to a full screen.
+  layout: "paged"
+
+  pages:
+
+  - page_number: 8
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant — 3 branches)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: |
+          Systolic Under:
+          • Adult (14+): 90 mmHg  ·  or MAP 65
+          • Child (1–13): 70 mmHg  ·  or MAP 50
+          • Infant (< 1): 60 mmHg  ·  or MAP 40
+        shape: "stadium"
+
+      decision:
+        text: "Severity?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "mild"
+          label: "Mild"
+          criteria:
+            - "Adequate Perfusion"
+            - "No Symptoms"
+          actions:
+            - provider_level: "A"
+              text: "Saline Lock"
+              kind: "procedure"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+        - id: "moderate"
+          label: "Moderate"
+          criteria:
+            - "Adequate Perfusion"
+            - "Tachy or Dizzy"
+          actions:
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+        - id: "severe"
+          label: "Severe"
+          criteria:
+            - "Poor Perfusion"
+            - "Altered LOC"
+          actions:
+            - provider_level: "A"
+              text: "NS Bolus"
+              kind: "medication_administration"
+            - provider_level: "I"
+              text: "Epi Drip"
+              kind: "medication_administration"
+            - provider_level: "I"
+              text: "Dopamine"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "12-Lead"
+              kind: "diagnostic"
+
+      convergence:
+        text: "Consider"
+        shape: "stadium"
+        bullets:
+          - text: "[Tachycardia](topic:wvems-2026-014), [Bradycardia](topic:wvems-2026-012)"
+          - text: "[Bleeding](topic:wvems-2026-058), [Altered LOC](topic:wvems-2026-036)"
+
+      critical_care_link:
+        text: "[Pressors](topic:wvems-2026-082), [Blood](topic:wvems-2026-084)"
+
+      dose_table:
+        - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+          dose: "500 mL"
+          route: "IV/IO"
+          frequency: "x4"
+          population: "adult"
+        - drug: "[Epi Drip](topic:wvems-2026-drug-reference#epi-drip-epi-push)"
+          dose: "1 drop per second"
+          route: "IV/IO"
+          frequency: "Titrated Drip"
+          population: "adult"
+        - drug: "[Dopamine](topic:wvems-2026-drug-reference#dopamine)"
+          dose: "5 mcg/kg/min"
+          route: "IV/IO"
+          frequency: "Titrated Drip"
+          population: "adult"
+
+  - page_number: 9
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Prose blocks (notes page)
+    # ────────────────────────────────────────────────
+
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "Shock Imperatives"
+          highlight: true
+          markdown: |
+            - Consider underlying causes:
+              - [Bradycardia](topic:wvems-2026-012), [Tachycardia](topic:wvems-2026-014)
+              - [Cardiac](topic:wvems-2026-028), [Anaphylaxis](topic:wvems-2026-032)
+              - [Diabetic](topic:wvems-2026-038), [Overdose / Tox](topic:wvems-2026-040)
+              - [Major Trauma](topic:wvems-2026-056), [Exposure](topic:wvems-2026-068)
+        - type: "prose"
+          title: "Poor Perfusion"
+          callout: true
+          markdown: |
+            Suspect if **several** of these:
+            - **Altered Mental Status**
+            - Skin Pale, Cool, Diaphoretic
+            - Tachycardia, Hypotension
+            - Dyspnea, Tachypnea
+
+    - type: "prose"
+      title: "Medication"
+      markdown: |
+        - **[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)** (0.9% Saline): indicated for **poor perfusion**.
+          - Monitor for edema & rales before & after fluid administration.
+        - **[Epi Drip](topic:wvems-2026-drug-reference#epi-drip-epi-push)** (Epinephrine): Mix bag of **1 mcg/mL** and use as follows:
+          - Add 1 mg **Epi** into 1,000 mL bag **-or-** 0.5 mg in 500 mL bag of **NS**
+          - Adults (14+ y/o): Use a macro drip (10 or 15 gtt/mL) set.
+          - Peds (0–13 y/o): Use a micro drip (60 gtt/mL) set.
+          - Start at 1 drop per second and **titrate as needed**.
+          - Avoid **Epi** if active chest pain and confirmed [STEMI](topic:wvems-2026-088).
+        - **[Dopamine](topic:wvems-2026-drug-reference#dopamine)** (Intropin®): for medical causes refractory to **Epi**.
+          - **Use a micro drip** (60 gtt/mL) set. May titrate **up to 4x** if needed.
+          - Average adults start around **1 drop every 5 sec** (with micro set).
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Use **balanced** resuscitation in [trauma](topic:wvems-2026-056). Pressors are a last resort.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Mean Arterial Pressure (**MAP**) is a better indicator when available.
+          - Consider [Pressors](topic:wvems-2026-082) or [Blood](topic:wvems-2026-084) if indicated and credentialed for CC.
+
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatrics"
+      markdown: |
+        - The majority of peds decompensation is airway related.
+        - Fluids are important for hypotension. Pressors are a last resort.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
+        - Limmer D, O'Keefe MF. Emergency Care 15th ed. Chapter 7, 29
+
+        NEMSIS: 9914127

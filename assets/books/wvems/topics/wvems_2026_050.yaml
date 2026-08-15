@@ -102,7 +102,7 @@ topic:
         shape: "stadium"
         bullets:
           - text: "[Bradycardia](topic:wvems-2026-012)"
-          - text: "[Circulation / Shock](topic:wvems-2025-008)"
+          - text: "[Circulation / Shock](topic:wvems-2026-008)"
 
       dose_table:
         - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
@@ -127,7 +127,7 @@ topic:
         - May **try 30 sec of ventilation** before starting compressions.
           - If **T-piece Resuscitator** is unavailable: use neonatal **[BVM](topic:wvems-2026-096#bvm)**.
           - **EKG** can provide rapid & reliable pulse rate & response.
-        - Less common causes of distress: [PTX](topic:wvems-2026-006), [Hypoglycemia](topic:wvems-2026-038), [Shock](topic:wvems-2025-008).
+        - Less common causes of distress: [PTX](topic:wvems-2026-006), [Hypoglycemia](topic:wvems-2026-038), [Shock](topic:wvems-2026-008).
 
     - type: "row"
       blocks:

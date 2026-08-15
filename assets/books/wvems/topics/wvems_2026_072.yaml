@@ -68,7 +68,7 @@ topic:
         bullets:
           - text: "Breathing"
             link_id: "wvems-2026-006"
-          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Shock](topic:wvems-2026-008)"
           - text: "OD / Tox"
             link_id: "wvems-2026-040"
           - text: "[Antidote](topic:wvems-2026-096#adult-antidotes)"

@@ -74,7 +74,7 @@ topic:
         shape: "stadium"
         bullets:
           - text: "[Breathing](topic:wvems-2026-006)"
-          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Shock](topic:wvems-2026-008)"
           - text: "[Chest Pain](topic:wvems-2026-028)"
           - text: "Dyspnea"
             link_id: "wvems-2026-030"
@@ -110,13 +110,13 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **[Nitro Drip](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): Monitor very closely for [hypotension](topic:wvems-2025-008).
+        - **[Nitro Drip](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): Monitor very closely for [hypotension](topic:wvems-2026-008).
           - **Requires a pump** — it is inappropriate to dose by gravity gtt.
           - **Titrate down** rapidly to maintain **SBP above 90 mmHg**.
           - May **start with two SL tabs** (0.4 mg SL x2) while preparing drip.
           - Use caution with history of aortic stenosis or pulmonary HTN.
           - Contraindicated if recent (36 h) use of any [PDE5 inhibitor](topic:wvems-2026-028).
-          - Stop drip and consider [vasopressors](topic:wvems-2026-082) if persistent [hypotension](topic:wvems-2025-008).
+          - Stop drip and consider [vasopressors](topic:wvems-2026-082) if persistent [hypotension](topic:wvems-2026-008).
         - **[Lasix®](topic:wvems-2026-drug-reference#lasix)** (Furosemide): Effect is delayed, but may be beneficial.
 
     - type: "prose"

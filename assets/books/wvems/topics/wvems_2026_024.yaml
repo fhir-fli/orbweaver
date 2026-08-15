@@ -168,7 +168,7 @@ topic:
         - Use caution with **[compressions](topic:wvems-2026-096#chest-compression)** and **[defib](topic:wvems-2026-096#defib)** in a moving vehicle.
         - **EtCo2** can help identify ROSC and guide termination decision.
         - A well run CODE should operate like a **pit crew**. Focus on your job.
-        - Consider causes: [Shock](topic:wvems-2025-008), [OD/Tox](topic:wvems-2026-040), [Hypoglycemia](topic:wvems-2026-038), [Hyperkalemia](topic:wvems-2026-018), etc.
+        - Consider causes: [Shock](topic:wvems-2026-008), [OD/Tox](topic:wvems-2026-040), [Hypoglycemia](topic:wvems-2026-038), [Hyperkalemia](topic:wvems-2026-018), etc.
 
     - type: "band_callout"
       band: "peds"

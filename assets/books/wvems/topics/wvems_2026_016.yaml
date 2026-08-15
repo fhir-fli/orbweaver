@@ -76,7 +76,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Circulation](topic:wvems-2025-008), [Tachy](topic:wvems-2026-014)"
+          - text: "[Circulation](topic:wvems-2026-008), [Tachy](topic:wvems-2026-014)"
           - text: "[Cold / Heat](topic:wvems-2026-068)"
           - text: "[Sepsis](topic:wvems-2026-094)"
 

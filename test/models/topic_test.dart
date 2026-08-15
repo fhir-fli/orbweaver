@@ -4,21 +4,21 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:orbweaver/models/topic.dart';
 
 void main() {
-  group('Topic.fromYamlString (WVEMS 2025-008)', () {
+  group('Topic.fromYamlString (WVEMS 2026-008)', () {
     late Topic topic;
 
     setUpAll(() {
       final yaml = File(
-        'assets/books/wvems/topics/wvems_2025_008.yaml',
+        'assets/books/wvems/topics/wvems_2026_008.yaml',
       ).readAsStringSync();
       topic = Topic.fromYamlString(yaml);
     });
 
     test('parses top-level metadata', () {
-      expect(topic.id, 'wvems-2025-008');
+      expect(topic.id, 'wvems-2026-008');
       expect(topic.title, 'Circulation / Shock');
-      expect(topic.version, 'v250218');
-      expect(topic.lastReviewed, '2024-10');
+      expect(topic.version, 'v260101');
+      expect(topic.lastReviewed, 'Dec 2025');
       expect(topic.category, TopicCategory.universal);
       expect(topic.pageNumber, 8);
       expect(topic.aliases, contains('Hypotension'));
@@ -54,21 +54,27 @@ void main() {
       expect(severe.actions.first.kind, ActionKind.medicationAdministration);
     });
 
-    test('severity flowchart convergence bullets with link ids', () {
+    test('convergence bullets carry several references each', () {
       final conv =
           (topic.blocks.first as FlowchartBlock).severity!.convergence!;
       expect(conv.text, 'Consider');
-      expect(conv.bullets.length, 6);
-      expect(conv.bullets.first.text, 'Tachycardia');
-      // Cross-link year-typo fix: 008's Consider links were corrected
-      // 2025→2026 when cross-topic navigation went live.
-      expect(conv.bullets.first.linkId, 'wvems-2026-014');
+      // Print sets two bullets of two references each, not six bullets of one:
+      // a per-bullet `link_id` could only have carried half of them.
+      expect(conv.bullets.length, 2);
+      expect(conv.bullets.first.text, contains('[Tachycardia](topic:wvems-2026-014)'));
+      expect(conv.bullets.first.text, contains('[Bradycardia](topic:wvems-2026-012)'));
+      expect(conv.bullets.first.linkId, isNull);
     });
 
     test('severity flowchart dose table rows', () {
       final doses = (topic.blocks.first as FlowchartBlock).severity!.doseTable;
       expect(doses.length, 3);
-      expect(doses.first.drug, 'NS Bolus');
+      // The drug name is the print's cross-reference into the drug reference.
+      expect(doses.first.drug, contains('NS Bolus'));
+      expect(
+        doses.first.drug,
+        contains('topic:wvems-2026-drug-reference#ns-bolus'),
+      );
       expect(doses.first.dose, '500 mL');
       expect(doses.first.population, DosePopulation.adult);
     });
@@ -78,20 +84,27 @@ void main() {
       final titles = prose.map((p) => p.title).toList();
       // 'Pediatrics' is deliberately absent: it is a BandCalloutBlock now, not
       // a ProseBlock — see the peds-band test below.
-      expect(titles, [
-        'Poor Perfusion',
-        'Shock Imperatives',
-        'Medication',
-        'Notes',
-        'References',
-      ]);
+      expect(titles, ['Medication', 'Notes', 'References']);
+    });
+
+    test('Shock Imperatives and Poor Perfusion sit side by side', () {
+      // The print sets them as a two-column pair at the top of p.9, the same
+      // shape p.59 uses for TRAUMA Alert + Poor Perfusion.
+      final row = topic.blocks.whereType<RowBlock>().single;
+      final pair = row.blocks.cast<ProseBlock>().toList();
+      expect(pair.map((p) => p.title), ['Shock Imperatives', 'Poor Perfusion']);
+      expect(pair.first.highlight, isTrue);
+      expect(pair.last.callout, isTrue);
+      expect(
+        pair.first.markdown,
+        contains('[Bradycardia](topic:wvems-2026-012)'),
+      );
     });
 
     test('highlight flag set for the callout, not for pediatrics', () {
       final byTitle = {
         for (final p in topic.blocks.whereType<ProseBlock>()) p.title: p,
       };
-      expect(byTitle['Poor Perfusion']!.highlight, isTrue);
       expect(byTitle['Medication']!.highlight, isFalse);
       // Pediatrics must NOT be a highlighted prose block any more: `highlight`
       // tints with the CHAPTER ACCENT, which rendered the peds section salmon
@@ -125,8 +138,9 @@ void main() {
       final meds = topic.blocks.whereType<ProseBlock>().firstWhere(
         (p) => p.title == 'Medication',
       );
-      expect(meds.markdown, contains('**NS Bolus**'));
+      expect(meds.markdown, contains('NS Bolus'));
       expect(meds.markdown, contains('Dopamine'));
+      expect(meds.markdown, contains('0.9% Saline'));
     });
 
     test('TopicAction supports timing/condition annotations', () {

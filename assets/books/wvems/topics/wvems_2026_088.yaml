@@ -75,7 +75,7 @@ topic:
             text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
           - text: "[Breathing](topic:wvems-2026-006)"
-          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Shock](topic:wvems-2026-008)"
           - text: "Pain"
             link_id: "wvems-2026-020"
           - text: "Chest Pain"
@@ -102,7 +102,7 @@ topic:
       markdown: |
         - Don't forget [the basics](topic:wvems-2026-028): **O2**, **ASA** & **Nitro**. Start **IV in left hand**.
         - Perform **15-Lead EKG** if: inferior STEMI or septal ST depressions.
-          - ST elevation in V4R is right sided MI — **Nitro** may cause [shock](topic:wvems-2025-008).
+          - ST elevation in V4R is right sided MI — **Nitro** may cause [shock](topic:wvems-2026-008).
           - ST elevations in V8 and V9 indicates a **posterior STEMI**.
         - If V-pace or LBBB: any of **Sgarbossa's** criteria suggests a STEMI.
 

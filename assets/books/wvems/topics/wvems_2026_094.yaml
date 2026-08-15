@@ -74,7 +74,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Shock](topic:wvems-2026-008)"
           - text: "[Fever](topic:wvems-2026-016)"
           - text: "[Vasopressors](topic:wvems-2026-082)"
 

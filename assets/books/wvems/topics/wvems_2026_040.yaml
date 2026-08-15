@@ -83,7 +83,7 @@ topic:
         shape: "stadium"
         bullets:
           - text: "Co-ingestions, [Brady](topic:wvems-2026-012), [N/V](topic:wvems-2026-022)"
-          - text: "[Shock](topic:wvems-2025-008), [Hyperthermia](topic:wvems-2026-068)"
+          - text: "[Shock](topic:wvems-2026-008), [Hyperthermia](topic:wvems-2026-068)"
           - text: "Patient DECON"
 
       dose_table:

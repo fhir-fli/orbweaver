@@ -36,7 +36,7 @@ three link tools (see the plan).
 | 23 | Zofran | `wvems-2026-drug-reference#zofran` | the printed line has no counterpart in the app — print: "- Strongly consider Zofran with any invasive airway device." |
 | 23 | Zofran | `wvems-2026-drug-reference#zofran` | the printed line has no counterpart in the app — print: "- May consider Zofran for dry heaving after stomach is empty" |
 | 29 | Aspirin | `wvems-2026-drug-reference#aspirin` | the printed line has no counterpart in the app — print: "• Aspirin and Nitro are contraindicated in peds chest pain." |
-| 29 | Hypotensive | `wvems-2025-008` | the printed line has no counterpart in the app — print: "- Use caution if Hypotensive or suspected inferior/right STE" |
+| 29 | Hypotensive | `wvems-2026-008` | the printed line has no counterpart in the app — print: "- Use caution if Hypotensive or suspected inferior/right STE" |
 | 29 | Nitro | `wvems-2026-drug-reference#nitro-nitro-drip` | the printed line has no counterpart in the app — print: "• Aspirin and Nitro are contraindicated in peds chest pain." |
 | 29 | STEMI | `wvems-2026-088` | the printed line has no counterpart in the app — print: "• Consider advanced STEMI care if indicated & credentialed f" |
 | 31 | Albuterol | `wvems-2026-drug-reference#albuterol` | the printed line has no counterpart in the app — print: "• Albuterol (Ventolin®) & Atrovent® (Ipratropium bromide):" |
@@ -50,26 +50,26 @@ three link tools (see the plan).
 | 31 | NIPPV | `wvems-2026-096#nippv` | the printed line has no counterpart in the app — print: "- May use double dose (0.8 mg) if hypertensive & requiring N" |
 | 31 | PDE5 inhibitor | `wvems-2026-028` | the printed line has no counterpart in the app — print: "- Contraindicated if recent (36 h) use of any PDE5 inhibitor" |
 | 31 | Pulmonary Edema | `wvems-2026-090` | the printed line has no counterpart in the app — print: "• Consider Pulmonary Edema if indicated & credentialed for C" |
-| 31 | Hypotension | `wvems-2025-008` | the app line matches but does not contain the phrase — print: "- **Nitro** (Nitroglycerin): for pulmonary edema / heart failure dyspn" |
+| 31 | Hypotension | `wvems-2026-008` | the app line matches but does not contain the phrase — print: "- **Nitro** (Nitroglycerin): for pulmonary edema / heart failure dyspn" |
 | 33 | dyspnea | `wvems-2026-030` | the printed line has no counterpart in the app — print: "Consider an Epi Drip for persistent dyspnea or shock." |
 | 33 | Epi Drip | `wvems-2026-drug-reference#epi-drip-epi-push` | the printed line has no counterpart in the app — print: "Consider an Epi Drip for persistent dyspnea or shock." |
-| 33 | shock | `wvems-2025-008` | the printed line has no counterpart in the app — print: "Consider an Epi Drip for persistent dyspnea or shock." |
+| 33 | shock | `wvems-2026-008` | the printed line has no counterpart in the app — print: "Consider an Epi Drip for persistent dyspnea or shock." |
 | 39 | Baqsimi | `wvems-2026-drug-reference#glucagon` | the printed line has no counterpart in the app — print: "†         Baqsimi® (Glucagon IN prefill):  3 mg  IN  x1  for" |
 | 39 | D10 | `wvems-2026-drug-reference#d10` | the printed line has no counterpart in the app — print: "- Must provide additional glucose or D10 after admin." |
 | 39 | D10 | `wvems-2026-drug-reference#d10` | the printed line has no counterpart in the app — print: "• D10 (Dextrose 10%): Recheck glucose prior to repeat dosing" |
 | 39 | Glucagon | `wvems-2026-drug-reference#glucagon` | the printed line has no counterpart in the app — print: "- Call Medical Control for any refusal after Glucagon." |
 | 39 | Glucagon | `wvems-2026-drug-reference#glucagon` | the printed line has no counterpart in the app — print: "• Glucagon (Glucagen®): Caution - improvement is temporary!" |
 | 39 | Oral Glucose | `wvems-2026-drug-reference#glucose` | the printed line has no counterpart in the app — print: "• Oral Glucose (Glutose 15™): Avoid if patient cannot swallo" |
-| 39 | shock | `wvems-2025-008` | the printed line has no counterpart in the app — print: "• Only use NS Bolus for shock. Hypervolemia can cause harm." |
+| 39 | shock | `wvems-2026-008` | the printed line has no counterpart in the app — print: "• Only use NS Bolus for shock. Hypervolemia can cause harm." |
 | 41 | Antidotes | `wvems-2026-096#adult-antidotes` | the printed line has no counterpart in the app — print: "- Most Antidotes require online orders (and dosing instructi" |
 | 41 | Burns | `wvems-2026-070` | the printed line has no counterpart in the app — print: "- For chemical burns and skin exposures, refer to Burns." |
 | 41 | CHF | `wvems-2026-030` | the printed line has no counterpart in the app — print: "- Consider even without Hypotension. Avoid with CHF or dialy" |
 | 41 | dialysis | `wvems-2026-018` | the printed line has no counterpart in the app — print: "- Consider even without Hypotension. Avoid with CHF or dialy" |
-| 41 | Hypotension | `wvems-2025-008` | the printed line has no counterpart in the app — print: "- Consider even without Hypotension. Avoid with CHF or dialy" |
+| 41 | Hypotension | `wvems-2026-008` | the printed line has no counterpart in the app — print: "- Consider even without Hypotension. Avoid with CHF or dialy" |
 | 41 | Inhalation | `wvems-2026-072` | the printed line has no counterpart in the app — print: "- For gasses and smoke inhalation, refer to Inhalation." |
 | 41 | Narcan | `wvems-2026-drug-reference#narcan` | the printed line has no counterpart in the app — print: "- Call Medical Control for any refusal after Narcan." |
 | 41 | NS Bolus | `wvems-2026-drug-reference#ns-bolus` | the printed line has no counterpart in the app — print: "• NS Bolus (0.9% Saline): Fluids may help dilute toxins." |
-| 41 | shock | `wvems-2025-008` | the printed line has no counterpart in the app — print: "• Just a single pill of some adult meds can cause profound s" |
+| 41 | shock | `wvems-2026-008` | the printed line has no counterpart in the app — print: "• Just a single pill of some adult meds can cause profound s" |
 | 43 | Dyspnea | `wvems-2026-006` | the app already links it elsewhere (wvems-2026-030) |
 | 47 | Benadryl | `wvems-2026-drug-reference#benadryl` | the printed line has no counterpart in the app — print: "Benadryl® (diphenhydramine): 25 mg PO, IV/IO, IM x1" |
 | 47 | Haldol | `wvems-2026-drug-reference#haldol` | the printed line has no counterpart in the app — print: "• Haldol® (Haloperidol): Requires transport and ALS monitori" |

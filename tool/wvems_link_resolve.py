@@ -261,11 +261,7 @@ def main():
             d = int(r["dest"])
             if 4 <= d <= 95:
                 even = d if d % 2 == 0 else d - 1
-                # pp.8-9 (Circulation / Shock) still ship as the 2025 file:
-                # the flowchart page was carried over and the prose page never
-                # was (audit §5.1). Batch 3 replaces it; until then this is
-                # where a link to p.8 has to land.
-                topic = "wvems-2025-008" if even == 8 else f"wvems-2026-{even:03d}"
+                topic = f"wvems-2026-{even:03d}"
                 how = "protocol-page"
             elif 96 <= d <= 108:
                 topic = PROC_TOPIC

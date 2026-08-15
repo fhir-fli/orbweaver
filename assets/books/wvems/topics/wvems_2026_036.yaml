@@ -94,7 +94,7 @@ topic:
         - title: "Cardiac"
           bullets:
             - "[Brady](topic:wvems-2026-012), [Tachy](topic:wvems-2026-014)"
-            - "[Shock](topic:wvems-2025-008), [Chest Pain](topic:wvems-2026-028)"
+            - "[Shock](topic:wvems-2026-008), [Chest Pain](topic:wvems-2026-028)"
 
       critical_care_link:
         text: "Sepsis"

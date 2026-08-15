@@ -44,7 +44,7 @@ topic:
           title: "Stabilize"
           bullets:
             - "Control Bleeding"
-            - "Treat [Circulation](topic:wvems-2025-008)"
+            - "Treat [Circulation](topic:wvems-2026-008)"
             - "[Airway](topic:wvems-2026-004) / [Breathing](topic:wvems-2026-006)"
         - type: "action"
           provider_level: "E"
@@ -80,7 +80,7 @@ topic:
         bullets:
           - text: "Bleeding"
             link_id: "wvems-2026-058"
-          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Shock](topic:wvems-2026-008)"
           - text: "[Medical ROSC](topic:wvems-2026-026)"
           - text: "[Intubation](topic:wvems-2026-078), [Vent](topic:wvems-2026-080)"
 

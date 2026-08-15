@@ -73,7 +73,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Shock](topic:wvems-2025-008)"
+          - text: "[Shock](topic:wvems-2026-008)"
           - text: "[Blood](topic:wvems-2026-084)"
           - text: "[Allergy](topic:wvems-2026-032)"
             link_id: "wvems-2026-040"

@@ -63,7 +63,7 @@ topic:
           label: "2. Trauma Care"
           criteria:
             - "Control [Bleeding](topic:wvems-2026-058)"
-            - "Treat [Circulation](topic:wvems-2025-008)"
+            - "Treat [Circulation](topic:wvems-2026-008)"
             - "[Airway](topic:wvems-2026-004) / [Breathing](topic:wvems-2026-006)"
           actions:
             - text: "Tourniquet"

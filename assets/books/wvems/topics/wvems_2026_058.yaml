@@ -80,7 +80,7 @@ topic:
             text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
           - text: "[Breathing](topic:wvems-2026-006)"
-          - text: "Circulation / [Shock](topic:wvems-2025-008)"
+          - text: "Circulation / [Shock](topic:wvems-2026-008)"
           - text: "[Major Trauma](topic:wvems-2026-056)"
           - text: "[Blood](topic:wvems-2026-084)"
 
@@ -149,7 +149,7 @@ topic:
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Hypotension is a late sign of hemorrhagic [Shock](topic:wvems-2025-008) in peds.
+        - Hypotension is a late sign of hemorrhagic [Shock](topic:wvems-2026-008) in peds.
         - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"

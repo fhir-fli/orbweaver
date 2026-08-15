@@ -6,8 +6,9 @@
 // surfaces it.
 //
 // This caught three live ones: the WVEMS drug reference pointed at
-// `wvems-2026-008` for Circulation / Shock, but that page is still the 2025
-// edition (`wvems-2025-008`), so all three links were dead.
+// `wvems-2026-008` for Circulation / Shock while that protocol still shipped
+// as the 2025 edition (`wvems-2025-008`), so all three links were dead. The
+// 2026 edition of pp.8-9 has since replaced it.
 //
 // The `#anchor` half is guarded too. A quarter of the print's cross-references
 // point into the drug reference and another tenth into the procedures — one

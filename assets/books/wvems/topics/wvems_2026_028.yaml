@@ -119,7 +119,7 @@ topic:
       markdown: |
         - **[Aspirin](topic:wvems-2026-drug-reference#aspirin)** (Baby ASA): contraindicated with active GI bleeding.
           - Have patient chew **four (4) 81 mg** tabs (not enteric coated).
-        - **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): may cause [Hypotension](topic:wvems-2025-008).
+        - **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): may cause [Hypotension](topic:wvems-2026-008).
           - Hold for SBP < 100 mmHg or HR < 50 / > 100.
           - Do **not** give within 24 h of PDE5 inhibitors (sildenafil, etc).
 

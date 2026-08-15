@@ -46,7 +46,7 @@ topic:
           bullets:
             - "Establish [Airway](topic:wvems-2026-004)"
             - "Provide [Breathing](topic:wvems-2026-006)"
-            - "Treat [Circulation](topic:wvems-2025-008)"
+            - "Treat [Circulation](topic:wvems-2026-008)"
         - type: "action"
           provider_level: "E"
           text: "12-Lead"
@@ -91,8 +91,8 @@ topic:
       markdown: |
         - Ensure adequate resuscitation **before** attempting transport.
           - Move expeditiously but with caution. **Don't sacrifice stability.**
-        - Monitor closely for [Hypotension](topic:wvems-2025-008). Be ready with fluids & pressors.
-        - Avoid hyperventilation. It can cause [Hypotension](topic:wvems-2025-008) & repeat arrest.
+        - Monitor closely for [Hypotension](topic:wvems-2026-008). Be ready with fluids & pressors.
+        - Avoid hyperventilation. It can cause [Hypotension](topic:wvems-2026-008) & repeat arrest.
         - Monitor body temp and treat any [Fever](topic:wvems-2026-016) aggressively with meds.
 
     - type: "prose"

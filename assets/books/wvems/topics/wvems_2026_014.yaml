@@ -103,7 +103,7 @@ topic:
         text: "Consider"
         shape: "stadium"
         bullets:
-          - text: "[Circulation](topic:wvems-2025-008), [Pain](topic:wvems-2026-020)"
+          - text: "[Circulation](topic:wvems-2026-008), [Pain](topic:wvems-2026-020)"
           - text: "[Fever](topic:wvems-2026-016), [Bleeding](topic:wvems-2026-058)"
 
       dose_table:
@@ -136,7 +136,7 @@ topic:
       highlight: true
       markdown: |
         - **Simple Tachycardias** (e.g. Sinus Tach) occur for many reasons.
-          - **Reactive** causes like: [Shock](topic:wvems-2025-008), [Pain](topic:wvems-2026-020), [Fever](topic:wvems-2026-016), [Bleeding](topic:wvems-2026-058).
+          - **Reactive** causes like: [Shock](topic:wvems-2026-008), [Pain](topic:wvems-2026-020), [Fever](topic:wvems-2026-016), [Bleeding](topic:wvems-2026-058).
           - **Hidden** causes like: [OD / Tox](topic:wvems-2026-040), [Behavioral](topic:wvems-2026-046), [Anaphylaxis](topic:wvems-2026-032).
           - **Cardiac** causes like: SSS, A-Flutter, A-Fib w/ RVR.
         - Treat the **underlying cause** before targeting the rate itself.

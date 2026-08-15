@@ -1,0 +1,103 @@
+# ============================================================
+# WVEMS 2026 — How To Use (p.3)
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+#
+# The book's own instructions for reading itself. Absent from the app until
+# now (audit §5.1). It is what makes the provider-level badges mean anything:
+# "You may use any intervention marked for your level or lower." It also
+# defines the age bands the whole book doses by, and the Critical Care rules.
+#
+# Print sets each section's first word as a bold run-in heading continuing
+# into the sentence ("**Basic** procedures are assumed for every call."). The
+# app has no run-in heading, so the word becomes the block title and the rest
+# of its sentence the block's lead line.
+# ============================================================
+
+topic:
+  id: "wvems-2026-003"
+  version: "v260101"
+  title: "How To Use"
+  list_subtitle: "2026-003 · how to read this book"
+  last_reviewed: "Apr 2025"
+  tags: ["how to use", "instructions", "scope", "provider level", "badge", "legend", "medical direction", "critical care", "pediatric"]
+  aliases:
+    - "Instructions"
+    - "Scope of Practice"
+    - "Provider Levels"
+    - "Getting Started"
+  category: "universal"
+  page_number: 3
+
+  blocks:
+
+    - type: "prose"
+      title: "Welcome to the WVEMS Protocols"
+      highlight: true
+      markdown: |
+        - Think of this like a **tool box**, not a **cookbook**.
+        - You should **use several protocols** at the same time on every call.
+        - You may use any intervention marked for your level or lower.
+
+    - type: "prose"
+      title: "Basic"
+      markdown: |
+        Procedures are assumed for every call.
+        - Don't forget: scene safe, BSI, ABC's, call for **ALS**, notify the ED, etc.
+        - Every patient should have a full assessment including vital signs.
+        - Ask about **medical allergies** and **pregnancy** before giving meds.
+
+    - type: "prose"
+      title: "Call"
+      markdown: |
+        For online **Medical Direction** at any time for advice on:
+        - Any questions, problems, or if uncertain for any reason.
+        - Getting permission to **deviate** from these protocols.
+        - If unable to contact, remember: **get the patient to the hospital**.
+
+    - type: "prose"
+      title: "Protocols"
+      markdown: |
+        Mean you **can**, but not always that you **should**.
+        - Use only enough to stabilize and/or improve. Don't follow blindly.
+        - Skip anything unnecessary. Not every box needs to be completed.
+        - The listed **order suggests importance**, but it is not absolute.
+
+    - type: "prose"
+      title: "Severity"
+      markdown: |
+        Is a **subjective judgement** that requires thought.
+        - Not all decisions are black and white. Use this text as a guide.
+        - **Reassess and restart** protocols as needed during a call.
+        - Use good clinical sense to decide what takes precedence.
+
+    - type: "prose"
+      title: "Presume"
+      markdown: |
+        Routine things when appropriate, like:
+        - SpO2, EKG, EtCO2, glucometer, saline lock, phlebotomy, etc.
+        - Regular layperson **first aid** treatments like splinting & band-aids.
+        - Note: protocols may also include reminders (like "12-Lead").
+
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatric"
+      markdown: |
+        Considerations are **included** in every protocol.
+        - Patients 14 y/o and over (14+) are generally given **adult** therapy.
+        - Children (1–13 y/o) and Infants (< 1 y/o) are considered **peds**.
+        - Use [Peds Reference](topic:wvems-2026-144) for peds dosing & **adults under 110 lbs** (50 kg).
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: "Critical Care"
+      markdown: |
+        (CC) is for credentialed **paramedics only**.
+        - Provider's responsibility to maintain **mandatory prerequisites**.
+        - Must be approved **for that specific protocol** by the agency OMD.
+        - All deadlines expire on the last day of the month (a grace period).
+
+    - type: "prose"
+      title: "References"
+      markdown: |
+        Are included. This text is not comprehensive.
+        - Medications may appear as **brand name**® or **generic**.

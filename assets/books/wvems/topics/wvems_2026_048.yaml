@@ -107,7 +107,7 @@ topic:
           - type: "caution"
             text: "[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
         bullets:
-          - text: "[HTN](topic:wvems-2026-010), [Circulation](topic:wvems-2025-008)"
+          - text: "[HTN](topic:wvems-2026-010), [Circulation](topic:wvems-2026-008)"
           - text: "[Seizure](topic:wvems-2026-042), [Bleeding](topic:wvems-2026-058)"
           - text: "[Preeclampsia](topic:wvems-2026-092)"
 
