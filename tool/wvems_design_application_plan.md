@@ -169,17 +169,17 @@ pdfvenv/bin/python tool/wvems_link_apply.py    targets.tsv report.tsv [--apply] 
 `pdfvenv` is a throwaway venv with `pymupdf` + `pyyaml`. Each writes every row
 as it is produced; `wvems_link_apply.py` without `--apply` only reports.
 
-## Batch 3 — ship the two missing pages
+## Batch 3 — ship the two missing pages ✅
 
-Source: `wvems_audit_typography.md` §5.1.
+Source: `wvems_audit_typography.md` §5.1. Applied 2026-08-14 (`6af9bef`).
 
-- **p.9** — an entire protocol prose page. Related: the Universal section still
-  points at the 2025 edition file for pp.8–9 (`wvems_2025_008`), which is what
-  made three links dead in `44ac730`.
-- **p.3** — the book's own instructions: 34 lines, including *"use any
-  intervention marked for your level or lower"*, the age definitions (14+ adult,
-  1–13 child, <1 infant, adults under 110 lb use paediatric dosing) and the CC
-  credentialing rules. Without it every one of the 363 badges is unexplained.
+- [x] **p.9** — the whole prose page, transcribed from the 2026 PDF as
+      `wvems_2026_008.yaml` with the two-page shape every sibling has and the
+      print's 19 cross-references. `wvems_2025_008.yaml` is gone; the 53
+      references that pointed at the id it never had now resolve.
+- [x] **p.3** — `wvems_2026_003.yaml`, "How To Use", in the front-matter group.
+      It is what makes the badges mean anything, so it had to land before
+      Batch 4.
 
 ## Batch 4 — badges
 
@@ -226,3 +226,5 @@ tables not shrunk, section title ratio, and small print for URLs/attributions.
 - 2026-08-14 — **Batch 2 complete** (`944958a`). 642 cross-references restored
   in total: 253 prose, 323 flowchart, 66 appendix. Unrestorable and conflicting
   ones are listed in `tool/wvems_links_not_restorable.md`.
+- 2026-08-14 — **Batch 3 applied** (`6af9bef` + `9192de3`). WVEMS book 51 → 52
+  topics. Verified on the emulator: p.8, p.9 and How To Use.
