@@ -181,17 +181,37 @@ Source: `wvems_audit_typography.md` §5.1. Applied 2026-08-14 (`6af9bef`).
       It is what makes the badges mean anything, so it had to land before
       Batch 4.
 
-## Batch 4 — badges
+## Batch 4 — badges 🚧
 
-Source: `wvems_audit_badges.md` §6.
+Source: `wvems_audit_badges.md` §6. Applied 2026-08-14/15 (`49c6878`,
+`3af8e38`).
 
-The biggest gap is **#5**: 31 inline badges on 21 pages, in exactly the place a
-reader looks for the permission boundary, rendered today as two bold characters
-because `MiniMarkdown` has no badge span. Then the policy-page chips (#4b), the
-heading badge (#7), the convergence-bullet badges (#8), the three authored-as-text
-tile badges (#9), the two missing flow badges (#10), a distinct Critical-Care
-paramedic level (#11), the badge fills (#12), the `als` → `aemt` rename (#13),
-the two legends (#14, #15), and the missing octagon / trapezoid (#20, #21).
+### Done
+- [x] **#5 the badge span** — the audit's "single biggest gap". `ScopeChip`
+      promoted to `lib/widgets/scope_chip.dart`; `MiniMarkdown` and the
+      flowchart inline parser both take `{E}` / `{A}` / `{I}` / `{P}` /
+      `{P(CC)}` / `{}`. Braces collide with nothing, so it is safe beside
+      `[text](target)`. 24 literal badges converted.
+- [x] **#11 a distinct Critical Care level** + **#12 fills** + **#13 `als` →
+      `aemt`.** `provider_paramedic` is the print's pink, `provider_critical_care`
+      the purple; the 29 body `P` badges are reclassified, since the audit found
+      the pink `P` exactly once in 166 pages.
+- [x] **#4b** policy chips · **#7** heading badge · **#9** three tile badges
+      authored as text · **#10** two missing flow badges · **#14/#15** the
+      legend now draws real badges and carries the "your level or lower"
+      sentence · **#20** the missing octagon · **#21** the missing trapezoid ·
+      **#27** the twelfth alert box.
+
+### Left in batch 4
+- [ ] **#8** badges inside convergence-stadium bullets (pp.24, 52) — the token
+      works there now; the two need authoring.
+- [ ] **#22** the Concept box is neutral grey in print, amber in the app, which
+      steals emphasis from the octagon and trapezoid (31 uses).
+- [ ] **#33** 12 missing Critical-Care bands · **#34** 17 missing CC sub-tabs,
+      and the pill reshaped into a tab fused to the stadium.
+- [ ] **#3b** the p.96 procedures index is itself a scope table · **#26** the
+      "Call ER" tile (12 pages) · **#30/#31** population edge tabs · **#23**
+      dashed conditional boxes (supported, used 0 times).
 
 ## Batch 5 — typography
 
@@ -228,3 +248,9 @@ tables not shrunk, section title ratio, and small print for URLs/attributions.
   ones are listed in `tool/wvems_links_not_restorable.md`.
 - 2026-08-14 — **Batch 3 applied** (`6af9bef` + `9192de3`). WVEMS book 51 → 52
   topics. Verified on the emulator: p.8, p.9 and How To Use.
+- 2026-08-14/15 — **Batch 4 part 1** (`49c6878`, `3af8e38`). The badge span, the
+  two `P` levels split, and every discrete missing chip/shape the audit lists.
+  ⚠️ Two traps cost time: a stale asset bundle survived uninstall+install
+  because `flutter build apk` skipped the asset copy (fix: `flutter clean`), and
+  the shared `~/.pub-cache` loses packages mid-build when another session runs
+  `pub get` (fix: re-run `flutter pub get`, don't chase it).
