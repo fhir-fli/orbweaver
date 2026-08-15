@@ -159,7 +159,7 @@ topic:
         - LVAD patients may be alive and well **without a palpable pulse**.
           - It may be impossible to palpate or auscultate a blood pressure.
           - Do not start CPR on patients who are obviously alive and well.
-        - An LVAD can make **diagnosis of arrest** very difficult.
+        - An LVAD can make [diagnosis of arrest](topic:wvems-2026-109#termination-of-resuscitation) very difficult.
           - Look for other signs of life and listen for pump noise.
           - Chest compressions may harm a ventricular assist device.
           - Consider the advice of trained bystanders or the LVAD center.
@@ -172,7 +172,7 @@ topic:
       markdown: |
         - EMS may be utilized to standby at a scene without a specific patient.
         - EMS should complete a full report for any patients or treatments.
-          - Consider simple interventions such as **PO pain meds** and ice.
+          - Consider simple interventions such as [PO pain meds](topic:wvems-2026-020) and ice.
           - Document a [refusal](#patient-refusals) if any patient declines transport.
 
     - type: "prose"
@@ -235,7 +235,7 @@ topic:
       anchor: "destination-triage"
       markdown: |
         - In some specific cases patients may benefit from triage directly to a more appropriate facility. Consider bypassing the closest facility and increasing transport time by **no more than 30 minutes** for:
-          - Specific **emergent needs**: **STEMI**, LVO **Stroke**, or **Major Trauma**
+          - Specific **emergent needs**: [STEMI](topic:wvems-2026-088), LVO [Stroke](topic:wvems-2026-044), or [Major Trauma](topic:wvems-2026-056)
           - Anticipated specialty services (ortho, OB/GYN, peds, ENT, etc.)
           - Pre-established physician (recent surgery, oncology, dialysis, etc.)
           - System status (agency utilization, need for admission, etc.)
@@ -252,7 +252,7 @@ topic:
       markdown: |
         - Adults should have an appropriate presentation ([chest pain](topic:wvems-2026-028), etc.) and an EKG identified as **\*\*\* ACUTE MI \*\*\*** by automated analysis.
         - **ALS**: May consider STE > 1 mm in 2 or more contiguous leads.
-        - **CC** (Critical Care): May consider advanced criteria (Sgarbossa's, posterior, etc.).
+        - **CC** (Critical Care): May consider advanced criteria (Sgarbossa's, [posterior](topic:wvems-2026-088), etc.).
         - Appropriate WVEMS cardiac hospitals (with emergent PCI) include:
           - Carilion **Roanoke** & **New River Valley** & Centra **Lynchburg**
           - Lewis Gale **Salem** & **Montgomery** & Sovah **Danville** & **Martinsville**
@@ -260,8 +260,8 @@ topic:
     - type: "prose"
       title: "Acute Large Vessel (LVO) Stroke"
       markdown: |
-        - Patients must have a definite **time last normal under 6 hrs** and at least one positive finding on a **Cincinnati Stroke** (FAST) exam.
-        - Must also have **arm drift** and at least one finding on a **Stroke VAN**.
+        - Patients must have a definite **time last normal under 6 hrs** and at least one positive finding on a [Cincinnati Stroke](topic:wvems-2026-044) (FAST) exam.
+        - Must also have **arm drift** and at least one finding on a [Stroke VAN](topic:wvems-2026-044).
         - Appropriate WVEMS stroke hospitals (PSC, TSC, or CSC) include:
           - Carilion **Roanoke** Memorial & Centra **Lynchburg** Baptist
           - Lewis Gale **Salem** & Sovah **Danville** & Sovah **Martinsville**
@@ -269,7 +269,7 @@ topic:
     - type: "prose"
       title: "Major or Unstable Trauma"
       markdown: |
-        - Patients should meet trauma triage guidelines with **major injury** and/or **major mechanism** and/or **major burns** > 20% BSA.
+        - Patients should meet trauma triage guidelines with **major injury** and/or **major mechanism** and/or **major [burns](topic:wvems-2026-070)** > 20% BSA.
         - Appropriate WVEMS trauma hospitals (Level 1 or 2) include:
           - Carilion **Roanoke** & Lewis Gale **Salem** & Centra **Lynchburg**
 
@@ -298,7 +298,7 @@ topic:
           - Inform Medical Control of any courtesy transports.
         - **EMS may confirm death** in several ways including:
           - Lack of pulse, respirations and response.
-          - **Obvious Death** or **Mortal Injury**.
+          - [Obvious Death](topic:wvems-2026-024) or [Mortal Injury](topic:wvems-2026-052).
           - **ALS**: Asystole in at least two cardiac leads with EKG gain at max.
         - EMS may consider assisting with last rites if requested by family.
 

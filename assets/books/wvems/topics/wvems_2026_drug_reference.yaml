@@ -40,7 +40,7 @@ topic:
         - "May cause: hypernatremia, seizure"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocol: Elevated ICP"
+        - "Protocol: [Elevated ICP](topic:wvems-2026-086)"
         - "Osmotic diuretic · Onset: minutes · Duration: hours"
         - "https://www.medscape.com/viewarticle/548015"
 
@@ -130,7 +130,7 @@ topic:
         - "May cause: hypotension, dizzy"
         - "**Pregnancy Category D**: known risks"
       pearls:
-        - "Protocols: [Tachycardia](topic:wvems-2026-014), Med CODE/ROSC, [Trauma CODE](topic:wvems-2026-052)"
+        - "Protocols: [Tachycardia](topic:wvems-2026-014), [Med CODE](topic:wvems-2026-024)/[ROSC](topic:wvems-2026-026), [Trauma CODE](topic:wvems-2026-052)"
         - "Dilute in NS and **give over 10 min if non-emergent**"
         - "Antiarrhythmic Class III · Onset: mins · Duration: hours"
         - "https://reference.medscape.com/drug/342296"
@@ -195,7 +195,7 @@ topic:
         - "**Pregnancy Category D**: known risks"
         - "**Do not use** for premature babies"
       pearls:
-        - "Alternate substitute for **Versed** (only with OMD approval)"
+        - "Alternate substitute for **[Versed](topic:wvems-2026-drug-reference#versed)** (only with OMD approval)"
         - "Benzo (GABA agonist) · Onset: 1 min · Duration: 8 hours"
         - "https://reference.medscape.com/drug/342906"
 
@@ -217,7 +217,7 @@ topic:
         - "**Pregnancy Category C**: safety not established"
       pearls:
         - "**Organophosphate OD** may require massive doses"
-        - "Protocols: [Bradycardia](topic:wvems-2026-012), Administer Antidote"
+        - "Protocols: [Bradycardia](topic:wvems-2026-012), **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Anticholinergic · Onset: seconds · Duration: minutes"
         - "https://reference.medscape.com/drug/343093"
 
@@ -258,7 +258,7 @@ topic:
         - "May cause: dry mouth"
         - "**Pregnancy Category B**: likely safe"
       pearls:
-        - "Protocols: [Allergic Reaction](topic:wvems-2026-032), [Behavioral](topic:wvems-2026-046), Antidote"
+        - "Protocols: [Allergic Reaction](topic:wvems-2026-032), [Behavioral](topic:wvems-2026-046), **[Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Antihistamine · Onset: 15 min · Duration: 4 hours"
         - "https://reference.medscape.com/drug/343392"
 
@@ -280,7 +280,7 @@ topic:
         - "May cause: hypokalemia"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocols: [Hyperkalemia](topic:wvems-2026-018), Administer Antidote"
+        - "Protocols: [Hyperkalemia](topic:wvems-2026-018), **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Electrolyte: alkali · Onset: 15 min · Duration: 1 hour"
         - "https://reference.medscape.com/drug/342305"
 
@@ -304,7 +304,7 @@ topic:
         - "May cause: tachy, brady, N/V, HA"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocols: [Hyperkalemia](topic:wvems-2026-018), Administer Antidote"
+        - "Protocols: [Hyperkalemia](topic:wvems-2026-018), **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Dilute in NS and **give over 10 min if non-emergent**"
         - "Electrolyte: cofactor · Onset: minutes · Duration: hours"
         - "https://reference.medscape.com/drug/344432"
@@ -328,7 +328,7 @@ topic:
         - "Do not use: caustic ingestions"
         - "**Pregnancy N/A**: not categorized"
       pearls:
-        - "Protocol: Administer Antidote"
+        - "Protocol: **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Antidote: physical binder, not metabolized"
         - "https://reference.medscape.com/drug/343714"
 
@@ -348,7 +348,7 @@ topic:
         - "PMH: CKD, renal failure"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocol: Administer Antidote"
+        - "Protocol: **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Follow kit instructions and **give over 10 min**"
         - "Antidote: protein binding to cyanide · Half-life: 30 hrs"
         - "https://reference.medscape.com/drug/343734"
@@ -370,7 +370,7 @@ topic:
         - "May cause: hyperglycemia"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocols: [Diabetic](topic:wvems-2026-038), Administer Antidote"
+        - "Protocols: [Diabetic](topic:wvems-2026-038), **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Glucose monosaccharide · Onset: mins · Duration: 40 min"
         - "https://reference.medscape.com/drug/342705"
 
@@ -438,7 +438,7 @@ topic:
         - "May cause: vision changes, HTN"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocol: Administer Antidote"
+        - "Protocol: **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Antidote: anticholinergic, reactivates esterase · Peak: 30 m"
         - "https://reference.medscape.com/drug/343745"
 
@@ -560,7 +560,7 @@ topic:
         - "**Pregnancy Category B**: likely safe"
       pearls:
         - "**β-blocker OD** may require multiple doses"
-        - "Protocols: [Diabetic](topic:wvems-2026-038), Administer Antidote"
+        - "Protocols: [Diabetic](topic:wvems-2026-038), **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Hepatic glycogenolysis · Onset: 10 min · Duration: 30 min"
         - "https://reference.medscape.com/drug/342712"
 
@@ -601,7 +601,7 @@ topic:
         - "PMH: antiarrhythmics, Long QT"
         - "PMH: Parkinson's disease"
         - "May cause: **hypotension, NMS**"
-        - "May cause: dystonia"
+        - "May cause: [dystonia](topic:wvems-2026-046)"
         - "**Pregnancy Category C**: safety not established"
       pearls:
         - "Protocol: [Behavioral](topic:wvems-2026-046)"
@@ -628,7 +628,7 @@ topic:
         - "May cause: bleeding"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocol: STEMI"
+        - "Protocol: [STEMI](topic:wvems-2026-088)"
         - "Anticoagulant · Onset: immediate · Peak: 2–4 hours"
         - "https://reference.medscape.com/drug/342169"
 
@@ -650,7 +650,7 @@ topic:
         - "May cause: N/V, dizzy"
         - "**Pregnancy Category D**: known risks"
       pearls:
-        - "Protocols: [Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), Cold / Heat"
+        - "Protocols: [Fever](topic:wvems-2026-016), [Pain](topic:wvems-2026-020), [Cold / Heat](topic:wvems-2026-068)"
         - "NSAID: cox inhibitor · Onset: 30 min · Duration: 4 hours"
         - "https://reference.medscape.com/drug/343289"
 
@@ -696,7 +696,7 @@ topic:
         - "May cause: **hypersalivation**"
         - "**Pregnancy N/A**: not categorized"
       pearls:
-        - "Protocols: [Pain](topic:wvems-2026-020), [Med ROSC](topic:wvems-2026-026), Trauma ROSC, [RSI](topic:wvems-2026-078), [Sedation](topic:wvems-2026-080)"
+        - "Protocols: [Pain](topic:wvems-2026-020), [Med ROSC](topic:wvems-2026-026), [Trauma ROSC](topic:wvems-2026-054), [RSI](topic:wvems-2026-078), [Sedation](topic:wvems-2026-080)"
         - "Dilute in NS, **give over 10 min if used IV/IO in pain/ROSC**"
         - "Dissociative anesthetic · Onset: 30 s · Duration: minutes"
         - "https://reference.medscape.com/drug/343099"
@@ -719,7 +719,7 @@ topic:
         - "May cause: **Hypokalemia**, rash"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocol: Pulmonary Edema"
+        - "Protocol: [Pulmonary Edema](topic:wvems-2026-090)"
         - "Loop diuretic · Onset: 5 minutes · Duration: 4 hours"
         - "https://reference.medscape.com/drug/342423"
 
@@ -769,7 +769,7 @@ topic:
         - "May cause: hypotension, N/V, seizure"
         - "**Pregnancy Category B**: likely safe"
       pearls:
-        - "Protocol: IO Procedure"
+        - "Protocol: **[IO Procedure](topic:wvems-2026-096#io)**"
         - "Antiarrhythmic: Class IB · Onset: 45 sec · Duration: 10 min"
         - "https://reference.medscape.com/drug/342302"
 
@@ -836,7 +836,7 @@ topic:
         - "May cause: delirium, N/V, itching"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Alt. substitute for Fentanyl (only with OMD approval)"
+        - "Alt. substitute for **[Fentanyl](topic:wvems-2026-drug-reference#fentanyl)** (only with OMD approval)"
         - "Opioid: μ-agonist · Onset: minutes · Duration: 4 hours"
         - "https://reference.medscape.com/drug/343319"
 
@@ -857,7 +857,7 @@ topic:
         - "**Pregnancy Category C**: safety not established"
         - "**Do not use** for premature babies"
       pearls:
-        - "Protocols: [Overdose / Tox](topic:wvems-2026-040), Administer Antidote"
+        - "Protocols: [Overdose / Tox](topic:wvems-2026-040), **[Administer Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Opioid (μ) antagonist · Onset: 2 min · Duration: 45 min"
         - "https://reference.medscape.com/drug/343741"
 
@@ -902,12 +902,12 @@ topic:
           text: "Dilute 50 mg in 250 mL, use a pump"
       warnings:
         - "Peds: do not use"
-        - "PMH: recent (36 h) **PDE5 inhibitors**"
+        - "PMH: recent (36 h) [PDE5 inhibitors](topic:wvems-2026-028)"
         - "PMH: ergot meds (pain/migraine)"
         - "May cause: **headache**, hypotension"
         - "**Pregnancy Category B**: likely safe"
       pearls:
-        - "Protocols: [Chest Pain](topic:wvems-2026-028), [Dyspnea](topic:wvems-2026-030), Pulmonary Edema"
+        - "Protocols: [Chest Pain](topic:wvems-2026-028), [Dyspnea](topic:wvems-2026-030), [Pulmonary Edema](topic:wvems-2026-090)"
         - "Systemic vasodilator · Onset: 1 min · Duration: 30 min"
         - "https://reference.medscape.com/drug/342280"
 
@@ -928,7 +928,7 @@ topic:
         - "May cause: **dyspnea** & rales"
         - "**Pregnancy Category C**: safety not established"
       pearls:
-        - "Protocols: [Shock](topic:wvems-2025-008), [Tachy](topic:wvems-2026-014), [Fever](topic:wvems-2026-016), [HyperK+](topic:wvems-2026-018), [Diabetic](topic:wvems-2026-038), [OD/Tox](topic:wvems-2026-040), Preg, [Major Trauma](topic:wvems-2026-056) / CODE, Cold/Heat, [Burn](topic:wvems-2026-070)"
+        - "Protocols: [Shock](topic:wvems-2025-008), [Tachy](topic:wvems-2026-014), [Fever](topic:wvems-2026-016), [HyperK+](topic:wvems-2026-018), [Diabetic](topic:wvems-2026-038), [OD/Tox](topic:wvems-2026-040), [Preg](topic:wvems-2026-048), [Major Trauma](topic:wvems-2026-056) / [CODE](topic:wvems-2026-052), [Cold/Heat](topic:wvems-2026-068), [Burn](topic:wvems-2026-070)"
         - "Isotonic crystalloid · Onset: seconds · Duration: varies"
         - "https://www.rxlist.com/normal-saline-drug.htm"
 
@@ -1090,7 +1090,7 @@ topic:
         - "May cause: visual changes, N/V"
         - "**Pregnancy Category B**: likely safe"
       pearls:
-        - "Protocols: [Bleeding](topic:wvems-2026-058), Pregnancy, [Epistaxis](topic:wvems-2026-076), OB Procedures"
+        - "Protocols: [Bleeding](topic:wvems-2026-058), [Pregnancy](topic:wvems-2026-048), [Epistaxis](topic:wvems-2026-076), **[OB Procedures](topic:wvems-2026-096#manage-ob-complication)**"
         - "Antifibrinolytic · Onset: minutes · Duration: 3 hours"
         - "https://reference.medscape.com/drug/342087"
 
@@ -1134,7 +1134,7 @@ topic:
         - "May cause: hypotension"
         - "**Pregnancy Category D**: known risks"
       pearls:
-        - "Protocols: [Seizure](topic:wvems-2026-042), [Behavioral](topic:wvems-2026-046), Cold / Heat, Antidote"
+        - "Protocols: [Seizure](topic:wvems-2026-042), [Behavioral](topic:wvems-2026-046), [Cold / Heat](topic:wvems-2026-068), **[Antidote](topic:wvems-2026-096#adult-antidotes)**"
         - "Critical Care: [Sedation / Vent](topic:wvems-2026-080)"
         - "Benzo: GABA agonist · Onset: 3 minutes · Duration: 1 hour"
         - "https://reference.medscape.com/drug/342907"

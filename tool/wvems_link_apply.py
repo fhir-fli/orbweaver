@@ -24,7 +24,7 @@ absent from the matched line, an existing link to a different target — is
 reported and left alone.
 
     usage: pdfvenv/bin/python tool/wvems_link_apply.py <targets.tsv> <report.tsv>
-                                                       [--apply] [--odd|--even]
+                              [--apply] [--odd|--even] [--appendix]
 """
 import re
 import sys
@@ -50,11 +50,113 @@ PRINT_TYPOS = {"behavorial": "Behavioral"}
 BOLD_RUN_RE = re.compile(r"\*\*(.+?)\*\*")
 
 
+# The appendix topics are one file each, holding every printed page of their
+# section. A link leaving p.121 has to be placed in *that page's* cards, not
+# anywhere in a 1,161-line drug reference, so each page gets a line range.
+#
+#   procedures  pp.97-108  — cards per page measured from the rotated
+#                            side-labels (see wvems_link_resolve.py)
+#   policies    pp.110-117 — each page opens with the section the book's own
+#                            p.109 index names, and those are the anchors
+#                            authored on the prose blocks
+#   drugs       pp.119-143 — exactly two cards per page, in printed (alphabetical)
+#                            order: 25 pages, 50 cards, 1:1 with the app's file
+#                            order (verified against the PDF's card headers)
+PROCEDURE_PAGES = {
+    97: "Glucometer",
+    98: "Back Blows & Thrusts",
+    99: "BVM",
+    100: "BIAD",
+    101: "Chest Compression",
+    102: "Wound Care",
+    103: "SMR with C-collar",
+    104: "Adult Antidotes",
+    105: "Pacing",
+    106: "Deliver Baby",
+    107: "RSI Prep Checklist",
+    108: "Cric",
+}
+
+POLICY_PAGES = {
+    110: "patient-abuse-and-neglect",
+    111: "verification-of-on-scene-personnel",
+    112: "termination-of-resuscitation",
+    113: "advanced-cardiac-devices",
+    114: "ems-standbys",
+    115: "patient-refusals",
+    116: "destination-triage",
+    117: "deceased-subjects",
+}
+
+DRUG_FIRST_PAGE = 119
+DRUGS_PER_PAGE = 2
+
+
 def page_to_file(page):
     even = page if page % 2 == 0 else page - 1
     if 4 <= even <= 94:
         return TOPICS / f"wvems_2026_{even:03d}.yaml"
+    if 97 <= page <= 108:
+        return TOPICS / "wvems_2026_096.yaml"
+    if 110 <= page <= 117:
+        return TOPICS / "wvems_2026_109.yaml"
+    if DRUG_FIRST_PAGE <= page <= 143:
+        return TOPICS / "wvems_2026_drug_reference.yaml"
     return None
+
+
+def _marker_lines(lines, pattern):
+    return [i for i, ln in enumerate(lines) if re.match(pattern, ln)]
+
+
+def appendix_range(lines, page):
+    """The line range of one printed page inside a single-file appendix topic."""
+    if 97 <= page <= 108:
+        starts = _marker_lines(lines, r'\s*- type: "procedure_card"')
+        names = [
+            next(
+                (
+                    re.search(r'name:\s*"([^"]+)"', lines[j]).group(1)
+                    for j in range(i, min(i + 4, len(lines)))
+                    if "name:" in lines[j]
+                ),
+                "",
+            )
+            for i in starts
+        ]
+        firsts = {}
+        for pg, first_name in PROCEDURE_PAGES.items():
+            if first_name in names:
+                firsts[pg] = starts[names.index(first_name)]
+        return _span(firsts, page, len(lines))
+    if 110 <= page <= 117:
+        firsts = {}
+        for pg, slug in POLICY_PAGES.items():
+            hit = next(
+                (i for i, ln in enumerate(lines) if f'anchor: "{slug}"' in ln), None
+            )
+            if hit is not None:
+                # back up to the block's `- type:` line
+                while hit > 0 and not lines[hit].lstrip().startswith("- type:"):
+                    hit -= 1
+                firsts[pg] = hit
+        return _span(firsts, page, len(lines))
+    if DRUG_FIRST_PAGE <= page <= 143:
+        starts = _marker_lines(lines, r'\s*- type: "drug_card"')
+        firsts = {
+            DRUG_FIRST_PAGE + k // DRUGS_PER_PAGE: i
+            for k, i in enumerate(starts)
+            if k % DRUGS_PER_PAGE == 0
+        }
+        return _span(firsts, page, len(lines))
+    return None
+
+
+def _span(firsts, page, eof):
+    if page not in firsts:
+        return None
+    later = sorted(v for k, v in firsts.items() if k > page)
+    return firsts[page], (later[0] if later else eof)
 
 
 def phrase_regex(phrase):
@@ -113,6 +215,11 @@ def main():
     targets_path, report_path = Path(sys.argv[1]), Path(sys.argv[2])
     do_apply = "--apply" in sys.argv
     only = "odd" if "--odd" in sys.argv else "even" if "--even" in sys.argv else None
+    # The appendix topics are prose-like (their cards render through
+    # MiniMarkdown), so this script handles them — but only when asked. Run
+    # unfiltered it would also apply prose logic to the flowchart pages, whose
+    # text is not markdown and belongs to wvems_flowchart_link_apply.py.
+    appendix_only = "--appendix" in sys.argv
 
     by_page = defaultdict(list)
     for row in targets_path.read_text().splitlines()[1:]:
@@ -143,6 +250,10 @@ def main():
         tally[status] += 1
 
     for page in sorted(by_page):
+        if appendix_only and page < 96:
+            continue
+        if not appendix_only and page >= 96:
+            continue
         if only == "odd" and page % 2 == 0:
             continue
         if only == "even" and page % 2 == 1:
@@ -153,12 +264,12 @@ def main():
                 note("no-topic-file", "-", page, t["phrase"], "", "")
             continue
         lines = path.read_text().split("\n")
-        ranges = page_ranges(lines)
-        if page not in ranges:
+        span = page_ranges(lines).get(page) or appendix_range(lines, page)
+        if span is None:
             for t in by_page[page]:
                 note("no-page-block", path.name, page, t["phrase"], "", "")
             continue
-        cands = candidate_lines(lines, *ranges[page])
+        cands = candidate_lines(lines, *span)
 
         # Links sharing a printed line and a phrase are paired left to right,
         # which is the order they already come out of the extractor in.

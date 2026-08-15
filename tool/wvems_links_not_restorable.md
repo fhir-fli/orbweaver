@@ -86,3 +86,38 @@ about this — it sends symptom words to the ABC universal protocols, the same
 way it sends "Hypotension" to p.8 Circulation / Shock — so this is the book's
 habit rather than a slip. The app's target is arguably the more useful one for
 a reader. Left as the app has it; Grey's call.
+
+---
+
+## The appendix topics (batch 2f)
+
+66 restored, 96 already correct. What is left, from the drug reference, the
+procedures and the policies:
+
+| page | phrase | print points at | why |
+|---|---|---|---|
+| 97 | CODE | `wvems-2026-024` | the printed line has no counterpart in the app — best 0.48: But EMS may consider using established lines during a CODE. |
+| 101 | Lidocaine | `wvems-2026-drug-reference#lidocaine` | the printed line has no counterpart in the app — best 0.49: Lidocaine: 10 mg |
+| 104 | the basics | `wvems-2026-040` | the printed line has no counterpart in the app — best 0.38: • Don’t forget the basics: O2 for any inhaled toxins |
+| 104 | inhaled | `wvems-2026-072` | the printed line has no counterpart in the app — best 0.38: • Don’t forget the basics: O2 for any inhaled toxins |
+| 104 | Narcan | `wvems-2026-drug-reference#narcan` | the printed line has no counterpart in the app — best 0.54: - Narcan for hypoxia; NS Bolus for shock. |
+| 104 | NS Bolus | `wvems-2026-drug-reference#ns-bolus` | the printed line has no counterpart in the app — best 0.54: - Narcan for hypoxia; NS Bolus for shock. |
+| 105 | Pain | `wvems-2026-020` | the app already words it differently or links it another way — line 443 (1.00): - "- Consider pre-treating for [Pain](topic:wvems-2026-020)." |
+| 106 | Consider Destination Triage | `wvems-2026-109#destination-triage` | the app already words it differently or links it another way — line 520 (1.00): - "^~Consider **Destination Triage**" |
+| 112 | obvious death | `wvems-2026-024` | the printed line has no counterpart in the app — best 0.42: obvious death, mortal injury, or if the patient has a DNR /  |
+| 112 | mortal injury | `wvems-2026-052` | the printed line has no counterpart in the app — best 0.42: obvious death, mortal injury, or if the patient has a DNR /  |
+| 113 | Consider Destination Triage | `wvems-2026-109#destination-triage` | the app already words it differently or links it another way — line 143 (0.59): - Consider [destination triage](#destination-triage) in consultation w |
+| 116 | Sgarbossa’s | `wvems-2026-088` | the app already words it differently or links it another way — line 255 (0.89): - **CC** (Critical Care): May consider advanced criteria (Sgarbossa's, |
+| 128 | Brady | `wvems-2026-012` | the app already words it differently or links it another way — line 465 (0.94): - "Protocols: [Bradycardia](topic:wvems-2026-012), [CODE](topic:wvems- |
+| 135 | Malignant HTN | `wvems-2026-092` | the app already links it elsewhere — line 794 currently links to wvems-2026-010 |
+| 136 | OD/Tox | `wvems-2026-096#adult-antidotes` | the app already links it elsewhere — line 816 currently links to wvems-2026-040 |
+| 136 | Malig. HTN | `wvems-2026-092` | the app already links it elsewhere — line 816 currently links to wvems-2026-010 |
+
+**One conflict is worth a look.** On pp.135 and 136 the drug reference links
+**Malignant HTN** / **Malig. HTN** at `wvems-2026-010` (Hypertension); the print
+points both at `wvems-2026-092`, which is the protocol actually called Malignant
+HTN. Left as the app has it, but the app's target does not match its own label.
+
+The index pages (1, 96, 109, 118, 144) contribute 125 more links. Those are the
+book's own page-number navigation — the app builds its own index and TOC, so
+they have no counterpart by design, not by omission.
