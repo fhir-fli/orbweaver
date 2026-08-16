@@ -19,6 +19,7 @@ class Book {
     required this.spineColor,
     required this.contents,
     this.paletteOverrides = const {},
+    this.fontFamily,
     this.view,
   });
 
@@ -32,6 +33,14 @@ class Book {
   /// contents. `"index"` → a single-page sectioned directory linking every
   /// topic at once (like the WVEMS cover). Null for the ordinary drill-down.
   final String? view;
+
+  /// Body typeface for everything in this book, from `font_family:`.
+  ///
+  /// Book-scoped rather than global because it is a property of the *printed
+  /// source*, not of the app: WVEMS sets its body in Barlow Condensed, which
+  /// is what makes its 68-73 character measure possible, while the other
+  /// books' sources do not. Null = Flutter's default.
+  final String? fontFamily;
 
   /// Book-level `palette:` overrides (role → color), the root of the
   /// cascade. Chapters and topics inherit and may override per-role.
@@ -80,6 +89,7 @@ class BookGroup extends BookNode {
     required this.children,
     this.overview,
     this.paletteOverrides = const {},
+    this.fontFamily,
     this.view,
     this.formulary,
     this.appendix = false,
@@ -104,6 +114,9 @@ class BookGroup extends BookNode {
   /// and counted); this holds the structured records the custom view renders.
   final Formulary? formulary;
 
+  /// Chapter-level `font_family:`, overriding the book's for this subtree.
+  final String? fontFamily;
+
   /// Chapter-level `palette:` overrides, applied over the book's and
   /// inherited by this group's topics. Retained for reference; topic rows
   /// already carry their fully-resolved [BookTopic.palette].
@@ -125,6 +138,7 @@ class BookTopic {
     required this.asset,
     this.tags = const [],
     this.palette = const {},
+    this.fontFamily,
     this.searchText = '',
     this.titleText = '',
     this.keywordsText = '',
@@ -143,6 +157,10 @@ class BookTopic {
   /// page directly instead of loading [asset] (which is a `formulary:` sentinel,
   /// not a real file). Null for ordinary topics.
   final Drug? drug;
+
+  /// Resolved body typeface for this topic (book → chapter → topic), or null
+  /// for the default.
+  final String? fontFamily;
 
   /// Fully-resolved color palette for this topic (book → chapter → topic
   /// cascade, accent-derived roles filled in). Drives the TOC row accent

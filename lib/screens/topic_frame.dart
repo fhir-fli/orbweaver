@@ -22,10 +22,15 @@ class TopicBody extends StatefulWidget {
     this.onLoaded,
     this.onPage,
     this.initialAnchor,
+    this.fontFamily,
     super.key,
   });
 
   final String assetPath;
+
+  /// Body typeface for this book (`font_family:`), applied to the whole
+  /// topic. Book-scoped: the printed source chooses it, not the app.
+  final String? fontFamily;
 
   /// Anchor slug to open at, from a `topic:<id>#<anchor>` cross-reference.
   /// Only meaningful for a scrolling topic; a paged topic has no scroll to
@@ -132,52 +137,63 @@ class _TopicBodyState extends State<TopicBody> {
           ]);
     final theme = TopicTheme(resolved);
 
+    Widget withFont(Widget child) => widget.fontFamily == null
+        ? child
+        : DefaultTextStyle.merge(
+            style: TextStyle(fontFamily: widget.fontFamily),
+            child: child,
+          );
+
     if (topic.layout == TopicLayout.paged && topic.pages.length > 1) {
       // Sticky: each page snaps to a full screen. A flowchart page renders at
       // its exact size; a prose page is auto-fit (text + gaps scaled down just
       // enough) so it fills one screen full-width, like the printed page.
-      return PageView(
-        controller: _pageCtrl,
-        scrollDirection: Axis.vertical,
-        onPageChanged: (i) {
-          _subPage = i;
-          _report();
-        },
-        children: [
-          for (final page in topic.pages)
-            page.blocks.any((b) => b is FlowchartBlock)
-                // A flowchart page scales down UNIFORMLY (boxes + text together)
-                // to fit one screen — its hand-drawn boxes can't reflow like
-                // text, so uniform scaling is the safe fit. No-op when it
-                // already fits (renders full size, top-aligned).
-                ? LayoutBuilder(
-                    builder: (context, c) => FittedBox(
-                      fit: BoxFit.scaleDown,
-                      alignment: Alignment.topCenter,
-                      child: SizedBox(
-                        width: c.maxWidth,
-                        child: TopicPageBody(page: page, theme: theme),
+      return withFont(
+        PageView(
+          controller: _pageCtrl,
+          scrollDirection: Axis.vertical,
+          onPageChanged: (i) {
+            _subPage = i;
+            _report();
+          },
+          children: [
+            for (final page in topic.pages)
+              page.blocks.any((b) => b is FlowchartBlock)
+                  // A flowchart page scales down UNIFORMLY (boxes + text together)
+                  // to fit one screen — its hand-drawn boxes can't reflow like
+                  // text, so uniform scaling is the safe fit. No-op when it
+                  // already fits (renders full size, top-aligned).
+                  ? LayoutBuilder(
+                      builder: (context, c) => FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: Alignment.topCenter,
+                        child: SizedBox(
+                          width: c.maxWidth,
+                          child: TopicPageBody(page: page, theme: theme),
+                        ),
+                      ),
+                    )
+                  : _FitToScreen(
+                      builder: (scale) => TopicPageBody(
+                        page: page,
+                        theme: theme,
+                        gapScale: scale,
                       ),
                     ),
-                  )
-                : _FitToScreen(
-                    builder: (scale) => TopicPageBody(
-                      page: page,
-                      theme: theme,
-                      gapScale: scale,
-                    ),
-                  ),
-        ],
+          ],
+        ),
       );
     }
 
-    return SingleChildScrollView(
-      controller: _scrollCtrl,
-      child: TopicView(
-        topic: topic,
-        palette: resolved,
-        pageKeys: _pageKeys,
-        initialAnchor: widget.initialAnchor,
+    return withFont(
+      SingleChildScrollView(
+        controller: _scrollCtrl,
+        child: TopicView(
+          topic: topic,
+          palette: resolved,
+          pageKeys: _pageKeys,
+          initialAnchor: widget.initialAnchor,
+        ),
       ),
     );
   }
@@ -246,6 +262,7 @@ class TopicFrame extends StatefulWidget {
     required this.assetPath,
     this.palette = const {},
     this.initialAnchor,
+    this.fontFamily,
     super.key,
   });
 
@@ -254,6 +271,9 @@ class TopicFrame extends StatefulWidget {
 
   /// Anchor slug to open at, from a `topic:<id>#<anchor>` cross-reference.
   final String? initialAnchor;
+
+  /// Body typeface for the owning book.
+  final String? fontFamily;
 
   @override
   State<TopicFrame> createState() => _TopicFrameState();
@@ -293,6 +313,7 @@ class _TopicFrameState extends State<TopicFrame> {
           onLoaded: (t) => setState(() => _title = t.title),
           onPage: (pn) => _pageNumber.value = pn,
           initialAnchor: widget.initialAnchor,
+          fontFamily: widget.fontFamily,
         ),
       ),
     );
@@ -434,6 +455,7 @@ class _TopicPagerState extends State<TopicPager> {
                 return TopicBody(
                   assetPath: t.asset,
                   palette: t.palette,
+                  fontFamily: t.fontFamily,
                   onPage: (pn) => _report(i, pn),
                   initialAnchor: i == widget.initialIndex
                       ? widget.initialAnchor

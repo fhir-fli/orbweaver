@@ -61,6 +61,7 @@ Future<void> openLinkedTopic(
       builder: (_) => TopicFrame(
         assetPath: ref.asset,
         palette: ref.palette,
+        fontFamily: ref.fontFamily,
         initialAnchor: anchor,
       ),
     ),
@@ -96,6 +97,7 @@ Future<void> openProtocol(
         builder: (_) => TopicFrame(
           assetPath: t.asset,
           palette: t.palette,
+          fontFamily: t.fontFamily,
           initialAnchor: anchor,
         ),
       ),

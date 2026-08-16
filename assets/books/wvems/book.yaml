@@ -41,6 +41,15 @@ book:
   # contents tree — the 4 PDF index sections as explicit groups
   # (Universal / Medical / Trauma / Critical Care) + a drug-reference
   # appendix. Topic+map model; section structure is declared, not derived.
+  # The print sets its body in Barlow *Condensed*, which is what makes its
+  # 68-73 character measure possible. Roboto is 28% wider per character, and
+  # the app was buying the print's line length back by shrinking 24 of 45
+  # prose pages to 0.90 or 0.85. Roboto Condensed ships in Flutter's
+  # material_fonts cache (no new asset) and recovers 12% of that, so type gets
+  # *larger* on screen rather than smaller. Book-scoped: the other three books
+  # have their own sources.
+  font_family: "RobotoCondensed"
+
   contents:
     - title: "Universal"
       palette:

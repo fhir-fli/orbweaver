@@ -52,11 +52,13 @@ Future<Book> _loadBook(String id) async {
 
   final cover = (b['cover'] as String?) ?? '';
   final bookOverrides = parsePaletteOverrides(b['palette']);
+  final bookFont = b['font_family'] as String?;
   final contents = await _parseNodes(
     b['contents'] as YamlList? ?? YamlList(),
     dir,
     [bookOverrides],
     const [],
+    bookFont,
   );
 
   return Book(
@@ -67,6 +69,7 @@ Future<Book> _loadBook(String id) async {
     spineColor: _color(b['spine_color'] as String),
     contents: contents,
     paletteOverrides: bookOverrides,
+    fontFamily: bookFont,
     view: b['view'] as String?,
   );
 }
@@ -80,6 +83,7 @@ Future<List<BookNode>> _parseNodes(
   String dir,
   List<Map<String, Color>> layers,
   List<String> ancestors,
+  String? fontFamily,
 ) async {
   final nodes = <BookNode>[];
   for (final entry in raw) {
@@ -91,18 +95,25 @@ Future<List<BookNode>> _parseNodes(
         '$dir/${map['topic'] as String}',
         layers,
         ancestors,
+        fontFamily,
       );
       nodes.add(BookLeaf(topic));
     } else {
       // Group: a chapter/section, optionally with its own overview page.
       // Its `palette:` overrides extend the cascade for its subtree.
       final groupOverrides = parsePaletteOverrides(map['palette']);
+      final groupFont = (map['font_family'] as String?) ?? fontFamily;
       final childLayers = [...layers, groupOverrides];
       final childAncestors = [...ancestors, title];
       final overviewPath = map['topic'] as String?;
       final overview = overviewPath == null
           ? null
-          : await _loadTopicRow('$dir/$overviewPath', childLayers, ancestors);
+          : await _loadTopicRow(
+              '$dir/$overviewPath',
+              childLayers,
+              ancestors,
+              groupFont,
+            );
 
       // A `view: "collection"` group is a bespoke faceted screen (a
       // formulary) rather than a chapter. Its drugs are loaded from the
@@ -114,13 +125,19 @@ Future<List<BookNode>> _parseNodes(
         final formPath = map['formulary'] as String;
         final raw = await rootBundle.loadString('$dir/$formPath');
         formulary = Formulary.fromYaml(loadYaml(raw) as YamlMap);
-        children = _formularyLeaves(formulary, childLayers, childAncestors);
+        children = _formularyLeaves(
+          formulary,
+          childLayers,
+          childAncestors,
+          groupFont,
+        );
       } else {
         children = await _parseNodes(
           map['children'] as YamlList? ?? YamlList(),
           dir,
           childLayers,
           childAncestors,
+          groupFont,
         );
       }
       nodes.add(
@@ -129,6 +146,7 @@ Future<List<BookNode>> _parseNodes(
           overview: overview,
           children: children,
           paletteOverrides: groupOverrides,
+          fontFamily: groupFont,
           view: view,
           formulary: formulary,
           appendix: map['appendix'] as bool? ?? false,
@@ -148,6 +166,7 @@ List<BookNode> _formularyLeaves(
   Formulary formulary,
   List<Map<String, Color>> layers,
   List<String> ancestors,
+  String? fontFamily,
 ) {
   final palette = resolvePalette(layers);
   final crumb = ancestors.join(' › ');
@@ -163,6 +182,7 @@ List<BookNode> _formularyLeaves(
           asset: 'formulary:${drug.id}',
           tags: drug.indications,
           palette: palette,
+          fontFamily: fontFamily,
           searchText: SearchNormalizer.normalize(drug.searchBlob),
           titleText: SearchNormalizer.normalize(
             '${drug.name} ${drug.subtitle}',
@@ -190,6 +210,7 @@ Future<BookTopic> _loadTopicRow(
   String assetPath,
   List<Map<String, Color>> layers,
   List<String> ancestors,
+  String? fontFamily,
 ) async {
   final raw = await rootBundle.loadString(assetPath);
   final t = (loadYaml(raw) as YamlMap)['topic'] as YamlMap;
@@ -216,6 +237,7 @@ Future<BookTopic> _loadTopicRow(
     asset: assetPath,
     tags: tags,
     palette: resolvePalette([...layers, topicOwn]),
+    fontFamily: (t['font_family'] as String?) ?? fontFamily,
     searchText: SearchNormalizer.normalize(buf.toString()),
     titleText: SearchNormalizer.normalize('$title $subtitle'),
     keywordsText: SearchNormalizer.normalize([...tags, ...aliases].join(' ')),
@@ -253,7 +275,8 @@ class LibraryIndex {
   LibraryIndex(List<Book> books)
     : _byId = {
         for (final b in books)
-          for (final t in b.allTopics) t.id: TopicRef(b.id, t.asset, t.palette),
+          for (final t in b.allTopics)
+            t.id: TopicRef(b.id, t.asset, t.palette, t.fontFamily),
       },
       _bookByTopic = {
         for (final b in books)
@@ -276,10 +299,14 @@ class LibraryIndex {
 /// topic's fully-resolved palette (so a cross-link opens it with the right
 /// chapter colors).
 class TopicRef {
-  const TopicRef(this.bookId, this.asset, this.palette);
+  const TopicRef(this.bookId, this.asset, this.palette, this.fontFamily);
   final String bookId;
   final String asset;
   final Map<String, Color> palette;
+
+  /// The owning book's body typeface, so a cross-link opens the topic set
+  /// the way its own book sets it.
+  final String? fontFamily;
 }
 
 /// Parses a `"0xAARRGGBB"` (or `"#RRGGBB"`) spine color string.

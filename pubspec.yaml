@@ -36,3 +36,24 @@ flutter:
     - assets/books/who_imci/topics/
     - assets/books/calculators/
     - assets/books/calculators/topics/
+
+  # Roboto Condensed, Apache 2.0 (licence bundled beside the files). Flutter
+  # keeps these in its material_fonts cache but bundles NO Roboto into a built
+  # app — the FontManifest of a release APK holds only MaterialIcons — so the
+  # family has to ship as an asset or it silently falls back to the default.
+  # WVEMS asks for it by `font_family:`; the other books do not.
+  fonts:
+    - family: RobotoCondensed
+      fonts:
+        - asset: assets/fonts/RobotoCondensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/RobotoCondensed-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/RobotoCondensed-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/RobotoCondensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/RobotoCondensed-BoldItalic.ttf
+          weight: 700
+          style: italic

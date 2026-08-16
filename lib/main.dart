@@ -67,7 +67,11 @@ List<Route<void>> _restorePages(LastStateSnapshot s, List<Book> library) {
   routes.add(
     MaterialPageRoute<void>(
       builder: (_) => idx < 0
-          ? TopicFrame(assetPath: topic.asset, palette: topic.palette)
+          ? TopicFrame(
+              assetPath: topic.asset,
+              palette: topic.palette,
+              fontFamily: topic.fontFamily,
+            )
           : TopicPager(siblings: siblings, initialIndex: idx, bookId: book.id),
     ),
   );
