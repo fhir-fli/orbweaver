@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/widgets/scope_chip.dart';
+import 'package:orbweaver/widgets/unit_text.dart';
 
 /// Inline cross-references inside flowchart text.
 ///
@@ -93,18 +94,16 @@ class _FlowLinkTextState extends State<FlowLinkText> {
   @override
   Widget build(BuildContext context) {
     _disposeRecognizers();
-    if (!hasFlowLink(widget.text)) {
-      return Text(
-        widget.text,
-        textAlign: widget.textAlign,
-        style: widget.style,
-        maxLines: widget.maxLines,
-        overflow: widget.overflow,
-      );
-    }
+    // Always rich: even a node with no link or badge can carry a unit that
+    // needs stepping down ("NS Bolus 500 mL").
     return Text.rich(
       TextSpan(
-        children: buildFlowLinkSpans(context, widget.text, _recognizers),
+        children: buildFlowLinkSpans(
+          context,
+          widget.text,
+          _recognizers,
+          fontSize: widget.style?.fontSize ?? 14,
+        ),
       ),
       textAlign: widget.textAlign,
       style: widget.style,
@@ -120,13 +119,16 @@ class _FlowLinkTextState extends State<FlowLinkText> {
 List<InlineSpan> buildFlowLinkSpans(
   BuildContext context,
   String raw,
-  List<TapGestureRecognizer> sink,
-) {
+  List<TapGestureRecognizer> sink, {
+  double fontSize = 14,
+}) {
   final spans = <InlineSpan>[];
   var last = 0;
   for (final m in _flowInline.allMatches(raw)) {
     if (m.start > last) {
-      spans.add(TextSpan(text: raw.substring(last, m.start)));
+      spans.addAll(
+        unitAwareSpans(raw.substring(last, m.start), null, fontSize),
+      );
     }
     if (m.group(2) == null) {
       // A badge: groups 1-2 belong to the link alternative, group 3 to this.
@@ -160,7 +162,7 @@ List<InlineSpan> buildFlowLinkSpans(
     last = m.end;
   }
   if (last < raw.length) {
-    spans.add(TextSpan(text: raw.substring(last)));
+    spans.addAll(unitAwareSpans(raw.substring(last), null, fontSize));
   }
   return spans;
 }

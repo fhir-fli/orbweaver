@@ -4,6 +4,7 @@ import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/widgets/anchor_scope.dart';
 import 'package:orbweaver/widgets/scope_chip.dart';
+import 'package:orbweaver/widgets/unit_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// Renders a minimal subset of markdown as a vertical [Column]:
@@ -202,10 +203,11 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
     var last = 0;
     for (final m in re.allMatches(stashed)) {
       if (m.start > last) {
-        spans.add(
-          TextSpan(
-            text: restore(stashed.substring(last, m.start)),
-            style: plainStyle,
+        spans.addAll(
+          unitAwareSpans(
+            restore(stashed.substring(last, m.start)),
+            plainStyle,
+            widget.fontSize,
           ),
         );
       }
@@ -249,8 +251,12 @@ class _MiniMarkdownState extends State<MiniMarkdown> {
       last = m.end;
     }
     if (last < stashed.length) {
-      spans.add(
-        TextSpan(text: restore(stashed.substring(last)), style: plainStyle),
+      spans.addAll(
+        unitAwareSpans(
+          restore(stashed.substring(last)),
+          plainStyle,
+          widget.fontSize,
+        ),
       );
     }
     return spans;
