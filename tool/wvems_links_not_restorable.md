@@ -121,3 +121,38 @@ HTN. Left as the app has it, but the app's target does not match its own label.
 The index pages (1, 96, 109, 118, 144) contribute 125 more links. Those are the
 book's own page-number navigation — the app builds its own index and TOC, so
 they have no counterpart by design, not by omission.
+
+---
+
+## Critical-Care lines missing from five pages (batch 4)
+
+Audit §6.4 #33 lists twelve printed full-width lavender Critical-Care bands the
+app lacks. Seven were a band problem and are fixed. The other five are a
+**text** problem — the line itself is not in the app, and all five sit on pages
+audit §5.2 flags as rewritten rather than transcribed:
+
+| topic | print page | what the print puts on the lavender wash |
+|---|---|---|
+| `wvems-2026-012` | 13 | (not transcribed — p.13's whole *Notes* section is different copy) |
+| `wvems-2026-014` | 15 | (not transcribed — p.15 is missing *Poor Perfusion* and *Critical Arrhythmia*) |
+| `wvems-2026-018` | 19 | (not transcribed — p.19 is missing *Hyper K+ EKG*) |
+| `wvems-2026-028` | 29 | "Consider advanced STEMI care if indicated & credentialed for CC." |
+| `wvems-2026-030` | 31 | (not transcribed — p.31's *Notes* section is absent) |
+
+Only p.29's line was read off the print directly and is quoted above; the other
+four need their sections restored first, so nothing was invented for them.
+
+### p.29 in full, since it came up twice
+
+The app's Chest Pain page disagrees with the print on more than the CC band:
+
+- print: Nitro "Contraindicated if recent (**36 h**) use of any PDE5 inhibitors";
+  app: "Do **not** give within **24 h** of PDE5 inhibitors".
+- print: "Contraindicated if SBP under **110** mmHg **without IV/IO** access";
+  app: "Hold for SBP < **100** mmHg or HR < 50 / > 100".
+- print: "Use caution if Hypotensive or suspected inferior/right STEMI" — absent.
+- print: a **PDE5 Inhibitors** Concept box listing Sildenafil (Viagra®),
+  Tadalafil (Cialis®), Vardenafil (Levitra®), Avanafil (Stendra®) — absent.
+- print peds: "**Aspirin** and **Nitro** are contraindicated in peds chest
+  pain" — absent; the app substitutes a different bullet.
+- references differ (print: ACLS / PALS / Medscape 9/25 / Limmer ch.20).
