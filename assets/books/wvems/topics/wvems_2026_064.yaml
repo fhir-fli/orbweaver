@@ -56,7 +56,7 @@ topic:
         - title: "Impaled"
           bullets:
             - "Splint Object"
-            - "Don't Remove"
+            - "Don’t Remove"
         - title: "Evisceration"
           bullets:
             - "Saline Gauze"
@@ -130,6 +130,6 @@ topic:
       markdown: |
         - Medscape Blunt Chest — https://emedicine.medscape.com/article/428723 [Ver: 11/22]
         - Medscape Penetrating Abd — https://emedicine.medscape.com/article/2036859 [Ver: 3/22]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 31
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 31
 
         NEMSIS: 9914193

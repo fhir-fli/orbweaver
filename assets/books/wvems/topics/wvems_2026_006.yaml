@@ -30,16 +30,16 @@ topic:
 
     # ────────────────────────────────────────────────
     # Flowchart block (severity variant — 3 branches)
-    # Entry chain: trigger → "Provide O2" → decision
+    # Entry chain: trigger → "Provide O₂" → decision
     # Asymmetric actions: Mild 1, Moderate 2, Severe 3
     # ────────────────────────────────────────────────
     - type: "flowchart"
       variant: "severity"
 
       entry_chain:
-        - text: "Dyspnea or SpO2 under 95%"
+        - text: "Dyspnea or SpO₂ under 95%"
           shape: "stadium"
-        - text: "Provide O2"
+        - text: "Provide O₂"
           shape: "stadium"
 
       decision:
@@ -107,11 +107,11 @@ topic:
         - Spontaneous or traumatic **PTX** can be a severe problem.
           - **[Pleural Decompress](topic:wvems-2026-096#pleural-decompress)** for [Hypotension](topic:wvems-2026-008) or persistent hypoxia.
         - **[BVM](topic:wvems-2026-096#bvm)**: use two providers and two-handed technique if able.
-          - Use **EtCO2** and target **35–45 mmHg**. Avoid hyperventilation.
+          - Use **EtCO₂** and target **35–45 mmHg**. Avoid hyperventilation.
           - During CPR: alternate **30 : 2** until BIAD (or ETT) is placed.
         - **[NIPPV](topic:wvems-2026-096#nippv)**: contraindicated with agitation, vomiting, or hypotension.
           - May use if altered or unresponsive, but monitor closely.
-          - May place EtCO2 cannula under NIPPV mask to get waveform.
+          - May place EtCO₂ cannula under NIPPV mask to get waveform.
 
     - type: "prose"
       title: "BVM Rate"
@@ -123,11 +123,11 @@ topic:
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Provide O2 at appropriate doses. May decrease if SpO2 above 98%.
+        - Provide O₂ at appropriate doses. May decrease if SpO₂ above 98%.
           - **Nasal Cannula (NC)**: 1–6 L/min; **Non-Rebreather (NRB)**: 10–15 L/min.
           - **Hyperoxia** can make some conditions worse, especially COPD.
-          - Target SpO2 of **88–92%** for adults with isolated COPD.
-        - If SpO2 unavailable or machine fails: use good clinical judgment.
+          - Target SpO₂ of **88–92%** for adults with isolated COPD.
+        - If SpO₂ unavailable or machine fails: use good clinical judgment.
         - **Drowning** (or SCUBA) may cause hypoxia — treatment is the same.
 
     - type: "band_callout"
@@ -149,6 +149,6 @@ topic:
       markdown: |
         - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
         - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
-        - Limmer D, O'Keefe MF. Emergency Care 15th ed. Chapter 10.
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 10.
 
         NEMSIS: 9914001, 9914211

@@ -90,7 +90,7 @@ topic:
       highlight: true
       markdown: |
         - Ensure adequate resuscitation **before** attempting transport.
-          - Move expeditiously but with caution. **Don't sacrifice stability.**
+          - Move expeditiously but with caution. **Don’t sacrifice stability.**
         - Monitor closely for [Hypotension](topic:wvems-2026-008). Be ready with fluids & pressors.
         - Avoid hyperventilation. It can cause [Hypotension](topic:wvems-2026-008) & repeat arrest.
         - Monitor body temp and treat any [Fever](topic:wvems-2026-016) aggressively with meds.
@@ -106,7 +106,7 @@ topic:
     - type: "prose"
       title: "Notes"
       markdown: |
-        - **EtCO2** can help identify ROSC. Monitor during resuscitation.
+        - **EtCO₂** can help identify ROSC. Monitor during resuscitation.
         - Therapeutic hypothermia is **not included** in this protocol.
           - Also known as "targeted temperature management".
 
@@ -129,6 +129,6 @@ topic:
         - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
         - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
         - Medscape ROSC — https://www.medscape.com/viewarticle/762373 [Ver: 2012]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 20, 21
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 20, 21
 
         NEMSIS: 9914019

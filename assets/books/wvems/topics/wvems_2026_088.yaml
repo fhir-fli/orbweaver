@@ -100,11 +100,11 @@ topic:
     - type: "prose"
       title: "Imperatives"
       markdown: |
-        - Don't forget [the basics](topic:wvems-2026-028): **O2**, **ASA** & **Nitro**. Start **IV in left hand**.
+        - Don’t forget [the basics](topic:wvems-2026-028): **O₂**, **ASA** & **Nitro**. Start **IV in left hand**.
         - Perform **15-Lead EKG** if: inferior STEMI or septal ST depressions.
           - ST elevation in V4R is right sided MI — **Nitro** may cause [shock](topic:wvems-2026-008).
           - ST elevations in V8 and V9 indicates a **posterior STEMI**.
-        - If V-pace or LBBB: any of **Sgarbossa's** criteria suggests a STEMI.
+        - If V-pace or LBBB: any of **Sgarbossa’s** criteria suggests a STEMI.
 
     - type: "row"
       blocks:
@@ -117,7 +117,7 @@ topic:
             - w/ any **Sgarbossa**
             - Call a **STEMI** Alert
         - type: "prose"
-          title: "Sgarbossa's (modified)"
+          title: "Sgarbossa’s (modified)"
           callout: true
           markdown: |
             - **+ST** > 25% of QRS size (any lead)
@@ -149,6 +149,6 @@ topic:
       markdown: |
         - Medscape AMI — https://emedicine.medscape.com/article/155919 [Ver: 9/25]
         - ACC Expert Consensus — https://www.jacc.org/doi/10.1016/j.jacc.2022.08.750 [Ver: 11/22]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 20
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 20
 
         NEMSIS: 9914117, 9914143

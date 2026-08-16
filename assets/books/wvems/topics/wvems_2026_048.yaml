@@ -89,7 +89,7 @@ topic:
             - "Failed Delivery"
             - "Prolapse or Breech"
           actions:
-            - text: "Don't Push"
+            - text: "Don’t Push"
               kind: "procedure"
             - provider_level: "E"
               text: "Emergent Transport"
@@ -138,7 +138,7 @@ topic:
         - **Reduce cord** over the head if found around the neck.
         - **[Manage OB Complications](topic:wvems-2026-096#manage-ob-complication)** during transport:
           - **Failed Delivery / Shoulder Dystocia**: transport knees to chest.
-          - **Prolapse**: don't handle cord; relieve pressure with fingers in vagina.
+          - **Prolapse**: don’t handle cord; relieve pressure with fingers in vagina.
           - **Breech**: do not pull; elevate presenting part if pressing on cord.
 
     - type: "band_callout"
@@ -169,6 +169,6 @@ topic:
       markdown: |
         - Medscape Delivery — https://emedicine.medscape.com/article/260036 [Ver: 2/24]
         - Medscape Eclampsia — https://emedicine.medscape.com/article/253960 [Ver: 8/25]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 36
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 36
 
         NEMSIS: 9914145

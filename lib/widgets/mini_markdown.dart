@@ -301,6 +301,23 @@ class _UnitLine extends StatelessWidget {
   final Color bulletColor;
   final List<InlineSpan> spans;
 
+  /// The print marks the two levels with different glyphs — a round `•` at
+  /// level 0 (717 instances) and a dash at level 1 (419) — rather than by
+  /// indent alone. A sub-bullet sitting only ~13 px inboard is easy to lose
+  /// under a level-0 bullet that has just wrapped, which is exactly when it
+  /// matters. `•` / `–` rather than the print's exact glyphs: the app's old
+  /// `▪` was already heavier than the print's dot, and a round dot reads
+  /// better on a backlit screen.
+  String get _glyph => unit.level == 0 ? '\u2022' : '\u2013';
+
+  /// Space *below* this unit. Print sets 27.0 pt between two top-level
+  /// bullets against 24.0 pt for a continuation or a sub-bullet — a
+  /// 1.125 : 1.00 ratio the app had flattened to a single 1 px everywhere.
+  double get _gapBelow {
+    final base = unitSpacing ?? (unit.isBullet ? 3.0 : 2.0);
+    return unit.level == 0 && unit.isBullet ? base + 1.5 : base;
+  }
+
   @override
   Widget build(BuildContext context) {
     final indent = unit.level * (fontSize * 0.9);
@@ -315,20 +332,20 @@ class _UnitLine extends StatelessWidget {
 
     if (!unit.isBullet) {
       return Padding(
-        padding: EdgeInsets.only(left: indent, bottom: unitSpacing ?? 2),
+        padding: EdgeInsets.only(left: indent, bottom: _gapBelow),
         child: text,
       );
     }
 
     return Padding(
-      padding: EdgeInsets.only(left: indent, bottom: unitSpacing ?? 3),
+      padding: EdgeInsets.only(left: indent, bottom: _gapBelow),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 7),
             child: Text(
-              '▪',
+              _glyph,
               style: TextStyle(
                 fontSize: fontSize * 0.95,
                 height: height,

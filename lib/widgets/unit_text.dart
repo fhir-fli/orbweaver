@@ -15,6 +15,10 @@ import 'package:flutter/material.dart';
 /// comfortably readable while still stepping down visibly.
 const double kUnitScale = 0.85;
 
+/// Scale for the registered mark. Smaller than a unit — the print runs it at
+/// 0.667-0.80 — because it carries no clinical information at all.
+const double kMarkScale = 0.7;
+
 /// Unit tokens, read off the PDF rather than assumed — every span on the odd
 /// prose pages set below body size with a number before it
 /// (`tool/wvems_unit_census.py`, 276 instances, 41 distinct).
@@ -49,6 +53,11 @@ final RegExp _unitAfterNumber = RegExp(
   r'(?<=[0-9])(\s*)([A-Za-z°%/]+)',
 );
 
+/// The registered mark, which the print sets at 0.67-0.80 of the body (§3.3).
+/// The app had 109 of them at full size, where a ® next to a drug name is
+/// visually louder than the drug name's own emphasis.
+final RegExp _registered = RegExp('®');
+
 /// [text] split into spans, with any unit that follows a number set at
 /// [kUnitScale] of [fontSize]. Returns a single span when there is nothing to
 /// shrink, which is the common case.
@@ -57,29 +66,31 @@ final RegExp _unitAfterNumber = RegExp(
 /// leave the size to the ambient `DefaultTextStyle`; guessing it here would
 /// silently mis-scale every unit in a flow node.
 List<InlineSpan> unitAwareSpans(String text, TextStyle? base, double fontSize) {
-  final matches = _unitAfterNumber
-      .allMatches(text)
-      .where((m) => kUnitTokens.contains(m.group(2)))
-      .toList();
-  if (matches.isEmpty) return [TextSpan(text: text, style: base)];
+  // (start, end, scale) for every run that steps down, in order.
+  final marks = <(int, int, double)>[
+    for (final m in _unitAfterNumber.allMatches(text))
+      if (kUnitTokens.contains(m.group(2)))
+        (m.start + m.group(1)!.length, m.end, kUnitScale),
+    for (final m in _registered.allMatches(text)) (m.start, m.end, kMarkScale),
+  ]..sort((a, b) => a.$1.compareTo(b.$1));
+  if (marks.isEmpty) return [TextSpan(text: text, style: base)];
 
   final spans = <InlineSpan>[];
   var last = 0;
-  for (final m in matches) {
-    // the gap before the unit stays at full size; only the token shrinks
-    final tokenStart = m.start + m.group(1)!.length;
-    if (tokenStart > last) {
-      spans.add(TextSpan(text: text.substring(last, tokenStart), style: base));
+  for (final (start, end, scale) in marks) {
+    if (start < last) continue; // overlapping marks: first one wins
+    if (start > last) {
+      spans.add(TextSpan(text: text.substring(last, start), style: base));
     }
     spans.add(
       TextSpan(
-        text: m.group(2),
+        text: text.substring(start, end),
         style: (base ?? const TextStyle()).copyWith(
-          fontSize: fontSize * kUnitScale,
+          fontSize: fontSize * scale,
         ),
       ),
     );
-    last = m.end;
+    last = end;
   }
   if (last < text.length) {
     spans.add(TextSpan(text: text.substring(last), style: base));

@@ -2,7 +2,7 @@
 # WVEMS 2026 Protocol 8 — Circulation / Shock
 # Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
 #
-# Replaces wvems_2025_008.yaml, which shipped the 2025 edition's flowchart
+# Replaces wvems_2025_008.yaml, which shipped the 2025 edition’s flowchart
 # with a flattened, partly-2025 prose section and no page split. p.9's prose
 # page is transcribed here for the first time (audit §5.1 listed it as one of
 # the two whole pages missing from the app).
@@ -192,6 +192,6 @@ topic:
         - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
         - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
         - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
-        - Limmer D, O'Keefe MF. Emergency Care 15th ed. Chapter 7, 29
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 7, 29
 
         NEMSIS: 9914127

@@ -599,7 +599,7 @@ topic:
           text: "0–5 y/o: safety not established"
       warnings:
         - "PMH: antiarrhythmics, Long QT"
-        - "PMH: Parkinson's disease"
+        - "PMH: Parkinson’s disease"
         - "May cause: **hypotension, NMS**"
         - "May cause: [dystonia](topic:wvems-2026-046)"
         - "**Pregnancy Category C**: safety not established"

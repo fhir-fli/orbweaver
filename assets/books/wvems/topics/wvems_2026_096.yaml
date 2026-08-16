@@ -36,7 +36,7 @@ topic:
       title: "Procedures"
       highlight: true
       markdown: |
-        Step-by-step skills from the WVEMS card set (pp.96-108). Each card's
+        Step-by-step skills from the WVEMS card set (pp.96-108). Each card’s
         badge marks the **minimum provider scope** cleared for that skill —
         {E} {A} {I} {P} (ascending); no badge = all levels.
         Pink bands flag **age/peds** distinctions; lavender bands flag
@@ -56,7 +56,7 @@ topic:
         - "- The patient may have a preference."
         - "Pierce skin with lancet to obtain blood sample."
         - "- May alternatively obtain blood from IV attempt if meter allows."
-        - "Place blood in/on reagent strip per manufacturer's instructions."
+        - "Place blood in/on reagent strip per manufacturer’s instructions."
 
     - type: "procedure_card"
       name: "12-Lead"
@@ -172,7 +172,7 @@ topic:
         - "Start the flow of oxygen to the mask. Set **basic mask at 7.5** cmH2O."
         - "- Alternate: use CPAP or BiPAP mode on vent w/ OMD approval."
         - "- Start vent **CPAP at 7.5** cmH2O and **BiPAP at 10/5** cmH2O (IPAP/EPAP)"
-        - "Place the mask over patient's nose and mouth and tighten straps."
+        - "Place the mask over patient’s nose and mouth and tighten straps."
         - "- Ensure **adequate seal** by adjusting placement and strap tension."
         - "May use on semi-conscious patients, but must **monitor closely**."
         - "- **Remove promptly if any vomiting** or hypotension."
@@ -192,13 +192,13 @@ topic:
       steps:
         - "Prepare appropriately sized device:"
         - "- Average adults use **iGel #4 (green)**."
-        - "Follow **manufacturer's guidelines**. Apply appropriate **lube**."
+        - "Follow **manufacturer’s guidelines**. Apply appropriate **lube**."
         - "- Open mouth and pull jaw & tongue forward (or use jaw thrust)."
         - "Insert BIAD into pharynx. Follow curve of the palate and tongue."
         - "- Stop when resistance is felt and teeth are near the **depth line**."
         - "- May rotate to facilitate insertion. Rock gently to seat in airway."
         - "Confirm placement. Secure well with tape or other device."
-        - "- Use auscultation, capnometry, EtCO2 and SpO2 if available."
+        - "- Use auscultation, capnometry, EtCO₂ and SpO₂ if available."
         - "If BIAD fails, **try again with a different size**."
         - "- Most common failure of a BIAD is **inappropriate size**."
 
@@ -263,7 +263,7 @@ topic:
         - "~:[E] Use AED \"analyze\" function."
         - "~:[I] May interpret directly."
         - "If shock indicated: **charge defibrillator while continuing CPR**."
-        - "- Start at max, or follow manufacturer's or OMD's dosing guideline."
+        - "- Start at max, or follow manufacturer’s or OMD’s dosing guideline."
         - "!- Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing."
         - "**Assertively state \"CLEAR!\"** Visually confirm everyone is clear."
         - "Defibrillate by pressing **SHOCK**. **Restart CPR immediately**."
@@ -278,7 +278,7 @@ topic:
         - "Prepare IO device and select site."
         - "- Consider pre-treating for [Pain](topic:wvems-2026-020)."
         - "- **Tibial plateau** & **humeral head** are typical. Follow OMD guidance."
-        - "Insert IO following manufacturer's recommended procedure."
+        - "Insert IO following manufacturer’s recommended procedure."
         - "Secure well with bulky dressing or other manufactured device."
         - "Consider admin of low-dose Lidocaine for local discomfort."
         - "~[A] **Lidocaine: 10 mg** IO · Q 5 min · x3 PRN Pain · Adult"
@@ -315,7 +315,7 @@ topic:
         - "**Tighten** until bleeding is controlled. **Secure windlass** in place."
         - "- Consider placing second tourniquet if bleeding continues."
         - "- Consider treatment of [Pain](topic:wvems-2026-020). Do not place over bony joints."
-        - "**Record time** on tourniquet or directly on the patient's skin."
+        - "**Record time** on tourniquet or directly on the patient’s skin."
 
     - type: "procedure_card"
       name: "Wound Packing"
@@ -395,7 +395,7 @@ topic:
         - Some toxins have unique antidotes — only **major symptoms** need treatment.
         - Most indications below **require online orders** (and dosing) — call the **toxicologist** at **Poison Control** or the ED (or OMD).
         - A few antidotes are included in other protocols — if indicated, may follow those standing orders.
-        - Don't forget the basics: **O2** for inhaled toxins, **Narcan** for hypoxia, **NS Bolus** for shock.
+        - Don’t forget the basics: **O₂** for inhaled toxins, **Narcan** for hypoxia, **NS Bolus** for shock.
         - **Poison Help: 1-800-222-1222**
 
     - type: "procedure_card"
@@ -427,7 +427,7 @@ topic:
         - Medscape Organophosphate — https://emedicine.medscape.com/article/167726 [3/23]
         - Medscape SSRI/SNRI — https://emedicine.medscape.com/article/821737 [11/24]
         - Medscape Tricyclics — https://emedicine.medscape.com/article/819204 [6/24]
-        - Limmer D, O'Keefe MF. Emergency Care 15th ed. Chapter 25
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 25
 
     # ── Cardiac ─────────────────────────────────────────────
     - type: "prose"
@@ -445,7 +445,7 @@ topic:
         - "Place monitor in \"pacing\" mode."
         - "- Select initial rate of **80 bpm** for adults."
         - "!- Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds **rate**."
-        - "- Alternate: follow manufacturer's or OMD's rate guideline."
+        - "- Alternate: follow manufacturer’s or OMD’s rate guideline."
         - "Slowly increase mA output until electrical capture is noted."
         - "- Watch for pacer spikes with corresponding QRS on EKG screen."
         - "- Typical initial target energy is around **80 mA** for **all patients**."
@@ -466,7 +466,7 @@ topic:
         - "- Wipe off any topical meds. Avoid implanted devices or catheters."
         - "Enable **SYNC** mode and charge to **200 J** for adults."
         - "!- Use [Peds Reference](topic:wvems-2026-144) for initial (and escalating) doses in peds."
-        - "- Alternate: follow manufacturer's or OMD's dosing guideline."
+        - "- Alternate: follow manufacturer’s or OMD’s dosing guideline."
         - "- If monitor unable to SYNC: disable SYNC and use regular defib."
         - "**Assertively state \"CLEAR!\"** Visually confirm everyone is clear."
         - "Cardiovert by pressing **and holding** the **SHOCK** button."
@@ -491,8 +491,8 @@ topic:
         - "**Support & deliver head**. Try to prevent explosive birth."
         - "**Check for cord around neck**. Reduce over the head if found."
         - "**Deliver shoulders**. Deliver top shoulder first."
-        - "- May flex mom's legs to chest to assist."
-        - "- May press on mom's lower abdomen to assist."
+        - "- May flex mom’s legs to chest to assist."
+        - "- May press on mom’s lower abdomen to assist."
         - "Deliver body. Caution: **neonates are slippery**."
         - "Manage Neonate. (Stimulate, warm, clean, dry.)"
         - "- May place baby on mothers chest for skin-to-skin contact."
@@ -500,7 +500,7 @@ topic:
         - "Keep baby level with mom and **delay cord clamping** ~60 sec."
         - "- Clamp about **6-10 in. away** from the baby. Cut between clamps."
         - "- Leave a long viable stump for the ED to use (for lines & lab draw)."
-        - "Massage mother's lower abdomen (fundal massage)."
+        - "Massage mother’s lower abdomen (fundal massage)."
         - "- This should help stop postpartum [bleeding](topic:wvems-2026-058)."
         - "- :[A] If poor perfusion: **[TXA](topic:wvems-2026-drug-reference#txa)** (Tranex. Acid): **2 g** IV/IO over 10 m"
         - "Prepare for delivery of the placenta. Do not pull on the cord."
@@ -515,7 +515,7 @@ topic:
         - "Provide standard care: [Breathing](topic:wvems-2026-006), [Pain](topic:wvems-2026-020), etc."
         - "Try to help during transport."
         - "- Failed Delivery / Shoulder Dystocia: transport knees to chest"
-        - "- Prolapse: don't handle cord, relieve pressure using fingers in vagina"
+        - "- Prolapse: don’t handle cord, relieve pressure using fingers in vagina"
         - "- Breech: do not pull; elevate presenting part if pressing on cord"
         - "^~Consider **Destination Triage**"
 
@@ -531,8 +531,8 @@ topic:
       steps:
         - "Consider a standardized checklist."
         - "- E.g: https://bit.ly/NRVEMS_CCAirway"
-        - "**Preoxygenate**: Give 100% FiO2 with adjuncts, prep for apneic O2"
-        - "**Resuscitate Before Intubate**: IV, O2, monitor, EtCO2, BP, [Pressors](topic:wvems-2026-082)"
+        - "**Preoxygenate**: Give 100% FiO₂ with adjuncts, prep for apneic O₂"
+        - "**Resuscitate Before Intubate**: IV, O₂, monitor, EtCO₂, BP, [Pressors](topic:wvems-2026-082)"
         - "**Plan & Predict**: Why not BIAD? LEMON eval, brief the team"
         - "**Prepare**: ETT, rigid stylet, 10 cc syringe, video scope, suction"
         - "**Position**: Record monitor & medic, maybe cric pressure"
@@ -553,14 +553,14 @@ topic:
         - "Perform operational test and **attach to patient**. Monitor closely."
         - "^~**Typical Adult Vent Settings**"
         - "^~Mode: **AC (V)** · Vt: **350 mL** (or 450 mL if over 6′ tall)"
-        - "^~BPM: **12-16**/min · FiO2: **100%** (may titrate down 40-60%)"
+        - "^~BPM: **12-16**/min · FiO₂: **100%** (may titrate down 40-60%)"
         - "^~PEEP: 5 mmHg · PIP Limit: 35 mmHg · I:E 1:3"
         - "Use a standard **troubleshooting** algorithm like \"DOPE\":"
         - "- Investigate any **warnings** promptly while monitoring pt closely."
         - "- Immediately remove vent and **use BVM** for any critical **alarms**."
         - "Think **Dislodgement**, **Obstruction** or **PTX** if poor BVM response."
         - "**Titrate vent** settings to patient response."
-        - "- **Hypoxia**: increase FiO2, and/or PEEP (and/or minute volume)"
+        - "- **Hypoxia**: increase FiO₂, and/or PEEP (and/or minute volume)"
         - "- **Hypotension**: decrease PEEP (and/or tidal volume)"
         - "- **Breath Stacking** (e.g. COPD, asthma): increase I:E (1:4 or 1:5)"
 
@@ -586,7 +586,7 @@ topic:
         - "!- Angle down. Advance cath. Remove needle."
         - "!- Use Transtracheal Jet Insufflation device."
         - "@5 **Confirm** placement. **Secure** well w/ tape or manufactured device."
-        - "- Use auscultation, clinical response, skin color, SpO2 and/or EtCO2."
+        - "- Use auscultation, clinical response, skin color, SpO₂ and/or EtCO₂."
 
     - type: "procedure_card"
       name: "Finger Thoracostomy"

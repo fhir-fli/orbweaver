@@ -60,7 +60,7 @@ topic:
           label: "7 or less"
           criteria:
             - "One Pupil Dilated"
-            - "Cushing's Triad"
+            - "Cushing’s Triad"
           actions:
             - provider_level: "P(CC)"
               text: "3% Saline"
@@ -106,14 +106,14 @@ topic:
       title: "Imperatives"
       markdown: |
         - Critical to avoid [Hypoxia](topic:wvems-2026-006) and [Hypotension](topic:wvems-2026-008). Treat aggressively.
-          - Target **SBP > 110 mmHg** and **SpO2 96–99%** and **EtCO2 35–45 mmHg**.
+          - Target **SBP > 110 mmHg** and **SpO₂ 96–99%** and **EtCO₂ 35–45 mmHg**.
         - Use cot to **sit patient up at 30°** if lower spine injury unlikely.
         - One dilated pupil suggests herniation. Bilateral dilation is ominous.
 
     - type: "row"
       blocks:
         - type: "prose"
-          title: "Cushing's Triad"
+          title: "Cushing’s Triad"
           callout: true
           markdown: |
             - Hypertension
@@ -157,6 +157,6 @@ topic:
       markdown: |
         - Medscape Head Injury — https://emedicine.medscape.com/article/251834 [Ver: 5/22]
         - ACS TBI Guidelines — https://www.facs.org/search?searchTerm=TBI+Guideline [Ver: 2020]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 33, 34
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 33, 34
 
         NEMSIS: 9914101, 9914105

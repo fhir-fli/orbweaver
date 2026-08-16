@@ -128,7 +128,7 @@ topic:
 
     # NOT converted to a `row`, deliberately. Print p.77 does set the Anticoag
     # Meds box beside these bullets, but measured at 393x852 the row costs
-    # +126 px and drops the page's fit scale from 0.74 to 0.70: nine drug names
+    # +126 px and drops the page’s fit scale from 0.74 to 0.70: nine drug names
     # up to 22 chars wrap once the box is confined to a slot. See
     # tool/wvems_sidebyside_audit.md.
     - type: "prose"
@@ -156,6 +156,6 @@ topic:
       title: "References"
       markdown: |
         - Medscape Epistaxis — https://emedicine.medscape.com/article/764719 [Ver: 8/23]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 29
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 29
 
         NEMSIS: 9914059

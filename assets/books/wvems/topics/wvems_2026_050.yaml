@@ -71,7 +71,7 @@ topic:
             - "Cyanosis, Dyspnea"
             - "Weak Cry"
           actions:
-            - text: "Provide O2"
+            - text: "Provide O₂"
               kind: "procedure"
             - text: "T-piece"
               condition: "Assist"
@@ -85,7 +85,7 @@ topic:
             - "Floppy Baby"
             - "Low / Zero APGAR"
           actions:
-            - text: "Provide O2"
+            - text: "Provide O₂"
               kind: "procedure"
             - text: "T-piece"
               condition: "Ventilate"
@@ -119,10 +119,10 @@ topic:
       highlight: true
       markdown: |
         - Most respond to simple stimulation.
-          - **Dry off** & place on mom's chest.
+          - **Dry off** & place on mom’s chest.
           - Wait 60 sec before clamping cord.
           - Leave 6–10 inches of viable cord.
-        - **SpO2 rises slowly** after birth.
+        - **SpO₂ rises slowly** after birth.
           - Consider a sensor on **right hand**.
         - May **try 30 sec of ventilation** before starting compressions.
           - If **T-piece Resuscitator** is unavailable: use neonatal **[BVM](topic:wvems-2026-096#bvm)**.
@@ -158,7 +158,7 @@ topic:
             - cells: ["Activity", "kicks", "weak", "limp"]
             - cells: ["Respiration", "cry", "gasp", "0"]
         - type: "prose"
-          title: "Normal SpO2"
+          title: "Normal SpO₂"
           flex: 5
           callout: true
           markdown: |
@@ -173,10 +173,10 @@ topic:
       title: "Notes"
       markdown: |
         - Document **1 and 5 minute APGAR** scores — add up the total points.
-        - May place newborn directly on mom's chest to **keep warm**.
+        - May place newborn directly on mom’s chest to **keep warm**.
           - Encourage breastfeeding. Place mom & baby **ID bands** if avail.
         - **Meconium suction** is not included in this protocol.
-        - Avoid high flow O2 into a newborn's eyes.
+        - Avoid high flow O₂ into a newborn’s eyes.
         - This protocol is for infants under 1 month (≤ 30 days) old only.
 
     - type: "prose"
@@ -185,6 +185,6 @@ topic:
         - NALS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001367 [Ver: 2025]
         - Medscape Delivery — https://emedicine.medscape.com/article/260036 [Ver: 2/24]
         - Medscape Neonate — https://emedicine.medscape.com/article/977002 [Ver: 10/24]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 36
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 36
 
         NEMSIS: 9914145

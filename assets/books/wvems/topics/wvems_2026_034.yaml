@@ -54,7 +54,7 @@ topic:
         - title: "GI"
           bullets:
             - "SBO, Gallbladder"
-            - "Gastritis, Crohn's"
+            - "Gastritis, Crohn’s"
         - title: "GERD"
           bullets:
             - "\"Burning\" Pain"
@@ -137,6 +137,6 @@ topic:
       title: "References"
       markdown: |
         - Medscape Abd Pain — https://emedicine.medscape.com/article/776663 [Ver: 4/25]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 26
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 26
 
         NEMSIS: 9914061

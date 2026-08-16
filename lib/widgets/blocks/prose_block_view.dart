@@ -13,6 +13,11 @@ import 'package:orbweaver/widgets/section_bracket.dart';
 /// fit-scaler run nearer 1.0, so the text ends up *larger* on screen.
 const double kProseLineHeight = 1.18;
 
+/// Section title size. The print sets its section heads at 30 pt over a 25 pt
+/// body — a 1.20 step — where the app used 15.5 over 14, i.e. 1.107, leaving
+/// the printed bracket to carry the section break almost alone (audit §3.6).
+const double kSectionTitleSize = 16.8;
+
 /// Gap below each bullet / paragraph. The print puts no extra space
 /// between bullets at all (its bullet-to-bullet pitch equals its
 /// within-bullet wrap pitch), so this is 1 px purely so adjacent
@@ -172,7 +177,7 @@ class ProseBlockView extends StatelessWidget {
       color: theme.sectionRule,
       title: block.title,
       titleStyle: TextStyle(
-        fontSize: 15.5,
+        fontSize: kSectionTitleSize,
         fontWeight: FontWeight.w800,
         color: theme.sectionTitle,
         height: 1.2,

@@ -105,7 +105,7 @@ topic:
       title: "Imperatives"
       markdown: |
         - Acute edema is usually associated with [dyspnea](topic:wvems-2026-030) and elevated SBP.
-        - Use [O2 & NIPPV](topic:wvems-2026-006) aggressively. Be prepared to escalate [airway](topic:wvems-2026-004).
+        - Use [O₂ & NIPPV](topic:wvems-2026-006) aggressively. Be prepared to escalate [airway](topic:wvems-2026-004).
 
     - type: "prose"
       title: "Medications"
@@ -123,7 +123,7 @@ topic:
       title: "Notes"
       markdown: |
         - This protocol concentrates on common **cardiac** causes of edema.
-          - Non-cardiac causes still benefit from aggressive **O2 & NIPPV**.
+          - Non-cardiac causes still benefit from aggressive **O₂ & NIPPV**.
         - Consider **Fentanyl** for chest [pain or headache](topic:wvems-2026-020) (or air hunger).
 
     - type: "band_callout"
@@ -138,6 +138,6 @@ topic:
       markdown: |
         - Medscape Pulm. Edema — https://emedicine.medscape.com/article/157452 [Ver: 10/25]
         - ISHLT Peds HF — https://www.jhltonline.org/article/S1053-2498(25)02030-3/fulltext [Ver: 10/25]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 20, 37
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 20, 37
 
         NEMSIS: 9914137, 9914033, 9914021

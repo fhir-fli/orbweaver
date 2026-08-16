@@ -135,7 +135,7 @@ topic:
       title: "Notes"
       markdown: |
         - **Rule of 9's** can estimate BSA in adults.
-          - Patient's palm (**with fingers**) is about 1% BSA.
+          - Patient’s palm (**with fingers**) is about 1% BSA.
           - Consider only partial and full thickness when calculating BSA.
         - This protocol includes **chemical burns** and skin exposures.
           - For **gasses** and smoke [inhalation](topic:wvems-2026-072), refer to [Inhalation](topic:wvems-2026-072).
@@ -155,6 +155,6 @@ topic:
       title: "References"
       markdown: |
         - Medscape Burns — https://emedicine.medscape.com/article/1278244 [Ver: 10/23]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 30
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 30
 
         NEMSIS: 9914085, 9914095, 9914209, 9914213

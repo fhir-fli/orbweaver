@@ -106,7 +106,7 @@ topic:
       highlight: true
       markdown: |
         - In the last 12 months: pass a critical-care in-service training.
-        - Ensure blood is **stored and maintained** per supplier's instruction.
+        - Ensure blood is **stored and maintained** per supplier’s instruction.
 
     - type: "prose"
       title: "Imperatives"
@@ -133,7 +133,7 @@ topic:
       title: "Notes"
       markdown: |
         - If possible, ask about any **religious objections** before transfusion.
-          - **If altered**: may check for medical jewelry or in patient's wallet.
+          - **If altered**: may check for medical jewelry or in patient’s wallet.
 
     - type: "band_callout"
       band: "peds"
@@ -147,6 +147,6 @@ topic:
       markdown: |
         - PHTLS — https://www.naemt.org/education/trauma-education/phtls [Ver: 10th]
         - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 29, 34
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 29, 34
 
         NEMSIS: 9914083

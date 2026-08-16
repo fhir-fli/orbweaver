@@ -87,7 +87,7 @@ topic:
 
     # ────────────────────────────────────────────────
     # P POC Lactic — entry-chain action box at the top of the
-    # flowchart in the PDF. Our schema's entry_chain only holds
+    # flowchart in the PDF. Our schema’s entry_chain only holds
     # text nodes, so we render it as a separate centred action
     # callout below the flowchart (clinical content preserved).
     # ────────────────────────────────────────────────
@@ -122,11 +122,11 @@ topic:
           markdown: |
             Suspect if **several** of these:
             - Pulse > 90 /min, Lactic > 2 mmol/L
-            - Resp > 20 /min, EtCO2 < 25 mmHg
+            - Resp > 20 /min, EtCO₂ < 25 mmHg
             - Temp > 100.4°F (> 38°C)
             - Temp < 96.8°F (< 36°C)
             - Decrease in mental status
-            - Increased O2 requirement
+            - Increased O₂ requirement
         - type: "prose"
           title: "Suspect Infection"
           callout: true
@@ -167,6 +167,6 @@ topic:
       title: "References"
       markdown: |
         - Surviving Sepsis Campaign — International Guidelines 2021 [Ver: 11/21]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 24
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 24
 
         NEMSIS: 9914127

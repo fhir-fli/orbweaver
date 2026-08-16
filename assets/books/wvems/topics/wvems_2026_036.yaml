@@ -113,7 +113,7 @@ topic:
         - Unstable patients should be treated aggressively.
           - Be prepared for a [Medical CODE](topic:wvems-2026-024).
         - Alcohol and drugs can mask other causes of altered LOC.
-          - **Don't assume [Intoxication](topic:wvems-2026-040)** is the only problem.
+          - **Don’t assume [Intoxication](topic:wvems-2026-040)** is the only problem.
         - Syncope may be caused by or result in **trauma**.
           - Maintain a high index of suspicion.
 
@@ -137,7 +137,7 @@ topic:
       blocks:
         - type: "prose"
           markdown: |
-            May investigate pt's GCS:
+            May investigate pt’s GCS:
             - Check each response
             - Repeat **as needed**
             - Record the **best effort**
@@ -170,4 +170,4 @@ topic:
         - Medscape Syncope — https://emedicine.medscape.com/article/811669 [Ver: 9/24]
         - Medscape Delirium — https://emedicine.medscape.com/article/793247 [Ver: 4/24]
         - Medscape Hypoglycemia — https://emedicine.medscape.com/article/122122 [Ver: 5/25]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 22
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 22

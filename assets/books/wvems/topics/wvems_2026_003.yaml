@@ -2,15 +2,15 @@
 # WVEMS 2026 — How To Use (p.3)
 # Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
 #
-# The book's own instructions for reading itself. Absent from the app until
+# The book’s own instructions for reading itself. Absent from the app until
 # now (audit §5.1). It is what makes the provider-level badges mean anything:
 # "You may use any intervention marked for your level or lower." It also
 # defines the age bands the whole book doses by, and the Critical Care rules.
 #
-# Print sets each section's first word as a bold run-in heading continuing
+# Print sets each section’s first word as a bold run-in heading continuing
 # into the sentence ("**Basic** procedures are assumed for every call."). The
 # app has no run-in heading, so the word becomes the block title and the rest
-# of its sentence the block's lead line.
+# of its sentence the block’s lead line.
 # ============================================================
 
 topic:
@@ -42,7 +42,7 @@ topic:
       title: "Basic"
       markdown: |
         Procedures are assumed for every call.
-        - Don't forget: scene safe, BSI, ABC's, call for **ALS**, notify the ED, etc.
+        - Don’t forget: scene safe, BSI, ABC’s, call for **ALS**, notify the ED, etc.
         - Every patient should have a full assessment including vital signs.
         - Ask about **medical allergies** and **pregnancy** before giving meds.
 
@@ -58,7 +58,7 @@ topic:
       title: "Protocols"
       markdown: |
         Mean you **can**, but not always that you **should**.
-        - Use only enough to stabilize and/or improve. Don't follow blindly.
+        - Use only enough to stabilize and/or improve. Don’t follow blindly.
         - Skip anything unnecessary. Not every box needs to be completed.
         - The listed **order suggests importance**, but it is not absolute.
 
@@ -74,7 +74,7 @@ topic:
       title: "Presume"
       markdown: |
         Routine things when appropriate, like:
-        - SpO2, EKG, EtCO2, glucometer, saline lock, phlebotomy, etc.
+        - SpO₂, EKG, EtCO₂, glucometer, saline lock, phlebotomy, etc.
         - Regular layperson **first aid** treatments like splinting & band-aids.
         - Note: protocols may also include reminders (like "12-Lead").
 
@@ -92,7 +92,7 @@ topic:
       title: "Critical Care"
       markdown: |
         (CC) is for credentialed **paramedics only**.
-        - Provider's responsibility to maintain **mandatory prerequisites**.
+        - Provider’s responsibility to maintain **mandatory prerequisites**.
         - Must be approved **for that specific protocol** by the agency OMD.
         - All deadlines expire on the last day of the month (a grace period).
 

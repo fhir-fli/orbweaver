@@ -9,7 +9,7 @@
 # NOT reproduced. Instead the tables below are COMPUTED:
 #   per-age dose = (our drug cards' approved mg/kg) × (estimated weight-for-age)
 # rounded to a practical amount and capped (max shown in the notes). Dosing
-# facts/formulas aren't copyrightable, so this derivation is publish-clean.
+# facts/formulas aren’t copyrightable, so this derivation is publish-clean.
 # The weight-for-age row is an APPROXIMATE 50th-percentile estimate (Grey to
 # confirm/replace). Compute script: tmp/peds_dose.py (auditable). Every value
 # must be clinically verified before field use.

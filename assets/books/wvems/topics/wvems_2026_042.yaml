@@ -141,7 +141,7 @@ topic:
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Obtain details of patient's seizure meds if immediately available.
+        - Obtain details of patient’s seizure meds if immediately available.
         - Seizures can come in groups — **be prepared to treat another seizure**.
         - Confusion after seizure is common and may last over 30 min.
           - Transient stroke-like paralysis is also possible but is **not a CVA**.
@@ -160,6 +160,6 @@ topic:
       title: "References"
       markdown: |
         - Medscape Seizure — https://emedicine.medscape.com/article/1184846 [Ver: 7/22]
-        - Limmer D, O'Keefe MF. Emergency Care 15th ed. Chapter 22.
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 22.
 
         NEMSIS: 9914141, 9914157

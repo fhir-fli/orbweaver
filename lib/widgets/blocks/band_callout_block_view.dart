@@ -50,7 +50,7 @@ class BandCalloutBlockView extends StatelessWidget {
       color: rule,
       title: title.isEmpty ? null : title,
       titleStyle: TextStyle(
-        fontSize: 15.5,
+        fontSize: kSectionTitleSize,
         fontWeight: FontWeight.w800,
         color: rule,
         height: 1.2,

@@ -1,7 +1,7 @@
 # ============================================================
 # WVEMS 2026 — Policies (pp.109-117)
 # Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT) — original
-# WVEMS content, transcribed to titled prose (Grey's hybrid rule:
+# WVEMS content, transcribed to titled prose (Grey’s hybrid rule:
 # reference/policy text → titled prose + nested bullets, not flowcharts).
 #
 # NOTES ON FIDELITY:
@@ -82,13 +82,13 @@ topic:
     - type: "prose"
       title: "Physician Orders"
       markdown: |
-        - Physicians represent a unique resource. EMS may follow written or verbal orders from a patient's established physician, and **appropriate** verbal orders from a physician bystander on scene. EMS should only consider verbal orders outside these protocols **if the physician bystander accompanies EMS** to the hospital. Call **Medical Control** if there is any conflict.
+        - Physicians represent a unique resource. EMS may follow written or verbal orders from a patient’s established physician, and **appropriate** verbal orders from a physician bystander on scene. EMS should only consider verbal orders outside these protocols **if the physician bystander accompanies EMS** to the hospital. Call **Medical Control** if there is any conflict.
 
     # ── p.112 Termination ───────────────────────────────────
     - type: "prose"
       title: "Withholding Resuscitation"
       markdown: |
-        - Resuscitation is not appropriate if efforts are futile or against the patient's explicit wishes. **Withhold resuscitation** if any signs of **obvious death**, **mortal injury**, or if the patient has a **DNR / POST**.
+        - Resuscitation is not appropriate if efforts are futile or against the patient’s explicit wishes. **Withhold resuscitation** if any signs of **obvious death**, **mortal injury**, or if the patient has a **DNR / POST**.
         - Ask about a DNR / POST for any **hospice or nursing home** patient.
         - EMS should attempt to validate any DNR / POST with family or health-care workers. Begin resuscitation and call **Medical Control** if there is any question; EMS may stop resuscitation once verified.
 
@@ -147,7 +147,7 @@ topic:
           - Call **Medical Control** with any questions.
           - Consider the advice of the patient and any trained bystanders.
           - Some devices may provide **voice prompts** for troubleshooting.
-        - Routine management of these devices is **outside the scope** of EMS — the patient's life literally depends on them.
+        - Routine management of these devices is **outside the scope** of EMS — the patient’s life literally depends on them.
 
     - type: "prose"
       title: "Left Ventricular Assist Devices (LVADs)"
@@ -252,7 +252,7 @@ topic:
       markdown: |
         - Adults should have an appropriate presentation ([chest pain](topic:wvems-2026-028), etc.) and an EKG identified as **\*\*\* ACUTE MI \*\*\*** by automated analysis.
         - {I} **ALS**: May consider STE > 1 mm in 2 or more contiguous leads.
-        - {P(CC)} **CC** (Critical Care): May consider advanced criteria (Sgarbossa's, [posterior](topic:wvems-2026-088), etc.).
+        - {P(CC)} **CC** (Critical Care): May consider advanced criteria (Sgarbossa’s, [posterior](topic:wvems-2026-088), etc.).
         - Appropriate WVEMS cardiac hospitals (with emergent PCI) include:
           - Carilion **Roanoke** & **New River Valley** & Centra **Lynchburg**
           - Lewis Gale **Salem** & **Montgomery** & Sovah **Danville** & **Martinsville**

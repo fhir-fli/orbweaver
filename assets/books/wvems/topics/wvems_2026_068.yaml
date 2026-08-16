@@ -111,7 +111,7 @@ topic:
           rows:
             - cells: ["• Remove Wet Clothes & Dry Off"]
             - cells: ["• Heat Packs to Groin / Axilla"]
-            - cells: ["• Warmed O2 & IV Fluids"]
+            - cells: ["• Warmed O₂ & IV Fluids"]
         - type: "table"
           title: "Active Cooling"
           rows:
@@ -164,6 +164,6 @@ topic:
         - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
         - Medscape Hypothermia — https://emedicine.medscape.com/article/770542 [Ver: 10/21]
         - Medscape Heat Stroke — https://emedicine.medscape.com/article/166320 [Ver: 7/22]
-        - Limmer D, O'Keefe MF. **Emergency Care** 15th ed. Chapter 35
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 35
 
         NEMSIS: 9914023, 9914025, 9914027, 9914029, 9914031
