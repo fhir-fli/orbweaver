@@ -223,14 +223,26 @@ Source: `wvems_audit_badges.md` §6. Applied 2026-08-14/15 (`49c6878`,
       "Call ER" tile (12 pages) · **#30/#31** population edge tabs · **#23**
       dashed conditional boxes (supported, used 0 times).
 
-## Batch 5 — typography
+## Batch 5 — typography 🚧
 
-Source: `wvems_audit_typography.md` §8. In the audit's priority order after the
-links: a condensed body face (already in the Flutter cache; it is what the print
-uses and it makes type *bigger* on screen by relieving the fit-scaler), then
-units at 0.80 of the value (0.88 on peds cards), the two bullet glyphs, the
-extra 0.12 em between top-level bullets, subscript `2`, curly apostrophes,
-tables not shrunk, section title ratio, and small print for URLs/attributions.
+Source: `wvems_audit_typography.md` §8, in the audit's own priority order.
+
+- [x] **A condensed body face** (§3.10, the audit's third priority overall).
+      `font_family:` joins the book → chapter → topic cascade and WVEMS asks
+      for `RobotoCondensed`; the other books keep the default, because the face
+      is a property of the printed source.
+      ⚠️ **The audit's "already in the Flutter cache, no new asset" is wrong.**
+      It is in the SDK cache but a built APK bundles no Roboto at all — the
+      FontManifest holds only MaterialIcons — so the family fell back silently
+      and the first build looked identical. The five faces ship under
+      `assets/fonts/` now (Apache 2.0). Check by unzipping the APK, never by
+      looking at the screenshot twice.
+      ⚠️ **`page_fits.tsv` cannot measure this** — that harness renders in Ahem.
+- [ ] **Units at 0.80 of the value** (0.88 on peds cards) — 301 runs on the
+      protocol pages alone; the audit's fourth priority.
+- [ ] Two bullet glyphs · the extra 0.12 em between top-level bullets ·
+      subscript `2` · curly apostrophes · tables not shrunk · section-title
+      ratio · small print for URLs and attributions.
 
 ---
 
@@ -264,3 +276,4 @@ tables not shrunk, section title ratio, and small print for URLs/attributions.
   because `flutter build apk` skipped the asset copy (fix: `flutter clean`), and
   the shared `~/.pub-cache` loses packages mid-build when another session runs
   `pub get` (fix: re-run `flutter pub get`, don't chase it).
+- 2026-08-15 — **Batch 5 begun** (`5814eb5`): the condensed body face, book-scoped.
