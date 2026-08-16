@@ -238,11 +238,29 @@ Source: `wvems_audit_typography.md` §8, in the audit's own priority order.
       `assets/fonts/` now (Apache 2.0). Check by unzipping the APK, never by
       looking at the screenshot twice.
       ⚠️ **`page_fits.tsv` cannot measure this** — that harness renders in Ahem.
-- [ ] **Units at 0.80 of the value** (0.88 on peds cards) — 301 runs on the
-      protocol pages alone; the audit's fourth priority.
-- [ ] Two bullet glyphs · the extra 0.12 em between top-level bullets ·
-      subscript `2` · curly apostrophes · tables not shrunk · section-title
-      ratio · small print for URLs and attributions.
+- [x] **Units set smaller than the value** (§3.2, the audit's fourth priority).
+      Applied by rule, not authored: `unitAwareSpans` shrinks any unit token
+      that follows a number, in both parsers, so no YAML churn. **Vocabulary
+      measured off the PDF** (`wvems_unit_census.py`), which corrected two
+      guesses: an age is never a unit here, and abbreviated time shrinks while
+      spelled-out time does not. Scale 0.85, not the print's 0.80 — the audit
+      asks for a screen test first; one constant to change.
+- [x] Two bullet glyphs (§3.8) · the bullet pitch ratio (§3.9) · section-title
+      step 1.107 → 1.20 (§3.6) · subscript `₂`, 54 (§3.3) · the ® at 0.70, 109
+      (§3.3) · typographic apostrophes, 99 (§5.5) · References at 0.8 (§3.7).
+- [x] **Tables — deliberately NOT raised** (§6.6). The print sets its GCS,
+      APGAR and Shock Index tables at full prose body, so both were tried at
+      1.167 and 1.083; the GCS broke five and then three cells mid-word. The
+      print's rule assumes a 576 pt page. **Instead the real defect was fixed:**
+      the GCS shared its row 1:1 with prose and broke "confused" / "withdraw" /
+      "localizes" *at the default size*; the row is 6:4 now.
+
+### Batch 5 leftovers
+- [ ] Superscript ordinals (`15th`) — audit says leave plain on a phone, and
+      §3.7's smaller References line already carries the intent. Nothing to do
+      unless Grey disagrees.
+- [ ] The print's `/` at 0.88 and parens at 0.92 (a compound like
+      "Ketamine (pain): 3 mg" steps down twice). Fine detail; not attempted.
 
 ---
 
@@ -277,3 +295,6 @@ Source: `wvems_audit_typography.md` §8, in the audit's own priority order.
   the shared `~/.pub-cache` loses packages mid-build when another session runs
   `pub get` (fix: re-run `flutter pub get`, don't chase it).
 - 2026-08-15 — **Batch 5 begun** (`5814eb5`): the condensed body face, book-scoped.
+- 2026-08-16 — **Batch 5 complete** (`9e47e71`, `9e18d35`, `1035199`): units,
+  bullet glyphs and pitch, section step, subscripts, ®, apostrophes, References.
+  Tables left at their reduction on evidence, and the GCS row rebalanced.
