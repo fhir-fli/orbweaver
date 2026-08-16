@@ -108,6 +108,7 @@ topic:
         - type: "prose"
           title: "SEPSIS Alert"
           callout: true
+          dashed: true
           markdown: |
             - **Organ Dysfunction**
             - **Suspected Infection**

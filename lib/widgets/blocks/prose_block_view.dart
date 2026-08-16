@@ -103,7 +103,21 @@ class ProseBlockView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: [
-                if (block.title != null)
+                // A firm box gets the print's solid title chip; a dashed
+                // (conditional) one gets plain bold text, because the print
+                // draws that box as an outline with no fill and nothing solid
+                // inside it.
+                if (block.title != null && block.dashed)
+                  Text(
+                    block.title!,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w800,
+                      color: theme.alertText,
+                    ),
+                  )
+                else if (block.title != null)
                   Container(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 16,

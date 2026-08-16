@@ -146,6 +146,7 @@ topic:
         - type: "prose"
           title: "TRAUMA Alert"
           callout: true
+          dashed: true
           markdown: |
             - If Any Trauma CPR
             - Or Unstable Vitals

@@ -97,16 +97,22 @@ topic:
       highlight: true
       markdown: |
         - Transport emergently if sudden changes in LOC.
-          - Consider [Elevated ICP](topic:wvems-2026-086) if indicated & credentialed for Crit Care.
         - **Hypoxia** and **Hypotension** are associated with poor outcomes.
           - Investigate and treat for [Hypoxia](topic:wvems-2026-006) and [Hypotension](topic:wvems-2026-008) aggressively.
         - [Anticoagulation](topic:wvems-2026-076) meds (**blood thinners**) increase risk of ICH.
         - **Lacerations** benefit from repair within the first few hours.
         - **Mechanism** predicts severity.
 
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider [Elevated ICP](topic:wvems-2026-086) if indicated & credentialed for Crit Care.
+
     - type: "prose"
       title: "TRAUMA Alert"
       callout: true
+      dashed: true
       markdown: |
         - If Major Intervention
         - Or Major Mechanism

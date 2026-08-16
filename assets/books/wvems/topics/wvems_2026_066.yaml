@@ -119,6 +119,7 @@ topic:
     - type: "prose"
       title: "TRAUMA Alert"
       callout: true
+      dashed: true
       markdown: |
         - If Major Intervention
         - Or Major Mechanism

@@ -130,7 +130,6 @@ topic:
           - Uterus palpable above the umbilicus suggests late pregnancy.
         - Any SBP reading **above 160 mmHg** may be **preeclampsia**.
           - Prioritize transport. Call **Medical Control** for any refusal.
-          - Consider [Preeclampsia](topic:wvems-2026-092) if indicated and credentialed for CC.
         - Aggressively treat any [Seizure](topic:wvems-2026-042) as **eclampsia**.
         - Any maternal trauma after 20 weeks should be transported.
           - Fetus may have injury that is not immediately obvious.
@@ -141,6 +140,12 @@ topic:
           - **Failed Delivery / Shoulder Dystocia**: transport knees to chest.
           - **Prolapse**: don't handle cord; relieve pressure with fingers in vagina.
           - **Breech**: do not pull; elevate presenting part if pressing on cord.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider [Preeclampsia](topic:wvems-2026-092) if indicated and credentialed for CC.
 
     - type: "prose"
       title: "Notes"

@@ -111,6 +111,7 @@ topic:
         - type: "prose"
           title: "STEMI Alert"
           callout: true
+          dashed: true
           markdown: |
             - If **V-pace** or **LBBB**
             - w/ any **Sgarbossa**

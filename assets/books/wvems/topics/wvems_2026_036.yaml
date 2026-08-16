@@ -121,13 +121,18 @@ topic:
       title: "Notes"
       markdown: |
         - Consider an atypical [Cardiac](topic:wvems-2026-028) cause in diabetics and the elderly.
-        - Consider [Sepsis](topic:wvems-2026-094) if indicated and credentialed for Critical Care.
         - Check for **medical jewelry**.
 
     # Print p.37 sets the GCS scoring bullets to the LEFT of the GCS table
     # rather than above it. Both halves are narrow (longest bullet 22 chars,
     # and the same table already lives in a row on p.87), so the pairing
     # survives a 181 px slot.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider [Sepsis](topic:wvems-2026-094) if indicated and credentialed for Critical Care.
     - type: "row"
       blocks:
         - type: "prose"

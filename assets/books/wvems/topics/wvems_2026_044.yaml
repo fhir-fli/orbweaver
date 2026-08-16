@@ -111,6 +111,7 @@ topic:
     - type: "prose"
       title: "STROKE Alert"
       callout: true
+      dashed: true
       markdown: |
         - If you suspect a CVA
         - & Last Normal **< 6 h**

@@ -131,7 +131,12 @@ topic:
         - **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** (Sulfate): may cause [Hypotension](topic:wvems-2026-008) and [Dyspnea](topic:wvems-2026-030).
           - Only useful for seizures in late [Pregnancy](topic:wvems-2026-048) (20 weeks & over).
           - Do **not** provide in early pregnancy. Eclampsia is unlikely.
-          - Consider [Preeclampsia](topic:wvems-2026-092) if indicated and credentialed for CC.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider [Preeclampsia](topic:wvems-2026-092) if indicated and credentialed for CC.
 
     - type: "prose"
       title: "Notes"

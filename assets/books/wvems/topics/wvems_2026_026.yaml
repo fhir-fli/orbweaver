@@ -107,9 +107,14 @@ topic:
       title: "Notes"
       markdown: |
         - **EtCO2** can help identify ROSC. Monitor during resuscitation.
-        - Consider [Intubation](topic:wvems-2026-078) and/or [Vent](topic:wvems-2026-080) if indicated and credentialed for CC.
         - Therapeutic hypothermia is **not included** in this protocol.
           - Also known as "targeted temperature management".
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider [Intubation](topic:wvems-2026-078) and/or [Vent](topic:wvems-2026-080) if indicated and credentialed for CC.
 
     - type: "band_callout"
       band: "peds"

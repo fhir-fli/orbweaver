@@ -86,7 +86,6 @@ topic:
       markdown: |
         - Monitor [Airway](topic:wvems-2026-004) closely with any facial, nasal or oral burns.
           - Check the mouth for **soot** and the nose/face for **singed hairs**.
-          - Consider [Intubation](topic:wvems-2026-078) if indicated and credentialed for CC.
         - Provide **100%** oxygen by NRB for carbon monoxide (CO) exposure.
           - SpO2 may read **false normal** (CO can fool the SpO2 monitor).
           - Symptoms may include: headache, confusion, red skin, N/V.
@@ -94,6 +93,12 @@ topic:
         - Some industrial gas (e.g. **Cyanide**) may benefit from an **[Antidote](topic:wvems-2026-096#adult-antidotes)**.
         - WMD nerve gas (e.g. **Sarin**, **VX**) may benefit from an **[Antidote](topic:wvems-2026-096#adult-antidotes)**.
         - Even non-toxic gases can produce [Hypoxia](topic:wvems-2026-006) & [Dyspnea](topic:wvems-2026-030). Give O2.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider [Intubation](topic:wvems-2026-078) if indicated and credentialed for CC.
 
     - type: "prose"
       title: "Notes"
