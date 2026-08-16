@@ -140,6 +140,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - NAEMSP Excited Delirium — https://naemsp.org/resources/position-statements/ [Ver: 2024]
         - Medscape Acute Agitation — https://emedicine.medscape.com/article/805513 [Ver: 8/24]

@@ -114,6 +114,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Vomiting — https://emedicine.medscape.com/article/933135 [Ver: 10/23]
         - Limmer D, O’Keefe MF. Emergency Care 14th ed. Chapter 7, 29.

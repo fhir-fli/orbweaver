@@ -167,6 +167,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - EBG for Prehospital Pain — https://pubmed.ncbi.nlm.nih.gov/34928760/ [Ver: 1/22]
         - Medscape Pain — https://emedicine.medscape.com/article/310834 [Ver: 7/24]

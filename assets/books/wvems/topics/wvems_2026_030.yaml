@@ -151,6 +151,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - GINA Asthma — https://ginasthma.org/ [Ver: 2024]
         - GOLD COPD — https://goldcopd.org/ [Ver: 2024]

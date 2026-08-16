@@ -253,6 +253,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - PALS (AHA 2020) — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
         - Weight-for-age: approx 50th-percentile (CDC/WHO growth; PALS/Broselow convention)

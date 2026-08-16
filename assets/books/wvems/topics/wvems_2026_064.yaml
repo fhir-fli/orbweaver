@@ -127,6 +127,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Blunt Chest — https://emedicine.medscape.com/article/428723 [Ver: 11/22]
         - Medscape Penetrating Abd — https://emedicine.medscape.com/article/2036859 [Ver: 3/22]

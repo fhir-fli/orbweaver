@@ -166,6 +166,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Delivery — https://emedicine.medscape.com/article/260036 [Ver: 2/24]
         - Medscape Eclampsia — https://emedicine.medscape.com/article/253960 [Ver: 8/25]

@@ -144,6 +144,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Head Injury — https://emedicine.medscape.com/article/1163653 [Ver: 12/24]
         - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 33

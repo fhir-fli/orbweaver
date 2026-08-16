@@ -142,6 +142,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Hypoglycemia — https://emedicine.medscape.com/article/767359 [Ver: 9/24]
         - Medscape DKA — https://emedicine.medscape.com/article/118361 [Ver: 7/24]

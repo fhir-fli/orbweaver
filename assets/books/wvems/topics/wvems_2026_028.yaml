@@ -148,6 +148,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - ACC/AHA STEMI Guidelines — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001309 [Ver: 2024]
         - Medscape ACS — https://emedicine.medscape.com/article/1910735 [Ver: 6/24]

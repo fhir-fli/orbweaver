@@ -144,6 +144,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - PHTLS — https://www.naemt.org/education/trauma-education/phtls [Ver: 10th]
         - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]

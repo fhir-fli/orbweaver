@@ -147,6 +147,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Fracture Care — https://emedicine.medscape.com/article/1270717 [Ver: 4/24]
         - Medscape Vascular Trauma — https://emedicine.medscape.com/article/462752 [Ver: 10/23]

@@ -160,6 +160,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
         - Medscape Hypothermia — https://emedicine.medscape.com/article/770542 [Ver: 10/21]

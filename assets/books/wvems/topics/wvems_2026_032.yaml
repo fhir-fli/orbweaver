@@ -160,6 +160,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - WAO Anaphylaxis Guidelines — https://www.worldallergy.org/UserFiles/file/WAO-Anaphylaxis-Guidance-2020.pdf [Ver: 2020]
         - Medscape Anaphylaxis — https://emedicine.medscape.com/article/135065 [Ver: 3/24]

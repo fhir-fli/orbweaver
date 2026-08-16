@@ -134,6 +134,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - ACS-COT, ACEP, NAEMSP: SMR in Trauma — Joint Statement [Ver: 2018]
         - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 33

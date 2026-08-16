@@ -135,6 +135,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Abd Pain — https://emedicine.medscape.com/article/776663 [Ver: 4/25]
         - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 26

@@ -154,6 +154,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Head Injury — https://emedicine.medscape.com/article/251834 [Ver: 5/22]
         - ACS TBI Guidelines — https://www.facs.org/search?searchTerm=TBI+Guideline [Ver: 2020]

@@ -146,6 +146,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape AMI — https://emedicine.medscape.com/article/155919 [Ver: 9/25]
         - ACC Expert Consensus — https://www.jacc.org/doi/10.1016/j.jacc.2022.08.750 [Ver: 11/22]

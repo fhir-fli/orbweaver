@@ -136,6 +136,7 @@ topic:
     - type: "row"
       blocks:
         - type: "prose"
+          flex: 4
           markdown: |
             May investigate pt’s GCS:
             - Check each response
@@ -145,6 +146,9 @@ topic:
             - Normal score is **15**
             - Worst score is **3**
         - type: "table"
+          # 6:4 against the prose beside it — at 1:1 the four columns are too
+          # narrow and "confused" / "withdraw" / "localizes" break mid-word.
+          flex: 6
           title: "Glasgow Coma Scale"
           columns: ["Eyes", "Verbal", "Motor", ""]
           column_flex: [3, 3, 3, 1]
@@ -166,6 +170,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Syncope — https://emedicine.medscape.com/article/811669 [Ver: 9/24]
         - Medscape Delirium — https://emedicine.medscape.com/article/793247 [Ver: 4/24]

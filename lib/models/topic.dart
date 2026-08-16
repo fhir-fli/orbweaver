@@ -1282,6 +1282,7 @@ class ProseBlock extends Block {
     this.callout = false,
     this.dashed = false,
     this.boxed = false,
+    this.textScale = 1.0,
     super.flex,
     super.anchor,
     super.ownPaletteArgb,
@@ -1294,6 +1295,7 @@ class ProseBlock extends Block {
     callout: (map['callout'] as bool?) ?? false,
     dashed: (map['dashed'] as bool?) ?? false,
     boxed: (map['boxed'] as bool?) ?? false,
+    textScale: (map['text_scale'] as num?)?.toDouble() ?? 1.0,
     flex: _flex(map),
     anchor: map['anchor'] as String?,
     ownPaletteArgb: _parsePaletteArgb(map['palette']),
@@ -1303,6 +1305,15 @@ class ProseBlock extends Block {
   final String markdown;
   final bool highlight;
   final bool callout;
+
+  /// Body size for this block as a fraction of the prose body.
+  ///
+  /// The print keeps a whole tier below the body for matter that must recede:
+  /// URLs and `[Ver: …]` stamps at 12 pt (0.48 of body) and attributions at
+  /// 9-12 pt, so a Medscape URL does not carry the same weight as a drug dose
+  /// (audit §3.7). 0.48 is unreadable at a 12-14 px body, so a References
+  /// block takes 0.8 — the same intent, sized for a screen.
+  final double textScale;
 
   /// Draws a [callout] box's outline dashed instead of solid. The print
   /// uses this to separate a **conditional** box from a firm one — PDF

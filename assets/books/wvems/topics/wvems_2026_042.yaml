@@ -158,6 +158,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Seizure — https://emedicine.medscape.com/article/1184846 [Ver: 7/22]
         - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 22.

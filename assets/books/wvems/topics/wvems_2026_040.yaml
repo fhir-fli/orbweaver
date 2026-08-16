@@ -141,6 +141,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Poison Control — 1-800-222-1222
         - Medscape Toxicology — https://emedicine.medscape.com/article/813523 [Ver: 5/24]

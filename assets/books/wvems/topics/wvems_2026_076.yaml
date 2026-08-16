@@ -154,6 +154,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Epistaxis — https://emedicine.medscape.com/article/764719 [Ver: 8/23]
         - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 29

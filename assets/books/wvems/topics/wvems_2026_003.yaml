@@ -98,6 +98,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         Are included. This text is not comprehensive.
         - Medications may appear as **brand name**® or **generic**.

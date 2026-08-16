@@ -164,6 +164,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Sedation — https://emedicine.medscape.com/article/809993 [Ver: 10/24]
         - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 10, 27

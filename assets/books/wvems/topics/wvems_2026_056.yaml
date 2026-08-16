@@ -179,6 +179,7 @@ topic:
 
     - type: "prose"
       title: "References"
+      text_scale: 0.8
       markdown: |
         - Medscape Polytrauma — https://emedicine.medscape.com/article/434707 [Ver: 7/22]
         - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Chapter 29, 34

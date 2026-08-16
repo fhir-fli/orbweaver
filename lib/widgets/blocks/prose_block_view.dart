@@ -11,6 +11,10 @@ import 'package:orbweaver/widgets/section_bracket.dart';
 /// weights on a backlit screen. Tight leading is how the print fits five
 /// sections on a page, and buying that height back is what lets the paged
 /// fit-scaler run nearer 1.0, so the text ends up *larger* on screen.
+/// Prose body size — the ratio every other type size in the book is quoted
+/// against.
+const double kProseBodySize = 14;
+
 const double kProseLineHeight = 1.18;
 
 /// Section title size. The print sets its section heads at 30 pt over a 25 pt
@@ -159,6 +163,7 @@ class ProseBlockView extends StatelessWidget {
 
     final markdown = MiniMarkdown(
       markdown: block.markdown,
+      fontSize: kProseBodySize * block.textScale,
       bulletColor: accent,
       height: kProseLineHeight,
       unitSpacing: kProseUnitSpacing,
