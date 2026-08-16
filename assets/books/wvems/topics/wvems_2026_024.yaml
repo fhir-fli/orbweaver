@@ -95,8 +95,8 @@ topic:
         text: "Disposition"
         shape: "stadium"
         bullets:
-          - text: "BLS: Get ALS ASAP"
-          - text: "ALS: [Try 30 min](topic:wvems-2026-109#termination-of-resuscitation)"
+          - text: "{E} BLS: Get ALS ASAP"
+          - text: "{I} ALS: [Try 30 min](topic:wvems-2026-109#termination-of-resuscitation)"
 
       dose_table:
         - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
