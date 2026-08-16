@@ -203,12 +203,22 @@ Source: `wvems_audit_badges.md` §6. Applied 2026-08-14/15 (`49c6878`,
       **#27** the twelfth alert box.
 
 ### Left in batch 4
-- [ ] **#8** badges inside convergence-stadium bullets (pp.24, 52) — the token
-      works there now; the two need authoring.
-- [ ] **#22** the Concept box is neutral grey in print, amber in the app, which
-      steals emphasis from the octagon and trapezoid (31 uses).
-- [ ] **#33** 12 missing Critical-Care bands · **#34** 17 missing CC sub-tabs,
-      and the pill reshaped into a tab fused to the stadium.
+- [x] **#8** p.24's two convergence-bullet chips. (The summary names p.52 too;
+      that page's own badge dump has none.)
+- [x] **#22 / #23** the three box registers. The colour batch had already made
+      a callout grey; what was missing was the *form* — `dashed: true` had
+      never been used, so every conditional box rendered solid. The twelve
+      alert boxes are dashed now, and a dashed box's title is plain bold text
+      rather than the firm box's solid chip.
+- [x] **#33** the seven Critical-Care bands whose line exists. The other five
+      are missing *text*, not a missing band — see
+      `wvems_links_not_restorable.md`.
+- [x] **#34 (form)** the pill is a tab fused to the stadium's bottom edge, with
+      no arrow: it is not a next step, it is the same disposition for a
+      credentialed provider.
+- [ ] **#34 (coverage)** 16 of the 19 printed CC sub-tabs are still unauthored
+      (topics 004, 006, 010, 016, 026, 028, 030, 042, 048, 054, 056, 058, 062,
+      072, 086, 090). Each needs its printed page read for the tab's text.
 - [ ] **#3b** the p.96 procedures index is itself a scope table · **#26** the
       "Call ER" tile (12 pages) · **#30/#31** population edge tabs · **#23**
       dashed conditional boxes (supported, used 0 times).
