@@ -106,9 +106,11 @@ topic:
           markdown: |
             - In the last 12 months: pass a critical-care in-service training.
         - type: "prose"
+          flex: 6
           title: "SEPSIS Alert"
           callout: true
           dashed: true
+          call_er: true
           markdown: |
             - **Organ Dysfunction**
             - **Suspected Infection**
@@ -117,6 +119,7 @@ topic:
     - type: "row"
       blocks:
         - type: "prose"
+          flex: 5
           title: "Organ Dysfunction"
           callout: true
           markdown: |

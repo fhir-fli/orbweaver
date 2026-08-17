@@ -110,14 +110,17 @@ topic:
     - type: "row"
       blocks:
         - type: "prose"
+          flex: 6
           title: "TRAUMA Alert"
           callout: true
           dashed: true
+          call_er: true
           markdown: |
             - If Major Intervention
             - Or Major Mechanism
             - Call a **TRAUMA** Alert
         - type: "prose"
+          flex: 5
           title: "Poor Perfusion"
           callout: true
           markdown: |

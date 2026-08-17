@@ -41,6 +41,11 @@ const Map<String, Color> kRoleDefaults = {
   // exactly once in 166 pages (the legend); every body `P` is Critical Care
   // and takes the purple the print gives it. Before the split, one lavender
   // stood for both and the distinction was unrenderable.
+  // The "Call ER" tile (audit §4.1). Both sampled from the print, which uses
+  // the same tile on all 12 pages that carry it.
+  'call_er_phone': Color(0xFF01FE01),
+  'call_er_text': Color(0xFFCC0000),
+
   'provider_emt': Color(0xFFFFD966),
   'provider_intermediate': Color(0xFF6FA8DC),
   'provider_aemt': Color(0xFF93C47D),

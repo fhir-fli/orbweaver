@@ -3,6 +3,7 @@ import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
 import 'package:orbweaver/widgets/section_bracket.dart';
+import 'package:orbweaver/widgets/call_er_tile.dart';
 
 /// Line height for prose bodies. The printed protocols run a 50-56 px line
 /// pitch at 150 dpi against 47-50 px of ink (measured on PDF pp.11 and 71)
@@ -93,70 +94,87 @@ class ProseBlockView extends StatelessWidget {
       // PDF p.71 draws the "If Major Intervention / Call a TRAUMA Alert"
       // box dashed while the "ABLS rate:" box beside it is solid, and p.43
       // dashes the conditional peds Versed sub-box the same way.
-      return Align(
-        alignment: Alignment.center,
-        child: Container(
-          padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
-          decoration: BoxDecoration(
-            color: block.dashed ? theme.dashFill : theme.alertFill,
-            border: block.dashed
-                ? null
-                : Border.all(color: theme.alert, width: 1.4),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          foregroundDecoration: block.dashed
-              ? _DashedRoundedBorder(color: theme.dashRule, width: 1.4)
-              : null,
-          child: IntrinsicWidth(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // A firm box gets the print's solid title chip; a dashed
-                // (conditional) one gets plain bold text, because the print
-                // draws that box as an outline with no fill and nothing solid
-                // inside it.
-                if (block.title != null && block.dashed)
-                  Text(
+      final box = Container(
+        padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
+        decoration: BoxDecoration(
+          color: block.dashed ? theme.dashFill : theme.alertFill,
+          border: block.dashed
+              ? null
+              : Border.all(color: theme.alert, width: 1.4),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        foregroundDecoration: block.dashed
+            ? _DashedRoundedBorder(color: theme.dashRule, width: 1.4)
+            : null,
+        child: IntrinsicWidth(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // A firm box gets the print's solid title chip; a dashed
+              // (conditional) one gets plain bold text, because the print
+              // draws that box as an outline with no fill and nothing solid
+              // inside it.
+              if (block.title != null && block.dashed)
+                Text(
+                  block.title!,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w800,
+                    color: theme.alertText,
+                  ),
+                )
+              else if (block.title != null)
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 4,
+                  ),
+                  decoration: BoxDecoration(
+                    color: theme.alert,
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Text(
                     block.title!,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w800,
-                      color: theme.alertText,
+                      color: Colors.white,
                     ),
-                  )
-                else if (block.title != null)
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 4,
-                    ),
-                    decoration: BoxDecoration(
-                      color: theme.alert,
-                      borderRadius: BorderRadius.circular(999),
-                    ),
-                    child: Text(
-                      block.title!,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w800,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                const SizedBox(height: 8),
-                DefaultTextStyle.merge(
-                  textAlign: TextAlign.center,
-                  child: MiniMarkdown(
-                    markdown: block.markdown,
-                    bulletColor: theme.alertText,
                   ),
                 ),
-              ],
-            ),
+              const SizedBox(height: 8),
+              DefaultTextStyle.merge(
+                textAlign: TextAlign.center,
+                child: MiniMarkdown(
+                  markdown: block.markdown,
+                  bulletColor: theme.alertText,
+                ),
+              ),
+            ],
           ),
+        ),
+      );
+
+      // The print's alert marker is the *pairing* — a dashed box whose last
+      // bullet says "Call a <X> Alert", with the Call-ER tile immediately to
+      // its right (audit §4.2). The box carries almost no weight on its own:
+      // it is an outline with no fill.
+      if (!block.callEr) {
+        return Align(alignment: Alignment.center, child: box);
+      }
+      return Align(
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Flexible(child: box),
+            const SizedBox(width: 8),
+            const CallErTile(),
+          ],
         ),
       );
     }

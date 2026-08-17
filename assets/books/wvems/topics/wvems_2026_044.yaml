@@ -112,6 +112,7 @@ topic:
       title: "STROKE Alert"
       callout: true
       dashed: true
+      call_er: true
       markdown: |
         - If you suspect a CVA
         - & Last Normal **< 6 h**

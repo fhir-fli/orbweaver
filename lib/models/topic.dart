@@ -1283,6 +1283,7 @@ class ProseBlock extends Block {
     this.dashed = false,
     this.boxed = false,
     this.textScale = 1.0,
+    this.callEr = false,
     super.flex,
     super.anchor,
     super.ownPaletteArgb,
@@ -1296,6 +1297,7 @@ class ProseBlock extends Block {
     dashed: (map['dashed'] as bool?) ?? false,
     boxed: (map['boxed'] as bool?) ?? false,
     textScale: (map['text_scale'] as num?)?.toDouble() ?? 1.0,
+    callEr: (map['call_er'] as bool?) ?? false,
     flex: _flex(map),
     anchor: map['anchor'] as String?,
     ownPaletteArgb: _parsePaletteArgb(map['palette']),
@@ -1314,6 +1316,15 @@ class ProseBlock extends Block {
   /// (audit §3.7). 0.48 is unreadable at a 12-14 px body, so a References
   /// block takes 0.8 — the same intent, sized for a screen.
   final double textScale;
+
+  /// Pairs this box with the print's "Call ER" tile on its right.
+  ///
+  /// The print has no separate alert badge — the marker *is* the composition
+  /// `dashed box { … "Call a <X> Alert" } + Call-ER tile` (audit §4.2), on
+  /// exactly the 12 pages that carry the tile. Explicit rather than inferred
+  /// from `dashed`, because a dashed box is also the print's form for an
+  /// ordinary conditional (p.43's peds Versed sub-box), which gets no tile.
+  final bool callEr;
 
   /// Draws a [callout] box's outline dashed instead of solid. The print
   /// uses this to separate a **conditional** box from a firm one — PDF

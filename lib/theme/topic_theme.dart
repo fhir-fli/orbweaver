@@ -53,6 +53,10 @@ class TopicTheme {
   Color get severitySevereTile => _c('severity_severe_tile');
 
   // Provider badges.
+  /// The "Call ER" tile's green handset square and its red `ER`.
+  Color get callErPhone => _c('call_er_phone');
+  Color get callErText => _c('call_er_text');
+
   Color get providerEmt => _c('provider_emt');
   Color get providerIntermediate => _c('provider_intermediate');
   Color get providerAemt => _c('provider_aemt');

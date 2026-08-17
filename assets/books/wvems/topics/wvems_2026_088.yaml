@@ -109,14 +109,17 @@ topic:
     - type: "row"
       blocks:
         - type: "prose"
+          flex: 6
           title: "STEMI Alert"
           callout: true
           dashed: true
+          call_er: true
           markdown: |
             - If **V-pace** or **LBBB**
             - w/ any **Sgarbossa**
             - Call a **STEMI** Alert
         - type: "prose"
+          flex: 5
           title: "Sgarbossa’s (modified)"
           callout: true
           markdown: |

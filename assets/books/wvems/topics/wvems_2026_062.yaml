@@ -116,6 +116,7 @@ topic:
       title: "TRAUMA Alert"
       callout: true
       dashed: true
+      call_er: true
       markdown: |
         - If Major Intervention
         - Or Major Mechanism

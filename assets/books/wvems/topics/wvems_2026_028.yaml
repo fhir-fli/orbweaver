@@ -130,6 +130,7 @@ topic:
       title: "STEMI Alert"
       callout: true
       dashed: true
+      call_er: true
       markdown: |
         - If you see a [STEMI](topic:wvems-2026-088)
         - Or EKG says \*\***AMI**\*\*
