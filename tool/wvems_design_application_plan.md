@@ -224,10 +224,11 @@ Source: `wvems_audit_badges.md` §6. Applied 2026-08-14/15 (`49c6878`,
 - [ ] **#3b** the p.96 procedures index is itself a scope table ("who may do
       what", at a glance) — the app uses a book-level `view: "index"` with no
       badges. Marked ADAPT → *decide*, so it needs Grey.
-- [ ] **#26** the "Call ER" phone tile, 12 pages — a recurring themed vector
-      parameterised by one word (TRAUMA / STROKE / STEMI / SEPSIS). The print's
-      alert box gets all its weight from this tile; the app has the dashed box
-      but not the tile.
+- [x] **#26** the "Call ER" phone tile, on the 12 pages the audit measured.
+      Drawn as a vector (fixed geometry, twelve pages, one varying word), with
+      its green and red as palette roles. `call_er:` is explicit rather than
+      inferred from `dashed:` — a dashed box is also the print's ordinary
+      conditional (p.43), which gets no tile.
 - [ ] **#30/#31** population edge tabs — the pink `Peds` right-edge tab on an
       action tile (3 instances) and the per-row Adult/Peds tab in a dose table
       (the app draws a full-width section band instead; §6.4 calls that "form
@@ -313,3 +314,6 @@ Source: `wvems_audit_typography.md` §8, in the audit's own priority order.
 - 2026-08-17 — **#34 complete** (`ae10347`): all 19 CC sub-tabs. What is left of
   the three audits is #3b, #26, #30/#31, #24 — three of the four are marked
   "decide" in the audit and want Grey's call, and #26 is a new vector asset.
+- 2026-08-17 — **#26 done** (`ebe8467`, fixed in `761a0fd`). **Every build item
+  in the three audits is now applied.** What is left is only the three the
+  audits themselves mark "decide": #3b, #30/#31, #24.
