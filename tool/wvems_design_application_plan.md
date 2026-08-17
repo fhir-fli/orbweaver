@@ -317,3 +317,36 @@ Source: `wvems_audit_typography.md` §8, in the audit's own priority order.
 - 2026-08-17 — **#26 done** (`ebe8467`, fixed in `761a0fd`). **Every build item
   in the three audits is now applied.** What is left is only the three the
   audits themselves mark "decide": #3b, #30/#31, #24.
+
+---
+
+## The three "decide" items, investigated 2026-08-17
+
+Each was measured before recommending, rather than argued from the audit text.
+
+**#3b — the p.96 procedures index as a scope table.** The print devotes a page
+to a 9-section grid: every procedure as a tile with its scope badge, "who may
+do what" at a glance. **Checked: the app already holds this information and it
+is exactly right** — all 27 card `scope:` values match the print's index badges,
+**0 mismatches**, and the 4 the grid omits are the Critical Care procedures it
+summarises as "P 107 & 108". So this is a missing *view*, not a missing fact,
+and it is now cheap: a `table` whose cells carry `{E}` badges needs no code.
+**The judgement is whether a scan-view earns its place** — in print you flip to
+it; in the app you would scroll past it every time you open Procedures.
+→ Grey's call. Genuinely optional.
+
+**#30 — the action-tile pink `Peds` side tab (3 instances, pp.12, 50, 78).**
+Mostly already conveyed, in a different form: p.12's Epi carries
+`condition: "Peds"` and p.78's Intubate / Bougie Cric carry `condition:
+"Adult"`, which partitions the same way. Only p.50's appears unrepresented.
+→ **Recommend skip.** One instance, meaning largely preserved.
+
+**#31 — the dose-row Adult/Peds edge tabs.** The colour batch made the dose
+row's *fill* encode population (adult grey, peds pink), which the audit itself
+calls the print's primary signal — the tab is the label on it. §6.4 already
+grades this "form differs, meaning preserved".
+→ **Recommend skip.** Done in substance.
+
+**#24 — the zebra-striped age-band entry stadium (6 pages).** Only the striping
+is lost; every threshold is present in the stadium text.
+→ **Recommend skip.** The audit marks it low value itself.
