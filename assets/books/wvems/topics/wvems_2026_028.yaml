@@ -127,6 +127,15 @@ topic:
           - Do **not** give within 24 h of PDE5 inhibitors (sildenafil, etc).
 
     - type: "prose"
+      title: "PDE5 Inhibitors"
+      callout: true
+      markdown: |
+        - Sildenafil (Viagra®)
+        - Tadalafil (Cialis®)
+        - Vardenafil (Levitra®)
+        - Avanafil (Stendra®)
+
+    - type: "prose"
       title: "STEMI Alert"
       callout: true
       dashed: true

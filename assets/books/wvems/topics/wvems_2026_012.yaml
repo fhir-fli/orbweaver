@@ -113,6 +113,16 @@ topic:
         - {I} May try a pacer magnet to improve rate. **Do not** use on AICD.
 
     - type: "prose"
+      title: "Poor Perfusion"
+      callout: true
+      markdown: |
+        Suspect if **several** of these:
+        - **Altered Mental Status**
+        - Skin Pale, Cool, Diaphoretic
+        - Hypotension, Orthostasis
+        - Dyspnea, Tachypnea
+
+    - type: "prose"
       title: "Medications"
       markdown: |
         - **[Atropine](topic:wvems-2026-drug-reference#atropine)**: first-line for symptomatic, narrow-complex bradycardia.

@@ -141,6 +141,26 @@ topic:
           - **Cardiac** causes like: SSS, A-Flutter, A-Fib w/ RVR.
         - Treat the **underlying cause** before targeting the rate itself.
 
+    - type: "row"
+      blocks:
+        - type: "prose"
+          title: "Critical Arrhythmia"
+          callout: true
+          markdown: |
+            Suspect if pulse over:
+            - Adult (14+): **150** /min
+            - Child (1–13): **180** /min
+            - Infant (< 1): **220** /min
+        - type: "prose"
+          title: "Poor Perfusion"
+          callout: true
+          markdown: |
+            Suspect if **several** of these:
+            - **Altered Mental Status**
+            - Skin Pale, Cool, Diaphoretic
+            - Tachycardia, Hypotension
+            - Dyspnea, Tachypnea
+
     - type: "prose"
       title: "Medications"
       markdown: |

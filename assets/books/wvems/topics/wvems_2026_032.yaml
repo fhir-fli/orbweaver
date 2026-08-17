@@ -131,6 +131,16 @@ topic:
         - {A} Use IM meds (or IV/IO if available) for any patient in extremis.
 
     - type: "prose"
+      title: "Poor Perfusion"
+      callout: true
+      markdown: |
+        Suspect if **several** of these:
+        - **Altered Mental Status**
+        - Skin Pale, Cool, Diaphoretic
+        - Tachycardia, Hypotension
+        - Dyspnea, Tachypnea
+
+    - type: "prose"
       title: "Medications"
       markdown: |
         - **[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): use **IM**. Treat major reactions aggressively.
