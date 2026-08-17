@@ -128,36 +128,59 @@ topic:
       title: "Dyspnea Imperatives"
       highlight: true
       markdown: |
-        - [Breathing](topic:wvems-2026-006) (O₂ and NIPPV) should take precedence over meds.
-          - **SpO₂** and **EtCO₂** should be used extensively for dyspnea.
-        - Identify the **cause** before reaching for medications.
-          - The wrong med for the wrong cause may cause harm.
+        - [Breathing](topic:wvems-2026-006) (O₂ and [NIPPV](topic:wvems-2026-096#nippv)) should take precedence over meds.
+          - SpO₂ and EtCO₂ should be used **extensively** for dyspnea.
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Albuterol** (Proventil®): bronchodilator for reactive disease.
-        - **Atrovent** (Ipratropium): give once with first Albuterol.
-        - **Epi Neb**: nebulised for upper airway swelling (croup, anaphylaxis).
-        - **[Decadron](topic:wvems-2026-drug-reference#decadron)** (Dexamethasone): single steroid dose to delay rebound.
-        - **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): for pulmonary edema / heart failure dyspnea.
-          - Hold for SBP < 100 mmHg.
-          - Do **not** give within 24 h of PDE5 inhibitors.
+        - **[Albuterol](topic:wvems-2026-drug-reference#albuterol)** (Ventolin®) & **[Atrovent®](topic:wvems-2026-drug-reference#atrovent)** (Ipratropium bromide):
+          - May combine in same nebulizer. May cause palpitations.
+        - **[Epi Neb](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): Use **1 mg/mL vial** (not 0.1 mg/mL prefill).
+        - **[Decadron®](topic:wvems-2026-drug-reference#decadron)** (Dexamethasone): Alternate dose: 8 mg IV/IO, IM x1
+        - **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): May cause [Hypotension](topic:wvems-2026-008).
+          - May use **double dose** (0.8 mg) if hypertensive & requiring [NIPPV](topic:wvems-2026-096#nippv).
+          - Contraindicated if recent (36 h) use of any **PDE5 inhibitor**.
+        - May consider **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** for severe asthma and/or wheezing.
+          - {I} **Magnesium** (Sulfate): **1** gram IV/IO over 10 min
+
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - Good choice for severe croup, bronchiolitis or asthma in peds.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Consider an atypical [Cardiac](topic:wvems-2026-028) cause in diabetics and the elderly.
+        - [Anxiety](topic:wvems-2026-046) can also cause dyspnea and hyperventilation.
+          - Consider simple reassurance for obvious benign anxiety.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider [Pulmonary Edema](topic:wvems-2026-090) if indicated & credentialed for CC.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Stridor and barking cough → **croup** — give **Epi Neb** + Decadron.
-        - Wheezing → **asthma/RAD** — Albuterol + Atrovent.
-        - Use [Peds Reference](topic:wvems-2026-144) for weight-based dosing.
+        - Defer aggressive evaluation if any concern for **epiglottitis**.
+          - Agitation can make it much worse. (Unlikely if vaccinated.)
+        - **Croup** is an infection that is best treated like a reactive cause.
+          - **Stridor** may be present (but [choking](topic:wvems-2026-004) may also cause stridor).
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"
       text_scale: 0.8
       markdown: |
-        - GINA Asthma — https://ginasthma.org/ [Ver: 2024]
-        - GOLD COPD — https://goldcopd.org/ [Ver: 2024]
-        - Medscape Dyspnea — https://emedicine.medscape.com/article/2049439 [Ver: 4/24]
+        - Medscape COPD — https://emedicine.medscape.com/article/297664 [Ver: 7/25]
+        - Medscape Asthma — https://emedicine.medscape.com/article/296301 [Ver: 8/24]
+        - Medscape CHF — https://emedicine.medscape.com/article/163062 [Ver: 9/25]
+        - Medscape Croup — https://emedicine.medscape.com/article/962972 [Ver: 1/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 10, 19
 
         NEMSIS: 9914137, 9914139, 9914197, 9914221, 9914223
