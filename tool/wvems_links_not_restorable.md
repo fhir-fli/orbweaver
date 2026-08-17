@@ -189,3 +189,33 @@ different number, which is a clinical decision:
 
 Audit §5.2 lists **eleven** such pages. The four above are the ones examined in
 detail; the rest are 19, 33, 45, 71, 75 and the two already covered.
+
+### Were any of these deliberate updates? Checked — no evidence that they were
+
+Grey's instruction before restoring anything was to make sure we had not
+deliberately changed something that should be kept. The check, and what it
+found:
+
+1. **Every divergent value dates to the original authoring commit**, all five
+   topics written on **2026-05-02** (`e4c128f` p.11, `07f347d` p.13, `c2577d0`
+   p.15, `9a91dfc` p.29, `061a836` p.31). Traced with `git log --follow -S` on
+   each specific string — "24 h of PDE5", "SBP < 100", "Proventil",
+   "paradoxically slow", "QRS", "Cocaine". Not one was introduced by a later
+   edit.
+2. **Those commit messages describe structure only** — branch counts, schema
+   features, layout ("3-branch severity, asymmetric actions (2/2/3)"). None
+   mentions a dose, a threshold, a brand, a guideline or a source other than
+   the WVEMS PDF.
+3. **No corrections log exists.** This project's convention for a deliberate
+   clinical deviation is to record it in the file header — as the ProtocolBook
+   does, e.g. `formulary.yaml`'s header listing ceftriaxone q23hr→q24hr and the
+   morphine /kg→/dose fix. Every WVEMS topic header carries only `Source:`.
+
+So on the evidence these are **transcription drift from the initial authoring
+pass** — the print was paraphrased rather than transcribed — not clinical
+updates anyone chose to make.
+
+**The limit of that evidence:** git can only show there is no *recorded*
+deliberate change. If a value was changed on a verbal instruction during that
+May session, nothing here would show it. Given the convention in point 3, a
+deliberate change should have left a trace, and none did.
