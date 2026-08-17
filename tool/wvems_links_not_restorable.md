@@ -156,3 +156,36 @@ The app's Chest Pain page disagrees with the print on more than the CC band:
 - print peds: "**Aspirin** and **Nitro** are contraindicated in peds chest
   pain" — absent; the app substitutes a different bullet.
 - references differ (print: ACLS / PALS / Medscape 9/25 / Limmer ch.20).
+
+---
+
+## Content pass — what has been restored, and what still needs Grey
+
+**Restored 2026-08-17** (`7d2af5d`), strictly additive, nothing existing
+altered: the **Poor Perfusion** box on pp.13, 15 and 33 (the app carried it on
+7 of the print's 10 pages; **p.13's wording differs** — "Hypotension,
+Orthostasis" — so each was transcribed from its own page), the **Critical
+Arrhythmia** box on p.15 with its 150 / 180 / 220 rate thresholds, and the
+**PDE5 Inhibitors** box on p.29.
+
+### 🛑 What is left is NOT additive — it replaces clinical text, so it is Grey's
+
+On these pages the app does not merely *omit* the print, it **says something
+else**. Restoring means overwriting text somebody wrote, sometimes with a
+different number, which is a clinical decision:
+
+| page | the app says | the print says |
+|---|---|---|
+| 29 | Nitro: "within **24 h** of PDE5 inhibitors" | "recent (**36 h**) use of any PDE5 inhibitor" |
+| 29 | "Hold for SBP < **100** mmHg or HR < 50 / > 100" | "Contraindicated if SBP under **110** mmHg **without IV/IO** access" |
+| 29 | (absent) | "Use caution if Hypotensive or suspected inferior/right STEMI" |
+| 29 peds | one bullet on peds cardiac pain | "**Aspirin** and **Nitro** are contraindicated in peds chest pain" |
+| 31 | Albuterol brand "Proventil®" | "Ventolin®" |
+| 13 | Atropine "doses smaller than 0.5 mg may paradoxically slow the heart"; Pacing advice | "Atropine: less effective with: heart transplant, 3° heart block"; "Epi: preferred agent over Atropine in peds" |
+| 13 Notes | (absent) | pacing pads on any unstable patient; pacing at **80 bpm / 80 mA**; treat Pain and Anxiety from pacing |
+| 13 peds | 2 bullets | 5, incl. refer to Neonate under 1 month, single-pill overdoses, maternal medication in breast milk |
+| 15 Notes | QRS-width criteria the print does not state | "Cardiovert: enable **SYNC**, start at **200 J**, defib if unable to SYNC" |
+| 11 Notes | 2 bullets on beta-blockers and cocaine | 8 `Consider <protocol>` cross-references + "ask about new or recent changes to cardiac or BP medications" |
+
+Audit §5.2 lists **eleven** such pages. The four above are the ones examined in
+detail; the rest are 19, 33, 45, 71, 75 and the two already covered.
