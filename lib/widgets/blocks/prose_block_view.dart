@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/call_er_tile.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
 import 'package:orbweaver/widgets/section_bracket.dart';
-import 'package:orbweaver/widgets/call_er_tile.dart';
 
 /// Line height for prose bodies. The printed protocols run a 50-56 px line
 /// pitch at 150 dpi against 47-50 px of ink (measured on PDF pp.11 and 71)
@@ -163,10 +163,9 @@ class ProseBlockView extends StatelessWidget {
       // its right (audit §4.2). The box carries almost no weight on its own:
       // it is an outline with no fill.
       if (!block.callEr) {
-        return Align(alignment: Alignment.center, child: box);
+        return Align(child: box);
       }
       return Align(
-        alignment: Alignment.center,
         child: Row(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,

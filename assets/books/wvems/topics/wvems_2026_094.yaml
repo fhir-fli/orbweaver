@@ -101,6 +101,7 @@ topic:
     - type: "row"
       blocks:
         - type: "prose"
+          flex: 5
           title: "Sepsis Mandatory Prerequisites"
           highlight: true
           markdown: |
@@ -119,7 +120,6 @@ topic:
     - type: "row"
       blocks:
         - type: "prose"
-          flex: 5
           title: "Organ Dysfunction"
           callout: true
           markdown: |
