@@ -216,12 +216,24 @@ Source: `wvems_audit_badges.md` §6. Applied 2026-08-14/15 (`49c6878`,
 - [x] **#34 (form)** the pill is a tab fused to the stadium's bottom edge, with
       no arrow: it is not a next step, it is the same disposition for a
       credentialed provider.
-- [ ] **#34 (coverage)** 16 of the 19 printed CC sub-tabs are still unauthored
-      (topics 004, 006, 010, 016, 026, 028, 030, 042, 048, 054, 056, 058, 062,
-      072, 086, 090). Each needs its printed page read for the tab's text.
-- [ ] **#3b** the p.96 procedures index is itself a scope table · **#26** the
-      "Call ER" tile (12 pages) · **#30/#31** population edge tabs · **#23**
-      dashed conditional boxes (supported, used 0 times).
+- [x] **#34 (coverage)** all 19 CC sub-tabs authored. Text extracted from the
+      print's lavender fills (`wvems_cc_tab_extract.py`), every target confirmed
+      against the page's own link annotations. pp.4 and 72 had the tab modelled
+      as a `post_convergence:` stadium with a dangling empty `exits:`; both
+      removed in favour of the real form.
+- [ ] **#3b** the p.96 procedures index is itself a scope table ("who may do
+      what", at a glance) — the app uses a book-level `view: "index"` with no
+      badges. Marked ADAPT → *decide*, so it needs Grey.
+- [ ] **#26** the "Call ER" phone tile, 12 pages — a recurring themed vector
+      parameterised by one word (TRAUMA / STROKE / STEMI / SEPSIS). The print's
+      alert box gets all its weight from this tile; the app has the dashed box
+      but not the tile.
+- [ ] **#30/#31** population edge tabs — the pink `Peds` right-edge tab on an
+      action tile (3 instances) and the per-row Adult/Peds tab in a dose table
+      (the app draws a full-width section band instead; §6.4 calls that "form
+      differs, meaning preserved").
+- [ ] **#24** zebra-striped age-band entry stadium (6 pages) — marked
+      DROP → decide, low value, content already present.
 
 ## Batch 5 — typography 🚧
 
@@ -298,3 +310,6 @@ Source: `wvems_audit_typography.md` §8, in the audit's own priority order.
 - 2026-08-16 — **Batch 5 complete** (`9e47e71`, `9e18d35`, `1035199`): units,
   bullet glyphs and pitch, section step, subscripts, ®, apostrophes, References.
   Tables left at their reduction on evidence, and the GCS row rebalanced.
+- 2026-08-17 — **#34 complete** (`ae10347`): all 19 CC sub-tabs. What is left of
+  the three audits is #3b, #26, #30/#31, #24 — three of the four are marked
+  "decide" in the audit and want Grey's call, and #26 is a new vector asset.
