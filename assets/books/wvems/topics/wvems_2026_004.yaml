@@ -85,12 +85,9 @@ topic:
         shape: "stadium"
         bullets:
           - text: "[Breathing](topic:wvems-2026-006)"
-        exits:
-          - label: ""
 
-      post_convergence:
+      critical_care_link:
         text: "[Intubation](topic:wvems-2026-078)"
-        shape: "stadium"
 
   - page_number: 5
     blocks:

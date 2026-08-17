@@ -91,6 +91,9 @@ topic:
           - text: "[Tachy](topic:wvems-2026-014), [Brady](topic:wvems-2026-012), [Allergy](topic:wvems-2026-032)"
           - text: "[Pulmonary Edema](topic:wvems-2026-090)"
 
+      critical_care_link:
+        text: "[Pulm. Edema](topic:wvems-2026-090)"
+
       dose_table:
         - drug: "[Albuterol](topic:wvems-2026-drug-reference#albuterol)"
           dose: "2.5 mg"

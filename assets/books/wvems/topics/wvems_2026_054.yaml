@@ -84,6 +84,9 @@ topic:
           - text: "[Medical ROSC](topic:wvems-2026-026)"
           - text: "[Intubation](topic:wvems-2026-078), [Vent](topic:wvems-2026-080)"
 
+      critical_care_link:
+        text: "[Intubation](topic:wvems-2026-078), [Vent](topic:wvems-2026-080)"
+
       dose_table:
         - drug: "[Ketamine](topic:wvems-2026-drug-reference#ketamine)"
           dose: "20 mg"

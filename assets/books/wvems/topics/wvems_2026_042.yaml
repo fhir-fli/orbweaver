@@ -85,6 +85,9 @@ topic:
           - text: "[Fever](topic:wvems-2026-016), [Head Trauma](topic:wvems-2026-062)"
           - text: "[Preeclampsia](topic:wvems-2026-092)"
 
+      critical_care_link:
+        text: "[Preeclampsia](topic:wvems-2026-092)"
+
       dose_table:
         - drug: "[Versed](topic:wvems-2026-drug-reference#versed)"
           dose: "2.5–5 mg"

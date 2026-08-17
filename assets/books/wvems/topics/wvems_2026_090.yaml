@@ -80,6 +80,9 @@ topic:
             link_id: "wvems-2026-030"
           - text: "[Intubation](topic:wvems-2026-078)"
 
+      critical_care_link:
+        text: "[Intubation](topic:wvems-2026-078)"
+
       dose_table:
         - drug: "[Nitro Drip](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
           dose: "300 mcg/min"

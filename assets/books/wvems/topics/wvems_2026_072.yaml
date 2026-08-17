@@ -73,9 +73,8 @@ topic:
             link_id: "wvems-2026-040"
           - text: "[Antidote](topic:wvems-2026-096#adult-antidotes)"
 
-      post_convergence:
+      critical_care_link:
         text: "[Intubation](topic:wvems-2026-078)"
-        shape: "stadium"
 
   - page_number: 73
     blocks:

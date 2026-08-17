@@ -89,6 +89,9 @@ topic:
           - text: "[Pain](topic:wvems-2026-020), [Trunk Injury](topic:wvems-2026-064)"
           - text: "[STEMI](topic:wvems-2026-088)"
 
+      critical_care_link:
+        text: "[STEMI](topic:wvems-2026-088)"
+
       dose_table:
         - drug: "[Aspirin](topic:wvems-2026-drug-reference#aspirin)"
           dose: "4 × 81 mg"

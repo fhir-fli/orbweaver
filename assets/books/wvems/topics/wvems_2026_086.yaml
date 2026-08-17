@@ -80,6 +80,9 @@ topic:
           - text: "[Altered LOC](topic:wvems-2026-036), [Seizure](topic:wvems-2026-042)"
           - text: "[Intubation](topic:wvems-2026-078)"
 
+      critical_care_link:
+        text: "[Intubation](topic:wvems-2026-078)"
+
       dose_table:
         - drug: "[3% Saline](topic:wvems-2026-drug-reference#3-saline)"
           dose: "250 mL"

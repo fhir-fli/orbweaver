@@ -84,6 +84,9 @@ topic:
           - text: "[Major Trauma](topic:wvems-2026-056)"
           - text: "[Blood](topic:wvems-2026-084)"
 
+      critical_care_link:
+        text: "[Blood](topic:wvems-2026-084)"
+
       dose_table:
         - drug: "[TXA](topic:wvems-2026-drug-reference#txa)"
           dose: "2 grams"

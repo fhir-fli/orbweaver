@@ -93,6 +93,9 @@ topic:
     blocks:
 
     - type: "prose"
+
+      critical_care_link:
+        text: "[Elevated ICP](topic:wvems-2026-086)"
       title: "Head Injury Imperatives"
       highlight: true
       markdown: |

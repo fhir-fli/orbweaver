@@ -80,6 +80,9 @@ topic:
           - text: "[Cold / Heat](topic:wvems-2026-068)"
           - text: "[Sepsis](topic:wvems-2026-094)"
 
+      critical_care_link:
+        text: "[Sepsis](topic:wvems-2026-094)"
+
       dose_table:
         - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"

@@ -98,6 +98,9 @@ topic:
     # ────────────────────────────────────────────────
 
     - type: "prose"
+
+      critical_care_link:
+        text: "[Ventilator](topic:wvems-2026-080)"
       title: "Breathing Imperatives"
       highlight: true
       markdown: |

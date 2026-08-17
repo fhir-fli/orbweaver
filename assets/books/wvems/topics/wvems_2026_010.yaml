@@ -78,6 +78,9 @@ topic:
     # ────────────────────────────────────────────────
 
     - type: "prose"
+
+      critical_care_link:
+        text: "[Malignant HTN](topic:wvems-2026-092)"
       title: "Hypertension Imperatives"
       highlight: true
       markdown: |

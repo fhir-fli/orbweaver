@@ -112,6 +112,9 @@ topic:
           - text: "[Seizure](topic:wvems-2026-042), [Bleeding](topic:wvems-2026-058)"
           - text: "[Preeclampsia](topic:wvems-2026-092)"
 
+      critical_care_link:
+        text: "[Preeclampsia](topic:wvems-2026-092)"
+
       dose_table:
         - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
           dose: "500 mL"
