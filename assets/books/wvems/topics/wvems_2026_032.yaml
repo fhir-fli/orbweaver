@@ -126,9 +126,33 @@ topic:
       title: "Allergic Reaction Imperatives"
       highlight: true
       markdown: |
-        - Airway symptoms and **facial swelling** indicate a major reaction.
+        - Airway symptoms and facial swelling indicate a **major reaction**.
           - Lip and tongue swelling can be an immediate life threat.
-        - {A} Use IM meds (or IV/IO if available) for any patient in extremis.
+        - {A} **Use IM** meds (or IV/IO if available) for any patient in extremis.
+
+    - type: "prose"
+      title: "Medications"
+      markdown: |
+        - **[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): **Use IM**. Treat major reactions **aggressively**.
+          - Use for any major [Airway](topic:wvems-2026-004), [Breathing](topic:wvems-2026-006) or [Circulation](topic:wvems-2026-008) problems.
+          - **Be cautious** in patients over 50 y/o or with CAD or chest pain.
+
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - **EpiPen Jr.®**: Use for 3–8 y/o.  **EpiPen®**: Use for 9+ y/o.
+
+    - type: "prose"
+      title: ""
+      markdown: |
+        - {E} May only use auto-injector or color coded admin system.
+        - {I} Consider an **[Epi Drip](topic:wvems-2026-drug-reference#epi-drip-epi-push)** for persistent [dyspnea](topic:wvems-2026-030) or [shock](topic:wvems-2026-008).
+        - **[Albuterol](topic:wvems-2026-drug-reference#albuterol)** (Ventolin®): Use for any dyspnea or wheezing.
+          - Unlikely to help with rash or itching. May cause palpitations.
+        - **[Decadron®](topic:wvems-2026-drug-reference#decadron)** (Dexamethasone): Alternate dose: 8 mg IV/IO, IM x1
+        - **[Benadryl®](topic:wvems-2026-drug-reference#benadryl)** (Diphenhydramine): May give adults **50 mg PO x1**.
+          - {E} May only give PO (may use OTC formulation and dosing).
 
     - type: "prose"
       title: "Poor Perfusion"
@@ -141,38 +165,23 @@ topic:
         - Dyspnea, Tachypnea
 
     - type: "prose"
-      title: "Medications"
-      markdown: |
-        - **[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): use **IM**. Treat major reactions aggressively.
-          - Use for any major **[Airway](topic:wvems-2026-004), [Breathing](topic:wvems-2026-006) or [Circulation](topic:wvems-2026-008)** problems.
-          - Be cautious in patients **over 50 y/o** or with CAD or chest pain.
-          - **EpiPen Jr.®**: use for 3–8 y/o. **EpiPen®**: use for 9+ y/o.
-        - **[Albuterol](topic:wvems-2026-drug-reference#albuterol)** (Proventil®, Ventolin®): nebulised for bronchospasm.
-        - **Atrovent** (Ipratropium): nebulised — give once with first Albuterol.
-        - **[Benadryl](topic:wvems-2026-drug-reference#benadryl)** (Diphenhydramine): blunts the histamine response.
-          - Sedating — use caution if monitoring mental status.
-        - **[Decadron](topic:wvems-2026-drug-reference#decadron)** (Dexamethasone): single steroid dose to delay rebound.
-
-    - type: "prose"
       title: "Notes"
       markdown: |
-        - Be ready to repeat **Epi** if symptoms persist or rebound.
-        - Patients on **beta-blockers** may be refractory to Epi —
-          consider **Glucagon** if available.
-        - **Biphasic** reactions can recur 4–12 h after the initial response.
+        - Rapid onset of symptoms indicates a more severe reaction.
+        - Severe food allergies may also induce N/V and abdominal pain.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **EpiPen Jr.®** for 3–8 y/o; **EpiPen®** for 9+ y/o.
-        - Use [Peds Reference](topic:wvems-2026-144) for all other weight-based dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"
       text_scale: 0.8
       markdown: |
-        - WAO Anaphylaxis Guidelines — https://www.worldallergy.org/UserFiles/file/WAO-Anaphylaxis-Guidance-2020.pdf [Ver: 2020]
-        - Medscape Anaphylaxis — https://emedicine.medscape.com/article/135065 [Ver: 3/24]
+        - Medscape Hives — https://emedicine.medscape.com/article/137362 [Ver: 4/25]
+        - Medscape Anaphylaxis — https://emedicine.medscape.com/article/135065 [Ver: 8/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 23
 
         NEMSIS: 9914111

@@ -73,24 +73,15 @@ topic:
   - page_number: 11
     blocks:
 
-    # ────────────────────────────────────────────────
-    # Prose blocks (notes page)
-    # ────────────────────────────────────────────────
-
     - type: "prose"
-
-      critical_care_link:
-        text: "[Malignant HTN](topic:wvems-2026-092)"
       title: "Hypertension Imperatives"
       highlight: true
       markdown: |
-        - Confirm elevated systolic BP with **two reliable** blood pressures.
+        - Confirm elevated systolic BP with two reliable blood pressures.
         - HTN is a frequent reaction to [Pain](topic:wvems-2026-020) and acute physiologic insult.
-          - Investigate and treat **pain & underlying causes first**.
+          - Investigate and **treat pain** & **underlying causes** first.
         - Even mild HTN (SBP > 160 mmHg) in late [Pregnancy](topic:wvems-2026-048) may be pathologic.
           - It may progress to **eclampsia**. Be ready to treat for [Seizures](topic:wvems-2026-042).
-        - Inappropriate use of antihypertensives can cause harm.
-          - **Lowering BP during a stroke can cause harm.**
 
     - type: "band_callout"
       band: "critical_care"
@@ -99,24 +90,43 @@ topic:
         - Consider [Preeclampsia](topic:wvems-2026-092) if indicated and credentialed for CC.
 
     - type: "prose"
+      title: ""
+      markdown: |
+        - Inappropriate use of antihypertensives can **cause harm**.
+          - Lowering BP during a stroke can **cause harm**.
+
+    - type: "prose"
       title: "Notes"
       markdown: |
-        - Beta-blocker use prior to **Cocaine** can result in unopposed alpha
-          stimulation — significantly worsens HTN and may cause cardiac ischemia.
-        - Hypertensive emergencies require careful titrated therapy in the ED.
+        - Many other **underlying causes** can result in significant HTN.
+          - Consider [Cardiac](topic:wvems-2026-028) pathology if any chest pain.
+          - Consider [Dyspnea](topic:wvems-2026-030) and CHF if any rales or pedal edema.
+          - Consider [OD/Tox](topic:wvems-2026-040) if any recent stimulant or illicit drug use.
+          - Consider [Stroke](topic:wvems-2026-044) if any acute focal neurologic deficits.
+          - Consider [Behavioral](topic:wvems-2026-046) if anxiety from recent emotional triggers.
+          - Consider [Head Injury](topic:wvems-2026-062) if any history of trauma or signs of injury.
+        - Ask about new or recent changes to cardiac or **BP medications**.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider [Malignant HTN](topic:wvems-2026-092) if indicated and credentialed for CC.
+        - Consider [Pulmonary Edema](topic:wvems-2026-090) if indicated and credentialed for CC.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Hypertension is unusual in peds — investigate the underlying cause.
-        - Use **Peds Reference** or other approved source for peds dosing.
+        - Pathologic HTN is unlikely in peds. Treat underlying causes.
 
     - type: "prose"
       title: "References"
       text_scale: 0.8
       markdown: |
-        - Medscape HTN Emergency — https://emedicine.medscape.com/article/1952052 [Ver: 8/24]
-        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 17.
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 13
 
         NEMSIS: 9914123
