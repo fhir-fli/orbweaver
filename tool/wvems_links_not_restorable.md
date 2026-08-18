@@ -219,3 +219,45 @@ updates anyone chose to make.
 deliberate change. If a value was changed on a verbal instruction during that
 May session, nothing here would show it. Given the convention in point 3, a
 deliberate change should have left a trace, and none did.
+
+---
+
+## Content pass COMPLETE (2026-08-17)
+
+Grey confirmed he does not remember updating this book's content, matching what
+the git archaeology found, so the print is the source of truth and the app's
+paraphrases went back.
+
+**Nine pages transcribed from the print**: 11, 13, 15, 23, 29, 31, 33, 39, 41,
+47. Book-wide, measured with `wvems_text_parity.py`:
+
+| | before | after |
+|---|---|---|
+| printed body lines with no counterpart in the app | 177 | **62** |
+| app lines with no source in the print | 126 | **46** |
+
+The clinically consequential restorations:
+
+- **p.29** Nitro contraindicated under **SBP 110 without IV/IO** (was "SBP < 100
+  or HR < 50 / > 100") and at **36 h** of PDE5 (was 24 h); plus "use caution if
+  hypotensive or suspected inferior/right STEMI" and the paediatric "Aspirin
+  and Nitro are contraindicated".
+- **p.15** Cardiovert: **enable SYNC, start at 200 J, defib if unable to SYNC**
+  — the app had QRS-width criteria the print does not state.
+- **p.13** pacing at **80 bpm / 80 mA**, pads on any unstable patient, and the
+  five-bullet Pediatrics (Neonate under 1 month, single-pill overdoses,
+  maternal medication in breast milk).
+- **p.39** the sulfonylurea warnings and the Baqsimi intranasal 3 mg for ≥1 y/o.
+- **p.41** Narcan "only to treat hypoxia", the EMR intranasal-only restriction,
+  the AEMT titrate-from-0.04 mg line, Poison Control 800-222-1222.
+- **p.11** the six "Consider &lt;protocol&gt;" cross-references, which also
+  restores six links the batch-2 pass had to report as unplaceable.
+- **p.31** Ventolin® (not Proventil®), Epi Neb's 1 mg/mL vial vs 0.1 mg/mL
+  prefill, Nitro's double dose on NIPPV, the Magnesium option.
+- Two wrong **NEMSIS** codes (pp.33, 51).
+
+**What remains is structural, not missing text**, and needs no action: table
+cells the app combines into one bullet (p.51's SpO₂ tiers, p.89's Sgarbossa
+rows), the rule-of-nines numerals baked into p.71's raster (the audit marks
+that correct), and p.75's photo credits, which differ because the app sourced
+its own Wikimedia images.
