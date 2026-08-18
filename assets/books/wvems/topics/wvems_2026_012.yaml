@@ -107,10 +107,10 @@ topic:
       title: "Bradycardia Imperatives"
       highlight: true
       markdown: |
-        - Investigate & treat **underlying causes** like [Hypothermia](topic:wvems-2026-068).
+        - Investigate & consider tx of underlying causes, like [Hypothermia](topic:wvems-2026-068).
           - Consider [Overdose](topic:wvems-2026-040) if appropriate (many meds cause brady).
-          - Slow, wide-complex bradycardia may be due to [Hyperkalemia](topic:wvems-2026-018).
-        - {I} May try a pacer magnet to improve rate. **Do not** use on AICD.
+          - Slow, wide complex bradycardia may be due to [Hyperkalemia](topic:wvems-2026-018).
+        - {I} May try **pacer magnet** to improve rate. Do **not** use on AICD.
 
     - type: "prose"
       title: "Poor Perfusion"
@@ -125,20 +125,31 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **[Atropine](topic:wvems-2026-drug-reference#atropine)**: first-line for symptomatic, narrow-complex bradycardia.
-          - Less effective in heart-transplant patients (denervated heart).
-          - Doses smaller than 0.5 mg may paradoxically slow the heart.
-        - **Pacing** (transcutaneous): mechanical capture is the goal.
-          - Confirm electrical AND mechanical capture (palpate pulse).
-          - Sedate as tolerated for awake patients.
-        - **Epi** (Peds): infusion or repeat boluses for refractory bradycardia.
+        - **[Atropine](topic:wvems-2026-drug-reference#atropine)**: less effective with: heart transplant, 3° heart block
+
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - **[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): Preferred agent over **Atropine** in peds.
+
+    - type: "prose"
+      title: "Notes"
+      markdown: |
+        - Consider placing pacing (defib) **pads** on any unstable patient.
+        - **[Pacing](topic:wvems-2026-096#pacing)**: Can start at **80 bpm / 80 mA**. Escalate mA as needed.
+          - Treat [Pain](topic:wvems-2026-020) and/or [Anxiety](topic:wvems-2026-046) from pacing as soon as appropriate.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Bradycardia in peds is most often **hypoxia** — assist ventilations first.
-        - Use **PALS** rate thresholds and weight-based dosing.
+        - Refer to [Neonate](topic:wvems-2026-050) for any peds **under 1 month** (≤ 30 days) old.
+        - Frequently a [Breathing](topic:wvems-2026-006) problem: **don’t forget O₂ and BVM**.
+        - Even a **single pill** of some meds can cause severe bradycardia.
+          - Consider opiate, Ca²⁺ or ß-blocker [Overdose](topic:wvems-2026-040).
+        - Consider effects of maternal medication in breast milk.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"
@@ -146,5 +157,7 @@ topic:
       markdown: |
         - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
         - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 13, 20
 
         NEMSIS: 9914115

@@ -136,10 +136,13 @@ topic:
       highlight: true
       markdown: |
         - **Simple Tachycardias** (e.g. Sinus Tach) occur for many reasons.
-          - **Reactive** causes like: [Shock](topic:wvems-2026-008), [Pain](topic:wvems-2026-020), [Fever](topic:wvems-2026-016), [Bleeding](topic:wvems-2026-058).
-          - **Hidden** causes like: [OD / Tox](topic:wvems-2026-040), [Behavioral](topic:wvems-2026-046), [Anaphylaxis](topic:wvems-2026-032).
-          - **Cardiac** causes like: SSS, A-Flutter, A-Fib w/ RVR.
-        - Treat the **underlying cause** before targeting the rate itself.
+          - Reactive causes like: [Shock](topic:wvems-2026-008), [Pain](topic:wvems-2026-020), [Fever](topic:wvems-2026-016) or [Bleeding](topic:wvems-2026-058), etc.
+          - Hidden causes like: [OD / Tox](topic:wvems-2026-040), [Behavioral](topic:wvems-2026-046) or [Anaphylaxis](topic:wvems-2026-032), etc.
+          - Cardiac causes like: SSS, A-Flutter or A-Fib w/ RVR, etc.
+          - Treat the cause. Avoid anti-arrhythmics or cardioversion.
+        - **Critical Arrhythmias** (e.g. SVT, V-Tach w/pulse) are usually **faster**.
+          - But a fast pulse is not always critical. Judgement is necessary.
+          - {I} May try vagal maneuvers (e.g. modified valsalva).
 
     - type: "row"
       blocks:
@@ -164,27 +167,28 @@ topic:
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Adenosine** (Adenocard®): only for narrow-complex SVT (QRS ≤ 120 ms).
-          - Push fast through a proximal IV with saline flush.
-          - Warn the patient about the brief sense of impending doom.
-        - **[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®): for wide-complex tachycardia (QRS > 120 ms).
-          - Give over **10 min** for stable patients.
-        - **Magnesium** (Sulfate): for **Torsades** (polymorphic VT).
-        - **NS Bolus**: useful in shock states or rate from hypovolemia.
+        - **[Adenosine](topic:wvems-2026-drug-reference#adenosine)** (Adenocard®): Give **rapid IV push**.
+          - Use caution in patients with a history of WPW, COPD or asthma.
+        - **[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®): Give **over 10 min** IV drip.
+
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - Prehospital **Amio** is **not indicated** for pediatric tachycardia.
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Synchronized **Cardioversion** for unstable patients with a pulse.
-          - Sedate first if time and patient stability allow.
-        - Reassess rate and rhythm after every intervention.
+        - Consider placing cardioversion (defib) **pads** on any unstable pt.
+        - **[Cardiovert](topic:wvems-2026-096#cardiovert)**: Enable **SYNC**. Start at **200 J**. Defib if unable to SYNC.
+          - Alternative: follow manufacturer’s or OMD’s dosing guidance.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Use **PALS** rate thresholds and weight-based dosing.
-        - Vagal manoeuvres (ice to face) may convert SVT in stable peds.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"
@@ -192,5 +196,7 @@ topic:
       markdown: |
         - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
         - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 13, 20
 
         NEMSIS: 9914147, 9914151, 9914199
