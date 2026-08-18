@@ -77,46 +77,51 @@ topic:
   - page_number: 23
     blocks:
 
-    # ────────────────────────────────────────────────
-    # Prose blocks (notes page)
-    # ────────────────────────────────────────────────
-
     - type: "prose"
-      title: "Imperatives"
+      title: "Nausea / Vomiting Imperatives"
       highlight: true
       markdown: |
         - It is appropriate to **pre-treat for nausea** before symptoms start.
-          - Consider before any intervention that may cause nausea.
+          - Consider before any intervention (or meds) that cause nausea.
           - Especially if vomiting would cause serious complications.
-        - Avoid oral food and fluids. (Oral meds are OK.)
-          - Keep patients **NPO** (Nil Per Os: Lat. "nothing through the mouth").
+          - Strongly consider **[Zofran](topic:wvems-2026-drug-reference#zofran)** with any invasive airway device.
+        - **Avoid oral** food and fluids. (Oral meds are OK.)
+          - Keep patients **NPO** (Nil Per Os: Lat. “nothing through the mouth”)
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **[Zofran®](topic:wvems-2026-drug-reference#zofran)** (Ondansetron): use for all causes of nausea & vomiting.
+        - **[Zofran®](topic:wvems-2026-drug-reference#zofran)** (Ondansetron): Use for all causes of nausea & vomiting.
           - Use caution with [Bradycardia](topic:wvems-2026-012), and [Overdose / Tox](topic:wvems-2026-040).
-          - Consider **[12-Lead](topic:wvems-2026-096#12-lead)** if hx/risk of Long QT or electrolyte imbalance.
-          - {E} may only give PO — use Orally Disintegrating Tabs (ODTs).
-          - {A} alternate 4–10 y/o dose: break ODT in half and give 2 mg PO.
+          - Consider **[12-Lead](topic:wvems-2026-096#12-lead)** if hx/risk of **Long QT** or electrolyte imbalance.
+          - {E} May only give PO - use **Orally Disintegrating Tabs** (ODTs)
+
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - {A} Alternate 4–10 y/o dose: break ODT in half and give 2 mg PO
 
     - type: "prose"
       title: "Notes"
       markdown: |
         - Consider an atypical [Cardiac](topic:wvems-2026-028) cause in diabetics and the elderly.
         - Sniffing an alcohol prep may also provide minor nausea relief.
+        - Vomiting is a protective mechanism in [overdose](topic:wvems-2026-040) (such as EtOH).
+          - But intentionally inducing vomiting (i.e. ipecac) is not indicated.
+          - May consider **[Zofran](topic:wvems-2026-drug-reference#zofran)** for dry heaving after stomach is empty.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"
       text_scale: 0.8
       markdown: |
-        - Medscape Vomiting — https://emedicine.medscape.com/article/933135 [Ver: 10/23]
-        - Limmer D, O’Keefe MF. Emergency Care 14th ed. Chapter 7, 29.
+        - Medscape Vomiting — https://emedicine.medscape.com/article/933135 [Ver: 5/25]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 25, 26
 
         NEMSIS: 9914131
