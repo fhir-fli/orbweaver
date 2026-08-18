@@ -31,13 +31,12 @@ class DoseTable extends StatelessWidget {
       final row = rows[i];
       final startsGroup = i == 0 || rows[i - 1].population != row.population;
       if (startsGroup) indexInGroup = 0;
-      if (showLabels && startsGroup && row.population != DosePopulation.both) {
-        children.add(_PopulationLabel(population: row.population));
-      }
+      final wantsTab =
+          showLabels && startsGroup && row.population != DosePopulation.both;
       children.add(
         Container(
           width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+          padding: const EdgeInsets.only(left: 6, top: 3, bottom: 3),
           decoration: BoxDecoration(
             color: _stripe(theme, row.population, indexInGroup),
             border: i == 0
@@ -48,7 +47,15 @@ class DoseTable extends StatelessWidget {
                     ),
                   ),
           ),
-          child: _DoseRowView(row: row),
+          child: Row(
+            children: [
+              Expanded(child: _DoseRowView(row: row)),
+              if (wantsTab)
+                _PopulationTab(population: row.population)
+              else
+                const SizedBox(width: 6),
+            ],
+          ),
         ),
       );
       indexInGroup++;
@@ -78,12 +85,15 @@ Color _stripe(TopicTheme theme, DosePopulation population, int indexInGroup) {
   return indexInGroup.isEven ? light : dark;
 }
 
-/// Thin full-width band labeling the dose rows that follow as Adult or Peds.
-/// Print draws it as a right-hand vertical tab — solid #666666 for adult,
-/// solid #D23282 for peds, white text; the app keeps the full-width
-/// horizontal band (a better fit on a phone) and takes the tab's colours.
-class _PopulationLabel extends StatelessWidget {
-  const _PopulationLabel({required this.population});
+/// The print's population tab: a solid block at the **right edge of the first
+/// row** of each population group — `#666666` for adult, `#D23282` for peds,
+/// white bold text — not a band above the group.
+///
+/// Measured on p.24, where an adult dose strip sits directly above a
+/// paediatric one: each group's tab is one row tall, attached to that group's
+/// first row, and rounded on its outer edge.
+class _PopulationTab extends StatelessWidget {
+  const _PopulationTab({required this.population});
 
   final DosePopulation population;
 
@@ -96,15 +106,18 @@ class _PopulationLabel extends StatelessWidget {
       DosePopulation.both => ('', Colors.transparent),
     };
     return Container(
-      width: double.infinity,
-      color: bg,
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+      margin: const EdgeInsets.only(left: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      decoration: BoxDecoration(
+        color: bg,
+        borderRadius: const BorderRadius.horizontal(right: Radius.circular(4)),
+      ),
       child: Text(
         label,
         style: const TextStyle(
           fontSize: 11,
           fontWeight: FontWeight.w800,
-          letterSpacing: 0.5,
+          letterSpacing: 0.3,
           color: Colors.white,
         ),
       ),

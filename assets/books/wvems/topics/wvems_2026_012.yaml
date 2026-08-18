@@ -76,7 +76,7 @@ topic:
             - provider_level: "I"
               text: "Epi"
               kind: "medication_administration"
-              condition: "Peds"
+              peds_only: true
             - provider_level: "E"
               text: "12-Lead"
               kind: "diagnostic"

@@ -98,7 +98,7 @@ topic:
             - provider_level: "P(CC)"
               text: "Needle Cric"
               kind: "procedure"
-              condition: "Peds"
+              peds_only: true
 
       convergence:
         text: "Consider"

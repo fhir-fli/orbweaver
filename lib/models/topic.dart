@@ -246,6 +246,7 @@ class TopicAction {
     this.providerLevel = ProviderLevel.any,
     this.timing,
     this.condition,
+    this.pedsOnly = false,
   });
 
   factory TopicAction.fromYaml(Map<dynamic, dynamic> map) => TopicAction(
@@ -254,6 +255,7 @@ class TopicAction {
     providerLevel: ProviderLevel.fromString(map['provider_level'] as String?),
     timing: map['timing'] as String?,
     condition: map['condition'] as String?,
+    pedsOnly: (map['peds_only'] as bool?) ?? false,
   );
 
   final String text;
@@ -261,6 +263,12 @@ class TopicAction {
   final ProviderLevel providerLevel;
   final String? timing;
   final String? condition;
+
+  /// True when the print gives this tile its pink `Peds` side tab — a
+  /// full-height band on the tile's **right** edge, the mirror of the provider
+  /// badge on the left. Three tiles carry it (pp.12 and 50 Epi, p.78 Needle
+  /// Cric), and p.12's carries both at once: blue `I` left, pink `Peds` right.
+  final bool pedsOnly;
 }
 
 /// A single branch from the decision diamond in a severity flowchart.

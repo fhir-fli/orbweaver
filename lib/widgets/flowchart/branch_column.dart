@@ -351,9 +351,14 @@ class ActionTile extends StatelessWidget {
                 ),
               ),
             ),
-            // Mirror-width spacer balancing the left badge so the label
-            // sits at the tile's true centre.
-            if (showBadge) const SizedBox(width: _badgeWidth),
+            // The print mirrors the left provider badge with a pink `Peds`
+            // band on the right when a tile is paediatric-only; otherwise the
+            // mirror is an invisible spacer, so the label still sits at the
+            // tile's true centre either way.
+            if (action.pedsOnly)
+              const _PedsSideTab()
+            else if (showBadge)
+              const SizedBox(width: _badgeWidth),
           ],
         ),
       ),
@@ -387,6 +392,39 @@ class _ProviderBadge extends StatelessWidget {
           fontSize: 16,
           fontWeight: FontWeight.w800,
           color: Colors.black87,
+        ),
+      ),
+    );
+  }
+}
+
+/// The print's paediatric side tab: a full-height pink band on an action
+/// tile's right edge with a rotated `Peds`, mirroring the provider badge on
+/// the left (audit §4.5). Measured at 30 x 66 pt on pp.12, 50 and 78.
+class _PedsSideTab extends StatelessWidget {
+  const _PedsSideTab();
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = TopicThemeScope.of(context);
+    return Container(
+      width: _badgeWidth,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: theme.pedsRowDark,
+        border: const Border(
+          left: BorderSide(color: Colors.black87),
+        ),
+      ),
+      child: const RotatedBox(
+        quarterTurns: 3,
+        child: Text(
+          'Peds',
+          style: TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.w800,
+            color: Colors.black87,
+          ),
         ),
       ),
     );

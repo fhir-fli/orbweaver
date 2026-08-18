@@ -32,14 +32,26 @@ DoseRow _row(String drug, DosePopulation population) => DoseRow(
   population: population,
 );
 
-/// The row fills, in visual order. Rows are the containers that carry an
-/// explicit BoxDecoration colour; the label bands use a plain `color:`.
-List<Color?> _rowFills(WidgetTester tester) => tester
+/// Every BoxDecoration colour in the tree, in visual order.
+List<Color?> _decorationFills(WidgetTester tester) => tester
     .widgetList<Container>(find.byType(Container))
     .map((c) => c.decoration)
     .whereType<BoxDecoration>()
     .map((d) => d.color)
     .toList();
+
+final _zebra = <Color>{_adultLight, _adultDark, _pedsLight, _pedsDark};
+final _tabs = <Color>{const Color(0xFF666666), const Color(0xFFD23282)};
+
+/// The row fills, in visual order — the population tab is drawn with a
+/// BoxDecoration too now (the print puts it at the right edge of a group's
+/// first row, not in a band above it), so the two are told apart by colour.
+List<Color?> _rowFills(WidgetTester tester) =>
+    _decorationFills(tester).where(_zebra.contains).toList();
+
+/// The population tab fills, in visual order.
+List<Color?> _tabFills(WidgetTester tester) =>
+    _decorationFills(tester).where(_tabs.contains).toList();
 
 Future<void> _pump(
   WidgetTester tester,
@@ -109,19 +121,17 @@ void main() {
       expect(fills, [_adultLight, _adultDark, _adultLight]);
     });
 
-    testWidgets('the group label takes the print tab colours, white on '
+    testWidgets('the population tab takes the print colours, white on '
         'solid', (tester) async {
       await _pump(tester, [
         _row('Epi', DosePopulation.adult),
         _row('Epi', DosePopulation.peds),
       ]);
 
-      final bands = tester
-          .widgetList<Container>(find.byType(Container))
-          .where((c) => c.decoration == null && c.color != null)
-          .map((c) => c.color)
-          .toList();
-      expect(bands, [const Color(0xFF666666), const Color(0xFFD23282)]);
+      expect(_tabFills(tester), [
+        const Color(0xFF666666),
+        const Color(0xFFD23282),
+      ]);
 
       for (final label in ['Adult', 'Peds']) {
         final text = tester.widget<Text>(find.text(label));

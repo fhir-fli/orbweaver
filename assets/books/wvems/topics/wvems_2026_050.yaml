@@ -94,7 +94,7 @@ topic:
               kind: "procedure"
             - provider_level: "I"
               text: "Epi"
-              condition: "Peds only"
+              peds_only: true
               kind: "medication_administration"
 
       convergence:
