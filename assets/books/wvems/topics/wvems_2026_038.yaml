@@ -111,40 +111,49 @@ topic:
       title: "Diabetic Imperatives"
       highlight: true
       markdown: |
-        - EMS intervention is **not required** for mild asymptomatic patients.
+        - EMS intervention is not required for mild asymptomatic patients.
         - Consider a concurrent [Cardiac](topic:wvems-2026-028) emergency in the elderly.
-          - Many diabetic emergencies benefit from a **12-Lead** if able.
+          - Many diabetic emergencies benefit from a **12-Lead if able**.
         - Consider other causes of [Altered LOC](topic:wvems-2026-036) even with hypoglycemia.
+        - Hypoglycemia from **sulfonylureas** can be refractory & profound.
+          - E.g. glipizide (Glucotrol®), glyburide, glimepiride (Amaryl®)
+          - **Call Medical Control** for any refusal if taking **sulfonylureas**.
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Oral Glucose** (gel or sweetened liquid): only if airway is protected.
-        - **D10** (Dextrose 10%): titrate to mental status, not a fixed dose.
-          - **D50** is being phased out — D10 is gentler on veins.
-        - **Glucagon**: IM rescue if no IV access. Slow onset (~10 min).
-        - **NS Bolus**: backbone of DKA / hyperosmolar prehospital care.
+        - **[Oral Glucose](topic:wvems-2026-drug-reference#glucose)** (Glutose 15™): Avoid if patient cannot swallow.
+          - Consider **regular food** as an alternative if available.
+          - Prioritize food & drink with **simple sugar** (like juice & candy).
+          - Also provide complex carbs/protein (like **peanut butter**).
+        - **[D10](topic:wvems-2026-drug-reference#d10)** (Dextrose 10%): Recheck glucose prior to repeat dosing.
+          - May attempt without glucometer if hypoglycemia is likely.
+        - **[Glucagon](topic:wvems-2026-drug-reference#glucagon)** (Glucagen®): Caution - improvement is temporary!
+          - **Must provide additional glucose** or **[D10](topic:wvems-2026-drug-reference#d10)** after admin.
+          - **Call Medical Control** for any refusal after **Glucagon**.
+          - Can substitute intranasal prefill device (instead of IM dosing):
+          - † {E} **[Baqsimi®](topic:wvems-2026-drug-reference#glucagon)** (Glucagon IN prefill): **3** mg IN x1 for **≥ 1 y/o**
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Recheck glucose **5–10 min** after every intervention.
-        - Patients on insulin pumps: leave the pump alone unless directed otherwise.
-        - **DKA** patients may have fruity breath (acetone) and Kussmaul respirations.
+        - Avoid starting an IV in the **legs or feet** of a diabetic patient.
+        - Hyperglycemia with fruity odor may be **DKA** - emphasize IV fluids.
+        - Look for an **insulin pump**. May unplug the tube if **hypoglycemic**.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - **Hypoglycemia** in peds is dangerous and underrecognized.
-          - Always check glucose in any peds with altered LOC or seizure.
-        - Use [Peds Reference](topic:wvems-2026-144) for weight-based dosing.
+        - Only use **NS Bolus** for [shock](topic:wvems-2026-008). Hypervolemia can **cause harm**.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
 
     - type: "prose"
       title: "References"
       text_scale: 0.8
       markdown: |
-        - Medscape Hypoglycemia — https://emedicine.medscape.com/article/767359 [Ver: 9/24]
-        - Medscape DKA — https://emedicine.medscape.com/article/118361 [Ver: 7/24]
+        - Medscape Hypoglycemia — https://emedicine.medscape.com/article/122122 [Ver: 5/25]
+        - Medscape DKA — https://emedicine.medscape.com/article/118361 [Ver: 3/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 22
 
         NEMSIS: 9914121, 9914125

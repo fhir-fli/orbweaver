@@ -107,42 +107,48 @@ topic:
       title: "Behavioral Imperatives"
       highlight: true
       markdown: |
-        - **Do not assume psychosis.** Evaluate and treat for other causes.
-        - Behavioral patients may **not have the [capacity to refuse](topic:wvems-2026-109#patient-refusals)**.
-          - Involve **Police** and call Medical Control for any SI / HI refusal.
+        - **Do not assume** psychosis. Evaluate and treat for other causes.
+        - Behavioral patients may not have the [capacity to refuse](topic:wvems-2026-109#patient-refusals).
+          - Involve Police and call **Medical Control** for any SI / HI refusal.
         - Use of any restraint presents significant medical (and legal) risk.
-          - Attempt **de-escalation first**. Restraint should be a last resort.
-          - Use only to ensure safety of patient and providers.
+          - **Attempt de-escalation first**. Restraint should be a **last resort**.
+          - Use **only to ensure safety** of patient and providers.
+          - Use only when risk of harm is greater than risk of restraint.
+          - Peds, elderly or frail patients are **unlikely** to need restraint.
+        - Physical restraint should only be used in conjunction **with Police**.
+          - **Ask for Police** help if the patient is physically combative.
+          - Beware any physical or verbal threats, aggression, or agitation.
+          - Never use hobble restraints. Never restrain a patient prone.
+        - **Use caution with needles** - increased risk of provider injury.
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **Versed®** (Midazolam): rapid-onset benzo for agitation.
+        - **[Versed®](topic:wvems-2026-drug-reference#versed)** (Midazolam): Use with caution with peds and elderly.
           - Start lower if IV and/or smaller patient. Total dose: **10 mg max**.
-        - **Haldol** (Haloperidol): IM antipsychotic for severe agitation.
-          - Useful for delirium/psychosis where benzos alone are insufficient.
-          - Watch for QT prolongation and dystonic reactions.
+        - **[Haldol®](topic:wvems-2026-drug-reference#haldol)** (Haloperidol): Requires transport and **ALS** monitoring.
+          - May potentiate dystonic muscle jerking & spasms (not seizure).
+          - Consider treatment with **[Benadryl](topic:wvems-2026-drug-reference#benadryl)** if spasms are severe.
+          - {I} **[Benadryl®](topic:wvems-2026-drug-reference#benadryl)** (diphenhydramine): 25 mg PO, IV/IO, IM x1
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - Always rule out medical causes of altered behavior:
-          - **Hypoxia**, **hypoglycemia**, [head injury](topic:wvems-2026-062), **OD / Tox**, [sepsis](topic:wvems-2026-094).
-        - Document a clear scene description and the indication for any restraint.
-        - **Excited delirium** is a medical emergency — sudden death is possible.
+        - SI / HI: Suicidal or Homicidal Ideation (any recent thoughts or acts)
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Acute behavioral changes in peds are usually medical, not psychiatric.
-        - Use [Peds Reference](topic:wvems-2026-144) for weight-based dosing.
+        - Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.
+          - {I} **[Versed](topic:wvems-2026-drug-reference#versed)**: max peds dose is Q 2 min **x4 doses**
 
     - type: "prose"
       title: "References"
       text_scale: 0.8
       markdown: |
-        - NAEMSP Excited Delirium — https://naemsp.org/resources/position-statements/ [Ver: 2024]
-        - Medscape Acute Agitation — https://emedicine.medscape.com/article/805513 [Ver: 8/24]
+        - Medscape Suicide — https://emedicine.medscape.com/article/2013085 [Ver: 1/24]
+        - Medscape Aggression — https://emedicine.medscape.com/article/288689 [Ver: 11/22]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 27
 
         NEMSIS: 9914053
