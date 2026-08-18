@@ -111,59 +111,71 @@ topic:
       title: "Chest Pain Imperatives"
       highlight: true
       markdown: |
-        - This protocol is for suspected **cardiac (ACS)** emergencies only.
+        - This protocol is for suspected **cardiac** (ACS) emergencies only.
           - For pain resulting from chest trauma, refer to [Trunk Injury](topic:wvems-2026-064).
           - For palpitations refer to [Tachycardia](topic:wvems-2026-014) or [Bradycardia](topic:wvems-2026-012).
-        - For all patients with an identified [STEMI](topic:wvems-2026-088): place defib pads on.
+        - For all patients with an identified **STEMI**: place **defib pads** on.
           - Also expose and shave groin during transport if time allows.
 
     - type: "prose"
       title: "Medications"
       markdown: |
-        - **[Aspirin](topic:wvems-2026-drug-reference#aspirin)** (Baby ASA): contraindicated with active GI bleeding.
-          - Have patient chew **four (4) 81 mg** tabs (not enteric coated).
-        - **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): may cause [Hypotension](topic:wvems-2026-008).
-          - Hold for SBP < 100 mmHg or HR < 50 / > 100.
-          - Do **not** give within 24 h of PDE5 inhibitors (sildenafil, etc).
+        - **[Aspirin](topic:wvems-2026-drug-reference#aspirin)** (Baby ASA): Contraindicated with **active** GI bleeding
+          - Have patient **chew four** (4) 81 mg tabs (not enteric coated).
+        - **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): May cause [Hypotension](topic:wvems-2026-008).
+          - Use caution if [Hypotensive](topic:wvems-2026-008) or suspected inferior/right STEMI.
+          - Contraindicated if SBP under 110 mmHg **without IV/IO** access.
+          - Contraindicated if recent (36 h) use of any **PDE5 inhibitors**:
 
-    - type: "prose"
-      title: "PDE5 Inhibitors"
-      callout: true
-      markdown: |
-        - Sildenafil (Viagra®)
-        - Tadalafil (Cialis®)
-        - Vardenafil (Levitra®)
-        - Avanafil (Stendra®)
-
-    - type: "prose"
-      title: "STEMI Alert"
-      callout: true
-      dashed: true
-      call_er: true
-      markdown: |
-        - If you see a [STEMI](topic:wvems-2026-088)
-        - Or EKG says \*\***AMI**\*\*
-        - Call a **STEMI** Alert
+    - type: "row"
+      blocks:
+        - type: "prose"
+          flex: 6
+          title: "STEMI Alert"
+          callout: true
+          dashed: true
+          call_er: true
+          markdown: |
+            - If you see a [STEMI](topic:wvems-2026-088)
+            - Or EKG says \*\***AMI**\*\*
+            - Call a **STEMI** Alert
+        - type: "prose"
+          flex: 5
+          title: "PDE5 Inhibitors"
+          callout: true
+          markdown: |
+            - Sildenafil (Viagra®)
+            - Tadalafil (Cialis®)
+            - Vardenafil (Levitra®)
+            - Avanafil (Stendra®)
 
     - type: "prose"
       title: "Notes"
       markdown: |
-        - 12-Lead within **10 min** of patient contact when feasible.
-        - Transmit STEMI ECG to the receiving facility before arrival if possible.
-        - Atypical presentations are common in **diabetics**, **women**, and the **elderly**.
+        - Consider an atypical cardiac presentation in **diabetics** & **elderly**.
+          - Actual chest pain is not always present. Ask about cardiac hx.
+          - May have SOB or "discomfort" or nausea or be weak & sweaty.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Consider advanced [STEMI](topic:wvems-2026-088) care if indicated & credentialed for CC.
 
     - type: "band_callout"
       band: "peds"
       title: "Pediatrics"
       markdown: |
-        - Cardiac chest pain is uncommon in peds — investigate other causes
-          (musculoskeletal, anxiety, GERD, costochondritis).
+        - Cardiac chest pain is unlikely in peds. Consider other causes.
+        - **Aspirin** and **Nitro** are contraindicated in peds chest pain.
 
     - type: "prose"
       title: "References"
       text_scale: 0.8
       markdown: |
-        - ACC/AHA STEMI Guidelines — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001309 [Ver: 2024]
-        - Medscape ACS — https://emedicine.medscape.com/article/1910735 [Ver: 6/24]
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape ACS — https://emedicine.medscape.com/article/1910735 [Ver: 9/25]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 20
 
         NEMSIS: 9914117, 9914143
