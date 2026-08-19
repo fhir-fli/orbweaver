@@ -71,7 +71,7 @@ topic:
           - text: "[Shock](topic:wvems-2026-008)"
           - text: "OD / Tox"
             link_id: "wvems-2026-040"
-          - text: "[Antidote](topic:wvems-2026-096#adult-antidotes)"
+          - text: "[Antidote](topic:wvems-2026-096#administer-antidote)"
 
       critical_care_link:
         text: "[Intubation](topic:wvems-2026-078)"
@@ -89,8 +89,8 @@ topic:
           - SpO₂ may read **false normal** (CO can fool the SpO₂ monitor).
           - Symptoms may include: headache, confusion, red skin, N/V.
           - Oxygen is critical for **pregnant females** exposed to CO.
-        - Some industrial gas (e.g. **Cyanide**) may benefit from an **[Antidote](topic:wvems-2026-096#adult-antidotes)**.
-        - WMD nerve gas (e.g. **Sarin**, **VX**) may benefit from an **[Antidote](topic:wvems-2026-096#adult-antidotes)**.
+        - Some industrial gas (e.g. **Cyanide**) may benefit from an **[Antidote](topic:wvems-2026-096#administer-antidote)**.
+        - WMD nerve gas (e.g. **Sarin**, **VX**) may benefit from an **[Antidote](topic:wvems-2026-096#administer-antidote)**.
         - Even non-toxic gases can produce [Hypoxia](topic:wvems-2026-006) & [Dyspnea](topic:wvems-2026-030). Give O₂.
 
     - type: "band_callout"

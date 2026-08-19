@@ -42,6 +42,225 @@ topic:
         Pink bands flag **age/peds** distinctions; lavender bands flag
         **Critical Care** options; dashed callouts are **scope-gated**.
 
+    # ── The print's own index (p.96) ────────────────────────
+    # p.96 is not a procedure page: it is the map of pp.97-109, a
+    # 3-column grid of cards, each a page number, its category, and
+    # that page's procedures with the minimum scope cleared for
+    # each. The app inlined pp.97-108's cards into this topic and
+    # never carried the map, so the badge-at-a-glance view the print
+    # opens the section with was missing. Badges cross-checked
+    # against the page's vector fills (tool/wvems_procedures_index.py).
+
+    - type: "row"
+      blocks:
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 97"
+              markdown: "General"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{}"
+                    - "[Glucometer](topic:wvems-2026-096#glucometer)"
+                - cells:
+                    - "{E}"
+                    - "[12-Lead](topic:wvems-2026-096#12-lead)"
+                - cells:
+                    - "{A}"
+                    - "[Saline Lock](topic:wvems-2026-096#saline-lock)"
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 98"
+              markdown: "Airway"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{}"
+                    - "[Back Blows & Thrusts](topic:wvems-2026-096#back-blows-thrusts)"
+                - cells:
+                    - "{}"
+                    - "[Suction](topic:wvems-2026-096#suction)"
+                - cells:
+                    - "{A}"
+                    - "[Magill Forceps](topic:wvems-2026-096#magill-forceps)"
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 99"
+              markdown: "Breathing"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{}"
+                    - "[BVM](topic:wvems-2026-096#bvm)"
+                - cells:
+                    - "{}"
+                    - "[OPA / NPA](topic:wvems-2026-096#npa-opa)"
+                - cells:
+                    - "{E}"
+                    - "[NIPPV](topic:wvems-2026-096#nippv)"
+
+    - type: "row"
+      blocks:
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 100"
+              markdown: "Advanced Adjuncts"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{E}"
+                    - "[BIAD](topic:wvems-2026-096#biad)"
+                - cells:
+                    - "{A}"
+                    - "[OG-Tube](topic:wvems-2026-096#og-tube)"
+                - cells:
+                    - "{I}"
+                    - "[Pleural Decompress](topic:wvems-2026-096#pleural-decompress)"
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 101"
+              markdown: "Resuscitation"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{}"
+                    - "[Chest Compression](topic:wvems-2026-096#chest-compression)"
+                - cells:
+                    - "{}"
+                    - "[Defib](topic:wvems-2026-096#defib)"
+                - cells:
+                    - "{A}"
+                    - "[IO](topic:wvems-2026-096#io)"
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 102"
+              markdown: "Bleeding"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{}"
+                    - "[Wound Care](topic:wvems-2026-096#wound-care)"
+                - cells:
+                    - "{}"
+                    - "[Tourniquet](topic:wvems-2026-096#tourniquet)"
+                - cells:
+                    - "{}"
+                    - "[Wound Packing](topic:wvems-2026-096#wound-packing)"
+
+    - type: "row"
+      blocks:
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 103"
+              markdown: "Injury"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{}"
+                    - "[SMR with C-collar](topic:wvems-2026-096#smr-with-c-collar)"
+                - cells:
+                    - "{}"
+                    - "[Splint](topic:wvems-2026-096#splint)"
+                - cells:
+                    - "{E}"
+                    - "[Reduce Deformity](topic:wvems-2026-096#reduce-deformity)"
+                - cells:
+                    - "{}"
+                    - "[Stinger Removal](topic:wvems-2026-096#stinger-removal)"
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 104"
+              markdown: "Antidotes"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{}"
+                    - "[Administer Antidote](topic:wvems-2026-096#administer-antidote)"
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 105"
+              markdown: "Cardiac"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{I}"
+                    - "[Pacing](topic:wvems-2026-096#pacing)"
+                - cells:
+                    - "{I}"
+                    - "[Cardiovert](topic:wvems-2026-096#cardiovert)"
+
+    - type: "row"
+      blocks:
+        - type: "column"
+          flex: 4
+          blocks: []
+        - type: "column"
+          flex: 4
+          blocks:
+            - type: "prose"
+              title: "Page 106"
+              markdown: "Obstetrics"
+            - type: "table"
+              columns: []
+              column_flex: [2, 7]
+              rows:
+                - cells:
+                    - "{E}"
+                    - "[Deliver Baby](topic:wvems-2026-096#deliver-baby)"
+                - cells:
+                    - "{E}"
+                    - "[Manage OB Complication](topic:wvems-2026-096#manage-ob-complication)"
+        - type: "column"
+          flex: 4
+          blocks:
+            # The print sets these two apart from the procedure cards: Critical
+            # Care in its own lavender band because it is credential-gated, and
+            # Policies because it is a different section of the book.
+            - type: "band_callout"
+              band: "critical_care"
+              title: "P 107 & 108"
+              markdown: |
+                - [Critical Care](topic:wvems-2026-096#rsi-prep-checklist)
+            - type: "prose"
+              title: "Page 109"
+              markdown: |
+                - [Policies](topic:wvems-2026-109)
     # ── General ─────────────────────────────────────────────
     - type: "prose"
       title: "General"
@@ -399,7 +618,7 @@ topic:
         - **Poison Help: 1-800-222-1222**
 
     - type: "procedure_card"
-      name: "Adult Antidotes"
+      name: "Administer Antidote"
       steps:
         - "~[I] **[Atropine](topic:wvems-2026-drug-reference#atropine)**: [Bradycardia](topic:wvems-2026-012), Cholinergics"
         - "~[I] **[Benadryl](topic:wvems-2026-drug-reference#benadryl)**: [Dystonia](topic:wvems-2026-046), Neuroleptics"

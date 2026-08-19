@@ -38,9 +38,17 @@ class TableBlockView extends StatelessWidget {
   /// Per-column flex applies only when an explicit weight is given for
   /// every column; otherwise fall back to [fallback] (equal columns for
   /// the header, or the cell's own `span` for data rows).
+  ///
+  /// A header-less table (`columns: []`) counts its columns from the widest
+  /// row instead — the p.96 procedures index is a badge gutter beside a label
+  /// and wants the print's 1:7 split, but has no header row to measure
+  /// against, and silently ignoring its `column_flex` wrapped every label.
+  int get _columnCount => block.columns.isNotEmpty
+      ? block.columns.length
+      : block.rows.fold(0, (m, r) => r.cells.length > m ? r.cells.length : m);
+
   bool get _hasColumnFlex =>
-      block.columnFlex.isNotEmpty &&
-      block.columnFlex.length == block.columns.length;
+      block.columnFlex.isNotEmpty && block.columnFlex.length == _columnCount;
 
   int _colFlex(int i, int fallback) =>
       _hasColumnFlex ? block.columnFlex[i] : fallback;

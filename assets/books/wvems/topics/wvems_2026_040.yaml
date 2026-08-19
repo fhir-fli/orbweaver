@@ -77,7 +77,7 @@ topic:
             - provider_level: "A"
               text: "NS Bolus"
               kind: "medication_administration"
-            - text: "Administer [Antidote](topic:wvems-2026-096#adult-antidotes)"
+            - text: "Administer [Antidote](topic:wvems-2026-096#administer-antidote)"
               kind: "medication_administration"
 
       convergence:
@@ -109,8 +109,8 @@ topic:
       markdown: |
         - Collect a detailed history and **SDS** (Safety Data Sheet) if able:
           - Substance, quantity and **time** of ingestion or exposure
-        - Consider an **[Antidote](topic:wvems-2026-096#adult-antidotes)** for critical symptoms from a **known toxin**.
-          - Minor exposures with few symptoms do not require an **[Antidote](topic:wvems-2026-096#adult-antidotes)**.
+        - Consider an **[Antidote](topic:wvems-2026-096#administer-antidote)** for critical symptoms from a **known toxin**.
+          - Minor exposures with few symptoms do not require an **[Antidote](topic:wvems-2026-096#administer-antidote)**.
           - Stable patients should be monitored and transported.
           - Supportive care is sufficient for **alcohol** (ethanol) intoxication.
         - Monitor [Airway](topic:wvems-2026-004) closely with all **caustic ingestions**.
@@ -130,7 +130,7 @@ topic:
       title: "Notes"
       markdown: |
         - If poison is known, consider **Poison Control**: 800-222-1222.
-          - Most **[Antidotes](topic:wvems-2026-096#adult-antidotes)** require **online orders** (and dosing instructions).
+          - Most **[Antidotes](topic:wvems-2026-096#administer-antidote)** require **online orders** (and dosing instructions).
         - This protocol includes **poisoning** and toxic ingestions.
           - For **chemical burns** and skin exposures, refer to [Burns](topic:wvems-2026-070).
           - For **gasses** and smoke inhalation, refer to [Inhalation](topic:wvems-2026-072).
