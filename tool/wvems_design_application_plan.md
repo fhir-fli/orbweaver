@@ -221,20 +221,30 @@ Source: `wvems_audit_badges.md` §6. Applied 2026-08-14/15 (`49c6878`,
       against the page's own link annotations. pp.4 and 72 had the tab modelled
       as a `post_convergence:` stadium with a dangling empty `exits:`; both
       removed in favour of the real form.
-- [ ] **#3b** the p.96 procedures index is itself a scope table ("who may do
+- [x] **#3b** the p.96 procedures index is itself a scope table ("who may do
       what", at a glance) — the app uses a book-level `view: "index"` with no
-      badges. Marked ADAPT → *decide*, so it needs Grey.
+      badges. Built as the print's 3-column grid: 27 rows in 10 cards plus the
+      Critical Care band and Policies. Badges read off the page's vector fills
+      (`wvems_procedures_index.py`), agreeing with the render on all 27. Two
+      fixes fell out: `column_flex` was silently ignored on a header-less
+      table, and the p.104 card was named "Adult Antidotes" where the print
+      titles it "Administer Antidote" (20 inbound links repointed).
 - [x] **#26** the "Call ER" phone tile, on the 12 pages the audit measured.
       Drawn as a vector (fixed geometry, twelve pages, one varying word), with
       its green and red as palette roles. `call_er:` is explicit rather than
       inferred from `dashed:` — a dashed box is also the print's ordinary
       conditional (p.43), which gets no tile.
-- [ ] **#30/#31** population edge tabs — the pink `Peds` right-edge tab on an
-      action tile (3 instances) and the per-row Adult/Peds tab in a dose table
-      (the app draws a full-width section band instead; §6.4 calls that "form
-      differs, meaning preserved").
-- [ ] **#24** zebra-striped age-band entry stadium (6 pages) — marked
-      DROP → decide, low value, content already present.
+- [x] **#30/#31** population edge tabs — the pink `Peds` right-edge tab on an
+      action tile (3 instances) and the per-row Adult/Peds tab in a dose table.
+      The app's full-width section band replaced by the print's own form: a tab
+      at the right edge of each group's first row.
+- [x] **#24** zebra-striped age-band entry stadium (6 pages). The stripes are
+      not in the vector layer — both stadiums are stroke-only and the banding
+      is painted underneath by a shading `get_drawings()` never reports — so
+      the colours were sampled off a 400 dpi render
+      (`wvems_entry_stripe_sample.py`). On pp.8 and 82 the MAP values are a
+      *second stadium behind the first*, in the CC lavender, not a fourth
+      column. p.82 also regains the units the app had dropped.
 
 ## Batch 5 — typography 🚧
 
@@ -317,10 +327,28 @@ Source: `wvems_audit_typography.md` §8, in the audit's own priority order.
 - 2026-08-17 — **#26 done** (`ebe8467`, fixed in `761a0fd`). **Every build item
   in the three audits is now applied.** What is left is only the three the
   audits themselves mark "decide": #3b, #30/#31, #24.
+- 2026-08-19 — **the three "decide" items are done, and the recommendation
+  below them is superseded.** Grey overruled it: *"if the pink peds tab was in
+  the pdf, then it should be in our app too. it was always done for a reason
+  … every single callout, every single color, every single badge, every single
+  stripe served a purpose to make it more useful for humans, its a very well
+  thought out design … if its in the pdf, we want to try and faithfully
+  reproduce it."* #30/#31 in `96b4a94`, #24 in `4e0cf05`, #3b in `2d94587`.
+  **Every item in all three audits is now applied.** Two guards added, each
+  for a failure found while building: a banded row must never lose its unit to
+  the stadium's cap (p.92 was dropping "mmHg" silently), and no p.96 index link
+  may be dead. 607 tests; the 4 pre-existing table/formula failures untouched.
 
 ---
 
 ## The three "decide" items, investigated 2026-08-17
+
+> 🛑 **SUPERSEDED 2026-08-19 — all three were built. Do not act on the
+> recommendations below.** Grey's call: the print's design is deliberate
+> throughout, so anything in the PDF gets reproduced rather than judged on
+> whether the app's version preserves the meaning. #30/#31 `96b4a94`,
+> #24 `4e0cf05`, #3b `2d94587`. The measurements in this section are still
+> good; only the recommendations drawn from them are wrong.
 
 Each was measured before recommending, rather than argued from the audit text.
 
