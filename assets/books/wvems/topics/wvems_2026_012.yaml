@@ -139,7 +139,7 @@ topic:
       band: "peds"
       title: ""
       markdown: |
-        - **[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): Preferred agent over **Atropine** in peds.
+        - **[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)** (Epinephrine): Preferred agent over **[Atropine](topic:wvems-2026-drug-reference#atropine)** in peds.
 
     - type: "prose"
       title: "Notes"

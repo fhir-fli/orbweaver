@@ -167,7 +167,7 @@ topic:
       title: "Pediatrics"
       markdown: |
         - Cardiac chest pain is unlikely in peds. Consider other causes.
-        - **Aspirin** and **Nitro** are contraindicated in peds chest pain.
+        - **[Aspirin](topic:wvems-2026-drug-reference#aspirin)** and **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** are contraindicated in peds chest pain.
 
     - type: "prose"
       title: "References"

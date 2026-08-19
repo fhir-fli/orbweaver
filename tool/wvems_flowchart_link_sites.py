@@ -26,7 +26,9 @@ TOPICS = REPO / "assets/books/wvems/topics"
 
 
 def phrase_regex(phrase):
-    words = [re.escape(w) for w in phrase.split()]
+    # Split on slashes as well as spaces: the print sets "OD/Tox" closed up
+    # where the app writes "OD / Tox".
+    words = [re.escape(w) for w in re.split(r"[\s/]+", phrase) if w]
     return re.compile(rf"(?<![\w])({r'[\s\-/]*'.join(words)})(®)?(?![\w])", re.IGNORECASE)
 
 

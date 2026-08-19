@@ -150,13 +150,16 @@ or procedure name ("Versed" → p.143), so phrase → card is an exact match.
 
 ### What Batch 2 could not restore
 
-**`tool/wvems_links_not_restorable.md`** — 65 cross-references on 13 pages
-whose sentence is simply not in the app. These are the eleven rewritten pages
-audit §5.1-5.2 already lists (p.11's whole *Notes* section is different copy,
-p.13's and p.15's are gone, p.31 differs on the PDE5 window), so they are
-content work, not link work. Two more are a genuine decision: the print points
-**Dyspnea** at p.6 *Breathing* while the app points it at p.30 *Dyspnea*, and
-the app's target was left alone.
+⚠️ **Superseded 2026-08-19.** The 65 rows this section described were counted
+before the content pass restored the eleven rewritten pages, and every one of
+them was re-derived on 2026-08-19. **`tool/wvems_links_not_restorable.md` now
+holds the measured state**: of 1,181 in-book cross-references the app carries
+865, 260 leave pages or index rows the app has no target for, and 56 remain —
+of which 49 are present but unconfirmable by the tools, 6 are target
+disagreements for Grey, and exactly **one** (p.81's `Vent`, underlined inside a
+prose *heading*) cannot be restored without a renderer change. The re-run also
+fixed four defects in the link tools themselves, one of which would have
+written 54 duplicate links on the next run.
 
 ### The three tools, and how to re-run them
 
@@ -211,8 +214,8 @@ Source: `wvems_audit_badges.md` §6. Applied 2026-08-14/15 (`49c6878`,
       alert boxes are dashed now, and a dashed box's title is plain bold text
       rather than the firm box's solid chip.
 - [x] **#33** the seven Critical-Care bands whose line exists. The other five
-      are missing *text*, not a missing band — see
-      `wvems_links_not_restorable.md`.
+      were missing *text*, not a missing band; **#34 (coverage)** below
+      authored them from the print's own lavender fills, so all of them ship.
 - [x] **#34 (form)** the pill is a tab fused to the stadium's bottom edge, with
       no arrow: it is not a next step, it is the same disposition for a
       credentialed provider.
@@ -309,6 +312,13 @@ Source: `wvems_audit_typography.md` §8, in the audit's own priority order.
 - 2026-08-14 — **Batch 2 complete** (`944958a`). 642 cross-references restored
   in total: 253 prose, 323 flowchart, 66 appendix. Unrestorable and conflicting
   ones are listed in `tool/wvems_links_not_restorable.md`.
+- 2026-08-19 — **link graph re-derived and the report regenerated.** 20 more
+  links placed, four tool defects fixed (a card renamed out from under the
+  resolver, a non-idempotent field chooser worth 54 duplicate links, left-to-
+  right occurrence pairing that linked the wrong word, and a phrase split that
+  could not cross `OD/Tox` vs `OD / Tox`), and one content defect found: p.82's
+  convergence bullet read **Allergy** but navigated to Overdose / Tox. 607 tests
+  pass, same 4 pre-existing failures.
 - 2026-08-14 — **Batch 3 applied** (`6af9bef` + `9192de3`). WVEMS book 51 → 52
   topics. Verified on the emulator: p.8, p.9 and How To Use.
 - 2026-08-14/15 — **Batch 4 part 1** (`49c6878`, `3af8e38`). The badge span, the

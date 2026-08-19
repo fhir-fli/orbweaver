@@ -140,9 +140,9 @@ topic:
         - **[Decadron®](topic:wvems-2026-drug-reference#decadron)** (Dexamethasone): Alternate dose: 8 mg IV/IO, IM x1
         - **[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): May cause [Hypotension](topic:wvems-2026-008).
           - May use **double dose** (0.8 mg) if hypertensive & requiring [NIPPV](topic:wvems-2026-096#nippv).
-          - Contraindicated if recent (36 h) use of any **PDE5 inhibitor**.
+          - Contraindicated if recent (36 h) use of any [PDE5 inhibitor](topic:wvems-2026-028).
         - May consider **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** for severe asthma and/or wheezing.
-          - {I} **Magnesium** (Sulfate): **1** gram IV/IO over 10 min
+          - {I} **[Magnesium](topic:wvems-2026-drug-reference#magnesium)** (Sulfate): **1** gram IV/IO over 10 min
 
     - type: "band_callout"
       band: "peds"

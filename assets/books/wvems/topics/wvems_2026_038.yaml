@@ -130,7 +130,7 @@ topic:
           - May attempt without glucometer if hypoglycemia is likely.
         - **[Glucagon](topic:wvems-2026-drug-reference#glucagon)** (Glucagen®): Caution - improvement is temporary!
           - **Must provide additional glucose** or **[D10](topic:wvems-2026-drug-reference#d10)** after admin.
-          - **Call Medical Control** for any refusal after **Glucagon**.
+          - **Call Medical Control** for any refusal after **[Glucagon](topic:wvems-2026-drug-reference#glucagon)**.
           - Can substitute intranasal prefill device (instead of IM dosing):
           - † {E} **[Baqsimi®](topic:wvems-2026-drug-reference#glucagon)** (Glucagon IN prefill): **3** mg IN x1 for **≥ 1 y/o**
 

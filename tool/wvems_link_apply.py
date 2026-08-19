@@ -70,7 +70,10 @@ PROCEDURE_PAGES = {
     101: "Chest Compression",
     102: "Wound Care",
     103: "SMR with C-collar",
-    104: "Adult Antidotes",
+    # The app carries the p.96 index's name for this card, "Administer
+    # Antidote", not the rotated side-label's "Adult Antidotes" (renamed in
+    # 2d94587). The page-range scan matches on the app's authored name.
+    104: "Administer Antidote",
     105: "Pacing",
     106: "Deliver Baby",
     107: "RSI Prep Checklist",
@@ -94,6 +97,10 @@ DRUGS_PER_PAGE = 2
 
 def page_to_file(page):
     even = page if page % 2 == 0 else page - 1
+    # p.3 "How To Use" ships under its own odd number (batch 3, 9192de3); it
+    # is the one protocol topic that is not filed under the even page.
+    if page == 3:
+        return TOPICS / "wvems_2026_003.yaml"
     if 4 <= even <= 94:
         return TOPICS / f"wvems_2026_{even:03d}.yaml"
     if 97 <= page <= 108:
@@ -165,9 +172,11 @@ def phrase_regex(phrase):
     The app writes the registered trademark the print's card header drops
     ("Versed®" vs "Versed") and sometimes hyphenates where the print spaces
     ("weight-based" vs "weight based"), so word gaps match either and a
-    trailing ® is optional.
+    trailing ® is optional. The split is on slashes as well as spaces: the
+    print sets "OD/Tox" closed up where the app writes "OD / Tox", and a
+    phrase split on whitespace alone never matches across that.
     """
-    words = [re.escape(w) for w in phrase.split()]
+    words = [re.escape(w) for w in re.split(r"[\s/]+", phrase) if w]
     body = r"[\s\-/]*".join(words)
     return re.compile(rf"(?<![\w])({body})(®)?(?![\w])", re.IGNORECASE)
 
@@ -291,7 +300,34 @@ def main():
                 continue
             phrase = PRINT_TYPOS.get(t["phrase"].lower(), t["phrase"])
             rx = phrase_regex(phrase)
-            occ = list(rx.finditer(lines[best]))
+
+            def occurrences(idx):
+                """The phrase's places on a line, the linked ones claimed first.
+
+                Pairing purely left to right links the wrong word when the app
+                writes the phrase in prose *before* the cross-reference: p.41's
+                "- For **chemical burns** ... refer to [Burns](topic:...)" would
+                take "burns" out of the bold run and leave the line pointing at
+                p.70 twice. An occurrence already wrapped in a link to this very
+                target is the one the print means, wherever it sits; genuine
+                repeats still pair left to right behind it.
+                """
+                line_ = lines[idx]
+                links = list(LINK_RE.finditer(line_))
+                return sorted(
+                    rx.finditer(line_),
+                    key=lambda m: (
+                        not any(
+                            lm.start() <= m.start()
+                            and m.end() <= lm.end()
+                            and lm.group(2)[len("topic:") :] == target
+                            for lm in links
+                        ),
+                        m.start(),
+                    ),
+                )
+
+            occ = occurrences(best)
             k = used[(best, phrase.lower())]
             if k >= len(occ):
                 # The app sometimes splits one printed line into a bullet and
@@ -304,7 +340,7 @@ def main():
                 ]
                 if len(near) == 1:
                     best = near[0]
-                    occ = list(rx.finditer(lines[best]))
+                    occ = occurrences(best)
                     k = used[(best, phrase.lower())]
             used[(best, phrase.lower())] += 1
             if k >= len(occ):

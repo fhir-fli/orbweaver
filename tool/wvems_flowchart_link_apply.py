@@ -56,7 +56,9 @@ BOLD_UNAVAILABLE = True
 
 
 def phrase_regex(phrase):
-    words = [re.escape(w) for w in phrase.split()]
+    # Split on slashes as well as spaces: the print sets "OD/Tox" closed up
+    # where the app writes "OD / Tox".
+    words = [re.escape(w) for w in re.split(r"[\s/]+", phrase) if w]
     return re.compile(
         rf"(?<![\w])({r'[\s\-/]*'.join(words)})(®)?(?![\w])", re.IGNORECASE
     )
@@ -78,8 +80,38 @@ def page_ranges(lines):
 LINK_ANY = re.compile(r"\[[^\]]+\]\(topic:[^)]+\)")
 
 
+# `[Albuterol](topic:wvems-2026-drug-reference#albuterol)` -> `Albuterol`.
+LINK_UNWRAP = re.compile(r"\[([^\]]+)\]\(topic:[^)]+\)")
+
+
 def norm(s):
-    return re.sub(r"[^a-z0-9]+", " ", s.lower()).strip()
+    """Compare on what the page *says*, not on links already written into it.
+
+    Without the unwrap this script is not idempotent: on p.30 the print's one
+    Albuterol link sits on the dose-table line ("Albuterol: 2.5 mg"), and once
+    that row is linked its raw text carries the whole target inside it. The
+    similarity against the printed line then drops below the bare action tile's
+    ("E Albuterol medication_administration"), the tile wins the second run,
+    and the page ends up with two links where the print has one.
+    """
+    return re.sub(r"[^a-z0-9]+", " ", LINK_UNWRAP.sub(r"\1", s).lower()).strip()
+
+
+def companion_link_id(lines, i, end):
+    """The `link_id:` belonging to the bullet on line `i`, if it has one.
+
+    Same shape as the drop-link_id sweep below: the id sits on one of the next
+    two lines, indented to the bullet's own text.
+    """
+    if "text:" not in lines[i]:
+        return None
+    indent = len(lines[i]) - len(lines[i].lstrip(" -"))
+    for j in (i + 1, i + 2):
+        if j < end:
+            m = re.match(rf'\s{{{indent}}}link_id:\s*"([^"]+)"', lines[j])
+            if m:
+                return m.group(1)
+    return None
 
 
 def line_matcher(field):
@@ -177,6 +209,7 @@ def main():
             )
             chosen.append((phrase, target, usable[0]["field"], usable[0]["value"]))
 
+        placements = []
         # Pass 2 — place them. When one phrase occupies several lines of the
         # same field, the print's links and the app's occurrences are both in
         # reading order, so they pair off only if there are equally many. An
@@ -205,7 +238,7 @@ def main():
                 )
                 continue
             for (phrase, target, _), i in zip(items, hits):
-                taken = {(e[1], e[2]) for e in edits if e[0] == i}
+                taken = {(pl[1].start(), pl[1].end()) for pl in placements if pl[0] == i}
                 m = next(
                     (
                         m
@@ -221,11 +254,28 @@ def main():
                 if m is None:
                     note("already-linked", page, phrase, target, field, f"line {i + 1}")
                     continue
-                edits.append(
-                    (i, m.start(), m.end(), f"[{m.group(0)}](topic:{target})")
+                placements.append((i, m, phrase, target, field))
+
+        # A bullet whose whole text is one cross-reference already carries it
+        # as `link_id:`, and that renders as the same tap target. Rewriting it
+        # inline would only churn the form — so the inline write is reserved
+        # for bullets the print links *more than once*, which is the case
+        # `link_id` cannot express. Without this the tool is not idempotent
+        # against its own earlier output: p.88's "Chest Pain" bullet came back
+        # as a proposed edit on every re-run.
+        per_line = defaultdict(int)
+        for i, *_ in placements:
+            per_line[i] += 1
+        for i, m, phrase, target, field in placements:
+            if per_line[i] == 1 and companion_link_id(orig, i, end) == target:
+                note(
+                    "already-linked", page, phrase, target, field,
+                    f"line {i + 1} (link_id)",
                 )
-                touched.add(i)
-                note("link", page, phrase, target, field, f"line {i + 1}")
+                continue
+            edits.append((i, m.start(), m.end(), f"[{m.group(0)}](topic:{target})"))
+            touched.add(i)
+            note("link", page, phrase, target, field, f"line {i + 1}")
 
         for i, st, en, new in sorted(edits, key=lambda e: (-e[0], -e[1])):
             if do_apply:

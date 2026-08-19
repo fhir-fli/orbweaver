@@ -88,7 +88,7 @@ topic:
     - type: "prose"
       title: "Withholding Resuscitation"
       markdown: |
-        - Resuscitation is not appropriate if efforts are futile or against the patient’s explicit wishes. **Withhold resuscitation** if any signs of **obvious death**, **mortal injury**, or if the patient has a **DNR / POST**.
+        - Resuscitation is not appropriate if efforts are futile or against the patient’s explicit wishes. **Withhold resuscitation** if any signs of [obvious death](topic:wvems-2026-024), [mortal injury](topic:wvems-2026-052), or if the patient has a **DNR / POST**.
         - Ask about a DNR / POST for any **hospice or nursing home** patient.
         - EMS should attempt to validate any DNR / POST with family or health-care workers. Begin resuscitation and call **Medical Control** if there is any question; EMS may stop resuscitation once verified.
 
@@ -252,7 +252,7 @@ topic:
       markdown: |
         - Adults should have an appropriate presentation ([chest pain](topic:wvems-2026-028), etc.) and an EKG identified as **\*\*\* ACUTE MI \*\*\*** by automated analysis.
         - {I} **ALS**: May consider STE > 1 mm in 2 or more contiguous leads.
-        - {P(CC)} **CC** (Critical Care): May consider advanced criteria (Sgarbossa’s, [posterior](topic:wvems-2026-088), etc.).
+        - {P(CC)} **CC** (Critical Care): May consider advanced criteria ([Sgarbossa’s](topic:wvems-2026-088), [posterior](topic:wvems-2026-088), etc.).
         - Appropriate WVEMS cardiac hospitals (with emergent PCI) include:
           - Carilion **Roanoke** & **New River Valley** & Centra **Lynchburg**
           - Lewis Gale **Salem** & **Montgomery** & Sovah **Danville** & **Martinsville**

@@ -87,8 +87,7 @@ topic:
         bullets:
           - text: "[Shock](topic:wvems-2026-008)"
           - text: "[Blood](topic:wvems-2026-084)"
-          - text: "[Allergy](topic:wvems-2026-032)"
-            link_id: "wvems-2026-040"
+          - text: "[Allergy](topic:wvems-2026-032), [OD / Tox](topic:wvems-2026-040)"
 
       dose_table:
         - drug: "[Levophed](topic:wvems-2026-drug-reference#levophed)"

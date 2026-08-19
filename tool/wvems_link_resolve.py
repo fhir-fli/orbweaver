@@ -58,7 +58,12 @@ PROCEDURE_PAGES = {
     101: ["Chest Compression", "Defib", "IO"],
     102: ["Wound Care", "Tourniquet", "Wound Packing"],
     103: ["SMR with C-collar", "Splint", "Reduce Deformity", "Stinger Removal"],
-    104: ["Adult Antidotes"],
+    # p.104's rotated side-label reads "Adult Antidotes", but the card the
+    # app ships carries the p.96 index's name for it, "Administer Antidote"
+    # (renamed in 2d94587, 20 inbound links repointed). The anchor has to be
+    # the app's, so the app's title wins here; the side-label is recorded
+    # above only as where the page map came from.
+    104: ["Administer Antidote"],
     105: ["Pacing", "Cardiovert"],
     106: ["Deliver Baby", "Manage OB Complication"],
     107: ["RSI Prep Checklist", "Ventilator"],
@@ -269,8 +274,15 @@ def main():
                 hit = PHRASE_ALIASES.get((r["phrase"], d)) or best_match(
                     r["phrase"], cands
                 )
-                anchor = slug(hit) if hit else ""
-                how = "procedure-card" if hit else f"UNMATCHED-procedure p.{d}"
+                # Validated against the app's own card slugs, as the drug
+                # branch below already was: a card renamed in the app used to
+                # resolve silently to a dead anchor (adult-antidotes did, for
+                # 22 links) instead of surfacing here.
+                if hit and slug(hit) in proc_by_slug:
+                    anchor = slug(hit)
+                    how = "procedure-card"
+                else:
+                    how = f"UNMATCHED-procedure p.{d}"
             elif 109 <= d <= 117:
                 topic = POLICY_TOPIC
                 anchor = POLICY_PAGES.get(d, "")

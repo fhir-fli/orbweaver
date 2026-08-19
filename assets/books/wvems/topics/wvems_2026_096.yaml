@@ -304,7 +304,7 @@ topic:
         - "Watch for flash of blood; advance catheter (do not rethread cath)."
         - "Lab draw order: (culture), **blue**, (red), **gold**, **green**, **purple**, (gray)"
         - "Attach lock and flush with saline. Secure well with tape."
-        - "NOTE: It is **almost always** inappropriate for EMS to access an established indwelling central line (such as **dialysis** or **PICC line**). But EMS may consider using established lines during a CODE."
+        - "NOTE: It is **almost always** inappropriate for EMS to access an established indwelling central line (such as **dialysis** or **PICC line**). But EMS may consider using established lines during a [CODE](topic:wvems-2026-024)."
 
     # ── Airway ──────────────────────────────────────────────
     - type: "prose"
@@ -500,7 +500,7 @@ topic:
         - "Insert IO following manufacturer’s recommended procedure."
         - "Secure well with bulky dressing or other manufactured device."
         - "Consider admin of low-dose Lidocaine for local discomfort."
-        - "~[A] **Lidocaine: 10 mg** IO · Q 5 min · x3 PRN Pain · Adult"
+        - "~[A] **[Lidocaine](topic:wvems-2026-drug-reference#lidocaine): 10 mg** IO · Q 5 min · x3 PRN Pain · Adult"
         - "Consider using a pressure bag to increase fluid rates if needed."
 
     # ── Bleeding ────────────────────────────────────────────
@@ -614,7 +614,7 @@ topic:
         - Some toxins have unique antidotes — only **major symptoms** need treatment.
         - Most indications below **require online orders** (and dosing) — call the **toxicologist** at **Poison Control** or the ED (or OMD).
         - A few antidotes are included in other protocols — if indicated, may follow those standing orders.
-        - Don’t forget the basics: **O₂** for inhaled toxins, **Narcan** for hypoxia, **NS Bolus** for shock.
+        - Don’t forget [the basics](topic:wvems-2026-040): **O₂** for [inhaled](topic:wvems-2026-072) toxins, **[Narcan](topic:wvems-2026-drug-reference#narcan)** for hypoxia, **[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)** for shock.
         - **Poison Help: 1-800-222-1222**
 
     - type: "procedure_card"
@@ -736,7 +736,7 @@ topic:
         - "- Failed Delivery / Shoulder Dystocia: transport knees to chest"
         - "- Prolapse: don’t handle cord, relieve pressure using fingers in vagina"
         - "- Breech: do not pull; elevate presenting part if pressing on cord"
-        - "^~Consider **Destination Triage**"
+        - "^~[Consider Destination Triage](topic:wvems-2026-109#destination-triage)"
 
     # ── Critical Care ───────────────────────────────────────
     - type: "prose"

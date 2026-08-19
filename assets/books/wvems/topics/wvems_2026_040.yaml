@@ -120,7 +120,7 @@ topic:
       markdown: |
         - **[Narcan®](topic:wvems-2026-drug-reference#narcan)** (Naloxone): Should only be used to treat **[Hypoxia](topic:wvems-2026-006)**.
           - May try for any substance OD or exposure w/ dyspnea or shock.
-          - Call **Medical Control** for any refusal after **Narcan**.
+          - Call **Medical Control** for any refusal after **[Narcan](topic:wvems-2026-drug-reference#narcan)**.
           - {} May provide premeasured **intranasal** doses only.
           - {A} Titrate dose to resps & SpO₂; May start as low as **0.04** mg.
         - **[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)** (0.9% Saline): Fluids may help dilute toxins.
