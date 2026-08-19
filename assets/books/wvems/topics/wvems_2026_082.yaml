@@ -37,8 +37,20 @@ topic:
       variant: "severity"
 
       entry_chain:
-        - text: "Systolic Under  (or MAP)\nAdult (14+):  90  (65)\nChild (1-13):  70  (50)\nInfant (<1):  60  (40)"
+        - text: "Systolic Under"
           shape: "stadium"
+          bands:
+            - label: "Adult (14+)"
+              value: "90 mmHg"
+              cc: "65 mmHg"
+            - label: "Child (1–13)"
+              value: "70 mmHg"
+              cc: "50 mmHg"
+            - label: "Infant (< 1)"
+              value: "60 mmHg"
+              cc: "40 mmHg"
+          cc_title: "Or MAP"
+
 
       decision:
         text: "Technique?"

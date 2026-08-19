@@ -44,6 +44,8 @@ class CascadeFlowchartView extends StatelessWidget {
           text: flowchart.entry.text,
           shape: flowchart.entry.shape,
           theme: theme,
+          bands: flowchart.entry.bands,
+          ccTitle: flowchart.entry.ccTitle,
         ),
         for (var i = 0; i < steps.length; i++)
           _StepRow(

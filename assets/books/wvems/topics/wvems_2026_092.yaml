@@ -43,8 +43,16 @@ topic:
           text: "[Use Caution if Patient Refusal](topic:wvems-2026-109#patient-refusals)"
 
       entry_chain:
-        - text: "Systolic Over\nAdult (14+):  240 mmHg\nChild (1-13):  220 mmHg\nInfant (<1):  200 mmHg"
+        - text: "Systolic Over"
           shape: "stadium"
+          bands:
+            - label: "Adult (14+)"
+              value: "240 mmHg"
+            - label: "Child (1–13)"
+              value: "220 mmHg"
+            - label: "Infant (< 1)"
+              value: "200 mmHg"
+
 
       decision:
         text: "Severity?"

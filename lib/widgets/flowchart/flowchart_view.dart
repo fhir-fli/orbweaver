@@ -87,7 +87,13 @@ class SeverityFlowchartView extends StatelessWidget {
         );
       } else {
         rows.add(
-          FlowNodeBox(text: node.text, shape: node.shape, theme: theme),
+          FlowNodeBox(
+            text: node.text,
+            shape: node.shape,
+            theme: theme,
+            bands: node.bands,
+            ccTitle: node.ccTitle,
+          ),
         );
       }
       // Skip the arrow after the very last pre-branch node — the fork row
@@ -295,7 +301,13 @@ class SeverityFlowchartView extends StatelessWidget {
     for (var i = 0; i < cont.nodes.length; i++) {
       final node = cont.nodes[i];
       rows.add(
-        FlowNodeBox(text: node.text, shape: node.shape, theme: theme),
+        FlowNodeBox(
+          text: node.text,
+          shape: node.shape,
+          theme: theme,
+          bands: node.bands,
+          ccTitle: node.ccTitle,
+        ),
       );
       if (i < cont.nodes.length - 1) rows.add(const FlowDownArrow());
     }
@@ -495,6 +507,8 @@ class _EntryWithWarnings extends StatelessWidget {
                     shape: entry.shape,
                     theme: theme,
                     fillWidth: true,
+                    bands: entry.bands,
+                    ccTitle: entry.ccTitle,
                   ),
                   Expanded(
                     child: Center(
@@ -1470,7 +1484,13 @@ class LinearFlowchartView extends StatelessWidget {
         );
       } else {
         rows.add(
-          FlowNodeBox(text: node.text, shape: node.shape, theme: theme),
+          FlowNodeBox(
+            text: node.text,
+            shape: node.shape,
+            theme: theme,
+            bands: node.bands,
+            ccTitle: node.ccTitle,
+          ),
         );
       }
       rows.add(const FlowDownArrow());
@@ -1643,7 +1663,15 @@ class DifferentialFlowchartView extends StatelessWidget {
           ),
         );
       } else {
-        rows.add(FlowNodeBox(text: node.text, shape: node.shape, theme: theme));
+        rows.add(
+          FlowNodeBox(
+            text: node.text,
+            shape: node.shape,
+            theme: theme,
+            bands: node.bands,
+            ccTitle: node.ccTitle,
+          ),
+        );
       }
       // Skip the arrow after the very last entry node only when the
       // diamond follows immediately — its own incoming arrow handles

@@ -38,12 +38,19 @@ topic:
       variant: "severity"
 
       entry:
-        text: |
-          Systolic Under:
-          • Adult (14+): 90 mmHg  ·  or MAP 65
-          • Child (1–13): 70 mmHg  ·  or MAP 50
-          • Infant (< 1): 60 mmHg  ·  or MAP 40
+        text: "Systolic Under"
         shape: "stadium"
+        bands:
+          - label: "Adult (14+)"
+            value: "90 mmHg"
+            cc: "65 mmHg"
+          - label: "Child (1–13)"
+            value: "70 mmHg"
+            cc: "50 mmHg"
+          - label: "Infant (< 1)"
+            value: "60 mmHg"
+            cc: "40 mmHg"
+        cc_title: "Or MAP"
 
       decision:
         text: "Severity?"

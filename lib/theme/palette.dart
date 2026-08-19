@@ -93,6 +93,16 @@ const Map<String, Color> kRoleDefaults = {
   // Flow-chart shapes.
   'flow_decision': Color(0xFFE6B8AF),
   'flow_entry': Color(0xFFCFE2F3),
+  // The pale half of the entry stadium's zebra. The print bands these
+  // stadiums one stripe per line so a crew member can run a finger
+  // across their patient's age row without losing it (pp.8-14, 82, 92).
+  // Sampled off the rendered page: the vector layer is stroke-only, the
+  // banding is painted underneath (`tool/wvems_entry_stripe_sample.py`).
+  'flow_entry_alt': Color(0xFFE5EFF7),
+  // Same zebra, continued through the fused Critical-Care column: its
+  // dark stripe is `cc_band_fill` (#D9D2E9) exactly, which is how the
+  // print marks MAP as a credentialed measure rather than a note.
+  'flow_entry_cc_alt': Color(0xFFECE4FF),
   'flow_convergence': Color(0xFFD9EAD3),
   // The Critical-Care sub-tile under a convergence node: one colour, one
   // meaning — the same lavender as the CC content band, outlined in black

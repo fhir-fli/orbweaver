@@ -87,6 +87,8 @@ class TopicTheme {
   // Flow shapes.
   Color get flowDecision => _c('flow_decision');
   Color get flowEntry => _c('flow_entry');
+  Color get flowEntryAlt => _c('flow_entry_alt');
+  Color get flowEntryCcAlt => _c('flow_entry_cc_alt');
   Color get flowConvergence => _c('flow_convergence');
   Color get ccLinkFill => _c('cc_link_fill');
   Color get ccLinkBorder => _c('cc_link_border');

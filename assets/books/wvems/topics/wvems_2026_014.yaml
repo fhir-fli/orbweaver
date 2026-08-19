@@ -36,8 +36,16 @@ topic:
       variant: "severity"
 
       entry:
-        text: "Pulse Over\nAdult (14+): 100 /min\nChild (1–13): 130 /min\nInfant (<1): 160 /min"
+        text: "Pulse Over"
         shape: "stadium"
+        bands:
+          - label: "Adult (14+)"
+            value: "100 /min"
+          - label: "Child (1–13)"
+            value: "130 /min"
+          - label: "Infant (< 1)"
+            value: "160 /min"
+
 
       decision:
         text: "Severity?"

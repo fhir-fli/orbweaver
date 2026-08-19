@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/banded_entry.dart';
 import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 
 /// A flowchart node (entry / decision / convergence / action).
@@ -15,6 +16,8 @@ class FlowNodeBox extends StatelessWidget {
     required this.theme,
     this.compact = false,
     this.fillWidth = false,
+    this.bands = const [],
+    this.ccTitle,
     super.key,
   });
 
@@ -22,6 +25,13 @@ class FlowNodeBox extends StatelessWidget {
   final NodeShape shape;
   final TopicTheme theme;
   final bool compact;
+
+  /// Age rows, when this node is one of the print's banded entry stadiums.
+  /// See [BandedEntryStadium] — it takes over the whole node.
+  final List<AgeBand> bands;
+
+  /// Header of the fused Critical-Care column, when [bands] carry CC values.
+  final String? ccTitle;
 
   /// When true, skip the default Center+FractionallySizedBox(0.55) wrap
   /// applied to stadium and diamond shapes. Use when the node is
@@ -31,6 +41,18 @@ class FlowNodeBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (bands.isNotEmpty) {
+      // The banded stadium already is a stadium, striped and (where the page
+      // has one) fused to its Critical-Care column. It takes the full width:
+      // the 0.95 factor below exists to stop multi-line stadiums wrapping,
+      // and this one sizes its own rows.
+      return BandedEntryStadium(
+        title: text,
+        bands: bands,
+        ccTitle: ccTitle,
+      );
+    }
+
     if (shape == NodeShape.diamond) {
       // Diamond in isolation (no fan-out). DecisionHub handles the
       // diamond-with-arrows case; this branch is here for flowcharts

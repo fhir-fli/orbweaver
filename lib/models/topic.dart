@@ -459,15 +459,52 @@ class DoseRow {
 
 /// A flowchart node (entry, decision, or convergence).
 class FlowNode {
-  const FlowNode({required this.text, required this.shape});
+  const FlowNode({
+    required this.text,
+    required this.shape,
+    this.bands = const [],
+    this.ccTitle,
+  });
 
   factory FlowNode.fromYaml(Map<dynamic, dynamic> map) => FlowNode(
     text: map['text'] as String,
     shape: NodeShape.fromString(map['shape'] as String?),
+    bands: _mapList(map['bands'], AgeBand.fromYaml),
+    ccTitle: map['cc_title'] as String?,
   );
 
   final String text;
   final NodeShape shape;
+
+  /// Age-tiered thresholds, one row each, drawn as a zebra inside the node.
+  ///
+  /// The print sets these entry stadiums as a small table rather than as
+  /// free text — a title over one striped row per age band — because the
+  /// reader is looking up *their* patient's row under time pressure, not
+  /// reading a sentence (pp.8, 10, 12, 14, 82, 92).
+  final List<AgeBand> bands;
+
+  /// Header for the fused Critical-Care column, when the bands carry a
+  /// [AgeBand.criticalCare] value. p.8 puts "Or MAP" there: the MAP
+  /// thresholds are a credentialed measure, so the print gives them their own
+  /// lavender stadium fused to the right of the blue one.
+  final String? ccTitle;
+}
+
+/// One age row of a banded entry stadium: "Adult (14+)" → "90 mmHg", with an
+/// optional Critical-Care value in the fused right-hand column.
+class AgeBand {
+  const AgeBand({required this.label, required this.value, this.criticalCare});
+
+  factory AgeBand.fromYaml(Map<dynamic, dynamic> map) => AgeBand(
+    label: map['label'] as String,
+    value: map['value'] as String,
+    criticalCare: map['cc'] as String?,
+  );
+
+  final String label;
+  final String value;
+  final String? criticalCare;
 }
 
 /// The parsed body of a `variant: severity` flowchart block.
