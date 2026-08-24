@@ -32,11 +32,30 @@ prose and tables:
 | 13/14/15 Diarrhoea plans C/B/A | 131 / 135 / 138 | `who_5_02_*_dehydration.yaml` |
 | 16 Feeding recommendations | 302 | `who_10_01_2_sick_nutrition.yaml`, `who_12_03_nutrition_counselling.yaml` |
 
-**So the gap is form, not content.** The print's emergency backbone is 15 flowcharts;
-the app renders every one of them as running prose. Orbweaver *has* a flowchart
-renderer — the ProtocolBook uses it **40 times**, and the cyclic/loop variant landed in
-`cb82df7` — and the WHO book uses it **zero times**. That is the design finding, and it
-sits exactly on Grey's caveat that WHO formatting should stay close to the original.
+**Correction (2026-08-24, commit `b64def3`): "the emergency backbone is 15 flowcharts"
+was wrong.** That came from counting block types instead of looking at the pages. Having
+rendered all 16, only **two are flowcharts at all**:
+
+| | What it actually is | Action |
+|---|---|---|
+| **Chart 12** p.47 | the print's own title is "Neonatal resuscitation: **Flow chart**" — vertical spine, labelled exits | ✅ rebuilt as `algorithm` |
+| **Chart 13** p.131 | "Follow the arrows. If the answer is YES, go across. If NO, go down" | ✅ rebuilt as `cascade` |
+| Chart 2 pp.5–6 | ASSESS/TREAT matrix | table — already right |
+| Charts 7, 8, 9, 10, 11, 14, 15, 16 | bullets + dose tables | already right |
+| **Charts 3, 4, 5, 6** | **illustrated manual technique** | ✅ 13 drawings restored |
+
+**The gap I had not seen at all was the drawings.** Charts 3–6 teach manual technique —
+back slaps, chest thrusts, the Heimlich, neutral and tilting airway positions,
+look-listen-feel, jaw thrust, bag-and-mask, nasal prongs, nasal catheter, cervical
+stabilisation, recovery position — and **all 13 line drawings were missing**. A sentence
+cannot teach an infant's neutral airway position. Extracted with the print's own captions
+into `assets/books/who_imci/images/`.
+
+⚠️ **Extraction gotcha, measured:** these are **stencil masks**, so extracting the XObject
+directly yields **white lines on black**, and clip-rendering the page region drags in
+neighbouring headings and captions. Rebuild each as **255 − alpha** to get the line art
+alone. One (`who_chart06_2`) is a `Separation(DeviceCMYK,Black)` that will not write as
+PNG at all and is region-rendered instead.
 
 ## 2. Numeric parity: the port lost almost nothing
 
