@@ -52,6 +52,16 @@ topic:
         2. Clear secretions from the throat.
         3. Let child assume position of maximal comfort.
 
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart04_1.png"
+      caption: "Neutral position to open the airway in an infant"
+      size: "full"
+
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart04_2.png"
+      caption: "Tilting position to open the airway in an older child"
+      size: "full"
+
     - type: "prose"
       title: "Child unconscious"
       markdown: |
@@ -68,6 +78,11 @@ topic:
 
   - page_number: 10
     blocks:
+
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart04_3.png"
+      caption: "Look, listen and feel for breathing"
+      size: "full"
 
     - type: "prose"
       title: "B: When neck trauma or cervical spine injury is suspected"
@@ -94,6 +109,11 @@ topic:
           jaw is thrust **forwards**, at
           **90° to the body**
 
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart04_4.png"
+      caption: "Jaw thrust — fourth and fifth fingers behind the angle of the jaw, thrusting it forwards at 90° to the body"
+      size: "full"
+
     - type: "prose"
       title: "If jaw thrust does not open the airway"
       markdown: |
@@ -109,6 +129,11 @@ topic:
         - Give **1 breath every 2–3 seconds** (20–30 breaths/min).
         - **Avoid excessive ventilation rates** — they may compromise
           hemodynamics.
+
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart04_5.png"
+      caption: "Ventilate with bag and mask, ideally with a reservoir bag and oxygen"
+      size: "full"
 
     - type: "prose"
       title: "References"

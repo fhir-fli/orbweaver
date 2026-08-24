@@ -6,6 +6,12 @@
 # (2023 Cochrane); added a HIGH-priority red-alert — do NOT use Plan C in
 # severe acute malnutrition; noted the slow-rehydration alternative; updated
 # cholera antibiotics to azithromycin/doxycycline first-line.
+# 2026-08-24 — Chart 13 restored as a flowchart. The print draws Plan C as a
+# four-step decision cascade ("Follow the arrows. If the answer is YES, go
+# across. If NO, go down"), and the app had flattened it into two bullets
+# inside the treatment prose, which loses the order the chart imposes. Added
+# as a `cascade` block; the prose bullets stay as the detail behind it.
+# Grey's rule: if it is a flowchart in print, it is a flowchart in the app.
 # ============================================================
 
 topic:
@@ -63,6 +69,44 @@ topic:
           in a recent trial and needs less staff oversight. **Plan C remains the
           standard**, but the slow strategy is an option where monitoring is
           limited.
+
+    # ─────────── Chart 13 as the print draws it: follow the arrows ───────────
+    # The print's own instruction is "Follow the arrows. If the answer is YES,
+    # go across. If NO, go down." That decision chain used to live here as two
+    # bullets inside "Treatment", which loses the order the chart imposes.
+    - type: "flowchart"
+      variant: "cascade"
+      action_width: 0.55
+      entry:
+        text: "Severe dehydration — START HERE"
+        shape: "stadium"
+      root:
+        decision: "Can you give intravenous (IV) fluid immediately?"
+        action_answer: "yes"
+        action:
+          text: "Start IV fluid immediately — 100 ml/kg Ringer's lactate, split as in Table 13. If the child can drink, give ORS by mouth while the drip is set up."
+          kind: "procedure"
+        continuation:
+          decision: "Is IV treatment available nearby (within 30 min)?"
+          action_answer: "yes"
+          action:
+            text: "Refer urgently to hospital for IV treatment. If the child can drink, give the mother ORS and show her how to give frequent sips on the way."
+            kind: "referral"
+          continuation:
+            decision: "Are you trained to use a nasogastric tube for rehydration?"
+            action_answer: "yes"
+            action:
+              text: "Rehydrate by tube with ORS — 20 ml/kg per h for 6 h (total 120 ml/kg). Reassess every 1–2 h."
+              kind: "procedure"
+            continuation:
+              decision: "Can the child drink?"
+              action_answer: "yes"
+              action:
+                text: "Rehydrate by mouth with ORS — 20 ml/kg per h for 6 h (total 120 ml/kg). Reassess every 1–2 h."
+                kind: "procedure"
+      terminal_action:
+        text: "Refer URGENTLY to hospital for IV or nasogastric treatment."
+        kind: "referral"
 
     - type: "prose"
       title: "Which IV fluid"

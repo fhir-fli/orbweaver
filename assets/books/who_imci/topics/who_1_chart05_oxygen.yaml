@@ -57,6 +57,11 @@ topic:
       markdown: |
         - Place the prongs **just inside the nostrils** and secure with tape.
 
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart05_2.png"
+      caption: "Nasal prongs in place, secured with tape"
+      size: "full"
+
     - type: "prose"
       title: "Nasal catheter"
       markdown: |
@@ -67,6 +72,11 @@ topic:
           **nasopharyngeal** (not oropharyngeal) depth.
         - Insert the catheter to that depth.
         - Secure with tape.
+
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart05_1.png"
+      caption: "Nasal catheter — measure from the side of the nostril to the inner eyebrow margin"
+      size: "full"
 
     - type: "prose"
       title: "Flow rate"

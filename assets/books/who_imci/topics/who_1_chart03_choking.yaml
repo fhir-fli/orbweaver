@@ -51,6 +51,16 @@ topic:
         - When opening the airway, remove a foreign body **only if visible**.
         - **Do not perform blind finger sweeps.**
 
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart03_1.png"
+      caption: "Back slaps"
+      size: "full"
+
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart03_2.png"
+      caption: "Chest thrusts"
+      size: "full"
+
     - type: "prose"
       title: "Do NOT"
       callout: true
@@ -85,6 +95,16 @@ topic:
           becomes unresponsive.
         - When opening the airway, remove a foreign body **only if visible**.
         - **Do not perform blind finger sweeps.**
+
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart03_3.png"
+      caption: "Back blows to clear airway obstruction in a choking child"
+      size: "full"
+
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart03_4.png"
+      caption: "Heimlich manoeuvre for a choking older child"
+      size: "full"
 
     - type: "prose"
       title: "If the child becomes unresponsive"

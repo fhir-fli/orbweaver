@@ -62,6 +62,11 @@ topic:
           - Use the **lateral trauma position** if available (less
             cervical motion).
 
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart06_1.png"
+      caption: "Forehead and chin taped to a firm board, with the neck prevented from moving"
+      size: "full"
+
     - type: "prose"
       title: "Board caveats"
       callout: true
@@ -82,6 +87,11 @@ topic:
         - Keep the **neck slightly extended**, and stabilize by placing
           **cheek on one hand**.
         - **Bend one leg** to stabilize the body position.
+
+    - type: "image"
+      path: "assets/books/who_imci/images/who_chart06_2.png"
+      caption: "Recovery position — child on the side, neck slightly extended, one leg bent to stabilize the body"
+      size: "full"
 
     - type: "prose"
       title: "After positioning"

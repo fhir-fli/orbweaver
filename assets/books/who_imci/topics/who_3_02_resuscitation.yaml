@@ -33,6 +33,99 @@ topic:
         **meconium-stained liquor**. It often **cannot be anticipated** — be
         prepared at **every** delivery and follow **Chart 12**.
 
+    # ─────────── Chart 12 as the print draws it ───────────
+    # The print heads this page "Chart 12. Neonatal resuscitation: Flow chart"
+    # and draws a vertical spine with labelled Yes/No exits into side
+    # dispositions. The app carried the same content as five prose sections,
+    # which reads fine but loses the order and the exits. Rebuilt as an
+    # `algorithm` block; the prose sections below remain as the detail.
+    # A and B are the basic resuscitation steps, as the print's footnote says.
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Dry the infant immediately with a clean cloth. Keep warm by skin-to-skin contact and covered."
+        shape: "stadium"
+      stages:
+        - decision: "Breathing or crying, with good muscle tone or vigorous movements?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Routine care"
+                bullets:
+                  - "See section 3.1"
+                severity: "non_urgent"
+            - label: "No"
+              continue: true
+
+        - decision: "A · After stimulation, is the infant breathing?"
+          criteria:
+            - "Stimulate by rubbing the back 2 to 3 times"
+            - "Suction only if there was meconium-stained liquor, or the mouth or nose is full of secretions"
+          outcomes:
+            - label: "Breathing"
+              box:
+                title: "Routine care, and closely observe breathing"
+                severity: "non_urgent"
+            - label: "Not breathing, or gasping"
+              continue: true
+
+        - decision: "B · After 30–60 s of ventilation, is the infant breathing well?"
+          criteria:
+            - "CALL FOR HELP"
+            - "Transfer to the newborn resuscitation area"
+            - "Position the head and neck slightly extended"
+            - "Start positive pressure ventilation with mask and self-inflating bag within 1 min of birth"
+            - "Make sure the chest is moving adequately"
+          outcomes:
+            - label: "Breathing well"
+              box:
+                title: "Observe closely if it continues to breathe well"
+                severity: "non_urgent"
+            - label: "After 30–60 s"
+              continue: true
+
+        - decision: "C · Check the heart rate (HR) with a stethoscope"
+          outcomes:
+            - label: "HR < 60/min"
+              box:
+                title: "Chest compressions until HR ≥ 100/min"
+                bullets:
+                  - "See the figure on p.48"
+                  - "Give higher oxygen concentration"
+                  - "If HR remains < 60/min, consider other ventilatory support, IV adrenaline, or referral where possible"
+                  - "If there is no HR for > 10 min, or it remains < 60/min for 20 min, discontinue (section 3.2.2, p.50)"
+                severity: "emergency"
+            - label: "HR ≥ 60/min"
+              continue: true
+
+        - decision: "Is the heart rate 60–100/min, or above 100/min?"
+          outcomes:
+            - label: "HR 60–100/min"
+              box:
+                title: "Take ventilation corrective steps"
+                bullets:
+                  - "Continue to ventilate at 40 breaths per min"
+                  - "Consider higher oxygen concentration"
+                  - "Suction, if necessary"
+                  - "Reassess every 1–2 min"
+                severity: "priority"
+            - label: "HR > 100/min"
+              box:
+                title: "Continue to ventilate at 40 breaths per min"
+                bullets:
+                  - "Every 1–2 min stop to see if it breathes spontaneously"
+                  - "Stop ventilating when the respiratory rate is > 30 breaths per min"
+                  - "Give post-resuscitation care (section 3.2.1, p.50)"
+                severity: "priority"
+
+    - type: "prose"
+      title: "Which gas to ventilate with"
+      callout: true
+      markdown: |
+        Positive pressure ventilation should be started with **air** for infants
+        of **gestation > 32 weeks**. For **very preterm** infants it is preferable
+        to start with **30% oxygen** if possible.
+
     - type: "prose"
       title: "Chart 12 — first steps"
       markdown: |
