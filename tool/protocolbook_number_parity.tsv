@@ -1,0 +1,50 @@
+page	number	documented_in	context
+13	3-5s	pb_015_cpr_summary.yaml,pb_114_im_ecg_basics.yaml	
+15	3-5s	pb_015_cpr_summary.yaml,pb_114_im_ecg_basics.yaml	
+16	11-12kg	UNDOCUMENTED	4.99 4-6 65-73.99 7-8 74-80.99 9-10 81-94.99 11-12 95-106.99
+16	12kg	UNDOCUMENTED	above (e.g. underweight 100cm, use weight 11-12kg) If there 
+18	17y	pb_019_bp_boys.yaml,pb_018_bp_girls.yaml	
+19	17y	pb_019_bp_boys.yaml,pb_018_bp_girls.yaml	
+22	>=40	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	
+28	0.2-0.4ml	pb_028_poisoning_ingestion.yaml	0ml shots of vodka in a 70kg, maintenance is 0.2-0.4mls/kg/h
+28	0.4ml	pb_028_poisoning_ingestion.yaml	shots of vodka in a 70kg, maintenance is 0.2-0.4mls/kg/hour 
+33	20-40kg	UNDOCUMENTED	
+43	>=2	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	
+45	>=2	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	
+46	>=50	protocolbook_content_flags.md,pb_052_wheezing_child.yaml	 intubation • Pulse oximetry < 92% on oxygen >=50% • Recurre
+50	>=1	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	r > 24H Girls > 12 months & circumcised boys >=1 risk factor
+50	>=2	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	12 months & circumcised boys >=1 risk factor >=2 risk factor
+62	>=6	protocolbook_needs_oe_rereview.md,protocolbook_open_dosing_questions.md	If available, consider ICU admission for CRS >=6 Start Antib
+64	>=2	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	
+70	>=45	protocolbook_needs_oe_rereview.md,pb_070_pharyngitis.yaml	
+75	1-2mg/kg/dose	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	𝑡𝑟𝑜𝑐𝑟𝑖𝑡 I. Iron supplementation a) Children: 1-2mg/kg/dose P
+75	2mg/kg/dose	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	𝑜𝑐𝑟𝑖𝑡 I. Iron supplementation a) Children: 1-2mg/kg/dose PO 
+76	1yo	pb_135_im_hiv_oi.yaml,formulary.yaml	culate Transfusion Volume a. Paediatric: i. <1yo: 10mL/kg PR
+76	48-96h	pb_076_transfusions.yaml	/in 1-2 hours, sxs w/in 6 hrs, usu. improves 48-96 hrs ii. S
+76	5-7d	pb_076_transfusions.yaml	
+77	11-20%	UNDOCUMENTED	shing) 1 Heart Rate Within 10% of baseline 0 11-20% of basel
+79	4-12y	UNDOCUMENTED	
+80	2-10mg/kg/dose	protocolbook_source_errata.md,pb_080_pain_ladder.yaml	5 mg/kg/dose PO q4-6hrs prn Adults: Morphine 2-10mg/kg/dose 
+83	2-4mg/kg	protocolbook_content_flags.md,pb_082_neo_feeding.yaml	
+86	<28	pb_086_neo_sepsis_treatment.yaml	86 Neonatal Sepsis (<28 days) Treatment Yes No` 1)Antibiotic
+91	50wk	UNDOCUMENTED	
+95	10ug/kg	pb_094_im_heart_failure.yaml,pb_106_im_hypertension.yaml	
+96	>=1	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	
+97	45yo	UNDOCUMENTED	97 Stroke Protocol LAPSS Criteria 2 1. Age > 45yo 2. No hx o
+97	<170	protocolbook_content_flags.md,pb_096_im_stroke.yaml	
+99	<=2	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	
+99	>65	UNDOCUMENTED	 pressure or pressor requirement to maintain >65, Glasgow Co
+99	>=2	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	
+99	>=40	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	lly increasing mortality (hospital mortality >=40%) b. Clini
+99	>=65	protocolbook_content_flags.md,pb_099_im_sepsis.yaml	nsion requiring vasopressors to maintain MAP >=65 & serum la
+100	>=115	pb_099_im_sepsis.yaml	6 97% 34 65% 49 84% 97-114 98% 35 67% 50 85% >=115 99% Estim
+103	3g	protocolbook_needs_oe_rereview.md,protocolbook_content_flags.md	> 50 yr or immunocompromised add: Ampicillin 3g IV 6hourly F
+105	0.02-0.05iu/kg	UNDOCUMENTED	 5% Dextrose ½ NS at 150-200mL/hr b. Insulin 0.02-0.05 IU/kg
+105	0.14iu/kg	protocolbook_content_flags.md,pb_105_im_dka.yaml	every 2 hours 2. Soluble insulin infusion a. 0.14 IU/kg/hr F
+105	5meq	protocolbook_content_flags.md,pb_140_im_sodium.yaml	n cause brain oedema Potassium Protocol: Add 5mEq KCl/500mL 
+106	0.5ug/kg	pb_094_im_heart_failure.yaml,pb_106_im_hypertension.yaml	
+136	21:0	pb_135_im_hiv_oi.yaml	
+141	<=1	protocolbook_needs_oe_rereview.md,pb_014_cardiac_arrest.yaml	 -Less common: hypothyroidism Fluid Restrict <=1L/day Treat 
+148	q23h	protocolbook_source_errata.md,formulary.yaml	ts: • Meningitis: 2g IV q12hr • Other: 2g IV q23hr Contraind
+153	12-4h	protocolbook_source_errata.md,formulary.yaml	(acute): 2mg PO q8hr • Agitation: 0.5-2mg IV 12-4hrs Use wit
+153	2-10mg/kg/dose	protocolbook_source_errata.md,pb_080_pain_ladder.yaml	s prn Adults: • 1-2 mg/dose IV q2-4hrs prn • 2-10mg/kg/dose 

@@ -39,7 +39,10 @@ BOOKS = {
     "who_imci": {
         "pdf": REPO / "9789241548373_eng.pdf",
         "topics": REPO / "assets/books/who_imci/topics",
-        "offset": -1, "first": 1, "last": 412,
+        # measured: 433 of 438 pages agree that printed page P sits at index
+        # P+23 (the front matter is roman-numbered). p.47 = Chart 12, p.131 =
+        # Chart 13, p.294 = 10.1 Nutritional management, all confirmed.
+        "offset": 23, "first": 1, "last": 414,
     },
 }
 

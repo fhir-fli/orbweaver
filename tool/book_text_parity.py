@@ -52,9 +52,10 @@ BOOKS = {
     "who_imci": {
         "pdf": REPO / "9789241548373_eng.pdf",
         "topics": REPO / "assets/books/who_imci/topics",
-        "offset": -1,
+        # measured: printed page P sits at PDF index P+23 (roman front matter)
+        "offset": 23,
         "first": 1,
-        "last": 412,
+        "last": 414,
     },
 }
 
