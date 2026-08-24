@@ -97,7 +97,10 @@ topic:
         - type: "table"
           title: "Classify by physical exam"
           column_flex: [3, 5, 5]
-          columns: ["", "Congestion — YES (wet)", "Congestion — NO (dry)"]
+          # An empty first-column header leaves the two congestion labels
+          # running together across the header bar, out of line with the body
+          # columns (seen on device). Label the axis instead.
+          columns: ["Perfusion ↓ / Congestion →", "YES — wet", "NO — dry"]
           rows:
             - cells:
                 - "**Low perfusion — YES (cold)**"

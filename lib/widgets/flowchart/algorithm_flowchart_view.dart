@@ -23,6 +23,11 @@ class AlgorithmFlowchartView extends StatelessWidget {
   static const int _cols = 12;
   static const double _dLeftCol = 0.3; // diamond left edge
   static const double _dCols = 4.2; // diamond width
+  /// The largest axis-aligned rectangle inside a rhombus is exactly half
+  /// its width by half its height. Decision text is laid out in that
+  /// rectangle so it never crosses the sloped edges.
+  static const double _kDiamondTextWFrac = 0.5;
+  static const double _kDiamondTextHFrac = 0.5;
   static const double _boxLeftCol =
       2.7; // wide box, next to the down-arrow (→ col 12)
 
@@ -142,8 +147,28 @@ class _DecisionStage extends StatelessWidget {
 
     // Grow the diamond with the decision length so long questions have room
     // (and the criteria card below never overlaps the wrapped text).
-    final dLines = (stage.decision.length / 14).ceil().clamp(2, 6);
-    final dH = (32 + dLines * 15).toDouble();
+    //
+    // The text must fit the diamond's INSCRIBED RECTANGLE, not its bounding
+    // box. A rhombus is at full width only on its centre line and tapers to a
+    // point at top and bottom, so the largest axis-aligned rectangle inside
+    // one is exactly half its width by half its height. Sizing against the
+    // bounding box is why a long question used to cross the sloped edges —
+    // its first and last lines sat where the diamond is narrowest.
+    const dFont = 11.5;
+    final textW = dW * AlgorithmFlowchartView._kDiamondTextWFrac;
+    // ~0.55 em average advance for this weight; floor keeps a narrow column
+    // from claiming one character per line.
+    final charsPerLine = (textW / (dFont * 0.55)).floor().clamp(6, 40);
+    // Let a long question grow the diamond rather than clip: clamping the
+    // line count low is what left "Age >1 month - child convulsing for more
+    // than 5 minutes OR presents convulsing?" crossing the sloped edges even
+    // after the inscribed-rectangle fix. Long decisions are rare; a tall
+    // diamond reads, a clipped one does not.
+    final dLines = (stage.decision.length / charsPerLine).ceil().clamp(2, 14);
+    final textH = dLines * dFont * 1.12;
+    // Double it: the text box occupies the middle half of the diamond.
+    final dH = (textH / AlgorithmFlowchartView._kDiamondTextHFrac + 16)
+        .clamp(72.0, 420.0);
     final midY = dH / 2;
 
     final terminals = [
@@ -289,14 +314,14 @@ class _DecisionStage extends StatelessWidget {
             width: dW,
             height: dH,
             child: Center(
-              // Constrain to the diamond's inscribed width so the text wraps
-              // inside the rhombus instead of poking past its side points.
+              // The inscribed rectangle of a rhombus is half its width by
+              // half its height — anything wider crosses the sloped edges.
               child: SizedBox(
-                width: dW * 0.62,
+                width: textW,
                 child: FitText(
                   stage.decision,
-                  maxWidth: dW * 0.62,
-                  maxHeight: dH * 0.82,
+                  maxWidth: textW,
+                  maxHeight: dH * AlgorithmFlowchartView._kDiamondTextHFrac,
                   style: const TextStyle(
                     fontSize: 11.5,
                     height: 1.05,
