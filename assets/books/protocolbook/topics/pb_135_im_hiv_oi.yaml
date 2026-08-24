@@ -104,7 +104,7 @@ topic:
                 - Fluconazole 400 mg/day (10 mg/kg/day in children < 19 kg)
 
         - type: "prose"
-          title: "Pneumocystis jiroveci pneumonia (PCP)"
+          title: "Pneumocystis jirovecii pneumonia (PCP)"
           markdown: |
             - **CD4:** usually < 200
             - **Symptoms:** progressive dyspnea on exertion, nonproductive cough, fever, chest discomfort; may be severely hypoxic

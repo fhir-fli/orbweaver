@@ -5,6 +5,26 @@
 # Qual, m-PIMA) for early infant diagnosis; updated the virological testing
 # schedule (birth → 14–21 d → 1–2 mo → 4–6 mo) and breastfeeding intervals;
 # de-emphasised ultrasensitive p24 antigen (superseded by NAT).
+# ✅ OpenEvidence-reviewed again 2026-08-24. Confirmed: POC NAT, the
+# virological schedule, and p24 de-emphasis all current. Two corrections
+# applied and three additions made:
+#   - post-cessation testing was "4–6 weeks and 4–6 months"; DHHS gives
+#     4–6 weeks and **3 months** after cessation. Corrected.
+#   - added the presumptive-ART caveat: ARVs suppress both RNA and DNA NAT,
+#     so an extra virological test is needed 2–6 weeks after ARVs stop, and
+#     DNA NAT is preferable while the infant is still on ART (it detects
+#     cell-associated provirus, not active replication).
+#   - added definitive-exclusion criteria, birth-test risk stratification,
+#     and the rule that antibody-positive children ≥ 18 months are confirmed
+#     by NAT.
+# ⚠️ SOURCE NOTE: the granular schedules on this page (birth / 14–21 d /
+#   1–2 mo / 4–6 mo, the 3-month post-cessation window, and the definitive-
+#   exclusion rule) come from US DHHS/IDSA-ASM, which are more detailed than
+#   classic WHO EID guidance (birth / 6 weeks, plus antibody at 9 months).
+#   The clinical direction is identical; these are harmonised with current
+#   US guidance rather than verbatim WHO.
+#   Refs: DHHS Paediatric ARV Guidelines (OARAC 2026); IDSA/ASM Microbiology
+#   Laboratory Guide 2024 update; Ochodo Cochrane 2021 (POC NAT).
 # ============================================================
 
 topic:
@@ -55,6 +75,10 @@ topic:
         testing as soon as possible; if not possible, **repeat antibody testing at
         18 months**.
 
+        A child **≥ 18 months** with a positive antibody test may still carry
+        **residual maternal antibody**. Confirm the diagnosis with **NAT** before
+        committing the child to lifelong treatment.
+
     - type: "prose"
       title: "Virological tests"
       markdown: |
@@ -84,11 +108,17 @@ topic:
     - type: "prose"
       title: "When to do virological tests"
       markdown: |
-        Test **as early as birth** in high-risk infants, then on a routine
+        Test **at birth** in all perinatally exposed infants, then on a routine
         schedule:
         - **first routine test at 14–21 days**
         - **at 1–2 months**
         - **at 4–6 months**.
+
+        A **birth** test is **essential in high-risk infants** — mother not on ART,
+        started ART late, poor adherence, or a detectable maternal viral load near
+        delivery. It is **not strictly necessary in low-risk infants** whose mother
+        was on ART throughout pregnancy with a sustained undetectable viral load,
+        though it is still commonly done.
 
         **One positive virological test** is sufficient to diagnose HIV — **start
         ART without delay**, and collect a **second specimen** to confirm. Return
@@ -99,6 +129,30 @@ topic:
       markdown: |
         A breastfeeding infant remains **at risk** of acquiring HIV throughout
         breastfeeding. **Do not stop breastfeeding to perform testing.** Test
-        **every 3 months while breastfeeding**, and again at **4–6 weeks and
-        4–6 months after complete cessation**. A **negative** result only reliably
-        excludes HIV once this post-cessation window has passed.
+        **at least every 3 months while breastfeeding**, and again at **4–6 weeks
+        and 3 months after complete cessation**. A **negative** result only
+        reliably excludes HIV once this post-cessation window has passed.
+
+    - type: "prose"
+      title: "⚠ If the infant has had ARVs"
+      callout: true
+      markdown: |
+        **Antiretrovirals suppress the test as well as the virus.** In an infant
+        who received presumptive ART or prophylaxis, **both RNA and DNA NAT can be
+        falsely negative** while the drug is on board.
+        - Do an **additional virological test 2–6 weeks after ARVs are stopped**
+          before accepting a negative result.
+        - While the infant is **still on ART**, an **HIV DNA** assay is preferable
+          to RNA: it detects **cell-associated provirus** rather than active
+          replication, so it is less affected by drug suppression.
+
+    - type: "prose"
+      title: "Excluding HIV definitively"
+      markdown: |
+        In a child who is **not breastfeeding** and has had **no ARVs**, HIV is
+        **definitively excluded** by either:
+        - **two negative NATs** — one at **≥ 1 month** and one at **≥ 4 months**, or
+        - **two negative antibody tests** at **≥ 6 months**.
+
+        In a breastfeeding child, the clock does not start until breastfeeding has
+        **completely stopped** — see the post-cessation window above.

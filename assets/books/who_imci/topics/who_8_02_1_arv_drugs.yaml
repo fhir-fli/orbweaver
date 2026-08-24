@@ -9,6 +9,19 @@
 # regimens by weight band. The 2013 "LPV/r-based under 3 years" framing is
 # obsolete. Refs: DHHS/OARAC Pediatric ARV Guidelines 2024; ODYSSEY 2021;
 # IMPAACT 2019 (dispersible DTG/ABC/3TC).
+# ✅ OpenEvidence-reviewed again 2026-08-24: the DTG-based rewrite was
+# confirmed current (DTG + 2 NRTIs preferred ≥ 30 d / ≥ 3 kg; Triumeq PD the
+# first dispersible DTG single-tablet regimen; ODYSSEY and IMPAACT 2019 the
+# supporting trials). ONE GAP FOUND AND FIXED: **HLA-B*5701 screening before
+# any abacavir-containing regimen** was absent from the whole chapter, while
+# abacavir is this page's own preferred backbone. §8.2.3 warned only to STOP
+# if hypersensitivity occurs — reacting to the reaction rather than
+# preventing it. Screening added here and cross-referenced in §8.2.3.
+# ❓ OPEN FOR OE: HLA-B*5701 testing is frequently unavailable in the
+# settings this book serves, and WHO's public-health approach has not
+# historically required it. Should this page say "screen where available",
+# and what should the fallback be where it is not? Do not answer this from
+# the app — it needs a sourced answer.
 # ============================================================
 
 topic:
@@ -54,7 +67,7 @@ topic:
         - cells: ["INSTI", "Dolutegravir (DTG)", "Preferred anchor, all ages ≥ 4 wk & ≥ 3 kg"]
         - cells: ["INSTI", "Bictegravir (BIC)", "≥ 2 yr & ≥ 14 kg, as BIC/FTC/TAF (Biktarvy)"]
         - cells: ["INSTI", "Raltegravir (RAL)", "Neonates < 4 wk"]
-        - cells: ["NRTI", "Abacavir (ABC)", "Preferred NRTI backbone"]
+        - cells: ["NRTI", "Abacavir (ABC)", "Preferred NRTI backbone — screen HLA-B*5701 first"]
         - cells: ["NRTI", "Lamivudine (3TC)", "Backbone"]
         - cells: ["NRTI", "Emtricitabine (FTC)", "Backbone (= 3TC class)"]
         - cells: ["NRTI", "Zidovudine (ZDV)", "Alternative NRTI"]
@@ -93,6 +106,10 @@ topic:
     - type: "prose"
       title: "Notes on the regimens"
       markdown: |
+        - **Screen HLA-B*5701 before starting any abacavir-containing regimen.**
+          If positive, **do not use abacavir** — use a ZDV- or TAF-based backbone
+          instead. After a suspected hypersensitivity reaction, **never
+          rechallenge**: re-exposure can be fatal.
         - **DTG + ABC + 3TC** is the preferred regimen across ages; the dispersible
           fixed-dose combination (**Triumeq PD**) makes it feasible from **≥ 6 kg /
           ~3 months** in resource-limited settings.
