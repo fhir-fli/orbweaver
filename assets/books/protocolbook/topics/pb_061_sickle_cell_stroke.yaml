@@ -1,8 +1,16 @@
 # ============================================================
 # ProtocolBook p.61 — Sickle Cell Stroke. A linear flow (presentation
 # → initial management → concurrent-issue management table →
-# monitoring → discharge) with no decision points → titled prose +
-# one table, per the hybrid rule.
+# monitoring → discharge) with no decision points.
+#
+# 2026-08-24 — RENDERED AS A FLOWCHART. It was previously titled prose
+# plus one table, "per the hybrid rule" (linear flow, no decisions →
+# prose). Grey's rule of 2026-08-24 overrides that: if it is a
+# flowchart in the print, it is a flowchart in the app. The print draws
+# this page as a boxed spine with arrows, so the spine is now a
+# `linear` block. The concurrent-issue table stays a table below it —
+# `LinearContentStep` carries a title and bullets but not a table, so
+# the step names the six issues and the table below holds the detail.
 #
 # Faithful-rendering calls:
 #   - Citation superscripts (Hgb 156,162; hydration 163,164) dropped.
@@ -32,21 +40,39 @@ topic:
 
   blocks:
 
-    - type: "prose"
-      title: "Presentation"
-      markdown: |
-        New Neurologic Findings: hemiparesis, focal neurologic deficit, speech disorder — **OR** High Clinical Suspicion.
-
-    - type: "prose"
-      title: "Management"
-      markdown: |
-        - Monitor, support ABCs
-        - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
-        - Start Oxygen if spO2 <94%
-        - Assess GCS
-        - Assess hydration status
-        - Insert IV, Draw CBC, malaria, RBS
-        - Perform brief, targeted history, physical exam
+    - type: "flowchart"
+      variant: "linear"
+      entry_chain:
+        - text: "New neurologic findings — hemiparesis, focal neurologic deficit, speech disorder — OR high clinical suspicion"
+          shape: "stadium"
+      steps:
+        - type: "content"
+          title: "Initial management"
+          bullets:
+            - "Monitor, support ABCs"
+            - "Check vital signs (BP, PR, RR, spO2, Temp, Weight)"
+            - "Start oxygen if spO2 < 94%"
+            - "Assess GCS"
+            - "Assess hydration status"
+            - "Insert IV, draw CBC, malaria, RBS"
+            - "Perform brief, targeted history and physical exam"
+        - type: "content"
+          title: "Manage concurrent issues (table below)"
+          bullets:
+            - "Fever · Hypoglycaemia · Convulsions"
+            - "Anaemia — exchange transfusion preferred"
+            - "Infection · Hydration"
+        - type: "content"
+          title: "Monitoring"
+          bullets:
+            - "Daily neuro checks"
+            - "Physiotherapy as soon as acute issues resolve"
+      convergence:
+        text: "Discharge plan"
+        shape: "rounded_rectangle"
+        bullets:
+          - text: "Hydroxyurea"
+          - text: "Follow-up in Sickle Cell Clinic"
 
     - type: "table"
       title: "Manage concurrent issues"
@@ -61,14 +87,9 @@ topic:
         - cells: ["**Hydration**", "Dehydrated: see dehydration recommendations. MIVF if hydrated. Encourage feeding"]
 
     - type: "prose"
-      title: "Monitoring"
+      title: "Refer for imaging"
+      callout: true
       markdown: |
-        - Daily neuro checks
-        - Physiotherapy as soon as acute issues resolved
-        - **Refer for neuroimaging and advanced management.** Adults with sickle cell disease have a substantial rate of **haemorrhagic** stroke, which transfusion does not treat
-
-    - type: "prose"
-      title: "Discharge Plan"
-      markdown: |
-        - Hydroxyurea
-        - F/U in Sickle Cell Clinic
+        **Refer for neuroimaging and advanced management.** Adults with sickle
+        cell disease have a substantial rate of **haemorrhagic** stroke, which
+        transfusion does not treat.

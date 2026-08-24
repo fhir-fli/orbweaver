@@ -41,20 +41,52 @@ topic:
 
   blocks:
 
-    - type: "prose"
-      title: "Presentation"
-      markdown: |
-        Meets criteria for pneumonia **OR** has moderate to severe chest pain.
-
-    - type: "prose"
-      title: "Management"
-      markdown: |
-        - Monitor, support ABCs
-        - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
-        - Assess GCS, hydration status
-        - Start Oxygen if spO2 <94%
-        - Insert IV, Draw CBC, malaria, transfuse for Hgb <9
-        - Perform brief, targeted history, physical exam
+    # 2026-08-24 — the print draws p.62 as a boxed spine with arrows, so the
+    # spine is a flowchart. The CRS table and the treatment detail stay as
+    # blocks below: a `linear` step carries a title and bullets, not a table.
+    - type: "flowchart"
+      variant: "linear"
+      entry_chain:
+        - text: "Meets criteria for pneumonia OR has moderate to severe chest pain"
+          shape: "stadium"
+      steps:
+        - type: "content"
+          title: "Initial management"
+          bullets:
+            - "Monitor, support ABCs"
+            - "Check vital signs (BP, PR, RR, spO2, Temp, Weight)"
+            - "Assess GCS and hydration status"
+            - "Start oxygen if spO2 < 94%"
+            - "Insert IV, draw CBC and malaria, transfuse for Hgb < 9"
+            - "Perform brief, targeted history and physical exam"
+        - type: "content"
+          title: "Score the Clinical Respiratory Score (table below)"
+          bullets:
+            - "RR · auscultation · retractions or nasal flaring"
+            - "Mental status · O2 sat · colour"
+        - type: "action"
+          text: "If available, consider ICU admission for CRS ≥ 6"
+          kind: "referral"
+        - type: "content"
+          title: "Start antibiotics (detail below)"
+          bullets:
+            - "Cefotaxime IV 50 mg/kg q8h (max 2 g), or ceftriaxone 80 mg/kg IV daily (max 2 g)"
+            - "Azithromycin — day 1: 10 mg/kg; days 2–5: 5 mg/kg"
+        - type: "content"
+          title: "General supportive care (detail below)"
+          bullets:
+            - "Incentive spirometry — 10 maximal inspirations every 2 h while awake"
+            - "Salbutamol for wheeze or bronchospasm"
+            - "Aggressive pain management"
+            - "Encourage feeding; total fluid no more than maintenance"
+      convergence:
+        text: "Discharge criteria"
+        shape: "rounded_rectangle"
+        bullets:
+          - text: "Improved symptoms · afebrile × 24 h · good PO intake"
+          - text: "SpO2 > 94% on room air"
+          - text: "Hgb > 5, or back at the patient's known baseline — whichever is higher"
+          - text: "Pain controlled without morphine"
 
     - type: "table"
       title: "Clinical Respiratory Score (CRS)"
@@ -67,11 +99,6 @@ topic:
         - cells: ["**Mental Status**", "Normal/mildly irritable", "Irritable, restless", "Lethargic"]
         - cells: ["**O2sat**", ">95%", "90–95%", "<90%"]
         - cells: ["**Color**", "Normal", "Pale", "Cyanotic, dusky"]
-
-    - type: "prose"
-      callout: true
-      markdown: |
-        If available, consider ICU admission for CRS ≥6.
 
     - type: "prose"
       title: "Start Antibiotics"
@@ -90,12 +117,3 @@ topic:
         - Aggressive pain management
         - Encourage feeding, IVF if not eating (but TOTAL fluid intake should be no more than maintenance)
 
-    - type: "prose"
-      title: "Discharge Criteria"
-      markdown: |
-        - Improved symptoms
-        - Afebrile x 24hrs
-        - Good PO intake
-        - SpO2 >94% on room air
-        - Hgb >5, **or back at the patient's known baseline — whichever is higher**
-        - Pain controlled without morphine

@@ -44,6 +44,11 @@ topic:
         - cells: ["15 yr", "15", "18", "23"]
         - cells: ["18 yr", "14", "17", "21"]
 
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_vitals_resp_rate.png"
+      caption: "Respiratory rate percentiles by age — 90th, 50th and 10th centiles"
+      size: "full"
+
     - type: "table"
       title: "Heart rate per minute"
       columns: ["Age", "10%", "50%", "90%"]
@@ -61,3 +66,8 @@ topic:
         - cells: ["12 yr", "70",  "89",  "111"]
         - cells: ["15 yr", "64",  "82",  "104"]
         - cells: ["18 yr", "60",  "77",  "99"]
+
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_vitals_heart_rate.png"
+      caption: "Heart rate percentiles by age — 90th, 50th and 10th centiles"
+      size: "full"
