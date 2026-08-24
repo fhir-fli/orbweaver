@@ -55,14 +55,47 @@ topic:
         - NOT finger clubbing (if present, other dx needs to be considered)
         - CXR: hyperinflation, flat diaphragm
 
-    - type: "prose"
-      title: "Management"
-      markdown: |
-        - Monitor, support ABCs
-        - Check VS (PR, RR, spO₂, Temp, Weight)
-        - Assess AVPU / GCS
-        - Assess hydration status, IV if needed
-        - Perform brief, targeted history, physical exam
+    # 2026-08-24 — History and Physical exam are printed as plain outline text,
+    # but from "Management" down the print draws a boxed spine with arrows and
+    # an oxygen-target callout hanging off the side. That part is a flowchart.
+    - type: "flowchart"
+      variant: "linear"
+      warnings:
+        - type: "caution"
+          text: "Known or suspected COPD — aim for spO₂ 90–92%, NOT higher"
+      entry_chain:
+        - text: "Adult COPD or asthma"
+          shape: "stadium"
+      steps:
+        - type: "content"
+          title: "Management"
+          bullets:
+            - "Monitor, support ABCs"
+            - "Check VS (PR, RR, spO₂, Temp, weight)"
+            - "Assess AVPU / GCS"
+            - "Assess hydration status, IV if needed"
+            - "Perform brief, targeted history and physical exam"
+        - type: "content"
+          title: "Evaluate for other causes of SOB"
+          bullets:
+            - "Heart failure"
+            - "Pneumonia"
+            - "Pulmonary TB"
+        - type: "content"
+          title: "Bronchodilator therapy"
+          bullets:
+            - "Albuterol / ipratropium q20min × 3 doses — nebuliser (5 mg / 0.5 mg) or MDI 8 puffs"
+            - "Caution using albuterol with cardiac disease"
+            - "Evaluate after the first Rx and after the first 3; if symptoms dramatically improve, more likely asthma"
+            - "Prednisolone 40 mg/day × 5 days"
+      convergence:
+        text: "More sputum, colour change to yellow/green, or increased breathlessness, fever, tachypnoea?"
+        shape: "diamond"
+        bullets:
+          - text: "Suspect infective COPD exacerbation and treat"
+          - text: "Amoxicillin / clavulanate 875 mg BD × 5 days"
+          - text: "Doxycycline 100 mg BD × 10 days"
+          - text: "Azithromycin 500 mg once daily × 3 days"
 
     - type: "prose"
       title: "Important note on oxygen"
@@ -73,27 +106,3 @@ topic:
         alert_text: "0xFFE65100"
       markdown: |
         If the patient has known or suspected COPD, aim for an **spO₂ of 90–92%, not higher**.
-
-    - type: "prose"
-      title: "Evaluate for other causes of SOB"
-      markdown: |
-        - Heart failure
-        - Pneumonia
-        - Pulmonary TB
-
-    - type: "prose"
-      title: "Bronchodilator therapy"
-      markdown: |
-        - Albuterol / ipratropium q20min × 3 doses — nebulizer (5 mg / 0.5 mg) or MDI 8 puffs
-        - Caution using albuterol with cardiac disease
-        - Evaluate after the first Rx and after the first 3 Rx; if symptoms dramatically improve, more likely to be asthma
-        - Prednisolone 40 mg/day × 5 days
-
-    - type: "prose"
-      title: "Suspect infective exacerbation"
-      markdown: |
-        More sputum, change in colour to yellow/green, or increased breathlessness, fever, tachypnea? Suspect COPD exacerbation and treat:
-
-        - Amoxicillin / clavulanate 875 mg BD × 5 days
-        - Doxycycline 100 mg BD × 10 days
-        - Azithromycin 500 mg once daily × 3 days

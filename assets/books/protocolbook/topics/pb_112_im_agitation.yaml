@@ -24,6 +24,15 @@
 #     reasonable; monitor airway/respirations after sedation.
 # ============================================================
 
+# 🔴 BUG FIXED 2026-08-24 — the three sedation-safety notes (combination
+# beats either drug alone, olanzapine as an alternative, and the haloperidol
+# QT warning) sat at 4-space indent, which made them a THIRD entry under
+# `pages:` with no page_number and no blocks. TopicPage.fromYaml turns that
+# into an EMPTY PAGE, so none of it has ever rendered — including the QT
+# warning. Re-indented into page 113's blocks. Found while converting this
+# page to a flowchart; worth sweeping the other multi-page topics for the
+# same shape.
+
 topic:
   id: "pb-im-agitation"
   title: "Severely Agitated or Violent Patient"
@@ -86,30 +95,49 @@ topic:
     - page_number: 113
       blocks:
 
-        - type: "prose"
-          title: "Management"
-          markdown: |
-            - Ensure staff safety
-            - Attempt to calm the patient using verbal techniques
-            - Call security / police when possible for any concern about violence, or a patient threatening violence
-
-        - type: "prose"
-          title: "Indications for restraints"
-          markdown: |
-            - Imminent harm to others
-            - Imminent harm to self
-            - Disruption of important treatment
-            - Damage to surrounding equipment / environment
-            - Unsuccessful verbal approach
-
-        - type: "prose"
-          title: "Before sedation"
-          markdown: |
-            - Monitor, support ABCs
-            - Establish IV / O₂ monitoring if possible
-            - Check vital signs (BP, PR, RR, SpO₂, temp, weight)
-            - Check blood glucose
-            - Re-attempt to calm the patient using verbal techniques
+        # 2026-08-24 — the print draws p.113 as a flowchart: staff safety at the
+        # top feeding two parallel boxes (calm verbally / call security) that
+        # converge into restraint indications, then monitoring, then a second
+        # calming attempt, then the sedation gate into a three-column drug
+        # table. It was four prose blocks. The drug table stays below the
+        # chart: a `linear` step carries a title and bullets, not a table.
+        - type: "flowchart"
+          variant: "linear"
+          warnings:
+            - type: "safety"
+              text: "Ensure STAFF SAFETY first"
+          entry_chain:
+            - text: "Severely agitated or violent patient"
+              shape: "stadium"
+          steps:
+            - type: "content"
+              title: "First response"
+              bullets:
+                - "Attempt to calm the patient using verbal techniques"
+                - "Call security / police when possible for any concern about violence, or a patient threatening violence"
+            - type: "content"
+              title: "Indications for restraints"
+              bullets:
+                - "Imminent harm to others"
+                - "Imminent harm to self"
+                - "Disruption of important treatment"
+                - "Damage to surrounding equipment / environment"
+                - "Unsuccessful verbal approach"
+            - type: "content"
+              title: "Before sedation"
+              bullets:
+                - "Monitor, support ABCs"
+                - "Establish IV / O₂ monitoring if possible"
+                - "Check vital signs (BP, PR, RR, SpO₂, temp, weight)"
+                - "Check blood glucose"
+            - type: "action"
+              text: "Re-attempt to calm the patient using verbal techniques"
+              kind: "communication"
+          convergence:
+            text: "Rapid sedation required, and/or not responding to verbal techniques?"
+            shape: "diamond"
+            bullets:
+              - text: "Choose by situation — see the table below"
 
         - type: "table"
           title: "Rapid sedation (if required, and/or not responding to verbal techniques)"
@@ -122,8 +150,9 @@ topic:
             - cells: ["Drug intoxication / withdrawal, or undifferentiated", "Midazolam 2.5–5 mg IV/IM, AND (if necessary) haloperidol 2.5–5 mg IV/IM"]
             - cells: ["Known psychiatric disorder", "Haloperidol 2.5–5 mg IV/IM AND/OR midazolam 2.5–5 mg IV/IM"]
 
-    - type: "prose"
-      markdown: |
-        - **Combination works better than either drug alone.** Haloperidol **plus** midazolam is more effective than haloperidol on its own, which is the least effective of the usual options
-        - **Olanzapine 10 mg IM**, where stocked, is a good alternative to haloperidol with fewer extrapyramidal effects
-        - ⚠️ **Haloperidol prolongs the QT interval.** Get an ECG when that is feasible; avoid it if the QT is known to be long or the patient is on other QT-prolonging drugs. **IV carries more risk than IM**
+        - type: "prose"
+          title: "Choosing the drug"
+          markdown: |
+            - **Combination works better than either drug alone.** Haloperidol **plus** midazolam is more effective than haloperidol on its own, which is the least effective of the usual options
+            - **Olanzapine 10 mg IM**, where stocked, is a good alternative to haloperidol with fewer extrapyramidal effects
+            - ⚠️ **Haloperidol prolongs the QT interval.** Get an ECG when that is feasible; avoid it if the QT is known to be long or the patient is on other QT-prolonging drugs. **IV carries more risk than IM**

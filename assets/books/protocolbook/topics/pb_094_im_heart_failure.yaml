@@ -43,90 +43,100 @@ topic:
     - page_number: 94
       blocks:
 
-        - type: "prose"
-          title: "Common presenting complaints"
-          markdown: |
-            - Paroxysmal nocturnal dyspnoea (PND)
-            - Orthopnoea
-            - Dyspnoea on exertion (DOE)
-            - Fatigue and weight gain
-            - Cough
-            - Exercise intolerance
-            - Increasing abdominal girth
-            - Lower-extremity oedema
-            - Shortness of breath when bending forward ("bendopnoea")
+        # 2026-08-24 — the print draws p.94 as a flowchart: two parallel intake
+        # boxes (presenting complaints ‖ risk factors) converging into the
+        # assessment box, then down into the Stevenson 2×2. The app had all of
+        # it as seven prose blocks, and the 2×2 as four separate lists, which
+        # loses the grid that makes the classification usable at the bedside.
+        - type: "flowchart"
+          variant: "severity"
+          entry_chain:
+            - text: "Adult heart failure"
+              shape: "stadium"
+          branches:
+            - id: "complaints"
+              label: "Common presenting complaints"
+              criteria:
+                - "Paroxysmal nocturnal dyspnoea (PND)"
+                - "Orthopnoea"
+                - "Dyspnoea on exertion (DOE)"
+                - "Fatigue and weight gain"
+                - "Cough"
+                - "Exercise intolerance"
+                - "Increasing abdominal girth"
+                - "Lower-extremity oedema"
+                - "Shortness of breath when bending forward (\"bendopnoea\")"
+            - id: "risk"
+              label: "Risk factors"
+              criteria:
+                - "Known heart failure, coronary artery disease, myocardial infarction, or hypertension"
+                - "Diabetes mellitus or dyslipidaemia"
+                - "COPD or other lung disease"
+                - "Cardiac valve disease"
+                - "Pulmonary embolism or pulmonary hypertension"
+                - "Sleep apnoea"
+                - "Infection"
+                - "Recent surgery or trauma"
+                - "Family history of heart failure"
+                - "Significant smoking or alcohol use"
+          convergence:
+            text: "Initial management"
+            shape: "rounded_rectangle"
+            bullets:
+              - text: "Monitor, support ABCs"
+              - text: "Check vital signs (PR, RR, SpO₂, temp, weight)"
+              - text: "Start oxygen if SpO₂ < 94%"
+              - text: "Place a large-bore IV"
+              - text: "Assess AVPU/GCS and hydration status"
+              - text: "Perform a brief, targeted history and physical exam"
+              - text: "12-lead ECG"
+          post_convergence:
+            text: "Classify on physical exam — congestion × perfusion (grid below)"
+            shape: "rectangle"
 
-        - type: "prose"
-          title: "Risk factors"
-          markdown: |
-            - Known history of heart failure, coronary artery disease, myocardial infarction, or hypertension
-            - Diabetes mellitus or dyslipidaemia
-            - COPD or other lung disease
-            - Cardiac valve disease
-            - Pulmonary embolism or pulmonary hypertension
-            - Sleep apnoea
-            - Infection
-            - Recent surgery or trauma
-            - Family history of heart failure
-            - Significant smoking or alcohol use
-
-        - type: "prose"
-          title: "Initial management"
-          markdown: |
-            - Monitor, support ABCs
-            - Check vital signs (PR, RR, SpO₂, temp, weight)
-            - Start oxygen if SpO₂ < 94%
-            - Place a large-bore IV
-            - Assess AVPU/GCS, hydration status
-            - Perform a brief, targeted history and physical exam
-            - 12-lead ECG
-
-        - type: "prose"
+        - type: "table"
           title: "Classify by physical exam"
-          markdown: |
-            Classify by two axes — **congestion** (wet = congested, dry = not) and **perfusion** (cold = hypoperfused, warm = well-perfused):
-
-        - type: "prose"
-          title: "Cold & Wet (low perfusion + congestion)"
-          markdown: |
-            - SBP < 90 / narrow pulse pressure
-            - Cool / pale extremities
-            - Decreased urine output
-            - Elevated JVP
-            - Crackles in lung bases
-            - Peripheral oedema
-            - Hepatomegaly / ascites
-
-        - type: "prose"
-          title: "Cold & Dry (low perfusion, no congestion)"
-          markdown: |
-            - SBP < 90 / narrow pulse pressure
-            - Cool / pale extremities
-            - Decreased urine output
-            - Normal / low JVP
-            - Clear lungs
-            - Minimal peripheral oedema
-
-        - type: "prose"
-          title: "Warm & Wet (good perfusion + congestion)"
-          markdown: |
-            - SBP > 90
-            - Good peripheral pulse
-            - Normal urine output
-            - Elevated JVP
-            - Crackles in lung bases
-            - Peripheral oedema
-            - Hepatomegaly / ascites
-
-        - type: "prose"
-          title: "Warm & Dry (good perfusion, no congestion)"
-          markdown: |
-            - SBP > 90
-            - Good peripheral pulse
-            - Normal urine output
-            - Normal JVP
-            - Clear lungs
-            - Minimal peripheral oedema
+          column_flex: [3, 5, 5]
+          columns: ["", "Congestion — YES (wet)", "Congestion — NO (dry)"]
+          rows:
+            - cells:
+                - "**Low perfusion — YES (cold)**"
+                - |
+                  **Cold & Wet**
+                  - SBP < 90 / narrow pulse pressure
+                  - Cool / pale extremities
+                  - Decreased urine output
+                  - Elevated JVP
+                  - Crackles in lung bases
+                  - Peripheral oedema
+                  - Hepatomegaly / ascites
+                - |
+                  **Cold & Dry**
+                  - SBP < 90 / narrow pulse pressure
+                  - Cool / pale extremities
+                  - Decreased urine output
+                  - Normal / low JVP
+                  - Clear lungs
+                  - Minimal peripheral oedema
+            - cells:
+                - "**Low perfusion — NO (warm)**"
+                - |
+                  **Warm & Wet**
+                  - SBP > 90
+                  - Good peripheral pulse
+                  - Normal urine output
+                  - Elevated JVP
+                  - Crackles in lung bases
+                  - Peripheral oedema
+                  - Hepatomegaly / ascites
+                - |
+                  **Warm & Dry**
+                  - SBP > 90
+                  - Good peripheral pulse
+                  - Normal urine output
+                  - Normal JVP
+                  - Clear lungs
+                  - Minimal peripheral oedema
 
     # ═══════════════════════ PAGE 95 ═══════════════════════
     - page_number: 95

@@ -45,52 +45,68 @@ topic:
 
   blocks:
 
-    - type: "prose"
-      title: "History"
-      markdown: |
-        - Sleepiness
-        - Anorexia
-        - Dysphagia
-        - Fatigue
-        - Dyspnoea on exertion
-        - Syncope
+    # 2026-08-24 — the print draws p.74 as a boxed spine with arrows
+    # (history/findings -> management -> bleeding? -> empiric malaria+sepsis ->
+    # transfusion thresholds -> evaluate cause), so it is a flowchart here too.
+    # The transfusion thresholds stay a table below: a `linear` step carries a
+    # title and bullets, not a table.
+    - type: "flowchart"
+      variant: "linear"
+      entry_chain:
+        - text: "Anaemia"
+          shape: "stadium"
+      steps:
+        - type: "content"
+          title: "History"
+          bullets:
+            - "Sleepiness · anorexia · dysphagia"
+            - "Fatigue · dyspnoea on exertion · syncope"
+        - type: "content"
+          title: "Clinical findings"
+          bullets:
+            - "Pallor · tachycardia · heart failure symptoms"
+            - "Stomatitis · angular stomatitis · glossitis · koilonychia"
+            - "Oesophageal / pharyngeal webs"
+        - type: "content"
+          title: "Management"
+          bullets:
+            - "Monitor, support ABCs"
+            - "Check vital signs (BP, PR, RR, SpO₂, Temp, weight)"
+            - "Assess GCS and hydration status"
+            - "Insert 2 IVs; start oxygen if SpO₂ < 94%"
+            - "Draw CBC and malaria; consider blood cultures if concern for sepsis"
+            - "Type and cross if tachycardic, tachypnoeic, or severe pallor"
+            - "Perform a brief, targeted history and physical exam"
+        - type: "content"
+          title: "Is there a possibility of bleeding?"
+          bullets:
+            - "Ask about recent trauma"
+            - "Clinically significant GI bleeding should be visible as haematemesis, coffee-ground emesis, melaena, or haematochezia"
+            - "Four locations may hide active bleeding: thorax, abdomen, retroperitoneum / pelvis, thigh"
+        - type: "content"
+          title: "Consider empirical treatment"
+          bullets:
+            - "Treat empirically for malaria and sepsis if appropriate"
+            - "There is NO way to clinically differentiate between malaria and sepsis"
+        - type: "content"
+          title: "Transfuse? (thresholds in the table below)"
+          bullets:
+            - "High malaria areas — by blood supply"
+            - "Low malaria areas — <7 g/dL, or <10 g/dL and unstable"
+      convergence:
+        text: "Evaluate for the cause of anaemia"
+        shape: "rounded_rectangle"
+        bullets:
+          - text: "[Anaemia workup](topic:pb-anaemia-workup)"
 
     - type: "prose"
-      title: "Clinical findings"
+      title: "⚠ A normal SpO₂ does not exclude critical anaemia"
+      callout: true
       markdown: |
-        - Pallor
-        - Tachycardia
-        - Stomatitis
-        - Koilonychia
-        - Angular stomatitis
-        - Glossitis
-        - Oesophageal / pharyngeal webs
-        - Heart failure symptoms
-
-    - type: "prose"
-      title: "Management"
-      markdown: |
-        - Monitor, support ABCs
-        - Check vital signs (BP, PR, RR, SpO₂, Temp, **Weight**)
-        - Assess GCS, hydration status
-        - Insert 2 IVs; start oxygen if SpO₂ < 94%
-        - ⚠️ **A normal SpO₂ does NOT exclude critical anaemia.** SpO₂ measures saturation of the haemoglobin that is present, not oxygen delivery — a child with Hb 3 g/dL can read 99% while profoundly oxygen-deficient. **Give oxygen on clinical grounds** — respiratory distress, altered consciousness, or shock — whatever the reading
-        - Draw CBC, malaria; consider blood cultures if concern for sepsis
-        - Type and cross if tachycardic, tachypnoeic, or severe pallor
-        - Perform a brief, targeted history and physical exam
-
-    - type: "prose"
-      title: "Is there a possibility of bleeding?"
-      markdown: |
-        - Ask about recent trauma
-        - Clinically significant GI bleeding should be visible as haematemesis, coffee-ground emesis, melaena, or haematochezia
-        - Four locations in the body may hide active bleeding: thorax, abdomen, retroperitoneum / pelvis, thigh
-
-    - type: "prose"
-      title: "Empirical treatment"
-      highlight: true
-      markdown: |
-        Consider empirically treating for malaria and sepsis if appropriate — remember there is NO way to clinically differentiate between malaria and sepsis.
+        SpO₂ measures saturation of the haemoglobin that is **present**, not oxygen
+        delivery — a child with Hb 3 g/dL can read 99% while profoundly
+        oxygen-deficient. **Give oxygen on clinical grounds** — respiratory
+        distress, altered consciousness, or shock — whatever the reading.
 
     - type: "table"
       title: "When to transfuse"

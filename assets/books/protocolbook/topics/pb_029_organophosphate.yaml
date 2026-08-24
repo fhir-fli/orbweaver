@@ -67,34 +67,55 @@ topic:
         - Adults: common purposeful ingestion
         - **Diagnosis is on a clinical basis**
 
-    - type: "prose"
-      title: "Presentation (SLUDGE-BBB)"
-      markdown: |
-        - **S**alivation
-        - **L**acrimation
-        - **U**rination
-        - **D**iarrhoea
-        - **G**astric cramping
-        - **E**mesis
-        - **B**ronchorrhea
-        - **B**ronchospasm
-        - **B**radycardia
-        - Also: profuse sweating, convulsions and coma, fasciculations, constricted pupils
+    # 2026-08-24 — the print draws p.29 as a BRANCHING chart: the SLUDGE-BBB
+    # diagnosis box forks into two parallel arms (atropine bolus ‖ diazepam for
+    # convulsions), which rejoin at maintenance, with over-atropinisation
+    # hanging off the side. It was flat prose. Rendered as `severity`, whose
+    # branches are semantically flexible. The paediatric diazepam weight table
+    # stays a table below the chart.
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+        - text: "Organophosphate / carbamate exposure — diagnosis is on a clinical basis"
+          shape: "stadium"
+        - text: "SLUDGE-BBB: Salivation · Lacrimation · Urination · Diarrhoea · Gastric cramping · Emesis · Bronchorrhoea · Bronchospasm · Bradycardia. Also profuse sweating, convulsions and coma, fasciculations, constricted pupils"
+          shape: "rectangle"
+      branches:
+        - id: "atropine"
+          label: "Treatment — atropine bolus"
+          severity: "emergency"
+          criteria:
+            - "Children: 0.02 mg/kg IV"
+            - "Adults: 2 mg IV"
+          actions:
+            - text: "Double the previous dose and repeat every 5 minutes until atropinisation"
+              kind: "medication_administration"
+              timing: "every 5 min"
+            - text: "Endpoints: pulmonary secretions dry (improved oxygenation, easier breathing), pulse > 80/min, SBP > 80 mmHg"
+              kind: "assessment"
+        - id: "convulsions"
+          label: "Convulsions — diazepam"
+          severity: "priority"
+          criteria:
+            - "Children: rectal diazepam 2.5 mg suppositories by weight (table below)"
+            - "Or IV diazepam 0.2 mg/kg (children), max 10 mg"
+            - "Adults: 10 mg IV"
+          actions:
+            - text: "Repeat as necessary if convulsions occur"
+              kind: "medication_administration"
+      convergence:
+        text: "Maintenance after atropinisation"
+        shape: "rounded_rectangle"
+        bullets:
+          - text: "Mix the total atropine given as boluses into NS or D5%"
+          - text: "Patients < 25 kg: 250 mL, run at 50 mL/hr"
+          - text: "Patients > 25 kg: 500 mL, run at 100 mL/hr"
+          - text: "Monitor hourly for recurrent symptoms or over-atropinisation, and adjust the rate"
 
     - type: "prose"
-      title: "Treatment — atropine bolus"
+      title: "Rectal diazepam by weight"
       markdown: |
-        - Children: 0.02 mg/kg IV
-        - Adults: 2 mg IV
-        - **Double the previous dose and repeat every 5 minutes** until atropinisation:
-          - Pulmonary secretions dry (improved oxygenation, breathing easier)
-          - Pulse > 80/min
-          - SBP > 80 mmHg
-
-    - type: "prose"
-      title: "Convulsions — diazepam"
-      markdown: |
-        **Children — rectal diazepam** (2.5 mg suppositories), by weight:
+        **Children — rectal diazepam** (2.5 mg suppositories):
 
     - type: "table"
       columns: ["Weight", "Suppositories (2.5 mg)"]
@@ -109,14 +130,6 @@ topic:
         - Or IV diazepam 0.2 mg/kg (children), max 10 mg
         - Adults: 10 mg IV
         - Repeat as necessary if convulsions occur
-
-    - type: "prose"
-      title: "Maintenance after atropinisation"
-      markdown: |
-        - Mix the total amount of atropine used as boluses into NS or D5%, in the following volumes:
-          - Patients < 25 kg: use 250 mL, run at 50 mL/hr
-          - Patients > 25 kg: use 500 mL, run at 100 mL/hr
-        - Monitor hourly for signs of recurrent symptoms or over-atropinisation, and adjust the rate accordingly
 
     - type: "prose"
       markdown: |

@@ -56,43 +56,39 @@ topic:
       markdown: |
         **Always ensure no other causes of alteration before attributing symptoms solely to alcohol** (especially trauma or other ingestion)
 
-    - type: "prose"
-      title: "Diagnostic criteria for acute alcohol intoxication"
-      markdown: |
-        - **1.** Recent alcohol ingestion
-        - **2.** Maladaptive behavior or psychological changes
-          - Sexual or aggressive behavior
-          - Unstable mood
-          - Impaired judgement
-          - Impaired social or occupational functioning
-        - **3.** ≥1 of the following during/shortly after ingestion
-          - Slurred speech
-          - Unsteady gait
-          - Lack of coordination
-          - Stupor/coma
-          - Nystagmus
-          - Impaired attention/memory
-
-        **Symptoms not caused by other medical conditions or mental disorders**
-
-    - type: "prose"
-      title: "Management"
-      markdown: |
-        - Monitor, support ABCs
-        - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
-        - Assess GCS, hydration status
-        - Insert 2 IVs, Start Oxygen if spO2 <94%
-        - Lateral position
-        - Monitor for vomiting/aspiration
-        - IV hydration if necessary
-
-    - type: "prose"
-      title: "Concern for more than solely alcohol intoxication?"
-      markdown: |
-        - Follow [altered mental status protocol](topic:pb-altered-mental-status)
-        - Consider tests for disorders related to alcohol or with a similar presentation
-          - Glucose
-          - BMP
-          - Magnesium
-          - Lipase
-          - Liver functions
+    # 2026-08-24 — the print draws p.34 as a boxed spine with arrows
+    # (criteria -> management -> management -> "more than alcohol?"), so it is
+    # a flowchart here too. Grey's rule: a flowchart in print is a flowchart
+    # in the app, decision points or not.
+    - type: "flowchart"
+      variant: "linear"
+      entry_chain:
+        - text: "Suspected acute alcohol intoxication"
+          shape: "stadium"
+      steps:
+        - type: "content"
+          title: "Diagnostic criteria for acute alcohol intoxication"
+          bullets:
+            - "1. Recent alcohol ingestion"
+            - "2. Maladaptive behaviour or psychological changes — sexual or aggressive behaviour, unstable mood, impaired judgement, impaired social or occupational functioning"
+            - "3. At least one of: slurred speech, unsteady gait, lack of coordination, stupor/coma, nystagmus, impaired attention or memory"
+            - "Symptoms not caused by other medical conditions or mental disorders"
+        - type: "content"
+          title: "Management"
+          bullets:
+            - "Monitor, support ABCs"
+            - "Check vital signs (BP, PR, RR, spO2, Temp, Weight)"
+            - "Assess GCS and hydration status"
+            - "Insert 2 IVs, start oxygen if spO2 < 94%"
+        - type: "content"
+          title: "Ongoing care"
+          bullets:
+            - "Lateral position"
+            - "Monitor for vomiting and aspiration"
+            - "IV hydration if necessary"
+      convergence:
+        text: "Concern for more than solely alcohol intoxication?"
+        shape: "diamond"
+        bullets:
+          - text: "Follow the [altered mental status protocol](topic:pb-altered-mental-status)"
+          - text: "Consider glucose, BMP, magnesium, lipase, liver functions"

@@ -24,12 +24,12 @@ settles it.
 | **17** | `pb_017_vital_rates` | two **percentile line charts** (RR, HR) — same class as the pp.18–19 BP charts, which the app already carries as images | ✅ both added |
 | **61** | `pb_061_sickle_cell_stroke` | boxed spine: presentation → management → concurrent-issue table → monitoring → discharge | ✅ `linear` |
 | **62** | `pb_062_sickle_cell_acs` | boxed spine with the CRS table inline, ICU gate, antibiotics, supportive care, discharge | ✅ `linear` |
-| **29** | `pb_029_organophosphate` | **branching**: SLUDGE-BBB → atropine bolus ‖ diazepam → maintenance → over-atropinisation | ⏭️ `severity` |
-| **34** | `pb_034_alcohol_intoxication` | spine: diagnostic criteria → management → management → "more than alcohol?" | ⏭️ `linear` |
-| **74** | `pb_074_anaemia` | spine: history → management → bleeding? → empiric malaria/sepsis → transfusion thresholds → evaluate cause | ⏭️ `linear` |
-| **94** | `pb_094_im_heart_failure` | two parallel intake boxes converging into assessment, then the **Stevenson 2×2** (congestion × perfusion) | ⏭️ `algorithm` |
-| **113** | `pb_112_im_agitation` | parallel safety boxes converging → restraint indications → monitoring → sedation gate → 3-column drug table | ⏭️ `linear` + table |
-| **127** | `pb_127_im_copd_asthma` | spine: management → evaluate other causes → treatment → escalation, with an oxygen-target side callout | ⏭️ `linear` |
+| **29** | `pb_029_organophosphate` | **branching**: SLUDGE-BBB → atropine bolus ‖ diazepam → maintenance → over-atropinisation | ✅ `severity` |
+| **34** | `pb_034_alcohol_intoxication` | spine: diagnostic criteria → management → management → "more than alcohol?" | ✅ `linear` |
+| **74** | `pb_074_anaemia` | spine: history → management → bleeding? → empiric malaria/sepsis → transfusion thresholds → evaluate cause | ✅ `linear` |
+| **94** | `pb_094_im_heart_failure` | two parallel intake boxes converging into assessment, then the **Stevenson 2×2** (congestion × perfusion) | ✅ `severity` + 2×2 **table** — the four quadrants had been four separate prose lists, losing the grid |
+| **113** | `pb_112_im_agitation` | parallel safety boxes converging → restraint indications → monitoring → sedation gate → 3-column drug table | ✅ `linear` + table |
+| **127** | `pb_127_im_copd_asthma` | spine: management → evaluate other causes → treatment → escalation, with an oxygen-target side callout | ✅ `linear` |
 | 130 | `pb_130_im_dvt` | outline prose + Wells table with a small risk-band annotation box — **not** a flowchart | no action |
 | 12, 22, 27, 69, 80, 81 | — | small boxes/arrow glyphs, not figures | no action |
 
@@ -46,3 +46,20 @@ app."*
 puts a table inside the spine (pp.61, 62, 113), the step names the table's contents
 and the full table sits directly below the chart. Only the `algorithm` variant's
 `AlgoBox` can hold a table (`AlgoTable`), which is why p.94 is queued as `algorithm`.
+
+
+## 🔴 A rendering bug this pass turned up
+
+Converting p.113 exposed something unrelated and worse. In
+`pb_112_im_agitation.yaml` the three sedation-safety notes — combination beats
+either drug alone, olanzapine as an alternative, and **the haloperidol QT
+warning** — sat at 4-space indent. That made them a **third entry under `pages:`
+with no `page_number` and no `blocks`**, and `TopicPage.fromYaml` turns that into
+an **empty page**. None of it had ever rendered in the app.
+
+Re-indented into page 113's blocks. **All 466 topics across all books were then
+swept for the same shape: this was the only instance.**
+
+## Status
+All nine figures restored. 607 pass / 4 fail — the same four pre-existing
+failures as at `334d5f1`.
