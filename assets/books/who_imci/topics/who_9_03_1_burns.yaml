@@ -10,6 +10,12 @@
 # LMIC lens: honey / antimicrobial ointment lead as resource-appropriate
 # topicals; silver foam flagged expensive/often-unavailable; silver
 # sulfadiazine kept as a practical WHO-EML option when alternatives absent.
+# 2026-08-24 — restored the print's WORKED EXAMPLE of the burn fluid
+# calculation (20 kg child, 25% burn: 1440 ml maintenance + 2000 ml burn fluid
+# = 3440 ml, 1720 ml in the first 8 h). The rule was carried and is current
+# (Parkland + maintenance in young children + urine-output titration); the
+# arithmetic was not, and the arithmetic is the part people get wrong under
+# pressure. Found by numeric parity (tool/book_number_parity.py).
 # ============================================================
 
 topic:
@@ -84,6 +90,20 @@ topic:
           children, **add** maintenance fluid on top.
         - The formula gives only a **starting rate** — **titrate to urine output**
           (target **1–1.5 ml/kg/h**), not a fixed volume.
+
+    - type: "prose"
+      title: "Worked example — 20 kg child, 25% burn"
+      markdown: |
+        The print does the arithmetic, and it is worth keeping: this is the
+        calculation people get wrong at 3 a.m.
+
+        - Maintenance for 20 kg = **60 ml/h × 24 h = 1440 ml**
+        - Burn fluid = **4 ml × 20 kg × 25% = 2000 ml**
+        - **Total first 24 h = 3440 ml — half of it, 1720 ml, in the first 8 h**
+
+        Remember this is a **starting rate**, not a target volume: titrate to a
+        urine output of 1–1.5 ml/kg/h. **Second 24 h:** half to three-quarters of
+        day one's volume.
 
     - type: "prose"
       title: "Beware fluid creep"

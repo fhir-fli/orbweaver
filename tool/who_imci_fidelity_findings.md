@@ -97,3 +97,21 @@ of them:
 2. **Render the 15 charts as flowcharts**, using the renderer the ProtocolBook already
    exercises, keeping the print's decision structure.
 3. Adjudicate the 12 unreviewed-page numbers (growth tables and injuries).
+
+---
+
+## Adjudication of the 12 unreviewed-page numbers (2026-08-24)
+
+| Page | Figure | Verdict |
+|---|---|---|
+| **271** | `1440 ml`, `2000 ml`, `3440 ml`, `1720 ml` | 🔴 **REAL — fixed.** The print does the **burn-fluid arithmetic** (20 kg child, 25% burn: 1440 ml maintenance + 2000 ml burn fluid = 3440 ml, **1720 ml in the first 8 h**). The app carried the rule — Parkland, maintenance added in young children, titrate to urine output 1–1.5 ml/kg/h — but not the worked example, and the arithmetic is the part people get wrong under pressure. Added to `who_9_03_1_burns`. |
+| 380–383 | `380mo`…`383mo` | ⚪ **Artefact.** Page folios picked up next to a "months" column header. |
+| 386 | `72:273` | ⚪ **Artefact.** A journal citation — *Bulletin of the WHO*, 1994, **72**:273. |
+| 386 | `>84.9` | ⚪ Weight-for-length band edge; the growth tables are carried. |
+| 408, 409 | `363 g`, `218 l` | ⚪ **Artefact.** Growth-table cell values taking a neighbouring unit. |
+
+⚠️ **Attribution caveat, learned here:** these were attributed to `who_9_03_injuries` and
+the Annex 5 stubs by page ownership, and `who_9_03_injuries` has no OE header — but the
+**actual burns content lives in `who_9_03_1_burns`, which IS reviewed**. The parent
+files in this book are navigation stubs. **Do not read an unreviewed parent as an
+unreviewed chapter** — that is the same mistake as reading HIV chapter 8 as unreviewed.
