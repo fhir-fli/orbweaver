@@ -15,6 +15,11 @@
 #    inaccurate" warning, which OE called critically important and
 #    correctly highlighted. Limitations appropriately acknowledged;
 #    no change recommended.
+# 2026-08-24 — restored the print's two WORKED EXAMPLES of the underweight
+# rule ("underweight 10-month-old → use 4-6 months"; "underweight at 100 cm →
+# use 11-12 kg"). The rule was carried, the examples were not, and the examples
+# are what make the rule usable at speed. Found by numeric parity
+# (tool/book_number_parity.py) — 11-12 kg appeared nowhere in the app.
 # ============================================================
 
 topic:
@@ -66,7 +71,9 @@ topic:
 
     - type: "prose"
       markdown: |
-        **Underweight:** use **2 age-categories younger** or **1 height-category above**.
+        **Underweight:** use **2 age-categories younger** (e.g. an underweight
+        10-month-old — use the weight for 4–6 months) or **1 height-category
+        above** (e.g. underweight at 100 cm — use **11–12 kg**).
 
     - type: "prose"
       highlight: true

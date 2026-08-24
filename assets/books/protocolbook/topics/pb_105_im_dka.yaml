@@ -29,6 +29,11 @@
 #     outpatient titration is appropriate.
 # ============================================================
 
+# 2026-08-24 — the RBS<14 step-down infusion was written as a single figure,
+# 0.05 IU/kg/hr; the print gives the RANGE 0.02-0.05 IU/kg/hr. Narrowing a range
+# to its top value removes the option to titrate down once dextrose is running,
+# which is the point of the step-down. Restored. Found by numeric parity.
+
 topic:
   id: "pb-im-dka"
   title: "Adult Hyperglycaemia, DKA & HHS"
@@ -120,7 +125,7 @@ topic:
       markdown: |
         - Ketones still present:
           - Change IV fluids to 5% dextrose ½ NS at 150–200 mL/hr
-          - Insulin 0.05 IU/kg/hr infusion (maintain the IM/SC regimen)
+          - Insulin **0.02–0.05 IU/kg/hr** infusion (maintain the IM/SC regimen)
           - **DKA has resolved when: glucose < 11 mmol/L (200 mg/dL) AND two of — pH > 7.3, bicarbonate ≥ 18, anion gap normal.** Only then switch to subcutaneous insulin, and **overlap the first SC dose with the infusion by 1–2 hours** or the ketoacidosis returns
         - No ketones: switch to SC insulin with meals, a sliding scale, or Mixtard BD
           - Usual dose 0.5–1 IU/kg/day
