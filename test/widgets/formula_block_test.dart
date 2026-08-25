@@ -52,7 +52,16 @@ void main() {
     await t.pump();
 
     expect(find.text('61.7'), findsOneWidget);
-    expect(find.textContaining('perfusion'), findsOneWidget);
+    // Assert the INTERPRETATION string, not any text containing "perfusion".
+    // The loose finder started matching two widgets once the formula's own
+    // description gained "...is the usual organ-perfusion target", and this
+    // case was carried as known-failing on that ambiguity alone — the app was
+    // right the whole time. Match what the threshold actually emits
+    // (formula_registry.dart).
+    expect(
+      find.text('MAP < 65 — organ-perfusion concern.'),
+      findsOneWidget,
+    );
   });
 
   testWidgets('Holliday-Segar: renders both rate and daily rows', (t) async {
