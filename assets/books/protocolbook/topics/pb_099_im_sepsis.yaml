@@ -71,7 +71,16 @@ topic:
         - type: "flowchart"
           variant: "algorithm"
           stages:
-            - decision: "qSOFA — 2 or more of: GCS < 15, respiratory rate > 22, SBP < 100? (qSOFA MISSES many septic patients — a score under 2 does not rule sepsis out. Treat on clinical suspicion)"
+            # The caveat used to sit inside the question, making the decision a
+            # paragraph; it ran 64 px past the diamond and out onto the arrows
+            # (flowchart_fit_guard_test). A diamond holds a question — the
+            # qualification belongs in criteria, where it also reads better.
+            - decision: "qSOFA — 2 or more of these?"
+              criteria:
+                - "GCS < 15"
+                - "Respiratory rate > 22"
+                - "SBP < 100"
+                - "⚠️ qSOFA MISSES many septic patients — a score under 2 does NOT rule sepsis out. Treat on clinical suspicion"
               outcomes:
                 - label: "Yes"
                   box:

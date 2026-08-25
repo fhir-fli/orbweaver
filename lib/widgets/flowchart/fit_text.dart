@@ -48,6 +48,21 @@ class FitText extends StatelessWidget {
   /// (akin to a minimum touch target), not a layout fudge.
   static const double _minFontSize = 9;
 
+  /// Nodes whose text STILL does not fit after shrinking all the way to
+  /// [_minFontSize] — i.e. the shrink gave up and the text is now spilling
+  /// past the node's edges. Inside a rectangle that reads as untidy; inside a
+  /// diamond it crosses the sloped edges onto the arrows.
+  ///
+  /// Populated in debug builds only, and consumed by
+  /// `test/widgets/flowchart_fit_guard_test.dart`. Reaching the floor is NOT
+  /// on its own a defect — plenty of nodes are authored at 9pt and fit fine —
+  /// so the floor alone cannot be the guard's signal. Overflow at the floor
+  /// can.
+  /// Each entry is `excessPx|text` — how far past the budget the wrapped
+  /// text still runs. The magnitude matters: a couple of pixels is invisible,
+  /// while tens of pixels put a diamond's first line out on the arrows.
+  static final List<String> debugOverflowed = <String>[];
+
   @override
   Widget build(BuildContext context) {
     // Measure what the reader sees. The inline cross-reference syntax
@@ -95,6 +110,13 @@ class FitText extends StatelessWidget {
           if (h <= mh || fontSize <= _minFontSize) break;
           fontSize = (fontSize * mh / h).clamp(_minFontSize, fontSize);
         }
+        assert(() {
+          final excess = wrappedHeight(fontSize) - mh;
+          if (excess > 0.5) {
+            debugOverflowed.add('${excess.toStringAsFixed(1)}|$shown');
+          }
+          return true;
+        }());
       }
     }
     final resolved = style.copyWith(fontSize: fontSize, color: color);

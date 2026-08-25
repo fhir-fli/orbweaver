@@ -164,11 +164,14 @@ class _DecisionStage extends StatelessWidget {
     // than 5 minutes OR presents convulsing?" crossing the sloped edges even
     // after the inscribed-rectangle fix. Long decisions are rare; a tall
     // diamond reads, a clipped one does not.
-    final dLines = (stage.decision.length / charsPerLine).ceil().clamp(2, 14);
-    final textH = dLines * dFont * 1.12;
+    final dLines = (stage.decision.length / charsPerLine).ceil().clamp(2, 18);
+    // 1.12 under-estimated the wrapped height: TextPainter adds ascent and
+    // descent beyond the 1.05 line-height in the style, which left six
+    // diamonds 6-11 px short (flowchart_fit_guard_test). 1.28 clears them.
+    final textH = dLines * dFont * 1.28;
     // Double it: the text box occupies the middle half of the diamond.
     final dH = (textH / AlgorithmFlowchartView._kDiamondTextHFrac + 16)
-        .clamp(72.0, 420.0);
+        .clamp(72.0, 520.0);
     final midY = dH / 2;
 
     final terminals = [
