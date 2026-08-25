@@ -469,7 +469,57 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
 
   static const double _defaultColWidth = 78;
   static const double _fontSize = 12;
-  static const double _rowH = 21;
+  /// Floor for a body row. The real height is measured from the tallest cell
+  /// in the table (see [_measureRowH]): 21 fits a single line, and the growth
+  /// tables are all single-line, but a dose grid like WVEMS p.144 wraps its
+  /// cells to two lines and used to overflow this box by exactly one line.
+  ///
+  /// Rows stay UNIFORM rather than sizing individually, because the lookup
+  /// finder scrolls to a row by multiplying its index by the row height.
+  static const double _rowHMin = 21;
+
+  /// Measured once per (width, textScaler) combination.
+  double? _rowHCache;
+  double? _rowHCacheScale;
+
+  /// Last measured row height, used by the lookup finder, which runs from a
+  /// callback and has no BuildContext of its own. Seeded to the floor so a
+  /// lookup fired before the first paint still scrolls somewhere sensible.
+  double _rowHeight = _rowHMin;
+
+  /// The tallest wrapped cell in the table, so no row clips its content.
+  double _measureRowH(BuildContext context) {
+    final scaler = MediaQuery.textScalerOf(context);
+    final scale = scaler.scale(_fontSize);
+    if (_rowHCache != null && _rowHCacheScale == scale) return _rowHCache!;
+    var tallest = _rowHMin;
+    for (final row in widget.block.rows) {
+      for (var i = 0; i < row.cells.length; i++) {
+        final cell = row.cells[i];
+        final raw = switch (cell) {
+          TextCell(:final text) => text,
+          MarkdownCell(:final markdown) => markdown,
+          _ => '',
+        }.replaceAll('**', '');
+        if (raw.isEmpty) continue;
+        final tp = TextPainter(
+          text: TextSpan(
+            text: raw,
+            style: const TextStyle(fontSize: _fontSize, height: 1.1),
+          ),
+          textDirection: TextDirection.ltr,
+          textScaler: scaler,
+        )..layout(maxWidth: (_width(i) - 12).clamp(8.0, double.infinity));
+        // 2 px of breathing room top and bottom, matching the cell padding.
+        final h = tp.height + 4;
+        if (h > tallest) tallest = h;
+      }
+    }
+    _rowHCache = tallest;
+    _rowHCacheScale = scale;
+    _rowHeight = tallest;
+    return tallest;
+  }
   // Tall enough for a header label that wraps to two lines (e.g.
   // "Length (cm)") without overflowing into the first data row.
   static const double _headerH2 = 40;
@@ -533,7 +583,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
     setState(() => _highlightRow = match);
     if (match != null && _bodyV.hasClients) {
       // Land the row a little below the top so a row of context shows above.
-      final target = ((match - 1) * _rowH).clamp(
+      final target = ((match - 1) * _rowHeight).clamp(
         0.0,
         _bodyV.position.maxScrollExtent,
       );
@@ -564,6 +614,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
 
   @override
   Widget build(BuildContext context) {
+    _measureRowH(context);
     final block = widget.block;
     final theme = widget.theme;
     final style = _TableStyle(block, theme);
@@ -719,7 +770,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
       // column's alignment) positions the content inside the fixed box.
       return Container(
         width: _width(i),
-        height: _rowH,
+        height: _rowHeight,
         padding: const EdgeInsets.symmetric(horizontal: 6),
         decoration: BoxDecoration(color: cellBg, border: freezeEdge(i)),
         child: i < row.cells.length
