@@ -55,10 +55,37 @@ topic:
 
         - Medications: hormonal contraceptives, hormonal replacement therapy, antipsychotics, fibrates
 
+    - type: "prose"
+      title: "🛑 Assess pretest probability BEFORE using PERC"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **PERC is not a screen for all comers.** It is only valid once the patient has
+        already been judged **low probability** — by Wells (score < 2) or by a validated
+        gestalt of under about 15%. Applied to a patient you think likely to have a PE, it
+        produces a **falsely reassuring "rule out"**. European guidance does not use PERC
+        at all, warning it may be unsafe where PE prevalence is high.
+
+        **Order: pretest probability → then PERC → then D-dimer → then imaging.**
+        The book previously put PERC first.
+
+    - type: "prose"
+      title: "Suspected PE — the sequence where there is no CT pulmonary angiography"
+      markdown: |
+        1. **Assess pretest probability first** — Wells score (below), or Geneva, or gestalt
+        2. **High probability, or haemodynamically unstable** → do NOT do PERC or D-dimer. This patient needs imaging or empiric treatment — see the high-risk section below
+        3. **Low probability** → apply PERC. All 8 negative → PE excluded, stop
+        4. **Low probability but PERC positive, or intermediate probability** → D-dimer, using the **age-adjusted cutoff (age × 10 µg/L for age > 50)**
+        5. **D-dimer below cutoff** → PE excluded
+        6. **D-dimer above cutoff** → imaging. If no CTPA: **V/Q scan, or bilateral leg compression ultrasound** (a proximal DVT justifies the same anticoagulation without chest imaging), and **echocardiography for RV strain**
+
     - type: "flowchart"
       variant: "algorithm"
       entry:
-        text: "PE rule-out (PERC)"
+        text: "PERC — only if already assessed as LOW probability"
         shape: "stadium"
       stages:
         - decision: "Does the patient meet ALL of these?"
@@ -108,8 +135,68 @@ topic:
     - type: "prose"
       title: "Treatment based on risk"
       markdown: |
-        - **Low risk:** no treatment
-        - **Intermediate risk:** discuss with senior if treatment is appropriate
+        - **Low risk:** **a low Wells score alone does not exclude PE.** If the patient is
+          **PERC negative**, PE is excluded — observe or discharge with clear return advice.
+          If the patient is **not** PERC negative, a **D-dimer is required** before excluding
+          PE, and a positive result needs imaging or empiric treatment
+        - **Intermediate risk:** D-dimer; discuss with senior if treatment is appropriate
         - **High risk:** may start empiric treatment; discuss with senior if treatment should be continued
 
+        **If no D-dimer is available either** — the common case here:
+        - Low probability **and** PERC negative → PE can be excluded clinically; observe or discharge with return precautions
+        - Low probability but **PERC positive** → **do not simply discharge.** Use leg compression ultrasound and/or echocardiography if available; if suspicion persists and bleeding risk is acceptable, **empiric anticoagulation with close review is preferable to untested discharge**
+
         See [Deep Vein Thrombosis](topic:pb-im-dvt) for the shared DVT / PE anticoagulation regimen.
+
+    - type: "prose"
+      title: "🛑 HIGH-RISK (MASSIVE) PE — the patient who is shocked"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **Definition — systolic BP < 90 mmHg**, or a drop of ≥ 40 mmHg from baseline,
+        **sustained ≥ 15 minutes**, or requiring vasopressors/inotropes, or cardiac arrest
+        / obstructive shock.
+
+        **Do not run this patient through PERC, Wells or D-dimer.** Treat.
+
+    - type: "prose"
+      title: "Systemic thrombolysis for high-risk PE"
+      markdown: |
+        Where catheter-directed therapy and surgical embolectomy are unavailable —
+        **systemic thrombolysis is indicated** for confirmed or strongly suspected
+        high-risk PE without contraindications.
+
+        - **Alteplase: 100 mg IV over 2 hours.** In cardiac arrest / peri-arrest, an
+          accelerated **0.6 mg/kg over ~15 min (max 50 mg)**. A **50 mg** regimen has
+          similar efficacy with less bleeding
+        - **Tenecteplase: single weight-based IV bolus** — the same weight bands as the
+          STEMI table
+        - **Streptokinase: 250,000 IU IV over 30 min, then 100,000 IU/hr for 12–24 hours**
+          (an accelerated 1.5 million IU over 2 h is also described)
+
+        ⚠️ **These differ from the STEMI regimens** on the ACS pages: alteplase for PE is a
+        100 mg/2 h infusion, and streptokinase runs for 12–24 hours rather than as a single
+        STEMI dose.
+
+        **Anticoagulation around the lysis:** use **unfractionated heparin**. With
+        alteplase or tenecteplase, heparin is continued or resumed. With **streptokinase,
+        hold heparin during the infusion** and start it afterwards once the aPTT falls.
+
+    - type: "prose"
+      title: "Weighing the bleeding risk in high-risk PE"
+      markdown: |
+        The contraindication list is the same as for STEMI lysis — prior intracranial
+        haemorrhage, structural cerebral lesion, ischaemic stroke within 3 months (except
+        hyperacute), active bleeding, recent major surgery or trauma, severe uncontrolled
+        hypertension.
+
+        **But the balance shifts.** Thrombolysis in PE carries roughly **9.9% major
+        bleeding and ~1.7% intracranial haemorrhage** — higher than in many STEMI series —
+        yet the mortality of an untreated high-risk PE is high enough that a **relative**
+        contraindication is more readily overridden here than it would be in STEMI.
+
+        **In intermediate-risk PE, routine upfront lysis is NOT recommended** — the benefit
+        is offset by excess major and intracranial bleeding.

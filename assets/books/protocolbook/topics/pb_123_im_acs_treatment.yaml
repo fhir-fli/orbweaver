@@ -53,20 +53,24 @@ topic:
           markdown: |
             - **Anti-platelet:**
               - Aspirin 325 mg PO × 1 dose if not already given
-              - Clopidogrel 300 mg PO × 1 dose
+              - Clopidogrel — **under 75: 300 mg PO × 1 loading dose. 75 and over: 75 mg, NO loading dose** (excess intracranial haemorrhage with fibrinolysis)
             - **Nitroglycerin** sublingual spray or tablet (if not already given)
               - 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved
             - **Anticoagulant:**
               - Unfractionated heparin
                 - 60 units/kg IV bolus, maximum 4,000 units
                 - 12 units/kg/hr IV infusion, maximum 1,000 units/hr
-              - Enoxaparin
-                - 30 mg IV bolus followed 15 minutes later by
-                - 1 mg/kg subcutaneously q12hrs (maximum 100 mg/dose for first 2 doses)
+              - Enoxaparin — **the regimen changes at age 75**
+                - **Under 75:** 30 mg IV bolus, then 15 minutes later 1 mg/kg SC q12hrs (max 100 mg/dose for the first 2 doses)
+                - **75 and over: NO IV bolus. 0.75 mg/kg SC q12hrs (max 75 mg/dose for the first 2 doses)** — the full dose causes excess intracranial haemorrhage in this age group
                 - Should not be given if creatinine clearance < 30
             - **Thrombolytics**
-              - Ideally within first 24 hours of chest pain
+              - **Within 12 hours of symptom onset** — benefit is time-dependent and is **not established beyond 12 h**, while the bleeding risk is unchanged. (~30 lives saved per 1000 treated within 6 h; ~20 per 1000 at 7–12 h)
+              - **Target door-to-needle ≤ 30 minutes** (bolus within 10 min of the STEMI diagnosis)
+              - **After 12 h, give it only if PCI is truly unavailable AND** there is ongoing ischaemic chest pain with persistent ST elevation and a large territory at risk, **or** haemodynamic instability from the infarct. ⚠️ This 12–24 h exception is a **US position (Class IIa); European guidance does not endorse routine lysis beyond 12 h**
+              - **Do NOT lyse** a stable, pain-free late presenter. Treat medically — aspirin + clopidogrel, anticoagulation, beta blocker once stable, high-intensity statin, ACE inhibitor — and arrange transfer for angiography
               - Patient should be connected to defibrillator if possible
+              - The book previously printed "ideally within first 24 hours of chest pain"
 
         - type: "prose"
           title: "Thrombolytics — absolute contraindications"
@@ -79,7 +83,7 @@ topic:
             - History of intracranial hemorrhage
             - Known structural cerebrovascular lesion (such as arteriovenous malformation)
             - Known intracranial malignant neoplasm
-            - Ischaemic stroke within 3 months (EXCEPT ischaemic stroke within 3 hours)
+            - Ischaemic stroke within 3 months — **except a hyperacute ischaemic stroke within 4.5 hours**, where the right treatment is **stroke-dose** thrombolysis for the stroke itself, **not coronary-dose lysis**. The doses differ (stroke alteplase 0.9 mg/kg, max 90 mg; MI up to 100 mg) and giving the MI dose markedly increases haemorrhagic transformation
             - Suspected aortic dissection
             - Active bleeding
             - Significant head/facial trauma within 3 months
@@ -133,27 +137,50 @@ topic:
             - Recheck EKG in 6 hours
             - **Anti-platelet:**
               - Aspirin 325 mg PO × 1 dose if not already given
-              - Clopidogrel 300 mg PO × 1 dose
+              - Clopidogrel — **under 75: 300 mg PO × 1 loading dose. 75 and over: 75 mg, NO loading dose** (excess intracranial haemorrhage with fibrinolysis)
             - **Nitroglycerin** sublingual spray or tablet (if not already given)
               - 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved
             - **Anticoagulant:**
               - Unfractionated heparin
                 - 60 units/kg IV bolus, maximum 4,000 units
                 - 12 units/kg/hr IV infusion, maximum 1,000 units/hr
-              - Enoxaparin
-                - 30 mg IV bolus followed 15 minutes later by
-                - 1 mg/kg subcutaneously q12hrs (maximum 100 mg/dose for first 2 doses)
+              - Enoxaparin — **the regimen changes at age 75**
+                - **Under 75:** 30 mg IV bolus, then 15 minutes later 1 mg/kg SC q12hrs (max 100 mg/dose for the first 2 doses)
+                - **75 and over: NO IV bolus. 0.75 mg/kg SC q12hrs (max 75 mg/dose for the first 2 doses)** — the full dose causes excess intracranial haemorrhage in this age group
                 - Should not be given if creatinine clearance < 30
-            - **Oral beta blocker within first 24 hours** (preferred metoprolol succinate or carvedilol)
+            - **Oral beta blocker within first 24 hours — but check first** (preferred metoprolol succinate, carvedilol or bisoprolol)
               - Metoprolol succinate (metoprolol ER) 25 mg PO daily
-              - Carvedilol 6.25 mg PO BD
+              - Carvedilol 6.25 mg PO BD — favoured with LV dysfunction; avoid in obstructive airways disease
+              - Bisoprolol
               - Metoprolol tartrate 25 mg PO BD
-              - Labetalol 100 mg PO BD
-              - Atenolol 50 mg PO daily
+              - ⚠️ **Atenolol and labetalol are no longer preferred here** — atenolol is not among the beta blockers with proven post-MI mortality benefit, and labetalol is an IV antihypertensive rather than a secondary-prevention agent
             - **Oral ACE inhibitor within first 24 hours**
               - Captopril 12.5 mg PO BD
               - Lisinopril 5 mg PO daily
               - May use ARB if no ACE inhibitors available — losartan 50 mg PO daily
+
+        - type: "prose"
+          title: "🛑 Withhold the beta blocker in the first 24 h if ANY of these"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            - **Acute or decompensated heart failure** (Killip II–IV)
+            - **Low cardiac output state, or risk factors for cardiogenic shock** — older age, tachycardia, hypotension, late presentation
+            - **Hypotension**
+            - **PR > 0.24 s, or second- / third-degree AV block** without a pacemaker
+            - **Severe bradycardia**
+            - **Active bronchospasm**
+
+            Early beta blockade **increases cardiogenic shock** (5.0% vs 3.9% in COMMIT,
+            n = 45,852), concentrated in the first 1–2 days and in the haemodynamically
+            compromised. **Reassess at 24 h and start once stable.**
+
+            Before each of the first doses check **heart rate, blood pressure, signs of
+            pulmonary congestion, and the ECG (PR interval, AV block)**. Start low and
+            titrate up as HR and BP permit; stop for new or worsening heart failure.
 
         - type: "prose"
           title: "Intermediate risk category"

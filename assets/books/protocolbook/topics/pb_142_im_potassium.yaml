@@ -46,7 +46,11 @@ topic:
               - K < 4: in heart failure, HTN or arrhythmias
             - **IV potassium:**
               - Indications: K < 2.5, symptomatic, or a nonfunctioning GI tract
-              - 40 mEq in 1 L NS (children 0.5–1 mEq/kg/hr; adult 10 mEq/hr infusion)
+              - **Prefer oral whenever the gut works** — IV carries the higher risk of iatrogenic hyperkalaemia
+              - **Rate — children: 0.2 mEq/kg/hr** without continuous cardiac monitoring. **0.5–1 mEq/kg/hr is an ICU rate** needing continuous ECG; 1 mEq/kg/hr is the ceiling under any circumstances. Adults: 10 mEq/hr
+              - **Concentration — peripheral line max 40 mEq/L; central line up to 400 mEq/L.** Anything above 40 mEq/L must be central
+              - ⚠️ At 40 mEq/L a 20 kg child at 1 mEq/kg/hr would need **500 mL/hr** — undeliverable. Either slow the rate or use a central line
+              - **Monitoring:** continuous ECG at rapid rates, serum K⁺ every 1–2 h during active repletion. **Never bolus**
             - **PO potassium:**
               - 40–100 mEq/day (max adult 200 mEq/day; max children 3 mEq/kg/day)
               - Divide into doses every 6 hours
@@ -64,7 +68,10 @@ topic:
         - type: "prose"
           title: "Magnesium (often accompanies hypokalemia)"
           markdown: |
-            - Unstable or symptomatic & magnesium < 1: magnesium sulfate 2 g in 50 mL 5% dextrose, given over 30 minutes, 6 hourly (children 25–50 mg/kg)
+            - Unstable or symptomatic & magnesium < 1: magnesium sulfate **1–2 g IV over 15–60 min**, then a **slower continuous infusion** (children 25–50 mg/kg) — a rapid bolus is largely excreted in the urine
+            - **Repeat on the level, not on the clock.** Before each further dose check **serum magnesium · renal function and urine output · deep tendon reflexes** (loss means hypermagnesaemia) **· respiratory rate and blood pressure**
+            - **Maximum ~30–40 g/24 h** in an adult with normal renal function; **much less in renal impairment (~20 g/48 h)** — magnesium is renally cleared and accumulates
+            - **Also check and replace potassium and calcium** — hypomagnesaemia causes refractory hypokalaemia and hypocalcaemia
             - Stable, asymptomatic, magnesium < 2 but > 1: oral supplementation
 
     # ═══════════════════════ PAGE 143 ═══════════════════════
@@ -113,12 +120,14 @@ topic:
               outcomes:
                 - label: "Yes"
                   box:
-                    title: "Stabilise & treat urgently"
+                    title: "Stabilise AND shift — both, in parallel"
+                    severity: "emergency"
                     bullets:
                       - "Cardiac monitoring"
-                      - "10% calcium gluconate IV — children 0.5 mL/kg, adults 10 mL, given over 2–3 minutes, repeat every 5 min until ECG improves (lasts 30–60 min)"
-                      - "Furosemide IV — children 1 mg/kg, adults 20–40 mg"
-                      - "Dialysis: urgently if unstable; consider for asymptomatic patients with ESRD"
+                      - "**1. Stabilise (seconds):** 10% calcium gluconate IV — children 0.5 mL/kg, adults 10 mL, over 2–3 min; repeat every 5 min until the ECG improves. **Calcium does NOT lower the potassium** — it buys 30–60 min only"
+                      - "**2. Shift, at the same time — do not wait:** insulin + glucose **AND** nebulised salbutamol together (doses in the box below). These are what actually lower serum K⁺ in the first hour"
+                      - "**3. Then remove:** furosemide IV — children 1 mg/kg, adults 20–40 mg — **only helps if the patient is volume-replete and passing urine**"
+                      - "Dialysis: urgently if unstable; consider for asymptomatic patients with ESRD. It is the only reliable removal route if anuric"
                 - label: "No"
                   continue: true
             - decision: "K⁺ 6.0–6.5?"
@@ -129,7 +138,44 @@ topic:
                     bullets:
                       - "Insulin + glucose — adults: IV bolus insulin 10 IU + glucose 40–60 g; children: insulin IV 0.05 IU/kg/hr + glucose IV 0.5 g/kg/hr (for RBS < 180)"
                       - "Salbutamol q1–2hr — nebulizer: < 25 kg 2.5 mg in 3 mL NS, > 25 kg 5 mg in 5 mL NS (adults max 10–20 mg); MDI + spacer + mask: 5–10 kg 4 puffs, 10–20 kg 6 puffs, > 20 kg 8 puffs"
-                      - "Resonium q6hr — children 1 g/kg PO or PR; adults 15 g PO or 30–50 g PR"
+                      - "**These same two drugs belong in the severe branch above — give them there too, alongside the calcium**"
                 - label: "No"
                   box:
                     title: "Consider no Rx"
+
+        - type: "prose"
+          title: "⚠ These measures wear off — remeasure and repeat"
+          callout: true
+          markdown: |
+            Shifting therapy is **temporising**. Potassium rebounds as it wears off, so
+            recheck K⁺ and redose whenever definitive removal is delayed.
+            - **Insulin + glucose:** starts ~15 min, peaks 30–60 min, lasts **4–6 hours**
+            - **Salbutamol:** starts ~30 min, lasts **~2 hours**. **20–40% of patients do not respond** — especially those on a beta blocker — so it must **never** be the only shifting agent
+            - **Calcium:** lasts 30–60 min and never lowers the potassium
+
+        - type: "prose"
+          title: "🛑 Monitor glucose after insulin"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            Check blood glucose **at least hourly for 6 hours** after the insulin (every
+            30–60 min at first). **Delayed hypoglycaemia is the commonest iatrogenic harm
+            of this regimen** — most likely in non-diabetic patients, in renal impairment,
+            and where the starting glucose was low.
+
+        - type: "prose"
+          title: "Sodium polystyrene sulfonate (Resonium) — not an acute treatment"
+          markdown: |
+            **Onset is hours; it cannot be counted on in an acute episode**, and it is no
+            longer recommended for acute hyperkalaemia — efficacy is poorly defined and it
+            risks **colonic necrosis and bowel injury**, especially prepared with sorbitol.
+            Where nothing else exists, restrict it to anuric or severely oliguric patients
+            and avoid medium- or long-term use.
+
+            Dose if used: children 1 g/kg PO or PR; adults 15 g PO or 30–50 g PR, q6hr.
+
+            The acute work is done by **calcium + insulin/glucose + salbutamol**, and by
+            dialysis where available.

@@ -16,6 +16,12 @@ text extraction.
 
 | Page | Printed | Should be |
 |---|---|---|
+| **125** | SVT flow chart: **"Is the patient stable?" → No → Adenosine**, with cardioversion demoted to a note | **The branch is inverted.** Unstable → **immediate synchronised cardioversion** (50–100 J adult, 0.5–1 J/kg child). Stable → vagal manoeuvres → adenosine. As printed the stable patient never reaches adenosine at all, and the unstable one is given a drug instead of electricity. Verified on the rendered page, not just the text |
+| **143** | Hyperkalaemia: the **K > 6.5 / ECG-change** branch gets calcium, furosemide and dialysis; **insulin/glucose and salbutamol sit on the milder 6.0–6.5 branch** | Give **calcium AND insulin/glucose + salbutamol in parallel** in the severe branch. Calcium stabilises the myocardium for 30–60 min and **does not lower potassium at all**; furosemide only works if the patient passes urine. As printed, where dialysis is a day away the sickest patient's potassium is never lowered |
+| **123** | Thrombolytics **"ideally within first 24 hours of chest pain"** — the only timing guidance on the page | **Within 12 hours.** Benefit is not established beyond 12 h while the bleeding risk is unchanged. Door-to-needle ≤ 30 min. Beyond 12 h only with ongoing ischaemia + persistent ST elevation, or instability, and only where PCI is unavailable |
+| **123–124** | Enoxaparin and clopidogrel printed as single doses with **no age qualifier** | **At age ≥ 75 with fibrinolysis: no enoxaparin IV bolus, 0.75 mg/kg SC q12h (max 75 mg for the first 2 doses); clopidogrel 75 mg with NO 300 mg load.** The full adult regimen causes excess intracranial haemorrhage in this group |
+| **140** | **"Dopamine 2-5mcg/min"** | Missing its **/kg** — and the wrong drug. Use **norepinephrine 0.05–0.5 mcg/kg/min**, or **dobutamine 2–20 mcg/kg/min** for pump failure. Every other dopamine dose in this book is per kilogram; even 2–5 mcg/kg/min is the discredited "renal dose" |
+| **137** | Histoplasmosis: **"If CD4 < 50, consider adding rifabutin 300 mg PO QD"** | **Delete.** Rifabutin has no antifungal activity — the line was carried over from the MAC section on the same page. It is a strong enzyme inducer and would **lower itraconazole levels**, risking failure of the infection being treated |
 | **80** | Adults: Morphine **2–10 mg/kg/dose** PO | **2–10 mg/dose**. As printed this is ~140–700 mg in an adult — a lethal dose. The child mg/kg row and the Step-3 adult "1–2 mg/dose" both confirm the intent |
 | **146–158 (formulary)** | Morphine adult dose **per kg** | **per dose** — same error as p.80 |
 | **136** | Flucytosine **25 gm/kg/dose** | **25 mg/kg/dose** QID (100 mg/kg/day). A grams-per-kg dose is physically impossible |
@@ -202,3 +208,31 @@ well, so enlarging the box will reveal a fragment rather than restore a sentence
 
 Worth checking any text box you resize in v1.8: if a box is full to its last line,
 assume something may be sitting just underneath it.
+
+---
+
+# 🟡 ADDED 2026-08-25 — from the pp.114–142 advance pass (OE-confirmed)
+
+| Page | Printed | Should be |
+|---|---|---|
+| **140** | Rate formula *"Rate of IVF infusion to increase Na by 0.5 mEq/L/h = 1000 / (2 × [Na]serum)"* | Garbled — it has **no infusate term and no body-water term**, so it returns the same answer for 3% and 0.9% saline. Use rate (L/h) = desired rise ÷ (change per L infusate) |
+| **142** | IV potassium *"40 mEq in 1 L NS (children 0.5–1 mEq/kg/hr)"* | Incompatible as printed — at 40 mEq/L a 20 kg child at 1 mEq/kg/hr needs **500 mL/hr**. Without monitoring the rate is **0.2 mEq/kg/hr**; 0.5–1 is an ICU rate. Peripheral max 40 mEq/L, central up to 400 |
+| **142** | Magnesium *"2 g … over 30 minutes, 6 hourly"* as a standing order | Level-guided: 1–2 g over 15–60 min then a slower infusion; **max ~30–40 g/24 h**, far less in renal impairment; check reflexes, renal function, RR and BP before each repeat |
+| **123** | *"Ischaemic stroke within 3 months (EXCEPT ischaemic stroke within 3 hours)"* | **4.5 hours** — and the exception means **stroke-dose** lysis for the stroke, not coronary-dose |
+| **124** | Beta blocker within 24 h with **no contraindications listed**; options include atenolol and labetalol | Add the withhold list (Killip II–IV, low-output/shock risk, hypotension, PR > 0.24 s, AV block, bradycardia, bronchospasm). **Atenolol and labetalol are not preferred post-MI**; prefer metoprolol succinate, carvedilol or bisoprolol |
+| **131** | PERC applied as the **first gate to every patient**, before Wells | PERC is valid **only after** low pretest probability is established. Order: probability → PERC → D-dimer → imaging |
+| **131** | Low-risk PE → *"no treatment"* | A low Wells score alone does not exclude PE — **D-dimer required unless PERC negative** |
+| **131** | **No pathway at all for high-risk (massive) PE** | The book stocks thrombolytics for STEMI two pages earlier but never gives the PE indication. Added: definition, systemic thrombolysis, agent doses, heparin handling |
+| **128** | TB workup: *"HIV?" → Yes → "Discuss with senior"* — the algorithm ends there | The common case in this setting. Needs the parallel Xpert + urine LF-LAM pathway, ART timing, and co-trimoxazole |
+| **129** | Adjunctive steroids listed for **pericardial effusion** with no HIV qualifier; one prednisone regimen for all five indications | **Not recommended if HIV-positive** (IMPI: no benefit, increased HIV-associated malignancy). TB meningitis uses **dexamethasone 0.3–0.4 mg/kg/day tapering over 6–8 weeks**, not a flat 60 mg |
+| **129** | *"Do not change the regimen unless LFTs > 5 × ULN"* | Symptomatic patients stop at **≥ 3 × ULN**; 5 × applies to the asymptomatic |
+| **134** | Gonorrhoea **ceftriaxone 250 mg IM** | **500 mg IM (1 g if ≥ 150 kg)** — raised because of declining cephalosporin susceptibility |
+| **134** | Chlamydia: azithromycin first-line, doxycycline the alternative; pregnancy erythromycin 1 g q12h | **Doxycycline is first-line** in non-pregnant patients; pregnancy is **azithromycin 1 g**; erythromycin 1 g BD is not a correct regimen and erythromycin is no longer recommended in pregnancy |
+| **134** | Bacterial vaginosis given the **same single 2 g dose** as trichomoniasis | BV needs **metronidazole 500 mg BD × 7 days**; single-dose is not a recommended BV regimen. The trichomoniasis regimen was copied onto it |
+| **134** | Inpatient PID **ceftriaxone 250 mg IM daily** | **1 g IV every 24 hours** — these patients have sepsis, peritonitis or an abscess |
+| **135** | Cryptococcal induction lists three 14-day regimens | Add the **single-dose liposomal amphotericin B 10 mg/kg** (AMBITION) regimen — now WHO-preferred, and developed for exactly this setting |
+| **137** | Adult histoplasmosis maintenance **"itraconazole 200 mg PO TID"** | **200 mg TID × 3 days, then 200 mg BD.** The children's line has the step-down; the adult line dropped it, leaving an adult on 600 mg/day indefinitely |
+| **137** | Paediatric rifabutin **15 mg/kg** with no cap (and **5 mg/kg** elsewhere on the page) | Treatment **10–20 mg/kg, max 300 mg/day**; prophylaxis is 5 mg/kg. State which is which |
+| **136** | PCP steroids if *"O₂ sat on room air is < 90%"* | **PaO₂ < 70 mmHg, or A-a gradient ≥ 35** — by oximetry, **SpO₂ ≤ 92%**. Start within 72 h of the first TMP-SMX dose |
+| **138** | Zoster **aciclovir "1 g PO TID"** — the valaciclovir dose | **800 mg five times daily.** The two drugs are not interchangeable at the same dose |
+| **125** | AF: *"Needs anticoagulation. Warfarin 10 mg PO daily x 2 days"* | Anticoagulate on **CHA₂DS₂-VASc (men ≥ 2, women ≥ 3)**. **No loading dose** — routine loading increases bleeding without faster protection; start **2.5 mg** in the older or frail. First INR at 3–5 days |

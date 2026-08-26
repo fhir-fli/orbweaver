@@ -96,12 +96,18 @@ topic:
             - **Symptoms:** typical meningoencephalitis symptoms — fever, headache, meningismus, photophobia and vomiting
             - **Diagnosis:** LP — CSF analysis (india ink stain, Ag testing, fungal culture)
             - **Treatment:**
-              - Induction phase (2 weeks) — one of the following, first option preferred:
-                - (Preferred) Liposomal amphotericin B 4 mg/kg/day IV plus flucytosine 25 mg/kg/dose PO 4 times daily × 2 weeks
-                - Amphotericin B deoxycholate 1 mg/kg/day IV plus flucytosine 25 mg/kg/dose PO 4 times daily
-                - Fluconazole 800 mg/day (12 mg/kg/day in children < 19 kg) plus flucytosine 25 mg/kg/dose PO 4 times daily
+              - **PREFERRED — single high-dose liposomal amphotericin (the AMBITION regimen), now WHO-preferred where liposomal amphotericin is available:**
+                - **Liposomal amphotericin B 10 mg/kg IV as a SINGLE dose on day 1**
+                - **plus flucytosine 100 mg/kg/day PO in 4 divided doses × 14 days**
+                - **plus fluconazole 1200 mg/day × 14 days**
+                - Non-inferior for 10-week mortality (24.8%) against the WHO 7-day amphotericin control, with **significantly fewer grade 3–4 adverse events (50% vs 62%)** — and it removes the need for daily infusions and intensive renal/electrolyte monitoring, which is why it was developed for African hospitals
+              - **If only amphotericin B DEOXYCHOLATE is stocked** — the WHO 1-week regimen:
+                - Amphotericin B deoxycholate 1 mg/kg/day IV **plus** flucytosine 100 mg/kg/day × **7 days**, then fluconazole 1200 mg/day to complete induction
+                - ⚠️ Requires **pre-emptive saline hydration and potassium + magnesium supplementation**, with monitoring of creatinine, potassium, magnesium and haemoglobin — deoxycholate causes nephrotoxicity, renal tubular acidosis, hypokalaemia, hypomagnesaemia and anaemia
               - Consolidation phase (8 weeks):
-                - Fluconazole 400 mg/day (10 mg/kg/day in children < 19 kg)
+                - **Fluconazole 800 mg/day**
+              - Maintenance:
+                - **Fluconazole 200 mg/day until immune reconstitution on ART**
 
         - type: "prose"
           title: "Pneumocystis jirovecii pneumonia (PCP)"
@@ -112,7 +118,8 @@ topic:
             - **Treatment** (21 days) — first option preferred:
               - TMP-SMX: TMP 5 mg/kg/dose & SMX 25 mg/kg/dose IV or PO q6hrs
               - Pentamidine 4 mg/kg IV QD
-              - If initial O₂ sat on room air is < 90%: add prednisone / prednisolone
+              - **Add prednisone / prednisolone if PaO₂ < 70 mmHg on room air, or the A-a gradient is ≥ 35 mmHg.** Where only oximetry is available, use **SpO₂ ≤ 92%** (a PaO₂ of 70 corresponds to roughly 92–94%) — the book previously used < 90%, which denies steroids to patients who benefit
+              - **Start within 72 hours of the first dose of TMP-SMX** — benefit beyond that is not established. Steroids reduce mortality in moderate-to-severe PCP (RR ~0.56)
                 - Days 1–5: 1 mg/kg/dose BID (max 40 mg/dose)
                 - Days 6–10: 1 mg/kg/dose QD (max 40 mg/dose)
                 - Days 11–21: 0.5 mg/kg/dose QD (max 20 mg/dose)
@@ -132,7 +139,7 @@ topic:
                 - Clarithromycin 10 mg/kg/dose BD
                 - Ethambutol 20 mg/kg PO QD
                 - Azithromycin (in place of clarithromycin) 10 mg/kg QD
-                - If CD4 < 50, consider adding rifabutin 15 mg/kg PO QD
+                - If CD4 < 50, consider adding rifabutin **10–20 mg/kg PO QD (max 300 mg/day)** — the treatment dose. Note MAC *prophylaxis* is 5 mg/kg/day; the two differ by indication
               - Adults
                 - Clarithromycin 500 mg PO BD
                 - Ethambutol 15 mg/kg PO QD
@@ -162,8 +169,10 @@ topic:
                 - Amphotericin B deoxycholate 1 mg/kg/day IV
               - Maintenance:
                 - Children: itraconazole 2–5 mg/kg/dose TID × 3 days, then BID
-                - Adults: itraconazole 200 mg PO TID
-              - If CD4 < 50, consider adding rifabutin 300 mg PO QD
+                - **Adults: itraconazole 200 mg PO TID × 3 days (loading), then 200 mg PO BD** — the book previously printed TID as ongoing maintenance, which would leave an adult on 600 mg/day indefinitely
+              - **Continue for at least 12 months.** Stop only when all of: > 12 months of therapy, ≥ 6 months on ART with **CD4 ≥ 150**, negative fungal blood cultures, undetectable HIV viral load, and *Histoplasma* antigen below the quantifiable threshold
+              - Check **itraconazole levels (target 1–2 µg/mL)** where available — absorption is erratic and it is a CYP3A4 substrate
+              - 🛑 **Do NOT add rifabutin.** It has no antifungal activity and no role in histoplasmosis — the line here was carried over in error from the MAC section. Rifabutin is a strong enzyme inducer and would **lower itraconazole levels, risking failure of the very infection being treated**. If MAC prophylaxis is also needed, use **azithromycin**, which is not an inducer
 
     # ═══════════════════════ PAGE 138 ═══════════════════════
     - page_number: 138
@@ -192,11 +201,17 @@ topic:
           column_align: ["left", "left", "left"]
           rows:
             - cells: ["Valacyclovir", "20 mg/kg/dose PO TID", "1 g PO TID"]
-            - cells: ["Acyclovir", "20 mg/kg/dose PO QID", "1 g PO TID"]
+            - cells: ["Acyclovir", "20 mg/kg/dose PO QID", "**800 mg PO five times daily**"]
 
         - type: "prose"
           markdown: |
-            Severe cutaneous, visceral or disseminated disease in children and adults: acyclovir 10–15 mg/kg/dose IV q8hrs until improvement.
+            Severe cutaneous, visceral, disseminated or **ophthalmic (V1)** disease: start
+            **IV acyclovir 10 mg/kg q8hrs from the outset**, switching to oral once new
+            lesions stop forming. Oral courses run **7–10 days**; IV-then-oral completes
+            **10–14 days**.
+
+            ⚠️ Aciclovir and valaciclovir are **not interchangeable at the same dose** —
+            aciclovir's poor oral bioavailability is why it needs 800 mg five times daily.
 
             **Prevention — vaccination:**
 
@@ -210,8 +225,10 @@ topic:
             - **Symptoms:** retinitis most common (80–90%) — blurring, blind spots, floaters or flashing lights, usually unilateral; can also affect the GI tract with nonspecific complaints that usually include pain; rarely affects the nervous system (encephalitis or peripheral nerve involvement)
             - **Diagnosis:** generally made by ophthalmologist; serum PCR and serologies not normally helpful, but if found in CSF on LP, high likelihood of brain involvement
             - **Treatment:**
-              - Induction (one of the following):
+              - **Induction — 14–21 days minimum**, continued until the retinal lesions show resolved or markedly reduced opacity:
                 - Adults: valganciclovir 900 mg PO BD
                 - Alternatives for adults and children:
                   - Ganciclovir 5 mg/kg/dose IV q12hrs
                   - Foscarnet 90 mg/kg/dose IV q12hrs
+              - **Maintenance after induction: valganciclovir 900 mg PO once daily**
+              - **Stop maintenance** only after ≥ 3 months of anti-CMV therapy, once **CD4 ≥ 100 sustained for ≥ 3 months** on ART and the lesions are inactive — in consultation with ophthalmology. **Restart if CD4 falls again**

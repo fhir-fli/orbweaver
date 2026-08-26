@@ -91,7 +91,13 @@ topic:
               outcomes:
                 - label: "Yes"
                   box:
-                    title: "Discuss with senior"
+                    title: "HIV-positive — use the HIV pathway below, then rejoin"
+                    severity: "priority"
+                    bullets:
+                      - "Xpert MTB/RIF (or Ultra) on any sputum obtainable — it also reports rifampicin resistance"
+                      - "Urine LF-LAM IN PARALLEL — do not wait for sputum"
+                      - "Chest X-ray (often atypical or normal in advanced HIV) ± abdominal ultrasound"
+                      - "If all negative but suspicion persists — treat empirically, especially at low CD4"
                 - label: "No"
                   continue: true
             - decision: "Chest X-ray available and suggestive of TB?"
@@ -104,17 +110,59 @@ topic:
                 - label: "Available but not suggestive"
                   box:
                     title: "Consider other etiology"
-            - decision: "MDR TB?"
+            - decision: "Drug-resistant TB? Suspect if ANY of these"
+              criteria:
+                - "Xpert reports RIFAMPICIN RESISTANCE — this is the marker for MDR-TB"
+                - "Previous TB treatment — relapse, failure, or default/retreatment"
+                - "Known contact with a drug-resistant or MDR-TB case"
+                - "No clinical improvement, or no sputum conversion, at 2–3 months on first-line therapy"
+                - "HIV in a high-MDR-prevalence setting"
               outcomes:
                 - label: "Yes"
                   box:
-                    title: "Consult specialist"
+                    title: "Do NOT start standard 2RHZE — act now, then consult"
+                    severity: "emergency"
+                    bullets:
+                      - "Withhold a rifampicin-based regimen; arrange a WHO-recommended all-oral bedaquiline-based rifampicin-resistant regimen"
+                      - "Send a specimen for confirmatory and extended testing — fluoroquinolone susceptibility, culture/DST or Xpert MTB/XDR. About 5% of rpoB mutations fall outside the hotspot, so confirm"
+                      - "Airborne infection control IMMEDIATELY — separate the patient, mask, ventilate. Transmission is the key hazard"
                 - label: "No"
                   continue: true
           terminal:
             title: "Begin treatment"
             bullets:
               - "Proceed to the treatment page"
+
+        - type: "prose"
+          title: "TB in HIV — the pathway the algorithm points to"
+          markdown: |
+            **Screen:** the WHO four-symptom screen — cough, fever, night sweats, weight
+            loss. **In advanced HIV, test regardless of symptoms.**
+
+            **Test in parallel, not in sequence** — sputum Xpert **plus** urine LF-LAM
+            together give the highest yield (~71–73% in inpatients) and perform well even
+            at CD4 below 100. **Treat on the first positive result.**
+
+            **Urine LF-LAM — who qualifies:**
+            - **Inpatients:** signs or symptoms of TB, **or** advanced HIV disease (CD4 < 200 or WHO stage 3–4), **or** seriously ill (RR > 30, temp > 39 °C, HR > 120, or unable to walk unaided)
+            - **Outpatients:** signs or symptoms of TB and seriously ill, **or** CD4 < 100, **or** a WHO stage 3–4 event
+
+        - type: "prose"
+          title: "ART timing and co-trimoxazole"
+          callout: true
+          markdown: |
+            Start TB treatment **first**, then ART:
+            - **CD4 < 50 → start ART within 2 weeks**
+            - **CD4 ≥ 50 → start ART by 8 weeks**
+            - 🛑 **TB meningitis is the exception — delay ART to 4–8 weeks**, because early
+              ART increases severe adverse events without a survival benefit
+
+            **Start co-trimoxazole preventive therapy together with TB treatment** — it
+            reduces mortality in people with HIV. Follow national/WHO guidance on duration.
+
+            The standard **2RHZE/4RH** regimen is unchanged in HIV, but **rifampicin must be
+            preserved** — avoid intermittent dosing, and manage the rifamycin–ART
+            interactions. Some extrapulmonary forms need longer.
 
     # ═══════════════════════ PAGE 129 ═══════════════════════
     - page_number: 129
@@ -178,22 +226,48 @@ topic:
           stages:
             - decision: "Any of the following present?"
               criteria:
-                - "TB meningitis"
+                - "TB MENINGITIS — the only indication with robust guideline support"
                 - "Pulmonary TB with respiratory distress"
                 - "Pulmonary TB with airway obstruction from hilar lymph nodes"
                 - "Severe miliary TB"
-                - "Pericardial effusion"
+                - "Pericardial effusion — HIV-NEGATIVE ONLY (see the warning below)"
               outcomes:
-                - label: "Yes"
+                - label: "Yes — TB meningitis"
                   box:
-                    title: "Add prednisone"
+                    title: "Dexamethasone (preferred over prednisolone)"
+                    severity: "priority"
                     bullets:
-                      - "60 mg/day × 2 weeks"
-                      - "Reduce by 10 mg/day weekly"
+                      - "0.3–0.4 mg/kg/day IV for grade II/III disease, tapering weekly"
+                      - "Taper over 6–8 weeks in total"
+                      - "Still recommended in HIV-positive patients — no evidence of harm, and mortality is high"
+                - label: "Yes — the other indications"
+                  box:
+                    title: "Steroids on clinical judgement"
+                    bullets:
+                      - "Respiratory distress, airway compression from hilar nodes, severe miliary TB — lower-grade evidence; use judgement rather than a fixed course"
+                      - "One regimen does not fit all five indications, and the meningitis dose is weight-based, not a flat 60 mg"
                 - label: "No"
                   continue: true
           terminal:
             title: "Continue to the continuation phase"
+
+        - type: "prose"
+          title: "🛑 TB pericarditis — do NOT give steroids if HIV-positive"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            - **HIV-positive: not recommended.** In the IMPI trial (n = 1400) prednisolone
+              did not reduce death, tamponade or constriction, and was associated with a
+              **significantly increased incidence of HIV-associated malignancy, notably
+              Kaposi sarcoma.**
+            - **HIV-negative: optional**, mainly to reduce constriction — the evidence is
+              weak and it is not routine.
+
+            The book previously listed "pericardial effusion" for steroids with no HIV
+            qualifier.
 
         - type: "prose"
           title: "Continuation phase (after 2 months)"
@@ -216,4 +290,23 @@ topic:
 
         - type: "prose"
           markdown: |
-            **LFT monitoring:** if liver tenderness, hepatomegaly or jaundice, recheck LFTs. Do not change the regimen unless LFTs > 5 × upper limit of normal.
+            **LFT monitoring:** if liver tenderness, hepatomegaly or jaundice, recheck LFTs.
+
+            **The stopping threshold depends on symptoms:**
+            - **Asymptomatic → stop at ALT ≥ 5 × upper limit of normal**
+            - **Symptomatic** (nausea, vomiting, right-upper-quadrant pain, jaundice) **→ stop at ALT ≥ 3 × ULN** — or ALT ≥ 3 × ULN with bilirubin > 2 × ULN even without symptoms
+
+            The baseline bar (3 × ULN) is lower than the asymptomatic on-treatment bar
+            (5 × ULN) on purpose: a mild transaminase rise occurs in 5–30% of patients on
+            treatment and is usually transient, so a higher bar avoids needless
+            interruption — while at baseline the lower bar flags pre-existing liver disease.
+
+            **Reintroduction once ALT has settled — one drug at a time:**
+            1. **Rifampicin first** (least hepatotoxic, most important to keep) ± ethambutol
+            2. **Isoniazid** after about a week if ALT is stable
+            3. **Pyrazinamide last**, about a week later — or **omit it permanently** if the
+               hepatitis was severe, extending treatment to 9 months
+
+            In severe TB, cover the gap with a **non-hepatotoxic bridging regimen**
+            (ethambutol + a fluoroquinolone ± an aminoglycoside or linezolid). Monitor ALT
+            frequently and **stop the last drug added** if ALT rises or symptoms recur.

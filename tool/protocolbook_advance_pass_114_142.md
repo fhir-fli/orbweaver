@@ -1,32 +1,52 @@
 # ProtocolBook advance pass — pp.114–142 (the ECG / internal-medicine tail)
 
-**Status: PART 1 of 2.** Flags raised 2026-08-25 on the pages OE has not yet reached (the
-applied rounds stop at p.113).
+# ✅ ALL 32 FLAGS ANSWERED BY OE AND APPLIED — 2026-08-25
 
-**Covered so far — 7 of the 19 topics in this range**, chosen drug-first because that is
-where a wrong number does damage: electrolytes (pp.140–143), ACS treatment (pp.123–124),
-pulmonary embolism (p.131), adult TB (pp.128–129), STIs (pp.132–134), HIV opportunistic
-infections (pp.135–139), SVT (p.125).
+**OE endorsed every one**: "every one of these edits is warranted", "all of these are
+valid corrections", "every item here warrants revision", "the stability branch is indeed
+inverted, and it is a genuine safety error." Nothing was returned as a false alarm.
 
-**Still to review:** the five ECG pages (pp.114–120), chest pain / ACS diagnosis (p.121),
-epigastric pain, headache and syncope (p.126), COPD & asthma (p.127), and DVT (p.130).
+**The questions are kept below as the record of what was asked.** They are no longer open.
+Where OE's answer changed the book, the change is summarised in the table and applied in
+the topic YAML; where the error is in the **printed source**, it is also recorded in
+`protocolbook_source_errata.md` so it cannot come back in v1.8.
 
-**Every flag below was checked against the printed PDF page**, so each is a question about
-the book's content rather than about how it was transcribed. Where the print's layout
-mattered — the SVT branch labels — I looked at the rendered page, not the extracted text.
+| # | Applied |
+|---|---|
+| A1 | Severe hyperkalaemia now gets calcium **and** insulin/glucose + salbutamol **in parallel**; calcium labelled as not lowering K⁺; furosemide conditional on urine output; onset/duration/rebound table; glucose monitored hourly × 6 h; salbutamol non-response 20–40% noted |
+| A2 | Dopamine replaced by **norepinephrine 0.05–0.5 mcg/kg/min**, or **dobutamine 2–20 mcg/kg/min** for pump failure |
+| A3 | Garbled rate formula replaced by the correct derivation + worked example (55 mL/h); **bolus 3% saline** added (100 mL/10 min ×3, or 150 mL/20 min, target 4–6 mEq/L in 1–2 h); limits ≤10/24 h, ≤18/48 h, ≤8 if high ODS risk |
+| A4 | Paediatric IV K⁺ **0.2 mEq/kg/hr** without monitoring (0.5–1 is ICU); peripheral ≤40 mEq/L, central ≤400; the 500 mL/hr impossibility spelled out |
+| A5 | Resonium demoted — onset hours, not an acute treatment, colonic-necrosis risk |
+| A6 | Magnesium level-guided: 1–2 g over 15–60 min then slow infusion; max 30–40 g/24 h; check reflexes, renal function, RR/BP; replace K⁺ and Ca²⁺ |
+| B1 | Thrombolysis window **24 h → 12 h**; door-to-needle ≤30 min; the 12–24 h exception marked as a **US position ESC does not share**; stable late presenter explicitly not lysed |
+| B2 | **Age ≥75: no enoxaparin IV bolus, 0.75 mg/kg SC q12h (max 75 mg ×2); clopidogrel 75 mg, no load** |
+| B3 | Stroke exception **3 h → 4.5 h**, with the sentence explaining it means stroke-dose lysis, not coronary-dose |
+| B4 | Beta-blocker **withhold list** added (Killip II–IV, low output/shock risk, hypotension, PR > 0.24 s, AV block, bradycardia, bronchospasm) with the COMMIT numbers; atenolol and labetalol demoted, bisoprolol added |
+| C1 | **PERC moved behind pretest probability**; full no-CTPA sequence written out; age-adjusted D-dimer |
+| C2 | Low risk no longer "no treatment" — D-dimer required unless PERC negative; the no-D-dimer fallback spelled out |
+| C3 | **New high-risk PE section** — definition, systemic thrombolysis indicated, alteplase / tenecteplase / streptokinase regimens, heparin handling, and why the bleeding trade-off differs from STEMI |
+| D1 | HIV branch no longer dead-ends: parallel Xpert + urine LF-LAM, LAM eligibility, **ART at 2 weeks if CD4 < 50 / by 8 weeks otherwise, 4–8 weeks in TB meningitis**, co-trimoxazole with TB treatment |
+| D2 | **Pericarditis steroids: not recommended if HIV-positive** (IMPI; Kaposi signal), optional if HIV-negative; TB meningitis switched to **dexamethasone 0.3–0.4 mg/kg/day, taper 6–8 weeks** |
+| D3 | MDR criteria listed; rifampicin resistance connected to Xpert; immediate actions before the specialist (withhold rifampicin regimen, extended testing, airborne isolation) |
+| D4 | **Symptomatic stop at ALT ≥3× ULN, asymptomatic ≥5×**; why the thresholds differ; reintroduction order R → H → Z with the bridging regimen |
+| E1 | Gonorrhoea **250 mg → 500 mg IM (1 g if ≥150 kg)**; azithromycin no longer routine; cefixime restricted and unreliable pharyngeally |
+| E2 | Chlamydia **doxycycline first-line**, azithromycin the alternative (and a legitimate first choice where follow-up fails); pregnancy → azithromycin; erythromycin 1 g BD removed |
+| E3 | BV **metronidazole 500 mg BD × 7 days**, single-dose 2 g removed; trichomoniasis 7-day in women, 2 g single in men; BV partners not treated |
+| E4 | Inpatient PID **ceftriaxone 1 g IV q24h**; step-down at 24–48 h to complete 14 days; TOA guidance |
+| E5 | Herpes timing reworded to diminishing benefit, with explicit HIV guidance |
+| F1 | **AMBITION regimen added** — liposomal amphotericin **10 mg/kg single dose** + flucytosine 100 mg/kg/day + fluconazole 1200 mg/day × 14 d; consolidation 800 mg × 8 wk; maintenance 200 mg; deoxycholate fallback with its monitoring |
+| F2 | Adult itraconazole maintenance **200 mg TID × 3 days then BD**; 12-month duration and stop criteria; level monitoring |
+| F3 | **Rifabutin deleted from histoplasmosis** — no antifungal activity, and it lowers itraconazole levels; azithromycin if MAC prophylaxis is also needed |
+| F4 | Paediatric rifabutin **10–20 mg/kg, max 300 mg/day**, with the prophylaxis-vs-treatment distinction stated |
+| F5 | PCP steroids **PaO₂ < 70 mmHg / A-a ≥ 35 / SpO₂ ≤ 92%**, started **within 72 h** |
+| F6 | Zoster aciclovir **1 g TID → 800 mg five times daily**; IV from the outset for disseminated/visceral/ophthalmic; durations |
+| F7 | CMV induction **14–21 days**, maintenance **valganciclovir 900 mg daily**, stop criteria (CD4 ≥ 100 for ≥ 3 months) |
+| G1 | **SVT branch inverted back**: unstable → immediate synchronised cardioversion (50–100 J adult, 0.5–1 J/kg child); stable → vagal → adenosine → CCB/beta blocker → cardioversion. The no-cardioversion-available fallback is stated explicitly |
+| G2 | AF anticoagulation on **CHA₂DS₂-VASc (men ≥2, women ≥3)**; **warfarin loading removed**, 2.5 mg in the frail, INR at 3–5 days; unmonitored warfarin called the wrong choice |
+| G3 | Full digoxin regimen — load, maintenance, target level 0.5–0.9 ng/mL, pre-checks; beta blocker first-line |
 
-**How to use this file:** every numbered item below is **self-contained** — it quotes the
-verbatim printed text, states the concern, and asks something specific. Paste an item
-straight into OpenEvidence. Nothing refers to a file, a page of this repo, or a previous
-conversation, because OE cannot see any of it.
-
-**Setting to state to OE:** *district hospital, Gulu, northern Uganda — low-resource,
-paediatric-heavy, malaria-endemic. Limited drug availability; no reliable dialysis; ICU
-monitoring is not routinely available.*
-
-**Ask for every figure as a standalone line** — replies keep getting cut off at the number.
-
-Each item is marked 🔴 (patient-safety), 🟡 (correctness / clarity) or 🟢 (nice to have).
+**Suite: 613 pass, 0 fail.**
 
 ---
 

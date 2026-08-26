@@ -186,7 +186,7 @@ topic:
         - type: "prose"
           title: "Partner treatment"
           markdown: |
-            All sexual partners of the patient should be treated even if no symptoms (except herpes and candidiasis).
+            All sexual partners of the patient should be treated even if no symptoms — **except herpes, candidiasis and bacterial vaginosis**.
 
     # ═══════════════════════ PAGE 134 ═══════════════════════
     - page_number: 134
@@ -202,30 +202,42 @@ topic:
               - Unable to tolerate PO
               - No improvement / worsening in the first 48 hrs of outpatient treatment
             - **Inpatient treatment:**
-              - Ceftriaxone 250 mg IM daily
+              - **Ceftriaxone 1 g IV every 24 hours** (not 250 mg IM — these patients have sepsis, peritonitis or an abscess)
               - Doxycycline 100 mg/dose PO BID × 14 days
               - Metronidazole 500 mg PO/IV BID × 14 days
+              - **Step down to oral after clinical improvement, usually within 24–48 h**, to doxycycline 100 mg BD + metronidazole 500 mg BD, completing **14 days total**. Observe > 24 h first if there is a tubo-ovarian abscess
+              - **Tubo-ovarian abscess:** metronidazole is essential for anaerobic cover; a clindamycin + aminoglycoside regimen is a recognised alternative. Consider drainage
             - **Ambulatory treatment:**
-              - Ceftriaxone 250 mg IM × 1 dose (alternative: cefixime 400 mg PO × 1 dose)
+              - Ceftriaxone 500 mg IM × 1 dose (1 g if ≥ 150 kg)
               - Doxycycline 100 mg/dose PO BID × 14 days
               - Metronidazole 500 mg PO BID × 14 days
 
         - type: "prose"
           title: "Treatment regimens — by organism"
           markdown: |
-            - **Gonorrhea:** ceftriaxone 250 mg IM × 1 dose (alternative: cefixime 400 mg PO × 1 dose)
-            - **Chlamydia:** azithromycin 1 g PO × 1 dose
-              - Alternative for non-pregnant women / men: doxycycline 100 mg/dose q12hrs × 7 days
-              - Alternative for pregnant women: erythromycin 1 g/dose q12hrs × 7 days
-            - **Bacterial vaginosis:** tinidazole 2 g PO × 1 dose (alternative: metronidazole 2 g PO × 1 dose)
-            - **Trichomoniasis:** metronidazole 2 g PO × 1 dose (alternative: tinidazole 2 g PO × 1 dose)
+            - **Gonorrhea:** **ceftriaxone 500 mg IM × 1 dose** (**1 g if ≥ 150 kg**). The 250 mg dose was raised because of declining cephalosporin susceptibility
+              - **Do NOT add azithromycin routinely.** Ceftriaxone is given alone — unless chlamydia has not been excluded, in which case add **doxycycline 100 mg BD × 7 days**
+              - Alternative **only if ceftriaxone is unavailable**, and only for urogenital or rectal infection: cefixime 800 mg PO × 1 dose. If ceftriaxone is truly unavailable: **gentamicin 240 mg IM + azithromycin 2 g PO**
+              - ⚠️ **Cefixime is unreliable for pharyngeal infection — only ceftriaxone.** Test of cure is advised after pharyngeal gonorrhoea
+            - **Chlamydia — non-pregnant: doxycycline 100 mg PO BD × 7 days** (better cure, especially rectal)
+              - Alternative: azithromycin 1 g PO × 1 dose. **Where follow-up is unreliable, a single directly-observed 1 g dose is a legitimate first choice**, accepting a modestly lower cure rate
+              - **Pregnant: azithromycin 1 g PO × 1 dose** (alternative amoxicillin 500 mg PO TDS × 7 days)
+              - ⚠️ **Erythromycin is no longer recommended in pregnancy** (GI intolerance, adherence, adverse-outcome signals). The book previously printed erythromycin 1 g q12h — if erythromycin base must be used at all, the historical regimen is 500 mg QDS × 7 days
+            - **Bacterial vaginosis: metronidazole 500 mg PO BD × 7 days** (alternatives: intravaginal metronidazole 0.75% gel daily × 5 days, or clindamycin cream × 7 days)
+              - ⚠️ **Single-dose 2 g is NOT a recommended BV regimen** — it has a higher failure and recurrence rate. The book previously printed the trichomoniasis regimen here
+              - **Partners are not routinely treated** in BV — a second exception to the "treat all partners" rule
+            - **Trichomoniasis — women: metronidazole 500 mg PO BD × 7 days** (the 7-day course is now preferred over single-dose in women)
+              - **Men: metronidazole 2 g PO × 1 dose**
+              - **Treat partners** — this one is an STI
             - **Candidiasis** (using vaginal tablets): clotrimazole 500 mg inserted vaginally at bedtime × 1 dose
               - Alternative: clotrimazole 100 mg inserted vaginally at bedtime × 6 days
               - Alternative: nystatin 100,000 IU
             - **Herpes:**
-              - Initial outbreak — ineffective if started after 5 days from onset; acyclovir 400 mg/dose PO q8hrs × 7 days
-              - Recurrence — ineffective if given after 24 hours from onset; acyclovir 400 mg/dose PO q8hrs × 5 days
+              - Initial outbreak — acyclovir 400 mg/dose PO q8hrs × 7 days
+              - Recurrence — acyclovir 400 mg/dose PO q8hrs × 5 days
+              - **Timing:** most effective started early — within 72 hours of a first episode, or at the first sign of a recurrence — **but still offer it later if lesions are still forming or not yet fully crusted**, particularly in immunocompromised or HIV-positive patients. The benefit diminishes with time; it does not vanish at a cut-off
+              - **In HIV**, episodes are more severe and prolonged: treat any patient with zoster within a week of rash onset, or any time before full crusting
             - **Syphilis:** benzathine penicillin 1.2 million IU IM in each buttock
               - If < 2 years of infection: 1 dose
               - If > 2 years or unknown: 1 dose weekly × 3 weeks
-            - **Chancroid:** azithromycin 1 g PO × 1 dose (alternative: ceftriaxone 250 mg IM × 1 dose)
+            - **Chancroid:** azithromycin 1 g PO × 1 dose (alternative: ceftriaxone 500 mg IM × 1 dose)

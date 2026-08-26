@@ -44,9 +44,31 @@ topic:
               - Adult: 0.5 females, 0.6 males
               - Elderly: 0.45 females, 0.5 males
             - **Change in serum [Na] per L infusate** = (infusate [Na] − serum [Na]) ÷ (TBW + 1)
-            - **Rate of IVF infusion to increase Na by 0.5 mEq/L/h** = 1000 ÷ (2 × serum [Na])
+            - **Rate of infusion to raise Na by a chosen amount per hour** (L/h) = desired rise (mEq/L/h) ÷ (change in serum [Na] per L infusate, from the line above), then × 1000 for mL/h
+              - Worked example — serum Na 120, TBW 42 L, 3% saline (513 mEq/L): change per L = (513 − 120) ÷ (42 + 1) ≈ **9.1 mEq/L per litre**. To raise Na 0.5 mEq/L/h → 0.5 ÷ 9.1 ≈ 0.055 L/h ≈ **55 mL/h**
+              - ⚠️ The book previously printed "1000 ÷ (2 × serum [Na])" here. That has **no infusate term and no body-water term**, so it gives the same answer for 3% and 0.9% saline. It is not a valid formula
             - **Free H₂O deficit (L)** = (serum [Na] − 140) ÷ 140 × TBW
             - **FENa (fractional excretion of sodium)** = 100 × (urine Na × serum Cr) ÷ (serum Na × urine Cr)
+
+        - type: "prose"
+          title: "🛑 The formulas under-predict — measure, do not calculate"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            These predictive formulas **systematically underestimate the rise** and must
+            never replace serial sodium measurement.
+
+            For **severely symptomatic** hyponatraemia, practice has moved to **bolused 3%
+            saline** rather than a calculated infusion: **100 mL over 10 min, up to 3
+            times**, or **150 mL over 20 min** — targeting a **4–6 mEq/L rise in 1–2 h**,
+            with sodium checked **after each bolus** and then every 4–6 h.
+
+            **Correction limits: ≤ 10 mEq/L in 24 h and ≤ 18 mEq/L in 48 h** — and
+            **≤ 8 mEq/L in 24 h if the risk of osmotic demyelination is high**
+            (malnutrition, alcohol use, liver disease, hypokalaemia, Na < 105).
 
         - type: "prose"
           title: "Hyponatremia (Na < 135) — emergent management"
@@ -72,7 +94,12 @@ topic:
                     title: "NS 20 mL/kg bolus"
                 - label: "Yes — volume overloaded"
                   box:
-                    title: "Dopamine 2–5 mcg/min"
+                    title: "Vasopressor / inotrope — NOT dopamine"
+                    severity: "emergency"
+                    bullets:
+                      - "**Vasodilatory / distributive hypotension: norepinephrine 0.05–0.5 mcg/kg/min IV**, titrated to MAP (up to 1.0 mcg/kg/min if needed). It can run peripherally on a drop counter if there is no central line"
+                      - "**Pump failure with volume overload: dobutamine 2–20 mcg/kg/min**, ± norepinephrine"
+                      - "⚠️ The book printed **\"dopamine 2–5 mcg/min\"** here. That is missing its **/kg** — and even at 2–5 mcg/**kg**/min it is the discredited \"renal dose\", not a pressor dose. Dopamine also causes markedly more arrhythmia and higher mortality than norepinephrine, which is why this book prefers norepinephrine everywhere else"
                 - label: "No"
                   continue: true
             - decision: "Neurologic symptoms? (somnolence, convulsions, GCS < 9)"
@@ -87,7 +114,11 @@ topic:
                 - label: "No"
                   continue: true
           terminal:
-            title: "Correct Na no faster than 8 mEq/L/day and 0.5 mEq/L/hr"
+            title: "Correction limits"
+            bullets:
+              - "≤ 10 mEq/L in 24 h and ≤ 18 mEq/L in 48 h"
+              - "≤ 8 mEq/L in 24 h if osmotic-demyelination risk is high"
+              - "≤ 0.5 mEq/L/hr as a running rate"
 
     # ═══════════════════════ PAGE 141 ═══════════════════════
     - page_number: 141

@@ -48,11 +48,36 @@ topic:
         text: "Evaluation of SVT"
         shape: "stadium"
       stages:
-        - decision: "Is the patient stable?"
+        - decision: "Is the patient UNSTABLE? (hypotension, altered mental status, ischaemic chest pain, acute heart failure)"
           outcomes:
-            - label: "No"
+            - label: "Yes — unstable"
               box:
-                title: "Adenosine"
+                title: "IMMEDIATE synchronised cardioversion"
+                severity: "emergency"
+                bullets:
+                  - "**Adult: 50–100 J biphasic**, escalating if unsuccessful. **Child: 0.5–1 J/kg**, increasing to 2 J/kg"
+                  - "Sedate the conscious patient first"
+                  - "⚠️ First confirm the tachycardia is CAUSING the instability rather than responding to it — cardioverting a compensatory sinus tachycardia (sepsis, hypovolaemia) is harmful"
+                  - "Adenosine may be tried first ONLY if it does not delay cardioversion — regular narrow complex, IV access already in place"
+                  - "**If no synchronised cardioversion is available** — the realistic case here — run the drug pathway opposite AND arrange urgent transfer, in parallel"
+            - label: "No — stable"
+              continue: true
+        - decision: "Sinus tachycardia?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "Treat underlying cause"
+            - label: "No — regular narrow complex"
+              box:
+                title: "1. Vagal manoeuvres first"
+                bullets:
+                  - "**Modified Valsalva** — strain, then lay supine with passive leg raise. More effective than the standard Valsalva or carotid massage"
+              continue: true
+        - decision: "Still in SVT after vagal manoeuvres?"
+          outcomes:
+            - label: "Yes"
+              box:
+                title: "2. Adenosine"
                 bullets:
                   - "Give each dose as rapidly as possible"
                   - "Follow each dose immediately with a flush of 20 mL IV NS"
@@ -62,21 +87,19 @@ topic:
                   - "Wait 1–2 minutes"
                   - "No response — give 12 mg IV push (followed by NS flush)"
                   - "Do not use more than 3 doses"
-                  - "Note: electrical cardioversion per ACLS protocol is preferred for unstable patients if available"
-            - label: "Yes"
+                  - "Terminates AVNRT/AVRT in ~90–95%, with a very short half-life"
+            - label: "No"
               continue: true
-        - decision: "Sinus tachycardia?"
+        - decision: "Adenosine failed or contraindicated?"
           outcomes:
             - label: "Yes"
               box:
-                title: "Treat underlying cause"
-            - label: "No"
-              box:
-                title: "Beta blocker"
+                title: "3. IV rate-control drug, then 4. cardioversion"
                 bullets:
-                  - "Metoprolol tartrate 25 mg PO BD"
-                  - "Metoprolol succinate (metoprolol ER) 25 mg PO daily"
-                  - "Carvedilol 6.25 mg PO BD"
+                  - "IV diltiazem or verapamil, **or** an IV beta blocker"
+                  - "⚠️ **Avoid diltiazem and verapamil in suspected HFrEF**"
+                  - "Synchronised cardioversion (after sedation) if drugs fail or are contraindicated"
+            - label: "No"
               continue: true
         - decision: "Atrial fibrillation or atrial flutter?"
           outcomes:
@@ -84,6 +107,9 @@ topic:
               box:
                 title: "Rate control & anticoagulation"
                 bullets:
-                  - "Can consider digoxin for rate control"
-                  - "Needs anticoagulation"
-                  - "Warfarin 10 mg PO daily × 2 days, then base on INR (goal 2–3)"
+                  - "**Rate control: a beta blocker is first-line**, including in HFrEF. Digoxin is second-line — it controls rate at rest but poorly on exertion — and is best added to a beta blocker. **Avoid verapamil and diltiazem in HFrEF**"
+                  - "**Digoxin — load:** 0.5 mg PO then 0.25 mg q6–8h ×2 (total ~1–1.5 mg/24 h), or IV 0.25–0.5 mg then 0.25 mg q6h to ~0.75–1.5 mg/24 h. **Maintenance 0.0625–0.25 mg PO daily** (lower in the elderly and in renal impairment). Target level **0.5–0.9 ng/mL** — ≥ 1.2 is associated with increased mortality"
+                  - "**Before digoxin check renal function, K⁺, Mg²⁺ and Ca²⁺** — hypokalaemia and hypomagnesaemia potentiate toxicity. Monitor for nausea, visual change, arrhythmia"
+                  - "**Anticoagulate on CHA₂DS₂-VASc, not automatically: men ≥ 2, women ≥ 3.** A score of 1 (men) or 2 (women) is intermediate — shared decision. (European guidance uses the sex-independent CHA₂DS₂-VA: ≥ 2 anticoagulate, ≥ 1 consider)"
+                  - "🛑 **Warfarin: do NOT load.** Routine loading increases bleeding without faster protection. **Start 2.5 mg daily or lower in the older or frail adult.** First INR at **3–5 days**, then at least weekly until stable, then every 4–6 weeks (goal 2–3). The book previously printed 10 mg daily × 2 days"
+                  - "**Where INR monitoring is unreliable, warfarin is the wrong choice** — its benefit depends on time in therapeutic range. Prefer a DOAC if available; if neither is possible, **rate control alone is safer than unmonitored warfarin**. Aspirin is NOT an adequate substitute"
