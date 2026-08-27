@@ -160,3 +160,91 @@ antivenom is a significant intervention, and my impression is that guidelines di
    adrenaline be available once the infusion starts?
 4. Please confirm the correct paediatric prophylactic dose in **mg/kg**, so the book's
    0.005 mg/kg can be checked.
+
+---
+
+# CHAPTER 2 — DIAGNOSTIC APPROACH (5 topics, pp.41–46)
+
+✅ **No change needed.** All 5 topics were read. They carry clinical-reasoning content —
+IMCI stages, history, examination, laboratory investigations, differential diagnosis — with
+no dosing. The 2026-07 review added fast-breathing respiratory-rate thresholds, elevated
+the immunisation-status check, and required malaria confirmation by smear or RDT before
+treatment. Nothing here is stale or internally inconsistent.
+
+---
+
+# CHAPTER 3 — YOUNG INFANTS & NEONATES (24 topics, pp.47–76)
+
+**Overall: thoroughly reviewed and current.** The 2026-07 pass carries 2025 AHA/AAP and ERC
+guidance on cord milking, OMWaNA on kangaroo care, the CAP/FDA caffeine maintenance
+ceiling, 2022 WHO chlorhexidine cord care, and — importantly — **it already avoids
+ceftriaxone in neonates on the meningitis page**, preferring cefotaxime because of bilirubin
+displacement and calcium precipitation. Every dose across all 24 topics was extracted and
+checked; the neonatal drug table's per-kg figures reconcile with its volume columns, and
+the day-1 fluid figures that look contradictory are in fact correctly separated (the table
+is for term / low-birth-weight infants, the 80–90 ml/kg figure is flagged as **very**
+preterm / VLBW).
+
+**Two items need OE, and they are the same drug.**
+
+## 3-1 🔴 The same eye infection is given two different ceftriaxone maximums
+
+**Verbatim, as printed.** The neonatal conjunctivitis page:
+> *"Give **ceftriaxone 25–50 mg/kg (maximum 250 mg)** IM/IV as a single dose."*
+
+The neonatal drug-dose table, a few pages later, under ceftriaxone:
+> *"**Pus from eye: 50 mg/kg IM once (max 125 mg)**"*
+
+**The concern.** One book, one indication — gonococcal ophthalmia in a newborn — and two
+maximum doses that differ twofold. A 4 kg baby at 50 mg/kg is 200 mg: allowed by one page,
+above the cap on the other. Whichever page the clinician happens to open decides the dose.
+
+**Questions.**
+1. What is the correct single-dose ceftriaxone **maximum** for gonococcal ophthalmia
+   neonatorum? Please give it in mg on its own line.
+2. What is the correct **mg/kg** figure — 25–50 mg/kg, or a flat 50 mg/kg? Standalone line.
+3. Does the maximum differ between **prophylaxis** and **treatment** of eye infection, and
+   is that the origin of the two figures?
+
+## 3-2 🟡 Ceftriaxone is avoided in neonates on one page and given to them on another
+
+**The concern.** The neonatal **meningitis** page states plainly that ceftriaxone should be
+avoided in neonates — bilirubin displacement and calcium precipitation — and directs the
+reader to cefotaxime instead. The neonatal **conjunctivitis** page then gives *ceftriaxone*
+as the first choice, with cefotaxime 100 mg/kg only as the alternative. Both pages are
+about newborns, in the same chapter.
+
+I can see a defensible reason — a single small IM dose is not the same exposure as a
+meningitis course — but the book does not say that, so the two pages simply read as
+contradicting each other.
+
+**Questions.**
+1. Is a **single** IM dose of ceftriaxone acceptable in a neonate for gonococcal
+   ophthalmia, despite the general caution? Yes or no on its own line.
+2. Does the answer change in a **jaundiced** neonate, or one receiving **calcium-containing
+   fluids**? Please answer each separately.
+3. If ceftriaxone must be avoided in those infants, is **cefotaxime 100 mg/kg** the right
+   substitute and is one dose sufficient?
+4. What one sentence should the conjunctivitis page carry so it does not read as
+   contradicting the meningitis page?
+
+## 3-3 🟡 The book uses three different hypoglycaemia thresholds — is the neonatal one current?
+
+**Verbatim, as printed**, across the book:
+- Young-infant danger signs: *"**< 2.2 mmol/L (< 40 mg/100 ml)**, give 10% glucose 2 ml/kg IV"*
+- Chart 10 (children): *"**< 2.5 mmol/L (45 mg/dL)**, or **< 3 mmol/L** in a severely malnourished child"*
+- Severe malaria: *"blood glucose **< 2.5 mmol/L**"*
+
+**The concern.** Three thresholds is defensible if they are genuinely age- and
+context-specific, and the malnutrition one clearly is. But **2.2 mmol/L for a neonate is
+lower than the operational threshold I have seen used** in neonatal practice, and it is the
+lowest number in the book applied to the most vulnerable patients.
+
+**Questions.**
+1. What is the current **operational threshold for treating hypoglycaemia in a neonate**?
+   Give the figure in mmol/L on its own line.
+2. Does it differ in the **first 48 hours** versus later, or for **at-risk** infants
+   (small-for-gestational-age, infant of a diabetic mother, preterm)? Please give each as a
+   standalone line.
+3. The book gives neonates **2 ml/kg** of 10% glucose and older children **5 ml/kg**. Is
+   that difference correct, and is 2 ml/kg the right neonatal bolus?
