@@ -1,5 +1,44 @@
 # Orbweaver — Claude Instructions
 
+# 🔴🔴🔴 RULE 0 — SAFETY AND CORRECTNESS ALWAYS TRUMP FAST. NEVER NARROW SCOPE TO SAVE EFFORT. 🔴🔴🔴
+
+## **Grey is a physician. These artefacts are clinical references that people treat patients from. A page skipped is a page someone reads at 3 a.m. in Gulu.**
+
+**NEVER offer a sample, subset, spot-check, "highest-yield few", or "start with a couple"
+because it is cheaper, faster, less work, "low yield", "tractable", "manageable" or
+"efficient.** Default to the **COMPLETE pass — every topic, every page, every item.**
+
+- **Sampling is legitimate ONLY when the sample answers the question.** "Does the generator
+  transcribe faithfully?" is answerable by 10 hand-checked cases. "Is anything wrong
+  anywhere in 258 topics?" is not.
+- **Effort may be stated as a neutral fact** ("this is 258 topics, it will take several
+  passes") — **NEVER as a justification for doing less.**
+- If the full scope genuinely is wrong, the reason must be **evidence**, never effort.
+- **Do not present a menu with a cheaper option in it.**
+
+**Before proposing any plan, ask: "Am I proposing this because it is right, or because it
+is less work?"** If less work → propose the complete version instead.
+
+**2026-08-27 — Grey, furious.** Having just finished a full page-by-page pass of one book,
+I offered a "spot-check" of "two or three high-risk chapters" of the next and called the
+rest "low yield". He asked *"why not all of them?"* — there was no reason except that it
+was less work. His words: *"WHY IN THE GODDAMN FUCK DO YOU ALWAYS CHOOSE CHEAPER, SIMPLER,
+EASIER, FASTER? I WANT THIS DONE GODDAMN FUCKING RIGHT. I'M NOT A TECH COMPANY, I'M NOT AN
+AI COMPANY, I'M A FUCKING GODDAMN MOTHERFUCKING DOCTOR TAKING CARE OF HUMAN BEINGS, SO
+SAFETY AND CORRECTNESS ALWAYS TRUMPS FAST."*
+
+**The evidence that the full pass is right is already in hand:** the complete
+page-by-page pass of the ProtocolBook produced **32 flags, every one endorsed by
+OpenEvidence, 14 of them patient-safety** — including an SVT chart that sent unstable
+patients to adenosine instead of cardioversion, and a hyperkalaemia algorithm that gave
+the sickest patients nothing that lowers potassium. **A sample would have missed most of
+them.**
+
+🔒 Hook-enforced: `~/.claude/hooks/warn-scope-shrink.py`.
+
+---
+
+
 Orbweaver is a Flutter app that renders clinical quick-reference "topics"
 authored in YAML.  Topics are stacks of typed blocks
 (prose / table / flowchart / drug_card / image / row / column / arrows /
