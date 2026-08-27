@@ -10,7 +10,7 @@ the formulary was checked entry-by-entry against the corrected chapter doses.
 
 ---
 
-# 🔴 F-1 The valaciclovir and aciclovir HSV doses appear to be crossed
+# ✅ F-1 ANSWERED AND APPLIED — the rows were crossed, as suspected
 
 **Verbatim, as printed.**
 
@@ -41,14 +41,35 @@ the formulary was checked entry-by-entry against the corrected chapter doses.
 
 ---
 
-# 🟢 F-2 DECIDED — extend the formulary. Dosing request for OE below.
+# ✅ F-2 ANSWERED AND APPLIED — 18 entries added, formulary now 102 drugs
 
 **Grey's decision, 2026-08-27: extend the formulary to cover every drug the protocols
 prescribe.** The reader's expectation is right — a dose given in a protocol should be
 findable in the drug list. Additions are a deliberate departure from the printed
 "Essential Medications" list and should be marked as such.
 
-**Doses to come from OE, not from me.** The request below is written to be pasted whole.
+**OE supplied the doses; all 18 are in.** The request that produced them is kept below.
+
+**Applied 2026-08-27.** Each new entry carries `page: null` — they are not on a printed
+page — and opens with *"Not on the printed Essential Medications list — added because the
+protocols prescribe it."*
+
+**F-1 outcome:** OE confirmed the crossing. *"400 mg PO TID is not a valaciclovir dose for
+any indication — it is aciclovir's."* The valaciclovir entry now reads **1 g BD (initial
+genital HSV), 500 mg BD × 3 days (recurrence), 500 mg BD (HIV), 1 g TID (zoster), children
+20 mg/kg/dose BD–TID max 1 g**. Aciclovir keeps 400 mg TID for HSV and the corrected
+800 mg five-times-daily for zoster.
+
+**Two things OE flagged that are now in the entries:**
+- **Ticagrelor and the DOACs are marked as often unavailable at district level**, each
+  naming its stocked substitute, so the formulary does not imply routine access.
+- **Dopamine is retained only as an explicitly labelled fallback**, consistent with the
+  book's stated preference for norepinephrine.
+
+**Open, low priority:** OE offered to re-source norepinephrine, dobutamine, insulin and
+calcium gluconate to primary references rather than cross-referencing the book's own
+algorithms. Their doses match what the corrected chapters already use, so this is a
+consistency nicety rather than a correction.
 
 ---
 

@@ -90,6 +90,22 @@ formulary:
         - HSV: 400 mg PO TID
         - VZV (zoster): **800 mg PO five times daily** — aciclovir's poor oral bioavailability is why it is not dosed like valaciclovir
 
+    - id: "adenosine"
+      name: "Adenosine"
+      class: "antiarrhythmic"
+      dose: |
+        **Stable** regular narrow-complex SVT — after vagal manoeuvres.
+
+        **Children:** 0.1 mg/kg rapid IV push (max 6 mg); if no response 0.2 mg/kg (max 12 mg)
+
+        **Adults:** 6 mg rapid IV push + 20 mL flush; if no response 12 mg; may repeat 12 mg. **Max 3 doses**
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        Give as fast as possible into a proximal vein with an immediate flush; warn the
+        patient about transient chest tightness and flushing.
+        🛑 **For an UNSTABLE patient, synchronised cardioversion — not adenosine.**
+        Caution in asthma (bronchospasm) and in known WPW with an irregular wide-complex rhythm.
+
     - id: "albendazole"
       name: "Albendazole"
       class: ""
@@ -97,6 +113,22 @@ formulary:
       dose: |
         - Age < 2 yrs: 200 mg PO × 1 dose
         - Age ≥ 2 yr: 400 mg PO × 1 dose
+
+    - id: "alteplase"
+      name: "Alteplase (rt-PA)"
+      class: "thrombolytic"
+      dose: |
+        **High-risk (massive) PE — adults:** **100 mg IV over 2 hours**
+        - Peri-arrest / cardiac arrest: **0.6 mg/kg over ~15 min (max 50 mg)**
+        - A 50 mg regimen has similar efficacy with less bleeding (evidence for full equivalence is limited)
+
+        ⚠️ **The PE regimen is NOT the STEMI regimen** — do not carry a STEMI infusion schedule across.
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        Same absolute contraindications as the other lytics. **Unfractionated heparin may
+        run during the alteplase infusion** (unlike streptokinase).
+        Often unavailable or unaffordable at district level — **streptokinase or
+        tenecteplase are the realistic substitutes.**
 
     - id: "aminophylline"
       name: "Aminophylline"
@@ -165,6 +197,21 @@ formulary:
         - IV push: over 3–5 min
         - IV infusion: over 15–30 min
 
+    - id: "apixaban"
+      name: "Apixaban"
+      class: "anticoagulant"
+      dose: |
+        **VTE treatment — adults:** 10 mg PO BD × 7 days, then **5 mg PO BD**
+        - Extended prophylaxis after ≥ 6 months, if continued: 2.5 mg BD
+        - **No parenteral lead-in required**
+
+        **Children:** specialist-directed only
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        Duration ≥ 3 months. Preferred DOAC where bleeding risk is a concern (lowest GI
+        bleeding of the DOACs). Avoid in pregnancy and severe hepatic impairment.
+        Availability variable at district level.
+
     - id: "artesunate"
       name: "Artesunate"
       class: ""
@@ -213,6 +260,22 @@ formulary:
         - 100 mg Ca carbonate = 40 mg elemental Ca = 2 mEq Ca
         - **Ca gluconate 10%:** max dose 20 mL/kg, max dose 2 g
 
+    - id: "calcium-gluconate"
+      name: "Calcium Gluconate 10%"
+      class: "electrolyte"
+      dose: |
+        **Hyperkalaemia with ECG changes.**
+
+        **Children:** 0.5 mL/kg slow IV over 2–3 min with cardiac monitoring; repeat every 5 min until the ECG improves
+
+        **Adults:** 10 mL of 10% IV over 2–3 min; repeat every 5 min until the ECG improves
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        🛑 **It does NOT lower serum potassium** — it stabilises the myocardium for
+        30–60 min. **Always give alongside insulin/glucose ± salbutamol.**
+        Extravasation causes tissue necrosis. Give slowly and diluted in digoxin toxicity.
+        **Do not mix with bicarbonate** (precipitates).
+
     - id: "captopril"
       name: "Captopril"
       class: ""
@@ -256,6 +319,22 @@ formulary:
         - Adults: 3.125 mg PO q12hr, max 25 mg PO q12hr
       notes: |
         Titrate every 2 weeks.
+
+    - id: "cefixime"
+      name: "Cefixime"
+      class: "antibiotic"
+      dose: |
+        **Gonorrhoea — only where ceftriaxone is unavailable.**
+
+        **Adults:** 800 mg PO single dose (urogenital or rectal only)
+
+        **Children:** 8 mg/kg/day PO; ≥ 45 kg use the adult 800 mg single dose
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        🛑 **Unreliable for pharyngeal gonorrhoea — only ceftriaxone covers the pharynx.**
+        Arrange a test of cure if it is used. Second-line only, because of declining
+        cephalosporin susceptibility. If neither ceftriaxone nor cefixime is available:
+        gentamicin 240 mg IM + azithromycin 2 g PO.
 
     - id: "cefotaxime"
       name: "Cefotaxime"
@@ -325,6 +404,22 @@ formulary:
       dose: |
         - Children: 10 mg/kg/dose BD
         - Adults: 500 mg PO BD
+
+    - id: "clopidogrel"
+      name: "Clopidogrel"
+      class: "antiplatelet"
+      dose: |
+        **ACS with fibrinolysis:**
+        - **Age ≤ 75: 300 mg PO loading, then 75 mg daily**
+        - **Age > 75: NO loading dose — 75 mg daily** (excess intracranial haemorrhage)
+
+        **ACS without fibrinolysis:** 300–600 mg loading, then 75 mg daily
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        Typically 12 months of dual antiplatelet therapy. The age-75 no-load rule is
+        **specific to fibrinolysis-treated patients**. Hold ~5 days before major surgery
+        or CABG. **This is the only evidence-based P2Y₁₂ inhibitor to combine with a
+        fibrinolytic.**
 
     - id: "clotrimazole"
       name: "Clotrimazole"
@@ -446,6 +541,53 @@ formulary:
       notes: |
         Titrate maintenance dose every 2 weeks.
 
+    - id: "dobutamine"
+      name: "Dobutamine"
+      class: "vasoactive"
+      dose: |
+        **Pump failure with volume overload / cardiogenic shock.**
+
+        **Children and adults:** 2–20 mcg/kg/min IV, titrated — often combined with
+        norepinephrine when the patient is hypotensive
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        Can **worsen** hypotension (β₂ vasodilatation) and provoke tachyarrhythmia —
+        monitor rhythm and blood pressure. Not a sole agent in frank hypotension.
+        Availability variable at district level.
+
+    - id: "dopamine"
+      name: "Dopamine"
+      class: "vasoactive"
+      dose: |
+        🛑 **Fallback only — use norepinephrine first.**
+
+        **Children and adults:** 5–20 mcg/kg/min IV
+
+        ⚠️ 2–5 mcg/kg/min is the old "renal dose" and is **not** a pressor dose — do not
+        rely on it for hypotension. **Always per kilogram.**
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        More arrhythmia and higher mortality than norepinephrine. Keep only as the
+        substitute where norepinephrine is out of stock, and **transition as soon as it is
+        available**. Widely available, which is why it persists.
+
+    - id: "doxycycline"
+      name: "Doxycycline"
+      class: "antibiotic"
+      dose: |
+        **Chlamydia — adults:** 100 mg PO BD × 7 days (21 days for LGV / proctitis)
+
+        **Pelvic inflammatory disease — adults:** 100 mg PO/IV BD × 14 days, with
+        ceftriaxone + metronidazole
+
+        **Children ≥ 8 y or > 45 kg:** 100 mg PO BD. Under 8 y — prefer azithromycin
+        where an alternative exists
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        🛑 **Contraindicated in pregnancy** — use azithromycin for chlamydia and an
+        alternative PID regimen. Take with water, sitting upright, to avoid oesophagitis.
+        **First-line for chlamydia in non-pregnant patients.**
+
     - id: "enoxaparin"
       name: "Enoxaparin"
       class: ""
@@ -507,6 +649,24 @@ formulary:
         **Oesophageal candidiasis:**
         - Children: 6 mg/kg/dose PO × 1, then 3–6 mg/kg/dose PO daily × 14–21 days
         - Adult: 400 mg PO × 1, then 150–200 mg PO QD × 14–21 days
+
+    - id: "flucytosine"
+      name: "Flucytosine (5-FC)"
+      class: "antifungal"
+      dose: |
+        **Cryptococcal meningitis induction**, with amphotericin B and fluconazole.
+
+        **Children and adults:** **25 mg/kg/dose PO four times daily (100 mg/kg/day)**
+
+        Duration: **14 days** with the single-dose liposomal amphotericin B 10 mg/kg
+        regimen, or **7 days** with the amphotericin B deoxycholate 1-week regimen
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        **Dose-dependent bone-marrow suppression** — check FBC; interrupt or reduce for
+        neutropenia or thrombocytopenia. Renally cleared — reduce in renal impairment.
+        Historically scarce in sub-Saharan Africa but increasingly available through
+        cryptococcal-meningitis access programmes — **it should be actively procured**,
+        because induction without it is inferior.
 
     - id: "folic-acid"
       name: "Folic Acid / Folate"
@@ -636,6 +796,24 @@ formulary:
 
         Do not give in cases of renal disease. Give with food when possible.
 
+    - id: "insulin-soluble"
+      name: "Insulin (soluble / regular)"
+      class: "endocrine"
+      dose: |
+        **DKA — children:** 0.05–0.1 unit/kg/hr IV infusion (**no bolus in children**)
+        **DKA — adults:** 0.1 unit/kg/hr IV infusion (a 0.1 unit/kg bolus is optional)
+        - Once glucose ~11–14 mmol/L, **reduce to 0.02–0.05 unit/kg/hr and add dextrose**; continue until the anion gap closes
+
+        **Hyperkalaemia — children:** 0.05–0.1 unit/kg IV with glucose 0.5 g/kg
+        **Hyperkalaemia — adults:** 10 units IV with 25 g glucose (50 mL of 50%)
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        🛑 **Delayed hypoglycaemia** — check glucose **at least hourly for 6 hours** after
+        a hyperkalaemia dose.
+        In DKA, **do not stop the infusion for hyperglycaemia correction alone** — add
+        dextrose instead — and **replace potassium first if K⁺ < 3.3**.
+        Requires a cold chain.
+
     - id: "iron"
       name: "Iron"
       class: ""
@@ -658,6 +836,26 @@ formulary:
       dose: |
         - Children: 10 mg/kg PO QD
         - Adults: 5 mg/kg PO QD
+
+    - id: "itraconazole"
+      name: "Itraconazole"
+      class: "antifungal"
+      dose: |
+        **Disseminated histoplasmosis.**
+
+        **Adults:** 200 mg PO TID × 3 days (loading), then **200 mg PO BD**
+        **Children:** 5 mg/kg/dose PO TID × 3 days, then 5 mg/kg/dose BD (max 400 mg/day)
+
+        Duration **≥ 12 months** — stop only with > 12 months of therapy, ≥ 6 months on ART
+        with **CD4 ≥ 150**, negative fungal cultures, undetectable viral load, and
+        *Histoplasma* antigen below threshold
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        **Erratic absorption** — give capsules with food or an acidic drink; avoid acid
+        suppressants. Check the level where possible (**target 1–2 µg/mL**).
+        Strong CYP3A4 interactions (efavirenz, rilpivirine, rifampicin) — 🛑 **rifabutin
+        lowers itraconazole levels and has no role in histoplasmosis.**
+        **Negative inotrope — avoid in heart failure.**
 
     - id: "lactulose"
       name: "Lactulose"
@@ -717,6 +915,27 @@ formulary:
       notes: |
         - Infants / Children max: initial 12.5 mg/day, maintenance 150 mg/day
         - Adult max: 150 mg/day
+
+    - id: "magnesium-sulfate"
+      name: "Magnesium Sulfate"
+      class: "electrolyte"
+      dose: |
+        **Symptomatic hypomagnesaemia — children:** 25–50 mg/kg IV (max 2 g) over 15–60 min
+        **Symptomatic hypomagnesaemia — adults:** 1–2 g IV over 15–60 min, then a slower
+        continuous infusion
+
+        **Severe asthma — children:** 25–50 mg/kg IV (max 2 g) over 20 min
+        **Severe asthma — adults:** 1.2–2 g IV over 20 min, single dose
+
+        **Eclampsia — adults:** loading 4–6 g IV over 15–20 min, then 1–2 g/hr; continue
+        24 h after the last seizure or delivery
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        **Repeat on the level, not the clock.** Before each further dose check **deep
+        tendon reflexes** (loss = toxicity), **respiratory rate, blood pressure, urine
+        output and renal function**.
+        **IV rate ≤ 150 mg/min except in eclamptic seizures.**
+        Max ~30–40 g/24 h with normal renal function; ~20 g/48 h in renal impairment.
 
     - id: "metronidazole"
       name: "Metronidazole"
@@ -808,6 +1027,22 @@ formulary:
         Adults: 0.4 mg SL q5min × 3 doses
       notes: |
         prn anginal pain.
+
+    - id: "norepinephrine"
+      name: "Norepinephrine (Noradrenaline)"
+      class: "vasoactive"
+      dose: |
+        **First-line vasopressor** for septic shock, cardiogenic shock, and hypotension in
+        acute hyponatraemia.
+
+        **Children:** 0.05–0.1 mcg/kg/min IV, titrated (up to ~1 mcg/kg/min)
+        **Adults:** 0.05–0.5 mcg/kg/min IV, titrated to MAP ≥ 65 (up to 1 mcg/kg/min)
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        Central line preferred; **may be run peripherally short-term** through a
+        well-sited cannula with vigilance for extravasation, which causes tissue necrosis.
+        **It can be delivered on a drop counter where there is no pump.**
+        Preferred over dopamine — less arrhythmia, lower mortality.
 
     - id: "nystatin"
       name: "Nystatin"
@@ -1035,6 +1270,22 @@ formulary:
         - Children: 15 mg/kg PO QD
         - Adults: 10 mg/kg PO QD
 
+    - id: "rivaroxaban"
+      name: "Rivaroxaban"
+      class: "anticoagulant"
+      dose: |
+        **VTE treatment — adults:** 15 mg PO BD × 21 days, then **20 mg PO once daily
+        (with food)**
+        - **No parenteral lead-in required**
+
+        **Children:** specialist-directed only
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        Duration ≥ 3 months; longer if unprovoked or the risk persists. Avoid if
+        CrCl < 15 mL/min, in significant liver disease, and in pregnancy. No routine
+        monitoring — but **no reversal agent locally**.
+        If unavailable, warfarin **with mandatory LMWH overlap** is the fallback.
+
     - id: "salbutamol"
       name: "Salbutamol"
       class: ""
@@ -1050,6 +1301,25 @@ formulary:
         - > 20 kg: 8 puffs
       notes: |
         **DO NOT EVER GIVE ORALLY — not effective.**
+
+    - id: "streptokinase"
+      name: "Streptokinase"
+      class: "thrombolytic"
+      dose: |
+        **STEMI — adults:** 1.5 million IU IV over **60 minutes**
+
+        **High-risk PE — adults:** **250,000 IU IV over 30 min, then 100,000 IU/hr for
+        12–24 hours** (an accelerated 1.5 million IU over 2 h is also described)
+
+        ⚠️ **The PE regimen is a prolonged 12–24 h infusion, unlike the single STEMI
+        infusion** — this is the key difference on the shelf.
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        🛑 **Hold heparin during the streptokinase infusion**; start or resume once the
+        aPTT falls.
+        **Do not repeat** from about 5 days to 12 months after a previous dose
+        (neutralising antibodies). Hypotension during the infusion is common — slow the rate.
+        Usually the most commonly stocked lytic in this setting.
 
     - id: "sulphadoxine-pyrimethamine"
       name: "Sulphadoxine-pyrimethamine (SP)"
@@ -1074,18 +1344,54 @@ formulary:
       notes: |
         Max dose: 100 mg/day.
 
+    - id: "tenecteplase"
+      name: "Tenecteplase"
+      class: "thrombolytic"
+      dose: |
+        **STEMI — adults**, single IV bolus over 5 seconds, by weight:
+        - < 60 kg: 30 mg · 60–69 kg: 35 mg · 70–79 kg: 40 mg · 80–89 kg: 45 mg · ≥ 90 kg: 50 mg
+
+        **High-risk PE — adults:** the **same weight-banded bolus** (off-label for PE)
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        Absolute contraindications: prior intracranial haemorrhage, structural cerebral
+        lesion, ischaemic stroke within 3 months, active bleeding, suspected aortic
+        dissection.
+        **The bolus makes it ideal where infusion pumps are scarce.**
+
+    - id: "ticagrelor"
+      name: "Ticagrelor"
+      class: "antiplatelet"
+      dose: |
+        **NSTEMI NOT receiving fibrinolysis — adults:** 180 mg PO loading, then
+        **90 mg PO BD** (60 mg BD after 12 months if continued)
+      notes: |
+        ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
+        🛑 **Never combine with a fibrinolytic — use clopidogrel in lysed patients.**
+        Contraindicated after intracranial haemorrhage. Causes dyspnoea. Avoid aspirin
+        above 100 mg/day.
+        **Not on the WHO EML and often unavailable or unaffordable at district level —
+        clopidogrel is the practical substitute here.**
+
     - id: "valacyclovir"
       name: "Valacyclovir"
       class: ""
       page: 156
       dose: |
         **Children:**
-        - HSV: 1 g PO BD
+        - HSV: **20 mg/kg/dose PO BD–TID (max 1 g/dose)**
         - VZV: 20 mg/kg/dose PO TID
 
         **Adults:**
-        - HSV: 400 mg PO TID
-        - VZV: 1 g PO TID
+        - HSV, initial episode: **1 g PO BD × 7–10 days**
+        - HSV, recurrence: **500 mg PO BD × 3 days**
+        - HSV in HIV: 500 mg PO BD, 5–10 days
+        - VZV (zoster): 1 g PO TID × 7 days
+      notes: |
+        ⚠️ The book previously printed the adult HSV dose as **400 mg PO TID** — that is
+        **aciclovir's** regimen, not valaciclovir's — and put a flat adult **1 g PO BD** in
+        the children's row. The two rows were crossed with the aciclovir entry.
+        **The two drugs are not interchangeable at one dose.**
 
     - id: "valganciclovir"
       name: "Valganciclovir"

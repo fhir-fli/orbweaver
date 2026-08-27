@@ -14,10 +14,15 @@ void main() {
       final books = await loadLibrary();
       final pb = books.firstWhere((b) => b.id == 'protocolbook');
       final titles = pb.allTopics.map((t) => t.title).toList();
-      // 95 authored topic leaves + the Essential Medications formulary drugs
-      // (each drug loads as a synthetic searchable leaf).
-      expect(titles, hasLength(179));
+      // 95 authored topic leaves + the formulary drugs (each drug loads as a
+      // synthetic searchable leaf). 84 of the drugs are the printed Essential
+      // Medications list; 18 more were added on 2026-08-27 because the
+      // protocols prescribe them and the printed list did not carry them —
+      // see tool/protocolbook_formulary_flags.md.
+      expect(titles, hasLength(95 + 102));
       expect(titles, contains('Acyclovir'));
+      // one of the added entries, so this count cannot drift back silently
+      expect(titles, contains('Flucytosine (5-FC)'));
       expect(titles, contains('Epinephrine (Adrenaline)'));
       expect(titles, contains('Zinc Sulfate'));
       expect(
