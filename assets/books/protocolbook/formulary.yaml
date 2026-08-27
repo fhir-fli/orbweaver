@@ -88,7 +88,7 @@ formulary:
 
         **Adults:**
         - HSV: 400 mg PO TID
-        - VZV: 1 g PO TID
+        - VZV (zoster): **800 mg PO five times daily** — aciclovir's poor oral bioavailability is why it is not dosed like valaciclovir
 
     - id: "albendazole"
       name: "Albendazole"
@@ -141,7 +141,8 @@ formulary:
       page: 147
       dose: |
         **Children / Adults:**
-        - Liposomal amphotericin B: 4 mg/kg/day IV
+        - **Cryptococcal meningitis, preferred: liposomal amphotericin B 10 mg/kg IV as a SINGLE dose**, with flucytosine 100 mg/kg/day + fluconazole 1200 mg/day × 14 days
+        - Liposomal amphotericin B: 4 mg/kg/day IV (other indications)
         - Amphotericin B deoxycholate: 1 mg/kg/day IV
       notes: |
         Used with flucytosine.
@@ -455,7 +456,8 @@ formulary:
 
         **Adults:**
         - DVT prophylaxis: 40 mg SC OD
-        - Acute coronary syndrome treatment: 1 mg/kg SC q12hrs
+        - Acute coronary syndrome treatment: 1 mg/kg SC q12hrs (**under age 75**)
+        - **ACS at age ≥ 75 with fibrinolysis: NO IV bolus, 0.75 mg/kg SC q12hrs (max 75 mg for the first 2 doses)**
       notes: |
         Should not be given if CrCl < 30. For ACS: a 30 mg IV bolus is given 15 minutes before starting SC.
 
@@ -905,6 +907,9 @@ formulary:
       page: 155
       dose: |
         **Children:** 1 mEq/kg/dose
+        - **IV rate: 0.2 mEq/kg/hr without continuous cardiac monitoring.** 0.5–1 mEq/kg/hr is an ICU rate needing continuous ECG; 1 mEq/kg/hr is the absolute ceiling
+        - **Concentration: peripheral max 40 mEq/L; central up to 400 mEq/L** — above 40 must be central, and only for urgent life-threatening hypokalaemia under ICU-level care
+        - **Never give as a bolus**
 
         **Adults:**
         - Dose based on the level of hypokalemia
@@ -1015,7 +1020,7 @@ formulary:
       page: 156
       dose: |
         **Children:**
-        - Treatment: 15 mg/kg PO QD
+        - Treatment: 10–20 mg/kg PO QD — **maximum 300 mg/day**
         - Prophylaxis: 5 mg/kg PO QD
 
         **Adults:** 300 mg PO QD
@@ -1198,8 +1203,11 @@ formulary:
       class: ""
       page: 158
       dose: |
-        - Children: 0.2 mg/kg (max 10 mg) PO OD × 2 days
-        - Adults: 10 mg PO OD × 2 days
+        - **Do NOT load.** Routine loading increases bleeding without faster protection
+        - Adults: **start 5 mg PO OD; 2.5 mg or less if older, frail, malnourished, or with liver disease**
+        - Children: 0.2 mg/kg (max 10 mg) as a single first dose, then by INR
+        - **For VTE, overlap with LMWH or UFH for ≥ 5 days AND until INR ≥ 2 for 24 h** — warfarin alone from day 1 is inadequate
+        - First INR at 3–5 days, then at least weekly until stable. Goal 2–3
       notes: |
         Max 10 mg/dose.
 
