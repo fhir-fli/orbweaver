@@ -49,6 +49,8 @@ topic:
               - **Prefer oral whenever the gut works** — IV carries the higher risk of iatrogenic hyperkalaemia
               - **Rate — children: 0.2 mEq/kg/hr** without continuous cardiac monitoring. **0.5–1 mEq/kg/hr is an ICU rate** needing continuous ECG; 1 mEq/kg/hr is the ceiling under any circumstances. Adults: 10 mEq/hr
               - **Concentration — peripheral line max 40 mEq/L; central line up to 400 mEq/L.** Anything above 40 mEq/L must be central
+              - 🛑 **The 400 mEq/L / 40 mEq/hr regimen is for URGENT, life-threatening hypokalaemia only** — and it presupposes **ICU-level care with continuous ECG**. It is not a ward regimen
+              - **Routine ceiling: 10 mEq/hr, 200 mEq/24 h, at ≤ 40 mEq/L**
               - ⚠️ At 40 mEq/L a 20 kg child at 1 mEq/kg/hr would need **500 mL/hr** — undeliverable. Either slow the rate or use a central line
               - **Monitoring:** continuous ECG at rapid rates, serum K⁺ every 1–2 h during active repletion. **Never bolus**
             - **PO potassium:**
@@ -68,7 +70,7 @@ topic:
         - type: "prose"
           title: "Magnesium (often accompanies hypokalemia)"
           markdown: |
-            - Unstable or symptomatic & magnesium < 1: magnesium sulfate **1–2 g IV over 15–60 min**, then a **slower continuous infusion** (children 25–50 mg/kg) — a rapid bolus is largely excreted in the urine
+            - Unstable or symptomatic & magnesium < 1: magnesium sulfate **1–2 g IV over 15–60 min**, then a **slower continuous infusion** (children 25–50 mg/kg) — a rapid bolus is largely excreted in the urine. **Outside eclampsia, do not exceed 150 mg/min**
             - **Repeat on the level, not on the clock.** Before each further dose check **serum magnesium · renal function and urine output · deep tendon reflexes** (loss means hypermagnesaemia) **· respiratory rate and blood pressure**
             - **Maximum ~30–40 g/24 h** in an adult with normal renal function; **much less in renal impairment (~20 g/48 h)** — magnesium is renally cleared and accumulates
             - **Also check and replace potassium and calcium** — hypomagnesaemia causes refractory hypokalaemia and hypocalcaemia

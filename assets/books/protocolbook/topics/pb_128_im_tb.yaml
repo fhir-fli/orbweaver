@@ -290,11 +290,19 @@ topic:
 
         - type: "prose"
           markdown: |
+            **Reconcile these counts against the FDC actually stocked.** RH tablet strengths
+            vary between national programmes, and some tables use a different count or a
+            fourth band above 70 kg. The intensive-phase bands (2/3/4/5 of RHZE
+            150/75/400/275) are the standard WHO ones.
+
+        - type: "prose"
+          markdown: |
             **LFT monitoring:** if liver tenderness, hepatomegaly or jaundice, recheck LFTs.
 
             **The stopping threshold depends on symptoms:**
             - **Asymptomatic → stop at ALT ≥ 5 × upper limit of normal**
-            - **Symptomatic** (nausea, vomiting, right-upper-quadrant pain, jaundice) **→ stop at ALT ≥ 3 × ULN** — or ALT ≥ 3 × ULN with bilirubin > 2 × ULN even without symptoms
+            - **Symptomatic** (nausea, vomiting, right-upper-quadrant pain, jaundice) **→ stop at ALT ≥ 3 × ULN**
+            - 🛑 **The most dangerous combination on this page: ALT ≥ 3 × ULN WITH bilirubin > 2 × ULN — stop, symptoms or not.** This is Hy's-law territory and carries the highest risk of fatal drug-induced liver injury
 
             The baseline bar (3 × ULN) is lower than the asymptomatic on-treatment bar
             (5 × ULN) on purpose: a mild transaminase rise occurs in 5–30% of patients on
@@ -306,6 +314,11 @@ topic:
             2. **Isoniazid** after about a week if ALT is stable
             3. **Pyrazinamide last**, about a week later — or **omit it permanently** if the
                hepatitis was severe, extending treatment to 9 months
+
+            **The order varies between guidelines.** This sequence follows ATS/IDSA
+            (rifamycin first). WHO and many national programmes reintroduce **isoniazid
+            first, then rifampicin, then pyrazinamide**. **Either is acceptable**, provided
+            drugs are added **one at a time with LFTs checked before each addition**.
 
             In severe TB, cover the gap with a **non-hepatotoxic bridging regimen**
             (ethambutol + a fluoroquinolone ± an aminoglycoside or linezolid). Monitor ALT

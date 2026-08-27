@@ -69,7 +69,7 @@ topic:
             - cells: ["Lateral", "I, aVL", "LCx"]
             - cells: ["Inferior", "II, III, aVF", "RCA (85%), LCx (15%)"]
             - cells: ["RV", "V1–V2 & V4R", "Proximal RCA"]
-            - cells: ["Posterior", "ST depression V1–V2", "RCA or LCx"]
+            - cells: ["Posterior", "ST depression V1–V2 — **confirm with ST elevation ≥ 0.5 mm in V7–V9**", "RCA or LCx"]
 
         - type: "prose"
           title: "ST-Elevation MI (STEMI)"
@@ -108,6 +108,44 @@ topic:
           path: "assets/books/protocolbook/images/pb_ecg_ste_lbbb.png"
           size: "full"
           caption: "ST segment elevation in the setting of LBBB."
+
+        - type: "prose"
+          title: "🛑 STEMI in LBBB — a new LBBB is NOT automatically a STEMI"
+          callout: true
+          palette:
+            alert: "0xFFD32F2F"
+            alert_fill: "0xFFFDECEA"
+            alert_text: "0xFFB71C1C"
+          markdown: |
+            A new or presumed-new LBBB **no longer counts as a STEMI equivalent on its
+            own**. Apply the **Sgarbossa criteria** instead:
+
+            - **Concordant ST elevation ≥ 1 mm** in any lead — the most specific
+            - **Concordant ST depression ≥ 1 mm in V1–V3**
+            - **Excessively discordant ST elevation** — Smith-modified: **ST/S ratio ≤ −0.25**
+
+            **LBBB, RBBB or a paced rhythm with a high clinical suspicion of ongoing
+            ischaemia is a STEMI-equivalent** and should be triaged to reperfusion. This
+            matters here because the thrombolytic is on the shelf.
+
+        - type: "prose"
+          title: "Extra leads — record them before you decide"
+          markdown: |
+            - **Suspected INFERIOR STEMI (II, III, aVF) → record right-sided leads V3R–V4R.**
+              ST elevation in **V4R** means right ventricular infarction, which **changes
+              management: avoid nitrates, give fluids**
+            - **Suspected POSTERIOR MI → record posterior leads V7–V9.** ST elevation
+              **≥ 0.5 mm** confirms it. ST depression in V1–V2 on the standard 12-lead is
+              the cue, not the diagnosis
+            - Use them whenever symptoms are ongoing and the standard 12-lead is
+              inconclusive
+
+        - type: "prose"
+          title: "Before giving a thrombolytic — the ST-elevation mimics"
+          markdown: |
+            Not all ST elevation is ischaemic. Consider and exclude:
+            **early repolarisation · pericarditis · LVH · LBBB · hyperkalaemia.**
+            The pattern and the clinical picture, not the millimetres alone, decide.
 
         - type: "prose"
           title: "Non-STEMI (NSTEMI)"

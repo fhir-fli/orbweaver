@@ -114,7 +114,7 @@ topic:
           rows:
             - cells: ["**History**", "Highly suspicious", "2"]
             - cells: ["", "Moderately suspicious", "1"]
-            - cells: ["**ECG**", "Significant ST depression", "2"]
+            - cells: ["**ECG**", "Significant ST **deviation** — depression **or** elevation not attributable to LBBB, LVH or digoxin", "2"]
             - cells: ["", "Nonspecific repolarization abnormality", "1"]
             - cells: ["**Age**", "65 or older", "2"]
             - cells: ["", "45–65", "1"]
@@ -163,6 +163,19 @@ topic:
           title: "Likelihood of Coronary Artery Disease"
           markdown: |
             Pre-test probability by age, sex and pain type:
+
+            🛑 **This grid substantially OVERESTIMATES modern disease prevalence.** It is a
+            Diamond-Forrester-style table, and contemporary validation puts the true rate
+            far lower — in PROMISE, observed CAD ≥ 50% was **13.9% against a predicted
+            40.6%**, about a third of what the grid says; in a 3,903-patient cohort, 7%
+            actual against 31.4% predicted. **About half of "intermediate" patients
+            reclassify to low.**
+
+            **Read every figure here as an upper bound, and treat "intermediate" as
+            probably low.** As printed the table pushes patients toward more testing and
+            treatment than warranted — the opposite of what this setting needs. The 2019
+            ESC pre-test-probability table, or the CAD Consortium model, fits current
+            populations far better and carries a large "very low" group.
 
         - type: "table"
           columns: ["Age", "Sex", "Typical", "Atypical", "Non-Anginal"]

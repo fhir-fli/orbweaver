@@ -85,6 +85,22 @@ topic:
         **Acute:**
 
         - Enoxaparin 1 mg/kg subcutaneously q12hrs
-        - Unfractionated heparin IV 80 units/kg (5000 units max), then 18 units/kg/hr (1000 units max)
+        - Unfractionated heparin IV **80 units/kg bolus, then 18 units/kg/hr — titrated to aPTT / anti-Xa, NOT capped**
+          - 🛑 The book previously printed "5000 units max" and "1000 units/hr max". Those caps belong to the **fibrinolysis-associated** heparin on the ACS pages; they are **not part of the venous nomogram** and would **systematically underdose heavier patients** — an 80 kg patient needs ~1,440 units/hr, already above the printed hourly cap
 
-        **Chronic:** warfarin 10 mg PO daily × 2 days, then base on INR (goal 2–3).
+        **Chronic — a DOAC is first-line, not warfarin.** Guideline-preferred over a
+        vitamin-K antagonist in acute VTE without cancer: comparable efficacy, less major
+        and intracranial bleeding, and **no INR monitoring** — which matters most exactly
+        where monitoring is unreliable.
+
+        - **No parenteral lead-in needed:** **rivaroxaban 15 mg BD × 21 days, then 20 mg daily**; or **apixaban 10 mg BD × 7 days, then 5 mg BD**
+        - **Dabigatran and edoxaban DO need a 5–10 day parenteral lead-in**
+        - 🛑 **If only warfarin is available:** **do NOT load.** Start low (2.5 mg in the
+          older or frail), and **overlap with LMWH or UFH for at least 5 days AND until the
+          INR has been ≥ 2 for 24 hours** — warfarin alone from day 1 is inadequate because
+          of the early prothrombotic dip. Goal INR 2–3. The book previously printed
+          "warfarin 10 mg daily × 2 days" with no heparin overlap
+        - **Pregnancy and active cancer: LMWH is preferred**, not a DOAC or warfarin
+          (edoxaban or rivaroxaban are acceptable alternatives in cancer-associated VTE,
+          with caution for GI and GU bleeding)
+        - This now matches the atrial-fibrillation page, which was corrected the same way

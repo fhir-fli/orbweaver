@@ -45,14 +45,15 @@ topic:
         - type: "prose"
           title: "Lead placement"
           markdown: |
-            - **LA / RA:** placed mid-arm, lateral bicep, immediately below the V4 horizontal line
-            - **LL / RL:** limb (abdominal) leads, placed 7.5 cm below the umbilicus, on either side of the umbilical vertical line
+            - **LA / RA: wrists. LL / RL: ankles** — or at minimum on the limbs distal to the shoulders and hips. **This is the standard placement for a DIAGNOSTIC 12-lead**, and it is the placement all the criteria in this chapter assume
+            - ⚠️ **Torso (Mason-Likar) placement** — arms mid-arm at the lateral bicep, legs 7.5 cm below the umbilicus — **is for MONITORING**, or for recording during exercise or in the prone patient. It measurably alters limb-lead voltages and axis (most through the left-arm electrode) and can distort **LVH voltage criteria and inferior Q-waves / axis**, which are exactly the criteria used later in this chapter. The book previously printed these torso positions as the standard
             - **V1:** 4th ICS, just right of the sternum
             - **V2:** 4th ICS, just left of the sternum
             - **V3:** midway between V2 & V4
             - **V4:** midclavicular line, 5th ICS
             - **V5:** anterior axillary line, lateral to V4
             - **V6:** midaxillary line, lateral to V4 & V5
+            - ⚠️ **The commonest placement error is putting V1–V2 too high** — in the 2nd or 3rd interspace instead of the 4th. That produces **false poor R-wave progression or a pseudo-anterior-infarct pattern**
 
         - type: "image"
           path: "assets/books/protocolbook/images/pb_ecg_leads.png"
@@ -62,7 +63,7 @@ topic:
         - type: "prose"
           title: "Properly mounted?"
           markdown: |
-            - R waves in lead II should be the sum of the R waves in lead I and lead III
+            - **The amplitude of lead II equals the sum of leads I and III** (Einthoven's law). It applies to the **net deflection at any instant**, not to the R wave alone — written as "R in II = R in I + R in III" it will often appear not to hold on a real tracing
             - The sum of the waves in aVR, aVL & aVF should equal zero
 
         - type: "prose"

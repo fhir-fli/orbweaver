@@ -236,3 +236,23 @@ assume something may be sitting just underneath it.
 | **136** | PCP steroids if *"O₂ sat on room air is < 90%"* | **PaO₂ < 70 mmHg, or A-a gradient ≥ 35** — by oximetry, **SpO₂ ≤ 92%**. Start within 72 h of the first TMP-SMX dose |
 | **138** | Zoster **aciclovir "1 g PO TID"** — the valaciclovir dose | **800 mg five times daily.** The two drugs are not interchangeable at the same dose |
 | **125** | AF: *"Needs anticoagulation. Warfarin 10 mg PO daily x 2 days"* | Anticoagulate on **CHA₂DS₂-VASc (men ≥ 2, women ≥ 3)**. **No loading dose** — routine loading increases bleeding without faster protection; start **2.5 mg** in the older or frail. First INR at 3–5 days |
+
+---
+
+# 🟡 ADDED 2026-08-27 — from the pp.114–142 advance pass, part 2 (OE-confirmed)
+
+| Page | Printed | Should be |
+|---|---|---|
+| **114** | Limb leads *"mid-arm, lateral bicep"* and *"7.5 cm below the umbilicus"* | Those are **torso (Mason-Likar) monitoring positions**, not the standard diagnostic 12-lead. Standard is **wrists and ankles**. Torso placement alters limb-lead voltage and axis — mostly via the left arm — and distorts the **LVH voltage and inferior Q-wave/axis criteria this same chapter then uses** |
+| **114** | *"R waves in lead II should be the sum of the R waves in lead I and lead III"* | Einthoven's law applies to the **net deflection at any instant**, not the R wave: **the amplitude of lead II equals the sum of leads I and III**. As printed it will often appear not to hold |
+| **117** | **Complete AND incomplete LBBB both printed as "QRS 0.10–0.12 s"** | **Complete LBBB ≥ 0.12 s (120 ms); incomplete 110–120 ms.** The RBBB rows were already correct — only the LBBB pair is wrong |
+| **119–120** | LBBB example strips shown with **no rule for calling STEMI in LBBB** | A new LBBB is **no longer automatically a STEMI equivalent** — apply **Sgarbossa / modified Sgarbossa**. Decision-critical here, where the thrombolytic is on the shelf |
+| **119–120** | Inferior and posterior MI given standard 12-lead cues only | **Inferior → record V3R–V4R** (RV infarction changes management: no nitrates, give fluids). **Posterior → record V7–V9** (ST elevation ≥ 0.5 mm confirms) |
+| **122** | "Likelihood of Coronary Artery Disease" grid | A Diamond-Forrester-style table that **substantially overestimates** current prevalence — PROMISE observed 13.9% against 40.6% predicted; another cohort 7% against 31.4%. **About half of "intermediate" patients reclassify to low.** As printed it pushes toward more testing than warranted |
+| **122** | HEART score ECG row *"Significant ST depression"* | The validated criterion is significant ST **deviation** — depression **or** elevation not attributable to LBBB, LVH or digoxin |
+| **130** | DVT/PE *"warfarin 10 mg PO daily × 2 days"*, no DOAC, no heparin overlap | **A DOAC is first-line for VTE.** If warfarin is all there is: **no loading dose**, and **overlap with LMWH/UFH for ≥ 5 days AND until INR ≥ 2 for 24 h** — warfarin alone from day 1 is inadequate. This also contradicted the AF page, which was already corrected |
+| **130** | UFH *"80 units/kg (5000 units max), then 18 units/kg/hr (1000 units max)"* | **The caps are not part of the venous nomogram** — they belong to fibrinolysis-associated heparin on the ACS pages. They systematically underdose heavier patients (an 80 kg patient needs ~1,440 units/hr). Titrate to aPTT/anti-Xa, uncapped |
+| **134** | Herpes entry says treat *"any patient with zoster"* | This entry is **genital herpes (HSV)**, not herpes zoster (VZV) — a wording slip carried in from the VZV page |
+| **134** | Syphilis *"benzathine penicillin 1.2 million IU IM in each buttock"* | Correct in total but easy to misread — state **"2.4 million IU total (1.2 MU per buttock)"**. Note CDC uses a **1-year** cutoff for early syphilis where some programmes use 2 years |
+| **141** | Hypernatremia block ends with *"assume hypotonic hyponatremia"* | A **copy-paste carryover** from the hyponatraemia evaluation. Removed |
+| **142** | Central-line potassium *"up to 400 mEq/L"* stated without its condition | True, but the **400 mEq/L / 40 mEq/hr regimen is for urgent life-threatening hypokalaemia under ICU-level care with continuous ECG**. Routine ceiling is **10 mEq/hr, 200 mEq/24 h at ≤ 40 mEq/L** |

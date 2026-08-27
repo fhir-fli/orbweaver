@@ -17,11 +17,10 @@
 # CONTENT FLAGS for the later OE / content pass (rendered faithfully):
 #   - RBBB (rSR' in V1, wide slurred S in I/V6) and LBBB (loss of septal
 #     r in V1/q in V6, broad monophasic R in V6) criteria are standard.
-#   - The book states complete block "QRS 0.10–0.12 sec" and incomplete
-#     block "QRS 0.10–0.12 sec" identically for both RBBB and LBBB — as
-#     printed the complete/incomplete rows read the same duration range;
-#     transcribed faithfully (standard teaching: complete ≥ 0.12 s,
-#     incomplete 0.10–0.12 s). Flag for OE.
+#   - ✅ RESOLVED 2026-08-27 (OE): the book printed complete AND incomplete
+#     LBBB with the same "0.10-0.12 s" range. The RBBB rows were already
+#     correct. Corrected to complete >= 0.12 s (120 ms), incomplete
+#     110-120 ms. Source error - recorded in protocolbook_source_errata.md.
 # ============================================================
 
 topic:
@@ -58,8 +57,8 @@ topic:
         - Loss of initial r wave in V1 & q wave in V6
         - QS pattern in V1 (just downward deflecting, may be notched)
         - R pattern in V6 (just upward deflecting, may be notched)
-        - Complete LBBB: QRS 0.10–0.12 seconds with above pattern
-        - Incomplete LBBB: QRS 0.10–0.12 seconds with above pattern
+        - **Complete LBBB: QRS ≥ 0.12 seconds (≥ 120 ms)** with the above pattern
+        - **Incomplete LBBB: QRS 0.10–0.12 seconds (110–120 ms)** with the above pattern
 
     - type: "image"
       path: "assets/books/protocolbook/images/pb_ecg_conduction.png"

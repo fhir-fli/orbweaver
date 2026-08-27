@@ -186,5 +186,4 @@ topic:
             - Treatment:
               - Restore access to PO water (> 1 L/day)
               - Correct Na no faster than 10 mEq/L/day and 0.5 mEq/L/hr
-            - Assess if clinically logical; if not, consider confirming before managing
-            - Unless there is reason to suspect otherwise (extremely elevated glucose, mannitol, high serum protein — e.g. cancer), assume hypotonic hyponatremia
+            - ⚠️ Two lines that used to sit here — "assess if clinically logical" and "assume hypotonic hyponatremia" — belonged to the **hyponatraemia** evaluation above and were a copy-paste carryover. Removed
