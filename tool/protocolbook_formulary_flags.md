@@ -41,36 +41,68 @@ the formulary was checked entry-by-entry against the corrected chapter doses.
 
 ---
 
-# 🟡 F-2 Eighteen drugs the protocols prescribe are not in the formulary at all
+# 🟢 F-2 DECIDED — extend the formulary. Dosing request for OE below.
 
-**The finding.** The formulary is the drug reference this app offers, and a whole-book
-check found **18 drugs that the protocol pages give dosing for but that have no formulary
-entry**:
+**Grey's decision, 2026-08-27: extend the formulary to cover every drug the protocols
+prescribe.** The reader's expectation is right — a dose given in a protocol should be
+findable in the drug list. Additions are a deliberate departure from the printed
+"Essential Medications" list and should be marked as such.
 
-**flucytosine · itraconazole · doxycycline · cefixime · clopidogrel · ticagrelor ·
-tenecteplase · streptokinase · alteplase · adenosine · dopamine · norepinephrine ·
-dobutamine · insulin · magnesium · calcium gluconate · rivaroxaban · apixaban**
+**Doses to come from OE, not from me.** The request below is written to be pasted whole.
 
-Several of these are load-bearing for corrections just applied:
-- **Flucytosine** — the cryptococcal induction regimen now on p.136 depends on it
-- **Doxycycline** — now first-line for chlamydia
-- **Tenecteplase, streptokinase, alteplase** — the STEMI and the new high-risk-PE pathways
-- **Adenosine** — the corrected SVT algorithm
-- **Calcium gluconate, insulin, salbutamol** — the corrected hyperkalaemia algorithm
-- **Norepinephrine, dobutamine** — now the preferred pressors, replacing dopamine
+---
 
-**The question is one of scope, and it is Grey's, not mine.** The formulary reproduces the
-printed "Essential Medications" list, so adding entries is a deliberate departure from the
-print rather than a correction of it.
+## REQUEST — formulary entries for 18 drugs
 
-**Questions for Grey (not OE):**
-1. Should the formulary be **extended beyond the print** to cover every drug the protocols
-   prescribe? That is the reader's reasonable expectation — a dose given in a protocol
-   should be findable in the drug list.
-2. If yes, should the additions be marked as **not in the printed book**, the way other
-   evidence-driven departures are?
-3. If no, should the protocol pages instead carry a note that the formulary covers only
-   the printed essential-medicines list?
+**Setting: district hospital, Gulu, northern Uganda — low-resource, paediatric-heavy,
+malaria-endemic. Limited drug availability, no reliable dialysis, ICU monitoring not
+routinely available.**
+
+I am extending a pocket formulary so that every drug our protocols prescribe has an entry.
+For **each drug below**, please give, each on its own line:
+
+- **Paediatric dose** (mg/kg, with frequency and route) **and its maximum**
+- **Adult dose** (with frequency and route)
+- **Duration**, where the drug is given as a course
+- **The one monitoring requirement or contraindication** that most matters at the bedside
+- Whether it is on the **WHO Essential Medicines List**, and whether it is realistically
+  available at a district hospital in northern Uganda — if it usually is not, say so and
+  name the best substitute
+
+Where a drug has more than one indication in our book, please dose **each indication
+separately** — the indication we use it for is named in brackets.
+
+**Antimicrobials / antifungals**
+1. **Flucytosine** [cryptococcal meningitis induction, with amphotericin and fluconazole]
+2. **Itraconazole** [disseminated histoplasmosis — loading and maintenance]
+3. **Doxycycline** [chlamydia; pelvic inflammatory disease]
+4. **Cefixime** [gonorrhoea, only where ceftriaxone is unavailable]
+
+**Cardiac / antithrombotic**
+5. **Clopidogrel** [ACS, including with fibrinolysis — note the age-75 rule]
+6. **Ticagrelor** [NSTEMI not receiving fibrinolysis]
+7. **Tenecteplase** [STEMI; high-risk PE — please give both, and say if they differ]
+8. **Streptokinase** [STEMI; high-risk PE — both]
+9. **Alteplase** [high-risk PE, including the peri-arrest dose]
+10. **Adenosine** [stable regular narrow-complex SVT]
+11. **Rivaroxaban** [VTE treatment]
+12. **Apixaban** [VTE treatment]
+
+**Vasoactive / metabolic**
+13. **Norepinephrine** [septic shock; cardiogenic shock; hypotension in acute hyponatraemia]
+14. **Dobutamine** [pump failure with volume overload]
+15. **Dopamine** [retained only as the fallback where norepinephrine is unavailable — please
+    say plainly whether it should be kept in the formulary at all]
+16. **Insulin (soluble / regular)** [DKA, including the step-down rate; hyperkalaemia shifting]
+17. **Magnesium sulfate** [symptomatic hypomagnesaemia; please also give the severe-asthma
+    and eclampsia doses if they belong in a general formulary]
+18. **Calcium gluconate 10%** [hyperkalaemia with ECG changes]
+
+**Two general questions:**
+- For the **thrombolytics**, please state explicitly where the PE dose differs from the
+  STEMI dose, since we now carry both indications and the drugs sit on the same shelf.
+- For **rivaroxaban and apixaban**, please confirm which need a parenteral lead-in and
+  which do not, as that is the practical reason to prefer one here.
 
 ---
 
