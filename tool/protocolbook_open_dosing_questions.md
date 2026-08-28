@@ -100,3 +100,47 @@ from standard practice.
 
 **Q.** Confirm the heart-rate target to print for acute aortic dissection, and confirm
 that beta-blockade should precede the vasodilator.
+
+
+---
+
+# 🟡 2026-08-28 — PARTIAL ANSWERS RECEIVED, THE NUMBERS WERE LOST IN THE PASTE
+
+OE answered §J, §I1 and §I2. **Every figure in the reply was replaced by its citation
+marker**, so the prose survived and the numbers did not — e.g. *"print a ferritin cutoff
+of [1][2]"*, *"target heart rate [13][14][15]"*, *"SBP [14][16][13]"*. Nothing was
+guessed.
+
+## ✅ Applied — the parts that came through intact
+- **§J Q2:** inflammation = **CRP > 5 mg/L** (with AGP > 1 g/L, BRINDA). Where CRP is
+  unavailable — the usual case here — **assume inflammation and use the higher ferritin
+  cut-off for everyone**; the cost of over-treating is low against missing iron
+  deficiency in a malaria/HIV/TB population.
+- **§J Q3:** a **therapeutic iron trial is a defensible diagnosis** without iron studies.
+  Recheck Hb at 2–4 weeks; **≥ 1 g/dL by 2 weeks confirms** (sens 90%, spec 79% at day
+  14); **≥ 2 g/dL by 4 weeks** in a child with moderate anaemia; **reticulocytosis at
+  5–7 days** is earlier where available; no rise → non-adherence, malabsorption, ongoing
+  blood loss, or another cause; **3 months total** to replete stores.
+  → both applied to `pb_075_anaemia_workup`.
+- **§I1 Q4:** the **first-line drug choice does not change** with the target (thiazide or
+  CCB; ACE-I/ARB for diabetes or CKD). Nothing to edit — the page already says this.
+- **§I1 Q2:** the **age-split is dropped** in favour of one target for most adults. Cannot
+  apply without the number.
+- **§I2:** beta-blockade before the vasodilator is confirmed, and the SBP/HR structure is
+  confirmed. The page already prints SBP < 120 within the first hour and HR < 60 —
+  **left untouched**, because the reply's own figures were lost and changing a dissection
+  target on a guess is not acceptable.
+
+## 🛑 SEVEN NUMBERS STILL NEEDED — re-ask or re-paste without the citation markers
+1. Ferritin cut-off confirming iron deficiency **with no inflammation**
+2. Ferritin cut-off confirming iron deficiency **when inflammation is present**
+3. The **WHO adult** ferritin cut-off (given as context)
+4. The **transferrin-saturation** threshold that replaces or qualifies our bare 18%
+5. BP target for **most adults, including diabetes without CKD**
+6. BP target for **diabetes with high cardiovascular risk**, if safely tolerated
+7. BP target for **CKD**
+
+Plus §I1 Q3's explicit verdict — whether the lower target is still the right thing to
+print for a district hospital in northern Uganda — which was also cut off.
+
+§I2 needs nothing further unless the confirmed figures differ from HR < 60 / SBP < 120.

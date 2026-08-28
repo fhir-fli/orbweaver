@@ -66,6 +66,15 @@
 #   - B12 1–2 mg PO daily: valid alternative to IM (~1% of an oral
 #     dose is absorbed by passive diffusion without intrinsic factor).
 #   - Fe:TIBC 18% cut-off: simplified but clinically useful.
+# OpenEvidence-applied 2026-08-28 (§J, iron studies under inflammation):
+#   Added the CRP > 5 mg/L definition of inflammation, the assume-inflammation
+#   rule where CRP is unavailable, and the therapeutic-iron-trial criteria
+#   (>=1 g/dL at 2 wk, >=2 g/dL at 4 wk in moderate paediatric anaemia,
+#   retics at 5-7 d, 3 months total).
+#   🛑 STILL MISSING: the two FERRITIN CUT-OFFS themselves (no inflammation /
+#   inflammation present), the WHO adult cut-off, and the transferrin-saturation
+#   figure. Every one was eaten by a citation marker in the pasted reply and
+#   was NOT guessed. The table still prints the bare arrows and 18%.
 # ============================================================
 
 topic:
@@ -136,6 +145,24 @@ topic:
     - type: "prose"
       markdown: |
         Also consider a peripheral smear: basophilic stippling suggests thalassaemia or sideroblastic anaemia.
+
+    - type: "prose"
+      title: "Reading ferritin under inflammation"
+      highlight: true
+      markdown: |
+        Ferritin is an acute-phase reactant, so a "normal" ferritin does **not** exclude iron deficiency in a patient with malaria, HIV, TB or any acute febrile illness. **A higher ferritin cut-off applies when inflammation is present.**
+        - **Inflammation is defined as CRP > 5 mg/L** (with AGP > 1 g/L, per BRINDA)
+        - **Where CRP is unavailable — the usual case here — assume inflammation and apply the higher cut-off to everyone.** Malaria, HIV, TB and acute febrile illness are prevalent enough that most patients carry subclinical inflammation, and the cost of over-treating is low compared with missing iron deficiency
+
+    - type: "prose"
+      title: "No iron studies? Treat and recheck"
+      markdown: |
+        A **therapeutic trial of oral iron is a defensible way to diagnose iron deficiency** when iron studies are unavailable. Give a standard elemental iron dose (below) and **recheck haemoglobin at 2–4 weeks**.
+        - **A rise of ≥ 1 g/dL by 2 weeks confirms iron deficiency** — a ≥ 1.0 g/dL rise at day 14 predicts satisfactory overall response (sensitivity 90%, specificity 79%)
+        - In a child with **moderate anaemia**, expect **≥ 2 g/dL by 4 weeks**
+        - **Reticulocytosis at 5–7 days** is an earlier confirmatory sign where reticulocyte counts are available
+        - **If the rise does not happen**, reassess for non-adherence, malabsorption, ongoing blood loss, or another cause of anaemia
+        - Once haemoglobin normalises, **continue for a total of about 3 months** to replete stores
 
     - type: "prose"
       title: "Supplementation"
