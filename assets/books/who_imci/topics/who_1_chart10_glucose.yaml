@@ -89,10 +89,17 @@ topic:
         In a **neonate** the operational treatment threshold is
         **2.6 mmol/L (47 mg/dL)**, not the 2013 print's 2.2 mmol/L, which is
         lower than current guidance.
-        - **After 48 h of age:** target **> 3.3 mmol/L (60 mg/dL)**.
+        - **Symptomatic, any age — treat promptly at < 2.2 mmol/L
+          (40 mg/dL).**
+        - **Asymptomatic, at risk, first 48 h:** maintain **> 2.8 mmol/L
+          (50 mg/dL)** (PES). An infant who cannot hold that in the first
+          48 h **may have a disorder causing persistent hypoglycaemia**.
+          - AAP is staged more loosely over the same window: **> 2.2 mmol/L
+            (40 mg/dL) in the first 4 h** before a feed, **> 2.5 mmol/L
+            (45 mg/dL) from 4–24 h**.
+        - **After 48 h:** target **> 3.3 mmol/L (60 mg/dL)**.
         - **Suspected or confirmed persistent hypoglycaemia disorder**
           (e.g. hyperinsulinism): target **> 3.9 mmol/L (70 mg/dL)**.
-        - A **symptomatic** neonate is treated promptly at any age.
 
     - type: "prose"
       title: "After the bolus"

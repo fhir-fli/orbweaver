@@ -538,7 +538,24 @@ pass — the whole point of the cross-book flags.
 because the content changed, not because they were wrong:
 `library_test` 258 → 259 topics (Ch.9 = 34) and `who_chart10_test` 7 → 8 blocks.
 
-## ⚠️ Three figures were cut off in the pasted OE reply — not applied, not invented
+## ✅ RESOLVED 2026-08-28 — the two neonatal figures came from OE's Figure 2
+
+Grey supplied the PES/AAP figure. The missing numbers were:
+- **Symptomatic neonate, any age: treat at < 2.2 mmol/L (40 mg/dL)** (AAP).
+- **Asymptomatic at-risk, first 48 h: maintain > 2.8 mmol/L (50 mg/dL)** (PES); an
+  infant who cannot hold that may have a disorder causing persistent hypoglycaemia.
+  AAP stages the same window as > 2.2 (40 mg/dL) in the first 4 h before a feed and
+  > 2.5 (45 mg/dL) from 4–24 h.
+
+Both are now on Chart 10's "Neonatal thresholds" block alongside the > 3.3 and > 3.9
+targets. The **NAC stopping criteria** were never actually missing — both books
+already carried them in full.
+
+The Cochrane forest plot Grey also supplied (Premawardhena 1999, adrenaline vs
+placebo, any allergic reaction **RR 0.25 [0.11, 0.57]**) is carried as the number in
+`who_1_09_1_snake_bite`, not as an image.
+
+## ⚠️ Superseded — the three figures that were cut off in the pasted OE reply
 
 1. **3-3**, first-48-h transitional threshold: *"treat if ___"* — the number is
    missing from the paste. The page carries the 2.6 mmol/L operational threshold
