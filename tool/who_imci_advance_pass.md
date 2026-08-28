@@ -314,3 +314,90 @@ also gives **ceftriaxone 100 mg/kg to neonates and young infants** for suspected
 while the neonatal meningitis page avoids ceftriaxone in neonates entirely. That is now the
 **third** page in the book giving a neonate ceftriaxone against that caution. Whatever OE
 answers for 3-2 should be applied to all three.
+
+---
+
+# CHAPTER 6 — FEVER (25 topics, pp.149–196)
+
+**Overall: strong.** Weight-based artesunate (3 mg/kg under 20 kg, 2.4 mg/kg at or above),
+the full ACT list with per-drug targets, quinine with its rate ceiling and never-as-a-bolus
+warning, CrAg LFA preferred over India ink, naproxen preferred over aspirin in rheumatic
+fever, high-dose amoxicillin for otitis with a watchful-waiting option, and the AMBITION
+single-dose option already named in the cryptococcal topic. Every dose in all 25 topics was
+extracted and checked.
+
+**Three items need OE. Two are differences with the other book in this app, on the same
+diseases.**
+
+## 6-1 🔴 TB meningitis steroids: this book and the other give different doses AND durations
+
+**Verbatim, as printed here** (§6.3.3): *"**Dexamethasone 0.6 mg/kg/day for 2–3 weeks**
+(then reduce over a further 2–3 weeks) in **all** cases of TB meningitis, with either
+regimen."*
+
+**The other book in this app**, following an OpenEvidence answer applied on 2026-08-27:
+*"dexamethasone **0.3–0.4 mg/kg/day IV** for grade II/III disease, tapering weekly, **total
+6–8 weeks**."*
+
+So one book starts at roughly **double** the dose of the other and runs a **shorter** total
+course.
+
+**The likely explanation is age** — 0.3–0.4 mg/kg/day is the figure I associate with the
+adult trial regimen, and this is a paediatric book. But **neither page says so**, and a
+clinician holding both is given no way to tell whether the difference is deliberate.
+
+**Questions.**
+1. What is the correct dexamethasone **starting dose** for TB meningitis in a **child**,
+   in mg/kg/day? Standalone line.
+2. What is the correct **starting dose in an adult**? Standalone line.
+3. What is the **total duration including taper**, for each? Two standalone lines.
+4. Is the difference between 0.6 and 0.3–0.4 mg/kg/day genuinely **age-based**, or is one
+   of them simply out of date?
+5. Does the dose depend on **disease grade**, and if so how?
+
+## 6-2 🟡 Cryptococcal: the flucytosine range and the maintenance cap disagree with the other book
+
+**Verbatim, as printed here** (§6.3.4):
+> *"Induction (2 weeks): amphotericin B deoxycholate 1 mg/kg/day IV (or liposomal
+> amphotericin B 3–4 mg/kg/day) **+ flucytosine 100–150 mg/kg/day** in 4 divided doses."*
+> *"Consolidation (8 weeks): fluconazole 12 mg/kg/day (max 800 mg)."*
+> *"**Maintenance / secondary prophylaxis (6–12 months): fluconazole 6 mg/kg/day (max
+> 800 mg)**, until immune reconstitution on ART."*
+
+**Two concerns.**
+1. **Flucytosine 100–150 mg/kg/day.** The AMBITION regimen this same page recommends uses
+   **100 mg/kg/day**, and the other book in this app gives 100 mg/kg/day. The upper end of
+   150 is the older higher dose, and flucytosine's marrow toxicity is dose-dependent.
+2. **The maintenance cap is 800 mg — the same cap as consolidation.** Maintenance
+   fluconazole is, as I understand it, a substantially lower dose than consolidation
+   (200 mg/day in an adult), so an 800 mg ceiling on the maintenance line looks like the
+   consolidation figure carried down a row.
+
+**Questions.**
+1. What is the correct **flucytosine dose** for cryptococcal induction, in mg/kg/day —
+   100, or a range up to 150? Standalone line.
+2. Does the answer differ between the **AMBITION single-dose** regimen and the
+   **amphotericin-based** regimens? Please answer separately.
+3. What is the correct **maintenance** fluconazole dose and its **maximum**, for a child
+   (mg/kg/day) and for an adult (mg/day)? Two standalone lines.
+4. How long should maintenance continue, and what CD4 and duration-on-ART allow it to stop?
+
+## 6-3 🟡 Dexamethasone for bacterial meningitis — does it apply in this setting?
+
+**Verbatim, as printed** (§6.3.1): *"**Dexamethasone 0.15 mg/kg IV every 6 h for 4 days**,
+given with or before the first antibiotic dose."*
+
+**The concern.** That is the regimen from high-income trials. My understanding is that the
+trials conducted in sub-Saharan Africa did **not** show the same benefit, and that there
+has been specific concern in HIV-positive and malnourished children — both common in the
+population this book is written for. The page recommends it without qualification.
+
+**Questions.**
+1. Are adjunctive corticosteroids recommended for **childhood bacterial meningitis in a
+   low-resource, high-HIV-prevalence African setting**? Please answer yes or no on its own
+   line.
+2. If the evidence differs by region or by HIV status, please state what it shows for each.
+3. Does it differ by **organism** — *Haemophilus influenzae* type b versus pneumococcus
+   versus meningococcus?
+4. Is there a subgroup in whom it should be **withheld** — malnutrition, HIV, late
+   presentation, or where the first antibiotic dose has already been given?
