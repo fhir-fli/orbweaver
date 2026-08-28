@@ -13,134 +13,48 @@ Setting throughout: **district hospital, Gulu, northern Uganda — low-resource,
 paediatric-heavy, malaria-endemic.** Assume limited drug availability and prefer
 regimens deliverable there.
 
-Where a question asks for a figure, ask for it as a **standalone line** — replies keep
-getting cut off exactly at the number.
+🛑 **Ask for every figure as a standalone line, and ask that no citation marker follow
+it.** Three separate replies have now been lost at exactly the number: the citation
+bracket swallows the figure and leaves the sentence reading *"print a ferritin cutoff
+of [1][2]"*. If it happens again, screenshot the reply instead of pasting it — images
+have come through intact every time.
 
 ---
 
-# J. Iron studies — the ferritin threshold under inflammation (p.75)
+# ❓ HLA-B*5701 screening before abacavir — what to print where the test is unavailable
 
-**This one was asked on 2026-07-29, partially answered, and then lost — it was never
-applied and never re-asked.** Recording it properly.
+`who_8_02_1_arv_drugs` (WHO Pocket Book §8.2.1) now prints, as its own preferred
+first-line backbone:
 
-Our iron studies table prints:
+> **Screen HLA-B\*5701 before starting any abacavir-containing regimen.** If positive,
+> **do not use abacavir** — use a ZDV- or TAF-based backbone instead. After a suspected
+> hypersensitivity reaction, **never rechallenge**: re-exposure can be fatal.
+>
+> **DTG + ABC + 3TC** is the preferred regimen across ages; the dispersible fixed-dose
+> combination (**Triumeq PD**) makes it feasible from **≥ 6 kg / ~3 months** in
+> resource-limited settings.
 
-| | Fe | TIBC | Ferritin | Fe : TIBC |
-|---|---|---|---|---|
-| Iron deficiency | ↓ | ↑ | ↓ | <18% |
-| Anaemia of chronic inflammation | ↓ | nL | ↑ | >18% |
+The screening line was added because the whole chapter previously said only to *stop*
+abacavir if hypersensitivity occurred — reacting to the reaction rather than preventing
+it.
 
-The reply agreed the single 18% transferrin-saturation cut-off needs a caveat, and
-began to give a ferritin threshold of **30 µg/L** for use when inflammation is present,
-but the sentence was cut off before the rule was complete.
+**The problem:** HLA-B\*5701 testing is frequently unavailable in the settings this book
+serves, and WHO's public-health approach to ART has not historically required it. As
+printed, the page mandates a test that often cannot be done before the regimen it also
+calls preferred.
 
-**Q1.** State, as standalone lines, the ferritin thresholds to print:
-- ferritin below which iron deficiency is confirmed **with no inflammation**
-- ferritin below which iron deficiency is confirmed **when inflammation is present**
-  (malaria, HIV, TB, any acute illness — i.e. most patients here)
+**Q1.** Should the page say **"screen where available"** rather than mandating it? Answer
+yes or no on its own line.
 
-**Q2.** Should we print a CRP threshold to define "inflammation present", and if CRP is
-unavailable — which is usual — should we simply assume inflammation and use the higher
-ferritin cut-off for everyone?
+**Q2.** Where HLA-B\*5701 testing is **not** available, what should the instruction be —
+use abacavir anyway with counselling and close early monitoring, or choose a different
+backbone? Please state the recommended course on its own line.
 
-**Q3.** Iron studies are often unavailable entirely at district level. Is there a
-defensible way to decide on iron treatment without them — for example a therapeutic
-trial of iron with a haemoglobin recheck at a stated interval? If so, give the interval
-and the rise that counts as a response.
+**Q3.** What is the prevalence of HLA-B\*5701 in sub-Saharan African populations, and does
+it change the risk–benefit of starting abacavir without the test?
 
----
+**Q4.** If abacavir is started untested, what **specific monitoring** should be printed —
+what to warn the patient or carer about, over what window, and the threshold for stopping?
 
-# I. OPEN AFTER THE pp.106–113 ROUND (2026-07-29)
-
-## I1 🔴 Essential hypertension — what BP targets should we print?
-
-The reply flagged our targets as outdated but the recommendation itself was **cut off
-mid-sentence**, twice: once at "Update to …" and again at "for a district hospital in
-northern Uganda, the practical question is whether …". So we have the criticism but not
-the answer, and the part that was lost was specifically the judgement about whether the
-newer target is achievable here. Nothing has been changed.
-
-Our page currently prints:
-
-> Start with lifestyle interventions. Set the BP goal and choose medication based on
-> age, diabetes (DM), and chronic kidney disease (CKD).
-> **Goals by group:**
-> - ≥ 60 years (no DM/CKD): BP < 150/90
-> - < 60 years (no DM/CKD): BP < 140/90
-> - DM but no CKD: BP < 140/90
-> - CKD present: BP < 140/90
-
-First-line options on the same page are a thiazide or a calcium-channel blocker, with
-an ACE-inhibitor or ARB where there is diabetes or CKD.
-
-**Q1.** What single BP target — or set of targets — should we print? Give the numbers
-as **standalone lines**, one per patient group.
-
-**Q2.** Should the age-stratified structure (the ≥60 / <60 split) be dropped
-altogether in favour of one target for everyone?
-
-**Q3.** This is a district hospital in northern Uganda. Home monitoring is rare, most
-patients are seen every 1–3 months at best, drug supply is intermittent, and
-electrolyte monitoring is limited. **Does a lower target remain the right thing to
-print here**, given the risk of hypotension, falls and treatment interruption — or is
-a more permissive target the safer instruction for this setting? Please answer this
-one explicitly rather than by implication.
-
-**Q4.** If the target moves, does the first-line drug choice (thiazide or CCB;
-ACE-I/ARB for diabetes or CKD) change with it?
-
-## I2 🟡 Aortic dissection heart-rate target — confirm the figure
-
-We have applied a change from "goal SBP < 120 in 5–10 minutes" to "SBP < 120 **within
-the first hour**", and added "**target heart rate < 60**" plus an instruction to give
-the beta-blocker before the vasodilator.
-
-The heart-rate figure was **truncated in the reply** ("add HR …"), so we filled it in
-from standard practice.
-
-**Q.** Confirm the heart-rate target to print for acute aortic dissection, and confirm
-that beta-blockade should precede the vasodilator.
-
-
----
-
-# 🟡 2026-08-28 — PARTIAL ANSWERS RECEIVED, THE NUMBERS WERE LOST IN THE PASTE
-
-OE answered §J, §I1 and §I2. **Every figure in the reply was replaced by its citation
-marker**, so the prose survived and the numbers did not — e.g. *"print a ferritin cutoff
-of [1][2]"*, *"target heart rate [13][14][15]"*, *"SBP [14][16][13]"*. Nothing was
-guessed.
-
-## ✅ Applied — the parts that came through intact
-- **§J Q2:** inflammation = **CRP > 5 mg/L** (with AGP > 1 g/L, BRINDA). Where CRP is
-  unavailable — the usual case here — **assume inflammation and use the higher ferritin
-  cut-off for everyone**; the cost of over-treating is low against missing iron
-  deficiency in a malaria/HIV/TB population.
-- **§J Q3:** a **therapeutic iron trial is a defensible diagnosis** without iron studies.
-  Recheck Hb at 2–4 weeks; **≥ 1 g/dL by 2 weeks confirms** (sens 90%, spec 79% at day
-  14); **≥ 2 g/dL by 4 weeks** in a child with moderate anaemia; **reticulocytosis at
-  5–7 days** is earlier where available; no rise → non-adherence, malabsorption, ongoing
-  blood loss, or another cause; **3 months total** to replete stores.
-  → both applied to `pb_075_anaemia_workup`.
-- **§I1 Q4:** the **first-line drug choice does not change** with the target (thiazide or
-  CCB; ACE-I/ARB for diabetes or CKD). Nothing to edit — the page already says this.
-- **§I1 Q2:** the **age-split is dropped** in favour of one target for most adults. Cannot
-  apply without the number.
-- **§I2:** beta-blockade before the vasodilator is confirmed, and the SBP/HR structure is
-  confirmed. The page already prints SBP < 120 within the first hour and HR < 60 —
-  **left untouched**, because the reply's own figures were lost and changing a dissection
-  target on a guess is not acceptable.
-
-## 🛑 SEVEN NUMBERS STILL NEEDED — re-ask or re-paste without the citation markers
-1. Ferritin cut-off confirming iron deficiency **with no inflammation**
-2. Ferritin cut-off confirming iron deficiency **when inflammation is present**
-3. The **WHO adult** ferritin cut-off (given as context)
-4. The **transferrin-saturation** threshold that replaces or qualifies our bare 18%
-5. BP target for **most adults, including diabetes without CKD**
-6. BP target for **diabetes with high cardiovascular risk**, if safely tolerated
-7. BP target for **CKD**
-
-Plus §I1 Q3's explicit verdict — whether the lower target is still the right thing to
-print for a district hospital in northern Uganda — which was also cut off.
-
-§I2 needs nothing further unless the confirmed figures differ from HR < 60 / SBP < 120.
+**Q5.** Does the answer differ for the dispersible **DTG + ABC + 3TC** paediatric
+fixed-dose combination, where switching backbone means losing the single-tablet regimen?

@@ -956,7 +956,20 @@ listed here is done.
 | H1 | NAC 2-bag vs 3-bag under 40 kg | **2-bag for all weights** — FDA wording is absent data, not harm | no change needed |
 | H3 | Pralidoxime dose | children 20–50 mg/kg (max 2 g) then 10–20 mg/kg/hr; adults 1–2 g then 500 mg/hr | `pb_029` |
 
-**Still open — see `protocolbook_open_dosing_questions.md`:** the essential-hypertension
-BP targets (§I1), the aortic-dissection heart-rate figure (§I2), and the ferritin
-threshold under inflammation (§J, which was partially answered on 2026-07-29 and then
-lost — never applied, never re-asked, found only by auditing the tracking).
+## ✅ 2026-08-28 — §J, §I1 and §I2 all answered and applied
+
+| # | Question | Answer | Applied to |
+|---|---|---|---|
+| **J** | Ferritin cut-off under inflammation | **< 30 µg/L with no inflammation; < 70 µg/L (WHO) when inflammation is present, and < 100 µg/L to avoid missing cases.** WHO adult cut-off is < 15 but < 30 is the useful figure (98% specific, 92% sensitive for absent marrow iron); WHO revised its inflammatory-setting cut-off from 30 to 70; absolute iron deficiency rarely gives a ferritin above 100 under inflammation. Inflammation = **CRP > 5 mg/L** (AGP > 1 g/L, BRINDA); **where CRP is unavailable, assume inflammation for everyone.** **Transferrin saturation < 20% (or < 16%)** qualifies the table's bare 18%. Without iron studies at all, a **therapeutic iron trial** is defensible: **≥ 1 g/dL at 2 weeks** (sens 90%, spec 79% at day 14), **≥ 2 g/dL at 4 weeks** in a child with moderate anaemia, retics at 5–7 days, 3 months total to replete | `pb_075` |
+| **I1** | Essential-hypertension BP targets | **Drop the age split.** **Most adults incl. diabetes without CKD: < 140/90. CKD: < 140/90** (toward 130 systolic if tolerated and monitorable). **Diabetes with high CV risk, only if safely tolerated: < 130/80.** Q3 answered explicitly: **< 140/90 is the right target for THIS setting, not < 130/80** — SPRINT and STEP achieved sub-130 with standardised office readings, home monitoring and close follow-up, none of which exist here. First-line drugs unchanged; **a CCB is the most practical first agent because it needs no electrolyte monitoring** | `pb_106` |
+| **I2** | Aortic-dissection heart-rate target | **Confirmed: HR < 60, SBP < 120 mmHg, beta-blocker before the vasodilator.** **Labetalol preferred** (combined alpha/beta), esmolol for rapid titration; add a vasodilator **only if the target is not met after beta-blockade** — first or without rate control it causes reflex tachycardia, raising dP/dt and propagating the dissection. Plus analgesia. Some sources print 100–120 / 60–80; **< 60 is the stricter and more widely endorsed** rate target | `pb_106` |
+
+🛑 **It took three pastes to get §J and §I1.** Both earlier replies lost every figure to
+its citation bracket — *"print a ferritin cutoff of [1][2]"*, *"target heart rate
+[13][14][15]"* — while the surrounding prose came through. **Ask for figures as
+standalone lines with no citation after them, or screenshot the reply.** Screenshots
+have come through intact every time.
+
+**Still open — see `protocolbook_open_dosing_questions.md`:** only the **HLA-B\*5701
+screening** question (what to print where the test is unavailable, when abacavir is the
+book's own preferred backbone).

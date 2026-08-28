@@ -71,10 +71,10 @@
 #   rule where CRP is unavailable, and the therapeutic-iron-trial criteria
 #   (>=1 g/dL at 2 wk, >=2 g/dL at 4 wk in moderate paediatric anaemia,
 #   retics at 5-7 d, 3 months total).
-#   🛑 STILL MISSING: the two FERRITIN CUT-OFFS themselves (no inflammation /
-#   inflammation present), the WHO adult cut-off, and the transferrin-saturation
-#   figure. Every one was eaten by a citation marker in the pasted reply and
-#   was NOT guessed. The table still prints the bare arrows and 18%.
+#   Cut-offs received on the third paste and applied: < 30 ug/L with no
+#   inflammation, < 70 ug/L (WHO) with inflammation, < 100 ug/L to avoid missing
+#   cases; WHO adult cut-off < 15 ug/L for context; transferrin saturation
+#   < 20% (or < 16%) as the alternative discriminator qualifying the bare 18%.
 # ============================================================
 
 topic:
@@ -150,9 +150,14 @@ topic:
       title: "Reading ferritin under inflammation"
       highlight: true
       markdown: |
-        Ferritin is an acute-phase reactant, so a "normal" ferritin does **not** exclude iron deficiency in a patient with malaria, HIV, TB or any acute febrile illness. **A higher ferritin cut-off applies when inflammation is present.**
+        Ferritin is an acute-phase reactant, so a "normal" ferritin does **not** exclude iron deficiency in a patient with malaria, HIV, TB or any acute febrile illness.
+        - **No inflammation — iron deficiency confirmed if ferritin < 30 µg/L**
+        - **Inflammation present — iron deficiency confirmed if ferritin < 70 µg/L** (the WHO threshold); **use < 100 µg/L to avoid missing cases**
         - **Inflammation is defined as CRP > 5 mg/L** (with AGP > 1 g/L, per BRINDA)
         - **Where CRP is unavailable — the usual case here — assume inflammation and apply the higher cut-off to everyone.** Malaria, HIV, TB and acute febrile illness are prevalent enough that most patients carry subclinical inflammation, and the cost of over-treating is low compared with missing iron deficiency
+        - **Transferrin saturation < 20% (or < 16%)** is the alternative discriminator when ferritin is equivocal and iron studies are available — the table's single 18% line is a simplification
+
+        **Where the numbers come from.** The WHO adult cut-off is **< 15 µg/L**, but the clinically useful, more sensitive threshold is **< 30 µg/L** — 98% specific and 92% sensitive for absent marrow iron. WHO previously used < 30 µg/L in inflammatory settings and has revised that to **< 70 µg/L**. With concurrent inflammation, absolute iron deficiency rarely produces a ferritin above **100 µg/L**, which makes < 100 the best single predictor when inflammation is likely.
 
     - type: "prose"
       title: "No iron studies? Treat and recheck"
