@@ -401,3 +401,111 @@ population this book is written for. The page recommends it without qualificatio
    versus meningococcus?
 4. Is there a subgroup in whom it should be **withheld** — malnutrition, HIV, late
    presentation, or where the first antibiotic dose has already been given?
+
+---
+
+# CHAPTER 9 — SURGICAL PROBLEMS (33 topics, pp.253–288)
+
+**Overall: careful and consistent.** The post-FEAST fluid correction is applied uniformly
+across five separate topics (abdominal pain, appendicitis, bowel obstruction, and the
+trauma pages all read "10–20 ml/kg per bolus over 30–60 min, reassess after each"), the
+head-injury page prefers hypertonic saline over mannitol, the burns page carries Parkland
+with urine-output titration and the worked arithmetic, and the ketamine and local-anaesthetic
+ceilings are stated with their bioavailability caveats. All 33 topics checked dose by dose.
+
+**Two items need OE.**
+
+## 9-1 🟡 Ampicillin is dosed lower in this chapter than everywhere else in the book — and given orally
+
+**Verbatim, as printed.** Across chapter 9 — bowel-surgery prophylaxis, ruptured
+myelomeningocoele, wound care, peritonitis, appendicitis, incarcerated hernia —
+ampicillin is given as **"25–50 mg/kg 4× daily"**, and in the wound-care topic as
+**"ampicillin (25–50 mg/kg orally 4× daily)"**.
+
+Everywhere else in the book — neonatal sepsis, meningitis, severe pneumonia, septicaemia,
+UTI — ampicillin is **"50 mg/kg every 6 h"** with no lower bound.
+
+**Two concerns.**
+1. The **lower bound of 25 mg/kg is half** the dose the rest of the book uses, and chapter
+   9's indications are surgical sepsis, peritonitis and CNS-exposure prophylaxis — not
+   settings where a half dose seems right.
+2. **Oral ampicillin.** Ampicillin is poorly absorbed by mouth; amoxicillin is the oral
+   drug of that class. Prescribing "ampicillin orally" may deliver much less than intended.
+
+**Questions.**
+1. Is **25 mg/kg** ever an adequate ampicillin dose for surgical sepsis or peritonitis in a
+   child, or should this chapter use **50 mg/kg** like the rest of the book? Standalone line.
+2. Should **oral ampicillin** be replaced by **amoxicillin** where an oral route is
+   intended? If so, at what mg/kg and frequency? Standalone line.
+3. Is there any indication in this chapter where the lower 25 mg/kg figure is correct — for
+   example short prophylaxis rather than treatment?
+
+## 9-2 🟡 The WHO Surgical Safety Checklist is not mentioned anywhere in the surgery chapter
+
+**The finding.** I searched all 33 topics: the **Surgical Safety Checklist appears nowhere**
+— not in the pre-operative, intra-operative or post-operative topics.
+
+**The concern.** The checklist was published in 2008–2009, several years before this
+edition, and is a zero-cost intervention associated with reduced surgical mortality and
+complications. It is arguably the single highest-value thing a district hospital surgical
+chapter can carry, and its absence is more consequential than any of the dosing points
+above.
+
+**Questions.**
+1. Should a paediatric surgical chapter for a district hospital include the **WHO Surgical
+   Safety Checklist**? Yes or no on its own line.
+2. If yes, please give the **three phases and their items** in a form that could be printed
+   on a single page.
+3. Are there **paediatric-specific** additions to the standard checklist — weight-based
+   dosing confirmation, temperature management, airway-size verification?
+4. Is there evidence on its effect in **low-resource** settings specifically?
+
+---
+
+# CHAPTERS 10, 11, 12 AND THE ANNEXES (35 topics, pp.289–412)
+
+✅ **No change needed.** All 35 topics read and every dose checked.
+
+The 2026-07 review is thorough here and in one place notably so: **§12.6 immunization**
+carries a "since 2013" block that adds the **malaria vaccine (RTS,S/AS01 2021, R21/Matrix-M
+2023)**, **single-dose HPV for girls 9–14**, 2-dose IPV, routine MCV2, MenA conjugate for
+the meningitis belt, pentavalent DTP-HepB-Hib, and refined contraindications — exactly the
+2013→2026 drift this pass was looking for, already found and fixed.
+
+Elsewhere: transfusion volumes are **fever-guided per TRACT** in both the anaemia and the
+blood-transfusion topics (afebrile 30 ml/kg, febrile 20 ml/kg); transfusion-reaction
+adrenaline is weight-based with the old fixed 200 mg hydrocortisone corrected as an adult
+dose; LET has replaced cocaine-containing TAC; the ketamine IM dose carries its
+bioavailability correction; and the lumbar-puncture topic specifies 25G for neonates to
+halve traumatic taps.
+
+**Two things that looked like contradictions were checked rather than assumed, and are
+correct:** the anaemia topic does carry the fever-guided volumes (not a flat 30 ml/kg), and
+the two chlorphenamine doses in the transfusion-reaction topic (0.1 mg/kg and 0.25 mg/kg)
+are deliberately tiered by reaction severity.
+
+---
+
+# 🏁 PASS COMPLETE — all 258 topics
+
+| Chapter | Topics | Flags |
+|---|---|---|
+| 1 Triage & emergency | 33 | 3 (incl. the NAC cross-book contradiction) |
+| 2 Diagnostic approach | 5 | 0 |
+| 3 Young infants | 24 | 3 |
+| 4 Cough / breathing | 24 | 1 |
+| 5 Diarrhoea | 9 | 0 |
+| 6 Fever | 25 | 3 |
+| 7 Malnutrition | 27 | 1 |
+| 8 HIV | 34 | *(reviewed and applied 2026-08-25/27)* |
+| 9 Surgery | 33 | 2 |
+| 10–12 + annexes | 35 | 0 |
+| **Total** | **258** | **13 open for OE** |
+
+**The pattern across the book:** the 2026-07 review was genuinely thorough — far more so
+than the ProtocolBook's starting state — and most chapters needed nothing. **What it did
+not catch is disagreement between the two books this app ships.** Four of the thirteen
+flags are cross-book contradictions on the same drug for the same disease (paracetamol
+antidote, PCP co-trimoxazole, TB-meningitis steroids, cryptococcal flucytosine), and one of
+those had already been adjudicated by OE for the other book and never propagated here.
+**A single-book review cannot find those. Only reading them against each other can.**
