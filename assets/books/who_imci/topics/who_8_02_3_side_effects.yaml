@@ -50,7 +50,7 @@ topic:
       columns: ["Drug", "Side-effects", "Comments"]
       column_flex: [3, 5, 5]
       rows:
-        - cells: ["ABC", "Hypersensitivity, fever, mucositis rash — if these occur, STOP and never rechallenge", "Preferred backbone; screen HLA-B*5701 before starting (§8.2.1); tablets can be crushed"]
+        - cells: ["ABC", "Hypersensitivity, fever, mucositis rash — if these occur, STOP and never rechallenge", "Preferred backbone; screen HLA-B*5701 **where available** — if the test cannot be done, counsel and monitor for 6 weeks rather than withhold (§8.2.1); tablets can be crushed"]
         - cells: ["3TC / FTC", "Headache, abdominal pain, nausea (well tolerated)", "Backbone"]
         - cells: ["ZDV (AZT)", "Headache, anaemia, neutropenia", "Alternative NRTI"]
         - cells: ["TAF", "Headache, nausea", "Better renal / bone safety than TDF"]

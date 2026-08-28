@@ -17,11 +17,16 @@
 # abacavir is this page's own preferred backbone. §8.2.3 warned only to STOP
 # if hypersensitivity occurs — reacting to the reaction rather than
 # preventing it. Screening added here and cross-referenced in §8.2.3.
-# ❓ OPEN FOR OE: HLA-B*5701 testing is frequently unavailable in the
-# settings this book serves, and WHO's public-health approach has not
-# historically required it. Should this page say "screen where available",
-# and what should the fallback be where it is not? Do not answer this from
-# the app — it needs a sourced answer.
+# ✅ ANSWERED AND APPLIED 2026-08-28. OE: print "screen WHERE AVAILABLE", do
+# not mandate it. Where the test cannot be done, START abacavir with
+# structured counselling and 6-week monitoring rather than withholding it —
+# the explicit position of DHHS (CIII) and IDSA/HIVMA, and what WHO's
+# public-health ART approach has always allowed. Allele is rare across most
+# of sub-Saharan Africa but NOT uniform (Maasai >6%), so ancestry is not a
+# substitute for the test. Added: the 6-week HSR warning set and stop rule,
+# the never-rechallenge absolute, the higher bar for the Triumeq PD FDC with
+# DTG + ZDV + 3TC as the alternative, and hepatitis B screening before any
+# 3TC-containing regimen.
 # ============================================================
 
 topic:
@@ -67,7 +72,7 @@ topic:
         - cells: ["INSTI", "Dolutegravir (DTG)", "Preferred anchor, all ages ≥ 4 wk & ≥ 3 kg"]
         - cells: ["INSTI", "Bictegravir (BIC)", "≥ 2 yr & ≥ 14 kg, as BIC/FTC/TAF (Biktarvy)"]
         - cells: ["INSTI", "Raltegravir (RAL)", "Neonates < 4 wk"]
-        - cells: ["NRTI", "Abacavir (ABC)", "Preferred NRTI backbone — screen HLA-B*5701 first"]
+        - cells: ["NRTI", "Abacavir (ABC)", "Preferred NRTI backbone — screen HLA-B*5701 **where available**; if the test cannot be done, counsel and monitor rather than withhold"]
         - cells: ["NRTI", "Lamivudine (3TC)", "Backbone"]
         - cells: ["NRTI", "Emtricitabine (FTC)", "Backbone (= 3TC class)"]
         - cells: ["NRTI", "Zidovudine (ZDV)", "Alternative NRTI"]
@@ -106,10 +111,25 @@ topic:
     - type: "prose"
       title: "Notes on the regimens"
       markdown: |
-        - **Screen HLA-B*5701 before starting any abacavir-containing regimen.**
-          If positive, **do not use abacavir** — use a ZDV- or TAF-based backbone
-          instead. After a suspected hypersensitivity reaction, **never
-          rechallenge**: re-exposure can be fatal.
+        - **Screen HLA-B*5701 where available** before starting an
+          abacavir-containing regimen. **If positive, do not use abacavir** — use a
+          ZDV- or TAF-based backbone instead.
+        - **Where the test is not available, start abacavir with structured
+          counselling and close monitoring for the first 6 weeks. Do not withhold
+          it for lack of the test.** The allele is rare across most of sub-Saharan
+          Africa — essentially absent in West African populations, ~1.5–3.3% in
+          most East and Southern African groups — so the number needed to test to
+          prevent one reaction is high and pre-emptive testing is often not
+          cost-effective here. ⚠️ **It is not uniform**: some East African groups
+          reach European frequencies or higher (Maasai of Kenya > 6%, up to ~13%),
+          so **ancestry is not a substitute for the test where the test can be
+          done.** The reaction is also less common clinically in Black African
+          patients (2–3% vs 5–8% in White patients before screening existed).
+        - After a suspected hypersensitivity reaction, **never rechallenge** —
+          re-exposure can cause life-threatening hypotension and death within
+          hours, regardless of HLA status.
+        - **Screen for hepatitis B before starting any 3TC-containing regimen** —
+          a severe HBV flare can follow if 3TC is later stopped.
         - **DTG + ABC + 3TC** is the preferred regimen across ages; the dispersible
           fixed-dose combination (**Triumeq PD**) makes it feasible from **≥ 6 kg /
           ~3 months** in resource-limited settings.
@@ -117,6 +137,45 @@ topic:
           — DTG has replaced LPV/r as the preferred anchor.
         - For exact weight-band dosages see **Annex 2 / national paediatric ARV
           guidelines**.
+
+    - type: "prose"
+      title: "⚠ Starting abacavir untested — what to warn about and when to stop"
+      callout: true
+      markdown: |
+        **Window:** hypersensitivity usually appears **within the first 6 weeks**,
+        and can follow a single dose.
+
+        **Warn the carer to return for** a **rash**, or symptoms in **two or more**
+        of these groups:
+        - **fever**
+        - **constitutional** — malaise, fatigue, aching
+        - **gastrointestinal** — nausea, vomiting, diarrhoea, abdominal pain
+        - **respiratory** — breathlessness, cough, sore throat
+
+        **Threshold to stop:** if hypersensitivity is suspected, **stop abacavir
+        immediately even when another diagnosis is possible** — pneumonia,
+        gastroenteritis, another drug reaction. Err on the side of stopping.
+
+        **Absolute rule: never restart abacavir, or any abacavir-containing
+        product, after a suspected reaction** — whatever the HLA result.
+
+    - type: "prose"
+      title: "The dispersible FDC (Triumeq PD) — a higher bar"
+      markdown: |
+        The principle is the same, but the practical bar for using the
+        single-tablet FDC untested is **higher**, because a positive result cannot
+        be acted on after the fact within a fixed-dose combination. Paediatric
+        guidance is firmer: a **negative HLA-B*5701 before starting Triumeq PD**,
+        and where the result is unknown or positive — or the FDC is unavailable —
+        the alternative is **DTG + ZDV + 3TC**.
+        - **Test available →** screen. Negative, use Triumeq PD; positive, use a
+          ZDV- or TAF-based backbone.
+        - **Test unavailable →** weigh the adherence gain of the once-daily
+          dispersible FDC against not being able to exclude the allele. **Where
+          you can reliably review the child through the first 6 weeks**, starting
+          the FDC with counselling is consistent with the counsel-and-monitor
+          allowance. **Where early follow-up is uncertain, prefer DTG + ZDV + 3TC**
+          and remove the risk.
 
     - type: "prose"
       title: "Dosing by weight band"

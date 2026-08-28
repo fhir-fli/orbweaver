@@ -970,6 +970,33 @@ its citation bracket — *"print a ferritin cutoff of [1][2]"*, *"target heart r
 standalone lines with no citation after them, or screenshot the reply.** Screenshots
 have come through intact every time.
 
-**Still open — see `protocolbook_open_dosing_questions.md`:** only the **HLA-B\*5701
-screening** question (what to print where the test is unavailable, when abacavir is the
-book's own preferred backbone).
+## ✅ 2026-08-28 — HLA-B\*5701 answered and applied. THE QUEUE IS EMPTY.
+
+**OE: print "screen where available" — do not mandate it.** Where the test cannot be
+done, **start abacavir with structured counselling and 6-week monitoring rather than
+withholding it**. That is the explicit position of DHHS (graded CIII) and IDSA/HIVMA,
+and what WHO's public-health ART approach has always allowed. Mandating a
+frequently-unavailable test before the regimen the same page calls preferred was the
+wrong instruction for Gulu.
+
+⭐ **The finding worth carrying forward: the allele is rare across most of sub-Saharan
+Africa but NOT uniform.** Essentially absent in West African populations, ~1.5–3.3% in
+most East and Southern African groups — but the **Maasai of Kenya reach > 6%, up to
+~13%**, above European frequencies. So ancestry is not a substitute for the test where
+the test can be done, and a blanket "it's rare in Africa" would have been wrong.
+
+Applied to `who_8_02_1_arv_drugs` and cross-referenced in `who_8_02_3_side_effects`:
+- Table 24 and the regimen notes now say **where available**.
+- New callout: the **6-week window**, the multiorgan warning set (rash, or two or more
+  of fever / constitutional / GI / respiratory), **stop even when another diagnosis is
+  possible**, and **never rechallenge** — life-threatening hypotension and death within
+  hours, whatever the HLA result.
+- New block on the **dispersible FDC (Triumeq PD)**: a higher bar, because a positive
+  result cannot be acted on after the fact inside a single tablet. Test available →
+  screen. Test unavailable → reliable 6-week follow-up, start the FDC with counselling;
+  uncertain follow-up, prefer **DTG + ZDV + 3TC**.
+- Added, unprompted by the question: **screen for hepatitis B before any 3TC-containing
+  regimen** — severe HBV flare can follow if 3TC is later stopped.
+
+**`protocolbook_open_dosing_questions.md` is now empty of questions.** Every item ever
+raised in it has been answered and applied.
