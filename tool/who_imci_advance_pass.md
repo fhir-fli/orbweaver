@@ -248,3 +248,69 @@ lowest number in the book applied to the most vulnerable patients.
    standalone line.
 3. The book gives neonates **2 ml/kg** of 10% glucose and older children **5 ml/kg**. Is
    that difference correct, and is 2 ml/kg the right neonatal bolus?
+
+---
+
+# CHAPTER 4 — COUGH & DIFFICULT BREATHING (24 topics, pp.77–110)
+
+**Overall: current, and in places notably careful.** The 2026-07 review carries the revised
+WHO **paediatric** TB doses (H 10, R 15, Z 35, E 20 mg/kg — correctly higher than the adult
+figures the other book uses, which is right, not a contradiction), amoxicillin at
+**40 mg/kg/dose twice daily** for pneumonia, weight-based adrenaline replacing fixed
+volumes in both asthma and anaphylaxis, croup dexamethasone capped at 12 mg with
+weight-based nebulised adrenaline, and pertussis azithromycin first-line with erythromycin
+demoted. Aminophylline is already framed as **last resort only, not for mild-to-moderate
+asthma, ICU-level monitoring**, with magnesium noted as having the better safety profile —
+so it needs no flag. Every dose in all 24 topics was extracted and checked.
+
+**One item needs OE, and it is a cross-book difference.**
+
+## 4-1 🟡 The two books give different daily co-trimoxazole doses for PCP
+
+**Verbatim, as printed.** This book, in two places that agree with each other:
+> §4.2.1 severe pneumonia: *"add **high-dose co-trimoxazole (8 mg/kg trimethoprim + 40 mg/kg
+> sulfamethoxazole) every 8 h for 3 weeks**"*
+> §8.4.2 PCP: *"**High-dose co-trimoxazole (8 mg/kg TMP / 40 mg/kg SMX)** oral or preferably
+> **IV, three times daily for 3 weeks**"*
+
+That is **24 mg/kg/day of trimethoprim.**
+
+The other book in this app, for the same disease:
+> *"TMP-SMX: TMP **5 mg/kg/dose** & SMX 25 mg/kg/dose IV or PO **q6hrs**"* for 21 days
+
+That is **20 mg/kg/day of trimethoprim.**
+
+**The concern.** Same app, same disease, two daily totals. 24 mg/kg/day is also **above the
+15–20 mg/kg/day range** I associate with PCP treatment, and co-trimoxazole at high dose
+carries real marrow, renal and hypersensitivity toxicity — particularly in the
+HIV-positive children this regimen is aimed at.
+
+**Questions.**
+1. What is the correct **trimethoprim total daily dose** for PCP treatment in a child, in
+   mg/kg/day? Standalone line.
+2. Should it be divided **three times daily or four times daily**? Standalone line.
+3. Is **24 mg/kg/day** ever correct, or is 15–20 mg/kg/day the ceiling?
+4. Does the answer differ between **IV and oral**, or by severity?
+5. What monitoring does the high-dose course require, and for how long?
+
+---
+
+# CHAPTER 5 — DIARRHOEA (9 topics, pp.125–142)
+
+✅ **No change needed.** All 9 topics read and every dose checked. The 2026-07 review is
+current: low-osmolarity ORS as the standard, the NEJM 2020 evidence that **5 mg and 10 mg
+zinc are non-inferior to 20 mg with less vomiting** (with 20 mg correctly retained as the
+WHO dose), azithromycin as preferred cholera treatment, the GASTRO slow-rehydration
+evidence noted alongside Plan C, and metronidazole reserved for confirmed indications
+rather than given empirically.
+
+Two things that look like contradictions are **correctly distinguished** and were checked
+rather than assumed: the two ceftriaxone regimens in the dysentery topic are **50–80
+mg/kg/day for dysentery** versus **100 mg/kg for suspected sepsis in a young infant**, which
+is right; and the Plan C volumes reconcile with Chart 11 (100 ml/kg = 30 fast + 70).
+
+⚠️ **One observation that strengthens flag 3-2 rather than opening a new one:** this chapter
+also gives **ceftriaxone 100 mg/kg to neonates and young infants** for suspected sepsis,
+while the neonatal meningitis page avoids ceftriaxone in neonates entirely. That is now the
+**third** page in the book giving a neonate ceftriaxone against that caution. Whatever OE
+answers for 3-2 should be applied to all three.
