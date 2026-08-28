@@ -5,6 +5,9 @@
 # the full induction/consolidation/maintenance protocol (incl. AMBITION-cm
 # single-dose liposomal option); added CrAg LFA (preferred over India ink) and
 # serum CrAg screening; no-corticosteroids/no-mannitol warning.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Flucytosine 100-150 -> 25 mg/kg QID (100 mg/kg/day); maintenance fluconazole
+#   cap 800 -> 200 mg/day adult, with the real stopping criteria (flag 6-2).
 # ============================================================
 
 topic:
@@ -48,14 +51,20 @@ topic:
         Cure requires prolonged antifungal therapy in **three phases**:
         - **Induction (2 weeks):** **amphotericin B deoxycholate 1 mg/kg/day IV**
           (or **liposomal amphotericin B 3–4 mg/kg/day**) **+ flucytosine
-          100–150 mg/kg/day** in 4 divided doses.
+          25 mg/kg four times daily (100 mg/kg/day)**. The older 150 mg/kg/day
+          upper end is no longer used — flucytosine marrow toxicity is
+          dose-dependent.
           - Where **liposomal amphotericin B** is available, the WHO-preferred
             regimen is a **single high dose (10 mg/kg)** on day 1 **+ flucytosine
             + fluconazole for 14 days** (**AMBITION-cm**) — comparable efficacy
             with less toxicity and easier monitoring.
         - **Consolidation (8 weeks):** **fluconazole 12 mg/kg/day** (max 800 mg).
-        - **Maintenance / secondary prophylaxis (6–12 months):** **fluconazole
-          6 mg/kg/day** (max 800 mg), until immune reconstitution on ART.
+        - **Maintenance / secondary prophylaxis:** **fluconazole 6 mg/kg/day**
+          in a child, **200 mg/day** in an adult — **not the 800 mg
+          consolidation cap** — for a **minimum of 1 year**. Stop only after
+          ≥ 1 year of antifungal therapy with **CD4 ≥ 100/mm³ sustained for
+          ≥ 3 months on ART and an undetectable viral load**; restart if CD4
+          falls.
 
     - type: "prose"
       title: "Raised intracranial pressure & supportive care"

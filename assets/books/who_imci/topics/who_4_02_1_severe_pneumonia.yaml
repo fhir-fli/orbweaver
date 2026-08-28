@@ -3,6 +3,9 @@
 # ✅ OpenEvidence-reviewed 2026-07: clarified "very severe indrawing" (severe)
 # vs ordinary lower-chest indrawing (non-severe, §4.2.2); added HFNC as an
 # oxygen-escalation option. Ampicillin + gentamicin first-line confirmed.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   PCP co-trimoxazole: 8 mg/kg TMP q8h (= 24 mg/kg/day) was above the ceiling;
+#   now 15-20 mg/kg/day in 3-4 divided doses (flag 4-1).
 # ============================================================
 
 topic:
@@ -116,9 +119,12 @@ topic:
           ([§4.7.2](topic:who-imci-4-7-2-tuberculosis)).
         - **HIV / PCP:** in HIV-exposed children, **Pneumocystis pneumonia
           (PCP)**, often at **4–6 months**, is an important cause — treat as
-          severe pneumonia, and add **high-dose co-trimoxazole (8 mg/kg
-          trimethoprim + 40 mg/kg sulfamethoxazole) every 8 h for 3 weeks**
-          (< 12 months routinely; 12–59 months only if clinical PCP signs).
+          severe pneumonia, and add **high-dose co-trimoxazole — trimethoprim
+          15–20 mg/kg/day (with sulfamethoxazole 75–100 mg/kg/day in the fixed
+          combination), in 3–4 divided doses, for 3 weeks** (< 12 months
+          routinely; 12–59 months only if clinical PCP signs).
+          **Do not exceed 20 mg/kg/day of trimethoprim** — the 2013 print's
+          8 mg/kg every 8 h is 24 mg/kg/day, above the ceiling.
 
     - type: "prose"
       title: "Discharge & follow-up"

@@ -19,6 +19,10 @@
 #     "≈ 0.01 ml/kg" is an arithmetic slip and was not propagated.
 #   - Reaction adrenaline 0.01 mg/kg, antivenom child=adult dose, and
 #     cut/tourniquet prohibition re-confirmed accurate — unchanged.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Prophylactic SC adrenaline CONFIRMED and kept (flag 1-3): the only
+#   premedication with randomised evidence; dose 0.005 mg/kg capped at 0.25 mg;
+#   hydrocortisone cancels the benefit; 90% of reactions in the first hour.
 # ============================================================
 
 topic:
@@ -90,12 +94,21 @@ topic:
       markdown: |
         Give antivenom for **systemic signs** or **severe local signs**
         (swelling of **> half the limb** or severe necrosis):
-        - Have **adrenaline and resuscitation equipment ready**. Where
-          antivenom-reaction rates are high, give **prophylactic SC
-          adrenaline before** the infusion (reduces severe reactions ~40%):
-          **0.005 mg/kg (≈ 0.005 ml/kg of 1:1000)** in a child — the
-          **0.25 ml / 0.25 mg** figure is an **adult / older-child** dose.
-          **Antihistamines/steroids alone do NOT** prevent reactions.
+        - **Draw up adrenaline and have oxygen and resuscitation equipment
+          at the bedside before the infusion starts** — about **90% of
+          reactions happen in the first hour** and **40% of patients need
+          rescue adrenaline**. Monitor for at least **1–4 h**.
+        - Give **prophylactic SC adrenaline before** the infusion — it is
+          the **only premedication with randomised evidence of benefit**
+          (severe reactions cut ~40%). The case is strongest with the
+          **less-purified polyspecific antivenoms used across sub-Saharan
+          Africa**; with a highly purified F(ab′)₂ / Fab product the gain is
+          smaller and the decision individualised.
+          - **0.005 mg/kg (≈ 0.005 ml/kg of 1:1000)** in a child,
+            **capped at the adult 0.25 mg (0.25 ml)**.
+        - **Antihistamines and hydrocortisone do NOT** prevent reactions,
+          and **adding hydrocortisone cancels out adrenaline's benefit** —
+          do not substitute them for adrenaline.
         - **Monovalent** if the species is known; **polyvalent** if not.
           **Child dose = adult dose.**
         - Dilute in **2–3 volumes of 0.9% saline** and give IV **over 1 h**

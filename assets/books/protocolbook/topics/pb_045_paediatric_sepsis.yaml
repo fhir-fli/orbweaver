@@ -34,6 +34,8 @@
 #     standard; OE may note pSOFA/Phoenix (2024) exists.
 #   - Empiric Amp/Gent + ceftriaxone-if-meningitis is WHO-consistent
 #     first-line for LMIC neonatal/paediatric sepsis. Fine.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   D10% 5 -> 2 mL/kg (WHO pass flag 1-2).
 # ============================================================
 
 topic:
@@ -97,7 +99,7 @@ topic:
         title: "Management"
         bullets:
           - "Airway/Breathing: 100% O2, bag and mask if poor respiratory effort"
-          - "Treat hypoglycaemia: Dextrose 10% 5ml/kg IV push. Make it as 8mL NS + 2mL D50% (D10 in ~0.7% saline) or 1mL D50% + 8mL D5% (D10 in water) — see the resuscitation medications page"
+          - "Treat hypoglycaemia: Dextrose 10% 2ml/kg IV push. Make it as 8mL NS + 2mL D50% (D10 in ~0.7% saline) or 1mL D50% + 8mL D5% (D10 in water) — see the resuscitation medications page"
           - "PRBCs if severe anemia (Hgb <5)"
           - "Start Amp/Gent within 1 hour. Ceftriaxone if concerned for meningitis (see medication doses below)"
           - "Refractory shock despite fluids AND vasopressors, with suspected adrenal insufficiency: Hydrocortisone 2mg/kg IV bolus, then 1mg/kg IV q6h. Do NOT use routinely — benefit in children is unproven and observational data suggest possible harm"

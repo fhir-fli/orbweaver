@@ -5,6 +5,10 @@
 # atovaquone (and dapsone/TMP) as alternatives; corticosteroids for
 # moderate/severe PCP within 72 h; secondary prophylaxis after treatment.
 # Refs: DHHS/OARAC Pediatric OI 2025.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   PCP co-trimoxazole: 8 mg/kg TMP TDS (= 24 mg/kg/day) was above the ceiling;
+#   now 15-20 mg/kg/day, max 960 mg/day, 3-4 divided doses, + IV->oral step-down
+#   and the monitoring schedule (flag 4-1).
 # ============================================================
 
 topic:
@@ -51,8 +55,19 @@ topic:
       title: "Treatment"
       callout: true
       markdown: |
-        - **High-dose co-trimoxazole** (8 mg/kg TMP / 40 mg/kg SMX) oral or
-          preferably **IV, three times daily for 3 weeks** (first-line).
+        - **High-dose co-trimoxazole — trimethoprim 15–20 mg/kg/day** (with
+          sulfamethoxazole 75–100 mg/kg/day in the fixed combination),
+          **in 3–4 divided doses (q6–8h) for 3 weeks** (first-line).
+          **Maximum 960 mg trimethoprim per day.** The 2013 print's 8 mg/kg
+          every 8 h is **24 mg/kg/day, above the 20 mg/kg/day ceiling** — it
+          adds marrow, renal and hypersensitivity toxicity without benefit.
+        - **Same total daily dose IV or oral.** Start **IV** in severe disease
+          or malabsorption and **step down to oral at the same mg/kg** as the
+          pneumonitis settles, completing 21 days.
+        - **Monitor through the course:** full blood count (marrow
+          suppression), creatinine and potassium (hyperkalaemia), liver
+          enzymes, and for rash or hypersensitivity — weekly, or more often if
+          abnormal. **Withhold for any significant reaction.**
         - **Alternatives:** **pentamidine** (4 mg/kg once daily IV) for a severe
           drug reaction; **atovaquone**, or **dapsone + TMP**, for
           mild-to-moderate PCP.

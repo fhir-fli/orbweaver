@@ -31,6 +31,8 @@
 #    - Our severe-anaemia haemoglobin threshold differs slightly from
 #      the WHO cut-off; OE judged ours acceptable and suggested only
 #      that the distinction could be noted. Not added.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   D10% 5 -> 2 mL/kg (WHO pass flag 1-2).
 # ============================================================
 
 topic:
@@ -152,7 +154,7 @@ topic:
       highlight: true
       markdown: |-
         - **IV / IM Artesunate\*** at **0, 12, 24 h** — < 20 kg: **3 mg/kg** · ≥ 20 kg: **2.4 mg/kg**
-        - Treat hypoglycemia → 10 % dextrose **5 ml/kg**
+        - Treat hypoglycemia → 10 % dextrose **2 ml/kg**
         - Maintenance fluids / feeds
         - **DO NOT bolus** unless diarrhea with signs of severe dehydration
         - If severely pale, respiratory distress, or known Hgb < 5 → consider transfusion **10–20 ml/kg over 2–4 h**

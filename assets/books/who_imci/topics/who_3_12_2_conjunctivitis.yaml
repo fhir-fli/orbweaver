@@ -5,6 +5,9 @@
 #    corrected 150→250 mg; kanamycin replaced by cefotaxime 100 mg/kg;
 #    erythromycin 0.5% prophylaxis option; parental Rx → ceftriaxone
 #    500 mg IM (not amoxicillin/spectinomycin).
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Added WHY a single ceftriaxone dose is acceptable in a neonate and when to
+#   substitute cefotaxime (flag 3-2).
 # ============================================================
 
 topic:
@@ -43,10 +46,18 @@ topic:
         - **Wash the eyes** to clear the pus.
         - Give **ceftriaxone 25–50 mg/kg** (**maximum 250 mg**) IM/IV as a
           single dose.
-        - If ceftriaxone **cannot be used** — a jaundiced neonate or one on
-          calcium-containing IV fluids
-          ([see §3.9](topic:who-imci-3-9-meningitis)) — give **cefotaxime
-          100 mg/kg IM/IV** as a single dose instead.
+        - **Ceftriaxone is acceptable here as a single dose**, despite the
+          general neonatal caution — that caution is about **bilirubin
+          displacement and calcium precipitation on repeated or high-dose
+          exposure**, not about one dose for an eye infection.
+        - **Substitute cefotaxime 100 mg/kg IM/IV**, also a single dose, in a
+          **jaundiced or premature** neonate (ceftriaxone displaces bilirubin
+          → kernicterus) or one **receiving calcium-containing IV fluids**
+          (fatal ceftriaxone–calcium precipitation)
+          ([see §3.9](topic:who-imci-3-9-meningitis)).
+        - One dose is enough for **non-disseminated ocular** infection.
+          Disseminated infection or meningitis needs a **full multi-day
+          course**.
         - Also apply **tetracycline or chloramphenicol eye ointment**.
 
     - type: "prose"

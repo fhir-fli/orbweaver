@@ -63,6 +63,9 @@
 #   - Thresholds (≥200 mg/kg; ≥10 g or 200 mg/kg >6 y) verified
 #     against the AAP/AACT out-of-hospital criteria ✓. >100 kg dosed
 #     as 100 kg ✓ (standard capped dosing).
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Added the <5 kg bound, the three-bag high-risk carve-out and the
+#   do-not-stop-at-20h rule (WHO pass flag 1-1).
 # ============================================================
 
 topic:
@@ -195,3 +198,6 @@ topic:
             - Diluent may be D5W, ½NS or sterile water
             - If wt >100kg, Rx as per 100kg
             - **Flushing, rash or wheeze during bag 1** is a non-allergic histamine reaction, not an allergy — slow or pause the infusion, give an antihistamine, stop only for bronchospasm, then restart at a slower rate. Do not abandon treatment
+            - **Under 5kg:** take toxicology / specialist advice — the two-bag regimen is not established below that weight
+            - **Do not stop at 20–21 hrs just because the bags have run.** Continue until paracetamol is undetectable, INR and LFTs are normal or improving, and there is no encephalopathy
+            - **Three-bag** (150mg/kg over 15 min, then 50mg/kg over 4 hrs, then 100mg/kg over 16 hrs) is still preferred where more drug is wanted in the first 3 hrs: late presentation with established hepatotoxicity, massive or modified-release ingestion, or early signs of severe liver injury

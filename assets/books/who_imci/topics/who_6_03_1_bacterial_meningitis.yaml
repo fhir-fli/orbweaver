@@ -6,6 +6,11 @@
 # ampicillin downgraded to last-resort; 5–7-day option for uncomplicated cases;
 # dexamethasone refined (high-income benefit, no proven LMIC benefit, Listeria
 # contraindication); CSF multiplex PCR noted.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Dexamethasone rewritten (flag 6-3): NOT routine here - no benefit on
+#   mortality or sequelae in low-income settings and not demonstrated in
+#   HIV-positive patients. Restricted to early pneumococcal/Hib.
+#   Glucose bolus 5 -> 2 ml/kg (flag 1-2).
 # ============================================================
 
 topic:
@@ -101,15 +106,31 @@ topic:
       title: "Steroids"
       callout: true
       markdown: |
-        **Dexamethasone 0.15 mg/kg IV every 6 h for 4 days**, given **with or
-        within 4 h of** the first antibiotic dose. It **reduces hearing loss and
-        neurological sequelae in high-income settings** (especially H. influenzae
-        and pneumococcal meningitis), but has **no proven benefit in low-income
-        settings** (patients present later and sicker) — consider it where
-        presentation is early. **Do NOT give** in: **newborns**, **suspected
-        cerebral malaria**, **suspected viral encephalitis**, or **Listeria
-        monocytogenes** meningitis (higher mortality). It **is** recommended for
-        all **tuberculous** meningitis ([§6.3.3](topic:who-imci-6-3-3-tb-meningitis)).
+        **Steroids are not routine here.** Multiple trials and the Cochrane
+        review found **no benefit on mortality or sequelae in low-income
+        settings**, where patients present later and sicker, and **benefit was
+        not demonstrated in HIV-positive patients** — a large share of this
+        population. The high-income evidence (less hearing loss, fewer
+        neurological sequelae, lower mortality) does not transfer.
+
+        **If used**, restrict it to an **early-presenting child with suspected
+        pneumococcal or Hib meningitis** — those are where benefit
+        concentrates (pneumococcal: mortality; Hib in children: severe hearing
+        loss, RR ≈ 0.34). There is **no benefit in meningococcal disease** or
+        in non-Haemophilus organisms in children, and conjugate vaccination is
+        shrinking the group who could gain.
+
+        **Dexamethasone 0.15 mg/kg IV every 6 h for 4 days** (= 0.6 mg/kg/day,
+        which outperformed 0.8 mg/kg/day in a paediatric meta-analysis), given
+        **with or just before the first antibiotic dose** — up to about 4 h
+        after at the latest. **Starting it late is not useful; give it then or
+        not at all.**
+
+        **Do NOT give** in: **newborns** (insufficient data), **Listeria
+        monocytogenes** meningitis (higher mortality), **suspected cerebral
+        malaria**, or **suspected viral encephalitis**. It **is** recommended
+        for all **tuberculous** meningitis
+        ([§6.3.3](topic:who-imci-6-3-3-tb-meningitis)).
 
     - type: "prose"
       title: "Antimalarial (malarious areas)"
@@ -124,7 +145,7 @@ topic:
         - **Convulsions:** rectal/IV diazepam ([Chart 9](topic:who-imci-chart9-diazepam));
           treat repeated convulsions with a preventive anticonvulsant (phenytoin
           or phenobarbital).
-        - **Hypoglycaemia:** check glucose; give **5 ml/kg 10% dextrose** if low
+        - **Hypoglycaemia:** check glucose; give **2 ml/kg 10% dextrose** if low
           ([Chart 10](topic:who-imci-chart10-glucose)).
         - **Unconscious child:** keep the airway open; recovery position; turn
           every 2 h; do not lie in a wet bed; attend to pressure points.

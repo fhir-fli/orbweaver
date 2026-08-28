@@ -1,0 +1,89 @@
+# ============================================================
+# WHO Surgical Safety Checklist — added 2026-08-28 after an OpenEvidence
+# review of chapter 9 flagged its absence (flag 9-2). It is not in the
+# 2013 print; it is a zero-cost intervention with consistent mortality
+# and complication reductions, and the effect is largest in exactly this
+# setting. Refs: White Ann Surg 2021 (LMIC use — mortality RR 0.77,
+# complications RR 0.56); Jin World J Surg 2021 (mortality RR 0.68,
+# SSI RR 0.50); GlobalSurg Br J Surg 2019 (emergency laparotomy — the
+# greatest absolute benefit in low- and middle-HDI countries, where
+# uptake is about half that of high-HDI countries).
+# Paediatric additions per the same review.
+# ============================================================
+
+topic:
+  id: "who-imci-9-1-4-safety-checklist"
+  title: "WHO Surgical Safety Checklist"
+  list_subtitle: "9.1.4 · sign in · time out · sign out"
+  last_reviewed: "OpenEvidence-reviewed 2026-08 · WHO Surgical Safety Checklist (not in the 2013 print)"
+  tags: ["surgery", "checklist", "safety", "sign in", "time out", "sign out", "theatre", "operating room", "pediatric"]
+  aliases:
+    - "Surgical Safety Checklist"
+    - "Time Out"
+  category: "medical"
+
+  page_number: 256
+
+  blocks:
+
+    - type: "prose"
+      title: "Why it is here"
+      highlight: true
+      markdown: |
+        The checklist is **not in the 2013 print**. It costs nothing and its
+        effect is **largest in settings like this one**: across low- and
+        middle-income countries its use is associated with **mortality
+        RR 0.77 and complications RR 0.56**, and in emergency laparotomy the
+        greatest absolute mortality benefit was in low- and middle-HDI
+        countries — where uptake is about **half** that of high-HDI countries.
+
+    - type: "prose"
+      title: "1 · Sign In — before induction of anaesthesia"
+      markdown: |
+        - Patient has **confirmed identity, site, procedure and consent**.
+        - **Site is marked**, or marking is not applicable.
+        - **Anaesthesia machine and medication check** complete.
+        - **Pulse oximeter** is on the patient and working.
+        - Does the patient have a **known allergy**?
+        - **Difficult airway or aspiration risk**? If yes, equipment and
+          assistance available.
+        - **Risk of > 500 ml blood loss (> 7 ml/kg in children)**? If yes,
+          adequate **IV access and fluids** planned.
+
+    - type: "prose"
+      title: "2 · Time Out — before skin incision"
+      markdown: |
+        - **All team members introduce themselves by name and role.**
+        - Surgeon, anaesthetist and nurse **verbally confirm** the patient,
+          the site and the procedure.
+        - **Anticipated critical events:**
+          - **Surgeon:** critical or unexpected steps, operative duration,
+            anticipated blood loss.
+          - **Anaesthetist:** any patient-specific concerns.
+          - **Nursing team:** sterility confirmed, equipment issues or
+            concerns.
+        - **Antibiotic prophylaxis given within the last 60 min?**
+        - **Essential imaging displayed?**
+
+    - type: "prose"
+      title: "3 · Sign Out — before the patient leaves theatre"
+      markdown: |
+        The nurse **verbally confirms with the team**:
+        - The **name of the procedure** recorded.
+        - **Instrument, sponge and needle counts are correct.**
+        - **Specimens are labelled**, including the patient's name.
+        - Any **equipment problems** to be addressed.
+        - Surgeon, anaesthetist and nurse review the **key concerns for
+          recovery and management** of this child.
+
+    - type: "prose"
+      title: "Paediatric additions"
+      callout: true
+      markdown: |
+        - Confirm **weight-based dosing** — antibiotic and anaesthetic doses
+          in **mg/kg**, and the fluid plan.
+        - Verify **airway and tube size** for age and weight.
+        - **Active temperature management** — a child loses heat fast.
+        - A **glucose monitoring plan**.
+        - Remember the blood-loss threshold is weight-adjusted:
+          **> 7 ml/kg**, not a flat 500 ml.

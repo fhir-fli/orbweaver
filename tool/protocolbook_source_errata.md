@@ -256,3 +256,19 @@ assume something may be sitting just underneath it.
 | **134** | Syphilis *"benzathine penicillin 1.2 million IU IM in each buttock"* | Correct in total but easy to misread — state **"2.4 million IU total (1.2 MU per buttock)"**. Note CDC uses a **1-year** cutoff for early syphilis where some programmes use 2 years |
 | **141** | Hypernatremia block ends with *"assume hypotonic hyponatremia"* | A **copy-paste carryover** from the hyponatraemia evaluation. Removed |
 | **142** | Central-line potassium *"up to 400 mEq/L"* stated without its condition | True, but the **400 mEq/L / 40 mEq/hr regimen is for urgent life-threatening hypokalaemia under ICU-level care with continuous ECG**. Routine ceiling is **10 mEq/hr, 200 mEq/24 h at ≤ 40 mEq/L** |
+
+---
+
+# 🟡 ADDED 2026-08-28 — from the WHO Pocket Book advance pass (OE-confirmed)
+
+**These are ProtocolBook errata found by comparing the two books against each
+other.** The flag was raised on the WHO volume; OE's answer changed the
+ProtocolBook too. All corrected in the app.
+
+| Page | Printed | Should be |
+|---|---|---|
+| **12, 13, 22, 45, 61, 150 (formulary)** | Paediatric hypoglycaemia: **D10% 5 mL/kg IV** — in the triage steps, both PALS bradycardia branches, severe malaria, paediatric sepsis, sickle-cell stroke and the formulary | **2 mL/kg (0.2 g/kg).** 5 mL/kg is 2.5× the PES/AAP/APLS standard; the larger osmotic and glucose load can provoke **rebound hyperinsulinaemic hypoglycaemia**, and there is no evidence 2 mL/kg under-treats. The safeguard is repeat measurement plus a maintenance infusion, not a bigger bolus. Applies at every age and in severe acute malnutrition |
+| **39** | Snake bite, antivenom box: epinephrine listed only as **"ready in case of anaphylaxis"** | **Add prophylactic SC epinephrine 0.005 mg/kg (max 0.25 mg) BEFORE the infusion.** It is the only premedication with randomised evidence — severe reactions cut ~40% — and the case is strongest with the less-purified polyspecific antivenoms used across sub-Saharan Africa. Also state that **hydrocortisone cancels out epinephrine's benefit**, and that ~90% of reactions occur in the first hour with 40% needing rescue epinephrine |
+| **128** | TB meningitis steroids: **"0.3–0.4 mg/kg/day, tapering weekly"** with no age qualifier | State it is the **ADULT** dose (0.4 grade II/III, 0.3 grade I) and that **children get 0.6 mg/kg/day**. Without the qualifier the two books read as contradicting each other on a mortality-reducing drug. Add the taper: wean IV by 0.1 mg/kg/day weekly × 4 weeks, then oral, tapering 1 mg/week × 4 weeks |
+| **32–33** | NAC 2-bag table, no lower weight bound and no three-bag indication | Add: **under 5 kg take toxicology advice**; **three-bag** is still preferred for late presentation with established hepatotoxicity, massive or modified-release ingestion, or early severe liver injury; and **do not stop at 20–21 h** — continue until paracetamol is undetectable with INR/LFTs normal or improving and no encephalopathy |
+| **135** | Cryptococcal maintenance: **"fluconazole 200 mg/day until immune reconstitution on ART"** | Give the actual stopping rule: **minimum 1 year**, and stop only after ≥ 1 year of antifungal therapy with **CD4 ≥ 100 sustained ≥ 3 months on ART and a suppressed viral load** — restart if CD4 falls |

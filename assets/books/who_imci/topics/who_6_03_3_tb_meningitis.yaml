@@ -4,6 +4,9 @@
 # ✅ OpenEvidence-reviewed 2026-07: added the 6-month intensive (Cape Town)
 # regimen as a WHO-recommended alternative to the 12-month standard.
 # Dexamethasone (all cases) and no-streptomycin confirmed.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Dexamethasone 0.6 mg/kg/day now NAMED as the paediatric dose (adults get
+#   0.4) and the total duration stated as 6-8 weeks (flag 6-1).
 # ============================================================
 
 topic:
@@ -56,9 +59,11 @@ topic:
           **ethionamide 17.5–22.5 mg/kg/day** (replacing ethambutol). South
           African experience shows markedly better survival and treatment success
           than the 12-month regimen.
-        - **Dexamethasone 0.6 mg/kg/day for 2–3 weeks** (then reduce over a
-          further 2–3 weeks) in **all** cases of TB meningitis, with either
-          regimen.
+        - **Dexamethasone — the paediatric dose is 0.6 mg/kg/day** (adults get
+          0.4 mg/kg/day; the difference is age, not a disagreement), given for
+          **2–3 weeks then reduced over a further 2–3 weeks — 6–8 weeks in
+          total** — in **all** cases of TB meningitis, with either regimen.
+          Prednisolone 2–4 mg/kg/day is the alternative.
 
         **MDR** (proven/suspected): a **fluoroquinolone and other second-line
         drugs** within a functioning MDR-TB programme, decided by a clinician

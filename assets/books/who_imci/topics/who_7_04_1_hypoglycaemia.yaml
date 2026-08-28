@@ -4,6 +4,8 @@
 # ✅ OpenEvidence-reviewed 2026-07: treatment protocol + threshold confirmed
 # current (SugarFACT: raising the treatment cutoff did NOT reduce mortality);
 # added prevalence (~9%) and the ~4× mortality association.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Unconscious SAM child: IV 10% glucose 5 -> 2 ml/kg (flag 1-2).
 # ============================================================
 
 topic:
@@ -48,7 +50,9 @@ topic:
           then the **first feed as soon as possible**. Give the first feed of
           **F-75** if quickly available, then feed **every 2 h for 24 h**; then
           every 2–3 h day and night.
-        - **Unconscious:** give **IV 10% glucose 5 ml/kg**; if no IV access,
+        - **Unconscious:** give **IV 10% glucose 2 ml/kg** — the smaller
+          volume matters here, a severely malnourished child tolerates fluid
+          poorly. If no IV access,
           give **10% glucose or sucrose solution by NG tube**. If IV glucose is
           not available, give **1 teaspoon of sugar moistened with 1–2 drops of
           water sublingually**, repeat every 20 min to prevent relapse (monitor

@@ -82,6 +82,9 @@
 #   - Plain immobilization without tourniquet matches WHO guidance
 #     for viper-predominant regions (pressure-immobilization bandage
 #     is elapid/Australia practice) — fine as printed.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Added prophylactic SC epinephrine before antivenom, which the page lacked
+#   entirely, plus the hydrocortisone warning (WHO pass flag 1-3).
 # ============================================================
 
 topic:
@@ -177,7 +180,9 @@ topic:
                       - "Polyvalent: titrate to symptoms, assess q30min"
                       - "Monovalent: monitor haematologic response, repeat dose if needed"
                       - "Epinephrine ready in case of anaphylaxis: Epinephrine (1mg/1ml 1:1000), 0.01mL/kg (max 0.3mL child, 0.5mL adolescent/adult), IM anterolateral thigh, repeat q5–15 minutes if no improvement"
-                      - "Antihistamine: have available, not routinely recommended"
+                      - "Prophylactic SC epinephrine BEFORE the infusion: 0.005mg/kg (0.005mL/kg of 1:1000), max 0.25mg. The only premedication with randomised evidence — severe reactions cut ~40%, strongest with the less-purified polyspecific antivenoms used across sub-Saharan Africa"
+                      - "Antihistamine: have available, not routinely recommended. Hydrocortisone does not prevent reactions and cancels out epinephrine's benefit — do not substitute either for epinephrine"
+                      - "~90% of reactions occur in the first hour and 40% need rescue epinephrine — monitor at least 1–4 h"
                       - "Monitor Vital Signs"
                       - "Never run medications directly into affected limb"
                     severity: "emergency"

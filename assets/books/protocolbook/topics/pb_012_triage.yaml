@@ -14,6 +14,8 @@
 #    specifically endorsed as a reasonable LMIC step given how common
 #    hypoglycaemia is in critically ill children here; diazepam IV/PR
 #    likewise appropriate where midazolam may be unavailable.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   D10% 5 -> 2 mL/kg (WHO pass flag 1-2).
 # ============================================================
 
 topic:
@@ -63,7 +65,7 @@ topic:
               4. Start IV
               5. Check vitals (Weight, HR, RR, BP)
               6. Draw blood — Hb, malaria, type & cross if pale (red and purple tube)
-              7. D10% 5 ml/kg IV
+              7. D10% 2 ml/kg IV
               8. If convulsions: **diazepam IV or PR**
               9. Keep patient warm
 

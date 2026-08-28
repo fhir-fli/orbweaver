@@ -10,6 +10,8 @@
 #     option for UNCOMPLICATED appendicitis (~72% avoid surgery at 1 yr;
 #     St Peter Lancet 2025 / Minneci JAMA 2020) where surgical expertise is
 #     limited, though appendicectomy remains standard of care.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Ampicillin 25-50 -> 50 mg/kg IM/IV q6h (flag 9-1).
 # ============================================================
 
 topic:
@@ -57,7 +59,7 @@ topic:
           without shock, 10–20 ml/kg half-strength Darrow's / normal saline
           + 5% glucose over 20 min.
         - **Antibiotics:** **ceftriaxone + metronidazole where available**;
-          otherwise **ampicillin (25–50 mg/kg IM/IV 4× daily) + gentamicin
+          otherwise **ampicillin (50 mg/kg IM/IV every 6 h) + gentamicin
           (7.5 mg/kg IM/IV once daily) + metronidazole (10 mg/kg 3× daily)**.
         - **Urgent review** by a surgeon — **appendicectomy** as soon as possible.
           It is **better to operate and be wrong** than to delay and have

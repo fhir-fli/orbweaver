@@ -313,6 +313,7 @@ book:
             - topic: "topics/who_9_01_1_preoperative.yaml"
             - topic: "topics/who_9_01_2_intraoperative.yaml"
             - topic: "topics/who_9_01_3_postoperative.yaml"
+            - topic: "topics/who_9_01_4_safety_checklist.yaml"
         - title: "9.2 Congenital anomalies"
           topic: "topics/who_9_02_congenital.yaml"
           children:

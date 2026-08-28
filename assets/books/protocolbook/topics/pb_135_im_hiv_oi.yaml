@@ -22,6 +22,9 @@
 #     sulfadiazine-leucovorin for toxo, ampho+flucytosine → fluconazole for
 #     crypto, 21-day TMP-SMX + steroid-if-hypoxic for PCP, and the
 #     ganciclovir/valganciclovir CMV options are all standard OI care.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Cryptococcal maintenance: added the real stopping criteria - minimum 1 year,
+#   CD4 >=100 sustained >=3 months with suppressed VL (WHO pass flag 6-2).
 # ============================================================
 
 topic:
@@ -107,7 +110,8 @@ topic:
               - Consolidation phase (8 weeks):
                 - **Fluconazole 800 mg/day**
               - Maintenance:
-                - **Fluconazole 200 mg/day until immune reconstitution on ART**
+                - **Fluconazole 200 mg/day for a minimum of 1 year**
+                - Stop only after ≥1 year of antifungal therapy with **CD4 ≥100 sustained ≥3 months on ART and a suppressed viral load** — restart if CD4 falls
 
         - type: "prose"
           title: "Pneumocystis jirovecii pneumonia (PCP)"

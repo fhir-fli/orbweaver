@@ -46,6 +46,8 @@
 #   printed at the time — a termination-of-resuscitation threshold is a
 #   clinical and ethical policy decision for the setting, not a factual
 #   fix, so it waited for Grey. Now decided: 20 minutes.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   D10% 5 -> 2 mL/kg, both bradycardia branches (WHO pass flag 1-2).
 # ============================================================
 
 topic:
@@ -81,7 +83,7 @@ topic:
               kind: "procedure"
             - text: "Epinephrine 0.1 ml/kg of 0.1 mg/mL (1:10,000), max 10 ml (= 1 mg). If only 1 mg/mL (1:1,000) is stocked, dilute 1 ml in 9 ml normal saline — never give 1:1,000 undiluted IV"
               kind: "medication_administration"
-            - text: "Dextrose 10% 5 ml/kg (mix 8 ml normal saline with 2 ml D50%)"
+            - text: "Dextrose 10% 2 ml/kg (mix 8 ml normal saline with 2 ml D50%)"
               kind: "medication_administration"
         - id: "palpable"
           label: "> 60 bpm, pulse palpable"
@@ -93,7 +95,7 @@ topic:
               kind: "procedure"
             - text: "Establish IV/IO access"
               kind: "procedure"
-            - text: "Dextrose 10% 5 ml/kg (mix 8 ml normal saline with 2 ml D50%)"
+            - text: "Dextrose 10% 2 ml/kg (mix 8 ml normal saline with 2 ml D50%)"
               kind: "medication_administration"
             - text: "Continue examination to establish cause and treat"
               kind: "assessment"

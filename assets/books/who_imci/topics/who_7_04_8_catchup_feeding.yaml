@@ -5,6 +5,10 @@
 # DOWN (150–185 then 100–130 kcal/kg/day); noted RUTF shortens recovery vs F-100;
 # added outpatient weight-gain context and the both-criteria discharge rule.
 # The 2013 RUTF packet table is retained as the reference (see the update note).
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   RUTF table relabelled by ENERGY TARGET and the withdrawn 200 kcal/kg/day
+#   column REMOVED, not relabelled; packet counts redone at 150-185 and
+#   100-130 kcal/kg/day (flag 7-1).
 # ============================================================
 
 topic:
@@ -59,9 +63,8 @@ topic:
         The higher old ceiling (220) was not supported by benefit and may add
         metabolic stress. **RUTF is preferred over F-100** in rehabilitation — it
         shortens recovery (≈ 7 vs 10 days in one cohort) and enables earlier
-        outpatient care. The **packet table below reflects the 2013 dosing** —
-        read its lower (transition) column as the practical rehabilitation amount
-        under the revised target.
+        outpatient care. The **packet table below is dosed to the 2023 targets**;
+        the withdrawn 200 kcal/kg/day column has been removed.
 
     - type: "prose"
       title: "If using ready-to-use therapeutic food (RUTF)"
@@ -77,15 +80,21 @@ topic:
     - type: "table"
       title: "RUTF per day (92 g packets, 500 kcal each)"
       column_flex: [3, 4, 4]
-      columns: ["Weight (kg)", "Transition (150 kcal/kg/d)", "Rehab (200 kcal/kg/d)"]
+      columns: ["Weight (kg)", "150–185 kcal/kg/d (still severely malnourished)", "100–130 kcal/kg/d (until discharge)"]
       rows:
-        - cells: ["**4.0–4.9**", "1.5", "2.0"]
-        - cells: ["**5.0–6.9**", "2.1", "2.5"]
-        - cells: ["**7.0–8.4**", "2.5", "3.0"]
-        - cells: ["**8.5–9.4**", "2.8", "3.5"]
-        - cells: ["**9.5–10.4**", "3.1", "4.0"]
-        - cells: ["**10.5–11.9**", "3.6", "4.5"]
-        - cells: ["**≥ 12.0**", "4.0", "5.0"]
+        - cells: ["**4.0–4.9**", "1.5", "1"]
+        - cells: ["**5.0–6.9**", "2", "1.5"]
+        - cells: ["**7.0–8.4**", "2.5", "1.5–2"]
+        - cells: ["**8.5–9.4**", "3", "2"]
+        - cells: ["**9.5–10.4**", "3", "2"]
+        - cells: ["**10.5–11.9**", "3.5", "2.5"]
+        - cells: ["**≥ 12.0**", "4", "2.5–3"]
+
+    - type: "prose"
+      markdown: |
+        Packets are rounded to the nearest half sachet from the band midpoint.
+        **Check against the national OTP ration card** — programmes round
+        differently.
 
     - type: "prose"
       title: "🛑 Avoid causing heart failure"

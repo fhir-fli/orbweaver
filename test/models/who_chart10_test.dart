@@ -16,9 +16,10 @@ void main() {
     expect(topic.pageNumber, 16);
 
     final blocks = topic.blocks;
-    // when/what, dose table, dose+threshold context, after-bolus,
-    // 50% dilution, D50 danger callout, sublingual first-aid callout.
-    expect(blocks.length, 7);
+    // when/what, dose table, dose+threshold context, neonatal thresholds,
+    // after-bolus, 50% dilution, D50 danger callout, sublingual first-aid
+    // callout.
+    expect(blocks.length, 8);
 
     final table = blocks.whereType<TableBlock>().single;
     expect(table.columns.length, 2);

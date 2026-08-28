@@ -27,6 +27,8 @@
 #     hydration), NOT a contraindication check. Retitled "Manage
 #     concurrent issues" to match its content. Grey should fix the
 #     source PDF header.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   D10% 5 -> 2 mL/kg, children (WHO pass flag 1-2).
 # ============================================================
 
 topic:
@@ -80,7 +82,7 @@ topic:
       column_flex: [3, 7]
       rows:
         - cells: ["**Fever: Paracetamol**", "Children: 15mg/kg PO q6hrs · Adults: 650mg PO q6hrs"]
-        - cells: ["**Hypoglycemia**", "Children: Dextrose 10% 5ml/kg (mix 8ml NS with 2ml Dextrose 50%) · Adults: 1 amp (50ml) of Dextrose 50%"]
+        - cells: ["**Hypoglycemia**", "Children: Dextrose 10% 2ml/kg (mix 8ml NS with 2ml Dextrose 50%) · Adults: 1 amp (50ml) of Dextrose 50%"]
         - cells: ["**Convulsions**", "See Convulsion Protocol"]
         - cells: ["**Anemia: Transfusion**", "**Exchange transfusion is preferred** — target post-procedure **HbS 15–20%**. Start within **2 hours** of presentation. If exchange is not available: simple transfusion, PRBCs, to Hgb >9 — **but DO NOT exceed Hgb 10**. Raising the haematocrit without lowering HbS raises viscosity and can extend the infarct"]
         - cells: ["**Infection: Antibiotics**", "Cefotaxime IV 50mg/kg every 8 hours (max dose 2g). May substitute Ceftriaxone 80mg/kg IV daily (max dose 2g)"]

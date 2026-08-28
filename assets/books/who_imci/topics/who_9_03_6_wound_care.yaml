@@ -8,6 +8,10 @@
 # ACIP wound-type × vaccine-status matrix (TIG for dirty wounds if < 3
 # doses / unknown); cover MRSA for purulent wound infections where
 # prevalent. Refs: ACIP/CDC tetanus; TCCC; IDSA SSTI.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Ampicillin 25-50 mg/kg ORALLY -> ampicillin 50 mg/kg IM/IV q6h, or
+#   amoxicillin 40 mg/kg orally - oral ampicillin is erratically absorbed
+#   (flag 9-1).
 # ============================================================
 
 topic:
@@ -90,6 +94,7 @@ topic:
           **S. aureus**). Where **community-acquired MRSA** is prevalent, or for a
           purulent/abscess-forming infection, **cover MRSA** — e.g.
           **clindamycin** or **trimethoprim–sulfamethoxazole** — after incision and
-          drainage. If bowel flora suspected: **ampicillin (25–50 mg/kg orally 4×
-          daily) + gentamicin (7.5 mg/kg IM/IV once daily) + metronidazole
-          (7.5 mg/kg 3× daily)**.
+          drainage. If bowel flora suspected: **ampicillin 50 mg/kg IM/IV every
+          6 h** (orally, use **amoxicillin 40 mg/kg 2–3× daily** — oral
+          ampicillin is poorly and erratically absorbed) **+ gentamicin
+          (7.5 mg/kg IM/IV once daily) + metronidazole (7.5 mg/kg 3× daily)**.

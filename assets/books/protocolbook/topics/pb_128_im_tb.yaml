@@ -35,6 +35,9 @@
 #     compression, extended 12-month course for CNS TB, and the ALT-based
 #     hepatotoxicity thresholds (hold/alternate if >3–5× ULN) are all
 #     standard programmatic TB care.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   TB meningitis dexamethasone now NAMED as the adult dose (children get 0.6
+#   mg/kg/day) with the full taper schedule (WHO pass flag 6-1).
 # ============================================================
 
 topic:
@@ -237,9 +240,9 @@ topic:
                     title: "Dexamethasone (preferred over prednisolone)"
                     severity: "priority"
                     bullets:
-                      - "0.3–0.4 mg/kg/day IV for grade II/III disease, tapering weekly"
-                      - "Taper over 6–8 weeks in total"
-                      - "Still recommended in HIV-positive patients — no evidence of harm, and mortality is high"
+                      - "ADULT dose: 0.4 mg/kg/day IV for grade II/III disease, 0.3 mg/kg/day for grade I. Children get 0.6 mg/kg/day — the difference is age, not a disagreement"
+                      - "Wean the IV dose by 0.1 mg/kg/day each week for 4 weeks, then switch to oral and taper by 1 mg/week for 4 weeks — 6–8 weeks in total (3+3 weeks for grade I)"
+                      - "Still recommended in HIV-positive patients — confirmed by the 2023 ACT HIV trial"
                 - label: "Yes — the other indications"
                   box:
                     title: "Steroids on clinical judgement"

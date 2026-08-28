@@ -509,3 +509,45 @@ flags are cross-book contradictions on the same drug for the same disease (parac
 antidote, PCP co-trimoxazole, TB-meningitis steroids, cryptococcal flucytosine), and one of
 those had already been adjudicated by OE for the other book and never propagated here.
 **A single-book review cannot find those. Only reading them against each other can.**
+
+---
+
+# ✅ ALL 13 FLAGS ANSWERED BY OPENEVIDENCE AND APPLIED — 2026-08-28
+
+Grey put all 13 to OE in two batches. Every answer is applied. Where the answer
+changed a figure the **other** book also carries, it was propagated in the same
+pass — the whole point of the cross-book flags.
+
+| # | OE ruling | Applied to |
+|---|---|---|
+| **1-1** 🔴 | **Two-bag NAC down to 5 kg.** The FDA "not established under 41 kg" is absent trial data, not evidence of inferiority — two-bag is non-inferior for hepatotoxicity, OR 0.24 for anaphylactoid reactions, fewer medication errors in children. Three-bag stays for late presentation with established hepatotoxicity, massive/modified-release ingestion, or early severe liver injury. Under 5 kg → toxicology advice. **Do not stop at 20–21 h.** | `who_1_06_4_specific` rewritten to two-bag with weight-scaled diluent; `pb_032_paracetamol` gained the <5 kg line, the three-bag carve-out and the stopping rule |
+| **1-2** 🟡 | **2 ml/kg of 10% glucose (0.2 g/kg), not 5.** Same at every age and in SAM. The 5 ml/kg load can provoke rebound hyperinsulinaemic hypoglycaemia; the safeguard against under-treatment is repeat measurement + maintenance, not a bigger bolus. Recheck 20–30 min; maintenance GIR 5–8, up to 10–13 if recurrent (suspect hyperinsulinism). | Chart 10 (dose, weight table 6/10/16/24/32 ml, prose), `who_6_03_1`, `who_6_02_1`, `who_7_04_1`; **ProtocolBook propagated** — `pb_012`, `pb_013` (×2), `pb_022`, `pb_045`, `pb_061`, `formulary` |
+| **1-3** 🟡 | **Keep it.** Prophylactic SC adrenaline is the only premedication with randomised evidence (severe reactions −40%); strongest with the less-purified polyspecific antivenoms used across sub-Saharan Africa. Dose 0.005 mg/kg capped at 0.25 mg ✓. Antihistamines and hydrocortisone do not work, and **hydrocortisone cancels adrenaline's benefit**. ~90% of reactions in the first hour, 40% need rescue adrenaline; monitor 1–4 h. | `who_1_09_1_snake_bite`; **`pb_039_snake_bite` gained the prophylactic dose it lacked entirely** |
+| **3-1** 🔴 | **25–50 mg/kg, max 250 mg, single dose** (CDC 2021 / AAP). The 125 mg cap is the 1986 figure. | `who_3_14_drug_doses` eye-pus row 125 → 250 mg (the §3.12.2 page was already right) |
+| **3-2** 🟡 | A **single** dose of ceftriaxone is fine in a neonate for ophthalmia — the caution is bilirubin displacement and calcium precipitation on repeated exposure. Cefotaxime 100 mg/kg single dose if jaundiced/premature or on calcium-containing fluids. | `who_3_12_2_conjunctivitis` — the reason is now on the page |
+| **3-3** 🟡 | **2.6 mmol/L (47 mg/dL)** is the operational neonatal threshold; the print's 2.2 is low. After 48 h target > 3.3; persistent hypoglycaemia disorder > 3.9. | `who_3_06_danger_signs` 2.2 → 2.6; new "Neonatal thresholds" block in Chart 10 |
+| **4-1** 🟡 | **TMP 15–20 mg/kg/day in 3–4 divided doses, max 960 mg/day.** The print's 8 mg/kg q8h = **24 mg/kg/day, above the ceiling**. Same total IV or oral; monitor FBC, creatinine/K, LFTs, rash. | `who_8_04_2_pcp`, `who_4_02_1_severe_pneumonia` (the ProtocolBook formulary was already 15–20) |
+| **6-1** 🔴 | **The difference is age, not a disagreement.** Child 0.6 mg/kg/day; adult 0.4 (grade II/III), 0.3 (grade I). Both 6–8 weeks. Neither book said which age group it meant — that was the defect. Confirmed in HIV-positive adults (ACT HIV 2023). | `who_6_03_3_tb_meningitis` and `pb_128_im_tb` both now name the age group; the ProtocolBook gained the full taper schedule |
+| **6-2** 🟡 | **Flucytosine 100 mg/kg/day (25 mg/kg QID)** — drop the 150 upper end, marrow toxicity is dose-dependent. **Maintenance fluconazole 200 mg/day adult / 6 mg/kg child — the 800 mg cap was the consolidation figure carried down a row.** Continue ≥ 1 year; stop only at CD4 ≥ 100 sustained ≥ 3 months with suppressed VL. | `who_6_03_4_cryptococcal_meningitis` (both errors), `who_8_04_4_fungal` (flucytosine), `pb_135_im_hiv_oi` (stop criteria) |
+| **6-3** 🟡 | **No — not routine here.** No benefit on mortality or sequelae in low-income settings, and not demonstrated in HIV-positive patients. If used: early presentation, suspected pneumococcal or Hib, with or just before the first antibiotic dose. 0.6 mg/kg/day beat 0.8. Exclude neonates and Listeria. | `who_6_03_1_bacterial_meningitis` rewritten — steroids are now the exception, not the instruction (the ProtocolBook already carried the qualified version) |
+| **7-1** 🟡 | **Label by energy target and delete the 200 kcal/kg/day column** — it is withdrawn, not merely relabelled. New packet counts at 150–185 and 100–130 kcal/kg/day. | `who_7_04_8_catchup_feeding` — columns replaced, note about checking the national OTP ration card added |
+| **9-1** 🟡 | **50 mg/kg IV q6h**; 25 mg/kg is a half dose and inadequate for sepsis, peritonitis and CNS-exposure prophylaxis. **Replace oral ampicillin with amoxicillin** — oral ampicillin is poorly and erratically absorbed. | `who_9_04_1`, `who_9_04_2`, `who_9_04_7`, `who_9_02_4`, `who_9_03_6` (oral → amoxicillin 40 mg/kg 2–3× daily). The §9.1.1 pre-op prophylaxis range is left alone — OE said 25 mg/kg approximates a single prophylaxis dose |
+| **9-2** 🟡 | **Add it.** Zero cost; in LMICs mortality RR 0.77, complications RR 0.56; largest absolute benefit in emergency laparotomy in low/middle-HDI countries, where uptake is half that of high-HDI. | **New topic `who_9_01_4_safety_checklist.yaml`** — Sign In / Time Out / Sign Out plus paediatric additions (mg/kg dosing, tube size, temperature, glucose plan, > 7 ml/kg blood-loss threshold). Registered in `book.yaml` under 9.1 |
+
+**Suite after the pass: 613 pass / 0 fail.** Two count assertions were updated
+because the content changed, not because they were wrong:
+`library_test` 258 → 259 topics (Ch.9 = 34) and `who_chart10_test` 7 → 8 blocks.
+
+## ⚠️ Three figures were cut off in the pasted OE reply — not applied, not invented
+
+1. **3-3**, first-48-h transitional threshold: *"treat if ___"* — the number is
+   missing from the paste. The page carries the 2.6 mmol/L operational threshold
+   instead, which is the answer's own headline.
+2. **3-3**, symptomatic neonate: *"treat promptly at ___"*. Written as "a
+   symptomatic neonate is treated promptly at any age", with no figure.
+3. **1-1**, stopping criteria: *"continue until stopping criteria are met
+   (paracetamol ___"*. Both books already carried the full criteria
+   (undetectable paracetamol, INR/LFTs normal or improving, no encephalopathy),
+   so nothing was lost — but the paste did not confirm them.
+
+Ask OE for those two neonatal figures if you want them printed.

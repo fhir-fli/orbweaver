@@ -8,6 +8,8 @@
 # children); consolidation fluconazole 12 mg/kg; maintenance minimum 1 year;
 # DELAY ART to the end of the 2-week induction. Refs: ECMM/ISHAM/ASM 2024;
 # DHHS/OARAC Pediatric OI 2025.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Flucytosine 100-150 -> 25 mg/kg QID (100 mg/kg/day) (flag 6-2).
 # ============================================================
 
 topic:
@@ -63,7 +65,9 @@ topic:
       markdown: |
         - **Preferred:** amphotericin B deoxycholate **1 mg/kg/day** (or
           **liposomal amphotericin B 3–4 mg/kg/day**) **+ flucytosine
-          100–150 mg/kg/day in 4 divided doses**.
+          25 mg/kg four times daily (100 mg/kg/day)** — the older 150 mg/kg/day
+          upper end is no longer used, flucytosine marrow toxicity is
+          dose-dependent.
         - **Liposomal** amphotericin is preferred if **renal insufficiency** or
           risk thereof.
         - **Resource-limited (adults):** single-dose **liposomal amphotericin B

@@ -5,6 +5,8 @@
 # for < 20 kg); artesunate-over-quinine strengthened (AQUAMAT); added
 # pre-referral rectal artesunate; added a HIGH-priority FEAST red-alert
 # (no fluid boluses in compensated shock); phenobarbital-prophylaxis warning.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Glucose bolus 5 -> 2 ml/kg; recheck at 20-30 min (flag 1-2).
 # ============================================================
 
 topic:
@@ -168,9 +170,9 @@ topic:
         Blood glucose < 2.5 mmol/L (< 45 mg/dl); common in children < 3 years,
         those with convulsions or hyperparasitaemia, and the comatose — it can
         **mimic cerebral malaria**.
-        - Give **5 ml/kg of 10% glucose (dextrose) IV** rapidly ([Chart 10](topic:who-imci-chart10-glucose)).
+        - Give **2 ml/kg of 10% glucose (dextrose) IV** ([Chart 10](topic:who-imci-chart10-glucose)).
           If no IV, give via **intraosseous** or **sublingual sugar**; recheck
-          after 30 min and repeat if still low (< 3.0 mmol/L).
+          after 20–30 min and repeat if still low (< 3.0 mmol/L).
         - **Prevent** further hypoglycaemia in an unconscious child with **10%
           dextrose** in the maintenance infusion (add 20 ml of 50% glucose to
           80 ml of 0.9% saline or Ringer's lactate); do not exceed maintenance

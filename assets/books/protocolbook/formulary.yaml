@@ -36,6 +36,8 @@
 # ✅ FULL VERIFICATION SWEEP 2026-07-20: every drug on pp.146–158 re-checked
 #   against a 300-dpi render — ZERO dose-transcription errors; the only
 #   deviations from the source are the intentional corrections listed above.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Dextrose/Glucose: paediatric D10% 5 -> 2 mL/kg (0.2 g/kg) (flag 1-2).
 # ============================================================
 
 formulary:
@@ -492,7 +494,7 @@ formulary:
       class: ""
       page: 150
       dose: |
-        - Neonates / infants / children: D10% 5 mL/kg IV push (if no D10 immediately available, use D5)
+        - Neonates / infants / children: D10% 2 mL/kg (0.2 g/kg) IV push (if no D10 immediately available, use D5)
         - Adults: 25–50 mL D50 IV push
       notes: |
         **How to make D10:**

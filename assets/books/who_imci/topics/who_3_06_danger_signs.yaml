@@ -4,6 +4,8 @@
 # ✅ OpenEvidence review applied (2026-07): 2019 WHO PSBI tiered
 #    severity classification, fast-breathing age qualifier, capillary
 #    refill + cry quality as supplementary predictors.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Neonatal hypoglycaemia threshold 2.2 -> 2.6 mmol/L (flag 3-3).
 # ============================================================
 
 topic:
@@ -74,7 +76,9 @@ topic:
         - Insert a **venous cannula**.
         - Give **ampicillin (or penicillin) + gentamicin**.
         - If **drowsy, unconscious or convulsing, check blood glucose.** If
-          **< 2.2 mmol/L (< 40 mg/100 ml)**, give **10% glucose 2 ml/kg IV**,
+          **< 2.6 mmol/L (< 47 mg/dl)** — the operational neonatal threshold;
+          the 2013 print's **2.2 mmol/L is lower than current guidance** —
+          give **10% glucose 2 ml/kg IV**,
           then a **sustained infusion of 5 ml/kg/h** of 10% glucose over the
           next few days while oral feeds are built up. If glucose cannot be
           checked, **assume hypoglycaemia** and give glucose IV; if there is no

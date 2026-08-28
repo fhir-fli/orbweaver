@@ -10,6 +10,8 @@
 #     ampicillin+gentamicin+metronidazole triple remains acceptable in
 #     resource-limited settings.
 #   - Analgesia-does-not-mask + peritonitis signs re-confirmed accurate.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Ampicillin 25-50 -> 50 mg/kg IM/IV q6h (flag 9-1).
 # ============================================================
 
 topic:
@@ -65,7 +67,7 @@ topic:
           intra-abdominal problem, and may aid examination).
         - **Antibiotics** if signs of peritonitis: **ceftriaxone +
           metronidazole where available** (preferred); otherwise
-          **ampicillin (25–50 mg/kg IM/IV 4× daily) + gentamicin (7.5 mg/kg
+          **ampicillin (50 mg/kg IM/IV every 6 h) + gentamicin (7.5 mg/kg
           IM/IV once daily) + metronidazole (10 mg/kg 3× daily)** remains an
           acceptable resource-limited regimen.
         - **Urgent review** by a surgeon experienced in paediatric surgery.

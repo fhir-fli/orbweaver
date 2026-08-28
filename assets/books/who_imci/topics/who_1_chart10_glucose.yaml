@@ -22,12 +22,15 @@
 # OpenEvidence-reviewed 2026-07: reviewer confirmed the 10% dose, dilution-
 #   formula correction, D50 safety callout, buccal-gel bridge, SugarFACT
 #   threshold, and GIR maintenance all accurate — no change.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Glucose bolus 5 -> 2 ml/kg (0.2 g/kg) at every age, weight table rebuilt
+#   (flag 1-2); new neonatal-threshold block, 2.6 mmol/L operational (flag 3-3).
 # ============================================================
 
 topic:
   id: "who-imci-chart10-glucose"
   title: "IV Glucose (Hypoglycaemia)"
-  list_subtitle: "IMCI Chart 10 · 5 ml/kg of 10% glucose"
+  list_subtitle: "IMCI Chart 10 · 2 ml/kg of 10% glucose"
   last_reviewed: "OpenEvidence-reviewed 2026-07 · SugarFACT / PES / Luo 2024 / WHO (no change)"
   tags: ["hypoglycaemia", "glucose", "dextrose", "iv", "d10", "imci", "pediatric"]
   aliases:
@@ -47,36 +50,60 @@ topic:
         - **Treat as hypoglycaemia** if glucose is **< 2.5 mmol/L
           (45 mg/dL)**, or **< 3 mmol/L (54 mg/dL)** in a severely
           malnourished child, **or** if it **cannot be measured**.
-        - Give **5 ml/kg of 10% glucose** rapidly by IV injection.
+        - Give **2 ml/kg of 10% glucose (0.2 g/kg)** by IV injection —
+          over about **15 min** in a neonate.
 
     - type: "table"
-      title: "10% glucose bolus — 5 ml/kg"
-      columns: ["Age (weight)", "Volume (5 ml/kg)"]
+      title: "10% glucose bolus — 2 ml/kg"
+      columns: ["Age (weight)", "Volume (2 ml/kg)"]
       column_flex: [3, 2]
       rows:
-        - cells: ["< 2 months (< 4 kg)", "15 ml"]
-        - cells: ["2–< 4 months (4–< 6 kg)", "25 ml"]
-        - cells: ["4–< 12 months (6–< 10 kg)", "40 ml"]
-        - cells: ["1–< 3 years (10–< 14 kg)", "60 ml"]
-        - cells: ["3–< 5 years (14–< 19 kg)", "80 ml"]
+        - cells: ["< 2 months (< 4 kg)", "6 ml"]
+        - cells: ["2–< 4 months (4–< 6 kg)", "10 ml"]
+        - cells: ["4–< 12 months (6–< 10 kg)", "16 ml"]
+        - cells: ["1–< 3 years (10–< 14 kg)", "24 ml"]
+        - cells: ["3–< 5 years (14–< 19 kg)", "32 ml"]
 
     - type: "prose"
       title: "Dose & threshold context"
       markdown: |
-        - WHO uses **5 ml/kg (0.5 g/kg)** — about **2.5× the PES / AAP /
-          APLS standard of 2 ml/kg (0.2 g/kg)**. The higher WHO dose suits
-          settings where glucose monitoring and repeat dosing may be
-          delayed.
+        - **2 ml/kg (0.2 g/kg) is the dose at every age** — neonate,
+          infant, older child, and in **severe acute malnutrition**, where
+          the smaller volume matters because these children tolerate fluid
+          poorly.
+        - The 2013 print instructs **5 ml/kg (0.5 g/kg)**. That is **2.5×
+          the PES / AAP / APLS standard and is not supported** — the larger
+          osmotic and glucose load can provoke **rebound hyperinsulinaemic
+          hypoglycaemia**, and there is no evidence 2 ml/kg under-treats.
+          The safeguard against under-treatment is **repeat measurement and
+          a maintenance infusion**, not a bigger bolus.
+        - A **milder, asymptomatic** case can be managed with oral or
+          buccal glucose and feeding first; the IV bolus is for the
+          symptomatic or fitting child.
         - The **2.5 mmol/L** cutoff is supported by the **SugarFACT** RCT
           (Malawi) — raising it did **not** reduce mortality.
 
     - type: "prose"
+      title: "Neonatal thresholds"
+      markdown: |
+        In a **neonate** the operational treatment threshold is
+        **2.6 mmol/L (47 mg/dL)**, not the 2013 print's 2.2 mmol/L, which is
+        lower than current guidance.
+        - **After 48 h of age:** target **> 3.3 mmol/L (60 mg/dL)**.
+        - **Suspected or confirmed persistent hypoglycaemia disorder**
+          (e.g. hyperinsulinism): target **> 3.9 mmol/L (70 mg/dL)**.
+        - A **symptomatic** neonate is treated promptly at any age.
+
+    - type: "prose"
       title: "After the bolus"
       markdown: |
-        - **Recheck glucose at 30 min.** If still low, **repeat 5 ml/kg**
-          of 10% glucose.
+        - **Recheck glucose within 20–30 min.** If still low, **repeat
+          2 ml/kg** of 10% glucose.
         - **Start a maintenance 10% glucose infusion** (≈ 5–8 mg/kg/min;
           use 5% if 10% is unavailable) to prevent **rebound hypoglycaemia**.
+        - If hypoglycaemia **recurs**, titrate up to **10–13 mg/kg/min**
+          (central access and a higher concentration may be needed) and
+          **suspect hyperinsulinism**.
         - **Feed as soon as the child is conscious.**
         - If the child **cannot feed safely** (aspiration risk):
           - **milk or sugar water by NG tube** — 4 level teaspoons sugar

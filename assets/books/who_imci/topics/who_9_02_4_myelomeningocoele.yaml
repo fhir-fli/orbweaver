@@ -6,6 +6,8 @@
 # independent walking); postnatal closure within 48 h; Chiari II + neurogenic
 # bladder / CIC; periconceptional folic acid prevention. Amp+gent prophylaxis
 # retained (well-supported). Refs: Iskandar NEJM 2022; MOMS; Houtrow 2021.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   Ampicillin 25-50 -> 50 mg/kg IM/IV q6h (flag 9-1).
 # ============================================================
 
 topic:
@@ -51,8 +53,8 @@ topic:
         - Apply a **sterile dressing**.
         - **Close within 48 h of birth** (standard practice); give antibiotics if
           surgery will be delayed beyond 48 h.
-        - If **ruptured / for prophylaxis**: **ampicillin** (25–50 mg/kg IM/IV
-          4× daily) + **gentamicin** (5–7.5 mg/kg once daily) — this combination is
+        - If **ruptured / for prophylaxis**: **ampicillin** (50 mg/kg IM/IV
+          every 6 h) + **gentamicin** (5–7.5 mg/kg once daily) — this combination is
           well-supported (infection 6% vs 45%); **benzylpenicillin** (100–150 mg/kg
           daily in two divided doses) is an alternative — for **5 days**.
         - **Review** by a surgeon experienced in paediatric surgery.
