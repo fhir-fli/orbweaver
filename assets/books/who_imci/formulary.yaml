@@ -3,6 +3,10 @@
 # A reusable "formulary" collection: records + facets (A–Z / class / indication).
 # Rendered by the drug-index view; each record's doses reuse the weight-band table.
 # Every dose verified against the source page renders (RULE #0).
+# Cross-book dose pass 2026-08-28: the spectinomycin note still carried the old
+#   ceftriaxone ophthalmia cap of 125 mg, contradicting the 250 mg applied to
+#   S3.12.2 and S3.14 from OE flag 3-1. Corrected. It was missed the first time
+#   because that grep covered topics/ only and the formulary is a separate file.
 # ============================================================================
 formulary:
   id: "who-imci-a2-formulary"
@@ -936,7 +940,7 @@ formulary:
         regimen: "IM: 25 mg/kg single dose (max 75 mg)"
         form: "2-g vial in 5 ml diluent"
         bands: ["0.25 ml", "—", "—", "—", "—"]
-      notes: "Global supply has largely been discontinued. For neonatal gonococcal ophthalmia, ceftriaxone 25–50 mg/kg IM as a single dose (max 125 mg) is now the WHO-recommended treatment."
+      notes: "Global supply has largely been discontinued. For neonatal gonococcal ophthalmia, ceftriaxone 25–50 mg/kg IM/IV as a single dose (max 250 mg) is now the recommended treatment."
     - id: "tetracaine-adrenaline-cocaine"
       name: "Tetracaine, adrenaline, cocaine"
       class: "other"

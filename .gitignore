@@ -44,3 +44,6 @@ table_fits.tsv
 
 # Claude Code personal settings (permissions allowlist)
 .claude/settings.local.json
+
+# Cross-book comparison tooling
+tool/__pycache__/
