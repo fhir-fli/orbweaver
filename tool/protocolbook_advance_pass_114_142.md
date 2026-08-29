@@ -1,5 +1,9 @@
 # ProtocolBook advance pass — pp.114–142 (the ECG / internal-medicine tail)
 
+> ⚡ **NOTHING IS OPEN.** All 32 flags were answered by OE and applied on
+> 2026-08-25. The question text below is kept deliberately, as the record of
+> what was asked — **do not paste any of it into OpenEvidence again.**
+
 # ✅ ALL 32 FLAGS ANSWERED BY OE AND APPLIED — 2026-08-25
 
 **OE endorsed every one**: "every one of these edits is warranted", "all of these are

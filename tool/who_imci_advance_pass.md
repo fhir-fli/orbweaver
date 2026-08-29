@@ -1,5 +1,11 @@
 # WHO Pocket Book — full advance pass, all 258 topics
 
+> ⚡ **NOTHING IS OPEN.** All 13 flags were answered by OE and applied on
+> 2026-08-28 — the ruling table is at the end of this file. The question text
+> below is kept as the record of what was asked; **do not paste any of it into
+> OpenEvidence again.** The cross-book pass that followed has its own file,
+> `crossbook_findings.md`, which carries the one item still open.
+
 **Scope: every topic in the book.** Chapter 8 (HIV, 34 topics) was reviewed and applied on
 2026-08-25/27. This file covers **the remaining 224**, chapter by chapter, and is committed
 per chapter so it can go to OE in batches rather than waiting for the whole book.

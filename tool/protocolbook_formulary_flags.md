@@ -1,5 +1,10 @@
 # ProtocolBook formulary (pp.146–158) — advance pass
 
+> ⚡ **NOTHING IS OPEN.** Both flags (F-1, the crossed rows; F-2, the 18
+> missing entries) were answered by OE and applied — the formulary went 84 →
+> 102 drugs. The question text below is kept as the record of what was asked;
+> **do not paste any of it into OpenEvidence again.**
+
 Raised 2026-08-27, after the pp.12–142 chapter corrections were applied. The method here
 is the one that has found the worst errors before: **compare the book against itself.**
 Fourteen of the formulary's 84 drugs touch something the chapters changed this month, so
