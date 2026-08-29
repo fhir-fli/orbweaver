@@ -47,7 +47,12 @@
 #      minutes" cycle node, so the page read as 1 mg every 2 minutes - roughly
 #      double the AHA interval. p.13 (PALS) in this same book already prints
 #      "Repeat epinephrine every 3-5 minutes". Now stated explicitly on both
-#      the CPR node and the resume-CPR branch, and sent to OE to confirm.
+#      the CPR node and the resume-CPR branch. VERIFIED against the published
+#      sources, not asserted from memory: AHA ACLS gives 1 mg every 3-5 min
+#      for both shockable and non-shockable rhythms, and the 2-minute figure
+#      is the rhythm-check/compressor-change interval, not the drug interval.
+#      Conflating the two is what the chart did.
+#      ncbi.nlm.nih.gov/books/NBK613285 - 2019 AHA Focused Update on ACLS.
 # ============================================================
 
 topic:

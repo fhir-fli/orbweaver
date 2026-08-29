@@ -187,3 +187,28 @@ goes back to OE, quote the parenthetical in full and say what it expands to.
 ⚠️ **The oxygen sweep took two passes.** The first regex required a lowercase `s` in
 `spO`, so the sixteen `spO2` files changed and the nine `SpO₂` files did not. Both are
 done; the check is that no `oxygen if …` line reads 94% anywhere.
+
+
+---
+
+## ✅ 2026-08-28 — adrenaline in adult cardiac arrest, settled from the sources
+
+**Not sent to OE.** It was queued as a confirm-me, then withdrawn: the published sources
+settle it and there was nothing to adjudicate.
+
+**What the sources say.** The AHA ACLS reference states *"Patients who remain in pulseless
+ventricular tachycardia or ventricular fibrillation after defibrillation and 1 cycle of
+CPR should receive **1 mg of IV epinephrine every 3 to 5 minutes** while high-quality CPR
+is ongoing"*, and for non-shockable rhythms *"IV epinephrine (**1 mg every 3 to 5
+minutes**)"*. The **2-minute** figure is the **rhythm-check / compressor-change** interval,
+and the same reference does not tie the drug to it.
+
+**The defect was exactly that conflation.** The chart drew one "Every 2 minutes" cycle
+node and put epinephrine inside it, so the page read as 1 mg every 2 minutes. The
+interval now sits on its own, separated from the 2-minute cycle. The paediatric page of
+the same book already printed 3–5 minutes and is unchanged.
+
+Read: [ACLS, StatPearls / NCBI](https://www.ncbi.nlm.nih.gov/books/NBK613285/) ·
+[2019 AHA Focused Update on ACLS](https://www.ahajournals.org/doi/10.1161/CIR.0000000000000732).
+The AHA's own 2025 algorithm PDF at cpr.heart.org returns 403 to an automated fetch and
+was **not** read — naming it here so the gap is on the record rather than implied.
