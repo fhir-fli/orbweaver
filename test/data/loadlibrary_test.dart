@@ -16,10 +16,15 @@ void main() {
       final titles = pb.allTopics.map((t) => t.title).toList();
       // 95 authored topic leaves + the formulary drugs (each drug loads as a
       // synthetic searchable leaf). 84 of the drugs are the printed Essential
-      // Medications list; 18 more were added on 2026-08-27 because the
-      // protocols prescribe them and the printed list did not carry them —
-      // see tool/protocolbook_formulary_flags.md.
-      expect(titles, hasLength(95 + 102));
+      // Medications list; 18 more were added on 2026-08-27, and 37 more on
+      // 2026-08-29, because the protocols prescribe them and the printed list
+      // does not carry them — see tool/protocolbook_formulary_flags.md and
+      // tool/protocolbook_formulary_additions.md. The 2026-08-29 round asked
+      // the wider question: not which drugs the corrected chapters use, but
+      // which drugs ANY protocol in the book prescribes. It found labetalol,
+      // the book's own first choice in hypertensive emergency, and
+      // acetylcysteine, the paracetamol antidote, both absent.
+      expect(titles, hasLength(95 + 139));
       expect(titles, contains('Acyclovir'));
       // one of the added entries, so this count cannot drift back silently
       expect(titles, contains('Flucytosine (5-FC)'));
