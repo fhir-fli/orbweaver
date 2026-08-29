@@ -1,0 +1,19 @@
+book	file	decision	sicker	milder	kind	detail
+protocolbook	pb_030_hydrocarbon.yaml	Any of these present?	label "Yes — symptomatic"	label "No — asymptomatic"	THINNER ARM	sicker 2 vs milder 6
+protocolbook	pb_039_snake_bite.yaml	Has envenomation occurred?	label "Yes — obvious bite marks and/o"	severity: non_urgent	THINNER ARM	sicker 1 vs milder 6
+protocolbook	pb_042_paediatric_convulsions.yaml	Age >1 month — child convulsing for more than 5 minutes OR presents co	label "Yes"	label "No"	MISSING DRUG	phenobarbital
+protocolbook	pb_042_paediatric_convulsions.yaml	Convulsion stops after 5 more minutes?	label "Yes"	label "No"	MISSING DRUG	diazepam
+protocolbook	pb_042_paediatric_convulsions.yaml	Convulsion stops after 5 more minutes?	label "Yes"	label "No"	THINNER ARM	sicker 2 vs milder 5
+protocolbook	pb_046_paediatric_pneumonia.yaml	Cough or difficulty breathing PLUS any of these danger signs?	label "Yes — severe pneumonia"	label "No — assess chest indrawing / "	MISSING DRUG	amoxicillin
+protocolbook	pb_046_paediatric_pneumonia.yaml	Cough or difficulty breathing PLUS any of these danger signs?	label "Yes — severe pneumonia"	label "No — assess chest indrawing / "	THINNER ARM	sicker 2 vs milder 4
+protocolbook	pb_047_paediatric_dka.yaml	Ketones in Urine?	severity: emergency	severity: priority	MISSING DRUG	dextrose, insulin
+protocolbook	pb_047_paediatric_dka.yaml	Ketones in Urine?	severity: emergency	severity: priority	THINNER ARM	sicker 4 vs milder 8
+protocolbook	pb_067_epistaxis.yaml	Has bleeding stopped?	label "Yes"	label "No"	MISSING DRUG	adrenaline, tranexamic acid
+protocolbook	pb_067_epistaxis.yaml	Has bleeding stopped?	label "Yes"	label "No"	THINNER ARM	sicker 2 vs milder 5
+protocolbook	pb_067_epistaxis.yaml	Has bleeding stopped?	label "Yes"	label "No"	THINNER ARM	sicker 2 vs milder 7
+protocolbook	pb_075_anaemia_workup.yaml	Is there ↑ LDH, ↑ bilirubin, ↓ haptoglobin, or RI > 2%?	label "Yes — concern for haemolysis"	label "No"	MISSING DRUG	albendazole
+protocolbook	pb_096_im_stroke.yaml	Symptoms ongoing?	label "Yes"	label "No"	THINNER ARM	sicker 4 vs milder 7
+protocolbook	pb_125_im_svt.yaml	Atrial fibrillation or atrial flutter?	label "Yes"	label "No — the rhythm is not AF or f"	MISSING DRUG	adenosine
+wvems	wvems_2026_012.yaml	(severity split)	label "Severe"	label "Moderate"	MISSING DRUG	atropine
+wvems	wvems_2026_014.yaml	(severity split)	label "Severe"	label "Moderate"	MISSING DRUG	adenosine, amiodarone
+wvems	wvems_2026_020.yaml	(severity split)	label "Severe"	label "Moderate"	MISSING DRUG	ketorolac, paracetamol

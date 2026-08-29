@@ -318,3 +318,44 @@ expecting findings:**
 Only the one-sided-decision check earned its place. The other three are kept in the
 script with this note attached, because a future chart could genuinely trip them, but a
 hit is not a finding.
+
+
+---
+
+## ✅ 2026-08-29 — the hyperkalaemia shape: does the sicker branch get the weaker treatment?
+
+`tool/flowchart_severity_audit.py` asks the question that produced the worst defect this
+project has found. That hyperkalaemia algorithm sent the K > 6.5 / ECG-changes patient to
+calcium, furosemide and dialysis while **insulin-glucose and salbutamol — the only two
+things that lower serum potassium in the first hour — sat on the milder 6.0–6.5 branch.**
+For every decision that splits into a sicker and a milder arm, this compares what each arm
+actually contains: a drug named on the milder arm and absent from the sicker one, or a
+sicker arm carrying strictly fewer interventions.
+
+**124 severity-ordered decisions compared. 18 raised. None is the hyperkalaemia shape.**
+
+Read and dismissed with the reason:
+
+- **`pb_047` DKA, `pb_046` severe pneumonia, `pb_039` envenomation** — in each, the sicker
+  arm carries `continue: true` or hands off ("→ start DKA protocol"). The treatment is on
+  the continuing spine or a dedicated page, not missing. A hand-off is not an omission.
+- **`pb_042` convulsions, `pb_067` epistaxis, `pb_125` SVT** — the screen's own weakness:
+  it reads "Yes" as the sicker label, but "Convulsion stops?" and "Has bleeding stopped?"
+  make **Yes the good news**. The arms are the right way round.
+- **`pb_125` "AF or flutter? Yes lacks adenosine"** and **`pb_075` "haemolysis lacks
+  albendazole"** — the missing drug belongs to the *other* diagnosis. Adenosine is not for
+  AF; albendazole is for the iron-deficiency arm.
+- **`pb_030`, `pb_096`** — thinner sicker arms that read correctly: "intubate and admit to
+  ICU" is two lines and outranks six outpatient steps.
+- **`wvems_012`, `wvems_014`, `wvems_020`** — not touched. WVEMS is the original protocol
+  and is strict.
+
+## 🟢 One thing fell out of it: a paper reference the app cannot honour
+
+`pb_035` read *"Score withdrawal severity with the [CIWA-Ar Scale](topic:pb-ciwa-ar)
+**(next page)**"*. In the print the scale is on the facing page; in the app it is a
+**separate topic** reached by that link, and there is no page to turn. Dropped.
+
+**The other seven "(next page)" references in the book were checked and are correct** —
+each points within a multi-page topic, and the app really does paginate those
+(`topic_view.dart` iterates `topic.pages`), so the reader does swipe to a next page.

@@ -64,6 +64,12 @@
 #   used 90% throughout and this book already used 90% on its paediatric
 #   pneumonia page. Discharge/target criteria on other pages are NOT this
 #   figure and were left alone.
+# 2026-08-29: dropped "(next page)" after the CIWA-Ar link. In the print the
+#   scale is on the facing page; in the app it is a SEPARATE TOPIC reached by
+#   the link, and there is no next page to turn. The other seven "(next page)"
+#   references in the book were checked and are correct: each points within a
+#   multi-page topic, which the app does paginate (topic_view.dart iterates
+#   topic.pages), so the reader really does swipe to the next page.
 # ============================================================
 
 topic:
@@ -107,7 +113,7 @@ topic:
         - Assess GCS, hydration status
         - Insert 2 IVs, Start Oxygen if spO2 <90%
 
-        Score withdrawal severity with the [CIWA-Ar Scale](topic:pb-ciwa-ar) (next page).
+        Score withdrawal severity with the [CIWA-Ar Scale](topic:pb-ciwa-ar).
 
     - type: "flowchart"
       variant: "cycle"
