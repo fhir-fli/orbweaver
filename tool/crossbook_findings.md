@@ -729,3 +729,36 @@ per-dose and per-day figures explicitly and are unambiguous.
 *"Children: 8 mg/kg/day PO"* — a per-day figure with no frequency, in a book that
 distinguishes the two. Corrected to **8 mg/kg PO as a single dose**, which the entry's own
 next clause already implies: *"≥ 45 kg use the adult 800 mg single dose."*
+
+
+---
+
+## ✅ 2026-08-29 — maximum doses: no printed ceiling has been lost
+
+The shape worth hunting: a dose stated per kilogram whose ceiling is stated in one place
+and missing where it matters. It is the shape of two errors already found by eye —
+morphine printed as `2–10 mg/kg` when it should be `mg/dose`, and prednisone capped at
+`6 mg/day` when it should be 60, a cap that binds at 3 kg and makes the mg/kg meaningless.
+
+**Three passes, and the useful one was the third.**
+
+1. *Capped somewhere, uncapped elsewhere* — **64 drugs**, almost all benign. A page need
+   not repeat a ceiling the formulary carries, and most "uncapped" fragments are weight
+   tables or cross-references rather than prescriptions. No signal.
+2. *Compute the weight at which each stated cap binds* — **167 fragments** state both a
+   per-kg dose and a maximum. Sorting by crossover weight surfaced mostly noise, because
+   "max" in these books is usually a **per-day or cumulative** cap expressed in the same
+   per-kg terms, not an absolute ceiling. Captopril looked alarming at 2.4 kg until read:
+   its cap is **6 mg/kg/day**, and 2.5 mg/kg BD is 5 mg/kg/day, inside it.
+3. *Every maximum in the printed formulary, checked against the app entry* — **29 printed
+   `max` lines across pp.146–158. All 29 are carried.** Captopril's 450 mg/24 hr lives in
+   the entry's notes rather than its dose text, which is why a naive read of the dose
+   field missed it.
+
+**One apparent hit was my own parser, not the book.** It attributed dexamethasone's
+`(Max: 8 mg/dose)` to dapsone, because the max sits on a continuation line and the
+drug name is in the left column of the row above. Reading the printed page settled it:
+dapsone has no printed maximum, and the app's dexamethasone entry carries the 8 mg/dose.
+
+**Nothing to fix.** Recorded so the question is not re-opened, and so the third framing —
+check the print's ceilings against the transcription — is the one anyone repeats.
