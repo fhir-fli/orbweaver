@@ -694,3 +694,38 @@ also the only one that is not ours to edit. Nothing to do.
 one protocol book, authored together. The other two grew a formulary from a printed
 essential-medicines list and then added protocols that reached past it. The gap is a
 consequence of that shape, not of carelessness.
+
+
+---
+
+## 📌 2026-08-29 — the two formularies were completed on DIFFERENT grounds
+
+Worth writing down, because the arguments are not interchangeable.
+
+**WHO Annex 2 states its own scope:** *"This section gives the doses of the drugs
+mentioned in these guidelines that are suitable for infants and children."* A drug the
+guidelines dose and the annex omits is a gap **by the annex's own definition**, so
+completing it needs no external authority. That is what settled the WHO question.
+
+**The ProtocolBook formulary states something weaker:** *"We have tried to include the
+most common dosing regimens for the most commonly encountered conditions, but the
+specific patient or condition you are treating may require different dosing."* It makes
+**no completeness claim at all.** An omission there could be deliberate scope.
+
+So the ProtocolBook's 55 additions rest on **Grey's instruction and the 18-entry
+precedent of 2026-08-27**, not on the preamble. They are defensible on their own terms —
+labetalol in hypertensive emergency and acetylcysteine in paracetamol overdose are
+"commonly encountered conditions" by any reading — but the WHO argument does not transfer
+and was not used.
+
+### The preamble also sets a notation the additions must obey
+
+*"When written 'dose BD', this indicates that dose is given twice daily, not divided.
+When written 'dose ÷ BD', this indicates the dose is the total for the day and it is to
+be divided."* All 55 added entries were checked against it. Three state both the
+per-dose and per-day figures explicitly and are unambiguous.
+
+**One was ambiguous, and it came from the August batch, not this one.** Cefixime read
+*"Children: 8 mg/kg/day PO"* — a per-day figure with no frequency, in a book that
+distinguishes the two. Corrected to **8 mg/kg PO as a single dose**, which the entry's own
+next clause already implies: *"≥ 45 kg use the adult 800 mg single dose."*
