@@ -20,49 +20,29 @@ monitoring is not routinely available.
 
 ---
 
-## 1 🔴 Neonatal meningitis — which ampicillin dose?
+## 1 🟡 Neonatal meningitis — is 300 mg/kg/day of ampicillin too much?
 
-Two paediatric references used side by side give different ampicillin regimens for a
-neonate with meningitis, and three different daily totals are in circulation.
+The dose for a **term** neonate with meningitis has been settled at **150 mg/kg/day in
+week 1 (50 mg/kg every 8 h)** and **200 mg/kg/day in weeks 2–4 (50 mg/kg every 6 h)**,
+with the very preterm (≤ 34 weeks) taking 100 mg/kg/day every 12 h in week 1. One of the
+two references now prints exactly that.
 
-**Reference A** treats meningitis in the young infant with "ampicillin + gentamicin",
-and its only ampicillin entry is a neonatal drug-dose table reading:
-> **Ampicillin — 50 mg/kg IM/IV: week 1 every 12 h; weeks 2–4 every 8 h**
+**The other reference prints higher.** For a neonate with suspected meningitis it gives:
+> **ampicillin 100 mg/kg every 8 h (every 12 h in the 1st week)** plus cefotaxime
+> 50 mg/kg every 8 h (every 12 h in the 1st week)
 
-That is **100 mg/kg/day in week 1 and 150 mg/kg/day thereafter**. The table has no
-separate meningitis row, and the meningitis page does not say to increase it.
+That is **200 mg/kg/day in week 1 and 300 mg/kg/day in weeks 2–4** — one third to one
+half above the settled figure. The same reference gives **ampicillin 75 mg/kg every 6 h
+(300 mg/kg/day)** for Listeria in the older child.
 
-**Reference B** prints, for a neonate:
-> First line: ampicillin 50 mg/kg q8h (q12h in the 1st week) + gentamicin
-> **If concern for meningitis: ampicillin 100 mg/kg q8h (q12h in the 1st week)** plus
-> cefotaxime 50 mg/kg q8h (q12h in the 1st week)
-
-That is **200 mg/kg/day in week 1 and 300 mg/kg/day thereafter** — it explicitly doubles
-the dose when meningitis is suspected. The same reference gives **ampicillin 75 mg/kg IV
-6-hourly (300 mg/kg/day)** for Listeria in the older child.
-
-**A third figure has also been quoted** for neonatal meningitis: 100 mg/kg/day in week 1
-and 150 mg/kg/day in weeks 2–4, cited to the FDA label — the same numbers as the
-septicaemia dose above.
-
-**The concern.** Ampicillin is the Listeria and group B streptococcus drug, the CSF is
-the compartment that matters, and 150 mg/kg/day is the dose intended for bacteraemia
-without meningitis. A clinician gets 150 or 300 mg/kg/day depending on which book is
-open.
-
-**Questions.** Please give each figure as a **standalone line with no citation after the
-number**.
-1. **Confirmed or suspected neonatal meningitis, ≤ 7 days old:** ___ mg/kg/day, and the
-   dosing interval.
-2. **8–28 days old:** ___ mg/kg/day, and the dosing interval.
-3. Is **150 mg/kg/day** adequate for neonatal meningitis, or is it a septicaemia dose
-   that under-treats the CSF?
-4. Is **300 mg/kg/day** in a neonate too much, or is it the right Listeria and group B
-   streptococcus cover?
-5. What is the correct **cefotaxime** dose for neonatal meningitis over the same two age
-   windows?
-6. Should a neonatal drug-dose table carry a **separate meningitis row** for ampicillin
-   and cefotaxime, rather than one sepsis dose?
+**Questions.** Please answer each on its own line, with no citation after the number.
+1. Is **300 mg/kg/day** of ampicillin in a neonate **too much**, or is it an acceptable
+   upper figure for Listeria and group B streptococcus cover?
+2. Should the second reference be **brought down to 150 → 200 mg/kg/day**, or does a
+   higher dose have a place where CSF sterilisation is slow or the organism is Listeria?
+3. Is there a **maximum daily ampicillin dose** in a neonate, and what toxicity sets it?
+4. In an **older infant or child** with meningitis, what is the correct ampicillin dose —
+   the same reference prints 300 mg/kg/day there too.
 
 ---
 

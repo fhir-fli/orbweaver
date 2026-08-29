@@ -43,7 +43,7 @@ hydrocortisone and IV diazepam now carry identical values in both books.**
 
 | # | OE ruling | Applied |
 |---|---|---|
-| **1** 🔴 | Neonatal meningitis needs a **higher ampicillin dose than sepsis**; the §3.14 row under-treats the CSF. A **separate meningitis row** is needed. Cefotaxime frequency **increases** with postnatal age. | §3.9 rewritten with an explicit "do not use the §3.14 sepsis row"; **new meningitis row added to §3.14** (50 mg/kg q8h wk 1, q6h wk 2–4). ⚠️ **number not settled — see below** |
+| **1** 🔴 | Neonatal meningitis needs a **higher ampicillin dose than sepsis**; the §3.14 row under-treats the CSF. A **separate meningitis row** is needed. Cefotaxime frequency **increases** with postnatal age. | §3.9 rewritten with an explicit "do not use the §3.14 sepsis row"; **new meningitis row added to §3.14** (50 mg/kg q8h wk 1, q6h wk 2–4). ✅ **settled 2026-08-28** — 150 → 200 mg/kg/day confirmed for a **term** neonate, preterm ≤ 34 wk week-1 band (100 mg/kg/day q12h) added. Cefotaxime as applied also confirmed. The other book still prints 200 → 300 and that remains open. |
 | **2** 🔴 | **IV diazepam 0.2–0.3 mg/kg, max 10 mg.** 0.5 mg/kg is the rectal figure; rectal absorption is incomplete, which is why it is higher. 0.5 mg/kg IV is roughly double, and **16% of children had severe or life-threatening respiratory depression at recommended IV doses**. Max two benzodiazepine doses. | Chart 9 corrected to **0.2 mg/kg**; ProtocolBook formulary 0.3 → **0.2** to match its own p.20; both books gained the never-confuse-IV-with-rectal rule and the age-banded rectal doses |
 | **3** 🟡 | **Buccal or intranasal midazolam 0.3–0.5 mg/kg (max 10 mg)** first-line with no line; **IV lorazepam 0.1 mg/kg or IV diazepam 0.2 mg/kg** with a line. The level-1 claim is correct (OR 4.1, Cochrane/McIntyre; 9-RCT meta-analysis 2026). **Where only diazepam is stocked, rectal diazepam 0.5 mg/kg remains acceptable first-line** — an available drug beats an unstocked better one. | Chart 9 restructured accordingly; intranasal widened 0.2 → 0.3–0.5 mg/kg |
 | **4** 🟡 | **Day 1: 12 mg/kg (max 500 mg); days 2–5: 6 mg/kg/day (max 250 mg).** The 15/10 variant has no proven advantage and more GI upset. | `pb_043` corrected. **Both books now identical** |
@@ -155,3 +155,20 @@ Read and dismissed with the reason, so they are not re-raised:
   is in front of them.
 
 ---
+
+
+---
+
+## 🛑 OE has now misread the same parenthetical TWICE
+
+Both replies on neonatal meningitis called the ProtocolBook's cefotaxime schedule
+inverted — *"the other book's 50 mg/kg q8h then q12h inverts the age direction; frequency
+should increase with postnatal age, not decrease"*.
+
+The book actually prints **"cefotaxime 50 mg/kg q8h (q12h if in the 1st week)"**, which
+means **q12h in week 1, q8h thereafter** — frequency increasing with age, exactly as OE
+says it should. The same shape appears on the ampicillin line beside it.
+
+**No inversion was applied, either time.** Recorded here so a third reply does not
+persuade someone to "fix" a page that is already right. If a question about that page
+goes back to OE, quote the parenthetical in full and say what it expands to.
