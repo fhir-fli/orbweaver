@@ -248,3 +248,39 @@ nobody re-derives it. The rectal table (0.1 ml/kg = 0.5 mg/kg) and the two-dose 
 the print exactly.
 
 **Twice now, checking the actual source has overturned a claim made about that source.**
+
+
+---
+
+## ✅ 2026-08-29 — all 46 WVEMS flowchart pages screened for a dropped back-edge
+
+WVEMS figures are strict, so a dropped arrow there is a lost instruction in a protocol
+nobody may reinterpret. `tool/wvems_backedge_scan.py` renders each page and looks for a
+connector running outside the column of boxes.
+
+**The screen carries its own positive control and the first version FAILED it.** It hunted
+near-black runs in the outer sixth of the *page*; WHO Chart 12's back-edge is a thin
+**orange** arrow routed inside the chart's own frame, so both thresholds were wrong and it
+reported the known back-edge as clean. Ink is now anything not near-white, margins are
+measured against the chart's ink bounding box, and runs at ≥ 92% of an axis are discarded
+as the page frame — which had otherwise flagged all 46 pages. The control now fires at
+69% of chart width.
+
+**Result: 13 of 46 flagged, none of them a back-edge.**
+
+- **p68 (89%), p60 (82%)** — looked at. Both are the wide note boxes and the two branch
+  arrows **converging into** a "Consider" node. All flow is downward.
+- **p32 (right-band vertical 36%)** — looked at. The tall five-drug "Major" medication
+  stack's right border.
+- **p36 (37% at 73% height)** — looked at. A differential grid: eight cause boxes with
+  **double-headed** arrows between the columns, meaning "these are alternatives". The app
+  renders it `variant: differential`, which is right.
+- **p4, p6, p10, p34, p44, p62, p64, p72, p74** — p4 was looked at; the other eight were
+  closed by **measurement, not by sampling**: every one is a run of **175–176 px at 83% of
+  chart height, 36–37% of chart width**, the identical geometry of the "Consider"
+  convergence stadium seen on p4. Same pixel length at the same position is the same
+  graphic element.
+
+**Every WVEMS chart is entry → severity or cause split → parallel columns → converge into
+"Consider", or a differential grid. None loops.** WHO Chart 12 remains the only routed
+back-edge in the whole corpus, and it is fixed.
