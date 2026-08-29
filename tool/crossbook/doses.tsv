@@ -938,6 +938,7 @@ PB	formulary.yaml	Formulary	dexamethasone	0.25–0.5	mg/kg/dose	q6hr	Dexamethaso
 PB	formulary.yaml	Formulary	dexamethasone	8	mg/dose	q6hr	Dexamethasone › Dexamethasone	Extubation / upper airway swelling: 0.25–0.5 mg/kg/dose IV q6hr (max 8 mg/dose)
 PB	formulary.yaml	Formulary	dexamethasone	0.6	mg/kg/dose		Dexamethasone › Dexamethasone	Asthma / croup: 0.6 mg/kg/dose IV/IM/PO × 1 dose Adults:
 PB	formulary.yaml	Formulary	dexamethasone	2	mg	tid	Dexamethasone › Dexamethasone	Cerebral edema: 2 mg PO TID
+PB	formulary.yaml	Formulary	dexamethasone	10	mg	q6h	Dexamethasone › Dexamethasone	Bacterial meningitis: 10 mg IV q6h × 4 days — with or just before the first antibiotic dose. Not routine here: no benefit in low-income, high-HIV-prevalence settings; consider only if HIV-negative and presenting early
 PB	formulary.yaml	Formulary	dextrose	2	ml/kg		Dextrose / Glucose › Dextrose / Glucose	Neonates / infants / children: D10% 2 mL/kg (0.2 g/kg) IV push (if no D10 immediately available, use D5)
 PB	formulary.yaml	Formulary	dextrose	0.2	g/kg		Dextrose / Glucose › Dextrose / Glucose	Neonates / infants / children: D10% 2 mL/kg (0.2 g/kg) IV push (if no D10 immediately available, use D5)
 PB	formulary.yaml	Formulary	dextrose	25–50	ml		Dextrose / Glucose › Dextrose / Glucose	Adults: 25–50 mL D50 IV push
@@ -1111,6 +1112,8 @@ PB	formulary.yaml	Formulary	nystatin	1	ml	q6hrs	Nystatin › Nystatin	Term infan
 PB	formulary.yaml	Formulary	nystatin	4–6	ml	q6hr	Nystatin › Nystatin	Children / Adults — oropharyngeal candidiasis: 4–6 mL PO q6hr
 PB	formulary.yaml	Formulary	omeprazole	0.5–1	mg/kg/dose	bd;od	Omeprazole › Omeprazole	Children: 0.5–1 mg/kg/dose PO OD or BD
 PB	formulary.yaml	Formulary	omeprazole	20–40	mg	od	Omeprazole › Omeprazole	Adults: 20–40 mg PO OD
+PB	formulary.yaml	Formulary	omeprazole	80	mg	every 8–12 h	Omeprazole › Omeprazole	Upper GI bleed: 80 mg IV bolus, then 40 mg IV every 8–12 h (or 8 mg/hr by infusion if a pump is available), for at least 72 hours. Any stocked PPI — rabeprazole, omeprazole, pantoprazole
+PB	formulary.yaml	Formulary	omeprazole	40	mg	every 8–12 h	Omeprazole › Omeprazole	Upper GI bleed: 80 mg IV bolus, then 40 mg IV every 8–12 h (or 8 mg/hr by infusion if a pump is available), for at least 72 hours. Any stocked PPI — rabeprazole, omeprazole, pantoprazole
 PB	formulary.yaml	Formulary	paracetamol	10–15	mg/kg		Paracetamol / Panadol › Paracetamol / Panadol	Children: 10–15 mg/kg PO q4–6hr
 PB	formulary.yaml	Formulary	paracetamol	650	mg		Paracetamol / Panadol › Paracetamol / Panadol	Adults: 650 mg PO q4–6hr
 PB	formulary.yaml	Formulary	paracetamol	4	g/day		Paracetamol / Panadol › Paracetamol / Panadol	Max dose: 4 g/day. Not given in liver failure.
@@ -1140,6 +1143,9 @@ PB	formulary.yaml	Formulary	prednisolone	1	mg/day	every 2 weeks	Prednisone / Pre
 PB	formulary.yaml	Formulary	prednisolone	60	mg/day		Prednisone / Prednisolone › Prednisone / Prednisolone	Max for asthma: 60 mg/day. Tapering is only required if used for > 3 weeks. If any symptoms of adrenal insufficiency, return to the previous dose. Symptoms of adrenal insufficiency: abd pain, vomiting, unusual sweating, dehydration, confusion, fatigue, weakness, low BP, high HR, shock.
 PB	formulary.yaml	Formulary	propranolol	0.5–1	mg/kg/day		Propranolol › Propranolol	Children: 0.5–1 mg/kg/day PO ÷ q6–12hrs
 PB	formulary.yaml	Formulary	propranolol	40	mg	bid	Propranolol › Propranolol	Adults — initial: 40 mg PO BID
+PB	formulary.yaml	Formulary	carvedilol	20	mg	bd;daily	Propranolol › Propranolol	Variceal bleeding prophylaxis: 20 mg PO BD, and only if carvedilol is unavailable — carvedilol 6.25 mg daily titrating to 12.5 mg lowers portal pressure better. Titrate to resting HR 55–60, or a 25% fall from baseline. Hold if SBP < 90 or in refractory ascites
+PB	formulary.yaml	Formulary	carvedilol	6.25	mg	bd;daily	Propranolol › Propranolol	Variceal bleeding prophylaxis: 20 mg PO BD, and only if carvedilol is unavailable — carvedilol 6.25 mg daily titrating to 12.5 mg lowers portal pressure better. Titrate to resting HR 55–60, or a 25% fall from baseline. Hold if SBP < 90 or in refractory ascites
+PB	formulary.yaml	Formulary	carvedilol	12.5	mg	bd;daily	Propranolol › Propranolol	Variceal bleeding prophylaxis: 20 mg PO BD, and only if carvedilol is unavailable — carvedilol 6.25 mg daily titrating to 12.5 mg lowers portal pressure better. Titrate to resting HR 55–60, or a 25% fall from baseline. Hold if SBP < 90 or in refractory ascites
 PB	formulary.yaml	Formulary	propranolol	8	mg/kg/day		Propranolol › Propranolol	Max: 8 mg/kg/day
 PB	formulary.yaml	Formulary	propranolol	320	mg		Propranolol › Propranolol	Max: 320 mg PO ÷ q6–12hrs
 PB	formulary.yaml	Formulary	isoniazid	35	mg/kg	qd	Pyrazinamide › Pyrazinamide	Children: 35 mg/kg PO QD

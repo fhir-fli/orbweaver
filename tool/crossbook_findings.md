@@ -491,3 +491,56 @@ entry (`ceftriaxone 8 mg/kg/day` is the cefixime line beside it).
 ⭐ **This diff is what found the three glucose pages my own sweep had missed.** It earns
 its place for the same reason the chart-versus-prose audit does: formulary-side against
 page-side is a real boundary, so its hits mean something.
+
+
+---
+
+## 🔴 2026-08-29 — both formularies are missing drugs their own protocols prescribe
+
+Running the formulary-versus-page diff on the WHO book turned into a bigger question than
+the one it was asked. Not "does the formulary carry every DOSE" but **"does it carry the
+DRUG at all"**.
+
+Verified by matching each dosed drug against the actual entry names, not by a lookup
+table — the first count was inflated by name mapping and was not trusted until checked.
+Full list in `tool/crossbook/formulary_missing_drugs.tsv`.
+
+**ProtocolBook: 40 of 129 dosed drugs have no formulary entry.** Among them:
+
+| Drug | Rows | Where the protocols prescribe it |
+|---|---|---|
+| **atropine** | 14 | organophosphate poisoning, snake bite |
+| **naloxone** | 12 | opioid overdose |
+| **labetalol** | 11 | its own **first choice** in hypertensive emergency, and stroke |
+| **acetylcysteine** | 10 | the paracetamol **antidote** |
+| **aspirin** | 7 | ACS, stroke, rheumatic fever |
+| **hydrocortisone** | 5 | anaphylaxis, paediatric sepsis |
+| **midazolam** | 4 | status epilepticus, agitation |
+
+**WHO Pocket Book: 42 of 94 dosed drugs have no formulary entry.** Among them:
+
+| Drug | Rows | Where the protocols prescribe it |
+|---|---|---|
+| **glucose / dextrose** | 92 | every hypoglycaemia pathway in the book |
+| **whole blood** | 26 | every transfusion page |
+| **caffeine citrate** | 21 | neonatal apnoea |
+| **naloxone** | 12 | opioid poisoning, neonatal resuscitation |
+| **azithromycin** | 12 | pertussis, cholera, dysentery, typhoid |
+| **vitamin K** | 6 | given to **every newborn** |
+| **midazolam** | 5 | **Chart 9's own first-line anticonvulsant** |
+| **magnesium sulfate** | 5 | severe asthma |
+| **flucytosine** | 6 | cryptococcal induction |
+
+**Why it matters.** The formulary is the lookup. A clinician who opens it for the
+paracetamol antidote, the first-line drug in hypertensive emergency, or the anticonvulsant
+the book's own chart tells them to reach for, finds nothing.
+
+**What is safe to fix and what is not.**
+
+- **The ProtocolBook entries can simply be written**, from the doses its own pages already
+  carry and that have already been through review. No new clinical claim is introduced.
+- **The WHO formulary is the print's Annex 2.** Adding drugs the printed annex does not
+  list is a departure from the source, not a transcription fix. Grey's WHO caveat allows
+  reorganisation that helps the reader, and a formulary that omits the glucose dose while
+  the book prescribes it 92 times is arguably the clearest case for it — **but that is his
+  call, not mine.**
