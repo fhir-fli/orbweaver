@@ -74,11 +74,13 @@ def main():
             data[drug][book][unit][norm_value(value)].append(
                 (freq, topic, ctx, frag))
 
-    # Three books, so every PAIR is compared, not just ProtocolBook vs WHO.
-    # WVEMS was left out of the first run and that was wrong: the app puts all
-    # three in front of the same clinician.
-    BOOKS = ['PB', 'WHO', 'WVEMS']
-    PAIRS = [('PB', 'WHO'), ('PB', 'WVEMS'), ('WHO', 'WVEMS')]
+    # 🛑 WVEMS is NOT compared. Its doses are the original protocol's and are
+    # strict — a difference against a paediatric reference is not an error to
+    # reconcile. See the note at the top of crossbook_dose_extract.py.
+    # The pair machinery is kept because it costs nothing and makes the
+    # exclusion explicit rather than structural.
+    BOOKS = ['PB', 'WHO']
+    PAIRS = [('PB', 'WHO')]
 
     drugs = sorted(data)
     shared = [d for d in drugs

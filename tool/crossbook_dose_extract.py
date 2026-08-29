@@ -41,13 +41,23 @@ ROOT = '/home/grey/dev/fhir/orbweaver/assets/books'
 OUTDIR = '/home/grey/dev/fhir/orbweaver/tool/crossbook'
 OUT = os.path.join(OUTDIR, 'doses.tsv')
 
-# All THREE books the app ships. WVEMS was left out of the first run and that
-# was wrong: the app puts three books in front of the same clinician, and a
-# two-book comparison is not a complete pass. WVEMS has no formulary.
+# 🛑 WVEMS IS DELIBERATELY EXCLUDED, and must stay excluded.
+#
+# Its doses are the WVEMS protocol's own, transcribed from the original. They
+# are strict: the protocol is the authority for a crew operating under it, and
+# a difference between WVEMS and a paediatric reference is not an error to
+# reconcile. Grey, 2026-08-28: "We're using the wvems doses that were in the
+# original, we shouldn't be comparing to the other books, wvems has strict
+# doses."
+#
+# This is the dose counterpart of the print-fidelity rule already recorded for
+# WVEMS diagrams: reproduce it, do not improve it.
+#
+# The ProtocolBook and the WHO Pocket Book ARE compared, because both are
+# maintained here and both are being corrected against current evidence.
 BOOKS = {
     'PB': 'protocolbook',
     'WHO': 'who_imci',
-    'WVEMS': 'wvems',
 }
 HAS_FORMULARY = {'protocolbook', 'who_imci'}
 
@@ -68,6 +78,11 @@ SYNONYMS = {
     'dextrose': ['glucose'],
     'benzylpenicillin': ['penicillin g', 'crystalline penicillin',
                          'benzyl penicillin'],
+    # Phenoxymethylpenicillin is a DIFFERENT drug, oral, and the two books
+    # use it for different things. Conflating them made the ProtocolBook's
+    # oral pharyngitis dose look like a disagreement with WHO's IV neonatal
+    # one.
+    'penicillin v': ['phenoxymethylpenicillin', 'pen v'],
     'aciclovir': ['acyclovir'],
     'phenobarbital': ['phenobarbitone'],
     'magnesium sulfate': ['magnesium sulphate'],
@@ -199,6 +214,18 @@ FREQ_RE = re.compile(
     r'daily|nocte'
     r')', re.IGNORECASE)
 
+# A drug named as an ALLERGY or a CONTRAINDICATION is not a prescription.
+# "Clindamycin PO — for penicillin allergy | 7mg/kg (max 300mg) 8 hourly" put
+# the word penicillin nearer the dose than clindamycin, and the ProtocolBook's
+# clindamycin dose was filed under benzylpenicillin and read as a disagreement
+# with WHO's neonatal IV dose.
+NOT_A_PRESCRIPTION = re.compile(
+    r"^\W{0,3}(?:"
+    r"allergy|allergic|hypersensitivity|intoleran|anaphylaxis|reaction|"
+    r"resistan|sensitiv"
+    r")", re.I)
+ALLERGIC_TO = re.compile(r"(?:allergic to|allergy to|intolerant of)\W*$", re.I)
+
 # Keys whose value is a heading for everything nested under it.
 # `drug` is WVEMS's medication-block key, a SIBLING of `dose`/`route`/
 # `frequency` — the same shape as the formulary's name/regimen, and the
@@ -304,6 +331,29 @@ def formulary_drugs(doc):
     return []
 
 
+def cell_text(cells):
+    """Flatten a table row's cells to plain strings, or None if it is not a row.
+
+    A cell is usually a string, but a spanning cell is written as
+    `{text: "...", span: 2}`. The first version only joined rows whose cells
+    were ALL strings, so a row with one spanning cell fell through to the
+    generic walk, its drug in cell 0 was separated from its dose, and the dose
+    was attributed to whatever came before. That is how the ProtocolBook's
+    clindamycin dose ended up filed under benzylpenicillin.
+    """
+    if not isinstance(cells, list) or not cells:
+        return None
+    out = []
+    for c in cells:
+        if isinstance(c, str):
+            out.append(c)
+        elif isinstance(c, dict) and isinstance(c.get('text'), str):
+            out.append(c['text'])
+        else:
+            return None
+    return out
+
+
 def fragments(text):
     """Split a markdown block into (fragment, parent) pairs.
 
@@ -365,11 +415,12 @@ def collect(node, ctx, out):
         return
 
     if isinstance(node, list):
-        # A list of plain strings that is a table row: join it, so the drug in
-        # cell 0 stays with the dose in cell 3.
-        if node and all(isinstance(v, str) for v in node):
-            joined = ' | '.join(node)
-            out.append((re.sub(r'\s+', ' ', joined).strip(), tuple(ctx)))
+        # A table row: join it, so the drug in cell 0 stays with the dose in
+        # cell 3.
+        flat = cell_text(node)
+        if flat is not None and all(isinstance(v, str) for v in node):
+            out.append((re.sub(r'\s+', ' ', ' | '.join(flat)).strip(),
+                        tuple(ctx)))
             return
         for v in node:
             collect(v, ctx, out)
@@ -377,10 +428,10 @@ def collect(node, ctx, out):
 
     if isinstance(node, dict):
         # `cells: [...]` is a table row.
-        cells = node.get('cells')
-        if isinstance(cells, list) and all(isinstance(c, str) for c in cells):
-            joined = ' | '.join(cells)
-            out.append((re.sub(r'\s+', ' ', joined).strip(), tuple(ctx)))
+        flat = cell_text(node.get('cells'))
+        if flat is not None:
+            out.append((re.sub(r'\s+', ' ', ' | '.join(flat)).strip(),
+                        tuple(ctx)))
             rest = {k: v for k, v in node.items() if k != 'cells'}
         else:
             rest = node
@@ -451,6 +502,11 @@ def main():
                 if any(m.start() < e and s < m.end() for s, e in claimed):
                     continue
                 claimed.append((m.start(), m.end()))
+                # Skip a drug named only as an allergy or a contraindication.
+                if (NOT_A_PRESCRIPTION.search(frag[m.end():m.end() + 24])
+                        or ALLERGIC_TO.search(frag[max(0, m.start() - 24):
+                                                   m.start()])):
+                    continue
                 mentions.append((m.start(), m.end(), canon))
         mentions.sort()
 
@@ -483,7 +539,7 @@ def main():
         ctx_s = ' › '.join(ctx[-3:]).replace('\t', ' ')[:200]
 
         if mentions and carry is not None:
-            carry[0] = mentions[-1][2]
+            carry[0], carry[1] = mentions[-1][2], ctx
 
         n = 0
         for dm in doses:
@@ -495,11 +551,12 @@ def main():
                 drugs = [after[0]]
             elif ctx_drugs:
                 drugs = ctx_drugs[:1]
-            elif carry and carry[0]:
-                # Last resort: the drug named by the PREVIOUS fragment in the
-                # same block. WVEMS writes "Amiodarone: adults give twice" and
-                # then a bare "300 -> 150 mg" underneath it as a sibling, not a
-                # child, so neither the fragment nor any heading names the drug.
+            elif carry and carry[0] and carry[1] == ctx:
+                # Last resort: the drug named by the PREVIOUS fragment, and ONLY
+                # when that fragment sits under the identical heading chain —
+                # i.e. a true sibling. Unscoped, this carried metronidazole from
+                # a treatment bullet into the diet tables further down the file
+                # and dosed rice, sugar and whole egg as if they were the drug.
                 drugs = [carry[0]]
             else:
                 continue
@@ -533,7 +590,7 @@ def main():
             units = []
             collect(doc, [], units)
             here = 0
-            carry = [None]
+            carry = [None, None]
             for frag, ctx in units:
                 here += emit(book, base, title, (frag, ctx, ()), carry)
             rows += here
@@ -561,7 +618,7 @@ def main():
                 bound = (canon_of[base_name],)
             units = []
             collect(d, [name], units)
-            carry = [None]
+            carry = [None, None]
             for frag, ctx in units:
                 here += emit(book, 'formulary.yaml', 'Formulary',
                              (frag, ctx, bound), carry)

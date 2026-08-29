@@ -104,6 +104,43 @@ That is the argument for the cross-book pass, and for keeping the tooling.
 
 # ✅ Checked and NOT a contradiction
 
+⚠️ **I said earlier that everything checked and dismissed was written down. That was
+not true of nine of them** — aminophylline, artemether, artesunate, aspirin, atropine,
+ciprofloxacin, dextrose, furosemide and activated charcoal were adjudicated in the pass
+and never recorded. They are below now, with the rest.
+
+**2026-08-28, second run** (after WVEMS was removed and five extractor defects fixed):
+
+- **clindamycin** — ProtocolBook 7 mg/kg q8h (max 300 mg) is oral, for GAS pharyngitis
+  in penicillin allergy; WHO 10–13 mg/kg 3–4×/day is for abscess and osteomyelitis,
+  where deep-tissue and bone penetration is the point. Different indications, both
+  standard.
+- **lorazepam** — ProtocolBook 0.5–2 mg is adult agitation and alcohol withdrawal; WHO
+  0.1 mg/kg (max 4 mg) is a paediatric seizure dose. Different indication and
+  population.
+- **benzylpenicillin** — was a candidate only because penicillin V was conflated with
+  it, and because a clindamycin dose was being filed under it. With both fixed, the two
+  books no longer differ. Penicillin V agrees exactly (250 mg).
+- **activated charcoal** — ProtocolBook 1 g/kg, WHO 0.5–1 g/kg for ≤ 1 year. The WHO
+  figure is the infant band of a per-age table; 1 g/kg is the standard above it.
+- **aminophylline** — ProtocolBook's 4 mg/kg q12h is neonatal apnoea; WHO's 5 mg/kg q6h
+  is childhood asthma. The 100/200/250/300 mg figures are vial and tablet strengths, not
+  doses.
+- **artemether, artesunate** — the WHO-only values are the partner-drug halves of ACT
+  combinations (lumefantrine 12 mg/kg, mefloquine 8.3 mg/kg) and the quinine ladder.
+  Artesunate itself agrees: 3 mg/kg under 20 kg, 2.4 mg/kg at or above.
+- **aspirin** — ProtocolBook 300 mg stat then 75–100 mg daily is adult stroke and ACS;
+  the shared 300 is the same number reached from two directions.
+- **atropine** — agrees at 0.02 mg/kg. The ProtocolBook's 0.01–0.04 mg/kg is the
+  anticholinesterase trial in cobra envenoming, which WHO does not carry.
+- **ciprofloxacin** — ProtocolBook's 1000 mg/dose ceiling is adult; WHO's 500 mg/dose is
+  the paediatric cap on 10–20 mg/kg. Not the same quantity.
+- **dextrose** — agrees at 2 and 5 ml/kg after the glucose correction. The remaining
+  values are diluent volumes and quinine infusion fluid.
+- **furosemide** — ProtocolBook 1 mg/kg/dose BD paediatric and 40–80 mg IV adult; WHO
+  1 mg/kg then 2 mg/kg in heart failure. Compatible; the WHO page is an escalation, not
+  a different starting dose.
+
 Read and dismissed with the reason, so they are not re-raised:
 
 - **Ampicillin, cefotaxime, ceftriaxone, gentamicin, amoxicillin** outside neonatal
