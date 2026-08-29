@@ -8,8 +8,11 @@
 Flags: gross mismatch (implied mg/kg at band midpoint far from target) or
 non-monotonic bands. Model-knowledge screen -> Grey OE/spot-checks flags."""
 import yaml, re, os
-F = "/home/grey/dev/fhir/orbweaver-wt/assets/books/who_imci/formulary.yaml"
-OUT = "/home/grey/.claude/jobs/e8004895/tmp/whoaudit"; os.makedirs(OUT, exist_ok=True)
+# 2026-08-29: this pointed at the orbweaver-wt WORKTREE, which sits on an old
+# detached commit, so every flag it produced was against stale content. The
+# live tree is orbweaver. Absolute path, live tree, no cwd drift.
+F = "/home/grey/dev/fhir/orbweaver/assets/books/who_imci/formulary.yaml"
+OUT = "/home/grey/dev/fhir/orbweaver/tool/crossbook"; os.makedirs(OUT, exist_ok=True)
 d = yaml.safe_load(open(F))["formulary"]
 drugs = d["drugs"]
 MID = [4.5, 8, 12.5, 17.5, 24.5]           # midpoints of 3-<6,6-<10,10-<15,15-<20,20-29
@@ -27,8 +30,26 @@ def qty(s):
     except: return None, None
 def strength(form):
     # returns (mg_per_unit, kind)  kind in tablet|liquid
-    m = re.search(r"(\d+(?:\.\d+)?)\s*mg\s*/\s*(\d+(?:\.\d+)?)\s*ml", form, re.I)
+    #
+    # 2026-08-29: this produced 21 false flags, every one of them because a
+    # millilitre band was multiplied by the vial's TOTAL milligrams. Three
+    # real spellings were not matched and fell through to the tablet branch:
+    #   "250 mg/10-ml vial"                       - hyphen instead of a space
+    #   "reconstituted to 15 mg/ml"               - no number before "ml"
+    #   "(40 mg TMP + 200 mg SMX per 5 ml)"       - "per 5 ml"
+    # With them handled, artesunate lands on 3.0 mg/kg in every band and
+    # 2.4 in the >=20 kg band, exactly its stated regimen.
+    m = re.search(r"(\d+(?:\.\d+)?)\s*mg[^/]{0,12}?/\s*(\d+(?:\.\d+)?)\s*[-\s]*ml",
+                  form, re.I)
     if m: return float(m.group(1))/float(m.group(2)), "liquid"
+    m = re.search(r"per\s*(\d+(?:\.\d+)?)\s*ml", form, re.I)
+    if m:
+        mg = re.search(r"(\d+(?:\.\d+)?)\s*mg", form, re.I)
+        if mg:
+            return float(mg.group(1))/float(m.group(1)), "liquid"
+    m = re.search(r"(?:reconstituted|diluted)\s*to\s*(\d+(?:\.\d+)?)\s*mg\s*/\s*ml",
+                  form, re.I)
+    if m: return float(m.group(1)), "liquid"
     m = re.search(r"(\d+(?:\.\d+)?)\s*mg", form, re.I)
     if m: return float(m.group(1)), "tablet"
     m = re.search(r"(\d+(?:\.\d+)?)\s*(?:µg|mcg)", form, re.I)

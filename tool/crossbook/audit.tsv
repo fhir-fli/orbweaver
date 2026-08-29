@@ -1,0 +1,151 @@
+drug	label	Rlo	Rhi	strength	kind	band	qty	implied_mgkg	status
+Amoxicillin	Pneumonia (standard)	40.0	40.0	250.0	tablet	0	1.0	55.56	ok
+Amoxicillin	Pneumonia (standard)	40.0	40.0	250.0	tablet	1	2.0	62.5	ok
+Amoxicillin	Pneumonia (standard)	40.0	40.0	250.0	tablet	2	3.0	60.0	ok
+Amoxicillin	Pneumonia (standard)	40.0	40.0	250.0	tablet	3	4.0	57.14	ok
+Amoxicillin	Pneumonia (standard)	40.0	40.0	250.0	tablet	4	5.0	51.02	ok
+Amoxicillin	Pneumonia — syrup	40.0	40.0	50.0	liquid	0	5.0	55.56	ok
+Amoxicillin	Pneumonia — syrup	40.0	40.0	50.0	liquid	1	10.0	62.5	ok
+Amoxicillin	Pneumonia — syrup	40.0	40.0	50.0	liquid	2	15.0	60.0	ok
+Amoxicillin	Pneumonia — syrup	40.0	40.0	50.0	liquid	3	20.0	57.14	ok
+Ampicillin	Standard	50.0	50.0	200.0	liquid	0	1.0	44.44	ok
+Ampicillin	Standard	50.0	50.0	200.0	liquid	1	2.0	50.0	ok
+Ampicillin	Standard	50.0	50.0	200.0	liquid	2	3.0	48.0	ok
+Ampicillin	Standard	50.0	50.0	200.0	liquid	3	5.0	57.14	ok
+Ampicillin	Standard	50.0	50.0	200.0	liquid	4	6.0	48.98	ok
+Cefotaxime	Standard	50.0	50.0	500.0	tablet	0	0.8	88.89	ok
+Cefotaxime	Standard	50.0	50.0	500.0	tablet	1	1.5	93.75	ok
+Cefotaxime	Standard	50.0	50.0	500.0	tablet	2	2.5	100.0	ok
+Cefotaxime	Standard	50.0	50.0	500.0	tablet	3	3.5	100.0	ok
+Cefotaxime	Standard	50.0	50.0	500.0	tablet	4	5.0	102.04	HIGH?
+Cefalexin	Standard	12.5	12.5	250.0	tablet	0	0.25	13.89	ok
+Cefalexin	Standard	12.5	12.5	250.0	tablet	1	0.5	15.62	ok
+Cefalexin	Standard	12.5	12.5	250.0	tablet	2	0.75	15.0	ok
+Cefalexin	Standard	12.5	12.5	250.0	tablet	3	1.0	14.29	ok
+Cefalexin	Standard	12.5	12.5	250.0	tablet	4	1.25	12.76	ok
+Aminophylline	Asthma — oral (100 mg tab)	6.0	6.0	100.0	tablet	0	0.25	5.56	ok
+Aminophylline	Asthma — oral (100 mg tab)	6.0	6.0	100.0	tablet	1	0.5	6.25	ok
+Aminophylline	Asthma — oral (100 mg tab)	6.0	6.0	100.0	tablet	2	0.75	6.0	ok
+Aminophylline	Asthma — oral (100 mg tab)	6.0	6.0	100.0	tablet	3	1.0	5.71	ok
+Aminophylline	Asthma — oral (100 mg tab)	6.0	6.0	100.0	tablet	4	1.5	6.12	ok
+Aminophylline	Asthma — oral (200 mg tab)	6.0	6.0	200.0	tablet	1	0.25	6.25	ok
+Aminophylline	Asthma — oral (200 mg tab)	6.0	6.0	200.0	tablet	2	0.5	8.0	ok
+Aminophylline	Asthma — oral (200 mg tab)	6.0	6.0	200.0	tablet	3	0.5	5.71	ok
+Aminophylline	Asthma — oral (200 mg tab)	6.0	6.0	200.0	tablet	4	0.75	6.12	ok
+Aminophylline	IV loading	5.0	6.0	25.0	liquid	0	1.0	5.56	ok
+Aminophylline	IV loading	5.0	6.0	25.0	liquid	1	1.5	4.69	ok
+Aminophylline	IV loading	5.0	6.0	25.0	liquid	2	2.5	5.0	ok
+Aminophylline	IV loading	5.0	6.0	25.0	liquid	3	3.5	5.0	ok
+Aminophylline	IV loading	5.0	6.0	25.0	liquid	4	5.0	5.1	ok
+Aminophylline	IV maintenance	5.0	5.0	25.0	liquid	0	1.0	5.56	ok
+Aminophylline	IV maintenance	5.0	5.0	25.0	liquid	1	1.5	4.69	ok
+Aminophylline	IV maintenance	5.0	5.0	25.0	liquid	2	2.5	5.0	ok
+Aminophylline	IV maintenance	5.0	5.0	25.0	liquid	3	3.5	5.0	ok
+Aminophylline	IV maintenance	5.0	5.0	25.0	liquid	4	5.0	5.1	ok
+Artemether	Loading (40 mg/ml)	3.2	3.2	40.0	liquid	0	0.4	3.56	ok
+Artemether	Loading (40 mg/ml)	3.2	3.2	40.0	liquid	1	0.8	4.0	ok
+Artemether	Loading (40 mg/ml)	3.2	3.2	40.0	liquid	2	1.2	3.84	ok
+Artemether	Loading (40 mg/ml)	3.2	3.2	40.0	liquid	3	1.6	3.66	ok
+Artemether	Loading (40 mg/ml)	3.2	3.2	40.0	liquid	4	2.4	3.92	ok
+Artemether	Loading (80 mg/ml)	3.2	3.2	80.0	liquid	0	0.2	3.56	ok
+Artemether	Loading (80 mg/ml)	3.2	3.2	80.0	liquid	1	0.4	4.0	ok
+Artemether	Loading (80 mg/ml)	3.2	3.2	80.0	liquid	2	0.6	3.84	ok
+Artemether	Loading (80 mg/ml)	3.2	3.2	80.0	liquid	3	0.8	3.66	ok
+Artemether	Loading (80 mg/ml)	3.2	3.2	80.0	liquid	4	1.2	3.92	ok
+Artemether	Maintenance (40 mg/ml)	1.6	1.6	40.0	liquid	0	0.2	1.78	ok
+Artemether	Maintenance (40 mg/ml)	1.6	1.6	40.0	liquid	1	0.4	2.0	ok
+Artemether	Maintenance (40 mg/ml)	1.6	1.6	40.0	liquid	2	0.6	1.92	ok
+Artemether	Maintenance (40 mg/ml)	1.6	1.6	40.0	liquid	3	0.8	1.83	ok
+Artemether	Maintenance (40 mg/ml)	1.6	1.6	40.0	liquid	4	1.2	1.96	ok
+Artemether	Maintenance (80 mg/ml)	1.6	1.6	80.0	liquid	0	0.1	1.78	ok
+Artemether	Maintenance (80 mg/ml)	1.6	1.6	80.0	liquid	1	0.2	2.0	ok
+Artemether	Maintenance (80 mg/ml)	1.6	1.6	80.0	liquid	2	0.3	1.92	ok
+Artemether	Maintenance (80 mg/ml)	1.6	1.6	80.0	liquid	3	0.4	1.83	ok
+Artemether	Maintenance (80 mg/ml)	1.6	1.6	80.0	liquid	4	0.6	1.96	ok
+Artemether/lumefantrine	Standard	2.0	2.0	20.0	tablet	0	1.0	4.44	HIGH?
+Artemether/lumefantrine	Standard	2.0	2.0	20.0	tablet	1	1.0	2.5	ok
+Artemether/lumefantrine	Standard	2.0	2.0	20.0	tablet	2	1.0	1.6	ok
+Artemether/lumefantrine	Standard	2.0	2.0	20.0	tablet	3	2.0	2.29	ok
+Artemether/lumefantrine	Standard	2.0	2.0	20.0	tablet	4	2.0	1.63	ok
+Artesunate	Standard	3.0	3.0	15.0	liquid	0	0.9	3.0	ok
+Artesunate	Standard	3.0	3.0	15.0	liquid	1	1.6	3.0	ok
+Artesunate	Standard	3.0	3.0	15.0	liquid	2	2.5	3.0	ok
+Artesunate	Standard	3.0	3.0	15.0	liquid	3	3.5	3.0	ok
+Artesunate	Standard	3.0	3.0	15.0	liquid	4	3.9	2.39	ok
+Artesunate–mefloquine	Paediatric tablet	4.0	4.0	25.0	tablet	0	1.0	5.56	ok
+Artesunate–mefloquine	Paediatric tablet	4.0	4.0	25.0	tablet	1	1.0	3.12	ok
+Artesunate–mefloquine	Paediatric tablet	4.0	4.0	25.0	tablet	2	2.0	4.0	ok
+Artesunate–mefloquine	Paediatric tablet	4.0	4.0	25.0	tablet	3	2.0	2.86	ok
+Artesunate–mefloquine	Adult tablet	4.0	4.0	100.0	tablet	4	1.0	4.08	ok
+Aspirin	Standard	10.0	20.0	300.0	tablet	1	0.25	9.38	ok
+Aspirin	Standard	10.0	20.0	300.0	tablet	2	0.5	12.0	ok
+Aspirin	Standard	10.0	20.0	300.0	tablet	3	0.75	12.86	ok
+Aspirin	Standard	10.0	20.0	300.0	tablet	4	1.0	12.24	ok
+Chloramphenicol	Other — capsule	25.0	25.0	250.0	tablet	2	1.0	20.0	ok
+Chloramphenicol	Other — capsule	25.0	25.0	250.0	tablet	3	1.5	21.43	ok
+Chloramphenicol	Other — capsule	25.0	25.0	250.0	tablet	4	2.0	20.41	ok
+Chlorphenamine	Injection	0.25	0.25	10.0	tablet	0	0.1	0.22	ok
+Chlorphenamine	Injection	0.25	0.25	10.0	tablet	1	0.2	0.25	ok
+Chlorphenamine	Injection	0.25	0.25	10.0	tablet	2	0.3	0.24	ok
+Chlorphenamine	Injection	0.25	0.25	10.0	tablet	3	0.5	0.29	ok
+Chlorphenamine	Injection	0.25	0.25	10.0	tablet	4	0.6	0.24	ok
+Ciprofloxacin	100 mg tablet	10.0	20.0	100.0	tablet	0	0.5	11.11	ok
+Ciprofloxacin	100 mg tablet	10.0	20.0	100.0	tablet	1	1.0	12.5	ok
+Ciprofloxacin	100 mg tablet	10.0	20.0	100.0	tablet	2	1.5	12.0	ok
+Ciprofloxacin	100 mg tablet	10.0	20.0	100.0	tablet	3	2.0	11.43	ok
+Ciprofloxacin	100 mg tablet	10.0	20.0	100.0	tablet	4	3.0	12.24	ok
+Ciprofloxacin	250 mg tablet	10.0	20.0	250.0	tablet	0	0.25	13.89	ok
+Ciprofloxacin	250 mg tablet	10.0	20.0	250.0	tablet	1	0.5	15.62	ok
+Ciprofloxacin	250 mg tablet	10.0	20.0	250.0	tablet	2	0.5	10.0	ok
+Ciprofloxacin	250 mg tablet	10.0	20.0	250.0	tablet	3	1.0	14.29	ok
+Ciprofloxacin	250 mg tablet	10.0	20.0	250.0	tablet	4	1.5	15.31	ok
+Cloxacillin (or flucloxacillin/oxacillin)	Abscesses	15.0	15.0	250.0	tablet	0	0.25	13.89	ok
+Cloxacillin (or flucloxacillin/oxacillin)	Abscesses	15.0	15.0	250.0	tablet	1	0.5	15.62	ok
+Cloxacillin (or flucloxacillin/oxacillin)	Abscesses	15.0	15.0	250.0	tablet	2	1.0	20.0	ok
+Cloxacillin (or flucloxacillin/oxacillin)	Abscesses	15.0	15.0	250.0	tablet	3	1.5	21.43	ok
+Cloxacillin (or flucloxacillin/oxacillin)	Abscesses	15.0	15.0	250.0	tablet	4	2.5	25.51	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Adult tablet	4.0	4.0	80.0	tablet	0	0.25	4.44	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Adult tablet	4.0	4.0	80.0	tablet	1	0.5	5.0	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Adult tablet	4.0	4.0	80.0	tablet	2	1.0	6.4	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Adult tablet	4.0	4.0	80.0	tablet	3	1.0	4.57	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Adult tablet	4.0	4.0	80.0	tablet	4	1.0	3.27	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Paediatric tablet	4.0	4.0	20.0	tablet	0	1.0	4.44	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Paediatric tablet	4.0	4.0	20.0	tablet	1	2.0	5.0	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Paediatric tablet	4.0	4.0	20.0	tablet	2	3.0	4.8	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Paediatric tablet	4.0	4.0	20.0	tablet	3	3.0	3.43	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Paediatric tablet	4.0	4.0	20.0	tablet	4	4.0	3.27	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Syrup	4.0	4.0	8.0	liquid	0	2.0	3.56	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Syrup	4.0	4.0	8.0	liquid	1	3.5	3.5	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Syrup	4.0	4.0	8.0	liquid	2	6.0	3.84	ok
+Co-trimoxazole (trimethoprim–sulfamethoxazole)	Syrup	4.0	4.0	8.0	liquid	3	8.5	3.89	ok
+Dexamethasone	Meningitis	0.15	0.15	5.0	tablet	0	0.15	0.17	ok
+Dexamethasone	Meningitis	0.15	0.15	5.0	tablet	1	0.25	0.16	ok
+Dexamethasone	Meningitis	0.15	0.15	5.0	tablet	2	0.4	0.16	ok
+Dexamethasone	Meningitis	0.15	0.15	5.0	tablet	3	0.5	0.14	ok
+Dexamethasone	Meningitis	0.15	0.15	5.0	tablet	4	0.75	0.15	ok
+Diazepam	Convulsions — rectal	0.5	0.5	5.0	liquid	0	0.4	0.44	ok
+Diazepam	Convulsions — rectal	0.5	0.5	5.0	liquid	1	0.75	0.47	ok
+Diazepam	Convulsions — rectal	0.5	0.5	5.0	liquid	2	1.2	0.48	ok
+Diazepam	Convulsions — rectal	0.5	0.5	5.0	liquid	3	1.7	0.49	ok
+Diazepam	Convulsions — rectal	0.5	0.5	5.0	liquid	4	2.5	0.51	ok
+Diazepam	Convulsions — IV	0.2	0.3	5.0	liquid	0	0.25	0.28	ok
+Diazepam	Convulsions — IV	0.2	0.3	5.0	liquid	1	0.4	0.25	ok
+Diazepam	Convulsions — IV	0.2	0.3	5.0	liquid	2	0.6	0.24	ok
+Diazepam	Convulsions — IV	0.2	0.3	5.0	liquid	3	0.75	0.21	ok
+Diazepam	Convulsions — IV	0.2	0.3	5.0	liquid	4	1.25	0.26	ok
+Fluconazole	Standard	3.0	6.0	10.0	liquid	2	5.0	4.0	ok
+Fluconazole	Standard	3.0	6.0	10.0	liquid	3	7.5	4.29	ok
+Fluconazole	Standard	3.0	6.0	10.0	liquid	4	12.5	5.1	ok
+Metoclopramide	Injection	0.1	0.2	5.0	tablet	2	0.5	0.2	ok
+Metoclopramide	Injection	0.1	0.2	5.0	tablet	3	0.7	0.2	ok
+Metoclopramide	Injection	0.1	0.2	5.0	tablet	4	1.0	0.2	ok
+Phenobarbital	Loading	15.0	15.0	200.0	tablet	0	0.4	17.78	ok
+Phenobarbital	Loading	15.0	15.0	200.0	tablet	1	0.6	15.0	ok
+Phenobarbital	Loading	15.0	15.0	200.0	tablet	2	1.0	16.0	ok
+Phenobarbital	Loading	15.0	15.0	200.0	tablet	3	1.5	17.14	ok
+Phenobarbital	Loading	15.0	15.0	200.0	tablet	4	2.0	16.33	ok
+Phenobarbital	Maintenance	2.5	5.0	200.0	tablet	0	0.1	4.44	ok
+Phenobarbital	Maintenance	2.5	5.0	200.0	tablet	1	0.15	3.75	ok
+Phenobarbital	Maintenance	2.5	5.0	200.0	tablet	2	0.25	4.0	ok
+Phenobarbital	Maintenance	2.5	5.0	200.0	tablet	3	0.35	4.0	ok
+Phenobarbital	Maintenance	2.5	5.0	200.0	tablet	4	0.5	4.08	ok

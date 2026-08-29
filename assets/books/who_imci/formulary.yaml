@@ -11,6 +11,15 @@
 #   formulary entry was still the withdrawn 8 mg/kg TDS (= 24 mg/kg/day),
 #   three days after OE flag 4-1 capped it at 15-20 mg/kg/day and the PCP and
 #   severe-pneumonia TOPICS were corrected. The formulary was missed again.
+# 2026-08-29 band audit: ARTEMETHER-LUMEFANTRINE bands corrected against the
+#   print (p.361 of the source PDF). The print doses AL by its own bands -
+#   5-<15 kg one tablet, 15-24 kg two, ABOVE 25 kg THREE. The five columns in
+#   this formulary are 3-<6, 6-<10, 10-<15, 15-<20, 20-29, which do not line
+#   up, and the table read "1,1,1,2,2". That UNDERDOSED a 25-29 kg child, who
+#   should get three tablets, and offered AL below 5 kg where the print does
+#   not. Found by tool/who_formulary_band_audit.py once its millilitre parsing
+#   was fixed - it had been multiplying millilitre bands by the vial total and
+#   producing 21 false flags that hid this one.
 # ============================================================================
 formulary:
   id: "who-imci-a2-formulary"
@@ -301,9 +310,10 @@ formulary:
       page: 357
       doses:
       - label: "Standard"
-        regimen: "Oral: 2 mg/kg artemether + 12 mg/kg lumefantrine twice per day"
+        regimen: "Oral: 2 mg/kg artemether + 12 mg/kg lumefantrine twice per day, for 3 days"
         form: "Tablet: 20 mg artemether / 120 mg lumefantrine"
-        bands: ["1", "1", "1", "2", "2"]
+        bands: ["1 (only if ≥ 5 kg)", "1", "1", "2", "2 · 3 if > 25 kg"]
+      notes: "AL is dosed by its OWN weight bands — 5–<15 kg one tablet, 15–24 kg two, above 25 kg THREE — which do not line up with the five columns here. Below 5 kg AL is not recommended; above 25 kg give three tablets, not two."
     - id: "artesunate"
       name: "Artesunate"
       class: "antimalarial"
