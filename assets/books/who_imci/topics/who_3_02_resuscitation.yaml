@@ -5,6 +5,15 @@
 # ✅ OpenEvidence review applied (2026-07), layered onto Chart 12:
 #    tiered initial O₂, 100% O₂ + ETT/LMA + adrenaline dosing during
 #    compressions, individualised cessation (2025 AHA/AAP Part 5).
+# 2026-08-29 loop-renderer pass: Chart 12 is now variant: cycle.
+#   🔴 FIDELITY DEFECT FOUND BY RENDERING THE PRINT PAGE (p.47 of the source
+#   PDF, not the text layer): the print draws an arrow leaving the chest-
+#   compressions box labelled "If HR > 100/min", running along the bottom of
+#   the chart and back up. Rendered as a downward cascade that arrow was
+#   simply ABSENT, so the page never said what to do when compressions work.
+#   The return is routed through the heart-rate check, which lands the reader
+#   in the same > 100/min column - Grey's WHO caveat allows reorganisation
+#   where it reads better, and the destination is unchanged.
 # ============================================================
 
 topic:
@@ -41,83 +50,92 @@ topic:
     # `algorithm` block; the prose sections below remain as the detail.
     # A and B are the basic resuscitation steps, as the print's footnote says.
     - type: "flowchart"
-      variant: "algorithm"
-      entry:
-        text: "Dry the infant immediately with a clean cloth. Keep warm by skin-to-skin contact and covered."
-        shape: "stadium"
-      stages:
-        - decision: "Breathing or crying, with good muscle tone or vigorous movements?"
-          outcomes:
+      variant: "cycle"
+      # The print (Chart 12, p.47) draws a BACK-EDGE the algorithm renderer
+      # cannot express: an arrow leaving the chest-compressions box labelled
+      # "If HR > 100/min", running along the bottom and back up. Rendered as a
+      # cascade, that arrow was simply absent, so the page never said what to
+      # do when compressions work. The return is routed through the heart-rate
+      # check, which lands the reader in the same > 100/min column.
+      nodes:
+        - title: "Dry the infant immediately with a clean cloth. Keep warm by skin-to-skin contact and covered."
+        - shape: "decision"
+          title: "Breathing or crying, with good muscle tone or vigorous movements?"
+          down_label: "No"
+          branches:
             - label: "Yes"
+              side: "right"
               box:
                 title: "Routine care"
+                severity: "non_urgent"
                 bullets:
                   - "See section 3.1"
-                severity: "non_urgent"
-            - label: "No"
-              continue: true
-
-        - decision: "A · After stimulation, is the infant breathing?"
-          criteria:
+        - shape: "decision"
+          title: "A · After stimulation, is the infant breathing?"
+          down_label: "Not breathing, or gasping"
+          bullets:
             - "Stimulate by rubbing the back 2 to 3 times"
             - "Suction only if there was meconium-stained liquor, or the mouth or nose is full of secretions"
-          outcomes:
+          branches:
             - label: "Breathing"
+              side: "right"
               box:
                 title: "Routine care, and closely observe breathing"
                 severity: "non_urgent"
-            - label: "Not breathing, or gasping"
-              continue: true
-
-        - decision: "B · After 30–60 s of ventilation, is the infant breathing well?"
-          criteria:
+        - shape: "decision"
+          title: "B · After 30–60 s of ventilation, is the infant breathing well?"
+          down_label: "After 30–60 s"
+          bullets:
             - "CALL FOR HELP"
             - "Transfer to the newborn resuscitation area"
             - "Position the head and neck slightly extended"
             - "Start positive pressure ventilation with mask and self-inflating bag within 1 min of birth"
             - "Make sure the chest is moving adequately"
-          outcomes:
+          branches:
             - label: "Breathing well"
+              side: "right"
               box:
                 title: "Observe closely if it continues to breathe well"
                 severity: "non_urgent"
-            - label: "After 30–60 s"
-              continue: true
-
-        - decision: "C · Check the heart rate (HR) with a stethoscope"
-          outcomes:
+        - id: "hr_check"
+          shape: "decision"
+          title: "C · Check the heart rate (HR) with a stethoscope"
+          down_label: "HR ≥ 60/min"
+          branches:
             - label: "HR < 60/min"
+              side: "left"
               box:
                 title: "Chest compressions until HR ≥ 100/min"
+                severity: "emergency"
                 bullets:
                   - "See the figure on p.48"
                   - "Give higher oxygen concentration"
                   - "If HR remains < 60/min, consider other ventilatory support, IV adrenaline, or referral where possible"
                   - "If there is no HR for > 10 min, or it remains < 60/min for 20 min, discontinue (section 3.2.2, p.50)"
-                severity: "emergency"
-            - label: "HR ≥ 60/min"
-              continue: true
-
-        - decision: "Is the heart rate 60–100/min, or above 100/min?"
-          outcomes:
+              loop_to: "hr_check"
+              loop_label: "if HR > 100/min"
+        - shape: "decision"
+          title: "Is the heart rate 60–100/min, or above 100/min?"
+          branches:
             - label: "HR 60–100/min"
+              side: "left"
               box:
                 title: "Take ventilation corrective steps"
+                severity: "priority"
                 bullets:
                   - "Continue to ventilate at 40 breaths per min"
                   - "Consider higher oxygen concentration"
                   - "Suction, if necessary"
                   - "Reassess every 1–2 min"
-                severity: "priority"
             - label: "HR > 100/min"
+              side: "right"
               box:
                 title: "Continue to ventilate at 40 breaths per min"
+                severity: "priority"
                 bullets:
                   - "Every 1–2 min stop to see if it breathes spontaneously"
                   - "Stop ventilating when the respiratory rate is > 30 breaths per min"
                   - "Give post-resuscitation care (section 3.2.1, p.50)"
-                severity: "priority"
-
     - type: "prose"
       title: "Which gas to ventilate with"
       callout: true
