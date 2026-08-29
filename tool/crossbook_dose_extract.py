@@ -122,7 +122,7 @@ BRANDS = {
     'hydroxocobalamin': ['cyanokit'],
     'nitroglycerin': ['nitro', 'nitro drip', 'nitroglycerine', 'gtn'],
     'hypertonic saline': ['3% saline'],
-    'amiodarone': [],
+    'amiodarone': ['amio', 'pacerone'],
     'etomidate': [],
     'glucagon': [],
     'propofol': [],
@@ -200,7 +200,12 @@ FREQ_RE = re.compile(
     r')', re.IGNORECASE)
 
 # Keys whose value is a heading for everything nested under it.
-TITLE_KEYS = ('title', 'label', 'decision', 'name', 'list_subtitle')
+# `drug` is WVEMS's medication-block key, a SIBLING of `dose`/`route`/
+# `frequency` — the same shape as the formulary's name/regimen, and the
+# same trap: without it, "300 -> 150 mg" has no drug anywhere in its own
+# subtree and lands on whatever the block title happens to name.
+TITLE_KEYS = ('title', 'label', 'decision', 'name', 'drug',
+              'list_subtitle')
 
 
 def build_vocab():
@@ -420,7 +425,7 @@ def main():
     fh.write('book\tfile\ttopic\tdrug\tvalue\tunit\tfreq\tcontext\tfragment\n')
     fh.flush()
 
-    def emit(book, base, title, units_seen):
+    def emit(book, base, title, units_seen, carry=None):
         """Write one row per dose, attached to the drug it actually belongs to.
 
         The first version of this attached EVERY dose in a fragment to EVERY
@@ -451,24 +456,34 @@ def main():
 
         # Drugs named only in the enclosing heading — used when the fragment
         # itself names none, which is how most flowchart boxes are written.
+        # Headings are searched INNERMOST FIRST: the nearest heading is the
+        # most specific, and a book's chapter title routinely names a drug that
+        # has nothing to do with the bullet in hand.
         ctx_drugs = list(bound)
-        if ctx:
-            hay = ' || '.join(ctx)
-            ctx_claimed = []
+        for head in reversed(ctx):
+            found = []
+            claimed_h = []
             for pat, canon in patterns:
-                m = pat.search(hay)
+                m = pat.search(head)
                 if not m:
                     continue
-                if any(m.start() < e and s < m.end() for s, e in ctx_claimed):
+                if any(m.start() < e and st < m.end() for st, e in claimed_h):
                     continue
-                ctx_claimed.append((m.start(), m.end()))
+                claimed_h.append((m.start(), m.end()))
+                found.append(canon)
+            for canon in found:
                 if canon not in ctx_drugs:
                     ctx_drugs.append(canon)
+            if found:
+                break
 
         freq = FREQ_RE.findall(frag)
         freq_s = ';'.join(sorted(set(x.lower() for x in freq)))
         clean = re.sub(r'[*_`]', '', frag)[:400].replace('\t', ' ')
         ctx_s = ' › '.join(ctx[-3:]).replace('\t', ' ')[:200]
+
+        if mentions and carry is not None:
+            carry[0] = mentions[-1][2]
 
         n = 0
         for dm in doses:
@@ -480,6 +495,12 @@ def main():
                 drugs = [after[0]]
             elif ctx_drugs:
                 drugs = ctx_drugs[:1]
+            elif carry and carry[0]:
+                # Last resort: the drug named by the PREVIOUS fragment in the
+                # same block. WVEMS writes "Amiodarone: adults give twice" and
+                # then a bare "300 -> 150 mg" underneath it as a sibling, not a
+                # child, so neither the fragment nor any heading names the drug.
+                drugs = [carry[0]]
             else:
                 continue
             value, unit = dm.group(1), dm.group(2)
@@ -512,8 +533,9 @@ def main():
             units = []
             collect(doc, [], units)
             here = 0
+            carry = [None]
             for frag, ctx in units:
-                here += emit(book, base, title, (frag, ctx, ()))
+                here += emit(book, base, title, (frag, ctx, ()), carry)
             rows += here
             print('%s %s: %d dose rows (total %d)' % (book, base, here, rows),
                   flush=True)
@@ -539,9 +561,10 @@ def main():
                 bound = (canon_of[base_name],)
             units = []
             collect(d, [name], units)
+            carry = [None]
             for frag, ctx in units:
                 here += emit(book, 'formulary.yaml', 'Formulary',
-                             (frag, ctx, bound))
+                             (frag, ctx, bound), carry)
         rows += here
         print('%s formulary.yaml: %d dose rows (total %d)' % (book, here, rows),
               flush=True)

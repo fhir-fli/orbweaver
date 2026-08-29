@@ -14,13 +14,21 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 ## activated charcoal
 
 **g**  ⚠️
-- WHO: 5, 25-100, 25-50
+- WHO: 5, 25-50, 25-100
 - WVEMS: 50
 
 **g/kg**  ⚠️
 - PB: 1
 - WHO: 0.5-1
 - WVEMS: 1
+
+**ml**
+- PB: 40, 126
+- WHO: 40
+
+**ml/kg**  ⚠️
+- PB: 1.8
+- WHO: 10
 
 ## adenosine
 
@@ -30,19 +38,19 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg/kg**  ⚠️
 - PB: 0.1, 0.2
-- WVEMS: 0.1, 0.1-0.2, 0.2
+- WVEMS: 0.1-0.2, 0.1, 0.2
 
 ## adrenaline
 
 **mg**  ⚠️
 - PB: 0.25, 1
 - WHO: 0.25, 0.3, 0.5, 5
-- WVEMS: 0.3, 0.5, 1, 5, 150, 300
+- WVEMS: 0.3, 0.5, 1, 5
 
 **mg/kg**  ⚠️
 - PB: 0.005
-- WHO: 0.005, 0.01-0.03, 0.01, 0.05-0.1, 0.5
-- WVEMS: 0.01, 0.5, 5
+- WHO: 0.005, 0.01, 0.01-0.03, 0.05-0.1, 0.5
+- WVEMS: 0.01, 0.5
 
 **mg/ml**
 - PB: 0.1, 1
@@ -50,14 +58,14 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - WVEMS: 0.1, 1
 
 **ml**
-- PB: 0.3, 0.5, 1, 2, 5, 9, 10, 20
-- WHO: 0.15, 0.25, 0.3, 0.5, 3, 3-5, 5
-- WVEMS: 0.5-2, 100, 500, 1000
+- PB: 0.3, 0.5, 1, 2, 5-15, 5, 9, 10, 20
+- WHO: 0.15, 0.25, 0.3, 0.5, 3-5, 3, 5
+- WVEMS: 0.5, 0.5-2, 10, 100, 500, 1000
 
 **ml/kg**  ⚠️
 - PB: 0.005, 0.01, 0.1, 5-10, 30
 - WHO: 0.005, 0.01, 0.1, 0.5, 10-20, 20
-- WVEMS: 0.1
+- WVEMS: 0.1, 20
 
 ## aminophylline
 
@@ -67,11 +75,11 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg/kg**  ⚠️
 - PB: 2.5, 4, 6
-- WHO: 2.5, 5-6, 5, 6
+- WHO: 2.5, 4, 5-6, 5, 6
 
 **ml**
 - PB: 40
-- WHO: 0.6, 0.8, 1, 1.5, 2.5, 3.5, 5
+- WHO: 0.1-0.15, 0.15-0.2, 0.2-0.25, 0.25-0.3, 0.3-0.4, 0.6, 0.8, 1, 1.5, 2.5, 3.5, 5
 
 ## amoxicillin
 
@@ -81,10 +89,10 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg/kg**  ⚠️
 - PB: 50
-- WHO: 15, 25, 25-40, 40-45, 40, 50
+- WHO: 15, 25-40, 25, 40-45, 40, 50
 
 **mg/kg/dose**  ⚠️
-- PB: 25, 25-40, 40-45, 40, 45
+- PB: 25-40, 25, 40-45, 40, 45
 - WHO: 40
 
 ## amphotericin
@@ -101,11 +109,11 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg**  ⚠️
 - PB: 500
-- WHO: 250, 500
+- WHO: 5-7.5, 7.5-10, 10-12.5, 12.5-15, 15-17.5, 17.5-20, 20-22.5, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-90, 250, 500
 
 **mg/kg**  ⚠️
 - PB: 50, 75, 100
-- WHO: 25-50, 50
+- WHO: 5, 20, 25-50, 50
 
 **mg/kg/day**  ⚠️
 - PB: 300
@@ -132,7 +140,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 **mg**  ⚠️
 - PB: 75-100, 300, 325
 - WHO: 300
-- WVEMS: 0.4, 81
+- WVEMS: 81
 
 ## atropine
 
@@ -141,7 +149,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - WVEMS: 0.1, 0.5, 1, 2
 
 **mg/kg**  ⚠️
-- PB: 0.01-0.04, 0.02
+- PB: 0.01-0.04, 0.02, 0.04
 - WHO: 0.02
 - WVEMS: 0.02, 0.05
 
@@ -164,6 +172,14 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - WHO: 10-20, 40-50
 
 ## benzylpenicillin
+
+**mg**  ⚠️
+- PB: 250, 300
+- WHO: 600
+
+**mg/kg**  ⚠️
+- PB: 7
+- WHO: 60, 100-150
 
 ## calcium
 
@@ -203,7 +219,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg/kg**  ⚠️
 - PB: 75, 80, 100
-- WHO: 25-50, 50, 80-100, 80, 100
+- WHO: 25-50, 50, 80, 80-100, 100
 - WVEMS: 50, 100
 
 **mg/kg/day**  ⚠️
@@ -211,7 +227,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - WHO: 50-80, 75-80, 100
 
 **ml**
-- WHO: 0.5-0.75, 0.75-1, 1-1.25, 1.25-1.5, 1.5-1.75, 1.75-2, 2, 2-2.5, 3, 4, 6, 8, 9, 9.6, 10, 12, 12.5, 14, 18, 19, 20, 25
+- WHO: 0.5-0.75, 0.75-1, 1-1.25, 1-1.5, 1.25-1.5, 1.5-1.75, 1.5-2, 1.75-2, 2, 2-2.5, 2.5-3, 3-3.5, 3, 3.5-4, 4-4.5, 4, 6, 8, 9, 9.6, 10, 12, 12.5, 14, 18, 19, 20, 25
 - WVEMS: 3
 
 ## ciprofloxacin
@@ -275,8 +291,8 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 ## dextrose
 
 **g**  ⚠️
-- PB: 25, 40-60
-- WHO: 3, 20
+- PB: 25, 40-60, 1500
+- WHO: 3, 12, 20
 
 **g/kg**  ⚠️
 - PB: 0.2, 0.5
@@ -289,20 +305,20 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **ml**
 - PB: 1, 2, 4, 8, 9, 25-50, 50, 450
-- WHO: 0.5-1, 0.6, 1, 1-2, 3.4, 6, 9, 10, 16, 20, 24, 32, 50, 80, 90, 200, 250, 500, 1000
+- WHO: 0.5-1, 0.6, 1-2, 1, 2-4, 3.4, 6, 9, 10, 16, 19-23, 20, 24, 28-34, 32, 50, 80, 90, 200, 250, 500, 1000
 - WVEMS: 100
 
 **ml/kg**  ⚠️
 - PB: 2, 5, 10
 - WHO: 0.5, 2, 5, 7, 10-20, 14, 20
-- WVEMS: 5
+- WVEMS: 5, 20, 60
 
 **ml/kg/day**  ⚠️
-- PB: 150
-- WHO: 150-175
+- PB: 10, 30, 50, 100, 150, 200-220
+- WHO: 150-175, 150-180
 
 **mmol/l**
-- PB: 3, 10, 11, 11-14, 123
+- PB: 3, 10, 11-14, 11, 123
 - WHO: 1.5, 2.2, 2.5, 2.6, 2.8, 3, 3.3, 3.9, 75
 
 ## diazepam
@@ -312,8 +328,12 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - WHO: 10
 
 **mg/kg**  ⚠️
-- PB: 0.1, 0.15, 0.2, 0.3, 0.5
+- PB: 0.1, 0.15, 0.2, 0.3, 0.5, 20-50
 - WHO: 0.1-0.2, 0.2-0.3, 0.2, 0.5, 10
+
+**ml**
+- PB: 250, 500
+- WHO: 0.25, 0.3, 0.4, 0.5, 0.6, 0.75, 1, 1.2, 1.25, 1.5, 1.7, 2.5
 
 ## digoxin
 
@@ -344,7 +364,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 ## ethambutol
 
 **mg/kg**  ⚠️
-- PB: 15, 15-25, 20
+- PB: 15-25, 15, 20
 - WHO: 20
 
 ## fentanyl
@@ -394,13 +414,13 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 ## furosemide
 
 **mg**  ⚠️
-- PB: 20-40, 40-80, 40, 250
+- PB: 20-40, 40, 40-80, 250
 - WHO: 20
 - WVEMS: 40
 
 **mg/kg**  ⚠️
-- PB: 1, 1-2
-- WHO: 1, 1-2, 2
+- PB: 1-2, 1
+- WHO: 1-2, 1, 2
 - WVEMS: 1-2
 
 ## gentamicin
@@ -417,7 +437,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg**  ⚠️
 - PB: 2.5-5
-- WVEMS: 2.5-5, 5
+- WVEMS: 5
 
 ## heparin
 
@@ -432,7 +452,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - WHO: 0.15, 100
 
 **mg/kg**  ⚠️
-- PB: 1, 2-4, 2
+- PB: 1, 2, 2-4
 - WHO: 1-2, 2-4, 4
 
 ## hypertonic saline
@@ -442,14 +462,14 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - WVEMS: 250
 
 **ml/kg**  ⚠️
-- PB: 4
+- PB: 4, 20
 - WVEMS: 2-5
 
 ## ibuprofen
 
 **mg**  ⚠️
 - PB: 400-800
-- WVEMS: 600, 1000, 2400
+- WVEMS: 600, 2400
 
 **mg/kg**  ⚠️
 - PB: 5-10, 5, 10
@@ -469,16 +489,16 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 ## iron
 
 **mg**  ⚠️
-- PB: 1, 1-2, 2-4, 3-6, 5, 15, 60-120, 65
+- PB: 1-2, 1, 2-4, 3-6, 5, 15, 60-120, 65
 - WHO: 1, 10
 
 **mg/kg**  ⚠️
 - PB: 2-3, 3
-- WHO: 3
+- WHO: 3, 20
 
 **mg/kg/day**  ⚠️
 - PB: 4
-- WHO: 2-4, 2-3
+- WHO: 2-3, 2-4, 5, 10
 
 ## isoniazid
 
@@ -498,7 +518,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg/kg**  ⚠️
 - WHO: 0.5-2, 0.5-1, 1-2, 2-4, 4-5, 5-8, 6-8
-- WVEMS: 0.25-0.5
+- WVEMS: 0.25-0.5, 0.5-2, 2
 
 ## ketorolac
 
@@ -552,12 +572,16 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 ## metronidazole
 
+**g**  ⚠️
+- PB: 2
+- WHO: 3, 3.5, 3.7, 4, 11, 15, 64
+
 ## midazolam
 
 **mg**  ⚠️
 - PB: 2.5-5, 10
 - WHO: 10
-- WVEMS: 2.5, 2.5-5, 10
+- WVEMS: 2.5-5, 2.5, 10
 
 **mg/kg**  ⚠️
 - WHO: 0.1-0.2, 0.3-0.5, 20-40
@@ -569,6 +593,10 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - PB: 0.05-0.1
 - WHO: 0.005-0.01, 0.01-0.02, 0.05-0.1, 0.1-0.2, 0.15-0.3, 0.2-0.4
 - WVEMS: 0.1-0.2
+
+**ml/kg**  ⚠️
+- PB: 10-20
+- WHO: 10-20, 40
 
 ## naloxone
 
@@ -594,19 +622,19 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg**  ⚠️
 - PB: 0.4
-- WVEMS: 0.4, 0.8, 40, 50
+- WVEMS: 0.4, 0.8, 50
 
 ## noradrenaline
 
 **mcg/kg/min**  ⚠️
-- PB: 0.05-0.5, 0.05-0.1, 1, 2-20, 2-5, 5-20
-- WVEMS: 0.05, 0.05-0.5
+- PB: 0.05-0.1, 0.05-0.5, 1, 2-5, 2-20, 5-20
+- WVEMS: 0.05-0.5, 0.05
 
 ## nystatin
 
 **ml**
 - PB: 0.5, 1, 2, 4-6
-- WHO: 1, 1-2
+- WHO: 1-2, 1
 
 ## ondansetron
 
@@ -647,7 +675,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg/kg/day**  ⚠️
 - PB: 2-3
-- WHO: 10
+- WHO: 5, 10
 
 **ml**
 - PB: 10
@@ -684,12 +712,12 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 - WHO: 20, 30
 
 **mg/kg**  ⚠️
-- PB: 0.5, 1, 1-2, 2
+- PB: 0.5, 1-2, 1, 2
 - WHO: 1, 5-6, 5
 
 **mg/kg/day**  ⚠️
 - PB: 2
-- WHO: 1, 1-2, 2-4
+- WHO: 1-2, 1, 2-4
 
 **mmhg**
 - PB: 35, 70
@@ -706,7 +734,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 **mg**  ⚠️
 - PB: 2.5, 5, 10-20
 - WHO: 1-2, 2, 2.5
-- WVEMS: 0.3, 0.5, 1.25, 2.5, 10, 25
+- WVEMS: 1.25, 2.5, 10
 
 **mg/dose**  ⚠️
 - PB: 2.5, 5
@@ -723,7 +751,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **g**  ⚠️
 - WHO: 1
-- WVEMS: 1, 2
+- WVEMS: 1, 2, 10-12
 
 **mg**  ⚠️
 - PB: 500
@@ -732,6 +760,10 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 **mg/kg**
 - WHO: 15-20
 - WVEMS: 15-20
+
+**ml**
+- PB: 5
+- WVEMS: 350, 450
 
 ## vancomycin
 
@@ -765,7 +797,7 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 **mg**  ⚠️
 - PB: 10-20, 10, 20
-- WHO: 5-10, 5, 10, 20
+- WHO: 5, 5-10, 10, 20
 
 **mg/day**
 - PB: 10, 20
@@ -776,9 +808,9 @@ with the topic it came from. A difference is NOT a contradiction — read the co
 
 ## Drugs dosed in only ONE book
 
-**PB only (59):** acyclovir, albendazole, alteplase, amlodipine, apixaban, calcium gluconate 10%, captopril, carbamazepine, carvedilol, cefixime, clarithromycin, clavulanate, clopidogrel, clotrimazole, dapagliflozin, doxycycline, empagliflozin, enoxaparin, famotidine, foscarnet, ganciclovir, hctz, hydroxyurea, insulin, itraconazole, labetalol, lactulose, leucovorin, lisinopril, losartan, metformin, nicardipine, nifedipine, nitazoxanide, nitrofurantoin, nitroprusside, norfloxacin, octreotide, olanzapine, omeprazole, paromomycin, pethidine, propranolol, pyridoxine, pyrimethamine, ranitidine, rifabutin, rifaximin, rivaroxaban, sodium valproate, spironolactone, streptokinase, tenecteplase, terlipressin, ticagrelor, valacyclovir, valganciclovir, vitamin b12, warfarin
+**PB only (60):** acyclovir, albendazole, alteplase, amlodipine, apixaban, calcium gluconate 10%, captopril, carbamazepine, carvedilol, cefixime, clarithromycin, clavulanate, clopidogrel, clotrimazole, dapagliflozin, doxycycline, empagliflozin, enoxaparin, famotidine, foscarnet, ganciclovir, hctz, hydroxyurea, insulin, itraconazole, labetalol, lactulose, leucovorin, lisinopril, losartan, metformin, nicardipine, nifedipine, nitazoxanide, nitrofurantoin, nitroprusside, norfloxacin, octreotide, olanzapine, omeprazole, paromomycin, pethidine, propranolol, pyridoxine, pyrimethamine, ranitidine, rifabutin, rifaximin, rivaroxaban, sodium valproate, spironolactone, streptokinase, sulfadoxine-pyrimethamine, tenecteplase, terlipressin, ticagrelor, valacyclovir, valganciclovir, vitamin b12, warfarin
 
-**WHO only (39):** abacavir, amitriptyline, amodiaquine, artesunate–amodiaquine, benzathine benzylpenicillin, betamethasone, budesonide, bupivacaine, cefalexin, chloramphenicol, chloramphenicol, oily, chlorphenamine, deferoxamine, dihydroartemisinin, efavirenz, ethionamide, furazolidone, hydromorphone, ivig, kanamycin, lopinavir/ritonavir, mebendazole, mefloquine, methionine, metoclopramide, naproxen, phosphorus, piperaquine, pralidoxime, primaquine, procaine benzylpenicillin, rectal artesunate, sodium bicarbonate, spectinomycin, streptomycin, sulfadoxine, sulfamethoxazole, tenofovir, tetracycline
+**WHO only (40):** abacavir, amitriptyline, amodiaquine, artesunate–amodiaquine, benzathine benzylpenicillin, betamethasone, budesonide, bupivacaine, cefalexin, chloramphenicol, chloramphenicol, oily, chlorphenamine, deferoxamine, dihydroartemisinin, efavirenz, ethionamide, furazolidone, gentian violet, hydromorphone, ivig, kanamycin, lopinavir/ritonavir, mebendazole, mefloquine, methionine, metoclopramide, naproxen, phosphorus, piperaquine, pralidoxime, primaquine, procaine benzylpenicillin, rectal artesunate, sodium bicarbonate, spectinomycin, streptomycin, sulfadoxine, sulfamethoxazole, tenofovir, tetracycline
 
-**WVEMS only (10):** amiodarone, cefazolin, duodote, etomidate, glucagon, hydroxocobalamin, oxymetazoline, propofol, rocuronium, succinylcholine
+**WVEMS only (9):** amiodarone, cefazolin, duodote, etomidate, glucagon, hydroxocobalamin, propofol, rocuronium, succinylcholine
 

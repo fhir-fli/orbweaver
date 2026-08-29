@@ -58,6 +58,18 @@ Shared: 100, 200
 - `1 g/kg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Charcoal
   > 50 g PO (1 g/kg)
 
+### activated charcoal ml/kg — PB vs WHO
+
+**PB only:** 1.8
+
+- `1.8 ml/kg`  — *Poisoning / Ingestion — Suspected Acutely Poisoned Patient* › p.28 · initial algorithm › Common toxidromes & antidotes › Methanol
+  > Rx: oral by NGT — 1.8 ml/kg of 43% ethanol (roughly three 40 ml shots, ≈126 ml, in a 70 kg adult); maintenance 0.2–0.4 ml/kg/hour of 43% ethanol
+
+**WHO only:** 10
+
+- `10 ml/kg`  — *Ingested Poisons — Principles* › Ingested Poisons — Principles › 1.6.1 · decontamination, charcoal, lavage › Gastric lavage — rarely indicated
+  > Lavage with 10 ml/kg of 0.9% saline; returned volume should ≈ volume given; continue until the return is clear.
+
 ## adenosine
 
 ### adenosine mg/kg — PB vs WVEMS
@@ -102,24 +114,18 @@ Shared: 1
 - `0.25 mg`  — *Suspected Snake Bite* › What type of envenomation syndrome? Severe enough to warrant antivenom? (see next page) › Yes › Antivenom administration
   > Dilute antivenom in NS (no more than 20mL/500mL bag), give slowly over 30 mins or no more than 1–2mL/min | Polyvalent: titrate to symptoms, assess q30min | Monovalent: monitor haematologic response, repeat dose if needed
 
-**WVEMS only:** 0.3, 0.5, 5, 150, 300
+**WVEMS only:** 0.3, 0.5, 5
 
+- `0.3 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl › [Epi](topic:wvems-2026-drug-reference#epi-epi-neb)
+  > 0.3 mg
 - `0.3 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Epi, Epi Neb
   > 1 mg IV/IO (CODE); 0.3 mg IM (anaphylaxis)
-- `0.3 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Epi, Epi Neb
-  > 0.01 mg/kg IV (Brady/CODE); 0.01 mg/kg IM, max 0.3 mg (anaphylaxis)
 - `0.5 mg`  — *Circulation / Shock* › 2026-008 · NS Bolus / Epi Drip / Dopamine › Medication › [Epi Drip](topic:wvems-2026-drug-reference#epi-drip-epi-push)** (Epinephrine): Mix bag of **1 mcg/mL** and use as follows:
   > Add 1 mg Epi into 1,000 mL bag -or- 0.5 mg in 500 mL bag of NS
+- `5 mg`  — *Dyspnea* › Dyspnea › 2026-030 · cause-branched (Reactive / Infectious / Overload) › [Epi Neb](topic:wvems-2026-drug-reference#epi-epi-neb)
+  > 5 mg
 - `5 mg`  — *Peds Reference* › Peds Reference › 2026-144 · age-based dosing › Not in the tables (infusions & fixed doses)
   > Albuterol / Atrovent / Epi Neb — nebulised; use the standard neb dose (Albuterol 2.5 mg, Atrovent 0.5 mg, Epi Neb 0.5 mg/kg max 5 mg).
-- `5 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Epi, Epi Neb
-  > Epi Neb: 0.5 mg/kg, max 5 mg (SOB)
-- `150 mg`  — *Medical CODE* › Medical CODE › 2026-024 · Compressions / AED / Epi / Amio
-  > 300 → 150 mg
-- `150 mg`  — *Medical CODE* › 2026-024 · Compressions / AED / Epi / Amio › Medications › For adults, give twice (x2) Q 5 min
-  > (1) 300 mg → (2) 150 mg
-- `300 mg`  — *Medical CODE* › 2026-024 · Compressions / AED / Epi / Amio › Medications › For adults, give twice (x2) Q 5 min
-  > (1) 300 mg → (2) 150 mg
 
 ### adrenaline mg — WHO vs WVEMS
 
@@ -130,18 +136,12 @@ Shared: 0.3, 0.5, 5
 - `0.25 mg`  — *Snake Bite* › 1.9.1 · diagnosis, first aid, antivenom › Antivenom › Give **prophylactic SC adrenaline before** the infusion — it is the **only premedication with randomised evidence of benefit** (any reaction **RR 
   > 0.005 mg/kg (≈ 0.005 ml/kg of 1:1000) in a child, capped at the adult 0.25 mg (0.25 ml).
 
-**WVEMS only:** 1, 150, 300
+**WVEMS only:** 1
 
 - `1 mg`  — *Circulation / Shock* › 2026-008 · NS Bolus / Epi Drip / Dopamine › Medication › [Epi Drip](topic:wvems-2026-drug-reference#epi-drip-epi-push)** (Epinephrine): Mix bag of **1 mcg/mL** and use as follows:
   > Add 1 mg Epi into 1,000 mL bag -or- 0.5 mg in 500 mL bag of NS
-- `1 mg`  — *Medical CODE* › Medical CODE › 2026-024 · Compressions / AED / Epi / Amio
+- `1 mg`  — *Medical CODE* › Medical CODE › 2026-024 · Compressions / AED / Epi / Amio › [Epi](topic:wvems-2026-drug-reference#epi-epi-neb)
   > 1 mg
-- `150 mg`  — *Medical CODE* › Medical CODE › 2026-024 · Compressions / AED / Epi / Amio
-  > 300 → 150 mg
-- `150 mg`  — *Medical CODE* › 2026-024 · Compressions / AED / Epi / Amio › Medications › For adults, give twice (x2) Q 5 min
-  > (1) 300 mg → (2) 150 mg
-- `300 mg`  — *Medical CODE* › 2026-024 · Compressions / AED / Epi / Amio › Medications › For adults, give twice (x2) Q 5 min
-  > (1) 300 mg → (2) 150 mg
 
 ### adrenaline mg/kg — PB vs WHO
 
@@ -167,9 +167,9 @@ Shared: 0.005
 - `0.005 mg/kg`  — *Suspected Snake Bite* › What type of envenomation syndrome? Severe enough to warrant antivenom? (see next page) › Yes › Antivenom administration
   > Dilute antivenom in NS (no more than 20mL/500mL bag), give slowly over 30 mins or no more than 1–2mL/min | Polyvalent: titrate to symptoms, assess q30min | Monovalent: monitor haematologic response, repeat dose if needed
 
-**WVEMS only:** 0.01, 0.5, 5
+**WVEMS only:** 0.01, 0.5
 
-- `0.01 mg/kg`  — *Medical CODE* › Medical CODE › 2026-024 · Compressions / AED / Epi / Amio
+- `0.01 mg/kg`  — *Medical CODE* › Medical CODE › 2026-024 · Compressions / AED / Epi / Amio › [Epi](topic:wvems-2026-drug-reference#epi-epi-neb)
   > 0.01 mg/kg
 - `0.01 mg/kg`  — *Peds Reference* › Peds Reference › 2026-144 · age-based dosing › Resuscitation
   > Epi (mg) | 0.01 mg/kg | 0.035 | 0.08 | 0.1 | 0.12 | 0.16 | 0.2 | 0.25 | 0.32 | 0.4
@@ -177,8 +177,6 @@ Shared: 0.005
   > Albuterol / Atrovent / Epi Neb — nebulised; use the standard neb dose (Albuterol 2.5 mg, Atrovent 0.5 mg, Epi Neb 0.5 mg/kg max 5 mg).
 - `0.5 mg/kg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Epi, Epi Neb
   > Epi Neb: 0.5 mg/kg, max 5 mg (SOB)
-- `5 mg/kg`  — *Medical CODE* › Medical CODE › 2026-024 · Compressions / AED / Epi / Amio
-  > 5 mg/kg
 
 ### adrenaline mg/kg — WHO vs WVEMS
 
@@ -192,11 +190,6 @@ Shared: 0.01, 0.5
   > Give adrenaline (epinephrine) if HR stays < 60/min: IV/IO 0.01–0.03 mg/kg (endotracheal 0.05–0.1 mg/kg only while IV/IO access is being obtained). For suspected blood loss, give a volume bolus 10–20 mL/kg (normal saline 
 - `0.05-0.1 mg/kg`  — *Neonatal Resuscitation* › Neonatal Resuscitation › 3.2 · Chart 12 · dry, stimulate, ventilate, HR-guided › C · Circulation
   > Give adrenaline (epinephrine) if HR stays < 60/min: IV/IO 0.01–0.03 mg/kg (endotracheal 0.05–0.1 mg/kg only while IV/IO access is being obtained). For suspected blood loss, give a volume bolus 10–20 mL/kg (normal saline 
-
-**WVEMS only:** 5
-
-- `5 mg/kg`  — *Medical CODE* › Medical CODE › 2026-024 · Compressions / AED / Epi / Amio
-  > 5 mg/kg
 
 ### adrenaline ml/kg — PB vs WHO
 
@@ -237,11 +230,16 @@ Shared: 0.1
 - `30 ml/kg` (prn) — *Anaphylaxis* › Hypotension? › Yes › IV fluids — NS or RL
   > Children: 30mL/kg in first hour | Adults: 1–2L, 5–10mL/kg in first 5 min | May try recumbent positioning or vasopressors prn
 
+**WVEMS only:** 20
+
+- `20 ml/kg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › NS Bolus
+  > 20 mL/kg
+
 ### adrenaline ml/kg — WHO vs WVEMS
 
-Shared: 0.1
+Shared: 0.1, 20
 
-**WHO only:** 0.005, 0.01, 0.5, 10-20, 20
+**WHO only:** 0.005, 0.01, 0.5, 10-20
 
 - `0.005 ml/kg`  — *Snake Bite* › 1.9.1 · diagnosis, first aid, antivenom › Antivenom › Give **prophylactic SC adrenaline before** the infusion — it is the **only premedication with randomised evidence of benefit** (any reaction **RR 
   > 0.005 mg/kg (≈ 0.005 ml/kg of 1:1000) in a child, capped at the adult 0.25 mg (0.25 ml).
@@ -255,8 +253,6 @@ Shared: 0.1
   > 0.5 ml/kg of 1:1000 solution, nebulized (max dose 5 ml)
 - `10-20 ml/kg`  — *Neonatal Resuscitation* › Neonatal Resuscitation › 3.2 · Chart 12 · dry, stimulate, ventilate, HR-guided › C · Circulation
   > Give adrenaline (epinephrine) if HR stays < 60/min: IV/IO 0.01–0.03 mg/kg (endotracheal 0.05–0.1 mg/kg only while IV/IO access is being obtained). For suspected blood loss, give a volume bolus 10–20 mL/kg (normal saline 
-- `20 ml/kg`  — *Anaphylaxis* › 4.6.4 · adrenaline IM · airway · fluids › Treatment › Severe anaphylactic shock**, in addition:
-  > 20 ml/kg of normal saline 0.9% or Ringer's lactate IV as rapidly as possible (intraosseous if no IV access); repeat as needed
 
 ## aminophylline
 
@@ -282,12 +278,7 @@ Shared: 0.1
 
 ### aminophylline mg/kg — PB vs WHO
 
-Shared: 2.5, 6
-
-**PB only:** 4
-
-- `4 mg/kg`  — *Formulary* › Aminophylline › Aminophylline › Maintenance dose (IV or oral):
-  > Age 7–28 days: 4 mg/kg 12 hrly
+Shared: 2.5, 4, 6
 
 **WHO only:** 5, 5-6
 
@@ -390,8 +381,36 @@ Shared: 1
 
 Shared: 500
 
-**WHO only:** 250
+**WHO only:** 5-7.5, 7.5-10, 10-12.5, 12.5-15, 15-17.5, 17.5-20, 20-22.5, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-90, 250
 
+- `5-7.5 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
+- `7.5-10 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
+- `10-12.5 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
+- `12.5-15 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
+- `15-17.5 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
+- `17.5-20 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
+- `20-22.5 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
+- `20-30 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
+- `30-40 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
+- `40-50 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
+- `50-60 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
+- `60-70 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
+- `70-80 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
+- `80-90 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
 - `250 mg` (q12h;q8h) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
   > Ampicillin | 50 mg/kg IM/IV — wk 1 q12h; wk 2–4 q8h | 250 mg vial + 1.3 ml water → 250 mg/1.5 ml | 0.3–0.6 ml | 0.6–0.9 ml | 0.9–1.2 ml | 1.2–1.5 ml | 1.5–2.0 ml | 2.0–2.5 ml | 2.5–3.0 ml
 
@@ -408,8 +427,12 @@ Shared: 50
 - `100 mg/kg` (q12h;q8h) — *Neonatal Sepsis — Treatment* › Neonatal Sepsis — Treatment › pp.86–87 · < 28 days · antibiotics · duration › Antibiotic treatment
   > If concern for meningitis: ampicillin 100 mg/kg q8h (q12h if in the 1st week) PLUS cefotaxime 50 mg/kg q8h (q12h if in the 1st week)
 
-**WHO only:** 25-50
+**WHO only:** 5, 20, 25-50
 
+- `5 mg/kg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
+- `20 mg/kg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
 - `25-50 mg/kg`  — *Preoperative Care* › Preoperative Care › 9.1.1 · consent · fitness · fasting · antibiotics › Surgical antibiotic prophylaxis
   > Bowel surgery: ampicillin (25–50 mg/kg IM/IV) + gentamicin (5–7.5 mg/kg IM/IV) + metronidazole (10 mg/kg).
 
@@ -509,11 +532,9 @@ Shared: 300
 - `325 mg`  — *Treatment of ACS / Myocardial Infarction* › pp.123–124 · STEMI · NSTEMI · lytics › STEMI › Anti-platelet:
   > Aspirin 325 mg PO × 1 dose if not already given
 
-**WVEMS only:** 0.4, 81
+**WVEMS only:** 81
 
-- `0.4 mg`  — *Chest Pain* › Chest Pain › 2026-028 · Aspirin / Nitro
-  > 0.4 mg
-- `81 mg`  — *Chest Pain* › Chest Pain › 2026-028 · Aspirin / Nitro
+- `81 mg`  — *Chest Pain* › Chest Pain › 2026-028 · Aspirin / Nitro › [Aspirin](topic:wvems-2026-drug-reference#aspirin)
   > 4 × 81 mg
 - `81 mg`  — *Chest Pain* › 2026-028 · Aspirin / Nitro › Medications › [Aspirin](topic:wvems-2026-drug-reference#aspirin)** (Baby ASA): Contraindicated with **active** GI bleeding
   > Have patient chew four (4) 81 mg tabs (not enteric coated).
@@ -525,11 +546,9 @@ Shared: 300
 - `300 mg`  — *Formulary* › Aspirin › Aspirin › Standard
   > 300 mg tablet
 
-**WVEMS only:** 0.4, 81
+**WVEMS only:** 81
 
-- `0.4 mg`  — *Chest Pain* › Chest Pain › 2026-028 · Aspirin / Nitro
-  > 0.4 mg
-- `81 mg`  — *Chest Pain* › Chest Pain › 2026-028 · Aspirin / Nitro
+- `81 mg`  — *Chest Pain* › Chest Pain › 2026-028 · Aspirin / Nitro › [Aspirin](topic:wvems-2026-drug-reference#aspirin)
   > 4 × 81 mg
 - `81 mg`  — *Chest Pain* › 2026-028 · Aspirin / Nitro › Medications › [Aspirin](topic:wvems-2026-drug-reference#aspirin)** (Baby ASA): Contraindicated with **active** GI bleeding
   > Have patient chew four (4) 81 mg tabs (not enteric coated).
@@ -555,7 +574,7 @@ Shared: 2
   > Atropine — no 0.1 mg minimum (removed in PALS 2020) For sedation, use the lower doses shown on the Drug Reference cards.
 - `0.5 mg`  — *Peds Reference* › Peds Reference › 2026-144 · age-based dosing
   > Atropine (mg): no minimum (PALS 2020); max 0.5 mg
-- `1 mg`  — *Bradycardia* › Bradycardia › 2026-012 · Atropine / Pacing
+- `1 mg`  — *Bradycardia* › Bradycardia › 2026-012 · Atropine / Pacing › [Atropine](topic:wvems-2026-drug-reference#atropine)
   > 1 mg
 - `1 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Atropine
   > 1 mg IV/IO (brady); 2 mg double q5 min (organophosphate, no max)
@@ -564,19 +583,23 @@ Shared: 2
 
 Shared: 0.02
 
-**PB only:** 0.01-0.04
+**PB only:** 0.01-0.04, 0.04
 
 - `0.01-0.04 mg/kg` (every 1–3 h;every 2–4 h) — *Suspected Snake Bite* › pp.39–40 · envenomation + antivenom › Types of envenomation — Neurotoxic › Anticholinesterase trial — for suspected COBRA envenoming only. NOT for mamba** (mamba venom contains its own anticholinester
   > If positive, continue: adults 0.5–2.5 mg every 1–3 h (max 10 mg in 24 h); children 0.01–0.04 mg/kg every 2–4 h — each dose with atropine as above
+- `0.04 mg/kg`  — *Suspected Snake Bite* › pp.39–40 · envenomation + antivenom › Types of envenomation — Neurotoxic › Anticholinesterase trial — for suspected COBRA envenoming only. NOT for mamba** (mamba venom contains its own anticholinester
+  > Then neostigmine IM — adults 0.02 mg/kg; children 0.04 mg/kg
 
 ### atropine mg/kg — PB vs WVEMS
 
 Shared: 0.02
 
-**PB only:** 0.01-0.04
+**PB only:** 0.01-0.04, 0.04
 
 - `0.01-0.04 mg/kg` (every 1–3 h;every 2–4 h) — *Suspected Snake Bite* › pp.39–40 · envenomation + antivenom › Types of envenomation — Neurotoxic › Anticholinesterase trial — for suspected COBRA envenoming only. NOT for mamba** (mamba venom contains its own anticholinester
   > If positive, continue: adults 0.5–2.5 mg every 1–3 h (max 10 mg in 24 h); children 0.01–0.04 mg/kg every 2–4 h — each dose with atropine as above
+- `0.04 mg/kg`  — *Suspected Snake Bite* › pp.39–40 · envenomation + antivenom › Types of envenomation — Neurotoxic › Anticholinesterase trial — for suspected COBRA envenoming only. NOT for mamba** (mamba venom contains its own anticholinester
+  > Then neostigmine IM — adults 0.02 mg/kg; children 0.04 mg/kg
 
 **WVEMS only:** 0.05
 
@@ -629,6 +652,38 @@ Shared: 250, 500
   > Where fluoroquinolone resistance is prevalent (most of South Asia, parts of Africa): oral azithromycin 10–20 mg/kg/day for 5–7 days, or IV ceftriaxone 75–80 mg/kg/day for 10–14 days.
 - `40-50 mg/kg/day`  — *Pertussis* › 4.7.1 · whooping cough · azithromycin › Treatment — antibiotics › A macrolide does **not** shorten established illness but **reduces infectiousness** and is worth giving early (best in the first 1–2 w
   > Erythromycin — alternative if azithromycin is unavailable: 40–50 mg/kg/day (max 2 g/day) in 4 divided doses for 14 days.
+
+## benzylpenicillin
+
+### benzylpenicillin mg — PB vs WHO
+
+**PB only:** 250, 300
+
+- `250 mg` (bd) — *Acute Rheumatic Fever (ARF)* › p.58 · Jones criteria + Rx › Treatment › Secondary prophylaxis
+  > Penicillin V 250mg PO BD
+- `300 mg`  — *Pharyngitis* › Pharyngitis › p.70 · ENT infections IV › Treatment
+  > 7mg/kg (max 300mg) 8 hourly x 10 days
+
+**WHO only:** 600
+
+- `600 mg` (q12h;q6h) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Benzylpenicillin | 50 000 U/kg — wk 1 q12h; wk 2–4+ q6h | 600 mg (1 000 000 U) vial + 1.6 ml water → 500 000 U/ml | 0.2 ml | 0.2 ml | 0.3 ml | 0.5 ml | 0.5 ml | 0.6 ml | 0.7 ml
+- `600 mg`  — *Formulary* › Benzylpenicillin (penicillin G) › Benzylpenicillin (penicillin G) › General — IV
+  > Vial 600 mg + 9.6 ml water → 1 000 000 U/10 ml
+
+### benzylpenicillin mg/kg — PB vs WHO
+
+**PB only:** 7
+
+- `7 mg/kg`  — *Pharyngitis* › Pharyngitis › p.70 · ENT infections IV › Treatment
+  > 7mg/kg (max 300mg) 8 hourly x 10 days
+
+**WHO only:** 60, 100-150
+
+- `60 mg/kg` (every 6 h) — *Bacterial Meningitis* › Bacterial Meningitis › 6.3.1 · LP · ceftriaxone · dexamethasone › Antibiotic treatment — start immediately
+  > Last-resort (only if cephalosporins are unavailable and there is no known chloramphenicol/β-lactam resistance): chloramphenicol 25 mg/kg IM/IV every 6 h + ampicillin 50 mg/kg every 6 h, or chloramphenicol + benzylpenicil
+- `100-150 mg/kg` (daily;every 6 h;once daily) — *Myelomeningocoele* › Myelomeningocoele › 9.2.4 · prenatal repair · sterile dressing · folic acid › Postnatal treatment
+  > If ruptured / for prophylaxis: ampicillin (50 mg/kg IM/IV every 6 h) + gentamicin (5–7.5 mg/kg once daily) — this combination is well-supported (infection 6% vs 45%); benzylpenicillin (100–150 mg/kg daily in two divided 
 
 ## calcium
 
@@ -807,8 +862,8 @@ Shared: 80, 100
 
 - `25-50 mg/kg`  — *Neonatal Conjunctivitis* › Neonatal Conjunctivitis › 3.12.2 · sticky eyes vs ophthalmia neonatorum › Severe conjunctivitis (ophthalmia neonatorum)
   > Give ceftriaxone 25–50 mg/kg (maximum 250 mg) IM/IV as a single dose.
-- `25-50 mg/kg`  — *Formulary* › Spectinomycin › Spectinomycin
-  > Global supply has largely been discontinued. For neonatal gonococcal ophthalmia, ceftriaxone 25–50 mg/kg IM/IV as a single dose (max 250 mg) is now the recommended treatment.
+- `25-50 mg/kg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Pus from eye: 25–50 mg/kg IM/IV once (max 250 mg) | | — | — | — | — | — | — | —
 - `50 mg/kg` (q12h) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
   > Ceftriaxone (meningitis) | 50 mg/kg IV q12h | 1 g vial + 9.6 ml water → 1 g/10 ml | 0.5–0.75 ml | 0.75–1 ml | 1–1.25 ml | 1.25–1.5 ml | 1.5–1.75 ml | 1.75–2 ml | 2–2.5 ml
 - `50 mg/kg` (every 12 h;every 6 h;once daily) — *Bacterial Meningitis* › Bacterial Meningitis › 6.3.1 · LP · ceftriaxone · dexamethasone › Antibiotic treatment — start immediately
@@ -844,8 +899,8 @@ Shared: 50, 100
 
 - `25-50 mg/kg`  — *Neonatal Conjunctivitis* › Neonatal Conjunctivitis › 3.12.2 · sticky eyes vs ophthalmia neonatorum › Severe conjunctivitis (ophthalmia neonatorum)
   > Give ceftriaxone 25–50 mg/kg (maximum 250 mg) IM/IV as a single dose.
-- `25-50 mg/kg`  — *Formulary* › Spectinomycin › Spectinomycin
-  > Global supply has largely been discontinued. For neonatal gonococcal ophthalmia, ceftriaxone 25–50 mg/kg IM/IV as a single dose (max 250 mg) is now the recommended treatment.
+- `25-50 mg/kg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Pus from eye: 25–50 mg/kg IM/IV once (max 250 mg) | | — | — | — | — | — | — | —
 - `80 mg/kg` (once daily) — *Severe Pneumonia* › Severe Pneumonia › 4.2.1 · admit · oxygen · IV antibiotics › Antibiotic therapy
   > Use ceftriaxone 80 mg/kg IM/IV once daily if first-line treatment fails.
 - `80 mg/kg` (once daily) — *Epiglottitis* › Epiglottitis › 4.6.3 · airway emergency · Hib · ceftriaxone › Treatment
@@ -1003,8 +1058,10 @@ Shared: 12
   > [Decadron®](topic:wvems-2026-drug-reference#decadron) (Dexamethasone): Alternate dose: 8 mg IV/IO, IM x1
 - `8 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
   > [Decadron®](topic:wvems-2026-drug-reference#decadron) (Dexamethasone): Alternate dose: 8 mg IV/IO, IM x1
-- `10 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Decadron®
-  > 10 mg IV/IO, IM (alt 8 mg)
+- `10 mg`  — *Dyspnea* › Dyspnea › 2026-030 · cause-branched (Reactive / Infectious / Overload) › [Decadron](topic:wvems-2026-drug-reference#decadron)
+  > 10 mg
+- `10 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl › [Decadron](topic:wvems-2026-drug-reference#decadron)
+  > 10 mg
 
 ### dexamethasone mg/kg — PB vs WHO
 
@@ -1080,17 +1137,23 @@ Shared: 0.4, 0.6
 
 ### dextrose g — PB vs WHO
 
-**PB only:** 25, 40-60
+**PB only:** 25, 40-60, 1500
 
 - `25 g`  — *Formulary* › Insulin (soluble / regular) › Insulin (soluble / regular)
   > Once glucose ~11–14 mmol/L, reduce to 0.02–0.05 unit/kg/hr and add dextrose; continue until the anion gap closes Hyperkalaemia — children: 0.05–0.1 unit/kg IV with glucose 0.5 g/kg Hyperkalaemia — adults: 10 units IV wit
 - `40-60 g`  — *Potassium (K⁺) Abnormalities* › K⁺ 6.0–6.5? › Yes › Shift potassium intracellularly
   > Insulin + glucose — adults: IV bolus insulin 10 IU + glucose 40–60 g; children: insulin IV 0.05 IU/kg/hr + glucose IV 0.5 g/kg/hr (for RBS < 180) | Salbutamol q1–2hr — nebulizer: < 25 kg 2.5 mg in 3 mL NS, > 25 kg 5 mg i
+- `1500 g`  — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › Well baby > 34 weeks gestation and/or > 1500 g
+  > Well baby > 34 weeks gestation and/or > 1500 g
+- `1500 g` (every 3 h) — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › Well baby > 34 weeks gestation and/or > 1500 g
+  > Feed on demand, at least every 3 hours (at least 8 feeds per day). In babies > 1500 g who are not sick and are breastfeeding, it is not necessary to perform fluid calculations.
 
-**WHO only:** 3, 20
+**WHO only:** 3, 12, 20
 
 - `3 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 15 · Diet 2 — reduced-starch (cereal), no-milk (lactose-free)
   > Glucose | 3 g
+- `12 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 15 · Diet 2 — reduced-starch (cereal), no-milk (lactose-free)
+  > Note: cooked chicken (12 g) may replace the egg. Target ≥ 70 kcal/100 g; 10% of calories as protein. |
 - `20 g`  — *IV Glucose (Hypoglycaemia)* › IMCI Chart 10 · 2 ml/kg of 10% glucose › After the bolus › If the child **cannot feed safely** (aspiration risk):
   > milk or sugar water by NG tube — 4 level teaspoons sugar (20 g) in a 200 ml cup of clean water, or
 
@@ -1165,11 +1228,18 @@ Shared: 5
 - `10 ml/kg`  — *Formulary* › Quinine › Quinine
   > DANGER: rapid administration is dangerous. Mix with 10 mL/kg of 5% dextrose & run over 2–4 hours. DO NOT exceed 5 mg/kg/hr.
 
+**WVEMS only:** 20, 60
+
+- `20 ml/kg`  — *Peds Reference* › Peds Reference › 2026-144 · age-based dosing › Resuscitation
+  > NS bolus (mL) | 20 mL/kg | 70 | 160 | 200 | 240 | 320 | 400 | 500 | 640 | 800
+- `60 ml/kg`  — *Peds Reference* › Peds Reference › 2026-144 · age-based dosing
+  > NS bolus (mL): limit x3 (60 mL/kg)
+
 ### dextrose ml/kg — WHO vs WVEMS
 
-Shared: 5
+Shared: 5, 20
 
-**WHO only:** 0.5, 2, 7, 10-20, 14, 20
+**WHO only:** 0.5, 2, 7, 10-20, 14
 
 - `0.5 ml/kg`  — *IV Glucose (Hypoglycaemia)* › IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › Buccal glucose — first aid
   > Where available, 40% dextrose gel 0.5 ml/kg (0.2 g/kg) rubbed into the buccal mucosa, or
@@ -1185,20 +1255,35 @@ Shared: 5
   > IV fluids — for shock, give 10–20 ml/kg per bolus over 30–60 min (Ringer's lactate/Hartmann's or normal saline), reassessing after each ([Chart 7](topic:who-imci-chart7-iv-fluids-shock) — no bolus in compensated shock wi
 - `14 ml/kg`  — *Specific Poisons* › Specific Poisons › 1.6.4 · corrosives, petroleum, OP, paracetamol, aspirin, iron, opiates, CO › Acetylcysteine — two-bag at every weight
   > In a small child scale the diluent to weight — 7 ml/kg (bag 1) and 14 ml/kg (bag 2) in 5% glucose — the fixed adult 500 ml / 1000 ml bags cause fluid overload and hyponatraemia.
-- `20 ml/kg`  — *Abdominal Wall Defects* › 9.2.3 · gastroschisis · omphalocoele · closure › Treatment — protect and resuscitate › IV fluids — isotonic** (normal saline or balanced crystalloid, + 5% glucose for maintenance; avoid hypotonic flui
-  > Shock: 20 ml/kg bolus of Hartmann's / Ringer's lactate or normal saline.
+
+**WVEMS only:** 60
+
+- `60 ml/kg`  — *Peds Reference* › Peds Reference › 2026-144 · age-based dosing
+  > NS bolus (mL): limit x3 (60 mL/kg)
 
 ### dextrose ml/kg/day — PB vs WHO
 
-**PB only:** 150
+**PB only:** 10, 30, 50, 100, 150, 200-220
 
+- `10 ml/kg/day`  — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › Enteral feeding
+  > Neonates unable to breastfeed should be kept NPO for day 1. On day 2, start EBM at 10 ml/kg/day, with the remaining fluid requirement met by IV fluids.
+- `30 ml/kg/day` (daily;every 24 h) — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › Enteral feeding
+  > Increase EBM by 30 ml/kg/day every 24 hours and decrease IV fluids to keep within the daily fluid requirement until IVF is stopped. Monitor carefully for feeding intolerance (vomiting, apnoea, gastric residuals).
+- `50 ml/kg/day`  — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › Total fluids calculations
+  > Perinatal asphyxia: NPO for 24 hours after birth, and IVF at 50 ml/kg/day.
+- `100 ml/kg/day`  — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › Enteral feeding
+  > When the enteral feeding volume reaches 100 ml/kg/day and the baby is tolerating feeds, the IV infusion may be stopped. Aim to stop IVF by day 7–8 of life to reduce the risk of infection.
 - `150 ml/kg/day` (every 24 h) — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › Total fluids calculations
   > If IV fluids given, use D10% for days 1 & 2; change to MRL on day 3. Maximum IVF 150 ml/kg/day. Give via a paediatric infusion set (1 ml = 60 drops) and replace the fluid bag every 24 hours.
+- `200-220 ml/kg/day`  — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › Total fluids calculations
+  > Occasionally VLBW babies need 200–220 ml/kg/day to gain weight.
 
-**WHO only:** 150-175
+**WHO only:** 150-175, 150-180
 
 - `150-175 ml/kg/day`  — *Abdominal Wall Defects* › Abdominal Wall Defects › 9.2.3 · gastroschisis · omphalocoele · closure › Treatment — protect and resuscitate
   > IV fluids — isotonic (normal saline or balanced crystalloid, + 5% glucose for maintenance; avoid hypotonic fluids). Gastroschisis fluid needs are very high — up to 150–175 ml/kg/day because exposed bowel loses large volu
+- `150-180 ml/kg/day`  — *LBW < 2.0 kg (< 35 wk)* › LBW < 2.0 kg (< 35 wk) › 3.11.2 · special care · KMC · feeding · apnoea › Feeding — infants < 1.5 kg
+  > Feeds may rise over the first 2 weeks to 150–180 ml/kg/day (3-hourly: 19–23 ml for a 1-kg infant, 28–34 ml for a 1.5-kg infant); recalculate as the infant grows.
 
 ## diazepam
 
@@ -1219,7 +1304,7 @@ Shared: 10
 
 Shared: 0.2, 0.5
 
-**PB only:** 0.1, 0.15, 0.3
+**PB only:** 0.1, 0.15, 0.3, 20-50
 
 - `0.1 mg/kg`  — *Formulary* › Diazepam › Diazepam
   > 20–25 kg: 4 suppositories IV diazepam: 0.2 mg/kg slowly over 1 minute, max 10 mg. A second dose may be given at 0.1 mg/kg. Maximum two benzodiazepine doses, then a second-line agent — a third adds respiratory depression 
@@ -1229,6 +1314,8 @@ Shared: 0.2, 0.5
   > IV diazepam 0.15 mg/kg slowly over 1 minute (max 10 mg), OR
 - `0.3 mg/kg`  — *Formulary* › Diazepam › Diazepam
   > 20–25 kg: 4 suppositories IV diazepam: 0.2 mg/kg slowly over 1 minute, max 10 mg. A second dose may be given at 0.1 mg/kg. Maximum two benzodiazepine doses, then a second-line agent — a third adds respiratory depression 
+- `20-50 mg/kg`  — *Organophosphate / Carbamate Poisoning* › Organophosphate / Carbamate Poisoning › p.29 · insecticides / nerve gas
+  > Children: 20–50 mg/kg (max 2 g) IV over 30 minutes, then 10–20 mg/kg/hr
 
 **WHO only:** 0.1-0.2, 0.2-0.3, 10
 
@@ -1251,10 +1338,10 @@ Shared: 50
 
 **WVEMS only:** 25
 
+- `25 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl › [Benadryl](topic:wvems-2026-drug-reference#benadryl)
+  > 25 mg
 - `25 mg`  — *Behavioral* › 2026-046 · Versed / Haldol › Medications › [Haldol®](topic:wvems-2026-drug-reference#haldol)** (Haloperidol): Requires transport and **ALS** monitoring.
   > {I} [Benadryl®](topic:wvems-2026-drug-reference#benadryl) (diphenhydramine): 25 mg PO, IV/IO, IM x1
-- `25 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Benadryl®
-  > 25 mg IV/IO, IM, PO (may give 50 mg PO)
 
 ## dopamine
 
@@ -1271,7 +1358,7 @@ Shared: 5-20
 
 **WVEMS only:** 5
 
-- `5 mcg/kg/min`  — *Circulation / Shock* › Circulation / Shock › 2026-008 · NS Bolus / Epi Drip / Dopamine
+- `5 mcg/kg/min`  — *Circulation / Shock* › Circulation / Shock › 2026-008 · NS Bolus / Epi Drip / Dopamine › [Dopamine](topic:wvems-2026-drug-reference#dopamine)
   > 5 mcg/kg/min
 - `5 mcg/kg/min`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Dopamine
   > 5 mcg/kg/min IV/IO
@@ -1486,10 +1573,10 @@ Shared: 40
 
 **WVEMS only:** 40
 
+- `40 mg`  — *Pulmonary Edema* › Pulmonary Edema › 2026-090 · CHF / Nitro Drip / Lasix › [Lasix](topic:wvems-2026-drug-reference#lasix)
+  > 40 mg
 - `40 mg`  — *Peds Reference* › Peds Reference › 2026-144 · age-based dosing
   > Lasix (mg): furosemide; max 40 mg
-- `40 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Lasix®
-  > 40 mg IV/IO, IM
 
 ### furosemide mg/kg — PB vs WHO
 
@@ -1554,20 +1641,25 @@ Shared: 3, 5
   > Bowel surgery: ampicillin (25–50 mg/kg IM/IV) + gentamicin (5–7.5 mg/kg IM/IV) + metronidazole (10 mg/kg).
 - `5-7.5 mg/kg` (daily;every 6 h;once daily) — *Myelomeningocoele* › Myelomeningocoele › 9.2.4 · prenatal repair · sterile dressing · folic acid › Postnatal treatment
   > If ruptured / for prophylaxis: ampicillin (50 mg/kg IM/IV every 6 h) + gentamicin (5–7.5 mg/kg once daily) — this combination is well-supported (infection 6% vs 45%); benzylpenicillin (100–150 mg/kg daily in two divided 
+- `7.5 mg/kg` (od) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Wk 2–4: 7.5 mg/kg od IM/IV | | 0.75–1.1 ml | 1.1–1.5 ml | 1.5–1.8 ml | 1.8–2.2 ml | 2.2–2.6 ml | 2.6–3.0 ml | 3.0–3.3 ml
 - `7.5 mg/kg` (once a day) — *Severe Pneumonia* › 4.2.1 · admit · oxygen · IV antibiotics › Antibiotic therapy › IV ampicillin (or benzylpenicillin) + gentamicin:
   > gentamicin 7.5 mg/kg IM/IV once a day for at least 5 days
-- `7.5 mg/kg` (every 6 h;once daily) — *Severe Pneumonia* › Severe Pneumonia › 4.2.1 · admit · oxygen · IV antibiotics › Antibiotic therapy
-  > If no improvement within 48 h or staphylococcal pneumonia is suspected → switch to gentamicin 7.5 mg/kg once daily + cloxacillin 50 mg/kg IM/IV every 6 h.
 
 ## haloperidol
 
 ### haloperidol mg — PB vs WVEMS
 
-Shared: 2.5-5
+**PB only:** 2.5-5
+
+- `2.5-5 mg`  — *Severely Agitated or Violent Patient* › Severely Agitated or Violent Patient › pp.112–113 · de-escalation · restraint · sedation › Rapid sedation (if required, and/or not responding to verbal techniques)
+  > Severely violent patient | Haloperidol 2.5–5 mg IV/IM AND/OR midazolam 2.5–5 mg IV/IM
+- `2.5-5 mg`  — *Severely Agitated or Violent Patient* › Severely Agitated or Violent Patient › pp.112–113 · de-escalation · restraint · sedation › Rapid sedation (if required, and/or not responding to verbal techniques)
+  > Drug intoxication / withdrawal, or undifferentiated | Midazolam 2.5–5 mg IV/IM, AND (if necessary) haloperidol 2.5–5 mg IV/IM
 
 **WVEMS only:** 5
 
-- `5 mg`  — *Behavioral* › Behavioral › 2026-046 · Versed / Haldol
+- `5 mg`  — *Behavioral* › Behavioral › 2026-046 · Versed / Haldol › [Haldol](topic:wvems-2026-drug-reference#haldol)
   > 5 mg
 - `5 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Haldol®
   > 5 mg IM
@@ -1623,10 +1715,12 @@ Shared: 2-4
 
 ### hypertonic saline ml/kg — PB vs WVEMS
 
-**PB only:** 4
+**PB only:** 4, 20
 
 - `4 ml/kg`  — *Sodium (Na⁺) Abnormalities* › Neurologic symptoms? (somnolence, convulsions, GCS < 9) › Yes › 3% saline, run over 20 minutes
   > Children: 4 mL/kg (max 100 mL) | Adults: 100 mL | Repeat until symptoms improve
+- `20 ml/kg`  — *Sodium (Na⁺) Abnormalities* › Hypotensive / shock? › Yes — not volume overloaded › NS 20 mL/kg bolus
+  > NS 20 mL/kg bolus
 
 **WVEMS only:** 2-5
 
@@ -1646,14 +1740,12 @@ Shared: 2-4
 - `400-800 mg` (q6hrs) — *Formulary* › Ibuprofen › Ibuprofen
   > Dose 2 & 3: 5 mg/kg PO at 24 & 48 hours Children: 10 mg/kg PO q6hrs Adults: 400–800 mg PO q6–8hrs
 
-**WVEMS only:** 600, 1000, 2400
+**WVEMS only:** 600, 2400
 
-- `600 mg`  — *Fever* › Fever › 2026-016 · Tylenol / Ibuprofen
+- `600 mg`  — *Fever* › Fever › 2026-016 · Tylenol / Ibuprofen › [Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen)
   > 600 mg
-- `600 mg`  — *Cold / Heat* › Cold / Heat › 2026-068 · Hypothermia / Hyperthermia / Frostbite › Notes
-  > {E} [Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen) (Motrin®): Give 600 mg PO x1 for frostbite.
-- `1000 mg`  — *Fever* › Fever › 2026-016 · Tylenol / Ibuprofen
-  > 1,000 mg
+- `600 mg`  — *Pain* › Pain › 2026-020 · analgesia ladder › [Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen)
+  > 600 mg
 - `2400 mg` (daily) — *Fever* › Fever › 2026-016 · Tylenol / Ibuprofen › Medications
   > Max daily dose of [Tylenol](topic:wvems-2026-drug-reference#tylenol) is 3,000 mg & Ibuprofen is 2,400 mg.
 - `2400 mg` (daily) — *Pain* › Pain › 2026-020 · analgesia ladder › Notes
@@ -1743,6 +1835,11 @@ Shared: 3
 - `2-3 mg/kg`  — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › VLBW infants (< 1500 g) — vitamin supplementation (when tolerating full feeds)
   > Iron 2–3 mg/kg per day for routine preterm supplementation, starting at 2 weeks, until 6 months of age. Reserve 4 mg/kg/day for documented iron deficiency
 
+**WHO only:** 20
+
+- `20 mg/kg`  — *LBW < 2.0 kg (< 35 wk)* › LBW < 2.0 kg (< 35 wk) › 3.11.2 · special care · KMC · feeding · apnoea › Preventing apnoea
+  > Caffeine citrate: loading 20 mg/kg orally or IV (given slowly over 30 min); maintenance 5 mg/kg/day from 24 h later, increased if apnoea persists to a maximum of 10 mg/kg/day (caffeine citrate; = 5 mg/kg/day caffeine bas
+
 ### iron mg/kg/day — PB vs WHO
 
 **PB only:** 4
@@ -1750,12 +1847,18 @@ Shared: 3
 - `4 mg/kg/day`  — *Newborn Feeding & Fluid Requirements* › Newborn Feeding & Fluid Requirements › pp.82–83 · fluids · enteral feeds · OGT/NGT › VLBW infants (< 1500 g) — vitamin supplementation (when tolerating full feeds)
   > Iron 2–3 mg/kg per day for routine preterm supplementation, starting at 2 weeks, until 6 months of age. Reserve 4 mg/kg/day for documented iron deficiency
 
-**WHO only:** 2-3, 2-4
+**WHO only:** 2-3, 2-4, 5, 10
 
 - `2-3 mg/kg/day` (daily) — *Management of Anaemia* › Management of Anaemia › 10.5 · non-severe iron · severe → fever-guided transfusion › Non-severe anaemia
   > Give home iron treatment — a daily iron–folate tablet or iron syrup, providing 2–3 mg/kg/day of elemental iron.
 - `2-4 mg/kg/day`  — *LBW < 2.0 kg (< 35 wk)* › LBW < 2.0 kg (< 35 wk) › 3.11.2 · special care · KMC · feeding · apnoea › Supplements & iron
   > For VLBW infants (< 1.5 kg) fed breast milk, add human milk fortifier where available to meet protein and mineral needs. Start iron 2–4 mg/kg/day at 2 weeks of age (the upper end for the smallest infants), continued unti
+- `5 mg/kg/day`  — *LBW < 2.0 kg (< 35 wk)* › LBW < 2.0 kg (< 35 wk) › 3.11.2 · special care · KMC · feeding · apnoea › Preventing apnoea
+  > Caffeine citrate: loading 20 mg/kg orally or IV (given slowly over 30 min); maintenance 5 mg/kg/day from 24 h later, increased if apnoea persists to a maximum of 10 mg/kg/day (caffeine citrate; = 5 mg/kg/day caffeine bas
+- `5 mg/kg/day`  — *LBW < 2.0 kg (< 35 wk)* › LBW < 2.0 kg (< 35 wk) › 3.11.2 · special care · KMC · feeding · apnoea › Preventing apnoea
+  > Caffeine citrate: loading 20 mg/kg orally or IV (given slowly over 30 min); maintenance 5 mg/kg/day from 24 h later, increased if apnoea persists to a maximum of 10 mg/kg/day (caffeine citrate; = 5 mg/kg/day caffeine bas
+- `10 mg/kg/day`  — *LBW < 2.0 kg (< 35 wk)* › LBW < 2.0 kg (< 35 wk) › 3.11.2 · special care · KMC · feeding · apnoea › Preventing apnoea
+  > Caffeine citrate: loading 20 mg/kg orally or IV (given slowly over 30 min); maintenance 5 mg/kg/day from 24 h later, increased if apnoea persists to a maximum of 10 mg/kg/day (caffeine citrate; = 5 mg/kg/day caffeine bas
 
 ## isoniazid
 
@@ -1829,21 +1932,21 @@ Shared: 10, 15, 35
 
 **WVEMS only:** 20
 
-- `20 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Ketamine
-  > 20 mg IV/IO, IM/IN (pain)
+- `20 mg`  — *Pain* › Pain › 2026-020 · analgesia ladder › [Ketamine](topic:wvems-2026-drug-reference#ketamine)
+  > 20 mg
+- `20 mg`  — *Medical ROSC* › Medical ROSC › 2026-026 · Return of Pulse / Post-Resuscitation › [Ketamine](topic:wvems-2026-drug-reference#ketamine)
+  > 20 mg
 
 ### ketamine mg/kg — WHO vs WVEMS
 
-**WHO only:** 0.5-1, 0.5-2, 1-2, 2-4, 4-5, 5-8, 6-8
+Shared: 0.5-2
+
+**WHO only:** 0.5-1, 1-2, 2-4, 4-5, 5-8, 6-8
 
 - `0.5-1 mg/kg`  — *Intraoperative Care* › Intraoperative Care › 9.1.2 · anaesthesia · ketamine · cuffed airway › Ketamine (short painful procedures)
   > Top-up: 1–2 mg/kg IM or 0.5–1 mg/kg IV if the child responds to a painful stimulus.
 - `0.5-1 mg/kg`  — *Formulary* › Ketamine › Ketamine › IV further
   > IV: 0.5–1 mg/kg further dose if required
-- `0.5-2 mg/kg`  — *Intraoperative Care* › Intraoperative Care › 9.1.2 · anaesthesia · ketamine · cuffed airway › Ketamine (short painful procedures)
-  > Longer procedures (IV infusion): neonate — 0.5–2 mg/kg loading then continuous 500 µg/kg/h (up to 2 mg/kg/h); infant/child — 0.5–2 mg/kg loading then 0.5–2.5 mg/kg/h. At the end, turn the child into the lateral position 
-- `0.5-2 mg/kg`  — *Intraoperative Care* › Intraoperative Care › 9.1.2 · anaesthesia · ketamine · cuffed airway › Ketamine (short painful procedures)
-  > Longer procedures (IV infusion): neonate — 0.5–2 mg/kg loading then continuous 500 µg/kg/h (up to 2 mg/kg/h); infant/child — 0.5–2 mg/kg loading then 0.5–2.5 mg/kg/h. At the end, turn the child into the lateral position 
 - `1-2 mg/kg`  — *Intraoperative Care* › Intraoperative Care › 9.1.2 · anaesthesia · ketamine · cuffed airway › Ketamine (short painful procedures)
   > Induction: 5–8 mg/kg IM or 1–2 mg/kg IV over 60 s — ready in 2–3 min IV or 3–5 min IM.
 - `1-2 mg/kg`  — *Intraoperative Care* › Intraoperative Care › 9.1.2 · anaesthesia · ketamine · cuffed airway › Ketamine (short painful procedures)
@@ -1859,12 +1962,14 @@ Shared: 10, 15, 35
 - `6-8 mg/kg`  — *Practical Procedures* › Practical Procedures › Annex 1 · consent, analgesia, restraining › Analgesia & sedation for procedures
   > Ketamine: 4–5 mg/kg IM (IM bioavailability is ~40%, so higher doses up to ~6–8 mg/kg may be needed) — acts in 5–10 min and lasts about 20 min; or 0.5–2 mg/kg IV (faster onset).
 
-**WVEMS only:** 0.25-0.5
+**WVEMS only:** 0.25-0.5, 2
 
 - `0.25-0.5 mg/kg`  — *Peds Reference* › Peds Reference › 2026-144 · age-based dosing › Seizure / Sedation
   > Ketamine (mg) | 0.25–0.5 mg/kg | 1–2 | 2–4 | 2.5–5 | 3–6 | 4–8 | 5–10 | 6–12.5 | 8–16 | 10–20
 - `0.25-0.5 mg/kg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Ketamine
   > 0.25–0.5 mg/kg
+- `2 mg/kg`  — *Intubation / RSI* › Intubation / RSI › 2026-078 · Induce / Paralyze / Cric › [Ketamine](topic:wvems-2026-drug-reference#ketamine)
+  > 2 mg/kg
 
 ## levetiracetam
 
@@ -2022,8 +2127,40 @@ Shared: 2
 
 **WVEMS only:** 5
 
+- `5 mg`  — *Malignant HTN* › Malignant HTN › 2026-092 · HTN Crisis / Preeclampsia › [Lopressor](topic:wvems-2026-drug-reference#lopressor)
+  > 5 mg
 - `5 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Lopressor®
   > 5 mg IV/IO
+
+## metronidazole
+
+### metronidazole g — PB vs WHO
+
+**PB only:** 2
+
+- `2 g`  — *Sexually Transmitted Infections (STIs)* › pp.132–134 · syndromic management › Treatment regimens — by organism › Bacterial vaginosis: metronidazole 500 mg PO BD × 7 days** (alternatives: intravaginal metronidazole 0.75% gel daily × 5 days, or
+  > ⚠️ Single-dose 2 g is NOT a recommended BV regimen — it has a higher failure and recurrence rate. The book previously printed the trichomoniasis regimen here
+- `2 g`  — *Sexually Transmitted Infections (STIs)* › pp.132–134 · syndromic management › Treatment regimens — by organism › Trichomoniasis — women: metronidazole 500 mg PO BD × 7 days** (the 7-day course is now preferred over single-dose in women)
+  > Men: metronidazole 2 g PO × 1 dose
+
+**WHO only:** 3, 3.5, 3.7, 4, 11, 15, 64
+
+- `3 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 14 · Diet 1 — starch-based, reduced-milk (low-lactose)
+  > Cane sugar | 3.0 g
+- `3 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 15 · Diet 2 — reduced-starch (cereal), no-milk (lactose-free)
+  > Rice | 3 g
+- `3.5 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 14 · Diet 1 — starch-based, reduced-milk (low-lactose)
+  > Vegetable oil | 3.5 g
+- `3.7 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 14 · Diet 1 — starch-based, reduced-milk (low-lactose)
+  > Target: ≥ 70 kcal/100 g; ≤ 3.7 g lactose/kg/day; 11% of calories as protein. |
+- `4 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 15 · Diet 2 — reduced-starch (cereal), no-milk (lactose-free)
+  > Vegetable oil | 4 g
+- `11 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 14 · Diet 1 — starch-based, reduced-milk (low-lactose)
+  > Full-fat dried milk (or whole liquid milk: 85 ml) | 11 g
+- `15 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 14 · Diet 1 — starch-based, reduced-milk (low-lactose)
+  > Rice | 15 g
+- `64 g`  — *Severe Persistent Diarrhoea* › Severe Persistent Diarrhoea › 5.3.1 · hospital · special diets · micronutrients › Table 15 · Diet 2 — reduced-starch (cereal), no-milk (lactose-free)
+  > Whole egg | 64 g
 
 ## midazolam
 
@@ -2055,8 +2192,10 @@ Shared: 10
 
 - `2.5 mg`  — *Cold / Heat* › 2026-068 · Hypothermia / Hyperthermia / Frostbite › Cold / Heat Imperatives › Confusion** is the hallmark of major **hyperthermic** emergencies.
   > {A} If shivering from active cooling: [Versed®](topic:wvems-2026-drug-reference#versed) 2.5 mg IV/IO x1.
-- `2.5-5 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Versed®
-  > 10 mg IM or 0.2 mg/kg IV (seizure); 2.5–5 mg sedation
+- `2.5-5 mg`  — *Seizure* › Seizure › 2026-042 · Versed / Keppra / Mag › [Versed](topic:wvems-2026-drug-reference#versed)
+  > 2.5–5 mg
+- `2.5-5 mg`  — *Behavioral* › Behavioral › 2026-046 · Versed / Haldol › [Versed](topic:wvems-2026-drug-reference#versed)
+  > 2.5–5 mg
 
 ### midazolam mg/kg — WHO vs WVEMS
 
@@ -2136,6 +2275,15 @@ Shared: 0.1-0.2
 - `0.2-0.4 mg/kg` (every 4–6 h) — *Formulary* › Morphine › Morphine › Oral
   > Oral: 0.2–0.4 mg/kg every 4–6 h; increase if necessary for severe pain
 
+### morphine ml/kg — PB vs WHO
+
+Shared: 10-20
+
+**WHO only:** 40
+
+- `40 ml/kg`  — *Postoperative Care* › Postoperative Care › 9.1.3 · monitoring · isotonic fluids · multimodal pain › Common postoperative problems
+  > Low urine output — hypovolaemia, retention or renal failure (usually inadequate resuscitation). Give normal saline 10–20 ml/kg and repeat once (max 40 ml/kg; watch for overload); catheterize if retention.
+
 ## naloxone
 
 ### naloxone mg — PB vs WVEMS
@@ -2160,12 +2308,10 @@ Shared: 2, 4
 
 Shared: 0.4
 
-**WVEMS only:** 0.8, 40, 50
+**WVEMS only:** 0.8, 50
 
 - `0.8 mg`  — *Dyspnea* › 2026-030 · cause-branched (Reactive / Infectious / Overload) › Medications › [Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (Nitroglycerin): May cause [Hypotension](topic:wvems-2026-008).
   > May use double dose (0.8 mg) if hypertensive & requiring [NIPPV](topic:wvems-2026-096#nippv).
-- `40 mg`  — *Pulmonary Edema* › Pulmonary Edema › 2026-090 · CHF / Nitro Drip / Lasix
-  > 40 mg
 - `50 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Nitro, Nitro Drip
   > Dilute 50 mg in 250 mL, use a pump
 
@@ -2253,8 +2399,10 @@ Shared: 4
 
 **WVEMS only:** 1000, 3000
 
-- `1000 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Tylenol®
-  > 1,000 mg PO, IV/IO
+- `1000 mg`  — *Fever* › Fever › 2026-016 · Tylenol / Ibuprofen › [Tylenol](topic:wvems-2026-drug-reference#tylenol)
+  > 1,000 mg
+- `1000 mg`  — *Pain* › Pain › 2026-020 · analgesia ladder › [Tylenol](topic:wvems-2026-drug-reference#tylenol)
+  > 1,000 mg
 - `3000 mg` (daily) — *Fever* › Fever › 2026-016 · Tylenol / Ibuprofen › Medications
   > Max daily dose of [Tylenol](topic:wvems-2026-drug-reference#tylenol) is 3,000 mg & Ibuprofen is 2,400 mg.
 - `3000 mg` (daily) — *Pain* › Pain › 2026-020 · analgesia ladder › Notes
@@ -2359,8 +2507,10 @@ Shared: 5, 10, 15, 20, 40
 - `2-3 mg/kg/day` (once daily) — *Adult Convulsions* › Still convulsing or recurrent after 2 doses of diazepam? › Yes › Phenobarbital / phenobarbitone
   > Loading dose 20 mg/kg IM/IV (if given IV, over 20 minutes). If still fitting after 15 min, a further 10 mg/kg to a cumulative maximum of 40 mg/kg - only where respiratory monitoring is available | Maintenance (adults) 2-
 
-**WHO only:** 10
+**WHO only:** 5, 10
 
+- `5 mg/kg/day`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > | Maint 5 mg/kg/day oral (30-mg tablets) | | ¼ | ¼ | ½ | ½ | ½ | ¾ | ¾
 - `10 mg/kg/day`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Notes
   > Aminophylline, caffeine citrate, phenobarbital (injection): calculate the exact dose from the infant's weight rather than reading a range. For caffeine citrate, do not exceed a maintenance of 10 mg/kg/day.
 
@@ -2375,6 +2525,8 @@ Shared: 5, 10, 15, 20, 40
 
 **WVEMS only:** 50-200
 
+- `50-200 mcg`  — *Vasopressors* › Vasopressors › 2026-082 · Levophed / Epi Push / Neo Push › [Neo Push](topic:wvems-2026-drug-reference#neo-push)
+  > 50–200 mcg
 - `50-200 mcg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Neo Push
   > 50–200 mcg IV/IO
 
@@ -2509,20 +2661,12 @@ Shared: 2.5
 - `10-20 mg`  — *Potassium (K⁺) Abnormalities* › K⁺ 6.0–6.5? › Yes › Shift potassium intracellularly
   > Insulin + glucose — adults: IV bolus insulin 10 IU + glucose 40–60 g; children: insulin IV 0.05 IU/kg/hr + glucose IV 0.5 g/kg/hr (for RBS < 180) | Salbutamol q1–2hr — nebulizer: < 25 kg 2.5 mg in 3 mL NS, > 25 kg 5 mg i
 
-**WVEMS only:** 0.3, 0.5, 1.25, 10, 25
+**WVEMS only:** 1.25, 10
 
-- `0.3 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
-  > 0.3 mg
-- `0.5 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
-  > 0.5 mg
 - `1.25 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Albuterol
   > 2.5 mg neb (1.25 mg if <15 kg)
-- `10 mg`  — *Hyperkalemia* › Hyperkalemia › 2026-018 · Albuterol / Calcium / Bicarb
+- `10 mg`  — *Hyperkalemia* › Hyperkalemia › 2026-018 · Albuterol / Calcium / Bicarb › [Albuterol](topic:wvems-2026-drug-reference#albuterol)
   > 10 mg
-- `10 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
-  > 10 mg
-- `25 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
-  > 25 mg
 
 ### salbutamol mg — WHO vs WVEMS
 
@@ -2535,20 +2679,12 @@ Shared: 2.5
 - `2 mg`  — *Asthma* › Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Oral salbutamol & antibiotics
   > Oral salbutamol (syrup/tablets) is not recommended for severe or persistent wheeze — use only inhaled salbutamol; oral is for a child well enough to go home. Dose: 1 mo–2 y: 100 µg/kg (max 2 mg) up to 4×/day; 2–6 y: 1–2 
 
-**WVEMS only:** 0.3, 0.5, 1.25, 10, 25
+**WVEMS only:** 1.25, 10
 
-- `0.3 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
-  > 0.3 mg
-- `0.5 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
-  > 0.5 mg
 - `1.25 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › Albuterol
   > 2.5 mg neb (1.25 mg if <15 kg)
-- `10 mg`  — *Hyperkalemia* › Hyperkalemia › 2026-018 · Albuterol / Calcium / Bicarb
+- `10 mg`  — *Hyperkalemia* › Hyperkalemia › 2026-018 · Albuterol / Calcium / Bicarb › [Albuterol](topic:wvems-2026-drug-reference#albuterol)
   > 10 mg
-- `10 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
-  > 10 mg
-- `25 mg`  — *Allergic Reaction* › Allergic Reaction › 2026-032 · Epi / Albuterol / Benadryl
-  > 25 mg
 
 ### salbutamol mg/dose — PB vs WHO
 
@@ -2565,12 +2701,14 @@ Shared: 2.5
 
 Shared: 1
 
-**WVEMS only:** 2
+**WVEMS only:** 2, 10-12
 
 - `2 g`  — *Pregnancy / Delivery* › 2026-048 · OB / Eclampsia / Postpartum › Notes › Postpartum bleeding** can be severe; **fundal massage** can help.
   > {A} If poor perfusion: [TXA](topic:wvems-2026-drug-reference#txa) (Tranex. Acid): 2 g IV/IO over 10 min.
 - `2 g`  — *Procedures* › Procedures › 2026-096 · how-to skills › Deliver Baby
   > Expose patient. Have a chaperone. | - Visually inspect vaginal area. | Identify presenting part. Prioritize transport if not crowning. | - If any problems, manage complications and transport ASAP. | Support & deliver hea
+- `10-12 g`  — *Procedures* › Procedures › 2026-096 · how-to skills › Cric
+  > Confirm all alternatives have failed. | Prepare supplies and suction. | Locate cricothyroid membrane. Clean skin if time allows. | - Visualize spot under thyroid cartilage and above tracheal rings. | Use Bougie for adult
 
 ### tranexamic acid mg — PB vs WVEMS
 
@@ -2581,6 +2719,8 @@ Shared: 1
 
 **WVEMS only:** 150
 
+- `150 mg`  — *Epistaxis* › Epistaxis › 2026-076 · Nose Bleed / Afrin / TXA › [TXA](topic:wvems-2026-drug-reference#txa)
+  > 150 mg
 - `150 mg`  — *Drug Reference* › Drug Reference › pp.119–143 · protocol medications › TXA
   > 1 g IV/IO over 10 min (then 1 g/8 hr); 150 mg IN (epistaxis)
 
@@ -2620,4 +2760,4 @@ Shared: 10, 20
 
 ---
 
-**150 candidate drug+unit pairs across 60 drugs.**
+**155 candidate drug+unit pairs across 62 drugs.**
