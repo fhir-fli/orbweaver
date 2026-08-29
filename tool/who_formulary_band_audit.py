@@ -1,3 +1,8 @@
+# 2026-08-28: units matched case-insensitively. They are all lowercase in the
+# source TODAY (checked: 0 of 312 form/regimen strings carry MG/ML/MCG), so
+# this changes nothing now — but a case-sensitive unit match over clinical
+# prose is one edit away from silently returning None. The same defect in an
+# oxygen-threshold sweep left nine of twenty-five files unchanged.
 #!/usr/bin/env python3
 """Audit WHO formulary weight-band VALUES against each dose's mg/kg regimen.
 Flags: gross mismatch (implied mg/kg at band midpoint far from target) or
@@ -22,22 +27,22 @@ def qty(s):
     except: return None, None
 def strength(form):
     # returns (mg_per_unit, kind)  kind in tablet|liquid
-    m = re.search(r"(\d+(?:\.\d+)?)\s*mg\s*/\s*(\d+(?:\.\d+)?)\s*ml", form)
+    m = re.search(r"(\d+(?:\.\d+)?)\s*mg\s*/\s*(\d+(?:\.\d+)?)\s*ml", form, re.I)
     if m: return float(m.group(1))/float(m.group(2)), "liquid"
-    m = re.search(r"(\d+(?:\.\d+)?)\s*mg", form)
+    m = re.search(r"(\d+(?:\.\d+)?)\s*mg", form, re.I)
     if m: return float(m.group(1)), "tablet"
-    m = re.search(r"(\d+(?:\.\d+)?)\s*(?:µg|mcg)", form)
+    m = re.search(r"(\d+(?:\.\d+)?)\s*(?:µg|mcg)", form, re.I)
     if m: return float(m.group(1))/1000.0, "tablet"   # convert µg->mg
     return None, None
 def regR(reg):
     # mg/kg low,high (convert µg/kg->mg/kg)
-    m = re.search(r"(\d+(?:\.\d+)?)\s*(?:–|-|to)\s*(\d+(?:\.\d+)?)\s*(mg|µg|mcg)\s*/\s*kg", reg)
+    m = re.search(r"(\d+(?:\.\d+)?)\s*(?:–|-|to)\s*(\d+(?:\.\d+)?)\s*(mg|µg|mcg)\s*/\s*kg", reg, re.I)
     if m:
-        f = 0.001 if m.group(3)!="mg" else 1
+        f = 0.001 if m.group(3).lower() != "mg" else 1
         return float(m.group(1))*f, float(m.group(2))*f
-    m = re.search(r"(\d+(?:\.\d+)?)\s*(mg|µg|mcg)\s*/\s*kg", reg)
+    m = re.search(r"(\d+(?:\.\d+)?)\s*(mg|µg|mcg)\s*/\s*kg", reg, re.I)
     if m:
-        f = 0.001 if m.group(2)!="mg" else 1
+        f = 0.001 if m.group(2).lower() != "mg" else 1
         return float(m.group(1))*f, float(m.group(1))*f
     return None, None
 
