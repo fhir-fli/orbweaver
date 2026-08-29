@@ -53,6 +53,12 @@
 # Cross-book durations pass 2026-08-28: the PCP co-trimoxazole dose in this
 #   formulary entry was still the withdrawn 8 mg/kg/dose TID (= 24 mg/kg/day)
 #   after OE flag 4-1 capped it at 15-20 mg/kg/day.
+# 2026-08-29: three doses the PROTOCOLS prescribe were missing from their own
+#   formulary entries - the upper-GI-bleed PPI regimen, the adult bacterial-
+#   meningitis dexamethasone dose, and the variceal-prophylaxis propranolol
+#   starting dose. Copied from the pages that already carry them, with their
+#   qualifiers, so no new clinical claim is introduced. Found by diffing every
+#   formulary entry against every page dose.
 # ============================================================
 
 formulary:
@@ -505,6 +511,7 @@ formulary:
 
         **Adults:**
         - Cerebral edema: 2 mg PO TID
+        - **Bacterial meningitis: 10 mg IV q6h × 4 days** — with or just before the first antibiotic dose. **Not routine here:** no benefit in low-income, high-HIV-prevalence settings; consider only if HIV-negative and presenting early
 
     # ═══════════════════════ PAGE 150 ═══════════════════════
     - id: "dextrose-glucose"
@@ -1086,6 +1093,7 @@ formulary:
       dose: |
         - Children: 0.5–1 mg/kg/dose PO OD or BD
         - Adults: 20–40 mg PO OD
+        - **Upper GI bleed: 80 mg IV bolus, then 40 mg IV every 8–12 h** (or 8 mg/hr by infusion if a pump is available), **for at least 72 hours**. Any stocked PPI — rabeprazole, omeprazole, pantoprazole
       notes: |
         May reduce the serum concentration of clopidogrel.
 
@@ -1202,6 +1210,7 @@ formulary:
       dose: |
         - Children: 0.5–1 mg/kg/day PO ÷ q6–12hrs
         - Adults — initial: 40 mg PO BID
+        - **Variceal bleeding prophylaxis: 20 mg PO BD**, and only if carvedilol is unavailable — carvedilol 6.25 mg daily titrating to 12.5 mg lowers portal pressure better. Titrate to resting HR 55–60, or a 25% fall from baseline. **Hold if SBP < 90** or in refractory ascites
       notes: |
         - Max: 8 mg/kg/day
         - Max: 320 mg PO ÷ q6–12hrs

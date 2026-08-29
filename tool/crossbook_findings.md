@@ -456,3 +456,38 @@ This answer is about TRACT and paediatric transfusion. Its two references were t
 **Lancet bacterial-meningitis reviews** attached to the previous transfusion answer.
 Twice now. The substance was checkable against the trial's own arm definitions and is
 recorded on that basis; **nothing was accepted on the strength of the citations.**
+
+
+---
+
+## ✅ 2026-08-29 — every ProtocolBook formulary entry diffed against every page dose
+
+The formulary is the lookup a clinician opens at the bedside. If a protocol prescribes a
+dose the formulary does not carry, the lookup fails at the moment it is needed.
+
+Every PB dose row was grouped by drug and unit and split into formulary-side and
+page-side. **34 drug+unit pairs carry a page value the formulary lacks.** Read one by one:
+
+**Three are real gaps, and all three are common emergencies. Added, copied from the pages
+that already carry them with their qualifiers, so no new clinical claim is introduced:**
+
+- **Omeprazole** — the formulary had only `20–40 mg PO OD`. The upper-GI-bleed page
+  prescribes **80 mg IV bolus, then 40 mg IV q8–12h (or 8 mg/hr), at least 72 hours**.
+- **Dexamethasone** — the formulary had extubation, croup and `cerebral oedema 2 mg TID`.
+  The adult meningitis page prescribes **10 mg IV q6h × 4 days**, carried across with its
+  "not routine here" qualifier intact.
+- **Propranolol** — the formulary had `adults initial 40 mg BD`. The liver-failure page
+  prescribes **20 mg PO BD** for variceal prophylaxis, second to carvedilol, with the
+  HR target and the SBP < 90 stop.
+
+**The rest are not gaps** and are named so they are not re-raised: the formulary states a
+range the page picks a point inside (`carvedilol 3.125 → max 25` covers the page's 6.25
+and 12.5; `nifedipine up to 120 mg/day` covers `30–120`; `furosemide 40 mg or double the
+maintenance` covers `40–80`), or the same regimen expressed differently (`itraconazole
+200 mg TID` **is** the page's `600 mg/day`; `nitrofurantoin 1.5 mg/kg/dose q6h` **is** the
+page's `6 mg/kg/day`), or the page names a drug the formulary lists under a different
+entry (`ceftriaxone 8 mg/kg/day` is the cefixime line beside it).
+
+⭐ **This diff is what found the three glucose pages my own sweep had missed.** It earns
+its place for the same reason the chart-versus-prose audit does: formulary-side against
+page-side is a real boundary, so its hits mean something.
