@@ -25,6 +25,11 @@
 #     print survives via the ALL-CAPS wording (AlgoBox = plain text).
 #   - p.52 Rx-at-Home + p.53 Admit/Discharge/education boxes carry
 #     the book's numbered lists as flat bullets.
+# Cross-book pass 2026-08-28: nebulised salbutamol no longer steps up to
+#   5 mg at 2 years - that is too early. 2.5 mg for most children; 5 mg
+#   for >=5 y / >20-25 kg or a severe attack.
+#   NOTE: OE flagged this one as a practice recommendation, NOT a cited
+#   guideline value. If a guideline figure turns up, revisit.
 # ============================================================
 
 topic:
@@ -136,7 +141,7 @@ topic:
           title: "Management"
           markdown: |
             - Salbutamol every 15 minutes x 3 doses, via Nebulizer OR MDI+spacer+mask
-              - Nebulizer: <2 years 2.5mg in 3mL NS; >2 years 5mg in 5mL NS
+              - Nebulizer: 2.5mg in 3mL NS for most children. Step up to 5mg in 5mL NS for an older or larger child (roughly ≥5 years or >20–25kg) or a severe attack — weight and severity, not a 2-year cutoff
               - MDI+spacer+mask: 5–10 kg 4 puffs; 10–20 kg 6 puffs; >20 kg 8 puffs
               - **Oral salbutamol is ineffective**
             - Dexamethasone 0.6mg/kg PO or IV (if not drinking), **max 12mg**, x 1 dose, OR Prednisolone 1–2mg/kg PO x 1 dose

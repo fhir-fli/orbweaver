@@ -38,6 +38,18 @@
 #   deviations from the source are the intentional corrections listed above.
 # OpenEvidence-applied 2026-08-28 (WHO full advance pass):
 #   Dextrose/Glucose: paediatric D10% 5 -> 2 mL/kg (0.2 g/kg) (flag 1-2).
+# Cross-book pass 2026-08-28: IV diazepam 0.3 -> 0.2 mg/kg, to match the
+#   resuscitation page (p.20) and the FDA label. The formulary and p.20
+#   had disagreed. Added the never-confuse-IV-with-rectal rule and the
+#   age-banded rectal doses.
+# Cross-book pass 2026-08-28: vitamin K preterm threshold 1 kg -> 1500 g
+#   (AAP). Above it, 1 mg IM flat, not 0.5 mg; at or below it, 0.3-0.5
+#   mg/kg. The two books had split at different weights.
+# Cross-book pass 2026-08-28: calcium gluconate doses now LABELLED BY
+#   INDICATION. The two books differed 2-3x only because one was dosing
+#   neonatal hypocalcaemia (2 mL/kg) and the other child tetany (0.6-1)
+#   and hyperkalaemic membrane stabilisation (0.5). All three are correct
+#   in context; the defect was that none of them said which.
 # ============================================================
 
 formulary:
@@ -252,7 +264,10 @@ formulary:
       dose: |
         **Children:**
         - Replacement: 10 mg/kg/day
-        - Tetany / convulsions: 0.6–1 mL/kg of 10% solution via slow push
+        - Symptomatic hypocalcaemia / tetany / hypocalcaemic convulsions: **0.5–1 mL/kg** of 10% solution (≈50–100 mg/kg) slow IV over 5–10 min, with cardiac monitoring
+        - **Neonate: 1–2 mL/kg** of 10% solution (100–200 mg/kg) slow IV — the neonatal repletion dose is higher
+        - **Hyperkalaemia is a different indication: 0.5 mL/kg** (adults 10 mL) over 2–3 min. It stabilises the myocardium and does **not** lower the potassium
+        - Do not exceed **100 mg/min** in a child (200 mg/min adult); watch the ECG for bradycardia and arrhythmia
 
         **Adults:**
         - Tetany / convulsions: 2 g IV calcium gluconate
@@ -512,7 +527,9 @@ formulary:
         - 15–20 kg: 3 suppositories
         - 20–25 kg: 4 suppositories
 
-        **IV diazepam:** 0.3 mg/kg slowly over 1 minute
+        **IV diazepam:** 0.2 mg/kg slowly over 1 minute, max 10 mg. A second dose may be given at 0.1 mg/kg. **Maximum two benzodiazepine doses**, then a second-line agent — a third adds respiratory depression without added seizure control.
+
+        🛑 **The IV dose is NOT the rectal dose.** Rectal diazepam is higher (0.5 mg/kg at 2–5 y, 0.3 mg/kg at 6–11 y, 0.2 mg/kg at ≥12 y, max 20 mg) because rectal absorption is incomplete.
       notes: |
         Do not give to a neonate. Do not give IM.
 
@@ -1470,8 +1487,8 @@ formulary:
       page: 157
       dose: |
         **Neonate:**
-        - Preterm < 1 kg: 0.3 mg/kg IM stat
-        - Preterm > 1 kg: 0.5 mg IM stat
+        - Preterm ≤ 1500 g: 0.3–0.5 mg/kg IM stat — a single IV dose is not recommended in a preterm infant
+        - Preterm > 1500 g: 1 mg IM stat, the same as a term infant
         - Term: 1 mg IM stat
 
         **Supratherapeutic INR:**

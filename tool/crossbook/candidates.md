@@ -248,6 +248,24 @@ Shared: 50
 - `25-50 mg/kg`  — *Preoperative Care* › Preoperative Care › 9.1.1 · consent · fitness · fasting · antibiotics › Surgical antibiotic prophylaxis
   > Bowel surgery: ampicillin (25–50 mg/kg IM/IV) + gentamicin (5–7.5 mg/kg IM/IV) + metronidazole (10 mg/kg).
 
+### ampicillin mg/kg/day
+
+**ProtocolBook only:** 300
+
+- `300 mg/kg/day`  — *Pediatric Meningitis* › Pediatric Meningitis › pp.54–55 · recognition + Rx cascade › Treatment
+  > Ampicillin 75 mg/kg IV 6-hourly (= 300 mg/kg/day) — for Listeria
+
+**WHO only:** 100-150, 150, 200
+
+- `100-150 mg/kg/day` (q12h;q8h) — *Neonatal Meningitis* › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment › 🛑 **Meningitis needs a HIGHER ampicillin dose than sepsis. Do not use the §3.14 sepsis row.
+  > The §3.14 figure (50 mg/kg q12h then q8h, 100–150 mg/kg/day) is the septicaemia dose and does not reliably treat the CSF.
+- `150 mg/kg/day` (every 8 h) — *Neonatal Meningitis* › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment › 🛑 **Meningitis needs a HIGHER ampicillin dose than sepsis. Do not use the §3.14 sepsis row.
+  > ≤ 7 days: 50 mg/kg every 8 h (150 mg/kg/day)
+- `200 mg/kg/day` (every 6 h) — *Neonatal Meningitis* › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment › 🛑 **Meningitis needs a HIGHER ampicillin dose than sepsis. Do not use the §3.14 sepsis row.
+  > 8–28 days: 50 mg/kg every 6 h (200 mg/kg/day)
+- `200 mg/kg/day` (q6h;q8h) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
+  > Ampicillin (MENINGITIS) | 50 mg/kg IM/IV — wk 1 q8h; wk 2–4 q6h (150→200 mg/kg/day) | | same volumes as above | | | | | |
+
 ## artemether
 
 ### artemether mg/kg
@@ -348,22 +366,6 @@ Shared: 250, 500
 - `1200 mg` (bd;daily) — *Opportunistic Infections in HIV* › pp.135–138 · prophylaxis & treatment by OI › Prophylaxis — when to give to prevent infection › Disseminated MAC** — CD4 < 50 (after ruling out active disseminated MAC)
   > Preferred (adult): azithromycin 1200 mg PO once weekly, OR clarithromycin 500 mg PO BD, OR azithromycin 600 mg PO twice weekly; alternative rifabutin 300 mg PO daily
 
-### azithromycin mg/kg
-
-Shared: 5, 10, 20
-
-**ProtocolBook only:** 15
-
-- `15 mg/kg` (od) — *Paediatric Dehydration Protocol* › Paediatric Dehydration Protocol › pp.43–44 · Plans C/B/A + adjunctive Rx › Antibiotics ONLY if bloody diarrhoea (dysentery)
-  > Alternative: Azithromycin 15mg/kg PO on day 1 then 10mg/kg PO OD days 2–5
-
-**WHO only:** 6, 12
-
-- `6 mg/kg`  — *Dysentery* › 5.4 · bloody diarrhoea · Shigella · ciprofloxacin › Treatment — antibiotics › Give an antibiotic to which local **Shigella** are sensitive — **susceptibility-guided treatment matters** as resistance r
-  > Azithromycin 12 mg/kg on day 1, then 6 mg/kg on days 2–5. Choose by local susceptibility; avoid ciprofloxacin where fluoroquinolone resistance is known/likely.
-- `12 mg/kg`  — *Dysentery* › 5.4 · bloody diarrhoea · Shigella · ciprofloxacin › Treatment — antibiotics › Give an antibiotic to which local **Shigella** are sensitive — **susceptibility-guided treatment matters** as resistance r
-  > Azithromycin 12 mg/kg on day 1, then 6 mg/kg on days 2–5. Choose by local susceptibility; avoid ciprofloxacin where fluoroquinolone resistance is known/likely.
-
 ### azithromycin mg/kg/day
 
 **ProtocolBook only:** 5
@@ -380,21 +382,37 @@ Shared: 5, 10, 20
 
 ## calcium
 
+### calcium mg/kg
+
+Shared: 100-200
+
+**ProtocolBook only:** 50-100
+
+- `50-100 mg/kg`  — *Formulary* › Calcium › Calcium
+  > Symptomatic hypocalcaemia / tetany / hypocalcaemic convulsions: 0.5–1 mL/kg of 10% solution (≈50–100 mg/kg) slow IV over 5–10 min, with cardiac monitoring
+
+**WHO only:** 120-140
+
+- `120-140 mg/kg`  — *LBW < 2.0 kg (< 35 wk)* › LBW < 2.0 kg (< 35 wk) › 3.11.2 · special care · KMC · feeding · apnoea › Supplements & iron
+  > calcium 120–140 mg/kg
+
 ### calcium ml/kg
 
-**ProtocolBook only:** 0.5, 0.6-1, 20
+Shared: 0.5-1
+
+**ProtocolBook only:** 0.5, 1-2, 20
 
 - `0.5 ml/kg` (every 5 min) — *Potassium (K⁺) Abnormalities* › Any of the following? › Yes › Stabilise AND shift — both, in parallel
   > Cardiac monitoring | 1. Stabilise (seconds): 10% calcium gluconate IV — children 0.5 mL/kg, adults 10 mL, over 2–3 min; repeat every 5 min until the ECG improves. Calcium does NOT lower the potassium — it buys 30–60 min 
-- `0.6-1 ml/kg`  — *Formulary* › Calcium › Calcium
-  > Tetany / convulsions: 0.6–1 mL/kg of 10% solution via slow push Adults:
+- `1-2 ml/kg`  — *Formulary* › Calcium › Calcium
+  > Neonate: 1–2 mL/kg of 10% solution (100–200 mg/kg) slow IV — the neonatal repletion dose is higher
 - `20 ml/kg`  — *Formulary* › Calcium › Calcium
   > Ca gluconate 10%: max dose 20 mL/kg, max dose 2 g
 
 **WHO only:** 2
 
 - `2 ml/kg`  — *Convulsions or Fits* › Convulsions or Fits › 3.7 · glucose, phenobarbital, calcium › Anticonvulsant
-  > If hypocalcaemic, symptoms may settle with 2 ml/kg of 10% calcium gluconate as a slow IV infusion, then continue oral supplementation.
+  > If hypocalcaemic, symptoms may settle with 2 ml/kg of 10% calcium gluconate (100–200 mg/kg — the neonatal repletion dose; a child gets 0.5–1 ml/kg) as a slow IV infusion, then continue oral supplementation.
 
 ## cefotaxime
 
@@ -414,6 +432,22 @@ Shared: 50
 - `100 mg/kg`  — *Neonatal Conjunctivitis* › Neonatal Conjunctivitis › 3.12.2 · sticky eyes vs ophthalmia neonatorum › Severe conjunctivitis (ophthalmia neonatorum)
   > Substitute cefotaxime 100 mg/kg IM/IV, also a single dose, in a jaundiced or premature neonate (ceftriaxone displaces bilirubin → kernicterus) or one receiving calcium-containing IV fluids (fatal ceftriaxone–calcium prec
 
+### cefotaxime mg/kg/day
+
+**ProtocolBook only:** 150, 225-300
+
+- `150 mg/kg/day` (every 8 h) — *Urinary Tract & Kidney Disorders* › Urinary Tract & Kidney Disorders › pp.49–51 · work-up + UTI Rx › Pyelonephritis Treatment (7–14 days)
+  > Cefotaxime 150mg/kg/day IV/IM divided every 8 hours
+- `225-300 mg/kg/day`  — *Pediatric Meningitis* › Pediatric Meningitis › pp.54–55 · recognition + Rx cascade › Treatment
+  > AND Cefotaxime 75 mg/kg IV 6–8-hourly (= 225–300 mg/kg/day)
+
+**WHO only:** 100-150, 150-200
+
+- `100-150 mg/kg/day` (every 6–8 h;every 8–12 h) — *Neonatal Meningitis* › Neonatal Meningitis › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment
+  > If a third-generation cephalosporin is used, prefer cefotaxime — 50 mg/kg every 8–12 h if ≤ 7 days (100–150 mg/kg/day), every 6–8 h if > 7 days (150–200 mg/kg/day) — (+ gentamicin). Frequency increases with postnatal age
+- `150-200 mg/kg/day` (every 6–8 h;every 8–12 h) — *Neonatal Meningitis* › Neonatal Meningitis › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment
+  > If a third-generation cephalosporin is used, prefer cefotaxime — 50 mg/kg every 8–12 h if ≤ 7 days (100–150 mg/kg/day), every 6–8 h if > 7 days (150–200 mg/kg/day) — (+ gentamicin). Frequency increases with postnatal age
+
 ## ceftriaxone
 
 ### ceftriaxone g
@@ -427,14 +461,16 @@ Shared: 1, 2
 
 ### ceftriaxone mg
 
-Shared: 125, 250, 500
+Shared: 250, 500
 
-**ProtocolBook only:** 100, 800
+**ProtocolBook only:** 100, 125, 800
 
 - `100 mg` (bd) — *Formulary* › Doxycycline › Doxycycline
   > Chlamydia — adults: 100 mg PO BD × 7 days (21 days for LGV / proctitis) Pelvic inflammatory disease — adults: 100 mg PO/IV BD × 14 days, with ceftriaxone + metronidazole Children ≥ 8 y or > 45 kg: 100 mg PO BD. Under 8 y
 - `100 mg` (bd) — *Formulary* › Doxycycline › Doxycycline
   > Chlamydia — adults: 100 mg PO BD × 7 days (21 days for LGV / proctitis) Pelvic inflammatory disease — adults: 100 mg PO/IV BD × 14 days, with ceftriaxone + metronidazole Children ≥ 8 y or > 45 kg: 100 mg PO BD. Under 8 y
+- `125 mg` (stat) — *Adult Meningitis* › pp.102–103 · red flags · LP contraindications · Rx › If culture reveals meningococcus — treat close contacts › Prophylaxis:
+  > < 15 years old: ceftriaxone 125 mg IM stat
 - `800 mg`  — *Formulary* › Cefixime › Cefixime
   > Gonorrhoea — only where ceftriaxone is unavailable. Adults: 800 mg PO single dose (urogenital or rectal only) Children: 8 mg/kg/day PO; ≥ 45 kg use the adult 800 mg single dose
 - `800 mg`  — *Formulary* › Cefixime › Cefixime
@@ -454,7 +490,7 @@ Shared: 80, 100
 - `25-50 mg/kg`  — *Neonatal Conjunctivitis* › Neonatal Conjunctivitis › 3.12.2 · sticky eyes vs ophthalmia neonatorum › Severe conjunctivitis (ophthalmia neonatorum)
   > Give ceftriaxone 25–50 mg/kg (maximum 250 mg) IM/IV as a single dose.
 - `25-50 mg/kg`  — *Formulary* › Spectinomycin › Spectinomycin
-  > Global supply has largely been discontinued. For neonatal gonococcal ophthalmia, ceftriaxone 25–50 mg/kg IM as a single dose (max 125 mg) is now the WHO-recommended treatment.
+  > Global supply has largely been discontinued. For neonatal gonococcal ophthalmia, ceftriaxone 25–50 mg/kg IM/IV as a single dose (max 250 mg) is now the recommended treatment.
 - `50 mg/kg` (q12h) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
   > Ceftriaxone (meningitis) | 50 mg/kg IV q12h | 1 g vial + 9.6 ml water → 1 g/10 ml | 0.5–0.75 ml | 0.75–1 ml | 1–1.25 ml | 1.25–1.5 ml | 1.5–1.75 ml | 1.75–2 ml | 2–2.5 ml
 - `50 mg/kg` (every 12 h;every 6 h;once daily) — *Bacterial Meningitis* › Bacterial Meningitis › 6.3.1 · LP · ceftriaxone · dexamethasone › Antibiotic treatment — start immediately
@@ -692,29 +728,31 @@ Shared: 2, 5
 
 Shared: 10
 
-**ProtocolBook only:** 2.5
+**ProtocolBook only:** 2.5, 20
 
 - `2.5 mg`  — *Resuscitation Medications* › Resuscitation Medications › p.20 · pediatric & adult dosing › Children
   > Diazepam PR ~2.5 mg suppository | - < 10 kg: 1 supp (DO NOT USE in neonates) - 10 – 15 kg: 2 supp - 15 – 20 kg: 3 supp - 20 – 25 kg: 4 supp
 - `2.5 mg`  — *Resuscitation Medications* › Resuscitation Medications › p.20 · pediatric & adult dosing › Adults
   > Diazepam PR 2.5 mg suppository | 4 suppositories PR
+- `20 mg`  — *Formulary* › Diazepam › Diazepam
+  > 20–25 kg: 4 suppositories IV diazepam: 0.2 mg/kg slowly over 1 minute, max 10 mg. A second dose may be given at 0.1 mg/kg. Maximum two benzodiazepine doses, then a second-line agent — a third adds respiratory depression 
 
 ### diazepam mg/kg
 
-**ProtocolBook only:** 0.15, 0.2, 0.3
+Shared: 0.2, 0.5
 
+**ProtocolBook only:** 0.1, 0.15, 0.3
+
+- `0.1 mg/kg`  — *Formulary* › Diazepam › Diazepam
+  > 20–25 kg: 4 suppositories IV diazepam: 0.2 mg/kg slowly over 1 minute, max 10 mg. A second dose may be given at 0.1 mg/kg. Maximum two benzodiazepine doses, then a second-line agent — a third adds respiratory depression 
 - `0.15 mg/kg`  — *Resuscitation Medications* › Resuscitation Medications › p.20 · pediatric & adult dosing › Adults
   > Diazepam IV | 0.15 mg/kg IV slowly over 1 minute
 - `0.15 mg/kg`  — *Adult Convulsions* › p.101 · status epilepticus · diazepam → phenobarbital › First-line management › Treat both the fit and hypoglycaemia:
   > IV diazepam 0.15 mg/kg slowly over 1 minute (max 10 mg), OR
-- `0.2 mg/kg`  — *Resuscitation Medications* › Resuscitation Medications › p.20 · pediatric & adult dosing › Children
-  > Diazepam IV | 0.2 mg/kg IV slowly over 1 minute, max 10 mg · may repeat once after 5–10 min · maximum 2 doses, then phenobarbital
-- `0.2 mg/kg`  — *Organophosphate / Carbamate Poisoning* › Organophosphate / Carbamate Poisoning › p.29 · insecticides / nerve gas › Convulsions — diazepam
-  > Children: rectal diazepam 2.5 mg suppositories by weight (table below) | Or IV diazepam 0.2 mg/kg (children), max 10 mg | Adults: 10 mg IV
 - `0.3 mg/kg`  — *Formulary* › Diazepam › Diazepam
-  > 20–25 kg: 4 suppositories IV diazepam: 0.3 mg/kg slowly over 1 minute
+  > 20–25 kg: 4 suppositories IV diazepam: 0.2 mg/kg slowly over 1 minute, max 10 mg. A second dose may be given at 0.1 mg/kg. Maximum two benzodiazepine doses, then a second-line agent — a third adds respiratory depression 
 
-**WHO only:** 0.1-0.2, 0.2-0.3, 0.5, 10
+**WHO only:** 0.1-0.2, 0.2-0.3, 10
 
 - `0.1-0.2 mg/kg`  — *Practical Procedures* › Practical Procedures › Annex 1 · consent, analgesia, restraining › Analgesia & sedation for procedures
   > Midazolam (preferred benzodiazepine): 0.1–0.2 mg/kg IV, or 0.3–0.5 mg/kg intranasal / buccal / oral when there is no IV line (shorter-acting, multiple routes; on the WHO EMLc). Diazepam 0.1–0.2 mg/kg IV is an alternative
@@ -722,10 +760,6 @@ Shared: 10
   > 0.1–0.2 mg/kg IV
 - `0.2-0.3 mg/kg`  — *Formulary* › Diazepam › Diazepam › Convulsions — IV
   > IV: 0.2–0.3 mg/kg
-- `0.5 mg/kg`  — *Anticonvulsant (Convulsions)* › Anticonvulsant (Convulsions) › IMCI Chart 9 · midazolam / rectal diazepam · status ladder › First-line anticonvulsant
-  > Intranasal midazolam 0.2 mg/kg (max 10 mg). If midazolam is unavailable, give rectal diazepam 0.5 mg/kg (0.1 ml/kg) — technique and doses below.
-- `0.5 mg/kg`  — *Anticonvulsant (Convulsions)* › Anticonvulsant (Convulsions) › IMCI Chart 9 · midazolam / rectal diazepam · status ladder › If convulsions continue
-  > After 10 min: give a second dose (midazolam or diazepam; or IV diazepam 0.1 ml/kg = 0.5 mg/kg, max 10 mg, if a line is running). Do not exceed two benzodiazepine doses.
 - `10 mg/kg`  — *Formulary* › Diazepam › Diazepam
   > Neonates: give phenobarbital (20 mg/kg IV/IM) instead of diazepam. If convulsions continue, repeat 10 mg/kg IV/IM after 30 min. Oral phenobarbital maintenance 2.5–5 mg/kg.
 - `10 mg/kg`  — *Formulary* › Phenobarbital › Phenobarbital
@@ -740,10 +774,10 @@ Shared: 10
 
 **WHO only:** 0.1
 
-- `0.1 ml/kg`  — *Anticonvulsant (Convulsions)* › Anticonvulsant (Convulsions) › IMCI Chart 9 · midazolam / rectal diazepam · status ladder › First-line anticonvulsant
-  > Intranasal midazolam 0.2 mg/kg (max 10 mg). If midazolam is unavailable, give rectal diazepam 0.5 mg/kg (0.1 ml/kg) — technique and doses below.
 - `0.1 ml/kg`  — *Anticonvulsant (Convulsions)* › Anticonvulsant (Convulsions) › IMCI Chart 9 · midazolam / rectal diazepam · status ladder › Diazepam PR — 10 mg/2 ml, 0.1 ml/kg
   > Diazepam PR — 10 mg/2 ml, 0.1 ml/kg
+- `0.1 ml/kg`  — *Anticonvulsant (Convulsions)* › Anticonvulsant (Convulsions) › IMCI Chart 9 · midazolam / rectal diazepam · status ladder › If convulsions continue
+  > 🛑 The IV dose is NOT the rectal dose. Rectal 0.5 mg/kg (0.1 ml/kg) is higher because rectal absorption is incomplete. Intravenously give 0.2 mg/kg. 0.5 mg/kg IV is roughly double, and in a paediatric series 16% of childr
 
 ## erythromycin
 
@@ -975,39 +1009,35 @@ Shared: 3, 5
 
 ### hydrocortisone mg
 
+Shared: 100
+
 **ProtocolBook only:** 200
 
 - `200 mg`  — *Anaphylaxis* › Anaphylaxis › p.37 · criteria + epinephrine › Adjunctive treatment
-  > These do NOT treat airway, breathing or circulation. Never let them delay or replace epinephrine | H1 receptor blocker: Diphenhydramine 1mg/kg IV or PO, max dose 50mg | Steroids: Hydrocortisone 5mg/kg IM/slow IV (max 200
+  > These do NOT treat airway, breathing or circulation. Never let them delay or replace epinephrine | H1 receptor blocker: Diphenhydramine 1mg/kg IV or PO, max dose 50mg | Steroids: Hydrocortisone 2–4mg/kg IM/slow IV (max 1
 
-**WHO only:** 0.15, 100
+**WHO only:** 0.15
 
 - `0.15 mg`  — *Formulary* › Prednisolone › Prednisolone
   > Acute wheeze/asthma: 1–2 mg/kg/day for 3–5 days, no taper needed. Croup: 1 mg/kg as a single dose (alternative when dexamethasone 0.6 mg/kg, the preferred agent, is unavailable). Nephrotic syndrome uses a longer high-dos
-- `100 mg`  — *Transfusion Reactions* › Transfusion Reactions › 10.6.5 · mild · moderate · life-threatening · TACO/TRALI › Moderately severe reaction
-  > Give hydrocortisone 1–2 mg/kg IV (max 100 mg) or chlorphenamine 0.25 mg/kg IM, if available.
-- `100 mg`  — *Transfusion Reactions* › Transfusion Reactions › 10.6.5 · mild · moderate · life-threatening · TACO/TRALI › Life-threatening reaction
-  > Hydrocortisone 1–2 mg/kg IV (max 100 mg) — as an adjunct only (steroids have no proven benefit in acute anaphylaxis and act too slowly to replace adrenaline).
 
 ### hydrocortisone mg/kg
 
-**ProtocolBook only:** 1, 2, 5
+Shared: 2-4
+
+**ProtocolBook only:** 1, 2
 
 - `1 mg/kg` (q6h) — *Paediatric Sepsis & Septic Shock* › Paediatric Sepsis & Septic Shock › p.45 · SIRS table + management › Management
   > Airway/Breathing: 100% O2, bag and mask if poor respiratory effort | Treat hypoglycaemia: Dextrose 10% 2ml/kg IV push. Make it as 8mL NS + 2mL D50% (D10 in ~0.7% saline) or 1mL D50% + 8mL D5% (D10 in water) — see the res
 - `2 mg/kg` (q6h) — *Paediatric Sepsis & Septic Shock* › Paediatric Sepsis & Septic Shock › p.45 · SIRS table + management › Management
   > Airway/Breathing: 100% O2, bag and mask if poor respiratory effort | Treat hypoglycaemia: Dextrose 10% 2ml/kg IV push. Make it as 8mL NS + 2mL D50% (D10 in ~0.7% saline) or 1mL D50% + 8mL D5% (D10 in water) — see the res
-- `5 mg/kg`  — *Anaphylaxis* › Anaphylaxis › p.37 · criteria + epinephrine › Adjunctive treatment
-  > These do NOT treat airway, breathing or circulation. Never let them delay or replace epinephrine | H1 receptor blocker: Diphenhydramine 1mg/kg IV or PO, max dose 50mg | Steroids: Hydrocortisone 5mg/kg IM/slow IV (max 200
 
 **WHO only:** 1-2, 4
 
-- `1-2 mg/kg`  — *Transfusion Reactions* › Transfusion Reactions › 10.6.5 · mild · moderate · life-threatening · TACO/TRALI › Moderately severe reaction
-  > Give hydrocortisone 1–2 mg/kg IV (max 100 mg) or chlorphenamine 0.25 mg/kg IM, if available.
 - `1-2 mg/kg`  — *Transfusion Reactions* › Transfusion Reactions › 10.6.5 · mild · moderate · life-threatening · TACO/TRALI › Life-threatening reaction
   > Hydrocortisone 1–2 mg/kg IV (max 100 mg) — as an adjunct only (steroids have no proven benefit in acute anaphylaxis and act too slowly to replace adrenaline).
 - `4 mg/kg` (every 4 h) — *Asthma* › Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Steroids
-  > For a severe or life-threatening attack, give oral prednisolone 1 mg/kg (max 60 mg; 20 mg for ages 2–5 y) for 3–5 days. Repeat the dose if the child vomits; consider IV steroids if oral cannot be retained. Tapering short
+  > For a severe or life-threatening attack, give oral prednisolone 1–2 mg/kg/day — max 20 mg/day under 2 y, 30 mg/day at 2–5 y, 40–60 mg in an older child — for 3–5 days. Repeat the dose if the child vomits; consider IV ste
 
 ## ibuprofen
 
@@ -1099,6 +1129,24 @@ Shared: 10, 15, 35
   > Adults: 25 mg/kg PO QD
 - `30-40 mg/kg`  — *TB — Treatment* › TB — Treatment › p.73 · LFT check · regimen · steroids › First 2 months treatment
   > Pyrazinamide | 35 mg/kg | 30–40 mg/kg | 1.5 g/day
+
+## lorazepam
+
+### lorazepam mg
+
+**ProtocolBook only:** 0.5-2, 2
+
+- `0.5-2 mg`  — *Formulary* › Lorazepam › Lorazepam
+  > Agitation: 0.5–2 mg IV q2–4hrs
+- `2 mg`  — *Alcohol Withdrawal* › CIWA-Ar ≥ 10? › Yes › Lorazepam 2mg IV
+  > Lorazepam 2mg IV
+- `2 mg` (prn) — *Alcohol Withdrawal* › Alcohol Withdrawal › p.35 · stages + CIWA-Ar algorithm › Continue to monitor
+  > Once stable begin to wean Lorazepam 2mg IV to q2–4hrs prn
+
+**WHO only:** 4
+
+- `4 mg`  — *Anticonvulsant (Convulsions)* › Anticonvulsant (Convulsions) › IMCI Chart 9 · midazolam / rectal diazepam · status ladder › First-line anticonvulsant
+  > IV lorazepam 0.1 mg/kg (max 4 mg), or
 
 ## magnesium sulfate
 
@@ -1224,16 +1272,42 @@ Shared: 15-20
 
 Shared: 40
 
-**WHO only:** 5, 20, 60, 300
+**WHO only:** 5, 40-60, 300
 
 - `5 mg`  — *Formulary* › Prednisolone › Prednisolone
   > Acute wheeze/asthma: 1–2 mg/kg/day for 3–5 days, no taper needed. Croup: 1 mg/kg as a single dose (alternative when dexamethasone 0.6 mg/kg, the preferred agent, is unavailable). Nephrotic syndrome uses a longer high-dos
-- `20 mg` (every 4 h) — *Asthma* › Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Steroids
-  > For a severe or life-threatening attack, give oral prednisolone 1 mg/kg (max 60 mg; 20 mg for ages 2–5 y) for 3–5 days. Repeat the dose if the child vomits; consider IV steroids if oral cannot be retained. Tapering short
-- `60 mg` (every 4 h) — *Asthma* › Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Steroids
-  > For a severe or life-threatening attack, give oral prednisolone 1 mg/kg (max 60 mg; 20 mg for ages 2–5 y) for 3–5 days. Repeat the dose if the child vomits; consider IV steroids if oral cannot be retained. Tapering short
+- `40-60 mg` (every 4 h) — *Asthma* › Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Steroids
+  > For a severe or life-threatening attack, give oral prednisolone 1–2 mg/kg/day — max 20 mg/day under 2 y, 30 mg/day at 2–5 y, 40–60 mg in an older child — for 3–5 days. Repeat the dose if the child vomits; consider IV ste
 - `300 mg` (every 6 h) — *Asthma* › Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Aminophylline — last resort
   > Not recommended in mild-to-moderate asthma. Reserve for a child who does not improve after several doses of a rapid-acting bronchodilator plus oral prednisolone. Admit ideally to high-care/ICU with continuous monitoring.
+
+### prednisolone mg/day
+
+Shared: 20
+
+**ProtocolBook only:** 1, 2.5, 5, 10, 10-20, 40, 60
+
+- `1 mg/day` (every 2 weeks) — *Formulary* › Prednisone / Prednisolone › Prednisone / Prednisolone › Adults:
+  > Dose ≤ 10 mg/day: decrease by 1 mg/day every 2 weeks
+- `2.5 mg/day` (every 2 weeks) — *Formulary* › Prednisone / Prednisolone › Prednisone / Prednisolone › Adults:
+  > Dose 10–20 mg/day: decrease by 2.5 mg/day every 2 weeks
+- `5 mg/day`  — *Formulary* › Prednisone / Prednisolone › Prednisone / Prednisolone › Adults:
+  > Dose ≥ 20 mg/day: decrease by 5 mg/day every week
+- `10 mg/day` (every 2 weeks) — *Formulary* › Prednisone / Prednisolone › Prednisone / Prednisolone › Adults:
+  > Dose ≤ 10 mg/day: decrease by 1 mg/day every 2 weeks
+- `10-20 mg/day` (every 2 weeks) — *Formulary* › Prednisone / Prednisolone › Prednisone / Prednisolone › Adults:
+  > Dose 10–20 mg/day: decrease by 2.5 mg/day every 2 weeks
+- `40 mg/day`  — *Adult COPD and Asthma* › Adult COPD and Asthma › p.127 · exacerbation management › Bronchodilator therapy
+  > Albuterol / ipratropium q20min × 3 doses — nebuliser (5 mg / 0.5 mg) or MDI 8 puffs | Caution using albuterol with cardiac disease | Evaluate after the first Rx and after the first 3; if symptoms dramatically improve, mo
+- `60 mg/day`  — *Urinary Tract & Kidney Disorders* › Nephrotic syndrome — all of the following present? › Yes › Treat as Nephrotic Syndrome
+  > Prednisone 2mg/kg/day (max 60mg/day) x 4 weeks, then alternate-day dosing — will require taper
+- `60 mg/day`  — *TB — Treatment* › Are any of the following present? › Yes › Add Prednisone
+  > 2 mg/kg (max 60 mg/day) × 4 weeks | Followed by 1 mg/kg × 1 week | Followed by 0.5 mg/kg × 1 week
+
+**WHO only:** 30
+
+- `30 mg/day` (every 4 h) — *Asthma* › Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Steroids
+  > For a severe or life-threatening attack, give oral prednisolone 1–2 mg/kg/day — max 20 mg/day under 2 y, 30 mg/day at 2–5 y, 40–60 mg in an older child — for 3–5 days. Repeat the dose if the child vomits; consider IV ste
 
 ### prednisolone mg/kg
 
@@ -1268,10 +1342,10 @@ Shared: 1
 
 - `1 mg/kg/day` (every 6 h) — *Rheumatic Fever* › Rheumatic Fever › 6.11 · 2015 Jones · naproxen · prophylaxis › Management
   > If heart failure is present: bed rest with a restricted-sodium diet; oxygen; furosemide 1 mg/kg every 6 h; prednisolone 1 mg/kg/day orally for 1 week for severe heart failure; blood transfusion if Hb < 8 g/dl; antibiotic
+- `1-2 mg/kg/day` (every 4 h) — *Asthma* › Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Steroids
+  > For a severe or life-threatening attack, give oral prednisolone 1–2 mg/kg/day — max 20 mg/day under 2 y, 30 mg/day at 2–5 y, 40–60 mg in an older child — for 3–5 days. Repeat the dose if the child vomits; consider IV ste
 - `1-2 mg/kg/day`  — *Pneumocystis Pneumonia (PCP)* › Pneumocystis Pneumonia (PCP) › 8.4.2 · suspect early · high-dose co-trimoxazole › Treatment
   > Corticosteroids for moderate/severe PCP (PaO₂ < 70 mmHg or A–a gradient > 35 mmHg) — start within 72 h: prednisolone 1–2 mg/kg/day, then taper.
-- `1-2 mg/kg/day`  — *Lymphoid Interstitial Pneumonitis* › Lymphoid Interstitial Pneumonitis › 8.4.3 · LIP (now rare) · steroids only if hypoxic › Treatment
-  > Oral prednisolone 1–2 mg/kg/day for 2 weeks, then decrease over 2–4 weeks depending on response. Beware reactivating TB.
 - `2-4 mg/kg/day`  — *Tuberculous Meningitis* › Tuberculous Meningitis › 6.3.3 · HRZE 12 months · dexamethasone › Treatment — two WHO-recommended options
   > Dexamethasone — the paediatric dose is 0.6 mg/kg/day (adults get 0.4 mg/kg/day; the difference is age, not a disagreement), given for 2–3 weeks then reduced over a further 2–3 weeks — 6–8 weeks in total — in all cases of
 
@@ -1286,7 +1360,7 @@ Shared: 2.5
 - `0.5 mg`  — *Adult COPD and Asthma* › Adult COPD and Asthma › p.127 · exacerbation management › Bronchodilator therapy
   > Albuterol / ipratropium q20min × 3 doses — nebuliser (5 mg / 0.5 mg) or MDI 8 puffs | Caution using albuterol with cardiac disease | Evaluate after the first Rx and after the first 3; if symptoms dramatically improve, mo
 - `5 mg`  — *Wheezing Child (Bronchiolitis & Asthma)* › pp.52–53 · bronchiolitis + asthma › Management › Salbutamol every 15 minutes x 3 doses, via Nebulizer OR MDI+spacer+mask
-  > Nebulizer: <2 years 2.5mg in 3mL NS; >2 years 5mg in 5mL NS
+  > Nebulizer: 2.5mg in 3mL NS for most children. Step up to 5mg in 5mL NS for an older or larger child (roughly ≥5 years or >20–25kg) or a severe attack — weight and severity, not a 2-year cutoff
 - `5 mg`  — *Sickle Cell Acute Chest Syndrome* › Sickle Cell Acute Chest Syndrome › p.62 · CRS score + Rx › General Supportive Care
   > Salbutamol for any wheeze or bronchospasm — nebulised 5mg (2.5mg if <5 years), or inhaler 2–4 puffs as needed. The Clinical Respiratory Score above grades wheeze, so treat what it finds
 - `10-20 mg`  — *Potassium (K⁺) Abnormalities* › K⁺ 6.0–6.5? › Yes › Shift potassium intracellularly
@@ -1314,10 +1388,8 @@ Shared: 2.5
 
 Shared: 1, 10
 
-**ProtocolBook only:** 0.5, 1-2.5, 2.5-5
+**ProtocolBook only:** 1-2.5, 2.5-5
 
-- `0.5 mg` (stat) — *Formulary* › Vitamin K › Vitamin K
-  > Preterm > 1 kg: 0.5 mg IM stat
 - `1-2.5 mg`  — *Formulary* › Vitamin K › Vitamin K › Adult:
   > INR 4.5–10, no bleeding: may consider 1–2.5 mg PO
 - `2.5-5 mg`  — *Formulary* › Vitamin K › Vitamin K › Adult:
@@ -1325,23 +1397,16 @@ Shared: 1, 10
 - `2.5-5 mg`  — *Formulary* › Vitamin K › Vitamin K › Adult:
   > Minor bleeding & elevated INR: 2.5–5 mg PO
 
-### vitamin k mg/kg
-
-**ProtocolBook only:** 0.3
-
-- `0.3 mg/kg` (stat) — *Formulary* › Vitamin K › Vitamin K
-  > Preterm < 1 kg: 0.3 mg/kg IM stat
-
-**WHO only:** 0.3-0.5
-
-- `0.3-0.5 mg/kg`  — *Routine Newborn Care* › 3.3 · warmth, feeding, vitamin K, cord & eye care, vaccines › Vitamin K, cord & eye care › Give **IM vitamin K (phytomenadione)** to all newborns **once**:
-  > Infants ≤ 1500 g: 0.3–0.5 mg/kg IM (a single IV dose is not recommended in preterm infants).
-
 ## zinc
 
 ### zinc mg
 
 Shared: 10, 20
+
+**ProtocolBook only:** 10-20
+
+- `10-20 mg`  — *Paediatric Dehydration Protocol* › Paediatric Dehydration Protocol › pp.43–44 · Plans C/B/A + adjunctive Rx › Diarrhoea adjunctive Rx
+  > All cases to receive Zinc x 10–14 days — 10mg/day under 6 months, 20mg/day at 6 months and over. A single 10–20mg range risks giving the 20mg dose to a young infant
 
 **WHO only:** 5, 5-10
 
@@ -1350,23 +1415,7 @@ Shared: 10, 20
 - `5-10 mg`  — *Formulary* › Zinc › Zinc
   > Shortens diarrhoea and reduces future episodes. WHO standard: 10 mg/day under 6 months, 20 mg/day at 6 months and over; a 2020 trial found 5–10 mg noninferior with less vomiting, but the WHO dose is unchanged. Give with 
 
-### zinc mg/day
-
-**ProtocolBook only:** 10-20
-
-- `10-20 mg/day`  — *Paediatric Dehydration Protocol* › Paediatric Dehydration Protocol › pp.43–44 · Plans C/B/A + adjunctive Rx › Diarrhoea adjunctive Rx
-  > All cases to receive Zinc 10–20mg/day x 10–14 days
-
-**WHO only:** 10, 20
-
-- `10 mg/day`  — *Some Dehydration (Plan B)* › Some Dehydration (Plan B) › 5.2.2 · ORS over 4 h · zinc · feeding › Zinc
-  > ≥ 6 months: 1 tablet (20 mg) per day For infants, dissolve the tablet in a little clean water, expressed milk or ORS. Lower doses work too: a large trial (NEJM 2020) found 5 mg and 10 mg/day non-inferior to 20 mg for dia
-- `10 mg/day`  — *Formulary* › Zinc › Zinc
-  > Shortens diarrhoea and reduces future episodes. WHO standard: 10 mg/day under 6 months, 20 mg/day at 6 months and over; a 2020 trial found 5–10 mg noninferior with less vomiting, but the WHO dose is unchanged. Give with 
-- `20 mg/day`  — *Formulary* › Zinc › Zinc
-  > Shortens diarrhoea and reduces future episodes. WHO standard: 10 mg/day under 6 months, 20 mg/day at 6 months and over; a 2020 trial found 5–10 mg noninferior with less vomiting, but the WHO dose is unchanged. Give with 
-
 
 ---
 
-**79 candidate drug+unit pairs across 42 drugs.**
+**81 candidate drug+unit pairs across 43 drugs.**

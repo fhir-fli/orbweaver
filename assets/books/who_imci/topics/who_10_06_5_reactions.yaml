@@ -8,6 +8,8 @@
 # priority; corticosteroids are ADJUNCTIVE (no proven acute benefit).
 # Added TACO vs TRALI as named entities. Refs: Golden anaphylaxis PP 2023;
 # AABB; Kohorst 2020.
+# Cross-book pass 2026-08-28: hydrocortisone 1-2 -> 2-4 mg/kg (NIAID/FAAN),
+#   cap unchanged at 100 mg. The two books had disagreed on the mg/kg.
 # ============================================================
 
 topic:
@@ -51,7 +53,7 @@ topic:
         heart rate.
         - **Stop the transfusion;** remove the IV line but **not the cannula**; set
           up a new infusion with **normal saline**.
-        - Give **hydrocortisone 1–2 mg/kg IV (max 100 mg)** or **chlorphenamine
+        - Give **hydrocortisone 2–4 mg/kg IV (max 100 mg)** or **chlorphenamine
           0.25 mg/kg IM**, if available.
         - Give a **bronchodilator** if wheezing.
         - **Send to the blood bank:** the giving set used, a blood sample from

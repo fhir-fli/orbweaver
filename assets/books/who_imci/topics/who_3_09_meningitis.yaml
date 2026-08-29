@@ -44,10 +44,18 @@ topic:
     - type: "prose"
       title: "Treatment"
       markdown: |
-        - First-line: **ampicillin + gentamicin** (doses §3.14).
+        - First-line: **ampicillin + gentamicin**.
+        - 🛑 **Meningitis needs a HIGHER ampicillin dose than sepsis. Do not use
+          the §3.14 sepsis row.**
+          - **≤ 7 days: 50 mg/kg every 8 h (150 mg/kg/day)**
+          - **8–28 days: 50 mg/kg every 6 h (200 mg/kg/day)**
+          - The §3.14 figure (50 mg/kg q12h then q8h, 100–150 mg/kg/day) is the
+            **septicaemia** dose and **does not reliably treat the CSF**.
+        - **Gentamicin** doses as §3.14.
         - If a **third-generation cephalosporin** is used, **prefer cefotaxime**
-          — **50 mg/kg every 12 h if < 7 days**, **every 6–8 h if > 7 days**
-          (+ gentamicin).
+          — **50 mg/kg every 8–12 h if ≤ 7 days** (100–150 mg/kg/day), **every
+          6–8 h if > 7 days** (150–200 mg/kg/day) — (+ gentamicin). Frequency
+          **increases** with postnatal age.
         - **Duration:** at least **21 days for gram-negative** organisms;
           **14–21 days for group B streptococcus**.
         - If there are signs of **hypoxaemia**, give **oxygen** (§3.10).

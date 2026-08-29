@@ -4,6 +4,9 @@
 # ✅ OpenEvidence review applied (2026-07): phenobarbital dosing
 #    confirmed unchanged (NEOLEV2); second-line agents added; buccal
 #    40% dextrose gel noted for asymptomatic hypoglycaemia.
+# Cross-book pass 2026-08-28: labelled the 2 ml/kg as the NEONATAL
+#   repletion dose. A child gets 0.5-1 ml/kg, and hyperkalaemic membrane
+#   stabilisation is 0.5 ml/kg - three different indications.
 # ============================================================
 
 topic:
@@ -53,7 +56,8 @@ topic:
           agent — phenytoin (or fosphenytoin), levetiracetam, or midazolam**
           (limited evidence to choose between them).
         - If **hypocalcaemic**, symptoms may settle with **2 ml/kg of 10%
-          calcium gluconate** as a slow IV infusion, then continue **oral**
+          calcium gluconate (100–200 mg/kg — the neonatal repletion dose; a
+          child gets 0.5–1 ml/kg)** as a slow IV infusion, then continue **oral**
           supplementation.
         - **Rule out CNS infection** — treat if present
           ([§3.9](topic:who-imci-3-9-meningitis)).

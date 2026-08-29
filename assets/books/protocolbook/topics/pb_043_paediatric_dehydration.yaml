@@ -30,6 +30,10 @@
 # ⚠️ GENUINE SOURCE TYPO corrected (surfaced to Grey 2026-07-14):
 #   - p.44 prints "Paramomycin" twice (amoebiasis list and the
 #     giardiasis parenthetical) → corrected to "Paromomycin".
+# Cross-book pass 2026-08-28: azithromycin for dysentery 15/10 -> 12/6
+#   mg/kg, the WHO/AAP regimen (15/10 is a surveillance-protocol variant
+#   with no proven advantage and more GI upset). Zinc split by age
+#   (10mg <6mo, 20mg >=6mo) rather than one range for every child.
 # ============================================================
 
 topic:
@@ -126,7 +130,7 @@ topic:
         - type: "prose"
           title: "Diarrhoea adjunctive Rx"
           markdown: |
-            - **All cases to receive Zinc 10–20mg/day x 10–14 days**
+            - **All cases to receive Zinc x 10–14 days — 10mg/day under 6 months, 20mg/day at 6 months and over.** A single 10–20mg range risks giving the 20mg dose to a young infant
             - Diarrhoea >14 days may be complicated by ORS intolerance (worsening diarrhoea) — if seen, change to IV regimens
 
         - type: "prose"
@@ -134,7 +138,7 @@ topic:
           markdown: |
             - **First line:** Ciprofloxacin 15mg/kg/dose BD x 3–5 days
             - **Second line (or severely ill):** Ceftriaxone 50–80mg/kg/day x 3–5 days
-            - **Alternative:** Azithromycin 15mg/kg PO on day 1 then 10mg/kg PO OD days 2–5
+            - **Alternative:** Azithromycin 12mg/kg PO on day 1 (max 500mg) then 6mg/kg PO OD days 2–5 (max 250mg)
             - **DO NOT USE:** aminoglycosides, amoxicillin, ampicillin, chloramphenicol, cotrimoxazole, 1st or 2nd gen cephalosporins, nalidixic acid, nitrofurans, or tetracycline due to resistance
 
         - type: "prose"

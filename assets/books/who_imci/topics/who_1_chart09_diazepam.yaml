@@ -1,4 +1,22 @@
 # ============================================================
+# 🛑 2026-08-28 — THE IV DIAZEPAM DOSE ON THIS PAGE WAS WRONG FOR TWO
+# REVIEW CYCLES, AND BOTH CYCLES CONFIRMED IT.
+#   The 2026-06-18 review "corrected" IV diazepam 0.25 -> 0.5 mg/kg, calling
+#   0.25 subtherapeutic. The 2026-07 review re-confirmed 0.5 as accurate.
+#   Both were wrong. 0.5 mg/kg is the RECTAL dose (rectal absorption is
+#   incomplete, which is why it is higher); the IV dose is 0.2-0.3 mg/kg
+#   (FDA label 0.2 mg/kg; ESETT and the status-epilepticus dosing literature
+#   0.15-0.3). 0.5 mg/kg IV is roughly double, and 16% of children in a
+#   paediatric series had severe or life-threatening respiratory depression
+#   at RECOMMENDED IV doses.
+#   Found by the cross-book dose comparison (tool/crossbook_*), not by
+#   another read of this page: the ProtocolBook prints 0.2 mg/kg IV and the
+#   two books were laid side by side. Corrected to 0.2 mg/kg.
+#   Buccal AND intranasal midazolam widened to 0.3-0.5 mg/kg (was intranasal
+#   0.2). Added: with a line, IV lorazepam 0.1 mg/kg (max 4 mg) is an option;
+#   where only diazepam is stocked, rectal diazepam stays acceptable
+#   first-line.
+# ============================================================
 # WHO IMCI Chart 9 — How to give diazepam rectally (convulsions)
 # Pocket Book of Hospital Care for Children (2nd ed, 2013), p.15
 # OpenEvidence review applied 2026-06-18:
@@ -49,13 +67,19 @@ topic:
       title: "First-line anticonvulsant"
       highlight: true
       markdown: |
-        Where available, **midazolam is preferred** (faster, easier;
-        level-1 evidence over rectal diazepam):
-        - **Buccal midazolam 0.3–0.5 mg/kg** (max 10 mg), or
-        - **Intranasal midazolam 0.2 mg/kg** (max 10 mg).
+        **No IV line — give buccal or intranasal midazolam 0.3–0.5 mg/kg
+        (max 10 mg).** It is more effective than rectal diazepam (OR 4.1 for
+        therapeutic success, Cochrane / McIntyre), confirmed by a 2026
+        meta-analysis of 9 RCTs in 1,135 children, with comparable respiratory
+        safety.
 
-        If midazolam is unavailable, give **rectal diazepam 0.5 mg/kg**
-        (0.1 ml/kg) — technique and doses below.
+        **If only diazepam is stocked — which is usual here — rectal diazepam
+        0.5 mg/kg is an entirely acceptable first-line agent.** An available
+        drug beats an unstocked better one. Technique and doses below.
+
+        **With a line running:**
+        - **IV lorazepam 0.1 mg/kg** (max 4 mg), or
+        - **IV diazepam 0.2 mg/kg** (max 10 mg) slowly over 1 min.
 
     - type: "prose"
       title: "Rectal diazepam — how to give"
@@ -91,8 +115,15 @@ topic:
       highlight: true
       markdown: |
         - **After 10 min:** give a **second dose** (midazolam or diazepam;
-          or **IV diazepam 0.1 ml/kg = 0.5 mg/kg**, max 10 mg, if a line is
-          running). **Do not exceed two benzodiazepine doses.**
+          or **IV diazepam 0.2 mg/kg**, max 10 mg, if a line is running).
+          **Do not exceed two benzodiazepine doses** — a third adds
+          respiratory depression without added seizure control.
+        - 🛑 **The IV dose is NOT the rectal dose.** Rectal **0.5 mg/kg**
+          (0.1 ml/kg) is higher because rectal absorption is incomplete.
+          **Intravenously give 0.2 mg/kg.** 0.5 mg/kg IV is roughly double,
+          and in a paediatric series **16% of children had severe or
+          life-threatening respiratory depression at recommended IV doses**.
+          Diazepam is not established in neonates — give phenobarbital.
         - **After another 10 min — suspect status epilepticus.** Give a
           **second-line agent** (all equivalent — choose by availability):
           - **Levetiracetam 40 mg/kg IV** over 15 min, or

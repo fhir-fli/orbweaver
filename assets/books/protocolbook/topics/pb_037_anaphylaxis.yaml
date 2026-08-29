@@ -58,6 +58,8 @@
 # CONTENT FLAG still open (optional):
 #   - Diagnostic criteria are the classic 2006 NIAID/FAAN set — still
 #     widely taught; WAO 2020 simplified to 2 criteria.
+# Cross-book pass 2026-08-28: hydrocortisone 5 -> 2-4 mg/kg with a 100 mg
+#   paediatric cap (NIAID/FAAN); benefit is unproven in anaphylaxis.
 # ============================================================
 
 topic:
@@ -142,7 +144,7 @@ topic:
         bullets:
           - "These do NOT treat airway, breathing or circulation. Never let them delay or replace epinephrine"
           - "H1 receptor blocker: Diphenhydramine 1mg/kg IV or PO, max dose 50mg"
-          - "Steroids: Hydrocortisone 5mg/kg IM/slow IV (max 200mg)"
+          - "Steroids: Hydrocortisone 2–4mg/kg IM/slow IV (max 100mg in a child, 200mg adult). An adjunct of unproven benefit — it does not treat airway, breathing or circulation and must never delay epinephrine"
 
     - type: "prose"
       title: "Observation before discharge"

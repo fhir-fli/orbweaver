@@ -2,6 +2,9 @@
 # WHO IMCI §4.5.2 — Asthma. Pocket Book 2nd ed (2013), pp.96–101.
 # ✅ OpenEvidence-reviewed 2026-07: adrenaline route corrected from
 # subcutaneous to IM anterolateral thigh (faster, more reliable absorption).
+# Cross-book pass 2026-08-28: prednisolone 1 -> 1-2 mg/kg/day (GINA 2026),
+#   2-5 y cap 20 -> 30 mg/day, under-2 cap 20 mg/day stated. This page had
+#   also disagreed with the WHO formulary, which already said 1-2 mg/kg/day.
 # ============================================================
 
 topic:
@@ -81,7 +84,8 @@ topic:
       title: "Steroids"
       markdown: |
         For a **severe or life-threatening** attack, give **oral prednisolone
-        1 mg/kg** (max 60 mg; **20 mg** for ages 2–5 y) for **3–5 days**. Repeat
+        1–2 mg/kg/day** — max **20 mg/day under 2 y**, **30 mg/day at 2–5 y**,
+        40–60 mg in an older child — for **3–5 days**. Repeat
         the dose if the child vomits; consider IV steroids if oral cannot be
         retained. Tapering short courses (7–14 days) is not necessary. **IV
         hydrocortisone (4 mg/kg every 4 h) provides no benefit** and is only for

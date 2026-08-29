@@ -306,3 +306,59 @@ Read and dismissed with the reason, so they are not re-raised:
   200 mg**; the formulary says a **325 mg** ferrous sulfate tablet contains 65 mg
   elemental. Both are true of different salt forms, but a reader cannot tell which tablet
   is in front of them.
+
+---
+
+# ✅ 2026-08-28 — ALL TEN ANSWERED BY OE AND APPLIED
+
+Verified by re-running the comparison: **azithromycin, zinc, vitamin K,
+hydrocortisone and IV diazepam now carry identical values in both books.**
+
+| # | OE ruling | Applied |
+|---|---|---|
+| **1** 🔴 | Neonatal meningitis needs a **higher ampicillin dose than sepsis**; the §3.14 row under-treats the CSF. A **separate meningitis row** is needed. Cefotaxime frequency **increases** with postnatal age. | §3.9 rewritten with an explicit "do not use the §3.14 sepsis row"; **new meningitis row added to §3.14** (50 mg/kg q8h wk 1, q6h wk 2–4). ⚠️ **number not settled — see below** |
+| **2** 🔴 | **IV diazepam 0.2–0.3 mg/kg, max 10 mg.** 0.5 mg/kg is the rectal figure; rectal absorption is incomplete, which is why it is higher. 0.5 mg/kg IV is roughly double, and **16% of children had severe or life-threatening respiratory depression at recommended IV doses**. Max two benzodiazepine doses. | Chart 9 corrected to **0.2 mg/kg**; ProtocolBook formulary 0.3 → **0.2** to match its own p.20; both books gained the never-confuse-IV-with-rectal rule and the age-banded rectal doses |
+| **3** 🟡 | **Buccal or intranasal midazolam 0.3–0.5 mg/kg (max 10 mg)** first-line with no line; **IV lorazepam 0.1 mg/kg or IV diazepam 0.2 mg/kg** with a line. The level-1 claim is correct (OR 4.1, Cochrane/McIntyre; 9-RCT meta-analysis 2026). **Where only diazepam is stocked, rectal diazepam 0.5 mg/kg remains acceptable first-line** — an available drug beats an unstocked better one. | Chart 9 restructured accordingly; intranasal widened 0.2 → 0.3–0.5 mg/kg |
+| **4** 🟡 | **Day 1: 12 mg/kg (max 500 mg); days 2–5: 6 mg/kg/day (max 250 mg).** The 15/10 variant has no proven advantage and more GI upset. | `pb_043` corrected. **Both books now identical** |
+| **5** 🟡 | **Both figures were right — they are different indications.** Child tetany 0.5–1 mL/kg; **neonate 1–2 mL/kg**; hyperkalaemia 0.5 mL/kg (myocardial stabilisation, does not lower K⁺). Max ~10 mL, ≤ 100 mg/min in a child. **The defect was that neither book said which.** | Both books now **label every calcium dose by indication**, with the rate cap |
+| **6** 🟡 | **Hydrocortisone 2–4 mg/kg, max 100 mg in a child** (200 mg adult); same for anaphylaxis and transfusion reaction. An **adjunct of unproven benefit** that must never delay adrenaline. | ProtocolBook 5 → 2–4 mg/kg, cap 200 → 100 mg for a child; WHO 1–2 → 2–4 mg/kg. **Both books now identical** |
+| **7** 🟡 | **Print the age split: 10 mg/day under 6 months, 20 mg/day at 6 months and over**, 10–14 days. A single range risks the 20 mg dose in a young infant. | `pb_043` corrected. **Both books now identical** |
+| **8** 🟡 | **The split is at 1500 g, not 1 kg.** Above it, **1 mg IM** (the same as term) — not 0.5 mg. At or below it, **0.3–0.5 mg/kg**. A single IV dose is not recommended in a preterm infant. | ProtocolBook formulary corrected. **Both books now identical** |
+| **9** 🟡 | **2.5 mg for most children; 5 mg for an older or larger child (≈ ≥ 5 y or > 20–25 kg) or a severe attack.** Weight and severity, not a 2-year cutoff. ⚠️ OE marked this a **practice recommendation, not a cited guideline value.** | `pb_052` corrected, and the header records that the figure is uncited — revisit if a guideline value turns up |
+| **10** 🟡 | **1–2 mg/kg/day for 3–5 days, no taper.** Max **20 mg/day under 2 y, 30 mg/day at 2–5 y**, 40–60 mg older. 2 mg/kg **is** indicated in moderate-to-severe attacks. | WHO asthma page 1 → 1–2 mg/kg/day and the 2–5 y cap 20 → 30 mg. It had also disagreed with the WHO formulary, which already said 1–2 |
+
+## 🛑 THE ONE THING NOT CLOSED — neonatal meningitis ampicillin
+
+**OE's own reply gives two different figures, and the ProtocolBook prints a third.**
+
+- **OE answer 1** quotes the FDA neonatal-meningitis table: **100 mg/kg/day in week 1,
+  150 mg/kg/day in weeks 2–4** — which is exactly what §3.14 already said.
+- **OE answer 2** then says 150 mg/kg/day **is** the sepsis dose and is inadequate, and
+  to use **≥ 150 mg/kg/day in week 1 rising to 200 mg/kg/day** thereafter.
+- **The ProtocolBook prints 200 mg/kg/day in week 1 and 300 mg/kg/day thereafter**, and
+  300 mg/kg/day for Listeria in the older child.
+
+I applied **answer 2** (150 → 200 mg/kg/day) to the WHO volume, because it is the direct
+response to "is 150 adequate" and because it is strictly safer than the sepsis row that
+was there. **I did not touch the ProtocolBook.** So the two books still differ, and the
+number is not settled.
+
+**Question for OE.** For **confirmed or suspected neonatal meningitis**, give the
+ampicillin dose as **standalone lines with no citation after the number**:
+1. **≤ 7 days:** ___ mg/kg/day, and the dosing interval.
+2. **8–28 days:** ___ mg/kg/day, and the dosing interval.
+3. Is **300 mg/kg/day** in a neonate — what the other book prints — too much, or is it
+   the right Listeria/GBS cover?
+4. Your earlier reply gave both "100/150 mg/kg/day per the FDA table" **and** "150 is a
+   sepsis dose, use ≥150 rising to 200". Which is it?
+
+## 🔴 The finding behind the finding: two review cycles CONFIRMED the diazepam error
+
+`who_1_chart09_diazepam.yaml`'s own header records it. On **2026-06-18** a review
+"corrected" IV diazepam **0.25 → 0.5 mg/kg**, calling 0.25 subtherapeutic. On
+**2026-07** a second review **re-confirmed 0.5 as accurate**. Both were wrong: 0.25 sits
+inside the correct 0.2–0.3 range, and 0.5 is the rectal figure.
+
+**Neither review caught it, because both were reading that page on its own.** It took
+laying the two books side by side — the ProtocolBook prints 0.2 mg/kg IV — to see it.
+That is the argument for the cross-book pass, and for keeping the tooling.
