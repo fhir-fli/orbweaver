@@ -26,11 +26,11 @@ reliable dialysis; ICU monitoring is not routinely available.
 
 ---
 
-# ⚡ ONE ITEM OPEN. Everything else on this page is CLOSED.
+# ⚡ THREE ITEMS OPEN. Everything else on this page is CLOSED.
 
-**Ten findings came out of this pass. OE answered all ten and all ten are applied.**
-Only the neonatal-meningitis ampicillin **number** is unresolved, and it is the first
-section below. The ten question write-ups have been deleted now they are answered —
+**Ten findings came out of the dose pass. OE answered all ten and all ten are applied.**
+The neonatal-meningitis ampicillin **number** is still unresolved. **A second pass over
+DURATIONS and THRESHOLDS then added two more**, both below. The ten question write-ups have been deleted now they are answered —
 leaving answered questions sitting in a queue is how OE ended up re-answering settled
 ones twice.
 
@@ -60,6 +60,57 @@ ampicillin dose as **standalone lines with no citation after the number**:
    the right Listeria/GBS cover?
 4. Your earlier reply gave both "100/150 mg/kg/day per the FDA table" **and** "150 is a
    sepsis dose, use ≥150 rising to 200". Which is it?
+
+---
+
+## 🛑 OPEN 2 🟡 The two books give a well child TB contact DIFFERENT preventive regimens
+
+**What the ProtocolBook prints** (TB — diagnosis & systemic score):
+> Well child contacts who do NOT have TB: give **isoniazid preventive therapy 10 mg/kg
+> daily for 6 months**.
+
+**What the WHO volume prints** (tuberculosis):
+> **3HR — daily isoniazid + rifampicin × 3 months (all ages).**
+
+**The concern.** Both are WHO-endorsed TB preventive regimens, but they are different
+drugs for different lengths, and neither page mentions the other. A child contact gets
+six months of one drug or three months of two depending on which book is open. Adherence
+over six months in a district-hospital catchment is the whole problem TPT has, and the
+shorter rifamycin-based regimens exist because of it.
+
+**Questions.**
+1. For a **well child household contact of a smear-positive case**, which regimen should
+   a pocket reference print — **6H**, **3HR**, **3HP**, or **1HP**? Answer on its own
+   line, with no citation after it.
+2. Does the answer change for a **child living with HIV**, or one **under 5 years**?
+3. Is **6H still acceptable** where rifapentine or the fixed-dose combinations are not
+   stocked — which is the usual situation here?
+4. Give the **dose and duration** of the recommended regimen as standalone lines.
+
+---
+
+## 🛑 OPEN 3 🟡 The two books start OXYGEN at different saturations
+
+**The ProtocolBook prints `Start oxygen if SpO₂ < 94%`** on at least fourteen adult
+pages — sepsis, meningitis, heart failure, DKA, ACS, liver failure, convulsions,
+anaphylaxis, hypertension, alcohol intoxication and withdrawal, epistaxis, anaemia and
+paediatric DKA. Its own **paediatric pneumonia** page uses **< 90%**.
+
+**The WHO volume uses < 90%** as the threshold to give oxygen, throughout.
+
+**The concern.** Oxygen is the most rationed resource in this setting. A 94% trigger
+starts oxygen on a substantially larger group than a 90% trigger, and the two books
+disagree by four points on the same monitor. The ProtocolBook is also internally split:
+94% for adults, 90% for children.
+
+**Questions.**
+1. What SpO₂ threshold should a district hospital in northern Uganda print for
+   **starting oxygen in an adult**? One line, no citation after the number.
+2. What threshold for a **child**? One line.
+3. Is a **94%** trigger defensible where oxygen supply is limited, or does it consume
+   supply without benefit?
+4. Should the printed **target** differ from the printed **trigger** — and what target
+   should be printed for a patient at risk of hypercapnia?
 
 ---
 

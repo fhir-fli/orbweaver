@@ -50,6 +50,9 @@
 #   neonatal hypocalcaemia (2 mL/kg) and the other child tetany (0.6-1)
 #   and hyperkalaemic membrane stabilisation (0.5). All three are correct
 #   in context; the defect was that none of them said which.
+# Cross-book durations pass 2026-08-28: the PCP co-trimoxazole dose in this
+#   formulary entry was still the withdrawn 8 mg/kg/dose TID (= 24 mg/kg/day)
+#   after OE flag 4-1 capped it at 15-20 mg/kg/day.
 # ============================================================
 
 formulary:
@@ -471,7 +474,7 @@ formulary:
       dose: |
         **Children:**
         - Dosage: 4 mg/kg/dose TMP + 20 mg/kg/dose SMX/dose BD
-        - For interstitial pneumonia in children with HIV give 8 mg/kg/dose + SMZ 40 mg/kg/dose TMP TID × 21 days
+        - For interstitial pneumonia (PCP) in children with HIV: TMP 15–20 mg/kg/day + SMZ 75–100 mg/kg/day, in 3–4 divided doses, × 21 days (max TMP 960 mg/day). **Not** 8 mg/kg/dose TID — that is 24 mg/kg/day and above the ceiling
 
         **Adults:**
         - TMP 160 mg / SMX 800 mg PO every 12 hrs

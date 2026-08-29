@@ -7,6 +7,10 @@
 #   ceftriaxone ophthalmia cap of 125 mg, contradicting the 250 mg applied to
 #   S3.12.2 and S3.14 from OE flag 3-1. Corrected. It was missed the first time
 #   because that grep covered topics/ only and the formulary is a separate file.
+# Cross-book durations pass 2026-08-28: the PCP co-trimoxazole dose in this
+#   formulary entry was still the withdrawn 8 mg/kg TDS (= 24 mg/kg/day),
+#   three days after OE flag 4-1 capped it at 15-20 mg/kg/day and the PCP and
+#   severe-pneumonia TOPICS were corrected. The formulary was missed again.
 # ============================================================================
 formulary:
   id: "who-imci-a2-formulary"
@@ -448,7 +452,7 @@ formulary:
         regimen: "Oral: 4 mg/kg TMP + 20 mg/kg SMX twice a day"
         form: "Syrup (40 mg TMP + 200 mg SMX per 5 ml)"
         bands: ["2 ml", "3.5 ml", "6 ml", "8.5 ml", "—"]
-      notes: "For interstitial pneumonia (PCP) in HIV: 8 mg/kg TMP + 40 mg/kg SMX three times a day for 21 days. HIV co-trimoxazole PROPHYLAXIS (all HIV-exposed and HIV-infected children) is a lower single daily dose by weight band — see Chapter 8. Infant <1 month: ½ paediatric tablet or 1.25 ml syrup twice a day. Avoid in premature or jaundiced neonates."
+      notes: "For interstitial pneumonia (PCP) in HIV: trimethoprim 15–20 mg/kg/day (with sulfamethoxazole 75–100 mg/kg/day in the fixed combination), in 3–4 divided doses, for 21 days. Maximum 960 mg trimethoprim per day. NOT 8 mg/kg three times a day — that is 24 mg/kg/day and above the ceiling. HIV co-trimoxazole PROPHYLAXIS (all HIV-exposed and HIV-infected children) is a lower single daily dose by weight band — see Chapter 8. Infant <1 month: ½ paediatric tablet or 1.25 ml syrup twice a day. Avoid in premature or jaundiced neonates."
     - id: "deferoxamine"
       name: "Deferoxamine"
       class: "other"
