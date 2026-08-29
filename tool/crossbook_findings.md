@@ -359,3 +359,29 @@ Read and dismissed with the reason:
 **The other seven "(next page)" references in the book were checked and are correct** —
 each points within a multi-page topic, and the app really does paginate those
 (`topic_view.dart` iterates `topic.pages`), so the reader does swipe to a next page.
+
+
+---
+
+## ✅ 2026-08-29 — every ProtocolBook chart compared against the prose on its own page
+
+`tool/chart_vs_prose_audit.py`. The move that has found the worst errors here is
+comparing the book against itself; across books it caught an IV diazepam dose that two
+review cycles had confirmed. This asks it *within a page*: does the chart say what the
+paragraph beside it says?
+
+47 topics carry both a chart and prose or table blocks — 62 charts against 242 prose and
+table blocks. Doses are pulled from each side separately and compared per drug and unit.
+
+**One difference across all 47 topics, and it is not a contradiction.**
+
+`pb_042` paediatric convulsions, phenobarbitone: the chart carries **20 mg/kg, then a
+further 10 mg/kg, cumulative maximum 40**; the prose carries **20 mg/kg stat, then a
+further 5–10 mg/kg within 24 h, maintenance 5 mg/kg daily**. The prose paragraph is the
+**"Convulsions in the 1st month of life"** section and the chart is the **over-one-month**
+pathway. Both are internally coherent and each states its age group. No change.
+
+**This instrument is worth keeping, unlike the within-topic dose spread.** One hit across
+47 topics against 164 for the other, because comparing chart-side to prose-side is a real
+boundary, while "two doses somewhere in one topic" is not — a topic legitimately holds
+many drugs and many indications.
