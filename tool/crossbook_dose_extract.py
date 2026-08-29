@@ -41,10 +41,15 @@ ROOT = '/home/grey/dev/fhir/orbweaver/assets/books'
 OUTDIR = '/home/grey/dev/fhir/orbweaver/tool/crossbook'
 OUT = os.path.join(OUTDIR, 'doses.tsv')
 
+# All THREE books the app ships. WVEMS was left out of the first run and that
+# was wrong: the app puts three books in front of the same clinician, and a
+# two-book comparison is not a complete pass. WVEMS has no formulary.
 BOOKS = {
     'PB': 'protocolbook',
     'WHO': 'who_imci',
+    'WVEMS': 'wvems',
 }
+HAS_FORMULARY = {'protocolbook', 'who_imci'}
 
 # Names that appear in the text but not as a formulary entry, and spellings
 # that differ between the two books. Key = canonical name, value = the alternate
@@ -85,6 +90,46 @@ SYNONYMS = {
     'hydrochlorothiazide': ['hctz'],
     'pethidine': ['meperidine'],
     'sulfadoxine-pyrimethamine': ['sulphadoxine-pyrimethamine', 'sp'],
+}
+
+# WVEMS names its drug cards by BRAND or by ward shorthand — Ativan, Narcan,
+# Versed, Zofran, Toradol, Rocephin, Decadron, Keppra, Levophed, and Epi /
+# Nitro / Bicarb / D10 / TXA. 35 of its 50 drug cards matched nothing until
+# these were mapped, so most of the third book's doses were invisible.
+BRANDS = {
+    'lorazepam': ['ativan'],
+    'diphenhydramine': ['benadryl'],
+    'naloxone': ['narcan'],
+    'midazolam': ['versed'],
+    'ondansetron': ['zofran'],
+    'ketorolac': ['toradol'],
+    'ceftriaxone': ['rocephin'],
+    'dexamethasone': ['decadron'],
+    'levetiracetam': ['keppra'],
+    'noradrenaline': ['levophed'],
+    'haloperidol': ['haldol'],
+    'sodium bicarbonate': ['bicarb'],
+    'activated charcoal': ['charcoal'],
+    'dextrose': ['d10', 'd50', 'd25'],
+    'magnesium sulfate': ['magnesium'],
+    'tranexamic acid': ['txa'],
+    'adrenaline': ['epi', 'epi neb', 'epi drip', 'epi push'],
+    'phenylephrine': ['neo push', 'neo-synephrine'],
+    'metoprolol': ['lopressor'],
+    'cefazolin': ['ancef'],
+    'ipratropium': ['atrovent'],
+    'oxymetazoline': ['afrin'],
+    'hydroxocobalamin': ['cyanokit'],
+    'nitroglycerin': ['nitro', 'nitro drip', 'nitroglycerine', 'gtn'],
+    'hypertonic saline': ['3% saline'],
+    'amiodarone': [],
+    'etomidate': [],
+    'glucagon': [],
+    'propofol': [],
+    'rocuronium': [],
+    'succinylcholine': ['sux'],
+    'tetracaine': [],
+    'duodote': [],
 }
 
 # Drugs that are PRESCRIBED in the text of one or both books but are not a
@@ -162,6 +207,8 @@ def build_vocab():
     """Canonical drug name -> set of surface forms, from BOTH formularies."""
     vocab = {}
     for book_dir in BOOKS.values():
+        if book_dir not in HAS_FORMULARY:
+            continue
         path = os.path.join(ROOT, book_dir, 'formulary.yaml')
         with io.open(path, encoding='utf-8') as fh:
             doc = yaml.safe_load(fh)
@@ -187,6 +234,10 @@ def build_vocab():
         forms.update(a.lower() for a in alts)
     for name in EXTRA_DRUGS:
         vocab.setdefault(name, set()).add(name)
+    for canon, brands in BRANDS.items():
+        forms = vocab.setdefault(canon, set())
+        forms.add(canon)
+        forms.update(b.lower() for b in brands)
 
     # Surface forms too generic to match on their own. Kept deliberately short:
     # the first version stopped zinc, iron and folate and lost every one of
@@ -469,7 +520,9 @@ def main():
 
         # The formulary is walked per drug entry, with the drug pre-bound, so a
         # `regimen:` string that never repeats the drug's name still lands on
-        # the right drug.
+        # the right drug. WVEMS has none.
+        if book_dir not in HAS_FORMULARY:
+            continue
         files += 1
         with io.open(formulary_path, encoding='utf-8') as f:
             doc = yaml.safe_load(f)

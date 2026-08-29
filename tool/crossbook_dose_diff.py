@@ -74,14 +74,21 @@ def main():
             data[drug][book][unit][norm_value(value)].append(
                 (freq, topic, ctx, frag))
 
-    drugs = sorted(data)
-    both = [d for d in drugs if 'PB' in data[d] and 'WHO' in data[d]]
-    only_pb = [d for d in drugs if 'WHO' not in data[d]]
-    only_who = [d for d in drugs if 'PB' not in data[d]]
+    # Three books, so every PAIR is compared, not just ProtocolBook vs WHO.
+    # WVEMS was left out of the first run and that was wrong: the app puts all
+    # three in front of the same clinician.
+    BOOKS = ['PB', 'WHO', 'WVEMS']
+    PAIRS = [('PB', 'WHO'), ('PB', 'WVEMS'), ('WHO', 'WVEMS')]
 
-    print('%d drugs total · %d in BOTH books · %d ProtocolBook only · '
-          '%d WHO only' % (len(drugs), len(both), len(only_pb), len(only_who)),
-          flush=True)
+    drugs = sorted(data)
+    shared = [d for d in drugs
+              if sum(1 for b in BOOKS if b in data[d]) >= 2]
+    counts = {b: len([d for d in drugs if list(data[d]) == [b]]) for b in BOOKS}
+
+    print('%d drugs total · %d in two or more books · only-one-book: %s'
+          % (len(drugs), len(shared),
+             ', '.join('%s %d' % (b, counts[b]) for b in BOOKS)), flush=True)
+    both = shared
 
     ff = io.open(FULL, 'w', encoding='utf-8')
     cf = io.open(CAND, 'w', encoding='utf-8')
@@ -106,51 +113,48 @@ def main():
     n_cand = 0
     cand_drugs = 0
     for drug in both:
-        pb = data[drug]['PB']
-        who = data[drug]['WHO']
-        units = sorted(set(pb) | set(who))
+        present = [b for b in BOOKS if b in data[drug]]
+        units = sorted({u for b in present for u in data[drug][b]})
 
         ff.write('## %s\n\n' % drug)
         drug_cands = []
         for unit in units:
-            pv = set(pb.get(unit, {}))
-            wv = set(who.get(unit, {}))
-            if not pv or not wv:
+            vals = {b: set(data[drug][b].get(unit, {})) for b in present}
+            live = [b for b in present if vals[b]]
+            if len(live) < 2:
                 continue
+            differs = any(vals[a] != vals[c]
+                          for a, c in PAIRS if a in live and c in live)
             mark = ''
-            if pv != wv and unit not in WEAK_UNITS:
+            if differs and unit not in WEAK_UNITS:
                 mark = '  ⚠️'
-                drug_cands.append((unit, sorted(pv - wv), sorted(wv - pv),
-                                   sorted(pv & wv)))
+                for a, c in PAIRS:
+                    if a in live and c in live and vals[a] != vals[c]:
+                        drug_cands.append((unit, a, c,
+                                           sorted(vals[a] - vals[c]),
+                                           sorted(vals[c] - vals[a]),
+                                           sorted(vals[a] & vals[c])))
             ff.write('**%s**%s\n' % (unit, mark))
-            ff.write('- PB: %s\n' % ', '.join(sorted(pv, key=_k)))
-            ff.write('- WHO: %s\n' % ', '.join(sorted(wv, key=_k)))
+            for b in live:
+                ff.write('- %s: %s\n' % (b, ', '.join(sorted(vals[b], key=_k))))
             ff.write('\n')
         ff.flush()
 
         if drug_cands:
             cand_drugs += 1
             cf.write('## %s\n\n' % drug)
-            for unit, only_p, only_w, shared in drug_cands:
+            for unit, ba, bc, only_a, only_c, sh in drug_cands:
                 n_cand += 1
-                cf.write('### %s %s\n\n' % (drug, unit))
-                if shared:
-                    cf.write('Shared: %s\n\n'
-                             % ', '.join(sorted(shared, key=_k)))
-                if only_p:
-                    cf.write('**ProtocolBook only:** %s\n\n'
-                             % ', '.join(sorted(only_p, key=_k)))
-                    for v in sorted(only_p, key=_k):
-                        for freq, topic, ctx, frag in pb[unit][v][:2]:
-                            cf.write('- `%s %s` %s — *%s* › %s\n  > %s\n'
-                                     % (v, unit, ('(%s)' % freq) if freq else '',
-                                        topic, ctx, frag[:220]))
-                    cf.write('\n')
-                if only_w:
-                    cf.write('**WHO only:** %s\n\n'
-                             % ', '.join(sorted(only_w, key=_k)))
-                    for v in sorted(only_w, key=_k):
-                        for freq, topic, ctx, frag in who[unit][v][:2]:
+                cf.write('### %s %s — %s vs %s\n\n' % (drug, unit, ba, bc))
+                if sh:
+                    cf.write('Shared: %s\n\n' % ', '.join(sorted(sh, key=_k)))
+                for book, vals in ((ba, only_a), (bc, only_c)):
+                    if not vals:
+                        continue
+                    cf.write('**%s only:** %s\n\n'
+                             % (book, ', '.join(sorted(vals, key=_k))))
+                    for v in sorted(vals, key=_k):
+                        for freq, topic, ctx, frag in data[drug][book][unit][v][:2]:
                             cf.write('- `%s %s` %s — *%s* › %s\n  > %s\n'
                                      % (v, unit, ('(%s)' % freq) if freq else '',
                                         topic, ctx, frag[:220]))
@@ -159,11 +163,10 @@ def main():
         print('%s: %d units compared, %d candidate units'
               % (drug, len(units), len(drug_cands)), flush=True)
 
-    ff.write('\n---\n\n## Drugs dosed in only one book\n\n')
-    ff.write('**ProtocolBook only (%d):** %s\n\n'
-             % (len(only_pb), ', '.join(only_pb)))
-    ff.write('**WHO only (%d):** %s\n\n'
-             % (len(only_who), ', '.join(only_who)))
+    ff.write('\n---\n\n## Drugs dosed in only ONE book\n\n')
+    for b in BOOKS:
+        solo = [d for d in drugs if list(data[d]) == [b]]
+        ff.write('**%s only (%d):** %s\n\n' % (b, len(solo), ', '.join(solo)))
     ff.close()
 
     cf.write('\n---\n\n**%d candidate drug+unit pairs across %d drugs.**\n'

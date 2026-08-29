@@ -6,4 +6,5 @@ misoprostol	misoprostol
 oxytocin	oxytocin
 silver sulfadiazine	silver sulfadiazine
 sulfadoxine-pyrimethamine	sulfadoxine-pyrimethamine; sulphadoxine-pyrimethamine
+tetracaine	tetracaine
 tetracaine, adrenaline, cocaine	tetracaine, adrenaline, cocaine
