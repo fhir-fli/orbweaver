@@ -11,6 +11,14 @@
 #   mortality or sequelae in low-income settings and not demonstrated in
 #   HIV-positive patients. Restricted to early pneumococcal/Hib.
 #   Glucose bolus 5 -> 2 ml/kg (flag 1-2).
+# 2026-08-29: CHILD meningitis doses raised to the meningitis dose.
+#   Cefotaxime was 50 mg/kg q6h = 200 mg/kg/day; a child over 4 weeks needs
+#   225-300, so 75 mg/kg q6-8h. Ampicillin was 50 mg/kg q6h = 200; the child
+#   meningitis dose is 300 mg/kg/day (75 mg/kg q6h, max 12 g/day). Ceftriaxone
+#   at 100 mg/kg/day was already correct; its max 4 g/day is now stated.
+#   The OTHER BOOK ALREADY HAD ALL THREE RIGHT (pp.54-55). The cross-book dose
+#   pass saw this difference and dismissed it as indication and age - that
+#   dismissal was wrong, and is corrected in the findings record.
 # ============================================================
 
 topic:
@@ -73,14 +81,20 @@ topic:
         possible, **treat immediately** (delay of > 6 h sharply raises mortality
         and sequelae). **Ceftriaxone is the preferred agent:**
         - **Ceftriaxone 50 mg/kg IM/IV every 12 h**, **or 100 mg/kg once daily**
-          (deep IM or slow IV over 30–60 min); **or Cefotaxime 50 mg/kg IM/IV
-          every 6 h**.
+          (deep IM or slow IV over 30–60 min) — **maximum 4 g/day**. Beyond the
+          neonatal period this is the pragmatic choice: once- or twice-daily
+          dosing where nursing is stretched.
+        - **Or cefotaxime 75 mg/kg IM/IV every 6–8 h (225–300 mg/kg/day).**
+          🛑 **Not 50 mg/kg every 6 h** — that is 200 mg/kg/day, below the
+          meningitis dose for a child over 4 weeks.
         - Where **ceftriaxone-resistant S. pneumoniae exceeds 1%**, add
           **vancomycin 60 mg/kg/day IV** pending susceptibilities. Where
           resistance is low, the cephalosporin **alone** is appropriate.
         - **Last-resort** (only if cephalosporins are unavailable and there is no
           known chloramphenicol/β-lactam resistance): **chloramphenicol 25 mg/kg
-          IM/IV every 6 h + ampicillin 50 mg/kg every 6 h**, or chloramphenicol +
+          IM/IV every 6 h + ampicillin 75 mg/kg every 6 h (300 mg/kg/day,
+          max 12 g/day)** — the meningitis dose, not the 50 mg/kg sepsis dose —
+          or chloramphenicol +
           **benzylpenicillin 60 mg/kg (100 000 U/kg) every 6 h**.
         - **Duration:** **7–10 days** for most; **5–7 days** may suffice for an
           uncomplicated case with prompt improvement; **extend to 10–14 days**

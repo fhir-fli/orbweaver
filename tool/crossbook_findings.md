@@ -579,3 +579,53 @@ is for postoperative respiratory depression, a different indication.
 formulary, because the page supplies a context the lookup does not.** Moving doses into
 the lookup is not a clerical act, and this pass proves it — two CNS regimens had been sitting
 in the book, correct-looking, until they were read without their page.
+
+
+---
+
+## 🔴 2026-08-29 — the WHO child meningitis regimen was at the SEPSIS dose, and I had dismissed it
+
+Extending the CNS cross-check to the beta-lactams settled the ampicillin question left
+open earlier and exposed a second, larger one.
+
+**The meningitis doses, by age:**
+
+| | ≤ 7 days | 1–4 weeks | > 4 weeks | Adult |
+|---|---|---|---|---|
+| **Ampicillin** | 150 mg/kg/day q8h | 200 mg/kg/day q6–8h | **300 mg/kg/day q6h** (max 12 g) | 12 g/day q4h |
+| **Cefotaxime** | 100–150 q8–12h | 150–200 q6–8h | **225–300 q6–8h** (max 8–12 g) | 8–12 g/day q4–6h |
+| **Ceftriaxone** | avoid — use cefotaxime | avoid | 80–100 mg/kg/day, **max 4 g** | 4 g/day q12h |
+| **Cefepime** | — | — | 150 mg/kg/day q8h (max 6 g) | 6 g/day q8h |
+
+**The ProtocolBook already had all three right** — ampicillin 75 mg/kg q6h (300/day),
+cefotaxime 75 mg/kg q6–8h (225–300), ceftriaxone 100 mg/kg/day max 4 g.
+
+**The WHO volume was dosing a child with meningitis at the sepsis dose:** cefotaxime
+50 mg/kg q6h (**200** mg/kg/day) and ampicillin 50 mg/kg q6h (**200**). Both raised; the
+ceftriaxone 100 mg/kg/day was already right and now states its 4 g cap.
+
+### ⚠️ I dismissed this difference when the dose pass found it
+
+The cross-book record says: *"Ampicillin, cefotaxime, ceftriaxone, gentamicin, amoxicillin
+outside neonatal meningitis — the differences track indication and age, and each book's
+figure is internally consistent with its own weight bands."*
+
+**That was wrong.** The books differed because one was at the meningitis dose and the
+other at the sepsis dose, for the same disease in the same age group. "Indication and age"
+was the right shape of explanation and the wrong instance of it, and it closed the item
+without a source being consulted. The neonatal ampicillin question got adjudicated because
+it was flagged 🔴; this one sat one line below it in the same dismissal list.
+
+**What to take from it:** a dismissal that says "different indication" has to name the two
+indications. If it cannot, it is a guess. The dose pass's dismissal list should be re-read
+with that test applied.
+
+### Beta-lactam choice in this setting
+
+Cefotaxime and cefepime need q6–8h dosing — several infusions a day where nursing is
+stretched. **Beyond the neonatal period ceftriaxone's once- or twice-daily dosing is the
+pragmatic choice**, with cefotaxime reserved for neonates and cefepime or meropenem for
+suspected resistant gram-negative or healthcare-associated disease. Ampicillin is added
+whenever Listeria is possible — neonates and the immunocompromised. Cefepime is **not**
+for empiric community meningitis in a child: the label records insufficient data for
+paediatric *H. influenzae* type b.
