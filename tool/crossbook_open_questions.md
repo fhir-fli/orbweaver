@@ -15,8 +15,8 @@ pasting it; images have come through intact every time.
 paediatric-heavy, malaria-endemic. Limited drug availability; no reliable dialysis; ICU
 monitoring is not routinely available.
 
-When one is answered and applied, **delete it from this file** and record the ruling in
-`crossbook_findings.md`.
+> Note to self, not part of any question: when one is answered and applied, delete it
+> from this file and record the ruling in the findings file.
 
 ---
 
