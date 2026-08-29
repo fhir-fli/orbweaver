@@ -48,6 +48,11 @@
 #     0.05 mg/kg in OP poisoning. Since the regimen doubles q5min the
 #     practical difference is one cycle — low risk either way, but
 #     worth an OE confirmation of the starting dose.
+# 2026-08-29 loop-renderer pass: atropine titration is now variant: cycle -
+#   bolus -> check the atropinisation endpoints -> not yet -> DOUBLE and back
+#   to the bolus, exiting to the maintenance infusion. It was a severity split
+#   in which the doubling was one bullet inside a box and the chart never
+#   returned to the endpoint check.
 # ============================================================
 
 topic:
@@ -74,44 +79,52 @@ topic:
     # branches are semantically flexible. The paediatric diazepam weight table
     # stays a table below the chart.
     - type: "flowchart"
-      variant: "severity"
-      entry_chain:
-        - text: "Organophosphate / carbamate exposure — diagnosis is on a clinical basis"
-          shape: "stadium"
-        - text: "SLUDGE-BBB: Salivation · Lacrimation · Urination · Diarrhoea · Gastric cramping · Emesis · Bronchorrhoea · Bronchospasm · Bradycardia. Also profuse sweating, convulsions and coma, fasciculations, constricted pupils"
-          shape: "rectangle"
-      branches:
+      variant: "cycle"
+      # Titration loop (loop taxonomy 2): atropine is doubled and repeated every
+      # 5 minutes until the atropinisation endpoints are met, then the exit is a
+      # maintenance infusion. Drawn as a severity split, the doubling was a single
+      # bullet inside a box and the chart never returned to the endpoint check.
+      nodes:
+        - title: "Organophosphate / carbamate exposure — diagnosis is on a clinical basis"
+          bullets:
+            - "**SLUDGE-BBB:** Salivation · Lacrimation · Urination · Diarrhoea · Gastric cramping · Emesis · Bronchorrhoea · Bronchospasm · Bradycardia"
+            - "Also profuse sweating, convulsions and coma, fasciculations, constricted pupils"
         - id: "atropine"
-          label: "Treatment — atropine bolus"
+          title: "Atropine bolus"
           severity: "emergency"
-          criteria:
-            - "Children: 0.02 mg/kg IV"
-            - "Adults: 2 mg IV"
-          actions:
-            - text: "Double the previous dose and repeat every 5 minutes until atropinisation"
-              kind: "medication_administration"
-              timing: "every 5 min"
-            - text: "Endpoints: pulmonary secretions dry (improved oxygenation, easier breathing), pulse > 80/min, SBP > 80 mmHg"
-              kind: "assessment"
-        - id: "convulsions"
-          label: "Convulsions — diazepam"
-          severity: "priority"
-          criteria:
-            - "Children: rectal diazepam 2.5 mg suppositories by weight (table below)"
-            - "Or IV diazepam 0.2 mg/kg (children), max 10 mg"
-            - "Adults: 10 mg IV"
-          actions:
-            - text: "Repeat as necessary if convulsions occur"
-              kind: "medication_administration"
-      convergence:
-        text: "Maintenance after atropinisation"
-        shape: "rounded_rectangle"
-        bullets:
-          - text: "Mix the total atropine given as boluses into NS or D5%"
-          - text: "Patients < 25 kg: 250 mL, run at 50 mL/hr"
-          - text: "Patients > 25 kg: 500 mL, run at 100 mL/hr"
-          - text: "Monitor hourly for recurrent symptoms or over-atropinisation, and adjust the rate"
-
+          bullets:
+            - "Children: **0.02 mg/kg IV** · Adults: **2 mg IV**"
+          branches:
+            - label: "Convulsions"
+              side: "right"
+              box:
+                title: "Diazepam — treat the fit alongside the atropine"
+                severity: "priority"
+                bullets:
+                  - "Children: rectal diazepam 2.5 mg suppositories by weight (table below)"
+                  - "Or IV diazepam 0.2 mg/kg (children), max 10 mg"
+                  - "Adults: 10 mg IV"
+                  - "Repeat as necessary if convulsions recur"
+        - shape: "decision"
+          title: "Atropinised? Pulmonary secretions dry (improved oxygenation, easier breathing), pulse > 80/min, SBP > 80 mmHg"
+          down_label: "Yes — atropinised"
+          branches:
+            - label: "Not yet"
+              side: "left"
+              box:
+                title: "DOUBLE the previous dose"
+                severity: "emergency"
+                bullets:
+                  - "Give the doubled dose and reassess the endpoints"
+                  - "There is no fixed ceiling — very large total doses may be needed"
+              loop_to: "atropine"
+              loop_label: "every 5 min"
+        - title: "Maintenance after atropinisation"
+          bullets:
+            - "Mix the total atropine given as boluses into NS or D5%"
+            - "Patients < 25 kg: 250 mL, run at 50 mL/hr"
+            - "Patients > 25 kg: 500 mL, run at 100 mL/hr"
+            - "Monitor hourly for recurrent symptoms or over-atropinisation, and adjust the rate"
     - type: "prose"
       title: "Rectal diazepam by weight"
       markdown: |
