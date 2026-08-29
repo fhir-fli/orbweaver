@@ -26,91 +26,13 @@ reliable dialysis; ICU monitoring is not routinely available.
 
 ---
 
-# ⚡ THREE ITEMS OPEN. Everything else on this page is CLOSED.
-
-**Ten findings came out of the dose pass. OE answered all ten and all ten are applied.**
-The neonatal-meningitis ampicillin **number** is still unresolved. **A second pass over
-DURATIONS and THRESHOLDS then added two more**, both below. The ten question write-ups have been deleted now they are answered —
-leaving answered questions sitting in a queue is how OE ended up re-answering settled
-ones twice.
-
 ---
 
-## 🛑 THE ONE THING NOT CLOSED — neonatal meningitis ampicillin
+# ⚡ NO QUESTIONS LIVE HERE.
 
-**OE's own reply gives two different figures, and the ProtocolBook prints a third.**
-
-- **OE answer 1** quotes the FDA neonatal-meningitis table: **100 mg/kg/day in week 1,
-  150 mg/kg/day in weeks 2–4** — which is exactly what §3.14 already said.
-- **OE answer 2** then says 150 mg/kg/day **is** the sepsis dose and is inadequate, and
-  to use **≥ 150 mg/kg/day in week 1 rising to 200 mg/kg/day** thereafter.
-- **The ProtocolBook prints 200 mg/kg/day in week 1 and 300 mg/kg/day thereafter**, and
-  300 mg/kg/day for Listeria in the older child.
-
-I applied **answer 2** (150 → 200 mg/kg/day) to the WHO volume, because it is the direct
-response to "is 150 adequate" and because it is strictly safer than the sepsis row that
-was there. **I did not touch the ProtocolBook.** So the two books still differ, and the
-number is not settled.
-
-**Question for OE.** For **confirmed or suspected neonatal meningitis**, give the
-ampicillin dose as **standalone lines with no citation after the number**:
-1. **≤ 7 days:** ___ mg/kg/day, and the dosing interval.
-2. **8–28 days:** ___ mg/kg/day, and the dosing interval.
-3. Is **300 mg/kg/day** in a neonate — what the other book prints — too much, or is it
-   the right Listeria/GBS cover?
-4. Your earlier reply gave both "100/150 mg/kg/day per the FDA table" **and** "150 is a
-   sepsis dose, use ≥150 rising to 200". Which is it?
-
----
-
-## 🛑 OPEN 2 🟡 The two books give a well child TB contact DIFFERENT preventive regimens
-
-**What the ProtocolBook prints** (TB — diagnosis & systemic score):
-> Well child contacts who do NOT have TB: give **isoniazid preventive therapy 10 mg/kg
-> daily for 6 months**.
-
-**What the WHO volume prints** (tuberculosis):
-> **3HR — daily isoniazid + rifampicin × 3 months (all ages).**
-
-**The concern.** Both are WHO-endorsed TB preventive regimens, but they are different
-drugs for different lengths, and neither page mentions the other. A child contact gets
-six months of one drug or three months of two depending on which book is open. Adherence
-over six months in a district-hospital catchment is the whole problem TPT has, and the
-shorter rifamycin-based regimens exist because of it.
-
-**Questions.**
-1. For a **well child household contact of a smear-positive case**, which regimen should
-   a pocket reference print — **6H**, **3HR**, **3HP**, or **1HP**? Answer on its own
-   line, with no citation after it.
-2. Does the answer change for a **child living with HIV**, or one **under 5 years**?
-3. Is **6H still acceptable** where rifapentine or the fixed-dose combinations are not
-   stocked — which is the usual situation here?
-4. Give the **dose and duration** of the recommended regimen as standalone lines.
-
----
-
-## 🛑 OPEN 3 🟡 The two books start OXYGEN at different saturations
-
-**The ProtocolBook prints `Start oxygen if SpO₂ < 94%`** on at least fourteen adult
-pages — sepsis, meningitis, heart failure, DKA, ACS, liver failure, convulsions,
-anaphylaxis, hypertension, alcohol intoxication and withdrawal, epistaxis, anaemia and
-paediatric DKA. Its own **paediatric pneumonia** page uses **< 90%**.
-
-**The WHO volume uses < 90%** as the threshold to give oxygen, throughout.
-
-**The concern.** Oxygen is the most rationed resource in this setting. A 94% trigger
-starts oxygen on a substantially larger group than a 90% trigger, and the two books
-disagree by four points on the same monitor. The ProtocolBook is also internally split:
-94% for adults, 90% for children.
-
-**Questions.**
-1. What SpO₂ threshold should a district hospital in northern Uganda print for
-   **starting oxygen in an adult**? One line, no citation after the number.
-2. What threshold for a **child**? One line.
-3. Is a **94%** trigger defensible where oxygen supply is limited, or does it consume
-   supply without benefit?
-4. Should the printed **target** differ from the printed **trigger** — and what target
-   should be printed for a patient at risk of hypercapnia?
+**This file is the RECORD: what was ruled, where it was applied, and what was checked and
+dismissed with the reason.** The open questions are in `crossbook_open_questions.md` —
+three of them — and that file contains nothing but questions.
 
 ---
 
