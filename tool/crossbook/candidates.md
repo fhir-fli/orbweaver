@@ -40,8 +40,8 @@ Shared: 0.25
 
 - `1 mg`  — *Paediatric Advanced Life Support* › Paediatric Advanced Life Support › p.13 · PALS flowchart › < 60 bpm (or no pulse)
   > Epinephrine 0.1 ml/kg of 0.1 mg/mL (1:10,000), max 10 ml (= 1 mg). If only 1 mg/mL (1:1,000) is stocked, dilute 1 ml in 9 ml normal saline — never give 1:1,000 undiluted IV
-- `1 mg`  — *Adult Cardiac Arrest* › Adult Cardiac Arrest › p.14 · ACLS branches › No Pulse
-  > Epinephrine 1 mg IV in 10 ml normal saline, followed by 20 ml normal saline flush
+- `1 mg` (every 3–5 min) — *Adult Cardiac Arrest* › Adult Cardiac Arrest › p.14 · ACLS branches › Begin CPR — 2 minutes
+  > Continuous compressions until bag-valve mask available | 30 compressions : 2 breaths | Attach O2 to bag-valve mask | Epinephrine 1 mg IV in 10 ml normal saline, followed by a 20 ml flush — repeat every 3–5 minutes, NOT e
 
 **WHO only:** 0.3, 0.5, 5
 
@@ -222,36 +222,8 @@ Shared: 1
 
 Shared: 500
 
-**WHO only:** 5-7.5, 7.5-10, 10-12.5, 12.5-15, 15-17.5, 17.5-20, 20-22.5, 20-30, 30-40, 40-50, 50-60, 60-70, 70-80, 80-90, 250
+**WHO only:** 250
 
-- `5-7.5 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
-- `7.5-10 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
-- `10-12.5 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
-- `12.5-15 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
-- `15-17.5 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
-- `17.5-20 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
-- `20-22.5 mg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
-- `20-30 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
-- `30-40 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
-- `40-50 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
-- `50-60 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
-- `60-70 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
-- `70-80 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
-- `80-90 mg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
 - `250 mg` (q12h;q8h) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
   > Ampicillin | 50 mg/kg IM/IV — wk 1 q12h; wk 2–4 q8h | 250 mg vial + 1.3 ml water → 250 mg/1.5 ml | 0.3–0.6 ml | 0.6–0.9 ml | 0.9–1.2 ml | 1.2–1.5 ml | 1.5–2.0 ml | 2.0–2.5 ml | 2.5–3.0 ml
 
@@ -259,41 +231,33 @@ Shared: 500
 
 Shared: 50
 
-**PB only:** 75, 100
+**PB only:** 75
 
 - `75 mg/kg`  — *Pediatric Meningitis* › Pediatric Meningitis › pp.54–55 · recognition + Rx cascade › Treatment
   > Ampicillin 75 mg/kg IV 6-hourly (= 300 mg/kg/day) — for Listeria
 - `75 mg/kg`  — *Pediatric Meningitis* › Pediatric Meningitis › pp.54–55 · recognition + Rx cascade › Treatment
   > Ampicillin 75 mg/kg IV 6-hourly — Listeria risk continues through this window
-- `100 mg/kg` (q12h;q8h) — *Neonatal Sepsis — Treatment* › Neonatal Sepsis — Treatment › pp.86–87 · < 28 days · antibiotics · duration › Antibiotic treatment
-  > If concern for meningitis: ampicillin 100 mg/kg q8h (q12h if in the 1st week) PLUS cefotaxime 50 mg/kg q8h (q12h if in the 1st week)
 
-**WHO only:** 5, 20, 25-50
+**WHO only:** 25-50
 
-- `5 mg/kg` (daily) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > | Maint 5 mg/kg daily oral (or IV over 30 min) | | 5–7.5 mg | 7.5–10 mg | 10–12.5 mg | 12.5–15 mg | 15–17.5 mg | 17.5–20 mg | 20–22.5 mg
-- `20 mg/kg`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Caffeine citrate | Loading 20 mg/kg oral (or IV over 30 min) | Calculate the exact dose | 20–30 mg | 30–40 mg | 40–50 mg | 50–60 mg | 60–70 mg | 70–80 mg | 80–90 mg
 - `25-50 mg/kg`  — *Preoperative Care* › Preoperative Care › 9.1.1 · consent · fitness · fasting · antibiotics › Surgical antibiotic prophylaxis
   > Bowel surgery: ampicillin (25–50 mg/kg IM/IV) + gentamicin (5–7.5 mg/kg IM/IV) + metronidazole (10 mg/kg).
 
 ### ampicillin mg/kg/day — PB vs WHO
 
+Shared: 100, 150, 200
+
 **PB only:** 300
 
 - `300 mg/kg/day`  — *Pediatric Meningitis* › Pediatric Meningitis › pp.54–55 · recognition + Rx cascade › Treatment
   > Ampicillin 75 mg/kg IV 6-hourly (= 300 mg/kg/day) — for Listeria
+- `300 mg/kg/day`  — *Neonatal Sepsis — Treatment* › Neonatal Sepsis — Treatment › pp.86–87 · < 28 days · antibiotics · duration › Antibiotic treatment
+  > 🛑 Do not carry the older child's 300 mg/kg/day into a neonate. 300 mg/kg/day is correct beyond 4 weeks and is above the neonatal ceiling
 
-**WHO only:** 100-150, 150, 200
+**WHO only:** 100-150
 
-- `100-150 mg/kg/day` (q12h;q8h) — *Neonatal Meningitis* › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment › 🛑 **Meningitis needs a HIGHER ampicillin dose than sepsis. Do not use the §3.14 sepsis row.
+- `100-150 mg/kg/day` (q12h;q8h) — *Neonatal Meningitis* › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment › 🛑 **Meningitis needs a HIGHER ampicillin dose than sepsis. Do not use the §3.14 sepsis row.** In a **term** neonate:
   > The §3.14 figure (50 mg/kg q12h then q8h, 100–150 mg/kg/day) is the septicaemia dose and does not reliably treat the CSF.
-- `150 mg/kg/day` (every 8 h) — *Neonatal Meningitis* › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment › 🛑 **Meningitis needs a HIGHER ampicillin dose than sepsis. Do not use the §3.14 sepsis row.
-  > ≤ 7 days: 50 mg/kg every 8 h (150 mg/kg/day)
-- `200 mg/kg/day` (every 6 h) — *Neonatal Meningitis* › 3.9 · suspect, LP, 3 weeks of antibiotics › Treatment › 🛑 **Meningitis needs a HIGHER ampicillin dose than sepsis. Do not use the §3.14 sepsis row.
-  > 8–28 days: 50 mg/kg every 6 h (200 mg/kg/day)
-- `200 mg/kg/day` (q6h;q8h) — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
-  > Ampicillin (MENINGITIS) | 50 mg/kg IM/IV — wk 1 q8h; wk 2–4 q6h (150→200 mg/kg/day) | | same volumes as above | | | | | |
 
 ## artemether
 
@@ -622,22 +586,20 @@ Shared: 20, 40, 80, 100, 200, 400
 
 ### co-trimoxazole mg/kg/day — PB vs WHO
 
-Shared: 15-20
+Shared: 15-20, 24
 
 **PB only:** 75-100
 
+- `75-100 mg/kg/day` (tid) — *Formulary* › Co-trimoxazole (Trimethoprim–Sulfamethoxazole, TMP-SMX) › Co-trimoxazole (Trimethoprim–Sulfamethoxazole, TMP-SMX)
+  > For interstitial pneumonia (PCP) in children with HIV: TMP 15–20 mg/kg/day + SMZ 75–100 mg/kg/day, in 3–4 divided doses, × 21 days (max TMP 960 mg/day). Not 8 mg/kg/dose TID — that is 24 mg/kg/day and above the ceiling A
 - `75-100 mg/kg/day`  — *Formulary* › Co-trimoxazole (Trimethoprim–Sulfamethoxazole, TMP-SMX) › Co-trimoxazole (Trimethoprim–Sulfamethoxazole, TMP-SMX)
   > PCP pneumonia: TMP 15–20 mg/kg/day, SMX 75–100 mg/kg/day, divided in 4 equal doses
 
-**WHO only:** 8, 20, 24, 40
+**WHO only:** 8, 20, 40
 
 - `8 mg/kg/day`  — *Urinary Tract Infection* › Urinary Tract Infection › 6.8 · check the urine · amox-clav / cephalexin › Treatment
   > Co-trimoxazole (TMP 8 mg/kg/day + SMX 40 mg/kg/day in 2 doses) is now unreliable as empirical therapy — E. coli resistance exceeds 20–30% in many settings — so use it only where local susceptibility exceeds 80%. Adjust t
 - `20 mg/kg/day` (every 8 h) — *Pneumocystis Pneumonia (PCP)* › Pneumocystis Pneumonia (PCP) › 8.4.2 · suspect early · high-dose co-trimoxazole › Treatment
-  > High-dose co-trimoxazole — trimethoprim 15–20 mg/kg/day (with sulfamethoxazole 75–100 mg/kg/day in the fixed combination), in 3–4 divided doses (q6–8h) for 3 weeks (first-line). Maximum 960 mg trimethoprim per day. The 2
-- `24 mg/kg/day` (every 8 h) — *Severe Pneumonia* › Severe Pneumonia › 4.2.1 · admit · oxygen · IV antibiotics › If not improving — other diagnoses
-  > HIV / PCP: in HIV-exposed children, Pneumocystis pneumonia (PCP), often at 4–6 months, is an important cause — treat as severe pneumonia, and add high-dose co-trimoxazole — trimethoprim 15–20 mg/kg/day (with sulfamethoxa
-- `24 mg/kg/day` (every 8 h) — *Pneumocystis Pneumonia (PCP)* › Pneumocystis Pneumonia (PCP) › 8.4.2 · suspect early · high-dose co-trimoxazole › Treatment
   > High-dose co-trimoxazole — trimethoprim 15–20 mg/kg/day (with sulfamethoxazole 75–100 mg/kg/day in the fixed combination), in 3–4 divided doses (q6–8h) for 3 weeks (first-line). Maximum 960 mg trimethoprim per day. The 2
 - `40 mg/kg/day`  — *Urinary Tract Infection* › Urinary Tract Infection › 6.8 · check the urine · amox-clav / cephalexin › Treatment
   > Co-trimoxazole (TMP 8 mg/kg/day + SMX 40 mg/kg/day in 2 doses) is now unreliable as empirical therapy — E. coli resistance exceeds 20–30% in many settings — so use it only where local susceptibility exceeds 80%. Adjust t
@@ -1156,6 +1118,15 @@ Shared: 3
 
 ## isoniazid
 
+### isoniazid mg — PB vs WHO
+
+Shared: 300
+
+**PB only:** 600
+
+- `600 mg` (daily) — *TB — Diagnosis & Systemic Score* › p.71 · suspect / diagnose / Keith Edwards › Diagnosis › Well child contacts who do NOT have TB — give preventive therapy.** Treat every child household contact, and do not wait for a test.
+  > First line: 3HR — isoniazid 10mg/kg/day (7–15, max 300mg) + rifampicin 15mg/kg/day (10–20, max 600mg), daily for 3 months. The shorter rifamycin course completes far more often than 6 months of one drug, at equal efficac
+
 ### isoniazid mg/kg — PB vs WHO
 
 Shared: 10, 15, 35
@@ -1180,6 +1151,24 @@ Shared: 10, 15, 35
   > Adults: 25 mg/kg PO QD
 - `30-40 mg/kg`  — *TB — Treatment* › TB — Treatment › p.73 · LFT check · regimen · steroids › First 2 months treatment
   > Pyrazinamide | 35 mg/kg | 30–40 mg/kg | 1.5 g/day
+
+### isoniazid mg/kg/day — PB vs WHO
+
+Shared: 10
+
+**PB only:** 15
+
+- `15 mg/kg/day` (daily) — *TB — Diagnosis & Systemic Score* › p.71 · suspect / diagnose / Keith Edwards › Diagnosis › Well child contacts who do NOT have TB — give preventive therapy.** Treat every child household contact, and do not wait for a test.
+  > First line: 3HR — isoniazid 10mg/kg/day (7–15, max 300mg) + rifampicin 15mg/kg/day (10–20, max 600mg), daily for 3 months. The shorter rifamycin course completes far more often than 6 months of one drug, at equal efficac
+
+**WHO only:** 15-20, 22.5-30, 35-45
+
+- `15-20 mg/kg/day`  — *Tuberculous Meningitis* › Tuberculous Meningitis › 6.3.3 · HRZE 12 months · dexamethasone › Treatment — two WHO-recommended options
+  > 6-month intensive regimen (Cape Town regimen) — a WHO-recommended alternative for drug-susceptible TB meningitis, using higher doses for 6 months: isoniazid 15–20 mg/kg/day, rifampicin 22.5–30 mg/kg/day, pyrazinamide 35–
+- `22.5-30 mg/kg/day`  — *Tuberculous Meningitis* › Tuberculous Meningitis › 6.3.3 · HRZE 12 months · dexamethasone › Treatment — two WHO-recommended options
+  > 6-month intensive regimen (Cape Town regimen) — a WHO-recommended alternative for drug-susceptible TB meningitis, using higher doses for 6 months: isoniazid 15–20 mg/kg/day, rifampicin 22.5–30 mg/kg/day, pyrazinamide 35–
+- `35-45 mg/kg/day`  — *Tuberculous Meningitis* › Tuberculous Meningitis › 6.3.3 · HRZE 12 months · dexamethasone › Treatment — two WHO-recommended options
+  > 6-month intensive regimen (Cape Town regimen) — a WHO-recommended alternative for drug-susceptible TB meningitis, using higher doses for 6 months: isoniazid 15–20 mg/kg/day, rifampicin 22.5–30 mg/kg/day, pyrazinamide 35–
 
 ## lorazepam
 
@@ -1299,12 +1288,10 @@ Shared: 5, 10, 15, 20, 40
 - `2-3 mg/kg/day` (once daily) — *Adult Convulsions* › Still convulsing or recurrent after 2 doses of diazepam? › Yes › Phenobarbital / phenobarbitone
   > Loading dose 20 mg/kg IM/IV (if given IV, over 20 minutes). If still fitting after 15 min, a further 10 mg/kg to a cumulative maximum of 40 mg/kg - only where respiratory monitoring is available | Maintenance (adults) 2-
 
-**WHO only:** 5, 10
+**WHO only:** 5
 
 - `5 mg/kg/day`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Doses by weight band
   > | Maint 5 mg/kg/day oral (30-mg tablets) | | ¼ | ¼ | ½ | ½ | ½ | ¾ | ¾
-- `10 mg/kg/day`  — *Neonatal Drug Doses* › Neonatal Drug Doses › 3.14 · doses by weight band (scroll →) › Notes
-  > Aminophylline, caffeine citrate, phenobarbital (injection): calculate the exact dose from the infant's weight rather than reading a range. For caffeine citrate, do not exceed a maintenance of 10 mg/kg/day.
 
 ## phenytoin
 
@@ -1448,6 +1435,26 @@ Shared: 1, 10
 - `2.5-5 mg`  — *Formulary* › Vitamin K › Vitamin K › Adult:
   > Minor bleeding & elevated INR: 2.5–5 mg PO
 
+## whole blood
+
+### whole blood ml/kg — PB vs WHO
+
+Shared: 10, 10-20, 20
+
+**PB only:** 10-15
+
+- `10-15 ml/kg`  — *Transfusions* › Transfusions › p.76 · when / volume / complications › General considerations
+  > 10–15 mL/kg PRBCs raises a child's Hb an average of 2–3 g/dL
+
+**WHO only:** 5-10, 30
+
+- `5-10 ml/kg`  — *Severe Dengue* › Severe Dengue › 6.10.1 · plasma leakage · shock · fluid care › Haemorrhagic complications
+  > Monitor clinical condition, EVF and platelet count. Transfusion is rarely necessary — when major bleeding is confirmed, give 5–10 ml/kg fresh whole blood or 10 ml/kg packed cells slowly.
+- `30 ml/kg`  — *Management of Anaemia* › Management of Anaemia › 10.5 · non-severe iron · severe → fever-guided transfusion › Severe anaemia — transfuse
+  > Afebrile (T < 37.5 °C): give the higher volume — whole blood 30 ml/kg (or packed cells 20 ml/kg) — it lowers mortality.
+- `30 ml/kg`  — *Giving a Transfusion* › Giving a Transfusion › 10.6.4 · check first · fever-guided volume · monitor › Before transfusion — check that
+  > Afebrile (T < 37.5 °C): whole blood 30 ml/kg (or packed cells 20 ml/kg).
+
 ## zinc
 
 ### zinc mg — PB vs WHO
@@ -1469,4 +1476,4 @@ Shared: 10, 20
 
 ---
 
-**82 candidate drug+unit pairs across 44 drugs.**
+**85 candidate drug+unit pairs across 45 drugs.**

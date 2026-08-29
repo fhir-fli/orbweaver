@@ -166,6 +166,12 @@ EXTRA_DRUGS = [
     'phenylephrine', 'phosphorus', 'piperaquine', 'pralidoxime', 'primaquine',
     'rifaximin', 'terlipressin', 'vancomycin', 'sulfamethoxazole',
     'sulfadoxine', 'clavulanate', 'lorazepam', 'enoxaparin', 'ivig',
+    # Found 2026-08-29 by listing every table row-label whose row carries a
+    # dose and matches nothing in the vocabulary. Caffeine citrate is the
+    # one that mattered: its neonatal loading and maintenance doses were
+    # being filed under ampicillin, the drug named two rows above it.
+    'caffeine citrate', 'penicillin vk', 'rabies immunoglobulin',
+    'whole blood', 'packed red blood cells',
     'methionine', 'deferoxamine', 'nifedipine', 'amlodipine', 'lisinopril',
     'losartan', 'hydralazine', 'spironolactone', 'ketamine', 'morphine',
     'tranexamic acid', 'oxytocin', 'misoprostol', 'insulin', 'heparin',
