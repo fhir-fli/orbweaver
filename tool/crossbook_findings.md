@@ -116,9 +116,22 @@ and never recorded. They are below now, with the rest.
 
 Read and dismissed with the reason, so they are not re-raised:
 
-- **Ampicillin, cefotaxime, ceftriaxone, gentamicin, amoxicillin** outside neonatal
-  meningitis — the differences track indication and age, and each book's figure is
-  internally consistent with its own weight bands.
+- 🛑 **Ampicillin and cefotaxime — THIS DISMISSAL WAS WRONG.** See the 2026-08-29 entry
+  below: the WHO volume was at the sepsis dose and the ProtocolBook at the meningitis
+  dose, for the same disease in the same age group. Corrected.
+- **Ceftriaxone** — ProtocolBook 100 mg/kg/day once daily (max 4 g) for child meningitis;
+  WHO the same, plus 80–100 mg/kg/day for septicaemia and 75–80 for typhoid. Named
+  indications, all within the meningitis figure.
+- **Gentamicin** — the two agree; the unit split hid it. The ProtocolBook carries
+  *"term neonates / children / adults 5–7.5 mg/kg/day OD"* under `mg/kg/day`, WHO's
+  *"7.5 mg/kg once daily"* for peritonitis and appendicitis and *"5–7.5"* for surgical
+  prophylaxis under `mg/kg`. Neonatal week 1 is 3 mg/kg for low birth weight and 5 for
+  normal weight in both.
+- **Amoxicillin** — ProtocolBook 45 mg/kg/dose BD is otitis media, 25 simple infection,
+  875 mg the adult amoxiclav tablet, 500 mg TDS chlamydia in pregnancy. WHO 40 mg/kg BD
+  is pneumonia (the 2014 IMCI revision), 25 non-pneumonia, 50 mg/kg BD young-infant
+  serious bacterial infection, 250 mg the tablet strength. Every figure has its
+  indication.
 - **Isoniazid, rifampicin, pyrazinamide, ethambutol** — the ProtocolBook prints the
   **adult** daily doses (H 5, R 10, Z 25, E 15 mg/kg) and the paediatric table prints the
   **child** doses (10 / 15 / 35 / 20). Both correct; the difference is age.
@@ -134,9 +147,35 @@ Read and dismissed with the reason, so they are not re-raised:
 - **Amphotericin B** — 0.5 mg/kg (candidiasis, deoxycholate), 1 mg/kg/day (cryptococcal
   induction, deoxycholate) and 3–5 mg/kg (liposomal) are different indications and
   different formulations.
-- **Morphine, paracetamol, ibuprofen, phenytoin, phenobarbital, magnesium sulfate,
-  iron, folic acid, erythromycin, adrenaline** — differences all reduce to indication,
-  age, or route.
+Ten drugs were closed in one line — *"differences all reduce to indication, age, or
+route"* — without naming a single indication. **That is the same shape of dismissal that
+hid the meningitis underdose.** Re-read one by one, they do hold, and here is each with
+its indications named so the claim can be checked:
+
+- **Adrenaline** — ProtocolBook-only 1 mg is adult cardiac arrest. WHO-only 0.3 and
+  0.5 mg are the anaphylaxis caps for a child and an adolescent/adult; 5 mg is the
+  nebulised croup maximum. Shared 0.005 mg/kg is snake-bite premedication.
+- **Morphine** — WHO-only 0.005–0.01 mg/kg/h is the infusion rate, 0.01–0.02 mg/kg the
+  trauma titration increment. Shared 0.05–0.1 mg/kg is the IV bolus.
+- **Paracetamol** — ProtocolBook-only 200 and 300 mg/kg are **ingestion thresholds, not
+  doses**; 15 mg/kg q6h is its dosing. Shared 10–15 mg/kg agrees.
+- **Ibuprofen** — ProtocolBook-only 5 mg/kg is the second and third dose of the PDA
+  closure course at 24 and 48 h. Shared 10 mg/kg q6h is analgesia.
+- **Phenytoin** — ProtocolBook-only 2.5–4 mg/kg q12h is maintenance; 20 mg/kg the load.
+  Shared 15–20 mg/kg is the loading dose in both.
+- **Phenobarbital** — ProtocolBook 3–5 mg/kg/day and WHO 2.5–5 mg/kg are both oral
+  maintenance and overlap. Loading agrees at 20 mg/kg, repeat 10, cumulative max 40.
+- **Magnesium sulfate** — ProtocolBook 25–50 mg/kg is symptomatic hypomagnesaemia;
+  WHO 50 mg/kg is severe asthma. Different indications.
+- **Iron** — ProtocolBook 3–6 mg/kg/day elemental is treatment with a 15 mg/kg/day
+  ceiling and 2–3 mg/kg/day preterm supplementation; WHO 2–3 mg/kg/day is home treatment
+  of non-severe anaemia and 2–4 preterm. They overlap at 3 and differ only in the
+  ceiling each states.
+- **Folic acid** — ProtocolBook 0.1–1 mg is age-banded supplementation and its 1 mg/day
+  cap is the antifolate warning; WHO 4 mg/day is periconceptional prevention in a
+  high-risk mother. The 60 mg is the iron content of the iron–folate tablet, not folate.
+- **Erythromycin** — ProtocolBook 20 mg/kg/day IV and 50 mg/kg/day oral; WHO 40–50
+  mg/kg/day for diphtheria and pertussis. Route and indication.
 - **Vitamin A** — reads as a difference only if the extractor mis-parses the thousands
   separator. Both books carry **50 000 / 100 000 / 200 000 IU** exactly. Fixed in the
   tool; the two books agree.
