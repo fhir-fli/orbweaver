@@ -12,6 +12,14 @@
 #   Found by the cross-book dose comparison (tool/crossbook_*), not by
 #   another read of this page: the ProtocolBook prints 0.2 mg/kg IV and the
 #   two books were laid side by side. Corrected to 0.2 mg/kg.
+#   2026-08-29 — THE PRINT ITSELF SETTLES IT. Chart 9 on p.15 of the source
+#   PDF reads "or give diazepam IV at 0.05 ml/kg = 0.25 mg/kg if IV infusion
+#   is running". So the 2026-06-18 note that 0.25 "was a transcription error"
+#   and that 0.5 was "per WHO" was wrong about WHO as well as about the drug:
+#   0.25 is what WHO printed. This page now gives 0.2 mg/kg, the FDA label
+#   figure, which sits inside the same 0.2-0.3 range; the print's own 0.25 is
+#   recorded here so nobody re-derives it. The rectal 0.1 ml/kg = 0.5 mg/kg
+#   table and the two-dose cap match the print exactly.
 #   Buccal AND intranasal midazolam widened to 0.3-0.5 mg/kg (was intranasal
 #   0.2). Added: with a line, IV lorazepam 0.1 mg/kg (max 4 mg) is an option;
 #   where only diazepam is stocked, rectal diazepam stays acceptable

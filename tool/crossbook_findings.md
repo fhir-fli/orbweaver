@@ -212,3 +212,39 @@ Read: [ACLS, StatPearls / NCBI](https://www.ncbi.nlm.nih.gov/books/NBK613285/) �
 [2019 AHA Focused Update on ACLS](https://www.ahajournals.org/doi/10.1161/CIR.0000000000000732).
 The AHA's own 2025 algorithm PDF at cpr.heart.org returns 403 to an automated fetch and
 was **not** read — naming it here so the gap is on the record rather than implied.
+
+
+---
+
+## ✅ 2026-08-29 — every WHO chart page rendered and checked for dropped arrows
+
+The loop-word grep was the wrong instrument for the WHO charts: **a printed back-edge
+can use no loop words at all, and Chart 12's did not.** So all eleven chart pages were
+rendered from the source PDF at 120 dpi and looked at, rather than read through the text
+layer.
+
+**Result: Chart 12 was the only one with a drawn back-edge, and it is fixed.** The others
+carry no return arrows to lose —
+
+- **Charts 2, 7, 8, 11** are assess/treat columns and weight tables. Chart 7 and Chart 8
+  *describe* reassessment loops ("reassess after first infusion… if no improvement,
+  repeat"), but the print sets them as prose and tables, not as a flowchart, and the app
+  matches.
+- **Charts 3, 4, 5, 6** are procedure illustrations — choking, airway, oxygen delivery,
+  positioning. No decision flow at all.
+- **Charts 9, 10** are procedure text plus a dose-by-weight table.
+- **§11.2 monitoring** is a bulleted list, not a chart.
+
+## 🔑 Chart 9's print settles the diazepam question the other way round
+
+The print reads: *"or give diazepam IV at **0.05 ml/kg = 0.25 mg/kg** if IV infusion is
+running"*.
+
+So the 2026-06-18 note on that page — that 0.25 mg/kg "was a transcription error" and
+that 0.5 mg/kg was the figure "per WHO" — **was wrong about WHO as well as about the
+drug.** WHO printed 0.25. The page now gives **0.2 mg/kg**, the FDA label figure, which
+sits inside the same 0.2–0.3 range, and the print's own 0.25 is recorded on the page so
+nobody re-derives it. The rectal table (0.1 ml/kg = 0.5 mg/kg) and the two-dose cap match
+the print exactly.
+
+**Twice now, checking the actual source has overturned a claim made about that source.**
