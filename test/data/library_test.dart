@@ -160,7 +160,11 @@ void main() {
       // + Ch.11 (3) + Ch.12 (8) + Annex 1 (13) + Annex 3 (1) + Annex 4 (1)
       // + Annex 5 (3: A5.1 + A5.2 length + A5.2 height) = 259 manifest
       // topics. Annex 2 is a `view: collection` group with no manifest
-      // children — its 82 drugs are generated at load from formulary.yaml.
+      // children — its 122 drugs are generated at load from formulary.yaml.
+      // 82 are the printed Annex 2; 40 were added on 2026-08-29 because the
+      // guidelines dose them and Annex 2 says it covers "the doses of the
+      // drugs mentioned in these guidelines". Glucose was among them, and
+      // the book prescribes it 92 times.
       expect(leafCount(contents), 259);
     });
 
@@ -175,13 +179,13 @@ void main() {
     });
 
     test(
-      'who_imci: formulary.yaml loads as a Formulary (82 drugs, 3 lenses)',
+      'who_imci: formulary.yaml loads as a Formulary (122 drugs, 3 lenses)',
       () {
         final raw = File(
           'assets/books/who_imci/formulary.yaml',
         ).readAsStringSync();
         final f = Formulary.fromYaml(loadYaml(raw) as YamlMap);
-        expect(f.drugs, hasLength(82));
+        expect(f.drugs, hasLength(122));
         expect(f.facets.map((x) => x.key), ['alpha', 'class', 'indication']);
         expect(f.classOrder, contains('antibiotic'));
         expect(f.bands.columns, hasLength(5));
