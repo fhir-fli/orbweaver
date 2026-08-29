@@ -668,3 +668,29 @@ suspected resistant gram-negative or healthcare-associated disease. Ampicillin i
 whenever Listeria is possible — neonates and the immunocompromised. Cefepime is **not**
 for empiric community meningitis in a child: the label records insufficient data for
 paediatric *H. influenzae* type b.
+
+
+---
+
+## ✅ 2026-08-29 — WVEMS: no protocol prescribes a drug its reference lacks
+
+The question that found 40 gaps in the ProtocolBook and 42 in the WHO book, asked of the
+third: does any WVEMS protocol prescribe a drug that has no card in the drug reference?
+
+**37 distinct drugs are prescribed with a dose across the WVEMS protocol pages. All 37
+have a card. The reference holds 50.**
+
+**The negative is believed because the probe was proved on known positives.** Removing a
+card and re-running has to surface that drug, and it does — drop *Adenosine* and adenosine
+appears; drop *Zofran®* and **ondansetron** appears; drop *Narcan®* and **naloxone**
+appears; drop *Amiodarone* and amiodarone appears. Two of those four resolve through the
+brand map, so the check is reaching the generic behind the trade name rather than matching
+a string.
+
+**WVEMS is the only one of the three books that is complete in this respect**, and it is
+also the only one that is not ours to edit. Nothing to do.
+
+⭐ **Worth noticing why.** The WVEMS reference was built as a closed set — 50 cards for
+one protocol book, authored together. The other two grew a formulary from a printed
+essential-medicines list and then added protocols that reached past it. The gap is a
+consequence of that shape, not of carelessness.
