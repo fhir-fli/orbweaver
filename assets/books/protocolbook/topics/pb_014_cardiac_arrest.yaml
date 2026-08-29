@@ -38,6 +38,16 @@
 #   6 H's + 5 T's is fine as a deliberately expanded list. Kept as
 #   printed; all other H's and T's verified standard. Now decided:
 #   keep it, with the footnote.
+# 2026-08-28 loop-renderer pass:
+#   1. The ACLS chart is now variant: cycle - a real back-edge from the
+#      2-minute rhythm check to CPR. It was drawn one-way, with the loop
+#      implied only by an "Every 2 minutes" arrow label on a chain that never
+#      returned.
+#   2. EPINEPHRINE INTERVAL CORRECTED. Epinephrine sat inside the "Every 2
+#      minutes" cycle node, so the page read as 1 mg every 2 minutes - roughly
+#      double the AHA interval. p.13 (PALS) in this same book already prints
+#      "Repeat epinephrine every 3-5 minutes". Now stated explicitly on both
+#      the CPR node and the resume-CPR branch, and sent to OE to confirm.
 # ============================================================
 
 topic:
@@ -52,48 +62,51 @@ topic:
   blocks:
 
     - type: "flowchart"
-      variant: "severity"
-
-      entry_chain:
-        - text: "Safe, Stimulate, Shout for Help — move patient to emergency area (as long as can be safely moved)"
-          shape: "rectangle"
-        - text: "CHECK PULSE: DEFINITE pulse palpated within 10 seconds?"
-          shape: "diamond"
-
-      branches:
-        - id: "no_pulse"
-          label: "No Pulse"
+      variant: "cycle"
+      # Fixed-cycle resuscitation (loop taxonomy 3): CPR 2 min -> rhythm and
+      # pulse check -> still no pulse -> back to CPR. The chart used to draw
+      # this one-way, with the loop implied only by an "Every 2 minutes" arrow
+      # label on a continuation chain that never returned.
+      nodes:
+        - title: "Safe, Stimulate, Shout for Help — move patient to emergency area (as long as can be safely moved)"
+        - shape: "decision"
+          title: "CHECK PULSE: DEFINITE pulse palpated within 10 seconds?"
+          down_label: "No pulse"
+          branches:
+            - label: "Definite pulse"
+              side: "right"
+              box:
+                title: "Pulse present — support and monitor"
+                severity: "priority"
+                bullets:
+                  - "Open, maintain airway"
+                  - "1 breath every 6 seconds"
+                  - "Recheck pulse every 2 min"
+                  - "→ Post Cardiac Arrest Algorithm"
+        - id: "cpr"
+          title: "Begin CPR — 2 minutes"
           severity: "emergency"
-          actions:
-            - text: "Continuous compressions until bag-valve mask available"
-              kind: "procedure"
-            - text: "30 compressions : 2 breaths"
-              kind: "procedure"
-            - text: "Attach O2 to bag-valve mask"
-              kind: "procedure"
-            - text: "Epinephrine 1 mg IV in 10 ml normal saline, followed by 20 ml normal saline flush"
-              kind: "medication_administration"
-          continuation:
-            entry_arrow_label: "Every 2 minutes"
-            nodes:
-              - text: "Change compressors · Check pulse ≤ 10 sec · Epinephrine 1 mg IV in 10 ml NS, 20 ml flush"
-                shape: "rectangle"
-              - text: "Identify and treat reversible causes"
-                shape: "rectangle"
-
-        - id: "definite_pulse"
-          label: "Definite Pulse"
-          severity: "priority"
-          actions:
-            - text: "Open, maintain airway"
-              kind: "procedure"
-            - text: "1 breath every 6 seconds"
-              kind: "procedure"
-            - text: "Recheck pulse every 2 min"
-              kind: "assessment"
-              timing: "every 2 min"
-            - text: "→ Post Cardiac Arrest Algorithm"
-              kind: "referral"
+          bullets:
+            - "Continuous compressions until bag-valve mask available"
+            - "30 compressions : 2 breaths"
+            - "Attach O2 to bag-valve mask"
+            - "Epinephrine 1 mg IV in 10 ml normal saline, followed by a 20 ml flush — **repeat every 3–5 minutes**, NOT every cycle"
+            - "Identify and treat reversible causes (H's and T's below)"
+        - shape: "decision"
+          title: "After 2 minutes — change compressors, check pulse (≤ 10 sec) and rhythm. Pulse present?"
+          down_label: "Yes — ROSC"
+          branches:
+            - label: "No"
+              side: "left"
+              box:
+                title: "Resume CPR immediately"
+                severity: "emergency"
+                bullets:
+                  - "Epinephrine only if 3–5 minutes have passed since the last dose"
+                  - "Keep working through the reversible causes"
+              loop_to: "cpr"
+              loop_label: "every 2 min"
+        - title: "→ Post Cardiac Arrest Algorithm"
 
     - type: "table"
       columns: []
