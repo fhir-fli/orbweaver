@@ -23,6 +23,12 @@
 #     2–3); current practice favours a beta-blocker/CCB for rate control
 #     and a DOAC over warfarin where available, and CHA₂DS₂-VASc-guided
 #     anticoagulation — flag for OE (transcribed as printed).
+# 2026-08-29 structural audit: the final "Atrial fibrillation or atrial
+#   flutter?" decision had ONLY a Yes outcome. A reader who answered No fell
+#   off the bottom of the chart with no instruction. Added the No branch,
+#   which points back at the treatment already given above. Found by
+#   tool/flowchart_structure_audit.py - the only one-sided decision in all
+#   111 charts across the three books.
 # ============================================================
 
 topic:
@@ -103,6 +109,13 @@ topic:
               continue: true
         - decision: "Atrial fibrillation or atrial flutter?"
           outcomes:
+            - label: "No — the rhythm is not AF or flutter"
+              box:
+                title: "You have already treated it above"
+                bullets:
+                  - "A regular narrow-complex SVT that broke with vagal manoeuvres or adenosine needs nothing further here"
+                  - "One that did not break has had rate control and then cardioversion (step 3 → 4 above)"
+                  - "If the rhythm is still undiagnosed, get a 12-lead and treat the underlying cause"
             - label: "Yes"
               box:
                 title: "Rate control & anticoagulation"

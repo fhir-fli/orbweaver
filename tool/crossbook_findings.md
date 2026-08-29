@@ -284,3 +284,37 @@ as the page frame — which had otherwise flagged all 46 pages. The control now 
 **Every WVEMS chart is entry → severity or cause split → parallel columns → converge into
 "Consider", or a differential grid. None loops.** WHO Chart 12 remains the only routed
 back-edge in the whole corpus, and it is fixed.
+
+
+---
+
+## ✅ 2026-08-29 — structural audit of all 111 flowcharts in all three books
+
+`tool/flowchart_structure_audit.py` asks what a machine can decide on its own: can the
+flow be followed? Not layout, not print fidelity. The two worst errors this project has
+found were both structural — an SVT chart whose stability branch was inverted, and a
+hyperkalaemia algorithm whose sickest branch contained nothing that lowers potassium.
+
+**One real defect, in the SVT chart — the same chart as the inverted branch.**
+
+Its final decision, *"Atrial fibrillation or atrial flutter?"*, carried **only a Yes
+outcome**. A reader who answered **No fell off the bottom of the chart with no
+instruction**. It is the **only one-sided decision in all 111 charts**. Fixed: the No
+branch now points back at the treatment already given above (broke with vagal manoeuvres
+or adenosine → nothing further; did not break → rate control then cardioversion at steps
+3–4; still undiagnosed → 12-lead and treat the cause).
+
+**The other 180 hits are the screen's own noise, and are named here so nobody re-runs it
+expecting findings:**
+
+- **94 × UNREACHED id.** In the `severity` variant a branch `id` is a render anchor, not
+  a `goto` target, so nothing pointing at it is normal. The check is only meaningful for
+  `cycle` and for explicit `goto`.
+- **55 × BARE BOX.** A terminal box legitimately carries a title and nothing else —
+  "Transfer to ICU", "No Rx necessary", "Treat underlying cause".
+- **31 × DEAD END.** A `continue: true` on the last stage usually means the chart hands
+  off to the prose or table block beneath it, which is how these pages are built.
+
+Only the one-sided-decision check earned its place. The other three are kept in the
+script with this note attached, because a future chart could genuinely trip them, but a
+hit is not a finding.
