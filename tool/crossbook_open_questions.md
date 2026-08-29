@@ -1,8 +1,7 @@
 # Cross-book comparison — QUESTIONS FOR OPENEVIDENCE
 
-**ONE QUESTION OPEN.** Everything raised by the dose, threshold and flowchart passes has
-been answered and applied; the rulings are in the findings record. This one came out of
-comparing transfusion volumes.
+**ONE QUESTION OPEN.** Everything else raised by the dose, threshold, flowchart and
+formulary passes has been answered and applied; the rulings are in the findings record.
 
 Keep this file. When the next round raises a question, write it here in the same shape
 and put the open count on the line above.
@@ -27,34 +26,25 @@ monitoring is not routinely available.
 
 ---
 
-## 1 🔴 Transfusion volume in a child — should it be stratified by FEVER?
+## 1 🟡 Transfusion — afebrile packed cells: 15 ml/kg or 20?
 
-**One reference stratifies the volume by fever and gives a mortality reason:**
-> **Febrile (T ≥ 37.5 °C): give the lower volume — whole blood 20 ml/kg (or packed cells
-> 10 ml/kg) — higher volumes increased mortality in febrile children.**
-> **Afebrile (T < 37.5 °C): give the higher volume — whole blood 30 ml/kg (or packed
-> cells 20 ml/kg) — it lowers mortality.**
+The fever rule itself is settled and applied: febrile children take the lower volume,
+afebrile the higher, threshold 37.5 °C, and malnutrition overrides both.
 
-**The other reference stratifies by age and by malnutrition, and says nothing about
-fever:**
-> 10 mL PRBCs = 20 mL whole blood. If in shock, give WB for extra volume. If no shock and
-> concern for volume overload (malnourished, heart failure), give PRBCs.
-> **< 1 yr:** 10 mL/kg PRBCs, or 15 mL/kg WB
-> **> 1 yr:** 10 mL/kg PRBCs, or 20 mL/kg WB
-> **Malnourished:** 5 mL/kg PRBCs, or 10 mL/kg WB (do not repeat the transfusion)
-> Usual range for children: 10–20 mL/kg. Usually run 10 mL/kg (1 unit) over 3–4 hours.
+**The two figures for afebrile PACKED CELLS do not agree.**
 
-**The concern.** In a malaria-endemic paediatric hospital a large share of transfused
-children are febrile. If the fever rule is real, the second reference gives some of them
-a volume associated with higher mortality, and gives afebrile children less than the
-volume associated with lower mortality. But adding a mortality claim to a book that does
-not carry it should not be done on the strength of the other book alone.
+- One reference prints, for the afebrile child: *"whole blood 30 ml/kg (or **packed cells
+  20 ml/kg**)"*.
+- The adjudication that settled the rule gave: *"Afebrile child: whole blood 30 ml/kg (or
+  **packed cells 15 ml/kg**)"*.
 
-**Questions.** Please answer each on its own line, with no citation after the number.
-1. Should paediatric transfusion volume be **stratified by fever**? Yes or no.
-2. If yes, give the **febrile** and **afebrile** volumes for **whole blood** and for
-   **packed cells**, and the temperature threshold.
-3. Does the fever rule **replace** the age and malnutrition stratification, or sit
-   alongside it? A malnourished febrile child would otherwise have two different answers.
-4. What is the evidence, and does it hold outside the trial population?
+Whole blood is 30 ml/kg on both. Only the packed-cell equivalent differs, and 15 against
+20 is a third more blood for a child in a setting where supply is the binding constraint.
 
+**Questions.** Each figure on its own line, with no citation after the number.
+1. For an **afebrile** child with severe anaemia, what is the correct **packed cell**
+   volume?
+2. For a **febrile** child, is the packed-cell volume **10 ml/kg**?
+3. What ratio should a pocket reference use to convert whole blood to packed cells — one
+   book states **10 ml PRBC = 20 ml whole blood**, which would make 30 ml/kg whole blood
+   equal 15 ml/kg packed cells rather than 20.

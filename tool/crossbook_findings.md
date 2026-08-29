@@ -385,3 +385,42 @@ pathway. Both are internally coherent and each states its age group. No change.
 47 topics against 164 for the other, because comparing chart-side to prose-side is a real
 boundary, while "two doses somewhere in one topic" is not — a topic legitimately holds
 many drugs and many indications.
+
+
+---
+
+## ✅ 2026-08-29 — transfusion volume is stratified by FEVER, from TRACT
+
+**Ruling.** Yes, stratify by fever. Threshold **37.5 °C**. **Febrile: whole blood
+20 ml/kg (packed cells 10).** **Afebrile: whole blood 30 ml/kg.** The fever rule **sits
+alongside** the age and malnutrition stratification and does **not** replace it, and for
+the malnourished child **malnutrition takes precedence** — the conservative volume,
+slowly, no repeat.
+
+**Applied to `pb_076`** as an explicit hierarchy, because a malnourished febrile child
+previously had two answers: malnourished first, then febrile, then afebrile, with age as
+the fallback where temperature is not deciding.
+
+**Framed as a volume-selection rule, not a mortality claim** — OE's own caveat. The fever
+effect is a **prespecified subgroup interaction in a trial whose primary endpoint was
+null** (TRACT, 3,196 Ugandan and Malawian children with severe anaemia). The direction is
+well supported and drawn from exactly this population; the size of the benefit is not
+established. The page says so.
+
+**Also carried across:** TRACT found **no benefit in transfusing uncomplicated moderate
+anaemia** (Hb 4–6 g/dL, no severity signs), so a conservative trigger belongs with the
+conservative volumes.
+
+### 🛑 Still open, and narrowed to one number
+
+**Afebrile packed cells: 15 ml/kg or 20?** The WHO volume prints 20; the adjudication
+gave 15. Whole blood is 30 on both. 15 against 20 is a third more blood in a setting
+where supply is the binding constraint, and the ProtocolBook's own conversion — 10 ml
+PRBC = 20 ml whole blood — implies 15. Printed as **15–20** until it is settled.
+
+### ⚠️ The reference list on that reply did not match its content
+
+The answer is entirely about TRACT and paediatric transfusion. Its three references were
+the **FDA ampicillin label** and **two Lancet bacterial-meningitis reviews** — the
+citation list from an earlier, unrelated question. The substance was checkable and is
+recorded, but **nothing in it was accepted on the strength of those citations**.

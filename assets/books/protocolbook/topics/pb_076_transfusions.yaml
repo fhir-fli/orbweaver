@@ -44,6 +44,14 @@
 #   the malnourished-child 5 mL/kg PRBC / 10 mL/kg WB do-not-repeat
 #   rule · "1 unit raises adult Hb ~1 g/dL" · the malaria-area
 #   threshold table.
+# 2026-08-29: transfusion volume now stratified by FEVER as well as by age
+#   and malnutrition, from TRACT via OE. The hierarchy is explicit because a
+#   malnourished febrile child otherwise had two answers: MALNUTRITION WINS,
+#   then fever, then age. Framed as a volume-selection rule rather than a
+#   mortality claim - TRACT fever effect is a prespecified subgroup
+#   interaction in a trial with a NULL primary endpoint.
+#   OPEN: OE gives afebrile packed cells 15 mL/kg; the WHO volume prints
+#   20 mL/kg. Printed here as 15-20 pending that being settled.
 # ============================================================
 
 topic:
@@ -89,11 +97,16 @@ topic:
     - type: "prose"
       title: "Calculate transfusion volume"
       markdown: |
-        - **Paediatric**
-          - <1 yr: 10 mL/kg PRBCs, or 15 mL/kg WB
-          - >1 yr: 10 mL/kg PRBCs, or 20 mL/kg WB
-          - Malnourished: 5 mL/kg PRBCs, or 10 mL/kg WB (do not repeat the transfusion)
+        **Paediatric — take the first line that applies:**
+        - **Malnourished (any temperature): 5 mL/kg PRBCs, or 10 mL/kg WB** — slowly, watching for overload. **Do not repeat the transfusion.** Malnutrition overrides the afebrile higher-volume rule below
+        - **Febrile (T ≥ 37.5 °C): 10 mL/kg PRBCs, or 20 mL/kg WB**
+        - **Afebrile (T < 37.5 °C): 15–20 mL/kg PRBCs, or 30 mL/kg WB**
+        - By age, where temperature is not the deciding factor: <1 yr 10 mL/kg PRBCs or 15 mL/kg WB; >1 yr 10 mL/kg PRBCs or 20 mL/kg WB
         - **Adult**: 1–2 units PRBCs
+
+        **Why fever changes the volume.** In TRACT — 3,196 Ugandan and Malawian children with severe anaemia, the largest trial of transfusion volume in this population — the effect of volume differed by admission temperature. Afebrile children did better on the higher volume; **febrile children did worse on it**. Treat this as a **volume-selection rule**, not a mortality promise: it is a prespecified subgroup interaction in a trial whose primary endpoint was null, so the direction is well supported and the size of the benefit is not.
+
+        **TRACT also found no benefit in transfusing uncomplicated moderate anaemia** (Hb 4–6 g/dL with no severity signs) — a conservative trigger belongs with these conservative volumes.
 
     - type: "prose"
       title: "Complications"
