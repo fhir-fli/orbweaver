@@ -424,3 +424,35 @@ The answer is entirely about TRACT and paediatric transfusion. Its three referen
 the **FDA ampicillin label** and **two Lancet bacterial-meningitis reviews** — the
 citation list from an earlier, unrelated question. The substance was checkable and is
 recorded, but **nothing in it was accepted on the strength of those citations**.
+
+
+---
+
+## ✅ 2026-08-29 — afebrile packed cells settled at 20 ml/kg, and WHY 15 was wrong
+
+**Ruling. Print the trial's pairing, not a conversion.** TRACT randomised to
+**30 ml/kg whole blood OR 20 ml/kg red cells** (higher volume) against **20 ml/kg whole
+blood OR 10 ml/kg red cells** (lower), treating each pair as equivalent. So the afebrile
+child gets **20 ml/kg** packed cells and the febrile child **10 ml/kg**.
+
+**The 15 came from applying a bedside rule to a figure the trial had already paired.**
+`pb_076`'s own "10 mL PRBCs = 20 mL whole blood" halves 30 to 15. That rule reflects the
+roughly doubled haematocrit of packed cells in the abstract, but it is not what TRACT
+paired, and 15 would **under-transfuse the afebrile child** against the very evidence the
+volumes come from.
+
+Applied: the fever lines now read **30 WB or 20 PRBC** and **20 WB or 10 PRBC**, in that
+order, so the whole-blood figure leads and the packed-cell figure is read off rather than
+computed. The rule of thumb is kept — it is useful elsewhere — but now carries an
+explicit **do not use it to derive these volumes**. The malnutrition brake is unchanged.
+
+⭐ **The lesson is general: a conversion factor applied on top of a paired figure
+manufactures a third number that no source states.** The two books never disagreed about
+blood; one of them had done arithmetic the trial had not.
+
+### ⚠️ Second reply in a row whose reference list did not match its content
+
+This answer is about TRACT and paediatric transfusion. Its two references were the same
+**Lancet bacterial-meningitis reviews** attached to the previous transfusion answer.
+Twice now. The substance was checkable against the trial's own arm definitions and is
+recorded on that basis; **nothing was accepted on the strength of the citations.**

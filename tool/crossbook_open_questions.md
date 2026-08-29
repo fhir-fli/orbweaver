@@ -1,7 +1,7 @@
 # Cross-book comparison — QUESTIONS FOR OPENEVIDENCE
 
-**ONE QUESTION OPEN.** Everything else raised by the dose, threshold, flowchart and
-formulary passes has been answered and applied; the rulings are in the findings record.
+**NOTHING IS OPEN.** Everything raised by the dose, threshold, flowchart and formulary
+passes has been answered and applied; the rulings are in the findings record.
 
 Keep this file. When the next round raises a question, write it here in the same shape
 and put the open count on the line above.
@@ -23,26 +23,3 @@ monitoring is not routinely available.
 > from this file and record the ruling in the findings file.
 
 ---
-
-## 1 🟡 Transfusion — afebrile packed cells: 15 ml/kg or 20?
-
-Transfusion volume in a child with severe anaemia is stratified by fever: the febrile
-child takes the lower volume and the afebrile child the higher, with 37.5 °C as the
-threshold. **Two figures are in circulation for the afebrile PACKED CELL volume.**
-
-- One paediatric reference prints, for the afebrile child: **whole blood 30 ml/kg, or
-  packed cells 20 ml/kg**.
-- Elsewhere the same rule is given as: **whole blood 30 ml/kg, or packed cells
-  15 ml/kg**.
-
-Whole blood is 30 ml/kg either way. Only the packed-cell equivalent differs, and 15
-against 20 is a third more blood for a child in a setting where blood supply is the
-binding constraint.
-
-**Questions.** Each figure on its own line, with no citation after the number.
-1. For an **afebrile** child with severe anaemia, what is the correct **packed cell**
-   volume?
-2. For a **febrile** child, is the packed-cell volume **10 ml/kg**?
-3. What ratio should a pocket reference use to convert whole blood to packed cells — one
-   book states **10 ml PRBC = 20 ml whole blood**, which would make 30 ml/kg whole blood
-   equal 15 ml/kg packed cells rather than 20.

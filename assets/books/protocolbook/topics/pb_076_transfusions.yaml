@@ -52,6 +52,11 @@
 #   interaction in a trial with a NULL primary endpoint.
 #   OPEN: OE gives afebrile packed cells 15 mL/kg; the WHO volume prints
 #   20 mL/kg. Printed here as 15-20 pending that being settled.
+#   2026-08-29 SETTLED: afebrile packed cells are 20 mL/kg, not 15. TRACT
+#   randomised to "30 mL/kg whole blood OR 20 mL/kg red cells" as equivalent,
+#   so the packed-cell figure is the trial pairing and NOT 30 halved by this
+#   page own 10-PRBC-equals-20-WB rule. That halving gives 15 and
+#   under-transfuses. The rule of thumb is now marked as not applying here.
 # ============================================================
 
 topic:
@@ -85,7 +90,7 @@ topic:
     - type: "prose"
       title: "General considerations"
       markdown: |
-        - 10 mL PRBCs = 20 mL whole blood (WB)
+        - 10 mL PRBCs = 20 mL whole blood (WB) — a bedside rule of thumb. 🛑 **Do NOT use it to derive the fever-stratified volumes above:** those are the trial's own paired figures (30 WB ≈ 20 PRBC, 20 WB ≈ 10 PRBC). Halving 30 by this rule gives 15, which under-transfuses the afebrile child
         - If in shock, give WB for extra volume
         - If no shock and concern for volume overload (malnourished, heart failure), give PRBCs
         - 10–15 mL/kg PRBCs raises a child's Hb an average of 2–3 g/dL
@@ -99,10 +104,12 @@ topic:
       markdown: |
         **Paediatric — take the first line that applies:**
         - **Malnourished (any temperature): 5 mL/kg PRBCs, or 10 mL/kg WB** — slowly, watching for overload. **Do not repeat the transfusion.** Malnutrition overrides the afebrile higher-volume rule below
-        - **Febrile (T ≥ 37.5 °C): 10 mL/kg PRBCs, or 20 mL/kg WB**
-        - **Afebrile (T < 37.5 °C): 15–20 mL/kg PRBCs, or 30 mL/kg WB**
+        - **Febrile (T ≥ 37.5 °C): 20 mL/kg WB, or 10 mL/kg PRBCs**
+        - **Afebrile (T < 37.5 °C): 30 mL/kg WB, or 20 mL/kg PRBCs**
         - By age, where temperature is not the deciding factor: <1 yr 10 mL/kg PRBCs or 15 mL/kg WB; >1 yr 10 mL/kg PRBCs or 20 mL/kg WB
         - **Adult**: 1–2 units PRBCs
+
+        **Print the pairing, not a conversion.** TRACT randomised to **30 mL/kg whole blood or 20 mL/kg red cells** (higher) against **20 mL/kg whole blood or 10 mL/kg red cells** (lower), treating each pair as equivalent. Take the figures as printed.
 
         **Why fever changes the volume.** In TRACT — 3,196 Ugandan and Malawian children with severe anaemia, the largest trial of transfusion volume in this population — the effect of volume differed by admission temperature. Afebrile children did better on the higher volume; **febrile children did worse on it**. Treat this as a **volume-selection rule**, not a mortality promise: it is a prespecified subgroup interaction in a trial whose primary endpoint was null, so the direction is well supported and the size of the benefit is not.
 
