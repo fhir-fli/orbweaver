@@ -24,22 +24,20 @@ monitoring is not routinely available.
 
 ---
 
----
-
 ## 1 🟡 Transfusion — afebrile packed cells: 15 ml/kg or 20?
 
-The fever rule itself is settled and applied: febrile children take the lower volume,
-afebrile the higher, threshold 37.5 °C, and malnutrition overrides both.
+Transfusion volume in a child with severe anaemia is stratified by fever: the febrile
+child takes the lower volume and the afebrile child the higher, with 37.5 °C as the
+threshold. **Two figures are in circulation for the afebrile PACKED CELL volume.**
 
-**The two figures for afebrile PACKED CELLS do not agree.**
+- One paediatric reference prints, for the afebrile child: **whole blood 30 ml/kg, or
+  packed cells 20 ml/kg**.
+- Elsewhere the same rule is given as: **whole blood 30 ml/kg, or packed cells
+  15 ml/kg**.
 
-- One reference prints, for the afebrile child: *"whole blood 30 ml/kg (or **packed cells
-  20 ml/kg**)"*.
-- The adjudication that settled the rule gave: *"Afebrile child: whole blood 30 ml/kg (or
-  **packed cells 15 ml/kg**)"*.
-
-Whole blood is 30 ml/kg on both. Only the packed-cell equivalent differs, and 15 against
-20 is a third more blood for a child in a setting where supply is the binding constraint.
+Whole blood is 30 ml/kg either way. Only the packed-cell equivalent differs, and 15
+against 20 is a third more blood for a child in a setting where blood supply is the
+binding constraint.
 
 **Questions.** Each figure on its own line, with no citation after the number.
 1. For an **afebrile** child with severe anaemia, what is the correct **packed cell**
