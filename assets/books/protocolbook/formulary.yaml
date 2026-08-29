@@ -1427,7 +1427,7 @@ formulary:
   - id: meropenem
     name: Meropenem
     class: antibiotic
-    dose: '**1 g IV 8-hourly.** Covers gram-positives as well as gram-negatives, but **not MRSA**.
+    dose: '**Dose depends on the site — the generic figure underdoses the CNS.**\n\n- **Sepsis / intra-abdominal: 1 g IV 8-hourly**\n- **Meningitis or other CNS infection: adults 2 g IV 8-hourly (6 g/day); children ≥ 3 months 40 mg/kg IV 8-hourly, max 2 g per dose.** Infuse over 15–30 min\n- Skin and soft tissue: 500 mg IV 8-hourly\n\nCovers gram-positives as well as gram-negatives, but **not MRSA**.
 
       '
     notes: ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it. Dose taken from the adult sepsis page, p.99; no new clinical claim is introduced.
@@ -2245,7 +2245,7 @@ formulary:
   - id: vancomycin
     name: Vancomycin
     class: antibiotic
-    dose: '**15 mg/kg IV 8-hourly (max 2 g/dose).** Monitor levels where available; consult pharmacy.
+    dose: '**15 mg/kg IV 6-hourly (max 2 g/dose)** for serious MRSA and for CNS infection — **not 8-hourly**. Monitor levels where available; consult pharmacy.\n\nTarget trough **15–20 mg/L** (AUC/MIC ≥ 400) for the intracranial indication.
 
 
       Used for MRSA cover in sepsis, and with ceftriaxone where mastoiditis has intracranial complications.

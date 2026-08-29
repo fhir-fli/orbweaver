@@ -17,6 +17,11 @@
 #     surgical drainage; regimens (Ampicillin-Sulbactam / anti-staph
 #     penicillin in children; Ceftriaxone ± Vancomycin in adults for
 #     intracranial spread) transcribed as printed.
+# 2026-08-29: vancomycin 8-hourly -> 6-HOURLY. This page is mastoiditis WITH
+#   INTRACRANIAL COMPLICATIONS, and the 2020 ASHP/IDSA/PIDS consensus gives
+#   q6h with a 15-20 mg/L trough for serious MRSA and CNS infection. Found
+#   when the dose was lifted into a standalone formulary entry and checked
+#   there - it read as a generic dose once the page context was gone.
 # ============================================================
 
 topic:
@@ -54,6 +59,6 @@ topic:
       title: "Treatment — adults"
       markdown: |
         - Ceftriaxone 2g IV q12hr (**max 4g/day**) or Cefotaxime 2g IV 8 hourly
-        - **With intracranial complications:** Ceftriaxone 2g IV q12hr (**max 4g/day**) plus **Vancomycin 15mg/kg IV 8 hourly (max 2g/dose)** — monitor levels if available
+        - **With intracranial complications:** Ceftriaxone 2g IV q12hr (**max 4g/day**) plus **Vancomycin 15mg/kg IV 6 hourly (max 2g/dose)** — 6-hourly, not 8, because this is a CNS infection; target trough 15–20 mg/L — monitor levels if available
         - **CT of the temporal bone** where available, to look for coalescent mastoiditis or intracranial spread
         - **Refer to surgery.** With intracranial complications drainage is emergent — do not wait 48 hours

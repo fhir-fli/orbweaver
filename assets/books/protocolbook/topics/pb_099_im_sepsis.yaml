@@ -37,6 +37,8 @@
 #   trigger commits oxygen to a much larger group without mortality benefit,
 #   and oxygen is the most rationed resource in this setting. Discharge and
 #   target criteria are NOT this figure and were left alone.
+# 2026-08-29: vancomycin 8-hourly -> 6-HOURLY for serious MRSA, with the
+#   15-20 mg/L trough target (2020 ASHP/IDSA/PIDS consensus).
 # ============================================================
 
 topic:
@@ -198,4 +200,4 @@ topic:
               - Meropenem 1 g IV 8-hourly (also covers gram-positives, but NOT MRSA)
             - **Gram positives (including MRSA):**
               - Clindamycin 600 mg IV 8-hourly (also anaerobes)
-              - Vancomycin 15 mg/kg IV 8-hourly (consult pharmacy)
+              - Vancomycin 15 mg/kg IV **6-hourly** (consult pharmacy) — 6-hourly for serious MRSA, target trough 15–20 mg/L

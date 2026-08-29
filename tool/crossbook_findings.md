@@ -544,3 +544,38 @@ the book's own chart tells them to reach for, finds nothing.
   reorganisation that helps the reader, and a formulary that omits the glucose dose while
   the book prescribes it 92 times is arguably the clearest case for it — **but that is his
   call, not mine.**
+
+
+---
+
+## 🔴 2026-08-29 — lifting a dose out of its protocol exposed two real errors
+
+The 37 new formulary entries were written from doses the pages already carried, so no new
+clinical claim was introduced — and that was the point of sending them for checking: **a
+formulary entry is read without the page around it.** Two came back wrong, and both were
+wrong on the page too.
+
+**Meropenem — `1 g IV 8-hourly` is the intra-abdominal dose, and it underdoses the CNS.**
+- **Meningitis / CNS: adults 2 g IV 8-hourly (6 g/day); children ≥ 3 months 40 mg/kg IV
+  8-hourly, max 2 g per dose**, infused over 15–30 min.
+- Sepsis and intra-abdominal stay at 1 g q8h. Skin and soft tissue is 500 mg q8h.
+- The entry itself named the intracranial indication while carrying the generic figure.
+
+**Vancomycin — `15 mg/kg IV 8-hourly` is the wrong FREQUENCY for serious MRSA and for CNS
+infection. It is 6-hourly**, target trough **15–20 mg/L** (AUC/MIC ≥ 400), per the 2020
+ASHP/IDSA/PIDS consensus. The mg/kg and the 2 g cap were right; only the interval was
+wrong.
+
+**Both fixed in the formulary AND on the pages the doses came from** — `pb_069`
+mastoiditis with intracranial complications, and `pb_099` adult sepsis. The mastoiditis
+page is the sharper case: it explicitly treats an intracranial complication and dosed
+vancomycin as if it were a soft-tissue infection.
+
+**Naloxone was checked and is correct as written** — the entry's titrate-to-respiration
+approach matches the EMS guidance for overdose; the FDA label's stepwise 0.01 → 0.1 mg/kg
+is for postoperative respiratory depression, a different indication.
+
+⭐ **The lesson that generalises: a dose can be right on its page and wrong in the
+formulary, because the page supplies a context the lookup does not.** Moving doses into
+the lookup is not a clerical act, and this pass proves it — two CNS regimens had been sitting
+in the book, correct-looking, until they were read without their page.
