@@ -31,6 +31,12 @@
 #     the "use TIMI without labs" fallback is this book's resource-limited
 #     adaptation. The Diamond-Forrester-style Likelihood-of-CAD table is
 #     the classic pre-test-probability grid.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -61,7 +67,7 @@ topic:
             - Obtain / review EKG
             - Check vital signs (PR, RR, spO₂, Temp, Weight)
             - Assess AVPU / GCS, hydration status
-            - Start oxygen if spO₂ < 94%, insert IV if needed
+            - Start oxygen if spO₂ < 90%, insert IV if needed
             - Perform brief, targeted history, physical exam
             - **Aspirin** 300 / 325 mg PO × 1 dose
             - **Nitroglycerin** sublingual spray or tablet 0.4 mg every 5 minutes × 3 doses maximum, until symptoms resolved

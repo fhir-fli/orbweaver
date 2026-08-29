@@ -36,6 +36,10 @@
 #   Dissection: HR < 60 and beta-blocker-before-vasodilator CONFIRMED. Added
 #   labetalol as the preferred agent, the vasodilator-only-if-target-not-met
 #   rule, the dP/dt reason, and analgesia.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. Discharge and
+#   target criteria are NOT this figure and were left alone.
 # ============================================================
 
 topic:
@@ -66,7 +70,7 @@ topic:
             - Monitor, support ABCs
             - Check vital signs (PR, RR, SpO₂, temp)
             - Repeat and **verify** the BP
-            - Start oxygen if SpO₂ < 94%
+            - Start oxygen if SpO₂ < 90%
             - IV access; 12-lead ECG
             - Labs: RBS, CBC, renal functions, urinalysis for proteinuria
             - Perform a brief, targeted history and physical exam

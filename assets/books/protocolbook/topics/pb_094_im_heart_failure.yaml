@@ -26,6 +26,10 @@
 #     for the stable warm-and-dry chronic patient) are standard. Digoxin
 #     restricted to proven AF/flutter is appropriate. Morphine in acute
 #     pulmonary oedema is now controversial (kept as printed — flag).
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. Discharge and
+#   target criteria are NOT this figure and were left alone.
 # ============================================================
 
 topic:
@@ -85,7 +89,7 @@ topic:
             bullets:
               - text: "Monitor, support ABCs"
               - text: "Check vital signs (PR, RR, SpO₂, temp, weight)"
-              - text: "Start oxygen if SpO₂ < 94%"
+              - text: "Start oxygen if SpO₂ < 90%"
               - text: "Place a large-bore IV"
               - text: "Assess AVPU/GCS and hydration status"
               - text: "Perform a brief, targeted history and physical exam"

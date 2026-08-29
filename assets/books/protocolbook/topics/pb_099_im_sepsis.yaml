@@ -33,6 +33,10 @@
 #     early broad-spectrum antibiotics, and MAP ≥65 vasopressor target
 #     are standard Surviving Sepsis guidance; ceftriaxone 2 g first-line
 #     is resource-appropriate. Transfuse Hb < 5 is an LMIC threshold.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. Discharge and
+#   target criteria are NOT this figure and were left alone.
 # ============================================================
 
 topic:
@@ -64,7 +68,7 @@ topic:
           markdown: |
             - Monitor, support ABCs
             - Check vital signs (BP, PR, RR, SpO₂, temp, weight)
-            - Start oxygen if SpO₂ < 94%
+            - Start oxygen if SpO₂ < 90%
             - 12-lead ECG
             - Perform a brief, targeted history and physical exam
 

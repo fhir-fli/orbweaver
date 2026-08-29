@@ -20,6 +20,10 @@
 #     4 × 2.5 mg = 10 mg. Concurrent glucose (50 mL 50% dextrose) +
 #     treating the cause is appropriate. Phenobarbital IV load over
 #     ≥20 min (respiratory-depression caution) kept.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. Discharge and
+#   target criteria are NOT this figure and were left alone.
 # ============================================================
 
 topic:
@@ -52,7 +56,7 @@ topic:
         - Monitor, support ABCs
         - Check vital signs (PR, RR, SpO₂, temp, weight)
         - Assess AVPU/GCS, hydration status
-        - Start oxygen if SpO₂ < 94%; insert an IV if needed
+        - Start oxygen if SpO₂ < 90%; insert an IV if needed
         - Perform a brief, targeted history and physical exam
         - Labs: CBC, malaria, HIV, electrolytes
 

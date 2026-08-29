@@ -27,6 +27,10 @@
 #     spironolactone±furosemide ascites management are standard.
 #     Lactulose for hepatic encephalopathy (after excluding infection/
 #     bleeding/intoxication) is correct. Child-Pugh thresholds standard.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. Discharge and
+#   target criteria are NOT this figure and were left alone.
 # ============================================================
 
 topic:
@@ -68,7 +72,7 @@ topic:
           markdown: |
             - Monitor, support ABCs
             - Check vital signs (PR, RR, SpO₂, temp, weight)
-            - Start oxygen if SpO₂ < 94%; place a large-bore IV
+            - Start oxygen if SpO₂ < 90%; place a large-bore IV
             - Assess AVPU/GCS, hydration status
             - Perform a brief, targeted history and physical exam; 12-lead ECG in adults
             - **Rule out:** malaria (RDT, blood smear), sepsis (CBC, blood cultures)

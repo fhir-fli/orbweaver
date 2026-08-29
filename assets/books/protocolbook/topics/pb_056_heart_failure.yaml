@@ -21,6 +21,12 @@
 #   - "WARNING!" med-safety block bolded/italic in print → red-alert
 #     callout (prose, so emphasis renders).
 #   - AlgoBox bullets are plain text (no MiniMarkdown, no nesting).
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -62,7 +68,7 @@ topic:
             - Monitor, support ABCs, ensure patient is seated
             - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
             - Assess GCS, hydration status
-            - Start Oxygen if spO2 <94%, insert IV as needed
+            - Start Oxygen if spO2 <90%, insert IV as needed
             - Draw CBC, malaria, RFTs, electrolytes
             - Perform brief, targeted history, physical exam
             - Consider ECG if available

@@ -18,6 +18,12 @@
 #   - Correction-rate limits (≤ 8 mEq/L/day, 0.5 mEq/L/hr), 3% saline for
 #     symptomatic hyponatremia, and the volume-status (hyper/hypo/eu) work-up
 #     with U_osm/U_Na and glucose correction are all standard.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -75,7 +81,7 @@ topic:
           markdown: |
             - Monitor, support ABCs
             - Check vital signs (BP, PR, RR, spO₂, Temp, Wt)
-            - Start oxygen if spO₂ < 94%
+            - Start oxygen if spO₂ < 90%
             - Serum labs: CBC, RFT, electrolytes
             - Urine labs: creatinine, sodium, osmolarity
             - 12-lead ECG

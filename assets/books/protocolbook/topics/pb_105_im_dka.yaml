@@ -27,6 +27,10 @@
 #     and corrected-Na-directed fluid choice are all standard LMIC DKA
 #     practice (bedside, no blood-gas/osmolality). Metformin-first
 #     outpatient titration is appropriate.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. Discharge and
+#   target criteria are NOT this figure and were left alone.
 # ============================================================
 
 # 2026-08-24 — the RBS<14 step-down infusion was written as a single figure,
@@ -50,7 +54,7 @@ topic:
       markdown: |
         - Monitor, support ABCs
         - Check vital signs (BP, PR, RR, SpO₂, temp)
-        - Start oxygen if SpO₂ < 94%
+        - Start oxygen if SpO₂ < 90%
         - IV access; draw renal functions, potassium, urinalysis
         - 12-lead ECG (adults)
         - Perform a brief, targeted history and physical exam

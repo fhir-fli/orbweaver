@@ -28,6 +28,11 @@
 #     is the reduced-clearance adjustment. Ceftriaxone-jaundice caution
 #     (bilirubin displacement) is correct. Vitamin K + tetracycline eye
 #     ointment for home births = standard newborn prophylaxis.
+# Cross-book pass 2026-08-28: neonatal meningitis ampicillin brought down from
+#   100 mg/kg q8h (200->300 mg/kg/day) to 50 mg/kg q8h then q6h (150->200),
+#   the settled term-neonate dose, with the preterm <=34 wk week-1 band named.
+#   300 mg/kg/day is the OLDER-CHILD dose and was carried into the neonate.
+#   The neonatal ceiling is set by immature renal clearance and seizure risk.
 # ============================================================
 
 topic:
@@ -86,7 +91,9 @@ topic:
           markdown: |
             - **First line:** ampicillin 50 mg/kg q8h (q12h if in the 1st week) PLUS gentamicin 5 mg/kg OD (3 mg/kg OD if < 2 kg in the 1st week, or birth asphyxia)
             - **If concern for soft-tissue infection:** cloxacillin PLUS gentamicin (same dosing as above)
-            - **If concern for meningitis:** ampicillin 100 mg/kg q8h (q12h if in the 1st week) PLUS cefotaxime 50 mg/kg q8h (q12h if in the 1st week)
+            - **If concern for meningitis:** ampicillin **50 mg/kg q8h in week 1 (150 mg/kg/day), then q6h in weeks 2–4 (200 mg/kg/day)** PLUS cefotaxime 50 mg/kg q8h (q12h if in the 1st week)
+            - ⚠️ **A very preterm infant (≤ 34 weeks) in week 1 takes the lower band — 50 mg/kg q12h (100 mg/kg/day).** Ampicillin is renally cleared and clearance tracks postmenstrual age; accumulation risks CNS excitation and seizures
+            - 🛑 **Do not carry the older child's 300 mg/kg/day into a neonate.** 300 mg/kg/day is correct **beyond 4 weeks** and is above the neonatal ceiling
             - 🛑 **Prefer cefotaxime to ceftriaxone in a neonate.** Ceftriaxone displaces bilirubin from albumin and worsens jaundice, and it is **absolutely contraindicated in any neonate receiving calcium-containing IV fluids** — the two form fatal precipitates in the lungs and kidneys
 
         - type: "prose"

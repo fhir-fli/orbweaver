@@ -85,6 +85,12 @@
 # OpenEvidence-applied 2026-08-28 (WHO full advance pass):
 #   Added prophylactic SC epinephrine before antivenom, which the page lacked
 #   entirely, plus the hydrocortisone warning (WHO pass flag 1-3).
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -107,7 +113,7 @@ topic:
           markdown: |
             - Monitor, support ABCs
             - Check vital signs (BP, PR, RR, spO2, Temp)
-            - Start Oxygen if spO2 <94%
+            - Start Oxygen if spO2 <90%
             - Perform brief, targeted history, physical exam
 
         - type: "prose"

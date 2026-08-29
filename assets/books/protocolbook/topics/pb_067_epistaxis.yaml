@@ -37,6 +37,12 @@
 #     reasonable anterior-epistaxis practice; doses (TXA 500 mg/5 mL,
 #     epi 1 mg/5 mL) transcribed as printed.
 #   - Bacitracin/K-Y as packing lubricant transcribed as printed.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -57,7 +63,7 @@ topic:
         - Have patient lean forward, pinch nose closed (**DO NOT** tilt head back)
         - Check vital signs (**BP**, PR, RR, spO2, Temp, Weight)
         - Assess AVPU/GCS, hydration status
-        - Start oxygen if spO2 <94%, insert IV if needed
+        - Start oxygen if spO2 <90%, insert IV if needed
         - Perform brief, targeted history and physical exam
           - Nasal trauma (nose picking) is the most common cause, especially in children
           - **Ask about anticoagulants and antiplatelets** (warfarin, aspirin, clopidogrel) and about any bleeding disorder — it changes both the risk and the disposition

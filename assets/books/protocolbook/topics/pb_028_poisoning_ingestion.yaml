@@ -56,6 +56,12 @@
 #     Ambiguous as printed — OE / Grey to reword.
 #   - Physostigmine "avoid in TCA" ✓ current (asystole risk).
 #     NaHCO3 for TCA ✓. Benzodiazepine-first for seizures ✓.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -75,7 +81,7 @@ topic:
         - If **ANY** concern for residue on skin or clothing — use personal protective equipment (gloves, gowns, masks); remove / bag / discard clothing; wash patient and area thoroughly with soap and water (clothing and PPE are hazardous waste — dispose properly)
         - Monitor and support ABCD
         - Check vital signs (BP, PR, RR, spO2, Temp)
-        - If spO2 < 94% or **ANY** concern for respiration, start 100% O2 via facemask
+        - If spO2 < 90% or **ANY** concern for respiration, start 100% O2 via facemask
         - Bedside RBS and treat hypoglycemia
         - Place large-bore IV line
         - Perform brief, targeted history and physical exam; pay attention to mental status

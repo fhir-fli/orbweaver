@@ -75,7 +75,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### ciprofloxacin — day
 
-- **PB:** 3, 3-5, 7-10
+- **PB:** 3-5, 3, 7-10
 - **WHO:** 2, 3, 5, 7-10
 
   - `3-5 day` PB — *Paediatric Dehydration Protocol*
@@ -146,7 +146,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 ### gentamicin — day
 
 - **PB:** 7
-- **WHO:** 2, 5, 7, 7-10
+- **WHO:** 2, 5, 7-10, 7
 
   - `7 day` PB — *SAM — Admission & Acute Complications*
     > Gentamicin 7.5mg/kg/day x 7 days — SAM has its own higher gentamicin dose; do not use the general paediatric 5mg/kg here
@@ -159,11 +159,15 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### isoniazid — month
 
-- **PB:** 6
+- **PB:** 3, 6, 6-9
 - **WHO:** 3
 
+  - `3 month` PB — *TB — Diagnosis & Systemic Score*
+    > First line: 3HR — isoniazid 10mg/kg/day (7–15, max 300mg) + rifampicin 15mg/kg/day (10–20, max 600mg), daily for 3 months. The shorter rifamycin course completes far more often than 6 months of one dr
   - `6 month` PB — *TB — Diagnosis & Systemic Score*
-    > Well child contacts who do NOT have TB: give isoniazid preventive therapy 10mg/kg daily for 6 months
+    > Acceptable alternative where rifampicin fixed-dose combinations are not stocked: 6H — isoniazid 10mg/kg/day (7–15, max 300mg) daily for 6 months. An available regimen given reliably beats an unstocked
+  - `6-9 month` PB — *TB — Diagnosis & Systemic Score*
+    > Child living with HIV, or under 5: the same regimens. If ART drug interactions rule out a rifamycin, fall back to daily isoniazid for 6–9 months
   - `3 month` WHO — *Tuberculosis*
     > 3HR — daily isoniazid + rifampin × 3 months (all ages).
 
@@ -222,7 +226,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 ### quinine — hour
 
 - **PB:** 2, 4
-- **WHO:** 2-4, 2
+- **WHO:** 2, 2-4
 
   - `4 hour` PB — *Essential Medications*
     > Loading dose: 20 mg/kg IV given over 4 hours (after dilution)
@@ -274,7 +278,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### spo2 %
 
-- **PB:** < 16, < 20, < 50, < 90, < 92, < 94, < 95, > 3, > 90, > 92, > 94, > 95, ≤ 92, ≥ 50
+- **PB:** < 16, < 20, < 50, < 90, < 92, < 95, > 3, > 90, > 92, > 94, > 95, ≤ 92, ≥ 50
 - **WHO:** < 15, < 90, > 90, > 94, > 95, ≤ 90, ≥ 10, ≥ 30, ≥ 88-92, ≥ 90, ≥ 95
 
 ### temperature °C

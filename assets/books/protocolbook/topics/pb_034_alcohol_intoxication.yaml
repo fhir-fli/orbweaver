@@ -38,6 +38,12 @@
 #    position, aspiration monitoring) confirmed standard. OE singled
 #    out the rule-out-trauma-and-co-ingestion callout as the single
 #    most important safety point on the page.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -79,7 +85,7 @@ topic:
             - "Monitor, support ABCs"
             - "Check vital signs (BP, PR, RR, spO2, Temp, Weight)"
             - "Assess GCS and hydration status"
-            - "Insert 2 IVs, start oxygen if spO2 < 94%"
+            - "Insert 2 IVs, start oxygen if spO2 < 90%"
         - type: "content"
           title: "Ongoing care"
           bullets:

@@ -27,6 +27,10 @@
 #     hydralazine reflects a no-thrombolysis LMIC setting (permissive
 #     hypertension for ischaemic stroke); OE may contextualise vs
 #     thrombolysis/thrombectomy windows where available.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. Discharge and
+#   target criteria are NOT this figure and were left alone.
 # ============================================================
 
 topic:
@@ -67,7 +71,7 @@ topic:
           markdown: |
             - Monitor, support ABCs
             - Check vital signs (BP, PR, RR, SpO₂, temp)
-            - Start oxygen if SpO₂ < 94%
+            - Start oxygen if SpO₂ < 90%
             - Maintain glucose between 7.7 (140) and 10 (180)
             - Obtain labs: CBC, RFT, electrolytes, coagulation studies, urinalysis for proteinuria
             - 12-lead ECG — if positive for arrhythmia or infarction, prioritise cardiac stabilisation (see the cardiac protocol)
@@ -140,7 +144,7 @@ topic:
           markdown: |
             - Continue to monitor, support ABCs
             - Check vital signs (BP, PR, RR, SpO₂, temp)
-            - Start oxygen if SpO₂ < 94%
+            - Start oxygen if SpO₂ < 90%
             - Maintain glucose between 7.7 (140) and 10 (180)
             - Treat hypovolaemia with normal saline
             - 🛑 **Blood pressure: do NOT lower it** unless **SBP ≥ 220 or DBP ≥ 120**, or there is a specific indication (aortic dissection, acute coronary syndrome, acute heart failure). High BP after a stroke is largely compensatory — dropping it reduces perfusion to the ischaemic penumbra and worsens the infarct

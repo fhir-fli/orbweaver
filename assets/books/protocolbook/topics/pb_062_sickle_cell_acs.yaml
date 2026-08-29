@@ -23,11 +23,17 @@
 #   - Discharge criterion printed "pO2 >94% on room air". A percentage
 #     measured on room air is a SATURATION, not a partial pressure
 #     (pO2 is mmHg/kPa). The book writes "spO2" everywhere else,
-#     including twice on this same page ("Start Oxygen if spO2 <94%")
+#     including twice on this same page ("Start Oxygen if spO2 <90%")
 #     and "O2sat" in the CRS table; "pO2" occurs exactly once in all
 #     95 topics. Rendered "SpO2 >94% on room air". Verified against
 #     the source PDF p.62 — the source prints it too, so Grey should
 #     fix the source PDF.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -56,7 +62,7 @@ topic:
             - "Monitor, support ABCs"
             - "Check vital signs (BP, PR, RR, spO2, Temp, Weight)"
             - "Assess GCS and hydration status"
-            - "Start oxygen if spO2 < 94%"
+            - "Start oxygen if spO2 < 90%"
             - "Insert IV, draw CBC and malaria, transfuse for Hgb < 9"
             - "Perform brief, targeted history and physical exam"
         - type: "content"

@@ -20,6 +20,12 @@
 #   membrane stabilisation, insulin-glucose + salbutamol for intracellular
 #   shift, and resonium / furosemide / dialysis for elimination are the
 #   standard hyperkalemia bundle.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -102,7 +108,7 @@ topic:
           markdown: |
             - Monitor, support ABCs
             - Check vital signs (BP, PR, RR, spO₂, Temp, Wt)
-            - Start oxygen if spO₂ < 94%
+            - Start oxygen if spO₂ < 90%
             - Serum labs: CBC, RFT, electrolytes
             - 12-lead ECG
             - Perform brief, targeted history, physical exam

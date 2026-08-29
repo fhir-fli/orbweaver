@@ -32,6 +32,10 @@
 #    koilonychia, glossitis, angular stomatitis, oesophageal webs) and
 #    the four occult-bleeding compartments (thorax, abdomen,
 #    retroperitoneum/pelvis, thigh) confirmed as standard.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. Discharge and
+#   target criteria are NOT this figure and were left alone.
 # ============================================================
 
 topic:
@@ -73,7 +77,7 @@ topic:
             - "Monitor, support ABCs"
             - "Check vital signs (BP, PR, RR, SpO₂, Temp, weight)"
             - "Assess GCS and hydration status"
-            - "Insert 2 IVs; start oxygen if SpO₂ < 94%"
+            - "Insert 2 IVs; start oxygen if SpO₂ < 90%"
             - "Draw CBC and malaria; consider blood cultures if concern for sepsis"
             - "Type and cross if tachycardic, tachypnoeic, or severe pallor"
             - "Perform a brief, targeted history and physical exam"

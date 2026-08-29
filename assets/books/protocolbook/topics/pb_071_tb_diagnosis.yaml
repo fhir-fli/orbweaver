@@ -24,6 +24,10 @@
 #     ambulating is the classic LMIC technique for <5 yr who can't
 #     expectorate; stool Xpert / induced sputum are modern additions OE
 #     may note. Keith Edwards score ≥7 = TB transcribed as printed.
+# Cross-book pass 2026-08-28: TB preventive therapy for a child contact was
+#   6H alone. Now 3HR first-line (isoniazid + rifampicin, 3 months) with 6H
+#   as the stocked-out alternative, per the completion evidence. The other
+#   book already carried 3HR and the two pages never referenced each other.
 # ============================================================
 
 topic:
@@ -69,7 +73,11 @@ topic:
           - Perform on different days, 3 times total
           - Early morning, before the child eats or ambulates (ideally wake the patient after sleeping prone all night)
         - **Test for HIV** — check the mother if the child is <18 months, otherwise test the child. HIV changes prognosis, mandates co-trimoxazole preventive therapy, and creates rifampicin–ART interactions that alter the regimen. See the [HIV opportunistic infections protocol](topic:pb-im-hiv-oi)
-        - **Well child contacts who do NOT have TB:** give **isoniazid preventive therapy 10mg/kg daily for 6 months**
+        - **Well child contacts who do NOT have TB — give preventive therapy.** Treat every child household contact, and do not wait for a test.
+          - **First line: 3HR — isoniazid 10mg/kg/day (7–15, max 300mg) + rifampicin 15mg/kg/day (10–20, max 600mg), daily for 3 months.** The shorter rifamycin course completes far more often than 6 months of one drug, at equal efficacy
+          - **Acceptable alternative where rifampicin fixed-dose combinations are not stocked: 6H — isoniazid 10mg/kg/day (7–15, max 300mg) daily for 6 months.** An available regimen given reliably beats an unstocked better one
+          - **Child living with HIV, or under 5:** the same regimens. If ART drug interactions rule out a rifamycin, fall back to daily isoniazid for 6–9 months
+          - **Add pyridoxine 12.5–25mg/day** if the child is HIV-positive or malnourished
 
     - type: "table"
       title: "Scoring systems — Systemic TB · Keith Edwards Score (≥7 indicative of TB)"

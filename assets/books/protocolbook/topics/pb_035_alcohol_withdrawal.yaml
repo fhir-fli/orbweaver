@@ -58,6 +58,12 @@
 #   - Stage 4 printed "delirium trements" — spelling typo for
 #     "delirium tremens" (verified on the 300 dpi render).  Corrected
 #     here (searchability matters); source PDF should be fixed too.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -99,7 +105,7 @@ topic:
         - Monitor, support ABCs
         - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
         - Assess GCS, hydration status
-        - Insert 2 IVs, Start Oxygen if spO2 <94%
+        - Insert 2 IVs, Start Oxygen if spO2 <90%
 
         Score withdrawal severity with the [CIWA-Ar Scale](topic:pb-ciwa-ar) (next page).
 

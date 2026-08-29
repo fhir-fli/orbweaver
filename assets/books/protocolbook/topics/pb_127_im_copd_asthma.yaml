@@ -21,6 +21,9 @@
 #     prednisolone 40 mg course, and antibiotics for the Anthonisen
 #     (increased dyspnoea + sputum volume + purulence) criteria are all
 #     current exacerbation care.
+# Cross-book pass 2026-08-28: COPD saturation target 90-92% -> 88-92%, the
+#   standard hypercapnia cap this file's own header already flagged. Also
+#   states that the START trigger and the HOLD target are different numbers.
 # ============================================================
 
 topic:
@@ -62,7 +65,7 @@ topic:
       variant: "linear"
       warnings:
         - type: "caution"
-          text: "Known or suspected COPD — aim for spO₂ 90–92%, NOT higher"
+          text: "Known or suspected COPD — aim for spO₂ 88–92%, NOT higher. The trigger to START oxygen is not the target to hold it at"
       entry_chain:
         - text: "Adult COPD or asthma"
           shape: "stadium"

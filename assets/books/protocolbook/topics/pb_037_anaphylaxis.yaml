@@ -60,6 +60,12 @@
 #     widely taught; WAO 2020 simplified to 2 criteria.
 # Cross-book pass 2026-08-28: hydrocortisone 5 -> 2-4 mg/kg with a 100 mg
 #   paediatric cap (NIAID/FAAN); benefit is unproven in anaphylaxis.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -112,7 +118,7 @@ topic:
         - Monitor, support ABCs
         - Check vital signs (BP, PR, RR, spO2, Temp, Weight)
         - Assess GCS, hydration status
-        - Insert 2 IVs, Start Oxygen if spO2 <94%
+        - Insert 2 IVs, Start Oxygen if spO2 <90%
         - Draw CBC, malaria, and blood glucose
 
     - type: "flowchart"

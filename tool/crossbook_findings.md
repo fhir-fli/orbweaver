@@ -28,7 +28,7 @@ reliable dialysis; ICU monitoring is not routinely available.
 
 ---
 
-# ⚡ NO QUESTIONS LIVE HERE.
+# ⚡ NO QUESTIONS LIVE HERE. NOTHING IS OPEN.
 
 **This file is the RECORD: what was ruled, where it was applied, and what was checked and
 dismissed with the reason.** The open questions are in `crossbook_open_questions.md` —
@@ -172,3 +172,18 @@ says it should. The same shape appears on the ampicillin line beside it.
 **No inversion was applied, either time.** Recorded here so a third reply does not
 persuade someone to "fix" a page that is already right. If a question about that page
 goes back to OE, quote the parenthetical in full and say what it expands to.
+
+
+---
+
+# ✅ 2026-08-28 — the three durations/thresholds questions, answered and applied
+
+| # | OE ruling | Applied |
+|---|---|---|
+| **1** | **300 mg/kg/day of ampicillin is too much for a NEONATE and correct BEYOND 4 weeks.** Term neonate: **150 mg/kg/day week 1 (50 mg/kg q8h), 200 mg/kg/day weeks 2–4 (50 mg/kg q6h)**; very preterm (≤ 34 wk) in week 1 takes **100 mg/kg/day q12h**. The ceiling is set by **immature renal clearance** — ampicillin is renally eliminated and accumulation risks CNS excitation and seizures. Adult ceiling 12 g/day. **Child > 4 weeks with meningitis: 300 mg/kg/day is right.** | `pb_086` neonatal meningitis brought down from 200→300 to **150→200**, with the preterm band and the reason. The older-child 300 mg/kg/day is **left as it was — it is correct** |
+| **2** | **3HR first-line** — isoniazid 10 mg/kg/day (7–15, max 300 mg) + rifampicin 15 mg/kg/day (10–20, max 600 mg) daily × 3 months. Higher completion at equal efficacy. **6H stays acceptable where rifampicin FDCs are not stocked** — an available regimen given reliably beats an unstocked better one. Same for a child with HIV or under 5; if ART interactions rule out a rifamycin, isoniazid 6–9 months. **Pyridoxine 12.5–25 mg/day** if HIV-positive or malnourished. | `pb_071` rewritten from 6H-only to 3HR first-line with 6H named as the stocked-out alternative, plus the HIV/under-5 case and pyridoxine |
+| **3** | **A routine 94% trigger is not defensible here.** It commits oxygen to a much larger group without mortality benefit; thresholds as low as 88% are safe (OxyKids, OxyPICU) and the paediatric Surviving Sepsis panel now conditionally recommends **88–92%** after resuscitation. **Harmonise the 94%-adult / 90%-child split down to 90%.** Separate the **trigger** from the **target**, and cap the target in hypercapnia-prone patients. | **25 ProtocolBook topics** swept from `< 94%` to `< 90%`. COPD target 90–92% → **88–92%**, with the trigger-is-not-the-target line. Discharge and CCHD-screening criteria are different figures and were **left alone**. The WHO oxygen page already carried < 90% trigger, > 90% target and the 88–92% note, and needed no change |
+
+⚠️ **The oxygen sweep took two passes.** The first regex required a lowercase `s` in
+`spO`, so the sixteen `spO2` files changed and the nine `SpO₂` files did not. Both are
+done; the check is that no `oxygen if …` line reads 94% anywhere.

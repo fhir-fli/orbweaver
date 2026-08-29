@@ -29,6 +29,12 @@
 #     source PDF header.
 # OpenEvidence-applied 2026-08-28 (WHO full advance pass):
 #   D10% 5 -> 2 mL/kg, children (WHO pass flag 1-2).
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
 # ============================================================
 
 topic:
@@ -53,7 +59,7 @@ topic:
           bullets:
             - "Monitor, support ABCs"
             - "Check vital signs (BP, PR, RR, spO2, Temp, Weight)"
-            - "Start oxygen if spO2 < 94%"
+            - "Start oxygen if spO2 < 90%"
             - "Assess GCS"
             - "Assess hydration status"
             - "Insert IV, draw CBC, malaria, RBS"
