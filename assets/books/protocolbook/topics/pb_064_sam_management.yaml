@@ -68,6 +68,9 @@
 #     no-nappies advice and the zinc fallback. Uncomplicated SAM now
 #     says it still gets oral amoxicillin.
 #   Grey should carry all of these into the source PDF.
+# 2026-08-29: D10 5 -> 2 mL/kg. MISSED BY THE 2026-08-28 SWEEP, which matched
+#   "5 ml/kg" and not "5mls/kg", and worked from a fixed file list rather than
+#   re-grepping afterwards. Found by diffing the formulary against the pages.
 # ============================================================
 
 topic:
@@ -104,7 +107,7 @@ topic:
             Blood glucose <3mmol/L (54mg/dL). Treatment:
 
             - Can drink: 50mls of 10% dextrose or sugar water (1 spoon of sugar + 50mls of water)
-            - Can't drink: Dextrose 10% IV 5mls/kg, followed by Dextrose 10% 50mLs or sugar water by NGT
+            - Can't drink: Dextrose 10% IV 2mls/kg, followed by Dextrose 10% 50mLs or sugar water by NGT
 
         - type: "prose"
           title: "2. Hypothermia"

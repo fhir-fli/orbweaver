@@ -29,6 +29,9 @@
 #   - p.30 Hydrocarbon's "See Convulsion Protocol" box points here;
 #     flowchart boxes render plain text (no links), so that pointer
 #     stays textual.
+# 2026-08-29: D10 5 -> 2 mL/kg. MISSED BY THE 2026-08-28 SWEEP, which matched
+#   "5 ml/kg" and not "5mls/kg", and worked from a fixed file list rather than
+#   re-grepping afterwards. Found by diffing the formulary against the pages.
 # ============================================================
 
 topic:
@@ -70,7 +73,7 @@ topic:
                   - "Ensure safety and check ABC"
                   - "Start oxygen"
                   - "Diazepam 0.2mg/kg IV slowly over 1min (max 10mg) OR Rectal Diazepam 2.5mg suppository: <10kg 1 suppository · 10–15kg 2 · 15–20kg 3 · 20–25kg 4 suppositories"
-                  - "Dextrose 10% 5mls/kg IV (or check glucose)"
+                  - "Dextrose 10% 2mls/kg IV (or check glucose)"
                   - "Check ABCs when fit stops"
               continue: true
             - label: "No"

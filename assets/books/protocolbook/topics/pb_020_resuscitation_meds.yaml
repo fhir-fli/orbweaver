@@ -47,6 +47,9 @@
 #     20 mg/kg (our neonatal 20 mg/kg is correct and matches p.42).
 #     OE rated this LOW and said "consider". Maintenance 5 mg/kg/day
 #     is at the top of the 3–5 range but acceptable.
+# 2026-08-29: D10 5 -> 2 mL/kg. MISSED BY THE 2026-08-28 SWEEP, which matched
+#   "5 ml/kg" and not "5mls/kg", and worked from a fixed file list rather than
+#   re-grepping afterwards. Found by diffing the formulary against the pages.
 # ============================================================
 
 topic:
@@ -70,7 +73,7 @@ topic:
         - cells:
             - "Dextrose 10%"
             - |
-              **5 ml/kg** IV. Three ways to make it — they are **not** the same fluid:
+              **2 ml/kg** IV. Three ways to make it — they are **not** the same fluid:
               - **D10 in ~0.7% saline** (has sodium, ~123 mmol/L): 8 ml NS + 2 ml D50%
               - **D10 in water** (no sodium, free water): 1 ml D50% + 4 ml sterile water
               - **D10 in water**, if only D5% is at hand: 1 ml D50% + 8 ml D5%
