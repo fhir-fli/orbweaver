@@ -1119,7 +1119,7 @@ formulary:
       - calc
       - calc
       - calc
-    notes: 'Neonates: give phenobarbital (20 mg/kg IV/IM) instead of diazepam. If convulsions continue, repeat 10 mg/kg IV/IM after 30 min. Oral phenobarbital maintenance 2.5–5 mg/kg.'
+    notes: 'Neonates: give phenobarbital (20 mg/kg IV/IM) instead of diazepam. If convulsions continue, repeat PHENOBARBITAL 10 mg/kg IV/IM after 30 min — not diazepam. Oral phenobarbital maintenance 2.5–5 mg/kg.'
   - id: digoxin
     name: Digoxin
     class: cardiac
@@ -2031,8 +2031,14 @@ formulary:
     - convulsions
     page: 367
     doses:
-    - label: Loading
-      regimen: 'IM: 15 mg/kg loading dose'
+    - label: NEONATE / low birth weight — loading
+      regimen: 'IV/IM: 20 mg/kg. Give this instead of diazepam in a neonate. If convulsions continue, repeat 10 mg/kg after 30 min, to a cumulative maximum of 40 mg/kg. Watch for apnoea and keep a bag-mask to hand'
+      form: 200 mg/ml solution — calculate the exact dose
+    - label: NEONATE — maintenance
+      regimen: 'Oral: 5 mg/kg per day'
+      form: 200 mg/ml solution — calculate the exact dose
+    - label: CHILD, status epilepticus — loading
+      regimen: 'IM/IV: 15 mg/kg over 15 min, after two doses of diazepam have failed'
       form: 200 mg/ml solution
       bands:
       - 0.4 ml
@@ -2040,8 +2046,8 @@ formulary:
       - 1.0 ml
       - 1.5 ml
       - 2.0 ml
-    - label: Maintenance
-      regimen: 'Oral/IM: 2.5–5 mg/kg maintenance'
+    - label: CHILD — maintenance
+      regimen: 'Oral/IM: 2.5–5 mg/kg'
       form: 200 mg/ml solution
       bands:
       - 0.1 ml
@@ -2049,7 +2055,7 @@ formulary:
       - 0.25 ml
       - 0.35 ml
       - 0.5 ml
-    notes: 'Neonates: give phenobarbital (20 mg/kg IV/IM) instead of diazepam for convulsions; if they continue, 10 mg/kg IV/IM after 30 min.'
+    notes: '🛑 The loading dose differs by age and BOTH figures are correct. A NEONATE gets 20 mg/kg; an older child in status epilepticus gets 15 mg/kg. The millilitre bands above are calculated at 15 mg/kg and are for the older child only — for a neonate, calculate the exact dose.'
   - id: phenytoin
     name: Phenytoin
     class: anticonvulsant

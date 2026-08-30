@@ -1777,6 +1777,14 @@ formulary:
 
       - Maintenance: 5 mg/kg IV/IM/PO OD
 
+
+      🛑 **The resuscitation medications page gives a different scheme for the same
+      patient: 20 mg/kg IM/IV over 20 min, all ages, no milligram cap, a further
+      10 mg/kg if still fitting at 15 min, and a cumulative maximum of 40 mg/kg.**
+      The two are not interchangeable — the 320 mg cap here is reached at 16 kg on the
+      20 mg/kg scheme. Query outstanding; until it is answered, follow the
+      resuscitation page for an actively convulsing patient.
+
       '
     notes: '**Not compatible with aminophylline, metronidazole.**
 

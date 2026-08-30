@@ -9,6 +9,7 @@ glucagon	glucagon
 hydralazine	hydralazine
 hydroxocobalamin	cyanokit; hydroxocobalamin
 misoprostol	misoprostol
+nitroprusside	nitroprusside
 oxymetazoline	afrin; oxymetazoline
 oxytocin	oxytocin
 propofol	propofol
@@ -16,5 +17,6 @@ rocuronium	rocuronium
 silver sulfadiazine	silver sulfadiazine
 succinylcholine	succinylcholine; sux
 sulfadoxine-pyrimethamine	sulfadoxine-pyrimethamine; sulphadoxine-pyrimethamine
+sulfadoxine–pyrimethamine	sulfadoxine–pyrimethamine
 tetracaine	tetracaine
 tetracaine, adrenaline, cocaine	tetracaine, adrenaline, cocaine

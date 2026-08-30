@@ -285,3 +285,14 @@ no deficiency signs on F-75/F-100/RUTF should get the low daily dose only.
 
 For v1.8: change 14 → 15 in both places, add diarrhoea to the trigger, and state that the
 referring-centre case gets days 2 and 15.
+
+## Phenobarbital loading dose — the book disagrees with itself (p.20 vs p.154)
+
+**p.154 formulary:** infants / children / adults, loading **15 mg/kg** IV/IM, max initial
+loading dose **320 mg**, maintenance 5 mg/kg OD.
+**p.20 resuscitation medications**, both the paediatric and the adult table: load
+**20 mg/kg** IM/IV over 20 min, **all ages**, no milligram cap, further 10 mg/kg at
+15 min, cumulative max 40 mg/kg, maintenance **3–5** mg/kg OD.
+
+Not reconcilable by adding the cap: 320 mg is reached at 16 kg on the 20 mg/kg scheme.
+Open with OE. For v1.8 the two pages must be made to agree, whichever way it is answered.
