@@ -959,3 +959,27 @@ the AAD and paediatric consensus; keeping the 3 mg/kg conservative procedural ce
 sensible here. **OE added something we did not have: a total-milligram cap** — plain
 300 mg, with epinephrine 500 mg — because a mg/kg figure alone overdoses an adolescent
 near adult weight. Added.
+
+## Vocabulary-gap scan, 2026-08-30 — one drug the WHO book prescribes and its formulary lacks
+
+The scan looks for drug-like words next to a dose that no formulary carries. Raw output is
+259 unknown words and almost all of it is noise — ordinary English sitting beside a number
+("further", "start", "only", "above"). Filtering to words with drug morphology leaves
+three, of which two are not drugs (encephalopathy, benzodiazepine).
+
+**The one real hit: amoxicillin–clavulanate is absent from the WHO formulary.** §6.8 names
+**oral amoxicillin–clavulanate as the FIRST choice** for a urinary tract infection in a
+child with fever, systemic upset, signs of pyelonephritis, or in an infant, and §4.7 names
+it again for protracted bacterial bronchitis. The annex had no entry, so looking the drug
+up returned nothing — the same defect class as rifaximin printing only lactulose's dose.
+The ProtocolBook has had an entry all along, which is why this was invisible to the
+cross-book pass: it only compares drugs present in both.
+
+Added, with the dose taken verbatim from the page that prescribes it — 25–50 mg/kg/day
+**of the amoxicillin component**, in 2–3 divided doses, with an explicit instruction never
+to dose by the combined figure. Marked in the entry as **not yet checked by OpenEvidence**
+and queued as the one open question.
+
+**Worth keeping about the tool:** its signal-to-noise is poor enough that the raw output is
+unusable, but the morphology filter reduces 259 words to 3 in one command, and that found
+a first-choice antibiotic missing from a formulary. Run it filtered.

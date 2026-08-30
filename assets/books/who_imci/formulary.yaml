@@ -424,6 +424,17 @@ formulary:
       - 20 ml
       - —
     notes: 40 mg/kg per dose twice a day (80 mg/kg/day) is the WHO standard for pneumonia / chest-indrawing pneumonia (2014 IMCI revision). Some non-pneumonia infections use the lower 25 mg/kg twice a day (halve the amounts above).
+  - id: amoxicillin-clavulanate
+    name: Amoxicillin–clavulanate (co-amoxiclav)
+    class: antibiotic
+    subtitle: penicillin with beta-lactamase inhibitor
+    indications:
+    - urinary tract infection
+    - chronic cough
+    doses:
+    - label: Urinary tract infection — first choice
+      regimen: 'Oral: 25–50 mg/kg/day OF THE AMOXICILLIN COMPONENT, in 2–3 divided doses. Dose and prescribe by the amoxicillin component, never by the combined figure'
+    notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken verbatim from §6.8, which names it FIRST CHOICE for a urinary tract infection with fever, systemic upset, pyelonephritis, or in an infant; it is also named for protracted bacterial bronchitis in §4.7. Base the choice on local E. coli susceptibility where known. NOT yet checked by OpenEvidence.'
   - id: amphotericin-b
     name: Amphotericin B
     class: antibiotic

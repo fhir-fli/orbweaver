@@ -1,47 +1,53 @@
 count	word	book	example
-20	mg/kg	PB	Dilute antivenom in NS (no more than 20mL/500mL bag), give slowly over 30 mins or no more than 1–2mL/min | Polyvalent: titrate to symptoms, assess q30min | Monovalent: monitor haematologic response, r
-20	maintenance	PB	Digoxin — **ONLY IF PROVEN** supraventricular tachycardia (atrial fibrillation, atrial flutter, etc.). **Digitalise:** 0.25–0.5 mg IV, then 0.25 mg every 6–8 hours for up to 2 further doses (total ≤1–
+24	mg/kg	PB	Dilute antivenom in NS (no more than 20mL/500mL bag), give slowly over 30 mins or no more than 1–2mL/min | Polyvalent: titrate to symptoms, assess q30min | Monovalent: monitor haematologic response, r
+21	maintenance	PB	Should be treated with **Phenobarbitone 20mg/kg stat**; if still fitting after 30 min give a further **10mg/kg**, to a **cumulative maximum of 40mg/kg** — and only where respiratory monitoring is avai
 18	loading	PB	Loading: 6 mg/kg IV/PO over 1 hr
-12	exceed	PB	a) **1st line — Artesunate** i) **3 mg/kg** < 20 kg · **2.4 mg/kg** ≥ 20 kg IV/IM at **0, 12, 24 h** ii) Parenteral Rx ≥ 24 h, then daily until tolerating PO → switch to oral b) **2nd line — Artemethe
-12	shock	PB	Hypovolemic Shock: 10–20mL/kg NS or RL bolus, repeat until BP improves
+13	exceed	PB	a) **1st line — Artesunate** i) **3 mg/kg** < 20 kg · **2.4 mg/kg** ≥ 20 kg IV/IM at **0, 12, 24 h** ii) Parenteral Rx ≥ 24 h, then daily until tolerating PO → switch to oral b) **2nd line — Artemethe
+13	shock	PB	Hypovolemic Shock: 10–20mL/kg NS or RL bolus, repeat until BP improves
 10	blood	PB	If no improvement after first bolus, assume septic shock, give whole blood 10mL/kg
 10	initial	PB	Initial: 200 mg PO BD
-8	ml/kg	PB	Neonates / infants / children: D10% 2 mL/kg (0.2 g/kg) IV push (if no D10 immediately available, use D5)
-8	im/iv	WHO	| Wk 2–4: 7.5 mg/kg od IM/IV | | 0.75–1.1 ml | 1.1–1.5 ml | 1.5–1.8 ml | 1.8–2.2 ml | 2.2–2.6 ml | 2.6–3.0 ml | 3.0–3.3 ml
+9	ml/kg	PB	Neonates / infants / children: D10% 2 mL/kg (0.2 g/kg) IV push (if no D10 immediately available, use D5)
+9	im/iv	WHO	| Wk 2–4: 7.5 mg/kg od IM/IV | | 0.75–1.1 ml | 1.1–1.5 ml | 1.5–1.8 ml | 1.8–2.2 ml | 2.2–2.6 ml | 2.6–3.0 ml | 3.0–3.3 ml
+8	further	PB	Phenobarbitone / Phenobarbital | **Load** 20 mg/kg IM/IV over 20 min (all ages) · if still fitting after 15 min give a further **10 mg/kg**, to a **cumulative max 40 mg/kg** — only where respiratory m
 7	acid	PB	Plus folic acid 1 mg/kg (or 50 mg) IV every 4–6 hours** — it speeds conversion of formic acid to CO₂ and water, and is cheap and available
-6	further	PB	Phenobarbitone / Phenobarbital | **Load** 20 mg/kg IM/IV over 20 min (all ages) · if still fitting after 15 min give a further **10 mg/kg**, to a **cumulative max 40 mg/kg** — only where respiratory m
 6	start	PB	Children < 5 yo or < 20 kg: 0.1 mg/kg IV | Children > 5 yo or > 20 kg: 2 mg IV | Adults: 0.4 mg IV, titrate up to 2 mg | No IV? Give the SAME dose IM (onset ~5 min — do not re-dose faster than q3 min;
+6	meningitis	PB	Meningitis: 50 mg/kg/dose q6hr
+6	prophylaxis	PB	DVT prophylaxis: 40 mg SC OD
+6	cells	WHO	Afebrile (T < 37.5 °C):** give the **higher volume — whole blood 30 ml/kg (or packed cells 20 ml/kg)** — it **lowers** mortality.
 6	liquid	WHO	liquid 130 ml/kg per day** (or **100 ml/kg per day** if the child has **severe oedema**)
-5	sulfate	PB	Adults: **65 mg ONCE daily** of elemental iron (= ferrous sulfate 200 mg, one tablet). If not tolerated, the same tablet every other day — equally effective and better absorbed
 5	deoxycholate	PB	Amphotericin B deoxycholate 1 mg/kg/day IV **plus** flucytosine 100 mg/kg/day × **7 days**, then fluconazole 1200 mg/day to complete induction
-5	meningitis	PB	Meningitis: 50 mg/kg/dose q6hr
 5	treatment	PB	DVT / PE treatment: 1 mg/kg SC q12hrs **Adults:
 5	sugar	WHO	Sugar | 50 g | 10 g
+4	only	PB	Epinephrine 0.1 ml/kg of 0.1 mg/mL (1:10,000), max 10 ml (= 1 mg). If only 1 mg/mL (1:1,000) is stocked, dilute 1 ml in 9 ml normal saline — never give 1:1,000 undiluted IV
 4	maint	PB	Phenobarbitone / Phenobarbital | **Load** 20 mg/kg IM/IV over 20 min (all ages) · if still fitting after 15 min give a further **10 mg/kg**, to a **cumulative max 40 mg/kg** — only where respiratory m
 4	output	PB	Satisfactory urine output 1–2mL/kg/hr **NEVER alternate D10 & NS/RL — this can cause brain oedema
-4	cells	WHO	Afebrile (T < 37.5 °C):** give the **higher volume — whole blood 30 ml/kg (or packed cells 20 ml/kg)** — it **lowers** mortality.
+4	hourly	PB	Ampicillin 75 mg/kg IV 6-hourly (= 300 mg/kg/day) — **for Listeria
+4	above	PB	Transferrin saturation < 20% (or < 16%)** is the alternative discriminator when ferritin is equivocal and iron studies are available — the table's single 18% line is a simplification **Where the numbe
+4	flat	PB	Respiratory distress, airway compression from hilar nodes, severe miliary TB — lower-grade evidence; use judgement rather than a fixed course | One regimen does not fit all five indications, and the m
+4	sulfate	PB	Unstable or symptomatic & magnesium < 1: magnesium sulfate **1–2 g IV over 15–60 min**, then a **slower continuous infusion** (children 25–50 mg/kg) — a rapid bolus is largely excreted in the urine. *
+4	agitation	PB	Acute agitation — 2.5–5 mg IV/IM**, alone or with midazolam 2.5–5 mg. Olanzapine 10 mg IM, where stocked, has fewer extrapyramidal effects.
 4	fluid	WHO	Give IV fluid **15 ml/kg over 1 hour**. Prefer **Ringer's lactate (or Hartmann's)**.
 4	mg/ml	WHO	**Cefotaxime** | 50 mg/kg IV — premature q12h; wk 1 q8h; wk 2–4 q6h | 500 mg vial + 2 ml water → 250 mg/ml | 0.3 ml | 0.4 ml | 0.5 ml | 0.6 ml | 0.7 ml | 0.8 ml | 0.9 ml
-3	only	PB	Epinephrine 0.1 ml/kg of 0.1 mg/mL (1:10,000), max 10 ml (= 1 mg). If only 1 mg/mL (1:1,000) is stocked, dilute 1 ml in 9 ml normal saline — never give 1:1,000 undiluted IV
 3	load	PB	Phenobarbitone / Phenobarbital | **Load** 20 mg/kg IM/IV over 20 min (all ages) · if still fitting after 15 min give a further **10 mg/kg**, to a **cumulative max 40 mg/kg** — only where respiratory m
 3	suppositories	PB	Weight | Suppositories (2.5 mg)
 3	replacement	PB	Total fluid replacement = 80mL/kg + 2× maintenance − initial bolus
-3	hourly	PB	Ampicillin 75 mg/kg IV 6-hourly (= 300 mg/kg/day) — **for Listeria
-3	above	PB	Transferrin saturation < 20% (or < 16%)** is the alternative discriminator when ferritin is equivocal and iron studies are available — the table's single 18% line is a simplification **Where the numbe
+3	printed	PB	**Rate control: a beta blocker is first-line**, including in HFrEF. Digoxin is second-line — it controls rate at rest but poorly on exertion — and is best added to a beta blocker. **Avoid verapamil an
 3	other	PB	Other: 1 g IV 12 hrly
-3	prophylaxis	PB	DVT prophylaxis: 40 mg SC OD
 3	deficiency	PB	Deficiency: 1 mg PO/day
+3	pressure	PB	Raised intracranial pressure — 0.5–1 g/kg IV.** Hypertonic saline is the alternative.
+3	preterm	PB	Preterm ≤ 1500 g: 0.3–0.5 mg/kg IM stat — a single IV dose is not recommended in a preterm infant
 3	fluids	WHO	Step 2 — Circulation.** Check for **shock** or diarrhoea with **severe dehydration**. Give oxygen and start **cautious** IV fluids — **10–20 ml/kg over 30–60 min, reassess after each** (balanced cryst
+3	older	WHO	Induction (2 weeks):** **amphotericin B deoxycholate 1 mg/kg/day IV** (or **liposomal amphotericin B 3–4 mg/kg/day**) **+ flucytosine 25 mg/kg four times daily (100 mg/kg/day)**. The older 150 mg/kg/d
 3	boluses	WHO	With intensive care available:** up to **40–60 ml/kg** in boluses (**10–20 ml/kg per bolus**) over the first hour.
 3	poor	WHO	poor (< 5 g/kg/day)** → the child needs a **full re-assessment
-3	dispersible	WHO	Dispersible 20 mg tablet (or syrup)
-2	prbcs	PB	Packed Red Blood Cells (PRBCs) | 10 ml/kg (raise Hgb 1 g/dL)
+3	dispersible	WHO	Once daily by weight band. Dispersible 5 mg and film-coated tablets are NOT interchangeable mg-for-mg (dispersible has higher bioavailability).
 2	inject	PB	Flush:** slowly inject 3 ml NS looking for leakage under the skin — if OK, attach IV fluid set and secure with dressings / strap.
 2	transfusion	PB	If severely pale, respiratory distress, or known Hgb < 5 → consider transfusion **10–20 ml/kg over 2–4 h** After 24 h of Artesunate: if taking PO → switch to **3 days PO Rx**. If not → continue Artesu
 2	ingestion	PB	**Acute single ingestion** | ≥200mg/kg in <8 hrs | ≥10g or 200mg/kg (whichever is lower) in <8 hrs
 2	three-bag	PB	Three-bag** (150mg/kg over 15 min, then 50mg/kg over 4 hrs, then 100mg/kg over 16 hrs) is still preferred where more drug is wanted in the first 3 hrs: late presentation with established hepatotoxicit
 2	rehydration	PB	STEP 1: Ringers 30mls/kg over — >12 months: 30 minutes · <12 months: 60 minutes | If no IV access or IVF | STEP 2: Ringers 70mls/kg over — >12 months: 2.5 hours · <12 months: 5 hours | If no IV access
 2	amoxicillin-clavulanate	PB	Amoxicillin / Amoxicillin-Clavulanate 50mg/kg PO divided every 12 hours
+2	nebulizer	PB	Nebulizer: 2.5mg in 3mL NS for most children. Step up to 5mg in 5mL NS for an older or larger child (roughly ≥5 years or >20–25kg) or a severe attack — weight and severity, not a 2-year cutoff
 2	transfuse	PB	Transfuse 10–20mL/kg over 2–4 hours (2.5–5mL/kg/hr) if needed | Malaria Rx per protocol | Sepsis Rx per protocol
 2	paediatric	PB	Gentamicin 7.5mg/kg/day x 7 days** — SAM has its own higher gentamicin dose; do not use the general paediatric 5mg/kg here
 2	ferritin	PB	No inflammation — iron deficiency confirmed if ferritin < 30 µg/L
@@ -49,19 +55,28 @@ count	word	book	example
 2	digitalise	PB	Digoxin — **ONLY IF PROVEN** supraventricular tachycardia (atrial fibrillation, atrial flutter, etc.). **Digitalise:** 0.25–0.5 mg IV, then 0.25 mg every 6–8 hours for up to 2 further doses (total ≤1–
 2	available	PB	Esmolol** (where an infusion pump is available) — 500 mcg/kg IV over 1 minute, then infuse 25–50 mcg/kg/min, increasing by 25–50 mcg/kg/min every 5–10 minutes, to a maximum of 200–300 mcg/kg/min
 2	later	PB	Under 75:** 30 mg IV bolus, then 15 minutes later 1 mg/kg SC q12hrs (max 100 mg/dose for the first 2 doses)
-2	printed	PB	**Rate control: a beta blocker is first-line**, including in HFrEF. Digoxin is second-line — it controls rate at rest but poorly on exertion — and is best added to a beta blocker. **Avoid verapamil an
-2	flat	PB	Respiratory distress, airway compression from hilar nodes, severe miliary TB — lower-grade evidence; use judgement rather than a fixed course | One regimen does not fit all five indications, and the m
+2	tartrate	PB	Metoprolol tartrate 25 mg PO BD
 2	zoster	PB	VZV (zoster): **800 mg PO five times daily** — aciclovir's poor oral bioavailability is why it is not dosed like valaciclovir
 2	response	PB	Stable** regular narrow-complex SVT — after vagal manoeuvres. **Children:** 0.1 mg/kg rapid IV push (max 6 mg); if no response 0.2 mg/kg (max 12 mg) **Adults:** 6 mg rapid IV push + 20 mL flush; if no
-2	convulsions	PB	Tetany / convulsions: 0.6–1 mL/kg of 10% solution via slow push **Adults:
+2	stroke	PB	Ischaemic stroke: 300 mg PO stat**, then **75–100 mg daily
+2	convulsions	PB	Symptomatic hypocalcaemia / tetany / hypocalcaemic convulsions: **0.5–1 mL/kg** of 10% solution (≈50–100 mg/kg) slow IV over 5–10 min, with cardiac monitoring
+2	mg/kg/day	PB	< 12 yrs: 1 g/day, 35 mg/kg/day, 100 mg/dose BD
 2	infection	PB	Mild / moderate infection: 500 mg PO BD
+2	fraction	PB	Heart failure with reduced ejection fraction — 10 mg PO once daily, where available.** A fourth pillar alongside an ACE-inhibitor, a beta-blocker and spironolactone.
 2	croup	PB	Asthma / croup: 0.6 mg/kg/dose IV/IM/PO × 1 dose **Adults:
+2	iv/im	PB	IV/IM: 5 mcg/kg × 1 dose, followed by 2.5 mcg/kg q8hr × 2 doses
 2	everyone	PB	Everyone: 90 mg/kg/dose IV q12hrs
+2	encephalopathy	PB	Infants (hepatic encephalopathy): 2.5–10 mL ÷ TID-QID
+2	intranasal	PB	Buccal or intranasal: 0.3–0.5 mg/kg (max 10 mg)** — more effective than rectal diazepam
+2	increasing	PB	0.3–0.5 mcg/kg/min**, increasing 0.5 mcg/kg/min every few minutes, to a **maximum 10 mcg/kg/min**. 🛑 Avoid in hypertensive encephalopathy. Cyanide toxicity with prolonged or high-dose use.
+2	unavailable	PB	Variceal bleeding, if octreotide is unavailable — 2 mg IV q4–6h until bleeding stops, then 1 mg q4–6h.** More adverse effects than octreotide; avoid in ischaemic heart disease.
+2	term	PB	Term: 1 mg IM stat **Supratherapeutic INR:
 2	consider	PB	INR 4.5–10, no bleeding: may consider 1–2.5 mg PO
 2	adding	WHO	If neither is available, consider **animal milk**: dilute cow's milk by **adding 50 ml water to 100 ml milk, then add 10 g sugar** and an approved micronutrient supplement. **Do not** use for prematur
 2	flour	WHO	Cereal flour | 100 g | 20 g
 2	uses	WHO	If available:** blood **lactate ≥ 2 mmol/L** raises concern for tissue hypoperfusion. (The "strong" recommendation to measure is from the **adult** SSC; the **paediatric** SSC only **suggests** measur
 2	volume	WHO	Volume — 15 ml/kg over 1 hour
+2	rectal	WHO	🛑 **The IV dose is NOT the rectal dose.** Rectal **0.5 mg/kg** (0.1 ml/kg) is higher because rectal absorption is incomplete. **Intravenously give 0.2 mg/kg.** 0.5 mg/kg IV is roughly double, and in a
 2	feed	WHO	AAP is staged more loosely over the same window: **> 2.2 mmol/L (40 mg/dL) in the first 4 h** before a feed, **> 2.5 mmol/L (45 mg/dL) from 4–24 h**.
 2	ml/h	WHO	6–10 kg | 550 ml (110 ml/h) | 550 ml (220 ml/h)
 2	puffs	WHO	Salbutamol by MDI + spacer:** **2 puffs (200 µg)** into the chamber, child breathes 3–5 times; repeat to **6 puffs (< 5 y)** or **12 puffs (> 5 y)**, reassess and repeat as needed. A spacer can be mad
@@ -69,21 +84,17 @@ count	word	book	example
 2	reach	WHO	Children ≥ 6 months:** restart feeding as soon as the child can eat; give food **six times a day** to reach **≥ 110 kcal/kg/day**. Many eat poorly until a serious infection is treated for 24–48 h and 
 2	rice	WHO	Rice | **15 g**
 2	copper	WHO	Give **all** children daily supplementary multivitamins and minerals for **2 weeks** — a broad range including **≥ 2 RDAs of folate, vitamin A, zinc, magnesium and copper**. As a guide, one RDA for a 
-2	magnesium	WHO	Give **all** children daily supplementary multivitamins and minerals for **2 weeks** — a broad range including **≥ 2 RDAs of folate, vitamin A, zinc, magnesium and copper**. As a guide, one RDA for a 
-2	older	WHO	Induction (2 weeks):** **amphotericin B deoxycholate 1 mg/kg/day IV** (or **liposomal amphotericin B 3–4 mg/kg/day**) **+ flucytosine 25 mg/kg four times daily (100 mg/kg/day)**. The older 150 mg/kg/d
-2	pressure	WHO	Severe dengue is defined by **one or more** of: **plasma leakage** that may lead to **shock** and fluid accumulation; **severe bleeding**; **severe organ impairment**. **Plasma leakage is the most imp
 2	moderate	WHO	moderate (5–10 g/kg/day)** → check intake targets are met and no infection was overlooked
 2	good	WHO	good (> 10 g/kg/day)** → continue. **Outpatient** weight gain is normally **slower** (typically **2–4 g/kg/day**) than the inpatient target — do not judge outpatient progress against the 10 g/kg/day t
-2	dihydrochloride	WHO	Quinine dihydrochloride 150 mg/ml (2-ml ampoules)
-2	injection	WHO	Local injection: 4–5 mg/kg per dose as a local anaesthetic; or apply topically (see p.307)
 2	film-coated	WHO	Film-coated 10 mg — tablets once daily
+2	plain	WHO	🛑 The printed annex gives 4–5 mg/kg without saying which preparation, and that is unsafe to print: 5 mg/kg exceeds the maximum for PLAIN lidocaine. Confirmed by OE 2026-08-30 against the FDA labels an
+2	dihydrochloride	WHO	Quinine dihydrochloride 150 mg/ml (2-ml ampoules)
 1	flush	PB	Epinephrine (Adrenaline) | **0.1 ml/kg of 0.1 mg/mL (1:10,000)** IV, **max 10 ml (= 1 mg)** · flush 10 ml NS · 🛑 Use 0.1 mg/mL (1:10,000) for IV/IO. If only 1 mg/mL (1:1,000) ampoules are stocked, dil
-1	sodium	PB	Dextrose 10% | **5 ml/kg** IV. Three ways to make it — they are **not** the same fluid: - **D10 in ~0.7% saline** (has sodium, ~123 mmol/L): 8 ml NS + 2 ml D50% - **D10 in water** (no sodium, free wat
-1	mmol/l	PB	Dextrose 10% | **5 ml/kg** IV. Three ways to make it — they are **not** the same fluid: - **D10 in ~0.7% saline** (has sodium, ~123 mmol/L): 8 ml NS + 2 ml D50% - **D10 in water** (no sodium, free wat
-1	hand	PB	Dextrose 10% | **5 ml/kg** IV. Three ways to make it — they are **not** the same fluid: - **D10 in ~0.7% saline** (has sodium, ~123 mmol/L): 8 ml NS + 2 ml D50% - **D10 in water** (no sodium, free wat
+1	sodium	PB	Dextrose 10% | **2 ml/kg** IV. Three ways to make it — they are **not** the same fluid: - **D10 in ~0.7% saline** (has sodium, ~123 mmol/L): 8 ml NS + 2 ml D50% - **D10 in water** (no sodium, free wat
+1	mmol/l	PB	Dextrose 10% | **2 ml/kg** IV. Three ways to make it — they are **not** the same fluid: - **D10 in ~0.7% saline** (has sodium, ~123 mmol/L): 8 ml NS + 2 ml D50% - **D10 in water** (no sodium, free wat
+1	hand	PB	Dextrose 10% | **2 ml/kg** IV. Three ways to make it — they are **not** the same fluid: - **D10 in ~0.7% saline** (has sodium, ~123 mmol/L): 8 ml NS + 2 ml D50% - **D10 in water** (no sodium, free wat
 1	needle	PB	Needle:** IO or bone-marrow needle **15–18 G** (or **16–21 G** hypodermic if IO unavailable).
 1	hypoglycemia	PB	Hypoglycemia (< 2.2 mmol/L)
-1	charcoal	PB	Consider **single-dose activated charcoal 1 g/kg PO/NGT within 1 hour** of ingestion, for substances known to be adsorbed. Do not give it to a patient who is not fully awake, and never intubate solely
 1	three	PB	Rx: oral by NGT — 1.8 ml/kg of 43% ethanol (roughly **three 40 ml shots, ≈126 ml**, in a 70 kg adult); maintenance 0.2–0.4 ml/kg/hour of 43% ethanol
 1	shots	PB	Rx: oral by NGT — 1.8 ml/kg of 43% ethanol (roughly **three 40 ml shots, ≈126 ml**, in a 70 kg adult); maintenance 0.2–0.4 ml/kg/hour of 43% ethanol
 1	product	PB	Children < 5 yo or < 20 kg: 0.1 mg/kg IV | Children > 5 yo or > 20 kg: 2 mg IV | Adults: 0.4 mg IV, titrate up to 2 mg | No IV? Give the SAME dose IM (onset ~5 min — do not re-dose faster than q3 min;
@@ -96,9 +107,10 @@ count	word	book	example
 1	function	PB	Normal Birth Wt & >1 week of age (normal renal function): 5mg/kg OD IM/IV
 1	ns/rl	PB	Change IVF to D5 NS/RL (50mL D50 + 450mL NS/RL) | Continue Insulin Regimen until RBS <14 | Recheck urine for ketones every 4 hours
 1	low-sodium	PB	⚠️ **If cholera or profuse watery diarrhoea — use STANDARD ORS, not ReSoMal.** ReSoMal is deliberately low-sodium (45 mmol/L) for the oedematous, sodium-overloaded SAM child; in high-output sodium-los
-1	therapy	PB	Well child contacts who do NOT have TB:** give **isoniazid preventive therapy 10mg/kg daily for 6 months
+1	allergy	PB	Clindamycin PO — for penicillin allergy | 7mg/kg (max 300mg) 8 hourly x 10 days
 1	ideally	PB	⚠️ **Do NOT give 5 mg folic acid to anyone taking an antifolate** — sulfadoxine-pyrimethamine (SP, used for malaria chemoprevention) or cotrimoxazole prophylaxis. High-dose folate rescues the parasite
-1	malnourished	PB	Malnourished: 5 mL/kg PRBCs, or 10 mL/kg WB (do not repeat the transfusion)
+1	temperature	PB	Malnourished (any temperature): 5 mL/kg PRBCs, or 10 mL/kg WB** — slowly, watching for overload. **Do not repeat the transfusion.** Malnutrition overrides the afebrile higher-volume rule below
+1	against	PB	Adult**: 1–2 units PRBCs **Print the pairing, not a conversion.** TRACT randomised to **30 mL/kg whole blood or 20 mL/kg red cells** (higher) against **20 mL/kg whole blood or 10 mL/kg red cells** (lo
 1	and/or	PB	Well baby > 34 weeks gestation and/or > 1500 g
 1	babies	PB	Feed on demand, at least every 3 hours (at least 8 feeds per day). In babies > 1500 g who are not sick and are breastfeeding, it is not necessary to perform fluid calculations.
 1	reaches	PB	When the enteral feeding volume reaches 100 ml/kg/day and the baby is tolerating feeds, the IV infusion may be stopped. Aim to stop IVF by day 7–8 of life to reduce the risk of infection.
@@ -116,7 +128,6 @@ count	word	book	example
 1	infuse	PB	Esmolol** (where an infusion pump is available) — 500 mcg/kg IV over 1 minute, then infuse 25–50 mcg/kg/min, increasing by 25–50 mcg/kg/min every 5–10 minutes, to a maximum of 200–300 mcg/kg/min
 1	decreases	PB	Urine output decreases (< 0.5 mL/kg/hr for > 6 hours)
 1	inhibitor	PB	🛑 **Never combine ticagrelor with a fibrinolytic.** With lysis, clopidogrel is the only evidence-based P2Y₁₂ inhibitor — 300 mg load under 75, 75 mg with no load at 75 and over
-1	tartrate	PB	Metoprolol tartrate 25 mg PO BD
 1	nebuliser	PB	Albuterol / ipratropium q20min × 3 doses — nebuliser (5 mg / 0.5 mg) or MDI 8 puffs | Caution using albuterol with cardiac disease | Evaluate after the first Rx and after the first 3; if symptoms dram
 1	disease	PB	ADULT dose: 0.4 mg/kg/day IV for grade II/III disease, 0.3 mg/kg/day for grade I. Children get 0.6 mg/kg/day — the difference is age, not a disagreement | Wean the IV dose by 0.1 mg/kg/day each week f
 1	accelerated	PB	Alteplase: 100 mg IV over 2 hours.** In cardiac arrest / peri-arrest, an accelerated **0.6 mg/kg over ~15 min (max 50 mg)**. A **50 mg** regimen has similar efficacy with less bleeding
@@ -127,9 +138,10 @@ count	word	book	example
 1	vaccination	PB	Primary varicella vaccination: 0.5 mL SQ × 2 doses ≥ 3 months apart
 1	arrest	PB	Peri-arrest / cardiac arrest: **0.6 mg/kg over ~15 min (max 50 mg)
 1	continued	PB	Extended prophylaxis after ≥ 6 months, if continued: 2.5 mg BD
+1	arthritis	PB	Acute rheumatic fever arthritis: 20–25 mg/kg/dose PO q6h
+1	indication	PB	Hyperkalaemia is a different indication: 0.5 mL/kg** (adults 10 mL) over 2–3 min. It stabilises the myocardium and does **not** lower the potassium
 1	carbonate	PB	100 mg Ca carbonate = 40 mg elemental Ca = 2 mEq Ca
 1	g/day	PB	< 12 yrs: 1 g/day, 35 mg/kg/day, 100 mg/dose BD
-1	mg/kg/day	PB	< 12 yrs: 1 g/day, 35 mg/kg/day, 100 mg/dose BD
 1	sepsis	PB	Meningitis / sepsis: 2 g IV 6 hrly
 1	pneumonia	PB	Sepsis / pneumonia: 80 mg/kg IV OD **Children:
 1	uncomplicated	PB	UTI (uncomplicated): 250 mg PO BD × 3 days
@@ -137,27 +149,37 @@ count	word	book	example
 1	dosage	PB	Dosage: 4 mg/kg/dose TMP + 20 mg/kg/dose SMX/dose BD
 1	swelling	PB	Extubation / upper airway swelling: 0.25–0.5 mg/kg/dose IV q6hr (max 8 mg/dose)
 1	edema	PB	Cerebral edema: 2 mg PO TID
-1	iv/im	PB	IV/IM: 5 mcg/kg × 1 dose, followed by 2.5 mcg/kg q8hr × 2 doses
+1	higher	PB	20–25 kg: 4 suppositories **IV diazepam:** 0.2 mg/kg slowly over 1 minute, max 10 mg. A second dose may be given at 0.1 mg/kg. **Maximum two benzodiazepine doses**, then a second-line agent — a third 
 1	women	PB	Maintenance: 0.4 mg PO/day **Pregnant women:** 0.8 mg PO/day
 1	receive	PB	Megaloblastic / macrocytic anemia all receive 1 mg PO/IM/IV daily regardless of age. **NEVER LESS THAN 0.1 MG PO/DAY IN PREGNANCY.
 1	exacerbation	PB	Heart failure exacerbation: 40 mg IV/IM (or double the maintenance dose) q2hrs
 1	rate	PB	IV push: max rate 0.5 mg/kg/min
 1	syndrome	PB	Acute coronary syndrome: 60 units/kg IV bolus; 12 units/kg/hr IV infusion
 1	dvt/pe	PB	Maximum bolus for DVT/PE: 5,000 units
+1	adjunct	PB	Anaphylaxis adjunct: 2–4 mg/kg IM or slow IV, max 100 mg in a child (200 mg adult).** An adjunct of unproven benefit — it must never delay epinephrine
 1	initially	PB	Child 2–12 years: initially 20 mg/kg once daily, increased every 12 weeks in steps of 2.5–5 mg/kg daily according to response; usual dose 20–30 mg/kg daily (max 35 mg/kg daily).
 1	mg/dose	PB	Max:** 800 mg/dose, 2400 mg/day. Do not give in cases of renal disease. Give with food when possible.
-1	contains	PB	325 mg ferrous sulfate tablet contains 65 mg elemental iron
-1	encephalopathy	PB	Infants (hepatic encephalopathy): 2.5–10 mL ÷ TID-QID
+1	contains	PB	Prescribe by elemental iron, not salt weight.** A **325 mg dried (exsiccated)** ferrous sulfate tablet contains **65 mg** elemental iron (~30% iron). The **heptahydrate is only ~20% iron**, so a 200 m
 1	acute	PB	Anxiety (acute): 2 mg PO q8hr
-1	agitation	PB	Agitation: 0.5–2 mg IV q2–4hrs
+1	intra-abdominal	PB	Dose depends on the site — the generic figure underdoses the CNS.**\n\n- **Sepsis / intra-abdominal: 1 g IV 8-hourly**\n- **Meningitis or other CNS infection: adults 2 g IV 8-hourly (6 g/day); childre
+1	tissue	PB	Dose depends on the site — the generic figure underdoses the CNS.**\n\n- **Sepsis / intra-abdominal: 1 g IV 8-hourly**\n- **Meningitis or other CNS infection: adults 2 g IV 8-hourly (6 g/day); childre
+1	access	PB	Status epilepticus, no IV access: 10 mg IM** — as effective as IV lorazepam and faster to give
 1	candidiasis	PB	Children / Adults — oropharyngeal candidiasis: 4–6 mL PO q6hr
+1	endoscopy	PB	Variceal bleeding — the vasoactive drug of choice. Start as soon as varices are suspected, before endoscopy.** **50 mcg IV bolus, then 25–50 mcg/hr infusion for 3–5 days.**\n\nWhere octreotide is shor
+1	bleed	PB	Upper GI bleed: 80 mg IV bolus, then 40 mg IV every 8–12 h** (or 8 mg/hr by infusion if a pump is available), **for at least 72 hours**. Any stocked PPI — rabeprazole, omeprazole, pantoprazole
+1	g/dl	PB	10 mL/kg raises a child's haemoglobin about 1 g/dL** (10–15 mL/kg raises it 2–3 g/dL). One adult unit raises it about 1 g/dL. Volumes by fever and nutrition are on the transfusion page — take the firs
+1	eradication	PB	Strep eradication: 250 mg PO TID
 1	im/po/sq	PB	Adults: IM/PO/SQ 50 mg q3hrs
+1	fails	PB	Priapism, if aspiration alone fails — 100–500 mcg intracavernosal**, repeated every 5 min to a **maximum 1 mg total**. Dilute 1 mg in 19 mL NS to give 50 mcg/mL. **Combine with corporal aspiration** —
+1	ceiling	PB	Severe acute malnutrition: add 20 mmol/L** to the maintenance fluid 🛑 Peripheral ceiling 40 mmol/L. Do not exceed 10 mmol/hr without continuous ECG.
 1	asthma	PB	Max for asthma: 60 mg/day. Tapering is only required if used for **> 3 weeks**. If any symptoms of adrenal insufficiency, return to the previous dose. Symptoms of adrenal insufficiency: abd pain, vomi
+1	epistaxis	PB	Epistaxis — 500 mg in 5 mL NS on a pledget**, left in place 10 minutes, as the first agent tried.
 1	episode	PB	HSV, initial episode: **1 g PO BD × 7–10 days
 1	recurrence	PB	HSV, recurrence: **500 mg PO BD × 3 days
-1	term	PB	Term: 1 mg IM stat **Supratherapeutic INR:
 1	malabsorption	PB	Infants dietary deficiency:** 1 mg IM/day × 5 days, then weekly × 3 more doses **Infants / Children malabsorption:** 1 mg IM every other day × 6 days, then weekly for 6 weeks **Adults:
 1	anemia	PB	Severe deficiency or pernicious anemia: 1 mg IM every other day × 6 days, then weekly for 6 weeks
+1	applies	PB	Volumes by fever and nutrition are on the transfusion page — take the first line that applies 10 mL PRBC ≈ 20 mL whole blood as a bedside rule; **do not** use it to derive the fever-stratified volumes
+1	prbc	PB	Volumes by fever and nutrition are on the transfusion page — take the first line that applies 10 mL PRBC ≈ 20 mL whole blood as a bedside rule; **do not** use it to derive the fever-stratified volumes
 1	paste	WHO	Groundnut or oilseed paste | 100 g | 20 g
 1	whole	WHO	Milk (fresh or long-life whole) | 600 ml | 120 ml
 1	margarine	WHO	Oil or margarine | 25 g | 5 g
@@ -179,17 +201,18 @@ count	word	book	example
 1	iv/io	WHO	Give **adrenaline (epinephrine)** if HR stays **< 60/min**: **IV/IO 0.01–0.03 mg/kg** (endotracheal **0.05–0.1 mg/kg** only while IV/IO access is being obtained). For suspected blood loss, give a **vo
 1	endotracheal	WHO	Give **adrenaline (epinephrine)** if HR stays **< 60/min**: **IV/IO 0.01–0.03 mg/kg** (endotracheal **0.05–0.1 mg/kg** only while IV/IO access is being obtained). For suspected blood loss, give a **vo
 1	nasogastrically	WHO	If **hypoglycaemic**, give **glucose IV or nasogastrically — 2 ml/kg of 10% glucose** ([IV glucose](topic:who-imci-chart10-glucose)). If glucose cannot be measured, **treat empirically** with glucose.
+1	gluconate	WHO	If **hypocalcaemic**, symptoms may settle with **2 ml/kg of 10% calcium gluconate (100–200 mg/kg — the neonatal repletion dose; a child gets 0.5–1 ml/kg)** as a slow IV infusion, then continue **oral*
+1	gets	WHO	If **hypocalcaemic**, symptoms may settle with **2 ml/kg of 10% calcium gluconate (100–200 mg/kg — the neonatal repletion dose; a child gets 0.5–1 ml/kg)** as a slow IV infusion, then continue **oral*
+1	figure	WHO	The §3.14 figure (50 mg/kg q12h then q8h, 100–150 mg/kg/day) is the **septicaemia** dose and **does not reliably treat the CSF**.
 1	starting	WHO	The volumes above suit **term / low-birth-weight** infants. **Very preterm / very-low-birth-weight** infants need **more** — often starting **80–90 ml/kg on day 1** and rising toward **150–180 ml/kg/d
 1	toward	WHO	The volumes above suit **term / low-birth-weight** infants. **Very preterm / very-low-birth-weight** infants need **more** — often starting **80–90 ml/kg on day 1** and rising toward **150–180 ml/kg/d
 1	drop/min	WHO	If **enteral feeds are not tolerated**, give IV fluids **60 ml/kg/day** on day 1 (paediatric 100 ml burette: 60 drops = 1 ml, so **1 drop/min = 1 ml/h**).
 1	citrate	WHO	Caffeine citrate:** loading **20 mg/kg** orally or IV (given slowly over 30 min); maintenance **5 mg/kg/day** from 24 h later, increased if apnoea persists to a **maximum of 10 mg/kg/day** (caffeine c
-1	increasing	WHO	Examine the infant daily; reintroduce EBM by nasogastric tube when the abdomen is soft and non-tender, normal stools (no blood) are passing and there is no bilious vomiting. Start slowly, increasing *
 1	u/kg	WHO	Asymptomatic** neonates born to women with a positive VDRL or rapid plasma reagin test (with a normal evaluation): **benzathine benzylpenicillin 50 000 U/kg (≈ 37.5 mg/kg) as a single IM dose**.
 1	normal-wt	WHO	**Gentamicin** | Wk 1: LBW 3 mg/kg od; normal-wt 5 mg/kg od IM/IV | 20 mg/2 ml vial; or 80 mg/2 ml diluted to 8 ml → 10 mg/ml | 0.3–0.5 ml | 0.5–0.6 ml | 0.6–0.75 ml | 1.25–1.5 ml | 1.5–1.75 ml | 1.75
 1	u/ml	WHO	**Benzylpenicillin** | 50 000 U/kg — wk 1 q12h; wk 2–4+ q6h | 600 mg (1 000 000 U) vial + 1.6 ml water → 500 000 U/ml | 0.2 ml | 0.2 ml | 0.3 ml | 0.5 ml | 0.5 ml | 0.6 ml | 0.7 ml
 1	honey	WHO	Soothe the throat** and relieve cough with a **safe remedy** (e.g. a warm, sweet drink). In a child **≥ 1 year**, **honey** (2.5–5 ml) is a safe soothing remedy that modestly eases night-time cough. *
 1	severe	WHO	Nebulized adrenaline** (for stridor at rest / moderate–severe): **0.5 ml/kg of 1:1000, max 5 ml** (1:1000 = 1 mg/ml, so 0.5 mg/kg, max 5 mg), diluted to 3–5 ml with saline. If effective, repeat as oft
-1	unavailable	WHO	Erythromycin** — alternative if azithromycin is unavailable: **40–50 mg/kg/day** (max 2 g/day) in **4 divided doses for 14 days**.
 1	ineffective	WHO	Furosemide 1 mg/kg** — should increase urine flow within 2 h (give **IV** for faster action). If ineffective, **2 mg/kg** and repeat in 12 h; thereafter a single daily **1–2 mg/kg orally** is usually 
 1	strategy	WHO	Slower alternative (non-malnourished only):** a **slow strategy — 100 ml/kg over 8 h without boluses** — gave outcomes similar to Plan C in a recent trial and needs less staff oversight. **Plan C rema
 1	immediately	WHO	Start IV fluid immediately — 100 ml/kg Ringer's lactate, split as in Table 13. If the child can drink, give ORS by mouth while the drip is set up.
@@ -199,7 +222,7 @@ count	word	book	example
 1	chicken	WHO	**Note:** cooked chicken (12 g) may replace the egg. Target ≥ 70 kcal/100 g; 10% of calories as protein. |
 1	choice	WHO	Artesunate** (the drug of choice): **3 mg/kg IV or IM** per dose for children **< 20 kg**; **2.4 mg/kg** for children **≥ 20 kg** and adults — on admission, then at **12 h and 24 h**, then **once dail
 1	base/kg	WHO	Chloroquine** total **25 mg base/kg** — **10 mg/kg day 1, 10 mg/kg day 2, 5 mg/kg day 3**.
-1	course	WHO	Primaquine 0.25–0.5 mg/kg/day for 14 days** (total 3.5–7 mg/kg; the higher total is needed for fast-relapsing strains in East Asia/ Oceania); a **7-day course (0.5 mg/kg/day)** may be used if **G6PD a
+1	course	WHO	Primaquine 0.5 mg/kg/day for 14 days** is the target here (range 0.25–0.5; total 3.5–7 mg/kg). The higher end is preferred for radical cure in **East Africa**, and is required for fast-relapsing strai
 1	outperformed	WHO	Steroids are not routine here.** Multiple trials and the Cochrane review found **no benefit on mortality or sequelae in low-income settings**, where patients present later and sicker, and **benefit wa
 1	starch	WHO	No response** (continuing shock) → a further **20 ml/kg crystalloid over 1 h**. **Reserve colloid** (dextran 40 or a starch) — **10 ml/kg over 1 h** — for **refractory shock not responding to crystall
 1	still	WHO	Recheck** (finger/heel-prick Dextrostix) after 30 min. If glucose is still **< 3 mmol/L**, repeat the 10% glucose or sugar solution.
@@ -226,13 +249,12 @@ count	word	book	example
 1	obtain	WHO	Obtain **0.5–1 ml of CSF** (**1–2 ml preferable** if extra tests such as PCR, glucose or protein are needed) into **sterile container(s)** — separate containers for different analyses.
 1	infiltrate	WHO	Clean the chest with antiseptic (e.g. 70% alcohol). Select a point in the **mid-axillary line** (side of the chest) **just below the nipple level** (**5th intercostal space**). Infiltrate **~1 ml of 1
 1	lower	WHO	40 mg/kg per dose twice a day (80 mg/kg/day) is the WHO standard for pneumonia / chest-indrawing pneumonia (2014 IMCI revision). Some non-pneumonia infections use the lower 25 mg/kg twice a day (halve
-1	wheeze/asthma	WHO	Acute wheeze/asthma: 1–2 mg/kg/day for 3–5 days, no taper needed. Croup: 1 mg/kg as a single dose (alternative when dexamethasone 0.6 mg/kg, the preferred agent, is unavailable). Nephrotic syndrome us
-1	regimen	WHO	Acute wheeze/asthma: 1–2 mg/kg/day for 3–5 days, no taper needed. Croup: 1 mg/kg as a single dose (alternative when dexamethasone 0.6 mg/kg, the preferred agent, is unavailable). Nephrotic syndrome us
 1	assume	WHO	Artesunate is the first-line treatment for severe malaria (all species); quinine and IM artemether are alternatives only when it is unavailable. Volumes assume 15 mg/ml and the band midpoint — dose by
 1	im/iv/sc	WHO	IM/IV/SC: 0.25 mg/kg once (may repeat up to 4× in 24 h)
-1	rectal	WHO	Rectal: 0.5 mg/kg
 1	undiluted	WHO	Prefer NOT to use undiluted 40 mg/ml gentamicin where avoidable. Risk of adverse effects with theophylline; aminoglycoside oto/nephrotoxicity. Neonatal/premature dosing: see p.71.
-1	oral/im	WHO	Oral/IM: 2.5–5 mg/kg maintenance
-1	continue	WHO	Neonates: give phenobarbital (20 mg/kg IV/IM) instead of diazepam for convulsions; if they continue, 10 mg/kg IV/IM after 30 min.
-1	nebulizer	WHO	Nebulizer: 2.5 mg/dose
+1	print	WHO	🛑 The printed annex gives 4–5 mg/kg without saying which preparation, and that is unsafe to print: 5 mg/kg exceeds the maximum for PLAIN lidocaine. Confirmed by OE 2026-08-30 against the FDA labels an
+1	injection	WHO	Injection: 5 mg/ml
+1	oral/im	WHO	Oral/IM: 2.5–5 mg/kg
+1	wheeze/asthma	WHO	Acute wheeze/asthma: 1–2 mg/kg/day for 3–5 days, no taper needed. Croup: 1 mg/kg as a single dose (alternative when dexamethasone 0.6 mg/kg, the preferred agent, is unavailable). Nephrotic syndrome us
+1	regimen	WHO	Acute wheeze/asthma: 1–2 mg/kg/day for 3–5 days, no taper needed. Croup: 1 mg/kg as a single dose (alternative when dexamethasone 0.6 mg/kg, the preferred agent, is unavailable). Nephrotic syndrome us
 1	standard	WHO	Shortens diarrhoea and reduces future episodes. WHO standard: 10 mg/day under 6 months, 20 mg/day at 6 months and over; a 2020 trial found 5–10 mg noninferior with less vomiting, but the WHO dose is u
