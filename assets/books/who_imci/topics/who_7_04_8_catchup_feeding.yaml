@@ -137,9 +137,9 @@ topic:
     - type: "prose"
       title: "Discharge from nutritional treatment"
       markdown: |
-        Discharge on the **anthropometric indicator used at admission**, with
-        **no oedema for at least 2 weeks**
-        ([§7.6.2](topic:who-imci-7-6-2-discharge-criteria)). Pooled evidence
-        (21 studies) shows that requiring **both WHZ ≥ −2 AND MUAC ≥ 125 mm**
-        **lowers relapse** (single-criterion discharge leaves residual wasting) —
-        prefer the **stricter both-criteria** discharge where feasible.
+        Discharge requires **BOTH** anthropometric criteria — **WHZ ≥ −2 AND
+        MUAC ≥ 125 mm** — with **no oedema for at least 2 weeks**
+        ([§7.6.2](topic:who-imci-7-6-2-discharge-criteria)). The **2023 WHO
+        guideline replaced** the older rule of discharging on whichever indicator
+        was used at admission: pooled evidence (21 studies) shows single-criterion
+        discharge leaves **residual wasting** and **2–3× higher relapse**.

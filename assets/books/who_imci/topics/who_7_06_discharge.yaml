@@ -20,7 +20,7 @@ topic:
   blocks:
 
     - type: "prose"
-      title: "Two separate decisions"
+      title: "Three separate decisions"
       highlight: true
       markdown: |
         Three distinct phases — do not conflate them:

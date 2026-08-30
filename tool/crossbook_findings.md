@@ -784,3 +784,23 @@ formularies:
 **Rifaximin was the only entry of this class in either book.** Also widened octreotide
 maintenance to 25–50 mcg/hr (AASLD), noting a 1-day (≤72 h) infusion is non-inferior to
 5 days after band ligation — which matters where supply is short.
+
+## WHO chapter 7 (severe wasting) against the 2023 guideline — complete pass, 2026-08-29
+
+All 27 chapter 7 topics read. Three of the guideline's four focus areas were already
+carried: identification (§7.1–7.2), infants under 6 months (§7.4.10, brought over on
+2026-08-29), and children 6–59 months (§7.3–7.7). The fourth, prevention, has no topic
+because the Pocket Book chapter has no prevention section — that is the print, not a gap.
+
+Three internal contradictions found and two fixed:
+
+- **§7.4.8 opened its discharge block with the rule §7.6.2 says was replaced** —
+  "discharge on the anthropometric indicator used at admission" — then argued against
+  itself two sentences later. A reader on the catch-up feeding page got the superseded
+  single-criterion rule. Now leads with WHZ ≥ −2 AND MUAC ≥ 125 mm.
+- **§7.6 was headed "Two separate decisions" over a body listing three phases.** Fixed.
+- **Vitamin A third dose: §7.5.1 printed day 15 in one sentence and day 14 in the next**,
+  and the ProtocolBook prints 14 in both of its. The 2026-07 review changed one number
+  and left its neighbour. The print says 14 throughout. **Not settled here** — the
+  referring-centre sentence was rephrased so it no longer restates a conflicting number,
+  and the 14-vs-15 question is open with OE (Q1).
