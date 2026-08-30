@@ -1,6 +1,8 @@
 # Cross-book comparison — QUESTIONS FOR OPENEVIDENCE
 
-**1 OPEN.**
+**ONE QUESTION OPEN** — Q1, the vitamin A third dose. Nothing else in this file is
+awaiting an answer; everything earlier was answered, applied, and deleted from here,
+with the rulings kept in the findings record.
 
 Keep this file. When the next round raises a question, write it here in the same shape
 and put the open count on the line above.
