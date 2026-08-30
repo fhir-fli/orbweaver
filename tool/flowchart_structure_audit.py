@@ -12,11 +12,13 @@ defects a machine can find on its own:
                   it — the reader falls off the bottom of the chart.
   ONE-SIDED       a decision has a single outcome, so one answer is unhandled.
   EMPTY BRANCH    an outcome has neither a box, a continue, nor a goto.
-  EMPTY BOX       a box has a title and nothing else, in a chart whose other
-                  boxes carry content.
+  EMPTY BOX       a box with no title at all. (An earlier version flagged a
+                  box that had ONLY a title; that fired 55 times and every one
+                  was a legitimate one-line action box, so it is gone.)
   DANGLING GOTO   a `goto:` or `loop_to:` naming an id that does not exist.
-  UNREACHED ID    a node carries an id nothing targets — usually the remains of
-                  a branch that was rewritten.
+  (UNREACHED ID was removed: an `id:` here is both a goto target and a plain
+   anchor, so a node nothing targets is usually just an anchor. 90 false
+   positives, 0 true.)
 
 Every finding is a fact about the file, not a judgement, so this reports rather
 than adjudicates. Output is written and flushed per chart.
@@ -75,9 +77,13 @@ def audit(chart):
     for key, t in targets:
         if t not in ids:
             problems.append('DANGLING %s -> "%s"' % (key, t))
-    hit = {t for _, t in targets}
-    for i in sorted(ids - hit):
-        problems.append('UNREACHED id "%s"' % i)
+    # UNREACHED is REMOVED. In this schema an `id:` serves double duty: a goto
+    # target AND a plain anchor on a branch box. The check cannot tell them
+    # apart, so it flagged 89 WVEMS branch anchors and then, once narrowed to
+    # charts that navigate at all, still flagged pb_013's "slow" beside the one
+    # real loopback target. 90 false positives, 0 true ones, on 2026-08-30.
+    # DANGLING below is the half that means something: a target naming an id
+    # that does not exist is a break no matter how the ids are used.
 
     stages = chart.get('stages')
     if isinstance(stages, list):
@@ -92,10 +98,18 @@ def audit(chart):
                 for o in outs:
                     if not isinstance(o, dict):
                         continue
-                    if o.get('continue') and n == len(stages) - 1:
+                    # `continue: true` on the LAST stage is only a dead end
+                    # if there is nothing after the stages. Every one of these
+                    # charts ends in a `terminal:` block, which is exactly what
+                    # the reader continues INTO. Ignoring that produced 31
+                    # false positives on 2026-08-30, in 20 files, all 20 of
+                    # which carried a terminal block.
+                    if (o.get('continue') and n == len(stages) - 1
+                            and not chart.get('terminal')):
                         problems.append(
                             'DEAD END: "%s" / "%s" continues past the last '
-                            'stage' % (label, o.get('label', '')))
+                            'stage and the chart has no terminal block'
+                            % (label, o.get('label', '')))
                     if (not o.get('box') and not o.get('continue')
                             and not o.get('goto')):
                         problems.append(
@@ -120,10 +134,14 @@ def audit(chart):
             for v in x:
                 collect(v)
     collect(chart)
-    if any(full for _, full in boxes):
-        for t, full in boxes:
-            if not full:
-                problems.append('BARE BOX "%s" (title only)' % str(t)[:50])
+    # BARE BOX is REMOVED. It fired 55 times on 2026-08-30 and every one was a
+    # legitimate single-line action box - "Continue close monitoring of
+    # respiratory status", "→ Post Cardiac Arrest Algorithm". A box whose whole
+    # instruction fits in its title is normal in these charts, not a defect.
+    # An EMPTY title is caught below instead, which is the real failure.
+    for t, _ in boxes:
+        if not str(t or '').strip():
+            problems.append('EMPTY BOX TITLE')
     return problems
 
 

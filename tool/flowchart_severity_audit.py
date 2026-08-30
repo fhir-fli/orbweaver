@@ -39,11 +39,16 @@ OUT = '/home/grey/dev/fhir/orbweaver/tool/crossbook/severity_asymmetry.tsv'
 BOOKS = ('protocolbook', 'who_imci', 'wvems')
 
 RANK = {'emergency': 3, 'priority': 2, 'non_urgent': 0, 'none': 1}
+# "yes" and "no" carry NO severity on their own and were removed on 2026-08-30.
+# The decision text decides what they mean: on "Convulsion stops after 5 more
+# minutes?" and "Has bleeding stopped?" the YES arm is the GOOD outcome, so
+# scoring yes=severe inverted the comparison and reported the recovering child
+# as the sicker one. Six of eighteen findings were that inversion.
 SEVERE = re.compile(
     r'\b(unstable|severe|major|emergen|critical|shock|life[- ]threat|'
-    r'decompensat|impending|arrest|yes)\b', re.I)
+    r'decompensat|impending|arrest)\b', re.I)
 MILD = re.compile(
-    r'\b(stable|mild|minor|moderate|non[- ]?urgent|routine|well|no)\b', re.I)
+    r'\b(stable|mild|minor|moderate|non[- ]?urgent|routine|well)\b', re.I)
 
 
 def text_of(node):
