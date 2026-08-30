@@ -43,10 +43,13 @@
 #     So the book already disagrees with itself. Whichever way Grey
 #     goes, it must change in THREE places (here + p.42 ×2) or ONE
 #     (p.29), not one. Adults are consistently 0.15 (here + p.101).
-#   - PHENOBARBITAL non-neonatal load 15 mg/kg vs the more standard
-#     20 mg/kg (our neonatal 20 mg/kg is correct and matches p.42).
-#     OE rated this LOW and said "consider". Maintenance 5 mg/kg/day
-#     is at the top of the 3–5 range but acceptable.
+#   - PHENOBARBITAL: SETTLED 2026-08-30. OE ruled 20 mg/kg at EVERY
+#     age, no milligram cap, repeat 10-20 mg/kg to a cumulative max of
+#     40 mg/kg and only where respiratory monitoring is available,
+#     maintenance 3-5 mg/kg/day starting 12-24 h after the load. This
+#     page already said 20; the FORMULARY still said 15 mg/kg with a
+#     320 mg cap, which underdoses anyone over 16 kg. Both books are
+#     now on 20. Do not re-raise.
 # 2026-08-29: D10 5 -> 2 mL/kg. MISSED BY THE 2026-08-28 SWEEP, which matched
 #   "5 ml/kg" and not "5mls/kg", and worked from a fixed file list rather than
 #   re-grepping afterwards. Found by diffing the formulary against the pages.

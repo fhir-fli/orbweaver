@@ -860,3 +860,34 @@ side. The book already prints the stroke dose (0.9 mg/kg, max 90 mg) in the ACS
 contraindication note and its STEMI lytics are tenecteplase and streptokinase, so the
 entry now carries stroke alongside PE and points STEMI at those two. **The accelerated
 alteplase STEMI schedule is not in the book and was not invented** — the entry says so.
+
+## Phenobarbital loading dose — SETTLED 2026-08-30, both books now on 20 mg/kg
+
+**20 mg/kg at every age, child and adult, and there is no milligram cap.** The 15 mg/kg
+figure is a lower variant that appears in some trial protocols; the status-epilepticus
+guidelines use 20 mg/kg across children and adults. Phenobarbital comes after a
+benzodiazepine has failed, not before it.
+
+- **Rate:** over 20 min. Not faster than 1 mg/kg/min in a child, about 50–75 mg/min in an
+  adult.
+- **Repeat:** a further 10–20 mg/kg if still fitting 15 min later, to a **cumulative
+  maximum of 40 mg/kg**, which applies at all ages. **Only approach it where airway
+  support and respiratory monitoring are available** — the second load carries a high
+  risk of respiratory depression and hypotension. That is a real constraint in a district
+  hospital with no routine ICU monitoring.
+- **Maintenance:** 3–5 mg/kg/day, starting 12–24 h after the load. Print 3–5 rather than
+  5, because the range prompts lower dosing in the sedated or hepatically impaired
+  patient.
+- 🔴 **The 320 mg maximum initial loading dose is not a recognised cap and is deleted.**
+  It would have underdosed anyone over about 16 kg — every adult by more than half.
+
+**Applied in five places.** ProtocolBook formulary p.154 (was 15 mg/kg with the 320 mg
+cap); the pb_042 neonatal callout (was a further 5–10 mg/kg within 24 h, disagreeing with
+its own chart on the same page); WHO formulary older-child row (was 15 mg/kg, and its
+millilitre bands are recalculated at 20 mg/kg against the 200 mg/ml solution, so they no
+longer match the printed annex); WHO Chart 9's status ladder (was 15–20 mg/kg); and the
+stale header note on the ProtocolBook resuscitation page. Errata written for v1.8.
+
+**How it was found:** the book-against-itself dose pass, comparing the same drug and unit
+across pages of one book. The ProtocolBook's own two pages disagreed, which is the class
+of defect that cannot be excused as regional variation.

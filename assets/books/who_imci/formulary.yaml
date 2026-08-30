@@ -2038,14 +2038,14 @@ formulary:
       regimen: 'Oral: 5 mg/kg per day'
       form: 200 mg/ml solution — calculate the exact dose
     - label: CHILD, status epilepticus — loading
-      regimen: 'IM/IV: 15 mg/kg over 15 min, after two doses of diazepam have failed'
-      form: 200 mg/ml solution
+      regimen: 'IM/IV: 20 mg/kg over 20 min (not faster than 1 mg/kg/min), after two doses of diazepam have failed. No milligram cap. If still fitting after 15 min give a further 10–20 mg/kg, to a cumulative maximum of 40 mg/kg, and only where airway support and respiratory monitoring are available'
+      form: 200 mg/ml solution — millilitres recalculated at 20 mg/kg
       bands:
-      - 0.4 ml
-      - 0.6 ml
-      - 1.0 ml
-      - 1.5 ml
-      - 2.0 ml
+      - 0.45 ml
+      - 0.8 ml
+      - 1.25 ml
+      - 1.75 ml
+      - 2.45 ml
     - label: CHILD — maintenance
       regimen: 'Oral/IM: 2.5–5 mg/kg'
       form: 200 mg/ml solution
@@ -2055,7 +2055,7 @@ formulary:
       - 0.25 ml
       - 0.35 ml
       - 0.5 ml
-    notes: '🛑 The loading dose differs by age and BOTH figures are correct. A NEONATE gets 20 mg/kg; an older child in status epilepticus gets 15 mg/kg. The millilitre bands above are calculated at 15 mg/kg and are for the older child only — for a neonate, calculate the exact dose.'
+    notes: '🛑 The loading dose is 20 mg/kg AT EVERY AGE. The printed annex gives 15 mg/kg for children over the neonatal period; that is a lower variant, and 20 mg/kg is the figure the status-epilepticus guidelines use across children and adults (OE 2026-08-30). The millilitre bands above are recalculated at 20 mg/kg against the 200 mg/ml solution and do NOT match the printed annex bands. For a neonate, calculate the exact dose. Phenobarbital comes after a benzodiazepine has failed, not before it.'
   - id: phenytoin
     name: Phenytoin
     class: anticonvulsant

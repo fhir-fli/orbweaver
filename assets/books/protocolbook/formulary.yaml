@@ -1771,19 +1771,23 @@ formulary:
       - Maintenance: 5 mg/kg IV/IM/PO OD
 
 
-      **Infants / Children / Adults:**
+      **Infants / Children / Adults — same dose as neonates:**
 
-      - Loading: 15 mg/kg IV/IM (max initial loading dose 320 mg)
+      - Loading: **20 mg/kg IV/IM, all ages. There is no milligram cap.** Give over
+      20 min — **not faster than 1 mg/kg/min in a child, ~50–75 mg/min in an adult**
 
-      - Maintenance: 5 mg/kg IV/IM/PO OD
+      - If still fitting after 15 min: a further **10–20 mg/kg**, to a **cumulative
+      maximum of 40 mg/kg**
+
+      - Maintenance: 3–5 mg/kg IV/IM/PO OD, starting 12–24 h after the load
 
 
-      🛑 **The resuscitation medications page gives a different scheme for the same
-      patient: 20 mg/kg IM/IV over 20 min, all ages, no milligram cap, a further
-      10 mg/kg if still fitting at 15 min, and a cumulative maximum of 40 mg/kg.**
-      The two are not interchangeable — the 320 mg cap here is reached at 16 kg on the
-      20 mg/kg scheme. Query outstanding; until it is answered, follow the
-      resuscitation page for an actively convulsing patient.
+      🛑 **Only go past the first load where airway support and respiratory monitoring
+      are available.** The second load carries a high risk of respiratory depression and
+      hypotension. Have respiratory and blood-pressure support to hand before giving it.
+
+
+      Phenobarbital comes **after** a benzodiazepine has failed, not before it.
 
       '
     notes: '**Not compatible with aminophylline, metronidazole.**

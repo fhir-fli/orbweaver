@@ -296,3 +296,8 @@ loading dose **320 mg**, maintenance 5 mg/kg OD.
 
 Not reconcilable by adding the cap: 320 mg is reached at 16 kg on the 20 mg/kg scheme.
 Open with OE. For v1.8 the two pages must be made to agree, whichever way it is answered.
+
+**ANSWERED 2026-08-30.** OE: 20 mg/kg at every age, no milligram cap, repeat 10–20 mg/kg
+to a cumulative maximum of 40 mg/kg only with respiratory monitoring, maintenance
+3–5 mg/kg/day from 12–24 h after the load. p.154 must change to match p.20 in v1.8, and
+the 320 mg cap must be deleted — it underdoses everyone over about 16 kg.

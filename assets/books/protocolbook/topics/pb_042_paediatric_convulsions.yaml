@@ -53,7 +53,7 @@ topic:
         alert_text: "0xFFB71C1C"
       title: "Convulsions in the 1st month of life"
       markdown: |
-        Should be treated with **Phenobarbitone 20mg/kg stat**; a further 5–10mg/kg can be given within 24 hrs of the loading dose; maintenance dose is 5mg/kg daily. **Do not give Diazepam to neonates.**
+        Should be treated with **Phenobarbitone 20mg/kg stat**; if still fitting after 30 min give a further **10mg/kg**, to a **cumulative maximum of 40mg/kg** — and only where respiratory monitoring is available, because phenobarbitone causes apnoea and hypotension. Maintenance **3–5mg/kg daily**, starting 12–24 hrs after the load. **Do not give Diazepam to neonates.**
 
     - type: "flowchart"
       variant: "algorithm"
