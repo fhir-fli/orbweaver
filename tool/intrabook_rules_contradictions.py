@@ -37,7 +37,6 @@ from collections import defaultdict
 
 OUTDIR = '/home/grey/dev/fhir/orbweaver/tool/crossbook'
 DUR = os.path.join(OUTDIR, 'durations.tsv')
-THR = os.path.join(OUTDIR, 'thresholds.tsv')
 OUT = os.path.join(OUTDIR, 'intrabook_rules.tsv')
 
 DASH = chr(0x2013)
@@ -108,16 +107,19 @@ def main():
     fh.flush()
 
     dur = read(DUR, ['drug', 'unit'], 'value')
-    thr = read(THR, ['quantity', 'cmp'], 'value')
 
     # Durations: a 1.5x spread is a different course, not a rounding.
     n_d = emit(fh, 'DURATION', dur, 1.5)
-    # Thresholds: a cutoff is a decision boundary, so a much smaller
-    # difference matters. 94% against 90% oxygen is only 1.04x.
-    n_t = emit(fh, 'THRESHOLD', thr, 1.02)
     fh.close()
-    print('DONE: %d duration and %d threshold disagreements within a book '
-          '-> %s' % (n_d, n_t, OUT), flush=True)
+    # 🛑 THRESHOLDS ARE NOT COMPARED HERE ANY MORE. This file grouped them by
+    # quantity and comparator alone, which pooled every cutoff sharing a unit -
+    # hypoglycaemia at 2.2 against DKA resolution at 11 - and so reported
+    # nothing. tool/threshold_extract.py binds each cutoff to the decision it
+    # gates and reports a within-book disagreement as a decision group whose
+    # rows all come from one book.
+    print('DONE: %d duration disagreements within a book -> %s'
+          % (n_d, OUT), flush=True)
+    print('thresholds: see tool/threshold_extract.py', flush=True)
 
 
 if __name__ == '__main__':

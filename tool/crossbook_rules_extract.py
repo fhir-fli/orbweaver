@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
-"""Cross-book comparison of DURATIONS and THRESHOLDS.
+"""Cross-book comparison of DURATIONS.
+
+🛑 Thresholds moved to tool/threshold_extract.py on 2026-08-30.
+The version here keyed a cutoff on its UNIT, which mislabelled
+17 of its 244 rows (lactate and CSF glucose filed as blood
+glucose, CRP and bilirubin filed as glucose) and pooled every
+decision sharing a unit, so it could not report a disagreement
+at all. A cutoff belongs to a decision.
 
 The dose pass compared how much. This compares **how long** and **at what
 cutoff**, neither of which the dose extractor sees at all:
@@ -35,7 +42,6 @@ import crossbook_dose_extract as ex  # noqa: E402
 
 OUTDIR = ex.OUTDIR
 DUR_OUT = os.path.join(OUTDIR, 'durations.tsv')
-THR_OUT = os.path.join(OUTDIR, 'thresholds.tsv')
 REPORT = os.path.join(OUTDIR, 'rules_side_by_side.md')
 
 # "for 7 days", "× 10 days", "x 5 days", "over 4 h", "for 2–3 weeks".
@@ -43,27 +49,6 @@ _N = r'\d+(?:\.\d+)?(?:\s*[-–—]\s*\d+(?:\.\d+)?)?'
 DURATION = re.compile(
     r'(?:for|over|×|x|during)\s+(' + _N + r')\s*'
     r'(days?|weeks?|months?|hours?|hrs?|h\b|years?)', re.I)
-
-# A comparator, a number, and a unit that names a clinical quantity.
-QUANTITIES = {
-    'spo2 %': r'%',
-    'temperature °C': r'°\s?C',
-    'haemoglobin g/dL': r'g/dl',
-    'glucose mmol/L': r'mmol/l',
-    'glucose mg/dL': r'mg/dl',
-    'rate /min': r'(?:breaths?|beats?)\s*/\s*min',
-    'blood pressure mmHg': r'mmhg',
-}
-CMP = r'(?:≥|≤|>=|<=|<|>|greater than|less than|at least|below|above)'
-THRESHOLD = {
-    name: re.compile(r'(' + CMP + r')\s*(' + _N + r')\s*(' + unit + r')', re.I)
-    for name, unit in QUANTITIES.items()
-}
-
-# A percentage is only an SpO2 threshold when oxygen saturation is the subject.
-# Without this every "20% of children" and "≥ 1% resistance" became a cutoff.
-SPO2_SUBJECT = re.compile(
-    r'(spo|sao|o2\s*sat|oxygen satur|saturation|pulse ox|hypox)', re.I)
 
 
 def norm(v):
@@ -83,11 +68,6 @@ def norm_unit(u):
     return {'hr': 'hour', 'h': 'hour'}.get(u, u)
 
 
-def norm_cmp(c):
-    c = c.lower().strip()
-    return {'>=': '≥', '<=': '≤', 'greater than': '>', 'less than': '<',
-            'at least': '≥', 'below': '<', 'above': '>'}.get(c, c)
-
 
 def main():
     vocab = ex.build_vocab()
@@ -102,11 +82,7 @@ def main():
     df = io.open(DUR_OUT, 'w', encoding='utf-8')
     df.write('book\tfile\ttopic\tdrug\tvalue\tunit\tcontext\tfragment\n')
     df.flush()
-    tf = io.open(THR_OUT, 'w', encoding='utf-8')
-    tf.write('book\tfile\ttopic\tquantity\tcmp\tvalue\tcontext\tfragment\n')
-    tf.flush()
-
-    n_dur = n_thr = 0
+    n_dur = 0
     for book, book_dir in ex.BOOKS.items():
         tdir = os.path.join(ex.ROOT, book_dir, 'topics')
         paths = [os.path.join(tdir, n) for n in sorted(os.listdir(tdir))
@@ -120,7 +96,7 @@ def main():
             base = os.path.basename(path)
             units = []
             ex.collect(doc, [], units)
-            here_d = here_t = 0
+            here_d = 0
             for frag, ctx in units:
                 clean = re.sub(r'[*_`]', '', frag)[:400].replace('\t', ' ')
                 ctx_s = ' › '.join(ctx[-3:]).replace('\t', ' ')[:200]
@@ -157,25 +133,10 @@ def main():
                     n_dur += 1
                     here_d += 1
 
-                # --- thresholds, grouped by quantity ---
-                for qname, rx in THRESHOLD.items():
-                    if qname == 'spo2 %' and not SPO2_SUBJECT.search(
-                            frag + ' ' + ' '.join(ctx)):
-                        continue
-                    for m in rx.finditer(frag):
-                        tf.write('%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' % (
-                            book, base, title.replace('\t', ' '), qname,
-                            norm_cmp(m.group(1)), norm(m.group(2)),
-                            ctx_s, clean))
-                        tf.flush()
-                        n_thr += 1
-                        here_t += 1
-            print('%s %s: %d durations, %d thresholds (total %d / %d)'
-                  % (book, base, here_d, here_t, n_dur, n_thr), flush=True)
+            print('%s %s: %d durations (total %d)'
+                  % (book, base, here_d, n_dur), flush=True)
     df.close()
-    tf.close()
     print('DONE: %d durations -> %s' % (n_dur, DUR_OUT), flush=True)
-    print('DONE: %d thresholds -> %s' % (n_thr, THR_OUT), flush=True)
 
     # ---- side by side -----------------------------------------------------
     dur = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
@@ -184,16 +145,9 @@ def main():
         for line in f:
             c = line.rstrip('\n').split('\t')
             dur[c[3]][c[5]].setdefault(c[0], []).append((c[4], c[2], c[7]))
-    thr = defaultdict(lambda: defaultdict(list))
-    with io.open(THR_OUT, encoding='utf-8') as f:
-        next(f)
-        for line in f:
-            c = line.rstrip('\n').split('\t')
-            thr[c[3]].setdefault(c[0], []).append(
-                (c[4] + ' ' + c[5], c[2], c[7]))
 
     rf = io.open(REPORT, 'w', encoding='utf-8')
-    rf.write('# Cross-book DURATIONS and THRESHOLDS\n\n')
+    rf.write('# Cross-book DURATIONS\n\n')
     rf.write('Generated by `tool/crossbook_rules_extract.py`. WVEMS is excluded '
              '(its figures are\nthe original protocol\'s and are strict). '
              '**Candidates, not findings** — read the context.\n\n')
@@ -221,18 +175,6 @@ def main():
                              % (v, unit, b, topic, frag[:200]))
             rf.write('\n')
             rf.flush()
-    rf.write('\n## Thresholds — same quantity, different cutoff\n\n')
-    for q in sorted(thr):
-        books = thr[q]
-        if len(books) < 2:
-            continue
-        sets = {b: sorted({v for v, _, _ in rows}) for b, rows in books.items()}
-        rf.write('### %s\n\n' % q)
-        for b in ('PB', 'WHO'):
-            if b in sets:
-                rf.write('- **%s:** %s\n' % (b, ', '.join(sets[b])))
-        rf.write('\n')
-        rf.flush()
     rf.close()
     print('DONE: %d duration candidates -> %s' % (n_cand, REPORT), flush=True)
 
