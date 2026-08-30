@@ -29,7 +29,14 @@ import yaml
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import crossbook_dose_extract as ex  # noqa: E402
 
-ROOT = '/home/grey/dev/fhir/orbweaver/assets/books/protocolbook/topics'
+ROOT = '/home/grey/dev/fhir/orbweaver/assets/books'
+# 2026-08-30: this only ever ran over the ProtocolBook. WHO and WVEMS have
+# charts sitting beside prose on the same page too, and the comparison is
+# exactly as meaningful there. WVEMS is included DELIBERATELY: the rule that
+# its figures are strict forbids comparing them to the OTHER books, not to the
+# prose on its own page. A WVEMS chart disagreeing with its own paragraph is a
+# transcription error in our copy, which is ours to fix.
+BOOKS = ('protocolbook', 'who_imci', 'wvems')
 OUT = '/home/grey/dev/fhir/orbweaver/tool/crossbook/chart_vs_prose.tsv'
 
 DASH = chr(0x2013)
@@ -96,14 +103,22 @@ def main():
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     fh = io.open(OUT, 'w', encoding='utf-8')
-    fh.write('file\tdrug\tunit\tin_chart_only\tin_prose_only\tshared\tratio\n')
+    fh.write('book\tfile\tdrug\tunit\tin_chart_only\tin_prose_only\tshared'
+             '\tratio\n')
     fh.flush()
     n_top = n_hit = 0
 
-    for name in sorted(os.listdir(ROOT)):
-        if not name.endswith('.yaml'):
+    files = []
+    for book in BOOKS:
+        d = os.path.join(ROOT, book, 'topics')
+        if not os.path.isdir(d):
             continue
-        with io.open(os.path.join(ROOT, name), encoding='utf-8') as f:
+        for name in sorted(os.listdir(d)):
+            if name.endswith('.yaml'):
+                files.append((book, name, os.path.join(d, name)))
+
+    for book, name, path in files:
+        with io.open(path, encoding='utf-8') as f:
             doc = yaml.safe_load(f)
         charts, prose = [], []
 
@@ -147,14 +162,14 @@ def main():
             ratio = max(allv) / min(allv)
             if ratio < 1.5:
                 continue
-            fh.write('%s\t%s\t%s\t%s\t%s\t%s\t%.1f\n'
-                     % (name, drug, unit, ', '.join(sorted(only_c)),
+            fh.write('%s\t%s\t%s\t%s\t%s\t%s\t%s\t%.1f\n'
+                     % (book, name, drug, unit, ', '.join(sorted(only_c)),
                         ', '.join(sorted(only_p)),
                         ', '.join(sorted(c[key] & p[key])), ratio))
             fh.flush()
             n_hit += 1
-            print('  %-34s %-16s %-12s chart:%-18s prose:%-18s x%.1f'
-                  % (name, drug, unit, ', '.join(sorted(only_c))[:18],
+            print('  %-4s %-30s %-15s %-11s chart:%-16s prose:%-16s x%.1f'
+                  % (book[:4], name[:30], drug[:15], unit, ', '.join(sorted(only_c))[:18],
                      ', '.join(sorted(only_p))[:18], ratio), flush=True)
     fh.close()
     print('DONE: %d topics compared, %d chart-vs-prose differences -> %s'

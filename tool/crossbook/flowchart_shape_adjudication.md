@@ -47,3 +47,37 @@ The five that survive are all correct, and three of them are the logic being **r
 Nothing in any book. Two tools, from 198 findings of which 0 were real, to 5 questions of
 which 0 are defects. **An audit that cries wolf is worth nothing**, so the fix was to the
 audits, not to the charts.
+
+## Chart against the prose on its own page — extended to all three books
+
+It had only ever run over the ProtocolBook. WHO and WVEMS have charts beside prose on the
+same page too. **WVEMS is included deliberately:** the rule that its figures are strict
+forbids comparing them to the OTHER books, not to the prose on its own page. A WVEMS chart
+disagreeing with its own paragraph would be a transcription error in our copy, which is
+ours to fix.
+
+95 topics compared, 6 differences.
+
+**All five WVEMS differences are faithful transcriptions**, checked line by line against
+the 2026 protocol PDF. In every case the print itself carries a chart figure and a
+separate note figure:
+
+| our chart | our prose | the print |
+|---|---|---|
+| nitroglycerin 0.4 mg | 0.8 mg | *"Nitro: 0.4 mg SL Q 5 min x3"* and *"May use double dose (0.8 mg) if hypertensive & requiring NIPPV"* |
+| diphenhydramine 25 mg | 50 mg | *"Benadryl: 25 mg IV/IO, IM, PO Q 15 min x2"* and *"May give adults 50 mg PO x1"* |
+| midazolam 2.5–5 mg (×2 pages) | 10 mg | *"Versed: 2.5-5 mg IV/IO, IM/IN Q 2 min (max 10)"* — the 10 is the max on the same line |
+| propofol 50–200 mcg/kg/min | 100, 150, 200 | *"Propofol: 50-200 mcg/kg/min IV/IO Titrated Drip"* and *"Start gtt near 150 mcg/kg/min"* |
+
+That is a clean result for WVEMS on this axis: our copy matches the print wherever the two
+sides of a page differ.
+
+**One real finding, in the ProtocolBook.** `pb_042` paediatric convulsions: the chart's
+terminal box said phenobarbitone maintenance **5 mg/kg**, while the prose on the same page
+said **3–5**. OE ruled 3–5 on 2026-08-30, printed as a range so it prompts a lower dose in
+a sedated or hepatically impaired child. Chart corrected.
+
+🔒 **The parity guard then fired, on its first real occasion, and it was right.** Changing
+that page stranded the ProtocolBook formulary's flat 5 mg/kg maintenance, which no page
+carried any more — the exact "page corrected, formulary left behind" failure it was built
+for, five days after the fifth instance of it. Formulary brought to 3–5 in the same commit.

@@ -1,2 +1,6 @@
-file	drug	unit	in_chart_only	in_prose_only	shared	ratio
-pb_042_paediatric_convulsions.yaml	phenobarbital	mg/kg	10, 40	5–10	20, 5	8.0
+book	file	drug	unit	in_chart_only	in_prose_only	shared	ratio
+wvems	wvems_2026_030.yaml	nitroglycerin	mg	0.4	0.8		2.0
+wvems	wvems_2026_032.yaml	diphenhydramine	mg	25	50		2.0
+wvems	wvems_2026_042.yaml	midazolam	mg	2.5–5	10		4.0
+wvems	wvems_2026_046.yaml	midazolam	mg	2.5–5	10		4.0
+wvems	wvems_2026_080.yaml	propofol	mcg/kg/min	50-200	100, 150, 200		4.0
