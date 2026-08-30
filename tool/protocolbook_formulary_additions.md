@@ -1,15 +1,20 @@
-# ProtocolBook formulary — 55 drugs added beyond the printed Essential Medications list
+# ProtocolBook formulary — drugs added beyond the printed Essential Medications list
 
-The printed formulary (pp.146–158) carries 84 drugs. The protocols prescribe more than
-that. **18 were added on 2026-08-27** from the drugs the corrected chapters used, and
-**37 on 2026-08-29** by asking the wider question: which drugs does ANY protocol in the
-book prescribe? That found labetalol — the hypertension page's own first choice in
-emergency — and acetylcysteine, the paracetamol antidote, both absent.
+**52 STILL NEED CHECKING.** Three have been checked already and are excluded from the
+list below: meropenem and vancomycin came back **wrong** and are corrected; naloxone
+came back correct.
 
-**Every dose below is taken from the page that already prescribes it.** Nothing here is
-a new clinical claim; it is the book's own text, moved into the lookup where a
-clinician will go for it. **That is exactly why it now needs checking** — the doses have
-been reviewed in the context of their protocol, not as standalone formulary entries.
+The printed list (pp.146–158) carries 84 drugs. The protocols prescribe more. 18 were
+added on 2026-08-27 from the drugs the corrected chapters used; 37 more on 2026-08-29
+by asking which drugs ANY protocol in the book prescribes. That found labetalol — the
+hypertension page's own first choice in emergency — and acetylcysteine, the paracetamol
+antidote, both absent.
+
+**Every dose is taken from the page that already prescribes it,** so nothing here is a
+new clinical claim. **That is exactly why it needs checking:** these doses were
+reviewed inside their protocol, and a formulary entry is read without that context.
+Meropenem and vancomycin are what that looks like — both were the generic dose where
+the entry named an intracranial indication, and both were wrong on the page too.
 
 Formulary now holds 139 drugs.
 
@@ -100,7 +105,7 @@ Do **not** give to a patient who is not fully awake, and **never intubate solely
 
 **Adults:** 800 mg PO single dose (urogenital or rectal only)
 
-**Children:** 8 mg/kg/day PO; ≥ 45 kg use the adult 800 mg single dose
+**Children:** 8 mg/kg PO as a **single dose**; ≥ 45 kg use the adult 800 mg single dose
 
 ## Clindamycin
 
@@ -285,12 +290,6 @@ continuous infusion
 
 **Raised intracranial pressure — 0.5–1 g/kg IV.** Hypertonic saline is the alternative.
 
-## Meropenem
-
-*antibiotic*
-
-**1 g IV 8-hourly.** Covers gram-positives as well as gram-negatives, but **not MRSA**.
-
 ## Metformin
 
 *endocrine*
@@ -324,17 +323,6 @@ Post-ACS. Do not start a beta-blocker in cardiogenic shock or acute decompensate
 - **> 40kg:** 200mg/kg (max 22g) in 500mL over 4 hrs, then 100mg/kg (max 11g) in 1L over 16 hrs
 - Diluent D5W, ½NS or sterile water. If wt > 100kg, dose as 100kg
 - **Under 5kg:** take toxicology advice
-
-## Naloxone
-
-*antidote*
-
-**Opioid overdose — titrate to respiration, not to consciousness.**
-
-- **Children < 5 yr or < 20 kg: 0.1 mg/kg IV · Children > 5 yr or > 20 kg: 2 mg IV**
-- **Adults: 0.4 mg IV, titrate up to 2 mg**
-- **No IV?** Same dose IM (onset ~5 min; do not re-dose faster than q3min; unreliable in shock)
-- Lasts ~1 hour — **may need repeating 20–60 min later**
 
 ## Nicardipine
 
@@ -486,14 +474,6 @@ More adverse effects than octreotide; avoid in ischaemic heart disease.
 
 **Epistaxis — 500 mg in 5 mL NS on a pledget**, left in place 10 minutes, as the first agent tried.
 
-## Vancomycin
-
-*antibiotic*
-
-**15 mg/kg IV 8-hourly (max 2 g/dose).** Monitor levels where available; consult pharmacy.
-
-Used for MRSA cover in sepsis, and with ceftriaxone where mastoiditis has intracranial complications.
-
 ## Whole Blood (WB)
 
 *blood product*
@@ -504,4 +484,14 @@ Used for MRSA cover in sepsis, and with ceftriaxone where mastoiditis has intrac
 - Volumes by fever and nutrition are on the transfusion page — take the first line that applies
 
 10 mL PRBC ≈ 20 mL whole blood as a bedside rule; **do not** use it to derive the fever-stratified volumes.
+
+---
+
+## Already checked — do not re-send
+
+**Meropenem** — corrected after checking
+
+**Naloxone** — confirmed correct
+
+**Vancomycin** — corrected after checking
 
