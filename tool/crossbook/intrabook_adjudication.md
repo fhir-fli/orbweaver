@@ -52,3 +52,44 @@ ages, no cap, cumulative max 40 mg/kg. Not reconcilable by adding the cap — 32
 reached at 16 kg on the 20 mg/kg scheme. **Not merged and not decided.** The formulary
 entry now shows the conflict and points to the resuscitation page for an actively
 convulsing patient; the question is Q1 in the OE file and the errata entry is written.
+
+## Band 1.9–3.2x — 61 rows, all read
+
+This is the band where both pages look plausible and neither reads as wrong, so it is
+where a real error is hardest to see. One finding.
+
+**🔴 WHO lidocaine formulary — a maximum dose with no preparation named.** The entry read
+"Local injection: 4–5 mg/kg per dose", transcribed faithfully from the printed annex.
+**5 mg/kg exceeds the accepted maximum for PLAIN lidocaine, which is 4.5 mg/kg**; 7 mg/kg
+is allowed only when the solution contains epinephrine. This book's own intraoperative
+page already carries that split from a 2026-07 OE review, and the formulary was left
+behind — the meropenem pattern again. **Fixed**: the entry now gives 4.5 plain, 7 with
+epinephrine, notes the conservative 3 mg/kg used for procedures elsewhere in the book,
+adds the 1% = 10 mg/ml and 2% = 20 mg/ml conversion, and says toxicity in a small child
+is convulsions and cardiac arrest.
+
+**Read and cleared — legitimate differences, correctly labelled where it matters:**
+
+- **Two strengths of the same drug for different indications**, present identically in
+  both the formulary and the page: acyclovir 400/800, adenosine 6/12, albendazole
+  200/400, azithromycin 250/500, clindamycin 300/600, erythromycin 250/500, penicillin V
+  250/500, ciprofloxacin 250/500/750, ampicillin 250/500, cloxacillin 250/500,
+  ceftriaxone 250/500, leucovorin 5 and 10–25, pyrimethamine 0.25/0.5, rifabutin 5 and
+  10–20, zinc 10/20, morphine 1–2 and 2–10, nifedipine, losartan, captopril, furosemide,
+  enoxaparin, ticagrelor, tenecteplase's weight bands, alteplase's three indications.
+- **Age-banded and labelled:** PB gentamicin (neonate < 7 days 3, 8–28 days 5, term
+  neonate/child/adult 5–7.5), acetylcysteine's two-bag diluent 7 then 14 ml/kg,
+  artemether 3.2 loading then 1.6, quinine 20 loading then 10, rabies immunoglobulin
+  human 20 / equine 40, insulin's DKA rates, WHO caffeine citrate load 20 then
+  maintenance 5–10.
+- **Indication-driven:** WHO amoxicillin 25–50 for UTI against 80–90 for otitis and
+  severe wasting; ampicillin and cefotaxime meningitis against sepsis doses, all named;
+  hydrocortisone by indication; ibuprofen 5–10; bupivacaine.
+- **Extraction artifacts:** WHO amodiaquine 4 mg/kg (that is artesunate's figure in
+  "artesunate 4 mg/kg + amodiaquine 10 mg/kg"); WHO potassium 1 mmol/kg (sodium
+  bicarbonate's salicylate dose).
+- **Pyridoxine 25 vs 50 mg** across two tuberculosis pages is not a contradiction: the
+  paediatric page doses by weight from 50 mg tablets, the adult page gives 25 mg daily.
+- **Chlorphenamine 0.1 vs 0.25 mg/kg** in transfusion reactions is in the print both
+  ways, 0.1 for a mild reaction and 0.25 for a moderate one, with the annex at 0.25. Low
+  stakes: it is an adjunct that does not treat the reaction. Recorded, not raised.

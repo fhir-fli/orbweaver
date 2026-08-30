@@ -1705,15 +1705,16 @@ formulary:
     - anaesthesia
     page: 365
     doses:
-    - label: Local injection
-      regimen: 'Local injection: 4–5 mg/kg per dose as a local anaesthetic; or apply topically (see p.307)'
-      form: —
+    - label: Local injection — state which preparation
+      regimen: 'PLAIN: maximum 4.5 mg/kg. WITH EPINEPHRINE: maximum 7 mg/kg. A conservative ceiling of 3 mg/kg is used for procedures elsewhere in this book. Do not repeat within 2 h. Or apply topically'
+      form: 1% = 10 mg/ml · 2% = 20 mg/ml
       bands:
       - calc
       - calc
       - calc
       - calc
       - calc
+    notes: '🛑 The printed annex gives 4–5 mg/kg without saying which preparation. 5 mg/kg exceeds the accepted maximum for PLAIN lidocaine, which is 4.5 mg/kg; 7 mg/kg is allowed only when the solution contains epinephrine. Always state which you are using. Toxicity in a small child is convulsions and cardiac arrest.'
   - id: lopinavir-ritonavir
     name: Lopinavir/ritonavir (LPV/RTV)
     class: antiretroviral
