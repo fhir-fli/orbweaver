@@ -1,27 +1,70 @@
-# ProtocolBook formulary — drugs added beyond the printed Essential Medications list
+# FOR OPENEVIDENCE — everything open, in one place
 
-**49 STILL NEED CHECKING.** Six have been checked already and are excluded from the
-list below. **Wrong and corrected:** meropenem and vancomycin (generic dose where the
-entry named an intracranial indication); **rifaximin**, which printed only the lactulose
-regimen and no rifaximin dose at all, now 550 mg PO twice daily. **Refined:**
-octreotide, maintenance widened to 25-50 mcg/hr. **Came back correct:** naloxone,
-cefixime.
+**90 ITEMS OPEN: one clinical question, then 89 drug entries to check.**
 
-The printed list (pp.146–158) carries 84 drugs. The protocols prescribe more. 18 were
-added on 2026-08-27 from the drugs the corrected chapters used; 37 more on 2026-08-29
-by asking which drugs ANY protocol in the book prescribes. That found labetalol — the
-hypertension page's own first choice in emergency — and acetylcysteine, the paracetamol
-antidote, both absent.
+This is the only file to paste from. Nothing else is waiting on an answer.
 
-**Every dose is taken from the page that already prescribes it,** so nothing here is a
-new clinical claim. **That is exactly why it needs checking:** these doses were
-reviewed inside their protocol, and a formulary entry is read without that context.
-Meropenem and vancomycin are what that looks like — both were the generic dose where
-the entry named an intracranial indication, and both were wrong on the page too.
+**Setting:** district hospital, Gulu, northern Uganda — low-resource, paediatric-heavy,
+malaria-endemic. Limited drug availability, no reliable dialysis, and ICU monitoring is
+not routinely available.
 
-Formulary now holds 139 drugs.
+🛑 **Please give every figure as a bare number on its own line, with no citation marker
+after it.** Replies keep losing the number to the citation bracket — *"a ferritin cutoff
+of [1][2]"* — while the surrounding prose survives.
+
+Paste any part of this file on its own; each section is self-contained.
 
 ---
+
+# Part 1 · One clinical question
+
+## Q1 · Vitamin A for xerophthalmia — is the third dose on day 14 or day 15?
+
+One reference prints:
+
+> Give vitamin A orally on **days 1, 2 and 14** (age < 6 months, 50 000 IU; age 6–12
+> months, 100 000 IU; older children, 200 000 IU). If the first dose was given in the
+> referring centre, treat on days 1 and 14 only.
+
+A second reference, covering the same condition in the same children, prints:
+
+> Give vitamin A on **day 1**, and repeat on **days 2 and 15** only if the child has eye
+> signs of vitamin A deficiency or a history of measles.
+
+Both are for a child with severe wasting or nutritional oedema and eye signs of vitamin A
+deficiency. The doses by age are identical in both. Only the day of the third dose differs.
+
+**The concern:** these are two pages a clinician may read on the same admission, and they
+give different return dates for the same child. One of them is wrong, and we cannot tell
+which from the text.
+
+**Questions:**
+
+1. For treatment of xerophthalmia in a child with severe acute malnutrition, on which day
+   is the third dose of vitamin A given? Please give the day as a bare number on its own
+   line, with no citation marker after it.
+
+2. Is the third dose a fixed day, or is it "at least 2 weeks after the second dose", so
+   that day 14 and day 15 are both acceptable? A yes/no on its own line.
+
+3. If the first dose was already given at a referring centre, which doses does the
+   receiving hospital give? Please list the days as bare numbers.
+
+---
+
+# Part 2 · Adult and paediatric formulary entries to check (49)
+
+These are drugs a set of adult-and-paediatric hospital protocols prescribes but which
+were missing from that reference's own drug list. **Each dose below is copied from the
+protocol page that prescribes it**, so none is a new clinical claim.
+
+**Why they still need checking:** each dose was written inside a protocol, and a
+formulary entry gets read without that context. Two entries have already failed exactly
+that way — both carried the generic dose where the entry named an intracranial
+indication, and both were also wrong on the protocol page itself.
+
+**For each entry, please say whether the dose, route and frequency are correct for the
+indication named, and give the corrected figure if not.**
 
 ## Activated Charcoal
 
@@ -466,17 +509,276 @@ More adverse effects than octreotide; avoid in ischaemic heart disease.
 
 ---
 
-## Already checked — do not re-send
+---
 
-**Cefixime** — confirmed correct
+# Part 3 · Paediatric formulary entries to check (40)
 
-**Meropenem** — corrected after checking
+Same request, for a separate paediatric hospital-care reference. Its drug annex states
+that it "gives the doses of the drugs mentioned in these guidelines that are suitable for
+infants and children". These 40 are prescribed with a dose somewhere in that reference
+and are absent from the annex.
 
-**Naloxone** — confirmed correct
+**No weight bands** — like the annex's own digoxin, chloramphenicol and aminophylline
+entries, these are calculated from body weight.
 
-**Octreotide** — refined after checking (maintenance widened to 25–50 mcg/hr)
+**For each entry, please say whether the dose, route and frequency are correct for the
+indication named, and give the corrected figure if not.**
 
-**Rifaximin** — corrected after checking (it printed only lactulose's dose)
+## Acetylcysteine
 
-**Vancomycin** — corrected after checking
+*antidote*
 
+- **Paracetamol poisoning — two-bag, all weights down to 5 kg** — 300 mg/kg over 20 h: bag 1 200 mg/kg over 4 h, bag 2 100 mg/kg over 16 h. Scale the diluent to weight in a small child — 7 ml/kg then 14 ml/kg in 5% glucose
+- **Under 5 kg** — Take toxicology advice
+
+## Activated charcoal
+
+*antidote*
+
+- **≤ 1 year** — 0.5–1 g/kg
+- **1–12 years** — 25–50 g
+- **Route** — By mouth or NG tube — confirm the tube is in the stomach, not the airway. Do not induce vomiting
+
+## Amitriptyline
+
+*analgesic adjuvant*
+
+- **Neuropathic pain** — 0.2–0.5 mg/kg/day
+
+## Atropine
+
+*antidote*
+
+- **Organophosphate poisoning** — 0.02 mg/kg (20 µg/kg) IV — no maximum in severe poisoning — DOUBLED every 5 min until atropinisation: clear chest, HR > 80, SBP > 80
+
+## Azithromycin
+
+*antibiotic*
+
+- **Pertussis** — 10 mg/kg (max 500 mg) on day 1, then 5 mg/kg (max 250 mg) daily on days 2–5; or 10 mg/kg daily for 3 days
+- **Cholera** — Single 20 mg/kg dose, max 1 g
+- **Dysentery (Shigella)** — 12 mg/kg on day 1, then 6 mg/kg on days 2–5
+- **Typhoid** — 10–20 mg/kg/day for 5–7 days
+
+## Betamethasone
+
+*steroid*
+
+- **Antenatal, mother at risk of preterm delivery** — 12 mg IM every 24 h × 2 doses — reduces respiratory distress syndrome in the preterm infant
+
+## Budesonide
+
+*steroid*
+
+- **Viral croup** — 2 mg nebulised, as an alternative to dexamethasone 0.6 mg/kg or prednisolone
+
+## Bupivacaine
+
+*anaesthetic*
+
+- **Local infiltration** — 0.5–2.5 mg/kg as 0.25% or 0.5% — maximum 1 ml/kg of 0.25%, or 0.5 ml/kg of 0.5%
+
+## Caffeine citrate
+
+*respiratory stimulant*
+
+- **Apnoea of prematurity — loading** — 20 mg/kg orally, or IV over 30 min
+- **Maintenance** — 5 mg/kg/day from 24 h after the load, increased if apnoea persists — do not exceed 10 mg/kg/day
+
+## Calcium gluconate 10%
+
+*electrolyte*
+
+- **Hypocalcaemic convulsions — neonate** — 2 ml/kg (100–200 mg/kg) by slow IV infusion, with cardiac monitoring
+- **Hypocalcaemic convulsions — child** — 0.5–1 ml/kg
+- **Very low birth weight supplementation** — calcium 120–140 mg/kg per day
+
+## Clindamycin
+
+*antibiotic*
+
+- **MRSA-prevalent abscess or osteomyelitis** — 10–13 mg/kg 3–4 times daily, max 40 mg/kg/day. Good bone penetration and excellent oral bioavailability
+
+## Dapsone
+
+*antibiotic*
+
+- **PCP prophylaxis where co-trimoxazole is not tolerated** — From 4 weeks of age: 2 mg/kg orally once daily
+
+## Ethionamide
+
+*antituberculous*
+
+- **TB meningitis, 6-month intensive (Cape Town) regimen** — 17.5–22.5 mg/kg/day, replacing ethambutol
+
+## Flucytosine (5-FC)
+
+*antifungal*
+
+- **Cryptococcal induction** — 25 mg/kg four times daily (100 mg/kg/day), with amphotericin B. The older 150 mg/kg/day upper end is no longer used — marrow toxicity is dose-dependent
+
+## Folic acid
+
+*vitamin*
+
+- **Severe acute malnutrition** — 5 mg on day 1, then 1 mg daily
+- **Periconceptional prevention of neural-tube defects** — 400–800 µg/day, or 4 mg/day in a high-risk mother
+
+## Glucose (dextrose)
+
+*fluid*
+
+- **Hypoglycaemia — IV bolus** — IV: 2 ml/kg of 10% glucose (0.2 g/kg), over about 15 min in a neonate
+- **Maintenance after the bolus** — IV infusion of 10% glucose at a glucose infusion rate of 5–8 mg/kg/min; 10–13 if hypoglycaemia recurs
+- **Buccal, first aid** — 40% dextrose gel 0.5 ml/kg (0.2 g/kg) into the buccal mucosa where IV access is delayed
+
+## Hydrocortisone
+
+*steroid*
+
+- **Transfusion reaction / allergic adjunct** — 2–4 mg/kg IV, max 100 mg. An adjunct only — steroids act too slowly to replace adrenaline
+
+## Ketorolac
+
+*NSAID*
+
+- **Postoperative analgesia** — 0.5 mg/kg IV — a key opioid-sparing component
+
+## Levetiracetam
+
+*anticonvulsant*
+
+- **Status epilepticus, second line** — 40 mg/kg IV over 15 min
+
+## Lorazepam
+
+*benzodiazepine*
+
+- **Convulsions, IV line running** — 0.1 mg/kg IV, max 4 mg
+
+## Magnesium sulfate
+
+*electrolyte*
+
+- **Severe asthma** — 50 mg/kg IV — better safety profile than aminophylline, where the child has not improved on bronchodilators and steroids
+- **Severe acute malnutrition** — Extra magnesium 0.4–0.6 mmol/kg per day
+
+## Meropenem
+
+*antibiotic*
+
+- **XDR typhoid** — 20 mg/kg every 8 h IV
+
+## Methionine
+
+*antidote*
+
+- **Paracetamol poisoning within 8 h, if conscious and not vomiting** — < 6 years: 1 g every 4 h × 4 doses. ≥ 6 years: 2.5 g every 4 h × 4 doses. IV acetylcysteine is preferred
+
+## Midazolam
+
+*benzodiazepine*
+
+- **Convulsions — no IV line** — Buccal or intranasal 0.3–0.5 mg/kg, max 10 mg. More effective than rectal diazepam
+- **Procedural sedation** — 0.1–0.2 mg/kg IV, or 0.3–0.5 mg/kg intranasal, buccal or oral
+
+## Naloxone
+
+*antidote*
+
+- **Opioid poisoning** — 0.01 mg/kg (10 µg/kg) IV; if no response give 0.1 mg/kg — ten times the dose, not a repeat of the same one
+- **Neonate** — 0.1 mg/kg (0.4 mg/ml vial)
+
+## Naproxen
+
+*NSAID*
+
+- **Acute rheumatic fever arthritis** — 10–20 mg/kg/day in 2 divided doses, max 1000 mg/day, until joint pain resolves, then taper. Preferred over aspirin — lower risk of Reye syndrome
+
+## Ondansetron
+
+*antiemetic*
+
+- **Distressing nausea and vomiting** — 0.15 mg/kg IV or oral, max 4 mg, every 8 h — the preferred paediatric antiemetic
+
+## Penicillin V (phenoxymethylpenicillin)
+
+*antibiotic*
+
+- **Rheumatic fever secondary prophylaxis** — 250 mg orally twice daily — an alternative to benzathine benzylpenicillin, but less effective because it depends on daily adherence
+
+## Pentamidine
+
+*antiprotozoal*
+
+- **PCP where co-trimoxazole caused a severe drug reaction** — 4 mg/kg once daily IV
+
+## Phenytoin
+
+*anticonvulsant*
+
+- **Status epilepticus** — 15–20 mg/kg IV at no more than 1 mg/kg/min, through a separate line. Phenytoin is caustic — fosphenytoin is preferred where available
+
+## Phosphorus
+
+*mineral*
+
+- **Very low birth weight supplementation** — 60–90 mg/kg per day
+
+## Pralidoxime
+
+*antidote*
+
+- **Organophosphate poisoning with muscle weakness** — 20–50 mg/kg diluted in saline IV over 15–30 min, then 10–20 mg/kg/h (max about 0.5–1 g/h in children)
+
+## Primaquine
+
+*antimalarial*
+
+- **Radical cure of P. vivax / P. ovale** — 0.25–0.5 mg/kg/day for 14 days (total 3.5–7 mg/kg). Screen for G6PD deficiency first
+
+## Sodium bicarbonate
+
+*alkalinising agent*
+
+- **Salicylate poisoning** — 1 mmol/kg IV over 4 h to correct acidosis and raise urine pH above 7.5, with oral potassium 2–5 mmol/kg/day. Monitor urine pH hourly
+
+## Sulfadoxine–pyrimethamine (SP)
+
+*antimalarial*
+
+- **With artesunate, uncomplicated malaria** — 25 mg/kg sulfadoxine + 1.25 mg/kg pyrimethamine, once on day 1, with artesunate 4 mg/kg daily for 3 days
+
+## Tranexamic acid
+
+*haemostatic*
+
+- **Trauma, within 3 h of injury** — 15–20 mg/kg IV, max 1 g, then 2 mg/kg/h for at least 8 h
+
+## Vancomycin
+
+*antibiotic*
+
+- **Bacterial meningitis where ceftriaxone-resistant S. pneumoniae exceeds 1%** — 60 mg/kg/day IV, added pending susceptibilities
+
+## Vitamin D
+
+*vitamin*
+
+- **Very low birth weight supplementation** — 400 IU daily
+
+## Vitamin K (phytomenadione)
+
+*vitamin*
+
+- **Routine newborn** — 1 mg IM (1 mg/0.5 ml or 1 mg/ml ampoule — do not use a 10 mg/ml ampoule)
+- **Preterm ≤ 1500 g** — 0.3–0.5 mg/kg IM; a single IV dose is not recommended in a preterm infant
+- **Salicylate poisoning** — 10 mg IM/IV
+
+## Whole blood
+
+*blood product*
+
+- **Severe anaemia — afebrile (T < 37.5 °C)** — 30 ml/kg (or packed cells 20 ml/kg)
+- **Severe anaemia — febrile (T ≥ 37.5 °C)** — 20 ml/kg (or packed cells 10 ml/kg) — higher volumes increased mortality in febrile children
+- **Severe acute malnutrition** — 10 ml/kg, packed cells preferred; fluid overload is a common and serious complication

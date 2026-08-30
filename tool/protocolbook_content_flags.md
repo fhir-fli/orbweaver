@@ -1,6 +1,8 @@
 # ProtocolBook — deferred content/OE flags (from topic headers)
 
-Extracted from each topic file header. Many are author reassurances (already assessed current); the GENUINE open items are distilled below.
+**NOTHING IS OPEN.** Extracted from each topic file header. Every entry below is an
+assessment already made — do not paste any of it into OpenEvidence. Anything actually
+open lives in `OPENEVIDENCE.md`.
 
 ## pb_anaemia
 - Transfusion thresholds are WHO/LMIC malaria-area-stratified (the book's own scheme); modern restrictive-transfusion practice is broadly consistent. Empirical malaria+sepsis co-treatment and "no way to clinically differentiate malaria from sepsis" is an LMIC-appropriate pearl — kept verbatim.

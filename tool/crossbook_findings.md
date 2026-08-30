@@ -804,3 +804,21 @@ Three internal contradictions found and two fixed:
   and left its neighbour. The print says 14 throughout. **Not settled here** — the
   referring-centre sentence was rephrased so it no longer restates a conflicting number,
   and the 14-vs-15 question is open with OE (Q1).
+
+## Formulary entries already checked by OE — do not re-send
+
+**Cefixime** — confirmed correct.
+**Meropenem** — corrected after checking (generic dose under a CNS indication).
+**Naloxone** — confirmed correct.
+**Octreotide** — refined; maintenance widened to 25–50 mcg/hr.
+**Rifaximin** — corrected; it printed only lactulose's dose and none of its own.
+**Vancomycin** — corrected after checking (generic dose under a CNS indication).
+
+## 2026-08-29 — the three hand-off files merged into one
+
+`crossbook_open_questions.md`, `protocolbook_formulary_additions.md` and
+`who_formulary_additions.md` are now a single paste file, `tool/OPENEVIDENCE.md`.
+Grey had to find and send three separate files. Everything open lives in that one file;
+this findings file keeps the record. The stale-queue hook's generated-list table was
+repointed at the new name so it still catches the list going stale against either
+formulary.
