@@ -1,8 +1,11 @@
 # ProtocolBook formulary — drugs added beyond the printed Essential Medications list
 
-**52 STILL NEED CHECKING.** Three have been checked already and are excluded from the
-list below: meropenem and vancomycin came back **wrong** and are corrected; naloxone
-came back correct.
+**49 STILL NEED CHECKING.** Six have been checked already and are excluded from the
+list below. **Wrong and corrected:** meropenem and vancomycin (generic dose where the
+entry named an intracranial indication); **rifaximin**, which printed only the lactulose
+regimen and no rifaximin dose at all, now 550 mg PO twice daily. **Refined:**
+octreotide, maintenance widened to 25-50 mcg/hr. **Came back correct:** naloxone,
+cefixime.
 
 The printed list (pp.146–158) carries 84 drugs. The protocols prescribe more. 18 were
 added on 2026-08-27 from the drugs the corrected chapters used; 37 more on 2026-08-29
@@ -96,16 +99,6 @@ Do **not** give to a patient who is not fully awake, and **never intubate solely
 **Children:** 0.5 mL/kg slow IV over 2–3 min with cardiac monitoring; repeat every 5 min until the ECG improves
 
 **Adults:** 10 mL of 10% IV over 2–3 min; repeat every 5 min until the ECG improves
-
-## Cefixime
-
-*antibiotic*
-
-**Gonorrhoea — only where ceftriaxone is unavailable.**
-
-**Adults:** 800 mg PO single dose (urogenital or rectal only)
-
-**Children:** 8 mg/kg PO as a **single dose**; ≥ 45 kg use the adult 800 mg single dose
 
 ## Clindamycin
 
@@ -349,14 +342,6 @@ acute hyponatraemia.
 
 Co-trimoxazole 160/800 mg PO five days a week is the alternative.
 
-## Octreotide
-
-*gastrointestinal*
-
-**Variceal bleeding — the vasoactive drug of choice. Start as soon as varices are suspected, before endoscopy.**
-
-**50 mcg IV bolus, then 50 mcg/hr infusion for 3–5 days.**
-
 ## Olanzapine
 
 *psychiatric*
@@ -407,12 +392,6 @@ Dilute 1 mg in 19 mL NS to give 50 mcg/mL.
 - **Human Ig 20 IU/kg · Equine Ig 40 IU/kg**
 
 🛑 This is a **maximum, not a target** — there is no minimum dose. Exceeding it suppresses the vaccine response.
-
-## Rifaximin
-
-*gastrointestinal*
-
-**Recurrent hepatic encephalopathy — add to lactulose**, which stays first line at 30–45 mL PO every 1–2 hrs until two bowel movements, then 15–30 mL 2–4 times daily.
 
 ## Rivaroxaban
 
@@ -489,9 +468,15 @@ More adverse effects than octreotide; avoid in ischaemic heart disease.
 
 ## Already checked — do not re-send
 
+**Cefixime** — confirmed correct
+
 **Meropenem** — corrected after checking
 
 **Naloxone** — confirmed correct
+
+**Octreotide** — refined after checking (maintenance widened to 25–50 mcg/hr)
+
+**Rifaximin** — corrected after checking (it printed only lactulose's dose)
 
 **Vancomycin** — corrected after checking
 
