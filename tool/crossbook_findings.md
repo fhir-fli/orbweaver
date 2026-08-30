@@ -31,8 +31,8 @@ reliable dialysis; ICU monitoring is not routinely available.
 # ⚡ NO QUESTIONS LIVE HERE. NOTHING IS OPEN.
 
 **This file is the RECORD: what was ruled, where it was applied, and what was checked and
-dismissed with the reason.** The open questions are in `crossbook_open_questions.md` —
-three of them — and that file contains nothing but questions.
+dismissed with the reason.** The open questions are in `tool/OPENEVIDENCE.md` — one of
+them — and that file contains nothing but questions.
 
 ---
 
