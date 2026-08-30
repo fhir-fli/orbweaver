@@ -4,6 +4,17 @@
 # ✅ OpenEvidence-reviewed 2026-07: added the supplementary-suckling technique,
 # treating the mother-infant dyad as a unit, and structured post-discharge
 # breastfeeding support. Diluted-F-100 preparation unchanged.
+# 2026-08-29: brought to the 2023 WHO wasting guideline for this age group,
+#   read from the guideline itself (NCBI NBK601655), not asserted.
+#   ADDED: the IN-DEPTH ASSESSMENT step - 2023 puts a third destination
+#   between "complicating factor" and "admit", so inpatient is no longer the
+#   automatic answer; its anthropometric triggers (WAZ < -2, WLZ < -2, MUAC
+#   < 110 mm from 6 weeks); the 48-hour danger-sign-free transfer rule; and
+#   reduced visit frequency with anthropometry reassessed at 6 months.
+#   ALREADY PRESENT and left alone: the do-not-use-full-strength-F-100
+#   caution, the feeding order of preference, the mother-infant dyad, maternal
+#   mental health, supplementary suckling. This topic was in better shape than
+#   its missing "2023" marker suggested - the marker is not the content.
 # ============================================================
 
 topic:
@@ -29,7 +40,24 @@ topic:
         malnutrition or failure to thrive.
 
     - type: "prose"
-      title: "Admit for inpatient care if any of"
+      title: "2023 — inpatient is no longer the automatic answer"
+      highlight: true
+      markdown: |
+        The 2023 WHO guideline widened this group from **SAM** to **infants at
+        risk of poor growth and development**, and put an **in-depth assessment**
+        between "has a complicating factor" and "admit". Three destinations, not
+        two:
+        - **Admit directly** — danger signs, an acute medical problem, oedema,
+          or recent weight loss.
+        - **In-depth assessment first** — a medical problem needing
+          investigation, a condition with nutritional associations, a feeding
+          concern, or anthropometry: **WAZ < −2 SD, WLZ < −2 SD, or MUAC
+          < 110 mm** (from 6 weeks to under 6 months). The assessment is of the
+          **mother/caregiver–infant pair** — medical, feeding and psychosocial.
+        - **Outpatient** — no danger signs, and the assessment finds it safe.
+
+    - type: "prose"
+      title: "Triggers for admission or in-depth assessment"
       markdown: |
         - **general danger signs** or serious clinical condition (as for older
           infants)
@@ -84,9 +112,19 @@ topic:
         - **weight gain** is satisfactory (e.g. above the median WHO growth
           velocity, or **> 5 g/kg per day for at least 3 successive days**).
 
+        **2023 transfer criteria — all of:** no danger signs for **48 hours**, acute
+        problems resolved, oedema resolving, good appetite, **satisfactory weight
+        gain for 2–3 days**, and follow-up linked for the mother's or caregiver's
+        own health needs.
+
         Discharge from all nutritional care only when the infant **is feeding
         well** and has an **adequate weight gain** and a **weight-for-length
         ≥ −2 z-scores**. Assess and support the **mother's/carer's physical and
         mental health**. Arrange **structured post-discharge breastfeeding
         support** — infants often **fail to sustain growth** after discharge
         without it.
+
+        **Visit frequency may be reduced** once the infant is breastfeeding
+        effectively and weight gain has been sustained across **two consecutive
+        weekly visits**. **At 6 months, reassess anthropometry** to decide what
+        services the child still needs.
