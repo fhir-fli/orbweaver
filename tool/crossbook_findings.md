@@ -762,3 +762,25 @@ dapsone has no printed maximum, and the app's dexamethasone entry carries the 8 
 
 **Nothing to fix.** Recorded so the question is not re-opened, and so the third framing —
 check the print's ceilings against the transcription — is the one anyone repeats.
+
+## Entry prints only a companion drug's dose (OE's scan question, 2026-08-29)
+
+OE found that the new **rifaximin** entry printed only the lactulose regimen — a
+clinician looking up rifaximin found no rifaximin dose at all. It came from a page
+fragment where lactulose was the subject and rifaximin the add-on. Fixed:
+**recurrent hepatic encephalopathy, 550 mg PO twice daily**, added to lactulose.
+
+OE offered to scan the rest for the same defect. Run here instead, twice, over both
+formularies:
+
+- **41 entries** name another drug in their dose text. All 41 read; **all carry their
+  own dose**. Two looked truncated (dihydroartemisinin–piperaquine, RHZ FDC) but hold
+  theirs in `regimen` plus the weight-band table, which the flattener does not print.
+- **Complete version of the class** — any entry with no dose figure anywhere in its
+  record, whether or not it names another drug: **4 hits, 0 defects**. Potassium (mEq),
+  sulphadoxine-pyrimethamine (tablets) and vitamin D (IU) are unit misses by the probe,
+  not missing doses. Clotrimazole is topical; "apply BD-TID until cleared" is its dose.
+
+**Rifaximin was the only entry of this class in either book.** Also widened octreotide
+maintenance to 25–50 mcg/hr (AASLD), noting a 1-day (≤72 h) infusion is non-inferior to
+5 days after band ligation — which matters where supply is short.

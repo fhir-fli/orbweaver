@@ -59,6 +59,12 @@
 #   starting dose. Copied from the pages that already carry them, with their
 #   qualifiers, so no new clinical claim is introduced. Found by diffing every
 #   formulary entry against every page dose.
+# 2026-08-29: RIFAXIMIN had NO DOSE OF ITS OWN - the entry printed only the
+#   lactulose regimen, because it was written from a page fragment in which
+#   lactulose was the subject and rifaximin the add-on. Someone looking up
+#   rifaximin found no rifaximin dose. Now 550 mg PO twice daily.
+#   Octreotide maintenance widened to 25-50 mcg/hr (AASLD) and the 1-day
+#   non-inferiority noted, which matters where supply is short.
 # ============================================================
 
 formulary:
@@ -1656,7 +1662,7 @@ formulary:
     dose: '**Variceal bleeding — the vasoactive drug of choice. Start as soon as varices are suspected, before endoscopy.**
 
 
-      **50 mcg IV bolus, then 50 mcg/hr infusion for 3–5 days.**
+      **50 mcg IV bolus, then 25–50 mcg/hr infusion for 3–5 days.**\n\nWhere octreotide is short, a **1-day (≤ 72 h) infusion is non-inferior** to 5 days after successful band ligation.
 
       '
     notes: ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it. Dose taken from the upper GI bleed page, p.104; no new clinical claim is introduced.
@@ -1994,7 +2000,7 @@ formulary:
   - id: rifaximin
     name: Rifaximin
     class: gastrointestinal
-    dose: '**Recurrent hepatic encephalopathy — add to lactulose**, which stays first line at 30–45 mL PO every 1–2 hrs until two bowel movements, then 15–30 mL 2–4 times daily.
+    dose: '**Recurrent hepatic encephalopathy — 550 mg PO twice daily.**\n\nAdded to lactulose, not instead of it. Lactulose stays first line at 30–45 mL PO every 1–2 hrs until two bowel movements, then 15–30 mL 2–4 times daily to keep 2–3 soft stools a day.
 
       '
     notes: ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it. Dose taken from the liver failure page, p.108; no new clinical claim is introduced.
