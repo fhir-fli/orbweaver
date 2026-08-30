@@ -498,6 +498,60 @@ def main():
         if not doses:
             return 0
 
+        # Inside a FORMULARY entry the drug is not in question - it is the
+        # entry we are standing in - so `bound` is authoritative there and the
+        # nearest-mention rule below is skipped. Only the formulary walk passes
+        # a non-empty `bound`; every topic file passes ().
+        #
+        # This was wrong until 2026-08-30. Phenobarbital's regimen reads "after
+        # two doses of diazepam have failed", so its loading dose was filed
+        # under DIAZEPAM, and the guard that caught a reintroduced phenobarbital
+        # defect named the wrong drug. The same bug filed prednisolone's
+        # milligrams under hydrocortisone and flucytosine's under amphotericin,
+        # which cost a real read each during the intra-book pass.
+        if bound:
+            clean_b = re.sub(r'[*_`]', '', frag)[:400].replace('\t', ' ')
+            ctx_b = ' › '.join(ctx[-3:]).replace('\t', ' ')[:200]
+            freq_b = ';'.join(sorted(set(
+                x.lower() for x in FREQ_RE.findall(frag))))
+            # ...unless another drug is named IMMEDIATELY before the dose.
+            # A formulary entry routinely quotes a companion or fallback agent
+            # with its own dose - cefixime's entry ends "if neither is
+            # available: gentamicin 240 mg IM", and diazepam's note says
+            # "repeat PHENOBARBITAL 10 mg/kg after 30 min". Those belong to the
+            # drug named, not to the entry. A drug mentioned further away does
+            # NOT capture the dose: phenobarbital's own regimen reads "20 mg/kg
+            # ... after two doses of diazepam have failed", where diazepam
+            # follows the dose and is not its owner.
+            NEAR = 20
+            near = []
+            claimed_n = []
+            for pat, canon in patterns:
+                for m in pat.finditer(frag):
+                    if any(m.start() < e and st < m.end()
+                           for st, e in claimed_n):
+                        continue
+                    claimed_n.append((m.start(), m.end()))
+                    if canon not in bound:
+                        near.append((m.start(), m.end(), canon))
+            near.sort()
+
+            n_b = 0
+            for dm in doses:
+                owner = bound
+                prior = [c for st, e, c in near
+                         if e <= dm.start() and dm.start() - e <= NEAR]
+                if prior:
+                    owner = (prior[-1],)
+                for canon in owner:
+                    fh.write('%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' % (
+                        book, base, title.replace('\t', ' '), canon,
+                        dm.group(1).strip(), dm.group(2).lower(),
+                        freq_b, ctx_b, clean_b))
+                    fh.flush()
+                    n_b += 1
+            return n_b
+
         # Every drug mention in the fragment, with its position. Longest
         # surface forms are tried first and their spans claimed, so
         # "magnesium sulfate" is not also counted as "magnesium".

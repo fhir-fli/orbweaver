@@ -142,3 +142,49 @@ disagreed with the page prescribing the drug, and in two of the three the page h
 already been corrected and the formulary was left behind. That is now five occurrences of
 the same shape, counting meropenem and vancomycin. **When a page dose changes, the
 formulary entry has to change in the same commit.**
+
+## The instrument was wrong, so the pass was re-run — 2026-08-30
+
+The extractor attributed every dose to the nearest drug MENTIONED. Inside a formulary
+entry that is wrong: the drug is not in question, it is the entry you are standing in.
+Phenobarbital's regimen reads "20 mg/kg ... after two doses of diazepam have failed", so
+its loading dose was filed under **diazepam**. The same bug filed prednisolone's
+milligrams under hydrocortisone, magnesium sulfate's under aminophylline, and
+flucytosine's under amphotericin — each of which cost a read during the first pass.
+
+Formulary rows now bind to their own entry, **unless another drug is named within 20
+characters before the dose**, which is how a companion agent is quoted: cefixime's entry
+ends "if neither is available: gentamicin 240 mg IM", and diazepam's note says "repeat
+PHENOBARBITAL 10 mg/kg after 30 min". Both now attribute to the drug named. A drug
+mentioned further away does not capture the dose, which is what keeps phenobarbital's own
+regimen with phenobarbital.
+
+Re-running surfaced **fourteen drug/unit groups the old attribution had hidden**. All
+read. Two were real.
+
+**🔴 WHO piperaquine — the page underdoses small children.** The malaria page printed a
+flat "4 mg/kg DHA + 18 mg/kg piperaquine", while the formulary said ~24 mg/kg with a
+higher target under 25 kg. WHO doses piperaquine higher per kilogram in small children:
+**24 mg/kg under 25 kg, 18 mg/kg at 25 kg and above**. A clinician reading only the page
+gives a child the adult milligrams per kilogram. Underdosed piperaquine both fails the
+child and selects for resistance. **Fixed** — the page now carries both, and says why.
+
+**🔴 Ferrous sulfate — the two pages disagreed on the tablet, and both were right.** The
+anaemia page said 65 mg elemental iron equals ferrous sulfate **200 mg**; the formulary
+said a **325 mg** tablet contains 65 mg. Both conventions are correct: 200 mg is the
+dried (exsiccated) salt, 325 mg the heptahydrate, and each carries 65 mg of elemental
+iron. Neither page said which, so a clinician holding the other form would be out by
+about 40%. **Fixed** — both places now name the form.
+
+**The other twelve, read and cleared:** fluconazole 1200 mg/day quoted inside the
+amphotericin entry is cryptococcal induction and is on the page too; WHO amodiaquine
+"4 mg/kg" is artesunate's half of "artesunate 4 + amodiaquine 10"; folic acid 250 µg is
+the iron–folate tablet and 50 µg is a multivitamin content; cefixime, hydrocortisone,
+terlipressin and ipratropium all matched their pages; WHO isoniazid 100 mg is the
+ethambutol tablet in the fixed-dose combination entry and 300 mg is the adult preventive
+tablet; cefalexin 100 mg/kg/day is the severe skin-infection dose, stated in the entry.
+
+⚠️ **One extraction defect recorded, not fixed:** the dose pattern treats a space as a
+thousands separator, so "bag 1 200 mg/kg over 4 h" is read as 1200 mg/kg. It produces
+phantom values in the tooling only; the book text is correct. The parity baseline absorbs
+them.

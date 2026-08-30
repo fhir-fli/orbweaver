@@ -1,5 +1,4 @@
 amiodarone	amio; amiodarone; pacerone
-artesunate–mefloquine	artesunate–mefloquine
 cefazolin	ancef; cefazolin
 dihydroartemisinin–piperaquine	dha-pip; dihydroartemisinin–piperaquine
 duodote	duodote
@@ -17,6 +16,5 @@ rocuronium	rocuronium
 silver sulfadiazine	silver sulfadiazine
 succinylcholine	succinylcholine; sux
 sulfadoxine-pyrimethamine	sulfadoxine-pyrimethamine; sulphadoxine-pyrimethamine
-sulfadoxine–pyrimethamine	sulfadoxine–pyrimethamine
 tetracaine	tetracaine
 tetracaine, adrenaline, cocaine	tetracaine, adrenaline, cocaine
