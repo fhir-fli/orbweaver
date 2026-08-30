@@ -891,3 +891,44 @@ stale header note on the ProtocolBook resuscitation page. Errata written for v1.
 **How it was found:** the book-against-itself dose pass, comparing the same drug and unit
 across pages of one book. The ProtocolBook's own two pages disagreed, which is the class
 of defect that cannot be excused as regional variation.
+
+## 🔴 2026-08-30 — I introduced two unsourced clinical claims, and reverted them
+
+Asked directly whether the findings were real or invented, I re-checked the provenance of
+everything applied today. **Two claims were mine, from recall, not from any source I had
+checked. Both were written into the books and both are now reverted.**
+
+1. **Piperaquine "24 mg/kg under 25 kg, 18 mg/kg at 25 kg and above."** The WHO print says
+   a flat **18 mg/kg** target at all weights. The page was faithful and I "corrected" it
+   against my own memory of the malaria guidelines. Reverted to the print. The formulary's
+   conflicting ~24 mg/kg is now Q1 for OE — I do not know which is right.
+2. **Ferrous sulfate "200 mg dried and 325 mg heptahydrate both contain 65 mg elemental
+   iron."** The ProtocolBook print says "325 mg ferrous sulfate tablet contains 65 mg
+   elemental iron". The formulary was faithful; the anaemia page's 200 mg is the one that
+   differs. My dried-versus-heptahydrate explanation was plausible and unverified.
+   Reverted. Both pages now flag the disagreement and say to check the elemental iron
+   printed on the tablet, without explaining it. Q2 for OE.
+
+**Provenance of everything else applied today, stated plainly:**
+
+- **Verified against the print, quoted:** the phenobarbital 15-versus-20 contradiction
+  (p.154 against p.20), the WHO neonatal 20 against Annex 2's 15, the 320 mg cap, the
+  vitamin A day-14 print text, the WHO Chart 9 and §3.7 phenobarbital figures.
+- **OE rulings, applied as given:** phenobarbital 20 mg/kg at all ages with no cap;
+  vitamin A day 15 and the diarrhoea trigger; primaquine 0.5 mg/kg/day; rifaximin 550 mg
+  twice daily; octreotide 25–50 mcg/hr.
+- **Structural, verified by reading the file:** the diazepam note whose 10 mg/kg named no
+  drug; §7.4.8 carrying a discharge rule §7.6.2 says was replaced; the §7.6 heading.
+- **Derived arithmetic, labelled as derived in the entry:** the WHO phenobarbital
+  millilitre bands recalculated at 20 mg/kg. The method was validated first — the print's
+  own 15 mg/kg bands reproduce exactly from the same weight-band midpoints and the
+  200 mg/ml solution.
+- **Taken from our own pages, NOT independently verified:** lidocaine 4.5 plain / 7 with
+  epinephrine, and the alteplase stroke dose of 0.9 mg/kg max 90. Both were already in the
+  book on pages carrying a 2026-07 OE review, and moving them into the formulary is not a
+  new claim — but our own page is not a source, so lidocaine is Q3 for OE.
+
+**The lesson, which is the one already written down.** Both fabrications happened at the
+moment I was *fixing* a discrepancy the tooling had surfaced. The tool was right that the
+two pages disagreed; the invention was in supplying the reason. Finding a disagreement and
+resolving it are two different acts, and only the first one is mine.
