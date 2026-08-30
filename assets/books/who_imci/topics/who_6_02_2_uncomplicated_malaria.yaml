@@ -51,12 +51,16 @@ topic:
           pyrimethamine) **once on day 1**.
         - **Artesunate + mefloquine** — artesunate 4 mg/kg once daily for 3 days
           **plus** mefloquine 25 mg/kg base divided over 2–3 days.
-        - **Dihydroartemisinin + piperaquine** (40/320 mg tablets) — target
-          **4 mg/kg DHA + 18 mg/kg piperaquine once daily for 3 days**, as
-          printed in the WHO source text. ⚠️ The drug formulary states ~24 mg/kg
-          piperaquine with a higher target under 25 kg. The two do not agree and
-          it is **not settled here** — dose from the weight-band tablet counts,
-          which both sources share.
+        - **Dihydroartemisinin + piperaquine** (40/320 mg tablets), once daily
+          for 3 days. **The mg/kg target is weight-dependent** — piperaquine
+          exposure is lower in small children, so a flat mg/kg underdoses them
+          (OE 2026-08-30):
+          - **Under 25 kg: piperaquine 20 mg/kg/day**, DHA at least
+            **2.5 mg/kg/day**
+          - **25 kg and above: piperaquine 18 mg/kg/day**, DHA **4 mg/kg/day**
+
+          The printed text gives a flat 18 mg/kg, which is the figure for
+          25 kg and above.
         - **Artesunate + pyronaridine** (Pyramax) — a WHO-recommended ACT with
           high efficacy where artemisinin partial resistance is emerging.
 

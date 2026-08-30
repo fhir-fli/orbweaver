@@ -301,3 +301,13 @@ Open with OE. For v1.8 the two pages must be made to agree, whichever way it is 
 to a cumulative maximum of 40 mg/kg only with respiratory monitoring, maintenance
 3–5 mg/kg/day from 12–24 h after the load. p.154 must change to match p.20 in v1.8, and
 the 320 mg cap must be deleted — it underdoses everyone over about 16 kg.
+
+## Ferrous sulfate — the anaemia work-up page underdoses by a third (p.75)
+
+**Print says** 65 mg elemental iron = ferrous sulfate 200 mg, one tablet.
+**Correct (OE 2026-08-30):** 65 mg elemental iron = one **325 mg dried (exsiccated)**
+tablet. The dried salt is ~30% iron; the **heptahydrate is ~20%**, so a 200 mg tablet of
+it carries about **40 mg** elemental iron, not 65.
+
+For v1.8: prescribe by elemental iron, not salt weight, and drop the "200 mg = 65 mg"
+line. The formulary's own "325 mg contains 65 mg" was right and needs the word *dried*.

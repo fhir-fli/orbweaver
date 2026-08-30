@@ -932,3 +932,30 @@ checked. Both were written into the books and both are now reverted.**
 moment I was *fixing* a discrepancy the tooling had surfaced. The tool was right that the
 two pages disagreed; the invention was in supplying the reason. Finding a disagreement and
 resolving it are two different acts, and only the first one is mine.
+
+## OE round of 2026-08-30 — the three questions raised after I caught myself inventing
+
+All three answerable. Two were errors in the books.
+
+**Piperaquine — the mg/kg target IS weight-dependent, and both my figures were wrong.**
+The ruling: **20 mg/kg/day under 25 kg, 18 mg/kg/day at 25 kg and above**, because
+piperaquine exposure is lower in small children, so a flat mg/kg underdoses them. It is a
+real difference, not a tablet-counting artefact. Dihydroartemisinin splits the same way:
+at least 2.5 mg/kg/day under 25 kg, 4 mg/kg/day at or above. So the printed flat 18 was
+the figure for 25 kg and above only, and **my invented 24 was also wrong** — the number is
+20. Applied to both the page and the formulary. Had I not been asked whether I was making
+things up, a fabricated 24 would have stayed in the book.
+
+**Ferrous sulfate — the anaemia page was the error, and it underdosed.** A 325 mg **dried
+(exsiccated)** tablet contains 65 mg elemental iron, because the dried salt is about 30%
+iron. The **heptahydrate is about 20%**, so a 200 mg tablet of it carries roughly **40 mg**,
+not 65. The page's "65 mg elemental = ferrous sulfate 200 mg" was wrong by about a third
+of the dose. Both places now say to **prescribe by elemental iron, not salt weight**, and
+name the percentages.
+
+**Lidocaine — the rewrite was correct, and a single "4–5 mg/kg" is explicitly unsafe to
+print.** Plain 4.5 mg/kg, with epinephrine 7 mg/kg, confirmed against the FDA labels and
+the AAD and paediatric consensus; keeping the 3 mg/kg conservative procedural ceiling is
+sensible here. **OE added something we did not have: a total-milligram cap** — plain
+300 mg, with epinephrine 500 mg — because a mg/kg figure alone overdoses an adolescent
+near adult weight. Added.

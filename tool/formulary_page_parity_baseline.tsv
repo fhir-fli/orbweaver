@@ -90,6 +90,7 @@ PB	erythromycin	mg/kg/day	20
 PB	erythromycin	mg/kg/day	50
 PB	ethambutol	mg/kg/dose	15
 PB	ethambutol	mg/kg/dose	20
+PB	ferrous sulfate	mg	65
 PB	flucytosine	mg/kg/dose	25
 PB	folic acid	mg	0.1
 PB	folic acid	mg	0.3
@@ -116,11 +117,11 @@ PB	ibuprofen	mg/day	2400
 PB	ibuprofen	mg/dose	800
 PB	ibuprofen	mg/kg	5
 PB	iron	mg	15
-PB	iron	mg	200
 PB	iron	mg	2–4
-PB	iron	mg	325
+PB	iron	mg	300
 PB	iron	mg	3–6
 PB	iron	mg	5
+PB	iron	mg	60
 PB	iron	mg	60–120
 PB	itraconazole	mg/day	400
 PB	itraconazole	mg/kg/dose	5
@@ -221,6 +222,7 @@ WHO	acetylcysteine	mg/kg	1 200
 WHO	acetylcysteine	mg/kg	2 100
 WHO	acetylcysteine	ml/kg	14
 WHO	acetylcysteine	ml/kg	7
+WHO	adrenaline	mg	500
 WHO	adrenaline	mg/kg	7
 WHO	adrenaline	ml/kg	0.1
 WHO	aminophylline	mg	100
@@ -285,7 +287,10 @@ WHO	dexamethasone	mg/kg/dose	0.15
 WHO	diazepam	mg/kg	0.2–0.3
 WHO	digoxin	µg/kg	15
 WHO	digoxin	µg/kg	5
-WHO	dihydroartemisinin	mg/kg	4
+WHO	dihydroartemisinin	mg/kg/day	2.5
+WHO	dihydroartemisinin–piperaquine	mg/kg	18
+WHO	dihydroartemisinin–piperaquine	mg/kg/day	18
+WHO	dihydroartemisinin–piperaquine	mg/kg/day	4
 WHO	dobutamine	mg	250
 WHO	dobutamine	µg/kg	2–20
 WHO	dopamine	mg	250
@@ -324,6 +329,7 @@ WHO	ketamine	mg	6–12
 WHO	ketamine	mg	80–140
 WHO	ketamine	mg	8–15
 WHO	ketamine	mg/kg	2–4
+WHO	lidocaine	mg	300
 WHO	lidocaine	mg/kg	4–5
 WHO	lidocaine	mg/kg	5
 WHO	lopinavir/ritonavir	mg	20

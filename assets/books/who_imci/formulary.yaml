@@ -1167,7 +1167,7 @@ formulary:
     - 11–<17
     - 17–<25
     - 25–<36
-    regimen: 'Oral once daily for 3 days: dihydroartemisinin ~4 mg/kg + piperaquine ~24 mg/kg per day (higher mg/kg target in children under 25 kg)'
+    regimen: 'Oral once daily for 3 days. Piperaquine 20 mg/kg/day under 25 kg, 18 mg/kg/day at 25 kg and above; dihydroartemisinin at least 2.5 mg/kg/day under 25 kg, 4 mg/kg/day at 25 kg and above. Small children need the higher mg/kg because piperaquine exposure is lower in them (OE 2026-08-30). The printed annex gives a flat 18 mg/kg, which is the figure for 25 kg and above'
     doses:
     - label: 'Paediatric tablet: DHA 20 / piperaquine 160 mg'
       bands:
@@ -1714,7 +1714,7 @@ formulary:
       - calc
       - calc
       - calc
-    notes: '🛑 The printed annex gives 4–5 mg/kg without saying which preparation. 5 mg/kg exceeds the accepted maximum for PLAIN lidocaine, which is 4.5 mg/kg; 7 mg/kg is allowed only when the solution contains epinephrine. Always state which you are using. Toxicity in a small child is convulsions and cardiac arrest.'
+    notes: '🛑 The printed annex gives 4–5 mg/kg without saying which preparation, and that is unsafe to print: 5 mg/kg exceeds the maximum for PLAIN lidocaine. Confirmed by OE 2026-08-30 against the FDA labels and the AAD and paediatric consensus — plain 4.5 mg/kg, with epinephrine 7 mg/kg, and the two must be printed separately. 🛑 ALSO CAP THE TOTAL MILLIGRAMS in a bigger child or adolescent, where mg/kg alone overdoses someone near adult weight: plain 300 mg, with epinephrine 500 mg. Toxicity is convulsions and cardiac arrest.'
   - id: lopinavir-ritonavir
     name: Lopinavir/ritonavir (LPV/RTV)
     class: antiretroviral

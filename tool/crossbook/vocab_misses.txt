@@ -1,6 +1,5 @@
 amiodarone	amio; amiodarone; pacerone
 cefazolin	ancef; cefazolin
-dihydroartemisinin–piperaquine	dha-pip; dihydroartemisinin–piperaquine
 duodote	duodote
 etomidate	etomidate
 gentian violet	gentian violet
