@@ -14,6 +14,8 @@ the original protocol's and are strict). **Candidates, not findings** — read t
     > Wt | Bag 1 — over 4 hrs | Bag 2 — over 16 hrs
   - `16 hour` PB — *Paracetamol / Acetaminophen Toxicity*
     > Wt | Bag 1 — over 4 hrs | Bag 2 — over 16 hrs
+  - `4 hour` PB — *Essential Medications*
+    > Child ≤ 40kg: 200mg/kg in 7mL/kg diluent (max 500mL) over 4 hrs, then 100mg/kg in 14mL/kg (max 1L) over 16 hrs
   - `20 hour` WHO — *Specific Poisons*
     > Two-bag, all weights down to 5 kg — 300 mg/kg over 20 h:
   - `4 hour` WHO — *Specific Poisons*
@@ -75,7 +77,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### ciprofloxacin — day
 
-- **PB:** 3-5, 3, 7-10
+- **PB:** 3, 3-5, 7-10
 - **WHO:** 2, 3, 5, 7-10
 
   - `3-5 day` PB — *Paediatric Dehydration Protocol*
@@ -98,24 +100,12 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
   - `4 day` PB — *Adult Meningitis*
     > Steroids: not routinely. Adjunctive dexamethasone showed no benefit in low-income, high-HIV-prevalence settings, where patients present late and sicker. If the patient is HIV-negative and presents ear
+  - `4 day` PB — *Essential Medications*
+    > Bacterial meningitis: 10 mg IV q6h × 4 days — with or just before the first antibiotic dose. Not routine here: no benefit in low-income, high-HIV-prevalence settings; consider only if HIV-negative and
   - `4 day` WHO — *Bacterial Meningitis*
     > Steroids are not routine here. Multiple trials and the Cochrane review found no benefit on mortality or sequelae in low-income settings, where patients present later and sicker, and benefit was not de
   - `1 day` WHO — *Tuberculous Meningitis*
     > May be acute or chronic (symptoms over 1 day to 9 months). Presents with cranial-nerve deficits, or a more indolent course of headache, meningismus and altered mental status; early symptoms are usuall
-
-### dextrose — hour
-
-- **PB:** 2-4, 2, 6, 24
-- **WHO:** 24
-
-  - `2 hour` PB — *Malaria — Severe Rx*
-    > a) 1st line — Artesunate i) 3 mg/kg < 20 kg · 2.4 mg/kg ≥ 20 kg IV/IM at 0, 12, 24 h ii) Parenteral Rx ≥ 24 h, then daily until tolerating PO → switch to oral b) 2nd line — Artemether i) 3.2 mg/kg IM 
-  - `24 hour` PB — *Paediatric Hyperglycemia & DKA*
-    > Evaluate and manage dehydration | Check glucose every 4 hours (if hyperglycemia resolves with hydration → monitor every 6 hours x 24 hours; if continues to be normal x 24 hours → likely reactive) | Ch
-  - `24 hour` PB — *Paediatric Hyperglycemia & DKA*
-    > Evaluate and manage dehydration | Check glucose every 4 hours (if hyperglycemia resolves with hydration → monitor every 6 hours x 24 hours; if continues to be normal x 24 hours → likely reactive) | Ch
-  - `24 hour` WHO — *Step 1 · Hypoglycaemia*
-    > Conscious: give 50 ml of 10% glucose or sucrose (one rounded teaspoon of sugar in 3 tablespoons of water) orally or by NG tube, then the first feed as soon as possible. Give the first feed of F-75 if 
 
 ### erythromycin — day
 
@@ -146,7 +136,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 ### gentamicin — day
 
 - **PB:** 7
-- **WHO:** 2, 5, 7-10, 7
+- **WHO:** 2, 5, 7, 7-10
 
   - `7 day` PB — *SAM — Admission & Acute Complications*
     > Gentamicin 7.5mg/kg/day x 7 days — SAM has its own higher gentamicin dose; do not use the general paediatric 5mg/kg here
@@ -156,6 +146,20 @@ the original protocol's and are strict). **Candidates, not findings** — read t
     > Pneumonia (commonest — secondary infection or aspiration of vomit): treat with ampicillin/benzylpenicillin + gentamicin for 5 days (or azithromycin 5 days) and oxygen.
   - `7-10 day` WHO — *Septicaemia*
     > IV ampicillin 50 mg/kg every 6 h + IV gentamicin 7.5 mg/kg once daily for 7–10 days; or ceftriaxone 80–100 mg/kg IV once daily (over 30–60 min) for 7–10 days.
+
+### glucose — hour
+
+- **PB:** 2, 2-4, 6, 24
+- **WHO:** 24
+
+  - `2 hour` PB — *Malaria — Severe Rx*
+    > a) 1st line — Artesunate i) 3 mg/kg < 20 kg · 2.4 mg/kg ≥ 20 kg IV/IM at 0, 12, 24 h ii) Parenteral Rx ≥ 24 h, then daily until tolerating PO → switch to oral b) 2nd line — Artemether i) 3.2 mg/kg IM 
+  - `24 hour` PB — *Paediatric Hyperglycemia & DKA*
+    > Evaluate and manage dehydration | Check glucose every 4 hours (if hyperglycemia resolves with hydration → monitor every 6 hours x 24 hours; if continues to be normal x 24 hours → likely reactive) | Ch
+  - `24 hour` PB — *Paediatric Hyperglycemia & DKA*
+    > Evaluate and manage dehydration | Check glucose every 4 hours (if hyperglycemia resolves with hydration → monitor every 6 hours x 24 hours; if continues to be normal x 24 hours → likely reactive) | Ch
+  - `24 hour` WHO — *Step 1 · Hypoglycaemia*
+    > Conscious: give 50 ml of 10% glucose or sucrose (one rounded teaspoon of sugar in 3 tablespoons of water) orally or by NG tube, then the first feed as soon as possible. Give the first feed of F-75 if 
 
 ### isoniazid — month
 
@@ -208,7 +212,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 ### prednisolone — week
 
 - **PB:** 1, 4
-- **WHO:** 1, 2-4, 2
+- **WHO:** 1, 2, 2-4
 
   - `4 week` PB — *Urinary Tract & Kidney Disorders*
     > Prednisone 2mg/kg/day (max 60mg/day) x 4 weeks, then alternate-day dosing — will require taper
@@ -253,12 +257,24 @@ the original protocol's and are strict). **Candidates, not findings** — read t
   - `3 day` WHO — *Drug dosages*
     > Oral: 12.5 mg/kg four times a day for 3 days
 
+### whole blood — hour
+
+- **PB:** 3
+- **WHO:** 3-4, 3
+
+  - `3 hour` PB — *SAM — Admission & Acute Complications*
+    > No heart failure: 10mls/kg whole blood slowly over 3hrs
+  - `3 hour` WHO — *IV Fluids for Shock (with SAM)*
+    > Transfuse only for severe anaemia (Hb < 4 g/dL, or < 6 with respiratory distress): whole blood 10 ml/kg slowly over 3 h (packed cells if in cardiac failure).
+  - `3-4 hour` WHO — *Severe Malaria*
+    > less severe (EVF 12–15%; Hb 4–5) with shock, impaired consciousness, respiratory acidosis, heart failure, or very high parasitaemia (> 20%). Give 10 ml/kg packed cells or 20 ml/kg whole blood over 3–4
+
 
 ## Thresholds — same quantity, different cutoff
 
 ### blood pressure mmHg
 
-- **PB:** < 120, < 70, < 90, > 80, ≥ 35, ≥ 40
+- **PB:** < 120, < 70, < 90, > 180, > 80, ≥ 35, ≥ 40
 - **WHO:** < 50, < 60, < 70, < 90, > 20, > 35, ≤ 10, ≤ 20
 
 ### glucose mg/dL
@@ -283,6 +299,6 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### temperature °C
 
-- **PB:** < 35.5, > 39, ≥ 37.5, ≥ 38, ≥ 40
+- **PB:** < 35.5, < 37.5, > 39, ≥ 37.5, ≥ 38, ≥ 40
 - **WHO:** < 32, < 35, < 35.5, < 37.5, < 39, > 28, > 32, > 36.5, > 38, > 39, ≥ 25, ≥ 37.5, ≥ 38, ≥ 39
 
