@@ -93,3 +93,52 @@ is convulsions and cardiac arrest.
 - **Chlorphenamine 0.1 vs 0.25 mg/kg** in transfusion reactions is in the print both
   ways, 0.1 for a mild reaction and 0.25 for a moderate one, with the annex at 0.25. Low
   stakes: it is an adjunct that does not treat the reaction. Recorded, not raised.
+
+## Bands >3.2x (106 rows) and 1.5–1.9x (18 rows) — all read
+
+**No further findings.** Everything in these two bands is either a legitimate difference
+or an extraction artifact.
+
+**The artifact mechanism, confirmed repeatedly:** the extractor attaches a number to the
+nearest drug named, so a value sitting under a neighbouring drug's heading is captured
+under the wrong name. Every high-ratio row checked resolved this way. Worked examples:
+aminophylline "50 mg/kg" is magnesium sulfate's asthma dose; amphotericin "100 and
+150 mg/kg/day" are flucytosine's; artemether "12 mg/kg" is artemether–lumefantrine's
+combined figure; prednisolone "300 mg" is aminophylline's, from the asthma page; the
+adrenaline rows, which carry the largest ratios in the file, are driven by 1:1000 and
+1:10 000 concentrations and by millilitre volumes being read as doses; WHO glucose
+"1 200 / 2 100 mg/kg" is thousands separators. None is a book defect.
+
+**Checked specifically because the value would be dangerous if a reader took it as that
+drug's dose, and all clean:**
+
+- **Glucose 2 ml/kg** on every ProtocolBook page. The 10 ml/kg belongs to quinine's
+  infusion diluent. The August sweep that missed three pages has held.
+- **Co-trimoxazole.** The formulary gives 4 mg/kg TMP + 20 mg/kg SMX twice daily, which
+  is TMP 8 and SMX 40 per day, correct. The 24 mg/kg/day that appears on the severe
+  pneumonia page is the withdrawn figure quoted inside the text that explains why it was
+  withdrawn, not a live dose. The urinary tract infection page's 40 is sulfamethoxazole,
+  not trimethoprim.
+- **Acetylcysteine 150 mg/kg** is the ingestion threshold for charcoal and the first bag
+  of the three-bag regimen, both correct and both labelled.
+- **Isoniazid's 15 and 35 mg/kg** are rifampicin and pyrazinamide from the same table.
+- **Gentamicin** is age-labelled in both books: neonate under 7 days 3, 8–28 days 5, term
+  neonate to adult 5–7.5 mg/kg/day.
+
+**Low band, all legitimate by indication:** alteplase 0.6 mg/kg peri-arrest against
+0.9 mg/kg stroke; heparin 12, 18 and 20 units/kg/h by indication; cefotaxime and
+ampicillin meningitis doses against standard; amoxicillin tablet strengths; flucytosine
+150 mg/kg/day, already marked in the entry as no longer recommended.
+
+## Pass complete — 185 of 185 rows read
+
+Three defects found, all fixed: the phenobarbital loading dose and its 320 mg cap, the
+lidocaine maximum with no preparation named, and the diazepam note whose repeat dose
+named no drug. Plus two consistency repairs: the WHO phenobarbital rows unlabelled by
+age, and the primaquine page left behind by its own formulary.
+
+**The pattern worth keeping.** Every one of the three defects was a formulary entry that
+disagreed with the page prescribing the drug, and in two of the three the page had
+already been corrected and the formulary was left behind. That is now five occurrences of
+the same shape, counting meropenem and vancomycin. **When a page dose changes, the
+formulary entry has to change in the same commit.**
