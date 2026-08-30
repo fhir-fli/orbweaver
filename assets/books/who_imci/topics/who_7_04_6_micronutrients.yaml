@@ -48,9 +48,13 @@ topic:
       title: "Vitamin A"
       markdown: |
         Give vitamin A on **day 1**, and **repeat on days 2 and 15 ONLY if** the
-        child has **eye signs of vitamin A deficiency** (e.g. corneal ulceration)
-        or a **history of measles**. If there are no eye signs and no measles,
-        **do not give a high dose** — the amounts in therapeutic foods are enough.
+        child has **eye signs of vitamin A deficiency** (e.g. corneal ulceration),
+        **measles**, or **severe or persistent diarrhoea**.
+
+        🛑 **Otherwise do not give the high dose.** A child on F-75, F-100 or RUTF is
+        already getting vitamin A in the feed, and high-dose supplementation on top of
+        adequate feeding causes **more respiratory and diarrhoeal illness** — give the
+        low daily dose only.
         - **< 6 months:** **50 000 U**
         - **6–12 months:** **100 000 U**
         - **> 12 months:** **200 000 U**

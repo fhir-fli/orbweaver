@@ -275,3 +275,13 @@ ProtocolBook too. All corrected in the app.
 
 | **106** | Essential hypertension, goals by group: **≥ 60 years (no DM/CKD) BP < 150/90**, everyone else < 140/90 | **Drop the age split.** **< 140/90 for most adults including diabetes without CKD, and for CKD**; **< 130/80 only for diabetes with high cardiovascular risk that tolerates it.** The JNC-8-style ≥ 60 / < 60 structure is out of step with every major guideline. OE was asked explicitly whether the lower target belongs in a Gulu district hospital and said no — **< 140/90 is the safer instruction here**, because the sub-130 trials depended on standardised office readings, home monitoring and close follow-up that do not exist in this setting |
 | **75** | Iron studies table gives only arrows and a bare **Fe : TIBC 18%** line — no ferritin number anywhere | Print the cut-offs: **< 30 µg/L with no inflammation, < 70 µg/L (WHO) when inflammation is present, < 100 µg/L to avoid missing cases.** Inflammation is CRP > 5 mg/L, and **where CRP is unavailable — the usual case — assume inflammation for everyone.** Transferrin saturation **< 20% (or < 16%)** qualifies the 18%. Where iron studies are unavailable entirely, a **therapeutic iron trial** is a defensible diagnosis |
+
+## Vitamin A, third dose (p.157 formulary, and the SAM management page)
+
+**Print says days 1, 2 and 14. Correct is days 1, 2 and 15**, and day 15 is a fixed day,
+not "at least 2 weeks later" — OE, 2026-08-29. The print also restricts the high dose to
+eye signs or measles; **severe or persistent diarrhoea also qualifies**, and a child with
+no deficiency signs on F-75/F-100/RUTF should get the low daily dose only.
+
+For v1.8: change 14 → 15 in both places, add diarrhoea to the trigger, and state that the
+referring-centre case gets days 2 and 15.

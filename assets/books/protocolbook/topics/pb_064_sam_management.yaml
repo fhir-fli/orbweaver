@@ -40,11 +40,14 @@
 #   - §F4 VITAMIN A gained its doses (50,000 / 100,000 / 200,000 IU by
 #     age) and moved day 15 → day 14, plus the WHO restriction that
 #     high-dose vitamin A is only for eye signs or recent measles.
-#     ⚠️ NOTE FOR THE FORMULARY: formulary.yaml (p.157) says vitamin A
-#     "should not be given twice within 1 month" and "<6 months: not
-#     recommended". Those are the ROUTINE SUPPLEMENTATION rules and
-#     they contradict this DEFICIENCY TREATMENT schedule. The
-#     formulary entry still needs a qualifier — not done here.
+#     ⚠️ SUPERSEDED 2026-08-29: OE ruled the third dose is DAY 15, not
+#     14, for the SAM population, and that day 15 is a fixed day rather
+#     than "at least 2 weeks later". The 15 → 14 move above was wrong
+#     and is reverted; both books printed 14 and both are source errors.
+#     The trigger also widened to eye signs, measles, OR severe/
+#     persistent diarrhoea. The formulary qualifier this note asked for
+#     is DONE — the routine 1-month and "<6 months not recommended"
+#     rules are now explicitly scoped out of the treatment course.
 #   - §F5 ReSoMal gained the cholera / profuse-watery-diarrhoea
 #     exception (use standard ORS) and WHO's hard stop rule. ReSoMal
 #     is deliberately low-sodium, which is exactly wrong in
@@ -186,7 +189,7 @@ topic:
         - type: "prose"
           title: "7. Eye signs — Vitamin A deficiency / corneal ulceration / purulent ocular discharge"
           markdown: |
-            - **Vitamin A on days 1, 2 and 14** — <6 months **50,000 IU** · 6–12 months **100,000 IU** · >12 months **200,000 IU**. If the first dose was given at the referring centre, treat on days 1 and 14 only
+            - **Vitamin A on days 1, 2 and 15** — <6 months **50,000 IU** · 6–12 months **100,000 IU** · >12 months **200,000 IU**. Only for **eye signs, measles, or severe/persistent diarrhoea** — a child with no deficiency signs on F-75/F-100/RUTF gets the low daily dose only. If the first dose was given at the referring centre, give **days 2 and 15**
             - **Only give high-dose vitamin A if there are eye signs or a recent history of measles.** F-75, F-100 and RUTF already contain enough for everyone else
             - **Chloramphenicol or tetracycline eyedrops, 4 times a day for 7–10 days**
             - **1% atropine eyedrops, one drop 3 times a day for 3–5 days** — to relax the eye

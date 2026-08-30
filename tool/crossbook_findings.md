@@ -822,3 +822,41 @@ Grey had to find and send three separate files. Everything open lives in that on
 this findings file keeps the record. The stale-queue hook's generated-list table was
 repointed at the new name so it still catches the list going stale against either
 formulary.
+
+## OE round of 2026-08-29 — the vitamin A day, and 89 formulary entries
+
+**Vitamin A third dose is DAY 15, not day 14, and it is a fixed day** — not "at least
+2 weeks after the second". The looser wording belongs to the older generic xerophthalmia
+schedule, which is why the two books diverged. **Both books printed 14; both are source
+errors.** If the first dose was given at a referring centre, the receiving hospital gives
+**days 2 and 15**.
+
+🔴 **This reverses an earlier ruling of ours.** A previous round moved day 15 → day 14 on
+the SAM management page to match the print. That move was wrong. The stale note asking for
+a formulary qualifier is also resolved — it had been done since.
+
+**Scope of the high dose, widened:** eye signs, measles, **or severe/persistent
+diarrhoea**. A child with no deficiency signs who is on F-75, F-100 or RUTF gets the low
+daily dose only — those feeds already carry vitamin A, and high-dose supplementation on
+top of adequate feeding causes **more respiratory and diarrhoeal illness**. Applied in
+both books and in the ProtocolBook formulary, where the routine "1 month" and
+"< 6 months: not recommended" rules are now explicitly scoped out of the treatment course.
+
+**All 89 formulary entries came back dose-appropriate.** No dose errors. Four
+refinements applied:
+
+- **Phenylephrine (priapism)** — dose confirmed against AUA/SMSNA. Added: combine with
+  **corporal aspiration** (~93% detumescence, above either alone), and **monitor BP and
+  pulse** — reflex hypertension and bradycardia are expected, myocardial infarction is a
+  rare complication, hold above systolic 180 mmHg.
+- **Primaquine** — **0.5 mg/kg/day** named as the East African target for *P. vivax* /
+  *P. ovale* radical cure, rather than the 0.25–0.5 range. G6PD screening mandatory.
+- **Vitamin D (VLBW)** — 400 IU/day is the floor; now **400–1000 IU daily**.
+- **Naloxone** — titrate to **respiration**, not consciousness, and expect to repeat or
+  infuse: naloxone is shorter-acting than most opioids.
+
+**Alteplase, done without a paste.** OE offered to lay out the three regimens side by
+side. The book already prints the stroke dose (0.9 mg/kg, max 90 mg) in the ACS
+contraindication note and its STEMI lytics are tenecteplase and streptokinase, so the
+entry now carries stroke alongside PE and points STEMI at those two. **The accelerated
+alteplase STEMI schedule is not in the book and was not invented** — the entry says so.

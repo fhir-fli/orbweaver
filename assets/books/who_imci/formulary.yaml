@@ -1912,7 +1912,7 @@ formulary:
     class: antidote
     doses:
     - label: Opioid poisoning
-      regimen: 0.01 mg/kg (10 µg/kg) IV; if no response give 0.1 mg/kg — ten times the dose, not a repeat of the same one
+      regimen: 0.01 mg/kg (10 µg/kg) IV; if no response give 0.1 mg/kg — ten times the dose, not a repeat of the same one. Titrate to RESPIRATION, not to consciousness. Naloxone is shorter-acting than most opioids, so expect to repeat it or run an infusion
     - label: Neonate
       regimen: 0.1 mg/kg (0.4 mg/ml vial)
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §1.6.4 and the neonatal table §3.14. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
@@ -2112,7 +2112,7 @@ formulary:
     class: antimalarial
     doses:
     - label: Radical cure of P. vivax / P. ovale
-      regimen: 0.25–0.5 mg/kg/day for 14 days (total 3.5–7 mg/kg). Screen for G6PD deficiency first
+      regimen: 0.5 mg/kg/day for 14 days is the target in East Africa (range 0.25–0.5; total 3.5–7 mg/kg). G6PD screening is mandatory before starting
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §6.2.2. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: procaine-benzylpenicillin
     name: Procaine benzylpenicillin
@@ -2514,7 +2514,7 @@ formulary:
     class: vitamin
     doses:
     - label: Very low birth weight supplementation
-      regimen: 400 IU daily
+      regimen: 400–1000 IU daily (400 is the floor; preterm guidelines allow up to 800–1000)
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §3.11.2. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: vitamin-k
     name: Vitamin K (phytomenadione)

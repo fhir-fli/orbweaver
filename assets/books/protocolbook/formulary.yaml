@@ -176,7 +176,18 @@ formulary:
       - A 50 mg regimen has similar efficacy with less bleeding (evidence for full equivalence is limited)
 
 
-      ⚠️ **The PE regimen is NOT the STEMI regimen** — do not carry a STEMI infusion schedule across.
+      **Ischaemic stroke — adults:** **0.9 mg/kg, max 90 mg** (10% as a bolus, the rest
+      over 60 min), within 4.5 hours.
+
+
+      **STEMI:** this book''s STEMI lytics are **tenecteplase** and **streptokinase** —
+      see their entries for the weight bands. The accelerated alteplase STEMI schedule is
+      not printed in this book, so do not reconstruct it from the PE or stroke doses.
+
+
+      ⚠️ **The three regimens are different drugs'' worth of risk.** Giving the coronary
+      dose to a stroke markedly increases haemorrhagic transformation. Never carry one
+      indication''s schedule across to another.
 
       '
     notes: '⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it.
@@ -1781,6 +1792,15 @@ formulary:
 
       Dilute 1 mg in 19 mL NS to give 50 mcg/mL.
 
+
+      **Combine with corporal aspiration** — aspiration plus phenylephrine achieves
+      detumescence in about 93%, well above either alone.
+
+
+      **Monitor blood pressure and pulse** through the injections: reflex hypertension
+      and bradycardia are expected, and myocardial infarction is a rare complication.
+      Hold if systolic BP is above 180 mmHg.
+
       '
     notes: ⚠️ **Not on the printed Essential Medications list** — added because the protocols prescribe it. Dose taken from the sickle cell page, p.59; no new clinical claim is introduced.
   - id: phenytoin
@@ -2271,7 +2291,12 @@ formulary:
       - > 12 months: 200,000 units PO stat
 
 
-      **Treatment of deficiency (eye signs, or recent measles):** days 1, 2 and 14
+      **Treatment of deficiency — days 1, 2 and 15.** Only for eye signs of deficiency,
+      measles, or severe/persistent diarrhoea. A child with no deficiency signs who is
+      on F-75, F-100 or RUTF gets the low daily dose only — those feeds already contain
+      vitamin A, and high-dose supplementation in an adequately fed child causes more
+      respiratory and diarrhoeal illness. If the first dose was given at a referring
+      centre, give days 2 and 15.
 
       - < 6 months: 50,000 units
 
@@ -2283,7 +2308,7 @@ formulary:
     notes: 'For ROUTINE supplementation: once on admission; should not be given twice within 1 month.
 
 
-      The 1-month rule does **not** apply to the 3-dose deficiency-treatment course above — that schedule is deliberate. In severe acute malnutrition, give high-dose vitamin A only if there are eye signs or a recent history of measles: F-75, F-100 and RUTF already contain enough for everyone else.
+      The 1-month rule does **not** apply to the 3-dose deficiency-treatment course above — that schedule is deliberate, and neither does the "< 6 months: not recommended" line, which is a routine-supplementation rule. In severe acute malnutrition, give high-dose vitamin A only for **eye signs, measles, or severe/persistent diarrhoea**: F-75, F-100 and RUTF already contain enough for everyone else.
 
       '
   - id: vitamin-b12
