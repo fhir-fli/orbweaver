@@ -31,7 +31,7 @@ topic:
   id: "pb-im-hiv-oi"
   title: "Opportunistic Infections in HIV"
   list_subtitle: "pp.135–138 · prophylaxis & treatment by OI"
-  last_reviewed: "pocketbook v1.7"
+  last_reviewed: "pocketbook v1.7 · CD4 14% confirmed and universal under-5 co-trimoxazole added, OpenEvidence 2026-08-31"
   tags: ["HIV", "AIDS", "opportunistic infection", "OI", "CD4", "prophylaxis", "TMP-SMX", "cotrimoxazole", "dapsone", "candida", "candidiasis", "thrush", "toxoplasmosis", "cryptococcal meningitis", "cryptococcus", "PCP", "pneumocystis", "MAC", "mycobacterium avium", "cryptosporidiosis", "histoplasmosis", "HSV", "herpes", "VZV", "varicella", "zoster", "shingles", "CMV", "cytomegalovirus", "fluconazole", "amphotericin", "flucytosine", "ganciclovir", "acyclovir", "internal medicine", "infectious disease"]
   category: "medical"
   page_number: 135
@@ -45,7 +45,15 @@ topic:
         - type: "prose"
           title: "Prophylaxis — when to give to prevent infection"
           markdown: |
-            - **PCP / toxoplasma encephalitis** — CD4 < 200 or %CD4 < 14% (and for toxoplasma when CD4 < 100 and toxoplasma IgG positive)
+            - 🛑 **Every child with HIV under 5 years gets co-trimoxazole,
+              regardless of CD4.** WHO's public-health approach does not wait
+              for a count, and CD4 is often unavailable here. Start it, and use
+              the thresholds below only for a child of 5 or over.
+            - **PCP / toxoplasma encephalitis** — **CD4 < 200, or CD4 < 14%**.
+              Use the **percentage below age 6** and the **absolute count of 200
+              at 6 and over**. 14% is the same figure for a child, an adolescent
+              and an adult. For **toxoplasma**, CD4 < 100 **and** toxoplasma IgG
+              positive.
               - Preferred: TMP-SMX
                 - Child < 5 kg: 120 mg PO QD
                 - Child 5–14.9 kg: 240 mg PO QD

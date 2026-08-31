@@ -12,7 +12,7 @@ topic:
   id: "who-imci-8-3-2-cotrimoxazole"
   title: "Co-trimoxazole Prophylaxis"
   list_subtitle: "8.3.2 · who · how long · doses · discontinuation"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 · 14% vs 15% frameworks clarified 2026-08-31"
   tags: ["HIV", "co-trimoxazole", "prophylaxis", "PCP", "pediatric"]
   aliases:
     - "Cotrimoxazole prophylaxis"
@@ -52,6 +52,11 @@ topic:
           **reinstitute** if CD4 falls below the threshold.
         - **History of PCP:** continue until CD4 exceeds the age threshold on ART.
         - **Do NOT discontinue** if the child is **not on ART**.
+        - ℹ️ **15% here is a stopping threshold, not a starting one.** Prophylaxis
+          is *started* at **CD4 < 14%** or a count **< 200**; this 15% is the
+          paediatric immune-category cutoff used to *discontinue*, and the same
+          15% governs live-vaccine decisions. The two figures are different
+          frameworks, not a contradiction.
 
     - type: "prose"
       title: "Prolonged prophylaxis in high-burden settings"

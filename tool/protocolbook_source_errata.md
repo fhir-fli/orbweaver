@@ -311,3 +311,27 @@ it carries about **40 mg** elemental iron, not 65.
 
 For v1.8: prescribe by elemental iron, not salt weight, and drop the "200 mg = 65 mg"
 line. The formulary's own "325 mg contains 65 mg" was right and needs the word *dried*.
+
+---
+
+## p.22 · Malaria — hypoglycaemia threshold, 2.2 mmol/L → 3.0
+
+**The print says:**
+
+> Severe = Fever PLUS any of: … Hypoglycemia (< 2.2 mmol/L)
+
+**ANSWERED 2026-08-31.** OE: in a child with malaria the treatment threshold is
+**3.0 mmol/L**, the same figure as in severe acute malnutrition, with no separate lower
+figure printed for a symptomatic child on the malaria pathway. 2.2 appears in the
+Lancet paediatric malaria review, which itself notes a higher treatment threshold nearer
+4.0 may be more appropriate; 3.0 is the best-supported single printed figure and is safest
+where a repeat glucose measurement may be delayed.
+
+**Applied** to the app. **For v1.8 the printed 2.2 must become 3.0.** The other
+reference's severe-malaria pages were raised from 2.5 to 3.0 in the same round, so both
+now agree.
+
+Found by the cross-book threshold pass, which is the only instrument that has ever
+compared these two figures: the number sits in a severity checklist on one page and in a
+laboratory-findings list on the other, and nothing in either book pointed from one to
+the other.

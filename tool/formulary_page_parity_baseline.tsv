@@ -1,6 +1,12 @@
 # Formulary doses that appear on no page prescribing that drug.
 # Frozen so the test fails only on NEW ones. See
 # tool/formulary_page_parity.py for what a new row means.
+# amoxicillin–clavulanate 1750 mg/day: the page states the ceiling under
+#   the AMOXICILLIN COMPONENT, which is the correct way to write it, so the
+#   page row binds to amoxicillin and not to the combination. Not an orphan.
+# amoxicillin–clavulanate 25–45 and 50 mg/kg/day: citation figures inside the
+#   entry's evidence note (the FDA label range and the trial dose), not
+#   prescriptions. No page carries them because no page should.
 # book	drug	unit	value
 PB	adenosine	mg/kg	0.1
 PB	adenosine	mg/kg	0.2
@@ -235,7 +241,10 @@ WHO	amodiaquine	mg/kg	10
 WHO	amoxicillin	mg	250
 WHO	amoxicillin	mg/kg	25
 WHO	amoxicillin	mg/kg/day	80
+WHO	amoxicillin–clavulanate	mg/day	1750
+WHO	amoxicillin–clavulanate	mg/kg/day	25–45
 WHO	amoxicillin–clavulanate	mg/kg/day	25–50
+WHO	amoxicillin–clavulanate	mg/kg/day	50
 WHO	amphotericin	mg	2–8
 WHO	amphotericin	mg	3–12
 WHO	amphotericin	mg	4.5–18

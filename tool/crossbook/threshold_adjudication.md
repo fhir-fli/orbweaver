@@ -2,10 +2,27 @@
 
 Generated candidates: `tool/threshold_extract.py` → `threshold_side_by_side.md`.
 **20 decision groups carried differing cutoffs with rows from both books.** All 20
-were read against their pages. This file is the RECORD. The two questions that came
-out of it are in `tool/OPENEVIDENCE.md` and appear nowhere here as questions.
+were read against their pages. This file is the RECORD. **Both questions that came out
+of it were answered on 2026-08-31 and applied** — the rulings are below and none of this
+is open. The one question still open is in `tool/OPENEVIDENCE.md`.
 
-## 🔴 Genuine disagreements — sent to OpenEvidence
+## ✅ ANSWERED BY OE 2026-08-31 AND APPLIED — do not paste any of this again
+
+| ruling | applied |
+|---|---|
+| **Hypoglycaemia in a child with malaria: treat at 3.0 mmol/L.** Same figure in severe acute malnutrition. No separate lower figure for a symptomatic child on the malaria pathway. 3.0 is the best-supported single printed figure and matches this book's own malnutrition value; the Lancet paediatric malaria review states 2.2 but notes a higher treatment threshold nearer 4.0 may be more appropriate. | One book's malaria page 2.2 → **3.0**; the other's severe-malaria page 2.5 → **3.0** at both sites, with the reason printed beside it. Both books now agree, and the figure matches the repeat-dose threshold that page already carried. |
+| **CD4 14% is correct for starting PCP prophylaxis**, and is the same figure for a child, an adolescent and an adult. **Use the percentage below age 6 and the absolute count of 200 at 6 and over.** The 15% in the other book is the older paediatric immune-category cutoff used to *discontinue* and for live-vaccine decisions — a different framework, not a contradiction. | 14% kept and the age rule spelled out. The other book gained a line saying its 15% is a stopping threshold, so neither reads as wrong. |
+| 🛑 **WHO's public-health approach gives co-trimoxazole to EVERY child with HIV under 5 regardless of CD4**, so in this setting the percentage is largely academic for young children. | Added as the first line of the prophylaxis section, above the thresholds. The other book already carried it correctly (*"Infected, age < 5 years: continue — do not stop on CD4 criteria"*). |
+| **Amoxicillin–clavulanate for febrile UTI: 40–50 mg/kg/day of the amoxicillin component, every 8 hours, for 7 days.** Ceiling 1750 mg/day of the component at 40 kg. Use a 7:1 or 14:1 preparation so clavulanate stays at about 10 mg/kg/day. A 5-day course is noninferior to 10 days in a well-appearing child of 3 months to 5 years. | Formulary entry and the UTI page both corrected from 25–50 mg/kg/day in 2–3 divided doses, and from a 7–10 day duration. |
+
+⏭️ **Still open, and it is the only thing open:** the same book prints 2.5 on its
+general (non-malaria) hypoglycaemia pages while the malaria and malnutrition pathways
+now say 3.0. That question is in `tool/OPENEVIDENCE.md` and nowhere else.
+
+🆕 **OE offered** to lay out the WHO universal co-trimoxazole criteria for children with
+HIV in a high-burden setting in full. Not requested yet — Grey's call.
+
+## Genuine disagreements found by this pass — both now answered above
 
 **1. Hypoglycaemia cutoff on the malaria pages — 2.2 against 2.5 mmol/L.**
 One reference's malaria page defines hypoglycaemia as `< 2.2 mmol/L`. The other

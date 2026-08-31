@@ -93,7 +93,7 @@ def norm_unit(u):
 
 def main():
     vocab = ex.build_vocab()
-    patterns = [(re.compile(r'(?<![\w-])' + re.escape(f) + r'(?![\w-])', re.I),
+    patterns = [(re.compile(ex.drug_pattern(f), re.I),
                  canon)
                 for f, canon in sorted(
                     ((f, c) for c, fs in vocab.items() for f in fs),

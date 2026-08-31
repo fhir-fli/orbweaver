@@ -241,6 +241,23 @@ TITLE_KEYS = ('title', 'label', 'decision', 'name', 'drug',
               'list_subtitle')
 
 
+
+# A drug name written with one dash does not match the same name written with
+# another. The formulary spells it `Amoxicillin–clavulanate` with an EN DASH
+# and the page that prescribes it writes `amoxicillin-clavulanate` with a
+# HYPHEN, so the page's dose was invisible to the extractor and the parity
+# guard reported the formulary entry as an orphan. Six drugs here carry an
+# en-dash form and only four also carry the hyphen form. This is the same
+# failure as requiring one letter case over prose: one of several equivalent
+# writings, and the miss is silent.
+_DASHES = '-\u2010\u2011\u2012\u2013\u2014\u2015\u2212'
+
+
+def drug_pattern(form):
+    """Regex for a drug surface form, matching any dash for any dash."""
+    parts = [re.escape(p) for p in re.split('[' + _DASHES + ']', form)]
+    return r'(?<![\w-])' + ('[' + _DASHES + r']\s?').join(parts) + r'(?![\w-])'
+
 def build_vocab():
     """Canonical drug name -> set of surface forms, from BOTH formularies."""
     vocab = {}
@@ -471,7 +488,7 @@ def main():
     surfaces = sorted(
         ((form, canon) for canon, forms in vocab.items() for form in forms),
         key=lambda fc: -len(fc[0]))
-    patterns = [(re.compile(r'(?<![\w-])' + re.escape(f) + r'(?![\w-])',
+    patterns = [(re.compile(drug_pattern(f),
                             re.IGNORECASE), canon)
                 for f, canon in surfaces]
     print('vocabulary: %d canonical drugs, %d surface forms'

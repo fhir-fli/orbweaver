@@ -11,7 +11,7 @@ topic:
   id: "who-imci-6-8-uti"
   title: "Urinary Tract Infection"
   list_subtitle: "6.8 · check the urine · amox-clav / cephalexin"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 · amox-clav dose, schedule, ceiling and duration 2026-08-31"
   tags: ["urinary tract infection", "UTI", "pyelonephritis", "amoxicillin-clavulanate", "cephalexin", "co-trimoxazole", "ultrasound", "pediatric"]
   aliases:
     - "UTI"
@@ -63,16 +63,22 @@ topic:
         signs of **pyelonephritis** (loin pain or tenderness), or the child is an
         **infant**. **Base the choice on local E. coli susceptibility** where
         known:
-        - **First choice: oral amoxicillin-clavulanate** (25–50 mg/kg/day of the
-          amoxicillin component in 2–3 divided doses) **or a first-generation
+        - **First choice: oral amoxicillin-clavulanate** — **40–50 mg/kg/day of
+          the amoxicillin component, every 8 hours**. Prescribe by the
+          amoxicillin component, never by the combined figure, and use a
+          **high-ratio preparation (7:1 or 14:1)** so the clavulanate stays at
+          about 10 mg/kg/day or below. Once the child reaches 40 kg, the
+          **amoxicillin component must not exceed the adult 1750 mg/day**. **Or a first-generation
           cephalosporin** — cefalexin 50 mg/kg/day in 3–4 divided doses.
         - **Co-trimoxazole** (TMP 8 mg/kg/day + SMX 40 mg/kg/day in 2 doses) is
           now unreliable as empirical therapy — E. coli resistance exceeds
           20–30% in many settings — so use it **only where local susceptibility
           exceeds 80%**. **Adjust to culture results** when available.
-        - **Duration:** **7–10 days** for **febrile UTI / pyelonephritis**;
-          **3–5 days** is sufficient for **afebrile lower UTI (cystitis)** in
-          children ≥ 2 years.
+        - **Duration: 7 days** for **febrile UTI / pyelonephritis**. A **5-day
+          course is noninferior to 10 days** in a well-appearing child of
+          3 months to 5 years, so 5–7 days is defensible; go longer only for a
+          complicated case or a slow responder. **3–5 days** is sufficient for
+          **afebrile lower UTI (cystitis)** in children ≥ 2 years.
         - **Oral therapy equals IV.** For **uncomplicated pyelonephritis** in a
           child who can tolerate oral intake and is **not toxic-appearing**, oral
           antibiotics alone are as effective as an IV-to-oral course. **Reserve

@@ -432,9 +432,11 @@ formulary:
     - urinary tract infection
     - chronic cough
     doses:
-    - label: Urinary tract infection — first choice
-      regimen: 'Oral: 25–50 mg/kg/day OF THE AMOXICILLIN COMPONENT, in 2–3 divided doses. Dose and prescribe by the amoxicillin component, never by the combined figure'
-    notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken verbatim from §6.8, which names it FIRST CHOICE for a urinary tract infection with fever, systemic upset, pyelonephritis, or in an infant; it is also named for protracted bacterial bronchitis in §4.7. Base the choice on local E. coli susceptibility where known. NOT yet checked by OpenEvidence.'
+    - label: Febrile urinary tract infection / pyelonephritis — first choice
+      regimen: 'Oral: 40–50 mg/kg/day OF THE AMOXICILLIN COMPONENT, every 8 hours (3 doses), for 7 days. Dose and prescribe by the amoxicillin component, never by the combined figure'
+    - label: Ceiling once the child reaches 40 kg
+      regimen: 'Do not exceed the adult dose: 1750 mg/day of the amoxicillin component'
+    notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". §6.8 names it FIRST CHOICE for a urinary tract infection with fever, systemic upset, pyelonephritis, or in an infant; it is also named for protracted bacterial bronchitis in §4.7. **Use a high-ratio preparation (7:1 or 14:1 amoxicillin:clavulanate)** so the clavulanate stays at roughly 10 mg/kg/day or below — that is what limits the diarrhoea, and it is why the dose is written by the amoxicillin component. **Every 8 hours, not twice daily**, for the febrile/pyelonephritis indication. A 5-day course is proven noninferior to 10 days in a well-appearing child of 3 months to 5 years, so 5–7 days is defensible; 7 is the printed default, and longer only for a complicated case or a slow responder. Base the choice on local E. coli susceptibility where known. Dose, schedule, ceiling and duration confirmed by OpenEvidence 2026-08-31 (Montini, Pediatrics 2024, 50 mg/kg/day of the amoxicillin component in 3 divided doses; FDA label 25–45 mg/kg/day, upper end for the more severe indication).'
   - id: amphotericin-b
     name: Amphotericin B
     class: antibiotic
