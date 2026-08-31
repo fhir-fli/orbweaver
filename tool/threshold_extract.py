@@ -192,6 +192,27 @@ emergency care hospital section page'''.split())
 _WORD = re.compile(r'[a-zæ]+')
 
 
+
+def window(text, start, end, before=190, after=190):
+    """The text AROUND the match, not the first 400 characters of the unit.
+
+    A fragment is truncated for the output column, and a match past that cut
+    left the row showing text that does not contain the number the row
+    reports. Six duration rows read as a malaria coma paragraph filed under
+    iron; the drug and the duration were both real and both past character
+    400. A row a reader cannot adjudicate from its own evidence is worse than
+    no row.
+    """
+    a = max(0, start - before)
+    b = min(len(text), end + after)
+    out = text[a:b]
+    if a:
+        out = '…' + out
+    if b < len(text):
+        out = out + '…'
+    return out
+
+
 def norm(v):
     v = re.sub(r'[‐-―−]', '-', v).replace(' ', '')
     out = []
@@ -329,10 +350,11 @@ def main():
             ex.collect(doc, [], units)
             here_t = here_u = 0
             for frag, ctx in units:
-                clean = re.sub(r'[*_`]', '', frag)[:400].replace('\t', ' ')
                 decision = (title + ' › ' + ' › '.join(ctx[-2:])
                             ).replace('\t', ' ')[:200]
                 for m in THRESHOLD.finditer(frag):
+                    clean = re.sub(r'[*_`]', '', window(
+                        frag, m.start(), m.end())).replace('\t', ' ')
                     tail = frag[m.end():m.end() + 18]
                     unit = None
                     for u, rx in UNIT_RX.items():

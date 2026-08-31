@@ -39,6 +39,7 @@ from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import crossbook_dose_extract as ex  # noqa: E402
+from threshold_extract import decision_words  # noqa: E402
 
 OUTDIR = ex.OUTDIR
 DUR_OUT = os.path.join(OUTDIR, 'durations.tsv')
@@ -49,6 +50,27 @@ _N = r'\d+(?:\.\d+)?(?:\s*[-–—]\s*\d+(?:\.\d+)?)?'
 DURATION = re.compile(
     r'(?:for|over|×|x|during)\s+(' + _N + r')\s*'
     r'(days?|weeks?|months?|hours?|hrs?|h\b|years?)', re.I)
+
+
+
+def window(text, start, end, before=190, after=190):
+    """The text AROUND the match, not the first 400 characters of the unit.
+
+    A fragment is truncated for the output column, and a match past that cut
+    left the row showing text that does not contain the number the row
+    reports. Six duration rows read as a malaria coma paragraph filed under
+    iron; the drug and the duration were both real and both past character
+    400. A row a reader cannot adjudicate from its own evidence is worse than
+    no row.
+    """
+    a = max(0, start - before)
+    b = min(len(text), end + after)
+    out = text[a:b]
+    if a:
+        out = '…' + out
+    if b < len(text):
+        out = out + '…'
+    return out
 
 
 def norm(v):
@@ -80,7 +102,7 @@ def main():
 
     os.makedirs(OUTDIR, exist_ok=True)
     df = io.open(DUR_OUT, 'w', encoding='utf-8')
-    df.write('book\tfile\ttopic\tdrug\tvalue\tunit\tcontext\tfragment\n')
+    df.write('book\tfile\ttopic\tdrug\tvalue\tunit\tvia\tindication\tfragment\n')
     df.flush()
     n_dur = 0
     for book, book_dir in ex.BOOKS.items():
@@ -98,7 +120,6 @@ def main():
             ex.collect(doc, [], units)
             here_d = 0
             for frag, ctx in units:
-                clean = re.sub(r'[*_`]', '', frag)[:400].replace('\t', ' ')
                 ctx_s = ' › '.join(ctx[-3:]).replace('\t', ' ')[:200]
 
                 # --- durations, attached to the nearest drug before them ---
@@ -116,19 +137,42 @@ def main():
                         mentions.append((m.start(), canon))
                 mentions.sort()
                 for m in DURATION.finditer(frag):
+                    clean = re.sub(r'[*_`]', '', window(
+                        frag, m.start(), m.end())).replace('\t', ' ')
                     before = [c for p, c in mentions if p < m.start()]
                     drug = before[-1] if before else None
+                    via = 'fragment' if drug else None
                     if drug is None:
-                        hay = ' || '.join(ctx)
-                        for pat, canon in patterns:
-                            if pat.search(hay):
-                                drug = canon
+                        # The old fallback searched the WHOLE joined heading
+                        # stack and took the first pattern that matched, in
+                        # order of surface-form LENGTH. Which drug won was
+                        # therefore arbitrary, and six rows came out filed
+                        # under a drug named nowhere on the page at all: a
+                        # malaria coma paragraph filed under iron and under
+                        # artemether, an artesunate dosing line filed under
+                        # glucose, a rate-control paragraph under warfarin.
+                        #
+                        # A heading owns a duration only when it is the
+                        # NEAREST heading and it names exactly ONE drug.
+                        # Anything else is a guess, and a guessed drug is
+                        # worse than a dropped row.
+                        for head in reversed(ctx):
+                            named = []
+                            for pat, canon in patterns:
+                                if pat.search(head) and canon not in named:
+                                    named.append(canon)
+                            if len(named) == 1:
+                                drug, via = named[0], 'heading'
+                                break
+                            if named:
                                 break
                     if drug is None:
                         continue
-                    df.write('%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' % (
+                    df.write('%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' % (
                         book, base, title.replace('\t', ' '), drug,
-                        norm(m.group(1)), norm_unit(m.group(2)), ctx_s, clean))
+                        norm(m.group(1)), norm_unit(m.group(2)), via,
+                        (title + ' › ' + ' › '.join(ctx[-2:])
+                         ).replace('\t', ' ')[:200], clean))
                     df.flush()
                     n_dur += 1
                     here_d += 1
@@ -144,7 +188,8 @@ def main():
         next(f)
         for line in f:
             c = line.rstrip('\n').split('\t')
-            dur[c[3]][c[5]].setdefault(c[0], []).append((c[4], c[2], c[7]))
+            dur[c[3]][c[5]].setdefault(c[0], []).append(
+                (c[4], c[2], c[8], c[7]))
 
     rf = io.open(REPORT, 'w', encoding='utf-8')
     rf.write('# Cross-book DURATIONS\n\n')
@@ -153,30 +198,51 @@ def main():
              '**Candidates, not findings** — read the context.\n\n')
     rf.write('## Durations — same drug, different course length\n\n')
     rf.flush()
-    n_cand = 0
+    n_cand = n_same = 0
     for drug in sorted(dur):
         for unit in sorted(dur[drug]):
             books = dur[drug][unit]
-            if len(books) < 2:
-                continue
-            sets = {b: sorted({v for v, _, _ in rows}, key=_k)
-                    for b, rows in books.items()}
-            if sets.get('PB') == sets.get('WHO'):
-                continue
-            n_cand += 1
-            rf.write('### %s — %s\n\n' % (drug, unit))
-            for b in ('PB', 'WHO'):
-                if b in sets:
-                    rf.write('- **%s:** %s\n' % (b, ', '.join(sets[b])))
-            rf.write('\n')
-            for b in ('PB', 'WHO'):
-                for v, topic, frag in books.get(b, [])[:3]:
-                    rf.write('  - `%s %s` %s — *%s*\n    > %s\n'
-                             % (v, unit, b, topic, frag[:200]))
-            rf.write('\n')
-            rf.flush()
+            rows = [(b,) + r for b, rs in books.items() for r in rs]
+            # A drug legitimately runs 5 days for one infection and 10 for
+            # another, so a set of values per drug says nothing. Group by the
+            # INDICATION first, the same rule the threshold half needed: a row
+            # joins a group only if it shares a distinctive word with every
+            # row already in it.
+            buckets = []
+            for r in rows:
+                ws = decision_words(r[4])
+                for b in buckets:
+                    if all(ws & w for w in b['each']):
+                        b['each'].append(ws)
+                        b['rows'].append(r)
+                        break
+                else:
+                    buckets.append({'each': [ws], 'rows': [r]})
+            wrote = False
+            for b in buckets:
+                vals = sorted({r[1] for r in b['rows']}, key=_k)
+                bks = {r[0] for r in b['rows']}
+                if len(vals) < 2 or len(bks) < 2:
+                    n_same += 1
+                    continue
+                if not wrote:
+                    rf.write('### %s — %s\n\n' % (drug, unit))
+                    wrote = True
+                n_cand += 1
+                label = ' / '.join(sorted({r[4].split(' › ')[0]
+                                           for r in b['rows']}))[:110]
+                rf.write('#### ⚠ %s — %s\n\n' % (label, ', '.join(vals)))
+                for r in sorted(b['rows']):
+                    rf.write('- `%s %s` **%s** — %s\n  > %s\n'
+                             % (r[1], unit, r[0], r[4][:100], r[3][:190]))
+                rf.write('\n')
+                rf.flush()
+            if wrote and len(buckets) > 1:
+                rf.write('> NOT COMPARABLE: the other %d indication group(s) '
+                         'for this drug are not compared with these.\n\n'
+                         % (len(buckets) - 1))
     rf.close()
-    print('DONE: %d duration candidates -> %s' % (n_cand, REPORT), flush=True)
+    print('DONE: %d duration candidates across both books, %d groups agreed or single-book -> %s' % (n_cand, n_same, REPORT), flush=True)
 
 
 def _k(v):

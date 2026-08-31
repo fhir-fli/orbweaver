@@ -49,7 +49,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### ⚠ Vaccination — 2 different cutoffs, WHO only
 
 - `< 15` **WHO** — Vaccination › 8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4 › Measles / MMR
-  > Because of increased risk of early and severe measles, give an early measles dose at 6 months and a second after 9 months (measles- endemic settings). Children vaccinated before effective AR
+  > …es- endemic settings). Children vaccinated before effective ART should receive two appropriately spaced MMR doses after ART is established, unless severely immunosuppressed (CD4 < 15% or < 
 - `< 15` **WHO** — Vaccination › 8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4 › Yellow fever — CD4 threshold
   > Yellow fever vaccine is a live vaccine — contraindicated in children with symptomatic HIV or CD4 < 15%. It may be considered in an asymptomatic child with adequate CD4 if exposure risk is hi
 - `> 15` **WHO** — Vaccination › 8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4 › New / expanded vaccines
@@ -62,7 +62,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Cryptococcal Meningitis / Fungal Infections — agreed at ≥ 100
 
 - `≥ 100` **WHO** — Cryptococcal Meningitis › 6.3.4 · HIV · amphotericin + flucytosine › Treatment — three phases
-  > Maintenance / secondary prophylaxis: fluconazole 6 mg/kg/day in a child, 200 mg/day in an adult — not the 800 mg consolidation cap — for a minimum of 1 year. Stop only after ≥ 1 year of anti
+  > …conazole 6 mg/kg/day in a child, 200 mg/day in an adult — not the 800 mg consolidation cap — for a minimum of 1 year. Stop only after ≥ 1 year of antifungal therapy with CD4 ≥ 100/mm³ susta
 - `≥ 100` **WHO** — Fungal Infections › 8.4.4 · candidiasis · cryptococcal meningitis › Consolidation & maintenance
   > Maintenance (secondary prophylaxis): fluconazole 6 mg/kg/day (max 200 mg) for a minimum of 1 year. May stop in a child ≥ 6 yr with CD4 ≥ 100/mm³ and undetectable viral load on ≥ 3 months ART
 
@@ -74,7 +74,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Vaccination — agreed at < 200
 
 - `< 200` **WHO** — Vaccination › 8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4 › Measles / MMR
-  > Because of increased risk of early and severe measles, give an early measles dose at 6 months and a second after 9 months (measles- endemic settings). Children vaccinated before effective AR
+  > …ic settings). Children vaccinated before effective ART should receive two appropriately spaced MMR doses after ART is established, unless severely immunosuppressed (CD4 < 15% or < 200/mm³).
 
 ### Co-trimoxazole Prophylaxis — agreed at ≥ 200
 
@@ -88,7 +88,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Bacterial Meningitis / Coma / Convulsions — Differential Dx / Tuberculous Meningitis — agreed at < 1.5
 
 - `< 1.5` **WHO** — Coma / Convulsions — Differential Dx › 1.5.3 · history, exam, labs, Tables 3 & 4 › Meningitis & lumbar punctur
-  > The meningitis differential includes encephalitis, cerebral abscess and TB meningitis — consult a paediatric text. Do NOT do an LP if there are signs of raised ICP. A positive LP may show cl
+  > …text. Do NOT do an LP if there are signs of raised ICP. A positive LP may show cloudy CSF, raised white cells (usually > 100 polymorphs/mL in bacterial meningitis), low CSF glucose (< 1.5 m
 - `< 1.5` **WHO** — Bacterial Meningitis › 6.3.1 · LP · ceftriaxone · dexamethasone › Laboratory investigations
   > CSF: low glucose (< 1.5 mmol/L, or CSF:serum ratio ≤ 0.4); high protein (> 0.4 g/L); Gram stain and culture; a raised polymorph white cell count.
 - `< 1.5` **WHO** — Tuberculous Meningitis › 6.3.3 · HRZE 12 months · dexamethasone › When to suspect it
@@ -99,7 +99,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Coma / Convulsions — Differential Dx — agreed at > 0.4
 
 - `> 0.4` **WHO** — Coma / Convulsions — Differential Dx › 1.5.3 · history, exam, labs, Tables 3 & 4 › Meningitis & lumbar punctur
-  > The meningitis differential includes encephalitis, cerebral abscess and TB meningitis — consult a paediatric text. Do NOT do an LP if there are signs of raised ICP. A positive LP may show cl
+  > …signs of raised ICP. A positive LP may show cloudy CSF, raised white cells (usually > 100 polymorphs/mL in bacterial meningitis), low CSF glucose (< 1.5 mmol/L), high CSF protein (> 0.4 g/L
 
 ## ECG amplitude — mm (level)
 
@@ -164,11 +164,11 @@ pooled, which is what the previous version did and why it reported nothing.
 ### ⚠ Discharge from Nutritional Treatment / Severe Acute Malnutrition — 2 different cutoffs, WHO only
 
 - `< 115` **WHO** — Severe Acute Malnutrition › 7.1 · oedema / severe wasting / MUAC < 115 › Definition
-  > Severe acute malnutrition (SAM) in children 6–59 months is the presence of oedema of both feet OR severe wasting (weight-for-height/length < −3 SD, or mid-upper-arm circumference < 115 mm). 
+  > …ute malnutrition (SAM) in children 6–59 months is the presence of oedema of both feet OR severe wasting (weight-for-height/length < −3 SD, or mid-upper-arm circumference < 115 mm). No disti
 - `< 115` **WHO** — Severe Acute Malnutrition › 7.1 · oedema / severe wasting / MUAC < 115 › Diagnosis — main features
   > mid-upper-arm circumference (MUAC) < 115 mm, OR
 - `≥ 125` **WHO** — Severe Acute Malnutrition › 7.1 · oedema / severe wasting / MUAC < 115 › Complicated vs uncomplicated SAM
-  > Uncomplicated SAM — a child with a good appetite and no medical complication can be managed as an outpatient with ready-to-use therapeutic food (RUTF). See [§7.3 organization of care](topic:
+  > …pic:who-imci-7-3-organization-of-care) for the appetite test and admission criteria, and [§7.6.2 discharge criteria](topic:who-imci-7-6-2-discharge-criteria) (recovery = WHZ ≥ −2 AND MUAC ≥
 - `≥ 125` **WHO** — Discharge from Nutritional Treatment › 7.6.2 · WHZ ≥ −2 AND MUAC ≥ 125 · no oedema 2 wk › Discharge only when 
   > mid-upper-arm circumference ≥ 125 mm, AND
 
@@ -216,7 +216,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Malaria — agreed at > 3
 
 - `> 3` **PB** — Malaria › Malaria › p.22 · diagnosis + severe Rx
-  > \ Severe malaria may also include SBP < 70 with cold clammy skin, abnormal bleeding / DIC, renal failure (anuria by history or Cr > 3 mg/dL), macroscopic haemoglobinuria, or hyperbilirubinae
+  > …ere malaria may also include SBP < 70 with cold clammy skin, abnormal bleeding / DIC, renal failure (anuria by history or Cr > 3 mg/dL), macroscopic haemoglobinuria, or hyperbilirubinaemia 
 
 ### Liver Failure — agreed at > 2.5
 
@@ -226,7 +226,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Neonatal Jaundice — agreed at > 1
 
 - `> 1` **WHO** — Neonatal Jaundice › 3.12.1 · normal vs abnormal · phototherapy thresholds › Investigations
-  > infants if palms and soles are yellow at any age Tests depend on the probable diagnosis: Hb/PCV; FBC (serious bacterial infection — high/low neutrophils, > 20% band forms — and haemolysis); 
+  > …ous bilirubinometer (TcB) is a useful non-invasive screen (confirm with serum bilirubin before phototherapy). Always measure the conjugated (direct) fraction. A conjugated bilirubin > 1 mg/
 
 > NOT COMPARABLE: the 3 groups above gate different decisions and are not compared with each other.
 
@@ -294,7 +294,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 3` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › When & what to give
   > Treat as hypoglycaemia if glucose is < 2.5 mmol/L (45 mg/dL), or < 3 mmol/L (54 mg/dL) in a severely malnourished child, or if it cannot be measured.
 - `< 3` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — hypoglycaemia
-  > Give 2 ml/kg of 10% glucose (dextrose) IV ([Chart 10](topic:who-imci-chart10-glucose)). If no IV, give via intraosseous or sublingual sugar; recheck after 20–30 min and repeat if still low (
+  > …kg of 10% glucose (dextrose) IV ([Chart 10](topic:who-imci-chart10-glucose)). If no IV, give via intraosseous or sublingual sugar; recheck after 20–30 min and repeat if still low (< 3.0 mmo
 - `> 2.2` **WHO** — IV Glucose (Hypoglycaemia) › Neonatal thresholds › Asymptomatic, at risk, first 48 h:** maintain **> 2.8 mmol/
   > AAP is staged more loosely over the same window: > 2.2 mmol/L (40 mg/dL) in the first 4 h before a feed, > 2.5 mmol/L (45 mg/dL) from 4–24 h.
 - `> 2.5` **WHO** — IV Glucose (Hypoglycaemia) › Neonatal thresholds › Asymptomatic, at risk, first 48 h:** maintain **> 2.8 mmol/
@@ -340,7 +340,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Essential Medications — agreed at > 180
 
 - `> 180` **PB** — Essential Medications › Essential Medications › Phenylephrine
-  > Priapism, if aspiration alone fails — 100–500 mcg intracavernosal, repeated every 5 min to a maximum 1 mg total. Dilute 1 mg in 19 mL NS to give 50 mcg/mL. Combine with corporal aspiration —
+  > …lone. Monitor blood pressure and pulse through the injections: reflex hypertension and bradycardia are expected, and myocardial infarction is a rare complication. Hold if systolic BP is abo
 
 ### ⚠ IV Fluids for Shock (no SAM) — 3 different cutoffs, WHO only
 
@@ -394,7 +394,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 27` **WHO** — Management of Anaemia › 10.5 · non-severe iron · severe → fever-guided transfusion › Non-severe anaemia
   > WHO defines anaemia in children 6–59 months as Hb < 11 g/dl (moderate < 10, severe < 7 g/dl). The Pocket Book uses Hb < 9.3 g/dl (about EVF < 27%) as the threshold to start home iron treatme
 - `> 10` **WHO** — Management of Anaemia › 10.5 · non-severe iron · severe → fever-guided transfusion › Severe anaemia — transfus
-  > less severely anaemic children (EVF 13–18%; Hb 4–6 g/dl) who also have any of: clinically detectable dehydration, shock, impaired consciousness, heart failure, deep laboured breathing, or ve
+  > …; Hb 4–6 g/dl) who also have any of: clinically detectable dehydration, shock, impaired consciousness, heart failure, deep laboured breathing, or very high malaria parasitaemia (> 10% of re
 - `> 20` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — severe anaemia
   > less severe (EVF 12–15%; Hb 4–5) with shock, impaired consciousness, respiratory acidosis, heart failure, or very high parasitaemia (> 20%). Give 10 ml/kg packed cells or 20 ml/kg whole bloo
 - `≤ 12` **WHO** — Management of Anaemia › 10.5 · non-severe iron · severe → fever-guided transfusion › Severe anaemia — transfus
@@ -506,7 +506,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Rheumatic Fever — agreed at < 8
 
 - `< 8` **WHO** — Rheumatic Fever › 6.11 · 2015 Jones · naproxen · prophylaxis › Management
-  > If heart failure is present: bed rest with a restricted-sodium diet; oxygen; furosemide 1 mg/kg every 6 h; prednisolone 1 mg/kg/day orally for 1 week for severe heart failure; blood transfus
+  > … bed rest with a restricted-sodium diet; oxygen; furosemide 1 mg/kg every 6 h; prednisolone 1 mg/kg/day orally for 1 week for severe heart failure; blood transfusion if Hb < 8 g/dl; antibio
 
 > NOT COMPARABLE: the 6 groups above gate different decisions and are not compared with each other.
 
@@ -522,7 +522,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Paediatric Triage of Sick Children — agreed at < 60
 
 - `< 60` **PB** — Paediatric Triage of Sick Children › Paediatric Triage of Sick Children › p.12 · severity table
-  > Airway & Breathing - Obstructed breathing - Central cyanosis - Severe respiratory distress - Weak / absent breathing Circulation — cold hands with any of: - Cap refill > 3 sec - Weak + fast 
+  > … - Obstructed breathing - Central cyanosis - Severe respiratory distress - Weak / absent breathing Circulation — cold hands with any of: - Cap refill > 3 sec - Weak + fast pulse - Slow (< 6
 
 ### ⚠ Organophosphate / Carbamate Poisoning / Paediatric Advanced Life Support — 3 different cutoffs, PB only
 
@@ -545,7 +545,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 60` **WHO** — Neonatal Resuscitation › HR < 60/min › Chest compressions until HR ≥ 100/min
   > See the figure on p.48 | Give higher oxygen concentration | If HR remains < 60/min, consider other ventilatory support, IV adrenaline, or referral where possible | If there is no HR for > 10
 - `< 60` **WHO** — Neonatal Resuscitation › HR < 60/min › Chest compressions until HR ≥ 100/min
-  > See the figure on p.48 | Give higher oxygen concentration | If HR remains < 60/min, consider other ventilatory support, IV adrenaline, or referral where possible | If there is no HR for > 10
+  > …48 | Give higher oxygen concentration | If HR remains < 60/min, consider other ventilatory support, IV adrenaline, or referral where possible | If there is no HR for > 10 min, or it remains
 - `> 100` **WHO** — Neonatal Resuscitation › C · Check the heart rate (HR) with a stethoscope › HR < 60/min
   > if HR > 100/min
 - `> 100` **WHO** — Neonatal Resuscitation › 3.2 · Chart 12 · dry, stimulate, ventilate, HR-guided › Is the heart rate 60–100/min,
@@ -564,7 +564,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 160` **WHO** — Heart Failure › 4.8 · oxygen · furosemide · avoid fluid overload › Diagnosis
   > tachycardia — HR > 160/min (< 12 months), > 120/min (12 months–5 years)
 - `> 180` **WHO** — Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Aminophylline — last resort
-  > Not recommended in mild-to-moderate asthma. Reserve for a child who does not improve after several doses of a rapid-acting bronchodilator plus oral prednisolone. Admit ideally to high-care/I
+  > …(preferably 1 h), then 5 mg/kg every 6 h. Omit the loading dose if any aminophylline/caffeine was given in the previous 24 h. Stop immediately if the child vomits, has a pulse > 180/min, a 
 
 > NOT COMPARABLE: the 5 groups above gate different decisions and are not compared with each other.
 
@@ -582,11 +582,11 @@ pooled, which is what the previous version did and why it reported nothing.
 ### ⚠ Weight-for-height (2–5 y) / Weight-for-length (birth–2 y) — 2 different cutoffs, WHO only
 
 - `< 85` **WHO** — Weight-for-height (2–5 y) › Weight-for-height (2–5 y) › Annex 5 · A5.2 — weight-for-height z-scores (65–120 cm
-  > For a child 2–5 years (measured standing), find the row for the child's height, then read the weight across the −3 SD … 3 SD columns. −3 SD = severe acute malnutrition (SAM); −2 to −3 SD = m
+  > …he child's height, then read the weight across the −3 SD … 3 SD columns. −3 SD = severe acute malnutrition (SAM); −2 to −3 SD = moderate wasting. For younger / shorter children (< 85 cm, me
 - `< 85` **WHO** — Weight-for-length (birth–2 y) › Weight-for-length (birth–2 y) › Annex 5 · A5.2 — weight-for-length z-scores (4
-  > Weight-for-height / -length diagnoses acute malnutrition. Find the row for the child's length, then see where the weight falls across the −3 SD … 3 SD columns. −3 SD = severe acute malnutrit
+  > …'s length, then see where the weight falls across the −3 SD … 3 SD columns. −3 SD = severe acute malnutrition (SAM); −2 to −3 SD = moderate. Use length (recumbent) for a child < 85 cm and h
 - `≥ 85` **WHO** — Weight-for-length (birth–2 y) › Weight-for-length (birth–2 y) › Annex 5 · A5.2 — weight-for-length z-scores (4
-  > Weight-for-height / -length diagnoses acute malnutrition. Find the row for the child's length, then see where the weight falls across the −3 SD … 3 SD columns. −3 SD = severe acute malnutrit
+  > … across the −3 SD … 3 SD columns. −3 SD = severe acute malnutrition (SAM); −2 to −3 SD = moderate. Use length (recumbent) for a child < 85 cm and height (standing) for ≥ 85 cm — see the wei
 - `≥ 85` **WHO** — Weight-for-length (birth–2 y) › Annex 5 · A5.2 — weight-for-length z-scores (45–110 cm) › Reading the tables
   > Recumbent length averages 0.5 cm more than standing height; if only length is available for a child ≥ 85 cm, subtract 0.5 cm.
 - `≥ 85` **WHO** — Weight-for-length (birth–2 y) › Annex 5 · A5.2 — weight-for-length z-scores (45–110 cm) › Note
@@ -599,11 +599,11 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 2` **PB** — Adult Sepsis › Definitions › Septic shock
   > Clinical definition: persistent hypotension requiring vasopressors to maintain MAP ≥ 65, and serum lactate > 2 mmol/L (18 mg/dL), after adequate volume resuscitation
 - `> 5` **WHO** — Assessment of Emergency & Priority Signs › 1.3 · assess airway/breathing + circulation › Assess circulation — 
-  > If available: blood lactate ≥ 2 mmol/L raises concern for tissue hypoperfusion. (The "strong" recommendation to measure is from the adult SSC; the paediatric SSC only suggests measuring it a
+  > …o measure is from the adult SSC; the paediatric SSC only suggests measuring it and notes it may be unavailable in low-resource settings.) The Phoenix sepsis score uses > 5 mmol/L for cardio
 - `≥ 2` **WHO** — Assessment of Emergency & Priority Signs › 1.3 · assess airway/breathing + circulation › Assess circulation — 
   > If available: blood lactate ≥ 2 mmol/L raises concern for tissue hypoperfusion. (The "strong" recommendation to measure is from the adult SSC; the paediatric SSC only suggests measuring it a
 - `≥ 5` **WHO** — Shock — Differential Dx › 1.5.2 · history, examination, Table 2 › Standardised sepsis identification
-  > The Phoenix Sepsis Score (JAMA 2024) outperforms the 2005 IPSCC criteria: sepsis = Phoenix Score ≥ 2 with suspected infection; septic shock = sepsis + ≥ 1 cardiovascular point (severe hypote
+  > … IPSCC criteria: sepsis = Phoenix Score ≥ 2 with suspected infection; septic shock = sepsis + ≥ 1 cardiovascular point (severe hypotension for age, vasoactive medication, or lactate ≥ 5 mmo
 
 ### Severe Malaria — agreed at > 5
 
@@ -629,7 +629,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### ⚠ Pediatric Heart Failure — 2 different cutoffs, PB only
 
 - `< 90` **PB** — Pediatric Heart Failure › pp.56–57 · acute + chronic Rx › Physical exam findings
-  > Neonatal screening (>24 hrs old): check preductal (R. hand) & post-ductal (either foot) SpO2. Positive screen if: (a) SpO2 differs by >3% btw upper and lower extremities on 3 measurements se
+  > …check preductal (R. hand) & post-ductal (either foot) SpO2. Positive screen if: (a) SpO2 differs by >3% btw upper and lower extremities on 3 measurements separated by an hour each, (b) SpO2
 - `> 3` **PB** — Pediatric Heart Failure › pp.56–57 · acute + chronic Rx › Physical exam findings
   > Neonatal screening (>24 hrs old): check preductal (R. hand) & post-ductal (either foot) SpO2. Positive screen if: (a) SpO2 differs by >3% btw upper and lower extremities on 3 measurements se
 
@@ -726,7 +726,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 90` **PB** — Liver Failure › pp.108–110 · workup · SBP · Child-Pugh › Management
   > Start oxygen if SpO₂ < 90%; place a large-bore IV
 - `< 95` **PB** — Pediatric Heart Failure › pp.56–57 · acute + chronic Rx › Physical exam findings
-  > Neonatal screening (>24 hrs old): check preductal (R. hand) & post-ductal (either foot) SpO2. Positive screen if: (a) SpO2 differs by >3% btw upper and lower extremities on 3 measurements se
+  > …-ductal (either foot) SpO2. Positive screen if: (a) SpO2 differs by >3% btw upper and lower extremities on 3 measurements separated by an hour each, (b) SpO2 <90% any extremity, or (c) SpO2
 - `> 90` **WHO** — Heart Failure › 4.8 · oxygen · furosemide · avoid fluid overload › Treatment
   > Oxygen if RR ≥ 70/min, respiratory distress, central cyanosis or low SpO₂ — aim to keep SpO₂ > 90%.
 
@@ -782,7 +782,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 90` **PB** — Adult Hyperglycaemia, DKA & HHS › p.105 · RBS > 14 · insulin & fluid protocols › Management (RBS > 14 mmol/L)
   > Start oxygen if SpO₂ < 90%
 - `> 90` **WHO** — Supportive Care for Sick Neonates › 3.10 · thermal · fluids · oxygen · fever › Oxygen therapy (3.10.3)
-  > head nodding (synchronous with respiration — severe distress) Use a pulse oximeter to guide therapy: give oxygen if SpO₂ ≤ 90%, regulate flow to keep 90–95%, and discontinue once the infant 
+  > …onous with respiration — severe distress) Use a pulse oximeter to guide therapy: give oxygen if SpO₂ ≤ 90%, regulate flow to keep 90–95%, and discontinue once the infant holds > 90% in room
 - `> 94` **WHO** — Postoperative Care › 9.1.3 · monitoring · isotonic fluids · multimodal pain › Immediately after surgery
   > monitor oxygen saturation (target ≥ 95%; > 94% acceptable in resource-limited settings) after a general anaesthetic; give oxygen if needed.
 - `≤ 90` **WHO** — Supportive Care for Sick Neonates › 3.10 · thermal · fluids · oxygen · fever › Oxygen therapy (3.10.3)
@@ -798,9 +798,9 @@ pooled, which is what the previous version did and why it reported nothing.
 ### ⚠ Approach & Clinical Examination / Opportunistic Infections in HIV — 2 different cutoffs, both books
 
 - `< 90` **PB** — Opportunistic Infections in HIV › Pneumocystis jirovecii pneumonia (PCP) › Treatment** (21 days) — first optio
-  > Add prednisone / prednisolone if PaO₂ < 70 mmHg on room air, or the A-a gradient is ≥ 35 mmHg. Where only oximetry is available, use SpO₂ ≤ 92% (a PaO₂ of 70 corresponds to roughly 92–94%) —
+  > … PaO₂ < 70 mmHg on room air, or the A-a gradient is ≥ 35 mmHg. Where only oximetry is available, use SpO₂ ≤ 92% (a PaO₂ of 70 corresponds to roughly 92–94%) — the book previously used < 90%
 - `< 90` **WHO** — Approach & Clinical Examination › 2.3 · observe first, least-invasive last › 3. Interfering signs last
-  > Leave for last: temperature, skin turgor, capillary refill, blood pressure, throat and ears. Measure SpO₂ by pulse oximeter in every acutely ill child — not only those with respiratory signs
+  > …y ill child — not only those with respiratory signs; hypoxaemia is a major, often silent predictor of death and is poorly detected by clinical signs alone. Give oxygen and refer if SpO₂ < 9
 - `≤ 92` **PB** — Opportunistic Infections in HIV › Pneumocystis jirovecii pneumonia (PCP) › Treatment** (21 days) — first optio
   > Add prednisone / prednisolone if PaO₂ < 70 mmHg on room air, or the A-a gradient is ≥ 35 mmHg. Where only oximetry is available, use SpO₂ ≤ 92% (a PaO₂ of 70 corresponds to roughly 92–94%) —
 
@@ -822,9 +822,9 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 90` **WHO** — Oxygen Therapy › 10.7 · SpO2 < 90% · nasal prongs · HFNC where available › Pulse oximetry & duration
   > Normal oxygen saturation at sea level is 95–100%; it falls in severe pneumonia. Titrate the oxygen flow to a stable SpO₂ > 90% without wasting oxygen. (In cyanotic heart or lung disease, sat
 - `> 90` **WHO** — Oxygen Therapy › 10.7 · SpO2 < 90% · nasal prongs · HFNC where available › Pulse oximetry & duration
-  > Normal oxygen saturation at sea level is 95–100%; it falls in severe pneumonia. Titrate the oxygen flow to a stable SpO₂ > 90% without wasting oxygen. (In cyanotic heart or lung disease, sat
+  > …ng disease, saturation may not rise with oxygen.) Emerging evidence supports slightly lower targets (accepting SpO₂ ≥ 88–92%) in some settings, which conserves scarce oxygen — but > 90% rem
 - `> 90` **WHO** — Oxygen Therapy › 10.7 · SpO2 < 90% · nasal prongs · HFNC where available › Pulse oximetry & duration
-  > Normal oxygen saturation at sea level is 95–100%; it falls in severe pneumonia. Titrate the oxygen flow to a stable SpO₂ > 90% without wasting oxygen. (In cyanotic heart or lung disease, sat
+  > …(accepting SpO₂ ≥ 88–92%) in some settings, which conserves scarce oxygen — but > 90% remains the standard for this handbook. Continue oxygen until the child can maintain SpO₂ > 90% in room
 - `> 94` **WHO** — How to Give Oxygen › IMCI Chart 5 · nasal prongs / nasal catheter › Targets — emerging evidence
   > Do not over-oxygenate. Recent trials favour a conservative SpO₂ target of 88–92% over higher (>94%) targets:
 - `> 94` **WHO** — How to Give Oxygen › Targets — emerging evidence › Do not over-oxygenate.** Recent trials favour a **conservat
@@ -834,7 +834,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `≤ 90` **WHO** — Pertussis › 4.7.1 · whooping cough · azithromycin › Oxygen & airway
   > Give oxygen for apnoea, cyanosis, severe coughing spells, or SpO₂ ≤ 90%. Use nasal prongs (not a nasopharyngeal catheter — it provokes coughing); flow 1–2 L/min (0.5 L/min for young infants)
 - `≥ 88-92` **WHO** — Oxygen Therapy › 10.7 · SpO2 < 90% · nasal prongs · HFNC where available › Pulse oximetry & duration
-  > Normal oxygen saturation at sea level is 95–100%; it falls in severe pneumonia. Titrate the oxygen flow to a stable SpO₂ > 90% without wasting oxygen. (In cyanotic heart or lung disease, sat
+  > …able SpO₂ > 90% without wasting oxygen. (In cyanotic heart or lung disease, saturation may not rise with oxygen.) Emerging evidence supports slightly lower targets (accepting SpO₂ ≥ 88–92%)
 - `≥ 90` **WHO** — How to Give Oxygen › IMCI Chart 5 · nasal prongs / nasal catheter › Flow rate
   > Aim for an oxygen saturation ≥ 90%, but avoid hyperoxia
 
@@ -843,7 +843,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 90` **WHO** — Timing of Discharge › Timing of Discharge › 12.1 · improved markedly · SpO2 > 90% · individual basis
   > 12.1 · improved markedly · SpO2 > 90% · individual basis
 - `> 90` **WHO** — Timing of Discharge › 12.1 · improved markedly · SpO2 > 90% · individual basis › When is a child ready?
-  > In acute infections, a child can be considered ready for discharge when the clinical condition has improved markedly (afebrile, alert, eating and sleeping normally) and oral treatment has be
+  > …he clinical condition has improved markedly (afebrile, alert, eating and sleeping normally) and oral treatment has been started. A child who needed oxygen should maintain SpO₂ > 90% in room
 
 ### ⚠ Danger Signs (Newborn & Young Infant) / Triage — 2 different cutoffs, WHO only
 
@@ -872,7 +872,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### Wheeze — agreed at ≤ 90
 
 - `≤ 90` **WHO** — Wheeze › 4.5 · bronchodilator response · differential (Table 8) › Response to a rapid-acting bronchodilator
-  > subcutaneous adrenaline if neither is available. Signs of improvement: less respiratory distress (easier breathing), less lower chest wall indrawing, improved air entry. Children who still h
+  > …le. Signs of improvement: less respiratory distress (easier breathing), less lower chest wall indrawing, improved air entry. Children who still have signs of hypoxia (cyanosis, SpO₂ ≤ 90%, 
 
 ### Lymphoid Interstitial Pneumonitis / Viral Croup — agreed at ≤ 90
 
@@ -918,9 +918,9 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 20` **WHO** — Severe Dengue › 6.10.1 · plasma leakage · shock · fluid care › Fluid management — patients WITHOUT shock (PP >
   > Fluid management — patients WITHOUT shock (PP > 20 mmHg)
 - `≤ 10` **WHO** — Severe Dengue › 6.10.1 · plasma leakage · shock · fluid care › What it is
-  > Severe dengue is defined by one or more of: plasma leakage that may lead to shock and fluid accumulation; severe bleeding; severe organ impairment. Plasma leakage is the most important compl
+  > …e are signs of poor perfusion (cold extremities, delayed capillary refill, rapid weak pulse). Systolic hypotension is a late sign. Early shock (day 2–3), a very narrow pulse pressure (≤ 10 
 - `≤ 20` **WHO** — Severe Dengue › 6.10.1 · plasma leakage · shock · fluid care › What it is
-  > Severe dengue is defined by one or more of: plasma leakage that may lead to shock and fluid accumulation; severe bleeding; severe organ impairment. Plasma leakage is the most important compl
+  > …y lead to shock and fluid accumulation; severe bleeding; severe organ impairment. Plasma leakage is the most important complication. Shock is present if the pulse pressure ≤ 20 mmHg or ther
 - `≤ 20` **WHO** — Severe Dengue › 6.10.1 · plasma leakage · shock · fluid care › Fluid management — patients IN shock (PP ≤ 20 m
   > Fluid management — patients IN shock (PP ≤ 20 mmHg)
 
@@ -1022,15 +1022,15 @@ pooled, which is what the previous version did and why it reported nothing.
 - `≤ 0.5` **PB** — Sodium (Na⁺) Abnormalities › pp.140–141 · hypo/hypernatremia · formulas › Correction limits
   > ≤ 10 mEq/L in 24 h and ≤ 18 mEq/L in 48 h | ≤ 8 mEq/L in 24 h if osmotic-demyelination risk is high | ≤ 0.5 mEq/L/hr as a running rate
 - `≤ 10` **PB** — Sodium (Na⁺) Abnormalities › pp.140–141 · hypo/hypernatremia · formulas › 🛑 The formulas under-predict — measu
-  > These predictive formulas systematically underestimate the rise and must never replace serial sodium measurement. For severely symptomatic hyponatraemia, practice has moved to bolused 3% sal
+  > …100 mL over 10 min, up to 3 times, or 150 mL over 20 min — targeting a 4–6 mEq/L rise in 1–2 h, with sodium checked after each bolus and then every 4–6 h. Correction limits: ≤ 10 mEq/L in 2
 - `≤ 10` **PB** — Sodium (Na⁺) Abnormalities › pp.140–141 · hypo/hypernatremia · formulas › Correction limits
   > ≤ 10 mEq/L in 24 h and ≤ 18 mEq/L in 48 h | ≤ 8 mEq/L in 24 h if osmotic-demyelination risk is high | ≤ 0.5 mEq/L/hr as a running rate
 - `≤ 18` **PB** — Sodium (Na⁺) Abnormalities › pp.140–141 · hypo/hypernatremia · formulas › 🛑 The formulas under-predict — measu
-  > These predictive formulas systematically underestimate the rise and must never replace serial sodium measurement. For severely symptomatic hyponatraemia, practice has moved to bolused 3% sal
+  > …to 3 times, or 150 mL over 20 min — targeting a 4–6 mEq/L rise in 1–2 h, with sodium checked after each bolus and then every 4–6 h. Correction limits: ≤ 10 mEq/L in 24 h and ≤ 18 mEq/L in 4
 - `≤ 18` **PB** — Sodium (Na⁺) Abnormalities › pp.140–141 · hypo/hypernatremia · formulas › Correction limits
   > ≤ 10 mEq/L in 24 h and ≤ 18 mEq/L in 48 h | ≤ 8 mEq/L in 24 h if osmotic-demyelination risk is high | ≤ 0.5 mEq/L/hr as a running rate
 - `≤ 8` **PB** — Sodium (Na⁺) Abnormalities › pp.140–141 · hypo/hypernatremia · formulas › 🛑 The formulas under-predict — measu
-  > These predictive formulas systematically underestimate the rise and must never replace serial sodium measurement. For severely symptomatic hyponatraemia, practice has moved to bolused 3% sal
+  > …r 20 min — targeting a 4–6 mEq/L rise in 1–2 h, with sodium checked after each bolus and then every 4–6 h. Correction limits: ≤ 10 mEq/L in 24 h and ≤ 18 mEq/L in 48 h — and ≤ 8 mEq/L in 24
 - `≤ 8` **PB** — Sodium (Na⁺) Abnormalities › pp.140–141 · hypo/hypernatremia · formulas › Correction limits
   > ≤ 10 mEq/L in 24 h and ≤ 18 mEq/L in 48 h | ≤ 8 mEq/L in 24 h if osmotic-demyelination risk is high | ≤ 0.5 mEq/L/hr as a running rate
 
@@ -1079,7 +1079,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 39` **PB** — Adult Tuberculosis › pp.128–129 · diagnosis · RHZE regimen › TB in HIV — the pathway the algorithm points to
   > Inpatients: signs or symptoms of TB, or advanced HIV disease (CD4 < 200 or WHO stage 3–4), or seriously ill (RR > 30, temp > 39 °C, HR > 120, or unable to walk unaided)
 - `> 39` **WHO** — Management of Fever › 10.3 · treat discomfort · paracetamol / ibuprofen › Fever is a sign, not a diagnosis
-  > Temperatures in these guidelines are rectal unless stated; oral and axillary temperatures are lower by about 0.5 °C and 0.8 °C. Fever is not an indication for antibiotics and may help the im
+  > … oral and axillary temperatures are lower by about 0.5 °C and 0.8 °C. Fever is not an indication for antibiotics and may help the immune defence against infection. High fever (> 39 °C) can 
 - `≥ 37.5` **WHO** — Uncomplicated Malaria › 6.2.2 · oral ACT · vivax › Diagnosis
   > fever (≥ 37.5 °C) or a history of fever
 - `≥ 38` **WHO** — Urinary Tract Infection › 6.8 · check the urine · amox-clav / cephalexin › Diagnosis
@@ -1163,7 +1163,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `≥ 39` **WHO** — Dysentery › 5.4 · bloody diarrhoea · Shigella · ciprofloxacin › Complications
   > High fever (≥ 39 °C) — paracetamol; consider severe bacterial infection.
 - `≥ 39` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — cerebral malaria & convulsions
-  > Convulsions (common before/after coma; may be subtle — nystagmus, limb twitching, an irregular breathing pattern): give diazepam; check/treat hypoglycaemia; use phenobarbital only for active
+  > … not controlled by diazepam. Do NOT give phenobarbital prophylactically — it increases respiratory depression and mortality (Kenyan cerebral-malaria trial). Paracetamol if temperature ≥ 39 
 - `≥ 39` **WHO** — Severe Complicated Measles › 6.4.1 · admit · vitamin A · complications › Supportive care
   > Fever: paracetamol if temperature ≥ 39 °C causing distress.
 
@@ -1179,7 +1179,7 @@ pooled, which is what the previous version did and why it reported nothing.
 ### ⚠ Acute Otitis Media — 2 different cutoffs, WHO only
 
 - `< 39` **WHO** — Acute Otitis Media › 6.7.2 · high-dose amoxicillin · wicking › Watchful waiting (selected children)
-  > Where reliable follow-up within 48–72 h is possible, watchful waiting (observation with rescue antibiotics if symptoms worsen or fail to improve) is a safe option for children ≥ 2 years with
+  > …ul waiting (observation with rescue antibiotics if symptoms worsen or fail to improve) is a safe option for children ≥ 2 years with mild, unilateral AOM (mild otalgia, temperature < 39 °C, 
 - `≥ 39` **WHO** — Acute Otitis Media › 6.7.2 · high-dose amoxicillin · wicking › Treatment
   > Ear pain or high fever ≥ 39 °C causing distress → paracetamol.
 
