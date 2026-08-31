@@ -19,8 +19,27 @@ is open. The one question still open is in `tool/OPENEVIDENCE.md`.
 general (non-malaria) hypoglycaemia pages while the malaria and malnutrition pathways
 now say 3.0. That question is in `tool/OPENEVIDENCE.md` and nowhere else.
 
-🆕 **OE offered** to lay out the WHO universal co-trimoxazole criteria for children with
-HIV in a high-burden setting in full. Not requested yet — Grey's call.
+✅ **The full WHO universal co-trimoxazole criteria came back 2026-08-31 and are
+applied.** Universal for **all** HIV-exposed and HIV-infected infants, children and
+adolescents in a high-burden setting, irrespective of stage, CD4 and ART; the stage- and
+CD4-based initiation criteria were dropped by WHO in 2014. HIV-exposed infants start at
+4–6 weeks and continue until HIV is excluded and breastfeeding has ended. **Where malaria
+or severe bacterial infection is common it is continued LONG-TERM and not stopped on
+immune reconstitution**, which is the governing rule for this setting; a CD4-based stop
+(age ≥ 6, CD4 ≥ 200 or ≥ 14%, after ≥ 6 months on ART and > 3 months sustained) applies
+only where they are not common. Never stop in an infant, or in a child not on ART.
+Anchored on **ARROW** (Bwakura-Dangarembizi, *NEJM* 2014;370:41–53): children on ART over
+2 years with good recovery, median CD4 720 over age 5, and continuing still cut
+hospitalisation and malaria in both endemic and non-endemic areas with no waning — its
+authors said the WHO discontinuation criteria need reconsidering.
+
+Applied to both books. The discontinuation section of one was restructured so the
+high-burden rule governs and the CD4 stop rules sit under an explicit "only where malaria
+and severe bacterial infection are NOT common".
+
+🆕 **OE offered** the weight-based paediatric co-trimoxazole dosing table, with
+split-tablet and suspension options. Not requested — one book already prints weight
+bands (120 / 240 / 480 mg / 1 DS tab). Grey's call whether to reconcile them against it.
 
 ## Genuine disagreements found by this pass — both now answered above
 

@@ -12,7 +12,7 @@ topic:
   id: "who-imci-8-3-2-cotrimoxazole"
   title: "Co-trimoxazole Prophylaxis"
   list_subtitle: "8.3.2 · who · how long · doses · discontinuation"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 · 14% vs 15% frameworks clarified 2026-08-31"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 · universal initiation and long-term continuation in a high-burden setting, OpenEvidence 2026-08-31"
   tags: ["HIV", "co-trimoxazole", "prophylaxis", "PCP", "pediatric"]
   aliases:
     - "Cotrimoxazole prophylaxis"
@@ -37,35 +37,54 @@ topic:
         - **All infants born to HIV-positive mothers** — start **4–6 weeks after
           birth** (or first encounter), and continue until HIV is definitively
           excluded **and** the mother is no longer breastfeeding.
-        - **All HIV-infected children** — continue even when on ART.
+        - **All HIV-infected infants, children and adolescents** —
+          **irrespective of clinical stage, CD4 and ART.** Starting is not
+          gated on a CD4 count or percentage at any age. Continue on ART.
+        - The older stage- and CD4-based initiation criteria were dropped by
+          WHO in 2014, in line with the adult recommendation.
 
     - type: "prose"
-      title: "When to discontinue — age-stratified"
+      title: "When to discontinue"
       callout: true
       markdown: |
-        - **HIV-exposed (uninfected):** stop once HIV is confidently excluded and
-          breastfeeding has ended (per the criteria below).
-        - **Infected, age < 5 years:** **continue** — do **not** stop on CD4
-          criteria.
-        - **Infected, age ≥ 6 years:** may discontinue after **≥ 6 months on ART**
-          with **CD4 ≥ 15% or ≥ 200/mm³ for > 3 consecutive months**;
-          **reinstitute** if CD4 falls below the threshold.
-        - **History of PCP:** continue until CD4 exceeds the age threshold on ART.
+        🛑 **Where malaria or severe bacterial infection is common, the answer is
+        that you do not.** WHO recommends co-trimoxazole be **continued
+        long-term** in such settings and **not stopped on immune
+        reconstitution**. A malaria-endemic district hospital meets that
+        criterion, so **indefinite continuation is the default here** and the
+        CD4 rules below do not apply.
+
+        - **HIV-exposed (uninfected):** stop once HIV is confidently excluded
+          **and** breastfeeding has ended. This is the one routine stop.
+        - **Never discontinue in an infant**, whatever the CD4.
         - **Do NOT discontinue** if the child is **not on ART**.
-        - ℹ️ **15% here is a stopping threshold, not a starting one.** Prophylaxis
-          is *started* at **CD4 < 14%** or a count **< 200**; this 15% is the
-          paediatric immune-category cutoff used to *discontinue*, and the same
-          15% governs live-vaccine decisions. The two figures are different
-          frameworks, not a contradiction.
+        - **History of PCP:** continue.
+
+        **Only where malaria and severe bacterial infection are NOT common** may
+        a CD4-based stop be considered, after **≥ 6 months on ART** with
+        sustained recovery for **> 3 months**: age **≥ 6 years**, CD4
+        **≥ 200/mm³**, or **CD4 ≥ 14%** where a count is unavailable.
+        **Reinstitute** if CD4 falls below it.
+
+        ℹ️ **These are stopping figures, not starting ones.** Prophylaxis is
+        never gated on CD4 to start — see the section above. The **15%** that
+        appears elsewhere is the older paediatric immune-category cutoff, which
+        also governs live-vaccine decisions; **14%** is the figure paired with
+        the count of 200. Different frameworks, not a contradiction.
 
     - type: "prose"
       title: "Prolonged prophylaxis in high-burden settings"
       markdown: |
-        The **ARROW** trial (758 children, Uganda/Zimbabwe) showed **continued
-        co-trimoxazole** in children on ART with **high CD4** still reduced
-        hospitalizations — including where malaria is not endemic. In
-        **resource-limited, high-infection-burden** settings, **prolonged
-        prophylaxis may be warranted even after immune reconstitution**.
+        The **ARROW** trial (Uganda and Zimbabwe) randomised children who had
+        been on ART for **more than 2 years with good CD4 recovery** — median
+        CD4 **720** in those over 5. Continuing co-trimoxazole still produced
+        **sustained reductions in hospitalisation and in malaria**, with benefit
+        in **both malaria-endemic and non-endemic areas** and **no waning over
+        time**. Its authors concluded that the WHO discontinuation criteria
+        **need to be reconsidered**.
+
+        This is the evidence behind the rule above: in a high-burden setting,
+        **keep it going**. A good CD4 count is not a reason to stop.
 
     - type: "prose"
       title: "Excluding HIV in an exposed child"

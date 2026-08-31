@@ -45,10 +45,19 @@ topic:
         - type: "prose"
           title: "Prophylaxis — when to give to prevent infection"
           markdown: |
-            - 🛑 **Every child with HIV under 5 years gets co-trimoxazole,
-              regardless of CD4.** WHO's public-health approach does not wait
-              for a count, and CD4 is often unavailable here. Start it, and use
-              the thresholds below only for a child of 5 or over.
+            - 🛑 **In a malaria-endemic setting, every HIV-exposed and every
+              HIV-infected infant, child and adolescent gets co-trimoxazole,
+              regardless of stage, CD4 or ART — and keeps it long-term.** WHO
+              does not gate starting on a count at any age, and where malaria or
+              severe bacterial infection is common it recommends **not** stopping
+              on immune recovery. The ARROW trial randomised children on ART for
+              over 2 years with good CD4 recovery (median 720 over age 5) and
+              continuing still cut hospitalisation and malaria, with no waning.
+              **A good CD4 is not a reason to stop.** Start HIV-exposed infants
+              at **4–6 weeks** and continue until HIV is excluded and
+              breastfeeding has ended. **Never stop it in an infant**, or in a
+              child not on ART. The thresholds below are for starting decisions
+              elsewhere, not for this setting.
             - **PCP / toxoplasma encephalitis** — **CD4 < 200, or CD4 < 14%**.
               Use the **percentage below age 6** and the **absolute count of 200
               at 6 and over**. 14% is the same figure for a child, an adolescent
