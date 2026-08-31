@@ -1,6 +1,6 @@
 # FOR OPENEVIDENCE — everything open, in one place
 
-**ONE ITEM OPEN.** Everything earlier was answered, applied, and deleted.
+**TWO ITEMS OPEN.** Everything earlier was answered, applied, and deleted.
 
 This stays as the single paste file. When the next round raises something, write it
 here and put the open count on the line above.
@@ -53,3 +53,50 @@ or unavailable**.
 3. Do the staged neonatal targets (maintain above 2.8 mmol/L in the first 48 hours,
    above 3.3 after, above 3.9 in a persistent hypoglycaemia disorder) stand unchanged?
    Answer yes or no on its own line.
+
+
+---
+
+## Q2 · Co-trimoxazole prophylaxis in a child over 5 — the tablet strength is never stated
+
+A paediatric hospital reference gives co-trimoxazole prophylaxis dosing in a table headed:
+
+> Doses — trimethoprim 6–8 mg/kg once daily
+
+The rows are:
+
+> **< 6 months** — One paediatric tablet (or ¼ adult tablet) — 20 mg TMP / 100 mg SMX
+>
+> **6 months – 5 years** — Two paediatric tablets (or ½ adult tablet) — 40 mg TMP / 200 mg SMX
+>
+> **> 5 years** — One adult tablet
+
+The first two rows state the milligrams. **The third does not**, and never says whether the
+adult tablet is single or double strength. That is a twofold difference in the delivered
+dose. Working from the page's own first row, a quarter of an adult tablet being 20 mg TMP
+implies a full adult tablet of 80 mg TMP, the single-strength tablet.
+
+Two things do not sit together:
+
+1. 80 mg of trimethoprim in a child over 5 years is **below** the table's own heading of
+   6–8 mg/kg once daily as soon as the child weighs more than about 10–13 kg, and a child
+   over 5 years weighs considerably more than that.
+2. A second reference doses the same prophylaxis by weight and gives **480 mg** total for
+   15–29.9 kg and **one double-strength tablet** for 30 kg and above.
+
+**Questions:**
+
+1. For prophylaxis in a child **over 5 years**, is the correct dose one single-strength
+   tablet (80 mg TMP / 400 mg SMX) or one double-strength tablet (160 mg TMP / 800 mg
+   SMX)? Give the trimethoprim milligrams as a bare number on its own line with no
+   citation marker.
+
+2. Does that dose change by weight above 5 years, and if so at what weight and to what?
+   Give the weight and the trimethoprim milligrams as bare numbers on their own lines, or
+   write "no change".
+
+3. Is "trimethoprim 6–8 mg/kg once daily" the right heading for a prophylaxis table, or is
+   prophylaxis dosed by fixed band rather than per kilogram? Answer in one sentence.
+
+4. Please give the full weight-based paediatric prophylaxis table, including the
+   split-tablet and suspension options, as bare figures.
