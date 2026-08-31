@@ -1,0 +1,84 @@
+# Threshold pass — every cross-book candidate, read one at a time
+
+Generated candidates: `tool/threshold_extract.py` → `threshold_side_by_side.md`.
+**20 decision groups carried differing cutoffs with rows from both books.** All 20
+were read against their pages. This file is the RECORD. The two questions that came
+out of it are in `tool/OPENEVIDENCE.md` and appear nowhere here as questions.
+
+## 🔴 Genuine disagreements — sent to OpenEvidence
+
+**1. Hypoglycaemia cutoff on the malaria pages — 2.2 against 2.5 mmol/L.**
+One reference's malaria page defines hypoglycaemia as `< 2.2 mmol/L`. The other
+uses `< 2.5 mmol/L (45 mg/dL)` on its severe-malaria page, its bedside-glucose
+page and its coma/convulsions table, with `< 3.0` in severe malnutrition.
+A child with severe malaria and a glucose of 2.3 is treated by one book and not
+the other. Hypoglycaemia is a leading cause of death in severe malaria.
+The first book has **no other general hypoglycaemia threshold anywhere** — its only
+other figure is `< 3` on its severe-malnutrition page, which agrees with the second
+book's malnutrition figure.
+
+**2. CD4 percentage as the immunosuppression line — 14% against 15%.**
+One reference starts PCP/toxoplasma prophylaxis at `CD4 < 200 or %CD4 < 14%`.
+The other uses 15% throughout: discontinue co-trimoxazole at `CD4 ≥ 15%`, yellow
+fever permitted at `≥ 15%`, varicella at `> 15%`, IRIS risk below `15%`. 14% is the
+adult AIDS-defining figure; 15% is the paediatric severe-immunodeficiency figure,
+and the first book's page covers both adults and children.
+
+## ✅ Read and NOT a contradiction — with the reason, so they are not re-raised
+
+- **PaO2 in PCP, `< 70` both books; A–a gradient `≥ 35` against `> 35`.** Same
+  numbers. The two books differ only at exactly 35, which is not a clinical
+  difference. One book adds `SpO₂ ≤ 92%` as the oximetry surrogate; the other omits
+  it. An addition, not a disagreement.
+- **The eight-cutoff glucose group.** One book's neonatal targets are staged over
+  time (`> 2.8` first 48 h, `> 3.3` after, `> 3.9` in a persistent disorder) and its
+  treat-at figures are `< 2.5`, `< 3` in malnutrition, `< 2.2` if symptomatic. Every
+  figure carries its qualifier in the same sentence. The other book's only row here
+  is `< 3` on its malnutrition page, which agrees.
+- **Transfusion thresholds, `< 4` / `< 5` / `< 7` / `< 10` against `< 4` and
+  `4–6 with a complication`.** One book stratifies explicitly by blood supply and by
+  high- against low-malaria area; the other stratifies by complication. Both permit
+  transfusion at 5 with respiratory distress. Different stratification of one
+  decision, stated on the page, not a contradiction.
+- **Severe anaemia defined at `Hb < 5 / EVF < 15%` but transfused at `Hb ≤ 4 /
+  EVF ≤ 12%`** in the same book. A definition and a transfusion trigger are two
+  decisions and the page says so.
+- **`Hb < 11` against `Hb < 9.3`.** The book states the divergence itself: WHO
+  defines anaemia at 11 in children 6–59 months, and the Pocket Book uses 9.3.
+  Documented, not a defect.
+- **Lactate `> 2` against `≥ 2` against `≥ 5` against `> 5`.** Adult Sepsis-3
+  hypoperfusion, paediatric hypoperfusion concern, the Phoenix score, and severe
+  malaria. Four decisions.
+- **Every oxygen group.** One book writes `< 90` throughout; the other writes
+  `≤ 90`, differing only at exactly 90. The outliers all dissolve: `≥ 95 / > 94`
+  is post-anaesthetic recovery and says `> 94% acceptable in resource-limited
+  settings` in the same sentence; `< 95` and `> 3` is the newborn pulse-oximetry
+  screen for critical congenital heart disease, preductal against postductal, not
+  an oxygen-therapy trigger.
+- **Respiratory rate `< 20` against `≥ 60`.** Bradypnoea as a danger sign and fast
+  breathing in a neonate. Two decisions.
+- **Temperature `< 35` against `< 35.5`.** The two routes of the same hypothermia
+  measurement, axillary and rectal.
+- **Fever at 37.5, 38, 39, 40.** Malaria testing, urinary tract infection, fever
+  management, and hyperpyrexia as a severity marker. Four decisions.
+- **`≥ 37.5` / `< 37.5` against `> 38` on transfusion pages.** Not a transfusion
+  reaction threshold in the first book at all: it is a VOLUME rule, a febrile child
+  receiving 20 mL/kg where an afebrile child receives 30. The other book's `> 38` is
+  the reaction threshold. The clustering merged them because both pages carry
+  transfusion and a temperature.
+
+## ⚠ Limits of this instrument, recorded rather than papered over
+
+- **Decision clustering merges a page's sub-decisions.** The hypoglycaemia group
+  holds the general cutoff and the severe-malnutrition one together, because both
+  say hypoglycaemia. The qualifier is in the fragment, so a reader separates them at
+  a glance, but the tool cannot.
+- **A comparator difference alone raises a group.** `< 90` against `≤ 90` and
+  `≥ 35` against `> 35` are flagged and are never clinically meaningful.
+- **49 numbers are unattributed** and listed in `thresholds_unattributed.tsv`. Three
+  tuberculin indurations in a TB scoring table name their subject nowhere on the
+  page; the rest are compression depth, calf difference, a Ballard heel-toe, and
+  percentages that are feeds taken, blood-pressure reductions, stenosis grades and
+  pre-test probabilities.
+- **WVEMS is excluded**, as everywhere in the cross-book work: its figures are the
+  original protocol's and are strict.
