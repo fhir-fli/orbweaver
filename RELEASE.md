@@ -39,13 +39,25 @@ This one is cheap here, because the honest policy is almost empty. See below.
 ## The build works, and its size is not what it looks like
 
 `flutter build appbundle --release` succeeds in about 70 s and produces a **67.2 MB**
-`app-release.aab`. That number is the upload, not the download. Roughly 50 MB of it is
-`BUNDLE-METADATA` — native debug symbols for all three ABIs plus an 8 MB ProGuard map —
-which Play strips, and the three copies of `libflutter.so` and `libapp.so` are served as
-per-device splits. What a phone actually downloads is the 18 MB of assets plus one ABI's
-libraries. **That figure is an estimate from the bundle's contents, not a measurement**;
-`bundletool build-apks --connected-device` gives the real one if it matters, and in a
-low-bandwidth setting it does.
+`app-release.aab`. **That is the upload. An arm64 phone downloads about 24 MB.**
+
+Measured, compressed, from the bundle:
+
+| part | size | share |
+|---|---|---|
+| `BUNDLE-METADATA` | 27.9 MB | 41.7% |
+| native libs, all three CPU architectures | 23.2 MB | 34.6% |
+| assets, the books | 15.1 MB | 22.6% |
+| dex, resources, manifest | 0.8 MB | 1.2% |
+
+`BUNDLE-METADATA` is native debug symbols per architecture plus an 8 MB ProGuard map.
+Play keeps those to turn obfuscated crash reports back into line numbers; they never
+reach a device. The engine is compiled three times — arm64 7.8 MB, armv7 7.3 MB,
+x86_64 8.0 MB — and a phone gets exactly one. The x86_64 copy serves emulators only.
+
+So a device receives 15.1 + 7.8 + 0.8 = **23.7 MB**. In a low-bandwidth setting that is
+the number that matters. `bundletool build-apks --connected-device` confirms it exactly
+if you want it from the tool rather than from the archive.
 
 ## ⚪ Worth fixing before the listing
 
@@ -58,6 +70,43 @@ low-bandwidth setting it does.
 - **No `LICENSE` file.**
 - Gradle 8.14.0, AGP 8.11.1 and Kotlin 2.2.20 all warn that Flutter support is being
   dropped soon. Not blocking today.
+
+## 🛑 Content rights — the item I would look at before the account
+
+The app reproduces two bodies of work that are not ours, and neither carries a
+statement anywhere in the bundle.
+
+**The WHO Pocket Book.** Its own copyright page reads, verbatim:
+
+> © World Health Organization 2013
+> All rights reserved.
+
+with permission requests routed to WHO Press through
+`who.int/about/licensing/copyright_form`. **No Creative Commons licence is named for
+this title.** What was searched: WHO IRIS (`iris.who.int/handle/10665/81170`, which
+returns 403 to an automated fetch) and a web search across who.int, fctc.who.int and
+NCBI Bookshelf. A sibling title — *Pocket book of primary health care for children and
+adolescents* — **does** carry CC BY-NC-SA 3.0 IGO, so WHO does license some of this
+material openly; that finding is about a different book and does not transfer.
+
+⚠️ **Uncertainty is not prohibition and this is not a reason to stop.** It is a
+permission with a named route and a cost in time. Worth knowing: **WHO publishes its
+own e-Pocketbook app of this same content**, so there is precedent for the content
+appearing in a store.
+
+**The WVEMS protocols.** No copyright statement was found on the first three pages of
+the 2026 PDF. WVEMS is the authority for crews operating under it, which is why this
+repo treats its figures as strict and never reconciles them against the other books.
+Whether redistribution needs their sign-off is a question for them.
+
+**The ProtocolBook is yours**, so it raises nothing.
+
+**Image attribution is a compliance gap we can fix ourselves.** The Wikimedia images in
+`assets/books/wvems/images/` are CC BY, CC BY-SA and CC0, and
+`assets/books/wvems/images/CREDITS.md` lists every author, source and licence properly.
+It ships in the bundle and **nothing in the app ever displays it** — no code reads that
+file. CC BY and CC BY-SA require attribution be given to the people who see the work.
+An in-app credits screen closes this, and it is a small piece of work.
 
 ## 🛑 The account question, which is yours and not a technical one
 
