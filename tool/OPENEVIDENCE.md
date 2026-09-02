@@ -1,6 +1,6 @@
 # FOR OPENEVIDENCE — everything open, in one place
 
-**TWO ITEMS OPEN.** Everything earlier was answered, applied, and deleted.
+**THREE ITEMS OPEN.** Everything earlier was answered, applied, and deleted.
 
 This stays as the single paste file. When the next round raises something, write it
 here and put the open count on the line above.
@@ -100,3 +100,43 @@ Two things do not sit together:
 
 4. Please give the full weight-based paediatric prophylaxis table, including the
    split-tablet and suspension options, as bare figures.
+
+
+---
+
+## Q3 · IV quinine loading infusion — the stated window allows twice the stated maximum rate
+
+A paediatric hospital reference's quinine entry carries all three of these, in the same
+entry:
+
+> **IV loading:** 20 mg salt/kg over 2–4 h, diluted in 10 ml/kg IV fluid
+
+> **IV maintenance:** 10 mg salt/kg over 2 h, diluted in 10 ml/kg IV fluid
+
+> Doses expressed as mg of quinine dihydrochloride salt. Loading dose is DOUBLE the
+> maintenance dose. **Infusion must not exceed 5 mg salt/kg per hour.** At 8 h after the
+> loading dose, give the maintenance dose over 2 h, repeated every 8 h.
+
+Twenty mg/kg given over **2 hours** is **10 mg salt/kg per hour**, which is twice the
+maximum the same entry states. Only the 4-hour end of that window satisfies it, at
+exactly 5 mg salt/kg per hour. The maintenance dose is consistent: 10 mg/kg over 2 h is
+5 mg salt/kg per hour.
+
+A second reference prints the loading dose as **20 mg/kg IV over 4 hours** with no range.
+
+The setting is a district hospital in northern Uganda: malaria-endemic, paediatric-heavy,
+low-resource, **cardiac monitoring is not routinely available**, and quinine is used where
+artesunate is out of stock.
+
+**Questions:**
+
+1. Over how many hours should a 20 mg salt/kg IV quinine loading dose be given in a
+   child? Give the number of hours as a bare number on its own line with no citation
+   marker.
+
+2. Is "must not exceed 5 mg salt/kg per hour" the correct maximum infusion rate? Give the
+   figure as a bare number on its own line, or write "no".
+
+3. Is there any circumstance in which the loading dose may be given faster than the
+   maximum rate, and if so what is the shortest acceptable time? Give a number alone on
+   its own line, or write "none".

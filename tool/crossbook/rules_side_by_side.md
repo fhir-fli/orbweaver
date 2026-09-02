@@ -40,7 +40,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### amoxicillin — day
 
-#### ⚠ Pharyngitis / SAM — Admission & Acute Complications / Serious Bacterial Infection / Sexually Transmitted Infec — 5, 7, 10
+#### ⚠ Drug dosages / Pharyngitis / SAM — Admission & Acute Complications / Serious Bacterial Infection / Sexually Tr — 5, 7, 10
 
 - `10 day` **PB** — Pharyngitis › p.70 · ENT infections IV › Treatment
   > Amoxicillin PO | 25mg/kg/dose (max 500mg/dose) BD x 10 days
@@ -52,6 +52,8 @@ the original protocol's and are strict). **Candidates, not findings** — read t
   > Amoxicillin 45mg/kg/dose BD x 7 days if >2 years, mild-moderate, uncomplicated disease
 - `7 day` **PB** — Sinusitis › p.70 · ENT infections V › Treatment for bacterial sinusitis (must meet above criteria)
   > Amoxicillin/Clavulanic Acid 45mg/kg/dose BD x 7 days if <2 years, moderate-severe illness, attending daycare, or antibiotic exposure in the last 4 weeks
+- `7 day` **WHO** — Drug dosages › Amoxicillin–clavulanate (co-amoxiclav) › Febrile urinary tract infection / pyelonephr
+  > Oral: 40–50 mg/kg/day OF THE AMOXICILLIN COMPONENT, every 8 hours (3 doses), for 7 days. Dose and prescribe by the amoxicillin component, never by the combined figure
 - `7 day` **WHO** — Serious Bacterial Infection › 3.8 · neonatal sepsis — signs & antibiotics › When referral is not fea
   > Clinical severe infection → injectable gentamicin once daily for 2 days + oral amoxicillin 50 mg/kg twice daily for 7 days.
 - `7 day` **WHO** — Serious Bacterial Infection › 3.8 · neonatal sepsis — signs & antibiotics › When referral is not fea
@@ -151,7 +153,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### isoniazid — month
 
-#### ⚠ TB — Diagnosis & Systemic Score / Tuberculosis — 3, 6-9, 6
+#### ⚠ TB — Diagnosis & Systemic Score / Tuberculosis — 3, 6, 6-9
 
 - `3 month` **PB** — TB — Diagnosis & Systemic Score › Diagnosis › Well child contacts who do NOT have TB — give preventi
   > First line: 3HR — isoniazid 10mg/kg/day (7–15, max 300mg) + rifampicin 15mg/kg/day (10–20, max 600mg), daily for 3 months. The shorter rifamycin course completes far more often than 6 months
@@ -215,7 +217,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### tetracycline — day
 
-#### ⚠ Non-severe Measles / SAM — Admission & Acute Complications / Severe Complicated Measles — 7-10, 7
+#### ⚠ Non-severe Measles / SAM — Admission & Acute Complications / Severe Complicated Measles — 7, 7-10
 
 - `7-10 day` **PB** — SAM — Admission & Acute Complications › pp.64–65 · the 10-step checklist › 7. Eye signs — Vitamin A 
   > Chloramphenicol or tetracycline eyedrops, 4 times a day for 7–10 days
@@ -228,7 +230,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### whole blood — hour
 
-#### ⚠ SAM — Admission & Acute Complications / Severe Malaria — 3, 3-4
+#### ⚠ SAM — Admission & Acute Complications / Severe Malaria — 3-4, 3
 
 - `3 hour` **PB** — SAM — Admission & Acute Complications › pp.64–65 · the 10-step checklist › 5. Severe Anemia
   > No heart failure: 10mls/kg whole blood slowly over 3hrs
