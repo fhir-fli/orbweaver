@@ -12,7 +12,7 @@ topic:
   id: "who-imci-8-3-2-cotrimoxazole"
   title: "Co-trimoxazole Prophylaxis"
   list_subtitle: "8.3.2 · who · how long · doses · discontinuation"
-  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 · universal initiation and long-term continuation in a high-burden setting, OpenEvidence 2026-08-31"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 · universal initiation and long-term continuation 2026-08-31 · full age-banded dosing table, OpenEvidence 2026-09-01"
   tags: ["HIV", "co-trimoxazole", "prophylaxis", "PCP", "pediatric"]
   aliases:
     - "Cotrimoxazole prophylaxis"
@@ -95,13 +95,28 @@ topic:
         test 6 weeks after cessation.
 
     - type: "table"
-      title: "Doses — trimethoprim 6–8 mg/kg once daily"
-      columns: ["Age", "Dose"]
-      column_flex: [3, 5]
+      title: "Doses — by fixed age band, once daily"
+      columns: ["Age", "Daily dose", "Suspension 200/40 per 5 ml", "Paediatric tab 100/20", "Single-strength 400/80", "Double-strength 800/160"]
+      column_flex: [3, 3, 3, 2, 2, 2]
       rows:
-        - cells: ["< 6 months", "One paediatric tablet (or ¼ adult tablet) — 20 mg TMP / 100 mg SMX"]
-        - cells: ["6 months – 5 years", "Two paediatric tablets (or ½ adult tablet) — 40 mg TMP / 200 mg SMX"]
-        - cells: ["> 5 years", "One adult tablet"]
+        - cells: ["< 6 months", "100 mg SMX / 20 mg TMP", "2.5 ml", "1 tablet", "¼ tablet", "—"]
+        - cells: ["6 months – 5 years", "200 mg SMX / 40 mg TMP", "5 ml", "2 tablets", "½ tablet", "—"]
+        - cells: ["6 – 14 years", "400 mg SMX / 80 mg TMP", "10 ml", "4 tablets", "1 tablet", "½ tablet"]
+        - cells: ["≥ 15 years", "800 mg SMX / 160 mg TMP", "—", "—", "2 tablets", "1 tablet"]
+
+    - type: "prose"
+      title: "Reading the table"
+      markdown: |
+        - **The step to a double-strength tablet is at 15 years, not at 5.** A
+          child of 6–14 gets **one single-strength tablet, 80 mg trimethoprim**.
+          The older wording "one adult tablet" did not say which strength, and
+          that is a twofold difference in the delivered dose.
+        - **Dose by the band, not per kilogram.** Trimethoprim 6–8 mg/kg/day is
+          the pharmacological target behind these bands, not a bedside
+          calculation.
+        - ⚠️ **Round up, not down.** Pharmacokinetic studies show the fixed bands
+          modestly **underdose** children against adult exposures, so where a
+          child sits between two bands, take the higher tablet count.
 
     - type: "prose"
       title: "Allergy and follow-up"

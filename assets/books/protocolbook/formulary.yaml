@@ -1958,7 +1958,7 @@ formulary:
       - Maintenance dose: 10 mg/kg IV q8hrs (dilute, give over 2 hrs)
 
       '
-    notes: '**DANGER:** rapid administration is dangerous. Mix with 10 mL/kg of 5% dextrose & run over 2–4 hours. DO NOT exceed 5 mg/kg/hr.
+    notes: '**DANGER:** rapid administration is dangerous. Mix with 10 mL/kg of 5% dextrose and run the LOADING dose over 4 hours, never faster. DO NOT exceed 5 mg/kg/hr — 20 mg/kg over 2 hours is double that. **Omit the loading dose entirely if quinine or mefloquine was given in the preceding 24 hours.** The dextrose is not optional: quinine provokes hyperinsulinaemic hypoglycaemia, so check the glucose and treat below 3.0 mmol/L.
 
       '
   - id: rabies-immunoglobulin

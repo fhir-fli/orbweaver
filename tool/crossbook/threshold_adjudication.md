@@ -118,3 +118,33 @@ and the first book's page covers both adults and children.
   pre-test probabilities.
 - **WVEMS is excluded**, as everywhere in the cross-book work: its figures are the
   original protocol's and are strict.
+
+---
+
+## ✅ OE round of 2026-09-01 — applied, except one that is now back with OE
+
+| ruling | applied |
+|---|---|
+| **IV quinine loading is 4 hours flat.** The 5 mg salt/kg/h ceiling is correct and **no circumstance permits going faster**; 20 mg/kg over 2 h is 10 mg/kg/h and is unsafe (cardiotoxicity, hypotension) where cardiac monitoring is unavailable. | WHO entry's `2–4 h` → **4 h (NOT faster)**. 🔴 **The ProtocolBook had the same error in its notes** — its dose line already said 4 hours while its notes said "run over 2–4 hours" beside "DO NOT exceed 5 mg/kg/hr", contradicting both. Corrected. |
+| **Omit the loading dose entirely if quinine or mefloquine was given in the preceding 24 h**, and infuse in **dextrose-containing** fluid because quinine provokes hyperinsulinaemic hypoglycaemia. | Both books' quinine entries. |
+| **Co-trimoxazole prophylaxis is banded by age and the step to a double-strength tablet is at 15 years, not 5.** A child of 6–14 gets one **single-strength** tablet, 80 mg TMP. Full table: <6 mo 100/20 · 6 mo–5 y 200/40 · 6–14 y 400/80 · ≥15 y 800/160, with suspension, paediatric, single- and double-strength columns. Dose by band, not per kg; the bands modestly **underdose** children on PK data, so round up rather than down. | The WHO table's three rows became four with every column filled. The old third row read "One adult tablet" with no strength, a twofold ambiguity. |
+
+## ⏸️ Q1 sent BACK to OE rather than applied — the book contradicts the ruling
+
+OE ruled the general threshold should also be **3.0 mmol/L**, with 2.5 kept only for a
+well asymptomatic child being screened. **I asked that question without the evidence the
+book itself carries**, on the page that sets the cutoff:
+
+> The **2.5 mmol/L** cutoff is supported by the **SugarFACT** RCT (Malawi) — raising it
+> did **not** reduce mortality.
+
+A trial that randomised the threshold and found no mortality benefit outranks a
+pragmatic-safety argument, and it was in front of me the whole time. **Nothing was
+changed on the general pages.** The malaria pages stay at 3.0 from the earlier
+malaria-specific ruling, so the book is currently inconsistent on purpose and the
+question says so. Re-asked with the trial quoted, including whether it also overturns the
+malaria answer.
+
+🆕 **OE offered** the monitoring protocol for quinine-induced hypoglycaemia and
+cardiotoxicity during IV quinine in children. Both books now say to check the glucose and
+treat below 3.0; neither prints a monitoring schedule.
