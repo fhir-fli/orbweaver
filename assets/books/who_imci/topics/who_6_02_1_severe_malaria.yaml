@@ -53,8 +53,9 @@ topic:
     - type: "prose"
       title: "Laboratory findings"
       markdown: |
-        - **hypoglycaemia** — blood glucose < 3.0 mmol/L (< 54 mg/dl); check in
-          all children with signs of severe malaria
+        - **hypoglycaemia** — blood glucose < 2.5 mmol/L (< 45 mg/dl), or
+          < 3.0 mmol/L in severe malnutrition; check in all children with signs
+          of severe malaria
         - **hyperparasitaemia** — > 100 000/µl (2.5%) in low-transmission areas
           or > 20% in high-transmission areas
         - **severe anaemia** — EVF < 15%, Hb < 5 g/dl
@@ -167,15 +168,14 @@ topic:
     - type: "prose"
       title: "Complication — hypoglycaemia"
       markdown: |
-        Blood glucose < 3.0 mmol/L (< 54 mg/dl); common in children < 3 years,
-        those with convulsions or hyperparasitaemia, and the comatose — it can
-        **mimic cerebral malaria**. **Treat at 3.0 in the malaria pathway** —
-        the same figure as in severe acute malnutrition, and the same figure
-        this page already uses for the repeat dose. Do not wait for 2.5 where
-        a repeat glucose measurement may be delayed.
+        Blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe
+        acute malnutrition; common in children < 3 years, those with convulsions
+        or hyperparasitaemia, and the comatose — it can **mimic cerebral
+        malaria**.
         - Give **2 ml/kg of 10% glucose (dextrose) IV** ([Chart 10](topic:who-imci-chart10-glucose)).
           If no IV, give via **intraosseous** or **sublingual sugar**; recheck
-          after 20–30 min and repeat if still low (< 3.0 mmol/L).
+          after 20–30 min and repeat if still low (< 2.5 mmol/L, or < 3.0 in
+          severe malnutrition).
         - **Prevent** further hypoglycaemia in an unconscious child with **10%
           dextrose** in the maintenance infusion (add 20 ml of 50% glucose to
           80 ml of 0.9% saline or Ringer's lactate); do not exceed maintenance

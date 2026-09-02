@@ -31,10 +31,8 @@ pooled, which is what the previous version did and why it reported nothing.
 
 - `< 14` **PB** — Opportunistic Infections in HIV › pp.135–138 · prophylaxis & treatment by OI › Prophylaxis — when to give to p
   > PCP / toxoplasma encephalitis — CD4 < 200, or CD4 < 14%. Use the percentage below age 6 and the absolute count of 200 at 6 and over. 14% is the same figure for a child, an adolescent and an 
-- `< 14` **WHO** — Co-trimoxazole Prophylaxis › 8.3.2 · who · how long · doses · discontinuation › When to discontinue — age-stra
-  > ℹ️ 15% here is a stopping threshold, not a starting one. Prophylaxis is started at CD4 < 14% or a count < 200; this 15% is the paediatric immune-category cutoff used to discontinue, and the 
-- `≥ 15` **WHO** — Co-trimoxazole Prophylaxis › 8.3.2 · who · how long · doses · discontinuation › When to discontinue — age-stra
-  > Infected, age ≥ 6 years: may discontinue after ≥ 6 months on ART with CD4 ≥ 15% or ≥ 200/mm³ for > 3 consecutive months; reinstitute if CD4 falls below the threshold.
+- `≥ 14` **WHO** — Co-trimoxazole Prophylaxis › 8.3.2 · who · how long · doses · discontinuation › When to discontinue
+  > …cterial infection are NOT common may a CD4-based stop be considered, after ≥ 6 months on ART with sustained recovery for > 3 months: age ≥ 6 years, CD4 ≥ 200/mm³, or CD4 ≥ 14% where a count
 
 ### Checking Immunization Status — agreed at ≥ 15
 
@@ -80,8 +78,8 @@ pooled, which is what the previous version did and why it reported nothing.
 
 ### Co-trimoxazole Prophylaxis — agreed at ≥ 200
 
-- `≥ 200` **WHO** — Co-trimoxazole Prophylaxis › 8.3.2 · who · how long · doses · discontinuation › When to discontinue — age-stra
-  > Infected, age ≥ 6 years: may discontinue after ≥ 6 months on ART with CD4 ≥ 15% or ≥ 200/mm³ for > 3 consecutive months; reinstitute if CD4 falls below the threshold.
+- `≥ 200` **WHO** — Co-trimoxazole Prophylaxis › 8.3.2 · who · how long · doses · discontinuation › When to discontinue
+  > … malaria and severe bacterial infection are NOT common may a CD4-based stop be considered, after ≥ 6 months on ART with sustained recovery for > 3 months: age ≥ 6 years, CD4 ≥ 200/mm³, or C
 
 > NOT COMPARABLE: the 4 groups above gate different decisions and are not compared with each other.
 
@@ -239,12 +237,12 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 47` **WHO** — Danger Signs (Newborn & Young Infant) › 3.6 · non-specific signs of severe illness + emergency care › Emergenc
   > If drowsy, unconscious or convulsing, check blood glucose. If < 2.6 mmol/L (< 47 mg/dl) — the operational neonatal threshold; the 2013 print's 2.2 mmol/L is lower than current guidance — giv
 
-### Severe Malaria — agreed at < 54
+### Severe Malaria — agreed at < 45
 
-- `< 54` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Laboratory findings
-  > hypoglycaemia — blood glucose < 3.0 mmol/L (< 54 mg/dl); check in all children with signs of severe malaria
-- `< 54` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — hypoglycaemia
-  > Blood glucose < 3.0 mmol/L (< 54 mg/dl); common in children < 3 years, those with convulsions or hyperparasitaemia, and the comatose — it can mimic cerebral malaria. Treat at 3.0 in the mala
+- `< 45` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Laboratory findings
+  > hypoglycaemia — blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe malnutrition; check in all children with signs of severe malaria
+- `< 45` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — hypoglycaemia
+  > Blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe acute malnutrition; common in children < 3 years, those with convulsions or hyperparasitaemia, and the comatose — it can mi
 
 ### ⚠ Measuring Blood Glucose / Step 1 · Hypoglycaemia — 2 different cutoffs, WHO only
 
@@ -261,10 +259,10 @@ pooled, which is what the previous version did and why it reported nothing.
 
 ### ⚠ Coma / Convulsions — Differential Dx / Malaria / Step 1 · Hypoglycaemia — 2 different cutoffs, both books
 
+- `< 2.5` **PB** — Malaria › Malaria › p.22 · diagnosis + severe Rx
+  > Hypoglycemia (< 2.5 mmol/L; < 3.0 in severe malnutrition)
 - `< 2.5` **WHO** — Coma / Convulsions — Differential Dx › 1.5.3 · history, exam, labs, Tables 3 & 4 › Table 3 · Differential diag
   > Glucose < 2.5 mmol/L (45 mg/dL), or < 3.0 mmol/L (54 mg/dL) in SAM | Responds to glucose treatment
-- `< 3` **PB** — Malaria › Malaria › p.22 · diagnosis + severe Rx
-  > Hypoglycemia (< 3.0 mmol/L)
 - `< 3` **WHO** — Coma / Convulsions — Differential Dx › 1.5.3 · history, exam, labs, Tables 3 & 4 › Table 3 · Differential diag
   > Glucose < 2.5 mmol/L (45 mg/dL), or < 3.0 mmol/L (54 mg/dL) in SAM | Responds to glucose treatment
 - `< 3` **WHO** — Step 1 · Hypoglycaemia › 7.4.1 · 10% glucose 50 ml · feed every 2 h › Diagnosis
@@ -287,14 +285,16 @@ pooled, which is what the previous version did and why it reported nothing.
   > Symptomatic, any age — treat promptly at < 2.2 mmol/L (40 mg/dL).
 - `< 2.5` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › When & what to give
   > Treat as hypoglycaemia if glucose is < 2.5 mmol/L (45 mg/dL), or < 3 mmol/L (54 mg/dL) in a severely malnourished child, or if it cannot be measured.
-- `< 2.5` **WHO** — Measuring Blood Glucose › A1.7 · reagent strips at the bedside › What counts as hypoglycaemia
-  > Blood glucose < 2.5 mmol/L (< 45 mg/dL) — or < 3.0 mmol/L (< 54 mg/dL) in severe malnutrition — is hypoglycaemia: treat at once ([Chart 10](topic:who-imci-chart10-glucose)).
+- `< 2.5` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — hypoglycaemia
+  > Blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe acute malnutrition; common in children < 3 years, those with convulsions or hyperparasitaemia, and the comatose — it can mi
+- `< 2.5` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — hypoglycaemia
+  > …kg of 10% glucose (dextrose) IV ([Chart 10](topic:who-imci-chart10-glucose)). If no IV, give via intraosseous or sublingual sugar; recheck after 20–30 min and repeat if still low (< 2.5 mmo
 - `< 3` **PB** — SAM — Admission & Acute Complications › pp.64–65 · the 10-step checklist › 1. Hypoglycemia
   > Blood glucose <3mmol/L (54mg/dL). Treatment:
 - `< 3` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › When & what to give
   > Treat as hypoglycaemia if glucose is < 2.5 mmol/L (45 mg/dL), or < 3 mmol/L (54 mg/dL) in a severely malnourished child, or if it cannot be measured.
 - `< 3` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — hypoglycaemia
-  > Blood glucose < 3.0 mmol/L (< 54 mg/dl); common in children < 3 years, those with convulsions or hyperparasitaemia, and the comatose — it can mimic cerebral malaria. Treat at 3.0 in the mala
+  > Blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe acute malnutrition; common in children < 3 years, those with convulsions or hyperparasitaemia, and the comatose — it can mi
 - `> 2.2` **WHO** — IV Glucose (Hypoglycaemia) › Neonatal thresholds › Asymptomatic, at risk, first 48 h:** maintain **> 2.8 mmol/
   > AAP is staged more loosely over the same window: > 2.2 mmol/L (40 mg/dL) in the first 4 h before a feed, > 2.5 mmol/L (45 mg/dL) from 4–24 h.
 - `> 2.5` **WHO** — IV Glucose (Hypoglycaemia) › Neonatal thresholds › Asymptomatic, at risk, first 48 h:** maintain **> 2.8 mmol/
@@ -311,17 +311,26 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 10` **PB** — Adult Sepsis › pp.99–100 · qSOFA · SOFA · antibiotics › Therapeutic management
   > Glucose control — insulin to keep glucose under 10 mmol/L (180 mg/dL); do not chase tight control, hypoglycaemia does more harm here
 
+### Drug dosages / Essential Medications — agreed at < 2.5
+
+- `< 2.5` **PB** — Essential Medications › Essential Medications › Quinine
+  > … dose entirely if quinine or mefloquine was given in the preceding 24 hours. The dextrose is not optional: quinine provokes hyperinsulinaemic hypoglycaemia, so check the glucose and treat b
+- `< 2.5` **WHO** — Drug dosages › Drug dosages › Quinine
+  > …ing dose takes 4 h and must never be given over 2. Infuse in DEXTROSE-containing fluid, because quinine is a potent stimulus to hyperinsulinaemic hypoglycaemia — check the glucose and treat
+
 ### Danger Signs (Newborn & Young Infant) — agreed at < 2.6
 
 - `< 2.6` **WHO** — Danger Signs (Newborn & Young Infant) › 3.6 · non-specific signs of severe illness + emergency care › Emergenc
   > If drowsy, unconscious or convulsing, check blood glucose. If < 2.6 mmol/L (< 47 mg/dl) — the operational neonatal threshold; the 2013 print's 2.2 mmol/L is lower than current guidance — giv
 
-### Severe Malaria — agreed at < 3
+### ⚠ Severe Malaria — 2 different cutoffs, WHO only
 
+- `< 2.5` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Laboratory findings
+  > hypoglycaemia — blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe malnutrition; check in all children with signs of severe malaria
 - `< 3` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Laboratory findings
-  > hypoglycaemia — blood glucose < 3.0 mmol/L (< 54 mg/dl); check in all children with signs of severe malaria
+  > hypoglycaemia — blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe malnutrition; check in all children with signs of severe malaria
 
-> NOT COMPARABLE: the 6 groups above gate different decisions and are not compared with each other.
+> NOT COMPARABLE: the 7 groups above gate different decisions and are not compared with each other.
 
 ## blood pressure — mmHg (delta)
 

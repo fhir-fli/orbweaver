@@ -320,16 +320,27 @@ line. The formulary's own "325 mg contains 65 mg" was right and needs the word *
 
 > Severe = Fever PLUS any of: … Hypoglycemia (< 2.2 mmol/L)
 
-**ANSWERED 2026-08-31.** OE: in a child with malaria the treatment threshold is
-**3.0 mmol/L**, the same figure as in severe acute malnutrition, with no separate lower
-figure printed for a symptomatic child on the malaria pathway. 2.2 appears in the
-Lancet paediatric malaria review, which itself notes a higher treatment threshold nearer
-4.0 may be more appropriate; 3.0 is the best-supported single printed figure and is safest
-where a repeat glucose measurement may be delayed.
+🔁 **ANSWERED TWICE. THE SECOND ANSWER STANDS: 2.5 mmol/L.**
 
-**Applied** to the app. **For v1.8 the printed 2.2 must become 3.0.** The other
-reference's severe-malaria pages were raised from 2.5 to 3.0 in the same round, so both
-now agree.
+**2026-08-31, superseded.** OE first ruled 3.0 mmol/L for a child with malaria, and both
+books were moved to it.
+
+**2026-09-01, and this is the ruling to apply.** Asked again with the evidence the WHO
+book itself carries — its Chart 10 page cites the **SugarFACT** RCT — OE reversed:
+**2.5 mmol/L on both the general and the malaria pathways, and 3.0 retained ONLY for
+severe acute malnutrition.** SugarFACT randomised 322 severely ill Malawian children aged
+1 month to 5 years with a glucose of 2.5–5.0 mmol/L to immediate IV dextrose or to
+observation, measured in-hospital mortality, found **no difference (15% against 16%)** and
+was stopped for futility. It is the only randomised test of this question, in a
+low-resource malaria-endemic population directly comparable to Gulu, and the 3.0 figure
+rested on observational association and extrapolation.
+
+**Applied** to the app: both books now print **2.5, with 3.0 in severe malnutrition**.
+**For v1.8 the printed 2.2 must become 2.5.**
+
+🛑 **Why this flipped, so it does not flip again.** The first question was asked without
+the trial, which was sitting on the WHO book's own glucose page the whole time. Before
+asking about a threshold, read what the books already cite for it.
 
 Found by the cross-book threshold pass, which is the only instrument that has ever
 compared these two figures: the number sits in a severity checklist on one page and in a

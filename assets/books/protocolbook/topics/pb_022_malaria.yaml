@@ -124,7 +124,7 @@ topic:
             - AVPU = V, P, U or ≤ 2
             - ≥ 2 convulsions
             - Fever ≥ 40 °C (104 °F)
-            - Hypoglycemia (< 3.0 mmol/L)
+            - Hypoglycemia (< 2.5 mmol/L; < 3.0 in severe malnutrition)
             - Anemia (Hgb < 7)
         - type: "arrows"
           flex: 1

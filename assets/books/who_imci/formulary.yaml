@@ -2213,7 +2213,7 @@ formulary:
       - ½
       - ½
       - '1'
-    notes: Intravenous artesunate is now the preferred treatment for severe malaria; quinine is the alternative where artesunate is unavailable (see Chapter 6). Doses expressed as mg of quinine dihydrochloride salt. Loading dose is DOUBLE the maintenance dose. Infusion must not exceed 5 mg salt/kg per hour, which is why the loading dose takes 4 h and must never be given over 2. Infuse in DEXTROSE-containing fluid, because quinine is a potent stimulus to hyperinsulinaemic hypoglycaemia — check the glucose and treat below 3.0 mmol/L. Omit the loading dose if quinine or mefloquine was given in the preceding 24 h. At 8 h after the loading dose, give the maintenance dose over 2 h, repeated every 8 h; switch to a full oral ACT course when the child can swallow.
+    notes: Intravenous artesunate is now the preferred treatment for severe malaria; quinine is the alternative where artesunate is unavailable (see Chapter 6). Doses expressed as mg of quinine dihydrochloride salt. Loading dose is DOUBLE the maintenance dose. Infusion must not exceed 5 mg salt/kg per hour, which is why the loading dose takes 4 h and must never be given over 2. Infuse in DEXTROSE-containing fluid, because quinine is a potent stimulus to hyperinsulinaemic hypoglycaemia — check the glucose and treat below 2.5 mmol/L (3.0 in severe malnutrition). Omit the loading dose if quinine or mefloquine was given in the preceding 24 h. At 8 h after the loading dose, give the maintenance dose over 2 h, repeated every 8 h; switch to a full oral ACT course when the child can swallow.
   - id: rectal-artesunate
     name: Rectal artesunate (pre-referral)
     class: antimalarial

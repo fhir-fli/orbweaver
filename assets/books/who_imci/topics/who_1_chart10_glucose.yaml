@@ -80,8 +80,23 @@ topic:
         - A **milder, asymptomatic** case can be managed with oral or
           buccal glucose and feeding first; the IV bolus is for the
           symptomatic or fitting child.
-        - The **2.5 mmol/L** cutoff is supported by the **SugarFACT** RCT
-          (Malawi) — raising it did **not** reduce mortality.
+        - **The 2.5 mmol/L cutoff is what the one randomised trial supports.**
+          **SugarFACT** (Malawi) randomised 322 severely ill children aged
+          1 month to 5 years whose glucose was **2.5–5.0 mmol/L** to either
+          immediate IV 10% dextrose — a 5 ml/kg bolus then a 24-hour
+          maintenance infusion — or to observation and standard care, testing
+          whether raising the treatment cutoff from 2.5 to 5.0 saved lives. It
+          measured all-cause in-hospital mortality and found **no difference,
+          15% against 16%**, and was stopped for futility. Treating the
+          2.5–5.0 band does not help.
+        - ⚠️ **It says nothing about how hard to treat a child already below
+          2.5.** Those children were excluded. A glucose below 2.5 in a sick
+          child carries a case fatality up to about **26%** and demands
+          immediate dextrose.
+        - ⚠️ **Quinine-induced hyperinsulinaemic hypoglycaemia is real**, and
+          the answer to it is **anticipation, repeat measurement and
+          dextrose-containing infusion fluid** — not a higher universal
+          treatment threshold.
 
     - type: "prose"
       title: "Neonatal thresholds"
