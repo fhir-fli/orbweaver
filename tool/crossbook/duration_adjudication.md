@@ -4,7 +4,7 @@
 across 13 drugs** carried differing course lengths with rows from both books, once
 durations were bound to their indication. All 14 read against their pages, and every
 one of the 13 drugs is accounted for below. **One finding.** It is Q3 in
-`tool/OPENEVIDENCE.md` and appears here only as a record, not as a question.
+`OPENEVIDENCE.md` and appears here only as a record, not as a question.
 
 ## 🔴 The finding — quinine loading infusion
 

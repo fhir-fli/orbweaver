@@ -38,12 +38,13 @@ test/manual/out/
 test/manual/reference/
 
 # Diagnostic output from test/widgets/page_fits_screen_test.dart
-page_fits.tsv
-flowchart_fits.tsv
-table_fits.tsv
 
 # Claude Code personal settings (permissions allowlist)
 .claude/settings.local.json
 
 # Cross-book comparison tooling
 tool/__pycache__/
+
+# Test diagnostics. Kept out of the repo root: the root is where
+# Grey looks, and OPENEVIDENCE.md lives there now.
+build/fits/

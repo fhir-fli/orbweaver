@@ -16,7 +16,7 @@
 // table_features_test.dart came to be carried as known-failing for months
 // while the app was fine.
 //
-// Writes every table it measures to table_fits.tsv for diagnosis.
+// Writes every table it measures to build/fits/table_fits.tsv for diagnosis.
 
 import 'dart:io';
 
@@ -86,7 +86,8 @@ void main() {
     });
     expect(loaded, isNotEmpty, reason: 'no topics loaded — asset path broken?');
 
-    final fh = File('table_fits.tsv').openSync(mode: FileMode.write);
+    Directory('build/fits').createSync(recursive: true);
+    final fh = File('build/fits/table_fits.tsv').openSync(mode: FileMode.write);
     fh.writeStringSync('topic\tn_tables\tn_errors\tfirst_error\n');
     fh.flushSync();
 

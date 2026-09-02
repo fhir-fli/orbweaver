@@ -31,7 +31,7 @@ reliable dialysis; ICU monitoring is not routinely available.
 # ⚡ NO QUESTIONS LIVE HERE. NOTHING IS OPEN.
 
 **This file is the RECORD: what was ruled, where it was applied, and what was checked and
-dismissed with the reason.** The open questions are in `tool/OPENEVIDENCE.md` — one of
+dismissed with the reason.** The open questions are in `OPENEVIDENCE.md` — one of
 them — and that file contains nothing but questions.
 
 ---
@@ -817,7 +817,7 @@ Three internal contradictions found and two fixed:
 ## 2026-08-29 — the three hand-off files merged into one
 
 `crossbook_open_questions.md`, `protocolbook_formulary_additions.md` and
-`who_formulary_additions.md` are now a single paste file, `tool/OPENEVIDENCE.md`.
+`who_formulary_additions.md` are now a single paste file, `OPENEVIDENCE.md`.
 Grey had to find and send three separate files. Everything open lives in that one file;
 this findings file keeps the record. The stale-queue hook's generated-list table was
 repointed at the new name so it still catches the list going stale against either

@@ -24,7 +24,7 @@
 // so this test loads Roboto and FAILS LOUDLY if it cannot — a guard that
 // silently skips is not a guard.
 //
-// Writes per-page numbers to page_fits.tsv for diagnosis when it fails.
+// Writes per-page numbers to build/fits/page_fits.tsv for diagnosis when it fails.
 
 import 'dart:io';
 
@@ -108,7 +108,8 @@ void main() {
       tester.view.devicePixelRatio = 3.0;
       addTearDown(tester.view.reset);
 
-      final fh = File('page_fits.tsv').openSync(mode: FileMode.write);
+      Directory('build/fits').createSync(recursive: true);
+    final fh = File('build/fits/page_fits.tsv').openSync(mode: FileMode.write);
       fh.writeStringSync('topic\tpage\tfits_at\tnat_h\tavail_h\n');
       fh.flushSync();
 
@@ -237,7 +238,7 @@ void main() {
             'them on course for the 0.48 clipping floor where content is silently '
             'cut. Shorten the page, or move content into a side-by-side row.\n'
             '  ${offenders.join("\n  ")}\n'
-            'Per-page numbers in page_fits.tsv.',
+            'Per-page numbers in build/fits/page_fits.tsv.',
       );
     },
     timeout: const Timeout(Duration(minutes: 5)),

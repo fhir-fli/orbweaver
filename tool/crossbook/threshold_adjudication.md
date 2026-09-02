@@ -4,7 +4,7 @@ Generated candidates: `tool/threshold_extract.py` → `threshold_side_by_side.md
 **20 decision groups carried differing cutoffs with rows from both books.** All 20
 were read against their pages. This file is the RECORD. **Both questions that came out
 of it were answered on 2026-08-31 and applied** — the rulings are below and none of this
-is open. The one question still open is in `tool/OPENEVIDENCE.md`.
+is open. The one question still open is in `OPENEVIDENCE.md`.
 
 ## ✅ ANSWERED BY OE 2026-08-31 AND APPLIED — do not paste any of this again
 
@@ -17,7 +17,7 @@ is open. The one question still open is in `tool/OPENEVIDENCE.md`.
 
 ⏭️ **Still open, and it is the only thing open:** the same book prints 2.5 on its
 general (non-malaria) hypoglycaemia pages while the malaria and malnutrition pathways
-now say 3.0. That question is in `tool/OPENEVIDENCE.md` and nowhere else.
+now say 3.0. That question is in `OPENEVIDENCE.md` and nowhere else.
 
 ✅ **The full WHO universal co-trimoxazole criteria came back 2026-08-31 and are
 applied.** Universal for **all** HIV-exposed and HIV-infected infants, children and

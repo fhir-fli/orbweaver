@@ -23,7 +23,7 @@
 // every shrink decision comes out wrong. This loads Roboto and FAILS LOUDLY if
 // it cannot, for the same reason page_fits_screen_test does.
 //
-// Writes every node it measures to flowchart_fits.tsv for diagnosis.
+// Writes every node it measures to build/fits/flowchart_fits.tsv for diagnosis.
 
 import 'dart:io';
 
@@ -98,7 +98,8 @@ void main() {
     });
     expect(loaded, isNotEmpty, reason: 'no topics loaded — asset path broken?');
 
-    final fh = File('flowchart_fits.tsv').openSync(mode: FileMode.write);
+    Directory('build/fits').createSync(recursive: true);
+    final fh = File('build/fits/flowchart_fits.tsv').openSync(mode: FileMode.write);
     fh.writeStringSync('topic\tvariant\tn_spilled\tfirst_spilled\n');
     fh.flushSync();
 
