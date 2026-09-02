@@ -250,6 +250,45 @@ def decision_words(text):
 # subject for these lost real rows: `T >39°C` and `Core > 32 °C`.
 SELF_IDENTIFYING = {'°C': 'temperature'}
 
+# A page's SUB-decisions. The general hypoglycaemia cutoff and the
+# severe-malnutrition one sit in the same sentence and share every decision
+# word, so decision clustering alone put them in one group; a reader separated
+# them at a glance from the qualifier, and the tool could not. Eleven of 50
+# flagged groups hold rows carrying different qualifiers. Harvested from the
+# books, not invented: these are the qualifying clauses these two volumes
+# actually attach to a cutoff.
+QUALIFIERS = [
+    ('severe malnutrition',
+     re.compile(r'severe (?:acute )?malnutrition|\bSAM\b|severely malnourished'
+                r'|kwashiorkor|marasm', re.I)),
+    ('neonate', re.compile(r'neonat|newborn|first 48 h|preterm|\bLBW\b', re.I)),
+    ('symptomatic', re.compile(r'symptomatic|fitting|convulsing|unconscious',
+                               re.I)),
+    ('malaria', re.compile(r'malaria', re.I)),
+    ('on ART', re.compile(r'\bART\b|antiretroviral', re.I)),
+    ('in pregnancy', re.compile(r'pregnan', re.I)),
+]
+
+
+def qualifiers(text, start=None, end=None):
+    """Sub-decision qualifiers governing ONE number, not the whole fragment.
+
+    `Blood glucose < 2.5 mmol/L, or < 3.0 mmol/L in severe malnutrition` holds
+    both numbers and one qualifier, and reading the whole fragment tagged both.
+    The qualifier is scoped to the CLAUSE containing the number: comma,
+    semicolon, dash and pipe end a clause, and the qualifier may follow the
+    number as well as precede it, which is how these books write it.
+    """
+    if start is None:
+        return frozenset(n for n, rx in QUALIFIERS if rx.search(text))
+    DELIM = (',', ';', '|', ' - ', '\u2014', '\u2013', '(', ')')
+    a = max((text.rfind(d, 0, start) for d in DELIM), default=-1)
+    ends = [i for i in (text.find(d, end) for d in DELIM) if i != -1]
+    b = min(ends) if ends else len(text)
+    clause = text[a + 1:b]
+    return frozenset(n for n, rx in QUALIFIERS if rx.search(clause))
+
+
 UNIT_RX = {u: re.compile(p, re.I) for u, p in UNITS.items()}
 SUBJ_RX = [(q, us, re.compile(p, re.I)) for q, us, p in SUBJECTS]
 THRESHOLD = re.compile(r'(' + CMP + r')\s*(' + _N + r')\s*')
@@ -328,7 +367,7 @@ def main():
     os.makedirs(OUTDIR, exist_ok=True)
     tf = io.open(THR_OUT, 'w', encoding='utf-8')
     tf.write('book\tfile\ttopic\tquantity\tunit\tkind\tcmp\tvalue\t'
-             'decision\tvia\tfragment\n')
+             'decision\tvia\tqualifier\tfragment\n')
     tf.flush()
     uf = io.open(UNATTR_OUT, 'w', encoding='utf-8')
     uf.write('book\tfile\ttopic\tunit\tcmp\tvalue\tdecision\tfragment\n')
@@ -375,10 +414,13 @@ def main():
                         n_un += 1
                         here_u += 1
                         continue
-                    tf.write('%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' % (
-                        book, base, title.replace('\t', ' '), q, unit,
-                        kind_of(frag, m.start(), uend), norm_cmp(m.group(1)),
-                        norm(m.group(2)), decision, via, clean))
+                    tf.write(
+                        '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n'
+                        % (book, base, title.replace('\t', ' '), q, unit,
+                           kind_of(frag, m.start(), uend), norm_cmp(m.group(1)),
+                           norm(m.group(2)), decision, via,
+                           '+'.join(sorted(qualifiers(frag, m.start(), uend))),
+                           clean))
                     tf.flush()
                     n_thr += 1
                     here_t += 1
@@ -392,13 +434,55 @@ def main():
     return 0
 
 
+def _span(value):
+    """(low, high) for a value that may be a range, or None if not numeric."""
+    v = value.replace('\u2013', '-').replace('\u2014', '-')
+    parts = [x for x in v.split('-') if x]
+    try:
+        ns = [float(x) for x in parts]
+    except ValueError:
+        return None
+    return (min(ns), max(ns))
+
+
+def why_not_a_disagreement(pairs):
+    """Say why a set of (cmp, value) is not a real difference, or None.
+
+    Twelve of 62 flagged groups were one of these two, and neither is a
+    clinical difference. They are labelled rather than dropped: the group still
+    prints, under a heading that says why, so nothing is hidden from a reader.
+    """
+    nums = {v for _, v in pairs}
+    cmps = {c for c, _ in pairs}
+    if len(nums) == 1:
+        below = {'<', '\u2264'}
+        above = {'>', '\u2265'}
+        if cmps <= below or cmps <= above:
+            return ('same number, the comparator differs only at the value '
+                    'itself')
+        return ('same number read in both directions - a trigger on one page '
+                'and a target on the other, not a disagreement about the '
+                'number')
+    spans = [_span(v) for v in nums]
+    if any(x is None for x in spans):
+        return None
+    lo = min(x[0] for x in spans)
+    hi = max(x[1] for x in spans)
+    widest = [x for x in spans if x == (lo, hi)]
+    if widest and all(lo <= x[0] and x[1] <= hi for x in spans) and \
+            len({x[0] for x in spans}) == 1:
+        return ('one book prints a wider range that contains the other; they '
+                'share a lower bound')
+    return None
+
+
 def report():
     rows = []
     with io.open(THR_OUT, encoding='utf-8') as f:
         next(f)
         for line in f:
             c = line.rstrip('\n').split('\t')
-            if len(c) == 11:
+            if len(c) == 12:
                 rows.append(c)
 
     groups = defaultdict(list)
@@ -416,20 +500,21 @@ def report():
              'the previous version did and why it reported nothing.\n\n')
     rf.flush()
 
-    n_cmp = n_not = 0
+    n_cmp = n_not = n_benign = 0
     for key in sorted(groups):
         quantity, unit, kind = key
         rs = groups[key]
         buckets = []
         for c in rs:
             ws = decision_words(c[8])
+            qs = frozenset(x for x in c[10].split('+') if x)
             for b in buckets:
-                if all(ws & w for w in b['each']):
+                if b['qual'] == qs and all(ws & w for w in b['each']):
                     b['each'].append(ws)
                     b['rows'].append(c)
                     break
             else:
-                buckets.append({'each': [ws], 'rows': [c]})
+                buckets.append({'each': [ws], 'rows': [c], 'qual': qs})
 
         rf.write('## %s — %s (%s)\n\n' % (quantity, unit, kind))
         for b in buckets:
@@ -440,7 +525,15 @@ def report():
             label = sorted({c[8].split(' › ')[0] for c in b['rows']})
             differ = len(byval) > 1
             head = ' / '.join(label)[:120]
-            if differ and len(books) > 1:
+            if b['qual']:
+                head += ' [' + ', '.join(sorted(b['qual'])) + ']'
+            benign = why_not_a_disagreement(
+                [(c[6], c[7]) for c in b['rows']]) if differ else None
+            if benign:
+                n_benign += 1
+                rf.write('### ○ %s — not a disagreement: %s\n\n'
+                         % (head, benign))
+            elif differ and len(books) > 1:
                 n_cmp += 1
                 rf.write('### ⚠ %s — %d different cutoffs, '
                          'both books\n\n' % (head, len(byval)))
@@ -455,7 +548,7 @@ def report():
             for v in sorted(byval):
                 for c in byval[v][:3]:
                     rf.write('- `%s` **%s** — %s\n  > %s\n'
-                             % (v, c[0], c[8][:110], c[10][:190]))
+                             % (v, c[0], c[8][:110], c[11][:190]))
             rf.write('\n')
             rf.flush()
         if len(buckets) > 1:
@@ -463,8 +556,9 @@ def report():
                      'decisions and are not compared with each other.\n\n'
                      % len(buckets))
     rf.close()
-    print('DONE: %d groups with differing cutoffs, %d agreed -> %s'
-          % (n_cmp, n_not, REPORT), flush=True)
+    print('DONE: %d groups with differing cutoffs, %d benign (comparator or '
+          'contained range), %d agreed -> %s'
+          % (n_cmp, n_benign, n_not, REPORT), flush=True)
 
 
 if __name__ == '__main__':

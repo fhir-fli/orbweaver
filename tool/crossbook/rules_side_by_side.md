@@ -153,7 +153,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### isoniazid — month
 
-#### ⚠ TB — Diagnosis & Systemic Score / Tuberculosis — 3, 6, 6-9
+#### ⚠ TB — Diagnosis & Systemic Score / Tuberculosis — 3, 6-9, 6
 
 - `3 month` **PB** — TB — Diagnosis & Systemic Score › Diagnosis › Well child contacts who do NOT have TB — give preventi
   > First line: 3HR — isoniazid 10mg/kg/day (7–15, max 300mg) + rifampicin 15mg/kg/day (10–20, max 600mg), daily for 3 months. The shorter rifamycin course completes far more often than 6 months
@@ -202,7 +202,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### quinine — hour
 
-#### ⚠ Drug dosages / Essential Medications — 2, 2-4, 4
+#### ⚠ Drug dosages / Essential Medications — 2, 4
 
 - `2 hour` **PB** — Essential Medications › Essential Medications › Quinine
   > Maintenance dose: 10 mg/kg IV q8hrs (dilute, give over 2 hrs)
@@ -210,14 +210,12 @@ the original protocol's and are strict). **Candidates, not findings** — read t
   > Loading dose: 20 mg/kg IV given over 4 hours (after dilution)
 - `2 hour` **WHO** — Drug dosages › Quinine › IV maintenance
   > IV: 10 mg salt/kg over 2 h, diluted in 10 ml/kg IV fluid
-- `2 hour` **WHO** — Drug dosages › Drug dosages › Quinine
-  > … as mg of quinine dihydrochloride salt. Loading dose is DOUBLE the maintenance dose. Infusion must not exceed 5 mg salt/kg per hour. At 8 h after the loading dose, give the maintenance dose
-- `2-4 hour` **WHO** — Drug dosages › Quinine › IV loading
-  > IV: 20 mg salt/kg over 2–4 h, diluted in 10 ml/kg IV fluid
+- `4 hour` **WHO** — Drug dosages › Quinine › IV loading
+  > IV: 20 mg salt/kg over 4 h (NOT faster), diluted in 10 ml/kg of DEXTROSE-containing IV fluid. Omit the loading dose entirely if quinine or mefloquine was given in the preceding 24 h
 
 ### tetracycline — day
 
-#### ⚠ Non-severe Measles / SAM — Admission & Acute Complications / Severe Complicated Measles — 7, 7-10
+#### ○ Non-severe Measles / SAM — Admission & Acute Complications / Severe Complicated Measles — not a disagreement: one book prints a wider range that contains the other; they share a lower bound
 
 - `7-10 day` **PB** — SAM — Admission & Acute Complications › pp.64–65 · the 10-step checklist › 7. Eye signs — Vitamin A 
   > Chloramphenicol or tetracycline eyedrops, 4 times a day for 7–10 days
@@ -230,7 +228,7 @@ the original protocol's and are strict). **Candidates, not findings** — read t
 
 ### whole blood — hour
 
-#### ⚠ SAM — Admission & Acute Complications / Severe Malaria — 3-4, 3
+#### ○ SAM — Admission & Acute Complications / Severe Malaria — not a disagreement: one book prints a wider range that contains the other; they share a lower bound
 
 - `3 hour` **PB** — SAM — Admission & Acute Complications › pp.64–65 · the 10-step checklist › 5. Severe Anemia
   > No heart failure: 10mls/kg whole blood slowly over 3hrs

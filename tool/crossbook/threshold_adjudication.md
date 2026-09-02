@@ -105,12 +105,18 @@ and the first book's page covers both adults and children.
 
 ## ⚠ Limits of this instrument, recorded rather than papered over
 
-- **Decision clustering merges a page's sub-decisions.** The hypoglycaemia group
-  holds the general cutoff and the severe-malnutrition one together, because both
-  say hypoglycaemia. The qualifier is in the fragment, so a reader separates them at
-  a glance, but the tool cannot.
-- **A comparator difference alone raises a group.** `< 90` against `≤ 90` and
-  `≥ 35` against `> 35` are flagged and are never clinically meaningful.
+- ✅ **Both fixed 2026-09-01.** A cutoff now carries the **qualifier governing its
+  own clause** — severe malnutrition, neonate, symptomatic, malaria, on ART, in
+  pregnancy — scoped by comma, semicolon, dash, pipe and bracket, because
+  `< 2.5 mmol/L, or < 3.0 in severe malnutrition` holds two numbers and one
+  qualifier. And a group whose values differ only by **comparator** (`< 90` against
+  `≤ 90`), by **direction** (a trigger on one page, a target on the other), or by
+  **one range containing another that shares its lower bound** is now marked **○ not
+  a disagreement** with the reason in the heading. **Nothing is dropped** — ranking an
+  item out of the report is not this tool's call. 62 flagged groups became 49, with 12
+  benign and the rest resolving as agreed once sub-decisions separate.
+- ⚠️ **Still true:** the qualifier vocabulary is six terms harvested from these two
+  books. A sub-decision written some other way still merges.
 - **49 numbers are unattributed** and listed in `thresholds_unattributed.tsv`. Three
   tuberculin indurations in a TB scoring table name their subject nowhere on the
   page; the rest are compression depth, calf difference, a Ballard heel-toe, and

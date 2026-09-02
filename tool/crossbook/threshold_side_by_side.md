@@ -27,7 +27,7 @@ pooled, which is what the previous version did and why it reported nothing.
 
 ## CD4 count — % (level)
 
-### ⚠ Co-trimoxazole Prophylaxis / Opportunistic Infections in HIV — 2 different cutoffs, both books
+### ○ Co-trimoxazole Prophylaxis / Opportunistic Infections in HIV — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 14` **PB** — Opportunistic Infections in HIV › pp.135–138 · prophylaxis & treatment by OI › Prophylaxis — when to give to p
   > PCP / toxoplasma encephalitis — CD4 < 200, or CD4 < 14%. Use the percentage below age 6 and the absolute count of 200 at 6 and over. 14% is the same figure for a child, an adolescent and an 
@@ -46,20 +46,23 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 15` **WHO** — Side-effects & Monitoring › 8.2.3 · Table 26 · IRIS · viral-load monitoring › Immune reconstitution inflammato
   > IRIS is a spectrum of signs and symptoms from immune recovery weeks to months after starting ART — most often in children who start with very low CD4 (< 15%). It reflects unmasking of latent
 
-### ⚠ Vaccination — 2 different cutoffs, WHO only
+### ○ Vaccination — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 15` **WHO** — Vaccination › 8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4 › Measles / MMR
   > …es- endemic settings). Children vaccinated before effective ART should receive two appropriately spaced MMR doses after ART is established, unless severely immunosuppressed (CD4 < 15% or < 
-- `< 15` **WHO** — Vaccination › 8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4 › Yellow fever — CD4 threshold
-  > Yellow fever vaccine is a live vaccine — contraindicated in children with symptomatic HIV or CD4 < 15%. It may be considered in an asymptomatic child with adequate CD4 if exposure risk is hi
 - `> 15` **WHO** — Vaccination › 8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4 › New / expanded vaccines
   > Varicella (VZV-seronegative, 1–8 yr): give if CD4 > 15%; contraindicated if CD4 low.
 
-> NOT COMPARABLE: the 4 groups above gate different decisions and are not compared with each other.
+### Vaccination [symptomatic] — agreed at < 15
+
+- `< 15` **WHO** — Vaccination › 8.3.1 · full EPI + rotavirus/HPV/mening · live-vaccine CD4 › Yellow fever — CD4 threshold
+  > Yellow fever vaccine is a live vaccine — contraindicated in children with symptomatic HIV or CD4 < 15%. It may be considered in an asymptomatic child with adequate CD4 if exposure risk is hi
+
+> NOT COMPARABLE: the 5 groups above gate different decisions and are not compared with each other.
 
 ## CD4 count — /mm3 (level)
 
-### Cryptococcal Meningitis / Fungal Infections — agreed at ≥ 100
+### Cryptococcal Meningitis / Fungal Infections [on ART] — agreed at ≥ 100
 
 - `≥ 100` **WHO** — Cryptococcal Meningitis › 6.3.4 · HIV · amphotericin + flucytosine › Treatment — three phases
   > …conazole 6 mg/kg/day in a child, 200 mg/day in an adult — not the 800 mg consolidation cap — for a minimum of 1 year. Stop only after ≥ 1 year of antifungal therapy with CD4 ≥ 100/mm³ susta
@@ -279,7 +282,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 33.3` **PB** — Adult Hyperglycaemia, DKA & HHS › p.105 · RBS > 14 · insulin & fluid protocols › RBS > 33.3 mmol/L?
   > RBS > 33.3 mmol/L?
 
-### ⚠ IV Glucose (Hypoglycaemia) / Measuring Blood Glucose / SAM — Admission & Acute Complications / Severe Malaria / Step 1 · — 8 different cutoffs, both books
+### ⚠ IV Glucose (Hypoglycaemia) / Measuring Blood Glucose / SAM — Admission & Acute Complications / Severe Malaria / Step 1 · — 7 different cutoffs, both books
 
 - `< 2.2` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › Neonatal thresholds
   > Symptomatic, any age — treat promptly at < 2.2 mmol/L (40 mg/dL).
@@ -293,14 +296,12 @@ pooled, which is what the previous version did and why it reported nothing.
   > Blood glucose <3mmol/L (54mg/dL). Treatment:
 - `< 3` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › When & what to give
   > Treat as hypoglycaemia if glucose is < 2.5 mmol/L (45 mg/dL), or < 3 mmol/L (54 mg/dL) in a severely malnourished child, or if it cannot be measured.
-- `< 3` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — hypoglycaemia
-  > Blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe acute malnutrition; common in children < 3 years, those with convulsions or hyperparasitaemia, and the comatose — it can mi
+- `< 3` **WHO** — Step 1 · Hypoglycaemia › 7.4.1 · 10% glucose 50 ml · feed every 2 h › Monitoring & prevention
+  > Recheck (finger/heel-prick Dextrostix) after 30 min. If glucose is still < 3 mmol/L, repeat the 10% glucose or sugar solution.
 - `> 2.2` **WHO** — IV Glucose (Hypoglycaemia) › Neonatal thresholds › Asymptomatic, at risk, first 48 h:** maintain **> 2.8 mmol/
   > AAP is staged more loosely over the same window: > 2.2 mmol/L (40 mg/dL) in the first 4 h before a feed, > 2.5 mmol/L (45 mg/dL) from 4–24 h.
 - `> 2.5` **WHO** — IV Glucose (Hypoglycaemia) › Neonatal thresholds › Asymptomatic, at risk, first 48 h:** maintain **> 2.8 mmol/
   > AAP is staged more loosely over the same window: > 2.2 mmol/L (40 mg/dL) in the first 4 h before a feed, > 2.5 mmol/L (45 mg/dL) from 4–24 h.
-- `> 2.8` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › Neonatal thresholds
-  > Asymptomatic, at risk, first 48 h: maintain > 2.8 mmol/L (50 mg/dL) (PES). An infant who cannot hold that in the first 48 h may have a disorder causing persistent hypoglycaemia.
 - `> 3.3` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › Neonatal thresholds
   > After 48 h: target > 3.3 mmol/L (60 mg/dL).
 - `> 3.9` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › Neonatal thresholds
@@ -318,19 +319,29 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 2.5` **WHO** — Drug dosages › Drug dosages › Quinine
   > …ing dose takes 4 h and must never be given over 2. Infuse in DEXTROSE-containing fluid, because quinine is a potent stimulus to hyperinsulinaemic hypoglycaemia — check the glucose and treat
 
+### IV Glucose (Hypoglycaemia) [neonate] — agreed at > 2.8
+
+- `> 2.8` **WHO** — IV Glucose (Hypoglycaemia) › IMCI Chart 10 · 2 ml/kg of 10% glucose › Neonatal thresholds
+  > Asymptomatic, at risk, first 48 h: maintain > 2.8 mmol/L (50 mg/dL) (PES). An infant who cannot hold that in the first 48 h may have a disorder causing persistent hypoglycaemia.
+
 ### Danger Signs (Newborn & Young Infant) — agreed at < 2.6
 
 - `< 2.6` **WHO** — Danger Signs (Newborn & Young Infant) › 3.6 · non-specific signs of severe illness + emergency care › Emergenc
   > If drowsy, unconscious or convulsing, check blood glucose. If < 2.6 mmol/L (< 47 mg/dl) — the operational neonatal threshold; the 2013 print's 2.2 mmol/L is lower than current guidance — giv
 
-### ⚠ Severe Malaria — 2 different cutoffs, WHO only
+### Severe Malaria — agreed at < 2.5
 
 - `< 2.5` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Laboratory findings
   > hypoglycaemia — blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe malnutrition; check in all children with signs of severe malaria
+
+### Severe Malaria [severe malnutrition] — agreed at < 3
+
 - `< 3` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Laboratory findings
   > hypoglycaemia — blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe malnutrition; check in all children with signs of severe malaria
+- `< 3` **WHO** — Severe Malaria › 6.2.1 · parenteral artesunate · complications › Complication — hypoglycaemia
+  > Blood glucose < 2.5 mmol/L (< 45 mg/dl), or < 3.0 mmol/L in severe acute malnutrition; common in children < 3 years, those with convulsions or hyperparasitaemia, and the comatose — it can mi
 
-> NOT COMPARABLE: the 7 groups above gate different decisions and are not compared with each other.
+> NOT COMPARABLE: the 9 groups above gate different decisions and are not compared with each other.
 
 ## blood pressure — mmHg (delta)
 
@@ -389,7 +400,7 @@ pooled, which is what the previous version did and why it reported nothing.
 
 ## fractional excretion of sodium — % (level)
 
-### ⚠ Acute Kidney Injury / Sodium (Na⁺) Abnormalities — 2 different cutoffs, PB only
+### ○ Acute Kidney Injury / Sodium (Na⁺) Abnormalities — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 1` **PB** — Acute Kidney Injury › p.111 · prerenal / intrinsic / postrenal › Any of: FeNa < 1%, BUN/Cr > 20, U_Na < 20, U_
   > Any of: FeNa < 1%, BUN/Cr > 20, UNa < 20, Uosm > 500?
@@ -579,7 +590,7 @@ pooled, which is what the previous version did and why it reported nothing.
 
 ## height/length — cm (delta)
 
-### ⚠ SAM — Assessment & Classification — 2 different cutoffs, PB only
+### ○ SAM — Assessment & Classification — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 87` **PB** — SAM — Assessment & Classification › Nutritional Assessment › Length/height
   > Length (child laying down): <2yrs, or <87cm if age unknown
@@ -588,7 +599,7 @@ pooled, which is what the previous version did and why it reported nothing.
 
 ## height/length — cm (level)
 
-### ⚠ Weight-for-height (2–5 y) / Weight-for-length (birth–2 y) — 2 different cutoffs, WHO only
+### ○ Weight-for-height (2–5 y) / Weight-for-length (birth–2 y) — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 85` **WHO** — Weight-for-height (2–5 y) › Weight-for-height (2–5 y) › Annex 5 · A5.2 — weight-for-height z-scores (65–120 cm
   > …he child's height, then read the weight across the −3 SD … 3 SD columns. −3 SD = severe acute malnutrition (SAM); −2 to −3 SD = moderate wasting. For younger / shorter children (< 85 cm, me
@@ -682,7 +693,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 90` **PB** — Suspected Snake Bite › pp.39–40 · envenomation + antivenom › Management
   > Start Oxygen if spO2 <90%
 
-### ⚠ Asthma / Paediatric Pneumonia (2–59 months) / Pneumonia / Wheezing Child (Bronchiolitis & Asthma) — 2 different cutoffs, both books
+### ○ Asthma / Paediatric Pneumonia (2–59 months) / Pneumonia / Wheezing Child (Bronchiolitis & Asthma) — not a disagreement: same number, the comparator differs only at the value itself
 
 - `< 90` **PB** — Paediatric Pneumonia (2–59 months) › p.46 · severity + antibiotics › Cough or difficulty breathing PLUS any of
   > Central cyanosis or O2sat <90% | AVPU = 'V, P or U' | Inability to breastfeed/drink | Severe respiratory distress (e.g. grunting, very severe chest indrawing)
@@ -717,7 +728,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `≤ 90` **WHO** — Asthma › 4.5.2 · bronchodilator · steroids · oxygen › Oxygen
   > Give oxygen to keep SpO₂ > 95% in any child with asthma who is cyanosed (SpO₂ ≤ 90%) or whose breathing difficulty interferes with talking, eating or breastfeeding.
 
-### ⚠ Adult Meningitis / Bacterial Meningitis / Pediatric Meningitis — 2 different cutoffs, both books
+### ○ Adult Meningitis / Bacterial Meningitis / Pediatric Meningitis — not a disagreement: same number, the comparator differs only at the value itself
 
 - `< 90` **PB** — Pediatric Meningitis › pp.54–55 · recognition + Rx cascade › Management (Rx >1 month)
   > Start Oxygen if spO2 < 90%, insert IV
@@ -764,7 +775,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `< 90` **PB** — TIA / Stroke › pp.96–98 · ROSIER · LAPSS · ABCD3 · NIHSS › Management
   > Start oxygen if SpO₂ < 90%
 
-### ⚠ Adult Sepsis / Severe Pneumonia — 2 different cutoffs, both books
+### ○ Adult Sepsis / Severe Pneumonia — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 90` **PB** — Adult Sepsis › pp.99–100 · qSOFA · SOFA · antibiotics › Management
   > Start oxygen if SpO₂ < 90%
@@ -854,7 +865,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 90` **WHO** — Timing of Discharge › 12.1 · improved markedly · SpO2 > 90% · individual basis › When is a child ready?
   > …he clinical condition has improved markedly (afebrile, alert, eating and sleeping normally) and oral treatment has been started. A child who needed oxygen should maintain SpO₂ > 90% in room
 
-### ⚠ Danger Signs (Newborn & Young Infant) / Triage — 2 different cutoffs, WHO only
+### ○ Danger Signs (Newborn & Young Infant) / Triage — not a disagreement: same number, the comparator differs only at the value itself
 
 - `< 90` **WHO** — Triage › 1.1 · emergency / priority / non-urgent › Emergency signs
   > Central cyanosis — or SpO₂ < 90% where pulse oximetry is available
@@ -1185,7 +1196,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `≥ 39` **WHO** — Mastoiditis › 6.7.1 · tender swelling behind the ear › Supportive care & monitoring
   > High fever ≥ 39 °C causing distress → paracetamol.
 
-### ⚠ Acute Otitis Media — 2 different cutoffs, WHO only
+### ○ Acute Otitis Media — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 39` **WHO** — Acute Otitis Media › 6.7.2 · high-dose amoxicillin · wicking › Watchful waiting (selected children)
   > …ul waiting (observation with rescue antibiotics if symptoms worsen or fail to improve) is a safe option for children ≥ 2 years with mild, unilateral AOM (mild otalgia, temperature < 39 °C, 
@@ -1204,7 +1215,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 28` **WHO** — Intraoperative Care › 9.1.2 · anaesthesia · ketamine · cuffed airway › Hypothermia
   > Small children lose heat rapidly (greater relative surface area, poor insulation) — hypothermia affects drug metabolism, anaesthesia and blood coagulation. Keep theatre > 28 °C for infants/s
 
-### ⚠ Drug dosages — 2 different cutoffs, WHO only
+### ○ Drug dosages — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 37.5` **WHO** — Drug dosages › Whole blood › Severe anaemia — afebrile (T < 37.5 °C)
   > Severe anaemia — afebrile (T < 37.5 °C)
@@ -1222,7 +1233,7 @@ pooled, which is what the previous version did and why it reported nothing.
 - `> 15` **PB** — TB — Pulmonary Scoring Systems › p.72 · 8-point · Edwards · Brazilian › Brazilian Ministry of Health Scoring S
   > >15mm in children given BCG vaccine within last 2 years | +15
 
-### ⚠ Tuberculosis — 2 different cutoffs, WHO only
+### ○ Tuberculosis — not a disagreement: same number read in both directions - a trigger on one page and a target on the other, not a disagreement about the number
 
 - `< 10` **WHO** — Tuberculosis › 4.7.2 · Xpert Ultra · HRZE · 4-mo nonsevere › Investigations
   > Mantoux / PPD skin test — > 10 mm suggests TB; < 10 mm is equivocal after BCG and may be falsely negative in HIV, miliary disease, severe malnutrition or recent measles.

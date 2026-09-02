@@ -39,7 +39,8 @@ from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import crossbook_dose_extract as ex  # noqa: E402
-from threshold_extract import decision_words  # noqa: E402
+from threshold_extract import (decision_words,  # noqa: E402
+                               why_not_a_disagreement)
 
 OUTDIR = ex.OUTDIR
 DUR_OUT = os.path.join(OUTDIR, 'durations.tsv')
@@ -198,7 +199,7 @@ def main():
              '**Candidates, not findings** — read the context.\n\n')
     rf.write('## Durations — same drug, different course length\n\n')
     rf.flush()
-    n_cand = n_same = 0
+    n_cand = n_same = n_benign = 0
     for drug in sorted(dur):
         for unit in sorted(dur[drug]):
             books = dur[drug][unit]
@@ -228,6 +229,22 @@ def main():
                 if not wrote:
                     rf.write('### %s — %s\n\n' % (drug, unit))
                     wrote = True
+                # A course of 3-5 days against one of 3 days is one book
+                # printing a wider range, not a contradiction. Three of the 14
+                # groups were only that. Labelled, never dropped.
+                benign = why_not_a_disagreement([('=', v) for v in vals])
+                if benign:
+                    n_benign += 1
+                    label = ' / '.join(sorted({r[4].split(' › ')[0]
+                                               for r in b['rows']}))[:110]
+                    rf.write('#### ○ %s — not a disagreement: %s\n\n'
+                             % (label, benign))
+                    for r in sorted(b['rows']):
+                        rf.write('- `%s %s` **%s** — %s\n  > %s\n'
+                                 % (r[1], unit, r[0], r[4][:100], r[3][:190]))
+                    rf.write('\n')
+                    rf.flush()
+                    continue
                 n_cand += 1
                 label = ' / '.join(sorted({r[4].split(' › ')[0]
                                            for r in b['rows']}))[:110]
@@ -242,7 +259,9 @@ def main():
                          'for this drug are not compared with these.\n\n'
                          % (len(buckets) - 1))
     rf.close()
-    print('DONE: %d duration candidates across both books, %d groups agreed or single-book -> %s' % (n_cand, n_same, REPORT), flush=True)
+    print('DONE: %d duration candidates across both books, %d benign (a wider '
+          'range containing a narrower), %d agreed or single-book -> %s'
+          % (n_cand, n_benign, n_same, REPORT), flush=True)
 
 
 def _k(v):
