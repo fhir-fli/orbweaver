@@ -1,6 +1,0 @@
-book	file	decision	sicker	milder	kind	detail
-protocolbook	pb_047_paediatric_dka.yaml	Ketones in Urine?	severity: emergency	severity: priority	MISSING DRUG	glucose, insulin
-protocolbook	pb_047_paediatric_dka.yaml	Ketones in Urine?	severity: emergency	severity: priority	THINNER ARM	sicker 4 vs milder 8
-wvems	wvems_2026_012.yaml	(severity split)	label "Severe"	label "Moderate"	MISSING DRUG	atropine
-wvems	wvems_2026_014.yaml	(severity split)	label "Severe"	label "Moderate"	MISSING DRUG	adenosine, amiodarone
-wvems	wvems_2026_020.yaml	(severity split)	label "Severe"	label "Moderate"	MISSING DRUG	ketorolac, paracetamol

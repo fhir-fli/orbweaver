@@ -48,3 +48,21 @@ tool/__pycache__/
 # Test diagnostics. Kept out of the repo root: the root is where
 # Grey looks, and OPENEVIDENCE.md lives there now.
 build/fits/
+
+# Generated audit output. Every one of these is rebuilt by the script named in
+# its own header, and a committed snapshot goes stale silently: on 2026-08-30 a
+# stale doses.tsv made the formulary parity guard report an entry as orphaned,
+# and a stale hand-off list nearly sent superseded doses to a reviewer.
+# The ADJUDICATIONS in tool/crossbook/*_adjudication.md and
+# loop_chart_disposition.md are NOT generated and stay tracked: they are what
+# stops a later pass re-deriving a question that was already settled.
+tool/crossbook/*.tsv
+tool/crossbook/*.txt
+tool/crossbook/candidates.md
+tool/crossbook/side_by_side.md
+tool/crossbook/rules_side_by_side.md
+tool/crossbook/threshold_side_by_side.md
+tool/*_parity.tsv
+tool/protocolbook_clipped_text.tsv
+tool/protocolbook_flattened_figures.tsv
+tool/who_imci_chart_pages.tsv
