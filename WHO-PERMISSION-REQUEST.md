@@ -71,8 +71,8 @@ that is an inference from their uniform style, not a statement in the book.
 Adapt as you like; the facts are right.
 
 > Orbweaver is a free offline clinical reference app for health workers in low-resource
-> settings. It renders the Pocket book alongside two other references so a clinician can
-> compare them at the bedside. It is not sold, carries no advertising, no analytics and
+> settings, rendering the Pocket book on a phone screen for use at the bedside. It is
+> not sold, carries no advertising, no analytics and
 > no in-app purchases, collects no data of any kind, and requires no network connection.
 > It is currently in closed testing with a small number of named clinicians. The text is
 > restructured into topics for a phone screen rather than reproduced page-for-page, and
@@ -100,10 +100,9 @@ Paste this into the 4000-character box.
 
 > The material will be used in Orbweaver, a free offline clinical reference application
 > for Android and iOS, written for health workers in low-resource district hospitals.
-> The Pocket book is rendered as 259 topics laid out for a phone screen, alongside two
-> other references — a paediatric and internal medicine protocol handbook written by the
-> applicant, and a regional prehospital protocol set. A clinician can hold the same
-> question against all three at the bedside.
+> The Pocket book is rendered as 259 topics laid out for a phone screen, so a clinician
+> can find the guidance for the child in front of them without carrying the printed
+> book. Navigation follows the book's own chapter and section structure.
 >
 > Thirteen of the manual-technique line drawings are reproduced as printed: back slaps,
 > chest thrusts, the Heimlich manoeuvre, neutral and tilting airway positions,
@@ -149,3 +148,13 @@ Do **not** select print, journal, book or presentation: none applies.
 them. Drop it if you would rather this permission cover a public free listing outright —
 in which case ask for that scope explicitly in the box above, since a permission granted
 for closed testing may not cover a public release.
+
+
+---
+
+# 🛑 Do not mention the app's other books in this request
+
+The request is about the Pocket book and nothing else. The other two references the app
+carries are irrelevant to WHO's decision, and naming them invites questions about
+juxtaposition and context that have nothing to do with whether this reuse is permitted.
+Removed from both draft paragraphs on 2026-09-02.
