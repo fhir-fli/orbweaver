@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!-- The app has no networking, no crypto and no HTTPS calls of its own, so
+	     it uses no non-exempt encryption. Declaring this once stops App Store
+	     Connect asking the export-compliance question by hand on every upload.
+	     If any networking is ever added, revisit this before answering again. -->
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
