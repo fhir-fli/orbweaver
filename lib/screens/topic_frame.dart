@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:orbweaver/data/topic_loader.dart';
 import 'package:orbweaver/models/book.dart';
-import 'package:orbweaver/screens/book_screen.dart' show kBookRouteName;
 import 'package:orbweaver/models/topic.dart';
+import 'package:orbweaver/screens/book_screen.dart' show kBookRouteName;
+import 'package:orbweaver/services/feedback_email.dart';
 import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
@@ -383,6 +384,26 @@ class _TopicPagerState extends State<TopicPager> {
     _hCtrl.jumpToPage(index);
   }
 
+  /// Hands the reader's mail app a report already carrying the page, the book
+  /// and the build. Nothing is sent from the app itself: the app has no network
+  /// code, and a clinician mid-shift will not type a topic id out by hand.
+  Future<void> _reportProblem(BookTopic topic) async {
+    final ok = await sendFeedback(FeedbackContext(
+      bookId: widget.bookId,
+      topicId: topic.id,
+      topicTitle: topic.title,
+      pageLabel: _badge.value == null ? null : 'p.${_badge.value}',
+    ));
+    if (!ok && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('No mail app found. Write to $kFeedbackAddress'),
+          duration: Duration(seconds: 6),
+        ),
+      );
+    }
+  }
+
   void _goHome() {
     Navigator.of(
       context,
@@ -429,6 +450,11 @@ class _TopicPagerState extends State<TopicPager> {
                 setState(() => _searchOpen = true);
               }
             },
+          ),
+          IconButton(
+            tooltip: 'Report a problem with this page',
+            icon: const Icon(Icons.flag_outlined),
+            onPressed: () => _reportProblem(active),
           ),
           IconButton(
             tooltip: 'All protocols',

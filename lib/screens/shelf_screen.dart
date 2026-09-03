@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
 import 'package:orbweaver/screens/credits_screen.dart';
+import 'package:orbweaver/services/feedback_email.dart';
 
 /// Library shelf — grid of book covers. Tapping a cover pushes the
 /// book's topic list. The book list is loaded from the manifest YAMLs
@@ -20,6 +21,14 @@ class ShelfScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF1E4E8C),
         foregroundColor: Colors.white,
         actions: [
+          // General feedback, for anything not tied to one page. The per-page
+          // button on a topic carries the page id; this one does not, so it is
+          // tagged "general" and still lands in the same mail folder.
+          IconButton(
+            icon: const Icon(Icons.flag_outlined),
+            tooltip: 'Report a problem or suggest something',
+            onPressed: () => sendFeedback(const FeedbackContext()),
+          ),
           // Not decoration: the bundled Wikimedia images are CC BY and CC BY-SA,
           // and both require the attribution reach whoever sees the work.
           IconButton(
