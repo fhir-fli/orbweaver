@@ -15,6 +15,10 @@ dependencies:
   yaml: ^3.1.2
 
 dev_dependencies:
+  # One 1024x1024 PNG at assets/icon/orbweaver.png generates every Android
+  # density and every iOS entry. Run: dart run flutter_launcher_icons
+  # Both platforms still ship the stock Flutter logo until that file exists.
+  flutter_launcher_icons: ^0.14.1
   flutter_test:
     sdk: flutter
   very_good_analysis: ^9.0.0
@@ -59,3 +63,15 @@ flutter:
         - asset: assets/fonts/RobotoCondensed-BoldItalic.ttf
           weight: 700
           style: italic
+
+# Launcher icons. Drop a square 1024x1024 PNG at the path below, then run
+#   dart run flutter_launcher_icons
+# It writes the five Android mipmap densities and the sixteen iOS entries.
+# `remove_alpha_ios` is required: the App Store rejects an icon with an alpha
+# channel, and a PNG exported from most tools has one.
+flutter_launcher_icons:
+  image_path: "assets/icon/orbweaver.png"
+  android: "ic_launcher"
+  ios: true
+  remove_alpha_ios: true
+  background_color_ios: "#FFFFFF"

@@ -1,0 +1,89 @@
+Orbweaver
+=========
+
+This repository contains two different things under two different terms.
+
+------------------------------------------------------------------------
+1. THE SOFTWARE
+------------------------------------------------------------------------
+
+The application source — everything under lib/, test/, tool/, android/,
+ios/, web/ and the project configuration — is:
+
+    Copyright (c) 2026 J. Grey Faulkenberry
+
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+
+    The above copyright notice and this permission notice shall be
+    included in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+    BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+    ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+    CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+(The MIT License.)
+
+------------------------------------------------------------------------
+2. THE CLINICAL CONTENT — NOT COVERED BY THE ABOVE
+------------------------------------------------------------------------
+
+Everything under assets/books/ is clinical reference material, and the
+licence above does NOT apply to it. Three separate bodies of work are
+bundled there and each carries its own terms.
+
+  assets/books/protocolbook/
+      "Quick Reference: Basic Protocols in Paediatrics and Internal
+      Medicine for Resource Limited Settings"
+      Copyright (c) J. Grey Faulkenberry. All rights reserved.
+
+  assets/books/who_imci/
+      "Pocket book of hospital care for children: guidelines for the
+      management of common childhood illnesses, 2nd ed."
+      (c) World Health Organization 2013. All rights reserved.
+      WHO's open access licence applies to material published from
+      November 2016; this edition predates it, so reuse requires
+      permission from WHO Press. A permissions request was submitted on
+      2026-09-02 and, per WHO's terms, confers no authorisation unless
+      and until it is approved. See WHO-PERMISSION-REQUEST.md.
+      WHO is not responsible for any changes made to the original
+      content, and responsibility for this adaptation rests solely with
+      the publisher of this application.
+
+  assets/books/wvems/
+      "WVEMS Prehospital Protocols, 2026 edition"
+      Copyright (c) West Virginia Emergency Medical Services.
+      Reproduced as printed. WVEMS is the authority for crews operating
+      under these protocols.
+
+  assets/books/wvems/images/
+      Representative dosage-form and equipment illustrations from
+      Wikimedia Commons, under CC BY, CC BY-SA and CC0. Every author,
+      source and licence is listed in assets/credits.yaml and displayed
+      in the application on its credits screen, which is what CC BY and
+      CC BY-SA require.
+
+Anyone reusing this repository is responsible for obtaining their own
+permission for the content in assets/books/. Cloning the code does not
+carry any right to redistribute the books.
+
+------------------------------------------------------------------------
+3. NOT MEDICAL ADVICE
+------------------------------------------------------------------------
+
+This software renders clinical reference material for use by qualified
+health workers exercising their own judgement. It is not a substitute for
+clinical judgement, it does not establish a standard of care, and it is
+provided without warranty of accuracy or fitness for any clinical
+purpose. Verify every dose against a current source before administering
+it.

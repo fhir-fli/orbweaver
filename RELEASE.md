@@ -16,7 +16,11 @@ Google Play rejects a debug-signed bundle outright. Create an upload keystore, p
 its details in `android/key.properties` (gitignored), and point the release
 signingConfig at it.
 
-**2. Both platforms still ship the stock Flutter logo.**
+**2. Both platforms still ship the stock Flutter logo.** *(Pipeline ready — only the
+artwork is missing. Drop a square 1024×1024 PNG at `assets/icon/orbweaver.png` and run
+`dart run flutter_launcher_icons`; it writes all five Android densities and all sixteen
+iOS entries. See `assets/icon/README.md` for the three constraints the artwork has to
+survive.)*
 All five Android densities are byte-identical to the Flutter template, and the iOS
 1024 icon is the Flutter logo. Apple rejects placeholder artwork; Play will take it
 but nobody will install it. The icon sets themselves are complete — 5 Android
@@ -67,7 +71,6 @@ if you want it from the tool rather than from the archive.
   number, and Play will not accept a repeat.
 - **`description:` in `pubspec.yaml` is one line** — "Clinical protocol renderer for
   mobile." The store listing needs its own copy anyway.
-- **No `LICENSE` file.**
 - Gradle 8.14.0, AGP 8.11.1 and Kotlin 2.2.20 all warn that Flutter support is being
   dropped soon. Not blocking today.
 
