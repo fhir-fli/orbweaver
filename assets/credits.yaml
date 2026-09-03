@@ -13,10 +13,13 @@ credits:
     note: The ProtocolBook. Written by this app's author.
   - title: Pocket Book of Hospital Care for Children, 2nd edition (2013)
     by: World Health Organization
-    note: © World Health Organization 2013. All rights reserved. WHO is not responsible for any changes
-      made to the original content, and responsibility for this adaptation rests solely with the publisher
-      of this app. WHO's open access licence covers material published from November 2016; this edition
-      predates it, so reuse requires permission from WHO Press.
+    note: '**This app was not developed or published by the World Health Organization and should not
+      be credited to it.** Responsibility for this adaptation rests solely with the publisher of this app,
+      and the World Health Organization is not responsible for any changes made to the original content.
+      Reproduced under a non-exclusive licence granted 2026-09-03, request ID 202610340. Bibliographic
+      reference: Pocket book of hospital care for children: guidelines for the management of common
+      childhood illnesses, 2nd ed. Geneva: World Health Organization; 2013. ISBN 978 92 4 154837 3.
+      Copyright in the original material remains with the World Health Organization.'
   - title: WVEMS Prehospital Protocols, 2026 edition
     by: West Virginia Emergency Medical Services
     note: Reproduced as printed. WVEMS is the authority for crews operating under these protocols; where

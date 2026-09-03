@@ -74,53 +74,24 @@ if you want it from the tool rather than from the archive.
 - Gradle 8.14.0, AGP 8.11.1 and Kotlin 2.2.20 all warn that Flutter support is being
   dropped soon. Not blocking today.
 
-## 🛑 Content rights — the item I would look at before the account
+## ✅ Content rights — WHO licence GRANTED
 
-The app reproduces two bodies of work that are not ours, and neither carries a
-statement anywhere in the bundle.
-
-**The WHO Pocket Book.** Its own copyright page reads, verbatim:
-
-> © World Health Organization 2013
-> All rights reserved.
-
-with permission requests routed to WHO Press through
-`who.int/about/licensing/copyright_form`. **No Creative Commons licence is named for
-this title.** What was searched: WHO IRIS (`iris.who.int/handle/10665/81170`, which
-returns 403 to an automated fetch) and a web search across who.int, fctc.who.int and
-NCBI Bookshelf. A sibling title — *Pocket book of primary health care for children and
-adolescents* — **does** carry CC BY-NC-SA 3.0 IGO, so WHO does license some of this
-material openly; that finding is about a different book and does not transfer.
-
-✅ **Settled by WHO's own reply, 2026-09-02.** WHO's open access policy applies to
-publications **from November 2016**. Material predating that is "pre–Open Access", and
-for it WHO states plainly: *"Permission IS required for WHO materials that are not
-available under the CC BY-NC-SA 3.0 IGO licence. To request permission, please complete
-our online permissions form."* **The Pocket Book 2nd edition is 2013, so it is
-pre–Open Access and permission is required.** The channel is the online permissions
-form, not a mailbox — a generic enquiry only returns the automated notice.
-
-Two further points from that reply that apply here. **Commercial use needs permission
-either way**, open access or not, so a paid listing changes the request. And **not
-everything inside a WHO publication is WHO's**: anything credited to another source
-carries its own permission, and WHO puts that risk on the reuser.
-
-Worth knowing alongside it: **WHO publishes its own e-Pocketbook app of this same
-content**, so the content appearing in a store has precedent.
+**Request ID 202610340, granted 2026-09-03.** Non-exclusive, worldwide, royalty-free,
+covering current and future releases and both closed testing and a free public listing.
+No further request is needed at public release. Every condition, and the two that
+required changes to the app, are in `WHO-LICENCE.md`. **Do not re-raise this.**
 
 **The WVEMS protocols.** No copyright statement was found on the first three pages of
-the 2026 PDF. WVEMS is the authority for crews operating under it, which is why this
-repo treats its figures as strict and never reconciles them against the other books.
-Whether redistribution needs their sign-off is a question for them.
+the 2026 PDF. WVEMS is the authority for crews operating under it. Whether
+redistribution needs their sign-off is a question for them, and it is now the only
+content-rights item left open.
 
 **The ProtocolBook is yours**, so it raises nothing.
 
-**Image attribution is a compliance gap we can fix ourselves.** The Wikimedia images in
-`assets/books/wvems/images/` are CC BY, CC BY-SA and CC0, and
-`assets/books/wvems/images/CREDITS.md` lists every author, source and licence properly.
-It ships in the bundle and **nothing in the app ever displays it** — no code reads that
-file. CC BY and CC BY-SA require attribution be given to the people who see the work.
-An in-app credits screen closes this, and it is a small piece of work.
+**Image attribution: ✅ done.** The Wikimedia images are CC BY, CC BY-SA and CC0, and
+`assets/credits.yaml` is now rendered by an in-app credits screen, which is what those
+licences require.
+
 
 ## 🛑 The account question, which is yours and not a technical one
 

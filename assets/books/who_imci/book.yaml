@@ -1,7 +1,13 @@
 book:
   id: "who_imci"
   title: "Hospital Care for Children"
-  subtitle: "WHO · IMCI 2nd ed."
+  # Clause 9 of the licence granted 2026-09-03 (request 202610340) forbids use
+  # of the WHO name or emblem, or any abbreviation of it. Clause 3 separately
+  # REQUIRES a bibliographic acknowledgement, which the credits screen carries.
+  # The reading applied here: cite the source where a citation belongs, and do
+  # not use the name as a label on a book cover, which is nearer to branding.
+  # Reverse this if the licence is read the other way.
+  subtitle: "Pocket Book · 2nd ed."
   cover: "cover.png"
   spine_color: "0xFF1565C0"
   # contents tree — chapters/sections of the WHO Pocket Book. The Chapter 1
