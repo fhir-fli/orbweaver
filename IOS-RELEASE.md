@@ -42,14 +42,16 @@ only runs on macOS. A Linux checkout cannot build, sign or upload an iOS app.
     flutter pub get
     flutter build ios --release --no-codesign
 
-🛑 **Do not run `pod install` first — it fails with "No Podfile found".** The
-Podfile is not in the repository and is not meant to be: Flutter generates it,
-and only during an iOS build. `flutter build ios` writes `ios/Podfile`, runs
-`pod install` itself, and compiles without needing a signing team yet, so it also
-surfaces any other missing tooling early.
+🛑 **Do not run `pod install`. CocoaPods is not used at all.** Verified on the
+Mac 2026-09-03: this Flutter version resolves iOS plugin dependencies with
+**Swift Package Manager**, printing "Adding Swift Package Manager integration"
+during the build. No `Podfile` is generated, which is why `pod install` fails
+with "No Podfile found in the project directory" — there is nothing to find, and
+nothing is wrong.
 
-Two plugins carry iOS platform code and genuinely need pods: `url_launcher` and
-`shared_preferences`. If CocoaPods itself is missing: `sudo gem install cocoapods`.
+`flutter build ios --release --no-codesign` compiles without needing a signing
+team, so it proves the code builds for device before any Xcode work. It produced
+`build/ios/iphoneos/Runner.app` at 35.4 MB.
 
 ### 2. Set the signing team
 
