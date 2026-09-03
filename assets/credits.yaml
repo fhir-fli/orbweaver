@@ -1,0 +1,210 @@
+# Single source for the in-app credits screen.
+# Generated from the image table once, then maintained HERE. The old
+# assets/books/wvems/images/CREDITS.md was a second copy nothing displayed;
+# CC BY and CC BY-SA require attribution reach the people who see the work,
+# so this file is rendered by lib/screens/credits_screen.dart.
+credits:
+  intro: Orbweaver bundles material from several sources. This page lists them, and the licence each is
+    used under.
+  sources:
+  - title: 'Quick Reference: Basic Protocols in Paediatrics and Internal Medicine for Resource Limited
+      Settings'
+    by: J. Grey Faulkenberry, MD MPH
+    note: The ProtocolBook. Written by this app's author.
+  - title: Pocket Book of Hospital Care for Children, 2nd edition (2013)
+    by: World Health Organization
+    note: © World Health Organization 2013. All rights reserved. WHO is not responsible for any changes
+      made to the original content, and responsibility for this adaptation rests solely with the publisher
+      of this app. WHO's open access licence covers material published from November 2016; this edition
+      predates it, so reuse requires permission from WHO Press.
+  - title: WVEMS Prehospital Protocols, 2026 edition
+    by: West Virginia Emergency Medical Services
+    note: Reproduced as printed. WVEMS is the authority for crews operating under these protocols; where
+      its figures differ from the other references here, the WVEMS figure stands.
+  images:
+    intro: Representative illustrations of dosage forms and equipment, from Wikimedia Commons. Each is
+      a generic illustration of the form, NOT the specific product. Downsized to 600 px wide for the app;
+      not otherwise altered.
+    items:
+    - file: form_vial.jpg
+      use: vial
+      source: 23.4% Sodium Chloride.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:23.4%25_Sodium_Chloride.jpg
+      author: Alex Staidle
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: form_ampoule.jpg
+      use: ampoule
+      source: Adrenaline ampoule.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Adrenaline_ampoule.jpg
+      author: Whispyhistory
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: form_ivbag.jpg
+      use: ivbag
+      source: NaCl 0,9% 500ml white background.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:NaCl_0,9%25_500ml_white_background.jpg
+      author: Wesalius
+      licence: CC BY 4.0
+      licence_url: https://creativecommons.org/licenses/by/4.0
+    - file: form_nasalspray.jpg
+      use: nasalspray
+      source: BECONASE nasal spray.JPG
+      source_url: https://commons.wikimedia.org/wiki/File:BECONASE_nasal_spray.JPG
+      author: Ilyushka88
+      licence: CC BY-SA 3.0
+      licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    - file: form_autoinjector.jpg
+      use: autoinjector
+      source: Adrenalina autoinyector1.JPG
+      source_url: https://commons.wikimedia.org/wiki/File:Adrenalina_autoinyector1.JPG
+      author: AngelHM
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: form_nebule.jpg
+      use: nebule
+      source: Salbutamol nebules for inhalation.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Salbutamol_nebules_for_inhalation.jpg
+      author: Whispyhistory
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: form_tablet.jpg
+      use: tablet
+      source: Estradiol valerate and spironolactone.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Estradiol_valerate_and_spironolactone.jpg
+      author: RoxySaunders
+      licence: CC0
+      licence_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    - file: eq_glucometer.jpg
+      use: glucometer
+      source: Glucose_meters.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Glucose_meters.jpg
+      author: Christidy at English Wikipedia
+      licence: Public domain
+      licence_url: ''
+    - file: eq_ivcath.jpg
+      use: ivcath
+      source: Intravenous_cannula_decription.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Intravenous_cannula_decription.jpg
+      author: Fifo
+      licence: CC BY-SA 2.5
+      licence_url: https://creativecommons.org/licenses/by-sa/2.5
+    - file: eq_suction.jpg
+      use: suction
+      source: Absaugpumpe_von_Laerdal_im_blau-gelben_Corporate-Design.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Absaugpumpe_von_Laerdal_im_blau-gelben_Corporate-Design.jpg
+      author: Massimiliano Mariani
+      licence: CC BY-SA 3.0
+      licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    - file: eq_magill.jpg
+      use: magill
+      source: Magill_forceps_open.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Magill_forceps_open.jpg
+      author: Dctrzl
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: eq_opa.jpg
+      use: opa
+      source: One-piece_Guedel_Airways.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:One-piece_Guedel_Airways.jpg
+      author: Intersurgical Ltd
+      licence: CC BY-SA 3.0
+      licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    - file: eq_cpap.jpg
+      use: cpap
+      source: CPAP.png
+      source_url: https://commons.wikimedia.org/wiki/File:CPAP.png
+      author: PruebasBMA
+      licence: CC BY-SA 3.0
+      licence_url: https://creativecommons.org/licenses/by-sa/3.0
+    - file: eq_defib.jpg
+      use: defib
+      source: AED_machine_medisource.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:AED_machine_medisource.jpg
+      author: Chercher1105
+      licence: CC0
+      licence_url: http://creativecommons.org/publicdomain/zero/1.0/deed.en
+    - file: eq_tourniquet.jpg
+      use: tourniquet
+      source: US_Army_soldier_demonstrates_the_proper_way_to_use_a_combat_action_tourniquet,_Nov._6,_2008_(081106-D-1852B-012).jpg
+      source_url: https://commons.wikimedia.org/wiki/File:US_Army_soldier_demonstrates_the_proper_way_to_use_a_combat_action_tourniquet,_Nov._6,_2008_(081106-D-1852B-012
+      author: Fred W. Baker III
+      licence: Public domain
+      licence_url: ''
+    - file: eq_collar.jpg
+      use: collar
+      source: Cervical_collar.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Cervical_collar.jpg
+      author: Pagemaker787
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: eq_splint.jpg
+      use: splint
+      source: Ankle_foot_orthosis_splint.JPG
+      source_url: https://commons.wikimedia.org/wiki/File:Ankle_foot_orthosis_splint.JPG
+      author: Pagemaker787
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: eq_bvm.jpg
+      use: bvm
+      source: 2ballons.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:2ballons.jpg
+      author: bigomar2
+      licence: CC BY-SA 3.0
+      licence_url: http://creativecommons.org/licenses/by-sa/3.0/
+    - file: eq_laryngoscope.jpg
+      use: laryngoscope
+      source: 1st generation Video Laryngoscope.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:1st_generation_Video_Laryngoscope.jpg
+      author: KARL STORZ Endoskope
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: eq_gastric.jpg
+      use: gastric
+      source: Enteral feeding tube stylet retracted.png
+      source_url: https://commons.wikimedia.org/wiki/File:Enteral_feeding_tube_stylet_retracted.png
+      author: Tenbergen
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: eq_igel.jpg
+      use: igel
+      source: Laryngeal_mask_100.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Laryngeal_mask_100.jpg
+      author: (see source page)
+      licence: CC BY 3.0
+      licence_url: https://creativecommons.org/licenses/by/3.0
+    - file: eq_ventilator.jpg
+      use: ventilator
+      source: Servo_I_Ventilator.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Servo_I_Ventilator.jpg
+      author: BreathDriver
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: form_eyedrops.jpg
+      use: Tetracaine (ophthalmic dropper)
+      source: Alphagan-japan.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Alphagan-japan.jpg
+      author: melvil
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0
+    - file: form_oralbottle.jpg
+      use: Charcoal (oral suspension)
+      source: ActivatedCharcoal.JPG
+      source_url: https://commons.wikimedia.org/wiki/File:ActivatedCharcoal.JPG
+      author: James Heilman, MD
+      licence: CC BY 3.0
+      licence_url: https://creativecommons.org/licenses/by/3.0
+    - file: eq_cric.jpg
+      use: Cric (cricothyroid membrane landmark)
+      source: Cricothyrotomy.png
+      source_url: https://commons.wikimedia.org/wiki/File:Cricothyrotomy.png
+      author: PhilippN
+      licence: CC BY-SA 3.0
+      licence_url: http://creativecommons.org/licenses/by-sa/3.0/
+    - file: eq_ecg.jpg
+      use: ecg/12-lead
+      source: Bare chest ... ECG with probes.jpg
+      source_url: https://commons.wikimedia.org/wiki/File:Bare_chest_of_a_old_man_for_ECG_with_probes.jpg
+      author: Suyash.dwivedi
+      licence: CC BY-SA 4.0
+      licence_url: https://creativecommons.org/licenses/by-sa/4.0

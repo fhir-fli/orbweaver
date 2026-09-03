@@ -25,6 +25,7 @@ flutter:
   # (book.yaml + cover + topics/ + images/). Flutter asset globs are
   # non-recursive, so each bundle subdir that holds files is listed.
   assets:
+    - assets/credits.yaml
     - assets/books/
     - assets/books/protocolbook/
     - assets/books/protocolbook/topics/

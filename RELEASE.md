@@ -89,10 +89,21 @@ NCBI Bookshelf. A sibling title — *Pocket book of primary health care for chil
 adolescents* — **does** carry CC BY-NC-SA 3.0 IGO, so WHO does license some of this
 material openly; that finding is about a different book and does not transfer.
 
-⚠️ **Uncertainty is not prohibition and this is not a reason to stop.** It is a
-permission with a named route and a cost in time. Worth knowing: **WHO publishes its
-own e-Pocketbook app of this same content**, so there is precedent for the content
-appearing in a store.
+✅ **Settled by WHO's own reply, 2026-09-02.** WHO's open access policy applies to
+publications **from November 2016**. Material predating that is "pre–Open Access", and
+for it WHO states plainly: *"Permission IS required for WHO materials that are not
+available under the CC BY-NC-SA 3.0 IGO licence. To request permission, please complete
+our online permissions form."* **The Pocket Book 2nd edition is 2013, so it is
+pre–Open Access and permission is required.** The channel is the online permissions
+form, not a mailbox — a generic enquiry only returns the automated notice.
+
+Two further points from that reply that apply here. **Commercial use needs permission
+either way**, open access or not, so a paid listing changes the request. And **not
+everything inside a WHO publication is WHO's**: anything credited to another source
+carries its own permission, and WHO puts that risk on the reuser.
+
+Worth knowing alongside it: **WHO publishes its own e-Pocketbook app of this same
+content**, so the content appearing in a store has precedent.
 
 **The WVEMS protocols.** No copyright statement was found on the first three pages of
 the 2026 PDF. WVEMS is the authority for crews operating under it, which is why this

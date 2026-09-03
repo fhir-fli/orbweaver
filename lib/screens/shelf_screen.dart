@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
+import 'package:orbweaver/screens/credits_screen.dart';
 
 /// Library shelf — grid of book covers. Tapping a cover pushes the
 /// book's topic list. The book list is loaded from the manifest YAMLs
@@ -18,6 +19,20 @@ class ShelfScreen extends StatelessWidget {
         title: const Text('Orbweaver'),
         backgroundColor: const Color(0xFF1E4E8C),
         foregroundColor: Colors.white,
+        actions: [
+          // Not decoration: the bundled Wikimedia images are CC BY and CC BY-SA,
+          // and both require the attribution reach whoever sees the work.
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            tooltip: 'Sources & credits',
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute<void>(
+                builder: (_) => const CreditsScreen(),
+              ),
+            ),
+          ),
+        ],
       ),
       body: GridView.builder(
         padding: const EdgeInsets.all(16),
