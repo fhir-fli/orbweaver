@@ -1,0 +1,8 @@
+# Copy to android/key.properties and fill in. That file is gitignored;
+# this example is not, so it must never contain a real password.
+#
+# storeFile is an absolute path, or relative to android/app/.
+storeFile=/home/grey/orbweaver-upload.jks
+storePassword=CHANGEME
+keyAlias=upload
+keyPassword=CHANGEME

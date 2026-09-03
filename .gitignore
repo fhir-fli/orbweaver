@@ -66,3 +66,8 @@ tool/*_parity.tsv
 tool/protocolbook_clipped_text.tsv
 tool/protocolbook_flattened_figures.tsv
 tool/who_imci_chart_pages.tsv
+
+# Upload key. Never commit this or the keystore it points at.
+android/key.properties
+*.jks
+*.keystore
