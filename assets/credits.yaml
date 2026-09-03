@@ -6,6 +6,8 @@
 credits:
   intro: Orbweaver bundles material from several sources. This page lists them, and the licence each is
     used under.
+  privacy_label: Privacy — this app collects nothing
+  privacy_url: https://fhir-fli.github.io/fhir_fli_documentation/orbweaver-privacy
   sources:
   - title: 'Quick Reference: Basic Protocols in Paediatrics and Internal Medicine for Resource Limited
       Settings'

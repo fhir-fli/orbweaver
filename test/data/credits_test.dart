@@ -63,6 +63,15 @@ void main() {
         reason: 'bundled but credited nowhere: ${uncredited.join(', ')}');
   });
 
+  test('the privacy link is present and points at the live policy', () {
+    // Play requires this at production, not for closed testing, but the app
+    // should say what it collects whether or not a store demands it.
+    final url = (credits['privacy_url'] ?? '').toString();
+    expect(url, startsWith('https://'));
+    expect(url, contains('orbweaver-privacy'));
+    expect((credits['privacy_label'] ?? '').toString().trim(), isNotEmpty);
+  });
+
   test('each book carries a source acknowledgement', () {
     final sources = credits['sources'] as YamlList;
     expect(sources.length, greaterThanOrEqualTo(3));

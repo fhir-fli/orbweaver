@@ -49,9 +49,13 @@ class Credits {
     required this.sources,
     required this.imageIntro,
     required this.images,
+    this.privacyLabel = '',
+    this.privacyUrl = '',
   });
 
   final String intro;
+  final String privacyLabel;
+  final String privacyUrl;
   final List<SourceWork> sources;
   final String imageIntro;
   final List<ImageCredit> images;
@@ -94,6 +98,8 @@ Future<Credits> loadCredits() async {
   final imgs = c['images'] as YamlMap;
   return Credits(
     intro: _s(c['intro']),
+    privacyLabel: _s(c['privacy_label']),
+    privacyUrl: _s(c['privacy_url']),
     sources: [
       for (final s in (c['sources'] as YamlList? ?? YamlList()))
         SourceWork(
@@ -129,6 +135,10 @@ class _CreditsBody extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
       children: [
         Text(credits.intro, style: const TextStyle(fontSize: 14, height: 1.4)),
+        if (credits.privacyUrl.isNotEmpty) ...[
+          const SizedBox(height: 10),
+          _Link(text: credits.privacyLabel, url: credits.privacyUrl),
+        ],
         const SizedBox(height: 20),
         const _Heading('The books'),
         for (final s in credits.sources) _SourceCard(source: s),
