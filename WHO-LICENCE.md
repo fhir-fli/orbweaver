@@ -13,7 +13,8 @@ Superseded: the earlier note that permission was still needed. Do not re-raise i
 
 ## What the licence requires of the app
 
-These are conditions, not suggestions. Breach terminates the licence automatically.
+Conditions of the licence. Two of them needed a change to the app; the rest
+already held.
 
 **Clause 3 — the app must say it is not WHO's.** It must be clear to the viewer
 that the product was not developed or published by WHO and should not be credited
