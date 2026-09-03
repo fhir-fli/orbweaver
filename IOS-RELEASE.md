@@ -10,9 +10,9 @@ independent. `WHO-LICENCE.md` applies to both.
 
 ## Before you start
 
-**You need an Apple Developer Program membership, $99/year.** Google Play is a
-one-off $25; Apple is annual and there is no way round it. Enrolment can take a
-day or two if they verify you, so start it before anything else.
+**Apple Developer Program membership: ✅ Grey already has one** (confirmed
+2026-09-03). Noted only so nobody re-raises it: it is $99/year against Play's
+one-off $25, and it is the gate that would otherwise take days.
 
 **You need a Mac with Xcode.** Not optional and not emulatable: the iOS toolchain
 only runs on macOS. A Linux checkout cannot build, sign or upload an iOS app.
@@ -40,10 +40,18 @@ only runs on macOS. A Linux checkout cannot build, sign or upload an iOS app.
     git clone https://github.com/fhir-fli/orbweaver.git
     cd orbweaver
     flutter pub get
-    cd ios && pod install && cd ..
+    flutter build ios --release --no-codesign
 
-`pod install` is the step a Linux checkout never runs. If CocoaPods is missing:
-`sudo gem install cocoapods`.
+🛑 **Do not run `pod install`. CocoaPods is not used at all.** Verified on the
+Mac 2026-09-03: this Flutter version resolves iOS plugin dependencies with
+**Swift Package Manager**, printing "Adding Swift Package Manager integration"
+during the build. No `Podfile` is generated, which is why `pod install` fails
+with "No Podfile found in the project directory" — there is nothing to find, and
+nothing is wrong.
+
+`flutter build ios --release --no-codesign` compiles without needing a signing
+team, so it proves the code builds for device before any Xcode work. It produced
+`build/ios/iphoneos/Runner.app` at 35.4 MB.
 
 ### 2. Set the signing team
 
