@@ -111,4 +111,4 @@ does nothing:
 > any personal or health information. It has no accounts, no analytics and no network
 > access. Everything it displays is bundled with the app and read from the device.
 > Preferences you set are stored only on your device. Links you tap open in your
-> browser or mail app, which have their own policies. Contact: grey@fhirfli.dev
+> browser or mail app, which have their own policies. Contact: greyzus@fhirfli.dev
