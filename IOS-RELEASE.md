@@ -40,10 +40,16 @@ only runs on macOS. A Linux checkout cannot build, sign or upload an iOS app.
     git clone https://github.com/fhir-fli/orbweaver.git
     cd orbweaver
     flutter pub get
-    cd ios && pod install && cd ..
+    flutter build ios --release --no-codesign
 
-`pod install` is the step a Linux checkout never runs. If CocoaPods is missing:
-`sudo gem install cocoapods`.
+🛑 **Do not run `pod install` first — it fails with "No Podfile found".** The
+Podfile is not in the repository and is not meant to be: Flutter generates it,
+and only during an iOS build. `flutter build ios` writes `ios/Podfile`, runs
+`pod install` itself, and compiles without needing a signing team yet, so it also
+surfaces any other missing tooling early.
+
+Two plugins carry iOS platform code and genuinely need pods: `url_launcher` and
+`shared_preferences`. If CocoaPods itself is missing: `sudo gem install cocoapods`.
 
 ### 2. Set the signing team
 
