@@ -1,25 +1,31 @@
 # App icon
 
-Put a **square 1024 x 1024 PNG** here as `orbweaver.png`, then run:
+`orbweaver_master.png` is the source. `tool/make_icon.py` renders it into all
+five Android densities and all sixteen iOS entries:
 
-    dart run flutter_launcher_icons
+    python3 tool/make_icon.py
 
-That writes the five Android mipmap densities and all sixteen iOS entries from
-the one file. Nothing else needs editing.
+`orbweaver.png` is the 1024 master it also writes, for the store listings.
 
-## Why this directory exists empty
+## What the master is
 
-Both platforms currently ship the **stock Flutter logo**. All five Android
-densities are byte-identical to the Flutter template and the iOS 1024 is the
-Flutter mark. Apple rejects placeholder artwork, and Play will accept it but
-nobody installs an app wearing the framework's logo.
+Grey's artwork, with two corrections that the platforms require: the background
+is flattened to solid navy (0xFF1E4E8C) because a gradient flattens badly at
+small sizes and Apple rejects an alpha channel, and everything sits inside 80%
+of the square because Android masks the icon to a circle, a squircle or a
+rounded square depending on the launcher.
 
-## What the icon has to survive
+## Two things that were tried and are worse
 
-- **No alpha channel on iOS.** The App Store rejects it. `remove_alpha_ios: true`
-  in `pubspec.yaml` strips it, flattening onto white.
-- **Android masks it.** A circle, a squircle or a rounded square depending on the
-  launcher, so keep the meaningful part inside the middle ~66% and let the rest
-  be background.
-- **It is read at 48 px.** Whatever it is has to be legible at the size of a
-  fingernail, which rules out fine line work and text.
+**Drawing at the target pixel size without supersampling.** It removes the
+antialiasing, and the result is jagged rather than sharp. Small icons are
+supposed to be antialiased; the softness that prompted the attempt was an
+artefact of viewing them magnified with nearest-neighbour. At 1:1 the full
+composition holds down to 40 px.
+
+**A separate simplified mark for the small sizes.** Dropping either half loses
+something the other cannot carry: without the web it does not say Orbweaver,
+without the book it does not say what the app is.
+
+Nothing in this directory ships. `assets/icon` is not in the pubspec asset list;
+the generated files are written straight into the android and ios trees.
