@@ -10,9 +10,9 @@ independent. `WHO-LICENCE.md` applies to both.
 
 ## Before you start
 
-**You need an Apple Developer Program membership, $99/year.** Google Play is a
-one-off $25; Apple is annual and there is no way round it. Enrolment can take a
-day or two if they verify you, so start it before anything else.
+**Apple Developer Program membership: ✅ Grey already has one** (confirmed
+2026-09-03). Noted only so nobody re-raises it: it is $99/year against Play's
+one-off $25, and it is the gate that would otherwise take days.
 
 **You need a Mac with Xcode.** Not optional and not emulatable: the iOS toolchain
 only runs on macOS. A Linux checkout cannot build, sign or upload an iOS app.
