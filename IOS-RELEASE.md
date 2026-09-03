@@ -21,7 +21,9 @@ only runs on macOS. A Linux checkout cannot build, sign or upload an iOS app.
 
 - Bundle identifier `dev.fhirfli.orbweaver`, the same string as Android.
 - Display name `Orbweaver`.
-- Deployment target iOS 13.0.
+- Deployment target iOS 15.0. Apple warns on upload below 15.0 and makes it a
+  hard requirement in Spring 2027 (warning code 90068). iOS 15 runs on the
+  iPhone 6s and later, so almost nothing is lost by moving now.
 - All 15 app icon entries generated and committed. `Contents.json` declares 15
   and all 15 are present, verified by opening the catalogue rather than counting
   files.
