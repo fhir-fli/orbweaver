@@ -1,102 +1,60 @@
-# WHO permissions form — the answers
+# WHO Permissions Request Form — field by field
 
-Paste from here. Everything below is quoted from the publication itself or measured
-from this repo on 2026-09-02.
+Paste in order. Everything is quoted from the publication or measured from this repo on
+2026-09-02.
 
----
+🛑 **The "where WHO's material will be used" box currently contains the wrong text.** It
+holds my chat summary — *"alongside your protocol handbook… Your clinical background is
+in it"* — rather than the answer. Replace it with §11 below.
 
-## Full title of WHO material requested
-
-Verbatim from the WHO Library Cataloguing-in-Publication Data page:
-
-> Pocket book of hospital care for children: guidelines for the management of common
-> childhood illnesses – 2nd ed.
-
-## Full link to WHO material you wish to reuse
-
-    https://www.who.int/publications/i/item/9789241548373
-
-The IRIS record is `https://iris.who.int/handle/10665/81170`, which is the same work.
-
-## ISBN / WHO reference number
-
-    ISBN 978 92 4 154837 3
-
-The same page also gives `NLM classification: WS 29`.
-
-## Do you wish to reproduce the entire publication / material?
-
-**Yes.** Answer it that way; anything narrower would be wrong. The app carries **259
-topics** covering the book's clinical content, and **13 line drawings extracted from the
-PDF** — the manual-technique illustrations for back slaps, chest thrusts, the Heimlich,
-neutral and tilting airway positions, look-listen-feel, jaw thrust, bag-and-mask, nasal
-prongs, nasal catheter, cervical stabilisation and the recovery position. The source is
-438 pages.
-
-The text is **restructured, not copied verbatim**: the print's chapters become tappable
-topics, and some content is updated against current evidence with the change recorded on
-the page. The drawings **are** verbatim. Say both — an adaptation is still a reuse, and
-describing it accurately is what stops a later dispute.
-
-## Please select the item to be reproduced
-
-Single-select, and I do not know their option list, so pick the entry closest to **the
-entire publication**. If they offer a "text and figures" or "adaptation" option, that is
-the more accurate one.
+🛑 **Do not mention the app's other books anywhere in this form.** They are irrelevant to
+WHO's decision and invite questions about context that have nothing to do with whether
+this reuse is permitted.
 
 ---
 
-# How much third-party material is inside the WHO book?
+## Contact
 
-**None that the publication declares.** WHO's notice warns that some content in its
-publications is credited to another source and that permission for those rests with you.
-Searched the full extracted text — 725,723 characters, all 438 pages — for
-`adapted from`, `reproduced with permission`, `reproduced by permission`, `courtesy of`,
-`used with permission`, `kind permission`, `reprinted`, `photo credit`, `illustration
-by`, and `source:` followed by a name. **Zero matches.**
+| field | answer |
+|---|---|
+| **Title** | Dr |
+| First name | Grey |
+| Family name | Faulkenberry |
+| Organisation/affiliation | FHIR-FLI |
+| Website | `https://fhir-fli.github.io/fhir_fli_documentation/` |
+| **Type of organisation** (single-select) | **Individual**. Your free-text note already says you are affiliated with academic institutions but not acting under their umbrella, which is the honest reading. Do not pick an academic or commercial category. |
+| **Country** | United States of America — the form wants where **you** are, not where the app is used. |
+| Email | `grey.faulkenberry@emory.edu` |
 
-The Acknowledgements name the guideline development group, reviewers, contributing
-institutions, and the funders — the Bill and Melinda Gates Foundation and the Russian
-Federation. Those are contributor and funding credits, not copyright holders.
+⚠️ Using the Emory address alongside "not under their umbrella" invites the question of
+whether Emory is involved. If a personal address exists, it removes the ambiguity.
 
-⚠️ **One limit, stated rather than glossed:** that search covers the PDF's text layer. A
-credit printed inside an image would not appear in it. None of the 13 drawings we use
-carries a visible credit line, and they read as WHO's own commissioned line art, but
-that is an inference from their uniform style, not a statement in the book.
+## The material
 
----
+| field | answer |
+|---|---|
+| Full title | `Pocket book of hospital care for children: guidelines for the management of common childhood illnesses – 2nd ed.` |
+| Link | `https://www.who.int/publications/i/item/9789241548373` |
+| ISBN | `9789241548373` |
+| **Reproduce the entire publication?** | **Yes.** 259 topics carry the book's clinical content and 13 line drawings are reproduced verbatim, against a 438-page source. Anything narrower would be wrong. |
+| **Item to be reproduced** (single-select) | Whichever entry means **the entire publication**. |
 
-# The use, for the description box
+## The reuse
 
-Adapt as you like; the facts are right.
-
-> Orbweaver is a free offline clinical reference app for health workers in low-resource
-> settings, rendering the Pocket book on a phone screen for use at the bedside. It is
-> not sold, carries no advertising, no analytics and
-> no in-app purchases, collects no data of any kind, and requires no network connection.
-> It is currently in closed testing with a small number of named clinicians. The text is
-> restructured into topics for a phone screen rather than reproduced page-for-page, and
-> 13 of the manual-technique line drawings are reproduced as printed. WHO is credited as
-> the source on an in-app credits screen, which also states that WHO is not responsible
-> for any changes made to the original content and that responsibility for the
-> adaptation rests with the publisher of the app.
-
-**Two things to be careful about when you fill it in.**
-
-WHO's notice says **commercial use needs permission either way**, open access or not. A
-free app in closed testing is the easiest version of this request. If it ever carries a
-price, advertising, or a paid tier, that is a different request.
-
-WHO's open access licence applies to material published **from November 2016**. This
-edition is **2013**, so it is pre-open-access and permission is genuinely required. That
-is not a formality you can skip on the grounds that the app is free.
-
+| field | answer |
+|---|---|
+| **Will you be translating?** | **No.** |
+| **Type of reuse** (multi-select) | **Reproduce** and **adapt**. Both apply: the drawings are reproduced as printed, the text is restructured and in places updated. Do not select translate. |
+| **Publishing format** (multi-select) | **Mobile application**, plus anything meaning **electronic**, **digital** or **software**. Not print, book, journal or presentation. |
+| **Planned distribution date** | 04/09/2026 — only if closed testing genuinely starts then. It is before your Play ID verification completes and before any permission is granted, and the terms say you have no authorisation until approval. Give a date you can meet after approval. |
+| **Are you selling your material?** | **No.** |
+| **Sponsored or funded by another organisation?** | **No.** |
+| **Any advertising?** | **No.** |
+| **Health topic** (single-select) | **Child health** — or whichever option is closest to child/newborn health. |
 
 ---
 
-# Where WHO's material will be used
-
-Paste this into the 4000-character box.
+## §11 · Where WHO's material will be used
 
 > The material will be used in Orbweaver, a free offline clinical reference application
 > for Android and iOS, written for health workers in low-resource district hospitals.
@@ -107,54 +65,69 @@ Paste this into the 4000-character box.
 > Thirteen of the manual-technique line drawings are reproduced as printed: back slaps,
 > chest thrusts, the Heimlich manoeuvre, neutral and tilting airway positions,
 > look-listen-feel, jaw thrust, bag-and-mask ventilation, nasal prongs, nasal catheter,
-> cervical stabilisation and the recovery position. These are reproduced because the
+> cervical stabilisation and the recovery position. They are reproduced because the
 > technique cannot be learned from a sentence.
 >
 > The text is restructured rather than copied page for page, and a small number of
 > figures have been updated against current evidence, with each change and its source
 > recorded on the page it affects. WHO is credited as the source on an in-app credits
-> screen which states that WHO is not responsible for any changes made to the original
+> screen, which states that WHO is not responsible for any changes made to the original
 > content and that responsibility for the adaptation rests with the publisher of the
 > application.
 >
-> The application requires no network connection, collects no data of any kind, contains
-> no advertising, no analytics and no in-app purchases, and is not sold. Everything it
-> displays is bundled with it and read from the device.
+> The application requires no network connection, collects no data of any kind, and
+> contains no advertising, no analytics and no in-app purchases. It is not sold.
+> Everything it displays is bundled with it and read from the device.
 >
 > The applicant is a physician boarded in internal medicine, paediatrics and clinical
 > informatics who has practised in the settings this book is written for, including a
 > year as an attending in paediatrics and internal medicine at a regional referral
 > hospital in northern Uganda.
 
-## Publishing format
+## §12 · How are you planning to distribute your material, and to whom?
 
-Multi-select, and their list is not public. Select **mobile application**. If the list
-separates them, also select anything meaning **software**, **digital** or **electronic**.
-Do **not** select print, journal, book or presentation: none applies.
-
-## How are you planning to distribute your material, and to whom?
-
-> Distribution is through the Google Play and Apple App Store closed-testing channels —
-> Play closed testing and Apple TestFlight — to a small, named group of clinicians
-> invited by the applicant, for evaluation and feedback. The application is free, and
-> there is no paid tier, advertising or in-app purchase.
+> Distribution is through the Google Play and Apple App Store closed-testing channels,
+> Play closed testing and Apple TestFlight, to a small named group of clinicians invited
+> by the applicant, for evaluation and feedback. The application is free. There is no
+> paid tier, no advertising and no in-app purchase.
 >
 > If it goes on to a public listing it will remain free, with no advertising and no data
 > collection, and the intended audience is health workers in low-resource district
-> hospitals of the kind the Pocket book addresses. The applicant will seek WHO's view
-> before any distribution beyond the closed testing group if WHO wishes to be asked.
+> hospitals of the kind this book addresses.
 
-**Say the last sentence only if you mean it**, because it commits you to going back to
-them. Drop it if you would rather this permission cover a public free listing outright —
-in which case ask for that scope explicitly in the box above, since a permission granted
-for closed testing may not cover a public release.
+## §13 · Additional information
 
+This box is where to settle the scope, and it is the one decision that is yours.
+
+> The immediate use is closed testing with a small named group. The intended eventual use
+> is a free public listing on the same terms — no charge, no advertising, no data
+> collection. **Permission is requested to cover both**, so that a further request is not
+> needed at public release. If WHO would prefer to grant permission for the closed
+> testing phase only, please say so and the applicant will submit a further request
+> before any public listing.
+>
+> No third-party credited material was identified in the publication. A search of the
+> full text of all 438 pages for attribution phrases returned no results, and the
+> acknowledgements name contributors, reviewing institutions and funders rather than
+> copyright holders.
+
+**Cut that last paragraph if you would rather not raise it.** It shows you did the check
+WHO's notice asks for, which reads well, but it also puts the question in front of them.
 
 ---
 
-# 🛑 Do not mention the app's other books in this request
+# Reference: what is actually reproduced
 
-The request is about the Pocket book and nothing else. The other two references the app
-carries are irrelevant to WHO's decision, and naming them invites questions about
-juxtaposition and context that have nothing to do with whether this reuse is permitted.
-Removed from both draft paragraphs on 2026-09-02.
+- **259 topics** from a **438-page** source.
+- **13 line drawings** extracted from the PDF and reproduced verbatim.
+- **Third-party material inside the book: none declared.** Searched the full text layer,
+  725,723 characters, for *adapted from*, *reproduced with/by permission*, *courtesy of*,
+  *used with permission*, *kind permission*, *reprinted*, *photo credit*, *illustration
+  by*, and *source:* plus a name. Zero matches. Limit: that is the text layer, so a
+  credit printed inside an image would not appear, and none of the 13 drawings carries a
+  visible credit line.
+- WHO's open access licence covers material published **from November 2016**. This
+  edition is **2013**, so permission is genuinely required and being free does not remove
+  that.
+- WHO's notice also states commercial use needs permission either way. Keeping the app
+  free keeps this the simplest version of the request.
