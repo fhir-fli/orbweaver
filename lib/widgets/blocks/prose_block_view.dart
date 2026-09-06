@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/call_er_tile.dart';
+import 'package:orbweaver/widgets/flowchart/cc_link_pill.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
 import 'package:orbweaver/widgets/section_bracket.dart';
 
@@ -48,6 +49,23 @@ class ProseBlockView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final body = _body(context);
+    final link = block.criticalCareLink;
+    if (link == null) return body;
+    // The print fuses the lavender Critical-Care tab under the section it
+    // qualifies (p.6 Airway → Ventilator, p.62 Head Injury → Elevated ICP),
+    // exactly as it does under a flowchart's convergence stadium.
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        body,
+        CriticalCareLinkPill(link: link),
+      ],
+    );
+  }
+
+  Widget _body(BuildContext context) {
     final accent = theme.header;
     // Boxed prose — a rounded-border tile matching boxed-layout table
     // cells.  Untitled: acts as a flow-grid cell inside a RowBlock

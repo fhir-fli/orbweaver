@@ -11,6 +11,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/cc_link_pill.dart';
 import 'package:orbweaver/widgets/section_bracket.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
 
@@ -141,6 +142,36 @@ void main() {
             .where((d) => d.position == DecorationPosition.foreground),
         isNotEmpty,
       );
+    });
+  });
+
+  group('critical_care_link on prose', () {
+    // The print fuses the lavender Critical-Care tab under a prose section on
+    // p.6 (Airway → Ventilator) and p.62 (Head Injury → Elevated ICP). Until
+    // 2026-09-06 the parser never read the key, so neither tab was drawn.
+    testWidgets('hangs the same pill a flowchart uses under the section', (
+      tester,
+    ) async {
+      await _pump(tester, '''
+    - type: "prose"
+      title: "Breathing Imperatives"
+      highlight: true
+      critical_care_link:
+        text: "[Ventilator](topic:wvems-2026-080)"
+      markdown: |
+        - Ventilate.
+''');
+      expect(find.byType(CriticalCareLinkPill), findsOneWidget);
+      expect(find.byType(SectionBracket), findsOneWidget);
+    });
+
+    testWidgets('no pill without the key', (tester) async {
+      await _pump(tester, '''
+    - type: "prose"
+      title: "Breathing Imperatives"
+      markdown: "- Ventilate."
+''');
+      expect(find.byType(CriticalCareLinkPill), findsNothing);
     });
   });
 }

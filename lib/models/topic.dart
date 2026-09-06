@@ -1329,6 +1329,7 @@ class ProseBlock extends Block {
     this.boxed = false,
     this.textScale = 1.0,
     this.callEr = false,
+    this.criticalCareLink,
     super.flex,
     super.anchor,
     super.ownPaletteArgb,
@@ -1343,6 +1344,9 @@ class ProseBlock extends Block {
     boxed: (map['boxed'] as bool?) ?? false,
     textScale: (map['text_scale'] as num?)?.toDouble() ?? 1.0,
     callEr: (map['call_er'] as bool?) ?? false,
+    criticalCareLink: map['critical_care_link'] != null
+        ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
+        : null,
     flex: _flex(map),
     anchor: map['anchor'] as String?,
     ownPaletteArgb: _parsePaletteArgb(map['palette']),
@@ -1352,6 +1356,13 @@ class ProseBlock extends Block {
   final String markdown;
   final bool highlight;
   final bool callout;
+
+  /// Lavender Critical-Care tab fused under this box, the same pill a
+  /// flowchart hangs under its convergence. The print puts it under a prose
+  /// section on two pages (p.6 Airway → Ventilator, p.62 Head Injury →
+  /// Elevated ICP); before this field existed those two tabs were parsed
+  /// into nothing and never drawn.
+  final CriticalCareLink? criticalCareLink;
 
   /// Body size for this block as a fraction of the prose body.
   ///
@@ -1910,16 +1921,20 @@ class ProcedureBlock extends Block {
 
   final String name;
 
-  /// Provider-level badge letter: `E`, `A`, `I`, or `P` (paramedic). Null =
-  /// basic / all-level (rendered as a neutral grey chip, matching the printed
-  /// index).
+  /// Provider-level badge: `E`, `A`, `I`, `P` (paramedic) or `P(CC)` (Critical
+  /// Care). Null = basic / all-level (rendered as a neutral grey chip, matching
+  /// the printed index).
   final String? scope;
   final List<String> steps;
   final String? imagePath;
 
+  /// Accepts the same spellings as [ProviderLevel.fromString] so a Critical
+  /// Care procedure (`P(CC)` / `CC`) keeps its lavender badge instead of
+  /// silently dropping to the all-level grey chip. Anything else is null.
   static String? _normalizeScope(String? s) {
     if (s == null) return null;
     final v = s.trim().toUpperCase();
+    if (v == 'P(CC)' || v == 'CC') return 'P(CC)';
     return (v == 'E' || v == 'A' || v == 'I' || v == 'P') ? v : null;
   }
 }
