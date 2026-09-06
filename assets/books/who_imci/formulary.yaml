@@ -164,6 +164,10 @@ formulary:
     label: Vitamin A deficiency
   - key: tuberculosis
     label: Tuberculosis
+  - key: urinary tract infection
+    label: Urinary tract infection
+  - key: chronic cough
+    label: Chronic cough
   drugs:
   - id: abacavir
     name: Abacavir (ABC)
@@ -282,7 +286,8 @@ formulary:
       - '1'
   - id: acetylcysteine
     name: Acetylcysteine
-    class: antidote
+    class: other
+    subtitle: antidote
     doses:
     - label: Paracetamol poisoning — two-bag, all weights down to 5 kg
       regimen: '300 mg/kg over 20 h: bag 1 200 mg/kg over 4 h, bag 2 100 mg/kg over 16 h. Scale the diluent to weight in a small child — 7 ml/kg then 14 ml/kg in 5% glucose'
@@ -291,7 +296,8 @@ formulary:
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §1.6.4. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: activated-charcoal
     name: Activated charcoal
-    class: antidote
+    class: other
+    subtitle: antidote
     doses:
     - label: ≤ 1 year
       regimen: 0.5–1 g/kg
@@ -392,7 +398,8 @@ formulary:
     notes: Give IV loading dose only if the child has NOT taken aminophylline or theophylline within 24 h. For apnoea dosing in neonates/premature infants, see p.69.
   - id: amitriptyline
     name: Amitriptyline
-    class: analgesic adjuvant
+    class: analgesia
+    subtitle: analgesic adjuvant
     doses:
     - label: Neuropathic pain
       regimen: 0.2–0.5 mg/kg/day
@@ -629,7 +636,8 @@ formulary:
     notes: Not recommended for fever or pain in children — risk of Reye syndrome; use paracetamol or ibuprofen instead. Aspirin is retained only for specific indications such as acute rheumatic fever and Kawasaki disease, which use higher anti-inflammatory doses than the antipyretic dose shown here (see Chapter 6, rheumatic fever).
   - id: atropine
     name: Atropine
-    class: antidote
+    class: other
+    subtitle: antidote
     doses:
     - label: Organophosphate poisoning
       regimen: '0.02 mg/kg (20 µg/kg) IV — no maximum in severe poisoning — DOUBLED every 5 min until atropinisation: clear chest, HR > 80, SBP > 80'
@@ -717,28 +725,32 @@ formulary:
     notes: 'Neonatal/premature dosing & intervals: see p.71.'
   - id: betamethasone
     name: Betamethasone
-    class: steroid
+    class: other
+    subtitle: steroid
     doses:
     - label: Antenatal, mother at risk of preterm delivery
       regimen: 12 mg IM every 24 h × 2 doses — reduces respiratory distress syndrome in the preterm infant
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §3.11.3. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: budesonide
     name: Budesonide
-    class: steroid
+    class: other
+    subtitle: steroid
     doses:
     - label: Viral croup
       regimen: 2 mg nebulised, as an alternative to dexamethasone 0.6 mg/kg or prednisolone
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §4.6.1. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: bupivacaine
     name: Bupivacaine
-    class: anaesthetic
+    class: other
+    subtitle: anaesthetic
     doses:
     - label: Local infiltration
       regimen: 0.5–2.5 mg/kg as 0.25% or 0.5% — maximum 1 ml/kg of 0.25%, or 0.5 ml/kg of 0.5%
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §9.1.2. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: caffeine-citrate
     name: Caffeine citrate
-    class: respiratory stimulant
+    class: other
+    subtitle: respiratory stimulant
     doses:
     - label: Apnoea of prematurity — loading
       regimen: 20 mg/kg orally, or IV over 30 min
@@ -747,7 +759,8 @@ formulary:
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §3.11.2 and the neonatal table §3.14. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: calcium
     name: Calcium gluconate 10%
-    class: electrolyte
+    class: fluid_electrolyte
+    subtitle: electrolyte
     doses:
     - label: Hypocalcaemic convulsions — neonate
       regimen: 2 ml/kg (100–200 mg/kg) by slow IV infusion, with cardiac monitoring
@@ -1317,7 +1330,8 @@ formulary:
     daily: 20 mg/kg (range 15–25)
   - id: ethionamide
     name: Ethionamide
-    class: antituberculous
+    class: antituberculosis
+    subtitle: antituberculous
     doses:
     - label: TB meningitis, 6-month intensive (Cape Town) regimen
       regimen: 17.5–22.5 mg/kg/day, replacing ethambutol
@@ -1379,14 +1393,16 @@ formulary:
       - 2–3
   - id: flucytosine
     name: Flucytosine (5-FC)
-    class: antifungal
+    class: other
+    subtitle: antifungal
     doses:
     - label: Cryptococcal induction
       regimen: 25 mg/kg four times daily (100 mg/kg/day), with amphotericin B. The older 150 mg/kg/day upper end is no longer used — marrow toxicity is dose-dependent
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §6.3.4 and §8.4.4. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: folic-acid
     name: Folic acid
-    class: vitamin
+    class: other
+    subtitle: vitamin
     doses:
     - label: Severe acute malnutrition
       regimen: 5 mg on day 1, then 1 mg daily
@@ -1487,7 +1503,8 @@ formulary:
       - topical
   - id: dextrose
     name: Glucose (dextrose)
-    class: fluid
+    class: fluid_electrolyte
+    subtitle: fluid
     doses:
     - label: Hypoglycaemia — IV bolus
       regimen: 'IV: 2 ml/kg of 10% glucose (0.2 g/kg), over about 15 min in a neonate'
@@ -1498,7 +1515,8 @@ formulary:
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from Chart 10. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: hydrocortisone
     name: Hydrocortisone
-    class: steroid
+    class: other
+    subtitle: steroid
     doses:
     - label: Transfusion reaction / allergic adjunct
       regimen: 2–4 mg/kg IV, max 100 mg. An adjunct only — steroids act too slowly to replace adrenaline
@@ -1672,7 +1690,8 @@ formulary:
     notes: Full administration details on p.258.
   - id: ketorolac
     name: Ketorolac
-    class: NSAID
+    class: analgesia
+    subtitle: NSAID
     doses:
     - label: Postoperative analgesia
       regimen: 0.5 mg/kg IV — a key opioid-sparing component
@@ -1705,7 +1724,8 @@ formulary:
       - '1'
   - id: levetiracetam
     name: Levetiracetam
-    class: anticonvulsant
+    class: anticonvulsant_sedation
+    subtitle: anticonvulsant
     doses:
     - label: Status epilepticus, second line
       regimen: 40 mg/kg IV over 15 min
@@ -1765,14 +1785,16 @@ formulary:
     notes: Now an alternative rather than a preferred anchor — WHO prefers dolutegravir; LPV/r remains an option for neonates (see Chapter 8). Higher doses may be needed with enzyme-inducing drugs (nevirapine, efavirenz, fos-amprenavir, rifampicin).
   - id: lorazepam
     name: Lorazepam
-    class: benzodiazepine
+    class: anticonvulsant_sedation
+    subtitle: benzodiazepine
     doses:
     - label: Convulsions, IV line running
       regimen: 0.1 mg/kg IV, max 4 mg
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from Chart 9. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: magnesium-sulfate
     name: Magnesium sulfate
-    class: electrolyte
+    class: fluid_electrolyte
+    subtitle: electrolyte
     doses:
     - label: Severe asthma
       regimen: 50 mg/kg IV — better safety profile than aminophylline, where the child has not improved on bronchodilators and steroids
@@ -1815,7 +1837,8 @@ formulary:
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §6.6. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: methionine
     name: Methionine
-    class: antidote
+    class: other
+    subtitle: antidote
     doses:
     - label: Paracetamol poisoning within 8 h, if conscious and not vomiting
       regimen: '< 6 years: 1 g every 4 h × 4 doses. ≥ 6 years: 2.5 g every 4 h × 4 doses. IV acetylcysteine is preferred'
@@ -1878,7 +1901,8 @@ formulary:
     notes: For giardiasis and amoebiasis, use 10 mg/kg.
   - id: midazolam
     name: Midazolam
-    class: benzodiazepine
+    class: anticonvulsant_sedation
+    subtitle: benzodiazepine
     doses:
     - label: Convulsions — no IV line
       regimen: Buccal or intranasal 0.3–0.5 mg/kg, max 10 mg. More effective than rectal diazepam
@@ -1923,7 +1947,8 @@ formulary:
     notes: Calculate exact dose by weight; titrate to relieve pain.
   - id: naloxone
     name: Naloxone
-    class: antidote
+    class: other
+    subtitle: antidote
     doses:
     - label: Opioid poisoning
       regimen: 0.01 mg/kg (10 µg/kg) IV; if no response give 0.1 mg/kg — ten times the dose, not a repeat of the same one. Titrate to RESPIRATION, not to consciousness. Naloxone is shorter-acting than most opioids, so expect to repeat it or run an infusion
@@ -1932,7 +1957,8 @@ formulary:
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §1.6.4 and the neonatal table §3.14. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: naproxen
     name: Naproxen
-    class: NSAID
+    class: analgesia
+    subtitle: NSAID
     doses:
     - label: Acute rheumatic fever arthritis
       regimen: 10–20 mg/kg/day in 2 divided doses, max 1000 mg/day, until joint pain resolves, then taper. Preferred over aspirin — lower risk of Reye syndrome
@@ -1991,7 +2017,8 @@ formulary:
       - 1–2 ml
   - id: ondansetron
     name: Ondansetron
-    class: antiemetic
+    class: other
+    subtitle: antiemetic
     doses:
     - label: Distressing nausea and vomiting
       regimen: 0.15 mg/kg IV or oral, max 4 mg, every 8 h — the preferred paediatric antiemetic
@@ -2032,7 +2059,8 @@ formulary:
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §6.11 and §10.3. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: pentamidine
     name: Pentamidine
-    class: antiprotozoal
+    class: other
+    subtitle: antiprotozoal
     doses:
     - label: PCP where co-trimoxazole caused a severe drug reaction
       regimen: 4 mg/kg once daily IV
@@ -2072,14 +2100,16 @@ formulary:
     notes: '🛑 The loading dose is 20 mg/kg AT EVERY AGE. The printed annex gives 15 mg/kg for children over the neonatal period; that is a lower variant, and 20 mg/kg is the figure the status-epilepticus guidelines use across children and adults (OE 2026-08-30). The millilitre bands above are recalculated at 20 mg/kg against the 200 mg/ml solution and do NOT match the printed annex bands. For a neonate, calculate the exact dose. Phenobarbital comes after a benzodiazepine has failed, not before it.'
   - id: phenytoin
     name: Phenytoin
-    class: anticonvulsant
+    class: anticonvulsant_sedation
+    subtitle: anticonvulsant
     doses:
     - label: Status epilepticus
       regimen: 15–20 mg/kg IV at no more than 1 mg/kg/min, through a separate line. Phenytoin is caustic — fosphenytoin is preferred where available
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from Chart 9. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: phosphorus
     name: Phosphorus
-    class: mineral
+    class: fluid_electrolyte
+    subtitle: mineral
     doses:
     - label: Very low birth weight supplementation
       regimen: 60–90 mg/kg per day
@@ -2103,7 +2133,8 @@ formulary:
     notes: Calculate the exact dose by body weight.
   - id: pralidoxime
     name: Pralidoxime
-    class: antidote
+    class: other
+    subtitle: antidote
     doses:
     - label: Organophosphate poisoning with muscle weakness
       regimen: 20–50 mg/kg diluted in saline IV over 15–30 min, then 10–20 mg/kg/h (max about 0.5–1 g/h in children)
@@ -2310,7 +2341,8 @@ formulary:
     notes: No longer universally first-line — WHO burn care has shifted toward simple wound care and alternative dressings; silver sulfadiazine remains an option but is not required.
   - id: sodium-bicarbonate
     name: Sodium bicarbonate
-    class: alkalinising agent
+    class: fluid_electrolyte
+    subtitle: alkalinising agent
     doses:
     - label: Salicylate poisoning
       regimen: 1 mmol/kg IV over 4 h to correct acidosis and raise urine pH above 7.5, with oral potassium 2–5 mmol/kg/day. Monitor urine pH hourly
@@ -2481,7 +2513,8 @@ formulary:
     notes: Give to children ONLY for treatment of cholera — permanently stains teeth.
   - id: tranexamic-acid
     name: Tranexamic acid
-    class: haemostatic
+    class: other
+    subtitle: haemostatic
     doses:
     - label: Trauma, within 3 h of injury
       regimen: 15–20 mg/kg IV, max 1 g, then 2 mg/kg/h for at least 8 h
@@ -2531,14 +2564,16 @@ formulary:
       - '4'
   - id: vitamin-d
     name: Vitamin D
-    class: vitamin
+    class: other
+    subtitle: vitamin
     doses:
     - label: Very low birth weight supplementation
       regimen: 400–1000 IU daily (400 is the floor; preterm guidelines allow up to 800–1000)
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §3.11.2. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: vitamin-k
     name: Vitamin K (phytomenadione)
-    class: vitamin
+    class: other
+    subtitle: vitamin
     doses:
     - label: Routine newborn
       regimen: 1 mg IM (1 mg/0.5 ml or 1 mg/ml ampoule — do not use a 10 mg/ml ampoule)
@@ -2549,7 +2584,8 @@ formulary:
     notes: '⚠️ Not on the printed Annex 2 — added because the guidelines dose it, which is what Annex 2 says it covers: "the doses of the drugs mentioned in these guidelines that are suitable for infants and children". Dose taken from §3.3 and §1.6.4. No weight bands: like the annex''s own digoxin, chloramphenicol and aminophylline entries, calculate from body weight.'
   - id: whole-blood
     name: Whole blood
-    class: blood product
+    class: other
+    subtitle: blood product
     doses:
     - label: Severe anaemia — afebrile (T < 37.5 °C)
       regimen: 30 ml/kg (or packed cells 20 ml/kg)
