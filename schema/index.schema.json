@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fhir-fli.github.io/fhir_fli_documentation/orbweaver/schema/index.schema.json",
+  "title": "Orbweaver shelf index",
+  "description": "`assets/books/index.yaml`: the book ids on the shelf, in order. Each id is a bundle folder `assets/books/<id>/` holding a `book.yaml`.",
+  "type": "object",
+  "properties": {
+    "books": {
+      "description": "Book ids in shelf order.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_-]*$"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "books"
+  ],
+  "additionalProperties": false
+}

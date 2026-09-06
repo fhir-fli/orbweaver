@@ -1,0 +1,2778 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fhir-fli.github.io/fhir_fli_documentation/orbweaver/schema/topic.schema.json",
+  "title": "Orbweaver topic",
+  "description": "One orbweaver topic file (`assets/books/<book>/topics/<name>.yaml`): a page or pages of typed blocks. If a file validates against this schema the app parses and renders it. Unknown keys are errors because the renderer silently ignores them.",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "description": "A topic: one or more pages of blocks.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Logical id, kebab-case, unique across all books; the target of `topic:<id>` links.",
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "title": {
+          "description": "Page title.",
+          "type": "string"
+        },
+        "list_subtitle": {
+          "description": "Subtitle shown under the title in the contents list.",
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "last_reviewed": {
+          "description": "Source version string (e.g. `pocketbook v1.7`), not a date.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "Search keywords.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "aliases": {
+          "description": "Alternative names, weighted like tags in search.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "category": {
+          "description": "Clinical category (metadata).",
+          "type": "string",
+          "enum": [
+            "universal",
+            "medical",
+            "trauma",
+            "critical_care"
+          ],
+          "default": "universal"
+        },
+        "layout": {
+          "description": "`scroll` = one continuous column; `paged` = each page snaps to one screen.",
+          "type": "string",
+          "enum": [
+            "scroll",
+            "paged"
+          ],
+          "default": "scroll"
+        },
+        "font_family": {
+          "description": "Body typeface; must be a font the app bundles (`RobotoCondensed`).",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "page_number": {
+          "description": "Printed page number (single-page form only).",
+          "type": "integer"
+        },
+        "pages": {
+          "description": "Pages, each with its own `page_number` and `blocks` (preferred form).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/page"
+          },
+          "minItems": 1
+        },
+        "blocks": {
+          "description": "Blocks of a single-page topic (legacy form; use `pages` instead).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/block"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "title"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "pages"
+          ],
+          "not": {
+            "anyOf": [
+              {
+                "required": [
+                  "blocks"
+                ]
+              },
+              {
+                "required": [
+                  "page_number"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "required": [
+            "blocks"
+          ],
+          "not": {
+            "required": [
+              "pages"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "topic"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "color": {
+      "description": "Colour as `0xAARRGGBB`, `0xRRGGBB` or `#RRGGBB`.",
+      "type": "string",
+      "pattern": "^(0[xX]|#)?[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$"
+    },
+    "palette": {
+      "description": "Palette overrides, role → colour. Cascades book → chapter → topic → block; any role may be overridden and custom roles added. Common roles: accent, accent_fill, accent_branch, alert, alert_fill, alert_text, severity_{mild,moderate,severe}_{header,tile}, provider_{emt,aemt,intermediate,paramedic,critical_care,any}, pop_{adult,peds}, warning_{safety,caution}, flow_{decision,entry,convergence}, cc_link_{fill,border}, note_{fill,border,text}, danger_text.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/color"
+      }
+    },
+    "age_band": {
+      "description": "One age row of a banded entry node.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "Age row label, e.g. `Adult (14+)`.",
+          "type": "string"
+        },
+        "value": {
+          "description": "Threshold for that age, e.g. `90 mmHg`.",
+          "type": "string"
+        },
+        "cc": {
+          "description": "Optional Critical-Care value shown in a fused lavender column (needs `cc_title` on the node).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "flow_node": {
+      "description": "A flowchart node: entry, decision, or a continuation step.",
+      "type": "object",
+      "properties": {
+        "text": {
+          "description": "Node text.",
+          "type": "string"
+        },
+        "shape": {
+          "description": "Node outline.",
+          "type": "string",
+          "enum": [
+            "rectangle",
+            "rounded_rectangle",
+            "stadium",
+            "diamond"
+          ],
+          "default": "rectangle"
+        },
+        "bands": {
+          "description": "Age-tiered thresholds drawn as a striped mini-table inside the node.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/age_band"
+          }
+        },
+        "cc_title": {
+          "description": "Header of the fused Critical-Care column when `bands` carry `cc` values, e.g. `Or MAP`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "action": {
+      "description": "An action tile.",
+      "type": "object",
+      "properties": {
+        "text": {
+          "description": "Action text.",
+          "type": "string"
+        },
+        "kind": {
+          "description": "Action category (icon/styling).",
+          "type": "string",
+          "enum": [
+            "procedure",
+            "medication_administration",
+            "diagnostic",
+            "assessment",
+            "referral",
+            "communication"
+          ],
+          "default": "procedure"
+        },
+        "provider_level": {
+          "description": "Minimum provider level cleared for the intervention (WVEMS badge): E = EMT, A = AEMT, I = Intermediate, P = Paramedic, P(CC) or CC = Critical Care. Omit for any level.",
+          "type": "string",
+          "enum": [
+            "E",
+            "A",
+            "I",
+            "P",
+            "P(CC)",
+            "CC"
+          ]
+        },
+        "timing": {
+          "description": "Annotation such as `every 5 min`.",
+          "type": "string"
+        },
+        "condition": {
+          "description": "Annotation such as `if VT/VF`.",
+          "type": "string"
+        },
+        "peds_only": {
+          "description": "Pink `Peds` side tab on the right edge of the tile.",
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "warning": {
+      "description": "Side warning callout flanking a node.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "`safety` = red octagon on the left (scene safety, BSI); `caution` = purple trapezoid on the right (capacity, refusal, Critical-Care cross-reference). Only the first of each type renders.",
+          "type": "string",
+          "enum": [
+            "safety",
+            "caution"
+          ]
+        },
+        "text": {
+          "description": "Callout text.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "convergence_bullet": {
+      "description": "A bullet inside a convergence node.",
+      "type": "object",
+      "properties": {
+        "text": {
+          "description": "Bullet text.",
+          "type": "string"
+        },
+        "link_id": {
+          "description": "Visual cross-reference cue (underline); the app does not navigate on it.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "convergence_exit": {
+      "description": "A labelled arrow leaving the convergence node.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "Arrow label, e.g. `Improvement` / `No change`.",
+          "type": "string"
+        },
+        "loopback": {
+          "description": "`id` of a branch to loop back to. Omit for a forward arrow into `post_convergence`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "convergence": {
+      "description": "The node where branches reconverge (or a post-convergence box).",
+      "type": "object",
+      "properties": {
+        "text": {
+          "description": "Node text, e.g. `Re-assess ABC`.",
+          "type": "string"
+        },
+        "shape": {
+          "description": "Node outline.",
+          "type": "string",
+          "enum": [
+            "rectangle",
+            "rounded_rectangle",
+            "stadium",
+            "diamond"
+          ],
+          "default": "rounded_rectangle"
+        },
+        "bullets": {
+          "description": "Bullet list inside the node.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/convergence_bullet"
+          }
+        },
+        "exits": {
+          "description": "Labelled arrows leaving the node.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/convergence_exit"
+          }
+        },
+        "warnings": {
+          "description": "Side callouts flanking the node.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/warning"
+          }
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "cc_link": {
+      "description": "Lavender Critical-Care reference pill under the convergence.",
+      "type": "object",
+      "properties": {
+        "text": {
+          "description": "Pill text, e.g. `Sepsis`; may carry a `[text](topic:…)` link.",
+          "type": "string"
+        },
+        "link_id": {
+          "description": "Visual cross-reference cue (underline).",
+          "type": "string"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "dose_row": {
+      "description": "One row of the dose reference strip under a flowchart.",
+      "type": "object",
+      "properties": {
+        "drug": {
+          "type": "string"
+        },
+        "dose": {
+          "type": "string"
+        },
+        "route": {
+          "type": "string"
+        },
+        "frequency": {
+          "type": "string"
+        },
+        "population": {
+          "description": "Who the dose is for; drives the row stripe (adult grey, peds pink).",
+          "type": "string",
+          "enum": [
+            "adult",
+            "peds",
+            "both"
+          ],
+          "default": "both"
+        }
+      },
+      "required": [
+        "drug",
+        "dose",
+        "route",
+        "frequency"
+      ],
+      "additionalProperties": false
+    },
+    "branch_continuation": {
+      "description": "Downstream chain under one branch (asymmetric flow).",
+      "type": "object",
+      "properties": {
+        "entry_arrow_label": {
+          "description": "Label on the arrow from the branch's last action into the first node, e.g. `Every 2 minutes`.",
+          "type": "string"
+        },
+        "nodes": {
+          "description": "Nodes rendered downward under this branch only.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/flow_node"
+          }
+        }
+      },
+      "required": [
+        "nodes"
+      ],
+      "additionalProperties": false
+    },
+    "branch": {
+      "description": "One branch of a severity flowchart.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Branch id; the target of a convergence `loopback`.",
+          "type": "string"
+        },
+        "label": {
+          "description": "Branch header, e.g. `No Pulse`.",
+          "type": "string"
+        },
+        "criteria": {
+          "description": "Bullets under the label.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "actions": {
+          "description": "Action tiles, top to bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/action"
+          }
+        },
+        "severity": {
+          "description": "WHO IMCI tint: emergency = pink, priority = yellow, non_urgent = green.",
+          "type": "string",
+          "enum": [
+            "none",
+            "emergency",
+            "priority",
+            "non_urgent"
+          ],
+          "default": "none"
+        },
+        "continuation": {
+          "$ref": "#/$defs/branch_continuation"
+        },
+        "continues": {
+          "description": "Render label + down arrow only: the branch flows straight into the next block of the topic.",
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "id",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "linear_step": {
+      "description": "A step in a linear flowchart: `type: content` = a titled box with bullets; otherwise an action tile (same fields as an action).",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Step form.",
+          "type": "string",
+          "enum": [
+            "content",
+            "action"
+          ],
+          "default": "action"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "content"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "content"
+              },
+              "title": {
+                "description": "Box title, e.g. `Assess for:`.",
+                "type": "string"
+              },
+              "bullets": {
+                "description": "Bullets in the box.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "type",
+              "title"
+            ],
+            "additionalProperties": false
+          },
+          "else": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "action"
+              },
+              "text": {
+                "description": "Action text.",
+                "type": "string"
+              },
+              "kind": {
+                "description": "Action category (icon/styling).",
+                "type": "string",
+                "enum": [
+                  "procedure",
+                  "medication_administration",
+                  "diagnostic",
+                  "assessment",
+                  "referral",
+                  "communication"
+                ],
+                "default": "procedure"
+              },
+              "provider_level": {
+                "description": "Minimum provider level cleared for the intervention (WVEMS badge): E = EMT, A = AEMT, I = Intermediate, P = Paramedic, P(CC) or CC = Critical Care. Omit for any level.",
+                "type": "string",
+                "enum": [
+                  "E",
+                  "A",
+                  "I",
+                  "P",
+                  "P(CC)",
+                  "CC"
+                ]
+              },
+              "timing": {
+                "type": "string"
+              },
+              "condition": {
+                "type": "string"
+              },
+              "peds_only": {
+                "description": "Pink `Peds` side tab.",
+                "type": "boolean",
+                "default": false
+              }
+            },
+            "required": [
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        }
+      ]
+    },
+    "differential_card": {
+      "description": "One referential card in a differential grid.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "description": "Card title, e.g. `Skull Fx`.",
+          "type": "string"
+        },
+        "bullets": {
+          "description": "Descriptive bullets.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "cascade_step": {
+      "description": "One yes/no step of a cascade; `continuation` is the next step.",
+      "type": "object",
+      "properties": {
+        "decision": {
+          "description": "Yes/no question shown as the step header.",
+          "type": "string"
+        },
+        "criteria": {
+          "description": "Bullets under the question.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "action": {
+          "$ref": "#/$defs/action"
+        },
+        "action_answer": {
+          "description": "Which answer triggers `action`; the other answer continues.",
+          "type": "string",
+          "enum": [
+            "yes",
+            "no"
+          ],
+          "default": "yes"
+        },
+        "continuation": {
+          "$ref": "#/$defs/cascade_step"
+        }
+      },
+      "required": [
+        "decision"
+      ],
+      "additionalProperties": false
+    },
+    "algo_table": {
+      "description": "Compact bordered table rendered inside an algorithm box.",
+      "type": "object",
+      "properties": {
+        "columns": {
+          "description": "Column headers.",
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "number"
+            ]
+          }
+        },
+        "rows": {
+          "description": "Rows of cells.",
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": [
+                "string",
+                "number",
+                "boolean"
+              ]
+            }
+          }
+        },
+        "align": {
+          "description": "Per-column alignment; default left for column 0, centre for the rest.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "left",
+              "center",
+              "right"
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "algo_box": {
+      "description": "A content box: an outcome's result, a shared named box, or the terminal.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Makes the box a `goto` target.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Box title.",
+          "type": "string"
+        },
+        "bullets": {
+          "description": "Bullets under the title.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "severity": {
+          "description": "WHO IMCI tint: emergency = pink, priority = yellow, non_urgent = green.",
+          "type": "string",
+          "enum": [
+            "none",
+            "emergency",
+            "priority",
+            "non_urgent"
+          ],
+          "default": "none"
+        },
+        "table": {
+          "$ref": "#/$defs/algo_table"
+        }
+      },
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "algo_outcome": {
+      "description": "One labelled outcome of a decision stage.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "Outcome label on the arrow, e.g. `Yes`, `< 7 days`.",
+          "type": "string"
+        },
+        "box": {
+          "$ref": "#/$defs/algo_box"
+        },
+        "goto": {
+          "description": "`id` of a shared box in `boxes` to jump to (instead of an inline `box`).",
+          "type": "string"
+        },
+        "continue": {
+          "description": "After this outcome the flow rejoins the spine and proceeds to the next stage; otherwise the outcome is a terminal leaf.",
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "additionalProperties": false,
+      "not": {
+        "required": [
+          "box",
+          "goto"
+        ]
+      }
+    },
+    "algo_stage": {
+      "description": "A decision stage on the vertical spine.",
+      "type": "object",
+      "properties": {
+        "decision": {
+          "description": "Decision prompt.",
+          "type": "string"
+        },
+        "criteria": {
+          "description": "Bullets under the prompt.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "outcomes": {
+          "description": "Two or more labelled outcomes.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/algo_outcome"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "decision",
+        "outcomes"
+      ],
+      "additionalProperties": false
+    },
+    "cycle_branch": {
+      "description": "A side box off a cycle node, optionally looping back.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "Arrow label from the node to this box.",
+          "type": "string"
+        },
+        "side": {
+          "description": "Which side of the spine the box sits on.",
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "box": {
+          "$ref": "#/$defs/algo_box"
+        },
+        "loop_to": {
+          "description": "`id` of a spine node to draw a return arrow to (the loop). Omit for a terminal side action.",
+          "type": "string"
+        },
+        "loop_label": {
+          "description": "Annotation on the return arrow, e.g. `reassess q5–10 min`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "side",
+        "box"
+      ],
+      "additionalProperties": false
+    },
+    "cycle_node": {
+      "description": "One node on the spine of a cycle flowchart.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Makes the node a `loop_to` target.",
+          "type": "string"
+        },
+        "shape": {
+          "description": "`box` = rectangle, `decision` = diamond.",
+          "type": "string",
+          "enum": [
+            "box",
+            "decision"
+          ],
+          "default": "box"
+        },
+        "title": {
+          "description": "Node title.",
+          "type": "string"
+        },
+        "bullets": {
+          "description": "Bullets under the title.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "severity": {
+          "description": "WHO IMCI tint: emergency = pink, priority = yellow, non_urgent = green.",
+          "type": "string",
+          "enum": [
+            "none",
+            "emergency",
+            "priority",
+            "non_urgent"
+          ],
+          "default": "none"
+        },
+        "branches": {
+          "description": "Side boxes off this node.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cycle_branch"
+          }
+        },
+        "down_label": {
+          "description": "Label on the arrow to the next spine node, e.g. `once stable`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title"
+      ],
+      "additionalProperties": false
+    },
+    "flowchart_severity": {
+      "description": "Entry → decision → parallel branches → convergence (the WVEMS/ProtocolBook default).",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "flowchart"
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "variant": {
+          "const": "severity",
+          "default": "severity"
+        },
+        "entry_chain": {
+          "description": "Sequential nodes before the fork, top to bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/flow_node"
+          }
+        },
+        "entry": {
+          "description": "Single entry node (shorthand for a one-node `entry_chain`; do not use both).",
+          "$ref": "#/$defs/flow_node"
+        },
+        "pre_decision_actions": {
+          "description": "Action tiles between the entry chain and the decision.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/action"
+          }
+        },
+        "decision": {
+          "description": "Optional explicit decision node before the branches.",
+          "$ref": "#/$defs/flow_node"
+        },
+        "branches": {
+          "description": "Parallel branches, left to right.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/branch"
+          },
+          "minItems": 1
+        },
+        "convergence": {
+          "$ref": "#/$defs/convergence"
+        },
+        "post_convergence": {
+          "description": "One more box below the convergence, reached by a forward exit arrow.",
+          "$ref": "#/$defs/convergence"
+        },
+        "critical_care_link": {
+          "$ref": "#/$defs/cc_link"
+        },
+        "dose_table": {
+          "description": "Medication dose strip at the bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dose_row"
+          }
+        },
+        "warnings": {
+          "description": "Side callouts flanking the first entry node.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/warning"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "branches"
+      ],
+      "additionalProperties": false,
+      "not": {
+        "required": [
+          "entry",
+          "entry_chain"
+        ]
+      }
+    },
+    "flowchart_linear": {
+      "description": "Single column: entry → step → step → convergence. No decision, no branches.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "flowchart"
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "variant": {
+          "const": "linear"
+        },
+        "entry_chain": {
+          "description": "Sequential nodes before the fork, top to bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/flow_node"
+          }
+        },
+        "entry": {
+          "description": "Single entry node (shorthand for a one-node `entry_chain`; do not use both).",
+          "$ref": "#/$defs/flow_node"
+        },
+        "steps": {
+          "description": "Single-column steps, top to bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/linear_step"
+          },
+          "minItems": 1
+        },
+        "convergence": {
+          "$ref": "#/$defs/convergence"
+        },
+        "post_convergence": {
+          "description": "One more box below the convergence, reached by a forward exit arrow.",
+          "$ref": "#/$defs/convergence"
+        },
+        "critical_care_link": {
+          "$ref": "#/$defs/cc_link"
+        },
+        "dose_table": {
+          "description": "Medication dose strip at the bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dose_row"
+          }
+        },
+        "warnings": {
+          "description": "Side callouts flanking the first entry node.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/warning"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "variant",
+        "steps"
+      ],
+      "additionalProperties": false,
+      "not": {
+        "required": [
+          "entry",
+          "entry_chain"
+        ]
+      }
+    },
+    "flowchart_differential": {
+      "description": "Decision into a grid of referential cards (no action tiles per card).",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "flowchart"
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "variant": {
+          "const": "differential"
+        },
+        "entry_chain": {
+          "description": "Sequential nodes before the fork, top to bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/flow_node"
+          }
+        },
+        "entry": {
+          "description": "Single entry node (shorthand for a one-node `entry_chain`; do not use both).",
+          "$ref": "#/$defs/flow_node"
+        },
+        "pre_decision_actions": {
+          "description": "Action tiles between the entry chain and the decision.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/action"
+          }
+        },
+        "decision": {
+          "description": "Decision diamond above the card grid, e.g. `Location?`.",
+          "$ref": "#/$defs/flow_node"
+        },
+        "cards": {
+          "description": "Referential cards in a grid.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/differential_card"
+          },
+          "minItems": 1
+        },
+        "columns": {
+          "description": "Grid column count.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 2
+        },
+        "convergence": {
+          "$ref": "#/$defs/convergence"
+        },
+        "post_convergence": {
+          "description": "One more box below the convergence, reached by a forward exit arrow.",
+          "$ref": "#/$defs/convergence"
+        },
+        "critical_care_link": {
+          "$ref": "#/$defs/cc_link"
+        },
+        "dose_table": {
+          "description": "Medication dose strip at the bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dose_row"
+          }
+        },
+        "warnings": {
+          "description": "Side callouts flanking the first entry node.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/warning"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "variant",
+        "cards"
+      ],
+      "additionalProperties": false,
+      "not": {
+        "required": [
+          "entry",
+          "entry_chain"
+        ]
+      }
+    },
+    "flowchart_cascade": {
+      "description": "Linear yes/no chain (e.g. a contraindication checklist).",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "flowchart"
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "variant": {
+          "const": "cascade"
+        },
+        "entry": {
+          "$ref": "#/$defs/flow_node"
+        },
+        "root": {
+          "$ref": "#/$defs/cascade_step"
+        },
+        "terminal_action": {
+          "description": "Action taken if every step falls through.",
+          "$ref": "#/$defs/action"
+        },
+        "action_width": {
+          "description": "Fraction of the width given to the action column.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.5
+        }
+      },
+      "required": [
+        "type",
+        "variant",
+        "entry",
+        "root"
+      ],
+      "additionalProperties": false
+    },
+    "flowchart_algorithm": {
+      "description": "Vertical multi-decision algorithm: stages with labelled outcomes; loops are `goto` references, not drawn arrows.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "flowchart"
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "variant": {
+          "const": "algorithm"
+        },
+        "entry": {
+          "$ref": "#/$defs/flow_node"
+        },
+        "boxes": {
+          "description": "Shared named boxes that outcomes `goto`.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/algo_box"
+          }
+        },
+        "stages": {
+          "description": "Decision stages down the spine.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/algo_stage"
+          },
+          "minItems": 1
+        },
+        "terminal": {
+          "description": "Final box at the bottom of the spine.",
+          "$ref": "#/$defs/algo_box"
+        }
+      },
+      "required": [
+        "type",
+        "variant",
+        "stages"
+      ],
+      "additionalProperties": false
+    },
+    "flowchart_cycle": {
+      "description": "Cyclic algorithm: a spine whose side boxes can loop back to a node by `id` (drawn as a return arrow).",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "flowchart"
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "variant": {
+          "const": "cycle"
+        },
+        "nodes": {
+          "description": "Spine nodes, top to bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cycle_node"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "type",
+        "variant",
+        "nodes"
+      ],
+      "additionalProperties": false
+    },
+    "flowchart": {
+      "description": "A flowchart in one of six variants, chosen by `variant` (default `severity`).",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "flowchart"
+        },
+        "variant": {
+          "description": "Flowchart variant.",
+          "type": "string",
+          "enum": [
+            "severity",
+            "cascade",
+            "linear",
+            "differential",
+            "algorithm",
+            "cycle"
+          ],
+          "default": "severity"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "anyOf": [
+              {
+                "not": {
+                  "required": [
+                    "variant"
+                  ]
+                }
+              },
+              {
+                "properties": {
+                  "variant": {
+                    "const": "severity"
+                  }
+                },
+                "required": [
+                  "variant"
+                ]
+              }
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/flowchart_severity"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "variant": {
+                "const": "cascade"
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/flowchart_cascade"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "variant": {
+                "const": "linear"
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/flowchart_linear"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "variant": {
+                "const": "differential"
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/flowchart_differential"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "variant": {
+                "const": "algorithm"
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/flowchart_algorithm"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "variant": {
+                "const": "cycle"
+              }
+            },
+            "required": [
+              "variant"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/flowchart_cycle"
+          }
+        }
+      ]
+    },
+    "table_cell": {
+      "description": "A cell: a string (single line; a string containing newlines renders as markdown), a list of strings (bullets), or an object for span/markdown control.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        {
+          "type": "object",
+          "properties": {
+            "text": {
+              "description": "Cell text (markdown if multi-line).",
+              "type": "string"
+            },
+            "span": {
+              "description": "Number of columns this cell covers.",
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            },
+            "bullets": {
+              "description": "Bullet list instead of `text`.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "table_row": {
+      "description": "One table row.",
+      "type": "object",
+      "properties": {
+        "cells": {
+          "description": "Cells left to right; omit for a banner-only row.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/table_cell"
+          }
+        },
+        "title": {
+          "description": "Row banner rendered above the cells.",
+          "type": "string"
+        },
+        "header": {
+          "description": "Row label in a left header column.",
+          "type": "string"
+        },
+        "group": {
+          "description": "Group label; contiguous rows with the same group collapse under one label.",
+          "type": "string"
+        },
+        "severity": {
+          "description": "WHO IMCI tint: emergency = pink, priority = yellow, non_urgent = green.",
+          "type": "string",
+          "enum": [
+            "none",
+            "emergency",
+            "priority",
+            "non_urgent"
+          ],
+          "default": "none"
+        }
+      },
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "table": {
+      "description": "Columns + rows with optional severity tinting.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "table"
+        },
+        "title": {
+          "description": "Block title above the table.",
+          "type": "string"
+        },
+        "columns": {
+          "description": "Column headers; empty list = no header row.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "column_flex": {
+          "description": "Per-column width weights (one per column).",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "column_widths": {
+          "description": "Per-column fixed widths in px, for `layout: scroll`.",
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 1
+          }
+        },
+        "column_align": {
+          "description": "Per-column text alignment.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "left",
+              "right",
+              "center"
+            ]
+          }
+        },
+        "column_tint": {
+          "description": "Per-column background tint; empty string = none.",
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/$defs/color"
+              },
+              {
+                "type": "string",
+                "maxLength": 0
+              }
+            ]
+          }
+        },
+        "column_bar": {
+          "description": "Per-column in-cell magnitude bars for numeric cells.",
+          "type": "array",
+          "items": {
+            "type": "boolean"
+          }
+        },
+        "zebra": {
+          "description": "Alternate row shading (where a row has no severity tint).",
+          "type": "boolean",
+          "default": false
+        },
+        "sticky_header": {
+          "description": "Pin the header row while the body scrolls (scroll layout).",
+          "type": "boolean",
+          "default": false
+        },
+        "sticky_first_column": {
+          "description": "Pin the first column while the body scrolls horizontally (scroll layout).",
+          "type": "boolean",
+          "default": false
+        },
+        "lookup": {
+          "description": "Show a go-to-row finder keyed on the first column.",
+          "type": "boolean",
+          "default": false
+        },
+        "lookup_label": {
+          "description": "Label for the finder field; default `Go to <first column>`.",
+          "type": "string"
+        },
+        "max_height": {
+          "description": "Max height in px; the table scrolls inside it.",
+          "type": "number",
+          "minimum": 1
+        },
+        "rows": {
+          "description": "Data rows.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/table_row"
+          },
+          "minItems": 1
+        },
+        "layout": {
+          "description": "`standard` = dense grid; `boxed` = each cell a rounded tile (flow-grid rows); `scroll` = fixed column widths, horizontal scroll.",
+          "type": "string",
+          "enum": [
+            "standard",
+            "boxed",
+            "scroll"
+          ],
+          "default": "standard"
+        },
+        "flex": {
+          "description": "Share of the parent row/column width (12-column convention: a row's children should sum to 12). Only meaningful inside a `row` or `column`.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "rows"
+      ],
+      "additionalProperties": false
+    },
+    "prose": {
+      "description": "Markdown text. Most content lives here.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "prose"
+        },
+        "markdown": {
+          "description": "Markdown: `**bold**`, `- ` bullets, and links `[text](topic:<id>)`, `[text](topic:<id>#<anchor>)`, `[text](#<anchor>)` or an https URL. Provider badges `{E}` `{A}` `{I}` `{P}` `{P(CC)}` `{}`.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Bold sub-header above the text.",
+          "type": "string"
+        },
+        "highlight": {
+          "description": "Tinted (paediatrics pink) container.",
+          "type": "boolean",
+          "default": false
+        },
+        "callout": {
+          "description": "Attention card (amber by default) with the title as a chip.",
+          "type": "boolean",
+          "default": false
+        },
+        "dashed": {
+          "description": "Dashed outline for a `callout` (the print's conditional box).",
+          "type": "boolean",
+          "default": false
+        },
+        "boxed": {
+          "description": "Rounded-border centred tile, for use as a grid cell in a `row`.",
+          "type": "boolean",
+          "default": false
+        },
+        "text_scale": {
+          "description": "Body size as a fraction of the normal prose size (e.g. 0.8 for references).",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 1.0
+        },
+        "call_er": {
+          "description": "Pair this box with the print's `Call ER` tile on its right.",
+          "type": "boolean",
+          "default": false
+        },
+        "critical_care_link": {
+          "description": "Lavender Critical-Care tab fused under this box (WVEMS).",
+          "$ref": "#/$defs/cc_link"
+        },
+        "flex": {
+          "description": "Share of the parent row/column width (12-column convention: a row's children should sum to 12). Only meaningful inside a `row` or `column`.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "markdown"
+      ],
+      "additionalProperties": false
+    },
+    "band_callout": {
+      "description": "Markdown tinted to say who it applies to (WVEMS population/credential bands).",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "band_callout"
+        },
+        "band": {
+          "description": "`peds` = pink Pediatrics band; `critical_care` = lavender Critical Care band.",
+          "type": "string",
+          "enum": [
+            "peds",
+            "pediatrics",
+            "critical_care",
+            "cc"
+          ]
+        },
+        "markdown": {
+          "description": "Markdown: `**bold**`, `- ` bullets, and links `[text](topic:<id>)`, `[text](topic:<id>#<anchor>)`, `[text](#<anchor>)` or an https URL. Provider badges `{E}` `{A}` `{I}` `{P}` `{P(CC)}` `{}`.",
+          "type": "string"
+        },
+        "title": {
+          "description": "Section label inside the band; omit for the band's default (`Pediatrics` / `Critical Care`); empty string for a bare band.",
+          "type": "string"
+        },
+        "flex": {
+          "description": "Share of the parent row/column width (12-column convention: a row's children should sum to 12). Only meaningful inside a `row` or `column`.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "band",
+        "markdown"
+      ],
+      "additionalProperties": false
+    },
+    "drug_dose": {
+      "description": "One dose line of a drug card.",
+      "type": "object",
+      "properties": {
+        "text": {
+          "description": "Dose line.",
+          "type": "string"
+        },
+        "population": {
+          "description": "Who the dose is for; drives the row stripe (adult grey, peds pink).",
+          "type": "string",
+          "enum": [
+            "adult",
+            "peds",
+            "both"
+          ],
+          "default": "both"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "drug_card": {
+      "description": "Canonical drug reference card.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "drug_card"
+        },
+        "name": {
+          "description": "Drug name; also its default anchor slug.",
+          "type": "string"
+        },
+        "class": {
+          "description": "Drug class.",
+          "type": "string"
+        },
+        "indications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contraindications": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "doses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/drug_dose"
+          }
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "pearls": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "image": {
+          "description": "Asset path of a product shot, e.g. `assets/books/<book>/images/x.png`.",
+          "type": "string"
+        },
+        "critical_care": {
+          "description": "Critical-Care restricted (lavender notes zone).",
+          "type": "boolean",
+          "default": false
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "procedure_card": {
+      "description": "How-to procedure card: scope-badged header over numbered steps.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "procedure_card"
+        },
+        "name": {
+          "description": "Procedure name; also its default anchor slug.",
+          "type": "string"
+        },
+        "scope": {
+          "description": "Minimum provider level cleared for the intervention (WVEMS badge): E = EMT, A = AEMT, I = Intermediate, P = Paramedic, P(CC) or CC = Critical Care. Omit for any level.",
+          "type": "string",
+          "enum": [
+            "E",
+            "A",
+            "I",
+            "P",
+            "P(CC)",
+            "CC"
+          ]
+        },
+        "steps": {
+          "description": "Step lines. Prefix syntax: plain = next numbered step; `@2a text` = explicit label; `- text` = sub-bullet; `~[E] text` = scope note; `[E]` on a step = inline scope chip; leading `:` = dashed emphasis; leading `!` = pink peds band; leading `^` = lavender Critical-Care band; `NOTE: text` = full-width note.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "image": {
+          "description": "Asset path of an illustration.",
+          "type": "string"
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "image": {
+      "description": "Figure with caption.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "image"
+        },
+        "path": {
+          "description": "Asset path, e.g. `assets/books/<book>/images/figure.png`.",
+          "type": "string"
+        },
+        "caption": {
+          "type": "string"
+        },
+        "size": {
+          "description": "Rendered width.",
+          "type": "string",
+          "enum": [
+            "small",
+            "medium",
+            "large",
+            "full"
+          ],
+          "default": "medium"
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "path"
+      ],
+      "additionalProperties": false
+    },
+    "row": {
+      "description": "Horizontal layout of child blocks.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "row"
+        },
+        "blocks": {
+          "description": "Children side by side; their `flex` values should sum to 12.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/block"
+          },
+          "minItems": 1
+        },
+        "flex": {
+          "description": "Share of the parent row/column width (12-column convention: a row's children should sum to 12). Only meaningful inside a `row` or `column`.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        }
+      },
+      "required": [
+        "type",
+        "blocks"
+      ],
+      "additionalProperties": false
+    },
+    "column": {
+      "description": "Vertical layout of child blocks (inside a `row` slot).",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "column"
+        },
+        "blocks": {
+          "description": "Children stacked vertically; an empty list is a blank spacer cell.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/block"
+          }
+        },
+        "flex": {
+          "description": "Share of the parent row/column width (12-column convention: a row's children should sum to 12). Only meaningful inside a `row` or `column`.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        }
+      },
+      "required": [
+        "type",
+        "blocks"
+      ],
+      "additionalProperties": false
+    },
+    "arrows": {
+      "description": "Down or right arrows bridging rows of a flow grid.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "arrows"
+        },
+        "count": {
+          "description": "Number of evenly spaced arrows.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "label": {
+          "description": "Label on the arrows.",
+          "type": "string"
+        },
+        "length": {
+          "description": "Arrow length in px.",
+          "type": "number",
+          "minimum": 1,
+          "default": 14
+        },
+        "direction": {
+          "description": "Arrow direction (`right` requires count 1).",
+          "type": "string",
+          "enum": [
+            "down",
+            "right"
+          ],
+          "default": "down"
+        },
+        "inline": {
+          "description": "Label beside the arrow instead of above it.",
+          "type": "boolean",
+          "default": false
+        },
+        "flex": {
+          "description": "Share of the parent row/column width (12-column convention: a row's children should sum to 12). Only meaningful inside a `row` or `column`.",
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "merge_arrows": {
+      "description": "Several arrows converging into one.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "merge_arrows"
+        },
+        "columns": {
+          "description": "Grid width this block spans.",
+          "type": "integer",
+          "minimum": 1
+        },
+        "sources": {
+          "description": "Column indices of the top arrows.",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "target_center": {
+          "description": "Column index (fractional allowed) of the merged arrow.",
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "type",
+        "columns",
+        "sources",
+        "target_center"
+      ],
+      "additionalProperties": false
+    },
+    "conversion_dose": {
+      "description": "A discrete strength tagged with its tier (tiers mode).",
+      "type": "object",
+      "properties": {
+        "dose": {
+          "type": [
+            "string",
+            "number"
+          ],
+          "description": "Manufactured strength."
+        },
+        "tier": {
+          "description": "Tier name from `tiers`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "dose",
+        "tier"
+      ],
+      "additionalProperties": false
+    },
+    "conversion_agent": {
+      "description": "One agent in a conversion.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Agent name.",
+          "type": "string"
+        },
+        "route": {
+          "description": "Route, when the same agent has several (e.g. `PO`, `IV`).",
+          "type": "string"
+        },
+        "factor": {
+          "description": "Multiplier to the reference (equivalence mode).",
+          "type": "number"
+        },
+        "unit": {
+          "description": "Dose unit override for this agent.",
+          "type": "string"
+        },
+        "doses": {
+          "description": "Strengths (tiers mode).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/conversion_dose"
+          }
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "conversion": {
+      "description": "Interactive dose converter.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "conversion"
+        },
+        "mode": {
+          "description": "`equivalence` = free numeric entry with factors to a reference; `tiers` = pick from fixed strengths grouped in tiers.",
+          "type": "string",
+          "enum": [
+            "equivalence",
+            "tiers"
+          ],
+          "default": "equivalence"
+        },
+        "title": {
+          "type": "string"
+        },
+        "reference": {
+          "description": "Reference anchor name (equivalence), e.g. `oral morphine`.",
+          "type": "string"
+        },
+        "reference_label": {
+          "description": "Short label for the reference line, e.g. `MME`.",
+          "type": "string"
+        },
+        "unit": {
+          "description": "Default dose unit.",
+          "type": "string"
+        },
+        "source": {
+          "description": "Where the factors/tiers come from (shown; required for clinical safety).",
+          "type": "string"
+        },
+        "tiers": {
+          "description": "Ordered tier names low → high (tiers mode).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tier_note": {
+          "type": "string"
+        },
+        "agents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/conversion_agent"
+          },
+          "minItems": 1
+        },
+        "excluded": {
+          "description": "Agents deliberately not auto-converted, with the reason.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "reason": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "reason"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "caveats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "mode",
+        "agents"
+      ],
+      "additionalProperties": false
+    },
+    "formula_option": {
+      "description": "A select option: a bare value, or `{value, label}`.",
+      "anyOf": [
+        {
+          "type": [
+            "string",
+            "number",
+            "boolean"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean"
+              ]
+            },
+            "label": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "formula_input": {
+      "description": "One input field of a formula calculator.",
+      "type": "object",
+      "properties": {
+        "key": {
+          "description": "Value key the formula reads.",
+          "type": "string"
+        },
+        "label": {
+          "description": "Field label.",
+          "type": "string"
+        },
+        "type": {
+          "description": "Field type.",
+          "type": "string",
+          "enum": [
+            "number",
+            "select",
+            "boolean"
+          ],
+          "default": "number"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "help": {
+          "type": "string"
+        },
+        "default": {
+          "type": [
+            "string",
+            "number",
+            "boolean"
+          ],
+          "description": "Initial value."
+        },
+        "options": {
+          "description": "Options for a `select` input.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/formula_option"
+          }
+        },
+        "optional": {
+          "description": "Does not block computation when blank.",
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "required": [
+        "key",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "formula": {
+      "description": "Numbers in → number out, via a built-in formula.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "formula"
+        },
+        "kind": {
+          "description": "Which built-in formula computes the result. The math is compiled into the app; a YAML author cannot add kinds.",
+          "type": "string",
+          "enum": [
+            "renal_function",
+            "map",
+            "corrected_sodium",
+            "anion_gap",
+            "aa_gradient",
+            "winters",
+            "ideal_body_weight",
+            "holliday_segar",
+            "meld3",
+            "qtc",
+            "free_water_deficit",
+            "anthropometrics",
+            "osmolal_gap",
+            "parkland",
+            "urinary_indices",
+            "anc",
+            "reticulocyte",
+            "lights",
+            "fib4",
+            "maddrey",
+            "oxygenation",
+            "dday_age",
+            "lille",
+            "prevent_ascvd",
+            "glasgow_blatchford",
+            "adrogue_madias",
+            "hba1c_eag"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "source": {
+          "description": "Provenance of the formula (shown).",
+          "type": "string"
+        },
+        "inputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/formula_input"
+          },
+          "minItems": 1
+        },
+        "notes": {
+          "description": "Lines shown under the result.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "caveats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "kind",
+        "inputs"
+      ],
+      "additionalProperties": false
+    },
+    "score_option": {
+      "description": "One option of a choice/scale item.",
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "boolean"
+          ]
+        },
+        "label": {
+          "description": "Defaults to the value.",
+          "type": "string"
+        },
+        "points": {
+          "type": "number",
+          "default": 0
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "score_item": {
+      "description": "One scored criterion.",
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "type": {
+          "description": "`toggle` = yes/no worth `points`; `choice` = pick one option (chips); `scale` = pick one level (stepper).",
+          "type": "string",
+          "enum": [
+            "toggle",
+            "choice",
+            "scale"
+          ],
+          "default": "toggle"
+        },
+        "help": {
+          "type": "string"
+        },
+        "points": {
+          "description": "Points when a toggle is on.",
+          "type": "number",
+          "default": 0
+        },
+        "options": {
+          "description": "Options for choice/scale.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/score_option"
+          }
+        },
+        "default": {
+          "type": [
+            "string",
+            "number",
+            "boolean"
+          ],
+          "description": "Initially selected option value."
+        }
+      },
+      "required": [
+        "key",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "score_band": {
+      "description": "A total-score interval and its interpretation.",
+      "type": "object",
+      "properties": {
+        "min": {
+          "type": "number",
+          "default": 0
+        },
+        "max": {
+          "description": "Omit for open-ended.",
+          "type": "number"
+        },
+        "label": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "severity": {
+          "description": "Result tint.",
+          "type": "string",
+          "enum": [
+            "none",
+            "info",
+            "warn",
+            "alert"
+          ],
+          "default": "none"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "score": {
+      "description": "Criteria → summed points → risk band.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "const": "score"
+        },
+        "title": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string",
+          "default": "points"
+        },
+        "source": {
+          "description": "Provenance of the score (shown).",
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/score_item"
+          },
+          "minItems": 1
+        },
+        "bands": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/score_band"
+          },
+          "minItems": 1
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "caveats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "anchor": {
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        }
+      },
+      "required": [
+        "type",
+        "items",
+        "bands"
+      ],
+      "additionalProperties": false
+    },
+    "block": {
+      "description": "One vertical section of a page, chosen by `type`.",
+      "type": "object",
+      "properties": {
+        "type": {
+          "description": "Block type.",
+          "type": "string",
+          "enum": [
+            "prose",
+            "band_callout",
+            "flowchart",
+            "table",
+            "drug_card",
+            "procedure_card",
+            "image",
+            "row",
+            "column",
+            "arrows",
+            "merge_arrows",
+            "conversion",
+            "formula",
+            "score"
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "prose"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/prose"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "band_callout"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/band_callout"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "flowchart"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/flowchart"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "table"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/table"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "drug_card"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/drug_card"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "procedure_card"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/procedure_card"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "image"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/image"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "row"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/row"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "column"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/column"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "arrows"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/arrows"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "merge_arrows"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/merge_arrows"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "conversion"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/conversion"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "formula"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/formula"
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "score"
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "$ref": "#/$defs/score"
+          }
+        }
+      ]
+    },
+    "page": {
+      "description": "One page of a topic (maps to one source page).",
+      "type": "object",
+      "properties": {
+        "page_number": {
+          "description": "Printed page number of the source; shown in the header badge and page-break divider.",
+          "type": "integer"
+        },
+        "blocks": {
+          "description": "Blocks top to bottom.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/block"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "blocks"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

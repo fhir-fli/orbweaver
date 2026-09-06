@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fhir-fli.github.io/fhir_fli_documentation/orbweaver/schema/book.schema.json",
+  "title": "Orbweaver book",
+  "description": "A book bundle's `book.yaml`: metadata plus the contents tree that references topic files and arranges them into chapters and sections. Paths are relative to the bundle folder `assets/books/<id>/`.",
+  "type": "object",
+  "properties": {
+    "book": {
+      "description": "Book metadata and its contents tree (the map).",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Book id; must equal the bundle folder name and appear in `assets/books/index.yaml`.",
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "cover": {
+          "description": "Cover image filename in the bundle folder, e.g. `cover.png`.",
+          "type": "string"
+        },
+        "spine_color": {
+          "$ref": "#/$defs/color",
+          "description": "Spine colour on the shelf."
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "font_family": {
+          "description": "Body typeface for the whole book; must be a font the app bundles (`RobotoCondensed`).",
+          "type": "string"
+        },
+        "view": {
+          "description": "`index` = a single-page directory of every topic instead of the drill-down table of contents.",
+          "type": "string",
+          "enum": [
+            "index"
+          ]
+        },
+        "contents": {
+          "description": "The map: ordered leaves and groups.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/node"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "spine_color",
+        "contents"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "book"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "color": {
+      "description": "Colour as `0xAARRGGBB`, `0xRRGGBB` or `#RRGGBB`.",
+      "type": "string",
+      "pattern": "^(0[xX]|#)?[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?$"
+    },
+    "palette": {
+      "description": "Palette overrides, role → colour, inherited by everything below this level. See topic.schema.json for the role names.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/color"
+      }
+    },
+    "node": {
+      "description": "A contents entry: a LEAF `{topic: <path>}`; a GROUP with a `title` and `children` (a chapter/section, optionally with its own overview `topic`); or a `view: collection` group that renders a `formulary`.",
+      "type": "object",
+      "if": {
+        "required": [
+          "title"
+        ]
+      },
+      "then": {
+        "if": {
+          "properties": {
+            "view": {
+              "const": "collection"
+            }
+          },
+          "required": [
+            "view"
+          ]
+        },
+        "then": {
+          "$ref": "#/$defs/group_collection"
+        },
+        "else": {
+          "$ref": "#/$defs/group_chapter"
+        }
+      },
+      "else": {
+        "$ref": "#/$defs/leaf"
+      }
+    },
+    "group_chapter": {
+      "description": "A chapter or section with `children`.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "description": "Chapter/section title; fold the outline number in, e.g. `6.2 Malaria`.",
+          "type": "string"
+        },
+        "topic": {
+          "description": "Path, relative to the bundle folder, of this group's own overview page.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "font_family": {
+          "description": "Body typeface for this subtree; must be a font the app bundles (`RobotoCondensed`).",
+          "type": "string"
+        },
+        "appendix": {
+          "description": "Reference appendix (drugs/peds/procedures) rather than a numbered section; the `index` book view renders it as a footer bar.",
+          "type": "boolean",
+          "default": false
+        },
+        "children": {
+          "description": "Child entries (leaves or nested groups).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/node"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "title",
+        "children"
+      ],
+      "additionalProperties": false
+    },
+    "group_collection": {
+      "description": "A `view: collection` group: renders a formulary instead of children.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "description": "Chapter/section title; fold the outline number in, e.g. `6.2 Malaria`.",
+          "type": "string"
+        },
+        "topic": {
+          "description": "Path, relative to the bundle folder, of this group's own overview page.",
+          "type": "string"
+        },
+        "palette": {
+          "$ref": "#/$defs/palette"
+        },
+        "font_family": {
+          "description": "Body typeface for this subtree; must be a font the app bundles (`RobotoCondensed`).",
+          "type": "string"
+        },
+        "appendix": {
+          "description": "Reference appendix (drugs/peds/procedures) rather than a numbered section; the `index` book view renders it as a footer bar.",
+          "type": "boolean",
+          "default": false
+        },
+        "view": {
+          "description": "`collection` = a faceted formulary (A–Z / by class / by indication) built from `formulary` instead of a chapter.",
+          "type": "string",
+          "const": "collection"
+        },
+        "formulary": {
+          "description": "Path, relative to the bundle folder, of the `formulary.yaml` this collection renders.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "view",
+        "formulary"
+      ],
+      "additionalProperties": false
+    },
+    "leaf": {
+      "description": "A bare topic reference.",
+      "type": "object",
+      "properties": {
+        "topic": {
+          "description": "Path, relative to the bundle folder, of the topic file, e.g. `topics/intro.yaml`.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "topic"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

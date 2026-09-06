@@ -1,0 +1,282 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fhir-fli.github.io/fhir_fli_documentation/orbweaver/schema/formulary.schema.json",
+  "title": "Orbweaver formulary",
+  "description": "A book bundle's `formulary.yaml`: drug records rendered by the faceted drug index (A–Z, by class, by indication). Referenced from a `view: collection` group in `book.yaml`.",
+  "type": "object",
+  "properties": {
+    "formulary": {
+      "description": "A faceted drug collection.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "source": {
+          "description": "Where the formulary comes from (metadata; not rendered).",
+          "type": "string"
+        },
+        "intro": {
+          "description": "Markdown shown once at the top of the A–Z list (front-matter, dosing conventions).",
+          "type": "string"
+        },
+        "bands": {
+          "$ref": "#/$defs/axis",
+          "description": "Main weight-band axis."
+        },
+        "bands_art": {
+          "$ref": "#/$defs/axis",
+          "description": "Antiretroviral axis (surface area / weight, morning & evening)."
+        },
+        "facets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/facet"
+          },
+          "minItems": 1
+        },
+        "classes": {
+          "description": "Class keys and labels, in display order.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/keyed"
+          }
+        },
+        "indications": {
+          "description": "Indication keys and labels, in display order.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/keyed"
+          }
+        },
+        "drugs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/drug"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "bands",
+        "bands_art",
+        "facets",
+        "drugs"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "formulary"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "axis": {
+      "description": "One dose axis.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "Header over the band columns, e.g. `Dose by body weight (kg)`.",
+          "type": "string"
+        },
+        "columns": {
+          "description": "Ordered band column headers, e.g. `3–<6`, `6–<10`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "label",
+        "columns"
+      ],
+      "additionalProperties": false
+    },
+    "keyed": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "facet": {
+      "description": "One lens over the drug list.",
+      "type": "object",
+      "properties": {
+        "key": {
+          "description": "Facet id.",
+          "type": "string"
+        },
+        "label": {
+          "description": "Toggle label, e.g. `A–Z`.",
+          "type": "string"
+        },
+        "mode": {
+          "description": "`alpha` = flat A–Z; `group` = grouped by `field`.",
+          "type": "string",
+          "enum": [
+            "alpha",
+            "group"
+          ]
+        },
+        "tap": {
+          "description": "`detail` = open the drug page; `expand` = expand the slice in place.",
+          "type": "string",
+          "enum": [
+            "detail",
+            "expand"
+          ]
+        },
+        "field": {
+          "description": "Grouping field for `group` mode.",
+          "type": "string",
+          "enum": [
+            "class",
+            "indications"
+          ]
+        }
+      },
+      "required": [
+        "key",
+        "label",
+        "mode",
+        "tap"
+      ],
+      "additionalProperties": false
+    },
+    "dose_row": {
+      "description": "One dose row of a drug.",
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "Row label: form, indication or step.",
+          "type": "string"
+        },
+        "indication": {
+          "description": "Indication key this row is for (used by the by-indication expand).",
+          "type": "string"
+        },
+        "regimen": {
+          "type": "string"
+        },
+        "form": {
+          "type": "string"
+        },
+        "bands": {
+          "description": "One value per band column of the drug's axis.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "additionalProperties": false
+    },
+    "drug": {
+      "description": "One drug record.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Drug id, unique in the book; the target of `topic:<id>` links.",
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]*$"
+        },
+        "name": {
+          "type": "string"
+        },
+        "class": {
+          "description": "Class key from `classes`.",
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "indications": {
+          "description": "Indication keys from `indications`.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "axis": {
+          "description": "Which shared axis the band columns come from.",
+          "type": "string",
+          "enum": [
+            "main",
+            "art"
+          ],
+          "default": "main"
+        },
+        "page": {
+          "description": "Source page number.",
+          "type": "integer"
+        },
+        "regimen": {
+          "description": "Shared regimen line above the dose rows.",
+          "type": "string"
+        },
+        "daily": {
+          "description": "Daily mg/kg dose when there is no band grid (antituberculosis drugs).",
+          "type": "string"
+        },
+        "dose": {
+          "description": "Free-form dose-and-route markdown for prose-dosed formularies.",
+          "type": "string"
+        },
+        "notes": {
+          "description": "Notes / contraindications markdown.",
+          "type": "string"
+        },
+        "review": {
+          "description": "Indication came from a fallback source and awaits review.",
+          "type": "boolean",
+          "default": false
+        },
+        "band_label": {
+          "description": "Override the axis header for this drug.",
+          "type": "string"
+        },
+        "band_columns": {
+          "description": "Override the axis columns for this drug (when its weight bands differ).",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "doses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dose_row"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "class"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

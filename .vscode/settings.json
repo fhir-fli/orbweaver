@@ -1,0 +1,13 @@
+{
+  // Live validation + completion for the book bundles. Needs the Red Hat YAML
+  // extension (redhat.vscode-yaml); see .vscode/extensions.json.
+  "yaml.schemas": {
+    "./schema/topic.schema.json": ["assets/books/*/topics/*.yaml"],
+    "./schema/book.schema.json": ["assets/books/*/book.yaml"],
+    "./schema/formulary.schema.json": ["assets/books/*/formulary.yaml"],
+    "./schema/index.schema.json": ["assets/books/index.yaml"]
+  },
+  "yaml.validate": true,
+  "yaml.hover": true,
+  "yaml.completion": true
+}
