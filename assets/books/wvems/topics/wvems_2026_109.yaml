@@ -30,7 +30,7 @@ topic:
     - "Termination"
     - "Destination"
     - "MCI"
-  category: "critical"
+  category: "critical_care"
   page_number: 109
 
   blocks:
