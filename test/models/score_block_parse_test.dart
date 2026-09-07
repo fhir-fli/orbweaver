@@ -43,6 +43,7 @@ const _files = <String>[
   'calc_sgarbossa.yaml',
   'calc_nexus_cspine.yaml',
   'calc_pecarn_head.yaml',
+  'calc_pecarn_cspine.yaml',
 ];
 
 /// Every score block in the topic (PECARN carries one per age stratum).
@@ -124,7 +125,7 @@ void main() {
     }
 
     test('all scores registered', () {
-      expect(_files, hasLength(31));
+      expect(_files, hasLength(32));
       for (final f in _files) {
         expect(File('$_dir/$f').existsSync(), isTrue, reason: 'missing $f');
       }

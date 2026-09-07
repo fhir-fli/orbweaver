@@ -111,4 +111,4 @@ topic:
         - Head-to-head with NEXUS (Stiell 2003, 8,283 patients): CCR 99.4% vs 90.7% sensitivity, 45.1% vs 36.8% specificity, radiography rate 55.9% vs 66.6%. Run by the rule's developers; clinicians skipped the range-of-motion step in 10.2%, the rule's practical weakness.
         - Independent comparison (Ala 2018, 200 patients): 90% sensitivity for both rules, NEXUS more specific (54.7% vs 44.2%). Systematic review (Michaleff 2012, 15 modest-quality studies): CCR sensitivity 0.90–1.00, NEXUS 0.83–1.00.
         - Guidelines split: NICE uses the CCR; EAST and AANS/CNS use NEXUS; the ACR takes no position and accepts either.
-        - Children: neither adult rule is validated under about 8 years. In 22,430 children (Lee 2025) sensitivity was PECARN cervical-spine rule 93.3%, CCR 90.8%, NEXUS 85.7%.
+        - Children: neither adult rule is validated under about 8 years. In 22,430 children (Lee 2025) sensitivity was PECARN cervical-spine rule 93.3%, CCR 90.8%, NEXUS 85.7%. Under 16 use [PECARN cervical spine](topic:calc-pecarn-cspine).

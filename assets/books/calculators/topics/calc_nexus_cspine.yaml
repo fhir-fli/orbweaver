@@ -44,7 +44,8 @@ topic:
         clinically. All five must be absent to skip imaging — tap any that is
         present; a single one means imaging is indicated. Companion rule for
         alert, stable adults: the [Canadian C-Spine Rule](topic:calc-canadian-cspine),
-        which also carries the pathway for when CT is unavailable.
+        which also carries the pathway for when CT is unavailable. Children:
+        [PECARN cervical spine](topic:calc-pecarn-cspine).
 
     - type: "score"
       title: "NEXUS low-risk criteria"
@@ -64,4 +65,4 @@ topic:
         - "Rule negative: remove the collar, no imaging. Rule positive with CT unavailable: plain films, minimum 3 views, preferably 5 — and normal films do not fully clear the patient (see the Canadian C-Spine Rule page)."
       caveats:
         - "Over 65: NEXUS sensitivity is lower in older patients; the Canadian rule sends every patient ≥ 65 to imaging. Consider imaging on mechanism or examination even when NEXUS is negative."
-        - "Children: NEXUS and the Canadian rule are adult-derived and not validated under about 8 years; the paediatric subgroup (Viccellio 2001) had only 88 children under 2, none injured. In 22,430 children (Lee 2025) sensitivity was NEXUS 85.7%, Canadian rule 90.8%, PECARN cervical-spine rule 93.3%."
+        - "Children: NEXUS and the Canadian rule are adult-derived and not validated under about 8 years; the paediatric subgroup (Viccellio 2001) had only 88 children under 2, none injured. In 22,430 children (Lee 2025) sensitivity was NEXUS 85.7%, Canadian rule 90.8%, PECARN cervical-spine rule 93.3% — use the PECARN cervical-spine rule for children."

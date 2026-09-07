@@ -1,0 +1,101 @@
+# ============================================================
+# PECARN cervical-spine injury (CSI) prediction rule — children 0–17 y,
+# blunt trauma. Three tiers: high-risk → CT; intermediate → plain films;
+# neither → clinical clearance.
+# Evidence review 2026-09-07, built from the PRIMARY SOURCE, not from the
+# OpenEvidence reply of the same day:
+#   Leonard et al., Lancet Child Adolesc Health 2024 (PMID 38843852; abstract
+#   read whole via PubMed): 22,430 children 0–17 y at 18 PECARN EDs, 433
+#   (1.9%) CSI. High-risk factors: altered mental status (GCS 3–8 or U on
+#   AVPU); abnormal airway, breathing or circulation; focal neurological
+#   deficits including paraesthesia, numbness or weakness. CART factors:
+#   neck pain; altered mental status (GCS 9–14, V or P on AVPU, or other
+#   signs); substantial head injury; substantial torso injury; midline neck
+#   tenderness. Validation: sensitivity 94.3% (95% CI 90.7–97.9), specificity
+#   60.4%, NPV 99.9%; CT projected to fall from 17.2% to 6.9% of children.
+#   Only exclusion named: solely penetrating trauma. Enrolment: EMS transport,
+#   trauma-team evaluation, or neck imaging already done. An erratum exists
+#   (Lancet Child Adolesc Health 2024;8:e17); its content was not readable
+#   here — unknown what it corrected.
+#   Lee et al., JAMA Netw Open 2025 (PMC12717614, open access, Box read
+#   whole): the rule as applied — high-risk "consider CT", CART "consider
+#   radiography"; "substantial injuries" = warranting inpatient observation
+#   or surgical intervention. Same cohort: PECARN CSI 93.3% sensitivity,
+#   NPV 99.8%, projected CT 6.9%; NEXUS 85.7%; CCR 90.8%.
+# 🛑 OpenEvidence's reply listed torticollis, predisposing conditions, diving
+#   and high-risk MVC as intermediate factors and a seven-item exclusion list
+#   (24 h, ground-level falls, transfers, pregnancy). None of that is in the
+#   2024 rule or its abstract; the extra factors match the earlier 2011
+#   retrospective PECARN rule. Not printed.
+#   CT-unavailable pathway and paediatric cautions (odontoid view often
+#   unobtainable in a young child; occiput–C2 ligamentous injury with normal
+#   films; occiput recess or torso padding): OpenEvidence ruling 2026-09-07
+#   citing the Spinal Cord Society position statement (Yelamarthy 2020,
+#   PMID 31440893, abstract: "radiographs are required if CT is unavailable
+#   or unaffordable").
+# Encoded as weighted points (high-risk 10, intermediate 1; bands 0 / 1–3 /
+# ≥ 10) exactly as the PECARN head rule; show_total is false.
+# ============================================================
+
+topic:
+  id: "calc-pecarn-cspine"
+  title: "PECARN Paediatric Cervical Spine"
+  list_subtitle: "cervical-spine imaging, children < 18 y"
+  last_reviewed: "Evidence review 2026-09-07 · Leonard 2024 · Lee 2025 · OpenEvidence 2026-09-07"
+  tags: ["pecarn", "c-spine", "cervical spine", "neck", "trauma", "paediatric", "pediatric", "children", "imaging", "x-ray", "ct", "decision rule", "clearance"]
+  aliases:
+    - "PECARN cervical spine rule"
+    - "PECARN CSI rule"
+    - "Paediatric c-spine rule"
+    - "Pediatric cervical spine rule"
+  category: "trauma"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        For children under 18 after blunt trauma. Three tiers: any high-risk
+        factor means CT; otherwise any intermediate factor means plain films;
+        neither means the neck can be cleared clinically. Tap the factors
+        present; a high-risk factor outranks the rest. Adults 16 and over:
+        [NEXUS](topic:calc-nexus-cspine) or the
+        [Canadian C-Spine Rule](topic:calc-canadian-cspine).
+
+    - type: "score"
+      title: "PECARN cervical-spine injury rule"
+      show_total: false
+      source: "Leonard et al., Lancet Child Adolesc Health 2024 (validation sensitivity 94.3%, NPV 99.9%); Lee et al., JAMA Netw Open 2025"
+      items:
+        - { key: "gcs_low", label: "GCS 3–8, or Unresponsive on AVPU", type: "toggle", points: 10, help: "high-risk" }
+        - { key: "abc", label: "Abnormal airway, breathing or circulation", type: "toggle", points: 10, help: "high-risk" }
+        - { key: "focal", label: "Focal neurological deficit", type: "toggle", points: 10, help: "high-risk · includes paraesthesia, numbness or weakness" }
+        - { key: "ams", label: "Altered mental status: GCS 9–14, Verbal or Pain on AVPU, or other signs", type: "toggle", points: 1, help: "intermediate" }
+        - { key: "neck", label: "Neck pain, or midline neck tenderness on examination", type: "toggle", points: 1, help: "intermediate" }
+        - { key: "substantial", label: "Substantial head or torso injury", type: "toggle", points: 1, help: "intermediate · an injury that itself warrants admission or surgery" }
+      bands:
+        - { min: 0, max: 0, label: "No imaging — clear the neck clinically", detail: "Validation NPV 99.9%.", severity: "none" }
+        - { min: 1, max: 3, label: "Plain films of the cervical spine", detail: "Minimum 3 views (AP, lateral, odontoid), preferably 5. Escalate to CT if films are abnormal or inadequate.", severity: "warn" }
+        - { min: 10, label: "CT of the cervical spine", detail: "Transfer if CT is not on site; plain films do not exclude the cord and ligamentous injury this group carries.", severity: "alert" }
+      caveats:
+        - "Derived and validated in blunt trauma at 18 US children's trauma centres; the authors ask for validation in general emergency departments. Not for penetrating trauma."
+        - "Sensitivity 94.3% (95% CI 90.7–97.9): the rule misses some injuries. Persistent symptoms outweigh a negative rule."
+
+    - type: "prose"
+      title: "If plain films are normal but a factor persists"
+      markdown: |
+        Normal, adequate films do **not** clear an intermediate-risk child.
+        Keep the collar on and the neck immobilised. Clear only if the child
+        becomes asymptomatic with pain-free active rotation, or after a normal
+        CT or MRI, or on senior decision. Any focal neurological sign,
+        persistent neck pain or tenderness, altered mental status, or an
+        inadequate series (odontoid not obtained, C7–T1 not seen) needs CT or
+        MRI, transferring if necessary. Neurological signs require MRI
+        regardless of the films.
+
+        - In a young child the odontoid view is often unobtainable: record the
+          series as inadequate, not normal.
+        - Paediatric injuries are disproportionately high cervical
+          (occiput–C2) and ligamentous, where films and even CT can be normal.
+        - Immobilise in a size-appropriate collar with an occiput recess or
+          torso padding: a flat board flexes the neck over the large
+          paediatric occiput.

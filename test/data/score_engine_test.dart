@@ -875,6 +875,42 @@ void main() {
     });
   });
 
+  group(
+    'PECARN cervical spine (tree: high-risk → CT, intermediate → films)',
+    () {
+      late ScoreBlock b;
+      setUpAll(() => b = _load('calc_pecarn_cspine.yaml'));
+
+      test('six factors, total hidden', () {
+        expect(b.items, hasLength(6));
+        expect(b.showTotal, isFalse);
+      });
+      test('no factors → clinical clearance', () {
+        expect(_band(b, const {}), contains('No imaging'));
+      });
+      test('each intermediate factor alone → plain films', () {
+        for (final k in ['ams', 'neck', 'substantial']) {
+          expect(_band(b, {k: true}), contains('Plain films'), reason: k);
+        }
+        expect(
+          _band(b, {'ams': true, 'neck': true, 'substantial': true}),
+          contains('Plain films'),
+        );
+      });
+      test('each high-risk factor alone → CT', () {
+        for (final k in ['gcs_low', 'abc', 'focal']) {
+          expect(_band(b, {k: true}), contains('CT'), reason: k);
+        }
+      });
+      test('high-risk outranks intermediate', () {
+        expect(
+          _band(b, {'focal': true, 'neck': true, 'ams': true}),
+          contains('CT'),
+        );
+      });
+    },
+  );
+
   group('engine primitives', () {
     late ScoreBlock gcs;
     setUpAll(() => gcs = _load('calc_gcs.yaml'));
