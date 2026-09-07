@@ -12,6 +12,12 @@
 #   Stiell et al., NEJM 2003 (PMID 14695411): prospective head-to-head in
 #   8,283 alert stable adults — the Canadian C-Spine Rule was more sensitive
 #   (99.4% vs 90.7%) and more specific (45.1% vs 36.8%) than NEXUS.
+#   OpenEvidence 2026-09-07 (verified against the abstracts): Ala et al., PLoS
+#   One 2018 (PMID 30388133) 90% sensitivity for both, specificity NEXUS
+#   54.7% vs CCR 44.2%; Lee et al., JAMA Netw Open 2025 (PMID 41632125), 22,430
+#   children, sensitivity PECARN CSI 93.3%, NEXUS 85.7%, CCR 90.8%; guideline
+#   split and the CT-unavailable pathway per the OE ruling (Gesu 2021, ACR
+#   2019, Spinal Cord Society 2020).
 # All five criteria must be met to forgo imaging; any one present → image.
 # Criterion labels are the five named in the NEJM abstract; no verbatim
 # sub-definitions are reproduced here because the full text was not read.
@@ -36,7 +42,9 @@ topic:
       markdown: |
         Identifies blunt-trauma patients whose cervical spine can be cleared
         clinically. All five must be absent to skip imaging — tap any that is
-        present; a single one means imaging is indicated.
+        present; a single one means imaging is indicated. Companion rule for
+        alert, stable adults: the [Canadian C-Spine Rule](topic:calc-canadian-cspine),
+        which also carries the pathway for when CT is unavailable.
 
     - type: "score"
       title: "NEXUS low-risk criteria"
@@ -52,7 +60,8 @@ topic:
         - { min: 0, max: 0, label: "Low risk — no cervical-spine imaging required by NEXUS", detail: "NPV 99.8% for any injury, 99.9% for clinically significant injury.", severity: "none" }
         - { min: 1, label: "Imaging indicated — NEXUS cannot clear the spine", severity: "warn" }
       notes:
-        - "Any age. In children (Viccellio 2001) sensitivity was 100% for 30 injuries, but only 88 enrolled were under 2 years and none was injured — apply with caution under 2."
-        - "In alert, stable adults the Canadian C-Spine Rule was more sensitive (99.4% vs 90.7%) and more specific (45.1% vs 36.8%) in a prospective head-to-head (Stiell 2003)."
+        - "Guidelines split: EAST and AANS/CNS use NEXUS; NICE uses the Canadian C-Spine Rule; the ACR accepts either. In the developers' head-to-head (Stiell 2003) the Canadian rule was more sensitive (99.4% vs 90.7%) and more specific (45.1% vs 36.8%); an independent comparison (Ala 2018, 200 patients) found 90% sensitivity for both and NEXUS more specific (54.7% vs 44.2%)."
+        - "Rule negative: remove the collar, no imaging. Rule positive with CT unavailable: plain films, minimum 3 views, preferably 5 — and normal films do not fully clear the patient (see the Canadian C-Spine Rule page)."
       caveats:
-        - "Derived for blunt trauma in patients who can be assessed. Sensitivity in later series has been lower in patients over 65; consider imaging on mechanism or examination in older patients even when NEXUS is negative."
+        - "Over 65: NEXUS sensitivity is lower in older patients; the Canadian rule sends every patient ≥ 65 to imaging. Consider imaging on mechanism or examination even when NEXUS is negative."
+        - "Children: NEXUS and the Canadian rule are adult-derived and not validated under about 8 years; the paediatric subgroup (Viccellio 2001) had only 88 children under 2, none injured. In 22,430 children (Lee 2025) sensitivity was NEXUS 85.7%, Canadian rule 90.8%, PECARN cervical-spine rule 93.3%."

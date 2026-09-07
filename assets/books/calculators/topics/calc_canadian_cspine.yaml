@@ -1,0 +1,114 @@
+# ============================================================
+# Canadian C-Spine Rule (CCR) — cervical-spine imaging in alert, stable
+# adult blunt trauma. A three-step ALGORITHM, not a sum, so it is a flowchart.
+# Evidence review 2026-09-07, OpenEvidence ruling of the same day:
+#   Derivation: Stiell et al., JAMA 2001 (PMID 11597285), 8,924 adults, GCS 15,
+#   stable; 100% sensitivity, 42.5% specificity by cross-validation.
+#   Head-to-head: Stiell et al., NEJM 2003 (PMID 14695411), 8,283 patients —
+#   CCR 99.4% vs NEXUS 90.7% sensitivity, 45.1% vs 36.8% specificity,
+#   radiography 55.9% vs 66.6%; range of motion not assessed in 10.2%.
+#   Rule text, mechanism definitions and the rear-end exclusions are the NEJM
+#   2003 Figure 1 legend as quoted by OpenEvidence. Exclusion criteria are
+#   quoted from Stiell's CCR implementation protocol (Implement Sci 2007,
+#   PMC1802999, read whole), which restates the CCR study exclusions.
+#   Independent data (abstracts read whole): Ala et al., PLoS One 2018 (PMID
+#   30388133) — 200 patients, 90% sensitivity for BOTH rules, specificity
+#   NEXUS 54.7% vs CCR 44.2%. Michaleff et al., CMAJ 2012 (PMID 23048086) —
+#   15 modest-quality studies, CCR sensitivity 0.90–1.00, NEXUS 0.83–1.00.
+#   Guidelines (OE, citing Gesu 2021 and ACR 2019): NICE uses the CCR; EAST
+#   and AANS/CNS use NEXUS; ACR takes no position and says either may be used.
+#   CT-unavailable pathway: OE ruling citing the Spinal Cord Society position
+#   statement (Yelamarthy 2020, PMID 31440893: "radiographs are required if CT
+#   is unavailable or unaffordable") — minimum 3 views, preferably 5; normal
+#   films do NOT clear a rule-positive patient.
+# ============================================================
+
+topic:
+  id: "calc-canadian-cspine"
+  title: "Canadian C-Spine Rule"
+  list_subtitle: "cervical-spine imaging, alert stable adults"
+  last_reviewed: "Evidence review 2026-09-07 · Stiell 2001 · Stiell 2003 · OpenEvidence 2026-09-07"
+  tags: ["canadian c-spine", "ccr", "c-spine", "cervical spine", "neck", "trauma", "imaging", "x-ray", "decision rule", "clearance", "range of motion"]
+  aliases:
+    - "Canadian C-Spine Rule"
+    - "CCR"
+    - "C-spine rule"
+  category: "trauma"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        For alert (GCS 15), haemodynamically stable adults with blunt trauma
+        in the last 48 h where cervical-spine injury is a concern. Three
+        questions in order; range of motion is tested only when step 2 allows
+        it. Companion to [NEXUS](topic:calc-nexus-cspine); check the
+        exclusions below before applying.
+
+    - type: "flowchart"
+      variant: "algorithm"
+      entry: { text: "Alert (GCS 15), stable, blunt trauma, C-spine injury a concern", shape: "stadium" }
+      boxes:
+        - id: "image"
+          title: "Image the cervical spine"
+          bullets:
+            - "CT if available; otherwise plain films, minimum 3 views (AP, lateral, odontoid), preferably 5 (add both obliques), all seven cervical vertebrae and C7–T1 seen"
+          severity: "priority"
+      stages:
+        - decision: "1. Any high-risk factor that mandates radiography?"
+          criteria:
+            - "Age ≥ 65 years"
+            - "Dangerous mechanism: fall from ≥ 3 ft (1 m) or 5 stairs · axial load to the head (e.g. diving) · MVC at high speed (> 100 km/h), or with rollover or ejection · motorised recreational vehicle · bicycle collision"
+            - "Paraesthesias in the extremities"
+          outcomes:
+            - { label: "Yes", goto: "image" }
+            - { label: "No", continue: true }
+        - decision: "2. Any low-risk factor that allows safe assessment of range of motion?"
+          criteria:
+            - "Simple rear-end MVC (excludes: pushed into oncoming traffic · hit by a bus or large truck · rollover · hit by a high-speed vehicle)"
+            - "Sitting position in the emergency department"
+            - "Ambulatory at any time since the injury"
+            - "Delayed (not immediate) onset of neck pain"
+            - "Absence of midline cervical-spine tenderness"
+          outcomes:
+            - { label: "None present", goto: "image" }
+            - { label: "Yes", continue: true }
+        - decision: "3. Able to actively rotate the neck 45° to the left and to the right?"
+          outcomes:
+            - { label: "Unable, or not assessed", goto: "image" }
+            - { label: "Able", box: { title: "No imaging — remove the collar", severity: "non_urgent" } }
+
+    - type: "prose"
+      title: "Do not apply the rule if"
+      markdown: |
+        - Age under 16
+        - No trauma to the head or neck: neither neck pain nor a visible injury above the clavicles
+        - GCS below 15
+        - Unstable vital signs: systolic BP < 90 mmHg, respiratory rate < 10 or > 24
+        - Injury more than 48 h ago
+        - Penetrating trauma (stabbing, gunshot)
+        - Acute paralysis (paraplegia, quadriplegia)
+        - Known vertebral disease: ankylosing spondylitis, rheumatoid arthritis, spinal stenosis, previous cervical-spine surgery
+        - Returning for reassessment of the same injury
+
+    - type: "prose"
+      title: "If the rule is positive and CT is unavailable"
+      markdown: |
+        Obtain plain films (minimum 3 views, preferably 5). **Normal films do
+        not fully clear the patient.** Keep the collar on and the neck
+        immobilised. Stop immobilisation only if the patient becomes
+        asymptomatic with a normal, pain-free active range of motion, or
+        after a normal CT or MRI, or on senior clinical decision. Persistent
+        neck pain, midline tenderness, any neurological sign, or technically
+        inadequate films: maintain immobilisation and arrange CT or MRI,
+        transferring if necessary. Neurological signs or symptoms mandate MRI
+        regardless of the films.
+
+    - type: "prose"
+      title: "Evidence"
+      markdown: |
+        - Derivation (Stiell 2001, 8,924 adults): sensitivity 100%, specificity 42.5%.
+        - Head-to-head with NEXUS (Stiell 2003, 8,283 patients): CCR 99.4% vs 90.7% sensitivity, 45.1% vs 36.8% specificity, radiography rate 55.9% vs 66.6%. Run by the rule's developers; clinicians skipped the range-of-motion step in 10.2%, the rule's practical weakness.
+        - Independent comparison (Ala 2018, 200 patients): 90% sensitivity for both rules, NEXUS more specific (54.7% vs 44.2%). Systematic review (Michaleff 2012, 15 modest-quality studies): CCR sensitivity 0.90–1.00, NEXUS 0.83–1.00.
+        - Guidelines split: NICE uses the CCR; EAST and AANS/CNS use NEXUS; the ACR takes no position and accepts either.
+        - Children: neither adult rule is validated under about 8 years. In 22,430 children (Lee 2025) sensitivity was PECARN cervical-spine rule 93.3%, CCR 90.8%, NEXUS 85.7%.
