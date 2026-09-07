@@ -25,8 +25,15 @@ const String kAuthoringUrl =
     'https://fhir-fli.github.io/fhir_fli_documentation/docs/orbweaver/orbweaver_authoring';
 
 /// Bundled topics that between them use every block type and every flowchart
-/// variant, so an author can start from a real page.
+/// variant, so an author can start from a real page. The first is a generated
+/// sampler (tool/gen_playground_starter.py) showing the four main kinds of
+/// content on one page.
 const List<({String label, String asset})> kExamples = [
+  (
+    label:
+        'Sampler: prose + table + flowchart + calculator (Paediatric sepsis)',
+    asset: 'assets/playground/starter.yaml',
+  ),
   (
     label: 'Prose (Syncope)',
     asset: 'assets/books/protocolbook/topics/pb_126_im_syncope.yaml',

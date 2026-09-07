@@ -29,6 +29,8 @@ flutter:
     - assets/credits.yaml
     # The topic schema, so the web playground validates what is pasted.
     - schema/topic.schema.json
+    # The playground's first example (generated, see tool/gen_playground_starter.py).
+    - assets/playground/
     - assets/books/
     - assets/books/protocolbook/
     - assets/books/protocolbook/topics/
