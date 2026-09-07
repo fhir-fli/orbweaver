@@ -1,0 +1,58 @@
+# ============================================================
+# NEXUS Low-Risk Criteria — cervical-spine imaging after blunt trauma.
+# Evidence review 2026-09-07 (abstracts read whole via PubMed):
+#   Hoffman et al., NEJM 2000 (PMID 10891516): 34,069 blunt-trauma patients
+#   imaged at 21 US centres; the instrument missed 8/818 cervical-spine
+#   injuries (sensitivity 99.0%, NPV 99.8%, specificity 12.9%) and 2/578
+#   clinically significant injuries (sensitivity 99.6%, NPV 99.9%). No age
+#   bound — MDCalc's evidence page for the same cohort gives ages 1–101.
+#   Viccellio et al., Pediatrics 2001 (PMID 11483830): the < 18 y subgroup,
+#   3,065 children, 30 injuries, sensitivity 100% (95% CI 87.8–100); only 88
+#   were < 2 y and none of them injured, so the authors advise caution < 2 y.
+#   Stiell et al., NEJM 2003 (PMID 14695411): prospective head-to-head in
+#   8,283 alert stable adults — the Canadian C-Spine Rule was more sensitive
+#   (99.4% vs 90.7%) and more specific (45.1% vs 36.8%) than NEXUS.
+# All five criteria must be met to forgo imaging; any one present → image.
+# Criterion labels are the five named in the NEJM abstract; no verbatim
+# sub-definitions are reproduced here because the full text was not read.
+# ============================================================
+
+topic:
+  id: "calc-nexus-cspine"
+  title: "NEXUS C-Spine Criteria"
+  list_subtitle: "cervical-spine imaging after blunt trauma"
+  last_reviewed: "Evidence review 2026-09-07 · Hoffman 2000 · Viccellio 2001 · Stiell 2003"
+  tags: ["nexus", "c-spine", "cervical spine", "neck", "trauma", "imaging", "x-ray", "ct", "decision rule", "clearance"]
+  aliases:
+    - "NEXUS criteria"
+    - "NEXUS low-risk criteria"
+    - "C-spine clearance"
+    - "Cervical spine rule"
+  category: "trauma"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Identifies blunt-trauma patients whose cervical spine can be cleared
+        clinically. All five must be absent to skip imaging — tap any that is
+        present; a single one means imaging is indicated.
+
+    - type: "score"
+      title: "NEXUS low-risk criteria"
+      unit: "present"
+      source: "Hoffman et al., NEJM 2000; Viccellio et al., Pediatrics 2001 (children)"
+      items:
+        - { key: "tenderness", label: "Midline cervical tenderness", type: "toggle", points: 1 }
+        - { key: "neuro", label: "Focal neurologic deficit", type: "toggle", points: 1 }
+        - { key: "alertness", label: "Altered alertness", type: "toggle", points: 1, help: "not normally alert" }
+        - { key: "intoxication", label: "Intoxication", type: "toggle", points: 1 }
+        - { key: "distracting", label: "Painful distracting injury", type: "toggle", points: 1 }
+      bands:
+        - { min: 0, max: 0, label: "Low risk — no cervical-spine imaging required by NEXUS", detail: "NPV 99.8% for any injury, 99.9% for clinically significant injury.", severity: "none" }
+        - { min: 1, label: "Imaging indicated — NEXUS cannot clear the spine", severity: "warn" }
+      notes:
+        - "Any age. In children (Viccellio 2001) sensitivity was 100% for 30 injuries, but only 88 enrolled were under 2 years and none was injured — apply with caution under 2."
+        - "In alert, stable adults the Canadian C-Spine Rule was more sensitive (99.4% vs 90.7%) and more specific (45.1% vs 36.8%) in a prospective head-to-head (Stiell 2003)."
+      caveats:
+        - "Derived for blunt trauma in patients who can be assessed. Sensitivity in later series has been lower in patients over 65; consider imaging on mechanism or examination in older patients even when NEXUS is negative."

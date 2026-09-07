@@ -20,6 +20,8 @@ instruments (PHQ-9, GAD-7): items with 0–3 option points and severity bands.
 - type: "score"
   title: "CHA₂DS₂-VASc"
   unit: "points"                 # label after the total (default "points")
+  show_total: true               # false hides the total and shows only the band —
+                                 # for decision trees encoded as weighted points (PECARN)
   source: "Lip, Chest 2010"      # provenance — required for safety
   items:
     - { key: "chf", label: "Congestive heart failure / LV dysfunction", type: "toggle", points: 1 }

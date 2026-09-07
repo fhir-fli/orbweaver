@@ -302,39 +302,40 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.baseline,
-            textBaseline: TextBaseline.alphabetic,
-            children: [
-              const Text(
-                'Score',
-                style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
-              ),
-              const Spacer(),
-              Text(
-                '${result.total}',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.w800,
-                  color: sevColor,
+          if (_b.showTotal)
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.baseline,
+              textBaseline: TextBaseline.alphabetic,
+              children: [
+                const Text(
+                  'Score',
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
                 ),
-              ),
-              const SizedBox(width: 4),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 2),
-                child: Text(
-                  _b.unit,
+                const Spacer(),
+                Text(
+                  '${result.total}',
                   style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: sevColor.withValues(alpha: 0.85),
+                    fontSize: 22,
+                    fontWeight: FontWeight.w800,
+                    color: sevColor,
                   ),
                 ),
-              ),
-            ],
-          ),
+                const SizedBox(width: 4),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 2),
+                  child: Text(
+                    _b.unit,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
+                      color: sevColor.withValues(alpha: 0.85),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           if (band != null) ...[
-            const SizedBox(height: 2),
+            if (_b.showTotal) const SizedBox(height: 2),
             Text(
               band.label,
               style: TextStyle(

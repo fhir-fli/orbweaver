@@ -67,6 +67,28 @@ void main() {
     expect(find.textContaining('Minimal'), findsNothing);
   });
 
+  testWidgets('PECARN: two strata, no total shown, high-risk → CT', (t) async {
+    await t.pumpWidget(
+      _wrap(TopicView(topic: _load('calc_pecarn_head.yaml'))),
+    );
+    expect(find.byType(ScoreBlockView), findsNWidgets(2));
+    expect(find.text('Score'), findsNothing); // show_total: false
+    expect(find.textContaining('CT not recommended'), findsNWidgets(2));
+
+    final boxes = find.byType(Checkbox);
+    expect(boxes, findsNWidgets(12));
+    await t.tap(boxes.at(0)); // < 2 y: GCS 14 / AMS (high-risk)
+    await t.pump();
+    expect(find.textContaining('CT recommended'), findsOneWidget);
+    expect(find.textContaining('CT not recommended'), findsOneWidget);
+
+    await t.ensureVisible(boxes.at(8));
+    await t.tap(boxes.at(8)); // ≥ 2 y: history of LOC (intermediate)
+    await t.pump();
+    expect(find.textContaining('Observation versus CT'), findsOneWidget);
+    expect(find.textContaining('CT not recommended'), findsNothing);
+  });
+
   testWidgets('GCS: choosing worst responses drops to 3 / Severe', (t) async {
     await t.pumpWidget(_wrap(TopicView(topic: _load('calc_gcs.yaml'))));
     // Tap the first "None" chip of each component (eye/verbal/motor → all 1).

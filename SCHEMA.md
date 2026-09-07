@@ -401,6 +401,7 @@ The math is compiled into the app (`lib/data/formula_registry.dart`); YAML canno
 - type: "score"
   title: "CHA₂DS₂-VASc"
   unit: "points"
+  show_total: true    # false = band only (weighted decision trees such as PECARN)
   source: "…"
   items:
     - { key: "chf", label: "Heart failure", type: "toggle", points: 1 }

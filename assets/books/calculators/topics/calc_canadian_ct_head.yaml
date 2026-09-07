@@ -24,9 +24,10 @@ topic:
 
     - type: "prose"
       markdown: |
-        Identifies which minor head-injury patients (GCS 13–15) need a head
-        CT. Tap any factor present — a single one means CT is recommended.
-        Check the exclusions before applying.
+        Identifies which adult minor head-injury patients (GCS 13–15) need a
+        head CT. Tap any factor present — a single one means CT is recommended.
+        Check the exclusions before applying. Under 16, use
+        [PECARN](topic:calc-pecarn-head).
 
     - type: "score"
       title: "Canadian CT Head Rule"
@@ -42,5 +43,7 @@ topic:
       bands:
         - { min: 0, max: 0, label: "No CT indicated by the rule", severity: "none" }
         - { min: 1, label: "CT head recommended", severity: "warn" }
+      notes:
+        - "Derived in adults (Stiell 2001 enrolled consecutive adults, age ≥ 16). For children use the PECARN rule."
       caveats:
         - "Applies ONLY to GCS 13–15 minor head injury with witnessed LOC/amnesia/disorientation. Do NOT apply if on anticoagulant/antiplatelet, age < 16, seizure, bleeding disorder, or obvious open skull fracture."

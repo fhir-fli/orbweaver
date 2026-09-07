@@ -2466,6 +2466,11 @@
           "type": "string",
           "default": "points"
         },
+        "show_total": {
+          "description": "Show the summed total above the band (default true). Set false when the points encode a decision tree rather than a meaningful sum (e.g. PECARN), so only the band is shown.",
+          "type": "boolean",
+          "default": true
+        },
         "source": {
           "description": "Provenance of the score (shown).",
           "type": "string"

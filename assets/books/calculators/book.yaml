@@ -78,6 +78,8 @@ book:
         - topic: "topics/calc_4ts.yaml"
         - topic: "topics/calc_gcs.yaml"
         - topic: "topics/calc_canadian_ct_head.yaml"
+        - topic: "topics/calc_pecarn_head.yaml"
+        - topic: "topics/calc_nexus_cspine.yaml"
         - topic: "topics/calc_rcri.yaml"
         - topic: "topics/calc_bisap.yaml"
     - title: "Withdrawal Scales"

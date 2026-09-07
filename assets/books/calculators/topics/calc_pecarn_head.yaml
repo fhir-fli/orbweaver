@@ -1,0 +1,82 @@
+# ============================================================
+# PECARN paediatric head trauma rule — who needs a head CT.
+# Evidence review 2026-09-07 (abstract read whole via PubMed; rule tree and
+# footnote definitions read from MDCalc's reproduction of the Kuppermann 2009
+# figure, page data read whole):
+#   Kuppermann et al., Lancet 2009 (PMID 19758692): 42,412 children < 18 y,
+#   GCS 14–15, within 24 h of blunt head trauma, 25 North American EDs.
+#   ciTBI = death from TBI, neurosurgery, intubation > 24 h, or admission
+#   ≥ 2 nights for TBI. Validation: < 2 y rule NPV 1176/1176 (100%),
+#   sensitivity 25/25 (100%); ≥ 2 y rule NPV 3798/3800 (99.95%),
+#   sensitivity 61/63 (96.8%). Neither rule missed a neurosurgical case.
+#   Tiers (Kuppermann 2009 figure, via MDCalc): any high-risk predictor →
+#   ciTBI 4.4% (< 2 y) / 4.3% (≥ 2 y), CT recommended; any intermediate
+#   predictor → ~0.9%, observation vs CT; none → < 0.02% / < 0.05%, CT not
+#   recommended. Excluded from the study: GCS < 14, trivial mechanism
+#   (ground-level fall or walking/running into a stationary object with no
+#   signs or symptoms other than scalp abrasions/lacerations), pre-existing
+#   neurological disorders (exclusions as restated in Ryu et al., PLoS One
+#   2022, PMC8765658).
+# This is a DECISION TREE, not a sum: a high-risk predictor outranks every
+# intermediate one. Encoded as weighted points (high-risk 10, intermediate 1)
+# so the additive engine resolves the tiers exactly (0 → none; 1–4 →
+# intermediate; ≥ 10 → high), and show_total is false because the total
+# itself means nothing.
+# ============================================================
+
+topic:
+  id: "calc-pecarn-head"
+  title: "PECARN Paediatric Head Trauma"
+  list_subtitle: "head CT decision, children < 18 y"
+  last_reviewed: "Evidence review 2026-09-07 · Kuppermann 2009"
+  tags: ["pecarn", "head injury", "head trauma", "tbi", "ct", "paediatric", "pediatric", "children", "concussion", "imaging", "trauma"]
+  aliases:
+    - "PECARN"
+    - "PECARN head CT rule"
+    - "Paediatric head CT rule"
+    - "Pediatric head trauma rule"
+  category: "trauma"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Identifies children under 18 with blunt head trauma in the last 24 h
+        and GCS 14–15 who are at very low risk of clinically important brain
+        injury and can skip CT. Use the section for the child's age. Tap the
+        predictors present; a high-risk predictor outranks the rest.
+
+    - type: "score"
+      title: "Younger than 2 years"
+      show_total: false
+      source: "Kuppermann et al., Lancet 2009 (validation NPV 100%, sensitivity 100%)"
+      items:
+        - { key: "gcs_ams", label: "GCS 14, or other signs of altered mental status", type: "toggle", points: 10, help: "high-risk · AMS: agitation, somnolence, repetitive questioning, slow response to verbal communication" }
+        - { key: "palpable", label: "Palpable skull fracture", type: "toggle", points: 10, help: "high-risk" }
+        - { key: "hematoma", label: "Occipital, parietal or temporal scalp haematoma", type: "toggle", points: 1, help: "intermediate · frontal haematoma does not count" }
+        - { key: "loc", label: "Loss of consciousness ≥ 5 s", type: "toggle", points: 1, help: "intermediate" }
+        - { key: "mechanism", label: "Severe mechanism of injury", type: "toggle", points: 1, help: "intermediate · MVC with ejection, death of another passenger or rollover; pedestrian or unhelmeted cyclist struck by a motorised vehicle; fall > 0.9 m (3 ft); head struck by a high-impact object" }
+        - { key: "not_normal", label: "Not acting normally per parent", type: "toggle", points: 1, help: "intermediate" }
+      bands:
+        - { min: 0, max: 0, label: "CT not recommended", detail: "ciTBI risk < 0.02%.", severity: "none" }
+        - { min: 1, max: 4, label: "Observation versus CT", detail: "ciTBI risk ~0.9%. Decide on clinician experience, isolated vs multiple findings, worsening during observation, patient age, and parental preference.", severity: "warn" }
+        - { min: 10, label: "CT recommended", detail: "ciTBI risk 4.4%.", severity: "alert" }
+
+    - type: "score"
+      title: "2 years and older"
+      show_total: false
+      source: "Kuppermann et al., Lancet 2009 (validation NPV 99.95%, sensitivity 96.8%)"
+      items:
+        - { key: "gcs_ams", label: "GCS 14, or other signs of altered mental status", type: "toggle", points: 10, help: "high-risk · AMS: agitation, somnolence, repetitive questioning, slow response to verbal communication" }
+        - { key: "basilar", label: "Signs of basilar skull fracture", type: "toggle", points: 10, help: "high-risk" }
+        - { key: "loc", label: "Any history of loss of consciousness", type: "toggle", points: 1, help: "intermediate" }
+        - { key: "vomiting", label: "History of vomiting", type: "toggle", points: 1, help: "intermediate" }
+        - { key: "mechanism", label: "Severe mechanism of injury", type: "toggle", points: 1, help: "intermediate · MVC with ejection, death of another passenger or rollover; pedestrian or unhelmeted cyclist struck by a motorised vehicle; fall > 1.5 m (5 ft); head struck by a high-impact object" }
+        - { key: "headache", label: "Severe headache", type: "toggle", points: 1, help: "intermediate" }
+      bands:
+        - { min: 0, max: 0, label: "CT not recommended", detail: "ciTBI risk < 0.05%.", severity: "none" }
+        - { min: 1, max: 4, label: "Observation versus CT", detail: "ciTBI risk ~0.9%. Decide on clinician experience, isolated vs multiple findings, worsening during observation, patient age, and parental preference.", severity: "warn" }
+        - { min: 10, label: "CT recommended", detail: "ciTBI risk 4.3%.", severity: "alert" }
+      caveats:
+        - "Applies to blunt head trauma within 24 h with GCS 14–15. GCS ≤ 13 is outside the rule — image. The derivation excluded trivial mechanisms with no signs or symptoms beyond scalp abrasions/lacerations, penetrating trauma, and pre-existing neurological disorders."
+        - "For adults (≥ 16 y) use the Canadian CT Head Rule."

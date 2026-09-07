@@ -2376,6 +2376,7 @@ class ScoreBlock extends Block {
     required this.bands,
     this.title,
     this.unit = 'points',
+    this.showTotal = true,
     this.source,
     this.notes = const [],
     this.caveats = const [],
@@ -2386,6 +2387,7 @@ class ScoreBlock extends Block {
   factory ScoreBlock.fromYaml(Map<dynamic, dynamic> map) => ScoreBlock(
     title: map['title'] as String?,
     unit: (map['unit'] as String?) ?? 'points',
+    showTotal: (map['show_total'] as bool?) ?? true,
     source: map['source'] as String?,
     items: _mapList(map['items'], ScoreItem.fromYaml),
     bands: _mapList(map['bands'], ScoreBand.fromYaml),
@@ -2397,6 +2399,12 @@ class ScoreBlock extends Block {
 
   final String? title;
   final String unit;
+
+  /// Whether the summed total is displayed. A decision TREE encoded as
+  /// weighted points (PECARN: any high-risk predictor outranks every
+  /// intermediate one) resolves to a band, but its point total means nothing
+  /// to a reader, so such blocks set `show_total: false` and show only the band.
+  final bool showTotal;
 
   /// Provenance of the score — required for clinical safety (shown as source).
   final String? source;

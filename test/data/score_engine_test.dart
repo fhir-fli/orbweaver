@@ -17,6 +17,12 @@ ScoreBlock _load(String file) => Topic.fromYamlString(
   File('$_dir/$file').readAsStringSync(),
 ).blocks.whereType<ScoreBlock>().single;
 
+/// The [i]th score block of a topic that carries several (PECARN: one per
+/// age stratum).
+ScoreBlock _loadAt(String file, int i) => Topic.fromYamlString(
+  File('$_dir/$file').readAsStringSync(),
+).blocks.whereType<ScoreBlock>().elementAt(i);
+
 /// total for a selection map.
 num _total(ScoreBlock b, Map<String, dynamic> sel) =>
     computeScore(b, sel).total;
@@ -773,6 +779,100 @@ void main() {
       expect(_band(b, {'discordant': true}), contains('Positive'));
     });
     test('max 3', () => expect(scoreRange(b).max, 3));
+  });
+
+  group('NEXUS C-spine (all five absent → no imaging)', () {
+    late ScoreBlock b;
+    setUpAll(() => b = _load('calc_nexus_cspine.yaml'));
+
+    test('no criteria → low risk, no imaging', () {
+      expect(_total(b, const {}), 0);
+      expect(_band(b, const {}), contains('no cervical-spine imaging'));
+    });
+    test('any single criterion → imaging indicated', () {
+      for (final k in [
+        'tenderness',
+        'neuro',
+        'alertness',
+        'intoxication',
+        'distracting',
+      ]) {
+        expect(_band(b, {k: true}), contains('Imaging indicated'), reason: k);
+      }
+    });
+    test('five criteria, max 5', () {
+      expect(b.items, hasLength(5));
+      expect(scoreRange(b).max, 5);
+    });
+  });
+
+  group('PECARN head trauma (tree: high-risk outranks intermediate)', () {
+    late ScoreBlock under2;
+    late ScoreBlock over2;
+    setUpAll(() {
+      under2 = _loadAt('calc_pecarn_head.yaml', 0);
+      over2 = _loadAt('calc_pecarn_head.yaml', 1);
+    });
+
+    test('two strata, totals hidden, six predictors each', () {
+      expect(under2.showTotal, isFalse);
+      expect(over2.showTotal, isFalse);
+      expect(under2.items, hasLength(6));
+      expect(over2.items, hasLength(6));
+    });
+    test('< 2 y: no predictors → CT not recommended, < 0.02%', () {
+      final band = computeScore(under2, const {}).band!;
+      expect(band.label, contains('not recommended'));
+      expect(band.detail, contains('0.02%'));
+    });
+    test('≥ 2 y: no predictors → CT not recommended, < 0.05%', () {
+      final band = computeScore(over2, const {}).band!;
+      expect(band.label, contains('not recommended'));
+      expect(band.detail, contains('0.05%'));
+    });
+    test('< 2 y: each intermediate predictor alone → observation vs CT', () {
+      for (final k in ['hematoma', 'loc', 'mechanism', 'not_normal']) {
+        expect(_band(under2, {k: true}), contains('Observation'), reason: k);
+      }
+    });
+    test('≥ 2 y: each intermediate predictor alone → observation vs CT', () {
+      for (final k in ['loc', 'vomiting', 'mechanism', 'headache']) {
+        expect(_band(over2, {k: true}), contains('Observation'), reason: k);
+      }
+    });
+    test('all four intermediate predictors still → observation vs CT', () {
+      final all = {
+        'hematoma': true,
+        'loc': true,
+        'mechanism': true,
+        'not_normal': true,
+      };
+      expect(_band(under2, all), contains('Observation'));
+    });
+    test('< 2 y: either high-risk predictor → CT recommended, 4.4%', () {
+      for (final k in ['gcs_ams', 'palpable']) {
+        final band = computeScore(under2, {k: true}).band!;
+        expect(band.label, contains('CT recommended'), reason: k);
+        expect(band.detail, contains('4.4%'));
+      }
+    });
+    test('≥ 2 y: either high-risk predictor → CT recommended, 4.3%', () {
+      for (final k in ['gcs_ams', 'basilar']) {
+        final band = computeScore(over2, {k: true}).band!;
+        expect(band.label, contains('CT recommended'), reason: k);
+        expect(band.detail, contains('4.3%'));
+      }
+    });
+    test('high-risk outranks intermediate whatever else is ticked', () {
+      expect(
+        _band(under2, {'palpable': true, 'hematoma': true, 'loc': true}),
+        contains('CT recommended'),
+      );
+      expect(
+        _band(over2, {'gcs_ams': true, 'basilar': true, 'vomiting': true}),
+        contains('CT recommended'),
+      );
+    });
   });
 
   group('engine primitives', () {
