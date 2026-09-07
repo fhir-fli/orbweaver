@@ -18,7 +18,7 @@ void main() {
     '// It exists so the feedback email can report which build a report came from\n'
     '// without adding a package dependency to read it at runtime.\n'
     '// test/services/app_version_test.dart fails if this drifts from pubspec.\n'
-    "const String kAppVersion = '\$v';\n",
+    "const String kAppVersion = '$v';\n",
   );
-  stdout.writeln('app_version.dart -> \$v');
+  stdout.writeln('app_version.dart -> $v');
 }
