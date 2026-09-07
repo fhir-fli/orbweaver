@@ -26,7 +26,15 @@
 #   and high-risk MVC as intermediate factors and a seven-item exclusion list
 #   (24 h, ground-level falls, transfers, pregnancy). None of that is in the
 #   2024 rule or its abstract; the extra factors match the earlier 2011
-#   retrospective PECARN rule. Not printed.
+#   retrospective PECARN rule. Not printed. OpenEvidence re-verified on
+#   2026-09-07 and confirmed this encoding against Leonard 2024: those factors
+#   (high-risk MVC, predisposing conditions, limited range of motion) were
+#   tested prospectively and dropped; the final rule "relies solely on the
+#   child's symptoms and physical examination". The 2011 set still appears in
+#   the ACR Appropriateness Criteria appendix (Kadom 2019), which EXCLUDED
+#   midline tenderness; the 2024 CART analysis re-included posterior midline
+#   neck tenderness, so a reader reconciling against ACR will see an apparent
+#   conflict that is the rule being updated, not an error here.
 #   CT-unavailable pathway and paediatric cautions (odontoid view often
 #   unobtainable in a young child; occiput–C2 ligamentous injury with normal
 #   films; occiput recess or torso padding): OpenEvidence ruling 2026-09-07
