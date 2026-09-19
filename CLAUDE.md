@@ -1,7 +1,7 @@
 # Orbweaver — Claude Instructions
 
 > **Universal rules are in `~/.claude/CLAUDE.md`** — it loads in every session, in
-> every directory, so they are not repeated here. Full records: `~/.claude/rules/`.
+> every directory, so they are not repeated here. Full records: `~/.claude/rule-records/`.
 > This file holds project facts only.
 
 Orbweaver is a Flutter app that renders clinical quick-reference "topics"
