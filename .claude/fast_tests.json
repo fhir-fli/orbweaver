@@ -1,0 +1,7 @@
+{
+  "_why": "Read by ~/.claude/hooks/fast-tests-on-stop.py. The whole suite, 725 tests, 17 s (measured 2026-09-19), so it is the fast set. The books under assets/ are watched because the tests check them.",
+  "suites": [
+    {"package": ".", "watch": ["lib", "test", "assets"], "suffix": [".dart", ".yaml"],
+     "timeout": 180, "command": ["flutter", "test"]}
+  ]
+}
