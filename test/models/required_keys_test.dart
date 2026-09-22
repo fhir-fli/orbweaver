@@ -39,9 +39,25 @@ void main() {
   });
 
   test('a formulary without facets or drugs throws', () {
+    // Formulary.fromYaml casts `f['bands'] as YamlMap` on its second line,
+    // before it reads facets or drugs (read in lib/models/formulary.dart),
+    // so a fixture with `bands: []` throws there and proves nothing about
+    // the two lists. Both axes here are valid maps.
+    const head =
+        'formulary:\n'
+        '  id: f\n'
+        '  title: T\n'
+        '  bands: {label: Age, columns: [Adult]}\n'
+        '  bands_art: {label: ART, columns: [Adult]}\n';
     expect(
-      () => Formulary.fromYaml(yaml('formulary:\n  title: T\n  bands: []')),
+      () => Formulary.fromYaml(yaml('$head  drugs: []')),
       throwsA(isA<TypeError>()),
+      reason: 'no facets',
+    );
+    expect(
+      () => Formulary.fromYaml(yaml('$head  facets: []')),
+      throwsA(isA<TypeError>()),
+      reason: 'no drugs',
     );
   });
 }
