@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/arrow_paint.dart';
 import 'package:orbweaver/widgets/flowchart/fit_text.dart';
 
 /// Renders an `algorithm`-variant flowchart as a real clinical decision
@@ -413,24 +414,17 @@ class _StagePainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final stroke = Paint()
-      ..color = Colors.black87
-      ..strokeWidth = 1.6
-      ..style = PaintingStyle.stroke;
-    final solid = Paint()..color = Colors.black87;
+    final stroke = flowStroke(width: _strokeWidth);
+    final solid = flowFill();
     final midY = dH / 2;
 
-    void head(Offset tip, Offset dir) {
-      final u = dir / dir.distance;
-      final perp = Offset(-u.dy, u.dx) * 4;
-      final b = tip - u * 8;
-      final p = Path()
-        ..moveTo(tip.dx, tip.dy)
-        ..lineTo(b.dx + perp.dx, b.dy + perp.dy)
-        ..lineTo(b.dx - perp.dx, b.dy - perp.dy)
-        ..close();
-      canvas.drawPath(p, solid);
-    }
+    void head(Offset tip, Offset dir) => drawArrowHead(
+      canvas,
+      tip,
+      dir / dir.distance,
+      length: _stageHeadLength,
+      fill: solid,
+    );
 
     // Diamond.
     final d = Path()
@@ -503,28 +497,28 @@ class _StagePainter extends CustomPainter {
       old.fill != fill;
 }
 
+/// The algorithm renderer's connector weight and head sizes, kept as drawn.
+/// The stage head and the line head differ by one pixel; that difference
+/// predates this file's helpers and has not been measured against the print.
+const double _strokeWidth = 1.6;
+const double _stageHeadLength = 8;
+const double _lineHeadLength = 7;
+
 class _ArrowLine extends CustomPainter {
   const _ArrowLine(this.points);
   final List<Offset> points;
   @override
   void paint(Canvas canvas, Size size) {
-    final stroke = Paint()
-      ..color = Colors.black87
-      ..strokeWidth = 1.6
-      ..style = PaintingStyle.stroke;
     final path = Path()..moveTo(points.first.dx, points.first.dy);
     for (final p in points.skip(1)) {
       path.lineTo(p.dx, p.dy);
     }
-    canvas.drawPath(path, stroke);
-    final tip = points.last;
-    canvas.drawPath(
-      Path()
-        ..moveTo(tip.dx, tip.dy)
-        ..lineTo(tip.dx - 4, tip.dy - 7)
-        ..lineTo(tip.dx + 4, tip.dy - 7)
-        ..close(),
-      Paint()..color = Colors.black87,
+    canvas.drawPath(path, flowStroke(width: _strokeWidth));
+    drawArrowHead(
+      canvas,
+      points.last,
+      const Offset(0, 1),
+      length: _lineHeadLength,
     );
   }
 

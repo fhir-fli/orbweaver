@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/arrow_paint.dart';
 import 'package:orbweaver/widgets/flowchart/fit_text.dart';
 import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 import 'package:orbweaver/widgets/flowchart/flowchart_view.dart';
@@ -129,11 +130,7 @@ class _TrailingFillLinePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final cx = size.width / 2;
-    final paint = Paint()
-      ..color = Colors.black87
-      ..strokeWidth = 1.5
-      ..style = PaintingStyle.stroke;
-    canvas.drawLine(Offset(cx, 0), Offset(cx, size.height), paint);
+    canvas.drawLine(Offset(cx, 0), Offset(cx, size.height), flowStroke());
   }
 
   @override

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/arrow_paint.dart';
 import 'package:orbweaver/widgets/flowchart/banded_entry.dart';
 import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 
@@ -156,7 +157,7 @@ class DiamondNode extends StatelessWidget {
       width: double.infinity,
       height: height,
       child: CustomPaint(
-        painter: _DiamondPainter(
+        painter: DiamondPainter(
           fill: TopicThemeScope.of(context).flowDecision,
           stroke: Colors.black87,
         ),
@@ -267,13 +268,8 @@ class _DecisionArrowsPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final line = Paint()
-      ..color = Colors.black87
-      ..strokeWidth = 1.5
-      ..style = PaintingStyle.stroke;
-    final fill = Paint()
-      ..color = Colors.black87
-      ..style = PaintingStyle.fill;
+    final line = flowStroke();
+    final fill = flowFill();
 
     final w = size.width;
     final midX = w / 2;
@@ -284,16 +280,7 @@ class _DecisionArrowsPainter extends CustomPainter {
 
     void drawArrow(Path path, Offset tip, Offset shaftDir) {
       canvas.drawPath(path, line);
-      // Arrow head is a small triangle at the tip, oriented by [shaftDir].
-      final unit = shaftDir / shaftDir.distance;
-      final perp = Offset(-unit.dy, unit.dx) * 4;
-      final base = tip - unit * 6;
-      final head = Path()
-        ..moveTo(tip.dx, tip.dy)
-        ..lineTo(base.dx + perp.dx, base.dy + perp.dy)
-        ..lineTo(base.dx - perp.dx, base.dy - perp.dy)
-        ..close();
-      canvas.drawPath(head, fill);
+      drawArrowHead(canvas, tip, shaftDir / shaftDir.distance, fill: fill);
     }
 
     if (branchCount == 2 || branchCount == 3) {
@@ -357,11 +344,21 @@ class _DecisionArrowsPainter extends CustomPainter {
       old.columnGap != columnGap;
 }
 
-class _DiamondPainter extends CustomPainter {
-  const _DiamondPainter({required this.fill, required this.stroke});
+/// A filled, outlined diamond filling its whole canvas: the decision node
+/// of the severity family (2 px, round joins) and of the cycle renderer
+/// (1.5 px, mitred), which pass their own outline.
+class DiamondPainter extends CustomPainter {
+  const DiamondPainter({
+    required this.fill,
+    required this.stroke,
+    this.strokeWidth = 2,
+    this.strokeJoin = StrokeJoin.round,
+  });
 
   final Color fill;
   final Color stroke;
+  final double strokeWidth;
+  final StrokeJoin strokeJoin;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -378,12 +375,15 @@ class _DiamondPainter extends CustomPainter {
         Paint()
           ..color = stroke
           ..style = PaintingStyle.stroke
-          ..strokeWidth = 2
-          ..strokeJoin = StrokeJoin.round,
+          ..strokeWidth = strokeWidth
+          ..strokeJoin = strokeJoin,
       );
   }
 
   @override
-  bool shouldRepaint(_DiamondPainter old) =>
-      old.fill != fill || old.stroke != stroke;
+  bool shouldRepaint(DiamondPainter old) =>
+      old.fill != fill ||
+      old.stroke != stroke ||
+      old.strokeWidth != strokeWidth ||
+      old.strokeJoin != strokeJoin;
 }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/arrow_paint.dart';
 import 'package:orbweaver/widgets/flowchart/branch_column.dart';
 import 'package:orbweaver/widgets/flowchart/cc_link_pill.dart';
 import 'package:orbweaver/widgets/flowchart/dose_table.dart';
@@ -450,13 +451,8 @@ class _FanArrowsPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final line = Paint()
-      ..color = Colors.black87
-      ..strokeWidth = 1.5
-      ..style = PaintingStyle.stroke;
-    final fill = Paint()
-      ..color = Colors.black87
-      ..style = PaintingStyle.fill;
+    final line = flowStroke();
+    final fill = flowFill();
 
     final origin = Offset(size.width / 2, 0);
     for (var i = 0; i < count; i++) {
@@ -469,14 +465,7 @@ class _FanArrowsPainter extends CustomPainter {
       final unit = direction / length;
       final shaftEnd = tip - unit * 6;
       canvas.drawLine(origin, shaftEnd, line);
-      // Triangle head oriented along the line.
-      final perp = Offset(-unit.dy, unit.dx) * 4;
-      final head = Path()
-        ..moveTo(tip.dx, tip.dy)
-        ..lineTo(shaftEnd.dx + perp.dx, shaftEnd.dy + perp.dy)
-        ..lineTo(shaftEnd.dx - perp.dx, shaftEnd.dy - perp.dy)
-        ..close();
-      canvas.drawPath(head, fill);
+      drawArrowHead(canvas, tip, unit, fill: fill);
     }
   }
 
@@ -905,26 +894,13 @@ class _ConvergenceArrowsPainter extends CustomPainter {
       ..color = Colors.black87
       ..strokeWidth = 1.5
       ..style = PaintingStyle.stroke;
-    final fillPaint = Paint()
-      ..color = Colors.black87
-      ..style = PaintingStyle.fill;
+    final fillPaint = flowFill();
 
     final w = size.width;
     final stadiumTop = arrowExtension;
     final stadiumMidY = (stadiumTop + size.height) / 2;
     final stadiumLeftEdge = w * (1 - stadiumWidthFactor) / 2;
     final stadiumRightEdge = w - stadiumLeftEdge;
-
-    void arrowHead(Offset tip, Offset unit) {
-      final perp = Offset(-unit.dy, unit.dx) * 4;
-      final base = tip - unit * 6;
-      final head = Path()
-        ..moveTo(tip.dx, tip.dy)
-        ..lineTo(base.dx + perp.dx, base.dy + perp.dy)
-        ..lineTo(base.dx - perp.dx, base.dy - perp.dy)
-        ..close();
-      canvas.drawPath(head, fillPaint);
-    }
 
     // Column centres must match `_BranchesRow`: each column slot is
     // (W − (n−1)·gap)/n wide, with the gap between adjacent slots.
@@ -940,7 +916,12 @@ class _ConvergenceArrowsPainter extends CustomPainter {
         ..moveTo(centers[1], 0)
         ..lineTo(centers[1], stadiumTop);
       canvas.drawPath(midPath, line);
-      arrowHead(Offset(centers[1], stadiumTop), const Offset(0, 1));
+      drawArrowHead(
+        canvas,
+        Offset(centers[1], stadiumTop),
+        const Offset(0, 1),
+        fill: fillPaint,
+      );
     }
 
     // Left — down to stadium mid-height, then right into the left edge.
@@ -949,7 +930,12 @@ class _ConvergenceArrowsPainter extends CustomPainter {
       ..lineTo(centers.first, stadiumMidY)
       ..lineTo(stadiumLeftEdge, stadiumMidY);
     canvas.drawPath(leftPath, line);
-    arrowHead(Offset(stadiumLeftEdge, stadiumMidY), const Offset(1, 0));
+    drawArrowHead(
+      canvas,
+      Offset(stadiumLeftEdge, stadiumMidY),
+      const Offset(1, 0),
+      fill: fillPaint,
+    );
 
     // Right — mirror.
     final rightPath = Path()
@@ -957,7 +943,12 @@ class _ConvergenceArrowsPainter extends CustomPainter {
       ..lineTo(centers.last, stadiumMidY)
       ..lineTo(stadiumRightEdge, stadiumMidY);
     canvas.drawPath(rightPath, line);
-    arrowHead(Offset(stadiumRightEdge, stadiumMidY), const Offset(-1, 0));
+    drawArrowHead(
+      canvas,
+      Offset(stadiumRightEdge, stadiumMidY),
+      const Offset(-1, 0),
+      fill: fillPaint,
+    );
   }
 
   @override
@@ -1321,32 +1312,22 @@ class _VerticalArrowPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final line = Paint()
-      ..color = Colors.black87
-      ..strokeWidth = 1.5
-      ..style = PaintingStyle.stroke;
-    final fill = Paint()
-      ..color = Colors.black87
-      ..style = PaintingStyle.fill;
+    final line = flowStroke();
+    final fill = flowFill();
 
     final cx = size.width / 2;
 
     if (pointing == _Dir.down) {
       canvas.drawLine(Offset(cx, 0), Offset(cx, size.height - 5), line);
-      final head = Path()
-        ..moveTo(cx, size.height)
-        ..lineTo(cx - 4, size.height - 6)
-        ..lineTo(cx + 4, size.height - 6)
-        ..close();
-      canvas.drawPath(head, fill);
+      drawArrowHead(
+        canvas,
+        Offset(cx, size.height),
+        const Offset(0, 1),
+        fill: fill,
+      );
     } else {
       canvas.drawLine(Offset(cx, size.height), Offset(cx, 5), line);
-      final head = Path()
-        ..moveTo(cx, 0)
-        ..lineTo(cx - 4, 6)
-        ..lineTo(cx + 4, 6)
-        ..close();
-      canvas.drawPath(head, fill);
+      drawArrowHead(canvas, Offset(cx, 0), const Offset(0, -1), fill: fill);
     }
   }
 
@@ -1361,32 +1342,22 @@ class _HorizontalArrowPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final line = Paint()
-      ..color = Colors.black87
-      ..strokeWidth = 1.5
-      ..style = PaintingStyle.stroke;
-    final fill = Paint()
-      ..color = Colors.black87
-      ..style = PaintingStyle.fill;
+    final line = flowStroke();
+    final fill = flowFill();
 
     final cy = size.height / 2;
 
     if (pointing == _Dir.right) {
       canvas.drawLine(Offset(0, cy), Offset(size.width - 5, cy), line);
-      final head = Path()
-        ..moveTo(size.width, cy)
-        ..lineTo(size.width - 6, cy - 4)
-        ..lineTo(size.width - 6, cy + 4)
-        ..close();
-      canvas.drawPath(head, fill);
+      drawArrowHead(
+        canvas,
+        Offset(size.width, cy),
+        const Offset(1, 0),
+        fill: fill,
+      );
     } else {
       canvas.drawLine(Offset(size.width, cy), Offset(5, cy), line);
-      final head = Path()
-        ..moveTo(0, cy)
-        ..lineTo(6, cy - 4)
-        ..lineTo(6, cy + 4)
-        ..close();
-      canvas.drawPath(head, fill);
+      drawArrowHead(canvas, Offset(0, cy), const Offset(-1, 0), fill: fill);
     }
   }
 

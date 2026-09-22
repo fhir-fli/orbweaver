@@ -3,7 +3,9 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/flowchart/arrow_paint.dart';
 import 'package:orbweaver/widgets/flowchart/fit_text.dart';
+import 'package:orbweaver/widgets/flowchart/flow_node.dart';
 
 /// Renders a `variant: cycle` flowchart — a genuinely cyclic clinical
 /// algorithm (reassessment loop, titration, resuscitation cycle).
@@ -319,6 +321,12 @@ class _CycleLayout {
 // Painter — draws every connector
 // ───────────────────────────────────────────────────────────────────────
 
+/// The cycle renderer's connector weight and head sizes, kept as drawn.
+const double _strokeWidth = 1.7;
+const double _headLength = 8;
+const double _headHalfWidth = 6;
+const double _diamondStroke = 1.5;
+
 class _CyclePainter extends CustomPainter {
   const _CyclePainter({required this.layout, required this.fill});
   final _CycleLayout layout;
@@ -371,36 +379,25 @@ class _CyclePainter extends CustomPainter {
   }
 
   void _arrow(Canvas canvas, List<Offset> pts) {
-    final stroke = Paint()
-      ..color = Colors.black87
-      ..strokeWidth = 1.7
-      ..style = PaintingStyle.stroke
-      ..strokeJoin = StrokeJoin.round;
     final path = Path()..moveTo(pts.first.dx, pts.first.dy);
     for (final p in pts.skip(1)) {
       path.lineTo(p.dx, p.dy);
     }
-    canvas.drawPath(path, stroke);
-    // Arrowhead at the last point, oriented along the last segment.
-    final tip = pts.last;
-    final prev = pts[pts.length - 2];
-    final dir = tip - prev;
-    final len = dir.distance == 0 ? 1 : dir.distance;
-    final ux = dir.dx / len;
-    final uy = dir.dy / len;
-    // perpendicular
-    final px = -uy;
-    final py = ux;
-    const s = 6.0;
-    const back = 8.0;
-    final base = Offset(tip.dx - ux * back, tip.dy - uy * back);
     canvas.drawPath(
-      Path()
-        ..moveTo(tip.dx, tip.dy)
-        ..lineTo(base.dx + px * s, base.dy + py * s)
-        ..lineTo(base.dx - px * s, base.dy - py * s)
-        ..close(),
-      Paint()..color = Colors.black87,
+      path,
+      flowStroke(width: _strokeWidth, join: StrokeJoin.round),
+    );
+    // Arrowhead at the last point, oriented along the last segment; a
+    // zero-length segment leaves a degenerate (invisible) head, as before.
+    final tip = pts.last;
+    final dir = tip - pts[pts.length - 2];
+    final unit = dir.distance == 0 ? dir : dir / dir.distance;
+    drawArrowHead(
+      canvas,
+      tip,
+      unit,
+      length: _headLength,
+      halfWidth: _headHalfWidth,
     );
   }
 
@@ -483,7 +480,12 @@ class _Diamond extends StatelessWidget {
       width: width,
       height: height,
       child: CustomPaint(
-        painter: _DiamondPainter(fill: fill, border: border),
+        painter: DiamondPainter(
+          fill: fill,
+          stroke: border,
+          strokeWidth: _diamondStroke,
+          strokeJoin: StrokeJoin.miter,
+        ),
         child: Center(
           child: SizedBox(
             width: width * 0.62,
@@ -502,34 +504,6 @@ class _Diamond extends StatelessWidget {
       ),
     );
   }
-}
-
-class _DiamondPainter extends CustomPainter {
-  const _DiamondPainter({required this.fill, required this.border});
-  final Color fill;
-  final Color border;
-  @override
-  void paint(Canvas canvas, Size size) {
-    final path = Path()
-      ..moveTo(size.width / 2, 0)
-      ..lineTo(size.width, size.height / 2)
-      ..lineTo(size.width / 2, size.height)
-      ..lineTo(0, size.height / 2)
-      ..close();
-    canvas
-      ..drawPath(path, Paint()..color = fill)
-      ..drawPath(
-        path,
-        Paint()
-          ..color = border
-          ..strokeWidth = 1.5
-          ..style = PaintingStyle.stroke,
-      );
-  }
-
-  @override
-  bool shouldRepaint(_DiamondPainter old) =>
-      old.fill != fill || old.border != border;
 }
 
 Color? _sevFill(TopicTheme t, RowSeverity s) => switch (s) {
