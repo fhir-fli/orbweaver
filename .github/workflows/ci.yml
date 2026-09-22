@@ -16,6 +16,10 @@ jobs:
           cache: true
       - name: Install dependencies
         run: flutter pub get
+      # formulary_page_parity_test shells out to tool/formulary_page_parity.py,
+      # whose extractor reads the books with PyYAML.
+      - name: Install PyYAML for the parity guard
+        run: python3 -m pip install pyyaml
       - name: Verify formatting
         run: dart format --output=none --set-exit-if-changed .
       - name: Analyze

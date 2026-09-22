@@ -101,8 +101,13 @@ def write_baseline(rows):
 def main():
     bless = '--bless' in sys.argv
     if not os.path.exists(DOSES) or bless or '--extract' in sys.argv:
-        subprocess.run([sys.executable, EXTRACT], check=True,
-                       capture_output=True)
+        r = subprocess.run([sys.executable, EXTRACT], capture_output=True,
+                           text=True)
+        if r.returncode != 0:
+            # Show why, or a CI failure reads as a bare CalledProcessError.
+            sys.stderr.write(r.stderr)
+            sys.stderr.flush()
+            r.check_returncode()
     found = orphans()
     if bless:
         write_baseline(found)
