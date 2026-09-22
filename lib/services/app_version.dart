@@ -3,4 +3,4 @@
 // It exists so the feedback email can report which build a report came from
 // without adding a package dependency to read it at runtime.
 // test/services/app_version_test.dart fails if this drifts from pubspec.
-const String kAppVersion = '0.1.0+3';
+const String kAppVersion = '0.1.0+4';
