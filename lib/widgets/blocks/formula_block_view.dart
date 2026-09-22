@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:orbweaver/data/formula_registry.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/blocks/calculator_frame.dart';
 
 /// Renders an interactive [FormulaBlock]: a small form of numeric/select
 /// inputs whose computed outputs update live. The math lives in
@@ -79,53 +80,18 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
   Widget build(BuildContext context) {
     final accent = widget.theme.header;
     final result = computeFormula(_b.kind, _values());
-    return Container(
-      decoration: BoxDecoration(
-        color: accent.withValues(alpha: 0.04),
-        border: Border.all(color: accent.withValues(alpha: 0.5)),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      padding: const EdgeInsets.fromLTRB(12, 10, 12, 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          if (_b.title != null)
-            Text(
-              _b.title!,
-              style: TextStyle(
-                fontSize: 15.5,
-                fontWeight: FontWeight.w800,
-                color: accent,
-              ),
-            ),
-          const SizedBox(height: 8),
-          ..._buildInputs(),
-          const SizedBox(height: 12),
-          _buildResult(accent, result),
-          if (_b.notes.isNotEmpty) ...[
-            const SizedBox(height: 10),
-            for (final n in _b.notes)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 2),
-                child: Text(
-                  n,
-                  style: const TextStyle(fontSize: 12, color: Colors.black87),
-                ),
-              ),
-          ],
-          if (_b.caveats.isNotEmpty) ...[
-            const SizedBox(height: 10),
-            _buildCaveats(),
-          ],
-          if (_b.source != null) ...[
-            const SizedBox(height: 8),
-            Text(
-              'Source: ${_b.source}',
-              style: const TextStyle(fontSize: 10.5, color: Colors.black54),
-            ),
-          ],
-        ],
-      ),
+    return CalculatorFrame(
+      accent: accent,
+      theme: widget.theme,
+      title: _b.title,
+      notes: _b.notes,
+      caveats: _b.caveats,
+      source: _b.source,
+      body: [
+        ..._buildInputs(),
+        const SizedBox(height: 12),
+        _buildResult(accent, result),
+      ],
     );
   }
 
@@ -343,31 +309,4 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
       ),
     );
   }
-
-  Widget _buildCaveats() => Container(
-    width: double.infinity,
-    padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
-    decoration: BoxDecoration(
-      color: widget.theme.alertFill,
-      border: Border.all(color: widget.theme.alert, width: 1.2),
-      borderRadius: BorderRadius.circular(8),
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        for (final c in _b.caveats)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 2),
-            child: Text(
-              '⚠ $c',
-              style: TextStyle(
-                fontSize: 12,
-                color: widget.theme.alertText,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-      ],
-    ),
-  );
 }
