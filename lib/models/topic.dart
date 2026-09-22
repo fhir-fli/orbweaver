@@ -1457,7 +1457,17 @@ class FlowchartBlock extends Block {
     this.cycle,
     super.anchor,
     super.ownPaletteArgb,
-  });
+  }) : assert(
+         (variant != FlowchartVariant.severity || severity != null) &&
+             (variant != FlowchartVariant.cascade || cascade != null) &&
+             (variant != FlowchartVariant.linear || linear != null) &&
+             (variant != FlowchartVariant.differential ||
+                 differential != null) &&
+             (variant != FlowchartVariant.algorithm || algorithm != null) &&
+             (variant != FlowchartVariant.cycle || cycle != null),
+         'a FlowchartBlock must carry the payload of its variant; the '
+         'renderer reads it without a null check',
+       );
 
   factory FlowchartBlock.fromYaml(Map<dynamic, dynamic> map) {
     final variant = FlowchartVariant.fromString(map['variant'] as String?);

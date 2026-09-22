@@ -44,10 +44,11 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
     super.initState();
     final names = _b.agentNames;
     if (names.isNotEmpty) {
+      final tgt = names.length > 1 ? names[1] : names.first;
       _srcName = names.first;
       _srcRoute = _firstRoute(names.first);
-      _tgtName = names.length > 1 ? names[1] : names.first;
-      _tgtRoute = _firstRoute(_tgtName!);
+      _tgtName = tgt;
+      _tgtRoute = _firstRoute(tgt);
     }
     _doseCtrl.addListener(() => setState(() {}));
   }
