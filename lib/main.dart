@@ -5,10 +5,12 @@ import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
 import 'package:orbweaver/screens/shelf_screen.dart';
 import 'package:orbweaver/screens/topic_frame.dart';
+import 'package:orbweaver/services/error_log.dart';
 import 'package:orbweaver/services/last_state.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  ErrorLog.install();
   final library = await loadLibrary();
   final snapshot = await LastState.load();
   runApp(OrbweaverApp(library: library, snapshot: snapshot));

@@ -2,6 +2,7 @@ import 'dart:io' show Platform;
 
 import 'package:flutter/foundation.dart';
 import 'package:orbweaver/services/app_version.dart';
+import 'package:orbweaver/services/error_log.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 /// "Report a problem with this page" — opens the reader's own mail app with a
@@ -27,6 +28,9 @@ const String kFeedbackSubjectTag = '[Orbweaver]';
 /// Separator. Everything below it is generated; everything above is the reader's.
 const String kMetadataFence = '--- please leave everything below this line ---';
 
+/// How many [ErrorLog] entries a report carries.
+const int kErrorsInReport = 3;
+
 /// The context a report needs to be actionable.
 @immutable
 class FeedbackContext {
@@ -36,6 +40,7 @@ class FeedbackContext {
     this.topicId,
     this.topicTitle,
     this.pageLabel,
+    this.recentErrors = const [],
   });
 
   final String? bookId;
@@ -43,6 +48,10 @@ class FeedbackContext {
   final String? topicId;
   final String? topicTitle;
   final String? pageLabel;
+
+  /// The device's most recent uncaught errors, newest first, from
+  /// [ErrorLog.entries]; empty when nothing has gone wrong.
+  final List<String> recentErrors;
 
   /// Short tag for the subject line, so a full inbox is still sortable.
   String get subjectSuffix {
@@ -91,6 +100,14 @@ String buildBody(FeedbackContext c, {DateTime? now}) {
   }
   if (c.pageLabel != null && c.pageLabel!.isNotEmpty) {
     lines.add('page      ${c.pageLabel}');
+  }
+  if (c.recentErrors.isNotEmpty) {
+    // Only the newest few: a mailto body must stay small, and the newest
+    // is almost always the one the reader is writing about.
+    lines
+      ..add('')
+      ..add('--- recent errors, newest first ---')
+      ..addAll(c.recentErrors.take(kErrorsInReport));
   }
   return lines.join('\n');
 }

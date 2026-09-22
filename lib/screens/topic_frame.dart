@@ -5,6 +5,7 @@ import 'package:orbweaver/data/topic_loader.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/screens/book_screen.dart' show kBookRouteName;
+import 'package:orbweaver/services/error_log.dart';
 import 'package:orbweaver/services/feedback_email.dart';
 import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/palette.dart';
@@ -396,6 +397,7 @@ class _TopicPagerState extends State<TopicPager> {
         topicId: topic.id,
         topicTitle: topic.title,
         pageLabel: _badge.value == null ? null : 'p.${_badge.value}',
+        recentErrors: await ErrorLog.entries(),
       ),
     );
     if (!ok && mounted) {
