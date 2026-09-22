@@ -21,6 +21,19 @@ class FlowNodeBox extends StatelessWidget {
     super.key,
   });
 
+  /// A box carrying everything the model [node] declares (text, shape, age
+  /// bands and the fused Critical-Care title).
+  FlowNodeBox.fromNode(
+    FlowNode node, {
+    required this.theme,
+    this.compact = false,
+    this.fillWidth = false,
+    super.key,
+  }) : text = node.text,
+       shape = node.shape,
+       bands = node.bands,
+       ccTitle = node.ccTitle;
+
   final String text;
   final NodeShape shape;
   final TopicTheme theme;

@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/models/topic.dart';
@@ -8,6 +9,104 @@ import 'package:orbweaver/widgets/flowchart/dose_table.dart';
 import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 import 'package:orbweaver/widgets/flowchart/flow_node.dart';
 import 'package:orbweaver/widgets/flowchart/warning_callouts.dart';
+
+/// Width every single-column node takes (linear steps, convergence and
+/// post-convergence boxes, pre-decision action stacks): the same factor as
+/// the entry stadium in [FlowNodeBox], so the column reads as one track.
+const double _singleColumnWidthFactor = 0.55;
+
+/// The first safety and first caution callout, either of which may be
+/// absent. The print shows at most one of each, so later ones are ignored.
+({WarningCallout? safety, WarningCallout? caution}) _pickWarnings(
+  List<WarningCallout> warnings,
+) => (
+  safety: warnings.firstWhereOrNull((w) => w.type == WarningType.safety),
+  caution: warnings.firstWhereOrNull((w) => w.type == WarningType.caution),
+);
+
+/// The entry chain every variant opens with. A small leading gap unless the
+/// first node carries side callouts (the flanked row pads itself); the first
+/// node flanked by the safety octagon and caution trapezoid when the
+/// flowchart declares them; each further node; and a down-arrow after every
+/// node except, when [skipLastArrow], the last, whose transition the
+/// caller's next row draws itself (a fork row, or the diamond's own arrow).
+List<Widget> _entryChainRows(
+  FlowchartBody fc,
+  TopicTheme theme, {
+  required bool skipLastArrow,
+}) {
+  final (:safety, :caution) = _pickWarnings(fc.warnings);
+  final hasWarnings = safety != null || caution != null;
+  final rows = <Widget>[if (!hasWarnings) const SizedBox(height: 6)];
+  for (var i = 0; i < fc.entryChain.length; i++) {
+    final node = fc.entryChain[i];
+    if (i == 0 && hasWarnings) {
+      rows.add(
+        _EntryWithWarnings(
+          safety: safety,
+          caution: caution,
+          entry: node,
+          theme: theme,
+        ),
+      );
+    } else {
+      rows.add(FlowNodeBox.fromNode(node, theme: theme));
+    }
+    final isLast = i == fc.entryChain.length - 1;
+    if (!(isLast && skipLastArrow)) rows.add(const FlowDownArrow());
+  }
+  return rows;
+}
+
+/// The convergence of a single-column variant (linear, differential): a
+/// down-arrow, then the stadium flanked by its callouts when it declares
+/// any, else the plain box centred at [_singleColumnWidthFactor]. Empty
+/// when there is no convergence.
+List<Widget> _singleColumnConvergenceRows(
+  ConvergenceNode? conv,
+  TopicTheme theme,
+) {
+  if (conv == null) return const [];
+  final (:safety, :caution) = _pickWarnings(conv.warnings);
+  return [
+    const FlowDownArrow(),
+    if (safety != null || caution != null)
+      _ConvergenceWithWarnings(
+        safety: safety,
+        caution: caution,
+        node: conv,
+        theme: theme,
+      )
+    else
+      Center(
+        child: FractionallySizedBox(
+          widthFactor: _singleColumnWidthFactor,
+          child: _ConvergenceBox(node: conv, theme: theme),
+        ),
+      ),
+  ];
+}
+
+/// A down-arrow into the post-convergence node; empty when there is none.
+List<Widget> _postConvergenceRows(ConvergenceNode? post, TopicTheme theme) =>
+    post == null
+    ? const []
+    : [const FlowDownArrow(), _PostConvergence(node: post, theme: theme)];
+
+/// What every variant closes with: the Critical Care pill and the dose
+/// table, each only when declared.
+List<Widget> _footerRows(FlowchartBody fc, TopicTheme theme) => [
+  if (fc.criticalCareLink != null)
+    CriticalCareLinkPill(link: fc.criticalCareLink!),
+  if (fc.doseTable.isNotEmpty) ...[
+    const SizedBox(height: 8),
+    DoseTable(rows: fc.doseTable, theme: theme),
+  ],
+];
+
+/// The flowchart's rows, stretched to the full width.
+Widget _flowColumn(List<Widget> rows) =>
+    Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: rows);
 
 /// Severity-variant flowchart renderer — grid-of-widgets layout.
 ///
@@ -41,10 +140,7 @@ class SeverityFlowchartView extends StatelessWidget {
   Widget build(BuildContext context) {
     final fc = flowchart;
     final exits = fc.convergence?.exits ?? const <ConvergenceExit>[];
-    final loopback = exits
-        .where((e) => e.loopbackBranchId != null)
-        .cast<ConvergenceExit?>()
-        .firstWhere((_) => true, orElse: () => null);
+    final loopback = exits.firstWhereOrNull((e) => e.loopbackBranchId != null);
     final forwardExits = exits
         .where((e) => e.loopbackBranchId == null)
         .toList();
@@ -56,57 +152,11 @@ class SeverityFlowchartView extends StatelessWidget {
     final useLoopbackLayout =
         loopback != null && loopbackTargetIdx >= 0 && fc.branches.length == 2;
 
-    final rows = <Widget>[];
-
-    final safety = fc.warnings
-        .where((w) => w.type == WarningType.safety)
-        .cast<WarningCallout?>()
-        .firstWhere((_) => true, orElse: () => null);
-    final caution = fc.warnings
-        .where((w) => w.type == WarningType.caution)
-        .cast<WarningCallout?>()
-        .firstWhere((_) => true, orElse: () => null);
-    final hasWarnings = safety != null || caution != null;
-
-    // Breathing room above the first flowchart object. _EntryWithWarnings
-    // adds its own top padding, so only insert this leading gap when the
-    // flowchart starts with a plain entry node.
-    if (!hasWarnings) rows.add(const SizedBox(height: 6));
-
-    for (var i = 0; i < fc.entryChain.length; i++) {
-      final node = fc.entryChain[i];
-      // The first entry node gets the warning callouts as side flanks
-      // when any warnings are declared on the flowchart.
-      if (i == 0 && hasWarnings) {
-        rows.add(
-          _EntryWithWarnings(
-            safety: safety,
-            caution: caution,
-            entry: node,
-            theme: theme,
-          ),
-        );
-      } else {
-        rows.add(
-          FlowNodeBox(
-            text: node.text,
-            shape: node.shape,
-            theme: theme,
-            bands: node.bands,
-            ccTitle: node.ccTitle,
-          ),
-        );
-      }
-      // Skip the arrow after the very last pre-branch node — the fork row
-      // below handles that transition (one arrow per branch column).
-      // When pre-decision actions or a decision follow, the loop's
-      // trailing arrow flows into them instead.
-      final isLastPreBranch =
-          i == fc.entryChain.length - 1 &&
-          fc.decision == null &&
-          fc.preDecisionActions.isEmpty;
-      if (!isLastPreBranch) rows.add(const FlowDownArrow());
-    }
+    final rows = _entryChainRows(
+      fc,
+      theme,
+      skipLastArrow: fc.decision == null && fc.preDecisionActions.isEmpty,
+    );
 
     if (fc.preDecisionActions.isNotEmpty) {
       rows
@@ -214,14 +264,9 @@ class SeverityFlowchartView extends StatelessWidget {
         }
       } else {
         final conv = fc.convergence!;
-        final convSafety = conv.warnings
-            .where((w) => w.type == WarningType.safety)
-            .cast<WarningCallout?>()
-            .firstWhere((_) => true, orElse: () => null);
-        final convCaution = conv.warnings
-            .where((w) => w.type == WarningType.caution)
-            .cast<WarningCallout?>()
-            .firstWhere((_) => true, orElse: () => null);
+        final (safety: convSafety, caution: convCaution) = _pickWarnings(
+          conv.warnings,
+        );
         final hasConvWarnings = convSafety != null || convCaution != null;
         if (hasConvWarnings) {
           // Side callouts replace the L-arrow hub: this preserves the
@@ -260,22 +305,10 @@ class SeverityFlowchartView extends StatelessWidget {
           );
         }
       }
-
-      if (fc.criticalCareLink != null) {
-        rows.add(CriticalCareLinkPill(link: fc.criticalCareLink!));
-      }
     }
 
-    if (fc.doseTable.isNotEmpty) {
-      rows
-        ..add(const SizedBox(height: 8))
-        ..add(DoseTable(rows: fc.doseTable, theme: theme));
-    }
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: rows,
-    );
+    rows.addAll(_footerRows(fc, theme));
+    return _flowColumn(rows);
   }
 
   void _appendBranchContinuations(
@@ -304,13 +337,7 @@ class SeverityFlowchartView extends StatelessWidget {
     for (var i = 0; i < cont.nodes.length; i++) {
       final node = cont.nodes[i];
       rows.add(
-        FlowNodeBox(
-          text: node.text,
-          shape: node.shape,
-          theme: theme,
-          bands: node.bands,
-          ccTitle: node.ccTitle,
-        ),
+        FlowNodeBox.fromNode(node, theme: theme),
       );
       if (i < cont.nodes.length - 1) rows.add(const FlowDownArrow());
     }
@@ -1040,13 +1067,11 @@ class _PreDecisionActions extends StatelessWidget {
   final List<TopicAction> actions;
   final TopicTheme theme;
 
-  static const double _widthFactor = 0.55;
-
   @override
   Widget build(BuildContext context) {
     return Center(
       child: FractionallySizedBox(
-        widthFactor: _widthFactor,
+        widthFactor: _singleColumnWidthFactor,
         // LayoutBuilder sits above the tiles' own IntrinsicHeight, so it
         // can measure the stack width and feed each tile's label-fit.
         child: LayoutBuilder(
@@ -1086,14 +1111,12 @@ class _PostConvergence extends StatelessWidget {
   final ConvergenceNode node;
   final TopicTheme theme;
 
-  static const double _widthFactor = 0.55;
-
   @override
   Widget build(BuildContext context) {
     if (node.bullets.isNotEmpty) {
       return Center(
         child: FractionallySizedBox(
-          widthFactor: _widthFactor,
+          widthFactor: _singleColumnWidthFactor,
           child: _ConvergenceBox(node: node, theme: theme),
         ),
       );
@@ -1395,51 +1418,11 @@ class LinearFlowchartView extends StatelessWidget {
   /// Same as the entry-stadium width factor in [FlowNodeBox]; keeps all
   /// linear nodes (action tiles, content boxes, entry boxes, convergence)
   /// aligned in one centered column.
-  static const double _nodeWidthFactor = 0.55;
 
   @override
   Widget build(BuildContext context) {
     final fc = flowchart;
-    final safety = fc.warnings
-        .where((w) => w.type == WarningType.safety)
-        .cast<WarningCallout?>()
-        .firstWhere((_) => true, orElse: () => null);
-    final caution = fc.warnings
-        .where((w) => w.type == WarningType.caution)
-        .cast<WarningCallout?>()
-        .firstWhere((_) => true, orElse: () => null);
-    final hasWarnings = safety != null || caution != null;
-
-    final rows = <Widget>[];
-
-    if (!hasWarnings) rows.add(const SizedBox(height: 6));
-
-    // Entry chain — first node flanked by warnings (if any), rest stack
-    // with a FlowDownArrow between each.  Matches the severity layout.
-    for (var i = 0; i < fc.entryChain.length; i++) {
-      final node = fc.entryChain[i];
-      if (i == 0 && hasWarnings) {
-        rows.add(
-          _EntryWithWarnings(
-            safety: safety,
-            caution: caution,
-            entry: node,
-            theme: theme,
-          ),
-        );
-      } else {
-        rows.add(
-          FlowNodeBox(
-            text: node.text,
-            shape: node.shape,
-            theme: theme,
-            bands: node.bands,
-            ccTitle: node.ccTitle,
-          ),
-        );
-      }
-      rows.add(const FlowDownArrow());
-    }
+    final rows = _entryChainRows(fc, theme, skipLastArrow: false);
 
     // Steps — alternating mix of content boxes and action tiles.  We
     // measure the content width once via a LayoutBuilder placed above
@@ -1449,7 +1432,7 @@ class LinearFlowchartView extends StatelessWidget {
       rows.add(
         LayoutBuilder(
           builder: (context, constraints) {
-            final colW = constraints.maxWidth * _nodeWidthFactor;
+            final colW = constraints.maxWidth * _singleColumnWidthFactor;
             return Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -1457,7 +1440,7 @@ class LinearFlowchartView extends StatelessWidget {
                   _LinearStepRow(
                     step: fc.steps[i],
                     theme: theme,
-                    widthFactor: _nodeWidthFactor,
+                    widthFactor: _singleColumnWidthFactor,
                     columnWidth: colW,
                   ),
                   if (i < fc.steps.length - 1) const FlowDownArrow(),
@@ -1469,58 +1452,11 @@ class LinearFlowchartView extends StatelessWidget {
       );
     }
 
-    if (fc.convergence != null) {
-      rows.add(const FlowDownArrow());
-      final conv = fc.convergence!;
-      final convSafety = conv.warnings
-          .where((w) => w.type == WarningType.safety)
-          .cast<WarningCallout?>()
-          .firstWhere((_) => true, orElse: () => null);
-      final convCaution = conv.warnings
-          .where((w) => w.type == WarningType.caution)
-          .cast<WarningCallout?>()
-          .firstWhere((_) => true, orElse: () => null);
-      if (convSafety != null || convCaution != null) {
-        rows.add(
-          _ConvergenceWithWarnings(
-            safety: convSafety,
-            caution: convCaution,
-            node: conv,
-            theme: theme,
-          ),
-        );
-      } else {
-        rows.add(
-          Center(
-            child: FractionallySizedBox(
-              widthFactor: _nodeWidthFactor,
-              child: _ConvergenceBox(node: conv, theme: theme),
-            ),
-          ),
-        );
-      }
-    }
-
-    if (fc.postConvergence != null) {
-      rows
-        ..add(const FlowDownArrow())
-        ..add(_PostConvergence(node: fc.postConvergence!, theme: theme));
-    }
-
-    if (fc.criticalCareLink != null) {
-      rows.add(CriticalCareLinkPill(link: fc.criticalCareLink!));
-    }
-
-    if (fc.doseTable.isNotEmpty) {
-      rows
-        ..add(const SizedBox(height: 8))
-        ..add(DoseTable(rows: fc.doseTable, theme: theme));
-    }
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: rows,
-    );
+    rows
+      ..addAll(_singleColumnConvergenceRows(fc.convergence, theme))
+      ..addAll(_postConvergenceRows(fc.postConvergence, theme))
+      ..addAll(_footerRows(fc, theme));
+    return _flowColumn(rows);
   }
 }
 
@@ -1581,53 +1517,11 @@ class DifferentialFlowchartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final fc = flowchart;
-    final safety = fc.warnings
-        .where((w) => w.type == WarningType.safety)
-        .cast<WarningCallout?>()
-        .firstWhere((_) => true, orElse: () => null);
-    final caution = fc.warnings
-        .where((w) => w.type == WarningType.caution)
-        .cast<WarningCallout?>()
-        .firstWhere((_) => true, orElse: () => null);
-    final hasWarnings = safety != null || caution != null;
-
-    final rows = <Widget>[];
-
-    if (!hasWarnings) rows.add(const SizedBox(height: 6));
-
-    // Entry chain — same flow as the other variants.
-    for (var i = 0; i < fc.entryChain.length; i++) {
-      final node = fc.entryChain[i];
-      if (i == 0 && hasWarnings) {
-        rows.add(
-          _EntryWithWarnings(
-            safety: safety,
-            caution: caution,
-            entry: node,
-            theme: theme,
-          ),
-        );
-      } else {
-        rows.add(
-          FlowNodeBox(
-            text: node.text,
-            shape: node.shape,
-            theme: theme,
-            bands: node.bands,
-            ccTitle: node.ccTitle,
-          ),
-        );
-      }
-      // Skip the arrow after the very last entry node only when the
-      // diamond follows immediately — its own incoming arrow handles
-      // that. When pre-decision actions sit between, keep the arrow so
-      // it flows entry → actions.
-      final isLastBeforeDiamond =
-          i == fc.entryChain.length - 1 &&
-          fc.decision != null &&
-          fc.preDecisionActions.isEmpty;
-      if (!isLastBeforeDiamond) rows.add(const FlowDownArrow());
-    }
+    final rows = _entryChainRows(
+      fc,
+      theme,
+      skipLastArrow: fc.decision != null && fc.preDecisionActions.isEmpty,
+    );
 
     if (fc.preDecisionActions.isNotEmpty) {
       rows.add(
@@ -1687,57 +1581,10 @@ class DifferentialFlowchartView extends StatelessWidget {
       }
     }
 
-    if (fc.convergence != null) {
-      rows.add(const FlowDownArrow());
-      final conv = fc.convergence!;
-      final convSafety = conv.warnings
-          .where((w) => w.type == WarningType.safety)
-          .cast<WarningCallout?>()
-          .firstWhere((_) => true, orElse: () => null);
-      final convCaution = conv.warnings
-          .where((w) => w.type == WarningType.caution)
-          .cast<WarningCallout?>()
-          .firstWhere((_) => true, orElse: () => null);
-      if (convSafety != null || convCaution != null) {
-        rows.add(
-          _ConvergenceWithWarnings(
-            safety: convSafety,
-            caution: convCaution,
-            node: conv,
-            theme: theme,
-          ),
-        );
-      } else {
-        rows.add(
-          Center(
-            child: FractionallySizedBox(
-              widthFactor: 0.55,
-              child: _ConvergenceBox(node: conv, theme: theme),
-            ),
-          ),
-        );
-      }
-    }
-
-    if (fc.postConvergence != null) {
-      rows
-        ..add(const FlowDownArrow())
-        ..add(_PostConvergence(node: fc.postConvergence!, theme: theme));
-    }
-
-    if (fc.criticalCareLink != null) {
-      rows.add(CriticalCareLinkPill(link: fc.criticalCareLink!));
-    }
-
-    if (fc.doseTable.isNotEmpty) {
-      rows
-        ..add(const SizedBox(height: 8))
-        ..add(DoseTable(rows: fc.doseTable, theme: theme));
-    }
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: rows,
-    );
+    rows
+      ..addAll(_singleColumnConvergenceRows(fc.convergence, theme))
+      ..addAll(_postConvergenceRows(fc.postConvergence, theme))
+      ..addAll(_footerRows(fc, theme));
+    return _flowColumn(rows);
   }
 }

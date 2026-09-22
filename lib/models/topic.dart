@@ -300,9 +300,7 @@ class TopicBranch {
     criteria: _stringList(map['criteria']),
     actions: _mapList(map['actions'], TopicAction.fromYaml),
     severity: RowSeverity.fromString(map['severity'] as String?),
-    continuation: map['continuation'] != null
-        ? BranchContinuation.fromYaml(map['continuation'] as Map)
-        : null,
+    continuation: _mapOrNull(map['continuation'], BranchContinuation.fromYaml),
     continues: map['continues'] as bool? ?? false,
   );
 
@@ -507,27 +505,13 @@ class AgeBand {
   final String? criticalCare;
 }
 
-/// The parsed body of a `variant: severity` flowchart block.
-///
-/// [entryChain] is a sequence of boxes rendered top-down before the branch
-/// fork (e.g. "Safe/Stimulate/Shout" → "Assess breathing" → "Unresponsive").
-/// Accepts either a YAML list (`entry_chain: [...]`) or a single node
-/// (`entry: {...}`) for backward compatibility with the older shape.
-///
-/// [decision] is an optional node rendered between the last entry and the
-/// branches when authors want an explicit decision prompt. Usually unneeded
-/// when branches are severity-coloured and self-evident.
-///
-/// [postConvergence] is an optional box rendered after the convergence node,
-/// reached by a forward-labeled exit arrow from the convergence. Used for
-/// "if no change → continue with these steps" continuations typical of
-/// resuscitation algorithms.
-class SeverityFlowchart {
-  const SeverityFlowchart({
-    required this.branches,
+/// What the severity, linear and differential variants share: the entry
+/// stadium chain with its side callouts at the top, and the convergence tail
+/// (convergence, post-convergence, Critical Care pill, dose table) at the
+/// bottom. The variants differ only in what sits between.
+abstract class FlowchartBody {
+  const FlowchartBody({
     this.entryChain = const [],
-    this.preDecisionActions = const [],
-    this.decision,
     this.convergence,
     this.postConvergence,
     this.criticalCareLink,
@@ -535,48 +519,7 @@ class SeverityFlowchart {
     this.warnings = const [],
   });
 
-  factory SeverityFlowchart.fromYaml(Map<dynamic, dynamic> map) {
-    final entryChain = <FlowNode>[];
-    if (map['entry_chain'] != null) {
-      entryChain.addAll(
-        _mapList(map['entry_chain'], FlowNode.fromYaml),
-      );
-    } else if (map['entry'] != null) {
-      entryChain.add(FlowNode.fromYaml(map['entry'] as Map));
-    }
-    return SeverityFlowchart(
-      entryChain: entryChain,
-      preDecisionActions: _mapList(
-        map['pre_decision_actions'],
-        TopicAction.fromYaml,
-      ),
-      decision: map['decision'] != null
-          ? FlowNode.fromYaml(map['decision'] as Map)
-          : null,
-      branches: _mapList(map['branches'], TopicBranch.fromYaml),
-      convergence: map['convergence'] != null
-          ? ConvergenceNode.fromYaml(map['convergence'] as Map)
-          : null,
-      postConvergence: map['post_convergence'] != null
-          ? ConvergenceNode.fromYaml(map['post_convergence'] as Map)
-          : null,
-      criticalCareLink: map['critical_care_link'] != null
-          ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
-          : null,
-      doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
-      warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
-    );
-  }
-
   final List<FlowNode> entryChain;
-
-  /// Action tiles rendered as a centred vertical badged stack between
-  /// the entry chain and the decision diamond (e.g. Hyperkalemia's
-  /// 12-Lead / Albuterol before the severity branch point). Same
-  /// semantics as [DifferentialFlowchart.preDecisionActions].
-  final List<TopicAction> preDecisionActions;
-  final FlowNode? decision;
-  final List<TopicBranch> branches;
   final ConvergenceNode? convergence;
   final ConvergenceNode? postConvergence;
 
@@ -592,6 +535,75 @@ class SeverityFlowchart {
   /// More than one of each is allowed but only the first of each type
   /// is rendered.
   final List<WarningCallout> warnings;
+}
+
+/// `entry_chain:` (a list of nodes) or the older single `entry:`; empty
+/// when the flowchart declares neither.
+List<FlowNode> _entryChainFromYaml(Map<dynamic, dynamic> map) {
+  if (map['entry_chain'] != null) {
+    return _mapList(map['entry_chain'], FlowNode.fromYaml);
+  }
+  if (map['entry'] != null) return [FlowNode.fromYaml(map['entry'] as Map)];
+  return const [];
+}
+
+/// The parsed body of a `variant: severity` flowchart block.
+///
+/// [entryChain] is a sequence of boxes rendered top-down before the branch
+/// fork (e.g. "Safe/Stimulate/Shout" → "Assess breathing" → "Unresponsive").
+/// Accepts either a YAML list (`entry_chain: [...]`) or a single node
+/// (`entry: {...}`) for backward compatibility with the older shape.
+///
+/// [decision] is an optional node rendered between the last entry and the
+/// branches when authors want an explicit decision prompt. Usually unneeded
+/// when branches are severity-coloured and self-evident.
+///
+/// [postConvergence] is an optional box rendered after the convergence node,
+/// reached by a forward-labeled exit arrow from the convergence. Used for
+/// "if no change → continue with these steps" continuations typical of
+/// resuscitation algorithms.
+class SeverityFlowchart extends FlowchartBody {
+  const SeverityFlowchart({
+    required this.branches,
+    super.entryChain,
+    this.preDecisionActions = const [],
+    this.decision,
+    super.convergence,
+    super.postConvergence,
+    super.criticalCareLink,
+    super.doseTable,
+    super.warnings,
+  });
+
+  factory SeverityFlowchart.fromYaml(Map<dynamic, dynamic> map) =>
+      SeverityFlowchart(
+        entryChain: _entryChainFromYaml(map),
+        preDecisionActions: _mapList(
+          map['pre_decision_actions'],
+          TopicAction.fromYaml,
+        ),
+        decision: _mapOrNull(map['decision'], FlowNode.fromYaml),
+        branches: _mapList(map['branches'], TopicBranch.fromYaml),
+        convergence: _mapOrNull(map['convergence'], ConvergenceNode.fromYaml),
+        postConvergence: _mapOrNull(
+          map['post_convergence'],
+          ConvergenceNode.fromYaml,
+        ),
+        criticalCareLink: _mapOrNull(
+          map['critical_care_link'],
+          CriticalCareLink.fromYaml,
+        ),
+        doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
+        warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
+      );
+
+  /// Action tiles rendered as a centred vertical badged stack between
+  /// the entry chain and the decision diamond (e.g. Hyperkalemia's
+  /// 12-Lead / Albuterol before the severity branch point). Same
+  /// semantics as [DifferentialFlowchart.preDecisionActions].
+  final List<TopicAction> preDecisionActions;
+  final FlowNode? decision;
+  final List<TopicBranch> branches;
 }
 
 /// Side-of-flowchart warning callout. Two visual styles map from
@@ -669,51 +681,35 @@ class LinearActionStep extends LinearStep {
 /// Consider`.  Reuses [entryChain], [convergence], [postConvergence],
 /// [doseTable] and [warnings] with the same semantics as
 /// [SeverityFlowchart].
-class LinearFlowchart {
+class LinearFlowchart extends FlowchartBody {
   const LinearFlowchart({
     required this.steps,
-    this.entryChain = const [],
-    this.convergence,
-    this.postConvergence,
-    this.criticalCareLink,
-    this.doseTable = const [],
-    this.warnings = const [],
+    super.entryChain,
+    super.convergence,
+    super.postConvergence,
+    super.criticalCareLink,
+    super.doseTable,
+    super.warnings,
   });
 
-  factory LinearFlowchart.fromYaml(Map<dynamic, dynamic> map) {
-    final entryChain = <FlowNode>[];
-    if (map['entry_chain'] != null) {
-      entryChain.addAll(_mapList(map['entry_chain'], FlowNode.fromYaml));
-    } else if (map['entry'] != null) {
-      entryChain.add(FlowNode.fromYaml(map['entry'] as Map));
-    }
-    return LinearFlowchart(
-      entryChain: entryChain,
-      steps: _mapList(map['steps'], LinearStep.fromYaml),
-      convergence: map['convergence'] != null
-          ? ConvergenceNode.fromYaml(map['convergence'] as Map)
-          : null,
-      postConvergence: map['post_convergence'] != null
-          ? ConvergenceNode.fromYaml(map['post_convergence'] as Map)
-          : null,
-      criticalCareLink: map['critical_care_link'] != null
-          ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
-          : null,
-      doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
-      warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
-    );
-  }
+  factory LinearFlowchart.fromYaml(Map<dynamic, dynamic> map) =>
+      LinearFlowchart(
+        entryChain: _entryChainFromYaml(map),
+        steps: _mapList(map['steps'], LinearStep.fromYaml),
+        convergence: _mapOrNull(map['convergence'], ConvergenceNode.fromYaml),
+        postConvergence: _mapOrNull(
+          map['post_convergence'],
+          ConvergenceNode.fromYaml,
+        ),
+        criticalCareLink: _mapOrNull(
+          map['critical_care_link'],
+          CriticalCareLink.fromYaml,
+        ),
+        doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
+        warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
+      );
 
-  final List<FlowNode> entryChain;
   final List<LinearStep> steps;
-  final ConvergenceNode? convergence;
-  final ConvergenceNode? postConvergence;
-
-  /// Optional lavender Critical Care reference pill rendered below the
-  /// convergence / post-convergence (WVEMS PDF convention).
-  final CriticalCareLink? criticalCareLink;
-  final List<DoseRow> doseTable;
-  final List<WarningCallout> warnings;
 }
 
 /// One card in a [DifferentialFlowchart] — a titled white-bordered box
@@ -741,53 +737,42 @@ class DifferentialCard {
 /// in the dose_table.  Reuses [entryChain], [convergence],
 /// [postConvergence], [doseTable] and [warnings] with the same
 /// semantics as [SeverityFlowchart] / [LinearFlowchart].
-class DifferentialFlowchart {
+class DifferentialFlowchart extends FlowchartBody {
   const DifferentialFlowchart({
     required this.cards,
-    this.entryChain = const [],
+    super.entryChain,
     this.preDecisionActions = const [],
     this.decision,
     this.columns = 2,
-    this.convergence,
-    this.postConvergence,
-    this.criticalCareLink,
-    this.doseTable = const [],
-    this.warnings = const [],
+    super.convergence,
+    super.postConvergence,
+    super.criticalCareLink,
+    super.doseTable,
+    super.warnings,
   });
 
-  factory DifferentialFlowchart.fromYaml(Map<dynamic, dynamic> map) {
-    final entryChain = <FlowNode>[];
-    if (map['entry_chain'] != null) {
-      entryChain.addAll(_mapList(map['entry_chain'], FlowNode.fromYaml));
-    } else if (map['entry'] != null) {
-      entryChain.add(FlowNode.fromYaml(map['entry'] as Map));
-    }
-    return DifferentialFlowchart(
-      entryChain: entryChain,
-      preDecisionActions: _mapList(
-        map['pre_decision_actions'],
-        TopicAction.fromYaml,
-      ),
-      decision: map['decision'] != null
-          ? FlowNode.fromYaml(map['decision'] as Map)
-          : null,
-      cards: _mapList(map['cards'], DifferentialCard.fromYaml),
-      columns: (map['columns'] as num?)?.toInt() ?? 2,
-      convergence: map['convergence'] != null
-          ? ConvergenceNode.fromYaml(map['convergence'] as Map)
-          : null,
-      postConvergence: map['post_convergence'] != null
-          ? ConvergenceNode.fromYaml(map['post_convergence'] as Map)
-          : null,
-      criticalCareLink: map['critical_care_link'] != null
-          ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
-          : null,
-      doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
-      warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
-    );
-  }
-
-  final List<FlowNode> entryChain;
+  factory DifferentialFlowchart.fromYaml(Map<dynamic, dynamic> map) =>
+      DifferentialFlowchart(
+        entryChain: _entryChainFromYaml(map),
+        preDecisionActions: _mapList(
+          map['pre_decision_actions'],
+          TopicAction.fromYaml,
+        ),
+        decision: _mapOrNull(map['decision'], FlowNode.fromYaml),
+        cards: _mapList(map['cards'], DifferentialCard.fromYaml),
+        columns: (map['columns'] as num?)?.toInt() ?? 2,
+        convergence: _mapOrNull(map['convergence'], ConvergenceNode.fromYaml),
+        postConvergence: _mapOrNull(
+          map['post_convergence'],
+          ConvergenceNode.fromYaml,
+        ),
+        criticalCareLink: _mapOrNull(
+          map['critical_care_link'],
+          CriticalCareLink.fromYaml,
+        ),
+        doseTable: _mapList(map['dose_table'], DoseRow.fromYaml),
+        warnings: _mapList(map['warnings'], WarningCallout.fromYaml),
+      );
 
   /// Action tiles rendered as a centred vertical badged stack between
   /// the entry chain and the decision diamond — matching WVEMS
@@ -800,14 +785,6 @@ class DifferentialFlowchart {
 
   /// Grid column count — typically 2 (matching the WVEMS PDF layout).
   final int columns;
-  final ConvergenceNode? convergence;
-  final ConvergenceNode? postConvergence;
-
-  /// Optional lavender Critical Care reference pill rendered below the
-  /// convergence / post-convergence (WVEMS PDF convention).
-  final CriticalCareLink? criticalCareLink;
-  final List<DoseRow> doseTable;
-  final List<WarningCallout> warnings;
 }
 
 /// One step in a cascade flowchart.
@@ -831,13 +808,9 @@ class CascadeStep {
   factory CascadeStep.fromYaml(Map<dynamic, dynamic> map) => CascadeStep(
     decision: map['decision'] as String,
     criteria: _stringList(map['criteria']),
-    action: map['action'] != null
-        ? TopicAction.fromYaml(map['action'] as Map)
-        : null,
+    action: _mapOrNull(map['action'], TopicAction.fromYaml),
     actionAnswer: YesNo.fromString(map['action_answer'] as String?),
-    continuation: map['continuation'] != null
-        ? CascadeStep.fromYaml(map['continuation'] as Map)
-        : null,
+    continuation: _mapOrNull(map['continuation'], CascadeStep.fromYaml),
   );
 
   final String decision;
@@ -875,9 +848,10 @@ class CascadeFlowchart {
       CascadeFlowchart(
         entry: FlowNode.fromYaml(map['entry'] as Map),
         root: CascadeStep.fromYaml(map['root'] as Map),
-        terminalAction: map['terminal_action'] != null
-            ? TopicAction.fromYaml(map['terminal_action'] as Map)
-            : null,
+        terminalAction: _mapOrNull(
+          map['terminal_action'],
+          TopicAction.fromYaml,
+        ),
         actionWidthFraction: (map['action_width'] as num?)?.toDouble() ?? 0.5,
       );
 
@@ -912,9 +886,7 @@ class AlgoBox {
     title: map['title'] as String? ?? '',
     bullets: _stringList(map['bullets']),
     severity: RowSeverity.fromString(map['severity'] as String?),
-    table: map['table'] != null
-        ? AlgoTable.fromYaml(map['table'] as Map)
-        : null,
+    table: _mapOrNull(map['table'], AlgoTable.fromYaml),
   );
 
   final String? id;
@@ -969,7 +941,7 @@ class AlgoOutcome {
 
   factory AlgoOutcome.fromYaml(Map<dynamic, dynamic> map) => AlgoOutcome(
     label: map['label'] as String,
-    box: map['box'] != null ? AlgoBox.fromYaml(map['box'] as Map) : null,
+    box: _mapOrNull(map['box'], AlgoBox.fromYaml),
     goto: map['goto'] as String?,
     cont: (map['continue'] as bool?) ?? false,
   );
@@ -1014,9 +986,7 @@ class AlgorithmFlowchart {
 
   factory AlgorithmFlowchart.fromYaml(Map<dynamic, dynamic> map) =>
       AlgorithmFlowchart(
-        entry: map['entry'] != null
-            ? FlowNode.fromYaml(map['entry'] as Map)
-            : null,
+        entry: _mapOrNull(map['entry'], FlowNode.fromYaml),
         boxes: [
           for (final b in (map['boxes'] as List? ?? const []))
             AlgoBox.fromYaml(b as Map),
@@ -1025,9 +995,7 @@ class AlgorithmFlowchart {
           for (final s in (map['stages'] as List? ?? const []))
             AlgoStage.fromYaml(s as Map),
         ],
-        terminal: map['terminal'] != null
-            ? AlgoBox.fromYaml(map['terminal'] as Map)
-            : null,
+        terminal: _mapOrNull(map['terminal'], AlgoBox.fromYaml),
       );
 
   final FlowNode? entry;
@@ -1344,9 +1312,10 @@ class ProseBlock extends Block {
     boxed: (map['boxed'] as bool?) ?? false,
     textScale: (map['text_scale'] as num?)?.toDouble() ?? 1.0,
     callEr: (map['call_er'] as bool?) ?? false,
-    criticalCareLink: map['critical_care_link'] != null
-        ? CriticalCareLink.fromYaml(map['critical_care_link'] as Map)
-        : null,
+    criticalCareLink: _mapOrNull(
+      map['critical_care_link'],
+      CriticalCareLink.fromYaml,
+    ),
     flex: _flex(map),
     anchor: map['anchor'] as String?,
     ownPaletteArgb: _parsePaletteArgb(map['palette']),
@@ -2616,6 +2585,10 @@ List<bool> _boolList(dynamic raw) {
   final list = raw is YamlList ? raw.toList() : raw as List;
   return list.map((e) => e == true).toList();
 }
+
+/// [fromMap] applied to [raw] when it is present; null when the key is absent.
+T? _mapOrNull<T>(dynamic raw, T Function(Map<dynamic, dynamic>) fromMap) =>
+    raw == null ? null : fromMap(raw as Map);
 
 List<T> _mapList<T>(
   dynamic raw,
