@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/data/search_normalizer.dart';
 import 'package:orbweaver/models/formulary.dart';
+import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
+import 'package:orbweaver/widgets/search_app_bar.dart';
 
 /// A faceted **formulary** index: the same drugs viewed A–Z, by class, or by
 /// indication via a segmented toggle, with a search box. Tapping a drug opens
@@ -50,6 +52,14 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
     return ds;
   }
 
+  void _toggleSearch() => setState(() {
+    if (_searchOpen) {
+      _searchCtrl.clear();
+      _query = '';
+    }
+    _searchOpen = !_searchOpen;
+  });
+
   bool _matches(Drug d, String q) {
     if (q.isEmpty) return true;
     final blob = SearchNormalizer.normalize(d.searchBlob);
@@ -62,36 +72,15 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFEFEFEF),
-      appBar: AppBar(
-        backgroundColor: _accent,
-        foregroundColor: Colors.white,
-        title: _searchOpen
-            ? TextField(
-                controller: _searchCtrl,
-                autofocus: true,
-                style: const TextStyle(color: Colors.white, fontSize: 16),
-                cursorColor: Colors.white,
-                decoration: const InputDecoration(
-                  hintText: 'Search drugs…',
-                  hintStyle: TextStyle(color: Colors.white70),
-                  border: InputBorder.none,
-                ),
-                onChanged: (v) => setState(() => _query = v),
-              )
-            : Text(widget.formulary.title),
-        actions: [
-          IconButton(
-            icon: Icon(_searchOpen ? Icons.close : Icons.search),
-            onPressed: () => setState(() {
-              if (_searchOpen) {
-                _searchCtrl.clear();
-                _query = '';
-              }
-              _searchOpen = !_searchOpen;
-            }),
-          ),
-        ],
+      backgroundColor: kScreenChrome,
+      appBar: SearchAppBar(
+        color: _accent,
+        title: Text(widget.formulary.title),
+        hintText: 'Search drugs…',
+        searchOpen: _searchOpen,
+        controller: _searchCtrl,
+        onQueryChanged: (v) => setState(() => _query = v),
+        onToggleSearch: _toggleSearch,
       ),
       body: Column(
         children: [

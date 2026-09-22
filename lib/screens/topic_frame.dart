@@ -9,6 +9,7 @@ import 'package:orbweaver/services/feedback_email.dart';
 import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
+import 'package:orbweaver/widgets/search_app_bar.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
 
 /// Loads a topic asset and renders just its body — either a continuous
@@ -420,40 +421,27 @@ class _TopicPagerState extends State<TopicPager> {
     final accent = theme.header;
     return Scaffold(
       backgroundColor: theme.pageWash,
-      appBar: AppBar(
-        backgroundColor: accent,
-        foregroundColor: Colors.white,
+      appBar: SearchAppBar(
+        color: accent,
         titleSpacing: 8,
-        title: _searchOpen
-            ? TextField(
-                controller: _searchCtrl,
-                autofocus: true,
-                style: const TextStyle(color: Colors.white, fontSize: 16),
-                cursorColor: Colors.white,
-                decoration: const InputDecoration(
-                  hintText: 'Search protocols…',
-                  hintStyle: TextStyle(color: Colors.white70),
-                  border: InputBorder.none,
-                ),
-                onChanged: (v) => setState(() => _query = v),
-              )
-            : _AppBarTitle(
-                pageNumber: _badge,
-                title: active.title,
-                headerColor: accent,
-              ),
+        title: _AppBarTitle(
+          pageNumber: _badge,
+          title: active.title,
+          headerColor: accent,
+        ),
+        hintText: 'Search protocols…',
+        searchTooltip: 'Search protocols',
+        searchOpen: _searchOpen,
+        controller: _searchCtrl,
+        onQueryChanged: (v) => setState(() => _query = v),
+        onToggleSearch: () {
+          if (_searchOpen) {
+            _closeSearch();
+          } else {
+            setState(() => _searchOpen = true);
+          }
+        },
         actions: [
-          IconButton(
-            tooltip: _searchOpen ? 'Close search' : 'Search protocols',
-            icon: Icon(_searchOpen ? Icons.close : Icons.search),
-            onPressed: () {
-              if (_searchOpen) {
-                _closeSearch();
-              } else {
-                setState(() => _searchOpen = true);
-              }
-            },
-          ),
           IconButton(
             tooltip: 'Report a problem with this page',
             icon: const Icon(Icons.flag_outlined),
@@ -543,7 +531,7 @@ class _SearchResults extends StatelessWidget {
       );
     }
     return ColoredBox(
-      color: const Color(0xFFEFEFEF),
+      color: kScreenChrome,
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(vertical: 4),
         itemCount: scored.length,

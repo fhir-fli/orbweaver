@@ -5,6 +5,7 @@ import 'package:orbweaver/screens/drug_index_screen.dart';
 import 'package:orbweaver/screens/topic_frame.dart' show TopicPager;
 import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/palette.dart';
+import 'package:orbweaver/widgets/search_app_bar.dart';
 
 /// One book's table of contents.
 ///
@@ -40,43 +41,28 @@ class _BookScreenState extends State<BookScreen> {
     super.dispose();
   }
 
+  void _toggleSearch() => setState(() {
+    if (_searchOpen) {
+      _searchCtrl.clear();
+      _query = '';
+    }
+    _searchOpen = !_searchOpen;
+  });
+
   @override
   Widget build(BuildContext context) {
     final allTopics = widget.book.allTopics.toList(growable: false);
 
     return Scaffold(
-      backgroundColor: const Color(0xFFEFEFEF),
-      appBar: AppBar(
-        backgroundColor: widget.book.spineColor,
-        foregroundColor: Colors.white,
-        title: _searchOpen
-            ? TextField(
-                controller: _searchCtrl,
-                autofocus: true,
-                style: const TextStyle(color: Colors.white, fontSize: 16),
-                cursorColor: Colors.white,
-                decoration: const InputDecoration(
-                  hintText: 'Search…',
-                  hintStyle: TextStyle(color: Colors.white70),
-                  border: InputBorder.none,
-                ),
-                onChanged: (v) => setState(() => _query = v),
-              )
-            : Text(widget.book.title),
-        actions: [
-          IconButton(
-            icon: Icon(_searchOpen ? Icons.close : Icons.search),
-            onPressed: () {
-              setState(() {
-                if (_searchOpen) {
-                  _searchCtrl.clear();
-                  _query = '';
-                }
-                _searchOpen = !_searchOpen;
-              });
-            },
-          ),
-        ],
+      backgroundColor: kScreenChrome,
+      appBar: SearchAppBar(
+        color: widget.book.spineColor,
+        title: Text(widget.book.title),
+        hintText: 'Search…',
+        searchOpen: _searchOpen,
+        controller: _searchCtrl,
+        onQueryChanged: (v) => setState(() => _query = v),
+        onToggleSearch: _toggleSearch,
       ),
       body: allTopics.isEmpty
           ? const _EmptyState()
@@ -312,7 +298,7 @@ class _ChapterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFEFEFEF),
+      backgroundColor: kScreenChrome,
       appBar: AppBar(
         backgroundColor: book.spineColor,
         foregroundColor: Colors.white,

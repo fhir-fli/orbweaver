@@ -3,6 +3,7 @@ import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
 import 'package:orbweaver/screens/credits_screen.dart';
 import 'package:orbweaver/services/feedback_email.dart';
+import 'package:orbweaver/theme/palette.dart';
 
 /// Library shelf — grid of book covers. Tapping a cover pushes the
 /// book's topic list. The book list is loaded from the manifest YAMLs
@@ -15,7 +16,7 @@ class ShelfScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFEFEFEF),
+      backgroundColor: kScreenChrome,
       appBar: AppBar(
         title: const Text('Orbweaver'),
         backgroundColor: const Color(0xFF1E4E8C),

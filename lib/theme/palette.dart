@@ -15,6 +15,11 @@ import 'package:flutter/material.dart';
 /// Neutral structural chrome (app background, hairline dividers, placeholder
 /// greys) is intentionally *not* a role — it stays a fixed constant.
 
+/// The neutral grey behind every screen's scrollable content (shelf, book
+/// contents, drug index, credits, search results). Structural chrome, not a
+/// palette role: content cannot re-skin it.
+const Color kScreenChrome = Color(0xFFEFEFEF);
+
 /// Accent used when no palette in the cascade declares one.
 const Color kNeutralAccent = Color(0xFF455A64);
 
