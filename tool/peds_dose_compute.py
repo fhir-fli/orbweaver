@@ -2,7 +2,8 @@
 """Clean-room per-age pediatric doses = (our drug cards' mg/kg) x (cited weight-for-age).
 Writes an auditable TSV. DRAFT for clinical verification."""
 import os
-OUT = "/home/grey/.claude/jobs/e8004895/tmp/peds"; os.makedirs(OUT, exist_ok=True)
+from _repo import REPO
+OUT = str(REPO / 'build' / 'peds'); os.makedirs(OUT, exist_ok=True)
 
 # age -> (weight kg, age in years). Weight = approx 50th-%ile (Grey confirms/adjusts).
 AGES = [("Newborn",3.5,0.0),("6 mo",8,0.5),("1 yr",10,1),("2 yr",12,2),("4 yr",16,4),

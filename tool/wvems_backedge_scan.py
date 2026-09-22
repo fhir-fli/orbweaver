@@ -28,8 +28,9 @@ import subprocess
 import sys
 
 from PIL import Image
+from _repo import REPO
 
-ROOT = '/home/grey/dev/fhir/orbweaver'
+ROOT = str(REPO)
 SCRATCH = os.environ.get(
     'SCRATCH',
     '/tmp/claude-1000/-home-grey-dev-fhir/'

@@ -36,9 +36,10 @@ import re
 import sys
 
 import yaml
+from _repo import REPO
 
-ROOT = '/home/grey/dev/fhir/orbweaver/assets/books'
-OUTDIR = '/home/grey/dev/fhir/orbweaver/tool/crossbook'
+ROOT = str(REPO / 'assets/books')
+OUTDIR = str(REPO / 'tool/crossbook')
 OUT = os.path.join(OUTDIR, 'doses.tsv')
 
 # 🛑 WVEMS IS DELIBERATELY EXCLUDED, and must stay excluded.

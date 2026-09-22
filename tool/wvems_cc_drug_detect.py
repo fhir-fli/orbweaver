@@ -14,8 +14,9 @@ import sys
 from pathlib import Path
 
 from PIL import Image
+from _repo import REPO
 
-PDF = "/home/grey/dev/fhir/orbweaver/2026-WVEMS-Protocols.pdf"
+PDF = str(REPO / '2026-WVEMS-Protocols.pdf')
 OUT = Path(
     "/tmp/claude-1000/-home-grey-dev-fhir/"
     "bf69f899-5700-47a5-bab2-ea7f08d532a0/scratchpad"

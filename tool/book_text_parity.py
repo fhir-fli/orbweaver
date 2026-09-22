@@ -37,8 +37,9 @@ from pathlib import Path
 
 import pymupdf
 import yaml
+from _repo import REPO
 
-REPO = Path("/home/grey/dev/fhir/orbweaver")
+REPO = REPO
 
 BOOKS = {
     "protocolbook": {

@@ -17,8 +17,9 @@ from collections import Counter
 from pathlib import Path
 
 import pymupdf
+from _repo import REPO
 
-PDF = "/home/grey/dev/fhir/orbweaver/2026-WVEMS-Protocols.pdf"
+PDF = str(REPO / '2026-WVEMS-Protocols.pdf')
 BODY_PT = 25.0
 # A unit tier sits below the body but above the 12 pt small print (URLs,
 # `[Ver:]`, attributions), which is a different tier entirely (§3.7).

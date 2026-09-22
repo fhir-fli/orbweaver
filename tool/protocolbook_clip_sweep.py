@@ -17,8 +17,9 @@ Writes incrementally.
 import re
 import zlib
 from pathlib import Path
+from _repo import REPO
 
-PDF = Path('/home/grey/dev/fhir/orbweaver/ProtocolBook eBook 1.7.pdf')
+PDF = (REPO / 'ProtocolBook eBook 1.7.pdf')
 OUT = Path('/tmp/claude-1000/-home-grey-dev-fhir/8f9442b1-043e-47a0-a2fe-e29e007cc633/scratchpad/clipped_text.tsv')
 
 data = PDF.read_bytes()

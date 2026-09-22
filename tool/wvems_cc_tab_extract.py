@@ -18,8 +18,9 @@ import sys
 from pathlib import Path
 
 import pymupdf
+from _repo import REPO
 
-PDF = "/home/grey/dev/fhir/orbweaver/2026-WVEMS-Protocols.pdf"
+PDF = str(REPO / '2026-WVEMS-Protocols.pdf')
 
 # #D9D2E9 as PyMuPDF's 0-1 floats, with room for rounding in the PDF's own
 # colour operators.

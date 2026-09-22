@@ -28,8 +28,9 @@ import yaml
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import crossbook_dose_extract as ex  # noqa: E402
+from _repo import REPO
 
-ROOT = '/home/grey/dev/fhir/orbweaver/assets/books'
+ROOT = str(REPO / 'assets/books')
 # 2026-08-30: this only ever ran over the ProtocolBook. WHO and WVEMS have
 # charts sitting beside prose on the same page too, and the comparison is
 # exactly as meaningful there. WVEMS is included DELIBERATELY: the rule that
@@ -37,7 +38,7 @@ ROOT = '/home/grey/dev/fhir/orbweaver/assets/books'
 # prose on its own page. A WVEMS chart disagreeing with its own paragraph is a
 # transcription error in our copy, which is ours to fix.
 BOOKS = ('protocolbook', 'who_imci', 'wvems')
-OUT = '/home/grey/dev/fhir/orbweaver/tool/crossbook/chart_vs_prose.tsv'
+OUT = str(REPO / 'tool/crossbook/chart_vs_prose.tsv')
 
 DASH = chr(0x2013)
 WEAK = {'ml', 'mg/ml', 'mcg/ml', 'gm', 'mmhg', 'mmol/l', 'iu', 'units',

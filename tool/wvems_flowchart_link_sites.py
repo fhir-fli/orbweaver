@@ -20,8 +20,9 @@ from collections import defaultdict
 from pathlib import Path
 
 import yaml
+from _repo import REPO
 
-REPO = Path("/home/grey/dev/fhir/orbweaver")
+REPO = REPO
 TOPICS = REPO / "assets/books/wvems/topics"
 
 

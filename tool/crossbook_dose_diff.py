@@ -19,8 +19,9 @@ import os
 import re
 import sys
 from collections import defaultdict
+from _repo import REPO
 
-OUTDIR = '/home/grey/dev/fhir/orbweaver/tool/crossbook'
+OUTDIR = str(REPO / 'tool/crossbook')
 SRC = os.path.join(OUTDIR, 'doses.tsv')
 FULL = os.path.join(OUTDIR, 'side_by_side.md')
 CAND = os.path.join(OUTDIR, 'candidates.md')

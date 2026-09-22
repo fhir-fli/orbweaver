@@ -31,8 +31,9 @@ import sys
 from collections import defaultdict
 from difflib import SequenceMatcher
 from pathlib import Path
+from _repo import REPO
 
-REPO = Path("/home/grey/dev/fhir/orbweaver")
+REPO = REPO
 TOPICS = REPO / "assets/books/wvems/topics"
 
 # Targets whose cross-reference is bold in print as well as underlined.

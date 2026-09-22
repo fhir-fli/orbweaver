@@ -8,11 +8,12 @@
 Flags: gross mismatch (implied mg/kg at band midpoint far from target) or
 non-monotonic bands. Model-knowledge screen -> Grey OE/spot-checks flags."""
 import yaml, re, os
+from _repo import REPO
 # 2026-08-29: this pointed at the orbweaver-wt WORKTREE, which sits on an old
 # detached commit, so every flag it produced was against stale content. The
 # live tree is orbweaver. Absolute path, live tree, no cwd drift.
-F = "/home/grey/dev/fhir/orbweaver/assets/books/who_imci/formulary.yaml"
-OUT = "/home/grey/dev/fhir/orbweaver/tool/crossbook"; os.makedirs(OUT, exist_ok=True)
+F = str(REPO / 'assets/books/who_imci/formulary.yaml')
+OUT = str(REPO / 'tool/crossbook'); os.makedirs(OUT, exist_ok=True)
 d = yaml.safe_load(open(F))["formulary"]
 drugs = d["drugs"]
 MID = [4.5, 8, 12.5, 17.5, 24.5]           # midpoints of 3-<6,6-<10,10-<15,15-<20,20-29

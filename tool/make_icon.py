@@ -31,8 +31,9 @@ import os
 import sys
 
 from PIL import Image
+from _repo import REPO
 
-ROOT = '/home/grey/dev/fhir/orbweaver'
+ROOT = str(REPO)
 NAVY = (30, 78, 140)          # 0xFF1E4E8C, the app bar colour
 SAFE = 0.80                   # fraction of the square the artwork may occupy
 

@@ -29,9 +29,10 @@ import os
 import sys
 
 import yaml
+from _repo import REPO
 
-ROOT = '/home/grey/dev/fhir/orbweaver/assets/books'
-OUT = '/home/grey/dev/fhir/orbweaver/tool/crossbook/flowchart_structure.tsv'
+ROOT = str(REPO / 'assets/books')
+OUT = str(REPO / 'tool/crossbook/flowchart_structure.tsv')
 BOOKS = ('protocolbook', 'who_imci', 'wvems')
 
 

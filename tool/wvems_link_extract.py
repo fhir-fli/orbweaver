@@ -16,8 +16,9 @@ import sys
 from pathlib import Path
 
 import pymupdf
+from _repo import REPO
 
-PDF = "/home/grey/dev/fhir/orbweaver/2026-WVEMS-Protocols.pdf"
+PDF = str(REPO / '2026-WVEMS-Protocols.pdf')
 
 
 LIGATURES = {"ﬀ": "ff", "ﬁ": "fi", "ﬂ": "fl", "ﬃ": "ffi", "ﬄ": "ffl"}

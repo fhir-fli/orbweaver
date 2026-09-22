@@ -34,8 +34,9 @@ import io
 import os
 import sys
 from collections import defaultdict
+from _repo import REPO
 
-OUTDIR = '/home/grey/dev/fhir/orbweaver/tool/crossbook'
+OUTDIR = str(REPO / 'tool/crossbook')
 DUR = os.path.join(OUTDIR, 'durations.tsv')
 OUT = os.path.join(OUTDIR, 'intrabook_rules.tsv')
 

@@ -19,8 +19,9 @@ import sys
 from pathlib import Path
 
 import pymupdf
+from _repo import REPO
 
-PDF = "/home/grey/dev/fhir/orbweaver/2026-WVEMS-Protocols.pdf"
+PDF = str(REPO / '2026-WVEMS-Protocols.pdf')
 MIN_PT = 24.0
 
 

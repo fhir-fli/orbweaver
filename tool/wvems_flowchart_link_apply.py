@@ -24,8 +24,9 @@ import sys
 from collections import defaultdict
 from difflib import SequenceMatcher
 from pathlib import Path
+from _repo import REPO
 
-REPO = Path("/home/grey/dev/fhir/orbweaver")
+REPO = REPO
 TOPICS = REPO / "assets/books/wvems/topics"
 
 # Field paths whose renderer understands the inline cross-reference syntax.

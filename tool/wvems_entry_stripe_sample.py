@@ -16,8 +16,9 @@ import sys
 from pathlib import Path
 
 import pymupdf
+from _repo import REPO
 
-PDF = "/home/grey/dev/fhir/orbweaver/2026-WVEMS-Protocols.pdf"
+PDF = str(REPO / '2026-WVEMS-Protocols.pdf')
 DPI = 400
 SCALE = DPI / 72
 # PDF-space x of a column inside each stadium that no glyph crosses: just

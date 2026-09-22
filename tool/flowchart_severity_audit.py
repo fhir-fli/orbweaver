@@ -33,9 +33,10 @@ import yaml
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import crossbook_dose_extract as ex  # noqa: E402
+from _repo import REPO
 
-ROOT = '/home/grey/dev/fhir/orbweaver/assets/books'
-OUT = '/home/grey/dev/fhir/orbweaver/tool/crossbook/severity_asymmetry.tsv'
+ROOT = str(REPO / 'assets/books')
+OUT = str(REPO / 'tool/crossbook/severity_asymmetry.tsv')
 BOOKS = ('protocolbook', 'who_imci', 'wvems')
 
 RANK = {'emergency': 3, 'priority': 2, 'non_urgent': 0, 'none': 1}

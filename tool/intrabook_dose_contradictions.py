@@ -28,9 +28,10 @@ import io
 import os
 import sys
 from collections import defaultdict
+from _repo import REPO
 
-SRC = '/home/grey/dev/fhir/orbweaver/tool/crossbook/doses.tsv'
-OUT = '/home/grey/dev/fhir/orbweaver/tool/crossbook/intrabook_contradictions.tsv'
+SRC = str(REPO / 'tool/crossbook/doses.tsv')
+OUT = str(REPO / 'tool/crossbook/intrabook_contradictions.tsv')
 
 # Units too weak to compare on: a bare volume or concentration says nothing
 # without knowing what is in it.
