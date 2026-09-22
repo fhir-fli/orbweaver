@@ -16,7 +16,8 @@
           "type": "string"
         },
         "subtitle": {
-          "type": "string"
+          "type": "string",
+          "default": ""
         },
         "source": {
           "description": "Where the formulary comes from (metadata; not rendered).",
@@ -46,14 +47,16 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/keyed"
-          }
+          },
+          "default": []
         },
         "indications": {
           "description": "Indication keys and labels, in display order.",
           "type": "array",
           "items": {
             "$ref": "#/$defs/keyed"
-          }
+          },
+          "default": []
         },
         "drugs": {
           "type": "array",
@@ -185,7 +188,8 @@
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "default": []
         }
       },
       "required": [
@@ -210,14 +214,16 @@
           "type": "string"
         },
         "subtitle": {
-          "type": "string"
+          "type": "string",
+          "default": ""
         },
         "indications": {
           "description": "Indication keys from `indications`.",
           "type": "array",
           "items": {
             "type": "string"
-          }
+          },
+          "default": []
         },
         "axis": {
           "description": "Which shared axis the band columns come from.",
@@ -254,7 +260,7 @@
           "default": false
         },
         "band_label": {
-          "description": "Override the axis header for this drug.",
+          "description": "Override the axis header for this drug. Defaults to the axis's label.",
           "type": "string"
         },
         "band_columns": {
@@ -268,7 +274,8 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/dose_row"
-          }
+          },
+          "default": []
         }
       },
       "required": [

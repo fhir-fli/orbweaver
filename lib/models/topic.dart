@@ -964,8 +964,7 @@ class AlgoStage {
     decision: map['decision'] as String,
     criteria: _stringList(map['criteria']),
     outcomes: [
-      for (final o in (map['outcomes'] as List? ?? const []))
-        AlgoOutcome.fromYaml(o as Map),
+      for (final o in map['outcomes'] as List) AlgoOutcome.fromYaml(o as Map),
     ],
   );
 
@@ -992,8 +991,7 @@ class AlgorithmFlowchart {
             AlgoBox.fromYaml(b as Map),
         ],
         stages: [
-          for (final s in (map['stages'] as List? ?? const []))
-            AlgoStage.fromYaml(s as Map),
+          for (final s in map['stages'] as List) AlgoStage.fromYaml(s as Map),
         ],
         terminal: _mapOrNull(map['terminal'], AlgoBox.fromYaml),
       );
@@ -1111,8 +1109,7 @@ class CycleFlowchart {
 
   factory CycleFlowchart.fromYaml(Map<dynamic, dynamic> map) => CycleFlowchart(
     nodes: [
-      for (final n in (map['nodes'] as List? ?? const []))
-        CycleNode.fromYaml(n as Map),
+      for (final n in map['nodes'] as List) CycleNode.fromYaml(n as Map),
     ],
   );
 
@@ -1267,9 +1264,9 @@ class MergeArrowsBlock extends Block {
 
   factory MergeArrowsBlock.fromYaml(Map<dynamic, dynamic> map) =>
       MergeArrowsBlock(
-        columns: (map['columns'] as num?)?.toInt() ?? 1,
+        columns: (map['columns'] as num).toInt(),
         sources: _intList(map['sources']),
-        targetCenter: (map['target_center'] as num?)?.toDouble() ?? 0,
+        targetCenter: (map['target_center'] as num).toDouble(),
       );
 
   final int columns;

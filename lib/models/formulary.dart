@@ -90,12 +90,12 @@ class Formulary {
     }
 
     final facets = [
-      for (final x in (f['facets'] as YamlList? ?? const []))
+      for (final x in f['facets'] as YamlList)
         FormularyFacet.fromYaml(x as YamlMap),
     ];
 
     final drugs = <Drug>[];
-    for (final x in (f['drugs'] as YamlList? ?? const [])) {
+    for (final x in f['drugs'] as YamlList) {
       final m = x as YamlMap;
       final axis = (m['axis'] as String?) == 'art' ? artBands : bands;
       drugs.add(Drug.fromYaml(m, axis));

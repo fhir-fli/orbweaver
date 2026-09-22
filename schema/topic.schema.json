@@ -662,7 +662,8 @@
               "string",
               "number"
             ]
-          }
+          },
+          "default": []
         },
         "rows": {
           "description": "Rows of cells.",
@@ -676,7 +677,8 @@
                 "boolean"
               ]
             }
-          }
+          },
+          "default": []
         },
         "align": {
           "description": "Per-column alignment; default left for column 0, centre for the rest.",
@@ -703,7 +705,8 @@
         },
         "title": {
           "description": "Box title.",
-          "type": "string"
+          "type": "string",
+          "default": ""
         },
         "bullets": {
           "description": "Bullets under the title.",
@@ -798,7 +801,8 @@
       "properties": {
         "label": {
           "description": "Arrow label from the node to this box.",
-          "type": "string"
+          "type": "string",
+          "default": ""
         },
         "side": {
           "description": "Which side of the spine the box sits on.",
@@ -870,7 +874,8 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/cycle_branch"
-          }
+          },
+          "default": []
         },
         "down_label": {
           "description": "Label on the arrow to the next spine node, e.g. `once stable`.",
@@ -1200,7 +1205,8 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/algo_box"
-          }
+          },
+          "default": []
         },
         "stages": {
           "description": "Decision stages down the spine.",
@@ -1788,7 +1794,7 @@
           "default": false
         },
         "anchor": {
-          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic. Defaults to a slug made from the name.",
           "type": "string"
         },
         "palette": {
@@ -1836,7 +1842,7 @@
           "type": "string"
         },
         "anchor": {
-          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic.",
+          "description": "Slug that makes this block a link target: `[text](#slug)` in this topic, or `topic:<id>#slug` from another topic. Defaults to a slug made from the name.",
           "type": "string"
         },
         "palette": {
@@ -2246,7 +2252,8 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/formula_option"
-          }
+          },
+          "default": []
         },
         "optional": {
           "description": "Does not block computation when blank.",
@@ -2354,7 +2361,7 @@
           ]
         },
         "label": {
-          "description": "Defaults to the value.",
+          "description": "Defaults to the value. Defaults to the value's own text.",
           "type": "string"
         },
         "points": {
@@ -2400,7 +2407,8 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/score_option"
-          }
+          },
+          "default": []
         },
         "default": {
           "type": [
