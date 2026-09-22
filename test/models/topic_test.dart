@@ -61,8 +61,14 @@ void main() {
       // Print sets two bullets of two references each, not six bullets of one:
       // a per-bullet `link_id` could only have carried half of them.
       expect(conv.bullets.length, 2);
-      expect(conv.bullets.first.text, contains('[Tachycardia](topic:wvems-2026-014)'));
-      expect(conv.bullets.first.text, contains('[Bradycardia](topic:wvems-2026-012)'));
+      expect(
+        conv.bullets.first.text,
+        contains('[Tachycardia](topic:wvems-2026-014)'),
+      );
+      expect(
+        conv.bullets.first.text,
+        contains('[Bradycardia](topic:wvems-2026-012)'),
+      );
       expect(conv.bullets.first.linkId, isNull);
     });
 

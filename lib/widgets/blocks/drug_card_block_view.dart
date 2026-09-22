@@ -33,9 +33,10 @@ class DrugCardBlockView extends StatelessWidget {
     final lines = <String>[
       for (final i in block.indications) '- Tx: $i',
       for (final d in block.doses)
-        d.population == DosePopulation.both
-            ? '- ${d.text}'
-            : '- ${_pop(d.population)}: ${d.text}',
+        if (d.population == DosePopulation.both)
+          '- ${d.text}'
+        else
+          '- ${_pop(d.population)}: ${d.text}',
     ];
     return lines.isEmpty ? null : lines.join('\n');
   }
@@ -206,7 +207,7 @@ class _Section extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return ColoredBox(
       color: bg,
       child: IntrinsicHeight(
         child: Row(

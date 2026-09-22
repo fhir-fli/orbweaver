@@ -163,7 +163,7 @@ class BranchHeaderBox extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        border: Border.all(color: Colors.black87, width: 1),
+        border: Border.all(color: Colors.black87),
         borderRadius: BorderRadius.circular(6),
       ),
       child: Column(
@@ -179,7 +179,7 @@ class BranchHeaderBox extends StatelessWidget {
                   : BorderRadius.circular(5),
               border: hasCriteria
                   ? const Border(
-                      bottom: BorderSide(color: Colors.black87, width: 1),
+                      bottom: BorderSide(color: Colors.black87),
                     )
                   : null,
             ),
@@ -197,7 +197,6 @@ class BranchHeaderBox extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   for (final c in criteria)
@@ -228,7 +227,7 @@ class _BranchHeader extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 3),
       decoration: BoxDecoration(
         color: headerBg ?? Colors.white,
-        border: Border.all(color: Colors.black87, width: 1),
+        border: Border.all(color: Colors.black87),
         borderRadius: BorderRadius.circular(6),
       ),
       child: FlowLinkText(
@@ -303,7 +302,7 @@ class ActionTile extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: tileBg ?? Colors.white,
-        border: Border.all(color: Colors.black87, width: 1),
+        border: Border.all(color: Colors.black87),
       ),
       child: IntrinsicHeight(
         child: Row(
@@ -322,7 +321,6 @@ class ActionTile extends StatelessWidget {
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     FitText(
                       action.text,
@@ -383,7 +381,7 @@ class _ProviderBadge extends StatelessWidget {
       decoration: BoxDecoration(
         color: scopeFill(theme, level),
         border: const Border(
-          right: BorderSide(color: Colors.black87, width: 1),
+          right: BorderSide(color: Colors.black87),
         ),
       ),
       child: Text(

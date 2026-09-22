@@ -3,16 +3,19 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:orbweaver/data/search_normalizer.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/models/formulary.dart';
+import 'package:orbweaver/screens/topic_frame.dart' show TopicPager;
 import 'package:orbweaver/theme/palette.dart';
 import 'package:yaml/yaml.dart';
 
 /// The library is data, not code. Each book is a self-contained **bundle
 /// folder** under `assets/books/<id>/`:
 ///
-///   assets/books/<id>/book.yaml   metadata + contents tree (topic+map)
-///   assets/books/<id>/cover.*     shelf cover
-///   assets/books/<id>/topics/     one self-contained topic YAML each
-///   assets/books/<id>/images/     bitmaps the topics reference
+/// ```text
+/// assets/books/<id>/book.yaml   metadata + contents tree (topic+map)
+/// assets/books/<id>/cover.*     shelf cover
+/// assets/books/<id>/topics/     one self-contained topic YAML each
+/// assets/books/<id>/images/     bitmaps the topics reference
+/// ```
 ///
 /// `assets/books/index.yaml` lists the book ids in shelf order. Paths in
 /// `book.yaml` (cover, topic files) are relative to the bundle folder, so

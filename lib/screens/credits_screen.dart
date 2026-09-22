@@ -144,8 +144,10 @@ class _CreditsBody extends StatelessWidget {
         for (final s in credits.sources) _SourceCard(source: s),
         const SizedBox(height: 20),
         const _Heading('Images'),
-        Text(credits.imageIntro,
-            style: const TextStyle(fontSize: 13, height: 1.4)),
+        Text(
+          credits.imageIntro,
+          style: const TextStyle(fontSize: 13, height: 1.4),
+        ),
         const SizedBox(height: 12),
         for (final i in credits.images) _ImageRow(credit: i),
       ],
@@ -160,16 +162,16 @@ class _Heading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.only(bottom: 8),
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Color(0xFF1E4E8C),
-          ),
-        ),
-      );
+    padding: const EdgeInsets.only(bottom: 8),
+    child: Text(
+      text,
+      style: const TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: Color(0xFF1E4E8C),
+      ),
+    ),
+  );
 }
 
 class _SourceCard extends StatelessWidget {
@@ -188,19 +190,31 @@ class _SourceCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(source.title,
-                style: const TextStyle(
-                    fontSize: 14, fontWeight: FontWeight.bold, height: 1.3)),
+            Text(
+              source.title,
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+                height: 1.3,
+              ),
+            ),
             if (source.by.isNotEmpty) ...[
               const SizedBox(height: 2),
-              Text(source.by,
-                  style: const TextStyle(fontSize: 13, color: Colors.black87)),
+              Text(
+                source.by,
+                style: const TextStyle(fontSize: 13, color: Colors.black87),
+              ),
             ],
             if (source.note.isNotEmpty) ...[
               const SizedBox(height: 6),
-              Text(source.note,
-                  style: const TextStyle(
-                      fontSize: 12, height: 1.35, color: Colors.black54)),
+              Text(
+                source.note,
+                style: const TextStyle(
+                  fontSize: 12,
+                  height: 1.35,
+                  color: Colors.black54,
+                ),
+              ),
             ],
           ],
         ),
@@ -221,8 +235,10 @@ class _ImageRow extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('${credit.use} — ${credit.author}',
-              style: const TextStyle(fontSize: 13, height: 1.3)),
+          Text(
+            '${credit.use} — ${credit.author}',
+            style: const TextStyle(fontSize: 13, height: 1.3),
+          ),
           Wrap(
             crossAxisAlignment: WrapCrossAlignment.center,
             children: [
@@ -246,8 +262,10 @@ class _Link extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (url.isEmpty) {
-      return Text(text,
-          style: const TextStyle(fontSize: 12, color: Colors.black54));
+      return Text(
+        text,
+        style: const TextStyle(fontSize: 12, color: Colors.black54),
+      );
     }
     return InkWell(
       onTap: () {

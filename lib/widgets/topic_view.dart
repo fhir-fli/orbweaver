@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orbweaver/models/topic.dart';
+import 'package:orbweaver/screens/topic_frame.dart' show TopicFrame;
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/anchor_scope.dart';
@@ -181,7 +182,7 @@ class TopicPageBody extends StatelessWidget {
   final TopicPage page;
   final TopicTheme theme;
 
-  /// Scales the inter-block gaps (and top/bottom padding) so [_FitToScreen] can
+  /// Scales the inter-block gaps (and top/bottom padding) so `_FitToScreen` can
   /// tighten a paged page's vertical rhythm along with its text.
   final double gapScale;
 

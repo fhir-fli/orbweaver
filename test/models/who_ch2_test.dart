@@ -17,13 +17,13 @@ void main() {
       'who_2_04_labs.yaml': ('who-imci-2-4-labs', 43),
       'who_2_05_differential.yaml': ('who-imci-2-5-differential', 44),
     };
-    cases.forEach((file, expected) {
+    for (final MapEntry(key: file, value: expected) in cases.entries) {
       final t = load(file);
       expect(t.id, expected.$1);
       expect(t.pageNumber, expected.$2);
       expect(t.category, TopicCategory.medical);
       expect(t.blocks, isNotEmpty);
-    });
+    }
   });
 
   test('§2.5 links to the §1.5 differential tables', () {

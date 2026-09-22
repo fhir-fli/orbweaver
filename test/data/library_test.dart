@@ -131,7 +131,7 @@ void main() {
       expect((contents[9] as YamlMap)['title'], '10. Supportive care');
       expect(
         (contents[10] as YamlMap)['title'],
-        '11. Monitoring the child\'s progress',
+        "11. Monitoring the child's progress",
       );
       expect(
         (contents[11] as YamlMap)['title'],
@@ -176,7 +176,7 @@ void main() {
       final a2 = (b['contents'] as YamlList)[13] as YamlMap;
       expect(a2['view'], 'collection');
       expect(a2['formulary'], 'formulary.yaml');
-      expect(a2['palette']['accent'], '0xFF5981BF');
+      expect((a2['palette'] as YamlMap)['accent'], '0xFF5981BF');
       // The collection has no inline children — drugs come from the dataset.
       expect(a2['children'], isNull);
     });
@@ -234,7 +234,7 @@ void main() {
     test('who_imci: Annex 1 is a steel-blue-tabbed group; A1.2 nests', () {
       final b = loadBook('who_imci');
       final a1 = (b['contents'] as YamlList)[12] as YamlMap;
-      expect(a1['palette']['accent'], '0xFF5981BF');
+      expect((a1['palette'] as YamlMap)['accent'], '0xFF5981BF');
       expect(a1['topic'], isNotNull, reason: 'annex has its own overview');
       // A1.1 leaf + A1.2 group + A1.3/A1.4/A1.5/A1.6/A1.7 leaves = 7.
       final children = a1['children'] as YamlList;
@@ -247,7 +247,7 @@ void main() {
               as YamlMap;
       expect(g['topic'], isNotNull);
       // 5 sub-procedures (A1.2.1–A1.2.5) nested under the A1.2 overview.
-      expect((g['children'] as YamlList), hasLength(5));
+      expect(g['children'] as YamlList, hasLength(5));
     });
 
     test(
@@ -255,7 +255,7 @@ void main() {
       () {
         final b = loadBook('who_imci');
         final ch10 = (b['contents'] as YamlList)[9] as YamlMap;
-        expect(ch10['palette']['accent'], '0xFF1C63B7');
+        expect((ch10['palette'] as YamlMap)['accent'], '0xFF1C63B7');
         // 10.1 & 10.6 groups + 10.2/10.3/10.4/10.5/10.7/10.8 leaves = 8.
         final children = ch10['children'] as YamlList;
         expect(children, hasLength(8));
@@ -266,7 +266,7 @@ void main() {
                 as YamlMap;
         expect(g['topic'], isNotNull);
         // 5 sub-topics (10.6.1–10.6.5) nested under the §10.6 overview.
-        expect((g['children'] as YamlList), hasLength(5));
+        expect(g['children'] as YamlList, hasLength(5));
       },
     );
 
@@ -275,14 +275,14 @@ void main() {
       () {
         final b = loadBook('who_imci');
         final ch11 = (b['contents'] as YamlList)[10] as YamlMap;
-        expect(ch11['palette']['accent'], '0xFF542791');
+        expect((ch11['palette'] as YamlMap)['accent'], '0xFF542791');
         // 11.1/11.2/11.3 — three leaf sections, no nesting.
         final c11 = ch11['children'] as YamlList;
         expect(c11, hasLength(3));
         expect(c11.every((n) => (n as YamlMap)['title'] == null), isTrue);
 
         final ch12 = (b['contents'] as YamlList)[11] as YamlMap;
-        expect(ch12['palette']['accent'], '0xFF7264B8');
+        expect((ch12['palette'] as YamlMap)['accent'], '0xFF7264B8');
         // 12.1–12.8 — eight leaf sections, no nesting.
         final c12 = ch12['children'] as YamlList;
         expect(c12, hasLength(8));
@@ -293,7 +293,7 @@ void main() {
     test('who_imci: Chapter 8 is a cyan-teal-tabbed group; §8.1 nests', () {
       final b = loadBook('who_imci');
       final ch8 = (b['contents'] as YamlList)[7] as YamlMap;
-      expect(ch8['palette']['accent'], '0xFF00AAAF');
+      expect((ch8['palette'] as YamlMap)['accent'], '0xFF00AAAF');
       // 8.1–8.7 all nested groups = 7 direct children.
       final children = ch8['children'] as YamlList;
       expect(children, hasLength(7));
@@ -306,13 +306,13 @@ void main() {
               as YamlMap;
       expect(g['topic'], isNotNull);
       // 6 sub-topics (8.7.1–8.7.6) nested under the §8.7 overview.
-      expect((g['children'] as YamlList), hasLength(6));
+      expect(g['children'] as YamlList, hasLength(6));
     });
 
     test('who_imci: Chapter 9 is a sky-blue-tabbed group; §9.4 nests', () {
       final b = loadBook('who_imci');
       final ch9 = (b['contents'] as YamlList)[8] as YamlMap;
-      expect(ch9['palette']['accent'], '0xFF00ADEF');
+      expect((ch9['palette'] as YamlMap)['accent'], '0xFF00ADEF');
       // 9.1–9.5 all nested groups = 5 direct children.
       final children = ch9['children'] as YamlList;
       expect(children, hasLength(5));
@@ -323,13 +323,13 @@ void main() {
               as YamlMap;
       expect(g['topic'], isNotNull);
       // 9 sub-topics (9.4.1–9.4.9) nested under the §9.4 overview.
-      expect((g['children'] as YamlList), hasLength(9));
+      expect(g['children'] as YamlList, hasLength(9));
     });
 
     test('who_imci: Chapter 6 is a green-tabbed group; §6.3 nests', () {
       final b = loadBook('who_imci');
       final ch6 = (b['contents'] as YamlList)[5] as YamlMap;
-      expect(ch6['palette']['accent'], '0xFF40BA4E');
+      expect((ch6['palette'] as YamlMap)['accent'], '0xFF40BA4E');
       // 6.1/6.2/6.3/6.4/6.7/6.10 groups + 6.5/6.6/6.8/6.9/6.11 leaves = 11.
       final children = ch6['children'] as YamlList;
       expect(children, hasLength(11));
@@ -339,13 +339,13 @@ void main() {
               )
               as YamlMap;
       expect(g['topic'], isNotNull);
-      expect((g['children'] as YamlList), hasLength(4));
+      expect(g['children'] as YamlList, hasLength(4));
     });
 
     test('who_imci: Chapter 7 is a teal-tabbed group; §7.4 nests', () {
       final b = loadBook('who_imci');
       final ch7 = (b['contents'] as YamlList)[6] as YamlMap;
-      expect(ch7['palette']['accent'], '0xFF009167');
+      expect((ch7['palette'] as YamlMap)['accent'], '0xFF009167');
       // 7.1/7.2/7.3 leaves + 7.4/7.5/7.6/7.7 groups = 7 direct children.
       final children = ch7['children'] as YamlList;
       expect(children, hasLength(7));
@@ -358,13 +358,13 @@ void main() {
               as YamlMap;
       expect(g['topic'], isNotNull);
       // 10 steps (7.4.1–7.4.10) nested under the §7.4 overview.
-      expect((g['children'] as YamlList), hasLength(10));
+      expect(g['children'] as YamlList, hasLength(10));
     });
 
     test('who_imci: Chapter 5 is an olive-tabbed group; §5.2 nests', () {
       final b = loadBook('who_imci');
       final ch5 = (b['contents'] as YamlList)[4] as YamlMap;
-      expect(ch5['palette']['accent'], '0xFF999100');
+      expect((ch5['palette'] as YamlMap)['accent'], '0xFF999100');
       // 5.1 leaf, 5.2 group, 5.3 group, 5.4 leaf = 4 direct children.
       final children = ch5['children'] as YamlList;
       expect(children, hasLength(4));
@@ -374,13 +374,13 @@ void main() {
               )
               as YamlMap;
       expect(g['topic'], isNotNull);
-      expect((g['children'] as YamlList), hasLength(3));
+      expect(g['children'] as YamlList, hasLength(3));
     });
 
     test('who_imci: Chapter 4 is a brown-tabbed group; §4.6 nests', () {
       final b = loadBook('who_imci');
       final ch4 = (b['contents'] as YamlList)[3] as YamlMap;
-      expect(ch4['palette']['accent'], '0xFF9C5400');
+      expect((ch4['palette'] as YamlMap)['accent'], '0xFF9C5400');
       // 4.1–4.9 = 9 direct children (leaves + subsection groups).
       final children = ch4['children'] as YamlList;
       expect(children, hasLength(9));
@@ -392,20 +392,20 @@ void main() {
               )
               as YamlMap;
       expect(g['topic'], isNotNull);
-      expect((g['children'] as YamlList), hasLength(4));
+      expect(g['children'] as YamlList, hasLength(4));
     });
 
     test('who_imci: Chapter 2 is a red-tabbed group of 5 sections', () {
       final b = loadBook('who_imci');
       final ch2 = (b['contents'] as YamlList)[1] as YamlMap;
-      expect(ch2['palette']['accent'], '0xFFEF2B3E');
-      expect((ch2['children'] as YamlList), hasLength(5));
+      expect((ch2['palette'] as YamlMap)['accent'], '0xFFEF2B3E');
+      expect(ch2['children'] as YamlList, hasLength(5));
     });
 
     test('who_imci: Chapter 3 is an orange-tabbed group; §3.11 nests', () {
       final b = loadBook('who_imci');
       final ch3 = (b['contents'] as YamlList)[2] as YamlMap;
-      expect(ch3['palette']['accent'], '0xFFF05418');
+      expect((ch3['palette'] as YamlMap)['accent'], '0xFFF05418');
       // 3.1–3.10 + §3.14 leaves + §3.11/§3.12/§3.13 subsection groups = 14.
       final children = ch3['children'] as YamlList;
       expect(children, hasLength(14));
@@ -417,7 +417,7 @@ void main() {
               )
               as YamlMap;
       expect(g['topic'], isNotNull);
-      expect((g['children'] as YamlList), hasLength(4));
+      expect(g['children'] as YamlList, hasLength(4));
     });
 
     test('who_imci: §1.5 is a nested subsection group with 3 children', () {
@@ -432,7 +432,7 @@ void main() {
               as YamlMap;
       // The group carries its own overview topic plus 3 subsection leaves.
       expect(group['topic'], isNotNull);
-      expect((group['children'] as YamlList), hasLength(3));
+      expect(group['children'] as YamlList, hasLength(3));
     });
 
     test('wvems: 9 groups (4 sections + drug ref + procedures + policies + '
@@ -475,20 +475,62 @@ void main() {
       expect((contents[13] as YamlMap)['title'], 'Essential Medications');
       expect((contents[13] as YamlMap)['view'], 'collection');
       // Each group carries its own accent.
-      expect((contents[0] as YamlMap)['palette']['accent'], '0xFFC62828');
-      expect((contents[1] as YamlMap)['palette']['accent'], '0xFF6A1B9A');
-      expect((contents[2] as YamlMap)['palette']['accent'], '0xFF2E7D32');
-      expect((contents[3] as YamlMap)['palette']['accent'], '0xFFAD1457');
-      expect((contents[4] as YamlMap)['palette']['accent'], '0xFFBF360C');
-      expect((contents[5] as YamlMap)['palette']['accent'], '0xFF00695C');
-      expect((contents[6] as YamlMap)['palette']['accent'], '0xFF5D4037');
-      expect((contents[7] as YamlMap)['palette']['accent'], '0xFF283593');
-      expect((contents[8] as YamlMap)['palette']['accent'], '0xFF37474F');
-      expect((contents[9] as YamlMap)['palette']['accent'], '0xFFEF6C00');
-      expect((contents[10] as YamlMap)['palette']['accent'], '0xFF0277BD');
-      expect((contents[11] as YamlMap)['palette']['accent'], '0xFF0D47A1');
-      expect((contents[12] as YamlMap)['palette']['accent'], '0xFF00838F');
-      expect((contents[13] as YamlMap)['palette']['accent'], '0xFF4A148C');
+      expect(
+        ((contents[0] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFFC62828',
+      );
+      expect(
+        ((contents[1] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF6A1B9A',
+      );
+      expect(
+        ((contents[2] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF2E7D32',
+      );
+      expect(
+        ((contents[3] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFFAD1457',
+      );
+      expect(
+        ((contents[4] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFFBF360C',
+      );
+      expect(
+        ((contents[5] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF00695C',
+      );
+      expect(
+        ((contents[6] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF5D4037',
+      );
+      expect(
+        ((contents[7] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF283593',
+      );
+      expect(
+        ((contents[8] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF37474F',
+      );
+      expect(
+        ((contents[9] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFFEF6C00',
+      );
+      expect(
+        ((contents[10] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF0277BD',
+      );
+      expect(
+        ((contents[11] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF0D47A1',
+      );
+      expect(
+        ((contents[12] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF00838F',
+      );
+      expect(
+        ((contents[13] as YamlMap)['palette'] as YamlMap)['accent'],
+        '0xFF4A148C',
+      );
       // Emergency Protocols = p.12–26 (15 topics), ending in Altered
       // Mental Status; Ingestions has Poisoning (p.28); Paediatric has
       // Meningitis (p.55) for now.

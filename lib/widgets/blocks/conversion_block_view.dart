@@ -251,7 +251,7 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
       controller: _doseCtrl,
       keyboardType: const TextInputType.numberWithOptions(decimal: true),
       inputFormatters: [
-        FilteringTextInputFormatter.allow(RegExp(r'[0-9.]')),
+        FilteringTextInputFormatter.allow(RegExp('[0-9.]')),
       ],
       decoration: InputDecoration(
         isDense: true,

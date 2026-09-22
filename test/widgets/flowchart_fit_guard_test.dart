@@ -40,17 +40,19 @@ import 'package:orbweaver/widgets/topic_view.dart';
 const Size kPhone = Size(393, 852);
 
 /// FitText's legibility floor. Kept in step with `FitText._minFontSize`.
-const double kFloor = 9.0;
+const double kFloor = 9;
 
 /// How far past its budget a node's text may run before it counts as spilling.
 /// A pixel or two is invisible; the threshold is set from measurement, not
 /// taste — see the header note.
-const double kTolerancePx = 4.0;
+const double kTolerancePx = 4;
 
 File? _findRoboto() {
   final root = Platform.environment['FLUTTER_ROOT'];
   if (root != null && root.isNotEmpty) {
-    final f = File('$root/bin/cache/artifacts/material_fonts/Roboto-Regular.ttf');
+    final f = File(
+      '$root/bin/cache/artifacts/material_fonts/Roboto-Regular.ttf',
+    );
     if (f.existsSync()) return f;
   }
   var dir = File(Platform.resolvedExecutable).parent;
@@ -65,8 +67,9 @@ File? _findRoboto() {
 }
 
 void main() {
-  testWidgets('no flowchart node text is squeezed onto the legibility floor',
-      (tester) async {
+  testWidgets('no flowchart node text is squeezed onto the legibility floor', (
+    tester,
+  ) async {
     final font = _findRoboto();
     expect(
       font,
@@ -77,8 +80,9 @@ void main() {
           'guarding.',
     );
     await tester.runAsync(() async {
-      await (FontLoader('Roboto')
-            ..addFont(Future.value(font!.readAsBytesSync().buffer.asByteData())))
+      await (FontLoader(
+            'Roboto',
+          )..addFont(Future.value(font!.readAsBytesSync().buffer.asByteData())))
           .load();
     });
 
@@ -99,9 +103,12 @@ void main() {
     expect(loaded, isNotEmpty, reason: 'no topics loaded — asset path broken?');
 
     Directory('build/fits').createSync(recursive: true);
-    final fh = File('build/fits/flowchart_fits.tsv').openSync(mode: FileMode.write);
-    fh.writeStringSync('topic\tvariant\tn_spilled\tfirst_spilled\n');
-    fh.flushSync();
+    final fh =
+        File(
+            'build/fits/flowchart_fits.tsv',
+          ).openSync(mode: FileMode.write)
+          ..writeStringSync('topic\tvariant\tn_spilled\tfirst_spilled\n')
+          ..flushSync();
 
     final offenders = <String>[];
     var charts = 0;
@@ -138,11 +145,12 @@ void main() {
       final spilled = List<String>.from(FitText.debugOverflowed);
       FitText.debugOverflowed.clear();
 
-      fh.writeStringSync(
-        '${rec.id}\t${variants.join(",")}\t${spilled.length}\t'
-        '${spilled.isEmpty ? "" : spilled.first.replaceAll("\n", " ").replaceAll("\t", " ")}\n',
-      );
-      fh.flushSync();
+      fh
+        ..writeStringSync(
+          '${rec.id}\t${variants.join(",")}\t${spilled.length}\t'
+          '${spilled.isEmpty ? "" : spilled.first.replaceAll("\n", " ").replaceAll("\t", " ")}\n',
+        )
+        ..flushSync();
 
       for (final s in spilled) {
         final bar = s.indexOf('|');
@@ -157,9 +165,13 @@ void main() {
     }
     fh.closeSync();
 
-    expect(charts, greaterThan(40),
-        reason: 'expected the books to hold well over 40 flowcharts; '
-            'found $charts — did the block scan break?');
+    expect(
+      charts,
+      greaterThan(40),
+      reason:
+          'expected the books to hold well over 40 flowcharts; '
+          'found $charts — did the block scan break?',
+    );
     expect(
       offenders,
       isEmpty,

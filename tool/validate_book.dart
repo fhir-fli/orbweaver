@@ -127,8 +127,9 @@ void _validateBundle(SchemaSet schemas, Directory bundle) {
     for (final n in nodes) {
       if (n is! Map) continue;
       if (n['topic'] is String) topicPaths.add(n['topic'] as String);
-      if (n['formulary'] is String)
+      if (n['formulary'] is String) {
         formularyPaths.add(n['formulary'] as String);
+      }
       if (n['children'] is List) walk(n['children'] as List);
     }
   }
@@ -205,8 +206,9 @@ void _validateBundle(SchemaSet schemas, Directory bundle) {
   // the app allows links across books and renders unresolved ones inert.
   linkTargets.forEach((file, targets) {
     for (final t in targets) {
-      if (!ids.containsKey(t))
+      if (!ids.containsKey(t)) {
         _warn(file, 'link target "topic:$t" is not in this bundle');
+      }
     }
   });
   stdout.writeln('   ${topicPaths.length} topics, ${ids.length} ids');

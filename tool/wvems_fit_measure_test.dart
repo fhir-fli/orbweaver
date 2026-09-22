@@ -63,9 +63,9 @@ void main() {
 
       final outPath =
           Platform.environment['FIT_OUT'] ?? 'tool/wvems_fit_fine.tsv';
-      final fh = File(outPath).openSync(mode: FileMode.write);
-      fh.writeStringSync('topic\tpage_number\tfits_at\tnat_h_1.0\tavail_h\n');
-      fh.flushSync();
+      final fh = File(outPath).openSync(mode: FileMode.write)
+        ..writeStringSync('topic\tpage_number\tfits_at\tnat_h_1.0\tavail_h\n')
+        ..flushSync();
 
       final loaded = <({String id, Topic topic})>[];
       await tester.runAsync(() async {
@@ -83,12 +83,13 @@ void main() {
         }
       });
       stdout.writeln('measuring ${loaded.length} topics');
-      stdout.flush();
+      await stdout.flush();
 
       for (final rec in loaded) {
         final topic = rec.topic;
-        if (topic.layout != TopicLayout.paged || topic.pages.length < 2)
+        if (topic.layout != TopicLayout.paged || topic.pages.length < 2) {
           continue;
+        }
         final theme = TopicTheme(
           resolvePalette([
             {
@@ -103,7 +104,7 @@ void main() {
 
           double? natural;
           double avail = 0;
-          double fits = -1;
+          var fits = -1.0;
 
           for (final scale in fineLadder()) {
             final key = GlobalKey();
@@ -154,10 +155,11 @@ void main() {
               '${fits < 0 ? "NEVER" : fits.toStringAsFixed(2)}\t'
               '${natural?.toStringAsFixed(0) ?? "?"}\t'
               '${avail.toStringAsFixed(0)}\n';
-          fh.writeStringSync(line);
-          fh.flushSync();
+          fh
+            ..writeStringSync(line)
+            ..flushSync();
           stdout.writeln(line.trim());
-          stdout.flush();
+          await stdout.flush();
         }
       }
 

@@ -126,7 +126,6 @@ class ProseBlockView extends StatelessWidget {
             : null,
         child: IntrinsicWidth(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               // A firm box gets the print's solid title chip; a dashed
@@ -186,7 +185,6 @@ class ProseBlockView extends StatelessWidget {
       return Align(
         child: Row(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Flexible(child: box),
             const SizedBox(width: 8),

@@ -36,7 +36,7 @@ class TableBlockView extends StatelessWidget {
   bool get _hasGroups => block.rows.any((r) => r.group != null);
 
   /// Per-column flex applies only when an explicit weight is given for
-  /// every column; otherwise fall back to [fallback] (equal columns for
+  /// every column; otherwise fall back to `fallback` (equal columns for
   /// the header, or the cell's own `span` for data rows).
   ///
   /// A header-less table (`columns: []`) counts its columns from the widest
@@ -260,7 +260,7 @@ class TableBlockView extends StatelessWidget {
                     ? null
                     : BoxDecoration(
                         border: Border(
-                          right: BorderSide(color: dividerColor, width: 1),
+                          right: BorderSide(color: dividerColor),
                         ),
                       ),
                 child: style.styledCell(ci, row.cells[ci], _cellView),
@@ -469,6 +469,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
 
   static const double _defaultColWidth = 78;
   static const double _fontSize = 12;
+
   /// Floor for a body row. The real height is measured from the tallest cell
   /// in the table (see [_measureRowH]): 21 fits a single line, and the growth
   /// tables are all single-line, but a dose grid like WVEMS p.144 wraps its
@@ -520,6 +521,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
     _rowHeight = tallest;
     return tallest;
   }
+
   // Tall enough for a header label that wraps to two lines (e.g.
   // "Length (cm)") without overflowing into the first data row.
   static const double _headerH2 = 40;
@@ -536,7 +538,7 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
     _bodyH.addListener(_syncHeaderToBody);
     _keyNums = [
       for (final r in widget.block.rows)
-        r.cells.isEmpty ? null : _TableStyle._num(r.cells.first),
+        if (r.cells.isEmpty) null else _TableStyle._num(r.cells.first),
     ];
     _numericKeys =
         widget.block.rows.isNotEmpty && _keyNums.every((k) => k != null);
@@ -658,7 +660,6 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
         verticalInside: BorderSide(color: dividerColor),
         borderRadius: BorderRadius.circular(4),
       ),
-      defaultVerticalAlignment: TableCellVerticalAlignment.top,
       columnWidths: {
         for (var i = 0; i < ncol; i++) i: FixedColumnWidth(_width(i)),
       },

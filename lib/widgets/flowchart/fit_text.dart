@@ -116,7 +116,7 @@ class FitText extends StatelessWidget {
             debugOverflowed.add('${excess.toStringAsFixed(1)}|$shown');
           }
           return true;
-        }());
+        }(), 'debugOverflowed bookkeeping never fails');
       }
     }
     final resolved = style.copyWith(fontSize: fontSize, color: color);

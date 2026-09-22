@@ -109,10 +109,9 @@ class SeverityFlowchartView extends StatelessWidget {
     }
 
     if (fc.preDecisionActions.isNotEmpty) {
-      rows.add(
-        _PreDecisionActions(actions: fc.preDecisionActions, theme: theme),
-      );
-      rows.add(const FlowDownArrow());
+      rows
+        ..add(_PreDecisionActions(actions: fc.preDecisionActions, theme: theme))
+        ..add(const FlowDownArrow());
     }
 
     if (fc.decision != null) {
@@ -177,23 +176,24 @@ class SeverityFlowchartView extends StatelessWidget {
 
     if (fc.convergence != null) {
       if (useLoopbackLayout) {
-        rows.add(
-          _TwoColumn(
-            left: loopbackTargetIdx == 0
-                ? const Center(child: FlowUpArrow())
-                : const Center(child: FlowDownArrow()),
-            right: loopbackTargetIdx == 1
-                ? const Center(child: FlowUpArrow())
-                : const Center(child: FlowDownArrow()),
-          ),
-        );
-        rows.add(
-          _ConvergenceWithWaypointRow(
-            convergence: fc.convergence!,
-            waypointLabel: loopback.label,
-            theme: theme,
-          ),
-        );
+        rows
+          ..add(
+            _TwoColumn(
+              left: loopbackTargetIdx == 0
+                  ? const Center(child: FlowUpArrow())
+                  : const Center(child: FlowDownArrow()),
+              right: loopbackTargetIdx == 1
+                  ? const Center(child: FlowUpArrow())
+                  : const Center(child: FlowDownArrow()),
+            ),
+          )
+          ..add(
+            _ConvergenceWithWaypointRow(
+              convergence: fc.convergence!,
+              waypointLabel: loopback.label,
+              theme: theme,
+            ),
+          );
         if (fc.postConvergence != null) {
           final noChange = forwardExits.isNotEmpty
               ? forwardExits.first.label
@@ -201,17 +201,16 @@ class SeverityFlowchartView extends StatelessWidget {
           final parts = noChange.split(RegExp(r'\s+'));
           final before = parts.isNotEmpty ? parts.first : noChange;
           final after = parts.length >= 2 ? parts.sublist(1).join(' ') : null;
-          rows.add(
-            _TwoColumn(
-              left: Center(
-                child: FlowDownArrow(label: before, labelAfter: after),
+          rows
+            ..add(
+              _TwoColumn(
+                left: Center(
+                  child: FlowDownArrow(label: before, labelAfter: after),
+                ),
+                right: const Center(child: FlowUpArrow()),
               ),
-              right: const Center(child: FlowUpArrow()),
-            ),
-          );
-          rows.add(
-            _PostConvergence(node: fc.postConvergence!, theme: theme),
-          );
+            )
+            ..add(_PostConvergence(node: fc.postConvergence!, theme: theme));
         }
       } else {
         final conv = fc.convergence!;
@@ -229,15 +228,16 @@ class SeverityFlowchartView extends StatelessWidget {
           // clinical content (e.g. "Ensure Patient DECON",
           // "Consider Destination Triage") at the cost of the L-arrows
           // from the branch columns.
-          rows.add(_ParallelDownArrows(count: fc.branches.length));
-          rows.add(
-            _ConvergenceWithWarnings(
-              safety: convSafety,
-              caution: convCaution,
-              node: conv,
-              theme: theme,
-            ),
-          );
+          rows
+            ..add(_ParallelDownArrows(count: fc.branches.length))
+            ..add(
+              _ConvergenceWithWarnings(
+                safety: convSafety,
+                caution: convCaution,
+                node: conv,
+                theme: theme,
+              ),
+            );
         } else if (fc.branches.length == 2 || fc.branches.length == 3) {
           rows.add(
             _ConvergenceHub(
@@ -247,8 +247,9 @@ class SeverityFlowchartView extends StatelessWidget {
             ),
           );
         } else {
-          rows.add(_ParallelDownArrows(count: fc.branches.length));
-          rows.add(_ConvergenceBox(node: conv, theme: theme));
+          rows
+            ..add(_ParallelDownArrows(count: fc.branches.length))
+            ..add(_ConvergenceBox(node: conv, theme: theme));
         }
         for (final exit in forwardExits) {
           rows.add(FlowDownArrow(label: exit.label));
@@ -266,8 +267,9 @@ class SeverityFlowchartView extends StatelessWidget {
     }
 
     if (fc.doseTable.isNotEmpty) {
-      rows.add(const SizedBox(height: 8));
-      rows.add(DoseTable(rows: fc.doseTable, theme: theme));
+      rows
+        ..add(const SizedBox(height: 8))
+        ..add(DoseTable(rows: fc.doseTable, theme: theme));
     }
 
     return Column(
@@ -383,7 +385,6 @@ class _ParallelDownArrows extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         for (var i = 0; i < count; i++) ...[
           if (i > 0) const SizedBox(width: kSeverityBranchGap),
@@ -482,7 +483,6 @@ class _EntryWithWarnings extends StatelessWidget {
       padding: const EdgeInsets.only(top: 10),
       child: IntrinsicHeight(
         child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
               flex: 22,
@@ -500,8 +500,6 @@ class _EntryWithWarnings extends StatelessWidget {
               // the arrowhead — together they read as one continuous
               // arrow originating at the stadium's bottom.
               child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   FlowNodeBox(
                     text: entry.text,
@@ -560,7 +558,6 @@ class _ConvergenceWithWarnings extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntrinsicHeight(
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Expanded(
             flex: 22,
@@ -597,7 +594,6 @@ class _TwoColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(child: left),
         const SizedBox(width: kSeverityBranchGap),
@@ -969,7 +965,6 @@ class _ConvergenceBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(28),
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
           FlowLinkText(
@@ -1183,7 +1178,6 @@ class FlowDownArrow extends StatelessWidget {
       content = Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(label!, style: _arrowLabelStyle),
           const SizedBox(width: 6),
@@ -1197,7 +1191,6 @@ class FlowDownArrow extends StatelessWidget {
         // Label beside the arrow — label on left, glyph on right.
         content = Row(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(label!, style: _arrowLabelStyle),
             const SizedBox(width: 4),
@@ -1208,7 +1201,6 @@ class FlowDownArrow extends StatelessWidget {
         // Single leading label — stack label above the arrow.
         content = Column(
           mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(label!, style: _arrowLabelStyle),
             const SizedBox(height: 1),
@@ -1220,7 +1212,6 @@ class FlowDownArrow extends StatelessWidget {
       // Single trailing label — stack label below the arrow.
       content = Column(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           arrow,
           const SizedBox(height: 1),
@@ -1255,7 +1246,6 @@ class FlowUpArrow extends StatelessWidget {
         : Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               arrow,
               const SizedBox(width: 6),
@@ -1299,7 +1289,7 @@ class FlowRightArrow extends StatelessWidget {
   }
 }
 
-enum _Dir { up, down, left, right }
+enum _Dir { up, down, right }
 
 class _VerticalArrowPainter extends CustomPainter {
   const _VerticalArrowPainter({required this.pointing});
@@ -1512,10 +1502,9 @@ class LinearFlowchartView extends StatelessWidget {
     }
 
     if (fc.postConvergence != null) {
-      rows.add(const FlowDownArrow());
-      rows.add(
-        _PostConvergence(node: fc.postConvergence!, theme: theme),
-      );
+      rows
+        ..add(const FlowDownArrow())
+        ..add(_PostConvergence(node: fc.postConvergence!, theme: theme));
     }
 
     if (fc.criticalCareLink != null) {
@@ -1523,8 +1512,9 @@ class LinearFlowchartView extends StatelessWidget {
     }
 
     if (fc.doseTable.isNotEmpty) {
-      rows.add(const SizedBox(height: 8));
-      rows.add(DoseTable(rows: fc.doseTable, theme: theme));
+      rows
+        ..add(const SizedBox(height: 8))
+        ..add(DoseTable(rows: fc.doseTable, theme: theme));
     }
 
     return Column(
@@ -1646,15 +1636,16 @@ class DifferentialFlowchartView extends StatelessWidget {
     }
 
     if (fc.decision != null) {
-      rows.add(const FlowDownArrow());
-      rows.add(
-        FlowNodeBox(
-          text: fc.decision!.text,
-          shape: fc.decision!.shape,
-          theme: theme,
-        ),
-      );
-      rows.add(const FlowDownArrow());
+      rows
+        ..add(const FlowDownArrow())
+        ..add(
+          FlowNodeBox(
+            text: fc.decision!.text,
+            shape: fc.decision!.shape,
+            theme: theme,
+          ),
+        )
+        ..add(const FlowDownArrow());
     }
 
     // Card grid — cards chunked into rows of [columns] each.
@@ -1729,8 +1720,9 @@ class DifferentialFlowchartView extends StatelessWidget {
     }
 
     if (fc.postConvergence != null) {
-      rows.add(const FlowDownArrow());
-      rows.add(_PostConvergence(node: fc.postConvergence!, theme: theme));
+      rows
+        ..add(const FlowDownArrow())
+        ..add(_PostConvergence(node: fc.postConvergence!, theme: theme));
     }
 
     if (fc.criticalCareLink != null) {
@@ -1738,8 +1730,9 @@ class DifferentialFlowchartView extends StatelessWidget {
     }
 
     if (fc.doseTable.isNotEmpty) {
-      rows.add(const SizedBox(height: 8));
-      rows.add(DoseTable(rows: fc.doseTable, theme: theme));
+      rows
+        ..add(const SizedBox(height: 8))
+        ..add(DoseTable(rows: fc.doseTable, theme: theme));
     }
 
     return Column(

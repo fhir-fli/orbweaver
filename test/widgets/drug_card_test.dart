@@ -26,9 +26,8 @@ const _notesCc = Color(0xFFD9D2E9);
 
 /// Every zone fill in the card, in visual order (Use, Caution, Notes).
 List<Color> _zoneFills(WidgetTester tester) => tester
-    .widgetList<Container>(find.byType(Container))
+    .widgetList<ColoredBox>(find.byType(ColoredBox))
     .map((c) => c.color)
-    .whereType<Color>()
     .where((c) => c != Colors.white)
     .toList();
 

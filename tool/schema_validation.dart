@@ -10,7 +10,7 @@ import 'package:orbweaver/data/schema_explain.dart';
 
 export 'package:orbweaver/data/schema_explain.dart';
 
-/// The four schemas, loaded from [dir] (the repo's `schema/` folder).
+/// The four schemas, loaded from `dir` (the repo's `schema/` folder).
 class SchemaSet {
   SchemaSet._(this.topic, this.book, this.formulary, this.index);
 

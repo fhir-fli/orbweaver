@@ -10,7 +10,7 @@ class AnchorScope extends InheritedWidget {
     super.key,
   });
 
-  /// Scrolls the topic to the block whose `anchor:` slug equals [slug].
+  /// Scrolls the topic to the block whose `anchor:` slug equals `slug`.
   /// No-op if the slug isn't present in this topic.
   final void Function(String slug) scrollTo;
 

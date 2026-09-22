@@ -13,7 +13,8 @@ import 'package:yaml/yaml.dart';
 /// These fail if an image loses its author, source or licence, and if an image
 /// ships with no credit at all.
 void main() {
-  final doc = loadYaml(File('assets/credits.yaml').readAsStringSync()) as YamlMap;
+  final doc =
+      loadYaml(File('assets/credits.yaml').readAsStringSync()) as YamlMap;
   final credits = doc['credits'] as YamlMap;
   final images = (credits['images'] as YamlMap)['items'] as YamlList;
 
@@ -54,13 +55,18 @@ void main() {
       for (final raw in images) ((raw as YamlMap)['file'] ?? '').toString(),
     };
     final uncredited = <String>[];
-    for (final f in Directory('assets/books/wvems/images').listSync().whereType<File>()) {
+    for (final f in Directory(
+      'assets/books/wvems/images',
+    ).listSync().whereType<File>()) {
       final name = f.uri.pathSegments.last;
       if (!name.startsWith('form_') && !name.startsWith('eq_')) continue;
       if (!credited.contains(name)) uncredited.add(name);
     }
-    expect(uncredited, isEmpty,
-        reason: 'bundled but credited nowhere: ${uncredited.join(', ')}');
+    expect(
+      uncredited,
+      isEmpty,
+      reason: 'bundled but credited nowhere: ${uncredited.join(', ')}',
+    );
   });
 
   test('the privacy link is present and points at the live policy', () {

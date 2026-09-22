@@ -109,9 +109,12 @@ void main() {
       addTearDown(tester.view.reset);
 
       Directory('build/fits').createSync(recursive: true);
-    final fh = File('build/fits/page_fits.tsv').openSync(mode: FileMode.write);
-      fh.writeStringSync('topic\tpage\tfits_at\tnat_h\tavail_h\n');
-      fh.flushSync();
+      final fh =
+          File(
+              'build/fits/page_fits.tsv',
+            ).openSync(mode: FileMode.write)
+            ..writeStringSync('topic\tpage\tfits_at\tnat_h\tavail_h\n')
+            ..flushSync();
 
       // Asset I/O must run outside the fake-async zone testWidgets installs, or
       // the future never completes and the test times out with no output.
@@ -138,8 +141,9 @@ void main() {
 
       for (final rec in loaded) {
         final topic = rec.topic;
-        if (topic.layout != TopicLayout.paged || topic.pages.length < 2)
+        if (topic.layout != TopicLayout.paged || topic.pages.length < 2) {
           continue;
+        }
         final theme = TopicTheme(
           resolvePalette([
             {
@@ -204,13 +208,14 @@ void main() {
 
           checked++;
           final label = '${rec.id} p${page.pageNumber ?? i}';
-          fh.writeStringSync(
-            '${rec.id}\t${page.pageNumber ?? i}\t'
-            '${fits < 0 ? "NEVER" : fits.toStringAsFixed(2)}\t'
-            '${natural?.toStringAsFixed(0) ?? "?"}\t'
-            '${avail.toStringAsFixed(0)}\n',
-          );
-          fh.flushSync();
+          fh
+            ..writeStringSync(
+              '${rec.id}\t${page.pageNumber ?? i}\t'
+              '${fits < 0 ? "NEVER" : fits.toStringAsFixed(2)}\t'
+              '${natural?.toStringAsFixed(0) ?? "?"}\t'
+              '${avail.toStringAsFixed(0)}\n',
+            )
+            ..flushSync();
 
           if (fits < kMinScale) {
             offenders.add(

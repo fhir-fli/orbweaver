@@ -53,7 +53,7 @@ class AlgorithmFlowchartView extends StatelessWidget {
           rows.add(
             Padding(
               padding: EdgeInsets.only(left: colW * _boxLeftCol),
-              child: _AlgoBox(box: fc.terminal!, theme: theme, terminal: true),
+              child: _AlgoBox(box: fc.terminal, theme: theme, terminal: true),
             ),
           );
         }
@@ -109,11 +109,11 @@ class _Entry extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.only(left: cx - 7),
-          child: SizedBox(
+          child: const SizedBox(
             width: 14,
             height: 18,
             child: CustomPaint(
-              painter: _ArrowLine(const [Offset(7, 0), Offset(7, 18)]),
+              painter: _ArrowLine([Offset(7, 0), Offset(7, 18)]),
             ),
           ),
         ),
@@ -143,7 +143,6 @@ class _DecisionStage extends StatelessWidget {
     final dW = colW * AlgorithmFlowchartView._dCols;
     final dcx = leftX + dW / 2;
     final rightCornerX = leftX + dW;
-    final boxLeftX = colW * AlgorithmFlowchartView._boxLeftCol;
 
     // Grow the diamond with the decision length so long questions have room
     // (and the criteria card below never overlaps the wrapped text).
@@ -170,8 +169,10 @@ class _DecisionStage extends StatelessWidget {
     // diamonds 6-11 px short (flowchart_fit_guard_test). 1.28 clears them.
     final textH = dLines * dFont * 1.28;
     // Double it: the text box occupies the middle half of the diamond.
-    final dH = (textH / AlgorithmFlowchartView._kDiamondTextHFrac + 16)
-        .clamp(72.0, 520.0);
+    final dH = (textH / AlgorithmFlowchartView._kDiamondTextHFrac + 16).clamp(
+      72.0,
+      520.0,
+    );
     final midY = dH / 2;
 
     final terminals = [
@@ -396,7 +397,14 @@ class _StagePainter extends CustomPainter {
     required this.branchCenters,
   });
 
-  final double leftX, dW, dH, dcx, rightCornerX, boxTop, boxLeftX, contStartY;
+  final double leftX;
+  final double dW;
+  final double dH;
+  final double dcx;
+  final double rightCornerX;
+  final double boxTop;
+  final double boxLeftX;
+  final double contStartY;
   final bool atLevel;
   final Color fill;
   final bool hasContinue;

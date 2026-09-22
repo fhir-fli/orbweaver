@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/drug_index_screen.dart';
+import 'package:orbweaver/screens/topic_frame.dart' show TopicPager;
 import 'package:orbweaver/services/last_state.dart';
 import 'package:orbweaver/theme/palette.dart';
 
@@ -200,7 +201,7 @@ class _BookScreenState extends State<BookScreen> {
     return ListView.separated(
       padding: const EdgeInsets.symmetric(vertical: 4),
       itemCount: scored.length,
-      separatorBuilder: (_, __) => const Divider(
+      separatorBuilder: (_, _) => const Divider(
         height: 1,
         thickness: 0.5,
         indent: 12,
@@ -234,7 +235,7 @@ class _BookScreenState extends State<BookScreen> {
           topic: topic,
           onTap: () => openTopicFromBook(context, widget.book, topic),
         ),
-        BookGroup group
+        final BookGroup group
             when group.view == 'collection' && group.formulary != null =>
           _GroupRow(
             group: group,
@@ -252,7 +253,7 @@ class _BookScreenState extends State<BookScreen> {
               ),
             ),
           ),
-        BookGroup group => _GroupRow(
+        final BookGroup group => _GroupRow(
           group: group,
           spineColor: widget.book.spineColor,
           onTap: () => Navigator.push(
@@ -356,7 +357,7 @@ class _NodeTile extends StatelessWidget {
           indent: depth * 12.0,
           onTap: () => openTopicFromBook(context, book, topic),
         );
-      case BookGroup group:
+      case final BookGroup group:
         return ExpansionTile(
           tilePadding: EdgeInsets.only(left: 12 + depth * 12.0, right: 12),
           childrenPadding: EdgeInsets.zero,
@@ -446,7 +447,7 @@ class _GroupRow extends StatelessWidget {
       switch (child) {
         case BookLeaf():
           n++;
-        case BookGroup g:
+        case final BookGroup g:
           n += _leafCount(g);
       }
     }
@@ -569,7 +570,7 @@ Iterable<BookTopic> leavesOfGroup(BookGroup group) sync* {
     switch (child) {
       case BookLeaf(:final topic):
         yield topic;
-      case BookGroup g:
+      case final BookGroup g:
         yield* leavesOfGroup(g);
     }
   }
@@ -601,7 +602,6 @@ class _IndexCell extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
         ),
         child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             if (page != null)
               Container(
@@ -628,7 +628,7 @@ class _IndexCell extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 10.5,
                   fontWeight: FontWeight.w600,
-                  height: 1.0,
+                  height: 1,
                 ),
               ),
             ),

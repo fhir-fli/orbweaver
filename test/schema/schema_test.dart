@@ -153,7 +153,8 @@ void main() {
     final kinds = RegExp(
       r"'([a-z0-9_]+)'\s*=>",
     ).allMatches(src.substring(start, end)).map((m) => m.group(1)!).toSet();
-    final formula = schemas.topic.schemaMap![r'$defs']['formula'] as Map;
+    final formula =
+        (schemas.topic.schemaMap![r'$defs'] as Map)['formula'] as Map;
     final enumKinds =
         ((formula['properties'] as Map)['kind'] as Map)['enum'] as List;
     expect(enumKinds.toSet(), kinds);
@@ -225,7 +226,7 @@ void main() {
       'a flowchart with an unknown variant',
       topic(
         blocks: [
-          {'type': 'flowchart', 'variant': 'sqare', 'branches': []},
+          {'type': 'flowchart', 'variant': 'sqare', 'branches': <Object>[]},
         ],
       ),
       'sqare',
@@ -239,7 +240,7 @@ void main() {
             'variant': 'cascade',
             'entry': {'text': 'e'},
             'root': {'decision': 'd?'},
-            'branches': [],
+            'branches': <Object>[],
           },
         ],
       ),
@@ -320,7 +321,7 @@ void main() {
         explain(
           schemas.book,
           book([
-            {'topic': 'topics/a.yaml', 'palette': {}},
+            {'topic': 'topics/a.yaml', 'palette': <String, Object>{}},
           ]),
         ),
         isNotEmpty,

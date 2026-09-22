@@ -51,8 +51,9 @@ File? _findRoboto() {
 }
 
 void main() {
-  testWidgets('every table renders at phone width without a layout exception',
-      (tester) async {
+  testWidgets('every table renders at phone width without a layout exception', (
+    tester,
+  ) async {
     final font = _findRoboto();
     expect(
       font,
@@ -63,10 +64,9 @@ void main() {
           'to be carried as known-failing while the app was fine.',
     );
     await tester.runAsync(() async {
-      await (FontLoader('Roboto')
-            ..addFont(
-              Future.value(font!.readAsBytesSync().buffer.asByteData()),
-            ))
+      await (FontLoader('Roboto')..addFont(
+            Future.value(font!.readAsBytesSync().buffer.asByteData()),
+          ))
           .load();
     });
 
@@ -87,9 +87,9 @@ void main() {
     expect(loaded, isNotEmpty, reason: 'no topics loaded — asset path broken?');
 
     Directory('build/fits').createSync(recursive: true);
-    final fh = File('build/fits/table_fits.tsv').openSync(mode: FileMode.write);
-    fh.writeStringSync('topic\tn_tables\tn_errors\tfirst_error\n');
-    fh.flushSync();
+    final fh = File('build/fits/table_fits.tsv').openSync(mode: FileMode.write)
+      ..writeStringSync('topic\tn_tables\tn_errors\tfirst_error\n')
+      ..flushSync();
 
     final offenders = <String>[];
     var withTables = 0;
@@ -128,11 +128,12 @@ void main() {
       await tester.pump();
       FlutterError.onError = prev;
 
-      fh.writeStringSync(
-        '${rec.id}\t$n\t${errors.length}\t'
-        '${errors.isEmpty ? "" : errors.first.replaceAll("\n", " ").replaceAll("\t", " ")}\n',
-      );
-      fh.flushSync();
+      fh
+        ..writeStringSync(
+          '${rec.id}\t$n\t${errors.length}\t'
+          '${errors.isEmpty ? "" : errors.first.replaceAll("\n", " ").replaceAll("\t", " ")}\n',
+        )
+        ..flushSync();
 
       for (final e in errors) {
         offenders.add('${rec.id} ($n tables) — ${e.split("\n").first}');
@@ -143,13 +144,15 @@ void main() {
     expect(
       tableCount,
       greaterThan(80),
-      reason: 'expected well over 80 tables across the books; found '
+      reason:
+          'expected well over 80 tables across the books; found '
           '$tableCount in $withTables topics — did the block scan break?',
     );
     expect(
       offenders,
       isEmpty,
-      reason: 'These topics raise a layout exception at phone width:\n  '
+      reason:
+          'These topics raise a layout exception at phone width:\n  '
           '${offenders.join("\n  ")}',
     );
   });

@@ -112,21 +112,14 @@ class CycleFlowchartView extends StatelessWidget {
               top: lbl.top,
               width: lbl.width,
               child: Align(
-                alignment: lbl.alignRight
-                    ? Alignment.centerRight
-                    : (lbl.center ? Alignment.center : Alignment.centerLeft),
+                alignment: lbl.center ? Alignment.center : Alignment.centerLeft,
                 child: Text(
                   lbl.text,
-                  textAlign: lbl.alignRight
-                      ? TextAlign.right
-                      : (lbl.center ? TextAlign.center : TextAlign.left),
-                  style: TextStyle(
+                  textAlign: lbl.center ? TextAlign.center : TextAlign.left,
+                  style: const TextStyle(
                     fontSize: _labelFont,
                     fontWeight: FontWeight.w700,
                     color: Colors.black87,
-                    backgroundColor: lbl.loop
-                        ? Colors.white.withValues(alpha: 0.85)
-                        : null,
                   ),
                 ),
               ),
@@ -150,7 +143,10 @@ class CycleFlowchartView extends StatelessWidget {
 
 class _NodeRect {
   const _NodeRect(this.left, this.top, this.width, this.height);
-  final double left, top, width, height;
+  final double left;
+  final double top;
+  final double width;
+  final double height;
   double get right => left + width;
   double get bottom => top + height;
   double get cx => left + width / 2;
@@ -169,13 +165,13 @@ class _EdgeLabel {
     this.left,
     this.top,
     this.width, {
-    this.alignRight = false,
     this.center = false,
-    this.loop = false,
   });
   final String text;
-  final double left, top, width;
-  final bool alignRight, center, loop;
+  final double left;
+  final double top;
+  final double width;
+  final bool center;
 }
 
 /// Computes rects for every spine node, branch box, connector and label.
@@ -223,7 +219,7 @@ class _CycleLayout {
         for (final b in n.branches)
           _boxHeight(b.box.title, b.box.bullets, _branchW),
       ];
-      final bandH = [nodeH, ...branchHeights].reduce((a, b) => math.max(a, b));
+      final bandH = [nodeH, ...branchHeights].reduce(math.max);
 
       final nodeTop = y + (bandH - nodeH) / 2;
       // Centre on the spine — but if a box node's branches are all on ONE side,
@@ -388,12 +384,15 @@ class _CyclePainter extends CustomPainter {
     // Arrowhead at the last point, oriented along the last segment.
     final tip = pts.last;
     final prev = pts[pts.length - 2];
-    final dir = (tip - prev);
+    final dir = tip - prev;
     final len = dir.distance == 0 ? 1 : dir.distance;
-    final ux = dir.dx / len, uy = dir.dy / len;
+    final ux = dir.dx / len;
+    final uy = dir.dy / len;
     // perpendicular
-    final px = -uy, py = ux;
-    const s = 6.0, back = 8.0;
+    final px = -uy;
+    final py = ux;
+    const s = 6.0;
+    const back = 8.0;
     final base = Offset(tip.dx - ux * back, tip.dy - uy * back);
     canvas.drawPath(
       Path()
@@ -473,8 +472,10 @@ class _Diamond extends StatelessWidget {
     required this.border,
   });
   final String text;
-  final double width, height;
-  final Color fill, border;
+  final double width;
+  final double height;
+  final Color fill;
+  final Color border;
 
   @override
   Widget build(BuildContext context) {
@@ -505,7 +506,8 @@ class _Diamond extends StatelessWidget {
 
 class _DiamondPainter extends CustomPainter {
   const _DiamondPainter({required this.fill, required this.border});
-  final Color fill, border;
+  final Color fill;
+  final Color border;
   @override
   void paint(Canvas canvas, Size size) {
     final path = Path()
@@ -514,14 +516,15 @@ class _DiamondPainter extends CustomPainter {
       ..lineTo(size.width / 2, size.height)
       ..lineTo(0, size.height / 2)
       ..close();
-    canvas.drawPath(path, Paint()..color = fill);
-    canvas.drawPath(
-      path,
-      Paint()
-        ..color = border
-        ..strokeWidth = 1.5
-        ..style = PaintingStyle.stroke,
-    );
+    canvas
+      ..drawPath(path, Paint()..color = fill)
+      ..drawPath(
+        path,
+        Paint()
+          ..color = border
+          ..strokeWidth = 1.5
+          ..style = PaintingStyle.stroke,
+      );
   }
 
   @override

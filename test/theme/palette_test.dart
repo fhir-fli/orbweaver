@@ -71,7 +71,7 @@ void main() {
     });
 
     test('accent override re-derives branch (and fill) from it', () {
-      final magenta = const Color(0xFFD81B60);
+      const magenta = Color(0xFFD81B60);
       final p = resolvePalette([
         {'accent': magenta},
       ]);

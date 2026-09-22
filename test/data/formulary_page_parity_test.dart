@@ -35,24 +35,35 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   test('no formulary dose is stranded with no page prescribing it', () {
     final script = File('tool/formulary_page_parity.py');
-    expect(script.existsSync(), isTrue,
-        reason: 'tool/formulary_page_parity.py is missing');
+    expect(
+      script.existsSync(),
+      isTrue,
+      reason: 'tool/formulary_page_parity.py is missing',
+    );
 
     final probe = Process.runSync('python3', <String>['--version']);
     if (probe.exitCode != 0) {
-      markTestSkipped('python3 not available; run the guard by hand: '
-          'python3 tool/formulary_page_parity.py --extract');
+      markTestSkipped(
+        'python3 not available; run the guard by hand: '
+        'python3 tool/formulary_page_parity.py --extract',
+      );
       return;
     }
 
     // --extract re-reads the books, so the guard cannot pass on a stale
     // doses.tsv left over from an earlier run.
-    final r = Process.runSync(
-        'python3', <String>['tool/formulary_page_parity.py', '--extract']);
-    expect(r.exitCode, 0,
-        reason: '\n${r.stdout}${r.stderr}\n'
-            'A formulary dose appears on no page prescribing that drug.\n'
-            'If a page dose changed, change the formulary entry in the same '
-            'commit. Read the header of this test before blessing anything.');
+    final r = Process.runSync('python3', <String>[
+      'tool/formulary_page_parity.py',
+      '--extract',
+    ]);
+    expect(
+      r.exitCode,
+      0,
+      reason:
+          '\n${r.stdout}${r.stderr}\n'
+          'A formulary dose appears on no page prescribing that drug.\n'
+          'If a page dose changed, change the formulary entry in the same '
+          'commit. Read the header of this test before blessing anything.',
+    );
   }, timeout: const Timeout(Duration(minutes: 3)));
 }

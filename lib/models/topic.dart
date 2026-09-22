@@ -586,9 +586,9 @@ class SeverityFlowchart {
   final List<DoseRow> doseTable;
 
   /// Side-of-flowchart warning callouts that flank the first entry node
-  /// (matching the WVEMS protocol PDF convention). One [safety] is
+  /// (matching the WVEMS protocol PDF convention). One `safety` is
   /// rendered as a red octagon on the left of the entry stadium; one
-  /// [caution] is rendered as a purple trapezoid on the right.
+  /// `caution` is rendered as a purple trapezoid on the right.
   /// More than one of each is allowed but only the first of each type
   /// is rendered.
   final List<WarningCallout> warnings;
@@ -1090,11 +1090,11 @@ class CycleBranch {
 
 /// One node on the vertical spine of a [CycleFlowchart].
 ///
-/// [shape] is a plain [CycleNodeShape.box] rectangle or a
-/// [CycleNodeShape.decision] diamond. [branches] are side boxes (each
-/// optionally looping back). [downLabel] annotates the arrow to the next
+/// `shape` is a plain [CycleNodeShape.box] rectangle or a
+/// [CycleNodeShape.decision] diamond. `branches` are side boxes (each
+/// optionally looping back). `downLabel` annotates the arrow to the next
 /// spine node (e.g. a decision's "once stable" exit); null = a plain arrow.
-/// [id] makes the node a valid [CycleBranch.loopTo] target.
+/// `id` makes the node a valid [CycleBranch.loopTo] target.
 enum CycleNodeShape {
   box,
   decision;
@@ -2549,7 +2549,7 @@ class Topic {
 String anchorSlug(String name) => name
     .toLowerCase()
     .replaceAll(RegExp('[^a-z0-9]+'), '-')
-    .replaceAll(RegExp('^-+|-+\$'), '');
+    .replaceAll(RegExp(r'^-+|-+$'), '');
 
 List<String> _stringList(dynamic raw) {
   if (raw == null) return const [];

@@ -118,7 +118,7 @@ class SearchNormalizer {
   };
 
   static final RegExp _digitComma = RegExp(r'(\d),(\d)');
-  static final RegExp _nonWord = RegExp('[^a-z0-9\\s]');
+  static final RegExp _nonWord = RegExp(r'[^a-z0-9\s]');
   static final RegExp _ws = RegExp(r'\s+');
 
   /// Normalise [text] to a space-joined stream of normalised tokens.

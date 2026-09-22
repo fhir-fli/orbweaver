@@ -25,9 +25,14 @@ void main() {
   });
 
   test('a report with no topic still sorts', () {
-    expect(buildSubject(const FeedbackContext()), '$kFeedbackSubjectTag general');
-    expect(buildSubject(const FeedbackContext(bookId: 'wvems')),
-        '$kFeedbackSubjectTag wvems');
+    expect(
+      buildSubject(const FeedbackContext()),
+      '$kFeedbackSubjectTag general',
+    );
+    expect(
+      buildSubject(const FeedbackContext(bookId: 'wvems')),
+      '$kFeedbackSubjectTag wvems',
+    );
   });
 
   test('the body carries page, book, topic and build', () {
@@ -62,8 +67,11 @@ void main() {
     expect(uri.path, kFeedbackAddress);
     final q = uri.query;
     expect(q, contains('%20'));
-    expect(q.contains('+'), isFalse,
-        reason: 'a + in the query will show as a literal + in the mail body');
+    expect(
+      q.contains('+'),
+      isFalse,
+      reason: 'a + in the query will show as a literal + in the mail body',
+    );
     expect(q, contains('%0A'), reason: 'newlines must survive encoding');
   });
 
@@ -74,7 +82,10 @@ void main() {
     final pubspec = File('pubspec.yaml').readAsStringSync();
     final m = RegExp(r'^version:\s*(\S+)', multiLine: true).firstMatch(pubspec);
     expect(m, isNotNull);
-    expect(kAppVersion, m!.group(1),
-        reason: 'run: dart run tool/gen_version.dart');
+    expect(
+      kAppVersion,
+      m!.group(1),
+      reason: 'run: dart run tool/gen_version.dart',
+    );
   });
 }

@@ -77,15 +77,16 @@ class _OctagonPainter extends CustomPainter {
       ..lineTo(0, h - cut)
       ..lineTo(0, cut)
       ..close();
-    canvas.drawPath(path, Paint()..color = fill);
-    canvas.drawPath(
-      path,
-      Paint()
-        ..color = stroke
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.5
-        ..strokeJoin = StrokeJoin.round,
-    );
+    canvas
+      ..drawPath(path, Paint()..color = fill)
+      ..drawPath(
+        path,
+        Paint()
+          ..color = stroke
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.5
+          ..strokeJoin = StrokeJoin.round,
+      );
   }
 
   @override
@@ -188,15 +189,16 @@ class _TrapezoidPainter extends CustomPainter {
       ..lineTo(w - taper, h)
       ..lineTo(taper, h)
       ..close();
-    canvas.drawPath(path, Paint()..color = fill);
-    canvas.drawPath(
-      path,
-      Paint()
-        ..color = stroke
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.5
-        ..strokeJoin = StrokeJoin.round,
-    );
+    canvas
+      ..drawPath(path, Paint()..color = fill)
+      ..drawPath(
+        path,
+        Paint()
+          ..color = stroke
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 1.5
+          ..strokeJoin = StrokeJoin.round,
+      );
   }
 
   @override

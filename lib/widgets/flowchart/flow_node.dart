@@ -119,7 +119,7 @@ class FlowNodeBox extends StatelessWidget {
 /// account for this gap, otherwise their X positions are off by half
 /// the gap and the arrow ends look like they "step" instead of being
 /// straight continuations of the column-internal vertical line.
-const double kSeverityBranchGap = 4.0;
+const double kSeverityBranchGap = 4;
 
 /// Rhombus decision node. Exposed so [DecisionHub] can draw it inside
 /// its combined diamond+arrows layout. The inscribed text band spans
@@ -358,15 +358,16 @@ class _DiamondPainter extends CustomPainter {
       ..lineTo(size.width / 2, size.height)
       ..lineTo(0, size.height / 2)
       ..close();
-    canvas.drawPath(path, Paint()..color = fill);
-    canvas.drawPath(
-      path,
-      Paint()
-        ..color = stroke
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 2
-        ..strokeJoin = StrokeJoin.round,
-    );
+    canvas
+      ..drawPath(path, Paint()..color = fill)
+      ..drawPath(
+        path,
+        Paint()
+          ..color = stroke
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = 2
+          ..strokeJoin = StrokeJoin.round,
+      );
   }
 
   @override

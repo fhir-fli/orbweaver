@@ -25,8 +25,7 @@ const String kFeedbackAddress = 'greyzus@fhirfli.dev';
 const String kFeedbackSubjectTag = '[Orbweaver]';
 
 /// Separator. Everything below it is generated; everything above is the reader's.
-const String kMetadataFence =
-    '--- please leave everything below this line ---';
+const String kMetadataFence = '--- please leave everything below this line ---';
 
 /// The context a report needs to be actionable.
 @immutable
@@ -79,12 +78,16 @@ String buildBody(FeedbackContext c, {DateTime? now}) {
     'when      $when',
   ];
   if (c.bookId != null) {
-    lines.add('book      ${c.bookId}'
-        '${c.bookTitle == null ? '' : '  ·  ${c.bookTitle}'}');
+    lines.add(
+      'book      ${c.bookId}'
+      '${c.bookTitle == null ? '' : '  ·  ${c.bookTitle}'}',
+    );
   }
   if (c.topicId != null) {
-    lines.add('topic     ${c.topicId}'
-        '${c.topicTitle == null ? '' : '  ·  ${c.topicTitle}'}');
+    lines.add(
+      'topic     ${c.topicId}'
+      '${c.topicTitle == null ? '' : '  ·  ${c.topicTitle}'}',
+    );
   }
   if (c.pageLabel != null && c.pageLabel!.isNotEmpty) {
     lines.add('page      ${c.pageLabel}');
@@ -96,7 +99,8 @@ String buildBody(FeedbackContext c, {DateTime? now}) {
 /// which encodes a space as `+`; several mail clients then show literal plus
 /// signs through the whole body.
 Uri buildFeedbackUri(FeedbackContext c, {DateTime? now}) {
-  final q = 'subject=${Uri.encodeComponent(buildSubject(c))}'
+  final q =
+      'subject=${Uri.encodeComponent(buildSubject(c))}'
       '&body=${Uri.encodeComponent(buildBody(c, now: now))}';
   return Uri.parse('mailto:$kFeedbackAddress?$q');
 }

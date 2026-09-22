@@ -99,7 +99,7 @@ void main() {
         _row('Amiodarone', DosePopulation.peds),
       ];
 
-      await _pump(tester, rows, accent: const Color(0xFF1E4E8C)); // Universal
+      await _pump(tester, rows); // Universal
       final onBlue = _rowFills(tester).whereType<Color>().toList();
 
       await _pump(tester, rows, accent: const Color(0xFF2E7D32)); // Medical

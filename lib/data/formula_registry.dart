@@ -151,7 +151,7 @@ FormulaResult _adrogueMadias(Map<String, dynamic> v) {
   return FormulaResult([
     FormulaOutput(
       label: 'Predicted ΔNa⁺',
-      value: fmtNum(delta, decimals: 1),
+      value: fmtNum(delta),
       unit: 'mEq/L',
       primary: true,
       interpretation: 'per ${fmtNum(vol)} L infused. Estimate — recheck Na.',
@@ -172,8 +172,7 @@ FormulaResult _hba1cEag(Map<String, dynamic> v) {
       value: fmtNum(mgdl, decimals: 0),
       unit: 'mg/dL',
       primary: true,
-      interpretation:
-          '≈ ${fmtNum(mmol, decimals: 1)} mmol/L (ADAG). Population estimate.',
+      interpretation: '≈ ${fmtNum(mmol)} mmol/L (ADAG). Population estimate.',
     ),
   ]);
 }
@@ -372,7 +371,7 @@ FormulaResult _preventAscvd(Map<String, dynamic> v) {
     a * smoke,
     0,
     a * egfrLow,
-    1.0,
+    1,
   ];
   final b = sex == 'F' ? _preventAscvdFemale : _preventAscvdMale;
   var lp = 0.0;
@@ -394,7 +393,7 @@ FormulaResult _preventAscvd(Map<String, dynamic> v) {
   return FormulaResult([
     FormulaOutput(
       label: '10-year ASCVD risk',
-      value: fmtNum(risk, decimals: 1),
+      value: fmtNum(risk),
       unit: '%',
       primary: true,
       severity: sev,
@@ -506,7 +505,7 @@ FormulaResult _maddrey(Map<String, dynamic> v) {
   return FormulaResult([
     FormulaOutput(
       label: 'Maddrey discriminant function',
-      value: fmtNum(df, decimals: 1),
+      value: fmtNum(df),
       primary: true,
       severity: severe ? FormulaSeverity.alert : FormulaSeverity.none,
       interpretation: severe
@@ -664,7 +663,7 @@ FormulaResult _reticulocyte(Map<String, dynamic> v) {
   return FormulaResult([
     FormulaOutput(
       label: 'Reticulocyte production index',
-      value: fmtNum(rpi, decimals: 1),
+      value: fmtNum(rpi),
       primary: true,
       severity: adequate ? FormulaSeverity.none : FormulaSeverity.warn,
       interpretation: adequate
@@ -673,7 +672,7 @@ FormulaResult _reticulocyte(Map<String, dynamic> v) {
     ),
     FormulaOutput(
       label: 'Corrected reticulocyte',
-      value: fmtNum(corrected, decimals: 1),
+      value: fmtNum(corrected),
       unit: '%',
     ),
   ]);
@@ -713,7 +712,7 @@ FormulaResult _lights(Map<String, dynamic> v) {
       primary: true,
       severity: exudate ? FormulaSeverity.warn : FormulaSeverity.none,
       interpretation: exudate
-          ? 'Any Light\'s criterion met → exudate (needs further workup).'
+          ? "Any Light's criterion met → exudate (needs further workup)."
           : 'No criterion met → transudate.',
     ),
     FormulaOutput(
@@ -757,7 +756,6 @@ FormulaResult _urinaryIndices(Map<String, dynamic> v) {
       value: fmtNum(fena, decimals: 2),
       unit: '%',
       primary: true,
-      severity: FormulaSeverity.none,
       interpretation: prerenal
           ? '< 1% suggests prerenal.'
           : (fena > 2
@@ -772,7 +770,7 @@ FormulaResult _urinaryIndices(Map<String, dynamic> v) {
     out.add(
       FormulaOutput(
         label: 'FEUrea',
-        value: fmtNum(feurea, decimals: 1),
+        value: fmtNum(feurea),
         unit: '%',
         interpretation:
             '< 35% suggests prerenal — more reliable than FENa on diuretics.',
@@ -879,8 +877,7 @@ FormulaResult _parkland(Map<String, dynamic> v) {
       value: fmtNum(firstHalf * 2),
       unit: 'mL',
       primary: true,
-      interpretation:
-          'Lactated Ringer\'s; titrate to urine output 0.5 mL/kg/h.',
+      interpretation: "Lactated Ringer's; titrate to urine output 0.5 mL/kg/h.",
     ),
     FormulaOutput(
       label: 'First 8 h (from burn time)',
@@ -1091,8 +1088,9 @@ FormulaResult _renalFunction(Map<String, dynamic> v) {
 FormulaResult _map(Map<String, dynamic> v) {
   final sbp = _num(v, 'sbp');
   final dbp = _num(v, 'dbp');
-  if (sbp == null || dbp == null || sbp < dbp)
+  if (sbp == null || dbp == null || sbp < dbp) {
     return const FormulaResult.empty();
+  }
   final map = dbp + (sbp - dbp) / 3;
   return FormulaResult([
     FormulaOutput(
@@ -1138,8 +1136,9 @@ FormulaResult _anionGap(Map<String, dynamic> v) {
   final na = _num(v, 'sodium');
   final cl = _num(v, 'chloride');
   final hco3 = _num(v, 'bicarbonate');
-  if (na == null || cl == null || hco3 == null)
+  if (na == null || cl == null || hco3 == null) {
     return const FormulaResult.empty();
+  }
   final ag = na - (cl + hco3);
   final high = ag > 12;
   final out = <FormulaOutput>[

@@ -118,7 +118,6 @@ class _ZoomableImageView extends StatelessWidget {
               ),
       ),
       body: InteractiveViewer(
-        minScale: 0.8,
         maxScale: 6,
         child: Center(child: Image.asset(path)),
       ),

@@ -159,28 +159,29 @@ class _TopicBodyState extends State<TopicBody> {
           },
           children: [
             for (final page in topic.pages)
-              page.blocks.any((b) => b is FlowchartBlock)
-                  // A flowchart page scales down UNIFORMLY (boxes + text together)
-                  // to fit one screen — its hand-drawn boxes can't reflow like
-                  // text, so uniform scaling is the safe fit. No-op when it
-                  // already fits (renders full size, top-aligned).
-                  ? LayoutBuilder(
-                      builder: (context, c) => FittedBox(
-                        fit: BoxFit.scaleDown,
-                        alignment: Alignment.topCenter,
-                        child: SizedBox(
-                          width: c.maxWidth,
-                          child: TopicPageBody(page: page, theme: theme),
-                        ),
-                      ),
-                    )
-                  : _FitToScreen(
-                      builder: (scale) => TopicPageBody(
-                        page: page,
-                        theme: theme,
-                        gapScale: scale,
-                      ),
+              // A flowchart page scales down UNIFORMLY (boxes + text together)
+              // to fit one screen — its hand-drawn boxes can't reflow like
+              // text, so uniform scaling is the safe fit. No-op when it
+              // already fits (renders full size, top-aligned).
+              if (page.blocks.any((b) => b is FlowchartBlock))
+                LayoutBuilder(
+                  builder: (context, c) => FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.topCenter,
+                    child: SizedBox(
+                      width: c.maxWidth,
+                      child: TopicPageBody(page: page, theme: theme),
                     ),
+                  ),
+                )
+              else
+                _FitToScreen(
+                  builder: (scale) => TopicPageBody(
+                    page: page,
+                    theme: theme,
+                    gapScale: scale,
+                  ),
+                ),
           ],
         ),
       );
@@ -204,7 +205,7 @@ class _TopicBodyState extends State<TopicBody> {
 /// gaps via [TopicPageBody.gapScale]) just enough that it fits one screen —
 /// dense and full-width like the printed protocol page, with nothing cut.
 /// Measures the laid-out content and re-scales until it fits (converges in a
-/// frame or two); never scales below [_min].
+/// frame or two); never scales below `_min`.
 class _FitToScreen extends StatefulWidget {
   const _FitToScreen({required this.builder});
 
@@ -216,8 +217,8 @@ class _FitToScreen extends StatefulWidget {
 
 class _FitToScreenState extends State<_FitToScreen> {
   static const double _min = 0.48;
-  double _scale = 1.0;
-  final _key = GlobalKey();
+  double _scale = 1;
+  final GlobalKey<State<StatefulWidget>> _key = GlobalKey();
 
   void _fit(double availH) {
     final ctx = _key.currentContext;
@@ -388,12 +389,14 @@ class _TopicPagerState extends State<TopicPager> {
   /// and the build. Nothing is sent from the app itself: the app has no network
   /// code, and a clinician mid-shift will not type a topic id out by hand.
   Future<void> _reportProblem(BookTopic topic) async {
-    final ok = await sendFeedback(FeedbackContext(
-      bookId: widget.bookId,
-      topicId: topic.id,
-      topicTitle: topic.title,
-      pageLabel: _badge.value == null ? null : 'p.${_badge.value}',
-    ));
+    final ok = await sendFeedback(
+      FeedbackContext(
+        bookId: widget.bookId,
+        topicId: topic.id,
+        topicTitle: topic.title,
+        pageLabel: _badge.value == null ? null : 'p.${_badge.value}',
+      ),
+    );
     if (!ok && mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
@@ -544,7 +547,7 @@ class _SearchResults extends StatelessWidget {
       child: ListView.separated(
         padding: const EdgeInsets.symmetric(vertical: 4),
         itemCount: scored.length,
-        separatorBuilder: (_, __) =>
+        separatorBuilder: (_, _) =>
             const Divider(height: 1, thickness: 0.5, indent: 12, endIndent: 12),
         itemBuilder: (context, k) {
           final i = scored[k].$1;

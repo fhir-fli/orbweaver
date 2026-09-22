@@ -95,7 +95,7 @@ void main() {
 
   group('callout outline', () {
     /// The decorated box the callout draws its border with.
-    DecoratedBox _card(WidgetTester tester) => tester
+    DecoratedBox card0(WidgetTester tester) => tester
         .widgetList<DecoratedBox>(find.byType(DecoratedBox))
         .firstWhere((d) {
           final dec = d.decoration;
@@ -110,7 +110,7 @@ void main() {
       markdown: |
         - 14+ y/o: 500 mL/hr
 ''');
-      final card = _card(tester);
+      final card = card0(tester);
       expect((card.decoration as BoxDecoration).border, isNotNull);
       // No foreground pass is installed when the border is solid.
       expect(
@@ -134,7 +134,7 @@ void main() {
         - Or Major Mechanism
 ''');
       expect((topic.pages.first.blocks.single as ProseBlock).dashed, isTrue);
-      final card = _card(tester);
+      final card = card0(tester);
       expect((card.decoration as BoxDecoration).border, isNull);
       expect(
         tester

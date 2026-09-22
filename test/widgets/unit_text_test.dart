@@ -12,13 +12,20 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:orbweaver/widgets/unit_text.dart';
 
 /// The text of every span rendered smaller than [size].
-List<String> shrunk(String input, {double size = 14}) => unitAwareSpans(
-  input,
-  TextStyle(fontSize: size),
-  size,
-).whereType<TextSpan>().where((s) => (s.style?.fontSize ?? size) < size).map((
-  s,
-) => s.text!).toList();
+List<String> shrunk(String input, {double size = 14}) =>
+    unitAwareSpans(
+          input,
+          TextStyle(fontSize: size),
+          size,
+        )
+        .whereType<TextSpan>()
+        .where((s) => (s.style?.fontSize ?? size) < size)
+        .map(
+          (
+            s,
+          ) => s.text!,
+        )
+        .toList();
 
 void main() {
   group('unitAwareSpans', () {
@@ -51,16 +58,19 @@ void main() {
       expect(shrunk('Magnesium'), isEmpty);
     });
 
-    test('the gap before the unit keeps full size, so spacing is unchanged', () {
-      final spans = unitAwareSpans(
-        '500 mL',
-        const TextStyle(fontSize: 14),
-        14,
-      ).cast<TextSpan>();
-      expect(spans.map((s) => s.text).join(), '500 mL');
-      expect(spans.first.text, '500 ');
-      expect(spans.first.style!.fontSize, 14);
-    });
+    test(
+      'the gap before the unit keeps full size, so spacing is unchanged',
+      () {
+        final spans = unitAwareSpans(
+          '500 mL',
+          const TextStyle(fontSize: 14),
+          14,
+        ).cast<TextSpan>();
+        expect(spans.map((s) => s.text).join(), '500 mL');
+        expect(spans.first.text, '500 ');
+        expect(spans.first.style!.fontSize, 14);
+      },
+    );
 
     test('text with no unit comes back as a single span', () {
       final spans = unitAwareSpans('Call Medical Control', null, 14);
