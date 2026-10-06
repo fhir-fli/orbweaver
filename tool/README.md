@@ -26,10 +26,18 @@ corrections for v1.8.
 
 **`formulary_page_parity_baseline.tsv` stays** — a test asserts against it.
 
-**The clinical question queues stay** (`crossbook_findings.md`,
-`protocolbook_needs_oe_rereview.md`, the advance passes, the flags files). Each is
-stamped with its open count; all are closed. They hold OpenEvidence rulings, and
-losing one means a settled clinical question gets asked again.
+**The clinical question queues were removed on 2026-10-06** (Grey: committed,
+done and unlikely to be needed again means delete; git history is the archive).
+Every one was stamped NOTHING IS OPEN and its rulings were applied to the books.
+
+| removed 2026-10-06 | what it was |
+|---|---|
+| `crossbook_findings.md` | cross-book dose comparison findings, all dismissed or applied |
+| `protocolbook_needs_oe_rereview.md` | OE re-review tracker, rounds 1–2 |
+| `protocolbook_advance_pass_114_142.md`, `who_imci_advance_pass.md` | advance passes, 32 + 13 flags, all applied |
+| `protocolbook_content_flags.md`, `protocolbook_formulary_flags.md`, `protocolbook_open_dosing_questions.md` | flag and question files, all closed |
+| `protocolbook_flattened_figures.md`, `protocolbook_number_parity_adjudication.md`, `who_imci_fidelity_findings.md` | first-pass fidelity reports, superseded by the applied books |
+| `wvems_fit_measure_test.dart` | one-off fit measurement for the finished WVEMS pass |
 
 ## What is not kept
 

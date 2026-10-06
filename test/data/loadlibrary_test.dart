@@ -18,8 +18,8 @@ void main() {
       // synthetic searchable leaf). 84 of the drugs are the printed Essential
       // Medications list; 18 more were added on 2026-08-27, and 37 more on
       // 2026-08-29, because the protocols prescribe them and the printed list
-      // does not carry them — see tool/protocolbook_formulary_flags.md and
-      // tool/protocolbook_formulary_additions.md. The 2026-08-29 round asked
+      // does not carry them — see tool/protocolbook_formulary_flags.md
+      // (removed 2026-10-06, in git history). The 2026-08-29 round asked
       // the wider question: not which drugs the corrected chapters use, but
       // which drugs ANY protocol in the book prescribes. It found labetalol,
       // the book's own first choice in hypertensive emergency, and

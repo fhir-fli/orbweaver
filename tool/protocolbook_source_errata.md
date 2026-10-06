@@ -160,7 +160,7 @@ say-so.
   unless you want parity: a paediatric epinephrine ceiling on pp.13/20, and the
   clinical gaps filled during the evidence audit (priapism, incentive spirometry,
   isoniazid preventive therapy, and so on). Those are tracked in
-  `protocolbook_needs_oe_rereview.md`, not here.
+  `protocolbook_needs_oe_rereview.md` (removed 2026-10-06, in git history), not here.
 
 ---
 

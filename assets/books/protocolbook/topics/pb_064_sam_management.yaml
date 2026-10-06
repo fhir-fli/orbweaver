@@ -19,7 +19,8 @@
 # it), cross-checked against WHO Pocket Book ch.7 and UCG 2023 §19.2.2.
 #
 # ✅ SAM GROUP AUDIT APPLIED 2026-07-28 — all nine findings from §F of
-#   tool/protocolbook_needs_oe_rereview.md, each confirmed by OE:
+#   tool/protocolbook_needs_oe_rereview.md (removed 2026-10-06, in git
+#   history), each confirmed by OE:
 #   - §F1 GENTAMICIN 5 → 7.5 mg/kg/day. WHO ch.7 and UCG 2023 both
 #     print 7.5 mg/kg once daily for 7 days; the duration already
 #     matched, only the mg/kg differed. 5 mg/kg is the book's GENERAL

@@ -71,3 +71,6 @@ tool/who_imci_chart_pages.tsv
 android/key.properties
 *.jks
 *.keystore
+
+# IDE module files
+*.iml
