@@ -13,26 +13,25 @@ Map<String, dynamic> obs(
   String unit,
   String when, {
   String? encounter,
-}) =>
-    {
-      'resourceType': 'Observation',
-      'id': id,
-      'status': 'final',
-      'code': {
-        'coding': [
-          {'system': system, 'code': code},
-        ],
-      },
-      'subject': {'reference': 'Patient/p'},
-      if (encounter != null) 'encounter': {'reference': 'Encounter/$encounter'},
-      'effectiveDateTime': when,
-      'valueQuantity': {
-        'value': value,
-        'unit': unit,
-        'system': 'http://unitsofmeasure.org',
-        'code': unit,
-      },
-    };
+}) => {
+  'resourceType': 'Observation',
+  'id': id,
+  'status': 'final',
+  'code': {
+    'coding': [
+      {'system': system, 'code': code},
+    ],
+  },
+  'subject': {'reference': 'Patient/p'},
+  if (encounter != null) 'encounter': {'reference': 'Encounter/$encounter'},
+  'effectiveDateTime': when,
+  'valueQuantity': {
+    'value': value,
+    'unit': unit,
+    'system': 'http://unitsofmeasure.org',
+    'code': unit,
+  },
+};
 
 Map<String, dynamic> caseCtx(
   String birth,
@@ -145,8 +144,9 @@ Future<void> main(List<String> args) async {
   for (final e in cases.entries) {
     out.writeln('== ${e.key}');
     try {
-      final r = await lib.execute(e.value, const R4ModelResolver())
-          as Map<String, dynamic>;
+      final r =
+          await lib.execute(e.value, const R4ModelResolver())
+              as Map<String, dynamic>;
       for (final k in r.keys) {
         if (k == 'Patient' ||
             k.startsWith('Latest') ||
