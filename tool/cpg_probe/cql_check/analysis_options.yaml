@@ -1,0 +1,6 @@
+# Probe harness, run by hand from this directory (see ../README.md). It resolves the
+# cql and fhir_r4_cql packages from sibling checkouts, which CI does not have, so the
+# orbweaver analyzer run skips it.
+analyzer:
+  exclude:
+    - "**"

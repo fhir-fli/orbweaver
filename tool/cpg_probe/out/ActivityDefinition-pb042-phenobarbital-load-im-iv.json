@@ -1,0 +1,98 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "pb042-phenobarbital-load-im-iv",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-load-im-iv",
+  "version": "0.1.0",
+  "name": "Pb042PhenobarbitalLoadImIv",
+  "title": "IM/IV phenobarbitone 20 mg/kg",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "Loading dose after two doses of diazepam have failed. If given IV, give over 20 min.",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequestactivity",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+    ]
+  },
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "kind": "MedicationRequest",
+  "profile": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequest",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs",
+        "code": "order-medication",
+        "display": "Order a medication"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "doNotPerform": false,
+  "productCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "780186002",
+        "display": "Phenobarbital only product in parenteral dose form"
+      }
+    ]
+  },
+  "dosage": [
+    {
+      "sequence": 1,
+      "text": "20 mg/kg IM or IV",
+      "timing": {
+        "repeat": {
+          "duration": 20,
+          "durationUnit": "min"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "78421000",
+            "display": "Intramuscular route"
+          },
+          {
+            "system": "http://snomed.info/sct",
+            "code": "47625008",
+            "display": "Intravenous route"
+          }
+        ]
+      }
+    }
+  ],
+  "dynamicValue": [
+    {
+      "path": "dosageInstruction.doseAndRate.doseQuantity",
+      "expression": {
+        "language": "text/cql-identifier",
+        "expression": "Phenobarbital Load Dose",
+        "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+      }
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>IM/IV phenobarbitone 20 mg/kg</b></p><p>Loading dose after two doses of diazepam have failed. If given IV, give over 20 min.</p></div>"
+  }
+}

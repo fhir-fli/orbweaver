@@ -1,0 +1,63 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "pb042-check-glucose",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-check-glucose",
+  "version": "0.1.0",
+  "name": "Pb042CheckGlucose",
+  "title": "Check glucose",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "Check blood glucose (alternative to giving dextrose).",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequestactivity",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+    ]
+  },
+  "kind": "ServiceRequest",
+  "profile": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequest",
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs",
+        "code": "order-service",
+        "display": "Order a service"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "doNotPerform": false,
+  "dynamicValue": [
+    {
+      "path": "code",
+      "expression": {
+        "language": "text/cql-identifier",
+        "expression": "Blood Glucose Measurement Code",
+        "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+      }
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Check glucose</b></p><p>Check blood glucose (alternative to giving dextrose).</p></div>"
+  }
+}

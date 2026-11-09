@@ -1,0 +1,259 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "pb042-child-convulsions",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/PlanDefinition/pb042-child-convulsions",
+  "version": "0.1.0",
+  "name": "Pb042ChildConvulsions",
+  "title": "Paediatric convulsions over 1 month",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "Diazepam, then repeat diazepam, then phenobarbitone, at 5-minute intervals.",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "eca-rule"
+      }
+    ]
+  },
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "action": [
+    {
+      "title": "Treat fit and hypoglycaemia",
+      "id": "stage1",
+      "condition": [
+        {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "Stage 1 Applies",
+            "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+          }
+        }
+      ],
+      "action": [
+        {
+          "title": "Ensure safety and check ABC"
+        },
+        {
+          "title": "Start oxygen",
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-oxygen"
+        },
+        {
+          "title": "Diazepam IV or rectal",
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "title": "Diazepam 0.2 mg/kg IV slowly over 1 min (max 10 mg)",
+              "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-diazepam-iv"
+            },
+            {
+              "title": "Rectal diazepam 2.5 mg suppository by weight",
+              "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-diazepam-pr"
+            }
+          ]
+        },
+        {
+          "title": "Dextrose 10% or check glucose",
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "title": "Dextrose 10% 2 mL/kg IV",
+              "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-dextrose-10"
+            },
+            {
+              "title": "Check glucose",
+              "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-check-glucose"
+            }
+          ]
+        },
+        {
+          "title": "Check ABCs when fit stops"
+        }
+      ]
+    },
+    {
+      "title": "Third convulsion lasting <5 min in <2 hours: phenobarbitone",
+      "description": "Children with up to 2 fits lasting <5 mins do not require emergency drug treatment.",
+      "condition": [
+        {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "Third Short Seizure In 2 Hours",
+            "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+          }
+        }
+      ],
+      "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-load-im-iv"
+    },
+    {
+      "title": "Repeat diazepam",
+      "id": "stage2",
+      "condition": [
+        {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "Still Convulsing After 10 Minutes",
+            "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+          }
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "stage1",
+          "relationship": "after-start",
+          "offsetDuration": {
+            "value": 5,
+            "unit": "min",
+            "system": "http://unitsofmeasure.org",
+            "code": "min"
+          }
+        }
+      ],
+      "action": [
+        {
+          "title": "Diazepam IV or rectal",
+          "selectionBehavior": "exactly-one",
+          "action": [
+            {
+              "title": "Diazepam 0.2 mg/kg IV slowly over 1 min (max 10 mg)",
+              "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-diazepam-iv"
+            },
+            {
+              "title": "Rectal diazepam 2.5 mg suppository by weight",
+              "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-diazepam-pr"
+            }
+          ]
+        },
+        {
+          "title": "Continue oxygen",
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-oxygen"
+        },
+        {
+          "title": "Check ABCs when fit stops"
+        }
+      ]
+    },
+    {
+      "title": "Give IM/IV phenobarbitone 20 mg/kg",
+      "id": "stage3",
+      "condition": [
+        {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "Still Convulsing After 15 Minutes",
+            "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+          }
+        }
+      ],
+      "relatedAction": [
+        {
+          "actionId": "stage2",
+          "relationship": "after-start",
+          "offsetDuration": {
+            "value": 5,
+            "unit": "min",
+            "system": "http://unitsofmeasure.org",
+            "code": "min"
+          }
+        }
+      ],
+      "action": [
+        {
+          "title": "Phenobarbitone 20 mg/kg IM/IV",
+          "id": "child-load",
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-load-im-iv"
+        },
+        {
+          "title": "If still fitting after 15 min, further 10 mg/kg (cumulative max 40 mg/kg)",
+          "description": "Only where respiratory monitoring is available; bag-valve mask at the bedside.",
+          "relatedAction": [
+            {
+              "actionId": "child-load",
+              "relationship": "after-start",
+              "offsetDuration": {
+                "value": 15,
+                "unit": "min",
+                "system": "http://unitsofmeasure.org",
+                "code": "min"
+              }
+            }
+          ],
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-repeat"
+        },
+        {
+          "title": "Do not give more than 2 doses of diazepam in 24 hours once phenobarbitone used"
+        },
+        {
+          "title": "Maintenance phenobarbitone 3-5 mg/kg IV/IM OD x 48 hrs",
+          "relatedAction": [
+            {
+              "actionId": "child-load",
+              "relationship": "after-start",
+              "offsetRange": {
+                "low": {
+                  "value": 12,
+                  "unit": "h",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "h"
+                },
+                "high": {
+                  "value": 24,
+                  "unit": "h",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "h"
+                }
+              }
+            }
+          ],
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-maintenance-child"
+        },
+        {
+          "title": "Continue oxygen during active seizure",
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-oxygen"
+        },
+        {
+          "title": "Check ABCs when fit stops"
+        },
+        {
+          "title": "Investigate cause"
+        }
+      ]
+    },
+    {
+      "title": "Check ABC, observe, investigate cause",
+      "description": "Check ABC. Observe. Investigate cause."
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Paediatric convulsions over 1 month</b></p><p>Diazepam, then repeat diazepam, then phenobarbitone, at 5-minute intervals.</p></div>"
+  }
+}

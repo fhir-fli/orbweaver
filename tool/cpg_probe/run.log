@@ -1,0 +1,17 @@
+wrote out/Library-PaediatricConvulsions.json
+wrote out/ActivityDefinition-pb042-phenobarbital-load.json
+wrote out/ActivityDefinition-pb042-phenobarbital-load-im-iv.json
+wrote out/ActivityDefinition-pb042-phenobarbital-repeat.json
+wrote out/ActivityDefinition-pb042-phenobarbital-maintenance-neonate.json
+wrote out/ActivityDefinition-pb042-phenobarbital-maintenance-child.json
+wrote out/ActivityDefinition-pb042-diazepam-not-neonate.json
+wrote out/ActivityDefinition-pb042-diazepam-iv.json
+wrote out/ActivityDefinition-pb042-diazepam-pr.json
+wrote out/ActivityDefinition-pb042-diazepam-pr.json
+wrote out/ActivityDefinition-pb042-dextrose-10.json
+wrote out/ActivityDefinition-pb042-check-glucose.json
+wrote out/ActivityDefinition-pb042-oxygen.json
+wrote out/PlanDefinition-pb042-neonate-convulsions.json
+wrote out/PlanDefinition-pb042-child-convulsions.json
+wrote out/PlanDefinition-pb042-paediatric-convulsions.json
+yaml leaves 55; ledger rows 65; {'computable': 34, 'text': 19, 'lost': 12}

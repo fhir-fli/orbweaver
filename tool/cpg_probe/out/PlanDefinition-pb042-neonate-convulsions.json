@@ -1,0 +1,114 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "pb042-neonate-convulsions",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/PlanDefinition/pb042-neonate-convulsions",
+  "version": "0.1.0",
+  "name": "Pb042NeonateConvulsions",
+  "title": "Convulsions in the 1st month of life",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "Phenobarbitone, not diazepam, for convulsions in the first month of life.",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "eca-rule"
+      }
+    ]
+  },
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "action": [
+    {
+      "title": "Convulsions in the 1st month of life",
+      "condition": [
+        {
+          "kind": "applicability",
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "Is Neonate",
+            "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+          }
+        }
+      ],
+      "action": [
+        {
+          "title": "Phenobarbitone 20 mg/kg stat",
+          "id": "neo-load",
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-load"
+        },
+        {
+          "title": "If still fitting after 30 min, further 10 mg/kg",
+          "relatedAction": [
+            {
+              "actionId": "neo-load",
+              "relationship": "after-start",
+              "offsetDuration": {
+                "value": 30,
+                "unit": "min",
+                "system": "http://unitsofmeasure.org",
+                "code": "min"
+              }
+            }
+          ],
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-repeat"
+        },
+        {
+          "title": "Maintenance 3-5 mg/kg daily",
+          "relatedAction": [
+            {
+              "actionId": "neo-load",
+              "relationship": "after-start",
+              "offsetRange": {
+                "low": {
+                  "value": 12,
+                  "unit": "h",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "h"
+                },
+                "high": {
+                  "value": 24,
+                  "unit": "h",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "h"
+                }
+              }
+            }
+          ],
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-maintenance-neonate"
+        },
+        {
+          "title": "Do not give diazepam to neonates",
+          "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-diazepam-not-neonate"
+        }
+      ]
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Convulsions in the 1st month of life</b></p><p>Phenobarbitone, not diazepam, for convulsions in the first month of life.</p></div>"
+  }
+}

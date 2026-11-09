@@ -1,0 +1,99 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "pb042-diazepam-iv",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-diazepam-iv",
+  "version": "0.1.0",
+  "name": "Pb042DiazepamIv",
+  "title": "Diazepam 0.2 mg/kg IV",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "IV slowly over 1 minute, maximum 10 mg.",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequestactivity",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+    ]
+  },
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "kind": "MedicationRequest",
+  "profile": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequest",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs",
+        "code": "order-medication",
+        "display": "Order a medication"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "doNotPerform": false,
+  "productCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "778977002",
+        "display": "Diazepam only product in parenteral dose form"
+      }
+    ]
+  },
+  "dosage": [
+    {
+      "sequence": 1,
+      "text": "0.2 mg/kg IV slowly over 1 min (max 10 mg)",
+      "timing": {
+        "repeat": {
+          "duration": 1,
+          "durationUnit": "min"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "47625008",
+            "display": "Intravenous route"
+          }
+        ]
+      },
+      "maxDosePerAdministration": {
+        "value": 10,
+        "unit": "mg",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg"
+      }
+    }
+  ],
+  "dynamicValue": [
+    {
+      "path": "dosageInstruction.doseAndRate.doseQuantity",
+      "expression": {
+        "language": "text/cql-identifier",
+        "expression": "Diazepam IV Dose",
+        "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+      }
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Diazepam 0.2 mg/kg IV</b></p><p>IV slowly over 1 minute, maximum 10 mg.</p></div>"
+  }
+}

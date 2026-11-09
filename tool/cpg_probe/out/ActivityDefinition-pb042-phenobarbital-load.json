@@ -1,0 +1,78 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "pb042-phenobarbital-load",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-load",
+  "version": "0.1.0",
+  "name": "Pb042PhenobarbitalLoad",
+  "title": "Phenobarbitone 20 mg/kg",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "Loading dose. Only where respiratory monitoring is available: causes apnoea and hypotension.",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequestactivity",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+    ]
+  },
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "kind": "MedicationRequest",
+  "profile": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequest",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs",
+        "code": "order-medication",
+        "display": "Order a medication"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "doNotPerform": false,
+  "productCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "780186002",
+        "display": "Phenobarbital only product in parenteral dose form"
+      }
+    ]
+  },
+  "dosage": [
+    {
+      "sequence": 1,
+      "text": "20 mg/kg stat"
+    }
+  ],
+  "dynamicValue": [
+    {
+      "path": "dosageInstruction.doseAndRate.doseQuantity",
+      "expression": {
+        "language": "text/cql-identifier",
+        "expression": "Phenobarbital Load Dose",
+        "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+      }
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Phenobarbitone 20 mg/kg</b></p><p>Loading dose. Only where respiratory monitoring is available: causes apnoea and hypotension.</p></div>"
+  }
+}
