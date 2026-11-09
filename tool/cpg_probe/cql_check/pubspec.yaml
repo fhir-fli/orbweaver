@@ -1,0 +1,14 @@
+name: cqlcheck
+publish_to: none
+environment:
+  sdk: ^3.11.4
+dependencies:
+  cql:
+    path: ../../../../cql
+  fhir_r4_cql:
+    path: ../../../../fhir_r4/packages/fhir_r4_cql
+dependency_overrides:
+  cql:
+    path: ../../../../cql
+  fhir_r4:
+    path: ../../../../fhir_r4/packages/fhir_r4

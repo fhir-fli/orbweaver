@@ -1,0 +1,87 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "pb042-diazepam-pr",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-diazepam-pr",
+  "version": "0.1.0",
+  "name": "Pb042DiazepamPr",
+  "title": "Rectal diazepam 2.5 mg suppositories",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "By weight: <10kg 1 suppository, 10-15kg 2, 15-20kg 3, 20-25kg 4.",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequestactivity",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+    ]
+  },
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "kind": "MedicationRequest",
+  "profile": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequest",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs",
+        "code": "order-medication",
+        "display": "Order a medication"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "doNotPerform": false,
+  "productCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "778978007",
+        "display": "Diazepam only product in rectal dose form"
+      }
+    ]
+  },
+  "dosage": [
+    {
+      "sequence": 1,
+      "text": "2.5 mg suppository: <10kg 1, 10-15kg 2, 15-20kg 3, 20-25kg 4",
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "37161004",
+            "display": "Rectal route"
+          }
+        ]
+      }
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Rectal diazepam 2.5 mg suppositories</b></p><p>By weight: &lt;10kg 1 suppository, 10-15kg 2, 15-20kg 3, 20-25kg 4.</p></div>"
+  },
+  "dynamicValue": [
+    {
+      "path": "dosageInstruction.doseAndRate.doseQuantity.value",
+      "expression": {
+        "language": "text/cql-identifier",
+        "expression": "Rectal Diazepam Suppository Count",
+        "reference": "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+      }
+    }
+  ]
+}

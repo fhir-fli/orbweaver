@@ -1,0 +1,80 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "pb042-paediatric-convulsions",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/PlanDefinition/pb042-paediatric-convulsions",
+  "version": "0.1.0",
+  "name": "Pb042PaediatricConvulsions",
+  "title": "Paediatric Convulsions",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "ProtocolBook p.42: treatment of paediatric convulsions.",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition"
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+        "code": "workflow-definition"
+      }
+    ]
+  },
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "action": [
+    {
+      "title": "Convulsions in the 1st month of life",
+      "description": "Neonates: phenobarbitone only.",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+              "code": "emergency-care"
+            }
+          ]
+        }
+      ],
+      "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/PlanDefinition/pb042-neonate-convulsions"
+    },
+    {
+      "title": "Convulsions over 1 month",
+      "description": "Diazepam, repeat diazepam, then phenobarbitone.",
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-common-process-cs",
+              "code": "emergency-care"
+            }
+          ]
+        }
+      ],
+      "definitionCanonical": "http://fhir-fli.github.io/orbweaver/fhir/PlanDefinition/pb042-child-convulsions"
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Paediatric Convulsions</b></p><p>ProtocolBook p.42: treatment of paediatric convulsions.</p></div>"
+  }
+}

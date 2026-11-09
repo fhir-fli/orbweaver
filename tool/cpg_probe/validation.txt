@@ -1,0 +1,148 @@
+FHIR Validation tool Version 7.0.2 (Git# de3463393298). Built 2026-10-15T16:42:38.193Z (25 days old)
+  Java:   17.0.20.1 from /usr/lib/jvm/java-17-openjdk-amd64 on amd64 (64bit). 14984MB available
+  Paths:  Current = /home/grey/dev/fhir/orbweaver/tool/cpg_probe, Package Cache = /home/grey/.fhir/packages
+  Params: out/ActivityDefinition-pb042-check-glucose.json out/ActivityDefinition-pb042-dextrose-10.json out/ActivityDefinition-pb042-diazepam-iv.json out/ActivityDefinition-pb042-diazepam-not-neonate.json out/ActivityDefinition-pb042-diazepam-pr.json out/ActivityDefinition-pb042-oxygen.json out/ActivityDefinition-pb042-phenobarbital-load-im-iv.json out/ActivityDefinition-pb042-phenobarbital-load.json out/ActivityDefinition-pb042-phenobarbital-maintenance-child.json out/ActivityDefinition-pb042-phenobarbital-maintenance-neonate.json out/ActivityDefinition-pb042-phenobarbital-repeat.json out/Library-PaediatricConvulsions.json out/PlanDefinition-pb042-child-convulsions.json out/PlanDefinition-pb042-neonate-convulsions.json out/PlanDefinition-pb042-paediatric-convulsions.json -version 4.0.1 -ig /tmp/claude-1000/-home-grey-dev-fhir/add639f0-3aa1-4179-a90d-572f12510a65/scratchpad/cpg/cpg.tgz
+  Locale: United States/US
+  Jurisdiction: United States of America
+Loading
+  Loading FHIR v4.0.1 from hl7.fhir.r4.core#4.0.1
+  Load hl7.terminology.r4#6.2.0 - 4288 resources (00:10.854)
+  Load hl7.fhir.uv.extensions.r4#5.2.0 - 759 resources (00:01.348)
+  Loaded FHIR - 8268 resources (00:00.000)
+  Terminology Cache at /tmp/default-tx-cache/r4
+  Terminology server https://tx.fhir.org - Version Connected to Terminology Server at https://tx.fhir.org (00:01.799)
+  Load hl7.terminology#7.5.0 - 4190 resources (00:01.216)
+  Load hl7.terminology.r5#7.5.0 - 4190 resources (00:00.547)
+  Load hl7.fhir.uv.extensions#5.4.0 - 885 resources (00:01.353)
+  Load hl7.terminology.r4#6.1.0 - 4279 resources (00:00.648)
+  Load hl7.fhir.uv.extensions.r4#5.1.0 - 1397 resources (00:00.878)
+  Load /tmp/claude-1000/-home-grey-dev-fhir/add639f0-3aa1-4179-a90d-572f12510a65/scratchpad/cpg/cpg.tgz#2.0.0 - 133 resources (00:00.396)
+  Package Summary: [hl7.fhir.r4.core#4.0.1, hl7.fhir.xver-extensions#0.1.0, hl7.terminology.r4#6.2.0, hl7.fhir.uv.extensions.r4#5.2.0, hl7.terminology#7.5.0, hl7.terminology.r5#7.5.0, hl7.fhir.uv.extensions#5.4.0, hl7.terminology.r4#6.1.0, hl7.fhir.uv.extensions.r4#5.1.0, hl7.fhir.uv.cpg#2.0.0]
+  Get set... 
+  ...go! (00:02.762)
+Cached new session. Cache size = 1
+Sources to validate: out/ActivityDefinition-pb042-check-glucose.jsonout/ActivityDefinition-pb042-dextrose-10.jsonout/ActivityDefinition-pb042-diazepam-iv.jsonout/ActivityDefinition-pb042-diazepam-not-neonate.jsonout/ActivityDefinition-pb042-diazepam-pr.jsonout/ActivityDefinition-pb042-oxygen.jsonout/ActivityDefinition-pb042-phenobarbital-load-im-iv.jsonout/ActivityDefinition-pb042-phenobarbital-load.jsonout/ActivityDefinition-pb042-phenobarbital-maintenance-child.jsonout/ActivityDefinition-pb042-phenobarbital-maintenance-neonate.jsonout/ActivityDefinition-pb042-phenobarbital-repeat.jsonout/Library-PaediatricConvulsions.jsonout/PlanDefinition-pb042-child-convulsions.jsonout/PlanDefinition-pb042-neonate-convulsions.jsonout/PlanDefinition-pb042-paediatric-convulsions.json
+Validating
+  Validate out/ActivityDefinition-pb042-check-glucose.json
+ 00:00.629
+  Validate out/ActivityDefinition-pb042-dextrose-10.json
+ 00:00.196
+  Validate out/ActivityDefinition-pb042-diazepam-iv.json
+ 00:00.289
+  Validate out/ActivityDefinition-pb042-diazepam-not-neonate.json
+ 00:00.128
+  Validate out/ActivityDefinition-pb042-diazepam-pr.json
+ 00:00.183
+  Validate out/ActivityDefinition-pb042-oxygen.json
+ 00:00.214
+  Validate out/ActivityDefinition-pb042-phenobarbital-load-im-iv.json
+ 00:00.140
+  Validate out/ActivityDefinition-pb042-phenobarbital-load.json
+ 00:00.103
+  Validate out/ActivityDefinition-pb042-phenobarbital-maintenance-child.json
+ 00:00.121
+  Validate out/ActivityDefinition-pb042-phenobarbital-maintenance-neonate.json
+ 00:00.085
+  Validate out/ActivityDefinition-pb042-phenobarbital-repeat.json
+ 00:00.109
+  Validate out/Library-PaediatricConvulsions.json
+ 00:00.107
+  Validate out/PlanDefinition-pb042-child-convulsions.json
+ 00:00.393
+  Validate out/PlanDefinition-pb042-neonate-convulsions.json
+ 00:00.132
+  Validate out/PlanDefinition-pb042-paediatric-convulsions.json
+ 00:00.135
+Done. Times: Loading: 00:22.008, validation: 00:02.993 (#15). Memory = 701Mb
+
+-- out/ActivityDefinition-pb042-check-glucose.json -------------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+----------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-dextrose-10.json -----------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-diazepam-iv.json -----------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-diazepam-not-neonate.json --------------------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+------------------------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-diazepam-pr.json -----------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-oxygen.json ------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+--------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-phenobarbital-load-im-iv.json ------------------------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+--------------------------------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-phenobarbital-load.json ------------------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+--------------------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-phenobarbital-maintenance-child.json -------------------------------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-phenobarbital-maintenance-neonate.json ---------------------------------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- out/ActivityDefinition-pb042-phenobarbital-repeat.json --------------------------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+------------------------------------------------------------------------------------------------------------------------
+
+-- out/Library-PaediatricConvulsions.json ----------------------------------------------
+Success: 0 errors, 0 warnings, 1 notes
+  Information: All OK
+----------------------------------------------------------------------------------------
+
+-- out/PlanDefinition-pb042-child-convulsions.json -------------------------------------------------------
+Success: 0 errors, 0 warnings, 6 notes
+  Information @ PlanDefinition.extension[0] (line 5, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[1] (line 9, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[2] (line 13, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[0] (line 5, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[1] (line 9, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[2] (line 13, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+----------------------------------------------------------------------------------------------------------
+
+-- out/PlanDefinition-pb042-neonate-convulsions.json ---------------------------------------------------------
+Success: 0 errors, 0 warnings, 6 notes
+  Information @ PlanDefinition.extension[0] (line 5, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[1] (line 9, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[2] (line 13, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[0] (line 5, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[1] (line 9, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[2] (line 13, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+--------------------------------------------------------------------------------------------------------------
+
+-- out/PlanDefinition-pb042-paediatric-convulsions.json ------------------------------------------------------------
+Success: 0 errors, 0 warnings, 6 notes
+  Information @ PlanDefinition.extension[0] (line 5, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[1] (line 9, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[2] (line 13, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-strategydefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[0] (line 5, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[1] (line 9, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+  Information @ PlanDefinition.extension[2] (line 13, col6): This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice), validating against Clinical Practice Guidelines v2.0.0
+--------------------------------------------------------------------------------------------------------------------
+
+Done. Times: Loading: 00:22.008, validation: 00:02.993 (#15). Max Memory = 14Gb

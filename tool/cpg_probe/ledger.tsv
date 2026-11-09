@@ -1,0 +1,66 @@
+yaml_path	fact	status	fhir_location	note
+topic.id	topic id	computable	PlanDefinition.id/url	
+topic.title	title	text	PlanDefinition.title	
+topic.list_subtitle	list subtitle 'p.42 · diazepam → phenobarbitone'	lost		no list-display element
+topic.last_reviewed	source edition 'pocketbook v1.7'	lost		PlanDefinition.lastReviewDate is a date; edition string has no place (relatedArtifact could cite it)
+topic.tags	search tags (8)	lost		PlanDefinition.topic exists but needs codes; tags are free words
+topic.category	category 'medical'	lost		no equivalent; topic/useContext need codes
+topic.page_number	printed page 42	lost		no element; relatedArtifact could cite the page
+topic.blocks.0.type	block is prose	lost		layout
+topic.blocks.0.callout	shown as red alert callout	lost		no display semantics; action.priority could carry urgency, not appearance
+topic.blocks.0.palette	callout colours (3)	lost		layout
+topic.blocks.0.title	callout title / neonate scope	computable	rec_neo action condition 'Is Neonate'	'1st month' read as AgeInMonths() < 1
+topic.blocks.0.markdown	phenobarbitone 20 mg/kg stat	computable	AD pb042-phenobarbital-load + CQL dose	
+topic.blocks.0.markdown	further 10 mg/kg if still fitting after 30 min	computable	relatedAction offset 30 min + AD repeat	'still fitting' has no condition expression in the neonate branch
+topic.blocks.0.markdown	cumulative maximum 40 mg/kg	text	Dosage.text	maxDosePerLifetime is lifetime and absolute; a per-episode, per-kg cap has no element
+topic.blocks.0.markdown	only where respiratory monitoring is available	text	ActivityDefinition.description	a setting precondition; no element
+topic.blocks.0.markdown	phenobarbitone causes apnoea and hypotension	text	ActivityDefinition.description	
+topic.blocks.0.markdown	maintenance 3-5 mg/kg daily	computable	AD maintenance-neonate doseRange + timing	doseRange in mg/kg is valid UCUM but not a per-patient dose
+topic.blocks.0.markdown	maintenance starts 12-24 h after load	computable	relatedAction offsetRange 12-24 h	
+topic.blocks.0.markdown	do not give diazepam to neonates	computable	AD doNotPerform=true	
+topic.blocks.0.markdown	bold emphasis on doses	lost		layout
+topic.blocks.1.type	block is flowchart	lost		layout
+topic.blocks.1.variant	algorithm layout variant	lost		layout
+topic.blocks.1.boxes	shared 'observe' box: Check ABC / Observe / Investigate cause	text	action title+description	no code found for these acts
+topic.blocks.1.stages.0.decision	age >1 month AND (convulsing >5 min OR presents convulsing)	computable	condition 'Stage 1 Applies'	'presents convulsing' needs a current seizure observation; the >5 min arm and the presents arm collapse to one test
+topic.blocks.1.stages.0.outcomes.0.label	Yes	computable	applicability condition true	
+topic.blocks.1.stages.0.outcomes.0.box.title	Treat fit and hypoglycaemia	text	action.title	
+topic.blocks.1.stages.0.outcomes.0.box.bullets.0	ensure safety and check ABC	text	action.title	no code found
+topic.blocks.1.stages.0.outcomes.0.box.bullets.1	start oxygen	computable	AD pb042-oxygen (SNOMED 57485005)	no flow rate or target saturation on the page
+topic.blocks.1.stages.0.outcomes.0.box.bullets.2	diazepam 0.2 mg/kg IV over 1 min, max 10 mg	computable	AD pb042-diazepam-iv	
+topic.blocks.1.stages.0.outcomes.0.box.bullets.2	OR rectal diazepam	computable	selectionBehavior exactly-one	
+topic.blocks.1.stages.0.outcomes.0.box.bullets.2	suppository weight bands	computable	CQL 'Rectal Diazepam Suppository Count'	print does not say which band 10/15/20 kg falls in, nor what above 25 kg
+topic.blocks.1.stages.0.outcomes.0.box.bullets.3	dextrose 10% 2 mL/kg IV	computable	AD pb042-dextrose-10	
+topic.blocks.1.stages.0.outcomes.0.box.bullets.3	(or check glucose)	computable	selectionBehavior exactly-one + AD check-glucose	the print's 'or' is read as exactly one
+topic.blocks.1.stages.0.outcomes.0.box.bullets.4	check ABCs when fit stops	text	action.title	trigger 'fit stops' not expressed
+topic.blocks.1.stages.0.outcomes.0.continue	continue to next stage	computable	relatedAction stage2 after stage1 +5 min	
+topic.blocks.1.stages.0.outcomes.1.label	No	computable	separate applicability condition	
+topic.blocks.1.stages.0.outcomes.1.box.title	3rd convulsion <5 min in <2 h?	computable	condition 'Third Short Seizure In 2 Hours'	needs each seizure recorded as an Observation
+topic.blocks.1.stages.0.outcomes.1.box.bullets.0	No -> check ABC, observe, investigate	text	observe action (unconditioned)	the No-of-the-No branch has no condition
+topic.blocks.1.stages.0.outcomes.1.box.bullets.1	Yes -> phenobarbitone	computable	action -> AD phenobarbital-load-im-iv	
+topic.blocks.1.stages.0.outcomes.1.box.bullets.2	up to 2 fits <5 min need no emergency drugs	text	action.description	
+topic.blocks.1.stages.1.decision	convulsion stops after 5 more minutes?	computable	condition 'Still Convulsing After 10 Minutes'	read as total seizure duration >10 min
+topic.blocks.1.stages.1.outcomes.0.label	Yes	computable		
+topic.blocks.1.stages.1.outcomes.0.goto	Yes -> observe box	text	observe action	no condition links stop -> observe
+topic.blocks.1.stages.1.outcomes.1.label	No	computable		
+topic.blocks.1.stages.1.outcomes.1.box.title	repeat diazepam	text	action.title	
+topic.blocks.1.stages.1.outcomes.1.box.bullets.0	diazepam IV or PR, dosing as above	computable	same ADs reused	
+topic.blocks.1.stages.1.outcomes.1.box.bullets.1	continue oxygen	computable	AD pb042-oxygen	
+topic.blocks.1.stages.1.outcomes.1.box.bullets.2	check ABCs when fit stops	text	action.title	
+topic.blocks.1.stages.1.outcomes.1.continue	continue	computable	relatedAction stage3 after stage2 +5 min	
+topic.blocks.1.stages.2.decision	convulsion stops after 5 more minutes?	computable	condition 'Still Convulsing After 15 Minutes'	
+topic.blocks.1.stages.2.outcomes.0.label	Yes	computable		
+topic.blocks.1.stages.2.outcomes.0.goto	Yes -> observe box	text	observe action	
+topic.blocks.1.stages.2.outcomes.1.label	No	computable		
+topic.blocks.1.stages.2.outcomes.1.continue	continue to terminal	computable		
+topic.blocks.1.terminal.title	IM/IV phenobarbitone 20 mg/kg	computable	AD phenobarbital-load-im-iv	
+topic.blocks.1.terminal.bullets.0	further 10 mg/kg after 15 min	computable	relatedAction +15 min + AD repeat	'still fitting' not tested at 15 min
+topic.blocks.1.terminal.bullets.0	cumulative max 40 mg/kg	text	Dosage.text	same gap as neonate
+topic.blocks.1.terminal.bullets.0	only with respiratory monitoring; bag-valve mask at bedside	text	action.description	
+topic.blocks.1.terminal.bullets.1	no more than 2 diazepam doses in 24 h once phenobarbitone used	text	action.title	maxDosePerPeriod is absolute and unconditional; the 'once phenobarbitone used' condition has no element
+topic.blocks.1.terminal.bullets.1	if IV, give over 20 min	computable	Timing.repeat.duration 20 min	attached to phenobarbitone; the print places it after the diazepam sentence
+topic.blocks.1.terminal.bullets.2	maintenance 3-5 mg/kg IV/IM OD x 48 h from 12-24 h	computable	AD maintenance-child	
+topic.blocks.1.terminal.bullets.2	editorial note '(OE 2026-08-30 ...)'	lost		authoring provenance inside the bullet
+topic.blocks.1.terminal.bullets.3	continue oxygen during active seizure	computable	AD pb042-oxygen	'during active seizure' not expressed
+topic.blocks.1.terminal.bullets.4	check ABCs when fit stops	text	action.title	
+topic.blocks.1.terminal.bullets.5	investigate cause	text	action.title	

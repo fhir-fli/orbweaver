@@ -1,0 +1,93 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "pb042-phenobarbital-maintenance-neonate",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "shareable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-knowledgeCapability",
+      "valueCode": "publishable"
+    }
+  ],
+  "url": "http://fhir-fli.github.io/orbweaver/fhir/ActivityDefinition/pb042-phenobarbital-maintenance-neonate",
+  "version": "0.1.0",
+  "name": "Pb042PhenobarbitalMaintenanceNeonate",
+  "title": "Phenobarbitone maintenance (neonate)",
+  "status": "draft",
+  "experimental": true,
+  "date": "2026-11-09",
+  "publisher": "FHIR-FLI orbweaver",
+  "description": "Maintenance, starting 12-24 hours after the load.",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequestactivity",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+    ]
+  },
+  "library": [
+    "http://fhir-fli.github.io/orbweaver/fhir/Library/PaediatricConvulsions"
+  ],
+  "kind": "MedicationRequest",
+  "profile": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationrequest",
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type-cs",
+        "code": "order-medication",
+        "display": "Order a medication"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "doNotPerform": false,
+  "productCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "780186002",
+        "display": "Phenobarbital only product in parenteral dose form"
+      }
+    ]
+  },
+  "dosage": [
+    {
+      "sequence": 1,
+      "text": "3-5 mg/kg daily",
+      "timing": {
+        "repeat": {
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "doseAndRate": [
+        {
+          "doseRange": {
+            "low": {
+              "value": 3,
+              "unit": "mg/kg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/kg"
+            },
+            "high": {
+              "value": 5,
+              "unit": "mg/kg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg/kg"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Phenobarbitone maintenance (neonate)</b></p><p>Maintenance, starting 12-24 hours after the load.</p></div>"
+  }
+}
