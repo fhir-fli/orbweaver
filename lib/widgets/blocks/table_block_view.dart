@@ -1,7 +1,7 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart' hide TableCell, TableRow;
-import 'package:flutter/material.dart' as mat;
+import 'package:material_ui/material_ui.dart' hide TableCell, TableRow;
+import 'package:material_ui/material_ui.dart' as mat;
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';

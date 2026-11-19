@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// The app bar the book, formulary and topic screens share: a coloured bar
 /// whose [title] gives way to a search field while [searchOpen], with the

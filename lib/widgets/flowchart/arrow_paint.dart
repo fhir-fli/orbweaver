@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// The ink every flowchart connector and arrowhead is drawn in.
 const Color kFlowInk = Colors.black87;

@@ -7,8 +7,8 @@
 // Without this, the next person to touch `kUnitTokens` would reasonably add
 // `y/o` and `hours` and quietly diverge from the book.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/widgets/unit_text.dart';
 
 /// The text of every span rendered smaller than [size].

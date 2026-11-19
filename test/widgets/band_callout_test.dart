@@ -8,8 +8,8 @@
 // yet the print's peds band is pink on both, which is exactly the bug that
 // `highlight: true` has when it is used to mark a peds section.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// The named color palette, resolved through the **book → chapter → topic**
 /// cascade. Every semantic ("attention") color the renderer draws is a named

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Provides a same-topic anchor-scroll callback to descendants, so a
 /// `#<anchor>` link deep in the markdown can ask the topic view to scroll

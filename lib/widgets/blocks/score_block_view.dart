@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/formula_registry.dart' show FormulaSeverity;
 import 'package:orbweaver/data/score_engine.dart';
 import 'package:orbweaver/models/topic.dart';
