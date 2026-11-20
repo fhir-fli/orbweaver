@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/widgets/flowchart/flow_link.dart';
 
 /// Text widget that word-wraps but never breaks a word into an orphan

@@ -12,8 +12,8 @@
 // for every row, which threw the population away and replaced it with a colour
 // carrying no clinical information. These tests hold the fix in place.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';

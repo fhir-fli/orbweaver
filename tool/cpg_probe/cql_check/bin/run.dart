@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:cql/cql.dart';
 import 'package:cql/src/internal.dart';
 import 'package:fhir_r4_cql/fhir_r4_cql.dart';
@@ -144,9 +145,10 @@ Future<void> main(List<String> args) async {
   for (final e in cases.entries) {
     out.writeln('== ${e.key}');
     try {
-      final r =
-          await lib.execute(e.value, const R4ModelResolver())
-              as Map<String, dynamic>;
+      final r = await lib.execute(
+        e.value,
+        const R4ModelResolver(),
+      ) as Map<String, dynamic>;
       for (final k in r.keys) {
         if (k == 'Patient' ||
             k.startsWith('Latest') ||

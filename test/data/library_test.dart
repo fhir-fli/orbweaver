@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:flutter/material.dart' show Color;
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart' show Color;
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/models/formulary.dart';
@@ -239,12 +239,9 @@ void main() {
       // A1.1 leaf + A1.2 group + A1.3/A1.4/A1.5/A1.6/A1.7 leaves = 7.
       final children = a1['children'] as YamlList;
       expect(children, hasLength(7));
-      final g =
-          children.firstWhere(
-                (n) =>
-                    (n as YamlMap)['title'] == 'A1.2 Giving parenteral fluids',
-              )
-              as YamlMap;
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == 'A1.2 Giving parenteral fluids',
+      ) as YamlMap;
       expect(g['topic'], isNotNull);
       // 5 sub-procedures (A1.2.1–A1.2.5) nested under the A1.2 overview.
       expect(g['children'] as YamlList, hasLength(5));
@@ -259,11 +256,9 @@ void main() {
         // 10.1 & 10.6 groups + 10.2/10.3/10.4/10.5/10.7/10.8 leaves = 8.
         final children = ch10['children'] as YamlList;
         expect(children, hasLength(8));
-        final g =
-            children.firstWhere(
-                  (n) => (n as YamlMap)['title'] == '10.6 Blood transfusion',
-                )
-                as YamlMap;
+        final g = children.firstWhere(
+          (n) => (n as YamlMap)['title'] == '10.6 Blood transfusion',
+        ) as YamlMap;
         expect(g['topic'], isNotNull);
         // 5 sub-topics (10.6.1–10.6.5) nested under the §10.6 overview.
         expect(g['children'] as YamlList, hasLength(5));
@@ -297,13 +292,9 @@ void main() {
       // 8.1–8.7 all nested groups = 7 direct children.
       final children = ch8['children'] as YamlList;
       expect(children, hasLength(7));
-      final g =
-          children.firstWhere(
-                (n) =>
-                    (n as YamlMap)['title'] ==
-                    '8.7 Palliative & end-of-life care',
-              )
-              as YamlMap;
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '8.7 Palliative & end-of-life care',
+      ) as YamlMap;
       expect(g['topic'], isNotNull);
       // 6 sub-topics (8.7.1–8.7.6) nested under the §8.7 overview.
       expect(g['children'] as YamlList, hasLength(6));
@@ -316,11 +307,9 @@ void main() {
       // 9.1–9.5 all nested groups = 5 direct children.
       final children = ch9['children'] as YamlList;
       expect(children, hasLength(5));
-      final g =
-          children.firstWhere(
-                (n) => (n as YamlMap)['title'] == '9.4 Abdominal problems',
-              )
-              as YamlMap;
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '9.4 Abdominal problems',
+      ) as YamlMap;
       expect(g['topic'], isNotNull);
       // 9 sub-topics (9.4.1–9.4.9) nested under the §9.4 overview.
       expect(g['children'] as YamlList, hasLength(9));
@@ -333,11 +322,9 @@ void main() {
       // 6.1/6.2/6.3/6.4/6.7/6.10 groups + 6.5/6.6/6.8/6.9/6.11 leaves = 11.
       final children = ch6['children'] as YamlList;
       expect(children, hasLength(11));
-      final g =
-          children.firstWhere(
-                (n) => (n as YamlMap)['title'] == '6.3 Meningitis',
-              )
-              as YamlMap;
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '6.3 Meningitis',
+      ) as YamlMap;
       expect(g['topic'], isNotNull);
       expect(g['children'] as YamlList, hasLength(4));
     });
@@ -349,13 +336,9 @@ void main() {
       // 7.1/7.2/7.3 leaves + 7.4/7.5/7.6/7.7 groups = 7 direct children.
       final children = ch7['children'] as YamlList;
       expect(children, hasLength(7));
-      final g =
-          children.firstWhere(
-                (n) =>
-                    (n as YamlMap)['title'] ==
-                    '7.4 General management (10 steps)',
-              )
-              as YamlMap;
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '7.4 General management (10 steps)',
+      ) as YamlMap;
       expect(g['topic'], isNotNull);
       // 10 steps (7.4.1–7.4.10) nested under the §7.4 overview.
       expect(g['children'] as YamlList, hasLength(10));
@@ -368,11 +351,9 @@ void main() {
       // 5.1 leaf, 5.2 group, 5.3 group, 5.4 leaf = 4 direct children.
       final children = ch5['children'] as YamlList;
       expect(children, hasLength(4));
-      final g =
-          children.firstWhere(
-                (n) => (n as YamlMap)['title'] == '5.2 Acute diarrhoea',
-              )
-              as YamlMap;
+      final g = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '5.2 Acute diarrhoea',
+      ) as YamlMap;
       expect(g['topic'], isNotNull);
       expect(g['children'] as YamlList, hasLength(3));
     });
@@ -384,13 +365,10 @@ void main() {
       // 4.1–4.9 = 9 direct children (leaves + subsection groups).
       final children = ch4['children'] as YamlList;
       expect(children, hasLength(9));
-      final g =
-          children.firstWhere(
-                (n) =>
-                    (n as YamlMap)['title'] ==
-                    '4.6 Conditions presenting with stridor',
-              )
-              as YamlMap;
+      final g = children.firstWhere(
+        (n) =>
+            (n as YamlMap)['title'] == '4.6 Conditions presenting with stridor',
+      ) as YamlMap;
       expect(g['topic'], isNotNull);
       expect(g['children'] as YamlList, hasLength(4));
     });
@@ -409,13 +387,11 @@ void main() {
       // 3.1–3.10 + §3.14 leaves + §3.11/§3.12/§3.13 subsection groups = 14.
       final children = ch3['children'] as YamlList;
       expect(children, hasLength(14));
-      final g =
-          children.firstWhere(
-                (n) =>
-                    (n as YamlMap)['title'] ==
-                    '3.11 Preterm & low-birth-weight infants',
-              )
-              as YamlMap;
+      final g = children.firstWhere(
+        (n) =>
+            (n as YamlMap)['title'] ==
+            '3.11 Preterm & low-birth-weight infants',
+      ) as YamlMap;
       expect(g['topic'], isNotNull);
       expect(g['children'] as YamlList, hasLength(4));
     });
@@ -424,12 +400,9 @@ void main() {
       final b = loadBook('who_imci');
       final ch1 = (b['contents'] as YamlList).first as YamlMap;
       final children = ch1['children'] as YamlList;
-      final group =
-          children.firstWhere(
-                (n) =>
-                    (n as YamlMap)['title'] == '1.5 Diagnostic considerations',
-              )
-              as YamlMap;
+      final group = children.firstWhere(
+        (n) => (n as YamlMap)['title'] == '1.5 Diagnostic considerations',
+      ) as YamlMap;
       // The group carries its own overview topic plus 3 subsection leaves.
       expect(group['topic'], isNotNull);
       expect(group['children'] as YamlList, hasLength(3));

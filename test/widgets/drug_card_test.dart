@@ -12,8 +12,8 @@
 // The view used to hardcode one purple for every card, so every drug read as
 // Critical Care and the signal meant nothing.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';

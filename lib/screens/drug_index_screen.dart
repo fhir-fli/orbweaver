@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/search_normalizer.dart';
 import 'package:orbweaver/models/formulary.dart';
 import 'package:orbweaver/theme/palette.dart';

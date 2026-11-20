@@ -1,7 +1,7 @@
 // The docs-site playground: paste YAML, see the real renderer's output and
 // the schema's verdict.
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/main_playground.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
 

@@ -6,8 +6,8 @@
 //     how the print separates p.71's "Call a TRAUMA Alert" box from the
 //     solid "ABLS rate:" box beside it.
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';

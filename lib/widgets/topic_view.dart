@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/screens/topic_frame.dart' show TopicFrame;
 import 'package:orbweaver/theme/palette.dart';

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:json_schema/json_schema.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/schema_explain.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
@@ -299,8 +299,7 @@ class _EditorPane extends StatelessWidget {
               style: const TextStyle(fontFamily: 'monospace', fontSize: 12.5),
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
-                hintText:
-                    'topic:\n  id: "my-topic"\n  title: "…"\n  blocks:\n    - type: "prose"\n      markdown: "…"',
+                hintText: 'topic:\n  id: "my-topic"\n  title: "…"\n  blocks:\n    - type: "prose"\n      markdown: "…"',
               ),
             ),
           ),

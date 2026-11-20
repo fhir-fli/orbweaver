@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/widgets/scope_chip.dart';
 
 /// The printed WVEMS section bracket — a `[` drawn down the left of a

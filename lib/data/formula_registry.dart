@@ -397,8 +397,7 @@ FormulaResult _preventAscvd(Map<String, dynamic> v) {
       unit: '%',
       primary: true,
       severity: sev,
-      interpretation:
-          'AHA PREVENT (race-free). Interpret against current prevention guidance; runs lower than the old Pooled Cohort Equations.',
+      interpretation: 'AHA PREVENT (race-free). Interpret against current prevention guidance; runs lower than the old Pooled Cohort Equations.',
     ),
   ]);
 }
@@ -559,8 +558,7 @@ FormulaResult _oxygenation(Map<String, dynamic> v) {
       FormulaOutput(
         label: 'SpO₂/FiO₂ ratio',
         value: fmtNum(sf, decimals: 0),
-        interpretation:
-            'Surrogate when no ABG & SpO₂ ≤ 97% (≈ 315 mild / 235 mod / 148 severe).',
+        interpretation: 'Surrogate when no ABG & SpO₂ ≤ 97% (≈ 315 mild / 235 mod / 148 severe).',
       ),
     );
   }

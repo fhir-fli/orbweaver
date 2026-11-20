@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/theme/palette.dart';
 
 /// Typed view over a resolved color [palette] (see `palette.dart`). Every
