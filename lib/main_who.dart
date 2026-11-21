@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/data/formula_strings_loader.dart';
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/l10n/l10n.dart';
@@ -16,6 +17,7 @@ Future<void> main() async {
   // The single-book web build has no shelf to put a picker on, so it
   // follows the browser's language.
   final language = AppLanguage.resolve(null);
+  await loadFormulaStrings(language);
   final book = await loadBook('who_imci', language: language);
   runApp(WhoApp(book: book, language: language));
 }

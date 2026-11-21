@@ -21,6 +21,8 @@ dependencies:
   yaml: ^3.1.2
 
 dev_dependencies:
+  # sha256 of the English source a translation was made from (test/l10n).
+  crypto: ^3.0.6
   flutter_test:
     sdk: flutter
   very_good_analysis: ^9.0.0
@@ -34,6 +36,8 @@ flutter:
   # non-recursive, so each bundle subdir that holds files is listed.
   assets:
     - assets/credits.yaml
+    # Calculator wording (English) and its translations, by language folder.
+    - assets/l10n/
     # The topic schema, so the web playground validates what is pasted.
     - schema/topic.schema.json
     # The playground's first example (generated, see tool/gen_playground_starter.py).

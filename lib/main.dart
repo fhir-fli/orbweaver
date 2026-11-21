@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/data/formula_strings_loader.dart';
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/data/library_scope.dart';
 import 'package:orbweaver/l10n/l10n.dart';
@@ -16,6 +17,7 @@ Future<void> main() async {
   ErrorLog.install();
   final choice = await AppLanguage.loadChoice();
   final language = AppLanguage.resolve(choice);
+  await loadFormulaStrings(language);
   final library = await loadLibrary(language: language);
   final snapshot = await LastState.load();
   runApp(
@@ -62,6 +64,7 @@ class _OrbweaverAppState extends State<OrbweaverApp> {
   Future<void> _choose(String? choice) async {
     await AppLanguage.saveChoice(choice);
     final language = AppLanguage.resolve(choice);
+    if (language != _language) await loadFormulaStrings(language);
     final library = language == _language
         ? _library
         : await loadLibrary(language: language);
