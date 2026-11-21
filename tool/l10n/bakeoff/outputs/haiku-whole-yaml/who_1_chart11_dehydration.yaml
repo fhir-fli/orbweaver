@@ -1,0 +1,121 @@
+# translated-from-sha256: 192264d68b43cc8e60fbf78ced0d7e9ce9ea3db280ab8ebeb660a164fcb0a6dd
+topic:
+  id: "who-imci-chart11-dehydration"
+  title: "Deshidratación grave (emergencia)"
+  list_subtitle: "AIEPI Cuadro 11 · 70 ml/kg LR · luego SRO"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · WHO Plan C/Chart 13 / GASTRO / GASTROSAM"
+  tags: ["deshidratación", "diarrea", "lactato de ringer", "sro", "rehidratación", "plan c", "aiepi", "pediátrico"]
+  aliases:
+    - "Diarrea"
+    - "Rehidratación"
+  category: "medical"
+
+  page_number: 17
+
+  blocks:
+
+    - type: "prose"
+      title: "Cuándo usar este cuadro"
+      highlight: true
+      markdown: |
+        - **Deshidratación grave pero SIN shock** → use **Plan C** de
+          **tratamiento de la diarrea** (p.131), no este cuadro.
+        - **Si el niño está en shock**, primero siga el
+          [Cuadro 7](topic:who-imci-chart7-iv-fluids-shock) /
+          [Cuadro 8](topic:who-imci-chart8-iv-fluids-sam) (SAM). Cambie a
+          este cuadro cuando el **pulso se enlentezca** o el **llenado
+          capilar se acelere**.
+
+    - type: "prose"
+      title: "⚠ Niños con desnutrición grave — NO use este cuadro"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Los niños con desnutrición aguda grave (SAM) necesitan un enfoque
+        diferente ([§1.4](topic:who-imci-1-4-sam-emergency)):
+        - **En shock:** [Cuadro 8](topic:who-imci-chart8-iv-fluids-sam)
+          (15 ml/kg en 1 h).
+        - **Deshidratados, sin shock:** **SRO-OMS por vía oral** — **no ReSoMal**
+          (mayor riesgo de hiponatremia grave; GASTROSAM 2026).
+
+    - type: "prose"
+      title: "Rehidratación IV"
+      markdown: |
+        Administre **70 ml/kg de lactato de Ringer (Hartmann)** — o **solución
+        salina normal** si no está disponible:
+        - **en 5 h** en lactantes **(< 12 meses)**, o
+        - **en 2.5 h** en niños **(12 meses – 5 años)**.
+
+        **Nota:** estos 70 ml/kg corresponden a la **fase de déficit posterior
+        al shock**; los 30 ml/kg rápidos ya se administraron durante la
+        reanimación del shock. El **Plan C completo** (deshidratación grave
+        **sin** shock, p.131) es **100 ml/kg = 30 ml/kg rápidos + 70 ml/kg**.
+
+    - type: "table"
+      title: "Líquido IV — 70 ml/kg en total (velocidad por hora)"
+      columns: ["Peso", "< 12 meses · en 5 h", "12 meses–5 años · en 2.5 h"]
+      column_flex: [2, 3, 3]
+      rows:
+        - cells: ["< 4 kg", "200 ml (40 ml/h)", "—"]
+        - cells: ["4–6 kg", "350 ml (70 ml/h)", "—"]
+        - cells: ["6–10 kg", "550 ml (110 ml/h)", "550 ml (220 ml/h)"]
+        - cells: ["10–14 kg", "850 ml (170 ml/h)", "850 ml (340 ml/h)"]
+        - cells: ["14–19 kg", "—", "1200 ml (480 ml/h)"]
+
+    - type: "prose"
+      title: "Reevaluación"
+      markdown: |
+        - Reevalúe **cada 1–2 h**.
+        - **Si no mejora, reevalúe antes de simplemente acelerar el goteo:**
+          ¿es correcto el **diagnóstico**? ¿Se están reponiendo las **pérdidas
+          continuas**? ¿Existe una **causa subyacente** (sepsis, íleo)?
+        - Si la deshidratación es real y no mejora, aumente la velocidad
+          **de forma moderada** — y **vigile la sobrecarga de líquidos**
+          (dificultad respiratoria, hepatomegalia, edema periorbitario).
+
+    - type: "prose"
+      title: "Agregue SRO en cuanto el niño pueda beber"
+      markdown: |
+        Administre **sales de rehidratación oral (SRO) ~5 ml/kg por hora** en
+        cuanto el niño pueda beber, por lo general después de **3–4 h**
+        (lactantes) o **1–2 h** (niños).
+
+    - type: "table"
+      title: "SRO — volumen por hora"
+      columns: ["Peso", "SRO por hora"]
+      column_flex: [3, 2]
+      rows:
+        - cells: ["< 4 kg", "15 ml"]
+        - cells: ["4–6 kg", "25 ml"]
+        - cells: ["6–10 kg", "40 ml"]
+        - cells: ["10–14 kg", "60 ml"]
+        - cells: ["14–19 kg", "85 ml"]
+
+    - type: "prose"
+      title: "Luego reclasifique y continúe"
+      markdown: |
+        - Reevalúe después de **6 h** (lactantes) o **3 h** (niños).
+          **Clasifique la deshidratación** y elija **Plan A / B / C**
+          (pp.138 / 135 / 131) para continuar.
+        - Si es posible, **observe ≥ 6 h** después de la rehidratación para
+          confirmar que la madre puede mantener la hidratación con SRO por
+          vía oral.
+
+    - type: "prose"
+      title: "Notas de evidencia"
+      highlight: true
+      palette:
+        accent: "0xFF1565C0"
+      markdown: |
+        - **La rehidratación lenta es una alternativa válida** para la vía
+          completa del Plan C: **100 ml/kg en 8 h, sin bolos**, igualó al Plan C
+          estándar en seguridad y eficacia (GASTRO fase II) y es más sencilla
+          donde la supervisión del personal es limitada.
+        - **La valoración clínica de la deshidratación es imprecisa**: la escala
+          de la OMS tiene precisión limitada (solo ~29% de los niños «con
+          deshidratación grave» tenía una pérdida de peso ≥ 10%).
+          **Reevalúe según la respuesta clínica**, no solo con la clasificación
+          inicial.

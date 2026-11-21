@@ -1,0 +1,157 @@
+# translated-from-sha256: 7df24691d8e9b0ffc82594b844f5b1f7891c3bdb05cd231381e6928833e975df
+# ============================================================
+# WVEMS 2026 Protocol 62 — Head Injury
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# First protocol on the `differential` flowchart variant.
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-062"
+  version: "v260101"
+  title: "Traumatismo craneoencefálico"
+  list_subtitle: "2026-062 · Conmoción / Cara / Cuello / Ojo"
+  last_reviewed: "Oct 2025"
+  tags:
+  - "traumatismo craneal"
+  - "conmoción cerebral"
+  - "cara"
+  - "cuello"
+  - "ojo"
+  - "nariz"
+  - "trauma"
+  aliases:
+  - "Conmoción cerebral"
+  - "Trauma de cara / cuello"
+  - "Trauma de ojo / nariz / boca"
+  category: "trauma"
+
+  # Sticky: flowchart page + prose page each snap to a full screen.
+  layout: "paged"
+
+  pages:
+
+  - page_number: 62
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (differential variant — 2-col card grid)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "differential"
+
+      entry_chain:
+      - text: "Trauma de cabeza, cara o cuello"
+        shape: "stadium"
+
+      decision:
+        text: "¿Ubicación?"
+        shape: "diamond"
+
+      cards:
+      - title: "Fx. craneal"
+        bullets:
+        - "Signo de Battle"
+        - "Evitar presión"
+      - title: "Boca"
+        bullets:
+        - "Tx: [Vía aérea](topic:wvems-2026-004)"
+        - "Tenga cuidado con BIAD"
+      - title: "Cuero cabelludo"
+        bullets:
+        - "Tx: [Sangrado](topic:wvems-2026-058)"
+        - "Considerar fractura"
+      - title: "Oídos"
+        bullets:
+        - "Verificar presencia de LCR"
+        - "No taponar oídos"
+      - title: "Cuello"
+        bullets:
+        - "Tx: [Inmovilización](topic:wvems-2026-060)"
+        - "Sello torácico"
+      - title: "Nariz"
+        bullets:
+        - "Tx: [Epistaxis](topic:wvems-2026-076)"
+        - "No reducir"
+      - title: "Ojos"
+        bullets:
+        - "Irrigar cualquier sustancia química"
+        - "Proteger ambos por lesión"
+      - title: "Dientes"
+        bullets:
+        - "Colocar en solución"
+        - "Se puede intentar reimplantar"
+
+      convergence:
+        text: "Considerar"
+        shape: "stadium"
+        bullets:
+        - text: "[Trauma mayor](topic:wvems-2026-056)"
+        - text: "[Alteración del nivel de conciencia](topic:wvems-2026-036), [Convulsión](topic:wvems-2026-042)"
+        - text: "[Presión intracraneal elevada](topic:wvems-2026-086)"
+
+  - page_number: 63
+    blocks:
+
+    - type: "prose"
+
+      critical_care_link:
+        text: "[Presión intracraneal elevada](topic:wvems-2026-086)"
+      title: "Imperativos en traumatismo craneal"
+      highlight: true
+      markdown: |
+        - Trasladar de urgencia si hay cambios súbitos en el nivel de conciencia.
+        - **Hipoxia** e **hipotensión** se asocian con malos resultados.
+          - Investigar y tratar agresivamente la [hipoxia](topic:wvems-2026-006) y la [hipotensión](topic:wvems-2026-008).
+        - Los fármacos [anticoagulantes](topic:wvems-2026-076) (**diluyentes de la sangre**) aumentan el riesgo de HIC.
+        - Las **laceraciones** se benefician de la reparación en las primeras pocas horas.
+        - El **mecanismo** de lesión predice la gravedad.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considerar [presión intracraneal elevada](topic:wvems-2026-086) si está indicado y acreditado para cuidados críticos.
+
+    - type: "prose"
+      title: "Alerta de TRAUMA"
+      callout: true
+      dashed: true
+      call_er: true
+      markdown: |
+        - Si requiere una intervención mayor
+        - O un mecanismo mayor
+        - Active una alerta de **TRAUMA**
+
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - **Fx. craneal**: Puede causar equimosis detrás de las orejas o alrededor de ambos ojos.
+        - **Cuero cabelludo**: Presión directa para sangrado abundante (excepto si hay crepitación craneal o fractura).
+        - **Cuello**: Todas las penetraciones deben tener un sello torácico.
+        - **Ojo**: Use abundante solución salina o agua para irrigar cualquier contaminación.
+          - {E} **[Tetracaína](topic:wvems-2026-drug-reference#tetracaine)** (oftálmica al 0.5%): 1–2 gotas antes de irrigar.
+          - No irrigar lesiones penetrantes. Colocar **protector ocular** sobre ambos ojos.
+        - **Boca**: Puede retirar **objetos empalados** que comprometan la [vía aérea](topic:wvems-2026-004).
+        - **Oído**: Verifique cualquier secreción en busca de LCR dejándola caer sobre papel blanco.
+          - Un halo amarillo o claro sugiere fuga de LCR por fractura de cráneo.
+        - **Nariz**: No intente reducir. Trate la [epistaxis](topic:wvems-2026-076).
+        - **Dientes**: Traslade los dientes avulsionados en solución de Hank o SS.
+          - Intente el reimplante solo en lesiones no complicadas y aisladas.
+        - **Conmoción cerebral**: Generalmente no requiere intervención de EMS.
+
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - No intente el reimplante de dientes primarios (de leche).
+        - Use la [Referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para la dosificación pediátrica.
+
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Traumatismo craneal — https://emedicine.medscape.com/article/1163653 [Ver: 12/24]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15.ª ed. Capítulo 33
+
+        NEMSIS: 9914041, 9914057, 9914099, 9914101, 9914205

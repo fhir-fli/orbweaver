@@ -1,0 +1,111 @@
+# translated-from-sha256: 3b273915a54ad78c14680f1a41be943311fff8efc5cf13b3877f57e3f340a60c
+topic:
+  id: "who-imci-chart9-diazepam"
+  title: "Anticonvulsivante (convulsiones)"
+  list_subtitle: "AIEPI Gráfico 9 · midazolam / diazepam rectal · escalera del estado epiléptico"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · Kertam 2026 / ESETT / EcLiPSE / WHO"
+  tags: ["convulsión", "crisis", "diazepam", "rectal", "estado epiléptico", "fenobarbital", "imci", "pediátrico"]
+  aliases:
+    - "Crisis convulsiva"
+    - "Anticonvulsivante"
+    - "Estado epiléptico"
+  category: "medical"
+  palette:
+    alert: "0xFFD32F2F"
+    alert_fill: "0xFFFDECEA"
+    alert_text: "0xFFB71C1C"
+
+  page_number: 15
+
+  blocks:
+
+    - type: "prose"
+      title: "Anticonvulsivante de primera línea"
+      highlight: true
+      markdown: |
+        **Sin vía IV: administre midazolam bucal o intranasal 0.3–0.5 mg/kg
+        (máximo 10 mg).** Es más eficaz que el diazepam rectal (OR 4.1 para
+        éxito terapéutico, Cochrane / McIntyre), confirmado por un metaanálisis
+        de 2026 de 9 ECA con 1,135 niños, con seguridad respiratoria comparable.
+
+        **Si solo hay diazepam disponible — lo habitual aquí — el diazepam rectal
+        0.5 mg/kg es un agente de primera línea totalmente aceptable.** Un
+        fármaco disponible es preferible a uno mejor que no se tiene. Técnica y
+        dosis a continuación.
+
+        **Con una vía IV instalada:**
+        - **Lorazepam IV 0.1 mg/kg** (máximo 4 mg), o
+        - **Diazepam IV 0.2 mg/kg** (máximo 10 mg) lentamente durante 1 min.
+
+    - type: "prose"
+      title: "Diazepam rectal — cómo administrarlo"
+      markdown: |
+        - Cargue la dosis desde una ampolla de diazepam en una **jeringa de
+          tuberculina de 1 ml** (dosis según el peso), luego **retire la aguja**.
+        - Introduzca la jeringa **4–5 cm en el recto** e inyecte.
+        - **Mantenga juntas las nalgas** durante unos minutos.
+
+    - type: "table"
+      title: "Diazepam PR — 10 mg/2 ml, 0.1 ml/kg"
+      columns: ["Edad (peso)", "Dosis (0.1 ml/kg)"]
+      column_flex: [3, 2]
+      rows:
+        - cells: ["2 semanas–2 meses (< 4 kg)", "0.3 ml"]
+        - cells: ["2–< 4 meses (4–< 6 kg)", "0.5 ml"]
+        - cells: ["4–< 12 meses (6–< 10 kg)", "1.0 ml"]
+        - cells: ["1–< 3 años (10–< 14 kg)", "1.25 ml"]
+        - cells: ["3–< 5 años (14–19 kg)", "1.5 ml"]
+
+    - type: "prose"
+      title: "Neonato < 2 semanas — use fenobarbital"
+      markdown: |
+        Administre **fenobarbital 20 mg/kg IV/IM**, repita **10 mg/kg** tras
+        30 min si las convulsiones continúan. Los volúmenes siguientes asumen
+        el genérico de **200 mg/ml** (la forma neonatal SEZABY es **10 mg/ml**
+        — recalcule):
+        - **2 kg:** 0.2 ml, luego 0.1 ml tras 30 min
+        - **3 kg:** 0.3 ml, luego 0.15 ml tras 30 min
+
+    - type: "prose"
+      title: "Si las convulsiones continúan"
+      highlight: true
+      markdown: |
+        - **Tras 10 min:** administre una **segunda dosis** (midazolam o
+          diazepam; o **diazepam IV 0.2 mg/kg**, máximo 10 mg, si hay una vía
+          IV instalada). **No supere dos dosis de benzodiacepina** — una tercera
+          añade depresión respiratoria sin mayor control de las convulsiones.
+        - 🛑 **La dosis IV no es la dosis rectal.** La dosis rectal de
+          **0.5 mg/kg** (0.1 ml/kg) es mayor porque la absorción rectal es
+          incompleta. **Por vía intravenosa administre 0.2 mg/kg.** 0.5 mg/kg IV
+          es aproximadamente el doble, y en una serie pediátrica **el 16% de los
+          niños presentó depresión respiratoria grave o potencialmente mortal con
+          las dosis IV recomendadas**. El diazepam no está establecido en
+          neonatos — administre fenobarbital.
+        - **Tras otros 10 min — sospeche estado epiléptico.** Administre un
+          **agente de segunda línea** (todos equivalentes — elija según
+          disponibilidad):
+          - **Levetiracetam 40 mg/kg IV** durante 15 min, o
+          - **Fenobarbital 20 mg/kg IV/IM** durante 20 min, **sin límite de
+            miligramos** (el 15 mg/kg impreso es una variante menor; 20 es la
+            dosis de carga de la guía para todas las edades), o
+          - **Fosfenitoína/fenitoína 15–20 mg/kg IV** a **≤ 1 mg/kg/min** por una
+            **vía separada** (la fenitoína es cáustica — fosfenitoína preferible
+            cuando esté disponible), o
+          - **Valproato 20–40 mg/kg IV** cuando esté disponible.
+
+    - type: "prose"
+      title: "Si fiebre alta"
+      markdown: |
+        - **Desvista** al niño para reducir la fiebre.
+        - No administre **medicación oral** hasta que la convulsión esté
+          controlada (riesgo de aspiración).
+        - Una vez que cese y el niño pueda tragar, administre **paracetamol o
+          ibuprofeno** (para el confort — los antipiréticos **no** previenen la
+          recurrencia de convulsiones febriles).
+
+    - type: "prose"
+      title: "⚠ Seguridad de la vía aérea"
+      callout: true
+      markdown: |
+        Tenga siempre listo un **balón y mascarilla en buen estado** del tamaño
+        correcto — el diazepam puede causar **apnea**.

@@ -1,0 +1,164 @@
+# translated-from-sha256: 666093235a427b3b9e4514fd8040ff9ab44dbe2b112fd3742999d9307d006f54
+topic:
+
+  id: "wvems-2026-020"
+  version: "v260101"
+  title: "Dolor"
+  list_subtitle: "2026-020 · escalera analgésica"
+  last_reviewed: "Oct 2025"
+  tags: ["dolor", "analgesia", "fentanilo", "ketamina", "tylenol", "ibuprofeno", "toradol"]
+  aliases:
+    - "HA"
+    - "Cefalea"
+    - "Dolor de espalda"
+    - "Dolor de muela"
+    - "Migraña"
+    - "Fibromialgia"
+  category: "universal"
+
+  layout: "paged"
+
+  pages:
+
+  - page_number: 20
+    blocks:
+
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: "Lesión o molestia"
+        shape: "stadium"
+
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+
+      branches:
+
+        - id: "mild"
+          label: "Leve"
+          criteria:
+            - "Malestar mínimo"
+            - "Pulso normal"
+          actions:
+            - provider_level: "E"
+              text: "Tylenol"
+              kind: "medication_administration"
+            - provider_level: "E"
+              text: "Ibuprofeno"
+              kind: "medication_administration"
+
+        - id: "moderate"
+          label: "Moderado"
+          criteria:
+            - "Algo de malestar"
+            - "Taquicardia leve"
+          actions:
+            - provider_level: "E"
+              text: "Tylenol"
+              kind: "medication_administration"
+            - provider_level: "A"
+              text: "Toradol"
+              kind: "medication_administration"
+
+        - id: "severe"
+          label: "Grave"
+          criteria:
+            - "Malestar evidente"
+            - "Signos vitales elevados"
+          actions:
+            - provider_level: "A"
+              text: "Fentanilo"
+              kind: "medication_administration"
+            - provider_level: "I"
+              text: "Ketamina"
+              kind: "medication_administration"
+
+      convergence:
+        text: "Considerar"
+        shape: "rounded_rectangle"
+        bullets:
+          - text: "[Inmovilización](topic:wvems-2026-066)"
+          - text: "[Náusea](topic:wvems-2026-022)"
+
+      dose_table:
+        - drug: "[Tylenol](topic:wvems-2026-drug-reference#tylenol)"
+          dose: "1,000 mg"
+          route: "PO, IV/IO"
+          frequency: "x1"
+          population: "adult"
+        - drug: "[Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen)"
+          dose: "600 mg"
+          route: "PO"
+          frequency: "x1"
+          population: "adult"
+        - drug: "[Toradol](topic:wvems-2026-drug-reference#toradol)"
+          dose: "15 mg"
+          route: "IV/IO, IM/IN"
+          frequency: "x1"
+          population: "adult"
+        - drug: "[Fentanyl](topic:wvems-2026-drug-reference#fentanyl)"
+          dose: "50–100 mcg"
+          route: "IV/IO, IM/IN"
+          frequency: "Q 5 min x4"
+          population: "adult"
+        - drug: "[Ketamine](topic:wvems-2026-drug-reference#ketamine)"
+          dose: "20 mg"
+          route: "IV/IO, IM/IN"
+          frequency: "Q 15 min x2"
+          population: "adult"
+
+  - page_number: 21
+    blocks:
+
+    - type: "prose"
+      title: "Imperativos del dolor"
+      highlight: true
+      markdown: |
+        - El control del dolor en EMS está indicado para **lesión reciente** o **dolor súbito**, como:
+          - [Trauma mayor](topic:wvems-2026-056), [fracturas](topic:wvems-2026-066) evidentes, [dolor abdominal](topic:wvems-2026-034) agudo o [dolor torácico](topic:wvems-2026-028)
+        - Los analgésicos (incluso por VO) son **beneficiosos aunque el tiempo de traslado sea corto**.
+        - Utilice [dosificación pediátrica basada en el peso](topic:wvems-2026-144) para adultos de menor tamaño con menos de 110 lbs (50 kg).
+
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Tylenol®](topic:wvems-2026-drug-reference#tylenol)** (Paracetamol): evite si hay enfermedad hepática terminal.
+          - {E} solo puede administrar por VO; use tabletas, cápsulas, polvo o líquido de venta libre.
+          - {A} puede administrar por VO o IV/IO; para IV/IO, administre lentamente durante 10 min.
+        - **[Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen)** (Advil®, Motrin®): evite si hay hemorragia digestiva activa.
+        - **[Toradol®](topic:wvems-2026-drug-reference#toradol)** (Ketorolaco): evite si hay hemorragia digestiva activa.
+        - **[Fentanyl](topic:wvems-2026-drug-reference#fentanyl)** (Sublimaze®): use criterio clínico, con un objetivo de **0.5–1 mcg/kg**.
+          - Comience con una dosis menor (50 mcg) en pacientes no expuestos a narcóticos y/o de menor tamaño.
+        - **[Ketamine](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®):
+          - Uso IM/IN: administre en bolo sin diluir.
+          - Uso IV/IO: diluya en NS y administre lentamente durante 10 min.
+        - Puede administrar gotas oftálmicas para abrasiones o para el destello del soldador (queratitis UV):
+          - {E} **[Tetracaine](topic:wvems-2026-drug-reference#tetracaine)** (Tetracaína 0.5 % oftálmica) — 1–2 gotas en el ojo afectado.
+
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Tylenol e ibuprofeno son útiles para **dolor subagudo**, como:
+          - Dolor de muela, cefalea (migraña), ciática, fibromialgia, etc.
+          - Evite **fentanilo** y **ketamina** para el dolor subagudo.
+        - El dolor es subjetivo. Puede probar otro medicamento si el dolor continúa.
+          - **No** use Toradol junto con ibuprofeno (elija uno u otro).
+        - Dosis diaria máxima: **[Tylenol](topic:wvems-2026-drug-reference#tylenol) 3,000 mg** · **Ibuprofeno 2,400 mg**.
+
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        Utilice la [Referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para la dosificación pediátrica.
+
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - EBG para el dolor prehospitalario — https://pubmed.ncbi.nlm.nih.gov/34928760/ [Ver: 1/22]
+        - Medscape Dolor — https://emedicine.medscape.com/article/310834 [Ver: 7/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15.ª ed. Capítulo 14, 16.
+
+        NEMSIS: 9914051, 9914071, 9914131

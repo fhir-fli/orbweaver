@@ -1,0 +1,154 @@
+# translated-from-sha256: 3b273915a54ad78c14680f1a41be943311fff8efc5cf13b3877f57e3f340a60c
+# ============================================================
+# 🛑 2026-08-28 — THE IV DIAZEPAM DOSE ON THIS PAGE WAS WRONG FOR TWO
+# REVIEW CYCLES, AND BOTH CYCLES CONFIRMED IT.
+#   The 2026-06-18 review "corrected" IV diazepam 0.25 -> 0.5 mg/kg, calling
+#   0.25 subtherapeutic. The 2026-07 review re-confirmed 0.5 as accurate.
+#   Both were wrong. 0.5 mg/kg is the RECTAL dose (rectal absorption is
+#   incomplete, which is why it is higher); the IV dose is 0.2-0.3 mg/kg
+#   (FDA label 0.2 mg/kg; ESETT and the status-epilepticus dosing literature
+#   0.15-0.3). 0.5 mg/kg IV is roughly double, and 16% of children in a
+#   paediatric series had severe or life-threatening respiratory depression
+#   at RECOMMENDED IV doses.
+#   Found by the cross-book dose comparison (tool/crossbook_*), not by
+#   another read of this page: the ProtocolBook prints 0.2 mg/kg IV and the
+#   two books were laid side by side. Corrected to 0.2 mg/kg.
+#   2026-08-29 — THE PRINT ITSELF SETTLES IT. Chart 9 on p.15 of the source
+#   PDF reads "or give diazepam IV at 0.05 ml/kg = 0.25 mg/kg if IV infusion
+#   is running". So the 2026-06-18 note that 0.25 "was a transcription error"
+#   and that 0.5 was "per WHO" was wrong about WHO as well as about the drug:
+#   0.25 is what WHO printed. This page now gives 0.2 mg/kg, the FDA label
+#   figure, which sits inside the same 0.2-0.3 range; the print's own 0.25 is
+#   recorded here so nobody re-derives it. The rectal 0.1 ml/kg = 0.5 mg/kg
+#   table and the two-dose cap match the print exactly.
+#   Buccal AND intranasal midazolam widened to 0.3-0.5 mg/kg (was intranasal
+#   0.2). Added: with a line, IV lorazepam 0.1 mg/kg (max 4 mg) is an option;
+#   where only diazepam is stocked, rectal diazepam stays acceptable
+#   first-line.
+# ============================================================
+# WHO IMCI Chart 9 — How to give diazepam rectally (convulsions)
+# Pocket Book of Hospital Care for Children (2nd ed, 2013), p.15
+# OpenEvidence review applied 2026-06-18:
+#   - First-line: add buccal midazolam 0.5 mg/kg / intranasal 0.2 mg/kg
+#     (preferred; level-1 superiority over rectal diazepam — Kertam 2026
+#     meta-analysis, Cochrane 2018, 2026 AAP). Diazepam PR = fallback.
+#   - IV diazepam corrected 0.25 → 0.5 mg/kg (0.1 ml/kg, max 10 mg) per
+#     WHO (was a transcription error; 0.25 was subtherapeutic).
+#   - Status 2nd-line: add levetiracetam 40 mg/kg & valproate 20–40 mg/kg
+#     (ESETT/EcLiPSE equivalence); fosphenytoin preferred over phenytoin;
+#     phenytoin rate ≤ 1 mg/kg/min (was "over 60 min").
+#   - Neonate phenobarbital: note 200 mg/ml generic vs SEZABY 10 mg/ml.
+#   - Antipyretics don't prevent febrile-seizure recurrence.
+# id kept (who-imci-chart9-diazepam) — cross-links target it.
+# Diazepam PR table values are WHO Pocket Book verbatim (representative
+# weight per band); exact dose = 0.1 ml/kg of the 5 mg/ml solution.
+# OpenEvidence-reviewed 2026-07:
+#   - Buccal midazolam: widened to 0.3–0.5 mg/kg (max 10 mg) — some
+#     guidelines/EML use 0.3 mg/kg; the Kertam 2026 meta-analysis pooled
+#     0.2–0.5 mg/kg. Intranasal 0.2 mg/kg unchanged.
+#   - IV diazepam 0.5 mg/kg, second-line ladder (levetiracetam/valproate/
+#     fosphenytoin, phenytoin ≤1 mg/kg/min), two-dose benzo cap, and
+#     antipyretic note all re-confirmed accurate — unchanged.
+# ============================================================
+
+topic:
+  id: "who-imci-chart9-diazepam"
+  title: "Anticonvulsivante (convulsiones)"
+  list_subtitle: "IMCI Cuadro 9 · midazolam / diazepam rectal · escalera del estado epiléptico"
+  last_reviewed: "OpenEvidence-reviewed 2026-07 · Kertam 2026 / ESETT / EcLiPSE / WHO"
+  tags: ["convulsión", "crisis convulsiva", "diazepam", "rectal", "estado epiléptico", "fenobarbital", "imci", "pediátrico"]
+  aliases:
+  - "Convulsión"
+  - "Anticonvulsivante"
+  - "Estado epiléptico"
+  category: "medical"
+  # Apnoea / airway safety warning renders red.
+  palette:
+    alert: "0xFFD32F2F"
+    alert_fill: "0xFFFDECEA"
+    alert_text: "0xFFB71C1C"
+
+  page_number: 15
+
+  blocks:
+
+  - type: "prose"
+    title: "Anticonvulsivante de primera línea"
+    highlight: true
+    markdown: |
+      **No hay vía IV — administre midazolam bucal o intranasal 0.3–0.5 mg/kg
+      (máx. 10 mg).** Es más eficaz que el diazepam rectal (OR 4.1 para
+      éxito terapéutico; Cochrane / McIntyre), confirmado por un metanálisis de 2026
+      de 9 ECA en 1,135 niños, con seguridad respiratoria comparable.
+
+      **Si solo se dispone de diazepam — lo habitual aquí — el diazepam rectal
+      0.5 mg/kg es un fármaco de primera línea totalmente aceptable.** Un medicamento disponible es preferible a uno mejor que no está en existencia. Técnica y dosis a continuación.
+
+      **Con una vía venosa instalada:**
+      - **Lorazepam IV 0.1 mg/kg** (máx. 4 mg), o
+      - **Diazepam IV 0.2 mg/kg** (máx. 10 mg) lentamente durante 1 min.
+
+  - type: "prose"
+    title: "Diazepam rectal — cómo administrarlo"
+    markdown: |
+      - Cargue la dosis de una ampolla de diazepam en una **jeringa de tuberculina de 1 ml** (dosis según el peso) y luego **retire la aguja**.
+      - Introduzca la jeringa **4–5 cm en el recto** e inyecte.
+      - **Mantenga juntas las nalgas** durante unos minutos.
+
+  - type: "table"
+    title: "Diazepam PR — 10 mg/2 ml, 0.1 ml/kg"
+    columns: ["Edad (peso)", "Dosis (0.1 ml/kg)"]
+    column_flex: [3, 2]
+    rows:
+    - cells: ["2 semanas–2 meses (< 4 kg)", "0.3 ml"]
+    - cells: ["2–< 4 meses (4–< 6 kg)", "0.5 ml"]
+    - cells: ["4–< 12 meses (6–< 10 kg)", "1.0 ml"]
+    - cells: ["1–< 3 años (10–< 14 kg)", "1.25 ml"]
+    - cells: ["3–< 5 años (14–19 kg)", "1.5 ml"]
+
+  - type: "prose"
+    title: "Neonato < 2 semanas — use fenobarbital"
+    markdown: |
+      Administre **fenobarbital 20 mg/kg IV/IM**; repita **10 mg/kg** a los
+      30 min si las convulsiones continúan. Los volúmenes siguientes asumen el genérico de **200
+      mg/ml** (la forma neonatal SEZABY es de **10 mg/ml** — recalcule):
+      - **2 kg:** 0.2 ml, luego 0.1 ml a los 30 min
+      - **3 kg:** 0.3 ml, luego 0.15 ml a los 30 min
+
+  - type: "prose"
+    title: "Si las convulsiones continúan"
+    highlight: true
+    markdown: |
+      - **A los 10 min:** administre una **segunda dosis** (midazolam o diazepam;
+        o **diazepam IV 0.2 mg/kg**, máx. 10 mg, si hay una vía venosa instalada).
+        **No supere dos dosis de benzodiazepinas** — una tercera agrega depresión respiratoria sin mayor control de las convulsiones.
+      - 🛑 **La dosis IV NO es la dosis rectal.** La dosis rectal **0.5 mg/kg**
+        (0.1 ml/kg) es mayor porque la absorción rectal es incompleta.
+        **Por vía intravenosa administre 0.2 mg/kg.** 0.5 mg/kg IV equivale aproximadamente al doble,
+        y en una serie pediátrica **16% de los niños presentó depresión respiratoria grave o potencialmente mortal con las dosis IV recomendadas**.
+        El diazepam no está establecido en neonatos — administre fenobarbital.
+      - **Después de otros 10 min — sospeche estado epiléptico.** Administre un
+        **fármaco de segunda línea** (todos equivalentes — elija según disponibilidad):
+        - **Levetiracetam 40 mg/kg IV** durante 15 min, o
+        - **Fenobarbital 20 mg/kg IV/IM** durante 20 min, **sin límite de miligramos**
+          (el 15 mg/kg impreso es una variante menor; 20 es la dosis de carga de la guía para todas las edades), o
+        - **Fosfenitoína/fenitoína 15–20 mg/kg IV** a **≤ 1 mg/kg/min**
+          por una **vía separada** (la fenitoína es cáustica — preferir fosfenitoína cuando esté disponible), o
+        - **Valproato 20–40 mg/kg IV** donde esté disponible.
+
+  - type: "prose"
+    title: "Si hay fiebre alta"
+    markdown: |
+      - **Desvista** al niño para reducir la fiebre.
+      - No administre **medicamentos por vía oral** hasta que la convulsión esté controlada
+        (riesgo de aspiración).
+      - Una vez que cese y el niño pueda tragar, administre **paracetamol o
+        ibuprofeno** (para el confort — los antipiréticos **no** previenen
+        la recurrencia de convulsiones febriles).
+
+  - type: "prose"
+    title: "⚠ Seguridad de la vía aérea"
+    callout: true
+    markdown: |
+      Tenga siempre lista una **bolsa y mascarilla en buen estado** del tamaño adecuado —
+      el diazepam puede causar **apnea**.

@@ -1,0 +1,129 @@
+# translated-from-sha256: 60546b28a37fb072ce59146c284846c08e8c8aba8e18edd35cfba05868992587
+# ============================================================
+# WHO IMCI §8.3.2 — Co-trimoxazole prophylaxis. Pocket Book 2nd ed
+# (2013), pp.241–242.
+# ⚠️ OpenEvidence-reviewed 2026-07: age-stratified discontinuation
+# criteria (continue < 5 yr; ≥ 6 yr may stop after ≥ 6 mo ART with
+# CD4 ≥ 15% or ≥ 200/mm³ for > 3 mo); ARROW-trial note on prolonged
+# prophylaxis in high-burden sub-Saharan settings; atovaquone added as an
+# alternative. Refs: DHHS/OARAC Pediatric OI 2025; ARROW (NEJM 2014).
+# ============================================================
+
+topic:
+  id: "who-imci-8-3-2-cotrimoxazole"
+  title: "Profilaxis con cotrimoxazol"
+  list_subtitle: "8.3.2 · OMS · duración · dosis · suspensión"
+  last_reviewed: "WHO Pocket Book 2nd ed (2013) · OpenEvidence-reviewed 2026-07 · universal initiation and long-term continuation 2026-08-31 · full age-banded dosing table, OpenEvidence 2026-09-01"
+  tags: ["HIV", "cotrimoxazol", "profilaxis", "PCP", "pediátrico"]
+  aliases:
+  - "Profilaxis con cotrimoxazol"
+  - "Profilaxis con CTX"
+  category: "medical"
+
+  page_number: 241
+
+  blocks:
+
+  - type: "prose"
+    title: "Qué previene"
+    highlight: true
+    markdown: |
+      El cotrimoxazol previene la **PCP** y reduce la morbilidad y la mortalidad en
+      niños infectados y expuestos al VIH. También protege contra **infecciones
+      bacterianas comunes, toxoplasmosis y malaria**.
+
+  - type: "prose"
+    title: "Quiénes deben recibirlo"
+    markdown: |
+      - **Todos los lactantes nacidos de madres VIH positivas** — iniciar **a las 4–6 semanas de
+        vida** (o en el primer contacto), y continuar hasta que el VIH esté definitivamente
+        descartado **y** la madre ya no esté amamantando.
+      - **Todos los lactantes, niños y adolescentes infectados por VIH** —
+        **independientemente del estadio clínico, el CD4 y el TARV.** El inicio no depende
+        de un recuento o porcentaje de CD4 a ninguna edad. Continuar con el TARV.
+      - Los antiguos criterios de inicio basados en el estadio y en el CD4 fueron eliminados por
+        la OMS en 2014, en línea con la recomendación para adultos.
+
+  - type: "prose"
+    title: "Cuándo suspender"
+    callout: true
+    markdown: |
+      🛑 **Donde la malaria o la infección bacteriana grave son comunes, la respuesta es
+      que no se suspende.** La OMS recomienda que el cotrimoxazol se **continúe
+      a largo plazo** en esos entornos y **no se suspenda por la
+      reconstitución inmunitaria**. Un hospital distrital en zona endémica de malaria cumple
+      ese criterio, por lo que **la continuación indefinida es la opción predeterminada aquí** y
+      las reglas de CD4 que aparecen abajo no se aplican.
+
+      - **Expuestos al VIH (no infectados):** suspender una vez descartado el VIH con certeza
+        **y** finalizada la lactancia. Esta es la única suspensión rutinaria.
+      - **No suspender nunca en un lactante**, sea cual sea el CD4.
+      - **No suspender** si el niño **no recibe TARV**.
+      - **Antecedente de PCP:** continuar.
+
+      **Solo donde la malaria y la infección bacteriana grave NO son comunes** puede
+      considerarse una suspensión basada en el CD4, después de **≥ 6 meses de TARV** con
+      recuperación sostenida durante **> 3 meses**: edad **≥ 6 años**, CD4
+      **≥ 200/mm³**, o **CD4 ≥ 14%** cuando no se dispone de recuento absoluto.
+      **Reiniciar** si el CD4 cae por debajo de ese valor.
+
+      ℹ️ **Estas son cifras para suspender, no para iniciar.** La profilaxis nunca
+      depende del CD4 para iniciarse; véase la sección anterior. El **15%** que
+      aparece en otros lugares es el antiguo punto de corte pediátrico por categoría inmunitaria, que
+      también rige las decisiones sobre vacunas vivas; el **14%** es la cifra asociada
+      con el recuento de 200. Son marcos distintos, no una contradicción.
+
+  - type: "prose"
+    title: "Profilaxis prolongada en entornos de alta carga"
+    markdown: |
+      El ensayo **ARROW** (Uganda y Zimbabue) aleatorizó a niños que llevaban
+      más de **2 años con TARV y buena recuperación del CD4** — mediana de
+      CD4 de **720** en los mayores de 5 años. La continuación del cotrimoxazol aún produjo
+      **reducciones sostenidas de hospitalización y de malaria**, con beneficio
+      tanto en **zonas endémicas como no endémicas de malaria** y **sin pérdida de efecto
+      a lo largo del tiempo**. Sus autores concluyeron que los criterios de suspensión de la OMS
+      **deben reconsiderarse**.
+
+      Esta es la evidencia que respalda la regla anterior: en un entorno de alta carga,
+      **mantenerlo**. Un buen recuento de CD4 no es motivo para suspender.
+
+  - type: "prose"
+    title: "Descarte del VIH en un niño expuesto"
+    markdown: |
+      Suspender solo después de descartar el VIH con certeza: no amamantado, con una prueba
+      virológica negativa; amamantado < 18 meses, con una prueba virológica negativa
+      6 semanas después del cese; amamantado > 18 meses, con una prueba serológica negativa
+      6 semanas después del cese.
+
+  - type: "table"
+    title: "Dosis — por grupo de edad fijo, una vez al día"
+    columns: ["Edad", "Dosis diaria", "Suspensión 200/40 por 5 ml", "Comprimido pediátrico 100/20", "Concentración simple 400/80", "Concentración doble 800/160"]
+    column_flex: [3, 3, 3, 2, 2, 2]
+    rows:
+    - cells: ["< 6 meses", "100 mg SMX / 20 mg TMP", "2.5 ml", "1 comprimido", "¼ comprimido", "—"]
+    - cells: ["6 meses – 5 años", "200 mg SMX / 40 mg TMP", "5 ml", "2 comprimidos", "½ comprimido", "—"]
+    - cells: ["6 – 14 años", "400 mg SMX / 80 mg TMP", "10 ml", "4 comprimidos", "1 comprimido", "½ comprimido"]
+    - cells: ["≥ 15 años", "800 mg SMX / 160 mg TMP", "—", "—", "2 comprimidos", "1 comprimido"]
+
+  - type: "prose"
+    title: "Cómo leer la tabla"
+    markdown: |
+      - **El paso a un comprimido de concentración doble se da a los 15 años, no a los 5.** Un
+        niño de 6–14 años recibe **un comprimido de concentración simple, 80 mg de trimetoprima**.
+        La redacción anterior, "un comprimido de adulto", no indicaba qué concentración era, y
+        eso supone una diferencia de dos veces en la dosis administrada.
+      - **Dosifique por grupo de edad, no por kilogramo.** La trimetoprima de 6–8 mg/kg/día es
+        el objetivo farmacológico en que se basan estos grupos, no un
+        cálculo a la cabecera del paciente.
+      - ⚠️ **Redondee hacia arriba, no hacia abajo.** Los estudios farmacocinéticos muestran que los grupos
+        fijos **subdosifican** levemente a los niños en comparación con las exposiciones de adultos, por lo que,
+        si un niño queda entre dos grupos, tome el mayor número de comprimidos.
+
+  - type: "prose"
+    title: "Alergia y seguimiento"
+    markdown: |
+      Si es **alérgico** al cotrimoxazol, las alternativas son **dapsona** (desde las 4
+      semanas, **2 mg/kg por vía oral una vez al día**) o **atovacuona**.
+
+      Evalúe la tolerancia y la adherencia en **cada** consulta o control de seguimiento —
+      inicialmente mensual, luego cada 3 meses si la tolerancia es buena.

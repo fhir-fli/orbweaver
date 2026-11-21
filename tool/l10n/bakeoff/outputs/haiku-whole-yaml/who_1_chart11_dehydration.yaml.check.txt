@@ -1,0 +1,19 @@
+stamp: current
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/haiku/who_1_chart11_dehydration.yaml.topic.blocks[0].markdown: bold runs differ
+    en: 10  «- **Severe dehydration but NO shock** → use diarrhoea
+  **treatment Plan C** (p.131), not this chart.
+- **If the child is in shock**, first follow
+  [Chart 7](topic:who-imci-chart7-iv-fluids-shock) /
+  [Chart 8](topic:who-imci-chart8-iv-fluids-sam) (SAM). Switch
+  to this chart once the **pulse slows** or **capillary refill
+  speeds up**.
+»
+    tr: 12  «- **Deshidratación grave pero SIN shock** → use **Plan C** de
+  **tratamiento de la diarrea** (p.131), no este cuadro.
+- **Si el niño está en shock**, primero siga el
+  [Cuadro 7](topic:who-imci-chart7-iv-fluids-shock) /
+  [Cuadro 8](topic:who-imci-chart8-iv-fluids-sam) (SAM). Cambie a
+  este cuadro cuando el **pulso se enlentezca** o el **llenado
+  capilar se acelere**.
+»
+problems: 1
