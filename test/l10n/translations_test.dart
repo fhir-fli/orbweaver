@@ -67,6 +67,7 @@ const kTranslatableKeys = <String>{
   'reference_label',
   'regimen',
   'rows',
+  'source',
   'steps',
   'subtitle',
   'tags',
@@ -207,6 +208,27 @@ void main() {
       probe.deleteSync();
       if (dir.listSync().isEmpty) dir.deleteSync();
     }
+  });
+
+  test('every translated file is bundled with the app', () {
+    // Flutter asset folders are not recursive: a <lang>/ folder missing from
+    // pubspec.yaml ships nothing, and the app silently shows English. Seen
+    // once on the desktop build (the Spanish calculator wording was absent).
+    final pubspec =
+        loadYaml(File('pubspec.yaml').readAsStringSync()) as YamlMap;
+    final declared = {
+      for (final a in (pubspec['flutter'] as YamlMap)['assets'] as YamlList)
+        a as String,
+    };
+    final missing = [
+      for (final (tr, _, _) in _translatedFiles())
+        if (!declared.contains('${tr.parent.path}/')) tr.parent.path,
+    ];
+    expect(
+      missing.toSet(),
+      isEmpty,
+      reason: 'add these folders to pubspec.yaml',
+    );
   });
 
   test('the comparison catches a changed dose, sign, link and id', () {

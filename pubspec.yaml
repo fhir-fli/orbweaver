@@ -38,6 +38,7 @@ flutter:
     - assets/credits.yaml
     # Calculator wording (English) and its translations, by language folder.
     - assets/l10n/
+    - assets/l10n/es/
     # The topic schema, so the web playground validates what is pasted.
     - schema/topic.schema.json
     # The playground's first example (generated, see tool/gen_playground_starter.py).
@@ -54,6 +55,7 @@ flutter:
     - assets/books/who_imci/images/
     - assets/books/calculators/
     - assets/books/calculators/topics/
+    - assets/books/calculators/topics/es/
 
   # Roboto Condensed, Apache 2.0 (licence bundled beside the files). Flutter
   # keeps these in its material_fonts cache but bundles NO Roboto into a built
