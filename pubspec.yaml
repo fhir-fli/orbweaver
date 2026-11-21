@@ -11,6 +11,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
   json_schema: ^5.2.2
   material_ui: ^1.11.1
   shared_preferences: ^2.3.0
@@ -24,6 +27,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  # Interface strings: lib/l10n/app_<lang>.arb -> generated AppLocalizations (l10n.yaml).
+  generate: true
   # Each book is a self-contained bundle folder under assets/books/<id>/
   # (book.yaml + cover + topics/ + images/). Flutter asset globs are
   # non-recursive, so each bundle subdir that holds files is listed.

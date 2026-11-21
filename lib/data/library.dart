@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/data/localized_asset.dart';
 import 'package:orbweaver/data/search_normalizer.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/models/formulary.dart';
@@ -32,25 +33,30 @@ import 'package:yaml/yaml.dart';
 /// The **topic** is the source of truth for its own row: the loader reads
 /// each topic's `title` / `list_subtitle` / `tags` frontmatter — the book
 /// manifest only orders and references them.
-Future<List<Book>> loadLibrary() async {
+///
+/// [language] picks each file's translated copy where one exists (see
+/// [AssetLocalizer]); anything untranslated loads in English.
+Future<List<Book>> loadLibrary({String language = 'en'}) async {
+  final loc = await AssetLocalizer.load(language);
   final indexRaw = await rootBundle.loadString('assets/books/index.yaml');
   final index = loadYaml(indexRaw) as YamlMap;
   final ids = (index['books'] as YamlList).map((e) => e as String);
 
   final books = <Book>[];
   for (final id in ids) {
-    books.add(await _loadBook(id));
+    books.add(await _loadBook(id, loc));
   }
   return books;
 }
 
 /// Loads a single book by id — for a single-book build (e.g. the WHO-only web
 /// app) that opens straight into one book with no shelf.
-Future<Book> loadBook(String id) => _loadBook(id);
+Future<Book> loadBook(String id, {String language = 'en'}) async =>
+    _loadBook(id, await AssetLocalizer.load(language));
 
-Future<Book> _loadBook(String id) async {
+Future<Book> _loadBook(String id, AssetLocalizer loc) async {
   final dir = 'assets/books/$id';
-  final raw = await rootBundle.loadString('$dir/book.yaml');
+  final raw = await rootBundle.loadString(loc.path('$dir/book.yaml'));
   final b = (loadYaml(raw) as YamlMap)['book'] as YamlMap;
 
   final cover = (b['cover'] as String?) ?? '';
@@ -59,6 +65,7 @@ Future<Book> _loadBook(String id) async {
   final contents = await _parseNodes(
     b['contents'] as YamlList? ?? YamlList(),
     dir,
+    loc,
     [bookOverrides],
     const [],
     bookFont,
@@ -84,6 +91,7 @@ Future<Book> _loadBook(String id) async {
 Future<List<BookNode>> _parseNodes(
   YamlList raw,
   String dir,
+  AssetLocalizer loc,
   List<Map<String, Color>> layers,
   List<String> ancestors,
   String? fontFamily,
@@ -95,7 +103,7 @@ Future<List<BookNode>> _parseNodes(
     if (title == null) {
       // Leaf: a bare topic reference.
       final topic = await _loadTopicRow(
-        '$dir/${map['topic'] as String}',
+        loc.path('$dir/${map['topic'] as String}'),
         layers,
         ancestors,
         fontFamily,
@@ -112,7 +120,7 @@ Future<List<BookNode>> _parseNodes(
       final overview = overviewPath == null
           ? null
           : await _loadTopicRow(
-              '$dir/$overviewPath',
+              loc.path('$dir/$overviewPath'),
               childLayers,
               ancestors,
               groupFont,
@@ -126,7 +134,7 @@ Future<List<BookNode>> _parseNodes(
       List<BookNode> children;
       if (view == 'collection') {
         final formPath = map['formulary'] as String;
-        final raw = await rootBundle.loadString('$dir/$formPath');
+        final raw = await rootBundle.loadString(loc.path('$dir/$formPath'));
         formulary = Formulary.fromYaml(loadYaml(raw) as YamlMap);
         children = _formularyLeaves(
           formulary,
@@ -138,6 +146,7 @@ Future<List<BookNode>> _parseNodes(
         children = await _parseNodes(
           map['children'] as YamlList? ?? YamlList(),
           dir,
+          loc,
           childLayers,
           childAncestors,
           groupFont,

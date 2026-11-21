@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
@@ -193,7 +194,7 @@ class _StepRow extends StatelessWidget {
       return Padding(
         padding: const EdgeInsets.fromLTRB(4, 4, 2, 2),
         child: MiniMarkdown(
-          markdown: '**NOTE:** ${step.text}',
+          markdown: '**${context.l10n.procedureNote}** ${step.text}',
           fontSize: 13.5,
           height: 1.3,
           linkColor: theme.header,

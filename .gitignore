@@ -74,3 +74,7 @@ android/key.properties
 
 # IDE module files
 *.iml
+
+# Generated from lib/l10n/*.arb by `flutter pub get` (flutter: generate: true).
+# Derived data: rebuilt on every pub get, never edited or committed.
+lib/l10n/gen/

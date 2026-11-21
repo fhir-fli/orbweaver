@@ -1,0 +1,7 @@
+# Interface strings for the app shell and the block renderers. Book content is
+# NOT here: each book translates its own topic YAML (assets/books/<id>/topics/<lang>/).
+arb-dir: lib/l10n
+template-arb-file: app_en.arb
+output-dir: lib/l10n/gen
+output-localization-file: app_localizations.dart
+nullable-getter: false

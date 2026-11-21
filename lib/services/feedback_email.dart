@@ -28,6 +28,10 @@ const String kFeedbackSubjectTag = '[Orbweaver]';
 /// Separator. Everything below it is generated; everything above is the reader's.
 const String kMetadataFence = '--- please leave everything below this line ---';
 
+/// The default invitation line; screens pass the translated one.
+const String kFeedbackPromptEnglish =
+    'What is wrong, or what would help? Write it here.';
+
 /// How many [ErrorLog] entries a report carries.
 const int kErrorsInReport = 3;
 
@@ -41,6 +45,8 @@ class FeedbackContext {
     this.topicTitle,
     this.pageLabel,
     this.recentErrors = const [],
+    this.prompt = kFeedbackPromptEnglish,
+    this.language = 'en',
   });
 
   final String? bookId;
@@ -52,6 +58,13 @@ class FeedbackContext {
   /// The device's most recent uncaught errors, newest first, from
   /// [ErrorLog.entries]; empty when nothing has gone wrong.
   final List<String> recentErrors;
+
+  /// The line inviting the reader to write, in the reader's language.
+  final String prompt;
+
+  /// The language the reader was using, so a report about a translated page
+  /// is read against that translation.
+  final String language;
 
   /// Short tag for the subject line, so a full inbox is still sortable.
   String get subjectSuffix {
@@ -78,13 +91,14 @@ String buildSubject(FeedbackContext c) =>
 String buildBody(FeedbackContext c, {DateTime? now}) {
   final when = (now ?? DateTime.now().toUtc()).toIso8601String();
   final lines = <String>[
-    'What is wrong, or what would help? Write it here.',
+    c.prompt,
     '',
     '',
     kMetadataFence,
     'app       orbweaver $kAppVersion',
     'platform  ${_platformLine()}',
     'when      $when',
+    'language  ${c.language}',
   ];
   if (c.bookId != null) {
     lines.add(

@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:yaml/yaml.dart';
@@ -23,7 +24,7 @@ class CreditsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kScreenChrome,
       appBar: AppBar(
-        title: const Text('Sources & credits'),
+        title: Text(context.l10n.sourcesCredits),
         backgroundColor: const Color(0xFF1E4E8C),
         foregroundColor: Colors.white,
       ),
@@ -31,7 +32,9 @@ class CreditsScreen extends StatelessWidget {
         future: loadCredits(),
         builder: (context, snap) {
           if (snap.hasError) {
-            return Center(child: Text('Could not load credits: ${snap.error}'));
+            return Center(
+              child: Text(context.l10n.couldNotLoadCredits('${snap.error}')),
+            );
           }
           if (!snap.hasData) {
             return const Center(child: CircularProgressIndicator());
@@ -141,10 +144,10 @@ class _CreditsBody extends StatelessWidget {
           _Link(text: credits.privacyLabel, url: credits.privacyUrl),
         ],
         const SizedBox(height: 20),
-        const _Heading('The books'),
+        _Heading(context.l10n.creditsBooks),
         for (final s in credits.sources) _SourceCard(source: s),
         const SizedBox(height: 20),
-        const _Heading('Images'),
+        _Heading(context.l10n.creditsImages),
         Text(
           credits.imageIntro,
           style: const TextStyle(fontSize: 13, height: 1.4),

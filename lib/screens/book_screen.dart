@@ -1,5 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/library_scope.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/drug_index_screen.dart';
 import 'package:orbweaver/screens/topic_frame.dart' show TopicPager;
@@ -58,7 +59,7 @@ class _BookScreenState extends State<BookScreen> {
       appBar: SearchAppBar(
         color: widget.book.spineColor,
         title: Text(widget.book.title),
-        hintText: 'Search…',
+        hintText: context.l10n.searchHint,
         searchOpen: _searchOpen,
         controller: _searchCtrl,
         onQueryChanged: (v) => setState(() => _query = v),
@@ -383,9 +384,9 @@ class _GroupRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final count = _leafCount(group);
-    final unit = group.view == 'collection'
-        ? (count == 1 ? 'drug' : 'drugs')
-        : (count == 1 ? 'topic' : 'topics');
+    final countLabel = group.view == 'collection'
+        ? context.l10n.groupDrugCount(count)
+        : context.l10n.bookTopicCount(count);
     return InkWell(
       onTap: onTap,
       child: Padding(
@@ -414,7 +415,7 @@ class _GroupRow extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    '$count $unit',
+                    countLabel,
                     style: const TextStyle(fontSize: 11, color: Colors.black54),
                   ),
                 ],
@@ -636,13 +637,13 @@ class _EmptyState extends StatelessWidget {
   const _EmptyState();
 
   @override
-  Widget build(BuildContext context) => const Center(
+  Widget build(BuildContext context) => Center(
     child: Padding(
-      padding: EdgeInsets.all(32),
+      padding: const EdgeInsets.all(32),
       child: Text(
-        'No topics yet.\n\nContent for this book is still being authored.',
+        context.l10n.noTopicsYet,
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.black54),
+        style: const TextStyle(color: Colors.black54),
       ),
     ),
   );
@@ -658,7 +659,7 @@ class _NoMatches extends StatelessWidget {
     child: Padding(
       padding: const EdgeInsets.all(32),
       child: Text(
-        'No topics match "$query".',
+        context.l10n.noTopicsMatch(query),
         textAlign: TextAlign.center,
         style: const TextStyle(color: Colors.black54),
       ),

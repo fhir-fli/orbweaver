@@ -1,6 +1,7 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/formula_registry.dart' show FormulaSeverity;
 import 'package:orbweaver/data/score_engine.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/blocks/calculator_frame.dart';
@@ -273,9 +274,12 @@ class _ScoreBlockViewState extends State<ScoreBlockView> {
               crossAxisAlignment: CrossAxisAlignment.baseline,
               textBaseline: TextBaseline.alphabetic,
               children: [
-                const Text(
-                  'Score',
-                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+                Text(
+                  context.l10n.score,
+                  style: const TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
                 const Spacer(),
                 Text(

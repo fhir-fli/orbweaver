@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/flow_link.dart';
@@ -101,8 +102,8 @@ class _PopulationTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = TopicThemeScope.of(context);
     final (label, bg) = switch (population) {
-      DosePopulation.adult => ('Adult', theme.popAdult),
-      DosePopulation.peds => ('Peds', theme.popPeds),
+      DosePopulation.adult => (context.l10n.populationAdult, theme.popAdult),
+      DosePopulation.peds => (context.l10n.populationPeds, theme.popPeds),
       DosePopulation.both => ('', Colors.transparent),
     };
     return Container(

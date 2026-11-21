@@ -1,5 +1,6 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/search_normalizer.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/formulary.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
@@ -76,7 +77,7 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
       appBar: SearchAppBar(
         color: _accent,
         title: Text(widget.formulary.title),
-        hintText: 'Search drugs…',
+        hintText: context.l10n.searchDrugsHint,
         searchOpen: _searchOpen,
         controller: _searchCtrl,
         onQueryChanged: (v) => setState(() => _query = v),
@@ -145,7 +146,7 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Text(
-            'No drugs match "$_query".',
+            context.l10n.noDrugsMatch(_query),
             style: const TextStyle(color: Colors.black54),
           ),
         ),
@@ -378,7 +379,7 @@ class _DrugIndexScreenState extends State<DrugIndexScreen> {
               ),
             ),
             child: Text(
-              'See full ${d.name} →',
+              context.l10n.seeFullDrug(d.name),
               style: TextStyle(
                 fontSize: 12.5,
                 fontWeight: FontWeight.w600,
@@ -505,7 +506,7 @@ class DrugDetailScreen extends StatelessWidget {
             if (drug.dose != null)
               _card(
                 theme,
-                title: 'Dose & route',
+                title: context.l10n.doseAndRoute,
                 child: MiniMarkdown(
                   markdown: drug.dose!,
                   fontSize: 13,
@@ -515,7 +516,7 @@ class DrugDetailScreen extends StatelessWidget {
             if (drug.regimen != null)
               _card(
                 theme,
-                title: 'Regimen',
+                title: context.l10n.regimen,
                 child: Text(
                   drug.regimen!,
                   style: const TextStyle(fontSize: 13),
@@ -525,7 +526,7 @@ class DrugDetailScreen extends StatelessWidget {
             if (drug.daily != null)
               _card(
                 theme,
-                title: 'Daily dose',
+                title: context.l10n.dailyDose,
                 child: Text(
                   drug.daily!,
                   style: const TextStyle(
@@ -535,11 +536,11 @@ class DrugDetailScreen extends StatelessWidget {
                 ),
                 highlight: true,
               ),
-            if (drug.doses.isNotEmpty) _doseTable(),
+            if (drug.doses.isNotEmpty) _doseTable(context),
             if (drug.notes != null)
               _card(
                 theme,
-                title: 'Notes',
+                title: context.l10n.notes,
                 child: MiniMarkdown(
                   markdown: drug.notes!,
                   fontSize: 13,
@@ -550,7 +551,7 @@ class DrugDetailScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 8, left: 2),
                 child: Text(
-                  'Indication from EMLc fallback — pending OpenEvidence review.',
+                  context.l10n.indicationFallback,
                   style: TextStyle(
                     fontSize: 11,
                     fontStyle: FontStyle.italic,
@@ -564,7 +565,7 @@ class DrugDetailScreen extends StatelessWidget {
     );
   }
 
-  Widget _doseTable() {
+  Widget _doseTable(BuildContext context) {
     const firstW = 190.0;
     const bandW = 78.0;
     Widget hcell(String t, double w, {bool first = false}) => Container(
@@ -647,7 +648,7 @@ class DrugDetailScreen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    hcell('Dose', firstW, first: true),
+                    hcell(context.l10n.dose, firstW, first: true),
                     for (final c in cols) hcell(c, bandW),
                   ],
                 ),

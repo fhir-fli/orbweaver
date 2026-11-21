@@ -1,9 +1,11 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
 import 'package:orbweaver/screens/credits_screen.dart';
 import 'package:orbweaver/services/feedback_email.dart';
 import 'package:orbweaver/theme/palette.dart';
+import 'package:orbweaver/widgets/language_picker.dart';
 
 /// Library shelf — grid of book covers. Tapping a cover pushes the
 /// book's topic list. The book list is loaded from the manifest YAMLs
@@ -22,19 +24,29 @@ class ShelfScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF1E4E8C),
         foregroundColor: Colors.white,
         actions: [
+          IconButton(
+            icon: const Icon(Icons.translate),
+            tooltip: context.l10n.language,
+            onPressed: () => showLanguagePicker(context),
+          ),
           // General feedback, for anything not tied to one page. The per-page
           // button on a topic carries the page id; this one does not, so it is
           // tagged "general" and still lands in the same mail folder.
           IconButton(
             icon: const Icon(Icons.flag_outlined),
-            tooltip: 'Report a problem or suggest something',
-            onPressed: () => sendFeedback(const FeedbackContext()),
+            tooltip: context.l10n.reportProblemGeneral,
+            onPressed: () => sendFeedback(
+              FeedbackContext(
+                prompt: context.l10n.feedbackPrompt,
+                language: Localizations.localeOf(context).languageCode,
+              ),
+            ),
           ),
           // Not decoration: the bundled Wikimedia images are CC BY and CC BY-SA,
           // and both require the attribution reach whoever sees the work.
           IconButton(
             icon: const Icon(Icons.info_outline),
-            tooltip: 'Sources & credits',
+            tooltip: context.l10n.sourcesCredits,
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute<void>(
@@ -95,7 +107,7 @@ class _CoverCard extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
           ),
           Text(
-            '${book.allTopics.length} topics',
+            context.l10n.bookTopicCount(book.allTopics.length),
             style: const TextStyle(fontSize: 11, color: Colors.black54),
           ),
         ],

@@ -1,45 +1,107 @@
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/data/library_scope.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
 import 'package:orbweaver/screens/shelf_screen.dart';
 import 'package:orbweaver/screens/topic_frame.dart';
+import 'package:orbweaver/services/app_language.dart';
 import 'package:orbweaver/services/error_log.dart';
 import 'package:orbweaver/services/last_state.dart';
+import 'package:orbweaver/widgets/language_scope.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   ErrorLog.install();
-  final library = await loadLibrary();
+  final choice = await AppLanguage.loadChoice();
+  final language = AppLanguage.resolve(choice);
+  final library = await loadLibrary(language: language);
   final snapshot = await LastState.load();
-  runApp(OrbweaverApp(library: library, snapshot: snapshot));
+  runApp(
+    OrbweaverApp(
+      library: library,
+      snapshot: snapshot,
+      language: language,
+      languageChoice: choice,
+    ),
+  );
 }
 
-class OrbweaverApp extends StatelessWidget {
-  OrbweaverApp({required this.library, required this.snapshot, super.key})
-    : index = LibraryIndex(library);
+class OrbweaverApp extends StatefulWidget {
+  const OrbweaverApp({
+    required this.library,
+    required this.snapshot,
+    this.language = 'en',
+    this.languageChoice,
+    super.key,
+  });
 
   final List<Book> library;
-  final LibraryIndex index;
   final LastStateSnapshot snapshot;
+
+  /// The language [library] was loaded in.
+  final String language;
+  final String? languageChoice;
+
+  @override
+  State<OrbweaverApp> createState() => _OrbweaverAppState();
+}
+
+class _OrbweaverAppState extends State<OrbweaverApp> {
+  late List<Book> _library = widget.library;
+  late LibraryIndex _index = LibraryIndex(_library);
+  late String _language = widget.language;
+  late String? _choice = widget.languageChoice;
+  late LastStateSnapshot _snapshot = widget.snapshot;
+
+  // A new key on a language change rebuilds the Navigator, so no route
+  // keeps showing a page loaded in the old language.
+  int _generation = 0;
+
+  Future<void> _choose(String? choice) async {
+    await AppLanguage.saveChoice(choice);
+    final language = AppLanguage.resolve(choice);
+    final library = language == _language
+        ? _library
+        : await loadLibrary(language: language);
+    if (!mounted) return;
+    setState(() {
+      _choice = choice;
+      _language = language;
+      _library = library;
+      _index = LibraryIndex(library);
+      _snapshot = const LastStateSnapshot();
+      _generation++;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      key: ValueKey(_generation),
       title: 'Orbweaver',
       debugShowCheckedModeBanner: false,
+      locale: Locale(_language),
+      supportedLocales: [for (final l in kSupportedLanguages) Locale(l)],
+      localizationsDelegates: kLocalizationsDelegates,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
         useMaterial3: true,
       ),
       // Provide the link index above the Navigator so any pushed topic's
       // cross-links can resolve and navigate.
-      builder: (context, child) =>
-          LibraryScope(index: index, child: child ?? const SizedBox.shrink()),
-      onGenerateInitialRoutes: (_) => _restorePages(snapshot, library),
+      builder: (context, child) => LanguageScope(
+        choice: _choice,
+        onChoose: _choose,
+        child: LibraryScope(
+          index: _index,
+          child: child ?? const SizedBox.shrink(),
+        ),
+      ),
+      onGenerateInitialRoutes: (_) => _restorePages(_snapshot, _library),
       onGenerateRoute: (settings) => MaterialPageRoute<void>(
-        builder: (_) => ShelfScreen(books: library),
+        builder: (_) => ShelfScreen(books: _library),
       ),
     );
   }

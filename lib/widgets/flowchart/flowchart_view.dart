@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/library_scope.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/arrow_paint.dart';
@@ -248,7 +249,7 @@ class SeverityFlowchartView extends StatelessWidget {
         if (fc.postConvergence != null) {
           final noChange = forwardExits.isNotEmpty
               ? forwardExits.first.label
-              : 'No change';
+              : context.l10n.noChange;
           final parts = noChange.split(RegExp(r'\s+'));
           final before = parts.isNotEmpty ? parts.first : noChange;
           final after = parts.length >= 2 ? parts.sublist(1).join(' ') : null;

@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
@@ -29,14 +30,14 @@ class DrugCardBlockView extends StatelessWidget {
   final DrugCardBlock block;
   final TopicTheme theme;
 
-  String? _useMd() {
+  String? _useMd(AppLocalizations l10n) {
     final lines = <String>[
-      for (final i in block.indications) '- Tx: $i',
+      for (final i in block.indications) '- ${l10n.drugTreats} $i',
       for (final d in block.doses)
         if (d.population == DosePopulation.both)
           '- ${d.text}'
         else
-          '- ${_pop(d.population)}: ${d.text}',
+          '- ${_pop(l10n, d.population)}: ${d.text}',
     ];
     return lines.isEmpty ? null : lines.join('\n');
   }
@@ -47,7 +48,7 @@ class DrugCardBlockView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final caution = [...block.contraindications, ...block.warnings];
-    final use = _useMd();
+    final use = _useMd(context.l10n);
     final cautionMd = _bulletsMd(caution);
     final notesMd = _bulletsMd(block.pearls);
 
@@ -56,7 +57,7 @@ class DrugCardBlockView extends StatelessWidget {
       children: [
         if (use != null)
           _Section(
-            label: 'Use',
+            label: context.l10n.drugUse,
             bg: theme.drugUseFill,
             spine: theme.drugUseSpine,
             markdown: use,
@@ -64,7 +65,7 @@ class DrugCardBlockView extends StatelessWidget {
           ),
         if (cautionMd != null)
           _Section(
-            label: 'Caution',
+            label: context.l10n.drugCaution,
             bg: theme.drugCautionFill,
             spine: theme.drugCautionSpine,
             markdown: cautionMd,
@@ -131,7 +132,7 @@ class DrugCardBlockView extends StatelessWidget {
             topSections,
           if (notesMd != null)
             _Section(
-              label: 'Notes',
+              label: context.l10n.notes,
               bg: block.criticalCare
                   ? theme.drugNotesCcFill
                   : theme.drugNotesFill,
@@ -146,9 +147,9 @@ class DrugCardBlockView extends StatelessWidget {
     );
   }
 
-  String _pop(DosePopulation p) => switch (p) {
-    DosePopulation.adult => 'Adult',
-    DosePopulation.peds => 'Peds',
+  String _pop(AppLocalizations l10n, DosePopulation p) => switch (p) {
+    DosePopulation.adult => l10n.populationAdult,
+    DosePopulation.peds => l10n.populationPeds,
     DosePopulation.both => '',
   };
 }

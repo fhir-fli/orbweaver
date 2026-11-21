@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/flow_node.dart';
@@ -218,7 +219,7 @@ class _YesNoArrow extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            label.label,
+            label == YesNo.yes ? context.l10n.answerYes : context.l10n.answerNo,
             style: const TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.w700,
@@ -248,7 +249,7 @@ class _ContinuationArrow extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            label.label,
+            label == YesNo.yes ? context.l10n.answerYes : context.l10n.answerNo,
             style: const TextStyle(
               fontSize: 11,
               fontWeight: FontWeight.w700,

@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/blocks/prose_block_view.dart';
@@ -44,7 +45,12 @@ class BandCalloutBlockView extends StatelessWidget {
     // Care"); an explicit empty string means a bare tinted run with no
     // heading, which is how the print marks a single CC or peds line
     // sitting inside somebody else's section (p.11, p.79).
-    final title = block.title ?? block.band.defaultTitle;
+    final title =
+        block.title ??
+        switch (block.band) {
+          CalloutBand.peds => context.l10n.bandPediatrics,
+          CalloutBand.criticalCare => context.l10n.bandCriticalCare,
+        };
 
     return SectionBracket(
       color: rule,

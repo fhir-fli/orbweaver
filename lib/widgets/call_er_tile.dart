@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 
 /// The print's "Call ER" tile: a white card with a heavy black outline holding
@@ -42,7 +43,7 @@ class CallErTile extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'Call',
+            context.l10n.call,
             style: TextStyle(
               fontSize: size * 0.62,
               fontWeight: FontWeight.w700,
