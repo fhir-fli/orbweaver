@@ -1,0 +1,90 @@
+# translated-from-sha256: 0bfccf7af382fd7b69624e21397567888289eff9df1e54899e1917bc771fc05d
+topic:
+  id: "pb-adult-cardiac-arrest"
+  title: "Paro cardíaco en adultos"
+  list_subtitle: "p.14 · ramas de SVAC"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["svac", "adulto", "paro_cardiaco", "rcp", "reanimacion", "emergencia"]
+  category: "critical_care"
+  page_number: 14
+
+  blocks:
+
+    - type: "flowchart"
+      variant: "cycle"
+      nodes:
+        - title: "Seguridad, estimular, pedir ayuda — trasladar al paciente a un área de emergencia (siempre que pueda trasladarse con seguridad)"
+        - shape: "decision"
+          title: "VERIFICAR PULSO: ¿pulso DEFINIDO palpado dentro de 10 segundos?"
+          down_label: "Sin pulso"
+          branches:
+            - label: "Pulso definido"
+              side: "right"
+              box:
+                title: "Pulso presente — brindar soporte y monitorizar"
+                severity: "priority"
+                bullets:
+                  - "Abrir y mantener la vía aérea"
+                  - "1 respiración cada 6 segundos"
+                  - "Reevaluar el pulso cada 2 min"
+                  - "→ Algoritmo post paro cardíaco"
+        - id: "cpr"
+          title: "Iniciar RCP — 2 minutos"
+          severity: "emergency"
+          bullets:
+            - "Compresiones continuas hasta disponer de mascarilla con bolsa-válvula"
+            - "30 compresiones : 2 ventilaciones"
+            - "Conectar O2 a la mascarilla con bolsa-válvula"
+            - "Adrenalina (epinefrina) 1 mg IV en 10 ml de solución salina normal, seguida de un lavado de 20 ml — **repetir cada 3–5 minutos**, NO en cada ciclo"
+            - "Identificar y tratar las causas reversibles (H y T de abajo)"
+        - shape: "decision"
+          title: "Tras 2 minutos — cambiar a quien comprime, verificar pulso (≤ 10 s) y ritmo. ¿Pulso presente?"
+          down_label: "Sí — RCE"
+          branches:
+            - label: "No"
+              side: "left"
+              box:
+                title: "Reanudar RCP de inmediato"
+                severity: "emergency"
+                bullets:
+                  - "Adrenalina solo si han pasado 3–5 minutos desde la última dosis"
+                  - "Seguir trabajando sobre las causas reversibles"
+              loop_to: "cpr"
+              loop_label: "cada 2 min"
+        - title: "→ Algoritmo post paro cardíaco"
+
+    - type: "table"
+      columns: []
+      rows:
+        - cells:
+            - "**H**ipoglucemia"
+            - "**T**ensión (neumotórax a tensión)"
+        - cells:
+            - "**H**ipovolemia"
+            - "**T**aponamiento cardíaco"
+        - cells:
+            - "**H**ipoxia"
+            - "**T**óxicos"
+        - cells:
+            - "**H**idrogeniones (acidosis)"
+            - "**T**rombosis pulmonar"
+        - cells:
+            - "**H**ipo- / Hiperpotasemia"
+            - "**T**rombosis coronaria"
+        - cells:
+            - "**H**ipotermia"
+            - ""
+
+    - type: "prose"
+      markdown: |
+        La hipoglucemia no figura en la lista estándar de la AHA; se incluye aquí de forma deliberada, como causa frecuente y fácilmente reversible de paro en este contexto.
+
+    - type: "prose"
+      title: "RCP de alta calidad"
+      highlight: true
+      markdown: |
+        - **Frecuencia de compresión** 100–120/min
+        - **Profundidad de compresión** de al menos 5 cm
+        - **Permitir el retroceso completo del tórax** después de cada compresión
+        - **Minimizar las interrupciones** de las compresiones torácicas a < 10 segundos
+        - **Evitar la ventilación excesiva** — administrar solo el volumen suficiente para producir elevación visible del tórax. Administrar 2 ventilaciones cada 30 compresiones, o 1 ventilación cada 6 segundos si el paciente está intubado.

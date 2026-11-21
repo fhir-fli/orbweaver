@@ -22,139 +22,12 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:orbweaver/data/localized_asset.dart';
 import 'package:orbweaver/l10n/l10n.dart' show kSupportedLanguages;
 import 'package:yaml/yaml.dart';
 
-/// Keys whose string values are prose a reader sees, and so are translated.
-/// Any key NOT listed here must carry the identical value in a translation.
-/// Adding a key is a decision: only add one whose values are never an id,
-/// a path, a lookup key or an enum.
-const kTranslatableKeys = <String>{
-  'aliases',
-  'band_columns',
-  'band_label',
-  'bands',
-  'bullets',
-  'caption',
-  'caveats',
-  'cc_title',
-  'cells',
-  'columns',
-  'condition',
-  'criteria',
-  'daily',
-  'decision',
-  'detail',
-  'dose',
-  'down_label',
-  'form',
-  'help',
-  'intro',
-  'label',
-  'list_subtitle',
-  'lookup_label',
-  'loop_label',
-  'markdown',
-  'name',
-  'note',
-  'notes',
-  'pearls',
-  'privacy_label',
-  'reason',
-  'reference_label',
-  'regimen',
-  'rows',
-  'source',
-  'steps',
-  'subtitle',
-  'tags',
-  'text',
-  'timing',
-  'tier_note',
-  'title',
-  'warnings',
-};
-
-final _sourceLine = RegExp(r'^# translated-from-sha256: ([0-9a-f]{64})\s*$');
-
-final _numbers = RegExp(r'\d+(?:[.,]\d+)*');
-final _comparisons = RegExp('[<>≤≥]');
-final _units = RegExp(
-  '(?<![A-Za-zÀ-ÿ])(mg|mcg|µg|μg|ng|g|kg|mL|ml|L|dL|mmol|mEq|mOsm)(?![A-Za-zÀ-ÿ])',
-);
-final _links = RegExp(r'\]\(([^)]+)\)');
-
-String _sha256(File f) => sha256.convert(f.readAsBytesSync()).toString();
-
-List<String> _sorted(Iterable<String> xs) => [...xs]..sort();
-
-List<String> _all(RegExp re, String s, [int group = 0]) =>
-    _sorted(re.allMatches(s).map((m) => m.group(group)!));
-
-/// What must survive translation unchanged in one string.
-Map<String, Object> _safety(String s) => {
-  'numbers': _all(_numbers, s),
-  'comparisons': _all(_comparisons, s),
-  'units': _all(_units, s),
-  'links': _all(_links, s, 1),
-  'bold runs': '**'.allMatches(s).length,
-  'lines': '\n'.allMatches(s.trimRight()).length + 1,
-};
-
-/// Compares a parsed English node with its translation, appending each
-/// difference to [problems].
-void _compare(
-  Object? en,
-  Object? tr,
-  String path,
-  String? key,
-  List<String> problems,
-) {
-  if (en is Map) {
-    if (tr is! Map) {
-      problems.add('$path: English is a map, translation is not');
-      return;
-    }
-    final ek = _sorted(en.keys.map((k) => '$k'));
-    final tk = _sorted(tr.keys.map((k) => '$k'));
-    if (ek.join(',') != tk.join(',')) {
-      problems.add('$path: keys differ\n    en: $ek\n    tr: $tk');
-      return;
-    }
-    for (final k in en.keys) {
-      _compare(en[k], tr[k], '$path.$k', '$k', problems);
-    }
-  } else if (en is List) {
-    if (tr is! List || tr.length != en.length) {
-      problems.add(
-        '$path: list length ${en.length} vs '
-        '${tr is List ? tr.length : 'not a list'}',
-      );
-      return;
-    }
-    for (var i = 0; i < en.length; i++) {
-      _compare(en[i], tr[i], '$path[$i]', key, problems);
-    }
-  } else if (en is String && tr is String && kTranslatableKeys.contains(key)) {
-    final a = _safety(en);
-    final b = _safety(tr);
-    for (final part in a.keys) {
-      if ('${a[part]}' != '${b[part]}') {
-        problems.add(
-          '$path: $part differ\n    en: ${a[part]}  «$en»\n'
-          '    tr: ${b[part]}  «$tr»',
-        );
-      }
-    }
-  } else if (en != tr) {
-    problems.add(
-      '$path: must be identical (key "$key")\n    en: $en\n    tr: $tr',
-    );
-  }
-}
+import '../../tool/l10n/translation_check.dart';
 
 /// Every translated YAML under assets/, with its English source.
 List<(File translated, File english, String language)> _translatedFiles() {
@@ -235,7 +108,7 @@ void main() {
     // Seen failing on purpose, so a pass below means something.
     List<String> diff(String en, String tr) {
       final p = <String>[];
-      _compare(loadYaml(en), loadYaml(tr), r'$', null, p);
+      compareTranslation(loadYaml(en), loadYaml(tr), r'$', null, p);
       return p;
     }
 
@@ -259,6 +132,30 @@ topic:
     expect(diff(en, en.replaceFirst('"prose"', '"texto"')), isNotEmpty);
   });
 
+  test('wrapping and prose letters are not differences; layout is', () {
+    final p = <String>[];
+    void cmp(String en, String tr) {
+      p.clear();
+      compareTranslation({'markdown': en}, {'markdown': tr}, r'$', null, p);
+    }
+
+    // A longer translation that wraps onto more lines: same layout.
+    cmp('- Give 5 mg\n  slowly', '- Administre 5 mg\n  lentamente\n  durante');
+    expect(p, isEmpty);
+    // "e.g." and "GCS" hold no unit.
+    cmp(
+      'Toxins (e.g. amitraz), GCS < 12',
+      'Toxinas (p. ej., amitraz), ECG < 12',
+    );
+    expect(p, isEmpty);
+    // "1-ml" and "1 ml" are the same unit.
+    cmp('a 1-ml syringe', 'una jeringa de 1 ml');
+    expect(p, isEmpty);
+    // A dropped bullet is a difference.
+    cmp('- one\n- two', '- uno\n  dos');
+    expect(p, isNotEmpty);
+  });
+
   test('every translated book file matches its current English source', () {
     final problems = <String>[];
     for (final (tr, en, lang) in _translatedFiles()) {
@@ -268,18 +165,18 @@ topic:
         continue;
       }
       final first = const LineSplitter().convert(tr.readAsStringSync()).first;
-      final m = _sourceLine.firstMatch(first);
+      final m = sourceLine.firstMatch(first);
       if (m == null) {
         problems.add(
           '${tr.path}: line 1 must be "# translated-from-sha256: <hash>"',
         );
-      } else if (m.group(1) != _sha256(en)) {
+      } else if (m.group(1) != sha256Of(en)) {
         problems.add(
           '${tr.path} ($lang): the English changed since it was translated; '
           'update the translation, then re-stamp it',
         );
       }
-      _compare(
+      compareTranslation(
         loadYaml(en.readAsStringSync()),
         loadYaml(tr.readAsStringSync()),
         tr.path,
@@ -312,10 +209,10 @@ topic:
     for (final (tr, en, _) in _translatedFiles()) {
       if (!tr.path.endsWith('/formulas.yaml')) continue;
       final text = tr.readAsStringSync();
-      final m = _sourceLine.firstMatch(
+      final m = sourceLine.firstMatch(
         const LineSplitter().convert(text).first,
       );
-      if (m == null || m.group(1) != _sha256(en)) {
+      if (m == null || m.group(1) != sha256Of(en)) {
         problems.add('${tr.path}: missing or stale translated-from-sha256');
       }
       final doc = loadYaml(text) as YamlMap;
@@ -327,11 +224,11 @@ topic:
         final en = english[k] as String;
         final t = doc[k] as String;
         final slots = RegExp(r'\{[A-Za-z]+\}');
-        if (_all(slots, en).join() != _all(slots, t).join()) {
+        if (allMatches(slots, en).join() != allMatches(slots, t).join()) {
           problems.add('${tr.path}: "$k" slots differ');
         }
-        final a = _safety(en);
-        final b = _safety(t);
+        final a = safetyOf(en);
+        final b = safetyOf(t);
         for (final part in a.keys) {
           if ('${a[part]}' != '${b[part]}') {
             problems.add('${tr.path}: "$k" $part differ «$en» vs «$t»');
@@ -360,8 +257,8 @@ topic:
       expect(trKeys, keys, reason: 'app_$lang.arb keys');
       for (final k in keys) {
         expect(
-          _all(slots, tr[k] as String, 1).toSet(),
-          _all(slots, en[k] as String, 1).toSet(),
+          allMatches(slots, tr[k] as String, 1).toSet(),
+          allMatches(slots, en[k] as String, 1).toSet(),
           reason: 'app_$lang.arb "$k" placeholders',
         );
       }
