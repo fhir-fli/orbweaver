@@ -1,0 +1,20 @@
+# translated-from-sha256: 661488530d34c3e0cfecc16f3c9659b3a150428b36beeff9b0327b9767110142
+topic:
+  id: "pb-im-syncope"
+  title: "Síncope (adulto)"
+  list_subtitle: "p.126 · motivos de consulta frecuentes del adulto"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["síncope", "desmayo", "colapso", "pérdida de conciencia", "adulto", "medicina interna", "motivos de consulta frecuentes", "ECG", "ortostático"]
+  category: "medical"
+  page_number: 126
+  blocks:
+  - type: "prose"
+    title: "Síncope"
+    markdown: |
+      - **Historia y exploración física completas y de calidad**
+        - Incluya las circunstancias: cambios de medicación, deshidratación, defecación, micción, tos, dolor, exposición al calor, estar de pie al aire libre durante mucho tiempo, giro de la cabeza, presión sobre el seno carotídeo (como al afeitarse), ejercicio, falta de aire
+      - Mida glucemia aleatoria, hemograma, prueba de embarazo
+      - Considere convulsiones (pero recuerde que las sacudidas solas no significan convulsión — las sacudidas no convulsivas son frecuentes tras un síncope)
+      - ECG de 12 derivaciones; ecocardiograma si hay un soplo preocupante, o si el síncope ocurrió durante el ejercicio o se asoció a dolor torácico
+      - Electrolitos **solo** en pacientes con alta probabilidad de alteraciones
+      - Si todo lo anterior es normal, incluidos los SV, puede darse el alta a casa con seguridad

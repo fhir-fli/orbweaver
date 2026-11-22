@@ -1,0 +1,76 @@
+# translated-from-sha256: 1a4c6d4ea6e91af6f7f019be2605292d51c0dc96584f20268a388a141c4c1875
+topic:
+  id: "pb-im-copd-asthma"
+  title: "EPOC y asma del adulto"
+  list_subtitle: "p.127 · manejo de las exacerbaciones"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["EPOC", "asma", "exacerbación", "falta de aire", "disnea", "disnea", "sibilancias", "salbutamol", "albuterol", "ipratropio", "prednisolona", "oxígeno", "broncodilatador", "adulto", "medicina interna", "respiratorio"]
+  category: "medical"
+  page_number: 127
+  blocks:
+  - type: "prose"
+    title: "Historia"
+    markdown: |
+      - **MC:** casi siempre falta de aire
+      - **EPOC:** síntomas a menudo crónicos y progresivos
+        - Tos, sibilancias
+        - Producción de esputo (3 meses o más en los últimos 2 años)
+        - Disnea de esfuerzo, en general peor con la actividad de la parte superior del cuerpo; la de la parte inferior se tolera mejor
+        - Antecedente de tabaquismo
+      - **Asma:** también puede haber tos, opresión torácica, sibilancias
+  - type: "prose"
+    title: "Hallazgos de la exploración física / las pruebas"
+    markdown: |
+      - Fase espiratoria prolongada
+      - Sibilancias espiratorias
+      - Uso de músculos respiratorios accesorios
+      - Hipoxia
+      - NO acropaquias (si las hay, debe considerarse otro diagnóstico)
+      - RxT: hiperinsuflación, diafragma aplanado
+  - type: "flowchart"
+    variant: "linear"
+    warnings:
+    - type: "caution"
+      text: "EPOC conocida o sospechada — busque una spO₂ de 88–92%, NO más alta. El umbral para INICIAR el oxígeno no es el objetivo en el que mantenerlo"
+    entry_chain:
+    - text: "EPOC o asma del adulto"
+      shape: "stadium"
+    steps:
+    - type: "content"
+      title: "Manejo"
+      bullets:
+      - "Monitorice, mantenga el ABC"
+      - "Controle los SV (FC, FR, spO₂, Temp, peso)"
+      - "Evalúe AVPU / GCS"
+      - "Evalúe el estado de hidratación, vía IV si es necesario"
+      - "Haga una historia y una exploración física breves y dirigidas"
+    - type: "content"
+      title: "Valore otras causas de la falta de aire"
+      bullets:
+      - "Insuficiencia cardíaca"
+      - "Neumonía"
+      - "TB pulmonar"
+    - type: "content"
+      title: "Tratamiento broncodilatador"
+      bullets:
+      - "Salbutamol / ipratropio cada 20 min × 3 dosis — nebulizador (5 mg / 0.5 mg) o IDM 8 inhalaciones"
+      - "Precaución con el salbutamol en la cardiopatía"
+      - "Reevalúe tras el primer tratamiento y tras los 3 primeros; si los síntomas mejoran de forma espectacular, es más probable el asma"
+      - "Prednisolona 40 mg/día × 5 días"
+    convergence:
+      text: "¿Más esputo, cambio de color a amarillo/verde, o aumento de la disnea, fiebre, taquipnea?"
+      shape: "diamond"
+      bullets:
+      - text: "Sospeche una exacerbación infecciosa de la EPOC y trátela"
+      - text: "Amoxicilina / clavulánico 875 mg dos veces al día × 5 días"
+      - text: "Doxiciclina 100 mg dos veces al día × 10 días"
+      - text: "Azitromicina 500 mg una vez al día × 3 días"
+  - type: "prose"
+    title: "Nota importante sobre el oxígeno"
+    callout: true
+    palette:
+      alert: "0xFFEF6C00"
+      alert_fill: "0xFFFFF3E0"
+      alert_text: "0xFFE65100"
+    markdown: |
+      Si el paciente tiene EPOC conocida o sospechada, busque una **spO₂ de 90–92%, no más alta**.
