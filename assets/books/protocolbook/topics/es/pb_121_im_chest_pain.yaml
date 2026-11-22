@@ -1,0 +1,142 @@
+# translated-from-sha256: edbe72147453cfd8413689b1456ec65712920bd47d51566e4a5b44c794484ab1
+topic:
+  id: "pb-im-chest-pain"
+  title: "Dolor torácico / síndrome coronario agudo"
+  list_subtitle: "pp.121–122 · algoritmo de SCA · HEART / TIMI"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["dolor torácico", "SCA", "síndrome coronario agudo", "IAMCEST", "IAMSEST", "angina", "isquemia", "isquemia", "medicina interna", "cardiología", "puntuación HEART", "TIMI", "ácido acetilsalicílico", "nitroglicerina", "troponina", "estratificación del riesgo", "probabilidad pretest"]
+  category: "medical"
+  pages:
+  - page_number: 121
+    blocks:
+    - type: "prose"
+      title: "Dolor torácico"
+      markdown: |
+        - Debe considerarse un diagnóstico diferencial amplio
+        - En general lo más peligroso: síndrome coronario agudo, disección aórtica, embolia pulmonar, neumotórax a tensión, taponamiento pericárdico, mediastinitis (por causas como la rotura esofágica)
+    - type: "prose"
+      title: "Manejo — molestia torácica que sugiere isquemia"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Obtenga / revise el ECG
+        - Controle los signos vitales (FC, FR, spO₂, Temp, peso)
+        - Evalúe AVPU / GCS, el estado de hidratación
+        - Inicie oxígeno si la spO₂ < 90%, coloque una vía IV si es necesario
+        - Haga una historia y una exploración física breves y dirigidas
+        - **Ácido acetilsalicílico** 300 / 325 mg VO × 1 dosis
+        - **Nitroglicerina** en aerosol o tableta sublingual 0.4 mg cada 5 minutos × 3 dosis como máximo, hasta que cedan los síntomas
+        - Morfina / fentanilo IV si están disponibles para controlar el dolor
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Molestia torácica que sugiere isquemia"
+        shape: "stadium"
+      stages:
+      - decision: "¿Elevación del ST en el ECG?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate como IAMCEST"
+            severity: "emergency"
+        - label: "No"
+          continue: true
+      - decision: "Estratificación del riesgo"
+        criteria:
+        - "Si hay troponina: use la puntuación HEART"
+        - "Si hay troponina o CK-MB: use la puntuación TIMI — riesgo alto, trate como IAMSEST"
+        - "Si no hay análisis: use la puntuación TIMI sin análisis — riesgo alto, trate como IAMSEST; riesgo bajo, use los tipos de dolor torácico anginoso"
+        outcomes:
+        - label: "Riesgo alto"
+          box:
+            title: "Trate como IAMSEST"
+            severity: "priority"
+        - label: "Riesgo intermedio"
+          box:
+            title: "Tratamiento conservador"
+        - label: "Riesgo bajo / muy bajo"
+          box:
+            title: "Busque otras causas"
+  - page_number: 122
+    blocks:
+    - type: "prose"
+      title: "Puntuación HEART"
+      markdown: |
+        Puntuación **≤ 3** riesgo bajo · **4–6** riesgo intermedio · **≥ 7** riesgo alto.
+    - type: "table"
+      columns: ["", "Característica", "Puntos"]
+      column_flex: [3, 8, 2]
+      column_align: ["left", "left", "center"]
+      rows:
+      - cells: ["**Historia**", "Muy sospechosa", "2"]
+      - cells: ["", "Moderadamente sospechosa", "1"]
+      - cells: ["**ECG**", "**Desviación** significativa del ST — descenso **o** elevación no atribuible a BRI, HVI o digoxina", "2"]
+      - cells: ["", "Alteración inespecífica de la repolarización", "1"]
+      - cells: ["**Edad**", "65 o más", "2"]
+      - cells: ["", "45–65", "1"]
+      - cells: ["**Factores de riesgo**", "diabetes, fumador desde hace > 90 días, hiperlipidemia, hipertensión, antecedente familiar de EC, IMC > 30, antecedente de enfermedad aterosclerótica", "—"]
+      - cells: ["", "3 o más", "2"]
+      - cells: ["", "1–2", "1"]
+      - cells: ["**Troponina**", "> 3 veces el límite normal", "2"]
+      - cells: ["", "1–3 veces el límite normal", "1"]
+    - type: "prose"
+      title: "Puntuación de riesgo TIMI (TRS) para el IAMSEST"
+      markdown: |
+        Una puntuación **≥ 3** indica riesgo alto. Un punto por cada uno:
+    - type: "table"
+      columns: ["Característica", "Punto"]
+      column_flex: [9, 2]
+      column_align: ["left", "center"]
+      rows:
+      - cells: [{text: "**Antecedentes**", span: 2}]
+      - cells: ["Edad ≥ 65", "1"]
+      - cells: ["≥ 3 factores de riesgo de EC (hipertensión, hipercolesterolemia, diabetes, antecedente familiar de EC, fumador actual)", "1"]
+      - cells: ["EC conocida (estenosis ≥ 50%)", "1"]
+      - cells: ["Uso de ácido acetilsalicílico en los últimos 7 días", "1"]
+      - cells: [{text: "**Presentación**", span: 2}]
+      - cells: ["Angina intensa (≥ 2 episodios en las últimas 24 horas)", "1"]
+      - cells: ["Desviación del ST ≥ 0.5 mm", "1"]
+      - cells: ["+ biomarcadores cardíacos (troponina, CK-MB)", "1"]
+    - type: "prose"
+      title: "Tipos de dolor torácico anginoso"
+      markdown: |
+        Tres componentes:
+
+        - Dolor o molestia torácica retroesternal
+        - Desencadenado por el esfuerzo / ejercicio / estrés emocional
+        - Se alivia con reposo y/o nitroglicerina
+
+        Clasificación:
+
+        - **Angina típica**: tiene los 3 componentes
+        - **Angina atípica**: tiene 2 de 3
+        - **Dolor torácico no anginoso**: tiene < 2 componentes
+    - type: "prose"
+      title: "Probabilidad de enfermedad coronaria"
+      markdown: |
+        Probabilidad pretest según edad, sexo y tipo de dolor:
+
+        🛑 **Esta tabla SOBREESTIMA de forma sustancial la prevalencia actual de la enfermedad.** Es
+        una tabla tipo Diamond-Forrester, y la validación contemporánea sitúa la tasa real
+        mucho más abajo — en PROMISE, la EC ≥ 50% observada fue **13.9% frente a un 40.6%
+        predicho**, aproximadamente un tercio de lo que dice la tabla; en una cohorte de 3,903 pacientes, 7%
+        real frente a 31.4% predicho. **Aproximadamente la mitad de los pacientes "intermedios"
+        se reclasifican como bajos.**
+
+        **Lea cada cifra de aquí como un límite superior, y trate "intermedio" como
+        probablemente bajo.** Tal como está, la tabla empuja a los pacientes hacia más pruebas y
+        tratamiento de los justificados — lo contrario de lo que necesita este entorno. La tabla de
+        probabilidad pretest de la ESC de 2019, o el modelo CAD Consortium, se ajusta mucho mejor a las
+        poblaciones actuales e incluye un amplio grupo de "muy bajo".
+    - type: "table"
+      columns: ["Edad", "Sexo", "Típica", "Atípica", "No anginoso"]
+      column_flex: [3, 3, 4, 4, 4]
+      column_align: ["left", "left", "center", "center", "center"]
+      rows:
+      - cells: ["30–39", "Hombres", "Intermedia", "Intermedia", "Baja"]
+      - cells: ["", "Mujeres", "Intermedia", "Muy baja", "Muy baja"]
+      - cells: ["40–49", "Hombres", "**Alta**", "Intermedia", "Intermedia"]
+      - cells: ["", "Mujeres", "Intermedia", "Baja", "Muy baja"]
+      - cells: ["50–59", "Hombres", "**Alta**", "Intermedia", "Intermedia"]
+      - cells: ["", "Mujeres", "Intermedia", "Intermedia", "Baja"]
+      - cells: ["60–69", "Hombres", "**Alta**", "Intermedia", "Intermedia"]
+      - cells: ["", "Mujeres", "**Alta**", "Intermedia", "Intermedia"]
