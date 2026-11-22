@@ -86,3 +86,8 @@ litert_gemma-4-E4B-it	assets/books/wvems/topics/wvems_2026_020.yaml	178.3	0	0	3
 litert_gemma-4-E4B-it	assets/books/wvems/topics/wvems_2026_062.yaml	187.5	0	0	0
 litert_gemma-4-E4B-it	assets/books/calculators/topics/conv_steroids.yaml	86.9	0	0	0
 litert_gemma-4-12B-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	481.8	0	0	bad-reply: Invalid \escape: line 16 column 696 (char 1103)
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	363.0	1947	1658	0
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	212.8	2100	1923	0
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	1207.6	1852	1637	0
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	5374.2	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	158.0	1234	913	0
