@@ -1,0 +1,53 @@
+# translated-from-sha256: 65d543c0797b5af83d1922122c027cae981f75e06c704ccb40bce5be7f131732
+topic:
+  id: "wvems-2025-drug-ref-a"
+  title: "Referencia de fármacos: A"
+  list_subtitle: "p.120 · tarjetas de fármacos"
+  version: "v250218"
+  last_reviewed: "2024-10"
+  tags: ["drug_reference", "wvems"]
+  category: "universal"
+  page_number: 120
+  blocks:
+  - type: "drug_card"
+    name: "Afrin®"
+    class: "Oxymetazoline — α-adrenergic agonist"
+    image: "assets/drug_images/afrin.png"
+    indications:
+    - "Nosebleeds (epistaxis)"
+    doses:
+    - population: "adult"
+      text: "1 pulverización IN"
+    - population: "peds"
+      text: "Solo a partir de 6 años"
+    warnings:
+    - "APP: cardiopatía coronaria, HTA"
+    - "Puede causar cefalea, molestias nasales"
+    - "Categoría C en el embarazo: seguridad no establecida"
+    pearls:
+    - "Protocolo: epistaxis"
+    - "Inicio: segundos · Duración: 6 h"
+    - "reference.medscape.com/drug/343408"
+  - type: "drug_card"
+    name: "Salbutamol (albuterol)"
+    class: "Ventolin® — β-adrenergic agonist"
+    image: "assets/drug_images/albuterol.png"
+    indications:
+    - "Wheezing"
+    - "Hyperkalemia"
+    doses:
+    - population: "adult"
+      text: "2.5 mg nebulizado"
+    - population: "peds"
+      text: "0.15 mg/kg"
+    warnings:
+    - "APP: tratamiento antirretroviral"
+    - "APP: hipopotasemia"
+    - "Puede causar temblor, ansiedad"
+    - "Puede causar palpitaciones, taquicardia"
+    - "Categoría C en el embarazo: seguridad no establecida"
+    pearls:
+    - "Protocolos: disnea, reacción alérgica"
+    - "Cuatro (4×) nebulizaciones seguidas en la hiperpotasemia"
+    - "Inicio: 30 min · Duración: 2 h"
+    - "reference.medscape.com/drug/343426"
