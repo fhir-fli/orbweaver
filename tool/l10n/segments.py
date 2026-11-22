@@ -14,7 +14,7 @@ from ruamel.yaml import YAML
 from ruamel.yaml.scalarstring import LiteralScalarString
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CHECK = os.path.join(HERE, '..', 'translation_check.dart')
+CHECK = os.path.join(HERE, 'translation_check.dart')
 _block = re.search(r'kTranslatableKeys = <String>\{(.*?)\};', open(CHECK).read(), re.S)
 KEYS = set(re.findall(r"'([a-z_]+)'", _block.group(1)))
 assert 'markdown' in KEYS and 'title' in KEYS, KEYS

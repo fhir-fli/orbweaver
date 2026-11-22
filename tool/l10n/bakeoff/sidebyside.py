@@ -4,7 +4,8 @@ Spanish, for reading by eye. Short pieces (< 25 chars) are grouped at the
 end. Run from tool/l10n/bakeoff/."""
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import segments
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+import segments  # tool/l10n/segments.py
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 MODELS = ['haiku', 'gemini_gemini-3.1-flash-lite', 'gemini_gemma-4-31b-it', 'litert_gemma-4-E4B-it', 'opus-5-5-conversation']

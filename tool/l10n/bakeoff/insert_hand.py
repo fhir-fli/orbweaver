@@ -5,7 +5,8 @@ Writes outputs/opus-5-5-conversation/<page> and its .check.txt, one page at
 a time. Run from tool/l10n/bakeoff/."""
 import hashlib, json, os, re, subprocess, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import segments
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+import segments  # tool/l10n/segments.py
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))

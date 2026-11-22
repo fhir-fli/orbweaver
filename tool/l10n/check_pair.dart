@@ -2,9 +2,11 @@
 // test suite checks bundled translations (structure + safety content; the
 // sha256 stamp is reported but not required, for drafts not yet stamped).
 //
-//   dart run tool/l10n/check_pair.dart <english.yaml> <translated.yaml>
+//   dart run tool/l10n/check_pair.dart <english.yaml> <translated.yaml> [...]
 //
-// Prints one line per problem and exits 1 if there are any.
+// Takes one or more pairs. For each pair prints `== <translated>`, the
+// stamp, one line per problem and `problems: N`; exits 1 if any pair has
+// a problem.
 
 import 'dart:io';
 
@@ -13,19 +15,30 @@ import 'package:yaml/yaml.dart';
 import 'translation_check.dart';
 
 void main(List<String> args) {
-  if (args.length != 2) {
-    stderr.writeln('usage: check_pair.dart <english.yaml> <translated.yaml>');
+  if (args.isEmpty || args.length.isOdd) {
+    stderr.writeln(
+      'usage: check_pair.dart <english.yaml> <translated.yaml> [...]',
+    );
     exit(2);
   }
-  final en = File(args[0]);
-  final tr = File(args[1]);
+  var failed = false;
+  for (var i = 0; i < args.length; i += 2) {
+    if (args.length > 2) stdout.writeln('== ${args[i + 1]}');
+    if (!_checkPair(File(args[i]), File(args[i + 1]))) failed = true;
+  }
+  exit(failed ? 1 : 0);
+}
+
+bool _checkPair(File en, File tr) {
   final problems = <String>[];
   Object? parsed;
   try {
     parsed = loadYaml(tr.readAsStringSync());
   } on YamlException catch (e) {
-    stdout.writeln('${tr.path}: not valid YAML: ${e.message}');
-    exit(1);
+    stdout
+      ..writeln('${tr.path}: not valid YAML: ${e.message}')
+      ..writeln('problems: 1');
+    return false;
   }
   compareTranslation(
     loadYaml(en.readAsStringSync()),
@@ -45,5 +58,5 @@ void main(List<String> args) {
     stdout.writeln(p);
   }
   stdout.writeln('problems: ${problems.length}');
-  exit(problems.isEmpty ? 0 : 1);
+  return problems.isEmpty;
 }

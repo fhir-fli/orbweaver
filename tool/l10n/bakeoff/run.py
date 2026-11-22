@@ -23,7 +23,8 @@ import sys
 import time
 import urllib.request
 
-import segments
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+import segments  # tool/l10n/segments.py
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
