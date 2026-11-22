@@ -1,0 +1,134 @@
+# translated-from-sha256: 1f086985375cbd8ff61a3d933d2aca55fe0eeba8a3d5ef61551ab20bf8248d46
+topic:
+  id: "wvems-2026-070"
+  version: "v260101"
+  title: "Quemaduras"
+  list_subtitle: "2026-070 · térmicas / químicas / eléctricas"
+  last_reviewed: "Oct 2025"
+  tags:
+  - "quemaduras"
+  - "materiales peligrosos"
+  - "químicas"
+  - "eléctricas"
+  - "quemadura solar"
+  - "traumatismo"
+  aliases:
+  - "Materiales peligrosos"
+  - "Quemadura térmica / química / eléctrica"
+  - "Quemadura solar"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 70
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "safety"
+        text: "Garantice la SEGURIDAD del proveedor"
+      entry_chain:
+      - text: "Lesión térmica, química o eléctrica"
+        shape: "stadium"
+      - text: "Detenga la quemadura"
+        shape: "rounded_rectangle"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Superficial"
+        - "Menos del 5% de SCT"
+        actions:
+        - text: "Posición de confort"
+          kind: "procedure"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Profunda o con ampollas"
+        - "Cara o vía aérea"
+        actions:
+        - text: "Cuidado de la herida"
+          kind: "procedure"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "safety"
+          text: "Garantice la DESCONTAMINACIÓN del paciente"
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[Respiración](topic:wvems-2026-006)"
+        - text: "Circulación / [choque](topic:wvems-2026-008)"
+        - text: "[Dolor](topic:wvems-2026-020)"
+        - text: "[Antídoto](topic:wvems-2026-096#administer-antidote)"
+      dose_table:
+      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "per hour"
+        population: "adult"
+  - page_number: 71
+    blocks:
+    - type: "prose"
+      title: "Imperativos de las quemaduras"
+      highlight: true
+      markdown: |
+        - Use la **velocidad de líquidos de ABLS** (puede usar **SSN** o **RL**). Vigile la [hipotermia](topic:wvems-2026-068).
+        - Vigile de cerca la [vía aérea](topic:wvems-2026-004) ante cualquier quemadura facial, nasal u oral.
+        - Algunas quemaduras químicas (p. ej., **ácido fluorhídrico**) pueden beneficiarse de un **[antídoto](topic:wvems-2026-096#administer-antidote)**.
+        - Vigile el **[ECG](topic:wvems-2026-096#12-lead)** en las quemaduras eléctricas > **1,000 v**.
+        - Retire las joyas adyacentes y distales si es posible.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Velocidad ABLS"
+        callout: true
+        markdown: |
+          - 14+ años: **500 mL/h**
+          - 6–13 años: **250 mL/h**
+          - 0–5 años: **125 mL/h**
+      - type: "image"
+        path: "assets/books/wvems/images/bsa_rule_of_nines.png"
+        size: "full"
+        caption: "Regla de los 9 (SCT del adulto) — palma (con los dedos) ≈ 1%, periné 1%."
+    - type: "prose"
+      title: "Alerta de TRAUMA"
+      callout: true
+      dashed: true
+      call_er: true
+      markdown: |
+        - Si hay intervención mayor
+        - O mecanismo mayor
+        - Active una alerta de **TRAUMA**
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - La **regla de los 9** permite estimar la SCT en adultos.
+          - La palma del paciente (**con los dedos**) es aproximadamente el 1% de la SCT.
+          - Considere solo el espesor parcial y total al calcular la SCT.
+        - Este protocolo incluye las **quemaduras químicas** y las exposiciones cutáneas.
+          - Para **gases** e [inhalación](topic:wvems-2026-072) de humo, remítase a [inhalación](topic:wvems-2026-072).
+          - Para **envenenamiento** e ingestiones tóxicas, remítase a [sobredosis / tóxicos](topic:wvems-2026-040).
+        - Si se conoce el producto químico, considere llamar a **CHEMTREC**: 800-424-9300.
+        - Esto **no** incluye la exposición a **radiación** (llame a **control médico**).
+        - Considere el [triaje de destino](topic:wvems-2026-109#destination-triage) aeromédico si la quemadura mayor es > 20% de SCT.
+          - No hay centros de quemados verificados por la ABA cerca de la región de WVEMS.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Burns — https://emedicine.medscape.com/article/1278244 [Ver: 10/23]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 30
+
+        NEMSIS: 9914085, 9914095, 9914209, 9914213
