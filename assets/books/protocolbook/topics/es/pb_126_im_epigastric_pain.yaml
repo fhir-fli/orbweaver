@@ -1,0 +1,23 @@
+# translated-from-sha256: df35047a5252482741149018beaee1a7913fdb73fe95eac2f43a21836e809e59
+topic:
+  id: "pb-im-epigastric-pain"
+  title: "Dolor epigástrico (adulto)"
+  list_subtitle: "p.126 · dispepsia · signos de alarma"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["dolor epigástrico", "dispepsia", "dolor abdominal", "H. pylori", "helicobacter", "úlcera", "EGD", "endoscopia", "pancreatitis", "colecistitis", "adulto", "medicina interna", "motivos de consulta frecuentes"]
+  category: "medical"
+  page_number: 126
+  blocks:
+  - type: "prose"
+    title: "Dolor epigástrico"
+    markdown: |
+      - **Historia y exploración física completas y de calidad**
+        - SV y SpO₂
+        - Considere: SCA, pancreatitis, CAD, colecistitis, úlcera, preeclampsia / eclampsia, HELLP, embarazo ectópico
+        - Pruebas a considerar: ECG de 12 derivaciones, RxT
+        - Análisis a considerar: hemograma, función renal, amilasa / lipasa, PFH, glucosa, prueba de embarazo
+        - Signos que requieren interconsulta quirúrgica inmediata: SV inestables o signos de peritonitis (dolor abdominal intenso a la palpación o rebote)
+        - Indicaciones de esofagogastroduodenoscopia (EGD): > 55 años, sangrado / heces con sangre / vómito con sangre / anemia, saciedad precoz, pérdida de peso inexplicada o involuntaria (> 10% del peso corporal), disfagia progresiva, odinofagia, náuseas/vómitos persistentes, antecedente personal o familiar de cáncer gastrointestinal, úlcera previa, masa abdominal
+        - Helicobacter pylori:
+          - ≤ 55 años — haga la prueba de H. pylori si es posible, trate si es positiva
+          - > 55 años — considere la EGD; si es negativa, haga la prueba de H. pylori, trate si es positiva
