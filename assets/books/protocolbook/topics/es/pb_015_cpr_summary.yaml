@@ -1,0 +1,137 @@
+# translated-from-sha256: 87d9ba7e834e033a80f0fdd351a72674fdf8917d6768d03cc93567e9272b3f52
+# ============================================================
+# ProtocolBook p.15 — Summary of Steps of CPR for Adults, Children and Infants
+#
+# Schema feature exercised:
+#   - TableCell span: cells covering multiple columns (most rows share
+#     one value across Adults/Children/Infants; a few vary per column)
+#
+# ✅ OE-CONFIRMED CHANGES APPLIED (Grey's OpenEvidence pass, 2026-07-26).
+#   Two of these were rated HIGH — this page had been silently
+#   flattening an age difference the 2025 guidelines widened.
+#
+#   1. 🔴 HIGH — RESCUE BREATHS was ONE span-3 cell reading "1 breath
+#      every 3–5 seconds (12–20 breaths/min)" for every age. Adults and
+#      children now diverge sharply: adults 1 breath every 5–6 s
+#      (10–12/min), children and infants 1 breath every 2–3 s
+#      (20–30/min). Split into an Adults cell + a span-2 Children/
+#      Infants cell; the Newborns 30–50/min line rides with the
+#      paediatric cell where it belongs.
+#
+#   2. 🔴 HIGH — VENTILATIONS WITH ADVANCED AIRWAY had the same
+#      problem: one span-3 cell at "1 breath every 6–8 seconds
+#      (8–10 breaths/min)". That is right for ADULTS and roughly a
+#      THIRD of the correct paediatric rate. Split the same way:
+#      adults 6–8 s (8–10/min), children/infants 2–3 s (20–30/min).
+#
+#   3. MODERATE — COMPRESSION RATE "At least 100/min" → "100–120/min",
+#      matching p.14 (rates >120/min degrade compression depth).
+#
+#   Refs: Joyner 2026 Pediatrics (Part 6, Pediatric BLS 2025);
+#   Kleinman 2025 Circulation (Part 7, Adult BLS); Sawyer 2023.
+#
+# ✓ OE-VERIFIED, NO CHANGE: compression depths (adults ≥5 cm; children
+#   ~1/3 AP ≈ 5 cm; infants ~1/3 AP ≈ 4 cm) all correct; the newborn
+#   3:1 C:V ratio correct per the 2025 neonatal guidelines; C-A-B vs
+#   newborn A-B-C; recognition criteria; interruption limits.
+# ============================================================
+
+topic:
+  id: "pb-cpr-summary"
+  title: "Resumen de RCP — adultos, niños, lactantes"
+  list_subtitle: "p.15 · tabla comparativa"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["rcp", "reanimación", "comparación"]
+  category: "critical_care"
+  page_number: 15
+
+  blocks:
+
+  - type: "table"
+    columns: ["Componente", "Adultos", "Niños", "Lactantes"]
+    rows:
+
+    - cells:
+      - "Reconocimiento"
+      - text: |
+          No responde (todas las edades)
+          No respira o solo jadea
+          No se palpa pulso en 10 segundos
+          Recién nacido: FC < 60
+        span: 3
+
+    - cells:
+      - "Secuencia de RCP"
+      - text: |
+          Compresiones torácicas, vía aérea, respiración (C-A-B)
+          Recién nacido: vía aérea, respiración, compresiones (A-B-C)
+        span: 3
+
+    - cells:
+      - "Frecuencia de compresión"
+      - text: "100–120/min"
+        span: 3
+
+    - cells:
+      - "Profundidad de compresión"
+      - "Al menos 5 cm"
+      - text: |
+          Al menos 1/3 del diámetro AP
+          Aproximadamente 5 cm
+      - text: |
+          Al menos 1/3 del diámetro AP
+          Aproximadamente 4 cm
+
+    - cells:
+      - "Reexpansión de la pared torácica"
+      - text: |
+          Permita la reexpansión completa entre compresiones
+          Rote a quien comprime cada 2 minutos
+          Recién nacidos: se prefiere la técnica de los 2 pulgares con las manos alrededor del tórax
+        span: 3
+
+    - cells:
+      - "Interrupciones de las compresiones"
+      - text: |
+          Minimice las interrupciones de las compresiones torácicas
+          Intente limitarlas a < 10 segundos
+        span: 3
+
+    - cells:
+      - "Vía aérea"
+      - text: |
+          Inclinación de la cabeza — elevación del mentón (sospecha de traumatismo: tracción mandibular)
+          Recién nacido: posicionar, aspirar solo si hay secreciones
+        span: 3
+
+    - cells:
+      - "Relación compresión : ventilación (hasta colocar una vía aérea avanzada)"
+      - text: |
+          30:2
+          1 o 2 reanimadores
+      - text: |
+          30:2 (un reanimador)
+          15:2 (2 reanimadores)
+          3:1 (solo recién nacidos)
+        span: 2
+
+    - cells:
+      - "Ventilaciones de rescate (no responde, con pulso)"
+      - text: |
+          1 ventilación cada 5–6 segundos
+          (10–12 ventilaciones/min)
+      - text: |
+          1 ventilación cada 2–3 segundos
+          (20–30 ventilaciones/min)
+          Recién nacidos: 30–50 ventilaciones/min
+        span: 2
+
+    - cells:
+      - "Ventilaciones con vía aérea avanzada (intubado)"
+      - text: |
+          1 ventilación cada 6–8 segundos
+          (8–10 ventilaciones/min)
+      - text: |
+          1 ventilación cada 2–3 segundos
+          (20–30 ventilaciones/min)
+        span: 2

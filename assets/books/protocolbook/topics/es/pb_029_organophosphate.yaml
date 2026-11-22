@@ -1,0 +1,164 @@
+# translated-from-sha256: 89e5d1aa492b6cd7f743fa3727d079b503cc51bee8a8baba42676f32602562fb
+# ============================================================
+# ProtocolBook p.29 — Organophosphate / Carbamate poisoning
+# (insecticides / nerve gas).
+#
+# HYBRID rendering (Grey's call 2026-07-08): the source is a
+# content-flow diagram (boxes + arrows, NO decision points) →
+# rendered as clean sequential titled prose + a small weight-band
+# table, preserving all content and the top-to-bottom flow. The
+# box/arrow visual carries no clinical info beyond ordering.
+#
+# Faithful-rendering calls:
+#   - Citation superscripts (…gas)87,88, ingestion182–186 / 187,
+#     atropinisation88,188) are print footnotes → dropped.
+#   - SLUDGE-BBB mnemonic letters kept bold (they spell the aid).
+#   - Rectal-diazepam weight bands rendered as a table.
+#
+# CONTENT FLAGS for the later OE / content pass (rendered faithfully
+# now, NOT changed):
+#   - No OXIME (pralidoxime / 2-PAM) mentioned. WHO/LMIC practice is
+#     often atropine-centred (oxime benefit is debated, esp. late /
+#     carbamate), so this is defensible — flag for OE to confirm
+#     whether to add an "where available" oxime note.
+#   - Atropine "double the previous dose q5min until atropinised" is
+#     the standard escalating regimen — consistent with current tox.
+#
+# ✓ VERIFIED CURRENT (audit pass 2026-07-26):
+#   - The maintenance infusion is right: mixing the TOTAL bolus load
+#     into 250 mL run at 50 mL/hr (<25 kg) or 500 mL at 100 mL/hr
+#     (>25 kg) both deliver the loading dose over 5 hours = 20 %/hr,
+#     which sits at the top of the standard 10–20 %-of-loading-dose
+#     per hour regimen. No change needed.
+#   - Rectal diazepam bands work out to ~0.4–0.5 mg/kg across the
+#     range ✓. IV diazepam 0.2 mg/kg (child) / 10 mg (adult) ✓.
+#   - Atropinisation endpoints ✓ (has 3 of the usual 5 — dry axillae
+#     and non-pinpoint pupils not printed; cosmetic).
+#
+# ✅ OE-RESOLVED 2026-07-27, NO CHANGE NEEDED: paediatric atropine 0.02 mg/kg
+#    is what the 2025 AHA guideline table prints, and because the regimen
+#    DOUBLES every 5 min the practical difference from a 0.05 mg/kg start is
+#    one cycle. Keep 0.02. The pralidoxime prose block was reviewed and
+#    called well-calibrated (AHA gives it Class 2b; a 2026 umbrella review
+#    found neither clear benefit nor harm; atropine remains the mainstay).
+#    Atropinisation endpoints match the AHA wording exactly.
+#
+# (historical) CONTENT FLAG — OPEN (audit pass 2026-07-26, awaiting OE):
+#   - Paediatric atropine bolus printed 0.02 mg/kg. WHO uses 0.02
+#     mg/kg, but a number of current tox references start children at
+#     0.05 mg/kg in OP poisoning. Since the regimen doubles q5min the
+#     practical difference is one cycle — low risk either way, but
+#     worth an OE confirmation of the starting dose.
+# 2026-08-29 loop-renderer pass: atropine titration is now variant: cycle -
+#   bolus -> check the atropinisation endpoints -> not yet -> DOUBLE and back
+#   to the bolus, exiting to the maintenance infusion. It was a severity split
+#   in which the doubling was one bullet inside a box and the chart never
+#   returned to the endpoint check.
+# ============================================================
+
+topic:
+  id: "pb-organophosphate"
+  title: "Intoxicación por organofosforados / carbamatos"
+  list_subtitle: "p.29 · insecticidas / gases nerviosos"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["organofosforado", "carbamato", "insecticida", "colinérgico", "atropina", "intoxicación"]
+  category: "medical"
+  page_number: 29
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      - Niños: ingestión accidental frecuente
+      - Adultos: ingestión intencional frecuente
+      - **El diagnóstico es clínico**
+
+    # 2026-08-24 — the print draws p.29 as a BRANCHING chart: the SLUDGE-BBB
+    # diagnosis box forks into two parallel arms (atropine bolus ‖ diazepam for
+    # convulsions), which rejoin at maintenance, with over-atropinisation
+    # hanging off the side. It was flat prose. Rendered as `severity`, whose
+    # branches are semantically flexible. The paediatric diazepam weight table
+    # stays a table below the chart.
+  - type: "flowchart"
+    variant: "cycle"
+      # Titration loop (loop taxonomy 2): atropine is doubled and repeated every
+      # 5 minutes until the atropinisation endpoints are met, then the exit is a
+      # maintenance infusion. Drawn as a severity split, the doubling was a single
+      # bullet inside a box and the chart never returned to the endpoint check.
+    nodes:
+    - title: "Exposición a organofosforados / carbamatos — el diagnóstico es clínico"
+      bullets:
+      - "**SLUDGE-BBB:** Salivación · Lagrimeo · Micción · Diarrea · Cólicos gástricos · Emesis · Broncorrea · Broncoespasmo · Bradicardia"
+      - "Además sudoración profusa, convulsiones y coma, fasciculaciones, pupilas contraídas"
+    - id: "atropine"
+      title: "Bolo de atropina"
+      severity: "emergency"
+      bullets:
+      - "Niños: **0.02 mg/kg IV** · Adultos: **2 mg IV**"
+      branches:
+      - label: "Convulsiones"
+        side: "right"
+        box:
+          title: "Diazepam — trate la convulsión a la vez que da la atropina"
+          severity: "priority"
+          bullets:
+          - "Niños: supositorios rectales de diazepam de 2.5 mg según el peso (tabla de abajo)"
+          - "O diazepam IV 0.2 mg/kg (niños), máx. 10 mg"
+          - "Adultos: 10 mg IV"
+          - "Repita según sea necesario si reaparecen las convulsiones"
+    - shape: "decision"
+      title: "¿Atropinizado? Secreciones pulmonares secas (mejor oxigenación, respira con más facilidad), pulso > 80/min, PAS > 80 mmHg"
+      down_label: "Sí — atropinizado"
+      branches:
+      - label: "Todavía no"
+        side: "left"
+        box:
+          title: "DUPLIQUE la dosis anterior"
+          severity: "emergency"
+          bullets:
+          - "Administre la dosis duplicada y reevalúe los objetivos"
+          - "No hay un techo fijo — pueden necesitarse dosis totales muy grandes"
+        loop_to: "atropine"
+        loop_label: "cada 5 min"
+    - title: "Mantenimiento tras la atropinización"
+      bullets:
+      - "Mezcle la atropina total administrada en bolos en SSN o D5%"
+      - "Pacientes < 25 kg: 250 mL, a 50 mL/h"
+      - "Pacientes > 25 kg: 500 mL, a 100 mL/h"
+      - "Vigile cada hora si reaparecen los síntomas o hay sobreatropinización, y ajuste el ritmo"
+  - type: "prose"
+    title: "Diazepam rectal según el peso"
+    markdown: |
+      **Niños — diazepam rectal** (supositorios de 2.5 mg):
+
+  - type: "table"
+    columns: ["Peso", "Supositorios (2.5 mg)"]
+    rows:
+    - cells: ["< 10 kg", "1"]
+    - cells: ["10–15 kg", "2"]
+    - cells: ["15–20 kg", "3"]
+    - cells: ["20–25 kg", "4"]
+
+  - type: "prose"
+    markdown: |
+      - O diazepam IV 0.2 mg/kg (niños), máx. 10 mg
+      - Adultos: 10 mg IV
+      - Repita según sea necesario si aparecen convulsiones
+
+  - type: "prose"
+    markdown: |
+      **Pralidoxima (2-PAM) — donde esté disponible:**
+
+      - **Niños:** 20–50 mg/kg (máx. 2 g) IV en 30 minutos, luego 10–20 mg/kg/h
+      - **Adultos:** 1–2 g IV en 30 minutos, luego 500 mg/h
+
+      Las Uganda Clinical Guidelines 2023 la incluyen, pero el beneficio sobre la mortalidad es incierto (revisión Cochrane; ensayo controlado con placebo de Eddleston). **La atropina, administrada pronto y hasta los objetivos de arriba, es lo que cambia el pronóstico.**
+
+  - type: "prose"
+    title: "Sobreatropinización"
+    callout: true
+    markdown: |
+      Vigile la sobreatropinización:
+      - Retención urinaria
+      - Confusión / delirio
+      - Hipertermia

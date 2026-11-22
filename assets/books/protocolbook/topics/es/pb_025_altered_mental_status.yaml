@@ -1,0 +1,135 @@
+# translated-from-sha256: a0c21c6bb65b8de5b28b4f44b24bb8621e1753200bcc6da0b1aad9d07a1a6c37
+# ============================================================
+# ProtocolBook p.25–26 — Altered Mental Status & the
+# Neurologic Assessment. Two-page topic (multi-page `pages:`).
+#
+# Authoring notes:
+#   - p.25 is a formal outline (I/II/III/IV → a/b/c → i/ii/iii
+#     → 1/2/3/4 → a/b/c/d/e). MiniMarkdown renders nested bullets
+#     (2-space indent per level) but has NO auto-numbering, so the
+#     decorative Roman/letter/number labels are dropped and the
+#     hierarchy is carried by indentation. The AMPLE and AVPU
+#     labels ARE mnemonics (letters spell the word), so those are
+#     preserved inline as bold.
+#   - Source cross-ref "see next page" → "see below" (now one
+#     scrolling topic).
+#   - Coma-scale tables: the book blacks out cells where a column
+#     has no response at that score level; rendered here as an
+#     em-dash (—) meaning "no response scored at this level".
+#   - Two red-alert callouts for the safety-critical lines
+#     (never-assume-intoxication rule; coma → intubate threshold).
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). Checked and confirmed correct: the whole GCS table
+#    scored component-by-component against the standard scale (all 15
+#    rows exact); Blantyre Coma Scale structure and 0–5 range, with
+#    BCS ≤ 2 an appropriate intubation threshold for this setting;
+#    GCS ≤ 8 → intubate (universally accepted); AVPU; AMPLE; Cushing's
+#    triad as an ominous sign of raised ICP; Brudzinski's and Kernig's
+#    descriptions; and all pupil findings (unilateral fixed dilated =
+#    CN III compression, bilateral fixed dilated = brainstem, bilateral
+#    small = opioids / organophosphates / pontine haemorrhage).
+# ============================================================
+
+topic:
+  id: "pb-altered-mental-status"
+  title: "Alteración del estado mental y evaluación neurológica"
+  list_subtitle: "p.25 · evaluación + escalas de coma"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["alteración_estado_mental", "neurología", "coma", "gcs", "avpu", "bcs"]
+  category: "medical"
+
+  pages:
+
+    # ═══════════════════════ PAGE 25 ═══════════════════════
+  - page_number: 25
+    blocks:
+
+    - type: "prose"
+      title: "Abordaje"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Busque lesiones que amenacen la vida (si hay signos de traumatismo craneal, inmovilice la columna cervical)
+        - Controle los signos vitales (PA, FC, FR, spO2, Temp, peso) — **la tríada de Cushing (bradicardia, depresión respiratoria e hipertensión) es un hallazgo ominoso**
+        - Exploración física (a la vez que la historia si es posible)
+          - Exploración neurológica
+            - Breve y dirigida
+            - Distinga las causas estructurales de las no estructurales (suelen sugerirlas los hallazgos focales)
+            - Evalúe: nivel de conciencia / respuesta, respuestas motoras, reflejos del tronco encefálico
+              - Deterioro progresivo +/- signos neurológicos focales o pupilas fijas y dilatadas: pida una interconsulta quirúrgica urgente
+              - Aplique las escalas de evaluación neurológica (AVPU, BCS o GCS — vea abajo)
+              - Meningismo / rigidez de nuca (meningitis, hemorragia subaracnoidea)
+                - Signo de Brudzinski — flexión involuntaria de cadera y rodilla al flexionar el cuello forzadamente
+                - Signo de Kernig — flexión involuntaria de la rodilla al flexionar la cadera forzadamente
+              - Fondo de ojo
+                - El papiledema sugiere una PIC elevada de más de varias horas de evolución
+                - Las hemorragias retinianas en un lactante son un signo de traumatismo no accidental
+                - Pupila unilateral fija y dilatada: compresión del 3.er par craneal
+                - Pupilas bilaterales fijas y dilatadas: patología del tronco encefálico
+                - Pupilas pequeñas bilaterales: opioides, organofosforados, hemorragia pontina
+          - Exploración de la piel: los hematomas pueden sugerir traumatismo; los exantemas, infección
+          - Considere siempre: anemia, deshidratación o desnutrición en los niños
+
+    - type: "prose"
+      title: "Nunca suponga"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **NUNCA** suponga que un cambio del estado mental se debe solo a una intoxicación hasta haber descartado las alternativas.
+
+    # ═══════════════════════ PAGE 26 ═══════════════════════
+  - page_number: 26
+    blocks:
+
+    - type: "prose"
+      title: "Historia — AMPLE"
+      markdown: |
+        - **A** — Alergias
+        - **M** — Medicamentos
+        - **P** — Pasado: antecedentes médicos
+        - **L** — Última comida (Last meal)
+        - **E** — Evento: circunstancias — ¿qué pasó?
+          - ¿Rápido o gradual?
+          - ¿Síntomas previos, neurológicos, cefalea?
+          - Ingestiones
+          - Historia vaga / incoherente — ¿traumatismo no accidental?
+
+    - type: "prose"
+      title: "Escalas de evaluación neurológica — AVPU"
+      markdown: |
+        - **A** — Alerta
+        - **V** — responde a órdenes Verbales
+        - **P** — responde al estímulo doloroso (Pain) (presione con firmeza la uña del dedo medio con un bolígrafo; frote los nudillos sobre el esternón)
+        - **U** — inconsciente (Unconscious)
+
+    - type: "table"
+      title: "Escala de coma de Blantyre (BCS) — si aún no habla"
+      columns: ["Mejor respuesta motora", "Mejor respuesta verbal", "Mejor movimiento ocular", "Puntos"]
+      rows:
+      - cells: ["Localiza el dolor", "Llora con normalidad ante el dolor", "—", "2"]
+      - cells: ["Retira ante el dolor", "Se queja o llora de forma anormal ante el dolor", "Mira / sigue", "1"]
+      - cells: ["Ninguna o inapropiada", "Sin respuesta verbal", "Sin movimiento ocular", "0"]
+
+    - type: "table"
+      title: "Escala de coma de Glasgow (GCS)"
+      columns: ["Mejor respuesta motora", "Mejor respuesta verbal", "Apertura ocular", "Puntos"]
+      rows:
+      - cells: ["Obedece órdenes", "—", "—", "6"]
+      - cells: ["Localiza el dolor", "Orientado", "—", "5"]
+      - cells: ["Retira ante el dolor", "Confuso", "Espontánea", "4"]
+      - cells: ["Postura en flexión", "Palabras inapropiadas", "A la voz", "3"]
+      - cells: ["Postura en extensión", "Sonidos ininteligibles", "Al estímulo doloroso", "2"]
+      - cells: ["Ninguna", "Ninguna", "Ninguna", "1"]
+
+    - type: "prose"
+      title: "Coma"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        **GCS ≤ 8** o **BCS ≤ 2** — en general debe intubarse para proteger la vía aérea.

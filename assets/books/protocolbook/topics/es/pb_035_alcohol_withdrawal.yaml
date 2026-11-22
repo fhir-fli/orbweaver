@@ -1,0 +1,166 @@
+# translated-from-sha256: 6be84d6dc7f25a10976a5fc6fa1b58688a0de3c21e9e19771811fd4e527e6cc8
+# ============================================================
+# ProtocolBook p.35 — Alcohol Withdrawal.
+#
+# Top half = definition + a formal stages outline (Stage 1 minor
+# symptoms → Stage 2 alcoholic hallucinosis → Stage 3 withdrawal
+# seizures → Stage 4 delirium tremens).  Bottom half = a TRUE
+# decision flowchart (Wernicke concern? → thiamine; CIWA-Ar ≥10? →
+# lorazepam, with BOTH branches looping back to re-scoring) → the
+# `algorithm` variant per the hybrid rule.
+#
+# Faithful-rendering calls:
+#   - Citation superscript (management 27) dropped.
+#   - Stage numbering is semantic (temporal sequence) → kept as bold
+#     "Stage N" leads; the a/b sub-labels dropped (indentation).
+#   - The management box (monitor/vitals/GCS/IVs) precedes the first
+#     decision on the printed chart; rendered as the flowchart
+#     `entry`-adjacent titled prose section above it (same order).
+#   - The two reevaluate loop-backs (q5–10 min after lorazepam,
+#     q15–30 min if <10) are textual "→ recalculate CIWA-Ar" pointers
+#     per the standing no-drawn-back-arrow rule; both branches carry
+#     (continue ↓) to the once-stable wean terminal, mirroring the
+#     book's single down-arrow to that box.
+#   - Flowchart boxes are plain text (no links) → the CIWA-Ar scale
+#     cross-link lives in the prose line above the chart; the scale
+#     (p.36) links back.  Final "concern for more?" box rendered as a
+#     titled prose section (as on p.34) with the live altered-mental-
+#     status link.
+#
+# ✅ OE-CONFIRMED CHANGES APPLIED (Grey's OpenEvidence pass, 2026-07-26):
+#   Both were rated MODERATE severity — they affect management of a
+#   life-threatening condition.
+#
+#   1. WERNICKE SCREENING CRITERIA were incomplete. The decision node
+#      listed only "ataxia / ophthalmoplegia". The classic triad is
+#      CONFUSION + oculomotor dysfunction + ataxia, and the full triad
+#      appears in only ~10% of cases (the more sensitive Caine criteria
+#      need just 2 of 4: dietary deficiency, oculomotor abnormality,
+#      cerebellar dysfunction, altered mental status). "Confusion"
+#      added to the parenthetical; order now mirrors the stated triad.
+#      Refs: Sinha 2019 Mayo Clin Proc; Li 2025 Front Neurol; ASAM 2020.
+#
+#   2. THIAMINE DOSE was prophylaxis-only on a treatment trigger.
+#      100 mg IV daily is the ASAM PROPHYLAXIS dose (3–5 days); this
+#      node is fired by concern for Wernicke's, which warrants
+#      100–200 mg IV THREE TIMES DAILY for 3 days then oral. The box
+#      now carries both, labelled, so the malnourished-but-no-signs
+#      patient still gets the lower prophylactic regimen.
+#      (My original flag proposed 500 mg IV TDS per RCP/EFNS; OE
+#      landed on 200 mg IV TID — OE's value is what is applied.)
+#
+# ✓ OE-VERIFIED, NO CHANGE: stage timings 1–4 and the "stages may not
+#   go in order" caveat (ASAM — seizures can occur without preceding
+#   mild symptoms); lorazepam 2 mg IV; CIWA-Ar ≥10 treatment threshold
+#   (moderate withdrawal = 10–18); q5–10 min reassessment; wean to
+#   q2–4h prn.
+#
+# ⚠️ GENUINE SOURCE TYPO corrected (surfaced to Grey 2026-07-13):
+#   - Stage 4 printed "delirium trements" — spelling typo for
+#     "delirium tremens" (verified on the 300 dpi render).  Corrected
+#     here (searchability matters); source PDF should be fixed too.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
+# 2026-08-29: dropped "(next page)" after the CIWA-Ar link. In the print the
+#   scale is on the facing page; in the app it is a SEPARATE TOPIC reached by
+#   the link, and there is no next page to turn. The other seven "(next page)"
+#   references in the book were checked and are correct: each points within a
+#   multi-page topic, which the app does paginate (topic_view.dart iterates
+#   topic.pages), so the reader really does swipe to the next page.
+# ============================================================
+
+topic:
+  id: "pb-alcohol-withdrawal"
+  title: "Abstinencia alcohólica"
+  list_subtitle: "p.35 · fases + algoritmo CIWA-Ar"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["alcohol", "etanol", "abstinencia", "delirium tremens", "convulsión", "ciwa", "lorazepam", "tiamina", "wernicke"]
+  category: "medical"
+  page_number: 35
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Ocurre cuando un paciente deja de beber alcohol tras un periodo de consumo de grandes cantidades durante mucho tiempo.
+
+  - type: "prose"
+    title: "Fases"
+    markdown: |
+      No todos los pacientes pasan por todas las fases, y estas pueden no seguir el orden.
+
+      - **Fase 1 — síntomas menores**
+        - 6–12 horas después de dejar de beber
+        - Temblor, agitación, falta de apetito, náuseas, vómitos, ansiedad, sudoración, inquietud
+      - **Fase 2 — alucinosis alcohólica**
+        - 12–24 horas después de dejar de beber
+        - Pueden aparecer alucinaciones
+      - **Fase 3 — convulsiones por abstinencia**
+        - 24–48 horas después de dejar de beber (a veces antes)
+        - En general tonicoclónicas
+      - **Fase 4 — delirium tremens**
+        - 3–7 días después de dejar de beber (hasta 14 días después)
+        - Alucinaciones (en general visuales), confusión, taquicardia, hipertensión, agitación, sudoración
+
+  - type: "prose"
+    title: "Manejo de la abstinencia alcohólica"
+    markdown: |
+      - Monitorice, mantenga el ABC
+      - Controle los signos vitales (PA, FC, FR, spO2, Temp, peso)
+      - Evalúe la GCS, el estado de hidratación
+      - Coloque 2 vías IV, inicie oxígeno si la spO2 <90%
+
+      Puntúe la gravedad de la abstinencia con la [escala CIWA-Ar](topic:pb-ciwa-ar).
+
+  - type: "flowchart"
+    variant: "cycle"
+      # Reassessment loop: CIWA-Ar is re-scored, and BOTH branches (treat with
+      # lorazepam, or wait) loop back UP to the re-score hub; the only exit is
+      # straight down ("once stable").  Matches the printed p.35 layout.
+    nodes:
+    - title: "¿Sospecha de encefalopatía de Wernicke (confusión / oftalmoplejía / ataxia), o el paciente parece gravemente desnutrido?"
+      branches:
+      - label: "Sí"
+        side: "right"
+        box:
+          title: "Tiamina IV (si está disponible)"
+          bullets:
+          - "Sospecha de Wernicke: 200mg IV tres veces al día × 3 días, luego oral"
+          - "Solo profilaxis (desnutrido, sin signos de Wernicke): 100mg IV al día × 3–5 días"
+    - id: "rescore"
+      title: "Calcule la puntuación CIWA-Ar"
+      bullets:
+      - "Clinical Institute Withdrawal Assessment — Alcohol, revisada (vea el enlace de arriba)"
+    - shape: "decision"
+      title: "¿CIWA-Ar ≥ 10?"
+      down_label: "una vez estable"
+      branches:
+      - label: "No"
+        side: "left"
+        box:
+          title: "Reevalúe cada 15–30 min"
+          bullets:
+          - "luego vuelva a puntuar"
+        loop_to: "rescore"
+      - label: "Sí"
+        side: "right"
+        box:
+          title: "Lorazepam 2mg IV"
+          bullets:
+          - "reevalúe cada 5–10 min → vuelva a puntuar"
+          severity: "priority"
+        loop_to: "rescore"
+    - title: "Continúe vigilando"
+      bullets:
+      - "Una vez estable, empiece a espaciar el lorazepam 2mg IV a cada 2–4 h según necesidad"
+
+  - type: "prose"
+    title: "¿Sospecha de algo más que una intoxicación alcohólica?"
+    markdown: |
+      - Siga el [protocolo de alteración del estado mental](topic:pb-altered-mental-status)
+      - Pruebas posibles para trastornos relacionados con el alcohol o de presentación similar
+        - Panel metabólico básico, magnesio, pruebas de función hepática, lipasa

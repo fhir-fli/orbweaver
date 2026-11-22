@@ -74,9 +74,11 @@ def cmd_status():
 
 def cmd_next(out, n, book):
     todo = [p for p in english_pages(book) if state(p) != 'current'][:n]
+    # Strings with no letters are left out; apply copies them unchanged.
+    dump = {p: {k: v for k, v in segments.extract(os.path.join(REPO, p)).items()
+                if re.search(r'[^\W\d_]', v)} for p in todo}
     with open(out, 'w') as f:
-        json.dump({p: segments.extract(os.path.join(REPO, p)) for p in todo}, f,
-                  ensure_ascii=False, indent=1)
+        json.dump(dump, f, ensure_ascii=False, indent=1)
         f.flush()
     for p in todo:
         print(p, os.path.getsize(os.path.join(REPO, p)), flush=True)
@@ -89,6 +91,11 @@ def cmd_apply(src):
     for english, tr in pages.items():
         en_abs = os.path.join(REPO, english)
         want = segments.extract(en_abs)
+        # A string with no letters (a number, range, sign or blank) is kept
+        # as it is (prompt rule 6), so it may be left out of the JSON.
+        for k, v in want.items():
+            if k not in tr and not re.search(r'[^\W\d_]', v):
+                tr[k] = v
         if sorted(tr) != sorted(want):
             print(f'{english}: ids differ {sorted(set(tr) ^ set(want))}', flush=True)
             continue

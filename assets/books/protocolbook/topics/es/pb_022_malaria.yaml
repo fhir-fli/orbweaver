@@ -1,0 +1,177 @@
+# translated-from-sha256: 62c9fdcbb4ba2f61df615276290d7dcfe624843d8aba87da240300ee24e5ad91
+# ============================================================
+# ProtocolBook p.22 — Malaria
+#
+# All rows use a 12-column grid convention so widgets align across
+# the page.  Cell spans / flex values always sum to 12.
+#
+# Row layout:
+#   Row 1 (branches):           [6 | 6]
+#   Row 2 (test scenarios):     [3 | 3 | 3 | 3]
+#   Row 3 (actions):            [3 | 6 | 3]
+#     inner column (flex 6):    "Treat presumptively" / [3 | 3]
+#   Merge arrows → severity
+#   Severity row:               [6 | 2 | 4]
+#   Yes arrow row:              [6 | 6]
+#
+# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
+#    2026-07-26). Severe-malaria criteria confirmed broadly consistent
+#    with WHO. Artesunate weight-differentiated dosing verified correct
+#    (this is the page whose REVERSED bands were fixed in d180100 —
+#    the correction now reads clean against WHO). Dosing schedule at
+#    0, 12, 24 h then daily ✓. The "DO NOT bolus unless diarrhoea with
+#    signs of severe dehydration" rule was specifically endorsed as
+#    consistent with FEAST (boluses increased mortality in febrile
+#    African children with impaired perfusion) and an important
+#    LMIC-specific teaching point.
+#
+# ⚠️ NOTED, NOT CHANGED (OE rated LOW, acceptable as-is):
+#    - Our "≥ 2 convulsions" is marginally more conservative than
+#      WHO's ">2 in 24 h" — triggers severe classification one seizure
+#      earlier. Erring toward treating as severe is right here.
+#    - Our severe-anaemia haemoglobin threshold differs slightly from
+#      the WHO cut-off; OE judged ours acceptable and suggested only
+#      that the distinction could be noted. Not added.
+# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
+#   D10% 5 -> 2 mL/kg (WHO pass flag 1-2).
+# ============================================================
+
+topic:
+  id: "pb-malaria"
+  title: "Malaria"
+  list_subtitle: "p.22 · diagnóstico + tratamiento de la forma grave"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malaria", "infeccioso", "tropical", "artesunato", "pediátrico"]
+  category: "medical"
+  page_number: 22
+
+  blocks:
+
+  - type: "prose"
+    highlight: true
+    markdown: |-
+      Si la **gota gruesa es positiva** → **trate**.
+      Si la **PDR es negativa** → **no trate**.
+
+  - type: "prose"
+    markdown: |-
+      **Sea cual sea el resultado de las pruebas:** si el paciente tiene signos o síntomas de **malaria grave**, trate de forma presuntiva y haga después la prueba para confirmar.
+
+  - type: "table"
+    layout: "boxed"
+    rows:
+    - cells:
+      - text: "**Sin tratamiento/tratamiento incompleto en las últimas 4 semanas**"
+        span: 6
+      - text: "**Tratamiento completo en las últimas 4 semanas**"
+        span: 6
+
+  - type: "arrows"
+    count: 4
+
+  - type: "table"
+    layout: "boxed"
+    rows:
+    - cells:
+      - text: |-
+          +PDR
+          sin/−GG
+        span: 3
+      - text: |-
+          Sin PDR
+          −GG
+        span: 3
+      - text: |-
+          +PDR
+          Sin GG
+        span: 3
+      - text: |-
+          +PDR/sin PDR
+          −GG
+        span: 3
+
+  - type: "arrows"
+    count: 4
+
+  - type: "row"
+    blocks:
+    - type: "prose"
+      flex: 3
+      boxed: true
+      markdown: "**Trate**"
+    - type: "column"
+      flex: 6
+      blocks:
+      - type: "prose"
+        boxed: true
+        markdown: "**Trate de forma presuntiva**"
+      - type: "row"
+        blocks:
+        - type: "prose"
+          boxed: true
+          markdown: "Solicite **PDR**"
+        - type: "prose"
+          boxed: true
+          markdown: "Solicite **GG**"
+    - type: "prose"
+      flex: 3
+      boxed: true
+      markdown: "**No trate** — considere otro diagnóstico"
+
+  - type: "merge_arrows"
+    columns: 12
+    sources: [1, 4, 7]
+    target_center: 2.5
+
+  - type: "row"
+    blocks:
+    - type: "prose"
+      flex: 7
+      highlight: true
+      markdown: |-
+        **Grave = fiebre MÁS cualquiera de:**
+        - AVPU = V, P, U o ≤ 2
+        - ≥ 2 convulsiones
+        - Fiebre ≥ 40 °C (104 °F)
+        - Hipoglucemia (< 2.5 mmol/L; < 3.0 en la desnutrición grave)
+        - Anemia (Hb < 7)
+    - type: "arrows"
+      flex: 1
+      direction: "right"
+      count: 1
+      label: "No"
+      length: 24
+    - type: "prose"
+      flex: 4
+      boxed: true
+      markdown: "Trate como **malaria no complicada**"
+
+  - type: "row"
+    blocks:
+    - type: "arrows"
+      flex: 6
+      count: 1
+      label: "Sí"
+      length: 24
+      inline: true
+    - type: "prose"
+      flex: 6
+      markdown: ""
+
+  - type: "prose"
+    title: "Malaria grave — tratamiento inmediato"
+    highlight: true
+    markdown: |-
+      - **Artesunato\* IV / IM** a las **0, 12, 24 h** — < 20 kg: **3 mg/kg** · ≥ 20 kg: **2.4 mg/kg**
+      - Trate la hipoglucemia → dextrosa al 10 % **2 ml/kg**
+      - Líquidos / alimentación de mantenimiento
+      - **NO administre bolos** salvo diarrea con signos de deshidratación grave
+      - Si hay palidez intensa, dificultad respiratoria o Hb conocida < 5 → considere una transfusión de **10–20 ml/kg en 2–4 h**
+
+      Tras 24 h de artesunato: si tolera la VO → cambie a **3 días de tratamiento VO**. Si no → continúe el artesunato una vez al día hasta **7 días** o hasta que tolere la VO.
+
+  - type: "prose"
+    markdown: |-
+      \* La malaria grave también puede incluir PAS < 70 con piel fría y húmeda, sangrado anormal / CID, insuficiencia renal (anuria referida o Cr > 3 mg/dL), hemoglobinuria macroscópica o hiperbilirrubinemia (> 3 mg/dL) con gota gruesa MPS +++.
+
+      El tratamiento se aplica a todos los adultos y niños, incluidos lactantes, embarazadas en todos los trimestres y mujeres que amamantan.
