@@ -1,0 +1,118 @@
+# translated-from-sha256: 3c9740663cd837c9213be684824eae11b53f6a670ebbd2624bad1dc1749f2222
+topic:
+  id: "wvems-2026-034"
+  version: "v260101"
+  title: "Dolor abdominal"
+  list_subtitle: "2026-034 · GI / AAA / hemorragia GI / ginecoobstetricia"
+  last_reviewed: "Aug 2025"
+  tags:
+  - "dolor abdominal"
+  - "dolor de estómago"
+  - "acidez"
+  - "erge"
+  - "reflujo ácido"
+  - "aaa"
+  - "hemorragia gi"
+  - "ectópico"
+  aliases:
+  - "Dolor de estómago"
+  - "Acidez"
+  - "ERGE"
+  - "Reflujo ácido"
+  - "Ectópico"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 34
+    blocks:
+    - type: "flowchart"
+      variant: "differential"
+      entry_chain:
+      - text: "Molestia abdominal"
+        shape: "stadium"
+      decision:
+        text: "¿Causa?"
+        shape: "diamond"
+      cards:
+      - title: "GI"
+        bullets:
+        - "Obstrucción intestinal, vesícula"
+        - "Gastritis, Crohn"
+      - title: "ERGE"
+        bullets:
+        - "Dolor \"urente\""
+        - "Considere causa [cardíaca](topic:wvems-2026-028)"
+      - title: "AAA"
+        bullets:
+        - "\"Masa pulsátil\""
+        - "Vigile el [choque](topic:wvems-2026-008)"
+      - title: "Hemorragia GI"
+        bullets:
+        - "Vómito rojo o negro"
+        - "Vigile el [choque](topic:wvems-2026-008)"
+      - title: "Traumatismo"
+        bullets:
+        - "Lesión, caída, accidente de tráfico"
+        - "Tto: [lesión del tronco](topic:wvems-2026-064)"
+      - title: "Infección"
+        bullets:
+        - "Apéndice, colitis"
+        - "IVU, pielonefritis, ITS"
+      - title: "Ginecoobstetricia"
+        bullets:
+        - "Ectópico, torsión"
+        - "[Aborto espontáneo](topic:wvems-2026-048), SUD"
+      - title: "GU"
+        bullets:
+        - "Cálculos renales"
+        - "Torsión, fimosis"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Fiebre](topic:wvems-2026-016), [Dolor](topic:wvems-2026-020), [Náuseas](topic:wvems-2026-022)"
+        - text: "[Sobredosis / tóxicos](topic:wvems-2026-040), [Dolor torácico](topic:wvems-2026-028)"
+      critical_care_link:
+        text: "Sepsis"
+        link_id: "wvems-2026-094"
+  - page_number: 35
+    blocks:
+    - type: "prose"
+      title: "Imperativos del dolor abdominal"
+      highlight: true
+      markdown: |
+        - Este protocolo es para las causas **médicas** de dolor abdominal.
+          - Para el dolor abdominal traumático, remítase a [lesión del tronco](topic:wvems-2026-064).
+        - Prepárese para la [hipotensión](topic:wvems-2026-008) si se refiere pérdida de sangre, o si se sospecha:
+          - **AAA**: "masa pulsátil" en la línea media en el anciano
+          - **Hemorragia GI**: heces negras (melena) o vómito en "posos de café"
+        - Pregunte por [embarazo](topic:wvems-2026-048) y considere las complicaciones.
+          - Considere un **ectópico** en cualquier mujer embarazada, vigile el [choque](topic:wvems-2026-008).
+        - **Evite por boca** alimentos y líquidos. (Los fármacos orales están bien.)
+          - Mantenga a los pacientes en **NPO** (**Nil Per Os**: lat. "nada por la boca")
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere una causa [cardíaca](topic:wvems-2026-028) atípica en diabéticos y ancianos.
+        - Muchas causas frecuentes no requieren una intervención específica del SEM.
+          - P. ej., gastroenteritis, vesícula, apéndice, colitis, obstrucción intestinal, etc.
+          - Sí considere tratar los síntomas: [fiebre](topic:wvems-2026-016), [dolor](topic:wvems-2026-020), [náuseas](topic:wvems-2026-022)
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [sepsis](topic:wvems-2026-094) si está indicado y está acreditado para cuidados críticos.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - El estreñimiento simple es una causa frecuente en pediatría.
+          - No requiere una intervención agresiva del SEM.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Abd Pain — https://emedicine.medscape.com/article/776663 [Ver: 4/25]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 26
+
+        NEMSIS: 9914061

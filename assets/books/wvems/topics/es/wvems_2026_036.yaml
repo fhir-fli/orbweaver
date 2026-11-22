@@ -1,0 +1,145 @@
+# translated-from-sha256: 7c0a2d5d5575d5eedd7dcca838402c7ab2f05f4eff0ffa315d42c6dd12f66da6
+topic:
+  id: "wvems-2026-036"
+  version: "v260101"
+  title: "Alteración de la conciencia / síncope"
+  list_subtitle: "2026-036 · GCS / diferencial / causa"
+  last_reviewed: "Aug 2025"
+  tags:
+  - "alteración de la conciencia"
+  - "síncope"
+  - "sin respuesta"
+  - "confuso"
+  - "desmayo"
+  - "mareado"
+  - "colapso"
+  aliases:
+  - "Mareo"
+  - "Desmayo"
+  - "Colapso"
+  - "Ortostático"
+  - "POTS"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 36
+    blocks:
+    - type: "flowchart"
+      variant: "differential"
+      warnings:
+      - type: "caution"
+        text: "[Precaución si el paciente rechaza](topic:wvems-2026-109#patient-refusals)"
+      entry_chain:
+      - text: |-
+          Confuso o sin respuesta
+          (pero respira)
+        shape: "stadium"
+      pre_decision_actions:
+      - text: "Glucómetro"
+      - provider_level: "E"
+        text: "12 derivaciones"
+      - provider_level: "A"
+        text: "Tapón salino"
+      decision:
+        text: "¿Causa?"
+        shape: "diamond"
+      cards:
+      - title: "[Diabético](topic:wvems-2026-038)"
+        bullets:
+        - "Antec.: diabetes"
+        - "Glucosa anormal"
+      - title: "[Conductual](topic:wvems-2026-046)"
+        bullets:
+        - "Suicida, homicida"
+        - "Delirios, psicosis"
+      - title: "[Sobredosis / tóxicos](topic:wvems-2026-040)"
+        bullets:
+        - "Antec.: ingestión/exposición"
+        - "Drogas/alcohol evidentes"
+      - title: "Lesión"
+        bullets:
+        - "[Traumatismo craneal](topic:wvems-2026-062), [Hemorragia](topic:wvems-2026-058)"
+        - "[Exposición al frío / calor](topic:wvems-2026-068)"
+      - title: "[Convulsiones](topic:wvems-2026-042)"
+        bullets:
+        - "Antec.: epilepsia"
+        - "Sacudidas, confusión"
+      - title: "[Ictus](topic:wvems-2026-044)"
+        bullets:
+        - "Asimetría facial, debilidad"
+        - "Habla arrastrada"
+      - title: "[Fiebre](topic:wvems-2026-016)"
+        bullets:
+        - "Antec.: enfermedad o malestar"
+        - "Piel enrojecida, caliente"
+      - title: "Cardíaco"
+        bullets:
+        - "[Bradicardia](topic:wvems-2026-012), [Taquicardia](topic:wvems-2026-014)"
+        - "[Choque](topic:wvems-2026-008), [Dolor torácico](topic:wvems-2026-028)"
+      critical_care_link:
+        text: "Sepsis"
+        link_id: "wvems-2026-094"
+  - page_number: 37
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la alteración de la conciencia"
+      highlight: true
+      markdown: |
+        - La alteración de la conciencia y el síncope son problemas **complejos**.
+          - El paso más importante es considerar y **buscar la causa**.
+          - Investigue el caso y haga una **historia cuidadosa**.
+        - Los pacientes inestables deben tratarse de forma enérgica.
+          - Esté preparado para un [paro médico (CODE)](topic:wvems-2026-024).
+        - El alcohol y las drogas pueden enmascarar otras causas de alteración de la conciencia.
+          - **No suponga que la [intoxicación](topic:wvems-2026-040)** es el único problema.
+        - El síncope puede deberse a un **traumatismo** o causarlo.
+          - Mantenga un alto índice de sospecha.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere una causa [cardíaca](topic:wvems-2026-028) atípica en diabéticos y ancianos.
+        - Busque **joyas de alerta médica**.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [sepsis](topic:wvems-2026-094) si está indicado y está acreditado para cuidados críticos.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        flex: 4
+        markdown: |
+          Puede valorar la GCS del paciente:
+          - Compruebe cada respuesta
+          - Repita **según necesidad**
+          - Anote la **mejor respuesta**
+          - Sume los tres números
+          - La puntuación normal es **15**
+          - La peor puntuación es **3**
+      - type: "table"
+        flex: 6
+        title: "Escala de coma de Glasgow"
+        columns: ["Ojos", "Verbal", "Motora", ""]
+        column_flex: [3, 3, 3, 1]
+        rows:
+        - cells: ["ninguna", "ninguna", "ninguna", "1"]
+        - cells: ["al dolor", "quejidos", "extensión", "2"]
+        - cells: ["a la voz", "palabras", "flexión", "3"]
+        - cells: ["normal", "confusa", "retirada", "4"]
+        - cells: ["", "normal", "localiza", "5"]
+        - cells: ["", "", "normal", "6"]
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Muchas causas de síncope transitorio son benignas, pero:
+          - Una alteración prolongada de la conciencia indica una patología potencialmente grave.
+          - El síncope **durante el esfuerzo** puede ser una verdadera urgencia cardíaca.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Syncope — https://emedicine.medscape.com/article/811669 [Ver: 9/24]
+        - Medscape Delirium — https://emedicine.medscape.com/article/793247 [Ver: 4/24]
+        - Medscape Hypoglycemia — https://emedicine.medscape.com/article/122122 [Ver: 5/25]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 22

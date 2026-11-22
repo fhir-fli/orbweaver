@@ -1,0 +1,136 @@
+# translated-from-sha256: 82da439b55bf383dcdba28806f613b9dff651595a15d555d2790cde1ccba72f8
+topic:
+  id: "wvems-2026-038"
+  version: "v260101"
+  title: "Diabético"
+  list_subtitle: "2026-038 · glucosa / D10 / glucagón"
+  last_reviewed: "Aug 2025"
+  tags: ["diabético", "diabetes", "hipoglucemia", "hiperglucemia", "cad", "glucosa", "d10", "glucagón"]
+  aliases:
+  - "Hipoglucemia"
+  - "Hiperglucemia"
+  - "Azúcar en sangre"
+  - "Glucosa"
+  - "CAD"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 38
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "caution"
+        text: "[Precaución si el paciente rechaza](topic:wvems-2026-109#patient-refusals)"
+      entry:
+        text: "Glucemia anormal"
+        shape: "stadium"
+      decision:
+        text: "¿Nivel?"
+        shape: "diamond"
+      branches:
+      - id: "low"
+        label: "Baja"
+        criteria:
+        - "Menos de 60 mg/dL"
+        - "Confusión"
+        actions:
+        - provider_level: "E"
+          text: "Glucosa oral"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "D10"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "Glucagón"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+      - id: "high"
+        label: "Alta"
+        criteria:
+        - "Más de 400 mg/dL"
+        - "Poliuria, sed"
+        actions:
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Alteración de la conciencia](topic:wvems-2026-036)"
+        - text: "[Convulsiones](topic:wvems-2026-042), [Sobredosis / tóxicos](topic:wvems-2026-040)"
+      dose_table:
+      - drug: "[Oral Glucose](topic:wvems-2026-drug-reference#glucose)"
+        dose: "15 gramos"
+        route: "PO"
+        frequency: "Q 5 min x3"
+        population: "adult"
+      - drug: "[D10](topic:wvems-2026-drug-reference#d10)"
+        dose: "100 mL"
+        route: "IV/IO"
+        frequency: "Q 5 min x5"
+        population: "adult"
+      - drug: "[Glucagon](topic:wvems-2026-drug-reference#glucagon)"
+        dose: "1 mg"
+        route: "IM"
+        frequency: "x1"
+        population: "adult"
+      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+  - page_number: 39
+    blocks:
+    - type: "prose"
+      title: "Imperativos del diabético"
+      highlight: true
+      markdown: |
+        - No se requiere intervención del SEM en pacientes leves y asintomáticos.
+        - Considere una urgencia [cardíaca](topic:wvems-2026-028) concomitante en el anciano.
+          - Muchas urgencias diabéticas se benefician de un **ECG de 12 derivaciones si es posible**.
+        - Considere otras causas de [alteración de la conciencia](topic:wvems-2026-036) aun con hipoglucemia.
+        - La hipoglucemia por **sulfonilureas** puede ser refractaria y profunda.
+          - P. ej., glipizida (Glucotrol®), glibenclamida, glimepirida (Amaryl®)
+          - **Llame a control médico** ante cualquier rechazo si toma **sulfonilureas**.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Glucosa oral](topic:wvems-2026-drug-reference#glucose)** (Glutose 15™): evítela si el paciente no puede tragar.
+          - Considere **comida normal** como alternativa si la hay.
+          - Priorice comida y bebida con **azúcar simple** (como jugo y caramelos).
+          - Dé también carbohidratos complejos/proteínas (como **mantequilla de maní**).
+        - **[D10](topic:wvems-2026-drug-reference#d10)** (dextrosa al 10%): vuelva a medir la glucosa antes de repetir la dosis.
+          - Puede intentarse sin glucómetro si la hipoglucemia es probable.
+        - **[Glucagón](topic:wvems-2026-drug-reference#glucagon)** (Glucagen®): precaución — ¡la mejoría es temporal!
+          - **Debe dar más glucosa** o **[D10](topic:wvems-2026-drug-reference#d10)** tras administrarlo.
+          - **Llame a control médico** ante cualquier rechazo tras el **[glucagón](topic:wvems-2026-drug-reference#glucagon)**.
+          - Puede sustituirse por un dispositivo intranasal precargado (en lugar de la dosis IM):
+          - † {E} **[Baqsimi®](topic:wvems-2026-drug-reference#glucagon)** (glucagón IN precargado): **3** mg IN x1 a partir de **≥ 1 año**
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Evite canalizar una vía IV en las **piernas o los pies** de un paciente diabético.
+        - La hiperglucemia con olor afrutado puede ser una **CAD** — priorice los líquidos IV.
+        - Busque una **bomba de insulina**. Puede desconectar el tubo si hay **hipoglucemia**.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use el **bolo de SSN** solo en el [choque](topic:wvems-2026-008). La hipervolemia puede **causar daño**.
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Hypoglycemia — https://emedicine.medscape.com/article/122122 [Ver: 5/25]
+        - Medscape DKA — https://emedicine.medscape.com/article/118361 [Ver: 3/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 22
+
+        NEMSIS: 9914121, 9914125

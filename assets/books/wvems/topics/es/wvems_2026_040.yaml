@@ -1,0 +1,125 @@
+# translated-from-sha256: bac3dd22380a51760e058139a63ba4b15a76c704171cb55ecb96af13358a6923
+topic:
+  id: "wvems-2026-040"
+  version: "v260101"
+  title: "Sobredosis / tóxicos"
+  list_subtitle: "2026-040 · Narcan / antídoto"
+  last_reviewed: "Aug 2025"
+  tags: ["sobredosis", "tóxicos", "envenenamiento", "narcan", "naloxona", "antídoto"]
+  aliases:
+  - "Envenenamiento"
+  - "Ingestión"
+  - "Intoxicado"
+  - "Ebrio"
+  - "Armas de destrucción masiva"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 40
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "safety"
+        text: "Garantice la SEGURIDAD del proveedor"
+      - type: "safety"
+        text: "Garantice la DESCONTAMINACIÓN del paciente"
+      - type: "caution"
+        text: "[Precaución si el paciente rechaza](topic:wvems-2026-109#patient-refusals)"
+      entry:
+        text: "Exposición tóxica o sobredosis sintomática"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Perfusión adecuada"
+        - "Síntomas menores"
+        actions:
+        - provider_level: "A"
+          text: "Tapón salino"
+          kind: "procedure"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Mala perfusión"
+        - "Efectos tóxicos"
+        actions:
+        - text: "Narcan"
+          kind: "medication_administration"
+          condition: "Si hay hipoxia"
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+        - text: "Administre el [antídoto](topic:wvems-2026-096#administer-antidote)"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "Coingestiones, [bradicardia](topic:wvems-2026-012), [N/V](topic:wvems-2026-022)"
+        - text: "[Choque](topic:wvems-2026-008), [Hipertermia](topic:wvems-2026-068)"
+        - text: "DESCONTAMINACIÓN del paciente"
+      dose_table:
+      - drug: "[Narcan](topic:wvems-2026-drug-reference#narcan)"
+        dose: "hasta 4 mg"
+        route: "IV/IO, IM/IN"
+        frequency: "PRN"
+        population: "adult"
+      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+  - page_number: 41
+    blocks:
+    - type: "prose"
+      title: "Imperativos de sobredosis / tóxicos"
+      highlight: true
+      markdown: |
+        - Obtenga una historia detallada y la **SDS** (ficha de datos de seguridad) si es posible:
+          - Sustancia, cantidad y **hora** de la ingestión o exposición
+        - Considere un **[antídoto](topic:wvems-2026-096#administer-antidote)** ante síntomas críticos por un **tóxico conocido**.
+          - Las exposiciones menores con pocos síntomas no requieren **[antídoto](topic:wvems-2026-096#administer-antidote)**.
+          - Los pacientes estables deben vigilarse y trasladarse.
+          - El tratamiento de soporte basta en la intoxicación por **alcohol** (etanol).
+        - Vigile de cerca la [vía aérea](topic:wvems-2026-004) en todas las **ingestiones de cáusticos**.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Narcan®](topic:wvems-2026-drug-reference#narcan)** (naloxona): solo debe usarse para tratar la **[hipoxia](topic:wvems-2026-006)**.
+          - Puede probarse ante cualquier sobredosis o exposición con disnea o choque.
+          - Llame a **control médico** ante cualquier rechazo tras el **[Narcan](topic:wvems-2026-drug-reference#narcan)**.
+          - {} Solo puede dar dosis **intranasales** premedidas.
+          - {A} Ajuste la dosis a las respiraciones y la SpO₂; puede empezar con tan solo **0.04** mg.
+        - **[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)** (salino al 0.9%): los líquidos pueden ayudar a diluir los tóxicos.
+          - Considérelo aun sin [hipotensión](topic:wvems-2026-008). Evítelo con [ICC](topic:wvems-2026-030) o [diálisis](topic:wvems-2026-018).
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Si se conoce el tóxico, considere llamar al **centro de toxicología**: 800-222-1222.
+          - La mayoría de los **[antídotos](topic:wvems-2026-096#administer-antidote)** requieren **órdenes en línea** (e instrucciones de dosis).
+        - Este protocolo incluye el **envenenamiento** y las ingestiones tóxicas.
+          - Para **quemaduras químicas** y exposiciones cutáneas, remítase a [quemaduras](topic:wvems-2026-070).
+          - Para **gases** e inhalación de humo, remítase a [inhalación](topic:wvems-2026-072).
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Solo **una pastilla** de algunos fármacos de adulto puede causar un [choque](topic:wvems-2026-008) profundo.
+          - La ingestión de **cigarrillos o líquido de vapeo** (nicotina) puede ser **mortal**.
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Opioids — https://emedicine.medscape.com/article/815784 [Ver: 6/25]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 25
+
+        NEMSIS: 9914043, 9914135, 9914215, 9914217, 9914219, 9104225
