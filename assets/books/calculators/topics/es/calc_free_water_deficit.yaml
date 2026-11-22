@@ -1,0 +1,49 @@
+# translated-from-sha256: aacb9058697f70297e677815a2cd7545fb243eef714c5352b19b59a3266857f4
+# ============================================================
+# Free water deficit (hypernatremia).
+# Evidence review 2026-07-19: FWD = TBW × (current Na / target Na − 1),
+# TBW = weight × 0.6 (male) / 0.5 (female). Estimates the deficit ONLY —
+# ongoing/insensible losses must be added. The strict ≤0.5 mEq/L/h
+# correction cap is pediatric-extrapolated; adult cohorts show no harm
+# from faster correction — use clinical judgment.
+# ============================================================
+
+topic:
+  id: "calc-free-water-deficit"
+  title: "Déficit de agua libre"
+  list_subtitle: "hipernatremia"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["déficit de agua libre", "hipernatremia", "sodio", "agua", "act", "deshidratación", "electrolito"]
+  aliases:
+  - "Déficit de agua libre"
+  - "Déficit de agua"
+  - "Hipernatremia"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Estima el déficit de agua libre en la hipernatremia. Es el déficit
+      que hay que reponer — sume las pérdidas en curso e insensibles para planificar la
+      reposición total.
+
+  - type: "formula"
+    kind: "free_water_deficit"
+    title: "Déficit de agua libre"
+    source: "Déficit de agua libre = ACT × (Na actual / Na objetivo − 1)"
+    inputs:
+    - {key: "weight", label: "Peso", unit: "kg", type: "number"}
+    - key: "sex"
+      label: "Sexo"
+      type: "select"
+      default: "M"
+      options:
+      - {value: "M", label: "Hombre (ACT 0.6)"}
+      - {value: "F", label: "Mujer (ACT 0.5)"}
+    - {key: "sodium", label: "Na⁺ actual", unit: "mEq/L", type: "number"}
+    - {key: "target", label: "Na⁺ objetivo", unit: "mEq/L", type: "number", optional: true, help: "por defecto 140"}
+    notes:
+    - "Agua corporal total = peso × 0.6 (hombre) / 0.5 (mujer). Sume al déficit las pérdidas en curso + insensibles."
+    caveats:
+    - "El déficit es una estimación. El límite estricto de corrección ≤ 0.5 mEq/L/h se extrapola de pediatría; datos recientes en adultos no muestran daño con una corrección más rápida — aplique el juicio clínico."

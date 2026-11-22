@@ -1,0 +1,54 @@
+# translated-from-sha256: 8be6f96c180f2bd675e1909e11488d919ece717ee8ee1ece5156434e61d7b7dc
+# ============================================================
+# GAD-7 — Generalized Anxiety Disorder-7.
+# Evidence review 2026-07-19: validated (Spitzer 2006; USPSTF 2023 Grade B
+# for anxiety screening in adults ≤ 64). Cutoff ≥ 10 ≈ 89% sens / 82% spec.
+# PUBLIC DOMAIN (Pfizer, no permission/fee).
+# ============================================================
+
+topic:
+  id: "calc-gad7"
+  title: "GAD-7"
+  list_subtitle: "gravedad de la ansiedad"
+  last_reviewed: "Evidence review 2026-07-19 · Spitzer 2006 · USPSTF 2023"
+  tags: ["gad-7", "gad7", "ansiedad", "cribado", "psiquiatría", "gravedad", "preocupación"]
+  aliases:
+  - "GAD-7"
+  - "Trastorno de ansiedad generalizada"
+  - "Cribado de ansiedad"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Durante las últimas 2 semanas, ¿con qué frecuencia le ha molestado al paciente cada
+      problema? Puntúa la gravedad de la ansiedad.
+
+  - type: "score"
+    title: "GAD-7"
+    unit: "/ 21"
+    source: "Spitzer et al., Arch Intern Med 2006 (dominio público)"
+    items:
+    - key: "q1"
+      label: "Sentirse nervioso, ansioso o con los nervios de punta"
+      type: "scale"
+      default: "0"
+      options: &freq
+      - {value: "0", points: 0, label: "Nunca"}
+      - {value: "1", points: 1, label: "Varios días"}
+      - {value: "2", points: 2, label: "Más de la mitad de los días"}
+      - {value: "3", points: 3, label: "Casi todos los días"}
+    - {key: "q2", label: "No poder dejar de preocuparse o controlar la preocupación", type: "scale", default: "0", options: *freq}
+    - {key: "q3", label: "Preocuparse demasiado por diferentes cosas", type: "scale", default: "0", options: *freq}
+    - {key: "q4", label: "Dificultad para relajarse", type: "scale", default: "0", options: *freq}
+    - {key: "q5", label: "Estar tan inquieto que es difícil permanecer sentado", type: "scale", default: "0", options: *freq}
+    - {key: "q6", label: "Molestarse o irritarse fácilmente", type: "scale", default: "0", options: *freq}
+    - {key: "q7", label: "Sentir miedo, como si algo terrible pudiera pasar", type: "scale", default: "0", options: *freq}
+    bands:
+    - {min: 0, max: 4, label: "Ansiedad mínima", severity: "none"}
+    - {min: 5, max: 9, label: "Ansiedad leve", severity: "none"}
+    - {min: 10, max: 14, label: "Moderada — probable TAG", severity: "warn"}
+    - {min: 15, label: "Ansiedad grave", severity: "alert"}
+    notes:
+    - "≥ 10 es el umbral habitual para un probable trastorno de ansiedad generalizada. Es una medida de cribado/gravedad — por sí sola no es diagnóstica."

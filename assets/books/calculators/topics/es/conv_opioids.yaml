@@ -1,0 +1,63 @@
+# translated-from-sha256: 3c22279c7099f89a282153573ec810b7a1fa42cfed13fb4247a61de1ee1e7e7c
+# ============================================================
+# Opioid conversion → oral morphine equivalents (MME)
+# Factors per the CDC 2022 MME table (oral) + standard parenteral
+# ratios. OpenEvidence review applied 2026-06-18:
+#   - Hydromorphone PO 4.0 → 5.0 (CDC value; NCCN uses 4.0).
+#   - Tramadol PO 0.1 → 0.2 (CDC value; NCCN uses 0.1).
+#   - Added Oxymorphone PO 3.0 (CDC).
+#   - Tapentadol kept excluded (mixed μ/NRI mechanism — CDC lists 0.4
+#     for surveillance, but not reliably equianalgesic for switching).
+# ============================================================
+
+topic:
+  id: "conv-opioids"
+  title: "Conversión de opioides"
+  list_subtitle: "→ equivalentes de morfina oral (MME)"
+  last_reviewed: "OpenEvidence review 2026-06-18 · CDC 2022 MME table"
+  tags: ["opioide", "conversión", "mme", "morfina", "oxicodona", "hidromorfona"]
+  aliases:
+  - "MME"
+  - "Equivalentes de morfina"
+  category: "medical"
+  # Dangerous converter — harm caveats render red.
+  palette:
+    alert: "0xFFD32F2F"
+    alert_fill: "0xFFFDECEA"
+    alert_text: "0xFFB71C1C"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Conversión **directa** — elija el fármaco **desde** el que cambia,
+      introduzca su dosis y luego elija el fármaco **al** que cambia. La
+      línea central muestra el equivalente de morfina oral (**MME**). No suma
+      las 24 horas: para el total del día, lea el MME de cada fármaco y
+      súmelos usted.
+
+  - type: "conversion"
+    mode: "equivalence"
+    title: "Opioide → MME"
+    reference: "oral morphine"
+    reference_label: "MME"
+    unit: "mg"
+    source: "Factores de conversión a MME de los CDC 2022 (oral)"
+    agents:
+    - {name: "Morfina", route: "PO", factor: 1.0}
+    - {name: "Morfina", route: "IV/SC", factor: 3.0}
+    - {name: "Oxicodona", route: "PO", factor: 1.5}
+    - {name: "Oximorfona", route: "PO", factor: 3.0}
+    - {name: "Hidromorfona", route: "PO", factor: 5.0}
+    - {name: "Hidromorfona", route: "IV", factor: 20.0}
+    - {name: "Hidrocodona", route: "PO", factor: 1.0}
+    - {name: "Codeína", route: "PO", factor: 0.15}
+    - {name: "Tramadol", route: "PO", factor: 0.2}
+    excluded:
+    - {name: "Metadona", reason: "Relación no lineal, dependiente de la dosis — especialista."}
+    - {name: "Fentanilo (parche/IV)", reason: "Cinética del parche / conversión por especialista."}
+    - {name: "Buprenorfina", reason: "Agonista parcial con efecto techo."}
+    - {name: "Tapentadol", reason: "Mecanismo mixto opioide μ/IRN — no es equianalgésico de forma fiable."}
+    caveats:
+    - "Reduzca la dosis calculada un 25–50% por tolerancia cruzada incompleta."
+    - "Solo estimaciones — reajuste según el efecto y reevalúe."

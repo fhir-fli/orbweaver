@@ -1,0 +1,46 @@
+# translated-from-sha256: 5b6ed738d59b3182028b36d93580acc9e0e61ac71b13bd90de707e48bf7f2484
+# ============================================================
+# Urinary indices for AKI — FENa (+ FEUrea).
+# Evidence review 2026-07-19: adjuncts for prerenal vs intrinsic (ATN)
+# AKI, NOT a KDIGO-endorsed standalone standard. FENa is unreliable with
+# diuretics, CKD, and sepsis — FEUrea (< 35%) is more reliable under
+# diuretics. The prerenal/intrinsic dichotomy is an oversimplification.
+#   FENa%  = (UNa × SCr)/(SNa × UCr) × 100
+#   FEUrea% = (Uurea × SCr)/(Surea × UCr) × 100
+# ============================================================
+
+topic:
+  id: "calc-urinary-indices"
+  title: "FENa / FEUrea"
+  list_subtitle: "LRA prerrenal frente a intrínseca"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["fena", "feurea", "lra", "lesión renal aguda", "prerrenal", "nta", "índices urinarios", "renal"]
+  aliases:
+  - "FENa"
+  - "FEUrea"
+  - "Excreción fraccional de sodio"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Excreción fraccional de sodio (y de urea) para ayudar a distinguir la LRA prerrenal
+      de la intrínseca (NTA). Interprétela junto con el cuadro clínico — no
+      como una prueba aislada.
+
+  - type: "formula"
+    kind: "urinary_indices"
+    title: "FENa / FEUrea"
+    source: "FENa = (UNa·SCr)/(SNa·UCr)·100; FEUrea = (Uurea·SCr)/(Surea·UCr)·100"
+    inputs:
+    - {key: "serum_na", label: "Na⁺ sérico", unit: "mEq/L", type: "number"}
+    - {key: "urine_na", label: "Na⁺ urinario", unit: "mEq/L", type: "number"}
+    - {key: "serum_cr", label: "Creatinina sérica", unit: "mg/dL", type: "number"}
+    - {key: "urine_cr", label: "Creatinina urinaria", unit: "mg/dL", type: "number"}
+    - {key: "serum_urea", label: "Urea sérica (BUN)", unit: "mg/dL", type: "number", optional: true, help: "para FEUrea"}
+    - {key: "urine_urea", label: "Urea urinaria", unit: "mg/dL", type: "number", optional: true, help: "para FEUrea"}
+    notes:
+    - "FENa < 1% prerrenal · > 2% intrínseca (NTA). FEUrea < 35% prerrenal."
+    caveats:
+    - "La FENa no es fiable con diuréticos, ERC ni sepsis — use la FEUrea si hay diuréticos. No es un estándar aislado respaldado por KDIGO; la división prerrenal/intrínseca es una simplificación excesiva."

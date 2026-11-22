@@ -1,0 +1,100 @@
+# translated-from-sha256: 9efeb3af32d5a85aad43c42462cf921119f1cfea462ef238ea0547e295094443
+# ============================================================
+# SOFA — Sequential Organ Failure Assessment.
+# Evidence review 2026-07-19: the Sepsis-3 organ-dysfunction standard
+# (sepsis = suspected infection + acute rise in SOFA ≥ 2). ICU-oriented,
+# lab-dependent — not a rapid ward screen (use NEWS2 for screening).
+# Vincent 1996. Six organ systems, 0–4 each; total 0–24.
+# ============================================================
+
+topic:
+  id: "calc-sofa"
+  title: "Puntuación SOFA"
+  list_subtitle: "disfunción orgánica (Sepsis-3)"
+  last_reviewed: "Evidence review 2026-07-19 · Vincent 1996 · Sepsis-3 2016"
+  tags: ["sofa", "sepsis", "falla orgánica", "uci", "sepsis-3", "mortalidad", "cuidados críticos"]
+  aliases:
+  - "SOFA"
+  - "Evaluación secuencial de la falla orgánica"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Cuantifica la disfunción orgánica en seis sistemas. Es la base de la definición de Sepsis-3
+      (un aumento agudo de ≥ 2 puntos con sospecha de infección).
+
+  - type: "score"
+    title: "SOFA"
+    source: "Vincent et al., Intensive Care Med 1996"
+    items:
+    - key: "resp"
+      label: "Respiración (PaO₂/FiO₂, mmHg)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "≥ 400"}
+      - {value: "1", points: 1, label: "< 400"}
+      - {value: "2", points: 2, label: "< 300"}
+      - {value: "3", points: 3, label: "< 200 con soporte respiratorio"}
+      - {value: "4", points: 4, label: "< 100 con soporte respiratorio"}
+    - key: "coag"
+      label: "Coagulación (plaquetas ×10³/µL)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "≥ 150"}
+      - {value: "1", points: 1, label: "< 150"}
+      - {value: "2", points: 2, label: "< 100"}
+      - {value: "3", points: 3, label: "< 50"}
+      - {value: "4", points: 4, label: "< 20"}
+    - key: "liver"
+      label: "Hígado (bilirrubina, mg/dL)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "< 1.2"}
+      - {value: "1", points: 1, label: "1.2–1.9"}
+      - {value: "2", points: 2, label: "2.0–5.9"}
+      - {value: "3", points: 3, label: "6.0–11.9"}
+      - {value: "4", points: 4, label: "> 12"}
+    - key: "cardio"
+      label: "Cardiovascular"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "PAM ≥ 70"}
+      - {value: "1", points: 1, label: "PAM < 70"}
+      - {value: "2", points: 2, label: "Dopamina ≤ 5 o dobutamina (cualquier dosis)"}
+      - {value: "3", points: 3, label: "Dopamina > 5, o adrenalina/noradrenalina ≤ 0.1 µg/kg/min"}
+      - {value: "4", points: 4, label: "Dopamina > 15, o adrenalina/noradrenalina > 0.1"}
+    - key: "cns"
+      label: "SNC (escala de coma de Glasgow)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "15"}
+      - {value: "1", points: 1, label: "13–14"}
+      - {value: "2", points: 2, label: "10–12"}
+      - {value: "3", points: 3, label: "6–9"}
+      - {value: "4", points: 4, label: "< 6"}
+    - key: "renal"
+      label: "Renal (creatinina mg/dL o diuresis)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "< 1.2"}
+      - {value: "1", points: 1, label: "1.2–1.9"}
+      - {value: "2", points: 2, label: "2.0–3.4"}
+      - {value: "3", points: 3, label: "3.5–4.9 o diuresis < 500 mL/día"}
+      - {value: "4", points: 4, label: "> 5.0 o diuresis < 200 mL/día"}
+    bands:
+    - {min: 0, max: 6, label: "Mortalidad más baja (aproximadamente < 10–20%)", severity: "none"}
+    - {min: 7, max: 9, label: "Mortalidad moderada (~15–20%+)", severity: "warn"}
+    - {min: 10, max: 12, label: "Mortalidad alta (~40–50%)", severity: "alert"}
+    - {min: 13, label: "Mortalidad muy alta (> 50%)", severity: "alert"}
+    notes:
+    - "Sepsis-3: sospecha de infección + un aumento agudo del SOFA de ≥ 2 puntos (se asume una basal de 0 si la función orgánica era normal)."
+    caveats:
+    - "Depende de la UCI/del laboratorio (necesita gasometría, análisis, datos de vasopresores) — no es un cribado rápido a pie de cama; use NEWS2 para detectar el deterioro."

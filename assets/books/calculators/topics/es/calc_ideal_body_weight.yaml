@@ -1,0 +1,57 @@
+# translated-from-sha256: 34be1cb880854757bd8aa76e8252c7c63fdd994569b24892bdb074534d8e9b7d
+# ============================================================
+# Ideal body weight (Devine) + adjusted body weight.
+# Evidence review 2026-07-19: Devine (1974) IBW is the de-facto dosing
+# standard but is EMPIRIC (not dataset-derived; Pai/Paloucek 2000) and
+# biased at height/sex extremes. Adjusted BW = IBW + 0.4×(actual − IBW).
+# Drug-specific dosing weight (TBW vs IBW vs AdjBW vs LBW) varies by agent.
+# ============================================================
+
+topic:
+  id: "calc-ideal-body-weight"
+  title: "Peso corporal ideal / ajustado"
+  list_subtitle: "PCI de Devine + peso ajustado"
+  last_reviewed: "Evidence review 2026-07-19 · Devine 1974"
+  tags: ["peso corporal ideal", "pci", "peso corporal ajustado", "devine", "dosificación", "peso", "obesidad"]
+  aliases:
+  - "PCI"
+  - "Peso corporal ideal"
+  - "Peso corporal ajustado"
+  - "Devine"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Peso corporal ideal de Devine para la dosificación de fármacos según el peso. Introduzca también el peso
+      real para obtener además el peso corporal ajustado (usado para algunos fármacos en la
+      obesidad).
+
+  - type: "formula"
+    kind: "ideal_body_weight"
+    title: "Peso corporal ideal / ajustado"
+    source: "Devine, 1974; peso ajustado = PCI + 0.4 × (real − PCI)"
+    inputs:
+    - {key: "height", label: "Talla", type: "number"}
+    - key: "height_unit"
+      label: "Unidad de talla"
+      type: "select"
+      default: "cm"
+      options:
+      - {value: "cm"}
+      - {value: "in"}
+    - key: "sex"
+      label: "Sexo"
+      type: "select"
+      default: "M"
+      options:
+      - {value: "M", label: "Hombre"}
+      - {value: "F", label: "Mujer"}
+    - {key: "weight", label: "Peso real", unit: "kg", type: "number", optional: true, help: "para el peso corporal ajustado"}
+    notes:
+    - "PCI (hombre) = 50 + 2.3 × (talla en pulgadas − 60); (mujer) = 45.5 + 2.3 × (talla en pulgadas − 60)."
+    - "Peso corporal ajustado = PCI + 0.4 × (real − PCI)."
+    caveats:
+    - "El PCI de Devine es empírico (no derivado de datos) y está sesgado en los extremos de talla y según el sexo."
+    - "Con qué peso dosificar (total, ideal, ajustado o magro) depende de cada fármaco — siga la indicación del fármaco concreto."

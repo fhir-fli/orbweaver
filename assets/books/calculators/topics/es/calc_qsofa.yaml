@@ -1,0 +1,39 @@
+# translated-from-sha256: f8bb804341c4c35384abce0962845e18964a20eb2cedad04650a8376b2959918
+# ============================================================
+# qSOFA — quick Sepsis-related Organ Failure Assessment.
+# Evidence review 2026-07-19: the Surviving Sepsis Campaign 2021 (and 2026)
+# issued a STRONG recommendation AGAINST using qSOFA as a SINGLE sepsis
+# screening tool (poor sensitivity), favoring NEWS/NEWS2/MEWS/SIRS. qSOFA
+# still marks higher mortality risk. Seymour 2016 (Sepsis-3). Max 3.
+# ============================================================
+
+topic:
+  id: "calc-qsofa"
+  title: "qSOFA"
+  list_subtitle: "alerta de riesgo de mortalidad por sepsis"
+  last_reviewed: "Evidence review 2026-07-19 · Sepsis-3 2016 · SSC 2021"
+  tags: ["qsofa", "sepsis", "sofa", "falla orgánica", "mortalidad", "infección", "sepsis-3"]
+  aliases:
+  - "qSOFA"
+  - "SOFA rápido"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Una alerta rápida a pie de cama de mayor riesgo de mortalidad en la sospecha de infección.
+      **No** es un cribado sensible — vea la advertencia.
+
+  - type: "score"
+    title: "qSOFA"
+    source: "Seymour et al., JAMA 2016 (Sepsis-3)"
+    items:
+    - {key: "rr", label: "Frecuencia respiratoria ≥ 22", type: "toggle", points: 1}
+    - {key: "mentation", label: "Alteración del estado mental (GCS < 15)", type: "toggle", points: 1}
+    - {key: "sbp", label: "PA sistólica ≤ 100 mmHg", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 1, label: "Riesgo más bajo", severity: "none"}
+    - {min: 2, label: "≥ 2 — mayor riesgo de mortalidad; intensifique la evaluación", severity: "warn"}
+    caveats:
+    - "La SSC 2021/2026 recomienda NO usar el qSOFA como único cribado de sepsis (baja sensibilidad) — use NEWS2/MEWS/SRIS para el cribado. Un resultado positivo eleva la sospecha; uno negativo NO excluye la sepsis."

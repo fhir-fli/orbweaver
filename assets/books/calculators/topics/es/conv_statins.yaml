@@ -1,0 +1,75 @@
+# translated-from-sha256: 3c1dfbdb0b45b218ce6ab7a6149fbd508d10b7d684723f185b1405d1bb40c67e
+# ============================================================
+# Statin intensity equivalence (tiers mode)
+# Per 2018 ACC/AHA Cholesterol Guideline Table 3. OpenEvidence
+# review applied 2026-06-18: Pitavastatin 1 mg Low → Moderate (1–4 mg
+# = moderate); added Fluvastatin + Lovastatin 80 mg; simva-80 caveat.
+# ============================================================
+
+topic:
+  id: "conv-statins"
+  title: "Intensidad de estatinas"
+  list_subtitle: "intensidad baja / moderada / alta"
+  last_reviewed: "OpenEvidence review 2026-06-18 · 2018 ACC/AHA Table 3"
+  tags: ["estatina", "conversión", "intensidad", "atorvastatina", "rosuvastatina", "ldl"]
+  aliases:
+  - "Equivalencia de estatinas"
+  - "Intensidad sobre el LDL"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Las estatinas vienen en concentraciones fijas, así que esto compara por **nivel de intensidad
+      de reducción del LDL** y no por una dosis exacta. **Toque una concentración** para
+      resaltar su nivel — los equivalentes entre los demás fármacos.
+
+  - type: "conversion"
+    mode: "tiers"
+    title: "Intensidad de estatinas"
+    tiers: ["Low", "Moderate", "High"]
+    tier_note: "Intensidad de reducción del C-LDL (ACC/AHA 2018)."
+    source: "Guía de colesterol ACC/AHA 2018, tabla 3"
+    agents:
+    - name: "Atorvastatina"
+      doses:
+      - {dose: "10 mg", tier: "Moderate"}
+      - {dose: "20 mg", tier: "Moderate"}
+      - {dose: "40 mg", tier: "High"}
+      - {dose: "80 mg", tier: "High"}
+    - name: "Rosuvastatina"
+      doses:
+      - {dose: "5 mg", tier: "Moderate"}
+      - {dose: "10 mg", tier: "Moderate"}
+      - {dose: "20 mg", tier: "High"}
+      - {dose: "40 mg", tier: "High"}
+    - name: "Simvastatina"
+      doses:
+      - {dose: "10 mg", tier: "Low"}
+      - {dose: "20 mg", tier: "Moderate"}
+      - {dose: "40 mg", tier: "Moderate"}
+    - name: "Pravastatina"
+      doses:
+      - {dose: "10 mg", tier: "Low"}
+      - {dose: "20 mg", tier: "Low"}
+      - {dose: "40 mg", tier: "Moderate"}
+      - {dose: "80 mg", tier: "Moderate"}
+    - name: "Lovastatina"
+      doses:
+      - {dose: "20 mg", tier: "Low"}
+      - {dose: "40 mg", tier: "Moderate"}
+      - {dose: "80 mg", tier: "Moderate"}
+    - name: "Fluvastatina"
+      doses:
+      - {dose: "20 mg", tier: "Low"}
+      - {dose: "40 mg", tier: "Low"}
+      - {dose: "80 mg XL", tier: "Moderate"}
+    - name: "Pitavastatina"
+      doses:
+      - {dose: "1 mg", tier: "Moderate"}
+      - {dose: "2 mg", tier: "Moderate"}
+      - {dose: "4 mg", tier: "Moderate"}
+    caveats:
+    - "Equivalencia de intensidad ≠ intercambiables — sopese las interacciones, el riesgo de miopatía y la dosificación renal/hepática."
+    - "Se omite la simvastatina 80 mg — la FDA desaconseja su uso (riesgo de miopatía/rabdomiólisis)."

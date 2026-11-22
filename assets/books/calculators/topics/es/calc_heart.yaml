@@ -1,0 +1,79 @@
+# translated-from-sha256: 6a22e9323f7ecdee8bbe8210f2537237e3984c39923521f15d0b7081f20b04c0
+# ============================================================
+# HEART score — chest pain risk in the ED.
+# Evidence review 2026-07-19: validated (Backus 2013; HEART Pathway RCT
+# Mahler 2015 — 0% MACE in low-risk early-discharge), endorsed within
+# chest-pain pathways (2021 AHA/ACC). Requires troponin (the "T"); the
+# HEAR subscore is a troponin-free fallback for low-resource settings.
+# Total 0–10. History/ECG components are interobserver-variable.
+# ============================================================
+
+topic:
+  id: "calc-heart"
+  title: "Puntuación HEART"
+  list_subtitle: "riesgo en dolor torácico (urgencias)"
+  last_reviewed: "Evidence review 2026-07-19 · Backus 2013 · Mahler 2015"
+  tags: ["puntuación heart", "dolor torácico", "sca", "troponina", "mace", "riesgo", "urgencias", "cardíaco"]
+  aliases:
+  - "HEART"
+  - "Puntuación HEART"
+  - "Puntuación de dolor torácico"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Estratifica el riesgo del dolor torácico indiferenciado en urgencias para eventos cardíacos
+      adversos mayores a 6 semanas. Requiere un valor de troponina.
+
+  - type: "score"
+    title: "Puntuación HEART"
+    source: "Six et al. 2008; Backus 2013; ECA HEART Pathway (Mahler 2015)"
+    items:
+    - key: "history"
+      label: "Historia"
+      type: "choice"
+      default: "h0"
+      options:
+      - {value: "h0", label: "Ligeramente sospechosa", points: 0}
+      - {value: "h1", label: "Moderadamente sospechosa", points: 1}
+      - {value: "h2", label: "Muy sospechosa", points: 2}
+    - key: "ecg"
+      label: "ECG"
+      type: "choice"
+      default: "ec0"
+      options:
+      - {value: "ec0", label: "Normal", points: 0}
+      - {value: "ec1", label: "Alteración inespecífica de la repolarización", points: 1}
+      - {value: "ec2", label: "Desviación significativa del ST", points: 2}
+    - key: "age"
+      label: "Edad"
+      type: "choice"
+      default: "ag0"
+      options:
+      - {value: "ag0", label: "< 45", points: 0}
+      - {value: "ag1", label: "45–64", points: 1}
+      - {value: "ag2", label: "≥ 65", points: 2}
+    - key: "risk"
+      label: "Factores de riesgo"
+      type: "choice"
+      default: "r0"
+      options:
+      - {value: "r0", label: "Ninguno", points: 0}
+      - {value: "r1", label: "1–2 factores", points: 1}
+      - {value: "r2", label: "≥ 3, o enfermedad aterosclerótica conocida", points: 2}
+    - key: "troponin"
+      label: "Troponina"
+      type: "choice"
+      default: "t0"
+      options:
+      - {value: "t0", label: "≤ límite normal", points: 0}
+      - {value: "t1", label: "1–3× lo normal", points: 1}
+      - {value: "t2", label: "> 3× lo normal", points: 2}
+    bands:
+    - {min: 0, max: 3, label: "Riesgo bajo — el alta precoz es razonable", detail: "~1.7% de MACE a 6 semanas.", severity: "none"}
+    - {min: 4, max: 6, label: "Moderado — observe / ingrese", severity: "warn"}
+    - {min: 7, max: 10, label: "Riesgo alto — estudio invasivo precoz", severity: "alert"}
+    caveats:
+    - "Requiere troponina. Sin el ensayo, la subpuntuación HEAR (Historia/ECG/Edad/Riesgo) no puede excluir un IAM — considérela de menor certeza y observe."

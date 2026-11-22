@@ -1,0 +1,39 @@
+# translated-from-sha256: 551fa77ae9eacedf8aa5d9d32bcd5eaf25d02796b8282d89a433f2bb94ff8990
+# ============================================================
+# SIRS — Systemic Inflammatory Response Syndrome criteria.
+# Evidence review 2026-07-19: ≥ 2 of 4 = SIRS. Still widely used to flag
+# possible infection/sepsis (SSC lists SIRS among preferred screens over
+# qSOFA). Non-specific — SIRS ≠ sepsis. Bone 1992.
+# ============================================================
+
+topic:
+  id: "calc-sirs"
+  title: "Criterios de SRIS"
+  list_subtitle: "respuesta inflamatoria sistémica"
+  last_reviewed: "Evidence review 2026-07-19 · Bone 1992"
+  tags: ["sris", "sepsis", "respuesta inflamatoria sistémica", "infección", "cribado", "temperatura"]
+  aliases:
+  - "SRIS"
+  - "Respuesta inflamatoria sistémica"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Toque cada criterio presente. Dos o más cumplen SRIS — un aviso para buscar
+      infección, aunque el SRIS por sí mismo es inespecífico.
+
+  - type: "score"
+    title: "Criterios de SRIS"
+    source: "Bone et al., Chest 1992 (ACCP/SCCM)"
+    items:
+    - {key: "temp", label: "Temperatura > 38 °C o < 36 °C", type: "toggle", points: 1}
+    - {key: "hr", label: "Frecuencia cardíaca > 90", type: "toggle", points: 1}
+    - {key: "rr", label: "Frecuencia respiratoria > 20 o PaCO₂ < 32 mmHg", type: "toggle", points: 1}
+    - {key: "wbc", label: "Leucocitos > 12k o < 4k, o > 10% de bandas", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 1, label: "No se cumplen los criterios de SRIS", severity: "none"}
+    - {min: 2, label: "SRIS presente — evalúe infección / sepsis", severity: "warn"}
+    caveats:
+    - "El SRIS es inespecífico (el traumatismo, la pancreatitis y las quemaduras también lo provocan) — por sí solo no es sepsis; interprételo con el cuadro clínico y un lactato."

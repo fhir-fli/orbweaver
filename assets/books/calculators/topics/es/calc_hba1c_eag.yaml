@@ -1,0 +1,37 @@
+# translated-from-sha256: edc52154f0feeff641a719ad0b41aa02ccf4b020a7c269b700d19916435d9eda
+# ============================================================
+# HbA1c → estimated average glucose (eAG).
+# Evidence review 2026-07-19: ADAG study (Nathan, Diabetes Care 2008).
+# eAG (mg/dL) = 28.7 × A1c − 46.7; eAG (mmol/L) = 1.59 × A1c − 2.59.
+# A population estimate — individual mean glucose varies.
+# ============================================================
+
+topic:
+  id: "calc-hba1c-eag"
+  title: "HbA1c → GPe"
+  list_subtitle: "glucosa promedio estimada"
+  last_reviewed: "Evidence review 2026-07-19 · ADAG (Nathan 2008)"
+  tags: ["hba1c", "a1c", "gpe", "glucosa promedio estimada", "diabetes", "glucosa", "conversión"]
+  aliases:
+  - "GPe"
+  - "A1c a glucosa"
+  - "Glucosa promedio estimada"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Convierte la HbA1c en una glucosa promedio estimada — el equivalente en unidades
+      cotidianas que los pacientes entienden.
+
+  - type: "formula"
+    kind: "hba1c_eag"
+    title: "HbA1c → GPe"
+    source: "Nathan et al. (ADAG), Diabetes Care 2008"
+    inputs:
+    - {key: "a1c", label: "HbA1c", unit: "%", type: "number"}
+    notes:
+    - "GPe (mg/dL) = 28.7 × A1c − 46.7. Ejemplo: A1c 7% ≈ 154 mg/dL (8.6 mmol/L)."
+    caveats:
+    - "Es una regresión poblacional — la glucosa media real de una persona puede diferir; las condiciones que alteran el recambio eritrocitario distorsionan la HbA1c."

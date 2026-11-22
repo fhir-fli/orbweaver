@@ -1,0 +1,50 @@
+# translated-from-sha256: 51aac6ed2ff70dfc85101b3585445e3a51b890ab084f2773d5f3780e05c859dd
+# ============================================================
+# Burn resuscitation fluid (Parkland / ABA Consensus).
+# Evidence review 2026-07-19: ABA 2023/24 recommends STARTING at
+# 2 mL/kg/%TBSA in adults (the "ABA Consensus" rate), NOT the classic
+# 4 mL/kg Parkland rate ("fluid creep"). Half over the first 8 h from the
+# TIME OF BURN, half over the next 16 h. The formula is a starting
+# estimate — titrate to urine output 0.5 mL/kg/h. Use %TBSA of 2nd/3rd
+# degree burns (Lund-Browder; rule of nines is inaccurate in children).
+# ============================================================
+
+topic:
+  id: "calc-parkland"
+  title: "Líquidos de reanimación en quemaduras"
+  list_subtitle: "Parkland / Consenso de la ABA"
+  last_reviewed: "Evidence review 2026-07-19 · ABA CPG 2023/24"
+  tags: ["parkland", "quemadura", "líquidos", "reanimación", "scq", "aba", "ringer lactato", "traumatismo"]
+  aliases:
+  - "Fórmula de Parkland"
+  - "Líquidos en quemaduras"
+  - "Consenso de la ABA"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Cristaloide inicial de 24 horas para la reanimación del quemado. Introduzca el peso y
+      el %SCQ de quemaduras de segundo y tercer grado. **El valor por defecto es el ritmo inicial
+      de 2 mL/kg del Consenso de la ABA**; el ritmo de 4 mL/kg de Parkland es la
+      opción histórica.
+
+  - type: "formula"
+    kind: "parkland"
+    title: "Líquidos de reanimación en quemaduras"
+    source: "Guía de práctica clínica de la ABA 2023/24 (2 mL/kg); Baxter/Parkland (4 mL/kg)"
+    inputs:
+    - {key: "weight", label: "Peso", unit: "kg", type: "number"}
+    - {key: "tbsa", label: "%SCQ (2.º/3.er grado)", unit: "%", type: "number"}
+    - key: "coefficient"
+      label: "Ritmo inicial"
+      type: "select"
+      default: "2"
+      options:
+      - {value: "2", label: "2 mL/kg (Consenso de la ABA)"}
+      - {value: "4", label: "4 mL/kg (Parkland, histórico)"}
+    notes:
+    - "Administre la mitad en las primeras 8 h DESDE EL MOMENTO DE LA QUEMADURA y la otra mitad en las 16 h siguientes."
+    caveats:
+    - "Es solo una estimación inicial — ajústela según la diuresis (~0.5 mL/kg/h en adultos). Estime el %SCQ con Lund-Browder (la regla de los nueves sub-/sobreestima, sobre todo en niños)."

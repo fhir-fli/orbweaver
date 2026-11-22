@@ -1,0 +1,41 @@
+# translated-from-sha256: 40bec5cec9317fe4dfe462a7c5c1312ba578185af3f98498de6d5d75035bbfec
+# ============================================================
+# Oxygenation indices — P/F ratio (+ SpO₂/FiO₂).
+# Evidence review 2026-07-19: P/F = PaO₂ / FiO₂(fraction) — Berlin ARDS
+# severity (300/200/100 at PEEP ≥ 5). S/F is the 2023 Global-ARDS-
+# Definition surrogate when no ABG and SpO₂ ≤ 97% (≈ 315/235/148).
+# ============================================================
+
+topic:
+  id: "calc-oxygenation"
+  title: "Cociente P/F y S/F"
+  list_subtitle: "oxigenación / gravedad del SDRA"
+  last_reviewed: "Evidence review 2026-07-19 · Berlin 2012 · Global ARDS 2023"
+  tags: ["cociente p/f", "cociente pf", "cociente sf", "spo2/fio2", "sdra", "oxigenación", "hipoxemia", "pulmonar"]
+  aliases:
+  - "Cociente P/F"
+  - "PaO2/FiO2"
+  - "Cociente S/F"
+  - "SpO2/FiO2"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Cociente de oxigenación para la gravedad del SDRA. Introduzca FiO₂ y PaO₂ para el cociente
+      P/F; añada la SpO₂ para el sustituto S/F sin gasometría.
+
+  - type: "formula"
+    kind: "oxygenation"
+    title: "Índices de oxigenación"
+    source: "P/F = PaO₂/FiO₂ (Berlín 2012); sustituto S/F (definición global de SDRA 2023)"
+    inputs:
+    - {key: "fio2", label: "FiO₂", unit: "%", type: "number", default: 21, help: "21 = aire ambiente"}
+    - {key: "pao2", label: "PaO₂", unit: "mmHg", type: "number", optional: true}
+    - {key: "spo2", label: "SpO₂", unit: "%", type: "number", optional: true, help: "para S/F; úsela solo si es ≤ 97%"}
+    notes:
+    - "Gravedad P/F de Berlín (PEEP ≥ 5): leve 200–300 · moderada 100–200 · grave < 100."
+    - "S/F ≈ 315 leve · 235 moderada · 148 grave — solo sustituto, clasifica mal ~⅓."
+    caveats:
+    - "El S/F solo es válido cuando la SpO₂ es ≤ 97% y no hay gasometría; no es intercambiable con el P/F para ajustar el tratamiento."

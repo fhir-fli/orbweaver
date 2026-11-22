@@ -1,0 +1,40 @@
+# translated-from-sha256: ee8785e4724df59db33805eca8a140b7e4f607fdd7a08889f62555ee8b09d04d
+# ============================================================
+# Ottawa Knee Rule.
+# Evidence review 2026-07-19: well-validated (pooled sensitivity ~98–99%
+# for fracture; ~50% fewer knee radiographs). Any of the five criteria →
+# knee X-ray. Stiell 1995/1996.
+# ============================================================
+
+topic:
+  id: "calc-ottawa-knee"
+  title: "Regla de rodilla de Ottawa"
+  list_subtitle: "decisión de radiografía de rodilla"
+  last_reviewed: "Evidence review 2026-07-19 · Stiell 1995"
+  tags: ["rodilla ottawa", "rodilla", "fractura", "radiografía", "ortopedia", "regla de decisión"]
+  aliases:
+  - "Regla de rodilla de Ottawa"
+  - "Regla de radiografía de rodilla"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Identifica qué lesiones agudas de rodilla necesitan radiografía. Toque cualquier criterio
+      presente — uno solo indica imagen.
+
+  - type: "score"
+    title: "Regla de rodilla de Ottawa"
+    source: "Stiell et al., 1995/1996"
+    items:
+    - {key: "age55", label: "Edad ≥ 55", type: "toggle", points: 1}
+    - {key: "fibula", label: "Dolor a la palpación en la cabeza del peroné", type: "toggle", points: 1}
+    - {key: "patella", label: "Dolor aislado a la palpación de la rótula", type: "toggle", points: 1}
+    - {key: "flex90", label: "No puede flexionar a 90°", type: "toggle", points: 1}
+    - {key: "weight", label: "No puede apoyar el peso 4 pasos (inmediatamente y en urgencias)", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 0, label: "La regla no indica radiografía", severity: "none"}
+    - {min: 1, label: "Radiografía de rodilla indicada", severity: "warn"}
+    caveats:
+    - "Se aplica a la lesión aguda aislada de rodilla; menos validada en niños y tras un retraso importante."

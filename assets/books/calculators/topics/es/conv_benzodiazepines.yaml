@@ -1,0 +1,55 @@
+# translated-from-sha256: 7155a607422e8c8910bdf49669d0f271bfcceb736e7988052b7fa5964b34f530
+# ============================================================
+# Benzodiazepine conversion → diazepam equivalents (oral)
+# Factors per the 2025 ASAM/ACMT Benzodiazepine Tapering Guideline
+# Appendix H (VA/DoD & Ashton Manual). OpenEvidence review applied
+# 2026-06-18: Oxazepam 0.33 → 0.5 (20 mg ≈ 10 mg diazepam). Lorazepam
+# kept at 10 (Ashton 1 mg) — VA/DoD uses 2 mg (factor 5); range noted
+# in caveats. Equivalence is imprecise and varies by source/half-life.
+# ============================================================
+
+topic:
+  id: "conv-benzodiazepines"
+  title: "Conversión de benzodiazepinas"
+  list_subtitle: "→ equivalentes de diazepam (oral)"
+  last_reviewed: "OpenEvidence review 2026-06-18 · ASAM/ACMT 2025 (VA/DoD & Ashton)"
+  tags: ["benzodiazepina", "conversión", "diazepam", "lorazepam", "alprazolam", "clonazepam"]
+  aliases:
+  - "Equivalentes de diazepam"
+  - "Conversión de benzodiazepinas"
+  category: "medical"
+  palette:
+    alert: "0xFFD32F2F"
+    alert_fill: "0xFFFDECEA"
+    alert_text: "0xFFB71C1C"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Conversión oral **directa**. La línea central muestra la dosis
+      **equivalente de diazepam**. Las semividas varían mucho — use la
+      equivalencia como una estimación inicial, no como un cambio exacto.
+
+  - type: "conversion"
+    mode: "equivalence"
+    title: "Benzodiazepina → equivalente de diazepam"
+    reference: "diazepam"
+    reference_label: "mg equiv. de diazepam"
+    unit: "mg"
+    source: "Guía de reducción de benzodiazepinas ASAM/ACMT 2025, apéndice H (VA/DoD y Ashton)"
+    agents:
+    - {name: "Diazepam", factor: 1.0}
+    - {name: "Lorazepam", factor: 10.0}
+    - {name: "Alprazolam", factor: 20.0}
+    - {name: "Clonazepam", factor: 20.0}
+    - {name: "Temazepam", factor: 0.5}
+    - {name: "Oxazepam", factor: 0.5}
+    - {name: "Clordiazepóxido", factor: 0.4}
+    excluded:
+    - {name: "Midazolam", reason: "De acción corta / depende de la vía — no hay una equivalencia oral estable."}
+    - {name: "Clobazam", reason: "La equivalencia varía mucho."}
+    caveats:
+    - "La equivalencia del lorazepam varía: de 1 mg (Ashton) a 2 mg (VA/DoD) ≈ 10 mg de diazepam."
+    - "Las equivalencias son aproximadas y difieren entre referencias."
+    - "Tenga en cuenta la semivida al cambiar; reduzca la dosis lentamente."

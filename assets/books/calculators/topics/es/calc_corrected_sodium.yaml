@@ -1,0 +1,50 @@
+# translated-from-sha256: a15e051e41d2e8e8eeb732eb7663007af8d59baf5c2c95b40ca8aad03dbde92b
+# ============================================================
+# Sodium correction for hyperglycemia.
+# Evidence review 2026-07-19: the Hillier 2.4 factor (Hillier, Am J Med
+# 1999, hyperglycemic-clamp) is better-validated than the classic Katz
+# 1.6 (Katz, NEJM 1973), especially at glucose > 400 mg/dL. Default 2.4,
+# show 1.6 for comparison. Corrected Na is an interpretive aid for fluid
+# tonicity/trend — NOT a treatment target; DKA/HHS fluids follow ADA 2024.
+# ============================================================
+
+topic:
+  id: "calc-corrected-sodium"
+  title: "Corrección del sodio (hiperglucemia)"
+  list_subtitle: "Hillier 2.4 (se muestra Katz 1.6)"
+  last_reviewed: "Evidence review 2026-07-19 · Hillier 1999 · ADA 2024"
+  tags: ["sodio", "corregido", "hiperglucemia", "glucosa", "hiponatremia", "cad", "ehh", "electrolito", "hillier", "katz"]
+  aliases:
+  - "Sodio corregido"
+  - "Na corregido"
+  - "Corrección del sodio"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Estima el sodio sérico real en presencia de hiperglucemia (la glucosa atrae agua
+      al espacio intravascular y diluye el Na⁺ medido). Usa el factor **Hillier ×2.4**,
+      preferido por la evidencia; el clásico **Katz ×1.6** se muestra para
+      comparar.
+
+  - type: "formula"
+    kind: "corrected_sodium"
+    title: "Sodio corregido"
+    source: "Hillier, Am J Med 1999 (×2.4); Katz, NEJM 1973 (×1.6)"
+    inputs:
+    - {key: "sodium", label: "Na⁺ medido", unit: "mEq/L", type: "number"}
+    - {key: "glucose", label: "Glucosa", type: "number"}
+    - key: "glu_unit"
+      label: "Unidad de glucosa"
+      type: "select"
+      default: "mg/dL"
+      options:
+      - {value: "mg/dL"}
+      - {value: "mmol/L"}
+    notes:
+    - "Na⁺ corregido = Na⁺ medido + factor × (glucosa[mg/dL] − 100) / 100."
+    caveats:
+    - "Ayuda para interpretar la tonicidad y la tendencia — no es un objetivo terapéutico."
+    - "La reanimación con líquidos en CAD/EHH sigue la ADA 2024 (primero cristaloide isotónico); el consenso ADA 2024 sigue el β-hidroxibutirato en lugar de la brecha aniónica."
