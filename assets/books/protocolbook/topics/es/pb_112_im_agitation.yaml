@@ -1,0 +1,104 @@
+# translated-from-sha256: 6ddd9bb6b08a980ef01301c51c72b2fe5485eb8aec2afa1970fcd2aeaf947089
+topic:
+  id: "pb-im-agitation"
+  title: "Paciente gravemente agitado o violento"
+  list_subtitle: "pp.112–113 · desescalada · contención · sedación"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["agitación", "paciente violento", "desescalada", "contención", "sedación", "adulto", "medicina interna", "haloperidol", "midazolam", "psiquiatría", "conductual"]
+  category: "medical"
+  pages:
+  - page_number: 112
+    blocks:
+    - type: "prose"
+      markdown: |
+        Siempre que se pueda, es mejor prevenir que tratar.
+    - type: "prose"
+      title: "Factores que hacen más probable la violencia"
+      markdown: |
+        - Sexo masculino
+        - Antecedentes de violencia
+        - Consumo de drogas o alcohol
+    - type: "prose"
+      title: "Signos de violencia inminente"
+      markdown: |
+        - Conducta provocadora
+        - Actitud enfadada
+        - Habla alta y agresiva
+        - Postura tensa (p. ej., puños apretados)
+        - Se mueve o cambia de postura con frecuencia, camina de un lado a otro
+        - Actos agresivos (p. ej., golpear paredes, lanzar objetos, golpearse a sí mismo)
+    - type: "prose"
+      title: "10 elementos de la desescalada verbal"
+      markdown: |
+        - Respete el espacio personal (2 brazos de distancia)
+        - No provoque (mantenga la calma)
+        - Establezca contacto verbal (la primera persona en hacer contacto dirige la conversación)
+        - Use un lenguaje breve y sencillo
+        - Identifique sentimientos y deseos ("¿Qué espera conseguir?")
+        - Escuche con atención (repita al paciente lo que dijo para asegurarse)
+        - Dé la razón, sea claro, acepte discrepar si es necesario
+        - Fije límites claros (explique que no se toleran la violencia ni el maltrato)
+        - Ofrezca opciones, sea positivo
+        - Haga una sesión de análisis con el paciente y el personal
+    - type: "prose"
+      title: "NO"
+      markdown: |
+        - Discuta
+        - Amenace
+        - Sea condescendiente
+        - Dé órdenes
+  - page_number: 113
+    blocks:
+    - type: "flowchart"
+      variant: "linear"
+      warnings:
+      - type: "safety"
+        text: "Garantice PRIMERO la SEGURIDAD DEL PERSONAL"
+      entry_chain:
+      - text: "Paciente gravemente agitado o violento"
+        shape: "stadium"
+      steps:
+      - type: "content"
+        title: "Primera respuesta"
+        bullets:
+        - "Intente calmar al paciente con técnicas verbales"
+        - "Llame a seguridad / la policía cuando sea posible ante cualquier sospecha de violencia, o si el paciente amenaza con ella"
+      - type: "content"
+        title: "Indicaciones de contención"
+        bullets:
+        - "Daño inminente a otros"
+        - "Daño inminente a sí mismo"
+        - "Interrupción de un tratamiento importante"
+        - "Daño a los equipos / el entorno"
+        - "Fracaso del abordaje verbal"
+      - type: "content"
+        title: "Antes de la sedación"
+        bullets:
+        - "Monitorice, mantenga el ABC"
+        - "Establezca una vía IV / monitorización de O₂ si es posible"
+        - "Controle los signos vitales (PA, FC, FR, SpO₂, temp, peso)"
+        - "Mida la glucemia"
+      - type: "action"
+        text: "Vuelva a intentar calmar al paciente con técnicas verbales"
+        kind: "communication"
+      convergence:
+        text: "¿Se requiere sedación rápida y/o no responde a las técnicas verbales?"
+        shape: "diamond"
+        bullets:
+        - text: "Elija según la situación — vea la tabla de abajo"
+    - type: "table"
+      title: "Sedación rápida (si se requiere y/o no responde a las técnicas verbales)"
+      zebra: true
+      columns: ["Situación", "Sedación"]
+      column_flex: [4, 6]
+      column_align: ["left", "left"]
+      rows:
+      - cells: ["Paciente gravemente violento", "Haloperidol 2.5–5 mg IV/IM Y/O midazolam 2.5–5 mg IV/IM"]
+      - cells: ["Intoxicación / abstinencia de drogas, o no diferenciado", "Midazolam 2.5–5 mg IV/IM, Y (si es necesario) haloperidol 2.5–5 mg IV/IM"]
+      - cells: ["Trastorno psiquiátrico conocido", "Haloperidol 2.5–5 mg IV/IM Y/O midazolam 2.5–5 mg IV/IM"]
+    - type: "prose"
+      title: "Elección del fármaco"
+      markdown: |
+        - **La combinación funciona mejor que cualquiera de los dos fármacos solo.** Haloperidol **más** midazolam es más eficaz que el haloperidol solo, que es la menos eficaz de las opciones habituales
+        - **Olanzapina 10 mg IM**, donde haya, es una buena alternativa al haloperidol con menos efectos extrapiramidales
+        - ⚠️ **El haloperidol prolonga el intervalo QT.** Haga un ECG cuando sea factible; evítelo si se sabe que el QT es largo o si el paciente toma otros fármacos que lo prolongan. **La vía IV conlleva más riesgo que la IM**

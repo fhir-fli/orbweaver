@@ -1,0 +1,79 @@
+# translated-from-sha256: f11df18df5b2e8117096e1fb78cc2be6e9e2aaf3e6ea46dcdaa22d1a91c54207
+topic:
+  id: "pb-im-aki"
+  title: "Lesión renal aguda"
+  list_subtitle: "p.111 · prerrenal / intrínseca / posrenal"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["lesión renal aguda", "LRA", "insuficiencia renal", "adulto", "medicina interna", "prerrenal", "posrenal", "renal intrínseca", "NTA", "NIA", "glomerulonefritis", "FeNa", "nefrología"]
+  category: "medical"
+  page_number: 111
+  blocks:
+  - type: "prose"
+    title: "Diagnóstico"
+    markdown: |
+      - Disminución de la diuresis (< 0.5 mL/kg/h durante > 6 horas)
+      - Aumento de la Cr ≥ 0.3 mg/dL **en 48 horas**
+      - Aumento de la Cr ≥ 50% **en los últimos 7 días**
+  - type: "prose"
+    title: "Análisis"
+    markdown: |
+      - Orina: examen, Cr, Na, urea, osmolaridad
+      - Suero: hemograma, Na, Cr, BUN
+  - type: "flowchart"
+    variant: "algorithm"
+    stages:
+    - decision: "¿Alguno de: FeNa < 1%, BUN/Cr > 20, U_Na < 20, U_osm > 500?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Prerrenal (sugestivo, no definitivo)"
+          bullets:
+          - "Volumen arterial circulante efectivo disminuido; trate la causa subyacente"
+          - "Causas: hipovolemia, insuficiencia cardíaca, sepsis, deshidratación, hemorragia / intravascular, insuficiencia hepática"
+      - label: "No"
+        continue: true
+    - decision: "¿Sospecha de obstrucción?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Posrenal"
+          bullets:
+          - "Coloque una sonda Foley"
+          - "Considere ecografía abdominal y pélvica"
+          - "Causas: nefrolitiasis, neoplasia, HPB, cáncer de próstata, fármacos anticolinérgicos, esquistosomiasis"
+      - label: "No"
+        box:
+          title: "Renal intrínseca — vea las categorías de abajo"
+  - type: "prose"
+    title: "Renal intrínseca — categorías"
+    markdown: |
+      - **Glomerulonefritis**
+      - **Vascular:** SHU/PTT, CID, preeclampsia, hipertensión maligna
+      - **Necrosis tubular aguda (NTA):** isquemia; fármacos (aminoglucósidos); pigmentos (rabdomiólisis, hemólisis)
+      - **Nefritis intersticial aguda (NIA):** alérgica (betalactámicos, sulfamidas, AINE); infecciosa (pielonefritis, TB); infiltrativa (leucemia / linfoma)
+  - type: "prose"
+    title: "Manejo"
+    markdown: |
+      No hay ningún fármaco que trate la LRA. Todo lo siguiente consiste en eliminar la causa y no empeorarla.
+
+      - **Trate la causa** — rehidrate al paciente prerrenal, alivie la obstrucción (sonde), suspenda el fármaco responsable
+      - **Suspenda los nefrotóxicos:** AINE, aminoglucósidos, IECA/ARA II, contraste. Revise **toda** la hoja de medicación
+      - **Ajuste la dosis de todo lo que se elimina por el riñón** — es donde se acumula el daño evitable
+      - **Líquidos hasta la euvolemia, y luego pare.** Quedarse corto prolonga la lesión; pasarse mata. Reevalúe a menudo
+      - **Vigile a diario:** diuresis, peso, creatinina, **potasio**
+      - Trate la hiperpotasemia, la acidosis y la sobrecarga de líquidos con sus propios protocolos
+  - type: "prose"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    title: "Derive para diálisis — AEIOU"
+    markdown: |
+      - **A** — **A**cidosis grave que no se corrige
+      - **E** — **E**lectrolitos: hiperpotasemia refractaria al tratamiento médico
+      - **I** — **I**ngestión de un tóxico dializable (metanol, etilenglicol, salicilatos, litio)
+      - **O** — sobrecarga de volumen (**O**verload) que no responde a diuréticos
+      - **U** — **U**remia: pericarditis, encefalopatía, sangrado
+
+      Derive pronto — el traslado lleva tiempo, y estos pacientes empeoran rápidamente.
