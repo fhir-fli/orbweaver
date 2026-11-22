@@ -29,7 +29,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import segments  # noqa: E402
 
 REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
-BOOKS = ['calculators', 'protocolbook', 'wvems', 'who_imci']
+# who_imci is left out on purpose. WHO licence 202610340 (WHO-LICENCE.md) grants
+# reproduction in English only: the form says "Translating: No". Translate it
+# only after WHO grants a translation licence, and record that grant first.
+BOOKS = ['calculators', 'protocolbook', 'wvems']
+UNLICENSED = {'who_imci': 'WHO licence 202610340 does not cover translation (WHO-LICENCE.md)'}
 LOG = os.path.join(REPO, 'tool', 'l10n', 'es_progress.tsv')
 
 
@@ -99,6 +103,10 @@ def cmd_apply(src):
     with open(src) as f:
         pages = json.load(f)
     pairs = []
+    for english in pages:
+        for b, why in UNLICENSED.items():
+            if english.startswith(f'assets/books/{b}/'):
+                sys.exit(f'refusing {english}: {why}')
     for english, tr in pages.items():
         en_abs = os.path.join(REPO, english)
         want = segments.extract(en_abs)

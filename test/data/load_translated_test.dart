@@ -38,6 +38,20 @@ void main() {
     }
   });
 
+  // WHO licence 202610340 (WHO-LICENCE.md) covers the English book only:
+  // "Translating: No". In Spanish every WHO page must load its English file.
+  test('WHO stays English in Spanish (no translation licence)', () async {
+    final en = await loadLibrary();
+    final es = await loadLibrary(language: 'es');
+    final whoEn = en.firstWhere((b) => b.id == 'who_imci');
+    final whoEs = es.firstWhere((b) => b.id == 'who_imci');
+    expect(whoEs.allTopics, isNotEmpty);
+    expect(whoEs.title, whoEn.title);
+    for (final t in whoEs.allTopics) {
+      expect(t.asset, isNot(contains('/es/')), reason: t.id);
+    }
+  });
+
   // Every bundled page is translated now, so the fallback is tested on a
   // bundle listing that lacks one.
   test('a page with no Spanish file stays English, at its English path', () {

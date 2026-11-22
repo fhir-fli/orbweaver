@@ -30,6 +30,13 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.abspath(os.path.join(HERE, '..', '..', '..'))
 PROMPT = open(os.path.join(HERE, 'prompt.md')).read()
 PAGES = [l.strip() for l in open(os.path.join(HERE, 'pages.txt')) if l.strip()]
+# The three WHO pages in pages.txt were run once (2026-11-21) before we read that
+# WHO licence 202610340 excludes translation (WHO-LICENCE.md, "Translating: No").
+# Their outputs were removed; never send WHO text to a model again without a licence.
+_who = [p for p in PAGES if '/who_imci/' in p]
+if _who:
+    print(f'skipping {len(_who)} WHO pages: WHO licence does not cover translation', flush=True)
+    PAGES = [p for p in PAGES if p not in _who]
 ENV = '/home/grey/dev/graiai/thalamus/.env'
 
 
