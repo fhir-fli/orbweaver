@@ -1,12 +1,4 @@
 # translated-from-sha256: 81c03a0c22fef8847ba6f6374dce36b4a966d56469cce2622d5354c7b8e1d017
-# ============================================================
-# Centor / McIsaac (modified) — strep pharyngitis.
-# Evidence review 2026-07-19: IDSA 2025 suggests using a clinical score to
-# decide WHO TO TEST — it does NOT endorse empiric antibiotics by score
-# alone where rapid antigen/molecular testing exists. McIsaac adds the age
-# adjustment. Points per McIsaac 1998. Range −1 to 5.
-# ============================================================
-
 topic:
   id: "calc-centor"
   title: "Centor / McIsaac"
@@ -18,14 +10,11 @@ topic:
   - "McIsaac"
   - "Puntuación de estreptococo"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estima la probabilidad de estreptococo del grupo A en el dolor de garganta, para decidir
       a quién hacer la prueba. Toque los hallazgos presentes y elija el grupo de edad.
-
   - type: "score"
     title: "Centor (modificada por McIsaac)"
     source: "McIsaac et al., CMAJ 1998"

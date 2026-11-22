@@ -1,12 +1,4 @@
 # translated-from-sha256: 34be1cb880854757bd8aa76e8252c7c63fdd994569b24892bdb074534d8e9b7d
-# ============================================================
-# Ideal body weight (Devine) + adjusted body weight.
-# Evidence review 2026-07-19: Devine (1974) IBW is the de-facto dosing
-# standard but is EMPIRIC (not dataset-derived; Pai/Paloucek 2000) and
-# biased at height/sex extremes. Adjusted BW = IBW + 0.4×(actual − IBW).
-# Drug-specific dosing weight (TBW vs IBW vs AdjBW vs LBW) varies by agent.
-# ============================================================
-
 topic:
   id: "calc-ideal-body-weight"
   title: "Peso corporal ideal / ajustado"
@@ -19,15 +11,12 @@ topic:
   - "Peso corporal ajustado"
   - "Devine"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Peso corporal ideal de Devine para la dosificación de fármacos según el peso. Introduzca también el peso
       real para obtener además el peso corporal ajustado (usado para algunos fármacos en la
       obesidad).
-
   - type: "formula"
     kind: "ideal_body_weight"
     title: "Peso corporal ideal / ajustado"

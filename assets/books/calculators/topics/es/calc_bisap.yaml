@@ -1,13 +1,4 @@
 # translated-from-sha256: 458aca84f89a25c433f228f4e3c412dc44cf527ce6f78c7f83135f5b61bb3a29
-# ============================================================
-# BISAP — Bedside Index of Severity in Acute Pancreatitis.
-# Evidence review 2026-07-19: calculable within 24 h (vs Ranson's 48 h),
-# comparable discrimination — a reasonable bedside severity index. BUT
-# ACG 2013 endorses NO single score over SIRS + serial clinical/organ-
-# failure assessment (Atlanta 2012 defines severity by organ failure).
-# Wu 2008. 5 factors; total 0–5.
-# ============================================================
-
 topic:
   id: "calc-bisap"
   title: "Puntuación BISAP"
@@ -18,14 +9,11 @@ topic:
   - "BISAP"
   - "Gravedad de la pancreatitis"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Índice precoz (en las primeras 24 h) del riesgo de mortalidad en la pancreatitis aguda. Toque
       cada criterio presente.
-
   - type: "score"
     title: "BISAP"
     source: "Wu et al., Gut 2008"

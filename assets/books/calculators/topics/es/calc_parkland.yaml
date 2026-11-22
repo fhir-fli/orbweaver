@@ -1,14 +1,4 @@
 # translated-from-sha256: 51aac6ed2ff70dfc85101b3585445e3a51b890ab084f2773d5f3780e05c859dd
-# ============================================================
-# Burn resuscitation fluid (Parkland / ABA Consensus).
-# Evidence review 2026-07-19: ABA 2023/24 recommends STARTING at
-# 2 mL/kg/%TBSA in adults (the "ABA Consensus" rate), NOT the classic
-# 4 mL/kg Parkland rate ("fluid creep"). Half over the first 8 h from the
-# TIME OF BURN, half over the next 16 h. The formula is a starting
-# estimate — titrate to urine output 0.5 mL/kg/h. Use %TBSA of 2nd/3rd
-# degree burns (Lund-Browder; rule of nines is inaccurate in children).
-# ============================================================
-
 topic:
   id: "calc-parkland"
   title: "Líquidos de reanimación en quemaduras"
@@ -20,16 +10,13 @@ topic:
   - "Líquidos en quemaduras"
   - "Consenso de la ABA"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Cristaloide inicial de 24 horas para la reanimación del quemado. Introduzca el peso y
       el %SCQ de quemaduras de segundo y tercer grado. **El valor por defecto es el ritmo inicial
       de 2 mL/kg del Consenso de la ABA**; el ritmo de 4 mL/kg de Parkland es la
       opción histórica.
-
   - type: "formula"
     kind: "parkland"
     title: "Líquidos de reanimación en quemaduras"

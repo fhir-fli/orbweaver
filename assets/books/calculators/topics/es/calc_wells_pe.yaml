@@ -1,12 +1,4 @@
 # translated-from-sha256: 52d9cb9414508535683807ce549ea711e2dc17f0446b69b973dd484b67e2230f
-# ============================================================
-# Wells score for PE (two-level / dichotomized).
-# Evidence review 2026-07-19: ESC 2019 (Class I-B) and the 2026 AHA/ACC
-# PE guideline endorse Wells for pretest probability. Points per Wells
-# 2000. Dichotomized cutoff ≤ 4 "PE unlikely" → D-dimer, > 4 "PE likely"
-# → CTPA. Half-point weights.
-# ============================================================
-
 topic:
   id: "calc-wells-pe"
   title: "Puntuación de Wells — TEP"
@@ -17,14 +9,11 @@ topic:
   - "Wells TEP"
   - "Puntuación de TEP"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Puntuación de Wells dicotomizada (dos niveles) para la probabilidad pretest de embolia
       pulmonar. Orienta la vía del dímero D frente a la angiografía pulmonar por TC.
-
   - type: "score"
     title: "Puntuación de Wells — TEP"
     source: "Wells et al., 2000; guía de TEP de la ESC 2019"

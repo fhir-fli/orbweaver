@@ -123,6 +123,24 @@ def cmd_apply(src):
                 print(body, flush=True)
 
 
+def cmd_regen():
+    """Rebuild every current translated page from its own text with the
+    current reinsert, so a reinsert fix reaches pages written before it.
+    Writes each page to a JSON batch and runs the normal apply."""
+    pages = {}
+    for english in english_pages():
+        if state(english) != 'current':
+            continue
+        pages[english] = segments.extract(os.path.join(REPO, target(english)))
+    out = os.path.join(REPO, 'tool/l10n/.regen.json')
+    with open(out, 'w') as f:
+        json.dump(pages, f, ensure_ascii=False)
+        f.flush()
+    print(f'regenerating {len(pages)} pages', flush=True)
+    cmd_apply(out)
+    os.remove(out)
+
+
 if __name__ == '__main__':
     a = sys.argv[1:]
     if a[:1] == ['status']:
@@ -133,5 +151,7 @@ if __name__ == '__main__':
         cmd_next(rest[0], int(rest[1]) if len(rest) > 1 else 1, book)
     elif a[:1] == ['apply']:
         cmd_apply(a[1])
+    elif a[:1] == ['regen']:
+        cmd_regen()
     else:
         sys.exit(__doc__)

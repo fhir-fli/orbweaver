@@ -1,0 +1,53 @@
+# translated-from-sha256: a673557ae30a62aea711130ba5912f55c8d299a8ec4c749efccaaef8b535d506
+topic:
+  id: "pb-sickle-cell"
+  title: "Enfermedad de células falciformes"
+  list_subtitle: "p.59 · ingreso + medicación en casa"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["células falciformes", "drepanocitosis", "hidroxicarbamida", "ácido fólico", "profilaxis con penicilina", "profilaxis de la malaria", "priapismo", "pediátrico", "hematología"]
+  category: "medical"
+  page_number: 59
+  blocks:
+  - type: "prose"
+    title: "Ingrese a un niño con enfermedad de células falciformes si tiene cualquiera de los siguientes"
+    markdown: |
+      - Dolor: moderado a intenso
+      - Palidez intensa, Hb <5, síntomas con Hb <7 o caída de 2+ en la Hb respecto a la basal
+      - Fiebre con taquicardia, taquipnea, hipotensión o >38.0 C
+      - Dolor torácico, dificultad para respirar
+      - Signos anormales del SNC agudos (0–7 días) (p. ej., cefalea, somnolencia, parálisis o debilidad de una extremidad)
+      - Priapismo (>4 horas)
+      - PDR o GG + para malaria
+      - Diarrea y/o vómitos con dolor abdominal, distensión o incapacidad de beber lo suficiente para mantenerse hidratado
+      - Neutropenia (granulocitos <1000) y fiebre
+  - type: "prose"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    title: "Priapismo >4 horas — es isquémico, trátelo ya"
+    markdown: |
+      El retraso causa impotencia permanente. **No** espere a la transfusión — **la transfusión de hematíes no trata el priapismo.**
+
+      - Líquidos IV y analgesia (opioides según necesidad)
+      - Si no se resuelve en 1 hora de medidas de soporte: **aspire** sangre oscura del cuerpo cavernoso con una aguja mariposa de 19G y luego **irrigue con solución salina normal**
+      - Si la aspiración sola falla: **fenilefrina 100–500 mcg intracavernosa** (diluya 1mg en 19mL de SSN = 50 mcg/mL), repita cada 5 minutos, **máximo 1mg en total**
+      - Tenga **atropina** junto a la cama — la fenilefrina puede causar bradicardia refleja
+      - Si aún no se resuelve: **derivación quirúrgica urgente para una derivación (shunt)**
+  - type: "prose"
+    title: "Medicación en casa al alta"
+    markdown: |
+      - **Ácido fólico** 1mg VO al día — **no 5mg.** 1mg cubre el aumento de la demanda por la hemólisis crónica, y el folato a dosis altas antagoniza la sulfadoxina-pirimetamina mensual de abajo (rescata al parásito y aproximadamente duplica el fracaso del tratamiento antimalárico)
+      - **Penicilina V potásica**
+        - <3 años: 125mg VO dos veces al día
+        - 3–5 años: 250mg VO dos veces al día
+      - **Profilaxis de la malaria**
+        - Sulfadoxina-pirimetamina (SP): 2–5 años ½ tableta al mes; 5–10 años 1 tableta al mes; 10–15 años 2 tabletas al mes; >15 años 3 tabletas al mes
+        - Alergia a las sulfamidas: considere eritromicina 250mg VO cada 12 h
+      - **Hidroxicarbamida (hidroxiurea)**
+        - Idealmente debe manejarla un centro de tratamiento especializado
+        - Indicaciones: crisis frecuentes **≥3/año**; dolor que interfiere con las actividades de la vida diaria; velocidad anormal en la ecografía Doppler transcraneal (DTC) >200cm/s; antecedente de síndrome torácico agudo; antecedente de ictus
+        - **Todos los niños a partir de los 9 meses deben iniciar hidroxicarbamida.** Su seguridad y eficacia en niños del África subsahariana están establecidas (REACH, NOHARM)
+        - Dosis inicial: 20mg/kg VO al día
+        - Decisión de un profesional sanitario de mayor rango tras hemograma, función renal y pruebas de función hepática

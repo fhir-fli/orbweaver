@@ -1,12 +1,5 @@
 # translated-from-sha256: 7df24691d8e9b0ffc82594b844f5b1f7891c3bdb05cd231381e6928833e975df
-# ============================================================
-# WVEMS 2026 Protocol 62 — Head Injury
-# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
-# First protocol on the `differential` flowchart variant.
-# ============================================================
-
 topic:
-
   id: "wvems-2026-062"
   version: "v260101"
   title: "Traumatismo craneal"
@@ -25,29 +18,18 @@ topic:
   - "Trauma de cara / cuello"
   - "Trauma de ojo / nariz / boca"
   category: "trauma"
-
-  # Sticky: flowchart page + prose page each snap to a full screen.
   layout: "paged"
-
   pages:
-
   - page_number: 62
     blocks:
-
-    # ────────────────────────────────────────────────
-    # Flowchart block (differential variant — 2-col card grid)
-    # ────────────────────────────────────────────────
     - type: "flowchart"
       variant: "differential"
-
       entry_chain:
       - text: "Trauma de cabeza, cara o cuello"
         shape: "stadium"
-
       decision:
         text: "¿Localización?"
         shape: "diamond"
-
       cards:
       - title: "Fx de cráneo"
         bullets:
@@ -81,7 +63,6 @@ topic:
         bullets:
         - "Colóquelos en solución"
         - "Puede intentar reimplantar"
-
       convergence:
         text: "Considere"
         shape: "stadium"
@@ -89,12 +70,9 @@ topic:
         - text: "[Trauma mayor](topic:wvems-2026-056)"
         - text: "[Alteración del NC](topic:wvems-2026-036), [Convulsión](topic:wvems-2026-042)"
         - text: "[PIC elevada](topic:wvems-2026-086)"
-
   - page_number: 63
     blocks:
-
     - type: "prose"
-
       critical_care_link:
         text: "[PIC elevada](topic:wvems-2026-086)"
       title: "Imperativos del traumatismo craneal"
@@ -106,13 +84,11 @@ topic:
         - Los medicamentos [anticoagulantes](topic:wvems-2026-076) (**que adelgazan la sangre**) aumentan el riesgo de HIC.
         - Las **laceraciones** se benefician de reparación en las primeras horas.
         - El **mecanismo** predice la gravedad.
-
     - type: "band_callout"
       band: "critical_care"
       title: ""
       markdown: |
         - Considere [PIC elevada](topic:wvems-2026-086) si está indicado y tiene credencial de cuidados críticos.
-
     - type: "prose"
       title: "Alerta de TRAUMA"
       callout: true
@@ -122,7 +98,6 @@ topic:
         - Si hay una intervención mayor
         - O un mecanismo mayor
         - Active una Alerta de **TRAUMA**
-
     - type: "prose"
       title: "Notas"
       markdown: |
@@ -139,14 +114,12 @@ topic:
         - **Dientes**: traslade los dientes avulsionados en solución de Hank o SSN.
           - Intente el reimplante solo en lesiones sin complicaciones y aisladas.
         - **Conmoción**: por lo general no requiere intervención del SEM.
-
     - type: "band_callout"
       band: "peds"
       title: "Pediatría"
       markdown: |
         - No intente reimplantar dientes primarios (de leche).
         - Use la [Referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para la dosificación pediátrica.
-
     - type: "prose"
       title: "Referencias"
       text_scale: 0.8

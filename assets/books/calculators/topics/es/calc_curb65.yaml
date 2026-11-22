@@ -1,11 +1,4 @@
 # translated-from-sha256: f0eedd5f3d28c7ed321efd5ec9138a3c43f9c6830d6ddbd7f1a6b4b036f9adcb
-# ============================================================
-# CURB-65 — community-acquired pneumonia severity.
-# Evidence review 2026-07-19: ATS/IDSA 2019 PREFERS PSI/PORT for the
-# admission decision but CURB-65 is simpler and UK-standard (NICE NG250).
-# Points per Lim 2003 (Thorax). Max 5. Use with clinical judgment.
-# ============================================================
-
 topic:
   id: "calc-curb65"
   title: "CURB-65"
@@ -17,14 +10,11 @@ topic:
   - "CURB"
   - "Gravedad de la neumonía"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estima la mortalidad a 30 días en la neumonía adquirida en la comunidad para apoyar
       la decisión de ingreso. Toque cada criterio que corresponda.
-
   - type: "score"
     title: "CURB-65"
     source: "Lim et al., Thorax 2003"

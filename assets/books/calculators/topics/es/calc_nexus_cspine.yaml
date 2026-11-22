@@ -1,29 +1,4 @@
 # translated-from-sha256: 3bcf9a82e9814c8a2f6100213b32531c7b33052ac55351652e3dae68573c268b
-# ============================================================
-# NEXUS Low-Risk Criteria — cervical-spine imaging after blunt trauma.
-# Evidence review 2026-09-07 (abstracts read whole via PubMed):
-#   Hoffman et al., NEJM 2000 (PMID 10891516): 34,069 blunt-trauma patients
-#   imaged at 21 US centres; the instrument missed 8/818 cervical-spine
-#   injuries (sensitivity 99.0%, NPV 99.8%, specificity 12.9%) and 2/578
-#   clinically significant injuries (sensitivity 99.6%, NPV 99.9%). No age
-#   bound — MDCalc's evidence page for the same cohort gives ages 1–101.
-#   Viccellio et al., Pediatrics 2001 (PMID 11483830): the < 18 y subgroup,
-#   3,065 children, 30 injuries, sensitivity 100% (95% CI 87.8–100); only 88
-#   were < 2 y and none of them injured, so the authors advise caution < 2 y.
-#   Stiell et al., NEJM 2003 (PMID 14695411): prospective head-to-head in
-#   8,283 alert stable adults — the Canadian C-Spine Rule was more sensitive
-#   (99.4% vs 90.7%) and more specific (45.1% vs 36.8%) than NEXUS.
-#   OpenEvidence 2026-09-07 (verified against the abstracts): Ala et al., PLoS
-#   One 2018 (PMID 30388133) 90% sensitivity for both, specificity NEXUS
-#   54.7% vs CCR 44.2%; Lee et al., JAMA Netw Open 2025 (PMID 41632125), 22,430
-#   children, sensitivity PECARN CSI 93.3%, NEXUS 85.7%, CCR 90.8%; guideline
-#   split and the CT-unavailable pathway per the OE ruling (Gesu 2021, ACR
-#   2019, Spinal Cord Society 2020).
-# All five criteria must be met to forgo imaging; any one present → image.
-# Criterion labels are the five named in the NEJM abstract; no verbatim
-# sub-definitions are reproduced here because the full text was not read.
-# ============================================================
-
 topic:
   id: "calc-nexus-cspine"
   title: "Criterios NEXUS de columna cervical"
@@ -36,9 +11,7 @@ topic:
   - "Liberación de columna cervical"
   - "Regla de columna cervical"
   category: "trauma"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Identifica a los pacientes con traumatismo cerrado cuya columna cervical puede liberarse
@@ -47,7 +20,6 @@ topic:
       adultos alertas y estables: la [Regla canadiense de columna cervical](topic:calc-canadian-cspine),
       que además incluye la conducta cuando no hay TC. Niños:
       [PECARN columna cervical](topic:calc-pecarn-cspine).
-
   - type: "score"
     title: "Criterios NEXUS de bajo riesgo"
     unit: "present"

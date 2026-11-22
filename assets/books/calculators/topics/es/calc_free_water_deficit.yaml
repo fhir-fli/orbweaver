@@ -1,13 +1,4 @@
 # translated-from-sha256: aacb9058697f70297e677815a2cd7545fb243eef714c5352b19b59a3266857f4
-# ============================================================
-# Free water deficit (hypernatremia).
-# Evidence review 2026-07-19: FWD = TBW × (current Na / target Na − 1),
-# TBW = weight × 0.6 (male) / 0.5 (female). Estimates the deficit ONLY —
-# ongoing/insensible losses must be added. The strict ≤0.5 mEq/L/h
-# correction cap is pediatric-extrapolated; adult cohorts show no harm
-# from faster correction — use clinical judgment.
-# ============================================================
-
 topic:
   id: "calc-free-water-deficit"
   title: "Déficit de agua libre"
@@ -19,15 +10,12 @@ topic:
   - "Déficit de agua"
   - "Hipernatremia"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estima el déficit de agua libre en la hipernatremia. Es el déficit
       que hay que reponer — sume las pérdidas en curso e insensibles para planificar la
       reposición total.
-
   - type: "formula"
     kind: "free_water_deficit"
     title: "Déficit de agua libre"

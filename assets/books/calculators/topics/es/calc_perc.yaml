@@ -1,12 +1,4 @@
 # translated-from-sha256: b8f3fd4f6cb588e1da1198bb9e760924d566a6f7293cdf53003b83fd36cde69e
-# ============================================================
-# PERC — Pulmonary Embolism Rule-out Criteria.
-# Evidence review 2026-07-19: valid ONLY in low clinical-probability /
-# low-prevalence patients (PROPER RCT). If ALL 8 criteria are negative
-# (score 0), PE can be excluded without D-dimer. Any positive item →
-# cannot rule out. Endorsed by ACEP 2018 and the 2026 AHA/ACC PE guideline.
-# ============================================================
-
 topic:
   id: "calc-perc"
   title: "Regla PERC"
@@ -17,15 +9,12 @@ topic:
   - "PERC"
   - "Descartar TEP"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Criterios para descartar la embolia pulmonar. Toque cada criterio que esté
       **presente**. Si no hay ninguno (puntuación 0) **y** la probabilidad clínica pretest
       ya es baja, se excluye el TEP sin más pruebas.
-
   - type: "score"
     title: "Criterios PERC"
     source: "Kline et al., 2004; ensayo PROPER, JAMA 2018"

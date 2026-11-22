@@ -1,13 +1,4 @@
 # translated-from-sha256: 7759b66502322e5f5c932a9e60550a5a4fcaff5ea539e91421c67e25035ba09f
-# ============================================================
-# Ottawa Ankle Rule.
-# Evidence review 2026-07-19: among the best-validated decision rules
-# (pooled sensitivity ~98–100% for fracture; ~30–40% fewer radiographs).
-# Ankle X-ray if pain in the malleolar zone AND a positive finding; foot
-# X-ray if pain in the midfoot zone AND a positive finding. Any positive
-# finding here → imaging. Stiell 1992.
-# ============================================================
-
 topic:
   id: "calc-ottawa-ankle"
   title: "Regla de tobillo de Ottawa"
@@ -18,14 +9,11 @@ topic:
   - "Regla de tobillo de Ottawa"
   - "Regla de radiografía de tobillo"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Identifica qué lesiones agudas de tobillo/pie necesitan radiografía. Toque cualquier
       hallazgo positivo — uno solo indica imagen.
-
   - type: "score"
     title: "Regla de tobillo de Ottawa"
     source: "Stiell et al., Ann Emerg Med 1992"

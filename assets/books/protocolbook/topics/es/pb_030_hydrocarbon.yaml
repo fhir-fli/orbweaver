@@ -1,40 +1,4 @@
 # translated-from-sha256: 4a4a61e14793d61d9d81639837cab14d0471494f05e1c3c72c0a4e6d291e157f
-# ============================================================
-# ProtocolBook p.30 — Hydrocarbon ingestion (kerosene, paraffin).
-#
-# First use of the NEW `algorithm` flowchart variant (Grey's call
-# 2026-07-08): a genuinely branching multi-decision algorithm that
-# must render as ONE connected flowchart (prose would break it), but
-# in a cleaner vertical form than the book's hand-drawn 2-D diagram.
-# The algorithm variant = a top-to-bottom spine of decision stages;
-# each outcome ends in a disposition box, continues down the spine,
-# or `goto`s a named shared box. Loop-backs (asymptomatic → becomes
-# symptomatic → Treatment) are expressed as textual references, not
-# drawn backward arrows.
-#
-# Faithful-rendering calls:
-#   - Citation superscripts (present?189, antibiotics190) dropped.
-#   - The book's asymptomatic sub-branch (observe → 6 h CXR → normal
-#     → monitor 24 h / abnormal → treat) is captured in the "observe"
-#     box bullets rather than as its own drawn sub-tree — same logic,
-#     cleaner on a phone.
-#   - "See Convulsion Protocol" is plain text now; will become a
-#     topic: cross-link once the Paediatric Convulsions page (p.42)
-#     is authored.
-#
-# ✅ OE-REVIEWED 2026-07-27: page confirmed accurate as written. Only change
-#    applied — CXR timing 6 h → "6–8 h", the window the literature cites.
-#    ✓ Confirmed: no prophylactic antibiotics (a double-blind RCT in an LMIC
-#    setting found no benefit in kerosene pneumonitis), salbutamol with
-#    epinephrine avoided (myocardial sensitisation), NPO + maintenance IVF,
-#    24 h monitoring, and ICU for severe distress unresponsive to treatment.
-#
-# (historical) CONTENT FLAG for the later OE pass:
-#   - "Do NOT start prophylactic antibiotics" — matches current
-#     evidence (antibiotics only for secondary bacterial pneumonia);
-#     steroids likewise not indicated (book doesn't mention). Fine.
-# ============================================================
-
 topic:
   id: "pb-hydrocarbon"
   title: "Ingestión de hidrocarburos (queroseno, parafina)"
@@ -43,15 +7,12 @@ topic:
   tags: ["hidrocarburo", "queroseno", "parafina", "ingestión", "intoxicación", "aspiración"]
   category: "medical"
   page_number: 30
-
   blocks:
-
   - type: "prose"
     markdown: |
       - Más probable en niños
       - A menudo se presenta asintomático
       - Queroseno / hidrocarburos alifáticos — olor a destilado de petróleo
-
   - type: "flowchart"
     variant: "algorithm"
     entry:

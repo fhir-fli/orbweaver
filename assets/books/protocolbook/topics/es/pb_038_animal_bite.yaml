@@ -1,61 +1,4 @@
 # translated-from-sha256: b3bc35a0e7a8e3adf457522fc95ae6dff929edb7ccbc9517f86153a1d544bcfd
-# ============================================================
-# ProtocolBook p.38 — Animal Bite.
-#
-# Pure outline page (no boxes/arrows): mammalian bites, human
-# bites, prophylactic treatment (amoxicillin-clavulanate, tetanus
-# table, rabies table) → titled prose + tables.
-#
-# Faithful-rendering calls:
-#   - Citation superscripts (title 3) dropped.
-#   - The tetanus table has a 2-level printed header (Clean & minor
-#     wound vs All other wounds, each split into Toxoid / HTIG);
-#     split into TWO small 3-column tables (one per wound class) —
-#     same cells, far more legible on a phone.
-#   - "Immunocrompromised" spelling typo in the source → corrected
-#     to "Immunocompromised".
-#   - The rabies Vaccine row ends with a dangling "*" footnote
-#     marker whose footnote text does not exist anywhere on the
-#     page (p.39 starts Snake bite) — marker dropped.
-#
-# ⚠️ CONTENT FLAGS — OPEN (audit pass 2026-07-26, awaiting OE):
-#   - PENICILLIN-ALLERGY ALTERNATIVES as printed ("Ciprofloxacin,
-#     Azithromycin or Doxycycline") are listed as MONOTHERAPY, but
-#     none of the three reliably covers the oral ANAEROBES that make
-#     bite wounds infect. Standard alternative regimens pair an agent
-#     with Pasteurella cover against an anaerobic agent — e.g.
-#     doxycycline + metronidazole, TMP-SMX + metronidazole, or a
-#     fluoroquinolone + clindamycin. (Clindamycin alone is likewise
-#     inadequate — no Pasteurella.) OE to confirm the preferred pair
-#     for this setting, then add "+ metronidazole".
-#   - RABIES IMMUNOGLOBULIN administration: the table says "inject as
-#     much as possible around the wound, give the rest IM". The WHO
-#     2018 rabies position paper CHANGED this — infiltrate ALL of the
-#     RIG into and around the wound; the distant IM remainder is no
-#     longer recommended (no added benefit, wastes a scarce biologic).
-#     Clear-looking but a WHO-policy change rather than a printing
-#     error, so left as printed for OE.
-#   - Tetanus tables verified cell-by-cell against CDC — exact ✓.
-#   - Vaccine days 0/3/7/14 IM = the standard 4-dose Essen regimen ✓;
-#     WHO 2018 also endorses shorter ID regimens where ID practice
-#     exists. Optional note only.
-#
-# ⚠️ GENUINE SOURCE ERROR corrected (SURFACED TO GREY 2026-07-14):
-#   - The rabies table as printed conflates the two biologics: the
-#     Vaccine row reads "Human Ig 20U/kg OR Equine Ig 40U/kg IM
-#     (deltoid or anterolateral thigh area), inject once on days
-#     0, 3, 7 and 14" — but 20 U/kg human / 40 U/kg equine are the
-#     IMMUNOGLOBULIN doses (given ONCE, around the wound + rest IM,
-#     exactly as the row above already says), while days 0/3/7/14 is
-#     the VACCINE schedule. Followed as printed it would give
-#     repeated RIG on 4 days and no vaccine. Redistributed to the
-#     clearly-intended reading: RIG row = human 20 U/kg OR equine
-#     40 U/kg once; Vaccine row = IM deltoid/anterolateral thigh on
-#     days 0, 3, 7 and 14 (dose per product). Grey should fix the
-#     source PDF; OE pass to confirm regimen currency (WHO now also
-#     accepts ID regimens / 2-site schedules).
-# ============================================================
-
 topic:
   id: "pb-animal-bite"
   title: "Mordedura de animal"
@@ -64,9 +7,7 @@ topic:
   tags: ["mordedura de animal", "mordedura humana", "mordedura de perro", "rabia", "tétanos", "mordedura", "profilaxis", "amoxicilina-ácido clavulánico"]
   category: "medical"
   page_number: 38
-
   blocks:
-
   - type: "prose"
     title: "Mordeduras de mamíferos (no humanas)"
     markdown: |
@@ -79,7 +20,6 @@ topic:
         - Lesión moderada-grave o por aplastamiento
         - Edema en el sitio de la mordedura
         - Lesiones cerca de la mano, próximas a otros huesos/articulaciones, sobre todo si penetran la cápsula articular o el periostio
-
   - type: "prose"
     title: "Mordeduras humanas"
     markdown: |
@@ -88,7 +28,6 @@ topic:
       - Toda mordedura humana debe recibir antibióticos profilácticos
       - Considere la profilaxis posexposición para el VIH; en general el riesgo es bajo, pero mayor si la saliva está contaminada con sangre
       - Se recomienda la vacuna contra la hepatitis B ≤24 h tras la mordedura si no estaba inmunizado
-
   - type: "prose"
     title: "Tratamiento profiláctico"
     markdown: |
@@ -99,7 +38,6 @@ topic:
       - **Alergia a la penicilina — use una PAREJA, no un solo fármaco** (ninguna alternativa única cubre a la vez **Pasteurella** y los anaerobios orales):
         - **Doxiciclina** — adultos 100 mg VO dos veces al día · niños 2.2 mg/kg/dosis VO dos veces al día (máx. 100 mg/dosis). **Segura a cualquier edad en ciclos de menos de 21 días — no tiñe los dientes**
         - **MÁS metronidazol** — adultos 500 mg VO tres veces al día · niños 7.5 mg/kg/dosis VO tres veces al día (máx. 500 mg/dosis)
-
   - type: "table"
     title: "Tétanos — heridas limpias y menores"
     columns: ["Dosis previas de toxoide tetánico", "Toxoide tetánico", "Inmunoglobulina antitetánica humana"]
@@ -107,7 +45,6 @@ topic:
     rows:
     - cells: ["<3 dosis o desconocido", "Sí", "No"]
     - cells: ["≥3 dosis", "Solo si la última dosis fue hace ≥10 años", "No"]
-
   - type: "table"
     title: "Tétanos — todas las demás heridas"
     columns: ["Dosis previas de toxoide tetánico", "Toxoide tetánico", "Inmunoglobulina antitetánica humana"]
@@ -115,7 +52,6 @@ topic:
     rows:
     - cells: ["<3 dosis o desconocido", "Sí", "Sí"]
     - cells: ["≥3 dosis", "Solo si la última dosis fue hace ≥5 años", "No"]
-
   - type: "table"
     title: "Rabia — suponiendo que no estaba vacunado"
     columns: ["Biológico", "Pauta"]
@@ -123,7 +59,6 @@ topic:
     rows:
     - cells: ["**Inmunoglobulina antirrábica** (solo exposición de categoría III)", "Ig humana 20 UI/kg O Ig equina 40 UI/kg. **Es un MÁXIMO, no un objetivo — no hay dosis mínima. No lo supere** (el exceso suprime la propia respuesta de anticuerpos del paciente). **Infiltre TODA la dosis en y alrededor de la(s) herida(s)**; si el volumen no alcanza para todas las heridas, dilúyala con solución salina normal. Administre el resto IM solo si la herida físicamente no lo admite. **Solo el día 0 — nunca administre la IGR más de 7 días después de la primera dosis de vacuna.** No se necesita prueba cutánea antes de la Ig equina."]
     - cells: ["**Vacuna**", "IM (deltoides o cara anterolateral del muslo), una inyección los días 0, 3, 7 y 14"]
-
   - type: "prose"
     markdown: |
       **Sobre el resto de la inmunoglobulina:** la OMS (2018) aconseja infiltrar **toda** la dosis en y alrededor de la herida. Las Uganda Clinical Guidelines 2023 aún aconsejan administrar el resto IM en el glúteo. **Ambas son aceptables** — infiltrar solo la herida además rinde más un biológico escaso.

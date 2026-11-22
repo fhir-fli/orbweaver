@@ -1,0 +1,136 @@
+# translated-from-sha256: e79e6a0542959064de6b99c67b6ad212ad0c2e5aef23460554fe2a9c3ec8a64d
+topic:
+  id: "pb-wheezing-child"
+  title: "Niño con sibilancias (bronquiolitis y asma)"
+  list_subtitle: "pp.52–53 · bronquiolitis + asma"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sibilancia", "sibilancias", "bronquiolitis", "asma", "salbutamol", "respiratorio", "pediátrico", "nebulizador", "prednisolona", "dexametasona"]
+  category: "medical"
+  pages:
+  - page_number: 52
+    blocks:
+    - type: "prose"
+      title: "Ingreso del niño con sibilancias"
+      markdown: |
+        Sibilancias + antecedente de tos o dificultad para respirar:
+
+        - **Probable bronquiolitis:** <2 años, febril, crepitantes
+        - **Probable asma si:** >2 años, antecedente de sibilancias recurrentes o antecedentes familiares de atopia
+
+        **NO USE antibióticos en ninguno de los dos casos salvo que el paciente TAMBIÉN tenga neumonía** (vea la vía de neumonía).
+    - type: "prose"
+      title: "Manejo de la bronquiolitis"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (FC, FR, spO2, Temp, peso)
+        - Evalúe AVPU/GCS, el estado de hidratación
+        - Inicie oxígeno si la spO2 <90%, coloque una vía IV si es necesario
+        - Haga una historia y una exploración física breves y dirigidas
+
+        Considere hemograma y RxT en prematuros <12 semanas, cardiopatía congénita, inmunodeficiencia y enfermedad neurológica crónica.
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Gravedad de la bronquiolitis?"
+        outcomes:
+        - label: "Grave (spO2 <90%, apneas o esfuerzo respiratorio aumentado de forma persistente — taquipnea, aleteo nasal, retracciones subcostales/supraesternales, uso de músculos accesorios, quejido)"
+          box:
+            title: "Tratamiento (sobre todo de soporte)"
+            bullets:
+            - "Oxígeno si la spO2 <90%"
+            - "Solución salina nasal y aspiración con pera"
+            - "Hidratación VO, o SNG/líquidos IV si no tolera la alimentación oral"
+            - "Paracetamol para la fiebre"
+            - "Los corticoides y los antibióticos no son eficaces"
+            - "Salbutamol: si tiene más de 9 meses puede darse UNA nebulización, con exploración antes y después; suspenda si no mejora; si mejora claramente, puede continuar cada 4 horas"
+            severity: "emergency"
+          continue: true
+        - label: "Leve (sin hipoxia, sin apneas, sin dificultad respiratoria)"
+          box:
+            title: "Tratamiento en casa"
+            bullets:
+            - "Solución salina nasal"
+            - "Hidratación oral"
+            - "Paracetamol para la fiebre"
+            - "NADA de medicamentos para la tos o el resfriado"
+            severity: "non_urgent"
+      - decision: "¿Insuficiencia respiratoria inminente?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Prueba con CPAP"
+            severity: "emergency"
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Criterios de alta"
+        bullets:
+        - "SatO2 >94% x 12 horas"
+        - "Frecuencia respiratoria claramente mejorada"
+        - "Puede tomar líquidos para mantenerse hidratado"
+        - "Cuidador instruido en el uso de la solución salina nasal"
+        - "Aconseje que la tos puede persistir 1–2 semanas"
+        severity: "non_urgent"
+  - page_number: 53
+    blocks:
+    - type: "prose"
+      title: "Manejo del asma aguda"
+      markdown: |
+        Clasifique la gravedad y luego pase al manejo de abajo.
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Gravedad del asma?"
+        outcomes:
+        - label: "Grave — sibilancias MÁS spO2 <90%, tiraje subcostal, no puede mamar/beber, no puede hablar, letargo, flujo espiratorio máximo <50%"
+          box:
+            title: "Administre oxígeno"
+            bullets:
+            - "→ luego manejo (abajo)"
+            severity: "emergency"
+        - label: "Leve/moderada — sibilancias MÁS respiración rápida (2–12 meses: FR ≥50; >12 meses: FR ≥40), flujo espiratorio máximo 50–80%, intercambio de aire adecuado, spO2 >90%"
+          box:
+            title: "Pase al manejo (abajo)"
+            severity: "priority"
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Salbutamol cada 15 minutos x 3 dosis, con nebulizador O IDM+espaciador+mascarilla
+          - Nebulizador: 2.5mg en 3mL de SSN para la mayoría de los niños. Suba a 5mg en 5mL de SSN en un niño mayor o más grande (aproximadamente ≥5 años o >20–25kg) o en una crisis grave — según el peso y la gravedad, no por un corte a los 2 años
+          - IDM+espaciador+mascarilla: 5–10 kg 4 inhalaciones; 10–20 kg 6 inhalaciones; >20 kg 8 inhalaciones
+          - **El salbutamol oral no es eficaz**
+        - Dexametasona 0.6mg/kg VO o IV (si no bebe), **máx. 12mg**, x 1 dosis, O prednisolona 1–2mg/kg VO x 1 dosis
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Reevalúe a los 30–60 minutos"
+        shape: "stadium"
+      stages:
+      - decision: "¿Era inicialmente leve/moderada y ha mejorado notablemente?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Criterios de alta"
+            bullets:
+            - "SatO2 >92%"
+            - "Puede tomar líquidos para mantenerse hidratado"
+            - "Necesita salbutamol no más de cada 6h"
+            severity: "non_urgent"
+          continue: true
+        - label: "No"
+          box:
+            title: "Ingrese"
+            bullets:
+            - "Grave: continúe el oxígeno, salbutamol cada 1–4 horas, revisión temprana"
+            - "Leve/moderada: salbutamol cada 4 horas"
+            - "Prednisolona 1–2mg/kg una vez al día x 3 días"
+            - "Asegure una hidratación adecuada, líquidos de mantenimiento por SNG/IV si es necesario"
+            severity: "priority"
+          continue: true
+      terminal:
+        title: "Educación y seguimiento (todos los pacientes)"
+        bullets:
+        - "Eduque sobre el uso y la importancia del inhalador, el espaciador + mascarilla, los signos de asma, los signos de peligro y cómo evitar los desencadenantes (humo, etc.)"
+        - "Alta con salbutamol IDM cada 6 horas durante no más de 5 días"
+        - "Si NO recibió 3 días de corticoides, complete prednisolona 1–2mg/kg VO una vez al día x 3 días en total"
+        - "Considere corticoides inhalados si hay episodios recurrentes de sibilancias"

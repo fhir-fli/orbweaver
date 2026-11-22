@@ -1,12 +1,4 @@
 # translated-from-sha256: fca923ce069a2cea0e738aceb090765043be955c2bc2c34f272365f228d85c69
-# ============================================================
-# Revised Cardiac Risk Index (Lee).
-# Evidence review 2026-07-19: 2024 AHA/ACC perioperative guideline keeps
-# RCRI as a foundational preop cardiac-risk tool but recommends NOT using
-# it alone — pair with a procedure-specific calculator (NSQIP MICA) and,
-# in elevated-risk patients, biomarkers (BNP/troponin). Lee 1999. 6 factors.
-# ============================================================
-
 topic:
   id: "calc-rcri"
   title: "Índice de riesgo cardíaco revisado"
@@ -18,14 +10,11 @@ topic:
   - "Índice de Lee"
   - "Índice de riesgo cardíaco revisado"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estima el riesgo cardíaco mayor perioperatorio en cirugía no cardíaca.
       Toque cada factor presente.
-
   - type: "score"
     title: "Índice de riesgo cardíaco revisado"
     source: "Lee et al., Circulation 1999"

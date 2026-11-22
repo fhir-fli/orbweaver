@@ -1,13 +1,4 @@
 # translated-from-sha256: 24ed8110947222f412c297395e559dce090dcc5dec545da01a88b04e55e2cc03
-# ============================================================
-# Lille model — corticosteroid response in alcohol-associated hepatitis.
-# Evidence review 2026-07-19: AASLD 2020 uses the day-7 Lille score to
-# identify steroid non-responders (≥ 0.45 → stop steroids). Louvet 2007;
-# coefficients here converted to conventional US units (albumin g/dL,
-# bilirubin mg/dL). Renal insufficiency is BINARY (creatinine > 1.3 mg/dL),
-# per the original model / MDCalc.
-# ============================================================
-
 topic:
   id: "calc-lille"
   title: "Modelo de Lille"
@@ -18,16 +9,13 @@ topic:
   - "Modelo de Lille"
   - "Puntuación de Lille"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Tras ~7 días de corticosteroides por hepatitis asociada al alcohol grave,
       la puntuación de Lille identifica a los no respondedores, que deben suspender
       los esteroides. Use los valores basales (día 0) para todo excepto la bilirrubina
       del día 7.
-
   - type: "formula"
     kind: "lille"
     title: "Puntuación de Lille"

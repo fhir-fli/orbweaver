@@ -1,40 +1,4 @@
 # translated-from-sha256: 9ba36b788f62015e1654763f7bda3b9d911d70d06dc488fbeae20b002f00292d
-# ============================================================
-# ProtocolBook p.42 — Treatment of Paediatric convulsions.
-# First page of the Paediatric Protocols section (divider p.41
-# skipped per the standing divider rule).
-#
-# A genuinely nested decision tree in print. Linearised onto the
-# `algorithm` spine:
-#   - Stage 1 (age >1 month + convulsing >5 min OR presents
-#     convulsing?): Yes → first-line box (ABC/O2/diazepam/dextrose),
-#     continue; No → the printed side-question ("3rd convulsion
-#     lasting <5 mins in <2 hours?") collapsed into a leaf box whose
-#     bullets carry its two answers textually (No → observe; Yes →
-#     phenobarbitone below) plus the * footnote — a sub-decision off
-#     the spine, expressed per the standing textual-reference rule.
-#   - Stages 2 & 3 ("Convulsion stops after 5 more minutes?"): Yes →
-#     shared "observe" box (named `boxes:` target, goto from both —
-#     the book prints the identical Check-ABC/Observe/Investigate box
-#     twice); No → repeat-diazepam box, continue → phenobarbitone
-#     terminal.
-#   - The neonate rule (phenobarbitone only, NO diazepam) heads the
-#     printed page in italics → red-alert callout.
-#
-# Faithful-rendering calls:
-#   - Citation superscripts (title 1,16) dropped.
-#   - The book's item numbering continues across boxes (first box
-#     starts at "3)") — the numbers are a layout artifact of the
-#     printed chart; dropped, order preserved.
-#   - Suppository dose ladder kept verbatim (<10kg 1 … 20–25kg 4).
-#   - p.30 Hydrocarbon's "See Convulsion Protocol" box points here;
-#     flowchart boxes render plain text (no links), so that pointer
-#     stays textual.
-# 2026-08-29: D10 5 -> 2 mL/kg. MISSED BY THE 2026-08-28 SWEEP, which matched
-#   "5 ml/kg" and not "5mls/kg", and worked from a fixed file list rather than
-#   re-grepping afterwards. Found by diffing the formulary against the pages.
-# ============================================================
-
 topic:
   id: "pb-paediatric-convulsions"
   title: "Convulsiones pediátricas"
@@ -43,9 +7,7 @@ topic:
   tags: ["convulsión", "crisis epiléptica", "ataque", "estado epiléptico", "diazepam", "fenobarbital", "pediátrico", "neonato"]
   category: "medical"
   page_number: 42
-
   blocks:
-
   - type: "prose"
     callout: true
     palette:
@@ -55,7 +17,6 @@ topic:
     title: "Convulsiones en el 1.er mes de vida"
     markdown: |
       Deben tratarse con **fenobarbital 20mg/kg de inmediato**; si sigue convulsionando tras 30 min, administre otros **10mg/kg**, hasta un **máximo acumulado de 40mg/kg** — y solo donde haya monitorización respiratoria, porque el fenobarbital causa apnea e hipotensión. Mantenimiento **3–5mg/kg al día**, a partir de 12–24 h tras la carga. **No administre diazepam a neonatos.**
-
   - type: "flowchart"
     variant: "algorithm"
     boxes:

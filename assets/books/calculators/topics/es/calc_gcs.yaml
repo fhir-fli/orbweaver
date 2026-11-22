@@ -1,12 +1,4 @@
 # translated-from-sha256: 4b6cdd55550eed9b6363282838bd8e7535996563f7077c009152d97b59bd701e
-# ============================================================
-# Glasgow Coma Scale (GCS).
-# Evidence review 2026-07-19: universal (ATLS / Brain Trauma Foundation);
-# entrenched despite inter-rater variability. The MOTOR subscore is the
-# most reliable/prognostic; verbal is untestable when intubated. Teasdale
-# & Jennett 1974. Total 3–15.
-# ============================================================
-
 topic:
   id: "calc-gcs"
   title: "Escala de coma de Glasgow"
@@ -18,15 +10,12 @@ topic:
   - "Escala de coma de Glasgow"
   - "Escala de coma"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Nivel de conciencia según las respuestas ocular, verbal y motora.
       Los valores por defecto corresponden a un paciente normal (15); ajuste cada uno a la mejor respuesta
       observada.
-
   - type: "score"
     title: "Escala de coma de Glasgow"
     unit: "/ 15"

@@ -1,46 +1,4 @@
 # translated-from-sha256: 10b2da9a10cf5285af6a35dcd2fbda065e29b6937749ca742dadb27ed7ba895e
-# ============================================================
-# ProtocolBook p.23 — Malaria: Complications & Co-infection
-#
-# ✅ OE-CONFIRMED CHANGES APPLIED (Grey's OpenEvidence pass, 2026-07-26):
-#
-#   1. MODERATE — AKI section made FUROSEMIDE the hero. As printed,
-#      "if decreasing urinary output, add Lasix … the most important
-#      part of treatment is to maintain a normal urinary output"
-#      reads as: make urine with a diuretic. Furosemide does not
-#      improve renal outcomes in AKI and actively worsens injury in a
-#      volume-depleted child — which is exactly the malaria patient.
-#      Reframed to lead with fluid balance and effective antimalarial
-#      therapy, with furosemide explicitly reserved for fluid
-#      OVERLOAD. Dose and interval preserved. The "exclude pre-renal
-#      causes" step was already there and is what makes this safe.
-#
-#   2. MODERATE — DELAYED HAEMOLYSIS follow-up was a single control
-#      CBC at 2 weeks. Post-artesunate delayed haemolysis needs
-#      weekly CBC plus haemolysis markers for 4 weeks; one snapshot
-#      at 2 weeks can miss both an earlier nadir and a later one.
-#      Markers named (LDH, bilirubin, haptoglobin, reticulocytes) to
-#      make it actionable — same vocabulary as the p.75 workup page.
-#
-# ✓ OE-VERIFIED, NO CHANGE: treatment-failure logic incl. positive
-#   slide at 72 h → second-line; the co-infection section (the "no
-#   clinical or lab finding differentiates bacterial infection from
-#   malaria" pearl was called out as an important LMIC teaching
-#   point, and LP-before-antibiotics is correct).
-#
-# ✅ RESOLVED AND APPLIED (header corrected 2026-07-28 — it still said
-#   "OPEN, NOT APPLIED" long after the change had gone in, and that
-#   stale wording was fed back into OE, which then re-answered a
-#   settled question from the obsolete text):
-#   - item (e) previously started IRON + folic acid for Hgb < 9 DURING
-#     the acute episode, for 14 days. It now reads "start it only
-#     after the antimalarial course is complete, not on admission"
-#     and "treat for 3 months", dispensing 14 days at a time. Iron
-#     during acute infection is hazardous in a malaria-endemic
-#     setting, and 14 days was too short to refill stores.
-#     Re-confirmed by OE 2026-07-28.
-# ============================================================
-
 topic:
   id: "pb-malaria-complications"
   title: "Malaria — complicaciones y coinfección"
@@ -49,9 +7,7 @@ topic:
   tags: ["malaria", "complicaciones", "coinfección", "tropical", "pediátrico"]
   category: "medical"
   page_number: 23
-
   blocks:
-
   - type: "prose"
     title: "Complicaciones"
     markdown: |-
@@ -75,7 +31,6 @@ topic:
         iii) Si la Hb baja, o hay ictericia u orina oscura, añada **LDH, bilirrubina, haptoglobina y reticulocitos donde estén disponibles**
         iv) Transfunda si hay síntomas, o si la Hb baja del umbral de transfusión
         v) Indique al cuidador en el alta que regrese de inmediato si aparecen ojos amarillos, orina oscura, palidez o falta de aire — sin esperar a la cita
-
   - type: "prose"
     title: "Coinfección"
     markdown: |-

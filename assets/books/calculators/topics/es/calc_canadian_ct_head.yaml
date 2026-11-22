@@ -1,14 +1,4 @@
 # translated-from-sha256: b6e925a191b80f90effb7d893e1179e47bba664ba15475bd416102dbd05218b3
-# ============================================================
-# Canadian CT Head Rule.
-# Evidence review 2026-07-19: ACEP 2023 gives CCHR a Level A recommendation
-# for minor head injury (higher specificity than NEXUS/New Orleans → fewer
-# scans). Any high- or medium-risk factor present → CT. Applies only to
-# GCS 13–15 minor head injury with witnessed LOC/amnesia/disorientation.
-# EXCLUDES anticoagulated/antiplatelet, age < 16, seizure, bleeding
-# disorder, obvious open skull fracture. Stiell 2001.
-# ============================================================
-
 topic:
   id: "calc-canadian-ct-head"
   title: "Regla canadiense de TC craneal"
@@ -20,16 +10,13 @@ topic:
   - "CCHR"
   - "Regla de TC craneal"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Identifica qué adultos con traumatismo craneal leve (GCS 13–15) necesitan una
       TC craneal. Toque cualquier factor presente — uno solo basta para recomendar TC.
       Revise las exclusiones antes de aplicarla. En menores de 16 años, use
       [PECARN](topic:calc-pecarn-head).
-
   - type: "score"
     title: "Regla canadiense de TC craneal"
     source: "Stiell et al., Lancet 2001; política de ACEP 2023 sobre TCE leve"

@@ -1,12 +1,4 @@
 # translated-from-sha256: 27cfb990b35f77f97687f642577b292e6a46d303ce8a60eef262d9701ce42d8c
-# ============================================================
-# Maddrey Discriminant Function — alcoholic hepatitis severity.
-# Evidence review 2026-07-19: mDF = 4.6 × (PT − control PT) + bilirubin
-# (mg/dL). ≥ 32 = severe → consider corticosteroids. AASLD 2020 also
-# prompts steroids at MELD > 20; Morales-Arraez 2022 found MELD out-
-# performs mDF, so pair with MELD and the day-7 Lille response score.
-# ============================================================
-
 topic:
   id: "calc-maddrey"
   title: "Función discriminante de Maddrey"
@@ -18,14 +10,11 @@ topic:
   - "Función discriminante"
   - "mDF"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Gravedad de la hepatitis asociada al alcohol, usada para decidir sobre los
       corticosteroides. Necesita el TP del paciente y el TP control del laboratorio.
-
   - type: "formula"
     kind: "maddrey"
     title: "Función discriminante de Maddrey"

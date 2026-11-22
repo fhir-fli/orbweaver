@@ -1,13 +1,4 @@
 # translated-from-sha256: 78b9a5f79982271d3b743331e16aa677ed845bfc30c000df00364da2e1eb6ab6
-# ============================================================
-# NEWS2 — National Early Warning Score 2.
-# Evidence review 2026-07-19: NHS-mandated ward deterioration/sepsis
-# screen; SSC prefers it over qSOFA. Strong discrimination for
-# deterioration/mortality (outcome improvement depends on the escalation
-# response). RCP 2017. Aggregate 0–20 with SpO₂ Scale 1. A score of 3 in
-# ANY single parameter is a "red score" → urgent review regardless of total.
-# ============================================================
-
 topic:
   id: "calc-news2"
   title: "NEWS2"
@@ -19,14 +10,11 @@ topic:
   - "NEWS"
   - "Puntuación de alerta temprana"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       La puntuación de alerta temprana del NHS para el deterioro clínico. Elija la banda
       de cada observación; el total determina la respuesta de monitorización/escalamiento.
-
   - type: "score"
     title: "NEWS2"
     source: "Royal College of Physicians, NEWS2 (2017)"

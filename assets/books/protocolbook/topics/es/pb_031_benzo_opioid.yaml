@@ -1,61 +1,4 @@
 # translated-from-sha256: f6429c63d5630135f84cdd7f5cf981da208f9e061edc83263f1fae7c80dd2573
-# ============================================================
-# ProtocolBook p.31 — Benzodiazepine / Opioid ingestion.
-#
-# Two parts on the printed page:
-#   1. A comparison table ("Symptoms Generally Associated With")
-#      contrasting the Opioid vs Benzodiazepine toxidrome, with the
-#      book's ✓ / ✓✓✓ relative-severity marks → a `table` block, glyph
-#      columns centre-aligned. ✓ = sometimes / mild, ✓✓✓ = prominent.
-#   2. A genuine branching decision algorithm (classify by toxidrome →
-#      opioid arm carries a respiratory-failure decision → naloxone;
-#      benzodiazepine arm → flumazenil; every path converges on
-#      supportive care) → the `algorithm` flowchart variant (Grey's
-#      hybrid rule: TRUE decision trees render as real flowcharts).
-#
-# Faithful-rendering calls:
-#   - The source draws both treatment boxes (naloxone, flumazenil) and
-#     the decision's "No" branch all arrowing into one shared
-#     "Supportive care" box at the bottom. The algorithm variant models
-#     that convergence as: supportive care = the spine `terminal`
-#     (reached by the continue paths); the two treatment boxes are
-#     severity-tinted leaves that carry a textual "→ then Supportive
-#     care (below)" pointer instead of a drawn convergence arrow (per
-#     the standing loop-back rule — reference by text, never a back /
-#     cross arrow).
-#
-# CONTENT FLAG for the later OE / content pass (rendered faithfully):
-#   - Flumazenil for benzodiazepine overdose is transcribed as printed
-#     ("if respiratory depression"). In practice flumazenil is
-#     controversial — it can precipitate seizures / withdrawal in
-#     benzo-dependent patients and in mixed (esp. TCA) co-ingestions,
-#     and most guidance reserves it for reversal of iatrogenic
-#     procedural sedation, not undifferentiated overdose. OE to confirm
-#     whether to add a "caution / avoid in mixed ingestion" note.
-#   - Naloxone dosing as printed: big child (>5 yo / >20 kg) 2 mg IV but
-#     adult 0.4 mg IV — the adult starting dose is deliberately low
-#     (titrate-to-effect to avoid precipitated withdrawal); left as
-#     printed, OE to confirm.
-#
-# ✓ VERIFIED CURRENT (audit pass 2026-07-26): every printed dose checks
-#   out — flumazenil 0.01 mg/kg child / 0.2 mg adult, repeat to 1 mg,
-#   max 3 mg/hr ✓ label; naloxone 0.1 mg/kg (<5 y / <20 kg), 2 mg
-#   (>5 y / >20 kg), 0.4 mg adult ✓; repeat q2–3 min ✓; re-dose at
-#   20–60 min ✓ (naloxone t½ is shorter than most opioids).
-#
-# ⚠️ CONTENT FLAG — OPEN (audit pass 2026-07-26, awaiting OE), and it
-#   is the FLUMAZENIL one above that matters most: current consensus
-#   is that flumazenil should NOT be given in undifferentiated
-#   overdose, and is contraindicated with TCA co-ingestion, chronic
-#   benzodiazepine use, or a seizure history — it is for reversing
-#   iatrogenic procedural sedation. As printed the algorithm sends
-#   every "more likely benzodiazepine" patient to it. Adding a
-#   caution/contraindication line is the recommended fix.
-#   Secondary gaps: naloxone is IV-only here (no IM/IN route for the
-#   no-IV situation), and there is no INFUSION guidance for long-acting
-#   opioids (usual: two-thirds of the effective bolus per hour).
-# ============================================================
-
 topic:
   id: "pb-benzo-opioid"
   title: "Ingestión de benzodiazepinas / opioides"
@@ -64,9 +7,7 @@ topic:
   tags: ["benzodiazepina", "opioide", "ingestión", "intoxicación", "sobredosis", "naloxona", "flumazenil", "toxíndrome"]
   category: "medical"
   page_number: 31
-
   blocks:
-
   - type: "table"
     title: "Síntomas asociados en general con"
     columns: ["Síntoma", "Opioides", "Benzodiazepinas"]
@@ -80,11 +21,9 @@ topic:
     - cells: ["Depresión respiratoria", "✓✓✓", "✓"]
     - cells: ["Miosis", "✓✓✓", "✓"]
     - cells: ["Náuseas / vómitos", "✓✓✓", "✓"]
-
   - type: "prose"
     markdown: |
       **✓** = a veces / leve · **✓✓✓** = predominante
-
   - type: "flowchart"
     variant: "algorithm"
     entry:

@@ -1,42 +1,4 @@
 # translated-from-sha256: cd71f073bff9f13f79574576b8f8c28cbeee74c07e8fbd364fa45a39d01e4937
-# ============================================================
-# ProtocolBook pp.43–44 — Paediatric Dehydration Protocol
-# (EXCLUDING severe malnutrition), >2 months old with history of
-# diarrhoea/vomiting + Diarrhoea Adjunctive Rx. Two-page topic.
-#
-# p.43 is a pure severity cascade (shock → Plan C → Plan B →
-# Plan A), each decision's Yes ending in a treatment box and No
-# continuing down — maps 1:1 onto the `algorithm` spine. Severity
-# tints follow the WHO semantics the palette encodes: shock +
-# Plan C = emergency (pink), Plan B = priority (yellow), Plan A
-# terminal = non-urgent (green).
-#
-# p.44 ("Diarrhoea Adjunctive Rx") is a short outline companion:
-# zinc for all, ORS intolerance note, dysentery antibiotics
-# (incl. a DO-NOT-USE resistance list), antiprotozoals only for
-# proven amoebiasis/giardiasis → titled prose.
-#
-# Faithful-rendering calls:
-#   - Citation superscripts (title 1,16,17; Plan C 149,150;
-#     dysentery 16,18) dropped.
-#   - "If Hb<5g/dl transfuse urgently" sits inside the printed shock
-#     box → kept as the last criteria line of that decision.
-#   - STEP 1's dangling "If no IV access or IVF" line is as printed —
-#     it points at the NGT route spelled out under STEP 2; both lines
-#     kept verbatim in the PLAN C box.
-#   - Plan A's "ORS PO at 10mls/kg after each loose" is missing the
-#     obvious final word in print → rendered "after each loose
-#     stool" (WHO Plan A wording).
-#
-# ⚠️ GENUINE SOURCE TYPO corrected (surfaced to Grey 2026-07-14):
-#   - p.44 prints "Paramomycin" twice (amoebiasis list and the
-#     giardiasis parenthetical) → corrected to "Paromomycin".
-# Cross-book pass 2026-08-28: azithromycin for dysentery 15/10 -> 12/6
-#   mg/kg, the WHO/AAP regimen (15/10 is a surveillance-protocol variant
-#   with no proven advantage and more GI upset). Zinc split by age
-#   (10mg <6mo, 20mg >=6mo) rather than one range for every child.
-# ============================================================
-
 topic:
   id: "pb-paediatric-dehydration"
   title: "Protocolo de deshidratación pediátrica"
@@ -44,17 +6,12 @@ topic:
   last_reviewed: "pocketbook v1.7"
   tags: ["deshidratación", "diarrea", "gastroenteritis", "SRO", "rehidratación", "plan a", "plan b", "plan c", "choque", "pediátrico", "zinc", "disentería"]
   category: "medical"
-
   pages:
-
-    # ═══════════════════════ PAGE 43 ═══════════════════════
   - page_number: 43
     blocks:
-
     - type: "prose"
       markdown: |
         Para niños **>2 meses con antecedente de diarrea/vómitos** — **EXCLUYENDO la desnutrición grave**.
-
     - type: "flowchart"
       variant: "algorithm"
       stages:
@@ -122,17 +79,13 @@ topic:
         - "SRO VO a 10mls/kg tras cada deposición líquida"
         - "Continúe la lactancia materna y/o fomente la alimentación si tiene >6 meses"
         severity: "non_urgent"
-
-    # ═══════════════════════ PAGE 44 ═══════════════════════
   - page_number: 44
     blocks:
-
     - type: "prose"
       title: "Tratamiento complementario de la diarrea"
       markdown: |
         - **Todos los casos deben recibir zinc x 10–14 días — 10mg/día en menores de 6 meses, 20mg/día a partir de 6 meses.** Un rango único de 10–20mg corre el riesgo de dar la dosis de 20mg a un lactante pequeño
         - La diarrea de >14 días puede complicarse con intolerancia a las SRO (empeora la diarrea) — si ocurre, cambie a esquemas IV
-
     - type: "prose"
       title: "Antibióticos SOLO si hay diarrea con sangre (disentería)"
       markdown: |
@@ -140,7 +93,6 @@ topic:
         - **Segunda línea (o muy enfermo):** ceftriaxona 50–80mg/kg/día x 3–5 días
         - **Alternativa:** azitromicina 12mg/kg VO el día 1 (máx. 500mg), luego 6mg/kg VO una vez al día los días 2–5 (máx. 250mg)
         - **NO USE:** aminoglucósidos, amoxicilina, ampicilina, cloranfenicol, cotrimoxazol, cefalosporinas de 1.ª o 2.ª generación, ácido nalidíxico, nitrofuranos ni tetraciclina, por resistencias
-
     - type: "prose"
       title: "Antibióticos/antiprotozoarios SOLO si hay diarrea persistente Y"
       markdown: |

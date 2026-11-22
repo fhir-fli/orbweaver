@@ -1,11 +1,4 @@
 # translated-from-sha256: 3c1dfbdb0b45b218ce6ab7a6149fbd508d10b7d684723f185b1405d1bb40c67e
-# ============================================================
-# Statin intensity equivalence (tiers mode)
-# Per 2018 ACC/AHA Cholesterol Guideline Table 3. OpenEvidence
-# review applied 2026-06-18: Pitavastatin 1 mg Low → Moderate (1–4 mg
-# = moderate); added Fluvastatin + Lovastatin 80 mg; simva-80 caveat.
-# ============================================================
-
 topic:
   id: "conv-statins"
   title: "Intensidad de estatinas"
@@ -16,15 +9,12 @@ topic:
   - "Equivalencia de estatinas"
   - "Intensidad sobre el LDL"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Las estatinas vienen en concentraciones fijas, así que esto compara por **nivel de intensidad
       de reducción del LDL** y no por una dosis exacta. **Toque una concentración** para
       resaltar su nivel — los equivalentes entre los demás fármacos.
-
   - type: "conversion"
     mode: "tiers"
     title: "Intensidad de estatinas"

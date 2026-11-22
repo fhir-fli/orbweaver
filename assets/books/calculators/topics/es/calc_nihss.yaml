@@ -1,10 +1,4 @@
 # translated-from-sha256: fa5aa1f8906c2b55a599902f3da1bccc0aae8e4e2494ed0039b42d0414a4e621
-# ============================================================
-# NIHSS — National Institutes of Health Stroke Scale.
-# Evidence review 2026-07-19: standard stroke-severity measure (AHA/ASA
-# 2019 Class I, LOE B-NR). 15 items; total 0-42. Report components too.
-# ============================================================
-
 topic:
   id: "calc-nihss"
   title: "NIHSS"
@@ -16,14 +10,11 @@ topic:
   - "Escala de ictus del NIH"
   - "Gravedad del ictus"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Cuantifica la gravedad del ictus a partir de una exploración neurológica estructurada. Los valores por defecto
       corresponden a una exploración normal (0); ajuste cada ítem al hallazgo observado.
-
   - type: "score"
     title: "NIHSS"
     unit: "/ 42"

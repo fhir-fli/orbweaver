@@ -1,11 +1,4 @@
 # translated-from-sha256: 40bec5cec9317fe4dfe462a7c5c1312ba578185af3f98498de6d5d75035bbfec
-# ============================================================
-# Oxygenation indices — P/F ratio (+ SpO₂/FiO₂).
-# Evidence review 2026-07-19: P/F = PaO₂ / FiO₂(fraction) — Berlin ARDS
-# severity (300/200/100 at PEEP ≥ 5). S/F is the 2023 Global-ARDS-
-# Definition surrogate when no ABG and SpO₂ ≤ 97% (≈ 315/235/148).
-# ============================================================
-
 topic:
   id: "calc-oxygenation"
   title: "Cociente P/F y S/F"
@@ -18,14 +11,11 @@ topic:
   - "Cociente S/F"
   - "SpO2/FiO2"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Cociente de oxigenación para la gravedad del SDRA. Introduzca FiO₂ y PaO₂ para el cociente
       P/F; añada la SpO₂ para el sustituto S/F sin gasometría.
-
   - type: "formula"
     kind: "oxygenation"
     title: "Índices de oxigenación"

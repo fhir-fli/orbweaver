@@ -1,14 +1,4 @@
 # translated-from-sha256: b956df471ee2e126eae4e4619893d89da6ec4876d2b8c901c4f59b5c9d059da5
-# ============================================================
-# Renal function: Cockcroft-Gault CrCl + CKD-EPI 2021 eGFR.
-# Evidence review 2026-07-19: FDA May-2024 guidance moved new PK/labeling
-# to race-free eGFR (CKD-EPI 2021); NKF-ASN 2021 + KDIGO 2024 make
-# CKD-EPI 2021 the staging standard. BUT many legacy drug labels' dose
-# cut-points were derived against Cockcroft-Gault, so show BOTH and flag
-# discordance. eGFR is BSA-indexed (mL/min/1.73m²) — de-index before
-# using for an individual's drug dose. No race term in either equation.
-# ============================================================
-
 topic:
   id: "calc-creatinine-clearance"
   title: "Aclaramiento de creatinina / TFGe"
@@ -22,16 +12,13 @@ topic:
   - "CKD-EPI"
   - "TFG"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Dos estimaciones renales lado a lado. El **CrCl de Cockcroft-Gault** (necesita
       el peso) coincide con los puntos de corte de la mayoría de las fichas técnicas — úselo
       para la **dosificación de fármacos**. **CKD-EPI 2021** (sin raza) es el
       estándar para la **estadificación de la ERC**; desindexelo antes de dosificar.
-
   - type: "formula"
     kind: "renal_function"
     title: "Aclaramiento de creatinina / TFGe"

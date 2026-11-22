@@ -1,12 +1,4 @@
 # translated-from-sha256: 05bc7035a229f59a731b49b890c5523a565406476644eda0a117c90724e5c17e
-# ============================================================
-# Child-Pugh score — cirrhosis severity / prognosis.
-# Evidence review 2026-07-19: still the FDA/EMA framework for hepatic-
-# impairment drug dosing and a standard surgical-risk classifier, despite
-# subjective ascites/encephalopathy grading (MELD 3.0 preferred for
-# transplant prognosis). Points per Pugh 1973. Total 5–15 → Class A/B/C.
-# ============================================================
-
 topic:
   id: "calc-child-pugh"
   title: "Puntuación de Child-Pugh"
@@ -18,14 +10,11 @@ topic:
   - "Child-Turcotte-Pugh"
   - "CTP"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Clasifica la gravedad de la cirrosis (clase A/B/C) para el pronóstico, el riesgo
       quirúrgico y las decisiones de dosificación. Elija el grado de cada parámetro.
-
   - type: "score"
     title: "Child-Pugh"
     source: "Pugh et al., Br J Surg 1973"

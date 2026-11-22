@@ -1,11 +1,4 @@
 # translated-from-sha256: edc52154f0feeff641a719ad0b41aa02ccf4b020a7c269b700d19916435d9eda
-# ============================================================
-# HbA1c → estimated average glucose (eAG).
-# Evidence review 2026-07-19: ADAG study (Nathan, Diabetes Care 2008).
-# eAG (mg/dL) = 28.7 × A1c − 46.7; eAG (mmol/L) = 1.59 × A1c − 2.59.
-# A population estimate — individual mean glucose varies.
-# ============================================================
-
 topic:
   id: "calc-hba1c-eag"
   title: "HbA1c → GPe"
@@ -17,14 +10,11 @@ topic:
   - "A1c a glucosa"
   - "Glucosa promedio estimada"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Convierte la HbA1c en una glucosa promedio estimada — el equivalente en unidades
       cotidianas que los pacientes entienden.
-
   - type: "formula"
     kind: "hba1c_eag"
     title: "HbA1c → GPe"

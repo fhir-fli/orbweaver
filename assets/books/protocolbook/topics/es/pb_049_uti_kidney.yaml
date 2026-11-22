@@ -1,0 +1,191 @@
+# translated-from-sha256: b76e5cff59f34ebfe845d9a65d6fd66b55e4fc2ea726f032262aa74a5d1e3979
+topic:
+  id: "pb-uti-kidney"
+  title: "Trastornos urinarios y renales"
+  list_subtitle: "pp.49–51 · estudio + tratamiento de la IVU"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["IVU", "infección de vías urinarias", "pielonefritis", "riñón", "renal", "síndrome nefrótico", "hematuria", "proteinuria", "edema", "pediátrico"]
+  category: "medical"
+  pages:
+  - page_number: 49
+    blocks:
+    - type: "prose"
+      title: "Síntomas de presentación más frecuentes"
+      markdown: |
+        - Fiebre
+        - Disuria, polaquiuria, nicturia
+        - Dolor/molestia abdominal
+        - Hematuria (orina con sangre, oscura, color té)
+        - Oliguria/anuria
+        - Hinchazón — cara y extremidades
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿3–24 meses con fiebre, O niño que habla con disuria/polaquiuria/nicturia o síntomas abdominales?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Vaya al estudio de IVU/pielonefritis"
+            bullets:
+            - "→ vea el estudio de IVU/pielonefritis (página siguiente)"
+        - label: "No"
+          continue: true
+      - decision: "Tira reactiva de orina a pie de cama — ¿hay alguno de los siguientes?"
+        criteria:
+        - "Hematuria (macroscópica o microscópica)"
+        - "Proteinuria"
+        - "Oliguria/anuria"
+        - "Edema"
+        - "Hipertensión"
+        outcomes:
+        - label: "No"
+          box:
+            title: "Considere otras causas"
+            severity: "non_urgent"
+        - label: "Sí"
+          continue: true
+      - decision: "Síndrome nefrótico — ¿hay todos los siguientes?"
+        criteria:
+        - "Obtenga primero: función renal, electrolitos (Na+/K+/Cl−), albúmina/proteínas, hemograma"
+        - "Evalúe y trate otros factores: malaria, sepsis, deshidratación, insuficiencia cardíaca, desnutrición"
+        - "Proteinuria"
+        - "Edema"
+        - "Hipoalbuminemia"
+        - "Ningún otro diagnóstico ni antecedente de hematuria macroscópica, ni Cr elevada"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate como síndrome nefrótico"
+            bullets:
+            - "Prednisona 2mg/kg/día (máx. 60mg/día) x 4 semanas, luego en días alternos — requerirá reducción gradual"
+            severity: "priority"
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Medidas de soporte"
+        bullets:
+        - "Oliguria/anuria (LO MÁS IMPORTANTE): si baja la diuresis, tras corregir cualquier causa prerrenal, inicie furosemida (Lasix) 1mg/kg IV/dosis dos veces al día, y considere hidratación IV (1/2–2/3 de los LIV de mantenimiento, vigile la sobrecarga de líquidos)"
+        - "Hipertensión (>95%): si no se controla con furosemida, amlodipino 2.5mg una o dos veces al día"
+        - "Edema: furosemida 1mg/kg/dosis IV una o dos veces al día"
+        - "Vigile la diuresis/el estado de volumen: puede requerir sonda Foley (objetivo de diuresis 1mL/kg/h)"
+        - "Antecedente de faringitis/infección cutánea: considere penicilina V 250mg tres veces al día para erradicar el estreptococo"
+        - "Trate las infecciones (evite gentamicina, ibuprofeno y otros fármacos nefrotóxicos)"
+        - "Trate la malaria (considere confirmar la erradicación con PDR y GG de control)"
+        - "RECUERDE: puede haber depleción intravascular incluso con edema"
+  - page_number: 50
+    blocks:
+    - type: "prose"
+      title: "Estudio de IVU / pielonefritis"
+      markdown: |
+        **Factores de riesgo de IVU:**
+
+        - Antecedente de IVU
+        - T >39°C
+        - Fiebre sin foco
+        - Aspecto de enfermo
+        - Dolor suprapúbico
+        - Fiebre >24H
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Fiebre en niños de 3–24 meses"
+        shape: "stadium"
+      stages:
+      - decision: "¿Alcanza el umbral de riesgo de IVU de su grupo?"
+        criteria:
+        - "Niñas <12 meses o niños no circuncidados: ≥1 factor de riesgo"
+        - "Niñas >12 meses o niños circuncidados: ≥2 factores de riesgo"
+        outcomes:
+        - label: "Alcanza el umbral"
+          box:
+            title: "Obtenga un examen de orina (chorro medio)"
+            bullets:
+            - "→ interprete abajo"
+            severity: "priority"
+        - label: "No alcanza el umbral"
+          box:
+            title: "Infección urinaria/pielonefritis poco probable"
+            severity: "non_urgent"
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Niño que habla con síntomas urinarios o abdominales"
+        shape: "stadium"
+      stages:
+      - decision: "¿Disuria o polaquiuria?"
+        criteria:
+        - "Varón circuncidado sin síntomas urinarios → IVU poco probable, busque otra causa"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Obtenga un examen de orina (chorro medio)"
+            bullets:
+            - "→ interprete abajo"
+            severity: "priority"
+        - label: "No"
+          continue: true
+      - decision: "¿Dolor abdominal, dolor de espalda o incontinencia de reciente aparición?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Obtenga un examen de orina (chorro medio)"
+            bullets:
+            - "→ interprete abajo"
+            severity: "priority"
+        - label: "No"
+          box:
+            title: "IVU poco probable, busque otra causa"
+            severity: "non_urgent"
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Obtenga un examen de orina (chorro medio) — interprete"
+        shape: "stadium"
+      stages:
+      - decision: "¿Nitritos o EL positivos?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate como IVU"
+            bullets:
+            - "→ vea el tratamiento (página siguiente)"
+            severity: "priority"
+        - label: "No"
+          box:
+            title: "IVU poco probable, busque otra causa"
+            severity: "non_urgent"
+  - page_number: 51
+    blocks:
+    - type: "prose"
+      title: "Tratamiento de la IVU baja (ciclo de 7 días)"
+      markdown: |
+        Tratamiento ambulatorio (sin aspecto tóxico y que lo tolere):
+
+        - Nitrofurantoína 6mg/kg VO dividida cada 6 horas (no si tiene <1 año)
+        - Amoxicilina / amoxicilina-ácido clavulánico 50mg/kg VO dividida cada 12 horas
+    - type: "prose"
+      title: "Trate como IVU alta (pielonefritis) si hay lo siguiente"
+      markdown: |
+        - **<2 años**
+          - Edad <2 meses
+          - Urosepsis clínica (p. ej., aspecto tóxico, hipotensión, mal llenado capilar)
+          - Paciente inmunodeprimido
+          - Vómitos o no tolera la medicación oral
+          - Seguimiento ambulatorio inadecuado (p. ej., sin teléfono, vive lejos del hospital)
+          - No responde al tratamiento ambulatorio
+        - **>2 años**, al menos 2 de los siguientes: fiebre, escalofríos, dolor en el flanco
+    - type: "prose"
+      title: "Tratamiento de la pielonefritis (7–14 días)"
+      markdown: |
+        Tratamiento hospitalario. Análisis: hemograma, función renal (hemocultivo si se sospecha sepsis).
+
+        - Antibióticos IV durante 48–72 horas hasta la mejoría clínica, luego cambie a VO
+        - Cefotaxima 150mg/kg/día IV/IM dividida cada 8 horas
+        - Ceftriaxona 75mg/kg IV/IM al día
+        - Ampicilina 50mg/kg IV/IM cada 6 horas
+        - Hidratación IV si no tolera la VO, vigile la diuresis
+    - type: "prose"
+      title: "Imagen"
+      markdown: |
+        - **Ecografía renal/vesical:** todos los lactantes febriles con IVU, en 48 horas si es grave; si no, tras resolverse la enfermedad aguda
+        - **CUMS** ante cualquiera de: alteraciones en la ecografía, IVU febril recurrente, Temp >38 axilar Y un patógeno distinto de E. Coli, retraso del crecimiento o hipertensión

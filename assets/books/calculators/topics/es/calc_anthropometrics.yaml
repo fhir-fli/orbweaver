@@ -1,11 +1,4 @@
 # translated-from-sha256: 749734c20d915c97edfce646eac05edc698bcc39774121ebaa237d26e8642d8b
-# ============================================================
-# BMI + body-surface area (Mosteller).
-# Evidence review 2026-07-19: BSA default = Mosteller (chemo-dosing
-# convention; Cancer Care Ontario). BMI with WHO categories (+ optional
-# Asian cutoffs noted). Mosteller BSA = √(height_cm × weight_kg / 3600).
-# ============================================================
-
 topic:
   id: "calc-anthropometrics"
   title: "IMC y SC"
@@ -18,14 +11,11 @@ topic:
   - "Superficie corporal"
   - "Índice de masa corporal"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Índice de masa corporal (con la categoría de la OMS) y superficie corporal (Mosteller,
       la convención para dosificar quimioterapia).
-
   - type: "formula"
     kind: "anthropometrics"
     title: "IMC y SC"

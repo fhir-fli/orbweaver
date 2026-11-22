@@ -1,41 +1,4 @@
 # translated-from-sha256: 3a8f8b79b67489b7cfd3b875b32864bb08a23e84a6cd214afc79f42c831224f9
-# ============================================================
-# ProtocolBook p.36 — CIWA-Ar Scale (Clinical Institute Withdrawal
-# Assessment — Alcohol, revised).
-#
-# The printed page is a 2-column grid of ten 0–7 (orientation 0–4)
-# anchored scoring items.  The 2-column arrangement is pure
-# space-saving; rendered as ten small Score|Finding tables stacked
-# in the book's reading order (left-to-right, top-to-bottom:
-# Headache, Tremor, Nausea/Vomiting, Anxiety, Paroxysmal sweats,
-# Orientation, Agitation, Auditory, Tactile, Visual).
-#
-# Faithful-rendering calls:
-#   - The source leaves intermediate severities (2, 3, 5, 6 on most
-#     items) unanchored — the clinician interpolates.  Those rows are
-#     kept with an em-dash "—" finding (the established no-value-cell
-#     convention), mirroring the printed blanks.
-#   - No total-score interpretation is printed on this page (the ≥10
-#     treatment threshold lives in the p.35 flowchart) — none added.
-#   - Companion page to Alcohol Withdrawal (p.35); linked both ways.
-#
-# ✓ VERIFIED FAITHFUL (audit pass 2026-07-26): all ten items checked
-#   anchor-by-anchor against the published CIWA-Ar (Sullivan 1989) —
-#   item set, score ranges (nine 0–7 + orientation 0–4, max 67) and
-#   every printed anchor wording match. No errors.
-#
-# ⚠️ MINOR FLAGS — OPEN (audit pass 2026-07-26):
-#   - Two "—" cells are NOT actually unanchored in the real scale:
-#     Nausea/vomiting score 1 = "mild nausea with no vomiting", and
-#     Anxiety score 1 = "mildly anxious". The SOURCE printed them
-#     blank; restoring them would improve scoring consistency but is a
-#     deviation from the printed page — Grey's call.
-#   - No total-score severity bands printed (conventionally <8–10
-#     mild / 8–15 moderate / >15 severe with raised seizure and DT
-#     risk). Only the ≥10 treatment threshold exists, on p.35.
-#     Optional addition.
-# ============================================================
-
 topic:
   id: "pb-ciwa-ar"
   title: "Escala CIWA-Ar"
@@ -44,13 +7,10 @@ topic:
   tags: ["ciwa", "ciwa-ar", "alcohol", "abstinencia", "puntuación", "escala", "delirium tremens"]
   category: "medical"
   page_number: 36
-
   blocks:
-
   - type: "prose"
     markdown: |
       Clinical Institute Withdrawal Assessment — Alcohol, revisada. Puntúe cada uno de los 10 ítems; se usa para guiar el tratamiento en la [abstinencia alcohólica](topic:pb-alcohol-withdrawal) (trate si el total es ≥10). Las puntuaciones sin descripción (—) son gravedades intermedias entre las descritas.
-
   - type: "table"
     title: "Cefalea"
     columns: ["Puntuación", "Hallazgo"]
@@ -64,7 +24,6 @@ topic:
     - cells: ["5", "grave"]
     - cells: ["6", "muy grave"]
     - cells: ["7", "extremadamente grave"]
-
   - type: "table"
     title: "Temblor"
     columns: ["Puntuación", "Hallazgo"]
@@ -78,7 +37,6 @@ topic:
     - cells: ["5", "—"]
     - cells: ["6", "—"]
     - cells: ["7", "grave, incluso sin extender los brazos"]
-
   - type: "table"
     title: "Náuseas y vómitos"
     columns: ["Puntuación", "Hallazgo"]
@@ -92,7 +50,6 @@ topic:
     - cells: ["5", "—"]
     - cells: ["6", "—"]
     - cells: ["7", "náuseas constantes, arcadas y vómitos frecuentes"]
-
   - type: "table"
     title: "Ansiedad"
     columns: ["Puntuación", "Hallazgo"]
@@ -106,7 +63,6 @@ topic:
     - cells: ["5", "—"]
     - cells: ["6", "—"]
     - cells: ["7", "estados de pánico agudo similares al delirio grave o a la esquizofrenia aguda"]
-
   - type: "table"
     title: "Sudoración paroxística"
     columns: ["Puntuación", "Hallazgo"]
@@ -120,7 +76,6 @@ topic:
     - cells: ["5", "—"]
     - cells: ["6", "—"]
     - cells: ["7", "sudoración profusa"]
-
   - type: "table"
     title: "Orientación y obnubilación del sensorio"
     columns: ["Puntuación", "Hallazgo"]
@@ -131,7 +86,6 @@ topic:
     - cells: ["2", "desorientado en la fecha por ≤2 días naturales"]
     - cells: ["3", "desorientado en la fecha por >2 días"]
     - cells: ["4", "desorientado en lugar y/o persona"]
-
   - type: "table"
     title: "Agitación"
     columns: ["Puntuación", "Hallazgo"]
@@ -145,7 +99,6 @@ topic:
     - cells: ["5", "—"]
     - cells: ["6", "—"]
     - cells: ["7", "camina de un lado a otro o se agita constantemente"]
-
   - type: "table"
     title: "Alteraciones auditivas"
     columns: ["Puntuación", "Hallazgo"]
@@ -159,7 +112,6 @@ topic:
     - cells: ["5", "alucinaciones graves"]
     - cells: ["6", "alucinaciones extremadamente graves"]
     - cells: ["7", "alucinaciones continuas"]
-
   - type: "table"
     title: "Alteraciones táctiles"
     columns: ["Puntuación", "Hallazgo"]
@@ -173,7 +125,6 @@ topic:
     - cells: ["5", "alucinaciones graves"]
     - cells: ["6", "alucinaciones extremadamente graves"]
     - cells: ["7", "alucinaciones continuas"]
-
   - type: "table"
     title: "Alteraciones visuales"
     columns: ["Puntuación", "Hallazgo"]

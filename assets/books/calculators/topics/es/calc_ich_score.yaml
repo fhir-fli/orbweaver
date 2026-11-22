@@ -1,13 +1,4 @@
 # translated-from-sha256: 0ca45def39ad5050d4673e4dff190a8237bdbeee2300bef4eed5288a460de50d
-# ============================================================
-# ICH Score — intracerebral hemorrhage 30-day mortality.
-# Evidence review 2026-07-19: validated (Hemphill 2001). Prone to a
-# self-fulfilling prophecy — early withdrawal of care drives the mortality
-# it "predicts"; the AHA/ASA 2022 ICH guideline advises aggressive early
-# care and postponing new DNR orders to at least hospital day 2. Do NOT use
-# it to justify limiting care. Total 0–6.
-# ============================================================
-
 topic:
   id: "calc-ich-score"
   title: "Puntuación ICH"
@@ -19,14 +10,11 @@ topic:
   - "Hemphill"
   - "Puntuación de hemorragia intracerebral"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estima la mortalidad a 30 días tras una hemorragia intracerebral espontánea.
       Es solo una ayuda pronóstica — lea la advertencia antes de que oriente cualquier decisión.
-
   - type: "score"
     title: "Puntuación ICH"
     source: "Hemphill et al., Stroke 2001"

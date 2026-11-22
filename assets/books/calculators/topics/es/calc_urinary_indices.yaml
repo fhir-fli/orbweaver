@@ -1,14 +1,4 @@
 # translated-from-sha256: 5b6ed738d59b3182028b36d93580acc9e0e61ac71b13bd90de707e48bf7f2484
-# ============================================================
-# Urinary indices for AKI — FENa (+ FEUrea).
-# Evidence review 2026-07-19: adjuncts for prerenal vs intrinsic (ATN)
-# AKI, NOT a KDIGO-endorsed standalone standard. FENa is unreliable with
-# diuretics, CKD, and sepsis — FEUrea (< 35%) is more reliable under
-# diuretics. The prerenal/intrinsic dichotomy is an oversimplification.
-#   FENa%  = (UNa × SCr)/(SNa × UCr) × 100
-#   FEUrea% = (Uurea × SCr)/(Surea × UCr) × 100
-# ============================================================
-
 topic:
   id: "calc-urinary-indices"
   title: "FENa / FEUrea"
@@ -20,15 +10,12 @@ topic:
   - "FEUrea"
   - "Excreción fraccional de sodio"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Excreción fraccional de sodio (y de urea) para ayudar a distinguir la LRA prerrenal
       de la intrínseca (NTA). Interprétela junto con el cuadro clínico — no
       como una prueba aislada.
-
   - type: "formula"
     kind: "urinary_indices"
     title: "FENa / FEUrea"

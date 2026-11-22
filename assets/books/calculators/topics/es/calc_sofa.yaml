@@ -1,12 +1,4 @@
 # translated-from-sha256: 9efeb3af32d5a85aad43c42462cf921119f1cfea462ef238ea0547e295094443
-# ============================================================
-# SOFA — Sequential Organ Failure Assessment.
-# Evidence review 2026-07-19: the Sepsis-3 organ-dysfunction standard
-# (sepsis = suspected infection + acute rise in SOFA ≥ 2). ICU-oriented,
-# lab-dependent — not a rapid ward screen (use NEWS2 for screening).
-# Vincent 1996. Six organ systems, 0–4 each; total 0–24.
-# ============================================================
-
 topic:
   id: "calc-sofa"
   title: "Puntuación SOFA"
@@ -17,14 +9,11 @@ topic:
   - "SOFA"
   - "Evaluación secuencial de la falla orgánica"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Cuantifica la disfunción orgánica en seis sistemas. Es la base de la definición de Sepsis-3
       (un aumento agudo de ≥ 2 puntos con sospecha de infección).
-
   - type: "score"
     title: "SOFA"
     source: "Vincent et al., Intensive Care Med 1996"

@@ -1,0 +1,50 @@
+# translated-from-sha256: 8f80f09e92d44c9dd93d482d23bb6503a46ea215dd25dc073c75602588bc0c38
+topic:
+  id: "pb-rheumatic-fever"
+  title: "Fiebre reumática aguda (FRA)"
+  list_subtitle: "p.58 · criterios de Jones + tratamiento"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["fiebre reumática", "FRA", "criterios de jones", "estreptococo", "carditis", "corea de sydenham", "cardíaco", "penicilina", "profilaxis", "pediátrico"]
+  category: "medical"
+  page_number: 58
+  blocks:
+  - type: "prose"
+    title: "Diagnóstico"
+    markdown: |
+      - **FRA inicial:** (evidencia de infección previa por estreptococo del grupo A) + (2 mayores) O (1 mayor + 2 criterios menores)
+      - **FRA recurrente:** (antecedente de FRA) + (2 mayores) O (1 mayor + 2 menores) O (3 criterios menores)
+
+      Abajo = criterios de Jones de 2015 para el diagnóstico de fiebre reumática en poblaciones de riesgo moderado a alto.
+  - type: "prose"
+    title: "Criterios mayores"
+    markdown: |
+      - **Carditis y valvulitis** (clínica y/o subclínica)
+        - Manifestaciones: fiebre, soplo nuevo, molestia torácica o dolor pleurítico, malestar, taquicardia, insuficiencia cardíaca
+      - **Artritis**
+        - Manifestaciones: fiebre, poliartritis migratoria de grandes articulaciones (rodillas, codos, tobillos, muñecas) pero también monoartritis o poliartralgia, se afectan primero las extremidades inferiores, más en adolescentes, asimétrica
+      - **Afectación del sistema nervioso central** (p. ej., corea de Sydenham)
+        - Manifestaciones: fiebre, muecas, inquietud, torpeza, labilidad emocional, dificultad para escribir, alteración de la marcha, puede desaparecer durante el sueño
+      - **Nódulos subcutáneos**
+      - **Eritema marginado**
+  - type: "prose"
+    title: "Criterios menores"
+    markdown: |
+      - Monoartralgia (en esta población **la poliartralgia es un criterio MAYOR**, no menor — cuente un hallazgo articular en una sola categoría, nunca en ambas)
+      - Fiebre (≥37.5 °C axilar)
+      - ↑↑ VSG (≥30 mm/h) y/o ↑↑ PCR (≥3.0 mg/dL)
+      - Intervalo PR prolongado, teniendo en cuenta la variabilidad por edad (salvo que la carditis sea un criterio mayor)
+  - type: "prose"
+    title: "Evaluación"
+    markdown: |
+      - Hemograma y VSG/PCR cuando estén disponibles
+      - Ecocardiograma, ECG si están disponibles
+  - type: "prose"
+    title: "Tratamiento"
+    markdown: |
+      - Esquema antibiótico de la faringitis estreptocócica (tenga o no faringitis en este momento)
+      - **Artritis:** ácido acetilsalicílico 20–25mg/kg/dosis cada 6 h
+      - **Profilaxis secundaria**
+        - Penicilina G benzatínica (PGB) IM cada mes: ≤27kg = 600,000 UI; >27kg = 1.2 millones de UI
+        - Penicilina V 250mg VO dos veces al día
+        - Eritromicina 250mg VO dos veces al día (solo si es alérgico a la penicilina)
+        - **Duración:** sin carditis — 5 años o hasta los 21 años, lo que sea más largo · carditis sin cardiopatía residual — 10 años o hasta los 21 años, lo que sea más largo · cardiopatía residual — 10 años o hasta los 40 años, a veces de por vida

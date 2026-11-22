@@ -1,12 +1,4 @@
 # translated-from-sha256: b0f3fb97990bf25102f34fcec58b34e19863a6ef3e6fdeda24cd0211ce1a423b
-# ============================================================
-# Maintenance IV fluids — Holliday-Segar (4-2-1 / 100-50-20).
-# Evidence review 2026-07-19: the RATE calculation is standard, but the
-# COMPOSITION must be ISOTONIC per AAP 2018 (Feld, Pediatrics 2018) — the
-# historical hypotonic default (D5-0.45%/0.2% NaCl) causes iatrogenic
-# hyponatremia. Applies to children > 28 days (neonates differ).
-# ============================================================
-
 topic:
   id: "calc-holliday-segar"
   title: "Líquidos IV de mantenimiento"
@@ -18,14 +10,11 @@ topic:
   - "Líquidos de mantenimiento"
   - "Holliday-Segar"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       **Ritmo** de líquidos de mantenimiento según el peso (Holliday-Segar). Introduzca el peso;
       la calculadora da el ritmo por hora y el volumen en 24 horas.
-
   - type: "formula"
     kind: "holliday_segar"
     title: "Ritmo de líquidos de mantenimiento"

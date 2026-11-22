@@ -1,41 +1,4 @@
 # translated-from-sha256: 764af686a5ce820e76648be63fafd38bb9246d4824ddee6e583ce20ed628ad76
-# ============================================================
-# ProtocolBook pp.86–87 — Neonatal Sepsis (< 28 days): Treatment +
-# Duration of treatment. Fourth leaf of the Neonatal Protocols section.
-#
-# Two-page topic (`pages:`): p.86 = the treatment flowchart (one real
-# decision — clinical signs of sepsis? — branching into a sepsis-
-# management pathway and a localized-infection pathway) + antibiotic
-# regimens; p.87 = the duration-of-treatment table.
-#
-# Faithful-rendering calls:
-#   - The single top decision (signs of sepsis? Yes/No) → a small
-#     `algorithm` (Yes → treat as sepsis; No → assess for localized
-#     infection); each arm's detail (multi-step management + a/b/c
-#     antibiotic dosing, which the algorithm boxes can't hold) →
-#     titled prose below, in printed order. Same split as p.73/p.75.
-#   - Antibiotic regimens a/b/c → bold-lead prose with dose bullets.
-#   - Duration (p.87) → a two-column `table` (standard layout so the
-#     long cells wrap).
-#   - Cefotaxime "may substitute ceftriaxone (but risk of jaundice)"
-#     kept as printed.
-#   - Citation superscripts dropped; "No`" arrow typo (stray backtick)
-#     silently corrected.
-#
-# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
-#   - Ampicillin + gentamicin is the WHO first-line neonatal empiric
-#     regimen; cloxacillin for soft-tissue, ampicillin + cefotaxime for
-#     meningitis. Gentamicin 3 mg/kg OD if <2 kg / 1st week / asphyxia
-#     is the reduced-clearance adjustment. Ceftriaxone-jaundice caution
-#     (bilirubin displacement) is correct. Vitamin K + tetracycline eye
-#     ointment for home births = standard newborn prophylaxis.
-# Cross-book pass 2026-08-28: neonatal meningitis ampicillin brought down from
-#   100 mg/kg q8h (200->300 mg/kg/day) to 50 mg/kg q8h then q6h (150->200),
-#   the settled term-neonate dose, with the preterm <=34 wk week-1 band named.
-#   300 mg/kg/day is the OLDER-CHILD dose and was carried into the neonate.
-#   The neonatal ceiling is set by immature renal clearance and seizure risk.
-# ============================================================
-
 topic:
   id: "pb-neo-sepsis-treatment"
   title: "Sepsis neonatal — tratamiento"
@@ -43,13 +6,9 @@ topic:
   last_reviewed: "pocketbook v1.7"
   tags: ["neonatal", "sepsis", "recién nacido", "tratamiento", "ampicilina", "gentamicina", "cloxacilina", "cefotaxima", "ceftriaxona", "meningitis", "antibióticos", "duración", "infección localizada"]
   category: "medical"
-
   pages:
-
-    # ═══════════════════════ PAGE 86 ═══════════════════════
   - page_number: 86
     blocks:
-
     - type: "flowchart"
       variant: "algorithm"
       entry:
@@ -74,7 +33,6 @@ topic:
         - label: "No"
           box:
             title: "Evalúe si hay infección localizada (vea abajo)"
-
     - type: "prose"
       title: "Si hay signos de sepsis — manejo inicial"
       markdown: |
@@ -85,7 +43,6 @@ topic:
         - Administre vitamina K y pomada oftálmica de tetraciclina si nació en casa o no se le dieron en la maternidad
         - Manténgalo abrigado
         - Mantenga la alimentación por boca o por SNG; use líquidos IV solo si hay dificultad respiratoria o distensión abdominal grave
-
     - type: "prose"
       title: "Tratamiento antibiótico"
       markdown: |
@@ -95,7 +52,6 @@ topic:
         - ⚠️ **Un prematuro extremo (≤ 34 semanas) en la semana 1 recibe la banda inferior — 50 mg/kg c/12h (100 mg/kg/día).** La ampicilina se elimina por vía renal y su aclaramiento sigue la edad posmenstrual; la acumulación arriesga excitación del SNC y convulsiones
         - 🛑 **No traslade al neonato los 300 mg/kg/día del niño mayor.** 300 mg/kg/día es correcto **después de las 4 semanas** y está por encima del techo neonatal
         - 🛑 **En el neonato prefiera la cefotaxima a la ceftriaxona.** La ceftriaxona desplaza la bilirrubina de la albúmina y empeora la ictericia, y está **absolutamente contraindicada en todo neonato que reciba líquidos IV con calcio** — ambos forman precipitados mortales en pulmones y riñones
-
     - type: "prose"
       title: "Si no hay signos de sepsis — evalúe si hay infección localizada"
       markdown: |
@@ -104,7 +60,6 @@ topic:
         - Pus en el oído
         - Pus en el ombligo y enrojecimiento de la piel del abdomen; o
         - Algunas ampollas grandes llenas de pus / pústulas sépticas?
-
     - type: "prose"
       title: "Decida — ¿el bebé necesita líquidos, alimentación o sangre?"
       markdown: |
@@ -114,18 +69,14 @@ topic:
         - Palidez intensa
         - Infección localizada grave — articulaciones, distensión abdominal
         - Pérdida de peso
-
     - type: "prose"
       title: "Cuando corresponda"
       markdown: |
         - Trate la oftalmía neonatal
         - Trate con un antibiótico oral — uno que cubra Staphylococcus aureus si hay pústulas sépticas grandes llenas de pus
         - Aconseje a la madre y programe un control
-
-    # ═══════════════════════ PAGE 87 ═══════════════════════
   - page_number: 87
     blocks:
-
     - type: "table"
       title: "Duración del tratamiento de la sepsis neonatal"
       zebra: true

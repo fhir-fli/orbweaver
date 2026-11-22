@@ -1,13 +1,4 @@
 # translated-from-sha256: 092eb04cfb88d5baa9de42cea0fb9d46d86354789867b8542452f252e856ce72
-# ============================================================
-# Bishop score — cervical readiness for induction.
-# Evidence review 2026-07-19: standard cervical-favorability tool (ACOG
-# Clinical Practice Guideline No. 9, 2025, which replaced Practice
-# Bulletin 107). It is a RIPENING/favorability measure, a poor predictor
-# of induction SUCCESS (Kolkman 2013); no single cutoff is endorsed.
-# Total 0–13. Higher = more favorable.
-# ============================================================
-
 topic:
   id: "calc-bishop"
   title: "Puntuación de Bishop"
@@ -18,14 +9,11 @@ topic:
   - "Puntuación de Bishop"
   - "Puntuación cervical"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Evalúa si el cuello uterino es favorable antes de la inducción del trabajo de parto. Las puntuaciones más altas
       indican un cuello más favorable ("maduro").
-
   - type: "score"
     title: "Puntuación de Bishop"
     source: "Bishop 1964; ACOG Clinical Practice Guideline No. 9 (2025)"

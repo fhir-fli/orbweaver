@@ -1,12 +1,4 @@
 # translated-from-sha256: 374541004947b60b69090c1b2071d43a86860b194073dbdad63d65384cf76a08
-# ============================================================
-# Adrogué-Madias — predicted change in serum Na from an infusate.
-# Evidence review 2026-07-19: ΔNa = (infusate Na + infusate K − serum Na)
-# × Vol / (TBW + Vol). The volume-scaled form (Kidney360 2021) is correct
-# for any volume; at 1 L it is the classic Adrogué-Madias. A planning
-# estimate — it ignores ongoing losses, so recheck Na frequently.
-# ============================================================
-
 topic:
   id: "calc-adrogue-madias"
   title: "Adrogué-Madias"
@@ -18,14 +10,11 @@ topic:
   - "Corrección de sodio"
   - "Corrección de hiponatremia"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Predice el cambio del sodio sérico con 1 L (o un volumen elegido) de una
       solución IV — para planificar la corrección de la hiponatremia (o hipernatremia).
-
   - type: "formula"
     kind: "adrogue_madias"
     title: "Adrogué-Madias"

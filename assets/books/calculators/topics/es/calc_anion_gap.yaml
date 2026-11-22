@@ -1,13 +1,4 @@
 # translated-from-sha256: 54e02be93392ce1f57d735b46a43f4fd081465aed95b027e77a07bcff0acc45f
-# ============================================================
-# Anion gap (+ optional albumin correction, Figge).
-# Evidence review 2026-07-19: AG = Na − (Cl + HCO3). Albumin correction
-# (+2.5 per 1 g/dL below 4.0) unmasks an occult high gap in hypoalbuminemia
-# and is better-founded than calcium correction — but it is NOT a lactate
-# surrogate (Chawla 2008: doesn't improve hyperlactatemia detection).
-# Check a lactate directly. Normal AG ≈ 8–12 (analyzer-dependent).
-# ============================================================
-
 topic:
   id: "calc-anion-gap"
   title: "Brecha aniónica"
@@ -19,15 +10,12 @@ topic:
   - "BA"
   - "Acidosis con brecha aniónica elevada"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Brecha aniónica sérica a partir del panel metabólico básico. Añada la albúmina para obtener
       también la brecha **corregida por albúmina**, que revela una brecha elevada oculta
       cuando la albúmina está baja.
-
   - type: "formula"
     kind: "anion_gap"
     title: "Brecha aniónica"

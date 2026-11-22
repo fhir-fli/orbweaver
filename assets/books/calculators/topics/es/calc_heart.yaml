@@ -1,13 +1,4 @@
 # translated-from-sha256: 6a22e9323f7ecdee8bbe8210f2537237e3984c39923521f15d0b7081f20b04c0
-# ============================================================
-# HEART score — chest pain risk in the ED.
-# Evidence review 2026-07-19: validated (Backus 2013; HEART Pathway RCT
-# Mahler 2015 — 0% MACE in low-risk early-discharge), endorsed within
-# chest-pain pathways (2021 AHA/ACC). Requires troponin (the "T"); the
-# HEAR subscore is a troponin-free fallback for low-resource settings.
-# Total 0–10. History/ECG components are interobserver-variable.
-# ============================================================
-
 topic:
   id: "calc-heart"
   title: "Puntuación HEART"
@@ -19,14 +10,11 @@ topic:
   - "Puntuación HEART"
   - "Puntuación de dolor torácico"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estratifica el riesgo del dolor torácico indiferenciado en urgencias para eventos cardíacos
       adversos mayores a 6 semanas. Requiere un valor de troponina.
-
   - type: "score"
     title: "Puntuación HEART"
     source: "Six et al. 2008; Backus 2013; ECA HEART Pathway (Mahler 2015)"

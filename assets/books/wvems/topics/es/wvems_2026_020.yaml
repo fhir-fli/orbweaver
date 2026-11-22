@@ -1,11 +1,5 @@
 # translated-from-sha256: 666093235a427b3b9e4514fd8040ff9ab44dbe2b112fd3742999d9307d006f54
-# ============================================================
-# WVEMS 2026 Protocol 20 — Pain
-# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
-# ============================================================
-
 topic:
-
   id: "wvems-2026-020"
   version: "v260101"
   title: "Dolor"
@@ -20,31 +14,19 @@ topic:
   - "Migraña"
   - "Fibromialgia"
   category: "universal"
-
-  # Sticky: flowchart page + prose page each snap to a full screen.
   layout: "paged"
-
   pages:
-
   - page_number: 20
     blocks:
-
-    # ────────────────────────────────────────────────
-    # Flowchart block (severity variant)
-    # ────────────────────────────────────────────────
     - type: "flowchart"
       variant: "severity"
-
       entry:
         text: "Lesión o molestia"
         shape: "stadium"
-
       decision:
         text: "¿Intensidad?"
         shape: "diamond"
-
       branches:
-
       - id: "mild"
         label: "Leve"
         criteria:
@@ -57,7 +39,6 @@ topic:
         - provider_level: "E"
           text: "Ibuprofeno"
           kind: "medication_administration"
-
       - id: "moderate"
         label: "Moderado"
         criteria:
@@ -70,7 +51,6 @@ topic:
         - provider_level: "A"
           text: "Toradol"
           kind: "medication_administration"
-
       - id: "severe"
         label: "Intenso"
         criteria:
@@ -83,14 +63,12 @@ topic:
         - provider_level: "I"
           text: "Ketamina"
           kind: "medication_administration"
-
       convergence:
         text: "Considere"
         shape: "rounded_rectangle"
         bullets:
         - text: "[Inmovilización](topic:wvems-2026-066)"
         - text: "[Náuseas](topic:wvems-2026-022)"
-
       dose_table:
       - drug: "[Tylenol](topic:wvems-2026-drug-reference#tylenol)"
         dose: "1,000 mg"
@@ -117,14 +95,8 @@ topic:
         route: "IV/IO, IM/IN"
         frequency: "Q 15 min x2"
         population: "adult"
-
   - page_number: 21
     blocks:
-
-    # ────────────────────────────────────────────────
-    # Prose blocks (notes page)
-    # ────────────────────────────────────────────────
-
     - type: "prose"
       title: "Imperativos del dolor"
       highlight: true
@@ -133,7 +105,6 @@ topic:
           - [Trauma mayor](topic:wvems-2026-056), [fracturas](topic:wvems-2026-066) evidentes, dolor [abdominal](topic:wvems-2026-034) agudo o [dolor torácico](topic:wvems-2026-028)
         - Los analgésicos (incluso VO) son **beneficiosos a pesar de traslados cortos**.
         - Use la [dosificación pediátrica por peso](topic:wvems-2026-144) en adultos pequeños de menos de 110 lbs (50 kg).
-
     - type: "prose"
       title: "Medicamentos"
       markdown: |
@@ -149,7 +120,6 @@ topic:
           - Uso IV/IO: dilúyala en SSN y adminístrela lentamente en 10 min.
         - Puede aplicar gotas oftálmicas en abrasiones o en el destello del soldador (queratitis por UV):
           - {E} **[Tetracaína](topic:wvems-2026-drug-reference#tetracaine)** (oftálmica al 0.5 %) — 1–2 gotas en el ojo afectado.
-
     - type: "prose"
       title: "Notas"
       markdown: |
@@ -159,13 +129,11 @@ topic:
         - El dolor es subjetivo. Puede probar otro medicamento si el dolor continúa.
           - **No** use Toradol junto con ibuprofeno (elija uno u otro).
         - Dosis diaria máxima: **[Tylenol](topic:wvems-2026-drug-reference#tylenol) 3,000 mg** · **ibuprofeno 2,400 mg**.
-
     - type: "band_callout"
       band: "peds"
       title: "Pediatría"
       markdown: |
         Use la [Referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para la dosificación pediátrica.
-
     - type: "prose"
       title: "Referencias"
       text_scale: 0.8

@@ -1,11 +1,4 @@
 # translated-from-sha256: 551fa77ae9eacedf8aa5d9d32bcd5eaf25d02796b8282d89a433f2bb94ff8990
-# ============================================================
-# SIRS — Systemic Inflammatory Response Syndrome criteria.
-# Evidence review 2026-07-19: ≥ 2 of 4 = SIRS. Still widely used to flag
-# possible infection/sepsis (SSC lists SIRS among preferred screens over
-# qSOFA). Non-specific — SIRS ≠ sepsis. Bone 1992.
-# ============================================================
-
 topic:
   id: "calc-sirs"
   title: "Criterios de SRIS"
@@ -16,14 +9,11 @@ topic:
   - "SRIS"
   - "Respuesta inflamatoria sistémica"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Toque cada criterio presente. Dos o más cumplen SRIS — un aviso para buscar
       infección, aunque el SRIS por sí mismo es inespecífico.
-
   - type: "score"
     title: "Criterios de SRIS"
     source: "Bone et al., Chest 1992 (ACCP/SCCM)"

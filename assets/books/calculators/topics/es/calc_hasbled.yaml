@@ -1,13 +1,4 @@
 # translated-from-sha256: 1cb2fbb20ba35ff48739bb1dcdf0487a2ab7bc928e9738a6d3108fc0cae67f7d
-# ============================================================
-# HAS-BLED — major bleeding risk on anticoagulation in AF.
-# Evidence review 2026-07-19: modest discrimination (c ~0.58–0.61).
-# ESC 2024 de-emphasized structured bleeding scoring; HAS-BLED is for
-# identifying/correcting MODIFIABLE bleeding factors and flagging
-# high-risk (≥3) patients for review — it must NEVER be used to withhold
-# anticoagulation. Points per Pisters 2010 (Chest). Max 9.
-# ============================================================
-
 topic:
   id: "calc-hasbled"
   title: "HAS-BLED"
@@ -18,15 +9,12 @@ topic:
   - "HAS-BLED"
   - "Riesgo de sangrado"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estima el riesgo de sangrado mayor a 1 año en pacientes con FA
       anticoagulados. Su propósito es poner de manifiesto los factores de sangrado **modificables**
       — no negar la anticoagulación.
-
   - type: "score"
     title: "HAS-BLED"
     source: "Pisters et al., Chest 2010"

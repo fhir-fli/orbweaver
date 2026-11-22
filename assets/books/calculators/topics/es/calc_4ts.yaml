@@ -1,12 +1,4 @@
 # translated-from-sha256: ef4069b3bccb7d12289d6b4ce3813cd471150f13dfcfe4af6c12a3f57e19124b
-# ============================================================
-# 4Ts score — Heparin-Induced Thrombocytopenia (HIT) pretest probability.
-# Evidence review 2026-07-19: ASH 2018 uses 4Ts to set pretest probability;
-# high negative predictive value (~98%) makes a LOW score a reliable
-# rule-out, but PPV is low so a high score needs lab confirmation
-# (immunoassay → functional). Points per Lo 2006. Total 0–8.
-# ============================================================
-
 topic:
   id: "calc-4ts"
   title: "Puntuación 4T (TIH)"
@@ -18,15 +10,12 @@ topic:
   - "Puntuación TIH"
   - "Trombocitopenia inducida por heparina"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Probabilidad pretest de trombocitopenia inducida por heparina. Una
       puntuación baja descarta la TIH de forma fiable; una puntuación
       intermedia/alta obliga a suspender la heparina y confirmar en laboratorio.
-
   - type: "score"
     title: "Puntuación 4T"
     source: "Lo et al., J Thromb Haemost 2006; guía de TIH de la ASH 2018"

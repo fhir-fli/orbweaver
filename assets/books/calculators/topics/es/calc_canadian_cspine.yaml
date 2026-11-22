@@ -1,29 +1,4 @@
 # translated-from-sha256: d0d88f82710a3ef3d533dc63a6ab8e1281904ed91f01cdf165881e44e3155acf
-# ============================================================
-# Canadian C-Spine Rule (CCR) — cervical-spine imaging in alert, stable
-# adult blunt trauma. A three-step ALGORITHM, not a sum, so it is a flowchart.
-# Evidence review 2026-09-07, OpenEvidence ruling of the same day:
-#   Derivation: Stiell et al., JAMA 2001 (PMID 11597285), 8,924 adults, GCS 15,
-#   stable; 100% sensitivity, 42.5% specificity by cross-validation.
-#   Head-to-head: Stiell et al., NEJM 2003 (PMID 14695411), 8,283 patients —
-#   CCR 99.4% vs NEXUS 90.7% sensitivity, 45.1% vs 36.8% specificity,
-#   radiography 55.9% vs 66.6%; range of motion not assessed in 10.2%.
-#   Rule text, mechanism definitions and the rear-end exclusions are the NEJM
-#   2003 Figure 1 legend as quoted by OpenEvidence. Exclusion criteria are
-#   quoted from Stiell's CCR implementation protocol (Implement Sci 2007,
-#   PMC1802999, read whole), which restates the CCR study exclusions.
-#   Independent data (abstracts read whole): Ala et al., PLoS One 2018 (PMID
-#   30388133) — 200 patients, 90% sensitivity for BOTH rules, specificity
-#   NEXUS 54.7% vs CCR 44.2%. Michaleff et al., CMAJ 2012 (PMID 23048086) —
-#   15 modest-quality studies, CCR sensitivity 0.90–1.00, NEXUS 0.83–1.00.
-#   Guidelines (OE, citing Gesu 2021 and ACR 2019): NICE uses the CCR; EAST
-#   and AANS/CNS use NEXUS; ACR takes no position and says either may be used.
-#   CT-unavailable pathway: OE ruling citing the Spinal Cord Society position
-#   statement (Yelamarthy 2020, PMID 31440893: "radiographs are required if CT
-#   is unavailable or unaffordable") — minimum 3 views, preferably 5; normal
-#   films do NOT clear a rule-positive patient.
-# ============================================================
-
 topic:
   id: "calc-canadian-cspine"
   title: "Regla canadiense de columna cervical"
@@ -35,9 +10,7 @@ topic:
   - "CCR"
   - "Regla de columna cervical"
   category: "trauma"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Para adultos alertas (GCS 15) y hemodinámicamente estables con traumatismo cerrado
@@ -45,7 +18,6 @@ topic:
       preguntas en orden; el rango de movimiento solo se explora cuando el paso 2 lo
       permite. Complemento de [NEXUS](topic:calc-nexus-cspine); revise las
       exclusiones de abajo antes de aplicarla.
-
   - type: "flowchart"
     variant: "algorithm"
     entry: {text: "Alerta (GCS 15), estable, traumatismo cerrado, preocupa lesión cervical", shape: "stadium"}
@@ -78,7 +50,6 @@ topic:
       outcomes:
       - {label: "No puede, o no se exploró", goto: "image"}
       - {label: "Puede", box: {title: "Sin imagen — retire el collarín", severity: "non_urgent"}}
-
   - type: "prose"
     title: "No aplique la regla si"
     markdown: |
@@ -91,7 +62,6 @@ topic:
       - Parálisis aguda (paraplejía, cuadriplejía)
       - Enfermedad vertebral conocida: espondilitis anquilosante, artritis reumatoide, estenosis del canal, cirugía previa de columna cervical
       - Regresa para reevaluación de la misma lesión
-
   - type: "prose"
     title: "Si la regla es positiva y no hay TC"
     markdown: |
@@ -104,7 +74,6 @@ topic:
       técnicamente inadecuadas: mantenga la inmovilización y gestione TC o RM,
       trasladando si es necesario. Los signos o síntomas neurológicos obligan a hacer RM
       sean cuales sean las radiografías.
-
   - type: "prose"
     title: "Evidencia"
     markdown: |

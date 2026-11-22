@@ -1,13 +1,4 @@
 # translated-from-sha256: 03efca89d0e2ada1aec9725afbb2149f61546dd48ae258f6140d282838ae7f42
-# ============================================================
-# Osmolal gap.
-# Evidence review 2026-07-19: gap = measured − calculated osmolality,
-# calc = 2·Na + glucose/18 + BUN/2.8 (+ ethanol/3.7). An adjunct for
-# toxic-alcohol evaluation — a normal/low gap does NOT rule out ingestion
-# (esp. late, once the parent alcohol is metabolized). Levels + anion gap
-# + clinical picture (and EXTRIP for dialysis) drive management.
-# ============================================================
-
 topic:
   id: "calc-osmolal-gap"
   title: "Brecha osmolal"
@@ -18,15 +9,12 @@ topic:
   - "Brecha osmolal"
   - "Brecha osmolar"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Diferencia entre la osmolalidad sérica medida y la calculada. Una brecha
       grande sugiere osmoles no medidos (p. ej., metanol, etilenglicol) — pero
       una brecha normal no puede excluir la ingestión de un alcohol tóxico.
-
   - type: "formula"
     kind: "osmolal_gap"
     title: "Brecha osmolal"

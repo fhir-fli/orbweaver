@@ -56,10 +56,31 @@ def extract(path):
     return out
 
 
+def _strip_comments(node):
+    """Drop every comment. ruamel re-emits a comment at its source column; a
+    replaced literal block is re-emitted at ruamel's own indent, so a comment
+    that followed it in the English can land inside the block and become
+    reader-visible text (pb_054_meningitis, 2026-11-22). The translated file
+    is generated, so it carries no maintainer comments."""
+    ca = getattr(node, 'ca', None)
+    if ca is not None:
+        ca.items.clear()
+        ca.comment = None
+        ca.end = []
+    if isinstance(node, dict):
+        for v in node.values():
+            _strip_comments(v)
+    elif isinstance(node, list):
+        for v in node:
+            _strip_comments(v)
+
+
 def reinsert(path, translated):
     """English page with each string replaced, as YAML text. Raises if an id
-    is missing or extra."""
+    is missing or extra, or if the emitted YAML does not read back as exactly
+    the translated strings."""
     doc = _yaml().load(open(path))
+    _strip_comments(doc)
     n = [0]
 
     def visit(s):
@@ -71,4 +92,14 @@ def reinsert(path, translated):
         raise ValueError(f'{len(translated)} strings returned, page has {n[0]}')
     buf = io.StringIO()
     _yaml().dump(doc, buf)
-    return buf.getvalue()
+    text = buf.getvalue()
+    back = {}
+
+    def read(s):
+        back[f's{len(back) + 1}'] = str(s)
+        return s
+    _walk(_yaml().load(text), None, read)
+    bad = [k for k in translated if back.get(k) != translated[k]]
+    if bad or len(back) != len(translated):
+        raise ValueError(f'{path}: emitted YAML reads back differently at {bad[:5]}')
+    return text

@@ -1,12 +1,4 @@
 # translated-from-sha256: f08cecfa76dd6b55b7ae324f7664d0bd4664952e92ee0625de07dcde8358c186
-# ============================================================
-# COWS — Clinical Opiate Withdrawal Scale.
-# Evidence review 2026-07-19: ASAM 2020 references COWS for opioid-
-# withdrawal severity and buprenorphine-induction timing (typically
-# ≥ 11–12; some use ≥ 13 in the fentanyl era). Wesson & Ling 2003.
-# 11 items; total 0–48.
-# ============================================================
-
 topic:
   id: "calc-cows"
   title: "COWS"
@@ -18,15 +10,12 @@ topic:
   - "Abstinencia de opioides"
   - "Escala clínica de abstinencia de opiáceos"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Gravedad de la abstinencia de opioides, usada para decidir cuándo iniciar la buprenorfina.
       Puntúe cada signo; una puntuación moderada indica abstinencia suficiente para iniciar
       la buprenorfina con seguridad.
-
   - type: "score"
     title: "COWS"
     source: "Wesson & Ling, J Psychoactive Drugs 2003"

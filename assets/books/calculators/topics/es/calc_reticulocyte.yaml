@@ -1,11 +1,4 @@
 # translated-from-sha256: cb202d1d700deae2707b571ac4f103c0a61503431570486684ede5dfe536c57f
-# ============================================================
-# Corrected reticulocyte count + reticulocyte production index (RPI).
-# Evidence review 2026-07-19: corrected retic% = retic% × (Hct/45);
-# RPI = corrected ÷ maturation factor (Hct ≥35→1.0, 25–34→1.5, 20–24→2.0,
-# <20→2.5). RPI ≥ 2 = adequate marrow response; < 2 = hypoproliferative.
-# ============================================================
-
 topic:
   id: "calc-reticulocyte"
   title: "Índice reticulocitario (IPR)"
@@ -17,14 +10,11 @@ topic:
   - "Índice de producción reticulocitaria"
   - "Reticulocitos corregidos"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Ajusta el porcentaje de reticulocitos al grado de anemia para valorar
       si la médula responde de forma adecuada.
-
   - type: "formula"
     kind: "reticulocyte"
     title: "Índice de producción reticulocitaria"

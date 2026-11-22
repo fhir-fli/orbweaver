@@ -1,14 +1,4 @@
 # translated-from-sha256: 0cc66ce1be733302932906f932a50f9aec773aa63849cdd8116fbd69f10a1a9a
-# ============================================================
-# Light's criteria — pleural exudate vs transudate.
-# Evidence review 2026-07-19: standard first-line test (BTS 2023 built
-# around the exudate/transudate split). Exudate if ANY: pleural/serum
-# protein > 0.5, pleural/serum LDH > 0.6, or pleural LDH > 2/3 the upper
-# limit of normal serum LDH. Known pitfall: over-calls exudate in diuresed
-# heart failure — use the serum-effusion albumin gradient (> 1.2 g/dL) or
-# NT-proBNP when HF is suspected.
-# ============================================================
-
 topic:
   id: "calc-lights"
   title: "Criterios de Light"
@@ -20,14 +10,11 @@ topic:
   - "Líquido pleural"
   - "Exudado trasudado"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Clasifica un derrame pleural como exudado o trasudado. Basta con que se cumpla
       un criterio para que sea un exudado.
-
   - type: "formula"
     kind: "lights"
     title: "Criterios de Light"

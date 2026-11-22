@@ -1,10 +1,4 @@
 # translated-from-sha256: 68ee6c504faefd09b9c99d543eff3dcac390f6920f435b8794f8ec693835b475
-# ============================================================
-# AUDIT-C — Alcohol Use Disorders Identification Test (Consumption).
-# Evidence review 2026-07-19: validated alcohol screen (Bush 1998; USPSTF
-# 2018 Grade B). Positive: ≥ 4 (men) / ≥ 3 (women). PUBLIC DOMAIN (WHO/VA).
-# ============================================================
-
 topic:
   id: "calc-auditc"
   title: "AUDIT-C"
@@ -15,14 +9,11 @@ topic:
   - "AUDIT-C"
   - "Cribado de alcohol"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Cribado breve del consumo de riesgo o del trastorno por consumo de alcohol. Puntúe
       cada una de las tres preguntas.
-
   - type: "score"
     title: "AUDIT-C"
     unit: "/ 12"

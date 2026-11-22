@@ -1,12 +1,4 @@
 # translated-from-sha256: 697ca76629239e78f46a4ec2ff3b04fad4fbde7415de29c5dff04d273a2e9bb6
-# ============================================================
-# CHA₂DS₂-VASc — stroke risk in atrial fibrillation.
-# Evidence review 2026-07-19: 2023 ACC/AHA/ACCP/HRS AF guideline uses
-# CHA₂DS₂-VASc (absolute-risk framing). ESC 2024 moved to CHA₂DS₂-VA
-# (drops the sex category, max 8) — surfaced in a note. Points per Lip
-# 2010 (Chest). Pair with HAS-BLED for modifiable bleeding factors.
-# ============================================================
-
 topic:
   id: "calc-cha2ds2-vasc"
   title: "CHA₂DS₂-VASc"
@@ -18,14 +10,11 @@ topic:
   - "CHADS-VASc"
   - "Riesgo de ictus en FA"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estima el riesgo anual de ictus en la fibrilación auricular no valvular para
       orientar la anticoagulación oral. Toque cada factor que corresponda.
-
   - type: "score"
     title: "CHA₂DS₂-VASc"
     source: "Lip et al., Chest 2010; guía de FA ACC/AHA/ACCP/HRS 2023"

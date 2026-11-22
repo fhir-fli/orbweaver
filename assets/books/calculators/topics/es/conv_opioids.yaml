@@ -1,15 +1,4 @@
 # translated-from-sha256: 3c22279c7099f89a282153573ec810b7a1fa42cfed13fb4247a61de1ee1e7e7c
-# ============================================================
-# Opioid conversion → oral morphine equivalents (MME)
-# Factors per the CDC 2022 MME table (oral) + standard parenteral
-# ratios. OpenEvidence review applied 2026-06-18:
-#   - Hydromorphone PO 4.0 → 5.0 (CDC value; NCCN uses 4.0).
-#   - Tramadol PO 0.1 → 0.2 (CDC value; NCCN uses 0.1).
-#   - Added Oxymorphone PO 3.0 (CDC).
-#   - Tapentadol kept excluded (mixed μ/NRI mechanism — CDC lists 0.4
-#     for surveillance, but not reliably equianalgesic for switching).
-# ============================================================
-
 topic:
   id: "conv-opioids"
   title: "Conversión de opioides"
@@ -20,14 +9,11 @@ topic:
   - "MME"
   - "Equivalentes de morfina"
   category: "medical"
-  # Dangerous converter — harm caveats render red.
   palette:
     alert: "0xFFD32F2F"
     alert_fill: "0xFFFDECEA"
     alert_text: "0xFFB71C1C"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Conversión **directa** — elija el fármaco **desde** el que cambia,
@@ -35,7 +21,6 @@ topic:
       línea central muestra el equivalente de morfina oral (**MME**). No suma
       las 24 horas: para el total del día, lea el MME de cada fármaco y
       súmelos usted.
-
   - type: "conversion"
     mode: "equivalence"
     title: "Opioide → MME"

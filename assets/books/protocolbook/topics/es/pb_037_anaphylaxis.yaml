@@ -1,74 +1,4 @@
 # translated-from-sha256: 0c0a12a16a28af499e18fc233131fd2ee5e081ce2e80b2056d6c08fc8b4cf151
-# ============================================================
-# ProtocolBook p.37 — Anaphylaxis.
-#
-# Hybrid-rule split: everything above "Wheezing?" on the printed
-# chart is a LINEAR flow with no branch points (symptoms → 3
-# diagnostic-criteria boxes feeding "any of the 3" → epinephrine →
-# 5-item management box), so that half is titled prose with the
-# epinephrine action as a red-alert callout.  The true decision
-# tail (Wheezing? → treat as asthma; Hypotension? → IV fluids;
-# → adjunctive treatment) is an `algorithm` flowchart; the
-# adjunctive box is the spine terminal (every path receives it).
-#
-# Faithful-rendering calls:
-#   - Criteria 1 ends with a stray unmatched ")" in the source —
-#     dropped (typo, no content).
-#   - "Treat as asthma exacerbation" is plain text for now; becomes a
-#     topic: cross-link once the Wheezing/Asthma pages (~p.53) are
-#     authored (same deferral as p.30's convulsion pointer).
-#
-# ✅ EVIDENCE-CURRENCY UPDATES APPLIED (audit pass 2026-07-26) — the
-# two items below were pre-designated CLEAR-CUT and are now applied:
-#   - RANITIDINE → FAMOTIDINE → **DELETED ENTIRELY (2026-07-27)**.
-#     Ranitidine was withdrawn worldwide in April 2020 (NDMA), so it
-#     was first swapped for famotidine. On re-review the H2 blocker
-#     was removed altogether: no H2 blocker appears in RCUK 2021, the
-#     AAAAI/ACAAI 2020 or 2023 parameters, WHO EML §3, or Uganda
-#     Clinical Guidelines 2023 §1.1.1 — and Nurmatov's systematic
-#     review "failed to identify any eligible studies for inclusion",
-#     i.e. zero RCTs have ever been done. It consumed page space and
-#     pharmacy stock while offering nothing, and risked reading as
-#     "treatment" of an anaphylaxis. H1 blocker and steroid kept, but
-#     now explicitly labelled as not treating airway, breathing or
-#     circulation.
-#   - EPINEPHRINE MAX 0.3 mL → "max 0.3 mL (child), up to 0.5 mL
-#     (adolescent / adult)". 0.01 mg/kg IM with a 0.5 mg adult ceiling
-#     and a 0.3 mg prepubertal ceiling is the current AAAAI/ACAAI +
-#     WAO parameter; 0.3 mg is the paediatric cap only, so the printed
-#     blanket 0.3 mL under-doses adults.
-#
-# ✅ RESOLVED 2026-07-27 (both were open flags, now closed):
-#   - The "Adjunctive treatment" terminal is now explicitly labelled as
-#     NOT treating airway, breathing or circulation, and never to
-#     delay or replace epinephrine — matching the practice parameters,
-#     which recommend against routine steroids/antihistamines and note
-#     they do not prevent biphasic reactions.
-#   - OBSERVATION PERIOD added, and set LONGER than the international
-#     default deliberately. NICE NG258's short-observation route
-#     requires the patient to already hold two in-date adrenaline
-#     auto-injectors and to have ready access to emergency care —
-#     neither is true here, so no patient in this setting qualifies.
-#     NICE's 12-hour criteria, by contrast, explicitly include
-#     "presents out-of-hours" and "would be discharged to an area
-#     where access to emergency care is difficult" — routinely true
-#     for a rural catchment. Hence 6 h minimum / 12 h if severe /
-#     admit every child under 16. This is a case where the right
-#     answer is set by logistics rather than biology.
-#
-# CONTENT FLAG still open (optional):
-#   - Diagnostic criteria are the classic 2006 NIAID/FAAN set — still
-#     widely taught; WAO 2020 simplified to 2 criteria.
-# Cross-book pass 2026-08-28: hydrocortisone 5 -> 2-4 mg/kg with a 100 mg
-#   paediatric cap (NIAID/FAAN); benefit is unproven in anaphylaxis.
-# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
-#   trigger commits oxygen to a much larger group without mortality benefit,
-#   and oxygen is the most rationed resource in this setting. The other book
-#   used 90% throughout and this book already used 90% on its paediatric
-#   pneumonia page. Discharge/target criteria on other pages are NOT this
-#   figure and were left alone.
-# ============================================================
-
 topic:
   id: "pb-anaphylaxis"
   title: "Anafilaxia"
@@ -77,9 +7,7 @@ topic:
   tags: ["anafilaxia", "alergia", "reacción alérgica", "epinefrina", "adrenalina", "angioedema", "urticaria", "hipotensión"]
   category: "medical"
   page_number: 37
-
   blocks:
-
   - type: "prose"
     title: "Síntomas frecuentes"
     markdown: |
@@ -87,7 +15,6 @@ topic:
       - **Respiratorios:** disnea, sibilancias, estridor, hipoxia
       - **GI:** náuseas/vómitos/diarrea/cólicos abdominales
       - **Disfunción de órgano diana:** síncope, hipotonía
-
   - type: "prose"
     title: "Criterios diagnósticos — cualquiera de los 3 → adrenalina"
     markdown: |
@@ -99,7 +26,6 @@ topic:
         - Niños de 1–10 años: PAS <(70 + [edad x 2])
         - Niños de 1 mes a 1 año: PAS <70
         - Neonato a término: PAS <60
-
   - type: "prose"
     callout: true
     palette:
@@ -112,7 +38,6 @@ topic:
       - IM en la cara anterolateral del muslo
       - Repita c/5–15 minutos si no mejora
       - 🛑 **Use la de 1 mg/mL (1:1,000) SOLO por vía IM. NO la administre IV** — es **10× la concentración IV** y puede causar una arritmia mortal. Para uso IV (solo en paro cardíaco), diluya a **0.1 mg/mL (1:10,000)**
-
   - type: "prose"
     title: "Manejo inicial"
     markdown: |
@@ -121,7 +46,6 @@ topic:
       - Evalúe el Glasgow y el estado de hidratación
       - Coloque 2 vías IV; inicie oxígeno si la SpO2 <90%
       - Tome hemograma, malaria y glucemia
-
   - type: "flowchart"
     variant: "algorithm"
     stages:
@@ -152,7 +76,6 @@ topic:
       - "Estos NO tratan la vía aérea, la respiración ni la circulación. Nunca deje que retrasen o sustituyan a la adrenalina"
       - "Bloqueador de receptores H1: difenhidramina 1mg/kg IV o VO, dosis máx. 50mg"
       - "Corticoides: hidrocortisona 2–4mg/kg IM/IV lenta (máx. 100mg en un niño, 200mg en adulto). Un complemento de beneficio no demostrado — no trata la vía aérea, la respiración ni la circulación y nunca debe retrasar la adrenalina"
-
   - type: "prose"
     title: "Observación antes del alta"
     markdown: |

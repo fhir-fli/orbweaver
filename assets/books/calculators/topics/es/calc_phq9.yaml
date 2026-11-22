@@ -1,12 +1,4 @@
 # translated-from-sha256: a208b9ae047416b9d09e3d9612ca9680cf4609a46065f8f4243f8d34aea07dea
-# ============================================================
-# PHQ-9 — Patient Health Questionnaire (depression).
-# Evidence review 2026-07-19: validated severity/screening measure
-# (Kroenke 2001; USPSTF 2023 Grade B). Cutoff ≥ 10 ≈ 88% sens/spec for
-# major depression. PUBLIC DOMAIN (Pfizer, no permission/fee).
-# Item 9 (self-harm) needs a direct safety assessment on any positive.
-# ============================================================
-
 topic:
   id: "calc-phq9"
   title: "PHQ-9"
@@ -18,14 +10,11 @@ topic:
   - "Cuestionario de salud del paciente"
   - "Cribado de depresión"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Durante las últimas 2 semanas, ¿con qué frecuencia le ha molestado al paciente cada
       problema? Puntúa la gravedad y sigue la respuesta al tratamiento.
-
   - type: "score"
     title: "PHQ-9"
     unit: "/ 27"

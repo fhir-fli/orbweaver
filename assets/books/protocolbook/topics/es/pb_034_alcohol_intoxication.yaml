@@ -1,52 +1,4 @@
 # translated-from-sha256: 11527ec82f9a9a221672561291ec66e4fa84a13b617c6af6adb56204eeba158b
-# ============================================================
-# ProtocolBook p.34 — Alcohol Intoxication.
-#
-# The printed page is a vertical sequence of four boxes joined by
-# arrows with NO decision points (criteria → management → further
-# management → "concern for more?" work-up) → a content-flow
-# diagram, so per Grey's standing hybrid rule (2026-07-08) it is
-# rendered as titled prose sections in the same top-to-bottom
-# order, NOT as a flowchart.
-#
-# Faithful-rendering calls:
-#   - Citation superscripts (criteria 191, management 27) dropped.
-#   - The diagnostic criteria are numbered 1–3 in the source and the
-#     numbering is semantic (all three must be met), so the numbers
-#     are kept inline as bold leads (MiniMarkdown has no
-#     auto-numbering).
-#   - Criterion 3's six signs are printed as a 2-column space-saving
-#     grid with no header taxonomy; flattened to bullets (the column
-#     split carries no clinical meaning).  The merged bottom row
-#     ("Symptoms not caused by other medical conditions or mental
-#     disorders") kept as a bold caveat line.
-#   - The source's second management box re-starts at "4. Management"
-#     although the first management box already ends with item 4 — a
-#     layout/numbering quirk; both boxes merged into one titled
-#     Management section preserving item order, duplicate "4." label
-#     dropped.
-#   - "Follow altered mental status protocol" is now a live
-#     topic: cross-link to pb-altered-mental-status (pp.25–26,
-#     authored 2026-07-08).
-#
-# ✅ OE-VERIFIED CLEAN — NO CHANGES (Grey's OpenEvidence pass,
-#    2026-07-26). The three printed criteria map exactly onto the
-#    DSM-5 criteria for Alcohol Intoxication: our 1 = A (recent
-#    ingestion), 2 = B (problematic behavioural/psychological change),
-#    3 = C (≥1 of six signs), and the bold caveat line = D (not
-#    attributable to another condition). The six signs match DSM-5's
-#    set. Management steps (ABCs, vitals, GCS, 2 IVs, lateral
-#    position, aspiration monitoring) confirmed standard. OE singled
-#    out the rule-out-trauma-and-co-ingestion callout as the single
-#    most important safety point on the page.
-# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
-#   trigger commits oxygen to a much larger group without mortality benefit,
-#   and oxygen is the most rationed resource in this setting. The other book
-#   used 90% throughout and this book already used 90% on its paediatric
-#   pneumonia page. Discharge/target criteria on other pages are NOT this
-#   figure and were left alone.
-# ============================================================
-
 topic:
   id: "pb-alcohol-intoxication"
   title: "Intoxicación alcohólica"
@@ -55,18 +7,11 @@ topic:
   tags: ["alcohol", "etanol", "intoxicación", "ingestión", "envenenamiento", "alteración del estado mental"]
   category: "medical"
   page_number: 34
-
   blocks:
-
   - type: "prose"
     callout: true
     markdown: |
       **Asegúrese siempre de que no hay otras causas de la alteración antes de atribuir los síntomas solo al alcohol** (sobre todo traumatismo u otra ingestión)
-
-    # 2026-08-24 — the print draws p.34 as a boxed spine with arrows
-    # (criteria -> management -> management -> "more than alcohol?"), so it is
-    # a flowchart here too. Grey's rule: a flowchart in print is a flowchart
-    # in the app, decision points or not.
   - type: "flowchart"
     variant: "linear"
     entry_chain:

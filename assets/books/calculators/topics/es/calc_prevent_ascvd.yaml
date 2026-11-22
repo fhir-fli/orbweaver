@@ -1,14 +1,4 @@
 # translated-from-sha256: 55cd758baaabca015ee9cbf081633b6d14338a3b0902842015377dbb58d3a9d4
-# ============================================================
-# PREVENT — 10-year ASCVD risk (AHA, race-free).
-# Evidence review 2026-07-19: the 2026 ACC/AHA dyslipidemia guideline
-# recommends the AHA PREVENT equations over the Pooled Cohort Equations
-# (race removed; PCE overestimated by ~40-50%). Coefficients from Khan et
-# al., Circulation 2024;149:430-449, extracted via the peer-reviewed
-# preventr package, cross-checked vs the paper's Table 2 hazard ratios and
-# validated end-to-end (preventr worked example → 9.2%). Ages 30–79.
-# ============================================================
-
 topic:
   id: "calc-prevent-ascvd"
   title: "PREVENT (ECVA a 10 años)"
@@ -20,15 +10,12 @@ topic:
   - "Riesgo de ECVA"
   - "Riesgo cardiovascular"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Riesgo a 10 años de enfermedad cardiovascular aterosclerótica según PREVENT de la AHA
       (infarto o ictus) — el sucesor sin raza de las Pooled Cohort
       Equations. Para prevención primaria, de 30 a 79 años.
-
   - type: "formula"
     kind: "prevent_ascvd"
     title: "PREVENT — riesgo de ECVA a 10 años"

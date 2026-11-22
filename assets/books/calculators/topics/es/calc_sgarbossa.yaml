@@ -1,12 +1,4 @@
 # translated-from-sha256: 9aa540ab9de1c5ba7f05da32da713cc3d993b27fcf27494338fee72b742b0532
-# ============================================================
-# Modified (Smith) Sgarbossa Criteria — MI in LBBB / paced rhythm.
-# Evidence review 2026-07-19: the unweighted Smith 2012 modification —
-# ANY criterion positive suggests acute coronary occlusion (sens ~80% /
-# spec ~99%, validated Meyers 2015), far more sensitive than the original
-# weighted score (sens ~20%). Applies to LBBB or ventricular pacing.
-# ============================================================
-
 topic:
   id: "calc-sgarbossa"
   title: "Sgarbossa (modificado)"
@@ -18,15 +10,12 @@ topic:
   - "Sgarbossa modificado"
   - "IAM con BRIHH"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Detecta un IAM agudo cuando un bloqueo de rama izquierda (o la estimulación
       ventricular) oculta los cambios habituales del ST. Basta con un criterio positivo para que el
       resultado sea positivo.
-
   - type: "score"
     title: "Criterios de Sgarbossa modificados"
     source: "Smith et al., Ann Emerg Med 2012 (validado por Meyers 2015)"

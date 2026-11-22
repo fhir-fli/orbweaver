@@ -1,13 +1,4 @@
 # translated-from-sha256: f7eafa80fff14149c2df5b2d8823679f27c33c6989e83c42d54e1939336e1806
-# ============================================================
-# Glasgow-Blatchford Score — upper GI bleed risk.
-# Evidence review 2026-07-19: superior to Rockall for predicting need for
-# intervention (Stanley BMJ 2017, AUROC 0.86 vs 0.66-0.70). ACG 2021 / ESGE:
-# GBS ≤ 1 identifies very-low-risk patients safe for outpatient management.
-# In the formula block (not the additive score block) because hemoglobin
-# points are SEX-CONDITIONAL. Total 0-23.
-# ============================================================
-
 topic:
   id: "calc-glasgow-blatchford"
   title: "Puntuación de Glasgow-Blatchford"
@@ -19,14 +10,11 @@ topic:
   - "GBS"
   - "Puntuación de hemorragia digestiva"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Estratifica el riesgo de la hemorragia digestiva alta aguda para identificar a los pacientes
       de muy bajo riesgo (GBS ≤ 1) que pueden manejarse de forma ambulatoria.
-
   - type: "formula"
     kind: "glasgow_blatchford"
     title: "Puntuación de Glasgow-Blatchford"

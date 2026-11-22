@@ -1,74 +1,4 @@
 # translated-from-sha256: 5a148cdfe8eaf1e34d2342261390a62c0b426fe2ef2b609dcdd751d5594bc9e8
-# ============================================================
-# ProtocolBook pp.32–33 — Paracetamol / Acetaminophen toxicity.
-# Two-page topic (multi-page `pages:`).
-#
-# p.32 is a formal outline (Populations / Inappropriate dosing /
-# Risk factors / Phases 1–4 / mental-status note) + the "Possibly
-# Toxic Dosages" table (0–6 y vs >6 y, acute single ingestion vs
-# repeated supratherapeutic ingestion).  p.33 is the management
-# algorithm: a TRUE decision flowchart (possible toxic dose? →
-# charcoal in children → branch on time since ingestion) → the
-# `algorithm` flowchart variant per Grey's hybrid rule, converging
-# on the Rumack-Matthew nomogram (shipped as an image asset,
-# images/pb_paracetamol_nomogram.png, cropped from the source PDF
-# at 300 dpi) and the NAC dosing table.
-#
-# Faithful-rendering calls:
-#   - Citation superscripts (Phases 89–92, dosages 93, management 94,
-#     NAC 89) dropped, as on every previous page.
-#   - Outline Roman/letter labels dropped; hierarchy carried by
-#     nested-bullet indentation (standing rule).
-#   - Risk-factor co-ingestion list had a stray unmatched ")" in the
-#     source — dropped (pure typo, no content).
-#   - The RSTI row of the dosages table spans three time-window
-#     criteria in the source; rendered as three table rows with the
-#     RSTI label on the first and "" continuation cells.
-#   - NAC table footnote markers (*, +) folded into a plain prose
-#     footnote (single "*" is the MiniMarkdown literal-star bug, and
-#     both footnotes apply to the whole table anyway).
-#   - The three time-since-ingestion arms converge on the nomogram in
-#     the source; modelled as textual "→ plot level on nomogram
-#     (below)" pointers per the standing no-drawn-convergence rule.
-#
-# ⚠️ GENUINE SOURCE ERROR corrected (SURFACED TO GREY 2026-07-13):
-#   - NAC loading dose, >40 kg row: the book prints "150mL/kg in
-#     200mL diluent" — a unit typo, self-contradictory as printed
-#     (150 mL/kg of drug "in 200 mL diluent" is impossible).  The
-#     standard adult IV-NAC load is 150 mg/kg in 200 mL over 1 hr,
-#     matching the other two weight rows.  Rendered as **mg/kg**.
-#     Grey should fix the source PDF too.
-#
-# CONTENT FLAGS for the later OE / content pass (rendered faithfully):
-#   - Nomogram y-axis has no units printed in the source (µg/mL is
-#     the convention; treatment line = 150 µg/mL at 4 h).  OE pass may
-#     want a units note; not added now (faithful render).
-#   - "DW" in the NAC diluent footnote transcribed as printed
-#     (presumably dextrose in water / D5W); OE to confirm phrasing.
-#   - 21-h three-bag IV-NAC regimen (150/50/100 mg/kg) is current
-#     standard; loading over 1 h current.  Fine.
-#
-# ⚠️ CONTENT FLAGS — OPEN (audit pass 2026-07-26, awaiting OE):
-#   - ACTIVATED CHARCOAL box carries NO TIME WINDOW ("in children, may
-#     consider activated charcoal, if KNOWN ingestion of >150mg/kg").
-#     Charcoal is only useful within roughly 1–2 h of ingestion; as
-#     printed it invites late, useless (and aspiration-risky) dosing.
-#     Adding the window is the single clearest improvement here.
-#   - TWO-BAG NAC (200 mg/kg over 4 h then 100 mg/kg over 16 h, per
-#     SNAP) has largely displaced the 3-bag regimen in centres that
-#     have switched, on the strength of markedly fewer anaphylactoid
-#     reactions. The printed 3-bag regimen is NOT wrong — this is a
-#     currency question for OE, not an error.
-#   - 4–8 h arm: current practice also starts NAC empirically if the
-#     level will not return before the 8 h mark. Not printed.
-#   - Thresholds (≥200 mg/kg; ≥10 g or 200 mg/kg >6 y) verified
-#     against the AAP/AACT out-of-hospital criteria ✓. >100 kg dosed
-#     as 100 kg ✓ (standard capped dosing).
-# OpenEvidence-applied 2026-08-28 (WHO full advance pass):
-#   Added the <5 kg bound, the three-bag high-risk carve-out and the
-#   do-not-stop-at-20h rule (WHO pass flag 1-1).
-# ============================================================
-
 topic:
   id: "pb-paracetamol"
   title: "Toxicidad por paracetamol / acetaminofén"
@@ -76,19 +6,14 @@ topic:
   last_reviewed: "pocketbook v1.7"
   tags: ["paracetamol", "acetaminofén", "tylenol", "panadol", "ingestión", "intoxicación", "sobredosis", "NAC", "acetilcisteína", "nomograma", "rumack", "hepatotoxicidad", "hígado"]
   category: "medical"
-
   pages:
-
-    # ═══════════════════════ PAGE 32 ═══════════════════════
   - page_number: 32
     blocks:
-
     - type: "prose"
       title: "Poblaciones"
       markdown: |
         - **Niños:** en general, ingestión accidental
         - **Niños mayores / adolescentes / adultos:** con más frecuencia, ingestión intencional
-
     - type: "prose"
       title: "Dosificación inadecuada por"
       markdown: |
@@ -96,7 +21,6 @@ topic:
         - Mala comprensión de las dosis de los líquidos
         - Dosis adicionales cuando los padres creen que la primera no funcionó
         - Consumo de varios productos que contienen acetaminofén (Tylenol, Panadol, acetaminofén, paracetamol, antigripales/antitusivos - Pyridex, antiácidos, medicamentos para la cefalea)
-
     - type: "prose"
       title: "Factores de riesgo"
       markdown: |
@@ -104,7 +28,6 @@ topic:
         - Consumo crónico excesivo de alcohol
         - Coingestión con: rifampicina, isoniazida, cotrimoxazol, zidovudina, barbitúricos, carbamazepina
         - Comorbilidades: ayuno prolongado, vómitos/diarrea prolongados, trastornos de la conducta alimentaria, desnutrición, neoplasia maligna, VIH/sida
-
     - type: "prose"
       title: "Fases"
       markdown: |
@@ -122,11 +45,9 @@ topic:
         - **Fase 4: 96 horas–14 días tras la ingestión**
           - Puede empezar a mejorar, con recuperación completa en 3 meses
           - Puede progresar a falla multiorgánica y muerte
-
     - type: "prose"
       markdown: |
         El estado mental suele ser normal en las primeras 48 h tras la sobredosis, salvo que lo afecte una coingestión.
-
     - type: "table"
       title: "Dosis posiblemente tóxicas"
       columns: ["Ingestión", "0–6 años", ">6 años"]
@@ -135,16 +56,12 @@ topic:
       - cells: ["**Ingestión supraterapéutica repetida (ISTR)**", "≥200mg/kg en <24 h", "≥10g o 200mg/kg (lo que sea menor) en <24 h"]
       - cells: ["", "≥150mg/kg/día x 48h", "≥6g o 150mg/kg (lo que sea menor) al día x 48 h"]
       - cells: ["", "≥100mg/kg/día x 72 h", "≥4g/día o 100mg/kg (lo que sea menor) con alguno de los factores de riesgo anteriores"]
-
-    # ═══════════════════════ PAGE 33 ═══════════════════════
   - page_number: 33
     blocks:
-
     - type: "prose"
       title: "Manejo"
       markdown: |
         Compare con la tabla de dosis posiblemente tóxicas de arriba.
-
     - type: "flowchart"
       variant: "algorithm"
       stages:
@@ -176,12 +93,10 @@ topic:
             bullets:
             - "→ marque el nivel en el nomograma (abajo)"
             severity: "priority"
-
     - type: "image"
       path: "assets/books/protocolbook/images/pb_paracetamol_nomogram.png"
       size: "full"
       caption: "Nomograma de Rumack-Matthew — concentración plasmática de acetaminofén (µg/mL) frente a horas tras la ingestión. Trate si el nivel está por encima de la línea continua (de tratamiento), que pasa por 150 µg/mL a las 4 horas."
-
     - type: "table"
       title: "N-acetilcisteína (NAC) — esquema de 2 bolsas, TODOS los pesos"
       layout: "scroll"
@@ -190,7 +105,6 @@ topic:
       rows:
       - cells: ["**Niño ≤40kg**", "200mg/kg en **7mL/kg** de diluyente (máx. 500mL)", "100mg/kg en **14mL/kg** de diluyente (máx. 1L)"]
       - cells: ["**>40kg**", "200mg/kg (máx. 22g) en 500mL de diluyente", "100mg/kg (máx. 11g) en 1L de diluyente"]
-
     - type: "prose"
       markdown: |
         - Total **300mg/kg en 20 h** — el mismo total que el antiguo esquema de 3 bolsas, pero con muchas menos reacciones anafilactoides y un cambio de bolsa menos

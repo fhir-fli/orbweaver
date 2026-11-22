@@ -1,11 +1,4 @@
 # translated-from-sha256: 207a447debb78b60d1c94dc34de0eded29579774ff9fc6c7a3ba60c08a7c9353
-# ============================================================
-# Alveolar-arterial (A-a) oxygen gradient.
-# Evidence review 2026-07-19: PAO2 = FiO2×(Patm − PH2O) − PaCO2/R;
-# A-a = PAO2 − PaO2. Age-adjusted upper normal ≈ age/4 + 4. Sea-level
-# defaults Patm 760, PH2O 47, R 0.8. Patm is adjustable for altitude.
-# ============================================================
-
 topic:
   id: "calc-aa-gradient"
   title: "Gradiente alveoloarterial de oxígeno"
@@ -17,15 +10,12 @@ topic:
   - "Gradiente alveoloarterial"
   - "Gradiente Aa"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       El gradiente alveoloarterial de oxígeno a partir de una gasometría arterial. Un
       gradiente elevado indica alteración V/Q, cortocircuito o limitación de la difusión
       (frente a hipoventilación / FiO₂ baja, en las que el gradiente es normal).
-
   - type: "formula"
     kind: "aa_gradient"
     title: "Gradiente A–a"

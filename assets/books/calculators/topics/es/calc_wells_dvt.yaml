@@ -1,12 +1,4 @@
 # translated-from-sha256: 63f9fda1f5c3cf8564a866bf98aaaa0fe34e072a4e0bdecbe0f5a731903e79b8
-# ============================================================
-# Wells score for DVT (two-level).
-# Evidence review 2026-07-19: NICE NG158 / ASH 2018 use the two-level
-# Wells DVT score as the entry point, ALWAYS paired with D-dimer ±
-# proximal ultrasound — not a standalone rule-out (weaker in primary
-# care, Oudega). Points per Wells 2003 (NEJM). Alt-diagnosis item = −2.
-# ============================================================
-
 topic:
   id: "calc-wells-dvt"
   title: "Puntuación de Wells — TVP"
@@ -17,15 +9,12 @@ topic:
   - "Wells TVP"
   - "Puntuación de TVP"
   category: "medical"
-
   blocks:
-
   - type: "prose"
     markdown: |
       Puntuación de Wells de dos niveles para la probabilidad pretest de trombosis venosa profunda.
       El resultado orienta la vía del dímero D / ecografía — no sirve sola
       para descartar.
-
   - type: "score"
     title: "Puntuación de Wells — TVP"
     source: "Wells et al., NEJM 2003; NICE NG158"

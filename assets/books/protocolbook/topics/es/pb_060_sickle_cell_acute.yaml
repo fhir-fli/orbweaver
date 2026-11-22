@@ -1,0 +1,102 @@
+# translated-from-sha256: a05b39febd435cdb47ed814674ea671035b2698eb25f9a764d184f8d3e95aec4
+topic:
+  id: "pb-sickle-cell-acute"
+  title: "Manejo agudo de la enfermedad de células falciformes"
+  list_subtitle: "p.60 · triaje de la crisis"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["células falciformes", "drepanocitosis", "crisis", "vasooclusiva", "síndrome torácico agudo", "secuestro esplénico", "ictus", "ceftriaxona", "pediátrico", "hematología"]
+  category: "medical"
+  page_number: 60
+  blocks:
+  - type: "prose"
+    title: "Manejo inicial"
+    markdown: |
+      - Monitorice, mantenga el ABC
+      - Controle los SV (PA, FC, FR, spO2, Temp, peso)
+      - Evalúe la GCS, el estado de hidratación
+      - Coloque una vía IV, inicie oxígeno si la spO2 <90%
+      - Extraiga hemograma, reticulocitos, malaria, bilirrubina total/directa si hay ictericia
+      - Haga una historia y una exploración física breves y dirigidas
+  - type: "flowchart"
+    variant: "algorithm"
+    stages:
+    - decision: "¿Hallazgos neurológicos focales? (hemiparesia, déficit neurológico focal, trastorno del habla)"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Trate como ictus"
+          severity: "emergency"
+      - label: "No"
+        continue: true
+    - decision: "¿Cumple criterios de neumonía o tiene dolor torácico moderado a intenso?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Trate como síndrome torácico agudo"
+          severity: "emergency"
+      - label: "No"
+        continue: true
+    - decision: "¿Aumento súbito del bazo con caída de la Hb >2g/dL respecto a la basal? (en general con dolor abdominal y <5 años)"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Secuestro esplénico"
+          bullets:
+          - "La Hb puede seguir bajando, vigile con cuidado"
+          - "Puede requerir transfusiones más intensivas que una crisis habitual"
+          - "Transfunda con PRECAUCIÓN en alícuotas de 5 mL/kg con Hb seriadas — objetivo Hb 7-8, no más. Al liberar el bazo las células secuestradas, la Hb se dispara y causa hiperviscosidad"
+          - "Por lo demás, trate con medidas de soporte como en una crisis vasooclusiva: líquidos IV, analgesia, oxígeno"
+          - "NO haga esplenectomía en el secuestro agudo — la mortalidad es alta"
+          - "Recurre en aproximadamente la mitad de los casos. Esplenectomía programada tras un segundo episodio, o tras un episodio que amenace la vida; vacune antes contra el neumococo y el meningococo"
+          - "Indique a la familia que regrese de inmediato si aparece palidez súbita, distensión abdominal o letargo"
+          severity: "emergency"
+      - label: "No"
+        continue: true
+    - decision: "¿Hb muy por debajo de la basal con reticulocitos BAJOS? (reticulocitos <1%, o casi cero)"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Crisis aplásica"
+          bullets:
+          - "La médula ha dejado de producir hematíes, en general tras un parvovirus B19"
+          - "Se distingue del secuestro por los reticulocitos BAJOS y la AUSENCIA de esplenomegalia"
+          - "La Hb suele caer a 3-6 g/dL y seguirá cayendo hasta que se recupere la médula"
+          - "Transfunda; la recuperación suele producirse en 7-10 días"
+          severity: "emergency"
+      - label: "No"
+        continue: true
+    - decision: "¿Crisis vasooclusiva o dolor moderado a intenso?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Trate de forma intensiva, vea el protocolo de manejo del dolor"
+          severity: "priority"
+      - label: "No"
+        continue: true
+    - decision: "¿Fiebre?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Trate como infección"
+          bullets:
+          - "Hemocultivos"
+          - "Ceftriaxona: 100mg/kg una vez al día IV (puede darse 50mg/kg cada 12 h) — máx. 2g/dosis, y máx. 4g/día solo si trata una meningitis, si no, máx. 2g/día"
+          - "Si hay evidencia de sepsis, use el protocolo de sepsis"
+          severity: "priority"
+      - label: "No"
+        continue: true
+    - decision: "¿Hipotenso o deshidratado?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Trate con el protocolo de deshidratación"
+          severity: "priority"
+      - label: "No"
+        continue: true
+    terminal:
+      title: "Medidas de soporte"
+      bullets:
+      - "Hidratación: si hay deshidratación leve o poca ingesta VO, puede considerar 1.5 x los LIV de mantenimiento durante 24h, con objetivo de euvolemia; idealmente el aporte total (IV y VO) debe cubrir el mantenimiento completo; vigile con cuidado la sobrecarga de volumen (NO ADMINISTRE BOLOS si no está hipotenso)"
+      - "Alimentación"
+      - "Malaria"
+      severity: "non_urgent"
