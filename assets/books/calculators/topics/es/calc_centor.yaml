@@ -1,0 +1,51 @@
+# translated-from-sha256: 81c03a0c22fef8847ba6f6374dce36b4a966d56469cce2622d5354c7b8e1d017
+# ============================================================
+# Centor / McIsaac (modified) — strep pharyngitis.
+# Evidence review 2026-07-19: IDSA 2025 suggests using a clinical score to
+# decide WHO TO TEST — it does NOT endorse empiric antibiotics by score
+# alone where rapid antigen/molecular testing exists. McIsaac adds the age
+# adjustment. Points per McIsaac 1998. Range −1 to 5.
+# ============================================================
+
+topic:
+  id: "calc-centor"
+  title: "Centor / McIsaac"
+  list_subtitle: "faringitis estreptocócica"
+  last_reviewed: "Evidence review 2026-07-19 · McIsaac 1998 · IDSA 2025"
+  tags: ["centor", "mcisaac", "faringitis", "estreptococo", "dolor de garganta", "ebhga", "estreptocócica"]
+  aliases:
+  - "Centor"
+  - "McIsaac"
+  - "Puntuación de estreptococo"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Estima la probabilidad de estreptococo del grupo A en el dolor de garganta, para decidir
+      a quién hacer la prueba. Toque los hallazgos presentes y elija el grupo de edad.
+
+  - type: "score"
+    title: "Centor (modificada por McIsaac)"
+    source: "McIsaac et al., CMAJ 1998"
+    items:
+    - {key: "exudate", label: "Exudado o inflamación amigdalar", type: "toggle", points: 1}
+    - {key: "nodes", label: "Ganglios cervicales anteriores dolorosos/aumentados", type: "toggle", points: 1}
+    - {key: "fever", label: "Fiebre > 38 °C (o antecedente)", type: "toggle", points: 1}
+    - {key: "no_cough", label: "Ausencia de tos", type: "toggle", points: 1}
+    - key: "age"
+      label: "Edad"
+      type: "choice"
+      default: "a15_44"
+      options:
+      - {value: "a3_14", label: "3–14", points: 1}
+      - {value: "a15_44", label: "15–44", points: 0}
+      - {value: "a45", label: "≥ 45", points: -1}
+    bands:
+    - {min: -1, max: 0, label: "Muy baja — sin prueba ni antibióticos", severity: "none"}
+    - {min: 1, max: 1, label: "Baja — prueba opcional", severity: "none"}
+    - {min: 2, max: 3, label: "Intermedia — antígeno rápido / cultivo", severity: "warn"}
+    - {min: 4, label: "Alta — haga la prueba; si no hay prueba disponible, considere tratamiento empírico", severity: "warn"}
+    caveats:
+    - "Úsela para decidir a quién hacer la PRUEBA, no para tratar solo por la puntuación donde exista la prueba rápida de antígeno/molecular (IDSA 2025). El tratamiento empírico guiado por la puntuación es solo un recurso cuando faltan medios."

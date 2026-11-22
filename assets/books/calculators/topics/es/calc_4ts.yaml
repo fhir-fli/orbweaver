@@ -1,0 +1,71 @@
+# translated-from-sha256: ef4069b3bccb7d12289d6b4ce3813cd471150f13dfcfe4af6c12a3f57e19124b
+# ============================================================
+# 4Ts score — Heparin-Induced Thrombocytopenia (HIT) pretest probability.
+# Evidence review 2026-07-19: ASH 2018 uses 4Ts to set pretest probability;
+# high negative predictive value (~98%) makes a LOW score a reliable
+# rule-out, but PPV is low so a high score needs lab confirmation
+# (immunoassay → functional). Points per Lo 2006. Total 0–8.
+# ============================================================
+
+topic:
+  id: "calc-4ts"
+  title: "Puntuación 4T (TIH)"
+  list_subtitle: "trombocitopenia inducida por heparina"
+  last_reviewed: "Evidence review 2026-07-19 · Lo 2006 · ASH 2018"
+  tags: ["4ts", "tih", "heparina", "trombocitopenia", "plaquetas", "trombosis", "hematología"]
+  aliases:
+  - "4T"
+  - "Puntuación TIH"
+  - "Trombocitopenia inducida por heparina"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Probabilidad pretest de trombocitopenia inducida por heparina. Una
+      puntuación baja descarta la TIH de forma fiable; una puntuación
+      intermedia/alta obliga a suspender la heparina y confirmar en laboratorio.
+
+  - type: "score"
+    title: "Puntuación 4T"
+    source: "Lo et al., J Thromb Haemost 2006; guía de TIH de la ASH 2018"
+    items:
+    - key: "thrombocytopenia"
+      label: "Trombocitopenia (magnitud)"
+      type: "choice"
+      default: "tc0"
+      options:
+      - {value: "tc0", label: "Descenso < 30% o nadir < 10", points: 0}
+      - {value: "tc1", label: "Descenso 30–50% o nadir 10–19", points: 1}
+      - {value: "tc2", label: "Descenso > 50% y nadir ≥ 20", points: 2}
+    - key: "timing"
+      label: "Momento del descenso plaquetario"
+      type: "choice"
+      default: "ti0"
+      options:
+      - {value: "ti0", label: "< 4 días, sin heparina reciente", points: 0}
+      - {value: "ti1", label: "Compatible pero no claro / inicio después del día 10 / ≤1 día con heparina previa hace 31–100 d", points: 1}
+      - {value: "ti2", label: "Inicio claro en los días 5–10, o ≤ 1 día con heparina en los últimos 30 d", points: 2}
+    - key: "thrombosis"
+      label: "Trombosis o secuelas"
+      type: "choice"
+      default: "tb0"
+      options:
+      - {value: "tb0", label: "Ninguna", points: 0}
+      - {value: "tb1", label: "Trombosis progresiva/recurrente o sospechada", points: 1}
+      - {value: "tb2", label: "Trombosis nueva, necrosis cutánea o reacción anafilactoide", points: 2}
+    - key: "other"
+      label: "oTra causa de trombocitopenia"
+      type: "choice"
+      default: "ot0"
+      options:
+      - {value: "ot0", label: "Definida", points: 0}
+      - {value: "ot1", label: "Posible", points: 1}
+      - {value: "ot2", label: "Ninguna aparente", points: 2}
+    bands:
+    - {min: 0, max: 3, label: "Probabilidad baja — TIH prácticamente descartada", detail: "VPN alto (~98%).", severity: "none"}
+    - {min: 4, max: 5, label: "Intermedia — suspenda la heparina, haga la prueba", severity: "warn"}
+    - {min: 6, max: 8, label: "Probabilidad alta — suspenda la heparina, haga la prueba, trate", severity: "alert"}
+    caveats:
+    - "Una puntuación alta NO es diagnóstica (VPP bajo) — confirme con un inmunoensayo y luego con una prueba funcional. Una puntuación baja descarta la TIH de forma fiable."

@@ -1,0 +1,66 @@
+# translated-from-sha256: 68ee6c504faefd09b9c99d543eff3dcac390f6920f435b8794f8ec693835b475
+# ============================================================
+# AUDIT-C — Alcohol Use Disorders Identification Test (Consumption).
+# Evidence review 2026-07-19: validated alcohol screen (Bush 1998; USPSTF
+# 2018 Grade B). Positive: ≥ 4 (men) / ≥ 3 (women). PUBLIC DOMAIN (WHO/VA).
+# ============================================================
+
+topic:
+  id: "calc-auditc"
+  title: "AUDIT-C"
+  list_subtitle: "cribado del consumo de alcohol"
+  last_reviewed: "Evidence review 2026-07-19 · Bush 1998 · USPSTF 2018"
+  tags: ["audit-c", "auditc", "alcohol", "cribado", "beber", "consumo de sustancias", "tca"]
+  aliases:
+  - "AUDIT-C"
+  - "Cribado de alcohol"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Cribado breve del consumo de riesgo o del trastorno por consumo de alcohol. Puntúe
+      cada una de las tres preguntas.
+
+  - type: "score"
+    title: "AUDIT-C"
+    unit: "/ 12"
+    source: "Bush et al., Arch Intern Med 1998 (dominio público)"
+    items:
+    - key: "frequency"
+      label: "¿Con qué frecuencia toma una bebida que contenga alcohol?"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Nunca"}
+      - {value: "1", points: 1, label: "Una vez al mes o menos"}
+      - {value: "2", points: 2, label: "2–4 veces al mes"}
+      - {value: "3", points: 3, label: "2–3 veces por semana"}
+      - {value: "4", points: 4, label: "4+ veces por semana"}
+    - key: "quantity"
+      label: "¿Cuántas bebidas estándar toma en un día típico en que bebe?"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "1–2"}
+      - {value: "1", points: 1, label: "3–4"}
+      - {value: "2", points: 2, label: "5–6"}
+      - {value: "3", points: 3, label: "7–9"}
+      - {value: "4", points: 4, label: "10 o más"}
+    - key: "binge"
+      label: "¿Con qué frecuencia toma 6 o más bebidas en una sola ocasión?"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Nunca"}
+      - {value: "1", points: 1, label: "Menos de una vez al mes"}
+      - {value: "2", points: 2, label: "Mensualmente"}
+      - {value: "3", points: 3, label: "Semanalmente"}
+      - {value: "4", points: 4, label: "A diario o casi a diario"}
+    bands:
+    - {min: 0, max: 2, label: "Riesgo bajo", severity: "none"}
+    - {min: 3, max: 7, label: "Cribado positivo — probable consumo de riesgo/perjudicial", severity: "warn"}
+    - {min: 8, label: "Alto — probable trastorno por consumo de alcohol", severity: "alert"}
+    notes:
+    - "Punto de corte positivo según el sexo: ≥ 4 (hombres) / ≥ 3 (mujeres). Es una herramienta de cribado — confirme con una evaluación más completa."

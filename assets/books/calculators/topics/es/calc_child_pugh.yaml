@@ -1,0 +1,78 @@
+# translated-from-sha256: 05bc7035a229f59a731b49b890c5523a565406476644eda0a117c90724e5c17e
+# ============================================================
+# Child-Pugh score — cirrhosis severity / prognosis.
+# Evidence review 2026-07-19: still the FDA/EMA framework for hepatic-
+# impairment drug dosing and a standard surgical-risk classifier, despite
+# subjective ascites/encephalopathy grading (MELD 3.0 preferred for
+# transplant prognosis). Points per Pugh 1973. Total 5–15 → Class A/B/C.
+# ============================================================
+
+topic:
+  id: "calc-child-pugh"
+  title: "Puntuación de Child-Pugh"
+  list_subtitle: "gravedad de la cirrosis (A/B/C)"
+  last_reviewed: "Evidence review 2026-07-19 · Pugh 1973"
+  tags: ["child-pugh", "child pugh", "cirrosis", "hígado", "pronóstico", "hepático", "clase"]
+  aliases:
+  - "Child-Pugh"
+  - "Child-Turcotte-Pugh"
+  - "CTP"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Clasifica la gravedad de la cirrosis (clase A/B/C) para el pronóstico, el riesgo
+      quirúrgico y las decisiones de dosificación. Elija el grado de cada parámetro.
+
+  - type: "score"
+    title: "Child-Pugh"
+    source: "Pugh et al., Br J Surg 1973"
+    items:
+    - key: "bilirubin"
+      label: "Bilirrubina total"
+      type: "choice"
+      default: "b1"
+      options:
+      - {value: "b1", label: "< 2 mg/dL", points: 1}
+      - {value: "b2", label: "2–3 mg/dL", points: 2}
+      - {value: "b3", label: "> 3 mg/dL", points: 3}
+    - key: "albumin"
+      label: "Albúmina"
+      type: "choice"
+      default: "a1"
+      options:
+      - {value: "a1", label: "> 3.5 g/dL", points: 1}
+      - {value: "a2", label: "2.8–3.5 g/dL", points: 2}
+      - {value: "a3", label: "< 2.8 g/dL", points: 3}
+    - key: "inr"
+      label: "INR"
+      type: "choice"
+      default: "i1"
+      options:
+      - {value: "i1", label: "< 1.7", points: 1}
+      - {value: "i2", label: "1.7–2.3", points: 2}
+      - {value: "i3", label: "> 2.3", points: 3}
+    - key: "ascites"
+      label: "Ascitis"
+      type: "choice"
+      default: "as1"
+      options:
+      - {value: "as1", label: "Ninguna", points: 1}
+      - {value: "as2", label: "Leve / responde a diuréticos", points: 2}
+      - {value: "as3", label: "Moderada–grave / refractaria", points: 3}
+    - key: "enceph"
+      label: "Encefalopatía"
+      type: "choice"
+      default: "e1"
+      options:
+      - {value: "e1", label: "Ninguna", points: 1}
+      - {value: "e2", label: "Grado 1–2", points: 2}
+      - {value: "e3", label: "Grado 3–4", points: 3}
+    bands:
+    - {min: 5, max: 6, label: "Clase A — bien compensada", severity: "none"}
+    - {min: 7, max: 9, label: "Clase B — compromiso significativo", severity: "warn"}
+    - {min: 10, max: 15, label: "Clase C — descompensada", severity: "alert"}
+    caveats:
+    - "La gradación de la ascitis y la encefalopatía es subjetiva. Use MELD 3.0 para el pronóstico del trasplante; Child-Pugh sigue siendo el marco de dosificación de las fichas técnicas (FDA/EMA)."
