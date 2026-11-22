@@ -1,0 +1,204 @@
+# translated-from-sha256: fb8105d4c013a2903cdadcce7f203d6b74c293dced910f8f00b0bf1585921f9a
+topic:
+  id: "pb-im-hiv-oi"
+  title: "Infecciones oportunistas en el VIH"
+  list_subtitle: "pp.135–138 · profilaxis y tratamiento por infección"
+  last_reviewed: "pocketbook v1.7 · CD4 14% confirmed and universal under-5 co-trimoxazole added, OpenEvidence 2026-08-31"
+  tags: ["VIH", "sida", "infección oportunista", "IO", "CD4", "profilaxis", "TMP-SMX", "cotrimoxazol", "dapsona", "candida", "candidiasis", "muguet", "toxoplasmosis", "meningitis criptocócica", "criptococo", "PCP", "pneumocystis", "MAC", "mycobacterium avium", "criptosporidiosis", "histoplasmosis", "VHS", "herpes", "VVZ", "varicela", "zóster", "culebrilla", "CMV", "citomegalovirus", "fluconazol", "anfotericina", "flucitosina", "ganciclovir", "aciclovir", "medicina interna", "enfermedades infecciosas"]
+  category: "medical"
+  pages:
+  - page_number: 135
+    blocks:
+    - type: "prose"
+      title: "Profilaxis — cuándo darla para prevenir la infección"
+      markdown: |
+        - 🛑 **En un entorno endémico de malaria, todo lactante, niño y adolescente
+          expuesto al VIH o infectado por el VIH recibe cotrimoxazol,
+          sea cual sea el estadio, los CD4 o el TAR — y lo mantiene a largo plazo.** La OMS
+          no condiciona el inicio a un recuento a ninguna edad, y donde la malaria o
+          la infección bacteriana grave son frecuentes recomienda **no** suspenderlo
+          con la recuperación inmunitaria. El ensayo ARROW aleatorizó a niños en TAR durante
+          más de 2 años con buena recuperación de CD4 (mediana de 720 por encima de los 5 años) y
+          continuarlo seguía reduciendo las hospitalizaciones y la malaria, sin atenuarse.
+          **Unos CD4 buenos no son motivo para suspenderlo.** Inicie en los lactantes expuestos al VIH
+          a las **4–6 semanas** y continúe hasta que se descarte el VIH y
+          haya terminado la lactancia materna. **Nunca lo suspenda en un lactante**, ni en un
+          niño sin TAR. Los umbrales de abajo son para decidir el inicio en
+          otros entornos, no en este.
+        - **PCP / encefalitis por toxoplasma** — **CD4 < 200, o CD4 < 14%**.
+          Use el **porcentaje por debajo de los 6 años** y el **recuento absoluto de 200
+          a partir de los 6**. El 14% es la misma cifra para un niño, un adolescente
+          y un adulto. Para el **toxoplasma**, CD4 < 100 **y** IgG de toxoplasma
+          positiva.
+          - De elección: TMP-SMX
+            - Niño < 5 kg: 120 mg VO una vez al día
+            - Niño 5–14.9 kg: 240 mg VO una vez al día
+            - Niño 15–29.9 kg: 480 mg VO una vez al día
+            - Niño > 30 kg y adulto: 1 tableta DS (doble concentración) VO una vez al día
+          - Alternativa: dapsona
+            - Niño < 12 años: 2 mg/kg VO una vez al día
+            - Niño > 12 años y adultos: 100 mg VO una vez al día
+        - **MAC diseminado** — CD4 < 50 (tras descartar un MAC diseminado activo)
+          - De elección (niño): azitromicina 20 mg/kg VO una vez a la semana, O claritromicina 7.5 mg/kg VO dos veces al día, O azitromicina 5 mg/kg/día VO; alternativa rifabutina 5 mg/kg VO al día
+          - De elección (adulto): azitromicina 1200 mg VO una vez a la semana, O claritromicina 500 mg VO dos veces al día, O azitromicina 600 mg VO dos veces por semana; alternativa rifabutina 300 mg VO al día
+    - type: "prose"
+      title: "Candida (orofaríngea y esofágica)"
+      markdown: |
+        - **CD4:** en general < 200
+        - **Síntomas:** sensación algodonosa en la boca, pérdida del gusto, dolor de intensidad variable al tragar
+        - **Diagnóstico:** la exploración muestra placas blancas seudomembranosas
+        - **Tratamiento:**
+          - Orofaríngea (trate 7–14 días)
+            - Fluconazol — niño 3–6 mg/kg/dosis VO al día; adulto 100 mg VO una vez al día
+            - Nistatina (si es suspensión, enjuáguela en la boca el mayor tiempo posible antes de tragarla) — niño < 5 años 100,000 UI (1 mL) cada 6 h VO; niño 5–12 años 200,000 UI (2 mL) cada 6 h VO; > 12 años y adulto 400,000–600,000 UI (4–6 mL) cada 6 h VO
+          - Esofágica (trate 14–21 días)
+            - Fluconazol — niño 6 mg/kg/dosis VO × 1 y luego 3–6 mg/kg/dosis VO al día; adulto 400 mg VO × 1 y luego 150–200 mg VO una vez al día
+  - page_number: 136
+    blocks:
+    - type: "prose"
+      title: "Toxoplasmosis"
+      markdown: |
+        - **CD4:** en general < 200
+        - **Síntomas:** a menudo neurológicos / encefalitis (cefalea, confusión), también puede haber fiebre, puede haber neumonitis (se presenta de forma parecida a la PCP)
+        - **Diagnóstico:** en general de presunción por el cuadro clínico; también puede diagnosticarse con una prueba de Ig positiva
+        - **Tratamiento** (pirimetamina, sulfadiazina y leucovorina):
+          - Niños
+            - Pirimetamina 0.5 mg/kg/dosis dos veces al día × 2–4 días, seguida de 0.25 mg/kg/dosis × 4 semanas, MÁS
+            - Sulfadiazina 40 mg/kg/dosis 4 veces al día
+            - Leucovorina 5 mg VO una vez cada 3 días
+          - Adultos
+            - Pirimetamina 200 mg VO una vez, seguida de: peso ≤ 60 kg 50 mg VO una vez al día; peso > 60 kg 75 mg VO una vez al día
+            - Sulfadiazina 1.5 g VO cada 6 h
+            - Leucovorina 10–25 mg VO una vez al día
+            - Alternativa: TMP-SMX 5 mg/kg/dosis y 25 mg/kg/dosis VO dos veces al día
+    - type: "prose"
+      title: "Meningitis criptocócica"
+      markdown: |
+        - **CD4:** en general < 100
+        - **Síntomas:** síntomas típicos de meningoencefalitis — fiebre, cefalea, meningismo, fotofobia y vómitos
+        - **Diagnóstico:** PL — análisis del LCR (tinción con tinta china, detección de antígeno, cultivo de hongos)
+        - **Tratamiento:**
+          - **DE ELECCIÓN — dosis única alta de anfotericina liposomal (la pauta AMBITION), ahora preferida por la OMS donde hay anfotericina liposomal:**
+            - **Anfotericina B liposomal 10 mg/kg IV en dosis ÚNICA el día 1**
+            - **más flucitosina 100 mg/kg/día VO en 4 dosis × 14 días**
+            - **más fluconazol 1200 mg/día × 14 días**
+            - No inferior en mortalidad a las 10 semanas (24.8%) frente al control de anfotericina 7 días de la OMS, con **significativamente menos eventos adversos de grado 3–4 (50% frente a 62%)** — y evita las infusiones diarias y el control intensivo renal/de electrolitos, por lo que se desarrolló para hospitales africanos
+          - **Si solo hay anfotericina B DESOXICOLATO** — la pauta de 1 semana de la OMS:
+            - Anfotericina B desoxicolato 1 mg/kg/día IV **más** flucitosina 100 mg/kg/día × **7 días**, luego fluconazol 1200 mg/día hasta completar la inducción
+            - ⚠️ Requiere **hidratación preventiva con suero salino y suplementos de potasio + magnesio**, con control de creatinina, potasio, magnesio y hemoglobina — el desoxicolato causa nefrotoxicidad, acidosis tubular renal, hipopotasemia, hipomagnesemia y anemia
+          - Fase de consolidación (8 semanas):
+            - **Fluconazol 800 mg/día**
+          - Mantenimiento:
+            - **Fluconazol 200 mg/día durante un mínimo de 1 año**
+            - Suspéndalo solo tras ≥1 año de tratamiento antifúngico con **CD4 ≥100 mantenidos ≥3 meses en TAR y carga viral suprimida** — reinícielo si bajan los CD4
+    - type: "prose"
+      title: "Neumonía por Pneumocystis jirovecii (PCP)"
+      markdown: |
+        - **CD4:** en general < 200
+        - **Síntomas:** disnea de esfuerzo progresiva, tos no productiva, fiebre, molestia torácica; puede haber hipoxia grave
+        - **Diagnóstico:** RxT con infiltrados bilaterales, LDH elevada
+        - **Tratamiento** (21 días) — se prefiere la primera opción:
+          - TMP-SMX: TMP 5 mg/kg/dosis y SMX 25 mg/kg/dosis IV o VO cada 6 h
+          - Pentamidina 4 mg/kg IV una vez al día
+          - **Añada prednisona / prednisolona si la PaO₂ < 70 mmHg con aire ambiente, o el gradiente A-a es ≥ 35 mmHg.** Donde solo hay oximetría, use **SpO₂ ≤ 92%** (una PaO₂ de 70 corresponde aproximadamente a 92–94%) — el libro usaba antes < 90%, lo que niega los corticoides a pacientes que se benefician
+          - **Inicie en las 72 horas siguientes a la primera dosis de TMP-SMX** — no está establecido el beneficio más allá. Los corticoides reducen la mortalidad en la PCP moderada a grave (RR ~0.56)
+            - Días 1–5: 1 mg/kg/dosis dos veces al día (máx. 40 mg/dosis)
+            - Días 6–10: 1 mg/kg/dosis una vez al día (máx. 40 mg/dosis)
+            - Días 11–21: 0.5 mg/kg/dosis una vez al día (máx. 20 mg/dosis)
+  - page_number: 137
+    blocks:
+    - type: "prose"
+      title: "Complejo Mycobacterium avium (MAC)"
+      markdown: |
+        - **CD4:** en general < 50
+        - **Síntomas:** en general inespecíficos — fiebre, sudores nocturnos, dolor abdominal y diarrea; también puede causar linfadenitis
+        - **Diagnóstico:** baciloscopia (BAAR) de sangre, médula ósea, heces, esputo, lavado bronquial, aspirado gástrico, o biopsia / PAAF
+        - **Tratamiento** (al menos 2 fármacos):
+          - Niños
+            - Claritromicina 10 mg/kg/dosis dos veces al día
+            - Etambutol 20 mg/kg VO una vez al día
+            - Azitromicina (en lugar de claritromicina) 10 mg/kg una vez al día
+            - Si CD4 < 50, considere añadir rifabutina **10–20 mg/kg VO una vez al día (máx. 300 mg/día)** — la dosis de tratamiento. Tenga en cuenta que la *profilaxis* del MAC es 5 mg/kg/día; las dos difieren según la indicación
+          - Adultos
+            - Claritromicina 500 mg VO dos veces al día
+            - Etambutol 15 mg/kg VO una vez al día
+            - Azitromicina (en lugar de claritromicina) 500 mg VO una vez al día
+    - type: "prose"
+      title: "Criptosporidiosis"
+      markdown: |
+        - **CD4:** en general < 100
+        - **Síntomas:** cuadro diarreico de intensidad variable, desde leve hasta enteritis grave; puede ser profuso y potencialmente mortal
+        - **Diagnóstico:** presentación clínica, microscopía de heces, PCR
+        - **Tratamiento:**
+          - El tratamiento principal es iniciar el TAR — es difícil eliminar la infección con una inmunodepresión grave
+          - Puede intentarse el tratamiento directo:
+            - Nitazoxanida — 1–3 años 100 mg VO dos veces al día; 4–11 años 200 mg VO dos veces al día; ≥ 12 años 500–1000 mg VO dos veces al día con comida × 14 días
+            - Alternativa: paromomicina 500 mg VO cuatro veces al día × 14–21 días
+    - type: "prose"
+      title: "Histoplasmosis"
+      markdown: |
+        - **CD4:** en general < 150
+        - **Síntomas:** inespecíficos — fiebre, escalofríos, sudores, malestar, cansancio, dolores musculares, pérdida de peso; a menudo afectación pulmonar y puede confundirse con TB; puede haber hepatoesplenomegalia
+        - **Diagnóstico:** a menudo solo por la historia (exposición a tierra contaminada con heces de murciélago y de aves); difícil de establecer — los cultivos pueden tardar 6 semanas, el antígeno (sangre u orina) es más rápido, la Ig puede tardar 4–6 semanas en aparecer tras la exposición inicial
+        - **Tratamiento:**
+          - Inducción — uno de los dos siguientes (se prefiere la primera opción):
+            - Anfotericina B liposomal 3 mg/kg IV una vez al día (niños 3–5 mg/kg)
+            - Anfotericina B desoxicolato 1 mg/kg/día IV
+          - Mantenimiento:
+            - Niños: itraconazol 2–5 mg/kg/dosis tres veces al día × 3 días, luego dos veces al día
+            - **Adultos: itraconazol 200 mg VO tres veces al día × 3 días (carga), luego 200 mg VO dos veces al día** — el libro imprimía antes tres veces al día como mantenimiento continuo, lo que dejaría a un adulto con 600 mg/día de forma indefinida
+          - **Continúe al menos 12 meses.** Suspenda solo cuando se cumplan todos: > 12 meses de tratamiento, ≥ 6 meses en TAR con **CD4 ≥ 150**, hemocultivos para hongos negativos, carga viral del VIH indetectable, y antígeno de *Histoplasma* por debajo del umbral cuantificable
+          - Mida los **niveles de itraconazol (objetivo 1–2 µg/mL)** donde sea posible — la absorción es errática y es sustrato del CYP3A4
+          - 🛑 **NO añada rifabutina.** No tiene actividad antifúngica ni papel en la histoplasmosis — la línea que estaba aquí se arrastró por error de la sección del MAC. La rifabutina es un inductor enzimático potente y **bajaría los niveles de itraconazol, con riesgo de fracaso de la misma infección que se trata**. Si también se necesita profilaxis del MAC, use **azitromicina**, que no es inductora
+  - page_number: 138
+    blocks:
+    - type: "prose"
+      title: "Virus del herpes simple (VHS) tipos 1 y 2"
+      markdown: |
+        - **CD4:** sin nivel específico; en general más grave a medida que bajan los CD4
+        - **Síntomas:** a menudo un pródromo de prurito, seguido de una erupción de vesículas y úlceras dolorosas; pueden ser múltiples o únicas; no puede distinguirse el tipo 1 del 2 solo por la clínica
+        - **Diagnóstico:** a menudo clínico; idealmente cultivo viral, detección de antígeno o PCR para ADN del VHS si se dispone (sobre todo porque, en el inmunodeprimido, varias enfermedades pueden presentarse con úlceras)
+        - **Tratamiento:**
+          - Valaciclovir 1 g VO dos veces al día (niños y adultos)
+          - Aciclovir — niños < 12 años 20 mg/kg/dosis VO tres veces al día; niños > 12 años y adultos 400 mg VO tres veces al día
+    - type: "prose"
+      title: "Virus varicela zóster (VVZ) — \"culebrilla\""
+      markdown: |
+        - **CD4:** sin nivel específico; en general más grave a medida que bajan los CD4
+        - **Síntomas:** pápulas eritematosas que evolucionan a vesículas o ampollas, en general distribuidas a lo largo de un solo dermatoma (aunque con más probabilidad de afectar un área mayor cuanto más grave es la inmunodepresión)
+        - **Diagnóstico:** en general clínico, por la historia y el exantema vesicular / dermatómico
+    - type: "table"
+      columns: ["Fármaco", "Niños", "Adultos"]
+      column_flex: [4, 5, 4]
+      column_align: ["left", "left", "left"]
+      rows:
+      - cells: ["Valaciclovir", "20 mg/kg/dosis VO tres veces al día", "1 g VO tres veces al día"]
+      - cells: ["Aciclovir", "20 mg/kg/dosis VO cuatro veces al día", "**800 mg VO cinco veces al día**"]
+    - type: "prose"
+      markdown: |
+        Enfermedad cutánea grave, visceral, diseminada u **oftálmica (V1)**: inicie
+        **aciclovir IV 10 mg/kg cada 8 h desde el principio**, pasando a vía oral cuando dejen
+        de formarse lesiones nuevas. Los ciclos orales duran **7–10 días**; IV y luego oral completa
+        **10–14 días**.
+
+        ⚠️ El aciclovir y el valaciclovir **no son intercambiables a la misma dosis** —
+        la mala biodisponibilidad oral del aciclovir es la razón de que necesite 800 mg cinco veces al día.
+
+        **Prevención — vacunación:**
+
+        - Adminístrela en pacientes con CD4 > 200, sin vacunación previa, sin brotes previos y seronegativos para VVZ
+        - Vacunación primaria contra la varicela: 0.5 mL SC × 2 dosis con ≥ 3 meses de separación
+    - type: "prose"
+      title: "Citomegalovirus (CMV)"
+      markdown: |
+        - **CD4:** en general < 50
+        - **Síntomas:** la retinitis es lo más frecuente (80–90%) — visión borrosa, puntos ciegos, moscas volantes o destellos, en general unilateral; también puede afectar al tubo digestivo con molestias inespecíficas que suelen incluir dolor; rara vez afecta al sistema nervioso (encefalitis o afectación de nervios periféricos)
+        - **Diagnóstico:** en general lo hace el oftalmólogo; la PCR sérica y la serología no suelen ayudar, pero si se encuentra en el LCR en la PL, hay alta probabilidad de afectación cerebral
+        - **Tratamiento:**
+          - **Inducción — 14–21 días como mínimo**, hasta que las lesiones retinianas muestren opacidad resuelta o muy reducida:
+            - Adultos: valganciclovir 900 mg VO dos veces al día
+            - Alternativas para adultos y niños:
+              - Ganciclovir 5 mg/kg/dosis IV cada 12 h
+              - Foscarnet 90 mg/kg/dosis IV cada 12 h
+          - **Mantenimiento tras la inducción: valganciclovir 900 mg VO una vez al día**
+          - **Suspenda el mantenimiento** solo tras ≥ 3 meses de tratamiento anti-CMV, cuando haya **CD4 ≥ 100 mantenidos ≥ 3 meses** en TAR y las lesiones estén inactivas — de acuerdo con oftalmología. **Reinícielo si los CD4 vuelven a bajar**

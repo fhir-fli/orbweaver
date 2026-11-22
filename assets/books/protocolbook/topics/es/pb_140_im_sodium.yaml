@@ -1,0 +1,155 @@
+# translated-from-sha256: 60a9c1e6a79cf855c1c70c24b00c3e80a7caa3cb4511fda2581bafe0b0698d02
+topic:
+  id: "pb-im-sodium"
+  title: "Alteraciones del sodio (Na⁺)"
+  list_subtitle: "pp.140–141 · hipo/hipernatremia · fórmulas"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sodio", "Na", "hiponatremia", "hipernatremia", "SIADH", "suero salino hipertónico", "salino al 3%", "déficit de agua libre", "ACT", "FENa", "electrolitos", "medicina interna"]
+  category: "medical"
+  pages:
+  - page_number: 140
+    blocks:
+    - type: "prose"
+      title: "Cálculos con el sodio"
+      markdown: |
+        - **ACT (agua corporal total)** = peso (kg) × fracción de agua
+        - **Fracción de agua:**
+          - Niños: 0.65 (< 6 años), 0.6 hasta la edad adulta
+          - Adulto: 0.5 mujeres, 0.6 hombres
+          - Ancianos: 0.45 mujeres, 0.5 hombres
+        - **Cambio del [Na] sérico por L de infusión** = ([Na] de la infusión − [Na] sérico) ÷ (ACT + 1)
+        - **Velocidad de infusión para subir el Na una cantidad elegida por hora** (L/h) = aumento deseado (mEq/L/h) ÷ (cambio del [Na] sérico por L de infusión, de la línea anterior), luego × 1000 para mL/h
+          - Ejemplo resuelto — Na sérico 120, ACT 42 L, salino al 3% (513 mEq/L): cambio por L = (513 − 120) ÷ (42 + 1) ≈ **9.1 mEq/L por litro**. Para subir el Na 0.5 mEq/L/h → 0.5 ÷ 9.1 ≈ 0.055 L/h ≈ **55 mL/h**
+          - ⚠️ El libro imprimía antes aquí "1000 ÷ (2 × [Na] sérico)". Eso **no tiene término de la infusión ni de agua corporal**, así que da la misma respuesta para el salino al 3% y al 0.9%. No es una fórmula válida
+        - **Déficit de H₂O libre (L)** = ([Na] sérico − 140) ÷ 140 × ACT
+        - **FENa (fracción excretada de sodio)** = 100 × (Na urinario × Cr sérica) ÷ (Na sérico × Cr urinaria)
+    - type: "prose"
+      title: "🛑 Las fórmulas predicen de menos — mida, no calcule"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Estas fórmulas predictivas **subestiman sistemáticamente el aumento** y nunca
+        deben sustituir a la medición seriada del sodio.
+
+        En la hiponatremia **gravemente sintomática**, la práctica ha pasado a **bolos de salino
+        al 3%** en lugar de una infusión calculada: **100 mL en 10 min, hasta 3
+        veces**, o **150 mL en 20 min** — buscando un **aumento de 4–6 mEq/L en 1–2 h**,
+        con sodio medido **tras cada bolo** y luego cada 4–6 h.
+
+        **Límites de corrección: ≤ 10 mEq/L en 24 h y ≤ 18 mEq/L en 48 h** — y
+        **≤ 8 mEq/L en 24 h si el riesgo de desmielinización osmótica es alto**
+        (desnutrición, consumo de alcohol, hepatopatía, hipopotasemia, Na < 105).
+    - type: "prose"
+      title: "Hiponatremia (Na < 135) — manejo urgente"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (PA, FC, FR, spO₂, Temp, peso)
+        - Inicie oxígeno si la spO₂ < 90%
+        - Análisis séricos: hemograma, función renal, electrolitos
+        - Análisis de orina: creatinina, sodio, osmolaridad
+        - ECG de 12 derivaciones
+        - Haga una historia y una exploración física breves y dirigidas
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Hiponatremia aguda"
+        shape: "stadium"
+      stages:
+      - decision: "¿Hipotensión / choque?"
+        outcomes:
+        - label: "Sí — sin sobrecarga de volumen"
+          box:
+            title: "Bolo de SSN 20 mL/kg"
+        - label: "Sí — con sobrecarga de volumen"
+          box:
+            title: "Vasopresor / inotrópico — NO dopamina"
+            severity: "emergency"
+            bullets:
+            - "**Hipotensión vasodilatadora / distributiva: noradrenalina 0.05–0.5 mcg/kg/min IV**, ajustada a la PAM (hasta 1.0 mcg/kg/min si es necesario). Puede pasarse por vía periférica con un contador de gotas si no hay vía central"
+            - "**Fallo de bomba con sobrecarga de volumen: dobutamina 2–20 mcg/kg/min**, ± noradrenalina"
+            - "⚠️ El libro imprimía aquí **\"dopamina 2–5 mcg/min\"**. Le falta el **/kg** — e incluso a 2–5 mcg/**kg**/min es la desacreditada \"dosis renal\", no una dosis vasopresora. La dopamina además causa muchas más arritmias y mayor mortalidad que la noradrenalina, por eso este libro prefiere la noradrenalina en todas las demás páginas"
+        - label: "No"
+          continue: true
+      - decision: "¿Síntomas neurológicos? (somnolencia, convulsiones, GCS < 9)"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Salino al 3%, a pasar en 20 minutos"
+            bullets:
+            - "Niños: 4 mL/kg (máx. 100 mL)"
+            - "Adultos: 100 mL"
+            - "Repita hasta que mejoren los síntomas"
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Límites de corrección"
+        bullets:
+        - "≤ 10 mEq/L en 24 h y ≤ 18 mEq/L en 48 h"
+        - "≤ 8 mEq/L en 24 h si el riesgo de desmielinización osmótica es alto"
+        - "≤ 0.5 mEq/L/h como ritmo continuo"
+  - page_number: 141
+    blocks:
+    - type: "prose"
+      title: "Hiponatremia — evaluación"
+      markdown: |
+        Sodio sérico bajo (< 135 mEq/L). Descarte primero los factores que afectan a la medición:
+
+        - Otros factores: manitol, hiperlipidemia, hiperproteinemia (p. ej., cáncer)
+        - ¿Hiperglucemia? Sume 1 mEq/L al sodio sérico por cada 2 puntos de glucosa por encima de 10
+        - Si no hay otra explicación, suponga una hiponatremia hipotónica
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Hiponatremia hipotónica — evalúe el estado de volumen"
+        shape: "stadium"
+      stages:
+      - decision: "¿Signos de sobrecarga de volumen? (edema periférico o pulmonar, o ascitis)"
+        outcomes:
+        - label: "Sí — hipervolémica"
+          box:
+            title: "Hipervolémica (FENa > 1% sugiere insuficiencia renal)"
+            bullets:
+            - "Furosemida"
+            - "Vasodilatador en la ICC"
+            - "Infusión de coloides en la cirrosis"
+        - label: "No"
+          continue: true
+      - decision: "¿Signos de hipovolemia? (PA baja o hipotensión)"
+        outcomes:
+        - label: "Sí — hipovolémica"
+          box:
+            title: "Hipovolémica"
+            bullets:
+            - "Na urinario < 20: pérdidas extrarrenales (lo más frecuente: diarrea; también 3.er espacio o diuréticos)"
+            - "Na urinario > 30: pérdidas renales"
+            - "Tratamiento: reposición de volumen con SSN"
+        - label: "No — euvolémica"
+          continue: true
+      - decision: "¿Osmolalidad urinaria > 100?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "SIADH (lo más frecuente)"
+            bullets:
+            - "Menos frecuente: hipotiroidismo"
+            - "Restricción de líquidos ≤ 1 L/día"
+            - "Trate la causa subyacente"
+        - label: "No"
+          box:
+            title: "Pocos solutos"
+            bullets:
+            - "Mala ingesta (desnutrición, alcoholismo)"
+            - "Intoxicación hídrica (polidipsia psicógena)"
+            - "Tratamiento: mejorar la ingesta"
+    - type: "prose"
+      title: "Hipernatremia (Na > 145)"
+      markdown: |
+        - Causas renales más frecuentes: diuresis osmótica, diuréticos de asa, diabetes insípida
+        - Causas extrarrenales más frecuentes: vómitos, diarrea
+        - Tratamiento:
+          - Restablezca el acceso al agua por VO (> 1 L/día)
+          - Corrija el Na no más rápido de 10 mEq/L/día y 0.5 mEq/L/h
+        - ⚠️ Dos líneas que estaban aquí — "valore si es clínicamente lógico" y "suponga una hiponatremia hipotónica" — pertenecían a la evaluación de la **hiponatremia** de arriba y eran un arrastre de copiar y pegar. Eliminadas

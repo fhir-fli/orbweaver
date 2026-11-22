@@ -1,0 +1,198 @@
+# translated-from-sha256: 7bbc7abe69e6596cab6ad92573e8c2dc67f912d58c9e2864c77eb03c3069ff30
+topic:
+  id: "pb-im-sti"
+  title: "Infecciones de transmisión sexual (ITS)"
+  list_subtitle: "pp.132–134 · manejo sindrómico"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ITS", "ETS", "transmisión sexual", "flujo", "úlcera genital", "gonorrea", "clamidia", "sífilis", "chancroide", "herpes", "tricomoniasis", "vaginosis bacteriana", "candidiasis", "EPI", "infección del tracto genital superior", "ceftriaxona", "azitromicina", "doxiciclina", "aciclovir", "penicilina benzatínica", "medicina interna", "enfermedades infecciosas"]
+  category: "medical"
+  pages:
+  - page_number: 132
+    blocks:
+    - type: "prose"
+      title: "Motivos de consulta frecuentes"
+      markdown: |
+        - Disuria
+        - Dispareunia
+        - Dolor en la parte baja del abdomen
+        - Secreción uretral / flujo vaginal
+        - Picor / ardor vulvar / vaginal
+        - Picor / ardor en el pene / escroto
+        - Ampollas / llagas / verrugas / bultos en la zona genital / anal
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Paciente mujer — consulta por flujo"
+        shape: "stadium"
+      stages:
+      - decision: "¿Prueba de VIH en los últimos 3 meses?"
+        outcomes:
+        - label: "No"
+          box:
+            title: "Prueba de VIH"
+        - label: "Sí"
+          continue: true
+      - decision: "¿Flujo anormal?"
+        outcomes:
+        - label: "No"
+          box:
+            title: "Considere otros diagnósticos"
+        - label: "Sí"
+          box:
+            title: "Haga una prueba de embarazo"
+          continue: true
+      - decision: "¿Dolor en la parte baja del abdomen con algún signo de peligro?"
+        criteria:
+        - "Parto / aborto reciente"
+        - "Amenorrea"
+        - "Sangrado vaginal anormal"
+        - "Defensa abdominal / dolor de rebote"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Solicite interconsulta ginecológica / quirúrgica"
+        - label: "No"
+          continue: true
+      - decision: "¿Dolor en la parte baja del abdomen o dolor a la movilización cervical?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate como infección del tracto genital superior"
+        - label: "No"
+          continue: true
+      - decision: "¿Hay alguno de los siguientes?"
+        criteria:
+        - "Flujo purulento"
+        - "Secreción uretral en la pareja"
+        - "Violencia sexual / prostitución"
+        - "Pareja nueva o > 1 pareja en los últimos 3 meses"
+        - "Alta sospecha clínica"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate gonorrea y clamidia"
+          continue: true
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Trate vaginosis bacteriana y tricomoniasis"
+        bullets:
+        - "Considere tratar candidiasis"
+  - page_number: 133
+    blocks:
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Paciente hombre — consulta por secreción"
+        shape: "stadium"
+      stages:
+      - decision: "¿Prueba de VIH en los últimos 3 meses?"
+        outcomes:
+        - label: "No"
+          box:
+            title: "Prueba de VIH"
+        - label: "Sí"
+          continue: true
+      - decision: "¿Hay secreción uretral?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate gonorrea y clamidia"
+        - label: "No"
+          box:
+            title: "Busque otro hallazgo genital / anal"
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Paciente — consulta por úlcera genital"
+        shape: "stadium"
+      stages:
+      - decision: "¿Prueba de VIH en los últimos 3 meses?"
+        outcomes:
+        - label: "No"
+          box:
+            title: "Prueba de VIH"
+        - label: "Sí"
+          continue: true
+      - decision: "¿Hay llaga / úlcera / vesícula?"
+        outcomes:
+        - label: "No"
+          box:
+            title: "Considere otros diagnósticos"
+        - label: "Sí"
+          continue: true
+      - decision: "¿Alguno de los siguientes?"
+        criteria:
+        - "Vesículas pequeñas y dolorosas"
+        - "Úlceras pequeñas con vesículas recurrentes"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate herpes genital"
+        - label: "No"
+          box:
+            title: "Trate sífilis Y chancroide"
+    - type: "prose"
+      title: "En niños"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Aunque queda fuera del alcance de este texto, estos síntomas en cualquier niño son **abuso sexual mientras no se demuestre lo contrario**. Considere siempre la agresión sexual.
+    - type: "prose"
+      title: "Tratamiento de la pareja"
+      markdown: |
+        Todas las parejas sexuales del paciente deben tratarse aunque no tengan síntomas — **salvo en el herpes, la candidiasis y la vaginosis bacteriana**.
+  - page_number: 134
+    blocks:
+    - type: "prose"
+      title: "Pautas de tratamiento — infecciones del tracto genital superior"
+      markdown: |
+        - **Ingrese en el hospital si hay alguno:**
+          - Sospecha de infección grave (sepsis), aspecto tóxico, sospecha clínica de que la pauta ambulatoria no es adecuada
+          - Sospecha de infección complicada (peritonitis, absceso)
+          - Etiología no clara
+          - No tolera la VO
+          - Sin mejoría / empeoramiento en las primeras 48 h de tratamiento ambulatorio
+        - **Tratamiento hospitalario:**
+          - **Ceftriaxona 1 g IV cada 24 horas** (no 250 mg IM — estas pacientes tienen sepsis, peritonitis o un absceso)
+          - Doxiciclina 100 mg/dosis VO dos veces al día × 14 días
+          - Metronidazol 500 mg VO/IV dos veces al día × 14 días
+          - **Pase a vía oral tras la mejoría clínica, en general en 24–48 h**, a doxiciclina 100 mg dos veces al día + metronidazol 500 mg dos veces al día, completando **14 días en total**. Observe primero > 24 h si hay un absceso tuboovárico
+          - **Absceso tuboovárico:** el metronidazol es esencial para cubrir anaerobios; una pauta de clindamicina + aminoglucósido es una alternativa reconocida. Considere el drenaje
+        - **Tratamiento ambulatorio:**
+          - Ceftriaxona 500 mg IM × 1 dosis (1 g si ≥ 150 kg)
+          - Doxiciclina 100 mg/dosis VO dos veces al día × 14 días
+          - Metronidazol 500 mg VO dos veces al día × 14 días
+    - type: "prose"
+      title: "Pautas de tratamiento — por microorganismo"
+      markdown: |
+        - **Gonorrea:** **ceftriaxona 500 mg IM × 1 dosis** (**1 g si ≥ 150 kg**). La dosis de 250 mg se aumentó por la disminución de la sensibilidad a las cefalosporinas
+          - **NO añada azitromicina de rutina.** La ceftriaxona se da sola — salvo que no se haya descartado la clamidia, en cuyo caso añada **doxiciclina 100 mg dos veces al día × 7 días**
+          - Alternativa **solo si no hay ceftriaxona**, y solo para la infección urogenital o rectal: cefixima 800 mg VO × 1 dosis. Si de verdad no hay ceftriaxona: **gentamicina 240 mg IM + azitromicina 2 g VO**
+          - ⚠️ **La cefixima no es fiable en la infección faríngea — solo ceftriaxona.** Se aconseja prueba de curación tras la gonorrea faríngea
+        - **Clamidia — no embarazada: doxiciclina 100 mg VO dos veces al día × 7 días** (mejor curación, sobre todo rectal)
+          - Alternativa: azitromicina 1 g VO × 1 dosis. **Donde el seguimiento no es fiable, una sola dosis de 1 g directamente observada es una primera opción legítima**, aceptando una tasa de curación algo menor
+          - **Embarazada: azitromicina 1 g VO × 1 dosis** (alternativa amoxicilina 500 mg VO tres veces al día × 7 días)
+          - ⚠️ **La eritromicina ya no se recomienda en el embarazo** (intolerancia GI, adherencia, señales de resultados adversos). El libro imprimía antes eritromicina 1 g cada 12 h — si hubiera que usar eritromicina base, la pauta histórica es 500 mg cuatro veces al día × 7 días
+        - **Vaginosis bacteriana: metronidazol 500 mg VO dos veces al día × 7 días** (alternativas: metronidazol gel vaginal al 0.75% al día × 5 días, o crema de clindamicina × 7 días)
+          - ⚠️ **La dosis única de 2 g NO es una pauta recomendada para la VB** — tiene más fracasos y recurrencias. El libro imprimía aquí antes la pauta de la tricomoniasis
+          - **En la VB no se trata a las parejas de rutina** — una segunda excepción a la regla de "tratar a todas las parejas"
+        - **Tricomoniasis — mujeres: metronidazol 500 mg VO dos veces al día × 7 días** (en mujeres ahora se prefiere la pauta de 7 días a la dosis única)
+          - **Hombres: metronidazol 2 g VO × 1 dosis**
+          - **Trate a las parejas** — esta sí es una ITS
+        - **Candidiasis** (con óvulos vaginales): clotrimazol 500 mg por vía vaginal al acostarse × 1 dosis
+          - Alternativa: clotrimazol 100 mg por vía vaginal al acostarse × 6 días
+          - Alternativa: nistatina 100,000 UI
+        - **Herpes:**
+          - Primer brote — aciclovir 400 mg/dosis VO cada 8 h × 7 días
+          - Recurrencia — aciclovir 400 mg/dosis VO cada 8 h × 5 días
+          - **Momento:** es más eficaz si se inicia pronto — en las 72 horas siguientes a un primer episodio, o al primer signo de recurrencia — **pero ofrézcalo igualmente más tarde si las lesiones aún se están formando o no tienen costra completa**, sobre todo en pacientes inmunodeprimidos o VIH positivos. El beneficio disminuye con el tiempo; no desaparece en un punto de corte
+          - **En el VIH**, los episodios de **herpes genital** son más graves y prolongados — trate incluso fuera de los plazos habituales, y use una **pauta más alta y más larga: aciclovir 400 mg cinco veces al día hasta que se resuelvan las lesiones**
+          - ⚠️ Esta entrada es el **herpes genital (VHS)**, no el herpes zóster (culebrilla, VVZ) — son dos infecciones distintas con dosis distintas
+        - **Sífilis:** penicilina benzatínica **2.4 millones de UI en total — administrada como 1.2 millones de UI IM en cada glúteo** (dividida para tolerarla mejor, pero es una dosis de 2.4 MU)
+          - Infección precoz: 1 dosis. **Los CDC usan un corte de 1 año para "precoz"; algunos programas usan 2 años — siga el programa nacional**
+          - Tardía o de duración desconocida: 1 dosis semanal × 3 semanas
+        - **Chancroide:** azitromicina 1 g VO × 1 dosis (alternativa: ceftriaxona 500 mg IM × 1 dosis)
