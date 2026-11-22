@@ -1,0 +1,111 @@
+# translated-from-sha256: f018be38b81b5135c6c56e8315f02884133e2ae6382cdb26c233b276fb4c3805
+topic:
+  id: "pb-im-hypertension"
+  title: "Hipertensión del adulto"
+  list_subtitle: "pp.106–107 · urgencia / emergencia · HTA esencial"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hipertensión", "emergencia hipertensiva", "urgencia hipertensiva", "adulto", "medicina interna", "presión arterial", "nicardipino", "labetalol", "nitroprusiato", "amlodipino", "lisinopril", "cardiología"]
+  category: "medical"
+  pages:
+  - page_number: 106
+    blocks:
+    - type: "prose"
+      title: "Urgencia y emergencia hipertensivas"
+      markdown: |
+        - PA > 180/120 → siga este protocolo
+        - PA 140/90 – 180/120 → hipertenso; vea el tratamiento de la hipertensión esencial (página siguiente)
+        - PA < 140/90 → no hipertenso
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (FC, FR, SpO₂, temp)
+        - Repita y **verifique** la PA
+        - Inicie oxígeno si la SpO₂ < 90%
+        - Acceso IV; ECG de 12 derivaciones
+        - Análisis: glucemia aleatoria, hemograma, función renal, examen de orina para proteinuria
+        - Haga una historia y una exploración física breves y dirigidas
+    - type: "prose"
+      title: "Recordatorio"
+      highlight: true
+      markdown: |
+        La cefalea sola NUNCA es una emergencia.
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Evidencia de daño de órgano diana?"
+        criteria:
+        - "Dolor torácico / angina / SCA / insuficiencia cardíaca"
+        - "Falta de aire o edema pulmonar"
+        - "Ictus, entumecimiento/debilidad, cambios visuales, dificultad para hablar"
+        - "Encefalopatía"
+        - "Lesión renal aguda"
+        - "Disección aórtica"
+        - "Eclampsia"
+        outcomes:
+        - label: "Sí — emergencia hipertensiva"
+          box:
+            title: "Emergencia hipertensiva (vea el tratamiento abajo)"
+            severity: "emergency"
+        - label: "No — urgencia hipertensiva"
+          box:
+            title: "Urgencia hipertensiva (vea el tratamiento abajo)"
+            severity: "priority"
+    - type: "prose"
+      title: "Emergencia hipertensiva — tratamiento"
+      markdown: |
+        - Nicardipino — inicial 5 mg/h, aumente 2.5 mg/h cada 5 min hasta un máx. de 15 mg/h
+        - Nitroprusiato sódico — 0.3–0.5 mcg/kg/min, aumente 0.5 mcg/kg/min cada pocos minutos hasta un máx. de 10 mcg/kg/min
+        - **Labetalol — primera elección aquí.** 10–20 mg IV, luego bolos de 20–80 mg cada 10 min hasta alcanzar la PA objetivo, o 300 mg de dosis total. **No necesita bomba de infusión** — los demás sí
+        - **Esmolol** (donde haya bomba de infusión) — 500 mcg/kg IV en 1 minuto, luego infusión de 25–50 mcg/kg/min, aumentando 25–50 mcg/kg/min cada 5–10 minutos, hasta un máximo de 200–300 mcg/kg/min
+        - Debe ingresar para el manejo. **Objetivo: reducción de la PA del 20–25% en la 1.ª hora, luego < 160/110 en las 2–6 horas siguientes**
+    - type: "prose"
+      title: "Urgencia hipertensiva — tratamiento"
+      markdown: |
+        - Nicardipino 20–40 mg VO cada 8–12 h
+        - Captopril 25 mg VO cada 8–12 h
+        - Labetalol 200 mg VO, luego 200–400 mg cada 6–12 h según necesidad
+        - No hay una PA objetivo específica en la fase aguda. Si a las 6 horas sigue sin evidencia de daño de órgano diana, puede darse el alta a casa con seguimiento en unos días.
+  - page_number: 107
+    blocks:
+    - type: "prose"
+      title: "Hipertensión en situaciones específicas"
+      markdown: |
+        - **Disección aórtica aguda** — objetivo **PAS < 120 mmHg en la primera hora** (no en 5–10 minutos — ese ritmo arriesga la hipoperfusión de órganos diana) y **frecuencia cardíaca < 60**. Administre **PRIMERO el betabloqueante IV** — se prefiere el **labetalol** por su bloqueo alfa y beta combinado, el **esmolol** cuando necesite un ajuste rápido; metoprolol si no hay ninguno de los dos. **Añada un vasodilatador (nicardipino o nitroprusiato) solo si no se alcanza la PA objetivo tras el betabloqueo** — darlo primero, o sin control de la frecuencia, causa taquicardia refleja que aumenta la tensión de cizallamiento de la pared aórtica (dP/dt) y puede extender la disección. Administre **analgesia adecuada**. Algunas fuentes indican PAS 100–120 y FC 60–80; **< 60 es el objetivo de frecuencia más estricto y más ampliamente respaldado**, y una PA más alta solo se tolera si hay mala perfusión activa
+        - **Ictus agudo** — vea la [vía del ictus](topic:pb-im-stroke)
+        - **Encefalopatía hipertensiva** — objetivo: bajar la PAS no más de un 20–25%, o la PAD a 100–110, en la primera hora; labetalol, nicardipino (NO use nitroprusiato)
+        - **Isquemia miocárdica aguda** (vea el protocolo de SCA) — objetivo PAS < 160, PAD < 100; nitroglicerina (salvo que se haya usado un inhibidor de la fosfodiesterasa en las últimas 48 h — sildenafilo, tadalafilo); alternativas labetalol, esmolol, nicardipino
+        - **Insuficiencia cardíaca aguda** — vea el [protocolo de insuficiencia cardíaca](topic:pb-im-heart-failure); nitroglicerina IV o SL
+        - **Hipertensión posoperatoria aguda** — suele empezar < 2 h tras la operación y suele requerir tratamiento durante < 6 horas; objetivo en pacientes de cirugía cardíaca PA < 140/90 o PAM < 105; esmolol, nicardipino, labetalol, nitroprusiato
+        - **Edema pulmonar agudo**
+        - **Insuficiencia renal aguda** — vea el algoritmo de insuficiencia renal
+        - **Preeclampsia / eclampsia** — consulte con ginecoobstetricia
+    - type: "prose"
+      title: "Hipertensión general (esencial) — confirmada en > 1 ocasión"
+      markdown: |
+        Empiece con cambios en el estilo de vida. **Un solo objetivo para casi todos — ya no hay división por edad.**
+        - **La mayoría de los adultos, incluida la diabetes sin ERC: PA < 140/90**
+        - **ERC: PA < 140/90** (intente acercarse a 130 de sistólica si se tolera y puede vigilarlo)
+        - **Diabetes con alto riesgo cardiovascular, solo si se tolera con seguridad: PA < 130/80**
+
+        **< 140/90 es el objetivo correcto para imprimir aquí, no < 130/80.** Los objetivos por debajo de 130 de SPRINT y STEP se lograron con mediciones frecuentes y estandarizadas en consulta, monitorización domiciliaria y seguimiento estrecho de electrolitos y medicación. Con visitas cada 1–3 meses, suministro irregular de fármacos, poca monitorización de electrolitos y un riesgo real de hipotensión, caídas e interrupción del tratamiento, empujar a < 130/80 arriesga daño sin la infraestructura que lo hizo seguro en los ensayos. Reserve < 130/80 para el paciente seleccionado de mayor riesgo — enfermedad cardiovascular establecida, diabetes de alto riesgo — que lo tolera y puede seguirse.
+
+        La antigua división ≥ 60 / < 60 (PA < 150/90 por encima de 60) no concuerda con ninguna guía importante y se ha eliminado.
+    - type: "prose"
+      title: "Opciones de primera línea"
+      markdown: |
+        El cambio de objetivo **no** cambia el fármaco de primera línea.
+        - **Población general (sin DM/ERC):**
+          - Hidroclorotiazida 12.5–25 mg VO una vez al día
+          - Amlodipino 2.5–10 mg VO una vez al día
+          - Nifedipino 30–120 mg VO una vez al día
+        - **Con DM o ERC:**
+          - Lisinopril 5–20 mg VO una vez al día
+          - Losartán 25–100 mg VO una vez al día
+        - **Un calcioantagonista suele ser el primer fármaco más práctico aquí — no necesita control de electrolitos.** Si usa un IECA o un ARA II por diabetes o ERC, acompáñelo al menos de controles intermitentes de potasio y creatinina
+    - type: "prose"
+      title: "Manejo de seguimiento"
+      markdown: |
+        - Evalúe la adherencia, el estilo de vida y la medicación
+        - Si la PA no está en objetivo, aumente la dosis del 1.er fármaco; si ya está al máximo, añada un 2.º fármaco
+        - Vea los protocolos de SCA e insuficiencia cardíaca para recomendaciones específicas

@@ -1,0 +1,77 @@
+# translated-from-sha256: eb0ed2a6015f9e0e73b659bab1bd51ac13e830eb86a8339d225a9a72835a6a86
+topic:
+  id: "pb-im-gi-bleed"
+  title: "Hemorragia digestiva alta"
+  list_subtitle: "p.104 · presentaciones · reanimación · várices"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hemorragia digestiva alta", "HDA", "hematemesis", "melena", "posos de café", "hematoquecia", "medicina interna", "IBP", "rabeprazol", "várices", "cirrosis", "transfusión", "gastroenterología"]
+  category: "medical"
+  page_number: 104
+  blocks:
+  - type: "prose"
+    title: "Presentaciones frecuentes"
+    markdown: |
+      - **Melena** — heces negras, alquitranadas, teñidas de sangre; requiere 50 mL de sangre del tubo digestivo alto
+      - **Hematemesis** — sangre roja brillante en el vómito; el origen suele estar por encima del ligamento de Treitz
+      - **Vómito en posos de café** — vómito con sangre oscura alterada y contenido gástrico
+      - **Hematoquecia** — heces con sangre
+  - type: "prose"
+    title: "Factores que influyen en la probabilidad de una hemorragia digestiva alta"
+    markdown: |
+      - **Más probable:** antecedente de melena, heces melénicas en la exploración, posos de café en el lavado, urea/Cr > 30
+      - **Sangrado grave más probable:** sangre roja en el lavado, taquicardia, Hb < 8
+      - **Menos probable:** coágulos de sangre en las heces
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Monitorice, mantenga el ABC; controle los signos vitales (PA, FC, FR, SpO₂, temp)"
+      shape: "stadium"
+    stages:
+    - decision: "¿Choque / hipotensión? (PAS < 100)"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Reanime"
+          bullets:
+          - "Nada por boca"
+          - "Oxígeno 4–6 L por cánula nasal"
+          - "2 vías IV de gran calibre"
+          - "Bolo de 20 mL/kg de Ringer si no hay sangre disponible de inmediato"
+          - "Haga un hemograma; transfunda sangre total cuando esté disponible"
+          severity: "priority"
+        continue: true
+      - label: "No"
+        box:
+          title: "Vigile y estudie"
+          bullets:
+          - "Controle los signos vitales cada 15 minutos hasta que esté estable (PAS > 100), luego cada hora"
+          - "Análisis: hemograma, grupo y escrutinio, BUN, Cr, glucemia aleatoria"
+          - "ECG de 12 derivaciones si está disponible"
+          - "Oxígeno 4–6 L por cánula nasal"
+          - "Historia y exploración física breves y dirigidas (incluido tacto rectal)"
+        continue: true
+    terminal:
+      title: "Inicie la supresión ácida IV"
+      bullets:
+      - "1.ª línea IBP (rabeprazol, omeprazol, pantoprazol — el que haya): bolo de 80 mg IV, LUEGO 40 mg IV cada 8-12 horas (o infusión de 8 mg/h si hay bomba). Continúe al menos 72 horas"
+      - "2.ª línea: famotidina 20 mg IV cada 12 horas"
+  - type: "flowchart"
+    variant: "algorithm"
+    stages:
+    - decision: "¿Sangrado probablemente por várices en un paciente con cirrosis?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Fármaco vasoactivo + antibióticos"
+          bullets:
+          - "Octreotida 50 mcg IV en bolo, LUEGO infusión de 50 mcg/h durante 3-5 días. Es el fármaco vasoactivo de elección y debe iniciarse en cuanto se sospechen várices, antes de la endoscopia"
+          - "Si no hay octreotida: terlipresina 2 mg IV cada 4-6 h hasta que cese el sangrado, luego 1 mg cada 4-6 h (más efectos adversos - evítela en la cardiopatía isquémica)"
+          - "Ceftriaxona 1 g/día × 7 días (ciprofloxacino 500 mg VO dos veces al día si se da de alta < 7 días) - aquí los antibióticos reducen la mortalidad, no solo la infección"
+          - "Vea el protocolo de cirrosis para el manejo preventivo"
+      - label: "No"
+        box:
+          title: "Trate la hipotensión con un nuevo bolo de líquidos / transfusión"
+          bullets:
+          - "Considere transfundir si Hb < 9 en pacientes de alto riesgo (ancianos, cardiopatía)"
+          - "Considere transfundir si Hb < 7 en pacientes de bajo riesgo"
+          - "Si continúa un sangrado importante, contacte con cirugía para un taponamiento con balón"

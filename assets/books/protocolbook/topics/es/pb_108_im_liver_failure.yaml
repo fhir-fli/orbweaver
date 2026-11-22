@@ -1,0 +1,149 @@
+# translated-from-sha256: 8a467aced229aadb1c49030aa23eba07bbf773b519e916adb67d332813cecf1b
+topic:
+  id: "pb-im-liver-failure"
+  title: "Insuficiencia hepática"
+  list_subtitle: "pp.108–110 · estudio · PBE · Child-Pugh"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["insuficiencia hepática", "cirrosis", "encefalopatía hepática", "adulto", "medicina interna", "ascitis", "PBE", "peritonitis bacteriana espontánea", "child-pugh", "lactulosa", "várices", "PFH", "hepatología"]
+  category: "medical"
+  pages:
+  - page_number: 108
+    blocks:
+    - type: "prose"
+      title: "Si no hay antecedentes conocidos, sospeche hepatopatía ante"
+      markdown: |
+        - Pruebas de función hepática elevadas; ictericia
+        - Edema periférico / ascitis; distensión abdominal
+        - Hemorragia digestiva (hematemesis / melena)
+        - Circulación colateral de la pared abdominal (cabeza de medusa); telangiectasias cutáneas; arañas vasculares; eritema palmar; acropaquias
+        - Encefalopatía (confusión, cambio del patrón de sueño); neuropatía periférica; asterixis
+        - Ginecomastia / atrofia testicular
+    - type: "prose"
+      title: "Notas sobre los resultados de laboratorio"
+      markdown: |
+        - ↓ albúmina, ↑ TP/INR/TTP en la insuficiencia hepática
+        - La ALT es más específica del hígado que la AST
+        - ALT > AST: hepatitis viral, hígado graso / esteatohepatitis no alcohólica (precirrótica)
+        - AST > 2 × ALT: hepatitis alcohólica, cirrosis (origen no hepático)
+        - Ictericia: se ve con bilirrubina > 2.5 mg/dL; ↑ bilirrubina en orina si es conjugada
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (FC, FR, SpO₂, temp, peso)
+        - Inicie oxígeno si la SpO₂ < 90%; coloque una vía IV de gran calibre
+        - Evalúe AVPU/GCS, el estado de hidratación
+        - Haga una historia y una exploración física breves y dirigidas; ECG de 12 derivaciones en adultos
+        - **Descarte:** malaria (PDR, gota gruesa), sepsis (hemograma, hemocultivos)
+        - Otros análisis: PFH (AST, ALT, bilirrubina total y directa, albúmina), función renal, electrolitos; considere TP/INR/TTP
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Hipotenso?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Bolo de SSN para reanimar; mantenga la PAS > 90. Vasopresor si es necesario: noradrenalina donde esté disponible; si no, dopamina"
+            severity: "priority"
+        - label: "No"
+          continue: true
+      - decision: "¿Sangrado?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Si es digestivo alto, vea el protocolo de hemorragia digestiva; si no, transfunda sangre total"
+            severity: "priority"
+        - label: "No"
+          continue: true
+      - decision: "¿Ascitis?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Paracentesis diagnóstica"
+            bullets:
+            - "Recuento celular y diferencial; cultivo y tinción de Gram; glucosa, proteínas totales, albúmina, LDH"
+            - "Si > 250 neutrófilos O ascitis + fiebre + dolor abdominal → inicie antibióticos para la PBE: cefotaxima 2 g IV cada 8 horas (2.ª línea ceftriaxona 1 g IV al día)"
+        - label: "No"
+          continue: true
+      - decision: "¿Alteración del estado mental (vea la gradación de la encefalopatía), SIN infección, SIN sangrado, SIN intoxicación aguda y hemodinámicamente estable?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Lactulosa 30-45 mL (20-30 g) VO cada 1-2 horas hasta 2 deposiciones, LUEGO 15-30 mL 2-4 veces al día para mantener 2-3 deposiciones blandas al día. En la encefalopatía recurrente añada rifaximina 550 mg VO dos veces al día donde esté disponible"
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Ecografía abdominal si no se ha hecho"
+    - type: "prose"
+      markdown: |
+        Para la hemorragia digestiva alta, vea el [protocolo de hemorragia digestiva alta](topic:pb-im-gi-bleed).
+  - page_number: 109
+    blocks:
+    - type: "prose"
+      title: "Estudio diagnóstico — según el patrón de las PFH"
+      markdown: |
+        - **Hepatocelular (predominio de AST/ALT elevadas):**
+          - AST/ALT > 1000 → hepatitis viral, isquemia, paracetamol
+          - Si no → ICC (haga ecocardiograma), fármacos, alcohol
+        - **Colestasis (bilirrubina y fosfatasa alcalina elevadas):** ecografía abdominal —
+          - Con dilatación de la vía biliar → obstrucción biliar (cáncer, cálculos, fibrosis)
+          - Sin dilatación → sepsis (↑↑ fosfatasa alcalina), hepatitis (↑ ALT), cirrosis (↑ TP/INR, ↓ albúmina); considere biopsia si no hay diagnóstico
+        - **Hiperbilirrubinemia aislada (solo bilirrubina elevada):**
+          - No conjugada (indirecta) → sobreproducción (hemólisis, reabsorción de hematomas, EP); defecto de conjugación (Gilbert, Crigler-Najjar)
+          - Conjugada (directa) → defecto de excreción (Dubin-Johnson, Rotor), transporte biliar anormal
+        - **Infiltrativa (solo fosfatasa alcalina elevada):** carcinoma hepatocelular, metástasis, linfoma, TB, sarcoidosis, histoplasmosis, amebiasis, medicamentos. Si no hay ninguno → considere una causa no hepática.
+  - page_number: 110
+    blocks:
+    - type: "prose"
+      title: "Gradación de la encefalopatía"
+      markdown: |
+        - **Estadio I** — estado mental alterado / deprimido, no se comporta como de costumbre
+        - **Estadio II** — letargo, confusión, inversión del sueño
+        - **Estadio III** — estupor, somnolencia, agresividad
+        - **Estadio IV** — coma
+    - type: "table"
+      title: "Puntuación de Child-Turcotte-Pugh modificada"
+      zebra: true
+      columns: ["Parámetro", "1 punto", "2 puntos", "3 puntos"]
+      column_flex: [5, 3, 4, 4]
+      column_align: ["left", "center", "center", "center"]
+      rows:
+      - cells: ["Ascitis", "Ausente", "Fácil de controlar", "Mal controlada"]
+      - cells: ["Encefalopatía", "Ausente", "Grado 1 o 2", "Grado 3 o 4"]
+      - cells: ["Bilirrubina (mg/dL)", "< 2", "2–3", "> 3"]
+      - cells: ["Albúmina (g/dL)", "> 3.5", "2.8–3.5", "< 2.8"]
+      - cells: ["TP (seg > control)", "< 4", "4–6", "> 6"]
+      - cells: ["o INR", "< 1.7", "1.8–2.3", "> 2.3"]
+    - type: "table"
+      title: "Clase de Child-Pugh → supervivencia a 1 año"
+      zebra: true
+      columns: ["Clase", "Puntos totales", "Supervivencia a 1 año"]
+      column_flex: [3, 4, 4]
+      column_align: ["center", "center", "center"]
+      rows:
+      - cells: ["A", "5–6", "100%"]
+      - cells: ["B", "7–9", "80%"]
+      - cells: ["C", "10–15", "45%"]
+    - type: "prose"
+      title: "Manejo crónico"
+      markdown: |
+        - Vacune contra la hepatitis A y B si no se ha hecho
+        - Eduque para evitar el alcohol, el paracetamol y otros fármacos hepatotóxicos
+        - **Profilaxis de la hemorragia por várices:**
+          - Inicie la profilaxis 1 semana después de un sangrado si está hemodinámicamente estable
+          - **Carvedilol 6.25 mg VO al día, ajustando a 12.5 mg al día — de preferencia.** Su bloqueo alfa adicional baja la presión portal mejor que el propranolol. Use propranolol 20 mg VO dos veces al día solo si no hay carvedilol
+          - Ajuste hasta uno de: FC en reposo 55–60 lpm; reducción de la FC del 25% respecto a la basal; o aparición de efectos adversos
+          - **Suspenda el betabloqueante si la PAS baja de 90**, o en la ascitis refractaria
+        - **Profilaxis de la PBE — dos indicaciones distintas, no exija ambas:**
+          - **Secundaria (ya tuvo una PBE): trate sea cual sea cualquier otro criterio.** Cotrimoxazol 160/800 mg VO 5 días/semana, o norfloxacino 400 mg VO al día, de forma indefinida
+          - **Primaria (nunca tuvo PBE):** considérela si las **proteínas del líquido ascítico son < 1.5 g/dL** Y hay función renal alterada (Cr > 1.2, BUN > 25 o Na < 130) **o** hepatopatía avanzada (Child-Turcotte-Pugh > 9 con bilirrubina > 3)
+        - **Tratamiento de la ascitis:**
+          - Educación: reducir la sal; reducir la ingesta de líquidos si hay Na bajo e hipervolemia
+          - Diuréticos (ambos si la PA lo tolera): espironolactona 100 mg/día (máx. 400) y furosemida 40 mg/día (máx. 160)
+          - Si es refractaria, considere la paracentesis terapéutica
+    - type: "prose"
+      title: "Niños"
+      markdown: |
+        - Casi siempre secundaria (casi nunca hepatopatía intrínseca)
+        - Si es intrínseca, la hepatitis A es la más frecuente — pero haga cribado de hepatitis B/C
+        - Si hay colelitiasis / coledocolitiasis, debe descartarse la drepanocitosis

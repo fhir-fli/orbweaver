@@ -1,0 +1,102 @@
+# translated-from-sha256: 340a162e2e3de11821674fac9ff8d2fb8bd1b2ad268b2938e2a05b6225f42dd8
+topic:
+  id: "pb-im-meningitis"
+  title: "Meningitis del adulto"
+  list_subtitle: "pp.102–103 · signos de alarma · contraindicaciones de la PL · tratamiento"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["meningitis", "adulto", "medicina interna", "punción lumbar", "PL", "ceftriaxona", "cefotaxima", "ampicilina", "meningococo", "profilaxis", "neurología", "LCR"]
+  category: "medical"
+  pages:
+  - page_number: 102
+    blocks:
+    - type: "prose"
+      markdown: |
+        - Los síntomas suelen ser inespecíficos — si no está claro, trate como meningitis Y como los otros diagnósticos (malaria, meningitis tuberculosa, etc.) hasta tener pruebas definitivas.
+        - **NO HAY FORMA** de confirmar o descartar una meningitis sin una punción lumbar.
+    - type: "prose"
+      title: "Síntomas que pueden presentarse"
+      markdown: |
+        - Fiebre
+        - Cefalea
+        - Rigidez de nuca, o signo de Kernig / Brudzinski
+        - Alteración del estado mental — confusión, obnubilación
+        - Convulsiones
+        - Fotofobia
+
+        Si hay **menos de 2** de fiebre / cefalea / rigidez de nuca / alteración del estado mental, considere seriamente otro diagnóstico. Si no hay **ninguno**, no debe considerarse la meningitis.
+    - type: "prose"
+      title: "Signos de advertencia / de alarma (enfermedad más crítica)"
+      markdown: |
+        - Exantema de progresión rápida
+        - Mala perfusión periférica: llenado capilar > 4 seg, oliguria, PAS < 90
+        - Frecuencia respiratoria < 8 o > 30
+        - Pulso > 140 o < 40
+        - Leucocitos < 4
+        - GCS < 12
+        - Mala respuesta a la reanimación inicial
+        - Signos neurológicos focales
+        - Tríada de Cushing (tardía y ominosa): hipertensión, bradicardia, respiración irregular
+    - type: "prose"
+      title: "Si el cultivo muestra meningococo — trate a los contactos cercanos"
+      markdown: |
+        - Contactos cercanos: convivientes, compañeros de habitación o de residencia; en el mismo vuelo/autobús durante > 8 horas; expuestos a secreciones orales (besos íntimos, reanimación boca a boca, intubación o manejo del tubo endotraqueal)
+        - Profilaxis:
+          - > 15 años: ciprofloxacino 500 mg VO dosis única
+          - < 15 años: ceftriaxona 125 mg IM dosis única
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - TB: vea la sección de tuberculosis
+        - **Corticoides: no de rutina.** La dexametasona complementaria no mostró beneficio en entornos de bajos ingresos y alta prevalencia de VIH, donde los pacientes llegan tarde y más graves. **Si el paciente es VIH negativo y consulta pronto**, puede considerarse dexametasona 10 mg IV cada 6 h × 4 días — adminístrela **con la primera dosis de antibiótico o justo antes**, o no la dé. **Suspéndala si se identifica Listeria** (se asocia a peor evolución), y no la use en la meningitis criptocócica
+  - page_number: 103
+    blocks:
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (FC, FR, SpO₂, temp, peso)
+        - Evalúe AVPU/GCS, el estado de hidratación
+        - Inicie oxígeno si la SpO₂ < 90%; coloque una vía IV si es necesario
+        - Haga una historia y una exploración física breves y dirigidas
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Tiene el paciente signos que hagan sospechar meningitis?"
+        outcomes:
+        - label: "No"
+          box:
+            title: "Busque otro origen de los síntomas"
+            severity: "non_urgent"
+        - label: "Sí"
+          continue: true
+      - decision: "¿Contraindicaciones absolutas para la PL?"
+        criteria:
+        - "Requiere RCP"
+        - "Choque"
+        - "Signos de PIC elevada (postura de descerebración, papiledema, pupilas arreactivas)"
+        - "Infección cutánea en el sitio de la PL"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Sin PL por ahora — inicie el tratamiento; si la contraindicación se resuelve < 4 h después de iniciar los antibióticos, haga entonces la PL"
+        - label: "No"
+          continue: true
+      - decision: "¿Contraindicaciones relativas para la PL?"
+        criteria:
+        - "Convulsiones"
+        - "Alteraciones de la coagulación (trastorno hemorrágico conocido, plaquetas < 50)"
+        - "GCS ≤ 8, estado mental cambiante, signos neurológicos focales o cambiantes"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Sin PL por ahora — inicie el tratamiento; haga la PL cuando sea seguro"
+        - label: "No"
+          box:
+            title: "Haga la PL — si hay bacterias en la tinción de Gram, > 6 leucocitos o cultivo de LCR positivo → ciclo completo de 10 días de antibióticos IV"
+    - type: "prose"
+      title: "Tratamiento (antibióticos IV × 10 días)"
+      markdown: |
+        - Ceftriaxona 2 g IV dos veces al día, O cefotaxima 2 g IV cada 6 horas
+        - Si tiene > 50 años o está inmunodeprimido, añada **ampicilina 2 g IV cada 4 horas** para Listeria (los mismos 12 g/día, pero la ampicilina mata en función del tiempo por encima de la CMI, así que importa el intervalo más corto)
+        - **Duración según el microorganismo:** 10 días por defecto · meningococo 7 días · neumococo 10–14 días · **Listeria o bacilos gramnegativos 21 días**
+        - Siga el [protocolo de convulsiones](topic:pb-im-convulsions) si corresponde
