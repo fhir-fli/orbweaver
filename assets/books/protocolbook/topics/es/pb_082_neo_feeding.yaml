@@ -1,0 +1,65 @@
+# translated-from-sha256: f47dda05fafcfea8919850eb6d9414b74bbd093f1ca4528a92c68ea53d214458
+topic:
+  id: "pb-neo-feeding"
+  title: "Alimentación del recién nacido y necesidades de líquidos"
+  list_subtitle: "pp.82–83 · líquidos · alimentación enteral · SOG/SNG"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "recién nacido", "alimentación", "líquidos", "necesidades de líquidos", "LME", "leche materna", "SOG", "SNG", "MBPN", "BPN", "vitamina D", "hierro", "dextrosa"]
+  category: "medical"
+  pages:
+  - page_number: 82
+    blocks:
+    - type: "table"
+      title: "Necesidades de líquidos (ml/kg/día, por día de vida)"
+      zebra: true
+      columns: ["Día", "< 1500 g", "> 1500 g"]
+      column_flex: [4, 3, 3]
+      column_align: ["left", "center", "center"]
+      rows:
+      - cells: ["D1 (D10%)", "80", "60"]
+      - cells: ["D2 (D10%)", "100", "80"]
+      - cells: ["D3 (MRL)", "120", "100"]
+      - cells: ["D4 (MRL)", "140", "120"]
+      - cells: ["D5 (MRL)", "160", "140"]
+      - cells: ["D6 (MRL)", "180", "160"]
+      - cells: ["D7+ (MRL)", "180", "160–180"]
+    - type: "prose"
+      title: "Cálculo de los líquidos totales"
+      markdown: |
+        - El día 1 es el 1.er día de vida — no hay día 0. El volumen total de líquidos se calcula para 24 horas e incluye tanto los líquidos enterales (VO/SNG) como los IV.
+        - Use el peso al nacer para los cálculos hasta que se supere, o use el peso más alto.
+        - Si administra líquidos IV, use D10% los días 1 y 2; cambie a MRL el día 3. Máximo de líquidos IV 150 ml/kg/día. Adminístrelos con un equipo de infusión pediátrico (1 ml = 60 gotas) y cambie la bolsa cada 24 horas.
+        - Asfixia perinatal: nada por boca 24 horas tras el nacimiento, y líquidos IV a 50 ml/kg/día.
+        - En ocasiones los bebés de MBPN necesitan 200–220 ml/kg/día para ganar peso.
+        - Pese a diario a todos los lactantes de la sala de recién nacidos.
+    - type: "prose"
+      title: "Bebé sano > 34 semanas de gestación y/o > 1500 g"
+      markdown: |
+        - Los lactantes de BPN que pueden mamar deben ponerse al pecho lo antes posible tras el nacimiento, cuando estén clínicamente estables.
+        - Alimente a demanda, al menos cada 3 horas (al menos 8 tomas al día). En bebés > 1500 g que no están enfermos y maman, no es necesario calcular los líquidos.
+        - Si está enfermo y no puede mamar, inicie LME con los cálculos de alimentación enteral (abajo).
+  - page_number: 83
+    blocks:
+    - type: "prose"
+      title: "Alimentación enteral"
+      markdown: |
+        - Los neonatos < 32–34 semanas o < 1500 g a menudo no coordinan bien la succión y la deglución. Debe obtenerse leche materna extraída (LME) y darse con vaso, cuchara o sonda oro-/nasogástrica. No se recomienda el biberón.
+        - Dé LME cada 2 horas (12 tomas al día). Puede ponerse al pecho tras la LME.
+        - Los neonatos que no pueden mamar deben estar en ayuno el día 1. El día 2, inicie LME a 10 ml/kg/día, cubriendo el resto de las necesidades con líquidos IV.
+        - Aumente la LME 30 ml/kg/día cada 24 horas y reduzca los líquidos IV para mantenerse dentro de las necesidades diarias hasta suspenderlos. Vigile con cuidado la intolerancia alimentaria (vómitos, apneas, residuos gástricos).
+        - Cuando el volumen enteral llegue a 100 ml/kg/día y el bebé lo tolere, puede suspenderse la infusión IV. Intente suspender los líquidos IV hacia el día 7–8 de vida para reducir el riesgo de infección.
+        - Los recién nacidos pierden peso en la primera semana de vida, pero no deben perder más del 10% del peso corporal.
+        - Los recién nacidos deben recuperar el peso al nacer a las 2 semanas de edad. Tras recuperarlo, el objetivo es ganar 20–30 gramos al día durante las primeras 6–8 semanas de vida.
+    - type: "prose"
+      title: "Indicaciones de SOG o SNG"
+      markdown: |
+        - Todos los neonatos < 1300 gramos hasta que ganen peso de forma constante
+        - Prematuros o MBPN (< 32–34 semanas o < 1500 g) con succión débil o mala coordinación succión/deglución
+        - Dificultad respiratoria — riesgo de aspiración; todos los recién nacidos con CPAP
+        - Recién nacidos enfermos (asfixia, meningitis, convulsiones) — succión débil
+        - Ganancia de peso escasa / nula durante 1 semana solo con LME / lactancia materna
+    - type: "prose"
+      title: "Lactantes de MBPN (< 1500 g) — suplemento de vitaminas (cuando toleren la alimentación completa)"
+      markdown: |
+        - Vitamina D 400 UI al día hasta los 6 meses de edad
+        - Hierro **2–3 mg/kg al día** como suplemento rutinario del prematuro, a partir de las 2 semanas, hasta los 6 meses de edad. Reserve **4 mg/kg/día** para el déficit de hierro documentado

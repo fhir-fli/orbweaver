@@ -1,0 +1,50 @@
+# translated-from-sha256: 3f9e63ae0810e00532608dee765dd5fbd64264673fc09b73209054f7ecbdfa51
+topic:
+  id: "pb-pain-ladder"
+  title: "Dolor — escala numérica y escalera analgésica de la OMS"
+  list_subtitle: "p.80 · escala 0–10 · puntuación · tratamiento"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["dolor", "manejo del dolor", "escala numérica", "0-10", "escalera analgésica de la OMS", "paracetamol", "ibuprofeno", "morfina", "opioide", "tratamiento", "analgesia"]
+  category: "medical"
+  page_number: 80
+  blocks:
+  - type: "prose"
+    title: "Escala numérica"
+    markdown: |
+      Para adultos y niños que entienden las puntuaciones numéricas. Pida al paciente que puntúe su dolor de 0 a 10:
+      - **0** — sin dolor
+      - **5** — dolor moderado
+      - **10** — el peor dolor posible
+  - type: "table"
+    title: "Puntuación — todas las escalas anteriores se gradúan igual"
+    zebra: true
+    columns: ["Puntuación", "Interpretación"]
+    column_flex: [3, 7]
+    column_align: ["center", "left"]
+    rows:
+    - cells: ["0", "Relajado y cómodo"]
+    - cells: ["1–3", "Molestia leve"]
+    - cells: ["4–6", "Dolor moderado"]
+    - cells: ["7–10", "Dolor intenso"]
+  - type: "prose"
+    title: "Tratamiento — escalera analgésica de la OMS"
+    markdown: |
+      Un abordaje escalonado del control del dolor según la puntuación.
+      - **Escalón 1 · Puntuación 0–3 — no opioide**
+        - Paracetamol 10–15 mg/kg cada 4–6 h (adultos 650 mg VO cada 4–6 h)
+        - Ibuprofeno 10 mg/kg cada 6–8 h (adultos 400–800 mg VO cada 6–8 h)
+        - Puede alternar paracetamol e ibuprofeno — dé uno u otro cada 3 horas (p. ej., paracetamol ahora, ibuprofeno en 3 horas, paracetamol 3 horas después)
+        - ⚠️ **Al alternar es fácil pasarse. Cuente el total diario de cada fármaco:** paracetamol máx. **75 mg/kg/día** (adultos **4 g/día**) · ibuprofeno máx. **40 mg/kg/día** (adultos **2.4 g/día**)
+      - **Escalón 2 · Puntuación 4–6 — preferible opioide oral**
+        - Preferible morfina a codeína si está disponible
+        - Niños: morfina 0.2–0.5 mg/kg/dosis VO cada 4–6 h según necesidad
+        - Adultos: morfina 2–10 mg/dosis VO cada 2–4 h según necesidad
+      - **Escalón 3 · Puntuación 7–10 — preferible opioide IV**
+        - Niños: morfina 0.1–0.2 mg/kg/dosis IV cada 2–4 h según necesidad
+        - Adultos: morfina 1–2 mg/dosis IV cada 2–4 h según necesidad
+  - type: "prose"
+    title: "Notas"
+    highlight: true
+    markdown: |
+      - A menudo es útil combinar no opioides con opioides
+      - Al iniciar opioides, use una dosis suficiente para controlar el dolor y vigile la respiración cada hora (cada 1 h) para evitar la depresión respiratoria

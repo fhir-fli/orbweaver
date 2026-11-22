@@ -1,0 +1,78 @@
+# translated-from-sha256: dd1f293e749c4e4fcb3e15a767047b6c87cabfac74383d56954dc1de50378668
+topic:
+  id: "pb-neo-jaundice"
+  title: "Ictericia neonatal"
+  list_subtitle: "pp.88–89 · fototerapia · zonas de Kramer · umbrales"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "ictericia", "hiperbilirrubinemia", "bilirrubina", "fototerapia", "exanguinotransfusión", "kramer", "zonas dérmicas", "atresia biliar", "recién nacido"]
+  category: "medical"
+  pages:
+  - page_number: 88
+    blocks:
+    - type: "prose"
+      title: "Evaluación"
+      markdown: |
+        - Busque la ictericia con luz natural intensa si es posible. Mire los ojos, bajo la lengua, las palmas y las plantas.
+        - Mida siempre la bilirrubina sérica si tiene < 24 horas y si la ictericia es clínicamente moderada o intensa. Trate según [bilitool.org](https://bilitool.org/) o según la edad en días conforme a las guías de la OMS de abajo.
+        - **Toda ictericia < 24 horas requiere más estudio y tratamiento urgente con fototerapia o exanguinotransfusión.**
+        - Si no puede medir la bilirrubina, inicie fototerapia:
+          - En un bebé sano con ictericia fácilmente visible en la planta del pie durante la primera semana de vida
+          - En un prematuro (< 2000 g) con CUALQUIER ictericia visible
+          - En un bebé enfermo que come mal, está irritable y tiene ictericia moderada a intensa — evalúe y trate la sepsis
+        - Los bebés de más de 2 semanas necesitan estudio de causas obstructivas de ictericia como la atresia biliar. En general no requieren fototerapia.
+        - La fototerapia no trata la hiperbilirrubinemia **directa (conjugada)**.
+    - type: "prose"
+      title: "Fototerapia y cuidados de soporte — lista de control"
+      markdown: |
+        - **Proteja los ojos** con un parche ocular o un gorro. Retírelo de vez en cuando durante las tomas.
+        - **Mantenga al bebé desnudo.**
+        - **Coloque al bebé cerca de la fuente de luz** — a menudo se recomiendan 45 cm de distancia, pero más cerca está bien si el bebé no se sobrecalienta. Puede usar una tela blanca alrededor de la luz para reflejarla hacia el bebé. Conozca la distancia recomendada para su equipo.
+        - **No coloque nada sobre los equipos de fototerapia.** Las luces y el bebé deben mantenerse frescos, así que no tape las rejillas de ventilación. Mantenga el equipo limpio — el polvo puede transportar bacterias y reducir la luz emitida.
+        - **Fomente la lactancia materna frecuente.** Salvo que el bebé esté deshidratado, los suplementos o líquidos IV son innecesarios. La fototerapia puede interrumpirse para las tomas y para el vínculo materno.
+        - **Cambie de posición periódicamente** de decúbito supino a prono. Exponga la máxima superficie del bebé. Recoloque tras cada toma.
+        - **Controle la temperatura** cada 2 horas y el peso cada 24 horas.
+        - **Se requiere una bilirrubina plasmática/sérica periódica (cada 12–24 h).** La valoración visual de la ictericia no es fiable.
+        - **Asegúrese de que la fuente de luz funciona** y emite luz. Los tubos fluorescentes deben cambiarse si llevan más de 6 meses de uso, si los extremos se han ennegrecido o si las luces parpadean.
+  - page_number: 89
+    blocks:
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_neo_kramer_zones.png"
+      size: "full"
+      caption: "Zonas dérmicas de Kramer — la ictericia avanza de la cabeza a los pies (zona 1 = cabeza/cuello, zona 5 = palmas/plantas). Puede usarse si no hay otro método, pero la inspección visual de la ictericia no es fiable."
+    - type: "table"
+      title: "Zona dérmica → bilirrubina indirecta (mg/100 mL)"
+      zebra: true
+      columns: ["Zona dérmica", "Media ± DE", "Rango", "Observaciones"]
+      column_flex: [3, 3, 3, 3]
+      column_align: ["center", "center", "center", "center"]
+      rows:
+      - cells: ["1", "5.9 ± 0.3", "4.3–7.9", "13"]
+      - cells: ["2", "8.9 ± 1.7", "5.4–12.2", "49"]
+      - cells: ["3", "11.8 ± 1.8", "8.1–16.5", "52"]
+      - cells: ["4", "15.0 ± 1.7", "11.1–18.3", "45"]
+      - cells: ["5", "—", "> 15", "29"]
+    - type: "table"
+      title: "Umbral de fototerapia (inicie en o por encima)"
+      zebra: true
+      columns: ["Edad", "Sano ≥ 35 sem", "Prematuro < 35 sem o con factores de riesgo"]
+      column_flex: [3, 4, 5]
+      column_align: ["left", "center", "center"]
+      rows:
+      - cells: ["Día 1", "Cualquier ictericia visible", "Cualquier ictericia visible"]
+      - cells: ["Día 2", "260 µmol/l (15 mg/dl)", "170 µmol/l (10 mg/dl)"]
+      - cells: ["Día ≥ 3", "310 µmol/l (18 mg/dl)", "250 µmol/l (15 mg/dl)"]
+    - type: "table"
+      title: "Umbral de exanguinotransfusión (en o por encima)"
+      zebra: true
+      columns: ["Edad", "Sano ≥ 35 sem", "Prematuro < 35 sem o con factores de riesgo"]
+      column_flex: [3, 4, 5]
+      column_align: ["left", "center", "center"]
+      rows:
+      - cells: ["Día 1", "260 µmol/l (15 mg/dl)", "220 µmol/l (10 mg/dl)"]
+      - cells: ["Día 2", "425 µmol/l (25 mg/dl)", "260 µmol/l (15 mg/dl)"]
+      - cells: ["Día ≥ 3", "425 µmol/l (25 mg/dl)", "340 µmol/l (20 mg/dl)"]
+    - type: "prose"
+      markdown: |
+        - La exanguinotransfusión no se describe en este libro de bolsillo; los niveles de bilirrubina sérica se incluyen por si es posible hacerla, o si el lactante puede trasladarse con rapidez y seguridad a otro centro donde se pueda realizar.
+        - Los factores de riesgo incluyen tamaño pequeño (< 2.5 kg al nacer o nacido antes de las 37 semanas de gestación), hemólisis y sepsis.
+        - Cualquier ictericia visible en cualquier parte del cuerpo el día 1 es significativa.

@@ -1,0 +1,73 @@
+# translated-from-sha256: 9443115505aa09bd7974e07332c445810405177628503663ce81bdb7621ebc78
+topic:
+  id: "pb-neo-sepsis-prevention"
+  title: "Sepsis neonatal precoz — riesgo y prevención"
+  list_subtitle: "p.85 · < 7 días · factores de riesgo · profilaxis"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "sepsis", "sepsis precoz", "recién nacido", "factores de riesgo", "corioamnionitis", "RPM", "rotura de membranas", "profilaxis", "ampicilina", "prevención"]
+  category: "medical"
+  page_number: 85
+  blocks:
+  - type: "prose"
+    title: "Factores de riesgo"
+    markdown: |
+      - Rotura prolongada de membranas (> 18 horas)
+      - Trabajo de parto prolongado
+      - Fiebre materna (≥ 38°C) u otra evidencia de infección
+      - Líquido amniótico fétido o bebé maloliente
+      - Prematuridad (< 37 semanas)
+      - Bajo peso al nacer (< 2000 g)
+      - Nacimiento fuera de un centro de salud
+      - Algunas prácticas tradicionales (como aplicar estiércol de vaca en el cordón)
+      - APGAR a los 5 minutos < 6
+  - type: "prose"
+    title: "Prevención (en entornos sin laboratorio)"
+    markdown: |
+      Siga los pasos siguientes en orden.
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Evalúe si hay sepsis precoz"
+      shape: "stadium"
+    stages:
+    - decision: "¿Signos clínicos de sepsis?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Ciclo completo de antibióticos IV"
+          severity: "priority"
+      - label: "No"
+        continue: true
+    - decision: "¿Corioamnionitis materna, o un gemelo con signos clínicos de sepsis?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Antibióticos IV × 48 h, luego revise"
+      - label: "No"
+        continue: true
+    - decision: "¿RPM ≥ 18 h, o fiebre materna ≥ 38°C?"
+      outcomes:
+      - label: "No"
+        box:
+          title: "Cuidados clínicos de rutina"
+          severity: "non_urgent"
+      - label: "Sí"
+        continue: true
+    - decision: "¿La madre recibió 2 dosis de ampicilina IV ≥ 4 h antes del parto?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Observación durante ≥ 48 h"
+      - label: "No"
+        continue: true
+    - decision: "¿≥ 37 semanas de gestación (o peso ≥ 2000 g) Y RPM < 18 h?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Observación durante ≥ 48 h"
+      - label: "No"
+        continue: true
+    terminal:
+      title: "Antibióticos IV × 48 h, luego revise"
+      bullets:
+      - "Si < 37 semanas de gestación (o peso < 2000 g), o RPM ≥ 18 h"
