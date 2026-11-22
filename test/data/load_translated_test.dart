@@ -2,6 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:orbweaver/data/formula_strings.dart';
 import 'package:orbweaver/data/formula_strings_loader.dart';
 import 'package:orbweaver/data/library.dart';
+import 'package:orbweaver/data/localized_asset.dart';
 import 'package:orbweaver/data/topic_loader.dart';
 
 /// The REAL loader in Spanish: a page with a translation loads it, a page
@@ -21,11 +22,11 @@ void main() {
     final topic = await loadTopicAsset(mapEs.asset);
     expect(topic.title, 'Presión arterial media');
 
-    // A page with no Spanish file stays English, at its English path.
-    final otherEs = calcEs.allTopics.firstWhere((t) => t.id != 'calc-map');
-    final otherEn = calcEn.allTopics.firstWhere((t) => t.id == otherEs.id);
-    expect(otherEs.title, otherEn.title);
-    expect(otherEs.asset, otherEn.asset);
+    // Every calculator page now has a Spanish file, and each loads it.
+    for (final t in calcEs.allTopics) {
+      final english = calcEn.allTopics.firstWhere((e) => e.id == t.id);
+      expect(t.asset, translatedPath(english.asset, 'es'));
+    }
 
     // Same books, same topic ids, same order.
     expect(es.map((b) => b.id), en.map((b) => b.id));
@@ -35,6 +36,16 @@ void main() {
         en[i].allTopics.map((t) => t.id).toList(),
       );
     }
+  });
+
+  // Every bundled page is translated now, so the fallback is tested on a
+  // bundle listing that lacks one.
+  test('a page with no Spanish file stays English, at its English path', () {
+    const en = 'assets/books/calculators/topics/calc_map.yaml';
+    const es = 'assets/books/calculators/topics/es/calc_map.yaml';
+    expect(AssetLocalizer('es', {en, es}).path(en), es);
+    expect(AssetLocalizer('es', {en}).path(en), en);
+    expect(AssetLocalizer.english().path(en), en);
   });
 
   test('the bundled Spanish calculator wording loads', () async {
