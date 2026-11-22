@@ -1,0 +1,130 @@
+# translated-from-sha256: 9c5159773101b67db8e42d0645ae0bd24b0430d1e745f38d2a05b6607af2db99
+topic:
+  id: "wvems-2026-076"
+  version: "v260101"
+  title: "Epistaxis"
+  list_subtitle: "2026-076 · sangrado nasal / Afrin / TXA"
+  last_reviewed: "Feb 2025"
+  tags:
+  - "epistaxis"
+  - "sangrado nasal"
+  - "afrin"
+  - "txa"
+  - "traumatismo"
+  aliases:
+  - "Sangrado nasal"
+  - "Nariz que sangra"
+  - "Nariz rota"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 76
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Sangrado por la nariz"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Rezumado mínimo"
+        - "Sin disnea"
+        actions:
+        - text: "Presión directa"
+          kind: "procedure"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Sangrado activo"
+        - "Anticoagulado"
+        actions:
+        - text: "Presión directa"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "Afrin"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "TXA"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "Tapón salino"
+          kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Respiración](topic:wvems-2026-006)"
+        - text: "Circulación / [choque](topic:wvems-2026-008)"
+        - text: "Hemorragia"
+          link_id: "wvems-2026-058"
+      dose_table:
+      - drug: "[Afrin](topic:wvems-2026-drug-reference#afrin)"
+        dose: "1 pulverización"
+        route: "IN"
+        frequency: "Q 5 min x3"
+        population: "adult"
+      - drug: "[TXA](topic:wvems-2026-drug-reference#txa)"
+        dose: "150 mg"
+        route: "IN"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 77
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la epistaxis"
+      highlight: true
+      markdown: |
+        - Haga que el paciente se incline hacia delante y **apriete con firmeza la parte blanda de la nariz**.
+        - **Si sigue sangrando** — indique al paciente que se suene los coágulos antes de los fármacos.
+        - Aplique los fármacos **en la fosa nasal afectada** y vuelva a apretar la nariz con firmeza.
+        - **Puede repetir las dosis** en la otra fosa nasal si el sangrado continúa.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Afrin®](topic:wvems-2026-drug-reference#afrin)** (oximetazolina): no la use si hay cualquier [dolor torácico](topic:wvems-2026-028) cardíaco.
+        - **[TXA](topic:wvems-2026-drug-reference#txa)** (ácido tranexámico): use un **atomizador**. Evítelo si hay EP o TVP conocida.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - No todos los sangrados nasales son traumáticos. El tratamiento es el mismo.
+        - Revise la faringe por un posible **sangrado posterior**.
+          - El sangrado puede ser **importante**.
+          - Más frecuente en los ancianos.
+          - Los anticoagulantes aumentan el riesgo.
+          - Esté preparado para tratar el [choque](topic:wvems-2026-008).
+        - Los anticoagulantes (**que adelgazan la sangre**) también aumentan el riesgo en:
+          - [Traumatismo grave](topic:wvems-2026-056)
+          - [Hemorragia](topic:wvems-2026-058)
+          - [Traumatismo craneal](topic:wvems-2026-062)
+    - type: "prose"
+      title: "Fármacos anticoagulantes"
+      callout: true
+      markdown: |
+        - Ácido acetilsalicílico (AAS)
+        - Coumadin® (warfarina)
+        - Eliquis® (apixabán)
+        - Plavix® (clopidogrel)
+        - Xarelto® (rivaroxabán)
+        - Effient® (prasugrel)
+        - Pradaxa® (dabigatrán)
+        - Brilinta® (ticagrelor)
+        - Lovenox® (enoxaparina)
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Los sangrados nasales suelen deberse a traumatismos menores (hurgarse la nariz).
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Epistaxis — https://emedicine.medscape.com/article/764719 [Ver: 8/23]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 29
+
+        NEMSIS: 9914059
