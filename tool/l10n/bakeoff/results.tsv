@@ -85,3 +85,4 @@ litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	1
 litert_gemma-4-E4B-it	assets/books/wvems/topics/wvems_2026_020.yaml	178.3	0	0	3
 litert_gemma-4-E4B-it	assets/books/wvems/topics/wvems_2026_062.yaml	187.5	0	0	0
 litert_gemma-4-E4B-it	assets/books/calculators/topics/conv_steroids.yaml	86.9	0	0	0
+litert_gemma-4-12B-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	481.8	0	0	bad-reply: Invalid \escape: line 16 column 696 (char 1103)
