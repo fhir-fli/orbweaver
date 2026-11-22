@@ -18,3 +18,43 @@ haiku	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	11.8	2279	3149	0
 haiku	assets/books/wvems/topics/wvems_2026_020.yaml	15.4	2430	4322	0
 haiku	assets/books/wvems/topics/wvems_2026_062.yaml	20.9	2427	6054	0
 haiku	assets/books/calculators/topics/conv_steroids.yaml	8.4	1480	2283	0
+gemini_gemini-3.1-flash-lite	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	4.6	1826	1521	0
+gemini_gemini-3.1-flash-lite	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	4.6	1947	1660	0
+gemini_gemini-3.1-flash-lite	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	4.6	2100	1827	1
+gemini_gemini-3.1-flash-lite	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	4.9	1852	1630	1
+gemini_gemini-3.1-flash-lite	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	4.2	1347	1091	0
+gemini_gemini-3.1-flash-lite	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	5.2	1234	909	0
+gemini_gemini-3.1-flash-lite	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	4.3	1565	1332	0
+gemini_gemini-3.1-flash-lite	assets/books/wvems/topics/wvems_2026_020.yaml	5.0	1814	1507	0
+gemini_gemini-3.1-flash-lite	assets/books/wvems/topics/wvems_2026_062.yaml	4.0	1782	1541	0
+gemini_gemini-3.1-flash-lite	assets/books/calculators/topics/conv_steroids.yaml	2.8	973	656	0
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	214.5	1826	1543	0
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	65.1	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	48.6	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	0.2	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	0.5	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	30.8	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	26.4	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/wvems/topics/wvems_2026_020.yaml	65.6	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/wvems/topics/wvems_2026_062.yaml	172.7	1782	1534	0
+gemini_gemma-4-31b-it	assets/books/calculators/topics/conv_steroids.yaml	97.5	973	645	0
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/wvems/topics/wvems_2026_020.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/wvems/topics/wvems_2026_062.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/calculators/topics/conv_steroids.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/wvems/topics/wvems_2026_020.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/wvems/topics/wvems_2026_062.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/calculators/topics/conv_steroids.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error

@@ -63,7 +63,9 @@ def call_haiku(page_text):
 
 def call_gemini(model, page_text):
     from google import genai
-    client = genai.Client(api_key=key('GOOGLE_API_KEY'))
+    # Grey's AI Studio key, kept out of every repo.
+    env = open(os.path.expanduser('~/.config/orbweaver-l10n/keys.env')).read()
+    client = genai.Client(api_key=re.search(r'GEMINI_API_KEY=(\S+)', env).group(1))
     r = client.models.generate_content(model=model, contents=PROMPT + page_text)
     u = r.usage_metadata
     return r.text, u.prompt_token_count, u.candidates_token_count
@@ -85,6 +87,16 @@ def call_ollama(tag, page_text):
     return r['response'], r.get('prompt_eval_count', 0), r.get('eval_count', 0)
 
 
+def call(backend, text):
+    if backend == 'haiku':
+        return call_haiku(text)
+    if backend.startswith('gemini:'):
+        return call_gemini(backend.split(':', 1)[1], text)
+    if backend.startswith('ollama:'):
+        return call_ollama(backend.split(':', 1)[1], text)
+    raise SystemExit(f'unknown backend {backend}')
+
+
 def main():
     backend = sys.argv[1]
     label = re.sub(r'[^A-Za-z0-9._-]', '_', backend)
@@ -100,14 +112,14 @@ def main():
         source = segments.extract(english)
         text = json.dumps(source, ensure_ascii=False, indent=1)
         t0 = time.time()
-        if backend == 'haiku':
-            raw, tin, tout = call_haiku(text)
-        elif backend.startswith('gemini:'):
-            raw, tin, tout = call_gemini(backend.split(':', 1)[1], text)
-        elif backend.startswith('ollama:'):
-            raw, tin, tout = call_ollama(backend.split(':', 1)[1], text)
-        else:
-            raise SystemExit(f'unknown backend {backend}')
+        try:
+            raw, tin, tout = call(backend, text)
+        except Exception as e:  # an API refusal or outage is a result row, not a crash
+            msg = str(e).splitlines()[0][:200]
+            results.write(f'{label}\t{page}\t{time.time() - t0:.1f}\t0\t0\tapi-error: {msg}\n')
+            results.flush()
+            print(f'{page}: api error: {msg}', flush=True)
+            continue
         secs = time.time() - t0
         stamp = hashlib.sha256(open(english, 'rb').read()).hexdigest()
         with open(out + '.raw.txt', 'w') as f:
