@@ -1,0 +1,112 @@
+# translated-from-sha256: 1b8b86b3bd647f5bbe20f82ff627f4382469d040d6f200e518a131366184a000
+topic:
+  id: "wvems-2026-026"
+  version: "v260101"
+  title: "RCE médico"
+  list_subtitle: "2026-026 · retorno del pulso / posreanimación"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "rce"
+  - "posreanimación"
+  - "ketamina"
+  - "amiodarona"
+  - "médico"
+  aliases:
+  - "Retorno del pulso"
+  - "Cuidados posreanimación"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 26
+    blocks:
+    - type: "flowchart"
+      variant: "linear"
+      entry_chain:
+      - text: "Retorno del pulso"
+        shape: "stadium"
+      steps:
+      - type: "content"
+        title: "Estabilice"
+        bullets:
+        - "Establezca la [vía aérea](topic:wvems-2026-004)"
+        - "Proporcione [respiración](topic:wvems-2026-006)"
+        - "Trate la [circulación](topic:wvems-2026-008)"
+      - type: "action"
+        provider_level: "E"
+        text: "12 derivaciones"
+        kind: "diagnostic"
+      - type: "action"
+        provider_level: "A"
+        text: "Tapón salino"
+        kind: "procedure"
+      - type: "action"
+        text: "Glucómetro"
+        kind: "diagnostic"
+      - type: "action"
+        provider_level: "I"
+        text: "Ketamina"
+        condition: "Si está agitado"
+        kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[Fiebre](topic:wvems-2026-016), [Alteración de la conciencia](topic:wvems-2026-036)"
+        - text: "[Diabético](topic:wvems-2026-038), [Sobredosis](topic:wvems-2026-040)"
+        - text: "[Intubación](topic:wvems-2026-078), [Ventilador](topic:wvems-2026-080)"
+      critical_care_link:
+        text: "[Intubación](topic:wvems-2026-078), [Ventilador](topic:wvems-2026-080)"
+      dose_table:
+      - drug: "[Ketamine](topic:wvems-2026-drug-reference#ketamine)"
+        dose: "20 mg"
+        route: "IV/IO"
+        frequency: "Q 5 min x2"
+        population: "adult"
+  - page_number: 27
+    blocks:
+    - type: "prose"
+      title: "Imperativos del RCE médico"
+      highlight: true
+      markdown: |
+        - Asegure una reanimación adecuada **antes** de intentar el traslado.
+          - Muévase con rapidez pero con precaución. **No sacrifique la estabilidad.**
+        - Vigile de cerca la [hipotensión](topic:wvems-2026-008). Tenga listos líquidos y vasopresores.
+        - Evite la hiperventilación. Puede causar [hipotensión](topic:wvems-2026-008) y un nuevo paro.
+        - Vigile la temperatura corporal y trate cualquier [fiebre](topic:wvems-2026-016) de forma enérgica con fármacos.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Ketamina](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®): diluya en SSN y **adminístrela despacio en 10 min**.
+          - Use la [dosificación pediátrica por peso](topic:wvems-2026-144) en adultos de menos de 110 lbs (50 kg).
+        - Considere un goteo de mantenimiento si hubo **TV/FV previa** y el **traslado dura > 30 min**:
+          - {I} **[Amiodarona](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®): 1 mg/min IV/IO, solo adultos.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - El **EtCO₂** puede ayudar a identificar el RCE. Vigílelo durante la reanimación.
+        - La hipotermia terapéutica **no está incluida** en este protocolo.
+          - También llamada "manejo dirigido de la temperatura".
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [intubación](topic:wvems-2026-078) y/o el [ventilador](topic:wvems-2026-080) si están indicados y está acreditado para CC.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Las arritmias son frecuentes tras el RCE, pero suelen ser autolimitadas.
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape ROSC — https://www.medscape.com/viewarticle/762373 [Ver: 2012]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 20, 21
+
+        NEMSIS: 9914019

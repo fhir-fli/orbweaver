@@ -1,0 +1,154 @@
+# translated-from-sha256: 71893a616e9258603b524c3b5e4aeaa93185b489eed63299f933025d3c9f0512
+topic:
+  id: "wvems-2026-024"
+  version: "v260101"
+  title: "Paro médico (CODE)"
+  list_subtitle: "2026-024 · compresiones / DEA / epinefrina / amiodarona"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "paro médico"
+  - "paro cardíaco"
+  - "rcp"
+  - "tv/fv"
+  - "aesp"
+  - "asistolia"
+  - "epinefrina"
+  - "amiodarona"
+  aliases:
+  - "Paro cardíaco"
+  - "RCP"
+  - "TV/FV"
+  - "AESP"
+  - "Asistolia"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 24
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: |-
+          Sin pulso
+          Sin muerte evidente
+          Sin DNR/POST
+        shape: "stadium"
+      decision:
+        text: "Asigne tareas"
+        shape: "diamond"
+      branches:
+      - id: "first"
+        label: "1. Compresiones"
+        criteria:
+        - "Lo más importante"
+        - "Empiece de inmediato"
+        - "Minimice las pausas"
+        actions:
+        - text: "Compresión torácica"
+          kind: "procedure"
+      - id: "second"
+        label: "2. DEA"
+        criteria:
+        - "Corte la ropa"
+        - "Trabaje sin interrumpir la RCP"
+        - "Analice cada 2 min"
+        actions:
+        - text: "Desfibrile"
+          kind: "procedure"
+          condition: "Si se indica"
+      - id: "third"
+        label: "3. Soporte"
+        criteria:
+        - "Establezca la [vía aérea](topic:wvems-2026-004)"
+        - "Proporcione [respiración](topic:wvems-2026-006)"
+        - "Use acceso IV o IO"
+        actions:
+        - provider_level: "I"
+          text: "Epinefrina"
+          kind: "medication_administration"
+        - provider_level: "I"
+          text: "Amiodarona"
+          kind: "medication_administration"
+          condition: "Si TV/FV"
+      convergence:
+        text: "Destino"
+        shape: "stadium"
+        bullets:
+        - text: "{E} BLS: pida ALS cuanto antes"
+        - text: "{I} ALS: [intente 30 min](topic:wvems-2026-109#termination-of-resuscitation)"
+      dose_table:
+      - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
+        dose: "1 mg"
+        route: "IV/IO"
+        frequency: "Q 5 min"
+        population: "adult"
+      - drug: "[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)"
+        dose: "300 → 150 mg"
+        route: "IV/IO"
+        frequency: "Q 5 min x2"
+        population: "adult"
+      - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
+        dose: "0.01 mg/kg"
+        route: "IV/IO"
+        frequency: "Q 5 min"
+        population: "peds"
+      - drug: "[Amiodarone](topic:wvems-2026-drug-reference#amiodarone)"
+        dose: "5 mg/kg"
+        route: "IV/IO"
+        frequency: "Q 5 min x3"
+        population: "peds"
+  - page_number: 25
+    blocks:
+    - type: "prose"
+      title: "Imperativos del paro"
+      highlight: true
+      markdown: |
+        - Empiece las compresiones en el sitio.
+          - Traslade cuanto antes si hay **RCE**, o es **pediátrico**, o **embarazada**, o cualquier [caso especial](topic:wvems-2026-109#termination-of-resuscitation).
+        - {E} **BLS**: pida ALS cuanto antes. [Traslade](topic:wvems-2026-109#termination-of-resuscitation) si lo presenció el SEM o hubo alguna descarga.
+        - {I} **ALS**: intente durante **30 min**. Si no hay RCE: [solicite la terminación](topic:wvems-2026-109#termination-of-resuscitation).
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Compresiones"
+        markdown: |
+          - Adulto/pediátrico: **120 /min**
+          - OPA/NPA: **30:2** con BVM
+          - BIAD/TET: **continuas**
+      - type: "prose"
+        title: "Muerte evidente"
+        markdown: |
+          - Livideces declives
+          - Rigidez cadavérica
+          - Descomposición del cuerpo
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Amiodarona](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®):
+          - En adultos, administre dos veces (x2) cada 5 min
+            - (1) 300 mg → (2) 150 mg
+          - En pediatría, administre 5 mg/kg tres veces (x3) cada 5 min
+        - Considere fármacos complementarios en el paro por TV polimorfa sin pulso:
+          - {I} **[Magnesio](topic:wvems-2026-drug-reference#magnesium)** (sulfato): 2 gramos IV/IO x1 para torsades
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Tenga precaución con las **[compresiones](topic:wvems-2026-096#chest-compression)** y la **[desfibrilación](topic:wvems-2026-096#defib)** en un vehículo en movimiento.
+        - El **EtCo2** puede ayudar a identificar el RCE y a orientar la decisión de terminar.
+        - Un paro bien llevado debe funcionar como un **equipo de boxes**. Céntrese en su tarea.
+        - Considere las causas: [choque](topic:wvems-2026-008), [sobredosis/tóxicos](topic:wvems-2026-040), [hipoglucemia](topic:wvems-2026-038), [hiperpotasemia](topic:wvems-2026-018), etc.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use una relación de compresiones 15:2 en la reanimación BLS con dos reanimadores.
+        - Remítase a [neonato](topic:wvems-2026-050) para cualquier paciente pediátrico de **menos de 1 mes** (≤ 30 días).
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape CPR — https://emedicine.medscape.com/article/1344081 [Ver: 8/21]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 20, 21

@@ -1,0 +1,152 @@
+# translated-from-sha256: fb9f7ebd565d8793891eae7a2fbbf258ebd21247e9326744a4f36ecf8b877036
+topic:
+  id: "wvems-2026-028"
+  version: "v260101"
+  title: "Dolor torácico"
+  list_subtitle: "2026-028 · ácido acetilsalicílico / nitroglicerina"
+  last_reviewed: "Feb 2025"
+  tags: ["dolor torácico", "sca", "iamcest", "iam", "ácido acetilsalicílico", "nitro", "cardíaco"]
+  aliases:
+  - "SCA"
+  - "Infarto"
+  - "IAM agudo"
+  - "Cardíaco"
+  - "Coronario"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 28
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Molestia torácica cardíaca"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Molestia leve"
+        - "Antecedentes cardíacos"
+        actions:
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "E"
+          text: "Ácido acetilsalicílico"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "Tapón salino"
+          kind: "procedure"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Náuseas, sudoración"
+        - "Dolor que se irradia"
+        actions:
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "E"
+          text: "Ácido acetilsalicílico"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "Tapón salino"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "Nitroglicerina"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[Respiración](topic:wvems-2026-006), [Taquicardia](topic:wvems-2026-014)"
+        - text: "[Dolor](topic:wvems-2026-020), [Lesión del tronco](topic:wvems-2026-064)"
+        - text: "[IAMCEST](topic:wvems-2026-088)"
+      critical_care_link:
+        text: "[IAMCEST](topic:wvems-2026-088)"
+      dose_table:
+      - drug: "[Aspirin](topic:wvems-2026-drug-reference#aspirin)"
+        dose: "4 × 81 mg"
+        route: "PO"
+        frequency: "x1 (chewed)"
+        population: "adult"
+      - drug: "[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
+        dose: "0.4 mg"
+        route: "SL"
+        frequency: "Q 5 min x3"
+        population: "adult"
+  - page_number: 29
+    blocks:
+    - type: "prose"
+      title: "Imperativos del dolor torácico"
+      highlight: true
+      markdown: |
+        - Este protocolo es solo para urgencias **cardíacas** sospechadas (SCA).
+          - Para el dolor por traumatismo torácico, remítase a [lesión del tronco](topic:wvems-2026-064).
+          - Para las palpitaciones, remítase a [taquicardia](topic:wvems-2026-014) o [bradicardia](topic:wvems-2026-012).
+        - En todo paciente con un **IAMCEST** identificado: coloque los **parches de desfibrilación**.
+          - Además, descubra y rasure la ingle durante el traslado si hay tiempo.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Ácido acetilsalicílico](topic:wvems-2026-drug-reference#aspirin)** (AAS infantil): contraindicado con sangrado GI **activo**
+          - Haga que el paciente **mastique cuatro** (4) tabletas de 81 mg (sin cubierta entérica).
+        - **[Nitroglicerina](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (nitroglicerina): puede causar [hipotensión](topic:wvems-2026-008).
+          - Precaución si está [hipotenso](topic:wvems-2026-008) o si se sospecha IAMCEST inferior/derecho.
+          - Contraindicada si la PAS es menor de 110 mmHg **sin acceso IV/IO**.
+          - Contraindicada si hubo uso reciente (36 h) de cualquier **inhibidor de la PDE5**:
+    - type: "row"
+      blocks:
+      - type: "prose"
+        flex: 6
+        title: "Alerta IAMCEST"
+        callout: true
+        dashed: true
+        call_er: true
+        markdown: |
+          - Si ve un [IAMCEST](topic:wvems-2026-088)
+          - O el ECG dice \*\***AMI**\*\*
+          - Active una alerta de **IAMCEST**
+      - type: "prose"
+        flex: 5
+        title: "Inhibidores de la PDE5"
+        callout: true
+        markdown: |
+          - Sildenafilo (Viagra®)
+          - Tadalafilo (Cialis®)
+          - Vardenafilo (Levitra®)
+          - Avanafilo (Stendra®)
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere una presentación cardíaca atípica en **diabéticos** y **ancianos**.
+          - No siempre hay dolor torácico real. Pregunte por antecedentes cardíacos.
+          - Puede haber disnea o "molestia" o náuseas, o estar débil y sudoroso.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere los cuidados avanzados del [IAMCEST](topic:wvems-2026-088) si están indicados y está acreditado para CC.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - El dolor torácico cardíaco es improbable en pediatría. Considere otras causas.
+        - El **[ácido acetilsalicílico](topic:wvems-2026-drug-reference#aspirin)** y la **[nitroglicerina](topic:wvems-2026-drug-reference#nitro-nitro-drip)** están contraindicados en el dolor torácico pediátrico.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape ACS — https://emedicine.medscape.com/article/1910735 [Ver: 9/25]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 20
+
+        NEMSIS: 9914117, 9914143
