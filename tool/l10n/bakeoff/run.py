@@ -66,7 +66,18 @@ def call_gemini(model, page_text):
     # Grey's AI Studio key, kept out of every repo.
     env = open(os.path.expanduser('~/.config/orbweaver-l10n/keys.env')).read()
     client = genai.Client(api_key=re.search(r'GEMINI_API_KEY=(\S+)', env).group(1))
-    r = client.models.generate_content(model=model, contents=PROMPT + page_text)
+    # Free-tier models answer 503 "high demand" often; wait and try again,
+    # up to ~1 hour per page, logging each wait.
+    for attempt in range(12):
+        try:
+            r = client.models.generate_content(model=model, contents=PROMPT + page_text)
+            break
+        except Exception as e:
+            if '503' not in str(e) or attempt == 11:
+                raise
+            wait = min(60 * 2 ** attempt, 600)
+            print(f'  503, retry {attempt + 1} in {wait}s', flush=True)
+            time.sleep(wait)
     u = r.usage_metadata
     return r.text, u.prompt_token_count, u.candidates_token_count
 
