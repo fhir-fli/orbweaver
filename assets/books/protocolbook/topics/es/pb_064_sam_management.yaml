@@ -25,8 +25,8 @@ topic:
       markdown: |
         Glucemia <3mmol/L (54mg/dL). Tratamiento:
 
-        - Puede beber: 50mls de dextrosa al 10% o agua azucarada (1 cucharada de azúcar + 50mls de agua)
-        - No puede beber: dextrosa al 10% IV 2mls/kg, seguida de 50mLs de dextrosa al 10% o agua azucarada por SNG
+        - Puede beber: 50mL de dextrosa al 10% o agua azucarada (1 cucharada de azúcar + 50mL de agua)
+        - No puede beber: dextrosa al 10% IV 2mL/kg, seguida de 50mL de dextrosa al 10% o agua azucarada por SNG
     - type: "prose"
       title: "2. Hipotermia"
       markdown: |
@@ -48,7 +48,7 @@ topic:
       markdown: |
         - Oxígeno
         - Mantenga abrigado
-        - Líquidos IV: 15mls/kg/hora (puede repetirse una vez)
+        - Líquidos IV: 15mL/kg/hora (puede repetirse una vez)
         - Elección de líquidos: RL+D5% o ½SSN+D5%, añada 20mmol/L de KCL
         - Si no mejora tras el primer bolo, suponga choque séptico y administre sangre total 10mL/kg
     - type: "prose"
@@ -66,8 +66,8 @@ topic:
 
         **Tratamiento — use la solución de rehidratación para la desnutrición (ReSoMal):**
 
-        - 5mls/kg VO cada 30min x 2 h, LUEGO
-        - 5–10mls/kg/h, alternando ReSoMal una hora y F-75 la siguiente x 10 h
+        - 5mL/kg VO cada 30min x 2 h, LUEGO
+        - 5–10mL/kg/h, alternando ReSoMal una hora y F-75 la siguiente x 10 h
         - Si mejora, dé ReSoMal solo después de cada deposición líquida
         - ⚠️ **Si hay cólera o diarrea acuosa profusa — use SRO ESTÁNDAR, no ReSoMal.** La ReSoMal es deliberadamente baja en sodio (45 mmol/L) para el niño con DAG edematoso y sobrecargado de sodio; en la diarrea de alto débito con pérdida de sodio empeora la hiponatremia
         - 🛑 **Suspenda la ReSoMal de inmediato si la frecuencia respiratoria sube 5/min Y el pulso 25/min** — reevalúe por sobrecarga de líquidos
@@ -78,8 +78,8 @@ topic:
 
         - **Suspenda la alimentación solo durante la transfusión** (unas 3 horas) y reanúdela de inmediato. Mantenga el D10% de mantenimiento — la otra emergencia de este niño es la hipoglucemia
         - Compruebe si hay insuficiencia cardíaca antes de empezar
-        - Sin insuficiencia cardíaca: 10mls/kg de sangre total **lentamente en 3h**
-        - Con insuficiencia cardíaca: 5–7mls/kg de concentrado de hematíes
+        - Sin insuficiencia cardíaca: 10mL/kg de sangre total **lentamente en 3h**
+        - Con insuficiencia cardíaca: 5–7mL/kg de concentrado de hematíes
         - ⚠️ **Administre furosemida 1mg/kg IV al INICIO de la transfusión.** En la DAG la transfusión debe ser más lenta y menor que en un niño bien nutrido — la propia transfusión es una de las principales causas de la insuficiencia cardíaca del punto 6
         - **Vigile cada 15 minutos** — pulso, respiración, campos pulmonares, tamaño del hígado. Si la respiración sube 5/min o el pulso 25/min, **transfunda más despacio**. Si aparecen crepitantes basales o aumenta el hígado, **suspenda y administre furosemida 1mg/kg IV**
         - 🛑 **No repita la transfusión** aunque la Hb siga baja, ni en los 4 días siguientes a la última

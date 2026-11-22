@@ -25,11 +25,11 @@ topic:
         outcomes:
         - label: "Sí — choque"
           box:
-            title: "Ringer 20mls/kg en 15 minutos"
+            title: "Ringer 20mL/kg en 15 minutos"
             bullets:
             - "Puede administrarse un segundo bolo si es necesario antes de pasar al PASO 2 DEL PLAN C de abajo"
             - "Trate la hipoglucemia"
-            - "Inicie SRO 5 mls/kg/h cuando pueda beber"
+            - "Inicie SRO 5 mL/kg/h cuando pueda beber"
             severity: "emergency"
         - label: "No"
           continue: true
@@ -46,9 +46,9 @@ topic:
           box:
             title: "PLAN C"
             bullets:
-            - "PASO 1: Ringer 30mls/kg en — >12 meses: 30 minutos · <12 meses: 60 minutos"
+            - "PASO 1: Ringer 30mL/kg en — >12 meses: 30 minutos · <12 meses: 60 minutos"
             - "Si no hay acceso IV ni líquidos IV"
-            - "PASO 2: Ringer 70mls/kg en — >12 meses: 2.5 horas · <12 meses: 5 horas"
+            - "PASO 2: Ringer 70mL/kg en — >12 meses: 2.5 horas · <12 meses: 5 horas"
             - "Si no hay acceso IV ni líquidos IV, rehidrate por SNG con 100ml/kg de SRO"
             - "Reevalúe cada hora"
             - "Tras 3–6 horas, reclasifique el grado de deshidratación"
@@ -67,7 +67,7 @@ topic:
           box:
             title: "PLAN B"
             bullets:
-            - "SRO VO a 75mls/kg en 4 horas"
+            - "SRO VO a 75mL/kg en 4 horas"
             - "Continúe la lactancia materna y/o fomente la alimentación si tiene >6 meses"
             - "Reevalúe y reclasifique a las 4 horas"
             severity: "priority"
@@ -76,7 +76,7 @@ topic:
       terminal:
         title: "Sin deshidratación significativa (PLAN A) — diarrea/GE con menos de 2 de los signos de deshidratación anteriores"
         bullets:
-        - "SRO VO a 10mls/kg tras cada deposición líquida"
+        - "SRO VO a 10mL/kg tras cada deposición líquida"
         - "Continúe la lactancia materna y/o fomente la alimentación si tiene >6 meses"
         severity: "non_urgent"
   - page_number: 44

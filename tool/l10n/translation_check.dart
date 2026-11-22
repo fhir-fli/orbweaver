@@ -63,9 +63,11 @@ final _numbers = RegExp(r'\d+(?:[.,]\d+)*');
 final _comparisons = RegExp('[<>≤≥]');
 // A unit counts only right after a number or a "/" ("0.1 mg/kg", "5 mL",
 // "1-ml syringe"):
-// a bare letter in prose ("e.g.", "GCS") is not a unit.
+// a bare letter in prose ("e.g.", "GCS") is not a unit. An English plural
+// ("9 mLs", "50mls") is the same unit, so the trailing "s" is matched but not
+// captured: the unit compared is group 1.
 final _units = RegExp(
-  r'(?<=(?:\d|/)[\s-]?)(mg|mcg|µg|μg|ng|g|kg|mL|ml|L|dL|mmol|mEq|mOsm)(?![A-Za-zÀ-ÿ])',
+  r'(?<=(?:\d|/)[\s-]?)(mg|mcg|µg|μg|ng|g|kg|mL|ml|L|dL|mmol|mEq|mOsm)s?(?![A-Za-zÀ-ÿ])',
 );
 final _links = RegExp(r'\]\(([^)]+)\)');
 
@@ -105,7 +107,8 @@ String layoutOf(String s) {
 Map<String, Object> safetyOf(String s) => {
   'numbers': allMatches(_numbers, s),
   'comparisons': allMatches(_comparisons, s),
-  'units': allMatches(_units, s),
+  // "ml" and "mL" are one unit; the books use both spellings.
+  'units': _sorted(allMatches(_units, s, 1).map((u) => u == 'ml' ? 'mL' : u)),
   'links': allMatches(_links, s, 1),
   'bold runs': '**'.allMatches(s).length,
   'layout': layoutOf(s),

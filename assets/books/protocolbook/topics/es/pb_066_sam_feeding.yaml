@@ -12,8 +12,8 @@ topic:
     title: "Estabilización"
     markdown: |
       - Use solo F-75
-      - Si hay edema: 100mls/kg/día
-      - Si no hay edema: 130mls/kg/día
+      - Si hay edema: 100mL/kg/día
+      - Si no hay edema: 130mL/kg/día
       - No cambie el volumen diario total de leche, aunque pierda o gane peso
       - Al principio tomas cada 2 horas durante al menos 48 h
       - Si está estable, pase a tomas cada 3 o cada 4 horas
@@ -40,7 +40,7 @@ topic:
     title: "Transición a F-100"
     markdown: |
       - Los primeros 2 días, dé el mismo volumen que de F-75
-      - El día 3, añada 10mls por toma hasta un máximo de 220ml/kg/día o hasta que el niño no pueda terminarla
+      - El día 3, añada 10mL por toma hasta un máximo de 220ml/kg/día o hasta que el niño no pueda terminarla
       - Inicie el suplemento de hierro el día 3 de la transición
   - type: "prose"
     title: "Cuándo volver a la estabilización"

@@ -35,7 +35,7 @@ topic:
           - "Garantice la seguridad y compruebe el ABC"
           - "Inicie oxígeno"
           - "Diazepam 0.2mg/kg IV lento en 1min (máx. 10mg) O diazepam rectal en supositorio de 2.5mg: <10kg 1 supositorio · 10–15kg 2 · 15–20kg 3 · 20–25kg 4 supositorios"
-          - "Dextrosa al 10% 2mls/kg IV (o mida la glucosa)"
+          - "Dextrosa al 10% 2mL/kg IV (o mida la glucosa)"
           - "Compruebe el ABC cuando cese la convulsión"
         continue: true
       - label: "No"

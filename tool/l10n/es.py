@@ -51,6 +51,8 @@ def english_pages(book=None):
         # The manifest (group titles, book title) is translated like a page;
         # it lands at <book>/es/book.yaml, where the loader looks for it.
         out.append(f'assets/books/{b}/book.yaml')
+        if os.path.exists(os.path.join(REPO, f'assets/books/{b}/formulary.yaml')):
+            out.append(f'assets/books/{b}/formulary.yaml')
         d = f'assets/books/{b}/topics'
         out += sorted(f'{d}/{n}' for n in os.listdir(os.path.join(REPO, d)) if n.endswith('.yaml'))
     return out
