@@ -1,0 +1,132 @@
+# translated-from-sha256: 541c194d04c24565f1ced7136e33ad7fdade8a6bad579ad83b1d27ebe1c520bc
+topic:
+  id: "wvems-2026-088"
+  version: "v260101"
+  title: "IAMCEST"
+  list_subtitle: "2026-088 · 15 derivaciones / Sgarbossa / heparina"
+  last_reviewed: "Feb 2025"
+  tags:
+  - "iamcest"
+  - "sca"
+  - "15 derivaciones"
+  - "sgarbossa"
+  - "heparina"
+  - "cuidados críticos"
+  aliases:
+  - "ECG de 15 derivaciones"
+  - "BRI"
+  - "IAMCEST derecho"
+  - "IAMCEST posterior"
+  category: "critical_care"
+  layout: "paged"
+  pages:
+  - page_number: 88
+    blocks:
+    - type: "flowchart"
+      variant: "linear"
+      entry_chain:
+      - text: "Sospecha de SCA con cambios patológicos en el ECG"
+        shape: "stadium"
+      steps:
+      - type: "action"
+        text: "Trate el [dolor torácico](topic:wvems-2026-028)n](topic:wvems-2026-020)"
+        kind: "referral"
+      - type: "action"
+        provider_level: "P(CC)"
+        text: "15 derivaciones"
+        condition: "Si está indicado"
+        kind: "diagnostic"
+      - type: "action"
+        provider_level: "P(CC)"
+        text: "Sgarbossa"
+        condition: "Marcapasos ventricular o BRI"
+        kind: "diagnostic"
+      - type: "content"
+        title: "Confirme:"
+        bullets:
+        - "Síntomas de SCA"
+        - "ECG con IAMCEST"
+      - type: "action"
+        provider_level: "P(CC)"
+        text: "Heparina"
+        kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[Respiración](topic:wvems-2026-006)"
+        - text: "[Choque](topic:wvems-2026-008)"
+        - text: "Dolor"
+          link_id: "wvems-2026-020"
+        - text: "Dolor torácico"
+          link_id: "wvems-2026-028"
+      dose_table:
+      - drug: "[Heparin](topic:wvems-2026-drug-reference#heparin)"
+        dose: "5,000 unidades"
+        route: "IV/IO"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 89
+    blocks:
+    - type: "prose"
+      title: "Requisitos previos obligatorios de IAMCEST"
+      highlight: true
+      markdown: |
+        - En los últimos 12 meses: aprobar una formación interna de cuidados críticos.
+    - type: "prose"
+      title: "Imperativos"
+      markdown: |
+        - No olvide [lo básico](topic:wvems-2026-028): **O₂**, **AAS** y **nitroglicerina**. Coloque la **vía IV en la mano izquierda**.
+        - Haga un **ECG de 15 derivaciones** si: IAMCEST inferior o descensos del ST septales.
+          - La elevación del ST en V4R indica IAM derecho — la **nitroglicerina** puede causar [choque](topic:wvems-2026-008).
+          - Las elevaciones del ST en V8 y V9 indican un **IAMCEST posterior**.
+        - Si hay marcapasos ventricular o BRI: cualquiera de los criterios de **Sgarbossa** sugiere un IAMCEST.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        flex: 6
+        title: "Alerta IAMCEST"
+        callout: true
+        dashed: true
+        call_er: true
+        markdown: |
+          - Si hay **marcapasos ventricular** o **BRI**
+          - con cualquier criterio de **Sgarbossa**
+          - Active una alerta de **IAMCEST**
+      - type: "prose"
+        flex: 5
+        title: "Sgarbossa (modificado)"
+        callout: true
+        markdown: |
+          - **+ST** > 25% del tamaño del QRS (cualquier derivación)
+          - **+ST** con **+QRS** (concordante)
+          - **−ST** con **−QRS** en V1, V2 o V3
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Heparina](topic:wvems-2026-drug-reference#heparin)** (sódica): verifique la dosis/concentración, adminístrela en bolo IV lento.
+          - Evítela si hay cualquier sospecha de sangrado potencialmente mortal (HDA, HIC, etc.).
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Avise a urgencias **cuanto antes**. Prepárese para **ir directo a la sala de hemodinámica** si hay tiempo.
+          - **Rasure** desde el cinturón hasta las rodillas, coloque los **parches de desfibrilación**, cambie a una bata.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Puede haber repolarización precoz en el ECG que imita elevaciones del ST.
+          - Pero la repolarización precoz **no requiere** intervención del SEM.
+        - Un IAMCEST verdadero es muy improbable en pediatría — busque otras causas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape AMI — https://emedicine.medscape.com/article/155919 [Ver: 9/25]
+        - ACC Expert Consensus — https://www.jacc.org/doi/10.1016/j.jacc.2022.08.750 [Ver: 11/22]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 20
+
+        NEMSIS: 9914117, 9914143

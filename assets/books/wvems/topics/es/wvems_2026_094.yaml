@@ -1,0 +1,138 @@
+# translated-from-sha256: cc5b2782dbcc73f7e5fbe8fe341ca4e32d9b896b8b6fea432d976fd17d3d875d
+topic:
+  id: "wvems-2026-094"
+  version: "v260101"
+  title: "Sepsis"
+  list_subtitle: "2026-094 · choque séptico / Rocephin"
+  last_reviewed: "Aug 2025"
+  tags:
+  - "sepsis"
+  - "infección"
+  - "choque séptico"
+  - "rocephin"
+  - "cuidados críticos"
+  aliases:
+  - "Infección grave"
+  - "Choque séptico"
+  category: "critical_care"
+  layout: "paged"
+  pages:
+  - page_number: 94
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Sospecha de disfunción orgánica por infección"
+        shape: "stadium"
+      - text: "{P(CC)} Lactato en el punto de atención"
+        shape: "rectangle"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Perfusión adecuada"
+        - "Probabilidad baja"
+        actions:
+        - text: "Vigile de cerca"
+          kind: "assessment"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Mala perfusión"
+        - "Probabilidad alta"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Hemocultivos"
+          kind: "diagnostic"
+        - provider_level: "P(CC)"
+          text: "Rocephin"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Choque](topic:wvems-2026-008)"
+        - text: "[Fiebre](topic:wvems-2026-016)"
+        - text: "[Vasopresores](topic:wvems-2026-082)"
+      dose_table:
+      - drug: "[Rocephin](topic:wvems-2026-drug-reference#rocephin)"
+        dose: "1 gramo"
+        route: "IV/IO, IM"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 95
+    blocks:
+    - type: "row"
+      blocks:
+      - type: "prose"
+        flex: 5
+        title: "Requisitos previos obligatorios de sepsis"
+        highlight: true
+        markdown: |
+          - En los últimos 12 meses: aprobar una formación interna de cuidados críticos.
+      - type: "prose"
+        flex: 6
+        title: "Alerta de SEPSIS"
+        callout: true
+        dashed: true
+        call_er: true
+        markdown: |
+          - **Disfunción orgánica**
+          - **Sospecha de infección**
+          - Active una alerta de **SEPSIS**
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Disfunción orgánica"
+        callout: true
+        markdown: |
+          Sospéchela si hay **varios** de estos:
+          - Pulso > 90 /min, lactato > 2 mmol/L
+          - Resp. > 20 /min, EtCO₂ < 25 mmHg
+          - Temp. > 100.4°F (> 38°C)
+          - Temp. < 96.8°F (< 36°C)
+          - Disminución del estado mental
+          - Mayor necesidad de O₂
+      - type: "prose"
+        title: "Sospecha de infección"
+        callout: true
+        markdown: |
+          Con cualquier **antecedente reciente** de:
+          - Fiebre, tos, uso de antibióticos
+          - Vía / catéter permanente
+          - Herida abierta / úlcera por presión
+          - Cirugía / procedimiento mayor
+    - type: "prose"
+      title: "Imperativos"
+      markdown: |
+        - La sepsis es una disfunción orgánica potencialmente mortal causada por una infección.
+        - Ante una posible sepsis, sugerimos medir el **lactato en sangre**.
+        - En la **sepsis sin choque**, recomendamos valorar rápidamente la
+          probabilidad de causas infecciosas frente a no infecciosas.
+        - Ante una **baja probabilidad** de infección **sin choque**, sugerimos
+          aplazar los antimicrobianos mientras se sigue vigilando de cerca.
+        - En el **choque séptico** o con **alta probabilidad** de sepsis,
+          recomendamos administrar antimicrobianos de inmediato.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Rocephin®](topic:wvems-2026-drug-reference#rocephin)** (ceftriaxona): primera línea en la sepsis no diferenciada.
+          - Vigile de cerca si hay alergia a la penicilina; evítela si hay alergia a cefalosporinas.
+          - Reconstituya con **[SSN](topic:wvems-2026-drug-reference#ns-bolus)** para IV/IO, y con **[lidocaína](topic:wvems-2026-drug-reference#lidocaine)** para IM.
+          - **No** la use con **[calcio](topic:wvems-2026-drug-reference#calcium)** — potencialmente mortal.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Es apropiado **aplazar los antibióticos** (evidencia mínima en pediatría).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Surviving Sepsis Campaign — International Guidelines 2021 [Ver: 11/21]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 24
+
+        NEMSIS: 9914127

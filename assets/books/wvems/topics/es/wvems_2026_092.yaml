@@ -1,0 +1,131 @@
+# translated-from-sha256: a3238c6cb78bf19e8ce8a74e73773f1495d78796d4bf01bf18285224aa1ba0d2
+topic:
+  id: "wvems-2026-092"
+  version: "v260101"
+  title: "HTA maligna"
+  list_subtitle: "2026-092 · crisis hipertensiva / preeclampsia"
+  last_reviewed: "Feb 2025"
+  tags:
+  - "hta maligna"
+  - "crisis hipertensiva"
+  - "preeclampsia"
+  - "lopressor"
+  - "magnesio"
+  - "cuidados críticos"
+  aliases:
+  - "Preeclampsia"
+  - "Urgencia hipertensiva"
+  - "Emergencia hipertensiva"
+  - "Crisis hipertensiva"
+  category: "critical_care"
+  layout: "paged"
+  pages:
+  - page_number: 92
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "caution"
+        text: "[Precaución si el paciente rechaza](topic:wvems-2026-109#patient-refusals)"
+      entry_chain:
+      - text: "Sistólica mayor de"
+        shape: "stadium"
+        bands:
+        - label: "Adulto (14+)"
+          value: "240 mmHg"
+        - label: "Niño (1–13)"
+          value: "220 mmHg"
+        - label: "Lactante (< 1)"
+          value: "200 mmHg"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "urgent"
+        label: "Urgente"
+        criteria:
+        - "Dolor torácico, disnea"
+        - "Cefalea"
+        actions:
+        - text: "Trate como [hipertensión](topic:wvems-2026-010)"
+          kind: "referral"
+      - id: "emergent"
+        label: "Emergente"
+        criteria:
+        - "Alteración de la conciencia"
+        - "Daño orgánico"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Lopressor"
+          kind: "medication_administration"
+        - provider_level: "P(CC)"
+          text: "Magnesio"
+          condition: "Si está embarazada"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Dolor](topic:wvems-2026-020)"
+        - text: "[Embarazo](topic:wvems-2026-048)"
+        - text: "[Convulsiones](topic:wvems-2026-042)"
+        - text: "[Cardíaco](topic:wvems-2026-028), [Disnea](topic:wvems-2026-030), [Ictus](topic:wvems-2026-044)"
+      dose_table:
+      - drug: "[Lopressor](topic:wvems-2026-drug-reference#lopressor)"
+        dose: "5 mg"
+        route: "IV/IO"
+        frequency: "Q 5 min x2"
+        population: "adult"
+      - drug: "[Magnesium](topic:wvems-2026-drug-reference#magnesium)"
+        dose: "4 gramos"
+        route: "IV/IO"
+        frequency: "over 10 min"
+        population: "adult"
+  - page_number: 93
+    blocks:
+    - type: "prose"
+      title: "Requisitos previos obligatorios de HTA maligna"
+      highlight: true
+      markdown: |
+        - En los últimos 12 meses: aprobar una formación interna de cuidados críticos.
+    - type: "prose"
+      title: "Imperativos"
+      markdown: |
+        - El uso inadecuado de antihipertensivos puede **causar daño**.
+          - Considere e investigue las **causas subyacentes** de la [hipertensión](topic:wvems-2026-010).
+        - Los déficits neurológicos focales son más probablemente un [ictus](topic:wvems-2026-044).
+          - Bajar la PA durante un ictus puede **causar daño**.
+        - Use antihipertensivos **solo si es probable un daño orgánico** por la HTA.
+          - Céntrese en las causas subyacentes si el daño orgánico es improbable.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Lopressor®](topic:wvems-2026-drug-reference#lopressor)** (metoprolol):
+          - Busque una **reducción del 10–20%** de la PA sistólica. No supere el **25%**.
+          - Contraindicado si la PAS es menor de 190 mmHg o el pulso menor de 60 /min.
+          - Llame a **control médico** si la PAS sigue elevada tras dos dosis.
+        - **[Magnesio](topic:wvems-2026-drug-reference#magnesium)** (sulfato): úselo solo en la **preeclampsia** grave.
+          - Los síntomas graves incluyen: HTA, cefalea, confusión, disnea, edema.
+          - Considere darlo como **profilaxis de convulsiones** si la PAS > 160 mmHg.
+          - Vigile los **reflejos osteotendinosos** por toxicidad — suspéndalo si se pierden.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Los signos de **daño orgánico** por HTA pueden incluir:
+          - Debilidad global evidente, parálisis, convulsiones, encefalopatía.
+          - Cefalea intensa y vómitos, cambios del estado mental.
+          - **Pérdida** de visión o visión borrosa (no simples destellos ni visión doble).
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - La HTA maligna es improbable en pediatría. Trate las [causas subyacentes](topic:wvems-2026-010) de la HTA.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Malignant HTN — https://emedicine.medscape.com/article/241640 [Ver: 8/24]
+        - Medscape Eclampsia — https://emedicine.medscape.com/article/253960 [Ver: 6/24]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 7, 13
+
+        NEMSIS: 9914123
