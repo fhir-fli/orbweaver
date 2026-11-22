@@ -1,0 +1,79 @@
+# translated-from-sha256: 7dd8ff1c675b37c25d78fb0d609624c36cae8679bf3459063e739ba7cf050eeb
+topic:
+  id: "pb-sickle-cell-acs"
+  title: "Síndrome torácico agudo en la enfermedad de células falciformes"
+  list_subtitle: "p.62 · puntuación CRS + tratamiento"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["células falciformes", "drepanocitosis", "síndrome torácico agudo", "STA", "puntuación respiratoria clínica", "cefotaxima", "azitromicina", "transfusión", "pediátrico", "hematología", "respiratorio"]
+  category: "medical"
+  page_number: 62
+  blocks:
+  - type: "flowchart"
+    variant: "linear"
+    entry_chain:
+    - text: "Cumple criterios de neumonía O tiene dolor torácico moderado a intenso"
+      shape: "stadium"
+    steps:
+    - type: "content"
+      title: "Manejo inicial"
+      bullets:
+      - "Monitorice, mantenga el ABC"
+      - "Controle los signos vitales (PA, FC, FR, spO2, Temp, peso)"
+      - "Evalúe la GCS y el estado de hidratación"
+      - "Inicie oxígeno si la spO2 < 90%"
+      - "Coloque una vía IV, extraiga hemograma y malaria, transfunda si la Hb < 9"
+      - "Haga una historia y una exploración física breves y dirigidas"
+    - type: "content"
+      title: "Calcule la puntuación respiratoria clínica (tabla de abajo)"
+      bullets:
+      - "FR · auscultación · retracciones o aleteo nasal"
+      - "Estado mental · SatO2 · color"
+    - type: "action"
+      text: "Si está disponible, considere el ingreso en UCI con CRS ≥ 6"
+      kind: "referral"
+    - type: "content"
+      title: "Inicie antibióticos (detalle abajo)"
+      bullets:
+      - "Cefotaxima IV 50 mg/kg cada 8 h (máx. 2 g), o ceftriaxona 80 mg/kg IV al día (máx. 2 g)"
+      - "Azitromicina — día 1: 10 mg/kg; días 2–5: 5 mg/kg"
+    - type: "content"
+      title: "Medidas generales de soporte (detalle abajo)"
+      bullets:
+      - "Espirometría incentivada — 10 inspiraciones máximas cada 2 h mientras esté despierto"
+      - "Salbutamol si hay sibilancias o broncoespasmo"
+      - "Manejo intensivo del dolor"
+      - "Fomente la alimentación; el total de líquidos no debe superar el mantenimiento"
+    convergence:
+      text: "Criterios de alta"
+      shape: "rounded_rectangle"
+      bullets:
+      - text: "Mejoría de los síntomas · afebril × 24 h · buena ingesta VO"
+      - text: "SpO2 > 94% con aire ambiente"
+      - text: "Hb > 5, o de vuelta a la basal conocida del paciente — lo que sea mayor"
+      - text: "Dolor controlado sin morfina"
+  - type: "table"
+    title: "Puntuación respiratoria clínica (CRS)"
+    columns: ["Signo", "0", "1", "2"]
+    column_flex: [4, 5, 5, 5]
+    rows:
+    - cells: ["**FR (>12 meses)**", "<30", "30–40", ">40"]
+    - cells: ["**Auscultación**", "Buena entrada de aire, mínimas sibilancias/crepitantes", "Entrada de aire disminuida, sibilancias inspiratorias y espiratorias", "Ruidos muy disminuidos/ausentes, sibilancias intensas"]
+    - cells: ["**Retracciones o aleteo nasal**", "Leves", "Moderadas", "Graves"]
+    - cells: ["**Estado mental**", "Normal/levemente irritable", "Irritable, inquieto", "Letárgico"]
+    - cells: ["**SatO2**", ">95%", "90–95%", "<90%"]
+    - cells: ["**Color**", "Normal", "Pálido", "Cianótico, oscuro"]
+  - type: "prose"
+    title: "Inicie antibióticos"
+    markdown: |
+      - **Cefotaxima** IV 50mg/kg cada 8 horas (dosis máx. 2g)
+        - Puede sustituirse por ceftriaxona 80mg/kg IV al día (dosis máx. 2g)
+      - **Azitromicina**
+        - Día 1: 10mg/kg (dosis máx./de adulto 500mg)
+        - Días 2–5: 5mg/kg (dosis máx./de adulto 250mg)
+  - type: "prose"
+    title: "Medidas generales de soporte"
+    markdown: |
+      - **Espirometría incentivada — 10 inspiraciones máximas cada 2 horas mientras esté despierto.** Iníciela pronto. Si no hay espirómetro, haga que el niño **infle un globo** con la misma pauta. Es lo más rentable de esta página: reduce mucho las complicaciones pulmonares y no cuesta nada
+      - **Salbutamol** ante cualquier sibilancia o broncoespasmo — nebulizado 5mg (2.5mg si <5 años), o inhalador 2–4 inhalaciones según necesidad. La puntuación respiratoria clínica de arriba puntúa las sibilancias, así que trate lo que encuentre
+      - Manejo intensivo del dolor
+      - Fomente la alimentación, líquidos IV si no come (pero el aporte TOTAL de líquidos no debe superar el mantenimiento)

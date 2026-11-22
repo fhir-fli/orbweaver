@@ -1,0 +1,125 @@
+# translated-from-sha256: 722899a50358c9cae075f8c5f0eff49649ae9d0ab03b15f818f7961cc3383117
+topic:
+  id: "pb-sam-management"
+  title: "DAG — ingreso y complicaciones agudas"
+  list_subtitle: "pp.64–65 · la lista de 10 pasos"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["desnutrición", "DAG", "hipoglucemia", "hipotermia", "choque", "deshidratación", "ReSoMal", "anemia", "F-75", "infección", "vitamina A", "pediátrico", "nutrición"]
+  category: "medical"
+  pages:
+  - page_number: 64
+    blocks:
+    - type: "prose"
+      title: "Criterios de ingreso con DAG (cualquiera)"
+      markdown: |
+        - Pacientes con DAG y edema grave
+        - Niños <6 meses con DAG
+        - Pacientes con DAG complicada
+
+        **DAG no complicada** (sin criterios de ingreso): manéjela en la atención terapéutica ambulatoria con alimentos terapéuticos listos para usar (ATLU), **más amoxicilina oral** — la DAG no complicada también recibe un antibiótico.
+    - type: "prose"
+      markdown: |
+        **Tras el ingreso, compruebe TODO lo siguiente:**
+    - type: "prose"
+      title: "1. Hipoglucemia"
+      markdown: |
+        Glucemia <3mmol/L (54mg/dL). Tratamiento:
+
+        - Puede beber: 50mls de dextrosa al 10% o agua azucarada (1 cucharada de azúcar + 50mls de agua)
+        - No puede beber: dextrosa al 10% IV 2mls/kg, seguida de 50mLs de dextrosa al 10% o agua azucarada por SNG
+    - type: "prose"
+      title: "2. Hipotermia"
+      markdown: |
+        Temperatura axilar <35 o rectal <35.5. Tratamiento:
+
+        - Caliente activamente (método canguro, cubra la cabeza, sin bolsas de agua caliente porque la piel ya es frágil, lejos de ventanas o corrientes, mantenga la habitación caliente, cambie la ropa mojada, manténgalo cubierto todo el tiempo y por la noche)
+        - También debe tratar la hipoglucemia y la infección
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "3. Choque — criterios"
+      markdown: |
+        AVPU <A **Y** extremidades frías **más uno de**: llenado capilar >3 seg O pulso débil/rápido/ausente.
+    - type: "prose"
+      title: "3. Choque — tratamiento"
+      markdown: |
+        - Oxígeno
+        - Mantenga abrigado
+        - Líquidos IV: 15mls/kg/hora (puede repetirse una vez)
+        - Elección de líquidos: RL+D5% o ½SSN+D5%, añada 20mmol/L de KCL
+        - Si no mejora tras el primer bolo, suponga choque séptico y administre sangre total 10mL/kg
+    - type: "prose"
+      title: "4. Deshidratación — >2 de los siguientes signos"
+      markdown: |
+        - AVPU <A
+        - Llenado capilar ≥2 segundos
+        - No puede beber
+        - Ojos hundidos
+        - Pliegue cutáneo lento ≥2 segundos
+        - Sin lágrimas
+        - Mucosas secas
+        - Diarrea reciente/frecuente
+        - Vómitos
+
+        **Tratamiento — use la solución de rehidratación para la desnutrición (ReSoMal):**
+
+        - 5mls/kg VO cada 30min x 2 h, LUEGO
+        - 5–10mls/kg/h, alternando ReSoMal una hora y F-75 la siguiente x 10 h
+        - Si mejora, dé ReSoMal solo después de cada deposición líquida
+        - ⚠️ **Si hay cólera o diarrea acuosa profusa — use SRO ESTÁNDAR, no ReSoMal.** La ReSoMal es deliberadamente baja en sodio (45 mmol/L) para el niño con DAG edematoso y sobrecargado de sodio; en la diarrea de alto débito con pérdida de sodio empeora la hiponatremia
+        - 🛑 **Suspenda la ReSoMal de inmediato si la frecuencia respiratoria sube 5/min Y el pulso 25/min** — reevalúe por sobrecarga de líquidos
+    - type: "prose"
+      title: "5. Anemia grave"
+      markdown: |
+        Hb <4g/dl, **Hb 4–6g/dl con dificultad respiratoria**, o (si no hay Hb) palidez con síntomas de insuficiencia cardíaca (taquipnea, taquicardia, venas del cuello ingurgitadas, extremidades frías, cianosis de las yemas de los dedos o la lengua).
+
+        - **Suspenda la alimentación solo durante la transfusión** (unas 3 horas) y reanúdela de inmediato. Mantenga el D10% de mantenimiento — la otra emergencia de este niño es la hipoglucemia
+        - Compruebe si hay insuficiencia cardíaca antes de empezar
+        - Sin insuficiencia cardíaca: 10mls/kg de sangre total **lentamente en 3h**
+        - Con insuficiencia cardíaca: 5–7mls/kg de concentrado de hematíes
+        - ⚠️ **Administre furosemida 1mg/kg IV al INICIO de la transfusión.** En la DAG la transfusión debe ser más lenta y menor que en un niño bien nutrido — la propia transfusión es una de las principales causas de la insuficiencia cardíaca del punto 6
+        - **Vigile cada 15 minutos** — pulso, respiración, campos pulmonares, tamaño del hígado. Si la respiración sube 5/min o el pulso 25/min, **transfunda más despacio**. Si aparecen crepitantes basales o aumenta el hígado, **suspenda y administre furosemida 1mg/kg IV**
+        - 🛑 **No repita la transfusión** aunque la Hb siga baja, ni en los 4 días siguientes a la última
+  - page_number: 65
+    blocks:
+    - type: "prose"
+      title: "6. Insuficiencia cardíaca"
+      markdown: |
+        - **Causas frecuentes:** sobrehidratación, sobrealimentación, transfusión de sangre, dieta rica en sodio, anemia grave, neumonía grave
+        - **Signos:** deterioro con aumento de peso, reaparición del edema, dificultad respiratoria súbita, venas del cuello prominentes, extremidades frías, hígado doloroso, cianosis
+        - Oxígeno
+        - Suspenda todos los líquidos IV y la alimentación
+        - Furosemida (Lasix) 1mg/kg IV
+    - type: "prose"
+      title: "7. Signos oculares — déficit de vitamina A / úlcera corneal / secreción ocular purulenta"
+      markdown: |
+        - **Vitamina A los días 1, 2 y 15** — <6 meses **50,000 UI** · 6–12 meses **100,000 UI** · >12 meses **200,000 UI**. Solo si hay **signos oculares, sarampión o diarrea grave/persistente** — un niño sin signos de déficit con F-75/F-100/ATLU recibe solo la dosis diaria baja. Si la primera dosis se dio en el centro que lo refirió, administre los **días 2 y 15**
+        - **Administre vitamina A a dosis altas solo si hay signos oculares o antecedente reciente de sarampión.** F-75, F-100 y ATLU ya contienen suficiente para todos los demás
+        - **Colirio de cloranfenicol o tetraciclina, 4 veces al día durante 7–10 días**
+        - **Colirio de atropina al 1%, una gota 3 veces al día durante 3–5 días** — para relajar el ojo
+        - 🛑 **Cubra con apósitos oculares empapados en solución salina y vende el ojo o los ojos** — esto es lo que evita la perforación corneal y la extrusión del cristalino
+    - type: "prose"
+      title: "8. Dermatosis grave"
+      markdown: |
+        Descamación con grietas y ulceración de la piel. El déficit de zinc es habitual en el kwashiorkor y la piel mejora rápidamente al corregirlo.
+
+        - Lave con esponja o remoje las zonas afectadas 10 minutos al día en permanganato de potasio al 0.01%, o aplique violeta de genciana en las lesiones
+        - **Aplique una crema barrera** — pomada de zinc y aceite de ricino, vaselina o tul graso — en las zonas en carne viva
+        - **Evite los pañales** para que el periné se mantenga seco y al aire
+        - Asegúrese de que el niño recibe la alimentación completa con F-75/F-100 o ATLU, que aporta el zinc. Si aún no come, administre **zinc 2mg/kg/día por vía oral**
+    - type: "prose"
+      title: "9. Control de la infección (en la DAG complicada)"
+      markdown: |
+        - Ampicilina 50mg/kg IV cada 6 h x 2 días
+        - Luego cambie a **amoxicilina oral 25–40mg/kg/dosis cada 8 h x 5 días** si mejora tras 2 días
+        - **Gentamicina 7.5mg/kg/día x 7 días** — la DAG tiene su propia dosis más alta de gentamicina; no use aquí los 5mg/kg pediátricos generales
+        - Haga la prueba del VIH a la madre si el niño tiene <18 meses; si no, al paciente
+    - type: "prose"
+      title: "10. Déficit de micronutrientes"
+      markdown: |
+        - No se necesitan suplementos (todos los micronutrientes ya están incluidos en F-75, F-100)
+        - Añada la mezcla CMV (combinación de minerales y vitaminas) a la leche si prepara la fórmula usted mismo
+        - Si no hay fórmulas terapéuticas ni CMV, suplemente con gotas multivitamínicas en todas las fases del manejo. Pero inicie el hierro en la fase de rehabilitación

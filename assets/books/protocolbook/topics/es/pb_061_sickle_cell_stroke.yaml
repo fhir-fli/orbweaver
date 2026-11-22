@@ -1,0 +1,61 @@
+# translated-from-sha256: e47beee06e54006183f293191d1e402efb0e354dab0893847f4b16d2d4dd527f
+topic:
+  id: "pb-sickle-cell-stroke"
+  title: "Ictus en la enfermedad de células falciformes"
+  list_subtitle: "p.61 · protocolo de ictus agudo"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["células falciformes", "drepanocitosis", "ictus", "hemiparesia", "transfusión", "cefotaxima", "hidroxicarbamida", "pediátrico", "hematología", "neurología"]
+  category: "medical"
+  page_number: 61
+  blocks:
+  - type: "flowchart"
+    variant: "linear"
+    entry_chain:
+    - text: "Hallazgos neurológicos nuevos — hemiparesia, déficit neurológico focal, trastorno del habla — O alta sospecha clínica"
+      shape: "stadium"
+    steps:
+    - type: "content"
+      title: "Manejo inicial"
+      bullets:
+      - "Monitorice, mantenga el ABC"
+      - "Controle los signos vitales (PA, FC, FR, spO2, Temp, peso)"
+      - "Inicie oxígeno si la spO2 < 90%"
+      - "Evalúe la GCS"
+      - "Evalúe el estado de hidratación"
+      - "Coloque una vía IV, extraiga hemograma, malaria, glucemia aleatoria"
+      - "Haga una historia y una exploración física breves y dirigidas"
+    - type: "content"
+      title: "Maneje los problemas concurrentes (tabla de abajo)"
+      bullets:
+      - "Fiebre · Hipoglucemia · Convulsiones"
+      - "Anemia — se prefiere la exanguinotransfusión"
+      - "Infección · Hidratación"
+    - type: "content"
+      title: "Vigilancia"
+      bullets:
+      - "Exploración neurológica diaria"
+      - "Fisioterapia en cuanto se resuelvan los problemas agudos"
+    convergence:
+      text: "Plan de alta"
+      shape: "rounded_rectangle"
+      bullets:
+      - text: "Hidroxicarbamida"
+      - text: "Seguimiento en la consulta de células falciformes"
+  - type: "table"
+    title: "Maneje los problemas concurrentes"
+    columns: ["Problema", "Manejo"]
+    column_flex: [3, 7]
+    rows:
+    - cells: ["**Fiebre: paracetamol**", "Niños: 15mg/kg VO cada 6 h · Adultos: 650mg VO cada 6 h"]
+    - cells: ["**Hipoglucemia**", "Niños: dextrosa al 10% 2ml/kg (mezcle 8ml de SSN con 2ml de dextrosa al 50%) · Adultos: 1 ampolla (50ml) de dextrosa al 50%"]
+    - cells: ["**Convulsiones**", "Vea el protocolo de convulsiones"]
+    - cells: ["**Anemia: transfusión**", "**Se prefiere la exanguinotransfusión** — objetivo tras el procedimiento **HbS 15–20%**. Iníciela en las **2 horas** siguientes a la llegada. Si no hay exanguinotransfusión: transfusión simple de CH hasta Hb >9 — **pero NO supere una Hb de 10**. Elevar el hematocrito sin bajar la HbS aumenta la viscosidad y puede extender el infarto"]
+    - cells: ["**Infección: antibióticos**", "Cefotaxima IV 50mg/kg cada 8 horas (dosis máx. 2g). Puede sustituirse por ceftriaxona 80mg/kg IV al día (dosis máx. 2g)"]
+    - cells: ["**Hidratación**", "Deshidratado: vea las recomendaciones de deshidratación. LIV de mantenimiento si está hidratado. Fomente la alimentación"]
+  - type: "prose"
+    title: "Derive para estudio de imagen"
+    callout: true
+    markdown: |
+      **Derive para neuroimagen y manejo avanzado.** Los adultos con enfermedad de
+      células falciformes tienen una tasa considerable de ictus **hemorrágico**, que
+      la transfusión no trata.
