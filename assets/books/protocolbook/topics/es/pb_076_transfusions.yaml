@@ -1,0 +1,69 @@
+# translated-from-sha256: 09ac1565ad1fd193a4ba34f671920deff76b5cd70ff69bd939bec0d9a9283e39
+topic:
+  id: "pb-transfusions"
+  title: "Transfusiones"
+  list_subtitle: "p.76 · cuándo / volumen / complicaciones"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["transfusión", "sangre", "CH", "sangre total", "hemoglobina", "RHTA", "reacción febril", "TRALI", "anafilaxia", "malaria", "pediátrico"]
+  category: "medical"
+  page_number: 76
+  blocks:
+  - type: "table"
+    title: "Cuándo transfundir"
+    zebra: true
+    columns: ["Entorno", "Transfunda si la hemoglobina es"]
+    column_flex: [5, 5]
+    column_align: ["left", "left"]
+    rows:
+    - cells: [{text: "**Zonas de malaria alta**", span: 2}]
+    - cells: ["Poco suministro de sangre", "<4 g/dL, o <5 g/dL e inestable"]
+    - cells: ["Buen suministro de sangre", "<5 g/dL"]
+    - cells: [{text: "**Zonas de malaria baja**", span: 2}]
+    - cells: ["—", "<7 g/dL, o <10 g/dL e inestable"]
+  - type: "prose"
+    markdown: |
+      Vea también [Anemia — abordaje y umbrales](topic:pb-anaemia).
+  - type: "prose"
+    title: "Consideraciones generales"
+    markdown: |
+      - 10 mL de CH = 20 mL de sangre total (ST) — una regla práctica de cabecera. 🛑 **NO la use para deducir los volúmenes según la fiebre de abajo:** son las cifras emparejadas del propio ensayo (30 ST ≈ 20 CH, 20 ST ≈ 10 CH). Dividir 30 entre dos con esta regla da 15, lo que transfunde de menos al niño afebril
+      - Si está en choque, administre ST para aportar más volumen
+      - Si no hay choque y se teme una sobrecarga de volumen (desnutrición, insuficiencia cardíaca), administre CH
+      - 10–15 mL/kg de CH elevan la Hb de un niño una media de 2–3 g/dL
+      - Rango habitual en niños: 10–20 mL/kg
+      - 1 unidad de CH eleva la Hb de un adulto una media de 1 g/dL
+      - Volumen habitual en adultos: 1–2 unidades
+      - En general se pasan 10 mL/kg (1 unidad) en 3–4 horas
+  - type: "prose"
+    title: "Calcule el volumen de la transfusión"
+    markdown: |
+      **Pediátrico — use la primera línea que corresponda:**
+      - **Desnutrido (cualquier temperatura): 5 mL/kg de CH, o 10 mL/kg de ST** — lentamente, vigilando la sobrecarga. **No repita la transfusión.** La desnutrición prevalece sobre la regla de mayor volumen en afebriles de abajo
+      - **Febril (T ≥ 37.5 °C): 20 mL/kg de ST, o 10 mL/kg de CH**
+      - **Afebril (T < 37.5 °C): 30 mL/kg de ST, o 20 mL/kg de CH**
+      - Por edad, cuando la temperatura no es el factor decisivo: <1 año 10 mL/kg de CH o 15 mL/kg de ST; >1 año 10 mL/kg de CH o 20 mL/kg de ST
+      - **Adulto**: 1–2 unidades de CH
+
+      **Imprima la pareja, no una conversión.** TRACT aleatorizó a **30 mL/kg de sangre total o 20 mL/kg de hematíes** (mayor) frente a **20 mL/kg de sangre total o 10 mL/kg de hematíes** (menor), tratando cada pareja como equivalente. Use las cifras tal como están.
+
+      **Por qué la fiebre cambia el volumen.** En TRACT — 3,196 niños ugandeses y malauíes con anemia grave, el mayor ensayo sobre volumen de transfusión en esta población — el efecto del volumen variaba según la temperatura al ingreso. Los niños afebriles evolucionaron mejor con el volumen mayor; **los niños febriles evolucionaron peor con él**. Tómelo como una **regla para elegir el volumen**, no como una promesa de mortalidad: es una interacción de subgrupo preespecificada en un ensayo cuyo objetivo principal fue nulo, así que la dirección está bien respaldada y el tamaño del beneficio no.
+
+      **TRACT tampoco encontró beneficio en transfundir la anemia moderada no complicada** (Hb 4–6 g/dL sin signos de gravedad) — un umbral conservador va con estos volúmenes conservadores.
+  - type: "prose"
+    title: "Complicaciones"
+    markdown: |
+      - **Reacción hemolítica aguda (RHTA)** — en 24 h
+        - Signos: fiebre, escalofríos, tiritona, dolor en el sitio de infusión, dolor torácico / lumbar / abdominal, PA baja, falta de aire
+        - Tratamiento: suspenda la transfusión; devuelva la unidad al laboratorio para revisar la compatibilidad; **la hidratación IV intensiva es la prioridad** — protege los riñones de la hemoglobina libre. Añada **furosemida** solo si la diuresis sigue baja pese a un llenado adecuado. **Los vasopresores (p. ej., dopamina) son para la hipotensión, no para la diuresis** — la dopamina "renal" a dosis bajas no protege los riñones
+      - **Reacción febril no hemolítica** — en 6 h
+        - Signos: fiebre, escalofríos, taquipnea, cefalea, vómitos, cambios de PA
+        - Tratamiento: suspenda la transfusión; devuelva la unidad al laboratorio para revisar la compatibilidad (importante para distinguir lo hemolítico de lo no hemolítico); extraiga hemocultivos; administre paracetamol. **La petidina (meperidina) para la tiritona intensa es solo de segunda línea** — su metabolito se acumula y causa convulsiones con dosis repetidas, y su beneficio aquí nunca se ha demostrado
+      - **Reacción hemolítica tardía** — en general a los 3–21 días
+        - Signos: fiebre, anemia, ictericia leve
+        - Tratamiento: busque anticuerpos nuevos; no hay tratamiento específico
+      - **Alérgica / urticaria / anafilaxia**
+        - Signos: broncoespasmo, edema laríngeo, hipotensión
+        - Tratamiento: urticaria — difenhidramina; anafilaxia (vea el [protocolo de anafilaxia](topic:pb-anaphylaxis)) — adrenalina, difenhidramina, antagonista H2, glucocorticoides
+      - **Lesión pulmonar aguda relacionada con la transfusión (TRALI)** — a menudo en 1–2 h, a veces en 6 h; suele mejorar en 48–96 h
+        - Signos: fiebre, edema pulmonar bilateral, hipoxemia, insuficiencia respiratoria, hipotensión
+        - Tratamiento: oxígeno suplementario y soporte respiratorio; RxT; valore una posible sobrecarga de volumen (se presenta de forma parecida)

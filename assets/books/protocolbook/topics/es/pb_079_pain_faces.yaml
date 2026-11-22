@@ -1,0 +1,60 @@
+# translated-from-sha256: 72e0823cc66310c1e2fbdcbb10f4f825515e58187085ecacb7b9f8479572c72a
+topic:
+  id: "pb-pain-faces"
+  title: "Dolor — escalas de caras y de bidones"
+  list_subtitle: "p.79 · caras de Wong-Baker · bidones"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["dolor", "manejo del dolor", "wong-baker", "escala de caras", "bidón", "analógica visual", "autoinforme", "pediátrico", "escala de dolor"]
+  category: "medical"
+  page_number: 79
+  blocks:
+  - type: "prose"
+    markdown: |
+      Escalas visuales de autoinforme — pida al paciente que señale el dibujo que mejor refleje su dolor.
+      - **Caras de Wong-Baker** — para edades de **4–12** (puede usarse hasta los 18)
+      - **Bidones** — una alternativa para pacientes que no entienden las caras
+  - type: "prose"
+    title: "Escala de caras de Wong-Baker"
+    markdown: |
+      Edades 4–12 (puede usarse hasta los 18).
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_pain_faces.png"
+    size: "full"
+    caption: "Caras de Wong-Baker — de 0 (no duele) abajo a 10 (el peor dolor) arriba."
+  - type: "table"
+    title: "Caras — puntuación y etiqueta"
+    zebra: true
+    columns: ["Puntuación", "Etiqueta"]
+    column_flex: [2, 6]
+    column_align: ["center", "left"]
+    rows:
+    - cells: ["0", "No duele"]
+    - cells: ["2", "Duele un poquito"]
+    - cells: ["4", "Duele un poco más"]
+    - cells: ["6", "Duele todavía más"]
+    - cells: ["8", "Duele mucho"]
+    - cells: ["10", "El peor dolor"]
+  - type: "prose"
+    title: "Escala de bidones"
+    markdown: |
+      Para puntuar si no entiende las caras — el bidón se llena a medida que aumenta el dolor.
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_pain_jerrycans.png"
+    size: "full"
+    caption: "Bidones — de 0 (sin dolor, vacío) abajo a 10 (dolor insoportable, lleno) arriba."
+  - type: "table"
+    title: "Bidones — puntuación y etiqueta"
+    zebra: true
+    columns: ["Puntuación", "Etiqueta"]
+    column_flex: [2, 6]
+    column_align: ["center", "left"]
+    rows:
+    - cells: ["0", "Sin dolor"]
+    - cells: ["2", "Dolor leve"]
+    - cells: ["4", "Más dolor"]
+    - cells: ["6", "Dolor moderado"]
+    - cells: ["8", "Dolor intenso"]
+    - cells: ["10", "Dolor insoportable"]
+  - type: "prose"
+    markdown: |
+      Vea [puntuación y escalera analgésica de la OMS](topic:pb-pain-ladder).

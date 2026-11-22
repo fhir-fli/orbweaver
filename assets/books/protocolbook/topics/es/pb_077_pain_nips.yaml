@@ -1,0 +1,63 @@
+# translated-from-sha256: fdf69fa01766dd43bb3ce10fb2a80f9e8edfc7f2ce8dfe10a4fb9fda8715321a
+topic:
+  id: "pb-pain-nips"
+  title: "Dolor — neonatal (NIPS)"
+  list_subtitle: "p.77 · escala NIPS · < 1 año"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["dolor", "manejo del dolor", "NIPS", "escala de dolor neonatal", "neonato", "analgesia", "medidas de confort", "sacarosa", "paracetamol", "opioide"]
+  category: "medical"
+  page_number: 77
+  blocks:
+  - type: "prose"
+    markdown: |
+      La evaluación depende de la edad — use la escala adecuada. La NIPS es para lactantes **< 1 año**.
+  - type: "table"
+    title: "Escala de dolor neonatal (NIPS)"
+    zebra: true
+    columns: ["Hallazgo", "Puntos"]
+    column_flex: [8, 2]
+    column_align: ["left", "center"]
+    rows:
+    - cells: [{text: "**Expresión facial**", span: 2}]
+    - cells: ["Relajada — cara tranquila, expresión neutra", "0"]
+    - cells: ["Mueca — músculos tensos, ceño / mentón / mandíbula fruncidos", "1"]
+    - cells: [{text: "**Llanto**", span: 2}]
+    - cells: ["Sin llanto — tranquilo, no llora", "0"]
+    - cells: ["Gimoteo — quejido leve, intermitente", "1"]
+    - cells: ["Llanto vigoroso — grito fuerte, agudo, continuo (si está intubado, puntúe el llanto silencioso por el movimiento facial)", "2"]
+    - cells: [{text: "**Patrón respiratorio**", span: 2}]
+    - cells: ["Relajado — patrón habitual de este lactante", "0"]
+    - cells: ["Cambio en la respiración — irregular, más rápida de lo habitual, arcadas, contiene la respiración", "1"]
+    - cells: [{text: "**Brazos**", span: 2}]
+    - cells: ["Relajados — sin rigidez muscular, movimientos aleatorios ocasionales", "0"]
+    - cells: ["Flexionados / extendidos — tensos, brazos rectos, rígidos y/o extensión o flexión rápida", "1"]
+    - cells: [{text: "**Piernas**", span: 2}]
+    - cells: ["Relajadas — sin rigidez, movimientos aleatorios ocasionales", "0"]
+    - cells: ["Flexionadas / extendidas — tensas, piernas rectas, rígidas y/o extensión o flexión rápida", "1"]
+    - cells: [{text: "**Estado de alerta**", span: 2}]
+    - cells: ["Dormido / despierto — tranquilo, en calma, dormido, o alerta y sosegado", "0"]
+    - cells: ["Inquieto — alerta, intranquilo y agitándose", "1"]
+  - type: "prose"
+    markdown: |
+      **Puntuación máxima 7.** La frecuencia cardíaca y la saturación de oxígeno **no** forman parte de la NIPS — pertenecen a otras escalas (PIPP). Dependen de la fiebre, la anemia y la enfermedad pulmonar además del dolor, así que añadirlas reduce la especificidad de la puntuación.
+  - type: "prose"
+    title: "Cómo puntuar"
+    markdown: |
+      **Administre analgesia con una puntuación de 3 o más.**
+
+      - **0–2 · Leve** — el método principal es no farmacológico:
+        - Chupete, sacarosa, mano a la boca, succión no nutritiva
+        - Envolver, nido, sostener en brazos
+        - Cambios de postura; posición correcta para los procedimientos
+        - Reducir los estímulos ambientales (luz, ruido, movimientos bruscos)
+        - Menos manipulación, con periodos de descanso entre procedimientos
+        - Medidas de confort que se hayan visto eficaces en ese neonato
+        - Voz tranquilizadora; sonidos intrauterinos grabados
+        - Farmacológico: paracetamol
+      - **3–4 · Moderado**
+        - No farmacológico (vea los métodos principales arriba)
+        - Añada un bolo de opioide — **morfina 0.05–0.1 mg/kg IV**
+      - **5–7 · Intenso**
+        - El método principal es farmacológico: **morfina 0.05–0.1 mg/kg IV** en bolos intermitentes
+        - Considere una infusión de morfina
+      - 🛑 **Cualquier opioide en un neonato requiere monitorización de apneas.** Los neonatos son mucho más sensibles a la depresión respiratoria por opioides que los lactantes mayores — tenga una bolsa-válvula-mascarilla y naloxona junto a la cama

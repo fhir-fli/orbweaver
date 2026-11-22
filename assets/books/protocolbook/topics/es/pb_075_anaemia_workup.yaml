@@ -1,0 +1,96 @@
+# translated-from-sha256: b651cdc5c75fd26e0df80440154d97360bef71864ca1603c13bda9b1fe9ddb03
+topic:
+  id: "pb-anaemia-workup"
+  title: "Anemia — busque la causa"
+  list_subtitle: "p.75 · cribado de hemólisis · VCM · estudios de hierro"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["anemia", "anemia", "hemólisis", "índice reticulocitario", "VCM", "microcítica", "normocítica", "macrocítica", "estudios de hierro", "déficit de hierro", "ferritina", "B12", "folato", "suplementación"]
+  category: "medical"
+  page_number: 75
+  blocks:
+  - type: "prose"
+    title: "Estudio tras la estabilización"
+    markdown: |
+      - Solicítelo cuando el niño esté estabilizado y se hayan descartado malaria y sepsis
+      - Análisis: hemograma, LDH, bilirrubina, haptoglobina, índice reticulocitario (IR)
+      - IR = (% de reticulocitos ÷ 2) × (hematocrito ÷ hematocrito normal)
+        - El ÷ 2 es el factor de corrección por maduración, que supone un hematocrito de alrededor del 25%. Aumenta a medida que empeora la anemia — aproximadamente 2.5 con Hto 15%, 2 con 25%, 1.5 con 35%, 1 con un Hto normal
+  - type: "flowchart"
+    variant: "algorithm"
+    stages:
+    - decision: "¿Hay ↑ LDH, ↑ bilirrubina, ↓ haptoglobina o IR > 2%?"
+      outcomes:
+      - label: "Sí — sospecha de hemólisis"
+        box:
+          title: "Considere las siguientes pruebas"
+          bullets:
+          - "Electroforesis de hemoglobina — busque drepanocitosis, talasemia u otra hemoglobinopatía"
+          - "Pruebas de coagulación y PFH — busque hepatopatía y CID"
+          - "Frotis de sangre periférica — busque posibles neoplasias"
+          - "Prueba de G6PD"
+      - label: "No"
+        box:
+          title: "Administre un antihelmíntico a todos los niños"
+          bullets:
+          - "Albendazol 400mg VO dosis única (edad > 2 años)"
+          - "Albendazol 200mg VO dosis única (edad 1–2 años)"
+        continue: true
+    - decision: "Clasifique por el VCM"
+      outcomes:
+      - label: "Anemia macrocítica"
+        box:
+          title: "Estudio de la anemia macrocítica"
+          bullets:
+          - "Niveles de B12 y folato"
+          - "PFH"
+          - "Pruebas tiroideas"
+          - "Pregunte por antecedentes de consumo excesivo de alcohol"
+          - "Revise la medicación (zidovudina, hidroxicarbamida)"
+      - label: "Anemia microcítica o normocítica"
+        box:
+          title: "Estudios de hierro"
+          table:
+            columns: ["", "Fe", "CTFH", "Ferritina", "Fe : CTFH"]
+            align: ["left", "center", "center", "center", "center"]
+            rows:
+            - ["Déficit de hierro", "↓", "↑", "↓", "<18%"]
+            - ["Anemia de la inflamación crónica", "↓", "nL", "↑", ">18%"]
+  - type: "prose"
+    markdown: |
+      Considere también un frotis periférico: el punteado basófilo sugiere talasemia o anemia sideroblástica.
+  - type: "prose"
+    title: "Cómo leer la ferritina con inflamación"
+    highlight: true
+    markdown: |
+      La ferritina es un reactante de fase aguda, así que una ferritina "normal" **no** descarta el déficit de hierro en un paciente con malaria, VIH, TB o cualquier enfermedad febril aguda.
+      - **Sin inflamación — déficit de hierro confirmado si la ferritina es < 30 µg/L**
+      - **Con inflamación — déficit de hierro confirmado si la ferritina es < 70 µg/L** (el umbral de la OMS); **use < 100 µg/L para no pasar casos por alto**
+      - **La inflamación se define como PCR > 5 mg/L** (con AGP > 1 g/L, según BRINDA)
+      - **Donde no hay PCR — lo habitual aquí — suponga inflamación y aplique el punto de corte más alto a todos.** La malaria, el VIH, la TB y la enfermedad febril aguda son tan prevalentes que la mayoría de los pacientes tienen inflamación subclínica, y el coste de sobretratar es bajo comparado con pasar por alto un déficit de hierro
+      - **Una saturación de transferrina < 20% (o < 16%)** es el discriminador alternativo cuando la ferritina es dudosa y hay estudios de hierro — la línea única del 18% de la tabla es una simplificación
+
+      **De dónde salen las cifras.** El punto de corte de la OMS en adultos es **< 15 µg/L**, pero el umbral clínicamente útil y más sensible es **< 30 µg/L** — 98% de especificidad y 92% de sensibilidad para la ausencia de hierro medular. La OMS usaba antes < 30 µg/L en contextos inflamatorios y lo ha revisado a **< 70 µg/L**. Con inflamación concurrente, el déficit absoluto de hierro rara vez produce una ferritina por encima de **100 µg/L**, lo que hace de < 100 el mejor predictor único cuando la inflamación es probable.
+  - type: "prose"
+    title: "¿Sin estudios de hierro? Trate y vuelva a medir"
+    markdown: |
+      Una **prueba terapéutica con hierro oral es una forma defendible de diagnosticar el déficit de hierro** cuando no hay estudios de hierro. Administre una dosis estándar de hierro elemental (abajo) y **vuelva a medir la hemoglobina a las 2–4 semanas**.
+      - **Un aumento de ≥ 1 g/dL a las 2 semanas confirma el déficit de hierro** — un aumento de ≥ 1.0 g/dL el día 14 predice una respuesta global satisfactoria (sensibilidad 90%, especificidad 79%)
+      - En un niño con **anemia moderada**, espere **≥ 2 g/dL a las 4 semanas**
+      - **La reticulocitosis a los 5–7 días** es un signo confirmatorio más precoz donde haya recuento de reticulocitos
+      - **Si no se produce el aumento**, reevalúe por falta de adherencia, malabsorción, pérdida de sangre continua u otra causa de anemia
+      - Cuando se normalice la hemoglobina, **continúe hasta un total de unos 3 meses** para reponer los depósitos
+  - type: "prose"
+    title: "Suplementación"
+    markdown: |
+      - **Hierro** — una vez al día, con o antes de la comida, no con leche ni té
+        - Niños: **3 mg/kg UNA vez al día** de hierro elemental (máx. 60 mg/día)
+        - Adultos: **65 mg UNA vez al día** de hierro elemental = **una tableta de 325 mg de sulfato ferroso seco**. 🛑 **Prescriba por hierro elemental, no por peso de la sal.** Una tableta de 200 mg del heptahidrato aporta solo unos **40 mg** de hierro elemental, no 65 — el heptahidrato tiene ~20% de hierro, la sal seca ~30% (OE 2026-08-30). Si no se tolera, la misma tableta en días alternos — igual de eficaz y se absorbe mejor
+        - **Se prefiere una vez al día** antes que dividir en tres dosis — igual de eficaz, se absorbe mejor y se toma con más regularidad. Dividir la dosis no es un error si es lo que permiten sus existencias
+      - **Folato (ácido fólico)**
+        - Niños: 0.4–1 mg VO al día
+        - Adultos: 1–5 mg VO al día (según la gravedad)
+        - ⚠️ **NO administre 5 mg de ácido fólico a nadie que tome un antifolato** — sulfadoxina-pirimetamina (SP, usada en la quimioprevención de la malaria) o profilaxis con cotrimoxazol. El folato a dosis altas rescata al parásito y aproximadamente duplica el fracaso del tratamiento antimalárico. En estos pacientes mantenga el ácido fólico en **≤1 mg/día, idealmente 0.4 mg**
+        - La anemia causada por un fármaco antifolato se trata con **ácido folínico**, no con ácido fólico
+      - **B12 (cianocobalamina)**
+        - Niños: 1 mg VO al día
+        - Adultos: 1–2 mg VO al día
