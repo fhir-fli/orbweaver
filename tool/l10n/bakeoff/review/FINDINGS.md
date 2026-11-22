@@ -50,7 +50,8 @@ dropped); **minor** = wrong word, typo, untranslated word, register; meaning int
 - gemma-31b minor: "prn" left untranslated.
 - opus: none found.
 
-## wvems_2026_020 pain (31B refused)
+## wvems_2026_020 pain
+- gemma-31b (retry run): no meaning errors; kept the brand names as the prompt asks. minor: typo "Tetricaína"; references line left in English.
 - haiku: no meaning errors. minor: "angustia" for distress (reads as anxiety).
 - flash-lite: no meaning errors. minor but against the prompt: replaced the brand names the protocol uses (Tylenol → "Paracetamol®", Toradol → "Ketorolaco®", with a ® on a generic).
 - **E4B ERROR**: invented a link — "EMS" became a link to the Major Trauma page. minor: "náuicos" (not a word) for narcotic-naive; bold dropped from "not".
@@ -73,7 +74,7 @@ dropped); **minor** = wrong word, typo, untranslated word, register; meaning int
 | Opus 5.5 (this conversation) | 0 | 10 | 0 |
 | Haiku 5.5 | 1 | 10 | 0 |
 | Gemini 3.1 Flash-Lite | 2 | 10 | 0 |
-| Gemma 4 31B (Gemini API) | 1 | 8 (retry run in progress) | poisoning lost to 503 ×12; pain pending |
+| Gemma 4 31B (Gemini API) | 1 | 9 | poisoning lost to 503 ×12; rerun in progress |
 | Gemma 4 E4B (laptop) | 7 | 9 | 1 not valid JSON |
 | Gemma 4 E2B (laptop) | not read in full; checker found 2 link errors | 8 | 2 not valid JSON |
 

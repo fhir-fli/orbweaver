@@ -1,0 +1,177 @@
+# translated-from-sha256: 666093235a427b3b9e4514fd8040ff9ab44dbe2b112fd3742999d9307d006f54
+# ============================================================
+# WVEMS 2026 Protocol 20 — Pain
+# Source: assets/2026-WVEMS-Protocols (MayJuun LLC, MIT)
+# ============================================================
+
+topic:
+
+  id: "wvems-2026-020"
+  version: "v260101"
+  title: "Dolor"
+  list_subtitle: "2026-020 · escalera analgésica"
+  last_reviewed: "Oct 2025"
+  tags: ["dolor", "analgesia", "fentanilo", "ketamina", "Tylenol", "ibuprofeno", "Toradol"]
+  aliases:
+  - "HA"
+  - "Cefalea"
+  - "Dolor de espalda"
+  - "Dolor dental"
+  - "Migraña"
+  - "Fibromialgia"
+  category: "universal"
+
+  # Sticky: flowchart page + prose page each snap to a full screen.
+  layout: "paged"
+
+  pages:
+
+  - page_number: 20
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Flowchart block (severity variant)
+    # ────────────────────────────────────────────────
+    - type: "flowchart"
+      variant: "severity"
+
+      entry:
+        text: "Lesión o malestar"
+        shape: "stadium"
+
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+
+      branches:
+
+      - id: "mild"
+        label: "Leve"
+        criteria:
+        - "Malestar mínimo"
+        - "Pulso normal"
+        actions:
+        - provider_level: "E"
+          text: "Tylenol"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "Ibuprofeno"
+          kind: "medication_administration"
+
+      - id: "moderate"
+        label: "Moderado"
+        criteria:
+        - "Cierto malestar"
+        - "Taquicardia leve"
+        actions:
+        - provider_level: "E"
+          text: "Tylenol"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "Toradol"
+          kind: "medication_administration"
+
+      - id: "severe"
+        label: "Grave"
+        criteria:
+        - "Malestar evidente"
+        - "Signos vitales elevados"
+        actions:
+        - provider_level: "A"
+          text: "Fentanilo"
+          kind: "medication_administration"
+        - provider_level: "I"
+          text: "Ketamina"
+          kind: "medication_administration"
+
+      convergence:
+        text: "Considere"
+        shape: "rounded_rectangle"
+        bullets:
+        - text: "[Entablillado](topic:wvems-2026-066)"
+        - text: "[Náuseas](topic:wvems-2026-022)"
+
+      dose_table:
+      - drug: "[Tylenol](topic:wvems-2026-drug-reference#tylenol)"
+        dose: "1,000 mg"
+        route: "PO, IV/IO"
+        frequency: "x1"
+        population: "adult"
+      - drug: "[Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen)"
+        dose: "600 mg"
+        route: "PO"
+        frequency: "x1"
+        population: "adult"
+      - drug: "[Toradol](topic:wvems-2026-drug-reference#toradol)"
+        dose: "15 mg"
+        route: "IV/IO, IM/IN"
+        frequency: "x1"
+        population: "adult"
+      - drug: "[Fentanyl](topic:wvems-2026-drug-reference#fentanyl)"
+        dose: "50–100 mcg"
+        route: "IV/IO, IM/IN"
+        frequency: "Q 5 min x4"
+        population: "adult"
+      - drug: "[Ketamine](topic:wvems-2026-drug-reference#ketamine)"
+        dose: "20 mg"
+        route: "IV/IO, IM/IN"
+        frequency: "Q 15 min x2"
+        population: "adult"
+
+  - page_number: 21
+    blocks:
+
+    # ────────────────────────────────────────────────
+    # Prose blocks (notes page)
+    # ────────────────────────────────────────────────
+
+    - type: "prose"
+      title: "Imperativos del dolor"
+      highlight: true
+      markdown: |
+        - El control del dolor por SEM está indicado para **lesiones recientes** o **dolor súbito** como:
+          - [Trauma mayor](topic:wvems-2026-056), [fracturas](topic:wvems-2026-066) evidentes, [dolor abdominal](topic:wvems-2026-034) o [dolor torácico](topic:wvems-2026-028) agudo
+        - Los analgésicos (incluso VO) son **beneficiosos a pesar de los tiempos cortos de traslado**.
+        - Use la [dosificación pediátrica basada en el peso](topic:wvems-2026-144) para adultos pequeños de menos de 110 lbs (50 kg).
+
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Tylenol®](topic:wvems-2026-drug-reference#tylenol)** (Acetaminofén): evite si hay enfermedad hepática terminal.
+          - {E} solo puede administrar VO; use tabletas, cápsulas, polvo o líquido de venta libre.
+          - {A} puede administrar VO o IV/IO; para IV/IO, administre lentamente durante 10 min.
+        - **[Ibuprofeno](topic:wvems-2026-drug-reference#ibuprofen)** (Advil®, Motrin®): evite si hay sangrado gastrointestinal activo.
+        - **[Toradol®](topic:wvems-2026-drug-reference#toradol)** (Ketorolaco): evite si hay sangrado gastrointestinal activo.
+        - **[Fentanilo](topic:wvems-2026-drug-reference#fentanyl)** (Sublimaze®): use su criterio, objetivo **0.5–1 mcg/kg**.
+          - Comience con una dosis menor (50 mcg) para pacientes que no han recibido narcóticos y/o pacientes más pequeños.
+        - **[Ketamina](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®):
+          - Uso IM/IN: administre como bolo sin diluir.
+          - Uso IV/IO: diluya en NS y administre lentamente durante 10 min.
+        - Puede administrar gotas oftálmicas para abrasiones o queratitis actínica (quemadura del soldador):
+          - {E} **[Tetricaína](topic:wvems-2026-drug-reference#tetracaine)** (0.5 % oftálmica) — 1–2 gtt en el ojo afectado.
+
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - El Tylenol y el ibuprofeno son adecuados para el **dolor subagudo** como:
+          - Dolor dental, cefalea (migraña), ciática, fibromialgia, etc.
+          - Evite el **fentanilo** y la **ketamina** para el dolor subagudo.
+        - El dolor es subjetivo. Puede intentar otro medicamento si el dolor persiste.
+          - **No** use Toradol con ibuprofeno (elija uno u otro).
+        - Dosis diaria máxima: **[Tylenol](topic:wvems-2026-drug-reference#tylenol) 3,000 mg** · **Ibuprofeno 2,400 mg**.
+
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        Use la [Referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para la dosificación pediátrica.
+
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - EBG para el dolor prehospitalario — https://pubmed.ncbi.nlm.nih.gov/34928760/ [Ver: 1/22]
+        - Medscape Pain — https://emedicine.medscape.com/article/310834 [Ver: 7/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Chapter 14, 16.
+
+        NEMSIS: 9914051, 9914071, 9914131
