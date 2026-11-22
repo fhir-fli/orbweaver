@@ -31,7 +31,8 @@ dropped); **minor** = wrong word, typo, untranslated word, register; meaning int
 - flash-lite minor: "Mantener al calor"; "manchas sépticas".
 - opus: none found.
 
-## pb_028_poisoning_ingestion (31B refused)
+## pb_028_poisoning_ingestion
+- gemma-31b (rerun, 49 min of 503 waits): no meaning errors — "casi **NUNCA INDICADO**" and "adsorbidas" both right. minor: "delirio, delirios"; RBS/CBC kept in brackets.
 - **haiku ERROR**: "Gastric lavage: almost NEVER INDICATED" → "**NUNCA ESTÁ INDICADO**, casi siempre" (reads "NEVER indicated, almost always").
 - **flash-lite ERROR**: charcoal "for substances known to be adsorbed" → "que se sabe que se absorben" (absorbed, not adsorbed — the reason to give charcoal is lost).
 - **E4B ERROR**: "Bedside RBS" → "Glucosa en sangre rápida (GCS)" — labels glucose with the Glasgow abbreviation two lines above GCS < 12. minor: "ABCD" → "ABC", "bag" left in English, "Td" for Rx.
@@ -74,7 +75,7 @@ dropped); **minor** = wrong word, typo, untranslated word, register; meaning int
 | Opus 5.5 (this conversation) | 0 | 10 | 0 |
 | Haiku 5.5 | 1 | 10 | 0 |
 | Gemini 3.1 Flash-Lite | 2 | 10 | 0 |
-| Gemma 4 31B (Gemini API) | 1 | 9 | poisoning lost to 503 ×12; rerun in progress |
+| Gemma 4 31B (Gemini API) | 1 | 10 | 0 (poisoning needed a second run) |
 | Gemma 4 E4B (laptop) | 7 | 9 | 1 not valid JSON |
 | Gemma 4 E2B (laptop) | not read in full; checker found 2 link errors | 8 | 2 not valid JSON |
 

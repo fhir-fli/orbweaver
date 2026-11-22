@@ -92,3 +92,4 @@ gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatme
 gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	5374.2	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
 gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	158.0	1234	913	0
 gemini_gemma-4-31b-it	assets/books/wvems/topics/wvems_2026_020.yaml	256.8	1814	1502	0
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	2954.9	1347	1094	0
