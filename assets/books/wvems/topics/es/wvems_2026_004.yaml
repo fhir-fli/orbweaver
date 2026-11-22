@@ -1,0 +1,122 @@
+# translated-from-sha256: 2fb51d3f1954ed8fdafb25fb675bdf6d74b1497eecac589691fa371a2d06621e
+topic:
+  id: "wvems-2026-004"
+  version: "v260101"
+  title: "Vía aérea"
+  list_subtitle: "2026-004 · OPA / BIAD / aspiración"
+  last_reviewed: "Dec 2025"
+  tags: ["vía aérea", "atragantamiento", "biad", "opa", "npa", "aspiración", "intubación"]
+  aliases:
+  - "Ventilación"
+  - "Aspiración"
+  - "Cánula oral/nasal"
+  - "BIAD"
+  - "Atragantamiento"
+  category: "universal"
+  layout: "paged"
+  pages:
+  - page_number: 4
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Atragantamiento, inestable o sin respuesta"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "mild"
+        label: "Leve"
+        criteria:
+        - "Arcadas, tos"
+        - "Despierto y atragantado"
+        actions:
+        - text: "Golpes en la espalda y compresiones"
+          kind: "procedure"
+      - id: "moderate"
+        label: "Moderada"
+        criteria:
+        - "Alteración del nivel de conciencia"
+        - "Hipoxia, boqueo"
+        actions:
+        - text: "Recoloque la vía aérea"
+          kind: "procedure"
+        - text: "Aspiración"
+          kind: "procedure"
+        - text: "NPA"
+          kind: "procedure"
+      - id: "severe"
+        label: "Grave"
+        criteria:
+        - "Sin respuesta"
+        - "Apnea o ronquido"
+        actions:
+        - text: "OPA"
+          kind: "procedure"
+        - provider_level: "A"
+          text: "Pinzas de Magill"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "BIAD"
+          kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Respiración](topic:wvems-2026-006)"
+      critical_care_link:
+        text: "[Intubación](topic:wvems-2026-078)"
+  - page_number: 5
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la vía aérea"
+      markdown: |
+        - Mantenga la vía aérea eficaz más sencilla. **Escale solo si es necesario.**
+          - Considere **elevar la cabecera** de la camilla para reducir el riesgo de aspiración.
+        - Si el **[BIAD](topic:wvems-2026-096#biad)** falla, **inténtelo de nuevo con otro tamaño.**
+          - El fallo más frecuente de un **[BIAD](topic:wvems-2026-096#biad)** es el tamaño inadecuado.
+        - Use varias técnicas para confirmar la vía aérea:
+          - Exploración física: ruidos pulmonares, color de la piel, elevación del tórax, etc.
+          - Signos vitales: SpO₂ en ascenso, EtCO₂, capnografía de onda (el patrón de referencia)
+        - Esté preparado para escalar la vía aérea si hay signos de **mala perfusión**.
+    - type: "prose"
+      title: "Mala perfusión"
+      callout: true
+      markdown: |
+        Sospéchela si hay **varios** de estos:
+        - **Alteración del estado mental**
+        - Piel pálida, fría, sudorosa
+        - Taquicardia, hipotensión
+        - Disnea, taquipnea
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Anime a toser. Use **[golpes en la espalda y compresiones abdominales](topic:wvems-2026-096#back-blows-thrusts)** en el atragantamiento.
+          - Use **compresiones torácicas** si está embarazada o no puede rodear el abdomen.
+        - Recoloque la vía aérea con **tracción mandibular** si hay cualquier sospecha de lesión espinal.
+          - Use **inclinación de la cabeza / elevación del mentón** si la causa es médica (o si falla la tracción mandibular).
+        - Tenga precaución con la **[NPA](topic:wvems-2026-096#npa-opa)** si hay cualquier signo de fx. de cráneo o traumatismo facial.
+        - Asegure bien el **[BIAD](topic:wvems-2026-096#biad)**. Use cinta o un dispositivo de fijación comercial.
+          - Puede colocar un collarín cervical (aun sin traumatismo) para ayudar a estabilizar el BIAD.
+          - {A} Considere colocar una **[sonda OG](topic:wvems-2026-096#og-tube)** si el BIAD lo permite.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [intubación](topic:wvems-2026-078) si está indicada y está acreditado para cuidados críticos.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Sospeche una obstrucción de la vía aérea, sobre todo si hay **estridor**.
+        - Use **compresiones torácicas** (en lugar de compresiones abdominales) en lactantes (< 1 año).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 9
+
+        NEMSIS: 9914011, 9914003, 9914005

@@ -1,0 +1,167 @@
+# translated-from-sha256: 654372fe69cd123ea916a225ff70567132f9d4d4cb3bc3edcba635517d9f858a
+topic:
+  id: "wvems-2026-008"
+  version: "v260101"
+  title: "Circulación / choque"
+  list_subtitle: "2026-008 · bolo de SSN / goteo de epinefrina / dopamina"
+  last_reviewed: "Dec 2025"
+  tags: ["circulación", "choque", "hipotensión", "pa baja", "bolo de líquidos", "perfusión", "epinefrina diluida", "vasopresor"]
+  aliases:
+  - "Hipotensión"
+  - "PA baja"
+  - "Bolo de líquidos"
+  - "Epinefrina diluida"
+  category: "universal"
+  layout: "paged"
+  pages:
+  - page_number: 8
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Sistólica menor de"
+        shape: "stadium"
+        bands:
+        - label: "Adulto (14+)"
+          value: "90 mmHg"
+          cc: "65 mmHg"
+        - label: "Niño (1–13)"
+          value: "70 mmHg"
+          cc: "50 mmHg"
+        - label: "Lactante (< 1)"
+          value: "60 mmHg"
+          cc: "40 mmHg"
+        cc_title: "O PAM"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "mild"
+        label: "Leve"
+        criteria:
+        - "Perfusión adecuada"
+        - "Sin síntomas"
+        actions:
+        - provider_level: "A"
+          text: "Tapón salino"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+      - id: "moderate"
+        label: "Moderada"
+        criteria:
+        - "Perfusión adecuada"
+        - "Taquicardia o mareo"
+        actions:
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+      - id: "severe"
+        label: "Grave"
+        criteria:
+        - "Mala perfusión"
+        - "Alteración del nivel de conciencia"
+        actions:
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+        - provider_level: "I"
+          text: "Goteo de epinefrina"
+          kind: "medication_administration"
+        - provider_level: "I"
+          text: "Dopamina"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Taquicardia](topic:wvems-2026-014), [Bradicardia](topic:wvems-2026-012)"
+        - text: "[Hemorragia](topic:wvems-2026-058), [Alteración de la conciencia](topic:wvems-2026-036)"
+      critical_care_link:
+        text: "[Vasopresores](topic:wvems-2026-082), [Sangre](topic:wvems-2026-084)"
+      dose_table:
+      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+      - drug: "[Epi Drip](topic:wvems-2026-drug-reference#epi-drip-epi-push)"
+        dose: "1 gota por segundo"
+        route: "IV/IO"
+        frequency: "Titrated Drip"
+        population: "adult"
+      - drug: "[Dopamine](topic:wvems-2026-drug-reference#dopamine)"
+        dose: "5 mcg/kg/min"
+        route: "IV/IO"
+        frequency: "Titrated Drip"
+        population: "adult"
+  - page_number: 9
+    blocks:
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Imperativos del choque"
+        highlight: true
+        markdown: |
+          - Considere las causas subyacentes:
+            - [Bradicardia](topic:wvems-2026-012), [Taquicardia](topic:wvems-2026-014)
+            - [Cardíaco](topic:wvems-2026-028), [Anafilaxia](topic:wvems-2026-032)
+            - [Diabético](topic:wvems-2026-038), [Sobredosis / tóxicos](topic:wvems-2026-040)
+            - [Traumatismo grave](topic:wvems-2026-056), [Exposición](topic:wvems-2026-068)
+      - type: "prose"
+        title: "Mala perfusión"
+        callout: true
+        markdown: |
+          Sospéchela si hay **varios** de estos:
+          - **Alteración del estado mental**
+          - Piel pálida, fría, sudorosa
+          - Taquicardia, hipotensión
+          - Disnea, taquipnea
+    - type: "prose"
+      title: "Medicación"
+      markdown: |
+        - **[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)** (salino al 0.9%): indicado en la **mala perfusión**.
+          - Vigile edema y estertores antes y después de administrar líquidos.
+        - **[Goteo de epinefrina](topic:wvems-2026-drug-reference#epi-drip-epi-push)** (epinefrina): prepare una bolsa de **1 mcg/mL** y úsela así:
+          - Añada 1 mg de **epinefrina** a una bolsa de 1,000 mL **-o-** 0.5 mg a una bolsa de 500 mL de **SSN**
+          - Adultos (14+ años): use un equipo de macrogoteo (10 o 15 gtt/mL).
+          - Pediátricos (0–13 años): use un equipo de microgoteo (60 gtt/mL).
+          - Empiece a 1 gota por segundo y **ajuste según necesidad**.
+          - Evite la **epinefrina** si hay dolor torácico activo y [IAMCEST](topic:wvems-2026-088) confirmado.
+        - **[Dopamina](topic:wvems-2026-drug-reference#dopamine)** (Intropin®): para causas médicas refractarias a la **epinefrina**.
+          - **Use un equipo de microgoteo** (60 gtt/mL). Puede ajustar **hasta 4x** si es necesario.
+          - En el adulto medio, empiece hacia **1 gota cada 5 seg** (con equipo de microgoteo).
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Use una reanimación **equilibrada** en el [traumatismo](topic:wvems-2026-056). Los vasopresores son el último recurso.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - La presión arterial media (**PAM**) es un mejor indicador cuando se dispone de ella.
+          - Considere [vasopresores](topic:wvems-2026-082) o [sangre](topic:wvems-2026-084) si están indicados y está acreditado para CC.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - La mayoría de las descompensaciones pediátricas se deben a la vía aérea.
+        - Los líquidos son importantes en la hipotensión. Los vasopresores son el último recurso.
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 7, 29
+
+        NEMSIS: 9914127
