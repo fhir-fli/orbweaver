@@ -1,0 +1,34 @@
+stamp: current
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/litert_gemma-4-E2B-it/pb_028_poisoning_ingestion.yaml.topic.blocks[2].markdown: numbers differ
+    en: [0.2, 0.4, 1, 1.8, 126, 3, 4, 40, 43, 43, 50, 6, 7.15, 70]  «- See the specific protocol for: Organophosphates / Carbamates / Cholinergics, Hydrocarbons / Paraffin / Kerosene, Benzodiazepines / Opiates, Paracetamol, Ethanol
+- **Adrenergic / Sympathomimetics**
+  - Cocaine, amphetamines (crystal meth, Adderall), pseudoephedrine
+  - Presentation: HTN, tachycardia, mydriasis, anxiety, delirium, delusions
+  - Rx: supportive — **benzodiazepines first** (they usually settle the hypertension and tachycardia on their own), plus IV fluids; anti-hypertensives only if still needed
+- **Anticholinergic / Tricyclic antidepressants (TCA) / antihistamines**
+  - Presentation: hyperpyrexia, cutaneous vasodilation (flushing), decreased saliva, mydriasis, urinary retention, dysrhythmias
+  - Rx:
+    - Physostigmine — avoid in TCA; only if persistent tachyarrhythmias or convulsions. Call the anesthetist prior to administering.
+    - NaHCO3 for TCA
+- **Methanol**
+  - Presentation: delirium, loss of vision
+  - Rx: oral by NGT — 1.8 ml/kg of 43% ethanol (roughly **three 40 ml shots, ≈126 ml**, in a 70 kg adult); maintenance 0.2–0.4 ml/kg/hour of 43% ethanol
+  - **Plus folic acid 1 mg/kg (or 50 mg) IV every 4–6 hours** — it speeds conversion of formic acid to CO₂ and water, and is cheap and available
+  - **Refer urgently for haemodialysis if available:** pH ≤ 7.15, visual symptoms, seizures, coma, or deterioration despite the antidote. Dialysis clears both methanol and formate and is the definitive treatment
+»
+    tr: [0.2, 0.4, 1, 1.8, 126, 2, 3, 4, 40, 43, 43, 50, 6, 7.15, 70]  «- Consulte el protocolo específico para: Organofosforados / Carbamatos / Colinérgicos, Hidrocarburos / Parafina / Queroseno, Benzodiazepinas / Opioides, Paracetamol, Etanol
+- **Adrenérgicos / Simpatomiméticos**
+  - Cocaína, amfetaminas (metanfetamina, Adderall), pseudoefedrina
+  - Presentación: TEP, taquicardia, midriasis, ansiedad, delirio, alucinaciones
+  - Rx: de soporte — **benzodiazepinas primero** (suelen estabilizar la hipertensión y la taquicardia por sí mismas), más fluidos IV; antihipertensivos solo si aún se necesitan
+- **Anticolinérgicos / Antidepresivos tricíclicos (ADT) / Antihistamínicos**
+  - Presentación: hiperpiróxia, vasodilatación cutánea (eritema), disminución de la saliva, midriasis, retención urinaria, disarritmias
+  - Rx:
+    - Fisostigmina — evite en ADT; solo si hay taquiarritmias persistentes o convulsiones. Consulte al anestesiólogo antes de administrar.
+    - NaHCO3 para ADT
+- **Metanol**
+  - Presentación: delirio, pérdida de visión
+  - Rx: oral por NGT — 1.8 ml/kg de etanol al 43% (aproximadamente **tres sorbos de 40 ml, ≈126 ml**, en un adulto de 70 kg); mantenimiento 0.2–0.4 ml/kg/hora de etanol al 43%
+  - **Más ácido fólico 1 mg/kg (o 50 mg) IV cada 4–6 horas** — acelera la conversión de ácido fórmico a CO2 y agua, y es barato y está disponible
+  - **Deriva urgentemente a hemodiálisis si está disponible:** pH ≤ 7.15, síntomas visuales, convulsiones, coma, o deterioro a pesar del antídoto. La diálisis elimina tanto el metanol como el formato y es el tratamiento definitivo»
+problems: 1

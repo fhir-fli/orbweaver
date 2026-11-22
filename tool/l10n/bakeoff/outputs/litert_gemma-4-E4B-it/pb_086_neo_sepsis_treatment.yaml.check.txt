@@ -1,0 +1,5 @@
+stamp: current
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/litert_gemma-4-E4B-it/pb_086_neo_sepsis_treatment.yaml.topic.pages[0].blocks[0].stages[0].criteria[7]: comparisons differ
+    en: [<, >]  «PROM > 18 h (if aged < 7 days)»
+    tr: [>]  «PRM > 18 h (si tiene menos de 7 días de vida)»
+problems: 1

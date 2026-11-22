@@ -1,0 +1,123 @@
+# translated-from-sha256: 933eeea7633ff762e21699670551642f70d0de9a9c347ad73c29018f61e00ad7
+# ============================================================
+# ProtocolBook p.28 — Poisoning / Ingestion Algorithm:
+# Suspected acutely poisoned patient.
+#
+# Authoring notes:
+#   - Pure-prose numbered algorithm. Rendered as nested bullets
+#     (MiniMarkdown has no ordered lists; sequence is carried by
+#     top-to-bottom order, as on p.25). The book's 14 numbered
+#     items are split into three titled prose blocks mirroring the
+#     book's own logical grouping (initial mgmt 1–12, ICU 13,
+#     toxidromes 14) for scannability.
+#   - Citation superscripts in the source (Algorithm3, patient79,
+#     NEVER INDICATED80–86) are print footnote markers → dropped.
+#   - Source emphasis kept: ANY, NEVER INDICATED → **bold**.
+#   - Fixed obvious source typo "ant-hypertensives" → "anti-hypertensives".
+#   - "See specific protocol for: ..." (Organophosphates, Hydrocarbons,
+#     Paracetamol, Alcohol) → will be wired as [topic:...] cross-links
+#     once those pages (p.29–39) are authored. Plain text for now.
+#
+# CONTENT FLAG for the later OE / content pass (rendered faithfully now):
+#   - Methanol Rx uses oral ETHANOL (competitive ADH inhibition). This
+#     is the correct LMIC-appropriate antidote; FOMEPIZOLE is the modern
+#     first-line where available. Flag for OE currency review.
+#   - Gastric lavage "almost never indicated" — consistent with modern
+#     tox practice (single-dose activated charcoal preferred within 1 h
+#     for selected ingestions); OE may add charcoal guidance.
+#
+# ✅ OE-CONFIRMED, APPLIED 2026-07-27: activated charcoal guidance added
+#    (1 g/kg PO/NGT within 1 h; not if not fully awake; never intubate
+#    solely to give it) — OE called this the most impactful decontamination
+#    tool available in an LMIC setting. Sympathomimetic Rx reordered to put
+#    BENZODIAZEPINES FIRST (they usually settle the hypertension and
+#    tachycardia without a second agent). METHANOL gained folic acid
+#    1 mg/kg (or 50 mg) IV q4–6h and an explicit haemodialysis referral
+#    trigger (pH ≤7.15, visual symptoms, seizures, coma, or deterioration
+#    despite antidote) — OE called the dialysis omission the largest gap on
+#    the page. Vodka example disambiguated to ~three 40 ml shots (≈126 ml).
+#    ✓ Confirmed no change: gastric-lavage stance, physostigmine-avoid-in-TCA
+#    (safest for a setting with limited monitoring), NaHCO3 for TCA,
+#    benzodiazepine-first for toxin seizures, and the ethanol dosing itself.
+#
+# (historical) CONTENT FLAGS — OPEN (audit pass 2026-07-26, awaiting OE):
+#   - METHANOL section is ANTIDOTE-ONLY. The printed ethanol dosing
+#     itself checks out (1.8 mL/kg of 43% ≈ 0.61 g/kg load; 0.2–0.4
+#     mL/kg/hr ≈ 0.07–0.14 g/kg/hr maintenance — both textbook, and
+#     the LMIC-appropriate choice), but TWO pillars of methanol
+#     management are absent: (a) FOLINIC / FOLIC ACID (accelerates
+#     formate clearance; usual 50 mg IV q6h), and (b) HAEMODIALYSIS,
+#     which is the DEFINITIVE treatment for significant poisoning
+#     (visual symptoms, severe acidosis, high level) and clears both
+#     methanol and formate. Absence of any dialysis pointer is the
+#     larger gap. OE to confirm what to add and in what form given
+#     dialysis availability in this setting.
+#   - Example "40 ml shots of vodka in a 70 kg adult" reads as a
+#     SINGLE shot; 1.8 mL/kg × 70 kg ≈ 126 mL ≈ THREE 40 mL shots.
+#     Ambiguous as printed — OE / Grey to reword.
+#   - Physostigmine "avoid in TCA" ✓ current (asystole risk).
+#     NaHCO3 for TCA ✓. Benzodiazepine-first for seizures ✓.
+# Cross-book pass 2026-08-28: oxygen trigger 94% -> 90%. A routine 94%
+#   trigger commits oxygen to a much larger group without mortality benefit,
+#   and oxygen is the most rationed resource in this setting. The other book
+#   used 90% throughout and this book already used 90% on its paediatric
+#   pneumonia page. Discharge/target criteria on other pages are NOT this
+#   figure and were left alone.
+# ============================================================
+
+topic:
+  id: "pb-poisoning-ingestion"
+  title: "Envenenamiento / Ingestión — Paciente Sospechoso de Intoxicación Aguda"
+  list_subtitle: "p.28 · algoritmo inicial"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["envenenamiento", "ingestión", "toxicología", "toxidromo", "antídoto"]
+  category: "medical"
+  page_number: 28
+
+  blocks:
+
+  - type: "prose"
+    title: "Manejo inicial"
+    markdown: |
+      - Si existe **CUALQUIER** preocupación por residuos en la piel o ropa — use equipo de protección personal (guantes, batas, mascarillas); retire / bag / deseche la ropa; lave al paciente y la zona minuciosamente con agua y jabón (la ropa y el EPP son residuos peligrosos — deseche correctamente)
+      - Monitoree y apoye la ABC
+      - Compruebe los signos vitales (TA, FC, FR, SatO2, Temp)
+      - Si SatO2 < 90% o existe **CUALQUIER** preocupación por la respiración, inicie O2 al 100% vía mascarilla facial
+      - Glucosa en sangre rápida (GCS) al pie de cama y trate la hipoglucemia
+      - Coloque una vía IV de calibre grueso
+      - Realice una anamnesis y examen físico breve y enfocado; preste atención al estado mental
+        - Qué se tomó, hace cuánto, volumen / cuánto, efectos inmediatos
+      - Desconfíe de traumas ocultos
+      - Obtenga laboratorios: hemograma, funciones renales, electrolitos, funciones hepáticas
+      - ECG de 12 derivaciones
+      - Las convulsiones son una emergencia neurológica y deben tratarse prontamente con diazepam
+      - Lavado gástrico: casi **NUNCA INDICADO**
+      - Considere **carbón activado en dosis única de 1 g/kg por VO/SNG dentro de 1 hora** de la ingestión, para sustancias conocidas que se adsorben. No se lo dé a un paciente que no esté completamente despierto, y nunca intube solo para dárselo
+
+  - type: "prose"
+    title: "Indicaciones para ingreso a la UCI"
+    markdown: |
+      - Necesidad de ETT y ventilación mecánica
+      - GCS < 12 / AVPU = U / estado epiléptico
+      - Tóxicos con potencial de depresión respiratoria (p. ej., envenenamiento por amitraz)
+      - Desequilibrios ácido-base
+      - Curso clínico de envenenamiento no claro / impredecible (es decir, poco estudiado)
+
+  - type: "prose"
+    title: "Toxidromos comunes y antídotos"
+    markdown: |
+      - Consulte el protocolo específico para: Organofosforados / Carbamatos / Colinérgicos, Hidrocarburos / Parafina / Queroseno, Benzodiacepinas / Opiáceos, Paracetamol, Etanol
+      - **Adrenérgicos / Simpaticomiméticos**
+        - Cocaína, anfetaminas (metanfetamina cristal, Adderall), pseudoefedrina
+        - Presentación: HAS, taquicardia, midriasis, ansiedad, delirio, delirios
+        - Td: de apoyo — **benzodiacepinas primero** (normalmente estabilizan la hipertensión y la taquicardia por sí solas), más líquidos IV; antihipertensivos solo si sigue siendo necesario
+      - **Anticolinérgicos / Antidepresivos tricíclicos (ATC) / antihistamínicos**
+        - Presentación: hiperpirexia, vasodilatación cutánea (enrojecimiento), disminución de la salivación, midriasis, retención urinaria, arritmias
+        - Td:
+          - Fisiostigmina — evite en ATC; solo si hay taquiarritmias persistentes o convulsiones. Llame al anestesiólogo antes de administrarlo.
+          - NaHCO3 para ATC
+      - **Metanol**
+        - Presentación: delirio, pérdida de visión
+        - Td: por vía oral por SNG — 1.8 ml/kg de etanol al 43% (aproximadamente **tres dosis de 40 ml, ≈126 ml**, en un adulto de 70 kg); mantenimiento de 0.2–0.4 ml/kg/hora de etanol al 43%
+        - **Además de ácido fólico 1 mg/kg (o 50 mg) IV cada 4–6 horas** — acelera la conversión de ácido fórmico a CO₂ y agua, y es barato y disponible
+        - **Derive urgentemente a hemodiálisis si está disponible:** pH ≤ 7.15, síntomas visuales, convulsiones, coma, o deterioro a pesar del antídoto. La diálisis elimina tanto el metanol como el formato y es el tratamiento definitivo

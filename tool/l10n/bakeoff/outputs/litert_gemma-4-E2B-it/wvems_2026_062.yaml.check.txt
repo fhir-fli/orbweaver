@@ -1,0 +1,47 @@
+stamp: current
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/litert_gemma-4-E2B-it/wvems_2026_062.yaml.topic.pages[1].blocks[0].markdown: numbers differ
+    en: [006, 008, 076, 2026, 2026, 2026]  «- Transport emergently if sudden changes in LOC.
+- **Hypoxia** and **Hypotension** are associated with poor outcomes.
+  - Investigate and treat for [Hypoxia](topic:wvems-2026-006) and [Hypotension](topic:wvems-2026-008) aggressively.
+- [Anticoagulation](topic:wvems-2026-076) meds (**blood thinners**) increase risk of ICH.
+- **Lacerations** benefit from repair within the first few hours.
+- **Mechanism** predicts severity.
+»
+    tr: [006, 008, 056, 056, 076, 2026, 2026, 2026, 2026, 2026]  «- Transporte de emergencia si hay cambios repentinos en la LOC.
+- La **hipoxia** y la **hipotensión** están asociadas con peores resultados.
+  - Investigue y trate agresivamente la [Hipoxia](topic:wvems-2026-006) y la [Hipotensión](topic:wvems-2026-008).
+- Los medicamentos de [Anticoagulación](topic:wvems-2026-076) (**empaquetadores de sangre**) aumentan el riesgo de HCE.
+- Las [Laceraciones](topic:wvems-2026-056) se benefician de la reparación dentro de las primeras horas.
+- El [Mecanismo](topic:wvems-2026-056) predice la gravedad.
+»
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/litert_gemma-4-E2B-it/wvems_2026_062.yaml.topic.pages[1].blocks[0].markdown: links differ
+    en: [topic:wvems-2026-006, topic:wvems-2026-008, topic:wvems-2026-076]  «- Transport emergently if sudden changes in LOC.
+- **Hypoxia** and **Hypotension** are associated with poor outcomes.
+  - Investigate and treat for [Hypoxia](topic:wvems-2026-006) and [Hypotension](topic:wvems-2026-008) aggressively.
+- [Anticoagulation](topic:wvems-2026-076) meds (**blood thinners**) increase risk of ICH.
+- **Lacerations** benefit from repair within the first few hours.
+- **Mechanism** predicts severity.
+»
+    tr: [topic:wvems-2026-006, topic:wvems-2026-008, topic:wvems-2026-056, topic:wvems-2026-056, topic:wvems-2026-076]  «- Transporte de emergencia si hay cambios repentinos en la LOC.
+- La **hipoxia** y la **hipotensión** están asociadas con peores resultados.
+  - Investigue y trate agresivamente la [Hipoxia](topic:wvems-2026-006) y la [Hipotensión](topic:wvems-2026-008).
+- Los medicamentos de [Anticoagulación](topic:wvems-2026-076) (**empaquetadores de sangre**) aumentan el riesgo de HCE.
+- Las [Laceraciones](topic:wvems-2026-056) se benefician de la reparación dentro de las primeras horas.
+- El [Mecanismo](topic:wvems-2026-056) predice la gravedad.
+»
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/litert_gemma-4-E2B-it/wvems_2026_062.yaml.topic.pages[1].blocks[0].markdown: bold runs differ
+    en: 10  «- Transport emergently if sudden changes in LOC.
+- **Hypoxia** and **Hypotension** are associated with poor outcomes.
+  - Investigate and treat for [Hypoxia](topic:wvems-2026-006) and [Hypotension](topic:wvems-2026-008) aggressively.
+- [Anticoagulation](topic:wvems-2026-076) meds (**blood thinners**) increase risk of ICH.
+- **Lacerations** benefit from repair within the first few hours.
+- **Mechanism** predicts severity.
+»
+    tr: 6  «- Transporte de emergencia si hay cambios repentinos en la LOC.
+- La **hipoxia** y la **hipotensión** están asociadas con peores resultados.
+  - Investigue y trate agresivamente la [Hipoxia](topic:wvems-2026-006) y la [Hipotensión](topic:wvems-2026-008).
+- Los medicamentos de [Anticoagulación](topic:wvems-2026-076) (**empaquetadores de sangre**) aumentan el riesgo de HCE.
+- Las [Laceraciones](topic:wvems-2026-056) se benefician de la reparación dentro de las primeras horas.
+- El [Mecanismo](topic:wvems-2026-056) predice la gravedad.
+»
+problems: 3

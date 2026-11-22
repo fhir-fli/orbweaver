@@ -65,3 +65,23 @@ gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestio
 gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	33.9	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
 litert_gemma-4-E2B-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	127.8	0	0	0
 litert_gemma-4-E2B-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	130.0	0	0	1
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	225.6	1565	1328	0
+gemini_gemma-4-31b-it	assets/books/wvems/topics/wvems_2026_020.yaml	19.9	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+litert_gemma-4-E2B-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	226.1	0	0	bad-reply: Illegal trailing comma before end of object: line 55 column 292 (char 5632)
+litert_gemma-4-E2B-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	129.2	0	0	1
+litert_gemma-4-E2B-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	84.2	0	0	1
+litert_gemma-4-E2B-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	88.7	0	0	bad-reply: Invalid control character at: line 2 column 13 (char 14)
+litert_gemma-4-E2B-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	112.9	0	0	0
+litert_gemma-4-E2B-it	assets/books/wvems/topics/wvems_2026_020.yaml	112.4	0	0	2
+litert_gemma-4-E2B-it	assets/books/wvems/topics/wvems_2026_062.yaml	128.0	0	0	3
+litert_gemma-4-E2B-it	assets/books/calculators/topics/conv_steroids.yaml	51.2	0	0	0
+litert_gemma-4-E4B-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	162.7	0	0	0
+litert_gemma-4-E4B-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	167.1	0	0	bad-reply: Expecting ',' delimiter: line 59 column 427 (char 3940)
+litert_gemma-4-E4B-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	167.3	0	0	0
+litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	150.2	0	0	1
+litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	109.1	0	0	0
+litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	90.3	0	0	0
+litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	153.1	0	0	0
+litert_gemma-4-E4B-it	assets/books/wvems/topics/wvems_2026_020.yaml	178.3	0	0	3
+litert_gemma-4-E4B-it	assets/books/wvems/topics/wvems_2026_062.yaml	187.5	0	0	0
+litert_gemma-4-E4B-it	assets/books/calculators/topics/conv_steroids.yaml	86.9	0	0	0
