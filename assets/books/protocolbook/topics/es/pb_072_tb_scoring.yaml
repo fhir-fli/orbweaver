@@ -1,0 +1,71 @@
+# translated-from-sha256: 63084bf2669dc009da36bd46aeccbd676b704a95832f32dc2b4ad536de89dd29
+topic:
+  id: "pb-tb-scoring"
+  title: "TB — sistemas de puntuación pulmonar"
+  list_subtitle: "p.72 · 8 puntos · Edwards · brasileño"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["tuberculosis", "TB", "pediátrico", "tuberculosis pulmonar", "puntuación", "puntuación de riesgo de 8 puntos", "puntuación de edwards", "sistema de puntuación brasileño", "tuberculina", "rxt"]
+  category: "medical"
+  page_number: 72
+  blocks:
+  - type: "table"
+    title: "Puntuación de riesgo de 8 puntos para niños en contacto con personas infectadas"
+    zebra: true
+    columns: ["Característica / puntuación", "0", "1", "2", "3", "4"]
+    column_flex: [8, 2, 2, 2, 2, 2]
+    column_align: ["left", "center", "center", "center", "center", "center"]
+    rows:
+    - cells: ["Prueba de tuberculina (mm de induración)", "<10", "-", "10–14", "15–19", "≥20"]
+    - cells: ["Caso fuente con baciloscopia positiva", "-", "Presente", "-", "-", "-"]
+    - cells: ["El caso fuente vive en una zona de alta incidencia", "-", "-", "Presente", "-", "-"]
+    - cells: ["El caso fuente es mujer", "-", "Presente", "-", "-", "-"]
+  - type: "prose"
+    markdown: |
+      **Zona de alta incidencia:** en el estudio original esta incidencia era de 277/100,000; si no conoce la incidencia local, puede suponer que es alta si está en África o en el Sudeste Asiático.
+
+      **El caso fuente es mujer:** refleja los patrones de contacto en el cuidado de la población del estudio original — las cuidadoras suelen tener un contacto cercano más prolongado con los niños pequeños. No es un factor de riesgo biológico.
+  - type: "table"
+    title: "Nueva puntuación de Edwards modificada"
+    zebra: true
+    columns: ["Característica / puntuación", "0", "1", "2", "3"]
+    column_flex: [7, 3, 4, 3, 4]
+    column_align: ["left", "center", "center", "center", "center"]
+    rows:
+    - cells: ["Duración de la enfermedad (semanas)", "<2", "2–4", "-", ">4"]
+    - cells: ["Nutrición (% peso para la longitud)", ">80", "60–80", "-", "<60"]
+    - cells: ["Antecedente familiar de TB", "Ninguno", "Referido por la familia", "-", "Esputo positivo demostrado"]
+    - cells: ["Prueba de tuberculina", "-", "-", "-", "Positiva"]
+    - cells: ["Desnutrición", "-", "-", "-", "Sin mejoría tras 4 semanas"]
+    - cells: ["Fiebre inexplicada (>2 semanas)", "-", "-", "Sin respuesta al tratamiento", "-"]
+  - type: "prose"
+    markdown: |
+      Una puntuación ≥7 indica tuberculosis
+  - type: "table"
+    title: "Sistema de puntuación del Ministerio de Salud de Brasil"
+    zebra: true
+    columns: ["Hallazgo", "Puntos"]
+    column_flex: [8, 2]
+    column_align: ["left", "center"]
+    rows:
+    - cells: [{text: "**Síntomas clínicos**", span: 2}]
+    - cells: ["Fiebre o síntomas como tos, cansancio, pérdida de peso, sudoración durante > 2 semanas", "+15"]
+    - cells: ["Asintomático o síntomas < 2 semanas", "0"]
+    - cells: ["Mejoría de la infección respiratoria sin antibióticos, o con antibióticos para gérmenes comunes", "−10"]
+    - cells: [{text: "**Hallazgos radiológicos**", span: 2}]
+    - cells: ["RxT con adenopatías hiliares, patrón miliar, condensación o infiltrado durante > 2 semanas, con empeoramiento de los síntomas o sin mejoría con antibióticos para gérmenes comunes", "+15"]
+    - cells: ["Condensación o infiltrado < 2 semanas", "+5"]
+    - cells: ["RxT normal", "−5"]
+    - cells: [{text: "**Contacto con un adulto con TB**", span: 2}]
+    - cells: ["Contacto cercano en los últimos 2 años", "+10"]
+    - cells: ["Ocasional o negativo", "0"]
+    - cells: [{text: "**Prueba cutánea de tuberculina**", span: 2}]
+    - cells: ["> 10mm en un niño vacunado con BCG hace > 2 años o nunca vacunado", "+15"]
+    - cells: [">15mm en niños vacunados con BCG en los últimos 2 años", "+15"]
+    - cells: ["≥ 5mm y ≤ 9mm", "+5"]
+    - cells: ["< 5mm", "0"]
+    - cells: [{text: "**Estado nutricional**", span: 2}]
+    - cells: ["Peso < percentil 10", "+5"]
+    - cells: ["Peso ≥ percentil 10", "0"]
+  - type: "prose"
+    markdown: |
+      **Puntos:** ≥40 muy probable · 30–39 posible · ≤29 poco probable

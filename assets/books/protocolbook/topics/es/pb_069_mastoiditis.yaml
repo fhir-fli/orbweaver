@@ -1,0 +1,34 @@
+# translated-from-sha256: b7e34738892b918aad4695b914e8a24eb60c9f367f5f4a793b5844e0e7ac1da3
+topic:
+  id: "pb-mastoiditis"
+  title: "Mastoiditis"
+  list_subtitle: "p.69 · infecciones de ORL III"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["mastoiditis", "ORL", "otitis media", "retroauricular", "oreja desplazada", "ampicilina-sulbactam", "ceftriaxona", "vancomicina", "pediátrico"]
+  category: "medical"
+  page_number: 69
+  blocks:
+  - type: "prose"
+    title: "Presentación / hallazgos de la exploración"
+    markdown: |
+      - El factor de riesgo es un diagnóstico actual o reciente de otitis media aguda
+      - Signos de inflamación local sobre la mastoides:
+        - Oreja desplazada hacia fuera
+        - Eritema, hinchazón o dolor retroauricular
+        - Signos sistémicos, fiebre o malestar
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_mastoiditis_postauricular.png"
+    size: "full"
+    caption: "Mastoiditis — hinchazón retroauricular sobre la mastoides (derecha) que desplaza la oreja hacia fuera y hacia abajo (vista posterior)."
+  - type: "prose"
+    title: "Tratamiento — niños"
+    markdown: |
+      - Ampicilina-sulbactam IV 50mg/kg cada 6 horas (la dosis es del componente de ampicilina), **O** cloxacilina o flucloxacilina IV 50mg/kg cada 6 horas — **una u otra, no ambas** (la ampicilina-sulbactam ya cubre el estafilococo)
+      - Si no responde en 48 horas o el niño empeora, derive a un especialista quirúrgico para valorar incisión y drenaje
+  - type: "prose"
+    title: "Tratamiento — adultos"
+    markdown: |
+      - Ceftriaxona 2g IV cada 12 h (**máx. 4g/día**) o cefotaxima 2g IV cada 8 horas
+      - **Con complicaciones intracraneales:** ceftriaxona 2g IV cada 12 h (**máx. 4g/día**) más **vancomicina 15mg/kg IV cada 6 horas (máx. 2g/dosis)** — cada 6 horas, no cada 8, porque es una infección del SNC; nivel valle objetivo 15–20 mg/L — controle los niveles si es posible
+      - **TC del hueso temporal** donde esté disponible, para buscar mastoiditis coalescente o extensión intracraneal
+      - **Derive a cirugía.** Con complicaciones intracraneales el drenaje es urgente — no espere 48 horas

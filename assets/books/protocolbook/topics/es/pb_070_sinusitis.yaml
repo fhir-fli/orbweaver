@@ -1,0 +1,45 @@
+# translated-from-sha256: 04de89621cbf40f3ceb5c1583c766d1bfcf04c0661ac7d6d26d5bb2eb65b82bf
+topic:
+  id: "pb-sinusitis"
+  title: "Sinusitis"
+  list_subtitle: "p.70 · infecciones de ORL V"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sinusitis", "rinosinusitis", "sinusitis bacteriana", "ORL", "nasal", "amoxicilina", "empeoramiento bifásico", "pediátrico"]
+  category: "medical"
+  page_number: 70
+  blocks:
+  - type: "prose"
+    markdown: |
+      - **No** requiere antibióticos salvo que sea bacteriana
+  - type: "table"
+    title: "Diagnóstico de sinusitis aguda — 2 síntomas mayores, O 1 mayor + ≥2 menores"
+    columns: ["Síntomas mayores", "Criterios menores"]
+    column_flex: [1, 1]
+    rows:
+    - cells:
+      - bullets:
+        - "Congestión u obstrucción nasal"
+        - "Secreción nasal purulenta"
+        - "Hiposmia o anosmia"
+        - "Congestión o plenitud facial"
+        - "Dolor o presión facial"
+        - "Fiebre"
+      - bullets:
+        - "Cefalea"
+        - "Dolor, presión o plenitud de oído"
+        - "Halitosis"
+        - "Dolor dental"
+        - "Tos"
+        - "Cansancio"
+  - type: "prose"
+    title: "Diagnóstico de sinusitis BACTERIANA — cualquiera de"
+    markdown: |
+      - Signos/síntomas anteriores que duran ≥10 días
+      - Empeoramiento o aparición de signos/síntomas tras una mejoría inicial, en general a los 5–6 días (**empeoramiento bifásico**)
+      - Síntomas graves con fiebre concurrente (>38.5 axilar) y secreción nasal purulenta o dolor facial durante ≥3 días
+  - type: "prose"
+    title: "Tratamiento de la sinusitis bacteriana (debe cumplir los criterios anteriores)"
+    markdown: |
+      - Amoxicilina 45mg/kg/dosis dos veces al día x 7 días si tiene >2 años y enfermedad leve-moderada no complicada
+      - Amoxicilina/ácido clavulánico 45mg/kg/dosis dos veces al día x 7 días si tiene <2 años, enfermedad moderada-grave, asiste a guardería o recibió antibióticos en las últimas 4 semanas
+      - Si no mejora en 72 horas, considere cambiar de antibiótico

@@ -1,0 +1,66 @@
+# translated-from-sha256: abb1a5235b51645d8bbfb1f079b253a1f042ce694d75a31bcbc9f896943db61a
+topic:
+  id: "pb-pharyngitis"
+  title: "Faringitis"
+  list_subtitle: "p.70 · infecciones de ORL IV"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["faringitis", "dolor de garganta", "faringitis estreptocócica", "estreptocócica", "puntuación de centor", "ORL", "penicilina", "amoxicilina", "clindamicina", "amigdalitis", "pediátrico"]
+  category: "medical"
+  page_number: 70
+  blocks:
+  - type: "prose"
+    markdown: |
+      - La faringitis estreptocócica suele presentarse con dolor de garganta, fiebre, cefalea o dolor de estómago, pero **NO** con síntomas virales como tos, coriza o conjuntivitis
+      - **Solo la faringitis estreptocócica debe tratarse con antibióticos** — todas las demás solo con medidas de soporte
+      - **Por qué tratarla:** para prevenir la **fiebre reumática aguda** y la cardiopatía reumática que le sigue. Por eso deben completarse los 10 días aunque el dolor de garganta ceda en 2–3 días. Vea el [protocolo de fiebre reumática](topic:pb-rheumatic-fever)
+  - type: "table"
+    title: "Diagnóstico de faringitis estreptocócica — puntuación de Centor modificada"
+    columns: ["Criterios", "Puntos"]
+    column_flex: [6, 1]
+    column_align: ["left", "center"]
+    rows:
+    - cells: ["Edad 3–14 años", "+1"]
+    - cells: ["Edad 15–44 años", "0"]
+    - cells: ["Edad ≥45 años", "−1"]
+    - cells: ["Exudado amigdalar", "+1"]
+    - cells: ["Ganglios cervicales anteriores dolorosos/aumentados", "+1"]
+    - cells: ["Febril", "+1"]
+    - cells: ["Ausencia de tos", "+1"]
+  - type: "table"
+    title: "Puntuación — niños"
+    columns: ["Puntuación", "Acción"]
+    column_flex: [2, 5]
+    column_align: ["center", "left"]
+    rows:
+    - cells: ["0–1 puntos", "No requiere tratamiento"]
+    - cells: ["2 puntos", "Idealmente prueba rápida/cultivo; puede usar el juicio clínico para iniciar el tratamiento"]
+    - cells: ["3+ puntos", "Inicie el tratamiento de forma presuntiva"]
+  - type: "table"
+    title: "Puntuación — adultos"
+    columns: ["Puntuación", "Acción"]
+    column_flex: [2, 5]
+    column_align: ["center", "left"]
+    rows:
+    - cells: ["0–2 puntos", "No requiere tratamiento"]
+    - cells: ["3+ puntos", "Inicie el tratamiento de forma presuntiva"]
+  - type: "table"
+    title: "Tratamiento"
+    columns: ["Medicamento", "Dosis pediátrica (≤27kg)", "Dosis de adulto (>27kg)"]
+    column_flex: [5, 5, 5]
+    rows:
+    - cells:
+      - "Penicilina V potásica VO"
+      - "250mg VO dos veces al día x 10 días"
+      - "500mg VO dos veces al día x 10 días"
+    - cells:
+      - "Penicilina G benzatínica IM — dosis única"
+      - "600,000 UI x 1"
+      - "1.2 millones de UI x 1"
+    - cells:
+      - "Amoxicilina VO"
+      - text: "25mg/kg/dosis (máx. 500mg/dosis) dos veces al día x 10 días"
+        span: 2
+    - cells:
+      - "Clindamicina VO — en alergia a la penicilina"
+      - text: "7mg/kg (máx. 300mg) cada 8 horas x 10 días"
+        span: 2
