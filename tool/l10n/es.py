@@ -72,11 +72,17 @@ def cmd_status():
         print(b, len(pages), counts, flush=True)
 
 
+def has_letter(v):
+    """True when v holds a letter. Unicode fractions (½ ¼ ¾) are numerics,
+    not letters, though the regex class \\w counts them as word characters."""
+    return any(c.isalpha() for c in v)
+
+
 def cmd_next(out, n, book):
     todo = [p for p in english_pages(book) if state(p) != 'current'][:n]
     # Strings with no letters are left out; apply copies them unchanged.
     dump = {p: {k: v for k, v in segments.extract(os.path.join(REPO, p)).items()
-                if re.search(r'[^\W\d_]', v)} for p in todo}
+                if has_letter(v)} for p in todo}
     with open(out, 'w') as f:
         json.dump(dump, f, ensure_ascii=False, indent=1)
         f.flush()
@@ -94,7 +100,7 @@ def cmd_apply(src):
         # A string with no letters (a number, range, sign or blank) is kept
         # as it is (prompt rule 6), so it may be left out of the JSON.
         for k, v in want.items():
-            if k not in tr and not re.search(r'[^\W\d_]', v):
+            if k not in tr and not has_letter(v):
                 tr[k] = v
         if sorted(tr) != sorted(want):
             print(f'{english}: ids differ {sorted(set(tr) ^ set(want))}', flush=True)
