@@ -47,18 +47,22 @@ flutter:
     - assets/books/protocolbook/
     - assets/books/protocolbook/topics/
     - assets/books/protocolbook/topics/es/
+    - assets/books/protocolbook/es/
     - assets/books/protocolbook/images/
     - assets/books/wvems/
     - assets/books/wvems/topics/
     - assets/books/wvems/topics/es/
+    - assets/books/wvems/es/
     - assets/books/wvems/images/
     - assets/books/who_imci/
     - assets/books/who_imci/topics/
     - assets/books/who_imci/topics/es/
+    - assets/books/who_imci/es/
     - assets/books/who_imci/images/
     - assets/books/calculators/
     - assets/books/calculators/topics/
     - assets/books/calculators/topics/es/
+    - assets/books/calculators/es/
 
   # Roboto Condensed, Apache 2.0 (licence bundled beside the files). Flutter
   # keeps these in its material_fonts cache but bundles NO Roboto into a built

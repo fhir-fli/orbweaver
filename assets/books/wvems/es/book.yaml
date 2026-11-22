@@ -1,0 +1,142 @@
+# translated-from-sha256: d14021b0afedb741d4fe5e7eefffa5e46cbcd5826bd7d29fbb1e4480402b8dfa
+book:
+  id: "wvems"
+  title: "Protocolos WVEMS"
+  subtitle: "Edición 2026 · Prehospitalaria"
+  cover: "cover.png"
+  spine_color: "0xFF1E4E8C"
+  view: "index"
+  palette:
+    node_border: "0xFF000000"
+    section_rule: "0xFF666666"
+    section_title: "0xFF000000"
+    box_border: "0xFF000000"
+    alert: "0xFF000000"
+    alert_fill: "0xFFEFEFEF"
+    alert_text: "0xFF000000"
+    dash_rule: "0xFF999999"
+    dash_fill: "0xFFFDFAFA"
+    note_fill: "0xFFEFEFEF"
+    note_border: "0xFF000000"
+    note_text: "0xFF000000"
+  font_family: "RobotoCondensed"
+  contents:
+  - title: "Universales"
+    palette:
+      accent: "0xFF1E4E8C"
+      accent_fill: "0xFFE8F0FA"
+      accent_branch: "0xFF2C6BB5"
+      page_wash: "0xFFF5F8FD"
+    children:
+    - topic: "topics/wvems_2026_004.yaml"
+    - topic: "topics/wvems_2026_006.yaml"
+    - topic: "topics/wvems_2026_008.yaml"
+    - topic: "topics/wvems_2026_010.yaml"
+    - topic: "topics/wvems_2026_012.yaml"
+    - topic: "topics/wvems_2026_016.yaml"
+    - topic: "topics/wvems_2026_018.yaml"
+    - topic: "topics/wvems_2026_020.yaml"
+    - topic: "topics/wvems_2026_014.yaml"
+    - topic: "topics/wvems_2026_022.yaml"
+  - title: "Médicos"
+    palette:
+      accent: "0xFF2E7D32"
+      accent_fill: "0xFFEAF4EB"
+      accent_branch: "0xFF43A047"
+      page_wash: "0xFFF5F9F3"
+    children:
+    - topic: "topics/wvems_2026_024.yaml"
+    - topic: "topics/wvems_2026_026.yaml"
+    - topic: "topics/wvems_2026_028.yaml"
+    - topic: "topics/wvems_2026_030.yaml"
+    - topic: "topics/wvems_2026_032.yaml"
+    - topic: "topics/wvems_2026_034.yaml"
+    - topic: "topics/wvems_2026_036.yaml"
+    - topic: "topics/wvems_2026_038.yaml"
+    - topic: "topics/wvems_2026_040.yaml"
+    - topic: "topics/wvems_2026_042.yaml"
+    - topic: "topics/wvems_2026_044.yaml"
+    - topic: "topics/wvems_2026_046.yaml"
+    - topic: "topics/wvems_2026_048.yaml"
+    - topic: "topics/wvems_2026_050.yaml"
+  - title: "Trauma"
+    palette:
+      accent: "0xFFC55A11"
+      accent_fill: "0xFFFBEEE4"
+      accent_branch: "0xFFE57324"
+      page_wash: "0xFFFCF6F5"
+    children:
+    - topic: "topics/wvems_2026_052.yaml"
+    - topic: "topics/wvems_2026_054.yaml"
+    - topic: "topics/wvems_2026_056.yaml"
+    - topic: "topics/wvems_2026_058.yaml"
+    - topic: "topics/wvems_2026_060.yaml"
+    - topic: "topics/wvems_2026_062.yaml"
+    - topic: "topics/wvems_2026_064.yaml"
+    - topic: "topics/wvems_2026_066.yaml"
+    - topic: "topics/wvems_2026_068.yaml"
+    - topic: "topics/wvems_2026_070.yaml"
+    - topic: "topics/wvems_2026_072.yaml"
+    - topic: "topics/wvems_2026_074.yaml"
+    - topic: "topics/wvems_2026_076.yaml"
+  - title: "Cuidados críticos"
+    palette:
+      accent: "0xFF6A1B9A"
+      accent_fill: "0xFFF1E7F6"
+      accent_branch: "0xFF8E24AA"
+      page_wash: "0xFFF2F0F6"
+    children:
+    - topic: "topics/wvems_2026_078.yaml"
+    - topic: "topics/wvems_2026_080.yaml"
+    - topic: "topics/wvems_2026_082.yaml"
+    - topic: "topics/wvems_2026_084.yaml"
+    - topic: "topics/wvems_2026_086.yaml"
+    - topic: "topics/wvems_2026_088.yaml"
+    - topic: "topics/wvems_2026_090.yaml"
+    - topic: "topics/wvems_2026_092.yaml"
+    - topic: "topics/wvems_2026_094.yaml"
+  - title: "Vademécum"
+    appendix: true
+    palette:
+      accent: "0xFF3A5D64"
+      accent_fill: "0xFFE6EEF0"
+      accent_branch: "0xFF5E8F99"
+      page_wash: "0xFFF6F9F9"
+    children:
+    - topic: "topics/wvems_2026_drug_reference.yaml"
+  - title: "Procedimientos"
+    appendix: true
+    palette:
+      accent: "0xFFC55A11"
+      accent_fill: "0xFFFBEEE4"
+      accent_branch: "0xFFE57324"
+      page_wash: "0xFFFDF8F2"
+    children:
+    - topic: "topics/wvems_2026_096.yaml"
+  - title: "Normas"
+    appendix: true
+    palette:
+      accent: "0xFF455A64"
+      accent_fill: "0xFFECEFF1"
+      accent_branch: "0xFF607D8B"
+      page_wash: "0xFFFDF8F2"
+    children:
+    - topic: "topics/wvems_2026_109.yaml"
+  - title: "Referencia pediátrica"
+    appendix: true
+    palette:
+      accent: "0xFFAD1457"
+      accent_fill: "0xFFFDE7F0"
+      accent_branch: "0xFFD81B60"
+      page_wash: "0xFFFFFBFB"
+    children:
+    - topic: "topics/wvems_2026_144.yaml"
+  - title: "Acerca de y créditos"
+    appendix: true
+    palette:
+      accent: "0xFF455A64"
+      accent_fill: "0xFFECEFF1"
+      accent_branch: "0xFF607D8B"
+    children:
+    - topic: "topics/wvems_2026_003.yaml"
+    - topic: "topics/wvems_2026_about.yaml"
