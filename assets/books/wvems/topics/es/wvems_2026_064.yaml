@@ -1,0 +1,113 @@
+# translated-from-sha256: 2cfe54d73e7fd07e6d140965ab2851ae077ee38a4a535d82970951cc47ee544b
+topic:
+  id: "wvems-2026-064"
+  version: "v260101"
+  title: "Lesión del tronco"
+  list_subtitle: "2026-064 · tórax / abdomen / evisceración / tórax inestable"
+  last_reviewed: "Oct 2025"
+  tags:
+  - "lesión del tronco"
+  - "tórax"
+  - "abdomen"
+  - "evisceración"
+  - "tórax inestable"
+  - "fx pélvica"
+  - "traumatismo"
+  aliases:
+  - "Lesión de tórax / abdomen"
+  - "Evisceración"
+  - "Tórax inestable"
+  - "Fx pélvica"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 64
+    blocks:
+    - type: "flowchart"
+      variant: "differential"
+      entry_chain:
+      - text: "Traumatismo de tórax, espalda o abdomen"
+        shape: "stadium"
+      decision:
+        text: "¿Lesión?"
+        shape: "diamond"
+      cards:
+      - title: "Penetrante"
+        bullets:
+        - "Tto: [respiración](topic:wvems-2026-006)"
+        - "Considere PTX"
+      - title: "Empalado"
+        bullets:
+        - "Inmovilice el objeto"
+        - "No lo retire"
+      - title: "Evisceración"
+        bullets:
+        - "Gasa con suero salino"
+        - "Barrera impermeable"
+      - title: "Tórax inestable"
+        bullets:
+        - "Tto: [respiración](topic:wvems-2026-006)"
+        - "Asista con BVM"
+      - title: "Columna"
+        bullets:
+        - "Tto: [inmovilización](topic:wvems-2026-060)"
+        - "Busque un escalón"
+      - title: "Pelvis inestable"
+        bullets:
+        - "Tto: [choque](topic:wvems-2026-008)"
+        - "Use un cinturón pélvico"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Traumatismo grave](topic:wvems-2026-056)"
+        - text: "[Hemorragia](topic:wvems-2026-058)"
+        - text: "[Dolor](topic:wvems-2026-020)"
+  - page_number: 65
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la lesión del tronco"
+      highlight: true
+      markdown: |
+        - Inmovilice los **objetos empalados** tal como estén (corte los restos para liberar al paciente).
+          - Puede retirarlos solo si interfieren con la vía aérea o la reanimación.
+        - Las **laceraciones** se benefician de reparación en las primeras horas.
+        - El **mecanismo** es un indicador importante de la gravedad de la lesión.
+    - type: "prose"
+      title: "Alerta de TRAUMA"
+      callout: true
+      dashed: true
+      call_er: true
+      markdown: |
+        - Si hay intervención mayor
+        - O mecanismo mayor
+        - Active una alerta de **TRAUMA**
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - **Penetrante**: toda herida penetrante debe tener un [sello torácico](topic:wvems-2026-006).
+          - Retire el sello torácico si usa presión positiva (p. ej., BVM, NIPPV).
+        - **Evisceración**: cúbrala con gasa con suero salino y una barrera impermeable.
+        - **Columna**: vigile los déficits neurológicos y aplique [inmovilización](topic:wvems-2026-060).
+        - **Empalado**: corte el objeto para liberarlo de los restos. No lo retire del paciente.
+        - **Tórax inestable**: vigile el [neumotórax](topic:wvems-2026-006). Use BVM ante [disnea](topic:wvems-2026-030).
+        - **Pelvis inestable**: valórela **solo una vez** (con compresión suave).
+          - Considere un **cinturón pélvico**:
+            - Colóquelo **POR DEBAJO de la línea del cinturón**.
+            - Sobre los trocánteres mayores.
+            - Rote los pies hacia dentro.
+            - Sujete juntos pies y piernas.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - La lesión del tronco es más probable en niños atropellados.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Blunt Chest — https://emedicine.medscape.com/article/428723 [Ver: 11/22]
+        - Medscape Penetrating Abd — https://emedicine.medscape.com/article/2036859 [Ver: 3/22]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 31
+
+        NEMSIS: 9914193

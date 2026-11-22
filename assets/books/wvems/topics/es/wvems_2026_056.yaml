@@ -1,0 +1,163 @@
+# translated-from-sha256: 89ccc3214f0ffded3b669ade7ed26f587fc9bfcf03ee6e513acf0e06bc9a8a3a
+topic:
+  id: "wvems-2026-056"
+  version: "v260101"
+  title: "Traumatismo grave"
+  list_subtitle: "2026-056 · multisistémico / empalado / explosión"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "traumatismo"
+  - "multisistémico"
+  - "empalado"
+  - "explosión"
+  - "politraumatismo"
+  aliases:
+  - "Traumatismo multisistémico"
+  - "Empalado"
+  - "Lesión por explosión / onda expansiva"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 56
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Lesión multisistémica evidente"
+        shape: "stadium"
+      decision:
+        text: "Prioridades"
+        shape: "diamond"
+      branches:
+      - id: "first"
+        label: "Primero"
+        criteria:
+        - "Trate la [circulación](topic:wvems-2026-008)"
+        - "Establezca la [vía aérea](topic:wvems-2026-004)"
+        - "Proporcione respiración"
+        actions:
+        - text: "Torniquete"
+          kind: "procedure"
+        - provider_level: "I"
+          text: "Descompresión pleural"
+          kind: "procedure"
+        - text: "Sello torácico"
+          kind: "procedure"
+      - id: "second"
+        label: "Segundo"
+        criteria:
+        - "Considere [HEMS](topic:wvems-2026-109#destination-triage)"
+        - "Tiempo en escena < 10 min"
+        - "Mantenga la [RMC](topic:wvems-2026-060) manual"
+        actions:
+        - provider_level: "E"
+          text: "Traslado urgente"
+          kind: "referral"
+      - id: "third"
+        label: "Tercero"
+        criteria:
+        - "Repita la valoración 1.ª"
+        - "Trate otras lesiones"
+        - "Trate el [dolor](topic:wvems-2026-020)"
+        actions:
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "Ancef"
+          condition: "Si hay herida importante"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "Respiración"
+          link_id: "wvems-2026-006"
+        - text: "[Choque](topic:wvems-2026-008)"
+        - text: "[Hemorragia](topic:wvems-2026-058)"
+        - text: "[Dolor](topic:wvems-2026-020)"
+        - text: "[Sangre](topic:wvems-2026-084)"
+      critical_care_link:
+        text: "[Sangre](topic:wvems-2026-084)"
+      dose_table:
+      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+      - drug: "[Ancef](topic:wvems-2026-drug-reference#ancef)"
+        dose: "2 gramos"
+        route: "IV/IO, IM"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 57
+    blocks:
+    - type: "prose"
+      title: "Imperativos del traumatismo grave"
+      highlight: true
+      markdown: |
+        - El traslado rápido es **crucial** ante lesiones masivas potencialmente mortales.
+          - **Lleve al paciente al hospital**. El tratamiento definitivo está **en el quirófano**.
+          - Retrase el traslado solo para atender amenazas vitales mayores.
+          - La valoración secundaria y el tratamiento pueden hacerse durante el traslado.
+        - Es apropiado empezar solo con una **inmovilización manual** rápida.
+          - Puede dejar la colocación del [collarín cervical](topic:wvems-2026-060) para la valoración secundaria.
+          - Debe dejar la inmovilización de las extremidades para la valoración secundaria.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        flex: 6
+        title: "Alerta de TRAUMA"
+        callout: true
+        dashed: true
+        call_er: true
+        markdown: |
+          - Si hay intervención mayor
+          - O mecanismo mayor
+          - Active una alerta de **TRAUMA**
+      - type: "prose"
+        flex: 5
+        title: "Mala perfusión"
+        callout: true
+        markdown: |
+          Sospéchela si hay **varios** de estos:
+          - **Alteración del estado mental**
+          - Piel pálida, fría, sudorosa
+          - Taquicardia, hipotensión
+          - Disnea, taquipnea
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)** (salino al 0.9%): **PAS objetivo de 90 mmHg**.
+          - Use una reanimación **equilibrada** en el choque hemorrágico (objetivo más alto
+            si hay lesión de **cabeza / columna** o **embarazo**).
+        - **[Ancef®](topic:wvems-2026-drug-reference#ancef)** (cefazolina): adminístrela ante cualquier **herida abierta** importante.
+          - Vigile de cerca si hay alergia a la penicilina; evítela si hay alergia a cefalosporinas.
+          - Reconstituya el polvo con suero salino normal y **agite bien** para mezclar.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere **calentadores de líquidos** IV y/o **infusores rápidos** si los hay.
+        - Inmovilice los **objetos empalados** tal como estén (corte los restos para liberar al paciente).
+          - Puede retirarlos solo si interfieren con la vía aérea o la reanimación.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere [sangre](topic:wvems-2026-084) si está indicado y está acreditado para cuidados críticos.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Polytrauma — https://emedicine.medscape.com/article/434707 [Ver: 7/22]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 29, 34
+
+        NEMSIS: 9914045, 9914105, 9914207
