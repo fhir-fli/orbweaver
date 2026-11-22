@@ -87,7 +87,26 @@ def call_ollama(tag, page_text):
     return r['response'], r.get('prompt_eval_count', 0), r.get('eval_count', 0)
 
 
+def call_litert(model_file, page_text):
+    """Gemma through LiteRT-LM on the CPU, the runtime graiai uses for the
+    same .litertlm files. Sampling and thinking as in model_notes.md.
+    Token counts are not reported by the CLI; 0 is written."""
+    cmd = [os.path.expanduser('~/.local/bin/uv'), 'tool', 'run', '--from',
+           'litert-lm==0.19.0', 'litert-lm', 'run',
+           f'/home/grey/dev/graiai/models/{model_file}.litertlm',
+           '--backend', 'cpu', '--thinking', 'false', '--cache', 'memory',
+           '--max-num-tokens', '8192', '--temperature', '1.0', '--top-p',
+           '0.95', '--top-k', '64', '--prompt', PROMPT + page_text]
+    r = subprocess.run(cmd, capture_output=True, text=True, timeout=7200,
+                       env={**os.environ, 'LLVM_PROFILE_FILE': '/dev/null'})
+    if r.returncode != 0 or not r.stdout.strip():
+        raise RuntimeError(f'litert-lm exit {r.returncode}: {r.stderr.strip()[-200:]}')
+    return r.stdout, 0, 0
+
+
 def call(backend, text):
+    if backend.startswith('litert:'):
+        return call_litert(backend.split(':', 1)[1], text)
     if backend == 'haiku':
         return call_haiku(text)
     if backend.startswith('gemini:'):
