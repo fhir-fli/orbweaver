@@ -14,7 +14,7 @@ topic:
   - type: "prose"
     markdown: |
       Estratifica el riesgo del dolor torácico indiferenciado en urgencias para eventos cardíacos
-      adversos mayores a 6 semanas. Requiere un valor de troponina.
+      adversos mayores en 6 semanas. Requiere un valor de troponina.
   - type: "score"
     title: "Puntuación HEART"
     source: "Six et al. 2008; Backus 2013; ECA HEART Pathway (Mahler 2015)"
@@ -64,4 +64,4 @@ topic:
     - {min: 4, max: 6, label: "Moderado — observe / ingrese", severity: "warn"}
     - {min: 7, max: 10, label: "Riesgo alto — estudio invasivo precoz", severity: "alert"}
     caveats:
-    - "Requiere troponina. Sin el ensayo, la subpuntuación HEAR (Historia/ECG/Edad/Riesgo) no puede excluir un IAM — considérela de menor certeza y observe."
+    - "Requiere troponina. Sin el análisis, la subpuntuación HEAR (Historia/ECG/Edad/Riesgo) no puede excluir un IAM — considérela de menor certeza y observe."

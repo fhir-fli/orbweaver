@@ -63,7 +63,7 @@ class CallErTile extends StatelessWidget {
           ),
           SizedBox(height: size * 0.06),
           Text(
-            'ER',
+            context.l10n.callErPlace,
             style: TextStyle(
               fontSize: size * 0.62,
               fontWeight: FontWeight.w900,

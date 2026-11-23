@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_glasgow_blatchford.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s31",
+   "severity": "meaning",
+   "problem": "The English states the score is 'not' validated for predicting mortality, whereas the Spanish ('que la mortalidad') suggests it is validated for mortality, just less so than for intervention/transfusion.",
+   "fix": "Mejor validada para predecir la necesidad de intervención/transfusión, no la mortalidad; interprétela con juicio clínico.",
+   "en": "Best validated for predicting need for intervention/transfusion, not mortality; interpret with clinical judgment.",
+   "es": "Mejor validada para predecir la necesidad de intervención/transfusión que la mortalidad; interprétela con juicio clínico."
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s31\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The English states the score is 'not' validated for predicting mortality, whereas the Spanish ('que la mortalidad') suggests it is validated for mortality, just less so than for intervention/transfusion.\",\n    \"fix\": \"Mejor validada para predecir la necesidad de intervención/transfusión, no la mortalidad; interprétela con juicio clínico.\"\n  }\n]\n```"
+ ]
+}

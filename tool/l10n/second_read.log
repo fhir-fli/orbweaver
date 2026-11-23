@@ -1,0 +1,167 @@
+217 pages
+assets/credits.yaml: 61 pairs, 3 findings (0 patient-safety), 115s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/book.yaml: 12 pairs, 0 findings (0 patient-safety), 972s 
+assets/books/calculators/topics/calc_4ts.yaml: 36 pairs, 0 findings (0 patient-safety), 128s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_aa_gradient.yaml: 28 pairs, 0 findings (0 patient-safety), 240s 
+assets/books/calculators/topics/calc_adrogue_madias.yaml: 30 pairs, 0 findings (0 patient-safety), 68s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_anc.yaml: 19 pairs, 0 findings (0 patient-safety), 296s 
+assets/books/calculators/topics/calc_anion_gap.yaml: 24 pairs, 1 findings (0 patient-safety), 145s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/calculators/topics/calc_anthropometrics.yaml: 21 pairs, 0 findings (0 patient-safety), 2845s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+assets/books/calculators/topics/calc_auditc.yaml: 32 pairs, 1 findings (1 patient-safety), 4069s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/calculators/topics/calc_bisap.yaml: 22 pairs, 0 findings (0 patient-safety), 2849s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_bishop.yaml: 29 pairs, 0 findings (0 patient-safety), 528s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_canadian_cspine.yaml: 44 pairs, 0 findings (0 patient-safety), 1768s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_canadian_ct_head.yaml: 34 pairs, 0 findings (0 patient-safety), 166s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/topics/calc_centor.yaml: 25 pairs, 1 findings (0 patient-safety), 1049s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_cha2ds2_vasc.yaml: 31 pairs, 0 findings (0 patient-safety), 504s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_child_pugh.yaml: 36 pairs, 0 findings (0 patient-safety), 304s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_ciwa_ar.yaml: 87 pairs, 0 findings (0 patient-safety), 623s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_corrected_sodium.yaml: 24 pairs, 0 findings (0 patient-safety), 519s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_cows.yaml: 74 pairs, 1 findings (0 patient-safety), 736s 
+assets/books/calculators/topics/calc_creatinine_clearance.yaml: 34 pairs, 0 findings (0 patient-safety), 93s 
+assets/books/calculators/topics/calc_curb65.yaml: 25 pairs, 0 findings (0 patient-safety), 71s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+assets/books/calculators/topics/calc_dday_age.yaml: 18 pairs, 0 findings (0 patient-safety), 3993s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_fib4.yaml: 21 pairs, 0 findings (0 patient-safety), 2233s 
+assets/books/calculators/topics/calc_free_water_deficit.yaml: 24 pairs, 0 findings (0 patient-safety), 51s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_gad7.yaml: 55 pairs, 0 findings (0 patient-safety), 1615s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+assets/books/calculators/topics/calc_gcs.yaml: 39 pairs, 0 findings (0 patient-safety), 4665s 
+assets/books/calculators/topics/calc_glasgow_blatchford.yaml: 31 pairs, 1 findings (0 patient-safety), 79s 
+assets/books/calculators/topics/calc_hasbled.yaml: 26 pairs, 0 findings (0 patient-safety), 79s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_hba1c_eag.yaml: 18 pairs, 0 findings (0 patient-safety), 149s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_heart.yaml: 38 pairs, 2 findings (0 patient-safety), 209s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/calculators/topics/calc_holliday_segar.yaml: 21 pairs, 3 findings (0 patient-safety), 2799s 
+assets/books/calculators/topics/calc_ich_score.yaml: 30 pairs, 0 findings (0 patient-safety), 70s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_ideal_body_weight.yaml: 27 pairs, 0 findings (0 patient-safety), 2229s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+assets/books/calculators/topics/calc_lights.yaml: 22 pairs, 0 findings (0 patient-safety), 3462s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_lille.yaml: 23 pairs, 0 findings (0 patient-safety), 163s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/topics/calc_maddrey.yaml: 20 pairs, 0 findings (0 patient-safety), 1035s 
+assets/books/calculators/topics/calc_map.yaml: 20 pairs, 0 findings (0 patient-safety), 65s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_meld.yaml: 30 pairs, 0 findings (0 patient-safety), 266s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s

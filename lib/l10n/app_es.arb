@@ -44,6 +44,7 @@
   "goToRow": "Ir a la fila",
   "goToColumn": "Ir a {column}",
   "call": "Llamar",
+  "callErPlace": "Urgencias",
   "noChange": "Sin cambios",
   "calculatorSource": "Fuente: {source}",
   "conversionHighlighted": "Resaltado: equivalencias de intensidad {tier}.",

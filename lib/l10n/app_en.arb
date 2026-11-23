@@ -58,6 +58,8 @@
   "goToColumn": "Go to {column}",
   "@goToColumn": {"placeholders": {"column": {"type": "String"}}},
   "call": "Call",
+  "callErPlace": "ER",
+  "@callErPlace": {"description": "The place on the Call ER tile: the receiving emergency department."},
   "noChange": "No change",
   "calculatorSource": "Source: {source}",
   "@calculatorSource": {"placeholders": {"source": {"type": "String"}}},

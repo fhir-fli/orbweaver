@@ -4,7 +4,7 @@ topic:
   title: "Líquidos IV de mantenimiento"
   list_subtitle: "regla 4-2-1 de Holliday-Segar"
   last_reviewed: "Evidence review 2026-07-19 · Holliday-Segar 1957 · AAP 2018 (isotonic)"
-  tags: ["líquidos", "mantenimiento", "holliday", "segar", "4-2-1", "iv", "pediátrico", "hidratación", "ritmo"]
+  tags: ["líquidos", "mantenimiento", "holliday", "segar", "4-2-1", "iv", "pediátrico", "hidratación", "velocidad"]
   aliases:
   - "regla 4-2-1"
   - "Líquidos de mantenimiento"
@@ -13,11 +13,11 @@ topic:
   blocks:
   - type: "prose"
     markdown: |
-      **Ritmo** de líquidos de mantenimiento según el peso (Holliday-Segar). Introduzca el peso;
-      la calculadora da el ritmo por hora y el volumen en 24 horas.
+      **Velocidad** de líquidos de mantenimiento según el peso (Holliday-Segar). Introduzca el peso;
+      la calculadora da la velocidad por hora y el volumen en 24 horas.
   - type: "formula"
     kind: "holliday_segar"
-    title: "Ritmo de líquidos de mantenimiento"
+    title: "Velocidad de líquidos de mantenimiento"
     source: "Holliday & Segar, Pediatrics 1957; composición según la AAP 2018 (Feld)"
     inputs:
     - {key: "weight", label: "Peso", unit: "kg", type: "number"}

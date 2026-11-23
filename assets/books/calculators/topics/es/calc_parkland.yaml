@@ -14,8 +14,8 @@ topic:
   - type: "prose"
     markdown: |
       Cristaloide inicial de 24 horas para la reanimación del quemado. Introduzca el peso y
-      el %SCQ de quemaduras de segundo y tercer grado. **El valor por defecto es el ritmo inicial
-      de 2 mL/kg del Consenso de la ABA**; el ritmo de 4 mL/kg de Parkland es la
+      el %SCQ de quemaduras de segundo y tercer grado. **El valor por defecto es la velocidad inicial
+      de 2 mL/kg del Consenso de la ABA**; la velocidad de 4 mL/kg de Parkland es la
       opción histórica.
   - type: "formula"
     kind: "parkland"

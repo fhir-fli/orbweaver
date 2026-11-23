@@ -1,0 +1,33 @@
+{
+ "page": "assets/books/calculators/topics/calc_holliday_segar.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s11",
+   "severity": "minor",
+   "problem": "The word 'rate' (referring to fluid infusion) is translated as 'ritmo', which usually refers to cardiac rhythm in a clinical context.",
+   "fix": "velocidad",
+   "en": "rate",
+   "es": "ritmo"
+  },
+  {
+   "id": "s15",
+   "severity": "minor",
+   "problem": "The word 'rate' is translated as 'ritmo', which is atypical for IV fluid rates and usually refers to cardiac rhythm.",
+   "fix": "**Velocidad** de líquidos de mantenimiento según el peso (Holliday-Segar). Introduzca el peso;\nla calculadora da la velocidad por hora y el volumen en 24 horas.\n",
+   "en": "Maintenance fluid **rate** by weight (Holliday-Segar). Enter weight;\nthe calculator gives the hourly rate and 24-hour volume.\n",
+   "es": "**Ritmo** de líquidos de mantenimiento según el peso (Holliday-Segar). Introduzca el peso;\nla calculadora da el ritmo por hora y el volumen en 24 horas.\n"
+  },
+  {
+   "id": "s16",
+   "severity": "minor",
+   "problem": "The word 'rate' is translated as 'ritmo', which is atypical for IV fluid rates and usually refers to cardiac rhythm.",
+   "fix": "Velocidad de líquidos de mantenimiento",
+   "en": "Maintenance fluid rate",
+   "es": "Ritmo de líquidos de mantenimiento"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s11\",\n    \"severity\": \"minor\",\n    \"problem\": \"The word 'rate' (referring to fluid infusion) is translated as 'ritmo', which usually refers to cardiac rhythm in a clinical context.\",\n    \"fix\": \"velocidad\"\n  },\n  {\n    \"id\": \"s15\",\n    \"severity\": \"minor\",\n    \"problem\": \"The word 'rate' is translated as 'ritmo', which is atypical for IV fluid rates and usually refers to cardiac rhythm.\",\n    \"fix\": \"**Velocidad** de líquidos de mantenimiento según el peso (Holliday-Segar). Introduzca el peso;\\nla calculadora da la velocidad por hora y el volumen en 24 horas.\\n\"\n  },\n  {\n    \"id\": \"s16\",\n    \"severity\": \"minor\",\n    \"problem\": \"The word 'rate' is translated as 'ritmo', which is atypical for IV fluid rates and usually refers to cardiac rhythm.\",\n    \"fix\": \"Velocidad de líquidos de mantenimiento\"\n  }\n]\n```"
+ ]
+}
