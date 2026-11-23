@@ -24,7 +24,7 @@
 // so this test loads Roboto and FAILS LOUDLY if it cannot — a guard that
 // silently skips is not a guard.
 //
-// Writes per-page numbers to build/fits/page_fits.tsv for diagnosis when it fails.
+// Writes per-page numbers to build/fits/page_fits_<language>.tsv for diagnosis when it fails.
 
 import 'dart:io';
 
@@ -33,10 +33,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/data/topic_loader.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
+
+import 'book_fonts.dart';
 
 /// Pixel 3a logical size — the proxy this project targets.
 const Size kPhone = Size(393, 852);
@@ -82,170 +85,191 @@ File? _findRoboto() {
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets(
-    'every paged prose page fits one screen at >= $kMinScale',
-    (tester) async {
-      final font = _findRoboto();
-      expect(
-        font,
-        isNotNull,
-        reason:
-            'Could not find Roboto-Regular.ttf in the Flutter SDK. This test '
-            'measures text layout, and flutter_test defaults to the Ahem face, '
-            'which advances about twice Roboto and makes every height wrong. '
-            'Failing rather than skipping so the guard cannot quietly stop '
-            'guarding.',
-      );
-
-      await tester.runAsync(() async {
-        await (FontLoader('Roboto')..addFont(
-              Future.value(font!.readAsBytesSync().buffer.asByteData()),
-            ))
-            .load();
-      });
-
-      tester.view.physicalSize = kPhone * 3.0;
-      tester.view.devicePixelRatio = 3.0;
-      addTearDown(tester.view.reset);
-
-      Directory('build/fits').createSync(recursive: true);
-      final fh =
-          File(
-              'build/fits/page_fits.tsv',
-            ).openSync(mode: FileMode.write)
-            ..writeStringSync('topic\tpage\tfits_at\tnat_h\tavail_h\n')
-            ..flushSync();
-
-      // Asset I/O must run outside the fake-async zone testWidgets installs, or
-      // the future never completes and the test times out with no output.
-      final loaded = <({String id, Topic topic})>[];
-      await tester.runAsync(() async {
-        for (final book in await loadLibrary()) {
-          for (final entry in book.allTopics) {
-            if (entry.drug != null || entry.asset.isEmpty) continue;
-            loaded.add((
-              id: entry.id,
-              topic: await loadTopicAsset(entry.asset),
-            ));
-          }
-        }
-      });
-      expect(
-        loaded,
-        isNotEmpty,
-        reason: 'no topics loaded — asset path broken?',
-      );
-
-      final offenders = <String>[];
-      var checked = 0;
-
-      for (final rec in loaded) {
-        final topic = rec.topic;
-        if (topic.layout != TopicLayout.paged || topic.pages.length < 2) {
-          continue;
-        }
-        final theme = TopicTheme(
-          resolvePalette([
-            {
-              for (final e in topic.ownPaletteArgb.entries)
-                e.key: Color(e.value),
-            },
-          ]),
+  // Every shipped language: a translation is longer than the English
+  // (Spanish runs ~20% longer), so a page that fits in English can overflow.
+  for (final language in kSupportedLanguages) {
+    testWidgets(
+      'every paged prose page fits one screen at >= $kMinScale ($language)',
+      (tester) async {
+        final font = _findRoboto();
+        expect(
+          font,
+          isNotNull,
+          reason:
+              'Could not find Roboto-Regular.ttf in the Flutter SDK. This test '
+              'measures text layout, and flutter_test defaults to the Ahem face, '
+              'which advances about twice Roboto and makes every height wrong. '
+              'Failing rather than skipping so the guard cannot quietly stop '
+              'guarding.',
         );
 
-        for (var i = 0; i < topic.pages.length; i++) {
-          final page = topic.pages[i];
-          // Flowchart pages take the FittedBox(scaleDown) path, which shrinks
-          // uniformly and never clips, so they are not at risk.
-          if (page.blocks.any((b) => b is FlowchartBlock)) continue;
+        await tester.runAsync(() async {
+          await (FontLoader('Roboto')..addFont(
+                Future.value(font!.readAsBytesSync().buffer.asByteData()),
+              ))
+              .load();
+        });
 
-          double? natural;
-          var avail = 0.0;
-          var fits = -1.0;
+        tester.view.physicalSize = kPhone * 3.0;
+        tester.view.devicePixelRatio = 3.0;
+        await loadBookFonts(tester);
+        addTearDown(tester.view.reset);
 
-          for (final scale in kCandidates) {
-            final key = GlobalKey();
-            await tester.pumpWidget(
-              MaterialApp(
-                theme: ThemeData(fontFamily: 'Roboto'),
-                home: Scaffold(
-                  body: Builder(
-                    builder: (context) => MediaQuery(
-                      data: MediaQuery.of(
-                        context,
-                      ).copyWith(textScaler: TextScaler.linear(scale)),
-                      child: LayoutBuilder(
-                        builder: (context, c) {
-                          avail = c.maxHeight;
-                          return SingleChildScrollView(
-                            physics: const NeverScrollableScrollPhysics(),
-                            child: KeyedSubtree(
-                              key: key,
-                              child: TopicPageBody(
-                                page: page,
-                                theme: theme,
-                                gapScale: scale,
-                              ),
-                            ),
-                          );
-                        },
+        Directory('build/fits').createSync(recursive: true);
+        final fh =
+            File(
+                'build/fits/page_fits_$language.tsv',
+              ).openSync(mode: FileMode.write)
+              ..writeStringSync('topic\tpage\tfits_at\tnat_h\tavail_h\n')
+              ..flushSync();
+
+        // Asset I/O must run outside the fake-async zone testWidgets installs, or
+        // the future never completes and the test times out with no output.
+        final loaded = <({String id, Topic topic, String? font})>[];
+        await tester.runAsync(() async {
+          for (final book in await loadLibrary(language: language)) {
+            for (final entry in book.allTopics) {
+              if (entry.drug != null || entry.asset.isEmpty) continue;
+              loaded.add((
+                id: entry.id,
+                font: entry.fontFamily,
+                topic: await loadTopicAsset(entry.asset),
+              ));
+            }
+          }
+        });
+        expect(
+          loaded,
+          isNotEmpty,
+          reason: 'no topics loaded — asset path broken?',
+        );
+
+        final offenders = <String>[];
+        var checked = 0;
+
+        for (final rec in loaded) {
+          final topic = rec.topic;
+          if (topic.layout != TopicLayout.paged || topic.pages.length < 2) {
+            continue;
+          }
+          final theme = TopicTheme(
+            resolvePalette([
+              {
+                for (final e in topic.ownPaletteArgb.entries)
+                  e.key: Color(e.value),
+              },
+            ]),
+          );
+
+          for (var i = 0; i < topic.pages.length; i++) {
+            final page = topic.pages[i];
+            // Flowchart pages take the FittedBox(scaleDown) path, which shrinks
+            // uniformly and never clips, so they are not at risk.
+            if (page.blocks.any((b) => b is FlowchartBlock)) continue;
+
+            double? natural;
+            var avail = 0.0;
+            var fits = -1.0;
+
+            for (final scale in kCandidates) {
+              final key = GlobalKey();
+              await tester.pumpWidget(
+                MaterialApp(
+                  theme: ThemeData(fontFamily: 'Roboto'),
+                  home: Scaffold(
+                    body: withBookFont(
+                      rec.font,
+                      Builder(
+                        builder: (context) => MediaQuery(
+                          data: MediaQuery.of(
+                            context,
+                          ).copyWith(textScaler: TextScaler.linear(scale)),
+                          child: LayoutBuilder(
+                            builder: (context, c) {
+                              avail = c.maxHeight;
+                              return SingleChildScrollView(
+                                physics: const NeverScrollableScrollPhysics(),
+                                child: KeyedSubtree(
+                                  key: key,
+                                  child: TopicPageBody(
+                                    page: page,
+                                    theme: theme,
+                                    gapScale: scale,
+                                  ),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            );
-            await tester.pump();
+              );
+              await tester.pump();
+              // Decode the page's images before measuring. An Image.asset
+              // that has not decoded yet lays out at zero height, so a page
+              // with a picture was measured as if the picture were absent.
+              final images = find.byType(Image).evaluate().toList();
+              if (images.isNotEmpty) {
+                await tester.runAsync(() async {
+                  for (final e in images) {
+                    await precacheImage((e.widget as Image).image, e);
+                  }
+                });
+                await tester.pump();
+              }
 
-            final box = key.currentContext?.findRenderObject();
-            if (box is! RenderBox || !box.hasSize) break;
-            natural ??= box.size.height;
-            if (box.size.height <= avail - 2) {
-              fits = scale;
-              break;
+              final box = key.currentContext?.findRenderObject();
+              if (box is! RenderBox || !box.hasSize) break;
+              natural ??= box.size.height;
+              if (box.size.height <= avail - 2) {
+                fits = scale;
+                break;
+              }
+            }
+
+            checked++;
+            final label = '${rec.id} p${page.pageNumber ?? i}';
+            fh
+              ..writeStringSync(
+                '${rec.id}\t${page.pageNumber ?? i}\t'
+                '${fits < 0 ? "NEVER" : fits.toStringAsFixed(2)}\t'
+                '${natural?.toStringAsFixed(0) ?? "?"}\t'
+                '${avail.toStringAsFixed(0)}\n',
+              )
+              ..flushSync();
+
+            if (fits < kMinScale) {
+              offenders.add(
+                '$label — fits at '
+                '${fits < 0 ? "NO scale tried" : fits.toStringAsFixed(2)}, '
+                'natural ${natural?.toStringAsFixed(0)}px vs '
+                '${avail.toStringAsFixed(0)}px available',
+              );
             }
           }
-
-          checked++;
-          final label = '${rec.id} p${page.pageNumber ?? i}';
-          fh
-            ..writeStringSync(
-              '${rec.id}\t${page.pageNumber ?? i}\t'
-              '${fits < 0 ? "NEVER" : fits.toStringAsFixed(2)}\t'
-              '${natural?.toStringAsFixed(0) ?? "?"}\t'
-              '${avail.toStringAsFixed(0)}\n',
-            )
-            ..flushSync();
-
-          if (fits < kMinScale) {
-            offenders.add(
-              '$label — fits at '
-              '${fits < 0 ? "NO scale tried" : fits.toStringAsFixed(2)}, '
-              'natural ${natural?.toStringAsFixed(0)}px vs '
-              '${avail.toStringAsFixed(0)}px available',
-            );
-          }
         }
-      }
-      fh.closeSync();
+        fh.closeSync();
 
-      expect(
-        checked,
-        greaterThan(0),
-        reason: 'no paged prose pages were checked',
-      );
-      expect(
-        offenders,
-        isEmpty,
-        reason:
-            'These pages need shrinking below $kMinScale to fit a '
-            '${kPhone.width.toInt()}x${kPhone.height.toInt()} screen, which puts '
-            'them on course for the 0.48 clipping floor where content is silently '
-            'cut. Shorten the page, or move content into a side-by-side row.\n'
-            '  ${offenders.join("\n  ")}\n'
-            'Per-page numbers in build/fits/page_fits.tsv.',
-      );
-    },
-    timeout: const Timeout(Duration(minutes: 5)),
-  );
+        expect(
+          checked,
+          greaterThan(0),
+          reason: 'no paged prose pages were checked',
+        );
+        expect(
+          offenders,
+          isEmpty,
+          reason:
+              'These pages need shrinking below $kMinScale to fit a '
+              '${kPhone.width.toInt()}x${kPhone.height.toInt()} screen, which puts '
+              'them on course for the 0.48 clipping floor where content is silently '
+              'cut. Shorten the page, or move content into a side-by-side row.\n'
+              '  ${offenders.join("\n  ")}\n'
+              'Per-page numbers in build/fits/page_fits_$language.tsv.',
+        );
+      },
+      timeout: const Timeout(Duration(minutes: 5)),
+    );
+  }
 }

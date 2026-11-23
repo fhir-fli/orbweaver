@@ -66,15 +66,15 @@ topic:
           link_id: "wvems-2026-058"
         - text: "[Vasopresores](topic:wvems-2026-082)"
       dose_table:
-      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
         dose: "500 mL"
         route: "IV/IO"
-        frequency: "PRN"
+        frequency: "si precisa"
         population: "adult"
-      - drug: "Blood"
+      - drug: "Sangre"
         dose: "1 unidad"
         route: "IV/IO"
-        frequency: "PRN"
+        frequency: "si precisa"
         population: "adult"
   - page_number: 85
     blocks:

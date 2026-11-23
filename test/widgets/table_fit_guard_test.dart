@@ -16,7 +16,7 @@
 // table_features_test.dart came to be carried as known-failing for months
 // while the app was fine.
 //
-// Writes every table it measures to build/fits/table_fits.tsv for diagnosis.
+// Writes every table it measures to build/fits/table_fits_<language>.tsv for diagnosis.
 
 import 'dart:io';
 
@@ -25,8 +25,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/data/topic_loader.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
+
+import 'book_fonts.dart';
 
 /// Pixel 3a logical size — the proxy this project targets.
 const Size kPhone = Size(393, 852);
@@ -51,109 +54,130 @@ File? _findRoboto() {
 }
 
 void main() {
-  testWidgets('every table renders at phone width without a layout exception', (
-    tester,
-  ) async {
-    final font = _findRoboto();
-    expect(
-      font,
-      isNotNull,
-      reason:
-          'Roboto not found. Measuring tables in Ahem reports phantom '
-          'overflows, which is how three cases in table_features_test came '
-          'to be carried as known-failing while the app was fine.',
-    );
-    await tester.runAsync(() async {
-      await (FontLoader('Roboto')..addFont(
-            Future.value(font!.readAsBytesSync().buffer.asByteData()),
-          ))
-          .load();
-    });
+  // Every shipped language: a translation is longer than the English
+  // (Spanish runs ~20% longer), so a page that fits in English can overflow.
+  for (final language in kSupportedLanguages) {
+    testWidgets(
+      'every table renders at phone width without a layout exception ($language)',
+      (
+        tester,
+      ) async {
+        final font = _findRoboto();
+        expect(
+          font,
+          isNotNull,
+          reason:
+              'Roboto not found. Measuring tables in Ahem reports phantom '
+              'overflows, which is how three cases in table_features_test came '
+              'to be carried as known-failing while the app was fine.',
+        );
+        await tester.runAsync(() async {
+          await (FontLoader('Roboto')..addFont(
+                Future.value(font!.readAsBytesSync().buffer.asByteData()),
+              ))
+              .load();
+        });
 
-    tester.view.physicalSize = kPhone * 3.0;
-    tester.view.devicePixelRatio = 3.0;
-    addTearDown(tester.view.reset);
+        tester.view.physicalSize = kPhone * 3.0;
+        tester.view.devicePixelRatio = 3.0;
+        await loadBookFonts(tester);
+        addTearDown(tester.view.reset);
 
-    // Asset I/O must run outside the fake-async zone testWidgets installs.
-    final loaded = <({String id, Topic topic})>[];
-    await tester.runAsync(() async {
-      for (final book in await loadLibrary()) {
-        for (final entry in book.allTopics) {
-          if (entry.drug != null || entry.asset.isEmpty) continue;
-          loaded.add((id: entry.id, topic: await loadTopicAsset(entry.asset)));
-        }
-      }
-    });
-    expect(loaded, isNotEmpty, reason: 'no topics loaded — asset path broken?');
+        // Asset I/O must run outside the fake-async zone testWidgets installs.
+        final loaded = <({String id, Topic topic, String? font})>[];
+        await tester.runAsync(() async {
+          for (final book in await loadLibrary(language: language)) {
+            for (final entry in book.allTopics) {
+              if (entry.drug != null || entry.asset.isEmpty) continue;
+              loaded.add((
+                id: entry.id,
+                font: entry.fontFamily,
+                topic: await loadTopicAsset(entry.asset),
+              ));
+            }
+          }
+        });
+        expect(
+          loaded,
+          isNotEmpty,
+          reason: 'no topics loaded — asset path broken?',
+        );
 
-    Directory('build/fits').createSync(recursive: true);
-    final fh = File('build/fits/table_fits.tsv').openSync(mode: FileMode.write)
-      ..writeStringSync('topic\tn_tables\tn_errors\tfirst_error\n')
-      ..flushSync();
+        Directory('build/fits').createSync(recursive: true);
+        final fh =
+            File('build/fits/table_fits_$language.tsv')
+                .openSync(mode: FileMode.write)
+              ..writeStringSync('topic\tn_tables\tn_errors\tfirst_error\n')
+              ..flushSync();
 
-    final offenders = <String>[];
-    var withTables = 0;
-    var tableCount = 0;
+        final offenders = <String>[];
+        var withTables = 0;
+        var tableCount = 0;
 
-    for (final rec in loaded) {
-      final topic = rec.topic;
-      final n = [
-        for (final page in topic.pages)
-          for (final b in page.blocks)
-            if (b is TableBlock) b,
-      ].length;
-      if (n == 0) continue;
-      withTables++;
-      tableCount += n;
+        for (final rec in loaded) {
+          final topic = rec.topic;
+          final n = [
+            for (final page in topic.pages)
+              for (final b in page.blocks)
+                if (b is TableBlock) b,
+          ].length;
+          if (n == 0) continue;
+          withTables++;
+          tableCount += n;
 
-      final errors = <String>[];
-      final prev = FlutterError.onError;
-      FlutterError.onError = (d) => errors.add(d.exceptionAsString());
-      await tester.pumpWidget(
-        MaterialApp(
-          theme: ThemeData(fontFamily: 'Roboto'),
-          home: Scaffold(
-            body: SingleChildScrollView(
-              child: TopicView(
-                topic: topic,
-                palette: {
-                  for (final e in topic.ownPaletteArgb.entries)
-                    e.key: Color(e.value),
-                },
+          final errors = <String>[];
+          final prev = FlutterError.onError;
+          FlutterError.onError = (d) => errors.add(d.exceptionAsString());
+          await tester.pumpWidget(
+            MaterialApp(
+              theme: ThemeData(fontFamily: 'Roboto'),
+              home: Scaffold(
+                body: withBookFont(
+                  rec.font,
+                  SingleChildScrollView(
+                    child: TopicView(
+                      topic: topic,
+                      palette: {
+                        for (final e in topic.ownPaletteArgb.entries)
+                          e.key: Color(e.value),
+                      },
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
-        ),
-      );
-      await tester.pump();
-      FlutterError.onError = prev;
+          );
+          await tester.pump();
+          FlutterError.onError = prev;
 
-      fh
-        ..writeStringSync(
-          '${rec.id}\t$n\t${errors.length}\t'
-          '${errors.isEmpty ? "" : errors.first.replaceAll("\n", " ").replaceAll("\t", " ")}\n',
-        )
-        ..flushSync();
+          fh
+            ..writeStringSync(
+              '${rec.id}\t$n\t${errors.length}\t'
+              '${errors.isEmpty ? "" : errors.first.replaceAll("\n", " ").replaceAll("\t", " ")}\n',
+            )
+            ..flushSync();
 
-      for (final e in errors) {
-        offenders.add('${rec.id} ($n tables) — ${e.split("\n").first}');
-      }
-    }
-    fh.closeSync();
+          for (final e in errors) {
+            offenders.add('${rec.id} ($n tables) — ${e.split("\n").first}');
+          }
+        }
+        fh.closeSync();
 
-    expect(
-      tableCount,
-      greaterThan(80),
-      reason:
-          'expected well over 80 tables across the books; found '
-          '$tableCount in $withTables topics — did the block scan break?',
+        expect(
+          tableCount,
+          greaterThan(80),
+          reason:
+              'expected well over 80 tables across the books; found '
+              '$tableCount in $withTables topics — did the block scan break?',
+        );
+        expect(
+          offenders,
+          isEmpty,
+          reason:
+              'These topics raise a layout exception at phone width:\n  '
+              '${offenders.join("\n  ")}',
+        );
+      },
     );
-    expect(
-      offenders,
-      isEmpty,
-      reason:
-          'These topics raise a layout exception at phone width:\n  '
-          '${offenders.join("\n  ")}',
-    );
-  });
+  }
 }

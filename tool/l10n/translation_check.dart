@@ -11,8 +11,15 @@ import 'package:crypto/crypto.dart';
 /// Any key NOT listed here must carry the identical value in a translation.
 /// Adding a key is a decision: only add one whose values are never an id,
 /// a path, a lookup key or an enum.
+///
+/// A `type.key` entry makes `key` translatable only inside a map whose
+/// `type:` is `type`. A drug card's `class` and `indications` are prose
+/// ("Oxymetazoline — α-adrenergic agonist", "Nosebleeds"), but the same keys
+/// in a formulary are ids (`class: antiarrhythmic`, `indications: [hiv]`).
 const kTranslatableKeys = <String>{
   'aliases',
+  'drug_card.class',
+  'drug_card.indications',
   'band_columns',
   'band_label',
   'bands',
@@ -29,7 +36,11 @@ const kTranslatableKeys = <String>{
   'detail',
   'dose',
   'down_label',
+  // WVEMS dose tables: the drug cell ("[NS Bolus](topic:...)").
+  'drug',
   'form',
+  // WVEMS dose tables: how often ("Q 5 min x2").
+  'frequency',
   'help',
   'intro',
   'label',
@@ -51,10 +62,14 @@ const kTranslatableKeys = <String>{
   'subtitle',
   'tags',
   'text',
+  // Statin tiers: the header and each row's tier must stay the same word
+  // (conversion_block_view matches them); translations_test checks it.
+  'tier',
+  'tier_note',
+  'tiers',
   'timing',
   // credits.yaml: what an image illustrates ("vial"); read by nothing but the screen.
   'use',
-  'tier_note',
   'title',
   'warnings',
 };
@@ -137,7 +152,9 @@ void compareTranslation(
       return;
     }
     for (final k in en.keys) {
-      compareTranslation(en[k], tr[k], '$path.$k', '$k', problems);
+      final scoped = '${en['type']}.$k';
+      final key = kTranslatableKeys.contains(scoped) ? scoped : '$k';
+      compareTranslation(en[k], tr[k], '$path.$k', key, problems);
     }
   } else if (en is List) {
     if (tr is! List || tr.length != en.length) {

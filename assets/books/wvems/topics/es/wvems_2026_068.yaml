@@ -74,7 +74,7 @@ topic:
         - text: "[Circulación (choque)](topic:wvems-2026-008)"
         - text: "[Paro médico](topic:wvems-2026-024)"
       dose_table:
-      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
         dose: "500 mL"
         route: "IV/IO"
         frequency: "x4"

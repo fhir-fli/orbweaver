@@ -72,10 +72,10 @@ topic:
       critical_care_link:
         text: "[Edema pulm.](topic:wvems-2026-090)"
       dose_table:
-      - drug: "[Albuterol](topic:wvems-2026-drug-reference#albuterol)"
+      - drug: "[Salbutamol](topic:wvems-2026-drug-reference#albuterol)"
         dose: "2.5 mg"
         route: "NEB"
-        frequency: "Q 5 min x4"
+        frequency: "cada 5 min x4"
         population: "adult"
       - drug: "[Atrovent](topic:wvems-2026-drug-reference#atrovent)"
         dose: "0.5 mg"
@@ -87,15 +87,15 @@ topic:
         route: "IV/IO, IM"
         frequency: "x1"
         population: "adult"
-      - drug: "[Epi Neb](topic:wvems-2026-drug-reference#epi-epi-neb)"
+      - drug: "[Epinefrina nebulizada](topic:wvems-2026-drug-reference#epi-epi-neb)"
         dose: "5 mg"
         route: "NEB"
         frequency: "x1"
         population: "adult"
-      - drug: "[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
+      - drug: "[Nitroglicerina](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
         dose: "0.4 mg"
         route: "SL"
-        frequency: "Q 5 min x3"
+        frequency: "cada 5 min x3"
         population: "adult"
   - page_number: 31
     blocks:

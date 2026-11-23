@@ -26,7 +26,7 @@ topic:
       - "Administre antibióticos durante al menos 5 días"
       severity: "emergency"
     stages:
-    - decision: "¿Tos o dificultad para respirar MÁS alguno de estos signos de peligro?"
+    - decision: "¿Tos o dificultad respiratoria MÁS alguno de estos signos de peligro?"
       criteria:
       - "Cianosis central o SatO2 <90%"
       - "AVPU = 'V, P o U'"

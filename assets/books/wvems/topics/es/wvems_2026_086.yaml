@@ -63,15 +63,15 @@ topic:
       critical_care_link:
         text: "[Intubación](topic:wvems-2026-078)"
       dose_table:
-      - drug: "[3% Saline](topic:wvems-2026-drug-reference#3-saline)"
+      - drug: "[Salino al 3%](topic:wvems-2026-drug-reference#3-saline)"
         dose: "250 mL"
         route: "IV/IO"
-        frequency: "over 10 min"
+        frequency: "en 10 min"
         population: "adult"
       - drug: "[Keppra](topic:wvems-2026-drug-reference#keppra)"
         dose: "3,000 mg"
         route: "IV/IO"
-        frequency: "over 10 min"
+        frequency: "en 10 min"
         population: "adult"
   - page_number: 87
     blocks:

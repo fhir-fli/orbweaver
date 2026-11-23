@@ -62,7 +62,7 @@ topic:
       critical_care_link:
         text: "[Sepsis](topic:wvems-2026-094)"
       dose_table:
-      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
         dose: "500 mL"
         route: "IV/IO"
         frequency: "x4"
@@ -72,7 +72,7 @@ topic:
         route: "PO, IV/IO"
         frequency: "x1"
         population: "adult"
-      - drug: "[Ibuprofen](topic:wvems-2026-drug-reference#ibuprofen)"
+      - drug: "[Ibuprofeno](topic:wvems-2026-drug-reference#ibuprofen)"
         dose: "600 mg"
         route: "PO"
         frequency: "x1"

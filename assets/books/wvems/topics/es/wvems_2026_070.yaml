@@ -59,7 +59,7 @@ topic:
         shape: "stadium"
         warnings:
         - type: "safety"
-          text: "Garantice la DESCONTAMINACIÓN del paciente"
+          text: "DESCONTAMINE al paciente"
         - type: "caution"
           text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
         bullets:
@@ -68,10 +68,10 @@ topic:
         - text: "[Dolor](topic:wvems-2026-020)"
         - text: "[Antídoto](topic:wvems-2026-096#administer-antidote)"
       dose_table:
-      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
         dose: "500 mL"
         route: "IV/IO"
-        frequency: "per hour"
+        frequency: "por hora"
         population: "adult"
   - page_number: 71
     blocks:
@@ -79,11 +79,11 @@ topic:
       title: "Imperativos de las quemaduras"
       highlight: true
       markdown: |
-        - Use la **velocidad de líquidos de ABLS** (puede usar **SSN** o **RL**). Vigile la [hipotermia](topic:wvems-2026-068).
-        - Vigile de cerca la [vía aérea](topic:wvems-2026-004) ante cualquier quemadura facial, nasal u oral.
-        - Algunas quemaduras químicas (p. ej., **ácido fluorhídrico**) pueden beneficiarse de un **[antídoto](topic:wvems-2026-096#administer-antidote)**.
+        - Use la **velocidad de líquidos ABLS** (sirve **SSN** o **RL**). Vigile la [hipotermia](topic:wvems-2026-068).
+        - Vigile de cerca la [vía aérea](topic:wvems-2026-004) en toda quemadura facial, nasal u oral.
+        - Algunas quemaduras químicas (p. ej., **ácido HF**) pueden beneficiarse de un **[antídoto](topic:wvems-2026-096#administer-antidote)**.
         - Vigile el **[ECG](topic:wvems-2026-096#12-lead)** en las quemaduras eléctricas > **1,000 v**.
-        - Retire las joyas adyacentes y distales si es posible.
+        - Retire las joyas adyacentes y distales si puede.
     - type: "row"
       blocks:
       - type: "prose"
@@ -110,20 +110,20 @@ topic:
       title: "Notas"
       markdown: |
         - La **regla de los 9** permite estimar la SCT en adultos.
-          - La palma del paciente (**con los dedos**) es aproximadamente el 1% de la SCT.
-          - Considere solo el espesor parcial y total al calcular la SCT.
-        - Este protocolo incluye las **quemaduras químicas** y las exposiciones cutáneas.
-          - Para **gases** e [inhalación](topic:wvems-2026-072) de humo, remítase a [inhalación](topic:wvems-2026-072).
-          - Para **envenenamiento** e ingestiones tóxicas, remítase a [sobredosis / tóxicos](topic:wvems-2026-040).
-        - Si se conoce el producto químico, considere llamar a **CHEMTREC**: 800-424-9300.
-        - Esto **no** incluye la exposición a **radiación** (llame a **control médico**).
-        - Considere el [triaje de destino](topic:wvems-2026-109#destination-triage) aeromédico si la quemadura mayor es > 20% de SCT.
-          - No hay centros de quemados verificados por la ABA cerca de la región de WVEMS.
+          - La palma del paciente (**con los dedos**) es cerca del 1% de la SCT.
+          - Para la SCT, cuente solo el espesor parcial y total.
+        - Incluye las **quemaduras químicas** y las exposiciones cutáneas.
+          - Para **gases** e [inhalación](topic:wvems-2026-072) de humo, vea [inhalación](topic:wvems-2026-072).
+          - Para **envenenamiento** e ingestiones tóxicas, vea [sobredosis / tóxicos](topic:wvems-2026-040).
+        - Si se conoce el químico, considere llamar a **CHEMTREC**: 800-424-9300.
+        - **No** incluye la exposición a **radiación** (llame a **control médico**).
+        - Considere [triaje de destino](topic:wvems-2026-109#destination-triage) aeromédico si quemadura mayor > 20% de SCT.
+          - No hay centros de quemados verificados por la ABA cerca de WVEMS.
     - type: "band_callout"
       band: "peds"
       title: "Pediatría"
       markdown: |
-        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+        - Dosis pediátricas: [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada.
     - type: "prose"
       title: "Referencias"
       text_scale: 0.8

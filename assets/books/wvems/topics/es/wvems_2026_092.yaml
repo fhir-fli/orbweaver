@@ -74,12 +74,12 @@ topic:
       - drug: "[Lopressor](topic:wvems-2026-drug-reference#lopressor)"
         dose: "5 mg"
         route: "IV/IO"
-        frequency: "Q 5 min x2"
+        frequency: "cada 5 min x2"
         population: "adult"
-      - drug: "[Magnesium](topic:wvems-2026-drug-reference#magnesium)"
+      - drug: "[Magnesio](topic:wvems-2026-drug-reference#magnesium)"
         dose: "4 gramos"
         route: "IV/IO"
-        frequency: "over 10 min"
+        frequency: "en 10 min"
         population: "adult"
   - page_number: 93
     blocks:

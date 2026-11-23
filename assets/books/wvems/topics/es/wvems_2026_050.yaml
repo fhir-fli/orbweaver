@@ -83,10 +83,10 @@ topic:
         - text: "[Bradicardia](topic:wvems-2026-012)"
         - text: "[Circulación / choque](topic:wvems-2026-008)"
       dose_table:
-      - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
+      - drug: "[Epinefrina](topic:wvems-2026-drug-reference#epi-epi-neb)"
         dose: "0.5 mL (de 1 mg en 10 mL)"
         route: "IV/IO"
-        frequency: "Q 5 min"
+        frequency: "cada 5 min"
         population: "peds"
   - page_number: 51
     blocks:

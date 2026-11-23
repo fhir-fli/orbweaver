@@ -51,7 +51,7 @@ topic:
       - drug: "[Zofran](topic:wvems-2026-drug-reference#zofran)"
         dose: "4 mg"
         route: "IV/IO, IM/IN, PO"
-        frequency: "Q 5 min x2"
+        frequency: "cada 5 min x2"
         population: "adult"
   - page_number: 23
     blocks:

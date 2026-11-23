@@ -69,10 +69,10 @@ topic:
       critical_care_link:
         text: "[Intubación](topic:wvems-2026-078), [Ventilador](topic:wvems-2026-080)"
       dose_table:
-      - drug: "[Ketamine](topic:wvems-2026-drug-reference#ketamine)"
+      - drug: "[Ketamina](topic:wvems-2026-drug-reference#ketamine)"
         dose: "20 mg"
         route: "IV/IO"
-        frequency: "Q 5 min x2"
+        frequency: "cada 5 min x2"
         population: "adult"
   - page_number: 55
     blocks:

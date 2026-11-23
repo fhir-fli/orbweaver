@@ -11,10 +11,10 @@ topic:
   blocks:
   - type: "drug_card"
     name: "Afrin®"
-    class: "Oxymetazoline — α-adrenergic agonist"
+    class: "Oximetazolina — agonista α-adrenérgico"
     image: "assets/drug_images/afrin.png"
     indications:
-    - "Nosebleeds (epistaxis)"
+    - "Sangrado nasal (epistaxis)"
     doses:
     - population: "adult"
       text: "1 pulverización IN"
@@ -30,11 +30,11 @@ topic:
     - "reference.medscape.com/drug/343408"
   - type: "drug_card"
     name: "Salbutamol (albuterol)"
-    class: "Ventolin® — β-adrenergic agonist"
+    class: "Ventolin® — agonista β-adrenérgico"
     image: "assets/drug_images/albuterol.png"
     indications:
-    - "Wheezing"
-    - "Hyperkalemia"
+    - "Sibilancias"
+    - "Hiperpotasemia"
     doses:
     - population: "adult"
       text: "2.5 mg nebulizado"

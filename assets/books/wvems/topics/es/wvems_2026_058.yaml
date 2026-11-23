@@ -70,7 +70,7 @@ topic:
       - drug: "[TXA](topic:wvems-2026-drug-reference#txa)"
         dose: "2 gramos"
         route: "IV/IO"
-        frequency: "over 10 min"
+        frequency: "en 10 min"
         population: "adult"
   - page_number: 59
     blocks:

@@ -72,15 +72,15 @@ topic:
       critical_care_link:
         text: "[IAMCEST](topic:wvems-2026-088)"
       dose_table:
-      - drug: "[Aspirin](topic:wvems-2026-drug-reference#aspirin)"
+      - drug: "[Aspirina](topic:wvems-2026-drug-reference#aspirin)"
         dose: "4 × 81 mg"
         route: "PO"
-        frequency: "x1 (chewed)"
+        frequency: "x1 (masticado)"
         population: "adult"
-      - drug: "[Nitro](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
+      - drug: "[Nitroglicerina](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
         dose: "0.4 mg"
         route: "SL"
-        frequency: "Q 5 min x3"
+        frequency: "cada 5 min x3"
         population: "adult"
   - page_number: 29
     blocks:

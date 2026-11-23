@@ -16,10 +16,10 @@ topic:
   - type: "drug_card"
     name: "Salino al 3%"
     critical_care: true
-    class: "Hypertonic Saline"
+    class: "Solución salina hipertónica"
     image: "assets/books/wvems/images/form_ivbag.jpg"
     indications:
-    - "Traumatic Brain Injury"
+    - "Traumatismo craneoencefálico"
     doses:
     - population: "adult"
       text: "**250 mL** IV/IO"
@@ -37,10 +37,10 @@ topic:
     - "https://www.medscape.com/viewarticle/548015"
   - type: "drug_card"
     name: "Adenosina"
-    class: "Adenocard® — antiarrhythmic (Class V)"
+    class: "Adenocard® — antiarrítmico (clase V)"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Supraventricular Tachycardia (SVT)"
+    - "Taquicardia supraventricular (TSV)"
     doses:
     - population: "adult"
       text: "**6 mg**, luego **12 mg** IV/IO"
@@ -59,10 +59,10 @@ topic:
     - "https://reference.medscape.com/drug/342295"
   - type: "drug_card"
     name: "Afrin®"
-    class: "Oxymetazoline"
+    class: "Oximetazolina"
     image: "assets/books/wvems/images/form_nasalspray.jpg"
     indications:
-    - "Nosebleeds"
+    - "Sangrado nasal"
     doses:
     - population: "adult"
       text: "**1 pulverización** IN"
@@ -81,7 +81,7 @@ topic:
     class: "Ventolin®"
     image: "assets/books/wvems/images/form_nebule.jpg"
     indications:
-    - "Wheezing, Hyperkalemia"
+    - "Sibilancias, hiperpotasemia"
     doses:
     - population: "adult"
       text: "**2.5 mg** nebulizado"
@@ -103,7 +103,7 @@ topic:
     class: "Pacerone®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "V-Tach / V-Fib"
+    - "TV / FV"
     doses:
     - population: "adult"
       text: "Paro: **300**, luego **150 mg** IV/IO"
@@ -124,10 +124,10 @@ topic:
     - "https://reference.medscape.com/drug/342296"
   - type: "drug_card"
     name: "Ancef®"
-    class: "Cefazolin"
+    class: "Cefazolina"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Major Wounds, Open Fractures"
+    - "Heridas mayores, fracturas abiertas"
     doses:
     - population: "adult"
       text: "**2 gramos** IV/IO, IM"
@@ -145,7 +145,7 @@ topic:
     - "https://reference.medscape.com/drug/342492"
   - type: "drug_card"
     name: "Ácido acetilsalicílico (aspirina)"
-    class: "Baby ASA"
+    class: "AAS infantil"
     image: "assets/books/wvems/images/form_tablet.jpg"
     indications:
     - "Angina"
@@ -167,7 +167,7 @@ topic:
     class: "Lorazepam"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Seizure, Delirium, Sedation"
+    - "Convulsiones, delirio, sedación"
     doses:
     - population: "adult"
       text: "**4 mg** IV/IO (convulsiones); 1 mg sedación/delirio"
@@ -188,7 +188,7 @@ topic:
     class: "AtroPen®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Bradycardia, Organophosphate OD"
+    - "Bradicardia, sobredosis de organofosforados"
     doses:
     - population: "adult"
       text: "**1 mg** IV/IO (bradicardia); **2 mg** duplicando cada 5 min (organofosforados, sin máximo)"
@@ -206,10 +206,10 @@ topic:
     - "https://reference.medscape.com/drug/343093"
   - type: "drug_card"
     name: "Atrovent®"
-    class: "Ipratropium Bromide"
+    class: "Bromuro de ipratropio"
     image: "assets/books/wvems/images/form_nebule.jpg"
     indications:
-    - "Wheezing"
+    - "Sibilancias"
     doses:
     - population: "adult"
       text: "**0.5 mg** nebulizado"
@@ -225,10 +225,10 @@ topic:
     - "https://reference.medscape.com/drug/343416"
   - type: "drug_card"
     name: "Benadryl®"
-    class: "Diphenhydramine"
+    class: "Difenhidramina"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Allergic Reactions, Dystonia"
+    - "Reacciones alérgicas, distonía"
     doses:
     - population: "adult"
       text: "**25 mg** IV/IO, IM, VO (puede dar 50 mg VO)"
@@ -245,10 +245,10 @@ topic:
     - "https://reference.medscape.com/drug/343392"
   - type: "drug_card"
     name: "Bicarbonato"
-    class: "Sodium Bicarbonate"
+    class: "Bicarbonato de sodio"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Acidosis, Arrhythmia"
+    - "Acidosis, arritmia"
     doses:
     - population: "adult"
       text: "**50 mEq** IV/IO"
@@ -266,10 +266,10 @@ topic:
     - "https://reference.medscape.com/drug/342305"
   - type: "drug_card"
     name: "Calcio"
-    class: "Calcium Chloride"
+    class: "Cloruro de calcio"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Hyperkalemia, Ca-blocker OD"
+    - "Hiperpotasemia, sobredosis de bloqueantes del calcio"
     doses:
     - population: "adult"
       text: "**1 gramo** IV/IO"
@@ -291,9 +291,9 @@ topic:
   - type: "drug_card"
     name: "Carbón activado"
     image: "assets/books/wvems/images/form_oralbottle.jpg"
-    class: "Activated"
+    class: "Activado"
     indications:
-    - "Poisoning, Overdose"
+    - "Intoxicación, sobredosis"
     doses:
     - population: "adult"
       text: "**50 g** VO (1 g/kg)"
@@ -312,10 +312,10 @@ topic:
     - "https://reference.medscape.com/drug/343714"
   - type: "drug_card"
     name: "CyanoKit®"
-    class: "Hydroxocobalamin"
+    class: "Hidroxocobalamina"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Cyanide Poisoning / Exposure"
+    - "Intoxicación / exposición a cianuro"
     doses:
     - population: "adult"
       text: "**5 gramos** IV/IO en 10 min"
@@ -332,10 +332,10 @@ topic:
     - "https://reference.medscape.com/drug/343734"
   - type: "drug_card"
     name: "D10"
-    class: "Dextrose 10%"
+    class: "Dextrosa al 10%"
     image: "assets/books/wvems/images/form_ivbag.jpg"
     indications:
-    - "Hypoglycemia"
+    - "Hipoglucemia"
     doses:
     - population: "adult"
       text: "**100 mL** IV/IO"
@@ -352,10 +352,10 @@ topic:
     - "https://reference.medscape.com/drug/342705"
   - type: "drug_card"
     name: "Decadron®"
-    class: "Dexamethasone"
+    class: "Dexametasona"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Inflammation"
+    - "Inflamación"
     doses:
     - population: "adult"
       text: "**10 mg** IV/IO, IM (alternativa 8 mg)"
@@ -376,7 +376,7 @@ topic:
     class: "Intropin®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Shock, Hypotension"
+    - "Choque, hipotensión"
     doses:
     - population: "adult"
       text: "**5 mcg/kg/min** IV/IO"
@@ -396,10 +396,10 @@ topic:
     - "https://reference.medscape.com/drug/342435"
   - type: "drug_card"
     name: "DuoDote®"
-    class: "Atropine & Pralidoxime"
+    class: "Atropina y pralidoxima"
     image: "assets/books/wvems/images/form_autoinjector.jpg"
     indications:
-    - "Organophosphate poisoning"
+    - "Intoxicación por organofosforados"
     doses:
     - population: "adult"
       text: "**autoinyector** IM (2.1 mg / 600 mg)"
@@ -417,10 +417,10 @@ topic:
     - "https://reference.medscape.com/drug/343745"
   - type: "drug_card"
     name: "Epinefrina, epinefrina nebulizada"
-    class: "Epinephrine, EpiPen®"
+    class: "Epinefrina, EpiPen®"
     image: "assets/books/wvems/images/form_ampoule.jpg"
     indications:
-    - "Bradycardia, CODE, Dyspnea, Allergy"
+    - "Bradicardia, paro (CODE), disnea, alergia"
     doses:
     - population: "adult"
       text: "**1 mg** IV/IO (paro); **0.3 mg IM** (anafilaxia)"
@@ -441,10 +441,10 @@ topic:
     - "https://reference.medscape.com/drug/342437"
   - type: "drug_card"
     name: "Goteo de epinefrina, epinefrina en bolo"
-    class: "Epinephrine, Adrenalin"
+    class: "Epinefrina, Adrenalin"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Hypotension, Shock"
+    - "Hipotensión, choque"
     doses:
     - population: "adult"
       text: "equipo de **1 gtt/sec macrogotero**"
@@ -471,7 +471,7 @@ topic:
     class: "Amidate®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "RSI / RSA induction"
+    - "Inducción de SRI / SRA"
     doses:
     - population: "adult"
       text: "**0.3 mg/kg** IV/IO"
@@ -493,7 +493,7 @@ topic:
     class: "Sublimaze®"
     image: "assets/books/wvems/images/form_ampoule.jpg"
     indications:
-    - "Acute Pain, Sedation"
+    - "Dolor agudo, sedación"
     doses:
     - population: "adult"
       text: "**50–100 mcg** IV/IO, IM/IN"
@@ -515,7 +515,7 @@ topic:
     class: "Baqsimi®, Glucagen®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Hypoglycemia, β-blocker OD"
+    - "Hipoglucemia, sobredosis de β-bloqueantes"
     doses:
     - population: "adult"
       text: "**1 mg** IM hipoglucemia; **2–10 mg** IV (sobredosis de β-bloqueantes/antagonistas del calcio)"
@@ -534,10 +534,10 @@ topic:
     - "https://reference.medscape.com/drug/342712"
   - type: "drug_card"
     name: "Glucosa"
-    class: "Oral Glucose, Glutose 15™"
+    class: "Glucosa oral, Glutose 15™"
     image: "assets/books/wvems/images/form_glucosegel.jpg"
     indications:
-    - "Hypoglycemia"
+    - "Hipoglucemia"
     doses:
     - population: "adult"
       text: "**15 gramos** VO"
@@ -556,7 +556,7 @@ topic:
     class: "Haloperidol"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Severe Psychosis"
+    - "Psicosis grave"
     doses:
     - population: "adult"
       text: "**5 mg** IM"
@@ -577,10 +577,10 @@ topic:
   - type: "drug_card"
     name: "Heparina"
     critical_care: true
-    class: "Heparin Sodium"
+    class: "Heparina sódica"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "ST-Elevation Myocardial Infarction"
+    - "Infarto de miocardio con elevación del ST"
     doses:
     - population: "adult"
       text: "**5,000 unidades** IV/IO"
@@ -602,7 +602,7 @@ topic:
     class: "Advil®, Motrin®"
     image: "assets/books/wvems/images/form_tablet.jpg"
     indications:
-    - "Fever, Pain"
+    - "Fiebre, dolor"
     doses:
     - population: "adult"
       text: "**600 mg** VO"
@@ -623,7 +623,7 @@ topic:
     class: "Levetiracetam"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Status Epilepticus, Seizures"
+    - "Estado epiléptico, convulsiones"
     doses:
     - population: "adult"
       text: "**60 mg/kg** IV/IO (máx. 4.5 g)"
@@ -645,7 +645,7 @@ topic:
     class: "Ketalar®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Severe Pain, Discomfort"
+    - "Dolor intenso, malestar"
     doses:
     - population: "adult"
       text: "**20 mg** IV/IO, IM/IN (dolor)"
@@ -666,10 +666,10 @@ topic:
   - type: "drug_card"
     name: "Lasix®"
     critical_care: true
-    class: "Furosemide"
+    class: "Furosemida"
     image: "assets/books/wvems/images/form_ampoule.jpg"
     indications:
-    - "Congestive Heart Failure"
+    - "Insuficiencia cardíaca congestiva"
     doses:
     - population: "adult"
       text: "**40 mg** IV/IO, IM"
@@ -687,10 +687,10 @@ topic:
   - type: "drug_card"
     name: "Levophed®"
     critical_care: true
-    class: "Norepinephrine"
+    class: "Norepinefrina"
     image: "assets/books/wvems/images/form_ampoule.jpg"
     indications:
-    - "Hypotension, Septic Shock"
+    - "Hipotensión, choque séptico"
     doses:
     - population: "adult"
       text: "**5–20 mcg/min** IV/IO"
@@ -714,7 +714,7 @@ topic:
     class: "Xylocaine®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Pain after IO (or V-Tach / V-Fib)"
+    - "Dolor tras IO (o TV / FV)"
     doses:
     - population: "adult"
       text: "Dolor tras la IO: **10 mg** IO"
@@ -738,7 +738,7 @@ topic:
     class: "Metoprolol"
     image: "assets/books/wvems/images/form_ampoule.jpg"
     indications:
-    - "HTN, Tachycardia"
+    - "HTA, taquicardia"
     doses:
     - population: "adult"
       text: "**5 mg** IV/IO"
@@ -755,10 +755,10 @@ topic:
     - "https://reference.medscape.com/drug/342360"
   - type: "drug_card"
     name: "Magnesio"
-    class: "Magnesium Sulfate"
+    class: "Sulfato de magnesio"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "TdP, Preeclampsia, Eclampsia"
+    - "TdP, preeclampsia, eclampsia"
     doses:
     - population: "adult"
       text: "**1–4 gramos** IV/IO"
@@ -777,10 +777,10 @@ topic:
     - "https://reference.medscape.com/drug/344444"
   - type: "drug_card"
     name: "Morfina"
-    class: "Morphine Sulfate"
+    class: "Sulfato de morfina"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Acute Pain, Sedation"
+    - "Dolor agudo, sedación"
     doses:
     - population: "adult"
       text: "**2–4 mg** IV/IO, IM/IN"
@@ -798,10 +798,10 @@ topic:
     - "https://reference.medscape.com/drug/343319"
   - type: "drug_card"
     name: "Narcan®"
-    class: "Naloxone"
+    class: "Naloxona"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Opiate OD"
+    - "Sobredosis de opiáceos"
     doses:
     - population: "adult"
       text: "**0.04–4 mg** IV/IO, IM/N"
@@ -819,10 +819,10 @@ topic:
   - type: "drug_card"
     name: "Fenilefrina en bolo"
     critical_care: true
-    class: "Phenylephrine"
+    class: "Fenilefrina"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Hypotension, Shock Index > 0.8"
+    - "Hipotensión, índice de choque > 0.8"
     doses:
     - population: "adult"
       text: "**50–200 mcg** IV/IO"
@@ -843,10 +843,10 @@ topic:
     - "https://reference.medscape.com/drug/342444"
   - type: "drug_card"
     name: "Nitroglicerina, goteo de nitroglicerina"
-    class: "Nitroglycerin, Nitrostat®"
+    class: "Nitroglicerina, Nitrostat®"
     image: "assets/books/wvems/images/form_tablet.jpg"
     indications:
-    - "Angina, Congestive Heart Failure"
+    - "Angina, insuficiencia cardíaca congestiva"
     doses:
     - population: "adult"
       text: "**0.4 mg** SL"
@@ -866,10 +866,10 @@ topic:
     - "https://reference.medscape.com/drug/342280"
   - type: "drug_card"
     name: "Bolo de SSN"
-    class: "0.9% Normal Saline"
+    class: "Solución salina normal al 0.9%"
     image: "assets/books/wvems/images/form_ivbag.jpg"
     indications:
-    - "Hypotension, Hypovolemia"
+    - "Hipotensión, hipovolemia"
     doses:
     - population: "adult"
       text: "**500 mL** IV/IO"
@@ -890,7 +890,7 @@ topic:
     class: "Diprivan®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Sedation"
+    - "Sedación"
     doses:
     - population: "adult"
       text: "**150 mcg/kg/min** IV/IO"
@@ -911,10 +911,10 @@ topic:
   - type: "drug_card"
     name: "Rocephin®"
     critical_care: true
-    class: "Ceftriaxone"
+    class: "Ceftriaxona"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Infection"
+    - "Infección"
     doses:
     - population: "adult"
       text: "**1–2 g** IV/IO, IM (sepsis); **2 g** meningitis"
@@ -937,7 +937,7 @@ topic:
     class: "Zemuron®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "RSI Paralysis"
+    - "Parálisis para SRI"
     doses:
     - population: "adult"
       text: "**1 mg/kg** IV/IO"
@@ -960,7 +960,7 @@ topic:
     class: "Anectine®"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "RSI Paralysis"
+    - "Parálisis para SRI"
     doses:
     - population: "adult"
       text: "**1.5 mg/kg** IV/IO"
@@ -979,9 +979,9 @@ topic:
   - type: "drug_card"
     name: "Tetracaína"
     image: "assets/books/wvems/images/form_eyedrops.jpg"
-    class: "0.5% Ophthalmic"
+    class: "Oftálmica al 0.5%"
     indications:
-    - "Eye pain (non-penetrating)"
+    - "Dolor ocular (no penetrante)"
     doses:
     - population: "adult"
       text: "**1–2 gtt** en el ojo afectado"
@@ -998,10 +998,10 @@ topic:
     - "https://reference.medscape.com/drug/343373"
   - type: "drug_card"
     name: "Toradol®"
-    class: "Ketorolac"
+    class: "Ketorolaco"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Moderate Pain"
+    - "Dolor moderado"
     doses:
     - population: "adult"
       text: "**15 mg** IV/IO, IM/IN"
@@ -1019,10 +1019,10 @@ topic:
     - "https://reference.medscape.com/drug/343292"
   - type: "drug_card"
     name: "TXA"
-    class: "Tranexamic Acid"
+    class: "Ácido tranexámico"
     image: "assets/books/wvems/images/form_ampoule.jpg"
     indications:
-    - "Bleeding, Epistaxis"
+    - "Hemorragia, epistaxis"
     doses:
     - population: "adult"
       text: "**1 g** IV/IO en 10 min (luego 1 g/8 h); 150 mg IN (epistaxis)"
@@ -1041,10 +1041,10 @@ topic:
     - "https://reference.medscape.com/drug/342087"
   - type: "drug_card"
     name: "Tylenol®"
-    class: "Acetaminophen"
+    class: "Paracetamol (acetaminofén)"
     image: "assets/books/wvems/images/form_ivbag.jpg"
     indications:
-    - "Fever, Pain"
+    - "Fiebre, dolor"
     doses:
     - population: "adult"
       text: "**1,000 mg** VO, IV/IO"
@@ -1066,7 +1066,7 @@ topic:
     class: "Midazolam"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Seizure, Delirium, Sedation"
+    - "Convulsiones, delirio, sedación"
     doses:
     - population: "adult"
       text: "**10 mg** IM o 0.2 mg/kg IV (convulsiones); 2.5–5 mg sedación"
@@ -1084,10 +1084,10 @@ topic:
     - "https://reference.medscape.com/drug/342907"
   - type: "drug_card"
     name: "Zofran®"
-    class: "Ondansetron"
+    class: "Ondansetrón"
     image: "assets/books/wvems/images/form_vial.jpg"
     indications:
-    - "Nausea, Vomiting"
+    - "Náuseas, vómitos"
     doses:
     - population: "adult"
       text: "**4 mg** IV/IO, IM/IN, VO"

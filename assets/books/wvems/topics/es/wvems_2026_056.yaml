@@ -83,7 +83,7 @@ topic:
       critical_care_link:
         text: "[Sangre](topic:wvems-2026-084)"
       dose_table:
-      - drug: "[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)"
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
         dose: "500 mL"
         route: "IV/IO"
         frequency: "x4"

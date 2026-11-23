@@ -63,10 +63,10 @@ topic:
       critical_care_link:
         text: "[Intubación](topic:wvems-2026-078)"
       dose_table:
-      - drug: "[Nitro Drip](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
+      - drug: "[Goteo de nitroglicerina](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
         dose: "300 mcg/min"
         route: "IV/IO"
-        frequency: "Titrate Down"
+        frequency: "Ajuste a la baja"
         population: "adult"
       - drug: "[Lasix](topic:wvems-2026-drug-reference#lasix)"
         dose: "40 mg"

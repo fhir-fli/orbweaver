@@ -16,7 +16,7 @@ from ruamel.yaml.scalarstring import LiteralScalarString
 HERE = os.path.dirname(os.path.abspath(__file__))
 CHECK = os.path.join(HERE, 'translation_check.dart')
 _block = re.search(r'kTranslatableKeys = <String>\{(.*?)\};', open(CHECK).read(), re.S)
-KEYS = set(re.findall(r"'([a-z_]+)'", _block.group(1)))
+KEYS = set(re.findall(r"'([a-z_.]+)'", _block.group(1)))
 assert 'markdown' in KEYS and 'title' in KEYS, KEYS
 
 
@@ -29,14 +29,17 @@ def _yaml():
 
 def _walk(node, key, visit):
     """Visit each translatable string. Mirrors compareTranslation: a list
-    inherits its key, a map's children take their own."""
+    inherits its key, a map's children take their own, scoped to the map's
+    `type:` when KEYS lists "<type>.<key>" (a drug card's class/indications)."""
     if isinstance(node, dict):
         for k in list(node.keys()):
             v = node[k]
-            if isinstance(v, str) and str(k) in KEYS:
+            scoped = f"{node.get('type')}.{k}"
+            kk = scoped if scoped in KEYS else str(k)
+            if isinstance(v, str) and kk in KEYS:
                 node[k] = visit(v)
             else:
-                _walk(v, str(k), visit)
+                _walk(v, kk, visit)
     elif isinstance(node, list):
         for i, v in enumerate(node):
             if isinstance(v, str) and key in KEYS:

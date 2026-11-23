@@ -78,15 +78,15 @@ topic:
         - text: "[Dolor](topic:wvems-2026-020), [Respiración](topic:wvems-2026-006), [Hiper K+](topic:wvems-2026-018)"
         - text: "[Choque](topic:wvems-2026-008), [N/V](topic:wvems-2026-022), [Sobredosis / tóxicos](topic:wvems-2026-040)"
       dose_table:
-      - drug: "[Atropine](topic:wvems-2026-drug-reference#atropine)"
+      - drug: "[Atropina](topic:wvems-2026-drug-reference#atropine)"
         dose: "1 mg"
         route: "IV/IO"
-        frequency: "Q 5 min x3"
+        frequency: "cada 5 min x3"
         population: "adult"
-      - drug: "[Epi](topic:wvems-2026-drug-reference#epi-epi-neb)"
+      - drug: "[Epinefrina](topic:wvems-2026-drug-reference#epi-epi-neb)"
         dose: "Use la [referencia pediátrica](topic:wvems-2026-144)"
         route: "IV/IO"
-        frequency: "Q 5 min"
+        frequency: "cada 5 min"
         population: "peds"
   - page_number: 13
     blocks:
