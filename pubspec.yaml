@@ -36,6 +36,8 @@ flutter:
   # non-recursive, so each bundle subdir that holds files is listed.
   assets:
     - assets/credits.yaml
+    # Its translations (assets/<language>/credits.yaml).
+    - assets/es/
     # Calculator wording (English) and its translations, by language folder.
     - assets/l10n/
     - assets/l10n/es/

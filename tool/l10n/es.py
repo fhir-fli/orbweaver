@@ -48,7 +48,8 @@ def target(english):
 
 
 def english_pages(book=None):
-    out = []
+    # The credits screen's prose (assets/credits.yaml -> assets/es/credits.yaml).
+    out = [] if book else ['assets/credits.yaml']
     for b in BOOKS:
         if book and b != book:
             continue
@@ -79,6 +80,7 @@ def cmd_status():
             s = state(p)
             counts[s] = counts.get(s, 0) + 1
         print(b, len(pages), counts, flush=True)
+    print('credits', 1, {state('assets/credits.yaml'): 1}, flush=True)
 
 
 def has_letter(v):

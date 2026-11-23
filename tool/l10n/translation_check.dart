@@ -52,6 +52,8 @@ const kTranslatableKeys = <String>{
   'tags',
   'text',
   'timing',
+  // credits.yaml: what an image illustrates ("vial"); read by nothing but the screen.
+  'use',
   'tier_note',
   'title',
   'warnings',

@@ -4,9 +4,10 @@ import 'package:flutter/services.dart' show AssetManifest, rootBundle;
 /// folder beside the English file, same file name.
 ///
 /// ```text
-/// assets/books/who_imci/topics/who_1_1.yaml      English (the source)
-/// assets/books/who_imci/topics/es/who_1_1.yaml   Spanish
-/// assets/books/who_imci/es/book.yaml             Spanish book manifest
+/// assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml      English
+/// assets/books/protocolbook/topics/es/pb_014_cardiac_arrest.yaml   Spanish
+/// assets/books/protocolbook/es/book.yaml                           Spanish manifest
+/// assets/es/credits.yaml                                           Spanish credits
 /// ```
 String translatedPath(String englishPath, String language) {
   final slash = englishPath.lastIndexOf('/');
