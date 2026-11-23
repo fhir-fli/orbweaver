@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/data/localized_asset.dart';
 import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
@@ -318,7 +319,7 @@ class _ProcedureImage extends StatelessWidget {
       alignment: Alignment.center,
       height: 150,
       child: Image.asset(
-        path,
+        AssetLocalizerScope.path(context, path),
         fit: BoxFit.contain,
         errorBuilder: (context, error, stack) => const Center(
           child: Text(

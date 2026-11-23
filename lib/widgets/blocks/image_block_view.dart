@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/data/localized_asset.dart';
 import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
@@ -29,7 +30,7 @@ class ImageBlockView extends StatelessWidget {
     };
 
     final imageChild = Image.asset(
-      block.path,
+      AssetLocalizerScope.path(context, block.path),
       errorBuilder: (context, error, stack) => _placeholder(context, width),
     );
 
@@ -120,7 +121,9 @@ class _ZoomableImageView extends StatelessWidget {
       ),
       body: InteractiveViewer(
         maxScale: 6,
-        child: Center(child: Image.asset(path)),
+        child: Center(
+          child: Image.asset(AssetLocalizerScope.path(context, path)),
+        ),
       ),
     );
   }

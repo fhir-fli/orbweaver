@@ -2,6 +2,7 @@ import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/formula_strings_loader.dart';
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/data/library_scope.dart';
+import 'package:orbweaver/data/localized_asset.dart';
 import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/screens/book_screen.dart';
@@ -19,6 +20,7 @@ Future<void> main() async {
   final language = AppLanguage.resolve(choice);
   await loadFormulaStrings(language);
   final library = await loadLibrary(language: language);
+  final images = await AssetLocalizer.load(language);
   final snapshot = await LastState.load();
   runApp(
     OrbweaverApp(
@@ -26,6 +28,7 @@ Future<void> main() async {
       snapshot: snapshot,
       language: language,
       languageChoice: choice,
+      images: images,
     ),
   );
 }
@@ -36,6 +39,7 @@ class OrbweaverApp extends StatefulWidget {
     required this.snapshot,
     this.language = 'en',
     this.languageChoice,
+    this.images,
     super.key,
   });
 
@@ -46,6 +50,9 @@ class OrbweaverApp extends StatefulWidget {
   final String language;
   final String? languageChoice;
 
+  /// Finds the reading language's copy of a picture; null = English.
+  final AssetLocalizer? images;
+
   @override
   State<OrbweaverApp> createState() => _OrbweaverAppState();
 }
@@ -55,6 +62,7 @@ class _OrbweaverAppState extends State<OrbweaverApp> {
   late LibraryIndex _index = LibraryIndex(_library);
   late String _language = widget.language;
   late String? _choice = widget.languageChoice;
+  late AssetLocalizer _images = widget.images ?? AssetLocalizer.english();
   late LastStateSnapshot _snapshot = widget.snapshot;
 
   // A new key on a language change rebuilds the Navigator, so no route
@@ -68,12 +76,16 @@ class _OrbweaverAppState extends State<OrbweaverApp> {
     final library = language == _language
         ? _library
         : await loadLibrary(language: language);
+    final images = language == _language
+        ? _images
+        : await AssetLocalizer.load(language);
     if (!mounted) return;
     setState(() {
       _choice = choice;
       _language = language;
       _library = library;
       _index = LibraryIndex(library);
+      _images = images;
       _snapshot = const LastStateSnapshot();
       _generation++;
     });
@@ -99,7 +111,10 @@ class _OrbweaverAppState extends State<OrbweaverApp> {
         onChoose: _choose,
         child: LibraryScope(
           index: _index,
-          child: child ?? const SizedBox.shrink(),
+          child: AssetLocalizerScope(
+            localizer: _images,
+            child: child ?? const SizedBox.shrink(),
+          ),
         ),
       ),
       onGenerateInitialRoutes: (_) => _restorePages(_snapshot, _library),

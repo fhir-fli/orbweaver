@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart' show AssetManifest, rootBundle;
+import 'package:flutter/widgets.dart';
 
 /// Where a translated copy of an English asset lives: a `<language>/`
 /// folder beside the English file, same file name.
@@ -39,4 +40,30 @@ class AssetLocalizer {
     final t = translatedPath(englishPath, language);
     return _assets.contains(t) ? t : englishPath;
   }
+}
+
+/// Hands the reading language's [AssetLocalizer] to the renderers, so a
+/// picture with English text baked in can show its translated copy
+/// (`images/es/<file>`) when one exists. Without a scope (tests, the
+/// playground) every picture stays English.
+class AssetLocalizerScope extends InheritedWidget {
+  const AssetLocalizerScope({
+    required this.localizer,
+    required super.child,
+    super.key,
+  });
+
+  final AssetLocalizer localizer;
+
+  /// [englishPath], or its translated copy for the reading language.
+  static String path(BuildContext context, String englishPath) =>
+      context
+          .dependOnInheritedWidgetOfExactType<AssetLocalizerScope>()
+          ?.localizer
+          .path(englishPath) ??
+      englishPath;
+
+  @override
+  bool updateShouldNotify(AssetLocalizerScope oldWidget) =>
+      oldWidget.localizer.language != localizer.language;
 }
