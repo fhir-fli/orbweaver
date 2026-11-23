@@ -75,7 +75,7 @@ Future<Book> _loadBook(String id, AssetLocalizer loc) async {
     id: b['id'] as String,
     title: b['title'] as String,
     subtitle: (b['subtitle'] as String?) ?? '',
-    coverAsset: cover.isEmpty ? '' : '$dir/$cover',
+    coverAsset: cover.isEmpty ? '' : loc.path('$dir/$cover'),
     spineColor: _color(b['spine_color'] as String),
     contents: contents,
     paletteOverrides: bookOverrides,

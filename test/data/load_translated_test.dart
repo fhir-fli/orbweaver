@@ -52,6 +52,22 @@ void main() {
     }
   });
 
+  // Covers: ours are redrawn in Spanish (tool/l10n/covers.py); WVEMS keeps
+  // its own printed cover and WHO is not licensed for translation.
+  test('Spanish covers where we drew the cover, English elsewhere', () async {
+    final es = await loadLibrary(language: 'es');
+    String cover(String id) => es.firstWhere((b) => b.id == id).coverAsset;
+    expect(cover('calculators'), 'assets/books/calculators/es/cover.png');
+    expect(cover('protocolbook'), 'assets/books/protocolbook/es/cover.jpg');
+    expect(cover('wvems'), 'assets/books/wvems/cover.png');
+    expect(cover('who_imci'), 'assets/books/who_imci/cover.png');
+    final en = await loadLibrary();
+    expect(
+      en.firstWhere((b) => b.id == 'calculators').coverAsset,
+      'assets/books/calculators/cover.png',
+    );
+  });
+
   // Every bundled page is translated now, so the fallback is tested on a
   // bundle listing that lacks one.
   test('a page with no Spanish file stays English, at its English path', () {
