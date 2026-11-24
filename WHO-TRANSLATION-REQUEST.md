@@ -1,4 +1,4 @@
-# WHO translation request — DRAFT, not submitted
+# WHO translation request — DRAFT, not submitted (answers in form order)
 
 Submit through the **WHO Permissions request form**
 (https://www.who.int/about/policies/publishing/permissions), the same form used for
@@ -12,20 +12,35 @@ answered "Will you be translating?" with "No". Until WHO grants a translation, t
 app shows the WHO book in English in every language, and the Spanish pages are kept
 off the public repository (branch history rewritten 2026-11-22).
 
-Fields below follow the first request's record. Answer every field not listed here
-exactly as in WHO-PERMISSION-REQUEST.md (contact, organisation, country, title, link,
-ISBN, entire publication, format, selling, sponsorship, advertising, health topic).
-Whether the form has a field for an earlier request ID is unknown; if it has one,
-enter **202610340**.
-
-## Fields that change
+Fields in the form's own order (form text pasted by Grey 2026-11-24). Where the
+first request's answer is reused, the value is the one WHO recorded on licence
+202610340 (WHO-LICENCE.md), not the draft. The form has no field for an earlier
+request ID, so 202610340 goes in "Additional information".
 
 | field | answer |
 |---|---|
-| **Will you be translating?** | **Yes.** |
-| Language(s), if asked | **Spanish.** |
-| **Type of reuse** | **Reproduce**, **adapt** and **translate**. |
-| Planned distribution date | A date after approval that you can meet. |
+| Title | Dr |
+| First name / Family name | Grey / Faulkenberry |
+| Organisation/affiliation | **FHIR-FLI**, as on licence 202610340. (The form was pre-filled with Emory University; the first request used FHIR-FLI with type Individual.) |
+| Website | `https://fhir-fli.github.io/fhir_fli_documentation/` |
+| Type of organisation | **Individual**, as before |
+| Country | United States of America |
+| Email | `grey.faulkenberry@emory.edu`, as before |
+| Full title | `Pocket book of hospital care for children: guidelines for the management of common childhood illnesses – 2nd ed.` |
+| Link | `https://www.who.int/publications/i/item/9789241548373` |
+| ISBN | `9789241548373` |
+| Entire publication? | **Yes** |
+| Item to be reproduced | **WHO publication/document** |
+| **Will you be translating?** | **Yes** (the one answer that changes) |
+| Type of reuse | **Software/Apps** (as granted), plus any option meaning translation if the list has one |
+| Where used | paste the section below |
+| Publishing format | Mobile application / electronic / digital, as before |
+| How distributed | paste the section below |
+| Planned date | a date after approval that you can meet |
+| Selling / Sponsored / Advertising | **No / No / No** |
+| Health topic | **eHealth**, as granted |
+| Additional information | paste the section below |
+| Terms box | tick |
 
 ## Where WHO's material will be used (paste)
 
@@ -44,3 +59,7 @@ Before I re-read the licence, the Spanish text was posted for about a day to a p
 ## How will you distribute it (paste)
 
 As under licence 202610340: Play closed testing and Apple TestFlight to a small named group of clinicians, free, and if it goes to a public listing it remains free with no advertising and no data collection.
+
+## Additional information (paste)
+
+This is a further request under licence 202610340 (granted 3 September 2026), which covers the same publication in the same application without translation. Only the translation is new; every other answer is the same as in that request. The application will show whatever translation disclaimer WHO requires.
