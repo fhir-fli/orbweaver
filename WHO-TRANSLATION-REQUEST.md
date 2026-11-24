@@ -32,7 +32,7 @@ request ID, so 202610340 goes in "Additional information".
 | Entire publication? | **Yes** |
 | Item to be reproduced | **WHO publication/document** |
 | **Will you be translating?** | **Yes** (the one answer that changes) |
-| Type of reuse | **Software/Apps** (as granted), plus any option meaning translation if the list has one |
+| Type of reuse | **Software/App** only. The list (Grey 2026-11-24) has no translation option: academic, broadcast media, research, dissertation, institutional repository, link to website, photocopy, post on website, presentation/conference, promotional materials, regulatory approval, reprint this entire work, scientific journal/book, social media, software/app. "Will you be translating? Yes" carries the translation. |
 | Where used | paste the section below |
 | Publishing format | Mobile application / electronic / digital, as before |
 | How distributed | paste the section below |
