@@ -47,3 +47,9 @@ Seven pages first failed on a DNS outage and were rerun after the retry fix.
 | calc_wells_pe | s6 | tag "etv" should be "tev" | Kept: ETV (enfermedad tromboembólica venosa) and TEV are both standard Spanish; the book uses ETV in all 13 places, so the tag matches the text |
 
 Every other page in this range had no findings. (calc_wells_pe was missed at first and adjudicated 2026-11-24 after a log sweep.)
+
+## Pages 73– (2026-11-24)
+
+| Page | Id | Gemma said | Verdict |
+|---|---|---|---|
+| pb_016_weight_estimation | s52 | **patient-safety**: "1 categoría de talla superior" reads as the taller band; the English "1 height-category above" means the row above in the table, a shorter band and a lower weight | Fixed: "1 categoría de talla menor, la fila de arriba en la tabla". Gemma was right: at 100 cm "superior" points to 107–120.99 cm, 16–19 kg, instead of 11–12 kg, about 40–60% more drug. The worked example (11–12 kg) was already correct, so a careful reader would have seen the conflict. No other page carries the rule (English searched for "category above", "height-category", "categories younger", "row above"). |

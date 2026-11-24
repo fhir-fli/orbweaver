@@ -44,7 +44,7 @@ topic:
     markdown: |
       **Bajo peso:** use **2 categorías de edad menores** (p. ej., para un lactante de 10 meses
       con bajo peso — use el peso de 4–6 meses) o **1 categoría de talla
-      superior** (p. ej., bajo peso con 100 cm — use **11–12 kg**).
+      menor**, la fila de arriba en la tabla (p. ej., bajo peso con 100 cm — use **11–12 kg**).
   - type: "prose"
     highlight: true
     markdown: |

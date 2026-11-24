@@ -285,3 +285,6 @@ assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml: 45 pairs, 0 finding
 assets/books/protocolbook/topics/pb_015_cpr_summary.yaml: 34 pairs, 0 findings (0 patient-safety), 304s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_016_weight_estimation.yaml: 25 pairs, 1 findings (1 patient-safety), 412s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
