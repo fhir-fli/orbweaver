@@ -1,0 +1,21 @@
+{
+ "page": "assets/books/protocolbook/formulary.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s37",
+   "severity": "meaning",
+   "problem": "The drug 'Artemether' is incorrectly translated as 'Artemetero'.",
+   "fix": "Arteméter",
+   "en": "Artemether",
+   "es": "Artemetero"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s37\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The drug 'Artemether' is incorrectly translated as 'Artemetero'.\",\n    \"fix\": \"Arteméter\"\n  }\n]\n```",
+  "```json\n[]\n```",
+  "[]",
+  "[]",
+  "```json\n[]\n```"
+ ]
+}

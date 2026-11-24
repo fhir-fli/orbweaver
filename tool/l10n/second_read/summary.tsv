@@ -64,3 +64,14 @@ assets/books/calculators/topics/calc_rcri.yaml	26	1	78	0	0
 assets/books/calculators/topics/calc_reticulocyte.yaml	19	1	991	0	0	
 assets/books/calculators/topics/calc_sgarbossa.yaml	23	1	61	0	0	
 assets/books/calculators/topics/calc_sirs.yaml	20	1	242	0	0	
+assets/books/calculators/topics/calc_sofa.yaml	35	1	347	0	0	
+assets/books/calculators/topics/calc_urinary_indices.yaml	26	1	140	0	0	
+assets/books/calculators/topics/calc_wells_dvt.yaml	30	1	66	0	0	
+assets/books/calculators/topics/calc_wells_pe.yaml	29	1	74	1	0	
+assets/books/calculators/topics/calc_winters.yaml	21	1	108	0	0	
+assets/books/calculators/topics/conv_benzodiazepines.yaml	28	1	102	0	0	
+assets/books/calculators/topics/conv_opioids.yaml	33	1	141	0	0	
+assets/books/calculators/topics/conv_statins.yaml	74	1	352	0	0	
+assets/books/calculators/topics/conv_steroids.yaml	31	1	180	0	0	
+assets/books/protocolbook/book.yaml	16	1	44	0	0	
+assets/books/protocolbook/formulary.yaml	397	5	1471	1	0	

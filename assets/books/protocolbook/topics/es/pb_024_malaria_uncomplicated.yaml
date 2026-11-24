@@ -18,7 +18,7 @@ topic:
       - Es el mismo esquema con el que debe terminar la malaria complicada
       - Trate a los lactantes de **< 5 kg** como niños de **5 kg**
   - type: "table"
-    title: "1.ª línea — Artemetero / lumefantrina (Coartem®)"
+    title: "1.ª línea — Arteméter / lumefantrina (Coartem®)"
     columns: ["Peso (kg)", "Esquema de 3 días*", "Color"]
     rows:
     - cells:

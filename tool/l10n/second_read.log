@@ -253,3 +253,25 @@ assets/books/calculators/topics/calc_sgarbossa.yaml: 23 pairs, 0 findings (0 pat
 assets/books/calculators/topics/calc_sirs.yaml: 20 pairs, 0 findings (0 patient-safety), 242s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_sofa.yaml: 35 pairs, 0 findings (0 patient-safety), 347s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_urinary_indices.yaml: 26 pairs, 0 findings (0 patient-safety), 140s 
+assets/books/calculators/topics/calc_wells_dvt.yaml: 30 pairs, 0 findings (0 patient-safety), 66s 
+assets/books/calculators/topics/calc_wells_pe.yaml: 29 pairs, 1 findings (0 patient-safety), 74s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_winters.yaml: 21 pairs, 0 findings (0 patient-safety), 108s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/conv_benzodiazepines.yaml: 28 pairs, 0 findings (0 patient-safety), 102s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/conv_opioids.yaml: 33 pairs, 0 findings (0 patient-safety), 141s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/conv_statins.yaml: 74 pairs, 0 findings (0 patient-safety), 352s 
+assets/books/calculators/topics/conv_steroids.yaml: 31 pairs, 0 findings (0 patient-safety), 180s 
+assets/books/protocolbook/book.yaml: 16 pairs, 0 findings (0 patient-safety), 44s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/formulary.yaml: 397 pairs, 1 findings (0 patient-safety), 1471s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s

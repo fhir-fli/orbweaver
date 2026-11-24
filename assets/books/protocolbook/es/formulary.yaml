@@ -166,7 +166,7 @@ formulary:
       digestiva de los ACOD). Evítelo en el embarazo y en la insuficiencia hepática grave.
       Disponibilidad variable en el nivel de distrito.
   - id: artemether
-    name: Artemetero
+    name: Arteméter
     class: antimalarial
     dose: |
       **Malaria grave, 2.ª línea — solo si no hay artesunato.**

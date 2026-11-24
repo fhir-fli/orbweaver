@@ -38,3 +38,11 @@ Seven pages first failed on a DNS outage and were rerun after the retry fix.
 | calc_perc | s19 | "en 4 semanas" reads as future | Fixed: "en las últimas 4 semanas" |
 | calc_phq9 | s41 | "a sí mismo/a la familia" drops "or to" | Fixed: "a sí mismo/a o a la familia" |
 | calc_qsofa | s20 | "SRIS" should be "SIRS" | Kept: SRIS (síndrome de respuesta inflamatoria sistémica) is the Spanish acronym |
+
+## Pages 58–68 (2026-11-24)
+
+| Page | Id | Gemma said | Verdict |
+|---|---|---|---|
+| protocolbook formulary | s37 | "Artemetero" should be "Arteméter" | Fixed, and the same word on pb_023 (×2 pages) and pb_024: WHO's Spanish malaria guidelines (2021, 2022) and Colombia's Ministerio de Salud malaria guide write "arteméter + lumefantrina". 0 "artemetero" left. |
+
+Every other page in this range had no findings.
