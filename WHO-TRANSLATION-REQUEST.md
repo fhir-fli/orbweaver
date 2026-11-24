@@ -1,4 +1,10 @@
-# WHO translation request — DRAFT, not submitted (answers in form order)
+# WHO translation request — SUBMITTED 2026-11-24
+
+> Submitted by Grey 2026-11-24 through the WHO Permissions request form. This is now
+> the record of what was asked. Request ID: unknown until WHO's email arrives (write
+> it here). Submitting is not permission: until WHO approves, the WHO book stays
+> English in every language. Organisation, date and other choices as Grey entered
+> them; I did not see the submitted form.
 
 Submit through the **WHO Permissions request form**
 (https://www.who.int/about/policies/publishing/permissions), the same form used for
