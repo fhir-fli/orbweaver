@@ -44,5 +44,6 @@ Seven pages first failed on a DNS outage and were rerun after the retry fix.
 | Page | Id | Gemma said | Verdict |
 |---|---|---|---|
 | protocolbook formulary | s37 | "Artemetero" should be "Arteméter" | Fixed, and the same word on pb_023 (×2 pages) and pb_024: WHO's Spanish malaria guidelines (2021, 2022) and Colombia's Ministerio de Salud malaria guide write "arteméter + lumefantrina". 0 "artemetero" left. |
+| calc_wells_pe | s6 | tag "etv" should be "tev" | Kept: ETV (enfermedad tromboembólica venosa) and TEV are both standard Spanish; the book uses ETV in all 13 places, so the tag matches the text |
 
-Every other page in this range had no findings.
+Every other page in this range had no findings. (calc_wells_pe was missed at first and adjudicated 2026-11-24 after a log sweep.)

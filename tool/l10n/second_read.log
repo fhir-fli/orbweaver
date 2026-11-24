@@ -275,3 +275,13 @@ assets/books/protocolbook/book.yaml: 16 pairs, 0 findings (0 patient-safety), 44
 assets/books/protocolbook/formulary.yaml: 397 pairs, 1 findings (0 patient-safety), 1471s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_012_triage.yaml: 15 pairs, 0 findings (0 patient-safety), 350s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_013_pals.yaml: 24 pairs, 0 findings (0 patient-safety), 265s 
+assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml: 45 pairs, 0 findings (0 patient-safety), 93s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_015_cpr_summary.yaml: 34 pairs, 0 findings (0 patient-safety), 304s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
