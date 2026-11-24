@@ -23,3 +23,18 @@ that page.
 | credits | s3 | ProtocolBook title left in English | Kept: it cites the published English title |
 | credits | s6 | WHO disclaimer left in English | Kept: WHO material stays English until WHO grants translation (licence 202610340) |
 | credits | s58 | "Cricotiroidotomía" for "Cric" | Kept: "Cric" is the procedure; the parenthesis already says landmark |
+
+## Pages 39–57 (2026-11-23 to 11-24)
+
+Pages with no findings: calc_nexus_cspine, calc_osmolal_gap, calc_ottawa_knee,
+calc_oxygenation, calc_parkland, calc_pecarn_cspine, calc_pecarn_head, calc_news2,
+calc_prevent_ascvd, calc_qtc, calc_rcri, calc_reticulocyte, calc_sgarbossa, calc_sirs.
+Seven pages first failed on a DNS outage and were rerun after the retry fix.
+
+| Page | Id | Gemma said | Verdict |
+|---|---|---|---|
+| calc_nihss | s44, s45, s50, s51, s56, s57, s62, s63 | "claudicación"/"claudica" for drift is vascular claudication | Kept: the Spanish NIHSS uses "claudicación" for drift (SAMUR Madrid NIHSS sheet, servpub.madrid.es/manualsamur/anexos/306_02_EscalaNIHSS.pdf; Junta de Andalucía stroke annex, "Claudica pero no toca la cama") |
+| calc_ottawa_ankle | s27 | "evaluadas en ~10 días" could read as "after 10 days" | Fixed: "evaluadas dentro de los ~10 días" |
+| calc_perc | s19 | "en 4 semanas" reads as future | Fixed: "en las últimas 4 semanas" |
+| calc_phq9 | s41 | "a sí mismo/a la familia" drops "or to" | Fixed: "a sí mismo/a o a la familia" |
+| calc_qsofa | s20 | "SRIS" should be "SIRS" | Kept: SRIS (síndrome de respuesta inflamatoria sistémica) is the Spanish acronym |

@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_qsofa.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s20",
+   "severity": "meaning",
+   "problem": "The acronym 'SIRS' was incorrectly transcribed as 'SRIS'.",
+   "fix": "La SSC 2021/2026 recomienda NO usar el qSOFA como único cribado de sepsis (baja sensibilidad) — use NEWS2/MEWS/SIRS para el cribado. Un resultado positivo eleva la sospecha; uno negativo NO excluye la sepsis.",
+   "en": "SSC 2021/2026 recommend AGAINST qSOFA as a single sepsis screen (low sensitivity) — use NEWS2/MEWS/SIRS to screen. A positive raises concern; a negative does NOT exclude sepsis.",
+   "es": "La SSC 2021/2026 recomienda NO usar el qSOFA como único cribado de sepsis (baja sensibilidad) — use NEWS2/MEWS/SRIS para el cribado. Un resultado positivo eleva la sospecha; uno negativo NO excluye la sepsis."
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s20\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The acronym 'SIRS' was incorrectly transcribed as 'SRIS'.\",\n    \"fix\": \"La SSC 2021/2026 recomienda NO usar el qSOFA como único cribado de sepsis (baja sensibilidad) — use NEWS2/MEWS/SIRS para el cribado. Un resultado positivo eleva la sospecha; uno negativo NO excluye la sepsis.\"\n  }\n]\n```"
+ ]
+}

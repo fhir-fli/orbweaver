@@ -37,3 +37,30 @@ assets/books/calculators/topics/calc_lille.yaml	23	1	163	0	0
 assets/books/calculators/topics/calc_maddrey.yaml	20	1	1035	0	0	
 assets/books/calculators/topics/calc_map.yaml	20	1	65	0	0	
 assets/books/calculators/topics/calc_meld.yaml	30	1	266	0	0	
+assets/books/calculators/topics/calc_news2.yaml	32	1	5322	0	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/calculators/topics/calc_nexus_cspine.yaml	32	1	160	0	0	
+assets/books/calculators/topics/calc_nihss.yaml	93	2	1695	8	0	
+assets/books/calculators/topics/calc_osmolal_gap.yaml	22	1	1602	0	0	
+assets/books/calculators/topics/calc_ottawa_ankle.yaml	27	1	1715	1	0	
+assets/books/calculators/topics/calc_ottawa_knee.yaml	21	1	2147	0	0	
+assets/books/calculators/topics/calc_oxygenation.yaml	25	1	2296	0	0	
+assets/books/calculators/topics/calc_parkland.yaml	23	1	2250	0	0	
+assets/books/calculators/topics/calc_pecarn_cspine.yaml	44	1	152	0	0	
+assets/books/calculators/topics/calc_pecarn_head.yaml	60	1	1074	0	0	
+assets/books/calculators/topics/calc_perc.yaml	24	1	2745	0	0	[Errno -2] Name or service not known
+assets/books/calculators/topics/calc_phq9.yaml	67	1	10	0	0	[Errno -2] Name or service not known
+assets/books/calculators/topics/calc_prevent_ascvd.yaml	40	1	10	0	0	[Errno -2] Name or service not known
+assets/books/calculators/topics/calc_qsofa.yaml	20	1	15	0	0	[Errno -2] Name or service not known
+assets/books/calculators/topics/calc_qtc.yaml	21	1	20	0	0	[Errno -2] Name or service not known
+assets/books/calculators/topics/calc_rcri.yaml	26	1	15	0	0	[Errno -2] Name or service not known
+assets/books/calculators/topics/calc_reticulocyte.yaml	19	1	15	0	0	[Errno -2] Name or service not known
+assets/books/calculators/topics/calc_news2.yaml	32	1	264	0	0	
+assets/books/calculators/topics/calc_perc.yaml	24	1	428	1	0	
+assets/books/calculators/topics/calc_phq9.yaml	67	1	136	1	0	
+assets/books/calculators/topics/calc_prevent_ascvd.yaml	40	1	183	0	0	
+assets/books/calculators/topics/calc_qsofa.yaml	20	1	179	1	0	
+assets/books/calculators/topics/calc_qtc.yaml	21	1	108	0	0	
+assets/books/calculators/topics/calc_rcri.yaml	26	1	78	0	0	
+assets/books/calculators/topics/calc_reticulocyte.yaml	19	1	991	0	0	
+assets/books/calculators/topics/calc_sgarbossa.yaml	23	1	61	0	0	
+assets/books/calculators/topics/calc_sirs.yaml	20	1	242	0	0	

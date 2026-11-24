@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_ottawa_ankle.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s27",
+   "severity": "meaning",
+   "problem": "The phrase 'assessed within ~10 days' is translated as 'evaluadas en ~10 días'. In Spanish, 'en ~10 días' is ambiguous and can be interpreted as 'after 10 days' or 'in 10 days' time, whereas 'within' specifically defines the window from the time of injury.",
+   "fix": "evaluadas dentro de los ~10 días",
+   "en": "Applies to acute injury, typically age ≥ 18 (validated variants from age 6), assessed within ~10 days, without intoxication or distracting injury.",
+   "es": "Se aplica a lesiones agudas, en general edad ≥ 18 (variantes validadas desde los 6 años), evaluadas en ~10 días, sin intoxicación ni lesión que distraiga."
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s27\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The phrase 'assessed within ~10 days' is translated as 'evaluadas en ~10 días'. In Spanish, 'en ~10 días' is ambiguous and can be interpreted as 'after 10 days' or 'in 10 days' time, whereas 'within' specifically defines the window from the time of injury.\",\n    \"fix\": \"evaluadas dentro de los ~10 días\"\n  }\n]\n```"
+ ]
+}

@@ -165,3 +165,91 @@ assets/books/calculators/topics/calc_meld.yaml: 30 pairs, 0 findings (0 patient-
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/calculators/topics/calc_news2.yaml: 32 pairs, 0 findings (0 patient-safety), 5322s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_nexus_cspine.yaml: 32 pairs, 0 findings (0 patient-safety), 160s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_nihss.yaml: 93 pairs, 8 findings (0 patient-safety), 1695s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_osmolal_gap.yaml: 22 pairs, 0 findings (0 patient-safety), 1602s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_ottawa_ankle.yaml: 27 pairs, 1 findings (0 patient-safety), 1715s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_ottawa_knee.yaml: 21 pairs, 0 findings (0 patient-safety), 2147s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_oxygenation.yaml: 25 pairs, 0 findings (0 patient-safety), 2296s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_parkland.yaml: 23 pairs, 0 findings (0 patient-safety), 2250s 
+assets/books/calculators/topics/calc_pecarn_cspine.yaml: 44 pairs, 0 findings (0 patient-safety), 152s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/topics/calc_pecarn_head.yaml: 60 pairs, 0 findings (0 patient-safety), 1074s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/calculators/topics/calc_perc.yaml: 24 pairs, 0 findings (0 patient-safety), 2745s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_phq9.yaml: 67 pairs, 0 findings (0 patient-safety), 10s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_prevent_ascvd.yaml: 40 pairs, 0 findings (0 patient-safety), 10s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_qsofa.yaml: 20 pairs, 0 findings (0 patient-safety), 15s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_qtc.yaml: 21 pairs, 0 findings (0 patient-safety), 20s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_rcri.yaml: 26 pairs, 0 findings (0 patient-safety), 15s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_reticulocyte.yaml: 19 pairs, 0 findings (0 patient-safety), 15s [Errno -2] Name or service not known
+217 pages
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_news2.yaml: 32 pairs, 0 findings (0 patient-safety), 264s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_perc.yaml: 24 pairs, 1 findings (0 patient-safety), 428s 
+assets/books/calculators/topics/calc_phq9.yaml: 67 pairs, 1 findings (0 patient-safety), 136s 
+assets/books/calculators/topics/calc_prevent_ascvd.yaml: 40 pairs, 0 findings (0 patient-safety), 183s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_qsofa.yaml: 20 pairs, 1 findings (0 patient-safety), 179s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_qtc.yaml: 21 pairs, 0 findings (0 patient-safety), 108s 
+assets/books/calculators/topics/calc_rcri.yaml: 26 pairs, 0 findings (0 patient-safety), 78s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/topics/calc_reticulocyte.yaml: 19 pairs, 0 findings (0 patient-safety), 991s 
+assets/books/calculators/topics/calc_sgarbossa.yaml: 23 pairs, 0 findings (0 patient-safety), 61s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_sirs.yaml: 20 pairs, 0 findings (0 patient-safety), 242s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s

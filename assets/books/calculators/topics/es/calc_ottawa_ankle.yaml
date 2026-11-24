@@ -27,4 +27,4 @@ topic:
     - {min: 0, max: 0, label: "La regla no indica radiografía", severity: "none"}
     - {min: 1, label: "Radiografía indicada", severity: "warn"}
     caveats:
-    - "Se aplica a lesiones agudas, en general edad ≥ 18 (variantes validadas desde los 6 años), evaluadas en ~10 días, sin intoxicación ni lesión que distraiga."
+    - "Se aplica a lesiones agudas, en general edad ≥ 18 (variantes validadas desde los 6 años), evaluadas dentro de los ~10 días, sin intoxicación ni lesión que distraiga."

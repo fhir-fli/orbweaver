@@ -1,0 +1,74 @@
+{
+ "page": "assets/books/calculators/topics/calc_nihss.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s44",
+   "severity": "meaning",
+   "problem": "The term 'claudicación' is a false friend; it refers to vascular claudication (pain during walking) rather than neurological 'drift' (the limb dropping).",
+   "fix": "Sin deriva (mantiene 10 s)",
+   "en": "No drift (holds 10 s)",
+   "es": "Sin claudicación (mantiene 10 s)"
+  },
+  {
+   "id": "s45",
+   "severity": "meaning",
+   "problem": "The term 'claudica' is a false friend; it refers to vascular claudication rather than neurological 'drift'.",
+   "fix": "Deriva antes de 10 s",
+   "en": "Drift before 10 s",
+   "es": "Claudica antes de 10 s"
+  },
+  {
+   "id": "s50",
+   "severity": "meaning",
+   "problem": "The term 'claudicación' is a false friend; it refers to vascular claudication rather than neurological 'drift'.",
+   "fix": "Sin deriva (mantiene 10 s)",
+   "en": "No drift (holds 10 s)",
+   "es": "Sin claudicación (mantiene 10 s)"
+  },
+  {
+   "id": "s51",
+   "severity": "meaning",
+   "problem": "The term 'claudica' is a false friend; it refers to vascular claudication rather than neurological 'drift'.",
+   "fix": "Deriva antes de 10 s",
+   "en": "Drift before 10 s",
+   "es": "Claudica antes de 10 s"
+  },
+  {
+   "id": "s56",
+   "severity": "meaning",
+   "problem": "The term 'claudicación' is a false friend; it refers to vascular claudication rather than neurological 'drift'.",
+   "fix": "Sin deriva (mantiene 5 s)",
+   "en": "No drift (holds 5 s)",
+   "es": "Sin claudicación (mantiene 5 s)"
+  },
+  {
+   "id": "s57",
+   "severity": "meaning",
+   "problem": "The term 'claudica' is a false friend; it refers to vascular claudication rather than neurological 'drift'.",
+   "fix": "Deriva antes de 5 s",
+   "en": "Drift before 5 s",
+   "es": "Claudica antes de 5 s"
+  },
+  {
+   "id": "s62",
+   "severity": "meaning",
+   "problem": "The term 'claudicación' is a false friend; it refers to vascular claudication rather than neurological 'drift'.",
+   "fix": "Sin deriva (mantiene 5 s)",
+   "en": "No drift (holds 5 s)",
+   "es": "Sin claudicación (mantiene 5 s)"
+  },
+  {
+   "id": "s63",
+   "severity": "meaning",
+   "problem": "The term 'claudica' is a false friend; it refers to vascular claudication rather than neurological 'drift'.",
+   "fix": "Deriva antes de 5 s",
+   "en": "Drift before 5 s",
+   "es": "Claudica antes de 5 s"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s44\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'claudicación' is a false friend; it refers to vascular claudication (pain during walking) rather than neurological 'drift' (the limb dropping).\",\n    \"fix\": \"Sin deriva (mantiene 10 s)\"\n  },\n  {\n    \"id\": \"s45\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'claudica' is a false friend; it refers to vascular claudication rather than neurological 'drift'.\",\n    \"fix\": \"Deriva antes de 10 s\"\n  },\n  {\n    \"id\": \"s50\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'claudicación' is a false friend; it refers to vascular claudication rather than neurological 'drift'.\",\n    \"fix\": \"Sin deriva (mantiene 10 s)\"\n  },\n  {\n    \"id\": \"s51\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'claudica' is a false friend; it refers to vascular claudication rather than neurological 'drift'.\",\n    \"fix\": \"Deriva antes de 10 s\"\n  },\n  {\n    \"id\": \"s56\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'claudicación' is a false friend; it refers to vascular claudication rather than neurological 'drift'.\",\n    \"fix\": \"Sin deriva (mantiene 5 s)\"\n  },\n  {\n    \"id\": \"s57\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'claudica' is a false friend; it refers to vascular claudication rather than neurological 'drift'.\",\n    \"fix\": \"Deriva antes de 5 s\"\n  },\n  {\n    \"id\": \"s62\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'claudicación' is a false friend; it refers to vascular claudication rather than neurological 'drift'.\",\n    \"fix\": \"Sin deriva (mantiene 5 s)\"\n  },\n  {\n    \"id\": \"s63\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'claudica' is a false friend; it refers to vascular claudication rather than neurological 'drift'.\",\n    \"fix\": \"Deriva antes de 5 s\"\n  }\n]\n```",
+  "[]"
+ ]
+}

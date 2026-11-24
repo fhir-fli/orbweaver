@@ -33,7 +33,7 @@ topic:
     - {key: "q3", label: "Dificultad para conciliar/mantener el sueño, o dormir demasiado", type: "scale", default: "0", options: *freq}
     - {key: "q4", label: "Sentirse cansado o con poca energía", type: "scale", default: "0", options: *freq}
     - {key: "q5", label: "Poco apetito o comer en exceso", type: "scale", default: "0", options: *freq}
-    - {key: "q6", label: "Sentirse mal consigo mismo — un fracaso, o haberse fallado a sí mismo/a la familia", type: "scale", default: "0", options: *freq}
+    - {key: "q6", label: "Sentirse mal consigo mismo — un fracaso, o haberse fallado a sí mismo/a o a la familia", type: "scale", default: "0", options: *freq}
     - {key: "q7", label: "Dificultad para concentrarse (leer, ver televisión)", type: "scale", default: "0", options: *freq}
     - {key: "q8", label: "Moverse/hablar despacio, o estar inquieto/intranquilo — de forma notable", type: "scale", default: "0", options: *freq}
     - {key: "q9", label: "Pensar que estaría mejor muerto, o en hacerse daño", type: "scale", default: "0", options: *freq}

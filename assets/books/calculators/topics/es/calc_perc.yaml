@@ -24,7 +24,7 @@ topic:
     - {key: "spo2", label: "SpO₂ < 95% con aire ambiente", type: "toggle", points: 1}
     - {key: "leg_swelling", label: "Edema unilateral de la pierna", type: "toggle", points: 1}
     - {key: "hemoptysis", label: "Hemoptisis", type: "toggle", points: 1}
-    - {key: "surgery_trauma", label: "Cirugía o traumatismo recientes (en 4 semanas, con hospitalización/anestesia general)", type: "toggle", points: 1}
+    - {key: "surgery_trauma", label: "Cirugía o traumatismo recientes (en las últimas 4 semanas, con hospitalización/anestesia general)", type: "toggle", points: 1}
     - {key: "prior_vte", label: "TEP o TVP previos", type: "toggle", points: 1}
     - {key: "hormone", label: "Uso de hormonas (anticonceptivos orales, estrógenos, THS)", type: "toggle", points: 1}
     bands:
