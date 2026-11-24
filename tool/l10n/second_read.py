@@ -53,7 +53,12 @@ def ask(c, pairs):
             return r.text or ''
         except Exception as e:
             msg = str(e)
-            if not any(code in msg for code in ('503', '429', '500')) or attempt == 11:
+            # Server busy, or the laptop's network dropped (DNS failure,
+            # refused or reset connection): wait and retry rather than
+            # skipping the page. Seen 2026-11-24: 7 pages lost to DNS errors.
+            transient = ('503', '429', '500', 'Errno -2', 'Errno -3',
+                         'Connection', 'Timeout', 'timed out')
+            if not any(code in msg for code in transient) or attempt == 11:
                 raise
             wait = min(60 * 2 ** attempt, 600)
             print(f'  {msg[:40]!r}, retry {attempt + 1} in {wait}s', flush=True)
