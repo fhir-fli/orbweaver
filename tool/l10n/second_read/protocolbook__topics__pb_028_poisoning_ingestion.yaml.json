@@ -1,0 +1,25 @@
+{
+ "page": "assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s6",
+   "severity": "minor",
+   "problem": "The term 'toxíndrome' is not a standard medical term in Spanish; it appears to be a hybrid of 'toxidrome' and 'síndrome'.",
+   "fix": "toxidrome",
+   "en": "toxidrome",
+   "es": "toxíndrome"
+  },
+  {
+   "id": "s12",
+   "severity": "minor",
+   "problem": "The term 'Toxíndromes' is not a standard medical term in Spanish.",
+   "fix": "Toxidromes",
+   "en": "Common toxidromes & antidotes",
+   "es": "Toxíndromes y antídotos frecuentes"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s6\",\n    \"severity\": \"minor\",\n    \"problem\": \"The term 'toxíndrome' is not a standard medical term in Spanish; it appears to be a hybrid of 'toxidrome' and 'síndrome'.\",\n    \"fix\": \"toxidrome\"\n  },\n  {\n    \"id\": \"s12\",\n    \"severity\": \"minor\",\n    \"problem\": \"The term 'Toxíndromes' is not a standard medical term in Spanish.\",\n    \"fix\": \"Toxidromes\"\n  }\n]\n```"
+ ]
+}

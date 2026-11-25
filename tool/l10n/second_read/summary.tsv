@@ -80,3 +80,14 @@ assets/books/protocolbook/topics/pb_013_pals.yaml	24	1	265	0	0
 assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	45	1	93	0	0	
 assets/books/protocolbook/topics/pb_015_cpr_summary.yaml	34	1	304	0	0	
 assets/books/protocolbook/topics/pb_016_weight_estimation.yaml	25	1	412	1	1	
+assets/books/protocolbook/topics/pb_017_vital_rates.yaml	37	1	2237	0	0	
+assets/books/protocolbook/topics/pb_018_bp_girls.yaml	8	1	51	0	0	
+assets/books/protocolbook/topics/pb_019_bp_boys.yaml	8	1	541	0	0	
+assets/books/protocolbook/topics/pb_020_resuscitation_meds.yaml	40	1	303	0	0	Expecting value: line 1 column 1 (char 0)
+assets/books/protocolbook/topics/pb_021_io_line.yaml	11	1	134	0	0	
+assets/books/protocolbook/topics/pb_022_malaria.yaml	27	1	142	0	0	
+assets/books/protocolbook/topics/pb_023_malaria_complications.yaml	11	1	263	0	0	
+assets/books/protocolbook/topics/pb_023_malaria_severe_meds.yaml	11	1	261	0	0	
+assets/books/protocolbook/topics/pb_024_malaria_uncomplicated.yaml	38	1	282	0	0	
+assets/books/protocolbook/topics/pb_025_altered_mental_status.yaml	51	1	113	0	0	
+assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	13	1	509	2	0	

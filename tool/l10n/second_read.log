@@ -288,3 +288,34 @@ assets/books/protocolbook/topics/pb_015_cpr_summary.yaml: 34 pairs, 0 findings (
 assets/books/protocolbook/topics/pb_016_weight_estimation.yaml: 25 pairs, 1 findings (1 patient-safety), 412s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/protocolbook/topics/pb_017_vital_rates.yaml: 37 pairs, 0 findings (0 patient-safety), 2237s 
+assets/books/protocolbook/topics/pb_018_bp_girls.yaml: 8 pairs, 0 findings (0 patient-safety), 51s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_019_bp_boys.yaml: 8 pairs, 0 findings (0 patient-safety), 541s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_020_resuscitation_meds.yaml: 40 pairs, 0 findings (0 patient-safety), 303s Expecting value: line 1 column 1 (char 0)
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_021_io_line.yaml: 11 pairs, 0 findings (0 patient-safety), 134s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_022_malaria.yaml: 27 pairs, 0 findings (0 patient-safety), 142s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_023_malaria_complications.yaml: 11 pairs, 0 findings (0 patient-safety), 263s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_023_malaria_severe_meds.yaml: 11 pairs, 0 findings (0 patient-safety), 261s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_024_malaria_uncomplicated.yaml: 38 pairs, 0 findings (0 patient-safety), 282s 
+assets/books/protocolbook/topics/pb_025_altered_mental_status.yaml: 51 pairs, 0 findings (0 patient-safety), 113s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml: 13 pairs, 2 findings (0 patient-safety), 509s 
