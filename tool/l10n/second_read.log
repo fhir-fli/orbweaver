@@ -362,3 +362,24 @@ assets/books/protocolbook/topics/pb_047_paediatric_dka.yaml: 53 pairs, 0 finding
 assets/books/protocolbook/topics/pb_049_uti_kidney.yaml: 87 pairs, 1 findings (0 patient-safety), 301s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/protocolbook/topics/pb_052_wheezing_child.yaml: 69 pairs, 0 findings (0 patient-safety), 2875s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_054_meningitis.yaml: 64 pairs, 0 findings (0 patient-safety), 145s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+assets/books/protocolbook/topics/pb_056_heart_failure.yaml: 42 pairs, 0 findings (0 patient-safety), 4074s 
+assets/books/protocolbook/topics/pb_058_rheumatic_fever.yaml: 22 pairs, 0 findings (0 patient-safety), 77s 
+assets/books/protocolbook/topics/pb_059_sickle_cell.yaml: 17 pairs, 1 findings (0 patient-safety), 141s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
