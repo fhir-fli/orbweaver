@@ -486,3 +486,37 @@ assets/books/protocolbook/topics/pb_090_neo_ballard.yaml: 20 pairs, 0 findings (
 assets/books/protocolbook/topics/pb_094_im_heart_failure.yaml: 76 pairs, 0 findings (0 patient-safety), 83s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
 assets/books/protocolbook/topics/pb_096_im_stroke.yaml: 133 pairs, 6 findings (4 patient-safety), 286s 
+assets/books/protocolbook/topics/pb_099_im_sepsis.yaml: 59 pairs, 0 findings (0 patient-safety), 99s 
+assets/books/protocolbook/topics/pb_101_im_convulsions.yaml: 31 pairs, 0 findings (0 patient-safety), 87s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_102_im_meningitis.yaml: 47 pairs, 0 findings (0 patient-safety), 172s 
+assets/books/protocolbook/topics/pb_104_im_gi_bleed.yaml: 50 pairs, 0 findings (0 patient-safety), 82s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/protocolbook/topics/pb_105_im_dka.yaml: 40 pairs, 0 findings (0 patient-safety), 1043s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_106_im_hypertension.yaml: 44 pairs, 0 findings (0 patient-safety), 355s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_108_im_liver_failure.yaml: 73 pairs, 0 findings (0 patient-safety), 235s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_111_im_aki.yaml: 39 pairs, 0 findings (0 patient-safety), 148s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_112_im_agitation.yaml: 52 pairs, 0 findings (0 patient-safety), 152s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_114_im_ecg_basics.yaml: 31 pairs, 0 findings (0 patient-safety), 224s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/protocolbook/topics/pb_116_im_ecg_enlargement.yaml: 31 pairs, 0 findings (0 patient-safety), 1158s 
+assets/books/protocolbook/topics/pb_117_im_ecg_conduction.yaml: 22 pairs, 0 findings (0 patient-safety), 53s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/protocolbook/topics/pb_118_im_ecg_svt.yaml: 27 pairs, 1 findings (0 patient-safety), 2267s 

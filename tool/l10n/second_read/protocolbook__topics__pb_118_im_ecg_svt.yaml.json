@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/protocolbook/topics/pb_118_im_ecg_svt.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s15",
+   "severity": "minor",
+   "problem": "'afib' is a specific abbreviation for atrial fibrillation, while 'fibrilación' is vague and could be confused with ventricular fibrillation in other contexts.",
+   "fix": "FA",
+   "en": "afib",
+   "es": "fibrilación"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s15\",\n    \"severity\": \"minor\",\n    \"problem\": \"'afib' is a specific abbreviation for atrial fibrillation, while 'fibrilación' is vague and could be confused with ventricular fibrillation in other contexts.\",\n    \"fix\": \"FA\"\n  }\n]\n```"
+ ]
+}
