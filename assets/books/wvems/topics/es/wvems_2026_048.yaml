@@ -67,7 +67,7 @@ topic:
         criteria:
         - "Prematuro o gemelos"
         - "Parto fallido"
-        - "Prolapso o nalgas"
+        - "Prolapso o presentación de nalgas"
         actions:
         - text: "No puje"
           kind: "procedure"
@@ -117,7 +117,7 @@ topic:
         - **[Maneje las complicaciones obstétricas](topic:wvems-2026-096#manage-ob-complication)** durante el traslado:
           - **Parto fallido / distocia de hombros**: traslade con las rodillas al pecho.
           - **Prolapso**: no manipule el cordón; alivie la presión con los dedos en la vagina.
-          - **Nalgas**: no tire; eleve la parte que se presenta si presiona el cordón.
+          - **Presentación de nalgas**: no tire; eleve la parte que se presenta si presiona el cordón.
     - type: "band_callout"
       band: "critical_care"
       title: ""

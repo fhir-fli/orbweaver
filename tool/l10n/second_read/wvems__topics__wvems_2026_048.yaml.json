@@ -1,0 +1,25 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_048.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s33",
+   "severity": "minor",
+   "problem": "The term 'Breech' (referring to breech presentation) is translated as 'nalgas' (buttocks), which is an anatomical part, not the medical term for the presentation.",
+   "fix": "Prolapso o presentación podálica",
+   "en": "Prolapse or Breech",
+   "es": "Prolapso o nalgas"
+  },
+  {
+   "id": "s48",
+   "severity": "minor",
+   "problem": "The term 'Breech' is translated as 'Nalgas', which is an anatomical part rather than the correct medical term for the presentation.",
+   "fix": "Presentación podálica: no tire; eleve la parte que se presenta si presiona el cordón.",
+   "en": "- This protocol applies to **late pregnancy** (20 weeks & over).\n  - There are no specific EMS interventions for early pregnancy.\n  - Uterus palpable above the umbilicus suggests late pregnancy.\n- Any SBP reading **above 160 mmHg** may be **preeclampsia**.\n  - Prioritize transport. Call **Medical Control** for any refusal.\n- Aggressively treat any [Seizure](topic:wvems-2026-042) as **eclampsia**.\n- Any maternal trauma after 20 weeks should be transported.\n  - Fetus may have injury that is not immediately obvious.\n  - Even minor trauma (simple falls, etc.) can cause fetal harm.\n- **Prioritize transport** if any complications (to facility w/ OB/GYN).\n- **Reduce cord** over the head if found around the neck.\n- **[Manage OB Complications](topic:wvems-2026-096#manage-ob-complication)** during transport:\n  - **Failed Delivery / Shoulder Dystocia**: transport knees to chest.\n  - **Prolapse**: don’t handle cord; relieve pressure with fingers in vagina.\n  - **Breech**: do not pull; elevate presenting part if pressing on cord.\n",
+   "es": "- Este protocolo se aplica al **embarazo avanzado** (20 semanas o más).\n  - No hay intervenciones específicas del SEM para el embarazo temprano.\n  - Un útero palpable por encima del ombligo sugiere embarazo avanzado.\n- Cualquier PAS **por encima de 160 mmHg** puede ser **preeclampsia**.\n  - Priorice el traslado. Llame a **control médico** ante cualquier rechazo.\n- Trate de forma enérgica cualquier [convulsión](topic:wvems-2026-042) como **eclampsia**.\n- Todo traumatismo materno después de las 20 semanas debe trasladarse.\n  - El feto puede tener una lesión que no es evidente de inmediato.\n  - Incluso un traumatismo menor (caídas simples, etc.) puede dañar al feto.\n- **Priorice el traslado** si hay complicaciones (a un centro con ginecoobstetricia).\n- **Reduzca el cordón** por encima de la cabeza si está alrededor del cuello.\n- **[Maneje las complicaciones obstétricas](topic:wvems-2026-096#manage-ob-complication)** durante el traslado:\n  - **Parto fallido / distocia de hombros**: traslade con las rodillas al pecho.\n  - **Prolapso**: no manipule el cordón; alivie la presión con los dedos en la vagina.\n  - **Nalgas**: no tire; eleve la parte que se presenta si presiona el cordón.\n"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s33\",\n    \"severity\": \"minor\",\n    \"problem\": \"The term 'Breech' (referring to breech presentation) is translated as 'nalgas' (buttocks), which is an anatomical part, not the medical term for the presentation.\",\n    \"fix\": \"Prolapso o presentación podálica\"\n  },\n  {\n    \"id\": \"s48\",\n    \"severity\": \"minor\",\n    \"problem\": \"The term 'Breech' is translated as 'Nalgas', which is an anatomical part rather than the correct medical term for the presentation.\",\n    \"fix\": \"Presentación podálica: no tire; eleve la parte que se presenta si presiona el cordón.\"\n  }\n]\n```"
+ ]
+}
