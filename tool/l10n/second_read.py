@@ -105,9 +105,19 @@ def main():
         try:
             for i in range(0, len(ids), CHUNK):
                 part = {k: pairs[k] for k in ids[i:i + CHUNK]}
-                text = ask(c, part)
+                # An answer that is not JSON (seen 2026-11-24 on pb_020 and
+                # pb_029: "Expecting value: line 1 column 1") is asked again,
+                # up to 3 times; the last bad answer goes into the error.
+                for tries in range(3):
+                    text = ask(c, part)
+                    try:
+                        got = parse(text)
+                        break
+                    except ValueError:
+                        if tries == 2:
+                            raise ValueError(f'not JSON after 3 asks: {text[:120]!r}')
                 raw.append(text)
-                for f in parse(text):
+                for f in got:
                     if f.get('id') in part:
                         f['en'] = part[f['id']]['en']
                         f['es'] = part[f['id']]['es']
