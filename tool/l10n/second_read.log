@@ -319,3 +319,12 @@ assets/books/protocolbook/topics/pb_025_altered_mental_status.yaml: 51 pairs, 0 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
 assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml: 13 pairs, 2 findings (0 patient-safety), 509s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_029_organophosphate.yaml: 44 pairs, 0 findings (0 patient-safety), 665s Expecting value: line 1 column 1 (char 0)
+assets/books/protocolbook/topics/pb_030_hydrocarbon.yaml: 41 pairs, 0 findings (0 patient-safety), 78s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_031_benzo_opioid.yaml: 56 pairs, 3 findings (0 patient-safety), 318s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s

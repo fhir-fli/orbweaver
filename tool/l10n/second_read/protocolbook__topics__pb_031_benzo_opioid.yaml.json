@@ -1,0 +1,33 @@
+{
+ "page": "assets/books/protocolbook/topics/pb_031_benzo_opioid.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s2",
+   "severity": "minor",
+   "problem": "The term 'toxíndrome' is not a word in Spanish; it is a literal hybrid of English and Spanish.",
+   "fix": "p.31 · síndrome toxicológico + algoritmo",
+   "en": "p.31 · toxidrome + algorithm",
+   "es": "p.31 · toxíndrome + algoritmo"
+  },
+  {
+   "id": "s10",
+   "severity": "minor",
+   "problem": "The term 'toxíndrome' is not a word in Spanish; it is a literal hybrid of English and Spanish.",
+   "fix": "síndrome toxicológico",
+   "en": "toxidrome",
+   "es": "toxíndrome"
+  },
+  {
+   "id": "s41",
+   "severity": "minor",
+   "problem": "The term 'toxíndrome' is not a word in Spanish; it is a literal hybrid of English and Spanish.",
+   "fix": "¿Síndrome toxicológico predominante?",
+   "en": "Predominant toxidrome?",
+   "es": "¿Toxíndrome predominante?"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s2\",\n    \"severity\": \"minor\",\n    \"problem\": \"The term 'toxíndrome' is not a word in Spanish; it is a literal hybrid of English and Spanish.\",\n    \"fix\": \"p.31 · síndrome toxicológico + algoritmo\"\n  },\n  {\n    \"id\": \"s10\",\n    \"severity\": \"minor\",\n    \"problem\": \"The term 'toxíndrome' is not a word in Spanish; it is a literal hybrid of English and Spanish.\",\n    \"fix\": \"síndrome toxicológico\"\n  },\n  {\n    \"id\": \"s41\",\n    \"severity\": \"minor\",\n    \"problem\": \"The term 'toxíndrome' is not a word in Spanish; it is a literal hybrid of English and Spanish.\",\n    \"fix\": \"¿Síndrome toxicológico predominante?\"\n  }\n]\n```"
+ ]
+}

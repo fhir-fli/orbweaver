@@ -91,3 +91,6 @@ assets/books/protocolbook/topics/pb_023_malaria_severe_meds.yaml	11	1	261	0	0
 assets/books/protocolbook/topics/pb_024_malaria_uncomplicated.yaml	38	1	282	0	0	
 assets/books/protocolbook/topics/pb_025_altered_mental_status.yaml	51	1	113	0	0	
 assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	13	1	509	2	0	
+assets/books/protocolbook/topics/pb_029_organophosphate.yaml	44	1	665	0	0	Expecting value: line 1 column 1 (char 0)
+assets/books/protocolbook/topics/pb_030_hydrocarbon.yaml	41	1	78	0	0	
+assets/books/protocolbook/topics/pb_031_benzo_opioid.yaml	56	1	318	3	0	
