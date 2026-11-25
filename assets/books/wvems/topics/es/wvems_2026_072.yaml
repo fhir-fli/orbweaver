@@ -46,7 +46,7 @@ topic:
         shape: "stadium"
         warnings:
         - type: "safety"
-          text: "DESCONTAMINE al paciente"
+          text: "Garantice la DESCONTAMINACIÓN del paciente"
         bullets:
         - text: "Respiración"
           link_id: "wvems-2026-006"

@@ -60,7 +60,7 @@ topic:
         - text: "[Maneje al neonato](topic:wvems-2026-050)"
           kind: "procedure"
         - provider_level: "A"
-          text: "Tapón salino"
+          text: "Vía salinizada"
           kind: "procedure"
       - id: "complicated"
         label: "Complicado"

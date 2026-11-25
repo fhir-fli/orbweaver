@@ -23,7 +23,7 @@ topic:
       - type: "safety"
         text: "Garantice la SEGURIDAD del proveedor"
       - type: "safety"
-        text: "DESCONTAMINE al paciente"
+        text: "Garantice la DESCONTAMINACIÓN del paciente"
       - type: "caution"
         text: "[Precaución si el paciente rechaza](topic:wvems-2026-109#patient-refusals)"
       entry:
@@ -40,7 +40,7 @@ topic:
         - "Síntomas menores"
         actions:
         - provider_level: "A"
-          text: "Tapón salino"
+          text: "Vía salinizada"
           kind: "procedure"
       - id: "major"
         label: "Mayor"

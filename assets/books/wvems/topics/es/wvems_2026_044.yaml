@@ -44,7 +44,7 @@ topic:
         kind: "diagnostic"
       - type: "action"
         provider_level: "A"
-        text: "Tapón salino"
+        text: "Vía salinizada"
         kind: "procedure"
       convergence:
         text: "Considere"
@@ -68,7 +68,7 @@ topic:
         - **Valoración del ictus**: empiece con la exploración FAST de **Cincinnati**.
           - Considere un cribado adicional si es posible (Stroke VAN o NIHSS).
         - **Eleve** la cabecera aproximadamente 30° (ayuda a prevenir la aspiración).
-        - Intente un **[tapón salino](topic:wvems-2026-096#saline-lock)** solo una vez. Deje los demás sitios para el personal de urgencias.
+        - Intente una **[vía salinizada](topic:wvems-2026-096#saline-lock)** solo una vez. Deje los demás sitios para el personal de urgencias.
     - type: "row"
       blocks:
       - type: "prose"

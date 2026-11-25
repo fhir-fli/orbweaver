@@ -48,7 +48,7 @@ topic:
         - "6.4 mEq/L o menos"
         actions:
         - provider_level: "A"
-          text: "Tapón salino"
+          text: "Vía salinizada"
           kind: "procedure"
       - id: "major"
         label: "Mayor"

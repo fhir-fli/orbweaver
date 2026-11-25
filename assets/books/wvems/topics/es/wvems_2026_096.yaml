@@ -41,7 +41,7 @@ topic:
           - "[12 derivaciones](topic:wvems-2026-096#12-lead)"
         - cells:
           - "{A}"
-          - "[Tapón salino](topic:wvems-2026-096#saline-lock)"
+          - "[Vía salinizada](topic:wvems-2026-096#saline-lock)"
     - type: "column"
       flex: 4
       blocks:
@@ -251,7 +251,7 @@ topic:
     - "~:[E] Puede leer la interpretación automática."
     - "~:[I] Puede interpretarlo directamente."
   - type: "procedure_card"
-    name: "Tapón salino"
+    name: "Vía salinizada"
     image: "assets/books/wvems/images/eq_ivcath.jpg"
     scope: "A"
     steps:

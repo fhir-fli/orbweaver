@@ -47,7 +47,7 @@ topic:
         kind: "diagnostic"
       - type: "action"
         provider_level: "A"
-        text: "Tapón salino"
+        text: "Vía salinizada"
         kind: "procedure"
       - type: "action"
         provider_level: "I"

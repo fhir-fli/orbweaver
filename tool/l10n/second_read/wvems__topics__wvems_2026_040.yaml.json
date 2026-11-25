@@ -1,0 +1,25 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_040.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s15",
+   "severity": "meaning",
+   "problem": "\"Ensure\" means to verify or make sure a condition is met, whereas \"Descontamine\" is a direct command to perform the action of decontamination.",
+   "fix": "Garantice la DESCONTAMINACIÓN del paciente",
+   "en": "Ensure Patient DECON",
+   "es": "DESCONTAMINE al paciente"
+  },
+  {
+   "id": "s22",
+   "severity": "minor",
+   "problem": "\"Tapón salino\" is a literal translation of \"lock\" as \"plug/stopper\"; the correct clinical term for a saline lock (a catheter maintained with saline) is \"catéter salinizado\" or \"vía salinizada\".",
+   "fix": "Catéter salinizado",
+   "en": "Saline Lock",
+   "es": "Tapón salino"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s15\",\n    \"severity\": \"meaning\",\n    \"problem\": \"\\\"Ensure\\\" means to verify or make sure a condition is met, whereas \\\"Descontamine\\\" is a direct command to perform the action of decontamination.\",\n    \"fix\": \"Garantice la DESCONTAMINACIÓN del paciente\"\n  },\n  {\n    \"id\": \"s22\",\n    \"severity\": \"minor\",\n    \"problem\": \"\\\"Tapón salino\\\" is a literal translation of \\\"lock\\\" as \\\"plug/stopper\\\"; the correct clinical term for a saline lock (a catheter maintained with saline) is \\\"catéter salinizado\\\" or \\\"vía salinizada\\\".\",\n    \"fix\": \"Catéter salinizado\"\n  }\n]\n```"
+ ]
+}

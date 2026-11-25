@@ -53,7 +53,7 @@ topic:
     title: "Dé por supuestas"
     markdown: |
       las cosas rutinarias cuando proceda, como:
-      - SpO₂, ECG, EtCO₂, glucómetro, tapón salino, extracción de sangre, etc.
+      - SpO₂, ECG, EtCO₂, glucómetro, vía salinizada, extracción de sangre, etc.
       - Los tratamientos habituales de **primeros auxilios** de un lego, como férulas y curitas.
       - Nota: los protocolos también pueden incluir recordatorios (como "12 derivaciones").
   - type: "band_callout"

@@ -43,7 +43,7 @@ topic:
         - "Sin síntomas"
         actions:
         - provider_level: "A"
-          text: "Tapón salino"
+          text: "Vía salinizada"
           kind: "procedure"
         - provider_level: "E"
           text: "12 derivaciones"

@@ -59,7 +59,7 @@ topic:
         shape: "stadium"
         warnings:
         - type: "safety"
-          text: "DESCONTAMINE al paciente"
+          text: "Garantice la DESCONTAMINACIÓN del paciente"
         - type: "caution"
           text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
         bullets:

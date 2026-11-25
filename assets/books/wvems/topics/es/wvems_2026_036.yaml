@@ -39,7 +39,7 @@ topic:
       - provider_level: "E"
         text: "12 derivaciones"
       - provider_level: "A"
-        text: "Tapón salino"
+        text: "Vía salinizada"
       decision:
         text: "¿Causa?"
         shape: "diamond"

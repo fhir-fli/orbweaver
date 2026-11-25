@@ -52,7 +52,7 @@ topic:
           text: "TXA"
           kind: "medication_administration"
         - provider_level: "A"
-          text: "Tapón salino"
+          text: "Vía salinizada"
           kind: "procedure"
       convergence:
         text: "Considere"

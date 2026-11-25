@@ -41,7 +41,7 @@ topic:
           text: "12 derivaciones"
           kind: "diagnostic"
         - provider_level: "A"
-          text: "Tapón salino"
+          text: "Vía salinizada"
           kind: "procedure"
       - id: "moderate"
         label: "Moderada"
