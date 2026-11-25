@@ -72,7 +72,7 @@ topic:
     - type: "row"
       blocks:
       - type: "prose"
-        title: "Ictus de Cincinnati"
+        title: "Escala de Cincinnati"
         callout: true
         markdown: |
           - ¿**F**acial droop (asimetría facial)?
