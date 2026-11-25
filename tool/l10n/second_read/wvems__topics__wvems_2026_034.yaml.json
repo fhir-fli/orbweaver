@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_034.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s22",
+   "severity": "meaning",
+   "problem": "The term 'urente' is extremely rare in Latin American clinical practice and is most commonly associated with urinary symptoms (e.g., 'micción urente'), which could mislead a clinician to think of a urinary cause rather than a burning sensation related to GI issues.",
+   "fix": "Dolor \"quemante\"",
+   "en": "\"Burning\" Pain",
+   "es": "Dolor \"urente\""
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s22\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'urente' is extremely rare in Latin American clinical practice and is most commonly associated with urinary symptoms (e.g., 'micción urente'), which could mislead a clinician to think of a urinary cause rather than a burning sensation related to GI issues.\",\n    \"fix\": \"Dolor \\\"quemante\\\"\"\n  }\n]\n```"
+ ]
+}
