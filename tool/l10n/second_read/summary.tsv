@@ -155,3 +155,26 @@ assets/books/protocolbook/topics/pb_114_im_ecg_basics.yaml	31	1	224	0	0
 assets/books/protocolbook/topics/pb_116_im_ecg_enlargement.yaml	31	1	1158	0	0	
 assets/books/protocolbook/topics/pb_117_im_ecg_conduction.yaml	22	1	53	0	0	
 assets/books/protocolbook/topics/pb_118_im_ecg_svt.yaml	27	1	2267	1	0	
+assets/books/protocolbook/topics/pb_119_im_ecg_ischaemia.yaml	65	1	86	0	0	
+assets/books/protocolbook/topics/pb_121_im_chest_pain.yaml	110	2	405	0	0	
+assets/books/protocolbook/topics/pb_123_im_acs_treatment.yaml	56	1	524	0	0	
+assets/books/protocolbook/topics/pb_125_im_svt.yaml	68	1	115	0	0	
+assets/books/protocolbook/topics/pb_126_im_epigastric_pain.yaml	17	1	5214	0	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_126_im_headache.yaml	16	1	1541	0	0	
+assets/books/protocolbook/topics/pb_126_im_syncope.yaml	13	1	5311	0	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_127_im_copd_asthma.yaml	46	1	632	0	0	
+assets/books/protocolbook/topics/pb_128_im_tb.yaml	117	2	5490	1	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_130_im_dvt.yaml	36	1	1591	0	0	
+assets/books/protocolbook/topics/pb_131_im_pe.yaml	59	1	210	0	0	
+assets/books/protocolbook/topics/pb_132_im_sti.yaml	93	2	308	0	0	
+assets/books/protocolbook/topics/pb_135_im_hiv_oi.yaml	70	1	259	0	0	
+assets/books/protocolbook/topics/pb_140_im_sodium.yaml	71	1	297	0	0	
+assets/books/protocolbook/topics/pb_142_im_potassium.yaml	53	1	5129	0	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/wvems/book.yaml	11	1	52	0	0	
+assets/books/wvems/topics/wvems_2026_003.yaml	33	1	148	0	0	
+assets/books/wvems/topics/wvems_2026_004.yaml	46	1	99	0	0	
+assets/books/wvems/topics/wvems_2026_006.yaml	49	1	291	0	0	
+assets/books/wvems/topics/wvems_2026_008.yaml	63	1	105	0	0	
+assets/books/wvems/topics/wvems_2026_010.yaml	38	1	187	0	0	
+assets/books/wvems/topics/wvems_2026_012.yaml	53	1	297	0	0	
+assets/books/wvems/topics/wvems_2026_014.yaml	73	1	212	1	0	

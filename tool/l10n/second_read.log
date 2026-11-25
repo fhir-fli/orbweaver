@@ -520,3 +520,101 @@ assets/books/protocolbook/topics/pb_117_im_ecg_conduction.yaml: 22 pairs, 0 find
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
 assets/books/protocolbook/topics/pb_118_im_ecg_svt.yaml: 27 pairs, 1 findings (0 patient-safety), 2267s 
+assets/books/protocolbook/topics/pb_119_im_ecg_ischaemia.yaml: 65 pairs, 0 findings (0 patient-safety), 86s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_121_im_chest_pain.yaml: 110 pairs, 0 findings (0 patient-safety), 405s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_123_im_acs_treatment.yaml: 56 pairs, 0 findings (0 patient-safety), 524s 
+assets/books/protocolbook/topics/pb_125_im_svt.yaml: 68 pairs, 0 findings (0 patient-safety), 115s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_126_im_epigastric_pain.yaml: 17 pairs, 0 findings (0 patient-safety), 5214s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_126_im_headache.yaml: 16 pairs, 0 findings (0 patient-safety), 1541s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_126_im_syncope.yaml: 13 pairs, 0 findings (0 patient-safety), 5311s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_127_im_copd_asthma.yaml: 46 pairs, 0 findings (0 patient-safety), 632s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_128_im_tb.yaml: 117 pairs, 1 findings (0 patient-safety), 5490s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_130_im_dvt.yaml: 36 pairs, 0 findings (0 patient-safety), 1591s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_131_im_pe.yaml: 59 pairs, 0 findings (0 patient-safety), 210s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_132_im_sti.yaml: 93 pairs, 0 findings (0 patient-safety), 308s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_135_im_hiv_oi.yaml: 70 pairs, 0 findings (0 patient-safety), 259s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_140_im_sodium.yaml: 71 pairs, 0 findings (0 patient-safety), 297s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_142_im_potassium.yaml: 53 pairs, 0 findings (0 patient-safety), 5129s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/wvems/book.yaml: 11 pairs, 0 findings (0 patient-safety), 52s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_003.yaml: 33 pairs, 0 findings (0 patient-safety), 148s 
+assets/books/wvems/topics/wvems_2026_004.yaml: 46 pairs, 0 findings (0 patient-safety), 99s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_006.yaml: 49 pairs, 0 findings (0 patient-safety), 291s 
+assets/books/wvems/topics/wvems_2026_008.yaml: 63 pairs, 0 findings (0 patient-safety), 105s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_010.yaml: 38 pairs, 0 findings (0 patient-safety), 187s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_012.yaml: 53 pairs, 0 findings (0 patient-safety), 297s 
+assets/books/wvems/topics/wvems_2026_014.yaml: 73 pairs, 1 findings (0 patient-safety), 212s 

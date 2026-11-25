@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_014.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s60",
+   "severity": "minor",
+   "problem": "The acronym 'SSS' (Sick Sinus Syndrome) is translated as 'enfermedad del seno', which is not standard medical terminology and is ambiguous as it could be interpreted as nasal sinus or breast disease.",
+   "fix": "Change 'enfermedad del seno' to 'síndrome del seno enfermo'",
+   "en": "- **Simple Tachycardias** (e.g. Sinus Tach) occur for many reasons.\n  - Reactive causes like: [Shock](topic:wvems-2026-008), [Pain](topic:wvems-2026-020), [Fever](topic:wvems-2026-016) or [Bleeding](topic:wvems-2026-058), etc.\n  - Hidden causes like: [OD / Tox](topic:wvems-2026-040), [Behavioral](topic:wvems-2026-046) or [Anaphylaxis](topic:wvems-2026-032), etc.\n  - Cardiac causes like: SSS, A-Flutter or A-Fib w/ RVR, etc.\n  - Treat the cause. Avoid anti-arrhythmics or cardioversion.\n- **Critical Arrhythmias** (e.g. SVT, V-Tach w/pulse) are usually **faster**.\n  - But a fast pulse is not always critical. Judgement is necessary.\n  - {I} May try vagal maneuvers (e.g. modified valsalva).\n",
+   "es": "- Las **taquicardias simples** (p. ej., taquicardia sinusal) ocurren por muchas razones.\n  - Causas reactivas como: [choque](topic:wvems-2026-008), [dolor](topic:wvems-2026-020), [fiebre](topic:wvems-2026-016) o [hemorragia](topic:wvems-2026-058), etc.\n  - Causas ocultas como: [sobredosis / tóxicos](topic:wvems-2026-040), [conductual](topic:wvems-2026-046) o [anafilaxia](topic:wvems-2026-032), etc.\n  - Causas cardíacas como: enfermedad del seno, flutter auricular o FA con RVR, etc.\n  - Trate la causa. Evite los antiarrítmicos y la cardioversión.\n- Las **arritmias críticas** (p. ej., TSV, TV con pulso) suelen ser **más rápidas**.\n  - Pero un pulso rápido no siempre es crítico. Hace falta criterio.\n  - {I} Puede probar maniobras vagales (p. ej., Valsalva modificada).\n"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s60\",\n    \"severity\": \"minor\",\n    \"problem\": \"The acronym 'SSS' (Sick Sinus Syndrome) is translated as 'enfermedad del seno', which is not standard medical terminology and is ambiguous as it could be interpreted as nasal sinus or breast disease.\",\n    \"fix\": \"Change 'enfermedad del seno' to 'síndrome del seno enfermo'\"\n  }\n]\n```"
+ ]
+}
