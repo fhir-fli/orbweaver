@@ -328,3 +328,37 @@ assets/books/protocolbook/topics/pb_030_hydrocarbon.yaml: 41 pairs, 0 findings (
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
 assets/books/protocolbook/topics/pb_031_benzo_opioid.yaml: 56 pairs, 3 findings (0 patient-safety), 318s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_032_paracetamol.yaml: 68 pairs, 0 findings (0 patient-safety), 375s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_034_alcohol_intoxication.yaml: 27 pairs, 0 findings (0 patient-safety), 118s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_035_alcohol_withdrawal.yaml: 35 pairs, 0 findings (0 patient-safety), 129s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_036_ciwa_ar.yaml: 97 pairs, 0 findings (0 patient-safety), 210s 
+assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml: 35 pairs, 0 findings (0 patient-safety), 144s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_038_animal_bite.yaml: 44 pairs, 0 findings (0 patient-safety), 278s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_039_snake_bite.yaml: 53 pairs, 0 findings (0 patient-safety), 189s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_042_paediatric_convulsions.yaml: 45 pairs, 0 findings (0 patient-safety), 1721s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_043_paediatric_dehydration.yaml: 64 pairs, 0 findings (0 patient-safety), 201s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_045_paediatric_sepsis.yaml: 55 pairs, 0 findings (0 patient-safety), 1673s 
+assets/books/protocolbook/topics/pb_046_paediatric_pneumonia.yaml: 46 pairs, 0 findings (0 patient-safety), 123s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_047_paediatric_dka.yaml: 53 pairs, 0 findings (0 patient-safety), 204s 
+assets/books/protocolbook/topics/pb_049_uti_kidney.yaml: 87 pairs, 1 findings (0 patient-safety), 301s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s

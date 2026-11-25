@@ -94,3 +94,16 @@ assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	13	1	509	2	0
 assets/books/protocolbook/topics/pb_029_organophosphate.yaml	44	1	665	0	0	Expecting value: line 1 column 1 (char 0)
 assets/books/protocolbook/topics/pb_030_hydrocarbon.yaml	41	1	78	0	0	
 assets/books/protocolbook/topics/pb_031_benzo_opioid.yaml	56	1	318	3	0	
+assets/books/protocolbook/topics/pb_032_paracetamol.yaml	68	1	375	0	0	
+assets/books/protocolbook/topics/pb_034_alcohol_intoxication.yaml	27	1	118	0	0	
+assets/books/protocolbook/topics/pb_035_alcohol_withdrawal.yaml	35	1	129	0	0	
+assets/books/protocolbook/topics/pb_036_ciwa_ar.yaml	97	2	210	0	0	
+assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	35	1	144	0	0	
+assets/books/protocolbook/topics/pb_038_animal_bite.yaml	44	1	278	0	0	
+assets/books/protocolbook/topics/pb_039_snake_bite.yaml	53	1	189	0	0	
+assets/books/protocolbook/topics/pb_042_paediatric_convulsions.yaml	45	1	1721	0	0	
+assets/books/protocolbook/topics/pb_043_paediatric_dehydration.yaml	64	1	201	0	0	
+assets/books/protocolbook/topics/pb_045_paediatric_sepsis.yaml	55	1	1673	0	0	
+assets/books/protocolbook/topics/pb_046_paediatric_pneumonia.yaml	46	1	123	0	0	
+assets/books/protocolbook/topics/pb_047_paediatric_dka.yaml	53	1	204	0	0	
+assets/books/protocolbook/topics/pb_049_uti_kidney.yaml	87	2	301	1	0	

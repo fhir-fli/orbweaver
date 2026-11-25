@@ -142,7 +142,7 @@ topic:
         text: "Obtenga un examen de orina (chorro medio) — interprete"
         shape: "stadium"
       stages:
-      - decision: "¿Nitritos o EL positivos?"
+      - decision: "¿Nitritos o esterasa leucocitaria positivos?"
         outcomes:
         - label: "Sí"
           box:
