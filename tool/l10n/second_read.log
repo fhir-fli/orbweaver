@@ -483,3 +483,6 @@ assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml: 52 pairs, 0 f
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
 assets/books/protocolbook/topics/pb_088_neo_jaundice.yaml: 49 pairs, 0 findings (0 patient-safety), 175s 
 assets/books/protocolbook/topics/pb_090_neo_ballard.yaml: 20 pairs, 0 findings (0 patient-safety), 108s 
+assets/books/protocolbook/topics/pb_094_im_heart_failure.yaml: 76 pairs, 0 findings (0 patient-safety), 83s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_096_im_stroke.yaml: 133 pairs, 6 findings (4 patient-safety), 286s 
