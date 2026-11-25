@@ -1530,7 +1530,7 @@ formulary:
       **No está en la LME de la OMS y a menudo no está disponible o no es asequible en el nivel de distrito —
       el clopidogrel es el sustituto práctico aquí.**
   - id: tranexamic-acid
-    name: Ácido tranexámico (ATX)
+    name: Ácido tranexámico (TXA)
     class: haemostatic
     dose: |
       **Epistaxis — 500 mg en 5 mL de SSN en una torunda**, dejada 10 minutos, como primer fármaco que se prueba.

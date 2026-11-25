@@ -383,3 +383,37 @@ assets/books/protocolbook/topics/pb_056_heart_failure.yaml: 42 pairs, 0 findings
 assets/books/protocolbook/topics/pb_058_rheumatic_fever.yaml: 22 pairs, 0 findings (0 patient-safety), 77s 
 assets/books/protocolbook/topics/pb_059_sickle_cell.yaml: 17 pairs, 1 findings (0 patient-safety), 141s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_060_sickle_cell_acute.yaml: 60 pairs, 0 findings (0 patient-safety), 183s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_061_sickle_cell_stroke.yaml: 48 pairs, 0 findings (0 patient-safety), 5206s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_062_sickle_cell_acs.yaml: 62 pairs, 0 findings (0 patient-safety), 5283s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_063_sam_assessment.yaml: 63 pairs, 0 findings (0 patient-safety), 103s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_064_sam_management.yaml: 40 pairs, 0 findings (0 patient-safety), 207s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_066_sam_feeding.yaml: 23 pairs, 0 findings (0 patient-safety), 328s 
+assets/books/protocolbook/topics/pb_067_epistaxis.yaml: 44 pairs, 1 findings (0 patient-safety), 174s 
+assets/books/protocolbook/topics/pb_068_otitis_media.yaml: 21 pairs, 0 findings (0 patient-safety), 58s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s

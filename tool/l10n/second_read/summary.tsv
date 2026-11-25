@@ -112,3 +112,11 @@ assets/books/protocolbook/topics/pb_054_meningitis.yaml	64	1	145	0	0
 assets/books/protocolbook/topics/pb_056_heart_failure.yaml	42	1	4074	0	0	
 assets/books/protocolbook/topics/pb_058_rheumatic_fever.yaml	22	1	77	0	0	
 assets/books/protocolbook/topics/pb_059_sickle_cell.yaml	17	1	141	1	0	
+assets/books/protocolbook/topics/pb_060_sickle_cell_acute.yaml	60	1	183	0	0	
+assets/books/protocolbook/topics/pb_061_sickle_cell_stroke.yaml	48	1	5206	0	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_062_sickle_cell_acs.yaml	62	1	5283	0	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_063_sam_assessment.yaml	63	1	103	0	0	
+assets/books/protocolbook/topics/pb_064_sam_management.yaml	40	1	207	0	0	
+assets/books/protocolbook/topics/pb_066_sam_feeding.yaml	23	1	328	0	0	
+assets/books/protocolbook/topics/pb_067_epistaxis.yaml	44	1	174	1	0	
+assets/books/protocolbook/topics/pb_068_otitis_media.yaml	21	1	58	0	0	
