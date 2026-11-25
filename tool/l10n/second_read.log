@@ -652,3 +652,9 @@ assets/books/wvems/topics/wvems_2026_044.yaml: 35 pairs, 2 findings (0 patient-s
 assets/books/wvems/topics/wvems_2026_046.yaml: 54 pairs, 0 findings (0 patient-safety), 668s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
 assets/books/wvems/topics/wvems_2026_048.yaml: 55 pairs, 2 findings (0 patient-safety), 291s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_050.yaml: 70 pairs, 0 findings (0 patient-safety), 294s 
+assets/books/wvems/topics/wvems_2026_052.yaml: 60 pairs, 0 findings (0 patient-safety), 125s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_054.yaml: 45 pairs, 1 findings (0 patient-safety), 230s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
