@@ -66,12 +66,12 @@ topic:
       - drug: "[Salino al 3%](topic:wvems-2026-drug-reference#3-saline)"
         dose: "250 mL"
         route: "IV/IO"
-        frequency: "en 10 min"
+        frequency: "durante 10 min"
         population: "adult"
       - drug: "[Keppra](topic:wvems-2026-drug-reference#keppra)"
         dose: "3,000 mg"
         route: "IV/IO"
-        frequency: "en 10 min"
+        frequency: "durante 10 min"
         population: "adult"
   - page_number: 87
     blocks:
@@ -125,7 +125,7 @@ topic:
       title: "Pediatría"
       markdown: |
         - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
-        - Busque el **extremo superior** de la PAS según la edad (también en la [referencia pediátrica](topic:wvems-2026-144)).
+        - Procure mantener la PAS en el **extremo superior** del rango para la edad (también en la [referencia pediátrica](topic:wvems-2026-144)).
     - type: "prose"
       title: "Referencias"
       text_scale: 0.8

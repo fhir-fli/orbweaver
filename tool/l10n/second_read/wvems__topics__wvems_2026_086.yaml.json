@@ -1,0 +1,33 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_086.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s31",
+   "severity": "meaning",
+   "problem": "The term 'over 10 min' refers to the rate/duration of administration. 'En 10 min' can be ambiguous in Spanish, potentially being read as 'within 10 minutes' (a deadline) rather than 'during a period of 10 minutes' (a rate).",
+   "fix": "durante 10 min",
+   "en": "over 10 min",
+   "es": "en 10 min"
+  },
+  {
+   "id": "s34",
+   "severity": "meaning",
+   "problem": "The term 'over 10 min' refers to the rate/duration of administration. 'En 10 min' can be ambiguous in Spanish, potentially being read as 'within 10 minutes' (a deadline) rather than 'during a period of 10 minutes' (a rate).",
+   "fix": "durante 10 min",
+   "en": "over 10 min",
+   "es": "en 10 min"
+  },
+  {
+   "id": "s75",
+   "severity": "meaning",
+   "problem": "'Target' as a clinical imperative means to aim for or maintain a specific physiological value. 'Busque' means 'look for' or 'search', which suggests looking up the value in a table rather than maintaining that value in the patient.",
+   "fix": "Mantenga el extremo superior de la PAS según la edad",
+   "en": "- Use [Peds Reference](topic:wvems-2026-144) or other approved source for peds dosing.\n- Target **upper end** of age-adjusted SBP (also in [Peds Reference](topic:wvems-2026-144)).\n",
+   "es": "- Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.\n- Busque el **extremo superior** de la PAS según la edad (también en la [referencia pediátrica](topic:wvems-2026-144)).\n"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s31\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'over 10 min' refers to the rate/duration of administration. 'En 10 min' can be ambiguous in Spanish, potentially being read as 'within 10 minutes' (a deadline) rather than 'during a period of 10 minutes' (a rate).\",\n    \"fix\": \"durante 10 min\"\n  },\n  {\n    \"id\": \"s34\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'over 10 min' refers to the rate/duration of administration. 'En 10 min' can be ambiguous in Spanish, potentially being read as 'within 10 minutes' (a deadline) rather than 'during a period of 10 minutes' (a rate).\",\n    \"fix\": \"durante 10 min\"\n  },\n  {\n    \"id\": \"s75\",\n    \"severity\": \"meaning\",\n    \"problem\": \"'Target' as a clinical imperative means to aim for or maintain a specific physiological value. 'Busque' means 'look for' or 'search', which suggests looking up the value in a table rather than maintaining that value in the patient.\",\n    \"fix\": \"Mantenga el extremo superior de la PAS según la edad\"\n  }\n]\n```"
+ ]
+}

@@ -74,7 +74,7 @@ topic:
       - drug: "[Keppra](topic:wvems-2026-drug-reference#keppra)"
         dose: "3,000 mg"
         route: "IV/IO"
-        frequency: "en 10 min"
+        frequency: "durante 10 min"
         population: "adult"
       - drug: "[Magnesio](topic:wvems-2026-drug-reference#magnesium)"
         dose: "4 gramos"
