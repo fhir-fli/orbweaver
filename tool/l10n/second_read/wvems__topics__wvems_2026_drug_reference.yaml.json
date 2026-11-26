@@ -1,0 +1,25 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_drug_reference.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s463",
+   "severity": "meaning",
+   "problem": "The abbreviation 'CAD' is used as the translation for 'DKA' (Cetoacidosis Diabética). While correct in Spanish, 'CAD' is a false friend as it commonly stands for 'Coronary Artery Disease' in English. Given that 'CAD' was translated as 'cardiopatía coronaria' in segment s424, using 'CAD' here creates a critical ambiguity.",
+   "fix": "APP: cetoacidosis diabética, bloqueo AV",
+   "en": "PMH: DKA, AV block",
+   "es": "APP: CAD, bloqueo AV"
+  }
+ ],
+ "raw": [
+  "```json\n[]\n```",
+  "```json\n[]\n```",
+  "[]",
+  "```json\n[]\n```",
+  "```json\n[]\n```",
+  "```json\n[\n  {\n    \"id\": \"s463\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The abbreviation 'CAD' is used as the translation for 'DKA' (Cetoacidosis Diabética). While correct in Spanish, 'CAD' is a false friend as it commonly stands for 'Coronary Artery Disease' in English. Given that 'CAD' was translated as 'cardiopatía coronaria' in segment s424, using 'CAD' here creates a critical ambiguity.\",\n    \"fix\": \"APP: cetoacidosis diabética, bloqueo AV\"\n  }\n]\n```",
+  "[]",
+  "```json\n[]\n```",
+  "```json\n[]\n```"
+ ]
+}

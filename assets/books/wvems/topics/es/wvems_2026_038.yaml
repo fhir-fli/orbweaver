@@ -117,7 +117,7 @@ topic:
       title: "Notas"
       markdown: |
         - Evite canalizar una vía IV en las **piernas o los pies** de un paciente diabético.
-        - La hiperglucemia con olor afrutado puede ser una **CAD** — priorice los líquidos IV.
+        - La hiperglucemia con olor afrutado puede ser una **cetoacidosis diabética (CAD)** — priorice los líquidos IV.
         - Busque una **bomba de insulina**. Puede desconectar el tubo si hay **hipoglucemia**.
     - type: "band_callout"
       band: "peds"

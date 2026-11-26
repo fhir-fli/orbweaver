@@ -697,3 +697,44 @@ assets/books/wvems/topics/wvems_2026_084.yaml: 47 pairs, 0 findings (0 patient-s
 assets/books/wvems/topics/wvems_2026_086.yaml: 67 pairs, 3 findings (0 patient-safety), 210s 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/wvems/topics/wvems_2026_088.yaml: 47 pairs, 0 findings (0 patient-safety), 546s 
+assets/books/wvems/topics/wvems_2026_090.yaml: 47 pairs, 0 findings (0 patient-safety), 181s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_092.yaml: 51 pairs, 0 findings (0 patient-safety), 281s 
+assets/books/wvems/topics/wvems_2026_094.yaml: 44 pairs, 0 findings (0 patient-safety), 108s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/wvems/topics/wvems_2026_096.yaml: 453 pairs, 3 findings (1 patient-safety), 1692s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_109.yaml: 62 pairs, 0 findings (0 patient-safety), 186s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_144.yaml: 193 pairs, 0 findings (0 patient-safety), 696s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/wvems/topics/wvems_2026_about.yaml: 28 pairs, 0 findings (0 patient-safety), 1655s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_drug_reference.yaml: 667 pairs, 1 findings (0 patient-safety), 2916s 
+assets/books/wvems/topics/wvems_drug_ref_a.yaml: 30 pairs, 0 findings (0 patient-safety), 65s 

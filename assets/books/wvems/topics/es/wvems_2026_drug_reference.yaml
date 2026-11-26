@@ -765,7 +765,7 @@ topic:
     - population: "peds"
       text: "25–50 mg/kg"
     warnings:
-    - "APP: CAD, bloqueo AV"
+    - "APP: cetoacidosis diabética, bloqueo AV"
     - "No mezclar: **Digoxin®**"
     - "Puede causar: hipoxia, edema, **choque**"
     - "**Vigile los reflejos** para evitar la toxicidad"
