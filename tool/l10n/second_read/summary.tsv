@@ -224,3 +224,12 @@ assets/books/wvems/topics/wvems_2026_144.yaml	193	3	696	0	0
 assets/books/wvems/topics/wvems_2026_about.yaml	28	1	1655	0	0	
 assets/books/wvems/topics/wvems_2026_drug_reference.yaml	667	9	2916	1	0	
 assets/books/wvems/topics/wvems_drug_ref_a.yaml	30	1	65	0	0	
+assets/books/protocolbook/topics/pb_020_resuscitation_meds.yaml	40	1	318	0	0	
+assets/books/protocolbook/topics/pb_029_organophosphate.yaml	44	1	212	0	0	
+assets/books/protocolbook/topics/pb_061_sickle_cell_stroke.yaml	48	1	321	0	0	
+assets/books/protocolbook/topics/pb_062_sickle_cell_acs.yaml	62	1	186	0	0	
+assets/books/protocolbook/topics/pb_126_im_epigastric_pain.yaml	17	1	5253	0	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_126_im_syncope.yaml	13	1	45	0	0	
+assets/books/protocolbook/topics/pb_128_im_tb.yaml	117	2	5221	0	0	503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_142_im_potassium.yaml	53	1	1595	0	0	
+assets/books/wvems/topics/wvems_2026_080.yaml	54	1	2458	2	0	

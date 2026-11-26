@@ -738,3 +738,52 @@ assets/books/wvems/topics/wvems_2026_about.yaml: 28 pairs, 0 findings (0 patient
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
 assets/books/wvems/topics/wvems_2026_drug_reference.yaml: 667 pairs, 1 findings (0 patient-safety), 2916s 
 assets/books/wvems/topics/wvems_drug_ref_a.yaml: 30 pairs, 0 findings (0 patient-safety), 65s 
+217 pages
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_020_resuscitation_meds.yaml: 40 pairs, 0 findings (0 patient-safety), 318s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_029_organophosphate.yaml: 44 pairs, 0 findings (0 patient-safety), 212s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_061_sickle_cell_stroke.yaml: 48 pairs, 0 findings (0 patient-safety), 321s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_062_sickle_cell_acs.yaml: 62 pairs, 0 findings (0 patient-safety), 186s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_126_im_epigastric_pain.yaml: 17 pairs, 0 findings (0 patient-safety), 5253s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_126_im_syncope.yaml: 13 pairs, 0 findings (0 patient-safety), 45s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_128_im_tb.yaml: 117 pairs, 0 findings (0 patient-safety), 5221s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_142_im_potassium.yaml: 53 pairs, 0 findings (0 patient-safety), 1595s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/wvems/topics/wvems_2026_080.yaml: 54 pairs, 2 findings (0 patient-safety), 2458s 
