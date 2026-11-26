@@ -787,3 +787,12 @@ assets/books/protocolbook/topics/pb_142_im_potassium.yaml: 53 pairs, 0 findings 
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
   "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
 assets/books/wvems/topics/wvems_2026_080.yaml: 54 pairs, 2 findings (0 patient-safety), 2458s 
+217 pages
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_126_im_epigastric_pain.yaml: 17 pairs, 0 findings (0 patient-safety), 263s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_128_im_tb.yaml: 117 pairs, 0 findings (0 patient-safety), 776s 
