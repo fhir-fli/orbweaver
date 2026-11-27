@@ -1,0 +1,144 @@
+# translated-from-sha256: fa5aa1f8906c2b55a599902f3da1bccc0aae8e4e2494ed0039b42d0414a4e621
+topic:
+  id: "calc-nihss"
+  title: "NIHSS"
+  list_subtitle: "gravedad del ictus"
+  last_reviewed: "Evidence review 2026-07-19 · AHA/ASA 2019"
+  tags: ["nihss", "escala de ictus nih", "ictus", "gravedad", "neuro", "acv", "tpa"]
+  aliases:
+  - "NIHSS"
+  - "Escala de ictus del NIH"
+  - "Gravedad del ictus"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Cuantifica la gravedad del ictus a partir de una exploración neurológica estructurada. Los valores por defecto
+      corresponden a una exploración normal (0); ajuste cada ítem al hallazgo observado.
+  - type: "score"
+    title: "NIHSS"
+    unit: "/ 42"
+    source: "Brott et al., Stroke 1989; NIH Stroke Scale"
+    items:
+    - key: "loc"
+      label: "1a. Nivel de conciencia"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Alerta, responde"}
+      - {value: "1", points: 1, label: "Se despierta con estímulos menores"}
+      - {value: "2", points: 2, label: "Se despierta solo con estímulos repetidos/dolorosos"}
+      - {value: "3", points: 3, label: "No responde / solo respuestas reflejas"}
+    - key: "loc_q"
+      label: "1b. Preguntas de nivel de conciencia (mes, edad)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ambas correctas"}
+      - {value: "1", points: 1, label: "Una correcta"}
+      - {value: "2", points: 2, label: "Ninguna correcta"}
+    - key: "loc_c"
+      label: "1c. Órdenes de nivel de conciencia (abrir/cerrar los ojos, apretar la mano)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ambas tareas correctas"}
+      - {value: "1", points: 1, label: "Una tarea correcta"}
+      - {value: "2", points: 2, label: "Ninguna tarea"}
+    - key: "gaze"
+      label: "2. Mirada"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Normal"}
+      - {value: "1", points: 1, label: "Parálisis parcial de la mirada"}
+      - {value: "2", points: 2, label: "Desviación forzada"}
+    - key: "visual"
+      label: "3. Campos visuales"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Sin pérdida visual"}
+      - {value: "1", points: 1, label: "Hemianopsia parcial"}
+      - {value: "2", points: 2, label: "Hemianopsia completa"}
+      - {value: "3", points: 3, label: "Hemianopsia bilateral / ceguera"}
+    - key: "facial"
+      label: "4. Parálisis facial"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Normal"}
+      - {value: "1", points: 1, label: "Leve (surco nasolabial borrado)"}
+      - {value: "2", points: 2, label: "Parcial (parte inferior de la cara)"}
+      - {value: "3", points: 3, label: "Completa (superior + inferior)"}
+    - key: "arm_l"
+      label: "5a. Motor del brazo izquierdo"
+      type: "scale"
+      default: "0"
+      options: &motorarm
+      - {value: "0", points: 0, label: "Sin claudicación (mantiene 10 s)"}
+      - {value: "1", points: 1, label: "Claudica antes de 10 s"}
+      - {value: "2", points: 2, label: "Algún esfuerzo contra la gravedad"}
+      - {value: "3", points: 3, label: "Sin esfuerzo contra la gravedad"}
+      - {value: "4", points: 4, label: "Sin movimiento"}
+    - {key: "arm_r", label: "5b. Motor del brazo derecho", type: "scale", default: "0", options: *motorarm}
+    - key: "leg_l"
+      label: "6a. Motor de la pierna izquierda"
+      type: "scale"
+      default: "0"
+      options: &motorleg
+      - {value: "0", points: 0, label: "Sin claudicación (mantiene 5 s)"}
+      - {value: "1", points: 1, label: "Claudica antes de 5 s"}
+      - {value: "2", points: 2, label: "Algún esfuerzo contra la gravedad"}
+      - {value: "3", points: 3, label: "Sin esfuerzo contra la gravedad"}
+      - {value: "4", points: 4, label: "Sin movimiento"}
+    - {key: "leg_r", label: "6b. Motor de la pierna derecha", type: "scale", default: "0", options: *motorleg}
+    - key: "ataxia"
+      label: "7. Ataxia de extremidades"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ausente"}
+      - {value: "1", points: 1, label: "Una extremidad"}
+      - {value: "2", points: 2, label: "Dos extremidades"}
+    - key: "sensory"
+      label: "8. Sensibilidad"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Normal"}
+      - {value: "1", points: 1, label: "Pérdida leve-moderada"}
+      - {value: "2", points: 2, label: "Pérdida grave / total"}
+    - key: "language"
+      label: "9. Lenguaje"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Sin afasia"}
+      - {value: "1", points: 1, label: "Afasia leve-moderada"}
+      - {value: "2", points: 2, label: "Afasia grave"}
+      - {value: "3", points: 3, label: "Mutismo / afasia global"}
+    - key: "dysarthria"
+      label: "10. Disartria"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Normal"}
+      - {value: "1", points: 1, label: "Habla arrastrada leve-moderada"}
+      - {value: "2", points: 2, label: "Grave / ininteligible"}
+    - key: "extinction"
+      label: "11. Extinción / inatención"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Sin alteración"}
+      - {value: "1", points: 1, label: "Una modalidad sensitiva"}
+      - {value: "2", points: 2, label: "Profunda / varias modalidades"}
+    bands:
+    - {min: 0, max: 0, label: "Sin síntomas de ictus", severity: "none"}
+    - {min: 1, max: 4, label: "Ictus menor", severity: "warn"}
+    - {min: 5, max: 15, label: "Ictus moderado", severity: "warn"}
+    - {min: 16, max: 20, label: "Ictus moderado a grave", severity: "alert"}
+    - {min: 21, label: "Ictus grave", severity: "alert"}
+    notes:
+    - "Informe los componentes, no solo el total. La NIHSS seriada sigue la progresión / respuesta al tratamiento."

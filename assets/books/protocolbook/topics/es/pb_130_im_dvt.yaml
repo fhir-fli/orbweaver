@@ -1,0 +1,76 @@
+# translated-from-sha256: cc148749d5f81617d307bc6033e8446798c36d553eff78e9c8bc80a7d1583591
+topic:
+  id: "pb-im-dvt"
+  title: "Trombosis venosa profunda (TVP)"
+  list_subtitle: "p.130 · puntuación de Wells · anticoagulación"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["TVP", "trombosis venosa profunda", "ETV", "puntuación de Wells", "dímero D", "ecografía doppler", "enoxaparina", "heparina", "warfarina", "anticoagulación", "iliofemoral", "medicina interna", "hematología"]
+  category: "medical"
+  page_number: 130
+  blocks:
+  - type: "prose"
+    title: "Motivos de consulta frecuentes"
+    markdown: |
+      - Hinchazón de la pierna, dolor, dolor unilateral a la palpación
+      - La trombosis iliofemoral puede presentarse con:
+        - Dolor en nalgas / ingle, hinchazón del muslo, venas superficiales colaterales
+  - type: "prose"
+    title: "Factores de riesgo"
+    markdown: |
+      - Reposo prolongado en cama, inmovilización, viaje en avión o autobús
+      - Edad > 40 años
+      - Obesidad
+      - VIH o tuberculosis
+  - type: "prose"
+    title: "Puntuación predictiva de Wells"
+    markdown: |
+      Puntuación **≤ 0** riesgo bajo · **1–2** riesgo intermedio · **≥ 3** riesgo alto.
+  - type: "table"
+    columns: ["Hallazgo", "Puntos"]
+    column_flex: [9, 2]
+    column_align: ["left", "center"]
+    rows:
+    - cells: ["TVP / EP previa", "1"]
+    - cells: ["Parálisis / inmovilización de la extremidad inferior", "1"]
+    - cells: ["Encamado > 3 días o cirugía mayor en las últimas 4 semanas", "1"]
+    - cells: ["Dolor local a la palpación", "1"]
+    - cells: ["Hinchazón de toda la pierna", "1"]
+    - cells: ["Diferencia en la pantorrilla ≥ 3 cm", "1"]
+    - cells: ["Edema con fóvea SOLO en la pierna sintomática", "1"]
+    - cells: ["Venas superficiales colaterales", "1"]
+    - cells: ["Diagnóstico alternativo más probable que la TVP", "−2"]
+  - type: "prose"
+    title: "Recomendaciones de manejo"
+    markdown: |
+      - **Riesgo bajo:** puede descartarse con ecografía doppler de las extremidades inferiores o dímero D si preocupa; si no, sin tratamiento
+      - **Riesgo moderado:**
+        - Ecografía doppler de las extremidades inferiores o dímero D para descartar
+        - Espere a los resultados para iniciar el tratamiento
+      - **Riesgo alto:**
+        - Inicie el tratamiento
+        - Pida una ecografía doppler de las extremidades inferiores para confirmar
+  - type: "prose"
+    title: "Opciones de tratamiento de la TVP o la EP"
+    markdown: |
+      **Agudo:**
+
+      - Enoxaparina 1 mg/kg por vía subcutánea cada 12 h
+      - Heparina no fraccionada IV **bolo de 80 unidades/kg, luego 18 unidades/kg/h — ajustada según TTPa / anti-Xa, SIN tope**
+        - 🛑 El libro imprimía antes "máx. 5000 unidades" y "máx. 1000 unidades/h". Esos topes corresponden a la heparina **asociada a la fibrinólisis** de las páginas de SCA; **no forman parte del nomograma venoso** y **infradosificarían sistemáticamente a los pacientes de más peso** — un paciente de 80 kg necesita ~1,440 unidades/h, ya por encima del tope horario impreso
+
+      **Crónico — un ACOD es de primera línea, no la warfarina.** Las guías lo prefieren a un
+      antagonista de la vitamina K en la ETV aguda sin cáncer: eficacia comparable, menos sangrado mayor
+      e intracraneal, y **sin control del INR** — lo que importa más precisamente
+      donde el control no es fiable.
+
+      - **Sin necesidad de inicio parenteral:** **rivaroxabán 15 mg dos veces al día × 21 días, luego 20 mg al día**; o **apixabán 10 mg dos veces al día × 7 días, luego 5 mg dos veces al día**
+      - **El dabigatrán y el edoxabán SÍ necesitan 5–10 días de inicio parenteral**
+      - 🛑 **Si solo hay warfarina:** **NO dé dosis de carga.** Empiece bajo (2.5 mg en el
+        adulto mayor o frágil), y **solápela con HBPM o HNF al menos 5 días Y hasta que el
+        INR haya sido ≥ 2 durante 24 horas** — la warfarina sola desde el día 1 es inadecuada por
+        el descenso protrombótico inicial. INR objetivo 2–3. El libro imprimía antes
+        "warfarina 10 mg al día × 2 días" sin solapamiento con heparina
+      - **Embarazo y cáncer activo: se prefiere la HBPM**, no un ACOD ni la warfarina
+        (el edoxabán o el rivaroxabán son alternativas aceptables en la ETV asociada al cáncer,
+        con precaución por el sangrado GI y GU)
+      - Esto coincide ahora con la página de fibrilación auricular, que se corrigió del mismo modo

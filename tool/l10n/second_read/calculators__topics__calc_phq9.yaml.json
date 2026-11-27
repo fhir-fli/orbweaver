@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_phq9.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s41",
+   "severity": "minor",
+   "problem": "The translation is missing the conjunction 'o a' (or to) between 'sí mismo/a' and 'la familia', which makes the phrase grammatically incorrect and slightly ambiguous.",
+   "fix": "Sentirse mal consigo mismo — un fracaso, o haberse fallado a sí mismo/a o a la familia",
+   "en": "Feeling bad about yourself — a failure, or letting yourself/family down",
+   "es": "Sentirse mal consigo mismo — un fracaso, o haberse fallado a sí mismo/a la familia"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s41\",\n    \"severity\": \"minor\",\n    \"problem\": \"The translation is missing the conjunction 'o a' (or to) between 'sí mismo/a' and 'la familia', which makes the phrase grammatically incorrect and slightly ambiguous.\",\n    \"fix\": \"Sentirse mal consigo mismo — un fracaso, o haberse fallado a sí mismo/a o a la familia\"\n  }\n]\n```"
+ ]
+}

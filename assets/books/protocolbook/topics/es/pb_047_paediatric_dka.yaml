@@ -1,0 +1,124 @@
+# translated-from-sha256: f8fb30791665ebc9e89701566d4fa884dba20761c1d8227bdfc31ab56f20f6a2
+topic:
+  id: "pb-paediatric-dka"
+  title: "Hiperglucemia y CAD pediátricas"
+  list_subtitle: "pp.47–48 · triaje + protocolo de CAD"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hiperglucemia", "hiperglucemia", "CAD", "cetoacidosis diabética", "diabetes", "insulina", "cetonas", "pediátrico", "diabetes tipo 1"]
+  category: "medical"
+  pages:
+  - page_number: 47
+    blocks:
+    - type: "prose"
+      markdown: |
+        **Hiperglucemia pediátrica** — glucemia aleatoria >14mmol/L.
+
+        - **Historia:** poliuria, polidipsia, pérdida de peso, dolor abdominal, cansancio, vómitos, confusión
+        - **Hallazgos clínicos:** respiración profunda con suspiros/de Kussmaul, olor a cetonas, letargo, vómitos
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (PA, FC, FR, spO2, Temp, peso)
+        - Evalúe la GCS, el estado de hidratación
+        - Coloque 2 vías IV, inicie oxígeno si la spO2 <90%
+        - Extraiga función renal, potasio, hemograma, malaria, examen general de orina
+        - Haga una historia y una exploración física breves y dirigidas
+        - **NO ADMINISTRE INSULINA**
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿GCS <9 O se planea usar insulina en infusión?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Traslade a UCI"
+            severity: "emergency"
+        - label: "No"
+          continue: true
+      - decision: "¿Cetonas en orina?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Cetoacidosis diabética"
+            bullets:
+            - "Identifique y trate la enfermedad desencadenante; considere: sepsis, neumonía, gastroenteritis"
+            - "→ inicie el protocolo de CAD (página siguiente)"
+            severity: "emergency"
+        - label: "No"
+          box:
+            title: "Maneje la hiperglucemia sin CAD"
+            bullets:
+            - "Evalúe y maneje la deshidratación"
+            - "Mida la glucosa cada 4 horas (si la hiperglucemia se resuelve con la hidratación → vigile cada 6 horas x 24 horas; si sigue normal x 24 horas → probablemente reactiva)"
+            - "Haga tira reactiva de orina cada 6 horas"
+            - "Si hay cetonuria con hiperglucemia, inicie la vía de CAD"
+            - "Si la glucosa es >14 durante >6 horas → Dx: DM tipo 1 sin CAD"
+            - "Inicie insulina SC, dosis habitual 0.5–1 UI/kg/día (escala móvil de insulina regular cada 6 horas; Mixtard dos veces al día 70% AM / 30% PM, 30 minutos antes de las comidas)"
+            severity: "priority"
+  - page_number: 48
+    blocks:
+    - type: "prose"
+      title: "Cetoacidosis diabética"
+      markdown: |
+        Identifique y trate la enfermedad desencadenante; considere: sepsis, neumonía, gastroenteritis.
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "Protocolo de líquidos"
+      markdown: |
+        Reposición total de líquidos = 80mL/kg + 2× mantenimiento − bolo inicial
+
+        - **Bolo inicial**
+          - Choque hipovolémico: bolo de 10–20mL/kg de SSN o RL, repita hasta que mejore la PA
+          - Hipovolemia sin choque: 10–20mL/kg de SSN o RL en la 1.ª hora
+          - **NO administre >40mL/kg en las primeras 4h — puede causar edema cerebral**
+        - Líquidos de reposición: corrija el déficit restante en 48 horas
+        - Diuresis satisfactoria 1–2mL/kg/h
+
+        **NUNCA alterne D10 y SSN/RL — puede causar edema cerebral**
+    - type: "prose"
+      title: "Protocolo de insulina"
+      markdown: |
+        **Inicie tras 1 hora de líquidos IV.**
+
+        - **Análogo de acción rápida (lispro/aspart) si está disponible:** SC 0.15 UI/kg **cada 2 horas**
+        - **Insulina soluble/regular — SC 0.15 UI/kg cada 4 horas, NO cada 2.** La insulina regular alcanza su pico a las 2–4 horas y dura 5–8; administrarla cada 2 horas acumula dosis y causa hipoglucemia. El intervalo de 2 horas corresponde a los análogos de acción rápida
+    - type: "prose"
+      title: "Protocolo de potasio"
+      markdown: |
+        - Añada 10mEq de KCl por bolsa de 500mL
+        - **NO administre potasio si la diuresis es <1mL/kg/h (o K >5.5)**
+    - type: "prose"
+      title: "Vigile el estado neurológico"
+      markdown: |
+        - Vigile: cefalea, descenso de la FC, irritabilidad, incontinencia, disminución de la conciencia, signos focales
+        - Si hay alguno de los anteriores: compruebe/corrija la hipoglucemia
+        - Si **no** hay hipoglucemia: llame al médico de mayor rango si hay cambios neurológicos y sospecha de aumento de la PIC; traslade a UCI; manitol 0.5–1g/kg o solución salina hipertónica
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Cuando la glucemia sea <14 o baje rápidamente, repita el examen de orina"
+        shape: "stadium"
+      stages:
+      - decision: "¿Cetonas en orina al repetir?"
+        outcomes:
+        - label: "La orina sigue con cetonas"
+          box:
+            title: "Mantenga en ayuno"
+            bullets:
+            - "Cambie los líquidos IV a D5 SSN/RL (50mL de D50 + 450mL de SSN/RL)"
+            - "Continúe la pauta de insulina hasta glucemia <14"
+            - "Repita las cetonas en orina cada 4 horas"
+            severity: "priority"
+        - label: "Orina sin cetonas"
+          box:
+            title: "Transición a la vía oral"
+            bullets:
+            - "Si el paciente puede beber, suspenda los líquidos IV; si no, continúe la reposición/el mantenimiento"
+            - "El paciente puede comer"
+            - "Cambie a insulina SC, dosis habitual 0.5–1 UI/kg/día (escala móvil de insulina regular cada 6 horas; Mixtard dos veces al día 70% AM / 30% PM, 30 minutos antes de las comidas)"
+            severity: "non_urgent"

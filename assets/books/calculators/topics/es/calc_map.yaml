@@ -1,0 +1,28 @@
+# translated-from-sha256: d76c72c3ef1f5acbb3fc4964284bc106436bae61e11431b2ee6601448caabc97
+topic:
+  id: "calc-map"
+  title: "Presión arterial media"
+  list_subtitle: "PAM a partir de PAS / PAD"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["pam", "presión arterial media", "presión arterial", "perfusión", "hemodinámica", "choque", "pas", "pad"]
+  aliases:
+  - "PAM"
+  - "Presión arterial media"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Presión arterial media a partir de la presión tomada con manguito. Una PAM ≥ 65 mmHg es
+      el objetivo habitual de perfusión de órganos.
+  - type: "formula"
+    kind: "map"
+    title: "Presión arterial media"
+    source: "PAM = PAD + (PAS − PAD) / 3"
+    inputs:
+    - {key: "sbp", label: "PA sistólica", unit: "mmHg", type: "number"}
+    - {key: "dbp", label: "PA diastólica", unit: "mmHg", type: "number"}
+    notes:
+    - "PAM = PAD + (PAS − PAD) / 3 = PAD + ⅓ × presión de pulso."
+    caveats:
+    - "La fórmula de ⅓ es una estimación que tiende a subestimar la PAM real (un mejor factor de presión de pulso es ≈ 0.4)."
+    - "La PAM por manguito no es intercambiable con la PAM por línea arterial — prefiera la medición directa en el choque / con vasopresores."

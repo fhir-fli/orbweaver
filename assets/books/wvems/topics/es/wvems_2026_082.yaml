@@ -1,0 +1,144 @@
+# translated-from-sha256: 25cd63bf7c5ec7e30eea92bf3e00d983201acb524e98ab6374ba662836a3775f
+topic:
+  id: "wvems-2026-082"
+  version: "v260101"
+  title: "Vasopresores"
+  list_subtitle: "2026-082 · Levophed / epinefrina en bolo / fenilefrina en bolo"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "vasopresores"
+  - "inotrópicos"
+  - "vasopresores en bolo"
+  - "levophed"
+  - "epi"
+  - "cuidados críticos"
+  aliases:
+  - "Inotrópicos"
+  - "Vasopresores en bolo"
+  category: "critical_care"
+  layout: "paged"
+  pages:
+  - page_number: 82
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Sistólica menor de"
+        shape: "stadium"
+        bands:
+        - label: "Adulto (14+)"
+          value: "90 mmHg"
+          cc: "65 mmHg"
+        - label: "Niño (1–13)"
+          value: "70 mmHg"
+          cc: "50 mmHg"
+        - label: "Lactante (< 1)"
+          value: "60 mmHg"
+          cc: "40 mmHg"
+        cc_title: "O PAM"
+      decision:
+        text: "¿Técnica?"
+        shape: "diamond"
+      branches:
+      - id: "pump"
+        label: "Bomba"
+        criteria:
+        - "Ayuda suficiente"
+        - "Traslado más largo"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Levophed"
+          kind: "medication_administration"
+      - id: "push"
+        label: "Bolo"
+        criteria:
+        - "Necesidad transitoria"
+        - "Índice de choque > 0.8"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Epinefrina en bolo"
+          kind: "medication_administration"
+        - provider_level: "P(CC)"
+          text: "Fenilefrina en bolo"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Choque](topic:wvems-2026-008)"
+        - text: "[Sangre](topic:wvems-2026-084)"
+        - text: "[Alergia](topic:wvems-2026-032), [Sobredosis / tóxicos](topic:wvems-2026-040)"
+      dose_table:
+      - drug: "[Levophed](topic:wvems-2026-drug-reference#levophed)"
+        dose: "5–20 mcg/min"
+        route: "IV/IO"
+        frequency: "Goteo ajustado"
+        population: "adult"
+      - drug: "[Epinefrina en bolo](topic:wvems-2026-drug-reference#epi-drip-epi-push)"
+        dose: "5–20 mcg"
+        route: "IV/IO"
+        frequency: "cada 2 min"
+        population: "adult"
+      - drug: "[Fenilefrina en bolo](topic:wvems-2026-drug-reference#neo-push)"
+        dose: "50–200 mcg"
+        route: "IV/IO"
+        frequency: "cada 2 min"
+        population: "adult"
+  - page_number: 83
+    blocks:
+    - type: "prose"
+      title: "Requisitos previos obligatorios de vasopresores"
+      highlight: true
+      markdown: |
+        - En los últimos 12 meses: aprobar una formación interna de cuidados críticos.
+    - type: "prose"
+      title: "Imperativos"
+      markdown: |
+        - Anticipe y esté preparado para una **nueva hipotensión** si usa dosis en bolo.
+        - El uso inadecuado de vasopresores puede **causar daño**.
+          - Compruebe dos veces el cálculo de la dosis (cuidado con las distintas concentraciones).
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Levophed®](topic:wvems-2026-drug-reference#levophed)** (noradrenalina): bueno para el **choque séptico**.
+          - **Requiere bomba** — no es apropiado dosificarlo por goteo por gravedad.
+        - **[Epinefrina en bolo](topic:wvems-2026-drug-reference#epi-drip-epi-push)** (epinefrina): buena para el **choque anafiláctico**.
+          - Esté preparado para repetir la dosis; evítela en el IAMCEST.
+        - **[Fenilefrina en bolo](topic:wvems-2026-drug-reference#neo-push)** (fenilefrina): buena para un **índice de choque** elevado.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Índice de choque"
+        callout: true
+        markdown: |
+          IC = **pulso / PAS**
+      - type: "prose"
+        title: "Mala perfusión"
+        callout: true
+        markdown: |
+          Sospéchela si hay **varios** de estos:
+          - **Alteración del estado mental**
+          - Piel pálida, fría, sudorosa
+          - Taquicardia, hipotensión
+          - Disnea, taquipnea
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - El **índice de choque** predice bien la hipotensión por la SRI.
+          - Tenga listos los vasopresores en bolo si el **índice de choque es mayor de 0.8**.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+        - Ajuste a la PA según la edad (los signos vitales también figuran en la [referencia pediátrica](topic:wvems-2026-144)).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vasopressors — https://emedicine.medscape.com/article/2172220 [Ver: 6/24]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 7, 29
+
+        NEMSIS: 9914127, 9914179

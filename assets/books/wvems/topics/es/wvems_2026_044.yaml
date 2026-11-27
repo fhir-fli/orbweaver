@@ -1,0 +1,120 @@
+# translated-from-sha256: dbdea73c114f5610f2a67b8a7a1b71f8a2fd788f3d991118b08333e278c83050
+topic:
+  id: "wvems-2026-044"
+  version: "v260101"
+  title: "Ictus"
+  list_subtitle: "2026-044 · ACV / AIT / Cincinnati FAST"
+  last_reviewed: "Aug 2025"
+  tags:
+  - "ictus"
+  - "acv"
+  - "ait"
+  - "neurología"
+  - "médico"
+  aliases:
+  - "ACV"
+  - "AIT"
+  - "Miniictus"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 44
+    blocks:
+    - type: "flowchart"
+      variant: "linear"
+      entry_chain:
+      - text: "Déficit neurológico focal agudo"
+        shape: "stadium"
+      steps:
+      - type: "action"
+        text: "Pregunte la última vez que estuvo normal"
+        kind: "assessment"
+      - type: "action"
+        text: "Haga la valoración del ictus"
+        kind: "assessment"
+      - type: "action"
+        text: "Eleve la cabecera"
+        kind: "procedure"
+      - type: "action"
+        text: "Glucómetro"
+        kind: "diagnostic"
+      - type: "action"
+        provider_level: "E"
+        text: "12 derivaciones"
+        kind: "diagnostic"
+      - type: "action"
+        provider_level: "A"
+        text: "Vía salinizada"
+        kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[Respiración](topic:wvems-2026-006), [Choque](topic:wvems-2026-008), [Convulsiones](topic:wvems-2026-042)"
+        - text: "[Alteración de la conciencia](topic:wvems-2026-036), [Traumatismo craneal](topic:wvems-2026-062)"
+  - page_number: 45
+    blocks:
+    - type: "prose"
+      title: "Imperativos del ictus"
+      highlight: true
+      markdown: |
+        - El tratamiento depende del tiempo. No retrase el traslado por procedimientos.
+        - **La última vez que estuvo normal** no es necesariamente cuando empezaron los síntomas.
+          - Si se notó al despertar: la última vez normal es cuando se acostó.
+          - Si hay alteración de la conciencia: la última vez normal es cuando alguien lo vio normal.
+        - **Valoración del ictus**: empiece con la exploración FAST de **Cincinnati**.
+          - Considere un cribado adicional si es posible (Stroke VAN o NIHSS).
+        - **Eleve** la cabecera aproximadamente 30° (ayuda a prevenir la aspiración).
+        - Intente una **[vía salinizada](topic:wvems-2026-096#saline-lock)** solo una vez. Deje los demás sitios para el personal de urgencias.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Escala de Cincinnati"
+        callout: true
+        markdown: |
+          - ¿**F**acial droop (asimetría facial)?
+          - ¿**A**rm drift (caída del brazo)?
+          - ¿**S**lurred speech (habla arrastrada)?
+          - ¿**T**iempo desde la última vez normal?
+      - type: "prose"
+        title: "Stroke VAN"
+        callout: true
+        markdown: |
+          Debe haber **caída del brazo**.
+          - **V**isión: ¿pérdida parcial / total?
+          - **A**fasia: ¿dificultad para hablar?
+          - **N**egligencia: ¿ignora un lado?
+    - type: "prose"
+      title: "Alerta de ICTUS"
+      callout: true
+      dashed: true
+      call_er: true
+      markdown: |
+        - Si sospecha un ACV
+        - y la última vez normal fue **< 6 h**
+        - Active una alerta de **ICTUS**
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - La trombólisis sistémica (**tPA**, **TNK**) debe hacerse en **3–6 horas**.
+          - La neurointervención vascular puede ser posible hasta las 24 horas.
+        - Anime a la familia o al tutor a acompañar al paciente.
+          - Hay decisiones importantes que tomar rápido en urgencias.
+          - Anote el número de teléfono de la familia o el tutor si es posible.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - El ictus es improbable en pediatría. Considere otras causas de [alteración de la conciencia](topic:wvems-2026-036).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - Medscape Stroke — https://emedicine.medscape.com/article/1916852 [Ver: 2/24]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 22
+
+        NEMSIS: 9914145

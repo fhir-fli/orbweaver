@@ -1,0 +1,80 @@
+# translated-from-sha256: 8d6af4fa121fb143b12969d1b4515adf9730bc96e6cb8f1a6d62671125b152f0
+topic:
+  id: "wvems-2026-003"
+  version: "v260101"
+  title: "Cómo usarlo"
+  list_subtitle: "2026-003 · cómo leer este libro"
+  last_reviewed: "Apr 2025"
+  tags: ["cómo usarlo", "instrucciones", "ámbito de práctica", "nivel del proveedor", "insignia", "leyenda", "dirección médica", "cuidados críticos", "pediátrico"]
+  aliases:
+  - "Instrucciones"
+  - "Ámbito de práctica"
+  - "Niveles del proveedor"
+  - "Para empezar"
+  category: "universal"
+  page_number: 3
+  blocks:
+  - type: "prose"
+    title: "Bienvenido a los protocolos de WVEMS"
+    highlight: true
+    markdown: |
+      - Piense en esto como una **caja de herramientas**, no como un **libro de recetas**.
+      - Debe **usar varios protocolos** a la vez en cada llamada.
+      - Puede usar cualquier intervención marcada para su nivel o uno inferior.
+  - type: "prose"
+    title: "Los procedimientos básicos"
+    markdown: |
+      se dan por supuestos en cada llamada.
+      - No olvide: escena segura, BSI, ABC, pedir **ALS**, avisar a urgencias, etc.
+      - Todo paciente debe tener una valoración completa, con signos vitales.
+      - Pregunte por **alergias a medicamentos** y **embarazo** antes de administrar fármacos.
+  - type: "prose"
+    title: "Llame"
+    markdown: |
+      a la **dirección médica** en línea en cualquier momento para consultar:
+      - Cualquier pregunta, problema, o si tiene dudas por cualquier motivo.
+      - Para obtener permiso para **desviarse** de estos protocolos.
+      - Si no puede contactar, recuerde: **lleve al paciente al hospital**.
+  - type: "prose"
+    title: "Los protocolos"
+    markdown: |
+      significan que **puede**, pero no siempre que **deba**.
+      - Use solo lo suficiente para estabilizar y/o mejorar. No los siga a ciegas.
+      - Omita lo innecesario. No hay que completar todas las casillas.
+      - El **orden indicado sugiere importancia**, pero no es absoluto.
+  - type: "prose"
+    title: "La gravedad"
+    markdown: |
+      es un **juicio subjetivo** que requiere reflexión.
+      - No todas las decisiones son blanco o negro. Use este texto como guía.
+      - **Reevalúe y reinicie** los protocolos según sea necesario durante la llamada.
+      - Use el buen criterio clínico para decidir qué tiene prioridad.
+  - type: "prose"
+    title: "Dé por supuestas"
+    markdown: |
+      las cosas rutinarias cuando proceda, como:
+      - SpO₂, ECG, EtCO₂, glucómetro, vía salinizada, extracción de sangre, etc.
+      - Los tratamientos habituales de **primeros auxilios** de un lego, como férulas y curitas.
+      - Nota: los protocolos también pueden incluir recordatorios (como "12 derivaciones").
+  - type: "band_callout"
+    band: "peds"
+    title: "Las consideraciones pediátricas"
+    markdown: |
+      están **incluidas** en cada protocolo.
+      - Los pacientes de 14 años o más (14+) reciben en general tratamiento de **adulto**.
+      - Los niños (1–13 años) y los lactantes (< 1 año) se consideran **pediátricos**.
+      - Use la [referencia pediátrica](topic:wvems-2026-144) para las dosis pediátricas y para **adultos de menos de 110 lbs** (50 kg).
+  - type: "band_callout"
+    band: "critical_care"
+    title: "Cuidados críticos"
+    markdown: |
+      (CC) es solo para **paramédicos acreditados**.
+      - Es responsabilidad del proveedor mantener los **requisitos previos obligatorios**.
+      - Debe estar aprobado **para ese protocolo concreto** por el OMD de la agencia.
+      - Todos los plazos vencen el último día del mes (un periodo de gracia).
+  - type: "prose"
+    title: "Las referencias"
+    text_scale: 0.8
+    markdown: |
+      están incluidas. Este texto no es exhaustivo.
+      - Los medicamentos pueden aparecer con su **nombre comercial**® o su **nombre genérico**.

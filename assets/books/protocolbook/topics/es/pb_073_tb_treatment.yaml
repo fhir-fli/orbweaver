@@ -1,0 +1,101 @@
+# translated-from-sha256: 818c28a9755053f01b4782b071821f296a62bca2ab35eb7dcd29744301223c88
+topic:
+  id: "pb-tb-treatment"
+  title: "TB — tratamiento"
+  list_subtitle: "p.73 · control de PFH · esquema · corticoides"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["tuberculosis", "TB", "pediátrico", "tratamiento", "isoniazida", "rifampicina", "pirazinamida", "etambutol", "prednisona", "piridoxina", "PFH", "esquema"]
+  category: "medical"
+  page_number: 73
+  blocks:
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Compruebe las PFH antes de iniciar el tratamiento"
+      shape: "stadium"
+    stages:
+    - decision: "¿ALT > 3 × el límite superior de la normalidad?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Consulte con un médico de mayor rango sobre un posible esquema alternativo"
+          severity: "priority"
+      - label: "No"
+        continue: true
+    - decision: "¿PFH anormales pero ALT < 3 × el límite superior de la normalidad?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Repita las PFH cada mes durante el tratamiento"
+        continue: true
+      - label: "No"
+        continue: true
+    terminal:
+      title: "Inicie el tratamiento — esquema de los 2 primeros meses (tabla de abajo)"
+  - type: "prose"
+    title: "Vigilancia de las PFH durante el tratamiento"
+    markdown: |
+      Si aparecen dolor hepático, hepatomegalia o ictericia, repita las PFH.
+
+      - **Con síntomas** (náuseas, vómitos, dolor abdominal, ictericia): suspenda y consulte con **ALT >3 × el límite superior de la normalidad**
+      - **Sin síntomas:** suspenda y consulte con **ALT >5 × el límite superior de la normalidad**
+  - type: "table"
+    title: "Tratamiento de los 2 primeros meses"
+    zebra: true
+    columns: ["Medicamento", "Dosis diaria recomendada", "Rango", "Dosis máx."]
+    column_flex: [5, 4, 5, 5]
+    column_align: ["left", "center", "center", "center"]
+    rows:
+    - cells: ["Isoniazida", "10 mg/kg", "7–15 mg/kg", "300 mg/día"]
+    - cells: ["Rifampicina", "15 mg/kg", "10–20 mg/kg", "600 mg/día"]
+    - cells: ["Pirazinamida", "35 mg/kg", "30–40 mg/kg", "1.5 g/día"]
+    - cells: ["Etambutol", "20 mg/kg", "15–25 mg/kg", "1.6 g/día"]
+  - type: "flowchart"
+    variant: "algorithm"
+    stages:
+    - decision: "¿Hay alguno de los siguientes?"
+      criteria:
+      - "Meningitis tuberculosa"
+      - "TB pulmonar con dificultad respiratoria"
+      - "TB pulmonar con obstrucción de la vía aérea por ganglios hiliares"
+      - "TB miliar grave"
+      - "Derrame pericárdico"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Añada prednisona"
+          bullets:
+          - "2 mg/kg (máx. 60 mg/día) × 4 semanas"
+          - "Seguida de 1 mg/kg × 1 semana"
+          - "Seguida de 0.5 mg/kg × 1 semana"
+        continue: true
+      - label: "No"
+        continue: true
+    terminal:
+      title: "Tras 2 meses"
+      bullets:
+      - "La TB cerebral requiere 10 meses más de tratamiento (12 meses en total)"
+      - "La TB pulmonar requiere 4 meses más de tratamiento (6 meses en total)"
+  - type: "table"
+    title: "Tras 2 meses (continuación)"
+    zebra: true
+    columns: ["Medicamento", "Dosis diaria recomendada", "Rango", "Dosis máx."]
+    column_flex: [5, 4, 5, 5]
+    column_align: ["left", "center", "center", "center"]
+    rows:
+    - cells: ["Isoniazida", "10 mg/kg", "7–15 mg/kg", "300 mg/día"]
+    - cells: ["Rifampicina", "15 mg/kg", "10–20 mg/kg", "600 mg/día"]
+  - type: "prose"
+    title: "Piridoxina durante todo el tratamiento"
+    markdown: |
+      El paciente debe recibir piridoxina (vitamina B6) durante todo el tratamiento.
+  - type: "table"
+    title: "Dosis de piridoxina según el peso (tabletas de 50 mg)"
+    zebra: true
+    columns: ["Peso (kg)", "Número de tabletas de piridoxina (50 mg)"]
+    column_flex: [4, 6]
+    column_align: ["left", "left"]
+    rows:
+    - cells: ["5–7", "Un cuarto de tableta al día"]
+    - cells: ["8–14", "Media tableta al día"]
+    - cells: ["≥15", "Una tableta entera al día"]

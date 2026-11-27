@@ -1,0 +1,147 @@
+# translated-from-sha256: 7df24691d8e9b0ffc82594b844f5b1f7891c3bdb05cd231381e6928833e975df
+topic:
+
+  id: "wvems-2026-062"
+  version: "v260101"
+  title: "Traumatismo craneoencefálico"
+  list_subtitle: "2026-062 · Conmoción / Cara / Cuello / Ojo"
+  last_reviewed: "Oct 2025"
+  tags:
+    - "traumatismo craneal"
+    - "conmoción cerebral"
+    - "cara"
+    - "cuello"
+    - "ojo"
+    - "nariz"
+    - "trauma"
+  aliases:
+    - "Conmoción cerebral"
+    - "Trauma de cara / cuello"
+    - "Trauma de ojo / nariz / boca"
+  category: "trauma"
+
+  layout: "paged"
+
+  pages:
+
+  - page_number: 62
+    blocks:
+
+    - type: "flowchart"
+      variant: "differential"
+
+      entry_chain:
+        - text: "Trauma de cabeza, cara o cuello"
+          shape: "stadium"
+
+      decision:
+        text: "¿Ubicación?"
+        shape: "diamond"
+
+      cards:
+        - title: "Fractura de cráneo"
+          bullets:
+            - "Signo de Battle"
+            - "Evitar presión"
+        - title: "Boca"
+          bullets:
+            - "Tx: [Vía aérea](topic:wvems-2026-004)"
+            - "Tenga cuidado con BIAD"
+        - title: "Cuero cabelludo"
+          bullets:
+            - "Tx: [Sangrado](topic:wvems-2026-058)"
+            - "Considerar fractura"
+        - title: "Oídos"
+          bullets:
+            - "Verifique si hay LCR"
+            - "No taponar los oídos"
+        - title: "Cuello"
+          bullets:
+            - "Tx: [Inmovilización](topic:wvems-2026-060)"
+            - "Sello torácico"
+        - title: "Nariz"
+          bullets:
+            - "Tx: [Epistaxis](topic:wvems-2026-076)"
+            - "No reducir"
+        - title: "Ojos"
+          bullets:
+            - "Irrigar cualquier químico"
+            - "Proteger ambos por lesión"
+        - title: "Dientes"
+          bullets:
+            - "Colocar en solución"
+            - "Puede intentar reimplantar"
+
+      convergence:
+        text: "Considerar"
+        shape: "stadium"
+        bullets:
+          - text: "[Trauma mayor](topic:wvems-2026-056)"
+          - text: "[Alteración del nivel de conciencia](topic:wvems-2026-036), [Convulsión](topic:wvems-2026-042)"
+          - text: "[PIC elevada](topic:wvems-2026-086)"
+
+  - page_number: 63
+    blocks:
+
+    - type: "prose"
+
+      critical_care_link:
+        text: "[PIC elevada](topic:wvems-2026-086)"
+      title: "Imperativos en traumatismo craneal"
+      highlight: true
+      markdown: |
+        - Transporte de urgencia si hay cambios súbitos en el nivel de conciencia.
+        - **Hipoxia** e **hipotensión** se asocian con malos resultados.
+          - Investigue y trate agresivamente [Hipoxia](topic:wvems-2026-006) e [Hipotensión](topic:wvems-2026-008).
+        - Los medicamentos [anticoagulantes](topic:wvems-2026-076) (**diluyentes de la sangre**) aumentan el riesgo de HIC.
+        - **Las laceraciones** se benefician de reparación dentro de las primeras horas.
+        - **El mecanismo** predice la gravedad.
+
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considerar [PIC elevada](topic:wvems-2026-086) si está indicado y acreditado para cuidados críticos.
+
+    - type: "prose"
+      title: "Alerta de TRAUMA"
+      callout: true
+      dashed: true
+      call_er: true
+      markdown: |
+        - Si hay intervención mayor
+        - O mecanismo mayor
+        - Llame una alerta de **TRAUMA**
+
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - **Fractura de cráneo**: Puede causar equimosis detrás de las orejas o alrededor de ambos ojos.
+        - **Cuero cabelludo**: Presión directa para sangrado abundante (a menos que haya crepitación o fractura de cráneo).
+        - **Cuello**: Todas las penetraciones deben tener un sello torácico.
+        - **Ojo**: Use abundante solución salina o agua para irrigar cualquier contaminación.
+          - {E} **[Tetracaína](topic:wvems-2026-drug-reference#tetracaine)** (0.5% oftálmica): 1–2 gotas antes de irrigar.
+          - No irrigue una lesión penetrante. Coloque **protector ocular** sobre ambos ojos.
+        - **Boca**: Puede retirar **objetos empalados** que comprometan la [Vía aérea](topic:wvems-2026-004).
+        - **Oído**: Verifique cualquier secreción para LCR dejando caer una gota sobre papel blanco.
+          - Un halo amarillo o claro sugiere fuga de LCR por fractura de cráneo.
+        - **Nariz**: No intente reducir. Trate la [Epistaxis](topic:wvems-2026-076).
+        - **Dientes**: Transporte los dientes avulsionados en solución de Hank o SF.
+          - Intente el reimplante solo en lesiones no complicadas y aisladas.
+        - **Conmoción**: Generalmente no requiere intervención prehospitalaria.
+
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - No intente reimplantar dientes primarios (de leche).
+        - Use la [Referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para la dosificación pediátrica.
+
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Traumatismo craneal — https://emedicine.medscape.com/article/1163653 [Ver: 12/24]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 33
+
+        NEMSIS: 9914041, 9914057, 9914099, 9914101, 9914205

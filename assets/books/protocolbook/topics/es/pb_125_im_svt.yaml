@@ -1,0 +1,93 @@
+# translated-from-sha256: bc5d05a60e95b7a4f062f3c8929238dd8a884b46c7038ed4d2fdaced514a02bd
+topic:
+  id: "pb-im-svt"
+  title: "Taquicardias supraventriculares (TSV)"
+  list_subtitle: "p.125 · ¿estable? · adenosina · control de la frecuencia"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["TSV", "taquicardia supraventricular", "arritmia", "adenosina", "cardioversión", "taquicardia sinusal", "fibrilación auricular", "flutter auricular", "control de la frecuencia", "digoxina", "warfarina", "anticoagulación", "medicina interna", "cardiología"]
+  category: "medical"
+  page_number: 125
+  blocks:
+  - type: "prose"
+    title: "Taquicardias supraventriculares (TSV)"
+    markdown: |
+      - Taquicardias que se originan por encima del nodo AV
+      - Un QRS estrecho indica TSV
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Evaluación de la TSV"
+      shape: "stadium"
+    stages:
+    - decision: "¿Está el paciente INESTABLE? (hipotensión, alteración del estado mental, dolor torácico isquémico, insuficiencia cardíaca aguda)"
+      outcomes:
+      - label: "Sí — inestable"
+        box:
+          title: "Cardioversión sincronizada INMEDIATA"
+          severity: "emergency"
+          bullets:
+          - "**Adulto: 50–100 J bifásicos**, aumentando si no tiene éxito. **Niño: 0.5–1 J/kg**, aumentando a 2 J/kg"
+          - "Sede primero al paciente consciente"
+          - "⚠️ Confirme primero que la taquicardia CAUSA la inestabilidad y no que responde a ella — cardiovertir una taquicardia sinusal compensadora (sepsis, hipovolemia) es dañino"
+          - "Puede probarse primero la adenosina SOLO si no retrasa la cardioversión — complejo estrecho regular, con acceso IV ya colocado"
+          - "**Si no hay cardioversión sincronizada** — el caso realista aquí — siga la vía farmacológica de al lado Y organice un traslado urgente, a la vez"
+      - label: "No — estable"
+        continue: true
+    - decision: "¿Taquicardia sinusal?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Trate la causa subyacente"
+      - label: "No — complejo estrecho regular"
+        box:
+          title: "1. Maniobras vagales primero"
+          bullets:
+          - "**Valsalva modificada** — pujo y luego decúbito supino con elevación pasiva de las piernas. Más eficaz que la Valsalva estándar o el masaje carotídeo"
+        continue: true
+    - decision: "¿Sigue en TSV tras las maniobras vagales?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "2. Adenosina"
+          bullets:
+          - "Administre cada dosis lo más rápido posible"
+          - "Siga cada dosis de inmediato con un lavado de 20 mL de SSN IV"
+          - "6 mg IV en bolo rápido (seguido de lavado con SSN)"
+          - "Espere 1–2 minutos"
+          - "Sin respuesta — administre 12 mg IV en bolo rápido (seguido de lavado con SSN)"
+          - "Espere 1–2 minutos"
+          - "Sin respuesta — administre 12 mg IV en bolo rápido (seguido de lavado con SSN)"
+          - "No use más de 3 dosis"
+          - "Termina la TRNAV/TRAV en ~90–95%, con una semivida muy corta"
+      - label: "No"
+        continue: true
+    - decision: "¿Falló la adenosina o está contraindicada?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "3. Fármaco IV para controlar la frecuencia, luego 4. cardioversión"
+          bullets:
+          - "Diltiazem o verapamilo IV, **o** un betabloqueante IV"
+          - "⚠️ **Evite el diltiazem y el verapamilo si se sospecha ICFEr**"
+          - "Cardioversión sincronizada (tras sedación) si los fármacos fallan o están contraindicados"
+      - label: "No"
+        continue: true
+    - decision: "¿Fibrilación auricular o flutter auricular?"
+      outcomes:
+      - label: "No — el ritmo no es FA ni flutter"
+        box:
+          title: "Ya lo ha tratado arriba"
+          bullets:
+          - "Una TSV regular de complejo estrecho que cedió con maniobras vagales o adenosina no necesita nada más aquí"
+          - "Una que no cedió ya ha recibido control de la frecuencia y luego cardioversión (paso 3 → 4 arriba)"
+          - "Si el ritmo sigue sin diagnosticar, haga un ECG de 12 derivaciones y trate la causa subyacente"
+      - label: "Sí"
+        box:
+          title: "Control de la frecuencia y anticoagulación"
+          bullets:
+          - "**Control de la frecuencia: un betabloqueante es de primera línea**, también en la ICFEr. La digoxina es de segunda línea — controla la frecuencia en reposo pero mal con el esfuerzo — y es mejor añadirla a un betabloqueante. **Evite el verapamilo y el diltiazem en la ICFEr**"
+          - "**Digoxina — carga:** 0.5 mg VO y luego 0.25 mg cada 6–8 h ×2 (total ~1–1.5 mg/24 h), o IV 0.25–0.5 mg y luego 0.25 mg cada 6 h hasta ~0.75–1.5 mg/24 h. **Mantenimiento 0.0625–0.25 mg VO al día** (menos en los ancianos y en la insuficiencia renal). Nivel objetivo **0.5–0.9 ng/mL** — ≥ 1.2 se asocia a mayor mortalidad"
+          - "**Antes de la digoxina compruebe la función renal, K⁺, Mg²⁺ y Ca²⁺** — la hipopotasemia y la hipomagnesemia potencian la toxicidad. Vigile náuseas, cambios visuales, arritmias"
+          - "**Anticoagule según CHA₂DS₂-VASc, no de forma automática: hombres ≥ 2, mujeres ≥ 3.** Una puntuación de 1 (hombres) o 2 (mujeres) es intermedia — decisión compartida. (Las guías europeas usan el CHA₂DS₂-VA, independiente del sexo: ≥ 2 anticoagule, ≥ 1 considere)"
+          - "🛑 **Warfarina: NO dé dosis de carga.** La carga rutinaria aumenta el sangrado sin proteger antes. **Inicie con 2.5 mg al día o menos en el adulto mayor o frágil.** Primer INR a los **3–5 días**, luego al menos cada semana hasta que se estabilice, y después cada 4–6 semanas (objetivo 2–3). El libro imprimía antes 10 mg al día × 2 días"
+          - "**Donde el control del INR no es fiable, la warfarina es la elección equivocada** — su beneficio depende del tiempo en rango terapéutico. Prefiera un ACOD si está disponible; si ninguno es posible, **el control de la frecuencia solo es más seguro que la warfarina sin control**. El ácido acetilsalicílico NO es un sustituto adecuado"

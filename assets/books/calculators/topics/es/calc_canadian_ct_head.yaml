@@ -1,0 +1,37 @@
+# translated-from-sha256: b6e925a191b80f90effb7d893e1179e47bba664ba15475bd416102dbd05218b3
+topic:
+  id: "calc-canadian-ct-head"
+  title: "Regla canadiense de TC craneal"
+  list_subtitle: "imagen en el traumatismo craneal leve"
+  last_reviewed: "Evidence review 2026-07-19 · Stiell 2001 · ACEP 2023"
+  tags: ["regla canadiense tc craneal", "cchr", "traumatismo craneal", "tce", "tc", "conmoción", "traumatismo", "imagen"]
+  aliases:
+  - "Regla canadiense de TC craneal"
+  - "CCHR"
+  - "Regla de TC craneal"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Identifica qué adultos con traumatismo craneal leve (GCS 13–15) necesitan una
+      TC craneal. Toque cualquier factor presente — uno solo basta para recomendar TC.
+      Revise las exclusiones antes de aplicarla. En menores de 16 años, use
+      [PECARN](topic:calc-pecarn-head).
+  - type: "score"
+    title: "Regla canadiense de TC craneal"
+    source: "Stiell et al., Lancet 2001; política de ACEP 2023 sobre TCE leve"
+    items:
+    - {key: "gcs", label: "GCS < 15 a las 2 h de la lesión", type: "toggle", points: 1, help: "alto riesgo"}
+    - {key: "open_depressed", label: "Sospecha de fractura de cráneo abierta o hundida", type: "toggle", points: 1, help: "alto riesgo"}
+    - {key: "basal", label: "Cualquier signo de fractura de la base del cráneo", type: "toggle", points: 1, help: "hemotímpano, ojos de mapache, fuga de LCR, signo de Battle"}
+    - {key: "vomiting", label: "≥ 2 episodios de vómito", type: "toggle", points: 1, help: "alto riesgo"}
+    - {key: "age65", label: "Edad ≥ 65", type: "toggle", points: 1, help: "alto riesgo"}
+    - {key: "amnesia", label: "Amnesia retrógrada ≥ 30 min antes del impacto", type: "toggle", points: 1, help: "riesgo medio"}
+    - {key: "mechanism", label: "Mecanismo peligroso", type: "toggle", points: 1, help: "peatón atropellado, expulsado, caída > 3 ft / 5 escalones (riesgo medio)"}
+    bands:
+    - {min: 0, max: 0, label: "La regla no indica TC", severity: "none"}
+    - {min: 1, label: "Se recomienda TC craneal", severity: "warn"}
+    notes:
+    - "Derivada en adultos (Stiell 2001 incluyó adultos consecutivos, edad ≥ 16). En niños use la regla PECARN."
+    caveats:
+    - "Se aplica SOLO al traumatismo craneal leve con GCS 13–15 y pérdida de conciencia/amnesia/desorientación presenciada. NO la aplique si toma anticoagulante/antiagregante, edad < 16, convulsión, trastorno hemorrágico o fractura de cráneo abierta evidente."

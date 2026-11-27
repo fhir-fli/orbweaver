@@ -1,0 +1,56 @@
+# translated-from-sha256: 55cd758baaabca015ee9cbf081633b6d14338a3b0902842015377dbb58d3a9d4
+topic:
+  id: "calc-prevent-ascvd"
+  title: "PREVENT (ECVA a 10 años)"
+  list_subtitle: "riesgo cardiovascular (sin raza)"
+  last_reviewed: "Evidence review 2026-07-19 · Khan Circulation 2024 · 2026 ACC/AHA"
+  tags: ["prevent", "ecva", "riesgo cardiovascular", "ecv", "estatina", "prevención primaria", "colesterol", "riesgo"]
+  aliases:
+  - "PREVENT"
+  - "Riesgo de ECVA"
+  - "Riesgo cardiovascular"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Riesgo a 10 años de enfermedad cardiovascular aterosclerótica según PREVENT de la AHA
+      (infarto o ictus) — el sucesor sin raza de las Pooled Cohort
+      Equations. Para prevención primaria, de 30 a 79 años.
+  - type: "formula"
+    kind: "prevent_ascvd"
+    title: "PREVENT — riesgo de ECVA a 10 años"
+    source: "Khan et al., Circulation 2024;149:430-449 (modelo base PREVENT de la AHA)"
+    inputs:
+    - key: "sex"
+      label: "Sexo"
+      type: "select"
+      default: "M"
+      options:
+      - {value: "M", label: "Hombre"}
+      - {value: "F", label: "Mujer"}
+    - {key: "age", label: "Edad", unit: "yr", type: "number", help: "30–79"}
+    - {key: "total_c", label: "Colesterol total", type: "number"}
+    - {key: "hdl_c", label: "Colesterol HDL", type: "number"}
+    - key: "chol_unit"
+      label: "Unidad de colesterol"
+      type: "select"
+      default: "mg/dL"
+      options:
+      - {value: "mg/dL"}
+      - {value: "mmol/L"}
+    - {key: "sbp", label: "PA sistólica", unit: "mmHg", type: "number"}
+    - {key: "egfr", label: "TFGe", unit: "mL/min/1.73m²", type: "number", help: "CKD-EPI 2021 (vea la calculadora de CrCl/TFGe)"}
+    - key: "bp_tx"
+      label: "En tratamiento antihipertensivo"
+      type: "select"
+      default: "no"
+      options: &yn
+      - {value: "no", label: "No"}
+      - {value: "yes", label: "Sí"}
+    - {key: "statin", label: "Con estatina", type: "select", default: "no", options: *yn}
+    - {key: "diabetes", label: "Diabetes", type: "select", default: "no", options: *yn}
+    - {key: "smoking", label: "Fumador actual", type: "select", default: "no", options: *yn}
+    notes:
+    - "Sin raza por diseño — no se usa el desacreditado coeficiente racial de las antiguas herramientas de TFGe/PCE. El IMC no es necesario para la estimación de ECVA."
+    caveats:
+    - "Prevención primaria, de 30 a 79 años. Las estimaciones de PREVENT son más bajas que las de las Pooled Cohort Equations — aplique los umbrales específicos de PREVENT de la guía vigente, no el antiguo corte de 7.5% de las PCE."

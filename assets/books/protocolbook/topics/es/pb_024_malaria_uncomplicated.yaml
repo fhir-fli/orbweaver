@@ -1,0 +1,75 @@
+# translated-from-sha256: 9f2a71004bad0daeeb421d9107180806ac95415a73c151f6be0124b64eb4be99
+topic:
+  id: "pb-malaria-uncomplicated"
+  title: "Malaria — tratamiento de la forma no complicada"
+  list_subtitle: "p.24 · esquemas VO (ambulatorio)"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malaria", "no complicada", "coartem", "ambulatorio", "dosificación", "pediátrico"]
+  category: "medical"
+  page_number: 24
+  blocks:
+  - type: "prose"
+    markdown: |-
+      **Estudios**
+      a) Gota gruesa (GG) para parásitos de malaria
+      b) ± Determinación de hemoglobina
+
+      **Tratamiento** (ambulatorio)
+      - Es el mismo esquema con el que debe terminar la malaria complicada
+      - Trate a los lactantes de **< 5 kg** como niños de **5 kg**
+  - type: "table"
+    title: "1.ª línea — Arteméter / lumefantrina (Coartem®)"
+    columns: ["Peso (kg)", "Esquema de 3 días*", "Color"]
+    rows:
+    - cells:
+      - text: "5–14"
+      - text: "1 tableta dos veces al día"
+      - text: "Amarillo"
+    - cells:
+      - text: "15–24"
+      - text: "2 tabletas dos veces al día"
+      - text: "Azul"
+    - cells:
+      - text: "25–34"
+      - text: "3 tabletas dos veces al día"
+      - text: "Marrón"
+    - cells:
+      - text: "> 35"
+      - text: "4 tabletas dos veces al día"
+      - text: "Verde"
+  - type: "prose"
+    markdown: |-
+      \* Idealmente, las dos primeras dosis deben administrarse con **8 horas de intervalo**.
+  - type: "table"
+    title: "Alternativa — Artesunato / amodiaquina"
+    columns: ["Peso (kg)", "Dosis (3 días)", "Color"]
+    rows:
+    - cells:
+      - text: "4.5 – < 9"
+      - text: "25/67.5 mg · 1 tableta al día (blíster de 3 tabletas)"
+      - text: "Amarillo"
+    - cells:
+      - text: "9 – < 18"
+      - text: "50/135 mg · 1 tableta al día (blíster de 3 tabletas)"
+      - text: "Azul"
+    - cells:
+      - text: "18 – < 36"
+      - text: "100/270 mg · 1 tableta al día (blíster de 3 tabletas)"
+      - text: "Marrón"
+    - cells:
+      - text: "> 36"
+      - text: "100/270 mg · 2 tabletas al día (blíster de 6 tabletas)"
+      - text: "Verde"
+  - type: "table"
+    title: "Alternativa — Dihidroartemisinina / piperaquina"
+    columns: ["Peso (kg)", "Dosis de DHA / piperaquina (mg) al día × 3 días"]
+    rows:
+    - cells: [text: "5 – <8", text: "20 / 160"]
+    - cells: [text: "8 – <11", text: "30 / 240"]
+    - cells: [text: "11 – <17", text: "40 / 320"]
+    - cells: [text: "17 – <25", text: "60 / 480"]
+    - cells: [text: "25 – <36", text: "80 / 640"]
+    - cells: [text: "36 – <60", text: "120 / 960"]
+  - type: "prose"
+    markdown: |-
+      **Deben evitarse las comidas ricas en grasa con la dihidroartemisinina / piperaquina.**

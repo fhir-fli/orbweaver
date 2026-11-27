@@ -1,0 +1,79 @@
+# translated-from-sha256: f6429c63d5630135f84cdd7f5cf981da208f9e061edc83263f1fae7c80dd2573
+topic:
+  id: "pb-benzo-opioid"
+  title: "Ingestión de benzodiazepinas / opioides"
+  list_subtitle: "p.31 · toxíndrome + algoritmo"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["benzodiazepina", "opioide", "ingestión", "intoxicación", "sobredosis", "naloxona", "flumazenil", "toxíndrome"]
+  category: "medical"
+  page_number: 31
+  blocks:
+  - type: "table"
+    title: "Síntomas asociados en general con"
+    columns: ["Síntoma", "Opioides", "Benzodiazepinas"]
+    column_align: ["left", "center", "center"]
+    rows:
+    - cells: ["Amnesia anterógrada", "✓", "✓✓✓"]
+    - cells: ["Ataxia / incoordinación", "✓", "✓✓✓"]
+    - cells: ["Habla arrastrada", "✓", "✓✓✓"]
+    - cells: ["Confusión", "✓", "✓✓✓"]
+    - cells: ["Estupor / coma", "✓✓✓", "✓"]
+    - cells: ["Depresión respiratoria", "✓✓✓", "✓"]
+    - cells: ["Miosis", "✓✓✓", "✓"]
+    - cells: ["Náuseas / vómitos", "✓✓✓", "✓"]
+  - type: "prose"
+    markdown: |
+      **✓** = a veces / leve · **✓✓✓** = predominante
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Sospecha de ingestión de benzodiazepinas / opioides — clasifique por el patrón de síntomas predominante (vea la tabla de arriba)"
+      shape: "stadium"
+    stages:
+    - decision: "¿Toxíndrome predominante?"
+      criteria:
+      - "Opioides → predominan estupor / coma, depresión respiratoria, miosis, náuseas / vómitos"
+      - "Benzodiazepinas → predominan amnesia anterógrada, ataxia, habla arrastrada, confusión"
+      outcomes:
+      - label: "Sobredosis de benzodiazepinas conocida o más probable"
+        box:
+          id: "flumazenil"
+          title: "Flumazenil — solo si se CONFIRMA una ingestión aislada de benzodiazepinas"
+          severity: "priority"
+          bullets:
+          - "NO LO ADMINISTRE en: sobredosis o coma no diferenciados; sospecha de coingestión de tricíclicos u otros proconvulsivantes; uso crónico de benzodiazepinas; epilepsia conocida; QRS ancho, arritmia o signos anticolinérgicos"
+          - "Solo es seguro cuando la ingestión se conoce con certeza — p. ej., ingestión exploratoria pediátrica presenciada, o revertir una sedación para un procedimiento"
+          - "Si hay depresión respiratoria y se cumplen los criterios — Niños: 0.01 mg/kg IV, máx. igual que en adultos"
+          - "Adultos: 0.2 mg IV, puede repetirse hasta lograr efecto (máx. 1 mg), máx. 3 mg/hora"
+          - "En general dura ~1 hora — puede requerir dosis repetidas"
+          - "→ luego medidas de soporte (abajo)"
+      - label: "Sobredosis de opioides conocida o más probable"
+        continue: true
+    - decision: "¿Respiraciones < 12/min  o  SpO₂ < 90%?"
+      outcomes:
+      - label: "Sí"
+        box:
+          id: "naloxone"
+          title: "Bolsa-válvula-mascarilla  +  naloxona"
+          severity: "emergency"
+          bullets:
+          - "Niños < 5 años o < 20 kg: 0.1 mg/kg IV"
+          - "Niños > 5 años o > 20 kg: 2 mg IV"
+          - "Adultos: 0.4 mg IV, ajuste hasta 2 mg"
+          - "¿Sin vía IV? Administre la MISMA dosis IM (inicio ~5 min — no repita antes de cada 3 min; poco fiable en el choque, así que consiga una vía IV/IO si puede)"
+          - "La vía intranasal necesita un producto concentrado (≥1 mg/mL, o un aerosol de 4 mg). NO puede administrarse con ampollas de 0.4 mg/mL — 2 mg serían 5 mL y la nariz admite ~1 mL por fosa nasal. Use la vía IM"
+          - "Sin respuesta con un total de 10 mg — probablemente no es un opioide, reevalúe"
+          - "Dependiente de opioides (neonato de madre consumidora de opioides, paciente en cuidados paliativos): inicie con 0.01 mg/kg y ajuste al alza"
+          - "Puede repetirse cada 2–3 min según la respuesta"
+          - "Tras la reversión puede ser necesario repetir 20–60 minutos después"
+          - "Ajuste hasta que RESPIRE (FR ≥ 12), no hasta la conciencia plena — la sobrerreversión precipita abstinencia, vómitos y aspiración"
+          - "Opioide de acción prolongada: infunda dos tercios de la dosis eficaz del bolo por hora, ajustando a FR ≥ 12"
+          - "Ingrese en UCI"
+          - "→ luego medidas de soporte (abajo)"
+      - label: "No"
+        continue: true
+    terminal:
+      title: "Medidas de soporte"
+      bullets:
+      - "Preste especial atención al estado respiratorio"
+      - "La duración depende del fármaco ingerido"

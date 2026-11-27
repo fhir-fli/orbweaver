@@ -1,0 +1,53 @@
+# translated-from-sha256: 8e1c4eef6b4646817654d9c2f63f4c2aa645849ea4cbce0c7afcb1c8cba4f17d
+topic:
+  id: "calc-meld"
+  title: "MELD 3.0"
+  list_subtitle: "hepatopatía terminal (OPTN 2023)"
+  last_reviewed: "Evidence review 2026-07-19 · OPTN 2023 · Kim 2021"
+  tags: ["meld", "meld 3.0", "hígado", "cirrosis", "trasplante", "mortalidad", "terminal", "hepático"]
+  aliases:
+  - "MELD"
+  - "MELD 3.0"
+  - "MELD-Na"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      MELD 3.0 — la puntuación actual de la OPTN para asignar trasplantes hepáticos
+      (sustituyó a MELD-Na en 2023). Predice la mortalidad a 90 días en la hepatopatía
+      terminal. Las unidades de laboratorio son de EE. UU. (mg/dL), salvo la creatinina.
+  - type: "formula"
+    kind: "meld3"
+    title: "MELD 3.0"
+    source: "Política de la OPTN 2023; Kim et al., Gastroenterology 2021"
+    inputs:
+    - key: "sex"
+      label: "Sexo"
+      type: "select"
+      default: "M"
+      options:
+      - {value: "M", label: "Hombre"}
+      - {value: "F", label: "Mujer"}
+    - {key: "bilirubin", label: "Bilirrubina", unit: "mg/dL", type: "number"}
+    - {key: "creatinine", label: "Creatinina", type: "number"}
+    - key: "cr_unit"
+      label: "Unidad de creatinina"
+      type: "select"
+      default: "mg/dL"
+      options:
+      - {value: "mg/dL"}
+      - {value: "µmol/L"}
+    - {key: "inr", label: "INR", type: "number"}
+    - {key: "sodium", label: "Sodio", unit: "mEq/L", type: "number"}
+    - {key: "albumin", label: "Albúmina", unit: "g/dL", type: "number"}
+    - key: "dialysis"
+      label: "Diálisis ≥ 2×/semana (o HDVVC 24h)"
+      type: "select"
+      default: "no"
+      options:
+      - {value: "no", label: "No"}
+      - {value: "yes", label: "Sí"}
+    notes:
+    - "Límites aplicados automáticamente: bilirrubina/INR/creatinina ≥ 1; creatinina con tope de 3 (=3 en diálisis); sodio 125–137; albúmina 1.5–3.5; resultado 6–40."
+    caveats:
+    - "Para edad ≥ 12. La política de asignación usa MELD 3.0; algunos ensayos/registros aún informan MELD-Na."

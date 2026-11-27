@@ -1,0 +1,30 @@
+# translated-from-sha256: ad3c6deaa01a73f957e25c8e6c01a29d76bd5e32a94478f2441c9592295a0ae3
+topic:
+  id: "calc-qtc"
+  title: "QT corregido (QTc)"
+  list_subtitle: "Fridericia (Bazett / Framingham / Hodges)"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["qtc", "qt", "qt corregido", "fridericia", "bazett", "ecg", "torsades", "prolongación"]
+  aliases:
+  - "QTc"
+  - "QT corregido"
+  - "Fridericia"
+  - "Bazett"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Intervalo QT corregido por la frecuencia cardíaca. **Fridericia** es la corrección
+      preferida; se muestra Bazett (el valor por defecto de los electrocardiógrafos), pero sobrestima
+      el QTc en la taquicardia y lo infraestima en la bradicardia.
+  - type: "formula"
+    kind: "qtc"
+    title: "QTc"
+    source: "Fridericia 1920; Bazett 1920; Framingham (Sagie 1992); Hodges 1983"
+    inputs:
+    - {key: "qt", label: "QT medido", unit: "ms", type: "number"}
+    - {key: "hr", label: "Frecuencia cardíaca", unit: "bpm", type: "number"}
+    notes:
+    - "QTc de Fridericia = QT ÷ (60/FC)^⅓. Prolongado aproximadamente ≥ 460 ms; el riesgo de torsades aumenta por encima de 500 ms."
+    caveats:
+    - "Con frecuencias cardíacas alejadas de 60, prefiera Fridericia/Framingham a Bazett; interprete según el contexto clínico (electrolitos, fármacos que prolongan el QT)."

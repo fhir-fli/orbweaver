@@ -1,0 +1,100 @@
+# translated-from-sha256: 15e1affe770ff0b9ed7d52b9b2bc16fa6f1f210df34339f769e225be31c84961
+topic:
+  id: "wvems-2026-022"
+  version: "v260101"
+  title: "Náuseas / vómitos"
+  list_subtitle: "2026-022 · Zofran"
+  last_reviewed: "Aug 2023"
+  tags: ["náuseas", "vómitos", "emesis", "zofran", "ondansetrón"]
+  aliases:
+  - "Emesis"
+  - "Hiperémesis"
+  - "Vómitos cíclicos"
+  category: "universal"
+  layout: "paged"
+  pages:
+  - page_number: 22
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Náuseas o vómitos"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Náuseas leves"
+        - "Sin vómitos"
+        actions:
+        - text: "Mantener NPO"
+          kind: "procedure"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "N/V moderados"
+        - "Taquicardia"
+        actions:
+        - provider_level: "E"
+          text: "Zofran"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Fiebre](topic:wvems-2026-016), [Dolor](topic:wvems-2026-020)"
+        - text: "[Dolor abdominal](topic:wvems-2026-034)"
+      dose_table:
+      - drug: "[Zofran](topic:wvems-2026-drug-reference#zofran)"
+        dose: "4 mg"
+        route: "IV/IO, IM/IN, PO"
+        frequency: "cada 5 min x2"
+        population: "adult"
+  - page_number: 23
+    blocks:
+    - type: "prose"
+      title: "Imperativos de náuseas / vómitos"
+      highlight: true
+      markdown: |
+        - Es apropiado **tratar las náuseas de forma preventiva** antes de que empiecen los síntomas.
+          - Considérelo antes de cualquier intervención (o fármaco) que cause náuseas.
+          - Sobre todo si el vómito causaría complicaciones graves.
+          - Considere seriamente el **[Zofran](topic:wvems-2026-drug-reference#zofran)** con cualquier dispositivo invasivo de vía aérea.
+        - **Evite por boca** alimentos y líquidos. (Los fármacos orales están bien.)
+          - Mantenga a los pacientes en **NPO** (Nil Per Os: lat. “nada por la boca”)
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Zofran®](topic:wvems-2026-drug-reference#zofran)** (ondansetrón): úselo para todas las causas de náuseas y vómitos.
+          - Precaución con [bradicardia](topic:wvems-2026-012) y [sobredosis / tóxicos](topic:wvems-2026-040).
+          - Considere el **[ECG de 12 derivaciones](topic:wvems-2026-096#12-lead)** si hay antecedente/riesgo de **QT largo** o alteración electrolítica.
+          - {E} Solo puede darse VO - use **tabletas bucodispersables** (ODT)
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - {A} Dosis alternativa de 4–10 años: parta la ODT por la mitad y dé 2 mg VO
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere una causa [cardíaca](topic:wvems-2026-028) atípica en diabéticos y ancianos.
+        - Oler una toallita con alcohol también puede aliviar un poco las náuseas.
+        - El vómito es un mecanismo protector en la [sobredosis](topic:wvems-2026-040) (como el EtOH).
+          - Pero inducir el vómito a propósito (p. ej., ipecacuana) no está indicado.
+          - Puede considerar el **[Zofran](topic:wvems-2026-drug-reference#zofran)** para las arcadas cuando el estómago esté vacío.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Vomiting — https://emedicine.medscape.com/article/933135 [Ver: 5/25]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 25, 26
+
+        NEMSIS: 9914131

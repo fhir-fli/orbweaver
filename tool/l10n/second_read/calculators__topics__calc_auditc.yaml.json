@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_auditc.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s9",
+   "severity": "patient-safety",
+   "problem": "The acronym 'aud' (Alcohol Use Disorder) is translated as 'tca'. In Spanish medical contexts, 'TCA' refers to 'Trastorno de la Conducta Alimentaria' (Eating Disorder), which is a completely different condition.",
+   "fix": "TUA",
+   "en": "aud",
+   "es": "tca"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s9\",\n    \"severity\": \"patient-safety\",\n    \"problem\": \"The acronym 'aud' (Alcohol Use Disorder) is translated as 'tca'. In Spanish medical contexts, 'TCA' refers to 'Trastorno de la Conducta Alimentaria' (Eating Disorder), which is a completely different condition.\",\n    \"fix\": \"TUA\"\n  }\n]\n```"
+ ]
+}

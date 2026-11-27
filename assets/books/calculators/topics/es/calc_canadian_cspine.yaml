@@ -1,0 +1,84 @@
+# translated-from-sha256: d0d88f82710a3ef3d533dc63a6ab8e1281904ed91f01cdf165881e44e3155acf
+topic:
+  id: "calc-canadian-cspine"
+  title: "Regla canadiense de columna cervical"
+  list_subtitle: "imagen de columna cervical, adultos alertas y estables"
+  last_reviewed: "Evidence review 2026-09-07 · Stiell 2001 · Stiell 2003 · OpenEvidence 2026-09-07"
+  tags: ["regla canadiense columna cervical", "ccr", "columna cervical", "columna cervical", "cuello", "traumatismo", "imagen", "radiografía", "regla de decisión", "liberación", "rango de movimiento"]
+  aliases:
+  - "Regla canadiense de columna cervical"
+  - "CCR"
+  - "Regla de columna cervical"
+  category: "trauma"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Para adultos alertas (GCS 15) y hemodinámicamente estables con traumatismo cerrado
+      en las últimas 48 h en quienes preocupa una lesión de la columna cervical. Tres
+      preguntas en orden; el rango de movimiento solo se explora cuando el paso 2 lo
+      permite. Complemento de [NEXUS](topic:calc-nexus-cspine); revise las
+      exclusiones de abajo antes de aplicarla.
+  - type: "flowchart"
+    variant: "algorithm"
+    entry: {text: "Alerta (GCS 15), estable, traumatismo cerrado, preocupa lesión cervical", shape: "stadium"}
+    boxes:
+    - id: "image"
+      title: "Obtenga imagen de la columna cervical"
+      bullets:
+      - "TC si está disponible; si no, radiografías simples, mínimo 3 proyecciones (AP, lateral, odontoides), preferiblemente 5 (añada ambas oblicuas), con las siete vértebras cervicales y C7–T1 visibles"
+      severity: "priority"
+    stages:
+    - decision: "1. ¿Algún factor de alto riesgo que obligue a hacer radiografía?"
+      criteria:
+      - "Edad ≥ 65 años"
+      - "Mecanismo peligroso: caída de ≥ 3 ft (1 m) o 5 escalones · carga axial sobre la cabeza (p. ej., zambullida) · colisión vehicular a alta velocidad (> 100 km/h), o con vuelco o expulsión · vehículo recreativo motorizado · choque en bicicleta"
+      - "Parestesias en las extremidades"
+      outcomes:
+      - {label: "Sí", goto: "image"}
+      - {label: "No", continue: true}
+    - decision: "2. ¿Algún factor de bajo riesgo que permita explorar con seguridad el rango de movimiento?"
+      criteria:
+      - "Alcance posterior simple (excluye: empujado hacia el tráfico en sentido contrario · golpeado por un autobús o camión grande · vuelco · golpeado por un vehículo a alta velocidad)"
+      - "Sentado en el servicio de urgencias"
+      - "Ha caminado en algún momento desde la lesión"
+      - "Inicio diferido (no inmediato) del dolor cervical"
+      - "Ausencia de dolor a la palpación en la línea media cervical"
+      outcomes:
+      - {label: "Ninguno presente", goto: "image"}
+      - {label: "Sí", continue: true}
+    - decision: "3. ¿Puede rotar activamente el cuello 45° a la izquierda y a la derecha?"
+      outcomes:
+      - {label: "No puede, o no se exploró", goto: "image"}
+      - {label: "Puede", box: {title: "Sin imagen — retire el collarín", severity: "non_urgent"}}
+  - type: "prose"
+    title: "No aplique la regla si"
+    markdown: |
+      - Edad menor de 16 años
+      - Sin traumatismo en la cabeza o el cuello: ni dolor cervical ni lesión visible por encima de las clavículas
+      - GCS menor de 15
+      - Signos vitales inestables: PA sistólica < 90 mmHg, frecuencia respiratoria < 10 o > 24
+      - Lesión de hace más de 48 h
+      - Traumatismo penetrante (arma blanca, arma de fuego)
+      - Parálisis aguda (paraplejía, cuadriplejía)
+      - Enfermedad vertebral conocida: espondilitis anquilosante, artritis reumatoide, estenosis del canal, cirugía previa de columna cervical
+      - Regresa para reevaluación de la misma lesión
+  - type: "prose"
+    title: "Si la regla es positiva y no hay TC"
+    markdown: |
+      Obtenga radiografías simples (mínimo 3 proyecciones, preferiblemente 5). **Unas radiografías normales
+      no liberan por completo al paciente.** Mantenga el collarín y el cuello
+      inmovilizado. Suspenda la inmovilización solo si el paciente queda
+      asintomático con un rango de movimiento activo normal y sin dolor, o
+      tras una TC o RM normal, o por decisión clínica de un médico de mayor rango. Dolor
+      cervical persistente, dolor a la palpación en la línea media, cualquier signo neurológico o radiografías
+      técnicamente inadecuadas: mantenga la inmovilización y gestione TC o RM,
+      trasladando si es necesario. Los signos o síntomas neurológicos obligan a hacer RM
+      sean cuales sean las radiografías.
+  - type: "prose"
+    title: "Evidencia"
+    markdown: |
+      - Derivación (Stiell 2001, 8,924 adultos): sensibilidad 100%, especificidad 42.5%.
+      - Comparación directa con NEXUS (Stiell 2003, 8,283 pacientes): CCR 99.4% frente a 90.7% de sensibilidad, 45.1% frente a 36.8% de especificidad, tasa de radiografía 55.9% frente a 66.6%. Realizado por los autores de la regla; los clínicos omitieron el paso del rango de movimiento en el 10.2%, la debilidad práctica de la regla.
+      - Comparación independiente (Ala 2018, 200 pacientes): 90% de sensibilidad para ambas reglas, NEXUS más específica (54.7% frente a 44.2%). Revisión sistemática (Michaleff 2012, 15 estudios de calidad moderada): sensibilidad de la CCR 0.90–1.00, NEXUS 0.83–1.00.
+      - Las guías difieren: NICE usa la CCR; EAST y AANS/CNS usan NEXUS; el ACR no toma posición y acepta cualquiera.
+      - Niños: ninguna de las reglas para adultos está validada por debajo de unos 8 años. En 22,430 niños (Lee 2025) la sensibilidad fue: regla cervical de PECARN 93.3%, CCR 90.8%, NEXUS 85.7%. En menores de 16 años use [PECARN columna cervical](topic:calc-pecarn-cspine).

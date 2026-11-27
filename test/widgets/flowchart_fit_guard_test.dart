@@ -23,7 +23,7 @@
 // every shrink decision comes out wrong. This loads Roboto and FAILS LOUDLY if
 // it cannot, for the same reason page_fits_screen_test does.
 //
-// Writes every node it measures to build/fits/flowchart_fits.tsv for diagnosis.
+// Writes every node it measures to build/fits/flowchart_fits_<language>.tsv for diagnosis.
 
 import 'dart:io';
 
@@ -32,9 +32,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/library.dart';
 import 'package:orbweaver/data/topic_loader.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/widgets/flowchart/fit_text.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
+
+import 'book_fonts.dart';
 
 /// Pixel 3a logical size — the proxy this project targets.
 const Size kPhone = Size(393, 852);
@@ -67,118 +70,139 @@ File? _findRoboto() {
 }
 
 void main() {
-  testWidgets('no flowchart node text is squeezed onto the legibility floor', (
-    tester,
-  ) async {
-    final font = _findRoboto();
-    expect(
-      font,
-      isNotNull,
-      reason:
-          'Roboto not found. Measuring in Ahem would make every shrink '
-          'decision wrong, so this fails rather than quietly stopping '
-          'guarding.',
-    );
-    await tester.runAsync(() async {
-      await (FontLoader(
-            'Roboto',
-          )..addFont(Future.value(font!.readAsBytesSync().buffer.asByteData())))
-          .load();
-    });
+  // Every shipped language: a translation is longer than the English
+  // (Spanish runs ~20% longer), so a page that fits in English can overflow.
+  for (final language in kSupportedLanguages) {
+    testWidgets(
+      'no flowchart node text is squeezed onto the legibility floor ($language)',
+      (
+        tester,
+      ) async {
+        final font = _findRoboto();
+        expect(
+          font,
+          isNotNull,
+          reason:
+              'Roboto not found. Measuring in Ahem would make every shrink '
+              'decision wrong, so this fails rather than quietly stopping '
+              'guarding.',
+        );
+        await tester.runAsync(() async {
+          await (FontLoader(
+                'Roboto',
+              )..addFont(
+                Future.value(font!.readAsBytesSync().buffer.asByteData()),
+              ))
+              .load();
+        });
 
-    tester.view.physicalSize = kPhone * 3.0;
-    tester.view.devicePixelRatio = 3.0;
-    addTearDown(tester.view.reset);
+        tester.view.physicalSize = kPhone * 3.0;
+        tester.view.devicePixelRatio = 3.0;
+        await loadBookFonts(tester);
+        addTearDown(tester.view.reset);
 
-    // Asset I/O must run outside the fake-async zone testWidgets installs.
-    final loaded = <({String id, Topic topic})>[];
-    await tester.runAsync(() async {
-      for (final book in await loadLibrary()) {
-        for (final entry in book.allTopics) {
-          if (entry.drug != null || entry.asset.isEmpty) continue;
-          loaded.add((id: entry.id, topic: await loadTopicAsset(entry.asset)));
-        }
-      }
-    });
-    expect(loaded, isNotEmpty, reason: 'no topics loaded — asset path broken?');
+        // Asset I/O must run outside the fake-async zone testWidgets installs.
+        final loaded = <({String id, Topic topic, String? font})>[];
+        await tester.runAsync(() async {
+          for (final book in await loadLibrary(language: language)) {
+            for (final entry in book.allTopics) {
+              if (entry.drug != null || entry.asset.isEmpty) continue;
+              loaded.add((
+                id: entry.id,
+                font: entry.fontFamily,
+                topic: await loadTopicAsset(entry.asset),
+              ));
+            }
+          }
+        });
+        expect(
+          loaded,
+          isNotEmpty,
+          reason: 'no topics loaded — asset path broken?',
+        );
 
-    Directory('build/fits').createSync(recursive: true);
-    final fh =
-        File(
-            'build/fits/flowchart_fits.tsv',
-          ).openSync(mode: FileMode.write)
-          ..writeStringSync('topic\tvariant\tn_spilled\tfirst_spilled\n')
-          ..flushSync();
+        Directory('build/fits').createSync(recursive: true);
+        final fh =
+            File(
+                'build/fits/flowchart_fits_$language.tsv',
+              ).openSync(mode: FileMode.write)
+              ..writeStringSync('topic\tvariant\tn_spilled\tfirst_spilled\n')
+              ..flushSync();
 
-    final offenders = <String>[];
-    var charts = 0;
+        final offenders = <String>[];
+        var charts = 0;
 
-    for (final rec in loaded) {
-      final topic = rec.topic;
-      final variants = <String>{
-        for (final page in topic.pages)
-          for (final b in page.blocks)
-            if (b is FlowchartBlock) b.variant.name,
-      };
-      if (variants.isEmpty) continue;
-      charts++;
+        for (final rec in loaded) {
+          final topic = rec.topic;
+          final variants = <String>{
+            for (final page in topic.pages)
+              for (final b in page.blocks)
+                if (b is FlowchartBlock) b.variant.name,
+          };
+          if (variants.isEmpty) continue;
+          charts++;
 
-      FitText.debugOverflowed.clear();
-      await tester.pumpWidget(
-        MaterialApp(
-          theme: ThemeData(fontFamily: 'Roboto'),
-          home: Scaffold(
-            body: SingleChildScrollView(
-              child: TopicView(
-                topic: topic,
-                palette: {
-                  for (final e in topic.ownPaletteArgb.entries)
-                    e.key: Color(e.value),
-                },
+          FitText.debugOverflowed.clear();
+          await tester.pumpWidget(
+            MaterialApp(
+              theme: ThemeData(fontFamily: 'Roboto'),
+              home: Scaffold(
+                body: withBookFont(
+                  rec.font,
+                  SingleChildScrollView(
+                    child: TopicView(
+                      topic: topic,
+                      palette: {
+                        for (final e in topic.ownPaletteArgb.entries)
+                          e.key: Color(e.value),
+                      },
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
-        ),
-      );
-      await tester.pump();
+          );
+          await tester.pump();
 
-      final spilled = List<String>.from(FitText.debugOverflowed);
-      FitText.debugOverflowed.clear();
+          final spilled = List<String>.from(FitText.debugOverflowed);
+          FitText.debugOverflowed.clear();
 
-      fh
-        ..writeStringSync(
-          '${rec.id}\t${variants.join(",")}\t${spilled.length}\t'
-          '${spilled.isEmpty ? "" : spilled.first.replaceAll("\n", " ").replaceAll("\t", " ")}\n',
-        )
-        ..flushSync();
+          fh
+            ..writeStringSync(
+              '${rec.id}\t${variants.join(",")}\t${spilled.length}\t'
+              '${spilled.isEmpty ? "" : spilled.first.replaceAll("\n", " ").replaceAll("\t", " ")}\n',
+            )
+            ..flushSync();
 
-      for (final s in spilled) {
-        final bar = s.indexOf('|');
-        final excess = double.parse(s.substring(0, bar));
-        final text = s.substring(bar + 1);
-        if (excess < kTolerancePx) continue;
-        offenders.add(
-          '${rec.id} [${variants.join(",")}] +${excess.toStringAsFixed(0)}px — '
-          '"${text.length > 60 ? "${text.substring(0, 60)}…" : text}"',
+          for (final s in spilled) {
+            final bar = s.indexOf('|');
+            final excess = double.parse(s.substring(0, bar));
+            final text = s.substring(bar + 1);
+            if (excess < kTolerancePx) continue;
+            offenders.add(
+              '${rec.id} [${variants.join(",")}] +${excess.toStringAsFixed(0)}px — '
+              '"${text.length > 60 ? "${text.substring(0, 60)}…" : text}"',
+            );
+          }
+        }
+        fh.closeSync();
+
+        expect(
+          charts,
+          greaterThan(40),
+          reason:
+              'expected the books to hold well over 40 flowcharts; '
+              'found $charts — did the block scan break?',
         );
-      }
-    }
-    fh.closeSync();
-
-    expect(
-      charts,
-      greaterThan(40),
-      reason:
-          'expected the books to hold well over 40 flowcharts; '
-          'found $charts — did the block scan break?',
+        expect(
+          offenders,
+          isEmpty,
+          reason:
+              'These flowchart nodes still do not fit after shrinking all the '
+              'way to the ${kFloor}pt legibility floor, so their text is '
+              'spilling past the node edges:\n  ${offenders.join("\n  ")}',
+        );
+      },
     );
-    expect(
-      offenders,
-      isEmpty,
-      reason:
-          'These flowchart nodes still do not fit after shrinking all the '
-          'way to the ${kFloor}pt legibility floor, so their text is '
-          'spilling past the node edges:\n  ${offenders.join("\n  ")}',
-    );
-  });
+  }
 }

@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_068.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s34",
+   "severity": "meaning",
+   "problem": "'Medical Code' refers to the emergency activation or protocol (e.g., Code Blue), whereas 'Paro médico' translates to 'medical arrest,' which describes the patient's state rather than the clinical protocol.",
+   "fix": "Código médico",
+   "en": "[Medical Code](topic:wvems-2026-024)",
+   "es": "[Paro médico](topic:wvems-2026-024)"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s34\",\n    \"severity\": \"meaning\",\n    \"problem\": \"'Medical Code' refers to the emergency activation or protocol (e.g., Code Blue), whereas 'Paro médico' translates to 'medical arrest,' which describes the patient's state rather than the clinical protocol.\",\n    \"fix\": \"Código médico\"\n  }\n]\n```"
+ ]
+}

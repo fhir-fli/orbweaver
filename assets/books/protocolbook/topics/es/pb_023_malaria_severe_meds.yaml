@@ -1,0 +1,26 @@
+# translated-from-sha256: f1724c5e86e51bc5182a9ebc9577dc42d5b4f6961aa2baa082e39799a5c8d020
+topic:
+  id: "pb-malaria-severe-meds"
+  title: "Malaria — tratamiento de la forma grave"
+  list_subtitle: "p.23 · escalera parenteral (hospitalizado)"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malaria", "grave", "artesunato", "arteméter", "quinina", "parenteral", "hospitalizado"]
+  category: "medical"
+  page_number: 23
+  blocks:
+  - type: "prose"
+    highlight: true
+    markdown: |-
+      **Todos los esquemas parenterales deben seguirse de 3 días de tratamiento oral cuando tolere la VO.**
+  - type: "prose"
+    markdown: |-
+      a) **1.ª línea — Artesunato**
+        i) **3 mg/kg** < 20 kg · **2.4 mg/kg** ≥ 20 kg IV/IM a las **0, 12, 24 h**
+        ii) Tratamiento parenteral ≥ 24 h, luego diario hasta que tolere la VO → cambie a oral
+      b) **2.ª línea — Arteméter**
+        i) **3.2 mg/kg IM** al ingreso
+        ii) **1.6 mg/kg IM** al día hasta que pueda tomar medicación oral → cambie a VO
+      c) **3.ª línea — Quinina**
+        i) Dosis de carga **20 mg/kg** — **PELIGRO:** la administración rápida es peligrosa. Mezcle con **10 mL/kg de dextrosa al 5 %** y pase en **2–4 h**. **NO supere 5 mg/kg/h.**  Seguida de:
+        ii) **10 mg/kg** (en 2 h) cada **8 h**
+        iii) Si no hay mejoría en **48 h** → reduzca a **10 mg/kg cada 12 h**

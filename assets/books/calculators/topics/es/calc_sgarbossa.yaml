@@ -1,0 +1,32 @@
+# translated-from-sha256: 9aa540ab9de1c5ba7f05da32da713cc3d993b27fcf27494338fee72b742b0532
+topic:
+  id: "calc-sgarbossa"
+  title: "Sgarbossa (modificado)"
+  list_subtitle: "IAM con BRIHH / ritmo de marcapasos"
+  last_reviewed: "Evidence review 2026-07-19 · Smith 2012 · Meyers 2015"
+  tags: ["sgarbossa", "brihh", "bloqueo de rama izquierda", "iam", "iamcest", "marcapasos", "ecg", "oclusión"]
+  aliases:
+  - "Sgarbossa"
+  - "Sgarbossa modificado"
+  - "IAM con BRIHH"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Detecta un IAM agudo cuando un bloqueo de rama izquierda (o la estimulación
+      ventricular) oculta los cambios habituales del ST. Basta con un criterio positivo para que el
+      resultado sea positivo.
+  - type: "score"
+    title: "Criterios de Sgarbossa modificados"
+    source: "Smith et al., Ann Emerg Med 2012 (validado por Meyers 2015)"
+    items:
+    - {key: "concordant_ste", label: "Elevación concordante del ST ≥ 1 mm en ≥ 1 derivación", type: "toggle", points: 1}
+    - {key: "concordant_std", label: "Descenso concordante del ST ≥ 1 mm en V1–V3", type: "toggle", points: 1}
+    - {key: "discordant", label: "Elevación discordante del ST con cociente ST/S ≤ −0.25 (elevación del ST ≥ 25% de la profundidad de la onda S)", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 0, label: "Negativo — no se cumple ningún criterio", severity: "none"}
+    - {min: 1, label: "Positivo — sugiere IAM agudo (active la vía de hemodinámica)", severity: "alert"}
+    notes:
+    - "La regla modificada (sin ponderar) usa el cociente ST/S para el tercer criterio; sensibilidad ~80% / especificidad ~99%, mejor que la puntuación original ponderada 5/3/2."
+    caveats:
+    - "Para BRIHH o ritmos de estimulación ventricular. Un resultado negativo no excluye el IAM — correlacione con los síntomas, la troponina y ECG seriados."

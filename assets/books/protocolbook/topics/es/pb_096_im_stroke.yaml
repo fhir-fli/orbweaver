@@ -1,0 +1,206 @@
+# translated-from-sha256: 51af9a5c91c1aa5be8a602021da158df535dd1fa2dc1e6600b4ffa7a985e04df
+topic:
+  id: "pb-im-stroke"
+  title: "AIT / ictus"
+  list_subtitle: "pp.96–98 · ROSIER · LAPSS · ABCD3 · NIHSS"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ictus", "AIT", "ataque isquémico transitorio", "medicina interna", "ROSIER", "LAPSS", "ABCD3", "NIHSS", "neurología", "labetalol", "presión arterial"]
+  category: "medical"
+  pages:
+  - page_number: 96
+    blocks:
+    - type: "prose"
+      title: "AIT / ictus"
+      markdown: |
+        Mida o administre glucosa antes de iniciar la evaluación del ictus.
+    - type: "prose"
+      title: "Síntomas de AIT / ictus"
+      markdown: |
+        - Síntomas transitorios en el AIT
+        - Déficit neurológico focal
+        - Disfunción motora unilateral de extremidades o cara (debilidad, torpeza, parálisis)
+        - Cambio visual: pérdida de visión en un ojo, diplopía
+        - Hemianopsia homónima
+        - Alteraciones del habla (afasia, disartria)
+        - Déficit sensitivo unilateral (entumecimiento, pérdida sensitiva)
+        - Vértigo, ataxia de la marcha, el tronco, las extremidades
+        - Pérdida de conciencia, síncope, convulsión
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (PA, FC, FR, SpO₂, temp)
+        - Inicie oxígeno si la SpO₂ < 90%
+        - Mantenga la glucosa entre 7.7 (140) y 10 (180)
+        - Análisis: hemograma, función renal, electrolitos, pruebas de coagulación, examen de orina para proteinuria
+        - ECG de 12 derivaciones — si muestra arritmia o infarto, priorice la estabilización cardíaca (vea el protocolo cardíaco)
+        - Haga una historia y una exploración física breves y dirigidas
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Persisten los síntomas?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Puntúe con ROSIER (abajo)"
+            bullets:
+            - "Total ≥ 1 → protocolo de ictus (página siguiente)"
+            - "Total < 1 → busque otras causas"
+        - label: "No"
+          box:
+            title: "Evalúe y trate los imitadores"
+            bullets:
+            - "Hipo/hiperglucemia; convulsión; migraña (complicada)"
+            - "Lesión cerebral (tumor/aneurisma); infección (p. ej., meningitis)"
+            - "Trastornos cardíacos; síncope; delirium; trastorno psiquiátrico"
+            - "Síndrome vestibular agudo; afección de nervio periférico"
+            - "Si no hay imitadores → AIT; trátelo igual que un ictus → protocolo de ictus"
+    - type: "table"
+      title: "Criterios ROSIER (total ≥ 1 → ictus probable)"
+      zebra: true
+      columns: ["Característica", "Puntos"]
+      column_flex: [8, 2]
+      column_align: ["left", "center"]
+      rows:
+      - cells: ["Pérdida de conciencia o síncope", "−1"]
+      - cells: ["Actividad convulsiva", "−1"]
+      - cells: ["Debilidad facial asimétrica", "+1"]
+      - cells: ["Debilidad asimétrica del brazo", "+1"]
+      - cells: ["Debilidad asimétrica de la pierna", "+1"]
+      - cells: ["Alteración del habla", "+1"]
+      - cells: ["Defecto del campo visual", "+1"]
+  - page_number: 97
+    blocks:
+    - type: "prose"
+      title: "Protocolo de ictus — criterios LAPSS"
+      markdown: |
+        - Edad > 45 años
+        - Sin antecedentes de convulsiones
+        - Síntomas neurológicos nuevos en las últimas 24 horas
+        - Deambulaba en su situación basal
+        - Glucosa > 3.4 (60) y < 22.2 (400)
+        - La asimetría es unilateral
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Cuántos criterios LAPSS se cumplen?"
+        outcomes:
+        - label: "Cumple TODOS"
+          box:
+            title: "Trate como ictus"
+        - label: "Cumple ALGUNOS"
+          box:
+            title: "Trate como ictus, pero busque otras causas"
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Siga monitorizando, mantenga el ABC
+        - Controle los signos vitales (PA, FC, FR, SpO₂, temp)
+        - Inicie oxígeno si la SpO₂ < 90%
+        - Mantenga la glucosa entre 7.7 (140) y 10 (180)
+        - Trate la hipovolemia con solución salina normal
+        - 🛑 **Presión arterial: NO la baje** salvo que la **PAS sea ≥ 220 o la PAD ≥ 120**, o haya una indicación específica (disección aórtica, síndrome coronario agudo, insuficiencia cardíaca aguda). La PA alta tras un ictus es en gran parte compensadora — bajarla reduce la perfusión de la penumbra isquémica y empeora el infarto
+        - Si está indicado el tratamiento, **redúzcala no más de un 15% en las primeras 24 horas** — labetalol 10–20 mg IV en 1–2 minutos, puede repetirse una vez; o hidralazina
+        - **Si se administra trombólisis**, el objetivo es distinto — mantenga < 185/110 antes y < 180/105 después
+        - **Antiagregante — el fármaco más útil que tiene aquí.** Una vez descartada la hemorragia (o, sin imagen, cuando el cuadro sea claramente isquémico y no haya uso de anticoagulantes ni traumatismo craneal): **ácido acetilsalicílico 300 mg VO de inmediato**, luego 75–100 mg al día
+        - **AIT o ictus menor:** añada **clopidogrel 300 mg de carga, luego 75 mg al día durante 21 días**, y después continúe solo con ácido acetilsalicílico. La doble terapia durante esos 21 días reduce la recurrencia del ictus en aproximadamente una cuarta parte
+        - Luego continúe con medidas de soporte — si es un **ictus**, use la escala de ictus del NIH (abajo); si es un **AIT**, use la puntuación ABCD3 (abajo)
+    - type: "table"
+      title: "NIHSS — gravedad del ictus"
+      zebra: true
+      columns: ["Puntuación", "Gravedad"]
+      column_flex: [3, 7]
+      column_align: ["center", "left"]
+      rows:
+      - cells: ["0", "Sin síntomas de ictus"]
+      - cells: ["1–4", "Ictus menor"]
+      - cells: ["5–15", "Ictus moderado"]
+      - cells: ["16–20", "Ictus moderado a grave"]
+      - cells: ["21–42", "Ictus grave"]
+    - type: "table"
+      title: "Puntuación ABCD3 (AIT — riesgo de ictus posterior)"
+      zebra: true
+      columns: ["Característica", "Puntos"]
+      column_flex: [8, 2]
+      column_align: ["left", "center"]
+      rows:
+      - cells: ["Edad > 60", "+1"]
+      - cells: ["PA > 140/90", "+1"]
+      - cells: ["Clínica: debilidad unilateral", "+2"]
+      - cells: ["Clínica: alteración del habla sin debilidad", "+1"]
+      - cells: ["Duración de los síntomas > 60 minutos", "+2"]
+      - cells: ["Duración de los síntomas 10–59 minutos", "+1"]
+      - cells: ["Diabetes", "+1"]
+      - cells: ["AIT en los últimos 7 días", "+2"]
+    - type: "prose"
+      markdown: |
+        Puntuación < 4: riesgo de ictus muy bajo. **Una puntuación baja no significa "mandar a casa" — aproximadamente 1 de cada 5 pacientes con puntuación baja tiene una causa grave tratable (estenosis carotídea, fibrilación auricular). Todo AIT sospechado necesita un ECG y, donde sea posible, evaluación carotídea, sea cual sea la puntuación.**
+  - page_number: 98
+    blocks:
+    - type: "table"
+      title: "Escala de ictus de los National Institutes of Health (NIHSS)"
+      zebra: true
+      columns: ["Puntuación", "Descripción"]
+      column_flex: [2, 8]
+      column_align: ["center", "left"]
+      rows:
+      - cells: [{text: "**1a. Nivel de conciencia (NC)**", span: 2}]
+      - cells: ["0", "Alerta; responde con viveza"]
+      - cells: ["1", "No alerta; se despierta con estímulos menores"]
+      - cells: ["2", "No alerta; requiere estímulos repetidos"]
+      - cells: ["3", "No responde, o solo responde con reflejos"]
+      - cells: [{text: "**1b. Preguntas de NC** (¿En qué mes estamos? ¿Qué edad tiene?)", span: 2}]
+      - cells: ["0", "Ambas respuestas correctas"]
+      - cells: ["1", "Responde bien una pregunta"]
+      - cells: ["2", "Responde mal ambas preguntas"]
+      - cells: [{text: "**1c. Órdenes de NC**", span: 2}]
+      - cells: ["0", "Realiza bien ambas tareas"]
+      - cells: ["1", "Realiza bien una tarea"]
+      - cells: ["2", "No realiza bien ninguna tarea"]
+      - cells: [{text: "**2. Mejor mirada**", span: 2}]
+      - cells: ["0", "Normal"]
+      - cells: ["1", "Parálisis parcial de la mirada"]
+      - cells: ["2", "Desviación forzada"]
+      - cells: [{text: "**3. Visual**", span: 2}]
+      - cells: ["0", "Sin pérdida visual"]
+      - cells: ["1", "Hemianopsia parcial"]
+      - cells: ["2", "Hemianopsia completa"]
+      - cells: ["3", "Hemianopsia bilateral"]
+      - cells: [{text: "**4. Parálisis facial**", span: 2}]
+      - cells: ["0", "Movimientos normales y simétricos"]
+      - cells: ["1", "Parálisis menor"]
+      - cells: ["2", "Parálisis parcial"]
+      - cells: ["3", "Parálisis completa de uno o ambos lados"]
+      - cells: [{text: "**5. Motor del brazo** (5a izquierdo, 5b derecho)", span: 2}]
+      - cells: ["0", "Sin claudicación"]
+      - cells: ["1", "Claudicación"]
+      - cells: ["2", "Algún esfuerzo contra la gravedad"]
+      - cells: ["3", "Sin esfuerzo contra la gravedad; el miembro cae"]
+      - cells: ["4", "Sin movimiento"]
+      - cells: [{text: "**6. Motor de la pierna** (6a izquierda, 6b derecha)", span: 2}]
+      - cells: ["0", "Sin claudicación"]
+      - cells: ["1", "Claudicación"]
+      - cells: ["2", "Algún esfuerzo contra la gravedad"]
+      - cells: ["3", "Sin esfuerzo contra la gravedad; el miembro cae"]
+      - cells: ["4", "Sin movimiento"]
+      - cells: [{text: "**7. Ataxia de miembros**", span: 2}]
+      - cells: ["0", "Ausente"]
+      - cells: ["1", "Presente en un miembro"]
+      - cells: ["2", "Presente en dos miembros"]
+      - cells: [{text: "**8. Sensibilidad**", span: 2}]
+      - cells: ["0", "Normal, sin pérdida sensitiva"]
+      - cells: ["1", "Pérdida sensitiva leve a moderada"]
+      - cells: ["2", "Pérdida sensitiva grave a total"]
+      - cells: [{text: "**9. Mejor lenguaje**", span: 2}]
+      - cells: ["0", "Sin afasia; normal"]
+      - cells: ["1", "Afasia leve a moderada"]
+      - cells: ["2", "Afasia grave"]
+      - cells: ["3", "Mudo, afasia global"]
+      - cells: [{text: "**10. Disartria**", span: 2}]
+      - cells: ["0", "Normal"]
+      - cells: ["1", "Disartria leve a moderada"]
+      - cells: ["2", "Disartria grave"]
+      - cells: [{text: "**11. Extinción e inatención**", span: 2}]
+      - cells: ["0", "Sin alteraciones"]
+      - cells: ["1", "Inatención visual / táctil / auditiva / espacial / personal"]
+      - cells: ["2", "Hemiinatención o extinción profunda"]

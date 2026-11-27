@@ -1,0 +1,68 @@
+# translated-from-sha256: 9daffa97b76ec94bd03e6a154cf194dea035bc5d7ec700bb2246715104cc1900
+topic:
+  id: "pb-paediatric-pneumonia"
+  title: "Neumonía pediátrica (2–59 meses)"
+  list_subtitle: "p.46 · gravedad + antibióticos"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neumonía", "tos", "dificultad respiratoria", "tiraje subcostal", "amoxicilina", "ampicilina", "gentamicina", "pediátrico", "respiratorio"]
+  category: "medical"
+  page_number: 46
+  blocks:
+  - type: "prose"
+    markdown: |
+      Para **niños de 2–59 meses**. Para los casos especiales, consulte los protocolos de exposición/infección por VIH, TB, neonatología o drepanocitosis.
+  - type: "flowchart"
+    variant: "algorithm"
+    boxes:
+    - id: "severe"
+      title: "Tratamiento de la neumonía grave"
+      bullets:
+      - "Oxígeno si hay hipoxia"
+      - "Maneje la vía aérea según necesidad"
+      - "Trate la fiebre"
+      - "1.ª línea: ampicilina 50mg/kg IM/IV cada 6 h Y gentamicina 5mg/kg IM/IV al día"
+      - "Si no mejora en 48 horas y se sospecha neumonía estafilocócica, cambie la ampicilina por cloxacilina (misma dosis)"
+      - "2.ª línea: ceftriaxona 80mg/kg IM/IV al día"
+      - "Administre antibióticos durante al menos 5 días"
+      severity: "emergency"
+    stages:
+    - decision: "¿Tos o dificultad respiratoria MÁS alguno de estos signos de peligro?"
+      criteria:
+      - "Cianosis central o SatO2 <90%"
+      - "AVPU = 'V, P o U'"
+      - "No puede mamar/beber"
+      - "Dificultad respiratoria grave (p. ej., quejido, tiraje subcostal muy intenso)"
+      outcomes:
+      - label: "Sí — neumonía grave"
+        goto: "severe"
+        continue: true
+      - label: "No — evalúe el tiraje subcostal / respiraciones por minuto (2–11 meses >50, 1–5 años >40)"
+        box:
+          title: "¿Hay tiraje subcostal / respiración rápida?"
+          bullets:
+          - "Sí → tratamiento de la neumonía: amoxicilina 40mg/kg/dosis VO dos veces al día x 5 días; puede tratarse en casa si no hay otras preocupaciones"
+          - "No → sin neumonía: si solo hay tos, trate con medidas de soporte como infección respiratoria alta. Si hay falta de aire, busque otras causas"
+    - decision: "En la rama de neumonía grave — ¿algún criterio de traslado a UCI?"
+      criteria:
+      - "Insuficiencia respiratoria inminente / requiere intubación"
+      - "Pulsioximetría <92% con oxígeno ≥50%"
+      - "Apneas recurrentes o respiración lenta e irregular"
+      - "FR y FC aumentadas con dificultad respiratoria grave y agotamiento"
+      - "Alteración del estado mental"
+      - "Choque/no mantiene la PA sin vasopresores"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Traslade a UCI"
+          severity: "emergency"
+      - label: "No — continúe el tratamiento y luego valore el alta"
+        continue: true
+    terminal:
+      title: "Criterios de alta"
+      bullets:
+      - "Mejoría clínica global (nivel de actividad, apetito, menos fiebre) x 24 horas"
+      - "Pulsioximetría >90% con aire ambiente x 24 horas"
+      - "Estado mental estable y en su nivel basal"
+      - "Tolera la medicación oral si la necesita"
+      - "Tolera la VO para mantener la hidratación/nutrición"
+      severity: "non_urgent"

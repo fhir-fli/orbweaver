@@ -1,0 +1,163 @@
+# translated-from-sha256: 235918e4267641db74d88ac13fd7b98efd5bb546ad5ff774a7047c39febc41a5
+topic:
+  id: "wvems-2026-052"
+  version: "v260101"
+  title: "Paro traumático (CODE)"
+  list_subtitle: "2026-052 · torniquete / descompresión pleural / epinefrina"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "paro traumático"
+  - "paro por traumatismo"
+  - "rcp"
+  - "torniquete"
+  - "descompresión pleural"
+  - "epinefrina"
+  - "amiodarona"
+  aliases:
+  - "Paro traumático"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 52
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: |-
+          Sin pulso
+          Sin lesión mortal
+          Sin DNR/POST
+        shape: "stadium"
+      decision:
+        text: "Asigne tareas"
+        shape: "diamond"
+      branches:
+      - id: "first"
+        label: "1. Compresiones"
+        criteria:
+        - "Lo más importante"
+        - "Empiece de inmediato"
+        - "Minimice las pausas"
+        actions:
+        - text: "Compresión torácica"
+          kind: "procedure"
+      - id: "second"
+        label: "2. Atención del trauma"
+        criteria:
+        - "Controle la [hemorragia](topic:wvems-2026-058)"
+        - "Trate la [circulación](topic:wvems-2026-008)"
+        - "[Vía aérea](topic:wvems-2026-004) / [respiración](topic:wvems-2026-006)"
+        actions:
+        - text: "Torniquete"
+          kind: "procedure"
+        - provider_level: "I"
+          text: "Descompresión pleural"
+          kind: "procedure"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      - id: "third"
+        label: "3. Atención médica"
+        criteria:
+        - "Pruebe el [paro médico (CODE)](topic:wvems-2026-024)"
+        - "Analice cada 2 min"
+        - "Use acceso IV o IO"
+        actions:
+        - text: "Desfibrile"
+          kind: "procedure"
+          condition: "Si se indica"
+        - provider_level: "I"
+          text: "Epinefrina"
+          kind: "medication_administration"
+        - provider_level: "I"
+          text: "Amiodarona"
+          kind: "medication_administration"
+          condition: "Si TV/FV"
+      convergence:
+        text: "Destino"
+        shape: "stadium"
+        bullets:
+        - text: "Traslade cuanto antes"
+      dose_table:
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+      - drug: "[Epinefrina](topic:wvems-2026-drug-reference#epi-epi-neb)"
+        dose: "1 mg"
+        route: "IV/IO"
+        frequency: "cada 5 min"
+        population: "adult"
+      - drug: "[Amiodarona](topic:wvems-2026-drug-reference#amiodarone)"
+        dose: "300 → 150 mg"
+        route: "IV/IO"
+        frequency: "cada 5 min x2"
+        population: "adult"
+  - page_number: 53
+    blocks:
+    - type: "prose"
+      title: "Imperativos del paro"
+      highlight: true
+      markdown: |
+        - Coloque **[torniquetes](topic:wvems-2026-096#tourniquet)** si es necesario.
+          - Limitar la pérdida de sangre es crucial.
+        - Pruebe la **[descompresión pleural](topic:wvems-2026-096#pleural-decompress)** bilateral.
+          - Un neumotórax a tensión oculto puede causar el paro traumático.
+        - Este protocolo se aplica al paro cardíaco causado por un **traumatismo grave**.
+          - Remítase a [paro médico (CODE)](topic:wvems-2026-024) en el paro con lesiones solo incidentales.
+        - El tratamiento definitivo del paro traumático es el quirófano.
+          - Priorice las compresiones, los torniquetes y el **traslado cuanto antes**.
+    - type: "prose"
+      title: "Compresiones"
+      markdown: |
+        - Adulto/pediátrico: **120 /min**
+        - OPA/NPA: **30:2** con BVM
+        - BIAD/TET: **continuas**
+    - type: "row"
+      blocks:
+      - type: "prose"
+        flex: 6
+        title: "Alerta de TRAUMA"
+        callout: true
+        dashed: true
+        call_er: true
+        markdown: |
+          - Si hay cualquier RCP por trauma
+          - O signos vitales inestables
+          - Active una alerta de **TRAUMA**
+      - type: "prose"
+        flex: 5
+        title: "Lesiones mortales"
+        markdown: |
+          - Decapitación o cerebro expuesto
+          - Destrucción del tronco o de órganos
+          - Carbonización irreconocible
+          - Traumatismo contuso masivo, explosión
+          - Más de 30 min desde el paro
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)** (salino al 0.9%): **PAS objetivo de 90** mmHg
+          - Use una reanimación **equilibrada** en el choque hemorrágico
+          - Busque un objetivo más alto si hay lesión de **cabeza/columna** o **embarazo**.
+        - **[Amiodarona](topic:wvems-2026-drug-reference#amiodarone)**: en adultos administre dos veces (x2) cada 5 min, 300 → 150 mg
+          - En pediatría, administre 5 mg/kg tres veces (x3) cada 5 min
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Tenga precaución con las **compresiones** y la **desfibrilación** en un vehículo en movimiento.
+        - El **EtCo2** puede ayudar a identificar el RCE y a orientar la decisión de terminar.
+        - Un paro bien llevado debe funcionar como un **equipo de boxes**. Céntrese en su tarea.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support/ [Ver: 11th]
+        - NAEMSP Mortal Injuries — https://doi.org/10.3109/10903127.2012.755586 [Ver: 1/13]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 29, 34

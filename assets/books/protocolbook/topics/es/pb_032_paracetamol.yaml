@@ -1,0 +1,117 @@
+# translated-from-sha256: 5a148cdfe8eaf1e34d2342261390a62c0b426fe2ef2b609dcdd751d5594bc9e8
+topic:
+  id: "pb-paracetamol"
+  title: "Toxicidad por paracetamol / acetaminofén"
+  list_subtitle: "pp.32–33 · fases, nomograma + NAC"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["paracetamol", "acetaminofén", "tylenol", "panadol", "ingestión", "intoxicación", "sobredosis", "NAC", "acetilcisteína", "nomograma", "rumack", "hepatotoxicidad", "hígado"]
+  category: "medical"
+  pages:
+  - page_number: 32
+    blocks:
+    - type: "prose"
+      title: "Poblaciones"
+      markdown: |
+        - **Niños:** en general, ingestión accidental
+        - **Niños mayores / adolescentes / adultos:** con más frecuencia, ingestión intencional
+    - type: "prose"
+      title: "Dosificación inadecuada por"
+      markdown: |
+        - Dosis de adulto administradas a niños
+        - Mala comprensión de las dosis de los líquidos
+        - Dosis adicionales cuando los padres creen que la primera no funcionó
+        - Consumo de varios productos que contienen acetaminofén (Tylenol, Panadol, acetaminofén, paracetamol, antigripales/antitusivos - Pyridex, antiácidos, medicamentos para la cefalea)
+    - type: "prose"
+      title: "Factores de riesgo"
+      markdown: |
+        - <2 años y dosis de 90mg/kg/día de acetaminofén o varias dosis de adulto
+        - Consumo crónico excesivo de alcohol
+        - Coingestión con: rifampicina, isoniazida, cotrimoxazol, zidovudina, barbitúricos, carbamazepina
+        - Comorbilidades: ayuno prolongado, vómitos/diarrea prolongados, trastornos de la conducta alimentaria, desnutrición, neoplasia maligna, VIH/sida
+    - type: "prose"
+      title: "Fases"
+      markdown: |
+        - **Fase 1: ≤24 horas tras la ingestión**
+          - Síntomas inespecíficos: náuseas, vómitos, dolor abdominal, anorexia, letargo, diaforesis y malestar general
+        - **Fase 2: 24–72 horas tras la ingestión**
+          - Mayor riesgo hepatotóxico si consulta >24 h después de la ingestión
+          - Los síntomas pueden mejorar o desaparecer
+          - Aparecen alteraciones analíticas: ↑AST, ALT, bilirrubina, TP/INR
+          - Posible dolor en hipocondrio derecho o hepatomegalia
+        - **Fase 3: 72–96 horas tras la ingestión**
+          - Muerte de hepatocitos y momento del daño hepático máximo
+          - Reaparecen o empeoran las náuseas y los vómitos
+          - También puede haber malestar, ictericia, coagulopatía, encefalopatía y síntomas del SNC (por ejemplo, confusión, somnolencia, coma)
+        - **Fase 4: 96 horas–14 días tras la ingestión**
+          - Puede empezar a mejorar, con recuperación completa en 3 meses
+          - Puede progresar a falla multiorgánica y muerte
+    - type: "prose"
+      markdown: |
+        El estado mental suele ser normal en las primeras 48 h tras la sobredosis, salvo que lo afecte una coingestión.
+    - type: "table"
+      title: "Dosis posiblemente tóxicas"
+      columns: ["Ingestión", "0–6 años", ">6 años"]
+      rows:
+      - cells: ["**Ingestión aguda única**", "≥200mg/kg en <8 h", "≥10g o 200mg/kg (lo que sea menor) en <8 h"]
+      - cells: ["**Ingestión supraterapéutica repetida (ISTR)**", "≥200mg/kg en <24 h", "≥10g o 200mg/kg (lo que sea menor) en <24 h"]
+      - cells: ["", "≥150mg/kg/día x 48h", "≥6g o 150mg/kg (lo que sea menor) al día x 48 h"]
+      - cells: ["", "≥100mg/kg/día x 72 h", "≥4g/día o 100mg/kg (lo que sea menor) con alguno de los factores de riesgo anteriores"]
+  - page_number: 33
+    blocks:
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        Compare con la tabla de dosis posiblemente tóxicas de arriba.
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Posible dosis tóxica?"
+        outcomes:
+        - label: "No"
+          box:
+            title: "No requiere tratamiento"
+        - label: "Sí"
+          box:
+            title: "En niños, puede considerarse el carbón activado si hay una ingestión CONOCIDA de >150mg/kg — en las 2 h siguientes a la ingestión (hasta 4 h si la ingestión es grande)"
+          continue: true
+      - decision: "¿Tiempo desde la ingestión?"
+        outcomes:
+        - label: "<4 h tras la ingestión"
+          box:
+            title: "Nivel de paracetamol a las 4 h"
+            bullets:
+            - "→ marque el nivel en el nomograma (abajo)"
+        - label: "4–8 h tras la ingestión"
+          box:
+            title: "Nivel de paracetamol inmediato"
+            bullets:
+            - "Si el nivel no estará disponible antes de las 8 h desde la ingestión, INICIE la NAC YA y suspéndala después si el nivel resulta bajo — la NAC pierde eficacia después de 8 h, así que no espere al laboratorio"
+            - "→ marque el nivel en el nomograma (abajo)"
+        - label: ">8 h"
+          box:
+            title: "Trate con NAC; nivel de paracetamol inmediato y ALT"
+            bullets:
+            - "→ marque el nivel en el nomograma (abajo)"
+            severity: "priority"
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_paracetamol_nomogram.png"
+      size: "full"
+      caption: "Nomograma de Rumack-Matthew — concentración plasmática de acetaminofén (µg/mL) frente a horas tras la ingestión. Trate si el nivel está por encima de la línea continua (de tratamiento), que pasa por 150 µg/mL a las 4 horas."
+    - type: "table"
+      title: "N-acetilcisteína (NAC) — esquema de 2 bolsas, TODOS los pesos"
+      layout: "scroll"
+      columns: ["Peso", "Bolsa 1 — en 4 h", "Bolsa 2 — en 16 h"]
+      column_widths: [76, 145, 145]
+      rows:
+      - cells: ["**Niño ≤40kg**", "200mg/kg en **7mL/kg** de diluyente (máx. 500mL)", "100mg/kg en **14mL/kg** de diluyente (máx. 1L)"]
+      - cells: ["**>40kg**", "200mg/kg (máx. 22g) en 500mL de diluyente", "100mg/kg (máx. 11g) en 1L de diluyente"]
+    - type: "prose"
+      markdown: |
+        - Total **300mg/kg en 20 h** — el mismo total que el antiguo esquema de 3 bolsas, pero con muchas menos reacciones anafilactoides y un cambio de bolsa menos
+        - **En niños, ajuste el diluyente al peso y use D5W** — los volúmenes fijos de diluyente de adulto en un niño pequeño causan sobrecarga de líquidos e hiponatremia
+        - El diluyente puede ser D5W, ½SSN o agua estéril
+        - Si el peso es >100kg, trate como si pesara 100kg
+        - **Rubor, exantema o sibilancias durante la bolsa 1** son una reacción histamínica no alérgica, no una alergia — enlentezca o pause la infusión, administre un antihistamínico, suspenda solo si hay broncoespasmo y luego reinicie a un ritmo más lento. No abandone el tratamiento
+        - **Menos de 5kg:** pida consejo a toxicología / al especialista — el esquema de dos bolsas no está establecido por debajo de ese peso
+        - **No suspenda a las 20–21 h solo porque se acabaron las bolsas.** Continúe hasta que el paracetamol sea indetectable, el INR y las PFH sean normales o mejoren, y no haya encefalopatía
+        - El esquema de **tres bolsas** (150mg/kg en 15 min, luego 50mg/kg en 4 h, luego 100mg/kg en 16 h) sigue siendo preferible cuando se desea más fármaco en las primeras 3 h: presentación tardía con hepatotoxicidad establecida, ingestión masiva o de liberación modificada, o signos tempranos de daño hepático grave

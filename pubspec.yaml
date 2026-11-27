@@ -10,6 +10,9 @@ dependencies:
   collection: ^1.19.0
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.20.2
   json_schema: ^5.2.2
   material_ui: ^1.11.1
   shared_preferences: ^2.3.0
@@ -17,17 +20,26 @@ dependencies:
   yaml: ^3.1.2
 
 dev_dependencies:
+  # sha256 of the English source a translation was made from (test/l10n).
+  crypto: ^3.0.6
   flutter_test:
     sdk: flutter
   very_good_analysis: ^9.0.0
 
 flutter:
   uses-material-design: true
+  # Interface strings: lib/l10n/app_<lang>.arb -> generated AppLocalizations (l10n.yaml).
+  generate: true
   # Each book is a self-contained bundle folder under assets/books/<id>/
   # (book.yaml + cover + topics/ + images/). Flutter asset globs are
   # non-recursive, so each bundle subdir that holds files is listed.
   assets:
     - assets/credits.yaml
+    # Its translations (assets/<language>/credits.yaml).
+    - assets/es/
+    # Calculator wording (English) and its translations, by language folder.
+    - assets/l10n/
+    - assets/l10n/es/
     # The topic schema, so the web playground validates what is pasted.
     - schema/topic.schema.json
     # The playground's first example (generated, see tool/gen_playground_starter.py).
@@ -35,15 +47,23 @@ flutter:
     - assets/books/
     - assets/books/protocolbook/
     - assets/books/protocolbook/topics/
+    - assets/books/protocolbook/topics/es/
+    - assets/books/protocolbook/es/
     - assets/books/protocolbook/images/
+    - assets/books/protocolbook/images/es/
     - assets/books/wvems/
     - assets/books/wvems/topics/
+    - assets/books/wvems/topics/es/
+    - assets/books/wvems/es/
     - assets/books/wvems/images/
+    - assets/books/wvems/images/es/
     - assets/books/who_imci/
     - assets/books/who_imci/topics/
     - assets/books/who_imci/images/
     - assets/books/calculators/
     - assets/books/calculators/topics/
+    - assets/books/calculators/topics/es/
+    - assets/books/calculators/es/
 
   # Roboto Condensed, Apache 2.0 (licence bundled beside the files). Flutter
   # keeps these in its material_fonts cache but bundles NO Roboto into a built

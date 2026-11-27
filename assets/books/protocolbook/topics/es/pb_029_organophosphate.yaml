@@ -1,0 +1,90 @@
+# translated-from-sha256: 89e5d1aa492b6cd7f743fa3727d079b503cc51bee8a8baba42676f32602562fb
+topic:
+  id: "pb-organophosphate"
+  title: "Intoxicación por organofosforados / carbamatos"
+  list_subtitle: "p.29 · insecticidas / gases nerviosos"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["organofosforado", "carbamato", "insecticida", "colinérgico", "atropina", "intoxicación"]
+  category: "medical"
+  page_number: 29
+  blocks:
+  - type: "prose"
+    markdown: |
+      - Niños: ingestión accidental frecuente
+      - Adultos: ingestión intencional frecuente
+      - **El diagnóstico es clínico**
+  - type: "flowchart"
+    variant: "cycle"
+    nodes:
+    - title: "Exposición a organofosforados / carbamatos — el diagnóstico es clínico"
+      bullets:
+      - "**SLUDGE-BBB:** Salivación · Lagrimeo · Micción · Diarrea · Cólicos gástricos · Emesis · Broncorrea · Broncoespasmo · Bradicardia"
+      - "Además sudoración profusa, convulsiones y coma, fasciculaciones, pupilas contraídas"
+    - id: "atropine"
+      title: "Bolo de atropina"
+      severity: "emergency"
+      bullets:
+      - "Niños: **0.02 mg/kg IV** · Adultos: **2 mg IV**"
+      branches:
+      - label: "Convulsiones"
+        side: "right"
+        box:
+          title: "Diazepam — trate la convulsión a la vez que da la atropina"
+          severity: "priority"
+          bullets:
+          - "Niños: supositorios rectales de diazepam de 2.5 mg según el peso (tabla de abajo)"
+          - "O diazepam IV 0.2 mg/kg (niños), máx. 10 mg"
+          - "Adultos: 10 mg IV"
+          - "Repita según sea necesario si reaparecen las convulsiones"
+    - shape: "decision"
+      title: "¿Atropinizado? Secreciones pulmonares secas (mejor oxigenación, respira con más facilidad), pulso > 80/min, PAS > 80 mmHg"
+      down_label: "Sí — atropinizado"
+      branches:
+      - label: "Todavía no"
+        side: "left"
+        box:
+          title: "DUPLIQUE la dosis anterior"
+          severity: "emergency"
+          bullets:
+          - "Administre la dosis duplicada y reevalúe los objetivos"
+          - "No hay un techo fijo — pueden necesitarse dosis totales muy grandes"
+        loop_to: "atropine"
+        loop_label: "cada 5 min"
+    - title: "Mantenimiento tras la atropinización"
+      bullets:
+      - "Mezcle la atropina total administrada en bolos en SSN o D5%"
+      - "Pacientes < 25 kg: 250 mL, a 50 mL/h"
+      - "Pacientes > 25 kg: 500 mL, a 100 mL/h"
+      - "Vigile cada hora si reaparecen los síntomas o hay sobreatropinización, y ajuste el ritmo"
+  - type: "prose"
+    title: "Diazepam rectal según el peso"
+    markdown: |
+      **Niños — diazepam rectal** (supositorios de 2.5 mg):
+  - type: "table"
+    columns: ["Peso", "Supositorios (2.5 mg)"]
+    rows:
+    - cells: ["< 10 kg", "1"]
+    - cells: ["10–15 kg", "2"]
+    - cells: ["15–20 kg", "3"]
+    - cells: ["20–25 kg", "4"]
+  - type: "prose"
+    markdown: |
+      - O diazepam IV 0.2 mg/kg (niños), máx. 10 mg
+      - Adultos: 10 mg IV
+      - Repita según sea necesario si aparecen convulsiones
+  - type: "prose"
+    markdown: |
+      **Pralidoxima (2-PAM) — donde esté disponible:**
+
+      - **Niños:** 20–50 mg/kg (máx. 2 g) IV en 30 minutos, luego 10–20 mg/kg/h
+      - **Adultos:** 1–2 g IV en 30 minutos, luego 500 mg/h
+
+      Las Uganda Clinical Guidelines 2023 la incluyen, pero el beneficio sobre la mortalidad es incierto (revisión Cochrane; ensayo controlado con placebo de Eddleston). **La atropina, administrada pronto y hasta los objetivos de arriba, es lo que cambia el pronóstico.**
+  - type: "prose"
+    title: "Sobreatropinización"
+    callout: true
+    markdown: |
+      Vigile la sobreatropinización:
+      - Retención urinaria
+      - Confusión / delirio
+      - Hipertermia

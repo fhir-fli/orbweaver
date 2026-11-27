@@ -1,0 +1,35 @@
+# translated-from-sha256: 1cb2fbb20ba35ff48739bb1dcdf0487a2ab7bc928e9738a6d3108fc0cae67f7d
+topic:
+  id: "calc-hasbled"
+  title: "HAS-BLED"
+  list_subtitle: "riesgo de sangrado con anticoagulación"
+  last_reviewed: "Evidence review 2026-07-19 · Pisters 2010 · ESC 2024"
+  tags: ["has-bled", "hasbled", "sangrado", "anticoagulación", "fa", "fibrilación auricular", "riesgo"]
+  aliases:
+  - "HAS-BLED"
+  - "Riesgo de sangrado"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Estima el riesgo de sangrado mayor a 1 año en pacientes con FA
+      anticoagulados. Su propósito es poner de manifiesto los factores de sangrado **modificables**
+      — no negar la anticoagulación.
+  - type: "score"
+    title: "HAS-BLED"
+    source: "Pisters et al., Chest 2010"
+    items:
+    - {key: "htn", label: "Hipertensión (no controlada, PAS > 160)", type: "toggle", points: 1}
+    - {key: "renal", label: "Función renal anormal (diálisis, trasplante, Cr > 2.3 mg/dL)", type: "toggle", points: 1}
+    - {key: "liver", label: "Función hepática anormal (cirrosis, bilirrubina > 2× o AST/ALT/FA > 3×)", type: "toggle", points: 1}
+    - {key: "stroke", label: "Ictus previo", type: "toggle", points: 1}
+    - {key: "bleeding", label: "Sangrado mayor previo o predisposición", type: "toggle", points: 1}
+    - {key: "labile_inr", label: "INR lábil (inestable/alto, TRT < 60%)", type: "toggle", points: 1}
+    - {key: "elderly", label: "Edad avanzada (> 65 años)", type: "toggle", points: 1}
+    - {key: "drugs", label: "Fármacos que predisponen al sangrado (antiagregante, AINE)", type: "toggle", points: 1}
+    - {key: "alcohol", label: "Alcohol ≥ 8 bebidas/semana", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 2, label: "Riesgo de sangrado bajo–moderado", severity: "none"}
+    - {min: 3, label: "Riesgo de sangrado alto — corrija los factores modificables y revise", severity: "warn"}
+    caveats:
+    - "NUNCA use HAS-BLED para negar la anticoagulación. Una puntuación alta señala factores modificables (PA, INR lábil, alcohol, fármacos concomitantes) que corregir y obliga a un seguimiento más estrecho."

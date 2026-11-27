@@ -1,0 +1,156 @@
+# translated-from-sha256: 669229dcbf7b7af0d3472608a3f72fed8068e010a2e44e6c67da3c1a9acc711d
+topic:
+  id: "wvems-2026-032"
+  version: "v260101"
+  title: "Reacción alérgica"
+  list_subtitle: "2026-032 · epinefrina / salbutamol / Benadryl"
+  last_reviewed: "Jun 2025"
+  tags: ["alergia", "anafilaxia", "epi", "epinefrina", "salbutamol", "benadryl", "decadron"]
+  aliases:
+  - "Exantema"
+  - "Ronchas"
+  - "Picor"
+  - "Anafilaxia"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 32
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "caution"
+        text: "[Precaución si el paciente rechaza](topic:wvems-2026-109#patient-refusals)"
+      entry:
+        text: "Reacción alérgica sintomática"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Exantema, picor"
+        - "Disnea leve"
+        actions:
+        - provider_level: "E"
+          text: "Salbutamol"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "Atrovent"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "Benadryl"
+          kind: "medication_administration"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Mala perfusión"
+        - "Disnea evidente"
+        actions:
+        - provider_level: "E"
+          text: "Epinefrina"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "Salbutamol"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "Atrovent"
+          kind: "medication_administration"
+        - provider_level: "E"
+          text: "Benadryl"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "Decadron"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Circulación](topic:wvems-2026-008)"
+        - text: "[Disnea](topic:wvems-2026-030)"
+      dose_table:
+      - drug: "[Salbutamol](topic:wvems-2026-drug-reference#albuterol)"
+        dose: "2.5 mg"
+        route: "NEB"
+        frequency: "cada 5 min x4"
+        population: "adult"
+      - drug: "[Atrovent](topic:wvems-2026-drug-reference#atrovent)"
+        dose: "0.5 mg"
+        route: "NEB"
+        frequency: "x1"
+        population: "adult"
+      - drug: "[Benadryl](topic:wvems-2026-drug-reference#benadryl)"
+        dose: "25 mg"
+        route: "IV/IO, IM, PO"
+        frequency: "cada 15 min x2"
+        population: "adult"
+      - drug: "[Epinefrina](topic:wvems-2026-drug-reference#epi-epi-neb)"
+        dose: "0.3 mg"
+        route: "auto, IM"
+        frequency: "cada 5 min x3"
+        population: "adult"
+      - drug: "[Decadron](topic:wvems-2026-drug-reference#decadron)"
+        dose: "10 mg"
+        route: "IV/IO, IM"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 33
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la reacción alérgica"
+      highlight: true
+      markdown: |
+        - Los síntomas de vía aérea y la hinchazón facial indican una **reacción mayor**.
+          - La hinchazón de labios y lengua puede ser una amenaza inmediata para la vida.
+        - {A} **Use fármacos IM** (o IV/IO si se dispone) en cualquier paciente in extremis.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Epinefrina](topic:wvems-2026-drug-reference#epi-epi-neb)** (epinefrina): **úsela IM**. Trate las reacciones mayores de forma **enérgica**.
+          - Úsela ante cualquier problema mayor de [vía aérea](topic:wvems-2026-004), [respiración](topic:wvems-2026-006) o [circulación](topic:wvems-2026-008).
+          - **Tenga precaución** en pacientes mayores de 50 años o con EC o dolor torácico.
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - **EpiPen Jr.®**: úsela de 3–8 años.  **EpiPen®**: úsela a partir de 9+ años.
+    - type: "prose"
+      title: ""
+      markdown: |
+        - {E} Solo puede usar autoinyector o un sistema de administración por código de colores.
+        - {I} Considere un **[goteo de epinefrina](topic:wvems-2026-drug-reference#epi-drip-epi-push)** ante [disnea](topic:wvems-2026-030) o [choque](topic:wvems-2026-008) persistentes.
+        - **[Salbutamol](topic:wvems-2026-drug-reference#albuterol)** (Ventolin®): úselo ante cualquier disnea o sibilancia.
+          - Es improbable que ayude con el exantema o el picor. Puede causar palpitaciones.
+        - **[Decadron®](topic:wvems-2026-drug-reference#decadron)** (dexametasona): dosis alternativa: 8 mg IV/IO, IM x1
+        - **[Benadryl®](topic:wvems-2026-drug-reference#benadryl)** (difenhidramina): puede dar a los adultos **50 mg VO x1**.
+          - {E} Solo puede darse VO (puede usar la formulación y la dosis de venta libre).
+    - type: "prose"
+      title: "Mala perfusión"
+      callout: true
+      markdown: |
+        Sospéchela si hay **varios** de estos:
+        - **Alteración del estado mental**
+        - Piel pálida, fría, sudorosa
+        - Taquicardia, hipotensión
+        - Disnea, taquipnea
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - El inicio rápido de los síntomas indica una reacción más grave.
+        - Las alergias alimentarias graves también pueden causar N/V y dolor abdominal.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Hives — https://emedicine.medscape.com/article/137362 [Ver: 4/25]
+        - Medscape Anaphylaxis — https://emedicine.medscape.com/article/135065 [Ver: 8/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 23
+
+        NEMSIS: 9914111

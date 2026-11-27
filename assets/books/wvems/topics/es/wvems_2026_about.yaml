@@ -1,0 +1,111 @@
+# translated-from-sha256: 203efab8deef3fca942c522b8661d6953034f2403d3ace5816676bd62d7818c5
+topic:
+  id: "wvems-2026-about"
+  version: "v260101"
+  title: "Acerca de y créditos"
+  list_subtitle: "autores · licencia · leyenda"
+  last_reviewed: "Dec 2025"
+  tags: ["acerca de", "créditos", "licencia", "atribución", "leyenda", "wvems"]
+  aliases:
+  - "Créditos"
+  - "Licencia"
+  - "Atribución"
+  - "Leyenda"
+  category: "universal"
+  page_number: 2
+  blocks:
+  - type: "prose"
+    title: "Protocolos WVEMS 2026"
+    highlight: true
+    markdown: |
+      **Protocolos, procedimientos, políticas y medicamentos del Western Virginia
+      EMS Medical Direction Committee.**
+
+      Editores: **Dres. Ekey, LePera y Stanley.** Creados y generosamente
+      puestos a disposición del público por el **Western Virginia EMS Council, Inc.
+      (WVEMS)** — esta edición de Orbweaver es una transcripción digital de su
+      trabajo, con nuestro agradecimiento.
+  - type: "prose"
+    title: "Licencia"
+    callout: true
+    palette:
+      alert: "0xFF2E7D32"
+      alert_fill: "0xFFEAF4EB"
+      alert_text: "0xFF1B5E20"
+    markdown: |
+      Los protocolos de WVEMS se publican bajo la **licencia Creative Commons
+      Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)** —
+      de uso, adaptación y difusión libres para cualquiera, con atribución.
+
+      Esta edición digital se ofrece bajo la **misma licencia CC BY-SA 4.0**,
+      con atribución a WVEMS.
+      creativecommons.org/licenses/by-sa/4.0/
+  - type: "prose"
+    title: "Créditos — editores y revisores"
+    markdown: |
+      **Editores:** Dres. Ekey, LePera y Stanley.
+
+      **Revisión médica:** Dr. D DeBroekert · Dr. B Ekey† · Dr. M Green† ·
+      Dr. K Gutermuth† · Dr. C Lane† · Dr. A LePera · Dr. D Lollar ·
+      Dr. M Mitchell · Dr. J Patterson · Dr. H Rose-Inman† · Dr. E Stanley† ·
+      Dr. N Yelverton. (**†** subespecialista en SEM.)
+
+      **Revisión SEM:** Brian Alderson · Adam Amburgey · Chris Christensen ·
+      Kevin Cressell · Jennifer Daniels · Scott Davis · Diana Foley ·
+      Mike Garnett · Laura Hungerford · Steve LePera · Jane Lindsay ·
+      Christian Long · Drew Mitchell · Dave Perfater · Daryll Perry ·
+      Kari Whitney · Brandon Winesett.
+
+      **Revisión administrativa:** Belinda Hodges · Afton Jamerson.
+  - type: "prose"
+    title: "Adaptado de (fuentes de WVEMS)"
+    markdown: |
+      - Protocolos WVEMS — 2025
+      - VA OEMS Scope of Practice — 2024 (v3)
+      - VA (NEMSIS) VPHIB 3.5.0.6 — 2025
+      - AHA Guidelines for CPR & ECC — 2025
+      - NAEMSP Trauma Compendium — 2025
+  - type: "prose"
+    title: "Leyenda de niveles de proveedor"
+    markdown: |
+      Las insignias marcan el **nivel mínimo de proveedor** habilitado para una habilidad o dosis.
+      Puede usar cualquier intervención marcada para **su nivel o inferior** — vea
+      [Cómo usar](topic:wvems-2026-003).
+      - {} — **EMR** (todos los niveles; la versión impresa deja esta insignia en blanco)
+      - {E} — EMT
+      - {A} — AEMT
+      - {I} — Intermediate
+      - {P} — Paramédico
+      - {P(CC)} — Paramédico de cuidados críticos (solo paramédicos acreditados)
+
+      Soporte vital básico (SVB): EMR, EMT, AEMT · Soporte vital avanzado (SVA):
+      Intermediate, paramédico, paramédico de cuidados críticos.
+  - type: "prose"
+    title: "Símbolos de flujo e intervención"
+    markdown: |
+      - **Indicaciones** (azul redondeado) — cuándo usar
+      - **Use su criterio** (rombo) — un punto de decisión
+      - **No olvide** (verde redondeado) — recordatorios
+      - **Nota importante** (trapecio) — salvedad clave
+      - **Concepto** (recuadro) — contexto y detalles
+      - **ADVERTENCIA** (octógono rojo) — alto de seguridad
+  - type: "prose"
+    title: "Contacto — WVEMS Council"
+    markdown: |
+      Western Virginia EMS Council, Inc.
+      1944 Peters Creek Rd., Roanoke, VA 24017
+      - Teléfono: 540-562-3482
+      - Web: https://wvems.org
+      - Correo: western@vaems.org
+  - type: "prose"
+    title: "Acerca de esta edición digital"
+    boxed: true
+    markdown: |
+      Transcrita a Orbweaver a partir de los protocolos WVEMS 2026. Donde la dosificación
+      se **actualizó a la evidencia actual** (PALS 2025 / OpenEvidence), se
+      indica en las tarjetas afectadas. Las tablas propietarias de dosis pediátricas por edad de **Handtevy**
+      **no se reprodujeron** — la referencia pediátrica de aquí
+      es un equivalente calculado, independiente y basado en la evidencia (verifíquelo localmente).
+      Las imágenes de medicamentos/equipos son **representativas** (genéricas), no los
+      productos concretos. **Confirme todas las dosis con referencias actuales y
+      con su director médico antes de usarlas.**

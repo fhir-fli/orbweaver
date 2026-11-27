@@ -1,0 +1,44 @@
+# translated-from-sha256: 697ca76629239e78f46a4ec2ff3b04fad4fbde7415de29c5dff04d273a2e9bb6
+topic:
+  id: "calc-cha2ds2-vasc"
+  title: "CHA₂DS₂-VASc"
+  list_subtitle: "riesgo de ictus en FA"
+  last_reviewed: "Evidence review 2026-07-19 · 2023 ACC/AHA AF · Lip 2010"
+  tags: ["cha2ds2-vasc", "chads", "fibrilación auricular", "fa", "ictus", "anticoagulación", "riesgo", "vasc"]
+  aliases:
+  - "CHA2DS2-VASc"
+  - "CHADS-VASc"
+  - "Riesgo de ictus en FA"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Estima el riesgo anual de ictus en la fibrilación auricular no valvular para
+      orientar la anticoagulación oral. Toque cada factor que corresponda.
+  - type: "score"
+    title: "CHA₂DS₂-VASc"
+    source: "Lip et al., Chest 2010; guía de FA ACC/AHA/ACCP/HRS 2023"
+    items:
+    - {key: "chf", label: "Insuficiencia cardíaca congestiva / disfunción del VI", type: "toggle", points: 1}
+    - {key: "htn", label: "Hipertensión", type: "toggle", points: 1}
+    - key: "age"
+      label: "Edad"
+      type: "choice"
+      default: "lt65"
+      options:
+      - {value: "lt65", label: "< 65", points: 0}
+      - {value: "65_74", label: "65–74", points: 1}
+      - {value: "ge75", label: "≥ 75", points: 2}
+    - {key: "dm", label: "Diabetes mellitus", type: "toggle", points: 1}
+    - {key: "stroke", label: "Ictus / AIT / tromboembolia previos", type: "toggle", points: 2}
+    - {key: "vasc", label: "Enfermedad vascular (IAM previo, EAP, placa aórtica)", type: "toggle", points: 1}
+    - {key: "female", label: "Sexo femenino", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 0, label: "Riesgo bajo", detail: "No está indicado tratamiento antitrombótico.", severity: "none"}
+    - {min: 1, max: 1, label: "Riesgo bajo–intermedio — considere la anticoagulación (hombres)", severity: "warn"}
+    - {min: 2, label: "Se recomienda anticoagulación oral", detail: "El riesgo aumenta con la puntuación; valórelo frente al riesgo de sangrado.", severity: "alert"}
+    notes:
+    - "Los umbrales dependen del sexo: ACO recomendada con ≥2 (hombres) / ≥3 (mujeres). Una mujer con 1 punto solo por el sexo es de riesgo bajo."
+    - "La ESC 2024 usa CHA₂DS₂-VA (sin la categoría de sexo, máx. 8); esta versión la conserva (práctica de EE. UU. 2023)."
+    caveats:
+    - "Orienta — no obliga — la anticoagulación; sopésela frente al riesgo de sangrado (HAS-BLED) y la decisión compartida."

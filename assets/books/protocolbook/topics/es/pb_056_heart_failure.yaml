@@ -1,0 +1,119 @@
+# translated-from-sha256: e289864d26d4a2abf373bd33e642b8f7dbbe1b6d6dd8f9b8a813919dc8399f63
+topic:
+  id: "pb-heart-failure"
+  title: "Insuficiencia cardíaca pediátrica"
+  list_subtitle: "pp.56–57 · tratamiento agudo + crónico"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["insuficiencia cardíaca", "cardíaco", "furosemida", "dopamina", "digoxina", "IECA", "crisis hipoxémica", "miocardiopatía", "cardiopatía congénita", "pediátrico"]
+  category: "medical"
+  pages:
+  - page_number: 56
+    blocks:
+    - type: "prose"
+      title: "Insuficiencia cardíaca — síntomas más frecuentes"
+      markdown: |
+        - **Lactantes:** dificultad para alimentarse, fatiga fácil, retraso del crecimiento
+        - **Niños pequeños:** síntomas GI, retraso del crecimiento, fatiga fácil, tos recurrente o crónica con sibilancias (debe distinguirse del asma)
+        - **Niños mayores:** intolerancia al ejercicio, anorexia, dolor abdominal, sibilancias, disnea, edema, palpitaciones, dolor torácico o síncope
+    - type: "prose"
+      title: "Hallazgos de la exploración física"
+      markdown: |
+        - Taquicardia, ritmo de galope
+        - Mala perfusión — extremidades frías/moteadas, llenado capilar lento, pulsos periféricos disminuidos, PA sistémica baja
+        - Hallazgos pulmonares — taquipnea, retracciones, uso de músculos respiratorios accesorios, quejido/aleteo nasal en lactantes, sibilancias y estertores (más en niños mayores)
+        - Congestión sistémica — hepatomegalia, ingurgitación yugular (rara en lactantes y niños pequeños), edema periférico
+        - Hipertensión en las extremidades superiores o pulsos débiles en las inferiores
+        - Soplo de grado III o más, frémito o levantamiento precordial
+        - **Cribado neonatal (>24 h de vida):** mida la SpO2 preductal (mano D.) y posductal (cualquier pie). Cribado positivo si: (a) la SpO2 difiere >3% entre extremidades superiores e inferiores en 3 mediciones separadas por una hora cada una, (b) SpO2 <90% en cualquier extremidad, o (c) SpO2 <95% en extremidades superiores e inferiores en 3 mediciones separadas por una hora cada una
+    - type: "prose"
+      title: "Manejo agudo"
+      markdown: |
+        - Monitorice, mantenga el ABC, asegúrese de que el paciente esté sentado
+        - Controle los signos vitales (PA, FC, FR, spO2, Temp, peso)
+        - Evalúe la GCS, el estado de hidratación
+        - Inicie oxígeno si la spO2 <90%, coloque una vía IV según necesidad
+        - Extraiga hemograma, malaria, función renal, electrolitos
+        - Haga una historia y una exploración física breves y dirigidas
+        - Considere un ECG si está disponible
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Anemia grave o fiebre alta?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Considere tratar una insuficiencia cardíaca de alto gasto por anemia, malaria o sepsis"
+            bullets:
+            - "Transfunda 10–20mL/kg en 2–4 horas (2.5–5mL/kg/h) si es necesario"
+            - "Tratamiento de la malaria según protocolo"
+            - "Tratamiento de la sepsis según protocolo"
+            severity: "priority"
+          continue: true
+        - label: "No"
+          continue: true
+      - decision: "¿Extremidades frías?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Considere dopamina 5–20mcg/kg por minuto, ajustando según efecto"
+            severity: "priority"
+          continue: true
+        - label: "No"
+          continue: true
+      - decision: "¿Sobrecarga de volumen?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Furosemida 1mg/kg IV cada 4 horas hasta la mejoría clínica, luego cada 6–8 horas"
+            severity: "priority"
+        - label: "No"
+          box:
+            title: "Tras la estabilización: RxT, ecocardiograma"
+            severity: "non_urgent"
+  - page_number: 57
+    blocks:
+    - type: "prose"
+      title: "Medicamentos crónicos y dosis"
+      markdown: |
+        - **Diuréticos**
+          - Furosemida 1mg/kg/dosis una o dos veces al día
+          - Espironolactona 1mg/kg/día dividida una o dos veces al día, hasta 3.3–6mg/kg/día dividida una o dos veces al día (sin superar 100mg/día)
+        - **IECA / ARA II**
+          - Captopril 0.3–2.5mg/kg dividido dos veces al día, ajuste al alza según necesidad, dosis máx. 6mg/kg/día
+          - Lisinopril/enalapril 0.1mg/kg una vez al día
+          - Losartán 0.5mg/kg/día (sin superar 12.5–25mg/día), hasta 1.4mg/kg/día (sin superar 150mg/día)
+        - **Digital/digoxina** — mantenimiento **5–15mcg/kg/día dividida dos veces al día**. (20–30mcg/kg/día es la dosis de DIGITALIZACIÓN / CARGA, administrada una vez — NO es una dosis de mantenimiento; la digoxina tiene un índice terapéutico estrecho)
+          - Especialmente útil en presencia de arritmias auriculares
+        - **Betabloqueantes**
+          - Propranolol 1–3mg/kg/dosis dos o tres veces al día
+          - Carvedilol 0.1mg/kg/día dividido dos veces al día (sin superar 3.125mg/día), hasta 0.8–1mg/kg/día dividido dos veces al día (sin superar 25mg dos veces al día)
+    - type: "prose"
+      title: "Orden recomendado en la disfunción ventricular izquierda"
+      markdown: |
+        - Furosemida — en pacientes con retención de líquidos actual o previa
+        - IECA/ARA II — todos los que no tengan contraindicación específica, sobre todo con valvulopatía (en especial insuficiencia mitral o aórtica)
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "ADVERTENCIA"
+      markdown: |
+        Antes de iniciar cualquiera de los siguientes medicamentos, debe tener un ecocardiograma, un nivel de potasio y haber consultado con un médico de mayor rango.
+
+        - Espironolactona — en pacientes con furosemida que siguen con retención de líquidos, sobre todo los más sintomáticos
+        - Digoxina — en los que tienen fracción de eyección baja
+    - type: "prose"
+      title: "Tratamiento de situaciones específicas"
+      markdown: |
+        - **Cardiopatía congénita acianótica:** cortocircuitos de izquierda a derecha (CIV/PCA los más frecuentes) — orden estándar de medicamentos
+        - **Cardiopatía congénita cianótica: tetralogía de Fallot**
+          - Los síntomas de insuficiencia cardíaca son raros
+          - Trate la crisis hipoxémica:
+            - Posición genupectoral
+            - Oxígeno
+            - Morfina 0.1 mg/kg/dosis IV
+            - Solución salina normal 10–20mL/kg IV en bolo lento
+            - Propranolol 0.1mg/kg/dosis IV o 0.5mg/kg/dosis VO
+        - **Miocardiopatía dilatada:** orden de tratamiento estándar; digoxina (sobre todo en presencia de arritmias auriculares)

@@ -1,0 +1,42 @@
+# translated-from-sha256: 1e65335de5874c9c4e7b9d8c9d186bcd1fe7ef44aace53b137067143737ec436
+topic:
+  id: "pb-im-ecg-svt"
+  title: "ECG — arritmias supraventriculares"
+  list_subtitle: "p.118 · flutter auricular · FA · FA con RVR"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiografía", "adulto", "medicina interna", "cardiología", "arritmia", "supraventricular", "TSV", "flutter auricular", "fibrilación auricular", "FA", "fibrilación", "respuesta ventricular rápida", "RVR", "ondas F"]
+  category: "medical"
+  page_number: 118
+  blocks:
+  - type: "prose"
+    title: "Arritmias supraventriculares"
+    callout: true
+    palette:
+      alert: "0xFF0D47A1"
+      alert_fill: "0xFFE8EEF7"
+      alert_text: "0xFF0D47A1"
+    markdown: |
+      Hallazgos del ECG en las arritmias supraventriculares frecuentes.
+  - type: "prose"
+    title: "Flutter auricular"
+    markdown: |
+      - En general ~300 ciclos/minuto, frecuencia ventricular de 150/min
+      - Ondas F clásicas negativas en II, III, aVF y positivas en V1
+      - Flutter (en dientes de sierra o grueso)
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_ecg_aflutter.png"
+    size: "full"
+    caption: "Flutter auricular en la derivación II — ondas de flutter en dientes de sierra (gruesas)."
+  - type: "prose"
+    title: "Fibrilación auricular"
+    markdown: |
+      - Onda auricular irregular
+      - Patrón irregularmente irregular
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_ecg_afib.png"
+    size: "full"
+    caption: "Fibrilación auricular — irregularmente irregular, sin ondas P definidas."
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_ecg_afrvr.png"
+    size: "full"
+    caption: "Fibrilación auricular con respuesta ventricular rápida."

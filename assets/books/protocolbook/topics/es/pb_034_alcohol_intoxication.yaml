@@ -1,0 +1,46 @@
+# translated-from-sha256: 11527ec82f9a9a221672561291ec66e4fa84a13b617c6af6adb56204eeba158b
+topic:
+  id: "pb-alcohol-intoxication"
+  title: "Intoxicación alcohólica"
+  list_subtitle: "p.34 · criterios + manejo"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["alcohol", "etanol", "intoxicación", "ingestión", "envenenamiento", "alteración del estado mental"]
+  category: "medical"
+  page_number: 34
+  blocks:
+  - type: "prose"
+    callout: true
+    markdown: |
+      **Asegúrese siempre de que no hay otras causas de la alteración antes de atribuir los síntomas solo al alcohol** (sobre todo traumatismo u otra ingestión)
+  - type: "flowchart"
+    variant: "linear"
+    entry_chain:
+    - text: "Sospecha de intoxicación alcohólica aguda"
+      shape: "stadium"
+    steps:
+    - type: "content"
+      title: "Criterios diagnósticos de intoxicación alcohólica aguda"
+      bullets:
+      - "1. Ingestión reciente de alcohol"
+      - "2. Conducta desadaptativa o cambios psicológicos — conducta sexual o agresiva, ánimo inestable, juicio alterado, deterioro del funcionamiento social o laboral"
+      - "3. Al menos uno de: habla arrastrada, marcha inestable, incoordinación, estupor/coma, nistagmo, alteración de la atención o la memoria"
+      - "Síntomas no causados por otras afecciones médicas o trastornos mentales"
+    - type: "content"
+      title: "Manejo"
+      bullets:
+      - "Monitorice, mantenga el ABC"
+      - "Controle los signos vitales (PA, FC, FR, spO2, Temp, peso)"
+      - "Evalúe la GCS y el estado de hidratación"
+      - "Coloque 2 vías IV, inicie oxígeno si la spO2 < 90%"
+    - type: "content"
+      title: "Cuidados continuos"
+      bullets:
+      - "Posición lateral"
+      - "Vigile los vómitos y la aspiración"
+      - "Hidratación IV si es necesario"
+    convergence:
+      text: "¿Sospecha de algo más que una intoxicación alcohólica?"
+      shape: "diamond"
+      bullets:
+      - text: "Siga el [protocolo de alteración del estado mental](topic:pb-altered-mental-status)"
+      - text: "Considere glucosa, panel metabólico básico, magnesio, lipasa, pruebas de función hepática"

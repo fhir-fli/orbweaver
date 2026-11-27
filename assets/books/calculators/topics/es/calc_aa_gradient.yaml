@@ -1,0 +1,33 @@
+# translated-from-sha256: 207a447debb78b60d1c94dc34de0eded29579774ff9fc6c7a3ba60c08a7c9353
+topic:
+  id: "calc-aa-gradient"
+  title: "Gradiente alveoloarterial de oxígeno"
+  list_subtitle: "gradiente alveoloarterial de O₂"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["a-a", "gradiente aa", "oxígeno", "alveolar", "arterial", "hipoxemia", "gasometría", "pao2", "cortocircuito"]
+  aliases:
+  - "Gradiente A-a"
+  - "Gradiente alveoloarterial"
+  - "Gradiente Aa"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      El gradiente alveoloarterial de oxígeno a partir de una gasometría arterial. Un
+      gradiente elevado indica alteración V/Q, cortocircuito o limitación de la difusión
+      (frente a hipoventilación / FiO₂ baja, en las que el gradiente es normal).
+  - type: "formula"
+    kind: "aa_gradient"
+    title: "Gradiente A–a"
+    source: "PAO₂ = FiO₂×(Patm − 47) − PaCO₂/0.8; A–a = PAO₂ − PaO₂"
+    inputs:
+    - {key: "fio2", label: "FiO₂", unit: "%", type: "number", default: 21, help: "21 = aire ambiente"}
+    - {key: "paco2", label: "PaCO₂", unit: "mmHg", type: "number"}
+    - {key: "pao2", label: "PaO₂", unit: "mmHg", type: "number"}
+    - {key: "age", label: "Edad", unit: "yr", type: "number", optional: true, help: "para el valor normal ajustado por edad"}
+    - {key: "patm", label: "P atmosférica", unit: "mmHg", type: "number", optional: true, help: "760 a nivel del mar; menor en altitud"}
+    notes:
+    - "Límite superior normal ajustado por edad ≈ (edad / 4) + 4 mmHg."
+    - "Valores por defecto: Patm 760 mmHg (nivel del mar), vapor de agua 47 mmHg, cociente respiratorio 0.8."
+    caveats:
+    - "En altitud, introduzca la presión atmosférica local — de lo contrario, el valor por defecto a nivel del mar (760 mmHg) sobrestima la PAO₂ y el gradiente."

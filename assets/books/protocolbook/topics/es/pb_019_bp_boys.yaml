@@ -1,0 +1,18 @@
+# translated-from-sha256: 0b9b6f30e24d9ca3bb726554f98381c60ddfcbd95e90c7d5c6e2c7bad07aa031
+topic:
+  id: "pb-bp-boys"
+  title: "Niños — PA según talla"
+  list_subtitle: "p.19 · gráfica (toque para ampliar)"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pediátrico", "presión_arterial", "niños", "referencia"]
+  category: "universal"
+  page_number: 19
+  blocks:
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_bp_boys_sbp.png"
+    caption: "Niños — PA sistólica según talla"
+    size: "full"
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_bp_boys_dbp.png"
+    caption: "Niños — PA diastólica según talla"
+    size: "full"

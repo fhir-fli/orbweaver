@@ -1,0 +1,265 @@
+# translated-from-sha256: c32cea6a557f487a5b0dfd8cc94c3033d3511b78ea3a01b00de0df449ff93e4f
+topic:
+  id: "pb-im-tb"
+  title: "Tuberculosis del adulto"
+  list_subtitle: "pp.128–129 · diagnóstico · pauta RHZE"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["tuberculosis", "TB", "adulto", "rifampicina", "isoniazida", "pirazinamida", "etambutol", "RHZE", "DFC", "GeneXpert", "baciloscopia", "TB-MDR", "piridoxina", "esputo", "medicina interna", "enfermedades infecciosas"]
+  category: "medical"
+  pages:
+  - page_number: 128
+    blocks:
+    - type: "prose"
+      title: "Considere la tuberculosis ante lo siguiente"
+      markdown: |
+        - Tos crónica (> 2–3 semanas)
+        - Fiebre crónica (> 2–3 semanas)
+        - Neumonía que no mejora con tratamiento
+        - Emaciación
+        - Adenopatías (grandes, indoloras)
+        - Ascitis
+        - Insuficiencia cardíaca / derrame pericárdico
+        - Negativa a flexionar una articulación dolorosa
+        - Irritabilidad, signos meníngeos
+        - Hematuria, piuria estéril
+        - Contacto cercano con alguien con TB en los últimos 2 años
+    - type: "prose"
+      title: "Diagnóstico — inicie el estudio si hay alguno"
+      markdown: |
+        - Tos > 2 semanas
+        - Otros síntomas respiratorios inexplicados > 2 semanas
+        - Neumonía adquirida en la comunidad que no responde tras 7 días de tratamiento
+        - Alta sospecha clínica por la historia o la exploración
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Estudio de TB"
+        shape: "stadium"
+      boxes:
+      - id: "sputum"
+        title: "Pruebas de esputo"
+        bullets:
+        - "Si está disponible, haga Gene Xpert en 1 muestra de esputo"
+        - "Si no, 3 muestras de esputo para baciloscopia (BAAR)"
+      stages:
+      - decision: "¿VIH?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "VIH positivo — use la vía de VIH de abajo y luego vuelva aquí"
+            severity: "priority"
+            bullets:
+            - "Xpert MTB/RIF (o Ultra) en cualquier esputo que pueda obtenerse — también informa la resistencia a rifampicina"
+            - "LF-LAM en orina EN PARALELO — no espere al esputo"
+            - "Radiografía de tórax (a menudo atípica o normal en el VIH avanzado) ± ecografía abdominal"
+            - "Si todo es negativo pero persiste la sospecha — trate de forma empírica, sobre todo con CD4 bajos"
+        - label: "No"
+          continue: true
+      - decision: "¿Hay radiografía de tórax y sugiere TB?"
+        criteria:
+        - "Si no hay radiografía, pase directamente a las pruebas de esputo"
+        outcomes:
+        - label: "No disponible, o disponible y sugestiva"
+          goto: "sputum"
+          continue: true
+        - label: "Disponible pero no sugestiva"
+          box:
+            title: "Considere otra etiología"
+      - decision: "¿TB farmacorresistente? Sospéchela si hay CUALQUIERA de estos"
+        criteria:
+        - "Xpert informa RESISTENCIA A RIFAMPICINA — es el marcador de la TB-MDR"
+        - "Tratamiento previo de TB — recaída, fracaso o abandono/retratamiento"
+        - "Contacto conocido con un caso de TB farmacorresistente o TB-MDR"
+        - "Sin mejoría clínica, o sin conversión del esputo, a los 2–3 meses de tratamiento de primera línea"
+        - "VIH en un entorno de alta prevalencia de MDR"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "NO inicie la pauta estándar 2RHZE — actúe ya y luego consulte"
+            severity: "emergency"
+            bullets:
+            - "No dé una pauta basada en rifampicina; organice una pauta oral recomendada por la OMS para TB resistente a rifampicina basada en bedaquilina"
+            - "Envíe una muestra para pruebas de confirmación y ampliadas — sensibilidad a fluoroquinolonas, cultivo/PSF o Xpert MTB/XDR. Alrededor del 5% de las mutaciones de rpoB quedan fuera de la región diana, así que confírmelo"
+            - "Control de la infección aérea INMEDIATO — separe al paciente, mascarilla, ventile. La transmisión es el peligro principal"
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Inicie el tratamiento"
+        bullets:
+        - "Pase a la página de tratamiento"
+    - type: "prose"
+      title: "TB en el VIH — la vía a la que remite el algoritmo"
+      markdown: |
+        **Cribado:** el cribado de cuatro síntomas de la OMS — tos, fiebre, sudores nocturnos,
+        pérdida de peso. **En el VIH avanzado, haga la prueba con o sin síntomas.**
+
+        **Haga las pruebas en paralelo, no en secuencia** — Xpert en esputo **más** LF-LAM en orina
+        juntos dan el mayor rendimiento (~71–73% en pacientes ingresados) y funcionan bien incluso
+        con CD4 por debajo de 100. **Trate con el primer resultado positivo.**
+
+        **LF-LAM en orina — quién cumple los criterios:**
+        - **Pacientes ingresados:** signos o síntomas de TB, **o** enfermedad avanzada por VIH (CD4 < 200 o estadio 3–4 de la OMS), **o** gravemente enfermos (FR > 30, temp > 39 °C, FC > 120, o incapaces de caminar sin ayuda)
+        - **Pacientes ambulatorios:** signos o síntomas de TB y gravemente enfermos, **o** CD4 < 100, **o** un evento de estadio 3–4 de la OMS
+    - type: "prose"
+      title: "Momento del TAR y cotrimoxazol"
+      callout: true
+      markdown: |
+        Inicie **primero** el tratamiento de la TB, luego el TAR:
+        - **CD4 < 50 → inicie el TAR en 2 semanas**
+        - **CD4 ≥ 50 → inicie el TAR antes de 8 semanas**
+        - 🛑 **La meningitis tuberculosa es la excepción — retrase el TAR a las 4–8 semanas**, porque el
+          TAR precoz aumenta los eventos adversos graves sin beneficio en la supervivencia
+
+        **Inicie la profilaxis con cotrimoxazol junto con el tratamiento de la TB** — 
+        reduce la mortalidad en las personas con VIH. Siga las guías nacionales/de la OMS sobre la duración.
+
+        La pauta estándar **2RHZE/4RH** no cambia en el VIH, pero **hay que conservar la
+        rifampicina** — evite la dosificación intermitente, y maneje las interacciones
+        rifamicina–TAR. Algunas formas extrapulmonares necesitan más tiempo.
+  - page_number: 129
+    blocks:
+    - type: "prose"
+      title: "Tratamiento — compruebe primero la función hepática"
+      markdown: |
+        Compruebe las PFH antes de empezar.
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Compruebe las PFH"
+        shape: "stadium"
+      stages:
+      - decision: "¿ALT > 3 × el límite superior normal?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Consulte con un médico de mayor rango una posible pauta alternativa"
+        - label: "No"
+          continue: true
+      - decision: "¿PFH alteradas pero ALT < 3 × el límite superior normal?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Repita las PFH cada mes"
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Inicie la pauta de abajo"
+    - type: "prose"
+      title: "Primeros 2 meses (fase intensiva) — dosis diaria"
+      markdown: |
+        - Rifampicina (R) 10 mg/kg
+        - Isoniazida (H) 5 mg/kg
+        - Pirazinamida (Z) 25 mg/kg
+        - Etambutol (E) 15 mg/kg
+    - type: "table"
+      columns: ["Peso antes del tratamiento", "DFC RHZE 150/75/400/275"]
+      column_flex: [5, 6]
+      column_align: ["left", "center"]
+      rows:
+      - cells: ["30–37 kg", "2 tabletas"]
+      - cells: ["38–54 kg", "3 tabletas"]
+      - cells: ["55–70 kg", "4 tabletas"]
+      - cells: ["> 70 kg", "5 tabletas"]
+    - type: "prose"
+      markdown: |
+        **Nota:** debe darse piridoxina 25 mg VO al día durante todo el tratamiento.
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "¿Corticoides complementarios?"
+        shape: "stadium"
+      stages:
+      - decision: "¿Hay alguno de los siguientes?"
+        criteria:
+        - "MENINGITIS TUBERCULOSA — la única indicación con sólido respaldo de las guías"
+        - "TB pulmonar con dificultad respiratoria"
+        - "TB pulmonar con obstrucción de la vía aérea por ganglios hiliares"
+        - "TB miliar grave"
+        - "Derrame pericárdico — SOLO VIH NEGATIVO (vea la advertencia de abajo)"
+        outcomes:
+        - label: "Sí — meningitis tuberculosa"
+          box:
+            title: "Dexametasona (preferida a la prednisolona)"
+            severity: "priority"
+            bullets:
+            - "Dosis del ADULTO: 0.4 mg/kg/día IV en la enfermedad de grado II/III, 0.3 mg/kg/día en el grado I. Los niños reciben 0.6 mg/kg/día — la diferencia es la edad, no un desacuerdo"
+            - "Reduzca la dosis IV 0.1 mg/kg/día cada semana durante 4 semanas, luego pase a vía oral y reduzca 1 mg/semana durante 4 semanas — 6–8 semanas en total (3+3 semanas en el grado I)"
+            - "Sigue recomendada en pacientes VIH positivos — confirmado por el ensayo ACT HIV de 2023"
+        - label: "Sí — las otras indicaciones"
+          box:
+            title: "Corticoides según criterio clínico"
+            bullets:
+            - "Dificultad respiratoria, compresión de la vía aérea por ganglios hiliares, TB miliar grave — evidencia de menor grado; use su criterio en lugar de una pauta fija"
+            - "Una sola pauta no sirve para las cinco indicaciones, y la dosis en la meningitis es por peso, no 60 mg fijos"
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Continúe con la fase de continuación"
+    - type: "prose"
+      title: "🛑 Pericarditis tuberculosa — NO dé corticoides si es VIH positivo"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        - **VIH positivo: no recomendado.** En el ensayo IMPI (n = 1400) la prednisolona
+          no redujo la muerte, el taponamiento ni la constricción, y se asoció a una
+          **incidencia significativamente mayor de neoplasias asociadas al VIH, sobre todo
+          sarcoma de Kaposi.**
+        - **VIH negativo: opcional**, sobre todo para reducir la constricción — la evidencia es
+          débil y no es de rutina.
+
+        El libro listaba antes "derrame pericárdico" para corticoides sin matiz sobre
+        el VIH.
+    - type: "prose"
+      title: "Fase de continuación (tras 2 meses)"
+      markdown: |
+        - La TB cerebral requiere 10 meses más (12 meses en total, 2RHZE/10RH)
+        - La TB pulmonar requiere 4 meses más (6 meses en total, 2RHZE/4RH)
+        - Baciloscopia de esputo:
+          - Si es positiva, repita a los 3 meses
+          - Si sigue positiva a los 3 meses, repita las sensibilidades
+    - type: "table"
+      columns: ["Peso antes del tratamiento", "RH 150/75", "RH 300/150"]
+      column_flex: [4, 4, 4]
+      column_align: ["left", "center", "center"]
+      rows:
+      - cells: ["30–37 kg", "2 tabletas", "—"]
+      - cells: ["38–54 kg", "3 tabletas", "—"]
+      - cells: ["55–70 kg", "—", "2 tabletas"]
+      - cells: ["> 70 kg", "—", "2 tabletas"]
+    - type: "prose"
+      markdown: |
+        **Concilie estos números con la DFC que realmente haya en existencia.** Las concentraciones de las tabletas de RH
+        varían entre programas nacionales, y algunas tablas usan otro número o una
+        cuarta franja por encima de 70 kg. Las franjas de la fase intensiva (2/3/4/5 de RHZE
+        150/75/400/275) son las estándar de la OMS.
+    - type: "prose"
+      markdown: |
+        **Control de las PFH:** si hay dolor hepático a la palpación, hepatomegalia o ictericia, repita las PFH.
+
+        **El umbral para suspender depende de los síntomas:**
+        - **Asintomático → suspenda con ALT ≥ 5 × límite superior normal**
+        - **Sintomático** (náuseas, vómitos, dolor en hipocondrio derecho, ictericia) **→ suspenda con ALT ≥ 3 × LSN**
+        - 🛑 **La combinación más peligrosa de esta página: ALT ≥ 3 × LSN CON bilirrubina > 2 × LSN — suspenda, haya o no síntomas.** Es territorio de la ley de Hy y conlleva el mayor riesgo de lesión hepática mortal por fármacos
+
+        El umbral basal (3 × LSN) es más bajo que el umbral asintomático durante el tratamiento
+        (5 × LSN) a propósito: una elevación leve de transaminasas ocurre en el 5–30% de los pacientes en
+        tratamiento y suele ser transitoria, así que un umbral más alto evita interrupciones
+        innecesarias — mientras que al inicio el umbral más bajo señala una hepatopatía previa.
+
+        **Reintroducción cuando la ALT se haya normalizado — un fármaco cada vez:**
+        1. **Rifampicina primero** (la menos hepatotóxica, la más importante de mantener) ± etambutol
+        2. **Isoniazida** tras aproximadamente una semana si la ALT está estable
+        3. **Pirazinamida al final**, aproximadamente una semana después — u **omítala definitivamente** si la
+           hepatitis fue grave, prolongando el tratamiento a 9 meses
+
+        **El orden varía entre guías.** Esta secuencia sigue a ATS/IDSA
+        (rifamicina primero). La OMS y muchos programas nacionales reintroducen **primero la isoniazida,
+        luego la rifampicina, luego la pirazinamida**. **Cualquiera es aceptable**, siempre que
+        los fármacos se añadan **de uno en uno con PFH comprobadas antes de cada adición**.
+
+        En la TB grave, cubra el intervalo con una **pauta puente no hepatotóxica**
+        (etambutol + una fluoroquinolona ± un aminoglucósido o linezolid). Vigile la ALT
+        con frecuencia y **suspenda el último fármaco añadido** si sube la ALT o reaparecen los síntomas.

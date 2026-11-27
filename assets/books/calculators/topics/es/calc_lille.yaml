@@ -1,0 +1,33 @@
+# translated-from-sha256: 24ed8110947222f412c297395e559dce090dcc5dec545da01a88b04e55e2cc03
+topic:
+  id: "calc-lille"
+  title: "Modelo de Lille"
+  list_subtitle: "respuesta a esteroides en la hepatitis alcohólica"
+  last_reviewed: "Evidence review 2026-07-19 · Louvet 2007 · AASLD 2020"
+  tags: ["lille", "hepatitis alcohólica", "esteroide", "corticosteroide", "respuesta", "hígado", "hepatología"]
+  aliases:
+  - "Modelo de Lille"
+  - "Puntuación de Lille"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Tras ~7 días de corticosteroides por hepatitis asociada al alcohol grave,
+      la puntuación de Lille identifica a los no respondedores, que deben suspender
+      los esteroides. Use los valores basales (día 0) para todo excepto la bilirrubina
+      del día 7.
+  - type: "formula"
+    kind: "lille"
+    title: "Puntuación de Lille"
+    source: "Louvet et al., Hepatology 2007"
+    inputs:
+    - {key: "age", label: "Edad", unit: "yr", type: "number"}
+    - {key: "albumin", label: "Albúmina (día 0)", unit: "g/dL", type: "number"}
+    - {key: "bilirubin_day0", label: "Bilirrubina (día 0)", unit: "mg/dL", type: "number"}
+    - {key: "bilirubin_day7", label: "Bilirrubina (día 7)", unit: "mg/dL", type: "number"}
+    - {key: "creatinine", label: "Creatinina (día 0)", unit: "mg/dL", type: "number", help: "> 1.3 cuenta como insuficiencia renal"}
+    - {key: "pt", label: "Tiempo de protrombina", unit: "sec", type: "number"}
+    notes:
+    - "La puntuación va de 0 a 1; ≥ 0.45 = no respondedor (supervivencia a 6 meses mala). Se evalúa el día 7 de esteroides (el día 4 es una lectura precoz aceptable)."
+    caveats:
+    - "Solo tiene sentido en un paciente que ya recibe corticosteroides por hepatitis asociada al alcohol grave (p. ej., Maddrey ≥ 32 o MELD > 20)."

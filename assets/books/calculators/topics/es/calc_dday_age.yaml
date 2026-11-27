@@ -1,0 +1,27 @@
+# translated-from-sha256: a6e3e022b89599d44b3dd041f28f72feee247a2599799edc2384d950c0f26c1b
+topic:
+  id: "calc-dday-age"
+  title: "Dímero D ajustado por edad"
+  list_subtitle: "punto de corte para excluir ETV"
+  last_reviewed: "Evidence review 2026-07-19 · ADJUST-PE 2014 · ESC 2019"
+  tags: ["dímero d", "ajustado por edad", "etv", "tep", "tvp", "punto de corte", "exclusión"]
+  aliases:
+  - "Dímero D ajustado por edad"
+  - "Punto de corte del dímero D"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      El punto de corte del dímero D ajustado por edad para excluir ETV en pacientes mayores.
+      Introduzca la edad (y, si lo desea, el dímero D medido para interpretarlo).
+  - type: "formula"
+    kind: "dday_age"
+    title: "Dímero D ajustado por edad"
+    source: "Righini et al. (ADJUST-PE), JAMA 2014; guía de TEP de la ESC 2019"
+    inputs:
+    - {key: "age", label: "Edad", unit: "yr", type: "number"}
+    - {key: "measured", label: "Dímero D medido", unit: "µg/L FEU", type: "number", optional: true}
+    notes:
+    - "Punto de corte = edad × 10 µg/L (FEU) si la edad es > 50; si no, el convencional de 500."
+    caveats:
+    - "Válido solo con probabilidad pretest BAJA o INTERMEDIA (no alta). Supone un ensayo en unidades equivalentes de fibrinógeno (FEU) — compruebe las unidades/referencia de su laboratorio."

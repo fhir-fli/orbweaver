@@ -1,0 +1,40 @@
+# translated-from-sha256: 98211e636240f7244a211022a061f0ffa63091e2f0e2c20406f2c27be038556c
+topic:
+  id: "pb-pain-flacc"
+  title: "Dolor — r-FLACC (2 meses – 7 años)"
+  list_subtitle: "p.78 · Cara · Piernas · Actividad · Llanto · Consuelo"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["dolor", "manejo del dolor", "FLACC", "r-FLACC", "cara piernas actividad llanto consuelo", "pediátrico", "escala de dolor"]
+  category: "medical"
+  page_number: 78
+  blocks:
+  - type: "prose"
+    markdown: |
+      Escala FLACC revisada (Face — cara, Legs — piernas, Activity — actividad, Cry — llanto, Consolability — consuelo) — para niños de **2 meses a 7 años**. Sume las cinco categorías para una puntuación total de 0–10; vea [puntuación y escalera analgésica de la OMS](topic:pb-pain-ladder).
+  - type: "table"
+    title: "Escala r-FLACC"
+    zebra: true
+    columns: ["Hallazgo", "Puntos"]
+    column_flex: [8, 2]
+    column_align: ["left", "center"]
+    rows:
+    - cells: [{text: "**Cara**", span: 2}]
+    - cells: ["Sin expresión particular o sonrisa", "0"]
+    - cells: ["Mueca o ceño fruncido ocasional, retraído o desinteresado; parece triste o preocupado", "1"]
+    - cells: ["Mueca o ceño fruncido constante; temblor del mentón frecuente / constante; mandíbula apretada; cara de angustia; expresión de miedo o pánico", "2"]
+    - cells: [{text: "**Piernas**", span: 2}]
+    - cells: ["Posición normal o relajadas; tono y movimiento habituales de las extremidades", "0"]
+    - cells: ["Incómodo, inquieto, tenso; temblores ocasionales", "1"]
+    - cells: ["Patea, o piernas encogidas; aumento marcado de la espasticidad; temblores o sacudidas constantes", "2"]
+    - cells: [{text: "**Actividad**", span: 2}]
+    - cells: ["Acostado tranquilo, posición normal, se mueve con facilidad, respiración regular y rítmica", "0"]
+    - cells: ["Se retuerce, se mueve adelante / atrás, movimientos tensos o protectores, levemente agitado, respiración superficial con defensa, suspiros intermitentes", "1"]
+    - cells: ["Arqueado, rígido o con sacudidas, agitación intensa, golpes con la cabeza, tiritona, contiene la respiración, jadeo o inspiraciones bruscas, defensa intensa", "2"]
+    - cells: [{text: "**Llanto**", span: 2}]
+    - cells: ["Sin llanto / sin verbalización", "0"]
+    - cells: ["Se queja o gimotea, protestas ocasionales, arrebato verbal o gruñido ocasional", "1"]
+    - cells: ["Llora sin parar, grita o solloza, protestas frecuentes, arrebatos repetidos, gruñidos constantes", "2"]
+    - cells: [{text: "**Consuelo**", span: 2}]
+    - cells: ["Contento o relajado", "0"]
+    - cells: ["Se tranquiliza con contacto, abrazos o que le hablen de vez en cuando; se le puede distraer", "1"]
+    - cells: ["Difícil de consolar o calmar; aparta al cuidador; se resiste a los cuidados o a las medidas de confort", "2"]

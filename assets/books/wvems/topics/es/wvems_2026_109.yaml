@@ -1,0 +1,264 @@
+# translated-from-sha256: 3071e41dcd704b41d268dd8d4e6123f7ebebd90f9c32f0ab1711fab05e8b6766
+topic:
+  id: "wvems-2026-109"
+  version: "v260101"
+  title: "Políticas"
+  list_subtitle: "2026-109 · políticas operativas"
+  last_reviewed: "Dec 2025"
+  tags: ["políticas", "operaciones", "rechazo", "terminación", "destino", "ivm", "maltrato"]
+  aliases:
+  - "Políticas operativas"
+  - "Rechazos"
+  - "Terminación"
+  - "Destino"
+  - "IVM"
+  category: "critical_care"
+  page_number: 109
+  blocks:
+  - type: "prose"
+    title: "Políticas"
+    highlight: true
+    markdown: |
+      Políticas operativas de WVEMS (pp.110-117): denuncia de maltrato, autoridad
+      en la escena, no iniciar/terminar la reanimación, dispositivos cardíacos
+      avanzados, guardias preventivas y policía, rechazos, triaje de destino,
+      y fallecidos/IVM. **Llame a control médico ante cualquier conflicto.**
+  - type: "prose"
+    title: "Maltrato y negligencia del paciente"
+    anchor: "patient-abuse-and-neglect"
+    markdown: |
+      - El maltrato es cualquier lesión física, sexual y/o mental de cualquier **niño, pareja, persona mayor o adulto incapacitado** causada por otra persona por acción u omisión — a manos de una pareja, padre o madre, cuidador, cónyuge, vecino o hijo adulto. El SEM tiene **obligación de denunciar** según el Código de Virginia (**22 VAC 30-100-15**).
+      - Tenga presente la posibilidad de maltrato en **todos** los pacientes. Cuando se sospeche maltrato, primero **proteja al equipo del SEM** y al paciente. Reúna toda la información posible y conserve las pruebas físicas si puede. Los signos pueden incluir:
+        - **Físicos**: lesiones que no concuerdan con el mecanismo referido, lesiones en distintas fases de curación, lesiones defensivas (p. ej., en los antebrazos) o lesiones durante el embarazo
+        - **Psicológicos**: pasividad excesiva, conducta sumisa/temerosa, agresividad excesiva, tendencias violentas, llanto excesivo, trastornos de conducta, abuso de sustancias o incumplimiento de la medicación
+        - **Negligencia**: ropa inadecuada para el clima, higiene insuficiente, cuidador desatento o desnutrición
+      - Notifique de inmediato los hallazgos sospechosos al hospital receptor (si se traslada) y a los servicios sociales y/o la policía:
+        - **Adultos** — Servicios de Protección de Adultos **888-832-3858**
+        - Sospecha de **trata de personas** — avise a la policía; Línea Nacional contra la Trata **888-373-7888**
+        - **Violencia doméstica** — ofrezca la intervención policial; Línea Nacional **800-799-SAFE**
+        - **Niños** — Servicios de Protección de Menores **800-552-7096**
+  - type: "prose"
+    title: "Abandono de lactantes"
+    callout: true
+    markdown: |
+      El Código de Virginia (**§18.2-371.1 B.2**) **permite** que un padre o madre
+      reciente **entregue a su recién nacido** a un hospital o a una agencia del SEM en determinadas
+      circunstancias. Los proveedores del SEM deben **aceptarlo sin dudar**,
+      valorarlo y trasladar a cualquier lactante que se les entregue.
+  - type: "prose"
+    title: "Verificación del personal en la escena"
+    anchor: "verification-of-on-scene-personnel"
+    markdown: |
+      - La atención prehospitalaria es responsabilidad de los **recursos del SEM que responden**. Se puede contar con los testigos cuando las necesidades inmediatas superan los recursos del SEM disponibles, o si un testigo aporta un recurso único. El SEM nunca debe autorizar ni realizar ninguna intervención fuera de su competencia **o de su nivel de conocimiento/comodidad**.
+      - Los testigos pueden tener un conocimiento único de una **afección o dispositivo médico** especializado (trabajadores sociales/asistentes del paciente, profesionales de salud mental, un cuidador que maneja un ventilador domiciliario, un paciente con LVAD, etc.). El SEM debe llamar a **control médico** ante cualquier orden de apartarse de la atención habitual del SEM.
+      - Los **procedimientos de SVB** se enseñan a menudo como primeros auxilios comunes. Los testigos apropiados pueden ayudar cuando los recursos del SEM son insuficientes — el SEM debe dirigirlos y mantener la responsabilidad general.
+      - Las **intervenciones de SVA** solo son apropiadas por los recursos de SVA que responden. Primero debe existir un acuerdo formal de ayuda mutua o una autorización de **control médico**. El SEM no tiene autoridad para habilitar a personal sanitario ajeno al SEM (enfermero, NP, PA, CRNA, terapeuta respiratorio, etc.) a realizar intervenciones de SVA.
+  - type: "prose"
+    title: "Órdenes médicas"
+    markdown: |
+      - Los médicos representan un recurso único. El SEM puede seguir órdenes escritas o verbales del médico habitual del paciente, y órdenes verbales **apropiadas** de un médico testigo en la escena. El SEM solo debe considerar órdenes verbales fuera de estos protocolos **si el médico testigo acompaña al SEM** al hospital. Llame a **control médico** si hay cualquier conflicto.
+  - type: "prose"
+    title: "No iniciar la reanimación"
+    markdown: |
+      - La reanimación no es apropiada si los esfuerzos son inútiles o contrarios a los deseos explícitos del paciente. **No inicie la reanimación** si hay cualquier signo de [muerte evidente](topic:wvems-2026-024), [lesión mortal](topic:wvems-2026-052), o si el paciente tiene un **DNR / POST**.
+      - Pregunte por un DNR / POST en cualquier paciente de **cuidados paliativos o residencia de ancianos**.
+      - El SEM debe intentar validar cualquier DNR / POST con la familia o el personal sanitario. Inicie la reanimación y llame a **control médico** si hay cualquier duda; el SEM puede detener la reanimación una vez verificado.
+  - type: "prose"
+    title: "Terminación de la reanimación"
+    anchor: "termination-of-resuscitation"
+    markdown: |
+      - El traslado durante la reanimación no es óptimo y expone a los equipos a un riesgo importante. Esta política equilibra el posible beneficio de una reanimación prolongada frente a los riesgos del traslado urgente.
+      - **Priorice el traslado en cualquier caso especial.** Si intenta la reanimación, los casos especiales pueden beneficiarse de recursos no disponibles en el terreno — priorice las compresiones y el DEA y traslade cuanto antes.
+      - {I} **SVA**: reanime en la escena en los casos no especiales. Llame a **control médico** si no hay RCE **en 30 min**.
+      - {E} **SVB**: intente transferir la atención al SVA (o a un hospital) en 15 min. **Priorice el traslado si hay un hospital a menos de 15 min.** Una reanimación prolongada de SVB más allá de 15 min aún puede tener éxito si el paro fue **presenciado por el SEM** o si el DEA aconsejó alguna descarga — priorice el traslado en esos casos sin importar el tiempo. Llame a **control médico** si no fue presenciado por el SEM, no hubo descarga y no hay SVA tras 15 min.
+  - type: "prose"
+    title: "Casos especiales (priorice el traslado)"
+    boxed: true
+    markdown: |
+      - Sospecha de **causa traumática**
+      - Pacientes **pediátricas** o **embarazadas**
+      - **Hipotermia** o **ahogamiento**
+      - **Rayo** o **descarga eléctrica**
+      - **Sobredosis** o **envenenamiento**
+  - type: "prose"
+    title: "Criterios de terminación de SVA"
+    boxed: true
+    markdown: |
+      - No es un **caso especial**
+      - Sin RCE en **30 min**
+  - type: "prose"
+    title: "Criterios de terminación de SVB"
+    boxed: true
+    markdown: |
+      - No es un **caso especial**
+      - No presenciado por el SEM
+      - Nunca hubo descarga del DEA
+      - Sin SVA en **15 min**
+      - Sin RCE en **15 min**
+  - type: "prose"
+    title: "Dispositivos cardíacos avanzados"
+    anchor: "advanced-cardiac-devices"
+    markdown: |
+      - El SEM puede encontrarse ocasionalmente con dispositivos poco comunes como:
+        - Desfibrilador portátil (p. ej., **ZOLL® LifeVest**)
+        - Balón de contrapulsación intraaórtico (**IABP**)
+        - Marcapasos transvenoso (**TVP**)
+        - Dispositivo de asistencia ventricular izquierda (**LVAD**)
+      - **Lleve todos los suministros del dispositivo** y la documentación a urgencias.
+        - **Lleve todas las baterías**, cables, documentación y tarjetas de cartera.
+        - Considere el [triaje de destino](#destination-triage) en consulta con **control médico**.
+      - Diagnosticar los problemas del dispositivo es complejo.
+        - **No desenchufe ni retire nada.**
+        - Ante la duda, siga los protocolos habituales.
+        - Llame a **control médico** ante cualquier duda.
+        - Tenga en cuenta los consejos del paciente y de cualquier testigo formado.
+        - Algunos dispositivos pueden dar **indicaciones de voz** para resolver problemas.
+      - El manejo rutinario de estos dispositivos está **fuera de la competencia** del SEM — la vida del paciente depende literalmente de ellos.
+  - type: "prose"
+    title: "Dispositivos de asistencia ventricular izquierda (LVAD)"
+    markdown: |
+      - Todo paciente con **LVAD** tendrá asignado un "**centro de LVAD**."
+        - El paciente debería tener el número de teléfono de contacto de emergencia.
+        - El SEM puede intentar **contactar con el centro de LVAD** ante cualquier problema.
+        - Llame a **control médico** para verificar cualquier recomendación.
+      - Los pacientes con LVAD pueden estar vivos y bien **sin pulso palpable**.
+        - Puede ser imposible palpar o auscultar una presión arterial.
+        - No inicie RCP en pacientes que están claramente vivos y bien.
+      - Un LVAD puede hacer muy difícil el [diagnóstico del paro](topic:wvems-2026-109#termination-of-resuscitation).
+        - Busque otros signos de vida y escuche el ruido de la bomba.
+        - Las compresiones torácicas pueden dañar un dispositivo de asistencia ventricular.
+        - Tenga en cuenta los consejos de testigos formados o del centro de LVAD.
+        - Llame a **control médico cuanto antes ante cualquier paciente con LVAD inconsciente**.
+  - type: "prose"
+    title: "Guardias preventivas del SEM"
+    anchor: "ems-standbys"
+    markdown: |
+      - Se puede usar al SEM para una guardia preventiva en una escena sin un paciente concreto.
+      - El SEM debe completar un informe completo de cualquier paciente o tratamiento.
+        - Considere intervenciones sencillas como [analgésicos VO](topic:wvems-2026-020) y hielo.
+        - Documente un [rechazo](#patient-refusals) si algún paciente rechaza el traslado.
+  - type: "prose"
+    title: "Rehabilitación en la escena"
+    markdown: |
+      - El SEM puede proporcionar rehabilitación en **escenas grandes** como incendios de estructuras, etc.
+        - Esto puede incluir un cribado y/o tratamiento abreviados.
+        - La rehabilitación **solo se aplica a compañeros de primera respuesta**.
+      - El SEM debe coordinar toda la actividad con el mando del incidente.
+      - La rehabilitación estándar incluye un área específica dedicada a las **operaciones médicas**.
+        - La rehabilitación suele consistir en tomar signos vitales y una exploración sencilla.
+        - Dé líquidos y comida VO. Vigile hasta que vuelva a su estado basal.
+        - Un registro abreviado puede sustituir al informe completo.
+        - El mando del incidente decidirá quién puede volver tras la rehabilitación.
+  - type: "prose"
+    title: "Asistencia a la policía"
+    markdown: |
+      - Se puede llamar al SEM para valorar a un paciente bajo custodia.
+        - Ofrezca siempre el traslado. El SEM **nunca puede recomendar** un rechazo.
+        - El SEM puede dar tratamiento, pero no puede "dar el alta" a un paciente.
+        - Los agentes pueden decidir rechazar el traslado, pero deben firmar un rechazo.
+        - Los agentes deben acompañar a cualquier paciente bajo custodia.
+        - Llame a **control médico** si hay cualquier conflicto.
+      - El SEM puede retirar las sondas de un arma de electrochoque (**Taser™**) como parte del cuidado de la herida.
+        - El SEM debe documentar un informe completo.
+        - Los agentes pueden firmar un rechazo por una persona bajo su arresto.
+        - Las sondas son pequeñas púas rectas. Estire bien la piel y tire hacia fuera.
+        - La **púa está alineada con la marca** de la sonda.
+  - type: "prose"
+    title: "Rechazos del paciente"
+    anchor: "patient-refusals"
+    markdown: |
+      - Los rechazos representan un riesgo médico particular. El SEM debe completar un rechazo formal con **2 tomas de signos vitales** y **la firma de un testigo** para cualquier paciente que rechace cualquier intervención y/o el traslado.
+      - El SEM debe animar al tratamiento y al traslado a todo paciente.
+        - **Nunca niegue el traslado. Nunca anime a un rechazo.**
+      - Todo paciente que desee rechazar debe ser **apto** para tomar sus propias decisiones. Son pacientes aptos:
+        - Adultos legales (18 años o más)
+        - Menores (< 18 años) casados, divorciados o emancipados
+      - El Código de Virginia (**§54.1-2969 C,D**) permite a cualquier **menor de 14-17 años** dirigir su tratamiento **solo si no hay un responsable** razonablemente disponible — esto incluye la posibilidad de rechazar el tratamiento/traslado.
+      - El Código de Virginia (**§54.1-2969 G**) permite a las **menores embarazadas** dirigir su tratamiento **solo en lo relativo al parto de su bebé**.
+      - Un responsable (padre o madre, tutor, apoderado médico, etc.) puede tener la autoridad para rechazar en nombre de un paciente que no es apto por sí mismo.
+      - Todo paciente (o responsable) que desee rechazar también debe demostrar **capacidad** — despierto, orientado y capaz de demostrar que comprende los posibles riesgos.
+        - Los pacientes con alteración de la conciencia carecen de capacidad y no pueden rechazar.
+        - Los pacientes suicidas carecen de capacidad y no pueden rechazar.
+      - Llame a **control médico** y pida ayuda a la policía ante cualquier paciente que intente rechazar pero no deba permitírsele.
+  - type: "prose"
+    title: "¿Quién es un paciente?"
+    markdown: |
+      - Toda persona para la que se haya llamado específicamente al SEM debe considerarse un paciente. Todo paciente debe tener un informe completo con un traslado o un rechazo documentado.
+      - No toda persona en la escena tiene que considerarse un paciente. El SEM no está obligado a documentar un rechazo de una persona que declina la valoración del SEM, **y** actúa con normalidad sin malestar evidente, **y** para la que no se llamó específicamente al SEM.
+        - Debe documentarse un rechazo si hay cualquier duda.
+  - type: "prose"
+    title: "Plan de triaje de destino"
+    anchor: "destination-triage"
+    markdown: |
+      - En algunos casos concretos los pacientes pueden beneficiarse del triaje directo a un centro más apropiado. Considere saltarse el centro más cercano y alargar el tiempo de traslado **no más de 30 minutos** en caso de:
+        - **Necesidades urgentes** concretas: [IAMCEST](topic:wvems-2026-088), [ictus](topic:wvems-2026-044) por OGV o [traumatismo grave](topic:wvems-2026-056)
+        - Servicios especializados previstos (ortopedia, ginecología-obstetricia, pediatría, ORL, etc.)
+        - Médico ya establecido (cirugía reciente, oncología, diálisis, etc.)
+        - Estado del sistema (ocupación de la agencia, necesidad de ingreso, etc.)
+      - Considere el uso de **HEMS** en enfermedades críticas o traslados más largos.
+  - type: "prose"
+    title: "Triaje de destino"
+    highlight: true
+    markdown: |
+      ¿Hay un centro **alternativo** a **< 30 min** más de distancia? → **Puede saltarse el servicio de urgencias más cercano.**
+  - type: "prose"
+    title: "IAMCEST agudo con dolor torácico"
+    markdown: |
+      - Los adultos deben tener una presentación apropiada ([dolor torácico](topic:wvems-2026-028), etc.) y un ECG identificado como **\*\*\* ACUTE MI \*\*\*** por el análisis automático.
+      - {I} **SVA**: puede considerar una elevación del ST > 1 mm en 2 o más derivaciones contiguas.
+      - {P(CC)} **CC** (cuidados críticos): puede considerar criterios avanzados ([Sgarbossa](topic:wvems-2026-088), [posterior](topic:wvems-2026-088), etc.).
+      - Los hospitales cardíacos apropiados de WVEMS (con ICP urgente) incluyen:
+        - Carilion **Roanoke** y **New River Valley** y Centra **Lynchburg**
+        - Lewis Gale **Salem** y **Montgomery** y Sovah **Danville** y **Martinsville**
+  - type: "prose"
+    title: "Ictus agudo por oclusión de gran vaso (OGV)"
+    markdown: |
+      - Los pacientes deben tener una **última hora de normalidad menor de 6 h** definida y al menos un hallazgo positivo en la exploración de [Cincinnati](topic:wvems-2026-044) (FAST).
+      - También deben tener **caída del brazo** y al menos un hallazgo en la [escala VAN](topic:wvems-2026-044).
+      - Los hospitales de ictus apropiados de WVEMS (PSC, TSC o CSC) incluyen:
+        - Carilion **Roanoke** Memorial y Centra **Lynchburg** Baptist
+        - Lewis Gale **Salem** y Sovah **Danville** y Sovah **Martinsville**
+  - type: "prose"
+    title: "Traumatismo mayor o inestable"
+    markdown: |
+      - Los pacientes deben cumplir los criterios de triaje de trauma con **lesión mayor** y/o **mecanismo mayor** y/o **[quemaduras](topic:wvems-2026-070) mayores** > 20% de SCT.
+      - Los hospitales de trauma apropiados de WVEMS (nivel 1 o 2) incluyen:
+        - Carilion **Roanoke** y Lewis Gale **Salem** y Centra **Lynchburg**
+  - type: "prose"
+    title: "Personas fallecidas"
+    anchor: "deceased-subjects"
+    markdown: |
+      - El SEM puede encontrarse ocasionalmente con una persona fallecida.
+        - Mantenga el respeto por el fallecido y su familia.
+        - Implique siempre **a la policía**. Haga siempre **un informe completo**.
+      - Si no se intentó la reanimación:
+        - Considere toda persona fallecida como una posible **escena del crimen**.
+        - Limite las entradas/salidas del SEM y coordine con la policía.
+        - La policía puede pedir al SEM que confirme la muerte.
+      - Si se intentó la reanimación y después se terminó:
+        - **Control médico** ya debería estar implicado.
+        - No retire parches, electrodos, vías invasivas ni tubos.
+        - El SEM puede desconectar equipos como los cables del ECG y la BVM.
+        - Siga las indicaciones de la policía o del médico forense.
+      - En algunas situaciones la policía puede liberar el cuerpo.
+        - El SEM no debe trasladar al fallecido a urgencias.
+        - Una vez liberado el cuerpo, el SEM puede retirar vías, tubos, etc.
+        - El SEM puede ofrecer un traslado de cortesía a una funeraria.
+        - El traslado de cortesía no es obligatorio. Siga la política de la agencia.
+        - Informe a control médico de cualquier traslado de cortesía.
+      - **El SEM puede confirmar la muerte** de varias formas, entre ellas:
+        - Ausencia de pulso, respiración y respuesta.
+        - [Muerte evidente](topic:wvems-2026-024) o [lesión mortal](topic:wvems-2026-052).
+        - {I} **SVA**: asistolia en al menos dos derivaciones cardíacas con la ganancia del ECG al máximo.
+      - El SEM puede considerar ayudar con los últimos ritos si la familia lo pide.
+  - type: "prose"
+    title: "Incidente con víctimas múltiples (IVM)"
+    markdown: |
+      - **Pida más ayuda. Inicie un sistema estandarizado de triaje de IVM.**
+        - Hay varios sistemas descritos, como SALT y START.
+      - Haga el mayor bien al mayor número de personas hasta que llegue ayuda suficiente.
+        - Considere usar cualquier recurso disponible, como los testigos.
+        - Priorice las intervenciones que salvan vidas.
+        - El triaje y la priorización de la atención durante un IVM no son abandono.
+        - Considere el "triaje inverso" en un IVM por **caída de rayo**.
+      - **Avise al hospital receptor** (o a los hospitales) cuanto antes.

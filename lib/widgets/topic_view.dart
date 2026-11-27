@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/screens/topic_frame.dart' show TopicFrame;
 import 'package:orbweaver/theme/palette.dart';
@@ -235,7 +236,7 @@ class _PageBreak extends StatelessWidget {
           if (pageNumber != null) ...[
             const SizedBox(width: 10),
             Text(
-              'Page $pageNumber',
+              context.l10n.pageNumber('$pageNumber'),
               style: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,

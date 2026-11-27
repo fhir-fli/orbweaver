@@ -1,0 +1,140 @@
+# translated-from-sha256: d50d94ed8b3884c4800ce3181cf5a23591641fd25fce9b1bea75eb08d4ef80a8
+topic:
+  id: "wvems-2026-068"
+  version: "v260101"
+  title: "Frío / calor"
+  list_subtitle: "2026-068 · hipotermia / hipertermia / congelación"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "frío"
+  - "calor"
+  - "hipotermia"
+  - "hipertermia"
+  - "congelación"
+  - "golpe de calor"
+  - "traumatismo"
+  aliases:
+  - "Hipo/hipertermia"
+  - "Congelación leve/grave"
+  - "Golpe de calor"
+  - "SNM"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 68
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Sospecha de exposición"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "major_hypo"
+        label: "Hipotermia mayor"
+        criteria:
+        - "Dejó de tiritar"
+        - "Cianosis"
+        actions:
+        - text: "Calentamiento activo"
+          kind: "procedure"
+        - text: "Glucómetro"
+          kind: "diagnostic"
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Perfusión adecuada"
+        - "Conciencia normal"
+        actions:
+        - text: "Técnicas pasivas"
+          kind: "procedure"
+      - id: "major_hyper"
+        label: "Hipertermia mayor"
+        criteria:
+        - "Confuso"
+        - "Piel caliente"
+        actions:
+        - text: "Enfriamiento activo"
+          kind: "procedure"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Circulación (choque)](topic:wvems-2026-008)"
+        - text: "[Paro médico](topic:wvems-2026-024)"
+      dose_table:
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+    - type: "row"
+      blocks:
+      - type: "table"
+        title: "Calentamiento activo"
+        rows:
+        - cells: ["• Quite la ropa mojada y seque"]
+        - cells: ["• Compresas calientes en ingle / axilas"]
+        - cells: ["• O₂ y líquidos IV calentados"]
+      - type: "table"
+        title: "Enfriamiento activo"
+        rows:
+        - cells: ["• Ventilador, rociado de agua y/o baño de hielo"]
+        - cells: ["• Bolsas de hielo en ingle / axilas"]
+        - cells: ["• Líquidos VO, líquidos IV fríos"]
+  - page_number: 69
+    blocks:
+    - type: "prose"
+      title: "Imperativos de frío / calor"
+      highlight: true
+      markdown: |
+        - La **hipertermia** **no** es lo mismo que la [fiebre](topic:wvems-2026-016) por infección.
+          - Los fármacos para la [fiebre](topic:wvems-2026-016) empeoran la **hipertermia** y están contraindicados.
+        - La **confusión** es el sello de las urgencias **hipertérmicas** mayores.
+          - Enfríe de forma enérgica y activa a cualquiera que esté **caliente y confuso**.
+          - {A} Si tirita por el enfriamiento activo: **[Versed®](topic:wvems-2026-drug-reference#versed)** 2.5 mg IV/IO x1.
+        - La **reanimación** en la **hipotermia** mayor es un caso especial:
+          - La intervención más importante es el **recalentamiento activo**.
+          - Busque el pulso con cuidado. Si lo hay, será **muy débil**.
+          - Aplique **desfibrilación** y **fármacos de ACLS** como en el [paro médico](topic:wvems-2026-024) habitual.
+          - Llame a **control médico** antes de terminar la reanimación.
+        - **Proteja** las compresas calientes y de hielo. No las ponga directamente sobre la piel.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Las **técnicas pasivas** incluyen cambios de ropa y de entorno.
+        - Los termómetros especiales o los monitores de **temperatura central** pueden ayudar:
+          - La **hiper**termia mayor es probable por encima de 104°F (40°C).
+          - La **hipo**termia mayor es probable por debajo de 88°F (30°C).
+        - Algunas drogas también pueden causar **hipertermia**. El tratamiento es el mismo.
+        - Mover en exceso a los pacientes **hipotérmicos** puede causar **FV**.
+        - Inmovilice cualquier extremidad con **congelación** para limitar el movimiento (no la frote).
+          - Retrase el recalentamiento de la **congelación** si puede volver a congelarse.
+        - {E} **[Ibuprofeno](topic:wvems-2026-drug-reference#ibuprofen)** (Motrin®): dé 600 mg VO x1 en la **congelación**.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Los niños pequeños (y los ancianos/frágiles) se descompensan más rápido.
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Medscape Hypothermia — https://emedicine.medscape.com/article/770542 [Ver: 10/21]
+        - Medscape Heat Stroke — https://emedicine.medscape.com/article/166320 [Ver: 7/22]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 35
+
+        NEMSIS: 9914023, 9914025, 9914027, 9914029, 9914031

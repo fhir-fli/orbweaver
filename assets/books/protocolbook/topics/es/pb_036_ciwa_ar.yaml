@@ -1,0 +1,140 @@
+# translated-from-sha256: 3a8f8b79b67489b7cfd3b875b32864bb08a23e84a6cd214afc79f42c831224f9
+topic:
+  id: "pb-ciwa-ar"
+  title: "Escala CIWA-Ar"
+  list_subtitle: "p.36 · puntuación de la abstinencia"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ciwa", "ciwa-ar", "alcohol", "abstinencia", "puntuación", "escala", "delirium tremens"]
+  category: "medical"
+  page_number: 36
+  blocks:
+  - type: "prose"
+    markdown: |
+      Clinical Institute Withdrawal Assessment — Alcohol, revisada. Puntúe cada uno de los 10 ítems; se usa para guiar el tratamiento en la [abstinencia alcohólica](topic:pb-alcohol-withdrawal) (trate si el total es ≥10). Las puntuaciones sin descripción (—) son gravedades intermedias entre las descritas.
+  - type: "table"
+    title: "Cefalea"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "ausente"]
+    - cells: ["1", "muy leve"]
+    - cells: ["2", "leve"]
+    - cells: ["3", "moderada"]
+    - cells: ["4", "moderadamente grave"]
+    - cells: ["5", "grave"]
+    - cells: ["6", "muy grave"]
+    - cells: ["7", "extremadamente grave"]
+  - type: "table"
+    title: "Temblor"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "sin temblor"]
+    - cells: ["1", "no visible, se palpa en las yemas de los dedos"]
+    - cells: ["2", "—"]
+    - cells: ["3", "—"]
+    - cells: ["4", "moderado con los brazos extendidos"]
+    - cells: ["5", "—"]
+    - cells: ["6", "—"]
+    - cells: ["7", "grave, incluso sin extender los brazos"]
+  - type: "table"
+    title: "Náuseas y vómitos"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "sin náuseas ni vómitos"]
+    - cells: ["1", "náuseas leves sin vómitos"]
+    - cells: ["2", "—"]
+    - cells: ["3", "—"]
+    - cells: ["4", "náuseas intermitentes con arcadas"]
+    - cells: ["5", "—"]
+    - cells: ["6", "—"]
+    - cells: ["7", "náuseas constantes, arcadas y vómitos frecuentes"]
+  - type: "table"
+    title: "Ansiedad"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "sin ansiedad, tranquilo"]
+    - cells: ["1", "levemente ansioso"]
+    - cells: ["2", "—"]
+    - cells: ["3", "—"]
+    - cells: ["4", "moderadamente ansioso, o en guardia"]
+    - cells: ["5", "—"]
+    - cells: ["6", "—"]
+    - cells: ["7", "estados de pánico agudo similares al delirio grave o a la esquizofrenia aguda"]
+  - type: "table"
+    title: "Sudoración paroxística"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "sin sudor visible"]
+    - cells: ["1", "apenas suda, palmas húmedas"]
+    - cells: ["2", "—"]
+    - cells: ["3", "—"]
+    - cells: ["4", "sudor evidente en la frente"]
+    - cells: ["5", "—"]
+    - cells: ["6", "—"]
+    - cells: ["7", "sudoración profusa"]
+  - type: "table"
+    title: "Orientación y obnubilación del sensorio"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "orientado y puede hacer sumas seriadas (sumando 7 cada vez)"]
+    - cells: ["1", "no puede hacer sumas seriadas"]
+    - cells: ["2", "desorientado en la fecha por ≤2 días naturales"]
+    - cells: ["3", "desorientado en la fecha por >2 días"]
+    - cells: ["4", "desorientado en lugar y/o persona"]
+  - type: "table"
+    title: "Agitación"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "actividad normal"]
+    - cells: ["1", "actividad mayor de lo normal"]
+    - cells: ["2", "—"]
+    - cells: ["3", "—"]
+    - cells: ["4", "moderadamente intranquilo e inquieto"]
+    - cells: ["5", "—"]
+    - cells: ["6", "—"]
+    - cells: ["7", "camina de un lado a otro o se agita constantemente"]
+  - type: "table"
+    title: "Alteraciones auditivas"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "ausentes"]
+    - cells: ["1", "sonidos muy levemente ásperos/capaces de asustar"]
+    - cells: ["2", "sonidos levemente ásperos o capaces de asustar"]
+    - cells: ["3", "sonidos moderadamente ásperos/capaces de asustar"]
+    - cells: ["4", "alucinaciones moderadamente graves"]
+    - cells: ["5", "alucinaciones graves"]
+    - cells: ["6", "alucinaciones extremadamente graves"]
+    - cells: ["7", "alucinaciones continuas"]
+  - type: "table"
+    title: "Alteraciones táctiles"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "ninguna"]
+    - cells: ["1", "parestesias muy leves"]
+    - cells: ["2", "parestesias leves"]
+    - cells: ["3", "parestesias moderadas"]
+    - cells: ["4", "alucinaciones moderadamente graves"]
+    - cells: ["5", "alucinaciones graves"]
+    - cells: ["6", "alucinaciones extremadamente graves"]
+    - cells: ["7", "alucinaciones continuas"]
+  - type: "table"
+    title: "Alteraciones visuales"
+    columns: ["Puntuación", "Hallazgo"]
+    column_flex: [1, 6]
+    rows:
+    - cells: ["0", "ausentes"]
+    - cells: ["1", "fotosensibilidad muy leve"]
+    - cells: ["2", "fotosensibilidad leve"]
+    - cells: ["3", "fotosensibilidad moderada"]
+    - cells: ["4", "alucinaciones visuales moderadamente graves"]
+    - cells: ["5", "alucinaciones visuales graves"]
+    - cells: ["6", "alucinaciones visuales extremadamente graves"]
+    - cells: ["7", "alucinaciones visuales continuas"]

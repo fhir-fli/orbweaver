@@ -115,7 +115,58 @@ class SearchNormalizer {
     'millimeter': 'mm',
     'millimetres': 'mm',
     'millimetre': 'mm',
+    // Spanish (accents are folded before this lookup).
+    'miligramos': 'mg',
+    'miligramo': 'mg',
+    'microgramos': 'mcg',
+    'microgramo': 'mcg',
+    'kilogramos': 'kg',
+    'kilogramo': 'kg',
+    'gramos': 'g',
+    'gramo': 'g',
+    'mililitros': 'ml',
+    'mililitro': 'ml',
+    'litros': 'l',
+    'litro': 'l',
+    'centimetros': 'cm',
+    'centimetro': 'cm',
+    'milimetros': 'mm',
+    'milimetro': 'mm',
   };
+
+  /// Accented letters → plain, so "neumonía", "neumonia" and "NEUMONÍA" are
+  /// one token, and so the punctuation strip below does not split a word at
+  /// its accent. Covers Spanish and French.
+  static const Map<String, String> _fold = {
+    'á': 'a',
+    'à': 'a',
+    'â': 'a',
+    'ä': 'a',
+    'ã': 'a',
+    'é': 'e',
+    'è': 'e',
+    'ê': 'e',
+    'ë': 'e',
+    'í': 'i',
+    'ì': 'i',
+    'î': 'i',
+    'ï': 'i',
+    'ó': 'o',
+    'ò': 'o',
+    'ô': 'o',
+    'ö': 'o',
+    'õ': 'o',
+    'ú': 'u',
+    'ù': 'u',
+    'û': 'u',
+    'ü': 'u',
+    'ñ': 'n',
+    'ç': 'c',
+    'œ': 'oe',
+    'æ': 'ae',
+    'ÿ': 'y',
+  };
+  static final RegExp _accented = RegExp('[${_fold.keys.join()}]');
 
   static final RegExp _digitComma = RegExp(r'(\d),(\d)');
   static final RegExp _nonWord = RegExp(r'[^a-z0-9\s]');
@@ -125,6 +176,7 @@ class SearchNormalizer {
   static String normalize(String text) {
     if (text.isEmpty) return '';
     var s = text.toLowerCase();
+    s = s.replaceAllMapped(_accented, (m) => _fold[m[0]]!);
     s = s.replaceAllMapped(_digitComma, (m) => '${m[1]}${m[2]}'); // 1,000→1000
     s = s.replaceAll('-', ' '); // hyphens → spaces
     s = s.replaceAll(_nonWord, ' '); // drop punctuation/symbols

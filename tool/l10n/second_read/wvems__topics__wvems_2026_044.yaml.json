@@ -1,0 +1,25 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_044.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s24",
+   "severity": "meaning",
+   "problem": "The translation 'Ictus de Cincinnati' suggests a stroke that occurs in the city of Cincinnati, rather than the 'Cincinnati Stroke Scale' (the clinical tool being referenced).",
+   "fix": "Escala de Cincinnati",
+   "en": "Cincinnati Stroke",
+   "es": "Ictus de Cincinnati"
+  },
+  {
+   "id": "s27",
+   "severity": "meaning",
+   "problem": "The term 'Negligencia' in Spanish typically refers to legal or professional malpractice. In a neurological context, 'Neglect' must be translated as 'Heminegligencia' or 'Negligencia espacial'.",
+   "fix": "Heminegligencia: ¿ignora un lado?",
+   "en": "Must have **Arm Drift**.\n- **V**ision: Partial / Total Loss?\n- **A**phasia: Trouble Speaking?\n- **N**eglect: Ignoring One Side?\n",
+   "es": "Debe haber **caída del brazo**.\n- **V**isión: ¿pérdida parcial / total?\n- **A**fasia: ¿dificultad para hablar?\n- **N**egligencia: ¿ignora un lado?\n"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s24\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The translation 'Ictus de Cincinnati' suggests a stroke that occurs in the city of Cincinnati, rather than the 'Cincinnati Stroke Scale' (the clinical tool being referenced).\",\n    \"fix\": \"Escala de Cincinnati\"\n  },\n  {\n    \"id\": \"s27\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'Negligencia' in Spanish typically refers to legal or professional malpractice. In a neurological context, 'Neglect' must be translated as 'Heminegligencia' or 'Negligencia espacial'.\",\n    \"fix\": \"Heminegligencia: ¿ignora un lado?\"\n  }\n]\n```"
+ ]
+}

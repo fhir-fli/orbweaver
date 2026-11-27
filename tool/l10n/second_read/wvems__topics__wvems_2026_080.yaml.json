@@ -1,0 +1,25 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_080.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s5",
+   "severity": "minor",
+   "problem": "English shorthand 'vent' left untranslated.",
+   "fix": "ventilador",
+   "en": "vent",
+   "es": "vent"
+  },
+  {
+   "id": "s48",
+   "severity": "meaning",
+   "problem": "The Imperial unit symbol for feet (') is not standard in Latin American Spanish and could be misread by a clinician.",
+   "fix": "mide más de 6 pies (183 cm)",
+   "en": "- Mode: **AC (V)** · Vt: **350 mL** (or 450 mL if over 6' tall)\n- BPM: **12-16** /min · FiO₂: **100%** (may titrate down 40-60%)\n- PEEP: **5 mmHg** · PIP Limit: **35 mmHg** · I:E **1:3**\n",
+   "es": "- Modo: **AC (V)** · Vt: **350 mL** (o 450 mL si mide más de 6')\n- RPM: **12-16** /min · FiO₂: **100%** (puede bajarse a 40-60%)\n- PEEP: **5 mmHg** · límite de PIP: **35 mmHg** · I:E **1:3**\n"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s5\",\n    \"severity\": \"minor\",\n    \"problem\": \"English shorthand 'vent' left untranslated.\",\n    \"fix\": \"ventilador\"\n  },\n  {\n    \"id\": \"s48\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The Imperial unit symbol for feet (') is not standard in Latin American Spanish and could be misread by a clinician.\",\n    \"fix\": \"mide más de 6 pies (183 cm)\"\n  }\n]\n```"
+ ]
+}

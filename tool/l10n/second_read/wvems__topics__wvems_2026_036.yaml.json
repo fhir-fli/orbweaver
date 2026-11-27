@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_036.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s47",
+   "severity": "meaning",
+   "problem": "\"Medical CODE\" is translated as \"paro médico\". In a clinical context, a \"CODE\" refers to the emergency activation protocol (e.g., Code Blue), whereas \"paro\" refers specifically to the physiological state of cardiac or respiratory arrest. Additionally, \"paro médico\" is not a standard clinical term in Spanish.",
+   "fix": "esté preparado para un código médico (CODE)",
+   "en": "- Altered LOC and syncope are **complex** problems.\n  - Most important step is to consider and **search for the cause**.\n  - Investigate the case and take a **careful history**.\n- Unstable patients should be treated aggressively.\n  - Be prepared for a [Medical CODE](topic:wvems-2026-024).\n- Alcohol and drugs can mask other causes of altered LOC.\n  - **Don’t assume [Intoxication](topic:wvems-2026-040)** is the only problem.\n- Syncope may be caused by or result in **trauma**.\n  - Maintain a high index of suspicion.\n",
+   "es": "- La alteración de la conciencia y el síncope son problemas **complejos**.\n  - El paso más importante es considerar y **buscar la causa**.\n  - Investigue el caso y haga una **historia cuidadosa**.\n- Los pacientes inestables deben tratarse de forma enérgica.\n  - Esté preparado para un [paro médico (CODE)](topic:wvems-2026-024).\n- El alcohol y las drogas pueden enmascarar otras causas de alteración de la conciencia.\n  - **No suponga que la [intoxicación](topic:wvems-2026-040)** es el único problema.\n- El síncope puede deberse a un **traumatismo** o causarlo.\n  - Mantenga un alto índice de sospecha.\n"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s47\",\n    \"severity\": \"meaning\",\n    \"problem\": \"\\\"Medical CODE\\\" is translated as \\\"paro médico\\\". In a clinical context, a \\\"CODE\\\" refers to the emergency activation protocol (e.g., Code Blue), whereas \\\"paro\\\" refers specifically to the physiological state of cardiac or respiratory arrest. Additionally, \\\"paro médico\\\" is not a standard clinical term in Spanish.\",\n    \"fix\": \"esté preparado para un código médico (CODE)\"\n  }\n]\n```"
+ ]
+}

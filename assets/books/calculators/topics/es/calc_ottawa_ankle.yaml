@@ -1,0 +1,30 @@
+# translated-from-sha256: 7759b66502322e5f5c932a9e60550a5a4fcaff5ea539e91421c67e25035ba09f
+topic:
+  id: "calc-ottawa-ankle"
+  title: "Regla de tobillo de Ottawa"
+  list_subtitle: "decisión de radiografía de tobillo/pie"
+  last_reviewed: "Evidence review 2026-07-19 · Stiell 1992"
+  tags: ["tobillo ottawa", "tobillo", "pie", "fractura", "radiografía", "esguince", "ortopedia", "regla de decisión"]
+  aliases:
+  - "Regla de tobillo de Ottawa"
+  - "Regla de radiografía de tobillo"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Identifica qué lesiones agudas de tobillo/pie necesitan radiografía. Toque cualquier
+      hallazgo positivo — uno solo indica imagen.
+  - type: "score"
+    title: "Regla de tobillo de Ottawa"
+    source: "Stiell et al., Ann Emerg Med 1992"
+    items:
+    - {key: "lat_mall", label: "Dolor óseo — borde posterior/punta del maléolo lateral", type: "toggle", points: 1, help: "→ radiografía de tobillo"}
+    - {key: "med_mall", label: "Dolor óseo — borde posterior/punta del maléolo medial", type: "toggle", points: 1, help: "→ radiografía de tobillo"}
+    - {key: "fifth_mt", label: "Dolor óseo — base del 5.º metatarsiano", type: "toggle", points: 1, help: "→ radiografía de pie"}
+    - {key: "navicular", label: "Dolor óseo — escafoides (navicular)", type: "toggle", points: 1, help: "→ radiografía de pie"}
+    - {key: "weight", label: "No puede apoyar el peso 4 pasos (inmediatamente y en urgencias)", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 0, label: "La regla no indica radiografía", severity: "none"}
+    - {min: 1, label: "Radiografía indicada", severity: "warn"}
+    caveats:
+    - "Se aplica a lesiones agudas, en general edad ≥ 18 (variantes validadas desde los 6 años), evaluadas dentro de los ~10 días, sin intoxicación ni lesión que distraiga."

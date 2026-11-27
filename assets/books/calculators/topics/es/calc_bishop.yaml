@@ -1,0 +1,69 @@
+# translated-from-sha256: 092eb04cfb88d5baa9de42cea0fb9d46d86354789867b8542452f252e856ce72
+topic:
+  id: "calc-bishop"
+  title: "Puntuación de Bishop"
+  list_subtitle: "madurez cervical para la inducción"
+  last_reviewed: "Evidence review 2026-07-19 · ACOG CPG No. 9 (2025)"
+  tags: ["bishop", "cervical", "inducción", "trabajo de parto", "obstetricia", "maduración", "favorabilidad"]
+  aliases:
+  - "Puntuación de Bishop"
+  - "Puntuación cervical"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Evalúa si el cuello uterino es favorable antes de la inducción del trabajo de parto. Las puntuaciones más altas
+      indican un cuello más favorable ("maduro").
+  - type: "score"
+    title: "Puntuación de Bishop"
+    source: "Bishop 1964; ACOG Clinical Practice Guideline No. 9 (2025)"
+    items:
+    - key: "dilation"
+      label: "Dilatación (cm)"
+      type: "choice"
+      default: "d0"
+      options:
+      - {value: "d0", label: "0", points: 0}
+      - {value: "d1", label: "1–2", points: 1}
+      - {value: "d3", label: "3–4", points: 2}
+      - {value: "d5", label: "≥ 5", points: 3}
+    - key: "effacement"
+      label: "Borramiento (%)"
+      type: "choice"
+      default: "e0"
+      options:
+      - {value: "e0", label: "0–30", points: 0}
+      - {value: "e40", label: "40–50", points: 1}
+      - {value: "e60", label: "60–70", points: 2}
+      - {value: "e80", label: "≥ 80", points: 3}
+    - key: "station"
+      label: "Altura de la presentación"
+      type: "choice"
+      default: "s3"
+      options:
+      - {value: "s3", label: "−3", points: 0}
+      - {value: "s2", label: "−2", points: 1}
+      - {value: "s1", label: "−1 / 0", points: 2}
+      - {value: "sp", label: "+1 / +2", points: 3}
+    - key: "consistency"
+      label: "Consistencia cervical"
+      type: "choice"
+      default: "c_firm"
+      options:
+      - {value: "c_firm", label: "Firme", points: 0}
+      - {value: "c_med", label: "Intermedia", points: 1}
+      - {value: "c_soft", label: "Blanda", points: 2}
+    - key: "position"
+      label: "Posición cervical"
+      type: "choice"
+      default: "p_post"
+      options:
+      - {value: "p_post", label: "Posterior", points: 0}
+      - {value: "p_mid", label: "Media", points: 1}
+      - {value: "p_ant", label: "Anterior", points: 2}
+    bands:
+    - {min: 0, max: 5, label: "Desfavorable — considere la maduración cervical", severity: "warn"}
+    - {min: 6, max: 7, label: "Favorabilidad intermedia", severity: "none"}
+    - {min: 8, label: "Cuello favorable", severity: "none"}
+    caveats:
+    - "Mide la favorabilidad/maduración — predice mal el éxito de la inducción (ACOG CPG No. 9, 2025); no se respalda ningún punto de corte único."

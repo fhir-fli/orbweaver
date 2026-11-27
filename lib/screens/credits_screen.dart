@@ -1,5 +1,7 @@
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/data/localized_asset.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/theme/palette.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:yaml/yaml.dart';
@@ -13,6 +15,8 @@ import 'package:yaml/yaml.dart';
 /// which is not attribution.
 ///
 /// `assets/credits.yaml` is the single source. Do not keep a second copy.
+/// Its translations sit beside it (`assets/es/credits.yaml`); the WHO entry
+/// stays in English there, because WHO licence 202610340 excludes translation.
 class CreditsScreen extends StatelessWidget {
   const CreditsScreen({super.key});
 
@@ -23,15 +27,19 @@ class CreditsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: kScreenChrome,
       appBar: AppBar(
-        title: const Text('Sources & credits'),
+        title: Text(context.l10n.sourcesCredits),
         backgroundColor: const Color(0xFF1E4E8C),
         foregroundColor: Colors.white,
       ),
       body: FutureBuilder<Credits>(
-        future: loadCredits(),
+        future: loadCredits(
+          language: Localizations.localeOf(context).languageCode,
+        ),
         builder: (context, snap) {
           if (snap.hasError) {
-            return Center(child: Text('Could not load credits: ${snap.error}'));
+            return Center(
+              child: Text(context.l10n.couldNotLoadCredits('${snap.error}')),
+            );
           }
           if (!snap.hasData) {
             return const Center(child: CircularProgressIndicator());
@@ -92,8 +100,10 @@ class ImageCredit {
 
 String _s(dynamic v) => v == null ? '' : v.toString();
 
-Future<Credits> loadCredits() async {
-  final raw = await rootBundle.loadString(CreditsScreen.asset);
+/// The credits in [language], or in English where no translation is bundled.
+Future<Credits> loadCredits({String language = 'en'}) async {
+  final loc = await AssetLocalizer.load(language);
+  final raw = await rootBundle.loadString(loc.path(CreditsScreen.asset));
   final doc = loadYaml(raw) as YamlMap;
   final c = doc['credits'] as YamlMap;
   final imgs = c['images'] as YamlMap;
@@ -141,10 +151,10 @@ class _CreditsBody extends StatelessWidget {
           _Link(text: credits.privacyLabel, url: credits.privacyUrl),
         ],
         const SizedBox(height: 20),
-        const _Heading('The books'),
+        _Heading(context.l10n.creditsBooks),
         for (final s in credits.sources) _SourceCard(source: s),
         const SizedBox(height: 20),
-        const _Heading('Images'),
+        _Heading(context.l10n.creditsImages),
         Text(
           credits.imageIntro,
           style: const TextStyle(fontSize: 13, height: 1.4),

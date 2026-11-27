@@ -1,0 +1,142 @@
+# translated-from-sha256: b5fcb777c7bf1397de2a953a1fa096052e0c3fe92564cf2d1d66544fdf387b46
+topic:
+  id: "pb-snake-bite"
+  title: "Sospecha de mordedura de serpiente"
+  list_subtitle: "pp.39–40 · envenenamiento + antiveneno"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["serpiente", "mordedura de serpiente", "envenenamiento", "antiveneno", "víbora", "cobra", "mordedura", "neurotóxico", "citotóxico", "hemotóxico"]
+  category: "medical"
+  pages:
+  - page_number: 39
+    blocks:
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (PA, FC, FR, spO2, Temp)
+        - Inicie oxígeno si la spO2 <90%
+        - Haga una historia y una exploración física breves y dirigidas
+    - type: "prose"
+      title: "Exploración física"
+      markdown: |
+        - **Vía aérea** — compruebe si hay hipersalivación y si puede eliminar las secreciones
+        - **Respiración** — vigile la debilidad de los músculos respiratorios
+        - **Sangrado** — vigile sangrados inusuales (hematuria/rezumado de heridas)
+        - **Neurológico** — exploración completa, incluidos los pares craneales
+        - **Estado neurovascular** de la extremidad, hinchazón, necrosis
+    - type: "prose"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      title: "Inmovilice la parte del cuerpo"
+      markdown: |
+        - **NO** aplique un torniquete
+        - **NO** haga incisiones en la herida
+        - **NO** administre antiveneno fuera del hospital
+        - **NO** trate con hielo
+    - type: "prose"
+      title: "Tétanos — y una regla para toda inyección IM"
+      markdown: |
+        - Administre **toxoide tetánico** — las heridas por mordedura de serpiente tienen riesgo de tétanos
+        - 🛑 **Mientras la coagulación sea anormal (20WBCT positiva, heridas que rezuman, cualquier sangrado inusual), NO administre NINGUNA inyección intramuscular** — ni toxoide tetánico, ni antibióticos, ni analgesia. Una inyección IM en sangre incoagulable causa un hematoma profundo. **Use la vía IV u oral hasta que el antiveneno haya restablecido la coagulación**, y luego administre el toxoide
+    - type: "prose"
+      title: "Considere los siguientes análisis"
+      markdown: |
+        - Hemograma, panel metabólico completo, TP/INR, TTP, PDF/dímero D, CPK
+        - Hisopado de la zona de la mordedura; use el kit de detección de veneno de serpiente (SVDK) si está disponible y hay evidencia clínica/analítica de envenenamiento
+    - type: "flowchart"
+      variant: "algorithm"
+      boxes:
+      - id: "observe"
+        title: "Ingrese una noche en observación"
+        bullets:
+        - "Eleve la extremidad afectada"
+        - "Si no hay síntomas nuevos, alta al día siguiente"
+      stages:
+      - decision: "¿Ha habido envenenamiento?"
+        outcomes:
+        - label: "No — sin marcas en la piel, sin síntomas"
+          box:
+            title: "Observe al menos 12 horas antes del alta"
+            bullets:
+            - "Hasta el 10–90% de las mordeduras venenosas son mordeduras secas, y el envenenamiento puede tardar muchas horas en manifestarse — una hora es demasiado poco"
+            - "Observe 24 horas si no se identificó la serpiente, el paciente vive lejos del hospital o no hay laboratorio para controles seriados"
+            - "Repita la prueba de coagulación (20WBCT) antes del alta"
+            - "Indique que regrese de inmediato si aparece cualquier síntoma"
+            severity: "non_urgent"
+        - label: "Sospecha — marcas en la piel PERO sin síntomas"
+          goto: "observe"
+        - label: "Sí — marcas de mordedura evidentes y/o síntomas"
+          continue: true
+      - decision: "¿Qué tipo de síndrome de envenenamiento? ¿Lo bastante grave para justificar antiveneno? (vea la página siguiente)"
+        outcomes:
+        - label: "No"
+          goto: "observe"
+        - label: "Sí"
+          box:
+            title: "Administración del antiveneno"
+            bullets:
+            - "Diluya el antiveneno en SSN (no más de 20mL por bolsa de 500mL), administre lentamente en 30 min o a no más de 1–2mL/min"
+            - "Polivalente: ajuste según los síntomas, evalúe cada 30 min"
+            - "Monovalente: vigile la respuesta hematológica, repita la dosis si es necesario"
+            - "Adrenalina preparada por si hay anafilaxia: adrenalina (1mg/1ml 1:1000), 0.01mL/kg (máx. 0.3mL niño, 0.5mL adolescente/adulto), IM en la cara anterolateral del muslo, repita cada 5–15 minutos si no hay mejoría"
+            - "Adrenalina SC profiláctica ANTES de la infusión: 0.005mg/kg (0.005mL/kg de 1:1000), máx. 0.25mg. Es la única premedicación con evidencia aleatorizada — reduce las reacciones graves ~40%, con mayor efecto con los antivenenos poliespecíficos menos purificados que se usan en el África subsahariana"
+            - "Antihistamínico: téngalo disponible, no se recomienda de rutina. La hidrocortisona no previene las reacciones y anula el beneficio de la adrenalina — no sustituya la adrenalina por ninguno de los dos"
+            - "~90% de las reacciones ocurren en la primera hora y el 40% necesita adrenalina de rescate — vigile al menos 1–4 h"
+            - "Vigile los signos vitales"
+            - "Nunca administre medicamentos directamente en la extremidad afectada"
+            severity: "emergency"
+  - page_number: 40
+    blocks:
+    - type: "prose"
+      title: "Tipos de envenenamiento — Neurotóxico"
+      markdown: |
+        - **Síntomas:** debilidad, parestesias, ptosis, diplopía, midriasis, dificultad para tragar, salivación excesiva, dificultad para respirar, parálisis e insuficiencia respiratoria
+        - **Tratamiento**
+          - Coloque una vía IV
+          - Vigile la oxigenación y la respiración
+          - Intubación y ventilación mecánica si es necesario
+        - **Prueba con anticolinesterásico — solo en la sospecha de envenenamiento por COBRA. NO en la mamba** (el veneno de mamba contiene su propio anticolinesterásico, así que no funcionará). El antiveneno y el soporte de la vía aérea van primero — es un complemento, nunca un sustituto
+          - Registre cuánto abre los ojos antes de empezar
+          - **Atropina primero, siempre** — adultos 0.6 mg IV lenta; niños 50 mcg/kg IV lenta
+          - **Luego neostigmina IM** — adultos 0.02 mg/kg; niños 0.04 mg/kg
+          - Reevalúe a los 30 y 60 minutos si los músculos están claramente más fuertes o abre mejor los párpados. Recuperar aproximadamente la mitad de la ptosis en la hora = positiva
+          - Si es positiva, continúe: adultos 0.5–2.5 mg cada 1–3 h (máx. 10 mg en 24 h); niños 0.01–0.04 mg/kg cada 2–4 h — **cada dosis con atropina como arriba**
+          - Suspenda tras 3 dosis si no hay respuesta. Vigile la vía aérea en todo momento — una prueba positiva puede retrasar la intubación, no elimina su necesidad
+        - **Indicaciones de antiveneno (la tríada de)**
+          - 1. Parestesias
+          - 2. Salivación excesiva/sabor metálico y sudoración
+          - 3. Disnea sin hinchazón dolorosa y progresiva O paresia con hinchazón importante
+        - **Tratamiento: antiveneno polivalente**
+    - type: "prose"
+      title: "Citotóxico"
+      markdown: |
+        - **Síntomas:** dolor intenso, equimosis/hinchazón en el sitio, ampollas, necrosis tisular grave, absceso, síndrome compartimental, hipotensión, choque, rabdomiólisis, insuficiencia renal
+        - **Tratamiento**
+          - Coloque una vía IV
+          - Analgesia
+          - Coloque la extremidad a la altura del corazón
+          - Líquidos IV para el choque/la insuficiencia renal
+          - Medidas de soporte
+        - **Indicaciones de antiveneno**
+          - Hinchazón progresiva ≥15cm/h
+          - Hinchazón que se extiende del pie/la mano a la rodilla/el codo en 4 horas
+          - Hinchazón de toda la extremidad a las 8 horas
+          - Hinchazón de la vía aérea
+          - Coagulopatía asociada
+        - **Tratamiento: antiveneno polivalente**
+    - type: "prose"
+      title: "Hemotóxico"
+      markdown: |
+        - **Síntomas:** sangrado en los sitios de herida (pueden ser heridas menores, laceraciones o sitios de punción), equimosis, hematuria, insuficiencia renal, CID
+        - **Tratamiento**
+          - Acceso IV
+          - **Administre el ANTIVENENO PRIMERO.** Los factores de coagulación transfundidos antes de neutralizar el veneno simplemente se consumen — producto desperdiciado, sin beneficio. Transfunda solo después del antiveneno, y solo si el sangrado amenaza la vida
+          - NO administre heparina, antifibrinolíticos ni trombolíticos
+        - **Indicaciones de antiveneno**
+          - Sangrado activo
+          - Sangre que no coagula en un tubo limpio a los 20 minutos
+          - Evidencia analítica de coagulopatía
+        - **Tratamiento: antiveneno monovalente**

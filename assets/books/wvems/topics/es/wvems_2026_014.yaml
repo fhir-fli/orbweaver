@@ -1,0 +1,179 @@
+# translated-from-sha256: 35d5e748efd7b9d0283b279a2503698b81cf89066d43a44a4578086ab7523884
+topic:
+  id: "wvems-2026-014"
+  version: "v260101"
+  title: "Taquicardia"
+  list_subtitle: "2026-014 · 3 ramas con fármacos condicionales"
+  last_reviewed: "Dec 2025"
+  tags: ["taquicardia", "taqui", "tsv", "fa", "tv", "adenosina", "amiodarona", "cardioversión"]
+  aliases:
+  - "Taquicardia sinusal"
+  - "TSV"
+  - "FA"
+  - "RVR"
+  - "Flutter auricular"
+  - "TV"
+  category: "universal"
+  layout: "paged"
+  pages:
+  - page_number: 14
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Pulso mayor de"
+        shape: "stadium"
+        bands:
+        - label: "Adulto (14+)"
+          value: "100 /min"
+        - label: "Niño (1–13)"
+          value: "130 /min"
+        - label: "Lactante (< 1)"
+          value: "160 /min"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "mild"
+        label: "Leve"
+        criteria:
+        - "Perfusión adecuada"
+        - "Taquicardia simple"
+        actions:
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      - id: "moderate"
+        label: "Moderada"
+        criteria:
+        - "Perfusión adecuada"
+        - "Arritmia crítica"
+        actions:
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+        - provider_level: "I"
+          text: "Adenosina"
+          kind: "medication_administration"
+          condition: "Si QRS ≤ 120 ms"
+        - provider_level: "I"
+          text: "Amiodarona"
+          kind: "medication_administration"
+          condition: "Si QRS > 120 ms"
+      - id: "severe"
+        label: "Grave"
+        criteria:
+        - "Mala perfusión"
+        - "Arritmia crítica"
+        actions:
+        - provider_level: "I"
+          text: "Cardioversión"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "I"
+          text: "Magnesio"
+          kind: "medication_administration"
+          condition: "Si torsades"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Circulación](topic:wvems-2026-008), [Dolor](topic:wvems-2026-020)"
+        - text: "[Fiebre](topic:wvems-2026-016), [Hemorragia](topic:wvems-2026-058)"
+      dose_table:
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+      - drug: "[Adenosina](topic:wvems-2026-drug-reference#adenosine)"
+        dose: "12 mg"
+        route: "IV/IO"
+        frequency: "cada 5 min x2"
+        population: "adult"
+      - drug: "[Amiodarona](topic:wvems-2026-drug-reference#amiodarone)"
+        dose: "150 mg"
+        route: "IV/IO"
+        frequency: "durante 10 min"
+        population: "adult"
+      - drug: "[Magnesio](topic:wvems-2026-drug-reference#magnesium)"
+        dose: "2 gramos"
+        route: "IV/IO"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 15
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la taquicardia"
+      highlight: true
+      markdown: |
+        - Las **taquicardias simples** (p. ej., taquicardia sinusal) ocurren por muchas razones.
+          - Causas reactivas como: [choque](topic:wvems-2026-008), [dolor](topic:wvems-2026-020), [fiebre](topic:wvems-2026-016) o [hemorragia](topic:wvems-2026-058), etc.
+          - Causas ocultas como: [sobredosis / tóxicos](topic:wvems-2026-040), [conductual](topic:wvems-2026-046) o [anafilaxia](topic:wvems-2026-032), etc.
+          - Causas cardíacas como: enfermedad del nodo sinusal, flutter auricular o FA con RVR, etc.
+          - Trate la causa. Evite los antiarrítmicos y la cardioversión.
+        - Las **arritmias críticas** (p. ej., TSV, TV con pulso) suelen ser **más rápidas**.
+          - Pero un pulso rápido no siempre es crítico. Hace falta criterio.
+          - {I} Puede probar maniobras vagales (p. ej., Valsalva modificada).
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Arritmia crítica"
+        callout: true
+        markdown: |
+          Sospéchela si el pulso supera:
+          - Adulto (14+): **150** /min
+          - Niño (1–13): **180** /min
+          - Lactante (< 1): **220** /min
+      - type: "prose"
+        title: "Mala perfusión"
+        callout: true
+        markdown: |
+          Sospéchela si hay **varios** de estos:
+          - **Alteración del estado mental**
+          - Piel pálida, fría, sudorosa
+          - Taquicardia, hipotensión
+          - Disnea, taquipnea
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Adenosina](topic:wvems-2026-drug-reference#adenosine)** (Adenocard®): administre en **bolo IV rápido**.
+          - Precaución en pacientes con antecedente de WPW, EPOC o asma.
+        - **[Amiodarona](topic:wvems-2026-drug-reference#amiodarone)** (Pacerone®): administre en goteo IV **en 10 min**.
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - La **amiodarona** prehospitalaria **no está indicada** en la taquicardia pediátrica.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere colocar **parches** de cardioversión (desfibrilación) en cualquier paciente inestable.
+        - **[Cardioversión](topic:wvems-2026-096#cardiovert)**: active **SYNC**. Empiece con **200 J**. Desfibrile si no puede sincronizar.
+          - Alternativa: siga la pauta de dosis del fabricante o del OMD.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 13, 20
+
+        NEMSIS: 9914147, 9914151, 9914199

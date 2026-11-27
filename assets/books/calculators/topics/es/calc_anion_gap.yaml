@@ -1,0 +1,32 @@
+# translated-from-sha256: 54e02be93392ce1f57d735b46a43f4fd081465aed95b027e77a07bcff0acc45f
+topic:
+  id: "calc-anion-gap"
+  title: "Brecha aniónica"
+  list_subtitle: "± corrección por albúmina"
+  last_reviewed: "Evidence review 2026-07-19 · Figge 1998 (albumin correction)"
+  tags: ["anión", "brecha", "acidosis", "hagma", "albúmina", "figge", "ácido-base", "electrolito", "bicarbonato"]
+  aliases:
+  - "Brecha aniónica"
+  - "BA"
+  - "Acidosis con brecha aniónica elevada"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Brecha aniónica sérica a partir del panel metabólico básico. Añada la albúmina para obtener
+      también la brecha **corregida por albúmina**, que revela una brecha elevada oculta
+      cuando la albúmina está baja.
+  - type: "formula"
+    kind: "anion_gap"
+    title: "Brecha aniónica"
+    source: "BA = Na − (Cl + HCO₃); corrección por albúmina según Figge, Crit Care Med 1998"
+    inputs:
+    - {key: "sodium", label: "Na⁺", unit: "mEq/L", type: "number"}
+    - {key: "chloride", label: "Cl⁻", unit: "mEq/L", type: "number"}
+    - {key: "bicarbonate", label: "HCO₃⁻", unit: "mEq/L", type: "number"}
+    - {key: "albumin", label: "Albúmina", unit: "g/dL", type: "number", optional: true}
+    notes:
+    - "Brecha aniónica = Na⁺ − (Cl⁻ + HCO₃⁻); normal ≈ 8–12 mEq/L (depende del analizador)."
+    - "BA corregida por albúmina = BA + 2.5 × (4.0 − albúmina g/dL)."
+    caveats:
+    - "La corrección por albúmina revela una brecha oculta en la hipoalbuminemia, pero NO sustituye al lactato — mida el lactato directamente cuando le preocupe la perfusión."

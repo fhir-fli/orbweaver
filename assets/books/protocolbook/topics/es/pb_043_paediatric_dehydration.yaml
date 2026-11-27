@@ -1,0 +1,100 @@
+# translated-from-sha256: cd71f073bff9f13f79574576b8f8c28cbeee74c07e8fbd364fa45a39d01e4937
+topic:
+  id: "pb-paediatric-dehydration"
+  title: "Protocolo de deshidratación pediátrica"
+  list_subtitle: "pp.43–44 · planes C/B/A + tratamiento complementario"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["deshidratación", "diarrea", "gastroenteritis", "SRO", "rehidratación", "plan a", "plan b", "plan c", "choque", "pediátrico", "zinc", "disentería"]
+  category: "medical"
+  pages:
+  - page_number: 43
+    blocks:
+    - type: "prose"
+      markdown: |
+        Para niños **>2 meses con antecedente de diarrea/vómitos** — **EXCLUYENDO la desnutrición grave**.
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "COMPRUEBE si hay CHOQUE — ¿los cuatro?"
+        criteria:
+        - "AVPU < A"
+        - "Llenado capilar >3 seg"
+        - "Manos frías + gradiente de temperatura"
+        - "Pulso débil / ausente"
+        - "Si Hb <5g/dl, transfunda con urgencia"
+        outcomes:
+        - label: "Sí — choque"
+          box:
+            title: "Ringer 20mL/kg en 15 minutos"
+            bullets:
+            - "Puede administrarse un segundo bolo si es necesario antes de pasar al PASO 2 DEL PLAN C de abajo"
+            - "Trate la hipoglucemia"
+            - "Inicie SRO 5 mL/kg/h cuando pueda beber"
+            severity: "emergency"
+        - label: "No"
+          continue: true
+      - decision: "Deshidratación grave (PLAN C) — ¿≥2 de los siguientes signos?"
+        criteria:
+        - "AVPU < A"
+        - "Llenado capilar ≥2 segundos"
+        - "No puede beber"
+        - "Ojos hundidos"
+        - "Pliegue cutáneo lento ≥2 segundos"
+        - "Sin lágrimas Y mucosas secas"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "PLAN C"
+            bullets:
+            - "PASO 1: Ringer 30mL/kg en — >12 meses: 30 minutos · <12 meses: 60 minutos"
+            - "Si no hay acceso IV ni líquidos IV"
+            - "PASO 2: Ringer 70mL/kg en — >12 meses: 2.5 horas · <12 meses: 5 horas"
+            - "Si no hay acceso IV ni líquidos IV, rehidrate por SNG con 100ml/kg de SRO"
+            - "Reevalúe cada hora"
+            - "Tras 3–6 horas, reclasifique el grado de deshidratación"
+            severity: "emergency"
+        - label: "No"
+          continue: true
+      - decision: "Algún grado de deshidratación (PLAN B) — ¿puede beber pero tiene 2 o más de los siguientes signos?"
+        criteria:
+        - "Inquietud/irritabilidad"
+        - "Ojos hundidos"
+        - "Pliegue cutáneo lento 1–2 segundos"
+        - "Lengua seca"
+        - "Lágrimas disminuidas"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "PLAN B"
+            bullets:
+            - "SRO VO a 75mL/kg en 4 horas"
+            - "Continúe la lactancia materna y/o fomente la alimentación si tiene >6 meses"
+            - "Reevalúe y reclasifique a las 4 horas"
+            severity: "priority"
+        - label: "No"
+          continue: true
+      terminal:
+        title: "Sin deshidratación significativa (PLAN A) — diarrea/GE con menos de 2 de los signos de deshidratación anteriores"
+        bullets:
+        - "SRO VO a 10mL/kg tras cada deposición líquida"
+        - "Continúe la lactancia materna y/o fomente la alimentación si tiene >6 meses"
+        severity: "non_urgent"
+  - page_number: 44
+    blocks:
+    - type: "prose"
+      title: "Tratamiento complementario de la diarrea"
+      markdown: |
+        - **Todos los casos deben recibir zinc x 10–14 días — 10mg/día en menores de 6 meses, 20mg/día a partir de 6 meses.** Un rango único de 10–20mg corre el riesgo de dar la dosis de 20mg a un lactante pequeño
+        - La diarrea de >14 días puede complicarse con intolerancia a las SRO (empeora la diarrea) — si ocurre, cambie a esquemas IV
+    - type: "prose"
+      title: "Antibióticos SOLO si hay diarrea con sangre (disentería)"
+      markdown: |
+        - **Primera línea:** ciprofloxacino 15mg/kg/dosis dos veces al día x 3–5 días
+        - **Segunda línea (o muy enfermo):** ceftriaxona 50–80mg/kg/día x 3–5 días
+        - **Alternativa:** azitromicina 12mg/kg VO el día 1 (máx. 500mg), luego 6mg/kg VO una vez al día los días 2–5 (máx. 250mg)
+        - **NO USE:** aminoglucósidos, amoxicilina, ampicilina, cloranfenicol, cotrimoxazol, cefalosporinas de 1.ª o 2.ª generación, ácido nalidíxico, nitrofuranos ni tetraciclina, por resistencias
+    - type: "prose"
+      title: "Antibióticos/antiprotozoarios SOLO si hay diarrea persistente Y"
+      markdown: |
+        - **Amebiasis demostrada:** paromomicina, diloxanida, yodoquinol
+        - **Giardiasis demostrada:** tinidazol, metronidazol, nitazoxanida (también albendazol, mebendazol, paromomicina)

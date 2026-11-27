@@ -1,0 +1,69 @@
+# translated-from-sha256: cd3dc8bb60e0fb4d5255fa306cf8391a40a3e5235bf3332d522e85f3193113bd
+topic:
+  id: "pb-resuscitation-meds"
+  title: "Medicamentos de reanimación"
+  list_subtitle: "p.20 · dosis pediátricas y de adultos"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["medicamentos", "reanimación", "emergencia", "dosificación"]
+  category: "critical_care"
+  page_number: 20
+  blocks:
+  - type: "table"
+    title: "Niños"
+    columns: ["Medicamento", "Dosis"]
+    rows:
+    - cells:
+      - "Adrenalina (epinefrina)"
+      - "**0.1 ml/kg de 0.1 mg/mL (1:10,000)** IV, **máx. 10 ml (= 1 mg)** · lave con 10 ml de SSN · 🛑 Use 0.1 mg/mL (1:10,000) por vía IV/IO. Si solo hay ampollas de 1 mg/mL (1:1,000), diluya 1 ml en 9 ml de SSN para obtener 1:10,000 — administrar 1:1,000 sin diluir por vía IV puede ser mortal"
+    - cells:
+      - "Dextrosa al 10%"
+      - |
+        **2 ml/kg** IV. Hay tres formas de prepararla — **no** son el mismo líquido:
+        - **D10 en solución salina ~0.7%** (con sodio, ~123 mmol/L): 8 ml de SSN + 2 ml de D50%
+        - **D10 en agua** (sin sodio, agua libre): 1 ml de D50% + 4 ml de agua estéril
+        - **D10 en agua**, si solo tiene D5%: 1 ml de D50% + 8 ml de D5%
+        Para un bolo por hipoglucemia sirve cualquiera. **Si va a seguir como líquido de mantenimiento, sepa cuál preparó** — la versión salina lleva sodio, las otras son agua libre
+    - cells:
+      - "Diazepam rectal, supositorio de ~2.5 mg"
+      - |
+        - < 10 kg: 1 supositorio (**NO USAR** en neonatos)
+        - 10 – 15 kg: 2 supositorios
+        - 15 – 20 kg: 3 supositorios
+        - 20 – 25 kg: 4 supositorios
+    - cells:
+      - "Diazepam IV"
+      - "**0.2 mg/kg** IV lento en 1 minuto, **máx. 10 mg** · puede repetirse una vez a los 5–10 min · **máximo 2 dosis**, luego fenobarbital"
+    - cells:
+      - "Fenobarbital"
+      - "**Carga** 20 mg/kg IM/IV en 20 min (todas las edades) · si sigue convulsionando tras 15 min administre otros **10 mg/kg**, hasta un **máximo acumulado de 40 mg/kg** — solo donde haya monitorización respiratoria · **Mantenimiento** 3–5 mg/kg IM/IV/VO una vez al día"
+    - cells:
+      - "Concentrado de hematíes (CH)"
+      - "10 ml/kg (eleva la Hb 1 g/dL)"
+    - cells:
+      - "Sangre total (ST)"
+      - "20 ml/kg (eleva la Hb 1 g/dL)"
+  - type: "table"
+    title: "Adultos"
+    columns: ["Medicamento", "Dosis"]
+    rows:
+    - cells:
+      - "Adrenalina (epinefrina)"
+      - "1 mg IV en 10 ml de SSN — lave con 20 ml de SSN"
+    - cells:
+      - "Dextrosa"
+      - "50 ml IV al 50% (1 ampolla)"
+    - cells:
+      - "Diazepam rectal, supositorio de 2.5 mg"
+      - "4 supositorios por vía rectal"
+    - cells:
+      - "Diazepam IV"
+      - "0.15 mg/kg IV lento en 1 minuto"
+    - cells:
+      - "Fenobarbital"
+      - "**Carga** 20 mg/kg IM/IV en 20 min · **Mantenimiento** 3–5 mg/kg IM/IV/VO una vez al día"
+    - cells:
+      - "Concentrado de hematíes (CH)"
+      - "1 unidad (eleva la Hb 1 g/dL)"
+    - cells:
+      - "Sangre total (ST)"
+      - "2 unidades (eleva la Hb 1 g/dL)"

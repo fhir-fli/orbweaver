@@ -1,0 +1,27 @@
+# translated-from-sha256: 4f960213b7a8a562635d6c21312b04e5d800a497a62cbf82b97acaf8a3a65ab0
+topic:
+  id: "calc-anc"
+  title: "Recuento absoluto de neutrófilos"
+  list_subtitle: "RAN / neutropenia"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["ran", "recuento absoluto de neutrófilos", "neutropenia", "leucocitos", "neutrófilo", "hematología", "febril"]
+  aliases:
+  - "RAN"
+  - "Recuento absoluto de neutrófilos"
+  - "Neutropenia"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Recuento absoluto de neutrófilos a partir del recuento de leucocitos y la fórmula.
+      Incluye las formas en banda.
+  - type: "formula"
+    kind: "anc"
+    title: "Recuento absoluto de neutrófilos"
+    source: "RAN = leucocitos × (%segmentados + %bandas) / 100"
+    inputs:
+    - {key: "wbc", label: "Leucocitos", unit: "×10⁹/L", type: "number"}
+    - {key: "segs", label: "Neutrófilos segmentados", unit: "%", type: "number"}
+    - {key: "bands", label: "Neutrófilos en banda", unit: "%", type: "number", optional: true}
+    notes:
+    - "Neutropenia: < 1500 leve · < 1000 moderada · < 500 grave (células/µL)."

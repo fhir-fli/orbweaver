@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_centor.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s8",
+   "severity": "meaning",
+   "problem": "The term 'gas' (acronym for Group A Streptococcus) is translated as 'ebhga', which is not a recognized medical term in Spanish.",
+   "fix": "GAS",
+   "en": "gas",
+   "es": "ebhga"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s8\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The term 'gas' (acronym for Group A Streptococcus) is translated as 'ebhga', which is not a recognized medical term in Spanish.\",\n    \"fix\": \"GAS\"\n  }\n]\n```"
+ ]
+}

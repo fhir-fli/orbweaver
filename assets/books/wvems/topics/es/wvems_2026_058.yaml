@@ -1,0 +1,142 @@
+# translated-from-sha256: 1eb3392921813336dd70187c4e247231ff9d4aea47ef1b10b38fad14fdf90873
+topic:
+  id: "wvems-2026-058"
+  version: "v260101"
+  title: "Hemorragia"
+  list_subtitle: "2026-058 · hemorragia / torniquete / TXA"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "sangrado"
+  - "hemorragia"
+  - "torniquete"
+  - "taponamiento de heridas"
+  - "txa"
+  - "traumatismo"
+  aliases:
+  - "Hemorragia"
+  - "Torniquete"
+  - "Taponamiento de heridas"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 58
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Hemorragia aguda"
+        shape: "stadium"
+      - text: "Presión directa"
+        shape: "rounded_rectangle"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Perfusión adecuada"
+        - "Lesión superficial"
+        actions:
+        - text: "Cuidado de la herida"
+          kind: "procedure"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Mala perfusión"
+        - "Sangrado pulsátil"
+        actions:
+        - text: "Torniquete"
+          kind: "procedure"
+        - text: "Taponamiento de heridas"
+          kind: "procedure"
+        - provider_level: "A"
+          text: "TXA"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[Respiración](topic:wvems-2026-006)"
+        - text: "Circulación / [choque](topic:wvems-2026-008)"
+        - text: "[Traumatismo grave](topic:wvems-2026-056)"
+        - text: "[Sangre](topic:wvems-2026-084)"
+      critical_care_link:
+        text: "[Sangre](topic:wvems-2026-084)"
+      dose_table:
+      - drug: "[TXA](topic:wvems-2026-drug-reference#txa)"
+        dose: "2 gramos"
+        route: "IV/IO"
+        frequency: "durante 10 min"
+        population: "adult"
+  - page_number: 59
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la hemorragia"
+      highlight: true
+      markdown: |
+        - Pase **rápidamente a un [torniquete](topic:wvems-2026-096#tourniquet)** ante cualquier sangrado mayor de brazo / pierna.
+          - Escriba en el paciente la hora de colocación del **[torniquete](topic:wvems-2026-096#tourniquet)**.
+        - El **[taponamiento](topic:wvems-2026-096#wound-packing)** también puede ayudar (sobre todo en la hemorragia de unión). **No** tapone:
+          - Fracturas de cráneo inestables, deprimidas o abiertas; heridas torácicas.
+          - Sangrado por orificios corporales: vagina, recto, oído, boca, etc.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        flex: 6
+        title: "Alerta de TRAUMA"
+        callout: true
+        dashed: true
+        call_er: true
+        markdown: |
+          - Si hay intervención mayor
+          - O mecanismo mayor
+          - Active una alerta de **TRAUMA**
+      - type: "prose"
+        flex: 5
+        title: "Mala perfusión"
+        callout: true
+        markdown: |
+          Sospéchela si hay **varios** de estos:
+          - **Alteración del estado mental**
+          - Piel pálida, fría, sudorosa
+          - Taquicardia, hipotensión
+          - Disnea, taquipnea
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[TXA](topic:wvems-2026-drug-reference#txa)** (ácido tranexámico): evítelo si la lesión tiene 3+ horas o hay EP conocida.
+          - Úselo ante cualquier **sangrado traumático externo** mayor.
+          - Úselo ante sospecha de **sangrado intraabdominal / torácico** con mala perfusión.
+          - También puede usarse en el sangrado [posparto](topic:wvems-2026-048) grave (no traumático).
+          - Evítelo en otras formas de sospecha de sangrado interno o médico.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Los fármacos [anticoagulantes](topic:wvems-2026-076) (**que adelgazan la sangre**) aumentan el riesgo de sangrado.
+        - Considere retirar los apósitos puestos por los testigos para valorar la gravedad.
+        - **[Vende las heridas](topic:wvems-2026-096#wound-care)** una vez controlado el sangrado.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere [sangre](topic:wvems-2026-084) si está indicado y está acreditado para cuidados críticos.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - La hipotensión es un signo tardío del [choque](topic:wvems-2026-008) hemorrágico en pediatría.
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Stop the Bleed® — https://www.stopthebleed.org [Ver: 2025]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 29
+
+        NEMSIS: 9914083

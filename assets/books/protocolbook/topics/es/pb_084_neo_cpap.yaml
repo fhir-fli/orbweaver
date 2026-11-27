@@ -1,0 +1,58 @@
+# translated-from-sha256: ea2c9be6219bbabab413279d17b5129fda8954635ff0158ef8fa58b6ce736301
+topic:
+  id: "pb-neo-cpap"
+  title: "CPAP neonatal"
+  list_subtitle: "p.84 · indicaciones · puntuación de Silverman-Anderson"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "CPAP", "dificultad respiratoria", "puntuación de silverman anderson", "APGAR", "recién nacido", "oxígeno", "cánulas nasales"]
+  category: "medical"
+  page_number: 84
+  blocks:
+  - type: "prose"
+    title: "Presión positiva continua en la vía aérea (CPAP)"
+    markdown: |
+      Para el máximo beneficio, inicie en cuanto se identifiquen los síntomas. Iníciela en un recién nacido con dificultad respiratoria grave y **todo** lo siguiente:
+      - Peso > 1000 g
+      - APGAR ≥ 4 a los 5 minutos
+      - Dificultad respiratoria — puntuación de Silverman-Anderson ≥ 4
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Inicie la CPAP"
+      shape: "stadium"
+    stages:
+    - decision: "Vigile cada 3 horas — signos y puntuación"
+      criteria:
+      - "Signos vitales — temperatura, frecuencia cardíaca, frecuencia respiratoria"
+      - "Pulsioximetría"
+      - "Puntuación de Silverman-Anderson"
+      - "Necesidad de limpieza / aspiración nasal"
+      outcomes:
+      - label: "Empeoran los signos y la puntuación"
+        box:
+          title: "Resuelva problemas y escale"
+          bullets:
+          - "Asegúrese de que el sellado y el equipo de CPAP funcionan bien; ajuste FiO₂ / presión"
+          - "Revisión por un médico de mayor rango"
+          severity: "priority"
+      - label: "Mejoran los signos y la puntuación"
+        box:
+          title: "Continúe la CPAP; vigile hasta una puntuación de Silverman-Anderson < 4"
+        continue: true
+    terminal:
+      title: "Pase de la CPAP a oxígeno por cánulas nasales"
+  - type: "table"
+    title: "Puntuación de Silverman-Anderson"
+    zebra: true
+    columns: ["Característica", "Puntuación 0", "Puntuación 1", "Puntuación 2"]
+    column_flex: [5, 3, 5, 4]
+    column_align: ["left", "center", "center", "center"]
+    rows:
+    - cells: ["Movimiento torácico", "Simétrico", "Retraso respiratorio", "Respiración en balancín"]
+    - cells: ["Tiraje intercostal", "Ninguno", "Mínimo", "Marcado"]
+    - cells: ["Retracción xifoidea", "Ninguna", "Mínima", "Marcada"]
+    - cells: ["Aleteo nasal", "Ninguno", "Mínimo", "Marcado"]
+    - cells: ["Quejido espiratorio", "Ninguno", "Audible con estetoscopio", "Audible"]
+  - type: "prose"
+    markdown: |
+      Una puntuación > 6 — inicie la CPAP mientras prepara el traslado para ventilación mecánica.

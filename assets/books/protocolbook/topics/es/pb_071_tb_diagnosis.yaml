@@ -1,0 +1,63 @@
+# translated-from-sha256: f9ab393c9fef31eaa1055a46af295be8a102156bb587bb2e2038d29355d6beca
+topic:
+  id: "pb-tb-diagnosis"
+  title: "TB — diagnóstico y puntuación sistémica"
+  list_subtitle: "p.71 · sospechar / diagnosticar / Keith Edwards"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["tuberculosis", "TB", "pediátrico", "puntuación de keith edwards", "aspirado gástrico", "diagnóstico", "linfadenopatía", "tos crónica", "tuberculina", "puntuación"]
+  category: "medical"
+  page_number: 71
+  blocks:
+  - type: "prose"
+    title: "Considere tuberculosis ante cualquiera de los siguientes"
+    markdown: |
+      - Tos crónica
+      - Fiebre crónica
+      - Neumonía que no mejora con el tratamiento
+      - Emaciación
+      - Linfadenopatía
+      - Ascitis
+      - Insuficiencia cardíaca / derrame pericárdico
+      - Se niega a flexionar una articulación dolorosa
+      - Irritabilidad, signos meníngeos
+      - Hematuria, piuria estéril
+  - type: "prose"
+    title: "Consideraciones generales que hacen más probable la tuberculosis"
+    markdown: |
+      - Curso prolongado de tos, fiebre, sudoración
+      - Los síntomas no mejoran con el tratamiento esperado
+      - Pérdida de peso / desnutrición, sobre todo si no mejora tras 4 semanas
+      - Linfadenopatía grande e indolora
+      - Contacto cercano con una persona con tuberculosis en los últimos 2 años
+  - type: "prose"
+    title: "Diagnóstico"
+    markdown: |
+      - En los niños es especialmente difícil — los <5 años no pueden producir esputo
+      - **Confirmación bacteriológica — si hay Xpert MTB/RIF Ultra, úselo primero.** Prioridad de muestras: **esputo** (si el niño puede expectorar) → **heces** → aspirado gástrico. El Xpert en heces está avalado por la OMS en niños que no pueden expectorar y **elimina por completo la necesidad del aspirado gástrico**
+      - **Si no hay Xpert — <5 años o no puede producir esputo → aspirado gástrico:**
+        - Hágalo en días distintos, 3 veces en total
+        - A primera hora de la mañana, antes de que el niño coma o camine (idealmente despierte al paciente tras dormir boca abajo toda la noche)
+      - **Haga la prueba del VIH** — a la madre si el niño tiene <18 meses; si no, al niño. El VIH cambia el pronóstico, obliga a la profilaxis con cotrimoxazol y crea interacciones rifampicina–TAR que modifican el esquema. Vea el [protocolo de infecciones oportunistas del VIH](topic:pb-im-hiv-oi)
+      - **Contactos infantiles sanos que NO tienen TB — administre tratamiento preventivo.** Trate a todo niño contacto domiciliario, sin esperar a una prueba.
+        - **Primera línea: 3HR — isoniazida 10mg/kg/día (7–15, máx. 300mg) + rifampicina 15mg/kg/día (10–20, máx. 600mg), a diario durante 3 meses.** El ciclo más corto con rifamicina se completa mucho más a menudo que 6 meses de un solo fármaco, con igual eficacia
+        - **Alternativa aceptable donde no haya combinaciones de dosis fija con rifampicina: 6H — isoniazida 10mg/kg/día (7–15, máx. 300mg) a diario durante 6 meses.** Un esquema disponible administrado de forma fiable supera a uno mejor que no hay en existencia
+        - **Niño que vive con VIH, o menor de 5 años:** los mismos esquemas. Si las interacciones con el TAR impiden una rifamicina, recurra a isoniazida diaria durante 6–9 meses
+        - **Añada piridoxina 12.5–25mg/día** si el niño es VIH positivo o está desnutrido
+  - type: "table"
+    title: "Sistemas de puntuación — TB sistémica · puntuación de Keith Edwards (≥7 indica TB)"
+    zebra: true
+    columns: ["Característica / puntuación", "0", "1", "2", "3", "4"]
+    column_flex: [7, 2, 2, 2, 2, 2]
+    column_align: ["left", "center", "center", "center", "center", "center"]
+    rows:
+    - cells: ["Duración de la enfermedad (semanas)", "<2", "2–4", "-", ">4", "-"]
+    - cells: ["Nutrición (% peso para la edad)", ">80", "60–80", "-", "<60", "-"]
+    - cells: ["Antecedente familiar de TB", "Ninguno", "Referido", "-", "Demostrado", "-"]
+    - cells: ["Fiebre inexplicada que no responde a los antimaláricos", "-", "-", "Positivo", "-", "-"]
+    - cells: ["Prueba de tuberculina", "-", "-", "-", "Positiva", "-"]
+    - cells: ["Linfadenopatía indolora con o sin fístula", "-", "-", "-", "Positivo", "-"]
+    - cells: ["Desnutrición que no mejora tras cuatro semanas", "-", "-", "-", "Positivo", "-"]
+    - cells: ["Hinchazón articular/ósea, fístulas", "-", "-", "-", "Positivo", "-"]
+    - cells: ["Masa abdominal o ascitis inexplicadas", "-", "-", "-", "Positivo", "-"]
+    - cells: ["SNC: cambios de carácter, convulsiones o coma", "-", "-", "-", "Positivo", "-"]
+    - cells: ["Deformidad angular de la columna", "-", "-", "-", "-", "Positivo"]

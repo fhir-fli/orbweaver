@@ -1,0 +1,130 @@
+# translated-from-sha256: 1c9fd49428e84ad89ee9d40fd802d36836f8cf8361a2e4e02ab61621557aa518
+topic:
+  id: "wvems-2026-066"
+  version: "v260101"
+  title: "Lesión de extremidad"
+  list_subtitle: "2026-066 · fractura / amputación / aplastamiento"
+  last_reviewed: "Oct 2025"
+  tags:
+  - "extremidad"
+  - "fractura"
+  - "amputación"
+  - "aplastamiento"
+  - "férula"
+  - "traumatismo"
+  aliases:
+  - "Aplastamiento"
+  - "Suspensión"
+  - "Amputación"
+  - "Férula"
+  - "Esguince"
+  - "Distensión"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 66
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Traumatismo de brazo o pierna"
+        shape: "stadium"
+      decision:
+        text: "¿Pulsos distales?"
+        shape: "diamond"
+      branches:
+      - id: "intact"
+        label: "Presentes"
+        criteria:
+        - "Piel caliente y rosada"
+        - "Buen llenado capilar"
+        actions:
+        - text: "Cuidado de la herida"
+          kind: "procedure"
+        - text: "Férula"
+          kind: "procedure"
+        - text: "Bolsa de hielo"
+          kind: "procedure"
+      - id: "absent"
+        label: "Ausentes"
+        criteria:
+        - "Piel pálida y fría"
+        - "Mal llenado capilar"
+        actions:
+        - provider_level: "E"
+          text: "Reduzca la deformidad"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "Traslado urgente"
+          kind: "referral"
+        - text: "Férula"
+          kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "{A} Ancef — si es fractura abierta"
+        - text: "[Dolor](topic:wvems-2026-020)"
+        - text: "[Hemorragia](topic:wvems-2026-058)"
+        - text: "[Hiperpotasemia](topic:wvems-2026-018)"
+      dose_table:
+      - drug: "[Ancef](topic:wvems-2026-drug-reference#ancef)"
+        dose: "2 gramos"
+        route: "IV/IO, IM"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 67
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la lesión de extremidad"
+      highlight: true
+      markdown: |
+        - Pase **rápidamente a un [torniquete](topic:wvems-2026-096#tourniquet)** ante cualquier sangrado mayor de brazo / pierna.
+          - Escriba en el paciente la hora de colocación del **[torniquete](topic:wvems-2026-096#tourniquet)**.
+        - Las **extremidades sin pulso** y las **amputaciones** son verdaderas urgencias.
+          - Anote la hora de la lesión. Reduzca cualquier deformidad. Traslade cuanto antes.
+          - Envuelva las partes amputadas en gasa con suero salino y colóquelas en una bolsa cerrada.
+          - Ponga la bolsa sobre hielo si lo hay. Anote la hora en que se puso en hielo.
+        - Tenga cuidado con la [hiperpotasemia](topic:wvems-2026-018) en cualquier lesión por **aplastamiento de un miembro** o por **suspensión**.
+          - Aplastamiento de un miembro: puede iniciar el tratamiento (si está disponible rápido) antes de liberarlo.
+          - **Suspendido del arnés**: extraiga de inmediato y coloque en decúbito supino.
+        - Las **laceraciones** se benefician de reparación en las primeras horas.
+        - El **mecanismo** es un indicador importante de la gravedad de la lesión.
+    - type: "prose"
+      title: "Alerta de TRAUMA"
+      callout: true
+      dashed: true
+      call_er: true
+      markdown: |
+        - Si hay intervención mayor
+        - O mecanismo mayor
+        - Active una alerta de **TRAUMA**
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Ancef®](topic:wvems-2026-drug-reference#ancef)** (cefazolina): adminístrela si se sospecha una **fractura abierta**.
+          - Vigile de cerca si hay alergia a la penicilina; evítela si hay alergia a cefalosporinas.
+          - Reconstituya el polvo con suero salino normal y **agite bien** para mezclar.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Retire las joyas adyacentes y distales si es posible.
+        - Las **inyecciones a alta presión** pueden causar lesiones sutiles pero devastadoras.
+        - Una **[férula de tracción](topic:wvems-2026-096#splint)** puede ayudar con el dolor y el sangrado de una **fx de fémur** aislada.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Considere el [maltrato infantil](topic:wvems-2026-109#patient-abuse-and-neglect) ante lesiones que no concuerdan con la historia.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Fracture Care — https://emedicine.medscape.com/article/1270717 [Ver: 4/24]
+        - Medscape Vascular Trauma — https://emedicine.medscape.com/article/462752 [Ver: 10/23]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 29, 30
+
+        NEMSIS: 9914077, 9914097

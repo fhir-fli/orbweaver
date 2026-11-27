@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/topic_loader.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/book.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/screens/book_screen.dart' show kBookRouteName;
@@ -123,7 +124,7 @@ class _TopicBodyState extends State<TopicBody> {
     if (_error != null) {
       return Padding(
         padding: const EdgeInsets.all(16),
-        child: Text('Error: $_error'),
+        child: Text(context.l10n.errorMessage('$_error')),
       );
     }
     final topic = _topic;
@@ -391,8 +392,12 @@ class _TopicPagerState extends State<TopicPager> {
   /// and the build. Nothing is sent from the app itself: the app has no network
   /// code, and a clinician mid-shift will not type a topic id out by hand.
   Future<void> _reportProblem(BookTopic topic) async {
+    final prompt = context.l10n.feedbackPrompt;
+    final language = Localizations.localeOf(context).languageCode;
     final ok = await sendFeedback(
       FeedbackContext(
+        prompt: prompt,
+        language: language,
         bookId: widget.bookId,
         topicId: topic.id,
         topicTitle: topic.title,
@@ -402,9 +407,9 @@ class _TopicPagerState extends State<TopicPager> {
     );
     if (!ok && mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('No mail app found. Write to $kFeedbackAddress'),
-          duration: Duration(seconds: 6),
+        SnackBar(
+          content: Text(context.l10n.noMailApp(kFeedbackAddress)),
+          duration: const Duration(seconds: 6),
         ),
       );
     }
@@ -431,8 +436,8 @@ class _TopicPagerState extends State<TopicPager> {
           title: active.title,
           headerColor: accent,
         ),
-        hintText: 'Search protocols…',
-        searchTooltip: 'Search protocols',
+        hintText: context.l10n.searchProtocolsHint,
+        searchTooltip: context.l10n.searchProtocols,
         searchOpen: _searchOpen,
         controller: _searchCtrl,
         onQueryChanged: (v) => setState(() => _query = v),
@@ -445,12 +450,12 @@ class _TopicPagerState extends State<TopicPager> {
         },
         actions: [
           IconButton(
-            tooltip: 'Report a problem with this page',
+            tooltip: context.l10n.reportProblemPage,
             icon: const Icon(Icons.flag_outlined),
             onPressed: () => _reportProblem(active),
           ),
           IconButton(
-            tooltip: 'All protocols',
+            tooltip: context.l10n.allProtocols,
             icon: const Icon(Icons.home_outlined),
             onPressed: _goHome,
           ),
@@ -526,7 +531,7 @@ class _SearchResults extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Text(
-            'No protocols match "$query".',
+            context.l10n.noProtocolsMatch(query),
             style: const TextStyle(color: Colors.black54),
           ),
         ),

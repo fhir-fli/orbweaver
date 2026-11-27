@@ -1,0 +1,29 @@
+# translated-from-sha256: 27cfb990b35f77f97687f642577b292e6a46d303ce8a60eef262d9701ce42d8c
+topic:
+  id: "calc-maddrey"
+  title: "Función discriminante de Maddrey"
+  list_subtitle: "gravedad de la hepatitis alcohólica"
+  last_reviewed: "Evidence review 2026-07-19 · AASLD 2020"
+  tags: ["maddrey", "función discriminante", "mdf", "hepatitis alcohólica", "esteroides", "hígado", "hepatología"]
+  aliases:
+  - "Maddrey"
+  - "Función discriminante"
+  - "mDF"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Gravedad de la hepatitis asociada al alcohol, usada para decidir sobre los
+      corticosteroides. Necesita el TP del paciente y el TP control del laboratorio.
+  - type: "formula"
+    kind: "maddrey"
+    title: "Función discriminante de Maddrey"
+    source: "Maddrey et al., Gastroenterology 1978"
+    inputs:
+    - {key: "pt", label: "TP del paciente", unit: "sec", type: "number"}
+    - {key: "control_pt", label: "TP control", unit: "sec", type: "number"}
+    - {key: "bilirubin", label: "Bilirrubina total", unit: "mg/dL", type: "number"}
+    notes:
+    - "mDF = 4.6 × (TP − TP control) + bilirrubina. ≥ 32 = hepatitis asociada al alcohol grave."
+    caveats:
+    - "El MELD predice mejor que la mDF (Morales-Arraez 2022) — trate también si MELD > 20, y reevalúe la respuesta a esteroides con la puntuación de Lille del día 7."

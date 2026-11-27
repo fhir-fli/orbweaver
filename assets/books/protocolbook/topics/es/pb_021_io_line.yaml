@@ -1,0 +1,31 @@
+# translated-from-sha256: 935e0a2759da3b4755fb27a2302a04c1f55902ec5e98e0f37b3f24676c8e37a4
+topic:
+  id: "pb-io-line"
+  title: "Colocación de una vía intraósea"
+  list_subtitle: "p.21 · técnica + ilustración"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["io", "procedimiento", "acceso_vascular", "choque", "pediátrico"]
+  category: "critical_care"
+  page_number: 21
+  blocks:
+  - type: "prose"
+    highlight: true
+    markdown: |
+      **Use la vía IO** en todo niño en choque si no hay acceso IV, para no retrasar la fluidoterapia.
+  - type: "prose"
+    title: "Técnica"
+    markdown: |
+      - **Aguja:** aguja IO o de médula ósea **15–18 G** (o hipodérmica **16–21 G** si no hay IO).
+      - **Referencias y preparación:** identifique las referencias anatómicas, guantes estériles, desinfecte la zona.
+      - **Sitio:** centro de la cara anteromedial (plana) de la tibia, en la unión del tercio superior y el tercio medio.
+      - **Asepsia:** antiséptico + gasa estéril (alcohol al 70 %, yodo o clorhexidina).
+      - **Inserción:** bisel hacia los dedos del pie, en vertical (90°), avance lentamente con movimiento rotatorio.
+      - **Deténgase** cuando note una **pérdida brusca de resistencia** — luego aspire con una jeringa de 5 ml.
+      - **Lavado:** inyecte lentamente 3 ml de SSN observando si hay fuga bajo la piel — si todo está bien, conecte el equipo de líquidos IV y fíjelo con apósitos / cinta.
+      - **Bolos:** puede necesitar una jeringa de 20 ml o 50 ml.
+      - **Vigile** si se hinchan la pierna / los músculos de la pantorrilla.
+      - **Sustituya** el acceso IO por uno IV en **8 horas**.
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_io_line.png"
+    caption: "Sitio: tibia anteromedial, unión del tercio superior y el tercio medio. Aguja perpendicular, bisel hacia los dedos del pie."
+    size: "large"

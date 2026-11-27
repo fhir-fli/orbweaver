@@ -1,0 +1,166 @@
+# translated-from-sha256: d2c74806dbf3badb6e0a0777be8527b13211ebbf95acd1e1fd24b417ae5c98c5
+topic:
+  id: "pb-im-pe"
+  title: "Embolia pulmonar (EP)"
+  list_subtitle: "p.131 · PERC · puntuación de Wells"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["embolia pulmonar", "EP", "ETV", "PERC", "puntuación de Wells", "disnea", "dolor torácico pleurítico", "hemoptisis", "anticoagulación", "dímero D", "medicina interna", "respiratorio"]
+  category: "medical"
+  page_number: 131
+  blocks:
+  - type: "prose"
+    title: "Motivos de consulta frecuentes"
+    markdown: |
+      En general de inicio rápido:
+
+      - Disnea
+      - Taquipnea
+      - Dolor torácico pleurítico
+      - Tos
+      - Fiebre
+      - Taquicardia
+  - type: "prose"
+    title: "Factores de riesgo"
+    markdown: |
+      - Los mismos que en la TVP
+
+      Además:
+
+      - Medicamentos: anticonceptivos hormonales, terapia hormonal sustitutiva, antipsicóticos, fibratos
+  - type: "prose"
+    title: "🛑 Evalúe la probabilidad pretest ANTES de usar PERC"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    markdown: |
+      **PERC no es un cribado para todos.** Solo es válido cuando el paciente ya se
+      ha juzgado de **baja probabilidad** — por Wells (puntuación < 2) o por una impresión
+      clínica validada de menos de un 15% aproximadamente. Aplicado a un paciente que usted cree que probablemente tiene una EP,
+      produce un **"descarte" falsamente tranquilizador**. Las guías europeas no usan PERC
+      en absoluto, y advierten que puede no ser seguro donde la prevalencia de EP es alta.
+
+      **Orden: probabilidad pretest → luego PERC → luego dímero D → luego imagen.**
+      El libro ponía antes PERC en primer lugar.
+  - type: "prose"
+    title: "Sospecha de EP — la secuencia donde no hay angiografía pulmonar por TC"
+    markdown: |
+      1. **Evalúe primero la probabilidad pretest** — puntuación de Wells (abajo), o Ginebra, o impresión clínica
+      2. **Probabilidad alta, o inestabilidad hemodinámica** → NO haga PERC ni dímero D. Este paciente necesita imagen o tratamiento empírico — vea la sección de alto riesgo de abajo
+      3. **Probabilidad baja** → aplique PERC. Los 8 negativos → EP descartada, pare
+      4. **Probabilidad baja pero PERC positivo, o probabilidad intermedia** → dímero D, usando el **punto de corte ajustado por edad (edad × 10 µg/L si la edad es > 50)**
+      5. **Dímero D por debajo del corte** → EP descartada
+      6. **Dímero D por encima del corte** → imagen. Si no hay angio-TC: **gammagrafía V/Q, o ecografía de compresión de ambas piernas** (una TVP proximal justifica la misma anticoagulación sin imagen torácica), y **ecocardiografía para ver sobrecarga del VD**
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "PERC — solo si ya se evaluó como de BAJA probabilidad"
+      shape: "stadium"
+    stages:
+    - decision: "¿Cumple el paciente TODOS estos?"
+      criteria:
+      - "Edad < 50 años"
+      - "Pulso < 100"
+      - "SpO₂ > 94%"
+      - "Sin hinchazón unilateral de la pierna"
+      - "Sin hemoptisis"
+      - "Sin cirugía ni traumatismo en las últimas 4 semanas"
+      - "Sin TVP / EP previa"
+      - "Sin uso de hormonas orales"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "No trate como embolia pulmonar"
+      - label: "No"
+        continue: true
+    - decision: "Evalúe si hay TVP — ¿positivo?"
+      outcomes:
+      - label: "Positivo para TVP"
+        box:
+          title: "Trate como TVP / EP"
+      - label: "No positivo"
+        continue: true
+    terminal:
+      title: "Aplique la puntuación de Wells (abajo)"
+  - type: "prose"
+    title: "Regla de decisión clínica de Wells"
+    markdown: |
+      Puntuación **< 2** riesgo bajo · **2–6** riesgo intermedio · **> 6** riesgo alto.
+  - type: "table"
+    columns: ["Hallazgo", "Puntos"]
+    column_flex: [9, 2]
+    column_align: ["left", "center"]
+    rows:
+    - cells: ["TVP / EP previa", "1.5"]
+    - cells: ["Inmovilización > 3 días o cirugía en las 4 semanas previas", "1.5"]
+    - cells: ["Neoplasia maligna en los últimos 6 meses", "1"]
+    - cells: ["Hinchazón de la pierna / dolor a la palpación de las venas profundas (signos clínicos de TVP)", "3"]
+    - cells: ["Hemoptisis", "1"]
+    - cells: ["La embolia pulmonar es el diagnóstico más probable", "3"]
+    - cells: ["Frecuencia cardíaca > 100", "1.5"]
+  - type: "prose"
+    title: "Tratamiento según el riesgo"
+    markdown: |
+      - **Riesgo bajo:** **una puntuación de Wells baja por sí sola no descarta la EP.** Si el paciente es
+        **PERC negativo**, la EP queda descartada — observe o dé el alta con indicaciones claras de regreso.
+        Si el paciente **no** es PERC negativo, **se necesita un dímero D** antes de descartar
+        la EP, y un resultado positivo requiere imagen o tratamiento empírico
+      - **Riesgo intermedio:** dímero D; consulte con el médico de mayor rango si el tratamiento es apropiado
+      - **Riesgo alto:** puede iniciar tratamiento empírico; consulte con el médico de mayor rango si debe continuarse
+
+      **Si tampoco hay dímero D** — el caso habitual aquí:
+      - Probabilidad baja **y** PERC negativo → la EP puede descartarse clínicamente; observe o dé el alta con indicaciones de regreso
+      - Probabilidad baja pero **PERC positivo** → **no dé simplemente el alta.** Use ecografía de compresión de las piernas y/o ecocardiografía si las hay; si persiste la sospecha y el riesgo de sangrado es aceptable, **la anticoagulación empírica con revisión estrecha es preferible a un alta sin pruebas**
+
+      Vea [Trombosis venosa profunda](topic:pb-im-dvt) para la pauta de anticoagulación común de TVP / EP.
+  - type: "prose"
+    title: "🛑 EP DE ALTO RIESGO (MASIVA) — el paciente en choque"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    markdown: |
+      **Definición — PA sistólica < 90 mmHg**, o un descenso de ≥ 40 mmHg respecto a la basal,
+      **mantenido ≥ 15 minutos**, o que requiere vasopresores/inotrópicos, o paro cardíaco
+      / choque obstructivo.
+
+      **No pase a este paciente por PERC, Wells ni dímero D.** Trátelo.
+  - type: "prose"
+    title: "Trombólisis sistémica en la EP de alto riesgo"
+    markdown: |
+      Donde no hay tratamiento dirigido por catéter ni embolectomía quirúrgica —
+      **está indicada la trombólisis sistémica** en la EP de alto riesgo confirmada o muy
+      sospechada sin contraindicaciones.
+
+      - **Alteplasa: 100 mg IV en 2 horas.** En el paro / periparo, una pauta
+        acelerada de **0.6 mg/kg en ~15 min (máx. 50 mg)**. Una pauta de **50 mg** tiene
+        eficacia similar con menos sangrado
+      - **Tenecteplasa: bolo IV único según el peso** — las mismas franjas de peso que la
+        tabla del IAMCEST
+      - **Estreptoquinasa: 250,000 UI IV en 30 min, luego 100,000 UI/h durante 12–24 horas**
+        (también se describe una pauta acelerada de 1.5 millones de UI en 2 h)
+
+      ⚠️ **Estas difieren de las pautas del IAMCEST** de las páginas de SCA: la alteplasa en la EP es una
+      infusión de 100 mg/2 h, y la estreptoquinasa dura 12–24 horas en lugar de una sola
+      dosis como en el IAMCEST.
+
+      **Anticoagulación alrededor de la lisis:** use **heparina no fraccionada**. Con
+      alteplasa o tenecteplasa, la heparina se continúa o se reanuda. Con **estreptoquinasa,
+      suspenda la heparina durante la infusión** e iníciela después cuando baje el TTPa.
+  - type: "prose"
+    title: "Sopesar el riesgo de sangrado en la EP de alto riesgo"
+    markdown: |
+      La lista de contraindicaciones es la misma que para la lisis en el IAMCEST — hemorragia
+      intracraneal previa, lesión cerebral estructural, ictus isquémico en los últimos 3 meses (salvo el
+      hiperagudo), sangrado activo, cirugía mayor o traumatismo recientes, hipertensión grave
+      no controlada.
+
+      **Pero el balance cambia.** La trombólisis en la EP conlleva aproximadamente un **9.9% de sangrado
+      mayor y ~1.7% de hemorragia intracraneal** — más que en muchas series de IAMCEST —
+      pero la mortalidad de una EP de alto riesgo sin tratar es tan alta que una contraindicación
+      **relativa** se pasa por alto aquí con más facilidad que en el IAMCEST.
+
+      **En la EP de riesgo intermedio NO se recomienda la lisis inicial rutinaria** — el beneficio
+      se compensa con el exceso de sangrado mayor e intracraneal.

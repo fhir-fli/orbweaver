@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 
 /// The card every interactive calculator block (score, formula, conversion)
@@ -68,7 +69,7 @@ class CalculatorFrame extends StatelessWidget {
         if (source != null) ...[
           const SizedBox(height: 8),
           Text(
-            'Source: $source',
+            context.l10n.calculatorSource(source!),
             style: const TextStyle(fontSize: 10.5, color: Colors.black54),
           ),
         ],

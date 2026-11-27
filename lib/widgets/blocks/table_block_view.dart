@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:material_ui/material_ui.dart' hide TableCell, TableRow;
 import 'package:material_ui/material_ui.dart' as mat;
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/mini_markdown.dart';
@@ -867,7 +868,9 @@ class _ScrollTableViewState extends State<_ScrollTableView> {
     if (!block.lookup) return panel;
     final label =
         block.lookupLabel ??
-        'Go to ${block.columns.isEmpty ? "row" : block.columns.first}';
+        (block.columns.isEmpty
+            ? context.l10n.goToRow
+            : context.l10n.goToColumn(block.columns.first));
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [

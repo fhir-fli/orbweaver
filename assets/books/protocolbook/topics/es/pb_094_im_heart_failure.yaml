@@ -1,0 +1,145 @@
+# translated-from-sha256: ab468452f20b1e9d096070d1c33a461dc59fb41f3ee06e092f4d6ba817c6a86a
+topic:
+  id: "pb-im-heart-failure"
+  title: "Insuficiencia cardíaca del adulto"
+  list_subtitle: "pp.94–95 · caliente/frío × húmedo/seco · tratamiento"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["insuficiencia cardíaca", "ICC", "adulto", "medicina interna", "stevenson", "frío húmedo seco caliente", "furosemida", "dopamina", "digoxina", "IECA", "NYHA", "cardiología"]
+  category: "medical"
+  pages:
+  - page_number: 94
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Insuficiencia cardíaca del adulto"
+        shape: "stadium"
+      branches:
+      - id: "complaints"
+        label: "Motivos de consulta frecuentes"
+        criteria:
+        - "Disnea paroxística nocturna (DPN)"
+        - "Ortopnea"
+        - "Disnea de esfuerzo"
+        - "Cansancio y aumento de peso"
+        - "Tos"
+        - "Intolerancia al ejercicio"
+        - "Aumento del perímetro abdominal"
+        - "Edema de miembros inferiores"
+        - "Falta de aire al inclinarse hacia delante (\"bendopnea\")"
+      - id: "risk"
+        label: "Factores de riesgo"
+        criteria:
+        - "Insuficiencia cardíaca conocida, enfermedad coronaria, infarto de miocardio o hipertensión"
+        - "Diabetes mellitus o dislipidemia"
+        - "EPOC u otra enfermedad pulmonar"
+        - "Valvulopatía cardíaca"
+        - "Embolia pulmonar o hipertensión pulmonar"
+        - "Apnea del sueño"
+        - "Infección"
+        - "Cirugía o traumatismo reciente"
+        - "Antecedentes familiares de insuficiencia cardíaca"
+        - "Consumo importante de tabaco o alcohol"
+      convergence:
+        text: "Manejo inicial"
+        shape: "rounded_rectangle"
+        bullets:
+        - text: "Monitorice, mantenga el ABC"
+        - text: "Controle los signos vitales (FC, FR, SpO₂, temp, peso)"
+        - text: "Inicie oxígeno si la SpO₂ < 90%"
+        - text: "Coloque una vía IV de gran calibre"
+        - text: "Evalúe AVPU/GCS y el estado de hidratación"
+        - text: "Haga una historia y una exploración física breves y dirigidas"
+        - text: "ECG de 12 derivaciones"
+      post_convergence:
+        text: "Clasifique por la exploración física — congestión × perfusión (tabla de abajo)"
+        shape: "rectangle"
+    - type: "table"
+      title: "Clasifique por la exploración física"
+      column_flex: [3, 5, 5]
+      columns: ["Perfusión ↓ / Congestión →", "SÍ — húmedo", "NO — seco"]
+      rows:
+      - cells:
+        - "**Baja perfusión — SÍ (frío)**"
+        - |
+          **Frío y húmedo**
+          - PAS < 90 / presión de pulso estrecha
+          - Extremidades frías / pálidas
+          - Diuresis disminuida
+          - PVY elevada
+          - Crepitantes en las bases pulmonares
+          - Edema periférico
+          - Hepatomegalia / ascitis
+        - |
+          **Frío y seco**
+          - PAS < 90 / presión de pulso estrecha
+          - Extremidades frías / pálidas
+          - Diuresis disminuida
+          - PVY normal / baja
+          - Pulmones limpios
+          - Edema periférico mínimo
+      - cells:
+        - "**Baja perfusión — NO (caliente)**"
+        - |
+          **Caliente y húmedo**
+          - PAS > 90
+          - Buen pulso periférico
+          - Diuresis normal
+          - PVY elevada
+          - Crepitantes en las bases pulmonares
+          - Edema periférico
+          - Hepatomegalia / ascitis
+        - |
+          **Caliente y seco**
+          - PAS > 90
+          - Buen pulso periférico
+          - Diuresis normal
+          - PVY normal
+          - Pulmones limpios
+          - Edema periférico mínimo
+  - page_number: 95
+    blocks:
+    - type: "prose"
+      title: "Tratamiento — en todas las descompensaciones"
+      markdown: |
+        - Vigile ingresos/egresos, considere una sonda Foley, pese a diario
+        - Considere electrolitos, BUN, Cr
+        - Ecocardiograma si es un diagnóstico nuevo; repítalo cuando esté estable si puede haber empeorado la enfermedad de base
+    - type: "prose"
+      title: "Frío y húmedo — tratamiento"
+      markdown: |
+        - Vasopresor para mantener la PAS > 90 — **la noradrenalina 0.05–0.5 mcg/kg/min es la primera opción donde esté disponible** (puede pasarse por vía periférica con contador de gotas si no hay vía central). Si no hay, dopamina 3–10 mcg/kg/min — eficaz, pero con muchas más arritmias y mayor mortalidad
+        - Furosemida — iníciela cuando la PA se mantenga; 40–80 mg IV cada 2 horas según la evaluación clínica. **Reevalúe antes de cada dosis repetida** (diuresis, PVY, tórax, PA) y **mida potasio y creatinina a diario** — las dosis repetidas cada 2 horas agotan el potasio rápidamente
+        - Digoxina — **SOLO SI SE DEMUESTRA** una taquicardia supraventricular (fibrilación auricular, flutter auricular, etc.). **Digitalice:** 0.25–0.5 mg IV, luego 0.25 mg cada 6–8 horas hasta 2 dosis más (total ≤1–1.5 mg). **Luego mantenimiento 0.125–0.25 mg VO UNA VEZ AL DÍA.** 🛑 **No continúe con dosis cada 6–8 horas** — eso son ~0.75–1 mg/día y alcanza niveles tóxicos con seguridad. Objetivo 0.5–0.9 ng/mL; reduzca en la insuficiencia renal y en los ancianos
+    - type: "prose"
+      title: "Frío y seco — tratamiento"
+      markdown: |
+        - Vasopresor para mantener la PAS > 90 — **la noradrenalina 0.05–0.5 mcg/kg/min es la primera opción donde esté disponible** (puede pasarse por vía periférica con contador de gotas si no hay vía central). Si no hay, dopamina 3–10 mcg/kg/min — eficaz, pero con muchas más arritmias y mayor mortalidad
+        - Digoxina — **SOLO SI SE DEMUESTRA** una taquicardia supraventricular (fibrilación auricular, flutter auricular, etc.). **Digitalice:** 0.25–0.5 mg IV, luego 0.25 mg cada 6–8 horas hasta 2 dosis más (total ≤1–1.5 mg). **Luego mantenimiento 0.125–0.25 mg VO UNA VEZ AL DÍA.** 🛑 **No continúe con dosis cada 6–8 horas** — eso son ~0.75–1 mg/día y alcanza niveles tóxicos con seguridad. Objetivo 0.5–0.9 ng/mL; reduzca en la insuficiencia renal y en los ancianos
+    - type: "prose"
+      title: "Caliente y húmedo — tratamiento"
+      markdown: |
+        - Furosemida — la dosis IV inicial debe igualar o superar la dosis VO diaria crónica, O bolo de 40–80 mg IV (duplique la dosis si no hay efecto en 30 minutos); considere un 2.º diurético si no responde; continúe cada 2 horas según necesidad
+        - 🛑 **No administre morfina para la disnea en la insuficiencia cardíaca aguda.** Se asocia a mayor mortalidad, más ventilación mecánica y más ingresos en UCI, y no mejora la disnea. Trate el edema — oxígeno, sentado, furosemida, nitratos
+        - Si hay hipertensión: IECA
+        - Continúe la dosis habitual de betabloqueante o IECA si está hemodinámicamente estable, pero no la ajuste hasta resolver la descompensación
+    - type: "prose"
+      title: "Caliente y seco — tratamiento"
+      markdown: |
+        Insuficiencia cardíaca crónica estable — el tratamiento también debe iniciarse en el hospital tras estabilizar una descompensación aguda, antes del alta:
+        - IECA — ajuste hasta la dosis más alta tolerada; controle periódicamente Cr y K+
+        - Betabloqueante — empiece bajo y suba cada dos semanas hasta la dosis máxima tolerada
+        - Furosemida — para la sobrecarga de volumen crónica
+        - Espironolactona — en clase II–IV de la NYHA; Cr sérica < 2.5 / 2 (hombres/mujeres); potasio < 5
+        - **Inhibidor de SGLT2 — donde esté disponible:** dapagliflozina 10 mg una vez al día o empagliflozina 10 mg una vez al día. Es ya un cuarto pilar junto al IECA, el betabloqueante y la espironolactona; reduce las hospitalizaciones y la muerte cardiovascular **tenga o no diabetes el paciente**
+    - type: "table"
+      title: "Clases de la New York Heart Association (NYHA)"
+      zebra: true
+      columns: ["Clase", "Descripción"]
+      column_flex: [2, 8]
+      column_align: ["center", "left"]
+      rows:
+      - cells: ["I", "Sin limitación de la actividad física. La actividad física habitual no causa cansancio excesivo, palpitaciones ni disnea."]
+      - cells: ["II", "Limitación leve de la actividad física. Cómodo en reposo. La actividad física habitual produce cansancio, palpitaciones o disnea."]
+      - cells: ["III", "Limitación marcada de la actividad física. Cómodo en reposo. Una actividad menor de la habitual causa cansancio, palpitaciones o disnea."]
+      - cells: ["IV", "No puede realizar ninguna actividad física sin molestias. Síntomas de insuficiencia cardíaca en reposo. Cualquier actividad física aumenta las molestias."]

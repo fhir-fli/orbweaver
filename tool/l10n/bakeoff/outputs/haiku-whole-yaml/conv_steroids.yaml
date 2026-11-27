@@ -1,0 +1,46 @@
+# translated-from-sha256: db898bc7246e84f088859b5f3f3e5aee4faa88c73bba53f200717d033de859c8
+topic:
+  id: "conv-steroids"
+  title: "Conversión de corticosteroides"
+  list_subtitle: "→ equivalente de prednisona (antiinflamatorio)"
+  last_reviewed: "Evidence review 2026-07-19 · Meikle-Tyler potency table"
+  tags: ["esteroide", "corticosteroide", "glucocorticoide", "conversión", "prednisona", "dexametasona", "hidrocortisona", "metilprednisolona"]
+  aliases:
+    - "Equivalencia de esteroides"
+    - "Conversión de glucocorticoides"
+    - "Equivalente de prednisona"
+  category: "medical"
+
+  blocks:
+
+    - type: "prose"
+      markdown: |
+        Compara corticosteroides sistémicos según su **potencia
+        antiinflamatoria (glucocorticoide)**. Elija el esteroide desde el
+        que va a **cambiar**, ingrese su dosis y luego elija el esteroide
+        al que va a **cambiar**. La línea central muestra la dosis
+        **equivalente de prednisona**.
+
+    - type: "conversion"
+      mode: "equivalence"
+      title: "Corticosteroide → equivalente de prednisona"
+      reference: "prednisone"
+      reference_label: "mg equiv. de prednisona"
+      unit: "mg"
+      source: "Meikle & Tyler, Am J Med 1977 (tabla estándar de potencia de glucocorticoides)"
+      agents:
+        - { name: "Hidrocortisona",       factor: 0.25 }
+        - { name: "Cortisona",            factor: 0.2 }
+        - { name: "Prednisona",           factor: 1.0 }
+        - { name: "Prednisolona",         factor: 1.0 }
+        - { name: "Metilprednisolona",    factor: 1.25 }
+        - { name: "Triamcinolona",        factor: 1.25 }
+        - { name: "Dexametasona",         factor: 6.667 }
+        - { name: "Betametasona",         factor: 8.333 }
+      excluded:
+        - { name: "Fludrocortisona", reason: "Principalmente un mineralocorticoide — no intercambiable para el efecto glucocorticoide." }
+      caveats:
+        - "Solo potencia antiinflamatoria — estos factores NO convierten la actividad mineralocorticoide ni la duración de acción."
+        - "La dexametasona / betametasona son de acción prolongada (36–72 h) con mayor supresión del eje HHA; no son fisiológicamente intercambiables con la hidrocortisona de acción corta, a pesar de dosis antiinflamatorias equivalentes."
+        - "Estimaciones de estudios de dosis única — ajuste clínicamente en caso de dosificación crónica o repetida, y reduzca gradualmente la dosis para evitar supresión suprarrenal."
+        - "Para dosis de estrés en insuficiencia suprarrenal use específicamente hidrocortisona (importa el efecto mineralocorticoide); esta tabla no aplica."

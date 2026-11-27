@@ -13,6 +13,10 @@ analyzer:
     - windows/**
     - macos/**
     - linux/**
+    # flutter gen-l10n output (l10n.yaml). Flutter 3.50's template still
+    # lists flutter_localizations' delegates, deprecated in 3.50 (CI run
+    # 45772042433: 2 infos); the app installs material_ui's (lib/l10n/l10n.dart).
+    - lib/l10n/gen/**
 
 linter:
   rules:

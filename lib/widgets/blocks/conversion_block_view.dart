@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/blocks/calculator_frame.dart';
@@ -295,7 +296,7 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
           Padding(
             padding: const EdgeInsets.only(top: 8),
             child: Text(
-              'Highlighted: $_selectedTier-intensity equivalents.',
+              context.l10n.conversionHighlighted('$_selectedTier'),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w600,
@@ -379,9 +380,9 @@ class _ConversionBlockViewState extends State<ConversionBlockView> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text(
-          'Not convertible here:',
-          style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+        Text(
+          context.l10n.notConvertibleHere,
+          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
         ),
         for (final e in _b.excluded)
           Padding(

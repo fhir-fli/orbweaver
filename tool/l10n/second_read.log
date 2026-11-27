@@ -1,0 +1,798 @@
+217 pages
+assets/credits.yaml: 61 pairs, 3 findings (0 patient-safety), 115s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/book.yaml: 12 pairs, 0 findings (0 patient-safety), 972s 
+assets/books/calculators/topics/calc_4ts.yaml: 36 pairs, 0 findings (0 patient-safety), 128s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_aa_gradient.yaml: 28 pairs, 0 findings (0 patient-safety), 240s 
+assets/books/calculators/topics/calc_adrogue_madias.yaml: 30 pairs, 0 findings (0 patient-safety), 68s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_anc.yaml: 19 pairs, 0 findings (0 patient-safety), 296s 
+assets/books/calculators/topics/calc_anion_gap.yaml: 24 pairs, 1 findings (0 patient-safety), 145s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/calculators/topics/calc_anthropometrics.yaml: 21 pairs, 0 findings (0 patient-safety), 2845s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+assets/books/calculators/topics/calc_auditc.yaml: 32 pairs, 1 findings (1 patient-safety), 4069s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/calculators/topics/calc_bisap.yaml: 22 pairs, 0 findings (0 patient-safety), 2849s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_bishop.yaml: 29 pairs, 0 findings (0 patient-safety), 528s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_canadian_cspine.yaml: 44 pairs, 0 findings (0 patient-safety), 1768s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_canadian_ct_head.yaml: 34 pairs, 0 findings (0 patient-safety), 166s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/topics/calc_centor.yaml: 25 pairs, 1 findings (0 patient-safety), 1049s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_cha2ds2_vasc.yaml: 31 pairs, 0 findings (0 patient-safety), 504s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_child_pugh.yaml: 36 pairs, 0 findings (0 patient-safety), 304s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_ciwa_ar.yaml: 87 pairs, 0 findings (0 patient-safety), 623s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_corrected_sodium.yaml: 24 pairs, 0 findings (0 patient-safety), 519s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/calculators/topics/calc_cows.yaml: 74 pairs, 1 findings (0 patient-safety), 736s 
+assets/books/calculators/topics/calc_creatinine_clearance.yaml: 34 pairs, 0 findings (0 patient-safety), 93s 
+assets/books/calculators/topics/calc_curb65.yaml: 25 pairs, 0 findings (0 patient-safety), 71s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+assets/books/calculators/topics/calc_dday_age.yaml: 18 pairs, 0 findings (0 patient-safety), 3993s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_fib4.yaml: 21 pairs, 0 findings (0 patient-safety), 2233s 
+assets/books/calculators/topics/calc_free_water_deficit.yaml: 24 pairs, 0 findings (0 patient-safety), 51s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_gad7.yaml: 55 pairs, 0 findings (0 patient-safety), 1615s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+assets/books/calculators/topics/calc_gcs.yaml: 39 pairs, 0 findings (0 patient-safety), 4665s 
+assets/books/calculators/topics/calc_glasgow_blatchford.yaml: 31 pairs, 1 findings (0 patient-safety), 79s 
+assets/books/calculators/topics/calc_hasbled.yaml: 26 pairs, 0 findings (0 patient-safety), 79s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_hba1c_eag.yaml: 18 pairs, 0 findings (0 patient-safety), 149s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_heart.yaml: 38 pairs, 2 findings (0 patient-safety), 209s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/calculators/topics/calc_holliday_segar.yaml: 21 pairs, 3 findings (0 patient-safety), 2799s 
+assets/books/calculators/topics/calc_ich_score.yaml: 30 pairs, 0 findings (0 patient-safety), 70s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_ideal_body_weight.yaml: 27 pairs, 0 findings (0 patient-safety), 2229s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+assets/books/calculators/topics/calc_lights.yaml: 22 pairs, 0 findings (0 patient-safety), 3462s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_lille.yaml: 23 pairs, 0 findings (0 patient-safety), 163s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/topics/calc_maddrey.yaml: 20 pairs, 0 findings (0 patient-safety), 1035s 
+assets/books/calculators/topics/calc_map.yaml: 20 pairs, 0 findings (0 patient-safety), 65s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_meld.yaml: 30 pairs, 0 findings (0 patient-safety), 266s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/calculators/topics/calc_news2.yaml: 32 pairs, 0 findings (0 patient-safety), 5322s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_nexus_cspine.yaml: 32 pairs, 0 findings (0 patient-safety), 160s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_nihss.yaml: 93 pairs, 8 findings (0 patient-safety), 1695s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_osmolal_gap.yaml: 22 pairs, 0 findings (0 patient-safety), 1602s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/calculators/topics/calc_ottawa_ankle.yaml: 27 pairs, 1 findings (0 patient-safety), 1715s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_ottawa_knee.yaml: 21 pairs, 0 findings (0 patient-safety), 2147s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_oxygenation.yaml: 25 pairs, 0 findings (0 patient-safety), 2296s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/calculators/topics/calc_parkland.yaml: 23 pairs, 0 findings (0 patient-safety), 2250s 
+assets/books/calculators/topics/calc_pecarn_cspine.yaml: 44 pairs, 0 findings (0 patient-safety), 152s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/topics/calc_pecarn_head.yaml: 60 pairs, 0 findings (0 patient-safety), 1074s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/calculators/topics/calc_perc.yaml: 24 pairs, 0 findings (0 patient-safety), 2745s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_phq9.yaml: 67 pairs, 0 findings (0 patient-safety), 10s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_prevent_ascvd.yaml: 40 pairs, 0 findings (0 patient-safety), 10s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_qsofa.yaml: 20 pairs, 0 findings (0 patient-safety), 15s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_qtc.yaml: 21 pairs, 0 findings (0 patient-safety), 20s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_rcri.yaml: 26 pairs, 0 findings (0 patient-safety), 15s [Errno -2] Name or service not known
+assets/books/calculators/topics/calc_reticulocyte.yaml: 19 pairs, 0 findings (0 patient-safety), 15s [Errno -2] Name or service not known
+217 pages
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_news2.yaml: 32 pairs, 0 findings (0 patient-safety), 264s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_perc.yaml: 24 pairs, 1 findings (0 patient-safety), 428s 
+assets/books/calculators/topics/calc_phq9.yaml: 67 pairs, 1 findings (0 patient-safety), 136s 
+assets/books/calculators/topics/calc_prevent_ascvd.yaml: 40 pairs, 0 findings (0 patient-safety), 183s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_qsofa.yaml: 20 pairs, 1 findings (0 patient-safety), 179s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_qtc.yaml: 21 pairs, 0 findings (0 patient-safety), 108s 
+assets/books/calculators/topics/calc_rcri.yaml: 26 pairs, 0 findings (0 patient-safety), 78s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/calculators/topics/calc_reticulocyte.yaml: 19 pairs, 0 findings (0 patient-safety), 991s 
+assets/books/calculators/topics/calc_sgarbossa.yaml: 23 pairs, 0 findings (0 patient-safety), 61s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_sirs.yaml: 20 pairs, 0 findings (0 patient-safety), 242s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/calc_sofa.yaml: 35 pairs, 0 findings (0 patient-safety), 347s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_urinary_indices.yaml: 26 pairs, 0 findings (0 patient-safety), 140s 
+assets/books/calculators/topics/calc_wells_dvt.yaml: 30 pairs, 0 findings (0 patient-safety), 66s 
+assets/books/calculators/topics/calc_wells_pe.yaml: 29 pairs, 1 findings (0 patient-safety), 74s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/calc_winters.yaml: 21 pairs, 0 findings (0 patient-safety), 108s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/conv_benzodiazepines.yaml: 28 pairs, 0 findings (0 patient-safety), 102s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/calculators/topics/conv_opioids.yaml: 33 pairs, 0 findings (0 patient-safety), 141s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/calculators/topics/conv_statins.yaml: 74 pairs, 0 findings (0 patient-safety), 352s 
+assets/books/calculators/topics/conv_steroids.yaml: 31 pairs, 0 findings (0 patient-safety), 180s 
+assets/books/protocolbook/book.yaml: 16 pairs, 0 findings (0 patient-safety), 44s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/formulary.yaml: 397 pairs, 1 findings (0 patient-safety), 1471s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_012_triage.yaml: 15 pairs, 0 findings (0 patient-safety), 350s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_013_pals.yaml: 24 pairs, 0 findings (0 patient-safety), 265s 
+assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml: 45 pairs, 0 findings (0 patient-safety), 93s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_015_cpr_summary.yaml: 34 pairs, 0 findings (0 patient-safety), 304s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_016_weight_estimation.yaml: 25 pairs, 1 findings (1 patient-safety), 412s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/protocolbook/topics/pb_017_vital_rates.yaml: 37 pairs, 0 findings (0 patient-safety), 2237s 
+assets/books/protocolbook/topics/pb_018_bp_girls.yaml: 8 pairs, 0 findings (0 patient-safety), 51s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_019_bp_boys.yaml: 8 pairs, 0 findings (0 patient-safety), 541s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_020_resuscitation_meds.yaml: 40 pairs, 0 findings (0 patient-safety), 303s Expecting value: line 1 column 1 (char 0)
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_021_io_line.yaml: 11 pairs, 0 findings (0 patient-safety), 134s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_022_malaria.yaml: 27 pairs, 0 findings (0 patient-safety), 142s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_023_malaria_complications.yaml: 11 pairs, 0 findings (0 patient-safety), 263s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_023_malaria_severe_meds.yaml: 11 pairs, 0 findings (0 patient-safety), 261s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_024_malaria_uncomplicated.yaml: 38 pairs, 0 findings (0 patient-safety), 282s 
+assets/books/protocolbook/topics/pb_025_altered_mental_status.yaml: 51 pairs, 0 findings (0 patient-safety), 113s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml: 13 pairs, 2 findings (0 patient-safety), 509s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_029_organophosphate.yaml: 44 pairs, 0 findings (0 patient-safety), 665s Expecting value: line 1 column 1 (char 0)
+assets/books/protocolbook/topics/pb_030_hydrocarbon.yaml: 41 pairs, 0 findings (0 patient-safety), 78s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_031_benzo_opioid.yaml: 56 pairs, 3 findings (0 patient-safety), 318s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_032_paracetamol.yaml: 68 pairs, 0 findings (0 patient-safety), 375s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_034_alcohol_intoxication.yaml: 27 pairs, 0 findings (0 patient-safety), 118s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_035_alcohol_withdrawal.yaml: 35 pairs, 0 findings (0 patient-safety), 129s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_036_ciwa_ar.yaml: 97 pairs, 0 findings (0 patient-safety), 210s 
+assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml: 35 pairs, 0 findings (0 patient-safety), 144s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_038_animal_bite.yaml: 44 pairs, 0 findings (0 patient-safety), 278s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_039_snake_bite.yaml: 53 pairs, 0 findings (0 patient-safety), 189s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_042_paediatric_convulsions.yaml: 45 pairs, 0 findings (0 patient-safety), 1721s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_043_paediatric_dehydration.yaml: 64 pairs, 0 findings (0 patient-safety), 201s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_045_paediatric_sepsis.yaml: 55 pairs, 0 findings (0 patient-safety), 1673s 
+assets/books/protocolbook/topics/pb_046_paediatric_pneumonia.yaml: 46 pairs, 0 findings (0 patient-safety), 123s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_047_paediatric_dka.yaml: 53 pairs, 0 findings (0 patient-safety), 204s 
+assets/books/protocolbook/topics/pb_049_uti_kidney.yaml: 87 pairs, 1 findings (0 patient-safety), 301s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/protocolbook/topics/pb_052_wheezing_child.yaml: 69 pairs, 0 findings (0 patient-safety), 2875s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_054_meningitis.yaml: 64 pairs, 0 findings (0 patient-safety), 145s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+assets/books/protocolbook/topics/pb_056_heart_failure.yaml: 42 pairs, 0 findings (0 patient-safety), 4074s 
+assets/books/protocolbook/topics/pb_058_rheumatic_fever.yaml: 22 pairs, 0 findings (0 patient-safety), 77s 
+assets/books/protocolbook/topics/pb_059_sickle_cell.yaml: 17 pairs, 1 findings (0 patient-safety), 141s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_060_sickle_cell_acute.yaml: 60 pairs, 0 findings (0 patient-safety), 183s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_061_sickle_cell_stroke.yaml: 48 pairs, 0 findings (0 patient-safety), 5206s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_062_sickle_cell_acs.yaml: 62 pairs, 0 findings (0 patient-safety), 5283s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_063_sam_assessment.yaml: 63 pairs, 0 findings (0 patient-safety), 103s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_064_sam_management.yaml: 40 pairs, 0 findings (0 patient-safety), 207s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_066_sam_feeding.yaml: 23 pairs, 0 findings (0 patient-safety), 328s 
+assets/books/protocolbook/topics/pb_067_epistaxis.yaml: 44 pairs, 1 findings (0 patient-safety), 174s 
+assets/books/protocolbook/topics/pb_068_otitis_media.yaml: 21 pairs, 0 findings (0 patient-safety), 58s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_069_mastoiditis.yaml: 18 pairs, 0 findings (0 patient-safety), 151s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_069_otitis_externa.yaml: 17 pairs, 0 findings (0 patient-safety), 202s 
+assets/books/protocolbook/topics/pb_070_pharyngitis.yaml: 54 pairs, 0 findings (0 patient-safety), 83s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_070_sinusitis.yaml: 30 pairs, 0 findings (0 patient-safety), 526s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/protocolbook/topics/pb_071_tb_diagnosis.yaml: 42 pairs, 0 findings (0 patient-safety), 2313s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_072_tb_scoring.yaml: 60 pairs, 0 findings (0 patient-safety), 1700s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_073_tb_treatment.yaml: 83 pairs, 0 findings (0 patient-safety), 765s 
+assets/books/protocolbook/topics/pb_074_anaemia.yaml: 52 pairs, 0 findings (0 patient-safety), 81s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_075_anaemia_workup.yaml: 53 pairs, 0 findings (0 patient-safety), 351s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_076_transfusions.yaml: 30 pairs, 1 findings (0 patient-safety), 337s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_077_pain_nips.yaml: 38 pairs, 0 findings (0 patient-safety), 227s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_078_pain_flacc.yaml: 33 pairs, 0 findings (0 patient-safety), 294s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_079_pain_faces.yaml: 37 pairs, 0 findings (0 patient-safety), 578s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+assets/books/protocolbook/topics/pb_080_pain_ladder.yaml: 25 pairs, 0 findings (0 patient-safety), 2881s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_082_neo_feeding.yaml: 37 pairs, 0 findings (0 patient-safety), 1646s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_084_neo_cpap.yaml: 51 pairs, 0 findings (0 patient-safety), 137s 
+assets/books/protocolbook/topics/pb_085_neo_sepsis_prevention.yaml: 40 pairs, 0 findings (0 patient-safety), 74s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml: 52 pairs, 0 findings (0 patient-safety), 1096s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_088_neo_jaundice.yaml: 49 pairs, 0 findings (0 patient-safety), 175s 
+assets/books/protocolbook/topics/pb_090_neo_ballard.yaml: 20 pairs, 0 findings (0 patient-safety), 108s 
+assets/books/protocolbook/topics/pb_094_im_heart_failure.yaml: 76 pairs, 0 findings (0 patient-safety), 83s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_096_im_stroke.yaml: 133 pairs, 6 findings (4 patient-safety), 286s 
+assets/books/protocolbook/topics/pb_099_im_sepsis.yaml: 59 pairs, 0 findings (0 patient-safety), 99s 
+assets/books/protocolbook/topics/pb_101_im_convulsions.yaml: 31 pairs, 0 findings (0 patient-safety), 87s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_102_im_meningitis.yaml: 47 pairs, 0 findings (0 patient-safety), 172s 
+assets/books/protocolbook/topics/pb_104_im_gi_bleed.yaml: 50 pairs, 0 findings (0 patient-safety), 82s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/protocolbook/topics/pb_105_im_dka.yaml: 40 pairs, 0 findings (0 patient-safety), 1043s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_106_im_hypertension.yaml: 44 pairs, 0 findings (0 patient-safety), 355s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_108_im_liver_failure.yaml: 73 pairs, 0 findings (0 patient-safety), 235s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_111_im_aki.yaml: 39 pairs, 0 findings (0 patient-safety), 148s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_112_im_agitation.yaml: 52 pairs, 0 findings (0 patient-safety), 152s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_114_im_ecg_basics.yaml: 31 pairs, 0 findings (0 patient-safety), 224s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/protocolbook/topics/pb_116_im_ecg_enlargement.yaml: 31 pairs, 0 findings (0 patient-safety), 1158s 
+assets/books/protocolbook/topics/pb_117_im_ecg_conduction.yaml: 22 pairs, 0 findings (0 patient-safety), 53s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/protocolbook/topics/pb_118_im_ecg_svt.yaml: 27 pairs, 1 findings (0 patient-safety), 2267s 
+assets/books/protocolbook/topics/pb_119_im_ecg_ischaemia.yaml: 65 pairs, 0 findings (0 patient-safety), 86s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_121_im_chest_pain.yaml: 110 pairs, 0 findings (0 patient-safety), 405s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_123_im_acs_treatment.yaml: 56 pairs, 0 findings (0 patient-safety), 524s 
+assets/books/protocolbook/topics/pb_125_im_svt.yaml: 68 pairs, 0 findings (0 patient-safety), 115s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_126_im_epigastric_pain.yaml: 17 pairs, 0 findings (0 patient-safety), 5214s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_126_im_headache.yaml: 16 pairs, 0 findings (0 patient-safety), 1541s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_126_im_syncope.yaml: 13 pairs, 0 findings (0 patient-safety), 5311s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/protocolbook/topics/pb_127_im_copd_asthma.yaml: 46 pairs, 0 findings (0 patient-safety), 632s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_128_im_tb.yaml: 117 pairs, 1 findings (0 patient-safety), 5490s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_130_im_dvt.yaml: 36 pairs, 0 findings (0 patient-safety), 1591s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_131_im_pe.yaml: 59 pairs, 0 findings (0 patient-safety), 210s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_132_im_sti.yaml: 93 pairs, 0 findings (0 patient-safety), 308s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_135_im_hiv_oi.yaml: 70 pairs, 0 findings (0 patient-safety), 259s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_140_im_sodium.yaml: 71 pairs, 0 findings (0 patient-safety), 297s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_142_im_potassium.yaml: 53 pairs, 0 findings (0 patient-safety), 5129s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/wvems/book.yaml: 11 pairs, 0 findings (0 patient-safety), 52s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_003.yaml: 33 pairs, 0 findings (0 patient-safety), 148s 
+assets/books/wvems/topics/wvems_2026_004.yaml: 46 pairs, 0 findings (0 patient-safety), 99s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_006.yaml: 49 pairs, 0 findings (0 patient-safety), 291s 
+assets/books/wvems/topics/wvems_2026_008.yaml: 63 pairs, 0 findings (0 patient-safety), 105s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_010.yaml: 38 pairs, 0 findings (0 patient-safety), 187s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_012.yaml: 53 pairs, 0 findings (0 patient-safety), 297s 
+assets/books/wvems/topics/wvems_2026_014.yaml: 73 pairs, 1 findings (0 patient-safety), 212s 
+assets/books/wvems/topics/wvems_2026_016.yaml: 56 pairs, 0 findings (0 patient-safety), 228s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_018.yaml: 51 pairs, 0 findings (0 patient-safety), 276s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_020.yaml: 60 pairs, 0 findings (0 patient-safety), 153s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_022.yaml: 37 pairs, 0 findings (0 patient-safety), 266s 
+assets/books/wvems/topics/wvems_2026_024.yaml: 64 pairs, 0 findings (0 patient-safety), 169s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_026.yaml: 39 pairs, 0 findings (0 patient-safety), 206s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_028.yaml: 56 pairs, 0 findings (0 patient-safety), 271s 
+assets/books/wvems/topics/wvems_2026_030.yaml: 65 pairs, 0 findings (0 patient-safety), 95s 
+assets/books/wvems/topics/wvems_2026_032.yaml: 62 pairs, 0 findings (0 patient-safety), 140s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_034.yaml: 54 pairs, 1 findings (0 patient-safety), 223s 
+assets/books/wvems/topics/wvems_2026_036.yaml: 74 pairs, 1 findings (0 patient-safety), 182s 
+assets/books/wvems/topics/wvems_2026_038.yaml: 55 pairs, 0 findings (0 patient-safety), 87s 
+assets/books/wvems/topics/wvems_2026_040.yaml: 50 pairs, 2 findings (0 patient-safety), 191s 
+assets/books/wvems/topics/wvems_2026_042.yaml: 55 pairs, 0 findings (0 patient-safety), 98s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/wvems/topics/wvems_2026_044.yaml: 35 pairs, 2 findings (0 patient-safety), 1023s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/wvems/topics/wvems_2026_046.yaml: 54 pairs, 0 findings (0 patient-safety), 668s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_048.yaml: 55 pairs, 2 findings (0 patient-safety), 291s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_050.yaml: 70 pairs, 0 findings (0 patient-safety), 294s 
+assets/books/wvems/topics/wvems_2026_052.yaml: 60 pairs, 0 findings (0 patient-safety), 125s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_054.yaml: 45 pairs, 1 findings (0 patient-safety), 230s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/wvems/topics/wvems_2026_056.yaml: 60 pairs, 0 findings (0 patient-safety), 1083s 
+assets/books/wvems/topics/wvems_2026_058.yaml: 49 pairs, 0 findings (0 patient-safety), 124s 
+assets/books/wvems/topics/wvems_2026_060.yaml: 39 pairs, 0 findings (0 patient-safety), 124s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/wvems/topics/wvems_2026_062.yaml: 54 pairs, 0 findings (0 patient-safety), 1054s 
+assets/books/wvems/topics/wvems_2026_064.yaml: 47 pairs, 0 findings (0 patient-safety), 105s 
+assets/books/wvems/topics/wvems_2026_066.yaml: 49 pairs, 0 findings (0 patient-safety), 100s 
+assets/books/wvems/topics/wvems_2026_068.yaml: 53 pairs, 1 findings (0 patient-safety), 146s 
+assets/books/wvems/topics/wvems_2026_070.yaml: 47 pairs, 0 findings (0 patient-safety), 94s 
+assets/books/wvems/topics/wvems_2026_072.yaml: 34 pairs, 0 findings (0 patient-safety), 98s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/wvems/topics/wvems_2026_074.yaml: 33 pairs, 0 findings (0 patient-safety), 993s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_076.yaml: 45 pairs, 0 findings (0 patient-safety), 139s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/wvems/topics/wvems_2026_078.yaml: 55 pairs, 0 findings (0 patient-safety), 517s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_080.yaml: 54 pairs, 0 findings (0 patient-safety), 430s Invalid \escape: line 11 column 30 (char 210)
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+assets/books/wvems/topics/wvems_2026_082.yaml: 54 pairs, 0 findings (0 patient-safety), 990s 
+assets/books/wvems/topics/wvems_2026_084.yaml: 47 pairs, 0 findings (0 patient-safety), 100s 
+assets/books/wvems/topics/wvems_2026_086.yaml: 67 pairs, 3 findings (0 patient-safety), 210s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/wvems/topics/wvems_2026_088.yaml: 47 pairs, 0 findings (0 patient-safety), 546s 
+assets/books/wvems/topics/wvems_2026_090.yaml: 47 pairs, 0 findings (0 patient-safety), 181s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_092.yaml: 51 pairs, 0 findings (0 patient-safety), 281s 
+assets/books/wvems/topics/wvems_2026_094.yaml: 44 pairs, 0 findings (0 patient-safety), 108s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+assets/books/wvems/topics/wvems_2026_096.yaml: 453 pairs, 3 findings (1 patient-safety), 1692s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/wvems/topics/wvems_2026_109.yaml: 62 pairs, 0 findings (0 patient-safety), 186s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_144.yaml: 193 pairs, 0 findings (0 patient-safety), 696s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/wvems/topics/wvems_2026_about.yaml: 28 pairs, 0 findings (0 patient-safety), 1655s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/wvems/topics/wvems_2026_drug_reference.yaml: 667 pairs, 1 findings (0 patient-safety), 2916s 
+assets/books/wvems/topics/wvems_drug_ref_a.yaml: 30 pairs, 0 findings (0 patient-safety), 65s 
+217 pages
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_020_resuscitation_meds.yaml: 40 pairs, 0 findings (0 patient-safety), 318s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_029_organophosphate.yaml: 44 pairs, 0 findings (0 patient-safety), 212s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_061_sickle_cell_stroke.yaml: 48 pairs, 0 findings (0 patient-safety), 321s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_062_sickle_cell_acs.yaml: 62 pairs, 0 findings (0 patient-safety), 186s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_126_im_epigastric_pain.yaml: 17 pairs, 0 findings (0 patient-safety), 5253s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+assets/books/protocolbook/topics/pb_126_im_syncope.yaml: 13 pairs, 0 findings (0 patient-safety), 45s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 7 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 8 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 9 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 10 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 11 in 600s
+assets/books/protocolbook/topics/pb_128_im_tb.yaml: 117 pairs, 0 findings (0 patient-safety), 5221s 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+assets/books/protocolbook/topics/pb_142_im_potassium.yaml: 53 pairs, 0 findings (0 patient-safety), 1595s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 4 in 480s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 5 in 600s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 6 in 600s
+assets/books/wvems/topics/wvems_2026_080.yaml: 54 pairs, 2 findings (0 patient-safety), 2458s 
+217 pages
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+assets/books/protocolbook/topics/pb_126_im_epigastric_pain.yaml: 17 pairs, 0 findings (0 patient-safety), 263s 
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 2 in 120s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 3 in 240s
+  "503 UNAVAILABLE. {'error': {'code': 503,", retry 1 in 60s
+assets/books/protocolbook/topics/pb_128_im_tb.yaml: 117 pairs, 0 findings (0 patient-safety), 776s 

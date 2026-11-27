@@ -1,0 +1,125 @@
+# translated-from-sha256: a8e6bbf19ab9d7ff94ace8cb469b1efcce820fc3766a18b7bd28117dc165feda
+topic:
+  id: "wvems-2026-084"
+  version: "v260101"
+  title: "Sangre"
+  list_subtitle: "2026-084 · transfusión / sangre total"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "sangre"
+  - "transfusión"
+  - "exanguinación"
+  - "sangre total"
+  - "cuidados críticos"
+  aliases:
+  - "Transfusión"
+  - "Exanguinación"
+  - "Hemoderivados de sangre total"
+  category: "critical_care"
+  layout: "paged"
+  pages:
+  - page_number: 84
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Choque hemorrágico"
+        shape: "stadium"
+      - text: "Detenga la [hemorragia](topic:wvems-2026-058)"
+        shape: "rounded_rectangle"
+      - text: "{A} Bolo de SSN"
+        shape: "rectangle"
+      decision:
+        text: "¿Respuesta?"
+        shape: "diamond"
+      branches:
+      - id: "rapid"
+        label: "Rápida"
+        criteria:
+        - "Perfusión adecuada"
+        - "Buena hemostasia"
+        actions:
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      - id: "transient"
+        label: "Transitoria"
+        criteria:
+        - "Perfusión lábil"
+        - "Mala hemostasia"
+        actions: []
+      - id: "minimal"
+        label: "Mínima / ninguna"
+        criteria:
+        - "Mala perfusión"
+        - "Sangrado interno"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Sangre"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Circulación](topic:wvems-2026-008)"
+        - text: "Hemorragia"
+          link_id: "wvems-2026-058"
+        - text: "[Vasopresores](topic:wvems-2026-082)"
+      dose_table:
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "si precisa"
+        population: "adult"
+      - drug: "Sangre"
+        dose: "1 unidad"
+        route: "IV/IO"
+        frequency: "si precisa"
+        population: "adult"
+  - page_number: 85
+    blocks:
+    - type: "prose"
+      title: "Requisitos previos obligatorios de sangre"
+      highlight: true
+      markdown: |
+        - En los últimos 12 meses: aprobar una formación interna de cuidados críticos.
+        - Asegure que la sangre se **almacena y conserva** según las instrucciones del proveedor.
+    - type: "prose"
+      title: "Imperativos"
+      markdown: |
+        - **SSN frente a sangre** es una decisión clínica. No hay una respuesta perfecta.
+          - El **bolo de SSN** puede servir en el sangrado externo fácil de controlar.
+          - Pase rápido a sangre si la perfusión no responde con rapidez.
+          - Los proveedores **pueden empezar con sangre** en el sangrado críticamente inestable.
+          - Úsela en la exanguinación masiva franca (**traumatismo**, GI, posparto).
+        - **PAS objetivo de 90 mmHg**, sea SSN o sangre.
+          - Use una reanimación **equilibrada** en el choque hemorrágico.
+          - Busque un objetivo más alto si hay lesión de **cabeza / columna** o **embarazo**.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)** (salino al 0.9%): puede omitir el **SSN** en pacientes in extremis.
+        - **Sangre** (LTOWB): **verifique** la etiqueta de control ambiental.
+          - Use un equipo especial y un **calentador**. Vigile las **reacciones transfusionales**.
+          - Pare de inmediato si hay [fiebre](topic:wvems-2026-016), [disnea](topic:wvems-2026-030) o [reacción alérgica](topic:wvems-2026-032).
+          - **Informe a urgencias** de cualquier sangre administrada y de cualquier reacción.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Si es posible, pregunte por **objeciones religiosas** antes de la transfusión.
+          - **Si está alterado**: puede buscar joyas de alerta médica o en la cartera del paciente.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Administre la **sangre** en alícuotas de **10 mL/kg**. Puede repetir según necesidad.
+        - Ajuste al extremo inferior de la PAS según la edad (en la [referencia pediátrica](topic:wvems-2026-144)).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - PHTLS — https://www.naemt.org/education/trauma-education/phtls [Ver: 10th]
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 29, 34
+
+        NEMSIS: 9914083

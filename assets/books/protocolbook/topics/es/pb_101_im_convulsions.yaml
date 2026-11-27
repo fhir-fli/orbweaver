@@ -1,0 +1,63 @@
+# translated-from-sha256: c1ebf8f702365624af5957b0319313ff4fb0f62bbe55e2fc1fda25913c57b145
+topic:
+  id: "pb-im-convulsions"
+  title: "Convulsiones del adulto"
+  list_subtitle: "p.101 · estado epiléptico · diazepam → fenobarbital"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["convulsiones", "crisis epiléptica", "estado epiléptico", "adulto", "medicina interna", "diazepam", "fenobarbital", "fenobarbitona", "dextrosa", "neurología"]
+  category: "medical"
+  page_number: 101
+  blocks:
+  - type: "prose"
+    title: "Manejo de primera línea"
+    markdown: |
+      **Convulsión activa o estado epiléptico** = una convulsión de > 5 minutos, o 2 convulsiones separadas sin recuperación completa entre ellas.
+      - Garantice la seguridad
+      - Inicie oxígeno
+      - Trate tanto la convulsión como la hipoglucemia:
+        - Diazepam rectal — 4 supositorios de 2.5 mg cada uno, O
+        - Diazepam IV 0.15 mg/kg lento en 1 minuto (máx. 10 mg), O
+        - **¿Sin acceso IV? Midazolam IM 10 mg** — tan eficaz como el lorazepam IV y más rápido de administrar cuando cuesta canalizar
+      - Administre 50 mL de dextrosa al 50%
+      - Compruebe el ABC cuando cese la convulsión
+  - type: "prose"
+    title: "Si hay antecedente de convulsiones (no convulsiona en este momento)"
+    markdown: |
+      - Monitorice, mantenga el ABC
+      - Controle los signos vitales (FC, FR, SpO₂, temp, peso)
+      - Evalúe AVPU/GCS, el estado de hidratación
+      - Inicie oxígeno si la SpO₂ < 90%; coloque una vía IV si es necesario
+      - Haga una historia y una exploración física breves y dirigidas
+      - Análisis: hemograma, malaria, VIH, electrolitos
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Tras el diazepam de primera línea"
+      shape: "stadium"
+    stages:
+    - decision: "¿Sigue convulsionando o convulsión recurrente?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Repita el diazepam (máximo 2 dosis en total)"
+          bullets:
+          - "Diazepam rectal — 4 supositorios de 2.5 mg cada uno, O"
+          - "Diazepam IV 0.15 mg/kg lento en 1 minuto (máx. 10 mg)"
+        continue: true
+      - label: "No"
+        box:
+          title: "La convulsión cesó — continúe las medidas de soporte y la vigilancia"
+          severity: "non_urgent"
+    - decision: "¿Sigue convulsionando o recurre tras 2 dosis de diazepam?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Fenobarbital / fenobarbitona"
+          bullets:
+          - "Dosis de carga 20 mg/kg IM/IV (si es IV, en 20 minutos). Si sigue convulsionando tras 15 min, otros 10 mg/kg hasta un máximo acumulado de 40 mg/kg - solo donde haya monitorización respiratoria"
+          - "Mantenimiento (adultos) 2-3 mg/kg/día IV/VO, una vez al día o dividido"
+          severity: "priority"
+      - label: "No"
+        box:
+          title: "La convulsión cesó — continúe las medidas de soporte y la vigilancia"
+          severity: "non_urgent"

@@ -1,0 +1,25 @@
+{
+ "page": "assets/books/calculators/topics/calc_heart.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s14",
+   "severity": "meaning",
+   "problem": "The phrase 'mayores a 6 semanas' is ambiguous and suggests events that last longer than 6 weeks or occur after 6 weeks, rather than 'major adverse cardiac events' (a specific medical term) occurring within a 6-week window.",
+   "fix": "Estratifica el riesgo del dolor torácico indiferenciado en urgencias para eventos cardíacos adversos mayores a las 6 semanas. Requiere un valor de troponina.",
+   "en": "Risk-stratifies undifferentiated chest pain in the ED for 6-week\nmajor adverse cardiac events. Requires a troponin value.\n",
+   "es": "Estratifica el riesgo del dolor torácico indiferenciado en urgencias para eventos cardíacos\nadversos mayores a 6 semanas. Requiere un valor de troponina.\n"
+  },
+  {
+   "id": "s41",
+   "severity": "meaning",
+   "problem": "'Ensayo' is a false friend; in a clinical context, it means 'clinical trial'. Here, 'assay' refers to a laboratory test/analysis.",
+   "fix": "Requiere troponina. Sin el análisis, la subpuntuación HEAR (Historia/ECG/Edad/Riesgo) no puede excluir un IAM — considérela de menor certeza y observe.",
+   "en": "Requires troponin. Without an assay, the HEAR subscore (History/ECG/Age/Risk) cannot exclude MI — treat as lower-certainty and observe.",
+   "es": "Requiere troponina. Sin el ensayo, la subpuntuación HEAR (Historia/ECG/Edad/Riesgo) no puede excluir un IAM — considérela de menor certeza y observe."
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s14\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The phrase 'mayores a 6 semanas' is ambiguous and suggests events that last longer than 6 weeks or occur after 6 weeks, rather than 'major adverse cardiac events' (a specific medical term) occurring within a 6-week window.\",\n    \"fix\": \"Estratifica el riesgo del dolor torácico indiferenciado en urgencias para eventos cardíacos adversos mayores a las 6 semanas. Requiere un valor de troponina.\"\n  },\n  {\n    \"id\": \"s41\",\n    \"severity\": \"meaning\",\n    \"problem\": \"'Ensayo' is a false friend; in a clinical context, it means 'clinical trial'. Here, 'assay' refers to a laboratory test/analysis.\",\n    \"fix\": \"Requiere troponina. Sin el análisis, la subpuntuación HEAR (Historia/ECG/Edad/Riesgo) no puede excluir un IAM — considérela de menor certeza y observe.\"\n  }\n]\n```"
+ ]
+}

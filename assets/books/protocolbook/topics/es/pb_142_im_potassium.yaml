@@ -1,0 +1,144 @@
+# translated-from-sha256: 6812b84d8c4fee08966e0e400582a9d43a65c63666ca6d944f6bb5fd79269a2f
+topic:
+  id: "pb-im-potassium"
+  title: "Alteraciones del potasio (K⁺)"
+  list_subtitle: "pp.142–143 · hipo/hiperpotasemia"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["potasio", "K", "hipopotasemia", "hiperpotasemia", "gluconato de calcio", "insulina glucosa", "salbutamol", "resonium", "magnesio", "ECG", "electrolitos", "medicina interna"]
+  category: "medical"
+  pages:
+  - page_number: 142
+    blocks:
+    - type: "prose"
+      title: "Hipopotasemia (el tratamiento principal es tratar la causa)"
+      markdown: |
+        - **Factores de riesgo:** diarrea, vómitos, diuréticos, síndrome de realimentación, ingesta alimentaria insuficiente (desnutrición, alcoholismo crónico)
+        - **Reposición de potasio:**
+          - K < 3: aunque sea asintomático
+          - K < 4: en la insuficiencia cardíaca, la HTA o las arritmias
+        - **Potasio IV:**
+          - Indicaciones: K < 2.5, sintomático, o tubo digestivo que no funciona
+          - **Prefiera la vía oral siempre que el intestino funcione** — la vía IV conlleva más riesgo de hiperpotasemia iatrogénica
+          - **Velocidad — niños: 0.2 mEq/kg/h** sin monitorización cardíaca continua. **0.5–1 mEq/kg/h es una velocidad de UCI** que necesita ECG continuo; 1 mEq/kg/h es el techo en cualquier circunstancia. Adultos: 10 mEq/h
+          - **Concentración — vía periférica máx. 40 mEq/L; vía central hasta 400 mEq/L.** Todo lo que supere 40 mEq/L debe ir por vía central
+          - 🛑 **La pauta de 400 mEq/L / 40 mEq/h es solo para la hipopotasemia URGENTE y potencialmente mortal** — y presupone **cuidados de nivel UCI con ECG continuo**. No es una pauta de planta
+          - **Techo habitual: 10 mEq/h, 200 mEq/24 h, a ≤ 40 mEq/L**
+          - ⚠️ A 40 mEq/L un niño de 20 kg a 1 mEq/kg/h necesitaría **500 mL/h** — imposible de administrar. Baje la velocidad o use una vía central
+          - **Monitorización:** ECG continuo a velocidades rápidas, K⁺ sérico cada 1–2 h durante la reposición activa. **Nunca en bolo**
+        - **Potasio VO:**
+          - 40–100 mEq/día (máx. adulto 200 mEq/día; máx. niños 3 mEq/kg/día)
+          - Divida en dosis cada 6 horas
+    - type: "prose"
+      title: "Potasio IV — nunca en bolo"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        El potasio IV **NUNCA** debe darse en bolo — siempre en infusión controlada.
+    - type: "prose"
+      title: "Magnesio (a menudo acompaña a la hipopotasemia)"
+      markdown: |
+        - Inestable o sintomático y magnesio < 1: sulfato de magnesio **1–2 g IV en 15–60 min**, luego una **infusión continua más lenta** (niños 25–50 mg/kg) — un bolo rápido se elimina en gran parte por la orina. **Fuera de la eclampsia, no supere 150 mg/min**
+        - **Repita según el nivel, no según el reloj.** Antes de cada nueva dosis compruebe **magnesio sérico · función renal y diuresis · reflejos osteotendinosos** (su pérdida indica hipermagnesemia) **· frecuencia respiratoria y presión arterial**
+        - **Máximo ~30–40 g/24 h** en un adulto con función renal normal; **mucho menos en la insuficiencia renal (~20 g/48 h)** — el magnesio se elimina por el riñón y se acumula
+        - **Compruebe y reponga también el potasio y el calcio** — la hipomagnesemia causa hipopotasemia e hipocalcemia refractarias
+        - Estable, asintomático, magnesio < 2 pero > 1: suplementos orales
+  - page_number: 143
+    blocks:
+    - type: "prose"
+      title: "Hiperpotasemia — presentación"
+      markdown: |
+        - **La mayoría son asintomáticos**
+        - Debilidad muscular / parálisis
+        - Arritmias cardíacas / palpitaciones
+        - Disminución de la motilidad intestinal
+        - Neurológico: parestesias, confusión, convulsiones
+    - type: "prose"
+      title: "Factores de riesgo frecuentes"
+      markdown: |
+        - Enfermedad renal aguda y crónica
+        - Medicamentos: IECA y ARA II, betabloqueantes, digoxina, AINE, espironolactona, cotrimoxazol
+        - Tumores muy agresivos con síndrome de lisis tumoral
+        - Daño tisular (rabdomiólisis, quemaduras o traumatismos)
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (PA, FC, FR, spO₂, Temp, peso)
+        - Inicie oxígeno si la spO₂ < 90%
+        - Análisis séricos: hemograma, función renal, electrolitos
+        - ECG de 12 derivaciones
+        - Haga una historia y una exploración física breves y dirigidas
+        - **K⁺ ≥ 5.5 = hiperpotasemia** — repita para confirmar el resultado, y suspenda todo suplemento de K⁺
+    - type: "flowchart"
+      variant: "algorithm"
+      entry:
+        text: "Hiperpotasemia confirmada"
+        shape: "stadium"
+      stages:
+      - decision: "¿Alguno de los siguientes?"
+        criteria:
+        - "K > 6.5"
+        - "Debilidad, parálisis muscular franca, palpitaciones, parestesias"
+        - "Cambios en el ECG: ondas T altas y picudas, prolongación del PR, bloqueo AV, ensanchamiento del QRS (puede acabar fundiéndose con la onda T)"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Estabilice Y desplace — ambos, a la vez"
+            severity: "emergency"
+            bullets:
+            - "Monitorización cardíaca"
+            - "**1. Estabilice (segundos):** gluconato de calcio al 10% IV — niños 0.5 mL/kg, adultos 10 mL, en 2–3 min; repita cada 5 min hasta que mejore el ECG. **El calcio NO baja el potasio** — solo da 30–60 min"
+            - "**2. Desplace, al mismo tiempo — no espere:** insulina + glucosa **Y** salbutamol nebulizado juntos (dosis en el recuadro de abajo). Son los que realmente bajan el K⁺ sérico en la primera hora"
+            - "**3. Luego elimine:** furosemida IV — niños 1 mg/kg, adultos 20–40 mg — **solo ayuda si el paciente tiene volumen adecuado y orina**"
+            - "Diálisis: urgente si está inestable; considérela en pacientes asintomáticos con ERCT. Es la única vía de eliminación fiable si hay anuria"
+        - label: "No"
+          continue: true
+      - decision: "¿K⁺ 6.0–6.5?"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Desplace el potasio al interior de las células"
+            bullets:
+            - "Insulina + glucosa — adultos: insulina en bolo IV 10 UI + glucosa 40–60 g; niños: insulina IV 0.05 UI/kg/h + glucosa IV 0.5 g/kg/h (si glucemia aleatoria < 180)"
+            - "Salbutamol cada 1–2 h — nebulizador: < 25 kg 2.5 mg en 3 mL de SSN, > 25 kg 5 mg en 5 mL de SSN (adultos máx. 10–20 mg); IDM + espaciador + mascarilla: 5–10 kg 4 inhalaciones, 10–20 kg 6 inhalaciones, > 20 kg 8 inhalaciones"
+            - "**Estos mismos dos fármacos van también en la rama grave de arriba — adminístrelos allí también, junto con el calcio**"
+        - label: "No"
+          box:
+            title: "Considere no tratar"
+    - type: "prose"
+      title: "⚠ Estas medidas dejan de hacer efecto — vuelva a medir y repita"
+      callout: true
+      markdown: |
+        El tratamiento de desplazamiento es **temporal**. El potasio rebota cuando se pasa el efecto, así que
+        vuelva a medir el K⁺ y repita la dosis siempre que se retrase la eliminación definitiva.
+        - **Insulina + glucosa:** empieza a los ~15 min, pico a los 30–60 min, dura **4–6 horas**
+        - **Salbutamol:** empieza a los ~30 min, dura **~2 horas**. **El 20–40% de los pacientes no responde** — sobre todo los que toman betabloqueantes — así que **nunca** debe ser el único fármaco de desplazamiento
+        - **Calcio:** dura 30–60 min y nunca baja el potasio
+    - type: "prose"
+      title: "🛑 Vigile la glucemia tras la insulina"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Mida la glucemia **al menos cada hora durante 6 horas** tras la insulina (cada
+        30–60 min al principio). **La hipoglucemia tardía es el daño iatrogénico más frecuente
+        de esta pauta** — más probable en pacientes no diabéticos, en la insuficiencia renal,
+        y cuando la glucosa inicial era baja.
+    - type: "prose"
+      title: "Poliestireno sulfonato sódico (Resonium) — no es un tratamiento agudo"
+      markdown: |
+        **Tarda horas en actuar; no se puede contar con él en un episodio agudo**, y ya no
+        se recomienda para la hiperpotasemia aguda — su eficacia está mal definida y
+        conlleva riesgo de **necrosis colónica y lesión intestinal**, sobre todo preparado con sorbitol.
+        Donde no haya otra cosa, restrínjalo a pacientes anúricos o con oliguria grave
+        y evite el uso a medio o largo plazo.
+
+        Dosis si se usa: niños 1 g/kg VO o VR; adultos 15 g VO o 30–50 g VR, cada 6 h.
+
+        El trabajo agudo lo hacen el **calcio + insulina/glucosa + salbutamol**, y la
+        diálisis donde la haya.

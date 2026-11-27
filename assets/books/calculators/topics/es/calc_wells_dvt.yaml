@@ -1,0 +1,38 @@
+# translated-from-sha256: 63f9fda1f5c3cf8564a866bf98aaaa0fe34e072a4e0bdecbe0f5a731903e79b8
+topic:
+  id: "calc-wells-dvt"
+  title: "Puntuación de Wells — TVP"
+  list_subtitle: "probabilidad pretest de TVP"
+  last_reviewed: "Evidence review 2026-07-19 · Wells 2003 · NICE NG158"
+  tags: ["wells", "tvp", "trombosis venosa profunda", "etv", "pretest", "dímero d", "probabilidad"]
+  aliases:
+  - "Wells TVP"
+  - "Puntuación de TVP"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Puntuación de Wells de dos niveles para la probabilidad pretest de trombosis venosa profunda.
+      El resultado orienta la vía del dímero D / ecografía — no sirve sola
+      para descartar.
+  - type: "score"
+    title: "Puntuación de Wells — TVP"
+    source: "Wells et al., NEJM 2003; NICE NG158"
+    items:
+    - {key: "cancer", label: "Cáncer activo (tratamiento en los últimos 6 meses o paliativo)", type: "toggle", points: 1}
+    - {key: "immobil", label: "Parálisis, paresia o inmovilización reciente de la pierna con yeso", type: "toggle", points: 1}
+    - {key: "bedridden", label: "Encamado recientemente ≥ 3 días o cirugía mayor en las últimas 12 semanas", type: "toggle", points: 1}
+    - {key: "tender", label: "Dolor localizado a lo largo del sistema venoso profundo", type: "toggle", points: 1}
+    - {key: "swollen_leg", label: "Toda la pierna hinchada", type: "toggle", points: 1}
+    - {key: "calf", label: "Pantorrilla ≥ 3 cm más ancha que la del lado asintomático", type: "toggle", points: 1}
+    - {key: "edema", label: "Edema con fóvea limitado a la pierna sintomática", type: "toggle", points: 1}
+    - {key: "collateral", label: "Venas superficiales colaterales (no varicosas)", type: "toggle", points: 1}
+    - {key: "prior_dvt", label: "TVP documentada previamente", type: "toggle", points: 1}
+    - {key: "alt_dx", label: "Un diagnóstico alternativo es al menos tan probable como la TVP", type: "toggle", points: -2}
+    bands:
+    - {min: -2, max: 1, label: "TVP improbable", detail: "→ dímero D; si es negativo, se excluye la TVP.", severity: "none"}
+    - {min: 2, label: "TVP probable", detail: "→ ecografía de las venas proximales de la pierna.", severity: "warn"}
+    notes:
+    - "Alternativa de tres niveles: ≤ 0 baja, 1–2 moderada, ≥ 3 alta probabilidad."
+    caveats:
+    - "Siempre junto con dímero D ± ecografía (NICE NG158) — no sirve sola para descartar; funciona peor en atención primaria."

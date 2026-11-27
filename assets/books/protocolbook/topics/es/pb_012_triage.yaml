@@ -1,0 +1,74 @@
+# translated-from-sha256: 6fae6c7ee7f4538c9ac9fa0b6887be1aa6013a90781761e32f3a775d9fc31f16
+topic:
+  id: "pb-triage-sick-children"
+  title: "Triaje pediátrico del niño enfermo"
+  list_subtitle: "p.12 · tabla de gravedad"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["triaje", "pediátrico", "emergencia"]
+  category: "universal"
+  page_number: 12
+  blocks:
+  - type: "table"
+    columns: ["Evaluar", "Tratar"]
+    rows:
+    - severity: "emergency"
+      title: "Signos de emergencia — cualquiera positivo"
+      cells:
+      - |
+        **Vía aérea y respiración**
+        - Respiración obstruida
+        - Cianosis central
+        - Dificultad respiratoria grave
+        - Respiración débil / ausente
+
+        **Circulación** — manos frías con cualquiera de:
+        - Llenado capilar > 3 seg
+        - Pulso débil + rápido
+        - Pulso lento (< 60 lpm) o ausente
+
+        **Discapacidad (neurológico)**
+        - Coma
+        - Convulsiones
+        - Confusión (AVPU: V, P o U)
+
+        **Diarrea grave** — con cualquiera de:
+        - Letargo / inconsciente
+        - No puede beber / bebe mal
+        - El pliegue cutáneo vuelve lentamente
+        - Ojos hundidos
+      - |
+        1. Pida ayuda
+        2. Traslade a una cama de emergencia
+        3. Administre oxígeno por cánula nasal
+        4. Canalice una vía IV
+        5. Controle los signos vitales (peso, FC, FR, PA)
+        6. Extraiga sangre — Hb, malaria, grupo y pruebas cruzadas si está pálido (tubo rojo y morado)
+        7. D10% 2 ml/kg IV
+        8. Si hay convulsiones: **diazepam IV o rectal**
+        9. Mantenga al paciente abrigado
+    - severity: "priority"
+      title: "Signos prioritarios (3TPR-MOB) — cualquiera positivo"
+      cells:
+      - |
+        - **T**iny (pequeño) — lactante enfermo < 2 meses
+        - **T**emperatura — muy alta o muy baja
+        - **T**raumatismo — traumatismo mayor
+        - **P**ain (dolor) — niño con dolor intenso
+        - **P**oisoning (intoxicación) — la madre refiere una intoxicación
+        - **P**alidez — palidez palmar intensa
+        - **R**estless (inquieto) / irritable / hipotónico
+        - **R**espiratoria, dificultad
+        - **R**eferencia — trae una carta de referencia urgente
+        - **M**alnutrición — emaciación grave visible
+        - **O**edema (edema) de ambos pies
+        - **B**urns (quemaduras) — quemaduras graves
+      - |
+        **Al frente de la fila:**
+        - Revisión clínica lo antes posible
+        - Pesar
+        - Observaciones basales y signos vitales
+    - severity: "non_urgent"
+      title: "No urgente — ninguno de los signos anteriores"
+      cells:
+      - ""
+      - Continúe con la evaluación y el tratamiento de rutina según la prioridad del niño.

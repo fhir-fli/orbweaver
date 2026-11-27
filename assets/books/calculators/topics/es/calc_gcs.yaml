@@ -1,0 +1,61 @@
+# translated-from-sha256: 4b6cdd55550eed9b6363282838bd8e7535996563f7077c009152d97b59bd701e
+topic:
+  id: "calc-gcs"
+  title: "Escala de coma de Glasgow"
+  list_subtitle: "GCS 3–15"
+  last_reviewed: "Evidence review 2026-07-19 · Teasdale & Jennett 1974"
+  tags: ["gcs", "escala de coma de glasgow", "conciencia", "coma", "neuro", "tce", "traumatismo"]
+  aliases:
+  - "GCS"
+  - "Escala de coma de Glasgow"
+  - "Escala de coma"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Nivel de conciencia según las respuestas ocular, verbal y motora.
+      Los valores por defecto corresponden a un paciente normal (15); ajuste cada uno a la mejor respuesta
+      observada.
+  - type: "score"
+    title: "Escala de coma de Glasgow"
+    unit: "/ 15"
+    source: "Teasdale & Jennett, Lancet 1974"
+    items:
+    - key: "eye"
+      label: "Apertura ocular"
+      type: "choice"
+      default: "e4"
+      options:
+      - {value: "e1", label: "Ninguna", points: 1}
+      - {value: "e2", label: "Al dolor", points: 2}
+      - {value: "e3", label: "A la voz", points: 3}
+      - {value: "e4", label: "Espontánea", points: 4}
+    - key: "verbal"
+      label: "Respuesta verbal"
+      type: "choice"
+      default: "v5"
+      options:
+      - {value: "v1", label: "Ninguna", points: 1}
+      - {value: "v2", label: "Sonidos incomprensibles", points: 2}
+      - {value: "v3", label: "Palabras inapropiadas", points: 3}
+      - {value: "v4", label: "Confusa", points: 4}
+      - {value: "v5", label: "Orientada", points: 5}
+    - key: "motor"
+      label: "Respuesta motora"
+      type: "choice"
+      default: "m6"
+      options:
+      - {value: "m1", label: "Ninguna", points: 1}
+      - {value: "m2", label: "Extensión (descerebración)", points: 2}
+      - {value: "m3", label: "Flexión anormal (decorticación)", points: 3}
+      - {value: "m4", label: "Retirada al dolor", points: 4}
+      - {value: "m5", label: "Localiza el dolor", points: 5}
+      - {value: "m6", label: "Obedece órdenes", points: 6}
+    bands:
+    - {min: 3, max: 8, label: "Lesión cerebral grave", detail: "GCS ≤ 8 — considere proteger la vía aérea.", severity: "alert"}
+    - {min: 9, max: 12, label: "Lesión cerebral moderada", severity: "warn"}
+    - {min: 13, max: 15, label: "Leve / menor", severity: "none"}
+    notes:
+    - "Informe los componentes por separado (p. ej., O3 V4 M5). La subpuntuación motora es la más fiable y pronóstica."
+    caveats:
+    - "Alterada por la sedación y la intubación (lo verbal no es evaluable si está intubado) — documente el modificador y la mejor respuesta."

@@ -1,0 +1,42 @@
+# translated-from-sha256: b07647146723a4b911dafc26a8272212e3652aa00a649d194e42a87639ddcf29
+topic:
+  id: "pb-otitis-media"
+  title: "Otitis media"
+  list_subtitle: "p.68 · infecciones de ORL I"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["otitis media", "OMA", "infección de oído", "ORL", "membrana timpánica", "otoscopia", "amoxicilina", "dolor de oído", "otorrea", "pediátrico"]
+  category: "medical"
+  page_number: 68
+  blocks:
+  - type: "prose"
+    title: "Presentación"
+    markdown: |
+      - **Quejas más frecuentes de los padres:** sueño inquieto, irritabilidad, se frota el oído (parecen los síntomas más útiles para el diagnóstico), dolor de oído, rinitis o tos intensa o prolongada, fiebre
+      - Inicio agudo, quizá precedido de síntomas respiratorios altos
+      - Más probable si se fuma en casa o si toma fórmula
+  - type: "prose"
+    title: "Exploración"
+    markdown: |
+      - Haga una otoscopia (examine la membrana timpánica con un otoscopio — idealmente con pera de insuflación)
+      - Retire el cerumen si es necesario para ver
+  - type: "prose"
+    title: "Diagnóstico — cualquiera de los siguientes en la exploración"
+    markdown: |
+      - Abombamiento moderado a intenso de la membrana timpánica (MT)
+      - Abombamiento leve de la MT **y** <48 h de dolor de oído, o eritema intenso de la MT
+      - MT roja, abombada y opaca
+      - Otorrea nueva no debida a otitis externa
+      - MT perforada con secreción
+  - type: "prose"
+    title: "Tratamiento"
+    markdown: |
+      La dosis máx./de adulto de lo siguiente es **875mg/dosis VO dos veces al día**.
+
+      - **1.ª línea:** amoxicilina 45mg/kg/dosis VO dos veces al día
+      - **2.ª línea:** amoxicilina/ácido clavulánico 45mg/kg/dosis VO dos veces al día
+      - **Duración:** 10 días si tiene <2 años, 7 días si tiene >2 años
+      - **Analgesia — adminístrela.** Paracetamol 15mg/kg cada 6 h o ibuprofeno 5–10mg/kg cada 8 h. El dolor es lo que trae al niño y a los padres, y es lo primero que mejora
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_otitis_media_tm.png"
+    size: "full"
+    caption: "Membrana timpánica en la otoscopia — MT normal (izquierda) frente a otitis media aguda (derecha): dibujos arriba, con las fotografías de otoscopia correspondientes abajo."

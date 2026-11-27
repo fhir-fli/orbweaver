@@ -1,0 +1,119 @@
+# translated-from-sha256: 919a48455da13ce80dc22f7b77f6167636d2416969b3a3e15999434d62d02157
+topic:
+  id: "wvems-2026-090"
+  version: "v260101"
+  title: "Edema pulmonar"
+  list_subtitle: "2026-090 · ICC / goteo de nitroglicerina / Lasix"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "edema pulmonar"
+  - "icc"
+  - "insuficiencia cardíaca"
+  - "goteo de nitroglicerina"
+  - "lasix"
+  - "cuidados críticos"
+  aliases:
+  - "Insuficiencia cardíaca"
+  - "Sobrecarga de volumen"
+  - "Disfunción sistólica"
+  category: "critical_care"
+  layout: "paged"
+  pages:
+  - page_number: 90
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Exacerbación aguda de ICC"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Perfusión adecuada"
+        - "Edema crónico"
+        actions:
+        - text: "Trate como [disnea](topic:wvems-2026-030)"
+          kind: "referral"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Estertores, ortopnea"
+        - "HTA, IY, tos"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Goteo de nitroglicerina"
+          kind: "medication_administration"
+        - provider_level: "P(CC)"
+          text: "Lasix"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Respiración](topic:wvems-2026-006)"
+        - text: "[Choque](topic:wvems-2026-008)"
+        - text: "[Dolor torácico](topic:wvems-2026-028)"
+        - text: "Disnea"
+          link_id: "wvems-2026-030"
+        - text: "[Intubación](topic:wvems-2026-078)"
+      critical_care_link:
+        text: "[Intubación](topic:wvems-2026-078)"
+      dose_table:
+      - drug: "[Goteo de nitroglicerina](topic:wvems-2026-drug-reference#nitro-nitro-drip)"
+        dose: "300 mcg/min"
+        route: "IV/IO"
+        frequency: "Ajuste a la baja"
+        population: "adult"
+      - drug: "[Lasix](topic:wvems-2026-drug-reference#lasix)"
+        dose: "40 mg"
+        route: "IV/IO, IM"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 91
+    blocks:
+    - type: "prose"
+      title: "Requisitos previos obligatorios de edema pulmonar"
+      highlight: true
+      markdown: |
+        - En los últimos 12 meses: aprobar una formación interna de cuidados críticos.
+    - type: "prose"
+      title: "Imperativos"
+      markdown: |
+        - El edema agudo suele asociarse a [disnea](topic:wvems-2026-030) y PAS elevada.
+        - Use [O₂ y NIPPV](topic:wvems-2026-006) de forma enérgica. Esté preparado para escalar la [vía aérea](topic:wvems-2026-004).
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Goteo de nitroglicerina](topic:wvems-2026-drug-reference#nitro-nitro-drip)** (nitroglicerina): vigile muy de cerca la [hipotensión](topic:wvems-2026-008).
+          - **Requiere bomba** — no es apropiado dosificarla por goteo por gravedad.
+          - **Baje** rápidamente para mantener la **PAS por encima de 90 mmHg**.
+          - Puede **empezar con dos tabletas SL** (0.4 mg SL x2) mientras prepara el goteo.
+          - Precaución con antecedente de estenosis aórtica o HTA pulmonar.
+          - Contraindicada si hubo uso reciente (36 h) de cualquier [inhibidor de la PDE5](topic:wvems-2026-028).
+          - Pare el goteo y considere [vasopresores](topic:wvems-2026-082) si la [hipotensión](topic:wvems-2026-008) persiste.
+        - **[Lasix®](topic:wvems-2026-drug-reference#lasix)** (furosemida): el efecto es tardío, pero puede ser beneficioso.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Este protocolo se centra en las causas **cardíacas** frecuentes de edema.
+          - Las causas no cardíacas también se benefician de **O₂ y NIPPV** enérgicos.
+        - Considere el **fentanilo** para el [dolor torácico o la cefalea](topic:wvems-2026-020) (o la sensación de falta de aire).
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+        - La ICC típica es improbable. Considere una enfermedad estructural o una [arritmia](topic:wvems-2026-014).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Pulm. Edema — https://emedicine.medscape.com/article/157452 [Ver: 10/25]
+        - ISHLT Peds HF — https://www.jhltonline.org/article/S1053-2498(25)02030-3/fulltext [Ver: 10/25]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 20, 37
+
+        NEMSIS: 9914137, 9914033, 9914021

@@ -1,0 +1,34 @@
+# translated-from-sha256: b8f3fd4f6cb588e1da1198bb9e760924d566a6f7293cdf53003b83fd36cde69e
+topic:
+  id: "calc-perc"
+  title: "Regla PERC"
+  list_subtitle: "descartar TEP (solo baja probabilidad)"
+  last_reviewed: "Evidence review 2026-07-19 · Kline 2004 · PROPER 2018"
+  tags: ["perc", "embolia pulmonar", "tep", "descartar", "etv", "dímero d"]
+  aliases:
+  - "PERC"
+  - "Descartar TEP"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Criterios para descartar la embolia pulmonar. Toque cada criterio que esté
+      **presente**. Si no hay ninguno (puntuación 0) **y** la probabilidad clínica pretest
+      ya es baja, se excluye el TEP sin más pruebas.
+  - type: "score"
+    title: "Criterios PERC"
+    source: "Kline et al., 2004; ensayo PROPER, JAMA 2018"
+    items:
+    - {key: "age50", label: "Edad ≥ 50", type: "toggle", points: 1}
+    - {key: "hr100", label: "Frecuencia cardíaca ≥ 100", type: "toggle", points: 1}
+    - {key: "spo2", label: "SpO₂ < 95% con aire ambiente", type: "toggle", points: 1}
+    - {key: "leg_swelling", label: "Edema unilateral de la pierna", type: "toggle", points: 1}
+    - {key: "hemoptysis", label: "Hemoptisis", type: "toggle", points: 1}
+    - {key: "surgery_trauma", label: "Cirugía o traumatismo recientes (en las últimas 4 semanas, con hospitalización/anestesia general)", type: "toggle", points: 1}
+    - {key: "prior_vte", label: "TEP o TVP previos", type: "toggle", points: 1}
+    - {key: "hormone", label: "Uso de hormonas (anticonceptivos orales, estrógenos, THS)", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 0, label: "PERC negativa — TEP excluido (si la probabilidad pretest es baja)", severity: "none"}
+    - {min: 1, label: "PERC positiva — TEP no excluido; continúe el estudio", severity: "warn"}
+    caveats:
+    - "Válida SOLO cuando la probabilidad pretest clínica/de impresión ya es BAJA (y en entornos de baja prevalencia) — nunca sirve sola para descartar con probabilidad moderada/alta."

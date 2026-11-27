@@ -1,0 +1,74 @@
+# translated-from-sha256: de0fa77fed1e414b50181f9c9e20b6ac005b359a34642360b22e4ebd46532e6f
+topic:
+  id: "pb-epistaxis"
+  title: "Epistaxis (sangrado nasal)"
+  list_subtitle: "p.67 · algoritmo"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["epistaxis", "sangrado nasal", "ORL", "nasal", "ácido tranexámico", "TXA", "taponamiento", "foley", "sangrado", "hemorragia"]
+  category: "medical"
+  page_number: 67
+  blocks:
+  - type: "prose"
+    title: "Manejo"
+    markdown: |
+      - Monitorice, mantenga el ABC
+      - Pida al paciente que se incline hacia delante y apriete la nariz cerrada (**NO** incline la cabeza hacia atrás)
+      - Controle los signos vitales (**PA**, FC, FR, spO2, Temp, peso)
+      - Evalúe AVPU/GCS, el estado de hidratación
+      - Inicie oxígeno si la spO2 <90%, coloque una vía IV si es necesario
+      - Haga una historia y una exploración física breves y dirigidas
+        - El traumatismo nasal (hurgarse la nariz) es la causa más frecuente, sobre todo en niños
+        - **Pregunte por anticoagulantes y antiagregantes** (warfarina, ácido acetilsalicílico, clopidogrel) y por cualquier trastorno hemorrágico — cambia tanto el riesgo como el destino del paciente
+      - Siga apretando la nariz cerrada durante **15 MINUTOS**
+      - **No pida pruebas de coagulación durante este tiempo**
+      - **No haga taponamiento durante este tiempo**
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Tras 15 minutos de compresión nasal continua"
+      shape: "stadium"
+    boxes:
+    - id: "observe_stop"
+      title: "El sangrado se detuvo — observe"
+      bullets:
+      - "Repita los signos vitales (FC, FR, spO2, Temp)"
+      - "Repita la GCS"
+      - "Retire cualquier taponamiento"
+      - "Vigile al menos 60 minutos"
+      - "Educación sobre la causa"
+      - "Vaselina tres veces al día durante 7–10 días"
+    stages:
+    - decision: "¿Se detuvo el sangrado?"
+      outcomes:
+      - label: "Sí"
+        goto: "observe_stop"
+      - label: "No"
+        box:
+          title: "Torunda de algodón en la fosa nasal que sangra (esto NO es un taponamiento)"
+          bullets:
+          - "Introduzca una torunda empapada, en este orden, cada una durante 10 minutos; deténgase en cualquier momento si se controla el sangrado:"
+          - "1) Ácido tranexámico inyectable (500 mg en 5 mL de SSN)"
+          - "2) Adrenalina / epinefrina (1 mg en 5 mL)"
+        continue: true
+    - decision: "¿Se detuvo el sangrado?"
+      outcomes:
+      - label: "Sí"
+        goto: "observe_stop"
+      - label: "No"
+        box:
+          title: "Taponamiento anterior + posterior"
+          bullets:
+          - "Hágalo en este orden; deténgase en cualquier momento si se controla el sangrado:"
+          - "1) Tapone la fosa nasal que sangra con un tampón o gasa empapados en bacitracina o gel K-Y"
+          - "2) Tapone la fosa nasal contralateral con un tampón o gasa empapados en bacitracina o gel K-Y"
+          - "3) Pase una sonda Foley lubricada por la fosa nasal que sangra hasta la nasofaringe, llénela con 5-15 mL de SSN y tire hacia delante, aplicando una tracción ligera contra la coana nasal posterior. Ínflela solo hasta que se asiente — el sobreinflado causa necrosis por presión del ala nasal y el tabique. Administre analgesia, es doloroso"
+          - "4) Tapone la fosa nasal que sangra alrededor de la sonda Foley con un tampón o gasa empapados en bacitracina o gel K-Y"
+        continue: true
+    terminal:
+      title: "Tras el taponamiento — ingrese y vigile"
+      bullets:
+      - "Repita los signos vitales (FC, FR, spO2, Temp, PA)"
+      - "Repita la GCS"
+      - "Acceso IV"
+      - "Análisis: hemograma, PFH, pruebas de coagulación"
+      - "Considere mantener el taponamiento 12–24 horas"

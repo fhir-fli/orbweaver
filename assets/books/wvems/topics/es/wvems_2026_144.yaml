@@ -1,0 +1,231 @@
+# translated-from-sha256: 79e040819443d3e3f7660a7c6a8734b26517447e5a4f2bbec325cd5b34ed2421
+topic:
+  id: "wvems-2026-144"
+  version: "v260101"
+  title: "Referencia pediátrica"
+  list_subtitle: "2026-144 · dosificación por edad"
+  last_reviewed: "Dec 2025"
+  tags: ["pediátrica", "pediatría", "dosificación", "edad", "referencia", "borrador"]
+  aliases:
+  - "Pediátrica"
+  - "Dosificación pediátrica"
+  - "Handtevy"
+  category: "medical"
+  page_number: 144
+  blocks:
+  - type: "prose"
+    title: "Referencia pediátrica"
+    highlight: true
+    markdown: |
+      - La **edad** es la referencia principal — permite prepararse durante el trayecto.
+      - Use una **cinta de longitud/color** si se desconoce la edad (o si el niño es muy pequeño/grande).
+      - La dosificación **por peso** es terciaria — estimar el peso es menos preciso.
+      - Use la **misma vía y frecuencia** que en el protocolo del adulto.
+        - Limite el **bolo de SSN** a **×3** (60 mL/kg).
+  - type: "prose"
+    title: "⚠️ Verifique cada dosis"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    markdown: |
+      Estas tablas por edad están **CALCULADAS** (**mg/kg** × **peso estimado
+      para la edad**) y revisadas frente a **PALS 2025 / OpenEvidence**, pero
+      siguen siendo una **comprobación cruzada** pendiente de **aprobación del director médico** — no
+      la sustituyen. **Confirme cada dosis** con una referencia actual
+      (y una cinta de longitud/color) antes de administrarla. Las dosis máximas y las salvedades
+      figuran en las notas bajo cada tabla (**\*** = limitada al máximo).
+  - type: "prose"
+    title: "Dosis para convulsiones / SRI (basadas en la evidencia)"
+    boxed: true
+    markdown: |
+      Siguen la **evidencia de PALS / estado epiléptico** — **más altas que
+      las dosis de sedación**:
+      - **Ativan** (lorazepam) **0.1 mg/kg** EE (máx. 4 mg)
+      - **Versed** (midazolam) **0.1–0.2 mg/kg** EE (máx. 10 mg)
+      - **Keppra** **40–60 mg/kg** carga en EE (3+ meses)
+      - **Rocuronio** **1 mg/kg** SRI
+      - **Atropina** — sin mínimo de 0.1 mg (eliminado en PALS 2020)
+      Para la **sedación**, use las dosis más bajas de las tarjetas de la referencia de fármacos.
+  - type: "table"
+    title: "Peso estimado para la edad (confirme / ajuste)"
+    columns: ["Edad", "Recién nacido", "6 meses", "1 año", "2 años", "4 años", "6 años", "8 años", "10 años", "12 años"]
+    column_widths: [70, 58, 54, 54, 54, 54, 54, 54, 56, 56]
+    layout: "scroll"
+    sticky_first_column: true
+    rows:
+    - cells: ["Peso", "3.5 kg", "8 kg", "10 kg", "12 kg", "16 kg", "20 kg", "25 kg", "32 kg", "40 kg"]
+  - type: "prose"
+    markdown: |
+      Peso aproximado para la edad en el **percentil 50** (alineado con PALS/Broselow).
+      **Esta es la suposición clave** — sustitúyala por su estándar preferido (p. ej.,
+      una estimación con cinta de longitud/color) y las dosis se ajustan en consecuencia.
+  - type: "table"
+    title: "Reanimación"
+    layout: "scroll"
+    sticky_header: true
+    sticky_first_column: true
+    zebra: true
+    columns: ["Fármaco", "Dosis/kg", "Recién nacido", "6 meses", "1 año", "2 años", "4 años", "6 años", "8 años", "10 años", "12 años"]
+    column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
+    rows:
+    - cells: ["Epinefrina (mg)", "0.01 mg/kg", "0.035", "0.08", "0.1", "0.12", "0.16", "0.2", "0.25", "0.32", "0.4"]
+    - cells: ["Adenosina 1.ª (mg)", "0.1 mg/kg", "0.35", "0.8", "1", "1.2", "1.6", "2", "2.5", "3.2", "4"]
+    - cells: ["Adenosina 2.ª (mg)", "0.2 mg/kg", "0.7", "1.6", "2", "2.4", "3.2", "4", "5", "6.4", "8"]
+    - cells: ["Amiodarona (mg)", "5 mg/kg", "18", "40", "50", "60", "80", "100", "125", "160", "200"]
+    - cells: ["Atropina (mg)", "0.02 mg/kg", "0.07", "0.16", "0.2", "0.24", "0.32", "0.4", "0.5", "0.5*", "0.5*"]
+    - cells: ["Calcio (mg)", "20 mg/kg", "70", "160", "200", "240", "320", "400", "500", "640", "800"]
+    - cells: ["Bicarbonato (mEq)", "1 mEq/kg", "4", "8", "10", "12", "16", "20", "25", "32", "40"]
+    - cells: ["D10 (mL)", "5 mL/kg", "20", "40", "50", "60", "80", "100", "125", "160", "200"]
+    - cells: ["Bolo de SSN (mL)", "20 mL/kg", "70", "160", "200", "240", "320", "400", "500", "640", "800"]
+    - cells: ["Salino al 3% (mL)", "2–5 mL/kg", "5–20", "15–40", "20–50", "25–60", "30–80", "40–100", "50–125", "65–160", "80–200"]
+    - cells: ["Magnesio (mg)", "25–50 mg/kg", "90–180", "200–400", "250–500", "300–600", "400–800", "500–1000", "620–1250", "800–1600", "1000–2000"]
+    - cells: ["Narcan (mg)", "0.1 mg/kg", "0.4", "0.8", "1", "1.2", "1.6", "2", "2*", "2*", "2*"]
+  - type: "prose"
+    markdown: |
+      - Epinefrina (mg): paro/bradicardia; = 0.1 mL/kg de 0.1 mg/mL; máx. 1 mg
+      - Adenosina 1.ª (mg): bolo rápido + lavado; máx. 6 mg
+      - Adenosina 2.ª (mg): máx. 12 mg
+      - Amiodarona (mg): paro; máx. 300 mg; cada 5 min x3
+      - Atropina (mg): sin mínimo (PALS 2020); máx. 0.5 mg
+      - Calcio (mg): en 10 min (en bolo en el paro)
+      - Bicarbonato (mEq): máx. 50 mEq
+      - D10 (mL): = 0.5 g/kg
+      - Bolo de SSN (mL): límite x3 (60 mL/kg)
+      - Salino al 3% (mL): TCE; en 10 min
+      - Magnesio (mg): en 10 min; máx. 2 g
+      - Narcan (mg): dosis inicial de la FDA 0.01 mg/kg, ajuste; máx. ~2 mg
+  - type: "table"
+    title: "Convulsiones / sedación"
+    layout: "scroll"
+    sticky_header: true
+    sticky_first_column: true
+    zebra: true
+    columns: ["Fármaco", "Dosis/kg", "Recién nacido", "6 meses", "1 año", "2 años", "4 años", "6 años", "8 años", "10 años", "12 años"]
+    column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
+    rows:
+    - cells: ["Ativan (mg)", "0.1 mg/kg", "0.35", "0.8", "1", "1.2", "1.6", "2", "2.5", "3.2", "4"]
+    - cells: ["Versed (mg)", "0.1–0.2 mg/kg", "0.35–0.7", "0.8–1.6", "1–2", "1.2–2.4", "1.6–3.2", "2–4", "2.5–5", "3.2–6.4", "4–8"]
+    - cells: ["Ketamina (mg)", "0.25–0.5 mg/kg", "1–2", "2–4", "2.5–5", "3–6", "4–8", "5–10", "6–12.5", "8–16", "10–20"]
+    - cells: ["Keppra (mg)", "40–60 mg/kg", "—", "320–480", "400–600", "480–720", "640–960", "800–1200", "1000–1500", "1280–1920", "1600–2400"]
+  - type: "prose"
+    markdown: |
+      - Ativan (mg): lorazepam en EE 0.1 mg/kg; máx. 4 mg [OE]
+      - Versed (mg): midazolam en EE 0.1-0.2 mg/kg; máx. 10 mg [OE]
+      - Ketamina (mg): dolor; más alta en cuidados críticos
+      - Keppra (mg): levetiracetam, carga en EE 40-60 mg/kg; 3+ meses; máx. 4.5 g [OE]
+  - type: "table"
+    title: "Vía aérea / SRI"
+    layout: "scroll"
+    sticky_header: true
+    sticky_first_column: true
+    zebra: true
+    columns: ["Fármaco", "Dosis/kg", "Recién nacido", "6 meses", "1 año", "2 años", "4 años", "6 años", "8 años", "10 años", "12 años"]
+    column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
+    rows:
+    - cells: ["Etomidato (mg)", "0.3 mg/kg", "—", "—", "—", "—", "—", "—", "—", "9.5", "12"]
+    - cells: ["Rocuronio (mg)", "1 mg/kg", "—", "8", "10", "12", "16", "20", "25", "32", "40"]
+    - cells: ["Succinilcolina (mg)", "2 mg/kg", "7", "16", "20", "24", "32", "40", "50", "64", "80"]
+  - type: "prose"
+    markdown: |
+      - Etomidato (mg): solo 10+ años, según la tarjeta
+      - Rocuronio (mg): SRI 1 mg/kg (OE 1.0-1.2); 3+ meses [OE]
+  - type: "table"
+    title: "Analgesia / otros"
+    layout: "scroll"
+    sticky_header: true
+    sticky_first_column: true
+    zebra: true
+    columns: ["Fármaco", "Dosis/kg", "Recién nacido", "6 meses", "1 año", "2 años", "4 años", "6 años", "8 años", "10 años", "12 años"]
+    column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
+    rows:
+    - cells: ["Fentanilo (mcg)", "0.5–2 mcg/kg", "2–7", "4–16", "5–20", "6–24", "8–32", "10–40", "12–50", "16–64", "20–80"]
+    - cells: ["Morfina (mg)", "0.1–0.2 mg/kg", "0.5", "1–1.5", "1–2", "1–2.5", "1.5–3", "2–4", "2.5–4*", "3–4*", "4"]
+    - cells: ["Toradol (mg)", "0.5 mg/kg", "—", "—", "—", "6", "8", "10", "12", "15*", "15*"]
+    - cells: ["Zofran (mg)", "0.1 mg/kg", "0.5", "1", "1", "1", "1.5", "2", "2.5", "3", "4"]
+    - cells: ["Benadryl (mg)", "1 mg/kg", "4", "8", "10", "12", "16", "20", "25", "32", "40"]
+    - cells: ["Decadron (mg)", "0.6 mg/kg", "2", "5", "6", "7", "9.5", "12", "12*", "12*", "12*"]
+    - cells: ["Lasix (mg)", "1–2 mg/kg", "4–7", "8–16", "10–20", "12–24", "16–32", "20–40", "25–40*", "32–40*", "40"]
+    - cells: ["TXA (mg)", "15–20 mg/kg", "50–70", "120–160", "150–200", "180–240", "240–320", "300–400", "380–500", "480–640", "600–800"]
+    - cells: ["Ibuprofeno (mg)", "10 mg/kg", "—", "80", "100", "120", "160", "200", "250", "320", "400"]
+    - cells: ["Tylenol (mg)", "15 mg/kg", "50", "120", "150", "180", "240", "300", "380", "480", "600"]
+  - type: "prose"
+    markdown: |
+      - Fentanilo (mcg): máx. ~100 mcg
+      - Morfina (mg): máx. ~4 mg
+      - Toradol (mg): ketorolaco; 2+ años; máx. 15 mg
+      - Zofran (mg): ondansetrón; máx. 4 mg
+      - Benadryl (mg): difenhidramina; máx. 50 mg
+      - Decadron (mg): dexametasona; crup; máx. 12 mg
+      - Lasix (mg): furosemida; máx. 40 mg
+      - TXA (mg): en 10 min; máx. 1 g (luego 2 mg/kg/h)
+      - Ibuprofeno (mg): 6+ meses; máx. ~600 mg
+      - Tylenol (mg): paracetamol; máx. ~1 g
+  - type: "table"
+    title: "Antibióticos / antídoto"
+    layout: "scroll"
+    sticky_header: true
+    sticky_first_column: true
+    zebra: true
+    columns: ["Fármaco", "Dosis/kg", "Recién nacido", "6 meses", "1 año", "2 años", "4 años", "6 años", "8 años", "10 años", "12 años"]
+    column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
+    rows:
+    - cells: ["Ancef (mg)", "25–30 mg/kg", "90–100", "200–240", "250–300", "300–360", "400–480", "500–600", "620–750", "800–960", "1000–1200"]
+    - cells: ["Rocephin (mg)", "50 mg/kg", "180", "400", "500", "600", "800", "1000", "1250", "1600", "2000"]
+    - cells: ["CyanoKit (mg)", "70 mg/kg", "240", "560", "700", "840", "1120", "1400", "1750", "2240", "2800"]
+  - type: "prose"
+    markdown: |
+      - Ancef (mg): cefazolina; máx. 2 g
+      - Rocephin (mg): ceftriaxona en sepsis; meningitis 100 mg/kg máx. 4 g
+      - CyanoKit (mg): hidroxocobalamina; en 10 min; máx. 5 g
+  - type: "table"
+    title: "Infusiones (ajuste)"
+    layout: "scroll"
+    sticky_header: true
+    sticky_first_column: true
+    zebra: true
+    columns: ["Fármaco", "Dosis/kg", "Recién nacido", "6 meses", "1 año", "2 años", "4 años", "6 años", "8 años", "10 años", "12 años"]
+    column_widths: [168, 150, 68, 68, 68, 68, 68, 68, 68, 68, 68]
+    rows:
+    - cells: ["Dopamina (mcg/min)", "5–20 mcg/kg/min", "20–70", "40–160", "50–200", "60–240", "80–320", "100–400", "125–500", "160–640", "200–800"]
+    - cells: ["Levophed (mcg/min)", "0.05–0.5 mcg/kg/min", "0.2–1.8", "0.4–4", "0.5–5", "0.6–6", "0.8–8", "1–10", "1.2–12.5", "1.6–16", "2–20"]
+    - cells: ["Lopressor (mcg/min)", "0.5 mcg/kg/min", "2", "4", "5", "6", "8", "10", "12.5", "16", "20"]
+  - type: "prose"
+    markdown: |
+      - Dopamina (mcg/min): 5-20 mcg/kg/min; ajuste
+      - Levophed (mcg/min): noradrenalina 0.05-0.5 mcg/kg/min; 4 mg en 250 mL
+      - Lopressor (mcg/min): metoprolol 0.5 mcg/kg/min
+  - type: "prose"
+    title: "No incluidos en las tablas (infusiones y dosis fijas)"
+    markdown: |
+      - **Goteo de epinefrina / dopamina / noradrenalina (Levophed) / metoprolol (Lopressor)** — **infusiones** por peso (mcg/kg/min); ajuste según efecto, no es una dosis única.
+      - **Glucagón** — **0.5 mg** IM si **< 6 años (< 20 kg)**, si no 1 mg.
+      - **Salbutamol / Atrovent / epinefrina nebulizada** — nebulizados; use la dosis estándar de nebulización (salbutamol **2.5 mg**, Atrovent **0.5 mg**, epinefrina nebulizada **0.5 mg/kg** máx. 5 mg).
+      - **DuoDote** — seguridad no establecida **≤ 40 kg**.
+      - **Ácido acetilsalicílico / Afrin / heparina / nitroglicerina** — indicaciones del adulto; no de rutina en pediatría.
+  - type: "prose"
+    title: "{E} Dosificación pediátrica para EMT"
+    markdown: |
+      - El cálculo de dosis pediátricas **no está en la competencia del EMT**.
+      - Los EMT pueden dar la **dosis habitual del adulto** de estos fármacos, a partir de la edad indicada:
+        - **Afrin** (oximetazolina): ≥ 6 años
+        - **Salbutamol** (Ventolin): ≥ 2 años
+        - **Atrovent** (ipratropio): ≥ 5 años
+        - **Baqsimi** (glucagón IN): ≥ 1 año
+        - **Glucagón** (IM): ≥ 5 años
+        - **Glucosa oral** (Glutose): ≥ 2 años
+        - **Narcan** (naloxona): ≥ 1 año
+        - **Tetracaína** (oftálmica): todas las edades
+        - **Zofran ODT** (ondansetrón): ≥ 11 años
+      - Pueden dar un **EpiPen Jr** de 3–8 años, o un **EpiPen** de adulto a partir de ≥ 9 años.
+      - Pueden dar las dosis **de venta libre** de Benadryl, ibuprofeno y Tylenol — siga las indicaciones de la caja según edad/peso.
+        - **No** pueden dar las dosis rotuladas "consulte a un médico (o según indicación médica)".
+  - type: "prose"
+    title: "Referencias"
+    text_scale: 0.8
+    markdown: |
+      - PALS (AHA 2020) — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+      - Peso para la edad: aprox. percentil 50 (crecimiento CDC/OMS; convención PALS/Broselow)
+      - Dosis derivadas de la referencia de fármacos de WVEMS (mg/kg) en esta app
+      - Handtevy — Pediatric Emergency Standards (la fuente impresa de WVEMS; propietaria, deliberadamente NO reproducida) — https://handtevy.com

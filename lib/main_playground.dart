@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:json_schema/json_schema.dart';
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/data/formula_strings_loader.dart';
 import 'package:orbweaver/data/schema_explain.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/widgets/topic_view.dart';
@@ -17,7 +18,12 @@ import 'package:url_launcher/url_launcher.dart';
 ///
 /// Build: `tool/publish_playground.sh` (or
 /// `flutter build web -t lib/main_playground.dart`).
-void main() => runApp(const PlaygroundApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // The playground renders in English, the authoring language.
+  await loadFormulaStrings('en');
+  runApp(const PlaygroundApp());
+}
 
 const String kSchemaUrl =
     'https://fhir-fli.github.io/fhir_fli_documentation/orbweaver/schema/topic.schema.json';

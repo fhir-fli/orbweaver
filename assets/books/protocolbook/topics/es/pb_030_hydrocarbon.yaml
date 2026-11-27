@@ -1,0 +1,74 @@
+# translated-from-sha256: 4a4a61e14793d61d9d81639837cab14d0471494f05e1c3c72c0a4e6d291e157f
+topic:
+  id: "pb-hydrocarbon"
+  title: "Ingestión de hidrocarburos (queroseno, parafina)"
+  list_subtitle: "p.30 · algoritmo"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hidrocarburo", "queroseno", "parafina", "ingestión", "intoxicación", "aspiración"]
+  category: "medical"
+  page_number: 30
+  blocks:
+  - type: "prose"
+    markdown: |
+      - Más probable en niños
+      - A menudo se presenta asintomático
+      - Queroseno / hidrocarburos alifáticos — olor a destilado de petróleo
+  - type: "flowchart"
+    variant: "algorithm"
+    entry:
+      text: "Ingestión de hidrocarburos"
+      shape: "stadium"
+    boxes:
+    - id: "treat"
+      title: "Tratamiento"
+      bullets:
+      - "Oxígeno"
+      - "Salbutamol (NO use adrenalina)"
+      - "Radiografía de tórax (RxT)"
+      - "Nada por boca con líquidos IV de mantenimiento"
+    stages:
+    - decision: "¿Hay alguno de estos?"
+      criteria:
+      - "Dificultad respiratoria (sibilancias, taquipnea)"
+      - "Convulsiones"
+      - "Vómitos"
+      - "Estado mental deprimido, letargo, inquietud"
+      outcomes:
+      - label: "Sí — sintomático"
+        goto: "treat"
+        continue: true
+      - label: "No — asintomático"
+        box:
+          title: "Observe"
+          bullets:
+          - "Si aparecen síntomas en el hospital → trate (abajo)"
+          - "A las 6–8 h de la ingestión, si sigue asintomático → radiografía de tórax"
+          - "RxT normal → vigile 24 h, luego alta si está bien"
+          - "RxT anormal → trate (abajo)"
+    - decision: "¿Dificultad respiratoria?"
+      outcomes:
+      - label: "Ninguna, o leve / moderada"
+        box:
+          title: "Continúe la vigilancia estrecha del estado respiratorio"
+        continue: true
+      - label: "Grave, responde al tratamiento"
+        box:
+          title: "Continúe la vigilancia estrecha del estado respiratorio"
+        continue: true
+      - label: "Grave, NO responde al tratamiento"
+        box:
+          title: "Intube e ingrese en UCI"
+          severity: "emergency"
+    - decision: "¿Convulsiones?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Vea el protocolo de convulsiones"
+      - label: "No"
+        box:
+          title: "NO inicie antibióticos profilácticos"
+        continue: true
+    terminal:
+      title: "Alta"
+      bullets:
+      - "A las 24 h, o cuando se hayan resuelto los síntomas respiratorios, puede darse el alta a casa"

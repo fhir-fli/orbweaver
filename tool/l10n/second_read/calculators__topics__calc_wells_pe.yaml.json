@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_wells_pe.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s6",
+   "severity": "meaning",
+   "problem": "The acronym for Venous Thromboembolism (VTE) in Spanish is 'TEV' (Tromboembolismo Venoso), not 'etv'.",
+   "fix": "tev",
+   "en": "vte",
+   "es": "etv"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s6\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The acronym for Venous Thromboembolism (VTE) in Spanish is 'TEV' (Tromboembolismo Venoso), not 'etv'.\",\n    \"fix\": \"tev\"\n  }\n]\n```"
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "page": "assets/credits.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s3",
+   "severity": "meaning",
+   "problem": "English left untranslated where a Spanish reader needs Spanish (Main title of the reference).",
+   "fix": "Referencia rápida: Protocolos básicos de pediatría y medicina interna para entornos de recursos limitados",
+   "en": "Quick Reference: Basic Protocols in Paediatrics and Internal Medicine for Resource Limited Settings",
+   "es": "Quick Reference: Basic Protocols in Paediatrics and Internal Medicine for Resource Limited Settings"
+  },
+  {
+   "id": "s6",
+   "severity": "meaning",
+   "problem": "English left untranslated where a Spanish reader needs Spanish (Critical disclaimer regarding WHO authorship and responsibility).",
+   "fix": "**Esta aplicación no fue desarrollada ni publicada por la Organización Mundial de la Salud y no debe atribuírsele.** La responsabilidad de esta adaptación recae exclusivamente en el editor de esta aplicación, y la Organización Mundial de la Salud no es responsable de ningún cambio realizado en el contenido original. Reproducido bajo una licencia no exclusiva concedida el 2026-09-03, ID de solicitud 202610340. Referencia bibliográfica: Pocket book of hospital care for children: guidelines for the management of common childhood illnesses, 2nd ed. Geneva: World Health Organization; 2013. ISBN 978 92 4 154837 3. Los derechos de autor del material original pertenecen a la Organización Mundial de la Salud.",
+   "en": "**This app was not developed or published by the World Health Organization and should not be credited to it.** Responsibility for this adaptation rests solely with the publisher of this app, and the World Health Organization is not responsible for any changes made to the original content. Reproduced under a non-exclusive licence granted 2026-09-03, request ID 202610340. Bibliographic reference: Pocket book of hospital care for children: guidelines for the management of common childhood illnesses, 2nd ed. Geneva: World Health Organization; 2013. ISBN 978 92 4 154837 3. Copyright in the original material remains with the World Health Organization.",
+   "es": "**This app was not developed or published by the World Health Organization and should not be credited to it.** Responsibility for this adaptation rests solely with the publisher of this app, and the World Health Organization is not responsible for any changes made to the original content. Reproduced under a non-exclusive licence granted 2026-09-03, request ID 202610340. Bibliographic reference: Pocket book of hospital care for children: guidelines for the management of common childhood illnesses, 2nd ed. Geneva: World Health Organization; 2013. ISBN 978 92 4 154837 3. Copyright in the original material remains with the World Health Organization."
+  },
+  {
+   "id": "s58",
+   "severity": "meaning",
+   "problem": "Wrong medical term: 'Cric' (referring to the anatomical landmark/membrane) is translated as 'Cricotiroidotomía' (the surgical procedure).",
+   "fix": "Cric (punto de referencia de la membrana cricotiroidea)",
+   "en": "Cric (cricothyroid membrane landmark)",
+   "es": "Cricotiroidotomía (referencia de la membrana cricotiroidea)"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s3\",\n    \"severity\": \"meaning\",\n    \"problem\": \"English left untranslated where a Spanish reader needs Spanish (Main title of the reference).\",\n    \"fix\": \"Referencia rápida: Protocolos básicos de pediatría y medicina interna para entornos de recursos limitados\"\n  },\n  {\n    \"id\": \"s6\",\n    \"severity\": \"meaning\",\n    \"problem\": \"English left untranslated where a Spanish reader needs Spanish (Critical disclaimer regarding WHO authorship and responsibility).\",\n    \"fix\": \"**Esta aplicación no fue desarrollada ni publicada por la Organización Mundial de la Salud y no debe atribuírsele.** La responsabilidad de esta adaptación recae exclusivamente en el editor de esta aplicación, y la Organización Mundial de la Salud no es responsable de ningún cambio realizado en el contenido original. Reproducido bajo una licencia no exclusiva concedida el 2026-09-03, ID de solicitud 202610340. Referencia bibliográfica: Pocket book of hospital care for children: guidelines for the management of common childhood illnesses, 2nd ed. Geneva: World Health Organization; 2013. ISBN 978 92 4 154837 3. Los derechos de autor del material original pertenecen a la Organización Mundial de la Salud.\"\n  },\n  {\n    \"id\": \"s58\",\n    \"severity\": \"meaning\",\n    \"problem\": \"Wrong medical term: 'Cric' (referring to the anatomical landmark/membrane) is translated as 'Cricotiroidotomía' (the surgical procedure).\",\n    \"fix\": \"Cric (punto de referencia de la membrana cricotiroidea)\"\n  }\n]\n```"
+ ]
+}

@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/flowchart/arrow_paint.dart';
@@ -411,11 +412,11 @@ class _PedsSideTab extends StatelessWidget {
           left: BorderSide(color: Colors.black87),
         ),
       ),
-      child: const RotatedBox(
+      child: RotatedBox(
         quarterTurns: 3,
         child: Text(
-          'Peds',
-          style: TextStyle(
+          context.l10n.populationPeds,
+          style: const TextStyle(
             fontSize: 11,
             fontWeight: FontWeight.w800,
             color: Colors.black87,

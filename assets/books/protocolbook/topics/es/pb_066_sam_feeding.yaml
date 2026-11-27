@@ -1,0 +1,53 @@
+# translated-from-sha256: 82a1234b88e28da098b47709ff19a07eb2175d22314225af692260fbd2b61ba4
+topic:
+  id: "pb-sam-feeding"
+  title: "DAG — alimentación (F-75 / ATLU / F-100)"
+  list_subtitle: "p.66 · estabilización → transición"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["desnutrición", "DAG", "alimentación", "F-75", "F-100", "ATLU", "plumpy nut", "estabilización", "transición", "pediátrico", "nutrición"]
+  category: "medical"
+  page_number: 66
+  blocks:
+  - type: "prose"
+    title: "Estabilización"
+    markdown: |
+      - Use solo F-75
+      - Si hay edema: 100mL/kg/día
+      - Si no hay edema: 130mL/kg/día
+      - No cambie el volumen diario total de leche, aunque pierda o gane peso
+      - Al principio tomas cada 2 horas durante al menos 48 h
+      - Si está estable, pase a tomas cada 3 o cada 4 horas
+      - El niño debe terminar al menos el 80% de las tomas ofrecidas
+      - Use SNG si no termina al menos el 80% de las tomas en 2–3 tomas consecutivas
+      - **Vómitos:** reduzca a tomas cada 1 hora o calcule la leche vomitada y vuelva a ofrecerla
+  - type: "prose"
+    title: "¿Cuándo pasar a la transición?"
+    markdown: |
+      - Recuperación del apetito
+      - Edema reducido o mínimo
+      - En este momento el niño puede sonreír
+      - Complicaciones médicas resueltas
+      - Pasa la prueba de aceptación/apetito (come un tercio del sobre de 92g de Plumpy nut)
+      - NB. Puede pasar a alimentos terapéuticos listos para usar (ATLU/Plumpy nut) o a F-100
+  - type: "prose"
+    title: "Transición a ATLU"
+    markdown: |
+      - Ofrezca el ATLU en un entorno higiénico y lúdico
+      - Dé el ATLU con abundante agua segura para beber
+      - Si no lo termina pero come >la mitad del ATLU, complemente con F-75
+      - Si toma <la mitad, vuelva a la estabilización con F-75
+  - type: "prose"
+    title: "Transición a F-100"
+    markdown: |
+      - Los primeros 2 días, dé el mismo volumen que de F-75
+      - El día 3, añada 10mL por toma hasta un máximo de 220ml/kg/día o hasta que el niño no pueda terminarla
+      - Inicie el suplemento de hierro el día 3 de la transición
+  - type: "prose"
+    title: "Cuándo volver a la estabilización"
+    markdown: |
+      - Reaparición de complicaciones médicas
+      - Pérdida del apetito (toma <80% de las tomas de forma consecutiva)
+      - Aparición/aumento del edema
+      - Empeoramiento del estado médico
+      - Signos de sobrecarga de líquidos
+      - Diarrea por realimentación

@@ -1,0 +1,114 @@
+# translated-from-sha256: da5d3dabe226baa72cfedbb8ca1003f09d6ef3de26ae0b87714b737f5cb52a81
+topic:
+  id: "wvems-2026-060"
+  version: "v260101"
+  title: "Inmovilización"
+  list_subtitle: "2026-060 · RMC / columna cervical / tabla espinal"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "inmovilización"
+  - "rmc"
+  - "espinal"
+  - "collarín cervical"
+  - "tabla espinal"
+  - "traumatismo"
+  aliases:
+  - "Restricción del movimiento de la columna (RMC)"
+  - "Columna cervical"
+  - "Tabla espinal"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 60
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Sospecha de lesión espinal contusa"
+        shape: "stadium"
+      decision:
+        text: "¿Indicaciones?"
+        shape: "diamond"
+      branches:
+      - id: "absent"
+        label: "Ausentes"
+        criteria:
+        - "Puede dar la historia"
+        - "Sin indicaciones"
+        actions:
+        - text: "Columna descartada"
+          kind: "assessment"
+      - id: "present"
+        label: "Presentes"
+        criteria:
+        - "Historia no fiable"
+        - "Alguna indicación"
+        actions:
+        - text: "RMC con [collarín cervical](topic:wvems-2026-096#smr-with-c-collar)"
+          kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Dolor](topic:wvems-2026-020)"
+        - text: "[Traumatismo grave](topic:wvems-2026-056)"
+    - type: "table"
+      title: "Indicaciones"
+      rows:
+      - cells:
+        - "• Dolor a la palpación de la columna"
+        - "• Alteración de la conciencia respecto a la basal"
+      - cells:
+        - "• Deformidad de la columna"
+        - "• Intoxicación aguda"
+      - cells:
+        - "• Déficits neurológicos"
+        - "• Lesión o mecanismo que distrae"
+  - page_number: 61
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la inmovilización"
+      highlight: true
+      markdown: |
+        - Aunque históricamente se han usado las tablas espinales para la
+          inmovilización, la **[RMC](topic:wvems-2026-096#smr-with-c-collar)** también puede lograrse con una camilla de
+          cuchara, un colchón de vacío, la **camilla de la ambulancia** o un dispositivo similar
+          al que el paciente quede sujeto con seguridad.
+        - Los pacientes despiertos y colaboradores pueden sujetarse con seguridad con cinturones.
+        - La RMC requiere **decúbito supino** y un **[collarín cervical](topic:wvems-2026-096#smr-with-c-collar)**.
+        - Se recomienda una tabla espinal larga, una camilla de cuchara o un colchón de vacío
+          para ayudar en los **traslados del paciente** y minimizar la
+          flexión, extensión o rotación de la columna lesionada.
+          - Puede probar una **autoextracción** suave de un vehículo (con collarín cervical).
+        - La **[RMC](topic:wvems-2026-096#smr-with-c-collar)** no tiene papel en el traumatismo penetrante.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - **Dolor a la palpación o deformidad de la columna** incluye cualquier:
+          - Dolor en la línea media del cuello o la espalda, dolor a la palpación, crepitación, escalón, etc.
+        - **Déficits neurológicos** incluye cualquier síntoma nuevo de lesión neurológica:
+          - Inconsciencia de más de 1 min, o convulsión.
+          - Parálisis, debilidad, entumecimiento o cambios visuales.
+          - Dolor lancinante 'eléctrico', u hormigueo en cualquier extremidad.
+        - **Alteración de la conciencia respecto a la basal** incluye cualquier cambio del estado mental:
+          - [Escala de coma de Glasgow](topic:wvems-2026-036) menor que la basal, confusión nueva.
+        - **Intoxicación aguda** incluye cualquier alteración mental debida a:
+          - Alcohol, medicamentos, drogas recreativas o ilegales.
+        - **Lesión o mecanismo que distrae** puede incluir:
+          - Signos vitales inestables, traumatismo de la vía aérea, lesión por explosión, zambullida en aguas poco profundas.
+          - Caída > 10 ft, tórax inestable, pelvis inestable, [quemadura](topic:wvems-2026-070) de 2.º o 3.er grado > 10% SCT.
+          - Fractura / sangrado mayor, [extremidad](topic:wvems-2026-066) aplastada / destrozada o amputada.
+          - Accidente de tráfico de alto riesgo: > 60 mph, eyección, vuelco, muerte, atropello.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Todo niño que no pueda dar una historia fiable debe recibir **[RMC](topic:wvems-2026-096#smr-with-c-collar)**.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACS-COT, ACEP, NAEMSP: SMR in Trauma — Joint Statement [Ver: 2018]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 33
+
+        NEMSIS: 9914073, 9914107

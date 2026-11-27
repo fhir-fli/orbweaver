@@ -1,0 +1,135 @@
+# translated-from-sha256: 1168908f2f6a965cfe42908eef8ac8fa9e506eb13648b4faa223541bc14a799b
+topic:
+  id: "wvems-2026-042"
+  version: "v260101"
+  title: "Convulsiones"
+  list_subtitle: "2026-042 · Versed / Keppra / magnesio"
+  last_reviewed: "Aug 2025"
+  tags: ["convulsiones", "epilepsia", "convulsión", "versed", "midazolam", "keppra", "levetiracetam", "magnesio"]
+  aliases:
+  - "Epilepsia"
+  - "Eclampsia"
+  - "Convulsión febril"
+  - "Abstinencia"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 42
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "safety"
+        text: "Garantice la SEGURIDAD del proveedor"
+      entry:
+        text: "Convulsiones o posturas anormales"
+        shape: "stadium"
+      decision:
+        text: "¿Activa?"
+        shape: "diamond"
+      branches:
+      - id: "not_seizing"
+        label: "Sin convulsión"
+        criteria:
+        - "Convulsión reciente"
+        - "Confusión poscrítica"
+        actions:
+        - text: "Glucómetro"
+          kind: "diagnostic"
+        - provider_level: "A"
+          text: "Vía salinizada"
+          kind: "procedure"
+      - id: "seizing"
+        label: "Convulsionando"
+        criteria:
+        - "Antec.: epilepsia"
+        - "Proteja de lesiones"
+        actions:
+        - provider_level: "A"
+          text: "Versed"
+          kind: "medication_administration"
+        - provider_level: "A"
+          text: "Keppra"
+          kind: "medication_administration"
+          condition: "Si es refractaria"
+        - provider_level: "I"
+          text: "Magnesio"
+          kind: "medication_administration"
+          condition: "Si está embarazada"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Alteración de la conciencia](topic:wvems-2026-036), [Sobredosis/tóxicos](topic:wvems-2026-040)"
+        - text: "[Fiebre](topic:wvems-2026-016), [Traumatismo craneal](topic:wvems-2026-062)"
+        - text: "[Preeclampsia](topic:wvems-2026-092)"
+      critical_care_link:
+        text: "[Preeclampsia](topic:wvems-2026-092)"
+      dose_table:
+      - drug: "[Versed](topic:wvems-2026-drug-reference#versed)"
+        dose: "2.5–5 mg"
+        route: "IV/IO, IM/IN"
+        frequency: "cada 2 min (máx. 10)"
+        population: "adult"
+      - drug: "[Keppra](topic:wvems-2026-drug-reference#keppra)"
+        dose: "3,000 mg"
+        route: "IV/IO"
+        frequency: "durante 10 min"
+        population: "adult"
+      - drug: "[Magnesio](topic:wvems-2026-drug-reference#magnesium)"
+        dose: "4 gramos"
+        route: "IV/IO"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 43
+    blocks:
+    - type: "prose"
+      title: "Imperativos de las convulsiones"
+      highlight: true
+      markdown: |
+        - Las convulsiones activas con [alteración de la conciencia](topic:wvems-2026-036) deben tratarse pronto.
+          - Los fármacos están **contraindicados sin convulsiones activas**.
+          - Trate de forma enérgica las convulsiones por **abstinencia de alcohol o benzodiacepinas**.
+        - Las sacudidas estando despierto y con respuesta probablemente no son una convulsión.
+          - Considere otras causas, como [conductual](topic:wvems-2026-046) o [sobredosis / tóxicos](topic:wvems-2026-040).
+          - Las seudocrisis no epilépticas no requieren intervención del SEM.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Versed®](topic:wvems-2026-drug-reference#versed)** (midazolam): solo apropiado para convulsiones activas.
+          - Empiece más bajo si es IV y/o el paciente es pequeño. Dosis total: **máx. 10 mg**.
+          - Precaución con la vía IM — mayor riesgo de lesión del proveedor.
+        - **[Keppra®](topic:wvems-2026-drug-reference#keppra)** (levetiracetam): segunda línea si las convulsiones continúan.
+          - Use la [dosificación pediátrica por peso](topic:wvems-2026-144) en adultos de menos de 110 lbs (50 kg).
+        - **[Magnesio](topic:wvems-2026-drug-reference#magnesium)** (sulfato): puede causar [hipotensión](topic:wvems-2026-008) y [disnea](topic:wvems-2026-030).
+          - Solo útil para convulsiones al final del [embarazo](topic:wvems-2026-048) (20 semanas o más).
+          - **No** lo dé al inicio del embarazo. La eclampsia es improbable.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [preeclampsia](topic:wvems-2026-092) si está indicado y está acreditado para CC.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Obtenga los detalles de la medicación anticonvulsiva del paciente si están disponibles de inmediato.
+        - Las convulsiones pueden venir en grupos — **esté preparado para tratar otra convulsión**.
+        - La confusión tras una convulsión es frecuente y puede durar más de 30 min.
+          - También es posible una parálisis transitoria similar a un ictus, pero **no es un ACV**.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Los niños menores de 5 años pueden tener una convulsión causada por [fiebre](topic:wvems-2026-016).
+          - Suele ser autolimitada; considere fármacos si dura **>5 min** o hay varias.
+          - Trate de forma enérgica cualquier convulsión pediátrica no asociada a [fiebre](topic:wvems-2026-016).
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+          - {A} **[Versed](topic:wvems-2026-drug-reference#versed)**: la dosis pediátrica máxima es **cada 2 min x4 dosis**.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Seizure — https://emedicine.medscape.com/article/1184846 [Ver: 7/22]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 22.
+
+        NEMSIS: 9914141, 9914157

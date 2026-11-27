@@ -1,0 +1,112 @@
+# translated-from-sha256: e81fd8fc9fea557bdc7cbf508c4202aa0a89be5faa2592c766e3d56a5690bf8e
+topic:
+  id: "wvems-2026-010"
+  version: "v260101"
+  title: "Hipertensión"
+  list_subtitle: "2026-010 · diagrama de gravedad"
+  last_reviewed: "Feb 2025"
+  tags: ["hta", "hipertensión", "presión arterial", "pa", "elevada"]
+  aliases:
+  - "HTA"
+  - "Presión arterial elevada"
+  category: "universal"
+  layout: "paged"
+  pages:
+  - page_number: 10
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Sistólica mayor de"
+        shape: "stadium"
+        bands:
+        - label: "Adulto (14+)"
+          value: "240 mmHg"
+        - label: "Niño (1–13)"
+          value: "220 mmHg"
+        - label: "Lactante (< 1)"
+          value: "200 mmHg"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Sin dificultad"
+        - "Sin dolor"
+        actions:
+        - text: "Posición de confort"
+          kind: "procedure"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Dolor torácico, disnea"
+        - "Cefalea"
+        actions:
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "A"
+          text: "Vía salinizada"
+          kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Dolor](topic:wvems-2026-020), [Embarazo](topic:wvems-2026-048), [Convulsiones](topic:wvems-2026-042)"
+        - text: "[Cardíaco](topic:wvems-2026-028), [Disnea](topic:wvems-2026-030), [Ictus](topic:wvems-2026-044)"
+        - text: "[HTA maligna](topic:wvems-2026-092)"
+  - page_number: 11
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la hipertensión"
+      highlight: true
+      markdown: |
+        - Confirme la PA sistólica elevada con dos tomas de presión fiables.
+        - La HTA es una reacción frecuente al [dolor](topic:wvems-2026-020) y a una agresión fisiológica aguda.
+          - Investigue y **trate primero el dolor** y las **causas subyacentes**.
+        - Incluso una HTA leve (PAS > 160 mmHg) al final del [embarazo](topic:wvems-2026-048) puede ser patológica.
+          - Puede progresar a **eclampsia**. Esté preparado para tratar [convulsiones](topic:wvems-2026-042).
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [preeclampsia](topic:wvems-2026-092) si está indicado y está acreditado para CC.
+    - type: "prose"
+      title: ""
+      markdown: |
+        - El uso inadecuado de antihipertensivos puede **causar daño**.
+          - Bajar la PA durante un ictus puede **causar daño**.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Muchas otras **causas subyacentes** pueden producir una HTA importante.
+          - Considere patología [cardíaca](topic:wvems-2026-028) si hay cualquier dolor torácico.
+          - Considere [disnea](topic:wvems-2026-030) e ICC si hay estertores o edema en los pies.
+          - Considere [sobredosis/tóxicos](topic:wvems-2026-040) si hay consumo reciente de estimulantes o drogas ilícitas.
+          - Considere [ictus](topic:wvems-2026-044) si hay cualquier déficit neurológico focal agudo.
+          - Considere [conductual](topic:wvems-2026-046) si hay ansiedad por desencadenantes emocionales recientes.
+          - Considere [traumatismo craneal](topic:wvems-2026-062) si hay antecedente de traumatismo o signos de lesión.
+        - Pregunte por cambios nuevos o recientes en la medicación cardíaca o **antihipertensiva**.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [HTA maligna](topic:wvems-2026-092) si está indicado y está acreditado para CC.
+        - Considere el [edema pulmonar](topic:wvems-2026-090) si está indicado y está acreditado para CC.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - La HTA patológica es improbable en pediatría. Trate las causas subyacentes.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 13
+
+        NEMSIS: 9914123

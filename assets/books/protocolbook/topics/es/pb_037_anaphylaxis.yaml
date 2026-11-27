@@ -1,0 +1,86 @@
+# translated-from-sha256: 0c0a12a16a28af499e18fc233131fd2ee5e081ce2e80b2056d6c08fc8b4cf151
+topic:
+  id: "pb-anaphylaxis"
+  title: "Anafilaxia"
+  list_subtitle: "p.37 · criterios + adrenalina"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["anafilaxia", "alergia", "reacción alérgica", "epinefrina", "adrenalina", "angioedema", "urticaria", "hipotensión"]
+  category: "medical"
+  page_number: 37
+  blocks:
+  - type: "prose"
+    title: "Síntomas frecuentes"
+    markdown: |
+      - **Mucocutáneos:** angioedema, urticaria, prurito, rubor
+      - **Respiratorios:** disnea, sibilancias, estridor, hipoxia
+      - **GI:** náuseas/vómitos/diarrea/cólicos abdominales
+      - **Disfunción de órgano diana:** síncope, hipotonía
+  - type: "prose"
+    title: "Criterios diagnósticos — cualquiera de los 3 → adrenalina"
+    markdown: |
+      - **Criterio 1:** Signos agudos en piel/mucosas + 1 de los siguientes: compromiso respiratorio, hipotensión, O signos de disfunción de órgano diana
+      - **Criterio 2:** Inicio rápido, tras una probable exposición a un antígeno, de 2 de los siguientes: signos mucocutáneos, síntomas respiratorios, hipotensión, O síntomas GI
+      - **Criterio 3:** Hipotensión tras la exposición a un alérgeno conocido
+        - Adultos: PAS <90
+        - Niños de 11–17 años: PAS <90
+        - Niños de 1–10 años: PAS <(70 + [edad x 2])
+        - Niños de 1 mes a 1 año: PAS <70
+        - Neonato a término: PAS <60
+  - type: "prose"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    title: "Adrenalina 1 mg/mL (1:1,000)"
+    markdown: |
+      - 0.01mL/kg — máx. 0.3mL (niño), hasta 0.5mL (adolescente / adulto)
+      - IM en la cara anterolateral del muslo
+      - Repita c/5–15 minutos si no mejora
+      - 🛑 **Use la de 1 mg/mL (1:1,000) SOLO por vía IM. NO la administre IV** — es **10× la concentración IV** y puede causar una arritmia mortal. Para uso IV (solo en paro cardíaco), diluya a **0.1 mg/mL (1:10,000)**
+  - type: "prose"
+    title: "Manejo inicial"
+    markdown: |
+      - Monitorice, apoye el ABC
+      - Tome los signos vitales (PA, FC, FR, SpO2, temperatura, peso)
+      - Evalúe el Glasgow y el estado de hidratación
+      - Coloque 2 vías IV; inicie oxígeno si la SpO2 <90%
+      - Tome hemograma, malaria y glucemia
+  - type: "flowchart"
+    variant: "algorithm"
+    stages:
+    - decision: "¿Sibilancias y/o falta de aire?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Trate como crisis asmática"
+        continue: true
+      - label: "No"
+        continue: true
+    - decision: "¿Hipotensión?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Líquidos IV — SSN o RL"
+          bullets:
+          - "Niños: 30mL/kg en la primera hora"
+          - "Adultos: 1–2L, 5–10mL/kg en los primeros 5 min"
+          - "Puede intentar el decúbito o vasopresores según necesidad"
+          severity: "priority"
+        continue: true
+      - label: "No"
+        continue: true
+    terminal:
+      title: "Tratamiento complementario"
+      bullets:
+      - "Estos NO tratan la vía aérea, la respiración ni la circulación. Nunca deje que retrasen o sustituyan a la adrenalina"
+      - "Bloqueador de receptores H1: difenhidramina 1mg/kg IV o VO, dosis máx. 50mg"
+      - "Corticoides: hidrocortisona 2–4mg/kg IM/IV lenta (máx. 100mg en un niño, 200mg en adulto). Un complemento de beneficio no demostrado — no trata la vía aérea, la respiración ni la circulación y nunca debe retrasar la adrenalina"
+  - type: "prose"
+    title: "Observación antes del alta"
+    markdown: |
+      - **Observe al menos 6 horas** después de que se resuelvan todos los síntomas — en todo paciente que haya necesitado adrenalina
+      - **Déjelo toda la noche (12 horas como mínimo, ingrese) si hay cualquiera de:** necesitó más de una dosis de adrenalina · cualquier hipotensión o colapso · estridor, sibilancias u otro problema respiratorio grave · asma grave conocida · reacción bifásica previa · llega de noche · vive lejos o le es difícil volver · no hay un adulto en casa que lo vigile
+      - **Ingrese a todo niño menor de 16 años.** No dé el alta el mismo día a un niño tras una anafilaxia verdadera
+      - Antes del alta, siente o ponga de pie al paciente y compruebe si se marea
+      - **Advierta a todo paciente y cuidador que los síntomas pueden volver** horas después de calmarse — una segunda reacción (bifásica) ocurre en aproximadamente el 5–20% de los casos, por lo general en 4–12 horas. Dígales que regresen de inmediato

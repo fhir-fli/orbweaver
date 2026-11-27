@@ -1,0 +1,157 @@
+# translated-from-sha256: 33f78ed98de74de5d025e0631a76c5f51c2eebdbaa8a97d36691e7e2f5ebc3ea
+topic:
+  id: "calc-ciwa-ar"
+  title: "CIWA-Ar"
+  list_subtitle: "gravedad de la abstinencia alcohólica"
+  last_reviewed: "Evidence review 2026-07-19 · Sullivan 1989 · ASAM 2020"
+  tags: ["ciwa", "ciwa-ar", "alcohol", "abstinencia", "delirium tremens", "benzodiazepina", "desintoxicación"]
+  aliases:
+  - "CIWA-Ar"
+  - "CIWA"
+  - "Abstinencia alcohólica"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Gravedad de la abstinencia alcohólica para el tratamiento guiado por síntomas. Puntúe cada
+      uno de los diez ítems; un total mayor indica una abstinencia más grave
+      y riesgo de convulsiones / delirium tremens.
+  - type: "score"
+    title: "CIWA-Ar"
+    source: "Sullivan et al., Br J Addiction 1989"
+    items:
+    - key: "nausea"
+      label: "Náuseas / vómitos"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ninguno"}
+      - {value: "1", points: 1, label: "Náuseas leves, sin vómitos"}
+      - {value: "2", points: 2}
+      - {value: "3", points: 3}
+      - {value: "4", points: 4, label: "Náuseas intermitentes, arcadas"}
+      - {value: "5", points: 5}
+      - {value: "6", points: 6}
+      - {value: "7", points: 7, label: "Náuseas constantes, arcadas y vómitos frecuentes"}
+    - key: "tremor"
+      label: "Temblor (brazos extendidos)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Sin temblor"}
+      - {value: "1", points: 1, label: "No visible, se palpa punta de dedo con punta de dedo"}
+      - {value: "2", points: 2}
+      - {value: "3", points: 3}
+      - {value: "4", points: 4, label: "Moderado, con los brazos extendidos"}
+      - {value: "5", points: 5}
+      - {value: "6", points: 6}
+      - {value: "7", points: 7, label: "Grave, incluso sin extender los brazos"}
+    - key: "sweats"
+      label: "Sudoración paroxística"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Sin sudor visible"}
+      - {value: "1", points: 1, label: "Apenas perceptible, palmas húmedas"}
+      - {value: "2", points: 2}
+      - {value: "3", points: 3}
+      - {value: "4", points: 4, label: "Gotas de sudor en la frente"}
+      - {value: "5", points: 5}
+      - {value: "6", points: 6}
+      - {value: "7", points: 7, label: "Sudoración profusa"}
+    - key: "anxiety"
+      label: "Ansiedad"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Sin ansiedad, tranquilo"}
+      - {value: "1", points: 1, label: "Levemente ansioso"}
+      - {value: "2", points: 2}
+      - {value: "3", points: 3}
+      - {value: "4", points: 4, label: "Moderadamente ansioso / en guardia"}
+      - {value: "5", points: 5}
+      - {value: "6", points: 6}
+      - {value: "7", points: 7, label: "Pánico agudo / delirio grave"}
+    - key: "agitation"
+      label: "Agitación"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Actividad normal"}
+      - {value: "1", points: 1, label: "Algo mayor de lo normal"}
+      - {value: "2", points: 2}
+      - {value: "3", points: 3}
+      - {value: "4", points: 4, label: "Moderadamente inquieto / intranquilo"}
+      - {value: "5", points: 5}
+      - {value: "6", points: 6}
+      - {value: "7", points: 7, label: "Camina de un lado a otro / se agita"}
+    - key: "tactile"
+      label: "Alteraciones táctiles"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ninguna"}
+      - {value: "1", points: 1, label: "Prurito / hormigueo muy leve"}
+      - {value: "2", points: 2, label: "Leve"}
+      - {value: "3", points: 3, label: "Moderada"}
+      - {value: "4", points: 4, label: "Alucinaciones moderadamente graves"}
+      - {value: "5", points: 5, label: "Alucinaciones graves"}
+      - {value: "6", points: 6, label: "Extremadamente grave"}
+      - {value: "7", points: 7, label: "Alucinaciones continuas"}
+    - key: "auditory"
+      label: "Alteraciones auditivas"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ausentes"}
+      - {value: "1", points: 1, label: "Sonidos muy levemente ásperos / capaces de asustar"}
+      - {value: "2", points: 2, label: "Leve"}
+      - {value: "3", points: 3, label: "Moderada"}
+      - {value: "4", points: 4, label: "Alucinaciones moderadamente graves"}
+      - {value: "5", points: 5, label: "Alucinaciones graves"}
+      - {value: "6", points: 6, label: "Extremadamente grave"}
+      - {value: "7", points: 7, label: "Alucinaciones continuas"}
+    - key: "visual"
+      label: "Alteraciones visuales"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ausentes"}
+      - {value: "1", points: 1, label: "Sensibilidad muy leve"}
+      - {value: "2", points: 2, label: "Leve"}
+      - {value: "3", points: 3, label: "Moderada"}
+      - {value: "4", points: 4, label: "Alucinaciones moderadamente graves"}
+      - {value: "5", points: 5, label: "Alucinaciones graves"}
+      - {value: "6", points: 6, label: "Extremadamente grave"}
+      - {value: "7", points: 7, label: "Alucinaciones continuas"}
+    - key: "headache"
+      label: "Cefalea / sensación de cabeza llena"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ausente"}
+      - {value: "1", points: 1, label: "Muy leve"}
+      - {value: "2", points: 2, label: "Leve"}
+      - {value: "3", points: 3, label: "Moderada"}
+      - {value: "4", points: 4, label: "Moderadamente grave"}
+      - {value: "5", points: 5, label: "Grave"}
+      - {value: "6", points: 6, label: "Muy grave"}
+      - {value: "7", points: 7, label: "Extremadamente grave"}
+    - key: "orientation"
+      label: "Orientación / obnubilación del sensorio"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Orientado, puede hacer sumas seriadas"}
+      - {value: "1", points: 1, label: "No puede hacer sumas seriadas / duda de la fecha"}
+      - {value: "2", points: 2, label: "Desorientado en la fecha por ≤ 2 días naturales"}
+      - {value: "3", points: 3, label: "Desorientado en la fecha por > 2 días"}
+      - {value: "4", points: 4, label: "Desorientado en lugar y/o persona"}
+    bands:
+    - {min: 0, max: 9, label: "Abstinencia mínima / ausente", severity: "none"}
+    - {min: 10, max: 19, label: "Abstinencia moderada", severity: "warn"}
+    - {min: 20, label: "Abstinencia grave — riesgo de convulsiones / delirium tremens", severity: "alert"}
+    notes:
+    - "Los protocolos guiados por síntomas suelen medicar con CIWA-Ar ≥ 8–10 y reevaluar."
+    caveats:
+    - "Válida SOLO en un paciente despierto, comunicativo y colaborador — no en pacientes de UCI / con delirio / no verbales, en quienes puede llevar a sobre- o infrasedación iatrogénica. Escale la abstinencia grave/refractaria (p. ej., fenobarbital, entorno monitorizado)."

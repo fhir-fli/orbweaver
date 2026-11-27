@@ -1,0 +1,46 @@
+# translated-from-sha256: 374541004947b60b69090c1b2071d43a86860b194073dbdad63d65384cf76a08
+topic:
+  id: "calc-adrogue-madias"
+  title: "Adrogué-Madias"
+  list_subtitle: "cambio de Na por solución infundida (hiponatremia)"
+  last_reviewed: "Evidence review 2026-07-19 · Adrogué & Madias 2000"
+  tags: ["adrogue-madias", "adrogue", "hiponatremia", "sodio", "solución salina hipertónica", "corrección", "electrolito"]
+  aliases:
+  - "Adrogue-Madias"
+  - "Corrección de sodio"
+  - "Corrección de hiponatremia"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Predice el cambio del sodio sérico con 1 L (o un volumen elegido) de una
+      solución IV — para planificar la corrección de la hiponatremia (o hipernatremia).
+  - type: "formula"
+    kind: "adrogue_madias"
+    title: "Adrogué-Madias"
+    source: "Adrogué & Madias, NEJM 2000; forma escalada por volumen Kidney360 2021"
+    inputs:
+    - {key: "sodium", label: "Na⁺ sérico actual", unit: "mEq/L", type: "number"}
+    - {key: "weight", label: "Peso", unit: "kg", type: "number"}
+    - key: "sex"
+      label: "Sexo"
+      type: "select"
+      default: "M"
+      options:
+      - {value: "M", label: "Hombre (ACT 0.6)"}
+      - {value: "F", label: "Mujer (ACT 0.5)"}
+    - key: "fluid"
+      label: "Solución infundida"
+      type: "select"
+      default: "saline3"
+      options:
+      - {value: "saline3", label: "Solución salina al 3% (Na 513)"}
+      - {value: "ns", label: "Solución salina al 0.9% (Na 154)"}
+      - {value: "lr", label: "Ringer lactato (Na 130)"}
+      - {value: "half_ns", label: "Solución salina al 0.45% (Na 77)"}
+      - {value: "d5w", label: "Dextrosa al 5% (Na 0)"}
+    - {key: "volume", label: "Volumen infundido", unit: "L", type: "number", optional: true, help: "por defecto 1 L"}
+    notes:
+    - "Agua corporal total = peso × 0.6 (hombre) / 0.5 (mujer)."
+    caveats:
+    - "Solo una estimación para planificar — no tiene en cuenta las pérdidas urinarias/insensibles en curso; controle el Na con frecuencia. Limite la corrección (≈ ≤ 8 mEq/L por 24 h en la hiponatremia crónica) para evitar la desmielinización osmótica."

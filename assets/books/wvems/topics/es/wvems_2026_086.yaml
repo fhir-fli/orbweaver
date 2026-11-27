@@ -1,0 +1,137 @@
+# translated-from-sha256: 7f40493994faee6f6148bd82d97bf6b5850a757f6b5d96db8bbb865e140d03c9
+topic:
+  id: "wvems-2026-086"
+  version: "v260101"
+  title: "PIC elevada"
+  list_subtitle: "2026-086 · TCE / herniación / salino hipertónico"
+  last_reviewed: "Oct 2025"
+  tags:
+  - "pic"
+  - "tce"
+  - "traumatismo craneal"
+  - "salino hipertónico"
+  - "keppra"
+  - "cuidados críticos"
+  aliases:
+  - "Traumatismo craneoencefálico"
+  - "Hemorragia"
+  - "Herniación"
+  category: "critical_care"
+  layout: "paged"
+  pages:
+  - page_number: 86
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Traumatismo craneoencefálico importante"
+        shape: "stadium"
+      decision:
+        text: "¿GCS?"
+        shape: "diamond"
+      branches:
+      - id: "high_gcs"
+        label: "8 o más"
+        criteria:
+        - "Cefalea, aturdido"
+        - "Despierto y confuso"
+        actions:
+        - text: "Trate como [traumatismo craneal](topic:wvems-2026-062)"
+          kind: "referral"
+      - id: "low_gcs"
+        label: "7 o menos"
+        criteria:
+        - "Una pupila dilatada"
+        - "Tríada de Cushing"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Salino al 3%"
+          kind: "medication_administration"
+        - provider_level: "P(CC)"
+          text: "Keppra"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[Traumatismo grave](topic:wvems-2026-056)"
+        - text: "[Alteración de la conciencia](topic:wvems-2026-036), [Convulsiones](topic:wvems-2026-042)"
+        - text: "[Intubación](topic:wvems-2026-078)"
+      critical_care_link:
+        text: "[Intubación](topic:wvems-2026-078)"
+      dose_table:
+      - drug: "[Salino al 3%](topic:wvems-2026-drug-reference#3-saline)"
+        dose: "250 mL"
+        route: "IV/IO"
+        frequency: "durante 10 min"
+        population: "adult"
+      - drug: "[Keppra](topic:wvems-2026-drug-reference#keppra)"
+        dose: "3,000 mg"
+        route: "IV/IO"
+        frequency: "durante 10 min"
+        population: "adult"
+  - page_number: 87
+    blocks:
+    - type: "prose"
+      title: "Requisitos previos obligatorios de PIC elevada"
+      highlight: true
+      markdown: |
+        - En los últimos 12 meses: aprobar una formación interna de cuidados críticos.
+        - Priorice el traslado urgente a un centro de trauma de nivel 1 o 2.
+    - type: "prose"
+      title: "Imperativos"
+      markdown: |
+        - Es crucial evitar la [hipoxia](topic:wvems-2026-006) y la [hipotensión](topic:wvems-2026-008). Trátelas de forma enérgica.
+          - Objetivo **PAS > 110 mmHg** y **SpO₂ 96–99%** y **EtCO₂ 35–45 mmHg**.
+        - Use la camilla para **incorporar al paciente a 30°** si es improbable una lesión de columna baja.
+        - Una pupila dilatada sugiere herniación. La dilatación bilateral es ominosa.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Tríada de Cushing"
+        callout: true
+        markdown: |
+          - Hipertensión
+          - Bradicardia
+          - Respiración irregular
+      - type: "table"
+        title: "Escala de coma de Glasgow"
+        columns: ["Ojos", "Verbal", "Motora", ""]
+        column_flex: [3, 3, 3, 1]
+        rows:
+        - cells: ["ninguna", "ninguna", "ninguna", "1"]
+        - cells: ["al dolor", "quejidos", "extensión", "2"]
+        - cells: ["a la voz", "palabras", "flexión", "3"]
+        - cells: ["normal", "confusa", "retirada", "4"]
+        - cells: ["", "normal", "localiza", "5"]
+        - cells: ["", "", "normal", "6"]
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Salino al 3%](topic:wvems-2026-drug-reference#3-saline)** (hipertónico): **informe a urgencias** tras usarlo.
+        - **[Keppra®](topic:wvems-2026-drug-reference#keppra)** (levetiracetam): puede darse incluso antes de cualquier [convulsión](topic:wvems-2026-042).
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Las [convulsiones](topic:wvems-2026-042), el [dolor](topic:wvems-2026-020), los [vómitos](topic:wvems-2026-022), la [agitación](topic:wvems-2026-046) y la [fiebre](topic:wvems-2026-016) pueden aumentar la PIC.
+          - Considere el tratamiento sintomático pero **no retrase el traslado**.
+        - Los corticoides, el **TXA** y/o la hiperventilación **no están indicados**.
+        - Mayor riesgo de hemorragia intracraneal si hay cualquier [anticoagulación](topic:wvems-2026-076).
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+        - Procure mantener la PAS en el **extremo superior** del rango para la edad (también en la [referencia pediátrica](topic:wvems-2026-144)).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Head Injury — https://emedicine.medscape.com/article/251834 [Ver: 5/22]
+        - ACS TBI Guidelines — https://www.facs.org/search?searchTerm=TBI+Guideline [Ver: 2020]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 33, 34
+
+        NEMSIS: 9914101, 9914105

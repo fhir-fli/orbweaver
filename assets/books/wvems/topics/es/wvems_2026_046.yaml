@@ -1,0 +1,129 @@
+# translated-from-sha256: d2c3a02fb34f574948e10c0a651f12cbb1119a81515fcaa369d90c071e76fd07
+topic:
+  id: "wvems-2026-046"
+  version: "v260101"
+  title: "Conductual"
+  list_subtitle: "2026-046 · Versed / Haldol"
+  last_reviewed: "Oct 2025"
+  tags: ["conductual", "psiquiátrico", "ansiedad", "agitación", "ideación suicida", "ideación homicida", "delirium", "versed", "haldol"]
+  aliases:
+  - "Psiquiátrico"
+  - "Ansiedad"
+  - "Agitación"
+  - "SI/HI"
+  - "Delirium"
+  - "Contención"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 46
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "safety"
+        text: "Garantice la SEGURIDAD del proveedor"
+      - type: "caution"
+        text: "[Precaución si el paciente rechaza](topic:wvems-2026-109#patient-refusals)"
+      entry:
+        text: "Psicosis franca, ansiedad o SI / HI"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "mild"
+        label: "Leve"
+        criteria:
+        - "Bastante tranquilo"
+        - "Bastante colaborador"
+        actions:
+        - text: "Posición de confort"
+          kind: "procedure"
+      - id: "moderate"
+        label: "Moderada"
+        criteria:
+        - "Agitación moderada"
+        - "Le escucha"
+        actions:
+        - provider_level: "I"
+          text: "Versed"
+          kind: "medication_administration"
+      - id: "severe"
+        label: "Grave"
+        criteria:
+        - "Delirante, irracional"
+        - "Peleando, agitado"
+        actions:
+        - text: "Llame a la policía"
+          kind: "communication"
+        - provider_level: "I"
+          text: "Versed"
+          kind: "medication_administration"
+        - provider_level: "I"
+          text: "Haldol"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Circulación (choque)](topic:wvems-2026-008)"
+        - text: "[Alteración de la conciencia](topic:wvems-2026-036)"
+      dose_table:
+      - drug: "[Versed](topic:wvems-2026-drug-reference#versed)"
+        dose: "2.5–5 mg"
+        route: "IV/IO, IM/IN"
+        frequency: "cada 2 min (máx. 10)"
+        population: "adult"
+      - drug: "[Haldol](topic:wvems-2026-drug-reference#haldol)"
+        dose: "5 mg"
+        route: "IM"
+        frequency: "x1"
+        population: "adult"
+  - page_number: 47
+    blocks:
+    - type: "prose"
+      title: "Imperativos conductuales"
+      highlight: true
+      markdown: |
+        - **No suponga** una psicosis. Evalúe y trate otras causas.
+        - Los pacientes conductuales pueden no tener [capacidad para rechazar](topic:wvems-2026-109#patient-refusals).
+          - Involucre a la policía y llame a **control médico** ante cualquier rechazo con SI / HI.
+        - El uso de cualquier contención conlleva un riesgo médico (y legal) importante.
+          - **Intente primero la desescalada**. La contención debe ser el **último recurso**.
+          - Úsela **solo para garantizar la seguridad** del paciente y de los proveedores.
+          - Úsela solo cuando el riesgo de daño sea mayor que el riesgo de la contención.
+          - Es **improbable** que los pacientes pediátricos, ancianos o frágiles necesiten contención.
+        - La contención física solo debe usarse junto **con la policía**.
+          - **Pida ayuda a la policía** si el paciente está físicamente agresivo.
+          - Tenga cuidado con cualquier amenaza física o verbal, agresión o agitación.
+          - Nunca use contenciones tipo hobble. Nunca contenga a un paciente en decúbito prono.
+        - **Tenga precaución con las agujas** — mayor riesgo de lesión del proveedor.
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Versed®](topic:wvems-2026-drug-reference#versed)** (midazolam): úselo con precaución en pediatría y ancianos.
+          - Empiece más bajo si es IV y/o el paciente es pequeño. Dosis total: **máx. 10 mg**.
+        - **[Haldol®](topic:wvems-2026-drug-reference#haldol)** (haloperidol): requiere traslado y monitorización **ALS**.
+          - Puede potenciar sacudidas musculares distónicas y espasmos (no convulsiones).
+          - Considere tratar con **[Benadryl](topic:wvems-2026-drug-reference#benadryl)** si los espasmos son intensos.
+          - {I} **[Benadryl®](topic:wvems-2026-drug-reference#benadryl)** (difenhidramina): 25 mg VO, IV/IO, IM x1
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - SI / HI: ideación suicida u homicida (cualquier pensamiento o acto reciente)
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+          - {I} **[Versed](topic:wvems-2026-drug-reference#versed)**: la dosis pediátrica máxima es cada 2 min **x4 dosis**
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Suicide — https://emedicine.medscape.com/article/2013085 [Ver: 1/24]
+        - Medscape Aggression — https://emedicine.medscape.com/article/288689 [Ver: 11/22]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 27
+
+        NEMSIS: 9914053

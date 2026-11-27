@@ -1,0 +1,1687 @@
+# translated-from-sha256: d668c274aeab054f0ecf96cee64cdfc35372ce5c1e0984539b48f918aedfb813
+formulary:
+  id: pb_formulary
+  title: Medicamentos esenciales
+  subtitle: Vademécum de la ProtocolBook · págs. 146–158
+  bands:
+    label: ''
+    columns: []
+  bands_art:
+    label: ''
+    columns: []
+  facets:
+  - key: alpha
+    label: A–Z
+    mode: alpha
+    tap: detail
+  classes: []
+  indications: []
+  intro: |
+    **Grupos de edad**
+    - Recién nacidos: ≤ 28 días de vida
+    - Lactantes: ≤ 1 año (incluye a los recién nacidos salvo que se especifique)
+    - Niños: ≤ 12 años (incluye a lactantes y recién nacidos salvo que se especifique)
+    - Adultos: > 12 años
+
+    **Pautas de dosificación**
+    - "dosis dos veces al día" = esa dosis dada dos veces al día, sin dividir
+    - "dosis ÷ en dos tomas" = la dosis es el total del día, dividido en dos tomas iguales separadas
+
+    **Nota:** estas son las pautas más habituales para las afecciones frecuentes; el paciente o la afección concretos pueden requerir otra dosificación.
+  drugs:
+  - id: activated-charcoal
+    name: Carbón activado
+    class: antidote
+    dose: |
+      **Dosis única de 1 g/kg VO o por SNG, en el plazo de 1 hora desde la ingestión** (hasta 4 horas en una ingestión grande), para sustancias que se sabe que adsorbe.
+
+      **No** lo dé a un paciente que no esté completamente despierto, y **nunca intube solo para poder darlo**.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de intoxicaciones, pág. 28; no se introduce ninguna afirmación clínica nueva.
+  - id: acyclovir
+    name: Aciclovir
+    class: ''
+    page: 146
+    dose: |
+      **Niños:**
+      - VHS: 20 mg/kg/dosis VO tres veces al día
+      - VVZ: 20 mg/kg/dosis VO cuatro veces al día
+
+      **Adultos:**
+      - VHS: 400 mg VO tres veces al día
+      - VVZ (zóster): **800 mg VO cinco veces al día** — la escasa biodisponibilidad oral del aciclovir es la razón por la que no se dosifica como el valaciclovir
+  - id: adenosine
+    name: Adenosina
+    class: antiarrhythmic
+    dose: |
+      **Estable** con TSV regular de complejo estrecho — tras las maniobras vagales.
+
+      **Niños:** 0.1 mg/kg en bolo IV rápido (máx. 6 mg); si no responde, 0.2 mg/kg (máx. 12 mg)
+
+      **Adultos:** 6 mg en bolo IV rápido + lavado de 20 mL; si no responde, 12 mg; puede repetirse 12 mg. **Máx. 3 dosis**
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Póngala lo más rápido posible en una vena proximal con lavado inmediato; avise al
+      paciente de la opresión torácica y el rubor transitorios.
+      🛑 **En un paciente INESTABLE, cardioversión sincronizada — no adenosina.**
+      Precaución en el asma (broncoespasmo) y en el WPW conocido con un ritmo irregular de complejo ancho.
+  - id: albendazole
+    name: Albendazol
+    class: ''
+    page: 146
+    dose: |
+      - Edad < 2 años: 200 mg VO × 1 dosis
+      - Edad ≥ 2 años: 400 mg VO × 1 dosis
+  - id: alteplase
+    name: Alteplasa (rt-PA)
+    class: thrombolytic
+    dose: |
+      **TEP de alto riesgo (masivo) — adultos:** **100 mg IV en 2 horas**
+      - Periparada / parada cardiaca: **0.6 mg/kg en ~15 min (máx. 50 mg)**
+      - Una pauta de 50 mg tiene una eficacia similar con menos hemorragia (la evidencia de equivalencia plena es limitada)
+
+      **Ictus isquémico — adultos:** **0.9 mg/kg, máx. 90 mg** (10% en bolo, el resto en 60 min), en las primeras 4.5 horas.
+
+      **IAMCEST:** los fibrinolíticos del IAMCEST de este libro son la **tenecteplasa** y la **estreptoquinasa** — vea sus entradas para las bandas de peso. La pauta acelerada de alteplasa en el IAMCEST no está impresa en este libro, así que no la reconstruya a partir de las dosis del TEP o del ictus.
+
+      ⚠️ **Las tres pautas equivalen a riesgos de fármacos distintos.** Dar la dosis coronaria en un ictus aumenta mucho la transformación hemorrágica. Nunca traslade la pauta de una indicación a otra.
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Las mismas contraindicaciones absolutas que los demás fibrinolíticos. **La heparina no fraccionada puede
+      mantenerse durante la infusión de alteplasa** (a diferencia de la estreptoquinasa).
+      A menudo no está disponible o no es asequible en el nivel de distrito — **la estreptoquinasa o la
+      tenecteplasa son los sustitutos realistas.**
+  - id: aminophylline
+    name: Aminofilina
+    class: ''
+    page: 146
+    dose: |
+      **Lactantes** (solo < 32 semanas o 1.5 kg con apnea del prematuro):
+      - Carga: 6 mg/kg IV/VO en 1 hora
+      - Dosis de mantenimiento (IV u oral):
+        - Edad ≤ 6 días: 2.5 mg/kg cada 12 horas
+        - Edad 7–28 días: 4 mg/kg cada 12 horas
+    notes: |
+      **No es compatible con el fenobarbital.**
+
+      Infusión IV: pásela en 20–30 minutos. Preparación oral: mezcle 10 mL de aminofilina (vial de 250 mg) con 40 mL de agua estéril = 5 mg/1 mL.
+  - id: amlodipine
+    name: Amlodipino
+    class: ''
+    page: 146
+    dose: |
+      - Niños: 0.05 mg/kg/dosis una vez al día
+      - Adultos: 5–10 mg/dosis VO al día
+    notes: |
+      Dosis máx. 5 mg/dosis, 10 mg/24 horas.
+  - id: amoxicillin-clavulanate
+    name: Amoxicilina / Amoxiclav (amoxicilina–ácido clavulánico)
+    class: ''
+    page: 146
+    dose: |
+      **Niños:**
+      - 25 mg/kg/dosis dos veces al día en las infecciones simples
+      - 40–45 mg/kg/dosis dos veces al día en la neumonía / otitis media
+
+      **Adultos:** 875 mg VO dos veces al día
+  - id: amphotericin
+    name: Anfotericina
+    class: ''
+    page: 147
+    dose: |
+      **Niños / adultos:**
+      - **Meningitis criptocócica, de elección: anfotericina B liposomal 10 mg/kg IV en dosis ÚNICA**, con flucitosina 100 mg/kg/día + fluconazol 1200 mg/día × 14 días
+      - Anfotericina B liposomal: 4 mg/kg/día IV (otras indicaciones)
+      - Anfotericina B desoxicolato: 1 mg/kg/día IV
+    notes: |
+      Se usa con flucitosina.
+  - id: ampicillin
+    name: Ampicilina
+    class: ''
+    page: 147
+    dose: |
+      **Recién nacido:** 50 mg/kg/dosis IV o IM
+      - < 7 días: cada 12 horas
+      - 8–28 días: cada 8 horas
+
+      **Lactantes / niños:** 50 mg/kg/dosis (máx. 500 mg) cada 6 horas IV/IM
+
+      **Adultos:** 2 g cada 6 horas IV/IM
+    notes: |
+      **NO LA MEZCLE CON GENTAMICINA.** Lave la vía o la bureta si se da al mismo tiempo que la gentamicina.
+
+      - Bolo IV: en 3–5 min
+      - Infusión IV: en 15–30 min
+  - id: apixaban
+    name: Apixabán
+    class: anticoagulant
+    dose: |
+      **Tratamiento de la ETV — adultos:** 10 mg VO dos veces al día × 7 días, y luego **5 mg VO dos veces al día**
+      - Profilaxis prolongada tras ≥ 6 meses, si se continúa: 2.5 mg dos veces al día
+      - **No requiere inicio parenteral**
+
+      **Niños:** solo bajo indicación del especialista
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Duración ≥ 3 meses. ACOD de elección cuando preocupa el riesgo de hemorragia (la menor hemorragia
+      digestiva de los ACOD). Evítelo en el embarazo y en la insuficiencia hepática grave.
+      Disponibilidad variable en el nivel de distrito.
+  - id: artemether
+    name: Arteméter
+    class: antimalarial
+    dose: |
+      **Malaria grave, 2.ª línea — solo si no hay artesunato.**
+
+      - **3.2 mg/kg IM** al ingreso
+      - luego **1.6 mg/kg IM al día** hasta que pueda tomar por vía oral → pase a un ciclo oral completo de TCA
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de malaria grave, pág. 23; no se introduce ninguna afirmación clínica nueva.
+  - id: artesunate
+    name: Artesunato
+    class: ''
+    page: 147
+    dose: |
+      - < 5 kg: trate como si pesara 5 kg
+      - < 20 kg: 3 mg/kg IV/IM a las 0, 12 y 24 horas
+      - > 20 kg: 2.4 mg/kg IV/IM a las 0, 12 y 24 horas
+  - id: aspirin
+    name: Ácido acetilsalicílico
+    class: antiplatelet
+    dose: |
+      - **SCA: 300–325 mg VO × 1 dosis**, masticado, lo antes posible
+      - **Ictus isquémico: 300 mg VO de inmediato**, y luego **75–100 mg al día**
+      - **Artritis de la fiebre reumática aguda: 20–25 mg/kg/dosis VO cada 6 h**
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de SCA, ictus y fiebre reumática; no se introduce ninguna afirmación clínica nueva.
+  - id: atropine
+    name: Atropina
+    class: antidote
+    dose: |
+      **Intoxicación por organofosforados / carbamatos — ajuste hasta la atropinización.**
+
+      - **Niños 0.02 mg/kg IV · Adultos 2 mg IV**, y luego **DUPLIQUE la dosis previa cada 5 min** hasta alcanzar los objetivos
+      - **Objetivos:** tórax sin secreciones, pulso > 80/min, PAS > 80 mmHg
+      - **Mantenimiento:** mezcle la dosis total de bolos en SSN o D5% — < 25 kg 250 mL a 50 mL/hora; > 25 kg 500 mL a 100 mL/hora; ajuste cada hora
+
+      **Mordedura de serpiente, antes de la neostigmina:** adultos 0.6 mg IV lenta; niños 50 mcg/kg IV lenta
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de organofosforados y mordedura de serpiente; no se introduce ninguna afirmación clínica nueva.
+  - id: azithromycin
+    name: Azitromicina
+    class: ''
+    page: 147
+    dose: |
+      - Lactantes / niños: 10 mg/kg VO × 1 día, y luego 5 mg/kg VO × 4 días
+      - Adultos: 500 mg VO × 1 día, y luego 250 mg VO × 4 días
+    notes: |
+      MAC: la dosis del primer día se mantiene como dosis de mantenimiento.
+  - id: benzyl-penicillin
+    name: Bencilpenicilina (penicilina cristalina, PenG)
+    class: ''
+    page: 147
+    dose: |
+      - < 7 días: 50,000 UI/kg/dosis cada 12 horas IV/IM
+      - ≥ 7 días: 50,000 UI/kg/dosis cada 6 horas IV/IM
+
+      **Faringitis por estreptococo del grupo A:**
+      - ≤ 27 kg: 600,000 UI IM dosis única
+      - > 27 kg: 1.2 millones de UI IM dosis única
+  - id: calcium
+    name: Calcio
+    class: ''
+    page: 147
+    dose: |
+      **Niños:**
+      - Reposición: 10 mg/kg/día
+      - Hipocalcemia sintomática / tetania / convulsiones hipocalcémicas: **0.5–1 mL/kg** de solución al 10% (≈50–100 mg/kg) IV lenta en 5–10 min, con monitorización cardiaca
+      - **Recién nacido: 1–2 mL/kg** de solución al 10% (100–200 mg/kg) IV lenta — la dosis de reposición neonatal es mayor
+      - **La hiperpotasemia es otra indicación: 0.5 mL/kg** (adultos 10 mL) en 2–3 min. Estabiliza el miocardio y **no** baja el potasio
+      - No supere **100 mg/min** en un niño (200 mg/min en el adulto); vigile en el ECG la bradicardia y las arritmias
+
+      **Adultos:**
+      - Tetania / convulsiones: 2 g IV de gluconato cálcico
+      - Reposición: 10 mg/kg/día
+    notes: |
+      - 20 mg = 1 mEq
+      - 100 mg de carbonato cálcico = 40 mg de Ca elemental = 2 mEq de Ca
+      - **Gluconato cálcico al 10%:** dosis máx. 20 mL/kg, dosis máx. 2 g
+  - id: calcium-gluconate
+    name: Gluconato cálcico al 10%
+    class: electrolyte
+    dose: |
+      **Hiperpotasemia con cambios en el ECG.**
+
+      **Niños:** 0.5 mL/kg IV lenta en 2–3 min con monitorización cardiaca; repita cada 5 min hasta que mejore el ECG
+
+      **Adultos:** 10 mL al 10% IV en 2–3 min; repita cada 5 min hasta que mejore el ECG
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      🛑 **NO baja el potasio sérico** — estabiliza el miocardio durante
+      30–60 min. **Désela siempre junto con insulina/glucosa ± salbutamol.**
+      La extravasación causa necrosis tisular. Désela despacio y diluida en la intoxicación digitálica.
+      **No la mezcle con bicarbonato** (precipita).
+  - id: captopril
+    name: Captopril
+    class: ''
+    page: 147
+    dose: |
+      - Recién nacido: 0.01–0.05 mg/kg/dosis VO cada 8–12 horas
+      - Lactantes < 6 meses: 0.01–0.5 mg/kg/dosis VO dos o tres veces al día
+      - Niños: 0.3–0.5 mg/kg/dosis VO dos o tres veces al día
+      - Adultos: 12.5–25 mg VO dos o tres veces al día; ajuste cada semana en 25 mg/dosis
+    notes: |
+      Dosis máx. 450 mg/24 horas.
+  - id: carbamazepine
+    name: Carbamazepina
+    class: ''
+    page: 148
+    dose: |
+      **< 12 años:**
+      - Inicial: 10–20 mg/kg/24 horas VO ÷ cada 12 horas
+      - Ajuste cada semana
+
+      **> 12 años:**
+      - Inicial: 200 mg VO dos veces al día
+      - Ajuste cada semana en 200 mg/24 horas
+    notes: |
+      Evite la retirada brusca y vigile de cerca los efectos adversos.
+
+      **Dosis máx.:**
+      - < 12 años: 1 g/día, 35 mg/kg/día, 100 mg/dosis dos veces al día
+      - 12–15 años: 1 g/24 horas
+      - > 15 años: 1.2 g/24 horas
+      - Adultos: 1.6–2.4 g/24 horas
+  - id: carvedilol
+    name: Carvedilol
+    class: ''
+    page: 148
+    dose: |
+      - Lactantes / niños: 0.025 mg/kg/dosis VO cada 12 horas
+      - Adultos: 3.125 mg VO cada 12 horas, máx. 25 mg VO cada 12 horas
+    notes: |
+      Ajuste cada 2 semanas.
+  - id: cefixime
+    name: Cefixima
+    class: antibiotic
+    dose: |
+      **Gonorrea — solo donde no hay ceftriaxona.**
+
+      **Adultos:** 800 mg VO dosis única (solo urogenital o rectal)
+
+      **Niños:** 8 mg/kg VO en **dosis única**; ≥ 45 kg use la dosis única de adulto de 800 mg
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      🛑 **Poco fiable en la gonorrea faríngea — solo la ceftriaxona cubre la faringe.**
+      Si se usa, programe una prueba de curación. Solo de segunda línea, por la disminución
+      de la sensibilidad a las cefalosporinas. Si no hay ceftriaxona ni cefixima:
+      gentamicina 240 mg IM + azitromicina 2 g VO.
+  - id: cefotaxime
+    name: Cefotaxima
+    class: ''
+    page: 148
+    dose: |
+      **Recién nacidos:**
+      - < 7 días: 50 mg/kg/dosis IV/IM cada 12 horas
+      - 8–28 días: 50 mg/kg/dosis IV/IM cada 8 horas
+
+      **Lactantes / niños:**
+      - 50 mg/kg/dosis cada 8 horas
+      - Meningitis: 50 mg/kg/dosis cada 6 horas
+      - Máx.: 2000 mg/dosis
+
+      **Adultos:**
+      - Meningitis / sepsis: 2 g IV cada 6 horas
+      - Otras: 1 g IV cada 12 horas
+    notes: |
+      Lave bien la vía o la bureta si se da al mismo tiempo que la gentamicina.
+
+      - Bolo IV: en 5 minutos
+      - Infusión IV: en 30 min
+  - id: ceftriaxone
+    name: Ceftriaxona
+    class: ''
+    page: 148
+    dose: |
+      **Lactantes:**
+      - Meningitis: 100 mg/kg IV una vez al día
+      - Sepsis / neumonía: 80 mg/kg IV una vez al día
+
+      **Niños:**
+      - 50 mg/kg/dosis IV/IM cada 24 horas
+      - Meningitis: 100 mg/kg/dosis cada 24 horas
+      - Máx.: 2 g/dosis
+
+      **Adultos:**
+      - Meningitis: 2 g IV cada 12 horas
+      - Otras: 2 g IV cada 24 horas
+    notes: |
+      Contraindicada en los recién nacidos con ictericia grave. No la mezcle con RL.
+
+      - Bolo IV: 10 minutos
+      - Infusión IV: pásela en 30–60 minutos
+  - id: ciprofloxacin
+    name: Ciprofloxacino
+    class: ''
+    page: 148
+    dose: |
+      **Niños:**
+      - 10–15 mg/kg/dosis VO dos veces al día
+      - Máx.: 1000 mg/dosis
+
+      **Adultos:**
+      - Infección leve / moderada: 500 mg VO dos veces al día
+      - Infección grave: 750 mg VO dos veces al día
+      - IVU (no complicada): 250 mg VO dos veces al día × 3 días
+  - id: clarithromycin
+    name: Claritromicina
+    class: ''
+    page: 149
+    dose: |
+      - Niños: 10 mg/kg/dosis dos veces al día
+      - Adultos: 500 mg VO dos veces al día
+  - id: clindamycin
+    name: Clindamicina
+    class: antibiotic
+    dose: |
+      - **Niños: 7 mg/kg/dosis VO cada 8 horas (máx. 300 mg)** × 10 días — faringitis estreptocócica en la alergia a la penicilina
+      - **Adultos: 600 mg IV cada 8 horas** — sepsis; también cubre anaerobios
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de faringitis y sepsis del adulto; no se introduce ninguna afirmación clínica nueva.
+  - id: clopidogrel
+    name: Clopidogrel
+    class: antiplatelet
+    dose: |
+      **SCA con fibrinólisis:**
+      - **Edad ≤ 75: carga de 300 mg VO, y luego 75 mg al día**
+      - **Edad > 75: SIN dosis de carga — 75 mg al día** (exceso de hemorragia intracraneal)
+
+      **SCA sin fibrinólisis:** carga de 300–600 mg, y luego 75 mg al día
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Habitualmente 12 meses de doble antiagregación. La regla de no cargar a partir de los 75 años es
+      **específica de los pacientes tratados con fibrinólisis**. Suspéndalo ~5 días antes de una cirugía mayor
+      o de una CABG. **Es el único inhibidor del P2Y₁₂ basado en la evidencia para combinar con un
+      fibrinolítico.**
+  - id: clotrimazole
+    name: Clotrimazol
+    class: ''
+    page: 149
+    dose: |
+      - Niños: pincelar en el muguet oral — aplicar dos o tres veces al día hasta que desaparezca
+      - Niños / adultos: aplicar en la zona infectada dos o tres veces al día hasta que desaparezca
+  - id: cloxacillin
+    name: Cloxacilina
+    class: ''
+    page: 149
+    dose: |
+      **Recién nacidos:** 25–50 mg/kg/dosis
+      - < 7 días: cada 12 horas
+      - 8–28 días: cada 8 horas
+
+      **Lactantes / niños:** 25–50 mg/kg/dosis IV/IM cada 6 horas
+
+      **Adultos:**
+      - 2 g IV/IM
+      - Infección leve / moderada: cada 6 horas
+      - Infección grave: cada 4 horas
+    notes: |
+      Lave bien la vía o la bureta si se da al mismo tiempo que la gentamicina.
+  - id: co-trimoxazole
+    name: Cotrimoxazol (trimetoprima–sulfametoxazol, TMP-SMX)
+    class: ''
+    page: 149
+    dose: |
+      **Niños:**
+      - Dosis: 4 mg/kg/dosis de TMP + 20 mg/kg/dosis de SMX/dosis dos veces al día
+      - En la neumonía intersticial (PCP) en niños con VIH: TMP 15–20 mg/kg/día + SMZ 75–100 mg/kg/día, en 3–4 dosis divididas, × 21 días (máx. TMP 960 mg/día). **No** 8 mg/kg/dosis tres veces al día — eso son 24 mg/kg/día y supera el techo
+
+      **Adultos:**
+      - TMP 160 mg / SMX 800 mg VO cada 12 horas
+      - Neumonía por PCP: TMP 15–20 mg/kg/día, SMX 75–100 mg/kg/día, divididos en 4 dosis iguales
+    notes: |
+      - Jarabe: 40 mg TMP / 200 mg SMZ por 5 mL
+      - Comprimido pediátrico: 20 mg TMP / 100 mg SMZ
+      - **Dosis máx.:** TMP 160 mg / SMX 800 mg VO cada 12 horas
+      - **Comprimidos:** concentración simple (SS) = TMP 80 mg / SMX 400 mg; doble concentración (DS) = TMP 160 mg / SMX 800 mg
+  - id: dapagliflozin
+    name: Dapagliflozina
+    class: cardiac
+    dose: |
+      **Insuficiencia cardiaca con fracción de eyección reducida — 10 mg VO una vez al día, donde la haya.**
+
+      Un cuarto pilar junto a un IECA, un betabloqueante y la espironolactona.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de insuficiencia cardiaca del adulto, págs. 94–95; no se introduce ninguna afirmación clínica nueva.
+  - id: dapsone
+    name: Dapsona
+    class: ''
+    page: 149
+    dose: |
+      Profilaxis con CD4 < 200:
+      - Niños: 2 mg/kg VO una vez al día
+      - Adultos: 100 mg VO una vez al día
+  - id: dexamethasone
+    name: Dexametasona
+    class: ''
+    page: 149
+    dose: |
+      **Niños:**
+      - Extubación / edema de la vía aérea superior: 0.25–0.5 mg/kg/dosis IV cada 6 horas (máx. 8 mg/dosis)
+      - Asma / crup: 0.6 mg/kg/dosis IV/IM/VO × 1 dosis
+
+      **Adultos:**
+      - Edema cerebral: 2 mg VO tres veces al día
+      - **Meningitis bacteriana: 10 mg IV cada 6 h × 4 días** — con la primera dosis de antibiótico o justo antes. **No es sistemática aquí:** sin beneficio en entornos de bajos ingresos y alta prevalencia de VIH; considérela solo si es VIH negativo y se presenta pronto
+  - id: dextrose-glucose
+    name: Dextrosa / glucosa
+    class: ''
+    page: 150
+    dose: |
+      - Recién nacidos / lactantes / niños: D10% 2 mL/kg (0.2 g/kg) en bolo IV (si no hay D10 de inmediato, use D5)
+      - Adultos: 25–50 mL de D50 en bolo IV
+    notes: |
+      **Cómo preparar D10:**
+      - 1 mL de D50% + 9 mL de D5%, O
+      - 2 mL de D50% + 8 mL de SSN
+  - id: diazepam
+    name: Diazepam
+    class: ''
+    page: 150
+    dose: |
+      **Supositorio rectal de diazepam de 2.5 mg:**
+      - < 10 kg: 1 supositorio
+      - 10–15 kg: 2 supositorios
+      - 15–20 kg: 3 supositorios
+      - 20–25 kg: 4 supositorios
+
+      **Diazepam IV:** 0.2 mg/kg lentamente en 1 minuto, máx. 10 mg. Puede darse una segunda dosis de 0.1 mg/kg. **Máximo dos dosis de benzodiacepina**, y luego un fármaco de segunda línea — una tercera añade depresión respiratoria sin mejorar el control de las crisis.
+
+      🛑 **La dosis IV NO es la dosis rectal.** El diazepam rectal es mayor (0.5 mg/kg a los 2–5 años, 0.3 mg/kg a los 6–11 años, 0.2 mg/kg a los ≥12 años, máx. 20 mg) porque la absorción rectal es incompleta.
+    notes: |
+      No lo dé a un recién nacido. No lo dé IM.
+  - id: digoxin
+    name: Digoxina
+    class: ''
+    page: 150
+    dose: |
+      **Edad 2–5 años:**
+      - Carga: 35 mcg/kg ÷ en tres tomas × 24 horas
+      - Mantenimiento: 5 mcg/kg/dosis dos veces al día
+
+      **Edad 5–10 años:**
+      - Carga: 25 mcg/kg ÷ en tres tomas × 24 horas
+      - Mantenimiento: 3 mcg/kg/dosis dos veces al día
+
+      **Edad 10–12 años:**
+      - Carga: 0.75–1.5 mg ÷ en tres tomas × 24 horas
+      - Mantenimiento: 30–125 mcg dos veces al día
+
+      **Adultos:**
+      - Digitalización rápida:
+        - IV/IM: 5 mcg/kg × 1 dosis, seguida de 2.5 mcg/kg cada 8 horas × 2 dosis
+        - VO: 7 mcg/kg × 1 dosis, seguida de 3 mcg/kg cada 8 horas × 2 dosis
+      - Mantenimiento:
+        - IV/IM: 2.4–3.6 mcg/kg/día
+        - VO: 3.4–5.1 mcg/kg/día
+    notes: |
+      Ajuste la dosis de mantenimiento cada 2 semanas.
+  - id: diphenhydramine
+    name: Difenhidramina
+    class: antihistamine
+    dose: |
+      **Solo como complemento en la anafilaxia — 1 mg/kg IV o VO, máx. 50 mg.**
+
+      🛑 **No** trata la vía aérea, la respiración ni la circulación. **Nunca deje que retrase ni sustituya a la epinefrina.**
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de anafilaxia, pág. 37; no se introduce ninguna afirmación clínica nueva.
+  - id: dobutamine
+    name: Dobutamina
+    class: vasoactive
+    dose: |
+      **Fallo de bomba con sobrecarga de volumen / choque cardiogénico.**
+
+      **Niños y adultos:** 2–20 mcg/kg/min IV, ajustada — a menudo combinada con
+      norepinefrina cuando el paciente está hipotenso
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Puede **empeorar** la hipotensión (vasodilatación β₂) y provocar taquiarritmias —
+      vigile el ritmo y la presión arterial. No como único fármaco en la hipotensión franca.
+      Disponibilidad variable en el nivel de distrito.
+  - id: dopamine
+    name: Dopamina
+    class: vasoactive
+    dose: |
+      🛑 **Solo como reserva — use primero norepinefrina.**
+
+      **Niños y adultos:** 5–20 mcg/kg/min IV
+
+      ⚠️ 2–5 mcg/kg/min es la antigua "dosis renal" y **no** es una dosis vasopresora — no
+      confíe en ella para la hipotensión. **Siempre por kilogramo.**
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Más arritmias y mayor mortalidad que la norepinefrina. Manténgala solo como
+      sustituto cuando no hay norepinefrina, y **cambie en cuanto esté
+      disponible**. Está ampliamente disponible, y por eso persiste.
+  - id: doxycycline
+    name: Doxiciclina
+    class: antibiotic
+    dose: |
+      **Clamidia — adultos:** 100 mg VO dos veces al día × 7 días (21 días en el LGV / la proctitis)
+
+      **Enfermedad inflamatoria pélvica — adultos:** 100 mg VO/IV dos veces al día × 14 días, con
+      ceftriaxona + metronidazol
+
+      **Niños ≥ 8 años o > 45 kg:** 100 mg VO dos veces al día. Por debajo de 8 años — prefiera la azitromicina
+      cuando exista una alternativa
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      🛑 **Contraindicada en el embarazo** — use azitromicina para la clamidia y una
+      pauta alternativa para la EIP. Tómela con agua, sentado, para evitar la esofagitis.
+      **De primera línea para la clamidia en pacientes no embarazadas.**
+  - id: empagliflozin
+    name: Empagliflozina
+    class: cardiac
+    dose: |
+      **Insuficiencia cardiaca con fracción de eyección reducida — 10 mg VO una vez al día, donde la haya.**
+
+      Un cuarto pilar junto a un IECA, un betabloqueante y la espironolactona.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de insuficiencia cardiaca del adulto, págs. 94–95; no se introduce ninguna afirmación clínica nueva.
+  - id: enoxaparin
+    name: Enoxaparina
+    class: ''
+    page: 150
+    dose: |
+      **Niños / adultos:**
+      - Tratamiento de la TVP / el TEP: 1 mg/kg SC cada 12 horas
+
+      **Adultos:**
+      - Profilaxis de la TVP: 40 mg SC una vez al día
+      - Tratamiento del síndrome coronario agudo: 1 mg/kg SC cada 12 horas (**menores de 75 años**)
+      - **SCA a una edad ≥ 75 años con fibrinólisis: SIN bolo IV, 0.75 mg/kg SC cada 12 horas (máx. 75 mg en las 2 primeras dosis)**
+    notes: |
+      No debe darse si el CrCl < 30. En el SCA: se da un bolo IV de 30 mg 15 minutos antes de iniciar la vía SC.
+  - id: epinephrine
+    name: Epinefrina (adrenalina)
+    class: ''
+    page: 150
+    dose: |
+      **Reanimación:**
+      - Niños: 0.1 mL/kg IV de 1:10,000
+      - Adultos: 1 mg o 10 mL de 1:10,000
+
+      **Crup viral:**
+      - Niños: 2 mL de 1:1000 nebulizados; puede repetirse si es eficaz
+    notes: |
+      Para preparar 1:10,000: mezcle 1 mL de epinefrina 1:1000 en 9 mL de SSN.
+  - id: erythromycin
+    name: Eritromicina (estolato)
+    class: ''
+    page: 151
+    dose: |
+      **Lactantes / niños:**
+      - 50 mg/kg/día VO ÷ cada 6–8 horas
+      - 20 mg/kg/día IV ÷ cada 6 horas
+
+      **Adultos:** 500 mg VO cada 6 horas
+  - id: ethambutol
+    name: Etambutol
+    class: ''
+    page: 151
+    dose: |
+      - Niños: 20 mg/kg/dosis VO una vez al día
+      - Adultos: 15 mg/kg/dosis VO una vez al día
+  - id: famotidine
+    name: Famotidina
+    class: gastrointestinal
+    dose: |
+      **20 mg IV cada 12 horas** — cuando no se dispone de un inhibidor de la bomba de protones. Un IBP es de primera línea en la hemorragia digestiva alta.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de hemorragia digestiva alta, pág. 104; no se introduce ninguna afirmación clínica nueva.
+  - id: flucloxacillin
+    name: Flucloxacilina
+    class: antibiotic
+    dose: |
+      **50 mg/kg IV cada 6 horas** — cobertura antiestafilocócica, p. ej., mastoiditis. Use cloxacilina **o** flucloxacilina, no ambas.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de mastoiditis, pág. 69; no se introduce ninguna afirmación clínica nueva.
+  - id: fluconazole
+    name: Fluconazol
+    class: ''
+    page: 151
+    dose: |
+      **Candidiasis orofaríngea:**
+      - Niños: 3–6 mg/kg/dosis al día × 7–14 días
+      - Adultos: 100 mg VO una vez al día × 7–14 días
+
+      **Candidiasis esofágica:**
+      - Niños: 6 mg/kg/dosis VO × 1, y luego 3–6 mg/kg/dosis VO al día × 14–21 días
+      - Adultos: 400 mg VO × 1, y luego 150–200 mg VO una vez al día × 14–21 días
+  - id: flucytosine
+    name: Flucitosina (5-FC)
+    class: antifungal
+    dose: |
+      **Inducción en la meningitis criptocócica**, con anfotericina B y fluconazol.
+
+      **Niños y adultos:** **25 mg/kg/dosis VO cuatro veces al día (100 mg/kg/día)**
+
+      Duración: **14 días** con la pauta de anfotericina B liposomal en dosis única de 10 mg/kg,
+      o **7 días** con la pauta de 1 semana de anfotericina B desoxicolato
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      **Mielosupresión dependiente de la dosis** — controle el hemograma; interrumpa o reduzca en la
+      neutropenia o la trombocitopenia. Eliminación renal — reduzca en la insuficiencia renal.
+      Históricamente escasa en el África subsahariana pero cada vez más disponible a través de
+      programas de acceso para la meningitis criptocócica — **debe adquirirse activamente**,
+      porque la inducción sin ella es inferior.
+  - id: folic-acid
+    name: Ácido fólico / folato
+    class: ''
+    page: 151
+    dose: |
+      **Mantenimiento en lactantes / niños:**
+      - Lactante: 0.1 mg VO/día
+      - < 4 años: 0.3 mg VO/día
+      - ≥ 4 años: 0.4 mg VO/día
+
+      **Adultos:**
+      - Carencia: 1 mg VO/día
+      - Mantenimiento: 0.4 mg VO/día
+
+      **Embarazadas:** 0.8 mg VO/día
+    notes: |
+      La anemia megaloblástica / macrocítica recibe siempre 1 mg VO/IM/IV al día, sea cual sea la edad.
+
+      **NUNCA MENOS DE 0.1 MG VO/DÍA EN EL EMBARAZO.**
+  - id: foscarnet
+    name: Foscarnet
+    class: ''
+    page: 151
+    dose: |
+      Todos: 90 mg/kg/dosis IV cada 12 horas
+  - id: furosemide
+    name: Furosemida / Lasix
+    class: ''
+    page: 151
+    dose: |
+      **Niños:** 1–2 mg/kg IV/VO cada 12 horas
+
+      **Adultos:**
+      - Exacerbación de la insuficiencia cardiaca: 40 mg IV/IM (o el doble de la dosis de mantenimiento) cada 2 horas
+      - Mantenimiento en la insuficiencia cardiaca: 20–40 mg VO una o dos veces al día
+      - Otras: 20–40 mg IV/IM/VO
+    notes: |
+      **No es compatible con la gentamicina.**
+
+      - Bolo IV: velocidad máx. 0.5 mg/kg/min
+      - Infusión IV: 10–15 min
+
+      Vea el protocolo de insuficiencia cardiaca para los detalles concretos.
+  - id: ganciclovir
+    name: Ganciclovir
+    class: ''
+    page: 151
+    dose: |
+      Todos: 5 mg/kg/dosis IV cada 12 horas
+  - id: gentamicin
+    name: Gentamicina
+    class: ''
+    page: 151
+    dose: |
+      **Recién nacidos** (si BPN < 2.5 kg y a término con asfixia perinatal):
+      - < 7 días: 3 mg/kg/día una vez al día
+      - 8–28 días: 5 mg/kg/día una vez al día
+
+      **Recién nacidos a término / niños / adultos:** 5–7.5 mg/kg/día una vez al día
+    notes: |
+      **No la mezcle con ampicilina.** Lave bien la vía o la bureta si se da al mismo tiempo que la ampicilina.
+
+      - Bolo IV: no
+      - Infusión IV: pásela en 30 minutos; lave bien la vía
+  - id: haloperidol
+    name: Haloperidol
+    class: psychiatric
+    dose: |
+      **Agitación aguda — 2.5–5 mg IV/IM**, solo o con midazolam 2.5–5 mg.
+
+      La olanzapina 10 mg IM, donde la haya, tiene menos efectos extrapiramidales.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de agitación, págs. 112–113; no se introduce ninguna afirmación clínica nueva.
+  - id: hctz
+    name: HCTZ (hidroclorotiazida)
+    class: ''
+    page: 152
+    dose: |
+      - Niños: 0.5–1 mg/kg/dosis una o dos veces al día
+      - Adultos: 12.5–50 mg una vez al día
+    notes: |
+      **Dosis máx.:**
+      - < 2 años: 37.5 mg una vez al día
+      - 2–12 años: 100 mg una vez al día
+      - > 12 años: 200 mg una vez al día
+  - id: heparin
+    name: Heparina (no fraccionada)
+    class: ''
+    page: 152
+    dose: |
+      **Niños:**
+      - Tratamiento de la TVP / el TEP: bolo IV de 75 unidades/kg; infusión IV de 20 unidades/kg/hora
+
+      **Adultos:**
+      - Profilaxis de la TVP: 5000 unidades SC cada 12 horas
+      - Tratamiento de la TVP / el TEP: bolo IV de 80 unidades/kg; infusión IV de 18 unidades/kg/hora
+      - Síndrome coronario agudo: bolo IV de 60 unidades/kg; infusión IV de 12 unidades/kg/hora
+    notes: |
+      El tratamiento se da como bolo IV seguido de una infusión IV continua.
+
+      - Bolo máximo en la TVP/el TEP: 5,000 unidades
+      - Bolo máximo en el SCA: 4,000 unidades
+      - Velocidad máxima de infusión: 1,000 unidades/hora
+  - id: hydrocortisone
+    name: Hidrocortisona
+    class: steroid
+    dose: |
+      - **Complemento en la anafilaxia: 2–4 mg/kg IM o IV lenta, máx. 100 mg en un niño (200 mg en el adulto).** Un complemento de beneficio no demostrado — nunca debe retrasar la epinefrina
+      - **Choque séptico pediátrico: bolo IV de 2 mg/kg, y luego 1 mg/kg IV cada 6 h.** **No** la use de forma sistemática
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de anafilaxia y sepsis pediátrica; no se introduce ninguna afirmación clínica nueva.
+  - id: hydroxyurea
+    name: Hidroxiurea
+    class: ''
+    page: 152
+    dose: |
+      Niño de 2–12 años: al inicio 20 mg/kg una vez al día, aumentando cada 12 semanas en pasos de 2.5–5 mg/kg al día según la respuesta; dosis habitual 20–30 mg/kg al día (máx. 35 mg/kg al día).
+    notes: |
+      Para usar en la drepanocitosis con ictus, ingreso por síndrome torácico agudo, > 3 ingresos/año por dolor, o necesidad de ≥ 2 transfusiones al año.
+  - id: hypertonic-saline
+    name: Solución salina hipertónica al 3%
+    class: fluid
+    dose: |
+      **Hiponatremia gravemente sintomática — bolo, no infusión lenta.**
+
+      - **Niños: 4 mL/kg (máx. 100 mL) · Adultos: 100 mL**, repita hasta que mejoren los síntomas
+      - Las fórmulas predictivas infraestiman sistemáticamente el ascenso y **nunca deben sustituir a la medición seriada del sodio**
+
+      También se usa en la hipertensión intracraneal como alternativa al manitol.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de sodio, pág. 140; no se introduce ninguna afirmación clínica nueva.
+  - id: ibuprofen
+    name: Ibuprofeno
+    class: ''
+    page: 152
+    dose: |
+      **Recién nacidos (cierre del DAP):**
+      - Dosis 1 a las 0 horas: 10 mg/kg VO
+      - Dosis 2 y 3: 5 mg/kg VO a las 24 y 48 horas
+
+      **Niños:** 10 mg/kg VO cada 6 horas
+
+      **Adultos:** 400–800 mg VO cada 6–8 horas
+    notes: |
+      **Máx.:** 800 mg/dosis, 2400 mg/día.
+
+      No lo dé en caso de enfermedad renal. Déselo con comida cuando sea posible.
+  - id: insulin-soluble
+    name: Insulina (soluble / regular)
+    class: endocrine
+    dose: |
+      **CAD — niños:** infusión IV de 0.05–0.1 unidad/kg/hora (**sin bolo en los niños**)
+      **CAD — adultos:** infusión IV de 0.1 unidad/kg/hora (un bolo de 0.1 unidad/kg es opcional)
+      - Cuando la glucosa esté en ~11–14 mmol/L, **reduzca a 0.02–0.05 unidad/kg/hora y añada dextrosa**; continúe hasta que se cierre el anión gap
+
+      **Hiperpotasemia — niños:** 0.05–0.1 unidad/kg IV con glucosa 0.5 g/kg
+      **Hiperpotasemia — adultos:** 10 unidades IV con 25 g de glucosa (50 mL al 50%)
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      🛑 **Hipoglucemia tardía** — mida la glucosa **al menos cada hora durante 6 horas** tras
+      una dosis para la hiperpotasemia.
+      En la CAD, **no detenga la infusión solo porque se haya corregido la hiperglucemia** — añada
+      dextrosa en su lugar — y **reponga primero el potasio si K⁺ < 3.3**.
+      Requiere cadena de frío.
+  - id: ipratropium
+    name: Ipratropio
+    class: respiratory
+    dose: |
+      **0.5 mg nebulizados con salbutamol, cada 20 min × 3 dosis**, u 8 pulsaciones con IDM y cámara espaciadora.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de EPOC y asma, pág. 127; no se introduce ninguna afirmación clínica nueva.
+  - id: iron
+    name: Hierro
+    class: ''
+    page: 152
+    dose: |
+      **Lactante prematuro:** 2–4 mg de Fe elemental/kg/día
+
+      **Ferropenia:**
+      - Niños: 3–6 mg de Fe elemental/kg/día
+      - Adultos: 60–120 mg de hierro elemental al día
+    notes: |
+      - Dosis máx.: 15 mg de Fe elemental/kg/día
+      - Jarabe Hemaforte: 5 mg de hierro elemental/mL
+      - **Prescriba por el hierro elemental, no por el peso de la sal.** Un comprimido de sulfato ferroso **seco (desecado) de 325 mg** contiene **65 mg** de hierro elemental (~30% de hierro). El **heptahidrato tiene solo ~20% de hierro**, así que un comprimido de 200 mg aporta unos **40 mg**, y uno de 300 mg unos 60 mg (OE 2026-08-30)
+  - id: isoniazid
+    name: Isoniazida
+    class: ''
+    page: 152
+    dose: |
+      - Niños: 10 mg/kg VO una vez al día
+      - Adultos: 5 mg/kg VO una vez al día
+  - id: itraconazole
+    name: Itraconazol
+    class: antifungal
+    dose: |
+      **Histoplasmosis diseminada.**
+
+      **Adultos:** 200 mg VO tres veces al día × 3 días (carga), y luego **200 mg VO dos veces al día**
+      **Niños:** 5 mg/kg/dosis VO tres veces al día × 3 días, y luego 5 mg/kg/dosis dos veces al día (máx. 400 mg/día)
+
+      Duración **≥ 12 meses** — suspenda solo con > 12 meses de tratamiento, ≥ 6 meses de TAR
+      con **CD4 ≥ 150**, cultivos fúngicos negativos, carga viral indetectable y
+      antígeno de *Histoplasma* por debajo del umbral
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      **Absorción errática** — dé las cápsulas con comida o con una bebida ácida; evite los
+      antiácidos y antisecretores. Mida el nivel cuando sea posible (**objetivo 1–2 µg/mL**).
+      Fuertes interacciones por CYP3A4 (efavirenz, rilpivirina, rifampicina) — 🛑 **la rifabutina
+      baja los niveles de itraconazol y no tiene papel en la histoplasmosis.**
+      **Inotrópico negativo — evítelo en la insuficiencia cardiaca.**
+  - id: labetalol
+    name: Labetalol
+    class: antihypertensive
+    dose: |
+      **Primera elección en la emergencia hipertensiva aquí — no necesita bomba de infusión.**
+
+      - **10–20 mg IV** en 1–2 min, y luego **20–80 mg cada 10 min** hasta alcanzar el objetivo, hasta un total de **300 mg**
+      - **Oral: 200 mg VO, y luego 200–400 mg cada 6–12 h si precisa**
+      - **Ictus agudo:** 10–20 mg IV en 1–2 min, puede repetirse una vez; baje la PA no más de un 15% en las primeras 24 horas
+      - **Disección aórtica:** dé el betabloqueante ANTES de cualquier vasodilatador
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de hipertensión e ictus; no se introduce ninguna afirmación clínica nueva.
+  - id: lactulose
+    name: Lactulosa
+    class: ''
+    page: 152
+    dose: |
+      - Lactantes (encefalopatía hepática): 2.5–10 mL ÷ en tres o cuatro tomas
+      - Niños: 1–3 mL/kg/día ÷ cada 8–12 horas
+      - Adultos: 30 mL VO cada 6 horas
+    notes: |
+      - Dosis máx. en niños: 60 mL/día
+      - Presentación: 10 g/15 mL
+      - Objetivo: al menos 3–4 deposiciones blandas al día
+  - id: leucovorin
+    name: Leucovorina
+    class: ''
+    page: 153
+    dose: |
+      - Niños: 5 mg VO una vez al día
+      - Adultos: 10–25 mg VO una vez al día
+  - id: lisinopril
+    name: Lisinopril
+    class: ''
+    page: 153
+    dose: |
+      - Lactantes / niños: 0.1 mg/kg VO una vez al día
+      - Adultos: 5 mg VO una vez al día
+    notes: |
+      **Dosis máx.:**
+      - Niños: 0.6 mg/kg/día o la dosis de adulto
+      - Adultos: 40 mg/día
+  - id: lorazepam
+    name: Lorazepam
+    class: ''
+    page: 153
+    dose: |
+      **Adultos / niños (> 12 años):**
+      - Ansiedad (aguda): 2 mg VO cada 8 horas
+      - Agitación: 0.5–2 mg IV cada 2–4 horas
+    notes: |
+      Úselo con precaución en los ancianos.
+  - id: losartan
+    name: Losartán
+    class: ''
+    page: 153
+    dose: |
+      **Lactantes / niños:**
+      - Inicial: 0.5 mg/kg/día
+      - Mantenimiento: hasta 1.4 mg/kg/día
+
+      **Adultos:** 25 mg VO al día
+    notes: |
+      - Máx. en lactantes / niños: inicial 12.5 mg/día, mantenimiento 150 mg/día
+      - Máx. en adultos: 150 mg/día
+  - id: magnesium-sulfate
+    name: Sulfato de magnesio
+    class: electrolyte
+    dose: |
+      **Hipomagnesemia sintomática — niños:** 25–50 mg/kg IV (máx. 2 g) en 15–60 min
+      **Hipomagnesemia sintomática — adultos:** 1–2 g IV en 15–60 min, y luego una infusión
+      continua más lenta
+
+      **Asma grave — niños:** 25–50 mg/kg IV (máx. 2 g) en 20 min
+      **Asma grave — adultos:** 1.2–2 g IV en 20 min, dosis única
+
+      **Eclampsia — adultos:** carga de 4–6 g IV en 15–20 min, y luego 1–2 g/hora; continúe
+      24 h tras la última convulsión o el parto
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      **Repita según el nivel, no según el reloj.** Antes de cada nueva dosis compruebe los **reflejos
+      osteotendinosos** (su pérdida = toxicidad), **la frecuencia respiratoria, la presión arterial, la diuresis
+      y la función renal**.
+      **Velocidad IV ≤ 150 mg/min salvo en las convulsiones eclámpticas.**
+      Máx. ~30–40 g/24 h con función renal normal; ~20 g/48 h en la insuficiencia renal.
+  - id: mannitol
+    name: Manitol
+    class: neurology
+    dose: |
+      **Hipertensión intracraneal — 0.5–1 g/kg IV.** La solución salina hipertónica es la alternativa.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de CAD, págs. 47 y 105; no se introduce ninguna afirmación clínica nueva.
+  - id: meropenem
+    name: Meropenem
+    class: antibiotic
+    dose: |
+      **La dosis depende del foco — la cifra genérica infradosifica el SNC.**\n\n- **Sepsis / intraabdominal: 1 g IV cada 8 horas**\n- **Meningitis u otra infección del SNC: adultos 2 g IV cada 8 horas (6 g/día); niños ≥ 3 meses 40 mg/kg IV cada 8 horas, máx. 2 g por dosis.** Infunda en 15–30 min\n- Piel y partes blandas: 500 mg IV cada 8 horas\n\nCubre grampositivos además de gramnegativos, pero **no el SARM**.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de sepsis del adulto, pág. 99; no se introduce ninguna afirmación clínica nueva.
+  - id: metformin
+    name: Metformina
+    class: endocrine
+    dose: |
+      **500 mg VO dos veces al día con las comidas**, cuando el paciente coma y la CAD se haya resuelto.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de CAD del adulto, pág. 105; no se introduce ninguna afirmación clínica nueva.
+  - id: metoprolol
+    name: Metoprolol
+    class: cardiac
+    dose: |
+      - **Tartrato de metoprolol 25 mg VO dos veces al día**
+      - **Succinato de metoprolol (LP) 25 mg VO al día**
+
+      Tras un SCA. No inicie un betabloqueante en el choque cardiogénico ni en la insuficiencia cardiaca aguda descompensada.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de tratamiento del SCA, págs. 123–124; no se introduce ninguna afirmación clínica nueva.
+  - id: metronidazole
+    name: Metronidazol
+    class: ''
+    page: 153
+    dose: |
+      **Recién nacidos:** 7.5 mg/kg/dosis IV
+      - Primera semana de vida:
+        - < 1.2 kg: cada 48 horas
+        - 1.2–2 kg: cada 24 horas
+        - > 2 kg: cada 12 horas
+      - Semanas 2–4:
+        - < 1.2 kg: cada 24 horas
+        - > 1.2 kg: cada 12 horas
+
+      **Infecciones leves:**
+      - Lactantes / niños: 7.5 mg/kg/dosis VO cada 8 horas
+      - Adultos: 500 mg VO cada 6 horas
+
+      **Infecciones moderadas–graves:**
+      - Lactantes / niños: 10 mg/kg/dosis IV cada 8 horas
+      - Adultos: 500 mg IV cada 6 horas
+    notes: |
+      **No es compatible con el fenobarbital ni con el Ringer lactato.** Adminístrelo por separado. Suspenda la perfusión IV principal.
+
+      - Bolo IV: no
+      - Infusión IV: pásela en 60 minutos en D10 o SSN
+  - id: midazolam
+    name: Midazolam
+    class: benzodiazepine
+    dose: |
+      - **Estado epiléptico, sin acceso IV: 10 mg IM** — tan eficaz como el lorazepam IV y más rápido de administrar
+      - **Bucal o intranasal: 0.3–0.5 mg/kg (máx. 10 mg)** — más eficaz que el diazepam rectal
+      - **Agitación aguda: 2.5–5 mg IV/IM**, solo o con haloperidol
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de convulsiones y agitación del adulto; no se introduce ninguna afirmación clínica nueva.
+  - id: morphine
+    name: Morfina
+    class: ''
+    page: 153
+    dose: |
+      **Recién nacido:** 0.05–0.2 mg/kg/dosis IM/SC/IV lenta cada 4 horas si precisa
+
+      **Niños:**
+      - 0.1–0.2 mg/kg/dosis IV cada 2–4 horas si precisa
+      - 0.2–0.5 mg/kg/dosis VO cada 4–6 horas si precisa
+
+      **Adultos:**
+      - 1–2 mg/dosis IV cada 2–4 horas si precisa
+      - 2–10 mg/dosis VO cada 2–4 horas si precisa
+    notes: |
+      Asegure una dosis suficiente para controlar el dolor — pero vigile con frecuencia (al menos cada 1 hora al principio) para evitar la depresión respiratoria.
+  - id: acetylcysteine
+    name: N-acetilcisteína (NAC)
+    class: antidote
+    dose: |
+      **Intoxicación por paracetamol — dos bolsas, todos los pesos hasta 5 kg. Total 300mg/kg en 20 horas.**
+
+      - **Niño ≤ 40kg:** 200mg/kg en 7mL/kg de diluyente (máx. 500mL) en 4 horas, y luego 100mg/kg en 14mL/kg (máx. 1L) en 16 horas
+      - **> 40kg:** 200mg/kg (máx. 22g) en 500mL en 4 horas, y luego 100mg/kg (máx. 11g) en 1L en 16 horas
+      - Diluyente D5W, ½SSN o agua estéril. Si el peso > 100kg, dosifique como 100kg
+      - **Menos de 5kg:** pida consejo toxicológico
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de paracetamol, págs. 32–33; no se introduce ninguna afirmación clínica nueva.
+  - id: naloxone
+    name: Naloxona
+    class: antidote
+    dose: |
+      **Sobredosis de opioides — ajuste según la respiración, no según el nivel de conciencia.**
+
+      - **Niños < 5 años o < 20 kg: 0.1 mg/kg IV · Niños > 5 años o > 20 kg: 2 mg IV**
+      - **Adultos: 0.4 mg IV, ajustando hasta 2 mg**
+      - **¿Sin vía IV?** La misma dosis IM (inicio ~5 min; no repita antes de cada 3 min; poco fiable en el choque)
+      - Dura ~1 hora — **puede necesitar repetirse 20–60 min después**
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de ingestión de benzodiacepinas y opioides, pág. 31; no se introduce ninguna afirmación clínica nueva.
+  - id: nicardipine
+    name: Nicardipino
+    class: antihypertensive
+    dose: |
+      - **IV, emergencia hipertensiva: 5 mg/hora al inicio**, aumente 2.5 mg/hora cada 5 min hasta un **máximo de 15 mg/hora**. Necesita bomba de infusión
+      - **Oral: 20–40 mg VO cada 8–12 h**
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de hipertensión, págs. 106–107; no se introduce ninguna afirmación clínica nueva.
+  - id: nifedipine
+    name: Nifedipino
+    class: ''
+    page: 154
+    dose: |
+      **Niños (> 1 año):**
+      - Inicial: 0.125 mg/kg dos veces al día
+      - Mantenimiento: hasta 3 mg/kg/día o 120 mg/día
+
+      **Adultos:**
+      - Inicial (LP): 30 mg VO una vez al día
+      - Mantenimiento (LP): hasta 120 mg/día
+      - Liberación inmediata (LI): 10–30 mg VO cada 8 horas
+    notes: |
+      En los niños use solo la liberación prolongada (LP). Idealmente los adultos solo usarían LP para la HTA. La liberación inmediata (LI) solo debería usarse realmente para la angina.
+  - id: nitazoxanide
+    name: Nitazoxanida
+    class: ''
+    page: 154
+    dose: |
+      - 1–3 años: 100 mg VO dos veces al día × 14 días
+      - 4–11 años: 200 mg VO dos veces al día × 14 días
+      - ≥ 12 años y adultos: 500–1000 mg VO dos veces al día × 14 días
+    notes: |
+      Désela con comida.
+  - id: nitrofurantoin
+    name: Nitrofurantoína
+    class: ''
+    page: 154
+    dose: |
+      - Niños (> 1 año): 1.5 mg/kg VO cada 6 horas (total 6 mg/kg/día)
+      - Adultos: 100 mg VO cada 6 horas
+    notes: |
+      El ciclo completo para la IVU en niños y adultos es de 7 días.
+  - id: nitroglycerine
+    name: Nitroglicerina
+    class: ''
+    page: 154
+    dose: |
+      Adultos: 0.4 mg SL cada 5 min × 3 dosis
+    notes: |
+      si precisa, por dolor anginoso.
+  - id: norepinephrine
+    name: Norepinefrina (noradrenalina)
+    class: vasoactive
+    dose: |
+      **Vasopresor de primera línea** en el choque séptico, el choque cardiogénico y la hipotensión en
+      la hiponatremia aguda.
+
+      **Niños:** 0.05–0.1 mcg/kg/min IV, ajustada (hasta ~1 mcg/kg/min)
+      **Adultos:** 0.05–0.5 mcg/kg/min IV, ajustada a una PAM ≥ 65 (hasta 1 mcg/kg/min)
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Se prefiere vía central; **puede pasarse por vía periférica a corto plazo** a través de una
+      cánula bien colocada, vigilando la extravasación, que causa necrosis tisular.
+      **Puede administrarse con un contador de gotas donde no hay bomba.**
+      Preferible a la dopamina — menos arritmias, menor mortalidad.
+  - id: norfloxacin
+    name: Norfloxacino
+    class: antibiotic
+    dose: |
+      **Profilaxis de la peritonitis bacteriana espontánea — 400 mg VO al día, indefinidamente.**
+
+      El cotrimoxazol 160/800 mg VO cinco días a la semana es la alternativa.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de insuficiencia hepática, pág. 108; no se introduce ninguna afirmación clínica nueva.
+  - id: nystatin
+    name: Nistatina
+    class: ''
+    page: 154
+    dose: |
+      - Lactantes prematuros: 0.5 mL a cada lado de la boca cada 6 horas
+      - Lactante a término: 1 mL a cada lado de la boca cada 6 horas
+      - Niños / adultos — candidiasis orofaríngea: 4–6 mL VO cada 6 horas
+    notes: |
+      - Suspensión VO = 100,000 unidades/mL
+      - Dos semanas si VIH positivo
+      - Enjuagar en la boca el mayor tiempo posible antes de tragar
+  - id: octreotide
+    name: Octreotida
+    class: gastrointestinal
+    dose: |
+      **Hemorragia por varices — el fármaco vasoactivo de elección. Iníciela en cuanto se sospechen varices, antes de la endoscopia.**
+
+      **Bolo IV de 50 mcg, y luego infusión de 25–50 mcg/hora durante 3–5 días.**\n\nCuando escasea la octreotida, una **infusión de 1 día (≤ 72 h) no es inferior** a 5 días tras una ligadura con bandas eficaz.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de hemorragia digestiva alta, pág. 104; no se introduce ninguna afirmación clínica nueva.
+  - id: olanzapine
+    name: Olanzapina
+    class: psychiatric
+    dose: |
+      **Agitación aguda — 10 mg IM**, donde la haya. Menos efectos extrapiramidales que el haloperidol.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de agitación, págs. 112–113; no se introduce ninguna afirmación clínica nueva.
+  - id: omeprazole
+    name: Omeprazol
+    class: ''
+    page: 154
+    dose: |
+      - Niños: 0.5–1 mg/kg/dosis VO una o dos veces al día
+      - Adultos: 20–40 mg VO una vez al día
+      - **Hemorragia digestiva alta: bolo IV de 80 mg, y luego 40 mg IV cada 8–12 h** (u 8 mg/hora en infusión si hay bomba), **durante al menos 72 horas**. Cualquier IBP disponible — rabeprazol, omeprazol, pantoprazol
+    notes: |
+      Puede reducir la concentración sérica de clopidogrel.
+  - id: packed-red-blood-cells
+    name: Concentrado de hematíes (CH)
+    class: blood product
+    dose: |
+      **10 mL/kg suben la hemoglobina de un niño alrededor de 1 g/dL** (10–15 mL/kg la suben 2–3 g/dL). Una unidad de adulto la sube alrededor de 1 g/dL.
+
+      Los volúmenes según la fiebre y la nutrición están en la página de transfusión — tome la primera línea que se aplique.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de medicamentos de reanimación y transfusión; no se introduce ninguna afirmación clínica nueva.
+  - id: paracetamol
+    name: Paracetamol / Panadol
+    class: ''
+    page: 154
+    dose: |
+      - Niños: 10–15 mg/kg VO cada 4–6 horas
+      - Adultos: 650 mg VO cada 4–6 horas
+    notes: |
+      Dosis máx.: 4 g/día. No se da en la insuficiencia hepática.
+  - id: paromomycin
+    name: Paromomicina
+    class: ''
+    page: 154
+    dose: |
+      ≥ 12 años y adultos: 500 mg VO cuatro veces al día × 14–21 días
+  - id: penicillin-v
+    name: Penicilina V (fenoximetilpenicilina)
+    class: antibiotic
+    dose: |
+      - **Faringitis estreptocócica: niños 250 mg VO dos veces al día × 10 días; adultos 500 mg VO dos veces al día × 10 días**
+      - **Erradicación del estreptococo: 250 mg VO tres veces al día**
+      - **Profilaxis secundaria de la fiebre reumática: 250 mg VO dos veces al día**
+
+      La ampicilina oral **no** es un sustituto — se absorbe mal y de forma errática.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de faringitis, drepanocitosis y fiebre reumática; no se introduce ninguna afirmación clínica nueva.
+  - id: pentamidine
+    name: Pentamidina
+    class: ''
+    page: 154
+    dose: |
+      Adultos / niños: 4 mg/kg IV una vez al día
+  - id: pethidine
+    name: Petidina (Demerol)
+    class: ''
+    page: 154
+    dose: |
+      - Niños: 0.5–1 mg/kg cada 4 horas
+      - Adultos: IM/VO/SC 50 mg cada 3 horas
+    notes: |
+      Casi siempre se prefiere la morfina si la hay (también en los problemas biliares).
+  - id: phenobarbital
+    name: Fenobarbitona / fenobarbital
+    class: ''
+    page: 154
+    dose: |
+      **Recién nacidos:**
+      - Carga: 20 mg/kg IV/IM
+      - Mantenimiento: 3–5 mg/kg IV/IM/VO una vez al día, a partir de 12–24 h después de la carga (OE 2026-08-30)
+
+      **Lactantes / niños / adultos — la misma dosis que en los recién nacidos:**
+      - Carga: **20 mg/kg IV/IM, a todas las edades. No hay techo en miligramos.** Pásela en 20 min — **no más rápido de 1 mg/kg/min en un niño, ~50–75 mg/min en un adulto**
+      - Si sigue convulsionando a los 15 min: otros **10–20 mg/kg**, hasta un **máximo acumulado de 40 mg/kg**
+      - Mantenimiento: 3–5 mg/kg IV/IM/VO una vez al día, empezando 12–24 h después de la carga
+
+      🛑 **Pase de la primera carga solo donde haya soporte de la vía aérea y vigilancia respiratoria.** La segunda carga conlleva un riesgo alto de depresión respiratoria e hipotensión. Tenga a mano soporte respiratorio y de la presión arterial antes de darla.
+
+      El fenobarbital va **después** del fracaso de una benzodiacepina, no antes.
+    notes: |
+      **No es compatible con la aminofilina ni el metronidazol.**
+
+      Si es IV, pásela en 20 minutos (no más rápido de 1 mg/kg/min).
+  - id: phenylephrine
+    name: Fenilefrina
+    class: vasopressor
+    dose: |
+      **Priapismo, si la aspiración sola fracasa — 100–500 mcg intracavernosos**, repetidos cada 5 min hasta un **máximo de 1 mg en total**.
+
+      Diluya 1 mg en 19 mL de SSN para obtener 50 mcg/mL.
+
+      **Combínela con la aspiración de los cuerpos cavernosos** — la aspiración más fenilefrina logra la detumescencia en alrededor del 93%, muy por encima de cualquiera de las dos por separado.
+
+      **Vigile la presión arterial y el pulso** durante las inyecciones: se esperan hipertensión y bradicardia reflejas, y el infarto de miocardio es una complicación rara. Suspéndala si la PA sistólica supera 180 mmHg.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de drepanocitosis, pág. 59; no se introduce ninguna afirmación clínica nueva.
+  - id: phenytoin
+    name: Fenitoína
+    class: ''
+    page: 155
+    dose: |
+      **Niños:**
+      - Carga: 15–20 mg/kg IV
+      - Mantenimiento: 2.5–4 mg/kg IV/VO cada 12 horas
+
+      **Adultos:**
+      - Carga: 20 mg/kg IV
+      - Mantenimiento: 100 mg IV/VO cada 6–8 horas
+    notes: |
+      **No es compatible con la aminofilina.** Désela solo en SSN. Lave con SSN después de darla.
+
+      Bolo IV: velocidad máx. 50 mg/min.
+  - id: potassium
+    name: Potasio
+    class: ''
+    page: 155
+    dose: |
+      **Niños:** 1 mEq/kg/dosis
+      - **Velocidad IV: 0.2 mEq/kg/hora sin monitorización cardiaca continua.** 0.5–1 mEq/kg/hora es una velocidad de UCI que necesita ECG continuo; 1 mEq/kg/hora es el techo absoluto
+      - **Concentración: periférica máx. 40 mEq/L; central hasta 400 mEq/L** — por encima de 40 debe ser central, y solo en la hipopotasemia urgente con riesgo vital bajo cuidados de nivel UCI
+      - **Nunca la dé en bolo**
+
+      **Adultos:**
+      - Dosis según el nivel de hipopotasemia
+      - 10 mEq suben el potasio aproximadamente 0.1
+      - Se prefiere VO a IV
+    notes: |
+      - 1 mEq = 75 mg (KCl)
+      - Frecuencia según el grado de déficit
+  - id: potassium-chloride
+    name: Cloruro potásico (KCl)
+    class: electrolyte
+    dose: |
+      - **CAD, K⁺ 3.3–5.3 con diuresis establecida: 10 mEq por bolsa de 500 mL (= 20 mmol/L).** El caso habitual
+      - **Desnutrición aguda grave: añada 20 mmol/L** al líquido de mantenimiento
+
+      🛑 Techo periférico 40 mmol/L. No supere 10 mmol/hora sin ECG continuo.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de CAD y DAG; no se introduce ninguna afirmación clínica nueva.
+  - id: prednisone
+    name: Prednisona / prednisolona
+    class: ''
+    page: 155
+    dose: |
+      - Niños: 1–2 mg/kg VO una vez al día
+      - Adultos: 40 mg VO una vez al día
+
+      **Pauta de descenso sugerida:**
+      - Niños: reduzca la dosis ~10% cada 2 semanas
+      - Adultos:
+        - Dosis ≥ 20 mg/día: reduzca 5 mg/día cada semana
+        - Dosis 10–20 mg/día: reduzca 2.5 mg/día cada 2 semanas
+        - Dosis ≤ 10 mg/día: reduzca 1 mg/día cada 2 semanas
+    notes: |
+      Máx. en el asma: 60 mg/día. El descenso solo es necesario si se ha usado **> 3 semanas**.
+
+      Si aparece cualquier síntoma de insuficiencia suprarrenal, vuelva a la dosis previa. Síntomas de insuficiencia suprarrenal: dolor abdominal, vómitos, sudoración inusual, deshidratación, confusión, cansancio, debilidad, PA baja, FC alta, choque.
+  - id: propranolol
+    name: Propranolol
+    class: ''
+    page: 155
+    dose: |
+      - Niños: 0.5–1 mg/kg/día VO ÷ cada 6–12 horas
+      - Adultos — inicial: 40 mg VO dos veces al día
+      - **Profilaxis de la hemorragia por varices: 20 mg VO dos veces al día**, y solo si no hay carvedilol — el carvedilol 6.25 mg al día ajustando a 12.5 mg baja mejor la presión portal. Ajuste a una FC en reposo de 55–60, o a un descenso del 25% respecto a la basal. **Suspéndalo si la PAS < 90** o en la ascitis refractaria
+    notes: |
+      - Máx.: 8 mg/kg/día
+      - Máx.: 320 mg VO ÷ cada 6–12 horas
+  - id: pyrazinamide
+    name: Pirazinamida
+    class: ''
+    page: 155
+    dose: |
+      - Niños: 35 mg/kg VO una vez al día
+      - Adultos: 25 mg/kg VO una vez al día
+  - id: pyridoxine
+    name: Piridoxina
+    class: ''
+    page: 155
+    dose: |
+      Adultos: 25 mg VO una vez al día
+    notes: |
+      Se da con el tratamiento de la TB.
+  - id: pyrimethamine
+    name: Pirimetamina
+    class: ''
+    page: 155
+    dose: |
+      **Niños:**
+      - Inicial: 0.5 mg/kg/dosis dos veces al día × 2–4 días
+      - Mantenimiento: 0.25 mg/kg/dosis
+
+      **Adultos:**
+      - Inicial: 200 mg VO una vez
+      - Mantenimiento: peso ≤ 60 kg 50 mg VO una vez al día; peso > 60 kg 75 mg VO una vez al día
+    notes: |
+      Se da con sulfadiazina y leucovorina.
+  - id: quinine
+    name: Quinina
+    class: ''
+    page: 156
+    dose: |
+      **Lactantes / niños / adultos:**
+      - Vea el algoritmo de malaria
+      - Dosis de carga: 20 mg/kg IV en 4 horas (tras diluirla)
+      - Dosis de mantenimiento: 10 mg/kg IV cada 8 horas (diluida, en 2 horas)
+    notes: |
+      **PELIGRO:** la administración rápida es peligrosa. Mézclela con 10 mL/kg de dextrosa al 5% y pase la dosis de CARGA en 4 horas, nunca más rápido. NO supere 5 mg/kg/hora — 20 mg/kg en 2 horas es el doble. **Omita por completo la dosis de carga si se dio quinina o mefloquina en las 24 horas previas.** La dextrosa no es opcional: la quinina provoca hipoglucemia hiperinsulinémica, así que mida la glucosa y trate por debajo de 2.5 mmol/L (3.0 en la desnutrición grave).
+  - id: rabies-immunoglobulin
+    name: Inmunoglobulina antirrábica
+    class: biological
+    dose: |
+      **Solo en la exposición de categoría III. Infiltre todo lo posible alrededor de la herida.**
+
+      - **Ig humana 20 UI/kg · Ig equina 40 UI/kg**
+
+      🛑 Esto es un **máximo, no un objetivo** — no hay dosis mínima. Superarlo suprime la respuesta a la vacuna.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de mordeduras de animales, pág. 38; no se introduce ninguna afirmación clínica nueva.
+  - id: ranitidine
+    name: Ranitidina
+    class: ''
+    page: 156
+    dose: |
+      **Recién nacidos:**
+      - < 37 semanas: 0.5 mg/kg IV cada 12 horas
+      - > 37 semanas: 1 mg/kg IV cada 12 horas
+      - VO: 1–2 mg/kg cada 12 horas
+
+      **Niños:** 2–5 mg/kg/dosis cada 12 horas
+
+      **Adultos:** 150 mg VO dos veces al día
+    notes: |
+      **No es compatible con la fenitoína.**
+
+      - Bolo IV: mínimo > 5 min para evitar la hipotensión
+      - Infusión IV: 15–20 min
+      - Precaución: mayor riesgo de ECN en los lactantes de MBPN
+  - id: rifabutin
+    name: Rifabutina
+    class: ''
+    page: 156
+    dose: |
+      **Niños:**
+      - Tratamiento: 10–20 mg/kg VO una vez al día — **máximo 300 mg/día**
+      - Profilaxis: 5 mg/kg VO una vez al día
+
+      **Adultos:** 300 mg VO una vez al día
+    notes: |
+      En el MAC grave.
+  - id: rifampicin
+    name: Rifampicina
+    class: ''
+    page: 156
+    dose: |
+      - Niños: 15 mg/kg VO una vez al día
+      - Adultos: 10 mg/kg VO una vez al día
+  - id: rifaximin
+    name: Rifaximina
+    class: gastrointestinal
+    dose: |
+      **Encefalopatía hepática recurrente — 550 mg VO dos veces al día.**\n\nSe añade a la lactulosa, no la sustituye. La lactulosa sigue siendo de primera línea a 30–45 mL VO cada 1–2 horas hasta dos deposiciones, y luego 15–30 mL 2–4 veces al día para mantener 2–3 deposiciones blandas al día.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de insuficiencia hepática, pág. 108; no se introduce ninguna afirmación clínica nueva.
+  - id: rivaroxaban
+    name: Rivaroxabán
+    class: anticoagulant
+    dose: |
+      **Tratamiento de la ETV — adultos:** 15 mg VO dos veces al día × 21 días, y luego **20 mg VO una vez al día
+      (con comida)**
+      - **No requiere inicio parenteral**
+
+      **Niños:** solo bajo indicación del especialista
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Duración ≥ 3 meses; más si no fue provocada o el riesgo persiste. Evítelo si el
+      CrCl < 15 mL/min, en la hepatopatía significativa y en el embarazo. Sin monitorización
+      sistemática — pero **sin antídoto disponible localmente**.
+      Si no lo hay, la warfarina **con solapamiento obligatorio con HBPM** es la alternativa.
+  - id: salbutamol
+    name: Salbutamol
+    class: ''
+    page: 156
+    dose: |
+      **Nebulización:**
+      - ≤ 20 kg: 2.5 mg/dosis en 3 mL de SSN
+      - > 20 kg: 5 mg/dosis en 5 mL de SSN
+
+      **IDM (inhalador de dosis medida):**
+      - 5–10 kg: 4 pulsaciones
+      - 10–20 kg: 6 pulsaciones
+      - > 20 kg: 8 pulsaciones
+    notes: |
+      **NUNCA LO DÉ POR VÍA ORAL — no es eficaz.**
+  - id: nitroprusside
+    name: Nitroprusiato sódico
+    class: antihypertensive
+    dose: |
+      **0.3–0.5 mcg/kg/min**, aumentando 0.5 mcg/kg/min cada pocos minutos, hasta un **máximo de 10 mcg/kg/min**.
+
+      🛑 Evítelo en la encefalopatía hipertensiva. Toxicidad por cianuro con el uso prolongado o a dosis altas.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de hipertensión, pág. 106; no se introduce ninguna afirmación clínica nueva.
+  - id: spironolactone
+    name: Espironolactona
+    class: ''
+    page: 156
+    dose: |
+      - Niños: 0.5–1.5 mg/kg/dosis dos veces al día
+      - Adultos: 25 mg VO una vez al día
+    notes: |
+      Dosis máx.: 100 mg/día.
+  - id: streptokinase
+    name: Estreptoquinasa
+    class: thrombolytic
+    dose: |
+      **IAMCEST — adultos:** 1.5 millones de UI IV en **60 minutos**
+
+      **TEP de alto riesgo — adultos:** **250,000 UI IV en 30 min, y luego 100,000 UI/hora durante
+      12–24 horas** (también se describe una pauta acelerada de 1.5 millones de UI en 2 h)
+
+      ⚠️ **La pauta del TEP es una infusión prolongada de 12–24 h, a diferencia de la infusión única
+      del IAMCEST** — esta es la diferencia clave en el estante.
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      🛑 **Suspenda la heparina durante la infusión de estreptoquinasa**; iníciela o reanúdela cuando el
+      TTPa baje.
+      **No la repita** entre unos 5 días y 12 meses después de una dosis previa
+      (anticuerpos neutralizantes). La hipotensión durante la infusión es frecuente — reduzca la velocidad.
+      Suele ser el fibrinolítico más disponible en este entorno.
+  - id: sulfadiazine
+    name: Sulfadiazina
+    class: ''
+    page: 156
+    dose: |
+      - Niños: 40 mg/kg/dosis cuatro veces al día
+      - Adultos: 1.5 g VO cada 6 horas
+    notes: |
+      Se da con leucovorina y pirimetamina en la toxoplasmosis.
+  - id: sulphadoxine-pyrimethamine
+    name: Sulfadoxina-pirimetamina (SP)
+    class: ''
+    page: 156
+    dose: |
+      **Niños:**
+      - 2–5 años: ½ comprimido al mes
+      - 5–10 años: 1 comprimido al mes
+      - 10–15 años: 2 comprimidos al mes
+      - > 15 años: 3 comprimidos al mes
+    notes: |
+      Profilaxis de la malaria en los pacientes con drepanocitosis.
+  - id: tenecteplase
+    name: Tenecteplasa
+    class: thrombolytic
+    dose: |
+      **IAMCEST — adultos**, bolo IV único en 5 segundos, según el peso:
+      - < 60 kg: 30 mg · 60–69 kg: 35 mg · 70–79 kg: 40 mg · 80–89 kg: 45 mg · ≥ 90 kg: 50 mg
+
+      **TEP de alto riesgo — adultos:** el **mismo bolo por bandas de peso** (fuera de indicación en el TEP)
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      Contraindicaciones absolutas: hemorragia intracraneal previa, lesión cerebral
+      estructural, ictus isquémico en los 3 meses previos, hemorragia activa, sospecha de
+      disección aórtica.
+      **El bolo la hace ideal donde escasean las bombas de infusión.**
+  - id: terlipressin
+    name: Terlipresina
+    class: gastrointestinal
+    dose: |
+      **Hemorragia por varices, si no hay octreotida — 2 mg IV cada 4–6 h hasta que cese la hemorragia, y luego 1 mg cada 4–6 h.**
+
+      Más efectos adversos que la octreotida; evítela en la cardiopatía isquémica.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de hemorragia digestiva alta, pág. 104; no se introduce ninguna afirmación clínica nueva.
+  - id: ticagrelor
+    name: Ticagrelor
+    class: antiplatelet
+    dose: |
+      **IAMSEST que NO recibe fibrinólisis — adultos:** carga de 180 mg VO, y luego
+      **90 mg VO dos veces al día** (60 mg dos veces al día tras 12 meses si se continúa)
+    notes: |
+      ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben.
+      🛑 **Nunca lo combine con un fibrinolítico — use clopidogrel en los pacientes fibrinolisados.**
+      Contraindicado tras una hemorragia intracraneal. Causa disnea. Evite el ácido acetilsalicílico
+      por encima de 100 mg/día.
+      **No está en la LME de la OMS y a menudo no está disponible o no es asequible en el nivel de distrito —
+      el clopidogrel es el sustituto práctico aquí.**
+  - id: tranexamic-acid
+    name: Ácido tranexámico (TXA)
+    class: haemostatic
+    dose: |
+      **Epistaxis — 500 mg en 5 mL de SSN en una torunda**, dejada 10 minutos, como primer fármaco que se prueba.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de la página de epistaxis, pág. 67; no se introduce ninguna afirmación clínica nueva.
+  - id: valacyclovir
+    name: Valaciclovir
+    class: ''
+    page: 156
+    dose: |
+      **Niños:**
+      - VHS: **20 mg/kg/dosis VO dos o tres veces al día (máx. 1 g/dosis)**
+      - VVZ: 20 mg/kg/dosis VO tres veces al día
+
+      **Adultos:**
+      - VHS, episodio inicial: **1 g VO dos veces al día × 7–10 días**
+      - VHS, recurrencia: **500 mg VO dos veces al día × 3 días**
+      - VHS en el VIH: 500 mg VO dos veces al día, 5–10 días
+      - VVZ (zóster): 1 g VO tres veces al día × 7 días
+    notes: |
+      ⚠️ El libro imprimía antes la dosis de adulto para el VHS como **400 mg VO tres veces al día** — esa es
+      la pauta del **aciclovir**, no la del valaciclovir — y ponía **1 g VO dos veces al día** fijo de adulto en
+      la fila de los niños. Las dos filas se habían cruzado con la entrada del aciclovir.
+      **Los dos fármacos no son intercambiables a una misma dosis.**
+  - id: valganciclovir
+    name: Valganciclovir
+    class: ''
+    page: 156
+    dose: |
+      Adultos: 900 mg VO dos veces al día
+  - id: valproic-acid
+    name: Ácido valproico / valproato sódico
+    class: ''
+    page: 157
+    dose: |
+      **Niños:**
+      - Inicial: 10–15 mg/kg/día VO ÷ cada 8–12 horas
+      - Mantenimiento: 30–60 mg/kg/día ÷ cada 8–12 horas
+
+      **Adultos:**
+      - Inicial: 15 mg/kg/día VO ÷ cada 8–12 horas
+      - Mantenimiento: 60 mg/kg/día ÷ cada 8–12 horas
+  - id: vancomycin
+    name: Vancomicina
+    class: antibiotic
+    dose: |
+      **15 mg/kg IV cada 6 horas (máx. 2 g/dosis)** en el SARM grave y en la infección del SNC — **no cada 8 horas**. Vigile los niveles donde se pueda; consulte con farmacia.\n\nValle objetivo **15–20 mg/L** (AUC/CMI ≥ 400) en la indicación intracraneal.
+
+      Se usa para cubrir el SARM en la sepsis, y con ceftriaxona cuando la mastoiditis tiene complicaciones intracraneales.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de mastoiditis y sepsis del adulto; no se introduce ninguna afirmación clínica nueva.
+  - id: vitamin-a
+    name: Vitamina A
+    class: ''
+    page: 157
+    dose: |
+      **Suplementación sistemática:**
+      - < 6 meses: no se recomienda
+      - 6–12 meses: 100,000 unidades VO de inmediato
+      - > 12 meses: 200,000 unidades VO de inmediato
+
+      **Tratamiento de la carencia — días 1, 2 y 15.** Solo ante signos oculares de carencia, sarampión o diarrea grave/persistente. Un niño sin signos de carencia que recibe F-75, F-100 o ATLC recibe solo la dosis diaria baja — esos alimentos ya contienen vitamina A, y la suplementación a dosis altas en un niño bien alimentado causa más enfermedad respiratoria y diarreica. Si la primera dosis se dio en un centro remitente, dé los días 2 y 15.
+      - < 6 meses: 50,000 unidades
+      - 6–12 meses: 100,000 unidades
+      - > 12 meses: 200,000 unidades
+    notes: |
+      En la suplementación SISTEMÁTICA: una vez al ingreso; no debe darse dos veces en 1 mes.
+
+      La regla de 1 mes **no** se aplica al ciclo de 3 dosis para tratar la carencia de arriba — esa pauta es deliberada, y tampoco la línea "< 6 meses: no se recomienda", que es una regla de la suplementación sistemática. En la desnutrición aguda grave, dé vitamina A a dosis altas solo ante **signos oculares, sarampión o diarrea grave/persistente**: F-75, F-100 y ATLC ya contienen suficiente para todos los demás.
+  - id: vitamin-b12
+    name: Vitamina B12
+    class: ''
+    page: 158
+    dose: |
+      **Carencia dietética en lactantes:** 1 mg IM/día × 5 días, y luego semanal × 3 dosis más
+
+      **Malabsorción en lactantes / niños:** 1 mg IM en días alternos × 6 días, y luego semanal durante 6 semanas
+
+      **Adultos:**
+      - Carencia: 1 mg VO una vez al día
+      - Carencia grave o anemia perniciosa: 1 mg IM en días alternos × 6 días, y luego semanal durante 6 semanas
+    notes: |
+      También llamada cianocobalamina.
+  - id: vitamin-d
+    name: Vitamina D
+    class: ''
+    page: 157
+    dose: |
+      **Lactantes:**
+      - Raquitismo: 2000 UI/día × 6–12 semanas
+      - Mantenimiento: 400 UI/día
+
+      **Niños:**
+      - Raquitismo: 2000 UI/día × 6–12 semanas
+      - Mantenimiento: 600–1000 UI/día
+
+      **Adultos:**
+      - Carencia: 6000 UI/día × 8 semanas
+      - Mantenimiento: 2000 UI/día
+    notes: |
+      Los niños también pueden tomar 50,000 UI/semana × 6 semanas.
+  - id: vitamin-k
+    name: Vitamina K
+    class: ''
+    page: 157
+    dose: |
+      **Recién nacido:**
+      - Prematuro ≤ 1500 g: 0.3–0.5 mg/kg IM de inmediato — no se recomienda una dosis IV única en un prematuro
+      - Prematuro > 1500 g: 1 mg IM de inmediato, igual que un recién nacido a término
+      - A término: 1 mg IM de inmediato
+
+      **INR supraterapéutico:**
+      - Niños: 0.03 mg/kg/dosis IV (dosis máx. 1 mg)
+      - Adultos:
+        - INR 4.5–10, sin hemorragia: puede considerarse 1–2.5 mg VO
+        - INR > 10: 2.5–5 mg VO
+        - Hemorragia menor e INR elevado: 2.5–5 mg VO
+        - Hemorragia mayor e INR elevado: 10 mg VO
+    notes: |
+      **Ingesta estándar adecuada diaria:**
+      - 0–1 años: 2.5 mcg
+      - 1–3 años: 30 mcg
+      - 4–13 años: 60 mcg
+      - 9–13 años: 60 mcg
+      - > 14 años, mujeres: 90 mcg/día
+      - > 14 años, varones: 120 mcg/día
+  - id: warfarin
+    name: Warfarina
+    class: ''
+    page: 158
+    dose: |
+      - **NO cargue.** La carga sistemática aumenta la hemorragia sin proteger antes
+      - Adultos: **empiece con 5 mg VO una vez al día; 2.5 mg o menos si es mayor, frágil, desnutrido o con hepatopatía**
+      - Niños: 0.2 mg/kg (máx. 10 mg) como primera dosis única, y luego según el INR
+      - **En la ETV, solape con HBPM o HNF durante ≥ 5 días Y hasta un INR ≥ 2 durante 24 h** — la warfarina sola desde el día 1 es insuficiente
+      - Primer INR a los 3–5 días, y luego al menos semanal hasta que se estabilice. Objetivo 2–3
+    notes: |
+      Máx. 10 mg/dosis.
+  - id: whole-blood
+    name: Sangre total (ST)
+    class: blood product
+    dose: |
+      **20 mL/kg suben la hemoglobina de un niño alrededor de 1 g/dL**; una unidad de adulto, alrededor de 1 g/dL.
+
+      - **Choque séptico que no responde al primer bolo: 10 mL/kg**
+      - Los volúmenes según la fiebre y la nutrición están en la página de transfusión — tome la primera línea que se aplique
+
+      10 mL de CH ≈ 20 mL de sangre total como regla a pie de cama; **no** la use para derivar los volúmenes estratificados por la fiebre.
+    notes: ⚠️ **No está en la lista impresa de medicamentos esenciales** — añadido porque los protocolos lo prescriben. Dosis tomada de las páginas de medicamentos de reanimación, DAG y transfusión; no se introduce ninguna afirmación clínica nueva.
+  - id: zinc-sulfate
+    name: Sulfato de zinc
+    class: ''
+    page: 158
+    dose: |
+      - Edad ≤ 6 meses: 10 mg al día durante 10–14 días
+      - Edad > 6 meses: 20 mg al día durante 10–14 días

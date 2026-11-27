@@ -1,0 +1,66 @@
+# translated-from-sha256: b1c8c97d6d705220af8be78a25669820395ff9e143a86214c5bd57d758ff9ef8
+topic:
+  id: "pb-im-ecg-enlargement"
+  title: "ECG — crecimiento de cavidades"
+  list_subtitle: "pp.116–117 · CAD · CAI · HVD · HVI"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiografía", "adulto", "medicina interna", "cardiología", "crecimiento auricular", "CAD", "CAI", "hipertrofia ventricular", "HVD", "HVI", "Sokolow-Lyon", "Cornell", "onda P", "crecimiento de cavidades"]
+  category: "medical"
+  pages:
+  - page_number: 116
+    blocks:
+    - type: "prose"
+      title: "Crecimiento auricular / ventricular"
+      callout: true
+      palette:
+        alert: "0xFF0D47A1"
+        alert_fill: "0xFFE8EEF7"
+        alert_text: "0xFF0D47A1"
+      markdown: |
+        Todos los hallazgos son **sugestivos pero no diagnósticos** — correlacione con el cuadro clínico y la imagen.
+    - type: "prose"
+      title: "Crecimiento auricular derecho (CAD)"
+      markdown: |
+        - Onda P > 2.5 mm en II, III o aVF pero < 0.12 seg
+        - Suele acompañarse de crecimiento ventricular derecho
+        - A menudo con enfermedad pulmonar o cardiopatía congénita
+    - type: "prose"
+      title: "Crecimiento auricular izquierdo (CAI)"
+      markdown: |
+        - Onda P > 0.12 seg
+        - Onda P bimodal o con muesca en las derivaciones de miembros
+        - Onda P bifásica en V1 — deflexión negativa > 0.04 seg o > 1 mm
+        - Si es muy marcada, indica mayor riesgo de FA
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_atrial_enlargement.png"
+      size: "full"
+      caption: "Normal frente a crecimiento auricular izquierdo frente a derecho en las derivaciones II y V1."
+    - type: "prose"
+      title: "Hipertrofia ventricular derecha (HVD)"
+      markdown: |
+        - Onda R alta en V1
+        - Onda R > onda S en V1
+        - Desviación del eje a la derecha
+        - Ondas T invertidas en V1–V3
+        - Frecuente en las cardiopatías congénitas
+        - Suele haber CAD
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_rvh.png"
+      size: "full"
+      caption: "Normal frente a HVD en las derivaciones V1 y V6 — R dominante en V1 con sobrecarga."
+  - page_number: 117
+    blocks:
+    - type: "prose"
+      title: "Hipertrofia ventricular izquierda (HVI)"
+      markdown: |
+        - Ondas S profundas en las derivaciones precordiales derechas
+        - Ondas R altas y positivas en las precordiales izquierdas
+        - Altura de la S en V1 más altura de la R en V5 o V6 > 35 mm
+        - **Criterios de voltaje de Cornell:** altura de la S en V3 + altura de la R en aVL, hombres > 28 mm, mujeres > 20 mm
+        - Onda R en aVL > 12 mm
+        - Suele haber CAI
+        - Las 2 causas más frecuentes: hipertensión y estenosis aórtica
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_lvh.png"
+      size: "full"
+      caption: "Normal frente a HVI en las derivaciones V1 y V6 — S profunda en V1, R alta en V6."

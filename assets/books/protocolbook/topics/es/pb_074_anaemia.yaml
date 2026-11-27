@@ -1,0 +1,83 @@
+# translated-from-sha256: 3a49924559fc0b4bca40f7519e17154b5855c4cbb31d5725aa298814cff33ec6
+topic:
+  id: "pb-anaemia"
+  title: "Anemia — abordaje y umbrales de transfusión"
+  list_subtitle: "p.74 · evaluar / reanimar / cuándo transfundir"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["anemia", "anemia", "palidez", "transfusión", "hemoglobina", "malaria", "sepsis", "sangrado", "coiloniquia"]
+  category: "medical"
+  page_number: 74
+  blocks:
+  - type: "flowchart"
+    variant: "linear"
+    entry_chain:
+    - text: "Anemia"
+      shape: "stadium"
+    steps:
+    - type: "content"
+      title: "Historia"
+      bullets:
+      - "Somnolencia · anorexia · disfagia"
+      - "Cansancio · disnea de esfuerzo · síncope"
+    - type: "content"
+      title: "Hallazgos clínicos"
+      bullets:
+      - "Palidez · taquicardia · síntomas de insuficiencia cardíaca"
+      - "Estomatitis · queilitis angular · glositis · coiloniquia"
+      - "Membranas esofágicas / faríngeas"
+    - type: "content"
+      title: "Manejo"
+      bullets:
+      - "Monitorice, mantenga el ABC"
+      - "Controle los signos vitales (PA, FC, FR, SpO₂, Temp, peso)"
+      - "Evalúe la GCS y el estado de hidratación"
+      - "Coloque 2 vías IV; inicie oxígeno si la SpO₂ < 90%"
+      - "Extraiga hemograma y malaria; considere hemocultivos si se sospecha sepsis"
+      - "Grupo y pruebas cruzadas si hay taquicardia, taquipnea o palidez intensa"
+      - "Haga una historia y una exploración física breves y dirigidas"
+    - type: "content"
+      title: "¿Hay posibilidad de sangrado?"
+      bullets:
+      - "Pregunte por traumatismos recientes"
+      - "Un sangrado GI clínicamente significativo debería verse como hematemesis, vómito en posos de café, melena o hematoquecia"
+      - "Cuatro lugares pueden ocultar un sangrado activo: tórax, abdomen, retroperitoneo / pelvis, muslo"
+    - type: "content"
+      title: "Considere un tratamiento empírico"
+      bullets:
+      - "Trate empíricamente la malaria y la sepsis si corresponde"
+      - "NO hay forma de distinguir clínicamente entre malaria y sepsis"
+    - type: "content"
+      title: "¿Transfundir? (umbrales en la tabla de abajo)"
+      bullets:
+      - "Zonas de malaria alta — según el suministro de sangre"
+      - "Zonas de malaria baja — <7 g/dL, o <10 g/dL e inestable"
+    convergence:
+      text: "Busque la causa de la anemia"
+      shape: "rounded_rectangle"
+      bullets:
+      - text: "[Estudio de la anemia](topic:pb-anaemia-workup)"
+  - type: "prose"
+    title: "⚠ Una SpO₂ normal no descarta una anemia crítica"
+    callout: true
+    markdown: |
+      La SpO₂ mide la saturación de la hemoglobina **presente**, no el aporte de
+      oxígeno — un niño con Hb 3 g/dL puede marcar 99% con un déficit
+      profundo de oxígeno. **Administre oxígeno según la clínica** — dificultad
+      respiratoria, alteración de la conciencia o choque — sea cual sea la lectura.
+  - type: "table"
+    title: "Cuándo transfundir"
+    zebra: true
+    columns: ["Entorno", "Transfunda si la hemoglobina es"]
+    column_flex: [5, 5]
+    column_align: ["left", "left"]
+    rows:
+    - cells: [{text: "**Zonas de malaria alta**", span: 2}]
+    - cells: ["Poco suministro de sangre", "<4 g/dL, o <5 g/dL e inestable"]
+    - cells: ["Buen suministro de sangre", "<5 g/dL"]
+    - cells: [{text: "**Zonas de malaria baja**", span: 2}]
+    - cells: ["—", "<7 g/dL, o <10 g/dL e inestable"]
+  - type: "prose"
+    markdown: |
+      **"Inestable" significa cualquiera de:** dificultad respiratoria (FR >50 en lactantes, >40 en niños mayores) · alteración de la conciencia · choque clínico (pulso rápido y débil, extremidades frías, llenado capilar >3 s) · respiración acidótica.
+
+      Luego [busque la causa de la anemia](topic:pb-anaemia-workup).

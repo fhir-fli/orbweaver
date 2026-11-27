@@ -1,0 +1,18 @@
+{
+ "page": "assets/books/protocolbook/topics/pb_049_uti_kidney.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s74",
+   "severity": "minor",
+   "problem": "The acronym 'LE' (Leukocyte Esterase) is translated as 'EL'. While understandable in context, 'EL' is not a standard clinical abbreviation in Spanish. It is clearer to use the term 'esterasa' or keep the English acronym 'LE'.",
+   "fix": "¿Nitritos o esterasa positivos?",
+   "en": "Nitrite or LE positive?",
+   "es": "¿Nitritos o EL positivos?"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s74\",\n    \"severity\": \"minor\",\n    \"problem\": \"The acronym 'LE' (Leukocyte Esterase) is translated as 'EL'. While understandable in context, 'EL' is not a standard clinical abbreviation in Spanish. It is clearer to use the term 'esterasa' or keep the English acronym 'LE'.\",\n    \"fix\": \"¿Nitritos o esterasa positivos?\"\n  }\n]\n```",
+  "```json\n[]\n```"
+ ]
+}

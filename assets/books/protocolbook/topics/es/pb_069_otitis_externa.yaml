@@ -1,0 +1,35 @@
+# translated-from-sha256: 162553775ba241593f206596ecedd4e7dc038980cf7edb642e99dfc062ca0bb1
+topic:
+  id: "pb-otitis-externa"
+  title: "Otitis externa"
+  list_subtitle: "p.69 · infecciones de ORL II"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["otitis externa", "oído de nadador", "conducto auditivo", "ORL", "otoscopia", "cortisporin", "otalgia", "trago", "pediátrico"]
+  category: "medical"
+  page_number: 69
+  blocks:
+  - type: "prose"
+    title: "Presentación"
+    markdown: |
+      - Otalgia, prurito, presión/plenitud del conducto auditivo, hipoacusia, dolor mandibular, secreción, enrojecimiento/eritema, hinchazón/edema
+  - type: "prose"
+    title: "Exploración"
+    markdown: |
+      También es necesario hacer una otoscopia.
+
+      - Dolor al mover el trago/el pabellón
+      - Eritema/edema del conducto auditivo
+      - Celulitis
+      - Secreción del conducto
+      - **Manipular el oído externo suele ser doloroso en la otitis externa, pero no en la otitis media**
+  - type: "prose"
+    title: "Tratamiento"
+    markdown: |
+      **Antibiótico tópico:**
+
+      - 🛑 **Mire primero el tímpano. Si está perforado — o no puede verlo — NO use neomicina.** La neomicina es un aminoglucósido y es **ototóxica** si llega al oído medio: puede causar hipoacusia permanente. Un oído que supura es precisamente el que está en riesgo
+      - **Perforado, o sin poder descartar la perforación:** use **gotas de fluoroquinolona — ciprofloxacino u ofloxacino**, 3–4 gotas en el oído afectado cada 8 horas x 7–10 días. No son ototóxicas
+      - **Tímpano íntegro:** neomicina/polimixina B/hidrocortisona (Cortisporin Otic) 3–4 gotas en el oído afectado cada 8 horas x 7–10 días
+      - **Si el conducto está demasiado hinchado para que entren las gotas, coloque una mecha** y limpie el conducto (limpieza ótica) — las gotas en un conducto obstruido no sirven de nada
+      - Administre analgesia — paracetamol o ibuprofeno
+      - Eduque sobre mantener el oído seco

@@ -1,0 +1,34 @@
+# translated-from-sha256: 749734c20d915c97edfce646eac05edc698bcc39774121ebaa237d26e8642d8b
+topic:
+  id: "calc-anthropometrics"
+  title: "IMC y SC"
+  list_subtitle: "índice de masa corporal + superficie corporal"
+  last_reviewed: "Evidence review 2026-07-19 · Mosteller 1987"
+  tags: ["imc", "sc", "índice de masa corporal", "superficie corporal", "mosteller", "peso", "obesidad", "dosificación"]
+  aliases:
+  - "IMC"
+  - "SC"
+  - "Superficie corporal"
+  - "Índice de masa corporal"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Índice de masa corporal (con la categoría de la OMS) y superficie corporal (Mosteller,
+      la convención para dosificar quimioterapia).
+  - type: "formula"
+    kind: "anthropometrics"
+    title: "IMC y SC"
+    source: "IMC = kg/m²; SC = √(talla·peso/3600) (Mosteller 1987)"
+    inputs:
+    - {key: "height", label: "Talla", type: "number"}
+    - key: "height_unit"
+      label: "Unidad de talla"
+      type: "select"
+      default: "cm"
+      options:
+      - {value: "cm"}
+      - {value: "in"}
+    - {key: "weight", label: "Peso", unit: "kg", type: "number"}
+    notes:
+    - "IMC de la OMS: < 18.5 bajo peso · 18.5–24.9 normal · 25–29.9 sobrepeso · ≥ 30 obesidad."

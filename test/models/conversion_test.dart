@@ -187,7 +187,16 @@ void main() {
       expect(b.source, isNotNull);
     });
 
-    test('every dose references a declared tier', () {
+    test('every dose references a declared tier, in every language', () {
+      // The header and each row's tier are matched as strings, so a
+      // translation must rename both alike.
+      final spanish = _load('es/conv_statins.yaml');
+      expect(spanish.tiers, ['Baja', 'Moderada', 'Alta']);
+      for (final a in spanish.agents) {
+        for (final d in a.doses) {
+          expect(spanish.tiers, contains(d.tier), reason: 'es ${a.name}');
+        }
+      }
       for (final a in b.agents) {
         for (final d in a.doses) {
           expect(

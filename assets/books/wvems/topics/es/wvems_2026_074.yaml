@@ -1,0 +1,98 @@
+# translated-from-sha256: 20763d8149fe85148e894189a63eb90f94d29f92a953edf9a7b26c0f184fd1fb
+topic:
+  id: "wvems-2026-074"
+  version: "v260101"
+  title: "Picadura / mordedura"
+  list_subtitle: "2026-074 · animal / serpiente / insecto"
+  last_reviewed: "Oct 2025"
+  tags:
+  - "picadura"
+  - "mordedura"
+  - "animal"
+  - "insecto"
+  - "serpiente"
+  - "araña"
+  - "traumatismo"
+  aliases:
+  - "Mordedura de animal / serpiente / araña / garrapata"
+  - "Picadura de abeja / avispa"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 74
+    blocks:
+    - type: "flowchart"
+      variant: "linear"
+      warnings:
+      - type: "safety"
+        text: "Garantice la SEGURIDAD del proveedor"
+      - type: "caution"
+        text: "[Precaución si el paciente rechaza](topic:wvems-2026-109#patient-refusals)"
+      entry_chain:
+      - text: "Lesión por animal o insecto"
+        shape: "stadium"
+      steps:
+      - type: "content"
+        title: "Valore:"
+        bullets:
+        - "[Reacción alérgica](topic:wvems-2026-032)"
+        - "[Hemorragia](topic:wvems-2026-058)"
+      - type: "action"
+        text: "Férula"
+        kind: "procedure"
+      - type: "action"
+        text: "Retire el aguijón"
+        kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Dolor](topic:wvems-2026-020)"
+        - text: "Lesión subyacente"
+  - page_number: 75
+    blocks:
+    - type: "prose"
+      title: "Imperativos de picaduras / mordeduras"
+      highlight: true
+      markdown: |
+        - **No lleve** animales, serpientes ni insectos a urgencias.
+          - Puede fotografiarlos desde una **distancia segura**, pero no intente atraparlos.
+          - La policía puede ayudar con el control de animales si es necesario.
+          - Pregunte por el **estado de vacunación antirrábica** de cualquier mamífero doméstico.
+        - Retire las joyas adyacentes y distales; marque el contorno de cualquier eritema.
+        - Los torniquetes venosos y la succión de la herida **no** están indicados.
+        - Las mordeduras graves o profundas (sobre todo humanas y de gato) necesitan valoración médica.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere el **hielo** para las mordeduras de animales y las picaduras de insectos, pero evítelo en las serpientes.
+        - **Mordeduras venenosas en VA**: serpiente de cascabel, cabeza de cobre (copperhead) y viuda negra.
+          - También puede haber mordeduras venenosas de **mascotas exóticas**.
+          - Las mordeduras de **garrapata** no suelen requerir intervención del SEM.
+          - Este protocolo no se aplica a picaduras ni mordeduras **marinas**.
+        - Si se conoce el animal, considere llamar al **centro de toxicología**: 800-222-1222.
+    - type: "row"
+      blocks:
+      - type: "image"
+        path: "assets/books/wvems/images/snake_rattlesnake.jpg"
+        caption: "Serpiente de cascabel · Jonathunder / Wikimedia, CC BY-SA 3.0"
+      - type: "image"
+        path: "assets/books/wvems/images/snake_copperhead.jpg"
+        caption: "Cabeza de cobre (copperhead) · Holger Krisp / Wikimedia, CC BY 3.0"
+      - type: "image"
+        path: "assets/books/wvems/images/spider_black_widow.jpg"
+        caption: "Viuda negra · Shenrich91 / Wikimedia, CC BY-SA 3.0"
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Tenga cuidado con la [anafilaxia](topic:wvems-2026-032) ante cualquier cambio de voz (p. ej., ronquera).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Snakebite — https://emedicine.medscape.com/article/168828 [Ver: 5/25]
+        - Medscape Spiders — https://emedicine.medscape.com/article/772795 [Ver: 10/21]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 35
+
+        NEMSIS: 9914079

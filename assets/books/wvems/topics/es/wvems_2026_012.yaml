@@ -1,0 +1,144 @@
+# translated-from-sha256: 9eb4cb4cdfb7673f2c358695ad6402f986d41d999a3e2d4fde6aeaa26dd31db9
+topic:
+  id: "wvems-2026-012"
+  version: "v260101"
+  title: "Bradicardia"
+  list_subtitle: "2026-012 · atropina / marcapasos"
+  last_reviewed: "Dec 2025"
+  tags: ["bradicardia", "bradi", "atropina", "marcapasos", "bloqueo cardíaco"]
+  aliases:
+  - "Bloqueo cardíaco"
+  - "Nodal"
+  - "RIV"
+  category: "universal"
+  layout: "paged"
+  pages:
+  - page_number: 12
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Pulso menor de"
+        shape: "stadium"
+        bands:
+        - label: "Adulto (14+)"
+          value: "60 /min"
+        - label: "Niño (1–13)"
+          value: "70 /min"
+        - label: "Lactante (< 1)"
+          value: "80 /min"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "mild"
+        label: "Leve"
+        criteria:
+        - "Perfusión adecuada"
+        - "Síntomas mínimos"
+        actions:
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "A"
+          text: "Vía salinizada"
+          kind: "procedure"
+      - id: "moderate"
+        label: "Moderada"
+        criteria:
+        - "Perfusión adecuada"
+        - "Dolor torácico, debilidad"
+        actions:
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+        - provider_level: "I"
+          text: "Atropina"
+          kind: "medication_administration"
+      - id: "severe"
+        label: "Grave"
+        criteria:
+        - "Mala perfusión"
+        - "Sin respuesta"
+        actions:
+        - provider_level: "I"
+          text: "Marcapasos"
+          kind: "procedure"
+        - provider_level: "I"
+          text: "Epinefrina"
+          kind: "medication_administration"
+          peds_only: true
+        - provider_level: "E"
+          text: "12 derivaciones"
+          kind: "diagnostic"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Dolor](topic:wvems-2026-020), [Respiración](topic:wvems-2026-006), [Hiper K+](topic:wvems-2026-018)"
+        - text: "[Choque](topic:wvems-2026-008), [N/V](topic:wvems-2026-022), [Sobredosis / tóxicos](topic:wvems-2026-040)"
+      dose_table:
+      - drug: "[Atropina](topic:wvems-2026-drug-reference#atropine)"
+        dose: "1 mg"
+        route: "IV/IO"
+        frequency: "cada 5 min x3"
+        population: "adult"
+      - drug: "[Epinefrina](topic:wvems-2026-drug-reference#epi-epi-neb)"
+        dose: "Use la [referencia pediátrica](topic:wvems-2026-144)"
+        route: "IV/IO"
+        frequency: "cada 5 min"
+        population: "peds"
+  - page_number: 13
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la bradicardia"
+      highlight: true
+      markdown: |
+        - Investigue y considere tratar las causas subyacentes, como la [hipotermia](topic:wvems-2026-068).
+          - Considere [sobredosis](topic:wvems-2026-040) si procede (muchos fármacos causan bradicardia).
+          - Una bradicardia lenta de complejo ancho puede deberse a [hiperpotasemia](topic:wvems-2026-018).
+        - {I} Puede probar con el **imán del marcapasos** para mejorar la frecuencia. **No** lo use sobre un DAI.
+    - type: "prose"
+      title: "Mala perfusión"
+      callout: true
+      markdown: |
+        Sospéchela si hay **varios** de estos:
+        - **Alteración del estado mental**
+        - Piel pálida, fría, sudorosa
+        - Hipotensión, ortostatismo
+        - Disnea, taquipnea
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Atropina](topic:wvems-2026-drug-reference#atropine)**: menos eficaz en: trasplante cardíaco, bloqueo cardíaco de 3.er grado
+    - type: "band_callout"
+      band: "peds"
+      title: ""
+      markdown: |
+        - **[Epinefrina](topic:wvems-2026-drug-reference#epi-epi-neb)** (epinefrina): preferida sobre la **[atropina](topic:wvems-2026-drug-reference#atropine)** en pediatría.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere colocar **parches** de marcapasos (desfibrilación) en cualquier paciente inestable.
+        - **[Marcapasos](topic:wvems-2026-096#pacing)**: puede empezar a **80 lpm / 80 mA**. Aumente los mA según necesidad.
+          - Trate el [dolor](topic:wvems-2026-020) y/o la [ansiedad](topic:wvems-2026-046) por el marcapasos en cuanto proceda.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Remítase a [neonato](topic:wvems-2026-050) para cualquier paciente pediátrico de **menos de 1 mes** (≤ 30 días).
+        - A menudo es un problema de [respiración](topic:wvems-2026-006): **no olvide el O₂ y la BVM**.
+        - Incluso **una sola pastilla** de algunos fármacos puede causar bradicardia grave.
+          - Considere [sobredosis](topic:wvems-2026-040) de opiáceos, Ca²⁺ o ß-bloqueantes.
+        - Considere los efectos de la medicación materna en la leche materna.
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Vitals — https://emedicine.medscape.com/article/2172054 [Ver: 2/24]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 13, 20
+
+        NEMSIS: 9914115

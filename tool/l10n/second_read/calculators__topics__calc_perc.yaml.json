@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_perc.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s19",
+   "severity": "minor",
+   "problem": "The phrase 'en 4 semanas' is ambiguous and typically suggests a future timeframe ('in 4 weeks') rather than the intended preceding window ('within the last 4 weeks').",
+   "fix": "en las últimas 4 semanas",
+   "en": "Recent surgery or trauma (within 4 wk, needing hospitalization/GA)",
+   "es": "Cirugía o traumatismo recientes (en 4 semanas, con hospitalización/anestesia general)"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s19\",\n    \"severity\": \"minor\",\n    \"problem\": \"The phrase 'en 4 semanas' is ambiguous and typically suggests a future timeframe ('in 4 weeks') rather than the intended preceding window ('within the last 4 weeks').\",\n    \"fix\": \"en las últimas 4 semanas\"\n  }\n]\n```"
+ ]
+}

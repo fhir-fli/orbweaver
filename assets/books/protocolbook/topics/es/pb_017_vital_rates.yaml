@@ -1,0 +1,51 @@
+# translated-from-sha256: e5e38bc59b3d4fd3681d9ac9980af1fc0abb5778d6d4204f67ac48a35caa2928
+topic:
+  id: "pb-vital-rates"
+  title: "Frecuencias vitales — percentiles por edad"
+  list_subtitle: "p.17 · tablas de FR y FC"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pediátrico", "signos_vitales", "frecuencia_respiratoria", "frecuencia_cardiaca"]
+  category: "universal"
+  page_number: 17
+  blocks:
+  - type: "table"
+    title: "Respiraciones por minuto"
+    columns: ["Edad", "10%", "50%", "90%"]
+    rows:
+    - cells: ["3 meses", "32", "42", "56"]
+    - cells: ["6 meses", "30", "39", "53"]
+    - cells: ["9 meses", "29", "37", "50"]
+    - cells: ["12 meses", "27", "35", "48"]
+    - cells: ["2 años", "23", "30", "40"]
+    - cells: ["3 años", "21", "27", "35"]
+    - cells: ["4 años", "20", "25", "32"]
+    - cells: ["6 años", "19", "23", "30"]
+    - cells: ["8 años", "18", "22", "27"]
+    - cells: ["12 años", "16", "20", "25"]
+    - cells: ["15 años", "15", "18", "23"]
+    - cells: ["18 años", "14", "17", "21"]
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_vitals_resp_rate.png"
+    caption: "Percentiles de frecuencia respiratoria por edad — percentiles 90, 50 y 10"
+    size: "full"
+  - type: "table"
+    title: "Frecuencia cardíaca por minuto"
+    columns: ["Edad", "10%", "50%", "90%"]
+    rows:
+    - cells: ["Nacimiento", "107", "127", "148"]
+    - cells: ["3 meses", "121", "141", "164"]
+    - cells: ["6 meses", "117", "137", "159"]
+    - cells: ["9 meses", "112", "132", "154"]
+    - cells: ["12 meses", "108", "128", "149"]
+    - cells: ["2 años", "98", "118", "140"]
+    - cells: ["3 años", "93", "112", "135"]
+    - cells: ["4 años", "87", "107", "130"]
+    - cells: ["6 años", "82", "102", "125"]
+    - cells: ["8 años", "76", "95", "119"]
+    - cells: ["12 años", "70", "89", "111"]
+    - cells: ["15 años", "64", "82", "104"]
+    - cells: ["18 años", "60", "77", "99"]
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_vitals_heart_rate.png"
+    caption: "Percentiles de frecuencia cardíaca por edad — percentiles 90, 50 y 10"
+    size: "full"

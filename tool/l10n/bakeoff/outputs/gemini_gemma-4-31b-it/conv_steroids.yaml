@@ -1,0 +1,65 @@
+# translated-from-sha256: db898bc7246e84f088859b5f3f3e5aee4faa88c73bba53f200717d033de859c8
+# ============================================================
+# Corticosteroid equivalence → prednisone-equivalent (mg)
+# Standard anti-inflammatory (glucocorticoid) potency table,
+# traceable to Meikle & Tyler, Am J Med 1977 (potency/duration via
+# HPA-axis suppression) and reproduced by UpToDate / hospital
+# formularies. There is NO single official society equivalence table.
+#
+# Factor = prednisone-equivalent mg per mg of drug, derived from the
+# classic equipotent doses (hydrocortisone 20 = cortisone 25 =
+# prednisone/prednisolone 5 = methylprednisolone/triamcinolone 4 =
+# dexamethasone 0.75 = betamethasone 0.6 mg). Reference = prednisone.
+#
+# EVIDENCE CAVEATS (verified 2026-07-19): the ratios equate
+# ANTI-INFLAMMATORY potency only — they do NOT capture mineralocorticoid
+# activity or duration of action. Dexamethasone/betamethasone are
+# long-acting (36-72 h) with greater HPA suppression, so equipotent doses
+# are not physiologically interchangeable with short-acting hydrocortisone.
+# Ratios derive from single-dose studies and are approximate.
+# ============================================================
+
+topic:
+  id: "conv-steroids"
+  title: "Conversión de corticosteroides"
+  list_subtitle: "→ equivalente a prednisona (antiinflamatorio)"
+  last_reviewed: "Evidence review 2026-07-19 · Meikle-Tyler potency table"
+  tags: ["esteroide", "corticosteroide", "glucocorticoide", "conversión", "prednisona", "dexametasona", "hidrocortisona", "metilprednisolona"]
+  aliases:
+  - "Equivalencia de esteroides"
+  - "Conversión de glucocorticoides"
+  - "Equivalente a prednisona"
+  category: "medical"
+
+  blocks:
+
+  - type: "prose"
+    markdown: |
+      Compara corticosteroides sistémicos según la **potencia
+      antiinflamatoria (glucocorticoide)**. Seleccione el esteroide del cual
+      **cambia**, ingrese su dosis y luego seleccione el esteroide
+      al que **cambia**. La línea central muestra la dosis **equivalente a prednisona**.
+
+  - type: "conversion"
+    mode: "equivalence"
+    title: "Corticosteroide → equivalente a prednisona"
+    reference: "prednisone"
+    reference_label: "mg equiv. prednisona"
+    unit: "mg"
+    source: "Meikle & Tyler, Am J Med 1977 (tabla estándar de potencia de glucocorticoides)"
+    agents:
+    - {name: "Hidrocortisona", factor: 0.25}
+    - {name: "Cortisona", factor: 0.2}
+    - {name: "Prednisona", factor: 1.0}
+    - {name: "Prednisolona", factor: 1.0}
+    - {name: "Metilprednisolona", factor: 1.25}
+    - {name: "Triamcinolona", factor: 1.25}
+    - {name: "Dexametasona", factor: 6.667}
+    - {name: "Betametasona", factor: 8.333}
+    excluded:
+    - {name: "Fludrocortisona", reason: "Principalmente un mineralocorticoide — no es intercambiable para el efecto glucocorticoide."}
+    caveats:
+    - "Solo potencia antiinflamatoria — estas proporciones NO convierten la actividad mineralocorticoide ni la duración de la acción."
+    - "La dexametasona / betametasona son de acción prolongada (36–72 h) con mayor supresión del eje HPA; no son fisiológicamente intercambiables con la hidrocortisona de acción corta a pesar de una dosificación antiinflamatoria igual."
+    - "Estimaciones de estudios de dosis única — ajuste clínicamente para dosificación crónica / repetida y reduzca la dosis gradualmente para evitar la supresión adrenal."
+    - "Para la dosificación por estrés en insuficiencia adrenal, use específicamente hidrocortisona (el efecto mineralocorticoide es importante); esta tabla no aplica."

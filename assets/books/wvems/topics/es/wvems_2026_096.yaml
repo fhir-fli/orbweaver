@@ -1,0 +1,737 @@
+# translated-from-sha256: 7fe2d34d089ba77bea0e8e900674b24d056efcb8d616557ef0ccadcafeae7661
+topic:
+  id: "wvems-2026-096"
+  version: "v260101"
+  title: "Procedimientos"
+  list_subtitle: "2026-096 · habilidades paso a paso"
+  last_reviewed: "Dec 2025"
+  tags: ["procedimientos", "habilidades", "cómo hacer", "vía aérea", "rcp", "sri"]
+  aliases:
+  - "Habilidades"
+  - "Cómo hacer"
+  category: "critical_care"
+  page_number: 96
+  blocks:
+  - type: "prose"
+    title: "Procedimientos"
+    highlight: true
+    markdown: |
+      Habilidades paso a paso del juego de tarjetas de WVEMS (pp.96-108). La insignia de cada tarjeta
+      marca el **nivel mínimo de proveedor** habilitado para esa habilidad —
+      {E} {A} {I} {P} (de menor a mayor); sin insignia = todos los niveles.
+      Las franjas rosas señalan diferencias por **edad/pediatría**; las franjas lavanda señalan
+      opciones de **cuidados críticos**; los recuadros discontinuos están **limitados por nivel**.
+  - type: "row"
+    blocks:
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 97"
+        markdown: "General"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{}"
+          - "[Glucómetro](topic:wvems-2026-096#glucometer)"
+        - cells:
+          - "{E}"
+          - "[12 derivaciones](topic:wvems-2026-096#12-lead)"
+        - cells:
+          - "{A}"
+          - "[Vía salinizada](topic:wvems-2026-096#saline-lock)"
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 98"
+        markdown: "Vía aérea"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{}"
+          - "[Golpes en la espalda y compresiones](topic:wvems-2026-096#back-blows-thrusts)"
+        - cells:
+          - "{}"
+          - "[Aspiración](topic:wvems-2026-096#suction)"
+        - cells:
+          - "{A}"
+          - "[Pinzas de Magill](topic:wvems-2026-096#magill-forceps)"
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 99"
+        markdown: "Respiración"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{}"
+          - "[BVM](topic:wvems-2026-096#bvm)"
+        - cells:
+          - "{}"
+          - "[OPA / NPA](topic:wvems-2026-096#npa-opa)"
+        - cells:
+          - "{E}"
+          - "[NIPPV](topic:wvems-2026-096#nippv)"
+  - type: "row"
+    blocks:
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 100"
+        markdown: "Dispositivos avanzados"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{E}"
+          - "[BIAD](topic:wvems-2026-096#biad)"
+        - cells:
+          - "{A}"
+          - "[Sonda orogástrica](topic:wvems-2026-096#og-tube)"
+        - cells:
+          - "{I}"
+          - "[Descompresión pleural](topic:wvems-2026-096#pleural-decompress)"
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 101"
+        markdown: "Reanimación"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{}"
+          - "[Compresiones torácicas](topic:wvems-2026-096#chest-compression)"
+        - cells:
+          - "{}"
+          - "[Desfibrilación](topic:wvems-2026-096#defib)"
+        - cells:
+          - "{A}"
+          - "[IO](topic:wvems-2026-096#io)"
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 102"
+        markdown: "Hemorragia"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{}"
+          - "[Cuidado de la herida](topic:wvems-2026-096#wound-care)"
+        - cells:
+          - "{}"
+          - "[Torniquete](topic:wvems-2026-096#tourniquet)"
+        - cells:
+          - "{}"
+          - "[Taponamiento de heridas](topic:wvems-2026-096#wound-packing)"
+  - type: "row"
+    blocks:
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 103"
+        markdown: "Lesiones"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{}"
+          - "[RMC con collarín cervical](topic:wvems-2026-096#smr-with-c-collar)"
+        - cells:
+          - "{}"
+          - "[Férula](topic:wvems-2026-096#splint)"
+        - cells:
+          - "{E}"
+          - "[Reducción de la deformidad](topic:wvems-2026-096#reduce-deformity)"
+        - cells:
+          - "{}"
+          - "[Retirada del aguijón](topic:wvems-2026-096#stinger-removal)"
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 104"
+        markdown: "Antídotos"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{}"
+          - "[Administración de antídotos](topic:wvems-2026-096#administer-antidote)"
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 105"
+        markdown: "Cardíaco"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{I}"
+          - "[Marcapasos](topic:wvems-2026-096#pacing)"
+        - cells:
+          - "{I}"
+          - "[Cardioversión](topic:wvems-2026-096#cardiovert)"
+  - type: "row"
+    blocks:
+    - type: "column"
+      flex: 4
+      blocks: []
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "prose"
+        title: "Página 106"
+        markdown: "Obstetricia"
+      - type: "table"
+        columns: []
+        column_flex: [2, 7]
+        rows:
+        - cells:
+          - "{E}"
+          - "[Atención del parto](topic:wvems-2026-096#deliver-baby)"
+        - cells:
+          - "{E}"
+          - "[Manejo de complicaciones obstétricas](topic:wvems-2026-096#manage-ob-complication)"
+    - type: "column"
+      flex: 4
+      blocks:
+      - type: "band_callout"
+        band: "critical_care"
+        title: "P 107 y 108"
+        markdown: |
+          - [Cuidados críticos](topic:wvems-2026-096#rsi-prep-checklist)
+      - type: "prose"
+        title: "Página 109"
+        markdown: |
+          - [Políticas](topic:wvems-2026-109)
+  - type: "prose"
+    title: "General"
+    markdown: "Valoración y acceso vascular."
+  - type: "procedure_card"
+    name: "Glucómetro"
+    image: "assets/books/wvems/images/eq_glucometer.jpg"
+    steps:
+    - "Prepare el glucómetro y la tira reactiva."
+    - "Identifique y limpie el sitio."
+    - "- El paciente puede tener una preferencia."
+    - "Pinche la piel con la lanceta para obtener la muestra de sangre."
+    - "- También puede obtener sangre del intento de vía IV si el medidor lo permite."
+    - "Coloque la sangre en/sobre la tira reactiva según las instrucciones del fabricante."
+  - type: "procedure_card"
+    name: "12 derivaciones"
+    image: "assets/books/wvems/images/eq_ecg.jpg"
+    scope: "E"
+    steps:
+    - "Introduzca los datos del paciente en el monitor."
+    - "Prepare el tórax y coloque los electrodos."
+    - "Indique al paciente que **se quede quieto**. Pulse el botón del monitor para adquirir el ECG de 12 derivaciones."
+    - "Adquiera el ECG **sin movimiento**. Intente **minimizar los artefactos**."
+    - "Transmita el ECG a urgencias. Puede contactar con el hospital receptor para confirmar."
+    - "~:[E] Puede leer la interpretación automática."
+    - "~:[I] Puede interpretarlo directamente."
+  - type: "procedure_card"
+    name: "Vía salinizada"
+    image: "assets/books/wvems/images/eq_ivcath.jpg"
+    scope: "A"
+    steps:
+    - "Busque un buen sitio."
+    - "- La fosa antecubital y la muñeca son sitios comunes."
+    - "- Intente evitar las piernas, la frente y la yugular **salvo que sea necesario**."
+    - "- Pase rápido a la **[IO](topic:wvems-2026-096#io) en las urgencias**. Puede empezar con **[IO](topic:wvems-2026-096#io)** en un [CODE](topic:wvems-2026-024)."
+    - "Limpie bien el sitio. Coloque un torniquete venoso proximal."
+    - "Haga la venopunción con una aguja/catéter de tamaño adecuado."
+    - "Vigile el reflujo de sangre; avance el catéter (no reintroduzca la aguja en el catéter)."
+    - "Orden de extracción de muestras: (hemocultivo), **azul**, (rojo), **dorado**, **verde**, **morado**, (gris)"
+    - "Conecte el tapón y lave con suero salino. Fíjelo bien con esparadrapo."
+    - "NOTA: Es **casi siempre** inapropiado que el SEM acceda a una vía central permanente ya colocada (como de **diálisis** o un **catéter PICC**). Pero el SEM puede considerar usar las vías ya colocadas durante un [CODE](topic:wvems-2026-024)."
+  - type: "prose"
+    title: "Vía aérea"
+    markdown: "Despejar y asegurar la vía aérea."
+  - type: "procedure_card"
+    name: "Golpes en la espalda y compresiones"
+    steps:
+    - "Ayude al paciente a **toser si puede**."
+    - "Empiece con golpes en la espalda (palmadas) a cualquier edad."
+    - "Alterne **5 golpes en la espalda** (palmadas) y **5 compresiones** en el atragantamiento grave:"
+    - "- Adulto (14+): compresiones abdominales (use compresiones torácicas si es obeso/embarazada.)"
+    - "!- Niño (1-13 años): compresiones abdominales, lactante (<1 año): compresiones torácicas"
+    - "Siga hasta que se resuelva. **Inicie la RCP** si el paciente deja de responder."
+    - "Retire cualquier cuerpo extraño visible de la boca antes de ventilar."
+    - "- No haga barridos digitales a ciegas en adultos ni en niños."
+  - type: "procedure_card"
+    name: "Aspiración"
+    image: "assets/books/wvems/images/eq_suction.jpg"
+    steps:
+    - "Los pacientes despiertos pueden aspirarse ellos mismos."
+    - "Prepare el aspirador con la punta:"
+    - "- Orofaringe: **punta rígida** (p. ej., Yankauer o DuCanto™ de gran calibre)"
+    - "- :[E] Nasal/BIAD/TET/traqueostomía/estoma: **catéter flexible** (french)."
+    - "Introduzca la punta con la aspiración apagada y/o el orificio de ventilación descubierto."
+    - "- Puede usar 2-3 mL de suero salino para aflojar las secreciones."
+    - "- :[E] Considere un cuidado detallado de la traqueostomía: retire/limpie la cánula interna."
+    - "Tape el orificio de ventilación y aspire mientras retira la punta."
+  - type: "procedure_card"
+    name: "Pinzas de Magill"
+    image: "assets/books/wvems/images/eq_magill.jpg"
+    scope: "A"
+    steps:
+    - "Confirme que el paciente no responde."
+    - "Visualice la faringe posterior."
+    - "- Puede usar un laringoscopio (el adulto promedio usa Mac #3)."
+    - "Use las pinzas de Magill para retirar cualquier cuerpo extraño identificado."
+    - "- Considere usar la **aspiración**."
+    - "Asegure la [vía aérea](topic:wvems-2026-004) con un BIAD si es necesario."
+  - type: "prose"
+    title: "Respiración"
+    markdown: "Oxigenación y ventilación."
+  - type: "procedure_card"
+    name: "BVM"
+    image: "assets/books/wvems/images/eq_bvm.jpg"
+    steps:
+    - "Prepare una BVM del tamaño adecuado."
+    - "- Conéctela a **oxígeno** de alto flujo."
+    - "!- Considere un reanimador con **pieza en T** (en lugar de BVM) en [recién nacidos](topic:wvems-2026-050)."
+    - "Mantenga un sellado adecuado de la mascarilla. **Se prefieren dos reanimadores**."
+    - "- **Uno**: use la pinza E-C; **dos**: use la técnica a dos manos."
+    - "- Las **dentaduras postizas** pueden mejorar el sellado, pero retírelas si causan obstrucción."
+    - "Ventile apretando la bolsa de forma lenta y deliberada."
+    - "- Acompañe la frecuencia natural y dé respiraciones adicionales según necesidad."
+  - type: "procedure_card"
+    name: "NPA / OPA"
+    image: "assets/books/wvems/images/eq_opa.jpg"
+    steps:
+    - "Mida el tamaño adecuado de OPA / NPA:"
+    - "- OPA: de la comisura de la boca al ángulo de la mandíbula"
+    - "- NPA: de la punta de la nariz al ángulo de la mandíbula (o el diámetro de la fosa nasal o del meñique)"
+    - "@2a **OPA**: introdúzcala despacio en la boca. Puede ayudarse con un depresor lingual."
+    - "- Introdúzcala con la **punta hacia la nariz** en adultos y la **punta hacia los pies** en niños."
+    - "- Gírela hasta su posición. Retírela de inmediato si hay náuseas."
+    - "@2b **NPA**: introdúzcala en la fosa nasal con el orificio inclinado (bisel) hacia el tabique."
+    - "- Lubrique la cánula y empiece por la fosa nasal más grande. Un sangrado leve es frecuente."
+    - "- Si nota resistencia: gire suavemente, pruebe una NPA más pequeña o la otra fosa nasal."
+    - "- **Precaución** si hay traumatismo facial evidente o fractura de la base del cráneo."
+  - type: "procedure_card"
+    name: "NIPPV"
+    image: "assets/books/wvems/images/eq_cpap.jpg"
+    scope: "E"
+    steps:
+    - "Anime al paciente con **firmeza**."
+    - "- Considere una NPA si la tolera."
+    - "Inicie el flujo de oxígeno a la mascarilla. Ajuste la **mascarilla básica a 7.5** cmH2O."
+    - "- Alternativa: use el modo CPAP o BiPAP del ventilador con aprobación del director médico."
+    - "- Inicie el ventilador con **CPAP a 7.5** cmH2O y **BiPAP a 10/5** cmH2O (IPAP/EPAP)"
+    - "Coloque la mascarilla sobre la nariz y la boca del paciente y ajuste las correas."
+    - "- Asegure un **sellado adecuado** ajustando la posición y la tensión de las correas."
+    - "Puede usarse en pacientes semiconscientes, pero debe **vigilarse de cerca**."
+    - "- **Retírela de inmediato si hay vómitos** o hipotensión."
+    - ":[I] Considere tratar la [ansiedad](topic:wvems-2026-046) para mejorar la tolerancia."
+    - "Puede ajustar las presiones: más altas si hay hipoxia, más bajas si hay hipotensión."
+    - "- Probablemente sea beneficioso usar **nebulizadores en línea** si está indicado y es posible."
+  - type: "prose"
+    title: "Dispositivos avanzados"
+    markdown: "Vías aéreas supraglóticas y descompresión."
+  - type: "procedure_card"
+    name: "BIAD"
+    image: "assets/books/wvems/images/eq_igel.jpg"
+    scope: "E"
+    steps:
+    - "Prepare un dispositivo del tamaño adecuado:"
+    - "- El adulto promedio usa **iGel #4 (verde)**."
+    - "Siga las **instrucciones del fabricante**. Aplique **lubricante** adecuado."
+    - "- Abra la boca y tire de la mandíbula y la lengua hacia delante (o use la tracción mandibular)."
+    - "Introduzca el BIAD en la faringe. Siga la curva del paladar y la lengua."
+    - "- Pare cuando note resistencia y los dientes estén cerca de la **línea de profundidad**."
+    - "- Puede girarlo para facilitar la inserción. Balancéelo suavemente para asentarlo en la vía aérea."
+    - "Confirme la colocación. Fíjelo bien con esparadrapo u otro dispositivo."
+    - "- Use auscultación, capnometría, EtCO₂ y SpO₂ si las hay."
+    - "Si el BIAD falla, **inténtelo de nuevo con otro tamaño**."
+    - "- El fallo más frecuente de un BIAD es el **tamaño inadecuado**."
+  - type: "procedure_card"
+    name: "Sonda orogástrica"
+    image: "assets/books/wvems/images/eq_gastric.jpg"
+    scope: "A"
+    steps:
+    - "Mida la profundidad adecuada de la sonda:"
+    - "- De la punta de la nariz al estómago"
+    - "Coloque una sonda orogástrica prehospitalaria solo con una **vía aérea adecuada**."
+    - "- Lubrique la sonda orogástrica e introdúzcala por el dispositivo de vía aérea según su diseño."
+    - "- Avance la sonda con suavidad hasta alcanzar la profundidad adecuada."
+    - "Confirme la colocación: inyecte aire y ausculte burbujas en el estómago"
+    - "Fije la sonda e **intente aspirar** el contenido gástrico."
+  - type: "procedure_card"
+    name: "Descompresión pleural"
+    image: "assets/books/wvems/images/eq_ivcath.jpg"
+    scope: "I"
+    steps:
+    - "Identifique el lado y limpie el mejor sitio:"
+    - "!- Pediatría: 2.º espacio intercostal, línea medioclavicular"
+    - "- Adultos: **4.º o 5.º espacio intercostal, por delante de la línea axilar media**"
+    - "^- Considere la [**[toracostomía digital](topic:wvems-2026-096#finger-thoracostomy)**](#finger-thoracostomy) si está indicada y está habilitado para CC."
+    - "Introduzca una aguja IV grande (calibre 12 o 14) en la piel a 90°"
+    - "- Preferiblemente use una aguja **diseñada específicamente** para la descompresión."
+    - "- Pase justo por encima del borde superior de la costilla para minimizar el sangrado."
+    - "Avance hasta notar un \"pop\" y / o escuchar un silbido de aire."
+    - "- Mantenga la aguja en su sitio, **avance solo el catéter** el resto del trayecto."
+    - "Retire la aguja, dejando el catéter de plástico. Aplique un **sello torácico**."
+    - "Ventile el sello torácico o **repita la descompresión** si vuelve la disnea."
+    - "- **Retire** el sello torácico si usa presión positiva (p. ej., BVM, NIPPV)."
+  - type: "prose"
+    title: "Reanimación"
+    markdown: "RCP, desfibrilación y acceso IO."
+  - type: "procedure_card"
+    name: "Compresiones torácicas"
+    steps:
+    - "Confirme que no hay pulso ni respiración."
+    - "Coloque las manos sobre el tórax:"
+    - "- Adulto (14+): dos manos con los dedos entrelazados sobre el centro del tórax"
+    - "!- Niño (1-13): una mano sobre el centro del tórax"
+    - "!- Lactante (<1): dos manos rodeando el tórax, con los pulgares"
+    - "Comprima fuerte y rápido. Comprima aproximadamente 1/3 de la profundidad del tórax."
+    - "- Asegúrese de permitir la **reexpansión completa del tórax** entre compresiones."
+    - "**Minimice las interrupciones**. Turne a los proveedores cada 2-5 min según necesidad."
+    - "NOTA: Puede pasar a un **dispositivo mecánico de RCP** tras los primeros 2 min."
+  - type: "procedure_card"
+    name: "Desfibrilación"
+    image: "assets/books/wvems/images/eq_defib.jpg"
+    steps:
+    - "Corte la ropa para descubrir el tórax."
+    - "- Considere rasurar el exceso de vello."
+    - "- Retire cualquier parche de medicación. Limpie los restos."
+    - "Coloque los parches del desfibrilador. Evite dispositivos implantados o catéteres."
+    - "Cuando esté indicado, detenga las compresiones y analice el ritmo cardíaco."
+    - "~:[E] Use la función \"analizar\" del DEA."
+    - "~:[I] Puede interpretarlo directamente."
+    - "Si está indicada la descarga: **cargue el desfibrilador mientras continúa la RCP**."
+    - "- Empiece al máximo, o siga la pauta de dosificación del fabricante o del director médico."
+    - "!- Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas."
+    - "**Diga con firmeza \"¡FUERA!\"** Confirme visualmente que nadie toca al paciente."
+    - "Desfibrile pulsando **DESCARGA**. **Reinicie la RCP de inmediato**."
+    - "- Considere cambiar de posición los parches (**cambio de vector**) si es refractario."
+    - "- No se recomienda el uso rutinario de la desfibrilación secuencial doble."
+  - type: "procedure_card"
+    name: "IO"
+    image: "assets/books/wvems/images/eq_ezio.jpg"
+    scope: "A"
+    steps:
+    - "Prepare el dispositivo IO y elija el sitio."
+    - "- Considere tratar antes el [dolor](topic:wvems-2026-020)."
+    - "- La **meseta tibial** y la **cabeza humeral** son los sitios típicos. Siga las indicaciones del director médico."
+    - "Introduzca la IO siguiendo el procedimiento recomendado por el fabricante."
+    - "Fíjela bien con un apósito voluminoso u otro dispositivo comercial."
+    - "Considere administrar lidocaína a dosis baja para la molestia local."
+    - "~[A] **[Lidocaína](topic:wvems-2026-drug-reference#lidocaine): 10 mg** IO · cada 5 min · x3 según necesidad por dolor · adulto"
+    - "Considere usar una bolsa de presión para aumentar el flujo de líquidos si es necesario."
+  - type: "prose"
+    title: "Hemorragia"
+    markdown: "Control de la hemorragia."
+  - type: "procedure_card"
+    name: "Cuidado de la herida"
+    image: "assets/books/wvems/images/eq_gauze.jpg"
+    steps:
+    - "Aplique **presión directa** sobre el sangrado."
+    - "- Considere un torniquete o el taponamiento."
+    - "Si el sangrado se controla con facilidad, irrigue las heridas contaminadas."
+    - "- Maximice el **lavado** de la contaminación grosera de las heridas grandes."
+    - "- Considere tratar antes el [dolor](topic:wvems-2026-020) antes de un **lavado** importante."
+    - "Cubra las heridas con gasa estéril y aplique un apósito adecuado."
+    - "- Vigile y **documente el pulso distal**, el movimiento y la sensibilidad."
+    - "- Cubra las [quemaduras](topic:wvems-2026-070) con gasa no adherente y un apósito estéril para quemaduras."
+    - "- Aplique un **sello torácico** (oclusivo) en cualquier herida penetrante de cuello o tronco."
+    - "- **Retire** el sello torácico si usa presión positiva (p. ej., BVM, NIPPV)."
+  - type: "procedure_card"
+    name: "Torniquete"
+    image: "assets/books/wvems/images/eq_tourniquet.jpg"
+    steps:
+    - "Aplique **presión directa** sobre el sangrado."
+    - "- Puede retirar los torniquetes ineficaces puestos por testigos."
+    - "Aplique el torniquete proximal al sangrado según las instrucciones del fabricante."
+    - "- Puede considerar un dispositivo específico (p. ej., torniquete de **unión**, ITclamp)"
+    - "**Apriete** hasta controlar el sangrado. **Fije la varilla** en su sitio."
+    - "- Considere colocar un segundo torniquete si el sangrado continúa."
+    - "- Considere tratar el [dolor](topic:wvems-2026-020). No lo coloque sobre articulaciones óseas."
+    - "**Anote la hora** en el torniquete o directamente en la piel del paciente."
+  - type: "procedure_card"
+    name: "Taponamiento de heridas"
+    image: "assets/books/wvems/images/eq_gauze.jpg"
+    steps:
+    - "Aplique **presión directa** sobre el sangrado."
+    - "- Si está estable, considere el cuidado simple de la herida."
+    - "- Si hay sangrado masivo de un miembro, considere un torniquete."
+    - "- El taponamiento es ideal para la **lesión de unión** (cuello, axila, ingle)."
+    - "- No tapone heridas de cráneo ni de tórax. No tapone orificios naturales."
+    - "Si el sangrado continúa, **limpie** la sangre y los coágulos de la herida."
+    - "Introduzca el material de taponamiento poco a poco, lo más profundo posible en la herida."
+    - "- Evite meter de golpe una gran bola. **Tapone en profundidad** y de forma deliberada."
+    - "- Introduzca en la herida todo el material de taponamiento que sea posible."
+    - "- :[E] Puede usar agentes hemostáticos (p. ej., QuikClot®, XStat®)"
+    - "Vuelva a aplicar **presión directa** sobre el taponamiento. Trate el [dolor](topic:wvems-2026-020)."
+  - type: "prose"
+    title: "Lesiones"
+    markdown: "Restricción del movimiento de la columna e inmovilización."
+  - type: "procedure_card"
+    name: "RMC con collarín cervical"
+    image: "assets/books/wvems/images/eq_collar.jpg"
+    steps:
+    - "Aplique RMC cervical **manual**."
+    - "Prepare un **collarín cervical** del tamaño adecuado."
+    - "- Coloque el collarín cervical manteniendo la RMC cervical manual."
+    - "**Use dispositivos auxiliares** para minimizar todo movimiento de la columna durante la transferencia."
+    - "- Como: tabla espinal, camilla de cuchara, colchón de vacío, etc."
+    - "- Puede probar una **autoextracción** suave de un vehículo (con collarín cervical)."
+    - "Una vez en la camilla, **pueden retirarse los dispositivos auxiliares** si es apropiado."
+    - "- Los pacientes despiertos y colaboradores pueden sujetarse con seguridad con cinturones."
+    - "- Puede incorporarse (hasta 30°) si no hay dolor/hormigueo, para mantener la vía aérea."
+    - "Puede soltarse la RMC cervical manual si el paciente se mantiene quieto."
+    - "- Si no: fije la cabeza a un dispositivo auxiliar adecuado."
+    - "NOTA: Algunos pacientes (por tamaño, edad o anatomía) no serán aptos para el equipo estándar. Nunca fuerce a un paciente a una posición no neutra. Use técnicas alternativas o RMC manual."
+  - type: "procedure_card"
+    name: "Férula"
+    image: "assets/books/wvems/images/eq_splint.jpg"
+    steps:
+    - "Aplique inmovilización manual."
+    - "Descubra la zona: quite o corte la ropa."
+    - "Compruebe y **documente el pulso distal**, el movimiento y la sensibilidad."
+    - "Puede devolver suavemente a una alineación **casi anatómica** y fijar la férula."
+    - "- Inmovilice en la posición encontrada si hay dolor o resistencia importantes."
+    - "Vuelva a comprobar y **documente el pulso distal**, el movimiento y la sensibilidad."
+    - "- Recoloque o retire la férula si empeora la función distal."
+    - "NOTA: Considere una **férula de tracción** en una fractura de fémur aislada."
+  - type: "procedure_card"
+    name: "Reducción de la deformidad"
+    scope: "E"
+    steps:
+    - "Confirme que **no hay pulso distal a la lesión**."
+    - "Considere tratar antes el [dolor](topic:wvems-2026-020) si es posible."
+    - "Reduzca manualmente la lesión e inmovilice en posición anatómica neutra."
+    - "Vuelva a comprobar y **documente el pulso distal**, el movimiento y la sensibilidad."
+  - type: "procedure_card"
+    name: "Retirada del aguijón"
+    steps:
+    - "Inspeccione la herida en busca del aguijón."
+    - "Si lo ve, ráspelo para retirarlo."
+    - "- Use un objeto de borde firme, como una tarjeta de crédito. No use pinzas."
+  - type: "prose"
+    title: "Antídotos"
+    markdown: "Reversión específica de cada toxina."
+  - type: "prose"
+    title: "Administración de antídotos"
+    markdown: |
+      - Algunas toxinas tienen antídotos específicos — solo los **síntomas mayores** necesitan tratamiento.
+      - La mayoría de las indicaciones de abajo **requieren órdenes en línea** (y la dosis) — llame al **toxicólogo** del **centro de toxicología** o a urgencias (o al director médico).
+      - Algunos antídotos están incluidos en otros protocolos — si está indicado, puede seguir esas órdenes permanentes.
+      - No olvide [lo básico](topic:wvems-2026-040): **O₂** para las toxinas [inhaladas](topic:wvems-2026-072), **[Narcan](topic:wvems-2026-drug-reference#narcan)** para la hipoxia, **[bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)** para el choque.
+      - **Centro de toxicología: 1-800-222-1222**
+  - type: "procedure_card"
+    name: "Administración de antídotos"
+    steps:
+    - "~[I] **[Atropina](topic:wvems-2026-drug-reference#atropine)**: [bradicardia](topic:wvems-2026-012), colinérgicos"
+    - "~[I] **[Benadryl](topic:wvems-2026-drug-reference#benadryl)**: [distonía](topic:wvems-2026-046), neurolépticos"
+    - "~[I] **[Bicarbonato](topic:wvems-2026-drug-reference#bicarb)**: [hiperpotasemia](topic:wvems-2026-018), QRS ancho, AAS, ATC, ISRS/IRSN"
+    - "~[I] **[Calcio](topic:wvems-2026-drug-reference#calcium)**: [hiperpotasemia](topic:wvems-2026-018), sobredosis de antagonistas del calcio, quemaduras por ácido fluorhídrico"
+    - "~**[Carbón activado](topic:wvems-2026-drug-reference#charcoal)**: tóxicos por VO (no cáusticos ni metales)"
+    - "~[A] **[CyanoKit](topic:wvems-2026-drug-reference#cyanokit)**: cianuro (ingerido o inhalado)"
+    - "~[A] **[D10](topic:wvems-2026-drug-reference#d10)**: [hipoglucemia](topic:wvems-2026-038), sobredosis de sulfonilureas"
+    - "~**[DuoDote](topic:wvems-2026-drug-reference#duodote)**: organofosforados, agentes nerviosos (armas de destrucción masiva)"
+    - "~[A] **[Glucagón](topic:wvems-2026-drug-reference#glucagon)**: [hipoglucemia](topic:wvems-2026-038), sobredosis de β-bloqueantes y antagonistas del calcio"
+    - "~[I] **[Magnesio](topic:wvems-2026-drug-reference#magnesium)**: [torsades](topic:wvems-2026-014), QTc prolongado"
+    - "~**[Narcan](topic:wvems-2026-drug-reference#narcan)**: [opiáceos](topic:wvems-2026-040) (solo si hay hipoxia), sobredosis de clonidina"
+    - "~[A] **[Versed](topic:wvems-2026-drug-reference#versed)**: [convulsiones](topic:wvems-2026-042), anticolinérgicos"
+  - type: "prose"
+    title: "Referencias de antídotos"
+    markdown: |
+      - Medscape Anticholinergics — https://emedicine.medscape.com/article/812644 [6/24]
+      - Medscape ASA — https://emedicine.medscape.com/article/1009987 [5/24]
+      - Medscape β-Blockers — https://emedicine.medscape.com/article/813342 [9/23]
+      - Medscape Ca-Blockers — https://emedicine.medscape.com/article/2184611 [4/23]
+      - Medscape Cyanide — https://emedicine.medscape.com/article/814287 [5/25]
+      - Medscape Ethanol — https://emedicine.medscape.com/article/812411 [1/25]
+      - Medscape Hydrofluoric acid — https://emedicine.medscape.com/article/769336 [10/21]
+      - Medscape Organophosphate — https://emedicine.medscape.com/article/167726 [3/23]
+      - Medscape SSRI/SNRI — https://emedicine.medscape.com/article/821737 [11/24]
+      - Medscape Tricyclics — https://emedicine.medscape.com/article/819204 [6/24]
+      - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 25
+  - type: "prose"
+    title: "Cardíaco"
+    markdown: "Marcapasos y cardioversión."
+  - type: "procedure_card"
+    name: "Marcapasos"
+    image: "assets/books/wvems/images/eq_defib.jpg"
+    scope: "I"
+    steps:
+    - "Coloque los parches de desfibrilación **y los electrodos de miembros del ECG**."
+    - "- Considere tratar antes el [dolor](topic:wvems-2026-020)."
+    - "- Limpie cualquier medicación tópica. Evite dispositivos implantados o catéteres."
+    - "Ponga el monitor en modo \"marcapasos\"."
+    - "- Elija una frecuencia inicial de **80 lpm** en adultos."
+    - "!- Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para la **frecuencia** pediátrica."
+    - "- Alternativa: siga la pauta de frecuencia del fabricante o del director médico."
+    - "Aumente lentamente la salida en mA hasta observar captura eléctrica."
+    - "- Busque espigas del marcapasos con su QRS correspondiente en la pantalla del ECG."
+    - "- La energía objetivo inicial típica ronda los **80 mA** en **todos los pacientes**."
+    - "Una vez observada la captura eléctrica, compruebe la captura mecánica."
+    - "- El pulso debe corresponder a la actividad eléctrica en la pantalla del ECG."
+    - "Siga aumentando la salida en mA si no hay captura mecánica."
+    - "Mantenga un equilibrio entre la comodidad del paciente y la necesidad médica."
+    - "- Trate el [dolor](topic:wvems-2026-020) y/o la [ansiedad](topic:wvems-2026-046) por el marcapasos en cuanto sea apropiado."
+    - "- Considere reducir la energía si es apropiado."
+  - type: "procedure_card"
+    name: "Cardioversión"
+    image: "assets/books/wvems/images/eq_defib.jpg"
+    scope: "I"
+    steps:
+    - "Coloque los parches de desfibrilación **y los electrodos de miembros del ECG**."
+    - "- Considere tratar antes el [dolor](topic:wvems-2026-020)."
+    - "- Limpie cualquier medicación tópica. Evite dispositivos implantados o catéteres."
+    - "Active el modo **SYNC** y cargue a **200 J** en adultos."
+    - "!- Use la [referencia pediátrica](topic:wvems-2026-144) para las dosis iniciales (y crecientes) en pediatría."
+    - "- Alternativa: siga la pauta de dosificación del fabricante o del director médico."
+    - "- Si el monitor no puede sincronizar: desactive SYNC y use la desfibrilación habitual."
+    - "**Diga con firmeza \"¡FUERA!\"** Confirme visualmente que nadie toca al paciente."
+    - "Cardiovierta pulsando **y manteniendo pulsado** el botón de **DESCARGA**."
+    - "- Puede haber un retraso notable antes de que se administre la energía."
+    - "Revalore al paciente y el ritmo. Repita (o aumente) según necesidad."
+    - "- Trate el [dolor](topic:wvems-2026-020) y/o la [ansiedad](topic:wvems-2026-046) por la descarga en cuanto sea apropiado."
+    - "- Considere cambiar de posición los parches (**cambio de vector**) si es refractario."
+  - type: "prose"
+    title: "Obstetricia"
+    markdown: "Parto de urgencia."
+  - type: "procedure_card"
+    name: "Atención del parto"
+    scope: "E"
+    steps:
+    - "**Descubra a la paciente**. Tenga un acompañante presente."
+    - "- Inspeccione visualmente la zona vaginal."
+    - "Identifique la parte que se presenta. Priorice el **traslado si no está coronando**."
+    - "- Si hay cualquier problema, maneje las complicaciones y traslade cuanto antes."
+    - "**Sostenga y saque la cabeza**. Intente evitar un parto explosivo."
+    - "**Busque una vuelta de cordón al cuello**. Pásela por encima de la cabeza si la encuentra."
+    - "**Saque los hombros**. Saque primero el hombro superior."
+    - "- Puede flexionar las piernas de la madre hacia el pecho para ayudar."
+    - "- Puede presionar la parte baja del abdomen de la madre para ayudar."
+    - "Saque el cuerpo. Cuidado: **los recién nacidos son resbaladizos**."
+    - "Atienda al recién nacido. (Estimule, caliente, limpie, seque.)"
+    - "- Puede colocar al bebé sobre el pecho de la madre, piel con piel."
+    - "- Puede animar a la lactancia materna tras un [parto sin complicaciones](topic:wvems-2026-048)."
+    - "Mantenga al bebé a la altura de la madre y **retrase el pinzamiento del cordón** ~60 s."
+    - "- Pince a unas **6-10 pulgadas** del bebé. Corte entre las pinzas."
+    - "- Deje un muñón largo y viable para que urgencias lo use (para vías y extracción de muestras)."
+    - "Masajee la parte baja del abdomen de la madre (masaje del fondo uterino)."
+    - "- Esto debería ayudar a detener la [hemorragia](topic:wvems-2026-058) posparto."
+    - "- :[A] Si hay mala perfusión: **[TXA](topic:wvems-2026-drug-reference#txa)** (ácido tranexámico): **2 g** IV/IO en 10 min"
+    - "Prepárese para la expulsión de la placenta. No tire del cordón."
+    - "- Lleve la placenta al hospital con la madre y el bebé."
+  - type: "procedure_card"
+    name: "Manejo de complicaciones obstétricas"
+    scope: "E"
+    steps:
+    - "**Priorice el traslado urgente a un centro con servicio de ginecología y obstetricia**."
+    - "Diga a la madre: **No puje**. El SEM puede hacer muy poco ante un parto **prematuro**, **gemelar** o de **nalgas**."
+    - "Dé la atención estándar: [respiración](topic:wvems-2026-006), [dolor](topic:wvems-2026-020), etc."
+    - "Intente ayudar durante el traslado."
+    - "- Parto detenido / distocia de hombros: traslade con las rodillas hacia el pecho"
+    - "- Prolapso: no manipule el cordón, alivie la presión con los dedos en la vagina"
+    - "- Presentación de nalgas: no tire; eleve la parte que se presenta si presiona el cordón"
+    - "^~[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+  - type: "prose"
+    title: "Cuidados críticos"
+    markdown: "SRI, ventilador y vía aérea quirúrgica."
+  - type: "procedure_card"
+    name: "Lista de verificación de preparación para SRI"
+    image: "assets/books/wvems/images/eq_laryngoscope.jpg"
+    scope: "P(CC)"
+    steps:
+    - "Considere una lista de verificación estandarizada."
+    - "- P. ej.: https://bit.ly/NRVEMS_CCAirway"
+    - "**Preoxigene**: dé FiO₂ al 100% con dispositivos auxiliares, prepare el O₂ apneico"
+    - "**Reanime antes de intubar**: vía IV, O₂, monitor, EtCO₂, PA, [vasopresores](topic:wvems-2026-082)"
+    - "**Planifique y prevea**: ¿por qué no un BIAD? Valoración LEMON, informe al equipo"
+    - "**Prepare**: TET, fiador rígido, jeringa de 10 cc, videolaringoscopio, aspiración"
+    - "**Posicione**: grabe el monitor y al paramédico, quizás presión cricoidea"
+    - "**Administre los fármacos**: jeringas etiquetadas, dosis comprobadas dos veces"
+    - "**Coloque el tubo**: vea pasar el TET entre las cuerdas, fíjelo con esparadrapo o un dispositivo"
+    - "**Demuéstrelo**: confirme de dos formas, use capnografía con onda"
+    - "**Cuidados tras la intubación**: sedación y ventilador, sonda orogástrica a aspiración, documente"
+  - type: "procedure_card"
+    name: "Ventilador"
+    image: "assets/books/wvems/images/eq_ventilator.jpg"
+    scope: "P(CC)"
+    steps:
+    - "Conecte el **circuito del paciente** adecuado."
+    - "Conecte la **manguera de oxígeno** de alta presión."
+    - "Inspeccione los filtros de entrada de gas fresco y de aire de emergencia."
+    - "**Encienda** el ventilador y configure el modo y los parámetros."
+    - "Haga la prueba de funcionamiento y **conéctelo al paciente**. Vigile de cerca."
+    - "^~**Parámetros típicos del ventilador en el adulto**"
+    - "^~Modo: **AC (V)** · Vt: **350 mL** (o 450 mL si mide más de 6′)"
+    - "^~RPM: **12-16**/min · FiO₂: **100%** (puede bajarse a 40-60%)"
+    - "^~PEEP: 5 mmHg · límite de PIP: 35 mmHg · I:E 1:3"
+    - "Use un algoritmo estándar de **resolución de problemas** como \"DOPE\":"
+    - "- Investigue de inmediato cualquier **aviso** mientras vigila de cerca al paciente."
+    - "- Retire de inmediato el ventilador y **use la BVM** ante cualquier **alarma** crítica."
+    - "Piense en **desplazamiento**, **obstrucción** o **neumotórax (PTX)** si la respuesta a la BVM es mala."
+    - "**Ajuste los parámetros del ventilador** según la respuesta del paciente."
+    - "- **Hipoxia**: aumente la FiO₂ y/o la PEEP (y/o el volumen minuto)"
+    - "- **Hipotensión**: disminuya la PEEP (y/o el volumen corriente)"
+    - "- **Atrapamiento aéreo** (p. ej., EPOC, asma): aumente la I:E (1:4 o 1:5)"
+  - type: "procedure_card"
+    name: "Cricotirotomía"
+    image: "assets/books/wvems/images/eq_cric.jpg"
+    scope: "P(CC)"
+    steps:
+    - "Confirme que todas las alternativas han fallado."
+    - "Prepare el material y la **aspiración**."
+    - "**Localice la membrana cricotiroidea**. **Limpie la piel** si hay tiempo."
+    - "- Visualice el punto bajo el cartílago tiroides y por encima de los anillos traqueales."
+    - "Use **bougie** en adultos o **aguja** en niños."
+    - "@4a **Bougie**: espere sangre, es una técnica táctil."
+    - "- Haga una **incisión vertical** amplia a través de la piel."
+    - "- Localice la membrana cricotiroidea con el dedo."
+    - "- Haga una **incisión horizontal** de punción; las burbujas son buena señal."
+    - "- **Introduzca un bougie**, luego una **cánula de traqueostomía** sobre el bougie. (O un TET #6: avance 1-2 cm más allá del balón.)"
+    - "- **Infle el balón** hasta que quede tenso. Retire el bougie."
+    - "@4b **Aguja**: use una jeringa pequeña con suero salino."
+    - "!- Conecte una aguja con catéter de 10-12g. Introdúzcala a 90°."
+    - "!- Aspire. Avance despacio hasta ver burbujas."
+    - "!- Incline hacia abajo. Avance el catéter. Retire la aguja."
+    - "!- Use un dispositivo de insuflación a chorro transtraqueal."
+    - "@5 **Confirme** la colocación. **Fíjela** bien con esparadrapo o un dispositivo comercial."
+    - "- Use auscultación, respuesta clínica, color de la piel, SpO₂ y/o EtCO₂."
+  - type: "procedure_card"
+    name: "Toracostomía digital"
+    image: "assets/books/wvems/images/eq_safetriangle.jpg"
+    scope: "P(CC)"
+    anchor: "finger-thoracostomy"
+    steps:
+    - "Confirme que está **sin pulso y en apnea**."
+    - "- **Limpie la piel** si hay tiempo."
+    - "**Localice la costilla** a la altura del pezón (o justo por encima)."
+    - "Corte a lo largo de la costilla, hasta llegar al hueso."
+    - "- Desde la línea axilar anterior hasta la media."
+    - "Introduzca con firmeza una **pinza Kelly** por la incisión."
+    - "- Pase justo **por encima de la costilla**, entre en la pleura."
+    - "Abra la pinza para agrandar el orificio."
+    - "Retire la pinza e introduzca el dedo."
+    - "- Escuche si sale aire, palpe el pulmón, compruebe el pulso."
+    - "Coloque un sello torácico con válvula. Dé **[Ancef](topic:wvems-2026-drug-reference#ancef) 2 g** IV."
+    - "- Coloque la aspiración en el orificio si hay sangrado masivo."

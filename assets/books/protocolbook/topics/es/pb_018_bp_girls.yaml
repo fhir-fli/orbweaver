@@ -1,0 +1,18 @@
+# translated-from-sha256: 8ca4d28acaa3e803df77d62706a434db575f5e3879a78eb1b1eee6b063cd9353
+topic:
+  id: "pb-bp-girls"
+  title: "Niñas — PA según talla"
+  list_subtitle: "p.18 · gráfica (toque para ampliar)"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pediátrico", "presión_arterial", "niñas", "referencia"]
+  category: "universal"
+  page_number: 18
+  blocks:
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_bp_girls_sbp.png"
+    caption: "Niñas — PA sistólica según talla"
+    size: "full"
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_bp_girls_dbp.png"
+    caption: "Niñas — PA diastólica según talla"
+    size: "full"

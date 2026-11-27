@@ -1,0 +1,53 @@
+# translated-from-sha256: 933eeea7633ff762e21699670551642f70d0de9a9c347ad73c29018f61e00ad7
+topic:
+  id: "pb-poisoning-ingestion"
+  title: "Intoxicación / ingestión — paciente con sospecha de intoxicación aguda"
+  list_subtitle: "p.28 · algoritmo inicial"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["intoxicación", "ingestión", "toxicología", "toxíndrome", "antídoto"]
+  category: "medical"
+  page_number: 28
+  blocks:
+  - type: "prose"
+    title: "Manejo inicial"
+    markdown: |
+      - Si hay **CUALQUIER** sospecha de residuos en la piel o la ropa — use equipo de protección personal (guantes, batas, mascarillas); retire / embolse / deseche la ropa; lave bien al paciente y la zona con agua y jabón (la ropa y el EPP son desechos peligrosos — elimínelos adecuadamente)
+      - Monitorice y apoye el ABCD
+      - Tome los signos vitales (PA, FC, FR, SpO2, temperatura)
+      - Si la SpO2 < 90% o hay **CUALQUIER** preocupación por la respiración, inicie O2 al 100% con mascarilla facial
+      - Glucemia capilar a pie de cama y trate la hipoglucemia
+      - Coloque una vía IV de grueso calibre
+      - Haga una historia clínica y una exploración física breves y dirigidas; preste atención al estado mental
+        - Qué tomó, hace cuánto, volumen / cuánto, efectos inmediatos
+      - Esté atento a un traumatismo oculto
+      - Pida laboratorios: hemograma, función renal, electrolitos, función hepática
+      - ECG de 12 derivaciones
+      - Las convulsiones son una emergencia neurológica y deben tratarse de inmediato con diazepam
+      - Lavado gástrico: **CASI NUNCA ESTÁ INDICADO**
+      - Considere **carbón activado en dosis única de 1 g/kg VO/SNG dentro de 1 hora** de la ingestión, para sustancias que se sabe que se adsorben. No lo dé a un paciente que no esté completamente despierto, y nunca intube solo para poder darlo
+  - type: "prose"
+    title: "Indicaciones de ingreso a UCI"
+    markdown: |
+      - Necesidad de TET y ventilación mecánica
+      - Glasgow < 12 / AVDI = I / estado epiléptico
+      - Tóxicos que pueden causar depresión respiratoria (p. ej., intoxicación por amitraz)
+      - Trastornos ácido–base
+      - Evolución clínica de la intoxicación incierta / impredecible (es decir, poco estudiada)
+  - type: "prose"
+    title: "Toxíndromes y antídotos frecuentes"
+    markdown: |
+      - Vea el protocolo específico de: organofosforados / carbamatos / colinérgicos, hidrocarburos / parafina / queroseno, benzodiacepinas / opiáceos, paracetamol, etanol
+      - **Adrenérgicos / simpaticomiméticos**
+        - Cocaína, anfetaminas (metanfetamina en cristal, Adderall), seudoefedrina
+        - Presentación: HTA, taquicardia, midriasis, ansiedad, delirium, ideas delirantes
+        - Tx: de soporte — **benzodiacepinas primero** (por lo general controlan por sí solas la hipertensión y la taquicardia), más líquidos IV; antihipertensivos solo si aún hacen falta
+      - **Anticolinérgicos / antidepresivos tricíclicos (ATC) / antihistamínicos**
+        - Presentación: hiperpirexia, vasodilatación cutánea (rubor), disminución de la saliva, midriasis, retención urinaria, arritmias
+        - Tx:
+          - Fisostigmina — evítela en ATC; solo si hay taquiarritmias persistentes o convulsiones. Llame al anestesiólogo antes de administrarla.
+          - NaHCO3 en ATC
+      - **Metanol**
+        - Presentación: delirium, pérdida de la visión
+        - Tx: oral por SNG — 1.8 ml/kg de etanol al 43% (aproximadamente **tres tragos de 40 ml, ≈126 ml**, en un adulto de 70 kg); mantenimiento 0.2–0.4 ml/kg/hora de etanol al 43%
+        - **Más ácido fólico 1 mg/kg (o 50 mg) IV cada 4–6 horas** — acelera la conversión del ácido fórmico en CO₂ y agua, y es barato y accesible
+        - **Refiera urgentemente para hemodiálisis si está disponible:** pH ≤ 7.15, síntomas visuales, convulsiones, coma o deterioro a pesar del antídoto. La diálisis elimina tanto el metanol como el formato y es el tratamiento definitivo

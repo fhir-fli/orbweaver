@@ -1,0 +1,141 @@
+# translated-from-sha256: 574a848c1324d6062fbc0fec190d5aedd859af66f516a7df2f6a6f8f882ae7f7
+topic:
+  id: "pb-im-sepsis"
+  title: "Sepsis del adulto"
+  list_subtitle: "pp.99–100 · qSOFA · SOFA · antibióticos"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sepsis", "choque séptico", "adulto", "medicina interna", "qSOFA", "SOFA", "lactato", "vasopresor", "ceftriaxona", "antibióticos", "PAM"]
+  category: "medical"
+  pages:
+  - page_number: 99
+    blocks:
+    - type: "prose"
+      title: "Definiciones"
+      markdown: |
+        - **Sepsis** (ya no existe la "sepsis grave"): disfunción orgánica potencialmente mortal causada por una respuesta desregulada del huésped a la infección
+        - **Disfunción orgánica**: un cambio agudo en la puntuación SOFA ≥ 2 puntos secundario a la infección
+        - **Choque séptico**
+          - Sepsis con alteraciones circulatorias / celulares / metabólicas graves que aumentan sustancialmente la mortalidad (mortalidad hospitalaria ≥ 40%)
+          - Definición clínica: hipotensión persistente que requiere vasopresores para mantener PAM ≥ 65, y lactato sérico > 2 mmol/L (18 mg/dL), tras una reanimación con volumen adecuada
+    - type: "prose"
+      title: "Manejo"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (PA, FC, FR, SpO₂, temp, peso)
+        - Inicie oxígeno si la SpO₂ < 90%
+        - ECG de 12 derivaciones
+        - Haga una historia y una exploración física breves y dirigidas
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "qSOFA — ¿2 o más de estos?"
+        criteria:
+        - "GCS < 15"
+        - "Frecuencia respiratoria > 22"
+        - "PAS < 100"
+        - "⚠️ El qSOFA NO DETECTA a muchos pacientes sépticos — una puntuación menor de 2 NO descarta la sepsis. Trate según la sospecha clínica"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate como sepsis hasta tener los resultados"
+            bullets:
+            - "Bolo de líquidos IV"
+            - "Inicie antibióticos — EN MENOS DE 1 HORA en el choque séptico, en menos de 3 horas en los demás"
+            - "Extraiga análisis, incluidos hemocultivos"
+            severity: "priority"
+        - label: "No"
+          box:
+            title: "No trate como sepsis"
+            severity: "non_urgent"
+    - type: "prose"
+      title: "Puntuación SOFA (puntos por sistema orgánico)"
+      markdown: |
+        - **PaO₂/FiO₂ (mmHg)** — 0: ≥ 400 · 1: < 400 · 2: < 300 · 3: < 200 con soporte respiratorio · 4: < 100 con soporte respiratorio
+        - **Plaquetas (×10³/µL)** — 0: ≥ 150 · 1: < 150 · 2: < 100 · 3: < 50 · 4: < 20
+        - **Bilirrubina (mg/dL)** — 0: < 1.2 · 1: 1.2–1.9 · 2: 2.0–5.9 · 3: 6.0–11.9 · 4: > 12.0
+        - **PAM / vasopresores** — 0: ≥ 70 · 1: < 70 · 2: dopamina < 5 o dobutamina (cualquier dosis) · 3: dopamina 5.1–15 o adrenalina ≤ 0.1 o noradrenalina ≤ 0.1 · 4: dopamina > 15 o adrenalina > 0.1 o noradrenalina > 0.1
+        - **GCS** — 0: 15 · 1: 13–14 · 2: 10–12 · 3: 6–9 · 4: < 6
+        - **Creatinina (mg/dL)** — 0: < 1.2 · 1: 1.2–1.9 · 2: 2.0–3.4 · 3: 3.5–4.9 · 4: > 5.0
+        - **Diuresis (mL/día)** — 3: < 500 · 4: < 200
+    - type: "flowchart"
+      variant: "algorithm"
+      stages:
+      - decision: "¿Aumento ≥ 2 de la puntuación SOFA respecto a la basal? (suponga una basal de 0 si no hay disfunción orgánica previa conocida)"
+        outcomes:
+        - label: "Sí"
+          box:
+            title: "Trate la sepsis"
+            severity: "priority"
+        - label: "No"
+          box:
+            title: "No trate como sepsis"
+            severity: "non_urgent"
+    - type: "prose"
+      title: "Recordatorio"
+      highlight: true
+      markdown: |
+        Este protocolo puede usarse durante la hospitalización, no solo al ingreso.
+  - page_number: 100
+    blocks:
+    - type: "table"
+      title: "Estimación de la PaO₂ a partir de la saturación de O₂"
+      zebra: true
+      columns: ["PaO₂", "Sat O₂", "PaO₂", "Sat O₂", "PaO₂", "Sat O₂"]
+      column_flex: [2, 2, 2, 2, 3, 2]
+      column_align: ["center", "center", "center", "center", "center", "center"]
+      rows:
+      - cells: ["21", "35%", "36", "69%", "51", "86%"]
+      - cells: ["22", "37%", "37", "71%", "52", "86%"]
+      - cells: ["23", "40%", "38", "72%", "53", "87%"]
+      - cells: ["24", "43%", "39", "74%", "54–55", "88%"]
+      - cells: ["25", "45%", "40", "75%", "56–57", "89%"]
+      - cells: ["26", "48%", "41", "76%", "58–59", "90%"]
+      - cells: ["27", "50%", "42", "77%", "60–62", "91%"]
+      - cells: ["28", "53%", "43", "79%", "63–65", "92%"]
+      - cells: ["29", "55%", "44", "80%", "66–68", "93%"]
+      - cells: ["30", "57%", "45", "81%", "69–73", "94%"]
+      - cells: ["31", "60%", "46", "82%", "74–78", "95%"]
+      - cells: ["32", "62%", "47", "83%", "79–85", "96%"]
+      - cells: ["33", "64%", "48", "83%", "86–96", "97%"]
+      - cells: ["34", "65%", "49", "84%", "97–114", "98%"]
+      - cells: ["35", "67%", "50", "85%", "≥ 115", "99%"]
+    - type: "table"
+      title: "Estimación del flujo de oxígeno — cánula nasal"
+      zebra: true
+      columns: ["Flujo de oxígeno", "FiO₂ (%)"]
+      column_flex: [6, 4]
+      column_align: ["left", "center"]
+      rows:
+      - cells: ["Aire ambiente", "21"]
+      - cells: ["1 L", "24"]
+      - cells: ["2 L", "28"]
+      - cells: ["3 L", "32"]
+      - cells: ["4 L", "36"]
+      - cells: ["5 L", "40"]
+      - cells: ["6 L", "44"]
+    - type: "prose"
+      title: "Manejo terapéutico"
+      markdown: |
+        - **Cardiovascular** — vigile FC, PA, diuresis y llenado capilar en busca de signos de hipoperfusión
+          - Bolo inicial: 30 mL/kg de RL/SSN en las primeras 3 horas — **adminístrelo en pasos de 500 mL–1 L y reevalúe entre cada uno** (tórax, PVY, saturación de oxígeno, diuresis). Donde no hay ventilación mecánica, la sobrecarga de líquidos es mucho más difícil de rescatar, y los ensayos en el África subsahariana han mostrado daño por la carga agresiva de líquidos
+          - Bolo adicional: otros 500 mL – 1 L de RL/SSN según necesidad
+          - Vasopresor: inícielo si la PAM < 65 tras la reanimación con líquidos. **La noradrenalina es de primera línea donde esté disponible** — empiece con 0.05–0.1 mcg/kg/min y ajuste a PAM ≥ 65; puede pasarse por vía periférica con contador de gotas si no hay vía central. Si no hay, dopamina 5–20 mcg/kg/min — aceptable, pero con muchas más arritmias y mayor mortalidad
+        - **Respiratorio** — oxígeno según necesidad para mantener la Sat O₂ > 90%
+        - **Análisis** — hemograma, malaria, hemocultivo; función renal, electrolitos; función hepática, amilasa, lipasa; TP/INR, TTP; urocultivo
+        - **Transfunda** — Hb < 5
+        - **Control de la glucosa** — insulina para mantener la glucosa por debajo de 10 mmol/L (180 mg/dL); no busque un control estricto, aquí la hipoglucemia hace más daño
+        - **Profilaxis de TVP** — **enoxaparina 40 mg SC al día**, o heparina no fraccionada 5000 unidades SC dos o tres veces al día, salvo sangrado activo o plaquetas bajas
+        - **Profilaxis GI** — solo si está con ventilación mecánica o tiene coagulopatía; puede considerarse en el paciente muy grave con varias comorbilidades; puede usarse un antagonista H2 o un IBP
+        - **Nutrición** — inicie la alimentación enteral pronto en el curso de la enfermedad
+    - type: "prose"
+      title: "Elección de antibióticos (IV)"
+      markdown: |
+        - Doble terapia SOLO en los pacientes en choque
+        - Use un antibiótico de 2.ª línea o adicional según la sospecha clínica del foco
+        - **1.ª línea:** ceftriaxona 2 g IV al día
+        - **Gramnegativos:**
+          - Gentamicina IV 5 mg/kg/día
+          - Meropenem 1 g IV cada 8 horas (también cubre grampositivos, pero NO SARM)
+        - **Grampositivos (incluido SARM):**
+          - Clindamicina 600 mg IV cada 8 horas (también anaerobios)
+          - Vancomicina 15 mg/kg IV **cada 6 horas** (consulte con farmacia) — cada 6 horas en el SARM grave, nivel valle objetivo 15–20 mg/L

@@ -1,0 +1,41 @@
+# translated-from-sha256: 10b2da9a10cf5285af6a35dcd2fbda065e29b6937749ca742dadb27ed7ba895e
+topic:
+  id: "pb-malaria-complications"
+  title: "Malaria — complicaciones y coinfección"
+  list_subtitle: "p.23 · LRA, anemia, fracaso del tratamiento"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["malaria", "complicaciones", "coinfección", "tropical", "pediátrico"]
+  category: "medical"
+  page_number: 23
+  blocks:
+  - type: "prose"
+    title: "Complicaciones"
+    markdown: |-
+      a) **Coma:** mantenga la vía aérea, coloque al paciente de lado, descarte otras causas (hipoglucemia, meningitis)
+      b) **Hiperpirexia:** baño con esponja tibia, paracetamol
+      c) **Convulsiones:** vea el tratamiento general de las convulsiones
+      d) **Lesión renal aguda:**
+        i) Descarte causas prerrenales — corrija primero la hipovolemia
+        ii) **Un balance hídrico cuidadoso es la parte más importante del tratamiento**
+        iii) El tratamiento antimalárico eficaz es la terapia definitiva
+        iv) **La furosemida (Lasix) 1 mg/kg/dosis cada 6–12 h es solo para la SOBRECARGA de volumen** — no mejora la recuperación renal y empeora la lesión en un niño con depleción de volumen
+      e) **Anemia:** aquí una Hb < 9 es un **umbral pragmático para iniciar hierro en este entorno, no la definición de anemia** (los puntos de corte diagnósticos de la OMS son más altos y específicos por edad). Si la Hb es < 9, administre hierro — pero **inícielo solo después de completar el tratamiento antimalárico**, no al ingreso. **Trate durante 3 meses** (se tarda 2–4 semanas en corregir la hemoglobina y 1–3 meses en reponer los depósitos de hierro); entregue 14 días cada vez y revise en cada entrega. Vuelva a medir la Hb a 1 mes — si no ha subido, el diagnóstico es erróneo o ha fallado la adherencia
+      f) **Tras el alta por anemia palúdica grave — administre quimioprevención de la malaria posalta (PDMC):** un ciclo completo de **dihidroartemisinina-piperaquina mensual durante 3 meses** (en las semanas 2, 6 y 10 tras el alta). Recomendada por la OMS desde 2022; reduce la mortalidad por todas las causas en ~77% y los reingresos en ~55%. Aproveche también estas visitas para los controles de hemólisis de (h)
+      g) **Fracaso del tratamiento:**
+        i) Considere otras causas de enfermedad / comorbilidades
+        ii) Un niño con antimaláricos VO y signos de malaria grave → cambie a **artesunato IV**
+        iii) Si está con antimaláricos VO y sigue febril con una **gota gruesa positiva** a las **72 h** → compruebe la adherencia; si hay fracaso del tratamiento, pase al **tratamiento de segunda línea**
+      h) **Hemólisis tardía (tras artesunato):**
+        i) Ocurre en niños que recibieron artesunato **PARENTERAL** — no con TCA oral, ni con quinina o arteméter. Es más frecuente tras parasitemias altas, pero no limite la vigilancia a esos niños
+        ii) **Hemoglobina semanal durante 4 semanas** tras el alta — la Hb sola basta para actuar, y está disponible en todas partes
+        iii) Si la Hb baja, o hay ictericia u orina oscura, añada **LDH, bilirrubina, haptoglobina y reticulocitos donde estén disponibles**
+        iv) Transfunda si hay síntomas, o si la Hb baja del umbral de transfusión
+        v) Indique al cuidador en el alta que regrese de inmediato si aparecen ojos amarillos, orina oscura, palidez o falta de aire — sin esperar a la cita
+  - type: "prose"
+    title: "Coinfección"
+    markdown: |-
+      Ningún hallazgo clínico o de laboratorio distingue bien la infección bacteriana de la malaria.  Los niños con malaria actual o reciente tienen mayor riesgo de infecciones bacterianas invasivas y mayores tasas de mortalidad.
+
+      a) **Neumonía:** trate si se sospecha y cumple los criterios de la OMS de neumonía
+      b) **Septicemia:** trate si se sospecha y cumple los **criterios de SRIS**
+      c) **Meningitis:** trate si se sospecha y cumple los criterios de la OMS; **haga la PL antes de iniciar los antibióticos**

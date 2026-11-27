@@ -1,0 +1,163 @@
+# translated-from-sha256: b90183809366f6639ebdb1baa65d641465e5a2c5c8ccb9533417e3c79fc5e519
+topic:
+  id: "wvems-2026-050"
+  version: "v260101"
+  title: "Neonato"
+  list_subtitle: "2026-050 · recién nacido / APGAR / pieza en T"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "neonato"
+  - "recién nacido"
+  - "lactante"
+  - "reanimación"
+  - "apgar"
+  - "pieza en t"
+  aliases:
+  - "Recién nacido"
+  - "Reanimación del bebé"
+  - "Reanimación del lactante"
+  - "Pieza en T"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 50
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "caution"
+        text: "[Precaución si rechazan la atención](topic:wvems-2026-109#patient-refusals)"
+      entry_chain:
+      - text: "Lactante menor de 1 mes (≤30 días)"
+        shape: "stadium"
+      - text: "Estimule, abrigue y seque"
+        shape: "rounded_rectangle"
+      decision:
+        text: "¿Pulso?"
+        shape: "diamond"
+      branches:
+      - id: "over_100"
+        label: "Más de 100"
+        criteria:
+        - "Piel caliente y rosada"
+        - "Llanto activo"
+        actions:
+        - text: "APGAR"
+          kind: "diagnostic"
+        - text: "Fomente la lactancia materna"
+          kind: "procedure"
+      - id: "moderate"
+        label: "100 - 60"
+        criteria:
+        - "Cianosis, disnea"
+        - "Llanto débil"
+        actions:
+        - text: "Administre O₂"
+          kind: "procedure"
+        - text: "Pieza en T"
+          condition: "Asista"
+          kind: "procedure"
+        - text: "Glucómetro"
+          kind: "diagnostic"
+      - id: "under_60"
+        label: "Menos de 60"
+        criteria:
+        - "Bebé hipotónico"
+        - "APGAR bajo / cero"
+        actions:
+        - text: "Administre O₂"
+          kind: "procedure"
+        - text: "Pieza en T"
+          condition: "Ventile"
+          kind: "procedure"
+        - text: "Compresión torácica"
+          kind: "procedure"
+        - provider_level: "I"
+          text: "Epinefrina"
+          peds_only: true
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Bradicardia](topic:wvems-2026-012)"
+        - text: "[Circulación / choque](topic:wvems-2026-008)"
+      dose_table:
+      - drug: "[Epinefrina](topic:wvems-2026-drug-reference#epi-epi-neb)"
+        dose: "0.5 mL (de 1 mg en 10 mL)"
+        route: "IV/IO"
+        frequency: "cada 5 min"
+        population: "peds"
+  - page_number: 51
+    blocks:
+    - type: "prose"
+      title: "Imperativos del neonato"
+      highlight: true
+      markdown: |
+        - La mayoría responde a una estimulación simple.
+          - **Séquelo** y colóquelo sobre el pecho de la madre.
+          - Espere 60 seg antes de pinzar el cordón.
+          - Deje 6–10 pulgadas de cordón viable.
+        - **La SpO₂ sube despacio** tras el nacimiento.
+          - Considere un sensor en la **mano derecha**.
+        - Puede **probar 30 seg de ventilación** antes de empezar las compresiones.
+          - Si no hay **reanimador con pieza en T**: use una **[BVM](topic:wvems-2026-096#bvm)** neonatal.
+          - El **ECG** puede dar una frecuencia del pulso y una respuesta rápidas y fiables.
+        - Causas menos frecuentes de dificultad: [PTX](topic:wvems-2026-006), [hipoglucemia](topic:wvems-2026-038), [choque](topic:wvems-2026-008).
+    - type: "row"
+      blocks:
+      - type: "prose"
+        title: "Compresiones"
+        callout: true
+        markdown: |
+          - Neonato: **120** /min
+          - OPA/NPA: **3 : 1** con BVM
+          - BIAD: **continuas**
+      - type: "prose"
+        title: "Frecuencia con BVM"
+        callout: true
+        markdown: |
+          Neonato: **cada 2 seg** (30 /min)
+    - type: "row"
+      blocks:
+      - type: "table"
+        title: "APGAR"
+        flex: 9
+        columns: ["", "2", "1", "0"]
+        column_flex: [2, 1, 1, 1]
+        rows:
+        - cells: ["Apariencia", "rosado", "azul", "gris"]
+        - cells: ["Pulso", "100+", "99-1", "0"]
+        - cells: ["Gesticulación", "buena", "escasa", "ninguna"]
+        - cells: ["Actividad", "patalea", "débil", "flácido"]
+        - cells: ["Respiración", "llanto", "boqueo", "0"]
+      - type: "prose"
+        title: "SpO₂ normal"
+        flex: 5
+        callout: true
+        markdown: |
+          - 1 min: **60–65%**
+          - 2 min: **65–70%**
+          - 3 min: **70–75%**
+          - 4 min: **75–80%**
+          - 5 min: **80–85%**
+          - 10 min: **85–95%**
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Documente las puntuaciones **APGAR al 1 y a los 5 minutos** — sume los puntos totales.
+        - Puede colocar al recién nacido directamente sobre el pecho de la madre para **mantenerlo caliente**.
+          - Fomente la lactancia materna. Coloque las **pulseras de identificación** de la madre y el bebé si las hay.
+        - La **aspiración de meconio** no está incluida en este protocolo.
+        - Evite el O₂ a alto flujo sobre los ojos del recién nacido.
+        - Este protocolo es solo para lactantes menores de 1 mes (≤ 30 días).
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - NALS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001367 [Ver: 2025]
+        - Medscape Delivery — https://emedicine.medscape.com/article/260036 [Ver: 2/24]
+        - Medscape Neonate — https://emedicine.medscape.com/article/977002 [Ver: 10/24]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 36
+
+        NEMSIS: 9914133, 9914163

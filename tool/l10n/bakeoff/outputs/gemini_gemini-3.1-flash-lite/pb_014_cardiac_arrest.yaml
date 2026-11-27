@@ -1,0 +1,151 @@
+# translated-from-sha256: 0bfccf7af382fd7b69624e21397567888289eff9df1e54899e1917bc771fc05d
+# ============================================================
+# ProtocolBook p.14 — Adult Cardiac Arrest Algorithm
+#
+# Schema features exercised:
+#   - TopicBranch.continuation on the No-Pulse branch
+#     (asymmetric flow — right branch terminates, left continues)
+#   - entry_arrow_label "Every 2 minutes" labels the arrow from the
+#     branch's action list into its first continuation node
+#   - H's and T's as a plain two-column table block
+#   - High-Quality CPR as a highlighted prose callout
+#
+# ✅ OE-CONFIRMED CHANGE APPLIED (Grey's OpenEvidence pass, 2026-07-26):
+#   MODERATE — COMPRESSION RATE "at least 100/min" → "100–120/min".
+#   The upper bound is clinically load-bearing, not decorative: rates
+#   above 120/min are associated with reduced compression depth and
+#   potentially worse outcomes, so an open-ended "at least" invites the
+#   exact failure mode the 2025 AHA guidelines bound. This was the item
+#   left pending from the Emergency batch — now confirmed and applied.
+#   Same fix applied in step to p.15 (pb_015_cpr_summary).
+#   Refs: Kleinman 2025 Circulation (Part 7, Adult BLS); Meaney 2013.
+#
+# ✓ OE-VERIFIED, NO CHANGE: epinephrine 1 mg IV in 10 mL NS with a
+#   20 mL flush every 2 minutes / every other cycle; the "definite
+#   pulse" branch at 1 breath every 6 seconds (correct for ADULTS —
+#   note this differs from the paediatric rate, see p.13/p.15).
+#
+# ✅ RESOLVED by OE (2026-07-27): KEEP hypoglycaemia in the H's, but mark
+#    it as a deliberate setting-specific addition. A one-line footnote was
+#    added under the table. (My earlier advice was to add nothing; OE asked
+#    for the footnote, so the footnote is what is printed.)
+#
+# (historical) OPEN item, now closed: HYPOGLYCAEMIA leads our H's
+#   list. It was in the 2005 AHA H's and T's but was dropped from 2010
+#   onward; the current standard is 5 H's (Hypovolaemia, Hypoxia,
+#   Hydrogen ion, Hypo-/Hyperkalaemia, Hypothermia) and 5 T's. OE
+#   judged keeping it DEFENSIBLE and appropriate for an LMIC manual
+#   where hypoglycaemia is a more prevalent reversible cause, and noted
+#   6 H's + 5 T's is fine as a deliberately expanded list. Kept as
+#   printed; all other H's and T's verified standard. Now decided:
+#   keep it, with the footnote.
+# 2026-08-28 loop-renderer pass:
+#   1. The ACLS chart is now variant: cycle - a real back-edge from the
+#      2-minute rhythm check to CPR. It was drawn one-way, with the loop
+#      implied only by an "Every 2 minutes" arrow label on a chain that never
+#      returned.
+#   2. EPINEPHRINE INTERVAL CORRECTED. Epinephrine sat inside the "Every 2
+#      minutes" cycle node, so the page read as 1 mg every 2 minutes - roughly
+#      double the AHA interval. p.13 (PALS) in this same book already prints
+#      "Repeat epinephrine every 3-5 minutes". Now stated explicitly on both
+#      the CPR node and the resume-CPR branch. VERIFIED against the published
+#      sources, not asserted from memory: AHA ACLS gives 1 mg every 3-5 min
+#      for both shockable and non-shockable rhythms, and the 2-minute figure
+#      is the rhythm-check/compressor-change interval, not the drug interval.
+#      Conflating the two is what the chart did.
+#      ncbi.nlm.nih.gov/books/NBK613285 - 2019 AHA Focused Update on ACLS.
+# ============================================================
+
+topic:
+  id: "pb-adult-cardiac-arrest"
+  title: "Paro cardíaco en adultos"
+  list_subtitle: "p.14 · Ramas de ACLS"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["acls", "adulto", "paro_cardiaco", "rcp", "reanimación", "emergencia"]
+  category: "critical_care"
+  page_number: 14
+
+  blocks:
+
+  - type: "flowchart"
+    variant: "cycle"
+      # Fixed-cycle resuscitation (loop taxonomy 3): CPR 2 min -> rhythm and
+      # pulse check -> still no pulse -> back to CPR. The chart used to draw
+      # this one-way, with the loop implied only by an "Every 2 minutes" arrow
+      # label on a continuation chain that never returned.
+    nodes:
+    - title: "Seguridad, Estimular, Pedir ayuda — mueva al paciente al área de emergencia (siempre que pueda moverse de forma segura)"
+    - shape: "decision"
+      title: "COMPROBAR PULSO: ¿Se palpa un pulso DEFINIDO en menos de 10 segundos?"
+      down_label: "No hay pulso"
+      branches:
+      - label: "Pulso definido"
+        side: "right"
+        box:
+          title: "Pulso presente — dar soporte y monitorizar"
+          severity: "priority"
+          bullets:
+          - "Abrir, mantener vía aérea"
+          - "1 respiración cada 6 segundos"
+          - "Recomprobar pulso cada 2 min"
+          - "→ Algoritmo postparo cardíaco"
+    - id: "cpr"
+      title: "Iniciar RCP — 2 minutos"
+      severity: "emergency"
+      bullets:
+      - "Compresiones continuas hasta disponer de mascarilla con bolsa autohinchable"
+      - "30 compresiones : 2 respiraciones"
+      - "Conectar O2 a la mascarilla con bolsa autohinchable"
+      - "Adrenalina 1 mg IV en 10 ml de solución salina normal, seguido de un lavado de 20 ml — **repetir cada 3–5 minutos**, NO cada ciclo"
+      - "Identificar y tratar causas reversibles (H y T a continuación)"
+    - shape: "decision"
+      title: "Después de 2 minutos — cambiar al reanimador que comprime, comprobar pulso (≤ 10 seg) y ritmo. ¿Pulso presente?"
+      down_label: "Sí — ROSC"
+      branches:
+      - label: "No"
+        side: "left"
+        box:
+          title: "Reanudar RCP inmediatamente"
+          severity: "emergency"
+          bullets:
+          - "Adrenalina solo si han pasado 3–5 minutos desde la última dosis"
+          - "Continuar trabajando en las causas reversibles"
+        loop_to: "cpr"
+        loop_label: "cada 2 min"
+    - title: "→ Algoritmo postparo cardíaco"
+
+  - type: "table"
+    columns: []
+    rows:
+    - cells:
+      - "**H**ipoglucemia"
+      - "**T**aponamiento cardíaco"
+    - cells:
+      - "**H**ipovolemia"
+      - "**T**ensión (neumotórax a tensión)"
+    - cells:
+      - "**H**ipoxia"
+      - "**T**oxinas"
+    - cells:
+      - "**H**idrogeniones (acidosis)"
+      - "**T**rombosis pulmonar"
+    - cells:
+      - "**H**ipo- / Hiperpotasemia"
+      - "**T**rombosis coronaria"
+    - cells:
+      - "**H**ipotermia"
+      - ""
+
+  - type: "prose"
+    markdown: |
+      La hipoglucemia no está en la lista estándar de la AHA; se mantiene aquí deliberadamente, como una causa común y fácilmente reversible de paro en este entorno.
+
+  - type: "prose"
+    title: "RCP de alta calidad"
+    highlight: true
+    markdown: |
+      - **Frecuencia de compresión** 100–120/min
+      - **Profundidad de compresión** al menos 5 cm
+      - **Permitir la expansión torácica completa** después de cada compresión
+      - **Minimizar las interrupciones** en las compresiones torácicas a < 10 segundos
+      - **Evitar la ventilación excesiva** — administrar solo el volumen suficiente para producir una elevación visible del tórax. Administrar 2 respiraciones cada 30 compresiones, o 1 respiración cada 6 segundos si está intubado.

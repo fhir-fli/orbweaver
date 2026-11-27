@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_054.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s32",
+   "severity": "meaning",
+   "problem": "The Spanish uses 'descompensa' (decompensates/deteriorates) instead of 'descompresión' (decompression). The English text refers to the need to repeat the pleural decompression procedure, whereas the Spanish refers to the patient's general clinical decompensation.",
+   "fix": "Repítala de inmediato si es necesaria una nueva descompresión tras el éxito inicial.",
+   "en": "- Most important aspect is to prioritize emergent transport.\n  - **Get the patient to the hospital.**\n- Reassess and repeat **[Pleural Decompression](topic:wvems-2026-096#pleural-decompress)** as needed.\n  - Repeat immediately if decompression after initial success.\n- Reassess and apply additional **[Tourniquets](topic:wvems-2026-096#tourniquet)** as needed.\n  - Apply pressure and **[pack wounds](topic:wvems-2026-096#wound-packing)** for junctional bleeding.\n- Consider a concurrent medical cause preceding the trauma.\n",
+   "es": "- Lo más importante es priorizar el traslado urgente.\n  - **Lleve al paciente al hospital.**\n- Reevalúe y repita la **[descompresión pleural](topic:wvems-2026-096#pleural-decompress)** según necesidad.\n  - Repítala de inmediato si se descompensa tras el éxito inicial.\n- Reevalúe y aplique **[torniquetes](topic:wvems-2026-096#tourniquet)** adicionales según necesidad.\n  - Aplique presión y **[taponee las heridas](topic:wvems-2026-096#wound-packing)** en la hemorragia de unión.\n- Considere una causa médica concomitante previa al traumatismo.\n"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s32\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The Spanish uses 'descompensa' (decompensates/deteriorates) instead of 'descompresión' (decompression). The English text refers to the need to repeat the pleural decompression procedure, whereas the Spanish refers to the patient's general clinical decompensation.\",\n    \"fix\": \"Repítala de inmediato si es necesaria una nueva descompresión tras el éxito inicial.\"\n  }\n]\n```"
+ ]
+}

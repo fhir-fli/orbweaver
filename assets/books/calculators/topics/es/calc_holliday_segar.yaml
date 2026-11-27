@@ -1,0 +1,29 @@
+# translated-from-sha256: b0f3fb97990bf25102f34fcec58b34e19863a6ef3e6fdeda24cd0211ce1a423b
+topic:
+  id: "calc-holliday-segar"
+  title: "Líquidos IV de mantenimiento"
+  list_subtitle: "regla 4-2-1 de Holliday-Segar"
+  last_reviewed: "Evidence review 2026-07-19 · Holliday-Segar 1957 · AAP 2018 (isotonic)"
+  tags: ["líquidos", "mantenimiento", "holliday", "segar", "4-2-1", "iv", "pediátrico", "hidratación", "velocidad"]
+  aliases:
+  - "regla 4-2-1"
+  - "Líquidos de mantenimiento"
+  - "Holliday-Segar"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      **Velocidad** de líquidos de mantenimiento según el peso (Holliday-Segar). Introduzca el peso;
+      la calculadora da la velocidad por hora y el volumen en 24 horas.
+  - type: "formula"
+    kind: "holliday_segar"
+    title: "Velocidad de líquidos de mantenimiento"
+    source: "Holliday & Segar, Pediatrics 1957; composición según la AAP 2018 (Feld)"
+    inputs:
+    - {key: "weight", label: "Peso", unit: "kg", type: "number"}
+    notes:
+    - "Por hora (4-2-1): 4 mL/kg/h los primeros 10 kg + 2 mL/kg/h los siguientes 10 kg + 1 mL/kg/h por cada kg > 20."
+    - "Por día (100-50-20): 100 mL/kg los primeros 10 kg + 50 mL/kg los siguientes 10 kg + 20 mL/kg por cada kg > 20."
+    caveats:
+    - "Use un líquido de mantenimiento ISOTÓNICO (NaCl al 0.9% o balanceado, + dextrosa/KCl) según la AAP 2018 — los líquidos hipotónicos (D5-NaCl al 0.45%/0.2%) conllevan riesgo de hiponatremia."
+    - "Para niños > 28 días; los neonatos y ciertos estados (SIADH, enfermedad renal/cardíaca, pérdidas en curso) requieren ajuste."

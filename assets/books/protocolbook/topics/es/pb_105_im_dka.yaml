@@ -1,0 +1,100 @@
+# translated-from-sha256: 2381811e026d02c789c4f7e63201b210be4a7ea56e6cc27e46cf1abaeb657b55
+topic:
+  id: "pb-im-dka"
+  title: "Hiperglucemia, CAD y EHH del adulto"
+  list_subtitle: "p.105 · glucemia > 14 · protocolos de insulina y líquidos"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["hiperglucemia", "CAD", "cetoacidosis diabética", "EHH", "hiperosmolar", "diabetes", "adulto", "medicina interna", "insulina", "potasio", "metformina", "edema cerebral", "endocrino"]
+  category: "medical"
+  page_number: 105
+  blocks:
+  - type: "prose"
+    title: "Manejo (glucemia aleatoria > 14 mmol/L)"
+    markdown: |
+      - Monitorice, mantenga el ABC
+      - Controle los signos vitales (PA, FC, FR, SpO₂, temp)
+      - Inicie oxígeno si la SpO₂ < 90%
+      - Acceso IV; extraiga función renal, potasio, examen de orina
+      - ECG de 12 derivaciones (adultos)
+      - Haga una historia y una exploración física breves y dirigidas
+      - **NO administre insulina todavía** — iníciela solo tras 1 hora de hidratación (vea el protocolo de insulina)
+  - type: "flowchart"
+    variant: "algorithm"
+    stages:
+    - decision: "¿Cetonas en la orina?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Cetoacidosis diabética (CAD) — use los protocolos de CAD/EHH de abajo"
+          severity: "priority"
+      - label: "No"
+        continue: true
+    - decision: "¿Glucemia aleatoria > 33.3 mmol/L?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Estado hiperglucémico hiperosmolar (EHH) — use los protocolos de CAD/EHH de abajo"
+          severity: "priority"
+      - label: "No"
+        box:
+          title: "Hiperglucemia no complicada — vea la sección ambulatoria de abajo"
+          severity: "non_urgent"
+  - type: "prose"
+    title: "CAD / EHH — primero"
+    markdown: |
+      Identifique y trate la enfermedad desencadenante — considere sepsis, neumonía, gastroenteritis, SCA.
+  - type: "prose"
+    title: "Protocolo de insulina (inicie tras 1 hora de hidratación)"
+    markdown: |
+      - Insulina soluble **IM 0.1 UI/kg/h**, O
+      - Insulina soluble en **infusión 0.1 UI/kg/h** (mínimo 1 unidad/h)
+      - **Análogo de acción rápida SC** (si no hay bomba ni vía IM): **dosis inicial de 0.3 UI/kg**, luego **0.2 UI/kg cada 2 horas** — o 0.1 UI/kg cada hora
+  - type: "prose"
+    title: "Protocolo de potasio"
+    markdown: |
+      - **K⁺ 3.3–5.3 y diuresis establecida → añada 10 mEq de KCl por bolsa de 500 mL (= 20 mEq/L).** Es el caso habitual
+      - **K⁺ < 3.3 → suspenda la insulina** y reponga primero el potasio (20–40 mEq/L) hasta que el K⁺ supere 3.3 — la insulina mete el potasio en las células y lo empeorará
+      - **K⁺ > 5.3 → no administre potasio**, repita en 2 horas
+      - **NO administre potasio si la diuresis es < 1 mL/kg/h (o K > 5.3)**
+      - ⚠️ El potasio corporal total siempre está agotado en la CAD aunque el nivel sérico parezca normal, y baja más a medida que actúa la insulina. Reponer de menos es el error más frecuente
+  - type: "prose"
+    title: "Protocolo de líquidos"
+    markdown: |
+      - Bolo inicial:
+        - Choque hipovolémico: bolo de 15–20 mL/kg de SSN o RL, repita hasta que mejore la PA
+        - Hipovolemia sin choque: 15–20 mL/kg de SSN o RL en la 1.ª hora
+        - **NO administre > 50 mL/kg en las primeras 4 horas — puede causar edema cerebral**
+      - Si el Na corregido es < 135: continúe con SSN o RL a 250–500 mL/h
+      - Si el Na corregido es > 135: continúe con ½ SSN a 250–500 mL/h
+      - La diuresis satisfactoria es de 1–2 mL/kg/h
+      - **NUNCA alterne D10 y SSN/RL — puede causar edema cerebral**
+  - type: "prose"
+    title: "Vigile el estado neurológico por edema cerebral"
+    highlight: true
+    markdown: |
+      Vigile cefalea, descenso de la FC, irritabilidad, incontinencia, disminución de la conciencia, signos focales. Si aparecen:
+      - Compruebe / corrija la hipoglucemia
+      - Llame al médico de mayor rango, traslade a UCI
+      - Manitol 0.5–1 g/kg
+  - type: "prose"
+    title: "Cuando la glucemia sea < 14 — repita el examen de orina"
+    markdown: |
+      - Siguen las cetonas:
+        - Cambie los líquidos IV a dextrosa al 5% en ½ SSN a 150–200 mL/h
+        - Infusión de insulina **0.02–0.05 UI/kg/h** (mantenga la pauta IM/SC)
+        - **La CAD se ha resuelto cuando: glucosa < 11 mmol/L (200 mg/dL) Y dos de — pH > 7.3, bicarbonato ≥ 18, anión GAP normal.** Solo entonces pase a insulina subcutánea, y **solape la primera dosis SC con la infusión 1–2 horas** o volverá la cetoacidosis
+      - Sin cetonas: pase a insulina SC con las comidas, una escala móvil, o Mixtard dos veces al día
+        - Dosis habitual 0.5–1 UI/kg/día
+  - type: "prose"
+    title: "Hiperglucemia no complicada (ambulatoria)"
+    markdown: |
+      - **Diabético conocido:**
+        - ¿Adherencia a la medicación? — No: reinicie la pauta; Sí: cambie la dosis
+        - Lleve un registro de las glucemias
+        - Seguimiento en consulta en 5 días
+      - **Diabético recién diagnosticado:**
+        - Inicie metformina 500 mg dos veces al día con las comidas
+        - Ajuste cada semana si no hay síntomas GI
+        - Si hay síntomas GI, reduzca a la dosis anterior hasta que se resuelvan
+        - Dosis máx. 1000 mg dos veces al día, o a veces 850 mg tres veces al día
+      - **Todos los pacientes:** consejos para modificar el estilo de vida

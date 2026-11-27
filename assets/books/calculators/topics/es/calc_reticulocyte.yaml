@@ -1,0 +1,27 @@
+# translated-from-sha256: cb202d1d700deae2707b571ac4f103c0a61503431570486684ede5dfe536c57f
+topic:
+  id: "calc-reticulocyte"
+  title: "Índice reticulocitario (IPR)"
+  list_subtitle: "reticulocitos corregidos + índice de producción"
+  last_reviewed: "Evidence review 2026-07-19"
+  tags: ["reticulocito", "ipr", "reticulocitos", "anemia", "hemólisis", "médula ósea", "hematología"]
+  aliases:
+  - "IPR"
+  - "Índice de producción reticulocitaria"
+  - "Reticulocitos corregidos"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Ajusta el porcentaje de reticulocitos al grado de anemia para valorar
+      si la médula responde de forma adecuada.
+  - type: "formula"
+    kind: "reticulocyte"
+    title: "Índice de producción reticulocitaria"
+    source: "% reticulocitos corregido = % reticulocitos × Hto/45; IPR = corregido ÷ factor de maduración"
+    inputs:
+    - {key: "retic", label: "Reticulocitos", unit: "%", type: "number"}
+    - {key: "hct", label: "Hematocrito", unit: "%", type: "number"}
+    notes:
+    - "Factor de maduración según el Hto: ≥ 35 → 1.0 · 25–34 → 1.5 · 20–24 → 2.0 · < 20 → 2.5."
+    - "Un IPR ≥ 2 (algunos usan 3) sugiere una respuesta adecuada (pérdida de sangre / hemólisis); < 2 sugiere hipoproliferación."

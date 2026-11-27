@@ -1,4 +1,6 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/data/localized_asset.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 
@@ -28,8 +30,8 @@ class ImageBlockView extends StatelessWidget {
     };
 
     final imageChild = Image.asset(
-      block.path,
-      errorBuilder: (context, error, stack) => _placeholder(width),
+      AssetLocalizerScope.path(context, block.path),
+      errorBuilder: (context, error, stack) => _placeholder(context, width),
     );
 
     return Column(
@@ -70,7 +72,7 @@ class ImageBlockView extends StatelessWidget {
     );
   }
 
-  Widget _placeholder(double width) {
+  Widget _placeholder(BuildContext context, double width) {
     return Container(
       width: width == double.infinity ? null : width,
       height: 80,
@@ -83,7 +85,7 @@ class ImageBlockView extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(6),
         child: Text(
-          '[image missing]\n${block.path}',
+          '${context.l10n.imageMissing}\n${block.path}',
           textAlign: TextAlign.center,
           style: const TextStyle(
             fontSize: 9,
@@ -119,7 +121,9 @@ class _ZoomableImageView extends StatelessWidget {
       ),
       body: InteractiveViewer(
         maxScale: 6,
-        child: Center(child: Image.asset(path)),
+        child: Center(
+          child: Image.asset(AssetLocalizerScope.path(context, path)),
+        ),
       ),
     );
   }

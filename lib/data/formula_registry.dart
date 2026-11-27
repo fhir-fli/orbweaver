@@ -9,12 +9,21 @@
 // golden test and a code review. The YAML declares inputs (for the form) and a
 // `kind`; this registry owns the math. New calculator ⇒ new tested function.
 //
+// The wording each output shows is NOT here: it is keyed text in
+// assets/l10n/formulas.yaml (and its translations), looked up with `_t`.
+//
 // Each function receives the parsed input map (numbers as `num`, selects as
 // `String`) keyed by the input `key`s declared in the topic YAML, and returns a
 // [FormulaResult]. Missing/invalid required inputs ⇒ [FormulaResult.empty] so
 // the view shows a placeholder rather than a wrong number.
 
 import 'dart:math' as math;
+
+import 'package:orbweaver/data/formula_strings.dart';
+
+/// The registry's wording comes from [FormulaStrings] by key, so the same
+/// math shows in any language.
+const String Function(String key, [Map<String, String> args]) _t = formulaText;
 
 /// Visual/severity flag for an output line (mapped to colors in the view).
 enum FormulaSeverity { none, info, warn, alert }
@@ -150,11 +159,13 @@ FormulaResult _adrogueMadias(Map<String, dynamic> v) {
   final delta = (naInf + kInf - serumNa) * vol / (tbw + vol);
   return FormulaResult([
     FormulaOutput(
-      label: 'Predicted ΔNa⁺',
+      label: _t('adrogue_madias.predicted_na'),
       value: fmtNum(delta),
       unit: 'mEq/L',
       primary: true,
-      interpretation: 'per ${fmtNum(vol)} L infused. Estimate — recheck Na.',
+      interpretation: _t('adrogue_madias.per_vol_l_infused_estimate', {
+        'vol': fmtNum(vol),
+      }),
     ),
   ]);
 }
@@ -168,11 +179,13 @@ FormulaResult _hba1cEag(Map<String, dynamic> v) {
   final mmol = 1.59 * a1c - 2.59;
   return FormulaResult([
     FormulaOutput(
-      label: 'Estimated average glucose',
+      label: _t('hba1c_eag.estimated_average_glucose'),
       value: fmtNum(mgdl, decimals: 0),
       unit: 'mg/dL',
       primary: true,
-      interpretation: '≈ ${fmtNum(mmol)} mmol/L (ADAG). Population estimate.',
+      interpretation: _t('hba1c_eag.mmol_mmol_l_adag_population', {
+        'mmol': fmtNum(mmol),
+      }),
     ),
   ]);
 }
@@ -238,17 +251,17 @@ FormulaResult _glasgowBlatchford(Map<String, dynamic> v) {
   final String interp;
   if (score <= 1) {
     sev = FormulaSeverity.none;
-    interp = 'Low risk — outpatient management may be appropriate.';
+    interp = _t('glasgow_blatchford.low_risk_outpatient_management_may');
   } else if (score <= 6) {
     sev = FormulaSeverity.warn;
-    interp = 'Intermediate — admit for evaluation.';
+    interp = _t('glasgow_blatchford.intermediate_admit_for_evaluation');
   } else {
     sev = FormulaSeverity.alert;
-    interp = 'High risk — likely needs intervention (endoscopy / transfusion).';
+    interp = _t('glasgow_blatchford.high_risk_likely_needs_intervention');
   }
   return FormulaResult([
     FormulaOutput(
-      label: 'Glasgow-Blatchford score',
+      label: _t('glasgow_blatchford.glasgow_blatchford_score'),
       value: '$score',
       primary: true,
       severity: sev,
@@ -392,12 +405,12 @@ FormulaResult _preventAscvd(Map<String, dynamic> v) {
   }
   return FormulaResult([
     FormulaOutput(
-      label: '10-year ASCVD risk',
+      label: _t('prevent_ascvd.year_ascvd_risk'),
       value: fmtNum(risk),
       unit: '%',
       primary: true,
       severity: sev,
-      interpretation: 'AHA PREVENT (race-free). Interpret against current prevention guidance; runs lower than the old Pooled Cohort Equations.',
+      interpretation: _t('prevent_ascvd.aha_prevent_race_free_interpret'),
     ),
   ]);
 }
@@ -435,13 +448,13 @@ FormulaResult _lille(Map<String, dynamic> v) {
   final nonResponder = lille >= 0.45;
   return FormulaResult([
     FormulaOutput(
-      label: 'Lille score',
+      label: _t('lille.lille_score'),
       value: fmtNum(lille, decimals: 2),
       primary: true,
       severity: nonResponder ? FormulaSeverity.alert : FormulaSeverity.none,
       interpretation: nonResponder
-          ? '≥ 0.45 — steroid non-responder; stop steroids, consider transplant eval.'
-          : '< 0.45 — responder; continue corticosteroids.',
+          ? _t('lille.steroid_non_responder_stop_steroids')
+          : _t('lille.responder_continue_corticosteroids'),
     ),
   ]);
 }
@@ -470,18 +483,18 @@ FormulaResult _fib4(Map<String, dynamic> v) {
   if (fib4 < lowCut) {
     sev = FormulaSeverity.none;
     interp = age < 35
-        ? 'Below cutoff, but FIB-4 is unreliable under age 35.'
-        : 'Low risk of advanced fibrosis (< ${fmtNum(lowCut)}) — monitor.';
+        ? _t('fib4.below_cutoff_but_fib_is')
+        : _t('fib4.low_risk_of_advanced_fibrosis', {'lowCut': fmtNum(lowCut)});
   } else if (fib4 <= 2.67) {
     sev = FormulaSeverity.warn;
-    interp = 'Indeterminate — second-line test (VCTE / ELF).';
+    interp = _t('fib4.indeterminate_second_line_test_vcte');
   } else {
     sev = FormulaSeverity.alert;
-    interp = 'High risk of advanced fibrosis (> 2.67) — refer.';
+    interp = _t('fib4.high_risk_of_advanced_fibrosis');
   }
   return FormulaResult([
     FormulaOutput(
-      label: 'FIB-4',
+      label: _t('fib4.fib'),
       value: fmtNum(fib4, decimals: 2),
       primary: true,
       severity: sev,
@@ -503,13 +516,13 @@ FormulaResult _maddrey(Map<String, dynamic> v) {
   final severe = df >= 32;
   return FormulaResult([
     FormulaOutput(
-      label: 'Maddrey discriminant function',
+      label: _t('maddrey.maddrey_discriminant_function'),
       value: fmtNum(df),
       primary: true,
       severity: severe ? FormulaSeverity.alert : FormulaSeverity.none,
       interpretation: severe
-          ? '≥ 32 — severe; consider corticosteroids (also MELD > 20).'
-          : '< 32 — not severe by mDF.',
+          ? _t('maddrey.severe_consider_corticosteroids_also_meld')
+          : _t('maddrey.not_severe_by_mdf'),
     ),
   ]);
 }
@@ -528,21 +541,21 @@ FormulaResult _oxygenation(Map<String, dynamic> v) {
     final String interp;
     final FormulaSeverity sev;
     if (pf >= 300) {
-      interp = '≥ 300 — no ARDS by oxygenation (Berlin).';
+      interp = _t('oxygenation.no_ards_by_oxygenation_berlin');
       sev = FormulaSeverity.none;
     } else if (pf >= 200) {
-      interp = '200–300 — mild ARDS range.';
+      interp = _t('oxygenation.mild_ards_range');
       sev = FormulaSeverity.warn;
     } else if (pf >= 100) {
-      interp = '100–200 — moderate ARDS range.';
+      interp = _t('oxygenation.moderate_ards_range');
       sev = FormulaSeverity.warn;
     } else {
-      interp = '< 100 — severe ARDS range.';
+      interp = _t('oxygenation.severe_ards_range');
       sev = FormulaSeverity.alert;
     }
     out.add(
       FormulaOutput(
-        label: 'P/F ratio',
+        label: _t('oxygenation.p_f_ratio'),
         value: fmtNum(pf, decimals: 0),
         primary: true,
         severity: sev,
@@ -556,9 +569,9 @@ FormulaResult _oxygenation(Map<String, dynamic> v) {
     final sf = spo2 / fio2;
     out.add(
       FormulaOutput(
-        label: 'SpO₂/FiO₂ ratio',
+        label: _t('oxygenation.spo_fio_ratio'),
         value: fmtNum(sf, decimals: 0),
-        interpretation: 'Surrogate when no ABG & SpO₂ ≤ 97% (≈ 315 mild / 235 mod / 148 severe).',
+        interpretation: _t('oxygenation.surrogate_when_no_abg_spo'),
       ),
     );
   }
@@ -573,13 +586,13 @@ FormulaResult _ddayAge(Map<String, dynamic> v) {
   final threshold = age > 50 ? age * 10 : 500.0; // µg/L (FEU)
   final out = <FormulaOutput>[
     FormulaOutput(
-      label: 'Age-adjusted D-dimer cutoff',
+      label: _t('dday_age.age_adjusted_d_dimer_cutoff'),
       value: fmtNum(threshold, decimals: 0),
       unit: 'µg/L FEU',
       primary: true,
       interpretation: age > 50
-          ? 'age × 10 (only valid with low/intermediate pretest probability).'
-          : 'Under age 50 the conventional 500 cutoff applies.',
+          ? _t('dday_age.age_only_valid_with_low')
+          : _t('dday_age.under_age_the_conventional_cutoff'),
     ),
   ];
   final measured = _num(v, 'measured');
@@ -587,13 +600,13 @@ FormulaResult _ddayAge(Map<String, dynamic> v) {
     final positive = measured >= threshold;
     out.add(
       FormulaOutput(
-        label: 'Measured D-dimer',
+        label: _t('dday_age.measured_d_dimer'),
         value: fmtNum(measured, decimals: 0),
         unit: 'µg/L FEU',
         severity: positive ? FormulaSeverity.warn : FormulaSeverity.none,
         interpretation: positive
-            ? '≥ cutoff — cannot exclude; imaging indicated.'
-            : '< cutoff — VTE excluded (with low/intermediate pretest probability).',
+            ? _t('dday_age.cutoff_cannot_exclude_imaging_indicated')
+            : _t('dday_age.cutoff_vte_excluded_with_low'),
       ),
     );
   }
@@ -614,22 +627,22 @@ FormulaResult _anc(Map<String, dynamic> v) {
   final String interp;
   if (anc < 500) {
     sev = FormulaSeverity.alert;
-    interp = 'Severe neutropenia (< 500) — high infection risk.';
+    interp = _t('anc.severe_neutropenia_high_infection_risk');
   } else if (anc < 1000) {
     sev = FormulaSeverity.warn;
-    interp = 'Moderate neutropenia (500–999).';
+    interp = _t('anc.moderate_neutropenia');
   } else if (anc < 1500) {
     sev = FormulaSeverity.warn;
-    interp = 'Mild neutropenia (1000–1499).';
+    interp = _t('anc.mild_neutropenia');
   } else {
     sev = FormulaSeverity.none;
-    interp = 'Normal (≥ 1500).';
+    interp = _t('anc.normal');
   }
   return FormulaResult([
     FormulaOutput(
-      label: 'ANC',
+      label: _t('anc.anc'),
       value: fmtNum(anc, decimals: 0),
-      unit: 'cells/µL',
+      unit: _t('anc.cells_l'),
       primary: true,
       severity: sev,
       interpretation: interp,
@@ -660,16 +673,16 @@ FormulaResult _reticulocyte(Map<String, dynamic> v) {
   final adequate = rpi >= 2;
   return FormulaResult([
     FormulaOutput(
-      label: 'Reticulocyte production index',
+      label: _t('reticulocyte.reticulocyte_production_index'),
       value: fmtNum(rpi),
       primary: true,
       severity: adequate ? FormulaSeverity.none : FormulaSeverity.warn,
       interpretation: adequate
-          ? 'RPI ≥ 2 — adequate marrow response (blood loss / hemolysis).'
-          : 'RPI < 2 — inadequate (hypoproliferative) response.',
+          ? _t('reticulocyte.rpi_adequate_marrow_response_blood')
+          : _t('reticulocyte.rpi_inadequate_hypoproliferative_response'),
     ),
     FormulaOutput(
-      label: 'Corrected reticulocyte',
+      label: _t('reticulocyte.corrected_reticulocyte'),
       value: fmtNum(corrected),
       unit: '%',
     ),
@@ -704,29 +717,29 @@ FormulaResult _lights(Map<String, dynamic> v) {
   final exudate = met > 0;
   return FormulaResult([
     FormulaOutput(
-      label: exudate ? 'Exudate' : 'Transudate',
+      label: exudate ? _t('lights.exudate') : _t('lights.transudate'),
       value: '$met/3',
-      unit: 'criteria met',
+      unit: _t('lights.criteria_met'),
       primary: true,
       severity: exudate ? FormulaSeverity.warn : FormulaSeverity.none,
       interpretation: exudate
-          ? "Any Light's criterion met → exudate (needs further workup)."
-          : 'No criterion met → transudate.',
+          ? _t('lights.any_light_s_criterion_met')
+          : _t('lights.no_criterion_met_transudate'),
     ),
     FormulaOutput(
-      label: 'Protein ratio',
+      label: _t('lights.protein_ratio'),
       value: fmtNum(protRatio, decimals: 2),
-      interpretation: c1 ? '> 0.5 ✓' : '≤ 0.5',
+      interpretation: c1 ? _t('lights.text') : _t('lights.text_2'),
     ),
     FormulaOutput(
-      label: 'LDH ratio',
+      label: _t('lights.ldh_ratio'),
       value: fmtNum(ldhRatio, decimals: 2),
-      interpretation: c2 ? '> 0.6 ✓' : '≤ 0.6',
+      interpretation: c2 ? _t('lights.text_3') : _t('lights.text_4'),
     ),
     FormulaOutput(
-      label: 'Pleural LDH / ULN',
+      label: _t('lights.pleural_ldh_uln'),
       value: fmtNum(ldhFrac, decimals: 2),
-      interpretation: c3 ? '> 2/3 ✓' : '≤ 2/3',
+      interpretation: c3 ? _t('lights.text_5') : _t('lights.text_6'),
     ),
   ]);
 }
@@ -750,15 +763,15 @@ FormulaResult _urinaryIndices(Map<String, dynamic> v) {
   final prerenal = fena < 1;
   final out = <FormulaOutput>[
     FormulaOutput(
-      label: 'FENa',
+      label: _t('urinary_indices.fena'),
       value: fmtNum(fena, decimals: 2),
       unit: '%',
       primary: true,
       interpretation: prerenal
-          ? '< 1% suggests prerenal.'
+          ? _t('urinary_indices.suggests_prerenal')
           : (fena > 2
-                ? '> 2% suggests intrinsic (ATN).'
-                : '1–2% indeterminate.'),
+                ? _t('urinary_indices.suggests_intrinsic_atn')
+                : _t('urinary_indices.indeterminate')),
     ),
   ];
   final sUrea = _num(v, 'serum_urea');
@@ -767,11 +780,12 @@ FormulaResult _urinaryIndices(Map<String, dynamic> v) {
     final feurea = (uUrea * sCr) / (sUrea * uCr) * 100;
     out.add(
       FormulaOutput(
-        label: 'FEUrea',
+        label: _t('urinary_indices.feurea'),
         value: fmtNum(feurea),
         unit: '%',
-        interpretation:
-            '< 35% suggests prerenal — more reliable than FENa on diuretics.',
+        interpretation: _t(
+          'urinary_indices.suggests_prerenal_more_reliable_than',
+        ),
       ),
     );
   }
@@ -794,32 +808,34 @@ FormulaResult _anthropometrics(Map<String, dynamic> v) {
   final String cat;
   final FormulaSeverity sev;
   if (bmi < 18.5) {
-    cat = 'Underweight';
+    cat = _t('anthropometrics.underweight');
     sev = FormulaSeverity.warn;
   } else if (bmi < 25) {
-    cat = 'Normal';
+    cat = _t('anthropometrics.normal');
     sev = FormulaSeverity.none;
   } else if (bmi < 30) {
-    cat = 'Overweight';
+    cat = _t('anthropometrics.overweight');
     sev = FormulaSeverity.warn;
   } else {
-    cat = 'Obese';
+    cat = _t('anthropometrics.obese');
     sev = FormulaSeverity.alert;
   }
   return FormulaResult([
     FormulaOutput(
-      label: 'BMI',
+      label: _t('anthropometrics.bmi'),
       value: fmtNum(bmi),
       unit: 'kg/m²',
       primary: true,
       severity: sev,
-      interpretation: '$cat (WHO). Asian cutoffs: overweight ≥23, obese ≥27.5.',
+      interpretation: _t('anthropometrics.cat_who_asian_cutoffs_overweight', {
+        'cat': cat,
+      }),
     ),
     FormulaOutput(
-      label: 'BSA (Mosteller)',
+      label: _t('anthropometrics.bsa_mosteller'),
       value: fmtNum(bsa, decimals: 2),
       unit: 'm²',
-      interpretation: 'Body-surface area for dosing (chemo convention).',
+      interpretation: _t('anthropometrics.body_surface_area_for_dosing'),
     ),
   ]);
 }
@@ -841,17 +857,17 @@ FormulaResult _osmolalGap(Map<String, dynamic> v) {
   final high = gap > 10;
   return FormulaResult([
     FormulaOutput(
-      label: 'Osmolal gap',
+      label: _t('osmolal_gap.osmolal_gap'),
       value: fmtNum(gap),
       unit: 'mOsm/kg',
       primary: true,
       severity: high ? FormulaSeverity.warn : FormulaSeverity.none,
       interpretation: high
-          ? 'Elevated (> 10) — consider unmeasured osmoles (toxic alcohol).'
-          : 'Normal ≤ 10 — but a normal gap does NOT exclude toxic alcohol.',
+          ? _t('osmolal_gap.elevated_consider_unmeasured_osmoles_toxic')
+          : _t('osmolal_gap.normal_but_a_normal_gap'),
     ),
     FormulaOutput(
-      label: 'Calculated osmolality',
+      label: _t('osmolal_gap.calculated_osmolality'),
       value: fmtNum(calc),
       unit: 'mOsm/kg',
     ),
@@ -871,19 +887,19 @@ FormulaResult _parkland(Map<String, dynamic> v) {
   final firstHalf = total / 2;
   return FormulaResult([
     FormulaOutput(
-      label: '24-hour volume',
+      label: _t('parkland.hour_volume'),
       value: fmtNum(firstHalf * 2),
       unit: 'mL',
       primary: true,
-      interpretation: "Lactated Ringer's; titrate to urine output 0.5 mL/kg/h.",
+      interpretation: _t('parkland.lactated_ringer_s_titrate_to'),
     ),
     FormulaOutput(
-      label: 'First 8 h (from burn time)',
+      label: _t('parkland.first_h_from_burn_time'),
       value: '${fmtNum(firstHalf)} mL',
       unit: '≈ ${fmtNum(firstHalf / 8)} mL/h',
     ),
     FormulaOutput(
-      label: 'Next 16 h',
+      label: _t('parkland.next_h'),
       value: '${fmtNum(firstHalf)} mL',
       unit: '≈ ${fmtNum(firstHalf / 16)} mL/h',
     ),
@@ -945,11 +961,11 @@ FormulaResult _meld3(Map<String, dynamic> v) {
   }
   return FormulaResult([
     FormulaOutput(
-      label: 'MELD 3.0',
+      label: _t('meld3.meld'),
       value: '$meld',
       primary: true,
       severity: sev,
-      interpretation: '90-day mortality rises steeply above ~20; range 6–40.',
+      interpretation: _t('meld3.day_mortality_rises_steeply_above'),
     ),
   ]);
 }
@@ -970,17 +986,17 @@ FormulaResult _qtc(Map<String, dynamic> v) {
   final String interp;
   if (fridericia > 500) {
     sev = FormulaSeverity.alert;
-    interp = 'QTc > 500 ms — high torsades risk.';
+    interp = _t('qtc.qtc_ms_high_torsades_risk');
   } else if (fridericia >= 460) {
     sev = FormulaSeverity.warn;
-    interp = 'Prolonged (≈ ≥ 460 ms).';
+    interp = _t('qtc.prolonged_ms');
   } else {
     sev = FormulaSeverity.none;
-    interp = 'Fridericia is the preferred correction (FDA / AHA).';
+    interp = _t('qtc.fridericia_is_the_preferred_correction');
   }
   return FormulaResult([
     FormulaOutput(
-      label: 'QTc (Fridericia)',
+      label: _t('qtc.qtc_fridericia'),
       value: fmtNum(fridericia, decimals: 0),
       unit: 'ms',
       primary: true,
@@ -988,18 +1004,18 @@ FormulaResult _qtc(Map<String, dynamic> v) {
       interpretation: interp,
     ),
     FormulaOutput(
-      label: 'QTc (Bazett)',
+      label: _t('qtc.qtc_bazett'),
       value: fmtNum(bazett, decimals: 0),
       unit: 'ms',
-      interpretation: 'Overestimates at high HR, underestimates at low HR.',
+      interpretation: _t('qtc.overestimates_at_high_hr_underestimates'),
     ),
     FormulaOutput(
-      label: 'QTc (Framingham)',
+      label: _t('qtc.qtc_framingham'),
       value: fmtNum(framingham, decimals: 0),
       unit: 'ms',
     ),
     FormulaOutput(
-      label: 'QTc (Hodges)',
+      label: _t('qtc.qtc_hodges'),
       value: fmtNum(hodges, decimals: 0),
       unit: 'ms',
     ),
@@ -1022,11 +1038,13 @@ FormulaResult _freeWaterDeficit(Map<String, dynamic> v) {
   final deficit = tbw * (current / target - 1);
   return FormulaResult([
     FormulaOutput(
-      label: 'Free water deficit',
+      label: _t('free_water_deficit.free_water_deficit'),
       value: fmtNum(deficit),
       unit: 'L',
       primary: true,
-      interpretation: 'Deficit only — add ongoing/insensible losses.',
+      interpretation: _t(
+        'free_water_deficit.deficit_only_add_ongoing_insensible',
+      ),
     ),
   ]);
 }
@@ -1049,12 +1067,11 @@ FormulaResult _renalFunction(Map<String, dynamic> v) {
     final crcl = (140 - age) * wt * (female ? 0.85 : 1.0) / (72 * scr);
     out.add(
       FormulaOutput(
-        label: 'CrCl (Cockcroft-Gault)',
+        label: _t('renal_function.crcl_cockcroft_gault'),
         value: fmtNum(crcl),
         unit: 'mL/min',
         primary: true,
-        interpretation:
-            'Use for drug dosing (matches legacy label cut-points).',
+        interpretation: _t('renal_function.use_for_drug_dosing_matches'),
       ),
     );
   }
@@ -1071,11 +1088,10 @@ FormulaResult _renalFunction(Map<String, dynamic> v) {
       (female ? 1.012 : 1.0);
   out.add(
     FormulaOutput(
-      label: 'eGFR (CKD-EPI 2021, race-free)',
+      label: _t('renal_function.egfr_ckd_epi_race_free'),
       value: fmtNum(egfr),
       unit: 'mL/min/1.73m²',
-      interpretation:
-          'For CKD staging. De-index (×BSA/1.73) before drug dosing.',
+      interpretation: _t('renal_function.for_ckd_staging_de_index'),
     ),
   );
   return FormulaResult(out);
@@ -1092,12 +1108,12 @@ FormulaResult _map(Map<String, dynamic> v) {
   final map = dbp + (sbp - dbp) / 3;
   return FormulaResult([
     FormulaOutput(
-      label: 'Mean arterial pressure',
+      label: _t('map.mean_arterial_pressure'),
       value: fmtNum(map),
       unit: 'mmHg',
       primary: true,
       severity: map < 65 ? FormulaSeverity.alert : FormulaSeverity.none,
-      interpretation: map < 65 ? 'MAP < 65 — organ-perfusion concern.' : null,
+      interpretation: map < 65 ? _t('map.map_organ_perfusion_concern') : null,
     ),
   ]);
 }
@@ -1113,17 +1129,19 @@ FormulaResult _correctedSodium(Map<String, dynamic> v) {
   final katz = na + 1.6 * delta;
   return FormulaResult([
     FormulaOutput(
-      label: 'Corrected Na⁺ (Hillier ×2.4)',
+      label: _t('corrected_sodium.corrected_na_hillier'),
       value: fmtNum(hillier),
       unit: 'mEq/L',
       primary: true,
-      interpretation: 'Evidence-preferred factor (esp. glucose > 400 mg/dL).',
+      interpretation: _t(
+        'corrected_sodium.evidence_preferred_factor_esp_glucose',
+      ),
     ),
     FormulaOutput(
-      label: 'Corrected Na⁺ (Katz ×1.6)',
+      label: _t('corrected_sodium.corrected_na_katz'),
       value: fmtNum(katz),
       unit: 'mEq/L',
-      interpretation: 'Legacy factor — shown for comparison.',
+      interpretation: _t('corrected_sodium.legacy_factor_shown_for_comparison'),
     ),
   ]);
 }
@@ -1141,14 +1159,14 @@ FormulaResult _anionGap(Map<String, dynamic> v) {
   final high = ag > 12;
   final out = <FormulaOutput>[
     FormulaOutput(
-      label: 'Anion gap',
+      label: _t('anion_gap.anion_gap'),
       value: fmtNum(ag),
       unit: 'mEq/L',
       primary: true,
       severity: high ? FormulaSeverity.warn : FormulaSeverity.none,
       interpretation: high
-          ? 'High anion gap (normal ≈ 8–12).'
-          : 'Normal range ≈ 8–12 mEq/L.',
+          ? _t('anion_gap.high_anion_gap_normal')
+          : _t('anion_gap.normal_range_meq_l'),
     ),
   ];
   final albumin = _num(v, 'albumin');
@@ -1157,12 +1175,11 @@ FormulaResult _anionGap(Map<String, dynamic> v) {
     final cHigh = corrected > 12;
     out.add(
       FormulaOutput(
-        label: 'Albumin-corrected AG',
+        label: _t('anion_gap.albumin_corrected_ag'),
         value: fmtNum(corrected),
         unit: 'mEq/L',
         severity: cHigh ? FormulaSeverity.warn : FormulaSeverity.none,
-        interpretation:
-            'Unmasks occult gap when albumin is low — not a lactate surrogate.',
+        interpretation: _t('anion_gap.unmasks_occult_gap_when_albumin'),
       ),
     );
   }
@@ -1186,7 +1203,7 @@ FormulaResult _aaGradient(Map<String, dynamic> v) {
   final aa = pAO2 - pao2;
   final out = <FormulaOutput>[
     FormulaOutput(
-      label: 'A–a gradient',
+      label: _t('aa_gradient.a_a_gradient'),
       value: fmtNum(aa),
       unit: 'mmHg',
       primary: true,
@@ -1197,13 +1214,13 @@ FormulaResult _aaGradient(Map<String, dynamic> v) {
     final elevated = aa > expected;
     out.add(
       FormulaOutput(
-        label: 'Expected (age-adjusted)',
+        label: _t('aa_gradient.expected_age_adjusted'),
         value: '≤ ${fmtNum(expected)}',
         unit: 'mmHg',
         severity: elevated ? FormulaSeverity.warn : FormulaSeverity.none,
         interpretation: elevated
-            ? 'Elevated for age (age/4 + 4).'
-            : 'Within age-expected range (age/4 + 4).',
+            ? _t('aa_gradient.elevated_for_age_age')
+            : _t('aa_gradient.within_age_expected_range_age'),
       ),
     );
   }
@@ -1220,12 +1237,13 @@ FormulaResult _winters(Map<String, dynamic> v) {
   final hi = expected + 2;
   final out = <FormulaOutput>[
     FormulaOutput(
-      label: 'Expected pCO₂',
+      label: _t('winters.expected_pco'),
       value: '${fmtNum(lo)}–${fmtNum(hi)}',
       unit: 'mmHg',
       primary: true,
-      interpretation:
-          'Adequate respiratory compensation in metabolic acidosis.',
+      interpretation: _t(
+        'winters.adequate_respiratory_compensation_in_metabolic',
+      ),
     ),
   ];
   final measured = _num(v, 'measured_pco2');
@@ -1233,18 +1251,18 @@ FormulaResult _winters(Map<String, dynamic> v) {
     final String interp;
     final FormulaSeverity sev;
     if (measured > hi) {
-      interp = 'Measured > expected → concurrent respiratory acidosis.';
+      interp = _t('winters.measured_expected_concurrent_respiratory_acidosis');
       sev = FormulaSeverity.warn;
     } else if (measured < lo) {
-      interp = 'Measured < expected → concurrent respiratory alkalosis.';
+      interp = _t('winters.measured_expected_concurrent_respiratory_alkalosis');
       sev = FormulaSeverity.warn;
     } else {
-      interp = 'Measured within expected → appropriate compensation.';
+      interp = _t('winters.measured_within_expected_appropriate_compensation');
       sev = FormulaSeverity.none;
     }
     out.add(
       FormulaOutput(
-        label: 'Measured pCO₂',
+        label: _t('winters.measured_pco'),
         value: fmtNum(measured),
         unit: 'mmHg',
         severity: sev,
@@ -1269,7 +1287,7 @@ FormulaResult _idealBodyWeight(Map<String, dynamic> v) {
   final ibw = base + 2.3 * (heightIn - 60);
   final out = <FormulaOutput>[
     FormulaOutput(
-      label: 'Ideal body weight (Devine)',
+      label: _t('ideal_body_weight.ideal_body_weight_devine'),
       value: fmtNum(ibw),
       unit: 'kg',
       primary: true,
@@ -1280,11 +1298,10 @@ FormulaResult _idealBodyWeight(Map<String, dynamic> v) {
     final adj = ibw + 0.4 * (actual - ibw);
     out.add(
       FormulaOutput(
-        label: 'Adjusted body weight',
+        label: _t('ideal_body_weight.adjusted_body_weight'),
         value: fmtNum(adj),
         unit: 'kg',
-        interpretation:
-            'IBW + 0.4 × (actual − IBW); use per drug-specific guidance.',
+        interpretation: _t('ideal_body_weight.ibw_actual_ibw_use_per'),
       ),
     );
   }
@@ -1317,16 +1334,16 @@ FormulaResult _hollidaySegar(Map<String, dynamic> v) {
 
   return FormulaResult([
     FormulaOutput(
-      label: 'Maintenance rate',
+      label: _t('holliday_segar.maintenance_rate'),
       value: fmtNum(hourly),
       unit: 'mL/hr',
       primary: true,
-      interpretation: 'Use an ISOTONIC fluid (AAP 2018) — not hypotonic.',
+      interpretation: _t('holliday_segar.use_an_isotonic_fluid_aap'),
     ),
     FormulaOutput(
-      label: 'Daily volume',
+      label: _t('holliday_segar.daily_volume'),
       value: fmtNum(daily),
-      unit: 'mL/day',
+      unit: _t('holliday_segar.ml_day'),
     ),
   ]);
 }

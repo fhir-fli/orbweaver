@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/protocolbook/topics/pb_067_epistaxis.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s8",
+   "severity": "minor",
+   "problem": "Incorrect acronym for tranexamic acid; TXA was changed to ATX, which is not a standard medical abbreviation.",
+   "fix": "TXA",
+   "en": "TXA",
+   "es": "ATX"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s8\",\n    \"severity\": \"minor\",\n    \"problem\": \"Incorrect acronym for tranexamic acid; TXA was changed to ATX, which is not a standard medical abbreviation.\",\n    \"fix\": \"TXA\"\n  }\n]\n```"
+ ]
+}

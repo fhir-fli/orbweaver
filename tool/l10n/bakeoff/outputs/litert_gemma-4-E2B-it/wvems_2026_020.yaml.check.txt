@@ -1,0 +1,27 @@
+stamp: current
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/litert_gemma-4-E2B-it/wvems_2026_020.yaml.topic.pages[1].blocks[0].markdown: links differ
+    en: [topic:wvems-2026-028, topic:wvems-2026-034, topic:wvems-2026-056, topic:wvems-2026-066, topic:wvems-2026-144]  «- EMS pain control is indicated for **recent injury** or **sudden pain** like:
+  - [Major trauma](topic:wvems-2026-056), obvious [fractures](topic:wvems-2026-066), acute [abdominal](topic:wvems-2026-034) or [chest pain](topic:wvems-2026-028)
+- Pain meds (even PO) are **beneficial despite short transport times**.
+- Use [weight-based peds dosing](topic:wvems-2026-144) for small adults under 110 lbs (50 kg).
+»
+    tr: [topic:wvems-2026-028, topic:wvems-2026-034, topic:wvems-2026-056, topic:wvems-2026-144]  «- El control del dolor EMS se indica para **lesiones recientes** o **dolor repentino** como:
+  - [Trauma mayor](topic:wvems-2026-056), fracturas obvias(topic:wvems-2026-066), dolor [abdominal](topic:wvems-2026-034) o [dolor de pecho](topic:wvems-2026-028)
+- Los medicamentos para el dolor (incluso vía PO) son **beneficiosos a pesar de los tiempos de transporte cortos**.
+- Utilice la [dosificación pediátrica basada en el peso](topic:wvems-2026-144) para adultos pequeños menores de 110 lbs (50 kg).
+»
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/litert_gemma-4-E2B-it/wvems_2026_020.yaml.topic.pages[1].blocks[2].markdown: bold runs differ
+    en: 12  «- Tylenol and Ibuprofen are good for **sub-acute pain** like:
+  - Toothache, headache (migraine), sciatica, fibromyalgia, etc.
+  - Avoid **Fentanyl** and **Ketamine** for sub-acute pain.
+- Pain is subjective. May try another medication if pain continues.
+  - Do **not** use Toradol with Ibuprofen (choose one or the other).
+- Max daily dose: **[Tylenol](topic:wvems-2026-drug-reference#tylenol) 3,000 mg** · **Ibuprofen 2,400 mg**.
+»
+    tr: 10  «- Tylenol e Ibuprofeno son buenos para el **dolor subagudo** como:
+  - Dolor de muelas, cefalea (migraña), ciática, fibromialgia, etc.
+  - Evite el **Fentanilo** y la **Ketamina** para el dolor subagudo.
+- El dolor es subjetivo. Puede intentar otro medicamento si el dolor continúa.
+  - No utilice Toradol con Ibuprofeno (elija uno o el otro).
+- Dosis diaria máxima: **[Tylenol](topic:wvems-2026-drug-reference#tylenol) 3,000 mg** · **Ibuprofeno 2,400 mg**.»
+problems: 2

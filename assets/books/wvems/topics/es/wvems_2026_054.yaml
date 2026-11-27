@@ -1,0 +1,139 @@
+# translated-from-sha256: 2ea83bfa3a0ac005126472c23a9ab03414235b0f3067252c05692956f20d378e
+topic:
+  id: "wvems-2026-054"
+  version: "v260101"
+  title: "RCE traumático"
+  list_subtitle: "2026-054 · retorno del pulso / posreanimación"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "rce"
+  - "trauma"
+  - "posreanimación"
+  - "ketamina"
+  aliases:
+  - "Retorno del pulso"
+  - "Posreanimación tras traumatismo"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 54
+    blocks:
+    - type: "flowchart"
+      variant: "linear"
+      entry_chain:
+      - text: "Retorno del pulso"
+        shape: "stadium"
+      steps:
+      - type: "content"
+        title: "Estabilice"
+        bullets:
+        - "Controle la hemorragia"
+        - "Trate la [circulación](topic:wvems-2026-008)"
+        - "[Vía aérea](topic:wvems-2026-004) / [respiración](topic:wvems-2026-006)"
+      - type: "action"
+        provider_level: "E"
+        text: "Traslado urgente"
+        kind: "referral"
+      - type: "action"
+        text: "Torniquete"
+        kind: "procedure"
+      - type: "action"
+        provider_level: "I"
+        text: "Descompresión pleural"
+        kind: "procedure"
+      - type: "action"
+        provider_level: "E"
+        text: "12 derivaciones"
+        kind: "diagnostic"
+      - type: "action"
+        provider_level: "A"
+        text: "Vía salinizada"
+        kind: "procedure"
+      - type: "action"
+        provider_level: "I"
+        text: "Ketamina"
+        condition: "Si está agitado"
+        kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "Hemorragia"
+          link_id: "wvems-2026-058"
+        - text: "[Choque](topic:wvems-2026-008)"
+        - text: "[RCE médico](topic:wvems-2026-026)"
+        - text: "[Intubación](topic:wvems-2026-078), [Ventilador](topic:wvems-2026-080)"
+      critical_care_link:
+        text: "[Intubación](topic:wvems-2026-078), [Ventilador](topic:wvems-2026-080)"
+      dose_table:
+      - drug: "[Ketamina](topic:wvems-2026-drug-reference#ketamine)"
+        dose: "20 mg"
+        route: "IV/IO"
+        frequency: "cada 5 min x2"
+        population: "adult"
+  - page_number: 55
+    blocks:
+    - type: "prose"
+      title: "Imperativos del RCE traumático"
+      highlight: true
+      markdown: |
+        - Lo más importante es priorizar el traslado urgente.
+          - **Lleve al paciente al hospital.**
+        - Reevalúe y repita la **[descompresión pleural](topic:wvems-2026-096#pleural-decompress)** según necesidad.
+          - Repítala de inmediato si se descompensa tras el éxito inicial.
+        - Reevalúe y aplique **[torniquetes](topic:wvems-2026-096#tourniquet)** adicionales según necesidad.
+          - Aplique presión y **[taponee las heridas](topic:wvems-2026-096#wound-packing)** en la hemorragia de unión.
+        - Considere una causa médica concomitante previa al traumatismo.
+    - type: "row"
+      blocks:
+      - type: "prose"
+        flex: 6
+        title: "Alerta de TRAUMA"
+        callout: true
+        dashed: true
+        call_er: true
+        markdown: |
+          - Si hay cualquier RCP por trauma
+          - O signos vitales inestables
+          - Active una alerta de **TRAUMA**
+      - type: "prose"
+        flex: 5
+        title: "Mala perfusión"
+        callout: true
+        markdown: |
+          Sospéchela si hay **varios** de estos:
+          - **Alteración del estado mental**
+          - Piel pálida, fría, sudorosa
+          - Taquicardia, hipotensión
+          - Disnea, taquipnea
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Ketamina](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®): diluya en SSN y **adminístrela despacio en 10 min**.
+          - Use la [dosificación pediátrica por peso](topic:wvems-2026-144) en adultos de menos de 110 lbs (50 kg).
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Mantenga la **normotermia** (la hipotermia causa coagulopatía y sangrado).
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [intubación](topic:wvems-2026-078) y/o el [ventilador](topic:wvems-2026-080) si están indicados y está acreditado para CC.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 29, 34
+
+        NEMSIS: 9914165

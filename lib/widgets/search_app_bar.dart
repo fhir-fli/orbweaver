@@ -1,4 +1,5 @@
 import 'package:material_ui/material_ui.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 
 /// The app bar the book, formulary and topic screens share: a coloured bar
 /// whose [title] gives way to a search field while [searchOpen], with the
@@ -61,7 +62,7 @@ class SearchAppBar extends StatelessWidget implements PreferredSizeWidget {
       IconButton(
         tooltip: searchTooltip == null
             ? null
-            : (searchOpen ? 'Close search' : searchTooltip),
+            : (searchOpen ? context.l10n.closeSearch : searchTooltip),
         icon: Icon(searchOpen ? Icons.close : Icons.search),
         onPressed: onToggleSearch,
       ),

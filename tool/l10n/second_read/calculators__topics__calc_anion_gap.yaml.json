@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_anion_gap.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s3",
+   "severity": "minor",
+   "problem": "The word 'anion' is left in English; the Spanish translation requires an accent: 'anión'.",
+   "fix": "anión",
+   "en": "anion",
+   "es": "anion"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s3\",\n    \"severity\": \"minor\",\n    \"problem\": \"The word 'anion' is left in English; the Spanish translation requires an accent: 'anión'.\",\n    \"fix\": \"anión\"\n  }\n]\n```"
+ ]
+}

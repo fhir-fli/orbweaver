@@ -1,0 +1,34 @@
+# translated-from-sha256: fca923ce069a2cea0e738aceb090765043be955c2bc2c34f272365f228d85c69
+topic:
+  id: "calc-rcri"
+  title: "Índice de riesgo cardíaco revisado"
+  list_subtitle: "riesgo cardíaco perioperatorio"
+  last_reviewed: "Evidence review 2026-07-19 · Lee 1999 · AHA/ACC 2024"
+  tags: ["rcri", "índice de lee", "perioperatorio", "riesgo cardíaco", "cirugía", "preoperatorio", "mace"]
+  aliases:
+  - "RCRI"
+  - "Índice de Lee"
+  - "Índice de riesgo cardíaco revisado"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Estima el riesgo cardíaco mayor perioperatorio en cirugía no cardíaca.
+      Toque cada factor presente.
+  - type: "score"
+    title: "Índice de riesgo cardíaco revisado"
+    source: "Lee et al., Circulation 1999"
+    items:
+    - {key: "highrisk_surgery", label: "Cirugía de alto riesgo (intraperitoneal, intratorácica, vascular suprainguinal)", type: "toggle", points: 1}
+    - {key: "ihd", label: "Cardiopatía isquémica", type: "toggle", points: 1}
+    - {key: "chf", label: "Antecedente de insuficiencia cardíaca congestiva", type: "toggle", points: 1}
+    - {key: "cva", label: "Antecedente de enfermedad cerebrovascular", type: "toggle", points: 1}
+    - {key: "insulin", label: "Tratamiento con insulina para la diabetes", type: "toggle", points: 1}
+    - {key: "creatinine", label: "Creatinina preoperatoria > 2.0 mg/dL", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 0, label: "Clase I — bajo (~3.9% de MACE)", severity: "none"}
+    - {min: 1, max: 1, label: "Clase II (~6% de MACE)", severity: "none"}
+    - {min: 2, max: 2, label: "Clase III — elevado (~10% de MACE)", severity: "warn"}
+    - {min: 3, label: "Clase IV — alto (~15%+ de MACE)", severity: "alert"}
+    caveats:
+    - "No lo use solo (AHA/ACC 2024): combínelo con una calculadora específica del procedimiento (NSQIP MICA) y, en pacientes de riesgo elevado, con BNP/troponina y la capacidad funcional."

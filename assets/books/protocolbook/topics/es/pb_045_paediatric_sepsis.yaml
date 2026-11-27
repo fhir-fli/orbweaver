@@ -1,0 +1,79 @@
+# translated-from-sha256: 1c1dfa4f3c43e9a3bb3aefd80a11dfc3aab1cdfe1e425e6691463e92cf75c240
+topic:
+  id: "pb-paediatric-sepsis"
+  title: "Sepsis y choque séptico pediátricos"
+  list_subtitle: "p.45 · tabla de SRIS + manejo"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["sepsis", "choque séptico", "SRIS", "infección", "pediátrico", "ampicilina", "gentamicina", "ceftriaxona", "bolo de líquidos"]
+  category: "medical"
+  page_number: 45
+  blocks:
+  - type: "prose"
+    title: "Definición de sepsis"
+    markdown: |
+      - **Sepsis:** criterios de SRIS + infección demostrada o sospechada
+      - **SRIS:** ≥2 de las siguientes mediciones anormales (una debe ser la temperatura o los leucocitos)
+      - **Temperatura** >37.9 axilar (38.5 central) o <35.4 axilar (36 central)
+  - type: "table"
+    title: "Criterios de SRIS por edad"
+    layout: "scroll"
+    columns: ["Grupo de edad", "Frecuencia cardíaca (lpm)", "Frecuencia respiratoria (resp/min)", "Leucocitos (×10³/mm)", "PAS (mmHg)"]
+    column_widths: [78, 92, 100, 96, 74]
+    rows:
+    - cells: ["0–1 semana", ">180/190 (o <100)", ">60", ">34", "<65"]
+    - cells: ["1 sem–1 mes", ">180/190 (o <100)", ">60", ">19.5 o <5", "<70"]
+    - cells: ["1 mes–1 año", ">180 (o <90)", ">50", ">17.5 o <5", "<75"]
+    - cells: ["1–5 años", ">140", ">40", ">15.5 o <6", "<74"]
+    - cells: ["5–10 años", ">130", ">30", ">13.5 o <4.5", "<83"]
+    - cells: [">10 años", ">110", ">30", ">11 o <4.5", "<90"]
+  - type: "flowchart"
+    variant: "algorithm"
+    stages:
+    - decision: "¿Infección sospechada/demostrada + SRIS?"
+      outcomes:
+      - label: "No"
+        box:
+          title: "¡No trate como sepsis!"
+          severity: "non_urgent"
+      - label: "Sí"
+        continue: true
+    - decision: "Signos de choque séptico — ¿TODOS los siguientes?"
+      criteria:
+      - "Extremidades frías"
+      - "Llenado capilar >3 segundos"
+      - "Pulso rápido Y débil"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Choque séptico"
+          bullets:
+          - "Considere un bolo de 10–20mL/kg de SSN o RL en 30–60 minutos, vigile signos de sobrecarga de volumen"
+          severity: "emergency"
+        continue: true
+      - label: "No"
+        continue: true
+    terminal:
+      title: "Manejo"
+      bullets:
+      - "Vía aérea/respiración: O2 al 100%, bolsa y mascarilla si el esfuerzo respiratorio es débil"
+      - "Trate la hipoglucemia: dextrosa al 10% 2ml/kg IV en bolo. Prepárela como 8mL de SSN + 2mL de D50% (D10 en salina ~0.7%) o 1mL de D50% + 8mL de D5% (D10 en agua) — vea la página de medicamentos de reanimación"
+      - "CH si hay anemia grave (Hb <5)"
+      - "Inicie ampicilina/gentamicina en menos de 1 hora. Ceftriaxona si se sospecha meningitis (vea las dosis más abajo)"
+      - "Choque refractario a pesar de líquidos Y vasopresores, con sospecha de insuficiencia suprarrenal: hidrocortisona 2mg/kg IV en bolo, luego 1mg/kg IV cada 6 h. NO la use de rutina — su beneficio en niños no está demostrado y los datos observacionales sugieren un posible daño"
+  - type: "prose"
+    title: "Análisis y otras pruebas"
+    markdown: |
+      - **Análisis:** PDR de malaria, glucemia aleatoria, hemograma con diferencial, hemocultivo
+      - **Otras pruebas:** examen general de orina, urocultivo, electrolitos/urea/Cr/calcio, PFH (AST/ALT [GOT/GPT]/bilirrubina), LCR si está indicado, RxT, serologías de infecciones
+  - type: "prose"
+    title: "Dosis de medicamentos"
+    markdown: |
+      - **Ampicilina:** 50mg/kg/dosis IV/IM
+        - Primera semana de vida: cada 12 horas
+        - Semanas 2–4: cada 8 horas
+        - Más de 4 semanas: cada 6 horas
+      - **Gentamicina:**
+        - Bajo peso al nacer: 3mg/kg IM/IV una vez al día
+        - Peso normal al nacer y >1 semana de edad (función renal normal): 5mg/kg una vez al día IM/IV
+      - **Ceftriaxona:** 1gm/10mL 100mg/kg una vez al día IV (puede darse 50mg/kg cada 12 h) — **máx. 2g/dosis**; máx. 4g/día solo si trata una meningitis, si no, máx. 2g/día
+        - ⚠️ **NUNCA administre ceftriaxona a un neonato que recibe líquidos IV con calcio** — ambos forman precipitados mortales. En esa situación use cefotaxima

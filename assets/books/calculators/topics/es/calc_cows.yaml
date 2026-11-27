@@ -1,0 +1,132 @@
+# translated-from-sha256: f08cecfa76dd6b55b7ae324f7664d0bd4664952e92ee0625de07dcde8358c186
+topic:
+  id: "calc-cows"
+  title: "COWS"
+  list_subtitle: "gravedad de la abstinencia de opioides"
+  last_reviewed: "Evidence review 2026-07-19 · Wesson & Ling 2003 · ASAM 2020"
+  tags: ["cows", "opioide", "opiáceo", "abstinencia", "buprenorfina", "inducción", "desintoxicación"]
+  aliases:
+  - "COWS"
+  - "Abstinencia de opioides"
+  - "Escala clínica de abstinencia de opiáceos"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Gravedad de la abstinencia de opioides, usada para decidir cuándo iniciar la buprenorfina.
+      Puntúe cada signo; una puntuación moderada indica abstinencia suficiente para iniciar
+      la buprenorfina con seguridad.
+  - type: "score"
+    title: "COWS"
+    source: "Wesson & Ling, J Psychoactive Drugs 2003"
+    items:
+    - key: "pulse"
+      label: "Frecuencia de pulso en reposo"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "≤ 80"}
+      - {value: "1", points: 1, label: "81–100"}
+      - {value: "2", points: 2, label: "101–120"}
+      - {value: "4", points: 4, label: "> 120"}
+    - key: "sweating"
+      label: "Sudoración"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ninguna"}
+      - {value: "1", points: 1, label: "Escalofríos / rubor subjetivos"}
+      - {value: "2", points: 2, label: "Cara ruborizada o húmeda"}
+      - {value: "3", points: 3, label: "Gotas de sudor en la frente"}
+      - {value: "4", points: 4, label: "Sudor que corre por la cara"}
+    - key: "restlessness"
+      label: "Inquietud"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Puede permanecer sentado quieto"}
+      - {value: "1", points: 1, label: "Refiere dificultad, pero puede"}
+      - {value: "3", points: 3, label: "Cambia de posición con frecuencia / movimientos superfluos"}
+      - {value: "5", points: 5, label: "No puede estar sentado quieto > unos segundos"}
+    - key: "pupil"
+      label: "Tamaño pupilar"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Puntiformes o normales"}
+      - {value: "1", points: 1, label: "Posiblemente mayores de lo normal"}
+      - {value: "2", points: 2, label: "Moderadamente dilatadas"}
+      - {value: "5", points: 5, label: "Solo se ve el borde del iris"}
+    - key: "aches"
+      label: "Dolor óseo / articular"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ausente"}
+      - {value: "1", points: 1, label: "Molestia difusa leve"}
+      - {value: "2", points: 2, label: "Dolor difuso intenso"}
+      - {value: "4", points: 4, label: "Se frota las articulaciones, no puede estar quieto"}
+    - key: "nose"
+      label: "Rinorrea / lagrimeo"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ausente"}
+      - {value: "1", points: 1, label: "Congestión nasal / ojos llorosos"}
+      - {value: "2", points: 2, label: "Rinorrea / lagrimeo"}
+      - {value: "4", points: 4, label: "Constante, a chorros"}
+    - key: "gi"
+      label: "Malestar digestivo"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ninguno"}
+      - {value: "1", points: 1, label: "Cólicos abdominales"}
+      - {value: "2", points: 2, label: "Náuseas o heces blandas"}
+      - {value: "3", points: 3, label: "Vómitos o diarrea"}
+      - {value: "5", points: 5, label: "Múltiples episodios"}
+    - key: "tremor"
+      label: "Temblor (manos extendidas)"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ninguno"}
+      - {value: "1", points: 1, label: "Se palpa, no se observa"}
+      - {value: "2", points: 2, label: "Temblor leve observable"}
+      - {value: "4", points: 4, label: "Temblor grueso / fasciculaciones"}
+    - key: "yawning"
+      label: "Bostezos"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ninguno"}
+      - {value: "1", points: 1, label: "Una o dos veces"}
+      - {value: "2", points: 2, label: "≥ 3 veces"}
+      - {value: "4", points: 4, label: "Varias veces por minuto"}
+    - key: "anxiety"
+      label: "Ansiedad / irritabilidad"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Ninguna"}
+      - {value: "1", points: 1, label: "Leve"}
+      - {value: "2", points: 2, label: "Claramente irritable / ansioso"}
+      - {value: "4", points: 4, label: "Tan ansioso que le cuesta participar"}
+    - key: "gooseflesh"
+      label: "Piel de gallina"
+      type: "scale"
+      default: "0"
+      options:
+      - {value: "0", points: 0, label: "Lisa"}
+      - {value: "3", points: 3, label: "Piloerección palpable / vello erizado"}
+      - {value: "5", points: 5, label: "Piloerección marcada"}
+    bands:
+    - {min: 0, max: 4, label: "Abstinencia mínima / ausente", severity: "none"}
+    - {min: 5, max: 12, label: "Abstinencia leve", severity: "none"}
+    - {min: 13, max: 24, label: "Abstinencia moderada", severity: "warn"}
+    - {min: 25, max: 36, label: "Abstinencia moderadamente grave", severity: "warn"}
+    - {min: 37, label: "Abstinencia grave", severity: "alert"}
+    notes:
+    - "Una puntuación de ~11–12+ (algunos usan ≥ 13 en la era del fentanilo) suele indicar abstinencia suficiente para iniciar la buprenorfina."
+    caveats:
+    - "Los signos objetivos (pupilas, piel de gallina, sudoración, temblor) son más difíciles de fingir — deles más peso cuando los hallazgos subjetivos y objetivos no coinciden."

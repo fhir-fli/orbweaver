@@ -1,0 +1,49 @@
+# translated-from-sha256: a208b9ae047416b9d09e3d9612ca9680cf4609a46065f8f4243f8d34aea07dea
+topic:
+  id: "calc-phq9"
+  title: "PHQ-9"
+  list_subtitle: "gravedad de la depresión"
+  last_reviewed: "Evidence review 2026-07-19 · Kroenke 2001 · USPSTF 2023"
+  tags: ["phq-9", "phq9", "depresión", "cribado", "ánimo", "psiquiatría", "gravedad"]
+  aliases:
+  - "PHQ-9"
+  - "Cuestionario de salud del paciente"
+  - "Cribado de depresión"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Durante las últimas 2 semanas, ¿con qué frecuencia le ha molestado al paciente cada
+      problema? Puntúa la gravedad y sigue la respuesta al tratamiento.
+  - type: "score"
+    title: "PHQ-9"
+    unit: "/ 27"
+    source: "Kroenke, Spitzer & Williams, J Gen Intern Med 2001 (dominio público)"
+    items:
+    - key: "q1"
+      label: "Poco interés o placer en hacer cosas"
+      type: "scale"
+      default: "0"
+      options: &freq
+      - {value: "0", points: 0, label: "Nunca"}
+      - {value: "1", points: 1, label: "Varios días"}
+      - {value: "2", points: 2, label: "Más de la mitad de los días"}
+      - {value: "3", points: 3, label: "Casi todos los días"}
+    - {key: "q2", label: "Sentirse decaído, deprimido o sin esperanza", type: "scale", default: "0", options: *freq}
+    - {key: "q3", label: "Dificultad para conciliar/mantener el sueño, o dormir demasiado", type: "scale", default: "0", options: *freq}
+    - {key: "q4", label: "Sentirse cansado o con poca energía", type: "scale", default: "0", options: *freq}
+    - {key: "q5", label: "Poco apetito o comer en exceso", type: "scale", default: "0", options: *freq}
+    - {key: "q6", label: "Sentirse mal consigo mismo — un fracaso, o haberse fallado a sí mismo/a o a la familia", type: "scale", default: "0", options: *freq}
+    - {key: "q7", label: "Dificultad para concentrarse (leer, ver televisión)", type: "scale", default: "0", options: *freq}
+    - {key: "q8", label: "Moverse/hablar despacio, o estar inquieto/intranquilo — de forma notable", type: "scale", default: "0", options: *freq}
+    - {key: "q9", label: "Pensar que estaría mejor muerto, o en hacerse daño", type: "scale", default: "0", options: *freq}
+    bands:
+    - {min: 0, max: 4, label: "Mínima", severity: "none"}
+    - {min: 5, max: 9, label: "Leve", severity: "none"}
+    - {min: 10, max: 14, label: "Moderada — considere tratamiento", severity: "warn"}
+    - {min: 15, max: 19, label: "Moderadamente grave", severity: "alert"}
+    - {min: 20, label: "Grave", severity: "alert"}
+    notes:
+    - "≥ 10 es el umbral habitual para una probable depresión mayor. Es una medida de cribado/gravedad — por sí sola no es diagnóstica."
+    caveats:
+    - "Ítem 9 (pensamientos de autolesión): CUALQUIER respuesta positiva obliga a una evaluación directa del riesgo suicida, sea cual sea la puntuación total."

@@ -1,0 +1,31 @@
+# translated-from-sha256: 458aca84f89a25c433f228f4e3c412dc44cf527ce6f78c7f83135f5b61bb3a29
+topic:
+  id: "calc-bisap"
+  title: "Puntuación BISAP"
+  list_subtitle: "gravedad de la pancreatitis aguda"
+  last_reviewed: "Evidence review 2026-07-19 · Wu 2008 · ACG 2013"
+  tags: ["bisap", "pancreatitis", "pancreatitis aguda", "gravedad", "mortalidad", "digestivo"]
+  aliases:
+  - "BISAP"
+  - "Gravedad de la pancreatitis"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Índice precoz (en las primeras 24 h) del riesgo de mortalidad en la pancreatitis aguda. Toque
+      cada criterio presente.
+  - type: "score"
+    title: "BISAP"
+    source: "Wu et al., Gut 2008"
+    items:
+    - {key: "bun", label: "BUN > 25 mg/dL", type: "toggle", points: 1}
+    - {key: "mental", label: "Alteración del estado mental (GCS < 15)", type: "toggle", points: 1}
+    - {key: "sirs", label: "SRIS (≥ 2 criterios)", type: "toggle", points: 1}
+    - {key: "age60", label: "Edad > 60", type: "toggle", points: 1}
+    - {key: "effusion", label: "Derrame pleural en la imagen", type: "toggle", points: 1}
+    bands:
+    - {min: 0, max: 2, label: "Mortalidad más baja (~< 2%)", severity: "none"}
+    - {min: 3, max: 3, label: "Mortalidad elevada (~5–8%)", severity: "warn"}
+    - {min: 4, label: "Mortalidad alta (~13–27%)", severity: "alert"}
+    caveats:
+    - "Ninguna puntuación sustituye al SRIS + la evaluación clínica seriada y de la falla orgánica (ACG 2013; la gravedad se define por la falla orgánica persistente, Atlanta 2012)."

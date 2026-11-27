@@ -1,0 +1,137 @@
+# translated-from-sha256: 2dc64ec0b1b4571c879ecf5029e38416f1e8bbc02cd050d2a4976f467666c4d7
+topic:
+  id: "wvems-2026-080"
+  version: "v260101"
+  title: "Sedación / ventilador"
+  list_subtitle: "2026-080 · Versed / fentanilo / propofol / ketamina"
+  last_reviewed: "Jun 2025"
+  tags:
+  - "sedación"
+  - "ventilador"
+  - "vent"
+  - "versed"
+  - "fentanilo"
+  - "propofol"
+  - "ketamina"
+  aliases:
+  - "Coma inducido médicamente"
+  - "Manejo del ventilador"
+  category: "critical_care"
+  layout: "paged"
+  pages:
+  - page_number: 80
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: "Vía aérea asegurada"
+        shape: "stadium"
+      decision:
+        text: "¿Técnica?"
+        shape: "diamond"
+      branches:
+      - id: "versed_fent"
+        label: "Versed y fentanilo"
+        criteria:
+        - "Perfusión adecuada"
+        - "Traslado corto"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Versed"
+          kind: "medication_administration"
+        - provider_level: "P(CC)"
+          text: "Fentanilo"
+          kind: "medication_administration"
+      - id: "propofol"
+        label: "Goteo de propofol"
+        criteria:
+        - "Perfusión adecuada"
+        - "Hay bomba IV"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Propofol"
+          kind: "medication_administration"
+      - id: "ketamine"
+        label: "Ketamina en bolo"
+        criteria:
+        - "Mala perfusión"
+        - "Acceso difícil"
+        actions:
+        - provider_level: "P(CC)"
+          text: "Ketamina"
+          kind: "medication_administration"
+      convergence:
+        text: "{P(CC)} Ventilador"
+        shape: "stadium"
+      post_convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Vía aérea](topic:wvems-2026-004), [Respiración](topic:wvems-2026-006)"
+        - text: "[Vasopresores](topic:wvems-2026-082)"
+      dose_table:
+      - drug: "[Fentanilo](topic:wvems-2026-drug-reference#fentanyl)"
+        dose: "0.5-1 mcg/kg"
+        route: "IV/IO"
+        frequency: "cada 30 min si precisa"
+        population: "adult"
+      - drug: "[Versed](topic:wvems-2026-drug-reference#versed)"
+        dose: "10-50 mcg/kg"
+        route: "IV/IO"
+        frequency: "cada 30 min si precisa"
+        population: "adult"
+      - drug: "[Ketamina](topic:wvems-2026-drug-reference#ketamine)"
+        dose: "0.5-2 mg/kg"
+        route: "IM/IV/IO"
+        frequency: "cada 30 min si precisa"
+        population: "adult"
+      - drug: "[Propofol](topic:wvems-2026-drug-reference#propofol)"
+        dose: "50-200 mcg/kg/min"
+        route: "IV"
+        frequency: "Goteo ajustado"
+        population: "adult"
+  - page_number: 81
+    blocks:
+    - type: "prose"
+      title: "Requisitos previos obligatorios de sedación / ventilador"
+      markdown: |
+        - En los últimos 12 meses: aprobar una formación interna de cuidados críticos.
+    - type: "prose"
+      title: "Imperativos"
+      highlight: true
+      markdown: |
+        - Vigile a los pacientes **de cerca**. La sedación y los **[ventiladores](topic:wvems-2026-096#ventilator)** son un equilibrio delicado.
+          - Use el criterio clínico y los signos vitales, **incluidas la SpO₂ y el EtCO₂**.
+          - Esté preparado para **ajustar los parámetros** y ayudar con la **[aspiración](topic:wvems-2026-096#suction)** y la [vía aérea](topic:wvems-2026-004).
+        - Use volúmenes de protección pulmonar con el **[ventilador](topic:wvems-2026-096#ventilator)**. Empiece con 4-8 mL/kg de peso ideal.
+        - Eleve la **cabecera a 30°** para ayudar a la ventilación y limitar la aspiración.
+        - Puede **aumentar la relación I:E** (1:5) en la enfermedad obstructiva (EPOC, asma).
+    - type: "prose"
+      title: "Parámetros típicos del ventilador en el adulto"
+      markdown: |
+        - Modo: **AC (V)** · Vt: **350 mL** (o 450 mL si mide más de 6 pies)
+        - RPM: **12-16** /min · FiO₂: **100%** (puede bajarse a 40-60%)
+        - PEEP: **5 mmHg** · límite de PIP: **35 mmHg** · I:E **1:3**
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Fentanilo](topic:wvems-2026-drug-reference#fentanyl)** (Sublimaze®), **[Versed](topic:wvems-2026-drug-reference#versed)** (Midazolam®): úselos juntos.
+          - Uno sin el otro difícilmente produce una sedación adecuada.
+        - **[Ketamina](topic:wvems-2026-drug-reference#ketamine)** (Ketalar®): útil en pediatría y en asmáticos.
+          - Duplique la dosis por vía IM (vigile la concentración: máx. 3 mL por inyección IM.)
+        - **[Propofol](topic:wvems-2026-drug-reference#propofol)** (Diprivan®): inicie el goteo hacia 150 mcg/kg/min.
+          - **Úselo solo con bomba IV** y un peso del paciente preciso.
+          - Ajuste según efecto, busque una **reducción** del 30-50% en los primeros 30 min.
+          - En ancianos o debilitados: empiece más bajo (100 mcg/kg/min).
+          - En pediatría: empiece más alto (200 mcg/kg/min).
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Sedation — https://emedicine.medscape.com/article/809993 [Ver: 10/24]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 10, 27

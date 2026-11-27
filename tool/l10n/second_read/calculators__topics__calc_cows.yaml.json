@@ -1,0 +1,17 @@
+{
+ "page": "assets/books/calculators/topics/calc_cows.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s55",
+   "severity": "meaning",
+   "problem": "The English 'Felt, not observed' in the context of a tremor scale refers to the patient's subjective report of a tremor that the clinician cannot see. The Spanish 'Se palpa' means the clinician feels the tremor through touch (palpation), which is an objective finding and contradicts 'not observed'.",
+   "fix": "Referido, no observado",
+   "en": "Felt, not observed",
+   "es": "Se palpa, no se observa"
+  }
+ ],
+ "raw": [
+  "```json\n[\n  {\n    \"id\": \"s55\",\n    \"severity\": \"meaning\",\n    \"problem\": \"The English 'Felt, not observed' in the context of a tremor scale refers to the patient's subjective report of a tremor that the clinician cannot see. The Spanish 'Se palpa' means the clinician feels the tremor through touch (palpation), which is an objective finding and contradicts 'not observed'.\",\n    \"fix\": \"Referido, no observado\"\n  }\n]\n```"
+ ]
+}

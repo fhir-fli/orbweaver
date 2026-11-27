@@ -1,6 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:orbweaver/data/formula_registry.dart';
+import 'package:orbweaver/l10n/l10n.dart';
 import 'package:orbweaver/models/topic.dart';
 import 'package:orbweaver/theme/topic_theme.dart';
 import 'package:orbweaver/widgets/blocks/calculator_frame.dart';
@@ -124,7 +125,7 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Text(
-        input.label + (input.optional ? ' (optional)' : ''),
+        input.label + (input.optional ? ' ${context.l10n.inputOptional}' : ''),
         style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
       ),
       if (input.help != null)
@@ -214,10 +215,10 @@ class _FormulaBlockViewState extends State<FormulaBlockView> {
           color: accent.withValues(alpha: 0.06),
           borderRadius: BorderRadius.circular(6),
         ),
-        child: const Text(
-          'Enter values to calculate',
+        child: Text(
+          context.l10n.enterValuesToCalculate,
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 13, color: Colors.black54),
+          style: const TextStyle(fontSize: 13, color: Colors.black54),
         ),
       );
     }

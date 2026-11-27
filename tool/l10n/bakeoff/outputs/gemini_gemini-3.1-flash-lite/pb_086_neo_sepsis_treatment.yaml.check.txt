@@ -1,0 +1,17 @@
+stamp: current
+/home/grey/dev/fhir/orbweaver/tool/l10n/bakeoff/outputs/gemini_gemini-3.1-flash-lite/pb_086_neo_sepsis_treatment.yaml.topic.pages[0].blocks[2].markdown: numbers differ
+    en: [1, 1, 1, 1, 1, 100, 12, 12, 12, 150, 2, 2, 200, 3, 300, 300, 34, 4, 4, 5, 50, 50, 50, 50, 6, 8, 8, 8]  «- **First line:** ampicillin 50 mg/kg q8h (q12h if in the 1st week) PLUS gentamicin 5 mg/kg OD (3 mg/kg OD if < 2 kg in the 1st week, or birth asphyxia)
+- **If concern for soft-tissue infection:** cloxacillin PLUS gentamicin (same dosing as above)
+- **If concern for meningitis:** ampicillin **50 mg/kg q8h in week 1 (150 mg/kg/day), then q6h in weeks 2–4 (200 mg/kg/day)** PLUS cefotaxime 50 mg/kg q8h (q12h if in the 1st week)
+- ⚠️ **A very preterm infant (≤ 34 weeks) in week 1 takes the lower band — 50 mg/kg q12h (100 mg/kg/day).** Ampicillin is renally cleared and clearance tracks postmenstrual age; accumulation risks CNS excitation and seizures
+- 🛑 **Do not carry the older child's 300 mg/kg/day into a neonate.** 300 mg/kg/day is correct **beyond 4 weeks** and is above the neonatal ceiling
+- 🛑 **Prefer cefotaxime to ceftriaxone in a neonate.** Ceftriaxone displaces bilirubin from albumin and worsens jaundice, and it is **absolutely contraindicated in any neonate receiving calcium-containing IV fluids** — the two form fatal precipitates in the lungs and kidneys
+»
+    tr: [1, 1, 1, 1, 1, 100, 12, 12, 12, 150, 2, 2, 200, 24, 24, 3, 300, 300, 34, 4, 4, 5, 50, 50, 50, 50, 6, 8, 8, 8]  «- **Primera línea:** ampicilina 50 mg/kg cada 8h (cada 12h si está en la 1.ª semana) MÁS gentamicina 5 mg/kg cada 24h (3 mg/kg cada 24h si < 2 kg en la 1.ª semana, o asfixia al nacer)
+- **Si hay sospecha de infección de tejidos blandos:** cloxacilina MÁS gentamicina (misma dosis que la anterior)
+- **Si hay sospecha de meningitis:** ampicilina **50 mg/kg cada 8h en la semana 1 (150 mg/kg/día), luego cada 6h en las semanas 2–4 (200 mg/kg/día)** MÁS cefotaxima 50 mg/kg cada 8h (cada 12h si está en la 1.ª semana)
+- ⚠️ **Un lactante muy prematuro (≤ 34 semanas) en la semana 1 recibe la dosis baja — 50 mg/kg cada 12h (100 mg/kg/día).** La ampicilina se elimina por vía renal y el aclaramiento sigue la edad postmenstrual; la acumulación conlleva riesgos de excitación del SNC y convulsiones
+- 🛑 **No aplique la dosis de 300 mg/kg/día del niño mayor en un neonato.** 300 mg/kg/día es correcto **más allá de las 4 semanas** y está por encima del techo neonatal
+- 🛑 **Prefiera la cefotaxima a la ceftriaxona en el neonato.** La ceftriaxona desplaza la bilirrubina de la albúmina y empeora la ictericia, y está **absolutamente contraindicada en cualquier neonato que reciba líquidos IV que contengan calcio** — ambos forman precipitados mortales en pulmones y riñones
+»
+problems: 1

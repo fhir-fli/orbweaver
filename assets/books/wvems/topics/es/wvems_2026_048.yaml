@@ -1,0 +1,149 @@
+# translated-from-sha256: a6f47fb6496046a99d9b57fb4fa4cf1acb9fbe73d6040702af7750f34a951e24
+topic:
+  id: "wvems-2026-048"
+  version: "v260101"
+  title: "Embarazo / parto"
+  list_subtitle: "2026-048 · obstetricia / eclampsia / posparto"
+  last_reviewed: "Dec 2025"
+  tags:
+  - "embarazo"
+  - "parto"
+  - "obstetricia"
+  - "preeclampsia"
+  - "eclampsia"
+  - "posparto"
+  aliases:
+  - "Contracciones"
+  - "Aborto espontáneo"
+  - "Cuidados posparto"
+  - "Hemorragia posparto"
+  - "OB"
+  category: "medical"
+  layout: "paged"
+  pages:
+  - page_number: 48
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      warnings:
+      - type: "caution"
+        text: "[Precaución si la paciente rechaza](topic:wvems-2026-109#patient-refusals)"
+      entry:
+        text: "Embarazo sospechado o conocido (20 semanas o más)"
+        shape: "stadium"
+      decision:
+        text: "¿Parto?"
+        shape: "diamond"
+      branches:
+      - id: "not_imminent"
+        label: "No inminente"
+        criteria:
+        - "Sangrado vaginal"
+        - "Trabajo de parto, contracciones"
+        - "Aborto espontáneo"
+        actions:
+        - text: "Decúbito lateral izquierdo"
+          kind: "procedure"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      - id: "normal"
+        label: "Normal"
+        criteria:
+        - "Perfusión adecuada"
+        - "A término (>36 sem)"
+        - "Presentación cefálica"
+        actions:
+        - provider_level: "E"
+          text: "Atienda el [parto](topic:wvems-2026-096#deliver-baby)"
+          kind: "procedure"
+        - text: "[Maneje al neonato](topic:wvems-2026-050)"
+          kind: "procedure"
+        - provider_level: "A"
+          text: "Vía salinizada"
+          kind: "procedure"
+      - id: "complicated"
+        label: "Complicado"
+        criteria:
+        - "Prematuro o gemelos"
+        - "Parto fallido"
+        - "Prolapso o presentación de nalgas"
+        actions:
+        - text: "No puje"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "Traslado urgente"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "[Maneje la complicación obstétrica](topic:wvems-2026-096#manage-ob-complication)"
+          kind: "procedure"
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[HTA](topic:wvems-2026-010), [Circulación](topic:wvems-2026-008)"
+        - text: "[Convulsiones](topic:wvems-2026-042), [Hemorragia](topic:wvems-2026-058)"
+        - text: "[Preeclampsia](topic:wvems-2026-092)"
+      critical_care_link:
+        text: "[Preeclampsia](topic:wvems-2026-092)"
+      dose_table:
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+  - page_number: 49
+    blocks:
+    - type: "prose"
+      title: "Imperativos del embarazo / parto"
+      markdown: |
+        - Este protocolo se aplica al **embarazo avanzado** (20 semanas o más).
+          - No hay intervenciones específicas del SEM para el embarazo temprano.
+          - Un útero palpable por encima del ombligo sugiere embarazo avanzado.
+        - Cualquier PAS **por encima de 160 mmHg** puede ser **preeclampsia**.
+          - Priorice el traslado. Llame a **control médico** ante cualquier rechazo.
+        - Trate de forma enérgica cualquier [convulsión](topic:wvems-2026-042) como **eclampsia**.
+        - Todo traumatismo materno después de las 20 semanas debe trasladarse.
+          - El feto puede tener una lesión que no es evidente de inmediato.
+          - Incluso un traumatismo menor (caídas simples, etc.) puede dañar al feto.
+        - **Priorice el traslado** si hay complicaciones (a un centro con ginecoobstetricia).
+        - **Reduzca el cordón** por encima de la cabeza si está alrededor del cuello.
+        - **[Maneje las complicaciones obstétricas](topic:wvems-2026-096#manage-ob-complication)** durante el traslado:
+          - **Parto fallido / distocia de hombros**: traslade con las rodillas al pecho.
+          - **Prolapso**: no manipule el cordón; alivie la presión con los dedos en la vagina.
+          - **Presentación de nalgas**: no tire; eleve la parte que se presenta si presiona el cordón.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [preeclampsia](topic:wvems-2026-092) si está indicado y está acreditado para CC.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere el **triaje de destino** a un centro con servicio de **ginecoobstetricia**.
+        - Llame a **control médico** si tiene dudas sobre la seguridad de los fármacos.
+        - La **hemorragia posparto** puede ser grave; el **masaje del fondo uterino** puede ayudar.
+          - {A} Si hay mala perfusión: **[TXA](topic:wvems-2026-drug-reference#txa)** (ácido tranexámico): **2 g** IV/IO en 10 min.
+        - Puede intentar un **parto en casa** si no es complicado y es inminente.
+          - La coronación y la necesidad de pujar sugieren que el parto es inminente.
+        - Intente que haya un **acompañante** presente en cualquier exploración genital.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Remítase a [neonato](topic:wvems-2026-050) para el manejo del recién nacido.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - Medscape Delivery — https://emedicine.medscape.com/article/260036 [Ver: 2/24]
+        - Medscape Eclampsia — https://emedicine.medscape.com/article/253960 [Ver: 8/25]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 36
+
+        NEMSIS: 9914145

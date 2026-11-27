@@ -1,0 +1,29 @@
+# translated-from-sha256: 8f824455813efd8db43915a24b6afe34c57367451dac13c9afa0b9f075db7adb
+topic:
+  id: "calc-fib4"
+  title: "Índice FIB-4"
+  list_subtitle: "riesgo de fibrosis hepática"
+  last_reviewed: "Evidence review 2026-07-19 · AASLD 2023"
+  tags: ["fib-4", "fib4", "hígado", "fibrosis", "masld", "ehgna", "cirrosis", "hepatología"]
+  aliases:
+  - "FIB-4"
+  - "Fibrosis-4"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Estimación no invasiva de primera línea del riesgo de fibrosis hepática avanzada en
+      pacientes en riesgo (p. ej., MASLD).
+  - type: "formula"
+    kind: "fib4"
+    title: "FIB-4"
+    source: "Sterling et al. 2006; guía de MASLD de la AASLD 2023"
+    inputs:
+    - {key: "age", label: "Edad", unit: "yr", type: "number"}
+    - {key: "ast", label: "AST", unit: "U/L", type: "number"}
+    - {key: "alt", label: "ALT", unit: "U/L", type: "number"}
+    - {key: "platelets", label: "Plaquetas", unit: "×10⁹/L", type: "number"}
+    notes:
+    - "FIB-4 = (edad × AST) / (plaquetas × √ALT). Puntos de corte < 1.3 bajo, > 2.67 alto (corte bajo 2.0 si la edad es > 65)."
+    caveats:
+    - "Poco fiable por debajo de los 35 años; los resultados indeterminados requieren una prueba de segunda línea (VCTE / ELF)."

@@ -1,0 +1,78 @@
+# translated-from-sha256: cc130da38a065ea7905e67520952eea2bc7e05f5b6ddbc92c463a7fe6ec7a4c7
+topic:
+  id: "pb-im-ecg-basics"
+  title: "ECG — fundamentos y abordaje"
+  list_subtitle: "pp.114–115 · colocación · intervalos · eje"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiografía", "adulto", "medicina interna", "colocación de electrodos", "eje", "intervalo PR", "QRS", "QT", "QTc", "frecuencia", "ritmo", "cardiología"]
+  category: "medical"
+  pages:
+  - page_number: 114
+    blocks:
+    - type: "prose"
+      title: "Colocación de los electrodos"
+      markdown: |
+        - **LA / RA: muñecas. LL / RL: tobillos** — o como mínimo en las extremidades por debajo de hombros y caderas. **Es la colocación estándar para un ECG DIAGNÓSTICO de 12 derivaciones**, y la que suponen todos los criterios de este capítulo
+        - ⚠️ **La colocación en el torso (Mason-Likar)** — brazos a media altura en la cara lateral del bíceps, piernas 7.5 cm por debajo del ombligo — **es para MONITORIZACIÓN**, o para registrar durante el ejercicio o con el paciente en decúbito prono. Altera de forma medible los voltajes y el eje de las derivaciones de miembros (sobre todo por el electrodo del brazo izquierdo) y puede distorsionar los **criterios de voltaje de HVI y las ondas Q / el eje inferiores**, que son precisamente los criterios que se usan más adelante en este capítulo. El libro imprimía antes estas posiciones de torso como estándar
+        - **V1:** 4.º EIC, justo a la derecha del esternón
+        - **V2:** 4.º EIC, justo a la izquierda del esternón
+        - **V3:** a medio camino entre V2 y V4
+        - **V4:** línea medioclavicular, 5.º EIC
+        - **V5:** línea axilar anterior, lateral a V4
+        - **V6:** línea axilar media, lateral a V4 y V5
+        - ⚠️ **El error de colocación más frecuente es poner V1–V2 demasiado altos** — en el 2.º o 3.er espacio intercostal en lugar del 4.º. Eso produce una **falsa mala progresión de la onda R o un patrón de seudoinfarto anterior**
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_leads.png"
+      size: "full"
+      caption: "Colocación de los electrodos precordiales (V1–V6) y de miembros (RA/LA/RL/LL)."
+    - type: "prose"
+      title: "¿Bien colocado?"
+      markdown: |
+        - **La amplitud de la derivación II es igual a la suma de las derivaciones I y III** (ley de Einthoven). Se aplica a la **deflexión neta en cualquier instante**, no solo a la onda R — escrita como "R en II = R en I + R en III" a menudo parecerá no cumplirse en un trazado real
+        - La suma de las ondas en aVR, aVL y aVF debe ser cero
+    - type: "prose"
+      title: "Partes básicas del ECG"
+      markdown: |
+        - **Onda P** — despolarización (activación) auricular
+        - **Complejo QRS** — despolarización (activación) ventricular
+        - **Segmento ST, onda T, onda U** — repolarización (recuperación) ventricular
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_waveform.png"
+      size: "full"
+      caption: "Forma de onda del ECG — ondas P/Q/R/S/T/U con los intervalos PR, QRS, ST, QT y RR. 1 cuadro grande = 0.20 s."
+  - page_number: 115
+    blocks:
+    - type: "prose"
+      title: "Calibración"
+      markdown: |
+        - 1 cuadro grande = 5 mm = 0.20 segundos
+        - 1 cuadro pequeño = 1 mm = 0.04 segundos
+        - 5 cuadros pequeños = 1 cuadro grande
+        - Calibración correcta: 10 mm de altura representan 1 mV (10 cuadros pequeños / 2 cuadros grandes) — lo asegura una marca de estandarización al principio del ECG
+    - type: "prose"
+      title: "Abordaje (es fundamental un abordaje sistemático)"
+      markdown: |
+        - **Frecuencia** (¿taqui? ¿bradi?): 300 ÷ intervalo R-R (en cuadros grandes) = latidos por minuto
+        - **Ritmo** (¿relación entre P y QRS?): sinusal = una P antes de cada QRS, un QRS tras cada P, y P positiva en II y negativa en aVR
+        - **Intervalos:**
+          - PR 0.12–0.2 seg (3–5 cuadros pequeños)
+          - QRS < 0.1–0.11 seg
+          - QT / QTc (QTc = 0.33–0.44 / 0.45 seg)
+        - **Puntos que se confunden fácilmente:**
+          - El intervalo RR es en realidad el intervalo QRS–QRS
+          - El intervalo PR va en realidad del inicio de la P al inicio del QRS
+          - El intervalo QT va en realidad del inicio del QRS al final de la T
+          - No todos los QRS tienen las 3
+    - type: "prose"
+      title: "Eje medio del QRS (¿DEI o DED?)"
+      markdown: |
+        - A medio camino entre dos derivaciones de miembros con ondas R altas de igual altura
+        - Apunta a 90° (ángulo recto) de cualquier derivación de miembros con un QRS bifásico (Q = R o R = S)
+        - Lo normal es entre −30° y 100°
+        - Si el QRS es positivo en I y II → el eje es normal
+        - Si el QRS es positivo en I y negativo en II → desviación del eje a la izquierda (DEI)
+        - Si el QRS es positivo en II y negativo en I → desviación del eje a la derecha (DED)
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_axis.png"
+      size: "full"
+      caption: "Sistema de referencia hexaxial — el eje de cada derivación de miembros (grados)."

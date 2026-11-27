@@ -1,0 +1,38 @@
+{
+ "page": "assets/books/wvems/topics/wvems_2026_096.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s112",
+   "severity": "patient-safety",
+   "problem": "The translation 'en las urgencias' refers to the Emergency Department (the place), whereas the English 'in emergencies' refers to emergency situations. This could be misinterpreted by a clinician as a directive to wait until they reach the hospital to perform IO access.",
+   "fix": "en emergencias",
+   "en": "- Advance rapidly to **[IO](topic:wvems-2026-096#io) in emergencies**. May start w/ **[IO](topic:wvems-2026-096#io)** in a [CODE](topic:wvems-2026-024).",
+   "es": "- Pase rápido a la **[IO](topic:wvems-2026-096#io) en las urgencias**. Puede empezar con **[IO](topic:wvems-2026-096#io)** en un [CODE](topic:wvems-2026-024)."
+  },
+  {
+   "id": "s258",
+   "severity": "minor",
+   "problem": "'contaminación grosera' is a literal translation of 'gross contamination', but 'grosera' in Spanish means 'rude'. The correct clinical term for 'gross' (meaning visible/large-scale) is 'macroscópica'.",
+   "fix": "- Maximice el **lavado** de la contaminación macroscópica de las heridas grandes.",
+   "en": "- Maximize **flushing** gross contamination out of large wounds.",
+   "es": "- Maximice el **lavado** de la contaminación grosera de las heridas grandes."
+  },
+  {
+   "id": "s322",
+   "severity": "minor",
+   "problem": "'órdenes en línea' is a literal translation of 'online orders'. In a clinical context, 'online' means real-time/direct communication with a physician, whereas 'en línea' in Spanish usually refers specifically to the internet.",
+   "fix": "- La mayoría de las indicaciones de abajo **requieren órdenes directas** (y la dosis) — llame al **toxicólogo** del **centro de toxicología** o a urgencias (o al director médico).",
+   "en": "- Some toxins have unique antidotes — only **major symptoms** need treatment.\n- Most indications below **require online orders** (and dosing) — call the **toxicologist** at **Poison Control** or the ED (or OMD).\n- A few antidotes are included in other protocols — if indicated, may follow those standing orders.\n- Don’t forget [the basics](topic:wvems-2026-040): **O₂** for [inhaled](topic:wvems-2026-072) toxins, **[Narcan](topic:wvems-2026-drug-reference#narcan)** for hypoxia, **[NS Bolus](topic:wvems-2026-drug-reference#ns-bolus)** for shock.\n- **Poison Help: 1-800-222-1222**\n",
+   "es": "- Algunas toxinas tienen antídotos específicos — solo los **síntomas mayores** necesitan tratamiento.\n- La mayoría de las indicaciones de abajo **requieren órdenes en línea** (y la dosis) — llame al **toxicólogo** del **centro de toxicología** o a urgencias (o al director médico).\n- Algunos antídotos están incluidos en otros protocolos — si está indicado, puede seguir esas órdenes permanentes.\n- No olvide [lo básico](topic:wvems-2026-040): **O₂** para las toxinas [inhaladas](topic:wvems-2026-072), **[Narcan](topic:wvems-2026-drug-reference#narcan)** para la hipoxia, **[bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)** para el choque.\n- **Centro de toxicología: 1-800-222-1222**\n"
+  }
+ ],
+ "raw": [
+  "```json\n[]\n```",
+  "```json\n[\n  {\n    \"id\": \"s112\",\n    \"severity\": \"patient-safety\",\n    \"problem\": \"The translation 'en las urgencias' refers to the Emergency Department (the place), whereas the English 'in emergencies' refers to emergency situations. This could be misinterpreted by a clinician as a directive to wait until they reach the hospital to perform IO access.\",\n    \"fix\": \"en emergencias\"\n  }\n]\n```",
+  "```json\n[]\n```",
+  "```json\n[\n  {\n    \"id\": \"s258\",\n    \"severity\": \"minor\",\n    \"problem\": \"'contaminación grosera' is a literal translation of 'gross contamination', but 'grosera' in Spanish means 'rude'. The correct clinical term for 'gross' (meaning visible/large-scale) is 'macroscópica'.\",\n    \"fix\": \"- Maximice el **lavado** de la contaminación macroscópica de las heridas grandes.\"\n  },\n  {\n    \"id\": \"s322\",\n    \"severity\": \"minor\",\n    \"problem\": \"'órdenes en línea' is a literal translation of 'online orders'. In a clinical context, 'online' means real-time/direct communication with a physician, whereas 'en línea' in Spanish usually refers specifically to the internet.\",\n    \"fix\": \"- La mayoría de las indicaciones de abajo **requieren órdenes directas** (y la dosis) — llame al **toxicólogo** del **centro de toxicología** o a urgencias (o al director médico).\"\n  }\n]\n```",
+  "```json\n[]\n```",
+  "```json\n[]\n```"
+ ]
+}

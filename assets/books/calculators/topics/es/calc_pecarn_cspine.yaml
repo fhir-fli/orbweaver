@@ -1,0 +1,59 @@
+# translated-from-sha256: eb29b2959a7dede3f203347255a45e0b104b3268f978fd0f55d8469a0f5f98ee
+topic:
+  id: "calc-pecarn-cspine"
+  title: "PECARN columna cervical pediátrica"
+  list_subtitle: "imagen de columna cervical, niños < 18 a"
+  last_reviewed: "Evidence review 2026-09-07 · Leonard 2024 · Lee 2025 · OpenEvidence 2026-09-07"
+  tags: ["pecarn", "columna cervical", "columna cervical", "cuello", "traumatismo", "pediátrico", "pediatría", "niños", "imagen", "radiografía", "tc", "regla de decisión", "liberación"]
+  aliases:
+  - "Regla de columna cervical de PECARN"
+  - "Regla PECARN de lesión cervical"
+  - "Regla pediátrica de columna cervical"
+  - "Regla de columna cervical pediátrica"
+  category: "trauma"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Para menores de 18 años tras un traumatismo cerrado. Tres niveles: cualquier factor de
+      alto riesgo indica TC; si no, cualquier factor intermedio indica radiografías simples;
+      si no hay ninguno, el cuello puede liberarse clínicamente. Toque los factores
+      presentes; un factor de alto riesgo prevalece sobre los demás. Adultos de 16 años o más:
+      [NEXUS](topic:calc-nexus-cspine) o la
+      [Regla canadiense de columna cervical](topic:calc-canadian-cspine).
+  - type: "score"
+    title: "Regla de PECARN de lesión de columna cervical"
+    show_total: false
+    source: "Leonard et al., Lancet Child Adolesc Health 2024 (sensibilidad en la validación 94.3%, VPN 99.9%); Lee et al., JAMA Netw Open 2025"
+    items:
+    - {key: "gcs_low", label: "GCS 3–8, o No responde en AVPU", type: "toggle", points: 10, help: "alto riesgo"}
+    - {key: "abc", label: "Vía aérea, respiración o circulación anormales", type: "toggle", points: 10, help: "alto riesgo"}
+    - {key: "focal", label: "Déficit neurológico focal", type: "toggle", points: 10, help: "alto riesgo · incluye parestesias, entumecimiento o debilidad"}
+    - {key: "ams", label: "Estado mental alterado: GCS 9–14, Voz o Dolor en AVPU, u otros signos", type: "toggle", points: 1, help: "intermedio"}
+    - {key: "neck", label: "Dolor cervical, o dolor a la palpación en la línea media cervical", type: "toggle", points: 1, help: "intermedio"}
+    - {key: "substantial", label: "Lesión importante de cabeza o tronco", type: "toggle", points: 1, help: "intermedio · una lesión que por sí misma justifica ingreso o cirugía"}
+    bands:
+    - {min: 0, max: 0, label: "Sin imagen — libere el cuello clínicamente", detail: "VPN en la validación 99.9%.", severity: "none"}
+    - {min: 1, max: 3, label: "Radiografías simples de columna cervical", detail: "Mínimo 3 proyecciones (AP, lateral, odontoides), preferiblemente 5. Pase a TC si las radiografías son anormales o inadecuadas.", severity: "warn"}
+    - {min: 10, label: "TC de columna cervical", detail: "Traslade si no hay TC en el centro; las radiografías simples no excluyen las lesiones medulares y ligamentosas que tiene este grupo.", severity: "alert"}
+    caveats:
+    - "Derivada y validada en traumatismo cerrado en 18 centros pediátricos de trauma de EE. UU.; los autores piden validación en servicios de urgencias generales. No es para traumatismo penetrante."
+    - "Sensibilidad 94.3% (IC 95% 90.7–97.9): la regla pasa por alto algunas lesiones. Los síntomas persistentes pesan más que una regla negativa."
+  - type: "prose"
+    title: "Si las radiografías son normales pero persiste un factor"
+    markdown: |
+      Unas radiografías normales y adecuadas **no** liberan a un niño de riesgo intermedio.
+      Mantenga el collarín y el cuello inmovilizado. Libere solo si el niño
+      queda asintomático con rotación activa sin dolor, o tras una TC o RM
+      normal, o por decisión de un médico de mayor rango. Cualquier signo neurológico focal,
+      dolor o dolor a la palpación cervical persistente, estado mental alterado, o una
+      serie inadecuada (sin proyección de odontoides, C7–T1 no visible) requiere TC o
+      RM, trasladando si es necesario. Los signos neurológicos requieren RM
+      sean cuales sean las radiografías.
+
+      - En un niño pequeño la proyección de odontoides a menudo no se puede obtener: registre la
+        serie como inadecuada, no como normal.
+      - Las lesiones pediátricas son desproporcionadamente cervicales altas
+        (occipucio–C2) y ligamentosas, en las que las radiografías e incluso la TC pueden ser normales.
+      - Inmovilice con un collarín de tamaño adecuado y un hueco para el occipucio o
+        almohadillado bajo el tronco: una tabla plana flexiona el cuello sobre el gran
+        occipucio pediátrico.

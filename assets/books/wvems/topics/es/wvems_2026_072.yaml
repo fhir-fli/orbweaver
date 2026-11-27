@@ -1,0 +1,106 @@
+# translated-from-sha256: bf2cc50f123f90b57078f62a433b5201064921d12c553172824fbbb34e8819e1
+topic:
+  id: "wvems-2026-072"
+  version: "v260101"
+  title: "Inhalación"
+  list_subtitle: "2026-072 · humo / CO / gas tóxico"
+  last_reviewed: "Jun 2025"
+  tags:
+  - "inhalación"
+  - "humo"
+  - "monóxido de carbono"
+  - "gas tóxico"
+  - "anóxico"
+  - "traumatismo"
+  aliases:
+  - "Inhalación de humo"
+  - "Monóxido de carbono"
+  - "Gas tóxico / anóxico"
+  category: "trauma"
+  layout: "paged"
+  pages:
+  - page_number: 72
+    blocks:
+    - type: "flowchart"
+      variant: "linear"
+      warnings:
+      - type: "safety"
+        text: "Garantice la SEGURIDAD del proveedor"
+      entry_chain:
+      - text: "Exposición a gas tóxico o anóxico"
+        shape: "stadium"
+      steps:
+      - type: "action"
+        text: "Retire del peligro"
+        kind: "procedure"
+      - type: "content"
+        title: "Valore:"
+        bullets:
+        - "[Vía aérea](topic:wvems-2026-004), respiración"
+        - "[Quemaduras](topic:wvems-2026-070), sobredosis / tóxicos"
+      - type: "action"
+        text: "Administre O₂"
+        kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "safety"
+          text: "Garantice la DESCONTAMINACIÓN del paciente"
+        bullets:
+        - text: "Respiración"
+          link_id: "wvems-2026-006"
+        - text: "[Choque](topic:wvems-2026-008)"
+        - text: "Sobredosis / tóxicos"
+          link_id: "wvems-2026-040"
+        - text: "[Antídoto](topic:wvems-2026-096#administer-antidote)"
+      critical_care_link:
+        text: "[Intubación](topic:wvems-2026-078)"
+  - page_number: 73
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la inhalación"
+      highlight: true
+      markdown: |
+        - Vigile de cerca la [vía aérea](topic:wvems-2026-004) ante cualquier quemadura facial, nasal u oral.
+          - Busque **hollín** en la boca y **pelos chamuscados** en la nariz/cara.
+        - Administre oxígeno al **100%** con NRB en la exposición al monóxido de carbono (CO).
+          - La SpO₂ puede dar un **falso normal** (el CO puede engañar al monitor de SpO₂).
+          - Los síntomas pueden incluir: cefalea, confusión, piel roja, N/V.
+          - El oxígeno es crucial en las **mujeres embarazadas** expuestas al CO.
+        - Algunos gases industriales (p. ej., **cianuro**) pueden beneficiarse de un **[antídoto](topic:wvems-2026-096#administer-antidote)**.
+        - Los gases nerviosos de armas de destrucción masiva (p. ej., **sarín**, **VX**) pueden beneficiarse de un **[antídoto](topic:wvems-2026-096#administer-antidote)**.
+        - Incluso los gases no tóxicos pueden producir [hipoxia](topic:wvems-2026-006) y [disnea](topic:wvems-2026-030). Dé O₂.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere la [intubación](topic:wvems-2026-078) si está indicada y está acreditado para CC.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Hay monitores de SpCO que funcionan como los de SpO₂.
+          - Normal: menos del 3% (puede llegar al 6% en grandes fumadores).
+          - Exposición: 3% – 10%.
+          - Tóxico: por encima del 10%.
+        - La mayoría de los **agentes antidisturbios** policiales son irritantes respiratorios potentes.
+          - Entre los más comunes están el **gas lacrimógeno** (CS) y el **spray de pimienta** (OC).
+          - Lave los ojos y lleve al aire libre. Cuidado con la contaminación cruzada.
+          - No hay antídotos específicos. Dé tratamiento de soporte.
+        - Este protocolo incluye los **gases** y la inhalación de humo.
+          - Para **[quemaduras](topic:wvems-2026-070) químicas** y exposiciones cutáneas, remítase a [quemaduras](topic:wvems-2026-070).
+          - Para **envenenamiento** e ingestiones tóxicas, remítase a [sobredosis / tóxicos](topic:wvems-2026-040).
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Los niños pequeños (y los ancianos/frágiles) pueden presentar síntomas antes.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ATLS® — https://www.facs.org/quality-programs/trauma/education/advanced-trauma-life-support [Ver: 11th]
+        - Medscape CO — https://emedicine.medscape.com/article/2085044 [Ver: 7/25]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 9, 25
+
+        NEMSIS: 9914033, 9914167, 9914173

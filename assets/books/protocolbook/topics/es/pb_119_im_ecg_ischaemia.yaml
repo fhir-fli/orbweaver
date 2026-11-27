@@ -1,0 +1,114 @@
+# translated-from-sha256: 631a8f4ec379e9b649646badf290ba53d2c7cc432806215b3563e6a5ee9e344c
+topic:
+  id: "pb-im-ecg-ischaemia"
+  title: "ECG — isquemia (IAMCEST / IAMSEST)"
+  list_subtitle: "pp.119–120 · territorios · IAMCEST · IAMSEST"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiografía", "adulto", "medicina interna", "cardiología", "isquemia", "isquemia", "IAMCEST", "IAMSEST", "infarto de miocardio", "IAM", "elevación del ST", "descenso del ST", "arteria coronaria", "DA", "CD", "Cx", "punto J"]
+  category: "medical"
+  pages:
+  - page_number: 119
+    blocks:
+    - type: "prose"
+      title: "Vaso culpable"
+      markdown: |
+        En general es el resultado de la oclusión de una de las 3 arterias principales:
+
+        - La arteria coronaria derecha (CD) irriga la cara inferior
+        - La descendente anterior (DA) irriga la cara anterior
+        - La circunfleja (Cx) irriga la cara lateral
+        - Nota: el tronco común irriga tanto la cara anterior como la lateral
+    - type: "prose"
+      title: "Localización por el ECG"
+      markdown: |
+        A veces es posible localizarlo con el ECG:
+    - type: "table"
+      columns: ["Zona anatómica", "Derivaciones del ECG", "Arteria coronaria"]
+      column_flex: [3, 4, 5]
+      rows:
+      - cells: ["Septal", "V1–V2", "DA proximal"]
+      - cells: ["Anterior", "V3–V4", "DA"]
+      - cells: ["Apical", "V5–V6", "DA distal, Cx o CD"]
+      - cells: ["Lateral", "I, aVL", "Cx"]
+      - cells: ["Inferior", "II, III, aVF", "CD (85%), Cx (15%)"]
+      - cells: ["VD", "V1–V2 y V4R", "CD proximal"]
+      - cells: ["Posterior", "Descenso del ST en V1–V2 — **confírmelo con elevación del ST ≥ 0.5 mm en V7–V9**", "CD o Cx"]
+    - type: "prose"
+      title: "IAM con elevación del ST (IAMCEST)"
+      markdown: |
+        - Isquemia transmural — todo el espesor
+        - Elevación del segmento ST en el punto J en 2 derivaciones contiguas
+          - **Derivaciones V2–V3:**
+            - Elevación de 2 mm en hombres ≥ 40 años
+            - Elevación de 2.5 mm en hombres < 40 años
+            - Elevación de 1.5 mm en mujeres
+          - Elevación de 1 mm en todas las demás derivaciones
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_st_diagram.png"
+      size: "full"
+      caption: "Punto J, línea de base y segmento ST — donde se mide la elevación del ST."
+    - type: "prose"
+      markdown: |
+        Ejemplos de elevación del segmento ST:
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_ste_examples.png"
+      size: "full"
+      caption: "Ejemplos de elevación del segmento ST."
+  - page_number: 120
+    blocks:
+    - type: "prose"
+      markdown: |
+        Ejemplos de elevación del segmento ST con bloqueo de rama izquierda:
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_ste_lbbb.png"
+      size: "full"
+      caption: "Elevación del segmento ST en presencia de BRI."
+    - type: "prose"
+      title: "🛑 IAMCEST con BRI — un BRI nuevo NO es automáticamente un IAMCEST"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        Un BRI nuevo o presuntamente nuevo **ya no cuenta por sí solo como equivalente
+        de IAMCEST**. Aplique en su lugar los **criterios de Sgarbossa**:
+
+        - **Elevación concordante del ST ≥ 1 mm** en cualquier derivación — el más específico
+        - **Descenso concordante del ST ≥ 1 mm en V1–V3**
+        - **Elevación discordante excesiva del ST** — modificado por Smith: **cociente ST/S ≤ −0.25**
+
+        **Un BRI, un BRD o un ritmo de marcapasos con alta sospecha clínica de isquemia
+        en curso es un equivalente de IAMCEST** y debe triarse a reperfusión. Esto
+        importa aquí porque el trombolítico está en el estante.
+    - type: "prose"
+      title: "Derivaciones adicionales — regístrelas antes de decidir"
+      markdown: |
+        - **Sospecha de IAMCEST INFERIOR (II, III, aVF) → registre las derivaciones derechas V3R–V4R.**
+          La elevación del ST en **V4R** indica infarto del ventrículo derecho, lo que **cambia
+          el manejo: evite los nitratos, administre líquidos**
+        - **Sospecha de IAM POSTERIOR → registre las derivaciones posteriores V7–V9.** La elevación
+          del ST **≥ 0.5 mm** lo confirma. El descenso del ST en V1–V2 en el ECG estándar de 12 derivaciones es
+          la pista, no el diagnóstico
+        - Úselas siempre que los síntomas persistan y el ECG estándar de 12 derivaciones no sea
+          concluyente
+    - type: "prose"
+      title: "Antes de administrar un trombolítico — los imitadores de la elevación del ST"
+      markdown: |
+        No toda elevación del ST es isquémica. Considere y descarte:
+        **repolarización precoz · pericarditis · HVI · BRI · hiperpotasemia.**
+        Deciden el patrón y el cuadro clínico, no solo los milímetros.
+    - type: "prose"
+      title: "IAM sin elevación del ST (IAMSEST)"
+      markdown: |
+        - Isquemia subendocárdica
+        - Segmento ST anormal
+          - Presente en 2 derivaciones contiguas
+          - Descenso del ST horizontal o descendente
+          - De 1 mm o más
+          - Que dura al menos 0.08 segundos
+        - **NOTA:** los descensos del ST < 1 mm (o solo del punto J) con ascenso rápido del segmento ST se consideran normales
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_ecg_std_examples.png"
+      size: "full"
+      caption: "Ejemplos de descenso del segmento ST."

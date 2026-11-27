@@ -1,0 +1,62 @@
+# translated-from-sha256: cf21d5a0d996fea78ccb9978baa310d787f32586bedffe651aac8b27bfc176ff
+topic:
+  id: "pb-pals-algorithm"
+  title: "Soporte vital avanzado pediátrico"
+  list_subtitle: "p.13 · diagrama de PALS"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["pals", "pediátrico", "reanimación", "emergencia"]
+  category: "critical_care"
+  page_number: 13
+  blocks:
+  - type: "flowchart"
+    variant: "severity"
+    entry_chain:
+    - text: "Seguridad, Estimular, Pedir ayuda — traslade al niño al área de emergencia (siempre que pueda moverse con seguridad)"
+      shape: "rectangle"
+    - text: "Evalúe la respiración y el pulso — mire, escuche y sienta durante 5–10 segundos"
+      shape: "rectangle"
+    - text: "No responde, no respira o solo jadea ocasionalmente"
+      shape: "diamond"
+    branches:
+    - id: "slow"
+      label: "< 60 lpm (o sin pulso)"
+      severity: "emergency"
+      actions:
+      - text: "15 compresiones torácicas : 2 ventilaciones de rescate con bolsa-válvula-mascarilla durante 2 minutos (rote al reanimador cada 2 minutos)"
+        kind: "procedure"
+      - text: "Establezca un acceso IV/IO"
+        kind: "procedure"
+      - text: "Adrenalina 0.1 ml/kg de 0.1 mg/mL (1:10,000), máx. 10 ml (= 1 mg). Si solo hay 1 mg/mL (1:1,000), diluya 1 ml en 9 ml de solución salina normal — nunca administre 1:1,000 sin diluir por vía IV"
+        kind: "medication_administration"
+      - text: "Dextrosa al 10% 2 ml/kg (mezcle 8 ml de solución salina normal con 2 ml de D50%)"
+        kind: "medication_administration"
+    - id: "palpable"
+      label: "> 60 lpm, pulso palpable"
+      severity: "priority"
+      actions:
+      - text: "Abra la vía aérea / reposicione la cabeza"
+        kind: "procedure"
+      - text: "1 ventilación cada 2–3 segundos (20–30 ventilaciones/min) con oxígeno"
+        kind: "procedure"
+      - text: "Establezca un acceso IV/IO"
+        kind: "procedure"
+      - text: "Dextrosa al 10% 2 ml/kg (mezcle 8 ml de solución salina normal con 2 ml de D50%)"
+        kind: "medication_administration"
+      - text: "Continúe la exploración para establecer la causa y tratarla"
+        kind: "assessment"
+    convergence:
+      text: "Reevalúe el ABC"
+      shape: "rounded_rectangle"
+      exits:
+      - label: "Mejoría"
+        loopback: "palpable"
+      - label: "Sin cambios"
+    post_convergence:
+      text: |
+        Continúe los ciclos: 15 compresiones : 2 ventilaciones durante 2 minutos
+        Coloque una SNG
+        Reevalúe el ABC cada 2–3 minutos
+        Si está pálido, considere una transfusión
+        Repita la adrenalina cada 3–5 minutos
+        Si no hay mejoría tras 20 minutos, considere detener la reanimación
+      shape: "rectangle"

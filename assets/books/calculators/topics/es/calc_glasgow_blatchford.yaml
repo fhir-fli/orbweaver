@@ -1,0 +1,48 @@
+# translated-from-sha256: f7eafa80fff14149c2df5b2d8823679f27c33c6989e83c42d54e1939336e1806
+topic:
+  id: "calc-glasgow-blatchford"
+  title: "Puntuación de Glasgow-Blatchford"
+  list_subtitle: "riesgo de hemorragia digestiva alta"
+  last_reviewed: "Evidence review 2026-07-19 · Blatchford 2000 · ACG 2021"
+  tags: ["glasgow-blatchford", "gbs", "hemorragia digestiva", "hemorragia digestiva alta", "hematemesis", "melena", "hda"]
+  aliases:
+  - "Glasgow-Blatchford"
+  - "GBS"
+  - "Puntuación de hemorragia digestiva"
+  category: "medical"
+  blocks:
+  - type: "prose"
+    markdown: |
+      Estratifica el riesgo de la hemorragia digestiva alta aguda para identificar a los pacientes
+      de muy bajo riesgo (GBS ≤ 1) que pueden manejarse de forma ambulatoria.
+  - type: "formula"
+    kind: "glasgow_blatchford"
+    title: "Puntuación de Glasgow-Blatchford"
+    source: "Blatchford et al., Lancet 2000"
+    inputs:
+    - {key: "bun", label: "BUN", type: "number"}
+    - key: "bun_unit"
+      label: "Unidad de urea"
+      type: "select"
+      default: "bun_mgdl"
+      options:
+      - {value: "bun_mgdl", label: "BUN mg/dL"}
+      - {value: "urea_mmol", label: "Urea mmol/L"}
+    - {key: "hgb", label: "Hemoglobina", unit: "g/dL", type: "number"}
+    - key: "sex"
+      label: "Sexo"
+      type: "select"
+      default: "M"
+      options:
+      - {value: "M", label: "Hombre"}
+      - {value: "F", label: "Mujer"}
+    - {key: "sbp", label: "PA sistólica", unit: "mmHg", type: "number"}
+    - {key: "pulse100", label: "Pulso ≥ 100", type: "boolean"}
+    - {key: "melena", label: "Melena", type: "boolean"}
+    - {key: "syncope", label: "Síncope", type: "boolean"}
+    - {key: "hepatic", label: "Enfermedad hepática", type: "boolean"}
+    - {key: "cardiac", label: "Insuficiencia cardíaca", type: "boolean"}
+    notes:
+    - "Los umbrales de hemoglobina difieren según el sexo (hombres 13/12/10, mujeres 12/10). GBS 0–1 = riesgo muy bajo."
+    caveats:
+    - "Mejor validada para predecir la necesidad de intervención/transfusión, no la mortalidad; interprétela con juicio clínico."

@@ -1,0 +1,115 @@
+# translated-from-sha256: 1f5b7a89c7c5f3190092997a2ba9ba17214d4e65c1cbe6ff94363906d468891a
+topic:
+  id: "pb-meningitis-gt1m"
+  title: "Meningitis pediátrica"
+  list_subtitle: "pp.54–55 · reconocimiento + secuencia de tratamiento"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["meningitis", "pediátrico", "infección_snc", "punción lumbar", "LCR", "cefotaxima", "ceftriaxona"]
+  category: "medical"
+  pages:
+  - page_number: 54
+    blocks:
+    - type: "prose"
+      markdown: |
+        - Los síntomas suelen ser inespecíficos; si no está claro, trate como meningitis **Y** como el otro diagnóstico (malaria, meningitis tuberculosa, etc.) hasta tener pruebas definitivas.
+        - **NO HAY FORMA** de confirmar o descartar una meningitis sin una punción lumbar.
+    - type: "table"
+      title: "Síntomas que PUEDEN presentarse en lactantes y niños"
+      columns: ["Síntoma", "Lactante", "Niños"]
+      column_flex: [5, 5, 5]
+      rows:
+      - cells: ["Fiebre", "Neonatos: no siempre (pueden tener hipotermia)", "✓"]
+      - cells: ["Cefalea", "✓", "✓"]
+      - cells: ["Rigidez de nuca / Kernig / Brudzinski", "Menos frecuente", "✓"]
+      - cells: ["Rechazo del alimento / vómitos / diarrea", "✓", "✓"]
+      - cells: ["Alteración del estado mental", "Letargo/irritabilidad", "Confusión/letargo/irritabilidad"]
+      - cells: ["Convulsiones", "Más preocupantes en <6 meses", "Más preocupantes en >6 años"]
+      - cells: ["Signos neurológicos focales", "✓", "✓"]
+      - cells: ["Dificultad respiratoria / apnea", "✓", "poco frecuente"]
+      - cells: ["Fontanela abombada", "✓", "—"]
+      - cells: ["Fotofobia", "No se puede confirmar", "✓"]
+      - cells: ["Tríada de Cushing", "no", "Signo tardío y ominoso (HTA, bradicardia, respiración irregular)"]
+    - type: "prose"
+      markdown: |
+        Los niños con **≥1 de**: rigidez de nuca, cianosis, alteración de la conciencia, convulsiones parciales, o convulsiones a partir de los 6 años tienen una tasa mucho mayor de meningitis.
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Si hay cualquier sospecha de meningitis tuberculosa, vea el protocolo de tuberculosis
+        - Si el cultivo muestra meningococo, los contactos cercanos necesitan profilaxis
+        - Si tiene <1 mes, vea los protocolos neonatales
+        - Ya no se recomiendan los corticoides en países de bajos recursos
+    - type: "prose"
+      title: "Trate con un ciclo completo de antibióticos si hay alguno"
+      markdown: |
+        - Punción lumbar con:
+          - Bacterias en la tinción de Gram, cultivo de LCR positivo, O
+          - Tinción de Gram: >9 leucocitos (<3 meses), >6 leucocitos (>3 meses)
+        - AVPU = 'P o U'
+        - Rigidez de nuca / Kernig / Brudzinski
+        - Fontanela abombada en un niño enfermo
+        - Evidencia de convulsiones parciales
+        - Si no, puede considerar suspender los antibióticos a las 48 horas si el cultivo de LCR es negativo
+  - page_number: 55
+    blocks:
+    - type: "prose"
+      title: "Manejo (tratamiento >1 mes)"
+      markdown: |
+        - Monitorice, mantenga el ABC
+        - Controle los signos vitales (FC, FR, spO2, Temp, peso)
+        - Evalúe AVPU/GCS, el estado de hidratación
+        - Inicie oxígeno si la spO2 < 90%, coloque una vía IV
+        - Haga una historia y una exploración física breves y dirigidas
+    - type: "flowchart"
+      variant: "cascade"
+      action_width: 0.4
+      entry:
+        text: "Sospecha de meningitis"
+        shape: "stadium"
+      root:
+        decision: "¿Tiene el paciente alguno de estos?"
+        criteria:
+        - "AVPU = P o U"
+        - "No puede beber / comer"
+        - "Fontanela abombada"
+        - "Convulsiones con >6 meses de edad o >48 h"
+        - "Evidencia de convulsiones parciales"
+        - "Alteración del estado mental Y convulsiones"
+        action:
+          text: "Busque otro origen de los síntomas"
+        action_answer: "no"
+        continuation:
+          decision: "¿Alguna contraindicación para la PL?"
+          criteria:
+          - "Requiere RCP"
+          - "Choque"
+          - "Signos de PIC elevada (GCS ≤8, estado mental cambiante, signos neurológicos focales, pupilas arreactivas, papiledema)"
+          - "Alteración de la coagulación o plaquetas <100"
+          - "Infección cutánea en el sitio de la PL"
+          action:
+            text: "Sin PL por ahora"
+            timing: "Reevalúe a las 24–48 h de los antibióticos"
+          action_answer: "yes"
+      terminal_action:
+        text: "Haga la PL — envíe glucosa, proteínas, recuento celular, tinción de Gram, cultivo"
+    - type: "prose"
+      title: "Tratamiento"
+      markdown: |
+        **Antibióticos IV x 10 días — inicie en menos de 1 hora.**
+
+        **Menores de 1 mes (neonato):**
+        - Ampicilina 75 mg/kg IV cada 6 horas (= 300 mg/kg/día) — **para Listeria**
+        - **Y** cefotaxima 75 mg/kg IV cada 6–8 horas (= 225–300 mg/kg/día)
+        - ⚠️ **Evite la ceftriaxona en neonatos** — desplaza la bilirrubina y forma precipitados mortales con los líquidos que contienen calcio. Use cefotaxima
+
+        **1–3 meses:**
+        - Ampicilina 75 mg/kg IV cada 6 horas — **el riesgo de Listeria persiste en este periodo**
+        - **Y** cefotaxima 75 mg/kg IV cada 6–8 horas, o ceftriaxona 100 mg/kg IV una vez al día (máx. 4 g/día)
+
+        **Mayores de 3 meses:**
+        - Ceftriaxona 100 mg/kg IV una vez al día (máx. 4 g/día), **O** cefotaxima 75 mg/kg IV cada 6–8 horas
+        - **No** se necesita ampicilina a esta edad — Listeria ya no es un patógeno probable
+    - type: "prose"
+      title: "Continuación"
+      markdown: |
+        - Siga el protocolo de convulsiones si corresponde

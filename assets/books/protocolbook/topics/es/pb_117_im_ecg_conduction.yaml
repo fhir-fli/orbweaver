@@ -1,0 +1,37 @@
+# translated-from-sha256: c27c5b9ce1cc75744f9be7d6d9675d5c69a44b62330a1b63bb35a185edd77212
+topic:
+  id: "pb-im-ecg-conduction"
+  title: "ECG — trastornos de la conducción"
+  list_subtitle: "p.117 · BRD · BRI"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["ECG", "EKG", "electrocardiografía", "adulto", "medicina interna", "cardiología", "conducción", "bloqueo de rama", "BRD", "BRI", "bloqueo de rama derecha", "bloqueo de rama izquierda", "QRS"]
+  category: "medical"
+  page_number: 117
+  blocks:
+  - type: "prose"
+    title: "Trastornos de la conducción"
+    callout: true
+    palette:
+      alert: "0xFF0D47A1"
+      alert_fill: "0xFFE8EEF7"
+      alert_text: "0xFF0D47A1"
+    markdown: |
+      Bloqueos de rama — se reconocen por el ensanchamiento del QRS y la morfología característica en V1 / V6.
+  - type: "prose"
+    title: "Bloqueo de rama derecha (BRD)"
+    markdown: |
+      - Patrón rSR' en V1 (onda r inicial pequeña, seguida de una onda S de tamaño normal y luego otra deflexión positiva grande)
+      - BRD completo: QRS > 0.12 segundos con el patrón anterior
+      - BRD incompleto: QRS 0.10–0.12 segundos con el patrón anterior
+  - type: "prose"
+    title: "Bloqueo de rama izquierda (BRI)"
+    markdown: |
+      - Pérdida de la onda r inicial en V1 y de la onda q en V6
+      - Patrón QS en V1 (solo deflexión negativa, puede tener muesca)
+      - Patrón R en V6 (solo deflexión positiva, puede tener muesca)
+      - **BRI completo: QRS ≥ 0.12 segundos (≥ 120 ms)** con el patrón anterior
+      - **BRI incompleto: QRS 0.10–0.12 segundos (110–120 ms)** con el patrón anterior
+  - type: "image"
+    path: "assets/books/protocolbook/images/pb_ecg_conduction.png"
+    size: "full"
+    caption: "Normal frente a BRD frente a BRI en las derivaciones V1 y V6."

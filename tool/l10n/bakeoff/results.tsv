@@ -1,0 +1,95 @@
+haiku-whole-yaml	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	17.4	4562	5041	1
+haiku-whole-yaml	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	17.8	3666	5501	3
+haiku-whole-yaml	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	22.6	3462	6509	3
+haiku-whole-yaml	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	20.5	3967	5788	0
+haiku-whole-yaml	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	14.0	4061	3604	1
+haiku-whole-yaml	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	14.5	3696	3906	0
+haiku-whole-yaml	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	15.1	4318	4165	0
+haiku-whole-yaml	assets/books/wvems/topics/wvems_2026_020.yaml	23.9	3498	6469	0
+haiku-whole-yaml	assets/books/wvems/topics/wvems_2026_062.yaml	18.9	3022	5396	0
+haiku-whole-yaml	assets/books/calculators/topics/conv_steroids.yaml	8.1	2258	2326	1
+haiku	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	18.0	2566	4890	0
+haiku	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	18.4	2619	5218	0
+haiku	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	14.7	2972	4131	0
+haiku	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	15.7	2733	4906	0
+haiku	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	13.7	2090	3843	1
+haiku	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	12.1	1794	3357	0
+haiku	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	11.8	2279	3149	0
+haiku	assets/books/wvems/topics/wvems_2026_020.yaml	15.4	2430	4322	0
+haiku	assets/books/wvems/topics/wvems_2026_062.yaml	20.9	2427	6054	0
+haiku	assets/books/calculators/topics/conv_steroids.yaml	8.4	1480	2283	0
+gemini_gemini-3.1-flash-lite	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	4.6	1826	1521	0
+gemini_gemini-3.1-flash-lite	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	4.6	1947	1660	0
+gemini_gemini-3.1-flash-lite	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	4.6	2100	1827	1
+gemini_gemini-3.1-flash-lite	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	4.9	1852	1630	1
+gemini_gemini-3.1-flash-lite	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	4.2	1347	1091	0
+gemini_gemini-3.1-flash-lite	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	5.2	1234	909	0
+gemini_gemini-3.1-flash-lite	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	4.3	1565	1332	0
+gemini_gemini-3.1-flash-lite	assets/books/wvems/topics/wvems_2026_020.yaml	5.0	1814	1507	0
+gemini_gemini-3.1-flash-lite	assets/books/wvems/topics/wvems_2026_062.yaml	4.0	1782	1541	0
+gemini_gemini-3.1-flash-lite	assets/books/calculators/topics/conv_steroids.yaml	2.8	973	656	0
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	214.5	1826	1543	0
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	65.1	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	48.6	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	0.2	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	0.5	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	30.8	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	26.4	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/wvems/topics/wvems_2026_020.yaml	65.6	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/wvems/topics/wvems_2026_062.yaml	172.7	1782	1534	0
+gemini_gemma-4-31b-it	assets/books/calculators/topics/conv_steroids.yaml	97.5	973	645	0
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/wvems/topics/wvems_2026_020.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/wvems/topics/wvems_2026_062.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E2B-it-qat-q4_0-gguf	assets/books/calculators/topics/conv_steroids.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	0.5	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/wvems/topics/wvems_2026_020.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/wvems/topics/wvems_2026_062.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+ollama_hf.co_google_gemma-4-E4B-it-qat-q4_0-gguf	assets/books/calculators/topics/conv_steroids.yaml	0.4	0	0	api-error: HTTP Error 500: Internal Server Error
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	0.8	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	26.5	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	0.2	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	15.9	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	33.9	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+litert_gemma-4-E2B-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	127.8	0	0	0
+litert_gemma-4-E2B-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	130.0	0	0	1
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	225.6	1565	1328	0
+gemini_gemma-4-31b-it	assets/books/wvems/topics/wvems_2026_020.yaml	19.9	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+litert_gemma-4-E2B-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	226.1	0	0	bad-reply: Illegal trailing comma before end of object: line 55 column 292 (char 5632)
+litert_gemma-4-E2B-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	129.2	0	0	1
+litert_gemma-4-E2B-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	84.2	0	0	1
+litert_gemma-4-E2B-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	88.7	0	0	bad-reply: Invalid control character at: line 2 column 13 (char 14)
+litert_gemma-4-E2B-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	112.9	0	0	0
+litert_gemma-4-E2B-it	assets/books/wvems/topics/wvems_2026_020.yaml	112.4	0	0	2
+litert_gemma-4-E2B-it	assets/books/wvems/topics/wvems_2026_062.yaml	128.0	0	0	3
+litert_gemma-4-E2B-it	assets/books/calculators/topics/conv_steroids.yaml	51.2	0	0	0
+litert_gemma-4-E4B-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	162.7	0	0	0
+litert_gemma-4-E4B-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	167.1	0	0	bad-reply: Expecting ',' delimiter: line 59 column 427 (char 3940)
+litert_gemma-4-E4B-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	167.3	0	0	0
+litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	150.2	0	0	1
+litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	109.1	0	0	0
+litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	90.3	0	0	0
+litert_gemma-4-E4B-it	assets/books/protocolbook/topics/pb_037_anaphylaxis.yaml	153.1	0	0	0
+litert_gemma-4-E4B-it	assets/books/wvems/topics/wvems_2026_020.yaml	178.3	0	0	3
+litert_gemma-4-E4B-it	assets/books/wvems/topics/wvems_2026_062.yaml	187.5	0	0	0
+litert_gemma-4-E4B-it	assets/books/calculators/topics/conv_steroids.yaml	86.9	0	0	0
+litert_gemma-4-12B-it	assets/books/who_imci/topics/who_1_chart09_diazepam.yaml	481.8	0	0	bad-reply: Invalid \escape: line 16 column 696 (char 1103)
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_1_chart11_dehydration.yaml	363.0	1947	1658	0
+gemini_gemma-4-31b-it	assets/books/who_imci/topics/who_8_03_2_cotrimoxazole.yaml	212.8	2100	1923	0
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_086_neo_sepsis_treatment.yaml	1207.6	1852	1637	0
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	5374.2	0	0	api-error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_014_cardiac_arrest.yaml	158.0	1234	913	0
+gemini_gemma-4-31b-it	assets/books/wvems/topics/wvems_2026_020.yaml	256.8	1814	1502	0
+gemini_gemma-4-31b-it	assets/books/protocolbook/topics/pb_028_poisoning_ingestion.yaml	2954.9	1347	1094	0

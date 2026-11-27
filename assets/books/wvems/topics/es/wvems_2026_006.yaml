@@ -1,0 +1,124 @@
+# translated-from-sha256: ef12d8a6123466df52312cfae31e4daabb2a7c7cc100cc67a7942b8d84bc00a5
+topic:
+  id: "wvems-2026-006"
+  version: "v260101"
+  title: "Respiración"
+  list_subtitle: "2026-006 · gravedad en 3 ramas"
+  last_reviewed: "Dec 2025"
+  tags: ["respiración", "hipoxia", "oxígeno", "bvm", "nippv", "ptx", "neumotórax", "disnea"]
+  aliases:
+  - "Hipoxia"
+  - "Oxígeno"
+  - "Neumotórax"
+  - "PTX"
+  - "EP"
+  - "Ahogamiento"
+  category: "universal"
+  layout: "paged"
+  pages:
+  - page_number: 6
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry_chain:
+      - text: "Disnea o SpO₂ menor de 95%"
+        shape: "stadium"
+      - text: "Administre O₂"
+        shape: "stadium"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "mild"
+        label: "Leve"
+        criteria:
+        - "Despierto y orientado"
+        - "Disnea subjetiva"
+        actions:
+        - text: "Posición de confort"
+          kind: "procedure"
+      - id: "moderate"
+        label: "Moderada"
+        criteria:
+        - "Respiraciones inadecuadas"
+        - "Cianosis, boqueo"
+        actions:
+        - text: "Asistencia con BVM"
+          kind: "procedure"
+        - provider_level: "E"
+          text: "NIPPV"
+          kind: "procedure"
+      - id: "severe"
+        label: "Grave"
+        criteria:
+        - "Insuficiencia respiratoria"
+        - "Lesión penetrante"
+        actions:
+        - text: "Ventilación con BVM"
+          kind: "procedure"
+        - text: "Sello torácico"
+          kind: "procedure"
+        - provider_level: "I"
+          text: "Descompresión pleural"
+          kind: "procedure"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        bullets:
+        - text: "[Vía aérea](topic:wvems-2026-004), [Disnea](topic:wvems-2026-030)"
+        - text: "[Ventilador](topic:wvems-2026-080)"
+  - page_number: 7
+    blocks:
+    - type: "prose"
+      critical_care_link:
+        text: "[Ventilador](topic:wvems-2026-080)"
+      title: "Imperativos de la respiración"
+      highlight: true
+      markdown: |
+        - **La disnea con traumatismo penetrante** es un problema grave.
+          - Aplique un **sello torácico** sobre cualquier lesión penetrante del cuello o el [tronco](topic:wvems-2026-064).
+          - Retire el sello torácico si usa presión positiva (p. ej., BVM, NIPPV).
+        - El **PTX** espontáneo o traumático puede ser un problema grave.
+          - **[Descompresión pleural](topic:wvems-2026-096#pleural-decompress)** ante [hipotensión](topic:wvems-2026-008) o hipoxia persistente.
+        - **[BVM](topic:wvems-2026-096#bvm)**: use dos proveedores y técnica a dos manos si puede.
+          - Use **EtCO₂** con objetivo de **35–45 mmHg**. Evite la hiperventilación.
+          - Durante la RCP: alterne **30 : 2** hasta colocar el BIAD (o el TET).
+        - **[NIPPV](topic:wvems-2026-096#nippv)**: contraindicada con agitación, vómitos o hipotensión.
+          - Puede usarse si está alterado o sin respuesta, pero vigile de cerca.
+          - Puede colocar la cánula de EtCO₂ bajo la mascarilla de NIPPV para obtener la onda.
+    - type: "prose"
+      title: "Frecuencia con BVM"
+      highlight: true
+      markdown: |
+        - **Adulto**: cada 6 seg (10 /min)
+        - **Pediátrico**: cada 2 seg (20–30 /min)
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Administre O₂ a dosis apropiadas. Puede reducirlo si la SpO₂ supera el 98%.
+          - **Cánula nasal (NC)**: 1–6 L/min; **mascarilla sin reinhalación (NRB)**: 10–15 L/min.
+          - La **hiperoxia** puede empeorar algunas afecciones, sobre todo la EPOC.
+          - SpO₂ objetivo de **88–92%** en adultos con EPOC aislada.
+        - Si no hay SpO₂ o el aparato falla: use un buen criterio clínico.
+        - El **ahogamiento** (o el buceo con escafandra) puede causar hipoxia — el tratamiento es el mismo.
+    - type: "band_callout"
+      band: "critical_care"
+      title: ""
+      markdown: |
+        - Considere el [ventilador](topic:wvems-2026-080) si está indicado y está acreditado para cuidados críticos.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Remítase a [neonato](topic:wvems-2026-050) para cualquier paciente pediátrico de menos de 1 mes (≤ 30 días).
+          - Considere un **reanimador con pieza en T** (en lugar de BVM) en [neonatos](topic:wvems-2026-050).
+        - Tenga precaución y use una BVM del tamaño adecuado para evitar el **barotrauma**.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Limmer D, O’Keefe MF. Emergency Care 15th ed. Capítulo 10.
+
+        NEMSIS: 9914001, 9914211

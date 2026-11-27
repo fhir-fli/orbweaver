@@ -1,0 +1,64 @@
+# translated-from-sha256: b3bc35a0e7a8e3adf457522fc95ae6dff929edb7ccbc9517f86153a1d544bcfd
+topic:
+  id: "pb-animal-bite"
+  title: "Mordedura de animal"
+  list_subtitle: "p.38 · mordeduras, tétanos + PEP de rabia"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["mordedura de animal", "mordedura humana", "mordedura de perro", "rabia", "tétanos", "mordedura", "profilaxis", "amoxicilina-ácido clavulánico"]
+  category: "medical"
+  page_number: 38
+  blocks:
+  - type: "prose"
+    title: "Mordeduras de mamíferos (no humanas)"
+    markdown: |
+      - Limpie la herida con agua y jabón
+      - Desbride el tejido desvitalizado
+      - Los antibióticos profilácticos son controvertidos, pero en general se recomiendan en los siguientes casos
+        - Pacientes inmunodeprimidos
+        - Pacientes asplénicos
+        - Hepatopatía avanzada
+        - Lesión moderada-grave o por aplastamiento
+        - Edema en el sitio de la mordedura
+        - Lesiones cerca de la mano, próximas a otros huesos/articulaciones, sobre todo si penetran la cápsula articular o el periostio
+  - type: "prose"
+    title: "Mordeduras humanas"
+    markdown: |
+      - Limpie la herida con agua y jabón
+      - Desbride el tejido desvitalizado
+      - Toda mordedura humana debe recibir antibióticos profilácticos
+      - Considere la profilaxis posexposición para el VIH; en general el riesgo es bajo, pero mayor si la saliva está contaminada con sangre
+      - Se recomienda la vacuna contra la hepatitis B ≤24 h tras la mordedura si no estaba inmunizado
+  - type: "prose"
+    title: "Tratamiento profiláctico"
+    markdown: |
+      - **Amoxicilina-ácido clavulánico x 5 días**
+        - Pediátrico: 25mg/kg/dosis VO dos veces al día
+        - Adulto: 1 gramo VO dos veces al día
+      - **Si no hay amoxicilina-clavulánico pero sí amoxicilina sola** (un problema de suministro, no una alergia) — **amoxicilina a la misma dosis MÁS metronidazol** (adultos 400mg VO tres veces al día · niños 7.5mg/kg/dosis VO tres veces al día) x 5 días
+      - **Alergia a la penicilina — use una PAREJA, no un solo fármaco** (ninguna alternativa única cubre a la vez **Pasteurella** y los anaerobios orales):
+        - **Doxiciclina** — adultos 100 mg VO dos veces al día · niños 2.2 mg/kg/dosis VO dos veces al día (máx. 100 mg/dosis). **Segura a cualquier edad en ciclos de menos de 21 días — no tiñe los dientes**
+        - **MÁS metronidazol** — adultos 500 mg VO tres veces al día · niños 7.5 mg/kg/dosis VO tres veces al día (máx. 500 mg/dosis)
+  - type: "table"
+    title: "Tétanos — heridas limpias y menores"
+    columns: ["Dosis previas de toxoide tetánico", "Toxoide tetánico", "Inmunoglobulina antitetánica humana"]
+    column_flex: [3, 3, 3]
+    rows:
+    - cells: ["<3 dosis o desconocido", "Sí", "No"]
+    - cells: ["≥3 dosis", "Solo si la última dosis fue hace ≥10 años", "No"]
+  - type: "table"
+    title: "Tétanos — todas las demás heridas"
+    columns: ["Dosis previas de toxoide tetánico", "Toxoide tetánico", "Inmunoglobulina antitetánica humana"]
+    column_flex: [3, 3, 3]
+    rows:
+    - cells: ["<3 dosis o desconocido", "Sí", "Sí"]
+    - cells: ["≥3 dosis", "Solo si la última dosis fue hace ≥5 años", "No"]
+  - type: "table"
+    title: "Rabia — suponiendo que no estaba vacunado"
+    columns: ["Biológico", "Pauta"]
+    column_flex: [2, 5]
+    rows:
+    - cells: ["**Inmunoglobulina antirrábica** (solo exposición de categoría III)", "Ig humana 20 UI/kg O Ig equina 40 UI/kg. **Es un MÁXIMO, no un objetivo — no hay dosis mínima. No lo supere** (el exceso suprime la propia respuesta de anticuerpos del paciente). **Infiltre TODA la dosis en y alrededor de la(s) herida(s)**; si el volumen no alcanza para todas las heridas, dilúyala con solución salina normal. Administre el resto IM solo si la herida físicamente no lo admite. **Solo el día 0 — nunca administre la IGR más de 7 días después de la primera dosis de vacuna.** No se necesita prueba cutánea antes de la Ig equina."]
+    - cells: ["**Vacuna**", "IM (deltoides o cara anterolateral del muslo), una inyección los días 0, 3, 7 y 14"]
+  - type: "prose"
+    markdown: |
+      **Sobre el resto de la inmunoglobulina:** la OMS (2018) aconseja infiltrar **toda** la dosis en y alrededor de la herida. Las Uganda Clinical Guidelines 2023 aún aconsejan administrar el resto IM en el glúteo. **Ambas son aceptables** — infiltrar solo la herida además rinde más un biológico escaso.

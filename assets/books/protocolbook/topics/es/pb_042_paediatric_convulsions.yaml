@@ -1,0 +1,74 @@
+# translated-from-sha256: 9ba36b788f62015e1654763f7bda3b9d911d70d06dc488fbeae20b002f00292d
+topic:
+  id: "pb-paediatric-convulsions"
+  title: "Convulsiones pediátricas"
+  list_subtitle: "p.42 · diazepam → fenobarbital"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["convulsión", "crisis epiléptica", "ataque", "estado epiléptico", "diazepam", "fenobarbital", "pediátrico", "neonato"]
+  category: "medical"
+  page_number: 42
+  blocks:
+  - type: "prose"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    title: "Convulsiones en el 1.er mes de vida"
+    markdown: |
+      Deben tratarse con **fenobarbital 20mg/kg de inmediato**; si sigue convulsionando tras 30 min, administre otros **10mg/kg**, hasta un **máximo acumulado de 40mg/kg** — y solo donde haya monitorización respiratoria, porque el fenobarbital causa apnea e hipotensión. Mantenimiento **3–5mg/kg al día**, a partir de 12–24 h tras la carga. **No administre diazepam a neonatos.**
+  - type: "flowchart"
+    variant: "algorithm"
+    boxes:
+    - id: "observe"
+      title: "Compruebe el ABC"
+      bullets:
+      - "Observe"
+      - "Investigue la causa"
+    stages:
+    - decision: "Edad >1 mes — ¿niño que convulsiona más de 5 minutos O llega convulsionando?"
+      outcomes:
+      - label: "Sí"
+        box:
+          title: "Trate la convulsión y la hipoglucemia"
+          bullets:
+          - "Garantice la seguridad y compruebe el ABC"
+          - "Inicie oxígeno"
+          - "Diazepam 0.2mg/kg IV lento en 1min (máx. 10mg) O diazepam rectal en supositorio de 2.5mg: <10kg 1 supositorio · 10–15kg 2 · 15–20kg 3 · 20–25kg 4 supositorios"
+          - "Dextrosa al 10% 2mL/kg IV (o mida la glucosa)"
+          - "Compruebe el ABC cuando cese la convulsión"
+        continue: true
+      - label: "No"
+        box:
+          title: "¿Niño con una 3.ª convulsión de <5min en <2 horas?"
+          bullets:
+          - "No → compruebe el ABC, observe, investigue la causa"
+          - "Sí → fenobarbital (recuadro inferior)"
+          - "Los niños con hasta 2 convulsiones de <5 min no requieren tratamiento farmacológico de urgencia"
+    - decision: "¿Cesa la convulsión tras 5 minutos más?"
+      outcomes:
+      - label: "Sí"
+        goto: "observe"
+      - label: "No"
+        box:
+          title: "Repita el diazepam"
+          bullets:
+          - "Diazepam 0.2mg/kg IV lento en 1min (máx. 10mg) O diazepam 2.5mg rectal (dosis como arriba)"
+          - "Continúe el oxígeno"
+          - "Compruebe el ABC cuando cese la convulsión"
+        continue: true
+    - decision: "¿Cesa la convulsión tras 5 minutos más?"
+      outcomes:
+      - label: "Sí"
+        goto: "observe"
+      - label: "No"
+        continue: true
+    terminal:
+      title: "Administre fenobarbital IM/IV 20mg/kg"
+      bullets:
+      - "Si sigue convulsionando tras 15 min, administre otros 10mg/kg — máximo acumulado de 40mg/kg. Solo donde haya monitorización respiratoria: el fenobarbital causa apnea e hipotensión, así que tenga una bolsa-válvula-mascarilla junto a la cama"
+      - "NO administre más de 2 dosis de diazepam en 24 horas una vez usado el fenobarbital (si es IV, administre en 20min)"
+      - "El tratamiento de mantenimiento debe ser inicialmente con fenobarbital **3–5mg/kg** IV/IM una vez al día x 48 h, a partir de 12–24 h tras la carga (OE 2026-08-30 — se imprime el rango para que sugiera una dosis menor en un niño sedado o con insuficiencia hepática)"
+      - "Continúe el oxígeno durante la convulsión activa"
+      - "Compruebe el ABC cuando cese la convulsión"
+      - "Investigue la causa"

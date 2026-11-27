@@ -1,0 +1,30 @@
+# translated-from-sha256: 4ab214f177f254adcfcf21645ad2f454bf02893c93759ddb33bb0ee3b57c373c
+topic:
+  id: "pb-im-headache"
+  title: "Cefalea — signos de alarma"
+  list_subtitle: "p.126 · signos de peligro de cefalea secundaria"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["cefalea", "signos de alarma", "en trueno", "cefalea secundaria", "signos de peligro", "SNNOOP", "adulto", "medicina interna", "motivos de consulta frecuentes", "neurología"]
+  category: "medical"
+  page_number: 126
+  blocks:
+  - type: "prose"
+    title: "Cefalea"
+    markdown: |
+      - **Historia y exploración física completas y de calidad**
+  - type: "prose"
+    title: "Signos de peligro (\"banderas rojas\")"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    markdown: |
+      Sugieren una lesión ocupante de espacio o vascular, infección, alteración metabólica o enfermedad sistémica:
+
+      - Síntomas o enfermedad sistémicos (p. ej., fiebre, ↓ peso, embarazo, VIH)
+      - Síntomas neurológicos (p. ej., confusión, disminución de la conciencia, signos focales, cambios visuales, meningismo, convulsiones, papiledema)
+      - De inicio reciente (sobre todo si > 40 años) o súbito ("en trueno")
+      - Antecedente de traumatismo craneal, consumo de drogas ilícitas, exposición a tóxicos
+      - La cefalea despierta al paciente, empeora con Valsalva, tos, esfuerzo o actividad sexual, o empeora en una postura concreta
+      - Antecedente de cefalea con cambio de sus características: frecuencia, intensidad, síntomas asociados

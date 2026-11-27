@@ -1,0 +1,156 @@
+# translated-from-sha256: 94abbb1da1bb7e4e6d2f6ab1b25fff45adbb326b64b4eb8ef6414d97bb1470ca
+topic:
+  id: "pb-im-acs-treatment"
+  title: "Tratamiento del SCA / infarto de miocardio"
+  list_subtitle: "pp.123–124 · IAMCEST · IAMSEST · trombolíticos"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["SCA", "síndrome coronario agudo", "IAMCEST", "IAMSEST", "infarto de miocardio", "IAM", "tratamiento", "trombolíticos", "tenecteplasa", "estreptoquinasa", "heparina", "enoxaparina", "ácido acetilsalicílico", "clopidogrel", "betabloqueante", "IECA", "medicina interna", "cardiología"]
+  category: "medical"
+  pages:
+  - page_number: 123
+    blocks:
+    - type: "prose"
+      markdown: |
+        Tratamiento según la categoría de riesgo, siguiendo el algoritmo de [dolor torácico / SCA](topic:pb-im-chest-pain).
+    - type: "prose"
+      title: "IAMCEST"
+      markdown: |
+        - **Antiagregante:**
+          - Ácido acetilsalicílico 325 mg VO × 1 dosis si no se ha dado
+          - Clopidogrel — **menores de 75: 300 mg VO × 1 dosis de carga. 75 o más: 75 mg, SIN dosis de carga** (exceso de hemorragia intracraneal con la fibrinólisis)
+        - **Nitroglicerina** en aerosol o tableta sublingual (si no se ha dado)
+          - 0.4 mg cada 5 minutos × 3 dosis como máximo, hasta que cedan los síntomas
+        - **Anticoagulante:**
+          - Heparina no fraccionada
+            - Bolo IV de 60 unidades/kg, máximo 4,000 unidades
+            - Infusión IV de 12 unidades/kg/h, máximo 1,000 unidades/h
+          - Enoxaparina — **la pauta cambia a los 75 años**
+            - **Menores de 75:** bolo IV de 30 mg, luego a los 15 minutos 1 mg/kg SC cada 12 h (máx. 100 mg/dosis en las 2 primeras dosis)
+            - **75 o más: SIN bolo IV. 0.75 mg/kg SC cada 12 h (máx. 75 mg/dosis en las 2 primeras dosis)** — la dosis completa causa exceso de hemorragia intracraneal en este grupo de edad
+            - No debe administrarse si el aclaramiento de creatinina es < 30
+        - **Trombolíticos**
+          - **En las 12 horas siguientes al inicio de los síntomas** — el beneficio depende del tiempo y **no está establecido más allá de las 12 h**, mientras que el riesgo de sangrado no cambia. (~30 vidas salvadas por cada 1000 tratados en 6 h; ~20 por cada 1000 a las 7–12 h)
+          - **Objetivo puerta-aguja ≤ 30 minutos** (bolo en los 10 min siguientes al diagnóstico de IAMCEST)
+          - **Pasadas 12 h, adminístrelo solo si de verdad no hay ICP Y** hay dolor torácico isquémico persistente con elevación persistente del ST y un territorio grande en riesgo, **o** inestabilidad hemodinámica por el infarto. ⚠️ Esta excepción de 12–24 h es una **posición estadounidense (clase IIa); las guías europeas no respaldan la lisis rutinaria más allá de 12 h**
+          - **NO haga lisis** en un paciente tardío, estable y sin dolor. Trátelo médicamente — ácido acetilsalicílico + clopidogrel, anticoagulación, betabloqueante cuando esté estable, estatina de alta intensidad, IECA — y organice el traslado para angiografía
+          - El paciente debe estar conectado a un desfibrilador si es posible
+          - El libro imprimía antes "idealmente en las primeras 24 horas del dolor torácico"
+    - type: "prose"
+      title: "Trombolíticos — contraindicaciones absolutas"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        - Antecedente de hemorragia intracraneal
+        - Lesión vascular cerebral estructural conocida (como una malformación arteriovenosa)
+        - Neoplasia maligna intracraneal conocida
+        - Ictus isquémico en los últimos 3 meses — **salvo un ictus isquémico hiperagudo de menos de 4.5 horas**, donde el tratamiento correcto es la trombólisis **a dosis de ictus** para el propio ictus, **no la lisis a dosis coronaria**. Las dosis son distintas (alteplasa en el ictus 0.9 mg/kg, máx. 90 mg; en el IAM hasta 100 mg) y dar la dosis del IAM aumenta mucho la transformación hemorrágica
+        - Sospecha de disección aórtica
+        - Sangrado activo
+        - Traumatismo craneal/facial importante en los últimos 3 meses
+        - Cirugía intracraneal/intrarraquídea en los últimos 2 meses
+    - type: "prose"
+      title: "Trombolíticos — contraindicaciones relativas"
+      markdown: |
+        - Antecedente de hipertensión crónica, grave y mal controlada
+        - Hipertensión no controlada (>180/110)
+        - Ictus isquémico de > 3 meses
+        - Demencia
+        - Patología intracraneal conocida que no sea contraindicación absoluta
+        - RCP > 10 min o traumática
+        - Cirugía mayor en las últimas 3 semanas
+        - Embarazo
+        - Úlcera péptica activa
+        - Tratamiento anticoagulante oral
+    - type: "prose"
+      title: "Dosis de trombolíticos"
+      markdown: |
+        **Tenecteplasa** — mezcle el vial de 50 mg en 10 mL de agua estéril (5 mg/mL), administrada en bolo IV en 5 segundos:
+    - type: "table"
+      columns: ["Peso", "Dosis", "Volumen"]
+      column_flex: [4, 4, 4]
+      column_align: ["left", "center", "center"]
+      rows:
+      - cells: ["< 60 kg", "30 mg", "6 mL"]
+      - cells: ["60–69 kg", "35 mg", "7 mL"]
+      - cells: ["70–79 kg", "40 mg", "8 mL"]
+      - cells: ["80–89 kg", "45 mg", "9 mL"]
+      - cells: ["≥ 90 kg", "50 mg", "10 mL"]
+    - type: "prose"
+      markdown: |
+        **Estreptoquinasa** — 1.5 millones de unidades en 50 mL de D5W IV en 60 minutos.
+
+        - Controle los signos vitales cada 15 minutos durante la infusión
+        - Vigile al paciente 30 minutos tras la infusión
+        - Traslade al paciente a UCI haya recibido o no la infusión
+  - page_number: 124
+    blocks:
+    - type: "prose"
+      title: "IAMSEST"
+      markdown: |
+        - Repita el ECG a las 6 horas
+        - **Antiagregante:**
+          - Ácido acetilsalicílico 325 mg VO × 1 dosis si no se ha dado
+          - Clopidogrel — **menores de 75: 300 mg VO × 1 dosis de carga. 75 o más: 75 mg, SIN dosis de carga** (exceso de hemorragia intracraneal con la fibrinólisis)
+        - **Nitroglicerina** en aerosol o tableta sublingual (si no se ha dado)
+          - 0.4 mg cada 5 minutos × 3 dosis como máximo, hasta que cedan los síntomas
+        - **Anticoagulante:**
+          - Heparina no fraccionada
+            - Bolo IV de 60 unidades/kg, máximo 4,000 unidades
+            - Infusión IV de 12 unidades/kg/h, máximo 1,000 unidades/h
+          - Enoxaparina — **la pauta cambia a los 75 años**
+            - **Menores de 75:** bolo IV de 30 mg, luego a los 15 minutos 1 mg/kg SC cada 12 h (máx. 100 mg/dosis en las 2 primeras dosis)
+            - **75 o más: SIN bolo IV. 0.75 mg/kg SC cada 12 h (máx. 75 mg/dosis en las 2 primeras dosis)** — la dosis completa causa exceso de hemorragia intracraneal en este grupo de edad
+            - No debe administrarse si el aclaramiento de creatinina es < 30
+        - **Elección del P2Y₁₂ — aquí se prefiere el ticagrelor al clopidogrel cuando
+          está disponible y el paciente NO recibe fibrinólisis y no tiene alto
+          riesgo de sangrado:** ticagrelor 180 mg VO de carga, luego 90 mg dos veces al día
+          - 🛑 **Nunca combine ticagrelor con un fibrinolítico.** Con la lisis, el clopidogrel es el único inhibidor del P2Y₁₂ con evidencia — 300 mg de carga en menores de 75, 75 mg sin carga a partir de 75
+          - **El prasugrel no es para pacientes con manejo médico**
+          - El clopidogrel sigue siendo razonable a partir de ≥ 70 años o con alto riesgo de sangrado, y dondequiera que no haya ticagrelor
+        - **Betabloqueante oral en las primeras 24 horas — pero compruebe antes** (de preferencia succinato de metoprolol, carvedilol o bisoprolol)
+          - Succinato de metoprolol (metoprolol de liberación prolongada) 25 mg VO al día
+          - Carvedilol 6.25 mg VO dos veces al día — preferible con disfunción del VI; evítelo en la enfermedad obstructiva de la vía aérea
+          - Bisoprolol
+          - Tartrato de metoprolol 25 mg VO dos veces al día
+          - ⚠️ **El atenolol y el labetalol ya no se prefieren aquí** — el atenolol no está entre los betabloqueantes con beneficio demostrado en la mortalidad tras el IAM, y el labetalol es un antihipertensivo IV, no un fármaco de prevención secundaria
+        - **IECA oral en las primeras 24 horas**
+          - Captopril 12.5 mg VO dos veces al día
+          - Lisinopril 5 mg VO al día
+          - Puede usarse un ARA II si no hay IECA — losartán 50 mg VO al día
+    - type: "prose"
+      title: "🛑 No dé el betabloqueante en las primeras 24 h si hay CUALQUIERA de estos"
+      callout: true
+      palette:
+        alert: "0xFFD32F2F"
+        alert_fill: "0xFFFDECEA"
+        alert_text: "0xFFB71C1C"
+      markdown: |
+        - **Insuficiencia cardíaca aguda o descompensada** (Killip II–IV)
+        - **Bajo gasto cardíaco, o factores de riesgo de choque cardiogénico** — edad avanzada, taquicardia, hipotensión, presentación tardía
+        - **Hipotensión**
+        - **PR > 0.24 s, o bloqueo AV de segundo / tercer grado** sin marcapasos
+        - **Bradicardia grave**
+        - **Broncoespasmo activo**
+
+        El betabloqueo precoz **aumenta el choque cardiogénico** (5.0% frente a 3.9% en COMMIT,
+        n = 45,852), concentrado en los primeros 1–2 días y en los pacientes con compromiso
+        hemodinámico. **Reevalúe a las 24 h e inícielo cuando esté estable.**
+
+        Antes de cada una de las primeras dosis compruebe **frecuencia cardíaca, presión arterial, signos de
+        congestión pulmonar y el ECG (intervalo PR, bloqueo AV)**. Empiece bajo y
+        suba según lo permitan la FC y la PA; suspenda si aparece o empeora la insuficiencia cardíaca.
+    - type: "prose"
+      title: "Categoría de riesgo intermedio"
+      markdown: |
+        - **Antiagregante:** ácido acetilsalicílico 325 mg VO × 1 dosis si no se ha dado
+        - **Nitroglicerina** en aerosol o tableta sublingual (si no se ha dado) — 0.4 mg cada 5 minutos × 3 dosis como máximo, hasta que cedan los síntomas
+        - **Anticoagulante profiláctico:**
+          - Heparina 5,000 unidades por vía subcutánea cada 12 h
+          - Enoxaparina 40 mg por vía subcutánea al día
+    - type: "prose"
+      title: "Categorías de riesgo bajo / muy bajo"
+      markdown: |
+        Busque otras causas.

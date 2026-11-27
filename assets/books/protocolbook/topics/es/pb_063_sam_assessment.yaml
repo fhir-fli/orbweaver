@@ -1,0 +1,62 @@
+# translated-from-sha256: dbde3b7b7f65f39f86d0792fc0ee4832e5c7ca95a367baf5abbb8fe320f3e72d
+topic:
+  id: "pb-sam-assessment"
+  title: "DAG — evaluación y clasificación"
+  list_subtitle: "p.63 · PB/PT + DAM frente a DAG"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["desnutrición", "DAG", "DAM", "desnutrición aguda grave", "PB", "peso para la talla", "edema", "nutrición", "pediátrico", "puntuación z"]
+  category: "medical"
+  page_number: 63
+  blocks:
+  - type: "prose"
+    title: "Evaluación nutricional"
+    markdown: |
+      - **Perímetro braquial (PB)** en cm
+        - Mide la emaciación/masa muscular en niños mayores de 6 meses
+        - Se correlaciona de forma significativa con el riesgo de muerte
+        - Herramienta de cribado fácil en la comunidad
+        - Se usa en pacientes muy enfermos a los que no se puede pesar/medir
+      - **Peso corporal** (en kg con precisión de 0.1 kg)
+        - Pese en cuanto llegue al hospital
+        - Hágalo una hora antes o después de una comida
+        - Quite la ropa, joyas, pañales, etc.
+        - Mantenga al niño abrigado con una manta mientras espera para medir
+      - **Longitud/talla**
+        - Longitud (niño acostado): <2 años, o <87cm si se desconoce la edad
+        - Talla (niño de pie): ≥2 años, o ≥87cm si se desconoce la edad
+        - Si tiene ≥2 años y no puede ponerse de pie, mida la longitud y reste 0.7 cm
+        - El niño debe estar descalzo, sin nada en la cabeza
+        - Hombros, glúteos y talones deben tocar el tallímetro
+        - Mida con precisión de 0.1 cm
+  - type: "prose"
+    title: "Cómo interpretar las mediciones"
+    markdown: |
+      - Use peso para la longitud/talla (peso/longitud, peso/talla) si tiene <5 años (59 meses)
+      - Use IMC para la edad si tiene ≥5 años
+      - Marque las mediciones (use las curvas de crecimiento) y obtenga la puntuación Z
+      - Clasifique el grado de desnutrición
+  - type: "table"
+    title: "Clasificación de la desnutrición aguda"
+    columns: ["Edad", "Indicador", "DAM (moderada)", "DAG (grave)"]
+    column_flex: [3, 3, 4, 4]
+    column_tint: ["", "", "0xFFFFF8E1", "0xFFFDECEA"]
+    rows:
+    - cells: ["**<6 meses**", "Peso/longitud", "≥−3DE y <−2DE", "<−3DE"]
+    - cells: ["**<6 meses**", "Edema", "Ausente", "Presente"]
+    - cells: ["**6–59 meses**", "Peso/longitud, peso/talla", "≥−3DE y <−2DE", "<−3DE"]
+    - cells: ["**6–59 meses**", "Edema", "Ausente", "Presente"]
+    - cells: ["**6–59 meses**", "PB", "≥11.5 y <12.5cm", "<11.5cm (rojo)"]
+    - cells: ["**5–19 años**", "IMC/edad", "≥−3DE y <−2DE", "<−3DE"]
+    - cells: ["**5–19 años**", "Edema", "Ausente", "Presente"]
+    - cells: ["**5 a <10 años**", "PB", "≥13.5 y <14.5cm", "<13.5 cm"]
+    - cells: ["**10 a <15 años**", "PB", "≥16.0 y <18.0 cm", "<16.0 cm"]
+    - cells: ["**15 a 19**", "PB", "≥18.5 y <21.0 cm", "<18.5 cm"]
+  - type: "prose"
+    callout: true
+    palette:
+      alert: "0xFFD32F2F"
+      alert_fill: "0xFFFDECEA"
+      alert_text: "0xFFB71C1C"
+    title: "La DAG complicada incluye cualquiera de los siguientes"
+    markdown: |
+      Hipoglucemia, hipotermia, infecciones, deshidratación grave, choque, Hb <4, insuficiencia cardíaca, úlcera corneal, dermatosis grave, o signos de peligro de la AIEPI como anorexia, vómitos incoercibles, convulsiones, letargo/pérdida de conciencia, incapacidad para comer o mamar, fiebre >39.

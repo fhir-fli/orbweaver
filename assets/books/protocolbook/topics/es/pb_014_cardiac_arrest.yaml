@@ -1,0 +1,85 @@
+# translated-from-sha256: 0bfccf7af382fd7b69624e21397567888289eff9df1e54899e1917bc771fc05d
+topic:
+  id: "pb-adult-cardiac-arrest"
+  title: "Paro cardíaco en el adulto"
+  list_subtitle: "p.14 · ramas de SVCA (ACLS)"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["svca", "adulto", "paro_cardiaco", "rcp", "reanimación", "emergencia"]
+  category: "critical_care"
+  page_number: 14
+  blocks:
+  - type: "flowchart"
+    variant: "cycle"
+    nodes:
+    - title: "Seguridad, estimule, pida ayuda a gritos — lleve al paciente al área de emergencias (siempre que pueda moverse con seguridad)"
+    - shape: "decision"
+      title: "COMPRUEBE EL PULSO: ¿se palpa un pulso CLARO en 10 segundos?"
+      down_label: "Sin pulso"
+      branches:
+      - label: "Pulso claro"
+        side: "right"
+        box:
+          title: "Hay pulso — apoye y monitorice"
+          severity: "priority"
+          bullets:
+          - "Abra y mantenga la vía aérea"
+          - "1 ventilación cada 6 segundos"
+          - "Recompruebe el pulso cada 2 min"
+          - "→ Algoritmo posparo cardíaco"
+    - id: "cpr"
+      title: "Inicie RCP — 2 minutos"
+      severity: "emergency"
+      bullets:
+      - "Compresiones continuas hasta disponer de bolsa-válvula-mascarilla"
+      - "30 compresiones : 2 ventilaciones"
+      - "Conecte O2 a la bolsa-válvula-mascarilla"
+      - "Adrenalina 1 mg IV en 10 ml de solución salina normal, seguida de un lavado de 20 ml — **repita cada 3–5 minutos**, NO en cada ciclo"
+      - "Identifique y trate las causas reversibles (las H y las T, abajo)"
+    - shape: "decision"
+      title: "A los 2 minutos — cambie a quien comprime, compruebe pulso (≤ 10 s) y ritmo. ¿Hay pulso?"
+      down_label: "Sí — RCE"
+      branches:
+      - label: "No"
+        side: "left"
+        box:
+          title: "Reanude la RCP de inmediato"
+          severity: "emergency"
+          bullets:
+          - "Adrenalina solo si han pasado 3–5 minutos desde la última dosis"
+          - "Siga revisando las causas reversibles"
+        loop_to: "cpr"
+        loop_label: "cada 2 min"
+    - title: "→ Algoritmo posparo cardíaco"
+  - type: "table"
+    columns: []
+    rows:
+    - cells:
+      - "**H**ipoglucemia"
+      - "Neumotórax a **T**ensión"
+    - cells:
+      - "**H**ipovolemia"
+      - "**T**aponamiento cardíaco"
+    - cells:
+      - "**H**ipoxia"
+      - "**T**óxicos"
+    - cells:
+      - "**H**idrogeniones (acidosis)"
+      - "**T**rombosis pulmonar"
+    - cells:
+      - "**H**ipo- / hiperpotasemia"
+      - "**T**rombosis coronaria"
+    - cells:
+      - "**H**ipotermia"
+      - ""
+  - type: "prose"
+    markdown: |
+      La hipoglucemia no está en la lista estándar de la AHA — se mantiene aquí a propósito, como causa de paro frecuente y fácilmente reversible en este entorno.
+  - type: "prose"
+    title: "RCP de alta calidad"
+    highlight: true
+    markdown: |
+      - **Frecuencia de compresión** 100–120/min
+      - **Profundidad de compresión** de al menos 5 cm
+      - **Permita la reexpansión completa del tórax** después de cada compresión
+      - **Reduzca al mínimo las interrupciones** de las compresiones torácicas a < 10 segundos
+      - **Evite la ventilación excesiva** — dé solo el volumen necesario para que el tórax se eleve visiblemente. Dé 2 ventilaciones cada 30 compresiones, o 1 ventilación cada 6 segundos si está intubado.

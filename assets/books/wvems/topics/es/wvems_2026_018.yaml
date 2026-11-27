@@ -1,0 +1,136 @@
+# translated-from-sha256: 1603c0b75ca855c684b3d02c6ed6e4fd3202a0e34b1e1e2e487303d13b059a89
+topic:
+  id: "wvems-2026-018"
+  version: "v260101"
+  title: "Hiperpotasemia"
+  list_subtitle: "2026-018 · salbutamol / calcio / bicarbonato"
+  last_reviewed: "Oct 2025"
+  tags:
+  - "hiperpotasemia"
+  - "potasio"
+  - "diálisis"
+  - "insuficiencia renal"
+  - "calcio"
+  - "salbutamol"
+  - "bicarbonato"
+  aliases:
+  - "K+ alto"
+  - "Potasio elevado"
+  - "Diálisis"
+  - "Insuficiencia renal"
+  category: "universal"
+  layout: "paged"
+  pages:
+  - page_number: 18
+    blocks:
+    - type: "flowchart"
+      variant: "severity"
+      entry:
+        text: |-
+          K+ sospechado o confirmado
+          mayor de 5.5 mEq/L
+        shape: "stadium"
+      pre_decision_actions:
+      - provider_level: "E"
+        text: "12 derivaciones"
+        kind: "diagnostic"
+      - provider_level: "E"
+        text: "Salbutamol"
+        kind: "medication_administration"
+      decision:
+        text: "¿Gravedad?"
+        shape: "diamond"
+      branches:
+      - id: "minor"
+        label: "Menor"
+        criteria:
+        - "Pocos cambios en el ECG"
+        - "6.4 mEq/L o menos"
+        actions:
+        - provider_level: "A"
+          text: "Vía salinizada"
+          kind: "procedure"
+      - id: "major"
+        label: "Mayor"
+        criteria:
+        - "Cambios evidentes en el ECG"
+        - "6.5 mEq/L o más"
+        actions:
+        - provider_level: "A"
+          text: "Bolo de SSN"
+          kind: "medication_administration"
+        - provider_level: "I"
+          text: "Calcio"
+          kind: "medication_administration"
+      convergence:
+        text: "Considere"
+        shape: "stadium"
+        warnings:
+        - type: "caution"
+          text: "[Considere el triaje de destino](topic:wvems-2026-109#destination-triage)"
+        bullets:
+        - text: "[Bradicardia](topic:wvems-2026-012)"
+        - text: "[Paro médico (CODE)](topic:wvems-2026-024)"
+      dose_table:
+      - drug: "[Salbutamol](topic:wvems-2026-drug-reference#albuterol)"
+        dose: "10 mg"
+        route: "NEB"
+        frequency: "x1 (4 nebulizaciones)"
+        population: "adult"
+      - drug: "[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)"
+        dose: "500 mL"
+        route: "IV/IO"
+        frequency: "x4"
+        population: "adult"
+      - drug: "[Calcio](topic:wvems-2026-drug-reference#calcium)"
+        dose: "1 gramo"
+        route: "IV/IO"
+        frequency: "durante 10 min"
+        population: "adult"
+  - page_number: 19
+    blocks:
+    - type: "prose"
+      title: "Imperativos de la hiperpotasemia"
+      highlight: true
+      markdown: |
+        - Sea enérgico con el tratamiento y el traslado si hay cualquier **cambio en el ECG**.
+        - Considere la hiperpotasemia en cualquier [lesión de extremidad](topic:wvems-2026-066) por **aplastamiento**.
+    - type: "prose"
+      title: "Cambios del ECG por K+"
+      markdown: |
+        De menor a potencialmente mortal:
+        - Ondas T picudas
+        - PRI largo / pérdida de la onda P
+        - QRS ancho (más de 120 ms)
+        - RIV lento (luego **onda sinusoidal**)
+    - type: "prose"
+      title: "Medicamentos"
+      markdown: |
+        - **[Salbutamol](topic:wvems-2026-drug-reference#albuterol)** (Ventolin®): apropiado aunque no haya ECG.
+          - Administre **cuatro** (4x) nebulizaciones estándar seguidas.
+        - **[Bolo de SSN](topic:wvems-2026-drug-reference#ns-bolus)** (salino al 0.9%): los líquidos abundantes ayudan a diluir el potasio.
+          - Considere líquidos abundantes aun sin [hipotensión](topic:wvems-2026-008).
+          - Evite los líquidos abundantes/profilácticos en pacientes en **diálisis**.
+        - **[Calcio](topic:wvems-2026-drug-reference#calcium)** (cloruro): **evítelo** con **[Rocephin®](topic:wvems-2026-drug-reference#rocephin)** o Digoxin® (mortal).
+        - Considere el **[bicarbonato](topic:wvems-2026-drug-reference#bicarb)** si hay acidosis y/o QRS ancho (>120 ms) en el ECG.
+          - {I} **[Bicarbonato](topic:wvems-2026-drug-reference#bicarb)** (bicarbonato sódico): administre 50 mEq IV/IO x1
+    - type: "prose"
+      title: "Notas"
+      markdown: |
+        - Considere la hiperpotasemia en cualquier paciente en **diálisis** o con insuficiencia renal.
+          - Si le llaman a un centro de diálisis, pregunte por el último nivel de K+.
+          - Evite la PANI o las vías IV en la misma extremidad que el acceso de diálisis.
+          - Considere el traslado a un hospital **con diálisis**.
+    - type: "band_callout"
+      band: "peds"
+      title: "Pediatría"
+      markdown: |
+        - Use la [referencia pediátrica](topic:wvems-2026-144) u otra fuente aprobada para las dosis pediátricas.
+    - type: "prose"
+      title: "Referencias"
+      text_scale: 0.8
+      markdown: |
+        - ACLS — https://www.ahajournals.org/doi/10.1161/CIR.0000000000001376 [Ver: 2025]
+        - PALS — https://www.ahajournals.org/doi/full/10.1161/CIR.0000000000001368 [Ver: 2025]
+        - Medscape Hyperkalemia — https://emedicine.medscape.com/article/240903 [Ver: 5/25]
+        - Limmer D, O’Keefe MF. **Emergency Care** 15th ed. Capítulo 28

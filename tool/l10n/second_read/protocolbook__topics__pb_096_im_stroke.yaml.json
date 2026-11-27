@@ -1,0 +1,58 @@
+{
+ "page": "assets/books/protocolbook/topics/pb_096_im_stroke.yaml",
+ "model": "gemma-4-31b-it",
+ "findings": [
+  {
+   "id": "s110",
+   "severity": "meaning",
+   "problem": "LOC (Level of Consciousness) is translated as 'NC', which is not a standard medical abbreviation in Spanish for consciousness.",
+   "fix": "**1c. Órdenes de nivel de conciencia (LOC)**",
+   "en": "**1c. LOC commands**",
+   "es": "**1c. Órdenes de NC**"
+  },
+  {
+   "id": "s144",
+   "severity": "patient-safety",
+   "problem": "'Drift' in a neurological motor exam refers to the limb drifting downward; 'claudicación' refers to vascular claudication (limping due to ischemia), which is a completely different finding.",
+   "fix": "Sin deriva",
+   "en": "No drift",
+   "es": "Sin claudicación"
+  },
+  {
+   "id": "s146",
+   "severity": "patient-safety",
+   "problem": "'Drift' in a neurological motor exam refers to the limb drifting downward; 'claudicación' refers to vascular claudication (limping due to ischemia), which is a completely different finding.",
+   "fix": "Deriva",
+   "en": "Drift",
+   "es": "Claudicación"
+  },
+  {
+   "id": "s155",
+   "severity": "patient-safety",
+   "problem": "'Drift' in a neurological motor exam refers to the limb drifting downward; 'claudicación' refers to vascular claudication (limping due to ischemia), which is a completely different finding.",
+   "fix": "Sin deriva",
+   "en": "No drift",
+   "es": "Sin claudicación"
+  },
+  {
+   "id": "s157",
+   "severity": "patient-safety",
+   "problem": "'Drift' in a neurological motor exam refers to the limb drifting downward; 'claudicación' refers to vascular claudication (limping due to ischemia), which is a completely different finding.",
+   "fix": "Deriva",
+   "en": "Drift",
+   "es": "Claudicación"
+  },
+  {
+   "id": "s200",
+   "severity": "minor",
+   "problem": "Typo in 'Hemiinatención' (double 'i').",
+   "fix": "Heminatención o extinción profunda",
+   "en": "Profound hemi-inattention or extinction",
+   "es": "Hemiinatención o extinción profunda"
+  }
+ ],
+ "raw": [
+  "[]",
+  "```json\n[\n  {\n    \"id\": \"s110\",\n    \"severity\": \"meaning\",\n    \"problem\": \"LOC (Level of Consciousness) is translated as 'NC', which is not a standard medical abbreviation in Spanish for consciousness.\",\n    \"fix\": \"**1c. Órdenes de nivel de conciencia (LOC)**\"\n  },\n  {\n    \"id\": \"s144\",\n    \"severity\": \"patient-safety\",\n    \"problem\": \"'Drift' in a neurological motor exam refers to the limb drifting downward; 'claudicación' refers to vascular claudication (limping due to ischemia), which is a completely different finding.\",\n    \"fix\": \"Sin deriva\"\n  },\n  {\n    \"id\": \"s146\",\n    \"severity\": \"patient-safety\",\n    \"problem\": \"'Drift' in a neurological motor exam refers to the limb drifting downward; 'claudicación' refers to vascular claudication (limping due to ischemia), which is a completely different finding.\",\n    \"fix\": \"Deriva\"\n  },\n  {\n    \"id\": \"s155\",\n    \"severity\": \"patient-safety\",\n    \"problem\": \"'Drift' in a neurological motor exam refers to the limb drifting downward; 'claudicación' refers to vascular claudication (limping due to ischemia), which is a completely different finding.\",\n    \"fix\": \"Sin deriva\"\n  },\n  {\n    \"id\": \"s157\",\n    \"severity\": \"patient-safety\",\n    \"problem\": \"'Drift' in a neurological motor exam refers to the limb drifting downward; 'claudicación' refers to vascular claudication (limping due to ischemia), which is a completely different finding.\",\n    \"fix\": \"Deriva\"\n  },\n  {\n    \"id\": \"s200\",\n    \"severity\": \"minor\",\n    \"problem\": \"Typo in 'Hemiinatención' (double 'i').\",\n    \"fix\": \"Heminatención o extinción profunda\"\n  }\n]\n```"
+ ]
+}

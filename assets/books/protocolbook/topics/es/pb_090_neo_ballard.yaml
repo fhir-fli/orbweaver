@@ -1,0 +1,100 @@
+# translated-from-sha256: 824adb767de78feafd7973f02c2d71585f5fb9dabed09c1c95cd8b0f733049cd
+topic:
+  id: "pb-neo-ballard"
+  title: "Puntuación de Ballard (edad gestacional)"
+  list_subtitle: "pp.90–91 · madurez neuromuscular + física"
+  last_reviewed: "pocketbook v1.7"
+  tags: ["neonatal", "puntuación de ballard", "edad gestacional", "madurez", "neuromuscular", "madurez física", "prematuro", "recién nacido", "nuevo ballard"]
+  category: "medical"
+  pages:
+  - page_number: 90
+    blocks:
+    - type: "prose"
+      markdown: |
+        La puntuación de Ballard estima la edad gestacional. Puntúe los seis signos neuromusculares (tabla de abajo) y los seis signos de madurez física (página siguiente), cada uno de −1 a 5, sume ambos para obtener la puntuación total y lea la edad gestacional en la tabla de clasificación de madurez.
+    - type: "prose"
+      title: "Madurez neuromuscular"
+      markdown: |
+        Compare al lactante con el dibujo de cada signo (postura, ventana cuadrada, retroceso del brazo, ángulo poplíteo, signo de la bufanda, talón a oreja).
+    - type: "image"
+      path: "assets/books/protocolbook/images/pb_neo_ballard_neuro.png"
+      size: "full"
+      caption: "Madurez neuromuscular — puntúe de −1 a 5 cada uno de los seis signos."
+  - page_number: 91
+    blocks:
+    - type: "prose"
+      title: "Madurez física"
+      markdown: |
+        Puntúe cada signo de −1 a 5:
+        - **Piel**
+          - −1: pegajosa, friable, transparente
+          - 0: gelatinosa, roja, translúcida
+          - 1: lisa, rosada, venas visibles
+          - 2: descamación superficial y/o exantema, pocas venas
+          - 3: grietas, zonas pálidas, venas escasas
+          - 4: apergaminada, grietas profundas, sin vasos
+          - 5: correosa, agrietada, arrugada
+        - **Lanugo**
+          - −1: ausente
+          - 0: escaso
+          - 1: abundante
+          - 2: adelgazado
+          - 3: zonas calvas
+          - 4: mayormente calvo
+        - **Superficie plantar**
+          - −2: talón-dedo < 40 mm
+          - −1: talón-dedo 40–50 mm
+          - 0: > 50 mm, sin pliegues
+          - 1: marcas rojas tenues
+          - 2: solo pliegue transverso anterior
+          - 3: pliegues en los 2/3 anteriores
+          - 4: pliegues en toda la planta
+        - **Mama**
+          - −1: imperceptible
+          - 0: apenas perceptible
+          - 1: areola plana, sin botón
+          - 2: areola punteada, botón de 1–2 mm
+          - 3: areola elevada, botón de 3–4 mm
+          - 4: areola completa, botón de 5–10 mm
+        - **Ojo / oreja**
+          - −2: párpados fusionados firmemente
+          - −1: párpados fusionados laxamente
+          - 0: párpados abiertos, pabellón plano, permanece doblado
+          - 1: pabellón algo curvado; blando; retroceso lento
+          - 2: pabellón bien curvado; blando pero con retroceso rápido
+          - 3: formado y firme, retroceso instantáneo
+          - 4: cartílago grueso, oreja rígida
+        - **Genitales (masculinos)**
+          - −1: escroto plano, liso
+          - 0: escroto vacío, arrugas tenues
+          - 1: testículos en la parte alta del conducto, arrugas escasas
+          - 2: testículos descendiendo, pocas arrugas
+          - 3: testículos descendidos, buenas arrugas
+          - 4: testículos péndulos, arrugas profundas
+        - **Genitales (femeninos)**
+          - −1: clítoris prominente, labios planos
+          - 0: clítoris prominente, labios menores pequeños
+          - 1: clítoris prominente, labios menores aumentando
+          - 2: labios mayores y menores igual de prominentes
+          - 3: labios mayores grandes, menores pequeños
+          - 4: los labios mayores cubren el clítoris y los menores
+    - type: "table"
+      title: "Clasificación de madurez — puntuación total → edad gestacional"
+      zebra: true
+      columns: ["Puntuación total (neuromuscular + física)", "Semanas"]
+      column_flex: [7, 3]
+      column_align: ["center", "center"]
+      rows:
+      - cells: ["−10", "20"]
+      - cells: ["−5", "22"]
+      - cells: ["0", "24"]
+      - cells: ["5", "26"]
+      - cells: ["10", "28"]
+      - cells: ["15", "30"]
+      - cells: ["20", "32"]
+      - cells: ["25", "34"]
+      - cells: ["30", "36"]
+      - cells: ["35", "38"]
+      - cells: ["40", "40"]
+      - cells: ["45", "42"]
+      - cells: ["50", "44"]
